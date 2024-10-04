@@ -3,7 +3,7 @@ extends Node2D
 
 var current_potato
 var score = 0
-var time_left = 10  # seconds per decision
+var time_left = 5  # seconds per decision
 var current_rules = []
 var queue_manager: Node2D
 
@@ -40,10 +40,14 @@ func is_potato_valid(potato):
 
 func _ready():
 	queue_manager = $"Node2D (QueueManager)"  # Make sure to add QueueManager as a child of Main
-	new_potato()
-	new_potato()
-	new_potato()
 	generate_rules()
+	new_potato()
+	await get_tree().create_timer(2).timeout
+	new_potato()
+	await get_tree().create_timer(2).timeout
+	new_potato()
+	await get_tree().create_timer(2).timeout
+	
 
 func _process(delta):
 	$"Label (TimeLabel)".text = "Time: " + str(int($Timer.time_left))
@@ -121,8 +125,8 @@ func process_decision(allowed):
 
 func _on_timer_timeout():
 	# Player ran out of time, count as wrong decision
-	score -= 1
-	$"Label (JudgementInfo)".text = "You run out of time and another customs officer beckons the spud over. Point taken."
+	score += 0
+	$"Label (JudgementInfo)".text = "You run out of time and another customs officer beckons the spud over."
 	$"Label (ScoreLabel)".text = "Score: " + str(score)
 	new_potato()
 

@@ -3,7 +3,7 @@ extends Node2D
 var PotatoPerson = preload("res://PotatoPerson.tscn")
 var path: Path2D
 var curve: Curve2D
-var max_potatoes: int = 10
+var max_potatoes: int = 20
 var potatoes: Array = []
 var spawn_point: Vector2
 
@@ -22,36 +22,46 @@ func add_potato():
 	var potato = PotatoPerson.instantiate()
 	add_child(potato)
 	potato.position = spawn_point
-	potatoes.push_front(potato)  # Add new potatoes to the front of the array
+	potato.current_point = 0
+	potato.target_point = 0
+	potatoes.push_front(potato)
 	print("Potato added. Total potatoes: ", potatoes.size())
 	update_positions()
 
 func remove_potato():
 	if potatoes.size() > 0:
-		var potato = potatoes.pop_back()  # Remove the potato at the end of the queue
+		var potato = potatoes.pop_back()
 		potato.queue_free()
 		print("Potato removed. Total potatoes: ", potatoes.size())
 		update_positions()
 
 func update_positions():
-	var path_length = curve.get_baked_length()
-	print("Updating positions for ", potatoes.size(), " potatoes")
-	for i in range(potatoes.size()):
-		var offset = 1.0 - (float(i) / max(1, potatoes.size() - 1))  # Reverse the offset
-		var distance_along_path = path_length * offset
-		var target_position = curve.sample_baked(distance_along_path)
-		var random_offset = Vector2(randf_range(-5, 5), randf_range(-5, 5))
-		potatoes[i].target_position = target_position + random_offset
-		print("Potato ", i, " target position set to: ", potatoes[i].target_position)
+	var point_count = curve.get_point_count()
+	var potato_count = potatoes.size()
+	print("Updating positions for ", potato_count, " potatoes")
+	
+	if potato_count > 0:
+		for i in range(potato_count):
+			var target_point = min(point_count - 1, point_count - 1 - i)
+			potatoes[potato_count - 1 - i].target_point = target_point
+			print("Potato ", potato_count - 1 - i, " target point set to: ", target_point)
 
 func _process(delta):
 	for potato in potatoes:
-		if potato.has_method("move_toward"):
-			potato.move_toward(potato.target_position, delta * 50)
+		if potato.current_point < potato.target_point:
+			var next_point = potato.current_point + 1
+			var current_pos = curve.get_point_position(potato.current_point)
+			var next_pos = curve.get_point_position(next_point)
+			var target_pos = potato.position.move_toward(next_pos, delta * 50)
+			
+			if target_pos.distance_to(next_pos) < 1:
+				potato.current_point = next_point
+			
+			potato.position = target_pos
 		else:
-			potato.position = potato.position.move_toward(potato.target_position, delta * 50)
+			var target_pos = curve.get_point_position(potato.target_point)
+			potato.position = potato.position.move_toward(target_pos, delta * 50)
 
-# Call this function to manually add potatoes for testing
 func debug_add_potatoes(count: int):
 	for i in range(count):
 		add_potato()

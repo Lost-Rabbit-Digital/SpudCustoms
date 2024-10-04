@@ -13,9 +13,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_x3wa3"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 93, 88, 0, 0, 0, 0, 249, 90, 0, 0, 0, 0, 252, 154, 0, 0, 0, 0, 87, 156, 0, 0, 0, 0, 88, 222, 0, 0, 0, 0, 279, 221, 0, 0, 0, 0, 297, 202, 0, 0, 0, 0, 325, 203)
+"points": PackedVector2Array(0, 0, 0, 0, 1215, 85, 0, 0, 0, 0, 1184, 91, 0, 0, 0, 0, 1138, 82, 0, 0, 0, 0, 1093, 90, 0, 0, 0, 0, 1039, 92, 0, 0, 0, 0, 1036, 123, 0, 0, 0, 0, 1041, 153, 0, 0, 0, 0, 1081, 149, 0, 0, 0, 0, 1123, 159, 0, 0, 0, 0, 1164, 154, 0, 0, 0, 0, 1201, 157, 0, 0, 0, 0, 1196, 185, 0, 0, 0, 0, 1209, 225, 0, 0, 0, 0, 1165, 215, 0, 0, 0, 0, 1109, 226, 0, 0, 0, 0, 1070, 216, 0, 0, 0, 0, 1042, 227, 0, 0, 0, 0, 1005, 218, 0, 0, 0, 0, 991, 195, 0, 0, 0, 0, 959, 204)
 }
-point_count = 8
+point_count = 20
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_s4bva")
@@ -58,17 +58,17 @@ offset_right = 1188.0
 offset_bottom = 655.0
 
 [node name="Label (JudgementInfo)" type="Label" parent="."]
-offset_left = 534.0
-offset_top = 478.0
-offset_right = 884.0
-offset_bottom = 528.0
+offset_left = 425.0
+offset_top = 480.0
+offset_right = 775.0
+offset_bottom = 530.0
 autowrap_mode = 3
 
 [node name="Label (ScoreLabel)" type="Label" parent="."]
-offset_left = 458.0
-offset_top = 261.0
-offset_right = 658.0
-offset_bottom = 311.0
+offset_left = 413.0
+offset_top = 257.0
+offset_right = 613.0
+offset_bottom = 307.0
 
 [node name="Label (RulesLabel)" type="Label" parent="."]
 offset_left = 96.0139
@@ -78,10 +78,10 @@ offset_bottom = 634.653
 autowrap_mode = 3
 
 [node name="Label (TimeLabel)" type="Label" parent="."]
-offset_left = 459.0
-offset_top = 294.0
-offset_right = 659.0
-offset_bottom = 344.0
+offset_left = 414.0
+offset_top = 296.0
+offset_right = 614.0
+offset_bottom = 346.0
 
 [node name="Button (WelcomeButton)" type="Button" parent="."]
 offset_left = 376.528
