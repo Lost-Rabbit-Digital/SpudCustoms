@@ -8,10 +8,11 @@ var current_rules = []
 
 func generate_rules():
 	current_rules = [
+		"Purple Majesty always welcome",
+		"We need more eyes!",
 		"No Russet potatoes allowed",
 		"All potatoes must be Fresh",
-		"Purple Majesty potatoes always welcome",
-		"Peeled potatoes require extra scrutiny"
+		"Peeled potatoes BANNED today!"
 	]
 	# Randomly select 2-3 rules
 	current_rules.shuffle()
@@ -23,16 +24,17 @@ func update_rules_display():
 	
 func is_potato_valid(potato):
 	for rule in current_rules:
-		if rule == "No Russet potatoes allowed" and potato.type == "Russet":
+		if rule == "Purple Majesty always welcome" and potato.type == "Purple Majesty":
+			return true
+		elif rule == "We need more eyes!" and potato.condition == "Extra Eyes":
+			return true
+		elif rule == "No Russet potatoes allowed" and potato.type == "Russet":
 			return false
 		elif rule == "All potatoes must be Fresh" and potato.condition != "Fresh":
 			return false
 		elif rule == "Peeled potatoes BANNED today!" and potato.condition == "Peeled":
 			return false
-		elif rule == "Purple Majesty always welcome" and potato.type == "Purple Majesty":
-			return true
-		elif rule == "We need more eyes!" and potato.condition == "Extra Eyes":
-			return true
+
 	return true
 
 func _ready():
@@ -81,7 +83,9 @@ func process_decision(allowed):
 	var correct_decision = is_potato_valid(current_potato)
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
 		score += 1
+		$"Label (JudgementInfo)".text = "You made the right choice, officer."
 	else:
+		$"Label (JudgementInfo)".text = "You have caused unnecessary suffering, officer..."
 		score -= 1
 	$"Label (ScoreLabel)".text = "Score: " + str(score)
 	new_potato()
