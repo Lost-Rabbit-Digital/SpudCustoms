@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=9 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://d03nqk75nmnqr" path="res://suspect_panel.png" id="2_f25cg"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://40m827pn4r7y" path="res://evidence_panel.png" id="4_juy1b"]
 [ext_resource type="Texture2D" uid="uid://blc1si6nool21" path="res://world_panel.png" id="5_h10h2"]
 [ext_resource type="Texture2D" uid="uid://b0w31jf11twuk" path="res://potato_humanoids/heads/russet_burbank_potato (2).png" id="7_fe5kd"]
+[ext_resource type="Texture2D" uid="uid://kjlwp8d6npbd" path="res://Potato_line.png" id="8_s0lh3"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_s4bva")
@@ -92,6 +93,10 @@ text = "NO ENTRY!"
 position = Vector2(252, 419)
 scale = Vector2(1.64844, 1.64844)
 texture = ExtResource("7_fe5kd")
+
+[node name="PotatoLine" type="Sprite2D" parent="."]
+position = Vector2(648, 137)
+texture = ExtResource("8_s0lh3")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Button (WelcomeButton)" to="." method="_on_button_welcome_button_pressed"]
