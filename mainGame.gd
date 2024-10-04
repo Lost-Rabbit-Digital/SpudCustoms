@@ -86,7 +86,7 @@ func get_random_name():
 	return full_name % [first_name[randi() % first_name.size()], last_name[randi() % last_name.size()]]
 
 func get_random_type():
-	var types = ["Russet", "Yukon Gold", "Sweet Potato", "Purple Majesty", "Red Bliss", "Fingerling", "Kennebec", "Maris Piper", "Idaho Potato", "Katahdin"]
+	var types = ["Russet Burbank", "Yukon Gold", "Sweet Potato", "Purple Majesty", "Red Bliss", "Fingerling", "Kennebec", "Maris Piper", "Idaho Potato", "Katahdin"]
 	return types[randi() % types.size()]
 
 func get_random_condition():
