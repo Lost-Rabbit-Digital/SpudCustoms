@@ -8,10 +8,7 @@ var current_rules = []
 
 func generate_rules():
 	current_rules = [
-		"No Russet potatoes allowed",
-		"All potatoes must be Fresh",
-		"Purple Majesty potatoes always welcome",
-		"Peeled potatoes require extra scrutiny"
+		"No Russet potatoes allowed"
 	]
 	# Randomly select 2-3 rules
 	current_rules.shuffle()
@@ -81,7 +78,9 @@ func process_decision(allowed):
 	var correct_decision = is_potato_valid(current_potato)
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
 		score += 1
+		$"Label (JudgementInfo)".text = "You made the right choice, officer."
 	else:
+		$"Label (JudgementInfo)".text = "You have caused unnecessary suffering, officer.."
 		score -= 1
 	$"Label (ScoreLabel)".text = "Score: " + str(score)
 	new_potato()
