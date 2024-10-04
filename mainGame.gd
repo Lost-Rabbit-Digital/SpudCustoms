@@ -23,19 +23,18 @@ func generate_rules():
 func update_rules_display():
 	$"Label (RulesLabel)".text = "Current Rules:\n" + "\n".join(current_rules)
 	
-func is_potato_valid(potato):
+func is_potato_valid(potato_info: Dictionary) -> bool:
 	for rule in current_rules:
-		if rule == "Purple Majesty always welcome" and potato.type == "Purple Majesty":
+		if rule == "Purple Majesty always welcome" and potato_info.type == "Purple Majesty":
 			return true
-		elif rule == "We need more eyes!" and potato.condition == "Extra Eyes":
+		elif rule == "We need more eyes!" and potato_info.condition == "Extra Eyes":
 			return true
-		elif rule == "No Russet potatoes allowed" and potato.type == "Russet":
+		elif rule == "No Russet potatoes allowed" and potato_info.type == "Russet":
 			return false
-		elif rule == "All potatoes must be Fresh" and potato.condition != "Fresh":
+		elif rule == "All potatoes must be Fresh" and potato_info.condition != "Fresh":
 			return false
-		elif rule == "Peeled potatoes BANNED today!" and potato.condition == "Peeled":
+		elif rule == "Peeled potatoes BANNED today!" and potato_info.condition == "Peeled":
 			return false
-
 	return true
 
 func _ready():
@@ -53,11 +52,18 @@ func _process(delta):
 	$"Label (TimeLabel)".text = "Time: " + str(int($Timer.time_left))
 
 func new_potato():
-	current_potato = generate_potato()
-	$"Label (PotatoInfo)".text = current_potato.description
+	var potato_info = {
+		"name": get_random_name(),
+		"type": get_random_type(),
+		"condition": get_random_condition(),
+	}
+	queue_manager.add_potato(potato_info)
+	update_potato_info_display(potato_info)
 	$Timer.start(time_left)
-	queue_manager.add_potato()
 	
+func update_potato_info_display(potato_info: Dictionary):
+	$"Label (PotatoInfo)".text = "Name: %s\nType: %s\nCondition: %s" % [potato_info.name, potato_info.type, potato_info.condition]	
+
 func generate_potato():
 	# Generate random potato characteristics
 	var potato = {
@@ -111,17 +117,25 @@ func _on_button_no_entry_button_pressed() -> void:
 	process_decision(false)
 
 func process_decision(allowed):
-	var correct_decision = is_potato_valid(current_potato)
+	var potato_info = queue_manager.remove_potato()
+	var correct_decision = is_potato_valid(potato_info)
+	
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
 		score += 1
 		$"Label (JudgementInfo)".text = "You made the right choice, officer."
 	else:
 		$"Label (JudgementInfo)".text = "You have caused unnecessary suffering, officer..."
 		score -= 1
+	
 	$"Label (ScoreLabel)".text = "Score: " + str(score)
-	queue_manager.remove_potato()
+	new_potato()
+	
 	if randi() % 5 == 0:  # 20% chance to change rules
 		generate_rules()
+
+func peek_front_potato():
+	var front_potato_info = queue_manager.get_front_potato_info()
+	# Use front_potato_info as needed
 
 func _on_timer_timeout():
 	# Player ran out of time, count as wrong decision
