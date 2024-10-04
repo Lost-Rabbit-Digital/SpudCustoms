@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=15 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://d03nqk75nmnqr" path="res://suspect_panel.png" id="2_f25cg"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c07b46wsf1fc1" path="res://PotatoPerson.tscn" id="9_bxbx1"]
 [ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
 [ext_resource type="Texture2D" uid="uid://dk0dn60svbwgm" path="res://potato_interaction_table.png" id="12_cxpwc"]
+[ext_resource type="Texture2D" uid="uid://cghrrmwbg3mxy" path="res://stamps.png" id="13_00po3"]
 
 [sub_resource type="Curve2D" id="Curve2D_x3wa3"]
 _data = {
@@ -143,6 +144,10 @@ script = ExtResource("10_a4p7n")
 [node name="PotatoInteractionTable" type="Sprite2D" parent="."]
 position = Vector2(1034, 616)
 texture = ExtResource("12_cxpwc")
+
+[node name="Stamps" type="Sprite2D" parent="."]
+position = Vector2(646, 364)
+texture = ExtResource("13_00po3")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Button (WelcomeButton)" to="." method="_on_button_welcome_button_pressed"]
