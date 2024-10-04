@@ -74,37 +74,23 @@ offset_bottom = 530.0
 autowrap_mode = 3
 
 [node name="Label (ScoreLabel)" type="Label" parent="."]
-offset_left = 413.0
-offset_top = 257.0
-offset_right = 613.0
-offset_bottom = 307.0
+offset_left = 359.0
+offset_top = 439.0
+offset_right = 559.0
+offset_bottom = 489.0
 
 [node name="Label (RulesLabel)" type="Label" parent="."]
-offset_left = 96.0139
-offset_top = 254.653
-offset_right = 296.014
-offset_bottom = 634.653
+offset_left = 96.0
+offset_top = 439.0
+offset_right = 296.0
+offset_bottom = 635.0
 autowrap_mode = 3
 
 [node name="Label (TimeLabel)" type="Label" parent="."]
-offset_left = 414.0
-offset_top = 296.0
-offset_right = 614.0
-offset_bottom = 346.0
-
-[node name="Button (WelcomeButton)" type="Button" parent="."]
-offset_left = 376.528
-offset_top = 536.051
-offset_right = 576.528
-offset_bottom = 636.051
-text = "Welcome to Taterland!"
-
-[node name="Button (NoEntryButton)" type="Button" parent="."]
-offset_left = 609.528
-offset_top = 536.051
-offset_right = 809.528
-offset_bottom = 636.051
-text = "NO ENTRY!"
+offset_left = 355.0
+offset_top = 480.0
+offset_right = 555.0
+offset_bottom = 530.0
 
 [node name="PotatoMugshot" type="Sprite2D" parent="."]
 position = Vector2(252, 419)
@@ -150,5 +136,3 @@ position = Vector2(646, 364)
 texture = ExtResource("13_00po3")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="Button (WelcomeButton)" to="." method="_on_button_welcome_button_pressed"]
-[connection signal="pressed" from="Button (NoEntryButton)" to="." method="_on_button_no_entry_button_pressed"]
