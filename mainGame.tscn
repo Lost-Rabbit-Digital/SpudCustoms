@@ -101,19 +101,15 @@ texture = ExtResource("8_s0lh3")
 
 [node name="Node2D (PotatoPerson)4" parent="." instance=ExtResource("9_bxbx1")]
 position = Vector2(288, 192)
-scale = Vector2(0.2, 0.2)
 
 [node name="Node2D (PotatoPerson)2" parent="." instance=ExtResource("9_bxbx1")]
 position = Vector2(241, 84)
-scale = Vector2(0.2, 0.2)
 
 [node name="Node2D (PotatoPerson)3" parent="." instance=ExtResource("9_bxbx1")]
 position = Vector2(189, 154)
-scale = Vector2(0.2, 0.2)
 
 [node name="Node2D (PotatoPerson)" parent="." instance=ExtResource("9_bxbx1")]
 position = Vector2(110, 82)
-scale = Vector2(0.2, 0.2)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Button (WelcomeButton)" to="." method="_on_button_welcome_button_pressed"]
