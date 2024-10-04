@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bca3wt2f8plkr"
-path="res://.godot/imported/purple_majesty_half.png-faacce715d7f2254a602004f88e1a9a2.ctex"
+path="res://.godot/imported/purple_majesty_head.png-bce4ff3081c5ad87546ad363ef1bef74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://purple_majesty_half.png"
-dest_files=["res://.godot/imported/purple_majesty_half.png-faacce715d7f2254a602004f88e1a9a2.ctex"]
+source_file="res://potatoes/heads/purple_majesty_head.png"
+dest_files=["res://.godot/imported/purple_majesty_head.png-bce4ff3081c5ad87546ad363ef1bef74.ctex"]
 
 [params]
 

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dnb4bt3sqi8uy" path="res://InterfaceOutline.png" id="3_vixev"]
 [ext_resource type="Texture2D" uid="uid://40m827pn4r7y" path="res://evidence_panel.png" id="4_juy1b"]
 [ext_resource type="Texture2D" uid="uid://blc1si6nool21" path="res://world_panel.png" id="5_h10h2"]
-[ext_resource type="Texture2D" uid="uid://bca3wt2f8plkr" path="res://purple_majesty_half.png" id="7_0jh12"]
+[ext_resource type="Texture2D" uid="uid://bca3wt2f8plkr" path="res://potatoes/heads/purple_majesty_head.png" id="7_0jh12"]
 [ext_resource type="Texture2D" uid="uid://kjlwp8d6npbd" path="res://Potato_line.png" id="8_s0lh3"]
 
 [node name="Node2D" type="Node2D"]

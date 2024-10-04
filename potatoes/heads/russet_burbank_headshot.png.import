@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0w31jf11twuk"
-path="res://.godot/imported/russet_burbank_potato (2).png-7867baf3a87004267aa7342ce3e7f831.ctex"
+path="res://.godot/imported/russet_burbank_headshot.png-2de90b23248e725d17e1290c5e9889b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://potato_humanoids/heads/russet_burbank_potato (2).png"
-dest_files=["res://.godot/imported/russet_burbank_potato (2).png-7867baf3a87004267aa7342ce3e7f831.ctex"]
+source_file="res://potatoes/heads/russet_burbank_headshot.png"
+dest_files=["res://.godot/imported/russet_burbank_headshot.png-2de90b23248e725d17e1290c5e9889b5.ctex"]
 
 [params]
 
