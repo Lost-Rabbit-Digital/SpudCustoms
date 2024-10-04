@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byvocg6b8mh2x"
-path="res://.godot/imported/sweet_potato_head.png-019cd099c2a60e432e20af67ea588da7.ctex"
+uid="uid://bin3je3xdtceg"
+path="res://.godot/imported/red_bliss_head.png-84e83be6a8c9495c075334b4918d621b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://potatoes/heads/sweet_potato_head.png"
-dest_files=["res://.godot/imported/sweet_potato_head.png-019cd099c2a60e432e20af67ea588da7.ctex"]
+source_file="res://potatoes/heads/red_bliss_head.png"
+dest_files=["res://.godot/imported/red_bliss_head.png-84e83be6a8c9495c075334b4918d621b.ctex"]
 
 [params]
 

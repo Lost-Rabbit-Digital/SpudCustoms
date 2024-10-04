@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://blc1si6nool21" path="res://world_panel.png" id="5_h10h2"]
 [ext_resource type="Texture2D" uid="uid://bca3wt2f8plkr" path="res://potatoes/heads/purple_majesty_head.png" id="7_0jh12"]
 [ext_resource type="Texture2D" uid="uid://kjlwp8d6npbd" path="res://Potato_line.png" id="8_s0lh3"]
-[ext_resource type="PackedScene" uid="uid://c07b46wsf1fc1" path="res://PotatoPerson.tscn" id="9_bxbx1"]
+[ext_resource type="PackedScene" path="res://PotatoPerson.tscn" id="9_bxbx1"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_s4bva")
