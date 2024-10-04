@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c07b46wsf1fc1"]
+
+[ext_resource type="Texture2D" uid="uid://ktervefvniim" path="res://potatoes/bodies/russet_burbank_body.png" id="1_6fgjm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v1hgv"]
+radius = 30.0
+height = 116.0
+
+[node name="Node2D (PotatoPerson)" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(289, 173)
+texture = ExtResource("1_6fgjm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(289, 173)
+shape = SubResource("CapsuleShape2D_v1hgv")
