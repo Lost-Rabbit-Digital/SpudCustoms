@@ -95,7 +95,7 @@ scale = Vector2(1.64844, 1.64844)
 texture = ExtResource("7_fe5kd")
 
 [node name="PotatoLine" type="Sprite2D" parent="."]
-position = Vector2(648, 137)
+position = Vector2(648, 134)
 texture = ExtResource("8_s0lh3")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
