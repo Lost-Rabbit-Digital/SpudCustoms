@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=15 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://d03nqk75nmnqr" path="res://suspect_panel.png" id="2_f25cg"]
@@ -7,9 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://40m827pn4r7y" path="res://evidence_panel.png" id="4_juy1b"]
 [ext_resource type="Texture2D" uid="uid://blc1si6nool21" path="res://world_panel.png" id="5_h10h2"]
 [ext_resource type="Texture2D" uid="uid://bca3wt2f8plkr" path="res://potatoes/heads/purple_majesty_head.png" id="7_0jh12"]
+[ext_resource type="Texture2D" uid="uid://c1pt8aw6106rk" path="res://interaction_table_background.png" id="7_nqnif"]
 [ext_resource type="Texture2D" uid="uid://kjlwp8d6npbd" path="res://Potato_line.png" id="8_s0lh3"]
 [ext_resource type="PackedScene" uid="uid://c07b46wsf1fc1" path="res://PotatoPerson.tscn" id="9_bxbx1"]
 [ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
+[ext_resource type="Texture2D" uid="uid://dk0dn60svbwgm" path="res://potato_interaction_table.png" id="12_cxpwc"]
+[ext_resource type="Texture2D" uid="uid://cghrrmwbg3mxy" path="res://stamps.png" id="13_00po3"]
 
 [sub_resource type="Curve2D" id="Curve2D_x3wa3"]
 _data = {
@@ -30,11 +33,13 @@ position = Vector2(642, 360)
 texture = ExtResource("3_vixev")
 
 [node name="Sprite2D (Rules Panel)" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(196.014, 450.653)
 scale = Vector2(0.991713, 0.966143)
 texture = ExtResource("3_3ctpg")
 
 [node name="Sprite2D (Evidence Panel)" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(583.528, 454.051)
 scale = Vector2(0.994467, 0.977299)
 texture = ExtResource("4_juy1b")
@@ -48,6 +53,10 @@ texture = ExtResource("5_h10h2")
 position = Vector2(1032.5, 457.5)
 scale = Vector2(0.99723, 0.988584)
 texture = ExtResource("2_f25cg")
+
+[node name="InteractionTableBackground" type="Sprite2D" parent="."]
+position = Vector2(465, 454)
+texture = ExtResource("7_nqnif")
 
 [node name="Timer" type="Timer" parent="."]
 
@@ -131,6 +140,14 @@ curve = SubResource("Curve2D_x3wa3")
 
 [node name="Node2D (QueueManager)" type="Node2D" parent="."]
 script = ExtResource("10_a4p7n")
+
+[node name="PotatoInteractionTable" type="Sprite2D" parent="."]
+position = Vector2(1034, 616)
+texture = ExtResource("12_cxpwc")
+
+[node name="Stamps" type="Sprite2D" parent="."]
+position = Vector2(646, 364)
+texture = ExtResource("13_00po3")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Button (WelcomeButton)" to="." method="_on_button_welcome_button_pressed"]
