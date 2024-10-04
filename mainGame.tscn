@@ -32,6 +32,12 @@ offset_top = 50.0
 offset_right = 290.0
 offset_bottom = 100.0
 
+[node name="Label (RulesLabel)" type="Label" parent="."]
+offset_left = 997.0
+offset_top = 259.0
+offset_right = 1197.0
+offset_bottom = 639.0
+
 [node name="Label (TimeLabel)" type="Label" parent="."]
 offset_left = 90.0
 offset_top = 100.0
