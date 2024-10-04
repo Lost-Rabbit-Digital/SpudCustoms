@@ -31,6 +31,8 @@ func is_potato_valid(potato):
 			return false
 		elif rule == "Purple Majesty always welcome" and potato.type == "Purple Majesty":
 			return true
+		elif rule == "We need more eyes!" and potato.condition == "Extra Eyes":
+			return true
 	return true
 
 func _ready():
