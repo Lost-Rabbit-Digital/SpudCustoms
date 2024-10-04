@@ -23,12 +23,12 @@ position = Vector2(642, 360)
 texture = ExtResource("3_vixev")
 
 [node name="Sprite2D (Rules Panel)" type="Sprite2D" parent="."]
-position = Vector2(1097, 455)
+position = Vector2(196.014, 450.653)
 scale = Vector2(0.991713, 0.966143)
 texture = ExtResource("3_3ctpg")
 
 [node name="Sprite2D (Evidence Panel)" type="Sprite2D" parent="."]
-position = Vector2(705, 458)
+position = Vector2(583.528, 454.051)
 scale = Vector2(0.994467, 0.977299)
 texture = ExtResource("4_juy1b")
 
@@ -38,17 +38,17 @@ scale = Vector2(0.994467, 0.977299)
 texture = ExtResource("5_h10h2")
 
 [node name="Sprite2D (Suspect Panel)" type="Sprite2D" parent="."]
-position = Vector2(253, 461.5)
+position = Vector2(1032.5, 457.5)
 scale = Vector2(0.99723, 0.988584)
 texture = ExtResource("2_f25cg")
 
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Label (PotatoInfo)" type="Label" parent="."]
-offset_left = 91.0
-offset_top = 543.0
-offset_right = 391.0
-offset_bottom = 663.0
+offset_left = 888.0
+offset_top = 535.0
+offset_right = 1188.0
+offset_bottom = 655.0
 
 [node name="Label (JudgementInfo)" type="Label" parent="."]
 offset_left = 534.0
@@ -64,10 +64,10 @@ offset_right = 658.0
 offset_bottom = 311.0
 
 [node name="Label (RulesLabel)" type="Label" parent="."]
-offset_left = 997.0
-offset_top = 259.0
-offset_right = 1197.0
-offset_bottom = 639.0
+offset_left = 96.0139
+offset_top = 254.653
+offset_right = 296.014
+offset_bottom = 634.653
 autowrap_mode = 3
 
 [node name="Label (TimeLabel)" type="Label" parent="."]
@@ -77,21 +77,21 @@ offset_right = 659.0
 offset_bottom = 344.0
 
 [node name="Button (WelcomeButton)" type="Button" parent="."]
-offset_left = 498.0
-offset_top = 540.0
-offset_right = 698.0
-offset_bottom = 640.0
+offset_left = 376.528
+offset_top = 536.051
+offset_right = 576.528
+offset_bottom = 636.051
 text = "Welcome to Taterland!"
 
 [node name="Button (NoEntryButton)" type="Button" parent="."]
-offset_left = 731.0
-offset_top = 540.0
-offset_right = 931.0
-offset_bottom = 640.0
+offset_left = 609.528
+offset_top = 536.051
+offset_right = 809.528
+offset_bottom = 636.051
 text = "NO ENTRY!"
 
 [node name="RussetBurbankPotato(2)" type="Sprite2D" parent="."]
-position = Vector2(252, 419)
+position = Vector2(1031.5, 415)
 scale = Vector2(1.64844, 1.64844)
 texture = ExtResource("7_0jh12")
 
