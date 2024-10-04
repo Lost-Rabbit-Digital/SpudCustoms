@@ -5,6 +5,7 @@ var current_potato
 var score = 0
 var time_left = 10  # seconds per decision
 var current_rules = []
+var queue_manager: Node2D
 
 func generate_rules():
 	current_rules = [
@@ -38,6 +39,9 @@ func is_potato_valid(potato):
 	return true
 
 func _ready():
+	queue_manager = $"Node2D (QueueManager)"  # Make sure to add QueueManager as a child of Main
+	new_potato()
+	new_potato()
 	new_potato()
 	generate_rules()
 
@@ -48,6 +52,7 @@ func new_potato():
 	current_potato = generate_potato()
 	$"Label (PotatoInfo)".text = current_potato.description
 	$Timer.start(time_left)
+	queue_manager.add_potato()
 	
 func generate_potato():
 	# Generate random potato characteristics
@@ -110,7 +115,7 @@ func process_decision(allowed):
 		$"Label (JudgementInfo)".text = "You have caused unnecessary suffering, officer..."
 		score -= 1
 	$"Label (ScoreLabel)".text = "Score: " + str(score)
-	new_potato()
+	queue_manager.remove_potato()
 	if randi() % 5 == 0:  # 20% chance to change rules
 		generate_rules()
 

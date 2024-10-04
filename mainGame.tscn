@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=12 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://d03nqk75nmnqr" path="res://suspect_panel.png" id="2_f25cg"]
@@ -8,7 +8,14 @@
 [ext_resource type="Texture2D" uid="uid://blc1si6nool21" path="res://world_panel.png" id="5_h10h2"]
 [ext_resource type="Texture2D" uid="uid://bca3wt2f8plkr" path="res://potatoes/heads/purple_majesty_head.png" id="7_0jh12"]
 [ext_resource type="Texture2D" uid="uid://kjlwp8d6npbd" path="res://Potato_line.png" id="8_s0lh3"]
-[ext_resource type="PackedScene" path="res://PotatoPerson.tscn" id="9_bxbx1"]
+[ext_resource type="PackedScene" uid="uid://c07b46wsf1fc1" path="res://PotatoPerson.tscn" id="9_bxbx1"]
+[ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
+
+[sub_resource type="Curve2D" id="Curve2D_x3wa3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 93, 88, 0, 0, 0, 0, 249, 90, 0, 0, 0, 0, 252, 154, 0, 0, 0, 0, 87, 156, 0, 0, 0, 0, 88, 222, 0, 0, 0, 0, 279, 221, 0, 0, 0, 0, 297, 202, 0, 0, 0, 0, 325, 203)
+}
+point_count = 8
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_s4bva")
@@ -90,26 +97,37 @@ offset_right = 931.0
 offset_bottom = 640.0
 text = "NO ENTRY!"
 
-[node name="RussetBurbankPotato(2)" type="Sprite2D" parent="."]
+[node name="PotatoMugshot" type="Sprite2D" parent="."]
 position = Vector2(252, 419)
 scale = Vector2(1.64844, 1.64844)
 texture = ExtResource("7_0jh12")
 
 [node name="PotatoLine" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(648, 134)
 texture = ExtResource("8_s0lh3")
 
 [node name="Node2D (PotatoPerson)4" parent="." instance=ExtResource("9_bxbx1")]
+visible = false
 position = Vector2(288, 192)
 
 [node name="Node2D (PotatoPerson)2" parent="." instance=ExtResource("9_bxbx1")]
+visible = false
 position = Vector2(241, 84)
 
 [node name="Node2D (PotatoPerson)3" parent="." instance=ExtResource("9_bxbx1")]
+visible = false
 position = Vector2(189, 154)
 
 [node name="Node2D (PotatoPerson)" parent="." instance=ExtResource("9_bxbx1")]
+visible = false
 position = Vector2(110, 82)
+
+[node name="Path2D (SpuddyQueue)" type="Path2D" parent="."]
+curve = SubResource("Curve2D_x3wa3")
+
+[node name="Node2D (QueueManager)" type="Node2D" parent="."]
+script = ExtResource("10_a4p7n")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Button (WelcomeButton)" to="." method="_on_button_welcome_button_pressed"]
