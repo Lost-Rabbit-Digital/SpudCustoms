@@ -1,0 +1,21 @@
+
+Spud Customs Outline: 
+	
+Gameplay progresses in day cycles where you must process 10 immigrating spuds to complete the day. 
+
+Each processing allows for 10 seconds to determine whether or not entry is allowed. 
+
+There is a chance of a spud attemping to cross the border even after entry is disallowed. 
+
+The player can attempt to peel these spuds for MAJOR BONUS POINTS. 
+
+The UI should emulate Papers Please in it's presentation of decision making information, and flavor
+text for spud profile. 
+
+The player is only ever presented with two buttons, and the option to peel fleeing spuds. 
+
+
+
+Create an alert box containing what conditions customs officers should look out for. (Rotten, Boiled, Mashed, Frozen)
+Display the scores for allowing or rejecting potatoes 
+Show a display of queued potatoes in the upper left.
