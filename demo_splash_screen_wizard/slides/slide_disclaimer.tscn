@@ -3,12 +3,14 @@
 [ext_resource type="Script" path="res://addons/splash_screen_wizard/splash_screen_slide.gd" id="1_5xj3q"]
 [ext_resource type="Resource" uid="uid://dphiwpkixnobm" path="res://demo_splash_screen_wizard/transitions/fade_in.tres" id="2_074l1"]
 [ext_resource type="Resource" uid="uid://bt2wxjwarvrol" path="res://demo_splash_screen_wizard/transitions/fade_out.tres" id="3_m5f48"]
-[ext_resource type="FontFile" uid="uid://ci3ly3akg71he" path="res://windows_command_prompt.ttf" id="4_twfb4"]
+[ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="4_twfb4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_45uur"]
 font = ExtResource("4_twfb4")
-font_size = 65
-font_color = Color(0.482353, 0.223529, 0.0666667, 1)
+font_size = 42
+font_color = Color(0, 0.633, 0.598546, 1)
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
 
 [node name="SlideDisclaimer" type="Control"]
 layout_mode = 3
@@ -36,7 +38,13 @@ theme_override_constants/margin_bottom = 40
 [node name="Label" type="Label" parent="MarginContainer"]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
-text = "All characters and events in this demo, even those based on real people, are entirely fictional.  All celebrity voices are impersonated, poorly.  The following plugin contains coarse language and due to its content it should not be viewed by anyone."
+text = "This game, \"SpudCustoms,\" is an original work created by Lost Rabbit Digital that pays homage to various games in the document-checking genre. While inspired by games such as \"Papers, Please\" created by Lucas Pope, this is an independent creation that offers its own unique take on the genre using distinct characters, setting, and mechanics.
+
+Any similarities to existing games are coincidental or represent common elements within the genre. \"SpudCustoms\" is a parody work featuring anthropomorphic potatoes and is not intended to infringe upon or compete with any existing intellectual property.
+
+All original assets, characters, and story elements of \"SpudCustoms\" are © 2024 Lost Rabbit Digital. All rights reserved.
+
+This game is a work of fiction. Any resemblance to real persons, living or dead, or actual places, is purely coincidental."
 label_settings = SubResource("LabelSettings_45uur")
 horizontal_alignment = 1
 vertical_alignment = 1
