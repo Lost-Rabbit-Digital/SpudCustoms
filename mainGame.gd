@@ -133,6 +133,7 @@ func new_potato():
 	queue_manager.add_potato(potato_info)
 	update_potato_info_display(potato_info)
 	update_potato_texture(potato_info.type)
+	$PotatoPerson.update_potato(potato_info)
 	
 func update_potato_info_display(potato_info: Dictionary):
 	$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = """{name}""".format(potato_info)
