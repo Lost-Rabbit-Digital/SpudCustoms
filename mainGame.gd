@@ -19,6 +19,7 @@ var closed_passport: Sprite2D
 var open_passport: Sprite2D
 var interaction_table: Sprite2D
 var suspect_panel: Sprite2D
+var suspect: Sprite2D
 var is_passport_open = false
 
 # Stamp system
@@ -102,6 +103,7 @@ func _ready():
 	open_passport = $"Sprite2D (Open Passport)"
 	interaction_table = $InteractionTableBackground
 	suspect_panel = $"Sprite2D (Suspect Panel)"
+	suspect = $"Sprite2D (PotatoMugshot)"
 	
 	# Add closed passport to draggable sprites
 	draggable_sprites.append(closed_passport)
@@ -110,7 +112,11 @@ func _ready():
 	open_passport.visible = false
 
 func _process(delta):
-	pass
+	var mouse_pos = get_global_mouse_position()
+	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)):
+		$"Sprite2D (Closed Passport Icon)/GivePromptDialogue".visible = true
+	else:
+		$"Sprite2D (Closed Passport Icon)/GivePromptDialogue".visible = false
 
 func new_potato():
 	var potato_info = {
@@ -265,15 +271,26 @@ func _input(event):
 				dragged_sprite = find_topmost_sprite_at(mouse_pos)
 				if dragged_sprite:
 					drag_offset = mouse_pos - dragged_sprite.global_position
+						
 			else:
 				if dragged_sprite == closed_passport:
+					$"Sprite2D (Closed Passport Icon)/GivePromptDialogue".visible = false
 					var drop_pos = get_global_mouse_position()
 					if interaction_table.get_rect().has_point(interaction_table.to_local(drop_pos)):
 						open_passport_action()
+					if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
+						close_passport_action()
+					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
+						close_passport_action()
+						new_potato()
 				elif dragged_sprite == open_passport:
+					$"Sprite2D (Closed Passport Icon)/GivePromptDialogue".visible = false
 					var drop_pos = get_global_mouse_position()
 					if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
 						close_passport_action()
+					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
+						close_passport_action()
+						new_potato()
 				dragged_sprite = null
 		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			if dragged_sprite and "Stamp" in dragged_sprite.name:
