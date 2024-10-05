@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg7aiv7jsd6pg"]
+
+[ext_resource type="Script" path="res://menus/options_menu.gd" id="1_oyqf7"]
+[ext_resource type="FontFile" uid="uid://ci3ly3akg71he" path="res://windows_command_prompt.ttf" id="2_ayndp"]
+
+[sub_resource type="Theme" id="Theme_7topn"]
+default_font = ExtResource("2_ayndp")
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oyqf7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -68.0
+offset_right = 35.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_7topn")
+text = "Begin a new game"
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_7topn")
+text = "Change settings"
+
+[node name="HowToButton" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_7topn")
+text = "How to play"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_7topn")
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
