@@ -57,17 +57,18 @@ scale = Vector2(0.994467, 0.977299)
 texture = ExtResource("4_juy1b")
 
 [node name="Sprite2D (World Panel)" type="Sprite2D" parent="."]
-position = Vector2(642, 135)
-scale = Vector2(0.994467, 0.977299)
+position = Vector2(639.45, 119)
+scale = Vector2(1.10044, 1.04808)
 texture = ExtResource("5_h10h2")
 
 [node name="Sprite2D (Suspect Panel)" type="Sprite2D" parent="."]
-position = Vector2(1031.5, 460)
-scale = Vector2(0.99723, 0.988584)
+position = Vector2(1076.47, 473.5)
+scale = Vector2(1.06925, 1.07534)
 texture = ExtResource("2_f25cg")
 
 [node name="InteractionTableBackground" type="Sprite2D" parent="."]
-position = Vector2(465, 460)
+position = Vector2(442, 473.5)
+scale = Vector2(1.10204, 1.08525)
 texture = ExtResource("7_nqnif")
 
 [node name="Timer" type="Timer" parent="."]
@@ -80,7 +81,7 @@ offset_bottom = 674.0
 autowrap_mode = 3
 
 [node name="Sprite2D (PotatoMugshot)" type="Sprite2D" parent="."]
-position = Vector2(1025, 352)
+position = Vector2(1062, 365)
 scale = Vector2(1.64844, 1.64844)
 texture = ExtResource("7_0jh12")
 
