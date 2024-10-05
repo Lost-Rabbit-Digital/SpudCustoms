@@ -85,13 +85,13 @@ func new_potato():
 	$Timer.start(time_left)
 	
 func update_potato_info_display(potato_info: Dictionary):
-	$"Label (PotatoInfo)".text = """Name: {name}
-	Date Of Birth: {date_of_birth}
-	Sex: {sex} 
-	Country Of Issue: {country_of_issue}
-	Expiration Date: {expiration_date} 
-	Type: {type}
-	Condition: {condition}
+	$"Label (PotatoInfo)".text = """{name}
+	{date_of_birth}
+	{sex} 
+	{country_of_issue}
+	{expiration_date} 
+	{type}
+	{condition}
 	""".format(potato_info)
 
 func generate_potato():
@@ -105,8 +105,14 @@ func generate_potato():
 	return potato
 
 func get_random_name():
-	var first_names = ["Spud", "Tater", "Mash", "Spudnik", "Tater Tot", "Mr. Potato", "Chip", "Murph", "Yam", "Tato", "Spuddy", "Tuber"]
-	var last_names = ["Ouwiw", "Sehi", "Sig", "Heechou", "Oufug", "Azej", "Ekepa", "Nuz", "Chegee", "Kusee", "Houf", "Fito", "Mog", "Urife"]
+	var first_names = [
+		"Spud", "Tater", "Mash", "Spudnik", "Tater Tot", "Mr. Potato", "Chip", 
+		"Murph", "Yam", "Tato", "Spuddy", "Tuber"
+		]
+	var last_names = [
+		"Ouwiw", "Sehi", "Sig", "Heechou", "Oufug", "Azej", 
+		"Ekepa", "Nuz", "Chegee", "Kusee", "Houf", "Fito", "Mog", "Urife"
+		]
 	return "%s %s" % [first_names[randi() % first_names.size()], last_names[randi() % last_names.size()]]
 
 func get_random_type():
@@ -114,14 +120,18 @@ func get_random_type():
 	return types[randi() % types.size()]
 
 func get_random_condition():
-	var conditions = ["Fresh", "Extra Eyes", "Peeled", "Rotten", "Sprouted", "Dehydrated", "Frozen"]
+	var conditions = ["Fresh", "Extra Eyes", "Rotten", "Sprouted", "Dehydrated", "Frozen"]
 	return conditions[randi() % conditions.size()]
 
 func get_random_sex():
 	return ["Male", "Female"][randi() % 2]
 	
 func get_random_country():
-	var countries = ["Spudland", "Potatopia", "Tuberstan", "North Yamnea", "Spuddington"]
+	var countries = [
+		"Spudland", "Potatopia", "Tuberstan", "North Yamnea", "Spuddington", 
+		"Tater's Cross", "Mash Meadows", "Tuber Valley", "Chip Hill", 
+		"Murphy's Landing", "Colcannon Corner", "Pratie Point"
+		]
 	return countries[randi() % countries.size()]
 	
 func get_random_date(years_ago_start: int, years_ago_end: int) -> String:
