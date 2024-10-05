@@ -183,7 +183,7 @@ func get_random_name():
 		"Murph", "Yam", "Tato", "Spuddy", "Tuber"
 		]
 	var last_names = [
-		"Ouwiw", "Sehi", "Sig", "Heechou", "Oufug", "Azej", 
+		"Ouwiw", "Sehi", "Sig", "Heechou", "Oufug", "Azej", "Holly",
 		"Ekepa", "Nuz", "Chegee", "Kusee", "Houf", "Fito", "Mog", "Urife"
 		]
 	return "%s %s" % [first_names[randi() % first_names.size()], last_names[randi() % last_names.size()]]

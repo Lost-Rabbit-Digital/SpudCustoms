@@ -111,7 +111,7 @@ scale = Vector2(1.19563, 1.05853)
 texture = ExtResource("7_rsfsr")
 
 [node name="Sprite2D (Suspect Panel)" type="Sprite2D" parent="."]
-position = Vector2(1074.47, 472)
+position = Vector2(1074, 472)
 scale = Vector2(1.05816, 1.06849)
 texture = ExtResource("2_f25cg")
 
@@ -130,6 +130,7 @@ offset_bottom = 674.0
 autowrap_mode = 3
 
 [node name="Sprite2D (PotatoMugshot)" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1062, 365)
 scale = Vector2(1.64844, 1.64844)
 texture = ExtResource("7_0jh12")
@@ -171,6 +172,7 @@ curve = SubResource("Curve2D_x3wa3")
 script = ExtResource("10_a4p7n")
 
 [node name="Sprite2D (Passport)" type="Sprite2D" parent="."]
+visible = false
 z_index = 1
 position = Vector2(551, 448)
 texture = ExtResource("12_q7tid")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dwyioid5nfmd5"
+path="res://.godot/imported/froggy_phrase (7).wav-062104f43cd56eea6ff96bf9cf6ac20b.sample"
+
+[deps]
+
+source_file="res://audio/froggy_phrase (7).wav"
+dest_files=["res://.godot/imported/froggy_phrase (7).wav-062104f43cd56eea6ff96bf9cf6ac20b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

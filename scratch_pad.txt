@@ -19,9 +19,7 @@ func generate_spuddy():
 
 Done: Split out the customs office and megaphone and create sprites for them so the potatoes will appear to go inside the office
 
-
-
-When the player clicks on the megaphone Sprite2D on top of the customs office, the next PotatoPerson is taken from the front of the SpuddyQueue and QueueManager and moved along the Path2D (EnterOfficePath), then the PotatoPerson is removed. 
+When the player clicks on the Sprite2D (Megaphone) on top of the customs office in mainGame.tscn, the next PotatoPerson is removed from the front of the Path2D (SpuddyQueue) and the QueueManager, and the PotatoPerson is moved along the Path2D (EnterOfficePath), then the PotatoPerson is removed and the Sprite2D (PotatoMugshot) slides onto the Sprite2D (Suspect Panel) from the right and goes from a dark black outline to the regular texture. Then the Sprite2D (Close Passport) is animated going down from the Sprite2D (PotatoMugshot) and settling at the bottom of the InteractionTableBackground for the player to pick up. 
 
 Initially the Sprite2D Passport is hidden until a PotatoPerson is called into the customs office, at which point the child Sprite2D (Close Passport) is animated going across the suspect panel and settling at the bottom for the player to pick up. 
 
@@ -32,8 +30,6 @@ Show no information for the potato to start, fade them into the right hand box, 
 Display all potato information on the entry visa, scale it up to view in evidence drawer. Close it after stamping and turn it red or green. 
 
 Show name above date of birth
-
-Show potato type below expiration
 
 Create Label (DateLabel) and add to the Potato Customs Table so the player can see the current date and judge if passports are expired.
 
