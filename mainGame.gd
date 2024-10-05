@@ -6,6 +6,9 @@ var score = 0
 var time_left = 5  # seconds per decision
 var current_rules = []
 var queue_manager: Node2D
+var dragging = false
+var drag_start = Vector2()
+var drag_sprite
 
 func generate_rules():
 	current_rules = [
@@ -64,7 +67,7 @@ func _ready():
 	queue_manager = $"Node2D (QueueManager)"  # Make sure to add QueueManager as a child of Main
 	generate_rules()
 	new_potato()
-	
+	drag_sprite = $"Sprite2D (Open Passport)"
 
 func _process(delta):
 	$"Label (TimeLabel)".text = "Time: " + str(int($Timer.time_left))
@@ -222,3 +225,23 @@ func update_potato_texture(potato_type: String):
 		
 	if texture_path_passport_photo != "":
 		$"Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = load(texture_path_passport_photo)
+
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				# Start dragging
+				var mouse_pos = get_global_mouse_position()
+				if drag_sprite.get_rect().has_point(drag_sprite.to_local(mouse_pos)):
+					dragging = true
+					drag_start = mouse_pos - drag_sprite.global_position
+			else:
+				# Stop dragging
+				dragging = false
+		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			# Drop the sprite
+			dragging = false
+	
+	elif event is InputEventMouseMotion and dragging:
+		# Update sprite position while dragging
+		drag_sprite.global_position = get_global_mouse_position() - drag_start
