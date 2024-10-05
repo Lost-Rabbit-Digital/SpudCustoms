@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://do8qjt2cvlgwr"]
 
 [ext_resource type="Script" path="res://menus/confirmation_scene.gd" id="1_7mxja"]
-[ext_resource type="FontFile" uid="uid://ci3ly3akg71he" path="res://windows_command_prompt.ttf" id="1_47ds0"]
+[ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="1_47ds0"]
 
 [sub_resource type="Theme" id="Theme_2g8j7"]
 default_font = ExtResource("1_47ds0")
@@ -18,46 +18,38 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7mxja")
 
-[node name="Label" type="Label" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -97.5
-offset_top = -43.79
-offset_right = 97.5
-offset_bottom = -20.79
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_2g8j7")
-text = "Are you sure you want to quit?"
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -101.5
-offset_top = -20.0
-offset_right = 101.5
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
 alignment = 1
 
-[node name="YesButton" type="Button" parent="HBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_2g8j7")
+text = "Are you sure you want to quit?"
+horizontal_alignment = 1
+
+[node name="YesButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_khmy2")
 text = "Yes"
 
-[node name="NoButton" type="Button" parent="HBoxContainer"]
+[node name="NoButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_khmy2")
 text = "No"
 
-[connection signal="pressed" from="HBoxContainer/YesButton" to="." method="_on_yes_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/NoButton" to="." method="_on_no_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/YesButton" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/NoButton" to="." method="_on_no_button_pressed"]

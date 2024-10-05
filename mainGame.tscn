@@ -117,7 +117,6 @@ scale = Vector2(1.05816, 1.06849)
 texture = ExtResource("2_f25cg")
 
 [node name="SuspectPanelFront" type="Sprite2D" parent="Sprite2D (Suspect Panel)"]
-z_index = 2
 z_as_relative = false
 texture = ExtResource("10_foucb")
 
