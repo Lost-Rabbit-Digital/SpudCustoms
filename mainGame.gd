@@ -29,7 +29,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			return true
 		elif rule == "We need more eyes!" and potato_info.condition == "Extra Eyes":
 			return true
-		elif rule == "No Russet potatoes allowed" and potato_info.type == "Russet":
+		elif rule == "No Russet potatoes allowed" and potato_info.type == "Russet Burbank":
 			return false
 		elif rule == "All potatoes must be Fresh" and potato_info.condition != "Fresh":
 			return false
@@ -41,11 +41,6 @@ func _ready():
 	queue_manager = $"Node2D (QueueManager)"  # Make sure to add QueueManager as a child of Main
 	generate_rules()
 	new_potato()
-	await get_tree().create_timer(2).timeout
-	new_potato()
-	await get_tree().create_timer(2).timeout
-	new_potato()
-	await get_tree().create_timer(2).timeout
 	
 
 func _process(delta):
@@ -59,6 +54,7 @@ func new_potato():
 	}
 	queue_manager.add_potato(potato_info)
 	update_potato_info_display(potato_info)
+	update_potato_texture(potato_info.type)
 	$Timer.start(time_left)
 	
 func update_potato_info_display(potato_info: Dictionary):
@@ -75,30 +71,9 @@ func generate_potato():
 	return potato
 
 func get_random_name():
-	var first_name = [
-	"Spud", "Tater", "Mash", "Spudnik", "Tater Tot", "Mr. Potato", "Chip", "Murph", "Yam", "Tato", "Spuddy", "Tuber"
-	]
-	var last_name = [
-	"Ouwiw", "Sehi", "Sig", "Heechou", "Oufug", "Azej", "Ekepa", "Nuz", "Chegee", "Kusee", "Houf", "Fito", "Mog", "Urife", 
-	"Pel", "Icekee", "Vuze", "Ivaj", "Edusto", "Douki", "Gere", "Wic", "Amur", "Sup", "Wofu", "Ezew", "Guko", "Huc", "Ruho", 
-	"Oukem", "Ohevo", "Epeer", "Inor", "Ileew", "Gor", "Vahu", "Ruhi", "Ecimu", "Mel", "Weechu", "Oumaze", "Tos", "Stife",
-	"Kuj", "Nedou", "Uguce", "Dorou", "Fouwee", "Neej", "Itoudee", "Soka", "Afidee", "Amaj", "Cad", "Ikacho", "Zebo", "Ukidi", 
-	"Osehee", "Etaje", "Wouk", "Nout", "Gic", "Houcee", "Astowa", "Feej", "Ceb", "Ogaha", "Von", "Etaf", "Cil", "Oudire", "Udeg", 
-	"Cukee", "Sovi", "Chabee", "Astihi", "Icobo", "Bouve", "Ejiwa", "Wup", "Chistou", "Jouhou", "Stukee", "Inouj", "Opob", "Liz", 
-	"Azab", "Couchee", "Ovucha", "Omast", "Imib", "Ipist", "Luwe", "Ivigi", "Rich", "Omucou", "Oujeet", "Arouj", "Tipou", 
-	"Roufe", "Ocheesou", "Ogudou", "Fest", "Outomo", "Vicu", "Houte", "Imowee", "Behu", "Ajoj", "Ifouzu", "Miz", "Istich", 
-	"Keew", "Reep", "Elus", "Chag", "Joudo", "Ijeema", "Ekeek", "Geew", "Ukuc", "Fevu", "Wape", "Cip", "Ipoun", "Ehij", 
-	"Ousteeca", "Noum", "Kif", "Enoud", "Oupago", "Owapu", "Ebutee", "Mowe", "Enur", "Ikomee", "Ewoc", "Outustou", "Uwustee", 
-	"Oreesti", "Ajosee", "Reenou", "Sog", "Ukop", "Cele", "Louc", "Roj", "Uchizo", "Cojee", "Bup", "Oudees", "Bucha", "Peej", 
-	"Steejee", "Icefou", "Aduk", "Awubu", "Hufou", "Alaree", "Oroum", "Stoumo", "Jesa", "Ouvas", "Teeb", "Chouta", "Koh", 
-	"Hufu", "Icuve", "Chadou", "Outoul", "Peba", "Oufeeze", "Teel", "Fouj", "Jus", "Doup", "Touwu", "Ouposu", "Ofum", 
-	"Uvosou", "Echuchi", "Par", "Homee", "Echas", "Ruh", "Gozo", "Stog", "Zoumo", "Nag", "Ougibe", "Suw", "Noba", "Ouzeeba", 
-	"Ijouv", "Zimou", "Abaci", "Gadu", "Uwast", "Ekeh", "Ofehe"
-	]
-	
-	var full_name = "%s %s"
-	
-	return full_name % [first_name[randi() % first_name.size()], last_name[randi() % last_name.size()]]
+	var first_names = ["Spud", "Tater", "Mash", "Spudnik", "Tater Tot", "Mr. Potato", "Chip", "Murph", "Yam", "Tato", "Spuddy", "Tuber"]
+	var last_names = ["Ouwiw", "Sehi", "Sig", "Heechou", "Oufug", "Azej", "Ekepa", "Nuz", "Chegee", "Kusee", "Houf", "Fito", "Mog", "Urife"]
+	return "%s %s" % [first_names[randi() % first_names.size()], last_names[randi() % last_names.size()]]
 
 func get_random_type():
 	var types = ["Russet Burbank", "Yukon Gold", "Sweet Potato", "Purple Majesty", "Red Bliss"]
@@ -106,7 +81,6 @@ func get_random_type():
 
 func get_random_condition():
 	var conditions = ["Fresh", "Slightly Sprouted", "Extra Eyes", "Peeled", "Rotten", "Sprouted", "Mashed", "Baked", "Fried", "Boiled", "Dehydrated", "Frozen"]
-	conditions = ["Fresh", "Slightly Sprouted", "Rotten", "Peeled"]
 	return conditions[randi() % conditions.size()]
 
 
@@ -144,11 +118,19 @@ func _on_timer_timeout():
 	$"Label (ScoreLabel)".text = "Score: " + str(score)
 	new_potato()
 
-# Main.tscn (Main scene structure)
-# - Node2D (root)
-#   - Label (PotatoInfo)
-#   - Button (WelcomeButton)
-#   - Button (NoEntryButton)
-#   - Label (ScoreLabel)
-#   - Label (TimeLabel)
-#   - Timer
+func update_potato_texture(potato_type: String):
+	var texture_path = ""
+	match potato_type:
+		"Purple Majesty":
+			texture_path = "res://potatoes/heads/purple_majesty_head.png"
+		"Red Bliss":
+			texture_path = "res://potatoes/heads/red_bliss_head.png"
+		"Russet Burbank":
+			texture_path = "res://potatoes/heads/russet_burbank_head.png"
+		"Sweet Potato":
+			texture_path = "res://potatoes/heads/sweet_potato_head.png"
+		"Yukon Gold":
+			texture_path = "res://potatoes/heads/yukon_gold_head.png"
+	
+	if texture_path != "":
+		$"Sprite2D (PotatoMugshot)".texture = load(texture_path)
