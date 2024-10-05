@@ -262,7 +262,6 @@ func _input(event):
 		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			if dragged_sprite and "Stamp" in dragged_sprite.name:
 				apply_stamp(dragged_sprite)
-			# Removed the line that set dragged_sprite to null
 	
 	elif event is InputEventMouseMotion and dragged_sprite:
 		dragged_sprite.global_position = get_global_mouse_position() - drag_offset
@@ -294,7 +293,6 @@ func apply_stamp(stamp):
 		# Hide the original stamp and make it non-draggable
 		stamp.visible = false
 		draggable_sprites.erase(stamp)
-		dragged_sprite = null
 		
 		# Create a temporary visual stamp that moves down
 		var temp_stamp = Sprite2D.new()
