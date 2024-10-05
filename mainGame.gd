@@ -304,7 +304,7 @@ func open_passport_action():
 	$"Sprite2D (Passport)/Sprite2D (Close Passport)".visible = false
 	
 func close_passport_action():
-	$"Sprite2D (Passport)".texture = preload("res://closed_passport.png")
+	$"Sprite2D (Passport)".texture = preload("res://documents/closed_passport_small.png")
 	$"Sprite2D (Passport)/Sprite2D (Open Passport)".visible = false
 	$"Sprite2D (Passport)/Sprite2D (Close Passport)".visible = true
 	
@@ -353,7 +353,7 @@ func apply_stamp(stamp):
 		final_stamp.position = stamped_object.to_local(final_stamp_position)
 		final_stamp.z_index = APPLIED_STAMP_Z_INDEX
 		final_stamp.modulate.a = 0  # Start invisible
-		stamped_object.add_child(final_stamp)
+		$"Sprite2D (Passport)/Sprite2D (Open Passport)".add_child(final_stamp)
 		
 		# Create and start the animation
 		var tween = create_tween()

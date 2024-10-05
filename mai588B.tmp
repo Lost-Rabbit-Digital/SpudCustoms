@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://c1pt8aw6106rk" path="res://interaction_table_background.png" id="7_nqnif"]
 [ext_resource type="Texture2D" uid="uid://kjlwp8d6npbd" path="res://Potato_line.png" id="8_s0lh3"]
 [ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
-[ext_resource type="Texture2D" uid="uid://fiti6rc52g72" path="res://documents/passport-old.png" id="12_q7tid"]
 [ext_resource type="FontFile" uid="uid://ci3ly3akg71he" path="res://windows_command_prompt.ttf" id="13_wxn24"]
 [ext_resource type="Texture2D" uid="uid://bycv0gufcogbx" path="res://potatoes/document_photos/purple_majesty.png" id="14_al1cy"]
 [ext_resource type="Texture2D" uid="uid://bnn4c6y1lovs1" path="res://stamps/rejection_stamp.png" id="14_pjwbq"]
@@ -23,6 +22,9 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1215, 85, 0, 0, 0, 0, 1184, 91, 0, 0, 0, 0, 1138, 82, 0, 0, 0, 0, 1093, 90, 0, 0, 0, 0, 1039, 92, 0, 0, 0, 0, 1036, 123, 0, 0, 0, 0, 1041, 153, 0, 0, 0, 0, 1081, 149, 0, 0, 0, 0, 1123, 159, 0, 0, 0, 0, 1164, 154, 0, 0, 0, 0, 1201, 157, 0, 0, 0, 0, 1196, 185, 0, 0, 0, 0, 1209, 225, 0, 0, 0, 0, 1165, 215, 0, 0, 0, 0, 1109, 226, 0, 0, 0, 0, 1070, 216, 0, 0, 0, 0, 1042, 227, 0, 0, 0, 0, 1005, 218, 0, 0, 0, 0, 991, 195, 0, 0, 0, 0, 959, 204)
 }
 point_count = 20
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_25c80"]
+load_path = "res://.godot/imported/passport_collision_placeholder.png-253dccfb7ed0114763fe4ca312d5215e.ctex"
 
 [sub_resource type="Theme" id="Theme_cb0mk"]
 default_font = ExtResource("13_wxn24")
@@ -110,16 +112,15 @@ script = ExtResource("10_a4p7n")
 
 [node name="Sprite2D (Passport)" type="Sprite2D" parent="."]
 position = Vector2(551, 448)
-texture = ExtResource("12_q7tid")
+texture = SubResource("CompressedTexture2D_25c80")
 
 [node name="Sprite2D (Close Passport)" type="Sprite2D" parent="Sprite2D (Passport)"]
-visible = false
 position = Vector2(-34.6184, 40.1346)
 rotation = -0.137881
 scale = Vector2(0.413016, 0.413016)
 
 [node name="GivePromptDialogue" type="Sprite2D" parent="Sprite2D (Passport)/Sprite2D (Close Passport)"]
-position = Vector2(357.294, -256.302)
+position = Vector2(421.301, -347.641)
 rotation = 0.137881
 scale = Vector2(2.42121, 2.42121)
 texture = ExtResource("17_mr1ft")
