@@ -125,7 +125,8 @@ curve = SubResource("Curve2D_x3wa3")
 script = ExtResource("10_a4p7n")
 
 [node name="PotatoInteractionTable" type="Sprite2D" parent="."]
-position = Vector2(1034, 616)
+position = Vector2(1038, 592)
+scale = Vector2(1.03784, 0.780994)
 texture = ExtResource("12_cxpwc")
 
 [node name="Stamps" type="Sprite2D" parent="."]

@@ -1,0 +1,62 @@
+func generate_spuddy():
+	heads = []
+	eyebrows = []
+	noses = []
+	face_hairs = []
+	mouths = []
+	glasses = [] 
+	hats = []
+
+
+	stamp interaction instead of buttons
+
+	Make a papers object appear below the mugshot that the user has to click
+
+	When clicked, the book object morphs into an opened document showing the information for the potato immigrating.
+
+	An approval stamp and rejection stamp that you pick up with left click, drag over the document to set approve or reject status. 
+
+	Click the document and drag the document onto the potato to return the document.
+
+Done: Change the texture for Sprite2D (PotatoMugshot) to match the type of potato using these headshot paths: 
+res://potatoes/heads/purple_majesty_head.png
+res://potatoes/heads/red_bliss_head.png
+res://potatoes/heads/russet_burbank_head.png
+res://potatoes/heads/sweet_potato_head.png
+res://potatoes/heads/yukon_gold_head.png
+
+Done: Update the queue_manager to store potato information about each potato in the queue including condition, type, and name.
+
+Update the potato information to include sex, country of issue, date of birth, expiration date.
+
+Update rules to include potato information.
+
+Display all potato information on the entry visa, scale it up to view in evidence drawer. Close it after stamping and turn it red or green. 
+
+Show name above date of birth
+Show type below expiration
+
+Show no information for the potato to start, fade them into the right hand box, then animate them passing their documents through, and when the player clicks the documents, then show the information of the oldest potato in the queue.
+
+Replace the buttons for Welcome to Taterland and No Entry with stamps that the player can pick up and use to stamp the potato person's documents, punch down stamp with right click while dragging.
+
+Update the process_decision logic to make the oldest potato move through the customs office and all the way to the left side of the screen after their immigration decision is made and is positive.
+
+Update the process_decision logic to make the oldest potato move through the customs office get blown up with fireball particle effects after their immigration decision is made and is negative.
+
+
+Potato walks up, puts in document. 
+Player clicks document. 
+Document displays in evidence drawer. 
+Player reviews document. 
+Player clicks stamp drawer to bring stamps into evidence drawer. 
+Player clicks approve or reject stamp and a stamp comes down on the passport. 
+Passport has a transparent stamp applied, folds up, and flies back to potato. 
+Potato fades out and appears to left of customs office. 
+Potato walks off-screen to left or is destroyed mid-way.
+
+Change the texture of the Sprite2D on the PotatoPerson to the appropriate type based on their potato_info.type
+
+Outline sound effects
+Outline music
+Set up main menu, settings menu, credits menu, how to play menu
