@@ -70,7 +70,7 @@ texture = ExtResource("2_f25cg")
 position = Vector2(465, 460)
 texture = ExtResource("7_nqnif")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="SpawnTimer" type="Timer" parent="."]
 
 [node name="Label (JudgementInfo)" type="Label" parent="."]
 offset_left = 505.0
@@ -175,4 +175,4 @@ z_as_relative = false
 position = Vector2(1, 88)
 texture = ExtResource("16_qj41b")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]

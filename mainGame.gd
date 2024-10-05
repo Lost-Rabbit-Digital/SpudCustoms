@@ -6,6 +6,11 @@ var score = 0
 var current_rules = []
 var queue_manager: Node2D
 
+# Potato spawn manager
+var potato_count = 0
+var max_potatoes = 20
+@onready var spawn_timer = $SpawnTimer
+
 # Dragging system
 var draggable_sprites = []
 var dragged_sprite = null
@@ -81,6 +86,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 func _ready():
 	queue_manager = $"Node2D (QueueManager)"  # Make sure to add QueueManager as a child of Main
 	generate_rules()
+	setup_spawn_timer()
 	new_potato()
 	draggable_sprites = [
 		$"Sprite2D (Passport)",
@@ -106,6 +112,27 @@ func _ready():
 	# Add closed passport to draggable sprites
 	draggable_sprites.append(passport)
 
+func setup_spawn_timer():
+	spawn_timer = Timer.new()
+	spawn_timer.set_wait_time(3.0)
+	spawn_timer.set_one_shot(false)
+	spawn_timer.connect("timeout", Callable(self, "_on_SpawnTimer_timeout"))
+	add_child(spawn_timer)
+	spawn_timer.start()
+
+func _on_SpawnTimer_timeout():
+	if queue_manager.potatoes.size() < queue_manager.max_potatoes:
+		#spawn_new_potato()
+		new_potato()
+	else:
+		spawn_timer.stop()
+
+func spawn_new_potato():
+	var potato_info = generate_potato_info()
+	queue_manager.add_potato(potato_info)
+	update_potato_info_display(potato_info)
+	update_potato_texture(potato_info.type)
+
 func _process(delta):
 	var mouse_pos = get_global_mouse_position()
 	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == false:
@@ -120,6 +147,17 @@ func _process(delta):
 	if interaction_table.get_rect().has_point(interaction_table.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == false:
 		open_passport_action()
 
+func generate_potato_info():
+	return {
+		"name": get_random_name(),
+		"type": get_random_type(),
+		"condition": get_random_condition(),
+		"sex": get_random_sex(), 
+		"country_of_issue": get_random_country(),
+		"date_of_birth": get_random_date(1, 10),
+		"expiration_date": get_random_date(0, 2)
+	}
+
 func new_potato():
 	var potato_info = {
 		"name": get_random_name(),
@@ -133,9 +171,27 @@ func new_potato():
 	queue_manager.add_potato(potato_info)
 	update_potato_info_display(potato_info)
 	update_potato_texture(potato_info.type)
-	$PotatoPerson.update_potato(potato_info)
+	
+	# Find the most recently created PotatoPerson
+	var potato_people = get_tree().get_nodes_in_group("PotatoPerson")
+	if potato_people.size() > 0:
+		var latest_potato_person = potato_people[potato_people.size() - 1]
+		latest_potato_person.update_potato(potato_info)
+	else:
+		print("Warning: No PotatoPerson found in the scene")
+	
+	if randi() % 5 == 0:  # 20% chance to change rules
+		generate_rules()
+	#$"Node2D (PotatoPerson)".update_potato(potato_info)
 	
 func update_potato_info_display(potato_info: Dictionary):
+	var front_potato = queue_manager.get_front_potato_info()
+	if front_potato.is_empty():
+		# Clear the display if there are no potatoes
+		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = ""
+		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = ""
+		return
+			
 	$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = """{name}""".format(potato_info)
 	$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = """{date_of_birth}
 	{sex} 
@@ -230,8 +286,10 @@ func process_decision(allowed):
 		score -= 1
 	
 	$"Label (ScoreLabel)".text = "Score: " + str(score)
-	new_potato()
-	
+
+	if queue_manager.potatoes.size() < queue_manager.max_potatoes and spawn_timer.is_stopped():
+		spawn_timer.start()
+		
 	if randi() % 5 == 0:  # 20% chance to change rules
 		generate_rules()
 
@@ -240,6 +298,13 @@ func peek_front_potato():
 	# Use front_potato_info as needed
 
 func update_potato_texture(potato_type: String):
+	var front_potato = queue_manager.get_front_potato_info()
+	if front_potato.is_empty():
+		# Clear the texture if there are no potatoes
+		$"Sprite2D (PotatoMugshot)".texture = null
+		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = null
+		return
+		
 	var texture_path = ""
 	var texture_path_passport_photo = ""
 	match potato_type:
