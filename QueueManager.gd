@@ -3,7 +3,7 @@ extends Node2D
 var PotatoPerson = preload("res://PotatoPerson.tscn")
 var path: Path2D
 var curve: Curve2D
-var max_potatoes: int = 14
+var max_potatoes: int = 10
 var potatoes: Array = []
 var spawn_point: Vector2
 
