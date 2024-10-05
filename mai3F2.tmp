@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=21 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://d03nqk75nmnqr" path="res://suspect_panel.png" id="2_f25cg"]
@@ -11,12 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://kjlwp8d6npbd" path="res://Potato_line.png" id="8_s0lh3"]
 [ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
 [ext_resource type="Texture2D" uid="uid://fiti6rc52g72" path="res://documents/passport-old.png" id="12_q7tid"]
-[ext_resource type="Script" path="res://addons/splash_screen_wizard/splash_screen.gd" id="13_h26qa"]
 [ext_resource type="FontFile" uid="uid://ci3ly3akg71he" path="res://windows_command_prompt.ttf" id="13_wxn24"]
 [ext_resource type="Texture2D" uid="uid://bycv0gufcogbx" path="res://potatoes/document_photos/purple_majesty.png" id="14_al1cy"]
-[ext_resource type="PackedScene" uid="uid://ckqiyl367tw67" path="res://demo_splash_screen_wizard/slides/slide_disclaimer.tscn" id="14_fb6ap"]
 [ext_resource type="Texture2D" uid="uid://bnn4c6y1lovs1" path="res://stamps/rejection_stamp.png" id="14_pjwbq"]
-[ext_resource type="PackedScene" uid="uid://cxqpgg8ax8bqv" path="res://demo_splash_screen_wizard/slides/slide_godot.tscn" id="15_85mjy"]
 [ext_resource type="Texture2D" uid="uid://bsbovhtxyeupa" path="res://stamps/approval_stamp.png" id="15_f4m32"]
 [ext_resource type="Texture2D" uid="uid://di4ir0kixwdv2" path="res://stamps/stamp_shadow.png" id="16_qj41b"]
 [ext_resource type="Texture2D" uid="uid://drnbiieybicrf" path="res://give_prompt_dialogue.png" id="17_mr1ft"]
@@ -126,35 +123,6 @@ position = Vector2(357.294, -256.302)
 rotation = 0.137881
 scale = Vector2(2.42121, 2.42121)
 texture = ExtResource("17_mr1ft")
-
-[node name="SplashScreen" type="Control" parent="Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("13_h26qa")
-delay_between_slides = 0.5
-skip_input_action = &"ui_accept"
-
-[node name="Background" type="ColorRect" parent="Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue/SplashScreen"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 0.72549, 0.0196078, 1)
-
-[node name="SlideDisclaimer" parent="Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue/SplashScreen" instance=ExtResource("14_fb6ap")]
-layout_mode = 1
-duration = 2.0
-skippable = true
-
-[node name="SlideGodot" parent="Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue/SplashScreen" instance=ExtResource("15_85mjy")]
-layout_mode = 1
-skippable = true
 
 [node name="Sprite2D (Open Passport)" type="Sprite2D" parent="Sprite2D (Passport)"]
 

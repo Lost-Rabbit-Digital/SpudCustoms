@@ -108,7 +108,7 @@ func _ready():
 
 func _process(delta):
 	var mouse_pos = get_global_mouse_position()
-	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport:
+	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == true:
 		$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = true
 	else:
 		$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = false
@@ -117,6 +117,8 @@ func _process(delta):
 		close_passport_action()
 	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport:
 		close_passport_action()
+	if interaction_table.get_rect().has_point(interaction_table.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == false:
+		open_passport_action()
 
 func new_potato():
 	var potato_info = {
@@ -282,6 +284,7 @@ func _input(event):
 						close_passport_action()
 					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
 						close_passport_action()
+						remove_stamp()
 						new_potato()
 				elif dragged_sprite == passport:
 					$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = false
@@ -304,9 +307,9 @@ func open_passport_action():
 	$"Sprite2D (Passport)/Sprite2D (Close Passport)".visible = false
 	
 func close_passport_action():
-	$"Sprite2D (Passport)".texture = preload("res://documents/closed_passport_small.png")
-	$"Sprite2D (Passport)/Sprite2D (Open Passport)".visible = false
+	$"Sprite2D (Passport)".texture = preload("res://documents/closed_passport_small/closed_passport_small.png")
 	$"Sprite2D (Passport)/Sprite2D (Close Passport)".visible = true
+	$"Sprite2D (Passport)/Sprite2D (Open Passport)".visible = false
 	
 func find_topmost_sprite_at(pos: Vector2):
 	var topmost_sprite = null
@@ -381,6 +384,19 @@ func apply_stamp(stamp):
 			draggable_sprites.append(stamp)  # Re-add the original stamp to draggable_sprites
 		)
 		
+func remove_stamp():
+	print("Clearing stamps from passport...")
+	# Get the parent node
+	var passport = $"Sprite2D (Passport)/Sprite2D (Open Passport)"
+
+	# Loop through all children and remove those with "stamp" in the name
+	for child in passport.get_children():
+		if "@Sprite2D@" in child.name:
+			print(child.name)
+			passport.remove_child(child)
+			# Optionally, if you want to completely delete the node:
+			child.queue_free()
+	
 func find_stampable_object_at(pos: Vector2):
 	for sprite in draggable_sprites:
 		if "Passport" in sprite.name and sprite.get_rect().has_point(sprite.to_local(pos)):
