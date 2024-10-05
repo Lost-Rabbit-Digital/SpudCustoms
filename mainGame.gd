@@ -6,9 +6,13 @@ var score = 0
 var time_left = 5  # seconds per decision
 var current_rules = []
 var queue_manager: Node2D
-var dragging = false
-var drag_start = Vector2()
-var drag_sprite
+
+# Dragging system
+var draggable_sprites = []
+var dragged_sprite = null
+var drag_offset = Vector2()
+const STAMP_Z_INDEX = 100
+const PASSPORT_Z_INDEX = 0
 
 func generate_rules():
 	current_rules = [
@@ -67,7 +71,20 @@ func _ready():
 	queue_manager = $"Node2D (QueueManager)"  # Make sure to add QueueManager as a child of Main
 	generate_rules()
 	new_potato()
-	drag_sprite = $"Sprite2D (Open Passport)"
+	draggable_sprites = [
+		$"Sprite2D (Open Passport)",
+		$"Sprite2D (Approval Stamp)",
+		$"Sprite2D (Rejection Stamp)"
+	]
+	# Ensure sprites are in the scene tree and set initial z-index
+	for sprite in draggable_sprites:
+		if not is_instance_valid(sprite):
+			push_warning("Sprite not found: " + sprite.name)
+		else:
+			if "Stamp" in sprite.name:
+				sprite.z_index = STAMP_Z_INDEX
+			else:
+				sprite.z_index = PASSPORT_Z_INDEX
 
 func _process(delta):
 	$"Label (TimeLabel)".text = "Time: " + str(int($Timer.time_left))
@@ -230,18 +247,32 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:
-				# Start dragging
+				# Try to start dragging
 				var mouse_pos = get_global_mouse_position()
-				if drag_sprite.get_rect().has_point(drag_sprite.to_local(mouse_pos)):
-					dragging = true
-					drag_start = mouse_pos - drag_sprite.global_position
+				dragged_sprite = find_topmost_sprite_at(mouse_pos)
+				if dragged_sprite:
+					drag_offset = mouse_pos - dragged_sprite.global_position
 			else:
 				# Stop dragging
-				dragging = false
+				dragged_sprite = null
 		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			# Drop the sprite
-			dragging = false
+			dragged_sprite = null
 	
-	elif event is InputEventMouseMotion and dragging:
+	elif event is InputEventMouseMotion and dragged_sprite:
 		# Update sprite position while dragging
-		drag_sprite.global_position = get_global_mouse_position() - drag_start
+		dragged_sprite.global_position = get_global_mouse_position() - drag_offset
+
+func find_topmost_sprite_at(pos: Vector2):
+	var topmost_sprite = null
+	for sprite in draggable_sprites:
+		if sprite.get_rect().has_point(sprite.to_local(pos)):
+			if not topmost_sprite or sprite.z_index > topmost_sprite.z_index:
+				topmost_sprite = sprite
+	return topmost_sprite
+
+func get_highest_z_index():
+	var highest = 0
+	for sprite in draggable_sprites:
+		highest = max(highest, sprite.z_index)
+	return highest
