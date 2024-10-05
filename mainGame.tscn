@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=15 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://d03nqk75nmnqr" path="res://suspect_panel.png" id="2_f25cg"]
@@ -13,7 +13,6 @@
 [ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
 [ext_resource type="Texture2D" uid="uid://dk0dn60svbwgm" path="res://potato_interaction_table.png" id="12_cxpwc"]
 [ext_resource type="Texture2D" uid="uid://cghrrmwbg3mxy" path="res://stamps.png" id="13_00po3"]
-[ext_resource type="Texture2D" uid="uid://bhaypmaxd0a4r" path="res://stamps_end.png" id="14_61xh2"]
 
 [sub_resource type="Curve2D" id="Curve2D_x3wa3"]
 _data = {
@@ -94,9 +93,6 @@ offset_right = 555.0
 offset_bottom = 530.0
 
 [node name="Sprite2D (PotatoMugshot)" type="Sprite2D" parent="."]
-position = Vector2(252, 419)
-
-[node name="RussetBurbankPotato(2)" type="Sprite2D" parent="."]
 position = Vector2(1031.5, 415)
 scale = Vector2(1.64844, 1.64844)
 texture = ExtResource("7_0jh12")
@@ -133,11 +129,7 @@ position = Vector2(1034, 616)
 texture = ExtResource("12_cxpwc")
 
 [node name="Stamps" type="Sprite2D" parent="."]
-position = Vector2(341, 328)
+position = Vector2(457, 390)
 texture = ExtResource("13_00po3")
-
-[node name="StampsEnd" type="Sprite2D" parent="."]
-position = Vector2(94, 440)
-texture = ExtResource("14_61xh2")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
