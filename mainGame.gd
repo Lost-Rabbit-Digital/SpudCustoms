@@ -11,7 +11,8 @@ var queue_manager: Node2D
 var draggable_sprites = []
 var dragged_sprite = null
 var drag_offset = Vector2()
-const STAMP_Z_INDEX = 100
+const PHYSICAL_STAMP_Z_INDEX = 100
+const APPLIED_STAMP_Z_INDEX = 50
 const PASSPORT_Z_INDEX = 0
 
 func generate_rules():
@@ -82,7 +83,7 @@ func _ready():
 			push_warning("Sprite not found: " + sprite.name)
 		else:
 			if "Stamp" in sprite.name:
-				sprite.z_index = STAMP_Z_INDEX
+				sprite.z_index = PHYSICAL_STAMP_Z_INDEX
 			else:
 				sprite.z_index = PASSPORT_Z_INDEX
 
@@ -243,24 +244,23 @@ func update_potato_texture(potato_type: String):
 	if texture_path_passport_photo != "":
 		$"Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = load(texture_path_passport_photo)
 
+
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:
-				# Try to start dragging
 				var mouse_pos = get_global_mouse_position()
 				dragged_sprite = find_topmost_sprite_at(mouse_pos)
 				if dragged_sprite:
 					drag_offset = mouse_pos - dragged_sprite.global_position
 			else:
-				# Stop dragging
 				dragged_sprite = null
 		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
-			# Drop the sprite
-			dragged_sprite = null
+			if dragged_sprite and "Stamp" in dragged_sprite.name:
+				apply_stamp(dragged_sprite)
+			# Removed the line that set dragged_sprite to null
 	
 	elif event is InputEventMouseMotion and dragged_sprite:
-		# Update sprite position while dragging
 		dragged_sprite.global_position = get_global_mouse_position() - drag_offset
 
 func find_topmost_sprite_at(pos: Vector2):
@@ -271,8 +271,26 @@ func find_topmost_sprite_at(pos: Vector2):
 				topmost_sprite = sprite
 	return topmost_sprite
 
+func apply_stamp(stamp):
+	var mouse_pos = get_global_mouse_position()
+	var stamped_object = find_stampable_object_at(mouse_pos)
+	if stamped_object:
+		var stamp_texture = "res://approved_stamp.png" if "Approval" in stamp.name else "res://denied_stamp.png"
+		var new_stamp = Sprite2D.new()
+		new_stamp.texture = load(stamp_texture)
+		new_stamp.position = stamped_object.to_local(mouse_pos)
+		new_stamp.z_index = APPLIED_STAMP_Z_INDEX
+		stamped_object.add_child(new_stamp)
+
+func find_stampable_object_at(pos: Vector2):
+	for sprite in draggable_sprites:
+		if "Passport" in sprite.name and sprite.get_rect().has_point(sprite.to_local(pos)):
+			return sprite
+	return null
+
 func get_highest_z_index():
 	var highest = 0
 	for sprite in draggable_sprites:
 		highest = max(highest, sprite.z_index)
 	return highest
+	
