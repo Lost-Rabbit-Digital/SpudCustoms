@@ -90,4 +90,3 @@ Done: Update the potato information to include sex, country of issue, date of bi
 Done: Update rules to include potato information.
 Done: Split stamp into two separate objects
 Done: Fill in additional detail on stamp objects
-

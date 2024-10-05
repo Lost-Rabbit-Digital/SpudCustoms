@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=22 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://suspect_panel.png" id="2_f25cg"]
@@ -17,12 +17,13 @@
 [ext_resource type="Texture2D" uid="uid://hrfuvprbphea" path="res://stamps/approval_stamp.png" id="15_f4m32"]
 [ext_resource type="Texture2D" uid="uid://c0dbfc2uut8qn" path="res://stamps/stamp_shadow.png" id="16_qj41b"]
 [ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://give_prompt_dialogue.png" id="17_mr1ft"]
+[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://background.png" id="18_jl4i3"]
 
 [sub_resource type="Curve2D" id="Curve2D_x3wa3"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1215, 85, 0, 0, 0, 0, 1184, 91, 0, 0, 0, 0, 1138, 82, 0, 0, 0, 0, 1093, 90, 0, 0, 0, 0, 1039, 92, 0, 0, 0, 0, 1036, 123, 0, 0, 0, 0, 1041, 153, 0, 0, 0, 0, 1081, 149, 0, 0, 0, 0, 1123, 159, 0, 0, 0, 0, 1164, 154, 0, 0, 0, 0, 1201, 157, 0, 0, 0, 0, 1196, 185, 0, 0, 0, 0, 1209, 225, 0, 0, 0, 0, 1165, 215, 0, 0, 0, 0, 1109, 226, 0, 0, 0, 0, 1070, 216, 0, 0, 0, 0, 1042, 227, 0, 0, 0, 0, 1005, 218, 0, 0, 0, 0, 991, 195, 0, 0, 0, 0, 959, 204)
+"points": PackedVector2Array(0, 0, 0, 0, 1215, 85, 0, 0, 0, 0, 1186.14, 87.2683, 0, 0, 0, 0, 1158.21, 96.0488, 0, 0, 0, 0, 1136.8, 82.878, 0, 0, 0, 0, 1099.57, 87.2683, 0, 0, 0, 0, 1083.74, 96.0488, 0, 0, 0, 0, 1055.81, 96.0488, 0, 0, 0, 0, 1031.61, 87.2683, 0, 0, 0, 0, 1029.75, 105.707, 0, 0, 0, 0, 1036, 123, 0, 0, 0, 0, 1030.68, 139.073, 0, 0, 0, 0, 1029.75, 159.268, 0, 0, 0, 0, 1049.3, 149.61, 0, 0, 0, 0, 1081, 149, 0, 0, 0, 0, 1123, 159, 0, 0, 0, 0, 1140.53, 148.732, 0, 0, 0, 0, 1160.08, 148.732, 0, 0, 0, 0, 1175.9, 159.268, 0, 0, 0, 0, 1200.11, 152.244, 0, 0, 0, 0, 1196.38, 172.439, 0, 0, 0, 0, 1207.55, 185.61, 0, 0, 0, 0, 1202.9, 199.659, 0, 0, 0, 0, 1200.11, 217.219, 0, 0, 0, 0, 1182.42, 221.61, 0, 0, 0, 0, 1162.87, 211.073, 0, 0, 0, 0, 1150.77, 220.732, 0, 0, 0, 0, 1137.73, 209.317, 0, 0, 0, 0, 1117.25, 210.195, 0, 0, 0, 0, 1103.29, 219.854, 0, 0, 0, 0, 1089.33, 210.195, 0, 0, 0, 0, 1077.23, 217.219, 0, 0, 0, 0, 1065.12, 210.195, 0, 0, 0, 0, 1047.44, 209.317, 0, 0, 0, 0, 1038.13, 218.976, 0, 0, 0, 0, 1020.44, 212.829, 0, 0, 0, 0, 1005, 218, 0, 0, 0, 0, 988.789, 212.829, 0, 0, 0, 0, 972.033, 219.84, 0, 0, 0, 0, 966.447, 210.195, 0, 0, 0, 0, 970.171, 193.512, 0, 0, 0, 0, 979.48, 203.171, 0, 0, 0, 0, 999.029, 210.195, 0, 0, 0, 0, 1010.2, 205.519, 0, 0, 0, 0, 1016.72, 195.268, 0, 0, 0, 0, 1012.06, 179.562, 0, 0, 0, 0, 1003.68, 193.512, 0, 0, 0, 0, 992.513, 200.148, 0, 0, 0, 0, 986.927, 184.732, 0, 0, 0, 0, 974.826, 179.562, 0, 0, 0, 0, 953.415, 198.358)
 }
-point_count = 20
+point_count = 50
 
 [sub_resource type="Theme" id="Theme_cb0mk"]
 default_font = ExtResource("13_wxn24")
@@ -35,9 +36,19 @@ font_size = 10
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_s4bva")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Container" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_right = 1280.0
 offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D (Background)" type="Sprite2D" parent="Container"]
+position = Vector2(640, 360)
+texture = ExtResource("18_jl4i3")
 
 [node name="Sprite2D (UI Wireframe)" type="Sprite2D" parent="."]
 visible = false
@@ -57,17 +68,18 @@ scale = Vector2(0.994467, 0.977299)
 texture = ExtResource("4_juy1b")
 
 [node name="Sprite2D (World Panel)" type="Sprite2D" parent="."]
-position = Vector2(642, 135)
-scale = Vector2(0.994467, 0.977299)
+position = Vector2(639.453, 121)
+scale = Vector2(1.09345, 1.02885)
 texture = ExtResource("5_h10h2")
 
 [node name="Sprite2D (Suspect Panel)" type="Sprite2D" parent="."]
-position = Vector2(1031.5, 460)
-scale = Vector2(0.99723, 0.988584)
+position = Vector2(1074.47, 472)
+scale = Vector2(1.05816, 1.06849)
 texture = ExtResource("2_f25cg")
 
 [node name="InteractionTableBackground" type="Sprite2D" parent="."]
-position = Vector2(465, 460)
+position = Vector2(444, 473)
+scale = Vector2(1.09694, 1.07604)
 texture = ExtResource("7_nqnif")
 
 [node name="SpawnTimer" type="Timer" parent="."]
@@ -80,7 +92,7 @@ offset_bottom = 674.0
 autowrap_mode = 3
 
 [node name="Sprite2D (PotatoMugshot)" type="Sprite2D" parent="."]
-position = Vector2(1025, 352)
+position = Vector2(1062, 365)
 scale = Vector2(1.64844, 1.64844)
 texture = ExtResource("7_0jh12")
 
@@ -103,6 +115,8 @@ position = Vector2(648, 134)
 texture = ExtResource("8_s0lh3")
 
 [node name="Path2D (SpuddyQueue)" type="Path2D" parent="."]
+position = Vector2(-39.1758, -33.3889)
+scale = Vector2(1.07422, 1.13889)
 curve = SubResource("Curve2D_x3wa3")
 
 [node name="Node2D (QueueManager)" type="Node2D" parent="."]
