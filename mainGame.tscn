@@ -21,7 +21,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_x3wa3"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1205.69, 90.4314, 0, 0, 0, 0, 1107.01, 92.1099, 0, 0, 0, 0, 1031.61, 87.2683, 0, 0, 0, 0, 1033.47, 152.244, 0, 0, 0, 0, 1123.77, 154.878, 0, 0, 0, 0, 1200.11, 152.244, 0, 0, 0, 0, 1201.97, 208.768, 0, 0, 0, 0, 1133.08, 212.125, 0, 0, 0, 0, 1066.05, 205.411, 0, 0, 0, 0, 1006.48, 212.125, 0, 0, 0, 0, 966.447, 210.195, 0, 0, 0, 0, 1016.72, 195.268, 0, 0, 0, 0, 1012.06, 179.562, 0, 0, 0, 0, 980.41, 180.233, 0, 0, 0, 0, 964.584, 192.822)
+"points": PackedVector2Array(0, 0, 0, 0, 1207.55, 85.3955, 0, 0, 0, 0, 1113.53, 88.7525, 0, 0, 0, 0, 1034.4, 87.9133, 0, 0, 0, 0, 1033.47, 145.822, 0, 0, 0, 0, 1072.57, 145.822, 0, 0, 0, 0, 1203.83, 144.983, 0, 0, 0, 0, 1201.97, 208.768, 0, 0, 0, 0, 1133.08, 212.125, 0, 0, 0, 0, 1066.05, 205.411, 0, 0, 0, 0, 1006.48, 212.125, 0, 0, 0, 0, 966.447, 210.195, 0, 0, 0, 0, 1016.72, 195.268, 0, 0, 0, 0, 1012.06, 179.562, 0, 0, 0, 0, 980.41, 180.233, 0, 0, 0, 0, 964.584, 192.822)
 }
 point_count = 15
 
@@ -171,7 +171,7 @@ position = Vector2(153, 453)
 
 [node name="Sprite2D (Approval Stamp)" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(187, 320)
+position = Vector2(108, 283)
 texture = ExtResource("15_f4m32")
 
 [node name="Sprite2D (StampShadow)" type="Sprite2D" parent="Sprite2D (Approval Stamp)"]
@@ -181,7 +181,7 @@ texture = ExtResource("16_qj41b")
 
 [node name="Sprite2D (Rejection Stamp)" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(153, 453)
+position = Vector2(108, 394)
 texture = ExtResource("14_pjwbq")
 
 [node name="Sprite2D (StampShadow)" type="Sprite2D" parent="Sprite2D (Rejection Stamp)"]

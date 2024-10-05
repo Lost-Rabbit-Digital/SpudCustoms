@@ -3,7 +3,7 @@ extends Node2D
 var PotatoPerson = preload("res://PotatoPerson.tscn")
 var path: Path2D
 var curve: Curve2D
-var max_potatoes: int = 20
+var max_potatoes: int = 14
 var potatoes: Array = []
 var spawn_point: Vector2
 
@@ -14,17 +14,25 @@ func _ready():
 	spawn_point = curve.get_point_position(0)
 	print("Path loaded, spawn point set to: ", spawn_point)
 
-func add_potato(potato_info: Dictionary):
-	if potatoes.size() >= max_potatoes:
+func can_add_potato() -> bool:
+	return potatoes.size() < max_potatoes
+
+func spawn_new_potato():
+	if can_add_potato():
+		var potato_info = get_parent().generate_potato_info()
+		add_potato(potato_info)
+		get_parent().update_potato_info_display()
+		get_parent().update_potato_texture()
+	else:
 		print("Maximum number of potatoes reached")
-		return
-	
+
+func add_potato(potato_info: Dictionary):
 	var potato = PotatoPerson.instantiate()
 	add_child(potato)
 	potato.position = spawn_point
 	potato.current_point = 0
 	potato.target_point = 0
-	potato.potato_info = potato_info
+	potato.update_potato(potato_info)
 	potatoes.push_front(potato)
 	print("Potato added. Total potatoes: ", potatoes.size())
 	print("Added potato info: ", potato_info)
@@ -33,7 +41,7 @@ func add_potato(potato_info: Dictionary):
 func remove_potato() -> Dictionary:
 	if potatoes.size() > 0:
 		var potato = potatoes.pop_back()
-		var info = potato.potato_info
+		var info = potato.get_potato_info()
 		potato.queue_free()
 		print("Potato removed. Total potatoes: ", potatoes.size())
 		print("Removed potato info: ", info)
@@ -70,7 +78,7 @@ func _process(delta):
 
 func get_front_potato_info() -> Dictionary:
 	if potatoes.size() > 0:
-		return potatoes.back().potato_info
+		return potatoes.back().get_potato_info()
 	return {}
 
 func debug_add_potatoes(count: int):

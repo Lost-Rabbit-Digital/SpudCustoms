@@ -87,7 +87,6 @@ func _ready():
 	queue_manager = $"Node2D (QueueManager)"  # Make sure to add QueueManager as a child of Main
 	generate_rules()
 	setup_spawn_timer()
-	new_potato()
 	draggable_sprites = [
 		$"Sprite2D (Passport)",
 		$"Sprite2D (Approval Stamp)",
@@ -121,17 +120,10 @@ func setup_spawn_timer():
 	spawn_timer.start()
 
 func _on_SpawnTimer_timeout():
-	if queue_manager.potatoes.size() < queue_manager.max_potatoes:
-		#spawn_new_potato()
-		new_potato()
+	if queue_manager.can_add_potato():
+		queue_manager.spawn_new_potato()
 	else:
 		spawn_timer.stop()
-
-func spawn_new_potato():
-	var potato_info = generate_potato_info()
-	queue_manager.add_potato(potato_info)
-	update_potato_info_display(potato_info)
-	update_potato_texture(potato_info.type)
 
 func _process(delta):
 	var mouse_pos = get_global_mouse_position()
@@ -158,48 +150,22 @@ func generate_potato_info():
 		"expiration_date": get_random_date(0, 2)
 	}
 
-func new_potato():
-	var potato_info = {
-		"name": get_random_name(),
-		"type": get_random_type(),
-		"condition": get_random_condition(),
-		"sex": get_random_sex(), 
-		"country_of_issue": get_random_country(),
-		"date_of_birth": get_random_date(1, 10),
-		"expiration_date": get_random_date(0, 2)
-	}
-	queue_manager.add_potato(potato_info)
-	update_potato_info_display(potato_info)
-	update_potato_texture(potato_info.type)
-	
-	# Find the most recently created PotatoPerson
-	var potato_people = get_tree().get_nodes_in_group("PotatoPerson")
-	if potato_people.size() > 0:
-		var latest_potato_person = potato_people[potato_people.size() - 1]
-		latest_potato_person.update_potato(potato_info)
-	else:
-		print("Warning: No PotatoPerson found in the scene")
-	
-	if randi() % 5 == 0:  # 20% chance to change rules
-		generate_rules()
-	#$"Node2D (PotatoPerson)".update_potato(potato_info)
-	
-func update_potato_info_display(potato_info: Dictionary):
+func update_potato_info_display():
 	var front_potato = queue_manager.get_front_potato_info()
 	if front_potato.is_empty():
 		# Clear the display if there are no potatoes
 		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = ""
 		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = ""
 		return
-			
-	$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = """{name}""".format(potato_info)
+
+	$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = """{name}""".format(front_potato)
 	$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = """{date_of_birth}
 	{sex} 
 	{country_of_issue}
 	{expiration_date} 
 	{type}
 	{condition}
-	""".format(potato_info)
+	""".format(front_potato)
 
 func generate_potato():
 	# Generate random potato characteristics
@@ -276,6 +242,10 @@ func _on_button_no_entry_button_pressed() -> void:
 
 func process_decision(allowed):
 	var potato_info = queue_manager.remove_potato()
+	if potato_info.is_empty():
+		print("No potato to process.")
+		return
+		
 	var correct_decision = is_potato_valid(potato_info)
 	
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
@@ -287,27 +257,32 @@ func process_decision(allowed):
 	
 	$"Label (ScoreLabel)".text = "Score: " + str(score)
 
-	if queue_manager.potatoes.size() < queue_manager.max_potatoes and spawn_timer.is_stopped():
+	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()
 		
 	if randi() % 5 == 0:  # 20% chance to change rules
 		generate_rules()
+		
+	# Check and update the information in the passport
+	update_potato_info_display()
+	# Check and update the potato headshot
+	update_potato_texture()
 
 func peek_front_potato():
 	var front_potato_info = queue_manager.get_front_potato_info()
 	# Use front_potato_info as needed
 
-func update_potato_texture(potato_type: String):
+func update_potato_texture():
 	var front_potato = queue_manager.get_front_potato_info()
 	if front_potato.is_empty():
 		# Clear the texture if there are no potatoes
 		$"Sprite2D (PotatoMugshot)".texture = null
 		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = null
 		return
-		
+
 	var texture_path = ""
 	var texture_path_passport_photo = ""
-	match potato_type:
+	match front_potato.type:
 		"Purple Majesty":
 			texture_path = "res://potatoes/heads/purple_majesty_head.png"
 			texture_path_passport_photo = "res://potatoes/document_photos/purple_majesty.png"
@@ -330,7 +305,6 @@ func update_potato_texture(potato_type: String):
 	if texture_path_passport_photo != "":
 		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = load(texture_path_passport_photo)
 
-
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
@@ -351,7 +325,6 @@ func _input(event):
 					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
 						close_passport_action()
 						remove_stamp()
-						new_potato()
 				dragged_sprite = null
 		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			if dragged_sprite and "Stamp" in dragged_sprite.name:
