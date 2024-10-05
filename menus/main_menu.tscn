@@ -1,10 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://btxcy8lur7wac"]
+[gd_scene load_steps=4 format=3 uid="uid://btxcy8lur7wac"]
 
 [ext_resource type="Script" path="res://menus/main_menu.gd" id="1_76e4a"]
 [ext_resource type="FontFile" uid="uid://ci3ly3akg71he" path="res://windows_command_prompt.ttf" id="2_ts8aq"]
-[ext_resource type="Script" path="res://addons/splash_screen_wizard/splash_screen.gd" id="3_ow5gf"]
-[ext_resource type="PackedScene" uid="uid://ckqiyl367tw67" path="res://demo_splash_screen_wizard/slides/slide_disclaimer.tscn" id="4_qbqlj"]
-[ext_resource type="PackedScene" uid="uid://cxqpgg8ax8bqv" path="res://demo_splash_screen_wizard/slides/slide_godot.tscn" id="5_dhmlk"]
 
 [sub_resource type="Theme" id="Theme_qd0ra"]
 default_font = ExtResource("2_ts8aq")
@@ -51,34 +48,6 @@ text = "Options"
 layout_mode = 2
 theme = SubResource("Theme_qd0ra")
 text = "Quit to desktop"
-
-[node name="SplashScreen" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("3_ow5gf")
-delay_between_slides = 0.5
-skip_input_action = &"ui_accept"
-
-[node name="Background" type="ColorRect" parent="SplashScreen"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 0.72549, 0.0196078, 1)
-
-[node name="SlideDisclaimer" parent="SplashScreen" instance=ExtResource("4_qbqlj")]
-layout_mode = 1
-duration = 3.0
-
-[node name="SlideGodot" parent="SplashScreen" instance=ExtResource("5_dhmlk")]
-layout_mode = 1
-skippable = true
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HowToButton" to="." method="_on_how_to_button_pressed"]

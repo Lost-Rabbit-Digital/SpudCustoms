@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://crf7ipx8lmngy"]
+
+[ext_resource type="Script" path="res://menus/splashscreen_scene.gd" id="1_gg4hc"]
+[ext_resource type="Script" path="res://addons/splash_screen_wizard/splash_screen.gd" id="1_ojb3m"]
+[ext_resource type="PackedScene" uid="uid://ckqiyl367tw67" path="res://demo_splash_screen_wizard/slides/slide_disclaimer.tscn" id="2_rwp70"]
+[ext_resource type="PackedScene" uid="uid://cxqpgg8ax8bqv" path="res://demo_splash_screen_wizard/slides/slide_godot.tscn" id="3_8mkbu"]
+
+[node name="SplashscreenScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gg4hc")
+
+[node name="SplashScreen" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ojb3m")
+delay_between_slides = 0.5
+skip_input_action = &"ui_accept"
+
+[node name="Background" type="ColorRect" parent="SplashScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.72549, 0.0196078, 1)
+
+[node name="SlideDisclaimer" parent="SplashScreen" instance=ExtResource("2_rwp70")]
+layout_mode = 1
+duration = 2.0
+skippable = true
+
+[node name="SlideGodot" parent="SplashScreen" instance=ExtResource("3_8mkbu")]
+layout_mode = 1
+skippable = true
+
+[connection signal="finished" from="SplashScreen/SlideGodot" to="." method="_on_slide_godot_finished"]

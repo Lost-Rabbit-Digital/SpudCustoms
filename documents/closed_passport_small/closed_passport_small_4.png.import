@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://papycbt2qmv2"
-path="res://.godot/imported/closed_passport_small.png-c9988294179ed1aff6c84add086d6085.ctex"
+uid="uid://ckqamq1eolmi6"
+path="res://.godot/imported/closed_passport_small_4.png-e363642ea3dab3d1489ead3021af9135.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://documents/closed_passport_small.png"
-dest_files=["res://.godot/imported/closed_passport_small.png-c9988294179ed1aff6c84add086d6085.ctex"]
+source_file="res://documents/closed_passport_small/closed_passport_small_4.png"
+dest_files=["res://.godot/imported/closed_passport_small_4.png-e363642ea3dab3d1489ead3021af9135.ctex"]
 
 [params]
 
