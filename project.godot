@@ -11,9 +11,12 @@ config_version=5
 [application]
 
 config/name="SpudCustoms"
-run/main_scene="res://mainGame.tscn"
+run/main_scene="res://menus/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/bg_color=Color(1, 0.72549, 0.0196078, 1)
+boot_splash/image="res://splashscreen.png"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=1500
 
 [display]
 

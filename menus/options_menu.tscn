@@ -47,9 +47,9 @@ layout_mode = 2
 theme = SubResource("Theme_7topn")
 text = "How to play"
 
-[node name="QuitButton" type="Button" parent="VBoxContainer"]
+[node name="BackButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_7topn")
 text = "Back"
 
-[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
