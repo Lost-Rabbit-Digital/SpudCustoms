@@ -93,6 +93,9 @@ offset_right = 555.0
 offset_bottom = 530.0
 
 [node name="Sprite2D (PotatoMugshot)" type="Sprite2D" parent="."]
+position = Vector2(252, 419)
+
+[node name="RussetBurbankPotato(2)" type="Sprite2D" parent="."]
 position = Vector2(1031.5, 415)
 scale = Vector2(1.64844, 1.64844)
 texture = ExtResource("7_0jh12")
@@ -129,7 +132,7 @@ position = Vector2(1034, 616)
 texture = ExtResource("12_cxpwc")
 
 [node name="Stamps" type="Sprite2D" parent="."]
-position = Vector2(457, 390)
+position = Vector2(646, 364)
 texture = ExtResource("13_00po3")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
