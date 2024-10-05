@@ -275,6 +275,9 @@ func _input(event):
 					if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
 						close_passport_action()
 				dragged_sprite = null
+		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			if dragged_sprite and "Stamp" in dragged_sprite.name:
+				apply_stamp(dragged_sprite)
 	
 	elif event is InputEventMouseMotion and dragged_sprite:
 		dragged_sprite.global_position = get_global_mouse_position() - drag_offset
