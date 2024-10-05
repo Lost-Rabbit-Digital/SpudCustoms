@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=22 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://d03nqk75nmnqr" path="res://suspect_panel.png" id="2_f25cg"]
@@ -13,10 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://duhfkle4277e4" path="res://potato_customs_table.png" id="12_aq75m"]
 [ext_resource type="Texture2D" uid="uid://fiti6rc52g72" path="res://documents/passport-old.png" id="12_q7tid"]
 [ext_resource type="Texture2D" uid="uid://0tllw6qq8ffe" path="res://closed_passport.png" id="13_fl0ko"]
-[ext_resource type="Texture2D" uid="uid://dfkymslqydjfj" path="res://approval_stamp.png" id="13_oy68s"]
 [ext_resource type="FontFile" uid="uid://ci3ly3akg71he" path="res://windows_command_prompt.ttf" id="13_wxn24"]
 [ext_resource type="Texture2D" uid="uid://bycv0gufcogbx" path="res://potatoes/document_photos/purple_majesty.png" id="14_al1cy"]
-[ext_resource type="Texture2D" uid="uid://bnn4c6y1lovs1" path="res://rejection_stamp.png" id="14_pjwbq"]
+[ext_resource type="Texture2D" uid="uid://bnn4c6y1lovs1" path="res://stamps/rejection_stamp.png" id="14_pjwbq"]
+[ext_resource type="Texture2D" uid="uid://bsbovhtxyeupa" path="res://stamps/approval_stamp.png" id="15_f4m32"]
+[ext_resource type="Texture2D" uid="uid://di4ir0kixwdv2" path="res://stamps/stamp_shadow.png" id="16_qj41b"]
 
 [sub_resource type="Curve2D" id="Curve2D_x3wa3"]
 _data = {
@@ -151,8 +152,14 @@ texture = ExtResource("14_al1cy")
 position = Vector2(153, 453)
 
 [node name="Sprite2D (Approval Stamp)" type="Sprite2D" parent="."]
+z_index = 2
 position = Vector2(153, 312)
-texture = ExtResource("13_oy68s")
+texture = ExtResource("15_f4m32")
+
+[node name="Sprite2D (StampShadow)" type="Sprite2D" parent="Sprite2D (Approval Stamp)"]
+z_as_relative = false
+position = Vector2(1, 88)
+texture = ExtResource("16_qj41b")
 
 [node name="Sprite2D (Closed Passport Icon)" type="Sprite2D" parent="."]
 position = Vector2(1032, 573)
@@ -161,7 +168,13 @@ scale = Vector2(0.31877, 0.31877)
 texture = ExtResource("13_fl0ko")
 
 [node name="Sprite2D (Rejection Stamp)" type="Sprite2D" parent="."]
+z_index = 2
 position = Vector2(153, 453)
 texture = ExtResource("14_pjwbq")
+
+[node name="Sprite2D (StampShadow)" type="Sprite2D" parent="Sprite2D (Rejection Stamp)"]
+z_as_relative = false
+position = Vector2(1, 88)
+texture = ExtResource("16_qj41b")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

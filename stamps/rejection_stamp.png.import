@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnn4c6y1lovs1"
-path="res://.godot/imported/rejection_stamp.png-e61e2da903096e2f3f0a47e99e620257.ctex"
+path="res://.godot/imported/rejection_stamp.png-e06733fc9d6a660e4037dbdf1d5c0375.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rejection_stamp.png"
-dest_files=["res://.godot/imported/rejection_stamp.png-e61e2da903096e2f3f0a47e99e620257.ctex"]
+source_file="res://stamps/rejection_stamp.png"
+dest_files=["res://.godot/imported/rejection_stamp.png-e06733fc9d6a660e4037dbdf1d5c0375.ctex"]
 
 [params]
 

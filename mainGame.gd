@@ -303,7 +303,7 @@ func apply_stamp(stamp):
 		
 		# Create the final stamp that will be left on the passport
 		var final_stamp = Sprite2D.new()
-		var stamp_texture = "res://approved_stamp.png" if "Approval" in stamp.name else "res://denied_stamp.png"
+		var stamp_texture = "res://stamps/approved_stamp.png" if "Approval" in stamp.name else "res://stamps/denied_stamp.png"
 		final_stamp.texture = load(stamp_texture)
 		var final_stamp_x = stamp.position.x
 		var final_stamp_y = stamp.position.y + STAMP_MOVE_DISTANCE
