@@ -85,8 +85,8 @@ func new_potato():
 	$Timer.start(time_left)
 	
 func update_potato_info_display(potato_info: Dictionary):
-	$"Label (PotatoInfo)".text = """{name}
-	{date_of_birth}
+	$"Sprite2D (Open Passport)/Label (PotatoHeader)".text = """{name}""".format(potato_info)
+	$"Sprite2D (Open Passport)/Label (PotatoInfo)".text = """{date_of_birth}
 	{sex} 
 	{country_of_issue}
 	{expiration_date} 
@@ -199,17 +199,26 @@ func _on_timer_timeout():
 
 func update_potato_texture(potato_type: String):
 	var texture_path = ""
+	var texture_path_passport_photo = ""
 	match potato_type:
 		"Purple Majesty":
 			texture_path = "res://potatoes/heads/purple_majesty_head.png"
+			texture_path_passport_photo = "res://potatoes/document_photos/purple_majesty.png"
 		"Red Bliss":
 			texture_path = "res://potatoes/heads/red_bliss_head.png"
+			texture_path_passport_photo = "res://potatoes/document_photos/red_bliss.png"
 		"Russet Burbank":
 			texture_path = "res://potatoes/heads/russet_burbank_head.png"
+			texture_path_passport_photo = "res://potatoes/document_photos/russet_burbank.png"
 		"Sweet Potato":
 			texture_path = "res://potatoes/heads/sweet_potato_head.png"
+			texture_path_passport_photo = "res://potatoes/document_photos/sweet_potato.png"
 		"Yukon Gold":
 			texture_path = "res://potatoes/heads/yukon_gold_head.png"
+			texture_path_passport_photo = "res://potatoes/document_photos/yukon_gold.png"
 	
 	if texture_path != "":
 		$"Sprite2D (PotatoMugshot)".texture = load(texture_path)
+		
+	if texture_path_passport_photo != "":
+		$"Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = load(texture_path_passport_photo)

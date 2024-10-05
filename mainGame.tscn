@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=21 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://d03nqk75nmnqr" path="res://suspect_panel.png" id="2_f25cg"]
@@ -11,9 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://kjlwp8d6npbd" path="res://Potato_line.png" id="8_s0lh3"]
 [ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
 [ext_resource type="Texture2D" uid="uid://duhfkle4277e4" path="res://potato_customs_table.png" id="12_aq75m"]
-[ext_resource type="Texture2D" uid="uid://dkyv84r4d0du4" path="res://documents/passport.png" id="12_by76q"]
+[ext_resource type="Texture2D" uid="uid://fiti6rc52g72" path="res://documents/passport-old.png" id="12_q7tid"]
 [ext_resource type="Texture2D" uid="uid://0tllw6qq8ffe" path="res://closed_passport.png" id="13_fl0ko"]
 [ext_resource type="Texture2D" uid="uid://dfkymslqydjfj" path="res://approval_stamp.png" id="13_oy68s"]
+[ext_resource type="FontFile" uid="uid://ci3ly3akg71he" path="res://windows_command_prompt.ttf" id="13_wxn24"]
+[ext_resource type="Texture2D" uid="uid://bycv0gufcogbx" path="res://potatoes/document_photos/purple_majesty.png" id="14_al1cy"]
 [ext_resource type="Texture2D" uid="uid://bnn4c6y1lovs1" path="res://rejection_stamp.png" id="14_pjwbq"]
 
 [sub_resource type="Curve2D" id="Curve2D_x3wa3"]
@@ -21,6 +23,10 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1215, 85, 0, 0, 0, 0, 1184, 91, 0, 0, 0, 0, 1138, 82, 0, 0, 0, 0, 1093, 90, 0, 0, 0, 0, 1039, 92, 0, 0, 0, 0, 1036, 123, 0, 0, 0, 0, 1041, 153, 0, 0, 0, 0, 1081, 149, 0, 0, 0, 0, 1123, 159, 0, 0, 0, 0, 1164, 154, 0, 0, 0, 0, 1201, 157, 0, 0, 0, 0, 1196, 185, 0, 0, 0, 0, 1209, 225, 0, 0, 0, 0, 1165, 215, 0, 0, 0, 0, 1109, 226, 0, 0, 0, 0, 1070, 216, 0, 0, 0, 0, 1042, 227, 0, 0, 0, 0, 1005, 218, 0, 0, 0, 0, 991, 195, 0, 0, 0, 0, 959, 204)
 }
 point_count = 20
+
+[sub_resource type="Theme" id="Theme_cb0mk"]
+default_font = ExtResource("13_wxn24")
+default_font_size = 48
 
 [sub_resource type="LabelSettings" id="LabelSettings_5ivkq"]
 line_spacing = 2.0
@@ -115,27 +121,44 @@ script = ExtResource("10_a4p7n")
 
 [node name="Sprite2D (Open Passport)" type="Sprite2D" parent="."]
 position = Vector2(551, 448)
-texture = ExtResource("12_by76q")
+texture = ExtResource("12_q7tid")
 
-[node name="Label (PotatoInfo)" type="Label" parent="."]
-offset_left = 474.0
-offset_top = 462.0
-offset_right = 774.0
-offset_bottom = 662.0
+[node name="Label (PotatoInfo)" type="Label" parent="Sprite2D (Open Passport)"]
+modulate = Color(0.384314, 0.321569, 0.321569, 1)
+self_modulate = Color(0.384314, 0.321569, 0.321569, 1)
+offset_left = -77.0
+offset_top = 30.0
+offset_right = 34.0
+offset_bottom = 124.0
+theme = SubResource("Theme_cb0mk")
 label_settings = SubResource("LabelSettings_5ivkq")
 
+[node name="Label (PotatoHeader)" type="Label" parent="Sprite2D (Open Passport)"]
+modulate = Color(0.384314, 0.321569, 0.321569, 1)
+self_modulate = Color(0.384314, 0.321569, 0.321569, 1)
+offset_left = -114.0
+offset_top = 10.0
+offset_right = 119.0
+offset_bottom = 25.0
+theme = SubResource("Theme_cb0mk")
+label_settings = SubResource("LabelSettings_5ivkq")
+
+[node name="Sprite2D (PassportPhoto)" type="Sprite2D" parent="Sprite2D (Open Passport)"]
+position = Vector2(79, 78)
+texture = ExtResource("14_al1cy")
+
 [node name="Sprite2D (Approval Stamp)" type="Sprite2D" parent="."]
-position = Vector2(550, 328)
+position = Vector2(153, 312)
 texture = ExtResource("13_oy68s")
 
 [node name="Sprite2D (Closed Passport Icon)" type="Sprite2D" parent="."]
-position = Vector2(1027, 597)
+position = Vector2(1032, 573)
 rotation = -0.516439
-scale = Vector2(0.6, 0.6)
+scale = Vector2(0.31877, 0.31877)
 texture = ExtResource("13_fl0ko")
 
 [node name="Sprite2D (Rejection Stamp)" type="Sprite2D" parent="."]
-position = Vector2(153, 405)
+position = Vector2(153, 453)
 texture = ExtResource("14_pjwbq")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
