@@ -15,8 +15,7 @@ const APPLIED_STAMP_Z_INDEX = 50
 const PASSPORT_Z_INDEX = 0
 
 # Passport dragging system
-var closed_passport: Sprite2D
-var open_passport: Sprite2D
+var passport: Sprite2D
 var interaction_table: Sprite2D
 var suspect_panel: Sprite2D
 var suspect: Sprite2D
@@ -84,7 +83,7 @@ func _ready():
 	generate_rules()
 	new_potato()
 	draggable_sprites = [
-		$"Sprite2D (Open Passport)",
+		$"Sprite2D (Passport)",
 		$"Sprite2D (Approval Stamp)",
 		$"Sprite2D (Rejection Stamp)"
 	]
@@ -99,24 +98,25 @@ func _ready():
 				sprite.z_index = PASSPORT_Z_INDEX
 	
 	# Get references to the new nodes
-	closed_passport = $"Sprite2D (Closed Passport Icon)"
-	open_passport = $"Sprite2D (Open Passport)"
+	passport = $"Sprite2D (Passport)"
 	interaction_table = $InteractionTableBackground
 	suspect_panel = $"Sprite2D (Suspect Panel)"
 	suspect = $"Sprite2D (PotatoMugshot)"
 	
 	# Add closed passport to draggable sprites
-	draggable_sprites.append(closed_passport)
-	
-	# Initially hide the open passport
-	open_passport.visible = false
+	draggable_sprites.append(passport)
 
 func _process(delta):
 	var mouse_pos = get_global_mouse_position()
-	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)):
-		$"Sprite2D (Closed Passport Icon)/GivePromptDialogue".visible = true
+	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport:
+		$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = true
 	else:
-		$"Sprite2D (Closed Passport Icon)/GivePromptDialogue".visible = false
+		$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = false
+		
+	if suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)) and dragged_sprite == passport:
+		close_passport_action()
+	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport:
+		close_passport_action()
 
 func new_potato():
 	var potato_info = {
@@ -133,8 +133,8 @@ func new_potato():
 	update_potato_texture(potato_info.type)
 	
 func update_potato_info_display(potato_info: Dictionary):
-	$"Sprite2D (Open Passport)/Label (PotatoHeader)".text = """{name}""".format(potato_info)
-	$"Sprite2D (Open Passport)/Label (PotatoInfo)".text = """{date_of_birth}
+	$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = """{name}""".format(potato_info)
+	$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = """{date_of_birth}
 	{sex} 
 	{country_of_issue}
 	{expiration_date} 
@@ -260,7 +260,7 @@ func update_potato_texture(potato_type: String):
 		$"Sprite2D (PotatoMugshot)".texture = load(texture_path)
 		
 	if texture_path_passport_photo != "":
-		$"Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = load(texture_path_passport_photo)
+		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = load(texture_path_passport_photo)
 
 
 func _input(event):
@@ -273,8 +273,8 @@ func _input(event):
 					drag_offset = mouse_pos - dragged_sprite.global_position
 						
 			else:
-				if dragged_sprite == closed_passport:
-					$"Sprite2D (Closed Passport Icon)/GivePromptDialogue".visible = false
+				if dragged_sprite == passport:
+					$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = false
 					var drop_pos = get_global_mouse_position()
 					if interaction_table.get_rect().has_point(interaction_table.to_local(drop_pos)):
 						open_passport_action()
@@ -283,14 +283,13 @@ func _input(event):
 					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
 						close_passport_action()
 						new_potato()
-				elif dragged_sprite == open_passport:
-					$"Sprite2D (Closed Passport Icon)/GivePromptDialogue".visible = false
+				elif dragged_sprite == passport:
+					$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = false
 					var drop_pos = get_global_mouse_position()
 					if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
 						close_passport_action()
 					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
 						close_passport_action()
-						new_potato()
 				dragged_sprite = null
 		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			if dragged_sprite and "Stamp" in dragged_sprite.name:
@@ -300,19 +299,15 @@ func _input(event):
 		dragged_sprite.global_position = get_global_mouse_position() - drag_offset
 
 func open_passport_action():
-	closed_passport.visible = false
-	open_passport.visible = true
-	draggable_sprites.erase(closed_passport)
-	draggable_sprites.append(open_passport)
-	is_passport_open = true
-
+	$"Sprite2D (Passport)".texture = preload("res://documents/passport-old.png")
+	$"Sprite2D (Passport)/Sprite2D (Open Passport)".visible = true
+	$"Sprite2D (Passport)/Sprite2D (Close Passport)".visible = false
+	
 func close_passport_action():
-	closed_passport.visible = true
-	open_passport.visible = false
-	draggable_sprites.erase(open_passport)
-	draggable_sprites.append(closed_passport)
-	is_passport_open = false
-
+	$"Sprite2D (Passport)".texture = preload("res://closed_passport.png")
+	$"Sprite2D (Passport)/Sprite2D (Open Passport)".visible = false
+	$"Sprite2D (Passport)/Sprite2D (Close Passport)".visible = true
+	
 func find_topmost_sprite_at(pos: Vector2):
 	var topmost_sprite = null
 	for sprite in draggable_sprites:
