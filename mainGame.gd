@@ -108,7 +108,7 @@ func _ready():
 
 func _process(delta):
 	var mouse_pos = get_global_mouse_position()
-	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == true:
+	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == false:
 		$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = true
 	else:
 		$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = false
@@ -286,13 +286,6 @@ func _input(event):
 						close_passport_action()
 						remove_stamp()
 						new_potato()
-				elif dragged_sprite == passport:
-					$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = false
-					var drop_pos = get_global_mouse_position()
-					if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
-						close_passport_action()
-					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
-						close_passport_action()
 				dragged_sprite = null
 		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			if dragged_sprite and "Stamp" in dragged_sprite.name:
