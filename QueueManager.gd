@@ -3,7 +3,7 @@ extends Node2D
 var PotatoPerson = preload("res://PotatoPerson.tscn")
 var path: Path2D
 var curve: Curve2D
-var max_potatoes: int = 10
+var max_potatoes: int
 var potatoes: Array = []
 var spawn_point: Vector2
 
@@ -13,6 +13,11 @@ func _ready():
 	curve = path.curve
 	spawn_point = curve.get_point_position(0)
 	print("Path loaded, spawn point set to: ", spawn_point)
+	# Set max potatoes based on length of curve, leave room for a manual spawn
+	max_potatoes = curve.get_point_count() - 1
+		
+	print("Path loaded, spawn point set to: ", spawn_point)
+	print("Max potatoes set to: ", max_potatoes)
 
 func can_add_potato() -> bool:
 	return potatoes.size() < max_potatoes
