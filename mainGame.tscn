@@ -109,6 +109,7 @@ curve = SubResource("Curve2D_x3wa3")
 script = ExtResource("10_a4p7n")
 
 [node name="Sprite2D (Passport)" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(551, 448)
 texture = ExtResource("12_q7tid")
 
@@ -127,7 +128,8 @@ texture = ExtResource("17_mr1ft")
 [node name="Sprite2D (Open Passport)" type="Sprite2D" parent="Sprite2D (Passport)"]
 
 [node name="Sprite2D (PassportPhoto)" type="Sprite2D" parent="Sprite2D (Passport)/Sprite2D (Open Passport)"]
-position = Vector2(79, 78)
+z_as_relative = false
+position = Vector2(66, 78)
 texture = ExtResource("14_al1cy")
 
 [node name="Label (PotatoHeader)" type="Label" parent="Sprite2D (Passport)/Sprite2D (Open Passport)"]
