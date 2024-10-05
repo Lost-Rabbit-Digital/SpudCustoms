@@ -2,16 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfs32levsu5ge"
-path="res://.godot/imported/splashscreen.png-642ebbdb6d608345041a31aaeea20ca5.ctex"
+uid="uid://dxgmwcx5l0b3a"
+path="res://.godot/imported/SlideTransition.svg-a6d989bb23e5710e9ee4f5028172d946.ctex"
 metadata={
+"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://splashscreen.png"
-dest_files=["res://.godot/imported/splashscreen.png-642ebbdb6d608345041a31aaeea20ca5.ctex"]
+source_file="res://addons/splash_screen_wizard/icons/SlideTransition.svg"
+dest_files=["res://.godot/imported/SlideTransition.svg-a6d989bb23e5710e9ee4f5028172d946.ctex"]
 
 [params]
 
@@ -32,3 +33,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=true
+editor/convert_colors_with_editor_theme=false
