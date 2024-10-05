@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=21 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://d03nqk75nmnqr" path="res://suspect_panel.png" id="2_f25cg"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://c1pt8aw6106rk" path="res://interaction_table_background.png" id="7_nqnif"]
 [ext_resource type="Texture2D" uid="uid://kjlwp8d6npbd" path="res://Potato_line.png" id="8_s0lh3"]
 [ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
-[ext_resource type="Texture2D" uid="uid://duhfkle4277e4" path="res://potato_customs_table.png" id="12_aq75m"]
 [ext_resource type="Texture2D" uid="uid://fiti6rc52g72" path="res://documents/passport-old.png" id="12_q7tid"]
 [ext_resource type="Texture2D" uid="uid://0tllw6qq8ffe" path="res://closed_passport.png" id="13_fl0ko"]
 [ext_resource type="FontFile" uid="uid://ci3ly3akg71he" path="res://windows_command_prompt.ttf" id="13_wxn24"]
@@ -81,14 +80,9 @@ offset_bottom = 674.0
 autowrap_mode = 3
 
 [node name="Sprite2D (PotatoMugshot)" type="Sprite2D" parent="."]
-position = Vector2(1031.5, 415)
+position = Vector2(1025, 352)
 scale = Vector2(1.64844, 1.64844)
 texture = ExtResource("7_0jh12")
-
-[node name="PotatoInteractionTable" type="Sprite2D" parent="."]
-position = Vector2(1036, 593)
-scale = Vector2(1.12648, 0.847697)
-texture = ExtResource("12_aq75m")
 
 [node name="Label (ScoreLabel)" type="Label" parent="."]
 offset_left = 883.0
@@ -162,7 +156,7 @@ position = Vector2(1, 88)
 texture = ExtResource("16_qj41b")
 
 [node name="Sprite2D (Closed Passport Icon)" type="Sprite2D" parent="."]
-position = Vector2(1032, 573)
+position = Vector2(1031, 545)
 rotation = -0.516439
 scale = Vector2(0.31877, 0.31877)
 texture = ExtResource("13_fl0ko")
