@@ -65,6 +65,9 @@ Outline sound effects
 Outline music
 Set up main menu, settings menu, credits menu, how to play menu
 
+Add a speaker with dialogue which the player can press as much as they want
+
+Add shutter with level in front of people
 
 Done: Update the queue_manager to store potato information about each potato in the queue including condition, type, and name.
 
@@ -76,4 +79,3 @@ Done: Update rules to include potato information.
 Done: Split stamp into two separate objects
 
 Done: Fill in additional detail on stamp objects
-

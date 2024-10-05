@@ -97,12 +97,6 @@ offset_right = 281.0
 offset_bottom = 672.0
 autowrap_mode = 3
 
-[node name="Label (TimeLabel)" type="Label" parent="."]
-offset_left = 1118.0
-offset_top = 632.0
-offset_right = 1218.0
-offset_bottom = 682.0
-
 [node name="PotatoLine" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(648, 134)
@@ -147,7 +141,7 @@ position = Vector2(153, 453)
 
 [node name="Sprite2D (Approval Stamp)" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(153, 312)
+position = Vector2(187, 320)
 texture = ExtResource("15_f4m32")
 
 [node name="Sprite2D (StampShadow)" type="Sprite2D" parent="Sprite2D (Approval Stamp)"]

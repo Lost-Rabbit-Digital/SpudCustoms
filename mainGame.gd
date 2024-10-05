@@ -3,7 +3,6 @@ extends Node2D
 
 var current_potato
 var score = 0
-var time_left = 5  # seconds per decision
 var current_rules = []
 var queue_manager: Node2D
 
@@ -14,6 +13,13 @@ var drag_offset = Vector2()
 const PHYSICAL_STAMP_Z_INDEX = 100
 const APPLIED_STAMP_Z_INDEX = 50
 const PASSPORT_Z_INDEX = 0
+
+# Passport dragging system
+var closed_passport: Sprite2D
+var open_passport: Sprite2D
+var interaction_table: Sprite2D
+var suspect_panel: Sprite2D
+var is_passport_open = false
 
 # Stamp system
 const STAMP_ANIMATION_DURATION = 0.3  # Duration of the stamp animation in seconds
@@ -90,9 +96,21 @@ func _ready():
 				sprite.z_index = PHYSICAL_STAMP_Z_INDEX
 			else:
 				sprite.z_index = PASSPORT_Z_INDEX
+	
+	# Get references to the new nodes
+	closed_passport = $"Sprite2D (Closed Passport Icon)"
+	open_passport = $"Sprite2D (Open Passport)"
+	interaction_table = $InteractionTableBackground
+	suspect_panel = $"Sprite2D (Suspect Panel)"
+	
+	# Add closed passport to draggable sprites
+	draggable_sprites.append(closed_passport)
+	
+	# Initially hide the open passport
+	open_passport.visible = false
 
 func _process(delta):
-	$"Label (TimeLabel)".text = "Time: " + str(int($Timer.time_left))
+	pass
 
 func new_potato():
 	var potato_info = {
@@ -107,7 +125,6 @@ func new_potato():
 	queue_manager.add_potato(potato_info)
 	update_potato_info_display(potato_info)
 	update_potato_texture(potato_info.type)
-	$Timer.start(time_left)
 	
 func update_potato_info_display(potato_info: Dictionary):
 	$"Sprite2D (Open Passport)/Label (PotatoHeader)".text = """{name}""".format(potato_info)
@@ -213,15 +230,6 @@ func peek_front_potato():
 	var front_potato_info = queue_manager.get_front_potato_info()
 	# Use front_potato_info as needed
 
-func _on_timer_timeout():
-	# Player ran out of time, count as wrong decision
-	score += 0
-	$"Label (JudgementInfo)".text = "You run out of time and another customs officer beckons the spud over."
-	$"Label (ScoreLabel)".text = "Score: " + str(score)
-	if randi() % 5 == 0:  # 20% chance to change rules
-		generate_rules()
-	new_potato()
-
 func update_potato_texture(potato_type: String):
 	var texture_path = ""
 	var texture_path_passport_photo = ""
@@ -258,13 +266,32 @@ func _input(event):
 				if dragged_sprite:
 					drag_offset = mouse_pos - dragged_sprite.global_position
 			else:
+				if dragged_sprite == closed_passport:
+					var drop_pos = get_global_mouse_position()
+					if interaction_table.get_rect().has_point(interaction_table.to_local(drop_pos)):
+						open_passport_action()
+				elif dragged_sprite == open_passport:
+					var drop_pos = get_global_mouse_position()
+					if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
+						close_passport_action()
 				dragged_sprite = null
-		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
-			if dragged_sprite and "Stamp" in dragged_sprite.name:
-				apply_stamp(dragged_sprite)
 	
 	elif event is InputEventMouseMotion and dragged_sprite:
 		dragged_sprite.global_position = get_global_mouse_position() - drag_offset
+
+func open_passport_action():
+	closed_passport.visible = false
+	open_passport.visible = true
+	draggable_sprites.erase(closed_passport)
+	draggable_sprites.append(open_passport)
+	is_passport_open = true
+
+func close_passport_action():
+	closed_passport.visible = true
+	open_passport.visible = false
+	draggable_sprites.erase(open_passport)
+	draggable_sprites.append(closed_passport)
+	is_passport_open = false
 
 func find_topmost_sprite_at(pos: Vector2):
 	var topmost_sprite = null
