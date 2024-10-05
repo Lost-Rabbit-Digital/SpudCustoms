@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=18 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://d03nqk75nmnqr" path="res://suspect_panel.png" id="2_f25cg"]
@@ -9,16 +9,22 @@
 [ext_resource type="Texture2D" uid="uid://bca3wt2f8plkr" path="res://potatoes/heads/purple_majesty_head.png" id="7_0jh12"]
 [ext_resource type="Texture2D" uid="uid://c1pt8aw6106rk" path="res://interaction_table_background.png" id="7_nqnif"]
 [ext_resource type="Texture2D" uid="uid://kjlwp8d6npbd" path="res://Potato_line.png" id="8_s0lh3"]
-[ext_resource type="PackedScene" uid="uid://c07b46wsf1fc1" path="res://PotatoPerson.tscn" id="9_bxbx1"]
 [ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
-[ext_resource type="Texture2D" uid="uid://dk0dn60svbwgm" path="res://potato_interaction_table.png" id="12_cxpwc"]
-[ext_resource type="Texture2D" uid="uid://cghrrmwbg3mxy" path="res://stamps.png" id="13_00po3"]
+[ext_resource type="Texture2D" uid="uid://duhfkle4277e4" path="res://potato_customs_table.png" id="12_aq75m"]
+[ext_resource type="Texture2D" uid="uid://dkyv84r4d0du4" path="res://documents/passport.png" id="12_by76q"]
+[ext_resource type="Texture2D" uid="uid://0tllw6qq8ffe" path="res://closed_passport.png" id="13_fl0ko"]
+[ext_resource type="Texture2D" uid="uid://dfkymslqydjfj" path="res://approval_stamp.png" id="13_oy68s"]
+[ext_resource type="Texture2D" uid="uid://bnn4c6y1lovs1" path="res://rejection_stamp.png" id="14_pjwbq"]
 
 [sub_resource type="Curve2D" id="Curve2D_x3wa3"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1215, 85, 0, 0, 0, 0, 1184, 91, 0, 0, 0, 0, 1138, 82, 0, 0, 0, 0, 1093, 90, 0, 0, 0, 0, 1039, 92, 0, 0, 0, 0, 1036, 123, 0, 0, 0, 0, 1041, 153, 0, 0, 0, 0, 1081, 149, 0, 0, 0, 0, 1123, 159, 0, 0, 0, 0, 1164, 154, 0, 0, 0, 0, 1201, 157, 0, 0, 0, 0, 1196, 185, 0, 0, 0, 0, 1209, 225, 0, 0, 0, 0, 1165, 215, 0, 0, 0, 0, 1109, 226, 0, 0, 0, 0, 1070, 216, 0, 0, 0, 0, 1042, 227, 0, 0, 0, 0, 1005, 218, 0, 0, 0, 0, 991, 195, 0, 0, 0, 0, 959, 204)
 }
 point_count = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_5ivkq"]
+line_spacing = 2.0
+font_size = 10
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_s4bva")
@@ -45,78 +51,61 @@ scale = Vector2(0.994467, 0.977299)
 texture = ExtResource("4_juy1b")
 
 [node name="Sprite2D (World Panel)" type="Sprite2D" parent="."]
-position = Vector2(645, 135)
+position = Vector2(642, 135)
 scale = Vector2(0.994467, 0.977299)
 texture = ExtResource("5_h10h2")
 
 [node name="Sprite2D (Suspect Panel)" type="Sprite2D" parent="."]
-position = Vector2(1032.5, 457.5)
+position = Vector2(1031.5, 460)
 scale = Vector2(0.99723, 0.988584)
 texture = ExtResource("2_f25cg")
 
 [node name="InteractionTableBackground" type="Sprite2D" parent="."]
-position = Vector2(465, 454)
+position = Vector2(465, 460)
 texture = ExtResource("7_nqnif")
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="Label (PotatoInfo)" type="Label" parent="."]
-offset_left = 888.0
-offset_top = 535.0
-offset_right = 1188.0
-offset_bottom = 655.0
-
 [node name="Label (JudgementInfo)" type="Label" parent="."]
-offset_left = 425.0
-offset_top = 480.0
-offset_right = 775.0
-offset_bottom = 530.0
+offset_left = 505.0
+offset_top = 624.0
+offset_right = 855.0
+offset_bottom = 674.0
 autowrap_mode = 3
-
-[node name="Label (ScoreLabel)" type="Label" parent="."]
-offset_left = 359.0
-offset_top = 439.0
-offset_right = 559.0
-offset_bottom = 489.0
-
-[node name="Label (RulesLabel)" type="Label" parent="."]
-offset_left = 96.0
-offset_top = 439.0
-offset_right = 296.0
-offset_bottom = 635.0
-autowrap_mode = 3
-
-[node name="Label (TimeLabel)" type="Label" parent="."]
-offset_left = 355.0
-offset_top = 480.0
-offset_right = 555.0
-offset_bottom = 530.0
 
 [node name="Sprite2D (PotatoMugshot)" type="Sprite2D" parent="."]
 position = Vector2(1031.5, 415)
 scale = Vector2(1.64844, 1.64844)
 texture = ExtResource("7_0jh12")
 
+[node name="PotatoInteractionTable" type="Sprite2D" parent="."]
+position = Vector2(1036, 593)
+scale = Vector2(1.12648, 0.847697)
+texture = ExtResource("12_aq75m")
+
+[node name="Label (ScoreLabel)" type="Label" parent="."]
+offset_left = 883.0
+offset_top = 635.0
+offset_right = 983.0
+offset_bottom = 685.0
+
+[node name="Label (RulesLabel)" type="Label" parent="."]
+offset_left = 81.0
+offset_top = 476.0
+offset_right = 281.0
+offset_bottom = 672.0
+autowrap_mode = 3
+
+[node name="Label (TimeLabel)" type="Label" parent="."]
+offset_left = 1118.0
+offset_top = 632.0
+offset_right = 1218.0
+offset_bottom = 682.0
+
 [node name="PotatoLine" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(648, 134)
 texture = ExtResource("8_s0lh3")
-
-[node name="Node2D (PotatoPerson)4" parent="." instance=ExtResource("9_bxbx1")]
-visible = false
-position = Vector2(288, 192)
-
-[node name="Node2D (PotatoPerson)2" parent="." instance=ExtResource("9_bxbx1")]
-visible = false
-position = Vector2(241, 84)
-
-[node name="Node2D (PotatoPerson)3" parent="." instance=ExtResource("9_bxbx1")]
-visible = false
-position = Vector2(189, 154)
-
-[node name="Node2D (PotatoPerson)" parent="." instance=ExtResource("9_bxbx1")]
-visible = false
-position = Vector2(110, 82)
 
 [node name="Path2D (SpuddyQueue)" type="Path2D" parent="."]
 curve = SubResource("Curve2D_x3wa3")
@@ -124,13 +113,29 @@ curve = SubResource("Curve2D_x3wa3")
 [node name="Node2D (QueueManager)" type="Node2D" parent="."]
 script = ExtResource("10_a4p7n")
 
-[node name="PotatoInteractionTable" type="Sprite2D" parent="."]
-position = Vector2(1038, 592)
-scale = Vector2(1.03784, 0.780994)
-texture = ExtResource("12_cxpwc")
+[node name="Sprite2D (Open Passport)" type="Sprite2D" parent="."]
+position = Vector2(551, 448)
+texture = ExtResource("12_by76q")
 
-[node name="Stamps" type="Sprite2D" parent="."]
-position = Vector2(457, 390)
-texture = ExtResource("13_00po3")
+[node name="Label (PotatoInfo)" type="Label" parent="."]
+offset_left = 474.0
+offset_top = 462.0
+offset_right = 774.0
+offset_bottom = 662.0
+label_settings = SubResource("LabelSettings_5ivkq")
+
+[node name="Sprite2D (Approval Stamp)" type="Sprite2D" parent="."]
+position = Vector2(550, 328)
+texture = ExtResource("13_oy68s")
+
+[node name="Sprite2D (Closed Passport Icon)" type="Sprite2D" parent="."]
+position = Vector2(1027, 597)
+rotation = -0.516439
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("13_fl0ko")
+
+[node name="Sprite2D (Rejection Stamp)" type="Sprite2D" parent="."]
+position = Vector2(153, 405)
+texture = ExtResource("14_pjwbq")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

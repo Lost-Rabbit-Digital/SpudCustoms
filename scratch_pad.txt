@@ -25,16 +25,21 @@ res://potatoes/heads/russet_burbank_head.png
 res://potatoes/heads/sweet_potato_head.png
 res://potatoes/heads/yukon_gold_head.png
 
-Done: Update the queue_manager to store potato information about each potato in the queue including condition, type, and name.
+Make a closed passport icon (128x128px)
 
-Update the potato information to include sex, country of issue, date of birth, expiration date.
+Customize the passport document to be fully original
 
-Update rules to include potato information.
+Create approved and rejected stamps that fit the size of the passport document
+
+Change the texture of the Sprite2D on the PotatoPerson to the appropriate type based on their potato_info.type
 
 Display all potato information on the entry visa, scale it up to view in evidence drawer. Close it after stamping and turn it red or green. 
 
 Show name above date of birth
-Show type below expiration
+
+Show potato type below expiration
+
+Create Label (DateLabel) and add to the Potato Customs Table so the player can see the current date and judge if passports are expired.
 
 Show no information for the potato to start, fade them into the right hand box, then animate them passing their documents through, and when the player clicks the documents, then show the information of the oldest potato in the queue.
 
@@ -44,7 +49,7 @@ Update the process_decision logic to make the oldest potato move through the cus
 
 Update the process_decision logic to make the oldest potato move through the customs office get blown up with fireball particle effects after their immigration decision is made and is negative.
 
-
+Customs Process:
 Potato walks up, puts in document. 
 Player clicks document. 
 Document displays in evidence drawer. 
@@ -55,8 +60,20 @@ Passport has a transparent stamp applied, folds up, and flies back to potato.
 Potato fades out and appears to left of customs office. 
 Potato walks off-screen to left or is destroyed mid-way.
 
-Change the texture of the Sprite2D on the PotatoPerson to the appropriate type based on their potato_info.type
 
 Outline sound effects
 Outline music
 Set up main menu, settings menu, credits menu, how to play menu
+
+
+Done: Update the queue_manager to store potato information about each potato in the queue including condition, type, and name.
+
+Done: Update the potato information to include sex, country of issue, date of birth, expiration date.
+
+Done: Update rules to include potato information.
+
+
+Done: Split stamp into two separate objects
+
+Done: Fill in additional detail on stamp objects
+

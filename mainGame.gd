@@ -9,11 +9,15 @@ var queue_manager: Node2D
 
 func generate_rules():
 	current_rules = [
-		"Purple Majesty always welcome",
-		"We need more eyes!",
-		"No Russet potatoes allowed",
-		"All potatoes must be Fresh",
-		"Peeled potatoes BANNED today!"
+		"Purple Majesty always welcome.",
+		"We need extra eyes!",
+		"No Russet Burbanks allowed!",
+		"All potatoes must be Fresh!",
+		"Peeled potatoes BANNED today!",
+		"No potatoes over 5 years old.",
+		"Only males potatoes allowed today.",
+		"Potatoes from Spudland must be arrested.",
+		"Expired potatoes are not allowed."
 	]
 	# Randomly select 2-3 rules
 	current_rules.shuffle()
@@ -25,16 +29,35 @@ func update_rules_display():
 	
 func is_potato_valid(potato_info: Dictionary) -> bool:
 	for rule in current_rules:
-		if rule == "Purple Majesty always welcome" and potato_info.type == "Purple Majesty":
-			return true
-		elif rule == "We need more eyes!" and potato_info.condition == "Extra Eyes":
-			return true
-		elif rule == "No Russet potatoes allowed" and potato_info.type == "Russet Burbank":
-			return false
-		elif rule == "All potatoes must be Fresh" and potato_info.condition != "Fresh":
-			return false
-		elif rule == "Peeled potatoes BANNED today!" and potato_info.condition == "Peeled":
-			return false
+		match rule: 
+			"Purple Majesty always welcome.":
+				if potato_info.type == "Purple Majesty":
+					return true
+			"We need extra eyes!":
+				if potato_info.condition == "Extra Eyes":
+					return true
+			"No Russet Burbanks allowed!":
+				if potato_info.type == "Russet Burbank":
+					return false
+			"All potatoes must be Fresh!":
+				if potato_info.condition != "Fresh":
+					return false
+			"Peeled potatoes BANNED today!": 
+				if potato_info.condition == "Peeled":
+					return false
+			"No potatoes over 5 years old.":
+				var age = calculate_age(potato_info.date_of_birth)
+				if age > 5: 
+					return false
+			"Only males potatoes allowed today.":
+				if potato_info.sex != "Male":
+					return false
+			"Potatoes from Spudland must be arrested.":
+				if potato_info.country_of_issue == "Spudland":
+					return false
+			"Expired potatoes are not allowed.":
+				if is_expired(potato_info.expiration_date):
+					return false
 	return true
 
 func _ready():
@@ -51,6 +74,10 @@ func new_potato():
 		"name": get_random_name(),
 		"type": get_random_type(),
 		"condition": get_random_condition(),
+		"sex": get_random_sex(), 
+		"country_of_issue": get_random_country(),
+		"date_of_birth": get_random_date(1, 10),
+		"expiration_date": get_random_date(0, 2)
 	}
 	queue_manager.add_potato(potato_info)
 	update_potato_info_display(potato_info)
@@ -58,7 +85,14 @@ func new_potato():
 	$Timer.start(time_left)
 	
 func update_potato_info_display(potato_info: Dictionary):
-	$"Label (PotatoInfo)".text = "Name: %s\nType: %s\nCondition: %s" % [potato_info.name, potato_info.type, potato_info.condition]	
+	$"Label (PotatoInfo)".text = """Name: {name}
+	Date Of Birth: {date_of_birth}
+	Sex: {sex} 
+	Country Of Issue: {country_of_issue}
+	Expiration Date: {expiration_date} 
+	Type: {type}
+	Condition: {condition}
+	""".format(potato_info)
 
 func generate_potato():
 	# Generate random potato characteristics
@@ -80,10 +114,43 @@ func get_random_type():
 	return types[randi() % types.size()]
 
 func get_random_condition():
-	var conditions = ["Fresh", "Slightly Sprouted", "Extra Eyes", "Peeled", "Rotten", "Sprouted", "Mashed", "Baked", "Fried", "Boiled", "Dehydrated", "Frozen"]
+	var conditions = ["Fresh", "Extra Eyes", "Peeled", "Rotten", "Sprouted", "Dehydrated", "Frozen"]
 	return conditions[randi() % conditions.size()]
 
-
+func get_random_sex():
+	return ["Male", "Female"][randi() % 2]
+	
+func get_random_country():
+	var countries = ["Spudland", "Potatopia", "Tuberstan", "North Yamnea", "Spuddington"]
+	return countries[randi() % countries.size()]
+	
+func get_random_date(years_ago_start: int, years_ago_end: int) -> String:
+	var current_date = Time.get_date_dict_from_system()
+	var year = current_date.year - years_ago_start - randi() % (years_ago_end - years_ago_start + 1)
+	var month = randi() % 12 + 1
+	var day = randi() % 28 + 1
+	return "%04d-%02d-%02d" % [year, month, day]
+	
+func calculate_age(date_of_birth: String) -> int:
+	var current_date = Time.get_date_dict_from_system()
+	var birth_date = Time.get_datetime_dict_from_datetime_string(date_of_birth, false)
+	var age = current_date.year - birth_date.year
+	if current_date.month < birth_date.month or (current_date.month == birth_date.month and current_date.day < birth_date.day):
+		age -= 1
+	return age	
+	
+func is_expired(expiration_date: String) -> bool:
+	var current_date = Time.get_date_dict_from_system()
+	var expiry_date = Time.get_datetime_dict_from_datetime_string(expiration_date, false)
+	if current_date.year > expiry_date.year:
+		return true
+	elif current_date.year == expiry_date.year:
+		if current_date.month > expiry_date.month: 
+			return true
+		elif current_date.month == expiry_date.month:
+			return current_date.day > expiry_date.day
+	return false
+	
 func _on_button_welcome_button_pressed() -> void:
 	process_decision(true)
 
@@ -116,6 +183,8 @@ func _on_timer_timeout():
 	score += 0
 	$"Label (JudgementInfo)".text = "You run out of time and another customs officer beckons the spud over."
 	$"Label (ScoreLabel)".text = "Score: " + str(score)
+	if randi() % 5 == 0:  # 20% chance to change rules
+		generate_rules()
 	new_potato()
 
 func update_potato_texture(potato_type: String):
