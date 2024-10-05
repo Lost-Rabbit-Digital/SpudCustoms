@@ -73,7 +73,11 @@ Outline music
 background music
 ]
 
-Set up main menu, settings menu, credits menu, how to play menu, pause menu
+MENUS:
+Done: main menu
+settings menu
+credits menu
+pause menu
 
 Done: stamp interaction instead of buttons
 Done: Replace the buttons for Welcome to Taterland and No Entry with stamps that the player can pick up and use to stamp the potato person's documents, punch down stamp with right click while dragging.
