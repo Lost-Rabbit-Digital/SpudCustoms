@@ -278,7 +278,7 @@ func apply_stamp(stamp):
 		var stamp_texture = "res://approved_stamp.png" if "Approval" in stamp.name else "res://denied_stamp.png"
 		var new_stamp = Sprite2D.new()
 		new_stamp.texture = load(stamp_texture)
-		new_stamp.position = stamped_object.to_local(mouse_pos)
+		new_stamp.position =  stamped_object.to_local(stamp.position)
 		new_stamp.z_index = APPLIED_STAMP_Z_INDEX
 		stamped_object.add_child(new_stamp)
 
