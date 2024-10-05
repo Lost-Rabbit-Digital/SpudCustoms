@@ -132,7 +132,7 @@ position = Vector2(1034, 616)
 texture = ExtResource("12_cxpwc")
 
 [node name="Stamps" type="Sprite2D" parent="."]
-position = Vector2(646, 364)
+position = Vector2(341, 328)
 texture = ExtResource("13_00po3")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
