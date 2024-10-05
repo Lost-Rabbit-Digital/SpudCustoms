@@ -147,6 +147,9 @@ label_settings = SubResource("LabelSettings_5ivkq")
 position = Vector2(79, 78)
 texture = ExtResource("14_al1cy")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(153, 453)
+
 [node name="Sprite2D (Approval Stamp)" type="Sprite2D" parent="."]
 position = Vector2(153, 312)
 texture = ExtResource("13_oy68s")

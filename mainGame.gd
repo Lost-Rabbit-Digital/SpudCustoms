@@ -275,6 +275,18 @@ func find_topmost_sprite_at(pos: Vector2):
 				topmost_sprite = sprite
 	return topmost_sprite
 
+func play_random_stamp_sound():
+	var stamp_sounds = [
+		preload("res://audio/stamp_sound_1.mp3"),
+		preload("res://audio/stamp_sound_2.mp3"),
+		preload("res://audio/stamp_sound_3.mp3"),
+		preload("res://audio/stamp_sound_4.mp3"),
+		preload("res://audio/stamp_sound_5.mp3")
+	]
+	if !$AudioStreamPlayer2D.is_playing():
+		$AudioStreamPlayer2D.stream = stamp_sounds.pick_random()
+		$AudioStreamPlayer2D.play()
+
 func apply_stamp(stamp):
 	var mouse_pos = get_global_mouse_position()
 	var stamped_object = find_stampable_object_at(mouse_pos)
@@ -306,6 +318,7 @@ func apply_stamp(stamp):
 		# Create and start the animation
 		var tween = create_tween()
 		tween.set_parallel(true)
+		play_random_stamp_sound()
 		
 		# Move down
 		tween.tween_property(temp_stamp, "position:y", 
