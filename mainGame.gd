@@ -15,6 +15,10 @@ const PHYSICAL_STAMP_Z_INDEX = 100
 const APPLIED_STAMP_Z_INDEX = 50
 const PASSPORT_Z_INDEX = 0
 
+# Stamp system
+const STAMP_ANIMATION_DURATION = 0.3  # Duration of the stamp animation in seconds
+const STAMP_MOVE_DISTANCE = 50  # How far the stamp moves down
+
 func generate_rules():
 	current_rules = [
 		"Purple Majesty always welcome.",
@@ -275,13 +279,55 @@ func apply_stamp(stamp):
 	var mouse_pos = get_global_mouse_position()
 	var stamped_object = find_stampable_object_at(mouse_pos)
 	if stamped_object:
+		# Hide the original stamp and make it non-draggable
+		stamp.visible = false
+		draggable_sprites.erase(stamp)
+		dragged_sprite = null
+		
+		# Create a temporary visual stamp that moves down
+		var temp_stamp = Sprite2D.new()
+		temp_stamp.texture = stamp.texture
+		temp_stamp.position = stamp.position
+		temp_stamp.z_index = PHYSICAL_STAMP_Z_INDEX
+		add_child(temp_stamp)
+		
+		# Create the final stamp that will be left on the passport
+		var final_stamp = Sprite2D.new()
 		var stamp_texture = "res://approved_stamp.png" if "Approval" in stamp.name else "res://denied_stamp.png"
-		var new_stamp = Sprite2D.new()
-		new_stamp.texture = load(stamp_texture)
-		new_stamp.position =  stamped_object.to_local(stamp.position)
-		new_stamp.z_index = APPLIED_STAMP_Z_INDEX
-		stamped_object.add_child(new_stamp)
-
+		final_stamp.texture = load(stamp_texture)
+		var final_stamp_x = stamp.position.x
+		var final_stamp_y = stamp.position.y + STAMP_MOVE_DISTANCE
+		var final_stamp_position = Vector2(final_stamp_x, final_stamp_y)
+		final_stamp.position = stamped_object.to_local(final_stamp_position)
+		final_stamp.z_index = APPLIED_STAMP_Z_INDEX
+		final_stamp.modulate.a = 0  # Start invisible
+		stamped_object.add_child(final_stamp)
+		
+		# Create and start the animation
+		var tween = create_tween()
+		tween.set_parallel(true)
+		
+		# Move down
+		tween.tween_property(temp_stamp, "position:y", 
+			temp_stamp.position.y + STAMP_MOVE_DISTANCE, 
+			STAMP_ANIMATION_DURATION / 2)
+		
+		# Fade in the final stamp when we hit the paper
+		tween.tween_property(final_stamp, "modulate:a", 
+			1.0, 0.1).set_delay(STAMP_ANIMATION_DURATION / 2)
+		
+		# Move back up
+		tween.chain().tween_property(temp_stamp, "position:y", 
+			temp_stamp.position.y, 
+			STAMP_ANIMATION_DURATION / 2)
+		
+		# Remove the temporary stamp and restore the original stamp
+		tween.chain().tween_callback(func():
+			temp_stamp.queue_free()
+			stamp.visible = true  # Make the original stamp visible again
+			draggable_sprites.append(stamp)  # Re-add the original stamp to draggable_sprites
+		)
+		
 func find_stampable_object_at(pos: Vector2):
 	for sprite in draggable_sprites:
 		if "Passport" in sprite.name and sprite.get_rect().has_point(sprite.to_local(pos)):
