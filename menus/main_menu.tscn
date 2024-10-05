@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://btxcy8lur7wac"]
 
 [ext_resource type="Script" path="res://menus/main_menu.gd" id="1_76e4a"]
-[ext_resource type="FontFile" uid="uid://ci3ly3akg71he" path="res://windows_command_prompt.ttf" id="2_ts8aq"]
+[ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="2_ts8aq"]
 
 [sub_resource type="Theme" id="Theme_qd0ra"]
 default_font = ExtResource("2_ts8aq")
@@ -34,11 +34,6 @@ layout_mode = 2
 theme = SubResource("Theme_qd0ra")
 text = "Begin a new game"
 
-[node name="HowToButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme = SubResource("Theme_qd0ra")
-text = "How to play"
-
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_qd0ra")
@@ -50,6 +45,5 @@ theme = SubResource("Theme_qd0ra")
 text = "Quit to desktop"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/HowToButton" to="." method="_on_how_to_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

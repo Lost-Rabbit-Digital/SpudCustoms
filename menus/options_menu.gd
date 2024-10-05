@@ -1,14 +1,11 @@
 extends Control
 
+@onready var back_button = $MarginContainer/VBoxContainer/BackButton as Button
 
-# Called when the node enters the scene tree for the first time.
+signal exit_options_menu
+
 func _ready():
-	pass # Replace with function body.
+	back_button.button_down.connect(on_back_button_pressed)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-func _on_back_button_pressed():
+func on_back_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://menus/main_menu.tscn")

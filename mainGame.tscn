@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=29 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://suspect_panel.png" id="2_f25cg"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://textures/customs_office.png" id="7_rsfsr"]
 [ext_resource type="Texture2D" uid="uid://cdrth310ylsx2" path="res://Potato_line.png" id="8_s0lh3"]
 [ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
+[ext_resource type="Texture2D" uid="uid://fmqkliw6t33x" path="res://suspect_panel_front.png" id="10_foucb"]
 [ext_resource type="Texture2D" uid="uid://ceh27taly75na" path="res://documents/passport-old.png" id="12_q7tid"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="13_wxn24"]
 [ext_resource type="Texture2D" uid="uid://cbthvh8tq02ee" path="res://potatoes/document_photos/purple_majesty.png" id="14_al1cy"]
@@ -114,6 +115,11 @@ texture = ExtResource("7_rsfsr")
 position = Vector2(1074.47, 472)
 scale = Vector2(1.05816, 1.06849)
 texture = ExtResource("2_f25cg")
+
+[node name="SuspectPanelFront" type="Sprite2D" parent="Sprite2D (Suspect Panel)"]
+z_index = 2
+z_as_relative = false
+texture = ExtResource("10_foucb")
 
 [node name="InteractionTableBackground" type="Sprite2D" parent="."]
 position = Vector2(444, 473)

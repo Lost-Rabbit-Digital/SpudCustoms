@@ -15,41 +15,32 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_oyqf7")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -35.0
-offset_top = -68.0
-offset_right = 35.0
-offset_bottom = 68.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
 
-[node name="StartButton" type="Button" parent="VBoxContainer"]
-visible = false
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-theme = SubResource("Theme_7topn")
-text = "Begin a new game"
+theme_override_constants/separation = 48
 
-[node name="OptionsButton" type="Button" parent="VBoxContainer"]
-visible = false
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = SubResource("Theme_7topn")
-text = "Change settings"
+theme_override_fonts/font = ExtResource("2_ayndp")
+theme_override_font_sizes/font_size = 32
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="HowToButton" type="Button" parent="VBoxContainer"]
-visible = false
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = SubResource("Theme_7topn")
-text = "How to play"
-
-[node name="BackButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
+size_flags_vertical = 10
 theme = SubResource("Theme_7topn")
 text = "Back"
-
-[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
