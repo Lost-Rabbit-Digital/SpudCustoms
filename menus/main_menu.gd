@@ -21,13 +21,15 @@ func on_start_button_pressed() -> void:
 
 func on_options_button_pressed() -> void:
 	margin_container.visible = false
+	options_menu.set_process(true)
 	options_menu.visible = true
 	
 func on_quit_button_pressed() -> void:
 	get_tree().change_scene_to_packed(confirmation_menu)
 
 func on_quit_options_menu() -> void:
-	pass
+	margin_container.visible = true
+	options_menu.visible = false
 
 func handle_connecting_signals() -> void:
 	start_button.button_down.connect(on_start_button_pressed)
