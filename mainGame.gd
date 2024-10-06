@@ -61,52 +61,184 @@ const STAMP_MOVE_DISTANCE = 36  # How far the stamp moves down
 
 func generate_rules():
 	current_rules = [
-		"Purple Majesty always welcome.",
+		# Type-based rules
+		"Purple Majesty not welcome.",
 		"No Russet Burbanks allowed!",
+		"Yukon Gold potatoes must be thoroughly checked.",
+		"Sweet Potatoes require special authorization.",
+		"Red Bliss potatoes are currently restricted.",
+
+		# Condition-based rules
 		"All potatoes must be Fresh!",
+		"Extra Eyes are suspicious, inspect carefully.",
+		"Rotten potatoes are strictly forbidden.",
+		"Sprouted potatoes need additional verification.",
+		"Dehydrated potatoes are not allowed today.",
+		"Frozen potatoes require a special permit.",
+
+		# Age-based rules
 		"No potatoes over 5 years old.",
-		"Only males potatoes allowed today.",
+		"Only mature potatoes (3+ years) allowed.",
+		"Young potatoes (under 2 years) need guardian.",
+
+		# Gender-based rules
+		"Only male potatoes allowed today.",
+		"Female potatoes get priority processing.",
+
+		# Country-based rules
 		"Potatoes from Spudland must be denied.",
-		"Expired potatoes are not allowed."
+		"Potatopia citizens need additional screening.",
+		"Tuberstan potatoes suspected of concealing arms.",
+		"North Yamnea is currently under embargo.",
+		"Spuddington potatoes require visa check.",
+		"Tatcross citizens get no entry processing.",
+		"Mash Meadows potatoes need health certificate.",
+		"Tuberville potatoes subject to random checks.",
+		"Chip Hill exports are currently restricted.",
+		"Murphyland potatoes need work permit verification.",
+		"Colcannon citizens must declare any seasonings.",
+		"Pratie Point potatoes require agricultural inspection.",
+
+		# Expiration-based rules
+		"Expired potatoes are not allowed.",
+		"Potatoes expiring within 30 days need approval.",
+		"Long-life potatoes (5+ years until expiry) get priority.",
+		"Potatoes must have at least 1 year until expiration.",
+		"Potatoes with less than 6 months to expiry require special handling.",
 	]
 	# Randomly select 2-3 rules
 	current_rules.shuffle()
 	current_rules = current_rules.slice(0, randi() % 2 + 2)
 	update_rules_display()
 
+
+func days_until_expiry(expiration_date: String) -> int:
+	var current_date = Time.get_date_dict_from_system()
+	var expiry_date = Time.get_datetime_dict_from_datetime_string(expiration_date, false)
+	var current_days = current_date.year * 365 + current_date.month * 30 + current_date.day
+	var expiry_days = expiry_date.year * 365 + expiry_date.month * 30 + expiry_date.day
+	return expiry_days - current_days
+
+func years_until_expiry(expiration_date: String) -> int:
+	return days_until_expiry(expiration_date) / 365
+
 func update_rules_display():
 	$"Label (RulesLabel)".text = "Current Rules:\n" + "\n".join(current_rules)
 	
 func is_potato_valid(potato_info: Dictionary) -> bool:
 	for rule in current_rules:
-		match rule: 
-			"Purple Majesty always welcome.":
+		match rule:
+			# Type-based rules
+			"Purple Majesty not welcome.":
 				if potato_info.type == "Purple Majesty":
-					return true
-			"We need extra eyes!":
-				if potato_info.condition == "Extra Eyes":
-					return true
+					return false
 			"No Russet Burbanks allowed!":
 				if potato_info.type == "Russet Burbank":
 					return false
+			"Yukon Gold potatoes must be thoroughly checked.":
+				if potato_info.type == "Yukon Gold":
+					return false
+			"Sweet Potatoes require special authorization.":
+				if potato_info.type == "Sweet Potato":
+					return false
+			"Red Bliss potatoes are currently restricted.":
+				if potato_info.type == "Red Bliss":
+					return false
+			# Condition-based rules
 			"All potatoes must be Fresh!":
 				if potato_info.condition != "Fresh":
 					return false
-			"Peeled potatoes BANNED today!": 
-				if potato_info.condition == "Peeled":
+			"Extra Eyes are suspicious, inspect carefully.":
+				if potato_info.condition == "Extra Eyes":
 					return false
+			"Rotten potatoes are strictly forbidden.":
+				if potato_info.condition == "Rotten":
+					return false
+			"Sprouted potatoes need additional verification.":
+				if potato_info.condition == "Sprouted":
+					return false
+			"Dehydrated potatoes are not allowed today.":
+				if potato_info.condition == "Dehydrated":
+					return false
+			"Frozen potatoes require a special permit.":
+				if potato_info.condition == "Frozen":
+					return false
+			# Age-based rules
 			"No potatoes over 5 years old.":
 				var age = calculate_age(potato_info.date_of_birth)
-				if age > 5: 
+				if age > 5:
 					return false
-			"Only males potatoes allowed today.":
-				if potato_info.sex != "Male":
+			"Only mature potatoes (3+ years) allowed.":
+				var age = calculate_age(potato_info.date_of_birth)
+				if age < 3:
 					return false
-			"Potatoes from Spudland must be arrested.":
+			"Young potatoes (under 2 years) need guardian.":
+				var age = calculate_age(potato_info.date_of_birth)
+				if age < 2:
+					return false
+			# Sex-based rules
+			"Only male potatoes allowed today.":
+				if potato_info.sex == "Female":
+					return false
+			"Female potatoes get priority processing.":
+				if potato_info.sex == "Male":
+					return false
+			# Country-based rules
+			"Potatoes from Spudland must be denied.":
 				if potato_info.country_of_issue == "Spudland":
 					return false
+			"Potatopia citizens need additional screening.":
+				if potato_info.country_of_issue == "Potatopia":
+					return false			
+			"Tuberstan potatoes welcome with open arms.":
+				if potato_info.country_of_issue == "Tuberstan":
+					return false			
+			"North Yamnea is currently under embargo.":
+				if potato_info.country_of_issue == "North Yamnea":
+					return false			
+			"Spuddington potatoes require visa check.":
+				if potato_info.country_of_issue == "Spuddington":
+					return false
+			"Tatcross citizens get expedited processing.":
+				if potato_info.country_of_issue == "Tatcross":
+					return false			
+			"Mash Meadows potatoes need health certificate.":
+				if potato_info.country_of_issue == "Mash Meadows":
+					return false
+			"Tuberville potatoes subject to random checks.":
+				if potato_info.country_of_issue == "Tuberville":
+					return false
+			"Chip Hill exports are currently restricted.":
+				if potato_info.country_of_issue == "Chip Hill":
+					return false
+			"Murphyland potatoes need work permit verification.":
+				if potato_info.country_of_issue == "Murphyland":
+					return false
+			"Colcannon citizens must declare any seasonings.":
+				if potato_info.country_of_issue == "Colcannon":
+					return false
+			"Pratie Point potatoes require agricultural inspection.":
+				if potato_info.country_of_issue == "Pratie Point":
+					return false
+			# Expiration-based rules
 			"Expired potatoes are not allowed.":
 				if is_expired(potato_info.expiration_date):
+					return false
+			"Potatoes expiring within 30 days need approval.":
+				var days_to_expiry = days_until_expiry(potato_info.expiration_date)
+				if days_to_expiry >= 0 and days_to_expiry <= 30:
+					return false
+			"Long-life potatoes (5+ years until expiry) get priority.":
+				var years_to_expiry = years_until_expiry(potato_info.expiration_date)
+				if years_to_expiry <= 5:
+					return false
+			"Potatoes must have at least 1 year until expiration.":
+				var years_to_expiry = years_until_expiry(potato_info.expiration_date)
+				if years_to_expiry < 1:
+					return false
+			"Potatoes with less than 6 months to expiry require special handling.":
+				var days_to_expiry = days_until_expiry(potato_info.expiration_date)
+				if days_to_expiry >= 0 and days_to_expiry < 180:
 					return false
 	return true
 
@@ -460,7 +592,7 @@ func process_decision(allowed):
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()
 		
-	if randi() % 5 == 0:  # 20% chance to change rules
+	if randi() % 5 < 2:  # 40% chance to change rules
 		generate_rules()
 		
 	# Check and update the information in the passport

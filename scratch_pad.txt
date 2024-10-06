@@ -1,7 +1,11 @@
-Review rules and make sure applying properly
+
+
+
+
 
 CUSTOMS PROCESS:
-Add letter with brief explainer on how to make points and that the gate will shut if too many potatoes stack up.
+Add letter with brief explainer on your job as a Spudarado Border Officer
+
 
 SOUNDS EFFECTS:
 when you open document
@@ -52,6 +56,10 @@ Bulletin card system
 
 
 COMPLETED:
+Done: generate_rules() has 7 entries in current_rules, this should be expanded. 
+Done: current_rules should have a maximum of 1-2 rules. 
+Done: is_potato_valid() must support multiple active rules in current_rules at once. 
+Done: Review rules and make sure applying properly
 Done: Potato expiration dates are always in the past, need a separate FUTURE facing function
 Done: Flip to game over and show high score when 3 strikes hit. 
 Done: Change spawn timer to not stop timer when hitting max

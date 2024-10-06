@@ -191,10 +191,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label (RulesLabel)" type="Label" parent="."]
-offset_left = 36.0
-offset_top = 402.0
-offset_right = 236.0
-offset_bottom = 598.0
+offset_left = 81.0
+offset_top = 476.0
+offset_right = 281.0
+offset_bottom = 672.0
 autowrap_mode = 3
 
 [node name="PotatoLine" type="Sprite2D" parent="."]
