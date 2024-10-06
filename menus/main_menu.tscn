@@ -5,6 +5,19 @@
 
 [sub_resource type="GDScript" id="GDScript_jiqp2"]
 script/source = "extends Control
+
+
+func _on_start_button_pressed():
+	get_tree().change_scene_to_file(\"res://mainGame.tscn\")
+
+func _on_credits_button_pressed():
+	get_tree().change_scene_to_file(\"res://menus/credits_menu.tscn\")
+
+func _on_disclaimer_button_pressed():
+	get_tree().change_scene_to_file(\"res://menus/disclaimer_menu.tscn\")
+
+func _on_quit_button_pressed():
+	get_tree().change_scene_to_file(\"res://menus/confirmation_scene.tscn\")
 "
 
 [sub_resource type="Theme" id="Theme_b2ndg"]
@@ -90,3 +103,8 @@ theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 16
 text = "Quit to desktop"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/DisclaimerButton" to="." method="_on_disclaimer_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
