@@ -2,7 +2,19 @@
 extends Node2D
 
 @onready var bgm_player = $"AudioStreamPlayer2D (BGM)"
+@onready var fade_overlay = $FadeOverlay
 
+func transition_to_scene(scene_path: String):
+	# Create a new Tween
+	var tween = create_tween()
+	print("Fade to black")
+	# Fade to black
+	tween.tween_property(fade_overlay, "modulate:a", 1.0, 1.0)
+	print("Change scene")
+	# Change the scene
+	get_tree().change_scene_to_file("res://game_over.tscn")
+	
+	
 var bgm_tracks = [
 	"res://music/ambient_nothingness_main_ovani_sound.mp3",
 	"res://music/ambient_vol3_defeat_main_ovani_sound.mp3",
@@ -14,12 +26,13 @@ var current_potato_info
 
 var current_potato
 var score = 0
+var strikes = 0
 var current_rules = []
 var queue_manager: Node2D
 const DEFAULT_VOLUME_PERCENT = 40.0
 var is_potato_in_office = false
 var megaphone_flash_timer: Timer
-const MEGAPHONE_FLASH_INTERVAL = 1.0 # flash every 5 seconds
+const MEGAPHONE_FLASH_INTERVAL = 1.0 # flash every 1 seconds
 
 # Potato spawn manager
 var potato_count = 0
@@ -103,14 +116,14 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 
 func update_date_display():
 	var current_date = Time.get_date_dict_from_system()
-	var formatted_date = "%04d-%02d-%02d" % [current_date.year, current_date.month, current_date.day]
-	$"Label (DateLabel)".text = "Date: " + formatted_date
+	var formatted_date = "%04d.%02d.%02d" % [current_date.year, current_date.month, current_date.day]
+	$"Label (DateLabel)".text = formatted_date
 
 func _ready():
 	setup_megaphone_flash_timer()
 	set_bgm_volume(DEFAULT_VOLUME_PERCENT)
 	play_random_bgm()
-	$"Label (ScoreLabel)".text = "Score: " + str(score)
+	$"Label (ScoreLabel)".text = "Score   " + str(score)
 	update_date_display()
 	queue_manager = $"Node2D (QueueManager)"  # Make sure to add QueueManager as a child of Main
 	generate_rules()
@@ -140,12 +153,9 @@ func _ready():
 	# Add closed passport to draggable sprites
 	draggable_sprites.append(passport)
 	
-	
 func setup_megaphone_flash_timer():
 	megaphone_flash_timer = $MegaphoneFlashTimer
 	megaphone_flash_timer.wait_time = MEGAPHONE_FLASH_INTERVAL
-	megaphone_flash_timer.connect("timeout", Callable(self, "_on_megaphone_flash_timer_timeout"))
-	add_child(megaphone_flash_timer)
 	megaphone_flash_timer.start()
 
 
@@ -296,14 +306,20 @@ func _process(delta):
 		open_passport_action()
 
 func generate_potato_info():
+	var expiration_date: String
+	if randf() < 0.2:
+		expiration_date = get_past_date(0, 3)
+	else:
+		expiration_date = get_future_date(0,3)
+		
 	return {
 		"name": get_random_name(),
 		"type": get_random_type(),
 		"condition": get_random_condition(),
 		"sex": get_random_sex(), 
 		"country_of_issue": get_random_country(),
-		"date_of_birth": get_random_date(1, 10),
-		"expiration_date": get_random_date(0, 2)
+		"date_of_birth": get_past_date(1, 10),
+		"expiration_date": expiration_date
 	}
 
 func update_potato_info_display():
@@ -369,12 +385,19 @@ func get_random_country():
 		]
 	return countries[randi() % countries.size()]
 	
-func get_random_date(years_ago_start: int, years_ago_end: int) -> String:
+func get_past_date(years_ago_start: int, years_ago_end: int) -> String:
 	var current_date = Time.get_date_dict_from_system()
 	var year = current_date.year - years_ago_start - randi() % (years_ago_end - years_ago_start + 1)
 	var month = randi() % 12 + 1
-	var day = randi() % 28 + 1
-	return "%04d-%02d-%02d" % [year, month, day]
+	var day = randi() % 28 + 1  # Simplified to avoid month-specific day calculations
+	return "%04d.%02d.%02d" % [year, month, day]
+
+func get_future_date(years_ahead_start: int, years_ahead_end: int) -> String:
+	var current_date = Time.get_date_dict_from_system()
+	var year = current_date.year + years_ahead_start + randi() % (years_ahead_end - years_ahead_start + 1)
+	var month = randi() % 12 + 1
+	var day = randi() % 28 + 1  # Simplified to avoid month-specific day calculations
+	return "%04d.%02d.%02d" % [year, month, day]
 	
 func calculate_age(date_of_birth: String) -> int:
 	var current_date = Time.get_date_dict_from_system()
@@ -402,6 +425,16 @@ func _on_button_welcome_button_pressed() -> void:
 func _on_button_no_entry_button_pressed() -> void:
 	process_decision(false)
 
+func go_to_game_over():
+	var game_over_scene = preload("res://game_over.tscn").instantiate()
+	game_over_scene.score = score
+	print("transition to scene")
+	$"Sprite2D (Approval Stamp)".visible = false
+	$"Sprite2D (Rejection Stamp)".visible = false
+	add_child(game_over_scene)
+	#transition_to_scene("res://game_over.tscn")
+	
+
 func process_decision(allowed):
 	var potato_info = queue_manager.remove_potato()
 	if potato_info.is_empty():
@@ -415,9 +448,14 @@ func process_decision(allowed):
 		$"Label (JudgementInfo)".text = "You made the right choice, officer."
 	else:
 		$"Label (JudgementInfo)".text = "You have caused unnecessary suffering, officer..."
-		score -= 1
-	
-	$"Label (ScoreLabel)".text = "Score: " + str(score)
+		strikes += 1
+		if strikes == 3:
+			go_to_game_over()
+			print("Game over!")
+			
+			
+	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + "/3"
+	$"Label (ScoreLabel)".text = "Score   " + str(score)
 
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()

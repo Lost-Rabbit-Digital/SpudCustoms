@@ -1,7 +1,4 @@
-Done: Change spawn timer to not stop timer when hitting max
-
-Add 3 strike system and warn when wrong.
-Flip to game over and show high score when 3 strikes hit. 
+Review rules and make sure applying properly
 
 
 CUSTOMS PROCESS:
@@ -56,6 +53,11 @@ Bulletin card system
 
 
 COMPLETED:
+Done: Potato expiration dates are always in the past, need a separate FUTURE facing function
+Done: Flip to game over and show high score when 3 strikes hit. 
+Done: Change spawn timer to not stop timer when hitting max
+Done: Add 3 strike system and warn when wrong.
+Done: Add working game over constraints
 Done: Score is added or removed based on accuracy of judgement.
 Done: Passports break after 2nd potato enters
 Done: Credits menu (Main menu scene)
