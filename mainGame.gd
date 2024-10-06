@@ -4,6 +4,8 @@ extends Node2D
 var close_sound_played = false
 var open_sound_played = false
 
+var is_paused = false
+
 # track the current potato's info
 var current_potato_info
 
@@ -395,6 +397,15 @@ func _process(delta):
 	else:
 		$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = false
 		
+	if is_paused == true:
+		$Container/pause_menu/MarginContainer.visible = true
+		$"Sprite2D (Approval Stamp)".visible = false
+		$"Sprite2D (Rejection Stamp)".visible = false
+	else:
+		$Container/pause_menu/MarginContainer.visible = false
+		$"Sprite2D (Approval Stamp)".visible = true
+		$"Sprite2D (Rejection Stamp)".visible = true
+		
 	# Check for closing passport
 	if (suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)) or 
 		suspect.get_rect().has_point(suspect.to_local(mouse_pos))) and (dragged_sprite == bulletin or dragged_sprite == passport):
@@ -638,6 +649,10 @@ func clear_potato_textures():
 	$"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = null
 	
 func _input(event):
+	if event is InputEventKey:
+		if event.keycode == KEY_ESCAPE and event.pressed:
+			is_paused = !is_paused
+				
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:

@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=3 uid="uid://bp2pkcox316n0"]
+
+[ext_resource type="Script" path="res://menus/pause_menu.gd" id="1_4a8qb"]
+[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://background.png" id="2_es6e3"]
+[ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="3_xl4c0"]
+
+[sub_resource type="Theme" id="Theme_s43ip"]
+default_font = ExtResource("3_xl4c0")
+default_font_size = 32
+
+[sub_resource type="Theme" id="Theme_jvk3w"]
+default_font = ExtResource("3_xl4c0")
+default_font_size = 32
+
+[node name="pause_menu" type="Control"]
+z_index = 5
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4a8qb")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Background" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(640, 360)
+texture = ExtResource("2_es6e3")
+
+[node name="Header" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.768627, 0.588235, 0.176471, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 14
+theme_override_constants/shadow_offset_y = 14
+theme_override_constants/outline_size = 14
+theme_override_constants/shadow_outline_size = 14
+theme_override_fonts/font = ExtResource("3_xl4c0")
+theme_override_font_sizes/font_size = 128
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Disclaimer" type="Label" parent="MarginContainer"]
+custom_minimum_size = Vector2(1256, 0)
+layout_mode = 2
+theme = SubResource("Theme_s43ip")
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+text = "Press \"Escape\" to resume..."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="QuitButton" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = SubResource("Theme_jvk3w")
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+text = "Quit to menu"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
