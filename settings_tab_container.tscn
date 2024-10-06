@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgu2vsjk6g1xm"]
+[gd_scene load_steps=3 format=3 uid="uid://dgu2vsjk6g1xm"]
 
 [ext_resource type="PackedScene" uid="uid://clursemqubq7t" path="res://menus/options_sub_menus/hotkey_rebind_button.tscn" id="1_n24g8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n76ra"]
 
 [node name="Settings_Tab_Container" type="Control"]
 layout_mode = 3
@@ -138,8 +140,18 @@ layout_mode = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Controls/MarginContainer/ScrollContainer"]
 layout_mode = 2
 
+[node name="HSeparator" type="HSeparator" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+theme_override_styles/separator = SubResource("StyleBoxEmpty_n76ra")
+
 [node name="Hotkey_Rebind_Button" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_n24g8")]
 layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+theme_override_styles/separator = SubResource("StyleBoxEmpty_n76ra")
 
 [node name="Accessibility" type="TabBar" parent="TabContainer"]
 visible = false
