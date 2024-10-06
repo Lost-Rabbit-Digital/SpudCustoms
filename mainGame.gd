@@ -23,6 +23,7 @@ const PASSPORT_Z_INDEX = 0
 var passport: Sprite2D
 var interaction_table: Sprite2D
 var suspect_panel: Sprite2D
+var suspect_panel_front: Sprite2D
 var suspect: Sprite2D
 var is_passport_open = false
 
@@ -108,6 +109,7 @@ func _ready():
 	passport = $"Sprite2D (Passport)"
 	interaction_table = $InteractionTableBackground
 	suspect_panel = $"Sprite2D (Suspect Panel)"
+	suspect_panel_front = $"Sprite2D (Suspect Panel)/SuspectPanelFront"
 	suspect = $"Sprite2D (PotatoMugshot)"
 	
 	# Add closed passport to draggable sprites
@@ -124,9 +126,9 @@ func play_random_customs_officer_sound():
 		preload("res://audio/froggy_phrase_7.wav")
 	]
 	# Play potato customs officer sound
-	if !$AudioStreamPlayer2D.is_playing():
-		$AudioStreamPlayer2D.stream = customs_officer_sounds.pick_random()
-		$AudioStreamPlayer2D.play()
+	if !$"AudioStreamPlayer2D (SFX)".is_playing():
+		$"AudioStreamPlayer2D (SFX)".stream = customs_officer_sounds.pick_random()
+		$"AudioStreamPlayer2D (SFX)".play()
 		
 
 func megaphone_clicked():
@@ -135,6 +137,7 @@ func megaphone_clicked():
 	print("Megaphone clicked")
 	var potato_person = queue_manager.remove_front_potato()
 	if potato_person:
+		passport.visible = false
 		move_potato_to_office(potato_person)
 	else:
 		print("No potato to process. :(")
@@ -174,15 +177,28 @@ func animate_mugshot_and_passport():
 	
 	# Set potato mugshot just to right side of screen
 	potato_mugshot.position.x = suspect_panel.position.x + suspect_panel.texture.get_width()
-	
 	# potato_mugshot.modulate(Color.BLACK)
+	
+	# Set the passport to invisible, 
+	# move it to just above the suspect mugshot, 
+	# change it's texture to tiny passport, 
+	# Move it down by half the height of the interaction table
+	
+	passport.visible = false
+	passport.position.x = suspect_panel.position.x 
+	passport.position.y = suspect_panel.position.y
+	close_passport_action()
+	
+	#passport.texture = load("res://documents/closed_passport_small/closed_passport_small.png")
 	
 	var tween = create_tween()
 	tween.set_parallel(true)
 	tween.tween_property(potato_mugshot, "position:x", suspect_panel.position.x, 0.5)
 	tween.tween_property(potato_mugshot, "modulate", Color.WHITE, 0.5)
-	
-	tween.chain().tween_property(passport, "position:y", interaction_table.position.y + interaction_table.texture.get_height() - passport.texture.get_height(), 0.5)
+	#passport.visible = true
+	tween.chain().tween_property(passport, "visible", true, 0)
+	tween.chain().tween_property(passport, "position:y", suspect_panel.position.y + suspect_panel.texture.get_height() / 5, 0.75)
+	tween.chain().tween_property(passport, "z_index", 3, 0)
 	print("Finished animating mugshot and passport")
 	
 func setup_spawn_timer():
@@ -441,9 +457,9 @@ func play_random_stamp_sound():
 		preload("res://audio/stamp_sound_4.mp3"),
 		preload("res://audio/stamp_sound_5.mp3")
 	]
-	if !$AudioStreamPlayer2D.is_playing():
-		$AudioStreamPlayer2D.stream = stamp_sounds.pick_random()
-		$AudioStreamPlayer2D.play()
+	if !$"AudioStreamPlayer2D (SFX)".is_playing():
+		$"AudioStreamPlayer2D (SFX)".stream = stamp_sounds.pick_random()
+		$"AudioStreamPlayer2D (SFX)".play()
 
 func apply_stamp(stamp):
 	var mouse_pos = get_global_mouse_position()
@@ -506,14 +522,24 @@ func remove_stamp():
 	print("Clearing stamps from passport...")
 	# Get the parent node
 	var passport = $"Sprite2D (Passport)/Sprite2D (Open Passport)"
-
+	var stamp_count = 0
+	var approval_status = null
 	# Loop through all children and remove those with "stamp" in the name
 	for child in passport.get_children():
 		if "@Sprite2D@" in child.name:
-			print(child.name)
+			stamp_count += 1
+			print(child.texture.resource_path)
+			if "approved" in child.texture.resource_path:
+				approval_status = "approved"
+			else:
+				approval_status = "rejected"
 			passport.remove_child(child)
-			# Optionally, if you want to completely delete the node:
-			child.queue_free()
+			
+	print("This passport has been processed as %s" % approval_status)
+	if stamp_count == 0:
+		print("There are no stamps, foolish potato.")
+		
+	
 	
 func find_stampable_object_at(pos: Vector2):
 	for sprite in draggable_sprites:
