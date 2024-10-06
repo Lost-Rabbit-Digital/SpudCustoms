@@ -519,12 +519,13 @@ func apply_stamp(stamp):
 		)
 		
 func remove_stamp():
-	print("Clearing stamps from passport...")
+	print("Processing passport...")
 	# Get the parent node
 	var passport = $"Sprite2D (Passport)/Sprite2D (Open Passport)"
 	var stamp_count = 0
 	var approval_status = null
-	# Loop through all children and remove those with "stamp" in the name
+	
+	# Check for stamps and determine approval status
 	for child in passport.get_children():
 		if "@Sprite2D@" in child.name:
 			stamp_count += 1
@@ -534,11 +535,61 @@ func remove_stamp():
 			else:
 				approval_status = "rejected"
 			passport.remove_child(child)
+			child.queue_free()
 			
-	print("This passport has been processed as %s" % approval_status)
 	if stamp_count == 0:
 		print("There are no stamps, foolish potato.")
 		
+	print("This passport has been processed as %s" % approval_status)
+	
+	# animate the potato mugshot
+	print(potato_mugshot)
+	var tween = create_tween()
+	print(potato_mugshot.position.x)
+	#tween.tween_property(potato_mugshot, "position:x", suspect_panel.x - potato_mugshot.texture.get_width(), 0.5)
+	tween.tween_property(potato_mugshot, "modulate:a", 0, 0.3)
+	# once fadeout completed, move potato to exit
+	tween.tween_callback(func(): move_potato_along_path(approval_status))
+	
+func move_potato_along_path(approval_status):
+	var path: Path2D
+	var potato_person = Sprite2D.new()
+	potato_person.texture = load("res://potatoes/bodies/russet_burbank_body.png")
+	
+	# set path based on approval status
+	if approval_status == "approved":
+		path = $"Path2D (ApprovePath)"
+	else: 
+		path = $"Path2D (RejectPath)"
+		
+	var path_follow = PathFollow2D.new()
+	path.add_child(path_follow)
+	path_follow.add_child(potato_person)
+	
+	potato_person.position = Vector2.ZERO
+	path_follow.progress_ratio = 0.0
+	
+	var exit_tween = create_tween()
+	exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 2.0)
+	exit_tween.tween_callback(func():
+		potato_person.queue_free()
+		path_follow.queue_free()
+		reset_scene()
+		)
+		
+func reset_scene():
+	# reset mugshot
+	potato_mugshot.modulate.a = 1
+	potato_mugshot.position.x = suspect_panel.position.x
+	
+	# reset passport
+	close_passport_action()
+	passport.position = Vector2(suspect_panel.position.x, suspect_panel.position.y + suspect_panel.texture.get_height () / 5)
+	
+	# clear stamps
+	for child in $"Sprite2D (Passport)/Sprite2D (Open Passport)".get_children():
+		if "@Sprite2D@" in child.name:
+			child.queue_free()
 	
 	
 func find_stampable_object_at(pos: Vector2):
