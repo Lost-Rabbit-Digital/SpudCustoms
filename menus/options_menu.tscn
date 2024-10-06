@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cg7aiv7jsd6pg"]
+[gd_scene load_steps=6 format=3 uid="uid://cg7aiv7jsd6pg"]
 
 [ext_resource type="Script" path="res://menus/options_menu.gd" id="1_oyqf7"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="2_ayndp"]
+[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://background.png" id="2_hck77"]
 [ext_resource type="PackedScene" uid="uid://dgu2vsjk6g1xm" path="res://settings_tab_container.tscn" id="3_an6tk"]
 
 [sub_resource type="Theme" id="Theme_7topn"]
@@ -27,6 +28,10 @@ theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
+
+[node name="Background" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(640, 360)
+texture = ExtResource("2_hck77")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2

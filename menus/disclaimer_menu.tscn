@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=3 uid="uid://jfnium2fmyss"]
+
+[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://background.png" id="1_r4aot"]
+[ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="2_ypp0a"]
+
+[sub_resource type="Theme" id="Theme_k4q13"]
+default_font = ExtResource("2_ypp0a")
+default_font_size = 32
+
+[sub_resource type="Theme" id="Theme_nctqt"]
+default_font = ExtResource("2_ypp0a")
+default_font_size = 48
+
+[sub_resource type="Theme" id="Theme_76cfd"]
+default_font = ExtResource("2_ypp0a")
+
+[node name="disclaimer_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Background" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(640, 360)
+texture = ExtResource("1_r4aot")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Header" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+modulate = Color(0.768627, 0.588235, 0.176471, 1)
+layout_mode = 2
+theme = SubResource("Theme_k4q13")
+text = "Developers"
+horizontal_alignment = 1
+
+[node name="Name1" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_nctqt")
+text = "David McHale"
+horizontal_alignment = 1
+
+[node name="Name2" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_nctqt")
+text = "Boden McHale"
+horizontal_alignment = 1
+
+[node name="Header2" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+modulate = Color(0.768627, 0.588235, 0.176471, 1)
+layout_mode = 2
+theme = SubResource("Theme_k4q13")
+text = "2024 @ Lost Rabbit Digital LLC"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme = SubResource("Theme_76cfd")
+text = "Back"
