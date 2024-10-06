@@ -243,22 +243,8 @@ func generate_potato_info():
 	}
 
 func update_potato_info_display():
-	var front_potato = queue_manager.get_front_potato_info()
-	if not current_potato_info and front_potato:
-		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = """{name}""".format(front_potato)
-		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = """{date_of_birth}
-		{sex} 
-		{country_of_issue}
-		{expiration_date} 
-		{type}
-		{condition}
-		""".format(front_potato)
-	elif front_potato.is_empty() and current_potato_info.is_empty():
-		# Clear the display if there are no potatoes
-		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = ""
-		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = ""
-		return
-	elif current_potato_info:
+	print("Updating potato info")
+	if current_potato_info:
 		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = """{name}""".format(current_potato_info)
 		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = """{date_of_birth}
 		{sex} 
@@ -267,9 +253,22 @@ func update_potato_info_display():
 		{type}
 		{condition}
 		""".format(current_potato_info)
-	else:
-		pass
-
+	if not current_potato_info:
+		var front_potato = queue_manager.get_front_potato_info()
+		if front_potato:
+			$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = """{name}""".format(front_potato)
+			$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = """{date_of_birth}
+			{sex} 
+			{country_of_issue}
+			{expiration_date} 
+			{type}
+			{condition}
+			""".format(front_potato)
+		else:
+			# Clear the display if there are no potatoes
+			$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = ""
+			$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = ""
+			return
 	update_potato_texture()
 
 func generate_potato():
@@ -370,8 +369,6 @@ func process_decision(allowed):
 		
 	# Check and update the information in the passport
 	update_potato_info_display()
-	# Check and update the potato headshot
-	update_potato_texture()
 
 func peek_front_potato():
 	var front_potato_info = queue_manager.get_front_potato_info()
@@ -380,16 +377,22 @@ func peek_front_potato():
 func update_potato_texture():
 	var texture_path = ""
 	var texture_path_passport_photo = ""
-	var front_potato = queue_manager.get_front_potato_info()
-	if front_potato.is_empty():
+	var potato_info = null
+	
+	# preferentially use current_potato_info, fall back to front_potato if null
+	if current_potato_info:
+		potato_info = current_potato_info
+	else:
+		potato_info = queue_manager.get_front_potato_info()
+		
+	if potato_info.is_empty():
+		print("Potato info is empty!")
 		# Clear the texture if there are no potatoes
 		potato_mugshot.texture = null
 		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = null
 		return		
-	if current_potato_info:
-		front_potato = current_potato_info
-			
-	match front_potato.type:
+		
+	match potato_info.type:
 		"Purple Majesty":
 			texture_path = "res://potatoes/heads/purple_majesty_head.png"
 			texture_path_passport_photo = "res://potatoes/document_photos/purple_majesty.png"
@@ -409,8 +412,9 @@ func update_potato_texture():
 	if texture_path != "":
 		potato_mugshot.texture = load(texture_path)
 		
-	if texture_path_passport_photo != "":
-		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = load(texture_path_passport_photo)
+	var passport_photo = $"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)"
+	if passport_photo.texture == null and texture_path_passport_photo != "":
+		passport_photo.texture = load(texture_path_passport_photo)
 
 func _input(event):
 	if event is InputEventMouseButton:
@@ -617,7 +621,7 @@ func move_potato_along_path(approval_status):
 	exit_tween.tween_callback(func():
 		potato_person.queue_free()
 		path_follow.queue_free()
-		reset_scene()
+		#reset_scene()
 		)
 		
 func reset_scene():
@@ -626,16 +630,16 @@ func reset_scene():
 	potato_mugshot.position.x = suspect_panel.position.x
 	
 	# reset passport
-	close_passport_action()
+	# close_passport_action()
 	passport.position = Vector2(suspect_panel.position.x, suspect_panel.position.y + suspect_panel.texture.get_height () / 5)
 	
 	# clear stamps
-	for child in $"Sprite2D (Passport)/Sprite2D (Open Passport)".get_children():
-		if "@Sprite2D@" in child.name:
-			child.queue_free()
+	#for child in $"Sprite2D (Passport)/Sprite2D (Open Passport)".get_children():
+	#	if "@Sprite2D@" in child.name:
+	#		child.queue_free()
 	
 	# Clear the current potato info
-	current_potato_info = null
+	# current_potato_info = null
 	
 func find_stampable_object_at(pos: Vector2):
 	for sprite in draggable_sprites:

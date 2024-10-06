@@ -63,7 +63,7 @@ func update_positions():
 		for i in range(potato_count):
 			var target_point = min(point_count - 1, point_count - 1 - i)
 			potatoes[potato_count - 1 - i].target_point = target_point
-			print("Potato ", potato_count - 1 - i, " target point set to: ", target_point)
+			#print("Potato ", potato_count - 1 - i, " target point set to: ", target_point)
 
 func _process(delta):
 	for potato in potatoes:
