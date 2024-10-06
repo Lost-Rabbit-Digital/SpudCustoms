@@ -99,7 +99,9 @@ text = "2024 @ Lost Rabbit Digital LLC"
 horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="MarginContainer"]
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 8
 theme = SubResource("Theme_ni8lc")
 theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)

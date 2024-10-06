@@ -70,7 +70,10 @@ theme_override_constants/separation = 32
 alignment = 1
 
 [node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme = SubResource("Theme_qd0ra")
 theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -78,7 +81,9 @@ theme_override_constants/outline_size = 16
 text = "Begin a new game"
 
 [node name="CreditsButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 theme = SubResource("Theme_qd0ra")
 theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -87,7 +92,9 @@ text = "Credits
 "
 
 [node name="DisclaimerButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 theme = SubResource("Theme_qd0ra")
 theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -95,7 +102,9 @@ theme_override_constants/outline_size = 16
 text = "Disclaimer"
 
 [node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 theme = SubResource("Theme_qd0ra")
 theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
