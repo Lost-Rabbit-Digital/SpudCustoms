@@ -403,22 +403,17 @@ func _input(event):
 						close_passport_action()
 						remove_stamp()
 				dragged_sprite = null
+				$"Sprite2D (Approval Stamp)/Sprite2D (StampShadow)".visible = false
+				$"Sprite2D (Rejection Stamp)/Sprite2D (StampShadow)".visible = false
 		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			if dragged_sprite and "Stamp" in dragged_sprite.name:
 				apply_stamp(dragged_sprite)
 				
-				
-	
 	elif event is InputEventMouseMotion and dragged_sprite:
 		dragged_sprite.global_position = get_global_mouse_position() - drag_offset
 		if "Stamp" in dragged_sprite.name:
 			var stamp_shadow = dragged_sprite.get_children()[0]
 			stamp_shadow.visible = true
-			
-	elif event is InputEventMouseButton and not event.pressed:
-		if event.button_index == MOUSE_BUTTON_LEFT:
-			$"Sprite2D (Approval Stamp)/Sprite2D (StampShadow)"
-			print("Left mouse button released")
 		
 func open_passport_action():
 	$"Sprite2D (Passport)".texture = preload("res://documents/passport-old.png")
