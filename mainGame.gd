@@ -89,7 +89,14 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 @onready var potato_mugshot = $"Sprite2D (PotatoMugshot)"
 @onready var enter_office_path = $"Path2D (EnterOfficePath)"
 
+func update_date_display():
+	var current_date = Time.get_date_dict_from_system()
+	var formatted_date = "%04d-%02d-%02d" % [current_date.year, current_date.month, current_date.day]
+	$"Label (DateLabel)".text = "Date: " + formatted_date
+
 func _ready():
+	$"Label (ScoreLabel)".text = "Score: " + str(score)
+	update_date_display()
 	queue_manager = $"Node2D (QueueManager)"  # Make sure to add QueueManager as a child of Main
 	generate_rules()
 	setup_spawn_timer()
