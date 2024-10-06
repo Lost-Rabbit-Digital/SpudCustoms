@@ -68,6 +68,8 @@ credits menu
 pause menu
 
 
+Add number of eyes as an attribute of personally identifiable information to the spuddy passports
+
 Done: When clicked, the book object morphs into an opened document showing the information for the potato immigrating.
 Done: An approval stamp and rejection stamp that you pick up with left click, drag over the document to set approve or reject status. 
 Done: Click the document and drag the document onto the potato to return the document.

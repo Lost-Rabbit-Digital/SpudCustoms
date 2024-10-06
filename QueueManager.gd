@@ -85,6 +85,16 @@ func get_front_potato_info() -> Dictionary:
 	if potatoes.size() > 0:
 		return potatoes.back().get_potato_info()
 	return {}
+	
+func remove_front_potato() -> Node2D: 
+	if potatoes.size() > 0: 
+		var potato = potatoes.pop_back()
+		print("Removing front potato. Remaining potatoes: ", potatoes.size())
+		update_positions()
+		return potato
+	return null
+	
+	
 
 func debug_add_potatoes(count: int):
 	for i in range(count):

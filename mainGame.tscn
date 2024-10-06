@@ -25,25 +25,25 @@
 
 [sub_resource type="Curve2D" id="Curve2D_f3jw2"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 917, 195, 0, 0, 0, 0, 998, 169, 0, 0, 0, 0, 993, 105, 0, 0, 0, 0, 899, 106, 0, 0, 0, 0, 899, 88, 0, 0, 0, 0, 880, 86, 0, 0, 0, 0, 881, 106, 0, 0, 0, 0, 634, 69, 0, 0, 0, 0, 626, 61, 0, 0, 0, 0, 617, 74, 0, 0, 0, 0, 337, 106, 0, 0, 0, 0, 326, 93, 0, 0, 0, 0, 311, 109, 0, 0, 0, 0, 11, 145)
+"points": PackedVector2Array(0, 0, 0, 0, 890, 198, 0, 0, 0, 0, 998, 169, 0, 0, 0, 0, 993, 105, 0, 0, 0, 0, 899, 106, 0, 0, 0, 0, 899, 88, 0, 0, 0, 0, 880, 86, 0, 0, 0, 0, 881, 106, 0, 0, 0, 0, 634, 69, 0, 0, 0, 0, 626, 61, 0, 0, 0, 0, 617, 74, 0, 0, 0, 0, 337, 106, 0, 0, 0, 0, 326, 93, 0, 0, 0, 0, 311, 109, 0, 0, 0, 0, 11, 145)
 }
 point_count = 14
 
 [sub_resource type="Curve2D" id="Curve2D_1j820"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 913, 196, 0, 0, 0, 0, 992, 174, 0, 0, 0, 0, 1005, 56, 0, 0, 0, 0, 1265, 51)
+"points": PackedVector2Array(0, 0, 0, 0, 887, 197, 0, 0, 0, 0, 992, 174, 0, 0, 0, 0, 1005, 56, 0, 0, 0, 0, 1265, 51)
 }
 point_count = 4
 
 [sub_resource type="Curve2D" id="Curve2D_xms7a"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 993, 196, 0, 0, 0, 0, 917, 203)
+"points": PackedVector2Array(0, 0, 0, 0, 985, 192, 0, 0, 0, 0, 917, 203)
 }
 point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_uenca"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 854, 202, 0, 0, 0, 0, 603, 195, 0, 0, 0, 0, 392, 189, 0, 0, 0, 0, 177, 196, 0, 0, 0, 0, 110, 198, 0, 0, 0, 0, 112, 16)
+"points": PackedVector2Array(0, 0, 0, 0, 886, 201, 0, 0, 0, 0, 603, 195, 0, 0, 0, 0, 392, 189, 0, 0, 0, 0, 177, 196, 0, 0, 0, 0, 110, 198, 0, 0, 0, 0, 112, 16)
 }
 point_count = 6
 
@@ -167,6 +167,8 @@ curve = SubResource("Curve2D_f3jw2")
 curve = SubResource("Curve2D_1j820")
 
 [node name="Path2D (EnterOfficePath)" type="Path2D" parent="."]
+position = Vector2(-420.074, 0)
+scale = Vector2(1.42647, 1)
 curve = SubResource("Curve2D_xms7a")
 
 [node name="Path2D (ApprovePath)" type="Path2D" parent="."]
@@ -181,11 +183,10 @@ script = ExtResource("10_a4p7n")
 [node name="Sprite2D (Passport)" type="Sprite2D" parent="."]
 visible = false
 z_index = 1
-position = Vector2(551, 448)
+position = Vector2(721, 426)
 texture = ExtResource("12_q7tid")
 
 [node name="Sprite2D (Close Passport)" type="Sprite2D" parent="Sprite2D (Passport)"]
-visible = false
 position = Vector2(-34.6184, 40.1346)
 rotation = -0.137881
 scale = Vector2(0.413016, 0.413016)

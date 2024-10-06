@@ -83,7 +83,6 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 					return false
 	return true
 
-
 @onready var megaphone = $"Sprite2D (Megaphone)"
 @onready var potato_mugshot = $"Sprite2D (PotatoMugshot)"
 @onready var enter_office_path = $"Path2D (EnterOfficePath)"
@@ -116,7 +115,6 @@ func _ready():
 	# Add closed passport to draggable sprites
 	draggable_sprites.append(passport)
 	
-
 func play_random_customs_officer_sound():
 	var customs_officer_sounds = [
 		preload("res://audio/froggy_phrase_1.wav"),
@@ -127,48 +125,66 @@ func play_random_customs_officer_sound():
 		preload("res://audio/froggy_phrase_6.wav"),
 		preload("res://audio/froggy_phrase_7.wav")
 	]
+	# Play potato customs officer sound
 	if !$AudioStreamPlayer2D.is_playing():
 		$AudioStreamPlayer2D.stream = customs_officer_sounds.pick_random()
 		$AudioStreamPlayer2D.play()
 		
-	# Play potato customs officer sound
-	
-	
 
 func megaphone_clicked():
 	queue_manager = $"Node2D (QueueManager)"
 	play_random_customs_officer_sound()
-	var potato_info = queue_manager.remove_potato()
-	if potato_info.is_empty():
-		print("No potato to process.")
-		return
-		
-	var potato_person = queue_manager.potatoes.pop_back()
-	if potato_person: 
+	print("Megaphone clicked")
+	var potato_person = queue_manager.remove_front_potato()
+	if potato_person:
 		move_potato_to_office(potato_person)
+	else:
+		print("No potato to process. :(")
 
 		
 func move_potato_to_office(potato_person):
+	print("Moving our spuddy to the customs office")
+	
+	# This may be removing a second potato, comment if persistenting after remove_front_potato() changes
+	if potato_person.get_parent():
+		potato_person.get_parent().remove_child(potato_person)
+		print("removed potato from original parent")
+		
 	var path_follow = PathFollow2D.new()
 	enter_office_path.add_child(path_follow)
 	path_follow.add_child(potato_person)
+	print("Added potato_person to new PathFollow2D")
 	
-	var tween = get_tree().create_tween()
-	tween.tween_property(path_follow, "progress_ratio", 1.0 , 2.0)
-	tween.tween_callback(potato_person.queue_free)
-	tween.tween_callback(path_follow.queue_free)
-	tween.tween_callback(animate_mugshot_and_passport)
+	potato_person.position = Vector2.ZERO
+	path_follow.progress_ratio = 0.0
+	print("Reset potato position and path progress") 
+		
+	var tween = create_tween()
+	tween.tween_property(path_follow, "progress_ratio", 1.0, 2.0)
+	tween.tween_callback(func():
+		print("Potato reached end of path, clean up")
+		potato_person.queue_free()
+		path_follow.queue_free()
+		animate_mugshot_and_passport()
+		)
+	
+	print("Started animate mugshot and passport tween animation")
 	
 func animate_mugshot_and_passport():
+	print("Animating mugshot and passport")
+	update_potato_info_display()
+	
 	potato_mugshot.position.x = suspect_panel.position.x + suspect_panel.texture.get_width()
+	
 	# potato_mugshot.modulate(Color.BLACK)
 	
-	var tween = get_tree().create_tween()
+	var tween = create_tween()
 	tween.set_parallel(true)
 	tween.tween_property(potato_mugshot, "position:x", suspect_panel.position.x, 0.5)
 	tween.tween_property(potato_mugshot, "modulate", Color.WHITE, 0.5)
 	
 	tween.chain().tween_property(passport, "position:y", interaction_table.position.y + interaction_table.texture.get_height() - passport.texture.get_height(), 0.5)
+	print("Finished animating mugshot and passport")
 	
 func setup_spawn_timer():
 	spawn_timer = Timer.new()
