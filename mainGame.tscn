@@ -244,6 +244,8 @@ position = Vector2(-4.99997, 4.00002)
 scale = Vector2(1.01509, 1.01216)
 texture = ExtResource("20_pd2wg")
 
+[node name="AudioStreamPlayer2D (BGM)" type="AudioStreamPlayer2D" parent="."]
+
 [node name="AudioStreamPlayer2D (SFX)" type="AudioStreamPlayer2D" parent="."]
 
 [node name="Sprite2D (Approval Stamp)" type="Sprite2D" parent="."]

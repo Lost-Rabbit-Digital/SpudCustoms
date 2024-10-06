@@ -1,6 +1,14 @@
 # Main.gd (Main scene script)
 extends Node2D
 
+@onready var bgm_player = $"AudioStreamPlayer2D (BGM)"
+
+var bgm_tracks = [
+	"res://music/ambient_nothingness_main_ovani_sound.mp3",
+	"res://music/ambient_vol3_defeat_main_ovani_sound.mp3",
+	"res://music/ambient_vol3_peace_main_ovani_sound.mp3",
+	"res://music/horror_fog_main_ovani_sound.mp3"
+]
 # track the current potato's info
 var current_potato_info
 
@@ -8,6 +16,7 @@ var current_potato
 var score = 0
 var current_rules = []
 var queue_manager: Node2D
+const DEFAULT_VOLUME_PERCENT = 40.0
 
 # Potato spawn manager
 var potato_count = 0
@@ -95,6 +104,8 @@ func update_date_display():
 	$"Label (DateLabel)".text = "Date: " + formatted_date
 
 func _ready():
+	set_bgm_volume(DEFAULT_VOLUME_PERCENT)
+	play_random_bgm()
 	$"Label (ScoreLabel)".text = "Score: " + str(score)
 	update_date_display()
 	queue_manager = $"Node2D (QueueManager)"  # Make sure to add QueueManager as a child of Main
@@ -125,6 +136,28 @@ func _ready():
 	# Add closed passport to draggable sprites
 	draggable_sprites.append(passport)
 	
+func set_bgm_volume(percent):
+	# Convert percentage to decibels
+	var volume_db = linear_to_db(percent / 100.0)
+	bgm_player.volume_db = volume_db
+	print("BGM volume set to ", percent, "% (", volume_db, " dB)")
+
+func play_random_bgm():
+	# select random track from bgm_tracks
+	var random_track = bgm_tracks[randi() % bgm_tracks.size()]
+	
+	# load and set audio
+	var audio_stream = load(random_track)
+	if audio_stream: 
+		bgm_player.stream = audio_stream
+		bgm_player.play()
+		print("Now playing: ", random_track)
+	else: 
+		print("Failed to load audio", random_track)
+	
+func _on_AudioStreamPlayer2D_BGM_finished():
+	play_random_bgm()
+
 func play_random_customs_officer_sound():
 	var customs_officer_sounds = [
 		preload("res://audio/froggy_phrase_1.wav"),
@@ -606,15 +639,19 @@ func move_potato_along_path(approval_status):
 	
 	potato_person.texture = load(texture_path)
 	potato_person.scale = Vector2(0.20, 0.20)
+	
 	# set path based on approval status
 	if approval_status == "approved":
 		path = $"Path2D (ApprovePath)"
+		process_decision(true)
 	else: 
 		if randi() % 5 == 0:  # 20% chance to go sicko mode
 			path =$"Path2D (RunnerPath)"
 		else:
 			path = $"Path2D (RejectPath)"
-		
+		process_decision(false)
+			
+	# Calculate score change
 	var path_follow = PathFollow2D.new()
 	path.add_child(path_follow)
 	path_follow.add_child(potato_person)
@@ -644,6 +681,8 @@ func reset_scene():
 	close_passport_action()
 	passport.position = Vector2(suspect_panel.position.x, suspect_panel.position.y + suspect_panel.texture.get_height () / 5)
 	passport.modulate.a = 1
+	
+	$"Label (JudgementInfo)".text = ""
 	
 	# Clear the current potato info
 	# current_potato_info = null
