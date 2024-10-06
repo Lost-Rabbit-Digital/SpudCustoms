@@ -19,7 +19,7 @@ var queue_manager: Node2D
 const DEFAULT_VOLUME_PERCENT = 40.0
 var is_potato_in_office = false
 var megaphone_flash_timer: Timer
-const MEGAPHONE_FLASH_INTERVAL = 5.0 # flash every 5 seconds
+const MEGAPHONE_FLASH_INTERVAL = 1.0 # flash every 5 seconds
 
 # Potato spawn manager
 var potato_count = 0
@@ -142,17 +142,18 @@ func _ready():
 	
 	
 func setup_megaphone_flash_timer():
-	megaphone_flash_timer = Timer.new()
+	megaphone_flash_timer = $MegaphoneFlashTimer
 	megaphone_flash_timer.wait_time = MEGAPHONE_FLASH_INTERVAL
 	megaphone_flash_timer.connect("timeout", Callable(self, "_on_megaphone_flash_timer_timeout"))
 	add_child(megaphone_flash_timer)
 	megaphone_flash_timer.start()
-	
-func on_megaphone_flash_timer_timeout():
+
+
+func _on_megaphone_flash_timer_timeout():
 	if not is_potato_in_office:
-		megaphone.visible = !megaphone.visible
+		$"Sprite2D (Megaphone)/Sprite2D (Flash Alert)".visible = !$"Sprite2D (Megaphone)/Sprite2D (Flash Alert)".visible
 	else:
-		megaphone.visible = true
+		$"Sprite2D (Megaphone)/Sprite2D (Flash Alert)".visible = true
 
 func set_bgm_volume(percent):
 	# Convert percentage to decibels
@@ -277,7 +278,8 @@ func _on_SpawnTimer_timeout():
 	if queue_manager.can_add_potato():
 		queue_manager.spawn_new_potato()
 	else:
-		spawn_timer.stop()
+		print("No mah potatoes bruv")
+		#spawn_timer.stop()
 
 func _process(delta):
 	var mouse_pos = get_global_mouse_position()
