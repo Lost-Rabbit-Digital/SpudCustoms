@@ -338,8 +338,8 @@ func get_random_sex():
 func get_random_country():
 	var countries = [
 		"Spudland", "Potatopia", "Tuberstan", "North Yamnea", "Spuddington", 
-		"Tater's Cross", "Mash Meadows", "Tuber Valley", "Chip Hill", 
-		"Murphy's Landing", "Colcannon Corner", "Pratie Point"
+		"Tatcross", "Mash Meadows", "Tuberville", "Chip Hill", 
+		"Murphyland", "Colcannon", "Pratie Point"
 		]
 	return countries[randi() % countries.size()]
 	
