@@ -1,10 +1,16 @@
-extends Node2D
+extends Control
 
 var score = 0
 
 func _ready():
-	$ScoreLabel.text = """Game Over
+	$MarginContainer/ScoreLabel.text = """You caused too much suffering and have been removed from your post.
+	
+	Your final score was 
+	""" + str(score)
 
-You caused too much suffering and have been removed from your post.
 
-Your final score was:   """ + str(score)
+func _on_restart_button_pressed():
+	get_tree().change_scene_to_file("res://mainGame.tscn")
+
+func _on_quit_button_pressed():
+	get_tree().change_scene_to_file("res://menus/main_menu.tscn")
