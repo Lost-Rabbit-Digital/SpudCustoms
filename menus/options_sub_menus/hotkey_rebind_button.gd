@@ -10,7 +10,8 @@ extends Control
 func _ready():
 	set_process_unhandled_key_input(false)
 	set_action_name()
-
+	set_text_for_key()
+	
 func set_action_name() -> void:
 	label.text = "Unassigned"
 	
@@ -19,3 +20,19 @@ func set_action_name() -> void:
 			label.text = "Primary Interaction"
 		"secondary_interaction":
 			label.text = "Seconday Interaction"
+		"cancel_interaction":
+			label.text = "Cancel Interaction"
+
+func set_text_for_key() -> void:
+	var action_events = InputMap.action_get_events(action_name)
+	if action_events.size() > 0:
+		var action_event = action_events[0]
+		
+		# Check the type of event and handle accordingly
+		if action_event is InputEventKey:
+			var action_keycode = OS.get_keycode_string(action_event.physical_keycode)
+			button.text = "%s" % action_keycode
+		elif action_event is InputEventMouseButton:
+			button.text = "Mouse %s" % action_event.button_index
+		elif action_event is InputEventJoypadButton:
+			button.text = "Joypad %s" % action_event.button_index

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=31 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://suspect_panel.png" id="2_f25cg"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://c0dbfc2uut8qn" path="res://stamps/stamp_shadow.png" id="16_qj41b"]
 [ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://give_prompt_dialogue.png" id="17_mr1ft"]
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://background.png" id="18_jl4i3"]
+[ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://documents/passport_shadow.png" id="20_pd2wg"]
 
 [sub_resource type="Curve2D" id="Curve2D_f3jw2"]
 _data = {
@@ -225,8 +226,12 @@ offset_bottom = 124.0
 theme = SubResource("Theme_cb0mk")
 label_settings = SubResource("LabelSettings_5ivkq")
 
+[node name="Sprite2D (Passport Shadow)" type="Sprite2D" parent="Sprite2D (Passport)/Sprite2D (Open Passport)"]
+position = Vector2(-4.99997, 4.00002)
+scale = Vector2(1.01509, 1.01216)
+texture = ExtResource("20_pd2wg")
+
 [node name="AudioStreamPlayer2D (SFX)" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(153, 453)
 
 [node name="Sprite2D (Approval Stamp)" type="Sprite2D" parent="."]
 z_index = 2

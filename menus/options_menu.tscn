@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://menus/options_menu.gd" id="1_oyqf7"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="2_ayndp"]
-[ext_resource type="PackedScene" path="res://settings_tab_container.tscn" id="3_an6tk"]
+[ext_resource type="PackedScene" uid="uid://dgu2vsjk6g1xm" path="res://settings_tab_container.tscn" id="3_an6tk"]
 
 [sub_resource type="Theme" id="Theme_7topn"]
 default_font = ExtResource("2_ayndp")
