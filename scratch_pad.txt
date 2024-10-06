@@ -1,45 +1,12 @@
 IMPORTANT:
-Fullscreen button
-Audio settings
-Megaphone dialogue
 Switch megaphone alert to be off when the box has someone in it
 Make music start on main menu instead of game
-
-
-WANTS:
-Bulletin system
-
-
-CUSTOMS PROCESS:
+Add dialogue to the megaphone
 Add letter with brief explainer on your job as a Spudarado Border Officer
+Make toggle audio button on main menu work
 
-
-SOUNDS EFFECTS:
-when potato walks up
-when potato leaves
-crowd murmuring ambient sound
-when you pick up document
-
-MENUS:
-Settings menu (Sounds/Graphics)
-Pause menu (Game scene)
-
-SYSTEMS:
-Music system (Main menu scene, smooth transition, game scene)
-
-SFX:
-Open passport
-Close passport
-Deny entry to potato
-Grant entry to potato
-
-GRAPHICS:
-Clock on the suspect table
-Separate suspect_table and suspect mugshot_background
-mugshot_background and suspect_table_slot should both be children of suspect_table in root tree
-Add shading to tops of stamps
-Slow down potato leaving the customs office
-Fade out passport when giving potato documents back
+FEATURE: 
+Entry ticket
 
 BUGS:
 Stamps go over edge of passport
@@ -49,15 +16,20 @@ Snap closed passport to position of mouse cursor to avoid bad offset
 If you spam stamps then multiple show up
 Stamp sticker is above stamp shadow
 Mouse has to be over passport to be able to stamp
-Check potato sex check logic, only males is giving points on allowing female potato
 
-FEATURE: 
-Add dialogue to the megaphone
-Entry ticket
-Bulletin card system
 
 
 COMPLETED:
+Fullscreen button
+Audio settings
+Bulletin card system
+Slow down potato leaving the customs office
+Clock on the suspect table
+Close passport
+Open passport
+Music system (Main menu scene, smooth transition, game scene)
+Fade out passport when giving potato documents back
+Check potato sex check logic, only males is giving points on allowing female potato
 Date system
 when you open document
 when you close document
