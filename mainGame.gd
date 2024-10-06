@@ -58,6 +58,10 @@ var suspect_panel_front: Sprite2D
 var suspect: Sprite2D
 var is_passport_open = false
 
+# Bulletin dragging system
+var bulletin: Sprite2D
+var is_bulletin_open = false
+
 # Stamp system
 const STAMP_ANIMATION_DURATION = 0.3  # Duration of the stamp animation in seconds
 const STAMP_MOVE_DISTANCE = 36  # How far the stamp moves down
@@ -280,6 +284,7 @@ func _ready():
 	
 	# Get references to the new nodes
 	passport = $"Sprite2D (Passport)"
+	bulletin = $"Sprite2D (Bulletin)"
 	interaction_table = $InteractionTableBackground
 	suspect_panel = $"Sprite2D (Suspect Panel)"
 	suspect_panel_front = $"Sprite2D (Suspect Panel)/SuspectPanelFront"
@@ -287,6 +292,7 @@ func _ready():
 	
 	# Add closed passport to draggable sprites
 	draggable_sprites.append(passport)
+	draggable_sprites.append(bulletin)
 	
 func setup_megaphone_flash_timer():
 	megaphone_flash_timer = $MegaphoneFlashTimer
@@ -690,6 +696,14 @@ func _input(event):
 					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
 						close_passport_action()
 						remove_stamp()
+				elif dragged_sprite == bulletin:
+					var drop_pos = get_global_mouse_position()
+					if interaction_table.get_rect().has_point(interaction_table.to_local(drop_pos)):
+						open_bulletin_action()
+					if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
+						close_bulletin_action()
+					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
+						close_bulletin_action()
 				dragged_sprite = null
 				$"Sprite2D (Approval Stamp)/Sprite2D (StampShadow)".visible = false
 				$"Sprite2D (Rejection Stamp)/Sprite2D (StampShadow)".visible = false
@@ -712,6 +726,16 @@ func close_passport_action():
 	$"Sprite2D (Passport)".texture = preload("res://documents/closed_passport_small/closed_passport_small.png")
 	$"Sprite2D (Passport)/Sprite2D (Close Passport)".visible = true
 	$"Sprite2D (Passport)/Sprite2D (Open Passport)".visible = false
+	
+func open_bulletin_action():
+	$"Sprite2D (Bulletin)".texture = preload("res://documents/bulletin/bulletin_main_page.png")
+	$"Sprite2D (Bulletin)/Sprite2D (Open Bulletin)".visible = true
+	$"Sprite2D (Bulletin)/Sprite2D (Close Bulletin)".visible = false
+	
+func close_bulletin_action():
+	$"Sprite2D (Bulletin)".texture = preload("res://documents/bulletin/closed_bulletin_small/closed_bulletin_small.png")
+	$"Sprite2D (Bulletin)/Sprite2D (Close Bulletin)".visible = true
+	$"Sprite2D (Bulletin)/Sprite2D (Open Bulletin)".visible = false
 	
 func find_topmost_sprite_at(pos: Vector2):
 	var topmost_sprite = null
