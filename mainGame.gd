@@ -638,7 +638,7 @@ func reset_scene():
 	passport.modulate.a = 1
 	
 	# Clear the current potato info
-	current_potato_info = null
+	# current_potato_info = null
 	
 func find_stampable_object_at(pos: Vector2):
 	for sprite in draggable_sprites:
