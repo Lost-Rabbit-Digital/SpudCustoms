@@ -246,5 +246,4 @@ z_as_relative = false
 position = Vector2(1, 88)
 texture = ExtResource("16_qj41b")
 
-[connection signal="megaphone_clicked" from="Sprite2D (Megaphone)" to="." method="_on_sprite_2d_megaphone_megaphone_clicked"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
