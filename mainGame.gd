@@ -179,31 +179,28 @@ func move_potato_to_office(potato_person):
 func animate_mugshot_and_passport():
 	print("Animating mugshot and passport")
 	update_potato_info_display()
-	
-	# Set potato mugshot just to right side of screen
+
+	# Reset positions and visibility
 	potato_mugshot.position.x = suspect_panel.position.x + suspect_panel.texture.get_width()
-	potato_mugshot.modulate.a = 0
-	
-	# Set the passport to invisible, 
-	# move it to just above the suspect mugshot, 
-	# change it's texture to tiny passport, 
-	# Move it down by half the height of the interaction table
-	
-	passport.visible = false
-	passport.position.x = suspect_panel.position.x 
-	passport.position.y = suspect_panel.position.y
+	#potato_mugshot.modulate.a = 0
+	#passport.visible = false
+	passport.position = Vector2(suspect_panel.position.x, suspect_panel.position.y)
+	passport.modulate.a = 1  # Ensure passport is fully opaque
 	close_passport_action()
-	
+
 	var tween = create_tween()
 	tween.set_parallel(true)
+
+	# Animate potato mugshot
 	tween.tween_property(potato_mugshot, "position:x", suspect_panel.position.x, 2)
 	tween.tween_property(potato_mugshot, "modulate:a", 1, 2)
-	#passport.visible = true
-	tween.chain().tween_property(passport, "modulate:a", 1, 0)
-	tween.chain().tween_property(passport, "visible", true, 0)
-	tween.chain().tween_property(passport, "position:y", suspect_panel.position.y + suspect_panel.texture.get_height() / 5, 1)
-	tween.chain().tween_property(passport, "z_index", 3, 0)
-	print("Finished animating mugshot and passport")
+
+	# Animate passport
+	tween.tween_property(passport, "visible", true, 0).set_delay(2)
+	tween.tween_property(passport, "position:y", suspect_panel.position.y + suspect_panel.texture.get_height() / 5, 1).set_delay(2)
+	tween.tween_property(passport, "z_index", 3, 0).set_delay(3)
+
+	tween.chain().tween_callback(func(): print("Finished animating mugshot and passport"))
 	
 func setup_spawn_timer():
 	spawn_timer = Timer.new()
@@ -245,7 +242,8 @@ func generate_potato_info():
 	}
 
 func update_potato_info_display():
-	print("Updating potato info")
+	print("Printing current potato info")
+	print(current_potato_info)
 	if current_potato_info:
 		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = """{name}""".format(current_potato_info)
 		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = """{date_of_birth}
@@ -255,15 +253,16 @@ func update_potato_info_display():
 		{type}
 		{condition}
 		""".format(current_potato_info)
-		update_potato_texture()
 	else:
+		print("Potato textures fucking up")
 		# Clear the display if there is no current potato
-		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = ""
-		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = ""
+		#$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = ""
+		#$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = ""
 		# You might want to clear the texture here as well
-		potato_mugshot.texture = null
-		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = null
+		#potato_mugshot.texture = null
+		#$"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = null
 	print("Potato info update complete")
+	update_potato_texture()
 
 func generate_potato():
 	# Generate random potato characteristics
@@ -362,54 +361,66 @@ func process_decision(allowed):
 		generate_rules()
 		
 	# Check and update the information in the passport
-	update_potato_info_display()
+	#update_potato_info_display()
 
 func peek_front_potato():
 	var front_potato_info = queue_manager.get_front_potato_info()
 	# Use front_potato_info as needed
 
 func update_potato_texture():
-	var texture_path = ""
-	var texture_path_passport_photo = ""
-	var potato_info = null
+	print("Updating potato texture")
 	
-	# preferentially use current_potato_info, fall back to front_potato if null
-	if current_potato_info:
-		potato_info = current_potato_info
+	if current_potato_info == null or current_potato_info.is_empty():
+		print("No valid potato info available")
+		clear_potato_textures()
+		return
+	
+	var texture_paths = get_texture_paths(current_potato_info.type)
+	
+	if texture_paths.head != "":
+		potato_mugshot.texture = load(texture_paths.head)
 	else:
-		potato_info = queue_manager.get_front_potato_info()
-		
-	if potato_info.is_empty():
-		print("Potato info is empty!")
-		# Clear the texture if there are no potatoes
 		potato_mugshot.texture = null
-		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = null
-		return		
-		
-	match potato_info.type:
-		"Purple Majesty":
-			texture_path = "res://potatoes/heads/purple_majesty_head.png"
-			texture_path_passport_photo = "res://potatoes/document_photos/purple_majesty.png"
-		"Red Bliss":
-			texture_path = "res://potatoes/heads/red_bliss_head.png"
-			texture_path_passport_photo = "res://potatoes/document_photos/red_bliss.png"
-		"Russet Burbank":
-			texture_path = "res://potatoes/heads/russet_burbank_head.png"
-			texture_path_passport_photo = "res://potatoes/document_photos/russet_burbank.png"
-		"Sweet Potato":
-			texture_path = "res://potatoes/heads/sweet_potato_head.png"
-			texture_path_passport_photo = "res://potatoes/document_photos/sweet_potato.png"
-		"Yukon Gold":
-			texture_path = "res://potatoes/heads/yukon_gold_head.png"
-			texture_path_passport_photo = "res://potatoes/document_photos/yukon_gold.png"
 	
-	if texture_path != "":
-		potato_mugshot.texture = load(texture_path)
-		
 	var passport_photo = $"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)"
-	if passport_photo.texture == null and texture_path_passport_photo != "":
-		passport_photo.texture = load(texture_path_passport_photo)
+	if texture_paths.passport != "":
+		passport_photo.texture = load(texture_paths.passport)
+	else:
+		passport_photo.texture = null
+	
+	print("Potato texture update complete for type: ", current_potato_info.type)
 
+func get_texture_paths(potato_type: String) -> Dictionary:
+	var paths = {
+		"head": "",
+		"passport": ""
+	}
+	
+	match potato_type:
+		"Purple Majesty":
+			paths.head = "res://potatoes/heads/purple_majesty_head.png"
+			paths.passport = "res://potatoes/document_photos/purple_majesty.png"
+		"Red Bliss":
+			paths.head = "res://potatoes/heads/red_bliss_head.png"
+			paths.passport = "res://potatoes/document_photos/red_bliss.png"
+		"Russet Burbank":
+			paths.head = "res://potatoes/heads/russet_burbank_head.png"
+			paths.passport = "res://potatoes/document_photos/russet_burbank.png"
+		"Sweet Potato":
+			paths.head = "res://potatoes/heads/sweet_potato_head.png"
+			paths.passport = "res://potatoes/document_photos/sweet_potato.png"
+		"Yukon Gold":
+			paths.head = "res://potatoes/heads/yukon_gold_head.png"
+			paths.passport = "res://potatoes/document_photos/yukon_gold.png"
+		_:
+			print("Unknown potato type: ", potato_type)
+	
+	return paths
+
+func clear_potato_textures():
+	potato_mugshot.texture = null
+	$"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = null
+	
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
@@ -543,28 +554,26 @@ func remove_stamp():
 	for child in passport.get_children():
 		if "@Sprite2D@" in child.name:
 			stamp_count += 1
-			print(child.texture.resource_path)
 			if "approved" in child.texture.resource_path:
 				approval_status = "approved"
 			else:
 				approval_status = "rejected"
 			passport.remove_child(child)
 			child.queue_free()
-			
+
 	if stamp_count == 0:
 		print("There are no stamps, foolish potato.")
-		
+		return
+
 	print("This passport has been processed as %s" % approval_status)
-	
-	# animate the potato mugshot
-	print(potato_mugshot)
+
+	# Animate the potato mugshot and passport exit
 	var tween = create_tween()
 	tween.set_parallel(true)
 	tween.tween_property(potato_mugshot, "position:x", suspect_panel.position.x - potato_mugshot.texture.get_width(), 2)
-	tween.tween_property(potato_mugshot, "modulate:a", 0, 2)
-	tween.tween_property(passport, "modulate:a", 0, 2)
-	# once fadeout completed, move potato to exit
-	tween.tween_callback(func(): move_potato_along_path(approval_status))
+	#tween.tween_property(potato_mugshot, "modulate:a", 0, 2)
+	#tween.tween_property(passport, "modulate:a", 0, 2)
+	tween.chain().tween_callback(func(): move_potato_along_path(approval_status))
 	
 func move_potato_along_path(approval_status):
 	if current_potato_info == null:
@@ -615,27 +624,21 @@ func move_potato_along_path(approval_status):
 	exit_tween.tween_callback(func():
 		potato_person.queue_free()
 		path_follow.queue_free()
-	
+		reset_scene()
 		)
-	reset_scene()
 	
 func reset_scene():
 	# reset mugshot
-	potato_mugshot.modulate.a = 0
+	#potato_mugshot.modulate.a = 0
 	potato_mugshot.position.x = suspect_panel.position.x
 	
 	# reset passport
 	close_passport_action()
 	passport.position = Vector2(suspect_panel.position.x, suspect_panel.position.y + suspect_panel.texture.get_height () / 5)
-	passport.modulate.a = 0
-	
-	# clear stamps
-	for child in $"Sprite2D (Passport)/Sprite2D (Open Passport)".get_children():
-		if "@Sprite2D@" in child.name:
-			child.queue_free()
+	passport.modulate.a = 1
 	
 	# Clear the current potato info
-	# current_potato_info = null
+	current_potato_info = null
 	
 func find_stampable_object_at(pos: Vector2):
 	for sprite in draggable_sprites:
