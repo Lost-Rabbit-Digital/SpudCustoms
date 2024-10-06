@@ -1,3 +1,9 @@
+Done: Change spawn timer to not stop timer when hitting max
+
+Add 3 strike system and warn when wrong.
+Flip to game over and show high score when 3 strikes hit. 
+
+
 CUSTOMS PROCESS:
 Add letter with brief explainer on how to make points and that the gate will shut if too many potatoes stack up.
 
