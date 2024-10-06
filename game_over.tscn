@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dyg2vas2oxboj"]
+[gd_scene load_steps=5 format=3 uid="uid://bceluaxi7vhl4"]
 
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="1_fte0y"]
 [ext_resource type="Script" path="res://game_over.gd" id="1_p3dq8"]

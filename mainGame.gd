@@ -878,8 +878,8 @@ func reset_scene():
 	potato_mugshot.position.x = suspect_panel.position.x
 	
 	# reset passport
-	close_passport_action()
-	passport.position = Vector2(suspect_panel.position.x, suspect_panel.position.y + suspect_panel.texture.get_height () / 5)
+	# close_passport_action()
+	# passport.position = Vector2(suspect_panel.position.x, suspect_panel.position.y + suspect_panel.texture.get_height () / 5)
 	#passport.modulate.a = 0
 	
 	$"Label (JudgementInfo)".text = ""
