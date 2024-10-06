@@ -83,6 +83,11 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 					return false
 	return true
 
+
+@onready var megaphone = $"Sprite2D (Megaphone)"
+@onready var potato_mugshot = $"Sprite2D (PotatoMugshot)"
+@onready var enter_office_path = $"Path2D (EnterOfficePath)"
+
 func _ready():
 	queue_manager = $"Node2D (QueueManager)"  # Make sure to add QueueManager as a child of Main
 	generate_rules()
@@ -110,7 +115,61 @@ func _ready():
 	
 	# Add closed passport to draggable sprites
 	draggable_sprites.append(passport)
+	
 
+func play_random_customs_officer_sound():
+	var customs_officer_sounds = [
+		preload("res://audio/froggy_phrase_1.wav"),
+		preload("res://audio/froggy_phrase_2.wav"),
+		preload("res://audio/froggy_phrase_3.wav"),
+		preload("res://audio/froggy_phrase_4.wav"),
+		preload("res://audio/froggy_phrase_5.wav"),
+		preload("res://audio/froggy_phrase_6.wav"),
+		preload("res://audio/froggy_phrase_7.wav")
+	]
+	if !$AudioStreamPlayer2D.is_playing():
+		$AudioStreamPlayer2D.stream = customs_officer_sounds.pick_random()
+		$AudioStreamPlayer2D.play()
+		
+	# Play potato customs officer sound
+	
+	
+
+func megaphone_clicked():
+	queue_manager = $"Node2D (QueueManager)"
+	play_random_customs_officer_sound()
+	var potato_info = queue_manager.remove_potato()
+	if potato_info.is_empty():
+		print("No potato to process.")
+		return
+		
+	var potato_person = queue_manager.potatoes.pop_back()
+	if potato_person: 
+		move_potato_to_office(potato_person)
+
+		
+func move_potato_to_office(potato_person):
+	var path_follow = PathFollow2D.new()
+	enter_office_path.add_child(path_follow)
+	path_follow.add_child(potato_person)
+	
+	var tween = get_tree().create_tween()
+	tween.tween_property(path_follow, "progress_ratio", 1.0 , 2.0)
+	tween.tween_callback(potato_person.queue_free)
+	tween.tween_callback(path_follow.queue_free)
+	tween.tween_callback(animate_mugshot_and_passport)
+	
+func animate_mugshot_and_passport():
+	potato_mugshot.position.x = suspect_panel.position.x + suspect_panel.texture.get_width()
+	# potato_mugshot.modulate(Color.BLACK)
+	
+	var tween = get_tree().create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(potato_mugshot, "position:x", suspect_panel.position.x, 0.5)
+	tween.tween_property(potato_mugshot, "modulate", Color.WHITE, 0.5)
+	
+	tween.chain().tween_property(passport, "position:y", interaction_table.position.y + interaction_table.texture.get_height() - passport.texture.get_height(), 0.5)
+	
 func setup_spawn_timer():
 	spawn_timer = Timer.new()
 	spawn_timer.set_wait_time(3.0)
@@ -166,6 +225,7 @@ func update_potato_info_display():
 	{type}
 	{condition}
 	""".format(front_potato)
+	update_potato_texture()
 
 func generate_potato():
 	# Generate random potato characteristics
@@ -276,7 +336,7 @@ func update_potato_texture():
 	var front_potato = queue_manager.get_front_potato_info()
 	if front_potato.is_empty():
 		# Clear the texture if there are no potatoes
-		$"Sprite2D (PotatoMugshot)".texture = null
+		potato_mugshot.texture = null
 		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = null
 		return
 
@@ -300,16 +360,19 @@ func update_potato_texture():
 			texture_path_passport_photo = "res://potatoes/document_photos/yukon_gold.png"
 	
 	if texture_path != "":
-		$"Sprite2D (PotatoMugshot)".texture = load(texture_path)
+		potato_mugshot.texture = load(texture_path)
 		
 	if texture_path_passport_photo != "":
 		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = load(texture_path_passport_photo)
+
 
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:
 				var mouse_pos = get_global_mouse_position()
+				if megaphone.get_rect().has_point(megaphone.to_local(mouse_pos)):
+					megaphone_clicked()
 				dragged_sprite = find_topmost_sprite_at(mouse_pos)
 				if dragged_sprite:
 					drag_offset = mouse_pos - dragged_sprite.global_position
@@ -381,6 +444,10 @@ func apply_stamp(stamp):
 		# Create the final stamp that will be left on the passport
 		var final_stamp = Sprite2D.new()
 		var stamp_texture = "res://stamps/approved_stamp.png" if "Approval" in stamp.name else "res://stamps/denied_stamp.png"
+		# Store final approval state for processing
+		var approval_state = "Approved" if "Approval" in stamp.name else "Denied"
+		
+		
 		final_stamp.texture = load(stamp_texture)
 		var final_stamp_x = stamp.position.x
 		var final_stamp_y = stamp.position.y + STAMP_MOVE_DISTANCE
