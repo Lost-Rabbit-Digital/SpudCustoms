@@ -174,6 +174,7 @@ func animate_mugshot_and_passport():
 	print("Animating mugshot and passport")
 	update_potato_info_display()
 	
+	# Set potato mugshot just to right side of screen
 	potato_mugshot.position.x = suspect_panel.position.x + suspect_panel.texture.get_width()
 	
 	# potato_mugshot.modulate(Color.BLACK)
@@ -380,7 +381,6 @@ func update_potato_texture():
 		
 	if texture_path_passport_photo != "":
 		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = load(texture_path_passport_photo)
-
 
 func _input(event):
 	if event is InputEventMouseButton:

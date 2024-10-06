@@ -137,8 +137,7 @@ offset_bottom = 674.0
 autowrap_mode = 3
 
 [node name="Sprite2D (PotatoMugshot)" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1062, 365)
+position = Vector2(1363, 363)
 scale = Vector2(1.64844, 1.64844)
 texture = ExtResource("7_0jh12")
 
@@ -181,9 +180,8 @@ curve = SubResource("Curve2D_x3wa3")
 script = ExtResource("10_a4p7n")
 
 [node name="Sprite2D (Passport)" type="Sprite2D" parent="."]
-visible = false
 z_index = 1
-position = Vector2(721, 426)
+position = Vector2(692, 443)
 texture = ExtResource("12_q7tid")
 
 [node name="Sprite2D (Close Passport)" type="Sprite2D" parent="Sprite2D (Passport)"]
