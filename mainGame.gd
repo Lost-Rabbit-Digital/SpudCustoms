@@ -441,18 +441,24 @@ func _process(delta):
 		
 	# Check for closing passport
 	if (suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)) or 
-		suspect.get_rect().has_point(suspect.to_local(mouse_pos))) and dragged_sprite == passport:
+		suspect.get_rect().has_point(suspect.to_local(mouse_pos))) and (dragged_sprite == bulletin or dragged_sprite == passport):
 		if not close_sound_played:
-			close_passport_action()
+			if dragged_sprite == passport:
+				close_passport_action()
+			elif dragged_sprite == bulletin:
+				close_bulletin_action()
 			$"AudioStreamPlayer2D (SFX)".stream = preload("res://audio/passport_sfx/close_passport_audio.mp3")
 			$"AudioStreamPlayer2D (SFX)".play()
 			close_sound_played = true
 			open_sound_played = false  # Reset open sound flag
 	
 	# Check for opening passport
-	if interaction_table.get_rect().has_point(interaction_table.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == false:
+	if interaction_table.get_rect().has_point(interaction_table.to_local(mouse_pos)) and (dragged_sprite == bulletin or dragged_sprite == passport):
 		if not open_sound_played:
-			open_passport_action()
+			if dragged_sprite == passport and is_passport_open == false:
+				open_passport_action()
+			elif dragged_sprite == bulletin:
+				open_bulletin_action()
 			$"AudioStreamPlayer2D (SFX)".stream = preload("res://audio/passport_sfx/open_passport_audio.mp3")
 			$"AudioStreamPlayer2D (SFX)".play()
 			open_sound_played = true
