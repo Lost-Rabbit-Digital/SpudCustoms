@@ -658,6 +658,9 @@ func move_potato_along_path(approval_status):
 	potato_person.position = Vector2.ZERO
 	path_follow.progress_ratio = 0.0
 	
+	passport = $"Sprite2D (Passport)"
+	passport.modulate.a = 0
+	
 	var exit_tween = create_tween()
 	if "Approve" in path:
 		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 10.0)
@@ -679,7 +682,7 @@ func reset_scene():
 	# reset passport
 	close_passport_action()
 	passport.position = Vector2(suspect_panel.position.x, suspect_panel.position.y + suspect_panel.texture.get_height () / 5)
-	passport.modulate.a = 0
+	#passport.modulate.a = 0
 	
 	$"Label (JudgementInfo)".text = ""
 	
