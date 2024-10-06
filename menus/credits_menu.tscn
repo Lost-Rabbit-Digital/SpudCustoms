@@ -6,11 +6,11 @@
 
 [sub_resource type="Theme" id="Theme_2wfvy"]
 default_font = ExtResource("1_gr2pr")
-default_font_size = 32
+default_font_size = 48
 
 [sub_resource type="Theme" id="Theme_n4pyg"]
 default_font = ExtResource("1_gr2pr")
-default_font_size = 48
+default_font_size = 64
 
 [sub_resource type="Theme" id="Theme_ni8lc"]
 default_font = ExtResource("1_gr2pr")
