@@ -37,13 +37,9 @@ theme_override_constants/margin_bottom = 12
 position = Vector2(640, 360)
 texture = ExtResource("2_xoteo")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="Label" type="Label" parent="MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 32
-alignment = 1
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
+size_flags_vertical = 0
 theme = SubResource("Theme_2g8j7")
 theme_override_colors/font_color = Color(0.768627, 0.588235, 0.176471, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -54,6 +50,11 @@ theme_override_constants/outline_size = 16
 theme_override_constants/shadow_outline_size = 16
 text = "Quit the game?"
 horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
 
 [node name="YesButton" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(300, 0)

@@ -563,9 +563,7 @@ func go_to_game_over():
 	print("transition to scene")
 	$"Sprite2D (Approval Stamp)".visible = false
 	$"Sprite2D (Rejection Stamp)".visible = false
-	add_child(game_over_scene)
-	#transition_to_scene("res://game_over.tscn")
-	
+	get_tree().change_scene_to_file("res://game_over.tscn")
 
 func process_decision(allowed):
 	var potato_info = queue_manager.remove_potato()
