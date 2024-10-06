@@ -3,6 +3,7 @@ Fullscreen button
 Audio settings
 Megaphone dialogue
 Switch megaphone alert to be off when the box has someone in it
+Make music start on main menu instead of game
 
 SFX:
 when you open document

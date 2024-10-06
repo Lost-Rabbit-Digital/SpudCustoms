@@ -4,6 +4,9 @@ extends Node2D
 @onready var bgm_player = $"AudioStreamPlayer2D (BGM)"
 @onready var fade_overlay = $FadeOverlay
 
+var close_sound_played = false
+var open_sound_played = false
+
 func transition_to_scene(scene_path: String):
 	# Create a new Tween
 	var tween = create_tween()
@@ -430,12 +433,24 @@ func _process(delta):
 	else:
 		$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = false
 		
-	if suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)) and dragged_sprite == passport:
-		close_passport_action()
-	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport:
-		close_passport_action()
+	# Check for closing passport
+	if (suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)) or 
+		suspect.get_rect().has_point(suspect.to_local(mouse_pos))) and dragged_sprite == passport:
+		if not close_sound_played:
+			close_passport_action()
+			$"AudioStreamPlayer2D (SFX)".stream = preload("res://audio/passport_sfx/close_passport_audio.mp3")
+			$"AudioStreamPlayer2D (SFX)".play()
+			close_sound_played = true
+			open_sound_played = false  # Reset open sound flag
+	
+	# Check for opening passport
 	if interaction_table.get_rect().has_point(interaction_table.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == false:
-		open_passport_action()
+		if not open_sound_played:
+			open_passport_action()
+			$"AudioStreamPlayer2D (SFX)".stream = preload("res://audio/passport_sfx/open_passport_audio.mp3")
+			$"AudioStreamPlayer2D (SFX)".play()
+			open_sound_played = true
+			close_sound_played = false  # Reset close sound flag
 
 func generate_potato_info():
 	var expiration_date: String
