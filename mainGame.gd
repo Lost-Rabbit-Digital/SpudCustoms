@@ -177,15 +177,15 @@ func move_potato_to_office(potato_person):
 	print("Started animate mugshot and passport tween animation")
 	
 func animate_mugshot_and_passport():
+	
+	passport = $"Sprite2D (Passport)"
 	print("Animating mugshot and passport")
 	update_potato_info_display()
 
 	# Reset positions and visibility
 	potato_mugshot.position.x = suspect_panel.position.x + suspect_panel.texture.get_width()
-	#potato_mugshot.modulate.a = 0
-	#passport.visible = false
+	passport.visible = false
 	passport.position = Vector2(suspect_panel.position.x, suspect_panel.position.y)
-	passport.modulate.a = 1  # Ensure passport is fully opaque
 	close_passport_action()
 
 	var tween = create_tween()
@@ -194,7 +194,7 @@ func animate_mugshot_and_passport():
 	# Animate potato mugshot
 	tween.tween_property(potato_mugshot, "position:x", suspect_panel.position.x, 2)
 	tween.tween_property(potato_mugshot, "modulate:a", 1, 2)
-
+	tween.tween_property(passport, "modulate:a", 1, 2)
 	# Animate passport
 	tween.tween_property(passport, "visible", true, 0).set_delay(2)
 	tween.tween_property(passport, "position:y", suspect_panel.position.y + suspect_panel.texture.get_height() / 5, 1).set_delay(2)
@@ -546,19 +546,19 @@ func apply_stamp(stamp):
 func remove_stamp():
 	print("Processing passport...")
 	# Get the parent node
-	var passport = $"Sprite2D (Passport)/Sprite2D (Open Passport)"
+	var open_passport = $"Sprite2D (Passport)/Sprite2D (Open Passport)"
 	var stamp_count = 0
 	var approval_status = null
 	
 	# Check for stamps and determine approval status
-	for child in passport.get_children():
+	for child in open_passport.get_children():
 		if "@Sprite2D@" in child.name:
 			stamp_count += 1
 			if "approved" in child.texture.resource_path:
 				approval_status = "approved"
 			else:
 				approval_status = "rejected"
-			passport.remove_child(child)
+			open_passport.remove_child(child)
 			child.queue_free()
 
 	if stamp_count == 0:
@@ -567,12 +567,13 @@ func remove_stamp():
 
 	print("This passport has been processed as %s" % approval_status)
 
+	var passport_book = $"Sprite2D (Passport)"
 	# Animate the potato mugshot and passport exit
 	var tween = create_tween()
 	tween.set_parallel(true)
 	tween.tween_property(potato_mugshot, "position:x", suspect_panel.position.x - potato_mugshot.texture.get_width(), 2)
-	#tween.tween_property(potato_mugshot, "modulate:a", 0, 2)
-	#tween.tween_property(passport, "modulate:a", 0, 2)
+	tween.tween_property(potato_mugshot, "modulate:a", 0, 2)
+	tween.tween_property(passport_book, "modulate:a", 0, 2)
 	tween.chain().tween_callback(func(): move_potato_along_path(approval_status))
 	
 func move_potato_along_path(approval_status):
