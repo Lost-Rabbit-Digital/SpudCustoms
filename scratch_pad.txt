@@ -46,6 +46,7 @@ FEATURE:
 Date system
 Add dialogue to the megaphone
 Entry ticket
+Bulletin card system
 
 
 COMPLETED:
