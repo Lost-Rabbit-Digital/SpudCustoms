@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=30 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://suspect_panel.png" id="2_f25cg"]
@@ -54,14 +54,6 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1255, 69, 0, 0, 0, 0, 1216, 71, 0, 0, 0, 0, 1162, 76, 0, 0, 0, 0, 1123, 66, 0, 0, 0, 0, 1084, 71, 0, 0, 0, 0, 1070, 89, 0, 0, 0, 0, 1079, 109, 0, 0, 0, 0, 1067, 123, 0, 0, 0, 0, 1073, 136, 0, 0, 0, 0, 1089, 145, 0, 0, 0, 0, 1121, 141, 0, 0, 0, 0, 1151, 143, 0, 0, 0, 0, 1188, 141, 0, 0, 0, 0, 1224, 142, 0, 0, 0, 0, 1252, 144, 0, 0, 0, 0, 1250, 211, 0, 0, 0, 0, 1215, 212, 0, 0, 0, 0, 1191, 208, 0, 0, 0, 0, 1153, 208, 0, 0, 0, 0, 1129, 207, 0, 0, 0, 0, 1106, 214, 0, 0, 0, 0, 1089, 207, 0, 0, 0, 0, 1055, 212, 0, 0, 0, 0, 1043, 194, 0, 0, 0, 0, 1049, 176, 0, 0, 0, 0, 1032, 173, 0, 0, 0, 0, 1010, 173, 0, 0, 0, 0, 1012, 192, 0, 0, 0, 0, 985, 192)
 }
 point_count = 29
-
-[sub_resource type="Theme" id="Theme_cb0mk"]
-default_font = ExtResource("13_wxn24")
-default_font_size = 48
-
-[sub_resource type="LabelSettings" id="LabelSettings_5ivkq"]
-line_spacing = 2.0
-font_size = 10
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_s4bva")
@@ -192,10 +184,11 @@ script = ExtResource("10_a4p7n")
 visible = false
 z_index = 1
 z_as_relative = false
-position = Vector2(692, 443)
+position = Vector2(695, 444)
 texture = ExtResource("12_q7tid")
 
 [node name="Sprite2D (Close Passport)" type="Sprite2D" parent="Sprite2D (Passport)"]
+visible = false
 position = Vector2(-34.6184, 40.1346)
 rotation = -0.137881
 scale = Vector2(0.413016, 0.413016)
@@ -210,32 +203,34 @@ texture = ExtResource("17_mr1ft")
 
 [node name="Sprite2D (PassportPhoto)" type="Sprite2D" parent="Sprite2D (Passport)/Sprite2D (Open Passport)"]
 z_as_relative = false
-position = Vector2(66, 78)
+position = Vector2(76, 75)
+scale = Vector2(0.975, 1)
 texture = ExtResource("14_al1cy")
 
 [node name="Label (PotatoHeader)" type="Label" parent="Sprite2D (Passport)/Sprite2D (Open Passport)"]
-modulate = Color(0.384314, 0.321569, 0.321569, 1)
-self_modulate = Color(0.384314, 0.321569, 0.321569, 1)
-offset_left = -114.0
-offset_top = 10.0
-offset_right = 119.0
-offset_bottom = 25.0
-theme = SubResource("Theme_cb0mk")
-label_settings = SubResource("LabelSettings_5ivkq")
+offset_left = -103.0
+offset_top = 20.0
+offset_right = 13.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label (PotatoInfo)" type="Label" parent="Sprite2D (Passport)/Sprite2D (Open Passport)"]
-modulate = Color(0.384314, 0.321569, 0.321569, 1)
-self_modulate = Color(0.384314, 0.321569, 0.321569, 1)
-offset_left = -77.0
-offset_top = 30.0
-offset_right = 34.0
-offset_bottom = 124.0
-theme = SubResource("Theme_cb0mk")
-label_settings = SubResource("LabelSettings_5ivkq")
+offset_left = -73.0
+offset_top = 46.0
+offset_right = 27.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
+theme_override_constants/line_spacing = 2
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
+autowrap_mode = 2
 
 [node name="Sprite2D (Passport Shadow)" type="Sprite2D" parent="Sprite2D (Passport)/Sprite2D (Open Passport)"]
-position = Vector2(-4.99997, 4.00002)
-scale = Vector2(1.01509, 1.01216)
+position = Vector2(-4.99997, 3.99999)
 texture = ExtResource("20_pd2wg")
 
 [node name="AudioStreamPlayer2D (SFX)" type="AudioStreamPlayer2D" parent="."]
