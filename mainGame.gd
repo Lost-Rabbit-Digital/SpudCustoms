@@ -179,9 +179,8 @@ func megaphone_clicked():
 	play_random_customs_officer_sound()
 	print("Megaphone clicked")
 	var potato_person = queue_manager.remove_front_potato()
-	current_potato_info = potato_person.potato_info
-	
-	if potato_person:
+	if potato_person != null:
+		current_potato_info = potato_person.potato_info
 		passport.visible = false
 		move_potato_to_office(potato_person)
 	else:
@@ -680,7 +679,7 @@ func reset_scene():
 	# reset passport
 	close_passport_action()
 	passport.position = Vector2(suspect_panel.position.x, suspect_panel.position.y + suspect_panel.texture.get_height () / 5)
-	passport.modulate.a = 1
+	passport.modulate.a = 0
 	
 	$"Label (JudgementInfo)".text = ""
 	
