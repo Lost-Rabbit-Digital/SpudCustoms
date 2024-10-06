@@ -223,10 +223,9 @@ curve = SubResource("Curve2D_x3wa3")
 script = ExtResource("10_a4p7n")
 
 [node name="Sprite2D (Passport)" type="Sprite2D" parent="."]
-visible = false
 z_index = 1
 z_as_relative = false
-position = Vector2(695, 444)
+position = Vector2(1612.51, 444)
 texture = ExtResource("12_q7tid")
 
 [node name="Sprite2D (Close Passport)" type="Sprite2D" parent="Sprite2D (Passport)"]

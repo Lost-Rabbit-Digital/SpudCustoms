@@ -1,3 +1,20 @@
+IMPORTANT:
+Fullscreen button
+Audio settings
+Megaphone dialogue
+Switch megaphone alert to be off when the box has someone in it
+
+SFX:
+when you open document
+when you close document
+when you pick up document
+button presses on main menu
+
+
+
+
+WANTS:
+Bulletin system
 
 
 CUSTOMS PROCESS:
@@ -5,14 +22,9 @@ Add letter with brief explainer on your job as a Spudarado Border Officer
 
 
 SOUNDS EFFECTS:
-when you open document
 when potato walks up
 when potato leaves
-when you pick up document
-when you close document
 crowd murmuring ambient sound
-button presses on main menu
-speaker sound when click megaphone for next person to come up
 
 MENUS:
 Settings menu (Sounds/Graphics)
@@ -46,13 +58,14 @@ Mouse has to be over passport to be able to stamp
 Check potato sex check logic, only males is giving points on allowing female potato
 
 FEATURE: 
-Date system
 Add dialogue to the megaphone
 Entry ticket
 Bulletin card system
 
 
 COMPLETED:
+Date system
+speaker sound when click megaphone for next person to come up
 Done: generate_rules() has 7 entries in current_rules, this should be expanded. 
 Done: current_rules should have a maximum of 1-2 rules. 
 Done: is_potato_valid() must support multiple active rules in current_rules at once. 
