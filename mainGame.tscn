@@ -227,12 +227,12 @@ position = Vector2(153, 453)
 
 [node name="Sprite2D (Approval Stamp)" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(108, 283)
+position = Vector2(260, 286)
 texture = ExtResource("15_f4m32")
 
 [node name="Sprite2D (StampShadow)" type="Sprite2D" parent="Sprite2D (Approval Stamp)"]
 z_as_relative = false
-position = Vector2(1, 88)
+position = Vector2(0, 81)
 texture = ExtResource("16_qj41b")
 
 [node name="Sprite2D (Rejection Stamp)" type="Sprite2D" parent="."]
@@ -242,7 +242,7 @@ texture = ExtResource("14_pjwbq")
 
 [node name="Sprite2D (StampShadow)" type="Sprite2D" parent="Sprite2D (Rejection Stamp)"]
 z_as_relative = false
-position = Vector2(1, 88)
+position = Vector2(1, 81)
 texture = ExtResource("16_qj41b")
 
 [connection signal="megaphone_clicked" from="Sprite2D (Megaphone)" to="." method="_on_sprite_2d_megaphone_megaphone_clicked"]
