@@ -17,6 +17,9 @@ var score = 0
 var current_rules = []
 var queue_manager: Node2D
 const DEFAULT_VOLUME_PERCENT = 40.0
+var is_potato_in_office = false
+var megaphone_flash_timer: Timer
+const MEGAPHONE_FLASH_INTERVAL = 5.0 # flash every 5 seconds
 
 # Potato spawn manager
 var potato_count = 0
@@ -104,6 +107,7 @@ func update_date_display():
 	$"Label (DateLabel)".text = "Date: " + formatted_date
 
 func _ready():
+	setup_megaphone_flash_timer()
 	set_bgm_volume(DEFAULT_VOLUME_PERCENT)
 	play_random_bgm()
 	$"Label (ScoreLabel)".text = "Score: " + str(score)
@@ -136,6 +140,20 @@ func _ready():
 	# Add closed passport to draggable sprites
 	draggable_sprites.append(passport)
 	
+	
+func setup_megaphone_flash_timer():
+	megaphone_flash_timer = Timer.new()
+	megaphone_flash_timer.wait_time = MEGAPHONE_FLASH_INTERVAL
+	megaphone_flash_timer.connect("timeout", Callable(self, "_on_megaphone_flash_timer_timeout"))
+	add_child(megaphone_flash_timer)
+	megaphone_flash_timer.start()
+	
+func on_megaphone_flash_timer_timeout():
+	if not is_potato_in_office:
+		megaphone.visible = !megaphone.visible
+	else:
+		megaphone.visible = true
+
 func set_bgm_volume(percent):
 	# Convert percentage to decibels
 	var volume_db = linear_to_db(percent / 100.0)
@@ -175,13 +193,19 @@ func play_random_customs_officer_sound():
 		
 
 func megaphone_clicked():
+	if is_potato_in_office:
+		print("Warning: A potato is already in the customs office!")
+		return
+		
 	queue_manager = $"Node2D (QueueManager)"
 	play_random_customs_officer_sound()
 	print("Megaphone clicked")
 	var potato_person = queue_manager.remove_front_potato()
 	if potato_person != null:
-		current_potato_info = potato_person.potato_info
+		is_potato_in_office = true
+		megaphone.visible = true
 		passport.visible = false
+		current_potato_info = potato_person.potato_info
 		move_potato_to_office(potato_person)
 	else:
 		print("No potato to process. :(")
@@ -470,7 +494,6 @@ func _input(event):
 				dragged_sprite = find_topmost_sprite_at(mouse_pos)
 				if dragged_sprite:
 					drag_offset = mouse_pos - dragged_sprite.global_position
-						
 			else:
 				if dragged_sprite == passport:
 					$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = false
@@ -605,7 +628,7 @@ func remove_stamp():
 		return
 
 	print("This passport has been processed as %s" % approval_status)
-
+	
 	var passport_book = $"Sprite2D (Passport)"
 	# Animate the potato mugshot and passport exit
 	var tween = create_tween()
@@ -613,7 +636,10 @@ func remove_stamp():
 	tween.tween_property(potato_mugshot, "position:x", suspect_panel.position.x - potato_mugshot.texture.get_width(), 2)
 	tween.tween_property(potato_mugshot, "modulate:a", 0, 2)
 	tween.tween_property(passport_book, "modulate:a", 0, 2)
-	tween.chain().tween_callback(func(): move_potato_along_path(approval_status))
+	tween.chain().tween_callback(func(): 
+		move_potato_along_path(approval_status)
+		is_potato_in_office = false # set to false as soon as potato leaves customs office
+	)
 	
 func move_potato_along_path(approval_status):
 	if current_potato_info == null:
