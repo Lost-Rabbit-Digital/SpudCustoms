@@ -7,6 +7,7 @@
 
 [sub_resource type="Theme" id="Theme_7topn"]
 default_font = ExtResource("2_ayndp")
+default_font_size = 32
 
 [node name="OptionsMenu" type="Control"]
 layout_mode = 3
@@ -53,4 +54,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_vertical = 8
 theme = SubResource("Theme_7topn")
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
 text = "Back"
