@@ -187,7 +187,6 @@ curve = SubResource("Curve2D_x3wa3")
 script = ExtResource("10_a4p7n")
 
 [node name="Sprite2D (Passport)" type="Sprite2D" parent="."]
-visible = false
 z_index = 1
 z_as_relative = false
 position = Vector2(695, 444)
@@ -225,10 +224,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label (PotatoInfo)" type="Label" parent="Sprite2D (Passport)/Sprite2D (Open Passport)"]
-offset_left = -73.0
-offset_top = 46.0
-offset_right = 27.0
-offset_bottom = 140.0
+offset_left = -75.0
+offset_top = 47.0
+offset_right = 33.0
+offset_bottom = 141.0
 theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
 theme_override_constants/line_spacing = 2
 theme_override_fonts/font = ExtResource("13_wxn24")
