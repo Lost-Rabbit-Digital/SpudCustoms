@@ -1,6 +1,5 @@
 Review rules and make sure applying properly
 
-
 CUSTOMS PROCESS:
 Add letter with brief explainer on how to make points and that the gate will shut if too many potatoes stack up.
 
@@ -114,3 +113,4 @@ Done: Update rules to include potato information.
 Done: Split stamp into two separate objects
 Done: Fill in additional detail on stamp objects
 Done: Change the texture for Sprite2D (PotatoMugshot) to match the type of potato using these headshot paths: 
+Done: Add restart button to game over screen
