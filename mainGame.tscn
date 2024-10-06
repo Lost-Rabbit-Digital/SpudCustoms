@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=32 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://suspect_panel.png" id="2_f25cg"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://textures/customs_office.png" id="7_rsfsr"]
 [ext_resource type="Script" path="res://Megaphone.gd" id="8_4dhg3"]
 [ext_resource type="Texture2D" uid="uid://cdrth310ylsx2" path="res://Potato_line.png" id="8_s0lh3"]
+[ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://textures/megaphone/megaphone_dialogue_box_1.png" id="9_arv36"]
 [ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
 [ext_resource type="Texture2D" uid="uid://fmqkliw6t33x" path="res://suspect_panel_front.png" id="10_foucb"]
 [ext_resource type="Texture2D" uid="uid://ceh27taly75na" path="res://documents/passport-old.png" id="12_q7tid"]
@@ -103,10 +104,16 @@ texture = ExtResource("5_h10h2")
 
 [node name="Sprite2D (Megaphone)" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(889, 179)
+position = Vector2(921.835, 176.705)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("7_7m4ia")
 script = ExtResource("8_4dhg3")
+
+[node name="MegaphoneDialogueBoxBlank" type="Sprite2D" parent="Sprite2D (Megaphone)"]
+visible = false
+position = Vector2(78.0929, -66.0072)
+scale = Vector2(0.948661, 0.948661)
+texture = ExtResource("9_arv36")
 
 [node name="Sprite2D (CustomsOffice)" type="Sprite2D" parent="."]
 z_index = 1

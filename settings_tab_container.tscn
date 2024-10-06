@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgu2vsjk6g1xm"]
+[gd_scene load_steps=3 format=3 uid="uid://dgu2vsjk6g1xm"]
 
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="1_c55re"]
+
+[sub_resource type="Theme" id="Theme_0f5pn"]
+default_font = ExtResource("1_c55re")
+default_font_size = 32
 
 [node name="Settings_Tab_Container" type="Control"]
 layout_mode = 3
@@ -21,15 +25,22 @@ offset_right = -100.0
 offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_c55re")
-theme_override_font_sizes/font_size = 32
+theme = SubResource("Theme_0f5pn")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_unselected_color = Color(0.768627, 0.588235, 0.176471, 1)
+theme_override_colors/font_hovered_color = Color(0.92549, 0.72549, 0.298039, 1)
+theme_override_colors/font_selected_color = Color(0.924081, 0.725612, 0.297739, 1)
+theme_override_constants/outline_size = 16
 tab_alignment = 1
 current_tab = 1
 
 [node name="Sound" type="TabBar" parent="TabContainer"]
 visible = false
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
 theme_override_fonts/font = ExtResource("1_c55re")
+theme_override_font_sizes/font_size = 32
 metadata/_tab_index = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Sound"]
@@ -97,26 +108,44 @@ alignment = 1
 
 [node name="Label" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 16
 text = "1234567"
 
 [node name="Label2" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 16
 text = "1234567"
 
 [node name="Label3" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 16
 text = "1234567"
 
 [node name="Label4" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 16
 text = "1234567"
 
 [node name="Label5" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 16
 text = "1234567"
 
 [node name="Label6" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 16
 text = "1234567"
 
 [node name="Accessibility" type="TabBar" parent="TabContainer"]

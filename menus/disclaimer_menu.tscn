@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://jfnium2fmyss"]
+
+[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://background.png" id="1_r4aot"]
+[ext_resource type="Script" path="res://menus/disclaimer_menu.gd" id="1_w3vny"]
+[ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="2_ypp0a"]
+
+[sub_resource type="Theme" id="Theme_nctqt"]
+default_font = ExtResource("2_ypp0a")
+default_font_size = 32
+
+[sub_resource type="Theme" id="Theme_76cfd"]
+default_font = ExtResource("2_ypp0a")
+default_font_size = 32
+
+[node name="disclaimer_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w3vny")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Background" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(640, 360)
+texture = ExtResource("1_r4aot")
+
+[node name="Disclaimer" type="Label" parent="MarginContainer"]
+custom_minimum_size = Vector2(1256, 0)
+layout_mode = 2
+theme = SubResource("Theme_nctqt")
+theme_override_colors/font_color = Color(0.768627, 0.588235, 0.176471, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+text = "This game, \"SpudCustoms,\" is an original work created by Lost Rabbit Digital that pays homage to various games in the document-checking genre. While inspired by games such as \"Papers, Please\" created by Lucas Pope, this is an independent creation that offers its own unique take on the genre using distinct characters, setting, and mechanics.
+
+Any similarities to existing games are coincidental or represent common elements within the genre. \"SpudCustoms\" is a parody work featuring anthropomorphic potatoes and is not intended to infringe upon or compete with any existing intellectual property.
+
+All original assets, characters, and story elements of \"SpudCustoms\" are © 2024 Lost Rabbit Digital. All rights reserved.
+
+This game is a work of fiction. Any resemblance to real persons, living or dead, or actual places, is purely coincidental."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="BackButton" type="Button" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme = SubResource("Theme_76cfd")
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/BackButton" to="." method="_on_back_button_pressed"]
