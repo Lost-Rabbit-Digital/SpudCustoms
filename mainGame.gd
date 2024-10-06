@@ -111,7 +111,7 @@ func years_until_expiry(expiration_date: String) -> int:
 	return days_until_expiry(expiration_date) / 365
 
 func update_rules_display():
-	$"Label (RulesLabel)".text = "Current Rules:\n" + "\n".join(current_rules)
+	$"Label (RulesLabel)".text = "LAWS\n" + "\n".join(current_rules)
 	
 func is_potato_valid(potato_info: Dictionary) -> bool:
 	for rule in current_rules:
@@ -398,11 +398,11 @@ func _process(delta):
 		$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = false
 		
 	if is_paused == true:
-		$Container/pause_menu/MarginContainer.visible = true
+		$Container/pause_menu.visible = true
 		$"Sprite2D (Approval Stamp)".visible = false
 		$"Sprite2D (Rejection Stamp)".visible = false
 	else:
-		$Container/pause_menu/MarginContainer.visible = false
+		$Container/pause_menu.visible = false
 		$"Sprite2D (Approval Stamp)".visible = true
 		$"Sprite2D (Rejection Stamp)".visible = true
 		

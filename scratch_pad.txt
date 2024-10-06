@@ -1,12 +1,6 @@
 IMPORTANT:
 Switch megaphone alert to be off when the box has someone in it
-Make music start on main menu instead of game
 Add dialogue to the megaphone
-Add letter with brief explainer on your job as a Spudarado Border Officer
-Make toggle audio button on main menu work
-
-FEATURE: 
-Entry ticket
 
 BUGS:
 Stamps go over edge of passport
@@ -20,6 +14,10 @@ Mouse has to be over passport to be able to stamp
 
 
 COMPLETED:
+Add letter with brief explainer on your job as a Spudarado Border Officer
+Pause menu
+Make toggle audio button on main menu work
+Make music start on main menu instead of game
 Fullscreen button
 Audio settings
 Bulletin card system

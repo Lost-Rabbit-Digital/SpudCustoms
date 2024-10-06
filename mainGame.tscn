@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=37 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://suspect_panel.png" id="2_f25cg"]
@@ -26,6 +26,9 @@
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://background.png" id="18_jl4i3"]
 [ext_resource type="Texture2D" uid="uid://cnt7y8a7drxme" path="res://documents/bulletin/bulletin_main_page.png" id="19_mnrrk"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://documents/passport_shadow.png" id="20_pd2wg"]
+[ext_resource type="Texture2D" uid="uid://c78plmdtw02b1" path="res://documents/bulletin/page_turn_right.png" id="21_pmbmt"]
+[ext_resource type="Script" path="res://sprite_2d_(bulletin).gd" id="21_qw3ji"]
+[ext_resource type="Texture2D" uid="uid://bfhpafskct413" path="res://documents/bulletin/page_turn_left.png" id="22_ir8f4"]
 [ext_resource type="PackedScene" uid="uid://c1amspwdfuccu" path="res://music_manager.tscn" id="27_2tnfb"]
 [ext_resource type="PackedScene" uid="uid://bp2pkcox316n0" path="res://menus/pause_menu.tscn" id="28_vb6g0"]
 
@@ -77,6 +80,7 @@ position = Vector2(640, 360)
 texture = ExtResource("18_jl4i3")
 
 [node name="pause_menu" parent="Container" instance=ExtResource("28_vb6g0")]
+visible = false
 layout_mode = 1
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -164,6 +168,7 @@ offset_left = 1112.0
 offset_top = 659.0
 offset_right = 1244.0
 offset_bottom = 709.0
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("13_wxn24")
@@ -177,6 +182,7 @@ offset_left = 895.0
 offset_top = 660.0
 offset_right = 1057.0
 offset_bottom = 710.0
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("13_wxn24")
@@ -190,6 +196,7 @@ offset_left = 895.0
 offset_top = 628.0
 offset_right = 995.0
 offset_bottom = 678.0
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("13_wxn24")
@@ -199,10 +206,15 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label (RulesLabel)" type="Label" parent="."]
-offset_left = 36.0
-offset_top = 402.0
-offset_right = 236.0
-offset_bottom = 598.0
+offset_left = 22.0
+offset_top = 247.0
+offset_right = 287.0
+offset_bottom = 443.0
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
 autowrap_mode = 3
 
 [node name="PotatoLine" type="Sprite2D" parent="."]
@@ -233,15 +245,53 @@ script = ExtResource("10_a4p7n")
 [node name="Sprite2D (Bulletin)" type="Sprite2D" parent="."]
 z_index = 3
 z_as_relative = false
-position = Vector2(167, 512)
+position = Vector2(422, 497)
 texture = ExtResource("19_mnrrk")
+script = ExtResource("21_qw3ji")
 
 [node name="Sprite2D (Close Bulletin)" type="Sprite2D" parent="Sprite2D (Bulletin)"]
 visible = false
-position = Vector2(315, 2)
 
 [node name="Sprite2D (Open Bulletin)" type="Sprite2D" parent="Sprite2D (Bulletin)"]
-position = Vector2(315, 2)
+
+[node name="Label (BulletinNote)" type="Label" parent="Sprite2D (Bulletin)/Sprite2D (Open Bulletin)"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -129.0
+offset_top = -179.0
+offset_right = 127.0
+offset_bottom = 177.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
+text = "As the previous Border Officer of the glorious nation of Spudarado, I feel compelled to share the importance and intricacies of your duties at your esteemed checkpoint.
+
+Each day, you will stand as the first line of defense against those who would seek to enter our potato-rich paradise without proper documentation. Your responsibilities include:
+
+Thorough examination of passports and entry permits,
+verification of traveler identities,
+scrutiny of any suspicious items or behavior,
+and upholding the ever-changing immigration regulations"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureButton (TurnRight)" type="TextureButton" parent="Sprite2D (Bulletin)/Sprite2D (Open Bulletin)"]
+offset_left = 100.0
+offset_top = 150.0
+offset_right = 130.0
+offset_bottom = 180.0
+texture_normal = ExtResource("21_pmbmt")
+
+[node name="TextureButton (TurnLeft)" type="TextureButton" parent="Sprite2D (Bulletin)/Sprite2D (Open Bulletin)"]
+visible = false
+offset_left = -130.0
+offset_top = 150.0
+offset_right = -100.0
+offset_bottom = 180.0
+texture_normal = ExtResource("22_ir8f4")
 
 [node name="Sprite2D (Passport)" type="Sprite2D" parent="."]
 z_index = 2
@@ -326,3 +376,5 @@ texture = ExtResource("16_qj41b")
 [connection signal="megaphone_clicked" from="Sprite2D (Megaphone)" to="." method="_on_sprite_2d_megaphone_megaphone_clicked"]
 [connection signal="timeout" from="MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Sprite2D (Bulletin)/Sprite2D (Open Bulletin)/TextureButton (TurnRight)" to="Sprite2D (Bulletin)" method="_on_texture_button_turn_right_pressed"]
+[connection signal="pressed" from="Sprite2D (Bulletin)/Sprite2D (Open Bulletin)/TextureButton (TurnLeft)" to="Sprite2D (Bulletin)" method="_on_texture_button_turn_left_pressed"]
