@@ -1,10 +1,5 @@
-
-Check potato sex check logic, only males is giving points on allowing female potato
-
-Add letter with brief explainer on how to make points and that the gate will shut if too many potatoes stack up.
-
 CUSTOMS PROCESS:
-Done: Score is added or removed based on accuracy of judgement.
+Add letter with brief explainer on how to make points and that the gate will shut if too many potatoes stack up.
 
 SOUNDS EFFECTS:
 when you open document
@@ -20,16 +15,16 @@ MENUS:
 Settings menu (Sounds/Graphics)
 Pause menu (Game scene)
 
-Systems:
+SYSTEMS:
 Music system (Main menu scene, smooth transition, game scene)
 
-Sound Effects:
+SFX:
 Open passport
 Close passport
 Deny entry to potato
 Grant entry to potato
 
-Graphics:
+GRAPHICS:
 Clock on the suspect table
 Separate suspect_table and suspect mugshot_background
 mugshot_background and suspect_table_slot should both be children of suspect_table in root tree
@@ -37,21 +32,25 @@ Add shading to tops of stamps
 Slow down potato leaving the customs office
 Fade out passport when giving potato documents back
 
-Bugs:
+BUGS:
 Stamps go over edge of passport
 Able to drag stamps off interaction table
 Able to drag passport off interaction table
 Snap closed passport to position of mouse cursor to avoid bad offset
 If you spam stamps then multiple show up
 Stamp sticker is above stamp shadow
-Passports break after 2nd potato enters
 Mouse has to be over passport to be able to stamp
+Check potato sex check logic, only males is giving points on allowing female potato
 
-Feature: 
+FEATURE: 
 Date system
 Add dialogue to the megaphone
 Entry ticket
 
+
+COMPLETED:
+Done: Score is added or removed based on accuracy of judgement.
+Done: Passports break after 2nd potato enters
 Done: Credits menu (Main menu scene)
 Done: Disclaimer menu (Main menu scene)
 Done: Redraw megaphone
