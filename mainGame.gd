@@ -1,6 +1,9 @@
 # Main.gd (Main scene script)
 extends Node2D
 
+# track the current potato's info
+var current_potato_info
+
 var current_potato
 var score = 0
 var current_rules = []
@@ -136,6 +139,7 @@ func megaphone_clicked():
 	play_random_customs_officer_sound()
 	print("Megaphone clicked")
 	var potato_person = queue_manager.remove_front_potato()
+	current_potato_info = potato_person.potato_info
 	if potato_person:
 		passport.visible = false
 		move_potato_to_office(potato_person)
@@ -146,10 +150,10 @@ func megaphone_clicked():
 func move_potato_to_office(potato_person):
 	print("Moving our spuddy to the customs office")
 	
-	# This may be removing a second potato, comment if persistenting after remove_front_potato() changes
 	if potato_person.get_parent():
 		potato_person.get_parent().remove_child(potato_person)
 		print("removed potato from original parent")
+		
 		
 	var path_follow = PathFollow2D.new()
 	enter_office_path.add_child(path_follow)
@@ -177,7 +181,7 @@ func animate_mugshot_and_passport():
 	
 	# Set potato mugshot just to right side of screen
 	potato_mugshot.position.x = suspect_panel.position.x + suspect_panel.texture.get_width()
-	# potato_mugshot.modulate(Color.BLACK)
+	potato_mugshot.modulate.a = 0
 	
 	# Set the passport to invisible, 
 	# move it to just above the suspect mugshot, 
@@ -189,15 +193,13 @@ func animate_mugshot_and_passport():
 	passport.position.y = suspect_panel.position.y
 	close_passport_action()
 	
-	#passport.texture = load("res://documents/closed_passport_small/closed_passport_small.png")
-	
 	var tween = create_tween()
 	tween.set_parallel(true)
-	tween.tween_property(potato_mugshot, "position:x", suspect_panel.position.x, 0.5)
-	tween.tween_property(potato_mugshot, "modulate", Color.WHITE, 0.5)
+	tween.tween_property(potato_mugshot, "position:x", suspect_panel.position.x, 2)
+	tween.tween_property(potato_mugshot, "modulate:a", 1, 2)
 	#passport.visible = true
 	tween.chain().tween_property(passport, "visible", true, 0)
-	tween.chain().tween_property(passport, "position:y", suspect_panel.position.y + suspect_panel.texture.get_height() / 5, 0.75)
+	tween.chain().tween_property(passport, "position:y", suspect_panel.position.y + suspect_panel.texture.get_height() / 5, 1)
 	tween.chain().tween_property(passport, "z_index", 3, 0)
 	print("Finished animating mugshot and passport")
 	
@@ -242,20 +244,32 @@ func generate_potato_info():
 
 func update_potato_info_display():
 	var front_potato = queue_manager.get_front_potato_info()
-	if front_potato.is_empty():
+	if not current_potato_info and front_potato:
+		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = """{name}""".format(front_potato)
+		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = """{date_of_birth}
+		{sex} 
+		{country_of_issue}
+		{expiration_date} 
+		{type}
+		{condition}
+		""".format(front_potato)
+	elif front_potato.is_empty() and current_potato_info.is_empty():
 		# Clear the display if there are no potatoes
 		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = ""
 		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = ""
 		return
+	elif current_potato_info:
+		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = """{name}""".format(current_potato_info)
+		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = """{date_of_birth}
+		{sex} 
+		{country_of_issue}
+		{expiration_date} 
+		{type}
+		{condition}
+		""".format(current_potato_info)
+	else:
+		pass
 
-	$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = """{name}""".format(front_potato)
-	$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = """{date_of_birth}
-	{sex} 
-	{country_of_issue}
-	{expiration_date} 
-	{type}
-	{condition}
-	""".format(front_potato)
 	update_potato_texture()
 
 func generate_potato():
@@ -364,15 +378,17 @@ func peek_front_potato():
 	# Use front_potato_info as needed
 
 func update_potato_texture():
+	var texture_path = ""
+	var texture_path_passport_photo = ""
 	var front_potato = queue_manager.get_front_potato_info()
 	if front_potato.is_empty():
 		# Clear the texture if there are no potatoes
 		potato_mugshot.texture = null
 		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = null
-		return
-
-	var texture_path = ""
-	var texture_path_passport_photo = ""
+		return		
+	if current_potato_info:
+		front_potato = current_potato_info
+			
 	match front_potato.type:
 		"Purple Majesty":
 			texture_path = "res://potatoes/heads/purple_majesty_head.png"
@@ -545,22 +561,44 @@ func remove_stamp():
 	# animate the potato mugshot
 	print(potato_mugshot)
 	var tween = create_tween()
-	print(potato_mugshot.position.x)
-	#tween.tween_property(potato_mugshot, "position:x", suspect_panel.x - potato_mugshot.texture.get_width(), 0.5)
-	tween.tween_property(potato_mugshot, "modulate:a", 0, 0.3)
+	tween.set_parallel(true)
+	tween.tween_property(potato_mugshot, "position:x", suspect_panel.position.x - potato_mugshot.texture.get_width(), 2)
+	tween.tween_property(potato_mugshot, "modulate:a", 0, 2)
+	tween.tween_property(passport, "modulate:a", 0, 2)
 	# once fadeout completed, move potato to exit
 	tween.tween_callback(func(): move_potato_along_path(approval_status))
 	
 func move_potato_along_path(approval_status):
+	if current_potato_info == null:
+		print("Error: No potato info available")
+		return
 	var path: Path2D
 	var potato_person = Sprite2D.new()
-	potato_person.texture = load("res://potatoes/bodies/russet_burbank_body.png")
 	
+		# Set texture based on potato type
+	var texture_path = ""
+	match current_potato_info.type:
+		"Purple Majesty":
+			texture_path = "res://potatoes/bodies/purple_majesty_body.png"
+		"Red Bliss":
+			texture_path = "res://potatoes/bodies/red_bliss_body.png"
+		"Russet Burbank":
+			texture_path = "res://potatoes/bodies/russet_burbank_body.png"
+		"Sweet Potato":
+			texture_path = "res://potatoes/bodies/sweet_potato_body.png"
+		"Yukon Gold":
+			texture_path = "res://potatoes/bodies/yukon_gold_body.png"
+	
+	potato_person.texture = load(texture_path)
+	potato_person.scale = Vector2(0.20, 0.20)
 	# set path based on approval status
 	if approval_status == "approved":
 		path = $"Path2D (ApprovePath)"
 	else: 
-		path = $"Path2D (RejectPath)"
+		if randi() % 5 == 0:  # 20% chance to go sicko mode
+			path =$"Path2D (RunnerPath)"
+		else:
+			path = $"Path2D (RejectPath)"
 		
 	var path_follow = PathFollow2D.new()
 	path.add_child(path_follow)
@@ -570,7 +608,12 @@ func move_potato_along_path(approval_status):
 	path_follow.progress_ratio = 0.0
 	
 	var exit_tween = create_tween()
-	exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 2.0)
+	if "Approve" in path:
+		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 10.0)
+	if "Reject" in path:
+		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 9.0)
+	else:
+		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 8.0)
 	exit_tween.tween_callback(func():
 		potato_person.queue_free()
 		path_follow.queue_free()
@@ -579,7 +622,7 @@ func move_potato_along_path(approval_status):
 		
 func reset_scene():
 	# reset mugshot
-	potato_mugshot.modulate.a = 1
+	potato_mugshot.modulate.a = 0
 	potato_mugshot.position.x = suspect_panel.position.x
 	
 	# reset passport
@@ -591,6 +634,8 @@ func reset_scene():
 		if "@Sprite2D@" in child.name:
 			child.queue_free()
 	
+	# Clear the current potato info
+	current_potato_info = null
 	
 func find_stampable_object_at(pos: Vector2):
 	for sprite in draggable_sprites:
