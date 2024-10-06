@@ -1,6 +1,5 @@
-Fix bug where passport re-appears after callback for departed potato
 
-
+Check potato sex check logic, only males is giving points on allowing female potato
 
 Add letter with brief explainer on how to make points and that the gate will shut if too many potatoes stack up.
 
@@ -25,6 +24,7 @@ settings menu
 credits menu
 pause menu
 
+Done: Fix bug where passport re-appears after callback for departed potato
 Add number of eyes as an attribute of personally identifiable information to the spuddy passports
 Fix fade from/to black outline for potato mugshot
 Done: Fix bug with clicking speaker before first potato 
