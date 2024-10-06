@@ -152,16 +152,30 @@ scale = Vector2(1.64844, 1.64844)
 texture = ExtResource("7_0jh12")
 
 [node name="Label (DateLabel)" type="Label" parent="."]
-offset_left = 1113.0
-offset_top = 642.0
-offset_right = 1213.0
-offset_bottom = 692.0
+offset_left = 1125.0
+offset_top = 645.0
+offset_right = 1257.0
+offset_bottom = 695.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 32
+text = "2020.20.20"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label (ScoreLabel)" type="Label" parent="."]
-offset_left = 914.0
+offset_left = 890.0
 offset_top = 643.0
-offset_right = 1014.0
+offset_right = 990.0
 offset_bottom = 693.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 32
+text = "Score: 1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label (RulesLabel)" type="Label" parent="."]
 offset_left = 81.0
