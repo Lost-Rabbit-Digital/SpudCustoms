@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=33 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://suspect_panel.png" id="2_f25cg"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://background.png" id="18_jl4i3"]
 [ext_resource type="Texture2D" uid="uid://cnt7y8a7drxme" path="res://documents/bulletin/bulletin_main_page.png" id="19_mnrrk"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://documents/passport_shadow.png" id="20_pd2wg"]
+[ext_resource type="PackedScene" uid="uid://c1amspwdfuccu" path="res://music_manager.tscn" id="27_2tnfb"]
 
 [sub_resource type="Curve2D" id="Curve2D_f3jw2"]
 _data = {
@@ -288,8 +289,6 @@ autowrap_mode = 2
 position = Vector2(-4.99997, 3.99999)
 texture = ExtResource("20_pd2wg")
 
-[node name="AudioStreamPlayer2D (BGM)" type="AudioStreamPlayer2D" parent="."]
-
 [node name="AudioStreamPlayer2D (SFX)" type="AudioStreamPlayer2D" parent="."]
 
 [node name="Sprite2D (Approval Stamp)" type="Sprite2D" parent="."]
@@ -315,6 +314,8 @@ z_index = 3
 z_as_relative = false
 position = Vector2(0, 80)
 texture = ExtResource("16_qj41b")
+
+[node name="MusicManager" parent="." instance=ExtResource("27_2tnfb")]
 
 [connection signal="megaphone_clicked" from="Sprite2D (Megaphone)" to="." method="_on_sprite_2d_megaphone_megaphone_clicked"]
 [connection signal="timeout" from="MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]

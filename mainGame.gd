@@ -1,29 +1,9 @@
 # Main.gd (Main scene script)
 extends Node2D
 
-@onready var bgm_player = $"AudioStreamPlayer2D (BGM)"
-@onready var fade_overlay = $FadeOverlay
-
 var close_sound_played = false
 var open_sound_played = false
 
-func transition_to_scene(scene_path: String):
-	# Create a new Tween
-	var tween = create_tween()
-	print("Fade to black")
-	# Fade to black
-	tween.tween_property(fade_overlay, "modulate:a", 1.0, 1.0)
-	print("Change scene")
-	# Change the scene
-	get_tree().change_scene_to_file("res://game_over.tscn")
-	
-	
-var bgm_tracks = [
-	"res://music/ambient_nothingness_main_ovani_sound.mp3",
-	"res://music/ambient_vol3_defeat_main_ovani_sound.mp3",
-	"res://music/ambient_vol3_peace_main_ovani_sound.mp3",
-	"res://music/horror_fog_main_ovani_sound.mp3"
-]
 # track the current potato's info
 var current_potato_info
 
@@ -32,7 +12,6 @@ var score = 0
 var strikes = 0
 var current_rules = []
 var queue_manager: Node2D
-const DEFAULT_VOLUME_PERCENT = 40.0
 var is_potato_in_office = false
 var megaphone_flash_timer: Timer
 const MEGAPHONE_FLASH_INTERVAL = 1.0 # flash every 1 seconds
@@ -260,8 +239,7 @@ func update_date_display():
 
 func _ready():
 	setup_megaphone_flash_timer()
-	set_bgm_volume(DEFAULT_VOLUME_PERCENT)
-	play_random_bgm()
+
 	$"Label (ScoreLabel)".text = "Score   " + str(score)
 	update_date_display()
 	queue_manager = $"Node2D (QueueManager)"  # Make sure to add QueueManager as a child of Main
@@ -305,28 +283,6 @@ func _on_megaphone_flash_timer_timeout():
 		$"Sprite2D (Megaphone)/Sprite2D (Flash Alert)".visible = !$"Sprite2D (Megaphone)/Sprite2D (Flash Alert)".visible
 	else:
 		$"Sprite2D (Megaphone)/Sprite2D (Flash Alert)".visible = true
-
-func set_bgm_volume(percent):
-	# Convert percentage to decibels
-	var volume_db = linear_to_db(percent / 100.0)
-	bgm_player.volume_db = volume_db
-	print("BGM volume set to ", percent, "% (", volume_db, " dB)")
-
-func play_random_bgm():
-	# select random track from bgm_tracks
-	var random_track = bgm_tracks[randi() % bgm_tracks.size()]
-	
-	# load and set audio
-	var audio_stream = load(random_track)
-	if audio_stream: 
-		bgm_player.stream = audio_stream
-		bgm_player.play()
-		print("Now playing: ", random_track)
-	else: 
-		print("Failed to load audio", random_track)
-	
-func _on_AudioStreamPlayer2D_BGM_finished():
-	play_random_bgm()
 
 func play_random_customs_officer_sound():
 	var customs_officer_sounds = [

@@ -32,14 +32,13 @@ func _on_quit_button_pressed():
 
 func _on_mute_button_toggled(toggled_on):
 	if is_game_muted == false:
-		is_game_muted = true
-		AudioServer.set_bus_mute(master_bus, is_game_muted)
+		is_game_muted = not is_game_muted
+		AudioServer.set_bus_mute(0, not is_game_muted)
 		$MarginContainer/HBoxContainer/MuteButton.texture_normal = preload(\"res://textures/UI/muted_button.png\")
 		$MarginContainer/HBoxContainer/MuteButton.texture_pressed = preload(\"res://textures/UI/muted_button_pressed.png\")
 		$MarginContainer/HBoxContainer/MuteButton.texture_hover = preload(\"res://textures/UI/muted_button_highlighted.png\")
 	else:
-		is_game_muted = false
-		AudioServer.set_bus_mute(master_bus, is_game_muted)
+		is_game_muted = not is_game_muted
 		$MarginContainer/HBoxContainer/MuteButton.texture_normal = preload(\"res://textures/UI/not_muted_button.png\")
 		$MarginContainer/HBoxContainer/MuteButton.texture_pressed = preload(\"res://textures/UI/not_muted_button_pressed.png\")
 		$MarginContainer/HBoxContainer/MuteButton.texture_hover = preload(\"res://textures/UI/not_muted_button_highlighted.png\")
