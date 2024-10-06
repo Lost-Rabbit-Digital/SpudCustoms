@@ -1,55 +1,14 @@
-func generate_spuddy():
-	heads = []
-	eyebrows = []
-	noses = []
-	face_hairs = []
-	mouths = []
-	glasses = [] 
-	hats = []
+Add random selection of background music on launch
 
-	Make a papers object appear below the mugshot that the user has to click
-
-	When clicked, the book object morphs into an opened document showing the information for the potato immigrating.
-
-	An approval stamp and rejection stamp that you pick up with left click, drag over the document to set approve or reject status. 
-
-	Click the document and drag the document onto the potato to return the document.
-
-Done: Split out the customs office and megaphone and create sprites for them so the potatoes will appear to go inside the office
-
-Done: When the player clicks on the Sprite2D (Megaphone) on top of the customs office in mainGame.tscn, the next PotatoPerson is removed from the front of the Path2D (SpuddyQueue) and the QueueManager, and the PotatoPerson is moved along the Path2D (EnterOfficePath), then the PotatoPerson is removed and the Sprite2D (PotatoMugshot) slides onto the Sprite2D (Suspect Panel) from the right and goes from a dark black outline to the regular texture.
+Scale up potato information in the passport to be more visible.
 
 
-Then the Sprite2D (Close Passport) is animated going down from the Sprite2D (PotatoMugshot) and settling at the bottom of the InteractionTableBackground for the player to pick up. 
+Add letter with brief explainer on how to make points and that the gate will shut if too many potatoes stack up.
 
-Initially the Sprite2D Passport is hidden until a PotatoPerson is called into the customs office, at which point the child Sprite2D (Close Passport) is animated going across the suspect panel and settling at the bottom for the player to pick up. 
-
-Display all potato information on the entry visa, scale it up to view in evidence drawer. Close it after stamping and turn it red or green. 
-Show name above date of birth
-
-Fix potato mugshot changing to the next potato in line before the current potato has been processed
-
-Create Label (DateLabel) and add to the Potato Customs Table so the player can see the current date and judge if passports are expired.
-
-
-Update the process_decision logic to make the oldest potato move through the customs office and all the way to the left side of the screen after their immigration decision is made and is positive.
-Update the process_decision logic to make the oldest potato move through the customs office get blown up with mini-nuke particle effects after their immigration decision is made and is negative.
 
 
 CUSTOMS PROCESS:
-Done: Potato walks up, puts in document. 
-Done: Player clicks document. 
-Done: Document displays in evidence drawer.
-Done: Player drags closed document to evidence drawer. 
-Done: Player reviews document. 
-Done: Player clicks stamp drawer to bring stamps into evidence drawer. 
-Done: Player clicks approve or reject stamp and a stamp comes down on the passport. 
-Done: Passport has a transparent stamp applied, player picks up and returns to potato.
-
-Potato fades out and appears to left of customs office. 
-Potato walks off-screen to left or is destroyed mid-way.
 Score is added or removed based on accuracy of judgement.
-
 
 SOUNDS EFFECTS:
 when you open document
@@ -61,24 +20,46 @@ crowd murmuring ambient sound
 button presses on main menu
 speaker sound when click megaphone for next person to come up
 
-
 MUSIC:
 "res://music/ambient_nothingness_main_ovani_sound.mp3"
 "res://music/ambient_vol3_defeat_main_ovani_sound.mp3"
 "res://music/ambient_vol3_peace_main_ovani_sound.mp3"
 "res://music/horror_fog_main_ovani_sound.mp3"
 
-
 MENUS:
 settings menu
 credits menu
 pause menu
 
-
 Add number of eyes as an attribute of personally identifiable information to the spuddy passports
 Fix fade from/to black outline for potato mugshot
 
+Done: Create Label (DateLabel) and add to the Potato Customs Table so the player can see the current date and judge if passports are expired.
 
+Done: Re-enable Label (ScoreLabel) on Customs Table
+Done: Fix potato mugshot changing to the next potato in line before the current potato has been processed
+
+Done: Update the process_decision logic to make the potato in customs office move through the customs office and all the way to the left side of the screen after their immigration decision is made and is positive.
+Done: Update the process_decision logic to make the oldest potato move through the customs office get blown up with mini-nuke particle effects after their immigration decision is made and is negative.
+Done: Potato walks up, puts in document. 
+Done: Player clicks document. 
+Done: Document displays in evidence drawer.
+Done: Player drags closed document to evidence drawer. 
+Done: Player reviews document. 
+Done: Player clicks stamp drawer to bring stamps into evidence drawer. 
+Done: Player clicks approve or reject stamp and a stamp comes down on the passport. 
+Done: Passport has a transparent stamp applied, player picks up and returns to potato.
+Done: Potato fades out and appears to left of customs office. 
+Done:Potato walks off-screen to left or is destroyed mid-way.
+
+Done: Update the remove_stamp function or create a new function to Tween the Sprite2D (Potato Mugshot) to move to the left of the Sprite2D (Suspect Panel) and disappear.
+
+Done: Then use the approval_status to decide whether to add the PotatoPerson to the Path2D (ApprovePath) or the Path2D (RejectPath) based on approved or rejected status respectively and move them to the end of the path, then remove them. 
+
+Done: Initially the Sprite2D Passport is hidden until a PotatoPerson is called into the customs office, at which point the child Sprite2D (Close Passport) is animated going across the suspect panel and settling at the bottom for the player to pick up. 
+Done: Split out the customs office and megaphone and create sprites for them so the potatoes will appear to go inside the office
+Done: When the player clicks on the Sprite2D (Megaphone) on top of the customs office in mainGame.tscn, the next PotatoPerson is removed from the front of the Path2D (SpuddyQueue) and the QueueManager, and the PotatoPerson is moved along the Path2D (EnterOfficePath), then the PotatoPerson is removed and the Sprite2D (PotatoMugshot) slides onto the Sprite2D (Suspect Panel) from the right and goes from a dark black outline to the regular texture.
+Done: Then the Sprite2D (Close Passport) is animated going down from the Sprite2D (PotatoMugshot) and settling at the bottom of the InteractionTableBackground for the player to pick up. 
 Done: when dragging, set shadow for stamp to visible and invisible otherwise
 Done: When clicked, the book object morphs into an opened document showing the information for the potato immigrating.
 Done: An approval stamp and rejection stamp that you pick up with left click, drag over the document to set approve or reject status. 

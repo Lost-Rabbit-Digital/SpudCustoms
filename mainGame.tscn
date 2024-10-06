@@ -131,10 +131,10 @@ texture = ExtResource("7_nqnif")
 [node name="SpawnTimer" type="Timer" parent="."]
 
 [node name="Label (JudgementInfo)" type="Label" parent="."]
-offset_left = 505.0
-offset_top = 624.0
-offset_right = 855.0
-offset_bottom = 674.0
+offset_left = 239.0
+offset_top = 647.0
+offset_right = 589.0
+offset_bottom = 697.0
 autowrap_mode = 3
 
 [node name="Sprite2D (PotatoMugshot)" type="Sprite2D" parent="."]
@@ -142,11 +142,17 @@ position = Vector2(1363, 363)
 scale = Vector2(1.64844, 1.64844)
 texture = ExtResource("7_0jh12")
 
+[node name="Label (DateLabel)" type="Label" parent="."]
+offset_left = 1113.0
+offset_top = 642.0
+offset_right = 1213.0
+offset_bottom = 692.0
+
 [node name="Label (ScoreLabel)" type="Label" parent="."]
-offset_left = 883.0
-offset_top = 635.0
-offset_right = 983.0
-offset_bottom = 685.0
+offset_left = 914.0
+offset_top = 643.0
+offset_right = 1014.0
+offset_bottom = 693.0
 
 [node name="Label (RulesLabel)" type="Label" parent="."]
 offset_left = 81.0
@@ -232,6 +238,8 @@ autowrap_mode = 2
 [node name="Sprite2D (Passport Shadow)" type="Sprite2D" parent="Sprite2D (Passport)/Sprite2D (Open Passport)"]
 position = Vector2(-4.99997, 3.99999)
 texture = ExtResource("20_pd2wg")
+
+[node name="AudioStreamPlayer2D (BGM)" type="AudioStreamPlayer2D" parent="."]
 
 [node name="AudioStreamPlayer2D (SFX)" type="AudioStreamPlayer2D" parent="."]
 
