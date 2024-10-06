@@ -1,12 +1,5 @@
-
-Check potato sex check logic, only males is giving points on allowing female potato
-
-Add letter with brief explainer on how to make points and that the gate will shut if too many potatoes stack up.
-
-
-
 CUSTOMS PROCESS:
-Done: Score is added or removed based on accuracy of judgement.
+Add letter with brief explainer on how to make points and that the gate will shut if too many potatoes stack up.
 
 SOUNDS EFFECTS:
 when you open document
@@ -18,15 +11,53 @@ crowd murmuring ambient sound
 button presses on main menu
 speaker sound when click megaphone for next person to come up
 
-
 MENUS:
-settings menu
-credits menu
-pause menu
+Settings menu (Sounds/Graphics)
+Pause menu (Game scene)
 
+SYSTEMS:
+Music system (Main menu scene, smooth transition, game scene)
+
+SFX:
+Open passport
+Close passport
+Deny entry to potato
+Grant entry to potato
+
+GRAPHICS:
+Clock on the suspect table
+Separate suspect_table and suspect mugshot_background
+mugshot_background and suspect_table_slot should both be children of suspect_table in root tree
+Add shading to tops of stamps
+Slow down potato leaving the customs office
+Fade out passport when giving potato documents back
+
+BUGS:
+Stamps go over edge of passport
+Able to drag stamps off interaction table
+Able to drag passport off interaction table
+Snap closed passport to position of mouse cursor to avoid bad offset
+If you spam stamps then multiple show up
+Stamp sticker is above stamp shadow
+Mouse has to be over passport to be able to stamp
+Check potato sex check logic, only males is giving points on allowing female potato
+
+FEATURE: 
+Date system
+Add dialogue to the megaphone
+Entry ticket
+Bulletin card system
+
+
+COMPLETED:
+Done: Score is added or removed based on accuracy of judgement.
+Done: Passports break after 2nd potato enters
+Done: Credits menu (Main menu scene)
+Done: Disclaimer menu (Main menu scene)
+Done: Redraw megaphone
 Done: Fix bug where passport re-appears after callback for departed potato
-Add number of eyes as an attribute of personally identifiable information to the spuddy passports
-Fix fade from/to black outline for potato mugshot
+Done: Add number of eyes as an attribute of personally identifiable information to the spuddy passports
+Done: Fix fade from/to black outline for potato mugshot
 Done: Fix bug with clicking speaker before first potato 
 Done: Create Label (DateLabel) and add to the Potato Customs Table so the player can see the current date and judge if passports are expired.
 DONE: Scale up potato information in the passport to be more visible.
@@ -44,7 +75,7 @@ Done: Player clicks stamp drawer to bring stamps into evidence drawer.
 Done: Player clicks approve or reject stamp and a stamp comes down on the passport. 
 Done: Passport has a transparent stamp applied, player picks up and returns to potato.
 Done: Potato fades out and appears to left of customs office. 
-Done:Potato walks off-screen to left or is destroyed mid-way.
+Done: Potato walks off-screen to left or is destroyed mid-way.
 Done: Update the remove_stamp function or create a new function to Tween the Sprite2D (Potato Mugshot) to move to the left of the Sprite2D (Suspect Panel) and disappear.
 Done: Then use the approval_status to decide whether to add the PotatoPerson to the Path2D (ApprovePath) or the Path2D (RejectPath) based on approved or rejected status respectively and move them to the end of the path, then remove them. 
 Done: Initially the Sprite2D Passport is hidden until a PotatoPerson is called into the customs office, at which point the child Sprite2D (Close Passport) is animated going across the suspect panel and settling at the bottom for the player to pick up. 
@@ -75,8 +106,3 @@ Done: Update rules to include potato information.
 Done: Split stamp into two separate objects
 Done: Fill in additional detail on stamp objects
 Done: Change the texture for Sprite2D (PotatoMugshot) to match the type of potato using these headshot paths: 
-res://potatoes/heads/purple_majesty_head.png
-res://potatoes/heads/red_bliss_head.png
-res://potatoes/heads/russet_burbank_head.png
-res://potatoes/heads/sweet_potato_head.png
-res://potatoes/heads/yukon_gold_head.png
