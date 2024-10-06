@@ -187,6 +187,7 @@ curve = SubResource("Curve2D_x3wa3")
 script = ExtResource("10_a4p7n")
 
 [node name="Sprite2D (Passport)" type="Sprite2D" parent="."]
+visible = false
 z_index = 1
 z_as_relative = false
 position = Vector2(695, 444)
@@ -244,10 +245,11 @@ texture = ExtResource("20_pd2wg")
 
 [node name="Sprite2D (Approval Stamp)" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(115, 288)
+position = Vector2(99, 307)
 texture = ExtResource("15_f4m32")
 
 [node name="Sprite2D (StampShadow)" type="Sprite2D" parent="Sprite2D (Approval Stamp)"]
+visible = false
 z_index = 3
 z_as_relative = false
 position = Vector2(0, 81)
@@ -255,10 +257,11 @@ texture = ExtResource("16_qj41b")
 
 [node name="Sprite2D (Rejection Stamp)" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(110, 387)
+position = Vector2(99, 446)
 texture = ExtResource("14_pjwbq")
 
 [node name="Sprite2D (StampShadow)" type="Sprite2D" parent="Sprite2D (Rejection Stamp)"]
+visible = false
 z_index = 3
 z_as_relative = false
 position = Vector2(0, 80)
