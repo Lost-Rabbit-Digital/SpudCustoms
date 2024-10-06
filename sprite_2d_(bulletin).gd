@@ -27,8 +27,10 @@ For the Glory of Spudarado!
 
 var how_to_play_note_1 = """INSTRUCTIONS
 To begin, press the speaker with the yellow flashing ring on top of the customs office building.
+Take the documents from the Potato and bring them to the main table.
 Then compare the information on the documents with the laws given.
 If there are any discrepencies, deny entry.
+After stamping the documents, hand them back to the Potato.
 
 CONTROLS
 [LEFT MOUSE] - Pick up and drops objects

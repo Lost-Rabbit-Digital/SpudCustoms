@@ -10,7 +10,7 @@ var is_paused = false
 var current_potato_info
 
 var current_potato
-var score = 0
+var score = 25
 var strikes = 0
 var current_rules = []
 var queue_manager: Node2D
@@ -284,7 +284,7 @@ func _on_megaphone_flash_timer_timeout():
 	if not is_potato_in_office:
 		$"Sprite2D (Megaphone)/Sprite2D (Flash Alert)".visible = !$"Sprite2D (Megaphone)/Sprite2D (Flash Alert)".visible
 	else:
-		$"Sprite2D (Megaphone)/Sprite2D (Flash Alert)".visible = true
+		$"Sprite2D (Megaphone)/Sprite2D (Flash Alert)".visible = false
 
 func play_random_customs_officer_sound():
 	var customs_officer_sounds = [
@@ -301,9 +301,22 @@ func play_random_customs_officer_sound():
 		$"AudioStreamPlayer2D (SFX)".stream = customs_officer_sounds.pick_random()
 		$"AudioStreamPlayer2D (SFX)".play()
 		
-
+func say_random_customs_officer_dialogue():
+	var customs_officer_dialogue = [
+		preload("res://textures/megaphone/megaphone_dialogue_box_2.png"),
+		preload("res://textures/megaphone/megaphone_dialogue_box_3.png"),
+		preload("res://textures/megaphone/megaphone_dialogue_box_4.png"),
+		preload("res://textures/megaphone/megaphone_dialogue_box_5.png"),
+		preload("res://textures/megaphone/megaphone_dialogue_box_6.png")
+	]
+	$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".visible = true
+	$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".texture = customs_officer_dialogue.pick_random()
+		
+		
 func megaphone_clicked():
 	if is_potato_in_office:
+		play_random_customs_officer_sound()
+		say_random_customs_officer_dialogue()
 		print("Warning: A potato is already in the customs office!")
 		return
 		
@@ -312,13 +325,18 @@ func megaphone_clicked():
 	print("Megaphone clicked")
 	var potato_person = queue_manager.remove_front_potato()
 	if potato_person != null:
+		$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".visible = true
+		$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".texture = preload("res://textures/megaphone/megaphone_dialogue_box_1.png")
 		is_potato_in_office = true
 		megaphone.visible = true
 		passport.visible = false
 		current_potato_info = potato_person.potato_info
 		move_potato_to_office(potato_person)
 	else:
+		$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".visible = true
+		$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".texture = preload("res://textures/megaphone/megaphone_dialogue_box_7.png")
 		print("No potato to process. :(")
+		
 
 		
 func move_potato_to_office(potato_person):
@@ -397,6 +415,9 @@ func _process(delta):
 	else:
 		$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = false
 		
+	if !$"AudioStreamPlayer2D (SFX)".is_playing():
+		$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".visible = false
+	
 	if is_paused == true:
 		$Container/pause_menu.visible = true
 		$"Sprite2D (Approval Stamp)".visible = false
@@ -572,7 +593,7 @@ func process_decision(allowed):
 		$"Label (JudgementInfo)".text = "You made the right choice, officer."
 	else:
 		$"Label (JudgementInfo)".text = "You have caused unnecessary suffering, officer..."
-		strikes += 1
+		strikes += 0
 		if strikes == 3:
 			go_to_game_over()
 			print("Game over!")
