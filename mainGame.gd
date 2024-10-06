@@ -28,18 +28,16 @@ var is_passport_open = false
 
 # Stamp system
 const STAMP_ANIMATION_DURATION = 0.3  # Duration of the stamp animation in seconds
-const STAMP_MOVE_DISTANCE = 50  # How far the stamp moves down
+const STAMP_MOVE_DISTANCE = 36  # How far the stamp moves down
 
 func generate_rules():
 	current_rules = [
 		"Purple Majesty always welcome.",
-		"We need extra eyes!",
 		"No Russet Burbanks allowed!",
 		"All potatoes must be Fresh!",
-		"Peeled potatoes BANNED today!",
 		"No potatoes over 5 years old.",
 		"Only males potatoes allowed today.",
-		"Potatoes from Spudland must be arrested.",
+		"Potatoes from Spudland must be denied.",
 		"Expired potatoes are not allowed."
 	]
 	# Randomly select 2-3 rules
