@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://cg7aiv7jsd6pg"]
+[gd_scene load_steps=7 format=3 uid="uid://cg7aiv7jsd6pg"]
 
 [ext_resource type="Script" path="res://menus/options_menu.gd" id="1_oyqf7"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="2_ayndp"]
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://background.png" id="2_hck77"]
 [ext_resource type="PackedScene" uid="uid://dgu2vsjk6g1xm" path="res://settings_tab_container.tscn" id="3_an6tk"]
+
+[sub_resource type="Theme" id="Theme_u7qyu"]
+default_font = ExtResource("2_ayndp")
+default_font_size = 32
 
 [sub_resource type="Theme" id="Theme_7topn"]
 default_font = ExtResource("2_ayndp")
@@ -38,17 +42,10 @@ texture = ExtResource("2_hck77")
 layout_mode = 2
 theme_override_constants/separation = -48
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_ayndp")
-theme_override_font_sizes/font_size = 32
-text = "Options"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Settings_Tab_Container" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_an6tk")]
 layout_mode = 2
 size_flags_vertical = 3
+theme = SubResource("Theme_u7qyu")
 
 [node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
