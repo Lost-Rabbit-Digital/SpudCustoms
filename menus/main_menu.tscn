@@ -49,9 +49,10 @@ theme = SubResource("Theme_b2ndg")
 theme_override_colors/font_color = Color(0.768627, 0.588235, 0.176471, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 16
-theme_override_constants/shadow_offset_y = 16
+theme_override_constants/shadow_offset_x = 14
+theme_override_constants/shadow_offset_y = 14
 theme_override_constants/outline_size = 16
+theme_override_constants/shadow_outline_size = 16
 text = "Spud Customs"
 horizontal_alignment = 1
 
