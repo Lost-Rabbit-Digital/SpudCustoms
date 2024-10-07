@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=38 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://suspect_panel.png" id="2_f25cg"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://documents/passport_shadow.png" id="20_pd2wg"]
 [ext_resource type="Texture2D" uid="uid://c78plmdtw02b1" path="res://documents/bulletin/page_turn_right.png" id="21_pmbmt"]
 [ext_resource type="Script" path="res://sprite_2d_(bulletin).gd" id="21_qw3ji"]
+[ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://textures/bulletin_alert_box.png" id="22_3pqlk"]
 [ext_resource type="Texture2D" uid="uid://bfhpafskct413" path="res://documents/bulletin/page_turn_left.png" id="22_ir8f4"]
 [ext_resource type="PackedScene" uid="uid://c1amspwdfuccu" path="res://music_manager.tscn" id="27_2tnfb"]
 [ext_resource type="PackedScene" uid="uid://bp2pkcox316n0" path="res://menus/pause_menu.tscn" id="28_vb6g0"]
@@ -123,7 +124,7 @@ texture = ExtResource("9_arv36")
 [node name="Sprite2D (Flash Alert)" type="Sprite2D" parent="Sprite2D (Megaphone)"]
 z_index = 2
 z_as_relative = false
-scale = Vector2(0.55, 0.55)
+scale = Vector2(0.75, 0.75)
 texture = ExtResource("10_5g2y2")
 
 [node name="Sprite2D (CustomsOffice)" type="Sprite2D" parent="."]
@@ -255,6 +256,40 @@ z_as_relative = false
 position = Vector2(446, 472)
 texture = ExtResource("19_mnrrk")
 script = ExtResource("21_qw3ji")
+
+[node name="Node2D" type="Node2D" parent="Sprite2D (Bulletin)"]
+
+[node name="Label (BulletinNote)2" type="Label" parent="Sprite2D (Bulletin)/Node2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -129.0
+offset_top = -179.0
+offset_right = 127.0
+offset_bottom = 177.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
+text = "INSTRUCTIONS
+To begin, press the speaker with the yellow flashing ring on top of the customs office building.
+Take the documents from the Potato and bring them to the main table.
+Then compare the information on the documents with the laws given.
+If there are any discrepencies, deny entry.
+After stamping the documents, hand them back to the Potato.
+
+CONTROLS
+[LEFT MOUSE] - Pick up and drops objects
+[RIGHT MOUSE] - Perform actions with objects 
+[ESCAPE] - Pause or return to the main menu
+Click here!  ---------------->"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="BulletinAlertBox" type="Sprite2D" parent="Sprite2D (Bulletin)/Node2D"]
+scale = Vector2(1.03, 1.03)
+texture = ExtResource("22_3pqlk")
 
 [node name="Sprite2D (Close Bulletin)" type="Sprite2D" parent="Sprite2D (Bulletin)"]
 visible = false
