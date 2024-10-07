@@ -72,7 +72,7 @@ func generate_rules():
 
 		# Gender-based rules
 		"Only male potatoes allowed today.",
-		"Female potatoes get priority processing.",
+		"Female potatoes get exclusive processing, no males.",
 
 		# Country-based rules
 		"Potatoes from Spudland must be denied.",
@@ -82,7 +82,7 @@ func generate_rules():
 		"Spuddington potatoes require visa check.",
 		"Tatcross citizens get no entry processing.",
 		"Mash Meadows potatoes are subject to quarantine, reject!",
-		"Tuberville potatoes subject to random checks.",
+		"Tuberville potatoes subject to absolute rejection.",
 		"Chip Hill exports are currently restricted.",
 		"Murphyland potatoes need work permit verification.",
 		"Colcannon citizens must be rejected due to seasonings.",
@@ -90,10 +90,10 @@ func generate_rules():
 
 		# Expiration-based rules
 		"Expired potatoes are not allowed.",
-		"Potatoes expiring within 30 days need approval.",
-		"Long-life potatoes (5+ years until expiry) get priority.",
+		"Reject potatoes expiring within 30 days.",
+		"Reject potatoes with less than 5 years until expiry.",
 		"Potatoes must have at least 1 year until expiration.",
-		"Potatoes with less than 6 months to expiry require special handling.",
+		"Reject potatoes with less than 6 months to expiry.",
 	]
 	# Randomly select 2-3 rules
 	current_rules.shuffle()
@@ -194,7 +194,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			"Only male potatoes allowed today.":
 				if potato_info.sex == "Female":
 					return false
-			"Female potatoes get priority processing.":
+			"Female potatoes get exclusive processing, no males.":
 				print("Your potato is: ", potato_info.sex)
 				if potato_info.sex == "Male":
 					return false
@@ -220,7 +220,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			"Mash Meadows potatoes are subject to quarantine, reject!":
 				if potato_info.country_of_issue == "Mash Meadows":
 					return false
-			"Tuberville potatoes subject to random checks.":
+			"Tuberville potatoes subject to absolute rejection.":
 				if potato_info.country_of_issue == "Tuberville":
 					return false
 			"Chip Hill exports are currently restricted.":
@@ -241,12 +241,12 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 				if is_expired(potato_info.expiration_date):
 					"Potato is expired. Return false"
 					return false
-			"Potatoes expiring within 30 days need approval.":
+			"Reject potatoes expiring within 30 days.":
 				var days_to_expiry = days_until_expiry(potato_info.expiration_date)
 				print("Checking days to expiry", days_until_expiry(potato_info.expiration_date))
 				if days_to_expiry >= 0 and days_to_expiry <= 30:
 					return false
-			"Long-life potatoes (5+ years until expiry) get priority.":
+			"Reject potatoes with less than 5 years until expiry.":
 				var years_to_expiry = years_until_expiry(potato_info.expiration_date)
 				print("Checking years to expiry", years_until_expiry(potato_info.expiration_date))
 				if years_to_expiry <= 5:
@@ -256,7 +256,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 				print("Checking years to expiry", years_until_expiry(potato_info.expiration_date))
 				if years_to_expiry < 1:
 					return false
-			"Potatoes with less than 6 months to expiry require special handling.":
+			"Reject potatoes with less than 6 months to expiry.":
 				var days_to_expiry = days_until_expiry(potato_info.expiration_date)
 				print("Checking days to expiry", days_until_expiry(potato_info.expiration_date))
 				if days_to_expiry >= 0 and days_to_expiry < 180:
