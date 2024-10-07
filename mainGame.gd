@@ -48,6 +48,36 @@ var is_bulletin_open = false
 const STAMP_ANIMATION_DURATION = 0.3  # Duration of the stamp animation in seconds
 const STAMP_MOVE_DISTANCE = 36  # How far the stamp moves down
 
+var bulletin_tutorial_timer: Timer
+const BULLETIN_TUTORIAL_FLASH_INTERVAL = 1.0 # flash every 1 seconds
+var is_in_bullet_tutorial = true
+
+var how_to_play_note_1 = """INSTRUCTIONS
+To begin, press the speaker with the yellow flashing ring on top of the customs office building.
+Take the documents from the Potato and bring them to the main table.
+Then compare the information on the documents with the laws given.
+If there are any discrepencies, deny entry.
+After stamping the documents, hand them back to the Potato.
+
+CONTROLS
+[LEFT MOUSE] - Pick up and drops objects
+[RIGHT MOUSE] - Perform actions with objects 
+[ESCAPE] - Pause or return to the main menu
+"""
+
+func setup_bulletin_tutorial_timer():
+	print("FLASH TIMER: Setup bulletin flash timer")
+	bulletin_tutorial_timer = $BulletinFlashTimer
+	bulletin_tutorial_timer.wait_time = BULLETIN_TUTORIAL_FLASH_INTERVAL
+	bulletin_tutorial_timer.start()
+	
+func _on_bulletin_tutorial_timer_timeout():
+	print("FLASH TIMER: Bulletin timeout")
+	if not is_in_bullet_tutorial:
+		$"Sprite2D (Bulletin)/Node2D/BulletinAlertBox".visible = !$"Sprite2D (Bulletin)/Node2D/BulletinAlertBox".visible
+	else:
+		$"Sprite2D (Bulletin)/Node2D/BulletinAlertBox".visible = false
+
 func generate_rules():
 	current_rules = [
 		# Type-based rules
@@ -275,6 +305,7 @@ func update_date_display():
 
 func _ready():
 	setup_megaphone_flash_timer()
+	setup_bulletin_tutorial_timer()
 
 	update_date_display()
 	queue_manager = $"Node2D (QueueManager)"  # Make sure to add QueueManager as a child of Main
@@ -312,6 +343,7 @@ func _ready():
 	draggable_sprites.append(bulletin)
 	
 func setup_megaphone_flash_timer():
+	print("FLASH TIMER: Setup megaphone flash timer")
 	megaphone_flash_timer = $MegaphoneFlashTimer
 	megaphone_flash_timer.wait_time = MEGAPHONE_FLASH_INTERVAL
 	megaphone_flash_timer.start()
@@ -488,7 +520,11 @@ func _process(delta):
 			$"AudioStreamPlayer2D (SFX)".play()
 			open_sound_played = true
 			close_sound_played = false  # Reset close sound flag
-
+			
+	# check if in bulletin tutorial
+	if $"Sprite2D (Bulletin)/Sprite2D (Open Bulletin)/Label (BulletinNote)".text != how_to_play_note_1:
+		is_in_bullet_tutorial = false
+		
 func generate_potato_info():
 	var expiration_date: String
 	if randf() < 0.2:

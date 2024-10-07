@@ -30,8 +30,8 @@
 [ext_resource type="Script" path="res://sprite_2d_(bulletin).gd" id="21_qw3ji"]
 [ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://textures/bulletin_alert_box.png" id="22_3pqlk"]
 [ext_resource type="Texture2D" uid="uid://bfhpafskct413" path="res://documents/bulletin/page_turn_left.png" id="22_ir8f4"]
-[ext_resource type="PackedScene" path="res://music_manager.tscn" id="27_2tnfb"]
-[ext_resource type="PackedScene" path="res://menus/pause_menu.tscn" id="28_vb6g0"]
+[ext_resource type="PackedScene" uid="uid://c1amspwdfuccu" path="res://music_manager.tscn" id="27_2tnfb"]
+[ext_resource type="PackedScene" uid="uid://bp2pkcox316n0" path="res://menus/pause_menu.tscn" id="28_vb6g0"]
 
 [sub_resource type="Curve2D" id="Curve2D_f3jw2"]
 _data = {
@@ -149,6 +149,7 @@ scale = Vector2(1.09694, 1.07604)
 texture = ExtResource("7_nqnif")
 
 [node name="MegaphoneFlashTimer" type="Timer" parent="."]
+autostart = true
 
 [node name="SpawnTimer" type="Timer" parent="."]
 
@@ -250,6 +251,9 @@ curve = SubResource("Curve2D_x3wa3")
 [node name="Node2D (QueueManager)" type="Node2D" parent="."]
 script = ExtResource("10_a4p7n")
 
+[node name="BulletinFlashTimer" type="Timer" parent="."]
+autostart = true
+
 [node name="Sprite2D (Bulletin)" type="Sprite2D" parent="."]
 z_index = 3
 z_as_relative = false
@@ -347,8 +351,6 @@ offset_right = -100.0
 offset_bottom = 180.0
 texture_normal = ExtResource("22_ir8f4")
 
-[node name="BulletinFlashTimer" type="Timer" parent="Sprite2D (Bulletin)"]
-
 [node name="Sprite2D (Passport)" type="Sprite2D" parent="."]
 z_index = 2
 z_as_relative = false
@@ -433,6 +435,6 @@ texture = ExtResource("16_qj41b")
 [connection signal="megaphone_clicked" from="Sprite2D (Megaphone)" to="." method="_on_sprite_2d_megaphone_megaphone_clicked"]
 [connection signal="timeout" from="MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="BulletinFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="pressed" from="Sprite2D (Bulletin)/Sprite2D (Open Bulletin)/TextureButton (TurnRight)" to="Sprite2D (Bulletin)" method="_on_texture_button_turn_right_pressed"]
 [connection signal="pressed" from="Sprite2D (Bulletin)/Sprite2D (Open Bulletin)/TextureButton (TurnLeft)" to="Sprite2D (Bulletin)" method="_on_texture_button_turn_left_pressed"]
-[connection signal="timeout" from="Sprite2D (Bulletin)/BulletinFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
