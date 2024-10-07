@@ -1,3 +1,5 @@
+Add links to itch and steam pages or twitter on main page? Helps folks find us from game
+
 Big questions: 
 What is the win condition? 
 Hit 25 points without getting 3 strikes. 
@@ -9,6 +11,13 @@ Done: Measure and trigger the win condition on score, similar to quit.
 Change score display to be out of 25. Change scene to success_scene once completed. In success_scene, move back to mainGame and pass the score back.
 
 Tuberstan and Pratie Point rules, one is not evaluating properly
+
+Troubleshoot Colcannon rule
+
+years_until_expiry, returning impossibly high numbers
+days_until_expiry, returning IMPOSSIBLY high numbers
+
+Potato moving in after decision processing, before megaphone pressed
 
 Done: Reset score if you fail
 

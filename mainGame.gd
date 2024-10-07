@@ -12,6 +12,7 @@ var current_potato_info
 var current_potato
 var score = 24
 var strikes = 0
+var max_score = 25
 var current_rules = []
 var queue_manager: Node2D
 var is_potato_in_office = false
@@ -58,9 +59,9 @@ func generate_rules():
 
 		# Condition-based rules
 		"All potatoes must be Fresh!",
-		"Extra Eyes are suspicious, inspect carefully.",
+		"Extra Eyes are suspicious, inspect carefully and reject.",
 		"Rotten potatoes are strictly forbidden.",
-		"Sprouted potatoes need additional verification.",
+		"Sprouted potatoes need additional verification and must be denied.",
 		"Dehydrated potatoes are not allowed today.",
 		"Frozen potatoes require a special permit.",
 
@@ -75,17 +76,17 @@ func generate_rules():
 
 		# Country-based rules
 		"Potatoes from Spudland must be denied.",
-		"Potatopia citizens need additional screening.",
+		"Potatopia citizens cannot enter under any circumstances.",
 		"Tuberstan potatoes suspected of concealing arms.",
 		"North Yamnea is currently under embargo.",
 		"Spuddington potatoes require visa check.",
 		"Tatcross citizens get no entry processing.",
-		"Mash Meadows potatoes need health certificate.",
+		"Mash Meadows potatoes are subject to quarantine, reject!",
 		"Tuberville potatoes subject to random checks.",
 		"Chip Hill exports are currently restricted.",
 		"Murphyland potatoes need work permit verification.",
-		"Colcannon citizens must declare any seasonings.",
-		"Pratie Point potatoes require agricultural inspection.",
+		"Colcannon citizens must be rejected due to seasonings.",
+		"Pratie Point potatoes require rejection on agricultural grounds.",
 
 		# Expiration-based rules
 		"Expired potatoes are not allowed.",
@@ -102,13 +103,34 @@ func generate_rules():
 
 func days_until_expiry(expiration_date: String) -> int:
 	var current_date = Time.get_date_dict_from_system()
-	var expiry_date = Time.get_datetime_dict_from_datetime_string(expiration_date, false)
-	var current_days = current_date.year * 365 + current_date.month * 30 + current_date.day
-	var expiry_days = expiry_date.year * 365 + expiry_date.month * 30 + expiry_date.day
-	return expiry_days - current_days
+	var expiry_parts = expiration_date.split('.')
+	
+	if expiry_parts.size() != 3:
+		print("Invalid date format: ", expiration_date)
+		return 0
+	
+	var expiry_year = expiry_parts[0].to_int()
+	var expiry_month = expiry_parts[1].to_int()
+	var expiry_day = expiry_parts[2].to_int()
+	
+	var current_unix = Time.get_unix_time_from_datetime_dict(current_date)
+	var expiry_unix = Time.get_unix_time_from_datetime_dict({
+		"year": expiry_year,
+		"month": expiry_month,
+		"day": expiry_day,
+		"hour": 0,
+		"minute": 0,
+		"second": 0
+	})
+	
+	var difference_seconds = expiry_unix - current_unix
+	return int(difference_seconds / 86400)  # Convert seconds to days
 
 func years_until_expiry(expiration_date: String) -> int:
-	return days_until_expiry(expiration_date) / 365
+	return int(days_until_expiry(expiration_date) / 365.25)  # Using 365.25 to account for leap years
+
+func is_expired(expiration_date: String) -> bool:
+	return days_until_expiry(expiration_date) < 0
 
 func update_rules_display():
 	$"Label (RulesLabel)".text = "LAWS\n" + "\n".join(current_rules)
@@ -137,13 +159,13 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			"All potatoes must be Fresh!":
 				if potato_info.condition != "Fresh":
 					return false
-			"Extra Eyes are suspicious, inspect carefully.":
+			"Extra Eyes are suspicious, inspect carefully and reject.":
 				if potato_info.condition == "Extra Eyes":
 					return false
 			"Rotten potatoes are strictly forbidden.":
 				if potato_info.condition == "Rotten":
 					return false
-			"Sprouted potatoes need additional verification.":
+			"Sprouted potatoes need additional verification and must be denied":
 				if potato_info.condition == "Sprouted":
 					return false
 			"Dehydrated potatoes are not allowed today.":
@@ -156,7 +178,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			"No potatoes over 5 years old.":
 				var age = calculate_age(potato_info.date_of_birth)
 				print("Age is ", str(age))
-				if age > 5:
+				if age >= 5:
 					return false
 			"Only mature potatoes (3+ years) allowed.":
 				var age = calculate_age(potato_info.date_of_birth)
@@ -166,7 +188,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			"Young potatoes (under 2 years) need guardian.":
 				var age = calculate_age(potato_info.date_of_birth)
 				print("Age is ", str(age))
-				if age < 2:
+				if age <= 2:
 					return false
 			# Sex-based rules
 			"Only male potatoes allowed today.":
@@ -195,7 +217,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			"Tatcross citizens get no entry processing.":
 				if potato_info.country_of_issue == "Tatcross":
 					return false			
-			"Mash Meadows potatoes need health certificate.":
+			"Mash Meadows potatoes are subject to quarantine, reject!":
 				if potato_info.country_of_issue == "Mash Meadows":
 					return false
 			"Tuberville potatoes subject to random checks.":
@@ -207,10 +229,10 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			"Murphyland potatoes need work permit verification.":
 				if potato_info.country_of_issue == "Murphyland":
 					return false
-			"Colcannon citizens must declare any seasonings.":
+			"Colcannon citizens must be rejected due to seasonings.":
 				if potato_info.country_of_issue == "Colcannon":
 					return false
-			"Pratie Point potatoes require agricultural inspection.":
+			"Pratie Point potatoes require rejection on agricultural grounds.":
 				if potato_info.country_of_issue == "Pratie Point":
 					return false
 			# Expiration-based rules
@@ -272,7 +294,11 @@ func _ready():
 				sprite.z_index = PHYSICAL_STAMP_Z_INDEX
 			else:
 				sprite.z_index = PASSPORT_Z_INDEX
-	
+				
+	# Add restoration of session score for continued shifts
+	if Global.final_score > 0:
+		score = Global.final_score
+		$"Label (ScoreLabel)".text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
 	# Get references to the new nodes
 	passport = $"Sprite2D (Passport)"
 	bulletin = $"Sprite2D (Bulletin)"
@@ -577,23 +603,6 @@ func calculate_age(date_of_birth: String) -> int:
 	
 	return age
 	
-func is_expired(expiration_date: String) -> bool:
-	var current_date = Time.get_date_dict_from_system()
-	var expiry_date = Time.get_datetime_dict_from_datetime_string(expiration_date, false)
-	var expiration_state = false
-	if current_date.year > expiry_date.year:
-		#return true
-		expiration_state = true
-	elif current_date.year == expiry_date.year:
-		if current_date.month > expiry_date.month: 
-			#return true
-			expiration_state = true
-		elif current_date.month == expiry_date.month:
-			#return current_date.day > expiry_date.day
-			expiration_state = current_date.day > expiry_date.day
-	expiration_state = false
-	return expiration_state
-	
 func _on_button_welcome_button_pressed() -> void:
 	process_decision(true)
 
@@ -601,24 +610,28 @@ func _on_button_no_entry_button_pressed() -> void:
 	process_decision(false)
 
 func go_to_game_over():
-	var game_over_scene = preload("res://game_over.tscn").instantiate()
-	game_over_scene.score = score
+	var game_over_scene = preload("res://menus/game_over.tscn").instantiate()
+		# Store the score in a global script or autoload
+	Global.final_score = score
 	print("transition to game over scene")
 	$"Sprite2D (Approval Stamp)".visible = false
 	$"Sprite2D (Rejection Stamp)".visible = false
-	get_tree().change_scene_to_file("res://game_over.tscn")
+	get_tree().change_scene_to_file("res://menus/game_over.tscn")
+
 	
 func go_to_game_win():
-	var game_win_scene = preload("res://menus/success_scene.tscn").instantiate()
-	game_win_scene.score = score
-	print("transition to game win scene")
+	print("Transitioning to game win scene with score:", score)
 	$"Sprite2D (Approval Stamp)".visible = false
 	$"Sprite2D (Rejection Stamp)".visible = false
-	get_tree().change_scene_to_file("res://success_scene.tscn")
+	Global.final_score = score
+	Global.shift += 1
+	# Use change_scene_to_packed to pass parameters
+	var success_scene = preload("res://menus/success_scene.tscn")
+	get_tree().change_scene_to_packed(success_scene)
+	# Store the score in a global script or autoload
 
 func process_decision(allowed):
-	var potato_info = queue_manager.remove_potato()
-	if potato_info.is_empty():
+	if current_potato_info.is_empty():
 		print("No potato to process.")
 		return
 		
@@ -627,7 +640,8 @@ func process_decision(allowed):
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
 		score += 1
 		$"Label (JudgementInfo)".text = "You made the right choice, officer."
-		if score == 25:
+		# Check if multiple of 25 and win if so
+		if score % 25 == 0:
 			print("You win!")
 			go_to_game_win()
 	else:
@@ -639,7 +653,7 @@ func process_decision(allowed):
 			
 			
 	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / 5"
-	$"Label (ScoreLabel)".text = "Score    " + str(score) + " / 25"
+	$"Label (ScoreLabel)".text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
 
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()

@@ -1,10 +1,8 @@
 extends Control
-
 var score = 0
 
 func _ready():
 	$MarginContainer/ScoreLabel.text = """You caused too much suffering and have been removed from your post. You ultimately helped """ + str(score) + " potatoes find their way to safety."
-
 
 func _on_restart_button_pressed():
 	score = 0
