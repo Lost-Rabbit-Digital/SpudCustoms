@@ -67,7 +67,7 @@ func generate_rules():
 
 		# Age-based rules
 		"No potatoes over 5 years old.",
-		"Only mature potatoes (3+ years) allowed.",
+		"Reject potatoes younger than 3 years old.",
 		"Young potatoes (under 2 years) need guardian.",
 
 		# Gender-based rules
@@ -79,7 +79,7 @@ func generate_rules():
 		"Potatopia citizens cannot enter under any circumstances.",
 		"Tuberstan potatoes suspected of concealing arms.",
 		"North Yamnea is currently under embargo.",
-		"Spuddington potatoes require visa check.",
+		"Reject Spuddington potatoes because of visa counterfeiting activity.",
 		"Tatcross citizens get no entry processing.",
 		"Mash Meadows potatoes are subject to quarantine, reject!",
 		"Tuberville potatoes subject to absolute rejection.",
@@ -180,7 +180,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 				print("Age is ", str(age))
 				if age >= 5:
 					return false
-			"Only mature potatoes (3+ years) allowed.":
+			"Reject potatoes younger than 3 years old.":
 				var age = calculate_age(potato_info.date_of_birth)
 				print("Age is ", str(age))
 				if age <= 3:
@@ -211,7 +211,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			"North Yamnea is currently under embargo.":
 				if potato_info.country_of_issue == "North Yamnea":
 					return false			
-			"Spuddington potatoes require visa check.":
+			"Reject Spuddington potatoes because of visa counterfeiting activity.":
 				if potato_info.country_of_issue == "Spuddington":
 					return false
 			"Tatcross citizens get no entry processing.":
