@@ -3,6 +3,16 @@ Move tutorial to the front of the document
 Make the flashing icon on the megaphone larger
 Explain how to flip the pages on the document in the tutorial
 
+Add flash arrow pointing from the left to the right indicator for megaphone
+Add flash indicator pointing at corner of first page 
+Picking up stamp hides cursor
+Move 4th page of instructions to page 1
+Fix stamp animation
+
+Make stamp interaction be, left click to pick up, left click to stamp, right click to drop. 
+
+How to give visual feedback of controls to the player? 
+
 MENUS:
 Settings menu (Sounds/Graphics)
 
