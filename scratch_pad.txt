@@ -1,3 +1,10 @@
+Big questions: 
+What is the win condition? 
+How do we tell the new player what to do to get through first potato processing? 
+What do we tell the player when they win?
+What do we tell the player when they lose? 
+
+
 IMPORTANT:
 Move tutorial to the front of the document
 Make the flashing icon on the megaphone larger
