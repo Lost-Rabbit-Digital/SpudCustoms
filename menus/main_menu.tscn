@@ -77,7 +77,7 @@ grow_vertical = 2
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
+theme_override_constants/margin_bottom = 24
 
 [node name="Background" type="Sprite2D" parent="MarginContainer"]
 position = Vector2(640, 360)
