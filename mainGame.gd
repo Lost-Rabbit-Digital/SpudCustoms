@@ -541,7 +541,7 @@ func generate_potato():
 
 func get_random_name():
 	var first_names = [
-		"Spud", "Tater", "Mash", "Spudnik", "Tater Tot", "Mr. Potato", "Chip", 
+		"Spud", "Tater", "Mash", "Spudnik", "Tater Tot", "Potato", "Chip", 
 		"Murph", "Yam", "Tato", "Spuddy", "Tuber"
 		]
 	var last_names = [
