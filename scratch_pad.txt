@@ -17,6 +17,8 @@ Transition to game win scene, "Your shift is over, you will be re-planted, you h
 What do we tell the player when they lose? 
 Transition to game lose scene, "You have unjustly denied permitted potatoes entry, you will be roasted. You have disgraced the potato motherland."
 
+Add score to both the success_scene.tscn and the game_over.tscn, then end of shifts functions as a soft-end and a way to heal for high-scoring.
+
 
 IMPORTANT:
 Move tutorial to the front of the document
