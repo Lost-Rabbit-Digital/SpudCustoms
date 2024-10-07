@@ -38,9 +38,12 @@ Add score to both the success_scene.tscn and the game_over.tscn, then end of shi
 
 
 IMPORTANT:
+<<<<<<< HEAD
 Move tutorial to the front of the document
 Make the flashing icon on the megaphone larger
 Explain how to flip the pages on the document in the tutorial
+=======
+>>>>>>> 24152083d4211b5f414f526aa38b095ce643d8a9
 
 Add flash arrow pointing from the left to the right indicator for megaphone
 Add flash indicator pointing at corner of first page 
@@ -74,6 +77,12 @@ Mouse has to be over passport to be able to stamp
 
 
 COMPLETED:
+<<<<<<< HEAD
+=======
+Explain how to flip the pages on the document in the tutorial
+Move tutorial to the front of the document
+Make the flashing icon on the megaphone larger
+>>>>>>> 24152083d4211b5f414f526aa38b095ce643d8a9
 Add dialogue to the megaphone
 Make toggle audio button on main menu work
 Add letter with brief explainer on your job as a Spudarado Border Officer
