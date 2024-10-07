@@ -36,9 +36,7 @@ CONTROLS
 [LEFT MOUSE] - Pick up and drops objects
 [RIGHT MOUSE] - Perform actions with objects 
 [ESCAPE] - Pause or return to the main menu
-Click here!  ---------------->
 """
-
 
 func _on_texture_button_turn_right_pressed():
 	if current_page + 1 <= maximum_pages:
