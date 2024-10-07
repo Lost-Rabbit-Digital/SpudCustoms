@@ -71,12 +71,13 @@ func setup_bulletin_tutorial_timer():
 	bulletin_tutorial_timer.wait_time = BULLETIN_TUTORIAL_FLASH_INTERVAL
 	bulletin_tutorial_timer.start()
 	
-func _on_bulletin_tutorial_timer_timeout():
+
+func _on_bulletin_flash_timer_timeout():
 	print("FLASH TIMER: Bulletin timeout")
 	if not is_in_bullet_tutorial:
 		$"Sprite2D (Bulletin)/Node2D/BulletinAlertBox".visible = !$"Sprite2D (Bulletin)/Node2D/BulletinAlertBox".visible
 	else:
-		$"Sprite2D (Bulletin)/Node2D/BulletinAlertBox".visible = false
+		$"Sprite2D (Bulletin)/Node2D".visible = false
 
 func generate_rules():
 	current_rules = [

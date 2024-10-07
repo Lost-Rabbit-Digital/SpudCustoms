@@ -149,7 +149,6 @@ scale = Vector2(1.09694, 1.07604)
 texture = ExtResource("7_nqnif")
 
 [node name="MegaphoneFlashTimer" type="Timer" parent="."]
-autostart = true
 
 [node name="SpawnTimer" type="Timer" parent="."]
 
@@ -252,7 +251,6 @@ curve = SubResource("Curve2D_x3wa3")
 script = ExtResource("10_a4p7n")
 
 [node name="BulletinFlashTimer" type="Timer" parent="."]
-autostart = true
 
 [node name="Sprite2D (Bulletin)" type="Sprite2D" parent="."]
 z_index = 3
@@ -435,6 +433,6 @@ texture = ExtResource("16_qj41b")
 [connection signal="megaphone_clicked" from="Sprite2D (Megaphone)" to="." method="_on_sprite_2d_megaphone_megaphone_clicked"]
 [connection signal="timeout" from="MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="BulletinFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
+[connection signal="timeout" from="BulletinFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Sprite2D (Bulletin)/Sprite2D (Open Bulletin)/TextureButton (TurnRight)" to="Sprite2D (Bulletin)" method="_on_texture_button_turn_right_pressed"]
 [connection signal="pressed" from="Sprite2D (Bulletin)/Sprite2D (Open Bulletin)/TextureButton (TurnLeft)" to="Sprite2D (Bulletin)" method="_on_texture_button_turn_left_pressed"]
