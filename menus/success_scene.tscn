@@ -63,6 +63,7 @@ You now have the choice to rejoin your family or work your next shift tomorrow.
 Choose wisely, for you only have one life."
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2

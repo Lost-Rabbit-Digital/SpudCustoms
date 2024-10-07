@@ -10,7 +10,7 @@ var is_paused = false
 var current_potato_info
 
 var current_potato
-var score = 0
+var score = 24
 var strikes = 0
 var current_rules = []
 var queue_manager: Node2D
@@ -50,10 +50,10 @@ const STAMP_MOVE_DISTANCE = 36  # How far the stamp moves down
 func generate_rules():
 	current_rules = [
 		# Type-based rules
-		"Purple Majesty not welcome.",
+		"Purple Majesty are not welcome.",
 		"No Russet Burbanks allowed!",
-		"Yukon Gold potatoes must be thoroughly checked.",
-		"Sweet Potatoes require special authorization.",
+		"Yukon Gold potatoes must be rejected.",
+		"Sweet Potatoes require special authorization. Reject!",
 		"Red Bliss potatoes are currently restricted.",
 
 		# Condition-based rules
@@ -115,18 +115,19 @@ func update_rules_display():
 	
 func is_potato_valid(potato_info: Dictionary) -> bool:
 	for rule in current_rules:
+		print("Current rule processing: " + rule)
 		match rule:
 			# Type-based rules
-			"Purple Majesty not welcome.":
+			"Purple Majesty are not welcome.":
 				if potato_info.type == "Purple Majesty":
 					return false
 			"No Russet Burbanks allowed!":
 				if potato_info.type == "Russet Burbank":
 					return false
-			"Yukon Gold potatoes must be thoroughly checked.":
+			"Yukon Gold potatoes must be rejected.":
 				if potato_info.type == "Yukon Gold":
 					return false
-			"Sweet Potatoes require special authorization.":
+			"Sweet Potatoes require special authorization. Reject!":
 				if potato_info.type == "Sweet Potato":
 					return false
 			"Red Bliss potatoes are currently restricted.":
@@ -154,14 +155,17 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			# Age-based rules
 			"No potatoes over 5 years old.":
 				var age = calculate_age(potato_info.date_of_birth)
+				print("Age is ", str(age))
 				if age > 5:
 					return false
 			"Only mature potatoes (3+ years) allowed.":
 				var age = calculate_age(potato_info.date_of_birth)
-				if age < 3:
+				print("Age is ", str(age))
+				if age <= 3:
 					return false
 			"Young potatoes (under 2 years) need guardian.":
 				var age = calculate_age(potato_info.date_of_birth)
+				print("Age is ", str(age))
 				if age < 2:
 					return false
 			# Sex-based rules
@@ -178,7 +182,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			"Potatopia citizens need additional screening.":
 				if potato_info.country_of_issue == "Potatopia":
 					return false			
-			"Tuberstan potatoes welcome with open arms.":
+			"Tuberstan potatoes suspected of concealing arms.":
 				if potato_info.country_of_issue == "Tuberstan":
 					return false			
 			"North Yamnea is currently under embargo.":
@@ -210,24 +214,30 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 					return false
 			# Expiration-based rules
 			"Expired potatoes are not allowed.":
+				print("Checking if is_expired", is_expired(potato_info.expiration_date))
 				if is_expired(potato_info.expiration_date):
 					return false
 			"Potatoes expiring within 30 days need approval.":
 				var days_to_expiry = days_until_expiry(potato_info.expiration_date)
+				print("Checking days to expiry", days_until_expiry(potato_info.expiration_date))
 				if days_to_expiry >= 0 and days_to_expiry <= 30:
 					return false
 			"Long-life potatoes (5+ years until expiry) get priority.":
 				var years_to_expiry = years_until_expiry(potato_info.expiration_date)
+				print("Checking years to expiry", years_until_expiry(potato_info.expiration_date))
 				if years_to_expiry <= 5:
 					return false
 			"Potatoes must have at least 1 year until expiration.":
 				var years_to_expiry = years_until_expiry(potato_info.expiration_date)
+				print("Checking years to expiry", years_until_expiry(potato_info.expiration_date))
 				if years_to_expiry < 1:
 					return false
 			"Potatoes with less than 6 months to expiry require special handling.":
 				var days_to_expiry = days_until_expiry(potato_info.expiration_date)
+				print("Checking days to expiry", days_until_expiry(potato_info.expiration_date))
 				if days_to_expiry >= 0 and days_to_expiry < 180:
 					return false
+	print("INFO: This potato should be allowed in, returning true.")
 	return true
 
 @onready var megaphone = $"Sprite2D (Megaphone)"
@@ -605,12 +615,12 @@ func process_decision(allowed):
 		$"Label (JudgementInfo)".text = "You have caused unnecessary suffering, officer..."
 		strikes += 1
 		if strikes == 5:
-			go_to_game_over()
 			print("Game over!")
+			go_to_game_over()
 			
 			
 	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / 5"
-	$"Label (ScoreLabel)".text = "Score    " + str(score + " / 25")
+	$"Label (ScoreLabel)".text = "Score    " + str(score) + " / 25"
 
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()

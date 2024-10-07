@@ -1,14 +1,31 @@
 Big questions: 
 What is the win condition? 
 Hit 25 points without getting 3 strikes. 
+
 Transition to win game screen, outline limit "Only allow 25 permitted potatoes to enter. You will be returned to your family if successful. Otherwise you will be roasted."
+
+Done: Measure and trigger the win condition on score, similar to quit. 
+
+Change score display to be out of 25. Change scene to success_scene once completed. In success_scene, move back to mainGame and pass the score back.
+
+Tuberstan and Pratie Point rules, one is not evaluating properly
+
+Done: Reset score if you fail
+
+Rephrase all laws to be more clearly negative
+
+Fix stamp animation artifact
+
+Remove Mr. Potato from first names
+
+Check why date rules keep failing (make sure expiration date is referencing correct variable, and that it's evaluating properly)
 
 How do we tell the new player what to do to get through first potato processing?
 
 Use flashing circles and text to walk the player through processing their first document. Click by click. 
 
- 1. Highlight on the speaker
- 2. Pamphlet with instructions
+ Done: 1. Alert, larger and centeredHighlight on the speaker
+ Done: 2. Update first page of Pamphlet with instructions
  3. Overlay of potato customs officer talking? Too much scope for this point
 
 What do we tell the player when they win?
@@ -22,6 +39,7 @@ Add score to both the success_scene.tscn and the game_over.tscn, then end of shi
 
 IMPORTANT:
 Move tutorial to the front of the document
+Make the flashing icon on the megaphone larger
 Explain how to flip the pages on the document in the tutorial
 
 Add flash arrow pointing from the left to the right indicator for megaphone
@@ -56,7 +74,6 @@ Mouse has to be over passport to be able to stamp
 
 
 COMPLETED:
-Make the flashing icon on the megaphone larger
 Add dialogue to the megaphone
 Make toggle audio button on main menu work
 Add letter with brief explainer on your job as a Spudarado Border Officer
