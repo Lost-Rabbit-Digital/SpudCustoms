@@ -1,5 +1,7 @@
 IMPORTANT:
-
+Move tutorial to the front of the document
+Make the flashing icon on the megaphone larger
+Explain how to flip the pages on the document in the tutorial
 
 MENUS:
 Settings menu (Sounds/Graphics)
