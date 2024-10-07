@@ -284,7 +284,8 @@ After stamping the documents, hand them back to the Potato.
 CONTROLS
 [LEFT MOUSE] - Pick up and drops objects
 [RIGHT MOUSE] - Perform actions with objects 
-[ESCAPE] - Pause or return to the main menu"
+[ESCAPE] - Pause or return to the main menu
+Click here!  ---------------->"
 horizontal_alignment = 1
 autowrap_mode = 2
 
