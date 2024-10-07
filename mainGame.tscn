@@ -121,11 +121,9 @@ scale = Vector2(0.948661, 0.948661)
 texture = ExtResource("9_arv36")
 
 [node name="Sprite2D (Flash Alert)" type="Sprite2D" parent="Sprite2D (Megaphone)"]
-visible = false
 z_index = 2
 z_as_relative = false
-position = Vector2(12.8571, -12.1429)
-scale = Vector2(1.5, 1.5)
+scale = Vector2(0.55, 0.55)
 texture = ExtResource("10_5g2y2")
 
 [node name="Sprite2D (CustomsOffice)" type="Sprite2D" parent="."]
