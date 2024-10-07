@@ -433,6 +433,6 @@ texture = ExtResource("16_qj41b")
 [connection signal="megaphone_clicked" from="Sprite2D (Megaphone)" to="." method="_on_sprite_2d_megaphone_megaphone_clicked"]
 [connection signal="timeout" from="MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="BulletinFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
+[connection signal="timeout" from="BulletinFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Sprite2D (Bulletin)/Sprite2D (Open Bulletin)/TextureButton (TurnRight)" to="Sprite2D (Bulletin)" method="_on_texture_button_turn_right_pressed"]
 [connection signal="pressed" from="Sprite2D (Bulletin)/Sprite2D (Open Bulletin)/TextureButton (TurnLeft)" to="Sprite2D (Bulletin)" method="_on_texture_button_turn_left_pressed"]
