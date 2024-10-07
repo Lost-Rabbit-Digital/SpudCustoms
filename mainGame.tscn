@@ -264,32 +264,41 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -129.0
-offset_top = -179.0
+offset_top = -221.5
 offset_right = 127.0
-offset_bottom = 177.0
+offset_bottom = -206.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
+theme_override_colors/font_color = Color(0.898039, 0.678431, 0.203922, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
 theme_override_fonts/font = ExtResource("13_wxn24")
 theme_override_font_sizes/font_size = 16
-text = "INSTRUCTIONS
-To begin, press the speaker with the yellow flashing ring on top of the customs office building.
-Take the documents from the Potato and bring them to the main table.
-Then compare the information on the documents with the laws given.
-If there are any discrepencies, deny entry.
-After stamping the documents, hand them back to the Potato.
-
-CONTROLS
-[LEFT MOUSE] - Pick up and drops objects
-[RIGHT MOUSE] - Perform actions with objects 
-[ESCAPE] - Pause or return to the main menu
-Click here!  ---------------->"
+text = "--={ READ BELOW FOR INSTRUCTIONS }=--"
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="BulletinAlertBox" type="Sprite2D" parent="Sprite2D (Bulletin)/Node2D"]
 scale = Vector2(1.03, 1.03)
 texture = ExtResource("22_3pqlk")
+
+[node name="Label (BulletinNote)3" type="Label" parent="Sprite2D (Bulletin)/Node2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 150.0
+offset_top = 159.0
+offset_right = 406.0
+offset_bottom = 174.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.898039, 0.678431, 0.203922, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
+text = "<--- Press for next page"
+autowrap_mode = 2
 
 [node name="Sprite2D (Close Bulletin)" type="Sprite2D" parent="Sprite2D (Bulletin)"]
 visible = false
@@ -319,8 +328,7 @@ After stamping the documents, hand them back to the Potato.
 CONTROLS
 [LEFT MOUSE] - Pick up and drops objects
 [RIGHT MOUSE] - Perform actions with objects 
-[ESCAPE] - Pause or return to the main menu
-Click here!  ---------------->"
+[ESCAPE] - Pause or return to the main menu"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -338,6 +346,8 @@ offset_top = 150.0
 offset_right = -100.0
 offset_bottom = 180.0
 texture_normal = ExtResource("22_ir8f4")
+
+[node name="BulletinFlashTimer" type="Timer" parent="Sprite2D (Bulletin)"]
 
 [node name="Sprite2D (Passport)" type="Sprite2D" parent="."]
 z_index = 2
@@ -425,3 +435,4 @@ texture = ExtResource("16_qj41b")
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Sprite2D (Bulletin)/Sprite2D (Open Bulletin)/TextureButton (TurnRight)" to="Sprite2D (Bulletin)" method="_on_texture_button_turn_right_pressed"]
 [connection signal="pressed" from="Sprite2D (Bulletin)/Sprite2D (Open Bulletin)/TextureButton (TurnLeft)" to="Sprite2D (Bulletin)" method="_on_texture_button_turn_left_pressed"]
+[connection signal="timeout" from="Sprite2D (Bulletin)/BulletinFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
