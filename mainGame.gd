@@ -52,19 +52,6 @@ var bulletin_tutorial_timer: Timer
 const BULLETIN_TUTORIAL_FLASH_INTERVAL = 1.0 # flash every 1 seconds
 var is_in_bullet_tutorial = true
 
-var how_to_play_note_1 = """INSTRUCTIONS
-To begin, press the speaker with the yellow flashing ring on top of the customs office building.
-Take the documents from the Potato and bring them to the main table.
-Then compare the information on the documents with the laws given.
-If there are any discrepencies, deny entry.
-After stamping the documents, hand them back to the Potato.
-
-CONTROLS
-[LEFT MOUSE] - Pick up and drops objects
-[RIGHT MOUSE] - Perform actions with objects 
-[ESCAPE] - Pause or return to the main menu
-"""
-
 func setup_bulletin_tutorial_timer():
 	print("FLASH TIMER: Setup bulletin flash timer")
 	bulletin_tutorial_timer = $BulletinFlashTimer
@@ -74,7 +61,7 @@ func setup_bulletin_tutorial_timer():
 
 func _on_bulletin_flash_timer_timeout():
 	print("FLASH TIMER: Bulletin timeout")
-	if not is_in_bullet_tutorial:
+	if is_in_bullet_tutorial:
 		$"Sprite2D (Bulletin)/Node2D/BulletinAlertBox".visible = !$"Sprite2D (Bulletin)/Node2D/BulletinAlertBox".visible
 	else:
 		$"Sprite2D (Bulletin)/Node2D".visible = false
@@ -523,7 +510,15 @@ func _process(delta):
 			close_sound_played = false  # Reset close sound flag
 			
 	# check if in bulletin tutorial
-	if $"Sprite2D (Bulletin)/Sprite2D (Open Bulletin)/Label (BulletinNote)".text != how_to_play_note_1:
+	if $"Sprite2D (Bulletin)/Sprite2D (Open Bulletin)/Label (BulletinNote)".text == """As the previous Border Officer of the glorious nation of Spudarado, I feel compelled to share the importance and intricacies of your duties at your esteemed checkpoint.
+
+Each day, you will stand as the first line of defense against those who would seek to enter our potato-rich paradise without proper documentation. Your responsibilities include:
+
+Thorough examination of passports and entry permits,
+verification of traveler identities,
+scrutiny of any suspicious items or behavior,
+and upholding the ever-changing immigration regulations
+""":
 		is_in_bullet_tutorial = false
 		
 func generate_potato_info():
