@@ -575,10 +575,18 @@ func _on_button_no_entry_button_pressed() -> void:
 func go_to_game_over():
 	var game_over_scene = preload("res://game_over.tscn").instantiate()
 	game_over_scene.score = score
-	print("transition to scene")
+	print("transition to game over scene")
 	$"Sprite2D (Approval Stamp)".visible = false
 	$"Sprite2D (Rejection Stamp)".visible = false
 	get_tree().change_scene_to_file("res://game_over.tscn")
+	
+func go_to_game_win():
+	var game_win_scene = preload("res://success_scene.tscn").instantiate()
+	game_win_scene.score = score
+	print("transition to game win scene")
+	$"Sprite2D (Approval Stamp)".visible = false
+	$"Sprite2D (Rejection Stamp)".visible = false
+	get_tree().change_scene_to_file("res://success_scene.tscn")
 
 func process_decision(allowed):
 	var potato_info = queue_manager.remove_potato()
@@ -591,6 +599,9 @@ func process_decision(allowed):
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
 		score += 1
 		$"Label (JudgementInfo)".text = "You made the right choice, officer."
+		if score == 25:
+			print("You win!")
+			go_to_game_win()
 	else:
 		$"Label (JudgementInfo)".text = "You have caused unnecessary suffering, officer..."
 		strikes += 1
