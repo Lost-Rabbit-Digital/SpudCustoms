@@ -115,9 +115,8 @@ texture = ExtResource("7_7m4ia")
 script = ExtResource("8_4dhg3")
 
 [node name="MegaphoneDialogueBoxBlank" type="Sprite2D" parent="Sprite2D (Megaphone)"]
-visible = false
-position = Vector2(78.0929, -66.0072)
-scale = Vector2(0.948661, 0.948661)
+position = Vector2(62.1428, -47.8571)
+scale = Vector2(0.75, 0.75)
 texture = ExtResource("9_arv36")
 
 [node name="Sprite2D (Flash Alert)" type="Sprite2D" parent="Sprite2D (Megaphone)"]
