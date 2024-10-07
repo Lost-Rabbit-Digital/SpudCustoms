@@ -1,8 +1,21 @@
 Big questions: 
 What is the win condition? 
-How do we tell the new player what to do to get through first potato processing? 
+Hit 25 points without getting 3 strikes. 
+Transition to win game screen, outline limit "Only allow 25 permitted potatoes to enter. You will be returned to your family if successful. Otherwise you will be roasted."
+
+How do we tell the new player what to do to get through first potato processing?
+
+Use flashing circles and text to walk the player through processing their first document. Click by click. 
+
+ 1. Highlight on the speaker
+ 2. Pamphlet with instructions
+ 3. Overlay of potato customs officer talking? Too much scope for this point
+
 What do we tell the player when they win?
+Transition to game win scene, "Your shift is over, you will be re-planted, you have served the potato motherland."
+
 What do we tell the player when they lose? 
+Transition to game lose scene, "You have unjustly denied permitted potatoes entry, you will be roasted. You have disgraced the potato motherland."
 
 
 IMPORTANT:
