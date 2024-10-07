@@ -22,7 +22,7 @@ var bulletin_welcome_note_3 = """Of course, there are perks to the job. The gove
 
 Should you ever find yourself at our checkpoint, I trust you'll have your papers in order. Remember, a proper Spudarado visa should always smell faintly of earth and have the official seal featuring our national symbol - the Majestic Russet.
 
-For the Glory of Spudarado!
+For the Glory of Spudorado!
 """
 
 var how_to_play_note_1 = """INSTRUCTIONS
@@ -44,20 +44,22 @@ func _on_texture_button_turn_right_pressed():
 		current_page += 1
 		if current_page == 1:
 			print(current_page)
-			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = bulletin_welcome_note_1
+			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = how_to_play_note_1
 			$"Sprite2D (Open Bulletin)/TextureButton (TurnLeft)".visible = false
 		elif current_page == 2:
 			print(current_page)
-			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = bulletin_welcome_note_2
+			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = bulletin_welcome_note_1
 			$"Sprite2D (Open Bulletin)/TextureButton (TurnLeft)".visible = true
 		elif current_page == 3:
 			print(current_page)
-			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = bulletin_welcome_note_3
+			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = bulletin_welcome_note_2
 			$"Sprite2D (Open Bulletin)/TextureButton (TurnLeft)".visible = true
 		elif current_page == 4:
 			print(current_page)
-			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = how_to_play_note_1
+			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = bulletin_welcome_note_3
 			$"Sprite2D (Open Bulletin)/TextureButton (TurnLeft)".visible = true
+			$"Sprite2D (Open Bulletin)/TextureButton (TurnRight)".visible = false
+
 		
 
 
@@ -66,17 +68,18 @@ func _on_texture_button_turn_left_pressed():
 		current_page -= 1
 		if current_page == 1:
 			print(current_page)
-			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = bulletin_welcome_note_1
+			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = how_to_play_note_1
 			$"Sprite2D (Open Bulletin)/TextureButton (TurnLeft)".visible = false
 		elif current_page == 2:
 			print(current_page)
-			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = bulletin_welcome_note_2
+			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = bulletin_welcome_note_1
 			$"Sprite2D (Open Bulletin)/TextureButton (TurnLeft)".visible = true
 		elif current_page == 3:
 			print(current_page)
-			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = bulletin_welcome_note_3
+			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = bulletin_welcome_note_2
 			$"Sprite2D (Open Bulletin)/TextureButton (TurnLeft)".visible = true
+			$"Sprite2D (Open Bulletin)/TextureButton (TurnRight)".visible = true
 		elif current_page == 4:
 			print(current_page)
-			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = how_to_play_note_1
+			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = bulletin_welcome_note_3
 			$"Sprite2D (Open Bulletin)/TextureButton (TurnLeft)".visible = true

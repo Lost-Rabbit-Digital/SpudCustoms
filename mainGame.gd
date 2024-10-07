@@ -242,7 +242,6 @@ func update_date_display():
 func _ready():
 	setup_megaphone_flash_timer()
 
-	$"Label (ScoreLabel)".text = "Score   " + str(score)
 	update_date_display()
 	queue_manager = $"Node2D (QueueManager)"  # Make sure to add QueueManager as a child of Main
 	generate_rules()
@@ -581,7 +580,7 @@ func go_to_game_over():
 	get_tree().change_scene_to_file("res://game_over.tscn")
 	
 func go_to_game_win():
-	var game_win_scene = preload("res://success_scene.tscn").instantiate()
+	var game_win_scene = preload("res://menus/success_scene.tscn").instantiate()
 	game_win_scene.score = score
 	print("transition to game win scene")
 	$"Sprite2D (Approval Stamp)".visible = false
@@ -605,13 +604,13 @@ func process_decision(allowed):
 	else:
 		$"Label (JudgementInfo)".text = "You have caused unnecessary suffering, officer..."
 		strikes += 1
-		if strikes == 3:
+		if strikes == 5:
 			go_to_game_over()
 			print("Game over!")
 			
 			
-	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + "/3"
-	$"Label (ScoreLabel)".text = "Score   " + str(score)
+	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / 5"
+	$"Label (ScoreLabel)".text = "Score    " + str(score + " / 25")
 
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()
