@@ -29,8 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://c78plmdtw02b1" path="res://documents/bulletin/page_turn_right.png" id="21_pmbmt"]
 [ext_resource type="Script" path="res://sprite_2d_(bulletin).gd" id="21_qw3ji"]
 [ext_resource type="Texture2D" uid="uid://bfhpafskct413" path="res://documents/bulletin/page_turn_left.png" id="22_ir8f4"]
-[ext_resource type="PackedScene" path="res://music_manager.tscn" id="27_2tnfb"]
-[ext_resource type="PackedScene" path="res://menus/pause_menu.tscn" id="28_vb6g0"]
+[ext_resource type="PackedScene" uid="uid://c1amspwdfuccu" path="res://music_manager.tscn" id="27_2tnfb"]
+[ext_resource type="PackedScene" uid="uid://bp2pkcox316n0" path="res://menus/pause_menu.tscn" id="28_vb6g0"]
 
 [sub_resource type="Curve2D" id="Curve2D_f3jw2"]
 _data = {

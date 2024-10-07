@@ -36,8 +36,7 @@ CONTROLS
 [LEFT MOUSE] - Pick up and drops objects
 [RIGHT MOUSE] - Perform actions with objects 
 [ESCAPE] - Pause or return to the main menu
-
-Click here to turn the page -------->
+Click here!  ---------------->
 """
 
 
