@@ -173,6 +173,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 				if potato_info.sex == "Female":
 					return false
 			"Female potatoes get priority processing.":
+				print("Your potato is: ", potato_info.sex)
 				if potato_info.sex == "Male":
 					return false
 			# Country-based rules
@@ -191,7 +192,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			"Spuddington potatoes require visa check.":
 				if potato_info.country_of_issue == "Spuddington":
 					return false
-			"Tatcross citizens get expedited processing.":
+			"Tatcross citizens get no entry processing.":
 				if potato_info.country_of_issue == "Tatcross":
 					return false			
 			"Mash Meadows potatoes need health certificate.":
@@ -216,6 +217,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			"Expired potatoes are not allowed.":
 				print("Checking if is_expired", is_expired(potato_info.expiration_date))
 				if is_expired(potato_info.expiration_date):
+					"Potato is expired. Return false"
 					return false
 			"Potatoes expiring within 30 days need approval.":
 				var days_to_expiry = days_until_expiry(potato_info.expiration_date)
@@ -557,23 +559,40 @@ func get_future_date(years_ahead_start: int, years_ahead_end: int) -> String:
 	
 func calculate_age(date_of_birth: String) -> int:
 	var current_date = Time.get_date_dict_from_system()
-	var birth_date = Time.get_datetime_dict_from_datetime_string(date_of_birth, false)
-	var age = current_date.year - birth_date.year
-	if current_date.month < birth_date.month or (current_date.month == birth_date.month and current_date.day < birth_date.day):
+	var birth_parts = date_of_birth.split('.')
+	
+	if birth_parts.size() != 3:
+		print("Invalid date format: ", date_of_birth)
+		return 0
+	
+	var birth_year = birth_parts[0].to_int()
+	var birth_month = birth_parts[1].to_int()
+	var birth_day = birth_parts[2].to_int()
+	
+	var age = current_date.year - birth_year
+	
+	# Adjust age if birthday hasn't occurred this year
+	if current_date.month < birth_month or (current_date.month == birth_month and current_date.day < birth_day):
 		age -= 1
-	return age	
+	
+	return age
 	
 func is_expired(expiration_date: String) -> bool:
 	var current_date = Time.get_date_dict_from_system()
 	var expiry_date = Time.get_datetime_dict_from_datetime_string(expiration_date, false)
+	var expiration_state = false
 	if current_date.year > expiry_date.year:
-		return true
+		#return true
+		expiration_state = true
 	elif current_date.year == expiry_date.year:
 		if current_date.month > expiry_date.month: 
-			return true
+			#return true
+			expiration_state = true
 		elif current_date.month == expiry_date.month:
-			return current_date.day > expiry_date.day
-	return false
+			#return current_date.day > expiry_date.day
+			expiration_state = current_date.day > expiry_date.day
+	expiration_state = false
+	return expiration_state
 	
 func _on_button_welcome_button_pressed() -> void:
 	process_decision(true)
@@ -603,7 +622,7 @@ func process_decision(allowed):
 		print("No potato to process.")
 		return
 		
-	var correct_decision = is_potato_valid(potato_info)
+	var correct_decision = is_potato_valid(current_potato_info)
 	
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
 		score += 1
