@@ -10,7 +10,7 @@ var is_paused = false
 var current_potato_info
 
 var current_potato
-var score = 25
+var score = 0
 var strikes = 0
 var current_rules = []
 var queue_manager: Node2D
@@ -593,7 +593,7 @@ func process_decision(allowed):
 		$"Label (JudgementInfo)".text = "You made the right choice, officer."
 	else:
 		$"Label (JudgementInfo)".text = "You have caused unnecessary suffering, officer..."
-		strikes += 0
+		strikes += 1
 		if strikes == 3:
 			go_to_game_over()
 			print("Game over!")
