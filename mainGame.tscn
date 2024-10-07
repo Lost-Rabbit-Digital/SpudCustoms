@@ -115,6 +115,7 @@ texture = ExtResource("7_7m4ia")
 script = ExtResource("8_4dhg3")
 
 [node name="MegaphoneDialogueBoxBlank" type="Sprite2D" parent="Sprite2D (Megaphone)"]
+visible = false
 position = Vector2(62.1428, -47.8571)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("9_arv36")
@@ -305,7 +306,7 @@ texture_normal = ExtResource("22_ir8f4")
 [node name="Sprite2D (Passport)" type="Sprite2D" parent="."]
 z_index = 2
 z_as_relative = false
-position = Vector2(1612.51, 444)
+position = Vector2(1656, 403)
 texture = ExtResource("12_q7tid")
 
 [node name="Sprite2D (Close Passport)" type="Sprite2D" parent="Sprite2D (Passport)"]
@@ -323,6 +324,7 @@ texture = ExtResource("17_mr1ft")
 [node name="Sprite2D (Open Passport)" type="Sprite2D" parent="Sprite2D (Passport)"]
 
 [node name="Sprite2D (PassportPhoto)" type="Sprite2D" parent="Sprite2D (Passport)/Sprite2D (Open Passport)"]
+z_index = 3
 z_as_relative = false
 position = Vector2(76, 75)
 scale = Vector2(0.975, 1)
