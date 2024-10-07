@@ -7,7 +7,9 @@ func _ready():
 
 
 func _on_restart_button_pressed():
+	score = 0
 	get_tree().change_scene_to_file("res://mainGame.tscn")
 
 func _on_quit_button_pressed():
+	score = 0
 	get_tree().change_scene_to_file("res://menus/main_menu.tscn")
