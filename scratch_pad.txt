@@ -1,5 +1,15 @@
 IMPORTANT:
-Add dialogue to the megaphone
+
+
+MENUS:
+Settings menu (Sounds/Graphics)
+
+SFX:
+Deny entry to potato
+Grant entry to potato
+
+FEATURE: 
+Entry ticket
 
 BUGS:
 Stamps go over edge of passport
@@ -13,12 +23,11 @@ Mouse has to be over passport to be able to stamp
 
 
 COMPLETED:
-Switch megaphone alert to be off when the box has someone in it
-Add letter with brief explainer on your job as a Spudarado Border Officer
-Pause menu
+Add dialogue to the megaphone
 Make toggle audio button on main menu work
-Make music start on main menu instead of game
-Fullscreen button
+Add letter with brief explainer on your job as a Spudarado Border Officer
+FullscSwitch megaphone alert to be off when the box has someone in it
+Make music start on main menu instead of gamereen button
 Audio settings
 Bulletin card system
 Slow down potato leaving the customs office
