@@ -62,6 +62,7 @@ theme_override_font_sizes/font_size = 32
 text = "You caused too much suffering and have been removed from your post."
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2

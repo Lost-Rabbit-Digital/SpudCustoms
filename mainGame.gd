@@ -10,7 +10,7 @@ var is_paused = false
 var current_potato_info
 
 var current_potato
-var score = 24
+var score = 0
 var strikes = 0
 var max_score = 25
 var current_rules = []
