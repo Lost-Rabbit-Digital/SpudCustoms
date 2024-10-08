@@ -1,0 +1,60 @@
+Potato processing workflow:
+
+The megaphone functions correctly to call in new potatoes.
+
+Potato information is correctly displayed in the passport
+Stamp application process works smoothly (both approval and rejection stamps)
+
+Potato exits correctly based on the stamp applied... with some exceptions. Not sure if thats a joke or not but I have send
+a video link of a rejected potato still running in. Maybe its for humor.
+
+
+Game mechanics:
+
+Score and strikes are updating correctly
+
+The game ends appropriately after 5 strikes
+
+Game transitions to the win scene when the score reaches a multiple of 25
+
+
+User interface interactions:
+
+Dragging and dropping of passports and bulletin = Okay.
+
+Opening and closing animations for passports and bulletin work correctly.
+
+Sound effects play at appropriate times (e.g., stamp sounds, customs officer phrases)
+
+
+Rule system:
+
+New rules are generated and displayed correctly... some are redundant thought.
+
+The game correctly identifies valid and invalid potatoes based on the current rules
+
+
+Queue management:
+
+New potatoes are spawning correctly in the queue
+
+Queue moves properly when potatoes are processed
+
+
+Visual elements:
+
+Potato textures and animations are displaying correctly
+
+No visual glitches or misalignments in the UI
+
+
+Performance:
+
+No lag or frame rate issues, especially when multiple animations are playing
+
+
+Edge cases:
+
+Try rapidly clicking buttons or dragging multiple objects simultaneously ===== Nothing wrong happens.
+
+Test what happens if you try to process a potato without applying a stamp === It doesnt process without a stamp.
