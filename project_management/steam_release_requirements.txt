@@ -1,0 +1,44 @@
+Minimal Requirements for $4.99 Steam Release:
+
+1. Core Gameplay Enhancement:
+   - At least 3 difficulty levels (Easy, Normal, Hard)
+   - 20+ unique immigration rules to cycle through
+   - 10+ different types of potatoes with varied characteristics
+
+2. Game Modes:
+   - Story Mode: 2-3 hour campaign with a simple narrative
+   - Endless Mode: For high-score chasers
+
+3. Progression System:
+   - Unlock new potato types and rules as you advance
+   - Basic officer customization (e.g., hats, badges)
+
+4. Replayability Features:
+   - Daily challenges with unique rule sets
+   - Global leaderboards for Endless Mode and Daily Challenges
+
+5. Polish and Quality of Life:
+   - Tutorial system for new players
+   - Options menu (volume control, resolution settings, etc.)
+   - Polished UI and improved art assets
+
+6. Steam Integration:
+   - 10-15 Steam Achievements
+   - Steam Cloud Saves
+   - Trading Cards (optional, but adds value)
+
+7. Localization:
+   - English + 2-3 additional languages (e.g., Spanish, French, German)
+
+8. Post-Launch Support Plan:
+   - Commitment to bug fixes and minor content updates
+
+9. Fry Rejected Potatoes Mini-game:
+   - Implement as an optional feature
+   - Include in Endless Mode for added challenge
+
+Suggested Genre for Steam:
+Primary Genre: Simulation
+Sub-Genres: Indie, Casual, Strategy
+
+Tags: Immigration, Potato, Customs, Paper Please, Bureaucracy, Time Management
