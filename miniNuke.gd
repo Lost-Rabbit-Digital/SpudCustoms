@@ -18,7 +18,7 @@ func _ready():
 	
 	# Set up the emission shape ( a sphere for a 3d-like effect) 
 	particle_material.emission_shape = ParticleProcessMaterial.EMISSION_SHAPE_SPHERE
-	particle_material.emission_sphere_radius = 50.0
+	particle_material.emission_sphere_radius = 150.0
 	
 	# set up particle movement
 	particle_material.gravity = Vector3( -1, -2, 0) # adjust for an isometric perspective
