@@ -42,3 +42,5 @@ Primary Genre: Simulation
 Sub-Genres: Indie, Casual, Strategy
 
 Tags: Immigration, Potato, Customs, Paper Please, Bureaucracy, Time Management
+
+Make Steam and Non-Steam version
