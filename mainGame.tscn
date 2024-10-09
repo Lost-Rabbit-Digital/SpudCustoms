@@ -30,9 +30,14 @@
 [ext_resource type="Script" path="res://sprite_2d_(bulletin).gd" id="21_qw3ji"]
 [ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://textures/bulletin_alert_box.png" id="22_3pqlk"]
 [ext_resource type="Texture2D" uid="uid://bfhpafskct413" path="res://documents/bulletin/page_turn_left.png" id="22_ir8f4"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" path="res://music_manager.tscn" id="27_2tnfb"]
 [ext_resource type="PackedScene" path="res://menus/pause_menu.tscn" id="28_vb6g0"]
 [ext_resource type="PackedScene" uid="uid://b8kqv7ksgscsc" path="res://miniNuke.tscn" id="33_gnkqk"]
+=======
+[ext_resource type="PackedScene" uid="uid://c1amspwdfuccu" path="res://music_manager.tscn" id="27_2tnfb"]
+[ext_resource type="PackedScene" uid="uid://bp2pkcox316n0" path="res://menus/pause_menu.tscn" id="28_vb6g0"]
+>>>>>>> Stashed changes
 
 [sub_resource type="Curve2D" id="Curve2D_f3jw2"]
 _data = {
@@ -197,7 +202,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("13_wxn24")
 theme_override_font_sizes/font_size = 32
-text = "Strikes   0 / 5"
+text = "Strikes   0 / 3"
 vertical_alignment = 1
 
 [node name="Label (ScoreLabel)" type="Label" parent="."]
@@ -211,7 +216,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("13_wxn24")
 theme_override_font_sizes/font_size = 32
-text = "Score        0  / 25"
+text = "Score        0  / 10"
 vertical_alignment = 1
 
 [node name="Label (RulesLabel)" type="Label" parent="."]

@@ -18,6 +18,18 @@ Done: Potato moving in after decision processing, before megaphone pressed
 
 Done: Reset score if you fail
 
+- Baggage inspection
+- Don't allow the player to move the passport while the animation is playing for it to pass into the customs table
+- Save game and load game
+- Save in a global if the player has finished the tutorial so every shift doesn't start the same interaction
+- Differnet documents, entry passes, work permits, baggage, visas, marriage licenses, bribes, 
+- Add officers patrolling the area
+- Fix stamp visual bugs
+- Make intuitive stamp mechanic
+- Settings menu with graphics, audio, accessibility, rebinds
+- Update pause menu
+
+
 Rephrase all laws to be more clearly negative
 
 Fix stamp animation artifact

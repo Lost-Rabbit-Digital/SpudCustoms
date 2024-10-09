@@ -12,7 +12,7 @@ var current_potato_info
 var current_potato
 var score = 0
 var strikes = 0
-var max_score = 25
+var max_score = 10
 var current_rules = []
 var queue_manager: Node2D
 var is_potato_in_office = false
@@ -672,19 +672,19 @@ func process_decision(allowed):
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
 		score += 1
 		$"Label (JudgementInfo)".text = "You made the right choice, officer."
-		# Check if multiple of 25 and win if so
-		if score % 25 == 0:
+		# Check if multiple of 10 and win if so
+		if score % 10 == 0:
 			print("You win!")
 			go_to_game_win()
 	else:
 		$"Label (JudgementInfo)".text = "You have caused unnecessary suffering, officer..."
 		strikes += 1
-		if strikes == 5:
+		if strikes == 3:
 			print("Game over!")
 			go_to_game_over()
 			
 			
-	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / 5"
+	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / 3"
 	$"Label (ScoreLabel)".text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
 
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
