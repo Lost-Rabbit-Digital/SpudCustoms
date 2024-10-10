@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://jfnium2fmyss"]
 
-[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://background.png" id="1_r4aot"]
-[ext_resource type="Script" path="res://menus/disclaimer_menu.gd" id="1_w3vny"]
+[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/background.png" id="1_r4aot"]
+[ext_resource type="Script" path="res://menus/menu_scripts/disclaimer_menu.gd" id="1_w3vny"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="2_ypp0a"]
 
 [sub_resource type="Theme" id="Theme_nctqt"]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://do8qjt2cvlgwr"]
 
-[ext_resource type="Script" path="res://menus/confirmation_scene.gd" id="1_7mxja"]
+[ext_resource type="Script" path="res://menus/menu_scripts/confirmation_scene.gd" id="1_7mxja"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="1_47ds0"]
-[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://background.png" id="2_xoteo"]
+[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/background.png" id="2_xoteo"]
 
 [sub_resource type="Theme" id="Theme_2g8j7"]
 default_font = ExtResource("1_47ds0")

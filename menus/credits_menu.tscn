@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://cybk18fy6jpce"]
 
-[ext_resource type="Script" path="res://menus/credits_menu.gd" id="1_3mktb"]
+[ext_resource type="Script" path="res://menus/menu_scripts/credits_menu.gd" id="1_3mktb"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="1_gr2pr"]
-[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://background.png" id="2_8yiec"]
+[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/background.png" id="2_8yiec"]
 
 [sub_resource type="Theme" id="Theme_2wfvy"]
 default_font = ExtResource("1_gr2pr")
@@ -10,7 +10,7 @@ default_font_size = 48
 
 [sub_resource type="Theme" id="Theme_n4pyg"]
 default_font = ExtResource("1_gr2pr")
-default_font_size = 64
+default_font_size = 32
 
 [sub_resource type="Theme" id="Theme_ni8lc"]
 default_font = ExtResource("1_gr2pr")
@@ -105,6 +105,24 @@ theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 16
 text = "Ovani Sound"
+horizontal_alignment = 1
+
+[node name="Header4" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_2wfvy")
+theme_override_colors/font_color = Color(0.768627, 0.588235, 0.176471, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+text = "Studio"
+horizontal_alignment = 1
+
+[node name="Name4" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_n4pyg")
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+text = "Lost Rabbit Digital"
 horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="MarginContainer"]

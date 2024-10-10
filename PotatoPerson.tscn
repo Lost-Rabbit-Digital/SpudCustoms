@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c07b46wsf1fc1"]
 
-[ext_resource type="Texture2D" uid="uid://cxrgr1gl127fw" path="res://potatoes/bodies/russet_burbank_body.png" id="1_6fgjm"]
+[ext_resource type="Texture2D" uid="uid://cxrgr1gl127fw" path="res://assets/potatoes/bodies/russet_burbank_body.png" id="1_6fgjm"]
 [ext_resource type="Script" path="res://PotatoPerson.gd" id="1_ftltf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v1hgv"]

@@ -6,11 +6,11 @@ var potato_info: Dictionary = {}
 
 # Preload all the textures
 var textures = {
-	"Russet Burbank": preload("res://potatoes/bodies/russet_burbank_body.png"),
-	"Yukon Gold": preload("res://potatoes/bodies/yukon_gold_body.png"),
-	"Sweet Potato": preload("res://potatoes/bodies/sweet_potato_body.png"),
-	"Purple Majesty": preload("res://potatoes/bodies/purple_majesty_body.png"),
-	"Red Bliss": preload("res://potatoes/bodies/red_bliss_body.png"),
+	"Russet Burbank": preload("res://assets/potatoes/bodies/russet_burbank_body.png"),
+	"Yukon Gold": preload("res://assets/potatoes/bodies/yukon_gold_body.png"),
+	"Sweet Potato": preload("res://assets/potatoes/bodies/sweet_potato_body.png"),
+	"Purple Majesty": preload("res://assets/potatoes/bodies/purple_majesty_body.png"),
+	"Red Bliss": preload("res://assets/potatoes/bodies/red_bliss_body.png"),
 }
 
 # Reference to the Sprite2D node

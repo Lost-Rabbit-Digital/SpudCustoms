@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bp2pkcox316n0"]
 
-[ext_resource type="Script" path="res://menus/pause_menu.gd" id="1_4a8qb"]
-[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://background.png" id="2_es6e3"]
+[ext_resource type="Script" path="res://menus/menu_scripts/pause_menu.gd" id="1_4a8qb"]
+[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/background.png" id="2_es6e3"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="3_xl4c0"]
 
 [sub_resource type="Theme" id="Theme_s43ip"]

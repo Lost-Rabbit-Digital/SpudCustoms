@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://crf7ipx8lmngy"]
 
-[ext_resource type="Script" path="res://menus/splashscreen_scene.gd" id="1_gg4hc"]
+[ext_resource type="Script" path="res://menus/menu_scripts/splashscreen_scene.gd" id="1_gg4hc"]
 [ext_resource type="Script" path="res://addons/splash_screen_wizard/splash_screen.gd" id="1_ojb3m"]
 [ext_resource type="PackedScene" uid="uid://cxqpgg8ax8bqv" path="res://demo_splash_screen_wizard/slides/slide_godot.tscn" id="3_8mkbu"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="4_gvbe2"]
@@ -22,7 +22,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ojb3m")
-delay_between_slides = 0.5
 skip_input_action = &"ui_accept"
 
 [node name="Background" type="ColorRect" parent="SplashScreen"]
@@ -39,7 +38,7 @@ layout_mode = 1
 duration = 2.0
 skippable = true
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="SplashScreen"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -51,11 +50,11 @@ offset_top = -28.0
 offset_right = 113.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_colors/font_color = Color(0.768627, 0.588235, 0.176471, 1)
+theme_override_colors/font_color = Color(0.732304, 0.559405, 0.163685, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_gvbe2")
 theme_override_font_sizes/font_size = 32
-text = "(\"Space\" to skip)"
+text = "(Press \"Space\" to skip)"
 horizontal_alignment = 1
 vertical_alignment = 1
 

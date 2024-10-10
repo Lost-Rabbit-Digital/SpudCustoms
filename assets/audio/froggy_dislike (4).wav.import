@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bv5j1e22e1p8y"
+path="res://.godot/imported/froggy_dislike (4).wav-b7b18908512b396728a59bb661a3f32b.sample"
+
+[deps]
+
+source_file="res://assets/audio/froggy_dislike (4).wav"
+dest_files=["res://.godot/imported/froggy_dislike (4).wav-b7b18908512b396728a59bb661a3f32b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

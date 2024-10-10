@@ -345,13 +345,13 @@ func _on_megaphone_flash_timer_timeout():
 
 func play_random_customs_officer_sound():
 	var customs_officer_sounds = [
-		preload("res://audio/froggy_phrase_1.wav"),
-		preload("res://audio/froggy_phrase_2.wav"),
-		preload("res://audio/froggy_phrase_3.wav"),
-		preload("res://audio/froggy_phrase_4.wav"),
-		preload("res://audio/froggy_phrase_5.wav"),
-		preload("res://audio/froggy_phrase_6.wav"),
-		preload("res://audio/froggy_phrase_7.wav")
+		preload("res://assets/audio/froggy_phrase_1.wav"),
+		preload("res://assets/audio/froggy_phrase_2.wav"),
+		preload("res://assets/audio/froggy_phrase_3.wav"),
+		preload("res://assets/audio/froggy_phrase_4.wav"),
+		preload("res://assets/audio/froggy_phrase_5.wav"),
+		preload("res://assets/audio/froggy_phrase_6.wav"),
+		preload("res://assets/audio/froggy_phrase_7.wav")
 	]
 	# Play potato customs officer sound
 	if !$"AudioStreamPlayer2D (SFX)".is_playing():
@@ -360,11 +360,11 @@ func play_random_customs_officer_sound():
 		
 func say_random_customs_officer_dialogue():
 	var customs_officer_dialogue = [
-		preload("res://textures/megaphone/megaphone_dialogue_box_2.png"),
-		preload("res://textures/megaphone/megaphone_dialogue_box_3.png"),
-		preload("res://textures/megaphone/megaphone_dialogue_box_4.png"),
-		preload("res://textures/megaphone/megaphone_dialogue_box_5.png"),
-		preload("res://textures/megaphone/megaphone_dialogue_box_6.png")
+		preload("res://assets/megaphone/megaphone_dialogue_box_2.png"),
+		preload("res://assets/megaphone/megaphone_dialogue_box_3.png"),
+		preload("res://assets/megaphone/megaphone_dialogue_box_4.png"),
+		preload("res://assets/megaphone/megaphone_dialogue_box_5.png"),
+		preload("res://assets/megaphone/megaphone_dialogue_box_6.png")
 	]
 	$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".visible = true
 	$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".texture = customs_officer_dialogue.pick_random()
@@ -383,7 +383,7 @@ func megaphone_clicked():
 	var potato_person = queue_manager.remove_front_potato()
 	if potato_person != null:
 		$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".visible = true
-		$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".texture = preload("res://textures/megaphone/megaphone_dialogue_box_1.png")
+		$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".texture = preload("res://assets/megaphone/megaphone_dialogue_box_1.png")
 		is_potato_in_office = true
 		megaphone.visible = true
 		passport.visible = false
@@ -391,7 +391,7 @@ func megaphone_clicked():
 		move_potato_to_office(potato_person)
 	else:
 		$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".visible = true
-		$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".texture = preload("res://textures/megaphone/megaphone_dialogue_box_7.png")
+		$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".texture = preload("res://assets/megaphone/megaphone_dialogue_box_7.png")
 		print("No potato to process. :(")
 		
 
@@ -492,7 +492,7 @@ func _process(delta):
 				close_passport_action()
 			elif dragged_sprite == bulletin:
 				close_bulletin_action()
-			$"AudioStreamPlayer2D (SFX)".stream = preload("res://audio/passport_sfx/close_passport_audio.mp3")
+			$"AudioStreamPlayer2D (SFX)".stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
 			$"AudioStreamPlayer2D (SFX)".play()
 			close_sound_played = true
 			open_sound_played = false  # Reset open sound flag
@@ -504,7 +504,7 @@ func _process(delta):
 				open_passport_action()
 			elif dragged_sprite == bulletin:
 				open_bulletin_action()
-			$"AudioStreamPlayer2D (SFX)".stream = preload("res://audio/passport_sfx/open_passport_audio.mp3")
+			$"AudioStreamPlayer2D (SFX)".stream = preload("res://assets/audio/passport_sfx/open_passport_audio.mp3")
 			$"AudioStreamPlayer2D (SFX)".play()
 			open_sound_played = true
 			close_sound_played = false  # Reset close sound flag
@@ -801,22 +801,22 @@ func _input(event):
 			stamp_shadow.visible = true
 		
 func open_passport_action():
-	$"Sprite2D (Passport)".texture = preload("res://documents/passport-old.png")
+	$"Sprite2D (Passport)".texture = preload("res://assets/documents/passport-old.png")
 	$"Sprite2D (Passport)/Sprite2D (Open Passport)".visible = true
 	$"Sprite2D (Passport)/Sprite2D (Close Passport)".visible = false
 	
 func close_passport_action():
-	$"Sprite2D (Passport)".texture = preload("res://documents/closed_passport_small/closed_passport_small.png")
+	$"Sprite2D (Passport)".texture = preload("res://assets/documents/closed_passport_small/closed_passport_small.png")
 	$"Sprite2D (Passport)/Sprite2D (Close Passport)".visible = true
 	$"Sprite2D (Passport)/Sprite2D (Open Passport)".visible = false
 	
 func open_bulletin_action():
-	$"Sprite2D (Bulletin)".texture = preload("res://documents/bulletin/bulletin_main_page.png")
+	$"Sprite2D (Bulletin)".texture = preload("res://assets/documents/bulletin/bulletin_main_page.png")
 	$"Sprite2D (Bulletin)/Sprite2D (Open Bulletin)".visible = true
 	$"Sprite2D (Bulletin)/Sprite2D (Close Bulletin)".visible = false
 	
 func close_bulletin_action():
-	$"Sprite2D (Bulletin)".texture = preload("res://documents/bulletin/closed_bulletin_small/closed_bulletin_small.png")
+	$"Sprite2D (Bulletin)".texture = preload("res://assets/documents/bulletin/closed_bulletin_small/closed_bulletin_small.png")
 	$"Sprite2D (Bulletin)/Sprite2D (Close Bulletin)".visible = true
 	$"Sprite2D (Bulletin)/Sprite2D (Open Bulletin)".visible = false
 	
@@ -830,11 +830,11 @@ func find_topmost_sprite_at(pos: Vector2):
 
 func play_random_stamp_sound():
 	var stamp_sounds = [
-		preload("res://audio/stamp_sound_1.mp3"),
-		preload("res://audio/stamp_sound_2.mp3"),
-		preload("res://audio/stamp_sound_3.mp3"),
-		preload("res://audio/stamp_sound_4.mp3"),
-		preload("res://audio/stamp_sound_5.mp3")
+		preload("res://assets/audio/stamp_sound_1.mp3"),
+		preload("res://assets/audio/stamp_sound_2.mp3"),
+		preload("res://assets/audio/stamp_sound_3.mp3"),
+		preload("res://assets/audio/stamp_sound_4.mp3"),
+		preload("res://assets/audio/stamp_sound_5.mp3")
 	]
 	if !$"AudioStreamPlayer2D (SFX)".is_playing():
 		$"AudioStreamPlayer2D (SFX)".stream = stamp_sounds.pick_random()

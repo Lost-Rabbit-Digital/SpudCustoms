@@ -5,10 +5,10 @@ extends Node
 const DEFAULT_VOLUME_PERCENT = 40.0
 
 var bgm_tracks = [
-	"res://music/ambient_nothingness_main_ovani_sound.mp3",
-	"res://music/ambient_vol3_defeat_main_ovani_sound.mp3",
-	"res://music/ambient_vol3_peace_main_ovani_sound.mp3",
-	"res://music/horror_fog_main_ovani_sound.mp3"
+	"res://assets/music/ambient_nothingness_main_ovani_sound.mp3",
+	"res://assets/music/ambient_vol3_defeat_main_ovani_sound.mp3",
+	"res://assets/music/ambient_vol3_peace_main_ovani_sound.mp3",
+	"res://assets/music/horror_fog_main_ovani_sound.mp3"
 ]
 
 func _ready():
