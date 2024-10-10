@@ -3,7 +3,7 @@ extends Node2D
 
 var close_sound_played = false
 var open_sound_played = false
-
+var holding_stamp = false
 var is_paused = false
 
 # track the current potato's info
@@ -758,15 +758,34 @@ func _input(event):
 			is_paused = !is_paused
 				
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT:
-			if event.pressed:
-				var mouse_pos = get_global_mouse_position()
-				if megaphone.get_rect().has_point(megaphone.to_local(mouse_pos)):
-					megaphone_clicked()
-				dragged_sprite = find_topmost_sprite_at(mouse_pos)
-				if dragged_sprite:
-					drag_offset = mouse_pos - dragged_sprite.global_position
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			var mouse_pos = get_global_mouse_position()
+			if megaphone.get_rect().has_point(megaphone.to_local(mouse_pos)):
+				megaphone_clicked()
+			
+			if holding_stamp:
+				var stamped_object = find_stampable_object_at(mouse_pos)
+				if stamped_object:
+					apply_stamp(dragged_sprite)
+					# Don't set holding_stamp to false here
 			else:
+				dragged_sprite = find_topmost_sprite_at(mouse_pos)
+				if dragged_sprite and "Stamp" in dragged_sprite.name:
+					holding_stamp = true
+					drag_offset = mouse_pos - dragged_sprite.global_position
+			
+			if dragged_sprite and dragged_sprite != null:
+				drag_offset = mouse_pos - dragged_sprite.global_position
+		
+		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			if holding_stamp:
+				holding_stamp = false
+				dragged_sprite = null
+				$"Sprite2D (Approval Stamp)/Sprite2D (StampShadow)".visible = false
+				$"Sprite2D (Rejection Stamp)/Sprite2D (StampShadow)".visible = false
+		
+		elif event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
+			if not holding_stamp:
 				if dragged_sprite == passport:
 					$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = false
 					var drop_pos = get_global_mouse_position()
@@ -786,11 +805,6 @@ func _input(event):
 					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
 						close_bulletin_action()
 				dragged_sprite = null
-				$"Sprite2D (Approval Stamp)/Sprite2D (StampShadow)".visible = false
-				$"Sprite2D (Rejection Stamp)/Sprite2D (StampShadow)".visible = false
-		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
-			if dragged_sprite and "Stamp" in dragged_sprite.name:
-				apply_stamp(dragged_sprite)
 				
 	elif event is InputEventMouseMotion and dragged_sprite:
 		dragged_sprite.global_position = get_global_mouse_position() - drag_offset
@@ -849,22 +863,16 @@ func apply_stamp(stamp):
 		# Create a temporary visual stamp that moves down
 		var temp_stamp = Sprite2D.new()
 		temp_stamp.texture = stamp.texture
-		temp_stamp.position = stamp.position
+		temp_stamp.position = mouse_pos
 		temp_stamp.z_index = PHYSICAL_STAMP_Z_INDEX
 		add_child(temp_stamp)
 		
 		# Create the final stamp that will be left on the passport
 		var final_stamp = Sprite2D.new()
 		var stamp_texture = "res://assets/stamps/approved_stamp.png" if "Approval" in stamp.name else "res://assets/stamps/denied_stamp.png"
-		# Store final approval state for processing
-		## var approval_state = "Approved" if "Approval" in stamp.name else "Denied"
-		
 		
 		final_stamp.texture = load(stamp_texture)
-		var final_stamp_x = stamp.position.x
-		var final_stamp_y = stamp.position.y + STAMP_MOVE_DISTANCE
-		var final_stamp_position = Vector2(final_stamp_x, final_stamp_y)
-		final_stamp.position = stamped_object.to_local(final_stamp_position)
+		final_stamp.position = stamped_object.to_local(mouse_pos)
 		final_stamp.z_index = APPLIED_STAMP_Z_INDEX
 		final_stamp.modulate.a = 0  # Start invisible
 		$"Sprite2D (Passport)/Sprite2D (Open Passport)".add_child(final_stamp)
