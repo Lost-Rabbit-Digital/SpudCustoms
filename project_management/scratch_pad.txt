@@ -1,4 +1,5 @@
-TO-DO:
+# Incomplete tasks
+
 [ ] - Baggage inspection
 [ ] - Don't allow the player to move the passport while the animation is playing for it to pass into the customs table
 [ ] - Save game and load game
@@ -23,7 +24,11 @@ TO-DO:
 [ ] - Add score to both the success_scene.tscn and the game_over.tscn, then end of shifts functions as a soft-end and a way to heal for high-scoring.
 
 
-IMPORTANT:
+
+## Graphical
+
+
+## Important features
 Move tutorial to the front of the document
 Make the flashing icon on the megaphone larger
 Explain how to flip the pages on the document in the tutorial
@@ -38,17 +43,17 @@ Make stamp interaction be, left click to pick up, left click to stamp, right cli
 
 How to give visual feedback of controls to the player? 
 
-MENUS:
+## Menus
 Settings menu (Sounds/Graphics)
 
-SFX:
+## Audio
 Deny entry to potato
 Grant entry to potato
 
-FEATURE: 
+## New features
 Entry ticket
 
-BUGS:
+## Bugs
 Stamps go over edge of passport
 Able to drag stamps off interaction table
 Able to drag passport off interaction table
@@ -59,7 +64,7 @@ Mouse has to be over passport to be able to stamp
 
 
 
-COMPLETED:
+# Completed tasks
 [o] - Alert, larger and centeredHighlight on the speaker
 [o] - Update first page of Pamphlet with instructions
 [o] - Hit 25 points without getting 3 strikes. 
