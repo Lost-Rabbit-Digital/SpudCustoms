@@ -50,7 +50,7 @@ const STAMP_MOVE_DISTANCE = 36  # How far the stamp moves down
 
 var bulletin_tutorial_timer: Timer
 const BULLETIN_TUTORIAL_FLASH_INTERVAL = 1.0 # flash every 1 seconds
-var is_in_bullet_tutorial = true
+var is_in_bulletin_tutorial = true
 
 func setup_bulletin_tutorial_timer():
 	#print("FLASH TIMER: Setup bulletin flash timer")
@@ -60,7 +60,7 @@ func setup_bulletin_tutorial_timer():
 
 func _on_bulletin_flash_timer_timeout():
 	#print("FLASH TIMER: Bulletin timeout")
-	if is_in_bullet_tutorial:
+	if is_in_bulletin_tutorial:
 		$"Sprite2D (Bulletin)/Node2D/BulletinAlertBox".visible = !$"Sprite2D (Bulletin)/Node2D/BulletinAlertBox".visible
 	else:
 		$"Sprite2D (Bulletin)/Node2D".visible = false
@@ -464,6 +464,19 @@ func _on_SpawnTimer_timeout():
 		print("No mah potatoes bruv")
 		#spawn_timer.stop()
 
+var how_to_play_note_1 = """INSTRUCTIONS
+To begin, press the speaker with the yellow flashing ring on top of the customs office building.
+Take the documents from the Potato and bring them to the main table.
+Then compare the information on the documents with the laws given.
+If there are any discrepencies, deny entry.
+After stamping the documents, hand them back to the Potato.
+
+CONTROLS
+[LEFT MOUSE] - Pick up and drops objects
+[RIGHT MOUSE] - Perform actions with objects 
+[ESCAPE] - Pause or return to the main menu
+"""
+
 func _process(_delta):
 	var mouse_pos = get_global_mouse_position()
 	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == false:
@@ -509,19 +522,10 @@ func _process(_delta):
 			close_sound_played = false  # Reset close sound flag
 			
 	# check if in bulletin tutorial
-	if $"Sprite2D (Bulletin)/Sprite2D (Open Bulletin)/Label (BulletinNote)".text != """INSTRUCTIONS
-To begin, press the speaker with the yellow flashing ring on top of the customs office building.
-Take the documents from the Potato and bring them to the main table.
-Then compare the information on the documents with the laws given.
-If there are any discrepencies, deny entry.
-After stamping the documents, hand them back to the Potato.
-
-CONTROLS
-[LEFT MOUSE] - Pick up and drops objects
-[RIGHT MOUSE] - Perform actions with objects 
-[ESCAPE] - Pause or return to the main menu
-""":
-		is_in_bullet_tutorial = false
+	if $"Sprite2D (Bulletin)/Sprite2D (Open Bulletin)/Label (BulletinNote)".text == how_to_play_note_1:
+		is_in_bulletin_tutorial = true
+	else:
+		is_in_bulletin_tutorial = false
 		
 func generate_potato_info():
 	var expiration_date: String
