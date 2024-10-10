@@ -53,14 +53,14 @@ const BULLETIN_TUTORIAL_FLASH_INTERVAL = 1.0 # flash every 1 seconds
 var is_in_bullet_tutorial = true
 
 func setup_bulletin_tutorial_timer():
-	print("FLASH TIMER: Setup bulletin flash timer")
+	#print("FLASH TIMER: Setup bulletin flash timer")
 	bulletin_tutorial_timer = $BulletinFlashTimer
 	bulletin_tutorial_timer.wait_time = BULLETIN_TUTORIAL_FLASH_INTERVAL
 	bulletin_tutorial_timer.start()
 	
 
 func _on_bulletin_flash_timer_timeout():
-	print("FLASH TIMER: Bulletin timeout")
+	#print("FLASH TIMER: Bulletin timeout")
 	if is_in_bullet_tutorial:
 		$"Sprite2D (Bulletin)/Node2D/BulletinAlertBox".visible = !$"Sprite2D (Bulletin)/Node2D/BulletinAlertBox".visible
 	else:
@@ -331,7 +331,7 @@ func _ready():
 	draggable_sprites.append(bulletin)
 	
 func setup_megaphone_flash_timer():
-	print("FLASH TIMER: Setup megaphone flash timer")
+	#print("FLASH TIMER: Setup megaphone flash timer")
 	megaphone_flash_timer = $MegaphoneFlashTimer
 	megaphone_flash_timer.wait_time = MEGAPHONE_FLASH_INTERVAL
 	megaphone_flash_timer.start()

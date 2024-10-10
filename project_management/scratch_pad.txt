@@ -1,22 +1,4 @@
-Done: Hit 25 points without getting 3 strikes. 
-Done: Add global score and shifts to extend play session
 
-Done: Transition to win game screen, outline limit "Only allow 25 permitted potatoes to enter. You will be returned to your family if successful. Otherwise you will be roasted."
-
-Done: Measure and trigger the win condition on score, similar to quit. 
-
-Done: Change score display to be out of 25. Change scene to success_scene once completed. In success_scene, move back to mainGame and pass the score back.
-
-Done: Tuberstan and Pratie Point rules, one is not evaluating properly
-
-Done: Troubleshoot Colcannon rule
-
-Done: years_until_expiry, returning impossibly high numbers
-Done: days_until_expiry, returning IMPOSSIBLY high numbers
-
-Done: Potato moving in after decision processing, before megaphone pressed
-
-Done: Reset score if you fail
 
 - Baggage inspection
 - Don't allow the player to move the passport while the animation is playing for it to pass into the customs table
@@ -95,30 +77,38 @@ Mouse has to be over passport to be able to stamp
 
 
 COMPLETED:
-<<<<<<< HEAD
-=======
-Explain how to flip the pages on the document in the tutorial
-Move tutorial to the front of the document
-Make the flashing icon on the megaphone larger
->>>>>>> 24152083d4211b5f414f526aa38b095ce643d8a9
-Add dialogue to the megaphone
-Make toggle audio button on main menu work
-Add letter with brief explainer on your job as a Spudarado Border Officer
-FullscSwitch megaphone alert to be off when the box has someone in it
-Make music start on main menu instead of gamereen button
-Audio settings
-Bulletin card system
-Slow down potato leaving the customs office
-Clock on the suspect table
-Close passport
-Open passport
-Music system (Main menu scene, smooth transition, game scene)
-Fade out passport when giving potato documents back
-Check potato sex check logic, only males is giving points on allowing female potato
-Date system
-when you open document
-when you close document
-speaker sound when click megaphone for next person to come up
+Done: Hit 25 points without getting 3 strikes. 
+Done: Add global score and shifts to extend play session
+Done: Transition to win game screen, outline limit "Only allow 25 permitted potatoes to enter. You will be returned to your family if successful. Otherwise you will be roasted."
+Done: Measure and trigger the win condition on score, similar to quit. 
+Done: Change score display to be out of 25. Change scene to success_scene once completed. In success_scene, move back to mainGame and pass the score back.
+Done: Tuberstan and Pratie Point rules, one is not evaluating properly
+Done: Troubleshoot Colcannon rule
+Done: years_until_expiry, returning impossibly high numbers
+Done: days_until_expiry, returning IMPOSSIBLY high numbers
+Done: Potato moving in after decision processing, before megaphone pressed
+Done: Reset score if you fail
+Done: Explain how to flip the pages on the document in the tutorial
+Done: Move tutorial to the front of the document
+Done: Make the flashing icon on the megaphone larger
+Done: Add dialogue to the megaphone
+Done: Make toggle audio button on main menu work
+Done: Add letter with brief explainer on your job as a Spudarado Border Officer
+Done: FullscSwitch megaphone alert to be off when the box has someone in it
+Done: Make music start on main menu instead of gamereen button
+Done: Audio settings
+Done: Bulletin card system
+Done: Slow down potato leaving the customs office
+Done: Clock on the suspect table
+Done: Close passport
+Done: Open passport
+Done: Music system (Main menu scene, smooth transition, game scene)
+Done: Fade out passport when giving potato documents back
+Done: Check potato sex check logic, only males is giving points on allowing female potato
+Done: Date system
+Done: when you open document
+Done: when you close document
+Done: speaker sound when click megaphone for next person to come up
 Done: generate_rules() has 7 entries in current_rules, this should be expanded. 
 Done: current_rules should have a maximum of 1-2 rules. 
 Done: is_potato_valid() must support multiple active rules in current_rules at once. 
