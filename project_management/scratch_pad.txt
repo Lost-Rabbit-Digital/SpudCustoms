@@ -1,6 +1,7 @@
 # Incomplete tasks
 
-
+## Miscellaneous
+[ ] - 
 
 ## Quality of life
 [ ] - Save in a global if the player has finished the tutorial so every shift doesn't start the same interaction
