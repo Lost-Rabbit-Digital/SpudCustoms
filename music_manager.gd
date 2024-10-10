@@ -34,5 +34,5 @@ func play_random_bgm():
 	else: 
 		print("Failed to load audio", random_track)
 	
-func _on_AudioStreamPlayer2D_BGM_finished():
+func _on_audio_stream_player_2d_bgm_finished():
 	play_random_bgm()
