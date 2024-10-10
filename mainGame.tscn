@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=38 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://suspect_panel.png" id="2_f25cg"]
@@ -30,14 +30,8 @@
 [ext_resource type="Script" path="res://sprite_2d_(bulletin).gd" id="21_qw3ji"]
 [ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://textures/bulletin_alert_box.png" id="22_3pqlk"]
 [ext_resource type="Texture2D" uid="uid://bfhpafskct413" path="res://documents/bulletin/page_turn_left.png" id="22_ir8f4"]
-<<<<<<< Updated upstream
-[ext_resource type="PackedScene" path="res://music_manager.tscn" id="27_2tnfb"]
-[ext_resource type="PackedScene" path="res://menus/pause_menu.tscn" id="28_vb6g0"]
-[ext_resource type="PackedScene" uid="uid://b8kqv7ksgscsc" path="res://miniNuke.tscn" id="33_gnkqk"]
-=======
 [ext_resource type="PackedScene" uid="uid://c1amspwdfuccu" path="res://music_manager.tscn" id="27_2tnfb"]
 [ext_resource type="PackedScene" uid="uid://bp2pkcox316n0" path="res://menus/pause_menu.tscn" id="28_vb6g0"]
->>>>>>> Stashed changes
 
 [sub_resource type="Curve2D" id="Curve2D_f3jw2"]
 _data = {
@@ -435,15 +429,6 @@ position = Vector2(0, 80)
 texture = ExtResource("16_qj41b")
 
 [node name="MusicManager" parent="." instance=ExtResource("27_2tnfb")]
-
-[node name="GPUParticles2D (miniNuke)3" parent="." instance=ExtResource("33_gnkqk")]
-position = Vector2(224, 92)
-
-[node name="GPUParticles2D (miniNuke)2" parent="." instance=ExtResource("33_gnkqk")]
-position = Vector2(745, 92)
-
-[node name="GPUParticles2D (miniNuke)" parent="." instance=ExtResource("33_gnkqk")]
-position = Vector2(492, 112)
 
 [connection signal="megaphone_clicked" from="Sprite2D (Megaphone)" to="." method="_on_sprite_2d_megaphone_megaphone_clicked"]
 [connection signal="timeout" from="MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
