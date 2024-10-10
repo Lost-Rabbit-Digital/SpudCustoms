@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bo22hma5o31ig"]
 
-[ext_resource type="PackedScene" uid="uid://ckqiyl367tw67" path="res://demo_splash_screen_wizard/slides/slide_disclaimer.tscn" id="2_flgjm"]
-[ext_resource type="PackedScene" uid="uid://cxqpgg8ax8bqv" path="res://demo_splash_screen_wizard/slides/slide_godot.tscn" id="3_phgod"]
+[ext_resource type="PackedScene" uid="uid://ckqiyl367tw67" path="res://addons/demo_splash_screen_wizard/slides/slide_disclaimer.tscn" id="2_flgjm"]
+[ext_resource type="PackedScene" uid="uid://cxqpgg8ax8bqv" path="res://addons/demo_splash_screen_wizard/slides/slide_godot.tscn" id="3_phgod"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8xhda"]
 font_size = 56

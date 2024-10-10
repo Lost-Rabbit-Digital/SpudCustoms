@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://ckqiyl367tw67"]
 
 [ext_resource type="Script" path="res://addons/splash_screen_wizard/splash_screen_slide.gd" id="1_5xj3q"]
-[ext_resource type="Resource" uid="uid://dphiwpkixnobm" path="res://demo_splash_screen_wizard/transitions/fade_in.tres" id="2_074l1"]
-[ext_resource type="Resource" uid="uid://bt2wxjwarvrol" path="res://demo_splash_screen_wizard/transitions/fade_out.tres" id="3_m5f48"]
+[ext_resource type="Resource" uid="uid://dphiwpkixnobm" path="res://addons/demo_splash_screen_wizard/transitions/fade_in.tres" id="2_074l1"]
+[ext_resource type="Resource" uid="uid://bt2wxjwarvrol" path="res://addons/demo_splash_screen_wizard/transitions/fade_out.tres" id="3_m5f48"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="4_twfb4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_45uur"]

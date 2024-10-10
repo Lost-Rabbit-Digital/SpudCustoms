@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://cxqpgg8ax8bqv"]
 
-[ext_resource type="Script" path="res://demo_splash_screen_wizard/slides/slide_godot.gd" id="1_uihei"]
-[ext_resource type="Resource" uid="uid://dphiwpkixnobm" path="res://demo_splash_screen_wizard/transitions/fade_in.tres" id="2_2cxhs"]
-[ext_resource type="Resource" uid="uid://bt2wxjwarvrol" path="res://demo_splash_screen_wizard/transitions/fade_out.tres" id="3_g0x0d"]
+[ext_resource type="Script" path="res://addons/demo_splash_screen_wizard/slides/slide_godot.gd" id="1_uihei"]
+[ext_resource type="Resource" uid="uid://dphiwpkixnobm" path="res://addons/demo_splash_screen_wizard/transitions/fade_in.tres" id="2_2cxhs"]
+[ext_resource type="Resource" uid="uid://bt2wxjwarvrol" path="res://addons/demo_splash_screen_wizard/transitions/fade_out.tres" id="3_g0x0d"]
 [ext_resource type="Texture2D" uid="uid://dl1dk4i6b3ck7" path="res://project_management/dist/marketing/splashscreen.png" id="4_re08h"]
 
 [sub_resource type="Animation" id="Animation_yhrdi"]
