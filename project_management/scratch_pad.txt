@@ -1,6 +1,5 @@
 # Incomplete tasks
 
-[ ] - Remove Mr. Potato from first names
 
 
 ## Quality of life
@@ -66,6 +65,7 @@
 
 
 # Completed tasks
+[o] - Remove Mr. Potato from first names
 [o] - Alert, larger and centeredHighlight on the speaker
 [o] - Update first page of Pamphlet with instructions
 [o] - Hit 25 points without getting 3 strikes. 
