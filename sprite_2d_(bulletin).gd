@@ -43,6 +43,7 @@ func _on_texture_button_turn_left_pressed():
 			print(current_page)
 			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = how_to_play_note_1
 			$"Sprite2D (Open Bulletin)/TextureButton (TurnLeft)".visible = false
+			$"Sprite2D (Open Bulletin)/TextureButton (TurnRight)".visible = true
 		elif current_page == 2:
 			print(current_page)
 			$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = daily_laws
