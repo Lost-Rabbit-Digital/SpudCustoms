@@ -694,9 +694,9 @@ func process_decision(allowed):
 	# Check and update the information in the passport
 	#update_potato_info_display()
 
-func peek_front_potato():
-	# Use front_potato_info as needed
-	var front_potato_info = queue_manager.get_front_potato_info()
+## func peek_front_potato():
+## 	# Use front_potato_info as needed
+## 	var front_potato_info = queue_manager.get_front_potato_info()
 
 func update_potato_texture():
 	print("Updating potato texture")
@@ -857,7 +857,7 @@ func apply_stamp(stamp):
 		var final_stamp = Sprite2D.new()
 		var stamp_texture = "res://assets/stamps/approved_stamp.png" if "Approval" in stamp.name else "res://assets/stamps/denied_stamp.png"
 		# Store final approval state for processing
-		var approval_state = "Approved" if "Approval" in stamp.name else "Denied"
+		## var approval_state = "Approved" if "Approval" in stamp.name else "Denied"
 		
 		
 		final_stamp.texture = load(stamp_texture)

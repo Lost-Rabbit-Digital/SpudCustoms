@@ -69,7 +69,7 @@ func _process(delta):
 	for potato in potatoes:
 		if potato.current_point < potato.target_point:
 			var next_point = potato.current_point + 1
-			var current_pos = curve.get_point_position(potato.current_point)
+			## var current_pos = curve.get_point_position(potato.current_point)
 			var next_pos = curve.get_point_position(next_point)
 			var target_pos = potato.position.move_toward(next_pos, delta * 50)
 			
