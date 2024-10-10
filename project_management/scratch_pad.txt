@@ -24,15 +24,11 @@
 [ ] - Move tutorial to the front of the document
 [ ] - Make the flashing icon on the megaphone larger
 [ ] - Explain how to flip the pages on the document in the tutorial
-
 [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
 [ ] - Add flash indicator pointing at corner of first page 
 [ ] - Picking up stamp hides cursor
 [ ] - Move 4th page of instructions to page 1
-[ ] - Fix stamp animation
-
 [ ] - Make stamp interaction be, left click to pick up, left click to stamp, right click to drop. 
-
 [ ] - How to give visual feedback of controls to the player? 
 
 ## Menus
@@ -51,16 +47,14 @@
 [ ] - Conversation with potato while checking documents
 
 ## Bugs
+[ ] - Fix stamp animation
+[ ] - If you spam stamps then multiple show up
 [ ] - Check why date rules keep failing (make sure expiration date is referencing correct variable, and that it's evaluating properly)
-[ ] - Fix stamp animation artifact
 [ ] - Don't allow the player to move the passport while the animation is playing for it to pass into the customs table
-[ ] - Fix stamp visual bugs
 [ ] - Stamps go over edge of passport
 [ ] - Able to drag stamps off interaction table
 [ ] - Able to drag passport off interaction table
 [ ] - Snap closed passport to position of mouse cursor to avoid bad offset
-[ ] - If you spam stamps then multiple show up
-[ ] - Stamp sticker is above stamp shadow
 [ ] - Mouse has to be over passport to be able to stamp
 
 
