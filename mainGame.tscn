@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=37 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://suspect_panel.png" id="2_f25cg"]
@@ -31,16 +31,6 @@
 [ext_resource type="Texture2D" uid="uid://bfhpafskct413" path="res://assets/documents/bulletin/page_turn_left.png" id="22_ir8f4"]
 [ext_resource type="PackedScene" uid="uid://c1amspwdfuccu" path="res://music_manager.tscn" id="27_2tnfb"]
 [ext_resource type="PackedScene" uid="uid://bp2pkcox316n0" path="res://menus/pause_menu.tscn" id="28_vb6g0"]
-
-[sub_resource type="GDScript" id="GDScript_jr47y"]
-script/source = "extends Sprite2D
-
-signal megaphone_clicked
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
-"
 
 [sub_resource type="Curve2D" id="Curve2D_f3jw2"]
 _data = {
@@ -122,7 +112,6 @@ z_index = 3
 position = Vector2(920, 169)
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("7_7m4ia")
-script = SubResource("GDScript_jr47y")
 
 [node name="MegaphoneDialogueBoxBlank" type="Sprite2D" parent="Sprite2D (Megaphone)"]
 visible = false
@@ -439,7 +428,6 @@ texture = ExtResource("16_qj41b")
 
 [node name="MusicManager" parent="." instance=ExtResource("27_2tnfb")]
 
-[connection signal="megaphone_clicked" from="Sprite2D (Megaphone)" to="." method="_on_sprite_2d_megaphone_megaphone_clicked"]
 [connection signal="timeout" from="MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="BulletinFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
