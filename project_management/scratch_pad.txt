@@ -7,14 +7,14 @@
 [ ] - Save in a global if the player has finished the tutorial so every shift doesn't start the same interaction
 [ ] - Overlay of potato customs officer talking
 [ ] - Rephrase all laws to be more clearly negative
-[ ] - Make intuitive stamp mechanic
+[x] - Make intuitive stamp mechanic
 [ ] - How do we tell the new player what to do to get through first potato processing?
 [ ] - Use flashing circles and text to walk the player through processing their first document. Click by click. 
-[ ] - Transition to game win scene, "Your shift is over, you will be re-planted, you have served the potato motherland."
-[ ] - What do we tell the player when they win?
-[ ] - Transition to game lose scene, "You have unjustly denied permitted potatoes entry, you will be roasted. You have disgraced the potato motherland."
-[ ] - What do we tell the player when they lose? 
-[ ] - Add score to both the success_scene.tscn and the game_over.tscn, then end of shifts functions as a soft-end and a way to heal for high-scoring.
+[x] - Transition to game win scene, "Your shift is over, you will be re-planted, you have served the potato motherland."
+[x] - What do we tell the player when they win?
+[x] - Transition to game lose scene, "You have unjustly denied permitted potatoes entry, you will be roasted. You have disgraced the potato motherland."
+[x] - What do we tell the player when they lose? 
+[x] - Add score to both the success_scene.tscn and the game_over.tscn, then end of shifts functions as a soft-end and a way to heal for high-scoring.
 
 ## Graphical
 [ ] - Add officers patrolling the area
