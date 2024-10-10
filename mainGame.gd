@@ -731,20 +731,20 @@ func get_texture_paths(potato_type: String) -> Dictionary:
 	
 	match potato_type:
 		"Purple Majesty":
-			paths.head = "res://potatoes/heads/purple_majesty_head.png"
-			paths.passport = "res://potatoes/document_photos/purple_majesty.png"
+			paths.head = "res://assets/potatoes/heads/purple_majesty_head.png"
+			paths.passport = "res://assets/potatoes/document_photos/purple_majesty.png"
 		"Red Bliss":
-			paths.head = "res://potatoes/heads/red_bliss_head.png"
-			paths.passport = "res://potatoes/document_photos/red_bliss.png"
+			paths.head = "res://assets/potatoes/heads/red_bliss_head.png"
+			paths.passport = "res://assets/potatoes/document_photos/red_bliss.png"
 		"Russet Burbank":
-			paths.head = "res://potatoes/heads/russet_burbank_head.png"
-			paths.passport = "res://potatoes/document_photos/russet_burbank.png"
+			paths.head = "res://assets/potatoes/heads/russet_burbank_head.png"
+			paths.passport = "res://assets/potatoes/document_photos/russet_burbank.png"
 		"Sweet Potato":
-			paths.head = "res://potatoes/heads/sweet_potato_head.png"
-			paths.passport = "res://potatoes/document_photos/sweet_potato.png"
+			paths.head = "res://assets/potatoes/heads/sweet_potato_head.png"
+			paths.passport = "res://assets/potatoes/document_photos/sweet_potato.png"
 		"Yukon Gold":
-			paths.head = "res://potatoes/heads/yukon_gold_head.png"
-			paths.passport = "res://potatoes/document_photos/yukon_gold.png"
+			paths.head = "res://assets/potatoes/heads/yukon_gold_head.png"
+			paths.passport = "res://assets/potatoes/document_photos/yukon_gold.png"
 		_:
 			print("Unknown potato type: ", potato_type)
 	
@@ -857,7 +857,7 @@ func apply_stamp(stamp):
 		
 		# Create the final stamp that will be left on the passport
 		var final_stamp = Sprite2D.new()
-		var stamp_texture = "res://stamps/approved_stamp.png" if "Approval" in stamp.name else "res://stamps/denied_stamp.png"
+		var stamp_texture = "res://assets/stamps/approved_stamp.png" if "Approval" in stamp.name else "res://assets/stamps/denied_stamp.png"
 		# Store final approval state for processing
 		var approval_state = "Approved" if "Approval" in stamp.name else "Denied"
 		
@@ -944,15 +944,15 @@ func move_potato_along_path(approval_status):
 	var texture_path = ""
 	match current_potato_info.type:
 		"Purple Majesty":
-			texture_path = "res://potatoes/bodies/purple_majesty_body.png"
+			texture_path = "res://assets/potatoes/bodies/purple_majesty_body.png"
 		"Red Bliss":
-			texture_path = "res://potatoes/bodies/red_bliss_body.png"
+			texture_path = "res://assets/potatoes/bodies/red_bliss_body.png"
 		"Russet Burbank":
-			texture_path = "res://potatoes/bodies/russet_burbank_body.png"
+			texture_path = "res://assets/potatoes/bodies/russet_burbank_body.png"
 		"Sweet Potato":
-			texture_path = "res://potatoes/bodies/sweet_potato_body.png"
+			texture_path = "res://assets/potatoes/bodies/sweet_potato_body.png"
 		"Yukon Gold":
-			texture_path = "res://potatoes/bodies/yukon_gold_body.png"
+			texture_path = "res://assets/potatoes/bodies/yukon_gold_body.png"
 	
 	potato_person.texture = load(texture_path)
 	potato_person.scale = Vector2(0.20, 0.20)
