@@ -1,0 +1,25 @@
+# 30 seconds for hard, 45 for normal, 60 for easy
+# we can add pressure to the players decision
+# based on difficulty level then have an overlay
+# pop of supervisor yelling if they take too long
+
+
+
+var processing_time = 40  # seconds
+var current_timer = 0
+
+func _process(delta):
+    if is_potato_in_office:
+        current_timer += delta
+        if current_timer >= processing_time:
+            # Time's up, force a decision or penalize the player
+            force_decision()
+
+func force_decision():
+    # Implement logic for when time runs out
+    pass
+
+func reset_timer():
+    current_timer = 0
+
+# Call reset_timer() when a new potato enters the office
