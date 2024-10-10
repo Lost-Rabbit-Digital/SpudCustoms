@@ -30,7 +30,7 @@ func _on_disclaimer_button_pressed():
 func _on_quit_button_pressed():
 	get_tree().change_scene_to_file(\"res://menus/confirmation_scene.tscn\")
 
-func _on_mute_button_toggled(toggled_on):
+func _on_mute_button_toggled(_toggled_on):
 	if is_game_muted == false:
 		is_game_muted = true
 		AudioServer.set_bus_mute(master_bus, is_game_muted)
@@ -45,7 +45,7 @@ func _on_mute_button_toggled(toggled_on):
 		$MarginContainer/HBoxContainer/MuteButton.texture_hover = preload(\"res://assets/ui_buttons/not_muted_button_highlighted.png\")
 	
 
-func _on_fullscreen_button_toggled(toggled_on):
+func _on_fullscreen_button_toggled(_toggled_on):
 	if is_fullscreen == false:
 		is_fullscreen = true
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)

@@ -57,7 +57,6 @@ func setup_bulletin_tutorial_timer():
 	bulletin_tutorial_timer = $BulletinFlashTimer
 	bulletin_tutorial_timer.wait_time = BULLETIN_TUTORIAL_FLASH_INTERVAL
 	bulletin_tutorial_timer.start()
-	
 
 func _on_bulletin_flash_timer_timeout():
 	#print("FLASH TIMER: Bulletin timeout")
@@ -465,7 +464,7 @@ func _on_SpawnTimer_timeout():
 		print("No mah potatoes bruv")
 		#spawn_timer.stop()
 
-func _process(delta):
+func _process(_delta):
 	var mouse_pos = get_global_mouse_position()
 	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == false:
 		$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = true
@@ -642,8 +641,7 @@ func _on_button_no_entry_button_pressed() -> void:
 	process_decision(false)
 
 func go_to_game_over():
-	var game_over_scene = preload("res://menus/game_over.tscn").instantiate()
-		# Store the score in a global script or autoload
+	# Store the score in a global script or autoload
 	Global.final_score = score
 	print("transition to game over scene")
 	$"Sprite2D (Approval Stamp)".visible = false
@@ -697,8 +695,8 @@ func process_decision(allowed):
 	#update_potato_info_display()
 
 func peek_front_potato():
-	var front_potato_info = queue_manager.get_front_potato_info()
 	# Use front_potato_info as needed
+	var front_potato_info = queue_manager.get_front_potato_info()
 
 func update_potato_texture():
 	print("Updating potato texture")

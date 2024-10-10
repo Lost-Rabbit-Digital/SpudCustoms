@@ -6,7 +6,7 @@ func _ready():
 	update_score_display()
 
 	
-func _process(float) -> void:
+func _process(_float) -> void:
 	update_score_display()
 
 func update_score_display():
