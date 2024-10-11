@@ -3,8 +3,33 @@
 # based on difficulty level then have an overlay
 # pop of supervisor yelling if they take too long
 
+The ideal time for processing a potato through customs should balance engagement, challenge, and a sense of urgency without causing frustration. Here are some considerations:
 
+1. Game Feel: Aim for a pace that feels brisk and keeps the player engaged, but not so fast that it becomes stressful or impossible to keep up.
 
+2. Difficulty Levels: The time could vary based on difficulty:
+   - Easy: 45-60 seconds
+   - Normal: 30-45 seconds
+   - Hard: 20-30 seconds
+
+3. Learning Curve: New players might need more time initially, so consider a gradual decrease in allowed time as the game progresses.
+
+4. Complexity: As rules and potato types become more complex, you might need to allow slightly more time.
+
+5. Player Skill Growth: Expert players will process potatoes faster, so the Endless mode could have a gradually decreasing time limit to challenge them.
+
+6. Mini-game Balance: If you're implementing the frying mini-game, ensure the main game's pace allows for occasional diversion without feeling punitive.
+
+As a starting point, I'd suggest aiming for an average of 30-40 seconds per potato on Normal difficulty. This gives players time to:
+
+1. Read the passport (5-10 seconds)
+2. Check against rules (10-15 seconds)
+3. Make a decision and stamp (5-10 seconds)
+4. Process the result and prepare for the next potato (5-10 seconds)
+
+You can implement a timer system to track this:
+
+```gdscript
 var processing_time = 40  # seconds
 var current_timer = 0
 
@@ -23,3 +48,6 @@ func reset_timer():
     current_timer = 0
 
 # Call reset_timer() when a new potato enters the office
+```
+
+Remember to playtest extensively and adjust based on player feedback. The goal is to find a sweet spot where players feel challenged but not overwhelmed, and where the game maintains a satisfying rhythm.

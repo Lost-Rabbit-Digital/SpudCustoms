@@ -1,0 +1,129 @@
+To present a compelling story mode lasting about 2 hours with the given parameters, you can structure it as follows:
+
+1. Story Structure:
+   - Divide the story into chapters or days
+   - Each chapter/day represents a shift at the customs office
+   - Aim for 8-10 chapters/days to fill the 2-hour playtime
+
+2. Story Presentation:
+   - Short cutscenes or dialogue sequences between chapters
+   - In-game events and conversations during potato processing
+   - Notes or memos that appear on the bulletin board
+   - Radio broadcasts or newspaper headlines in the background
+
+3. Pacing:
+   - Each chapter/day could last about 15 minutes
+   - Process about 20-25 potatoes per chapter (at 40 seconds each)
+   - Allow 2-3 minutes for story elements between chapters
+
+Here's a suggested implementation:
+
+```gdscript
+var current_chapter = 0
+var potatoes_processed_in_chapter = 0
+var max_potatoes_per_chapter = 25
+var story_events = [
+    # Array of story events, one per chapter
+]
+
+func start_story_mode():
+    current_chapter = 0
+    start_new_chapter()
+
+func start_new_chapter():
+    current_chapter += 1
+    potatoes_processed_in_chapter = 0
+    present_chapter_intro()
+    update_rules_and_difficulty()
+
+func present_chapter_intro():
+    # Show a cutscene or dialogue sequence
+    var story_scene = load("res://scenes/story/chapter_" + str(current_chapter) + "_intro.tscn").instance()
+    add_child(story_scene)
+    # Wait for scene to finish, then start gameplay
+
+func update_rules_and_difficulty():
+    # Adjust rules and difficulty based on current chapter
+    if current_chapter > 3:
+        set_difficulty("Normal")
+    if current_chapter > 7:
+        set_difficulty("Hard")
+    generate_rules()
+
+func process_decision(allowed):
+    # Existing decision processing logic
+    potatoes_processed_in_chapter += 1
+    
+    if potatoes_processed_in_chapter >= max_potatoes_per_chapter:
+        end_chapter()
+
+func end_chapter():
+    present_chapter_outro()
+    if current_chapter < story_events.size():
+        start_new_chapter()
+    else:
+        end_story_mode()
+
+func present_chapter_outro():
+    # Show end-of-day summary, story progression, etc.
+    var outro_scene = load("res://scenes/story/chapter_" + str(current_chapter) + "_outro.tscn").instance()
+    add_child(outro_scene)
+
+func end_story_mode():
+    # Show game ending, credits, etc.
+    pass
+
+func _process(delta):
+    if is_story_mode and is_potato_in_office:
+        check_for_story_events()
+
+func check_for_story_events():
+    # Check if any story events should trigger based on current state
+    for event in story_events[current_chapter]:
+        if event.should_trigger():
+            trigger_story_event(event)
+
+func trigger_story_event(event):
+    match event.type:
+        "dialogue":
+            show_dialogue(event.content)
+        "bulletin_note":
+            add_bulletin_note(event.content)
+        "radio_broadcast":
+            play_radio_broadcast(event.content)
+        "newspaper_headline":
+            update_newspaper_headline(event.content)
+
+func show_dialogue(content):
+    # Implement dialogue system
+    pass
+
+func add_bulletin_note(content):
+    # Add note to bulletin board
+    pass
+
+func play_radio_broadcast(content):
+    # Play audio and/or show subtitles
+    pass
+
+func update_newspaper_headline(content):
+    # Update in-game newspaper prop
+    pass
+```
+
+This structure allows you to:
+
+1. Control the pacing of the story by dividing it into chapters.
+2. Gradually increase difficulty as the story progresses.
+3. Inject story elements both between and during gameplay.
+4. Maintain the core gameplay loop while adding narrative elements.
+
+To flesh out the story:
+
+1. Create a narrative that spans the 8-10 chapters, with each chapter having a mini-arc.
+2. Design story events that can occur during potato processing (e.g., a suspicious potato that ties into the main plot).
+3. Write dialogue and cutscenes for the intros and outros of each chapter.
+4. Develop background elements like radio broadcasts and newspaper headlines that subtly advance the plot.
+5. Consider adding character development for the customs officer (player character) and recurring potato characters.
+
+Remember to allow players to skip story elements if they wish, and consider adding a "Story Recap" feature in the pause menu for players who want to refresh their memory on the plot.
