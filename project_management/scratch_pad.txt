@@ -3,7 +3,7 @@
 ## Urgent
 [ ] - Fix the pixel resolution of the text
 [ ] - "Change verbage to 2 and under"
-[ ] - Make fullscreen appear in the main game instead of just the main menu
+[ ] - Make full-screen appear in the main game instead of just the main menu
 [ ] - Make an options menu
 [ ] - Stamp doesn't match the rest of the pixel feel, different resolution
 [ ] - Make sure the user knows where the laws are, make it into a specific note which is immovable
@@ -17,7 +17,6 @@
 
 ## Graphical
 [ ] - Add officers patrolling the area
-
 
 ## Important features
 [ ] - Move tutorial to the front of the document
