@@ -1,21 +1,25 @@
 # Main.gd (Main scene script)
 extends Node2D
 
+# Track game states
 var close_sound_played = false
 var open_sound_played = false
 var holding_stamp = false
+var is_potato_in_office = false
 var is_paused = false
 
 # track the current potato's info
 var current_potato_info
-
 var current_potato
+
+# track win and lose data
 var score = 0
 var strikes = 0
 var max_score = 10
+
 var current_rules = []
+
 var queue_manager: Node2D
-var is_potato_in_office = false
 var megaphone_flash_timer: Timer
 const MEGAPHONE_FLASH_INTERVAL = 1.0 # flash every 1 seconds
 
@@ -101,7 +105,7 @@ func generate_rules():
 		"Mash Meadows potatoes are subject to quarantine, reject!",
 		"Tuberville potatoes subject to absolute rejection.",
 		"Chip Hill exports are currently restricted.",
-		"Murphyland potatoes need work permit verification.",
+		"Murphyland potatoes need work permit verification. Reject!",
 		"Colcannon citizens must be rejected due to seasonings.",
 		"Pratie Point potatoes require rejection on agricultural grounds.",
 
@@ -243,7 +247,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			"Chip Hill exports are currently restricted.":
 				if potato_info.country_of_issue == "Chip Hill":
 					return false
-			"Murphyland potatoes need work permit verification.":
+			"Murphyland potatoes need work permit verification. Reject!":
 				if potato_info.country_of_issue == "Murphyland":
 					return false
 			"Colcannon citizens must be rejected due to seasonings.":
