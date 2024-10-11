@@ -14,15 +14,6 @@
 ## Quality of life
 [ ] - Save in a global if the player has finished the tutorial so every shift doesn't start the same interaction
 [ ] - Overlay of potato customs officer talking
-[o] - Rephrase all laws to be more clearly negative
-[o] - Make intuitive stamp mechanic
-[o] - How do we tell the new player what to do to get through first potato processing?
-[o] - Use flashing circles and text to walk the player through processing their first document. Click by click. 
-[o] - Transition to game win scene, "Your shift is over, you will be re-planted, you have served the potato motherland."
-[o] - What do we tell the player when they win?
-[o] - Transition to game lose scene, "You have unjustly denied permitted potatoes entry, you will be roasted. You have disgraced the potato motherland."
-[o] - What do we tell the player when they lose? 
-[o] - Add score to both the success_scene.tscn and the game_over.tscn, then end of shifts functions as a soft-end and a way to heal for high-scoring.
 
 ## Graphical
 [ ] - Add officers patrolling the area
@@ -30,13 +21,11 @@
 
 ## Important features
 [ ] - Move tutorial to the front of the document
-[o] - Make the flashing icon on the megaphone larger
 [ ] - Explain how to flip the pages on the document in the tutorial
 [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
 [ ] - Add flash indicator pointing at corner of first page 
 [ ] - Picking up stamp hides cursor
 [ ] - Move 4th page of instructions to page 1
-[o] - Make stamp interaction be, left click to pick up, left click to stamp, right click to drop. 
 [ ] - How to give visual feedback of controls to the player? 
 
 ## Menus
@@ -69,6 +58,17 @@
 
 
 # Completed tasks
+[o] - Rephrase all laws to be more clearly negative
+[o] - Make intuitive stamp mechanic
+[o] - How do we tell the new player what to do to get through first potato processing?
+[o] - Use flashing circles and text to walk the player through processing their first document. Click by click. 
+[o] - Transition to game win scene, "Your shift is over, you will be re-planted, you have served the potato motherland."
+[o] - What do we tell the player when they win?
+[o] - Transition to game lose scene, "You have unjustly denied permitted potatoes entry, you will be roasted. You have disgraced the potato motherland."
+[o] - What do we tell the player when they lose? 
+[o] - Add score to both the success_scene.tscn and the game_over.tscn, then end of shifts functions as a soft-end and a way to heal for high-scoring.
+[o] - Make stamp interaction be, left click to pick up, left click to stamp, right click to drop. 
+[o] - Make the flashing icon on the megaphone larger
 [o] - Remove Mr. Potato from first names
 [o] - Alert, larger and centeredHighlight on the speaker
 [o] - Update first page of Pamphlet with instructions
