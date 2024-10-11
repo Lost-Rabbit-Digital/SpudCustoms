@@ -27,7 +27,7 @@ Minimal Requirements for $4.99 Steam Release:
    [o] Steam Cloud Saves
    - Trading Cards (optional, but adds value)
 
-9. Fry Rejected Potatoes Mini-game:
+7. Fry Rejected Potatoes Mini-game:
    - Implement as an optional feature
    - Include in Endless Mode for added challenge
 
@@ -42,5 +42,5 @@ Make Steam and Non-Steam version
 Post-Release Requirements:
 8. Post-Launch Support Plan:
    - Commitment to bug fixes and minor content updates
-7. Localization:
+9. Localization:
    - English + 2-3 additional languages (e.g., Spanish, French, German)
