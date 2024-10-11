@@ -1,4 +1,4 @@
-# Incomplete tasks
+# Incomplete tasks list
 
 ## Urgent
 [ ] - Fix the pixel resolution of the text
@@ -10,6 +10,8 @@
 [ ] - Make the instructions an overlay which you could close
 [ ] - More papers to shuffle around
 [ ] - Make new stamp shadow, make it a highlight instead of a shadow
+
+
 
 ## Quality of life
 [ ] - Save in a global if the player has finished the tutorial so every shift doesn't start the same interaction
