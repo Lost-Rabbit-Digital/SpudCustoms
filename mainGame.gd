@@ -714,8 +714,8 @@ func process_decision(allowed):
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
 		score += 1
 		$"Label (JudgementInfo)".text = "You made the right choice, officer."
-		# Check if multiple of 10 and win if so
-		if score % 10 == 0:
+		# Check if multiple of max_score and win if so
+		if score % max_score == 0:
 			print("You win!")
 			go_to_game_win()
 	else:
