@@ -17,6 +17,8 @@ var score = 0
 var strikes = 0
 var max_score = 10
 
+# storing and sending rule assignments
+signal rules_updated(new_rules)
 var current_rules = []
 
 var queue_manager: Node2D
@@ -154,7 +156,12 @@ func is_expired(expiration_date: String) -> bool:
 	return days_until_expiry(expiration_date) < 0
 
 func update_rules_display():
-	$"Label (RulesLabel)".text = "LAWS\n" + "\n".join(current_rules)
+	#$"Label (RulesLabel)".text = "LAWS\n" + "\n".join(current_rules)
+	if $"Sprite2D (Open Bulletin)/Label (BulletinNote)":
+		$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = "LAWS\n" + "\n".join(current_rules)
+	
+	# Emit the signal with the new rules
+	emit_signal("rules_updated", "LAWS\n" + "\n".join(current_rules))
 	
 func is_potato_valid(potato_info: Dictionary) -> bool:
 	for rule in current_rules:
@@ -698,9 +705,10 @@ func process_decision(allowed):
 
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()
+	
 		
-	if randi() % 5 < 2:  # 40% chance to change rules
-		generate_rules()
+	#if randi() % 5 < 2:  # 40% chance to change rules
+	#	generate_rules()
 		
 	# Check and update the information in the passport
 	#update_potato_info_display()

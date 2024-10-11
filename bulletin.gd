@@ -20,6 +20,17 @@ var daily_laws = """
 HTTPCLIENT ACTIVATED, FACEBOOK "CONNECT_DEFERRED
 """
 
+func _ready():
+	# Assuming the main game script is attached to a node named "Main"
+	var main_node = get_node("/root/Node2D")
+	if main_node:
+		main_node.connect("rules_updated", Callable(self, "update_daily_laws"))
+
+func update_daily_laws(new_laws):
+	daily_laws = new_laws
+	if current_page == 2:
+		$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = daily_laws
+
 func _on_texture_button_turn_right_pressed():
 	if current_page + 1 <= maximum_pages:
 		current_page += 1
