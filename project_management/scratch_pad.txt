@@ -7,9 +7,9 @@
 [ ] - Make an options menu
 [ ] - Stamp doesn't match the rest of the pixel feel, different resolution
 [ ] - Make sure the user knows where the laws are, make it into a specific note which is immovable
-
-## Miscellaneous
-[ ] - 
+[ ] - Make the instructions an overlay which you could close
+[ ] - More papers to shuffle around
+[ ] - Make new stamp shadow, make it a highlight instead of a shadow
 
 ## Quality of life
 [ ] - Save in a global if the player has finished the tutorial so every shift doesn't start the same interaction
