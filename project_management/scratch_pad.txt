@@ -1,13 +1,19 @@
 # Incomplete tasks
 
+## Urgent
+[ ] - Fix the pixel resolution of the text
+[ ] - "Change verbage to 2 and under"
+[ ] - Make fullscreen appear in the main game instead of just the main menu
+[ ] - Make an options menu
+[ ] - Stamp doesn't match the rest of the pixel feel, different resolution
+[ ] - Make sure the user knows where the laws are, make it into a specific note which is immovable
+
 ## Miscellaneous
 [ ] - 
 
 ## Quality of life
 [ ] - Save in a global if the player has finished the tutorial so every shift doesn't start the same interaction
 [ ] - Overlay of potato customs officer talking
-[ ] - Fix the pixel resolution of the text
-[ ] - "Change verbage to 2 and under"
 [o] - Rephrase all laws to be more clearly negative
 [o] - Make intuitive stamp mechanic
 [o] - How do we tell the new player what to do to get through first potato processing?
