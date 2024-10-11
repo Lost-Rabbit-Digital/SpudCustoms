@@ -6,6 +6,8 @@
 ## Quality of life
 [ ] - Save in a global if the player has finished the tutorial so every shift doesn't start the same interaction
 [ ] - Overlay of potato customs officer talking
+[ ] - Fix the pixel resolution of the text
+[ ] - "Change verbage to 2 and under"
 [o] - Rephrase all laws to be more clearly negative
 [o] - Make intuitive stamp mechanic
 [o] - How do we tell the new player what to do to get through first potato processing?
