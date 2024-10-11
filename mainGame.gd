@@ -14,8 +14,9 @@ var current_potato
 
 # track win and lose data
 var score = 0
-var strikes = 0
 var max_score = 10
+var strikes = 0
+var max_strikes = 3
 
 # storing and sending rule assignments
 signal rules_updated(new_rules)
@@ -50,6 +51,8 @@ var is_passport_open = false
 var bulletin: Sprite2D
 var is_bulletin_open = false
 
+var difficulty_level = "Easy"  # Can be "Easy", "Normal", or "Hard"
+
 # Stamp system
 const STAMP_ANIMATION_DURATION = 0.3  # Duration of the stamp animation in seconds
 const STAMP_MOVE_DISTANCE = 36  # How far the stamp moves down
@@ -57,6 +60,28 @@ const STAMP_MOVE_DISTANCE = 36  # How far the stamp moves down
 var bulletin_tutorial_timer: Timer
 const BULLETIN_TUTORIAL_FLASH_INTERVAL = 1.0 # flash every 1 seconds
 var is_in_bulletin_tutorial = true
+
+func set_difficulty(level):
+	difficulty_level = level
+	adjust_game_parameters()
+
+func adjust_game_parameters():
+	print("matching difficulty level:", difficulty_level)
+	match difficulty_level:
+		"Easy":
+			max_score = 8
+			max_strikes = 5
+		"Normal":
+			max_score = 10
+			max_strikes = 3
+		"Hard":
+			max_score = 12
+			max_strikes = 2
+	print("Max score:", max_score)
+	$"Label (ScoreLabel)".text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
+	print("Max strikes:", max_strikes)
+	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
+	
 
 func setup_bulletin_tutorial_timer():
 	#print("FLASH TIMER: Setup bulletin flash timer")
@@ -123,7 +148,6 @@ func generate_rules():
 	current_rules = current_rules.slice(0, randi() % 2 + 2)
 	update_rules_display()
 
-
 func days_until_expiry(expiration_date: String) -> int:
 	var current_date = Time.get_date_dict_from_system()
 	var expiry_parts = expiration_date.split('.')
@@ -159,7 +183,6 @@ func update_rules_display():
 	#$"Label (RulesLabel)".text = "LAWS\n" + "\n".join(current_rules)
 	if $"Sprite2D (Open Bulletin)/Label (BulletinNote)":
 		$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = "LAWS\n" + "\n".join(current_rules)
-	
 	# Emit the signal with the new rules
 	emit_signal("rules_updated", "LAWS\n" + "\n".join(current_rules))
 	
@@ -304,7 +327,7 @@ func update_date_display():
 func _ready():
 	setup_megaphone_flash_timer()
 	setup_bulletin_tutorial_timer()
-
+	set_difficulty("Easy")
 	update_date_display()
 	queue_manager = $"Node2D (QueueManager)"  # Make sure to add QueueManager as a child of Main
 	generate_rules()
@@ -335,6 +358,9 @@ func _ready():
 	suspect_panel = $"Sprite2D (Suspect Panel)"
 	suspect_panel_front = $"Sprite2D (Suspect Panel)/SuspectPanelFront"
 	suspect = $"Sprite2D (PotatoMugshot)"
+	
+	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
+
 	
 	# Add closed passport to draggable sprites
 	draggable_sprites.append(passport)
@@ -695,13 +721,13 @@ func process_decision(allowed):
 	else:
 		$"Label (JudgementInfo)".text = "You have caused unnecessary suffering, officer..."
 		strikes += 1
-		if strikes == 3:
+		if strikes >= max_strikes:
 			print("Game over!")
 			go_to_game_over()
 			
-			
-	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / 3"
+	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
 	$"Label (ScoreLabel)".text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
+
 
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()
