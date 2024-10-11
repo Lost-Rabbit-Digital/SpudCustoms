@@ -47,6 +47,7 @@
 [ ] - Conversation with potato while checking documents
 
 ## Bugs
+[ ] - Collision for the draggables to stay in the lower half of screen
 [ ] - Fix stamp animation
 [ ] - If you spam stamps then multiple show up
 [ ] - Check why date rules keep failing (make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
