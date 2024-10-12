@@ -40,9 +40,9 @@ point_count = 14
 
 [sub_resource type="Curve2D" id="Curve2D_1j820"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 887, 197, 0, 0, 0, 0, 962, 178, 0, 0, 0, 0, 988, 154, 0, 0, 0, 0, 1042, 149, 0, 0, 0, 0, 1017, 55, 0, 0, 0, 0, 1171, 49, 0, 0, 0, 0, 1221, 44, 0, 0, 0, 0, 1265, 51)
+"points": PackedVector2Array(0, 0, 0, 0, 887, 197, 0, 0, 0, 0, 992, 174, 0, 0, 0, 0, 1005, 56, 0, 0, 0, 0, 1265, 51)
 }
-point_count = 8
+point_count = 4
 
 [sub_resource type="Curve2D" id="Curve2D_xms7a"]
 _data = {
@@ -244,9 +244,6 @@ texture = ExtResource("8_s0lh3")
 
 [node name="Path2D (RunnerPath)" type="Path2D" parent="."]
 curve = SubResource("Curve2D_f3jw2")
-
-[node name="Path2D (TimedOutPath)" type="Path2D" parent="."]
-curve = SubResource("Curve2D_1j820")
 
 [node name="Path2D (RejectPath)" type="Path2D" parent="."]
 curve = SubResource("Curve2D_1j820")

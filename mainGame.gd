@@ -53,11 +53,14 @@ var suspect_panel_front: Sprite2D
 var suspect: Sprite2D
 var is_passport_open = false
 
+@onready var time_label = $"Label (TimeLabel)"
+var label_tween: Tween
+
 # Bulletin dragging system
 var bulletin: Sprite2D
 var is_bulletin_open = false
 
-var difficulty_level = "Easy"  # Can be "Easy", "Normal", or "Hard"
+var difficulty_level = "Hard"  # Can be "Easy", "Normal", or "Hard"
 
 # Stamp system
 const STAMP_ANIMATION_DURATION = 0.3  # Duration of the stamp animation in seconds
@@ -85,7 +88,7 @@ func adjust_game_parameters():
 		"Hard":
 			max_score = 12
 			max_strikes = 2
-			processing_time = 30
+			processing_time = 15
 	print("Max score:", max_score)
 	$"Label (ScoreLabel)".text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
 	print("Max strikes:", max_strikes)
@@ -336,7 +339,7 @@ func update_date_display():
 func _ready():
 	setup_megaphone_flash_timer()
 	setup_bulletin_tutorial_timer()
-	set_difficulty("Easy")
+	set_difficulty(difficulty_level)
 	update_date_display()
 	queue_manager = $"Node2D (QueueManager)"  # Make sure to add QueueManager as a child of Main
 	generate_rules()
@@ -523,18 +526,38 @@ CONTROLS
 [ESCAPE] - Pause or return to the main menu
 """
 
+func start_label_tween():
+	# Create a new Tween
+	label_tween = create_tween().set_loops()
+	
+	# Tween font size
+	label_tween.tween_property(time_label, "theme_override_font_sizes/font_size", 16, 0.5)\
+		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	label_tween.tween_property(time_label, "theme_override_font_sizes/font_size", 12, 0.5)\
+		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	
+	# Tween color
+	label_tween.parallel().tween_property(time_label, "theme_override_colors/font_color", Color.RED, 0.5)\
+		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	label_tween.tween_property(time_label, "theme_override_colors/font_color", Color.WHITE, 0.5)\
+		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
 func _process(_delta):
 	# Processing timer implementation
 	if is_potato_in_office:
 		# Show label if potato in customs office
 		$"Label (TimeLabel)".visible = true
 		current_timer += _delta
+		$"Label (TimeLabel)".text = "Time Left: %s" % str(int(processing_time) - int(current_timer))
 		# Update _process to change Time Left: display each second after timer incremented
-		if current_timer < 5: 
-			pass
+		if int(processing_time) - int(current_timer) < 5: 
+			start_label_tween()
 			# Tween text in $"Label (TimeLabel)" between font_size 
 			# 12 and 16 w/ easing function, flash red
-		if current_timer >= processing_time:
+		if int(current_timer) >= int(processing_time):
+			timedOut()
+			move_potato_along_path("timedOut")
+			is_potato_in_office = false
 			# Implicit rejection of potatos via the process_decision(false) function 
 			# carries the risk of accidentally passing a potato and improving player score
 			# This should be its' own force_decision(), maybe where the Supervisor says 
@@ -543,10 +566,10 @@ func _process(_delta):
 			# move_potato_along_path(approval_status) controls moving the player based on approval status
 			# We can add a new approval status (timed_out), and have the potato take a different route. 
 			# we can put that logic as well as the logic for adding a strike into the force_decision() function
-			pass 
 	else:
 		# Hide label if potato is not in/has left customs office
 		$"Label (TimeLabel)".visible = false
+		current_timer = 0
 	
 	var mouse_pos = get_global_mouse_position()
 	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == false:
@@ -737,7 +760,17 @@ func go_to_game_win():
 	get_tree().change_scene_to_packed(success_scene)
 	# Store the score in a global script or autoload
 
+func timedOut():
+	$"Label (JudgementInfo)".text = "You took too long and they left, officer..."
+	#strikes += 1
+	print("current strikes: ", strikes)
+	if strikes >= max_strikes:
+		print("Game over!")
+		go_to_game_over()
+	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
+
 func process_decision(allowed):
+	print("Evaluating immigration decision in process_decision()...")
 	if current_potato_info.is_empty():
 		print("No potato to process.")
 		return
@@ -761,20 +794,8 @@ func process_decision(allowed):
 	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
 	$"Label (ScoreLabel)".text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
 
-
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()
-	
-		
-	#if randi() % 5 < 2:  # 40% chance to change rules
-	#	generate_rules()
-		
-	# Check and update the information in the passport
-	#update_potato_info_display()
-
-## func peek_front_potato():
-## 	# Use front_potato_info as needed
-## 	var front_potato_info = queue_manager.get_front_potato_info()
 
 func update_potato_texture():
 	print("Updating potato texture")
@@ -1045,6 +1066,11 @@ func move_potato_along_path(approval_status):
 	if approval_status == "approved":
 		path = $"Path2D (ApprovePath)"
 		process_decision(true)
+		
+	if approval_status == "timedout":
+		path = $"Path2D (TimedOutPath)"
+		timedOut()
+		
 	else: 
 		if randi() % 5 == 0:  # 20% chance to go sicko mode
 			path =$"Path2D (RunnerPath)"
@@ -1068,8 +1094,11 @@ func move_potato_along_path(approval_status):
 		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 10.0)
 	if "Reject" in path:
 		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 9.0)
+	if "TimedOut" in path:
+		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 9.0)
 	else:
 		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 8.0)
+		
 	exit_tween.tween_callback(func():
 		potato_person.queue_free()
 		path_follow.queue_free()
