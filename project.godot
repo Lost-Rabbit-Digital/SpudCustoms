@@ -29,6 +29,7 @@ gdscript/warnings/integer_division=0
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://assets/cursor/cursor_default.png"
 
 [global_group]
 
