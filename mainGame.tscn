@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=39 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://suspect_panel.png" id="2_f25cg"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/background.png" id="18_jl4i3"]
 [ext_resource type="Texture2D" uid="uid://cnt7y8a7drxme" path="res://assets/documents/bulletin/bulletin_main_page.png" id="19_mnrrk"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="20_pd2wg"]
+[ext_resource type="Texture2D" uid="uid://dfpl3we6ml5ip" path="res://assets/documents/rulebook/rulebook_open.png" id="20_pyw75"]
 [ext_resource type="Texture2D" uid="uid://c78plmdtw02b1" path="res://assets/documents/bulletin/page_turn_right.png" id="21_pmbmt"]
 [ext_resource type="Script" path="res://bulletin.gd" id="21_qw3ji"]
 [ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://assets/alerts/bulletin_alert_box.png" id="22_3pqlk"]
@@ -269,12 +270,78 @@ script = ExtResource("10_a4p7n")
 [node name="BulletinFlashTimer" type="Timer" parent="."]
 
 [node name="Sprite2D (Rulebook)" type="Sprite2D" parent="."]
-position = Vector2(1202, 568)
+position = Vector2(1214, 557)
 texture = ExtResource("24_7gkl8")
 
 [node name="Sprite2D (Closed Rulebook)" type="Sprite2D" parent="Sprite2D (Rulebook)"]
 
 [node name="Sprite2D (Open Rulebook)" type="Sprite2D" parent="Sprite2D (Rulebook)"]
+visible = false
+texture = ExtResource("20_pyw75")
+
+[node name="MarginContainer (Left Page)" type="MarginContainer" parent="Sprite2D (Rulebook)/Sprite2D (Open Rulebook)"]
+anchors_preset = -1
+anchor_right = 0.387
+anchor_bottom = 0.835
+offset_left = -234.0
+offset_top = -186.0
+offset_right = -194.0
+offset_bottom = -146.0
+
+[node name="Sprite2D (PassportPhoto)" type="Sprite2D" parent="Sprite2D (Rulebook)/Sprite2D (Open Rulebook)/MarginContainer (Left Page)"]
+z_index = 3
+z_as_relative = false
+position = Vector2(111, 176)
+scale = Vector2(1.97351, 1.97351)
+texture = ExtResource("7_rsfsr")
+
+[node name="MarginContainer (Right Page)" type="MarginContainer" parent="Sprite2D (Rulebook)/Sprite2D (Open Rulebook)"]
+anchors_preset = -1
+anchor_right = 0.33
+anchor_bottom = 0.905
+offset_left = 6.0
+offset_top = -186.0
+offset_right = 67.0
+offset_bottom = -172.0
+
+[node name="Label (Right Page Header)" type="Label" parent="Sprite2D (Rulebook)/Sprite2D (Open Rulebook)/MarginContainer (Right Page)"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 32
+text = "CONTENTS
+---------------"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sprite2D (Rulebook)/Sprite2D (Open Rulebook)/MarginContainer (Right Page)"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label (Right Page Button 1)" type="Label" parent="Sprite2D (Rulebook)/Sprite2D (Open Rulebook)/MarginContainer (Right Page)/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
+text = "- Basic rules"
+vertical_alignment = 1
+
+[node name="Label (Right Page Button 2)" type="Label" parent="Sprite2D (Rulebook)/Sprite2D (Open Rulebook)/MarginContainer (Right Page)/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
+text = "- Booth information"
+vertical_alignment = 1
+
+[node name="Label (Right Page Button 3)" type="Label" parent="Sprite2D (Rulebook)/Sprite2D (Open Rulebook)/MarginContainer (Right Page)/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
+text = "- Documents"
+vertical_alignment = 1
 
 [node name="Sprite2D (Bulletin)" type="Sprite2D" parent="."]
 z_index = 3

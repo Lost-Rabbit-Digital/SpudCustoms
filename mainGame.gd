@@ -951,8 +951,8 @@ func close_bulletin_action():
 	
 func open_rulebook_action():
 	$"Sprite2D (Rulebook)".texture = preload("res://assets/documents/rulebook/rulebook_open.png")
-	$"Sprite2D (Rulebook)/Sprite2D (Closed Rulebook)".visible = true
 	$"Sprite2D (Rulebook)/Sprite2D (Closed Rulebook)".visible = false
+	$"Sprite2D (Rulebook)/Sprite2D (Open Rulebook)".visible = true
 	
 func close_rulebook_action():
 	$"Sprite2D (Rulebook)".texture = preload("res://assets/documents/rulebook/rulebook_closed.png")
