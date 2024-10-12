@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=38 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://suspect_panel.png" id="2_f25cg"]
@@ -29,6 +29,7 @@
 [ext_resource type="Script" path="res://bulletin.gd" id="21_qw3ji"]
 [ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://assets/alerts/bulletin_alert_box.png" id="22_3pqlk"]
 [ext_resource type="Texture2D" uid="uid://bfhpafskct413" path="res://assets/documents/bulletin/page_turn_left.png" id="22_ir8f4"]
+[ext_resource type="Texture2D" uid="uid://y3bfxrfq7tmx" path="res://assets/documents/rulebook/rulebook_closed.png" id="24_7gkl8"]
 [ext_resource type="PackedScene" uid="uid://bju5udyr0e5rr" path="res://music_manager.tscn" id="27_2tnfb"]
 [ext_resource type="PackedScene" uid="uid://bp2pkcox316n0" path="res://menus/pause_menu.tscn" id="28_vb6g0"]
 
@@ -266,6 +267,14 @@ curve = SubResource("Curve2D_x3wa3")
 script = ExtResource("10_a4p7n")
 
 [node name="BulletinFlashTimer" type="Timer" parent="."]
+
+[node name="Sprite2D (Rulebook)" type="Sprite2D" parent="."]
+position = Vector2(1202, 568)
+texture = ExtResource("24_7gkl8")
+
+[node name="Sprite2D (Closed Rulebook)" type="Sprite2D" parent="Sprite2D (Rulebook)"]
+
+[node name="Sprite2D (Open Rulebook)" type="Sprite2D" parent="Sprite2D (Rulebook)"]
 
 [node name="Sprite2D (Bulletin)" type="Sprite2D" parent="."]
 z_index = 3

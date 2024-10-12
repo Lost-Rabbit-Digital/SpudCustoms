@@ -60,6 +60,10 @@ var label_tween: Tween
 var bulletin: Sprite2D
 var is_bulletin_open = false
 
+# Rulebook dragging system
+var rulebook: Sprite2D
+var is_rulebook_open = false
+
 var difficulty_level = "Hard"  # Can be "Easy", "Normal", or "Hard"
 
 # Stamp system
@@ -366,6 +370,7 @@ func _ready():
 	# Get references to the new nodes
 	passport = $"Sprite2D (Passport)"
 	bulletin = $"Sprite2D (Bulletin)"
+	rulebook = $"Sprite2D (Rulebook)"
 	interaction_table = $InteractionTableBackground
 	suspect_panel = $"Sprite2D (Suspect Panel)"
 	suspect_panel_front = $"Sprite2D (Suspect Panel)/SuspectPanelFront"
@@ -377,6 +382,7 @@ func _ready():
 	# Add closed passport to draggable sprites
 	draggable_sprites.append(passport)
 	draggable_sprites.append(bulletin)
+	draggable_sprites.append(rulebook)
 	
 func setup_megaphone_flash_timer():
 	#print("FLASH TIMER: Setup megaphone flash timer")
@@ -591,24 +597,28 @@ func _process(_delta):
 		
 	# Check for closing passport
 	if (suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)) or 
-		suspect.get_rect().has_point(suspect.to_local(mouse_pos))) and (dragged_sprite == bulletin or dragged_sprite == passport):
+		suspect.get_rect().has_point(suspect.to_local(mouse_pos))) and (dragged_sprite == bulletin or dragged_sprite == passport or dragged_sprite == rulebook):
 		if not close_sound_played:
 			if dragged_sprite == passport:
 				close_passport_action()
 			elif dragged_sprite == bulletin:
 				close_bulletin_action()
+			elif dragged_sprite == rulebook:
+				close_rulebook_action()
 			$"AudioStreamPlayer2D (SFX)".stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
 			$"AudioStreamPlayer2D (SFX)".play()
 			close_sound_played = true
 			open_sound_played = false  # Reset open sound flag
 	
 	# Check for opening passport
-	if interaction_table.get_rect().has_point(interaction_table.to_local(mouse_pos)) and (dragged_sprite == bulletin or dragged_sprite == passport):
+	if interaction_table.get_rect().has_point(interaction_table.to_local(mouse_pos)) and (dragged_sprite == bulletin or dragged_sprite == passport or dragged_sprite == rulebook):
 		if not open_sound_played:
 			if dragged_sprite == passport and is_passport_open == false:
 				open_passport_action()
 			elif dragged_sprite == bulletin:
 				open_bulletin_action()
+			elif dragged_sprite == rulebook:
+				open_rulebook_action()
 			$"AudioStreamPlayer2D (SFX)".stream = preload("res://assets/audio/passport_sfx/open_passport_audio.mp3")
 			$"AudioStreamPlayer2D (SFX)".play()
 			open_sound_played = true
@@ -903,6 +913,14 @@ func _input(event):
 						close_bulletin_action()
 					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
 						close_bulletin_action()
+				elif dragged_sprite == rulebook:
+					var drop_pos = get_global_mouse_position()
+					if interaction_table.get_rect().has_point(interaction_table.to_local(drop_pos)):
+						open_rulebook_action()
+					if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
+						close_rulebook_action()
+					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
+						close_rulebook_action()
 				dragged_sprite = null
 				
 	elif event is InputEventMouseMotion and dragged_sprite:
@@ -930,6 +948,16 @@ func close_bulletin_action():
 	$"Sprite2D (Bulletin)".texture = preload("res://assets/documents/bulletin/closed_bulletin_small/closed_bulletin_small.png")
 	$"Sprite2D (Bulletin)/Sprite2D (Close Bulletin)".visible = true
 	$"Sprite2D (Bulletin)/Sprite2D (Open Bulletin)".visible = false
+	
+func open_rulebook_action():
+	$"Sprite2D (Rulebook)".texture = preload("res://assets/documents/rulebook/rulebook_open.png")
+	$"Sprite2D (Rulebook)/Sprite2D (Closed Rulebook)".visible = true
+	$"Sprite2D (Rulebook)/Sprite2D (Closed Rulebook)".visible = false
+	
+func close_rulebook_action():
+	$"Sprite2D (Rulebook)".texture = preload("res://assets/documents/rulebook/rulebook_closed.png")
+	$"Sprite2D (Rulebook)/Sprite2D (Closed Rulebook)".visible = true
+	$"Sprite2D (Rulebook)/Sprite2D (Open Rulebook)".visible = false
 	
 func find_topmost_sprite_at(pos: Vector2):
 	var topmost_sprite = null
