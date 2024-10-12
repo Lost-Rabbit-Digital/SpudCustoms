@@ -12,11 +12,17 @@ var is_paused = false
 var current_potato_info
 var current_potato
 
-# track win and lose data
+# track win and lose parameters
 var score = 0
 var max_score = 10
 var strikes = 0
 var max_strikes = 3
+
+# timer for limiting shift processing times
+var processing_time = 60  # seconds
+# Add difficulty max_time_left variable for easy, normal, hard 
+# configure this in set_difficulty_level to adjust processing_time, default to easy(60, 45, 30 seconds)
+var current_timer = 0
 
 # storing and sending rule assignments
 signal rules_updated(new_rules)
@@ -71,12 +77,15 @@ func adjust_game_parameters():
 		"Easy":
 			max_score = 8
 			max_strikes = 5
+			processing_time = 60
 		"Normal":
 			max_score = 10
 			max_strikes = 3
+			processing_time = 45
 		"Hard":
 			max_score = 12
 			max_strikes = 2
+			processing_time = 30
 	print("Max score:", max_score)
 	$"Label (ScoreLabel)".text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
 	print("Max strikes:", max_strikes)
@@ -515,6 +524,30 @@ CONTROLS
 """
 
 func _process(_delta):
+	# Processing timer implementation
+	if is_potato_in_office:
+		# Show label if potato in customs office
+		$"Label (TimeLabel)".visible = true
+		current_timer += _delta
+		# Update _process to change Time Left: display each second after timer incremented
+		if current_timer < 5: 
+			pass
+			# Tween text in $"Label (TimeLabel)" between font_size 
+			# 12 and 16 w/ easing function, flash red
+		if current_timer >= processing_time:
+			# Implicit rejection of potatos via the process_decision(false) function 
+			# carries the risk of accidentally passing a potato and improving player score
+			# This should be its' own force_decision(), maybe where the Supervisor says 
+			# what the right answer was too before punishing the player.
+			# Time's up, force a decision or penalize the player
+			# move_potato_along_path(approval_status) controls moving the player based on approval status
+			# We can add a new approval status (timed_out), and have the potato take a different route. 
+			# we can put that logic as well as the logic for adding a strike into the force_decision() function
+			pass 
+	else:
+		# Hide label if potato is not in/has left customs office
+		$"Label (TimeLabel)".visible = false
+	
 	var mouse_pos = get_global_mouse_position()
 	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == false:
 		$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = true
