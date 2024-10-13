@@ -58,6 +58,10 @@ var label_tween: Tween
 var bulletin: Sprite2D
 var is_bulletin_open = false
 
+# Rulebook dragging system
+var rulebook: Sprite2D
+var is_rulebook_open = false
+
 var difficulty_level = "Hard"  # Can be "Easy", "Normal", or "Hard"
 
 # Stamp system
@@ -376,6 +380,49 @@ func update_date_display():
 	var formatted_date = "%04d.%02d.%02d" % [current_date.year, current_date.month, current_date.day]
 	$"Label (DateLabel)".text = formatted_date
 
+func _ready():
+	setup_megaphone_flash_timer()
+	setup_bulletin_tutorial_timer()
+	set_difficulty(difficulty_level)
+	update_date_display()
+	queue_manager = $SystemManagers/QueueManager  # Make sure to add QueueManager as a child of Main
+	generate_rules()
+	setup_spawn_timer()
+	draggable_sprites = [
+		$Gameplay/InteractiveElements/Passport,
+		$Gameplay/InteractiveElements/ApprovalStamp,
+		$Gameplay/InteractiveElements/RejectionStamp
+	]
+	# Ensure sprites are in the scene tree and set initial z-index
+	for sprite in draggable_sprites:
+		if not is_instance_valid(sprite):
+			push_warning("Sprite not found: " + sprite.name)
+		else:
+			if "Stamp" in sprite.name:
+				sprite.z_index = PHYSICAL_STAMP_Z_INDEX
+			else:
+				sprite.z_index = PASSPORT_Z_INDEX
+				
+	# Add restoration of session score for continued shifts
+	if Global.final_score > 0:
+		score = Global.final_score
+		$UI/Labels/ScoreLabel.text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
+	# Get references to the new nodes
+	passport = $Gameplay/InteractiveElements/Passport
+	bulletin = $Gameplay/InteractiveElements/Bulletin
+	rulebook = $"Sprite2D (Rulebook)"
+	interaction_table = $InteractionTableBackground
+	suspect_panel = $"Sprite2D (Suspect Panel)"
+	suspect_panel_front = $"Sprite2D (Suspect Panel)/SuspectPanelFront"
+	suspect = $"Sprite2D (PotatoMugshot)"
+	
+	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
+
+	# Add closed passport to draggable sprites
+	draggable_sprites.append(passport)
+	draggable_sprites.append(bulletin)
+	draggable_sprites.append(rulebook)
+	
 func setup_megaphone_flash_timer():
 	#print("FLASH TIMER: Setup megaphone flash timer")
 	megaphone_flash_timer = $SystemManagers/Timers/MegaphoneFlashTimer
@@ -583,24 +630,28 @@ func _process(_delta):
 		
 	# Check for closing passport
 	if (suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)) or 
-		suspect.get_rect().has_point(suspect.to_local(mouse_pos))) and (dragged_sprite == bulletin or dragged_sprite == passport):
+		suspect.get_rect().has_point(suspect.to_local(mouse_pos))) and (dragged_sprite == bulletin or dragged_sprite == passport or dragged_sprite == rulebook):
 		if not close_sound_played:
 			if dragged_sprite == passport:
 				close_passport_action()
 			elif dragged_sprite == bulletin:
 				close_bulletin_action()
+			elif dragged_sprite == rulebook:
+				close_rulebook_action()
 			$SystemManagers/AudioManager/SFXPool.stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
 			$SystemManagers/AudioManager/SFXPool.play()
 			close_sound_played = true
 			open_sound_played = false  # Reset open sound flag
 	
 	# Check for opening passport
-	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)) and (dragged_sprite == bulletin or dragged_sprite == passport):
+	if interaction_table.get_rect().has_point(interaction_table.to_local(mouse_pos)) and (dragged_sprite == bulletin or dragged_sprite == passport or dragged_sprite == rulebook):
 		if not open_sound_played:
 			if dragged_sprite == passport and is_passport_open == false:
 				open_passport_action()
 			elif dragged_sprite == bulletin:
 				open_bulletin_action()
+			elif dragged_sprite == rulebook:
+				open_rulebook_action()
 			$SystemManagers/AudioManager/SFXPool.stream = preload("res://assets/audio/passport_sfx/open_passport_audio.mp3")
 			$SystemManagers/AudioManager/SFXPool.play()
 			open_sound_played = true
@@ -889,6 +940,14 @@ func _input(event):
 						close_bulletin_action()
 					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
 						close_bulletin_action()
+				elif dragged_sprite == rulebook:
+					var drop_pos = get_global_mouse_position()
+					if interaction_table.get_rect().has_point(interaction_table.to_local(drop_pos)):
+						open_rulebook_action()
+					if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
+						close_rulebook_action()
+					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
+						close_rulebook_action()
 				dragged_sprite = null
 				
 	elif event is InputEventMouseMotion and dragged_sprite:
@@ -916,6 +975,16 @@ func close_bulletin_action():
 	$Gameplay/InteractiveElements/Bulletin.texture = preload("res://assets/documents/bulletin/closed_bulletin_small/closed_bulletin_small.png")
 	$Gameplay/InteractiveElements/Bulletin/ClosedBulletin.visible = true
 	$Gameplay/InteractiveElements/Bulletin/OpenBulletin.visible = false
+	
+func open_rulebook_action():
+	$"Sprite2D (Rulebook)".texture = preload("res://assets/documents/rulebook/rulebook_open.png")
+	$"Sprite2D (Rulebook)/Sprite2D (Closed Rulebook)".visible = false
+	$"Sprite2D (Rulebook)/Sprite2D (Open Rulebook)".visible = true
+	
+func close_rulebook_action():
+	$"Sprite2D (Rulebook)".texture = preload("res://assets/documents/rulebook/rulebook_closed.png")
+	$"Sprite2D (Rulebook)/Sprite2D (Closed Rulebook)".visible = true
+	$"Sprite2D (Rulebook)/Sprite2D (Open Rulebook)".visible = false
 	
 func find_topmost_sprite_at(pos: Vector2):
 	var topmost_sprite = null

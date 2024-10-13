@@ -10,7 +10,7 @@
 [ ] - Make the instructions an overlay which you could close
 [ ] - More papers to shuffle around
 [ ] - Make new stamp shadow, make it a highlight instead of a shadow
-[ ] - Custom cursor
+[ ] - Custom cursor for hover, click, grab, drag
 
 
 

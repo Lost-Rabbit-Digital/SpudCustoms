@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://defs2tvfb8tjb" path="res://assets/ui_buttons/not_muted_button_highlighted.png" id="5_23kxd"]
 [ext_resource type="Texture2D" uid="uid://c2uwyulvqf4wp" path="res://assets/ui_buttons/fullscreen_button_pressed.png" id="7_auobi"]
 [ext_resource type="Texture2D" uid="uid://dxe350plods2f" path="res://assets/ui_buttons/fullscreen_button_highlighted.png" id="8_csvlh"]
-[ext_resource type="PackedScene" uid="uid://c1amspwdfuccu" path="res://music_manager.tscn" id="9_166k2"]
+[ext_resource type="PackedScene" uid="uid://bju5udyr0e5rr" path="res://music_manager.tscn" id="9_166k2"]
 
 [sub_resource type="GDScript" id="GDScript_jiqp2"]
 script/source = "extends Control
