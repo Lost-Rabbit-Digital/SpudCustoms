@@ -112,7 +112,7 @@ func _ready():
 	suspect_panel_front = $Gameplay/SuspectPanel/SuspectPanelFront
 	suspect = $Gameplay/PotatoMugshot
 	
-	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
+	$UI/Labels/StrikesLabel.text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
 
 	# Add closed passport to draggable sprites
 	draggable_sprites.append(passport)
@@ -145,9 +145,9 @@ func adjust_game_parameters():
 			max_strikes = 2
 			processing_time = 15
 	print("Max score:", max_score)
-	$"Label (ScoreLabel)".text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
+	$UI/Labels/ScoreLabel.text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
 	print("Max strikes:", max_strikes)
-	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
+	$UI/Labels/StrikesLabel.text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
 	
 
 func setup_bulletin_tutorial_timer():
@@ -159,9 +159,9 @@ func setup_bulletin_tutorial_timer():
 func _on_bulletin_flash_timer_timeout():
 	#print("FLASH TIMER: Bulletin timeout")
 	if is_in_bulletin_tutorial:
-		$"Sprite2D (Bulletin)/Node2D/BulletinAlertBox".visible = !$"Sprite2D (Bulletin)/Node2D/BulletinAlertBox".visible
+		$Gameplay/InteractiveElements/Bulletin/Node2D/BulletinAlertBox.visible = !$Gameplay/InteractiveElements/Bulletin/Node2D/BulletinAlertBox.visible
 	else:
-		$"Sprite2D (Bulletin)/Node2D".visible = false
+		$Gameplay/InteractiveElements/Bulletin/Node2D.visible = false
 
 func generate_rules():
 	current_rules = [
@@ -240,9 +240,8 @@ func is_expired(expiration_date: String) -> bool:
 	return days_until_expiry(expiration_date) < 0
 
 func update_rules_display():
-	#$"Label (RulesLabel)".text = "LAWS\n" + "\n".join(current_rules)
-	if $"Sprite2D (Open Bulletin)/Label (BulletinNote)":
-		$"Sprite2D (Open Bulletin)/Label (BulletinNote)".text = "LAWS\n" + "\n".join(current_rules)
+	if $Gameplay/InteractiveElements/Bulletin/OpenBulletin/BulletinNote:
+		$Gameplay/InteractiveElements/Bulletin/OpenBulletin/BulletinNote.text = "LAWS\n" + "\n".join(current_rules)
 	# Emit the signal with the new rules
 	emit_signal("rules_updated", "LAWS\n" + "\n".join(current_rules))
 	
@@ -353,7 +352,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 func update_date_display():
 	var current_date = Time.get_date_dict_from_system()
 	var formatted_date = "%04d.%02d.%02d" % [current_date.year, current_date.month, current_date.day]
-	$"Label (DateLabel)".text = formatted_date
+	$UI/Labels/DateLabel.text = formatted_date
 
 func _on_megaphone_flash_timer_timeout():
 	if not is_potato_in_office:
