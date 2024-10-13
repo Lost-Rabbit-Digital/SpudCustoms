@@ -1,0 +1,64 @@
+# Pixel Artist Wanted for Dystopian Document Thriller Game "Spud Customs"
+
+## About the Game
+"Spud Customs" is a dystopian document thriller game set in a world of anthropomorphic potatoes. Players take on the role of a customs officer, processing documents and making critical decisions that affect the game's narrative and outcome.
+
+## Job Description
+We are seeking a talented pixel artist to create various visual elements for our game. The artist will work closely with our development team to bring the unique world of "Spud Customs" to life through pixel art.
+
+## Required Skills
+- Proficiency in pixel art creation
+- Strong understanding of color theory and composition
+- Ability to work within specific pixel dimensions and restrictions
+- Experience with creating characters, environments, and UI elements in pixel art style
+- Familiarity with game development processes is a plus
+
+## Project Scope
+
+### 1. Menu Backgrounds (1920x1080px)
+- Main menu background showcasing the dystopian potato world
+- Options menu background
+- Credits screen background
+
+### 2. Character Designs (64x64px)
+- Various potato characters with different expressions and poses
+- Customs officer character (player character)
+- Background characters for queue scenes
+
+### 3. Scene Backgrounds (varies, up to 1920x1080px)
+- Customs office interior
+- Exterior views of the border checkpoint
+- Queue area for incoming potatoes
+
+### 4. UI Elements (64x64px and smaller)
+- Buttons (start, options, exit, etc.)
+- Icons for game mechanics (stamps, document types, etc.)
+- Progress bars, score displays
+
+### 5. Interactive Elements (64x64px)
+- Stamps (approval and rejection)
+- Documents (passports, ID cards, etc.)
+- Desk items (computer, lamp, etc.)
+
+## Deliverables
+- All artwork delivered in PNG format
+- Source files (e.g., Aseprite, PyxelEdit) for potential future edits
+- A style guide for maintaining consistency in future art creation
+
+## Timeline
+- Project duration: [Insert expected duration]
+- Milestones will be set for each category of deliverables
+
+## Budget
+[Insert your budget range or hourly rate]
+
+## How to Apply
+Please submit your application with:
+1. Your portfolio showcasing relevant pixel art work
+2. A brief cover letter explaining your interest in the project
+3. Your availability and preferred working hours
+4. Your rate (hourly or per-project)
+
+Send your application to [Insert contact email]
+
+We look forward to bringing the world of "Spud Customs" to life with your artistic talent!

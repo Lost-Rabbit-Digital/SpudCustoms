@@ -28,10 +28,13 @@ Minimal Requirements for $4.99 Steam Release:
    - 10-15 Steam Achievements (Story beats and firsts)
    [o] Steam Cloud Saves
    - Trading Cards (optional, but adds value)
+   - Cloud save support: Adds convenience but doesn't significantly expand gameplay.
 
 7. Fry Rejected Potatoes Mini-game:
    - Implement as an optional feature
    - Include in Endless Mode for added challenge
+
+8. Additional inspection mini-game (Baggage? Interrogation? Suspicious movement?)
 
 Suggested Genre for Steam:
 Primary Genre: Simulation
