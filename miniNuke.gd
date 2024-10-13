@@ -34,7 +34,7 @@ func _ready():
 	process_material = particle_material
 	
 	# Apply the small circular gradient texture for the particles
-	texture = preload("res://textures/miniNuke_particle_texture.png")
+	texture = preload("res://assets/miniNuke_particle_texture.png")
 	
 func create_color_ramp():
 	var color_ramp = Gradient.new()

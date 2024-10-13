@@ -8,8 +8,10 @@ var potatoes: Array = []
 var spawn_point: Vector2
 
 func _ready():
-	var path_node_path: NodePath = ^"../Path2D (SpuddyQueue)"
-	path = get_node(path_node_path)
+	#var path_node_path: NodePath = $"../../Gameplay/Paths/SpuddyQueue"
+	path = get_node($"../../Gameplay/Paths/SpuddyQueue")
+		
+	#	path_node_path)
 	curve = path.curve
 	spawn_point = curve.get_point_position(0)
 	print("Path loaded, spawn point set to: ", spawn_point)
@@ -24,10 +26,10 @@ func can_add_potato() -> bool:
 
 func spawn_new_potato():
 	if can_add_potato():
-		var potato_info = get_parent().generate_potato_info()
+		var potato_info = get_parent().get_parent().generate_potato_info()
 		add_potato(potato_info)
-		get_parent().update_potato_info_display()
-		get_parent().update_potato_texture()
+		get_parent().get_parent().update_potato_info_display()
+		get_parent().get_parent().update_potato_texture()
 	else:
 		print("Maximum number of potatoes reached")
 
@@ -93,8 +95,6 @@ func remove_front_potato() -> Node2D:
 		update_positions()
 		return potato
 	return null
-	
-	
 
 func debug_add_potatoes(count: int):
 	for i in range(count):

@@ -1,6 +1,6 @@
 extends Node
 
-@onready var bgm_player = $"AudioStreamPlayer2D (BGM)"
+@onready var bgm_player = $/root/Root/SystemManagers/AudioManager/BGMPool
 
 const DEFAULT_VOLUME_PERCENT = 40.0
 

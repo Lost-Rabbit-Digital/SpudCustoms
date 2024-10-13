@@ -20,9 +20,7 @@ var max_strikes = 3
 
 # timer for limiting shift processing times
 var processing_time = 60  # seconds
-# Add difficulty max_time_left variable for easy, normal, hard 
-# configure this in set_difficulty_level to adjust processing_time, default to easy(60, 45, 30 seconds)
-var current_timer = 0
+var current_timer = 0 # seconds
 
 # storing and sending rule assignments
 signal rules_updated(new_rules)
@@ -35,7 +33,7 @@ const MEGAPHONE_FLASH_INTERVAL = 1.0 # flash every 1 seconds
 # Potato spawn manager
 var potato_count = 0
 var max_potatoes = 20
-@onready var spawn_timer = $SpawnTimer
+@onready var spawn_timer = $SystemManagers/Timers/SpawnTimer
 
 # Dragging system
 var draggable_sprites = []
@@ -47,13 +45,13 @@ const PASSPORT_Z_INDEX = 0
 
 # Passport dragging system
 var passport: Sprite2D
-var interaction_table: Sprite2D
+var inspection_table: Sprite2D
 var suspect_panel: Sprite2D
 var suspect_panel_front: Sprite2D
 var suspect: Sprite2D
 var is_passport_open = false
 
-@onready var time_label = $"Label (TimeLabel)"
+@onready var time_label = $Gameplay/Labels/TimeLabel
 var label_tween: Tween
 
 # Bulletin dragging system
@@ -70,6 +68,51 @@ var bulletin_tutorial_timer: Timer
 const BULLETIN_TUTORIAL_FLASH_INTERVAL = 1.0 # flash every 1 seconds
 var is_in_bulletin_tutorial = true
 
+@onready var megaphone = $Gameplay/CustomsOffice/Megaphone
+@onready var potato_mugshot = $Gameplay/PotatoMugshot
+@onready var enter_office_path = $Gameplay/Paths/EnterOfficePath
+
+func _ready():
+	setup_megaphone_flash_timer()
+	setup_bulletin_tutorial_timer()
+	set_difficulty(difficulty_level)
+	update_date_display()
+	queue_manager = $SystemManagers/QueueManager 
+	generate_rules()
+	setup_spawn_timer()
+	draggable_sprites = [
+		$Gameplay/InteractiveElements/Passport,
+		$Gameplay/InteractiveElements/ApprovalStamp,
+		$Gameplay/InteractiveElements/RejectionStamp
+	]
+	# Ensure sprites are in the scene tree and set initial z-index
+	for sprite in draggable_sprites:
+		if not is_instance_valid(sprite):
+			push_warning("Sprite not found: " + sprite.name)
+		else:
+			if "Stamp" in sprite.name:
+				sprite.z_index = PHYSICAL_STAMP_Z_INDEX
+			else:
+				sprite.z_index = PASSPORT_Z_INDEX
+				
+	# Add restoration of session score for continued shifts
+	if Global.final_score > 0:
+		score = Global.final_score
+		$"Label (ScoreLabel)".text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
+	# Get references to the new nodes
+	passport = $Gameplay/InteractiveElements/Passport
+	bulletin = $Gameplay/InteractiveElements/Bulletin
+	inspection_table = $Gameplay/CustomsOffice/InspectionTable
+	suspect_panel = $Gameplay/CustomsOffice/SuspectPanel
+	suspect_panel_front = $Gameplay/CustomsOffice/SuspectPanel/SuspectPanelFront
+	potato_mugshot = $Gameplay/CustomsOffice/PotatoMugshot
+	
+	$Gameplay/Labels/StrikesLabel.text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
+	
+	# Add closed passport to draggable sprites
+	draggable_sprites.append(passport)
+	draggable_sprites.append(bulletin)
+	
 func set_difficulty(level):
 	difficulty_level = level
 	adjust_game_parameters()
@@ -327,69 +370,24 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 	print("INFO: This potato should be allowed in, returning true.")
 	return true
 
-@onready var megaphone = $"Sprite2D (Megaphone)"
-@onready var potato_mugshot = $"Sprite2D (PotatoMugshot)"
-@onready var enter_office_path = $"Path2D (EnterOfficePath)"
 
 func update_date_display():
 	var current_date = Time.get_date_dict_from_system()
 	var formatted_date = "%04d.%02d.%02d" % [current_date.year, current_date.month, current_date.day]
 	$"Label (DateLabel)".text = formatted_date
 
-func _ready():
-	setup_megaphone_flash_timer()
-	setup_bulletin_tutorial_timer()
-	set_difficulty(difficulty_level)
-	update_date_display()
-	queue_manager = $"Node2D (QueueManager)"  # Make sure to add QueueManager as a child of Main
-	generate_rules()
-	setup_spawn_timer()
-	draggable_sprites = [
-		$"Sprite2D (Passport)",
-		$"Sprite2D (Approval Stamp)",
-		$"Sprite2D (Rejection Stamp)"
-	]
-	# Ensure sprites are in the scene tree and set initial z-index
-	for sprite in draggable_sprites:
-		if not is_instance_valid(sprite):
-			push_warning("Sprite not found: " + sprite.name)
-		else:
-			if "Stamp" in sprite.name:
-				sprite.z_index = PHYSICAL_STAMP_Z_INDEX
-			else:
-				sprite.z_index = PASSPORT_Z_INDEX
-				
-	# Add restoration of session score for continued shifts
-	if Global.final_score > 0:
-		score = Global.final_score
-		$"Label (ScoreLabel)".text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
-	# Get references to the new nodes
-	passport = $"Sprite2D (Passport)"
-	bulletin = $"Sprite2D (Bulletin)"
-	interaction_table = $InteractionTableBackground
-	suspect_panel = $"Sprite2D (Suspect Panel)"
-	suspect_panel_front = $"Sprite2D (Suspect Panel)/SuspectPanelFront"
-	suspect = $"Sprite2D (PotatoMugshot)"
-	
-	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
-
-	
-	# Add closed passport to draggable sprites
-	draggable_sprites.append(passport)
-	draggable_sprites.append(bulletin)
-	
 func setup_megaphone_flash_timer():
 	#print("FLASH TIMER: Setup megaphone flash timer")
-	megaphone_flash_timer = $MegaphoneFlashTimer
+	megaphone_flash_timer = $SystemManagers/Timers/MegaphoneFlashTimer
 	megaphone_flash_timer.wait_time = MEGAPHONE_FLASH_INTERVAL
 	megaphone_flash_timer.start()
 
 
 func _on_megaphone_flash_timer_timeout():
 	if not is_potato_in_office:
-		$"Sprite2D (Megaphone)/Sprite2D (Flash Alert)".visible = !$"Sprite2D (Megaphone)/Sprite2D (Flash Alert)".visible
+		$Gameplay/CustomsOffice/Megaphone/FlashAlert.visible = !$Gameplay/CustomsOffice/Megaphone/FlashAlert.visible
 	else:
-		$"Sprite2D (Megaphone)/Sprite2D (Flash Alert)".visible = false
+		$Gameplay/CustomsOffice/Megaphone/FlashAlert.visible = false
 
 func play_random_customs_officer_sound():
 	var customs_officer_sounds = [
@@ -402,9 +400,9 @@ func play_random_customs_officer_sound():
 		preload("res://assets/audio/froggy_phrase_7.wav")
 	]
 	# Play potato customs officer sound
-	if !$"AudioStreamPlayer2D (SFX)".is_playing():
-		$"AudioStreamPlayer2D (SFX)".stream = customs_officer_sounds.pick_random()
-		$"AudioStreamPlayer2D (SFX)".play()
+	if !$SystemManagers/AudioManager/SFXPool.is_playing():
+		$SystemManagers/AudioManager/SFXPool.stream = customs_officer_sounds.pick_random()
+		$SystemManagers/AudioManager/SFXPool.play()
 		
 func say_random_customs_officer_dialogue():
 	var customs_officer_dialogue = [
@@ -414,8 +412,8 @@ func say_random_customs_officer_dialogue():
 		preload("res://assets/megaphone/megaphone_dialogue_box_5.png"),
 		preload("res://assets/megaphone/megaphone_dialogue_box_6.png")
 	]
-	$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".visible = true
-	$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".texture = customs_officer_dialogue.pick_random()
+	$Gameplay/CustomsOffice/Megaphone/MegaphoneDialogueBoxBlank.visible = true
+	$Gameplay/CustomsOffice/Megaphone/MegaphoneDialogueBoxBlank.texture = customs_officer_dialogue.pick_random()
 		
 		
 func megaphone_clicked():
@@ -425,32 +423,28 @@ func megaphone_clicked():
 		print("Warning: A potato is already in the customs office!")
 		return
 		
-	queue_manager = $"Node2D (QueueManager)"
+	queue_manager = $SystemManagers/QueueManager
 	play_random_customs_officer_sound()
 	print("Megaphone clicked")
 	var potato_person = queue_manager.remove_front_potato()
 	if potato_person != null:
-		$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".visible = true
-		$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".texture = preload("res://assets/megaphone/megaphone_dialogue_box_1.png")
+		$Gameplay/CustomsOffice/Megaphone/MegaphoneDialogueBoxBlank.visible = true
+		$Gameplay/CustomsOffice/Megaphone/MegaphoneDialogueBoxBlank.texture = preload("res://assets/megaphone/megaphone_dialogue_box_1.png")
 		is_potato_in_office = true
 		megaphone.visible = true
 		passport.visible = false
 		current_potato_info = potato_person.potato_info
 		move_potato_to_office(potato_person)
 	else:
-		$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".visible = true
-		$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".texture = preload("res://assets/megaphone/megaphone_dialogue_box_7.png")
+		$Gameplay/CustomsOffice/Megaphone/MegaphoneDialogueBoxBlank.visible = true
+		$Gameplay/CustomsOffice/Megaphone/MegaphoneDialogueBoxBlank.texture = preload("res://assets/megaphone/megaphone_dialogue_box_7.png")
 		print("No potato to process. :(")
-		
-
 		
 func move_potato_to_office(potato_person):
 	print("Moving our spuddy to the customs office")
-	
 	if potato_person.get_parent():
 		potato_person.get_parent().remove_child(potato_person)
 		print("removed potato from original parent")
-		
 		
 	var path_follow = PathFollow2D.new()
 	enter_office_path.add_child(path_follow)
@@ -469,12 +463,10 @@ func move_potato_to_office(potato_person):
 		path_follow.queue_free()
 		animate_mugshot_and_passport()
 		)
-	
 	print("Started animate mugshot and passport tween animation")
 	
 func animate_mugshot_and_passport():
-	
-	passport = $"Sprite2D (Passport)"
+	passport = $Gameplay/InteractiveElements/Passport
 	print("Animating mugshot and passport")
 	update_potato_info_display()
 
@@ -502,27 +494,27 @@ func setup_spawn_timer():
 	spawn_timer = Timer.new()
 	spawn_timer.set_wait_time(3.0)
 	spawn_timer.set_one_shot(false)
-	spawn_timer.connect("timeout", Callable(self, "_on_SpawnTimer_timeout"))
+	spawn_timer.connect("timeout", Callable(self, "_on_spawn_timer_timeout"))
 	add_child(spawn_timer)
 	spawn_timer.start()
 
-func _on_SpawnTimer_timeout():
+func _on_spawn_timer_timeout():
 	if queue_manager.can_add_potato():
 		queue_manager.spawn_new_potato()
 	else:
-		print("No mah potatoes bruv")
+		print("Potato queue limit reached, skip spawning.")
 		#spawn_timer.stop()
 
 var how_to_play_note_1 = """INSTRUCTIONS
 To begin, press the speaker with the yellow flashing ring on top of the customs office building.
 Take the documents from the Potato and bring them to the main table.
-Then compare the information on the documents with the laws given.
-If there are any discrepencies, deny entry.
+Compare the information on the documents with the laws given in your rulebook.
+If there are any violated laws, or the potato is expired, deny entry.
 After stamping the documents, hand them back to the Potato.
 
 CONTROLS
-[LEFT MOUSE] - Pick up and drops objects
-[RIGHT MOUSE] - Perform actions with objects 
+[LEFT MOUSE] - Pick up and perform actions with objects
+[RIGHT MOUSE] - Drop objects 
 [ESCAPE] - Pause or return to the main menu
 """
 
@@ -546,9 +538,9 @@ func _process(_delta):
 	# Processing timer implementation
 	if is_potato_in_office:
 		# Show label if potato in customs office
-		$"Label (TimeLabel)".visible = true
+		$UI/Labels/TimeLabel.visible = true
 		current_timer += _delta
-		$"Label (TimeLabel)".text = "Time Left: %s" % str(int(processing_time) - int(current_timer))
+		$UI/Labels/TimeLabel.text = "Time Left: %s" % str(int(processing_time) - int(current_timer))
 		# Update _process to change Time Left: display each second after timer incremented
 		if int(processing_time) - int(current_timer) < 5: 
 			start_label_tween()
@@ -568,26 +560,26 @@ func _process(_delta):
 			# we can put that logic as well as the logic for adding a strike into the force_decision() function
 	else:
 		# Hide label if potato is not in/has left customs office
-		$"Label (TimeLabel)".visible = false
+		$UI/Labels/TimeLabel.visible = false
 		current_timer = 0
 	
 	var mouse_pos = get_global_mouse_position()
 	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == false:
-		$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = true
+		$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = true
 	else:
-		$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = false
+		$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = false
 		
-	if !$"AudioStreamPlayer2D (SFX)".is_playing():
-		$"Sprite2D (Megaphone)/MegaphoneDialogueBoxBlank".visible = false
+	if !$SystemManagers/AudioManager/SFXPool.is_playing():
+		$Gameplay/CustomsOffice/Megaphone/MegaphoneDialogueBoxBlank.visible = false
 	
 	if is_paused == true:
-		$Container/pause_menu.visible = true
-		$"Sprite2D (Approval Stamp)".visible = false
-		$"Sprite2D (Rejection Stamp)".visible = false
+		$PauseContainer/PauseMenu.visible = true
+		$Gameplay/InteractiveElements/ApprovalStamp.visible = false
+		$Gameplay/InteractiveElements/RejectionStamp.visible = false
 	else:
 		$Container/pause_menu.visible = false
-		$"Sprite2D (Approval Stamp)".visible = true
-		$"Sprite2D (Rejection Stamp)".visible = true
+		$Gameplay/InteractiveElements/ApprovalStamp.visible = true
+		$Gameplay/InteractiveElements/RejectionStamp.visible = true
 		
 	# Check for closing passport
 	if (suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)) or 
@@ -597,25 +589,25 @@ func _process(_delta):
 				close_passport_action()
 			elif dragged_sprite == bulletin:
 				close_bulletin_action()
-			$"AudioStreamPlayer2D (SFX)".stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
-			$"AudioStreamPlayer2D (SFX)".play()
+			$SystemManagers/AudioManager/SFXPool.stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
+			$SystemManagers/AudioManager/SFXPool.play()
 			close_sound_played = true
 			open_sound_played = false  # Reset open sound flag
 	
 	# Check for opening passport
-	if interaction_table.get_rect().has_point(interaction_table.to_local(mouse_pos)) and (dragged_sprite == bulletin or dragged_sprite == passport):
+	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)) and (dragged_sprite == bulletin or dragged_sprite == passport):
 		if not open_sound_played:
 			if dragged_sprite == passport and is_passport_open == false:
 				open_passport_action()
 			elif dragged_sprite == bulletin:
 				open_bulletin_action()
-			$"AudioStreamPlayer2D (SFX)".stream = preload("res://assets/audio/passport_sfx/open_passport_audio.mp3")
-			$"AudioStreamPlayer2D (SFX)".play()
+			$SystemManagers/AudioManager/SFXPool.stream = preload("res://assets/audio/passport_sfx/open_passport_audio.mp3")
+			$SystemManagers/AudioManager/SFXPool.play()
 			open_sound_played = true
 			close_sound_played = false  # Reset close sound flag
 			
 	# check if in bulletin tutorial
-	if $"Sprite2D (Bulletin)/Sprite2D (Open Bulletin)/Label (BulletinNote)".text == how_to_play_note_1:
+	if $Gameplay/InteractiveElements/Bulletin/OpenBulletin/BulletinNote.text == how_to_play_note_1:
 		is_in_bulletin_tutorial = true
 	else:
 		is_in_bulletin_tutorial = false
@@ -641,8 +633,8 @@ func update_potato_info_display():
 	print("Printing current potato info")
 	print(current_potato_info)
 	if current_potato_info:
-		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = """{name}""".format(current_potato_info)
-		$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = """{date_of_birth}
+		$Gameplay/InteractiveElements/Passport/OpenPassport/PotatoHeader.text = """{name}""".format(current_potato_info)
+		$Gameplay/InteractiveElements/Passport/OpenPassport/PotatoInfo.text = """{date_of_birth}
 		{sex} 
 		{country_of_issue}
 		{expiration_date} 
@@ -650,13 +642,7 @@ func update_potato_info_display():
 		{condition}
 		""".format(current_potato_info)
 	else:
-		print("Potato textures fucking up")
-		# Clear the display if there is no current potato
-		#$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoHeader)".text = ""
-		#$"Sprite2D (Passport)/Sprite2D (Open Passport)/Label (PotatoInfo)".text = ""
-		# You might want to clear the texture here as well
-		#potato_mugshot.texture = null
-		#$"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = null
+		print("No current_potato_info found.")
 	print("Potato info update complete")
 	update_potato_texture()
 
@@ -744,15 +730,15 @@ func go_to_game_over():
 	# Store the score in a global script or autoload
 	Global.final_score = score
 	print("transition to game over scene")
-	$"Sprite2D (Approval Stamp)".visible = false
-	$"Sprite2D (Rejection Stamp)".visible = false
+	$Gameplay/InteractiveElements/ApprovalStamp.visible = false
+	$Gameplay/InteractiveElements/RejectionStamp.visible = false
 	get_tree().change_scene_to_file("res://menus/game_over.tscn")
 
 	
 func go_to_game_win():
 	print("Transitioning to game win scene with score:", score)
-	$"Sprite2D (Approval Stamp)".visible = false
-	$"Sprite2D (Rejection Stamp)".visible = false
+	$Gameplay/InteractiveElements/ApprovalStamp.visible = false
+	$Gameplay/InteractiveElements/RejectionStamp.visible = false
 	Global.final_score = score
 	Global.shift += 1
 	# Use change_scene_to_packed to pass parameters
@@ -761,13 +747,13 @@ func go_to_game_win():
 	# Store the score in a global script or autoload
 
 func timedOut():
-	$"Label (JudgementInfo)".text = "You took too long and they left, officer..."
+	$UI/Labels/JudgementLabel.text = "You took too long and they left, officer..."
 	#strikes += 1
 	print("current strikes: ", strikes)
 	if strikes >= max_strikes:
 		print("Game over!")
 		go_to_game_over()
-	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
+	$UI/Labels/StrikesLabel.text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
 
 func process_decision(allowed):
 	print("Evaluating immigration decision in process_decision()...")
@@ -779,20 +765,20 @@ func process_decision(allowed):
 	
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
 		score += 1
-		$"Label (JudgementInfo)".text = "You made the right choice, officer."
+		$UI/Labels/JudgementLabel.text = "You made the right choice, officer."
 		# Check if multiple of max_score and win if so
 		if score % max_score == 0:
 			print("You win!")
 			go_to_game_win()
 	else:
-		$"Label (JudgementInfo)".text = "You have caused unnecessary suffering, officer..."
+		$UI/Labels/JudgementLabel.text = "You have caused unnecessary suffering, officer..."
 		strikes += 1
 		if strikes >= max_strikes:
 			print("Game over!")
 			go_to_game_over()
 			
-	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
-	$"Label (ScoreLabel)".text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
+	$UI/Labels/StrikesLabel.text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
+	$UI/Labels/ScoreLabel.text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
 
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()
@@ -812,7 +798,7 @@ func update_potato_texture():
 	else:
 		potato_mugshot.texture = null
 	
-	var passport_photo = $"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)"
+	var passport_photo = $Gameplay/InteractiveElements/Passport/OpenPassport/PassportPhoto
 	if texture_paths.passport != "":
 		passport_photo.texture = load(texture_paths.passport)
 	else:
@@ -849,7 +835,7 @@ func get_texture_paths(potato_type: String) -> Dictionary:
 
 func clear_potato_textures():
 	potato_mugshot.texture = null
-	$"Sprite2D (Passport)/Sprite2D (Open Passport)/Sprite2D (PassportPhoto)".texture = null
+	$Gameplay/InteractiveElements/Passport/OpenPassport/PassportPhoto.texture = null
 	
 func _input(event):
 	if event is InputEventKey:
@@ -880,15 +866,15 @@ func _input(event):
 			if holding_stamp:
 				holding_stamp = false
 				dragged_sprite = null
-				$"Sprite2D (Approval Stamp)/Sprite2D (StampShadow)".visible = false
-				$"Sprite2D (Rejection Stamp)/Sprite2D (StampShadow)".visible = false
+				$Gameplay/InteractiveElements/ApprovalStamp/StampShadow.visible = false
+				$Gameplay/InteractiveElements/RejectionStamp/StampShadow.visible = false
 		
 		elif event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
 			if not holding_stamp:
 				if dragged_sprite == passport:
-					$"Sprite2D (Passport)/Sprite2D (Close Passport)/GivePromptDialogue".visible = false
+					$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = false
 					var drop_pos = get_global_mouse_position()
-					if interaction_table.get_rect().has_point(interaction_table.to_local(drop_pos)):
+					if inspection_table.get_rect().has_point(inspection_table.to_local(drop_pos)):
 						open_passport_action()
 					if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
 						close_passport_action()
@@ -897,7 +883,7 @@ func _input(event):
 						remove_stamp()
 				elif dragged_sprite == bulletin:
 					var drop_pos = get_global_mouse_position()
-					if interaction_table.get_rect().has_point(interaction_table.to_local(drop_pos)):
+					if inspection_table.get_rect().has_point(inspection_table.to_local(drop_pos)):
 						open_bulletin_action()
 					if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
 						close_bulletin_action()
@@ -912,24 +898,24 @@ func _input(event):
 			stamp_shadow.visible = true
 		
 func open_passport_action():
-	$"Sprite2D (Passport)".texture = preload("res://assets/documents/passport-old.png")
-	$"Sprite2D (Passport)/Sprite2D (Open Passport)".visible = true
-	$"Sprite2D (Passport)/Sprite2D (Close Passport)".visible = false
+	$Gameplay/InteractiveElements/Passport.texture = preload("res://assets/documents/passport-old.png")
+	$Gameplay/InteractiveElements/Passport/OpenPassport.visible = true
+	$Gameplay/InteractiveElements/Passport/ClosedPassport.visible = false
 	
 func close_passport_action():
-	$"Sprite2D (Passport)".texture = preload("res://assets/documents/closed_passport_small/closed_passport_small.png")
-	$"Sprite2D (Passport)/Sprite2D (Close Passport)".visible = true
-	$"Sprite2D (Passport)/Sprite2D (Open Passport)".visible = false
+	$Gameplay/InteractiveElements/Passport.texture = preload("res://assets/documents/closed_passport_small/closed_passport_small.png")
+	$Gameplay/InteractiveElements/Passport/ClosedPassport.visible = true
+	$Gameplay/InteractiveElements/Passport/OpenPassport.visible = false
 	
 func open_bulletin_action():
-	$"Sprite2D (Bulletin)".texture = preload("res://assets/documents/bulletin/bulletin_main_page.png")
-	$"Sprite2D (Bulletin)/Sprite2D (Open Bulletin)".visible = true
-	$"Sprite2D (Bulletin)/Sprite2D (Close Bulletin)".visible = false
+	$Gameplay/InteractiveElements/Bulletin.texture = preload("res://assets/documents/bulletin/bulletin_main_page.png")
+	$Gameplay/InteractiveElements/Bulletin/OpenBulletin.visible = true
+	$Gameplay/InteractiveElements/Bulletin/ClosedBulletin.visible = false
 	
 func close_bulletin_action():
-	$"Sprite2D (Bulletin)".texture = preload("res://assets/documents/bulletin/closed_bulletin_small/closed_bulletin_small.png")
-	$"Sprite2D (Bulletin)/Sprite2D (Close Bulletin)".visible = true
-	$"Sprite2D (Bulletin)/Sprite2D (Open Bulletin)".visible = false
+	$Gameplay/InteractiveElements/Bulletin.texture = preload("res://assets/documents/bulletin/closed_bulletin_small/closed_bulletin_small.png")
+	$Gameplay/InteractiveElements/Bulletin/ClosedBulletin.visible = true
+	$Gameplay/InteractiveElements/Bulletin/OpenBulletin.visible = false
 	
 func find_topmost_sprite_at(pos: Vector2):
 	var topmost_sprite = null
@@ -947,9 +933,9 @@ func play_random_stamp_sound():
 		preload("res://assets/audio/stamp_sound_4.mp3"),
 		preload("res://assets/audio/stamp_sound_5.mp3")
 	]
-	if !$"AudioStreamPlayer2D (SFX)".is_playing():
-		$"AudioStreamPlayer2D (SFX)".stream = stamp_sounds.pick_random()
-		$"AudioStreamPlayer2D (SFX)".play()
+	if !$SystemManagers/AudioManager/SFXPool.is_playing():
+		$SystemManagers/AudioManager/SFXPool.stream = stamp_sounds.pick_random()
+		$SystemManagers/AudioManager/SFXPool.play()
 
 func apply_stamp(stamp):
 	var mouse_pos = get_global_mouse_position()
@@ -974,7 +960,7 @@ func apply_stamp(stamp):
 		final_stamp.position = stamped_object.to_local(mouse_pos)
 		final_stamp.z_index = APPLIED_STAMP_Z_INDEX
 		final_stamp.modulate.a = 0  # Start invisible
-		$"Sprite2D (Passport)/Sprite2D (Open Passport)".add_child(final_stamp)
+		$Gameplay/InteractiveElements/Passport/OpenPassport.add_child(final_stamp)
 		
 		# Create and start the animation
 		var tween = create_tween()
@@ -1005,7 +991,7 @@ func apply_stamp(stamp):
 func remove_stamp():
 	print("Processing passport...")
 	# Get the parent node
-	var open_passport = $"Sprite2D (Passport)/Sprite2D (Open Passport)"
+	var open_passport = $Gameplay/InteractiveElements/Passport/OpenPassport
 	var stamp_count = 0
 	var approval_status = null
 	
@@ -1026,7 +1012,7 @@ func remove_stamp():
 
 	print("This passport has been processed as %s" % approval_status)
 	
-	var passport_book = $"Sprite2D (Passport)"
+	var passport_book = $Gameplay/InteractiveElements/Passport
 	# Animate the potato mugshot and passport exit
 	var tween = create_tween()
 	tween.set_parallel(true)
@@ -1064,18 +1050,18 @@ func move_potato_along_path(approval_status):
 	
 	# set path based on approval status
 	if approval_status == "approved":
-		path = $"Path2D (ApprovePath)"
+		path = $Gameplay/Paths/ApprovePath
 		process_decision(true)
 		
 	if approval_status == "timedout":
-		path = $"Path2D (TimedOutPath)"
+		path = $Gameplay/Paths/TimedOutPath
 		timedOut()
 		
 	else: 
 		if randi() % 5 == 0:  # 20% chance to go sicko mode
-			path =$"Path2D (RunnerPath)"
+			path = $Gameplay/Paths/RunnerPath
 		else:
-			path = $"Path2D (RejectPath)"
+			path = $Gameplay/Paths/RejectPath
 		process_decision(false)
 			
 	# Calculate score change
@@ -1086,7 +1072,7 @@ func move_potato_along_path(approval_status):
 	potato_person.position = Vector2.ZERO
 	path_follow.progress_ratio = 0.0
 	
-	passport = $"Sprite2D (Passport)"
+	passport = $Gameplay/InteractiveElements/Passport
 	passport.modulate.a = 0
 	
 	var exit_tween = create_tween()
@@ -1106,19 +1092,8 @@ func move_potato_along_path(approval_status):
 		)
 	
 func reset_scene():
-	# reset mugshot
-	#potato_mugshot.modulate.a = 0
 	potato_mugshot.position.x = suspect_panel.position.x
-	
-	# reset passport
-	# close_passport_action()
-	# passport.position = Vector2(suspect_panel.position.x, suspect_panel.position.y + suspect_panel.texture.get_height () / 5)
-	#passport.modulate.a = 0
-	
-	$"Label (JudgementInfo)".text = ""
-	
-	# Clear the current potato info
-	# current_potato_info = null
+	$UI/Labels/JudgementLabel.text = ""
 	
 func find_stampable_object_at(pos: Vector2):
 	for sprite in draggable_sprites:
