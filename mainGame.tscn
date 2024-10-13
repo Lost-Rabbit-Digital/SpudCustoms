@@ -231,8 +231,6 @@ offset_bottom = 40.0
 
 [node name="SFXPool" type="AudioStreamPlayer2D" parent="SystemManagers/AudioManager"]
 
-[node name="BGMPool" type="AudioStreamPlayer2D" parent="SystemManagers/AudioManager"]
-
 [node name="MusicManager" parent="SystemManagers" instance=ExtResource("27_2tnfb")]
 
 [node name="QueueManager" type="Node2D" parent="SystemManagers"]

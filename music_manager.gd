@@ -1,6 +1,6 @@
 extends Node
 
-@onready var bgm_player = $"../AudioManager/BGMPool"
+@onready var bgm_player = $BGMPlayer
 
 const DEFAULT_VOLUME_PERCENT = 40.0
 

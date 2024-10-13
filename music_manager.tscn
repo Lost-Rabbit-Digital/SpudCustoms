@@ -5,6 +5,6 @@
 [node name="MusicManager" type="Node"]
 script = ExtResource("1_1yjvi")
 
-[node name="AudioStreamPlayer2D (BGM)" type="AudioStreamPlayer2D" parent="."]
+[node name="BGMPlayer" type="AudioStreamPlayer2D" parent="."]
 
-[connection signal="finished" from="AudioStreamPlayer2D (BGM)" to="." method="_on_audio_stream_player_2d_bgm_finished"]
+[connection signal="finished" from="BGMPlayer" to="." method="_on_audio_stream_player_2d_bgm_finished"]
