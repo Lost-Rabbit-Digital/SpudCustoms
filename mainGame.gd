@@ -106,7 +106,7 @@ func _ready():
 	# Get references to the new nodes
 	passport = $Gameplay/InteractiveElements/Passport
 	bulletin = $Gameplay/InteractiveElements/Bulletin
-	rulebook = $"Sprite2D (Rulebook)"
+	rulebook = $Gameplay/InteractiveElements/Rulebook
 	inspection_table = $Gameplay/InspectionTable
 	suspect_panel = $Gameplay/SuspectPanel
 	suspect_panel_front = $Gameplay/SuspectPanel/SuspectPanelFront
@@ -548,7 +548,7 @@ func _process(_delta):
 		$Gameplay/InteractiveElements/ApprovalStamp.visible = false
 		$Gameplay/InteractiveElements/RejectionStamp.visible = false
 	else:
-		$Container/pause_menu.visible = false
+		$PauseContainer/PauseMenu.visible = false
 		$Gameplay/InteractiveElements/ApprovalStamp.visible = true
 		$Gameplay/InteractiveElements/RejectionStamp.visible = true
 		
@@ -901,14 +901,14 @@ func close_bulletin_action():
 	$Gameplay/InteractiveElements/Bulletin/OpenBulletin.visible = false
 	
 func open_rulebook_action():
-	$"Sprite2D (Rulebook)".texture = preload("res://assets/documents/rulebook/rulebook_open.png")
-	$"Sprite2D (Rulebook)/Sprite2D (Closed Rulebook)".visible = false
-	$"Sprite2D (Rulebook)/Sprite2D (Open Rulebook)".visible = true
+	$Gameplay/InteractiveElements/Rulebook.texture = preload("res://assets/documents/rulebook/rulebook_open.png")
+	$Gameplay/InteractiveElements/Rulebook/ClosedRulebook.visible = false
+	$Gameplay/InteractiveElements/Rulebook/OpenRulebook.visible = true
 	
 func close_rulebook_action():
-	$"Sprite2D (Rulebook)".texture = preload("res://assets/documents/rulebook/rulebook_closed.png")
-	$"Sprite2D (Rulebook)/Sprite2D (Closed Rulebook)".visible = true
-	$"Sprite2D (Rulebook)/Sprite2D (Open Rulebook)".visible = false
+	$Gameplay/InteractiveElements/Rulebook.texture = preload("res://assets/documents/rulebook/rulebook_closed.png")
+	$Gameplay/InteractiveElements/Rulebook/ClosedRulebook.visible = true
+	$Gameplay/InteractiveElements/Rulebook/OpenRulebook.visible = false
 	
 func find_topmost_sprite_at(pos: Vector2):
 	var topmost_sprite = null
