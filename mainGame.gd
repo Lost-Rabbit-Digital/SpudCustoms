@@ -81,7 +81,7 @@ func _ready():
 	setup_bulletin_tutorial_timer()
 	set_difficulty(difficulty_level)
 	update_date_display()
-	queue_manager = $SystemManagers/QueueManager 
+	queue_manager = $SystemManagers/QueueManager  # Make sure to add QueueManager as a child of Main
 	generate_rules()
 	setup_spawn_timer()
 	draggable_sprites = [
@@ -102,20 +102,28 @@ func _ready():
 	# Add restoration of session score for continued shifts
 	if Global.final_score > 0:
 		score = Global.final_score
-		$"Label (ScoreLabel)".text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
+		$UI/Labels/ScoreLabel.text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
 	# Get references to the new nodes
 	passport = $Gameplay/InteractiveElements/Passport
 	bulletin = $Gameplay/InteractiveElements/Bulletin
-	inspection_table = $Gameplay/CustomsOffice/InspectionTable
-	suspect_panel = $Gameplay/CustomsOffice/SuspectPanel
-	suspect_panel_front = $Gameplay/CustomsOffice/SuspectPanel/SuspectPanelFront
-	potato_mugshot = $Gameplay/CustomsOffice/PotatoMugshot
+	rulebook = $"Sprite2D (Rulebook)"
+	inspection_table = $Gameplay/InspectionTable
+	suspect_panel = $Gameplay/SuspectPanel
+	suspect_panel_front = $Gameplay/SuspectPanel/SuspectPanelFront
+	suspect = $Gameplay/PotatoMugshot
 	
-	$Gameplay/Labels/StrikesLabel.text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
-	
+	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
+
 	# Add closed passport to draggable sprites
 	draggable_sprites.append(passport)
 	draggable_sprites.append(bulletin)
+	draggable_sprites.append(rulebook)
+	
+func setup_megaphone_flash_timer():
+	#print("FLASH TIMER: Setup megaphone flash timer")
+	megaphone_flash_timer = $SystemManagers/Timers/MegaphoneFlashTimer
+	megaphone_flash_timer.wait_time = MEGAPHONE_FLASH_INTERVAL
+	megaphone_flash_timer.start()
 	
 func set_difficulty(level):
 	difficulty_level = level
@@ -380,56 +388,6 @@ func update_date_display():
 	var formatted_date = "%04d.%02d.%02d" % [current_date.year, current_date.month, current_date.day]
 	$"Label (DateLabel)".text = formatted_date
 
-func _ready():
-	setup_megaphone_flash_timer()
-	setup_bulletin_tutorial_timer()
-	set_difficulty(difficulty_level)
-	update_date_display()
-	queue_manager = $SystemManagers/QueueManager  # Make sure to add QueueManager as a child of Main
-	generate_rules()
-	setup_spawn_timer()
-	draggable_sprites = [
-		$Gameplay/InteractiveElements/Passport,
-		$Gameplay/InteractiveElements/ApprovalStamp,
-		$Gameplay/InteractiveElements/RejectionStamp
-	]
-	# Ensure sprites are in the scene tree and set initial z-index
-	for sprite in draggable_sprites:
-		if not is_instance_valid(sprite):
-			push_warning("Sprite not found: " + sprite.name)
-		else:
-			if "Stamp" in sprite.name:
-				sprite.z_index = PHYSICAL_STAMP_Z_INDEX
-			else:
-				sprite.z_index = PASSPORT_Z_INDEX
-				
-	# Add restoration of session score for continued shifts
-	if Global.final_score > 0:
-		score = Global.final_score
-		$UI/Labels/ScoreLabel.text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
-	# Get references to the new nodes
-	passport = $Gameplay/InteractiveElements/Passport
-	bulletin = $Gameplay/InteractiveElements/Bulletin
-	rulebook = $"Sprite2D (Rulebook)"
-	interaction_table = $InteractionTableBackground
-	suspect_panel = $"Sprite2D (Suspect Panel)"
-	suspect_panel_front = $"Sprite2D (Suspect Panel)/SuspectPanelFront"
-	suspect = $"Sprite2D (PotatoMugshot)"
-	
-	$"Label (StrikesLabel)".text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
-
-	# Add closed passport to draggable sprites
-	draggable_sprites.append(passport)
-	draggable_sprites.append(bulletin)
-	draggable_sprites.append(rulebook)
-	
-func setup_megaphone_flash_timer():
-	#print("FLASH TIMER: Setup megaphone flash timer")
-	megaphone_flash_timer = $SystemManagers/Timers/MegaphoneFlashTimer
-	megaphone_flash_timer.wait_time = MEGAPHONE_FLASH_INTERVAL
-	megaphone_flash_timer.start()
-
-
 func _on_megaphone_flash_timer_timeout():
 	if not is_potato_in_office:
 		$Gameplay/CustomsOffice/Megaphone/FlashAlert.visible = !$Gameplay/CustomsOffice/Megaphone/FlashAlert.visible
@@ -644,7 +602,7 @@ func _process(_delta):
 			open_sound_played = false  # Reset open sound flag
 	
 	# Check for opening passport
-	if interaction_table.get_rect().has_point(interaction_table.to_local(mouse_pos)) and (dragged_sprite == bulletin or dragged_sprite == passport or dragged_sprite == rulebook):
+	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)) and (dragged_sprite == bulletin or dragged_sprite == passport or dragged_sprite == rulebook):
 		if not open_sound_played:
 			if dragged_sprite == passport and is_passport_open == false:
 				open_passport_action()
@@ -942,7 +900,7 @@ func _input(event):
 						close_bulletin_action()
 				elif dragged_sprite == rulebook:
 					var drop_pos = get_global_mouse_position()
-					if interaction_table.get_rect().has_point(interaction_table.to_local(drop_pos)):
+					if inspection_table.get_rect().has_point(inspection_table.to_local(drop_pos)):
 						open_rulebook_action()
 					if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
 						close_rulebook_action()
