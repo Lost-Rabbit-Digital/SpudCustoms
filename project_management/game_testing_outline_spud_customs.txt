@@ -1,67 +1,53 @@
-Hi there, 
+Dear Playtester,
+Thank you for agreeing to playtest "Spud Customs." Your professional insights are crucial for improving our game. 
+Please follow the instructions below:
 
-Thank you for your time and willingness to test my game, Spud Customs. 
+Game Access
+Play online or download: https://lost-rabbit-digital.itch.io/spud-customs
 
-You can play the game directly in the browser, or download it locally here: https://lost-rabbit-digital.itch.io/spud-customs
+Playtesting Instructions
+Play the game for at least one full shift.
+Pay attention to gameplay mechanics, user interface, and overall experience.
+Note any bugs, glitches, or areas for improvement.
 
-I programmed this game in 72 hours for the 2024 Ludum Dare 56 game jam and I'm considering expanding it into a full Steam release.
+Evaluation Criteria
+Please rate the following aspects on a scale of 0-5 (0 being terrible, 5 being excellent):
+Overall Impression: [   ]
+Gameplay Fun Factor: [   ]
+Audio Quality: [   ]
+Visual Appeal: [   ]
+Theme/Mood Coherence: [   ]
 
-I appreciate your expertise and look forward to your feedback. 
+Feedback Report
+Please provide detailed feedback on:
 
-Please focus on testing the following aspects of the game:
+Gameplay Experience:
+Intuitive controls?
+Engaging mechanics?
+Difficulty balance?
 
-Potato processing workflow:
+Technical Performance:
+Any crashes or freezes?
+Frame rate issues?
+Loading times?
 
-Test the megaphone functionality to call in new potatoes
-Verify that potato information is correctly displayed in the passport
-Check if the stamp application process works smoothly (both approval and rejection stamps)
-Ensure the potato exits correctly based on the stamp applied
+User Interface:
+Menu navigation
+In-game UI clarity
+Information presentation
 
+Audio-Visual Elements:
+Graphics quality
+Sound effects and music
+Animation smoothness
 
-Game mechanics:
+Suggestions for Improvement:
+What features would enhance the game?
+Any elements that felt lacking or unnecessary?
 
-Test if the score and strikes are updating correctly
-Verify that the game ends appropriately after 5 strikes
-Check if the game transitions to the win scene when the score reaches a multiple of 25
+Bug Report:
+Describe any bugs encountered (with steps to reproduce if possible)
 
-
-User interface interactions:
-
-Test dragging and dropping of passports and bulletin
-Verify that opening and closing animations for passports and bulletin work correctly
-Check if the sound effects play at appropriate times (e.g., stamp sounds, customs officer phrases)
-
-
-Rule system:
-
-Verify that new rules are generated and displayed correctly
-Test if the game correctly identifies valid and invalid potatoes based on the current rules
-
-
-Queue management:
-
-Check if new potatoes are spawning correctly in the queue
-Verify that the queue moves properly when potatoes are processed
-
-
-Visual elements:
-
-Ensure that potato textures and animations are displaying correctly
-Check for any visual glitches or misalignments in the UI
-
-
-Performance:
-
-Test for any lag or frame rate issues, especially when multiple animations are playing
-
-
-Edge cases:
-
-Try rapidly clicking buttons or dragging multiple objects simultaneously
-Test what happens if you try to process a potato without applying a stamp
-
-Please document any bugs, glitches, or areas for improvement you encounter during testing. 
-
-Your thorough evaluation will help me refine and enhance the game experience. 
-
-Thank you again for your assistance!
+Additional Comments
+Please provide any other observations or suggestions here.
+Your thorough and honest feedback is invaluable to us. Thank you for your professional service in helping improve "Spud Customs"!
