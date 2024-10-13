@@ -8,8 +8,8 @@ var potatoes: Array = []
 var spawn_point: Vector2
 
 func _ready():
-	#var path_node_path: NodePath = $"../../Gameplay/Paths/SpuddyQueue"
-	path = get_node($"../../Gameplay/Paths/SpuddyQueue")
+	var path_node_path: NodePath = $"../Gameplay/Paths/SpuddyQueue"
+	path = get_node(path_node_path)
 		
 	#	path_node_path)
 	curve = path.curve
