@@ -6,12 +6,11 @@ var curve: Curve2D
 var max_potatoes: int
 var potatoes: Array = []
 var spawn_point: Vector2
+var path_node_path: NodePath
 
 func _ready():
-	var path_node_path: NodePath = $"../Gameplay/Paths/SpuddyQueue"
+	path_node_path = $"../../Gameplay/Paths/SpuddyQueue".get_path()
 	path = get_node(path_node_path)
-		
-	#	path_node_path)
 	curve = path.curve
 	spawn_point = curve.get_point_position(0)
 	print("Path loaded, spawn point set to: ", spawn_point)

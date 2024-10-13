@@ -152,7 +152,7 @@ func adjust_game_parameters():
 
 func setup_bulletin_tutorial_timer():
 	#print("FLASH TIMER: Setup bulletin flash timer")
-	bulletin_tutorial_timer = $BulletinFlashTimer
+	bulletin_tutorial_timer = $SystemManagers/Timers/BulletinFlashTimer
 	bulletin_tutorial_timer.wait_time = BULLETIN_TUTORIAL_FLASH_INTERVAL
 	bulletin_tutorial_timer.start()
 
@@ -201,14 +201,7 @@ func generate_rules():
 		"Chip Hill exports are currently restricted.",
 		"Murphyland potatoes need work permit verification. Reject!",
 		"Colcannon citizens must be rejected due to seasonings.",
-		"Pratie Point potatoes require rejection on agricultural grounds.",
-
-		# Expiration-based rules
-		"Expired potatoes are not allowed.",
-		"Reject potatoes expiring within 30 days.",
-		"Reject potatoes with less than 5 years until expiry.",
-		"Potatoes must have at least 1 year until expiration.",
-		"Reject potatoes with less than 6 months to expiry.",
+		"Pratie Point potatoes require rejection on agricultural grounds."
 	]
 	# Randomly select 2-3 rules
 	current_rules.shuffle()
@@ -352,32 +345,6 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 					return false
 			"Pratie Point potatoes require rejection on agricultural grounds.":
 				if potato_info.country_of_issue == "Pratie Point":
-					return false
-			# Expiration-based rules
-			"Expired potatoes are not allowed.":
-				print("Checking if is_expired", is_expired(potato_info.expiration_date))
-				if is_expired(potato_info.expiration_date):
-					"Potato is expired. Return false"
-					return false
-			"Reject potatoes expiring within 30 days.":
-				var days_to_expiry = days_until_expiry(potato_info.expiration_date)
-				print("Checking days to expiry", days_until_expiry(potato_info.expiration_date))
-				if days_to_expiry >= 0 and days_to_expiry <= 30:
-					return false
-			"Reject potatoes with less than 5 years until expiry.":
-				var years_to_expiry = years_until_expiry(potato_info.expiration_date)
-				print("Checking years to expiry", years_until_expiry(potato_info.expiration_date))
-				if years_to_expiry <= 5:
-					return false
-			"Potatoes must have at least 1 year until expiration.":
-				var years_to_expiry = years_until_expiry(potato_info.expiration_date)
-				print("Checking years to expiry", years_until_expiry(potato_info.expiration_date))
-				if years_to_expiry < 1:
-					return false
-			"Reject potatoes with less than 6 months to expiry.":
-				var days_to_expiry = days_until_expiry(potato_info.expiration_date)
-				print("Checking days to expiry", days_until_expiry(potato_info.expiration_date))
-				if days_to_expiry >= 0 and days_to_expiry < 180:
 					return false
 	print("INFO: This potato should be allowed in, returning true.")
 	return true
