@@ -1,7 +1,7 @@
 # Incomplete tasks list
 
 ## Stretch goals
-[ ] - Multiplayer?
+[ ] - Multiplayer? 8th / 15th of November for schedule
 [ ] - How should we do lighting for the environment and interactables? Real-time or baked into the pixel art?
 
 ## Urgent
