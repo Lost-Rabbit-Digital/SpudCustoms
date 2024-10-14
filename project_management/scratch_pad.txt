@@ -1,5 +1,7 @@
 # Incomplete tasks list
 
+- Multiplayer?
+
 ## Urgent
 [ ] - Fix the pixel resolution of the text
 [ ] - "Change verbage to 2 and under"
@@ -12,8 +14,6 @@
 [ ] - Make new stamp shadow, make it a highlight instead of a shadow
 [ ] - Custom cursor for hover, click, grab, drag
 
-
-
 ## Quality of life
 [ ] - Save in a global if the player has finished the tutorial so every shift doesn't start the same interaction
 [ ] - Overlay of potato customs officer talking
@@ -22,8 +22,6 @@
 [ ] - Shadows when the player begins to drag the item, they can click with no reaction
 [ ] - 
 [ ] - Cursor which changes on interaction hover 
-
-
 
 ## Graphical
 [ ] - Add officers patrolling the area
