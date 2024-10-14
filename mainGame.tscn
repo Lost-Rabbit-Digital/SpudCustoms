@@ -453,7 +453,6 @@ texture = ExtResource("20_pd2wg")
 z_index = 2
 texture_filter = 1
 position = Vector2(94, 487)
-scale = Vector2(3, 3)
 texture = ExtResource("28_uvib1")
 
 [node name="StampShadow" type="Sprite2D" parent="Gameplay/InteractiveElements/ApprovalStamp"]
@@ -479,7 +478,6 @@ texture = ExtResource("16_qj41b")
 [node name="RejectionStamp" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_index = 2
 position = Vector2(93, 617)
-scale = Vector2(3, 3)
 texture = ExtResource("31_c10l6")
 
 [node name="StampShadow" type="Sprite2D" parent="Gameplay/InteractiveElements/RejectionStamp"]
@@ -524,8 +522,8 @@ curve = SubResource("Curve2D_uenca")
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/BulletinFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Bulletin/OpenBulletin/TurnRight" to="Gameplay/InteractiveElements/Bulletin" method="_on_texture_button_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Bulletin/OpenBulletin/TurnLeft" to="Gameplay/InteractiveElements/Bulletin" method="_on_texture_button_turn_left_pressed"]
