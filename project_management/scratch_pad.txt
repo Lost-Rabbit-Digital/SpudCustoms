@@ -1,10 +1,12 @@
 # Incomplete tasks list
 
-- Multiplayer?
+## Stretch goals
+[ ] - Multiplayer?
+[ ] - How should we do lighting for the environment and interactables? Real-time or baked into the pixel art?
 
 ## Urgent
 [ ] - Fix the pixel resolution of the text
-[ ] - "Change verbage to 2 and under"
+[ ] - "Change verbiage to 2 and under"
 [ ] - Make full-screen appear in the main game instead of just the main menu
 [ ] - Make an options menu
 [ ] - Stamp doesn't match the rest of the pixel feel, different resolution
