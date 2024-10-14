@@ -18,7 +18,6 @@
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="13_wxn24"]
 [ext_resource type="Texture2D" uid="uid://cbthvh8tq02ee" path="res://assets/potatoes/document_photos/purple_majesty.png" id="14_al1cy"]
 [ext_resource type="Texture2D" uid="uid://b1ux0afanqtu7" path="res://assets/stamps/rejection_stamp.png" id="14_pjwbq"]
-[ext_resource type="Texture2D" uid="uid://hrfuvprbphea" path="res://assets/stamps/approval_stamp.png" id="15_f4m32"]
 [ext_resource type="Texture2D" uid="uid://c0dbfc2uut8qn" path="res://assets/stamps/stamp_shadow.png" id="16_qj41b"]
 [ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://give_prompt_dialogue.png" id="17_mr1ft"]
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/background.png" id="18_jl4i3"]
@@ -29,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://assets/alerts/bulletin_alert_box.png" id="22_3pqlk"]
 [ext_resource type="Texture2D" uid="uid://bfhpafskct413" path="res://assets/documents/bulletin/page_turn_left.png" id="22_ir8f4"]
 [ext_resource type="PackedScene" uid="uid://bju5udyr0e5rr" path="res://music_manager.tscn" id="27_2tnfb"]
+[ext_resource type="Texture2D" uid="uid://ctlvc3h0ku18v" path="res://assets/stamps/approval_stamp_1.png" id="28_j7e2j"]
 [ext_resource type="PackedScene" uid="uid://bp2pkcox316n0" path="res://menus/pause_menu.tscn" id="28_vb6g0"]
 [ext_resource type="Texture2D" uid="uid://y3bfxrfq7tmx" path="res://assets/documents/rulebook/rulebook_closed.png" id="31_d7mwj"]
 
@@ -450,8 +450,9 @@ texture = ExtResource("20_pd2wg")
 
 [node name="ApprovalStamp" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_index = 2
-position = Vector2(103, 486)
-texture = ExtResource("15_f4m32")
+position = Vector2(99, 480)
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("28_j7e2j")
 
 [node name="StampShadow" type="Sprite2D" parent="Gameplay/InteractiveElements/ApprovalStamp"]
 visible = false
@@ -507,8 +508,8 @@ curve = SubResource("Curve2D_uenca")
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/BulletinFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Bulletin/OpenBulletin/TurnRight" to="Gameplay/InteractiveElements/Bulletin" method="_on_texture_button_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Bulletin/OpenBulletin/TurnLeft" to="Gameplay/InteractiveElements/Bulletin" method="_on_texture_button_turn_left_pressed"]

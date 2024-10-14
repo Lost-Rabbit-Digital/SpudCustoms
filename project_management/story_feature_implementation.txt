@@ -23,92 +23,92 @@ var current_chapter = 0
 var potatoes_processed_in_chapter = 0
 var max_potatoes_per_chapter = 25
 var story_events = [
-    # Array of story events, one per chapter
+	# Array of story events, one per chapter
 ]
 
 func start_story_mode():
-    current_chapter = 0
-    start_new_chapter()
+	current_chapter = 0
+	start_new_chapter()
 
 func start_new_chapter():
-    current_chapter += 1
-    potatoes_processed_in_chapter = 0
-    present_chapter_intro()
-    update_rules_and_difficulty()
+	current_chapter += 1
+	potatoes_processed_in_chapter = 0
+	present_chapter_intro()
+	update_rules_and_difficulty()
 
 func present_chapter_intro():
-    # Show a cutscene or dialogue sequence
-    var story_scene = load("res://scenes/story/chapter_" + str(current_chapter) + "_intro.tscn").instance()
-    add_child(story_scene)
-    # Wait for scene to finish, then start gameplay
+	# Show a cutscene or dialogue sequence
+	var story_scene = load("res://scenes/story/chapter_" + str(current_chapter) + "_intro.tscn").instance()
+	add_child(story_scene)
+	# Wait for scene to finish, then start gameplay
 
 func update_rules_and_difficulty():
-    # Adjust rules and difficulty based on current chapter
-    if current_chapter > 3:
-        set_difficulty("Normal")
-    if current_chapter > 7:
-        set_difficulty("Hard")
-    generate_rules()
+	# Adjust rules and difficulty based on current chapter
+	if current_chapter > 3:
+		set_difficulty("Normal")
+	if current_chapter > 7:
+		set_difficulty("Hard")
+	generate_rules()
 
 func process_decision(allowed):
-    # Existing decision processing logic
-    potatoes_processed_in_chapter += 1
-    
-    if potatoes_processed_in_chapter >= max_potatoes_per_chapter:
-        end_chapter()
+	# Existing decision processing logic
+	potatoes_processed_in_chapter += 1
+	
+	if potatoes_processed_in_chapter >= max_potatoes_per_chapter:
+		end_chapter()
 
 func end_chapter():
-    present_chapter_outro()
-    if current_chapter < story_events.size():
-        start_new_chapter()
-    else:
-        end_story_mode()
+	present_chapter_outro()
+	if current_chapter < story_events.size():
+		start_new_chapter()
+	else:
+		end_story_mode()
 
 func present_chapter_outro():
-    # Show end-of-day summary, story progression, etc.
-    var outro_scene = load("res://scenes/story/chapter_" + str(current_chapter) + "_outro.tscn").instance()
-    add_child(outro_scene)
+	# Show end-of-day summary, story progression, etc.
+	var outro_scene = load("res://scenes/story/chapter_" + str(current_chapter) + "_outro.tscn").instance()
+	add_child(outro_scene)
 
 func end_story_mode():
-    # Show game ending, credits, etc.
-    pass
+	# Show game ending, credits, etc.
+	pass
 
 func _process(delta):
-    if is_story_mode and is_potato_in_office:
-        check_for_story_events()
+	if is_story_mode and is_potato_in_office:
+		check_for_story_events()
 
 func check_for_story_events():
-    # Check if any story events should trigger based on current state
-    for event in story_events[current_chapter]:
-        if event.should_trigger():
-            trigger_story_event(event)
+	# Check if any story events should trigger based on current state
+	for event in story_events[current_chapter]:
+		if event.should_trigger():
+			trigger_story_event(event)
 
 func trigger_story_event(event):
-    match event.type:
-        "dialogue":
-            show_dialogue(event.content)
-        "bulletin_note":
-            add_bulletin_note(event.content)
-        "radio_broadcast":
-            play_radio_broadcast(event.content)
-        "newspaper_headline":
-            update_newspaper_headline(event.content)
+	match event.type:
+		"dialogue":
+			show_dialogue(event.content)
+		"bulletin_note":
+			add_bulletin_note(event.content)
+		"radio_broadcast":
+			play_radio_broadcast(event.content)
+		"newspaper_headline":
+			update_newspaper_headline(event.content)
 
 func show_dialogue(content):
-    # Implement dialogue system
-    pass
+	# Implement dialogue system
+	pass
 
 func add_bulletin_note(content):
-    # Add note to bulletin board
-    pass
+	# Add note to bulletin board
+	pass
 
 func play_radio_broadcast(content):
-    # Play audio and/or show subtitles
-    pass
+	# Play audio and/or show subtitles
+	pass
 
 func update_newspaper_headline(content):
-    # Update in-game newspaper prop
-    pass
+	# Update in-game newspaper prop
+	pass
 ```
 
 This structure allows you to:
@@ -127,3 +127,188 @@ To flesh out the story:
 5. Consider adding character development for the customs officer (player character) and recurring potato characters.
 
 Remember to allow players to skip story elements if they wish, and consider adding a "Story Recap" feature in the pause menu for players who want to refresh their memory on the plot.
+
+
+# Spud Customs: Godot 4 Implementation Guide
+
+## Chapter 1: "Peeling Back the Layers"
+
+### Scene Setup
+1. Create a main scene for the border checkpoint
+   - Use `Node2D` as the root node
+   - Add child nodes for background, checkpoint desk, and character positions
+
+2. Implement a dialogue system
+   - Create a `DialogueManager` singleton
+   - Use JSON files to store dialogue trees
+
+3. Design the potato processing interface
+   - Create a `Control` node for the UI
+   - Add `TextureRect` nodes for document display
+   - Implement drag-and-drop functionality for stamps
+
+### Gameplay Mechanics
+1. Tutorial system
+   ```gdscript
+   func start_tutorial():
+	   # Show tutorial prompts
+	   # Highlight interactive elements
+	   # Guide player through basic actions
+   ```
+
+2. Potato inspection
+   ```gdscript
+   func inspect_potato(potato_data):
+	   # Display potato information
+	   # Allow player to examine documents
+	   # Implement decision-making process
+   ```
+
+3. Suspicion meter
+   ```gdscript
+   var suspicion_level = 0
+   
+   func update_suspicion(amount):
+	   suspicion_level += amount
+	   if suspicion_level > THRESHOLD:
+		   trigger_special_event()
+   ```
+
+### Key Event: Nervous Potato Encounter
+1. Create a unique potato character
+2. Implement special dialogue options
+3. Add inconsistencies to the potato's documents
+
+### Outro and World-building
+1. Create an end-of-day summary screen
+2. Implement a news ticker system for world events
+   ```gdscript
+   func update_news_ticker():
+	   # Cycle through news items
+	   # Update text on screen
+   ```
+
+## Chapter 2: "The Underground Root Cellar"
+
+### New Gameplay Elements
+1. Message interception minigame
+   ```gdscript
+   func start_interception_minigame():
+	   # Generate coded message
+	   # Allow player to decode using clues
+	   # Reward successful decoding
+   ```
+
+2. Staff meeting cutscene
+   - Use animated sprites for characters
+   - Implement dialogue choices affecting reputation
+
+3. Late-night stakeout mechanic
+   ```gdscript
+   func start_stakeout():
+	   # Set up night vision effect
+	   # Implement suspicion meter
+	   # Allow player to observe and record events
+   ```
+
+### World-building
+1. Create propaganda posters for Spud Green
+   - Use `Sprite2D` nodes with changing textures
+
+2. Implement a reputation system
+   ```gdscript
+   var reputation = {
+	   "government": 0,
+	   "resistance": 0
+   }
+   
+   func update_reputation(faction, amount):
+	   reputation[faction] += amount
+   ```
+
+## Chapter 3: "The Mashing Fields"
+
+### New Gameplay Mechanics
+1. Special processing queue
+   ```gdscript
+   func process_special_potato(potato_data):
+	   # Display unique identifiers
+	   # Implement morally challenging decisions
+	   # Track player choices for story branching
+   ```
+
+2. Clandestine meeting system
+   ```gdscript
+   func trigger_secret_meeting():
+	   # Set up secure location
+	   # Implement timed dialogue choices
+	   # Reveal key plot information
+   ```
+
+3. Confrontation dialogue system
+   ```gdscript
+   func start_confrontation(character):
+	   # Load character-specific dialogue
+	   # Implement argument mechanics
+	   # Allow player to present evidence
+   ```
+
+### World-building
+1. Create an awards ceremony cutscene
+2. Design the Mashing Fields reveal
+   - Use particle effects for a grim atmosphere
+   - Implement shocking visual reveals
+
+## Chapter 4: "Mash or Be Mashed"
+
+### Climax Gameplay
+1. Mass immigration event
+   ```gdscript
+   func trigger_mass_immigration():
+	   # Overwhelm the checkpoint system
+	   # Implement fast-paced decision making
+	   # Track consequences of player choices
+   ```
+
+2. Final confrontation system
+   ```gdscript
+   func start_final_confrontation():
+	   # Set up multiple interaction points
+	   # Allow player to use gathered evidence
+	   # Implement branching outcomes
+   ```
+
+3. Epilogue generator
+   ```gdscript
+   func generate_epilogue():
+	   # Analyze player choices throughout the game
+	   # Select appropriate ending scenes
+	   # Display final consequences
+   ```
+
+### Additional Systems
+
+1. Save/Load system
+   ```gdscript
+   func save_game():
+	   # Store player choices, reputation, and progress
+   
+   func load_game():
+	   # Restore game state from save data
+   ```
+
+2. Character customization
+   ```gdscript
+   func update_character_appearance():
+	   # Modify player sprite based on choices
+	   # Update uniform with hidden elements
+   ```
+
+3. Journal system
+   ```gdscript
+   func add_journal_entry(entry):
+	   # Store new story developments
+	   # Allow player to review past events
+   ```
+
+This implementation guide provides a high-level overview of the key systems and mechanics needed for Spud Customs in Godot 4. Each section can be expanded upon with more detailed code implementations as you progress through development.
