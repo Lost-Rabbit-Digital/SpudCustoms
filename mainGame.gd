@@ -77,6 +77,7 @@ var is_in_bulletin_tutorial = true
 @onready var enter_office_path = $Gameplay/Paths/EnterOfficePath
 
 func _ready():
+	time_label = $UI/Labels/TimeLabel
 	setup_megaphone_flash_timer()
 	setup_bulletin_tutorial_timer()
 	set_difficulty(difficulty_level)
@@ -490,37 +491,38 @@ CONTROLS
 """
 
 func start_label_tween():
-	# Create a new Tween
+	stop_label_tween()
+	
 	label_tween = create_tween().set_loops()
 	
-	# Tween font size
+	if not label_tween or not time_label:
+		print("Error: Failed to create tween or time_label not found")
+		return
+	
 	label_tween.tween_property(time_label, "theme_override_font_sizes/font_size", 16, 0.5)\
 		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	label_tween.tween_property(time_label, "theme_override_font_sizes/font_size", 12, 0.5)\
 		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
-	# Tween color
 	label_tween.parallel().tween_property(time_label, "theme_override_colors/font_color", Color.RED, 0.5)\
 		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	label_tween.tween_property(time_label, "theme_override_colors/font_color", Color.WHITE, 0.5)\
 		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
-func _process(_delta):
-	# Processing timer implementation
-	if is_potato_in_office:
-		# Show label if potato in customs office
-		$UI/Labels/TimeLabel.visible = true
-		current_timer += _delta
-		$UI/Labels/TimeLabel.text = "Time Left: %s" % str(int(processing_time) - int(current_timer))
-		# Update _process to change Time Left: display each second after timer incremented
-		if int(processing_time) - int(current_timer) < 5: 
-			start_label_tween()
-			# Tween text in $"Label (TimeLabel)" between font_size 
-			# 12 and 16 w/ easing function, flash red
-		if int(current_timer) >= int(processing_time):
-			timedOut()
-			move_potato_along_path("timedOut")
-			is_potato_in_office = false
+func reset_time_label():
+	if time_label:
+		time_label.add_theme_font_size_override("font_size", 12)
+		time_label.add_theme_color_override("font_color", Color.WHITE)
+		time_label.visible = false
+
+# Add this new function to stop the label tween
+func stop_label_tween():
+	if label_tween:
+		label_tween.kill()
+		label_tween = null
+	reset_time_label()
+
+
 			# Implicit rejection of potatos via the process_decision(false) function 
 			# carries the risk of accidentally passing a potato and improving player score
 			# This should be its' own force_decision(), maybe where the Supervisor says 
@@ -529,11 +531,40 @@ func _process(_delta):
 			# move_potato_along_path(approval_status) controls moving the player based on approval status
 			# We can add a new approval status (timed_out), and have the potato take a different route. 
 			# we can put that logic as well as the logic for adding a strike into the force_decision() function
+
+
+
+func _process(_delta):
+	# Processing timer implementation
+	if is_potato_in_office:
+		# Show label if potato in customs office
+		if not time_label.visible:
+			reset_time_label()
+			time_label.visible = true
+		
+		current_timer += _delta
+		var remaining_time = int(processing_time) - int(current_timer)
+		time_label.text = "Time Left: %s" % str(remaining_time)
+		
+		# Only start the tween effect when less than 5 seconds remain
+		if remaining_time < 5 and not label_tween:
+			start_label_tween()
+		elif remaining_time >= 5 and label_tween:
+			# Stop the tween if it's running and we're back above 5 seconds
+			stop_label_tween()
+		
+		if int(current_timer) >= int(processing_time):
+			timedOut()
+			move_potato_along_path("timedOut")
+			is_potato_in_office = false
 	else:
 		# Hide label if potato is not in/has left customs office
-		$UI/Labels/TimeLabel.visible = false
+		if time_label.visible:
+			stop_label_tween()
+			reset_time_label()
 		current_timer = 0
-	
+
+	# Rest of the existing _process function
 	var mouse_pos = get_global_mouse_position()
 	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == false:
 		$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = true
@@ -586,6 +617,10 @@ func _process(_delta):
 		is_in_bulletin_tutorial = true
 	else:
 		is_in_bulletin_tutorial = false
+		
+		
+		
+		
 		
 func generate_potato_info():
 	var expiration_date: String

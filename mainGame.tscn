@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://cd3tgngxnqogl" path="res://InterfaceOutline.png" id="3_vixev"]
 [ext_resource type="Texture2D" uid="uid://dmxlreycmttsa" path="res://evidence_panel.png" id="4_juy1b"]
 [ext_resource type="Texture2D" uid="uid://b20ds43o0qwss" path="res://world_panel.png" id="5_h10h2"]
-[ext_resource type="Texture2D" uid="uid://dryphrjvfqsnp" path="res://assets/potatoes/heads/purple_majesty_head.png" id="7_0jh12"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="7_7m4ia"]
 [ext_resource type="Texture2D" uid="uid://dbi1u25he35x" path="res://interaction_table_background.png" id="7_nqnif"]
 [ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/level/customs_office.png" id="7_rsfsr"]
@@ -19,7 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://cbthvh8tq02ee" path="res://assets/potatoes/document_photos/purple_majesty.png" id="14_al1cy"]
 [ext_resource type="Texture2D" uid="uid://c0dbfc2uut8qn" path="res://assets/stamps/stamp_shadow.png" id="16_qj41b"]
 [ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://give_prompt_dialogue.png" id="17_mr1ft"]
+[ext_resource type="Texture2D" uid="uid://dh5wbdkmsk7de" path="res://assets/potatoes/heads/russet_burbank_head_1.png" id="18_7ww6h"]
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/background.png" id="18_jl4i3"]
+[ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head_2.png" id="18_yiok2"]
 [ext_resource type="Texture2D" uid="uid://cnt7y8a7drxme" path="res://assets/documents/bulletin/bulletin_main_page.png" id="19_mnrrk"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="20_pd2wg"]
 [ext_resource type="Texture2D" uid="uid://c78plmdtw02b1" path="res://assets/documents/bulletin/page_turn_right.png" id="21_pmbmt"]
@@ -27,7 +28,6 @@
 [ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://assets/alerts/bulletin_alert_box.png" id="22_3pqlk"]
 [ext_resource type="Texture2D" uid="uid://bfhpafskct413" path="res://assets/documents/bulletin/page_turn_left.png" id="22_ir8f4"]
 [ext_resource type="PackedScene" uid="uid://bju5udyr0e5rr" path="res://music_manager.tscn" id="27_2tnfb"]
-[ext_resource type="Texture2D" uid="uid://btj4108ccd10n" path="res://assets/stamps/approval_stamp_2.png" id="28_1hnq1"]
 [ext_resource type="Texture2D" uid="uid://dubo3sdxx8chn" path="res://assets/stamps/approval_stamp_3.png" id="28_uvib1"]
 [ext_resource type="PackedScene" uid="uid://bp2pkcox316n0" path="res://menus/pause_menu.tscn" id="28_vb6g0"]
 [ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="31_c10l6"]
@@ -205,6 +205,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Background" type="Sprite2D" parent="PauseContainer"]
+z_index = -1
+z_as_relative = false
 position = Vector2(640, 360)
 texture = ExtResource("18_jl4i3")
 
@@ -275,6 +277,7 @@ scale = Vector2(0.75, 0.75)
 texture = ExtResource("10_5g2y2")
 
 [node name="SuspectPanel" type="Sprite2D" parent="Gameplay"]
+z_index = 1
 position = Vector2(1074, 472)
 scale = Vector2(1.05816, 1.06849)
 texture = ExtResource("2_f25cg")
@@ -285,14 +288,22 @@ z_as_relative = false
 texture = ExtResource("10_foucb")
 
 [node name="InspectionTable" type="Sprite2D" parent="Gameplay"]
-position = Vector2(444, 473)
+position = Vector2(442, 459)
 scale = Vector2(1.09694, 1.07604)
 texture = ExtResource("7_nqnif")
 
 [node name="PotatoMugshot" type="Sprite2D" parent="Gameplay"]
-position = Vector2(1363, 363)
-scale = Vector2(1.64844, 1.64844)
-texture = ExtResource("7_0jh12")
+z_index = 2
+position = Vector2(1400, 375)
+scale = Vector2(2.0266, 2.0266)
+texture = ExtResource("18_yiok2")
+
+[node name="PotatoMugshotShadow" type="Sprite2D" parent="Gameplay/PotatoMugshot"]
+modulate = Color(0, 0, 0, 0.521569)
+z_index = -1
+position = Vector2(-0.493437, -9.3753)
+scale = Vector2(1.22, 1.22)
+texture = ExtResource("18_7ww6h")
 
 [node name="InteractiveElements" type="Control" parent="Gameplay"]
 anchors_preset = 0
@@ -450,7 +461,7 @@ position = Vector2(-4.99997, 3.99999)
 texture = ExtResource("20_pd2wg")
 
 [node name="ApprovalStamp" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-z_index = 2
+z_index = 4
 texture_filter = 1
 position = Vector2(94, 487)
 scale = Vector2(3, 3)
@@ -460,20 +471,8 @@ texture = ExtResource("28_uvib1")
 visible = false
 z_index = 3
 z_as_relative = false
-position = Vector2(0, 81)
-texture = ExtResource("16_qj41b")
-
-[node name="ApprovalStamp2" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-visible = false
-z_index = 2
-position = Vector2(225, 486)
-texture = ExtResource("28_1hnq1")
-
-[node name="StampShadow" type="Sprite2D" parent="Gameplay/InteractiveElements/ApprovalStamp2"]
-visible = false
-z_index = 3
-z_as_relative = false
-position = Vector2(0, 81)
+position = Vector2(0, 20)
+scale = Vector2(0.29, 0.29)
 texture = ExtResource("16_qj41b")
 
 [node name="RejectionStamp" type="Sprite2D" parent="Gameplay/InteractiveElements"]
@@ -486,7 +485,8 @@ texture = ExtResource("31_c10l6")
 visible = false
 z_index = 3
 z_as_relative = false
-position = Vector2(0, 80)
+position = Vector2(0, 20)
+scale = Vector2(0.29, 0.29)
 texture = ExtResource("16_qj41b")
 
 [node name="Rulebook" type="Sprite2D" parent="Gameplay/InteractiveElements"]
@@ -521,6 +521,7 @@ curve = SubResource("Curve2D_xms7a")
 curve = SubResource("Curve2D_uenca")
 
 [node name="SpuddyQueue" type="Path2D" parent="Gameplay/Paths"]
+z_index = 3
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
