@@ -1,8 +1,12 @@
 # Incomplete tasks list
 
+## Stretch goals
+[ ] - Multiplayer? 8th / 15th of November for schedule
+[ ] - How should we do lighting for the environment and interactables? Real-time or baked into the pixel art?
+
 ## Urgent
 [ ] - Fix the pixel resolution of the text
-[ ] - "Change verbage to 2 and under"
+[ ] - "Change verbiage to 2 and under"
 [ ] - Make full-screen appear in the main game instead of just the main menu
 [ ] - Make an options menu
 [ ] - Stamp doesn't match the rest of the pixel feel, different resolution
@@ -12,8 +16,6 @@
 [ ] - Make new stamp shadow, make it a highlight instead of a shadow
 [ ] - Custom cursor for hover, click, grab, drag
 
-
-
 ## Quality of life
 [ ] - Save in a global if the player has finished the tutorial so every shift doesn't start the same interaction
 [ ] - Overlay of potato customs officer talking
@@ -22,8 +24,6 @@
 [ ] - Shadows when the player begins to drag the item, they can click with no reaction
 [ ] - 
 [ ] - Cursor which changes on interaction hover 
-
-
 
 ## Graphical
 [ ] - Add officers patrolling the area

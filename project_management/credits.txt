@@ -1,8 +1,10 @@
-# Graphics
+Programming:
+Boden McHale
+David McHale
 
-Cursor - https://lintnaya.itch.io/roret-cursor
+Art:
+Olexii
+https://lintnaya.itch.io/roret-cursor
 
-
-# Audio
-
-Speaker - N/A
+Audio:
+Ovani
