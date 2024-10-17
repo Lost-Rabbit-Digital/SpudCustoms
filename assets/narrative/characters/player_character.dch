@@ -8,20 +8,20 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "New portrait",
+"default_portrait": "Player Character",
 "description": "",
-"display_name": "player_character",
+"display_name": "You",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"New portrait": {
+"Player Character": {
 "export_overrides": {
-"image": ""
+"image": "\"res://assets/narrative/characters/player_character.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1.0,
+"offset": Vector2(0, -50),
+"scale": 0.8,
 "scene": ""
 }
 },

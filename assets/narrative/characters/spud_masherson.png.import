@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0twb8v5sitfj"
-path="res://.godot/imported/SupervisorRusset.png-5edaefb6be274b73c1b2ea67c51c115f.ctex"
+uid="uid://b1co18v8hynxl"
+path="res://.godot/imported/spud_masherson.png-d77b647a2a45fe498fb9489f829ad4db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/narrative/characters/SupervisorRusset.png"
-dest_files=["res://.godot/imported/SupervisorRusset.png-5edaefb6be274b73c1b2ea67c51c115f.ctex"]
+source_file="res://assets/narrative/characters/spud_masherson.png"
+dest_files=["res://.godot/imported/spud_masherson.png-d77b647a2a45fe498fb9489f829ad4db.ctex"]
 
 [params]
 

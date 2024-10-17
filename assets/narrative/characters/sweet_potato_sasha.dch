@@ -8,12 +8,22 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "",
+"default_portrait": "Sweet Potato Sasha",
 "description": "",
-"display_name": "sweet_potato_sasha",
+"display_name": "Sweet Potato Sasha",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
-"portraits": {},
+"portraits": {
+"Sweet Potato Sasha": {
+"export_overrides": {
+"image": "\"res://assets/narrative/characters/sweet_potato_sasha.png\""
+},
+"mirror": false,
+"offset": Vector2(0, -50),
+"scale": 0.8,
+"scene": ""
+}
+},
 "scale": 1.0
 }

@@ -30,6 +30,7 @@ gdscript/warnings/integer_division=0
 directories/dch_directory={
 "player_character": "res://assets/narrative/characters/player_character.dch",
 "prime_minister_idaho": "res://assets/narrative/characters/prime_minister_idaho.dch",
+"spud_masherson": "res://assets/narrative/characters/spud_masherson.dch",
 "supervisor_russet": "res://assets/narrative/characters/supervisor_russet.dch",
 "sweet_potato_sasha": "res://assets/narrative/characters/sweet_potato_sasha.dch"
 }
