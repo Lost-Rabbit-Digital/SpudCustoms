@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dyg2vas2oxboj"]
 
 [ext_resource type="Script" path="res://game_over.gd" id="1_upxqi"]
-[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/background.png" id="2_ybrx3"]
+[ext_resource type="Texture2D" uid="uid://budh8ujdl5y88" path="res://assets/level/pause_background.png" id="2_6id35"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="3_kyaab"]
 
 [sub_resource type="Theme" id="Theme_jvk3w"]
@@ -34,7 +34,7 @@ theme_override_constants/margin_bottom = 12
 
 [node name="Background" type="Sprite2D" parent="MarginContainer"]
 position = Vector2(640, 360)
-texture = ExtResource("2_ybrx3")
+texture = ExtResource("2_6id35")
 
 [node name="Header" type="Label" parent="MarginContainer"]
 layout_mode = 2

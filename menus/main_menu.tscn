@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://btxcy8lur7wac"]
 
-[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/background.png" id="2_3eajf"]
+[ext_resource type="Texture2D" uid="uid://budh8ujdl5y88" path="res://assets/level/pause_background.png" id="1_43osq"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="2_ts8aq"]
 [ext_resource type="Texture2D" uid="uid://cwkqpnmh2uhcj" path="res://assets/ui_buttons/fullscreen_button.png" id="3_7qux4"]
 [ext_resource type="Texture2D" uid="uid://b8dknioj3tbtf" path="res://assets/ui_buttons/not_muted_button.png" id="4_i3v01"]
@@ -77,11 +77,11 @@ grow_vertical = 2
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 24
+theme_override_constants/margin_bottom = 12
 
 [node name="Background" type="Sprite2D" parent="MarginContainer"]
-position = Vector2(640, 360)
-texture = ExtResource("2_3eajf")
+position = Vector2(652, 372)
+texture = ExtResource("1_43osq")
 
 [node name="Header" type="Label" parent="MarginContainer"]
 layout_mode = 2
