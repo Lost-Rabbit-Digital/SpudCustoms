@@ -679,6 +679,8 @@ func get_random_name():
 
 func get_random_type():
 	var types = ["Russet Burbank", "Yukon Gold", "Sweet Potato", "Purple Majesty", "Red Bliss"]
+	var day_one_types = ["Russet Burbank"]
+	types = day_one_types
 	return types[randi() % types.size()]
 
 func get_random_condition():

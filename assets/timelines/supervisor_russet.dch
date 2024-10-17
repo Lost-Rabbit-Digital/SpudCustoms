@@ -1,0 +1,30 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "SupervisorRusset",
+"description": "The main character's supervisor",
+"display_name": "Supervisor Russet",
+"mirror": false,
+"nicknames": ["Russ", "Russet", "Supervisor Russet"],
+"offset": Vector2(0, 0),
+"portraits": {
+"SupervisorRusset": {
+"export_overrides": {
+"image": "\"res://assets/timelines/SupervisorRusset.png\""
+},
+"ignore_char_scale": false,
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 0.75,
+"scene": "res://addons/dialogic/Modules/Character/default_portrait.tscn"
+}
+},
+"scale": 1.0
+}
