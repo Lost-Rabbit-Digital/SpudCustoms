@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=39 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://suspect_panel.png" id="2_f25cg"]
@@ -17,6 +17,7 @@
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="13_wxn24"]
 [ext_resource type="Texture2D" uid="uid://cbthvh8tq02ee" path="res://assets/potatoes/document_photos/purple_majesty.png" id="14_al1cy"]
 [ext_resource type="Texture2D" uid="uid://c0dbfc2uut8qn" path="res://assets/stamps/stamp_shadow.png" id="16_qj41b"]
+[ext_resource type="Texture2D" uid="uid://dgw6rbhy6crh" path="res://assets/suspect_panel/suspect_panel_table.png" id="17_hbwb4"]
 [ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://give_prompt_dialogue.png" id="17_mr1ft"]
 [ext_resource type="Texture2D" uid="uid://dh5wbdkmsk7de" path="res://assets/potatoes/heads/russet_burbank_head_1.png" id="18_7ww6h"]
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="18_jl4i3"]
@@ -281,6 +282,11 @@ z_index = 1
 position = Vector2(1074, 472)
 scale = Vector2(1.05816, 1.06849)
 texture = ExtResource("2_f25cg")
+
+[node name="SuspectPanelTable" type="Sprite2D" parent="Gameplay/SuspectPanel"]
+z_index = 2
+z_as_relative = false
+texture = ExtResource("17_hbwb4")
 
 [node name="SuspectPanelFront" type="Sprite2D" parent="Gameplay/SuspectPanel"]
 z_index = 2
