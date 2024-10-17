@@ -62,7 +62,7 @@ var is_bulletin_open = false
 var rulebook: Sprite2D
 var is_rulebook_open = false
 
-var difficulty_level = "Hard"  # Can be "Easy", "Normal", or "Hard"
+var difficulty_level = "Easy"  # Can be "Easy", "Normal", or "Hard"
 
 # Stamp system
 const STAMP_ANIMATION_DURATION = 0.3  # Duration of the stamp animation in seconds
