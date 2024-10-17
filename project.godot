@@ -28,7 +28,10 @@ gdscript/warnings/integer_division=0
 [dialogic]
 
 directories/dch_directory={
-"supervisor_russet": "res://assets/narrative/characters/supervisor_russet.dch"
+"player_character": "res://assets/narrative/characters/player_character.dch",
+"prime_minister_idaho": "res://assets/narrative/characters/prime_minister_idaho.dch",
+"supervisor_russet": "res://assets/narrative/characters/supervisor_russet.dch",
+"sweet_potato_sasha": "res://assets/narrative/characters/sweet_potato_sasha.dch"
 }
 directories/dtl_directory={
 "day_1_intro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_intro.dtl",

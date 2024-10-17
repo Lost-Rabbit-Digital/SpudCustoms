@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://give_prompt_dialogue.png" id="17_mr1ft"]
 [ext_resource type="Texture2D" uid="uid://dh5wbdkmsk7de" path="res://assets/potatoes/heads/russet_burbank_head_1.png" id="18_7ww6h"]
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/background.png" id="18_jl4i3"]
-[ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head_2.png" id="18_yiok2"]
+[ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="18_yiok2"]
 [ext_resource type="Texture2D" uid="uid://cnt7y8a7drxme" path="res://assets/documents/bulletin/bulletin_main_page.png" id="19_mnrrk"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="20_pd2wg"]
 [ext_resource type="Texture2D" uid="uid://c78plmdtw02b1" path="res://assets/documents/bulletin/page_turn_right.png" id="21_pmbmt"]

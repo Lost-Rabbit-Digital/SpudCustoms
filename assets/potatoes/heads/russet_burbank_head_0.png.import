@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyglahk6xajq7"
-path="res://.godot/imported/russet_burbank_head_2.png-8e787846ae97da4b00d4f0449b346945.ctex"
+uid="uid://ct3dnep2ricoc"
+path="res://.godot/imported/russet_burbank_head_0.png-63170651ac305c2d2994a662add998da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/potatoes/heads/russet_burbank_head_2.png"
-dest_files=["res://.godot/imported/russet_burbank_head_2.png-8e787846ae97da4b00d4f0449b346945.ctex"]
+source_file="res://assets/potatoes/heads/russet_burbank_head_0.png"
+dest_files=["res://.godot/imported/russet_burbank_head_0.png-63170651ac305c2d2994a662add998da.ctex"]
 
 [params]
 
