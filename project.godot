@@ -28,10 +28,10 @@ gdscript/warnings/integer_division=0
 [dialogic]
 
 directories/dch_directory={
-"player_character": "res://assets/timelines/player_character.dch",
-"prime_minister_idaho": "res://assets/timelines/prime_minister_idaho.dch",
-"supervisor_russet": "res://assets/timelines/supervisor_russet.dch",
-"sweet_potato_sasha": "res://assets/timelines/sweet_potato_sasha.dch"
+"player_character": "res://assets/potatoes/story_characters/player_character.dch",
+"prime_minister_idaho": "res://assets/potatoes/story_characters/prime_minister_idaho.dch",
+"supervisor_russet": "res://assets/potatoes/story_characters/supervisor_russet.dch",
+"sweet_potato_sasha": "res://assets/potatoes/story_characters/sweet_potato_sasha.dch"
 }
 directories/dtl_directory={
 "day_1_intro": "res://assets/timelines/day_1_intro.dtl",
