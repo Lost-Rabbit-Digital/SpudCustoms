@@ -28,14 +28,18 @@ gdscript/warnings/integer_division=0
 [dialogic]
 
 directories/dch_directory={
+<<<<<<< Updated upstream
 "player_character": "res://assets/timelines/player_character.dch",
 "prime_minister_idaho": "res://assets/timelines/prime_minister_idaho.dch",
 "supervisor_russet": "res://assets/timelines/supervisor_russet.dch",
 "sweet_potato_sasha": "res://assets/timelines/sweet_potato_sasha.dch"
+=======
+"supervisor_russet": "res://assets/narrative/characters/supervisor_russet.dch"
+>>>>>>> Stashed changes
 }
 directories/dtl_directory={
-"day_1_intro": "res://assets/timelines/day_1_intro.dtl",
-"day_1_outro": "res://assets/timelines/day_1_outro.dtl"
+"day_1_intro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_intro.dtl",
+"day_1_outro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_outro.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dct8uaqxrcrsc"
-path="res://.godot/imported/gameplay_spud_customs_latest.png-e0e025ee07dbe17c946aea8a22dac3e6.ctex"
+uid="uid://cehmu7gnoif43"
+path="res://.godot/imported/customs_office.jpg-603942534b3544d08f0f587fab131010.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/timelines/gameplay_spud_customs_latest.png"
-dest_files=["res://.godot/imported/gameplay_spud_customs_latest.png-e0e025ee07dbe17c946aea8a22dac3e6.ctex"]
+source_file="res://assets/narrative/customs_office.jpg"
+dest_files=["res://.godot/imported/customs_office.jpg-603942534b3544d08f0f587fab131010.ctex"]
 
 [params]
 

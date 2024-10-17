@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cehmu7gnoif43"
-path="res://.godot/imported/customs_office.jpg-bb9be97c5ed68ad12e107755af42015b.ctex"
+uid="uid://bg56rs6lyqwqm"
+path="res://.godot/imported/nation_of_spud.jpg-20a0813827ab445e5166e8fd128ff37b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/timelines/customs_office.jpg"
-dest_files=["res://.godot/imported/customs_office.jpg-bb9be97c5ed68ad12e107755af42015b.ctex"]
+source_file="res://assets/narrative/nation_of_spud.jpg"
+dest_files=["res://.godot/imported/nation_of_spud.jpg-20a0813827ab445e5166e8fd128ff37b.ctex"]
 
 [params]
 

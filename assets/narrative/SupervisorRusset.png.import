@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg56rs6lyqwqm"
-path="res://.godot/imported/nation_of_spud.jpg-8fd5502cc0c7f5d5d0b689a478a25395.ctex"
+uid="uid://b0twb8v5sitfj"
+path="res://.godot/imported/SupervisorRusset.png-10d64c5e7bd32dcc61ecd743bde0262b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/timelines/nation_of_spud.jpg"
-dest_files=["res://.godot/imported/nation_of_spud.jpg-8fd5502cc0c7f5d5d0b689a478a25395.ctex"]
+source_file="res://assets/narrative/SupervisorRusset.png"
+dest_files=["res://.godot/imported/SupervisorRusset.png-10d64c5e7bd32dcc61ecd743bde0262b.ctex"]
 
 [params]
 
