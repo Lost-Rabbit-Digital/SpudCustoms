@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0twb8v5sitfj"
-path="res://.godot/imported/SupervisorRusset.png-10d64c5e7bd32dcc61ecd743bde0262b.ctex"
+path="res://.godot/imported/SupervisorRusset.png-5edaefb6be274b73c1b2ea67c51c115f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/narrative/SupervisorRusset.png"
-dest_files=["res://.godot/imported/SupervisorRusset.png-10d64c5e7bd32dcc61ecd743bde0262b.ctex"]
+source_file="res://assets/narrative/characters/SupervisorRusset.png"
+dest_files=["res://.godot/imported/SupervisorRusset.png-5edaefb6be274b73c1b2ea67c51c115f.ctex"]
 
 [params]
 
