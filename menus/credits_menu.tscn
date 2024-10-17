@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://menus/menu_scripts/credits_menu.gd" id="1_3mktb"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="1_gr2pr"]
-[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/background.png" id="2_8yiec"]
+[ext_resource type="Texture2D" uid="uid://budh8ujdl5y88" path="res://assets/level/pause_background.png" id="2_fpbq3"]
 
 [sub_resource type="Theme" id="Theme_2wfvy"]
 default_font = ExtResource("1_gr2pr")
@@ -39,7 +39,7 @@ theme_override_constants/margin_bottom = 12
 
 [node name="Background" type="Sprite2D" parent="MarginContainer"]
 position = Vector2(640, 360)
-texture = ExtResource("2_8yiec")
+texture = ExtResource("2_fpbq3")
 
 [node name="MainHeader" type="Label" parent="MarginContainer"]
 layout_mode = 2

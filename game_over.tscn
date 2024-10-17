@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="1_fte0y"]
 [ext_resource type="Script" path="res://game_over.gd" id="1_p3dq8"]
-[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/background.png" id="2_m4abr"]
+[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="2_m4abr"]
 
 [sub_resource type="Theme" id="Theme_jvk3w"]
 default_font = ExtResource("1_fte0y")

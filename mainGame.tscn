@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://c0dbfc2uut8qn" path="res://assets/stamps/stamp_shadow.png" id="16_qj41b"]
 [ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://give_prompt_dialogue.png" id="17_mr1ft"]
 [ext_resource type="Texture2D" uid="uid://dh5wbdkmsk7de" path="res://assets/potatoes/heads/russet_burbank_head_1.png" id="18_7ww6h"]
-[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/background.png" id="18_jl4i3"]
+[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="18_jl4i3"]
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="18_yiok2"]
 [ext_resource type="Texture2D" uid="uid://cnt7y8a7drxme" path="res://assets/documents/bulletin/bulletin_main_page.png" id="19_mnrrk"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="20_pd2wg"]
@@ -94,6 +94,12 @@ z_index = 1
 position = Vector2(639.453, 121)
 scale = Vector2(1.09345, 1.02885)
 texture = ExtResource("5_h10h2")
+
+[node name="Background" type="Sprite2D" parent="UI"]
+z_index = 4
+z_as_relative = false
+position = Vector2(640, 360)
+texture = ExtResource("18_jl4i3")
 
 [node name="Labels" type="Control" parent="UI"]
 anchors_preset = 0
@@ -204,12 +210,6 @@ offset_bottom = 720.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="Sprite2D" parent="PauseContainer"]
-z_index = -1
-z_as_relative = false
-position = Vector2(640, 360)
-texture = ExtResource("18_jl4i3")
-
 [node name="PauseMenu" parent="PauseContainer" instance=ExtResource("28_vb6g0")]
 visible = false
 layout_mode = 1
@@ -288,7 +288,7 @@ z_as_relative = false
 texture = ExtResource("10_foucb")
 
 [node name="InspectionTable" type="Sprite2D" parent="Gameplay"]
-position = Vector2(442, 459)
+position = Vector2(442, 472)
 scale = Vector2(1.09694, 1.07604)
 texture = ExtResource("7_nqnif")
 
