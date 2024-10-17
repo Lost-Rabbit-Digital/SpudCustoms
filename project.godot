@@ -34,6 +34,7 @@ directories/dch_directory={
 "sweet_potato_sasha": "res://assets/narrative/characters/sweet_potato_sasha.dch"
 }
 directories/dtl_directory={
+"chapter_1_spud_masherson": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_spud_masherson.dtl",
 "day_1_intro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_intro.dtl",
 "day_1_outro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_outro.dtl"
 }
