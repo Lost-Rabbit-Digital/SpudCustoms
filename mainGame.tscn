@@ -313,7 +313,7 @@ offset_bottom = 40.0
 [node name="Bulletin" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_index = 3
 z_as_relative = false
-position = Vector2(1966, 418)
+position = Vector2(310, 481)
 texture = ExtResource("19_mnrrk")
 script = ExtResource("21_qw3ji")
 
