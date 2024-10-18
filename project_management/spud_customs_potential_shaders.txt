@@ -1,0 +1,55 @@
+Add a filling light blue glass tube sprite icon to represent Root Reserve quota (https://godotshaders.com/shader/2d-liquid-fill-inside-sphere/)
+
+Represent strikes with a filling red bar (https://godotshaders.com/shader/circular-life-bar/)
+
+Wiggle 2D for suspicious potatoes (https://godotshaders.com/shader/wiggle-2d/)
+
+Make waiting potatoes sway (https://godotshaders.com/shader/2d-wind-sway/)
+
+Set up electric fences as the border security increases (https://godotshaders.com/shader/energy-beams/)
+
+Use diamond-based screen tansitions (https://godotshaders.com/shader/diamond-based-screen-transition/), a cool improvement would be to make this little stamps it dissolves into
+
+Make user-triggered nukes create a positional shockwave (https://godotshaders.com/shader/positioned-shockwave/)
+
+The response for reflex game should be excessive, and overzealous (player clicks on crossing potato, you hear a launch sound, see a missile come down from top of screen, positional shockwave triggers, particle effect plays for initial explosion and fades, leaves a crater sprite behind where missile impacted)
+
+Make minor variations in potato type by giving them a few palette swap variations to maintain shading (https://godotshaders.com/shader/palette-swap-no-recolor-recolor/)
+
+Use a retro TV shader on a screen displayed in the cutscenes maybe for news stations (maybe bunker?) (https://godotshaders.com/shader/retro-tv-shader/)
+
+Activate speed lines when the player should be alert/aware (https://godotshaders.com/shader/speed-lines-shader-for-godot-4/)
+
+Apply a 2d topdown shadow to each of the individual documents the player is handling (https://godotshaders.com/shader/2d-topdown-shadow-that-goes-out-of-bounds/)
+
+Add squish impact effect for falling documents (https://godotshaders.com/shader/squish-sprite/)
+
+Add a highlight to items the player should interact with next ( https://godotshaders.com/shader/highlight-canvasitem/) (https://godotshaders.com/shader/2d-highlight-effect/) (https://godotshaders.com/shader/animated-dotted-outline/)
+
+Test mild motion blur on dragged documents (https://godotshaders.com/shader/2d-motion-blur/)
+
+Explode a potato that is hit with a nuke (https://godotshaders.com/shader/pixel-explosion/) OR (https://godotshaders.com/shader/playwithfurcifers-sprite-pixel-explosion-shader/)
+
+Add a chance for rain/snow (https://godotshaders.com/shader/simple-rain-snow-shader/) (https://godotshaders.com/shader/rain-and-snow-with-parallax-scrolling-effect/)
+
+Launch fireworks when the player correctly judges a potato or at end of day? (https://godotshaders.com/shader/fireworks/)
+
+Use this progress bar to fill the CHAOS METER in act 3 (https://godotshaders.com/shader/sprite-progress-bar/)
+
+Use for 2d depth lighting suspect booth (https://godotshaders.com/shader/2d-light-z-depth/)
+
+Implement UV Scan effect where "x-ray" version is same object with color inverted, and potentially glowing stamps that signify DANGEROUS POTATOES (https://godotshaders.com/shader/x-ray-vision-effect/)
+
+Use dynamic glow for adding effects to the UV light and other light sources (https://godotshaders.com/shader/dynamic-glow/)
+
+Add top-down shadows for the border walls in the main game scene ( https://godotshaders.com/shader/2d-top-down-shadows-tilemap-ready/)
+
+Add 2d fires everywhere in the border chaos scene (https://godotshaders.com/shader/2d-fire/)
+
+Use smooth pixel transition (https://godotshaders.com/shader/pixel-transition/)
+
+Use 2d rim light in suspect booth (https://godotshaders.com/shader/2d-rim-light/)
+
+Use electric ball for detaining? (https://godotshaders.com/shader/electric-ball-canvas-item/)
+
+Use desaturation shader to indicate draining of emotion (https://godotshaders.com/shader/desaturation-shader/)
