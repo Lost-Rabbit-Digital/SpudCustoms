@@ -20,7 +20,7 @@
 "image": "\"res://assets/narrative/characters/spud_masherson.png\""
 },
 "mirror": true,
-"offset": Vector2(0, -25),
+"offset": Vector2(0, -30),
 "scale": 0.4,
 "scene": ""
 }

@@ -82,28 +82,28 @@ The fate of Spud hangs in the balance. Your final decision will shape the future
 
 [background arg="res://assets/narrative/revolutionary_ending.jpg" fade="1.5"]
 Option 1: Revolutionary Ending
-join narrator right [z_index="1"]
+join narrator left [z_index="1"]
 narrator: The old regime crumbles. A new Spud rises from the ashes.
 narrator: Food shortages loom, but hope for a more ethical future prevails.
 leave narrator
 
 [background arg="res://assets/narrative/reform_ending.jpg" fade="1.5"]
 Option 2: Reform Ending
-join narrator right [z_index="1"]
+join narrator left [z_index="1"]
 narrator: Gradual changes begin. The most egregious offenders face trial.
 narrator: Slow progress towards a more open society is made.
 leave narrator
 
 [background arg="res://assets/narrative/authoritarian_ending.jpg" fade="1.5"]
 Option 3: Authoritarian Ending
-join narrator right [z_index="1"]
+join narrator left [z_index="1"]
 narrator: Order is maintained. Root Reserve production expands.
 narrator: You rise to power, grappling with the ethical cost of stability.
 leave narrator
 
 [background arg="res://assets/narrative/escape_ending.jpg" fade="1.5"]
 Option 4: Escape Ending
-join narrator right [z_index="1"]
+join narrator left [z_index="1"]
 narrator: You flee with a group of refugees, haunted by what you've left behind.
 narrator: A new life in exile begins, with thoughts of one day returning to save Spud.
 leave narrator
@@ -124,4 +124,3 @@ join narrator right [z_index="1"]
 narrator: Thank you for playing Spud Customs. Your choices have shaped the destiny of a nation.
 narrator: But remember, in the world of potatoes, the truth always lies beneath the skin...
 leave narrator
-

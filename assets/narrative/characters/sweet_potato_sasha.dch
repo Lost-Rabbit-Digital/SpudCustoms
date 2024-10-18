@@ -20,7 +20,7 @@
 "image": "\"res://assets/narrative/characters/sweet_potato_sasha.png\""
 },
 "mirror": false,
-"offset": Vector2(0, -50),
+"offset": Vector2(0, -40),
 "scale": 0.5,
 "scene": ""
 }
