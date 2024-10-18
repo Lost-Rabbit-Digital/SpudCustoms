@@ -1,4 +1,4 @@
-[background arg="res://assets/narrative/chapter_3/border_chaos.jpg" fade="3.0"]
+[background arg="res://assets/narrative/chapter_3/border_chaos.jpg" fade="1.0"]
 The Spud border is in utter chaos.
 Panicked potatoes are fleeing en masse.
 News of Root Reserve has spread, and nothing will ever be the same.
@@ -8,11 +8,13 @@ join player_character center [z_index="1"]
 player_character: (Think to yourself) What happened here? Where is everyone?
 leave player_character
 
+[background arg="res://assets/narrative/customs_office.jpg" fade="3.0"]
 join supervisor_russet left [z_index="1"]
 supervisor_russet: Thank spud you're here! It's all falling apart!
 supervisor_russet: The truth about Root Reserve... it's out. We need to contain this situation, now!
 leave supervisor_russet
 
+[background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="1.0"]
 join supervisor_russet left [z_index="1"]
 #[background arg="res://assets/timelines/crisis_management.png" fade="2.0"]
 supervisor_russet: Listen carefully. We're in crisis mode.
@@ -37,7 +39,9 @@ prime_minister_idaho: Remember your duty to Spud. Maintain order at all costs.
 leave prime_minister_idaho
 
 join player_character center [z_index="1"]
-player_character: (Think to yourself) Government, resistance, or find a middle ground? The choice is mine...
+player_character: (Think to yourself) Government or resistance? The choice is mine... (ALERT: This will change the rules to REJECTING all potatoes for the Government, or APPROVING all potatoes for the resistance, as fast as you can.)
+- "I'll help the Government of Spud!"
+- "We've got to get these potatoes through the checkpoint at all costs!'"
 leave player_character
 
 join supervisor_russet left [z_index="1"]
@@ -47,16 +51,16 @@ leave supervisor_russet
 
 join sweet_potato_sasha leftmost [z_index="1"]
 join player_character right [z_index="1"]
-#[background arg="res://assets/timelines/evidence_handling.png" fade="1.5"]
+[background arg="res://assets/narrative/root_reserve_reveal.jpg" fade="1.5"]
 sweet_potato_sasha: We've gathered evidence about Root Reserve. What should we do with it?
-player_character: (Options appear) Destroy it? Leak it to the public? Selective reveal?
+player_character: What should I do?
 - "Destroy it?"
 - "Leak it to the public?"
 - "Selectively reveal Root Reserve?"
 leave sweet_potato_sasha
 leave player_character
 
-#[background arg="res://assets/timelines/prime_minister_bunker.png" fade="3.0"]
+[background arg="res://assets/narrative/prime_minister_idaho_bunker.jpg" fade="3.0"]
 Prime Minister Idaho's emergency bunker. The moment of truth has arrived.
 
 join prime_minister_idaho center [z_index="1"]
@@ -73,32 +77,42 @@ prime_minister_idaho: The choice is yours. Arrest me, negotiate, or join me. Wha
 leave prime_minister_idaho
 leave player_character
 
-#[background arg="res://assets/timelines/epilogue_choice.png" fade="2.0"]
+[background arg="res://assets/narrative/epilogue_choice.jpg" fade="2.0"]
 The fate of Spud hangs in the balance. Your final decision will shape the future.
 
-#[background arg="res://assets/timelines/revolutionary_ending.png" fade="1.5"]
+[background arg="res://assets/narrative/revolutionary_ending.jpg" fade="1.5"]
 Option 1: Revolutionary Ending
-Narrator: The old regime crumbles. A new Spud rises from the ashes.
-Narrator: Food shortages loom, but hope for a more ethical future prevails.
+join narrator right [z_index="1"]
+narrator: The old regime crumbles. A new Spud rises from the ashes.
+narrator: Food shortages loom, but hope for a more ethical future prevails.
+leave narrator
 
-#[background arg="res://assets/timelines/reform_ending.png" fade="1.5"]
+[background arg="res://assets/narrative/reform_ending.jpg" fade="1.5"]
 Option 2: Reform Ending
-Narrator: Gradual changes begin. The most egregious offenders face trial.
-Narrator: Slow progress towards a more open society is made.
+join narrator right [z_index="1"]
+narrator: Gradual changes begin. The most egregious offenders face trial.
+narrator: Slow progress towards a more open society is made.
+leave narrator
 
-#[background arg="res://assets/timelines/authoritarian_ending.png" fade="1.5"]
+[background arg="res://assets/narrative/authoritarian_ending.jpg" fade="1.5"]
 Option 3: Authoritarian Ending
-Narrator: Order is maintained. Root Reserve production expands.
-Narrator: You rise to power, grappling with the ethical cost of stability.
+join narrator right [z_index="1"]
+narrator: Order is maintained. Root Reserve production expands.
+narrator: You rise to power, grappling with the ethical cost of stability.
+leave narrator
 
-#[background arg="res://assets/timelines/escape_ending.png" fade="1.5"]
+[background arg="res://assets/narrative/escape_ending.jpg" fade="1.5"]
 Option 4: Escape Ending
-Narrator: You flee with a group of refugees, haunted by what you've left behind.
-Narrator: A new life in exile begins, with thoughts of one day returning to save Spud.
+join narrator right [z_index="1"]
+narrator: You flee with a group of refugees, haunted by what you've left behind.
+narrator: A new life in exile begins, with thoughts of one day returning to save Spud.
+leave narrator
 
-#[background arg="res://assets/timelines/aftermath.png" fade="3.0"]
-Narrator: The consequences of your choices ripple through Spud society.
-Narrator: International reactions, food crises, justice or cover-ups - all shaped by your decisions.
+[background arg="res://assets/narrative/aftermath.jpg" fade="3.0"]
+join narrator right [z_index="1"]
+narrator: The consequences of your choices ripple through Spud society.
+narrator: International reactions, food crises, justice or cover-ups - all shaped by your decisions.
+leave narrator
 
 #[background arg="res://assets/timelines/final_reflection.png" fade="2.0"]
 join player_character center [z_index="1"]
@@ -106,5 +120,8 @@ player_character: (Final thoughts) What have I done? Was it the right choice? On
 leave player_character
 
 #[background arg="res://assets/timelines/game_end.png" fade="4.0"]
-Narrator: Thank you for playing Spud Customs. Your choices have shaped the destiny of a nation.
-Narrator: But remember, in the world of potatoes, the truth always lies beneath the skin...
+join narrator right [z_index="1"]
+narrator: Thank you for playing Spud Customs. Your choices have shaped the destiny of a nation.
+narrator: But remember, in the world of potatoes, the truth always lies beneath the skin...
+leave narrator
+

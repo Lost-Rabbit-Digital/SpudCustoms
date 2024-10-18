@@ -1,4 +1,4 @@
-[background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="4.0"]
+[background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="1.0"]
 #[background arg="res://assets/timelines/customs_office_morning.png" fade="3.0"]
 join player_character rightmost [z_index="1"]
 Another day dawns at the Spud border checkpoint.
@@ -43,14 +43,16 @@ leave supervisor_russet
 
 join spud_masherson leftmost [z_index="1"]
 join sweet_potato_sasha left [z_index="1"]
-join player_character right_most [z_index="1"]
+join player_character right [z_index="1"]
 [background arg="res://assets/narrative/night_gameplay_spud_customs_latest.png" fade="4.0"]
 #[background arg="res://assets/timelines/hidden_tunnel.png" fade="2.0"]
 *You notice movement near the rejection area*
 *Potatoes are being ushered through a hidden tunnel*
 *Is that... Spud Masherson overseeing the operation?*
 *And Sweet Potato Sasha helping potatoes escape?*
-leave --All-- 
+leave spud_masherson
+leave sweet_potato_sasha
+leave player_character
 
 join player_character center [z_index="1"]
 player_character: (Think to yourself) What should I do? Report this? Keep quiet? Confront them?
@@ -61,15 +63,16 @@ leave player_character
 
 join supervisor_russet leftmost [z_index="1"]
 join prime_minister_idaho center [z_index="1"]
-join supervisor_russet rightmost [z_index="1"]
+join player_character rightmost [z_index="1"]
 [background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="4.0"]
 #[background arg="res://assets/timelines/overheard_conversation.png" fade="2.0"]
 *You overhear a heated conversation*
 supervisor_russet: The numbers don't add up. We're missing dozens of rejects.
 prime_minister_idaho: Keep it quiet. If this gets out, the whole Root Reserve program is at risk.
 supervisor_russet: I don't care about Root Reserve! If we don't meet quotas, we'll all end up processed!
-leave --All-- 
-
+leave supervisor_russet
+leave prime_minister_idaho
+leave player_character
 
 [background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="4.0"]
 #[background arg="res://assets/timelines/root_reserve_propaganda.png" fade="1.5"]
@@ -77,25 +80,27 @@ leave --All--
 Poster text: "Root Reserve: The Miracle Food That Will Save Us All!"
 
 join sweet_potato_sasha left [z_index="1"]
-sweet_potato_sasha: *whispers* Be careful. That Root Reserve isn't what they say it is.
+sweet_potato_sasha: *whispers* Be careful. If they think you're a threat to Root Reserve, you'll wind up in the mashing fields next.
 leave sweet_potato_sasha
 
+join announcer center [z_index="1"]
 [background arg="res://assets/narrative/customs_office.jpg" fade="3.0"]
 #[background arg="res://assets/timelines/prime_minister_arrival.png" fade="3.0"]
-Announcer: Attention all staff! Prime Minister Idaho is making a surprise inspection!
+announcer: Attention all staff! Prime Minister Idaho is making a surprise inspection!
+leave announcer
 
 join prime_minister_idaho center [z_index="1"]
-prime_minister_idaho: Ah, our newest customs officer. I've heard promising things about you.
+prime_minister_idaho: Ah, our newest customs officer. I've heard promising things about you...
 prime_minister_idaho: Remember, Root Reserve is the future. Those who oppose progress are enemies of potato-kind.
 prime_minister_idaho: I'll be watching your career with great interest.
 leave prime_minister_idaho
 
 join supervisor_russet leftmost [z_index="1"]
-[background arg="res://assets/timelines/end_of_chapter2.png" fade="2.0"]
+#[background arg="res://assets/timelines/end_of_chapter2.png" fade="2.0"]
 supervisor_russet: You've done well, rookie. But things are only going to get more complicated from here.
 supervisor_russet: Go home and rest. Tomorrow, we separate the true patriots from the resistors.
 leave supervisor_russet
-
+[background arg="res://assets/narrative/night_gameplay_spud_customs_latest.png" fade="4.0"]
 join player_character center [z_index="1"]
 player_character: (Think to yourself) What's really going on here? And which side am I on?
 leave player_character

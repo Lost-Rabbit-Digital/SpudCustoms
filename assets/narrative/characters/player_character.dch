@@ -20,7 +20,7 @@
 "image": "\"res://assets/narrative/characters/player_character.png\""
 },
 "mirror": false,
-"offset": Vector2(0, -50),
+"offset": Vector2(0, 0),
 "scale": 0.6,
 "scene": ""
 }
