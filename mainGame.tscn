@@ -1,4 +1,5 @@
-[gd_scene load_steps=39 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=43 format=3 uid="uid://bqdirqkno2n36"]
+
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://suspect_panel.png" id="2_f25cg"]
 [ext_resource type="Texture2D" uid="uid://3puyjulpos2e" path="res://rules_panel.png" id="3_3ctpg"]
@@ -19,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dgw6rbhy6crh" path="res://assets/suspect_panel/suspect_panel_table.png" id="17_hbwb4"]
 [ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://give_prompt_dialogue.png" id="17_mr1ft"]
 [ext_resource type="Texture2D" uid="uid://dh5wbdkmsk7de" path="res://assets/potatoes/heads/russet_burbank_head_1.png" id="18_7ww6h"]
-[ext_resource type="Texture2D" path="res://assets/level/background.png" id="18_jl4i3"]
+[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="18_jl4i3"]
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="18_yiok2"]
 [ext_resource type="Texture2D" uid="uid://cnt7y8a7drxme" path="res://assets/documents/bulletin/bulletin_main_page.png" id="19_mnrrk"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="20_pd2wg"]
