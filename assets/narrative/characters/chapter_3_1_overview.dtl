@@ -1,0 +1,110 @@
+[background arg="res://assets/narrative/chapter_3/border_chaos.jpg" fade="3.0"]
+The Spud border is in utter chaos.
+Panicked potatoes are fleeing en masse.
+News of Root Reserve has spread, and nothing will ever be the same.
+
+#[background arg="res://assets/timelines/customs_office_disarray.png" fade="2.0"]
+join player_character center [z_index="1"]
+player_character: (Think to yourself) What happened here? Where is everyone?
+leave player_character
+
+join supervisor_russet left [z_index="1"]
+supervisor_russet: Thank spud you're here! It's all falling apart!
+supervisor_russet: The truth about Root Reserve... it's out. We need to contain this situation, now!
+leave supervisor_russet
+
+join supervisor_russet left [z_index="1"]
+#[background arg="res://assets/timelines/crisis_management.png" fade="2.0"]
+supervisor_russet: Listen carefully. We're in crisis mode.
+supervisor_russet: You'll need to make rapid decisions. Every choice counts.
+supervisor_russet: Maintain order, or join the chaos. It's up to you.
+leave supervisor_russet
+
+join supervisor_russet left [z_index="1"]
+#[background arg="res://assets/timelines/special_processing.png" fade="1.5"]
+supervisor_russet: We have "special" potatoes coming through. Use the UV light to verify their stamps.
+supervisor_russet: Follow this script for questioning. Don't deviate.
+supervisor_russet: And whatever you do, don't ask where they're going. Understood?
+leave supervisor_russet
+
+#[background arg="res://assets/timelines/loyalty_choice.png" fade="2.0"]
+join sweet_potato_sasha right [z_index="1"]
+sweet_potato_sasha: This is our chance to change everything. Will you help us?
+leave sweet_potato_sasha
+
+join prime_minister_idaho left [z_index="1"]
+prime_minister_idaho: Remember your duty to Spud. Maintain order at all costs.
+leave prime_minister_idaho
+
+join player_character center [z_index="1"]
+player_character: (Think to yourself) Government, resistance, or find a middle ground? The choice is mine...
+leave player_character
+
+join supervisor_russet left [z_index="1"]
+#[background arg="res://assets/timelines/character_fates.png" fade="2.0"]
+supervisor_russet: The fates of your colleagues are in your hands. Choose wisely.
+leave supervisor_russet
+
+join sweet_potato_sasha leftmost [z_index="1"]
+join player_character right [z_index="1"]
+#[background arg="res://assets/timelines/evidence_handling.png" fade="1.5"]
+sweet_potato_sasha: We've gathered evidence about Root Reserve. What should we do with it?
+player_character: (Options appear) Destroy it? Leak it to the public? Selective reveal?
+- "Destroy it?"
+- "Leak it to the public?"
+- "Selectively reveal Root Reserve?"
+leave sweet_potato_sasha
+leave player_character
+
+#[background arg="res://assets/timelines/prime_minister_bunker.png" fade="3.0"]
+Prime Minister Idaho's emergency bunker. The moment of truth has arrived.
+
+join prime_minister_idaho center [z_index="1"]
+join player_character leftmost [z_index="0"]
+
+prime_minister_idaho: So, you've discovered our little secret. Yes, Root Reserve is made from distilled potatoes.
+prime_minister_idaho: But don't you see? It was necessary! Our society was on the brink of collapse.
+prime_minister_idaho: Root Reserve saved us. The cost was high, but the alternative was extinction.
+prime_minister_idaho: The choice is yours. Arrest me, negotiate, or join me. What'll it be?
+
+- "This is monstrous! You'll face justice for this!"
+- "I... I understand. But there must be another way."
+- "You did what you had to do. How can I help maintain stability?"
+leave prime_minister_idaho
+leave player_character
+
+#[background arg="res://assets/timelines/epilogue_choice.png" fade="2.0"]
+The fate of Spud hangs in the balance. Your final decision will shape the future.
+
+#[background arg="res://assets/timelines/revolutionary_ending.png" fade="1.5"]
+Option 1: Revolutionary Ending
+Narrator: The old regime crumbles. A new Spud rises from the ashes.
+Narrator: Food shortages loom, but hope for a more ethical future prevails.
+
+#[background arg="res://assets/timelines/reform_ending.png" fade="1.5"]
+Option 2: Reform Ending
+Narrator: Gradual changes begin. The most egregious offenders face trial.
+Narrator: Slow progress towards a more open society is made.
+
+#[background arg="res://assets/timelines/authoritarian_ending.png" fade="1.5"]
+Option 3: Authoritarian Ending
+Narrator: Order is maintained. Root Reserve production expands.
+Narrator: You rise to power, grappling with the ethical cost of stability.
+
+#[background arg="res://assets/timelines/escape_ending.png" fade="1.5"]
+Option 4: Escape Ending
+Narrator: You flee with a group of refugees, haunted by what you've left behind.
+Narrator: A new life in exile begins, with thoughts of one day returning to save Spud.
+
+#[background arg="res://assets/timelines/aftermath.png" fade="3.0"]
+Narrator: The consequences of your choices ripple through Spud society.
+Narrator: International reactions, food crises, justice or cover-ups - all shaped by your decisions.
+
+#[background arg="res://assets/timelines/final_reflection.png" fade="2.0"]
+join player_character center [z_index="1"]
+player_character: (Final thoughts) What have I done? Was it the right choice? Only time will tell...
+leave player_character
+
+#[background arg="res://assets/timelines/game_end.png" fade="4.0"]
+Narrator: Thank you for playing Spud Customs. Your choices have shaped the destiny of a nation.
+Narrator: But remember, in the world of potatoes, the truth always lies beneath the skin...

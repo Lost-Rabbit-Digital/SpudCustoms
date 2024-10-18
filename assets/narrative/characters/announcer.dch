@@ -8,20 +8,20 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "Player Character",
+"default_portrait": "Announcer",
 "description": "",
-"display_name": "You",
+"display_name": "Radio Announcer",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"Player Character": {
+"Announcer": {
 "export_overrides": {
-"image": "\"res://assets/narrative/characters/player_character.png\""
+"image": "\"res://assets/narrative/characters/announcer.png\""
 },
 "mirror": false,
 "offset": Vector2(0, -50),
-"scale": 0.6,
+"scale": 0.5,
 "scene": ""
 }
 },

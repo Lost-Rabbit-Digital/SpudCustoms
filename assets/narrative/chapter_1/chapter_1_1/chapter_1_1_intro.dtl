@@ -3,7 +3,7 @@ Welcome to the great nation of Spud, citizen.
 A land of prosperity and opportunity for all potatoes.
 But our beloved Spud faces challenges, and we need your help.
 You've been selected for a crucial role in protecting our borders.
-Your duty: to process incoming potatoes and maintain our way of life.
+Your duty\: to process incoming potatoes and maintain our way of life.
 Remember, your family's well-being depends on your performance.
 
 [background arg="res://assets/narrative/wall-birds-eye-view.png" fade="2.0"]
@@ -17,45 +17,61 @@ supervisor_russet: Ah, the new sprout has finally arrived. Let's hope you're not
 supervisor_russet: Listen carefully, because I won't repeat myself. The future of Spud rests on your shoulders now.
 supervisor_russet: By the power vested in me, I hereby appoint you as a Customs Officer of the glorious nation of Spud.
 supervisor_russet: *Russet firmly places an official cap on your head, the weight of responsibility settling in*
-supervisor_russet: Your job is simple: examine documents, question applicants, and decide their fate. Admit, reject, or detain.
+supervisor_russet: Your job is simple\: examine documents, question applicants, and decide their fate. Admit, reject, or detain.
 supervisor_russet: Make too many mistakes, and you'll find yourself on the wrong side of that wall. Understood?
+- "Spud, yes, Spud!"
+- "I understand..."
+- "I don't understand at all!"
 leave supervisor_russet
 
+join supervisor_russet left [z_index="1"]
 [background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="4.0"]
 supervisor_russet: Alright, let's see what you're made of. Your first applicant is waiting.
+leave supervisor_russet
 
 join sweet_potato_sasha right [z_index="1"]
 sweet_potato_sasha: *whispering* Psst... newcomer. Not everything is as it seems here. Keep your eyes peeled and your wits sharp.
 leave sweet_potato_sasha
 
-#[background arg="res://assets/timelines/document_inspection.png" fade="2.0"]
+join supervisor_russet left [z_index="1"]
+# #[background arg="res://assets/timelines/document_inspection.png" fade="2.0"]
 supervisor_russet: Here's your first case. Check those stamps carefully. One wrong move could let in a bad spud.
 supervisor_russet: Remember, it's not just about papers. Look for signs of disease, tampering, or suspicious behavior.
 supervisor_russet: And always ask the right questions. A skilled officer can spot a liar from a mile away.
+leave supervisor_russet
 
-#[background arg="res://assets/timelines/radio_broadcast.png" fade="1.5"]
+join announcer center
+# #[background arg="res://assets/timelines/radio_broadcast.png" fade="1.5"]
 *Radio crackling in the background*
-Announcer: "...and in today's news, crop failures continue to plague our outer regions. The government assures us that innovative solutions are in development..."
+announcer: "...and in today's news, crop failures continue to plague our outer regions. The government assures us that innovative solutions are in development..."
+leave announcer
 
-#[background arg="res://assets/timelines/propaganda_poster.png" fade="1.5"]
+# #[background arg="res://assets/timelines/propaganda_poster.png" fade="1.5"]
 *A bright poster catches your eye*
-Poster text: "Report Suspicious Tubers - Keep Our Soil Pure! Your vigilance protects Spud!"
+Poster text\: "Report Suspicious Tubers - Keep Our Soil Pure! Your vigilance protects Spud!"
 
-#[background arg="res://assets/timelines/spud_masherson.png" fade="2.0"]
+join supervisor_russet left [z_index="1"]
+# #[background arg="res://assets/timelines/spud_masherson.png" fade="2.0"]
 supervisor_russet: Heads up, rookie. We've got a peculiar case coming through. Stay sharp.
 
 join spud_masherson center [z_index="1"]
 spud_masherson: *nervously* P-please... I need to enter Spud. My... my papers are all in order.
 leave spud_masherson
 
+join supervisor_russet left [z_index="1"]
 supervisor_russet: Well, what are you waiting for? Admit, reject, or detain. The choice is yours, but choose wisely.
+leave supervisor_russet
 
-#[background arg="res://assets/timelines/end_of_day.png" fade="3.0"]
+join supervisor_russet left [z_index="1"]
+# #[background arg="res://assets/timelines/end_of_day.png" fade="3.0"]
 supervisor_russet: That's it for today, newcomer. Not bad... for a beginner. Remember, efficiency is key. We have quotas to meet.
 supervisor_russet: Report back here tomorrow. And don't be late!
+leave supervisor_russet
 
-#[background arg="res://assets/timelines/cryptic_message.png" fade="2.0"]
+# #[background arg="res://assets/timelines/cryptic_message.png" fade="2.0"]
 *As you prepare to leave, you notice a small piece of paper hidden under some documents*
-Message text: "Not all is as it seems. The truth lies beneath the skin. - Y.G."
+Message text\: "Not all is as it seems. The truth lies beneath the skin. - Y.G."
 
+join supervisor_russet left [z_index="1"]
 supervisor_russet: What are you staring at? Get some rest. Tomorrow, we separate the good spuds from the bad.
+leave supervisor_russet

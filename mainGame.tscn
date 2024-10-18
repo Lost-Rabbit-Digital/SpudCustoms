@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=42 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://suspect_panel.png" id="2_f25cg"]
@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://c0dbfc2uut8qn" path="res://assets/stamps/stamp_shadow.png" id="16_qj41b"]
 [ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://give_prompt_dialogue.png" id="17_mr1ft"]
 [ext_resource type="Texture2D" uid="uid://dh5wbdkmsk7de" path="res://assets/potatoes/heads/russet_burbank_head_1.png" id="18_7ww6h"]
-[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="18_jl4i3"]
+[ext_resource type="Texture2D" path="res://assets/level/background.png" id="18_jl4i3"]
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="18_yiok2"]
 [ext_resource type="Texture2D" uid="uid://cnt7y8a7drxme" path="res://assets/documents/bulletin/bulletin_main_page.png" id="19_mnrrk"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="20_pd2wg"]
@@ -32,6 +32,10 @@
 [ext_resource type="PackedScene" uid="uid://bp2pkcox316n0" path="res://menus/pause_menu.tscn" id="28_vb6g0"]
 [ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="31_c10l6"]
 [ext_resource type="Texture2D" uid="uid://y3bfxrfq7tmx" path="res://assets/documents/rulebook/rulebook_closed.png" id="31_d7mwj"]
+[ext_resource type="Texture2D" uid="uid://rp2kuf2p1vxu" path="res://assets/documents/customs_guide/customs_guide_closed_big.png" id="33_43ifc"]
+[ext_resource type="LabelSettings" uid="uid://cv376fvgvbsxy" path="res://default_bulletin_label.tres" id="34_3g44m"]
+[ext_resource type="Texture2D" uid="uid://bxfqaedb1yks1" path="res://assets/documents/customs_guide/customs_guide_open_end_big.png" id="35_ky7rt"]
+[ext_resource type="Texture2D" uid="uid://dh04bnixjy2p3" path="res://assets/documents/customs_guide/customs_guide_open_middle_big.png" id="36_drpmm"]
 
 [sub_resource type="Curve2D" id="Curve2D_f3jw2"]
 _data = {
@@ -94,12 +98,6 @@ z_index = 1
 position = Vector2(639.453, 121)
 scale = Vector2(1.09345, 1.02885)
 texture = ExtResource("5_h10h2")
-
-[node name="Background" type="Sprite2D" parent="UI"]
-z_index = 4
-z_as_relative = false
-position = Vector2(640, 360)
-texture = ExtResource("18_jl4i3")
 
 [node name="Labels" type="Control" parent="UI"]
 anchors_preset = 0
@@ -210,6 +208,12 @@ offset_bottom = 720.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Background" type="Sprite2D" parent="PauseContainer"]
+z_index = -1
+z_as_relative = false
+position = Vector2(640, 360)
+texture = ExtResource("18_jl4i3")
+
 [node name="PauseMenu" parent="PauseContainer" instance=ExtResource("28_vb6g0")]
 visible = false
 layout_mode = 1
@@ -288,7 +292,7 @@ z_as_relative = false
 texture = ExtResource("10_foucb")
 
 [node name="InspectionTable" type="Sprite2D" parent="Gameplay"]
-position = Vector2(442, 472)
+position = Vector2(442, 459)
 scale = Vector2(1.09694, 1.07604)
 texture = ExtResource("7_nqnif")
 
@@ -313,7 +317,7 @@ offset_bottom = 40.0
 [node name="Bulletin" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_index = 3
 z_as_relative = false
-position = Vector2(310, 481)
+position = Vector2(-321, 468)
 texture = ExtResource("19_mnrrk")
 script = ExtResource("21_qw3ji")
 
@@ -463,7 +467,7 @@ texture = ExtResource("20_pd2wg")
 [node name="ApprovalStamp" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_index = 4
 texture_filter = 1
-position = Vector2(94, 487)
+position = Vector2(88, 612)
 texture = ExtResource("28_uvib1")
 
 [node name="StampShadow" type="Sprite2D" parent="Gameplay/InteractiveElements/ApprovalStamp"]
@@ -476,7 +480,7 @@ texture = ExtResource("16_qj41b")
 
 [node name="RejectionStamp" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_index = 2
-position = Vector2(93, 617)
+position = Vector2(226, 615)
 texture = ExtResource("31_c10l6")
 
 [node name="StampShadow" type="Sprite2D" parent="Gameplay/InteractiveElements/RejectionStamp"]
@@ -496,6 +500,72 @@ texture = ExtResource("31_d7mwj")
 
 [node name="OpenRulebook" type="Sprite2D" parent="Gameplay/InteractiveElements/Rulebook"]
 visible = false
+
+[node name="CustomsGuideClosedBig" type="Sprite2D" parent="Gameplay/InteractiveElements/Rulebook"]
+position = Vector2(-288, -25)
+texture = ExtResource("33_43ifc")
+
+[node name="CustomsGuideClosedBig" type="Sprite2D" parent="Gameplay/InteractiveElements"]
+position = Vector2(154, 370)
+scale = Vector2(3, 3)
+texture = ExtResource("33_43ifc")
+
+[node name="BulletinNote" type="Label" parent="Gameplay/InteractiveElements"]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 596.0
+offset_top = 297.0
+offset_right = 756.0
+offset_bottom = 437.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
+text = "CONTROLS
+[LEFT MOUSE] - Pick up and use or drag objects
+[RIGHT MOUSE] - Drop objects
+[ESCAPE] - Pause or return to the main menu"
+label_settings = ExtResource("34_3g44m")
+autowrap_mode = 3
+
+[node name="CustomsGuideOpenEndBig" type="Sprite2D" parent="Gameplay/InteractiveElements"]
+position = Vector2(692, 378)
+scale = Vector2(3, 3)
+texture = ExtResource("35_ky7rt")
+
+[node name="BulletinNote2" type="Label" parent="Gameplay/InteractiveElements"]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 325.0
+offset_top = 295.0
+offset_right = 485.0
+offset_bottom = 435.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
+text = "INSTRUCTIONS
+
+Press the megaphone to call in the next potato. 
+
+Drag their documents to your desk.
+
+Stamp their documents and return them."
+label_settings = ExtResource("34_3g44m")
+autowrap_mode = 2
+
+[node name="CustomsGuideOpenMiddleBig" type="Sprite2D" parent="Gameplay/InteractiveElements"]
+position = Vector2(426, 379)
+scale = Vector2(3, 3)
+texture = ExtResource("36_drpmm")
 
 [node name="Paths" type="Control" parent="Gameplay"]
 anchors_preset = 0

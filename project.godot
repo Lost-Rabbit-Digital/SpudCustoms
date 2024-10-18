@@ -28,6 +28,8 @@ gdscript/warnings/integer_division=0
 [dialogic]
 
 directories/dch_directory={
+"announcer": "res://assets/narrative/characters/announcer.dch",
+"narrator": "res://assets/narrative/characters/narrator.dch",
 "player_character": "res://assets/narrative/characters/player_character.dch",
 "prime_minister_idaho": "res://assets/narrative/characters/prime_minister_idaho.dch",
 "spud_masherson": "res://assets/narrative/characters/spud_masherson.dch",
@@ -36,6 +38,8 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "chapter_1_spud_masherson": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_spud_masherson.dtl",
+"chapter_2_1_overview": "res://assets/narrative/characters/chapter_2_1_overview.dtl",
+"chapter_3_1_overview": "res://assets/narrative/characters/chapter_3_1_overview.dtl",
 "day_1_intro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_intro.dtl",
 "day_1_outro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_outro.dtl"
 }
@@ -108,6 +112,5 @@ dialogic_default_action={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-environment/defaults/default_clear_color=Color(0.133333, 0.164706, 0.164706, 1)
 2d/snap/snap_2d_transforms_to_pixel=true
 2d/snap/snap_2d_vertices_to_pixel=true
