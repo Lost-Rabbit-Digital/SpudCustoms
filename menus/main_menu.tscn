@@ -80,8 +80,8 @@ theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
 [node name="Background" type="Sprite2D" parent="MarginContainer"]
-position = Vector2(652, 372)
 texture = ExtResource("1_43osq")
+centered = false
 
 [node name="Header" type="Label" parent="MarginContainer"]
 layout_mode = 2
