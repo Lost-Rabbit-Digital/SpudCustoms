@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bp2pkcox316n0"]
+[gd_scene load_steps=7 format=3 uid="uid://bp2pkcox316n0"]
 
 [ext_resource type="Script" path="res://menus/menu_scripts/pause_menu.gd" id="1_4a8qb"]
 [ext_resource type="Texture2D" uid="uid://budh8ujdl5y88" path="res://assets/level/pause_background.png" id="2_otyxc"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="3_xl4c0"]
+[ext_resource type="PackedScene" uid="uid://bhwnq3jtlbacg" path="res://menus/qol_menu_buttons.tscn" id="4_hxd3b"]
 
 [sub_resource type="Theme" id="Theme_s43ip"]
 default_font = ExtResource("3_xl4c0")
@@ -65,8 +66,15 @@ text = "Press \"Escape\" to resume..."
 horizontal_alignment = 1
 autowrap_mode = 2
 
+[node name="HBoxContainer2" parent="MarginContainer" instance=ExtResource("4_hxd3b")]
+layout_mode = 2
+size_flags_horizontal = 8
+alignment = 2
+
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
 theme_override_constants/separation = 32
 alignment = 1
 
