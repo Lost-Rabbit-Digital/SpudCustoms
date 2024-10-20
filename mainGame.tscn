@@ -264,7 +264,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="CustomsOffice" type="Sprite2D" parent="Gameplay"]
-z_index = 1
+z_index = 4
 position = Vector2(886, 193)
 scale = Vector2(1.19563, 1.05853)
 texture = ExtResource("7_rsfsr")
@@ -282,7 +282,7 @@ scale = Vector2(0.75, 0.75)
 texture = ExtResource("9_arv36")
 
 [node name="FlashAlert" type="Sprite2D" parent="Gameplay/CustomsOffice/Megaphone"]
-z_index = 2
+z_index = 5
 z_as_relative = false
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("10_5g2y2")
