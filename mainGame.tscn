@@ -304,7 +304,7 @@ z_as_relative = false
 texture = ExtResource("10_foucb")
 
 [node name="InspectionTable" type="Sprite2D" parent="Gameplay"]
-position = Vector2(442, 459)
+position = Vector2(442, 471.501)
 scale = Vector2(1.09694, 1.07604)
 texture = ExtResource("7_nqnif")
 
@@ -479,7 +479,7 @@ texture = ExtResource("20_pd2wg")
 [node name="ApprovalStamp" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_index = 4
 texture_filter = 1
-position = Vector2(88, 612)
+position = Vector2(88.0005, 624.501)
 texture = ExtResource("28_uvib1")
 
 [node name="StampShadow" type="Sprite2D" parent="Gameplay/InteractiveElements/ApprovalStamp"]
@@ -492,7 +492,7 @@ texture = ExtResource("16_qj41b")
 
 [node name="RejectionStamp" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_index = 2
-position = Vector2(226, 615)
+position = Vector2(226, 627.501)
 texture = ExtResource("31_c10l6")
 
 [node name="StampShadow" type="Sprite2D" parent="Gameplay/InteractiveElements/RejectionStamp"]
@@ -518,7 +518,7 @@ position = Vector2(-288, -25)
 texture = ExtResource("33_43ifc")
 
 [node name="CustomsGuideClosedBig" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-position = Vector2(154, 370)
+position = Vector2(154, 382.501)
 scale = Vector2(3, 3)
 texture = ExtResource("33_43ifc")
 
@@ -545,7 +545,7 @@ label_settings = ExtResource("34_3g44m")
 autowrap_mode = 3
 
 [node name="CustomsGuideOpenEndBig" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-position = Vector2(692, 378)
+position = Vector2(692, 390.501)
 scale = Vector2(3, 3)
 texture = ExtResource("35_ky7rt")
 
@@ -575,7 +575,7 @@ label_settings = ExtResource("34_3g44m")
 autowrap_mode = 2
 
 [node name="CustomsGuideOpenMiddleBig" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-position = Vector2(426, 379)
+position = Vector2(426, 391.501)
 scale = Vector2(3, 3)
 texture = ExtResource("36_drpmm")
 
