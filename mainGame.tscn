@@ -606,8 +606,8 @@ z_index = 3
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/BulletinFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Bulletin/OpenBulletin/TurnRight" to="Gameplay/InteractiveElements/Bulletin" method="_on_texture_button_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Bulletin/OpenBulletin/TurnLeft" to="Gameplay/InteractiveElements/Bulletin" method="_on_texture_button_turn_left_pressed"]

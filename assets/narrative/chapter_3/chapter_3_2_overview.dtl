@@ -1,0 +1,143 @@
+# Chapter 3
+[background arg="res://assets/narrative/chapter_3/border_chaos.jpg" fade="1.0"]
+# Image suggestion: Mass exodus of terrified potatoes fleeing from giant potato mashers and graters
+The Spud border is in utter chaos.
+Panicked potatoes are fleeing en masse, their eyes wide with terror.
+News of Root Reserve has spread, and nothing will ever be the same.
+The air is thick with the scent of fear... and oddly, mashed potatoes.
+
+join player_character center [z_index="1"]
+player_character: (Think to yourself) Holy guacamole... or should I say, holy mashed potatoes? What in the name of all that's starchy happened here? Where is everyone? Did they all suddenly develop an appetite for freedom fries?
+leave player_character
+
+[background arg="res://assets/narrative/customs_office.jpg" fade="3.0"]
+# Image suggestion: Supervisor Russet panicking amidst piles of paperwork and overturned Root Reserve cans
+join supervisor_russet left [z_index="1"]
+supervisor_russet: Thank spud you're here! It's all falling apart faster than an overcooked potato! We're really in the soup now... or should I say, the purée?
+supervisor_russet: The truth about Root Reserve... it's out. Turns out people don't like the idea of being turned into tomorrow's lunch. Who knew cannibalism could be so unpopular? Talk about biting the hand that feeds you!
+supervisor_russet: We need to contain this situation, now! Before we all end up in the great potato masher in the sky! Or worse, in the value meal section!
+leave supervisor_russet
+
+[background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="1.0"]
+# Image suggestion: A "crisis mode" interface with red alarms and potato-themed emergency protocols
+join supervisor_russet left [z_index="1"]
+supervisor_russet: Listen carefully, you half-baked rookie. We're in crisis mode. It's time to separate the mashed from the au gratin!
+supervisor_russet: You'll need to make rapid decisions. Every choice counts. It's fry or be fried out there!
+supervisor_russet: Maintain order, or join the chaos. It's up to you. But remember, in Spud, you're either serving the nation or serving as the main course! And trust me, you don't want to know what the daily special is today.
+leave supervisor_russet
+
+join supervisor_russet left [z_index="1"]
+# Image suggestion: A line of suspiciously uniform "potatoes" with barcodes and "SPECIAL" stamps
+supervisor_russet: We have "special" potatoes coming through. Use the UV light to verify their stamps. And don't ask why they're glowing... that's a feature, not a bug!
+supervisor_russet: Follow this script for questioning. Don't deviate. And for the love of all that's starchy, don't ask where they're going. Ignorance is bliss, and in this case, it might just keep you out of the fryer. Remember, curiosity mashed the spud!
+leave supervisor_russet
+
+# Image suggestion: Sweet Potato Sasha in resistance gear, holding a "Free the Fries" sign
+join sweet_potato_sasha right [z_index="1"]
+sweet_potato_sasha: This is our chance to change everything. Will you help us? Or will you continue to be small fry in their big potato game?
+sweet_potato_sasha: Remember, today's revolutionary is tomorrow's freedom fry! Join us, and together we can mash this corrupt system!
+leave sweet_potato_sasha
+
+# Image suggestion: Prime Minister Idaho as a menacing, giant potato looming over the city
+join prime_minister_idaho left [z_index="1"]
+prime_minister_idaho: Remember your duty to Spud. Maintain order at all costs. After all, a few bad potatoes shouldn't spoil the whole batch... they should just be made into a nutritious smoothie for the greater good!
+prime_minister_idaho: Choose wisely, officer. Your future in Spud may depend on it. Will you be part of the solution... or part of the dissolution?
+leave prime_minister_idaho
+
+join player_character center [z_index="1"]
+# Image suggestion: Player character sweating profusely, caught between resistance and government forces
+player_character: (Think to yourself) This is it. The moment of truth. Do I side with the government and keep this mashed-up system going? Or do I join the resistance and risk becoming potato pancakes? Oh, the steamy drama of it all!
+- "I'll help the Government of Spud! Better to reign in hell than serve in mashed heaven!"
+- "We've got to get these potatoes through the checkpoint at all costs! Viva la Potato Revolution!"
+leave player_character
+
+join supervisor_russet left [z_index="1"]
+# Image suggestion: A "Wheel of Misfortune" with various potato-themed fates (mashed, fried, baked, etc.)
+supervisor_russet: The fates of your colleagues are in your hands. Choose wisely. Remember, in Spud, job termination has a whole new meaning. Will they be baked, mashed, or freedomed?
+leave supervisor_russet
+
+join sweet_potato_sasha leftmost [z_index="1"]
+join player_character right [z_index="1"]
+[background arg="res://assets/narrative/root_reserve_reveal.jpg" fade="1.5"]
+# Image suggestion: Incriminating documents showing the "recipe" for Root Reserve with redacted potato names
+sweet_potato_sasha: We've gathered evidence about Root Reserve. What should we do with it? This could be our chance to expose the rotten core of Spud!
+player_character: What should I do? This decision could really cook my goose... or should I say, bake my potato?
+- "Destroy it? Ignorance is bliss, and bliss is not being turned into French fries!"
+- "Leak it to the public? Time to spill the beans... er, potatoes!"
+- "Selectively reveal Root Reserve? Let's peel back the layers of this conspiracy... carefully."
+leave sweet_potato_sasha
+leave player_character
+
+[background arg="res://assets/narrative/prime_minister_idaho_bunker.jpg" fade="3.0"]
+# Image suggestion: A secret underground bunker filled with luxury potato-themed items and a giant Root Reserve production facility
+Prime Minister Idaho's emergency bunker. The moment of truth has arrived. The air is thick with the scent of power... and oddly, sour cream and chives.
+
+join prime_minister_idaho center [z_index="1"]
+join player_character leftmost [z_index="0"]
+
+prime_minister_idaho: So, you've discovered our little secret. Yes, Root Reserve is made from distilled potatoes. Congratulations, you've unpeeled the truth!
+prime_minister_idaho: But don't you see? It was necessary! Our society was on the brink of collapse. We were one bad harvest away from total annihilation!
+prime_minister_idaho: Root Reserve saved us. The cost was high, but the alternative was extinction. It's a dog-eat-dog world out there... or in our case, a potato-eat-potato world.
+prime_minister_idaho: The choice is yours. Arrest me, negotiate, or join me. What'll it be? Remember, in Spud, you're either part of the solution or part of the dissolution!
+
+- "This is monstrous! You'll face justice for this! Prepare to be served... a summons!"
+- "I... I understand. But there must be another way. Can't we find a solution that doesn't involve cannibalism? Maybe a nice potato salad instead?"
+- "You did what you had to do. How can I help maintain stability? After all, sacrifices must be made for the greater gouda... I mean, good!"
+leave prime_minister_idaho
+leave player_character
+
+[background arg="res://assets/narrative/epilogue_choice.jpg" fade="2.0"]
+# Image suggestion: A forked road with different potato-themed futures (utopia, dystopia, etc.)
+The fate of Spud hangs in the balance. Your final decision will shape the future. Will you mash the system or become part of the stew?
+
+[background arg="res://assets/narrative/revolutionary_ending.jpg" fade="1.5"]
+# Image suggestion: Potatoes of all kinds living in harmony, with Root Reserve factories converted to community centers
+Option 1: Revolutionary Ending
+join narrator left [z_index="1"]
+narrator: The old regime crumbles. A new Spud rises from the ashes, where all potatoes are created equal.
+narrator: Food shortages loom, but hope for a more ethical future prevails. The new motto: "From each according to their starch, to each according to their needs!"
+leave narrator
+
+[background arg="res://assets/narrative/reform_ending.jpg" fade="1.5"]
+# Image suggestion: A courtroom with potato judges presiding over Root Reserve trials
+Option 2: Reform Ending
+join narrator left [z_index="1"]
+narrator: Gradual changes begin. The most egregious offenders face trial, charged with crimes against potato-nity.
+narrator: Slow progress towards a more open society is made. Root Reserve is rebranded as "Ethical Eats" - now with 100% less cannibalism!
+leave narrator
+
+[background arg="res://assets/narrative/authoritarian_ending.jpg" fade="1.5"]
+# Image suggestion: A dystopian potato city with the player character as a giant, menacing leader
+Option 3: Authoritarian Ending
+join narrator left [z_index="1"]
+narrator: Order is maintained. Root Reserve production expands. "Soylent Green was a cookbook!" becomes the national slogan.
+narrator: You rise to power, grappling with the ethical cost of stability. But hey, at least unemployment is at an all-time low... because everyone's employed as either security or ingredients!
+leave narrator
+
+[background arg="res://assets/narrative/escape_ending.jpg" fade="1.5"]
+# Image suggestion: A group of refugee potatoes in disguise, fleeing across the border
+Option 4: Escape Ending
+join narrator left [z_index="1"]
+narrator: You flee with a group of refugees, haunted by what you've left behind. Your new life motto: "Out of the frying pan, into the freedom!"
+narrator: A new life in exile begins, with thoughts of one day returning to save Spud. You start a support group called "Tubers Anonymous" for recovering Spud citizens.
+leave narrator
+
+[background arg="res://assets/narrative/aftermath.jpg" fade="3.0"]
+# Image suggestion: A globe with different countries represented by potato varieties reacting to Spud's situation
+join narrator right [z_index="1"]
+narrator: The consequences of your choices ripple through Spud society and beyond.
+narrator: International reactions range from horror to intrigue. Some nations cut ties, calling Spud "small potatoes," while others secretly ask for the Root Reserve recipe.
+narrator: As for you, whether hero or villain, you'll go down in history. After all, you can't make an omelet without breaking a few eggs... or in this case, you can't make a new society without mashing a few potatoes.
+leave narrator
+
+# Image suggestion: Player character looking reflectively into a mirror that shows all possible futures
+join player_character center [z_index="1"]
+player_character: (Final thoughts) What have I done? Was it the right choice? Only time will tell... But one thing's for sure, life in Spud will never be the same. Here's hoping we all don't end up in hot water... or worse, hot oil.
+leave player_character
+
+# Image suggestion: A "The End?" sign made of potato peelings
+join narrator right [z_index="1"]
+narrator: Thank you for playing Spud Customs. Your choices have shaped the destiny of a nation. Remember, in life as in potatoes, it's what's inside that counts.
+narrator: But always keep in mind, in the world of Spud, the truth always lies beneath the skin... and sometimes, that truth is delicious with a bit of butter and chives.
+leave narrator
+

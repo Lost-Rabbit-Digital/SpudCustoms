@@ -21,8 +21,8 @@
 },
 "ignore_char_scale": false,
 "mirror": false,
-"offset": Vector2(0, -50),
-"scale": 0.6,
+"offset": Vector2(0, 0),
+"scale": 1.0,
 "scene": "res://addons/dialogic/Modules/Character/default_portrait.tscn"
 }
 },

@@ -20,8 +20,8 @@
 "image": "\"res://assets/narrative/characters/announcer.png\""
 },
 "mirror": false,
-"offset": Vector2(0, -50),
-"scale": 0.5,
+"offset": Vector2(0, 0),
+"scale": 1.0,
 "scene": ""
 }
 },

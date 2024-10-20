@@ -8,20 +8,20 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "New portrait",
+"default_portrait": "Spud Masherson",
 "description": "",
 "display_name": "Spud Masherson",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"New portrait": {
+"Spud Masherson": {
 "export_overrides": {
 "image": "\"res://assets/narrative/characters/spud_masherson.png\""
 },
 "mirror": true,
-"offset": Vector2(0, -30),
-"scale": 0.4,
+"offset": Vector2(0, 0),
+"scale": 1.0,
 "scene": ""
 }
 },

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsw02jtqjldji"
-path="res://.godot/imported/wall-birds-eye-view.png-7eb6b5094e8b3011f09d4cdb0ac1258a.ctex"
+uid="uid://cufnx6eq5fk73"
+path="res://.godot/imported/busy_customs_office.jpg-c08b7ed9674ace7bd043374fd6cbe965.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/narrative/wall-birds-eye-view.png"
-dest_files=["res://.godot/imported/wall-birds-eye-view.png-7eb6b5094e8b3011f09d4cdb0ac1258a.ctex"]
+source_file="res://assets/narrative/busy_customs_office.jpg"
+dest_files=["res://.godot/imported/busy_customs_office.jpg-c08b7ed9674ace7bd043374fd6cbe965.ctex"]
 
 [params]
 

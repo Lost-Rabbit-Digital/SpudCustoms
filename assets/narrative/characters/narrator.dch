@@ -5,7 +5,18 @@
 "color": Color(1, 1, 1, 1),
 "custom_info": {
 "sound_mood_default": "",
-"sound_moods": {},
+"sound_moods": {
+"Mood 1": {
+"mode": 0,
+"name": "Mood 1",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
+"skip_characters": 0.0,
+"sound_path": "res://addons/dialogic/Example Assets/sound-effects/typing2.wav",
+"volume_base": 0.0,
+"volume_variance": 0.0
+}
+},
 "style": ""
 },
 "default_portrait": "Narrator",
@@ -20,8 +31,8 @@
 "image": "\"res://assets/narrative/characters/narrator.png\""
 },
 "mirror": false,
-"offset": Vector2(0, -40),
-"scale": 0.4,
+"offset": Vector2(0, 0),
+"scale": 1.0,
 "scene": ""
 }
 },
