@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=44 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://suspect_panel.png" id="2_f25cg"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="7_7m4ia"]
 [ext_resource type="Texture2D" uid="uid://dbi1u25he35x" path="res://interaction_table_background.png" id="7_nqnif"]
 [ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/level/customs_office.png" id="7_rsfsr"]
+[ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_woji0"]
 [ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="9_arv36"]
 [ext_resource type="Texture2D" uid="uid://jjnnivgwpiub" path="res://assets/alerts/megaphone_alert_box.png" id="10_5g2y2"]
 [ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
@@ -95,16 +96,22 @@ scale = Vector2(0.994467, 0.977299)
 texture = ExtResource("4_juy1b")
 
 [node name="WorldPanel" type="Sprite2D" parent="UI"]
-z_index = 1
+z_index = 3
 position = Vector2(639.453, 121)
 scale = Vector2(1.09345, 1.02885)
 texture = ExtResource("5_h10h2")
 
 [node name="Background" type="Sprite2D" parent="UI"]
-z_index = 2
+z_index = 4
 z_as_relative = false
 position = Vector2(640, 360)
 texture = ExtResource("18_jl4i3")
+
+[node name="InteractableItemsWorldBackground" type="Sprite2D" parent="UI"]
+z_index = 2
+z_as_relative = false
+position = Vector2(640, 360)
+texture = ExtResource("7_woji0")
 
 [node name="Labels" type="Control" parent="UI"]
 anchors_preset = 0
@@ -294,7 +301,6 @@ scale = Vector2(1.05816, 1.06849)
 texture = ExtResource("2_f25cg")
 
 [node name="SuspectPanelTable" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_index = 2
 z_as_relative = false
 texture = ExtResource("17_hbwb4")
 
@@ -504,7 +510,7 @@ scale = Vector2(0.29, 0.29)
 texture = ExtResource("16_qj41b")
 
 [node name="Rulebook" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-z_index = 3
+z_index = 1
 position = Vector2(1219, 567)
 texture = ExtResource("33_s6ap3")
 
