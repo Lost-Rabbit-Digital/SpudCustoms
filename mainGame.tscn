@@ -264,7 +264,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="CustomsOffice" type="Sprite2D" parent="Gameplay"]
-z_index = 4
+z_index = 5
 position = Vector2(886, 193)
 scale = Vector2(1.19563, 1.05853)
 texture = ExtResource("7_rsfsr")
@@ -585,20 +585,25 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="RunnerPath" type="Path2D" parent="Gameplay/Paths"]
+z_index = 3
 curve = SubResource("Curve2D_f3jw2")
 
 [node name="TimedOutPath" type="Path2D" parent="Gameplay/Paths"]
+z_index = 3
 curve = SubResource("Curve2D_1j820")
 
 [node name="RejectPath" type="Path2D" parent="Gameplay/Paths"]
+z_index = 3
 curve = SubResource("Curve2D_1j820")
 
 [node name="EnterOfficePath" type="Path2D" parent="Gameplay/Paths"]
+z_index = 3
 position = Vector2(-420.074, 0)
 scale = Vector2(1.42647, 1)
 curve = SubResource("Curve2D_xms7a")
 
 [node name="ApprovePath" type="Path2D" parent="Gameplay/Paths"]
+z_index = 3
 curve = SubResource("Curve2D_uenca")
 
 [node name="SpuddyQueue" type="Path2D" parent="Gameplay/Paths"]

@@ -64,11 +64,11 @@
 [ ] - Able to drag passport off interaction table
 [ ] - Snap closed passport to position of mouse cursor to avoid bad offset
 [ ] - Mouse has to be over passport to be able to stamp
-[ ] - Potato persons are above the customs office when called into the office
 [ ] - Potato persons flip upside down when called into the office
 
 
 # Completed tasks list
+[o] - Potato persons are above the customs office when called into the office
 [o] - Rephrase all laws to be more clearly negative
 [o] - Make intuitive stamp mechanic
 [o] - How do we tell the new player what to do to get through first potato processing?
