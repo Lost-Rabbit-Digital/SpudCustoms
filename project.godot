@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SpudCustoms"
-run/main_scene="res://chapter_1_cutscene_overview.tscn"
+run/main_scene="res://menus/splashscreen_scene.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/show_image=false
 config/icon="res://icon.svg"
@@ -49,11 +49,11 @@ directories/dtl_directory={
 "day_1_outro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_outro.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://assets/narrative/characters/DefaultStyle.tres", "res://assets/narrative/characters/DefaultSpeakerTextbox.tres"]
-layout/default_style="res://assets/narrative/characters/DefaultSpeakerTextbox.tres"
+layout/style_list=[]
+layout/default_style="Default"
 variables={}
 extensions_folder="res://addons/dialogic_additions"
-text/letter_speed=0.02
+text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
 text/advance_delay=0.1
@@ -71,23 +71,11 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
-text/autocolor_names=true
-animations/join_default="Slide In Left"
-animations/leave_default="Slide Out Right"
-history/simple_history_enabled=true
-history/simple_history_save=true
-translation/enabled=false
-translation/original_locale="en"
-translation/file_mode=1
-translation/translation_folder=""
-translation/save_mode=0
-translation/add_separator=false
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/size/mode=3
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="res://assets/cursor/cursor_default.png"
 

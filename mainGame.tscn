@@ -32,8 +32,8 @@
 [ext_resource type="Texture2D" uid="uid://dubo3sdxx8chn" path="res://assets/stamps/approval_stamp_3.png" id="28_uvib1"]
 [ext_resource type="PackedScene" uid="uid://bp2pkcox316n0" path="res://menus/pause_menu.tscn" id="28_vb6g0"]
 [ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="31_c10l6"]
-[ext_resource type="Texture2D" uid="uid://y3bfxrfq7tmx" path="res://assets/documents/rulebook/rulebook_closed.png" id="31_d7mwj"]
 [ext_resource type="Texture2D" uid="uid://rp2kuf2p1vxu" path="res://assets/documents/customs_guide/customs_guide_closed_big.png" id="33_43ifc"]
+[ext_resource type="Texture2D" uid="uid://b2wymckqr8jsk" path="res://assets/documents/customs_guide/customs_guide_closed_small.png" id="33_s6ap3"]
 [ext_resource type="LabelSettings" uid="uid://cv376fvgvbsxy" path="res://default_bulletin_label.tres" id="34_3g44m"]
 [ext_resource type="Texture2D" uid="uid://bxfqaedb1yks1" path="res://assets/documents/customs_guide/customs_guide_open_end_big.png" id="35_ky7rt"]
 [ext_resource type="Texture2D" uid="uid://dh04bnixjy2p3" path="res://assets/documents/customs_guide/customs_guide_open_middle_big.png" id="36_drpmm"]
@@ -506,20 +506,20 @@ texture = ExtResource("16_qj41b")
 [node name="Rulebook" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_index = 3
 position = Vector2(1219, 567)
-texture = ExtResource("31_d7mwj")
+texture = ExtResource("33_s6ap3")
 
 [node name="ClosedRulebook" type="Sprite2D" parent="Gameplay/InteractiveElements/Rulebook"]
 
 [node name="OpenRulebook" type="Sprite2D" parent="Gameplay/InteractiveElements/Rulebook"]
 visible = false
 
-[node name="CustomsGuideClosedBig" type="Sprite2D" parent="Gameplay/InteractiveElements/Rulebook"]
-position = Vector2(-288, -25)
+[node name="CustomsGuideClosedBig" type="Sprite2D" parent="Gameplay/InteractiveElements"]
+position = Vector2(138, -164)
+scale = Vector2(3, 3)
 texture = ExtResource("33_43ifc")
 
-[node name="CustomsGuideClosedBig" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-position = Vector2(154, 382.501)
-scale = Vector2(3, 3)
+[node name="CustomsGuideClosedBig2" type="Sprite2D" parent="Gameplay/InteractiveElements"]
+position = Vector2(885, -119)
 texture = ExtResource("33_43ifc")
 
 [node name="BulletinNote" type="Label" parent="Gameplay/InteractiveElements"]
@@ -528,10 +528,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 596.0
-offset_top = 297.0
-offset_right = 756.0
-offset_bottom = 437.0
+offset_left = 580.0
+offset_top = -249.501
+offset_right = 740.0
+offset_bottom = -109.501
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
@@ -545,7 +545,7 @@ label_settings = ExtResource("34_3g44m")
 autowrap_mode = 3
 
 [node name="CustomsGuideOpenEndBig" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-position = Vector2(692, 390.501)
+position = Vector2(676, -156)
 scale = Vector2(3, 3)
 texture = ExtResource("35_ky7rt")
 
@@ -555,10 +555,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 325.0
-offset_top = 295.0
-offset_right = 485.0
-offset_bottom = 435.0
+offset_left = 309.0
+offset_top = -251.501
+offset_right = 469.0
+offset_bottom = -111.501
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
@@ -575,7 +575,7 @@ label_settings = ExtResource("34_3g44m")
 autowrap_mode = 2
 
 [node name="CustomsGuideOpenMiddleBig" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-position = Vector2(426, 391.501)
+position = Vector2(410, -155)
 scale = Vector2(3, 3)
 texture = ExtResource("36_drpmm")
 
