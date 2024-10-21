@@ -85,8 +85,8 @@ translation/add_separator=false
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/size/mode=3
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="res://assets/cursor/cursor_default.png"

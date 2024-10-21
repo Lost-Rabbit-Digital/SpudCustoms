@@ -213,6 +213,7 @@ theme_override_font_sizes/font_size = 16
 autowrap_mode = 3
 
 [node name="PauseContainer" type="Control" parent="."]
+z_index = 6
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
