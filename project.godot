@@ -49,8 +49,8 @@ directories/dtl_directory={
 "day_1_outro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_outro.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://dialogic_default_style.tres"]
+layout/default_style="res://dialogic_default_style.tres"
 variables={}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
@@ -85,8 +85,8 @@ translation/add_separator=false
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/size/mode=3
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="res://assets/cursor/cursor_default.png"
