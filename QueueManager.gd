@@ -7,6 +7,8 @@ var max_potatoes: int
 var potatoes: Array = []
 var spawn_point: Vector2
 var path_node_path: NodePath
+var potato_walk_speed = 200
+var potato_run_speed = 250
 
 func _ready():
 	path_node_path = $"../../Gameplay/Paths/SpuddyQueue".get_path()
@@ -72,7 +74,7 @@ func _process(delta):
 			var next_point = potato.current_point + 1
 			## var current_pos = curve.get_point_position(potato.current_point)
 			var next_pos = curve.get_point_position(next_point)
-			var target_pos = potato.position.move_toward(next_pos, delta * 50)
+			var target_pos = potato.position.move_toward(next_pos, delta * potato_walk_speed)
 			
 			if target_pos.distance_to(next_pos) < 1:
 				potato.current_point = next_point
@@ -80,7 +82,7 @@ func _process(delta):
 			potato.position = target_pos
 		else:
 			var target_pos = curve.get_point_position(potato.target_point)
-			potato.position = potato.position.move_toward(target_pos, delta * 50)
+			potato.position = potato.position.move_toward(target_pos, delta * potato_walk_speed)
 
 func get_front_potato_info() -> Dictionary:
 	if potatoes.size() > 0:
