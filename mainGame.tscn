@@ -583,6 +583,7 @@ script = ExtResource("35_uuf1y")
 [node name="ClosedGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
 
 [node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
+visible = false
 
 [node name="GuideNote" type="Label" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
 anchors_preset = 15
