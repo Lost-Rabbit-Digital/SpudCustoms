@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SpudCustoms"
-run/main_scene="res://chapter_1_cutscene_overview.tscn"
+run/main_scene="res://menus/splashscreen_scene.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/show_image=false
 config/icon="res://icon.svg"
@@ -49,8 +49,8 @@ directories/dtl_directory={
 "day_1_outro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_outro.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://assets/narrative/characters/DefaultStyle.tres", "res://assets/narrative/characters/DefaultSpeakerTextbox.tres"]
-layout/default_style="res://assets/narrative/characters/DefaultSpeakerTextbox.tres"
+layout/style_list=[]
+layout/default_style="Default"
 variables={}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

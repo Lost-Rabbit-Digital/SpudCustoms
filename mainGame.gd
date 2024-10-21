@@ -938,12 +938,12 @@ func close_bulletin_action():
 	$Gameplay/InteractiveElements/Bulletin/OpenBulletin.visible = false
 	
 func open_rulebook_action():
-	$Gameplay/InteractiveElements/Rulebook.texture = preload("res://assets/documents/rulebook/rulebook_open.png")
+	$Gameplay/InteractiveElements/Rulebook.texture = preload("res://assets/documents/customs_guide/customs_guide_open_2.png")
 	$Gameplay/InteractiveElements/Rulebook/ClosedRulebook.visible = false
 	$Gameplay/InteractiveElements/Rulebook/OpenRulebook.visible = true
 	
 func close_rulebook_action():
-	$Gameplay/InteractiveElements/Rulebook.texture = preload("res://assets/documents/rulebook/rulebook_closed.png")
+	$Gameplay/InteractiveElements/Rulebook.texture = preload("res://assets/documents/customs_guide/customs_guide_closed_small.png")
 	$Gameplay/InteractiveElements/Rulebook/ClosedRulebook.visible = true
 	$Gameplay/InteractiveElements/Rulebook/OpenRulebook.visible = false
 	
