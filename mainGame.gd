@@ -51,7 +51,7 @@ var suspect_panel_front: Sprite2D
 var suspect: Sprite2D
 var is_passport_open = false
 
-@onready var time_label = $Gameplay/Labels/TimeLabel
+@onready var time_label = $UI/Labels/TimeLabel
 var label_tween: Tween
 
 # Bulletin dragging system

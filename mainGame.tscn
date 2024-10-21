@@ -69,7 +69,7 @@ _data = {
 }
 point_count = 35
 
-[node name="Root2" type="Node2D"]
+[node name="Root" type="Node2D"]
 script = ExtResource("1_s4bva")
 
 [node name="UI" type="Control" parent="."]
@@ -168,6 +168,7 @@ theme_override_font_sizes/font_size = 32
 text = "Time Left: 60"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="StrikesLabel" type="Label" parent="UI/Labels"]
 z_index = 2
