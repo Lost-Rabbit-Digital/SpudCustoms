@@ -58,9 +58,9 @@ var label_tween: Tween
 var bulletin: Sprite2D
 var is_bulletin_open = false
 
-# Rulebook dragging system
-var rulebook: Sprite2D
-var is_rulebook_open = false
+# Guide dragging system
+var guide: Sprite2D
+var is_guide_open = false
 
 var difficulty_level = "Easy"  # Can be "Easy", "Normal", or "Hard"
 
@@ -107,7 +107,7 @@ func _ready():
 	# Get references to the new nodes
 	passport = $Gameplay/InteractiveElements/Passport
 	bulletin = $Gameplay/InteractiveElements/Bulletin
-	rulebook = $Gameplay/InteractiveElements/Rulebook
+	guide = $Gameplay/InteractiveElements/Guide
 	inspection_table = $Gameplay/InspectionTable
 	suspect_panel = $Gameplay/SuspectPanel
 	suspect_panel_front = $Gameplay/SuspectPanel/SuspectPanelFront
@@ -118,7 +118,7 @@ func _ready():
 	# Add closed passport to draggable sprites
 	draggable_sprites.append(passport)
 	draggable_sprites.append(bulletin)
-	draggable_sprites.append(rulebook)
+	draggable_sprites.append(guide)
 	
 func setup_megaphone_flash_timer():
 	#print("FLASH TIMER: Setup megaphone flash timer")
@@ -585,28 +585,28 @@ func _process(_delta):
 		
 	# Check for closing passport
 	if (suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)) or 
-		suspect.get_rect().has_point(suspect.to_local(mouse_pos))) and (dragged_sprite == bulletin or dragged_sprite == passport or dragged_sprite == rulebook):
+		suspect.get_rect().has_point(suspect.to_local(mouse_pos))) and (dragged_sprite == bulletin or dragged_sprite == passport or dragged_sprite == guide):
 		if not close_sound_played:
 			if dragged_sprite == passport:
 				close_passport_action()
 			elif dragged_sprite == bulletin:
 				close_bulletin_action()
-			elif dragged_sprite == rulebook:
-				close_rulebook_action()
+			elif dragged_sprite == guide:
+				close_guide_action()
 			$SystemManagers/AudioManager/SFXPool.stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
 			$SystemManagers/AudioManager/SFXPool.play()
 			close_sound_played = true
 			open_sound_played = false  # Reset open sound flag
 	
 	# Check for opening passport
-	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)) and (dragged_sprite == bulletin or dragged_sprite == passport or dragged_sprite == rulebook):
+	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)) and (dragged_sprite == bulletin or dragged_sprite == passport or dragged_sprite == guide):
 		if not open_sound_played:
 			if dragged_sprite == passport and is_passport_open == false:
 				open_passport_action()
 			elif dragged_sprite == bulletin:
 				open_bulletin_action()
-			elif dragged_sprite == rulebook:
-				open_rulebook_action()
+			elif dragged_sprite == guide:
+				open_guide_action()
 			$SystemManagers/AudioManager/SFXPool.stream = preload("res://assets/audio/passport_sfx/open_passport_audio.mp3")
 			$SystemManagers/AudioManager/SFXPool.play()
 			open_sound_played = true
@@ -901,14 +901,14 @@ func _input(event):
 						close_bulletin_action()
 					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
 						close_bulletin_action()
-				elif dragged_sprite == rulebook:
+				elif dragged_sprite == guide:
 					var drop_pos = get_global_mouse_position()
 					if inspection_table.get_rect().has_point(inspection_table.to_local(drop_pos)):
-						open_rulebook_action()
+						open_guide_action()
 					if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
-						close_rulebook_action()
+						close_guide_action()
 					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
-						close_rulebook_action()
+						close_guide_action()
 				dragged_sprite = null
 				
 	elif event is InputEventMouseMotion and dragged_sprite:
@@ -937,15 +937,15 @@ func close_bulletin_action():
 	$Gameplay/InteractiveElements/Bulletin/ClosedBulletin.visible = true
 	$Gameplay/InteractiveElements/Bulletin/OpenBulletin.visible = false
 	
-func open_rulebook_action():
-	$Gameplay/InteractiveElements/Rulebook.texture = preload("res://assets/documents/customs_guide/customs_guide_open_2.png")
-	$Gameplay/InteractiveElements/Rulebook/ClosedRulebook.visible = false
-	$Gameplay/InteractiveElements/Rulebook/OpenRulebook.visible = true
+func open_guide_action():
+	$Gameplay/InteractiveElements/Guide.texture = preload("res://assets/documents/customs_guide/customs_guide_open_2.png")
+	$Gameplay/InteractiveElements/Guide/ClosedGuide.visible = false
+	$Gameplay/InteractiveElements/Guide/OpenGuide.visible = true
 	
-func close_rulebook_action():
-	$Gameplay/InteractiveElements/Rulebook.texture = preload("res://assets/documents/customs_guide/customs_guide_closed_small.png")
-	$Gameplay/InteractiveElements/Rulebook/ClosedRulebook.visible = true
-	$Gameplay/InteractiveElements/Rulebook/OpenRulebook.visible = false
+func close_guide_action():
+	$Gameplay/InteractiveElements/Guide.texture = preload("res://assets/documents/customs_guide/customs_guide_closed_small.png")
+	$Gameplay/InteractiveElements/Guide/ClosedGuide.visible = true
+	$Gameplay/InteractiveElements/Guide/OpenGuide.visible = false
 	
 func find_topmost_sprite_at(pos: Vector2):
 	var topmost_sprite = null
