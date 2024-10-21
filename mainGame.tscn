@@ -69,7 +69,7 @@ _data = {
 }
 point_count = 35
 
-[node name="Root2" type="Node2D"]
+[node name="Root" type="Node2D"]
 script = ExtResource("1_s4bva")
 
 [node name="UI" type="Control" parent="."]
@@ -119,7 +119,8 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="JudgementLabel" type="Label" parent="UI/Labels"]
-z_index = 3
+z_index = 2
+z_as_relative = false
 layout_mode = 0
 offset_left = 266.0
 offset_top = 652.0
@@ -135,7 +136,8 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="DateLabel" type="Label" parent="UI/Labels"]
-z_index = 3
+z_index = 2
+z_as_relative = false
 layout_mode = 0
 offset_left = 1112.0
 offset_top = 659.0
@@ -151,7 +153,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="TimeLabel" type="Label" parent="UI/Labels"]
-z_index = 3
+z_index = 2
+z_as_relative = false
 layout_mode = 0
 offset_left = 990.0
 offset_top = 231.0
@@ -165,9 +168,11 @@ theme_override_font_sizes/font_size = 32
 text = "Time Left: 60"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="StrikesLabel" type="Label" parent="UI/Labels"]
-z_index = 3
+z_index = 2
+z_as_relative = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
 offset_left = 895.0
@@ -183,7 +188,8 @@ text = "Strikes   0 / 3"
 vertical_alignment = 1
 
 [node name="ScoreLabel" type="Label" parent="UI/Labels"]
-z_index = 3
+z_index = 2
+z_as_relative = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
 offset_left = 895.0
@@ -199,7 +205,8 @@ text = "Score        0  / 10"
 vertical_alignment = 1
 
 [node name="RulesLabel" type="Label" parent="UI/Labels"]
-z_index = 3
+z_index = 2
+z_as_relative = false
 layout_mode = 0
 offset_left = 22.0
 offset_top = 247.0
@@ -213,6 +220,7 @@ theme_override_font_sizes/font_size = 16
 autowrap_mode = 3
 
 [node name="PauseContainer" type="Control" parent="."]
+z_index = 6
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -333,9 +341,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Bulletin" type="Sprite2D" parent="Gameplay/InteractiveElements"]
+visible = false
 z_index = 3
 z_as_relative = false
-position = Vector2(-321, 468)
+position = Vector2(-310, 428)
 texture = ExtResource("19_mnrrk")
 script = ExtResource("21_qw3ji")
 
@@ -510,14 +519,54 @@ scale = Vector2(0.29, 0.29)
 texture = ExtResource("16_qj41b")
 
 [node name="Rulebook" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-z_index = 1
-position = Vector2(1219, 567)
+z_index = 2
+z_as_relative = false
+position = Vector2(600, 457)
 texture = ExtResource("33_s6ap3")
 
 [node name="ClosedRulebook" type="Sprite2D" parent="Gameplay/InteractiveElements/Rulebook"]
 
 [node name="OpenRulebook" type="Sprite2D" parent="Gameplay/InteractiveElements/Rulebook"]
 visible = false
+
+[node name="BulletinNote" type="Label" parent="Gameplay/InteractiveElements/Rulebook/OpenRulebook"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -147.0
+offset_top = -106.0
+offset_right = 146.0
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
+text = "To begin, press the speaker with the yellow flashing ring on top of the customs office building.
+Take the documents from the Potato and bring them to the main table.
+Then compare the information on the documents with the laws given.
+If there are any discrepencies, deny entry.
+After stamping the documents, hand them back to the Potato.
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TurnRight" type="TextureButton" parent="Gameplay/InteractiveElements/Rulebook/OpenRulebook"]
+visible = false
+offset_left = 100.0
+offset_top = 150.0
+offset_right = 130.0
+offset_bottom = 180.0
+texture_normal = ExtResource("21_pmbmt")
+
+[node name="TurnLeft" type="TextureButton" parent="Gameplay/InteractiveElements/Rulebook/OpenRulebook"]
+visible = false
+offset_left = -130.0
+offset_top = 150.0
+offset_right = -100.0
+offset_bottom = 180.0
+texture_normal = ExtResource("22_ir8f4")
 
 [node name="CustomsGuideClosedBig" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 position = Vector2(138, -164)
@@ -622,3 +671,5 @@ curve = SubResource("Curve2D_x3wa3")
 [connection signal="timeout" from="SystemManagers/Timers/BulletinFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Bulletin/OpenBulletin/TurnRight" to="Gameplay/InteractiveElements/Bulletin" method="_on_texture_button_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Bulletin/OpenBulletin/TurnLeft" to="Gameplay/InteractiveElements/Bulletin" method="_on_texture_button_turn_left_pressed"]
+[connection signal="pressed" from="Gameplay/InteractiveElements/Rulebook/OpenRulebook/TurnRight" to="Gameplay/InteractiveElements/Bulletin" method="_on_texture_button_turn_right_pressed"]
+[connection signal="pressed" from="Gameplay/InteractiveElements/Rulebook/OpenRulebook/TurnLeft" to="Gameplay/InteractiveElements/Bulletin" method="_on_texture_button_turn_left_pressed"]
