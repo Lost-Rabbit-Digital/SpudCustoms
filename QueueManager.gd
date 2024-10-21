@@ -7,8 +7,8 @@ var max_potatoes: int
 var potatoes: Array = []
 var spawn_point: Vector2
 var path_node_path: NodePath
-var potato_walk_speed = 200
-var potato_run_speed = 250
+var potato_walk_speed = 150
+var potato_run_speed = 200
 
 func _ready():
 	path_node_path = $"../../Gameplay/Paths/SpuddyQueue".get_path()
