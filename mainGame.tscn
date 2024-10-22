@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=39 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://suspect_panel.png" id="2_f25cg"]
@@ -23,11 +23,8 @@
 [ext_resource type="Texture2D" uid="uid://dh5wbdkmsk7de" path="res://assets/potatoes/heads/russet_burbank_head_1.png" id="18_7ww6h"]
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="18_jl4i3"]
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="18_yiok2"]
-[ext_resource type="Texture2D" uid="uid://cnt7y8a7drxme" path="res://assets/documents/bulletin/bulletin_main_page.png" id="19_mnrrk"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="20_pd2wg"]
-[ext_resource type="Texture2D" uid="uid://c78plmdtw02b1" path="res://assets/documents/bulletin/page_turn_right.png" id="21_pmbmt"]
-[ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://assets/alerts/bulletin_alert_box.png" id="22_3pqlk"]
-[ext_resource type="Texture2D" uid="uid://bfhpafskct413" path="res://assets/documents/bulletin/page_turn_left.png" id="22_ir8f4"]
+[ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://assets/alerts/guide_alert_box.png" id="22_3pqlk"]
 [ext_resource type="PackedScene" uid="uid://bju5udyr0e5rr" path="res://music_manager.tscn" id="27_2tnfb"]
 [ext_resource type="Texture2D" uid="uid://dubo3sdxx8chn" path="res://assets/stamps/approval_stamp_3.png" id="28_uvib1"]
 [ext_resource type="PackedScene" uid="uid://bp2pkcox316n0" path="res://menus/pause_menu.tscn" id="28_vb6g0"]
@@ -35,64 +32,11 @@
 [ext_resource type="Texture2D" uid="uid://b2wymckqr8jsk" path="res://assets/documents/customs_guide/customs_guide_closed_small.png" id="33_s6ap3"]
 [ext_resource type="Script" path="res://guide.gd" id="35_uuf1y"]
 
-[sub_resource type="GDScript" id="GDScript_2jipv"]
-script/source = "extends Sprite2D
-var current_page = 1
-var maximum_pages = 2
-var how_to_play_note_1 = \"\"\"INSTRUCTIONS
-To begin, press the speaker with the yellow flashing ring on top of the customs office building.
-Take the documents from the Potato and bring them to the main table.
-Then compare the information on the documents with the laws given.
-If there are any discrepencies, deny entry.
-After stamping the documents, hand them back to the Potato.
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vm67j"]
+load_path = "res://.godot/imported/page_turn_right.png-3e792e4bdf032a1fa19f9571dfa31620.ctex"
 
-CONTROLS
-[LEFT MOUSE] - Pick up and drops objects
-[RIGHT MOUSE] - Perform actions with objects 
-[ESCAPE] - Pause or return to the main menu
-\"\"\"
-
-var daily_laws = \"\"\"
-HTTPCLIENT ACTIVATED, FACEBOOK \"CONNECT_DEFERRED
-\"\"\"
-
-func _ready():
-	# Assuming the main game script is attached to a node named \"Main\"
-	var main_node = get_node(\"/root/Root\")
-	if main_node:
-		main_node.connect(\"rules_updated\", Callable(self, \"update_daily_laws\"))
-
-func update_daily_laws(new_laws):
-	daily_laws = new_laws
-	if current_page == 2:
-		$OpenBulletin/BulletinNote.text = daily_laws
-
-func _on_texture_button_turn_right_pressed():
-	if current_page + 1 <= maximum_pages:
-		current_page += 1
-		if current_page == 1:
-			print(current_page)
-			$OpenBulletin/BulletinNote.text = how_to_play_note_1
-			$OpenBulletin/TurnLeft.visible = false
-		elif current_page == 2:
-			print(current_page)
-			$OpenBulletin/BulletinNote.text = daily_laws
-			$OpenBulletin/TurnLeft.visible = true
-			$OpenBulletin/TurnRight.visible = false
-
-func _on_texture_button_turn_left_pressed():
-	if current_page - 1 >= 1:
-		current_page -= 1
-		if current_page == 1:
-			print(current_page)
-			$OpenBulletin/BulletinNote.text = how_to_play_note_1
-			$OpenBulletin/TurnLeft.visible = false
-			$OpenBulletin/TurnRight.visible = true
-		elif current_page == 2:
-			print(current_page)
-			$OpenBulletin/BulletinNote.text = daily_laws
-			$OpenBulletin/TurnLeft.visible = true
-"
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f48nw"]
+load_path = "res://.godot/imported/page_turn_left.png-fdaf981b2f3e3a21cc193ce379ac8a9a.ctex"
 
 [sub_resource type="Curve2D" id="Curve2D_f3jw2"]
 _data = {
@@ -313,7 +257,7 @@ offset_bottom = 40.0
 
 [node name="SpawnTimer" type="Timer" parent="SystemManagers/Timers"]
 
-[node name="BulletinFlashTimer" type="Timer" parent="SystemManagers/Timers"]
+[node name="GuideFlashTimer" type="Timer" parent="SystemManagers/Timers"]
 
 [node name="AudioManager" type="Control" parent="SystemManagers"]
 anchors_preset = 0
@@ -379,14 +323,14 @@ texture = ExtResource("7_nqnif")
 
 [node name="PotatoMugshot" type="Sprite2D" parent="Gameplay"]
 z_index = 2
-position = Vector2(1400, 375)
+position = Vector2(1401, 373)
 scale = Vector2(2.0266, 2.0266)
 texture = ExtResource("18_yiok2")
 
 [node name="PotatoMugshotShadow" type="Sprite2D" parent="Gameplay/PotatoMugshot"]
 modulate = Color(0, 0, 0, 0.521569)
 z_index = -1
-position = Vector2(-0.493437, -9.3753)
+position = Vector2(-1.48, -8.328)
 scale = Vector2(1.22, 1.22)
 texture = ExtResource("18_7ww6h")
 
@@ -394,104 +338,6 @@ texture = ExtResource("18_7ww6h")
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="Bulletin" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-visible = false
-z_index = 3
-z_as_relative = false
-position = Vector2(-310, 428)
-texture = ExtResource("19_mnrrk")
-script = SubResource("GDScript_2jipv")
-
-[node name="Node2D" type="Node2D" parent="Gameplay/InteractiveElements/Bulletin"]
-
-[node name="BulletinIntroGuide" type="Label" parent="Gameplay/InteractiveElements/Bulletin/Node2D"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -129.0
-offset_top = -221.5
-offset_right = 127.0
-offset_bottom = -206.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.898039, 0.678431, 0.203922, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 16
-theme_override_fonts/font = ExtResource("13_wxn24")
-theme_override_font_sizes/font_size = 16
-text = "--={ READ BELOW FOR INSTRUCTIONS }=--"
-horizontal_alignment = 1
-autowrap_mode = 2
-
-[node name="BulletinAlertBox" type="Sprite2D" parent="Gameplay/InteractiveElements/Bulletin/Node2D"]
-scale = Vector2(1.03, 1.03)
-texture = ExtResource("22_3pqlk")
-
-[node name="BulletinPageGuide" type="Label" parent="Gameplay/InteractiveElements/Bulletin/Node2D"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 150.0
-offset_top = 159.0
-offset_right = 406.0
-offset_bottom = 174.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.898039, 0.678431, 0.203922, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 16
-theme_override_fonts/font = ExtResource("13_wxn24")
-theme_override_font_sizes/font_size = 16
-text = "<--- Press for next page"
-autowrap_mode = 2
-
-[node name="ClosedBulletin" type="Sprite2D" parent="Gameplay/InteractiveElements/Bulletin"]
-visible = false
-
-[node name="OpenBulletin" type="Sprite2D" parent="Gameplay/InteractiveElements/Bulletin"]
-
-[node name="BulletinNote" type="Label" parent="Gameplay/InteractiveElements/Bulletin/OpenBulletin"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -129.0
-offset_top = -179.0
-offset_right = 127.0
-offset_bottom = 177.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
-theme_override_fonts/font = ExtResource("13_wxn24")
-theme_override_font_sizes/font_size = 16
-text = "INSTRUCTIONS
-To begin, press the speaker with the yellow flashing ring on top of the customs office building.
-Take the documents from the Potato and bring them to the main table.
-Then compare the information on the documents with the laws given.
-If there are any discrepencies, deny entry.
-After stamping the documents, hand them back to the Potato.
-
-CONTROLS
-[LEFT MOUSE] - Pick up and drops objects
-[RIGHT MOUSE] - Perform actions with objects 
-[ESCAPE] - Pause or return to the main menu"
-horizontal_alignment = 1
-autowrap_mode = 2
-
-[node name="TurnRight" type="TextureButton" parent="Gameplay/InteractiveElements/Bulletin/OpenBulletin"]
-offset_left = 100.0
-offset_top = 150.0
-offset_right = 130.0
-offset_bottom = 180.0
-texture_normal = ExtResource("21_pmbmt")
-
-[node name="TurnLeft" type="TextureButton" parent="Gameplay/InteractiveElements/Bulletin/OpenBulletin"]
-visible = false
-offset_left = -130.0
-offset_top = 150.0
-offset_right = -100.0
-offset_bottom = 180.0
-texture_normal = ExtResource("22_ir8f4")
 
 [node name="Passport" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_index = 2
@@ -613,7 +459,7 @@ offset_left = 117.0
 offset_top = 110.0
 offset_right = 147.0
 offset_bottom = 140.0
-texture_normal = ExtResource("21_pmbmt")
+texture_normal = SubResource("CompressedTexture2D_vm67j")
 
 [node name="TurnLeft" type="TextureButton" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
 visible = false
@@ -621,7 +467,10 @@ offset_left = -147.0
 offset_top = 110.0
 offset_right = -117.0
 offset_bottom = 140.0
-texture_normal = ExtResource("22_ir8f4")
+texture_normal = SubResource("CompressedTexture2D_f48nw")
+
+[node name="GuideAlertBox" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
+texture = ExtResource("22_3pqlk")
 
 [node name="Paths" type="Control" parent="Gameplay"]
 anchors_preset = 0
@@ -655,10 +504,8 @@ z_index = 3
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/BulletinFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
-[connection signal="pressed" from="Gameplay/InteractiveElements/Bulletin/OpenBulletin/TurnRight" to="Gameplay/InteractiveElements/Bulletin" method="_on_texture_button_turn_right_pressed"]
-[connection signal="pressed" from="Gameplay/InteractiveElements/Bulletin/OpenBulletin/TurnLeft" to="Gameplay/InteractiveElements/Bulletin" method="_on_texture_button_turn_left_pressed"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/GuideFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]

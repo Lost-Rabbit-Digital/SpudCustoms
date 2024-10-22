@@ -54,10 +54,6 @@ var is_passport_open = false
 @onready var time_label = $UI/Labels/TimeLabel
 var label_tween: Tween
 
-# Bulletin dragging system
-var bulletin: Sprite2D
-var is_bulletin_open = false
-
 # Guide dragging system
 var guide: Sprite2D
 var is_guide_open = false
@@ -68,9 +64,9 @@ var difficulty_level = "Easy"  # Can be "Easy", "Normal", or "Hard"
 const STAMP_ANIMATION_DURATION = 0.3  # Duration of the stamp animation in seconds
 const STAMP_MOVE_DISTANCE = 36  # How far the stamp moves down
 
-var bulletin_tutorial_timer: Timer
-const BULLETIN_TUTORIAL_FLASH_INTERVAL = 1.0 # flash every 1 seconds
-var is_in_bulletin_tutorial = true
+var guide_tutorial_timer: Timer
+const GUIDE_TUTORIAL_FLASH_INTERVAL = 1.0 # flash every 1 seconds
+var is_in_guide_tutorial = true
 
 @onready var megaphone = $Gameplay/CustomsOffice/Megaphone
 @onready var potato_mugshot = $Gameplay/PotatoMugshot
@@ -79,7 +75,7 @@ var is_in_bulletin_tutorial = true
 func _ready():
 	time_label = $UI/Labels/TimeLabel
 	setup_megaphone_flash_timer()
-	setup_bulletin_tutorial_timer()
+	setup_guide_tutorial_timer()
 	set_difficulty(difficulty_level)
 	update_date_display()
 	queue_manager = $SystemManagers/QueueManager  # Make sure to add QueueManager as a child of Main
@@ -106,7 +102,6 @@ func _ready():
 		$UI/Labels/ScoreLabel.text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
 	# Get references to the new nodes
 	passport = $Gameplay/InteractiveElements/Passport
-	bulletin = $Gameplay/InteractiveElements/Bulletin
 	guide = $Gameplay/InteractiveElements/Guide
 	inspection_table = $Gameplay/InspectionTable
 	suspect_panel = $Gameplay/SuspectPanel
@@ -117,7 +112,6 @@ func _ready():
 
 	# Add closed passport to draggable sprites
 	draggable_sprites.append(passport)
-	draggable_sprites.append(bulletin)
 	draggable_sprites.append(guide)
 	
 func setup_megaphone_flash_timer():
@@ -151,18 +145,16 @@ func adjust_game_parameters():
 	$UI/Labels/StrikesLabel.text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
 	
 
-func setup_bulletin_tutorial_timer():
-	#print("FLASH TIMER: Setup bulletin flash timer")
-	bulletin_tutorial_timer = $SystemManagers/Timers/BulletinFlashTimer
-	bulletin_tutorial_timer.wait_time = BULLETIN_TUTORIAL_FLASH_INTERVAL
-	bulletin_tutorial_timer.start()
+func setup_guide_tutorial_timer():
+	guide_tutorial_timer = $SystemManagers/Timers/GuideFlashTimer
+	guide_tutorial_timer.wait_time = GUIDE_TUTORIAL_FLASH_INTERVAL
+	guide_tutorial_timer.start()
 
-func _on_bulletin_flash_timer_timeout():
-	#print("FLASH TIMER: Bulletin timeout")
-	if is_in_bulletin_tutorial:
-		$Gameplay/InteractiveElements/Bulletin/Node2D/BulletinAlertBox.visible = !$Gameplay/InteractiveElements/Bulletin/Node2D/BulletinAlertBox.visible
+func _on_guide_flash_timer_timeout():
+	if is_in_guide_tutorial:
+		$Gameplay/InteractiveElements/Guide/GuideAlertBox.visible = !$Gameplay/InteractiveElements/Guide/GuideAlertBox.visible
 	else:
-		$Gameplay/InteractiveElements/Bulletin/Node2D.visible = false
+		$Gameplay/InteractiveElements/Guide/GuideAlertBox.visible = false
 
 func generate_rules():
 	current_rules = [
@@ -241,8 +233,8 @@ func is_expired(expiration_date: String) -> bool:
 	return days_until_expiry(expiration_date) < 0
 
 func update_rules_display():
-	if $Gameplay/InteractiveElements/Bulletin/OpenBulletin/BulletinNote:
-		$Gameplay/InteractiveElements/Bulletin/OpenBulletin/BulletinNote.text = "LAWS\n" + "\n".join(current_rules)
+	if $Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote:
+		$Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote.text = "LAWS\n" + "\n".join(current_rules)
 	# Emit the signal with the new rules
 	emit_signal("rules_updated", "LAWS\n" + "\n".join(current_rules))
 	
@@ -585,12 +577,10 @@ func _process(_delta):
 		
 	# Check for closing passport
 	if (suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)) or 
-		suspect.get_rect().has_point(suspect.to_local(mouse_pos))) and (dragged_sprite == bulletin or dragged_sprite == passport or dragged_sprite == guide):
+		suspect.get_rect().has_point(suspect.to_local(mouse_pos))) and (dragged_sprite == passport or dragged_sprite == guide):
 		if not close_sound_played:
 			if dragged_sprite == passport:
 				close_passport_action()
-			elif dragged_sprite == bulletin:
-				close_bulletin_action()
 			elif dragged_sprite == guide:
 				close_guide_action()
 			$SystemManagers/AudioManager/SFXPool.stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
@@ -599,12 +589,10 @@ func _process(_delta):
 			open_sound_played = false  # Reset open sound flag
 	
 	# Check for opening passport
-	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)) and (dragged_sprite == bulletin or dragged_sprite == passport or dragged_sprite == guide):
+	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)) and (dragged_sprite == passport or dragged_sprite == guide):
 		if not open_sound_played:
 			if dragged_sprite == passport and is_passport_open == false:
 				open_passport_action()
-			elif dragged_sprite == bulletin:
-				open_bulletin_action()
 			elif dragged_sprite == guide:
 				open_guide_action()
 			$SystemManagers/AudioManager/SFXPool.stream = preload("res://assets/audio/passport_sfx/open_passport_audio.mp3")
@@ -613,14 +601,10 @@ func _process(_delta):
 			close_sound_played = false  # Reset close sound flag
 			
 	# check if in bulletin tutorial
-	if $Gameplay/InteractiveElements/Bulletin/OpenBulletin/BulletinNote.text == how_to_play_note_1:
-		is_in_bulletin_tutorial = true
+	if $Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote.text == how_to_play_note_1:
+		is_in_guide_tutorial = true
 	else:
-		is_in_bulletin_tutorial = false
-		
-		
-		
-		
+		is_in_guide_tutorial = false
 		
 func generate_potato_info():
 	var expiration_date: String
@@ -893,14 +877,6 @@ func _input(event):
 					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
 						close_passport_action()
 						remove_stamp()
-				elif dragged_sprite == bulletin:
-					var drop_pos = get_global_mouse_position()
-					if inspection_table.get_rect().has_point(inspection_table.to_local(drop_pos)):
-						open_bulletin_action()
-					if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
-						close_bulletin_action()
-					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
-						close_bulletin_action()
 				elif dragged_sprite == guide:
 					var drop_pos = get_global_mouse_position()
 					if inspection_table.get_rect().has_point(inspection_table.to_local(drop_pos)):
@@ -926,16 +902,6 @@ func close_passport_action():
 	$Gameplay/InteractiveElements/Passport.texture = preload("res://assets/documents/closed_passport_small/closed_passport_small.png")
 	$Gameplay/InteractiveElements/Passport/ClosedPassport.visible = true
 	$Gameplay/InteractiveElements/Passport/OpenPassport.visible = false
-	
-func open_bulletin_action():
-	$Gameplay/InteractiveElements/Bulletin.texture = preload("res://assets/documents/bulletin/bulletin_main_page.png")
-	$Gameplay/InteractiveElements/Bulletin/OpenBulletin.visible = true
-	$Gameplay/InteractiveElements/Bulletin/ClosedBulletin.visible = false
-	
-func close_bulletin_action():
-	$Gameplay/InteractiveElements/Bulletin.texture = preload("res://assets/documents/bulletin/closed_bulletin_small/closed_bulletin_small.png")
-	$Gameplay/InteractiveElements/Bulletin/ClosedBulletin.visible = true
-	$Gameplay/InteractiveElements/Bulletin/OpenBulletin.visible = false
 	
 func open_guide_action():
 	$Gameplay/InteractiveElements/Guide.texture = preload("res://assets/documents/customs_guide/customs_guide_open_2.png")

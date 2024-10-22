@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bc5llmyhe6byj"
-path="res://.godot/imported/bulletin_alert_box.png-b86f6946144df85ce384bee57f6e3b5b.ctex"
+path="res://.godot/imported/guide_alert_box.png-e5c44d6ed484c504845b1da486a7efee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/alerts/bulletin_alert_box.png"
-dest_files=["res://.godot/imported/bulletin_alert_box.png-b86f6946144df85ce384bee57f6e3b5b.ctex"]
+source_file="res://assets/alerts/guide_alert_box.png"
+dest_files=["res://.godot/imported/guide_alert_box.png-e5c44d6ed484c504845b1da486a7efee.ctex"]
 
 [params]
 
