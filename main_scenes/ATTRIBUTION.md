@@ -1,4 +1,8 @@
 # Attribution
+
+Brought to you by 
+## [Lost Rabbit Digital](https://www.lostrabbitdigital.org/)
+
 ## Team
 ### Programmers
 Author: [Boden McHale](https://www.bodenmchale.com/)
@@ -10,9 +14,7 @@ Author: [Olexii]
 
 ## Collaborators
 ### Audio
-Author: [Ovani]
-Source: []
-License: []
+Author: [Ovani](https://ovanisound.com/)
 
 ### Godot Game Template
 Author: [Marek Belski and contributors](https://github.com/Maaack/Godot-Game-Template/graphs/contributors)  
