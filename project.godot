@@ -21,6 +21,7 @@ config/icon="res://icon.svg"
 Global="*res://Global.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 MuteFullscreenMenuButtons="*res://menus/menu_scripts/mute_fullscreen_menu_buttons.gd"
+Guide="*res://guide.gd"
 
 [debug]
 

@@ -233,7 +233,7 @@ func is_expired(expiration_date: String) -> bool:
 	return days_until_expiry(expiration_date) < 0
 
 func update_rules_display():
-	if $Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote:
+	if $Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote and Guide.current_page == 2:
 		$Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote.text = "LAWS\n" + "\n".join(current_rules)
 	# Emit the signal with the new rules
 	emit_signal("rules_updated", "LAWS\n" + "\n".join(current_rules))
@@ -469,19 +469,6 @@ func _on_spawn_timer_timeout():
 		print("Potato queue limit reached, skip spawning.")
 		#spawn_timer.stop()
 
-var how_to_play_note_1 = """INSTRUCTIONS
-To begin, press the speaker with the yellow flashing ring on top of the customs office building.
-Take the documents from the Potato and bring them to the main table.
-Compare the information on the documents with the laws given in your rulebook.
-If there are any violated laws, or the potato is expired, deny entry.
-After stamping the documents, hand them back to the Potato.
-
-CONTROLS
-[LEFT MOUSE] - Pick up and perform actions with objects
-[RIGHT MOUSE] - Drop objects 
-[ESCAPE] - Pause or return to the main menu
-"""
-
 func start_label_tween():
 	stop_label_tween()
 	
@@ -600,11 +587,11 @@ func _process(_delta):
 			open_sound_played = true
 			close_sound_played = false  # Reset close sound flag
 			
-	# check if in bulletin tutorial
-	if $Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote.text == how_to_play_note_1:
-		is_in_guide_tutorial = true
-	else:
+	# check if in guide tutorial
+	if Guide.current_page == 1:
 		is_in_guide_tutorial = false
+	else:
+		is_in_guide_tutorial = true
 		
 func generate_potato_info():
 	var expiration_date: String

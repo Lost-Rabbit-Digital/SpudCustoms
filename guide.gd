@@ -6,11 +6,10 @@ Take the documents from the Potato and bring them to the main table.
 Then compare the information on the documents with the laws given.
 If there are any discrepencies, deny entry.
 After stamping the documents, hand them back to the Potato.
-
 """
 
 var daily_laws = """
-Deleting System32, please wait...
+
 """
 
 func _ready():
@@ -21,31 +20,31 @@ func _ready():
 
 func update_daily_laws(new_laws):
 	daily_laws = new_laws
-	if current_page == 2:
+	if Guide.current_page == 2:
 		$OpenGuide/GuideNote.text = daily_laws
 
 func _on_turn_right_pressed():
-	if current_page + 1 <= maximum_pages:
-		current_page += 1
-		if current_page == 1:
-			print(current_page)
+	if Guide.current_page + 1 <= maximum_pages:
+		Guide.current_page += 1
+		if Guide.current_page == 1:
+			print(Guide.current_page)
 			$OpenGuide/GuideNote.text = how_to_play_note_1
 			$OpenGuide/TurnLeft.visible = false
-		elif current_page == 2:
-			print(current_page)
+		elif Guide.current_page == 2:
+			print(Guide.current_page)
 			$OpenGuide/GuideNote.text = daily_laws
 			$OpenGuide/TurnLeft.visible = true
 			$OpenGuide/TurnRight.visible = false
 
 func _on_turn_left_pressed():
-	if current_page - 1 >= 1:
-		current_page -= 1
-		if current_page == 1:
-			print(current_page)
+	if Guide.current_page - 1 >= 1:
+		Guide.current_page -= 1
+		if Guide.current_page == 1:
+			print(Guide.current_page)
 			$OpenGuide/GuideNote.text = how_to_play_note_1
 			$OpenGuide/TurnLeft.visible = false
 			$OpenGuide/TurnRight.visible = true
-		elif current_page == 2:
-			print(current_page)
+		elif Guide.current_page == 2:
+			print(Guide.current_page)
 			$OpenGuide/GuideNote.text = daily_laws
 			$OpenGuide/TurnLeft.visible = true
