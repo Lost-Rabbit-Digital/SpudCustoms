@@ -1,16 +1,24 @@
-Programming:
-Boden McHale
-David McHale
-
-Art:
-Olexii
-https://lintnaya.itch.io/roret-cursor
-
-Audio:
-Ovani
-
 # Attribution
+## Team
+### Programmers
+Author: [Boden McHale]
+Source: []
+License: []
+
+Author: [David McHale]
+Source: []
+License: []
+
+### Artist
+Author: [Olexii]
+Source: []
+License: []
+
 ## Collaborators
+### Audio
+Author: [Ovani]
+Source: []
+License: []
 
 ### Godot Game Template
 Author: [Marek Belski and contributors](https://github.com/Maaack/Godot-Game-Template/graphs/contributors)  
@@ -22,11 +30,6 @@ License: [MIT License](LICENSE.txt)
 Author: [Juan Linietsky, Ariel Manzur, and contributors](https://godotengine.org/contact)  
 Source: [godotengine.org](https://godotengine.org/)  
 License: [MIT License](https://github.com/godotengine/godot/blob/master/LICENSE.txt) 
-
-#### Visual Studio Code
-Author: [Microsoft](https://opensource.microsoft.com/)  
-Source: [github: vscode](https://github.com/microsoft/vscode)  
-License: [MIT License](https://github.com/microsoft/vscode/blob/main/LICENSE.txt)
 
 #### Git
 Author: [Linus Torvalds](https://github.com/torvalds)  
