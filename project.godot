@@ -11,10 +11,11 @@ config_version=5
 [application]
 
 config/name="SpudCustoms"
+config/version="1.0.0"
 run/main_scene="res://menus/splashscreen_scene.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/show_image=false
-config/icon="res://icon.svg"
+config/icon="res://assets/potatoes/heads/russet_burbank_head.png"
 
 [autoload]
 
