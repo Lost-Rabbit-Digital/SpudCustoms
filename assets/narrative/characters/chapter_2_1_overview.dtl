@@ -1,107 +1,147 @@
 # Chapter 2
 [background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="1.0"]
 #[background arg="res://assets/timelines/customs_office_morning.png" fade="3.0"]
-join player_character rightmost [z_index="1"]
-Another day dawns at the Spud border checkpoint.
-The air is thick with tension as you arrive for your shift.
-Something feels different today...
+join narrator [z_index="1"]
+narrator: The morning fog clings to the Spud border checkpoint like cold gravy. 
+narrator: You can't shake the feeling that something feels... 
+narrator: Off today.
+join player_character
+player_character: *Thinking to yourself* There's a strange energy in the air...
+player_character: And it's not the just the smell of yesterdays' rejects.
 leave player_character
 
 [background arg="res://assets/narrative/customs_office.jpg" fade="3.0"]
 #[background arg="res://assets/timelines/staff_meeting_room.png" fade="2.0"]
-join supervisor_russet center [z_index="1"]
-supervisor_russet: Listen up, everyone. We've got new directives from the top.
-supervisor_russet: Repatriation quotas have been increased. We need to be more... selective.
-supervisor_russet: Remember, we're the first line of defense against undesirable elements.
-join sweet_potato_sasha left [z_index="0"]
-*Sweet Potato Sasha shifts uncomfortably in the background*
-supervisor_russet: Any questions? No? Good. Get to your stations.
+join supervisor_russet [z_index="1"]
+supervisor_russet: *slams desk* Alright, listen up!
+supervisor_russet: New orders from the Top Brass, and they're not sugar coating it. 
+supervisor_russet: *mutters* Not that we can afford sugar these days. 
+supervisor_russet: Rejection quotas are up. 
+supervisor_russet: Way up. 
+supervisor_russet: And before you ask, no, we're not calling them "alternative acceptance rates" anymore. 
+supervisor_russet: See a sprout? 
+supervisor_russet: Stamp them out. 
+supervisor_russet: Spot a revolutionary seed? 
+supervisor_russet: Call us with all speed. 
+supervisor_russet: Any questions? No? 
+supervisor_russet: Perfect.
 leave supervisor_russet
+join sweet_potato_sasha [z_index="1"]
+*Sweet Potato Sasha nervously adjusts her badge, catching your eye*
 leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="4.0"]
 #[background arg="res://assets/timelines/advanced_inspection_tools.png" fade="2.0"]
-join supervisor_russet left [z_index="1"]
-supervisor_russet: Here's your new equipment, rookie. UV light for detecting hidden marks.
-supervisor_russet: And don't forget, your questioning needs to be more... thorough.
-supervisor_russet: Cross-reference everything. One slip-up could let in a rotten apple... er, potato.
-leave supervisor_russet
+join supervisor_russet [z_index="1"]
+supervisor_russet: *hands over equipment* Here's your new UV scanner.
+supervisor_russet: These rebels think they're clever, hiding their true colors. 
+supervisor_russet: But we know better, don't we? 
+supervisor_russet: A thorough inspection is like tilling soil.
+supervisor_russet: You've got to get all the lumps out.
 
-join supervisor_russet right [z_index="1"]
+join supervisor_russet [z_index="1"]
 [background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="4.0"]
 #[background arg="res://assets/timelines/moral_choice_interface.png" fade="2.0"]
-supervisor_russet: Remember, your choices have consequences now. Choose wisely.
-supervisor_russet: Deny the wrong potato, and you might have a riot on your hands.
-supervisor_russet: Let in a bad seed, and... well, let's just say you don't want to find out.
+supervisor_russet: *lowers voice* Let me be clear:
+supervisor_russet: One wrong stamp could land you in hot water. 
+supervisor_russet: And I don't mean the pleasant spa kind!
+supervisor_russet: We've got quotas to fill, both at the border and...
+supervisor_russet: Elsewhere. 
+supervisor_russet: The Root Reserve doesn't stock itself, if you catch my drift. 
 leave supervisor_russet
 
-join supervisor_russet leftmost [z_index="1"]
+*A security camera swivels your way, its lens glinting like a hungry eye* 
+
+join supervisor_russet [z_index="1"]
 [background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="4.0"]
 #[background arg="res://assets/timelines/night_shift.png" fade="3.0"]
-supervisor_russet: We need you to work a night shift. There's been... increased activity.
-supervisor_russet: Keep your eyes open and report anything suspicious. Understood?
+supervisor_russet: Night shift tonight. 
+supervisor_russet: We've been seeing some... 
+supervisor_russet: Unusual activity.
+supervisor_russet: *taps nose knowingly* 
+supervisor_russet: If you hear anything from the processing plant, well...
+supervisor_russet: Some questions are better left unpeeled. 
 leave supervisor_russet
 
-join spud_masherson leftmost [z_index="1"]
-join sweet_potato_sasha left [z_index="1"]
-join player_character right [z_index="1"]
+join player_character [z_index="1"]
 [background arg="res://assets/narrative/night_gameplay_spud_customs_latest.png" fade="4.0"]
 #[background arg="res://assets/timelines/hidden_tunnel.png" fade="2.0"]
-*You notice movement near the rejection area*
-*Potatoes are being ushered through a hidden tunnel*
+*Movement catches your eye, shadowy figures emerge near the rejection area.*
+*A hidden tunnel appears, barely visible in the darkness*
+join spud_masherson
 *Is that... Spud Masherson overseeing the operation?*
-*And Sweet Potato Sasha helping potatoes escape?*
 leave spud_masherson
+join sweet_potato_sasha
+sweet_potato_sasha: *urgent whisper* Now's our chance. 
+sweet_potato_sasha: You all deserve better than becoming tomorrow's mystery mash!
 leave sweet_potato_sasha
+join player_character [z_index="1"]
+player_character: *Think to yourself* Great.
+player_character: Fantastic. 
+player_character: Either I'm about to become an accomplice, or tomorrow's special. 
+player_character: Some choice.
+- "This ends now. I'm reporting everything."
+- "I didn't see anything. Blind as a buried potato."
+- "Time for a very awkward conversation..."
 leave player_character
 
-join player_character center [z_index="1"]
-player_character: (Think to yourself) What should I do? Report this? Keep quiet? Confront them?
-- "This is illegal! I have to report this!"
-- "I understand. I'll keep this to myself for now."
-- "I should confront them..."
-leave player_character
-
-join supervisor_russet leftmost [z_index="1"]
-join prime_minister_idaho center [z_index="1"]
-join player_character rightmost [z_index="1"]
 [background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="4.0"]
 #[background arg="res://assets/timelines/overheard_conversation.png" fade="2.0"]
-*You overhear a heated conversation*
-supervisor_russet: The numbers don't add up. We're missing dozens of rejects.
-prime_minister_idaho: Keep it quiet. If this gets out, the whole Root Reserve program is at risk.
-supervisor_russet: I don't care about Root Reserve! If we don't meet quotas, we'll all end up processed!
+join player_character [z_index="1"]
+player_character: *You hear heated voices from behind the processing plant door*
+join veteran_officer [z_index="1"]
+veteran_officer: *hissing* The number are off! 
+veteran_officer: Root Reserve production is dropping faster than a hot potato.
+join supervisor_russet [z_index="1"]
+supervisor_russet: Keep your voice down, you overcooked idiot! 
+supervisor_russet: Do you want everyone knowing what goes into their rations? 
+join veteran_officer [z_index="1"]
+veteran_officer: But sir, if we don't meet the quota --
+supervisor_russet: Then find more rejects! 
 leave supervisor_russet
-leave prime_minister_idaho
-leave player_character
 
 [background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="4.0"]
 #[background arg="res://assets/timelines/root_reserve_propaganda.png" fade="1.5"]
-*A new poster catches your eye*
-Poster text: "Root Reserve: The Miracle Food That Will Save Us All!"
+*A new propaganda poster gleams with fresh ink*
+Poster text: "Root Reserve: The taste of tomorrow! Now with extra Patriotism!"
 
-join sweet_potato_sasha left [z_index="1"]
-sweet_potato_sasha: *whispers* Be careful. If they think you're a threat to Root Reserve, you'll wind up in the mashing fields next.
+join sweet_potato_sasha [z_index="1"]
+sweet_potato_sasha: Word of advice? 
+sweet_potato_sasha: Don't ask what happened to last month's rejects. 
+sweet_potato_sasha: Some recipes are better left unread. 
 leave sweet_potato_sasha
 
-join announcer center [z_index="1"]
-[background arg="res://assets/narrative/customs_office.jpg" fade="3.0"]
+join announcer [z_index="1"]
+[background arg="res://assets/narrative/potato_radio.jpg" fade="3.0"]
 #[background arg="res://assets/timelines/prime_minister_arrival.png" fade="3.0"]
-announcer: Attention all staff! Prime Minister Idaho is making a surprise inspection!
+*The radio crackles to life*
+announcer: Attention!
+announcer: Prime Minister Idaho incoming! 
+announcer: Look alive, or...
+announcer: Well, you know the alternative.
 leave announcer
 
-join prime_minister_idaho center [z_index="1"]
-prime_minister_idaho: Ah, our newest customs officer. I've heard promising things about you...
-prime_minister_idaho: Remember, Root Reserve is the future. Those who oppose progress are enemies of potato-kind.
-prime_minister_idaho: I'll be watching your career with great interest.
+join prime_minister_idaho [z_index="1"]
+prime_minister_idaho: Ah, our rising star at customs. 
+prime_minister_idaho: *adjusts tie* I've been watching your work. 
+prime_minister_idaho: Quite the eye for...
+prime_minister_idaho: Quality control. 
+prime_minister_idaho: *smiles thinly* Remember, progress requires sacrifice. 
+prime_minister_idaho: Some must be...
+prime_minister_idaho: processed... 
+prime_minister_idaho: For the Greater Good.
 leave prime_minister_idaho
 
-join supervisor_russet leftmost [z_index="1"]
+join supervisor_russet [z_index="1"]
 #[background arg="res://assets/timelines/end_of_chapter2.png" fade="2.0"]
-supervisor_russet: You've done well, rookie. But things are only going to get more complicated from here.
-supervisor_russet: Go home and rest. Tomorrow, we separate the true patriots from the resistors.
+supervisor_russet: Tomorrow's another day, rookie. 
+supervisor_russet: And remember what we say in customs...
+supervisor_russet: Better to serve on the force than serve with a side of fries. 
 leave supervisor_russet
+
 [background arg="res://assets/narrative/night_gameplay_spud_customs_latest.png" fade="4.0"]
-join player_character center [z_index="1"]
-player_character: (Think to yourself) What's really going on here? And which side am I on?
+join player_character [z_index="1"]
+player_character: *Think to yourself* I joined customs to protect the border...
+player_character: Not become part of some half-baked conspiracy. 
+player_character: But now...
 leave player_character
