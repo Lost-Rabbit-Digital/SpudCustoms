@@ -2,3 +2,4 @@
 .godot/
 /android/
 addons/godotsteam/win64/~libgodotsteam.windows.template_debug.x86_64.dll
+/addons/godotsteam
