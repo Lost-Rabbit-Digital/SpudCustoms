@@ -13,8 +13,4 @@
 ## Audio
 [Ovani](https://ovanisound.com/)
 
-## Godot Game Template
-[Marek Belski and contributors](https://github.com/Maaack/Godot-Game-Template/graphs/contributors)  
-[github: Godot-Game-Template](https://github.com/Maaack/Godot-Game-Template)  
-
 # [Lost Rabbit Digital](https://lost-rabbit-digital.itch.io/)
