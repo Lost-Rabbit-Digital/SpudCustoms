@@ -57,7 +57,9 @@ directories/dtl_directory={
 glossary/default_case_sensitive=true
 layout/style_list=["res://dialogic_default_style.tres"]
 layout/default_style="res://dialogic_default_style.tres"
-variables={}
+variables={
+"ending_choice": "none"
+}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
