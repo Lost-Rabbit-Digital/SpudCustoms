@@ -6,7 +6,6 @@ var close_sound_played = false
 var open_sound_played = false
 var holding_stamp = false
 var is_potato_in_office = false
-var is_paused = false
 
 # track the current potato's info
 var current_potato_info
@@ -553,15 +552,6 @@ func _process(_delta):
 	if !$SystemManagers/AudioManager/SFXPool.is_playing():
 		$Gameplay/CustomsOffice/Megaphone/MegaphoneDialogueBoxBlank.visible = false
 	
-	if is_paused == true:
-		$PauseContainer/PauseMenu.visible = true
-		$Gameplay/InteractiveElements/ApprovalStamp.visible = false
-		$Gameplay/InteractiveElements/RejectionStamp.visible = false
-	else:
-		$PauseContainer/PauseMenu.visible = false
-		$Gameplay/InteractiveElements/ApprovalStamp.visible = true
-		$Gameplay/InteractiveElements/RejectionStamp.visible = true
-		
 	# Check for closing passport
 	if (suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)) or 
 		suspect.get_rect().has_point(suspect.to_local(mouse_pos))) and (dragged_sprite == passport or dragged_sprite == guide):
@@ -715,7 +705,8 @@ func go_to_game_over():
 	print("transition to game over scene")
 	$Gameplay/InteractiveElements/ApprovalStamp.visible = false
 	$Gameplay/InteractiveElements/RejectionStamp.visible = false
-	get_tree().change_scene_to_file("res://menus/game_over.tscn")
+	print("ALERT: go_to_game_over() has been disabled")
+	#get_tree().change_scene_to_file("res://menus/game_over.tscn")
 
 	
 func go_to_game_win():
@@ -724,9 +715,10 @@ func go_to_game_win():
 	$Gameplay/InteractiveElements/RejectionStamp.visible = false
 	Global.final_score = score
 	Global.shift += 1
+	print("ALERT: go_to_game_win() has been disabled")
 	# Use change_scene_to_packed to pass parameters
-	var success_scene = preload("res://menus/success_scene.tscn")
-	get_tree().change_scene_to_packed(success_scene)
+	#var success_scene = preload("res://menus/success_scene.tscn")
+	#get_tree().change_scene_to_packed(success_scene)
 	# Store the score in a global script or autoload
 
 func timedOut():
@@ -821,10 +813,6 @@ func clear_potato_textures():
 	$Gameplay/InteractiveElements/Passport/OpenPassport/PassportPhoto.texture = null
 	
 func _input(event):
-	if event is InputEventKey:
-		if event.keycode == KEY_ESCAPE and event.pressed:
-			is_paused = !is_paused
-				
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			var mouse_pos = get_global_mouse_position()
