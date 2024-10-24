@@ -1,38 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7oxw8hncyodq"]
+[gd_scene load_steps=2 format=3 uid="uid://cshf3nexiguwg"]
 
-[ext_resource type="Script" path="res://main_scenes/scenes/game_scene/levels/level.gd" id="1_7u8ig"]
+[ext_resource type="Script" path="res://story_test.gd" id="1_o4sv1"]
 
-[node name="Level1" type="HBoxContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_7u8ig")
+[node name="Root" type="Node2D"]
+script = ExtResource("1_o4sv1")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/margin_left = 32
-theme_override_constants/margin_top = 32
-theme_override_constants/margin_right = 32
-theme_override_constants/margin_bottom = 32
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="LoseButton" type="Button" parent="MarginContainer"]
-layout_mode = 2
-text = "Lose"
+[node name="SystemManagers" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="MarginContainer2" type="MarginContainer" parent="."]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/margin_left = 32
-theme_override_constants/margin_top = 32
-theme_override_constants/margin_right = 32
-theme_override_constants/margin_bottom = 32
+[node name="PauseContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="WinButton" type="Button" parent="MarginContainer2"]
-layout_mode = 2
-text = "Win"
-
-[connection signal="pressed" from="MarginContainer/LoseButton" to="." method="_on_lose_button_pressed"]
-[connection signal="pressed" from="MarginContainer2/WinButton" to="." method="_on_win_button_pressed"]
+[node name="Dialogue" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
