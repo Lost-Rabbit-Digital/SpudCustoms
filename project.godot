@@ -37,8 +37,13 @@ gdscript/warnings/integer_division=0
 directories/dch_directory={
 "announcer": "res://assets/narrative/characters/announcer.dch",
 "narrator": "res://assets/narrative/characters/narrator.dch",
+"npc_1": "res://assets/narrative/characters/npc_1.dch",
+"npc_2": "res://assets/narrative/characters/npc_2.dch",
+"npc_3": "res://assets/narrative/characters/npc_3.dch",
 "player_character": "res://assets/narrative/characters/player_character.dch",
 "prime_minister_idaho": "res://assets/narrative/characters/prime_minister_idaho.dch",
+"resistance_member_1": "res://assets/narrative/characters/resistance_member_1.dch",
+"resistance_member_2": "res://assets/narrative/characters/resistance_member_2.dch",
 "spud_masherson": "res://assets/narrative/characters/spud_masherson.dch",
 "supervisor_russet": "res://assets/narrative/characters/supervisor_russet.dch",
 "sweet_potato_sasha": "res://assets/narrative/characters/sweet_potato_sasha.dch",
@@ -47,18 +52,18 @@ directories/dch_directory={
 directories/dtl_directory={
 "chapter_1_1_overview": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_overview.dtl",
 "chapter_1_spud_masherson": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_spud_masherson.dtl",
-"chapter_2_1_overview": "res://assets/narrative/characters/chapter_2_1_overview.dtl",
-"chapter_2_2_overview": "res://assets/narrative/chapter_2/chapter_2_2_overview.dtl",
-"chapter_3_1_overview": "res://assets/narrative/characters/chapter_3_1_overview.dtl",
-"chapter_3_2_overview": "res://assets/narrative/chapter_3/chapter_3_2_overview.dtl",
+"chapter_2/chapter_2_1_overview": "res://assets/narrative/chapter_2/chapter_2_1_overview.dtl",
+"chapter_3/chapter_3_1_overview": "res://assets/narrative/chapter_3/chapter_3_1_overview.dtl",
 "day_1_intro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_intro.dtl",
-"day_1_outro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_outro.dtl"
+"day_1_outro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_outro.dtl",
+"spud_customs_full_narrative": "res://assets/narrative/spud_customs_full_narrative.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://dialogic_default_style.tres"]
 layout/default_style="res://dialogic_default_style.tres"
 variables={
-"ending_choice": "none"
+"ending_choice": "none",
+"stay_or_go": "none"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
