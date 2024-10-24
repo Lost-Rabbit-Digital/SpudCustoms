@@ -434,7 +434,7 @@ func animate_mugshot_and_passport():
 	update_potato_info_display()
 
 	# Reset positions and visibility
-	potato_mugshot.position.x = suspect_panel.position.x + suspect_panel.texture.get_width()
+	potato_mugshot.position.x = suspect_panel.position.x + suspect_panel_front.texture.get_width()
 	passport.visible = false
 	passport.position = Vector2(suspect_panel.position.x, suspect_panel.position.y)
 	close_passport_action()
@@ -448,7 +448,7 @@ func animate_mugshot_and_passport():
 	tween.tween_property(passport, "modulate:a", 1, 2)
 	# Animate passport
 	tween.tween_property(passport, "visible", true, 0).set_delay(2)
-	tween.tween_property(passport, "position:y", suspect_panel.position.y + suspect_panel.texture.get_height() / 5, 1).set_delay(2)
+	tween.tween_property(passport, "position:y", suspect_panel.position.y + suspect_panel_front.texture.get_height() / 5, 1).set_delay(2)
 	tween.tween_property(passport, "z_index", 3, 0).set_delay(3)
 
 	tween.chain().tween_callback(func(): print("Finished animating mugshot and passport"))
