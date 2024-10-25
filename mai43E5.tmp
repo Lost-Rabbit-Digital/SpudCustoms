@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=35 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://assets/suspect_panel/suspect_panel.png" id="2_f25cg"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://jjnnivgwpiub" path="res://assets/alerts/megaphone_alert_box.png" id="10_5g2y2"]
 [ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
 [ext_resource type="Texture2D" uid="uid://fmqkliw6t33x" path="res://assets/suspect_panel/suspect_panel_front.png" id="10_foucb"]
-[ext_resource type="Texture2D" uid="uid://cwni5a4q3jj67" path="res://assets/suspect_panel/suspect_panel_top_bottom.png" id="12_n1tuu"]
 [ext_resource type="Texture2D" uid="uid://ceh27taly75na" path="res://assets/documents/passport-old.png" id="12_q7tid"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="13_wxn24"]
 [ext_resource type="Texture2D" uid="uid://cbthvh8tq02ee" path="res://assets/potatoes/document_photos/purple_majesty.png" id="14_al1cy"]
@@ -260,29 +259,19 @@ texture = ExtResource("10_5g2y2")
 z_index = 1
 position = Vector2(1074, 472)
 scale = Vector2(1.05816, 1.06849)
+texture = ExtResource("2_f25cg")
 
-[node name="SuspectPanelTop" type="Sprite2D" parent="Gameplay/SuspectPanel"]
+[node name="SuspectPanelTable" type="Sprite2D" parent="Gameplay/SuspectPanel"]
+visible = false
+z_as_relative = false
+texture = ExtResource("17_hbwb4")
+
+[node name="SuspectPanelFront" type="Sprite2D" parent="Gameplay/SuspectPanel"]
 z_index = 2
 z_as_relative = false
 texture = ExtResource("10_foucb")
 
-[node name="SuspectPanelTopBottom" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_as_relative = false
-texture = ExtResource("12_n1tuu")
-
-[node name="SuspectPanelFront" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_index = -1
-z_as_relative = false
-texture = ExtResource("2_f25cg")
-
-[node name="SuspectPanelTable" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_index = -1
-z_as_relative = false
-texture = ExtResource("17_hbwb4")
-
 [node name="SuspectPanelBackground" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_index = -1
-z_as_relative = false
 texture = ExtResource("14_v4iji")
 
 [node name="InspectionTable" type="Sprite2D" parent="Gameplay"]
@@ -299,7 +288,6 @@ texture = ExtResource("18_yiok2")
 [node name="PotatoMugshotShadow" type="Sprite2D" parent="Gameplay/PotatoMugshot"]
 modulate = Color(0, 0, 0, 0.521569)
 z_index = -1
-z_as_relative = false
 position = Vector2(-1.48, -8.328)
 scale = Vector2(1.22, 1.22)
 texture = ExtResource("18_7ww6h")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd3tgngxnqogl"
-path="res://.godot/imported/InterfaceOutline.png-6c100c07f86801e1e76c8b63aaf77449.ctex"
+uid="uid://dw8evqqtobc7x"
+path="res://.godot/imported/suspect_panel.png-120e0661a681a4691857565df4c0e3cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://InterfaceOutline.png"
-dest_files=["res://.godot/imported/InterfaceOutline.png-6c100c07f86801e1e76c8b63aaf77449.ctex"]
+source_file="res://assets/suspect_panel/suspect_panel.png"
+dest_files=["res://.godot/imported/suspect_panel.png-120e0661a681a4691857565df4c0e3cc.ctex"]
 
 [params]
 

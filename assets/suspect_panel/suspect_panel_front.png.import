@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3puyjulpos2e"
-path="res://.godot/imported/rules_panel.png-2df3fad53abb31df363aabbe41c395cb.ctex"
+uid="uid://fmqkliw6t33x"
+path="res://.godot/imported/suspect_panel_front.png-ca9a2aa13c65f87f166a8851f73d46a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rules_panel.png"
-dest_files=["res://.godot/imported/rules_panel.png-2df3fad53abb31df363aabbe41c395cb.ctex"]
+source_file="res://assets/suspect_panel/suspect_panel_front.png"
+dest_files=["res://.godot/imported/suspect_panel_front.png-ca9a2aa13c65f87f166a8851f73d46a5.ctex"]
 
 [params]
 
