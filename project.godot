@@ -56,6 +56,7 @@ directories/dtl_directory={
 "chapter_3/chapter_3_1_overview": "res://assets/narrative/chapter_3/chapter_3_1_overview.dtl",
 "day_1_intro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_intro.dtl",
 "day_1_outro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_outro.dtl",
+"scratch_test": "res://assets/narrative/scratch_test.dtl",
 "spud_customs_full_narrative": "res://assets/narrative/spud_customs_full_narrative.dtl"
 }
 glossary/default_case_sensitive=true
