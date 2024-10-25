@@ -299,6 +299,7 @@ texture = ExtResource("18_yiok2")
 [node name="PotatoMugshotShadow" type="Sprite2D" parent="Gameplay/PotatoMugshot"]
 modulate = Color(0, 0, 0, 0.521569)
 z_index = -1
+z_as_relative = false
 position = Vector2(-1.48, -8.328)
 scale = Vector2(1.22, 1.22)
 texture = ExtResource("18_7ww6h")
