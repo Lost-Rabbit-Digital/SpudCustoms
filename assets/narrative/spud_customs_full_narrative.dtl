@@ -39,7 +39,7 @@ supervisor_russet: Any questions before you begin?
 - "What exactly happens to rejected potatoes?"
 - "Is there a reason everyone seems so...nervous?"
 leave supervisor_russet
-[background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="1.0"]
+[background arg="res://assets/narrative/gameplay_spud_customs_latest_1.png" fade="1.0"]
 You continue your shift...
 
 [background arg="res://assets/narrative/potato_passports_1.jpg" fade="2.0"]
@@ -49,7 +49,7 @@ sweet_potato_sasha: I've been here a while, so if you need any help, just ask.
 sweet_potato_sasha: [i]leans in[/i] And keep your eyes peeled. Not everything is as it seems in Spud.
 leave sweet_potato_sasha
 
-[background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="1.0"]
+[background arg="res://assets/narrative/gameplay_spud_customs_latest_1.png" fade="1.0"]
 join supervisor_russet [z_index="1"]
 supervisor_russet: Your first applicant is waiting. Check those stamps carefully! 
 supervisor_russet: One wrong move could let in a bad spud.
@@ -57,7 +57,7 @@ supervisor_russet: Look for signs of disease, tampering, or suspicious behavior.
 supervisor_russet: If a potato seems rotten, reject them. Spud's safety comes first.
 leave supervisor_russet
 
-[background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="1.0"]
+[background arg="res://assets/narrative/gameplay_spud_customs_latest_1.png" fade="1.0"]
 You continue your shift...
 
 [background arg="res://assets/narrative/potato_radio_1.jpg" fade="1.0"]
@@ -68,7 +68,7 @@ announcer: "In other news, reports of missing potatoes continue. Authorities ass
 announcer: "Root Reserve. Feeding Spud's future!"
 leave announcer
 
-[background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="1.0"]
+[background arg="res://assets/narrative/gameplay_spud_customs_latest_1.png" fade="1.0"]
 You continue your shift...
 
 [background arg="res://assets/narrative/propaganda_1_2.jpg" fade="2.0"]
@@ -81,7 +81,7 @@ Poster text: "Serve With Pride - Your Duty Keeps Spud Strong!"
 [i]A third poster shows a shadowy silhouette[/i]
 "Those Who Abandon Their Duty Abandon Their Roots."
 
-[background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="1.0"]
+[background arg="res://assets/narrative/gameplay_spud_customs_latest_1.png" fade="1.0"]
 You continue your shift...
 
 join npc_2 [z_index="1"]
@@ -98,7 +98,7 @@ sweet_potato_sasha: No one knows for sure, but...just keep your wits about you.
 - "Maybe we should look into this further."
 leave sweet_potato_sasha
 
-[background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="1.0"]
+[background arg="res://assets/narrative/gameplay_spud_customs_latest_1.png" fade="1.0"]
 You continue your shift...
 
 join spud_masherson [z_index="1"]
@@ -123,7 +123,7 @@ supervisor_russet: And don't forget to grab your ration of Root Reserve on the w
 supervisor_russet: [i]grins[/i] It's the flavor of Spud's future!
 leave supervisor_russet
 
-[background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="1.0"]
+[background arg="res://assets/narrative/gameplay_spud_customs_latest_1.png" fade="1.0"]
 You finish your shift and start to leave the customs office.
 
 [background arg="res://assets/narrative/suspicious_note.jpg" fade="2.0"]
@@ -148,7 +148,7 @@ player_character: I better get to the bottom of this, before I end up disappeare
 leave player_character
 
 # Chapter 2
-[background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="1.0"]
+[background arg="res://assets/narrative/gameplay_spud_customs_latest_1.png" fade="1.0"]
 join narrator [z_index="1"]
 narrator: Another day dawns at the Spud border checkpoint. 
 narrator: The line of potatoes waiting for inspection stretches longer than ever.
@@ -165,7 +165,7 @@ supervisor_russet: [i]eyes narrow[/i] Any potato deemed unsafe or undesirable is
 supervisor_russet: Perform your duties with unwavering vigilance. The stability of Spud depends on it.
 leave supervisor_russet
 
-[background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="1.0"]
+[background arg="res://assets/narrative/gameplay_spud_customs_latest_1.png" fade="1.0"]
 join supervisor_russet [z_index="1"]
 [i]Russet beckons you over, voice lowered[/i]
 supervisor_russet: I have a special assignment for you. We've got intel on a group of troublemakers trying to sneak across the border.
@@ -199,7 +199,7 @@ leave supervisor_russet
 
 [i]You notice Sasha fiddling with her scanner, 'accidentally' letting a few suspicious potatoes through[/i]
 
-[background arg="res://assets/narrative/root_reserve_reveal.jpg" fade="1.5"]
+[background arg="res://assets/narrative/root_reserve_reveal_1.jpg" fade="1.5"]
 join sweet_potato_sasha  [z_index="1"]
 [i]You meet up with Sasha as planned[/i]
 sweet_potato_sasha: Good, you came. I managed to swipe this from Russet's office.
@@ -220,7 +220,7 @@ player_character: [i]looks up at Sasha, eyes haunted[/i] What do we do?
 leave sweet_potato_sasha
 leave player_character
 
-[background arg="res://assets/narrative/gameplay_spud_customs_latest.png" fade="4.0"]
+[background arg="res://assets/narrative/gameplay_spud_customs_latest_1.png" fade="4.0"]
 join announcer [z_index="1"]
 [i]The facility PA system crackles to life[/i]
 announcer: Attention officers - double rejection quotas are now in effect. 
@@ -253,7 +253,7 @@ player_character: But I was just rounding up the ingredients for their twisted r
 player_character: [i]clenches fists[/i] No more. This ends now, even if I have to tear down the Spud myself.
 leave player_character
 
-[background arg="res://assets/narrative/night_gameplay_spud_customs_latest.png" fade="4.0"]
+[background arg="res://assets/narrative/night_gameplay_spud_customs_latest_1.png" fade="4.0"]
 join narrator [z_index="1"]
 narrator: That night, under the cover of darkness, you make a fateful choice.
 narrator: As Sasha and her team smuggle out the damning documents...
@@ -261,7 +261,7 @@ narrator: You must decide - maintain your post and play ignorant?
 narrator: Or abandon your duty and join the resistance, come what may?
 
 set {stay_or_go} = "none"
-[background arg="res://assets/narrative/night_gameplay_spud_customs_latest.png" fade="4.0"] 
+[background arg="res://assets/narrative/night_gameplay_spud_customs_latest_1.png" fade="4.0"] 
 join player_character [z_index="1"]
 player_character: [i]takes a deep breath[/i] It's now or never. I have to make a choice.
 player_character: Do I stay at my post, keep my head down, and pray this all blows over?
@@ -344,7 +344,7 @@ narrator: [i]screen fades to black[/i]
 leave narrator
 
 # Chapter 3 - Closing narrative
-[background arg="res://assets/narrative/chapter_3/border_chaos.jpg" fade="1.0"]
+[background arg="res://assets/narrative/border_chaos_1.jpg" fade="1.0"]
 narrator: The Spud border is in complete chaos. 
 narrator: Panicked potatoes flood the checkpoints, desperate to escape.
 narrator: The leaked documents have shattered citizens' trust in the government.
@@ -406,7 +406,7 @@ player_character: [i]readying your weapons[/i] For Spud!
 leave player_character
 
 set {ending_choice} = "none"
-[background arg="res://assets/narrative/final_choice.jpg" fade="1.5"]
+[background arg="res://assets/narrative/confronting_idaho.jpg" fade="1.5"]
 # [background arg="res://assets/narrative/root_reserve_facility.jpg" fade="1.5"]
 join narrator [z_index="1"]
 narrator: You stand at the heart of the Root Reserve facility, the truth laid bare before you.
@@ -496,7 +496,8 @@ else:
 	leave sweet_potato_sasha
 	leave player_character
 
-[background arg="res://assets/narrative/uprising_montage.jpg" fade="3.0"]  
+[background arg="res://assets/narrative/epilogue_choice.jpg" fade="3.0"]  
+#[background arg="res://assets/narrative/uprising_montage.jpg" fade="3.0"]  
 join narrator [z_index="1"]
 narrator: The fall of Root Reserve sparks a wildfire of change across Spud.
 narrator: In the following days and weeks, the old regime crumbles.
@@ -506,7 +507,7 @@ narrator: But the road ahead is not without its challenges.
 narrator: Rebuilding a society from the ground up is no small potato task.
 leave narrator
 
-[background arg="res://assets/narrative/reconstruction_montage.jpg" fade="3.0"]
+#[background arg="res://assets/narrative/reconstruction_montage.jpg" fade="3.0"]
 join player_character [z_index="1"]
 player_character: [i]surveying the bustling crowds, you see a mixture of hope and uncertainty on every face[/i]
 player_character: We've won our freedom...but what do we do with it now?
@@ -523,7 +524,7 @@ join sweet_potato_sasha [z_index="1"]
 sweet_potato_sasha: As long as we stay true to our roots, to the ideals that brought us here...we'll find a way.
 leave sweet_potato_sasha
 
-[background arg="res://assets/narrative/new_spud_flag.jpg" fade="3.0"]
+#[background arg="res://assets/narrative/new_spud_flag.jpg" fade="3.0"]
 join narrator [z_index="1"]
 narrator: And so, from the ashes of the old Spud, a new nation begins to take root.
 narrator: One where every potato, regardless of shape or size, has a place at the table.
@@ -531,7 +532,7 @@ narrator: Where the fields are tilled with equity, and the harvest is shared by 
 narrator: The road may be long, and the soil rocky...but the seeds of change have been planted.
 leave narrator
 
-[background arg="res://assets/narrative/player_character_sasha_future.jpg" fade="3.0"]
+#[background arg="res://assets/narrative/player_character_sasha_future.jpg" fade="3.0"]
 join narrator [z_index="1"]
 narrator: And what of our hero, the erstwhile customs agent turned revolutionary?
 join player_character [z_index="1"]
@@ -550,7 +551,7 @@ player_character: The work isn't over. We've got a nation to nurture, and a love
 player_character: But there's no one I'd rather have at my side.
 leave player_character
 
-[background arg="res://assets/narrative/new_dawn_spud.jpg" fade="3.0"]
+#[background arg="res://assets/narrative/new_dawn_spud.jpg" fade="3.0"]
 join narrator [z_index="1]
 narrator: And so our story ends, not in the boiling pot of oppression...
 narrator: ...but in the nurturing soil of freedom, of hope, of potatoes united.
@@ -559,5 +560,5 @@ narrator: And though the future is uncertain, one thing is clear.
 narrator: In the new Spud, every potato has a chance to grow, to thrive, to be all that they can be.
 narrator: And that is a future worth fighting for.
 leave narrator
-[background arg="res://assets/narrative/credits.jpg" fade="5.0"]
+#[background arg="res://assets/narrative/credits.jpg" fade="5.0"]
 # Load credits scene
