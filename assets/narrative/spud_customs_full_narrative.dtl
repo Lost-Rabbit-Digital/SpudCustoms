@@ -27,7 +27,7 @@ leave npc_1
 narrator: Like they say, a good spud is a smooth spud. Any lumps could be...problematic.
 leave narrator
 
-[background arg="res://assets/narrative/busy_customs_office_1.jpg" fade="2.0"]
+[background arg="res://assets/narrative/supervisor_presenting.jpg" fade="2.0"]
 join supervisor_russet [z_index="1"]
 supervisor_russet: Ah, the new sprout has finally arrived. Welcome aboard.
 supervisor_russet: Listen carefully, your role is vital to Spud's security. 
@@ -169,7 +169,8 @@ leave supervisor_russet
 join supervisor_russet [z_index="1"]
 [i]Russet beckons you over, voice lowered[/i]
 supervisor_russet: I have a special assignment for you. We've got intel on a group of troublemakers trying to sneak across the border.
-supervisor_russet: Use the new scanner to check for any...irregularities. You spot anything suspicious, you report it immediately. Understand?
+[background arg="res://assets/narrative/uv_scanner.png" fade="1.0"]
+supervisor_russet: Use this new scanner to check for any...irregularities. You spot anything suspicious, you report it immediately. Understand?
 - "Yes sir, I won't let you down."
 - "What kind of irregularities are we talking about here?"
 leave supervisor_russet
@@ -199,7 +200,7 @@ leave supervisor_russet
 
 [i]You notice Sasha fiddling with her scanner, 'accidentally' letting a few suspicious potatoes through[/i]
 
-[background arg="res://assets/narrative/root_reserve_reveal_1.jpg" fade="1.5"]
+[background arg="res://assets/narrative/root_reserve_reveal.jpg" fade="1.5"]
 join sweet_potato_sasha  [z_index="1"]
 [i]You meet up with Sasha as planned[/i]
 sweet_potato_sasha: Good, you came. I managed to swipe this from Russet's office.
@@ -237,6 +238,7 @@ supervisor_russet: Any potato deemed unfit will be detained for... further proce
 supervisor_russet: [i]smiles coldly[/i] Their sacrifice will make our nation great. A few for the good of the many.
 leave supervisor_russet
 
+[background arg="res://assets/narrative/resistance_moonlight.jpg" fade="4.0"]
 join sweet_potato_sasha [z_index="1"]
 sweet_potato_sasha: [i]urgently whispers[/i] I've made contact with the resistance. 
 sweet_potato_sasha: We're getting those documents out tonight. I need you to distract the guards.
@@ -358,7 +360,7 @@ player_character: The government may have branded us as traitors...but the peopl
 player_character: And they're hungry for more than lies and false comfort now.
 leave player_character
 
-[background arg="res://assets/narrative/customs_office.jpg" fade="3.0"]
+[background arg="res://assets/narrative/supervisor_rage.jpg" fade="3.0"]
 join supervisor_russet left [z_index="1"]
 supervisor_russet: [i]slamming fist on desk, papers flying everywhere[/i] This is an absolute disaster! 
 supervisor_russet: The people are rioting in the streets, burning effigies of Root Reserve...
@@ -387,8 +389,9 @@ resistance_member_2: How do we know they won't turn on us the second things get 
 - "Judge me by my actions, not my past. I'm here to fight."
 leave resistance_member_2
 
-[background arg="res://assets/narrative/prime_minister_idaho_bunker.jpg" fade="3.0"]
 [i]Alarms blare as you breach the outer perimeter of the facility[/i]
+[background arg="res://assets/narrative/minister_idaho_monitor.jpg" fade="1.5"]
+
 join prime_minister_idaho [z_index="1"]
 prime_minister_idaho: [i]face appearing on a massive screen[/i] Well well, what do we have here?
 prime_minister_idaho: The traitor returns home... and they've brought the rebel scum with them.
@@ -399,6 +402,8 @@ prime_minister_idaho: As fertilizer for the next crop. [i]screen goes black[/i]
 leave prime_minister_idaho
 
 join player_character center [z_index="1"]
+[background arg="res://assets/narrative/idaho_bunker_hallway.jpg" fade="1.5"]
+
 player_character: [i]turning to Sasha and the others, eyes hard[/i] This ends tonight.
 player_character: The truth behind Root Reserve, Prime Minister Idaho's twisted vision...
 player_character: It all comes to light. No matter the cost. 
@@ -406,8 +411,7 @@ player_character: [i]readying your weapons[/i] For Spud!
 leave player_character
 
 set {ending_choice} = "none"
-[background arg="res://assets/narrative/confronting_idaho.jpg" fade="1.5"]
-# [background arg="res://assets/narrative/root_reserve_facility.jpg" fade="1.5"]
+[background arg="res://assets/narrative/root_reserve_factory_hallway.jpg" fade="1.5"]
 join narrator [z_index="1"]
 narrator: You stand at the heart of the Root Reserve facility, the truth laid bare before you.
 narrator: The horrific machinery of oppression, the countless potatoes processed...
@@ -533,7 +537,7 @@ narrator: Where the fields are tilled with equity, and the harvest is shared by 
 narrator: The road may be long, and the soil rocky...but the seeds of change have been planted.
 leave narrator
 
-#[background arg="res://assets/narrative/player_character_sasha_future.jpg" fade="3.0"]
+[background arg="res://assets/narrative/epilogue_romance.jpg" fade="3.0"]
 join narrator [z_index="1"]
 narrator: And what of our hero, the erstwhile customs agent turned revolutionary?
 join player_character [z_index="1"]

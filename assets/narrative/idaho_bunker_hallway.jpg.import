@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chpmef7hqkxol"
-path="res://.godot/imported/confronting_idaho.jpg-ddad8c5a61759f4af2340bde78661b24.ctex"
+path="res://.godot/imported/idaho_bunker_hallway.jpg-854d07c43d7788593d51f543c29e748e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/narrative/confronting_idaho.jpg"
-dest_files=["res://.godot/imported/confronting_idaho.jpg-ddad8c5a61759f4af2340bde78661b24.ctex"]
+source_file="res://assets/narrative/idaho_bunker_hallway.jpg"
+dest_files=["res://.godot/imported/idaho_bunker_hallway.jpg-854d07c43d7788593d51f543c29e748e.ctex"]
 
 [params]
 
