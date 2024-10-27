@@ -46,8 +46,7 @@ directories/dch_directory={
 "resistance_member_2": "res://assets/narrative/characters/resistance_member_2.dch",
 "spud_masherson": "res://assets/narrative/characters/spud_masherson.dch",
 "supervisor_russet": "res://assets/narrative/characters/supervisor_russet.dch",
-"sweet_potato_sasha": "res://assets/narrative/characters/sweet_potato_sasha.dch",
-"veteran_officer": "res://assets/narrative/characters/veteran_officer.dch"
+"sweet_potato_sasha": "res://assets/narrative/characters/sweet_potato_sasha.dch"
 }
 directories/dtl_directory={
 "chapter_1_1_overview": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_overview.dtl",

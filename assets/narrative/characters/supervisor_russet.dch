@@ -17,7 +17,7 @@
 "portraits": {
 "Supervisor Russet": {
 "export_overrides": {
-"image": "\"res://assets/narrative/characters/supervisor_russet.png\""
+"image": "\"res://assets/narrative/characters/supervisor_russet_1.png\""
 },
 "ignore_char_scale": false,
 "mirror": false,

@@ -17,7 +17,7 @@
 "portraits": {
 "Player Character": {
 "export_overrides": {
-"image": "\"res://assets/narrative/characters/player_character.png\""
+"image": "\"res://assets/narrative/characters/player_character_1.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

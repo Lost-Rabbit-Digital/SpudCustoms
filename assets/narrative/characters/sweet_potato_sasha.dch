@@ -17,7 +17,7 @@
 "portraits": {
 "Sweet Potato Sasha": {
 "export_overrides": {
-"image": "\"res://assets/narrative/characters/sweet_potato_sasha.png\""
+"image": "\"res://assets/narrative/characters/npc_2.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

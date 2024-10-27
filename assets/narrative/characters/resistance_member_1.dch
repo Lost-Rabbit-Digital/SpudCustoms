@@ -17,7 +17,7 @@
 "portraits": {
 "portrait": {
 "export_overrides": {
-"image": "\"res://assets/narrative/characters/resistance_member_1.png\""
+"image": "\"res://assets/narrative/characters/npc_3.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
