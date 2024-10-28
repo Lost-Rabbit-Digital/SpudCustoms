@@ -63,6 +63,13 @@ layout/style_list=["res://dialogic_default_style.tres"]
 layout/default_style="res://dialogic_default_style.tres"
 variables={
 "ending_choice": "none",
+"family_response": "none",
+"hideout_response": "none",
+"initial_response": "none",
+"resistance_trust": "none",
+"romance_ending": "none",
+"sasha_investigation": "none",
+"scanner_response": "none",
 "stay_or_go": "none"
 }
 extensions_folder="res://addons/dialogic_additions"
