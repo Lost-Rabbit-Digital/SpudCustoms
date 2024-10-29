@@ -21,6 +21,7 @@ These are tasks which must be completed before the submission to Steam deadline,
 [ ] - Cut items off when they leave interaction table
 
 ### Urgent
+[ ] - Multiplayer? 8th / 15th of November for schedule
 [ ] - Explain how to flip the pages on the document in the tutorial
 [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
 [ ] - Add flash indicator pointing at corner of first page 
@@ -34,6 +35,8 @@ These are tasks which must be completed before the submission to Steam deadline,
 [ ] - Make new stamp shadow, make it a highlight instead of a shadow
 [ ] - Custom cursor for hover, click, grab, drag
 [ ] - Save game and load game
+[ ] - Make it clearer that the potato is running the border, add agency
+[ ] - UV Lamp mini-game
 
 
 
@@ -66,13 +69,12 @@ These are more general tasks which would add a layer of quality to the game if c
 These are various goals which are out of scope for the current roadmap, but if possible would add more to the game.
 
 ### Features
-[ ] - Multiplayer? 8th / 15th of November for schedule
 [ ] - Baggage inspection
 
 ### Audio
 
 ### Graphics
-[ ] - How should we do lighting for the environment and interactablrpcses? Real-time or baked into the pixel art?
+[ ] - How should we do lighting for the environment and interactables? Real-time or baked into the pixel art?
 [ ] - Entry ticket
 [ ] - Different documents, entry passes, work permits, baggage, visas, marriage licenses, bribes, 
 
