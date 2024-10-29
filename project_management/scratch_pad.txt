@@ -1,56 +1,10 @@
-# Incomplete tasks list
+# Scratch Pad
+These are our goals, to-do tasks, and completed tasks.
 
-## Stretch goals
-[ ] - Multiplayer? 8th / 15th of November for schedule
-[ ] - How should we do lighting for the environment and interactables? Real-time or baked into the pixel art?
 
-## Urgent
-[ ] - Discuss new font
-[ ] - Fix the pixel resolution of the text
-[ ] - "Change verbiage to 2 and under"
-[ ] - Make full-screen appear in the main game instead of just the main menu
-[ ] - Make an options menu
-[ ] - Stamp doesn't match the rest of the pixel feel, different resolution
-[ ] - Make sure the user knows where the laws are, make it into a specific note which is immovable
-[ ] - Make the instructions an overlay which you could close
-[ ] - More papers to shuffle around
-[ ] - Make new stamp shadow, make it a highlight instead of a shadow
-[ ] - Custom cursor for hover, click, grab, drag
 
-## Quality of life
-[ ] - Save in a global if the player has finished the tutorial so every shift doesn't start the same interaction
-[ ] - Overlay of potato customs officer talking
-[ ] - Cut items off when they leave interaction table
-[ ] - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
-[ ] - Shadows when the player begins to drag the item, they can click with no reaction
-[ ] - Cursor which changes on interaction hover 
-
-## Graphical
-[ ] - Add officers patrolling the area
-
-## Important features
-[ ] - Move tutorial to the front of the document
-[ ] - Explain how to flip the pages on the document in the tutorial
-[ ] - Add flash arrow pointing from the left to the right indicator for megaphone
-[ ] - Add flash indicator pointing at corner of first page 
-[ ] - Picking up stamp hides cursor
-[ ] - Move 4th page of instructions to page 1
-[ ] - How to give visual feedback of controls to the player? 
-
-## Menus
-[ ] - Update pause menu
-[ ] - Settings menu with graphics, audio, accessibility, rebinds
-
-## Audio
-[ ] - Deny entry to potato
-[ ] - Grant entry to potato
-
-## New features
-[ ] - Save game and load game
-[ ] - Baggage inspection
-[ ] - Different documents, entry passes, work permits, baggage, visas, marriage licenses, bribes, 
-[ ] - Entry ticket
-[ ] - Conversation with potato while checking documents
+## To Be Completed (TBC)
+These are tasks which must be completed before the submission to Steam deadline, November 24th.
 
 ## Bugs
 [ ] - Collision for the draggables to stay in the lower half of screen
@@ -64,9 +18,87 @@
 [ ] - Snap closed passport to position of mouse cursor to avoid bad offset
 [ ] - Mouse has to be over passport to be able to stamp
 [ ] - Potato persons flip upside down when called into the office
+[ ] - Cut items off when they leave interaction table
+
+## Urgent
+[ ] - Explain how to flip the pages on the document in the tutorial
+[ ] - Add flash arrow pointing from the left to the right indicator for megaphone
+[ ] - Add flash indicator pointing at corner of first page 
+[ ] - Picking up stamp hides cursor
+[ ] - How to give visual feedback of controls to the player? 
+[ ] - Fix the pixel resolution of the text
+[ ] - "Change verbiage to 2 and under"
+[ ] - Stamp doesn't match the rest of the pixel feel, different resolution
+[ ] - Make sure the user knows where the laws are, make it into a specific note which is immovable
+[ ] - Make the instructions an overlay which you could close
+[ ] - Make new stamp shadow, make it a highlight instead of a shadow
+[ ] - Custom cursor for hover, click, grab, drag
+[ ] - Save game and load game
+
+
+
+## General Tasks
+These are more general tasks which would add a layer of quality to the game if completed before submission deadline. 
+
+### Audio
+[ ] - Deny entry to potato
+[ ] - Grant entry to potato
+
+### Graphics
+[ ] - Add officers patrolling the area
+
+### Interaction
+
+### Menus
+[ ] - Splash-screen text 
+
+### Quality of life (QoL)
+[ ] - Save in a global if the player has finished the tutorial so every shift doesn't start the same interaction
+[ ] - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
+[ ] - Shadows when the player begins to drag the item, they can click with no reaction
+[ ] - Cursor which changes on interaction hover 
+
+### User Interface (UI)
+
+
+
+## Stretch Goals
+These are various goals which are out of scope for the current roadmap, but if possible would add more to the game.
+
+### Features
+[ ] - Multiplayer? 8th / 15th of November for schedule
+[ ] - Baggage inspection
+
+### Audio
+
+### Graphics
+[ ] - How should we do lighting for the environment and interactables? Real-time or baked into the pixel art?
+[ ] - Entry ticket
+[ ] - Different documents, entry passes, work permits, baggage, visas, marriage licenses, bribes, 
+
+### Interaction
+[ ] - Conversation with potato while checking documents
+
+### Menus
+
+### Quality of life (QoL)
+
+### User Interface (UI)
+
 
 
 # Completed tasks list
+The tasks which have be completed and pushed to VCS.
+
+[o] - Overlay of potato customs officer talking
+[o] - Make full-screen appear in the main game instead of just the main menu
+[o] - Make an options menu
+[o] - More papers to shuffle around
+[o] - Discuss new font
+[o] - Move tutorial to the front of the document
+[o] - Move 4th page of instructions to page 1
+[o] - Update pause menu
+[o] - Settings menu with graphics, audio, accessibility, rebinds
 [o] - Potato persons are above the customs office when called into the office
 [o] - Rephrase all laws to be more clearly negative
 [o] - Make intuitive stamp mechanic
