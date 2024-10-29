@@ -17,7 +17,7 @@
 "portraits": {
 "Spud Masherson": {
 "export_overrides": {
-"image": "\"res://assets/narrative/characters/npc_2.png\""
+"image": "\"res://assets/narrative/characters/spud_masherson.png\""
 },
 "mirror": true,
 "offset": Vector2(0, 0),

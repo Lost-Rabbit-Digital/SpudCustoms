@@ -17,7 +17,7 @@
 "portraits": {
 "Prime Minister Idaho": {
 "export_overrides": {
-"image": "\"res://assets/narrative/characters/prime_minister_idaho_1.png\""
+"image": "\"res://assets/narrative/characters/prime_minister_idaho.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

@@ -1,5 +1,5 @@
 # Chapter 1
-[background arg="res://assets/narrative/nation_of_spud_2.png" fade="2.0"]
+[background arg="res://assets/narrative/nation_of_spud_1.png" fade="2.0"]
 join narrator [z_index="1"]
 narrator: Welcome to the great nation of Spud, citizen.
 narrator: A land of prosperity and opportunity for all potatoes.
@@ -7,7 +7,7 @@ narrator: But our beloved Spud faces challenges, and we need your help.
 narrator: You've been selected for a crucial role in protecting our borders.
 leave narrator
 
-[background arg="res://assets/narrative/grand_nation_of_spud.png" fade="2.0"]
+[background arg="res://assets/narrative/checkpoint_interior.png" fade="2.0"]
 join narrator [z_index="1"]
 narrator: Your duty\: to process incoming potatoes and maintain our way of life.
 narrator: Don't forget, your family's well-being depends on your performance.
@@ -64,7 +64,7 @@ else:
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
 You continue your shift...
 
-[background arg="res://assets/narrative/potato_passports.png" fade="2.0"]
+[background arg="res://assets/narrative/meeting_sasha.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 sweet_potato_sasha: Hey there, I'm Sasha. <Welcome to the team!/Glad to have you on board!/Nice to meet a fresh sprout!>
 sweet_potato_sasha: I've been here a while, so if you need any help, just ask.
@@ -190,7 +190,7 @@ leave supervisor_russet
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 [i]Russet beckons you over, voice lowered[/i]
-[background arg="res://assets/narrative/uv_scanner.png" fade="2.0"]
+[background arg="res://assets/narrative/uv_scanner_1.png" fade="2.0"]
 supervisor_russet: I have a special assignment for you. We've got intel on a group of troublemakers trying to sneak across the border.
 supervisor_russet: Use this new scanner to check for any... irregularities. You spot anything suspicious, you report it immediately. Understand?
 set {scanner_response} = "none"
@@ -368,7 +368,7 @@ if {stay_or_go} == "stay":
 	set {stay_response} = "none"
 	- "No sir, everything was quiet on my watch."
 		set {stay_response} = "lie"
-	- "[i]nervously[/i] Unusual? No, no, just the normal comings and goings!"
+	- "Unusual? No, no, just the normal comings and goings!"
 		set {stay_response} = "nervous"
 	
 	if {stay_response} == "lie":
@@ -428,19 +428,19 @@ else:
 		sweet_potato_sasha: But doing what's right despite that fear? That's real courage.
 		sweet_potato_sasha: And you've got more of it than you know.
 		leave sweet_potato_sasha
-
+	
 	[background arg="res://assets/narrative/resistance_hideout.png" fade="2.0"]
 	join resistance_member_1 [z_index="1"]
 	resistance_member_1: [i]looking up as you enter the hideout[/i] Well well, look who finally dug up their courage.
 	resistance_member_1: [i]narrows eyes[/i] How do we know you're not a spy? A double agent sent to infiltrate us?
 	leave resistance_member_1
-
+	
 	join sweet_potato_sasha [z_index="1"]
 	sweet_potato_sasha: [i]stepping forward[/i] I vouch for them. They risked everything to help us get this information out.
 	sweet_potato_sasha: [i]turns to you[/i] Don't mind the suspicion. We've learned the hard way to be cautious.
 	sweet_potato_sasha: [i]gestures to a tattered map on the wall[/i] Now, let's get to work. We've got a nation to save.
 	leave sweet_potato_sasha
-
+	
 	join player_character [z_index="1"]
 	player_character: [i]studying the faces around you, seeing a mixture of hope and grim determination[/i]
 	player_character: I may have abandoned my post...but I haven't abandoned my duty.

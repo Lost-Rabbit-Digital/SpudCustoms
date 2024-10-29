@@ -28,7 +28,7 @@
 "portraits": {
 "Narrator": {
 "export_overrides": {
-"image": "\"res://assets/narrative/characters/npc_3.png\""
+"image": "\"res://assets/narrative/characters/narrator_uniform.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

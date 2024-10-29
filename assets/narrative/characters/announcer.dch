@@ -17,7 +17,7 @@
 "portraits": {
 "Announcer": {
 "export_overrides": {
-"image": "\"res://assets/narrative/characters/announcer_1.png\""
+"image": "\"res://assets/narrative/characters/announcer.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
