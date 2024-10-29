@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://klsc8y01mql4"
-valid=false
+uid="uid://by4cfoy64c63"
+path="res://.godot/imported/gameplay_shot_1.png-b09dd7997131c7c8c8af926d14bff432.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://assets/narrative/gameplay.png"
+source_file="res://assets/narrative/gameplay_shot_1.png"
+dest_files=["res://.godot/imported/gameplay_shot_1.png-b09dd7997131c7c8c8af926d14bff432.ctex"]
 
 [params]
 
