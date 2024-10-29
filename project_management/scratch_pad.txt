@@ -6,7 +6,7 @@ These are our goals, to-do tasks, and completed tasks.
 ## To Be Completed (TBC)
 These are tasks which must be completed before the submission to Steam deadline, November 24th.
 
-## Bugs
+### Bugs
 [ ] - Collision for the draggables to stay in the lower half of screen
 [ ] - Fix stamp animation
 [ ] - If you spam stamps then multiple show up
@@ -20,7 +20,7 @@ These are tasks which must be completed before the submission to Steam deadline,
 [ ] - Potato persons flip upside down when called into the office
 [ ] - Cut items off when they leave interaction table
 
-## Urgent
+### Urgent
 [ ] - Explain how to flip the pages on the document in the tutorial
 [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
 [ ] - Add flash indicator pointing at corner of first page 
@@ -72,7 +72,7 @@ These are various goals which are out of scope for the current roadmap, but if p
 ### Audio
 
 ### Graphics
-[ ] - How should we do lighting for the environment and interactables? Real-time or baked into the pixel art?
+[ ] - How should we do lighting for the environment and interactablrpcses? Real-time or baked into the pixel art?
 [ ] - Entry ticket
 [ ] - Different documents, entry passes, work permits, baggage, visas, marriage licenses, bribes, 
 
