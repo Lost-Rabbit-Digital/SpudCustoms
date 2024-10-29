@@ -14,41 +14,41 @@ var score = 0
 var time_left = 60
 
 func _ready():
-    $Timer.connect("timeout", self, "_on_Timer_timeout")
-    $Timer.start()
-    _setup_spawn_points()
+	$Timer.connect("timeout", self, "_on_Timer_timeout")
+	$Timer.start()
+	_setup_spawn_points()
 
 func _setup_spawn_points():
-    # Add spawn points around the border of the game area
-    var screen_size = get_viewport_rect().size
-    for i in range(0, screen_size.x, 100):
-        spawn_points.append(Vector2(i, 0))
-        spawn_points.append(Vector2(i, screen_size.y))
-    for i in range(0, screen_size.y, 100):
-        spawn_points.append(Vector2(0, i))
-        spawn_points.append(Vector2(screen_size.x, i))
+	# Add spawn points around the border of the game area
+	var screen_size = get_viewport_rect().size
+	for i in range(0, screen_size.x, 100):
+		spawn_points.append(Vector2(i, 0))
+		spawn_points.append(Vector2(i, screen_size.y))
+	for i in range(0, screen_size.y, 100):
+		spawn_points.append(Vector2(0, i))
+		spawn_points.append(Vector2(screen_size.x, i))
 
 func _on_Timer_timeout():
-    time_left -= 1
-    if time_left <= 0:
-        _end_game()
-    else:
-        _spawn_potato()
+	time_left -= 1
+	if time_left <= 0:
+		_end_game()
+	else:
+		_spawn_potato()
 
 func _spawn_potato():
-    var potato = Potato.instance()
-    var spawn_point = spawn_points[randi() % spawn_points.size()]
-    potato.position = spawn_point
-    potato.connect("clicked", self, "_on_Potato_clicked")
-    add_child(potato)
+	var potato = Potato.instance()
+	var spawn_point = spawn_points[randi() % spawn_points.size()]
+	potato.position = spawn_point
+	potato.connect("clicked", self, "_on_Potato_clicked")
+	add_child(potato)
 
 func _on_Potato_clicked(potato):
-    score += 1
-    potato.queue_free()
+	score += 1
+	potato.queue_free()
 
 func _end_game():
-    $Timer.stop()
-    print("Game Over! Score: ", score)
+	$Timer.stop()
+	print("Game Over! Score: ", score)
 
 # In Potato.gd
 extends Area2D
@@ -56,16 +56,16 @@ extends Area2D
 signal clicked
 
 func _ready():
-    connect("input_event", self, "_on_input_event")
+	connect("input_event", self, "_on_input_event")
 
 func _on_input_event(viewport, event, shape_idx):
-    if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
-        emit_signal("clicked", self)
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
+		emit_signal("clicked", self)
 
 func _process(delta):
-    # Move towards the center of the screen
-    var direction = (get_viewport_rect().size / 2 - position).normalized()
-    position += direction * 100 * delta
+	# Move towards the center of the screen
+	var direction = (get_viewport_rect().size / 2 - position).normalized()
+	position += direction * 100 * delta
 
 ```
 

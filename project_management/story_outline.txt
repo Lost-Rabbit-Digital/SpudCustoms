@@ -18,17 +18,7 @@ Outro: Overheard conversation about missing rejected potatoes
 World-building: Introduce "Spud Green" as a new miracle food
 Characters: Encounter with Agent Yukon Gold, hinting at the resistance
 
-Chapter 3: "The Mashing Fields"
-
-Mini-arc: Uncovering the truth about Spud Green
-Intro: Award ceremony for meeting rejection quotas
-Gameplay: Processing potatoes marked for "special processing"
-Key event: Clandestine meeting with a potato who escaped the mashing fields
-Outro: Confrontation with Supervisor Russet about the Spud Green program
-World-building: Full reveal of the Mashing Fields and true nature of Spud Green
-Characters: Introduce Minister Idaho pushing Spud Green production
-
-Chapter 4: "Mash or Be Mashed"
+Chapter 3: "Mash or Be Mashed"
 
 Mini-arc: Final showdown and resolution
 Intro: Chaos at the border as the truth about Spud Green spreads
@@ -41,74 +31,61 @@ Characters: Final confrontations with all major characters
 Throughout these chapters, maintain:
 
 Player Choices:
-
 Moral decisions affecting individual potatoes and overall story
 Alignment options: government, rebellion, or neutral
 
 
 Environmental Storytelling:
-
 Evolving propaganda posters and graffiti
 Gradual changes in office atmosphere
 
 
 Background Elements:
-
 Conversations in the customs line
 Radio broadcasts and newspaper headlines
 
 
 Personal Storytelling:
-
 Journal entries reflecting your character's journey
 Character customization based on choices
 
 Elements for Fleshing Out the Story:
 Recurring Characters:
-
 Supervisor Russet: Your stern boss secretly involved in the Spud Green program
-Agent Yukon Gold: A mysterious potato with ties to the underground resistance
 Minister Idaho: The antagonistic Agricultural Minister pushing Spud Green production
 Sweet Potato Sasha: A sympathetic immigrant who opens your eyes to the truth
 
 World-Building Details:
-
 Spud's starch-based currency and potato-centric economy
 Historical context of the "Great Famine" leading to current policies
 Cultural differences between potato varieties (e.g., sweet potatoes vs. russets)
 
 Player Choices:
-
 Moral decisions affecting potato fates and story direction
 Alignment options: government, rebellion, or playing both sides
 Friendship or rivalry development with key characters
 
 Environmental Storytelling:
-
 Propaganda posters promoting Spud Green and demonizing "bad potatoes"
 Graffiti evolving from minor complaints to rebellion slogans
 Gradual wilting of office plants mirroring the story's dark turn
 
 Mini-Games and Special Events:
-
 Decoding resistance messages hidden in potato skin patterns
 Participating in "mashing simulations" (secretly rebellion training)
 "National Spud Green Day" celebrations
 
 Background Elements:
-
 Hushed conversations about missing family members in the customs line
 Break room rumors about the true ingredients of Spud Green
 Overheard phone calls about increasing "processing" quotas
 
 Personal Storytelling:
-
 Entries in your character's journal, questioning the morality of your job
 Letters from family unknowingly praising the benefits of Spud Green
 Character customization reflecting your journey (e.g., rebellion badges hidden under your uniform)
 
 Easter Eggs and Humor:
-
 Dark potato puns ("It's mash or be mashed out there")
 References to real-world food production issues and soylent products
 Hidden documents revealing the failed "Potato Cloning Initiative"

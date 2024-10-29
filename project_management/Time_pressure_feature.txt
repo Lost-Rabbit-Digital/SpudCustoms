@@ -3,6 +3,8 @@
 # based on difficulty level then have an overlay
 # pop of supervisor yelling if they take too long
 
+Should also have a timer counting UP as a score
+
 The ideal time for processing a potato through customs should balance engagement, 
 challenge, and a sense of urgency without causing frustration. 
 

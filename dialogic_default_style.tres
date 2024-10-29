@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_7gtpk"]
 [ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_xjfyw"]
 [ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="3_sam2y"]
-[ext_resource type="PackedScene" uid="uid://by6waso0mjpjp" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/textbox_with_speaker_portrait.tscn" id="4_07ypv"]
+[ext_resource type="PackedScene" uid="uid://by6waso0mjpjp" path="res://TextboxWithPortrait/custom_textbox_with_speaker_portrait.tscn" id="4_aqvcl"]
 [ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="5_rxml6"]
 [ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="6_t1e3b"]
 [ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="7_y3c6m"]
@@ -22,7 +22,7 @@ overrides = {}
 
 [sub_resource type="Resource" id="Resource_3ua7a"]
 script = ExtResource("1_7gtpk")
-scene = ExtResource("4_07ypv")
+scene = ExtResource("4_aqvcl")
 overrides = {}
 
 [sub_resource type="Resource" id="Resource_vsdrk"]
@@ -33,7 +33,12 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_vs5j6"]
 script = ExtResource("1_7gtpk")
 scene = ExtResource("6_t1e3b")
-overrides = {}
+overrides = {
+"sounds_focus": "\"typing4.wav\"",
+"sounds_hover": "\"typing2.wav\"",
+"sounds_pressed": "\"typing1.wav\"",
+"sounds_volume": "10.0"
+}
 
 [sub_resource type="Resource" id="Resource_nmxoi"]
 script = ExtResource("1_7gtpk")
@@ -52,4 +57,4 @@ base_overrides = {
 "global_bg_color": "Color(0.298039, 0.2, 0.113725, 0.901961)"
 }
 layers = Array[ExtResource("1_7gtpk")]([SubResource("Resource_036fq"), SubResource("Resource_5485j"), SubResource("Resource_3ua7a"), SubResource("Resource_vsdrk"), SubResource("Resource_vs5j6"), SubResource("Resource_nmxoi"), SubResource("Resource_16spt")])
-metadata/_latest_layer = -1
+metadata/_latest_layer = 2

@@ -23,7 +23,6 @@
 [ ] - Cut items off when they leave interaction table
 [ ] - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
 [ ] - Shadows when the player begins to drag the item, they can click with no reaction
-[ ] - 
 [ ] - Cursor which changes on interaction hover 
 
 ## Graphical

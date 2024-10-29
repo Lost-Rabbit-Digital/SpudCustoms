@@ -59,8 +59,8 @@ directories/dtl_directory={
 "spud_customs_full_narrative": "res://assets/narrative/spud_customs_full_narrative.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://dialogic_default_style.tres"]
-layout/default_style="res://dialogic_default_style.tres"
+layout/style_list=["res://dialogic_default_style.tres", "res://visual_novel_style.tres", "res://speaker_textbox_style.tres"]
+layout/default_style="res://speaker_textbox_style.tres"
 variables={
 "ending_choice": "none",
 "family_response": "none",
@@ -73,7 +73,7 @@ variables={
 "stay_or_go": "none"
 }
 extensions_folder="res://addons/dialogic_additions"
-text/letter_speed=0.01
+text/letter_speed=0.03
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
 text/advance_delay=0.1

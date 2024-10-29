@@ -25,7 +25,6 @@ For collections or groups, use plural nouns:
 Example: Enemies, Powerups, Checkpoints
 
 Applying these conventions to our current scene, you might rename some nodes like this:
-
 CustomsOffice instead of Sprite2D (CustomsOffice)
 Megaphone instead of Sprite2D (Megaphone)
 SuspectPanel instead of Sprite2D (Suspect Panel)
