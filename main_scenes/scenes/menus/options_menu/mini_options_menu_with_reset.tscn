@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvicl40gvy764"]
+[gd_scene load_steps=5 format=3 uid="uid://bvicl40gvy764"]
 
-[ext_resource type="PackedScene" path="res://main_scenes/scenes/menus/options_menu/mini_options_menu.tscn" id="1_7f6qg"]
+[ext_resource type="PackedScene" uid="uid://xgtah20snk0e" path="res://main_scenes/scenes/menus/options_menu/mini_options_menu.tscn" id="1_7f6qg"]
 [ext_resource type="Script" path="res://main_scenes/scenes/menus/options_menu/mini_options_menu_with_reset.gd" id="2_x8mcf"]
-[ext_resource type="PackedScene" path="res://main_scenes/scenes/menus/options_menu/game/reset_game_control/reset_game_control.tscn" id="3_mthw0"]
+[ext_resource type="PackedScene" uid="uid://cydxqnq2mrq0x" path="res://main_scenes/scenes/menus/options_menu/game/reset_game_control/reset_game_control.tscn" id="3_mthw0"]
+[ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://dos_theme.tres" id="4_0vil4"]
 
 [node name="MiniOptionsMenu" instance=ExtResource("1_7f6qg")]
 script = ExtResource("2_x8mcf")
 
 [node name="ResetGameControl" parent="." index="3" instance=ExtResource("3_mthw0")]
 layout_mode = 2
+theme = ExtResource("4_0vil4")
 
 [connection signal="reset_confirmed" from="ResetGameControl" to="." method="_on_reset_game_control_reset_confirmed"]

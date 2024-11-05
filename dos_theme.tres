@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dvc6ey2qolvid"]
+
+[ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="1_s0xwt"]
+
+[resource]
+default_font = ExtResource("1_s0xwt")

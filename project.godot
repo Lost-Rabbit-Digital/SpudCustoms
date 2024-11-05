@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Spud Customs"
 config/version="1.0.0"
+config/tags=PackedStringArray("steam")
 run/main_scene="res://main_scenes/scenes/opening/opening_with_logo.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/show_image=false
@@ -20,13 +21,13 @@ config/icon="res://assets/potatoes/heads/russet_burbank_head.png"
 [autoload]
 
 Global="*res://Global.gd"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 MuteFullscreenMenuButtons="*res://menus/menu_scripts/mute_fullscreen_menu_buttons.gd"
 Guide="*res://guide.gd"
 AppConfig="*res://addons/maaacks_game_template/base/scenes/autoloads/app_config.tscn"
 SceneLoader="*res://addons/maaacks_game_template/base/scenes/autoloads/scene_loader.tscn"
 ProjectMusicController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_music_controller.tscn"
 ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [debug]
 
@@ -49,12 +50,12 @@ directories/dch_directory={
 "sweet_potato_sasha": "res://assets/narrative/characters/sweet_potato_sasha.dch"
 }
 directories/dtl_directory={
+"chapter_1_1_intro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_intro.dtl",
+"chapter_1_1_outro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_outro.dtl",
 "chapter_1_1_overview": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_overview.dtl",
 "chapter_1_spud_masherson": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_spud_masherson.dtl",
-"chapter_2/chapter_2_1_overview": "res://assets/narrative/chapter_2/chapter_2_1_overview.dtl",
-"chapter_3/chapter_3_1_overview": "res://assets/narrative/chapter_3/chapter_3_1_overview.dtl",
-"day_1_intro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_intro.dtl",
-"day_1_outro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_outro.dtl",
+"chapter_2_1_overview": "res://assets/narrative/chapter_2/chapter_2_1_overview.dtl",
+"chapter_3_1_overview": "res://assets/narrative/chapter_3/chapter_3_1_overview.dtl",
 "scratch_test": "res://assets/narrative/scratch_test.dtl",
 "spud_customs_full_narrative": "res://assets/narrative/spud_customs_full_narrative.dtl"
 }

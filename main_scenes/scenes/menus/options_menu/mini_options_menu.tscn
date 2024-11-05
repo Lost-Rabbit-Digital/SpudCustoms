@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://xgtah20snk0e"]
+[gd_scene load_steps=4 format=3 uid="uid://xgtah20snk0e"]
 
-[ext_resource type="PackedScene" path="res://addons/maaacks_game_template/base/scenes/menus/options_menu/mini_options_menu.tscn" id="1_k4mqs"]
+[ext_resource type="PackedScene" uid="uid://vh1ucj2rfbby" path="res://addons/maaacks_game_template/base/scenes/menus/options_menu/mini_options_menu.tscn" id="1_k4mqs"]
 [ext_resource type="Script" path="res://main_scenes/scenes/menus/options_menu/mini_options_menu.gd" id="2_a76rh"]
+[ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://dos_theme.tres" id="3_xr515"]
 
 [node name="MiniOptionsMenu" instance=ExtResource("1_k4mqs")]
 script = ExtResource("2_a76rh")
+
+[node name="MuteControl" parent="." index="1"]
+theme = ExtResource("3_xr515")
+
+[node name="FullscreenControl" parent="." index="2"]
+theme = ExtResource("3_xr515")
