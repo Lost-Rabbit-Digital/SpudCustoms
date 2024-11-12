@@ -1,15 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbi5x44r78rf2"]
+[gd_scene load_steps=7 format=3 uid="uid://bbi5x44r78rf2"]
 
 [ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://addons/maaacks_game_template/examples/scenes/credits/credits.tscn" id="1_f8t86"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/examples/scenes/end_credits/end_credits.gd" id="2_jjp6q"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="3_78loh"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/base/scripts/capture_focus.gd" id="4_6s4qf"]
+[ext_resource type="AudioStream" uid="uid://cxr3ljbj4ddp4" path="res://assets/music/Ambient Vol2 Glorious Main.wav" id="4_78loh"]
+[ext_resource type="Texture2D" uid="uid://dk7gcl002ujew" path="res://assets/narrative/credits.png" id="5_6s4qf"]
 
 [node name="EndCredits" instance=ExtResource("1_f8t86")]
 script = ExtResource("2_jjp6q")
-main_menu_scene = "res://addons/maaacks_game_template/examples/scenes/menus/main_menu/main_menu_with_animations.tscn"
+main_menu_scene = "res://main_scenes/scenes/menus/main_menu/main_menu_with_animations.tscn"
+attribution_file_path = "res://main_scenes/ATTRIBUTION.md"
 
 [node name="BackgroundMusicPlayer" parent="." index="0" instance=ExtResource("3_78loh")]
+stream = ExtResource("4_78loh")
 
 [node name="BackgroundColor" type="ColorRect" parent="." index="1"]
 layout_mode = 1
@@ -25,13 +29,22 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("5_6s4qf")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="ScrollContainer" parent="." index="3"]
 scroll_vertical = 0
+
+[node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="." index="4"]
 layout_mode = 0
