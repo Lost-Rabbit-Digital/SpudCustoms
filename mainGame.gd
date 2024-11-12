@@ -489,8 +489,6 @@ func start_label_tween():
 
 func reset_time_label():
 	if time_label:
-		time_label.add_theme_font_size_override("font_size", 12)
-		time_label.add_theme_color_override("font_color", Color.WHITE)
 		time_label.visible = false
 
 # Add this new function to stop the label tween
@@ -753,7 +751,7 @@ func process_decision(allowed):
 			go_to_game_over()
 			
 	$UI/Labels/StrikesLabel.text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
-	$UI/Labels/ScoreLabel.text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
+	$UI/Labels/ScoreLabel.text = "Score   " + str(score) + " / " + str(max_score * Global.shift)
 
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()
