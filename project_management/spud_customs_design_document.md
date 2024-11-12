@@ -134,7 +134,6 @@ Each chapter represents one work shift (8-10 total chapters)
 2. Mini-games
    - Reflex-based runner catching
    - UV scanning for hidden messages
-   - Trapdoor Detaining of Suspicious potatoes system
 
 3. Progression System
    - Character customization (hats, badges)

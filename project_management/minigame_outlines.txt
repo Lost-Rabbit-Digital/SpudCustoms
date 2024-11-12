@@ -1,4 +1,4 @@
-Minigames + Multiplayer.txt
+Minigames
 
 Let's break this down into the different minigames and features we've mentioned:
 
