@@ -328,7 +328,7 @@ rotation = -0.137881
 scale = Vector2(0.413016, 0.413016)
 
 [node name="GivePromptDialogue" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport/ClosedPassport"]
-z_index = 4
+z_index = 5
 z_as_relative = false
 position = Vector2(357.294, -256.302)
 rotation = 0.137881
