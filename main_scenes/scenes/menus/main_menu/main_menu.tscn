@@ -1,47 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://vld3k2yiayt8"]
+[gd_scene load_steps=5 format=3 uid="uid://xvrd8awddfhf"]
 
-[ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_3rp4f"]
-[ext_resource type="Script" path="res://main_scenes/scenes/menus/main_menu/main_menu.gd" id="2_80s8e"]
-[ext_resource type="PackedScene" uid="uid://cvxrxaefrpjwk" path="res://main_scenes/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_rdmtj"]
-[ext_resource type="PackedScene" uid="uid://bdqcr5ikdw1hg" path="res://main_scenes/scenes/credits/credits.tscn" id="4_ajtjv"]
-[ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://dos_theme.tres" id="5_hkc3y"]
+[ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_7egdk"]
+[ext_resource type="Script" path="res://addons/maaacks_game_template/examples/scenes/menus/main_menu/main_menu.gd" id="2_5sg6b"]
+[ext_resource type="PackedScene" uid="uid://bdvdf5v87mmrr" path="res://addons/maaacks_game_template/examples/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_wk0ox"]
+[ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://addons/maaacks_game_template/examples/scenes/credits/credits.tscn" id="4_hjcmr"]
 
-[node name="MainMenu" instance=ExtResource("1_3rp4f")]
-script = ExtResource("2_80s8e")
-game_scene_path = "res://main_scenes/scenes/game_scene/game_ui.tscn"
-options_packed_scene = ExtResource("3_rdmtj")
-credits_packed_scene = ExtResource("4_ajtjv")
-
-[node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
-theme = ExtResource("5_hkc3y")
-theme_override_font_sizes/font_size = 24
-
-[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
-theme = ExtResource("5_hkc3y")
-theme_override_font_sizes/font_size = 148
-
-[node name="SubTitleMargin" parent="MenuContainer" index="1"]
-visible = false
-
-[node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
-offset_left = -280.0
-offset_top = 18.0
-offset_right = 280.0
-theme_override_constants/separation = 32
-vertical = false
-
-[node name="PlayButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0"]
-theme = ExtResource("5_hkc3y")
-theme_override_font_sizes/font_size = 33
-
-[node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1"]
-theme = ExtResource("5_hkc3y")
-theme_override_font_sizes/font_size = 33
-
-[node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2"]
-theme = ExtResource("5_hkc3y")
-theme_override_font_sizes/font_size = 33
-
-[node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3"]
-theme = ExtResource("5_hkc3y")
-theme_override_font_sizes/font_size = 33
+[node name="MainMenu" instance=ExtResource("1_7egdk")]
+script = ExtResource("2_5sg6b")
+game_scene_path = "res://addons/maaacks_game_template/examples/scenes/game_scene/game_ui.tscn"
+options_packed_scene = ExtResource("3_wk0ox")
+credits_packed_scene = ExtResource("4_hjcmr")

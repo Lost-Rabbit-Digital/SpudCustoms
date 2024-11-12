@@ -1,9 +1,9 @@
 # Godot Game Template
 For Godot 4.2+
 
-This template has a main menu, options menus, pause menu, credits, scene loader, extra tools, and an example game scene.
+This template has a main menu, options menus, pause menu, credits, scene loader, extra tools, and an example game scene.  
 
-[Example on itch.io](https://maaack.itch.io/godot-game-template)
+[Example on itch.io](https://maaack.itch.io/godot-game-template)  
 
 #### Videos
 
@@ -31,10 +31,13 @@ The `base/` folder holds the core components of the menus application.
 
 -   Main Menu    
 -   Options Menus
+-   Pause Menu
 -   Credits
 -   Loading Screen
+-   Opening Scene
 -   Persistent Settings
 -   Simple Config Interface
+-   Extensible Overlay Menus
 -   Keyboard/Mouse Support
 -   Gamepad Support
 -   UI Sound Controller
@@ -44,26 +47,27 @@ The `base/` folder holds the core components of the menus application.
 
 The `extras/` folder holds components that extend the core application.
 
--   Pause Menu
--   Opening Scene
--   Win & Lose Scenes
+-   Win & Lose Menus
+-   Level Loaders
+-   Level Progress Manager
 -   Logging Scripts
--   Additional Autoloaded Classes
--   Scripts for Testing & Releasing
+-   Script for Releasing on [itch.io](https://itch.io/) with [butler](https://itch.io/docs/butler/)
  
 ### Examples 
 
 The `examples/` folder contains an example project using inherited scenes from the `base/` and `extras/`.
 
 -   Example Game Scene
--   Level Advancement
+-   Base Level Class
+-   Example Levels
 -   End Credits
 -   Additional Inherited Scenes:
-	-   Game Options Menu w/ Reset button
-	-   Master Options Menu w/ Game Options tab 
-	-   Main Menu w/ Animations
-	-   Pause Menu w/ Linked Scenes
-	-   Loading Screen w/ Shader Pre-caching 
+    -   Game Options Menu w/ Reset button
+    -   Master Options Menu w/ Game Options tab 
+    -   Main Menu w/ Animations
+    -   Opening w/ Godot Logo
+    -   Level Loading Screen
+    -   Loading Screen w/ Shader Pre-caching 
 
 ### How it Works
 - `app_config.tscn` is set as the first autoload. It calls `app_settings.gd` to load all the configuration settings from the config file (if it exists) through `config.gd`.
@@ -74,9 +78,8 @@ The `examples/` folder contains an example project using inherited scenes from t
 - `credits.tscn` reads from `ATTRIBUTION.md` to automatically generate the content for it's scrolling text label.  
 - The `UISoundController` node automatically attaches sounds to buttons, tab bars, sliders, and line edits in the scene. `project_ui_sound_controller.tscn` is an autload used to apply UI sounds project-wide.
 - `project_music_controller.tscn` is an autoload that keeps music playing between scenes. It detects music stream players as they are added to the scene tree, reparents them to itself, and blends the tracks.  
-- `in_game_menu_controller.gd` controls opening and closing a menu and pausing the game in the background.
-- The `PauseMenuController` node loads the `pause_menu.tscn` (using `in_game_menu_controller.gd`) when triggering `ui-cancel`.
-- `game_ui.tscn` is a demo game scene that displays recognized action inputs, and features the `PauseMenuController` node, the `LevelLoader` node to advance through levels, and `in_game_menu_controller.gd` to show `win_screen.tscn` or `lose_screen.tscn`.
+- The `PauseMenuController` node loads the `pause_menu.tscn` when triggering `ui-cancel`.
+- `game_ui.tscn` is a demo game scene that displays recognized action inputs, and features the `PauseMenuController` node, the `LevelLoader` node to load levels from a directory, and `LevelListManager` to manage level progress and show menus in case of a win or loss.
   
 ## Installation
 
@@ -105,9 +108,9 @@ When editing an existing project:
 6.  Click to Install.
 7.  Reload the project (you may see errors before you do this).
 8.  Enable the plugin from the Project Settings > Plugins tab.  
-	If it's enabled for the first time,
-	1.  A dialogue window will appear asking to copy the example scenes out of `addons/`.
-	2.  Another dialogue window will ask to update the project's main scene.
+    If it's enabled for the first time,
+    1.  A dialogue window will appear asking to copy the example scenes out of `addons/`.
+    2.  Another dialogue window will ask to update the project's main scene.
 9.  Continue with the [Existing Project Instructions](/addons/maaacks_game_template/docs/ExistingProject.md)  
 
 
@@ -119,14 +122,14 @@ When editing an existing project:
 3.  Move the `addons/maaacks_game_template` folder into your project's `addons/` folder.  
 4.  Open/Reload the project.  
 5.  Enable the plugin from the Project Settings > Plugins tab.  
-	If it's enabled for the first time,
-	1.  A dialogue window will appear asking to copy the example scenes out of `addons/`.
-	2.  Another dialogue window will ask to update the project's main scene.
+    If it's enabled for the first time,
+    1.  A dialogue window will appear asking to copy the example scenes out of `addons/`.
+    2.  Another dialogue window will ask to update the project's main scene.
 6.  Continue with the [Existing Project Instructions](/addons/maaacks_game_template/docs/ExistingProject.md) 
 
 #### Minimal
 
-Users that want a minimal set of features can try [Maaack's Menus Template](https://github.com/Maaack/Godot-Menus-Template).  
+Users that want a minimal set of features can try [Maaack's Menus Template](https://github.com/Maaack/Godot-Menus-Template) or other options from the [plugin suite](/addons/maaacks_game_template/docs/PluginSuite.md).  
 
 ## Usage
 
