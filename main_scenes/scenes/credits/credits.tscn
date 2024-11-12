@@ -5,9 +5,11 @@
 
 [node name="Credits" instance=ExtResource("1_ep0dy")]
 script = ExtResource("2_50yi6")
-attribution_file_path = "res://addons/maaacks_game_template/examples/ATTRIBUTION.md"
+attribution_file_path = "res://main_scenes/ATTRIBUTION.md"
 
 [node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "[center][font_size=48]Collaborators[/font_size]
 
 [font_size=32]Role[/font_size]
