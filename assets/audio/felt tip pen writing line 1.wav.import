@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dhxlbc4kuhiry"
+path="res://.godot/imported/felt tip pen writing line 1.wav-3132fd034f7fda4b68246908a7cc1d9b.sample"
+
+[deps]
+
+source_file="res://assets/audio/felt tip pen writing line 1.wav"
+dest_files=["res://.godot/imported/felt tip pen writing line 1.wav-3132fd034f7fda4b68246908a7cc1d9b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

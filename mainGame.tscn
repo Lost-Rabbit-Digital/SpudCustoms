@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://assets/suspect_panel/suspect_panel.png" id="2_f25cg"]
 [ext_resource type="Texture2D" uid="uid://b20ds43o0qwss" path="res://world_panel.png" id="5_h10h2"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="7_7m4ia"]
-[ext_resource type="Texture2D" uid="uid://dbi1u25he35x" path="res://interaction_table_background.png" id="7_nqnif"]
 [ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/level/customs_office.png" id="7_rsfsr"]
 [ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_woji0"]
 [ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="9_arv36"]
@@ -17,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cbthvh8tq02ee" path="res://assets/potatoes/document_photos/purple_majesty.png" id="14_al1cy"]
 [ext_resource type="Texture2D" uid="uid://cnrr6jblok4ky" path="res://assets/suspect_panel/suspect_panel_background.png" id="14_v4iji"]
 [ext_resource type="Texture2D" uid="uid://cvtdlyxlb5qaw" path="res://assets/suspect_panel/suspect_panel_document_slot.png" id="16_a857f"]
+[ext_resource type="Texture2D" uid="uid://b2icltv7xkk6j" path="res://assets/level/CustomsDesk.png" id="16_p2ayh"]
 [ext_resource type="Texture2D" uid="uid://c0dbfc2uut8qn" path="res://assets/stamps/stamp_shadow.png" id="16_qj41b"]
 [ext_resource type="Texture2D" uid="uid://dgw6rbhy6crh" path="res://assets/suspect_panel/suspect_panel_table.png" id="17_hbwb4"]
 [ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://give_prompt_dialogue.png" id="17_mr1ft"]
@@ -291,9 +291,9 @@ position = Vector2(0, 2.4)
 texture = ExtResource("16_a857f")
 
 [node name="InspectionTable" type="Sprite2D" parent="Gameplay"]
-position = Vector2(442, 471.501)
-scale = Vector2(1.09694, 1.07604)
-texture = ExtResource("7_nqnif")
+position = Vector2(443.837, 470.5)
+scale = Vector2(2.64484, 2.59444)
+texture = ExtResource("16_p2ayh")
 
 [node name="PotatoMugshot" type="Sprite2D" parent="Gameplay"]
 z_index = 2
@@ -451,6 +451,7 @@ offset_bottom = 140.0
 texture_normal = SubResource("CompressedTexture2D_f48nw")
 
 [node name="Paths" type="Control" parent="Gameplay"]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -488,8 +489,8 @@ z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/GuideFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]

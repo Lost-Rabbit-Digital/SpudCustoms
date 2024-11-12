@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bhr3vqsyw8ws7"
+path="res://.godot/imported/SFX - Cartoon Monster, C1, 01.wav-68316c657d506f180471fb009181bf33.sample"
+
+[deps]
+
+source_file="res://assets/audio/SFX - Cartoon Monster, C1, 01.wav"
+dest_files=["res://.godot/imported/SFX - Cartoon Monster, C1, 01.wav-68316c657d506f180471fb009181bf33.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

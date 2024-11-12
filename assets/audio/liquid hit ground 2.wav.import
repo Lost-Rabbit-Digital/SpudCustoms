@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bjfes5rfbmohh"
+path="res://.godot/imported/liquid hit ground 2.wav-0742cf48b82c7bb31b0f174f7e4ae566.sample"
+
+[deps]
+
+source_file="res://assets/audio/liquid hit ground 2.wav"
+dest_files=["res://.godot/imported/liquid hit ground 2.wav-0742cf48b82c7bb31b0f174f7e4ae566.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

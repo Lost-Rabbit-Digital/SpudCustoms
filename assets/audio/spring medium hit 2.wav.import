@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c2poqdr03yevm"
+path="res://.godot/imported/spring medium hit 2.wav-cd793a5c43a20553e6280df8365d1b3d.sample"
+
+[deps]
+
+source_file="res://assets/audio/spring medium hit 2.wav"
+dest_files=["res://.godot/imported/spring medium hit 2.wav-cd793a5c43a20553e6280df8365d1b3d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

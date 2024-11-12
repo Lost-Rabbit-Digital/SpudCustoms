@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://wkkk04eefcr1"
+path="res://.godot/imported/rope pulled up 1.wav-05ca1e90f86fea88caa5137abf5aeb8e.sample"
+
+[deps]
+
+source_file="res://assets/audio/rope pulled up 1.wav"
+dest_files=["res://.godot/imported/rope pulled up 1.wav-05ca1e90f86fea88caa5137abf5aeb8e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

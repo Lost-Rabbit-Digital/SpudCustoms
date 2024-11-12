@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b3d7lkoph00sj"
+path="res://.godot/imported/cardboard box handled 2.wav-db1f770b4f52cb9c32374baecbccac48.sample"
+
+[deps]
+
+source_file="res://assets/audio/cardboard box handled 2.wav"
+dest_files=["res://.godot/imported/cardboard box handled 2.wav-db1f770b4f52cb9c32374baecbccac48.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

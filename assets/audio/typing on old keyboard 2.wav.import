@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://btvfy5ijg4rk6"
+path="res://.godot/imported/typing on old keyboard 2.wav-a1a37f29851fde4435ab93e9969b1b5c.sample"
+
+[deps]
+
+source_file="res://assets/audio/typing on old keyboard 2.wav"
+dest_files=["res://.godot/imported/typing on old keyboard 2.wav-a1a37f29851fde4435ab93e9969b1b5c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
