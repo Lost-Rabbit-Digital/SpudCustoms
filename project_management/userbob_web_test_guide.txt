@@ -1,0 +1,40 @@
+# Spud Customs - Web Demo Playtest
+Thank you for trying our game! Please take 1-3 minutes to play and share your thoughts.
+
+**Game Link:** https://lost-rabbit-digital.itch.io/spud-customs
+
+## Quick Rating (1-5 stars)
+- Fun: [   ]
+- Controls: [   ]
+- Clarity: [   ]
+
+## Quick Questions
+1. Did you understand how to:
+   - Call new potatoes? Yes/No
+   - Check documents? Yes/No
+   - Use stamps? Yes/No
+
+2. Was the time limit:
+   - [ ] Too short
+   - [ ] Just right
+   - [ ] Too long
+
+3. What confused you the most? (One sentence)
+_______________________________________
+
+4. What did you enjoy the most? (One sentence)
+_______________________________________
+
+## Bugs
+Did you encounter any issues? Please describe briefly:
+_______________________________________
+
+## Would you play more?
+- [ ] Yes
+- [ ] No
+- [ ] Maybe
+
+Any final thoughts? (Optional)
+_______________________________________
+
+Thank you for your feedback!

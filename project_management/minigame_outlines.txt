@@ -80,26 +80,3 @@ For this feature, you could implement a minigame where players use a UV light to
 3. Implement a UV light tool as a sprite that follows the mouse cursor.
 4. Use a shader to reveal the hidden layer only where the UV light is shining.
 5. Players move the UV light around to uncover and read the hidden messages.
-
-3. Quick Time Interrogation Minigame
-
-For the interrogation minigame, you could create a system where players need to choose the right responses quickly:
-
-1. Display a series of dialogue options when interrogating a suspicious potato.
-2. Each option has a time limit (e.g., 3 seconds) represented by a shrinking progress bar.
-3. Players must select the most appropriate response before time runs out.
-4. Correct choices increase the potato's nervousness, while incorrect ones or timeouts decrease it.
-5. The goal is to make the potato confess or reveal information before the interrogation time ends.
-
-4. Head-to-Head Multiplayer Mode
-
-For the multiplayer mode where players compete to process potatoes and sabotage each other:
-
-1. Implement a split-screen or side-by-side view for two players.
-2. Create a shared queue of potatoes that both players draw from.
-3. Add power-ups or items that players can use to hinder their opponent:
-   - Temporary screen blur
-   - Reversed controls
-   - Faster potato movement
-4. Implement a scoring system based on correctly processed potatoes and successful sabotages.
-5. The game ends when the potato queue is empty, with the highest scorer winning.

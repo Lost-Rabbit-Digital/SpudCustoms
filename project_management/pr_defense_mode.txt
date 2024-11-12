@@ -1,4 +1,0 @@
-Player request: Choose alert switch and randomly selects a border defense mode:
-Salt machine guns from top wall (>5 score in one shift w/o strikes)
-vats of hot oil that open up (>10 score in one shift w/o strikes)
-full-on-nukes (>20 score in one shift w/o strikes)
