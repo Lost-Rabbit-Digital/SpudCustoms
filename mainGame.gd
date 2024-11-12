@@ -732,7 +732,7 @@ func timedOut():
 
 func process_decision(allowed):
 	print("Evaluating immigration decision in process_decision()...")
-	if current_potato_info.is_empty():
+	if !current_potato_info or current_potato_info.is_empty():
 		print("No potato to process.")
 		return
 		
@@ -1023,11 +1023,9 @@ func move_potato_along_path(approval_status):
 	if approval_status == "approved":
 		path = $Gameplay/Paths/ApprovePath
 		process_decision(true)
-		
-	if approval_status == "timedout":
+	elif approval_status == "timedout":
 		path = $Gameplay/Paths/TimedOutPath
 		timedOut()
-		
 	else: 
 		if randi() % 5 == 0:  # 20% chance to go sicko mode
 			path = $Gameplay/Paths/RunnerPath
