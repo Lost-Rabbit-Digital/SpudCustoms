@@ -1,113 +1,5 @@
 To implement the Steam release requirements in the provided script, we'll need to make several additions and modifications. Here's a plan to address each requirement:
 
-1. Core Gameplay Enhancement:
-   - Add difficulty levels:
-```gdscript
-var difficulty_level = "Normal"  # Can be "Easy", "Normal", or "Hard"
-
-func set_difficulty(level):
-	difficulty_level = level
-	adjust_game_parameters()
-
-func adjust_game_parameters():
-	match difficulty_level:
-		"Easy":
-			max_score = 8
-			strikes = 5
-		"Normal":
-			max_score = 10
-			strikes = 3
-		"Hard":
-			max_score = 12
-			strikes = 2
-```
-
-   - Expand the rules and potato types:
-```gdscript
-var all_rules = [
-	# Add more rules here, up to 20+
-]
-
-var all_potato_types = [
-	# Add more potato types here, up to 10+
-]
-
-func generate_rules():
-	# Modify this function to select rules based on difficulty
-	var num_rules = 3 if difficulty_level == "Easy" else 5 if difficulty_level == "Normal" else 7
-	current_rules = all_rules.pick_random(num_rules)
-```
-
-2. Game Modes:
-   - Add a new variable for game mode:
-```gdscript
-var game_mode = "Story"  # Can be "Story" or "Endless"
-
-func set_game_mode(mode):
-	game_mode = mode
-	if game_mode == "Endless":
-		setup_endless_mode()
-	else:
-		setup_story_mode()
-
-func setup_endless_mode():
-	# Implement endless mode setup
-	pass
-
-func setup_story_mode():
-	# Implement story mode setup
-	pass
-```
-
-3. Progression System:
-   - Add variables for unlocks:
-```gdscript
-var unlocked_potato_types = ["Russet Burbank"]
-var unlocked_rules = []
-var player_level = 1
-
-func unlock_new_content():
-	if player_level % 5 == 0:
-		unlock_random_potato_type()
-	if player_level % 3 == 0:
-		unlock_random_rule()
-
-func unlock_random_potato_type():
-	var locked_types = all_potato_types.filter(func(type): return type not in unlocked_potato_types)
-	if locked_types.size() > 0:
-		unlocked_potato_types.append(locked_types.pick_random())
-
-func unlock_random_rule():
-	var locked_rules = all_rules.filter(func(rule): return rule not in unlocked_rules)
-	if locked_rules.size() > 0:
-		unlocked_rules.append(locked_rules.pick_random())
-```
-
-4. Replayability Features:
-   - Add daily challenge functionality:
-```gdscript
-var is_daily_challenge = false
-var daily_challenge_seed = 0
-
-func setup_daily_challenge():
-	is_daily_challenge = true
-	daily_challenge_seed = Time.get_unix_time_from_system() / 86400  # Changes daily
-	seed(daily_challenge_seed)
-	# Set up specific rules and potato types for the daily challenge
-```
-
-5. Polish and Quality of Life:
-   - Add a tutorial system:
-```gdscript
-var is_tutorial = false
-
-func start_tutorial():
-	is_tutorial = true
-	# Implement tutorial steps
-
-func end_tutorial():
-	is_tutorial = false
-```
 
 6. Steam Integration:
    - Add Steam achievement tracking:
@@ -130,19 +22,6 @@ func change_language(locale):
 	TranslationServer.set_locale(locale)
 ```
 
-8. Post-Launch Support Plan:
-   - This is more about project management than code implementation.
-
-9. Fry Rejected Potatoes Mini-game:
-   - Add a new scene for the mini-game:
-```gdscript
-func start_fry_minigame():
-	if game_mode == "Endless":
-		get_tree().change_scene_to_file("res://scenes/fry_minigame.tscn")
-
-# Call this function when a potato is rejected in Endless mode
-```
-
 To create separate Steam and non-Steam versions:
 1. Use Godot's export features to create two separate export configurations.
 2. Use conditional compilation to include or exclude Steam-specific code:
@@ -154,6 +33,5 @@ func _ready():
 	if STEAM_BUILD and OS.has_feature("Steam"):
 		Steam.init()
 		# Initialize other Steam-specific features
-```
 
 Remember to implement the actual functionality for these new features, create new scenes and UI elements as needed, and thoroughly test each new addition. This outline provides a starting point for incorporating the Steam release requirements into your existing codebase.
