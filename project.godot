@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Spud Customs"
 config/version="1.0.0"
-config/tags=PackedStringArray("steam")
+config/tags=PackedStringArray("active", "steam")
 run/main_scene="res://main_scenes/scenes/opening/opening_with_logo.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/show_image=false
@@ -21,12 +21,13 @@ config/icon="res://assets/potatoes/heads/russet_burbank_head.png"
 [autoload]
 
 Global="*res://Global.gd"
+MuteFullscreenMenuButtons="*res://menus/menu_scripts/mute_fullscreen_menu_buttons.gd"
 Guide="*res://guide.gd"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 AppConfig="*res://addons/maaacks_game_template/base/scenes/autoloads/app_config.tscn"
 SceneLoader="*res://addons/maaacks_game_template/base/scenes/autoloads/scene_loader.tscn"
 ProjectMusicController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_music_controller.tscn"
 ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [debug]
 
@@ -158,6 +159,6 @@ copy_path="res://main_scenes"
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-environment/defaults/default_clear_color=Color(0.137255, 0.168627, 0.168627, 1)
+environment/defaults/default_clear_color=Color(0.62291, 0.899653, 0.214622, 1)
 2d/snap/snap_2d_transforms_to_pixel=true
 2d/snap/snap_2d_vertices_to_pixel=true
