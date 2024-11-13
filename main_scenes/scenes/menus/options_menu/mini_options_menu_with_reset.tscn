@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://btc0276r4sgnb"]
+[gd_scene load_steps=4 format=3 uid="uid://bvicl40gvy764"]
 
 [ext_resource type="PackedScene" uid="uid://c6obwfb7wbibn" path="res://addons/maaacks_game_template/examples/scenes/menus/options_menu/mini_options_menu.tscn" id="1_2grs4"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/examples/scenes/menus/options_menu/mini_options_menu_with_reset.gd" id="2_egb8j"]
