@@ -178,7 +178,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"face",
-"speed": 1.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -195,7 +195,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"head",
-"speed": 1.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -251,28 +251,28 @@ animations = [{
 }],
 "loop": true,
 "name": &"torso",
-"speed": 1.0
+"speed": 5.0
 }]
 
 [node name="CharacterGenerator" type="Node2D"]
 
 [node name="Character" type="Node2D" parent="."]
-position = Vector2(651, 284)
+position = Vector2(324, 287)
 scale = Vector2(5, 5)
 
 [node name="Head" type="AnimatedSprite2D" parent="Character"]
-position = Vector2(2, -19)
+position = Vector2(1.62, -20.15)
 sprite_frames = SubResource("SpriteFrames_ay427")
 animation = &"head"
-frame_progress = 0.0493069
+frame_progress = 0.152691
 
 [node name="Face" type="AnimatedSprite2D" parent="Character"]
 sprite_frames = SubResource("SpriteFrames_ay427")
 animation = &"face"
-frame_progress = 0.889844
+frame_progress = 0.430609
 
 [node name="Torso" type="AnimatedSprite2D" parent="Character"]
 position = Vector2(2, 22)
 sprite_frames = SubResource("SpriteFrames_ay427")
 animation = &"torso"
-frame_progress = 0.924558
+frame_progress = 0.721624
