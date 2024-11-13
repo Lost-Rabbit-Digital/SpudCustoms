@@ -1,10 +1,9 @@
-[gd_scene load_steps=37 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=36 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://assets/suspect_panel/suspect_panel.png" id="2_f25cg"]
 [ext_resource type="Texture2D" uid="uid://doml0udrwe6pe" path="res://assets/Background.png" id="2_rft0e"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="7_7m4ia"]
-[ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/level/customs_office.png" id="7_rsfsr"]
 [ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_woji0"]
 [ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="9_arv36"]
 [ext_resource type="Texture2D" uid="uid://jjnnivgwpiub" path="res://assets/alerts/megaphone_alert_box.png" id="10_5g2y2"]
@@ -36,33 +35,33 @@
 
 [sub_resource type="Curve2D" id="Curve2D_f3jw2"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 890, 198, 0, 0, 0, 0, 998, 169, 0, 0, 0, 0, 993, 105, 0, 0, 0, 0, 899, 106, 0, 0, 0, 0, 899, 88, 0, 0, 0, 0, 880, 86, 0, 0, 0, 0, 881, 106, 0, 0, 0, 0, 634, 69, 0, 0, 0, 0, 626, 61, 0, 0, 0, 0, 617, 74, 0, 0, 0, 0, 337, 106, 0, 0, 0, 0, 326, 93, 0, 0, 0, 0, 311, 109, 0, 0, 0, 0, 11, 145)
+"points": PackedVector2Array(0, 0, 0, 0, 932, 184, 0, 0, 0, 0, 943, 161, 0, 0, 0, 0, 932, 103, 0, 0, 0, 0, 872, 94, 0, 0, 0, 0, 867, 73, 0, 0, 0, 0, 825, 73, 0, 0, 0, 0, 795, 99, 0, 0, 0, 0, 601, 109, 0, 0, 0, 0, 300, 128, 0, 0, 0, 0, 164, 99, 0, 0, 0, 0, 155, -6)
 }
-point_count = 14
+point_count = 11
 
 [sub_resource type="Curve2D" id="Curve2D_1j820"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 887, 197, 0, 0, 0, 0, 962, 178, 0, 0, 0, 0, 988, 154, 0, 0, 0, 0, 1042, 149, 0, 0, 0, 0, 1017, 55, 0, 0, 0, 0, 1171, 49, 0, 0, 0, 0, 1221, 44, 0, 0, 0, 0, 1265, 51)
+"points": PackedVector2Array(0, 0, 0, 0, 928, 189, 0, 0, 0, 0, 935, 164, 0, 0, 0, 0, 965, 128, 0, 0, 0, 0, 1023, 116, 0, 0, 0, 0, 1079, 109, 0, 0, 0, 0, 1156, 87, 0, 0, 0, 0, 1214, 86, 0, 0, 0, 0, 1290, 87)
 }
 point_count = 8
 
 [sub_resource type="Curve2D" id="Curve2D_xms7a"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 985, 192, 0, 0, 0, 0, 917, 203)
+"points": PackedVector2Array(0, 0, 0, 0, 977.99, 193, 0, 0, 0, 0, 941.537, 190)
 }
 point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_uenca"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 886, 201, 0, 0, 0, 0, 603, 195, 0, 0, 0, 0, 392, 189, 0, 0, 0, 0, 177, 196, 0, 0, 0, 0, 110, 198, 0, 0, 0, 0, 112, 16)
+"points": PackedVector2Array(0, 0, 0, 0, 767, 184, 0, 0, 0, 0, 603, 195, 0, 0, 0, 0, 392, 189, 0, 0, 0, 0, 177, 196, 0, 0, 0, 0, 110, 198, 0, 0, 0, 0, 112, 16)
 }
 point_count = 6
 
 [sub_resource type="Curve2D" id="Curve2D_x3wa3"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1280, 73, 0, 0, 0, 0, 1246, 70, 0, 0, 0, 0, 1205, 77, 0, 0, 0, 0, 1169, 71, 0, 0, 0, 0, 1141, 69, 0, 0, 0, 0, 1110, 76, 0, 0, 0, 0, 1080, 67, 0, 0, 0, 0, 1066, 84, 0, 0, 0, 0, 1080, 104, 0, 0, 0, 0, 1064, 121, 0, 0, 0, 0, 1074, 148, 0, 0, 0, 0, 1103, 139, 0, 0, 0, 0, 1131, 145, 0, 0, 0, 0, 1162, 138, 0, 0, 0, 0, 1187, 139, 0, 0, 0, 0, 1209, 144, 0, 0, 0, 0, 1239, 141, 0, 0, 0, 0, 1256, 148, 0, 0, 0, 0, 1249, 170, 0, 0, 0, 0, 1243, 192, 0, 0, 0, 0, 1253, 213, 0, 0, 0, 0, 1223, 219, 0, 0, 0, 0, 1192, 214, 0, 0, 0, 0, 1166, 210, 0, 0, 0, 0, 1131, 209, 0, 0, 0, 0, 1106, 214, 0, 0, 0, 0, 1080, 212, 0, 0, 0, 0, 1055, 212, 0, 0, 0, 0, 1043, 194, 0, 0, 0, 0, 1049, 176, 0, 0, 0, 0, 1032, 173, 0, 0, 0, 0, 1002, 176, -0.187288, 0, 0.187288, 0, 1024, 197, 0, 0, 0, 0, 1009, 211, 0, 0, 0, 0, 985, 192)
+"points": PackedVector2Array(0, 0, 0, 0, 1295, 136, 0, 0, 0, 0, 1258, 131, 0, 0, 0, 0, 1234, 135, 0, 0, 0, 0, 1214, 137, 0, 0, 0, 0, 1230, 158, 0, 0, 0, 0, 1215, 169, 0, 0, 0, 0, 1229, 194, 0, 0, 0, 0, 1215, 200, 0, 0, 0, 0, 1190, 188, 0, 0, 0, 0, 1164, 197, 0, 0, 0, 0, 1136, 194, 0, 0, 0, 0, 1114, 191, 0, 0, 0, 0, 1089, 189, 0, 0, 0, 0, 1061, 197, 0, 0, 0, 0, 1040, 188, 0, 0, 0, 0, 1008, 194, 0, 0, 0, 0, 977, 194)
 }
-point_count = 35
+point_count = 17
 
 [node name="Root" type="Node2D"]
 script = ExtResource("1_s4bva")
@@ -232,7 +231,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Megaphone" type="Sprite2D" parent="Gameplay"]
-visible = false
 z_index = 12
 position = Vector2(910, 129)
 scale = Vector2(1.4, 1.4)
@@ -249,13 +247,6 @@ z_index = 5
 z_as_relative = false
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("10_5g2y2")
-
-[node name="CustomsOffice" type="Sprite2D" parent="Gameplay"]
-visible = false
-z_index = 5
-position = Vector2(886, 193)
-scale = Vector2(1.19563, 1.05853)
-texture = ExtResource("7_rsfsr")
 
 [node name="SuspectPanel" type="Sprite2D" parent="Gameplay"]
 z_index = 1
@@ -453,40 +444,39 @@ offset_bottom = 140.0
 texture_normal = SubResource("CompressedTexture2D_f48nw")
 
 [node name="Paths" type="Control" parent="Gameplay"]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="RunnerPath" type="Path2D" parent="Gameplay/Paths"]
-z_index = 5
+z_index = 6
 z_as_relative = false
 curve = SubResource("Curve2D_f3jw2")
 
 [node name="TimedOutPath" type="Path2D" parent="Gameplay/Paths"]
-z_index = 5
+z_index = 6
 z_as_relative = false
 curve = SubResource("Curve2D_1j820")
 
 [node name="RejectPath" type="Path2D" parent="Gameplay/Paths"]
-z_index = 5
+z_index = 6
 z_as_relative = false
 curve = SubResource("Curve2D_1j820")
 
 [node name="EnterOfficePath" type="Path2D" parent="Gameplay/Paths"]
-z_index = 5
+z_index = 6
 z_as_relative = false
 position = Vector2(-420.074, 0)
 scale = Vector2(1.42647, 1)
 curve = SubResource("Curve2D_xms7a")
 
 [node name="ApprovePath" type="Path2D" parent="Gameplay/Paths"]
-z_index = 5
+z_index = 6
 z_as_relative = false
 curve = SubResource("Curve2D_uenca")
 
 [node name="SpuddyQueue" type="Path2D" parent="Gameplay/Paths"]
-z_index = 5
+z_index = 6
 z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 

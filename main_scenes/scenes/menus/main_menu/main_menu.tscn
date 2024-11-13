@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://xvrd8awddfhf"]
+[gd_scene load_steps=5 format=3 uid="uid://vld3k2yiayt8"]
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_7egdk"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/examples/scenes/menus/main_menu/main_menu.gd" id="2_5sg6b"]
@@ -10,3 +10,9 @@ script = ExtResource("2_5sg6b")
 game_scene_path = "res://addons/maaacks_game_template/examples/scenes/game_scene/game_ui.tscn"
 options_packed_scene = ExtResource("3_wk0ox")
 credits_packed_scene = ExtResource("4_hjcmr")
+
+[node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
+text = "v1.0.0"
+
+[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
+text = "Spud Customs"
