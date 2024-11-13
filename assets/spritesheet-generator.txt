@@ -1,0 +1,121 @@
+extends Node2D
+
+class_name CharacterGenerator
+
+# Sprite nodes for each part
+var head_sprite: Sprite2D
+var face_sprite: Sprite2D
+var hair_sprite: Sprite2D
+
+# Arrays to store the different texture regions
+var head_frames: Array[AtlasTexture] = []
+var face_frames: Array[AtlasTexture] = []
+var hair_frames: Array[AtlasTexture] = []
+
+# Constants for spritesheet layout
+const SPRITE_SIZE = Vector2(32, 32)  # Adjust based on your sprite size
+const HAIR_ROWS = 17
+const FACE_ROWS = 12
+const HEAD_ROWS = 8
+
+func _ready():
+    # Create sprite nodes
+    head_sprite = Sprite2D.new()
+    face_sprite = Sprite2D.new()
+    hair_sprite = Sprite2D.new()
+    
+    # Set up hierarchy
+    add_child(head_sprite)
+    add_child(face_sprite)
+    add_child(hair_sprite)
+    
+    # Set z-index for proper layering
+    head_sprite.z_index = 0
+    face_sprite.z_index = 1
+    hair_sprite.z_index = 2
+    
+    # Load and split spritesheets
+    load_spritesheets()
+
+func load_spritesheets():
+    # Load main spritesheets
+    var head_sheet = load("res://assets/sprites/heads_spritesheet.png")
+    var face_sheet = load("res://assets/sprites/faces_spritesheet.png")
+    var hair_sheet = load("res://assets/sprites/hair_spritesheet.png")
+    
+    # Split head spritesheet
+    for i in HEAD_ROWS:
+        var atlas = AtlasTexture.new()
+        atlas.atlas = head_sheet
+        atlas.region = Rect2(0, i * SPRITE_SIZE.y, SPRITE_SIZE.x, SPRITE_SIZE.y)
+        head_frames.append(atlas)
+    
+    # Split face spritesheet
+    for i in FACE_ROWS:
+        var atlas = AtlasTexture.new()
+        atlas.atlas = face_sheet
+        atlas.region = Rect2(0, i * SPRITE_SIZE.y, SPRITE_SIZE.x, SPRITE_SIZE.y)
+        face_frames.append(atlas)
+    
+    # Split hair spritesheet
+    for i in HAIR_ROWS:
+        var atlas = AtlasTexture.new()
+        atlas.atlas = hair_sheet
+        atlas.region = Rect2(0, i * SPRITE_SIZE.y, SPRITE_SIZE.x, SPRITE_SIZE.y)
+        hair_frames.append(atlas)
+
+func generate_random_character():
+    if head_frames.is_empty() or face_frames.is_empty() or hair_frames.is_empty():
+        push_error("Frame arrays are empty! Make sure spritesheets are loaded properly.")
+        return
+    
+    # Randomly select frames
+    head_sprite.texture = head_frames[randi() % head_frames.size()]
+    face_sprite.texture = face_frames[randi() % face_frames.size()]
+    hair_sprite.texture = hair_frames[randi() % hair_frames.size()]
+    
+    # Align the sprites (adjust these values based on your specific needs)
+    head_sprite.position = Vector2.ZERO
+    face_sprite.position = Vector2.ZERO
+    hair_sprite.position = Vector2.ZERO
+
+func generate_character_with_seed(seed_value: int):
+    seed(seed_value)
+    generate_random_character()
+
+func set_head(index: int):
+    if index >= 0 and index < head_frames.size():
+        head_sprite.texture = head_frames[index]
+
+func set_face(index: int):
+    if index >= 0 and index < face_frames.size():
+        face_sprite.texture = face_frames[index]
+
+func set_hair(index: int):
+    if index >= 0 and index < hair_frames.size():
+        hair_sprite.texture = hair_frames[index]
+
+func get_current_indices() -> Dictionary:
+    return {
+        "head": head_frames.find(head_sprite.texture),
+        "face": face_frames.find(face_sprite.texture),
+        "hair": hair_frames.find(hair_sprite.texture)
+    }
+
+# Optional: Add method to get total combinations possible
+func get_total_combinations() -> int:
+    return head_frames.size() * face_frames.size() * hair_frames.size()
+
+# Optional: Add method to generate a specific combination by index
+func generate_specific_combination(index: int):
+    var total_faces = face_frames.size()
+    var total_heads = head_frames.size()
+    
+    var hair_index = index / (total_faces * total_heads)
+    var remainder = index % (total_faces * total_heads)
+    var face_index = remainder / total_heads
+    var head_index = remainder % total_heads
+    
+    set_hair(hair_index)
+    set_face(face_index)
+    set_head(head_index)
