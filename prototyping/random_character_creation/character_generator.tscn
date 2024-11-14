@@ -264,15 +264,15 @@ scale = Vector2(5, 5)
 position = Vector2(1.62, -20.15)
 sprite_frames = SubResource("SpriteFrames_ay427")
 animation = &"head"
-frame_progress = 0.887349
+frame_progress = 0.52923
 
 [node name="Face" type="AnimatedSprite2D" parent="Character"]
 sprite_frames = SubResource("SpriteFrames_ay427")
 animation = &"face"
-frame_progress = 0.769029
+frame_progress = 0.41091
 
 [node name="Torso" type="AnimatedSprite2D" parent="Character"]
-position = Vector2(2, 22)
+position = Vector2(2.2, 22)
 sprite_frames = SubResource("SpriteFrames_ay427")
 animation = &"torso"
-frame_progress = 0.441031
+frame_progress = 0.0829106

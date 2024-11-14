@@ -19,11 +19,11 @@
 [ext_resource type="Texture2D" uid="uid://c0dbfc2uut8qn" path="res://assets/stamps/stamp_shadow.png" id="16_qj41b"]
 [ext_resource type="Texture2D" uid="uid://dgw6rbhy6crh" path="res://assets/suspect_panel/suspect_panel_table.png" id="17_hbwb4"]
 [ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://give_prompt_dialogue.png" id="17_mr1ft"]
-[ext_resource type="Texture2D" uid="uid://dh5wbdkmsk7de" path="res://assets/potatoes/heads/russet_burbank_head_1.png" id="18_7ww6h"]
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="18_jl4i3"]
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="18_yiok2"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="20_pd2wg"]
 [ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://assets/alerts/guide_alert_box.png" id="22_3pqlk"]
+[ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://prototyping/random_character_creation/character_generator.tscn" id="28_f6jf3"]
 [ext_resource type="Texture2D" uid="uid://dubo3sdxx8chn" path="res://assets/stamps/approval_stamp_3.png" id="28_uvib1"]
 [ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="31_c10l6"]
 [ext_resource type="Texture2D" uid="uid://b2wymckqr8jsk" path="res://assets/documents/customs_guide/customs_guide_closed_small.png" id="33_s6ap3"]
@@ -231,6 +231,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Megaphone" type="Sprite2D" parent="Gameplay"]
+visible = false
 z_index = 12
 position = Vector2(910, 129)
 scale = Vector2(1.4, 1.4)
@@ -289,18 +290,18 @@ scale = Vector2(2.64484, 2.59444)
 texture = ExtResource("16_p2ayh")
 
 [node name="PotatoMugshot" type="Sprite2D" parent="Gameplay"]
-z_index = 2
-position = Vector2(1401, 373)
-scale = Vector2(2.0266, 2.0266)
+z_index = 1
+position = Vector2(1400, 351)
+scale = Vector2(2.812, 2.812)
 texture = ExtResource("18_yiok2")
 
 [node name="PotatoMugshotShadow" type="Sprite2D" parent="Gameplay/PotatoMugshot"]
 modulate = Color(0, 0, 0, 0.521569)
 z_index = -1
 z_as_relative = false
-position = Vector2(-1.48, -8.328)
-scale = Vector2(1.22, 1.22)
-texture = ExtResource("18_7ww6h")
+position = Vector2(2.72393e-05, -5.92124)
+scale = Vector2(1.11492, 1.11492)
+texture = ExtResource("18_yiok2")
 
 [node name="InteractiveElements" type="Control" parent="Gameplay"]
 anchors_preset = 0
@@ -444,6 +445,7 @@ offset_bottom = 140.0
 texture_normal = SubResource("CompressedTexture2D_f48nw")
 
 [node name="Paths" type="Control" parent="Gameplay"]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -480,9 +482,25 @@ z_index = 6
 z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
+[node name="CharacterGenerator" parent="." instance=ExtResource("28_f6jf3")]
+visible = false
+position = Vector2(873, 210)
+scale = Vector2(0.600897, 0.600897)
+
+[node name="Head" parent="CharacterGenerator/Character" index="0"]
+frame_progress = 0.830036
+
+[node name="Face" parent="CharacterGenerator/Character" index="1"]
+frame_progress = 0.885328
+
+[node name="Torso" parent="CharacterGenerator/Character" index="2"]
+frame_progress = 0.715696
+
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/GuideFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]
+
+[editable path="CharacterGenerator"]
