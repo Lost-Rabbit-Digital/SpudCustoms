@@ -868,42 +868,6 @@ func _input(event):
 			if stamp_shadow:
 				stamp_shadow.visible = true
 
-
-func select_stamp(stamp: Node):
-	selected_stamp = stamp
-	# Visual feedback for selected stamp (e.g., highlight effect)
-	stamp.modulate = Color(1.2, 1.2, 1.2)  # Slight brightness increase
-	var stamp_shadow = stamp.get_node_or_null("StampShadow")
-	if stamp_shadow:
-		stamp_shadow.visible = true
-
-func deselect_stamp():
-	if selected_stamp:
-		# Remove visual feedback
-		selected_stamp.modulate = Color(1, 1, 1)
-		var stamp_shadow = selected_stamp.get_node_or_null("StampShadow")
-		if stamp_shadow:
-			stamp_shadow.visible = false
-		selected_stamp = null
-
-func handle_passport_click(mouse_pos: Vector2):
-	$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = false
-	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)):
-		open_passport_action()
-	elif suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)):
-		close_passport_action()
-	elif suspect.get_rect().has_point(suspect.to_local(mouse_pos)):
-		close_passport_action()
-		remove_stamp()
-
-func handle_guide_click(mouse_pos: Vector2):
-	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)):
-		open_guide_action()
-	elif suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)):
-		close_guide_action()
-	elif suspect.get_rect().has_point(suspect.to_local(mouse_pos)):
-		close_guide_action()
-
 func handle_passport_drop(mouse_pos: Vector2):
 	$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = false
 	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)):
@@ -922,47 +886,10 @@ func handle_guide_drop(mouse_pos: Vector2):
 	elif suspect.get_rect().has_point(suspect.to_local(mouse_pos)):
 		close_guide_action()
 
-func cancel_stamp():
-	# Safely handle stamp shadows
-	var approval_stamp = $Gameplay/InteractiveElements/ApprovalStamp
-	var rejection_stamp = $Gameplay/InteractiveElements/RejectionStamp
-	
-	if approval_stamp and approval_stamp.has_node("StampShadow"):
-		approval_stamp.get_node("StampShadow").visible = false
-	if rejection_stamp and rejection_stamp.has_node("StampShadow"):
-		rejection_stamp.get_node("StampShadow").visible = false
-		
-	dragged_sprite = null
-	# Restore cursor on stamp cancellation
-	if was_cursor_hidden:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		was_cursor_hidden = false
-
-func handle_document_drop():
-	if dragged_sprite == passport:
-		$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = false
-		var drop_pos = get_global_mouse_position()
-		if inspection_table.get_rect().has_point(inspection_table.to_local(drop_pos)):
-			open_passport_action()
-		if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
-			close_passport_action()
-		if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
-			close_passport_action()
-			remove_stamp()
-	elif dragged_sprite == guide:
-		var drop_pos = get_global_mouse_position()
-		if inspection_table.get_rect().has_point(inspection_table.to_local(drop_pos)):
-			open_guide_action()
-		if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
-			close_guide_action()
-		if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
-			close_guide_action()
-
-
 func open_passport_action():
 	$Gameplay/InteractiveElements/Passport.texture = preload("res://assets/documents/passport-old.png")
-	$Gameplay/InteractiveElements/Passport/OpenPassport.visible = true
 	$Gameplay/InteractiveElements/Passport/ClosedPassport.visible = false
+	$Gameplay/InteractiveElements/Passport/OpenPassport.visible = true
 	
 func close_passport_action():
 	$Gameplay/InteractiveElements/Passport.texture = preload("res://assets/documents/closed_passport_small/closed_passport_small.png")

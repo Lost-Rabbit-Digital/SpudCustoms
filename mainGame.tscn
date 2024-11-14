@@ -398,6 +398,7 @@ texture = ExtResource("33_s6ap3")
 script = ExtResource("35_uuf1y")
 
 [node name="ClosedGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
+visible = false
 z_as_relative = false
 
 [node name="GuideAlertBox" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide/ClosedGuide"]
