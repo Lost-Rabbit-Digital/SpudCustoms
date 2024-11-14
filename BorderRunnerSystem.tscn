@@ -10,17 +10,20 @@
 [node name="BorderRunnerSystem" type="Node2D"]
 script = ExtResource("1_8vf2f")
 
-[node name="ExplosionVFX (Node2D)" type="Node2D" parent="."]
+[node name="ExplosionVFX" type="Node2D" parent="."]
+z_index = 11
 script = ExtResource("2_1snt0")
 
-[node name="AlarmSound (AudioStreamPlayer2D)" type="AudioStreamPlayer2D" parent="."]
+[node name="AlarmSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_3vtb4")
 
-[node name="ExplosionSound (AudioStreamPlayer2D)" type="AudioStreamPlayer2D" parent="."]
+[node name="ExplosionSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_d84f0")
 
-[node name="MissileSound ( AudioStreamPlayer2D)" type="AudioStreamPlayer2D" parent="."]
+[node name="MissileSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_cevxq")
 
-[node name="MissileSprite (Sprite2D)" type="Sprite2D" parent="."]
+[node name="MissileSprite" type="Sprite2D" parent="."]
+z_index = 10
+scale = Vector2(0.04, 0.04)
 texture = ExtResource("6_og870")

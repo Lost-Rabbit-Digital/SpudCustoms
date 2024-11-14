@@ -81,7 +81,6 @@ scale = Vector2(2.59658, 2.44318)
 texture = ExtResource("2_rft0e")
 
 [node name="Background" type="Sprite2D" parent="UI"]
-z_index = 4
 z_as_relative = false
 position = Vector2(640, 360)
 texture = ExtResource("18_jl4i3")
@@ -477,7 +476,6 @@ offset_bottom = 140.0
 texture_normal = SubResource("CompressedTexture2D_f48nw")
 
 [node name="Paths" type="Control" parent="Gameplay"]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -529,6 +527,8 @@ frame_progress = 0.885328
 frame_progress = 0.715696
 
 [node name="BorderRunnerSystem" parent="." instance=ExtResource("29_rft0e")]
+z_index = 6
+position = Vector2(847, 143)
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]

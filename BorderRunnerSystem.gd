@@ -1,7 +1,7 @@
 extends Node2D
 
 # Runner settings
-@export var runner_chance = 0.2  # 20% chance per second for queue potato to run
+@export var runner_chance = 0.1  # 10% chance per second for queue potato to run
 @export var min_time_between_runs = 3.0  # Reduced to 3 seconds for testing
 @export var runner_base_points = 250  # Base points for catching runner
 @export var perfect_hit_bonus = 150   # Extra points for perfect hits
@@ -16,9 +16,16 @@ var active_runner = null
 var missile_active = false
 var missile_position = Vector2.ZERO
 var missile_target = Vector2.ZERO
-var missile_speed = 400
 var explosion_active = false
 var explosion_position = Vector2.ZERO
+
+# Runner settings
+var runner_speed = 0.15  # Reduced from 0.5 for slower movement
+@export var missile_speed = 400
+
+# Missile settings
+@export var missile_scale = Vector2(0.5, 0.5)  # Adjust missile size
+@export var missile_start_height = 600  # Height where missile starts
 
 # Node references
 @onready var queue_manager = $"../SystemManagers/QueueManager"
@@ -30,7 +37,15 @@ var explosion_position = Vector2.ZERO
 @onready var missile_sprite = $MissileSprite
 
 func _ready():
+	# Create missile sprite if it doesn't exist
+	if not missile_sprite:
+		missile_sprite = Sprite2D.new()
+		missile_sprite.texture = preload("res://assets/missiles/missile_sprite.png")  # Make sure path is correct
+		missile_sprite.scale = Vector2(0.5, 0.5)
+		add_child(missile_sprite)
 	missile_sprite.visible = false
+	missile_sprite.z_index = 15  # Make sure missile is visible above runners
+
 	if not queue_manager:
 		push_error("BorderRunnerSystem: Could not find QueueManager!")
 	print("BorderRunnerSystem initialized with chance: ", runner_chance)
@@ -65,17 +80,16 @@ func _process(delta):
 
 func attempt_spawn_runner():
 	print("Attempting to spawn runner...")
-	var potatoes = queue_manager.get_queue_potatoes()
-	print("Found ", potatoes.size(), " potatoes in queue")
-	
-	if potatoes.size() > 0:
-		var runner_index = randi() % potatoes.size()
-		var runner = potatoes[runner_index]
-		print("Selected potato at index ", runner_index, " to become runner")
+	if queue_manager.potatoes.size() > 0:
+		print("Found ", queue_manager.potatoes.size(), " potatoes in queue")
 		
-		# Remove from queue and start running
-		queue_manager.remove_potato(runner_index)
-		start_runner(runner)
+		# Get a random potato from the queue
+		var runner = queue_manager.remove_front_potato()
+		if runner:
+			print("Selected potato to become runner")
+			start_runner(runner)
+		else:
+			print("Failed to remove potato from queue")
 	else:
 		print("No potatoes available to become runners")
 	
@@ -83,8 +97,7 @@ func attempt_spawn_runner():
 
 func start_runner(potato):
 	active_runner = potato
-	active_runner.position = Vector2(1200, 150)  # Start position
-	print("Starting runner at position: ", active_runner.position)
+	print("Starting runner")
 	
 	# Play alarm and show alert
 	alarm_sound.play()
@@ -99,8 +112,14 @@ func start_runner(potato):
 		
 	var path_follow = PathFollow2D.new()
 	path.add_child(path_follow)
-	path_follow.add_child(active_runner)
-	active_runner.progress_ratio = 0.0
+	path_follow.progress_ratio = 0.0  # Set progress_ratio on PathFollow2D
+	
+	# Add the potato to the path_follow
+	if potato.get_parent():
+		potato.get_parent().remove_child(potato)
+	path_follow.add_child(potato)
+	potato.position = Vector2.ZERO  # Reset potato position relative to path_follow
+	
 	print("Runner setup complete on path")
 
 func update_runner(delta):
@@ -108,13 +127,18 @@ func update_runner(delta):
 		return
 		
 	var path_follow = active_runner.get_parent()
-	path_follow.progress_ratio += delta * 0.5  # Adjust speed as needed
+	if not path_follow or not path_follow is PathFollow2D:
+		push_error("Runner's parent is not a PathFollow2D!")
+		return
+		
+	path_follow.progress_ratio += delta * runner_speed
+	print("Runner progress: ", path_follow.progress_ratio)
 	
+	# Check if runner reached the end
 	if path_follow.progress_ratio >= 1.0:
 		runner_escaped()
-
-
-
+		return  # Add this return to prevent further updates
+		
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
@@ -122,37 +146,66 @@ func _input(event):
 				launch_missile(event.position)
 
 func launch_missile(target_pos):
+	print("Launching missile at: ", target_pos)
 	missile_active = true
-	missile_position = Vector2(640, 720)  # Bottom center of screen
+	
+	# Start from bottom center of screen
+	var viewport_rect = get_viewport_rect()
+	missile_position = Vector2(viewport_rect.size.x / 2, viewport_rect.size.y - 100)
 	missile_target = target_pos
+	
+	# Ensure missile is visible and at the correct position
 	missile_sprite.visible = true
+	missile_sprite.position = missile_position
+	missile_sprite.modulate.a = 1.0  # Ensure fully visible
+	
+	# Calculate initial rotation to point at target
+	var direction = (missile_target - missile_position).normalized()
+	missile_sprite.rotation = direction.angle() - PI/2
+	
 	missile_sound.play()
+	print("Missile launched from: ", missile_position)
 
 func update_missile(delta):
+	if not missile_active:
+		return
+		
 	var direction = (missile_target - missile_position).normalized()
-	missile_position += direction * missile_speed * delta
+	var movement = direction * missile_speed * delta
+	missile_position += movement
 	missile_sprite.position = missile_position
-	missile_sprite.rotation = direction.angle() - PI/2  # Point missile in direction of travel
+	missile_sprite.rotation = direction.angle() - PI/2
+	
+	print("Missile pos: ", missile_position, " Target: ", missile_target)
 	
 	# Check if missile reached target
 	if missile_position.distance_to(missile_target) < 5:
+		print("Missile reached target!")
 		trigger_explosion()
 
 func trigger_explosion():
+	print("Triggering explosion at: ", missile_position)
 	explosion_active = true
 	explosion_vfx.position = missile_position
+	explosion_vfx.visible = true
 	explosion_vfx.start_explosion()
 	missile_active = false
 	missile_sprite.visible = false
-	explosion_sound.play()
+	
+	if explosion_sound:
+		explosion_sound.play()
+	else:
+		push_error("Explosion sound not found!")
 	
 	check_runner_hit()
 
 func check_runner_hit():
 	if not active_runner:
+		print("No active runner to check for hit")
 		return
 		
-	var distance = active_runner.position.distance_to(explosion_vfx.position)
+	var distance = active_runner.global_position.distance_to(explosion_vfx.position)
+	print("Distance to runner: ", distance)
 	
 	if distance < explosion_size:
 		runner_streak += 1
@@ -163,6 +216,7 @@ func check_runner_hit():
 		if distance < explosion_size / 3:
 			points_earned += perfect_hit_bonus
 			bonus_text += "PERFECT HIT! +{perfect} bonus\n".format({"perfect": perfect_hit_bonus})
+			print("Perfect hit scored!")
 		
 		# Streak bonus
 		if runner_streak > 1:
@@ -193,6 +247,7 @@ func check_runner_hit():
 		
 		clean_up_runner()
 	else:
+		print("Missile missed the runner")
 		# Reset streak on miss
 		runner_streak = 0
 
@@ -210,7 +265,9 @@ func runner_escaped():
 func clean_up_runner():
 	if active_runner:
 		var path_follow = active_runner.get_parent()
-		path_follow.queue_free()
+		if path_follow:
+			path_follow.queue_free()
+		active_runner.queue_free()
 		active_runner = null
 	time_since_last_run = 0
 

@@ -68,6 +68,9 @@ func update_positions():
 			potatoes[potato_count - 1 - i].target_point = target_point
 			#print("Potato ", potato_count - 1 - i, " target point set to: ", target_point)
 
+func get_all_potatoes() -> Array:
+	return potatoes
+
 func _process(delta):
 	for potato in potatoes:
 		if potato.current_point < potato.target_point:
