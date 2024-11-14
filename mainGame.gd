@@ -1,6 +1,9 @@
 # Main.gd (Main scene script)
 extends Node2D
 
+# Add border runner system
+var border_runner_system
+
 # Track game states
 var close_sound_played = false
 var open_sound_played = false
@@ -11,11 +14,18 @@ var is_potato_in_office = false
 var current_potato_info
 var current_potato
 
-# track win and lose parameters
-var score = 0
-var max_score = 10
+# Track win and lose parameters
+var quota_met = 0  # Number of correct decisions
+var quota_target = 8  # Required correct decisions (formerly max_score)
 var strikes = 0
 var max_strikes = 3
+
+# Track points-based performance scoring system
+var score = 0  # Points from runners and other bonuses
+
+# Track multipliers and streaks
+var point_multiplier = 1.0
+var correct_decision_streak = 0
 
 # timer for limiting shift processing times
 var processing_time = 60  # seconds
@@ -80,7 +90,8 @@ var is_in_guide_tutorial = true
 func _ready():
 	# Store the default cursor shape
 	default_cursor = Input.get_current_cursor_shape()
-	
+	update_score_display()
+	update_quota_display()
 	time_label = $UI/Labels/TimeLabel
 	setup_megaphone_flash_timer()
 	setup_guide_tutorial_timer()
@@ -105,10 +116,13 @@ func _ready():
 			else:
 				sprite.z_index = PASSPORT_Z_INDEX
 				
-	# Add restoration of session score for continued shifts
 	if Global.final_score > 0:
 		score = Global.final_score
-		$UI/Labels/ScoreLabel.text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
+		update_score_display()
+
+	if Global.quota_met > 0:
+		quota_met = Global.quota_met
+		update_quota_display()
 	# Get references to the new nodes
 	passport = $Gameplay/InteractiveElements/Passport
 	guide = $Gameplay/InteractiveElements/Guide
@@ -123,6 +137,9 @@ func _ready():
 	draggable_sprites.append(passport)
 	draggable_sprites.append(guide)
 	
+	# add border runner system
+	border_runner_system = $BorderRunnerSystem
+	
 func setup_megaphone_flash_timer():
 	#print("FLASH TIMER: Setup megaphone flash timer")
 	megaphone_flash_timer = $SystemManagers/Timers/MegaphoneFlashTimer
@@ -131,26 +148,21 @@ func setup_megaphone_flash_timer():
 	
 func set_difficulty(level):
 	difficulty_level = level
-	adjust_game_parameters()
-
-func adjust_game_parameters():
-	print("matching difficulty level:", difficulty_level)
 	match difficulty_level:
 		"Easy":
-			max_score = 8
+			quota_target = 8
 			max_strikes = 5
 			processing_time = 60
 		"Normal":
-			max_score = 10
+			quota_target = 10
 			max_strikes = 3
 			processing_time = 45
 		"Hard":
-			max_score = 12
+			quota_target = 12
 			max_strikes = 2
-			processing_time = 15
-	print("Max score:", max_score)
-	$UI/Labels/ScoreLabel.text = "Score    " + str(score) + " / " + str(max_score * Global.shift)
-	print("Max strikes:", max_strikes)
+			processing_time = 30
+			
+	update_quota_display()
 	$UI/Labels/StrikesLabel.text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
 	
 
@@ -720,6 +732,7 @@ func go_to_game_win():
 	$Gameplay/InteractiveElements/ApprovalStamp.visible = false
 	$Gameplay/InteractiveElements/RejectionStamp.visible = false
 	Global.final_score = score
+	Global.quota_met = quota_met
 	Global.shift += 1
 	print("ALERT: go_to_game_win() has been disabled")
 	# Use change_scene_to_packed to pass parameters
@@ -745,24 +758,48 @@ func process_decision(allowed):
 	var correct_decision = is_potato_valid(current_potato_info)
 	
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
-		score += 1
-		$UI/Labels/JudgementLabel.text = "You made the right choice, officer."
-		# Check if multiple of max_score and win if so
-		if score % max_score == 0:
-			print("You win!")
+		quota_met += 1
+		correct_decision_streak += 1
+		
+		# Award bonus points for correct decisions
+		var decision_points = 25 * point_multiplier
+		score += decision_points
+		
+		# Increase multiplier for streaks
+		if correct_decision_streak >= 3:
+			point_multiplier = 1.5
+		if correct_decision_streak >= 5:
+			point_multiplier = 2.0
+			
+		$UI/Labels/JudgementLabel.text = "You made the right choice, officer.\n+" + str(decision_points) + " points!"
+		
+		# Check if quota met
+		if quota_met >= quota_target:
+			print("Quota complete!")
 			go_to_game_win()
 	else:
 		$UI/Labels/JudgementLabel.text = "You have caused unnecessary suffering, officer..."
+		correct_decision_streak = 0
+		point_multiplier = 1.0
 		strikes += 1
 		if strikes >= max_strikes:
 			print("Game over!")
 			go_to_game_over()
 			
+	update_score_display()
+	update_quota_display()
 	$UI/Labels/StrikesLabel.text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
-	$UI/Labels/ScoreLabel.text = "Score   " + str(score) + " / " + str(max_score * Global.shift)
 
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()
+
+func update_score_display():
+	$UI/Labels/ScoreLabel.text = "Score: " + str(score)
+	if point_multiplier > 1.0:
+		$UI/Labels/ScoreLabel.text += " (x" + str(point_multiplier) + ")"
+
+func update_quota_display():
+	$UI/Labels/QuotaLabel.text = "Quota: " + str(quota_met) + " / " + str(quota_target * Global.shift)
 
 func update_potato_texture():
 	print("Updating potato texture")

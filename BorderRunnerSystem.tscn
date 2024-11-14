@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://1mf0og1h885p"]
+
+[ext_resource type="Script" path="res://BorderRunnerSystem.gd" id="1_8vf2f"]
+[ext_resource type="Script" path="res://ExplosionVFX.gd" id="2_1snt0"]
+[ext_resource type="AudioStream" uid="uid://hd7b6dv3jfqj" path="res://assets/alerts/missile_alarm_sound.wav" id="3_3vtb4"]
+[ext_resource type="AudioStream" uid="uid://cf65vwoewhpck" path="res://assets/missiles/Balloon Explosion A.wav" id="4_d84f0"]
+[ext_resource type="AudioStream" uid="uid://dl551k0d7e4ga" path="res://assets/missiles/button press and missile launch.wav" id="5_cevxq"]
+[ext_resource type="Texture2D" uid="uid://d0e44jundomwj" path="res://assets/missiles/missile_sprite.png" id="6_og870"]
+
+[node name="BorderRunnerSystem" type="Node2D"]
+script = ExtResource("1_8vf2f")
+
+[node name="ExplosionVFX (Node2D)" type="Node2D" parent="."]
+script = ExtResource("2_1snt0")
+
+[node name="AlarmSound (AudioStreamPlayer2D)" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_3vtb4")
+
+[node name="ExplosionSound (AudioStreamPlayer2D)" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_d84f0")
+
+[node name="MissileSound ( AudioStreamPlayer2D)" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_cevxq")
+
+[node name="MissileSprite (Sprite2D)" type="Sprite2D" parent="."]
+texture = ExtResource("6_og870")

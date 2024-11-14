@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=37 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://assets/suspect_panel/suspect_panel.png" id="2_f25cg"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://assets/alerts/guide_alert_box.png" id="22_3pqlk"]
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://prototyping/random_character_creation/character_generator.tscn" id="28_f6jf3"]
 [ext_resource type="Texture2D" uid="uid://dubo3sdxx8chn" path="res://assets/stamps/approval_stamp_3.png" id="28_uvib1"]
+[ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="29_rft0e"]
 [ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="31_c10l6"]
 [ext_resource type="Texture2D" uid="uid://b2wymckqr8jsk" path="res://assets/documents/customs_guide/customs_guide_closed_small.png" id="33_s6ap3"]
 [ext_resource type="Script" path="res://guide.gd" id="35_uuf1y"]
@@ -117,16 +118,16 @@ autowrap_mode = 3
 z_index = 2
 z_as_relative = false
 layout_mode = 0
-offset_left = 1110.0
-offset_top = 651.0
-offset_right = 1242.0
-offset_bottom = 701.0
+offset_left = 71.0
+offset_top = 250.0
+offset_right = 203.0
+offset_bottom = 300.0
 theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("13_wxn24")
 theme_override_font_sizes/font_size = 32
-text = "2024.10.22"
+text = "2024.11.14"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -152,10 +153,10 @@ z_index = 2
 z_as_relative = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
-offset_left = 891.0
-offset_top = 668.0
-offset_right = 1091.0
-offset_bottom = 718.0
+offset_left = 1079.0
+offset_top = 666.0
+offset_right = 1279.0
+offset_bottom = 716.0
 theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
@@ -164,21 +165,21 @@ theme_override_font_sizes/font_size = 32
 text = "Strikes   0 / 5"
 vertical_alignment = 1
 
-[node name="ScoreLabel" type="Label" parent="UI/Labels"]
+[node name="QuotaLabel" type="Label" parent="UI/Labels"]
 z_index = 2
 z_as_relative = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
-offset_left = 891.0
-offset_top = 636.0
-offset_right = 1093.0
-offset_bottom = 686.0
+offset_left = 899.0
+offset_top = 666.0
+offset_right = 1101.0
+offset_bottom = 716.0
 theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("13_wxn24")
 theme_override_font_sizes/font_size = 32
-text = "Score    0 / 8"
+text = "Quota     0 / 8"
 vertical_alignment = 1
 
 [node name="RulesLabel" type="Label" parent="UI/Labels"]
@@ -195,6 +196,33 @@ theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("13_wxn24")
 theme_override_font_sizes/font_size = 16
 autowrap_mode = 3
+
+[node name="AlertLabel" type="Label" parent="UI/Labels"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(1, 0.00392157, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 24
+
+[node name="ScoreLabel" type="Label" parent="UI/Labels"]
+z_index = 2
+z_as_relative = false
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 0
+offset_left = 900.0
+offset_top = 638.0
+offset_right = 1102.0
+offset_bottom = 688.0
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 32
+text = "Score    3,200"
+vertical_alignment = 1
 
 [node name="SystemManagers" type="Control" parent="."]
 layout_mode = 3
@@ -499,6 +527,8 @@ frame_progress = 0.885328
 
 [node name="Torso" parent="CharacterGenerator/Character" index="2"]
 frame_progress = 0.715696
+
+[node name="BorderRunnerSystem" parent="." instance=ExtResource("29_rft0e")]
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
