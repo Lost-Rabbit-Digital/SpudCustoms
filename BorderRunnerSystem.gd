@@ -2,7 +2,7 @@ extends Node2D
 
 # Runner settings
 @export var runner_chance = 0.1  # 10% chance per second for queue potato to run
-@export var min_time_between_runs = 3.0  # Reduced to 3 seconds for testing
+@export var min_time_between_runs = 15.0 # Reduced to 3 seconds for testing
 @export var runner_base_points = 250  # Base points for catching runner
 @export var perfect_hit_bonus = 150   # Extra points for perfect hits
 @export var streak_bonus = 100        # Bonus for catching multiple runners

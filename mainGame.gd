@@ -1116,16 +1116,16 @@ func move_potato_along_path(approval_status):
 		# Set texture based on potato type
 	var texture_path = ""
 	match current_potato_info.type:
-		"Purple Majesty":
-			texture_path = "res://assets/potatoes/bodies/purple_majesty_body.png"
-		"Red Bliss":
-			texture_path = "res://assets/potatoes/bodies/red_bliss_body.png"
+#		"Purple Majesty":
+#			texture_path = "res://assets/potatoes/bodies/purple_majesty_body.png"
+#		"Red Bliss":
+#			texture_path = "res://assets/potatoes/bodies/red_bliss_body.png"
 		"Russet Burbank":
-			texture_path = "res://assets/potatoes/bodies/russet_burbank_body.png"
-		"Sweet Potato":
-			texture_path = "res://assets/potatoes/bodies/sweet_potato_body.png"
-		"Yukon Gold":
-			texture_path = "res://assets/potatoes/bodies/yukon_gold_body.png"
+			texture_path = "res://assets/potatoes/bodies/RussetBurbank_SmallSilhouette.png"
+#		"Sweet Potato":
+#			texture_path = "res://assets/potatoes/bodies/sweet_potato_body.png"
+#		"Yukon Gold":
+#			texture_path = "res://assets/potatoes/bodies/yukon_gold_body.png"
 	
 	potato_person.texture = load(texture_path)
 	potato_person.scale = Vector2(0.20, 0.20)
