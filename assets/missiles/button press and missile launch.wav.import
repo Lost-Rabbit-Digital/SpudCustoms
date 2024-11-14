@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dl551k0d7e4ga"
+path="res://.godot/imported/button press and missile launch.wav-faafa3c6825b5f02d6e78aec847774e3.sample"
+
+[deps]
+
+source_file="res://assets/missiles/button press and missile launch.wav"
+dest_files=["res://.godot/imported/button press and missile launch.wav-faafa3c6825b5f02d6e78aec847774e3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
