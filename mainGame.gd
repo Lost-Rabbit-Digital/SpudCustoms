@@ -947,13 +947,9 @@ func apply_stamp(stamp):
 	# Proceed with stamping
 	is_stamping = true
 	
-	# Reset holding states since we're stamping
-	holding_stamp = false
-	
-	# Show cursor since we're no longer holding the stamp
-	if was_cursor_hidden:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		was_cursor_hidden = false
+	# Don't reset holding states since we want to keep holding the stamp
+	# holding_stamp remains true
+	# dragged_sprite remains set
 	
 	var open_passport = $Gameplay/InteractiveElements/Passport/OpenPassport
 	if not open_passport:
@@ -961,7 +957,7 @@ func apply_stamp(stamp):
 		is_stamping = false
 		return
 	
-	# Create a temporary visual stamp that moves down
+	# Create a temporary visual stamp for the animation
 	var temp_stamp = Sprite2D.new()
 	if stamp.texture:
 		temp_stamp.texture = stamp.texture
@@ -990,6 +986,12 @@ func apply_stamp(stamp):
 	final_stamp.modulate.a = 0  # Start invisible
 	open_passport.add_child(final_stamp)
 	
+	# Store original stamp position to return to after animation
+	var original_stamp_pos = stamp.global_position
+	
+	# Temporarily hide the held stamp during animation
+	stamp.visible = false
+	
 	# Create and start the animation
 	var tween = create_tween()
 	tween.set_parallel(true)
@@ -1009,14 +1011,20 @@ func apply_stamp(stamp):
 		temp_stamp.position.y, 
 		STAMP_ANIMATION_DURATION / 2)
 	
-	# Remove the temporary stamp and finish the animation
+	# Remove the temporary stamp and restore the held stamp
 	tween.chain().tween_callback(func():
 		# Cleanup temp stamp
 		if is_instance_valid(temp_stamp):
 			temp_stamp.queue_free()
 		
-		# Reset dragged sprite
-		dragged_sprite = null
+		# Restore the held stamp
+		if stamp and is_instance_valid(stamp):
+			stamp.visible = true
+			stamp.global_position = get_global_mouse_position() - drag_offset
+			
+			# Keep cursor hidden since we're still holding the stamp
+			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+			was_cursor_hidden = true
 		
 		# Set up cooldown
 		var cooldown_timer = get_tree().create_timer(stamp_cooldown)
