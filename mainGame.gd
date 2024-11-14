@@ -1008,7 +1008,7 @@ func move_potato_along_path(approval_status):
 		"Red Bliss":
 			texture_path = "res://assets/potatoes/bodies/red_bliss_body.png"
 		"Russet Burbank":
-			texture_path = "res://assets/potatoes/bodies/russet_burbank_body.png"
+			texture_path = "res://assets/potatoes/bodies/RussetBurbank_SmallSilhouette.png"
 		"Sweet Potato":
 			texture_path = "res://assets/potatoes/bodies/sweet_potato_body.png"
 		"Yukon Gold":

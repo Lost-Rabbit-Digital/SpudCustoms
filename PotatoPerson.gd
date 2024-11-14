@@ -6,7 +6,7 @@ var potato_info: Dictionary = {}
 
 # Preload all the textures
 var textures = {
-	"Russet Burbank": preload("res://assets/potatoes/bodies/russet_burbank_body.png"),
+	"Russet Burbank": preload("res://assets/potatoes/bodies/RussetBurbank_SmallSilhouette.png"),
 	"Yukon Gold": preload("res://assets/potatoes/bodies/yukon_gold_body.png"),
 	"Sweet Potato": preload("res://assets/potatoes/bodies/sweet_potato_body.png"),
 	"Purple Majesty": preload("res://assets/potatoes/bodies/purple_majesty_body.png"),
