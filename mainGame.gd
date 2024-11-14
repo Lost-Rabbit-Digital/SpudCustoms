@@ -540,7 +540,6 @@ func _process(_delta):
 			reset_time_label()
 		current_timer = 0
 
-	# Rest of the existing _process function
 	var mouse_pos = get_global_mouse_position()
 	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == false:
 		$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = true
@@ -551,8 +550,7 @@ func _process(_delta):
 		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = false
 	
 	# Check for closing passport
-	if (suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)) or 
-		suspect.get_rect().has_point(suspect.to_local(mouse_pos))) and (dragged_sprite == passport or dragged_sprite == guide):
+	if (suspect.get_rect().has_point(suspect.to_local(mouse_pos)) or suspect_panel_front.get_rect().has_point(suspect_panel_front.to_local(mouse_pos)))and (dragged_sprite == passport or dragged_sprite == guide):
 		if not close_sound_played:
 			if dragged_sprite == passport:
 				close_passport_action()
