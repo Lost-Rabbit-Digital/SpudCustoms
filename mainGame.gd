@@ -786,21 +786,21 @@ func get_texture_paths(potato_type: String) -> Dictionary:
 	}
 	
 	match potato_type:
-#		"Purple Majesty":
-#			paths.head = "res://assets/potatoes/heads/purple_majesty_head.png"
-#			paths.passport = "res://assets/potatoes/document_photos/purple_majesty.png"
-#		"Red Bliss":
-#			paths.head = "res://assets/potatoes/heads/red_bliss_head.png"
-#			paths.passport = "res://assets/potatoes/document_photos/red_bliss.png"
+		"Purple Majesty":
+			paths.head = "res://assets/potatoes/heads/purple_majesty_head.png"
+			paths.passport = "res://assets/potatoes/document_photos/purple_majesty.png"
+		"Red Bliss":
+			paths.head = "res://assets/potatoes/heads/red_bliss_head.png"
+			paths.passport = "res://assets/potatoes/document_photos/red_bliss.png"
 		"Russet Burbank":
 			paths.head = "res://assets/potatoes/heads/russet_burbank_head.png"
 			paths.passport = "res://assets/potatoes/document_photos/russet_burbank.png"
-#	#	"Sweet Potato":
-#	#		paths.head = "res://assets/potatoes/heads/sweet_potato_head.png"
-#			paths.passport = "res://assets/potatoes/document_photos/sweet_potato.png"
-#		"Yukon Gold":
-#			paths.head = "res://assets/potatoes/heads/yukon_gold_head.png"
-#			paths.passport = "res://assets/potatoes/document_photos/yukon_gold.png"
+		"Sweet Potato":
+			paths.head = "res://assets/potatoes/heads/sweet_potato_head.png"
+			paths.passport = "res://assets/potatoes/document_photos/sweet_potato.png"
+		"Yukon Gold":
+			paths.head = "res://assets/potatoes/heads/yukon_gold_head.png"
+			paths.passport = "res://assets/potatoes/document_photos/yukon_gold.png"
 		_:
 			print("Unknown potato type: ", potato_type)
 	
@@ -1008,7 +1008,7 @@ func move_potato_along_path(approval_status):
 		"Red Bliss":
 			texture_path = "res://assets/potatoes/bodies/red_bliss_body.png"
 		"Russet Burbank":
-			texture_path = "res://assets/potatoes/bodies/RussetBurbank_SmallSilhouette.png"
+			texture_path = "res://assets/potatoes/bodies/russet_burbank_body.png"
 		"Sweet Potato":
 			texture_path = "res://assets/potatoes/bodies/sweet_potato_body.png"
 		"Yukon Gold":

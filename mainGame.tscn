@@ -73,7 +73,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="WorldPanel" type="Sprite2D" parent="UI"]
-z_index = 5
+z_index = 6
 z_as_relative = false
 position = Vector2(642.352, 121.5)
 scale = Vector2(2.59658, 2.44318)
@@ -86,7 +86,7 @@ position = Vector2(640, 360)
 texture = ExtResource("18_jl4i3")
 
 [node name="InteractableItemsWorldBackground" type="Sprite2D" parent="UI"]
-z_index = 4
+z_index = 5
 z_as_relative = false
 position = Vector2(640, 360)
 texture = ExtResource("7_woji0")
@@ -231,7 +231,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Megaphone" type="Sprite2D" parent="Gameplay"]
-visible = false
 z_index = 12
 position = Vector2(910, 129)
 scale = Vector2(1.4, 1.4)
@@ -239,8 +238,8 @@ texture = ExtResource("7_7m4ia")
 
 [node name="MegaphoneDialogueBoxBlank" type="Sprite2D" parent="Gameplay/Megaphone"]
 visible = false
-position = Vector2(62.1428, -47.8571)
-scale = Vector2(0.75, 0.75)
+position = Vector2(53.5714, -35.7143)
+scale = Vector2(0.581474, 0.581474)
 texture = ExtResource("9_arv36")
 
 [node name="FlashAlert" type="Sprite2D" parent="Gameplay/Megaphone"]
@@ -392,7 +391,7 @@ scale = Vector2(0.29, 0.29)
 texture = ExtResource("16_qj41b")
 
 [node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-z_index = 2
+z_index = 4
 z_as_relative = false
 position = Vector2(1216, 590)
 texture = ExtResource("33_s6ap3")
@@ -401,6 +400,7 @@ script = ExtResource("35_uuf1y")
 [node name="ClosedGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
 
 [node name="GuideAlertBox" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide/ClosedGuide"]
+visible = false
 texture = ExtResource("22_3pqlk")
 
 [node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
@@ -451,34 +451,34 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="RunnerPath" type="Path2D" parent="Gameplay/Paths"]
-z_index = 6
+z_index = 7
 z_as_relative = false
 curve = SubResource("Curve2D_f3jw2")
 
 [node name="TimedOutPath" type="Path2D" parent="Gameplay/Paths"]
-z_index = 6
+z_index = 7
 z_as_relative = false
 curve = SubResource("Curve2D_1j820")
 
 [node name="RejectPath" type="Path2D" parent="Gameplay/Paths"]
-z_index = 6
+z_index = 7
 z_as_relative = false
 curve = SubResource("Curve2D_1j820")
 
 [node name="EnterOfficePath" type="Path2D" parent="Gameplay/Paths"]
-z_index = 6
+z_index = 7
 z_as_relative = false
 position = Vector2(-420.074, 0)
 scale = Vector2(1.42647, 1)
 curve = SubResource("Curve2D_xms7a")
 
 [node name="ApprovePath" type="Path2D" parent="Gameplay/Paths"]
-z_index = 6
+z_index = 7
 z_as_relative = false
 curve = SubResource("Curve2D_uenca")
 
 [node name="SpuddyQueue" type="Path2D" parent="Gameplay/Paths"]
-z_index = 6
+z_index = 7
 z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
@@ -497,8 +497,8 @@ frame_progress = 0.885328
 frame_progress = 0.715696
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/GuideFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]
