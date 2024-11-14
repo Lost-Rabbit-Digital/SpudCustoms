@@ -8,7 +8,7 @@ radius = 30.0
 height = 116.0
 
 [node name="Node2D (PotatoPerson)" type="Node2D" groups=["PotatoPerson"]]
-z_index = 3
+z_index = 6
 z_as_relative = false
 scale = Vector2(0.2, 0.2)
 script = ExtResource("1_ftltf")

@@ -21,7 +21,6 @@ These are tasks which must be completed before the submission to Steam deadline,
 [ ] - Cut items off when they leave interaction table
 
 ### Urgent
-[ ] - Multiplayer? 8th / 15th of November for schedule
 [ ] - Explain how to flip the pages on the document in the tutorial
 [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
 [ ] - Add flash indicator pointing at corner of first page 
@@ -43,15 +42,6 @@ These are tasks which must be completed before the submission to Steam deadline,
 ## General Tasks
 These are more general tasks which would add a layer of quality to the game if completed before submission deadline. 
 
-### Audio
-[ ] - Deny entry to potato
-[ ] - Grant entry to potato
-
-### Graphics
-[ ] - Add officers patrolling the area
-
-### Interaction
-
 ### Menus
 [ ] - Splash-screen text 
 
@@ -61,8 +51,6 @@ These are more general tasks which would add a layer of quality to the game if c
 [ ] - Shadows when the player begins to drag the item, they can click with no reaction
 [ ] - Cursor which changes on interaction hover 
 
-### User Interface (UI)
-
 
 
 ## Stretch Goals
@@ -70,8 +58,7 @@ These are various goals which are out of scope for the current roadmap, but if p
 
 ### Features
 [ ] - Baggage inspection
-
-### Audio
+[ ] - Multiplayer? 8th / 15th of November for schedule
 
 ### Graphics
 [ ] - How should we do lighting for the environment and interactables? Real-time or baked into the pixel art?
@@ -80,12 +67,6 @@ These are various goals which are out of scope for the current roadmap, but if p
 
 ### Interaction
 [ ] - Conversation with potato while checking documents
-
-### Menus
-
-### Quality of life (QoL)
-
-### User Interface (UI)
 
 
 
@@ -214,23 +195,3 @@ The tasks which have be completed and pushed to VCS.
 [o] - Fill in additional detail on stamp objects
 [o] - Change the texture for Sprite2D (PotatoMugshot) to match the type of potato using these headshot paths: 
 [o] - Add restart button to game over screen
-
-
-
-Spud Customs Outline: 
-Gameplay progresses in day cycles where you must process 10 immigrating spuds to complete the day. 
-
-Each processing allows for 10 seconds to determine whether or not entry is allowed. 
-
-There is a chance of a spud attemping to cross the border even after entry is disallowed. 
-
-The player can attempt to peel these spuds for MAJOR BONUS POINTS. 
-
-The UI should emulate Papers Please in it's presentation of decision making information, and flavor
-text for spud profile. 
-
-The player is only ever presented with two buttons, and the option to peel fleeing spuds. 
-
-Create an alert box containing what conditions customs officers should look out for. (Rotten, Boiled, Mashed, Frozen)
-Display the scores for allowing or rejecting potatoes 
-Show a display of queued potatoes in the upper left.

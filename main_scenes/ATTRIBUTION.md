@@ -1,9 +1,16 @@
 # Attribution
 
-### Godot Game Template
-Author: [Marek Belski and contributors](https://github.com/Maaack/Godot-Game-Template/graphs/contributors)  
-Source: [github: Godot-Game-Template](https://github.com/Maaack/Godot-Game-Template)  
-License: [MIT License](LICENSE.txt)  
+# [Lost Rabbit Digital](https://lost-rabbit-digital.itch.io/)
+
+## Programmers
+[Boden McHale](https://www.bodenmchale.com/)
+[David McHale](https://www.youtube.com/channel/UCcmLal-sOU_5ThcSQCFDyoA)
+
+## Artist
+Olexii
+
+## Audio
+[Ovani](https://ovanisound.com/)
 
 ## Tools
 #### Godot
@@ -21,17 +28,13 @@ Author: [Linus Torvalds](https://github.com/torvalds)
 Source: [git-scm.com](https://git-scm.com/downloads)  
 License: [GNU General Public License version 2](https://opensource.org/licenses/GPL-2.0)
 
-## Programmers
-Lead Programmer: [Boden McHale](https://www.bodenmchale.com/)
-Junior Intern Programmer: [David McHale](https://www.youtube.com/channel/UCcmLal-sOU_5ThcSQCFDyoA)
+#### Godot Game Template
+Author: [Marek Belski and contributors](https://github.com/Maaack/Godot-Game-Template/graphs/contributors)  
+Source: [github: Godot-Game-Template](https://github.com/Maaack/Godot-Game-Template)  
+License: [MIT License](LICENSE.txt)  
 
-## Artist
-Lead Artist: [Olexii]
-
-## Audio
-Primary SFX Provider: [Ovani](https://ovanisound.com/)
-
-# [Lost Rabbit Digital](https://lost-rabbit-digital.itch.io/)
+# Special Thanks
+Thank you to our love ones and support nets which helped us create this game.
 
 # Memoriam
 GNU Michael McHale
