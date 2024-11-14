@@ -21,13 +21,13 @@ config/icon="res://assets/potatoes/heads/russet_burbank_head.png"
 [autoload]
 
 Global="*res://Global.gd"
-MuteFullscreenMenuButtons="*res://menus/menu_scripts/mute_fullscreen_menu_buttons.gd"
 Guide="*res://guide.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 AppConfig="*res://addons/maaacks_game_template/base/scenes/autoloads/app_config.tscn"
 SceneLoader="*res://addons/maaacks_game_template/base/scenes/autoloads/scene_loader.tscn"
 ProjectMusicController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_music_controller.tscn"
 ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+MuteFullscreenMenuButtons="*res://menus/menu_scripts/mute_fullscreen_menu_buttons.gd"
 
 [debug]
 
