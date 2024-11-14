@@ -1,20 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://c07b46wsf1fc1"]
+[gd_scene load_steps=3 format=3 uid="uid://c07b46wsf1fc1"]
 
 [ext_resource type="Script" path="res://PotatoPerson.gd" id="1_ftltf"]
 [ext_resource type="Texture2D" uid="uid://cv3hew72jdcn" path="res://assets/RussetBurbank_SmallSilhouette.png" id="2_p5u1t"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v1hgv"]
-radius = 30.0
-height = 116.0
 
 [node name="Node2D (PotatoPerson)" type="Node2D" groups=["PotatoPerson"]]
 z_index = 7
 z_as_relative = false
 scale = Vector2(0.2, 0.2)
 script = ExtResource("1_ftltf")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_v1hgv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-7, -5.71429)
