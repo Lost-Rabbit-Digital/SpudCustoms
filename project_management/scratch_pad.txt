@@ -3,35 +3,27 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 
-## To Be Completed (TBC)
+## To Be Completed
 These are tasks which must be completed before the submission to Steam deadline, November 24th.
 
 ### Bugs
-[ ] - Collision for the draggables to stay in the lower half of screen
-[ ] - Fix stamp animation
-[ ] - If you spam stamps then multiple show up
 [ ] - Check why date rules keep failing (make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
 [ ] - Don't allow the player to move the passport while the animation is playing for it to pass into the customs table
 [ ] - Stamps go over edge of passport
-[ ] - Able to drag stamps off interaction table
-[ ] - Able to drag passport off interaction table
+[ ] - Able to drag stamps off interaction table, bound them to lower half of screen
+[ ] - Able to drag passport off interaction table, bound them to lower half of screen
 [ ] - Snap closed passport to position of mouse cursor to avoid bad offset
 [ ] - Mouse has to be over passport to be able to stamp
 [ ] - Potato persons flip upside down when called into the office
-[ ] - Cut items off when they leave interaction table
 
 ### Urgent
 [ ] - Explain how to flip the pages on the document in the tutorial
 [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
 [ ] - Add flash indicator pointing at corner of first page 
-[ ] - Picking up stamp hides cursor
 [ ] - How to give visual feedback of controls to the player? 
 [ ] - Fix the pixel resolution of the text
 [ ] - "Change verbiage to 2 and under"
-[ ] - Stamp doesn't match the rest of the pixel feel, different resolution
-[ ] - Make sure the user knows where the laws are, make it into a specific note which is immovable
 [ ] - Make the instructions an overlay which you could close
-[ ] - Make new stamp shadow, make it a highlight instead of a shadow
 [ ] - Custom cursor for hover, click, grab, drag
 [ ] - Save game and load game
 [ ] - Make it clearer that the potato is running the border, add agency
@@ -41,9 +33,6 @@ These are tasks which must be completed before the submission to Steam deadline,
 
 ## General Tasks
 These are more general tasks which would add a layer of quality to the game if completed before submission deadline. 
-
-### Menus
-[ ] - Splash-screen text 
 
 ### Quality of life (QoL)
 [ ] - Save in a global if the player has finished the tutorial so every shift doesn't start the same interaction
@@ -61,7 +50,6 @@ These are various goals which are out of scope for the current roadmap, but if p
 [ ] - Multiplayer? 8th / 15th of November for schedule
 
 ### Graphics
-[ ] - How should we do lighting for the environment and interactables? Real-time or baked into the pixel art?
 [ ] - Entry ticket
 [ ] - Different documents, entry passes, work permits, baggage, visas, marriage licenses, bribes, 
 
@@ -73,6 +61,13 @@ These are various goals which are out of scope for the current roadmap, but if p
 # Completed tasks list
 The tasks which have be completed and pushed to VCS.
 
+[o] - Stamp doesn't match the rest of the pixel feel, different resolution
+[o] - Picking up stamp hides cursor
+[o] - Cut items off when they leave interaction table
+[o] - Splash-screen text 
+[o] - Collision for the draggables to stay in the lower half of screen
+[o] - Fix stamp animation
+[o] - If you spam stamps then multiple show up
 [o] - Overlay of potato customs officer talking
 [o] - Make full-screen appear in the main game instead of just the main menu
 [o] - Make an options menu
