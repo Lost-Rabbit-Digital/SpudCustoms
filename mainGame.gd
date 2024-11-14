@@ -41,6 +41,7 @@ var drag_offset = Vector2()
 const PHYSICAL_STAMP_Z_INDEX = 100
 const APPLIED_STAMP_Z_INDEX = 50
 const PASSPORT_Z_INDEX = 0
+var selected_stamp: Node = null  # Tracks which stamp is currently selected
 
 # Passport dragging system
 var passport: Sprite2D
@@ -62,7 +63,12 @@ var difficulty_level = "Easy"  # Can be "Easy", "Normal", or "Hard"
 # Stamp system
 const STAMP_ANIMATION_DURATION = 0.3  # Duration of the stamp animation in seconds
 const STAMP_MOVE_DISTANCE = 36  # How far the stamp moves down
+var is_stamping = false  # Tracks if a stamp animation is in progress
+var stamp_cooldown = 1.0  # Cooldown time in seconds after stamp animation
+var default_cursor = Input.CURSOR_ARROW
+var was_cursor_hidden = false
 
+# Guide system
 var guide_tutorial_timer: Timer
 const GUIDE_TUTORIAL_FLASH_INTERVAL = 1.0 # flash every 1 seconds
 var is_in_guide_tutorial = true
@@ -72,6 +78,9 @@ var is_in_guide_tutorial = true
 @onready var enter_office_path = $Gameplay/Paths/EnterOfficePath
 
 func _ready():
+	# Store the default cursor shape
+	default_cursor = Input.get_current_cursor_shape()
+	
 	time_label = $UI/Labels/TimeLabel
 	setup_megaphone_flash_timer()
 	setup_guide_tutorial_timer()
@@ -82,6 +91,7 @@ func _ready():
 	setup_spawn_timer()
 	draggable_sprites = [
 		$Gameplay/InteractiveElements/Passport,
+		$Gameplay/InteractiveElements/Guide,
 		$Gameplay/InteractiveElements/ApprovalStamp,
 		$Gameplay/InteractiveElements/RejectionStamp
 	]
@@ -578,7 +588,7 @@ func _process(_delta):
 		is_in_guide_tutorial = false
 	else:
 		is_in_guide_tutorial = true
-		
+
 func generate_potato_info():
 	var expiration_date: String
 	if randf() < 0.2:
@@ -810,60 +820,145 @@ func clear_potato_textures():
 	
 func _input(event):
 	if event is InputEventMouseButton:
+		var mouse_pos = get_global_mouse_position()
+		
+		# Handle left click press
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			var mouse_pos = get_global_mouse_position()
 			if megaphone.get_rect().has_point(megaphone.to_local(mouse_pos)):
 				megaphone_clicked()
+				return
 			
-			if holding_stamp:
+			# Try to pick up an object (stamp or document)
+			if not holding_stamp and dragged_sprite == null:
+				dragged_sprite = find_topmost_sprite_at(mouse_pos)
+				if dragged_sprite:
+					drag_offset = mouse_pos - dragged_sprite.global_position
+					if "Stamp" in dragged_sprite.name:
+						holding_stamp = true
+						Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+						was_cursor_hidden = true
+		
+		# Handle right click - stamps if over passport
+		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			if holding_stamp and not is_stamping:
 				var stamped_object = find_stampable_object_at(mouse_pos)
 				if stamped_object:
 					apply_stamp(dragged_sprite)
-					# Don't set holding_stamp to false here
-			else:
-				dragged_sprite = find_topmost_sprite_at(mouse_pos)
-				if dragged_sprite and "Stamp" in dragged_sprite.name:
-					holding_stamp = true
-					drag_offset = mouse_pos - dragged_sprite.global_position
-			
-			if dragged_sprite and dragged_sprite != null:
-				drag_offset = mouse_pos - dragged_sprite.global_position
 		
-		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
-			if holding_stamp:
-				holding_stamp = false
-				dragged_sprite = null
-				$Gameplay/InteractiveElements/ApprovalStamp/StampShadow.visible = false
-				$Gameplay/InteractiveElements/RejectionStamp/StampShadow.visible = false
-		
+		# Handle left click release
 		elif event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
-			if not holding_stamp:
-				if dragged_sprite == passport:
-					$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = false
-					var drop_pos = get_global_mouse_position()
-					if inspection_table.get_rect().has_point(inspection_table.to_local(drop_pos)):
-						open_passport_action()
-					if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
-						close_passport_action()
-					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
-						close_passport_action()
-						remove_stamp()
-				elif dragged_sprite == guide:
-					var drop_pos = get_global_mouse_position()
-					if inspection_table.get_rect().has_point(inspection_table.to_local(drop_pos)):
-						open_guide_action()
-					if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
-						close_guide_action()
-					if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
-						close_guide_action()
-				dragged_sprite = null
-				
+			if holding_stamp:
+				# Drop the stamp
+				holding_stamp = false
+				if was_cursor_hidden:
+					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+					was_cursor_hidden = false
+			elif dragged_sprite == passport:
+				handle_passport_drop(mouse_pos)
+			elif dragged_sprite == guide:
+				handle_guide_drop(mouse_pos)
+			
+			dragged_sprite = null
+	
+	# Handle mouse motion for dragging any object
 	elif event is InputEventMouseMotion and dragged_sprite:
 		dragged_sprite.global_position = get_global_mouse_position() - drag_offset
-		if "Stamp" in dragged_sprite.name:
-			var stamp_shadow = dragged_sprite.get_children()[0]
-			stamp_shadow.visible = true
+		if holding_stamp:
+			var stamp_shadow = dragged_sprite.get_node_or_null("StampShadow")
+			if stamp_shadow:
+				stamp_shadow.visible = true
+
+
+func select_stamp(stamp: Node):
+	selected_stamp = stamp
+	# Visual feedback for selected stamp (e.g., highlight effect)
+	stamp.modulate = Color(1.2, 1.2, 1.2)  # Slight brightness increase
+	var stamp_shadow = stamp.get_node_or_null("StampShadow")
+	if stamp_shadow:
+		stamp_shadow.visible = true
+
+func deselect_stamp():
+	if selected_stamp:
+		# Remove visual feedback
+		selected_stamp.modulate = Color(1, 1, 1)
+		var stamp_shadow = selected_stamp.get_node_or_null("StampShadow")
+		if stamp_shadow:
+			stamp_shadow.visible = false
+		selected_stamp = null
+
+func handle_passport_click(mouse_pos: Vector2):
+	$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = false
+	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)):
+		open_passport_action()
+	elif suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)):
+		close_passport_action()
+	elif suspect.get_rect().has_point(suspect.to_local(mouse_pos)):
+		close_passport_action()
+		remove_stamp()
+
+func handle_guide_click(mouse_pos: Vector2):
+	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)):
+		open_guide_action()
+	elif suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)):
+		close_guide_action()
+	elif suspect.get_rect().has_point(suspect.to_local(mouse_pos)):
+		close_guide_action()
+
+func handle_passport_drop(mouse_pos: Vector2):
+	$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = false
+	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)):
+		open_passport_action()
+	elif suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)):
+		close_passport_action()
+	elif suspect.get_rect().has_point(suspect.to_local(mouse_pos)):
+		close_passport_action()
+		remove_stamp()
+
+func handle_guide_drop(mouse_pos: Vector2):
+	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)):
+		open_guide_action()
+	elif suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)):
+		close_guide_action()
+	elif suspect.get_rect().has_point(suspect.to_local(mouse_pos)):
+		close_guide_action()
+
+func cancel_stamp():
+	# Safely handle stamp shadows
+	var approval_stamp = $Gameplay/InteractiveElements/ApprovalStamp
+	var rejection_stamp = $Gameplay/InteractiveElements/RejectionStamp
+	
+	if approval_stamp and approval_stamp.has_node("StampShadow"):
+		approval_stamp.get_node("StampShadow").visible = false
+	if rejection_stamp and rejection_stamp.has_node("StampShadow"):
+		rejection_stamp.get_node("StampShadow").visible = false
 		
+	dragged_sprite = null
+	# Restore cursor on stamp cancellation
+	if was_cursor_hidden:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		was_cursor_hidden = false
+
+func handle_document_drop():
+	if dragged_sprite == passport:
+		$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = false
+		var drop_pos = get_global_mouse_position()
+		if inspection_table.get_rect().has_point(inspection_table.to_local(drop_pos)):
+			open_passport_action()
+		if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
+			close_passport_action()
+		if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
+			close_passport_action()
+			remove_stamp()
+	elif dragged_sprite == guide:
+		var drop_pos = get_global_mouse_position()
+		if inspection_table.get_rect().has_point(inspection_table.to_local(drop_pos)):
+			open_guide_action()
+		if suspect_panel.get_rect().has_point(suspect_panel.to_local(drop_pos)):
+			close_guide_action()
+		if suspect.get_rect().has_point(suspect.to_local(drop_pos)):
+			close_guide_action()
+
+
 func open_passport_action():
 	$Gameplay/InteractiveElements/Passport.texture = preload("res://assets/documents/passport-old.png")
 	$Gameplay/InteractiveElements/Passport/OpenPassport.visible = true
@@ -884,12 +979,16 @@ func close_guide_action():
 	$Gameplay/InteractiveElements/Guide/ClosedGuide.visible = true
 	$Gameplay/InteractiveElements/Guide/OpenGuide.visible = false
 	
-func find_topmost_sprite_at(pos: Vector2):
+func find_topmost_sprite_at(pos: Vector2) -> Node2D:
 	var topmost_sprite = null
+	var highest_z = -1
+	
 	for sprite in draggable_sprites:
-		if sprite.get_rect().has_point(sprite.to_local(pos)):
-			if not topmost_sprite or sprite.z_index > topmost_sprite.z_index:
+		if sprite.visible and sprite.get_rect().has_point(sprite.to_local(pos)):
+			if sprite.z_index > highest_z:
+				highest_z = sprite.z_index
 				topmost_sprite = sprite
+	
 	return topmost_sprite
 
 func play_random_stamp_sound():
@@ -904,56 +1003,100 @@ func play_random_stamp_sound():
 		$SystemManagers/AudioManager/SFXPool.stream = stamp_sounds.pick_random()
 		$SystemManagers/AudioManager/SFXPool.play()
 
+
 func apply_stamp(stamp):
+	if is_stamping:
+		return
+	if not stamp or not is_instance_valid(stamp):
+		print("ERROR: Invalid stamp object")
+		return
+		
 	var mouse_pos = get_global_mouse_position()
 	var stamped_object = find_stampable_object_at(mouse_pos)
-	if stamped_object:
-		# Hide the original stamp and make it non-draggable
-		stamp.visible = false
-		draggable_sprites.erase(stamp)
+	
+	if not stamped_object:
+		return
 		
-		# Create a temporary visual stamp that moves down
-		var temp_stamp = Sprite2D.new()
+	# Proceed with stamping
+	is_stamping = true
+	
+	# Reset holding states since we're stamping
+	holding_stamp = false
+	
+	# Show cursor since we're no longer holding the stamp
+	if was_cursor_hidden:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		was_cursor_hidden = false
+	
+	var open_passport = $Gameplay/InteractiveElements/Passport/OpenPassport
+	if not open_passport:
+		print("ERROR: Cannot find OpenPassport node")
+		is_stamping = false
+		return
+	
+	# Create a temporary visual stamp that moves down
+	var temp_stamp = Sprite2D.new()
+	if stamp.texture:
 		temp_stamp.texture = stamp.texture
 		temp_stamp.position = mouse_pos
 		temp_stamp.z_index = PHYSICAL_STAMP_Z_INDEX
 		add_child(temp_stamp)
+	else:
+		print("ERROR: Stamp has no texture")
+		is_stamping = false
+		return
+	
+	# Create the final stamp that will be left on the passport
+	var final_stamp = Sprite2D.new()
+	var stamp_texture_path = "res://assets/stamps/approved_stamp.png" if "Approval" in stamp.name else "res://assets/stamps/denied_stamp.png"
+	var stamp_texture = load(stamp_texture_path)
+	
+	if not stamp_texture:
+		print("ERROR: Could not load stamp texture: ", stamp_texture_path)
+		temp_stamp.queue_free()
+		is_stamping = false
+		return
 		
-		# Create the final stamp that will be left on the passport
-		var final_stamp = Sprite2D.new()
-		var stamp_texture = "res://assets/stamps/approved_stamp.png" if "Approval" in stamp.name else "res://assets/stamps/denied_stamp.png"
-		
-		final_stamp.texture = load(stamp_texture)
-		final_stamp.position = stamped_object.to_local(mouse_pos)
-		final_stamp.z_index = APPLIED_STAMP_Z_INDEX
-		final_stamp.modulate.a = 0  # Start invisible
-		$Gameplay/InteractiveElements/Passport/OpenPassport.add_child(final_stamp)
-		
-		# Create and start the animation
-		var tween = create_tween()
-		tween.set_parallel(true)
-		play_random_stamp_sound()
-		
-		# Move down
-		tween.tween_property(temp_stamp, "position:y", 
-			temp_stamp.position.y + STAMP_MOVE_DISTANCE, 
-			STAMP_ANIMATION_DURATION / 2)
-		
-		# Fade in the final stamp when we hit the paper
-		tween.tween_property(final_stamp, "modulate:a", 
-			1.0, 0.1).set_delay(STAMP_ANIMATION_DURATION / 2)
-		
-		# Move back up
-		tween.chain().tween_property(temp_stamp, "position:y", 
-			temp_stamp.position.y, 
-			STAMP_ANIMATION_DURATION / 2)
-		
-		# Remove the temporary stamp and restore the original stamp
-		tween.chain().tween_callback(func():
+	final_stamp.texture = stamp_texture
+	final_stamp.position = stamped_object.to_local(mouse_pos)
+	final_stamp.z_index = APPLIED_STAMP_Z_INDEX
+	final_stamp.modulate.a = 0  # Start invisible
+	open_passport.add_child(final_stamp)
+	
+	# Create and start the animation
+	var tween = create_tween()
+	tween.set_parallel(true)
+	play_random_stamp_sound()
+	
+	# Move down
+	tween.tween_property(temp_stamp, "position:y", 
+		temp_stamp.position.y + STAMP_MOVE_DISTANCE, 
+		STAMP_ANIMATION_DURATION / 2)
+	
+	# Fade in the final stamp when we hit the paper
+	tween.tween_property(final_stamp, "modulate:a", 
+		1.0, 0.1).set_delay(STAMP_ANIMATION_DURATION / 2)
+	
+	# Move back up
+	tween.chain().tween_property(temp_stamp, "position:y", 
+		temp_stamp.position.y, 
+		STAMP_ANIMATION_DURATION / 2)
+	
+	# Remove the temporary stamp and finish the animation
+	tween.chain().tween_callback(func():
+		# Cleanup temp stamp
+		if is_instance_valid(temp_stamp):
 			temp_stamp.queue_free()
-			stamp.visible = true  # Make the original stamp visible again
-			draggable_sprites.append(stamp)  # Re-add the original stamp to draggable_sprites
+		
+		# Reset dragged sprite
+		dragged_sprite = null
+		
+		# Set up cooldown
+		var cooldown_timer = get_tree().create_timer(stamp_cooldown)
+		cooldown_timer.timeout.connect(func(): 
+			is_stamping = false
 		)
+	)
 		
 func remove_stamp():
 	print("Processing passport...")
@@ -1071,4 +1214,7 @@ func get_highest_z_index():
 	for sprite in draggable_sprites:
 		highest = max(highest, sprite.z_index)
 	return highest
-	
+
+func _exit_tree():
+	# Ensure cursor is restored when leaving the scene
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

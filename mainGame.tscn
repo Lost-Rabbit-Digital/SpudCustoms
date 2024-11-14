@@ -391,16 +391,19 @@ scale = Vector2(0.29, 0.29)
 texture = ExtResource("16_qj41b")
 
 [node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-z_index = 4
+z_index = 2
 z_as_relative = false
 position = Vector2(1216, 590)
 texture = ExtResource("33_s6ap3")
 script = ExtResource("35_uuf1y")
 
 [node name="ClosedGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
+z_as_relative = false
 
 [node name="GuideAlertBox" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide/ClosedGuide"]
 visible = false
+z_index = 4
+z_as_relative = false
 texture = ExtResource("22_3pqlk")
 
 [node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
