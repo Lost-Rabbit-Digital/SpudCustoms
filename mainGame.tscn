@@ -197,10 +197,12 @@ theme_override_font_sizes/font_size = 16
 autowrap_mode = 3
 
 [node name="AlertLabel" type="Label" parent="UI/Labels"]
-visible = false
+z_index = 15
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 489.0
+offset_top = 254.0
+offset_right = 815.0
+offset_bottom = 288.0
 theme_override_colors/font_color = Color(1, 0.00392157, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
