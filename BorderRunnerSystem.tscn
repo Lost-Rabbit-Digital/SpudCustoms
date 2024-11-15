@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://BorderRunnerSystem.gd" id="1_8vf2f"]
 [ext_resource type="Script" path="res://ExplosionVFX.gd" id="2_1snt0"]
-[ext_resource type="AudioStream" uid="uid://hd7b6dv3jfqj" path="res://assets/alerts/missile_alarm_sound.wav" id="3_3vtb4"]
+[ext_resource type="AudioStream" uid="uid://b6wmneh3xy7l5" path="res://assets/missiles/Doom Braaam.wav" id="3_8vf2f"]
 [ext_resource type="AudioStream" uid="uid://cf65vwoewhpck" path="res://assets/missiles/Balloon Explosion A.wav" id="4_d84f0"]
 [ext_resource type="AudioStream" uid="uid://dl551k0d7e4ga" path="res://assets/missiles/button press and missile launch.wav" id="5_cevxq"]
 [ext_resource type="Texture2D" uid="uid://d0e44jundomwj" path="res://assets/missiles/missile_sprite.png" id="6_og870"]
@@ -13,9 +13,12 @@ script = ExtResource("1_8vf2f")
 [node name="ExplosionVFX" type="Node2D" parent="."]
 z_index = 11
 script = ExtResource("2_1snt0")
+num_particles = 200
+particle_size = 3
 
 [node name="AlarmSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_3vtb4")
+stream = ExtResource("3_8vf2f")
+volume_db = -5.0
 
 [node name="ExplosionSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_d84f0")
@@ -25,5 +28,6 @@ stream = ExtResource("5_cevxq")
 
 [node name="MissileSprite" type="Sprite2D" parent="."]
 z_index = 10
-scale = Vector2(0.04, 0.04)
+z_as_relative = false
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("6_og870")

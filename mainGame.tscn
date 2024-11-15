@@ -67,6 +67,8 @@ point_count = 17
 [node name="Root" type="Node2D"]
 script = ExtResource("1_s4bva")
 
+[node name="BorderRunnerSystem" parent="." instance=ExtResource("29_rft0e")]
+
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -96,23 +98,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="JudgementLabel" type="Label" parent="UI/Labels"]
-z_index = 2
-z_as_relative = false
-layout_mode = 0
-offset_left = 266.0
-offset_top = 652.0
-offset_right = 616.0
-offset_bottom = 706.0
-theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("13_wxn24")
-theme_override_font_sizes/font_size = 16
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
 [node name="DateLabel" type="Label" parent="UI/Labels"]
 z_index = 2
 z_as_relative = false
@@ -129,6 +114,23 @@ theme_override_font_sizes/font_size = 32
 text = "2024.11.14"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="JudgementLabel" type="Label" parent="UI/Labels"]
+z_index = 2
+z_as_relative = false
+layout_mode = 0
+offset_left = 266.0
+offset_top = 652.0
+offset_right = 616.0
+offset_bottom = 706.0
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="TimeLabel" type="Label" parent="UI/Labels"]
 z_index = 2
@@ -527,10 +529,6 @@ frame_progress = 0.885328
 
 [node name="Torso" parent="CharacterGenerator/Character" index="2"]
 frame_progress = 0.715696
-
-[node name="BorderRunnerSystem" parent="." instance=ExtResource("29_rft0e")]
-z_index = 6
-position = Vector2(847, 143)
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
