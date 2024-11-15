@@ -152,7 +152,7 @@ func launch_missile(target_pos):
 	
 	# Start from bottom center of screen
 	var viewport_rect = get_viewport_rect()
-	missile_position = Vector2(viewport_rect.size.x / 2, viewport_rect.size.y - 100)
+	missile_position = Vector2((viewport_rect.size.x / 2) + 200, viewport_rect.size.y - 1000)
 	
 	# Set up missile sprite
 	missile_sprite.visible = true
