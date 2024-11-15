@@ -7,7 +7,7 @@
 [David McHale](https://www.youtube.com/channel/UCcmLal-sOU_5ThcSQCFDyoA)
 
 ## Artist
-Olexii
+Oleksii Lotokhov
 
 ## Audio
 [Ovani](https://ovanisound.com/)
