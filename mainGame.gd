@@ -432,6 +432,7 @@ func move_potato_to_office(potato_person):
 		print("removed potato from original parent")
 		
 	var path_follow = PathFollow2D.new()
+	path_follow.rotates = false  
 	enter_office_path.add_child(path_follow)
 	path_follow.add_child(potato_person)
 	print("Added potato_person to new PathFollow2D")
@@ -1110,22 +1111,8 @@ func move_potato_along_path(approval_status):
 	var path: Path2D
 	var potato_person = Sprite2D.new()
 	
-		# Set texture based on potato type
-	var texture_path = ""
-	match current_potato_info.type:
-#		"Purple Majesty":
-#			texture_path = "res://assets/potatoes/bodies/purple_majesty_body.png"
-#		"Red Bliss":
-#			texture_path = "res://assets/potatoes/bodies/red_bliss_body.png"
-		"Russet Burbank":
-			texture_path = "res://assets/potatoes/bodies/RussetBurbank_SmallSilhouette.png"
-#		"Sweet Potato":
-#			texture_path = "res://assets/potatoes/bodies/sweet_potato_body.png"
-#		"Yukon Gold":
-#			texture_path = "res://assets/potatoes/bodies/yukon_gold_body.png"
-	
-	potato_person.texture = load(texture_path)
-	potato_person.scale = Vector2(0.20, 0.20)
+	# Set texture
+	potato_person.texture = load("res://assets/potatoes/bodies/RussetBurbank_SmallSilhouette.png")
 	
 	# set path based on approval status
 	if approval_status == "approved":
@@ -1143,6 +1130,7 @@ func move_potato_along_path(approval_status):
 			
 	# Calculate score change
 	var path_follow = PathFollow2D.new()
+	path_follow.rotates = false
 	path.add_child(path_follow)
 	path_follow.add_child(potato_person)
 	
