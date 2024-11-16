@@ -49,9 +49,9 @@ point_count = 8
 
 [sub_resource type="Curve2D" id="Curve2D_xms7a"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 977.99, 193, 0, 0, 0, 0, 941.537, 190)
+"points": PackedVector2Array(0, 0, 0, 0, 977, 194, 0, 0, 0, 0, 943, 194, 0, 0, 0, 0, 911, 178)
 }
-point_count = 2
+point_count = 3
 
 [sub_resource type="Curve2D" id="Curve2D_uenca"]
 _data = {
@@ -521,8 +521,6 @@ curve = SubResource("Curve2D_1j820")
 [node name="EnterOfficePath" type="Path2D" parent="Gameplay/Paths"]
 z_index = 7
 z_as_relative = false
-position = Vector2(-420.074, 0)
-scale = Vector2(1.42647, 1)
 curve = SubResource("Curve2D_xms7a")
 
 [node name="ApprovePath" type="Path2D" parent="Gameplay/Paths"]

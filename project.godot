@@ -170,6 +170,16 @@ limits/message_queue/max_size_mb=128
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+driver/threads/thread_model=2
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
+textures/default_filters/anisotropic_filtering_level=0
+camera/depth_of_field/depth_of_field_bokeh_shape=0
+scaling_3d/mode=1
+textures/decals/filter=0
+textures/light_projectors/filter=0
+environment/glow/upscale_mode=0
+environment/volumetric_fog/use_filter=0
 environment/defaults/default_clear_color=Color(0.137255, 0.168627, 0.168627, 1)
 2d/snap/snap_2d_transforms_to_pixel=true
 2d/snap/snap_2d_vertices_to_pixel=true
