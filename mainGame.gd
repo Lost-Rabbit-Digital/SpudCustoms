@@ -432,7 +432,7 @@ func move_potato_to_office(potato_person):
 		print("removed potato from original parent")
 		
 	var path_follow = PathFollow2D.new()
-	path_follow.rotates = false  
+	path_follow.rotates = false 
 	enter_office_path.add_child(path_follow)
 	path_follow.add_child(potato_person)
 	print("Added potato_person to new PathFollow2D")
