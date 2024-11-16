@@ -1,6 +1,21 @@
 # Scratch Pad
 These are our goals, to-do tasks, and completed tasks.
 
+TO-DO 2024-11-16: DEMO
+[ ] - Remove potato types and remove from passport document
+[ ] - Add character generator and update in suspect panel and in suspect passport
+[ ] - Disallow the player to target to the right of the border wall or in the document processing area with missiles
+[ ] - Change position so Text flying up with the score update
+[ ] - Don't set stamps to go invisible when quota reached in Endless mode
+[ ] - Enable pause menu
+[ ] - Don't allow the player to move the passport while the animation is playing for it to pass into the customs table
+[ ] - Stamps go over edge of passport
+[ ] - Able to drag stamps off interaction table, bound them to lower half of screen
+[ ] - Able to drag passport off interaction table, bound them to lower half of screen
+[ ] - Snap closed passport to position of mouse cursor to avoid bad offset
+[ ] - Potato persons flip upside down when called into the office
+[ ] - Update menus with new MODERN DOS font
+[ ] - Update ATTRIBUTION.md with MODERN DOS font
 
 
 ## To Be Completed
@@ -8,13 +23,7 @@ These are tasks which must be completed before the submission to Steam deadline,
 
 ### Bugs
 [ ] - Check why date rules keep failing (make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
-[ ] - Don't allow the player to move the passport while the animation is playing for it to pass into the customs table
-[ ] - Stamps go over edge of passport
-[ ] - Able to drag stamps off interaction table, bound them to lower half of screen
-[ ] - Able to drag passport off interaction table, bound them to lower half of screen
-[ ] - Snap closed passport to position of mouse cursor to avoid bad offset
 [ ] - Mouse has to be over passport to be able to stamp
-[ ] - Potato persons flip upside down when called into the office
 
 ### Urgent
 [ ] - Explain how to flip the pages on the document in the tutorial
