@@ -13,11 +13,11 @@ TO-DO 2024-11-16: DEMO
 [ ] - Able to drag stamps off interaction table, bound them to lower half of screen
 [ ] - Able to drag passport off interaction table, bound them to lower half of screen
 [ ] - Snap closed passport to position of mouse cursor to avoid bad offset
-[ ] - Potato persons flip upside down when called into the office
 [ ] - Update menus with new MODERN DOS font
 [ ] - Update ATTRIBUTION.md with MODERN DOS font
 [ ] - Remove teleport to customs office when the potato is still moving in the line, make it say "Where is everyone"
 [ ] - Change megaphone dialogue box to be text files printed on instead of hardcoded words
+[o] - Potato persons flip upside down when called into the office
 
 
 ## To Be Completed

@@ -965,7 +965,6 @@ func play_random_stamp_sound():
 		$SystemManagers/AudioManager/SFXPool.stream = stamp_sounds.pick_random()
 		$SystemManagers/AudioManager/SFXPool.play()
 
-
 func apply_stamp(stamp):
 	if is_stamping:
 		return
@@ -1134,7 +1133,7 @@ func move_potato_along_path(approval_status):
 	path.add_child(path_follow)
 	path_follow.add_child(potato_person)
 	
-	potato_person.position = Vector2.ZERO
+	#potato_person.position = Vector2.ZERO
 	path_follow.progress_ratio = 0.0
 	
 	passport = $Gameplay/InteractiveElements/Passport
