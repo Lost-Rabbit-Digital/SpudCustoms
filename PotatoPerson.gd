@@ -1,4 +1,4 @@
-extends Node2D
+extends Sprite2D
 
 var current_point: int = 0
 var target_point: int = 0

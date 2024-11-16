@@ -3,13 +3,8 @@
 [ext_resource type="Script" path="res://PotatoPerson.gd" id="1_ftltf"]
 [ext_resource type="Texture2D" uid="uid://cv3hew72jdcn" path="res://assets/RussetBurbank_SmallSilhouette.png" id="2_p5u1t"]
 
-[node name="Node2D (PotatoPerson)" type="Node2D" groups=["PotatoPerson"]]
+[node name="Node2D (PotatoPerson)" type="Sprite2D" groups=["PotatoPerson"]]
 z_index = 7
 z_as_relative = false
-scale = Vector2(0.2, 0.2)
-script = ExtResource("1_ftltf")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-7, -5.71429)
-scale = Vector2(14, 16.4286)
 texture = ExtResource("2_p5u1t")
+script = ExtResource("1_ftltf")

@@ -1108,10 +1108,10 @@ func move_potato_along_path(approval_status):
 		print("Error: No potato info available")
 		return
 	var path: Path2D
-	var potato_person = Sprite2D.new()
 	
 	# Set texture
-	potato_person.texture = load("res://assets/potatoes/bodies/RussetBurbank_SmallSilhouette.png")
+	var PotatoScene = load("res://PotatoPerson.tscn")
+	var potato_person = PotatoScene.instantiate()
 	
 	# set path based on approval status
 	if approval_status == "approved":
@@ -1121,7 +1121,7 @@ func move_potato_along_path(approval_status):
 		path = $Gameplay/Paths/TimedOutPath
 		timedOut()
 	else: 
-		if randi() % 5 == 0:  # 20% chance to go sicko mode
+		if randi() % 20 == 0:  # 5% chance to go sicko mode
 			path = $Gameplay/Paths/RunnerPath
 		else:
 			path = $Gameplay/Paths/RejectPath
@@ -1156,7 +1156,7 @@ func move_potato_along_path(approval_status):
 		path_follow.queue_free()
 		reset_scene()
 		)
-	
+
 func reset_scene():
 	potato_mugshot.position.x = suspect_panel.position.x
 	$UI/Labels/JudgementLabel.text = ""
