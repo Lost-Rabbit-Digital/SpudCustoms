@@ -163,6 +163,10 @@ locale/translations=PackedStringArray("res://addons/maaacks_game_template/base/t
 disable_plugin_dialogues=true
 copy_path="res://main_scenes"
 
+[memory]
+
+limits/message_queue/max_size_mb=128
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
