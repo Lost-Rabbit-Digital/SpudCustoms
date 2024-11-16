@@ -339,7 +339,10 @@ texture = ExtResource("16_p2ayh")
 z_index = 1
 position = Vector2(1400, 351)
 scale = Vector2(2.812, 2.812)
-texture = ExtResource("18_yiok2")
+
+[node name="CharacterGenerator" parent="Gameplay/PotatoMugshot" instance=ExtResource("28_f6jf3")]
+position = Vector2(-67.2119, -47.6529)
+scale = Vector2(0.2, 0.2)
 
 [node name="PotatoMugshotShadow" type="Sprite2D" parent="Gameplay/PotatoMugshot"]
 modulate = Color(0, 0, 0, 0.521569)
@@ -537,15 +540,6 @@ curve = SubResource("Curve2D_x3wa3")
 visible = false
 position = Vector2(873, 210)
 scale = Vector2(0.600897, 0.600897)
-
-[node name="Head" parent="CharacterGenerator/Character" index="0"]
-frame_progress = 0.830036
-
-[node name="Face" parent="CharacterGenerator/Character" index="1"]
-frame_progress = 0.885328
-
-[node name="Torso" parent="CharacterGenerator/Character" index="2"]
-frame_progress = 0.715696
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]

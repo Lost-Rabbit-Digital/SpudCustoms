@@ -1,5 +1,6 @@
-[gd_scene load_steps=39 format=3 uid="uid://civ7gq0ovv5cr"]
+[gd_scene load_steps=40 format=3 uid="uid://civ7gq0ovv5cr"]
 
+[ext_resource type="Script" path="res://character_generator.gd" id="1_tmlea"]
 [ext_resource type="Texture2D" uid="uid://crn31gxjxc6x" path="res://assets/Russet_M_Face_64x34.png" id="1_txv40"]
 [ext_resource type="Texture2D" uid="uid://drexf7hn4dl2d" path="res://assets/Russet_W_Face_64x34.png" id="2_tmlea"]
 [ext_resource type="Texture2D" uid="uid://5l67ixtlxqgl" path="res://assets/Russet_Head_64x50.png" id="3_famtc"]
@@ -254,25 +255,30 @@ animations = [{
 "speed": 2.0
 }]
 
-[node name="CharacterGenerator" type="Node2D"]
+[node name="CharacterGenerator" type="Node2D" node_paths=PackedStringArray("head", "face", "torso")]
+script = ExtResource("1_tmlea")
+head = NodePath("Head")
+face = NodePath("Face")
+torso = NodePath("Torso")
 
-[node name="Character" type="Node2D" parent="."]
-position = Vector2(324, 287)
+[node name="Head" type="AnimatedSprite2D" parent="."]
+position = Vector2(334, 187)
 scale = Vector2(5, 5)
-
-[node name="Head" type="AnimatedSprite2D" parent="Character"]
-position = Vector2(1.62, -20.15)
 sprite_frames = SubResource("SpriteFrames_ay427")
 animation = &"head"
-frame_progress = 0.0951991
+frame = 2
+frame_progress = 0.958653
 
-[node name="Face" type="AnimatedSprite2D" parent="Character"]
+[node name="Face" type="AnimatedSprite2D" parent="."]
+position = Vector2(324, 287)
+scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_ay427")
 animation = &"face"
-frame_progress = 0.958949
+frame_progress = 0.30854
 
-[node name="Torso" type="AnimatedSprite2D" parent="Character"]
-position = Vector2(2.2, 22)
+[node name="Torso" type="AnimatedSprite2D" parent="."]
+position = Vector2(335, 397)
+scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_ay427")
 animation = &"torso"
-frame_progress = 0.933891
+frame_progress = 0.666016
