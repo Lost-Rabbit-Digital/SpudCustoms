@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cks3khdvnf0vp"
-path="res://.godot/imported/windows_command_prompt.ttf-615ac9748324275105aede07ede5c5a8.fontdata"
+path="res://.godot/imported/windows_command_prompt.ttf-b20714b5d62b45564b88fef6268d0f20.fontdata"
 
 [deps]
 
-source_file="res://windows_command_prompt.ttf"
-dest_files=["res://.godot/imported/windows_command_prompt.ttf-615ac9748324275105aede07ede5c5a8.fontdata"]
+source_file="res://assets/fonts/windows_command_prompt.ttf"
+dest_files=["res://.godot/imported/windows_command_prompt.ttf-b20714b5d62b45564b88fef6268d0f20.fontdata"]
 
 [params]
 
