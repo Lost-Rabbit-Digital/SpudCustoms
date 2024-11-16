@@ -131,7 +131,7 @@ func _ready():
 	suspect_panel_front = $Gameplay/SuspectPanel/SuspectPanelFront
 	suspect = $Gameplay/PotatoMugshot
 	
-	$UI/Labels/StrikesLabel.text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
+	$UI/Labels/StrikesLabel.text = "Strikes: " + str(strikes) + " / " + str(max_strikes)
 
 	# Add closed passport to draggable sprites
 	draggable_sprites.append(passport)
@@ -163,7 +163,7 @@ func set_difficulty(level):
 			processing_time = 30
 			
 	update_quota_display()
-	$UI/Labels/StrikesLabel.text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
+	$UI/Labels/StrikesLabel.text = "Strikes: " + str(strikes) + " / " + str(max_strikes)
 	
 
 func setup_guide_tutorial_timer():
@@ -744,7 +744,7 @@ func timedOut():
 	if strikes >= max_strikes:
 		print("Game over!")
 		go_to_game_over()
-	$UI/Labels/StrikesLabel.text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
+	$UI/Labels/StrikesLabel.text = "Strikes: " + str(strikes) + " / " + str(max_strikes)
 
 func process_decision(allowed):
 	print("Evaluating immigration decision in process_decision()...")
@@ -785,7 +785,7 @@ func process_decision(allowed):
 			
 	update_score_display()
 	update_quota_display()
-	$UI/Labels/StrikesLabel.text = "Strikes   " + str(strikes) + " / " + str(max_strikes)
+	$UI/Labels/StrikesLabel.text = "Strikes: " + str(strikes) + " / " + str(max_strikes)
 
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()

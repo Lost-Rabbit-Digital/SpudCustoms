@@ -24,7 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="18_yiok2"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="20_pd2wg"]
 [ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://assets/alerts/guide_alert_box.png" id="22_3pqlk"]
-[ext_resource type="Texture2D" uid="uid://cfkvlvqhnapxc" path="res://assets/documents/customs_guide/customs_guide_open_2.png" id="26_rft0e"]
+[ext_resource type="Texture2D" uid="uid://b2wymckqr8jsk" path="res://assets/documents/customs_guide/customs_guide_closed_small.png" id="27_tbg2w"]
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://prototyping/random_character_creation/character_generator.tscn" id="28_f6jf3"]
 [ext_resource type="Texture2D" uid="uid://dubo3sdxx8chn" path="res://assets/stamps/approval_stamp_3.png" id="28_uvib1"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="29_rft0e"]
@@ -96,7 +96,7 @@ texture = ExtResource("18_jl4i3")
 [node name="InteractableItemsWorldBackground" type="Sprite2D" parent="UI"]
 z_index = 5
 z_as_relative = false
-position = Vector2(640, 360)
+position = Vector2(637, 360)
 texture = ExtResource("7_woji0")
 
 [node name="Labels" type="Control" parent="UI"]
@@ -145,10 +145,10 @@ autowrap_mode = 3
 z_index = 2
 z_as_relative = false
 layout_mode = 0
-offset_left = 987.0
-offset_top = 259.0
-offset_right = 1195.0
-offset_bottom = 309.0
+offset_left = 988.0
+offset_top = 241.0
+offset_right = 1196.0
+offset_bottom = 291.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
@@ -165,10 +165,10 @@ texture_filter = 1
 texture_repeat = 1
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
-offset_left = 987.0
-offset_top = 637.0
-offset_right = 1211.0
-offset_bottom = 687.0
+offset_left = 897.0
+offset_top = 636.0
+offset_right = 1121.0
+offset_bottom = 686.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
@@ -184,9 +184,9 @@ texture_filter = 1
 texture_repeat = 1
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
-offset_left = 987.0
+offset_left = 897.0
 offset_top = 665.0
-offset_right = 1189.0
+offset_right = 1099.0
 offset_bottom = 715.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -231,10 +231,10 @@ texture_filter = 1
 texture_repeat = 1
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
-offset_left = 987.0
-offset_top = 232.0
-offset_right = 1189.0
-offset_bottom = 282.0
+offset_left = 256.0
+offset_top = 248.0
+offset_right = 458.0
+offset_bottom = 298.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
@@ -278,16 +278,15 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Megaphone" type="Sprite2D" parent="Gameplay"]
-visible = false
 z_index = 12
-position = Vector2(910, 129)
-scale = Vector2(1.4, 1.4)
+position = Vector2(900, 130)
+scale = Vector2(2.455, 2.455)
 texture = ExtResource("7_7m4ia")
 
 [node name="MegaphoneDialogueBoxBlank" type="Sprite2D" parent="Gameplay/Megaphone"]
 visible = false
-position = Vector2(53.5714, -35.7143)
-scale = Vector2(0.581474, 0.581474)
+position = Vector2(33.8086, -22.8106)
+scale = Vector2(0.349, 0.349)
 texture = ExtResource("9_arv36")
 
 [node name="FlashAlert" type="Sprite2D" parent="Gameplay/Megaphone"]
@@ -441,8 +440,8 @@ texture = ExtResource("16_qj41b")
 [node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_index = 2
 z_as_relative = false
-position = Vector2(637, 417)
-texture = ExtResource("26_rft0e")
+position = Vector2(1219, 589)
+texture = ExtResource("27_tbg2w")
 script = ExtResource("35_uuf1y")
 
 [node name="ClosedGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
@@ -456,6 +455,7 @@ z_as_relative = false
 texture = ExtResource("22_3pqlk")
 
 [node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
+visible = false
 
 [node name="GuideNote" type="Label" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
 texture_filter = 1

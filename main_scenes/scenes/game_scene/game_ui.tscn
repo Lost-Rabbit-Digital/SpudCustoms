@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bwaesp7snetav"]
+[gd_scene load_steps=12 format=3 uid="uid://wd3iagd1ob80"]
 
 [ext_resource type="Script" path="res://addons/maaacks_game_template/extras/scripts/pause_menu_controller.gd" id="1_vcw48"]
 [ext_resource type="PackedScene" uid="uid://cnmu4k37qncn8" path="res://addons/maaacks_game_template/examples/scenes/overlaid_menus/pause_menu.tscn" id="2_s1svj"]
