@@ -441,7 +441,7 @@ func move_potato_to_office(potato_person):
 	print("Reset potato position and path progress") 
 		
 	var tween = create_tween()
-	tween.tween_property(path_follow, "progress_ratio", 1.0, 2.0)
+	tween.tween_property(path_follow, "progress_ratio", 1.0, 1.0)
 	tween.tween_callback(func():
 		print("Potato reached end of path, clean up")
 		potato_person.queue_free()
@@ -465,13 +465,13 @@ func animate_mugshot_and_passport():
 	tween.set_parallel(true)
 
 	# Animate potato mugshot
-	tween.tween_property(potato_mugshot, "position:x", suspect_panel.position.x, 2)
+	tween.tween_property(potato_mugshot, "position:x", suspect_panel.position.x, 1)
 	tween.tween_property(potato_mugshot, "modulate:a", 1, 2)
 	tween.tween_property(passport, "modulate:a", 1, 2)
 	# Animate passport
-	tween.tween_property(passport, "visible", true, 0).set_delay(2)
-	tween.tween_property(passport, "position:y", suspect_panel.position.y + suspect_panel_front.texture.get_height() / 5, 1).set_delay(2)
-	tween.tween_property(passport, "z_index", 3, 0).set_delay(3)
+	tween.tween_property(passport, "visible", true, 0).set_delay(1)
+	tween.tween_property(passport, "position:y", suspect_panel.position.y + suspect_panel_front.texture.get_height() / 5, 1).set_delay(1)
+	tween.tween_property(passport, "z_index", 3, 0).set_delay(2)
 
 	tween.chain().tween_callback(func(): print("Finished animating mugshot and passport"))
 	
@@ -520,7 +520,6 @@ func stop_label_tween():
 		label_tween = null
 	reset_time_label()
 
-
 			# Implicit rejection of potatos via the process_decision(false) function 
 			# carries the risk of accidentally passing a potato and improving player score
 			# This should be its' own force_decision(), maybe where the Supervisor says 
@@ -529,8 +528,6 @@ func stop_label_tween():
 			# move_potato_along_path(approval_status) controls moving the player based on approval status
 			# We can add a new approval status (timed_out), and have the potato take a different route. 
 			# we can put that logic as well as the logic for adding a strike into the force_decision() function
-
-
 
 func _process(_delta):
 	# Processing timer implementation
@@ -1098,9 +1095,9 @@ func remove_stamp():
 	# Animate the potato mugshot and passport exit
 	var tween = create_tween()
 	tween.set_parallel(true)
-	tween.tween_property(potato_mugshot, "position:x", suspect_panel.position.x - potato_mugshot.texture.get_width(), 2)
-	tween.tween_property(potato_mugshot, "modulate:a", 0, 2)
-	tween.tween_property(passport_book, "modulate:a", 0, 2)
+	tween.tween_property(potato_mugshot, "position:x", suspect_panel.position.x - potato_mugshot.texture.get_width(), 1)
+	tween.tween_property(potato_mugshot, "modulate:a", 0, 1)
+	tween.tween_property(passport_book, "modulate:a", 0, 1)
 	tween.chain().tween_callback(func(): 
 		move_potato_along_path(approval_status)
 		is_potato_in_office = false # set to false as soon as potato leaves customs office
@@ -1155,15 +1152,17 @@ func move_potato_along_path(approval_status):
 	passport = $Gameplay/InteractiveElements/Passport
 	passport.modulate.a = 0
 	
+	var runner_time = randi_range(7, 11)
+	
 	var exit_tween = create_tween()
 	if "Approve" in path:
-		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 10.0)
-	if "Reject" in path:
-		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 9.0)
-	if "TimedOut" in path:
-		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 9.0)
-	else:
 		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 8.0)
+	if "Reject" in path:
+		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 8.0)
+	if "TimedOut" in path:
+		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 8.0)
+	else:
+		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, runner_time)
 		
 	exit_tween.tween_callback(func():
 		potato_person.queue_free()
