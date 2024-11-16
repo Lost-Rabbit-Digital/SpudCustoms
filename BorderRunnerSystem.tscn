@@ -16,7 +16,7 @@ missile_start_height = 400
 [node name="ExplosionVFX" type="Node2D" parent="."]
 z_index = 11
 script = ExtResource("2_1snt0")
-num_particles = 200
+num_particles = 400
 particle_size = 3
 
 [node name="AlarmSound" type="AudioStreamPlayer2D" parent="."]

@@ -36,9 +36,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_f3jw2"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 932, 184, 0, 0, 0, 0, 943, 161, 0, 0, 0, 0, 932, 103, 0, 0, 0, 0, 872, 94, 0, 0, 0, 0, 867, 73, 0, 0, 0, 0, 825, 73, 0, 0, 0, 0, 795, 99, 0, 0, 0, 0, 601, 109, 0, 0, 0, 0, 300, 128, 0, 0, 0, 0, 164, 99, 0, 0, 0, 0, 155, -6)
+"points": PackedVector2Array(0, 0, 0, 0, 932, 184, 0, 0, 0, 0, 943, 161, 0, 0, 0, 0, 930.147, 102.571, 0, 0, 0, 0, 865.881, 102.571, 0, 0, 0, 0, 855.994, 68.3915, 0, 0, 0, 0, 835.231, 72.4127, 0, 0, 0, 0, 825.344, 100.561, 0, 0, 0, 0, 779.863, 93.5238, 0, 0, 0, 0, 708, 144, 0, 0, 0, 0, 579, 88, 0, 0, 0, 0, 505, 136, 0, 0, 0, 0, 314.182, 102.571, 0, 0, 0, 0, 185.65, 137.757, 0, 0, 0, 0, 207.402, -0.973545)
 }
-point_count = 11
+point_count = 14
 
 [sub_resource type="Curve2D" id="Curve2D_1j820"]
 _data = {
@@ -68,6 +68,10 @@ point_count = 17
 script = ExtResource("1_s4bva")
 
 [node name="BorderRunnerSystem" parent="." instance=ExtResource("29_rft0e")]
+runner_base_points = 25
+perfect_hit_bonus = 15
+streak_bonus = 10
+missile_speed = 400
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -262,6 +266,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Megaphone" type="Sprite2D" parent="Gameplay"]
+visible = false
 z_index = 12
 position = Vector2(910, 129)
 scale = Vector2(1.4, 1.4)
@@ -487,6 +492,8 @@ offset_bottom = 40.0
 [node name="RunnerPath" type="Path2D" parent="Gameplay/Paths"]
 z_index = 7
 z_as_relative = false
+position = Vector2(-10.7703, 0.968421)
+scale = Vector2(1.01142, 0.994737)
 curve = SubResource("Curve2D_f3jw2")
 
 [node name="TimedOutPath" type="Path2D" parent="Gameplay/Paths"]
