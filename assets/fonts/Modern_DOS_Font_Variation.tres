@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://t3ii3pbmg2bo"]
+
+[ext_resource type="FontFile" uid="uid://beqph2xj7ncxa" path="res://assets/fonts/ModernDOS8x16.ttf" id="1_ter6v"]
+
+[resource]
+base_font = ExtResource("1_ter6v")

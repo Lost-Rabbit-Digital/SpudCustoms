@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://assets/suspect_panel/suspect_panel.png" id="2_f25cg"]
 [ext_resource type="Texture2D" uid="uid://doml0udrwe6pe" path="res://assets/Background.png" id="2_rft0e"]
+[ext_resource type="FontVariation" uid="uid://t3ii3pbmg2bo" path="res://assets/fonts/Modern_DOS_Font_Variation.tres" id="6_rd1c0"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="7_7m4ia"]
 [ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_woji0"]
 [ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="9_arv36"]
@@ -27,7 +28,6 @@
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://prototyping/random_character_creation/character_generator.tscn" id="28_f6jf3"]
 [ext_resource type="Texture2D" uid="uid://dubo3sdxx8chn" path="res://assets/stamps/approval_stamp_3.png" id="28_uvib1"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="29_rft0e"]
-[ext_resource type="FontFile" uid="uid://beqph2xj7ncxa" path="res://assets/fonts/ModernDOS8x16.ttf" id="29_tbg2w"]
 [ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="31_c10l6"]
 [ext_resource type="Script" path="res://guide.gd" id="35_uuf1y"]
 
@@ -79,6 +79,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="WorldPanel" type="Sprite2D" parent="UI"]
 z_index = 6
@@ -102,19 +103,22 @@ texture = ExtResource("7_woji0")
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="DateLabel" type="Label" parent="UI/Labels"]
 z_index = 2
 z_as_relative = false
+texture_filter = 1
+texture_repeat = 1
 layout_mode = 0
-offset_left = 71.0
-offset_top = 250.0
-offset_right = 203.0
-offset_bottom = 300.0
-theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+offset_left = 73.0
+offset_top = 248.0
+offset_right = 233.0
+offset_bottom = 298.0
+theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_fonts/font = ExtResource("6_rd1c0")
 theme_override_font_sizes/font_size = 32
 text = "2024.11.14"
 horizontal_alignment = 1
@@ -128,10 +132,10 @@ offset_left = 266.0
 offset_top = 652.0
 offset_right = 616.0
 offset_bottom = 706.0
-theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_fonts/font = ExtResource("6_rd1c0")
 theme_override_font_sizes/font_size = 16
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -141,14 +145,14 @@ autowrap_mode = 3
 z_index = 2
 z_as_relative = false
 layout_mode = 0
-offset_left = 994.0
-offset_top = 229.0
-offset_right = 1158.0
-offset_bottom = 279.0
-theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+offset_left = 987.0
+offset_top = 259.0
+offset_right = 1195.0
+offset_bottom = 309.0
+theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_fonts/font = ExtResource("6_rd1c0")
 theme_override_font_sizes/font_size = 32
 text = "Time Left: 60"
 horizontal_alignment = 1
@@ -157,35 +161,39 @@ vertical_alignment = 1
 [node name="StrikesLabel" type="Label" parent="UI/Labels"]
 z_index = 2
 z_as_relative = false
+texture_filter = 1
+texture_repeat = 1
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
-offset_left = 1079.0
-offset_top = 666.0
-offset_right = 1279.0
-offset_bottom = 716.0
-theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+offset_left = 987.0
+offset_top = 637.0
+offset_right = 1211.0
+offset_bottom = 687.0
+theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_fonts/font = ExtResource("6_rd1c0")
 theme_override_font_sizes/font_size = 32
-text = "Strikes   0 / 5"
+text = "Strikes: 0 / 5"
 vertical_alignment = 1
 
 [node name="QuotaLabel" type="Label" parent="UI/Labels"]
 z_index = 2
 z_as_relative = false
+texture_filter = 1
+texture_repeat = 1
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
-offset_left = 899.0
-offset_top = 666.0
-offset_right = 1101.0
-offset_bottom = 716.0
-theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+offset_left = 987.0
+offset_top = 665.0
+offset_right = 1189.0
+offset_bottom = 715.0
+theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_fonts/font = ExtResource("6_rd1c0")
 theme_override_font_sizes/font_size = 32
-text = "Quota     0 / 8"
+text = "Quota: 0 / 8"
 vertical_alignment = 1
 
 [node name="RulesLabel" type="Label" parent="UI/Labels"]
@@ -199,7 +207,7 @@ offset_bottom = 443.0
 theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_fonts/font = ExtResource("6_rd1c0")
 theme_override_font_sizes/font_size = 16
 autowrap_mode = 3
 
@@ -213,23 +221,26 @@ offset_bottom = 288.0
 theme_override_colors/font_color = Color(1, 0.00392157, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("6_rd1c0")
 theme_override_font_sizes/font_size = 24
 
 [node name="ScoreLabel" type="Label" parent="UI/Labels"]
 z_index = 2
 z_as_relative = false
+texture_filter = 1
+texture_repeat = 1
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
-offset_left = 900.0
-offset_top = 638.0
-offset_right = 1102.0
-offset_bottom = 688.0
-theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+offset_left = 987.0
+offset_top = 232.0
+offset_right = 1189.0
+offset_bottom = 282.0
+theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_fonts/font = ExtResource("6_rd1c0")
 theme_override_font_sizes/font_size = 32
-text = "Score    3,200"
+text = "Score: 9001"
 vertical_alignment = 1
 
 [node name="SystemManagers" type="Control" parent="."]
@@ -458,7 +469,7 @@ offset_bottom = 109.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
-theme_override_fonts/font = ExtResource("29_tbg2w")
+theme_override_fonts/font = ExtResource("6_rd1c0")
 theme_override_font_sizes/font_size = 16
 text = "To begin, press the speaker with the yellow flashing ring on top of the customs office building.
 Take the documents from the Potato and bring them to the main table.
@@ -539,8 +550,8 @@ frame_progress = 0.885328
 frame_progress = 0.715696
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/GuideFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]

@@ -108,8 +108,11 @@ translation/add_separator=false
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/mode=3
+window/size/mode=4
+window/size/window_width_override=2560
+window/size/window_height_override=1440
 window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
 mouse_cursor/custom_image="res://assets/cursor/cursor_default.png"
 
 [editor_plugins]
@@ -119,6 +122,10 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/maaa
 [global_group]
 
 PotatoPerson=""
+
+[gui]
+
+theme/custom_font="res://assets/fonts/Modern_DOS_Font_Variation.tres"
 
 [input]
 
