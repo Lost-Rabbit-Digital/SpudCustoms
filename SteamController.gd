@@ -41,6 +41,12 @@ func _ready():
 		# Fetch player avatar image in small format for leaderboard display
 		Steam.getPlayerAvatar(Steam.AVATAR_SMALL)
 		Steam.avatar_loaded.connect(_on_loaded_avatar)
+		
+		
+		
+# Leaderboard testing for each difficulty level
+
+
 	
 	
 # Avatar loading logic

@@ -340,7 +340,6 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 	print("INFO: This potato should be allowed in, returning true.")
 	return true
 
-
 func update_date_display():
 	var current_date = Time.get_date_dict_from_system()
 	var formatted_date = "%04d.%02d.%02d" % [current_date.year, current_date.month, current_date.day]
