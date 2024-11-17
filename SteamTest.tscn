@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cj4csdy1nlxfx"]
+
+[ext_resource type="Script" path="res://SteamController.gd" id="1_ohfha"]
+
+[node name="SteamController" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ohfha")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(643, 360)

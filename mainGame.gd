@@ -14,11 +14,13 @@ var is_potato_in_office = false
 var current_potato_info
 var current_potato
 
+
 # Track win and lose parameters
 var quota_met = 0  # Number of correct decisions
 var quota_target = 8  # Required correct decisions (formerly max_score)
 var strikes = 0
 var max_strikes = 3
+var difficulty_level
 
 # Track points-based performance scoring system
 var score = 0  # Points from runners and other bonuses
@@ -68,8 +70,6 @@ var label_tween: Tween
 var guide: Sprite2D
 var is_guide_open = false
 
-var difficulty_level = "Easy"  # Can be "Easy", "Normal", or "Hard"
-
 # Stamp system
 const STAMP_ANIMATION_DURATION = 0.3  # Duration of the stamp animation in seconds
 const STAMP_MOVE_DISTANCE = 36  # How far the stamp moves down
@@ -88,6 +88,7 @@ var is_in_guide_tutorial = true
 @onready var enter_office_path = $Gameplay/Paths/EnterOfficePath
 
 func _ready():
+	difficulty_level = Global.difficulty_level
 	# Store the default cursor shape
 	default_cursor = Input.get_current_cursor_shape()
 	update_score_display()
@@ -157,7 +158,7 @@ func set_difficulty(level):
 			quota_target = 10
 			max_strikes = 3
 			processing_time = 45
-		"Hard":
+		"Expert":
 			quota_target = 12
 			max_strikes = 2
 			processing_time = 30
@@ -179,13 +180,6 @@ func _on_guide_flash_timer_timeout():
 
 func generate_rules():
 	current_rules = [
-		# Type-based rules
-		"Purple Majesty are not welcome.",
-		"No Russet Burbanks allowed!",
-		"Yukon Gold potatoes must be rejected.",
-		"Sweet Potatoes require special authorization. Reject!",
-		"Red Bliss potatoes are currently restricted.",
-
 		# Condition-based rules
 		"All potatoes must be Fresh!",
 		"Extra Eyes are suspicious, inspect carefully and reject.",
@@ -263,22 +257,6 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 	for rule in current_rules:
 		print("Current rule processing: " + rule)
 		match rule:
-			# Type-based rules
-			"Purple Majesty are not welcome.":
-				if potato_info.type == "Purple Majesty":
-					return false
-			"No Russet Burbanks allowed!":
-				if potato_info.type == "Russet Burbank":
-					return false
-			"Yukon Gold potatoes must be rejected.":
-				if potato_info.type == "Yukon Gold":
-					return false
-			"Sweet Potatoes require special authorization. Reject!":
-				if potato_info.type == "Sweet Potato":
-					return false
-			"Red Bliss potatoes are currently restricted.":
-				if potato_info.type == "Red Bliss":
-					return false
 			# Condition-based rules
 			"All potatoes must be Fresh!":
 				if potato_info.condition != "Fresh":
