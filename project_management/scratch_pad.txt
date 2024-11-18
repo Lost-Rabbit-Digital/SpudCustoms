@@ -17,7 +17,27 @@ TO-DO 2024-11-16: DEMO
 [ ] - Update ATTRIBUTION.md with MODERN DOS font
 [ ] - Remove teleport to customs office when the potato is still moving in the line, make it say "Where is everyone"
 [ ] - Change megaphone dialogue box to be text files printed on instead of hardcoded words
-[o] - Potato persons flip upside down when called into the office
+[ ] - Add 8 different potato gibs that explode from a hit potato, with more exploding from a perfectly hit potato
+[ ] - Balance points (missiling, stamping, scanning)
+[ ] - Check and see whether strikes are actually removing
+[ ] - Difficulty selection UI after selecting endless mode
+[ ] - Make difficulty a global enum? 
+[ ] - Make missile travel in a loop de loop pattern for visual interest
+[ ] - Make sure missile has glow on rocket thruster
+[ ] - Make sure missile has smoke trail
+[ ] - Make sure missile leaves a crater
+[ ] - Make sure scores are shown above their respective action (stamping, missiling, scanning)
+[ ] - Make sure that potato gibs have a smaller smoke trail.
+[ ] - Randomize path that the runners traverse
+[ ] - Remove invalid/inconsistent rules (remove potato types, remove expiration related rules and just properly process expirations)
+[ ] - Show the appropriate leaderboard out of 3 Leaderboards based on the difficulty_level global
+[ ] - UV lamp represents a high-risk way to maximize points.
+[ ] - Leaderboards for top score, most kills, most games
+[ ] - Steam.uploadLeaderboardScore( score, keep_best, details, handle ) 
+[ ] - Use top 3 scores for leaderboard, then show ... and show 3 scores above player and 3 scores below player (if any), with players score in middle. 
+[ ] - Use Steam name and avatar on the leaderboard use Steam.AVATAR_SMALL for the leaderboard
+[ ] - Fix text color, should be white with black outline
+[ ] - Integrate pause menu, bgm handler, sfx handler
 
 
 ## To Be Completed
@@ -72,6 +92,7 @@ These are various goals which are out of scope for the current roadmap, but if p
 # Completed tasks list
 The tasks which have be completed and pushed to VCS.
 
+[o] - Potato persons flip upside down when called into the office
 [o] - Stamp doesn't match the rest of the pixel feel, different resolution
 [o] - Picking up stamp hides cursor
 [o] - Cut items off when they leave interaction table
