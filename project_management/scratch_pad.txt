@@ -27,7 +27,6 @@ TO-DO 2024-11-16: DEMO
     [ ] - Check and see whether strikes are actually removing
     [ ] - Difficulty selection UI after selecting endless mode
     [ ] - Make difficulty a global enum? 
-    [ ] - Make missile travel in a loop de loop pattern for visual interest
     [ ] - Make sure missile has glow on rocket thruster
     [ ] - Make sure missile has smoke trail
     [ ] - Make sure missile leaves a crater

@@ -8,7 +8,7 @@ extends Node2D
 @export var streak_bonus = 100           # Bonus for catching multiple runners
 @export var debug_mode = true            # Add checkbox in editor for testing
 var runner_streak = 0                    # Track consecutive successful catches
-@export var explosion_size = 48          # Size of explosion in pixels
+@export var explosion_size = 50          # Size of explosion in pixels
 
 # Giblet settings
 @export var num_gibs = 40          # Number of gibs to spawn per explosion
@@ -116,7 +116,7 @@ func start_runner(potato):
 		return
 		
 	var path_follow = PathFollow2D.new()
-	path.rotates = false
+	path_follow.rotates = false
 	path.add_child(path_follow)
 	path_follow.progress_ratio = 0.0
 	
@@ -151,7 +151,7 @@ func runner_escaped():
 	runner_streak = 0
 	get_parent().strikes += 1
 	alert_label.text = "Runner escaped! Strike added!"
-	alert_label.modulate = Color.RED
+	alert_label.add_theme_color_override("font_color", Color.RED)
 	
 	var timer = get_tree().create_timer(2.0)
 	timer.timeout.connect(Callable(self, "clear_alert"))
@@ -271,8 +271,8 @@ func handle_successful_hit():
 		"bonus": bonus_text,
 		"points": points_earned
 	})
-	alert_label.modulate = Color.GREEN
-	
+	alert_label.add_theme_color_override("font_color", Color.GREEN)
+
 	var timer = get_tree().create_timer(2.0)
 	timer.timeout.connect(Callable(self, "clear_alert"))
 	
@@ -294,7 +294,7 @@ func clean_up_runner():
 
 func clear_alert():
 	alert_label.visible = false
-	alert_label.modulate = Color.WHITE
+	alert_label.add_theme_color_override("font_color", Color.WHITE)
 
 class Gib extends Sprite2D:
 	var velocity = Vector2.ZERO
