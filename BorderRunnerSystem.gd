@@ -1,51 +1,85 @@
 extends Node2D
+## Manages the spawning of runners, missile targeting, and giblet effects when potatoes are destroyed
+class_name BorderRunnerSystem
 
-# Runner settings
-@export var runner_chance = 0.1          # 10% chance per second for queue potato to run
-@export var min_time_between_runs = 15.0 # Reduce for testing
-@export var runner_base_points = 250     # Base points for catching runner
-@export var perfect_hit_bonus = 150      # Extra points for perfect hits
-@export var streak_bonus = 100           # Bonus for catching multiple runners
-@export var debug_mode = true            # Add checkbox in editor for testing
-var runner_streak = 0                    # Track consecutive successful catches
-@export var explosion_size = 50          # Size of explosion in pixels
 
-# Giblet settings
-@export var num_gibs = 40          # Number of gibs to spawn per explosion
-@export var gib_lifetime = 2       # How long gibs persist
-@export var gib_min_speed = 250    # Minimum velocity for gibs
-@export var gib_max_speed = 375    # Maximum velocity for gibs
-@export var gib_gravity = 500      # Downward acceleration
-@export var gib_spin_speed = 13    # How fast gibs rotate
-@export var gib_scale = Vector2(0.35, 0.35)
+@export_group("System References")
+## Main root node of the game scene
+@export var root_node: Node2D
+## Manager for handling the potato queue
+@export var queue_manager: Node2D
+## Label used to display the current score
+@export var score_label: Label
+## Label used to display alerts and notifications to the player
+@export var alert_label: Label
 
-# Internal state
-var time_since_last_run = 0.0
-var active_runner = null
-var missile_active = false
-var missile_position = Vector2.ZERO
-var missile_target = Vector2.ZERO
-var explosion_active = false
-var explosion_position = Vector2.ZERO
-var is_runner_escaping = false  # Prevent multiple escape triggers
+@export_group("Runner System")
+@export_subgroup("Spawn Settings")
+## Chance per second for a queued potato to attempt escape
+@export_range(0, 1, 0.05) var runner_chance: float = 0.1
+## Minimum time that must pass between runner spawn attempts
+@export var min_time_between_runs: float = 15.0
+## Movement speed of runners along their escape path
+@export var runner_speed: float = 0.15
 
-# Runner settings
-var runner_speed = 0.15
-@export var missile_speed = 500
+@export_subgroup("Score Settings")
+## Base score awarded for successfully catching a runner
+@export var runner_base_points: int = 250
+## Additional points awarded for perfect accuracy hits
+@export var perfect_hit_bonus: int = 150
+## Bonus points multiplier for consecutive successful catches
+@export var streak_bonus: int = 100
 
-# Missile settings
-@export var missile_start_height = 600
+## Settings controlling missile launch, targeting and explosion behavior
+@export_group("Missile System")
+## Speed at which missiles travel toward their target
+@export var missile_speed: float = 500
+## Initial height from which missiles are launched
+@export var missile_start_height: float = 600
+## Radius of explosion effect and damage area
+@export var explosion_size: float = 50
 
-# Node references
-@onready var queue_manager = $"../SystemManagers/QueueManager"
+@export_group("Giblet System")
+@export_subgroup("Visual Settings")
+## Number of potato pieces that spawn when a runner is destroyed
+@export var num_gibs: int = 40
+## Size scaling applied to giblet sprites
+@export var gib_scale: Vector2 = Vector2(0.35, 0.35)
+## Duration giblets remain visible before disappearing
+@export var gib_lifetime: float = 2.0
+
+@export_subgroup("Physics Settings")
+## Slowest initial speed for spawned giblets
+@export var gib_min_speed: float = 250
+## Fastest initial speed for spawned giblets
+@export var gib_max_speed: float = 375
+## Downward acceleration applied to giblets over time
+@export var gib_gravity: float = 500
+## Rotation speed applied to giblets while in motion
+@export var gib_spin_speed: float = 13
+
+@export_group("Debug")
+## Enables testing features and debug functionality
+@export var debug_mode: bool = true
+
+# Audio/Visual node references
 @onready var alarm_sound = $AlarmSound
 @onready var explosion_sound = $ExplosionSound
 @onready var missile_sound = $MissileSound
-@onready var alert_label = $"../UI/Labels/AlertLabel"
 @onready var explosion_vfx = $ExplosionVFX
 @onready var missile_sprite = $MissileSprite
 
-var gib_textures = []
+# Internal state tracking
+var runner_streak: int = 0
+var time_since_last_run: float = 0.0
+var active_runner = null
+var missile_active: bool = false
+var missile_position: Vector2 = Vector2.ZERO
+var missile_target: Vector2 = Vector2.ZERO
+var explosion_active: bool = false
+var explosion_position: Vector2 = Vector2.ZERO
+var is_runner_escaping: bool = false
+var gib_textures: Array = []
 func _ready():
 	# Create missile sprite if it doesn't exist
 	if not missile_sprite:
@@ -259,13 +293,16 @@ func handle_successful_hit():
 		})
 	
 	# Remove a strike if any present
-	if get_parent().strikes > 0:
-		get_parent().strikes -= 1
+	if root_node.strikes > 0:
+		root_node.strikes -= 1
 		bonus_text += "Strike removed!\n"
 	
 	# Add points
-	get_parent().score += points_earned
-	
+	root_node.score += points_earned
+	score_label.text = "Score: {total_points}".format({
+		"total_points": format_number(root_node.score)
+	})
+
 	# Update display
 	alert_label.text = "{bonus}Total: +{points} points!".format({
 		"bonus": bonus_text,
@@ -277,6 +314,18 @@ func handle_successful_hit():
 	timer.timeout.connect(Callable(self, "clear_alert"))
 	
 	clean_up_runner()
+	
+func format_number(number):
+	var str_num = str(number)
+	var result = ""
+	var count = 0
+	for i in range(str_num.length() - 1, -1, -1):
+		if count == 3:
+			result = "," + result
+			count = 0
+		result = str_num[i] + result
+		count += 1
+	return result
 
 func clean_up_runner():
 	print("Cleaning up runner")

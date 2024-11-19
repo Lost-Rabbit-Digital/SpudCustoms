@@ -14,7 +14,7 @@ var textures = {
 }
 
 # Reference to the Sprite2D node
-@onready var sprite = $Sprite2D
+@onready var sprite = $"Sprite2D"
 
 func _ready():
 	# Ensure the Sprite2D node exists
@@ -29,6 +29,7 @@ func update_potato(new_potato_info: Dictionary):
 	potato_info = new_potato_info
 	update_appearance()
 
+# WARNING: GOING TO REPLACE THIS WHEN DOING CHARACTER GENERATION
 # Function to update the potato's appearance
 func update_appearance():
 	if not sprite:

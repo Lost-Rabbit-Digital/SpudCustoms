@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://PotatoPerson.gd" id="1_ftltf"]
 [ext_resource type="Texture2D" uid="uid://cv3hew72jdcn" path="res://assets/RussetBurbank_SmallSilhouette.png" id="2_p5u1t"]
 
-[node name="Node2D (PotatoPerson)" type="Sprite2D" groups=["PotatoPerson"]]
+[node name="PotatoPerson" type="Sprite2D" groups=["PotatoPerson"]]
 z_index = 7
 z_as_relative = false
 texture = ExtResource("2_p5u1t")

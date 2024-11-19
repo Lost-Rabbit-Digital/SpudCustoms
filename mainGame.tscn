@@ -70,12 +70,15 @@ point_count = 17
 [node name="Root" type="Node2D"]
 script = ExtResource("1_s4bva")
 
-[node name="BorderRunnerSystem" parent="." instance=ExtResource("29_rft0e")]
+[node name="BorderRunnerSystem" parent="." node_paths=PackedStringArray("root_node", "queue_manager", "score_label", "alert_label") instance=ExtResource("29_rft0e")]
 z_as_relative = false
+root_node = NodePath("..")
+queue_manager = NodePath("../SystemManagers/QueueManager")
+score_label = NodePath("../UI/Labels/ScoreLabel")
+alert_label = NodePath("../UI/Labels/AlertLabel")
 runner_base_points = 25
 perfect_hit_bonus = 15
 streak_bonus = 10
-missile_speed = 500
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
