@@ -19,29 +19,27 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 texture = SubResource("CanvasTexture_1ortb")
 
-[node name="Container" type="Control" parent="."]
-anchors_preset = 0
-offset_left = 401.0
-offset_top = 184.0
-offset_right = 1517.0
-offset_bottom = 846.0
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 256.0
+offset_right = 1530.0
+offset_bottom = 918.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Container"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-offset_right = 1280.0
-offset_bottom = 720.0
 
-[node name="TopLeaderboardEntry1" type="Control" parent="Container/VBoxContainer"]
+[node name="TopLeaderboardEntry1" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="Sprite" type="Sprite2D" parent="Container/VBoxContainer/TopLeaderboardEntry1"]
+[node name="Sprite" type="Sprite2D" parent="MarginContainer/VBoxContainer/TopLeaderboardEntry1"]
 position = Vector2(341, 6.99999)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_lsv0a")
 
-[node name="SteamUsername" type="Label" parent="Container/VBoxContainer/TopLeaderboardEntry1"]
+[node name="SteamUsername" type="Label" parent="MarginContainer/VBoxContainer/TopLeaderboardEntry1"]
 layout_mode = 1
 offset_left = 403.0
 offset_top = 1.63499
@@ -50,7 +48,8 @@ offset_bottom = 33.635
 text = "NumbaOneStampa"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="LeaderboardScore" type="Label" parent="Container/VBoxContainer/TopLeaderboardEntry1"]
+[node name="LeaderboardScore" type="Label" parent="MarginContainer/VBoxContainer/TopLeaderboardEntry1"]
+layout_mode = 0
 offset_left = 772.0
 offset_top = 35.0
 offset_right = 1021.53
@@ -58,16 +57,20 @@ offset_bottom = 83.0
 text = "2500"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="TopLeaderboardEntry2" type="Control" parent="Container/VBoxContainer"]
+[node name="TopLeaderboardEntry2" type="Control" parent="MarginContainer/VBoxContainer/TopLeaderboardEntry1"]
 layout_mode = 2
+anchors_preset = 0
+offset_top = 4.0
+offset_bottom = 4.0
 size_flags_horizontal = 0
 
-[node name="Sprite" type="Sprite2D" parent="Container/VBoxContainer/TopLeaderboardEntry2"]
+[node name="Sprite" type="Sprite2D" parent="MarginContainer/VBoxContainer/TopLeaderboardEntry1/TopLeaderboardEntry2"]
 position = Vector2(343, 85)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_lsv0a")
 
-[node name="SteamUsername" type="Label" parent="Container/VBoxContainer/TopLeaderboardEntry2"]
+[node name="SteamUsername" type="Label" parent="MarginContainer/VBoxContainer/TopLeaderboardEntry1/TopLeaderboardEntry2"]
+layout_mode = 0
 offset_left = 416.0
 offset_top = 73.0
 offset_right = 640.0
@@ -75,7 +78,8 @@ offset_bottom = 105.0
 text = "NumbaTwoStampa"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="LeaderboardScore" type="Label" parent="Container/VBoxContainer/TopLeaderboardEntry2"]
+[node name="LeaderboardScore" type="Label" parent="MarginContainer/VBoxContainer/TopLeaderboardEntry1/TopLeaderboardEntry2"]
+layout_mode = 0
 offset_left = 776.0
 offset_top = 95.0
 offset_right = 1000.0
@@ -83,16 +87,17 @@ offset_bottom = 143.0
 text = "2455"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="TopLeaderboardEntry3" type="Control" parent="Container/VBoxContainer"]
+[node name="TopLeaderboardEntry3" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Sprite" type="Sprite2D" parent="Container/VBoxContainer/TopLeaderboardEntry3"]
+[node name="Sprite" type="Sprite2D" parent="MarginContainer/VBoxContainer/TopLeaderboardEntry3"]
 position = Vector2(345, 161)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_lsv0a")
 
-[node name="SteamUsername" type="Label" parent="Container/VBoxContainer/TopLeaderboardEntry3"]
+[node name="SteamUsername" type="Label" parent="MarginContainer/VBoxContainer/TopLeaderboardEntry3"]
+layout_mode = 0
 offset_left = 418.0
 offset_top = 149.0
 offset_right = 674.0
@@ -100,7 +105,8 @@ offset_bottom = 181.0
 text = "NumbaThreeStampa"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="LeaderboardScore" type="Label" parent="Container/VBoxContainer/TopLeaderboardEntry3"]
+[node name="LeaderboardScore" type="Label" parent="MarginContainer/VBoxContainer/TopLeaderboardEntry3"]
+layout_mode = 0
 offset_left = 790.0
 offset_top = 169.0
 offset_right = 1014.0
@@ -108,18 +114,19 @@ offset_bottom = 217.0
 text = "2344"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="HSeparator" type="HSeparator" parent="Container/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="NeighborAboveEntry1" type="Control" parent="Container/VBoxContainer"]
+[node name="NeighborAboveEntry1" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Sprite" type="Sprite2D" parent="Container/VBoxContainer/NeighborAboveEntry1"]
+[node name="Sprite" type="Sprite2D" parent="MarginContainer/VBoxContainer/NeighborAboveEntry1"]
 position = Vector2(336, 268)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_lsv0a")
 
-[node name="SteamUsername" type="Label" parent="Container/VBoxContainer/NeighborAboveEntry1"]
+[node name="SteamUsername" type="Label" parent="MarginContainer/VBoxContainer/NeighborAboveEntry1"]
+layout_mode = 0
 offset_left = 428.0
 offset_top = 243.0
 offset_right = 652.0
@@ -127,7 +134,8 @@ offset_bottom = 275.0
 text = "NeighborAboveOne"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="LeaderboardScore" type="Label" parent="Container/VBoxContainer/NeighborAboveEntry1"]
+[node name="LeaderboardScore" type="Label" parent="MarginContainer/VBoxContainer/NeighborAboveEntry1"]
+layout_mode = 0
 offset_left = 790.0
 offset_top = 247.0
 offset_right = 1014.0
@@ -135,15 +143,16 @@ offset_bottom = 295.0
 text = "1340"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="NeighborAboveEntry2" type="Control" parent="Container/VBoxContainer"]
+[node name="NeighborAboveEntry2" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Sprite" type="Sprite2D" parent="Container/VBoxContainer/NeighborAboveEntry2"]
+[node name="Sprite" type="Sprite2D" parent="MarginContainer/VBoxContainer/NeighborAboveEntry2"]
 position = Vector2(363, 338)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_lsv0a")
 
-[node name="SteamUsername" type="Label" parent="Container/VBoxContainer/NeighborAboveEntry2"]
+[node name="SteamUsername" type="Label" parent="MarginContainer/VBoxContainer/NeighborAboveEntry2"]
+layout_mode = 0
 offset_left = 455.0
 offset_top = 313.0
 offset_right = 711.0
@@ -151,7 +160,8 @@ offset_bottom = 345.0
 text = "NeighborAboveTwo"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="LeaderboardScore" type="Label" parent="Container/VBoxContainer/NeighborAboveEntry2"]
+[node name="LeaderboardScore" type="Label" parent="MarginContainer/VBoxContainer/NeighborAboveEntry2"]
+layout_mode = 0
 offset_left = 780.0
 offset_top = 311.0
 offset_right = 1004.0
@@ -159,15 +169,16 @@ offset_bottom = 359.0
 text = "1310"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="NeighborAboveEntry3" type="Control" parent="Container/VBoxContainer"]
+[node name="NeighborAboveEntry3" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Sprite" type="Sprite2D" parent="Container/VBoxContainer/NeighborAboveEntry3"]
+[node name="Sprite" type="Sprite2D" parent="MarginContainer/VBoxContainer/NeighborAboveEntry3"]
 position = Vector2(340, 416)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_lsv0a")
 
-[node name="SteamUsername" type="Label" parent="Container/VBoxContainer/NeighborAboveEntry3"]
+[node name="SteamUsername" type="Label" parent="MarginContainer/VBoxContainer/NeighborAboveEntry3"]
+layout_mode = 0
 offset_left = 438.0
 offset_top = 397.0
 offset_right = 726.0
@@ -175,7 +186,8 @@ offset_bottom = 429.0
 text = "NeighborAboveThree"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="LeaderboardScore" type="Label" parent="Container/VBoxContainer/NeighborAboveEntry3"]
+[node name="LeaderboardScore" type="Label" parent="MarginContainer/VBoxContainer/NeighborAboveEntry3"]
+layout_mode = 0
 offset_left = 775.0
 offset_top = 389.0
 offset_right = 999.0
@@ -183,15 +195,16 @@ offset_bottom = 437.0
 text = "1290"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="PlayerLeaderboardEntry" type="Control" parent="Container/VBoxContainer"]
+[node name="PlayerLeaderboardEntry" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Sprite" type="Sprite2D" parent="Container/VBoxContainer/PlayerLeaderboardEntry"]
+[node name="Sprite" type="Sprite2D" parent="MarginContainer/VBoxContainer/PlayerLeaderboardEntry"]
 position = Vector2(343, 527)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_lsv0a")
 
-[node name="SteamUsername" type="Label" parent="Container/VBoxContainer/PlayerLeaderboardEntry"]
+[node name="SteamUsername" type="Label" parent="MarginContainer/VBoxContainer/PlayerLeaderboardEntry"]
+layout_mode = 0
 offset_left = 435.0
 offset_top = 502.0
 offset_right = 659.0
@@ -199,7 +212,8 @@ offset_bottom = 534.0
 text = "BroHeartTTV"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="LeaderboardScore" type="Label" parent="Container/VBoxContainer/PlayerLeaderboardEntry"]
+[node name="LeaderboardScore" type="Label" parent="MarginContainer/VBoxContainer/PlayerLeaderboardEntry"]
+layout_mode = 0
 offset_left = 774.0
 offset_top = 498.0
 offset_right = 998.0
@@ -207,15 +221,16 @@ offset_bottom = 546.0
 text = "1280"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="NeighborBelowEntry1" type="Control" parent="Container/VBoxContainer"]
+[node name="NeighborBelowEntry1" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Sprite" type="Sprite2D" parent="Container/VBoxContainer/NeighborBelowEntry1"]
+[node name="Sprite" type="Sprite2D" parent="MarginContainer/VBoxContainer/NeighborBelowEntry1"]
 position = Vector2(311, 634)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_lsv0a")
 
-[node name="SteamUsername" type="Label" parent="Container/VBoxContainer/NeighborBelowEntry1"]
+[node name="SteamUsername" type="Label" parent="MarginContainer/VBoxContainer/NeighborBelowEntry1"]
+layout_mode = 0
 offset_left = 403.0
 offset_top = 609.0
 offset_right = 659.0
@@ -223,7 +238,8 @@ offset_bottom = 641.0
 text = "NeighborBelowOne"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="LeaderboardScore" type="Label" parent="Container/VBoxContainer/NeighborBelowEntry1"]
+[node name="LeaderboardScore" type="Label" parent="MarginContainer/VBoxContainer/NeighborBelowEntry1"]
+layout_mode = 0
 offset_left = 767.0
 offset_top = 603.0
 offset_right = 991.0
@@ -231,15 +247,16 @@ offset_bottom = 651.0
 text = "1100"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="NeighborBelowEntry2" type="Control" parent="Container/VBoxContainer"]
+[node name="NeighborBelowEntry2" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Sprite" type="Sprite2D" parent="Container/VBoxContainer/NeighborBelowEntry2"]
+[node name="Sprite" type="Sprite2D" parent="MarginContainer/VBoxContainer/NeighborBelowEntry2"]
 position = Vector2(322, 712)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_lsv0a")
 
-[node name="SteamUsername" type="Label" parent="Container/VBoxContainer/NeighborBelowEntry2"]
+[node name="SteamUsername" type="Label" parent="MarginContainer/VBoxContainer/NeighborBelowEntry2"]
+layout_mode = 0
 offset_left = 414.0
 offset_top = 687.0
 offset_right = 670.0
@@ -247,7 +264,8 @@ offset_bottom = 719.0
 text = "NeighborBelowTwo"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="LeaderboardScore" type="Label" parent="Container/VBoxContainer/NeighborBelowEntry2"]
+[node name="LeaderboardScore" type="Label" parent="MarginContainer/VBoxContainer/NeighborBelowEntry2"]
+layout_mode = 0
 offset_left = 763.0
 offset_top = 691.0
 offset_right = 987.0
@@ -255,15 +273,16 @@ offset_bottom = 739.0
 text = "900"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="NeighborBelowEntry3" type="Control" parent="Container/VBoxContainer"]
+[node name="NeighborBelowEntry3" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Sprite" type="Sprite2D" parent="Container/VBoxContainer/NeighborBelowEntry3"]
+[node name="Sprite" type="Sprite2D" parent="MarginContainer/VBoxContainer/NeighborBelowEntry3"]
 position = Vector2(326, 792)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_lsv0a")
 
-[node name="SteamUsername" type="Label" parent="Container/VBoxContainer/NeighborBelowEntry3"]
+[node name="SteamUsername" type="Label" parent="MarginContainer/VBoxContainer/NeighborBelowEntry3"]
+layout_mode = 0
 offset_left = 418.0
 offset_top = 767.0
 offset_right = 706.0
@@ -271,7 +290,8 @@ offset_bottom = 799.0
 text = "NeighborBelowThree"
 label_settings = ExtResource("3_cuj0l")
 
-[node name="LeaderboardScore" type="Label" parent="Container/VBoxContainer/NeighborBelowEntry3"]
+[node name="LeaderboardScore" type="Label" parent="MarginContainer/VBoxContainer/NeighborBelowEntry3"]
+layout_mode = 0
 offset_left = 767.0
 offset_top = 773.0
 offset_right = 991.0
@@ -314,3 +334,8 @@ offset_right = 1341.0
 offset_bottom = 149.0
 text = "Score"
 label_settings = ExtResource("3_cuj0l")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(440, 375)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_lsv0a")

@@ -1,9 +1,20 @@
-
 extends Control
 var build_type: String
 var initialize_response: Dictionary
+var easy_leaderboard = "endless_easy"
+var normal_leaderboard = "endless_normal"
+var expert_leaderboard = "endless_expert"
+var score = 100
+var keep_best = true
+var leaderboard_handle = 0  # Store the handle globally in your script
+
+func find_leaderboard():
+	Steam.findLeaderboard(easy_leaderboard)
+	# Handle will be received in _on_leaderboard_find_result
 
 func _ready():
+
+
 	build_type = Global.build_type
 	print("Build type is: " + str(build_type))
 	
@@ -32,6 +43,7 @@ func _ready():
 		var is_owned: bool = Steam.isSubscribed()
 		var steam_id: int = Steam.getSteamID()
 		var steam_username: String = Steam.getPersonaName()
+		var easy_leaderboard_id = Steam.findLeaderboard(easy_leaderboard)
 		print("Game ID is: "  + str(game_id))
 		print("Online state is:" + str(is_online))
 		print("Owned state is: " + str(is_owned))
@@ -41,14 +53,45 @@ func _ready():
 		# Fetch player avatar image in small format for leaderboard display
 		Steam.getPlayerAvatar(Steam.AVATAR_SMALL)
 		Steam.avatar_loaded.connect(_on_loaded_avatar)
-		
-		
-		
+		Steam.leaderboard_find_result.connect(_on_leaderboard_find_result)
+		Steam.leaderboard_score_uploaded.connect(_on_leaderboard_score_uploaded)
+		Steam.leaderboard_scores_downloaded.connect(_on_leaderboard_scores_downloaded)
+		Steam.uploadLeaderboardScore(score, keep_best, leaderboard_handle)
+		Steam.downloadLeaderboardEntries( 1, 10, Steam.LEADERBOARD_DATA_REQUEST_GLOBAL, leaderboard_handle )
+		var user_array = [steam_id]
+		Steam.downloadLeaderboardEntriesForUsers(user_array, leaderboard_handle)
+
 # Leaderboard testing for each difficulty level
+func _on_leaderboard_find_result(handle, found):
+	if found:
+		leaderboard_handle = handle
+		# Now you can use the handle for uploads/downloads
+		Steam.uploadLeaderboardScore(score, keep_best, leaderboard_handle)
+		Steam.downloadLeaderboardEntries(1, 10, Steam.LEADERBOARD_DATA_REQUEST_GLOBAL, leaderboard_handle)
+		
+		var user_array = [Steam.getSteamID()]
+		Steam.downloadLeaderboardEntriesForUsers(user_array, leaderboard_handle)
+	else:
+		print("Failed to find leaderboard")
 
+func _on_leaderboard_score_uploaded(success: int, this_handle: int, this_score: Dictionary) -> void:
+	if success == 1:
+		print("Successfully uploaded scores!")
+		# Add additional logic to use other variables passed back
+	else:
+		print("Failed to upload scores!")
+	
+func _on_leaderboard_scores_downloaded(message: String, this_leaderboard_handle: int, result: Array) -> void:
+	print("Scores downloaded message: %s" % message)
 
-	
-	
+	# Save this for later leaderboard interactions, if you want
+	var leaderboard_handle: int = this_leaderboard_handle
+
+	# Add logic to display results
+	for this_result in result:
+		# Use each entry that is returned
+		print(result)	
+
 # Avatar loading logic
 func _on_loaded_avatar(user_id: int, avatar_size: int, avatar_buffer: PackedByteArray) -> void:
 	print("Avatar for user: %s" % user_id)

@@ -14,7 +14,6 @@ var is_potato_in_office = false
 var current_potato_info
 var current_potato
 
-
 # Track win and lose parameters
 var quota_met = 0  # Number of correct decisions
 var quota_target = 8  # Required correct decisions (formerly max_score)
@@ -98,7 +97,9 @@ func _ready():
 	setup_guide_tutorial_timer()
 	set_difficulty(difficulty_level)
 	update_date_display()
-	queue_manager = $SystemManagers/QueueManager  # Make sure to add QueueManager as a child of Main
+	# Make sure to add QueueManager
+	#  as a child of Main
+	queue_manager = $SystemManagers/QueueManager  
 	generate_rules()
 	setup_spawn_timer()
 	draggable_sprites = [
