@@ -16,13 +16,16 @@ class_name BorderRunnerSystem
 @export_group("Runner System")
 @export_subgroup("Spawn Settings")
 ## Chance per second for a queued potato to attempt escape
-@export_range(0, 1, 0.05) var runner_chance: float = 0.1
+# 0.025 for Easy (1 per 40 seconds)
+# 0.042 for Normal (1 per 23 seconds)
+# 0.085 for Expert (1 per 11 seconds)
+@export_range(0, 1, 0.01) var runner_chance: float = 0.085
 ## Minimum time that must pass between runner spawn attempts (Seconds)
 @export var min_time_between_runs: float = 1 # Default: 10
 ## Maximum time that can pass between runner spawn attempts (Seconds)
 @export var max_time_between_runs: float = 2 # Default: 180
 ## Movement speed of runners along their escape path
-@export var runner_speed: float = 0.15
+@export var runner_speed: float = 0.2
 
 @export_subgroup("Score Settings")
 ## Base score awarded for successfully catching a runner
@@ -80,6 +83,7 @@ var explosion_active: bool = false
 var explosion_position: Vector2 = Vector2.ZERO
 var has_runner_escaped: bool = false
 var gib_textures: Array = []
+
 func _ready():
 	# Create missile sprite if it doesn't exist
 	if not missile_sprite:
@@ -299,6 +303,8 @@ func handle_successful_hit():
 	# Calculate bonuses
 	var distance = active_runner.global_position.distance_to(explosion_position)
 	if distance < explosion_size / 3:
+		# Spawn even more gibs on a perfect hit
+		spawn_gibs(active_runner.global_position)
 		points_earned += perfect_hit_bonus
 		bonus_text += "PERFECT HIT! +{perfect} accuracy bonus points\n".format({"perfect": perfect_hit_bonus})
 	
@@ -328,10 +334,8 @@ func handle_successful_hit():
 		"points": points_earned
 	})
 	alert_label.add_theme_color_override("font_color", Color.GREEN)
-
 	var timer = get_tree().create_timer(2.0)
 	timer.timeout.connect(Callable(self, "clear_alert"))
-	
 	clean_up_runner()
 	
 func clean_up_runner():

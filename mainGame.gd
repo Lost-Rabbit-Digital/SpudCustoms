@@ -738,7 +738,7 @@ func process_decision(allowed):
 		correct_decision_streak += 1
 		
 		# Award bonus points for correct decisions
-		var decision_points = 25 * point_multiplier
+		var decision_points = 1000 * point_multiplier
 		score += decision_points
 		
 		# Increase multiplier for streaks
