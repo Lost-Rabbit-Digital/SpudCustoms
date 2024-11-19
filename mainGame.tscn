@@ -75,9 +75,6 @@ root_node = NodePath("..")
 queue_manager = NodePath("../SystemManagers/QueueManager")
 score_label = NodePath("../UI/Labels/ScoreLabel")
 alert_label = NodePath("../UI/Labels/AlertLabel")
-runner_base_points = 25
-perfect_hit_bonus = 15
-streak_bonus = 10
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3

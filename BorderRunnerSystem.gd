@@ -78,7 +78,7 @@ var missile_position: Vector2 = Vector2.ZERO
 var missile_target: Vector2 = Vector2.ZERO
 var explosion_active: bool = false
 var explosion_position: Vector2 = Vector2.ZERO
-var is_runner_escaping: bool = false
+var has_runner_escaped: bool = false
 var gib_textures: Array = []
 func _ready():
 	# Create missile sprite if it doesn't exist
@@ -112,9 +112,9 @@ func _process(delta):
 		update_missile(delta)
 	
 	# Handle runner logic only if no missile is active
-	if active_runner and not is_runner_escaping:
+	if active_runner and not has_runner_escaped:
 		update_runner(delta)
-	elif not active_runner and not is_runner_escaping:
+	elif not active_runner and not has_runner_escaped:
 		time_since_last_run += delta
 		
 		# Must exceed a random value between min_time_between_runs/max_time_between_runs
@@ -138,12 +138,16 @@ func attempt_spawn_runner():
 
 func start_runner(potato):
 	active_runner = potato
-	is_runner_escaping = false
+	has_runner_escaped = false
 	
 	# Play alarm and show alert
 	alarm_sound.play()
+	alert_label.visible = true
 	alert_label.text = "BORDER RUNNER DETECTED!\nClick to launch missile!"
 	alert_label.add_theme_color_override("font_color", Color.RED)
+	
+	var timer = get_tree().create_timer(2.0)
+	timer.timeout.connect(Callable(self, "clear_alert"))
 	
 	# Set up path follow
 	var path = $"../Gameplay/Paths/RunnerPath"
@@ -164,7 +168,7 @@ func start_runner(potato):
 	print("Runner setup complete")
 
 func update_runner(delta):
-	if not active_runner or is_runner_escaping:
+	if not active_runner or has_runner_escaped:
 		return
 		
 	var path_follow = active_runner.get_parent()
@@ -175,17 +179,18 @@ func update_runner(delta):
 	path_follow.progress_ratio += delta * runner_speed
 	
 	# Check if runner reached the end
-	if path_follow.progress_ratio >= 1.0 and not is_runner_escaping:
-		is_runner_escaping = true
+	if path_follow.progress_ratio >= 0.99 and not has_runner_escaped:
+		print("Runner has reached the end")
+		has_runner_escaped = true
 		runner_escaped()
 
 func runner_escaped():
 	if not active_runner:
 		return
 		
-	print("Runner escaping!")
+	print("Runner has escaped!")
 	runner_streak = 0
-	get_parent().strikes += 1
+	root_node.strikes += 1
 	
 	# Apply score penalty
 	root_node.score = max(0, root_node.score - escape_penalty)  # Prevent negative score
@@ -194,6 +199,7 @@ func runner_escaped():
 	})
 	
 	# Update alert to show penalty
+	alert_label.visible = true
 	alert_label.text = "Runner escaped!\nStrike added!\n-{penalty} points!".format({
 		"penalty": escape_penalty
 	})
@@ -207,7 +213,7 @@ func runner_escaped():
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			if active_runner and not missile_active and not is_runner_escaping:
+			if active_runner and not missile_active and not has_runner_escaped:
 				launch_missile(event.position)
 
 func launch_missile(target_pos):
@@ -294,12 +300,12 @@ func handle_successful_hit():
 	var distance = active_runner.global_position.distance_to(explosion_position)
 	if distance < explosion_size / 3:
 		points_earned += perfect_hit_bonus
-		bonus_text += "PERFECT HIT! +{perfect} bonus\n".format({"perfect": perfect_hit_bonus})
+		bonus_text += "PERFECT HIT! +{perfect} accuracy bonus points\n".format({"perfect": perfect_hit_bonus})
 	
 	if runner_streak > 1:
 		var streak_points = streak_bonus * (runner_streak - 1)
 		points_earned += streak_points
-		bonus_text += "STREAK x{mult}! +{streak} bonus\n".format({
+		bonus_text += "COMBO x{mult}! +{streak} combo bonus points\n".format({
 			"mult": runner_streak,
 			"streak": streak_points
 		})
@@ -316,6 +322,7 @@ func handle_successful_hit():
 	})
 
 	# Update display
+	alert_label.visible = true
 	alert_label.text = "{bonus} +{points} points!".format({
 		"bonus": bonus_text,
 		"points": points_earned
@@ -336,7 +343,7 @@ func clean_up_runner():
 		active_runner.queue_free()
 		active_runner = null
 	
-	is_runner_escaping = false
+	has_runner_escaped = false
 	missile_active = false
 	time_since_last_run = 0
 	print("Runner cleanup complete")
