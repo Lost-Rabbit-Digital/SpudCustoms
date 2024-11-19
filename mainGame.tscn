@@ -71,7 +71,6 @@ point_count = 17
 script = ExtResource("1_s4bva")
 
 [node name="BorderRunnerSystem" parent="." node_paths=PackedStringArray("root_node", "queue_manager", "score_label", "alert_label") instance=ExtResource("29_rft0e")]
-z_as_relative = false
 root_node = NodePath("..")
 queue_manager = NodePath("../SystemManagers/QueueManager")
 score_label = NodePath("../UI/Labels/ScoreLabel")

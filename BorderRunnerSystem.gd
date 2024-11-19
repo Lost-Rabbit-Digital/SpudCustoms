@@ -379,6 +379,9 @@ func spawn_gibs(pos):
 		var gib = Gib.new()
 		add_child(gib)
 		
+		gib.z_index = 20
+		gib.z_as_relative = false
+		
 		# Set random gib texture
 		gib.texture = gib_textures[randi() % gib_textures.size()]
 		
@@ -400,5 +403,3 @@ func spawn_gibs(pos):
 		# Set scale
 		gib.scale = gib_scale  # Adjust this based on your gib sprite sizes
 		
-		# Ensure gibs render above most other elements
-		gib.z_index = 20

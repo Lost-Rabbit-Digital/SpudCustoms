@@ -4,7 +4,6 @@ These are our goals, to-do tasks, and completed tasks.
 TO-DO 2024-11-16: DEMO
   Active Tasks:
     [ ] - Remove potato types and remove from passport document
-    [ ] - Add 8 different potato gibs that explode from a hit potato, with more exploding from a perfectly hit potato
     [ ] - Potatoes which run the border after being denied entry are immortal
     [ ] - If you do not kill a potato while it is running the border it repeats
   Boden Tasks:
@@ -96,6 +95,7 @@ These are various goals which are out of scope for the current roadmap, but if p
 # Completed tasks list
 The tasks which have be completed and pushed to VCS.
 
+[o] - Add 8 different potato gibs that explode from a hit potato, with more exploding from a perfectly hit potato
 [o] - Potato persons flip upside down when called into the office
 [o] - Stamp doesn't match the rest of the pixel feel, different resolution
 [o] - Picking up stamp hides cursor
