@@ -737,7 +737,9 @@ func process_decision(allowed):
 		quota_met += 1
 		correct_decision_streak += 1
 		
-		# Award bonus points for correct decisions
+		# Award points for correct decisions, with bonus points for consecutive
+		# correct decisions
+		# UV scanning will award 1000 points per finding
 		var decision_points = 1000 * point_multiplier
 		score += decision_points
 		
@@ -754,7 +756,7 @@ func process_decision(allowed):
 			print("Quota complete!")
 			go_to_game_win()
 	else:
-		$UI/Labels/JudgementLabel.text = "You have caused unnecessary suffering, officer..."
+		$UI/Labels/JudgementLabel.text = "You have caused unnecessary suffering, officer...\n+1 Strikes!"
 		correct_decision_streak = 0
 		point_multiplier = 1.0
 		strikes += 1

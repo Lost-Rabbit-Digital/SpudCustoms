@@ -2,7 +2,6 @@ extends Node2D
 ## Manages the spawning of runners, missile targeting, and giblet effects when potatoes are destroyed
 class_name BorderRunnerSystem
 
-
 @export_group("System References")
 ## Main root node of the game scene
 @export var root_node: Node2D
@@ -15,17 +14,13 @@ class_name BorderRunnerSystem
 
 @export_group("Runner System")
 @export_subgroup("Spawn Settings")
-## Chance per second for a queued potato to attempt escape
-# 0.025 for Easy (1 per 40 seconds)
-# 0.042 for Normal (1 per 23 seconds)
-# 0.085 for Expert (1 per 11 seconds)
-@export_range(0, 1, 0.01) var runner_chance: float = 0.085
+@export_range(0, 1, 0.001) var runner_chance: float = 0.025
 ## Minimum time that must pass between runner spawn attempts (Seconds)
 @export var min_time_between_runs: float = 1 # Default: 10
 ## Maximum time that can pass between runner spawn attempts (Seconds)
 @export var max_time_between_runs: float = 2 # Default: 180
 ## Movement speed of runners along their escape path
-@export var runner_speed: float = 0.2
+@export var runner_speed: float = 0.18
 
 @export_subgroup("Score Settings")
 ## Base score awarded for successfully catching a runner
@@ -40,11 +35,23 @@ class_name BorderRunnerSystem
 ## Settings controlling missile launch, targeting and explosion behavior
 @export_group("Missile System")
 ## Speed at which missiles travel toward their target
-@export var missile_speed: float = 500
+@export var missile_speed: float = 550
 ## Initial height from which missiles are launched
 @export var missile_start_height: float = 600
 ## Radius of explosion effect and damage area
 @export var explosion_size: float = 50
+
+# Add these to your existing @export variables
+@export_group("Missile Effects")
+@export var smoke_particle_texture: Texture2D = preload("res://assets/missiles/smoke_particle.png")
+@export var smoke_lifetime: float = 0.9
+@export var smoke_spread: float = 40.0
+@export var smoke_initial_velocity: float = 50.0
+@export var smoke_scale: float = 0.3
+@export var smoke_amount: int = 90
+
+@export_group("Crater System")
+@export var crater_size_multiplier: float = 1.2  # Size multiplier for explosion craters
 
 @export_group("Giblet System")
 @export_subgroup("Visual Settings")
@@ -61,7 +68,7 @@ class_name BorderRunnerSystem
 ## Fastest initial speed for spawned giblets
 @export var gib_max_speed: float = 375
 ## Downward acceleration applied to giblets over time
-@export var gib_gravity: float = 500
+@export var gib_gravity: float = 300
 ## Rotation speed applied to giblets while in motion
 @export var gib_spin_speed: float = 13
 
@@ -71,6 +78,8 @@ class_name BorderRunnerSystem
 @onready var missile_sound = $MissileSound
 @onready var explosion_vfx = $ExplosionVFX
 @onready var missile_sprite = $MissileSprite
+@onready var smoke_particles: CPUParticles2D = CPUParticles2D.new()
+@onready var crater_system = $CraterSystem
 
 # Internal state tracking
 var runner_streak: int = 0
@@ -83,6 +92,8 @@ var explosion_active: bool = false
 var explosion_position: Vector2 = Vector2.ZERO
 var has_runner_escaped: bool = false
 var gib_textures: Array = []
+var difficulty_level
+
 
 func _ready():
 	# Create missile sprite if it doesn't exist
@@ -92,6 +103,23 @@ func _ready():
 		add_child(missile_sprite)
 	missile_sprite.visible = false
 	missile_sprite.z_index = 15
+	
+	# Configure difficulty level and set runner chance based on difficulty level
+	difficulty_level = Global.difficulty_level
+	print("Setting Border Runner System to:" + difficulty_level)
+	## Chance per second for a queued potato to attempt escape
+	# 0.025 for Easy (1 per 40 seconds)
+	# 0.042 for Normal (1 per 23 seconds)
+	# 0.085 for Expert (1 per 11 seconds)
+	match difficulty_level:
+		"Easy":
+			runner_chance = 0.025
+		"Normal":
+			runner_chance = 0.042
+		"Expert":
+			runner_chance = 0.085
+		_: 
+			runner_chance = 0.10
 
 	if not queue_manager:
 		push_error("BorderRunnerSystem: Could not find QueueManager!")
@@ -104,7 +132,34 @@ func _ready():
 			gib_textures.append(texture)
 		else:
 			push_error("Failed to load giblet_" + str(i))
-
+			
+		# Setup smoke trail particles
+	add_child(smoke_particles)
+	smoke_particles.z_index = 14  # Just behind missile
+	
+	smoke_particles.texture = smoke_particle_texture
+	
+	# Configure particle properties
+	smoke_particles.emitting = false
+	smoke_particles.amount = smoke_amount
+	smoke_particles.lifetime = smoke_lifetime
+	smoke_particles.explosiveness = 0.0
+	smoke_particles.randomness = 0.5
+	smoke_particles.direction = Vector2.LEFT
+	smoke_particles.spread = smoke_spread
+	smoke_particles.gravity = Vector2.ZERO
+	smoke_particles.initial_velocity_min = smoke_initial_velocity * 0.8
+	smoke_particles.initial_velocity_max = smoke_initial_velocity
+	smoke_particles.scale_amount_min = smoke_scale * 0.8
+	smoke_particles.scale_amount_max = smoke_scale
+	smoke_particles.color = Color(0.7, 0.7, 0.7, 0.3)
+	
+	# Create gradient for fading
+	var gradient = Gradient.new()
+	gradient.add_point(0.0, Color(0.7, 0.7, 0.7, 0.3))
+	gradient.add_point(1.0, Color(0.7, 0.7, 0.7, 0.0))
+	smoke_particles.color_ramp = gradient
+	
 
 func _process(delta):
 	if not queue_manager:
@@ -217,8 +272,17 @@ func runner_escaped():
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			if active_runner and not missile_active and not has_runner_escaped:
+#			if active_runner and not missile_active and not has_runner_escaped:
+#				launch_missile(event.position)
+			if not missile_active and not has_runner_escaped:
 				launch_missile(event.position)
+				
+func _unhandled_input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			if crater_system:
+				var local_pos = crater_system.to_local(event.global_position)
+				crater_system.add_crater(local_pos)
 
 func launch_missile(target_pos):
 	print("Launching missile at: ", target_pos)
@@ -238,7 +302,13 @@ func launch_missile(target_pos):
 	var direction = (target_pos - missile_position).normalized()
 	missile_sprite.rotation = direction.angle() + PI/2
 	
+	# Play activation and launch sound
 	missile_sound.play()
+	
+	# Start particle emission and position at missile
+	smoke_particles.emitting = true
+	smoke_particles.position = missile_position
+	smoke_particles.rotation = missile_sprite.rotation - PI/2  # Adjust for particle direction
 	print("Missile launched from: ", missile_position)
 
 func update_missile(delta):
@@ -255,6 +325,10 @@ func update_missile(delta):
 	missile_sprite.position = missile_position
 	missile_sprite.rotation = direction.angle() + PI/2
 	
+	# Update smoke trail position and rotation
+	smoke_particles.position = missile_position
+	smoke_particles.rotation = missile_sprite.rotation - PI/2
+	
 	# Check if missile reached target (use squared distance for efficiency)
 	var distance_squared = missile_position.distance_squared_to(missile_target)
 	print("Distance to target: ", sqrt(distance_squared))  # Debug print
@@ -270,8 +344,16 @@ func trigger_explosion():
 	explosion_vfx.visible = true
 	explosion_vfx.start_explosion()
 	
+	# Add crater at explosion position
+	print("Invoking crater system")
+	# Convert global explosion position to local coordinates for crater system
+	if crater_system:
+		var local_pos = crater_system.to_local(explosion_position)
+		crater_system.add_crater(local_pos, crater_size_multiplier)
+	
 	missile_active = false
 	missile_sprite.visible = false
+	smoke_particles.emitting = false  # Stop smoke trail
 	
 	if explosion_sound:
 		explosion_sound.play()
@@ -414,3 +496,5 @@ func spawn_gibs(pos):
 		# Set scale
 		gib.scale = gib_scale  # Adjust this based on your gib sprite sizes
 		
+func clean_up_effects():
+	smoke_particles.emitting = false

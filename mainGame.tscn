@@ -75,6 +75,8 @@ root_node = NodePath("..")
 queue_manager = NodePath("../SystemManagers/QueueManager")
 score_label = NodePath("../UI/Labels/ScoreLabel")
 alert_label = NodePath("../UI/Labels/AlertLabel")
+runner_chance = 0.025
+smoke_amount = 65
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -141,10 +143,10 @@ vertical_alignment = 1
 z_index = 2
 z_as_relative = false
 layout_mode = 0
-offset_left = 266.0
-offset_top = 652.0
-offset_right = 616.0
-offset_bottom = 706.0
+offset_left = 490.0
+offset_top = 269.0
+offset_right = 840.0
+offset_bottom = 323.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
