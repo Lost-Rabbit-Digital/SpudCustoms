@@ -17,8 +17,10 @@ class_name BorderRunnerSystem
 @export_subgroup("Spawn Settings")
 ## Chance per second for a queued potato to attempt escape
 @export_range(0, 1, 0.05) var runner_chance: float = 0.1
-## Minimum time that must pass between runner spawn attempts
-@export var min_time_between_runs: float = 15.0
+## Minimum time that must pass between runner spawn attempts (Seconds)
+@export var min_time_between_runs: float = 1 # Default: 10
+## Maximum time that can pass between runner spawn attempts (Seconds)
+@export var max_time_between_runs: float = 2 # Default: 180
 ## Movement speed of runners along their escape path
 @export var runner_speed: float = 0.15
 
@@ -59,10 +61,6 @@ class_name BorderRunnerSystem
 @export var gib_gravity: float = 500
 ## Rotation speed applied to giblets while in motion
 @export var gib_spin_speed: float = 13
-
-@export_group("Debug")
-## Enables testing features and debug functionality
-@export var debug_mode: bool = true
 
 # Audio/Visual node references
 @onready var alarm_sound = $AlarmSound
@@ -119,18 +117,20 @@ func _process(delta):
 	elif not active_runner and not is_runner_escaping:
 		time_since_last_run += delta
 		
-		if time_since_last_run >= min_time_between_runs:
-			var roll = randf()
-			var threshold = runner_chance * delta
+		# Must exceed a random value between min_time_between_runs/max_time_between_runs
+		if time_since_last_run >= randi_range(min_time_between_runs, max_time_between_runs):
+			var roll = randf() # Random float between 0 and 1
+			var threshold = runner_chance * delta # 10% chance per-frame probability
 			
-			if roll < threshold or (debug_mode and time_since_last_run >= 10.0):
+			# Runners cannot spawn more frequently than min_time_between_runs
+			# After that minimum time, there's a 10% chance per second of spawning
+			if roll < threshold:
 				attempt_spawn_runner()
 
 func attempt_spawn_runner():
 	print("Attempting to spawn runner...")
 	if queue_manager.potatoes.size() > 0 and not active_runner:
 		var runner = queue_manager.remove_front_potato()
-		queue_manager.remove_front_potato()
 		if runner:
 			print("Starting new runner")
 			start_runner(runner)
