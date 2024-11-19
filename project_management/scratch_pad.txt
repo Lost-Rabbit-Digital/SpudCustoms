@@ -3,10 +3,11 @@ These are our goals, to-do tasks, and completed tasks.
 
 TO-DO 2024-11-16: DEMO
   Active Tasks:
-    [ ] - Remove potato types and remove from passport document
-    [ ] - Potatoes which run the border after being denied entry are immortal
+    [ ] - Potatoes which run the border after being denied entry don't trigger BorderRunnerSystem
     [ ] - If you do not kill a potato while it is running the border it repeats
   Boden Tasks:
+    [ ] - Remove potato types and remove from passport document
+    [ ] - Windowed mode breaks resolution and causes you to see outside viewport
     [ ] - Add character generator and update in suspect panel and in suspect passport
     [ ] - Disallow the player to target to the right of the border wall or in the document processing area with missiles
     [ ] - Change position so Text flying up with the score update

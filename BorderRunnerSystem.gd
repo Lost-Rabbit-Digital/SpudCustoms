@@ -29,6 +29,8 @@ class_name BorderRunnerSystem
 @export var perfect_hit_bonus: int = 150
 ## Bonus points multiplier for consecutive successful catches
 @export var streak_bonus: int = 100
+## Points penalty when a runner successfully escapes
+@export var escape_penalty: int = 500
 
 ## Settings controlling missile launch, targeting and explosion behavior
 @export_group("Missile System")
@@ -94,7 +96,7 @@ func _ready():
 	print("BorderRunnerSystem initialized with chance: ", runner_chance)
 	
 	# Load gib textures
-	for i in range(1, 4):  # Assuming you have 3 giblet sprites
+	for i in range(1, 9):  # Assuming you have 3 giblet sprites
 		var texture = load("res://assets/potato_giblets/giblet_" + str(i) + ".png")
 		if texture:
 			gib_textures.append(texture)
@@ -141,7 +143,7 @@ func start_runner(potato):
 	# Play alarm and show alert
 	alarm_sound.play()
 	alert_label.text = "BORDER RUNNER DETECTED!\nClick to launch missile!"
-	alert_label.visible = true
+	alert_label.add_theme_color_override("font_color", Color.RED)
 	
 	# Set up path follow
 	var path = $"../Gameplay/Paths/RunnerPath"
@@ -184,7 +186,17 @@ func runner_escaped():
 	print("Runner escaping!")
 	runner_streak = 0
 	get_parent().strikes += 1
-	alert_label.text = "Runner escaped! Strike added!"
+	
+	# Apply score penalty
+	root_node.score = max(0, root_node.score - escape_penalty)  # Prevent negative score
+	score_label.text = "Score: {total_points}".format({
+		"total_points": root_node.score
+	})
+	
+	# Update alert to show penalty
+	alert_label.text = "Runner escaped!\nStrike added!\n-{penalty} points!".format({
+		"penalty": escape_penalty
+	})
 	alert_label.add_theme_color_override("font_color", Color.RED)
 	
 	var timer = get_tree().create_timer(2.0)
@@ -300,11 +312,11 @@ func handle_successful_hit():
 	# Add points
 	root_node.score += points_earned
 	score_label.text = "Score: {total_points}".format({
-		"total_points": format_number(root_node.score)
+		"total_points": root_node.score
 	})
 
 	# Update display
-	alert_label.text = "{bonus}Total: +{points} points!".format({
+	alert_label.text = "{bonus} +{points} points!".format({
 		"bonus": bonus_text,
 		"points": points_earned
 	})
@@ -315,18 +327,6 @@ func handle_successful_hit():
 	
 	clean_up_runner()
 	
-func format_number(number):
-	var str_num = str(number)
-	var result = ""
-	var count = 0
-	for i in range(str_num.length() - 1, -1, -1):
-		if count == 3:
-			result = "," + result
-			count = 0
-		result = str_num[i] + result
-		count += 1
-	return result
-
 func clean_up_runner():
 	print("Cleaning up runner")
 	if active_runner:
