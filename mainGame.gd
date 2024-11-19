@@ -1098,7 +1098,7 @@ func move_potato_along_path(approval_status):
 		path = $Gameplay/Paths/TimedOutPath
 		timedOut()
 	else: 
-		if randi() % 20 == 0:  # 5% chance to go sicko mode
+		if randi() % 1 == 0:  # 5% chance to go sicko mode
 			path = $Gameplay/Paths/RunnerPath
 		else:
 			path = $Gameplay/Paths/RejectPath

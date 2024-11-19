@@ -5,6 +5,8 @@ TO-DO 2024-11-16: DEMO
   Active Tasks:
     [ ] - Remove potato types and remove from passport document
     [ ] - Add 8 different potato gibs that explode from a hit potato, with more exploding from a perfectly hit potato
+    [ ] - Potatoes which run the border after being denied entry are immortal
+    [ ] - If you do not kill a potato while it is running the border it repeats
   Boden Tasks:
     [ ] - Add character generator and update in suspect panel and in suspect passport
     [ ] - Disallow the player to target to the right of the border wall or in the document processing area with missiles

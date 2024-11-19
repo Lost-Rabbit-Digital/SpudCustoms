@@ -39,9 +39,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_f3jw2"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 903, 177, 0, 0, 0, 0, 941, 193, 0, 0, 0, 0, 944, 180, 0, 0, 0, 0, 935, 147, 0, 0, 0, 0, 909, 122, 0, 0, 0, 0, 873, 101, 0, 0, 0, 0, 861, 76, 0, 0, 0, 0, 829, 77, 0, 0, 0, 0, 812, 101, 0, 0, 0, 0, 777, 95, 0, 0, 0, 0, 744, 135, 0, 0, 0, 0, 697, 157, 0, 0, 0, 0, 650, 135, 0, 0, 0, 0, 621, 107, 0, 0, 0, 0, 563, 104, 0, 0, 0, 0, 541, 135, 0, 0, 0, 0, 504, 141, 0, 0, 0, 0, 467, 112, 0, 0, 0, 0, 418, 93, 0, 0, 0, 0, 373, 113, 0, 0, 0, 0, 325, 147, 0, 0, 0, 0, 268, 126, 0, 0, 0, 0, 230, 109, 0, 0, 0, 0, 183, 83, 0, 0, 0, 0, 171, 25, 0, 0, 0, 0, 171, -12)
+"points": PackedVector2Array(0, 0, 0, 0, 977, 194, 0, 0, 0, 0, 949, 184, 0, 0, 0, 0, 938, 161, 0, 0, 0, 0, 926, 136, 0, 0, 0, 0, 898, 115, 0, 0, 0, 0, 873, 101, 0, 0, 0, 0, 861, 76, 0, 0, 0, 0, 829, 77, 0, 0, 0, 0, 812, 101, 0, 0, 0, 0, 777, 95, 0, 0, 0, 0, 744, 135, 0, 0, 0, 0, 697, 157, 0, 0, 0, 0, 650, 135, 0, 0, 0, 0, 627, 88, 0, 0, 0, 0, 561, 100, 0, 0, 0, 0, 546, 143, 0, 0, 0, 0, 504, 141, 0, 0, 0, 0, 467, 112, 0, 0, 0, 0, 418, 93, 0, 0, 0, 0, 394, 134, 0, 0, 0, 0, 355, 135, 0, 0, 0, 0, 326, 87, 0, 0, 0, 0, 275, 93, 0, 0, 0, 0, 235, 140, 0, 0, 0, 0, 207, 105, 0, 0, 0, 0, 200, 72, 0, 0, 0, 0, 168, 51, 0, 0, 0, 0, 205, -3)
 }
-point_count = 26
+point_count = 28
 
 [sub_resource type="Curve2D" id="Curve2D_1j820"]
 _data = {
@@ -71,10 +71,11 @@ point_count = 17
 script = ExtResource("1_s4bva")
 
 [node name="BorderRunnerSystem" parent="." instance=ExtResource("29_rft0e")]
+z_as_relative = false
 runner_base_points = 25
 perfect_hit_bonus = 15
 streak_bonus = 10
-missile_speed = 400
+missile_speed = 500
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -553,8 +554,8 @@ position = Vector2(873, 210)
 scale = Vector2(0.600897, 0.600897)
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/GuideFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]

@@ -10,7 +10,6 @@
 [node name="BorderRunnerSystem" type="Node2D"]
 script = ExtResource("1_8vf2f")
 missile_speed = 350
-missile_scale = Vector2(1, 1)
 missile_start_height = 400
 
 [node name="ExplosionVFX" type="Node2D" parent="."]
