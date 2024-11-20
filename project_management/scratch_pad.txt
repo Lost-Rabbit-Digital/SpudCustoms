@@ -3,21 +3,16 @@ These are our goals, to-do tasks, and completed tasks.
 
 TO-DO 2024-11-16: DEMO
   Active Tasks:
-	[ ] - Potatoes which run the border after being denied entry don't trigger BorderRunnerSystem
-	[ ] - If you do not kill a potato while it is running the border it repeats
   Boden Tasks:
   [ ] - Add three paths for accepted potatoes, one across the road, up the sidewalk, down the sidewalk
   [ ] - Add multiple (2-4) paths for runner potatoes
-  [ ] - Add dialogue emotes randomly to the potatoes
   [ ] - Lower z-index of crater below that of the potato_person runner
-  [ ] - Strikes are not actually added when a runner escapes
   [ ] - Update "You made the right choice officer" and implement the green number score system instead
   [ ] - Potato time left timer doesn't size back up after shrinking
-	[ ] - Remove potato types and remove from passport document
+	[ ] - Remove potato types from mugshots and passports and replace with procedural character generator
 	[ ] - Windowed mode breaks resolution and causes you to see outside viewport
-	[ ] - Add character generator and update in suspect panel and in suspect passport
-	[ ] - Disallow the player to target to the right of the border wall or in the document processing area with missiles
-	[ ] - Change position so Text flying up with the score update
+	[ ] - Don't allow the player to target to the right of the border wall or in the document processing area with missiles
+	[ ] - Change position so kill text flying up with the score update
 	[ ] - Don't set stamps to go invisible when quota reached in Endless mode
 	[ ] - Enable pause menu
 	[ ] - Don't allow the player to move the passport while the animation is playing for it to pass into the customs table
@@ -28,8 +23,9 @@ TO-DO 2024-11-16: DEMO
 	[ ] - Update menus with new MODERN DOS font
 	[ ] - Update ATTRIBUTION.md with MODERN DOS font
 	[ ] - Remove teleport to customs office when the potato is still moving in the line, make it say "Where is everyone"
-	[ ] - Change megaphone dialogue box to be text files printed on instead of hardcoded words
-  [ ] - Ability to kill potato after it is accepted if there is a runner, penalty of 500 points
+  [o] - Ability to kill potato after it is accepted if there is a runner, penalty of 500 points
+  [o] - If you do not kill a potato while it is running the border it repeats
+  [o] - Potatoes which run the border after being denied entry don't trigger BorderRunnerSystem
   David Tasks:
 	[ ] - Balance points (missiling, stamping, scanning)
 	[ ] - Check and see whether strikes are actually removing
@@ -60,6 +56,8 @@ These are tasks which must be completed before the submission to Steam deadline,
 [ ] - Mouse has to be over passport to be able to stamp
 
 ### Urgent
+  [ ] - Add dialogue emotes randomly to the potatoes
+[ ] - Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
 [ ] - Explain how to flip the pages on the document in the tutorial
 [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
 [ ] - Add flash indicator pointing at corner of first page 

@@ -5,7 +5,10 @@ class_name BorderRunnerSystem
 @export_group("Debugging")
 ##
 @export var unlimited_missiles = false
+##
 @export var crater_spawn_on_click = false
+##
+@export var rapid_runners = false
 
 @export_group("System References")
 ## Main root node of the game scene
@@ -25,7 +28,7 @@ class_name BorderRunnerSystem
 ## Maximum time that can pass between runner spawn attempts (Seconds)
 @export var max_time_between_runs: float = 120 # Default: 120 seconds - 2 minutes
 ## Movement speed of runners along their escape path
-@export var runner_speed: float = 0.18
+@export var runner_speed: float = 0.14
 
 @export_subgroup("Score Settings")
 ## Base score awarded for successfully catching a runner
@@ -118,13 +121,20 @@ func _ready():
 	# 0.085 for Expert (1 per 11 seconds)
 	match difficulty_level:
 		"Easy":
+			runner_speed = 0.10
 			runner_chance = 0.025
 		"Normal":
+			runner_speed = 0.14
 			runner_chance = 0.042
 		"Expert":
+			runner_speed = 0.18
 			runner_chance = 0.085
 		_: 
+			runner_speed = 0.10
 			runner_chance = 0.10
+			
+	if rapid_runners == true:
+		runner_chance = 1.0
 
 	if not queue_manager:
 		push_error("BorderRunnerSystem: Could not find QueueManager!")
@@ -180,8 +190,10 @@ func _process(delta):
 		update_runner(delta)
 	elif not active_runner and not has_runner_escaped:
 		time_since_last_run += delta
+		if rapid_runners == true:
+			min_time_between_runs = 1
+			max_time_between_runs = 1
 		
-		# Must exceed a random value between min_time_between_runs/max_time_between_runs
 		if time_since_last_run >= randi_range(min_time_between_runs, max_time_between_runs):
 			var roll = randf() # Random float between 0 and 1
 			var threshold = runner_chance * delta # 10% chance per-frame probability
@@ -213,11 +225,22 @@ func start_runner(potato):
 	var timer = get_tree().create_timer(2.0)
 	timer.timeout.connect(Callable(self, "clear_alert"))
 	
-	# Set up path follow
-	var path = $"../Gameplay/Paths/RunnerPath"
-	if not path:
-		push_error("RunnerPath not found!")
+	# Get all available runner paths
+	var paths_node = $"../Gameplay/Paths/RunnerPaths"
+	var available_paths = []
+	
+	# Collect all valid runner paths
+	for child in paths_node.get_children():
+		if child.name.begins_with("RunnerPath"):
+			available_paths.append(child)
+	
+	if available_paths.is_empty():
+		push_error("No runner paths found!")
 		return
+		
+	# Randomly select a path
+	var path = available_paths[randi() % available_paths.size()]
+	print("Selected runner path: ", path.name)
 		
 	var path_follow = PathFollow2D.new()
 	path_follow.rotates = false
@@ -249,12 +272,23 @@ func force_start_runner(potato):
 	var timer = get_tree().create_timer(2.0)
 	timer.timeout.connect(Callable(self, "clear_alert"))
 	
-	# Set up path follow
-	var path = $"../Gameplay/Paths/RunnerPath"
-	if not path:
-		push_error("RunnerPath not found!")
+	# Get all available runner paths
+	var paths_node = $"../Gameplay/Paths/RunnerPaths"
+	var available_paths = []
+	
+	# Collect all valid runner paths
+	for child in paths_node.get_children():
+		if child.name.begins_with("RunnerPath"):
+			available_paths.append(child)
+	
+	if available_paths.is_empty():
+		push_error("No runner paths found!")
 		return
 		
+	# Randomly select a path
+	var path = available_paths[randi() % available_paths.size()]
+	print("Selected runner path: ", path.name)
+	
 	var path_follow = PathFollow2D.new()
 	path_follow.rotates = false
 	path.add_child(path_follow)
