@@ -2,6 +2,11 @@ extends Node2D
 ## Manages the spawning of runners, missile targeting, and giblet effects when potatoes are destroyed
 class_name BorderRunnerSystem
 
+@export_group("Debugging")
+##
+@export var unlimited_missiles = false
+@export var crater_spawn_on_click = false
+
 @export_group("System References")
 ## Main root node of the game scene
 @export var root_node: Node2D
@@ -308,17 +313,19 @@ func runner_escaped():
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-#			if active_runner and not missile_active and not has_runner_escaped:
-#				launch_missile(event.position)
-			if not missile_active and not has_runner_escaped:
+			if active_runner and not missile_active and not has_runner_escaped:
 				launch_missile(event.position)
-				
+			if unlimited_missiles == true:
+				if not missile_active and not has_runner_escaped:
+					launch_missile(event.position)
+
 func _unhandled_input(event):
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
-			if crater_system:
-				var local_pos = crater_system.to_local(event.global_position)
-				crater_system.add_crater(local_pos)
+	if crater_spawn_on_click == true:
+		if event is InputEventMouseButton:
+			if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+				if crater_system:
+					var local_pos = crater_system.to_local(event.global_position)
+					crater_system.add_crater(local_pos)
 
 func launch_missile(target_pos):
 	print("Launching missile at: ", target_pos)
