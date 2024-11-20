@@ -36,3 +36,4 @@ texture = ExtResource("6_og870")
 
 [node name="CraterSystem" type="Node2D" parent="."]
 script = ExtResource("7_1snt0")
+crater_fade_time = 10.0

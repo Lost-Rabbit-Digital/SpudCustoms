@@ -16,9 +16,9 @@ class_name BorderRunnerSystem
 @export_subgroup("Spawn Settings")
 @export_range(0, 1, 0.001) var runner_chance: float = 0.025
 ## Minimum time that must pass between runner spawn attempts (Seconds)
-@export var min_time_between_runs: float = 1 # Default: 10
+@export var min_time_between_runs: float = 10 # Default: 10
 ## Maximum time that can pass between runner spawn attempts (Seconds)
-@export var max_time_between_runs: float = 2 # Default: 180
+@export var max_time_between_runs: float = 120 # Default: 120 seconds - 2 minutes
 ## Movement speed of runners along their escape path
 @export var runner_speed: float = 0.18
 
@@ -225,6 +225,42 @@ func start_runner(potato):
 	path_follow.add_child(potato)
 	potato.position = Vector2.ZERO
 	print("Runner setup complete")
+
+func force_start_runner(potato):
+	# If there's already an active runner, clean it up first
+	if active_runner:
+		clean_up_runner()
+		
+	print("Force starting runner with rejected potato")
+	active_runner = potato
+	has_runner_escaped = false
+	
+	# Play alarm and show alert
+	alarm_sound.play()
+	alert_label.visible = true
+	alert_label.text = "BORDER RUNNER DETECTED!\nClick to launch missile!"
+	alert_label.add_theme_color_override("font_color", Color.RED)
+	
+	var timer = get_tree().create_timer(2.0)
+	timer.timeout.connect(Callable(self, "clear_alert"))
+	
+	# Set up path follow
+	var path = $"../Gameplay/Paths/RunnerPath"
+	if not path:
+		push_error("RunnerPath not found!")
+		return
+		
+	var path_follow = PathFollow2D.new()
+	path_follow.rotates = false
+	path.add_child(path_follow)
+	path_follow.progress_ratio = 0.0
+	
+	# Add the potato to the path_follow
+	if potato.get_parent():
+		potato.get_parent().remove_child(potato)
+	path_follow.add_child(potato)
+	potato.position = Vector2.ZERO
+	print("Forced runner setup complete")
 
 func update_runner(delta):
 	if not active_runner or has_runner_escaped:

@@ -1087,6 +1087,7 @@ func move_potato_along_path(approval_status):
 	if current_potato_info == null:
 		print("Error: No potato info available")
 		return
+		
 	var path: Path2D
 	
 	# Set texture
@@ -1100,12 +1101,22 @@ func move_potato_along_path(approval_status):
 	elif approval_status == "timedout":
 		path = $Gameplay/Paths/TimedOutPath
 		timedOut()
-	else: 
-		if randi() % 1 == 0:  # 5% chance to go sicko mode
-			path = $Gameplay/Paths/RunnerPath
+	else:
+		# Increase chance of runner when rejected
+		if randf() < 0.30:  # 15% chance to go runner mode
+			# Instead of using the runner path directly,
+			# trigger the border runner system
+			process_decision(false)
+			if border_runner_system:
+				# Pass the potato person to the border runner system
+				border_runner_system.force_start_runner(potato_person)
+				return  # Exit early as border runner system handles the potato
+			else:
+				print("ERROR: Border runner system not found!")
+				path = $Gameplay/Paths/RejectPath
 		else:
 			path = $Gameplay/Paths/RejectPath
-		process_decision(false)
+			process_decision(false)
 			
 	# Calculate score change
 	var path_follow = PathFollow2D.new()
@@ -1113,7 +1124,6 @@ func move_potato_along_path(approval_status):
 	path.add_child(path_follow)
 	path_follow.add_child(potato_person)
 	
-	#potato_person.position = Vector2.ZERO
 	path_follow.progress_ratio = 0.0
 	
 	passport = $Gameplay/InteractiveElements/Passport
@@ -1122,11 +1132,11 @@ func move_potato_along_path(approval_status):
 	var runner_time = randi_range(7, 11)
 	
 	var exit_tween = create_tween()
-	if "Approve" in path:
+	if "Approve" in path.name:
 		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 8.0)
-	if "Reject" in path:
+	elif "Reject" in path.name:
 		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 8.0)
-	if "TimedOut" in path:
+	elif "TimedOut" in path.name:
 		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 8.0)
 	else:
 		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, runner_time)
@@ -1135,7 +1145,7 @@ func move_potato_along_path(approval_status):
 		potato_person.queue_free()
 		path_follow.queue_free()
 		reset_scene()
-		)
+	)
 
 func reset_scene():
 	potato_mugshot.position.x = suspect_panel.position.x
