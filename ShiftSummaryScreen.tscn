@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsobjoevgmlbb"]
+
+[ext_resource type="Script" path="res://ShiftSummaryScreen.gd" id="1_lf5e7"]
+
+[node name="ShiftSummaryScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_lf5e7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="StatsContainer" type="PanelContainer" parent="."]
+z_index = 13
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 250.0
+offset_top = 200.0
+offset_right = 890.0
+offset_bottom = 560.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatsLabel" type="Label" parent="StatsContainer"]
+layout_mode = 2
+text = "Loading Stats..."
+
+[node name="ContinueButton" type="Button" parent="."]
+z_index = 13
+layout_mode = 0
+offset_left = 519.0
+offset_top = 573.0
+offset_right = 591.0
+offset_bottom = 597.0
+text = "Continue"

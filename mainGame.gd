@@ -85,8 +85,40 @@ var is_in_guide_tutorial = true
 @onready var megaphone = $Gameplay/Megaphone
 @onready var potato_mugshot = $Gameplay/PotatoMugshot
 @onready var enter_office_path = $Gameplay/Paths/EnterOfficePath
+@onready var stats_manager = $SystemManagers/StatsManager
+var shift_stats: ShiftStats
+@onready var shift_summary = preload("res://ShiftSummaryScreen.tscn")
+
+func end_shift():
+	var summary = shift_summary.instantiate()
+	add_child(summary)
+	
+	# Calculate final time taken
+	shift_stats.time_taken = processing_time - current_timer
+	shift_stats.processing_time_left = current_timer
+	
+	var stats = {
+		"shift": Global.shift,
+		"time_taken": shift_stats.time_taken,
+		"score": Global.score,
+		"missiles_fired": shift_stats.missiles_fired,
+		"missiles_hit": shift_stats.missiles_hit,
+		"perfect_hits": shift_stats.perfect_hits,
+		"total_stamps": shift_stats.total_stamps,
+		"potatoes_approved": shift_stats.potatoes_approved,
+		"potatoes_rejected": shift_stats.potatoes_rejected,
+		"perfect_stamps": shift_stats.perfect_stamps,
+		"speed_bonus": shift_stats.get_speed_bonus(),
+		"accuracy_bonus": shift_stats.get_accuracy_bonus(),
+		"perfect_bonus": shift_stats.get_missile_bonus(),  # Changed from perfect_hit_bonus
+		"final_score": Global.score
+	}
+	
+	summary.show_summary(stats)
 
 func _ready():
+	shift_stats = stats_manager.get_new_stats()
+	Global.score_updated.connect(_on_score_updated)
 	difficulty_level = Global.difficulty_level
 	# Store the default cursor shape
 	default_cursor = Input.get_current_cursor_shape()
@@ -160,7 +192,7 @@ func set_difficulty(level):
 			max_strikes = 3
 			processing_time = 45
 		"Expert":
-			quota_target = 12
+			quota_target = 1
 			max_strikes = 2
 			processing_time = 30
 			
@@ -687,6 +719,12 @@ func calculate_age(date_of_birth: String) -> int:
 	
 	return age
 	
+	
+	
+# Update score display when global score changes
+func _on_score_updated(new_score: int):
+	$UI/Labels/ScoreLabel.text = "Score: " + str(new_score)
+
 func _on_button_welcome_button_pressed() -> void:
 	process_decision(true)
 
@@ -702,7 +740,6 @@ func go_to_game_over():
 	print("ALERT: go_to_game_over() has been disabled")
 	#get_tree().change_scene_to_file("res://menus/game_over.tscn")
 
-	
 func go_to_game_win():
 	print("Transitioning to game win scene with score:", score)
 	$Gameplay/InteractiveElements/ApprovalStamp.visible = false
@@ -733,15 +770,21 @@ func process_decision(allowed):
 		
 	var correct_decision = is_potato_valid(current_potato_info)
 	
+	# Update stats
+	if allowed:
+		shift_stats.potatoes_approved += 1
+	else:
+		shift_stats.potatoes_rejected += 1
+	
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
 		quota_met += 1
 		correct_decision_streak += 1
-		
+				
 		# Award points for correct decisions, with bonus points for consecutive
 		# correct decisions
 		# UV scanning will award 1000 points per finding
 		var decision_points = 1000 * point_multiplier
-		score += decision_points
+		Global.add_score(decision_points)
 		
 		# Increase multiplier for streaks
 		if correct_decision_streak >= 3:
@@ -754,7 +797,8 @@ func process_decision(allowed):
 		# Check if quota met
 		if quota_met >= quota_target:
 			print("Quota complete!")
-			go_to_game_win()
+			end_shift()
+			#go_to_game_win()
 	else:
 		$UI/Labels/JudgementLabel.text = "You have caused unnecessary suffering, officer...\n+1 Strikes!"
 		correct_decision_streak = 0
@@ -965,6 +1009,8 @@ func apply_stamp(stamp):
 	# holding_stamp remains true
 	# dragged_sprite remains set
 	
+	
+	
 	var open_passport = $Gameplay/InteractiveElements/Passport/OpenPassport
 	if not open_passport:
 		print("ERROR: Cannot find OpenPassport node")
@@ -1024,6 +1070,18 @@ func apply_stamp(stamp):
 	tween.chain().tween_property(temp_stamp, "position:y", 
 		temp_stamp.position.y, 
 		STAMP_ANIMATION_DURATION / 2)
+	shift_stats.total_stamps += 1
+	
+	# Check accuracy
+	var is_perfect = stats_manager.check_stamp_accuracy(
+		final_stamp.global_position,
+		open_passport
+	)
+	
+	if is_perfect:
+		shift_stats.perfect_stamps += 1
+		Global.add_score(100)  # Bonus for perfect stamp
+		# Maybe add visual/audio feedback for perfect placement
 	
 	# Remove the temporary stamp and restore the held stamp
 	tween.chain().tween_callback(func():
