@@ -1094,16 +1094,37 @@ func move_potato_along_path(approval_status):
 	var PotatoScene = load("res://PotatoPerson.tscn")
 	var potato_person = PotatoScene.instantiate()
 	
+	# Get all available paths
+	var approve_paths_node = $Gameplay/Paths/ApprovePaths
+	var reject_paths_node = $Gameplay/Paths/RejectionPaths
+	var available_approve_paths = []
+	var available_reject_paths = []
+	
+	# Collect all valid approve paths
+	for child in approve_paths_node.get_children():
+		if child.name.begins_with("ApprovePath"):
+			available_approve_paths.append(child)
+			
+	# Collect all valid reject paths
+	for child in reject_paths_node.get_children():
+		if child.name.begins_with("RejectPath"):
+			available_reject_paths.append(child)
+	
 	# set path based on approval status
 	if approval_status == "approved":
-		path = $Gameplay/Paths/ApprovePath
+		if available_approve_paths.is_empty():
+			push_error("No approve paths found!")
+			return
+		# Randomly select an approve path
+		path = available_approve_paths[randi() % available_approve_paths.size()]
+		print("Selected approve path: ", path.name)
 		process_decision(true)
 	elif approval_status == "timedout":
 		path = $Gameplay/Paths/TimedOutPath
 		timedOut()
 	else:
 		# Increase chance of runner when rejected
-		if randf() < 0.30:  # 15% chance to go runner mode
+		if randf() < 0.30:  # 30% chance to go runner mode
 			# Instead of using the runner path directly,
 			# trigger the border runner system
 			process_decision(false)
@@ -1113,9 +1134,18 @@ func move_potato_along_path(approval_status):
 				return  # Exit early as border runner system handles the potato
 			else:
 				print("ERROR: Border runner system not found!")
-				path = $Gameplay/Paths/RejectPath
+				if !available_reject_paths.is_empty():
+					path = available_reject_paths[randi() % available_reject_paths.size()]
+				else:
+					push_error("No reject paths found!")
+					return
 		else:
-			path = $Gameplay/Paths/RejectPath
+			if available_reject_paths.is_empty():
+				push_error("No reject paths found!")
+				return
+			# Randomly select a reject path
+			path = available_reject_paths[randi() % available_reject_paths.size()]
+			print("Selected reject path: ", path.name)
 			process_decision(false)
 			
 	# Calculate score change
