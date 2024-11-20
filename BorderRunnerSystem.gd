@@ -11,6 +11,13 @@ class_name BorderRunnerSystem
 @export var score_label: Label
 ## Label used to display alerts and notifications to the player
 @export var alert_label: Label
+@export var missile_sprite : Sprite2D
+@export var explosion_vfx : Node2D
+
+# Audio References
+@onready var alarm_sound = $AlarmSound
+@onready var explosion_sound = $ExplosionSound
+@onready var missile_sound = $MissileSound
 
 @export_group("Runner System")
 @export_subgroup("Spawn Settings")
@@ -43,15 +50,17 @@ class_name BorderRunnerSystem
 
 # Add these to your existing @export variables
 @export_group("Missile Effects")
-@export var smoke_particle_texture: Texture2D = preload("res://assets/missiles/smoke_particle.png")
+@onready var smoke_particle_texture: Texture2D = preload("res://assets/missiles/smoke_particle.png")
 @export var smoke_lifetime: float = 0.9
 @export var smoke_spread: float = 40.0
 @export var smoke_initial_velocity: float = 50.0
 @export var smoke_scale: float = 0.3
 @export var smoke_amount: int = 90
+@onready var smoke_particles = CPUParticles2D.new()
 
 @export_group("Crater System")
 @export var crater_size_multiplier: float = 1.2  # Size multiplier for explosion craters
+@onready var crater_system = $CraterSystem
 
 @export_group("Giblet System")
 @export_subgroup("Visual Settings")
@@ -71,15 +80,6 @@ class_name BorderRunnerSystem
 @export var gib_gravity: float = 300
 ## Rotation speed applied to giblets while in motion
 @export var gib_spin_speed: float = 13
-
-# Audio/Visual node references
-@onready var alarm_sound = $AlarmSound
-@onready var explosion_sound = $ExplosionSound
-@onready var missile_sound = $MissileSound
-@onready var explosion_vfx = $ExplosionVFX
-@onready var missile_sprite = $MissileSprite
-@onready var smoke_particles: CPUParticles2D = CPUParticles2D.new()
-@onready var crater_system = $CraterSystem
 
 # Internal state tracking
 var runner_streak: int = 0
@@ -134,32 +134,32 @@ func _ready():
 			push_error("Failed to load giblet_" + str(i))
 			
 		# Setup smoke trail particles
-	add_child(smoke_particles)
-	smoke_particles.z_index = 14  # Just behind missile
-	
-	smoke_particles.texture = smoke_particle_texture
-	
-	# Configure particle properties
-	smoke_particles.emitting = false
-	smoke_particles.amount = smoke_amount
-	smoke_particles.lifetime = smoke_lifetime
-	smoke_particles.explosiveness = 0.0
-	smoke_particles.randomness = 0.5
-	smoke_particles.direction = Vector2.LEFT
-	smoke_particles.spread = smoke_spread
-	smoke_particles.gravity = Vector2.ZERO
-	smoke_particles.initial_velocity_min = smoke_initial_velocity * 0.8
-	smoke_particles.initial_velocity_max = smoke_initial_velocity
-	smoke_particles.scale_amount_min = smoke_scale * 0.8
-	smoke_particles.scale_amount_max = smoke_scale
-	smoke_particles.color = Color(0.7, 0.7, 0.7, 0.3)
-	
-	# Create gradient for fading
-	var gradient = Gradient.new()
-	gradient.add_point(0.0, Color(0.7, 0.7, 0.7, 0.3))
-	gradient.add_point(1.0, Color(0.7, 0.7, 0.7, 0.0))
-	smoke_particles.color_ramp = gradient
-	
+		add_child(smoke_particles)
+		smoke_particles.z_index = 14  # Just behind missile
+		
+		smoke_particles.texture = smoke_particle_texture
+		
+		# Configure particle properties
+		smoke_particles.emitting = false
+		smoke_particles.amount = smoke_amount
+		smoke_particles.lifetime = smoke_lifetime
+		smoke_particles.explosiveness = 0.0
+		smoke_particles.randomness = 0.5
+		smoke_particles.direction = Vector2.LEFT
+		smoke_particles.spread = smoke_spread
+		smoke_particles.gravity = Vector2.ZERO
+		smoke_particles.initial_velocity_min = smoke_initial_velocity * 0.8
+		smoke_particles.initial_velocity_max = smoke_initial_velocity
+		smoke_particles.scale_amount_min = smoke_scale * 0.8
+		smoke_particles.scale_amount_max = smoke_scale
+		smoke_particles.color = Color(0.7, 0.7, 0.7, 0.3)
+		
+		# Create gradient for fading
+		var gradient = Gradient.new()
+		gradient.add_point(0.0, Color(0.7, 0.7, 0.7, 0.3))
+		gradient.add_point(1.0, Color(0.7, 0.7, 0.7, 0.0))
+		smoke_particles.color_ramp = gradient
+		
 
 func _process(delta):
 	if not queue_manager:
@@ -200,10 +200,19 @@ func start_runner(potato):
 	has_runner_escaped = false
 	
 	# Play alarm and show alert
-	alarm_sound.play()
-	alert_label.visible = true
-	alert_label.text = "BORDER RUNNER DETECTED!\nClick to launch missile!"
-	alert_label.add_theme_color_override("font_color", Color.RED)
+	if alarm_sound:
+		alarm_sound.play()
+	else:
+		push_error("BorderRunnerSystem: alarm_sound is not assigned!")
+		
+	# Add null check for alert_label
+	if alert_label:
+		alert_label.visible = true
+		alert_label.text = "BORDER RUNNER DETECTED!\nClick to launch missile!"
+		alert_label.add_theme_color_override("font_color", Color.RED)
+	else:
+		push_error("BorderRunnerSystem: alert_label is not assigned!")
+		
 	
 	var timer = get_tree().create_timer(2.0)
 	timer.timeout.connect(Callable(self, "clear_alert"))

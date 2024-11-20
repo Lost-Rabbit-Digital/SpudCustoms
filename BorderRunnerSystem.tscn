@@ -8,9 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://d0e44jundomwj" path="res://assets/missiles/missile_sprite.png" id="6_og870"]
 [ext_resource type="Script" path="res://CraterSystem.gd" id="7_1snt0"]
 
-[node name="BorderRunnerSystem" type="Node2D"]
+[node name="BorderRunnerSystem" type="Node2D" node_paths=PackedStringArray("missile_sprite", "explosion_vfx")]
 script = ExtResource("1_8vf2f")
-runner_chance = 0.223
+missile_sprite = NodePath("MissileSprite")
+explosion_vfx = NodePath("ExplosionVFX")
 
 [node name="ExplosionVFX" type="Node2D" parent="."]
 z_index = 11
@@ -36,3 +37,4 @@ texture = ExtResource("6_og870")
 
 [node name="CraterSystem" type="Node2D" parent="."]
 script = ExtResource("7_1snt0")
+crater_fade_time = 15.0
