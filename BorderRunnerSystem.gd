@@ -49,15 +49,6 @@ class_name BorderRunnerSystem
 ## Radius of explosion effect and damage area
 @export var explosion_size: float = 50
 
-# Add these to your existing @export variables
-@export_group("Missile Effects")
-@export var smoke_particle_texture: Texture2D = preload("res://assets/missiles/smoke_particle.png")
-@export var smoke_lifetime: float = 0.9
-@export var smoke_spread: float = 40.0
-@export var smoke_initial_velocity: float = 50.0
-@export var smoke_scale: float = 0.3
-@export var smoke_amount: int = 90
-
 @export_group("Crater System")
 @export var crater_size_multiplier: float = 1.2  # Size multiplier for explosion craters
 
@@ -86,7 +77,7 @@ class_name BorderRunnerSystem
 @onready var missile_sound = $MissileSound
 @onready var explosion_vfx = $ExplosionVFX
 @onready var missile_sprite = $MissileSprite
-@onready var smoke_particles: CPUParticles2D = CPUParticles2D.new()
+@onready var smoke_particles = $MissileSprite/CPUParticles2D
 @onready var crater_system = $CraterSystem
 
 # Internal state tracking
@@ -148,34 +139,6 @@ func _ready():
 		else:
 			push_error("Failed to load giblet_" + str(i))
 			
-		# Setup smoke trail particles
-	add_child(smoke_particles)
-	smoke_particles.z_index = 14  # Just behind missile
-	
-	smoke_particles.texture = smoke_particle_texture
-	
-	# Configure particle properties
-	smoke_particles.emitting = false
-	smoke_particles.amount = smoke_amount
-	smoke_particles.lifetime = smoke_lifetime
-	smoke_particles.explosiveness = 0.0
-	smoke_particles.randomness = 0.5
-	smoke_particles.direction = Vector2.LEFT
-	smoke_particles.spread = smoke_spread
-	smoke_particles.gravity = Vector2.ZERO
-	smoke_particles.initial_velocity_min = smoke_initial_velocity * 0.8
-	smoke_particles.initial_velocity_max = smoke_initial_velocity
-	smoke_particles.scale_amount_min = smoke_scale * 0.8
-	smoke_particles.scale_amount_max = smoke_scale
-	smoke_particles.color = Color(0.7, 0.7, 0.7, 0.3)
-	
-	# Create gradient for fading
-	var gradient = Gradient.new()
-	gradient.add_point(0.0, Color(0.7, 0.7, 0.7, 0.3))
-	gradient.add_point(1.0, Color(0.7, 0.7, 0.7, 0.0))
-	smoke_particles.color_ramp = gradient
-	
-
 func _process(delta):
 	if not queue_manager:
 		print("No queue manager found!")
@@ -383,8 +346,6 @@ func launch_missile(target_pos):
 	missile_sound.play()
 	
 	# Start particle emission and position at missile
-	smoke_particles.emitting = true
-	smoke_particles.position = missile_position
 	smoke_particles.rotation = missile_sprite.rotation - PI/2  # Adjust for particle direction
 	print("Missile launched from: ", missile_position)
 
@@ -403,7 +364,6 @@ func update_missile(delta):
 	missile_sprite.rotation = direction.angle() + PI/2
 	
 	# Update smoke trail position and rotation
-	smoke_particles.position = missile_position
 	smoke_particles.rotation = missile_sprite.rotation - PI/2
 	
 	# Check if missile reached target (use squared distance for efficiency)
@@ -430,7 +390,6 @@ func trigger_explosion():
 	
 	missile_active = false
 	missile_sprite.visible = false
-	smoke_particles.emitting = false  # Stop smoke trail
 	
 	if explosion_sound:
 		explosion_sound.play()
@@ -572,6 +531,3 @@ func spawn_gibs(pos):
 		
 		# Set scale
 		gib.scale = gib_scale  # Adjust this based on your gib sprite sizes
-		
-func clean_up_effects():
-	smoke_particles.emitting = false

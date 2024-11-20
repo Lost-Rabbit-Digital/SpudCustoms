@@ -4,8 +4,8 @@ These are our goals, to-do tasks, and completed tasks.
 TO-DO 2024-11-16: DEMO
   Active Tasks:
   Boden Tasks:
-  [ ] - Add three paths for accepted potatoes, one across the road, up the sidewalk, down the sidewalk
-  [ ] - Add multiple (2-4) paths for runner potatoes
+  [ ] - If the potato_person escapes while the missile is airborne the missile becomes stuck
+  [ ] - Move missile particles further back near exhaust
   [ ] - Lower z-index of crater below that of the potato_person runner
   [ ] - Update "You made the right choice officer" and implement the green number score system instead
   [ ] - Potato time left timer doesn't size back up after shrinking
@@ -26,6 +26,9 @@ TO-DO 2024-11-16: DEMO
   [o] - Ability to kill potato after it is accepted if there is a runner, penalty of 500 points
   [o] - If you do not kill a potato while it is running the border it repeats
   [o] - Potatoes which run the border after being denied entry don't trigger BorderRunnerSystem
+  [o] - Add 10 paths for accepted potatoes
+  [o] - Add 10 paths for runner potatoes
+  [o] - Add 10 paths for rejected potatoes
   David Tasks:
 	[ ] - Balance points (missiling, stamping, scanning)
 	[ ] - Check and see whether strikes are actually removing

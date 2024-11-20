@@ -215,12 +215,13 @@ point_count = 17
 script = ExtResource("1_s4bva")
 
 [node name="BorderRunnerSystem" parent="." node_paths=PackedStringArray("root_node", "queue_manager", "score_label", "alert_label") instance=ExtResource("29_rft0e")]
+unlimited_missiles = true
+rapid_runners = true
 root_node = NodePath("..")
 queue_manager = NodePath("../SystemManagers/QueueManager")
 score_label = NodePath("../UI/Labels/ScoreLabel")
 alert_label = NodePath("../UI/Labels/AlertLabel")
 runner_chance = 0.025
-smoke_amount = 65
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
