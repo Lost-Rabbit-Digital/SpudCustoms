@@ -3,47 +3,45 @@ These are our goals, to-do tasks, and completed tasks.
 
 TO-DO 2024-11-16: DEMO
   Active Tasks:
-    [ ] - Potatoes which run the border after being denied entry don't trigger BorderRunnerSystem
+	[ ] - Potatoes which run the border after being denied entry don't trigger BorderRunnerSystem
+	[ ] - If you do not kill a potato while it is running the border it repeats
   Boden Tasks:
-  	[ ] - Remove potato types and remove from passport document
-  	[ ] - Windowed mode breaks resolution and causes you to see outside viewport
-  	[ ] - Add character generator and update in suspect panel and in suspect passport
-  	[ ] - Disallow the player to target to the right of the border wall or in the document processing area with missiles
-  	[ ] - Change position so Text flying up with the score update
-  	[ ] - Don't set stamps to go invisible when quota reached in Endless mode
-  	[ ] - Enable pause menu
-  	[ ] - Don't allow the player to move the passport while the animation is playing for it to pass into the customs table
-  	[ ] - Stamps go over edge of passport
-  	[ ] - Able to drag stamps off interaction table, bound them to lower half of screen
-  	[ ] - Able to drag passport off interaction table, bound them to lower half of screen
-  	[ ] - Snap closed passport to position of mouse cursor to avoid bad offset
-  	[ ] - Update menus with new MODERN DOS font
-  	[ ] - Update ATTRIBUTION.md with MODERN DOS font
-  	[ ] - Remove teleport to customs office when the potato is still moving in the line, make it say "Where is everyone"
-  	[ ] - Change megaphone dialogue box to be text files printed on instead of hardcoded words
+	[ ] - Remove potato types and remove from passport document
+	[ ] - Windowed mode breaks resolution and causes you to see outside viewport
+	[ ] - Add character generator and update in suspect panel and in suspect passport
+	[ ] - Disallow the player to target to the right of the border wall or in the document processing area with missiles
+	[ ] - Change position so Text flying up with the score update
+	[ ] - Don't set stamps to go invisible when quota reached in Endless mode
+	[ ] - Enable pause menu
+	[ ] - Don't allow the player to move the passport while the animation is playing for it to pass into the customs table
+	[ ] - Stamps go over edge of passport
+	[ ] - Able to drag stamps off interaction table, bound them to lower half of screen
+	[ ] - Able to drag passport off interaction table, bound them to lower half of screen
+	[ ] - Snap closed passport to position of mouse cursor to avoid bad offset
+	[ ] - Update menus with new MODERN DOS font
+	[ ] - Update ATTRIBUTION.md with MODERN DOS font
+	[ ] - Remove teleport to customs office when the potato is still moving in the line, make it say "Where is everyone"
+	[ ] - Change megaphone dialogue box to be text files printed on instead of hardcoded words
   David Tasks:
-  [ ] - Integrate pause menu, bgm handler, sfx handler
-  [ ] - Check and see whether strikes are actually removing
-  [ ] - Difficulty selection UI after selecting endless mode
-  [ ] - Randomize path that the runners traverse
-  [ ] - Remove invalid/inconsistent rules (remove potato types, remove expiration related rules and just properly process expirations)
-  [ ] - Show the appropriate leaderboard out of 3 Leaderboards based on the difficulty_level global
-  [ ] - Create end screen summarizing performance and giving grade, an option to submit score, see scores after submitting.
-  [ ] - Steam.uploadLeaderboardScore( score, keep_best, details, handle ) 
-  [ ] - Use top 3 scores for leaderboard, then show ... and show 3 scores above player and 3 scores below player (if any), with players score in middle. 
-  [ ] - Make sure that potato gibs have a smaller smoke trail.
-  [ ] - Leaderboards for top score, most kills, most games.
 	[ ] - Balance points (missiling, stamping, scanning)
+	[ ] - Check and see whether strikes are actually removing
+	[ ] - Difficulty selection UI after selecting endless mode
 	[ ] - Make difficulty a global enum? 
 	[ ] - Make sure missile has glow on rocket thruster
 	[ ] - Make sure missile has smoke trail
 	[ ] - Make sure missile leaves a crater
 	[ ] - Make sure scores are shown above their respective action (stamping, missiling, scanning)
 	[ ] - Make sure that potato gibs have a smaller smoke trail.
+	[ ] - Randomize path that the runners traverse
+	[ ] - Remove invalid/inconsistent rules (remove potato types, remove expiration related rules and just properly process expirations)
+	[ ] - Show the appropriate leaderboard out of 3 Leaderboards based on the difficulty_level global
 	[ ] - UV lamp represents a high-risk way to maximize points.
 	[ ] - Leaderboards for top score, most kills, most games
+	[ ] - Steam.uploadLeaderboardScore( score, keep_best, details, handle ) 
+	[ ] - Use top 3 scores for leaderboard, then show ... and show 3 scores above player and 3 scores below player (if any), with players score in middle. 
 	[ ] - Use Steam name and avatar on the leaderboard use Steam.AVATAR_SMALL for the leaderboard
 	[ ] - Fix text color, should be white with black outline
+	[ ] - Integrate pause menu, bgm handler, sfx handler
 
 
 ## To Be Completed
@@ -98,7 +96,6 @@ These are various goals which are out of scope for the current roadmap, but if p
 # Completed tasks list
 The tasks which have be completed and pushed to VCS.
 
-[o] - If you do not kill a potato while it is running the border it repeats
 [o] - Add 8 different potato gibs that explode from a hit potato, with more exploding from a perfectly hit potato
 [o] - Potato persons flip upside down when called into the office
 [o] - Stamp doesn't match the rest of the pixel feel, different resolution

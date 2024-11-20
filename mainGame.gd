@@ -86,8 +86,6 @@ var is_in_guide_tutorial = true
 @onready var potato_mugshot = $Gameplay/PotatoMugshot
 @onready var enter_office_path = $Gameplay/Paths/EnterOfficePath
 
-var runner_system = BorderRunnerSystem.new()
-
 func _ready():
 	difficulty_level = Global.difficulty_level
 	# Store the default cursor shape
@@ -1104,7 +1102,6 @@ func move_potato_along_path(approval_status):
 		timedOut()
 	else: 
 		if randi() % 1 == 0:  # 5% chance to go sicko mode
-			runner_system.start_runner(potato_person)
 			path = $Gameplay/Paths/RunnerPath
 		else:
 			path = $Gameplay/Paths/RejectPath
