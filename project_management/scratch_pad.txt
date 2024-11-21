@@ -91,6 +91,22 @@ These are various goals which are out of scope for the current roadmap, but if p
 # Completed tasks list
 The tasks which have be completed and pushed to VCS.
 
+[o] - Remove potato types from mugshots and passports and replace with procedural character generator
+[o] - Update missile smoke system
+[o] - Ability to kill potato after it is accepted if there is a runner, penalty of 500 points
+[o] - If you do not kill a potato while it is running the border it repeats
+[o] - Potatoes which run the border after being denied entry don't trigger BorderRunnerSystem
+[o] - Add 10 paths for accepted potatoes
+[o] - Add 10 paths for runner potatoes
+[o] - Add 10 paths for rejected potatoes
+[o] - Randomize path that the runners traverse
+[o] - Make sure missile leaves a crater
+[o] - Fix text color, should be white with black outline
+[o] - Integrate bgm handler, sfx handler
+[o] - Show the appropriate leaderboard out of 3 Leaderboards based on the difficulty_level global
+[o] - Steam.uploadLeaderboardScore( score, keep_best, details, handle ) 
+[o] - Use Steam name and avatar on the leaderboard use Steam.AVATAR_SMALL for the leaderboard
+[o] - Make difficulty a global var
 [o] - Add 8 different potato gibs that explode from a hit potato, with more exploding from a perfectly hit potato
 [o] - Potato persons flip upside down when called into the office
 [o] - Stamp doesn't match the rest of the pixel feel, different resolution
