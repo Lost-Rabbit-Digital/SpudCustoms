@@ -4,7 +4,7 @@ extends Node
 var shift = 1
 var final_score = 0
 var quota_met = 0
-var build_type = "Demo Release"
+var build_type = "Full Release"
 var difficulty_level = "Expert" # Can be "Easy", "Normal", or "Expert"
 
 # New scoring system variables
@@ -16,6 +16,7 @@ var high_scores: Dictionary = {
 }
 
 var is_fetching_leaderboard = false
+var current_leaderboard_handle = 0
 var cached_leaderboard_entries = []
 
 # Signals
@@ -28,21 +29,20 @@ func _ready():
 	score = final_score
 	load_high_scores()
 	
+	
 func _init():
-	print("Running global init")
 	if Steam.isSteamRunning():
+		print("Configuring Steam connections...")
 		Steam.leaderboard_find_result.connect(_on_leaderboard_find_result)
 		Steam.leaderboard_score_uploaded.connect(_on_leaderboard_score_uploaded)
 		Steam.leaderboard_scores_downloaded.connect(_on_leaderboard_scores_downloaded)
-		print("All steam connections configured.")
-		Steam.findLeaderboard("endless_expert")
-		submit_score(10000)
+		print("Steam connections configured.")
 
-
+# Helper function to get leaderboard name based on difficulty
 func get_leaderboard_name(difficulty: String = "") -> String:
 	if difficulty.is_empty():
 		difficulty = difficulty_level
-	
+		
 	match difficulty:
 		"Easy": return "endless_easy"
 		"Normal": return "endless_normal"
@@ -89,46 +89,63 @@ func get_leaderboard_entries(difficulty: String = "") -> Array:
 
 func _on_leaderboard_find_result(handle: int, found: bool) -> void:
 	if not found:
-		push_error("Failed to find leaderboard!")
+		print("Failed to find leaderboard!")
 		return
+		
+	print("Leaderboard found, handle: ", handle)
+	current_leaderboard_handle = handle
 	
-	# Immediately request scores
-	Steam.downloadLeaderboardEntries(
-		handle,
-		Steam.LEADERBOARD_DATA_REQUEST_GLOBAL,
-		1,
-		12
+	# Create empty PackedInt32Array for details
+	var details = PackedInt32Array()
+	
+	print("Uploading score to leaderboard")
+	Steam.uploadLeaderboardScore(
+		handle,  # Leaderboard handle
+		score,   # Current score
+		details  # Empty details array
 	)
 
+func _on_leaderboard_score_uploaded(success: int, handle: int, score_details: Dictionary) -> void:
+	if success == 1:
+		print("Successfully uploaded score to Steam leaderboard!")
+		print("Score details: ", score_details)
+		
+		# Request updated leaderboard entries
+		Steam.downloadLeaderboardEntries(
+			handle,
+			Steam.LEADERBOARD_DATA_REQUEST_GLOBAL,
+			1,  # Start rank
+			12  # End rank
+		)
+	else:
+		print("Failed to upload score to Steam leaderboard")
+
 func _on_leaderboard_scores_downloaded(handle: int, entries: Array) -> void:
-	print("leaderboard scores downloaded...")
+	print("Leaderboard scores downloaded")
 	is_fetching_leaderboard = false
 	cached_leaderboard_entries.clear()
 	
 	for entry in entries:
+		# Get the player name from Steam
+		var player_name = Steam.getFriendPersonaName(entry.steam_id_user)
 		cached_leaderboard_entries.append({
-			"name": entry.steam_id_user,  # You might want to get actual Steam names
+			"name": player_name,
 			"score": entry.score
 		})
-	print(cached_leaderboard_entries)
-
-func _on_leaderboard_score_uploaded(success: int, this_handle: int, this_score: Dictionary) -> void:
-	if success == 1:
-		print("Successfully uploaded scores!")
-		# Add additional logic to use other variables passed back
-	else:
-		print("Failed to upload scores!")
+	print("Updated cached leaderboard entries: ", cached_leaderboard_entries)
 
 func submit_score(score: int):
-	# Update Steam leaderboard if available
-	print("Submitting score, checking if Steam running")
-	var details = ""
-	if Steam.isSteamRunning():
-		print("Steam running, fetching handle")
-		var handle = get_leaderboard_name(difficulty_level)
-		Steam.findLeaderboard("endless_expert")
-		print("Submitting score")
-		Steam.uploadLeaderboardScore(score, true, var_to_bytes(details).to_int32_array())
+	print("Submitting score to Steam leaderboard")
+	if not Steam.isSteamRunning():
+		print("Steam not running, score submission skipped")
+		return false
+		
+	var leaderboard_name = get_leaderboard_name(difficulty_level)
+	print("Finding leaderboard: ", leaderboard_name)
+	
+	# First find the leaderboard
+	Steam.findLeaderboard(leaderboard_name)
+	return true
 
 # Update your add_score function to also update Steam leaderboards
 func add_score(points: int):

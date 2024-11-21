@@ -11,8 +11,7 @@ func _ready():
 	setup_background()
 	setup_styling()
 	show_summary(generate_test_stats())
-	Steam.findLeaderboard("endless_expert")
-	Global.submit_score(1000)
+	Global.submit_score(750)
 
 func setup_background():
 	if background and BACKGROUND_TEXTURE:
@@ -61,9 +60,9 @@ Missiles Fired: {fired}
 Missiles Hit: {hit}
 Perfect Hits: {perfect}
 Hit Rate: {rate}%""".format({
-		"fired": stats.get("missiles_fired", 0),
-		"hit": stats.get("missiles_hit", 0),
-		"perfect": stats.get("perfect_hits", 0),
+		"fired": format_number(stats.get("missiles_fired", 0)),
+		"hit": format_number(stats.get("missiles_hit", 0)),
+		"perfect": format_number(stats.get("perfect_hits", 0)),
 		"rate": calculate_hit_rate()
 	})
 	
@@ -73,10 +72,10 @@ Documents Stamped: {stamped}
 Potatoes Approved: {approved}
 Potatoes Rejected: {rejected}
 Perfect Stamps: {perfect}""".format({
-		"stamped": stats.get("total_stamps", 0),
-		"approved": stats.get("potatoes_approved", 0),
-		"rejected": stats.get("potatoes_rejected", 0),
-		"perfect": stats.get("perfect_stamps", 0)
+		"stamped": format_number(stats.get("total_stamps", 0)),
+		"approved": format_number(stats.get("potatoes_approved", 0)),
+		"rejected": format_number(stats.get("potatoes_rejected", 0)),
+		"perfect": format_number(stats.get("perfect_stamps", 0))
 	})
 	
 	# Update bonus stats
@@ -95,13 +94,27 @@ FINAL SCORE: {final}""".format({
 	# Update leaderboard
 	update_leaderboard()
 
+# Helper function to format numbers with commas
+func format_number(number: int) -> String:
+	var str_num = str(number)
+	var formatted = ""
+	var count = 0
+	
+	# Add commas every 3 digits from the right
+	for i in range(str_num.length() - 1, -1, -1):
+		if count == 3:
+			formatted = "," + formatted
+			count = 0
+		formatted = str_num[i] + formatted
+		count += 1
+		
+	return formatted
+
 func calculate_hit_rate() -> String:
 	if stats.get("missiles_fired", 0) > 0:
 		return "%d" % ((float(stats.get("missiles_hit", 0)) / stats.get("missiles_fired", 0)) * 100)
 	return "0"
 
-func format_number(number: int) -> String:
-	return "{:,}".format(number)
 
 func update_leaderboard():
 	print("Updating leaderboard...")
