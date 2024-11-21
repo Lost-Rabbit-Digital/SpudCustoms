@@ -561,6 +561,16 @@ func update_cursor(type):
 		"target":
 			Input.set_custom_mouse_cursor(load("res://assets/cursor/cursor_target.png"), Input.CURSOR_CROSS, Vector2(0, 0))
 
+func get_area2d_size(area2d):
+	var collision_shape = area2d.get_node("CollisionShape2D")
+	if collision_shape:
+		var shape = collision_shape.get_shape()
+		if shape is RectangleShape2D:
+			var extents = shape.extents
+			var size = extents * 2
+			return size
+	return Vector2.ZERO
+
 func check_cursor_status(mouse_pos):
 	if passport.get_rect().has_point(passport.to_local(mouse_pos)):
 		update_cursor("hover")
@@ -585,7 +595,11 @@ func check_cursor_status(mouse_pos):
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 			update_cursor("grab")
 	else:
-		update_cursor("default") 
+		var area2d_rect = Rect2($BorderRunnerSystem/Area2D.global_position, get_area2d_size($BorderRunnerSystem/Area2D))
+		if area2d_rect.has_point(mouse_pos):
+			update_cursor("target")
+		else:
+			update_cursor("default")
 			
 	
 func _process(_delta):

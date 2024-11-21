@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=65 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://assets/suspect_panel/suspect_panel.png" id="2_f25cg"]
@@ -32,6 +32,9 @@
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="29_rft0e"]
 [ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="31_c10l6"]
 [ext_resource type="Script" path="res://guide.gd" id="35_uuf1y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sihlh"]
+size = Vector2(756.5, 214)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vm67j"]
 
@@ -222,6 +225,12 @@ queue_manager = NodePath("../SystemManagers/QueueManager")
 score_label = NodePath("../UI/Labels/ScoreLabel")
 alert_label = NodePath("../UI/Labels/AlertLabel")
 runner_chance = 0.025
+
+[node name="Area2D" type="Area2D" parent="BorderRunnerSystem"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderRunnerSystem/Area2D"]
+position = Vector2(396.75, 122)
+shape = SubResource("RectangleShape2D_sihlh")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
