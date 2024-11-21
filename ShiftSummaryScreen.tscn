@@ -1,9 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsobjoevgmlbb"]
+[gd_scene load_steps=12 format=3 uid="uid://dsobjoevgmlbb"]
 
 [ext_resource type="Script" path="res://ShiftSummaryScreen.gd" id="1_lf5e7"]
 [ext_resource type="LabelSettings" uid="uid://bnemubwwr558w" path="res://ShiftSummaryHeaderText.tres" id="2_68n1l"]
 [ext_resource type="Texture2D" uid="uid://b5dnmxonlp47u" path="res://assets/shift_summary/shift_summary_mockup_empty.png" id="3_68n1l"]
 [ext_resource type="LabelSettings" uid="uid://skp252vibaj1" path="res://ShiftSummaryBodyText.tres" id="3_oti8t"]
+[ext_resource type="Shader" path="res://MenuAnimationTest.gdshader" id="5_e1ywj"]
+[ext_resource type="Texture2D" uid="uid://bm77k61gsk111" path="res://assets/narrative/characters/announcer.png" id="6_cb5ko"]
+[ext_resource type="Texture2D" uid="uid://b0twb8v5sitfj" path="res://assets/narrative/characters/player_character.png" id="7_tpfor"]
+[ext_resource type="Texture2D" uid="uid://b6qi6kyjj76fe" path="res://assets/narrative/characters/prime_minister_idaho_2.png" id="8_bot6v"]
+[ext_resource type="Texture2D" uid="uid://dy4e65cmyvp2j" path="res://assets/narrative/characters/narrator_uniform.png" id="9_wytqo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7ampw"]
+shader = ExtResource("5_e1ywj")
+shader_parameter/sprite_texture1 = ExtResource("6_cb5ko")
+shader_parameter/sprite_texture2 = ExtResource("7_tpfor")
+shader_parameter/sprite_texture3 = ExtResource("8_bot6v")
+shader_parameter/sprite_texture4 = ExtResource("9_wytqo")
+shader_parameter/aspect = Vector2(16, 9)
+shader_parameter/sprite_amount = 26.0
+shader_parameter/scale = Vector2(25, 25)
+shader_parameter/tint_color = Color(1, 0.8, 0.8, 1)
+shader_parameter/spacing = 3.0
+shader_parameter/scroll_speed = Vector2(-0.5, -2)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_bect4"]
 
 [node name="ShiftSummaryScreen" type="Control"]
 z_index = 13
@@ -187,6 +207,14 @@ offset_right = 1192.0
 offset_bottom = 632.0
 texture = ExtResource("3_68n1l")
 expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+material = SubResource("ShaderMaterial_7ampw")
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = SubResource("CanvasTexture_bect4")
 
 [connection signal="pressed" from="SubmitScoreButton" to="." method="_on_submit_score_button_pressed"]
 [connection signal="pressed" from="RefreshButton" to="." method="update_leaderboard"]
