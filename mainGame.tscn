@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=64 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://assets/suspect_panel/suspect_panel.png" id="2_f25cg"]
@@ -31,7 +31,6 @@
 [ext_resource type="Texture2D" uid="uid://dubo3sdxx8chn" path="res://assets/stamps/approval_stamp_3.png" id="28_uvib1"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="29_rft0e"]
 [ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="31_c10l6"]
-[ext_resource type="PackedScene" uid="uid://dsobjoevgmlbb" path="res://ShiftSummaryScreen.tscn" id="33_jgtln"]
 [ext_resource type="Script" path="res://guide.gd" id="35_uuf1y"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vm67j"]
@@ -816,10 +815,6 @@ curve = SubResource("Curve2D_xms7a")
 z_index = 7
 z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
-
-[node name="ShiftSummaryScreen" parent="." instance=ExtResource("33_jgtln")]
-z_index = 12
-scale = Vector2(0.1, 0.1)
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]

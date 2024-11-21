@@ -724,8 +724,6 @@ func calculate_age(date_of_birth: String) -> int:
 	
 	return age
 	
-	
-	
 # Update score display when global score changes
 func _on_score_updated(new_score: int):
 	$UI/Labels/ScoreLabel.text = "Score: " + str(new_score)
