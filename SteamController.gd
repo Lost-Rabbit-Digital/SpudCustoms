@@ -43,7 +43,7 @@ func _ready():
 		var is_owned: bool = Steam.isSubscribed()
 		var steam_id: int = Steam.getSteamID()
 		var steam_username: String = Steam.getPersonaName()
-		var easy_leaderboard_id = Steam.findLeaderboard(easy_leaderboard)
+		Steam.findLeaderboard("endless_easy")
 		print("Game ID is: "  + str(game_id))
 		print("Online state is:" + str(is_online))
 		print("Owned state is: " + str(is_owned))
