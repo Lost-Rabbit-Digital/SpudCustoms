@@ -53,6 +53,10 @@ const PHYSICAL_STAMP_Z_INDEX = 100
 const APPLIED_STAMP_Z_INDEX = 50
 const PASSPORT_Z_INDEX = 0
 var selected_stamp: Node = null  # Tracks which stamp is currently selected
+@onready var approval_stamp = $Gameplay/InteractiveElements/ApprovalStamp
+@onready var rejection_stamp = $Gameplay/InteractiveElements/RejectionStamp
+
+
 
 # Passport dragging system
 var passport: Sprite2D
@@ -118,13 +122,26 @@ func end_shift():
 	}
 	
 	summary.show_summary(stats)
+	
+func _on_button_mouse_entered():
+	# Change the cursor to "hover" when the mouse enters a button
+	update_cursor("hover")
+
+func _on_button_mouse_exited():
+	# Change the cursor back to "default" when the mouse exits a button
+	update_cursor("default")
+
+func _on_object_clicked():
+	# Change the cursor to "target" when an object is clicked
+	update_cursor("target")
 
 func _ready():
+	update_cursor("default")
+	
 	shift_stats = stats_manager.get_new_stats()
 	Global.score_updated.connect(_on_score_updated)
 	difficulty_level = Global.difficulty_level
 	# Store the default cursor shape
-	default_cursor = Input.get_current_cursor_shape()
 	update_score_display()
 	update_quota_display()
 	time_label = $UI/Labels/TimeLabel
@@ -543,7 +560,38 @@ func stop_label_tween():
 			# We can add a new approval status (timed_out), and have the potato take a different route. 
 			# we can put that logic as well as the logic for adding a strike into the force_decision() function
 
+func update_cursor(type):
+	match type:
+		"default":
+			Input.set_custom_mouse_cursor(load("res://assets/cursor/cursor_default.png"), Input.CURSOR_ARROW, Vector2(0, 0))
+		"hover":
+			Input.set_custom_mouse_cursor(load("res://assets/cursor/cursor_hover.png"), Input.CURSOR_POINTING_HAND, Vector2(0, 0))
+		"grab":
+			Input.set_custom_mouse_cursor(load("res://assets/cursor/cursor_grab.png"), Input.CURSOR_DRAG, Vector2(0, 0))
+		"click":
+			Input.set_custom_mouse_cursor(load("res://assets/cursor/cursor_click.png"), Input.CURSOR_POINTING_HAND, Vector2(0, 0))
+		"target":
+			Input.set_custom_mouse_cursor(load("res://assets/cursor/cursor_target.png"), Input.CURSOR_CROSS, Vector2(0, 0))
+
+func check_cursor_status(mouse_pos):
+	if megaphone.get_rect().has_point(megaphone.to_local(mouse_pos)):
+		update_cursor("click")
+	elif passport.get_rect().has_point(passport.to_local(mouse_pos)):
+			update_cursor("hover")
+	elif guide.get_rect().has_point(guide.to_local(mouse_pos)):
+			update_cursor("hover")
+	elif approval_stamp.get_rect().has_point(approval_stamp.to_local(mouse_pos)):
+		update_cursor("hover")
+	elif rejection_stamp.get_rect().has_point(rejection_stamp.to_local(mouse_pos)):
+			update_cursor("hover")
+
+	if holding_stamp or dragged_sprite == passport or dragged_sprite == guide:
+		update_cursor("grab")
+	
 func _process(_delta):
+	var mouse_pos = get_global_mouse_position()
+	check_cursor_status(mouse_pos)
+	
 	# Processing timer implementation
 	if is_potato_in_office:
 		# Show label if potato in customs office
@@ -573,7 +621,6 @@ func _process(_delta):
 			reset_time_label()
 		current_timer = 0
 
-	var mouse_pos = get_global_mouse_position()
 	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == false:
 		$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = true
 	else:
@@ -873,7 +920,6 @@ func _input(event):
 					drag_offset = mouse_pos - dragged_sprite.global_position
 					if "Stamp" in dragged_sprite.name:
 						holding_stamp = true
-						Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 						was_cursor_hidden = true
 		
 		# Handle right click - stamps if over passport
