@@ -631,7 +631,6 @@ func generate_potato_info():
 	
 	return {
 		"name": get_random_name(),
-		"type": get_random_type(),
 		"condition": get_random_condition(),
 		"sex": gender,
 		"country_of_issue": get_random_country(),
@@ -650,7 +649,6 @@ func update_potato_info_display():
 		{sex} 
 		{country_of_issue}
 		{expiration_date} 
-		{type}
 		{condition}
 		""".format(current_potato_info)
 	else:
@@ -662,10 +660,9 @@ func generate_potato():
 	# Generate random potato characteristics
 	var potato = {
 		"name": get_random_name(),
-		"type": get_random_type(),
 		"condition": get_random_condition(),
 	}
-	potato.description = "Name: %s\nType: %s\nCondition: %s" % [potato.name, potato.type, potato.condition]
+	potato.description = "Name: %s\nCondition: %s" % [potato.name, potato.condition]
 	return potato
 
 func get_random_name():
@@ -678,12 +675,6 @@ func get_random_name():
 		"Ekepa", "Nuz", "Chegee", "Kusee", "Houf", "Fito", "Mog", "Urife"
 		]
 	return "%s %s" % [first_names[randi() % first_names.size()], last_names[randi() % last_names.size()]]
-
-func get_random_type():
-	var types = ["Russet Burbank", "Yukon Gold", "Sweet Potato", "Purple Majesty", "Red Bliss"]
-	var day_one_types = ["Russet Burbank"]
-	types = day_one_types
-	return types[randi() % types.size()]
 
 func get_random_condition():
 	var conditions = ["Fresh", "Extra Eyes", "Rotten", "Sprouted", "Dehydrated", "Frozen"]
