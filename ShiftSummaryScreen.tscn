@@ -190,7 +190,7 @@ texture = ExtResource("3_68n1l")
 expand_mode = 1
 
 [node name="PotatoRain" parent="." instance=ExtResource("5_oti8t")]
-z_index = 1
+z_index = -1
 
 [connection signal="pressed" from="SubmitScoreButton" to="." method="_on_submit_score_button_pressed"]
 [connection signal="pressed" from="RefreshButton" to="." method="update_leaderboard"]
