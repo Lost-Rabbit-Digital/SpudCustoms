@@ -82,8 +82,11 @@ var guide_tutorial_timer: Timer
 const GUIDE_TUTORIAL_FLASH_INTERVAL = 1.0 # flash every 1 seconds
 var is_in_guide_tutorial = true
 
+# Character Generation
+@onready var mugshot_generator = $Gameplay/MugshotPhotoGenerator
+@onready var passport_generator = $Gameplay/InteractiveElements/Passport/OpenPassport/PassportPhotoGenerator
+
 @onready var megaphone = $Gameplay/Megaphone
-@onready var potato_mugshot = $Gameplay/PotatoMugshot
 @onready var enter_office_path = $Gameplay/Paths/EnterOfficePath
 @onready var stats_manager = $SystemManagers/StatsManager
 var shift_stats: ShiftStats
@@ -163,7 +166,7 @@ func _ready():
 	inspection_table = $Gameplay/InspectionTable
 	suspect_panel = $Gameplay/SuspectPanel
 	suspect_panel_front = $Gameplay/SuspectPanel/SuspectPanelFront
-	suspect = $Gameplay/PotatoMugshot
+	suspect = $Gameplay/MugshotPhotoGenerator/SizingSprite
 	
 	$UI/Labels/StrikesLabel.text = "Strikes: " + str(strikes) + " / " + str(max_strikes)
 
@@ -467,7 +470,7 @@ func animate_mugshot_and_passport():
 	update_potato_info_display()
 
 	# Reset positions and visibility
-	potato_mugshot.position.x = suspect_panel.position.x + suspect_panel_front.texture.get_width()
+	mugshot_generator.position.x = suspect_panel.position.x + suspect_panel_front.texture.get_width()
 	passport.visible = false
 	passport.position = Vector2(suspect_panel.position.x, suspect_panel.position.y)
 	close_passport_action()
@@ -476,8 +479,8 @@ func animate_mugshot_and_passport():
 	tween.set_parallel(true)
 
 	# Animate potato mugshot
-	tween.tween_property(potato_mugshot, "position:x", suspect_panel.position.x, 1)
-	tween.tween_property(potato_mugshot, "modulate:a", 1, 2)
+	tween.tween_property(mugshot_generator, "position:x", suspect_panel.position.x, 1)
+	tween.tween_property(mugshot_generator, "modulate:a", 1, 2)
 	tween.tween_property(passport, "modulate:a", 1, 2)
 	# Animate passport
 	tween.tween_property(passport, "visible", true, 0).set_delay(1)
@@ -616,14 +619,26 @@ func generate_potato_info():
 	else:
 		expiration_date = get_future_date(0,3)
 		
+	# Generate gender first since it affects character generation
+	var gender = get_random_sex()
+	
+	# Generate character appearance if we have a generator
+	var character_data = {}
+	if mugshot_generator:
+		mugshot_generator.set_gender("F" if gender == "Female" else "M")
+		mugshot_generator.randomise_character()
+		character_data = mugshot_generator.get_character_data()
+	
 	return {
 		"name": get_random_name(),
 		"type": get_random_type(),
 		"condition": get_random_condition(),
-		"sex": get_random_sex(), 
+		"sex": gender,
 		"country_of_issue": get_random_country(),
 		"date_of_birth": get_past_date(1, 10),
-		"expiration_date": expiration_date
+		"expiration_date": expiration_date,
+		# Store character appearance data
+		"character_data": character_data
 	}
 
 func update_potato_info_display():
@@ -824,58 +839,34 @@ func update_quota_display():
 	$UI/Labels/QuotaLabel.text = "Quota: " + str(quota_met) + " / " + str(quota_target * Global.shift)
 
 func update_potato_texture():
-	print("Updating potato texture")
+	print("Updating potato textures with character generator")
 	
 	if current_potato_info == null or current_potato_info.is_empty():
 		print("No valid potato info available")
 		clear_potato_textures()
 		return
 	
-	var texture_paths = get_texture_paths(current_potato_info.type)
+	if !mugshot_generator or !passport_generator:
+		print("ERROR: Character generators not found!")
+		return
 	
-	if texture_paths.head != "":
-		potato_mugshot.texture = load(texture_paths.head)
+	# Use the stored character data from potato_info
+	if current_potato_info.has("character_data"):
+		mugshot_generator.set_character_data(current_potato_info.character_data)
+		passport_generator.set_character_data(current_potato_info.character_data)
 	else:
-		potato_mugshot.texture = null
-	
-	var passport_photo = $Gameplay/InteractiveElements/Passport/OpenPassport/PassportPhoto
-	if texture_paths.passport != "":
-		passport_photo.texture = load(texture_paths.passport)
-	else:
-		passport_photo.texture = null
-	
-	print("Potato texture update complete for type: ", current_potato_info.type)
-
-func get_texture_paths(potato_type: String) -> Dictionary:
-	var paths = {
-		"head": "",
-		"passport": ""
-	}
-	
-	match potato_type:
-		"Purple Majesty":
-			paths.head = "res://assets/potatoes/heads/purple_majesty_head.png"
-			paths.passport = "res://assets/potatoes/document_photos/purple_majesty.png"
-		"Red Bliss":
-			paths.head = "res://assets/potatoes/heads/red_bliss_head.png"
-			paths.passport = "res://assets/potatoes/document_photos/red_bliss.png"
-		"Russet Burbank":
-			paths.head = "res://assets/potatoes/heads/russet_burbank_head.png"
-			paths.passport = "res://assets/potatoes/document_photos/russet_burbank.png"
-		"Sweet Potato":
-			paths.head = "res://assets/potatoes/heads/sweet_potato_head.png"
-			paths.passport = "res://assets/potatoes/document_photos/sweet_potato.png"
-		"Yukon Gold":
-			paths.head = "res://assets/potatoes/heads/yukon_gold_head.png"
-			paths.passport = "res://assets/potatoes/document_photos/yukon_gold.png"
-		_:
-			print("Unknown potato type: ", potato_type)
-	
-	return paths
+		print("ERROR: No character data found in potato_info!")
+		
+	print("Character display updated")
 
 func clear_potato_textures():
-	potato_mugshot.texture = null
-	$Gameplay/InteractiveElements/Passport/OpenPassport/PassportPhoto.texture = null
+	if mugshot_generator:
+		# Reset to default state or hide
+		mugshot_generator.set_gender("M")  # Reset to default gender
+		
+	if passport_generator:
+		# Reset to default state or hide
+		passport_generator.set_gender("M")  # Reset to default gender
 	
 func _input(event):
 	if event is InputEventMouseButton:
@@ -1133,12 +1124,12 @@ func remove_stamp():
 	# Animate the potato mugshot and passport exit
 	var tween = create_tween()
 	tween.set_parallel(true)
-	tween.tween_property(potato_mugshot, "position:x", suspect_panel.position.x - potato_mugshot.texture.get_width(), 1)
-	tween.tween_property(potato_mugshot, "modulate:a", 0, 1)
+	tween.tween_property(mugshot_generator, "position:x", suspect_panel.position.x - suspect.get_rect().size.x, 1)
+	tween.tween_property(mugshot_generator, "modulate:a", 0, 1)
 	tween.tween_property(passport_book, "modulate:a", 0, 1)
 	tween.chain().tween_callback(func(): 
 		move_potato_along_path(approval_status)
-		is_potato_in_office = false # set to false as soon as potato leaves customs office
+		is_potato_in_office = false
 	)
 	
 func move_potato_along_path(approval_status):
@@ -1236,7 +1227,7 @@ func move_potato_along_path(approval_status):
 	)
 
 func reset_scene():
-	potato_mugshot.position.x = suspect_panel.position.x
+	mugshot_generator.position.x = suspect_panel.position.x
 	$UI/Labels/JudgementLabel.text = ""
 	
 func find_stampable_object_at(pos: Vector2):

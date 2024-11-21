@@ -52,7 +52,7 @@ texture = ExtResource("6_og870")
 [node name="CPUParticles2D" type="CPUParticles2D" parent="MissileSprite"]
 show_behind_parent = true
 position = Vector2(0, 180)
-amount = 20
+amount = 25
 lifetime = 0.1
 texture = ExtResource("7_3vtb4")
 gravity = Vector2(0, 0)

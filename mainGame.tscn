@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=64 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://assets/suspect_panel/suspect_panel.png" id="2_f25cg"]
@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://cwni5a4q3jj67" path="res://assets/suspect_panel/suspect_panel_top_bottom.png" id="12_n1tuu"]
 [ext_resource type="Texture2D" uid="uid://ceh27taly75na" path="res://assets/documents/passport-old.png" id="12_q7tid"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://assets/fonts/windows_command_prompt.ttf" id="13_wxn24"]
-[ext_resource type="Texture2D" uid="uid://cbthvh8tq02ee" path="res://assets/potatoes/document_photos/purple_majesty.png" id="14_al1cy"]
 [ext_resource type="Texture2D" uid="uid://cnrr6jblok4ky" path="res://assets/suspect_panel/suspect_panel_background.png" id="14_v4iji"]
 [ext_resource type="Texture2D" uid="uid://cvtdlyxlb5qaw" path="res://assets/suspect_panel/suspect_panel_document_slot.png" id="16_a857f"]
 [ext_resource type="Texture2D" uid="uid://b2icltv7xkk6j" path="res://assets/level/CustomsDesk.png" id="16_p2ayh"]
@@ -216,8 +215,6 @@ point_count = 17
 script = ExtResource("1_s4bva")
 
 [node name="BorderRunnerSystem" parent="." node_paths=PackedStringArray("root_node", "queue_manager", "score_label", "alert_label") instance=ExtResource("29_rft0e")]
-unlimited_missiles = true
-rapid_runners = true
 root_node = NodePath("..")
 queue_manager = NodePath("../SystemManagers/QueueManager")
 score_label = NodePath("../UI/Labels/ScoreLabel")
@@ -498,21 +495,16 @@ position = Vector2(443.837, 470.5)
 scale = Vector2(2.64484, 2.59444)
 texture = ExtResource("16_p2ayh")
 
-[node name="PotatoMugshot" type="Sprite2D" parent="Gameplay"]
-z_index = 1
-position = Vector2(1400, 351)
-scale = Vector2(2.812, 2.812)
+[node name="MugshotPhotoGenerator" parent="Gameplay" instance=ExtResource("28_f6jf3")]
+position = Vector2(1404, 415)
+scale = Vector2(2.5, 2.5)
 
-[node name="CharacterGenerator" parent="Gameplay/PotatoMugshot" instance=ExtResource("28_f6jf3")]
-position = Vector2(-67.2119, -47.6529)
-scale = Vector2(0.2, 0.2)
-
-[node name="PotatoMugshotShadow" type="Sprite2D" parent="Gameplay/PotatoMugshot"]
+[node name="PotatoMugshotShadow" type="Sprite2D" parent="Gameplay/MugshotPhotoGenerator"]
 modulate = Color(0, 0, 0, 0.521569)
 z_index = -1
 z_as_relative = false
-position = Vector2(2.72393e-05, -5.92124)
-scale = Vector2(1.11492, 1.11492)
+position = Vector2(0.399963, -14.4)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("18_yiok2")
 
 [node name="InteractiveElements" type="Control" parent="Gameplay"]
@@ -543,12 +535,9 @@ texture = ExtResource("17_mr1ft")
 
 [node name="OpenPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
 
-[node name="PassportPhoto" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
-z_index = 3
-z_as_relative = false
-position = Vector2(76, 75)
+[node name="PassportPhotoGenerator" parent="Gameplay/InteractiveElements/Passport/OpenPassport" instance=ExtResource("28_f6jf3")]
+position = Vector2(73, 87)
 scale = Vector2(0.975, 1)
-texture = ExtResource("14_al1cy")
 
 [node name="PotatoHeader" type="Label" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
 offset_left = -103.0
@@ -827,16 +816,9 @@ z_index = 7
 z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
-[node name="CharacterGenerator" parent="." instance=ExtResource("28_f6jf3")]
-visible = false
-position = Vector2(873, 210)
-scale = Vector2(0.600897, 0.600897)
-
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/GuideFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]
-
-[editable path="CharacterGenerator"]

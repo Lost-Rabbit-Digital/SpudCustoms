@@ -1,59 +1,80 @@
 extends Node2D
 
+# Export node references for both mugshot and passport sprites
+@export_group("Character Sprites")
 @export var hair: AnimatedSprite2D
 @export var face: AnimatedSprite2D
 @export var torso: AnimatedSprite2D
 
-var gender: String = "M"  # Default to male, can be "M" or "F"
+# Track current character state
+@export_group("Generation Settings")
+@export var gender: String = "M"  # Default to male, can be "M" or "F"
+@export var current_hair_frame: int = 0
+@export var current_face_frame: int = 0
+@export var current_torso_frame: int = 0
 
 func _ready():
 	randomize()  # Initialize random seed
-	randomise_character()
 
 func set_gender(new_gender: String):
 	gender = new_gender
 	update_sprite_animations()
-	randomise_character()
 
 func update_sprite_animations():
-	# Update each sprite's animation based on gender
+	# Update sprites
 	if hair and hair.sprite_frames:
 		hair.play("Russel_" + gender + "_Hair")
+		hair.frame = current_hair_frame
+		
 	if face and face.sprite_frames:
 		face.play("Russel_" + gender + "_Face")
+		face.frame = current_face_frame
+		
 	if torso and torso.sprite_frames:
 		torso.play("Russel_" + gender + "_Body")
+		torso.frame = current_torso_frame
 
 func randomise_character():
-	# Use correct animation names with gender prefix
+	var hair_anim = "Russel_" + gender + "_Hair"
+	var face_anim = "Russel_" + gender + "_Face"
+	var body_anim = "Russel_" + gender + "_Body"
+	
+	# Generate random frames and store them
 	if hair and hair.sprite_frames:
-		var anim_name = "Russel_" + gender + "_Hair"
-		var frame_count = hair.sprite_frames.get_frame_count(anim_name)
+		var frame_count = hair.sprite_frames.get_frame_count(hair_anim)
 		if frame_count > 0:
-			hair.frame = randi_range(0, frame_count - 1)
+			current_hair_frame = randi_range(0, frame_count - 1)
 			
 	if face and face.sprite_frames:
-		var anim_name = "Russel_" + gender + "_Face"
-		var frame_count = face.sprite_frames.get_frame_count(anim_name)
+		var frame_count = face.sprite_frames.get_frame_count(face_anim)
 		if frame_count > 0:
-			face.frame = randi_range(0, frame_count - 1)
+			current_face_frame = randi_range(0, frame_count - 1)
 			
 	if torso and torso.sprite_frames:
-		var anim_name = "Russel_" + gender + "_Body"
-		var frame_count = torso.sprite_frames.get_frame_count(anim_name)
+		var frame_count = torso.sprite_frames.get_frame_count(body_anim)
 		if frame_count > 0:
-			torso.frame = randi_range(0, frame_count - 1)
-
-func _input(event):
-	if event.is_action_pressed("ui_up"):  # Space bar
-		randomise_character()
-	elif event.is_action_pressed("ui_down"):  # Add this in Project Settings > Input Map
-		gender = "F" if gender == "M" else "M"
-		update_sprite_animations()
-		randomise_character()
-
-# Optional function to directly set gender
-func toggle_gender():
-	gender = "F" if gender == "M" else "M"
+			current_torso_frame = randi_range(0, frame_count - 1)
+	
+	# Update sprites with the new frames
 	update_sprite_animations()
-	randomise_character()
+
+# Function to get current character data
+func get_character_data() -> Dictionary:
+	return {
+		"gender": gender,
+		"hair_frame": current_hair_frame,
+		"face_frame": current_face_frame,
+		"torso_frame": current_torso_frame
+	}
+
+# Function to set character data directly
+func set_character_data(data: Dictionary) -> void:
+	if data.has("gender"):
+		gender = data.gender
+	if data.has("hair_frame"):
+		current_hair_frame = data.hair_frame
+	if data.has("face_frame"):
+		current_face_frame = data.face_frame
+	if data.has("torso_frame"):
+		current_torso_frame = data.torso_frame
+	update_sprite_animations()
