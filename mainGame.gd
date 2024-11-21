@@ -122,18 +122,6 @@ func end_shift():
 	}
 	
 	summary.show_summary(stats)
-	
-func _on_button_mouse_entered():
-	# Change the cursor to "hover" when the mouse enters a button
-	update_cursor("hover")
-
-func _on_button_mouse_exited():
-	# Change the cursor back to "default" when the mouse exits a button
-	update_cursor("default")
-
-func _on_object_clicked():
-	# Change the cursor to "target" when an object is clicked
-	update_cursor("target")
 
 func _ready():
 	update_cursor("default")
@@ -574,19 +562,31 @@ func update_cursor(type):
 			Input.set_custom_mouse_cursor(load("res://assets/cursor/cursor_target.png"), Input.CURSOR_CROSS, Vector2(0, 0))
 
 func check_cursor_status(mouse_pos):
-	if megaphone.get_rect().has_point(megaphone.to_local(mouse_pos)):
-		update_cursor("click")
-	elif passport.get_rect().has_point(passport.to_local(mouse_pos)):
-			update_cursor("hover")
+	if passport.get_rect().has_point(passport.to_local(mouse_pos)):
+		update_cursor("hover")
+		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+			update_cursor("grab")
 	elif guide.get_rect().has_point(guide.to_local(mouse_pos)):
-			update_cursor("hover")
+		update_cursor("hover")
+		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+			update_cursor("grab")
 	elif approval_stamp.get_rect().has_point(approval_stamp.to_local(mouse_pos)):
 		update_cursor("hover")
+		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+			update_cursor("grab")
 	elif rejection_stamp.get_rect().has_point(rejection_stamp.to_local(mouse_pos)):
-			update_cursor("hover")
-
-	if holding_stamp or dragged_sprite == passport or dragged_sprite == guide:
+		update_cursor("hover")
+		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+			update_cursor("grab")
+	elif holding_stamp or dragged_sprite == passport or dragged_sprite == guide:
 		update_cursor("grab")
+	elif megaphone.get_rect().has_point(megaphone.to_local(mouse_pos)):
+		update_cursor("click")
+		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+			update_cursor("grab")
+	else:
+		update_cursor("default") 
+			
 	
 func _process(_delta):
 	var mouse_pos = get_global_mouse_position()
