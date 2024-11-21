@@ -114,16 +114,23 @@ func calculate_hit_rate() -> String:
 		return "%d" % ((float(stats.get("missiles_hit", 0)) / stats.get("missiles_fired", 0)) * 100)
 	return "0"
 
-
 func update_leaderboard():
 	print("Updating leaderboard...")
-	
 	$LeaderboardTitlePanel/Title.text = "Global Leaderboard\nEndless - %s" % Global.difficulty_level
 	# Format leaderboard entries
-	var entries = Global.get_leaderboard_entries(Global.difficulty_level)
-	print(entries)
+	var request_success = Global.request_leaderboard_entries(Global.difficulty_level)
 	var leaderboard_text = ""
+	if request_success: 
+		leaderboard_text = "Getting leaderboard scores..."
+		$LeaderboardPanel/Entries.text = leaderboard_text
+		
+	await get_tree().create_timer(1.0).timeout
+	leaderboard_text = ""
+	$LeaderboardPanel/Entries.text = ""
+	await get_tree().create_timer(1.0).timeout
 	
+	var entries = []
+	entries = Global.cached_leaderboard_entries
 	for i in range(min(entries.size(), 12)):
 		leaderboard_text += "%2d  %-15s  %s\n" % [
 			i + 1,
@@ -132,6 +139,7 @@ func update_leaderboard():
 		]
 	
 	$LeaderboardPanel/Entries.text = leaderboard_text
+	print("Leaderboard updated.")
 
 func play_entry_animation():
 	if animation_player:

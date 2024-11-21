@@ -2,7 +2,7 @@ extends Node
 
 # Existing variables
 var shift = 1
-var final_score = 0
+var final_score = 950
 var quota_met = 0
 var build_type = "Demo Release"
 var difficulty_level = "Expert" # Can be "Easy", "Normal", or "Expert"
@@ -41,9 +41,6 @@ func _init():
 func _process(delta: float) -> void:
 	Steam.run_callbacks()
 	
-func on_submit_score_button_pressed():
-	pass
-
 # Helper function to get leaderboard name based on difficulty
 func get_leaderboard_name(difficulty: String = "") -> String:
 	if difficulty.is_empty():
@@ -55,28 +52,10 @@ func get_leaderboard_name(difficulty: String = "") -> String:
 		"Expert": return "endless_expert"
 		_: return "endless_normal"
 
-func get_leaderboard_entries(difficulty: String = "") -> Array:
+func request_leaderboard_entries(difficulty: String = "") -> bool:
 	print("GLOBAL: Getting leaderboard entries")
 	if difficulty.is_empty():
 		difficulty = difficulty_level
-	
-	if not Steam.isSteamRunning():
-		print("Loading dummy data")
-		# Return dummy data for testing when Steam isn't available
-		return [
-			{"name": "BroHeartTTV", "score": 15750},
-			{"name": "LRDStudio", "score": 8600},
-			{"name": "Maaack", "score": 7200},
-			{"name": "IrishJohn", "score": 6980},
-			{"name": "FreshWaterFern", "score": 6540},
-			{"name": "AtegonDev", "score": 5300},
-			{"name": "OtterMakesGames", "score": 5200},
-			{"name": "nan0dev", "score": 4700},
-			{"name": "imlergan", "score": 4440},
-			{"name": "KittyKatsuVT", "score": 4300},
-			{"name": "nhancodes", "score": 4150},
-			{"name": "2NerdyNerds", "score": 4100}
-		]
 	
 	# If we don't have a handle for this difficulty, get it
 	is_fetching_leaderboard = true
@@ -86,8 +65,9 @@ func get_leaderboard_entries(difficulty: String = "") -> Array:
 	
 	# If we have a handle, fetch the scores
 	print("Fetching scores")
-	Steam.downloadLeaderboardEntries( 1, 12, Steam.LEADERBOARD_DATA_REQUEST_GLOBAL)
-	return cached_leaderboard_entries
+	Steam.downloadLeaderboardEntries(1, 12, Steam.LEADERBOARD_DATA_REQUEST_GLOBAL, current_leaderboard_handle)
+	Steam.run_callbacks()
+	return true
 
 func _on_leaderboard_find_result(handle: int, found: bool) -> void:
 	if not found:
@@ -101,36 +81,38 @@ func _on_leaderboard_find_result(handle: int, found: bool) -> void:
 	var details = PackedInt32Array()
 	
 	print("Uploading score to leaderboard")
-	Steam.uploadLeaderboardScore(
-		handle,  # Leaderboard handle
-		score,   # Current score
-		details  # Empty details array
-	)
+	Steam.uploadLeaderboardScore(score, true, details, handle)
+
 
 func _on_leaderboard_score_uploaded(success: int, handle: int, score_details: Dictionary) -> void:
 	if success == 1:
 		print("Successfully uploaded score to Steam leaderboard!")
 		print("Score details: ", score_details)
-		
+		print("Requesting updated leaderboard entries...")
 		# Request updated leaderboard entries
 		Steam.downloadLeaderboardEntries(
-			handle,
-			Steam.LEADERBOARD_DATA_REQUEST_GLOBAL,
 			1,  # Start rank
-			12  # End rank
+			12,  # End rank
+			Steam.LEADERBOARD_DATA_REQUEST_GLOBAL,
+			handle
 		)
+		print("Entries requested.")
 	else:
 		print("Failed to upload score to Steam leaderboard")
 
-func _on_leaderboard_scores_downloaded(handle: int, entries: Array) -> void:
+func _on_leaderboard_scores_downloaded(message: String, this_leaderboard_handle: int, result: Array) -> void:
+	print("Scores downloaded message: %s" % message)
 	print("Leaderboard scores downloaded")
 	is_fetching_leaderboard = false
 	cached_leaderboard_entries.clear()
-	
-	for entry in entries:
+	print("Entries include:") 
+	print(result)
+	for entry in result:
+		print(entry)
 		# Get the player name from Steam
-		var player_name = Steam.getFriendPersonaName(entry.steam_id_user)
+		var player_name = Steam.getFriendPersonaName(entry.steam_id)
 		cached_leaderboard_entries.append({
+			"rank": entry.global_rank,
 			"name": player_name,
 			"score": entry.score
 		})
