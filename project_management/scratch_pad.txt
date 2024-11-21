@@ -4,7 +4,6 @@ These are our goals, to-do tasks, and completed tasks.
 TO-DO 2024-11-16: DEMO
   Active Tasks:
   [ ] - The potatoes generate new images too early, when added to queue instead of when called into customs office
-  [ ] - Remove potato types from mugshots and passports and replace with procedural character generator
   Boden Tasks:
   [ ] - If the potato_person escapes while the missile is airborne the missile becomes stuck
   [ ] - Lower z-index of crater below that of the potato_person runner
@@ -24,6 +23,7 @@ TO-DO 2024-11-16: DEMO
 	[ ] - Update menus with new MODERN DOS font
 	[ ] - Update ATTRIBUTION.md with MODERN DOS font
 	[ ] - Remove teleport to customs office when the potato is still moving in the line, make it say "Where is everyone"
+  [o] - Remove potato types from mugshots and passports and replace with procedural character generator
   [o] - Update missile smoke system
   [o] - Ability to kill potato after it is accepted if there is a runner, penalty of 500 points
   [o] - If you do not kill a potato while it is running the border it repeats

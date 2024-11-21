@@ -656,23 +656,22 @@ func update_potato_info_display():
 	print("Potato info update complete")
 	update_potato_texture()
 
-func generate_potato():
-	# Generate random potato characteristics
-	var potato = {
-		"name": get_random_name(),
-		"condition": get_random_condition(),
-	}
-	potato.description = "Name: %s\nCondition: %s" % [potato.name, potato.condition]
-	return potato
-
 func get_random_name():
 	var first_names = [
 		"Spud", "Tater", "Mash", "Spudnik", "Tater Tot", "Potato", "Chip", 
-		"Murph", "Yam", "Tato", "Spuddy", "Tuber"
+		"Murph", "Yam", "Tato", "Spuddy", "Tuber", "Russet", "Fry", "Hash", 
+		"Wedge", "Rosti", "Gnocchi", "Gratin", "Duchess", "Rösti", "Hasselback",
+		"Dauphinoise", "Fondant", "Croquette", "Scallop", "Pomme", "Aloo", "Batata",
+		"Patata", "Kartoffel", "Jicama", "Sunchoke", "Yuca", "Oca", "Taro",
+		"Cassava", "Mandioca", "Malanga", "Rutabaga", "Parmentier", "Poutine",
+		"Latke", "Ratte", "Fingerling", "Bintje"
 		]
 	var last_names = [
 		"Ouwiw", "Sehi", "Sig", "Heechou", "Oufug", "Azej", "Holly",
-		"Ekepa", "Nuz", "Chegee", "Kusee", "Houf", "Fito", "Mog", "Urife"
+		"Ekepa", "Nuz", "Chegee", "Kusee", "Houf", "Fito", "Mog", "Urife",
+		"Quib", "Zog", "Yux", "Wug", "Vij", "Thog", "Spaz", "Rix", "Quog", "Pud",
+		"Nax", "Mub", "Loz", "Kiv", "Juf", "Hix", "Gub", "Faz", "Duv", "Coz",
+		"Bix", "Anj", "Zin", "Yad", "Woz", "Vix", "Tuj", "Sab", "Riv", "Poz"  
 		]
 	return "%s %s" % [first_names[randi() % first_names.size()], last_names[randi() % last_names.size()]]
 
