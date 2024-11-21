@@ -11,7 +11,6 @@ func _ready():
 	setup_background()
 	setup_styling()
 	show_summary(generate_test_stats())
-	Global.submit_score(750)
 
 func setup_background():
 	if background and BACKGROUND_TEXTURE:
@@ -156,3 +155,9 @@ func generate_test_stats() -> Dictionary:
 		"perfect_bonus": 2000,
 		"final_score": 15480
 	}
+
+
+func _on_submit_score_button_pressed() -> void:
+	print("Submitting score of: ")
+	print(stats.get("final_score"))
+	Global.submit_score(stats.get("final_score"))

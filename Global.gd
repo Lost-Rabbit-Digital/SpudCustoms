@@ -4,7 +4,7 @@ extends Node
 var shift = 1
 var final_score = 0
 var quota_met = 0
-var build_type = "Full Release"
+var build_type = "Demo Release"
 var difficulty_level = "Expert" # Can be "Easy", "Normal", or "Expert"
 
 # New scoring system variables
@@ -37,6 +37,12 @@ func _init():
 		Steam.leaderboard_score_uploaded.connect(_on_leaderboard_score_uploaded)
 		Steam.leaderboard_scores_downloaded.connect(_on_leaderboard_scores_downloaded)
 		print("Steam connections configured.")
+
+func _process(delta: float) -> void:
+	Steam.run_callbacks()
+	
+func on_submit_score_button_pressed():
+	pass
 
 # Helper function to get leaderboard name based on difficulty
 func get_leaderboard_name(difficulty: String = "") -> String:
@@ -80,11 +86,7 @@ func get_leaderboard_entries(difficulty: String = "") -> Array:
 	
 	# If we have a handle, fetch the scores
 	print("Fetching scores")
-	Steam.downloadLeaderboardEntries(Steam.LEADERBOARD_DATA_REQUEST_GLOBAL,
-		1,
-		12  # Get top 12 entries
-	)
-	
+	Steam.downloadLeaderboardEntries( 1, 12, Steam.LEADERBOARD_DATA_REQUEST_GLOBAL)
 	return cached_leaderboard_entries
 
 func _on_leaderboard_find_result(handle: int, found: bool) -> void:

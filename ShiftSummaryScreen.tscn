@@ -176,3 +176,5 @@ offset_right = 1192.0
 offset_bottom = 632.0
 texture = ExtResource("3_68n1l")
 expand_mode = 1
+
+[connection signal="pressed" from="SubmitScoreButton" to="." method="_on_submit_score_button_pressed"]
