@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4r085ggn1dvd"
-path="res://.godot/imported/cursor_grabbing.png-2572b4a1d3883e0e445a8e2bada9620e.ctex"
+uid="uid://bnuq3adxhu6gv"
+path="res://.godot/imported/Explosion_32x32.png-4d2035d5779b5e7b4d30a1fcbccf1bea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cursor/cursor_grabbing.png"
-dest_files=["res://.godot/imported/cursor_grabbing.png-2572b4a1d3883e0e445a8e2bada9620e.ctex"]
+source_file="res://assets/missiles/Explosion_32x32.png"
+dest_files=["res://.godot/imported/Explosion_32x32.png-4d2035d5779b5e7b4d30a1fcbccf1bea.ctex"]
 
 [params]
 
