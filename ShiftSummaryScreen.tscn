@@ -40,6 +40,15 @@ offset_bottom = 693.0
 text = "Submit Score
 "
 
+[node name="RefreshButton" type="Button" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 904.0
+offset_top = 648.0
+offset_right = 1064.0
+offset_bottom = 672.0
+text = "Refresh Leaderboard"
+
 [node name="RestartButton" type="Button" parent="."]
 z_index = 13
 layout_mode = 0
@@ -178,3 +187,4 @@ texture = ExtResource("3_68n1l")
 expand_mode = 1
 
 [connection signal="pressed" from="SubmitScoreButton" to="." method="_on_submit_score_button_pressed"]
+[connection signal="pressed" from="RefreshButton" to="." method="update_leaderboard"]
