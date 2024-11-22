@@ -7,8 +7,9 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - The potatoes generate new images too early, when added to queue instead of when called into customs office
     [ ] - Potato stamp approval doesn't update score
   Tasks:
-    [ ] - Hook up game won, level lost, and level won scenes
-    [ ] - Difficulty selection UI after selecting endless mode
+    [ ] - Bound missile mini-game to area2d, check update_cursor for area2d mouse checking code
+    [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
+    [ ] - Replace missile sprite
     [ ] - Don't set stamps to go invisible when quota reached in Endless mode
     [ ] - Check and see whether strikes are actually removing
     [ ] - Update stats on potato escape and missile kill
@@ -18,18 +19,11 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - Mouse has to be over passport to be able to stamp
     [ ] - Able to drag stamps off interaction table, bound them to lower half of screen
     [ ] - Able to drag passport off interaction table, bound them to lower half of screen
-  	[ ] - Don't allow the player to target to the right of the border wall or in the document processing area with missiles
   	[ ] - Change position so kill text flying up with the score update
-  	[ ] - Don't allow the player to move the passport while the animation is playing for it to pass into the customs table
   	[ ] - Stamps go over edge of passport
   	[ ] - Snap closed passport to position of mouse cursor to avoid bad offset
-  	[ ] - Remove teleport to customs office when the potato is still moving in the line, make it say "Where is everyone"
-    [ ] - Balance points (missiles, stamping, scanning)
-    [ ] - Remove invalid/inconsistent rules (remove expiration related rules and just properly process expiration)
-    [ ] - Lower z-index of crater below that of the potato_person runner
-    [ ] - Update menus with new MODERN DOS font
-    [ ] - Update ATTRIBUTION.md with MODERN DOS font
-    [ ] - Fix missile getting stuck bug, store last position of mouse on potato escape 
+    [o] - Don't allow the player to target to the right of the border wall or in the document processing area with missiles
+    [o] - Remove invalid/inconsistent rules (remove expiration related rules and just properly process expiration)
     [o] - Enable pause menu
     [o] - Remove camera shake from options
     [o] - Remove Anti-aliasing from options
@@ -43,8 +37,15 @@ These are tasks which must be completed before the submission to Steam deadline,
 
 ### Bugs
 [ ] - Check why date rules keep failing (make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
+[ ] - Fix missile getting stuck bug, store last position of mouse on potato escape 
+[ ] - Update menus with new MODERN DOS font
+[ ] - Update ATTRIBUTION.md with MODERN DOS font
+[ ] - Balance points (missiles, stamping, scanning)
+[ ] - Lower z-index of crater below that of the potato_person runner
+[ ] - Don't allow the player to move the passport while the animation is playing for it to pass into the customs table
 
 ### Urgent
+[ ] - Difficulty selection UI after selecting endless mode
 [ ] - Add dialogue emotes randomly to the potatoes
 [ ] - Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
 [ ] - Explain how to flip the pages on the document in the tutorial
