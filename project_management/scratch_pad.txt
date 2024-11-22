@@ -3,11 +3,11 @@ These are our goals, to-do tasks, and completed tasks.
 
 DEMO RELEASE GOALS: 2024-11-22
   Urgent Tasks:
-    [ ] - Enable pause menu
     [ ] - Hook up restart / main menu buttons from summary menu
     [ ] - The potatoes generate new images too early, when added to queue instead of when called into customs office
     [ ] - Potato stamp approval doesn't update score
   Tasks:
+    [ ] - Hook up game won, level lost, and level won scenes
     [ ] - Difficulty selection UI after selecting endless mode
     [ ] - Don't set stamps to go invisible when quota reached in Endless mode
     [ ] - Check and see whether strikes are actually removing
@@ -30,6 +30,7 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - Update menus with new MODERN DOS font
     [ ] - Update ATTRIBUTION.md with MODERN DOS font
     [ ] - Fix missile getting stuck bug, store last position of mouse on potato escape 
+    [o] - Enable pause menu
     [o] - Remove camera shake from options
     [o] - Remove Anti-aliasing from options
     [o] - Remove reset game data from options

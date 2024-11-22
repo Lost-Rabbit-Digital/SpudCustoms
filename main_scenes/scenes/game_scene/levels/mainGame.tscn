@@ -1,6 +1,6 @@
 [gd_scene load_steps=65 format=3 uid="uid://bqdirqkno2n36"]
 
-[ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
+[ext_resource type="Script" path="res://main_scenes/scenes/game_scene/levels/mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://assets/suspect_panel/suspect_panel.png" id="2_f25cg"]
 [ext_resource type="Texture2D" uid="uid://doml0udrwe6pe" path="res://assets/Background.png" id="2_rft0e"]
 [ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/level/customs_office.png" id="4_rd1c0"]
