@@ -5,11 +5,10 @@ DEMO RELEASE GOALS: 2024-11-22
   Urgent Tasks:
     [ ] - Enable pause menu
     [ ] - Hook up restart / main menu buttons from summary menu
-    [ ] - Windowed mode breaks resolution and causes you to see outside viewport
     [ ] - The potatoes generate new images too early, when added to queue instead of when called into customs office
     [ ] - Potato stamp approval doesn't update score
-    [ ] - Difficulty selection UI after selecting endless mode
   Tasks:
+    [ ] - Difficulty selection UI after selecting endless mode
     [ ] - Don't set stamps to go invisible when quota reached in Endless mode
     [ ] - Check and see whether strikes are actually removing
     [ ] - Update stats on potato escape and missile kill
@@ -31,9 +30,10 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - Update menus with new MODERN DOS font
     [ ] - Update ATTRIBUTION.md with MODERN DOS font
     [ ] - Fix missile getting stuck bug, store last position of mouse on potato escape 
-    [ ] - Remove camera shake from options
-    [ ] - Remove Anti-aliasing from options
-    [ ] - Remove reset game data from options (Check with David first to make sure it's not Steam related)
+    [o] - Remove camera shake from options
+    [o] - Remove Anti-aliasing from options
+    [o] - Remove reset game data from options
+    [o] - Windowed mode breaks resolution and causes you to see outside viewport
 
 
 FULL RELEASE GOALS: 2024-11-27
