@@ -113,7 +113,7 @@ window/size/mode=4
 window/size/window_width_override=2560
 window/size/window_height_override=1440
 window/stretch/mode="viewport"
-window/stretch/aspect="keep_height"
+window/stretch/aspect="keep_width"
 mouse_cursor/custom_image="res://assets/cursor/cursor_default.png"
 
 [editor_plugins]
