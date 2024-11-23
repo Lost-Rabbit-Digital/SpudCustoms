@@ -23,6 +23,7 @@ DEMO RELEASE GOALS: 2024-11-22
       [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
       [ ] - If the player has 0 points do not say "-500 points" when a potato escapes
       [ ] - Display the score for longer, a few seconds, so the player can read it
+      [ ] - Rewrite laws to make sense, bad wording
     Audio:
       [ ] - No ambience or background music playing
     Scoring:
@@ -39,8 +40,9 @@ DEMO RELEASE GOALS: 2024-11-22
       [ ] - Balance points (missiles, stamping, scanning)
       [ ] - If a potato times out and they should have been rejected, the player gets the point, this should always give the player zero points and one strike
     Quality of Life:
-      [ ] - Reduce time before start of queue
+      [ ] - 
     Interaction:
+      [ ] - Set default selection for main menu for keyboard control
       [ ] - Expand area for perfect hit chance on border runner system
       [ ] - Bound missile mini-game to area2d, check update_cursor for area2d mouse checking code
       [ ] - Mouse has to be over passport to be able to stamp
@@ -109,6 +111,7 @@ These are various goals which are out of scope for the current roadmap, but if p
 # Completed tasks list
 The tasks which have be completed and pushed to VCS.
 
+[o] - Reduce time before start of queue
 [o] - Laws are not showing up in the guide book
 [o] - Laws are not displaying on first potato
 [o] - Hook up restart / main menu buttons from summary menu
