@@ -10,6 +10,7 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - Move shift summary to end of game, not end of shift
   Tasks:
     Graphics:
+      [ ] - Timeout doesn't clear stamps from passport
       [ ] - Change "Runner Escaped" to capitals 
       [ ] - Potato time left timer doesn't size back up after shrinking
       [ ] - Passport comes from random x/y, instead of down the slot
@@ -24,6 +25,9 @@ DEMO RELEASE GOALS: 2024-11-22
       [ ] - If the player has 0 points do not say "-500 points" when a potato escapes
       [ ] - Display the score for longer, a few seconds, so the player can read it
       [ ] - Rewrite laws to make sense, bad wording
+      [ ] - Faces and hair doesn't line up on potatoes
+      [ ] - You can see the potato come in from the right
+      [ ] - Fade in potatoes when they come into the customs office
     Audio:
       [ ] - No ambience or background music playing
     Scoring:
@@ -42,6 +46,7 @@ DEMO RELEASE GOALS: 2024-11-22
     Quality of Life:
       [ ] - 
     Interaction:
+      [ ] - Border runner system went off twice and cancelled the first one out
       [ ] - Set default selection for main menu for keyboard control
       [ ] - Expand area for perfect hit chance on border runner system
       [ ] - Bound missile mini-game to area2d, check update_cursor for area2d mouse checking code
