@@ -6,7 +6,7 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - Potato stamp approval doesn't update score
     [ ] - Don't set stamps to go invisible when quota reached in Endless mode
     [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
-    [ ] - Laws are not showing up in the guide book
+    [ ] - Potato time left timer doesn't size back up after shrinking
   Tasks:
     [ ] - Passport comes from random x/y, instead of down the slot
     [ ] - Approval message is the wrong format, should be large green text
@@ -22,7 +22,6 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
     [ ] - Reduce time before start of queue
     [ ] - Update stats on potato escape and missile kill
-    [ ] - Potato time left timer doesn't size back up after shrinking
     [ ] - Check and see whether strikes are actually removing
     [ ] - Replace missile sprite
     [ ] - Bound missile mini-game to area2d, check update_cursor for area2d mouse checking code
@@ -34,19 +33,7 @@ DEMO RELEASE GOALS: 2024-11-22
   	[ ] - Snap closed passport to position of mouse cursor to avoid bad offset
     [ ] - Balance points (missiles, stamping, scanning)
     [ ] - If a potato times out and they should have been rejected, the player gets the point, this should always give the player zero points and one strike
-    [o] - Laws are not displaying on first potato
-    [o] - Hook up restart / main menu buttons from summary menu
-    [o] - The potatoes generate new images too early, when added to queue instead of when called into customs office
-    [o] - Cursor disappears after stamping
   
-  Stretch Tasks:
-    [ ] - Lighting system
-    [ ] - Click to interact with suspect, short dialog
-    [ ] - Paper shuffling sounds
-    [ ] - Click sounds in-game
-    [ ] - See what you could animate in the world
-    [ ] - Nature sounds
-
 FULL RELEASE GOALS: 2024-11-27
 ## To Be Completed
 These are tasks which must be completed before the submission to Steam deadline, November 24th.
@@ -108,6 +95,11 @@ These are various goals which are out of scope for the current roadmap, but if p
 # Completed tasks list
 The tasks which have be completed and pushed to VCS.
 
+[o] - Laws are not showing up in the guide book
+[o] - Laws are not displaying on first potato
+[o] - Hook up restart / main menu buttons from summary menu
+[o] - The potatoes generate new images too early, when added to queue instead of when called into customs office
+[o] - Cursor disappears after stamping
 [o] - Remove invalid/inconsistent rules (remove expiration related rules and just properly process expiration)
 [o] - Enable pause menu
 [o] - Remove camera shake from options
