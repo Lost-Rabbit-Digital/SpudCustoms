@@ -9,19 +9,18 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - There is no continuing shift, after you reach quota you hit the shift summary and end the game
     [ ] - Move shift summary to end of game, not end of shift, on quota reached restart, on strikes reached end game
     [ ] - Sometimes the potatoes don't give you a passport
+    [ ] - Don't allow grab while passport is moving, toggle a is_currently_animated boolean to check when picking up
+    [ ] - Passport comes from random x/y, instead of down the slot
   Tasks:
     Graphics:
       [ ] - Timeout doesn't clear stamps from passport
       [ ] - Change "Runner Escaped" to capitals 
       [ ] - Potato time left timer doesn't size back up after shrinking
-      [ ] - Passport comes from random x/y, instead of down the slot
-      [ ] - Approval message is the wrong format, should be large green text
       [ ] - The potato does not leave the customs office when the time runs out, set x/y
       [ ] - "You have caused unnecessary suffering" is in the wrong format, should be large red text
       [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
       [ ] - Missile gets stuck if border runner leaves while airborne, keep track of last spot and send missile there
       [ ] - Replace missile sprite
-      [ ] - Update "You made the right choice officer" and implement the green number score system instead
       [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
       [ ] - If the player has 0 points do not say "-500 points" when a potato escapes
       [ ] - Display the score for longer, a few seconds, so the player can read it
@@ -117,6 +116,8 @@ These are various goals which are out of scope for the current roadmap, but if p
 # Completed tasks list
 The tasks which have be completed and pushed to VCS.
 
+[o] - Update "You made the right choice officer" and implement the green number score system instead
+[o] - Approval message is the wrong format, should be large green text
 [o] - Reduce time before start of queue
 [o] - Laws are not showing up in the guide book
 [o] - Laws are not displaying on first potato

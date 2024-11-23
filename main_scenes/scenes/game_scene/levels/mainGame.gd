@@ -1,4 +1,3 @@
-# Main.gd (Main scene script)
 extends Node2D
 
 # Add border runner system
@@ -96,33 +95,6 @@ var is_in_guide_tutorial = true
 var shift_stats: ShiftStats
 @onready var shift_summary = preload("res://ShiftSummaryScreen.tscn")
 
-func end_shift():
-	var summary = shift_summary.instantiate()
-	add_child(summary)
-	
-	# Calculate final time taken
-	shift_stats.time_taken = processing_time - current_timer
-	shift_stats.processing_time_left = current_timer
-	
-	var stats = {
-		"shift": Global.shift,
-		"time_taken": shift_stats.time_taken,
-		"score": Global.score,
-		"missiles_fired": shift_stats.missiles_fired,
-		"missiles_hit": shift_stats.missiles_hit,
-		"perfect_hits": shift_stats.perfect_hits,
-		"total_stamps": shift_stats.total_stamps,
-		"potatoes_approved": shift_stats.potatoes_approved,
-		"potatoes_rejected": shift_stats.potatoes_rejected,
-		"perfect_stamps": shift_stats.perfect_stamps,
-		"speed_bonus": shift_stats.get_speed_bonus(),
-		"accuracy_bonus": shift_stats.get_accuracy_bonus(),
-		"perfect_bonus": shift_stats.get_missile_bonus(),  # Changed from perfect_hit_bonus
-		"final_score": Global.score
-	}
-	
-	summary.show_summary(stats)
-
 func _ready():
 	update_cursor("default")
 	# Make sure to add QueueManager as a child of Main
@@ -183,7 +155,35 @@ func _ready():
 	
 	# add border runner system
 	border_runner_system = $BorderRunnerSystem
+
+func end_shift():
+	var summary = shift_summary.instantiate()
+	add_child(summary)
 	
+	# Calculate final time taken
+	shift_stats.time_taken = processing_time - current_timer
+	shift_stats.processing_time_left = current_timer
+	
+	var stats = {
+		"shift": Global.shift,
+		"time_taken": shift_stats.time_taken,
+		"score": Global.score,
+		"missiles_fired": shift_stats.missiles_fired,
+		"missiles_hit": shift_stats.missiles_hit,
+		"perfect_hits": shift_stats.perfect_hits,
+		"total_stamps": shift_stats.total_stamps,
+		"potatoes_approved": shift_stats.potatoes_approved,
+		"potatoes_rejected": shift_stats.potatoes_rejected,
+		"perfect_stamps": shift_stats.perfect_stamps,
+		"speed_bonus": shift_stats.get_speed_bonus(),
+		"accuracy_bonus": shift_stats.get_accuracy_bonus(),
+		"perfect_bonus": shift_stats.get_missile_bonus(),  # Changed from perfect_hit_bonus
+		"final_score": Global.score
+	}
+	
+	summary.show_summary(stats)
+
+
 func setup_megaphone_flash_timer():
 	#print("FLASH TIMER: Setup megaphone flash timer")
 	megaphone_flash_timer = $SystemManagers/Timers/MegaphoneFlashTimer
@@ -832,13 +832,16 @@ func go_to_game_win():
 	# Store the score in a global script or autoload
 
 func timedOut():
-	$UI/Labels/JudgementLabel.text = "You took too long and they left, officer..."
+	# Alert the player
+	display_red_alert("You took too long and they left, officer...")
+	
+	# Update strikes
 	strikes += 1
-	#print("current strikes: ", strikes)
-	if strikes >= max_strikes:
-		#print("Game over!")
-		go_to_game_over()
 	$UI/Labels/StrikesLabel.text = "Strikes: " + str(strikes) + " / " + str(max_strikes)
+	
+	# Check if game over
+	if strikes == max_strikes:
+		go_to_game_over()
 
 func process_decision(allowed):
 	print("Evaluating immigration decision in process_decision()...")
@@ -857,12 +860,12 @@ func process_decision(allowed):
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
 		quota_met += 1
 		correct_decision_streak += 1
-				
-		# Award points for correct decisions, with bonus points for consecutive
-		# correct decisions
-		# UV scanning will award 1000 points per finding
-		var decision_points = 1000 * point_multiplier
-		Global.add_score(decision_points)
+		
+		# Check if quota met
+		if quota_met >= quota_target:
+			print("Quota complete!")
+			end_shift()
+			#go_to_game_win() # TODO: ENABLE FOR FULL RELEASE
 		
 		# Increase multiplier for streaks
 		if correct_decision_streak >= 3:
@@ -870,29 +873,21 @@ func process_decision(allowed):
 		if correct_decision_streak >= 5:
 			point_multiplier = 2.0
 			
-		alert_label.visible = true
-		alert_label.text = "You made the right choice, officer.\n+" + str(decision_points) + " points!"
-		alert_label.add_theme_color_override("font_color", Color.GREEN)
-		clear_alert_after_delay()
-		
-		# Check if quota met
-		if quota_met >= quota_target:
-			print("Quota complete!")
-			end_shift()
-			#go_to_game_win() # TODO: ENABLE FOR FULL RELEASE
+		# Award points for correct decisions, with bonus points for consecutive
+		# correct decisions
+		# UV scanning will award 1000 points per finding
+		var decision_points = 1000 * point_multiplier
+		display_green_alert("You made the right choice, officer.\n+" + str(decision_points) + " points!")
+		Global.add_score(decision_points)
 	else:
-		alert_label.visible = true
-		alert_label.text = "You have caused unnecessary suffering, officer...\n+1 Strikes!"
-		alert_label.add_theme_color_override("font_color", Color.RED)
-		clear_alert_after_delay()
-
-		
 		correct_decision_streak = 0
 		point_multiplier = 1.0
 		strikes += 1
 		if strikes == max_strikes:
 			print("Game over!")
 			go_to_game_over()
+			
+		display_red_alert("You have caused unnecessary suffering, officer...\n+1 Strikes!")
 			
 	update_score_display()
 	update_quota_display()
@@ -905,6 +900,18 @@ func clear_alert_after_delay():
 	await get_tree().create_timer(2.0).timeout
 	alert_label.visible = false
 	alert_label.add_theme_color_override("font_color", Color.WHITE)
+
+func display_red_alert(text):
+	alert_label.visible = true
+	alert_label.text = text
+	alert_label.add_theme_color_override("font_color", Color.RED)
+	clear_alert_after_delay()
+	
+func display_green_alert(text):
+	alert_label.visible = true
+	alert_label.text = text
+	alert_label.add_theme_color_override("font_color", Color.GREEN)
+	clear_alert_after_delay()
 
 func update_score_display():
 	$UI/Labels/ScoreLabel.text = "Score: " + str(score)
