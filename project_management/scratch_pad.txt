@@ -8,6 +8,8 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - Potato stamp approval doesn't update score
     [ ] - Don't set stamps to go invisible when quota reached in Endless mode
     [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
+    [ ] - Laws are not showing up in the guide book
+    [ ] - Tutorial
   Tasks:
     [ ] - Update stats on potato escape and missile kill
     [ ] - Potato time left timer doesn't size back up after shrinking

@@ -26,10 +26,10 @@
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="18_yiok2"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="20_pd2wg"]
 [ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://assets/alerts/guide_alert_box.png" id="22_3pqlk"]
-[ext_resource type="Texture2D" uid="uid://b2wymckqr8jsk" path="res://assets/documents/customs_guide/customs_guide_closed_small.png" id="27_tbg2w"]
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://prototyping/random_character_creation/character_generator.tscn" id="28_f6jf3"]
 [ext_resource type="Texture2D" uid="uid://dubo3sdxx8chn" path="res://assets/stamps/approval_stamp_3.png" id="28_uvib1"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="29_rft0e"]
+[ext_resource type="Texture2D" uid="uid://cfkvlvqhnapxc" path="res://assets/documents/customs_guide/customs_guide_open_2.png" id="30_0fqrc"]
 [ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="31_c10l6"]
 [ext_resource type="Script" path="res://guide.gd" id="35_uuf1y"]
 
@@ -279,10 +279,10 @@ z_as_relative = false
 texture_filter = 1
 texture_repeat = 1
 layout_mode = 0
-offset_left = 73.0
-offset_top = 248.0
-offset_right = 233.0
-offset_bottom = 298.0
+offset_left = 458.0
+offset_top = 641.0
+offset_right = 618.0
+offset_bottom = 691.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
@@ -399,10 +399,10 @@ texture_filter = 1
 texture_repeat = 1
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
-offset_left = 256.0
-offset_top = 248.0
-offset_right = 458.0
-offset_bottom = 298.0
+offset_left = 641.0
+offset_top = 641.0
+offset_right = 843.0
+offset_bottom = 691.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
@@ -613,8 +613,8 @@ texture = ExtResource("16_qj41b")
 [node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_index = 2
 z_as_relative = false
-position = Vector2(1219, 589)
-texture = ExtResource("27_tbg2w")
+position = Vector2(470, 458)
+texture = ExtResource("30_0fqrc")
 script = ExtResource("35_uuf1y")
 
 [node name="ClosedGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
@@ -628,7 +628,6 @@ z_as_relative = false
 texture = ExtResource("22_3pqlk")
 
 [node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
-visible = false
 
 [node name="GuideNote" type="Label" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
 texture_filter = 1
@@ -644,8 +643,8 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
 theme_override_fonts/font = ExtResource("6_rd1c0")
 theme_override_font_sizes/font_size = 16
-text = "To begin, press the speaker with the yellow flashing ring on top of the customs office building.
-Take the documents from the Potato and bring them to the main table.
+text = "To begin, press the speaker on top of the customs office building.
+Grab the documents from the Potato and drag them to the main table.
 Then compare the information on the documents with the laws given.
 If there are any discrepencies, deny entry.
 After stamping the documents, hand them back to the Potato.
