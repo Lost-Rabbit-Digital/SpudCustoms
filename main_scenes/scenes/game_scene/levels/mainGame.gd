@@ -56,7 +56,8 @@ var selected_stamp: Node = null  # Tracks which stamp is currently selected
 @onready var approval_stamp = $Gameplay/InteractiveElements/ApprovalStamp
 @onready var rejection_stamp = $Gameplay/InteractiveElements/RejectionStamp
 
-
+## Label used to display alerts and notifications to the player
+@onready var alert_label = $UI/Labels/AlertLabel
 
 # Passport dragging system
 var passport: Sprite2D
@@ -815,8 +816,8 @@ func go_to_game_over():
 	#$Gameplay/InteractiveElements/ApprovalStamp.visible = false
 	#$Gameplay/InteractiveElements/RejectionStamp.visible = false
 	print("ALERT: go_to_game_over() has been disabled")
-	#get_tree().change_scene_to_file("res://menus/game_over.tscn")
-
+	get_tree().change_scene_to_file("res://ShiftSummaryScreen.tscn")
+	
 func go_to_game_win():
 	print("Transitioning to game win scene with score:", score)
 	#$Gameplay/InteractiveElements/ApprovalStamp.visible = false
@@ -869,19 +870,27 @@ func process_decision(allowed):
 		if correct_decision_streak >= 5:
 			point_multiplier = 2.0
 			
-		$UI/Labels/JudgementLabel.text = "You made the right choice, officer.\n+" + str(decision_points) + " points!"
+		alert_label.visible = true
+		alert_label.text = "You made the right choice, officer.\n+" + str(decision_points) + " points!"
+		alert_label.add_theme_color_override("font_color", Color.GREEN)
+		clear_alert_after_delay()
 		
 		# Check if quota met
 		if quota_met >= quota_target:
 			print("Quota complete!")
 			end_shift()
-			#go_to_game_win()
+			#go_to_game_win() # TODO: ENABLE FOR FULL RELEASE
 	else:
-		$UI/Labels/JudgementLabel.text = "You have caused unnecessary suffering, officer...\n+1 Strikes!"
+		alert_label.visible = true
+		alert_label.text = "You have caused unnecessary suffering, officer...\n+1 Strikes!"
+		alert_label.add_theme_color_override("font_color", Color.RED)
+		clear_alert_after_delay()
+
+		
 		correct_decision_streak = 0
 		point_multiplier = 1.0
 		strikes += 1
-		if strikes >= max_strikes:
+		if strikes == max_strikes:
 			print("Game over!")
 			go_to_game_over()
 			
@@ -891,6 +900,11 @@ func process_decision(allowed):
 
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()
+
+func clear_alert_after_delay():
+	await get_tree().create_timer(2.0).timeout
+	alert_label.visible = false
+	alert_label.add_theme_color_override("font_color", Color.WHITE)
 
 func update_score_display():
 	$UI/Labels/ScoreLabel.text = "Score: " + str(score)

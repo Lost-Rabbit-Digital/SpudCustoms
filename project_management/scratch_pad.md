@@ -7,7 +7,8 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - Don't set stamps to go invisible when quota reached in Endless mode
     [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
     [ ] - There is no continuing shift, after you reach quota you hit the shift summary and end the game
-    [ ] - Move shift summary to end of game, not end of shift
+    [ ] - Move shift summary to end of game, not end of shift, on quota reached restart, on strikes reached end game
+    [ ] - Sometimes the potatoes don't give you a passport
   Tasks:
     Graphics:
       [ ] - Timeout doesn't clear stamps from passport
