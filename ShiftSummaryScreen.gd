@@ -169,3 +169,11 @@ func _on_submit_score_button_pressed() -> void:
 	print("Submitting score of: ")
 	print(stats.get("final_score"))
 	Global.submit_score(stats.get("final_score"))
+
+
+func _on_restart_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://main_scenes/scenes/game_scene/levels/mainGame.tscn")
+
+
+func _on_main_menu_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://main_scenes/scenes/menus/main_menu/main_menu_with_animations.tscn")
