@@ -12,9 +12,11 @@ var daily_laws = """
 
 """
 
+@export var main_node : Node2D
+
+
 func _ready():
 	# Assuming the main game script is attached to a node named "Main"
-	var main_node = get_node("/root/Root")
 	if main_node:
 		main_node.connect("rules_updated", Callable(self, "update_daily_laws"))
 

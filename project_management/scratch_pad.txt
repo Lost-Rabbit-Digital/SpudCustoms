@@ -3,14 +3,26 @@ These are our goals, to-do tasks, and completed tasks.
 
 DEMO RELEASE GOALS: 2024-11-22
   Urgent Tasks:
-    [ ] - Hook up restart / main menu buttons from summary menu
     [ ] - Potato stamp approval doesn't update score
     [ ] - Don't set stamps to go invisible when quota reached in Endless mode
     [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
     [ ] - Laws are not showing up in the guide book
     [ ] - Tutorial
-    [ ] - Passport comes from random x/y, instead of down the slot
   Tasks:
+    [ ] - Passport comes from random x/y, instead of down the slot
+    [ ] - Approval message is the wrong format, should be large green text
+    [ ] - Laws are not displaying on first potato
+    [ ] - The timer text stayed small from the countdown from the previous potato
+    [ ] - The potato does not leave the customs office when the time runs out, set x/y
+    [ ] - "You have caused unnecessary suffering" is in the wrong format, should be large red text
+    [ ] - Points are not added when correctly allowing entry to potatoes
+    [ ] - No ambience or background music playing
+    [ ] - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
+    [ ] - Went from 3 strikes to 7, border runners may add but not update strikes
+    [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
+    [ ] - Missile gets stuck if border runner leaves while airborne, keep track of last spot and send missile there
+    [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
+
     [ ] - Update stats on potato escape and missile kill
     [ ] - Potato time left timer doesn't size back up after shrinking
     [ ] - Check and see whether strikes are actually removing
@@ -23,6 +35,7 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - Able to drag passport off interaction table, bound them to lower half of screen
   	[ ] - Snap closed passport to position of mouse cursor to avoid bad offset
     [ ] - Balance points (missiles, stamping, scanning)
+    [o] - Hook up restart / main menu buttons from summary menu
     [o] - The potatoes generate new images too early, when added to queue instead of when called into customs office
     [o] - Cursor disappears after stamping
   

@@ -610,12 +610,13 @@ position = Vector2(0, 20)
 scale = Vector2(0.29, 0.29)
 texture = ExtResource("16_qj41b")
 
-[node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements"]
+[node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
 z_index = 2
 z_as_relative = false
 position = Vector2(470, 458)
 texture = ExtResource("30_0fqrc")
 script = ExtResource("35_uuf1y")
+main_node = NodePath("../../..")
 
 [node name="ClosedGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
 visible = false

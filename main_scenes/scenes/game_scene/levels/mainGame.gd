@@ -192,15 +192,15 @@ func set_difficulty(level):
 	match difficulty_level:
 		"Easy":
 			quota_target = 8
-			max_strikes = 5
+			max_strikes = 6
 			processing_time = 60
 		"Normal":
 			quota_target = 10
-			max_strikes = 3
+			max_strikes = 4
 			processing_time = 45
 		"Expert":
-			quota_target = 1
-			max_strikes = 2
+			quota_target = 12
+			max_strikes = 3
 			processing_time = 30
 			
 	update_quota_display()
@@ -810,15 +810,15 @@ func go_to_game_over():
 	# Store the score in a global script or autoload
 	Global.final_score = score
 	print("transition to game over scene")
-	$Gameplay/InteractiveElements/ApprovalStamp.visible = false
-	$Gameplay/InteractiveElements/RejectionStamp.visible = false
+	#$Gameplay/InteractiveElements/ApprovalStamp.visible = false
+	#$Gameplay/InteractiveElements/RejectionStamp.visible = false
 	print("ALERT: go_to_game_over() has been disabled")
 	#get_tree().change_scene_to_file("res://menus/game_over.tscn")
 
 func go_to_game_win():
 	print("Transitioning to game win scene with score:", score)
-	$Gameplay/InteractiveElements/ApprovalStamp.visible = false
-	$Gameplay/InteractiveElements/RejectionStamp.visible = false
+	#$Gameplay/InteractiveElements/ApprovalStamp.visible = false
+	#$Gameplay/InteractiveElements/RejectionStamp.visible = false
 	Global.final_score = score
 	Global.quota_met = quota_met
 	Global.shift += 1

@@ -38,7 +38,7 @@ func _init():
 		Steam.leaderboard_scores_downloaded.connect(_on_leaderboard_scores_downloaded)
 		print("Steam connections configured.")
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	Steam.run_callbacks()
 	
 # Helper function to get leaderboard name based on difficulty
