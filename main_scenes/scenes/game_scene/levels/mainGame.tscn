@@ -551,6 +551,7 @@ position = Vector2(76, 90)
 scale = Vector2(0.975, 1)
 
 [node name="PotatoMugshotShadow" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport/OpenPassport/PassportPhotoGenerator"]
+visible = false
 modulate = Color(0, 0, 0, 0.521569)
 z_index = -1
 position = Vector2(1.02564, -14)
@@ -580,6 +581,7 @@ theme_override_font_sizes/font_size = 16
 autowrap_mode = 2
 
 [node name="PassportShadow" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
+visible = false
 position = Vector2(-4.99997, 3.99999)
 texture = ExtResource("20_pd2wg")
 

@@ -16,7 +16,7 @@ var current_potato
 
 # Track win and lose parameters
 var quota_met = 0  # Number of correct decisions
-var quota_target = 8  # Required correct decisions (formerly max_score)
+var quota_target = 8  # Required correct decisions
 var strikes = 0
 var max_strikes = 3
 var difficulty_level
@@ -124,23 +124,25 @@ func end_shift():
 
 func _ready():
 	update_cursor("default")
+	# Make sure to add QueueManager as a child of Main
+	queue_manager = $SystemManagers/QueueManager  
+	setup_spawn_timer()
 	
 	shift_stats = stats_manager.get_new_stats()
 	Global.score_updated.connect(_on_score_updated)
 	difficulty_level = Global.difficulty_level
+	set_difficulty(difficulty_level)
 	# Store the default cursor shape
+	
 	update_score_display()
 	update_quota_display()
-	time_label = $UI/Labels/TimeLabel
-	setup_megaphone_flash_timer()
-	setup_guide_tutorial_timer()
-	set_difficulty(difficulty_level)
 	update_date_display()
-	# Make sure to add QueueManager
-	#  as a child of Main
-	queue_manager = $SystemManagers/QueueManager  
+	time_label = $UI/Labels/TimeLabel
+	
+	#setup_megaphone_flash_timer()
+	#setup_guide_tutorial_timer()
+	
 	generate_rules()
-	setup_spawn_timer()
 	draggable_sprites = [
 		$Gameplay/InteractiveElements/Passport,
 		$Gameplay/InteractiveElements/Guide,
@@ -505,7 +507,7 @@ func animate_mugshot_and_passport():
 	
 func setup_spawn_timer():
 	spawn_timer = Timer.new()
-	spawn_timer.set_wait_time(3.0)
+	spawn_timer.set_wait_time(1.0)
 	spawn_timer.set_one_shot(false)
 	spawn_timer.connect("timeout", Callable(self, "_on_spawn_timer_timeout"))
 	add_child(spawn_timer)

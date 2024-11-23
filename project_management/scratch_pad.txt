@@ -10,6 +10,7 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - Move shift summary to end of game, not end of shift
   Tasks:
     Graphics:
+      [ ] - Change "Runner Escaped" to capitals 
       [ ] - Potato time left timer doesn't size back up after shrinking
       [ ] - Passport comes from random x/y, instead of down the slot
       [ ] - Approval message is the wrong format, should be large green text
@@ -20,9 +21,15 @@ DEMO RELEASE GOALS: 2024-11-22
       [ ] - Replace missile sprite
       [ ] - Update "You made the right choice officer" and implement the green number score system instead
       [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
+      [ ] - If the player has 0 points do not say "-500 points" when a potato escapes
+      [ ] - Display the score for longer, a few seconds, so the player can read it
     Audio:
       [ ] - No ambience or background music playing
     Scoring:
+      [ ] - Randomly lose combo when doing potato border runner system
+      [ ] - A strike is not removed when you successfully murder a potato with an air-to-surface missile
+      [ ] - When a potato escapes by running a strike is not added
+      [ ] - If the player has 0 points do not remove 500 points when a potato escapes
       [ ] - Points are not added when correctly allowing entry to potatoes
       [ ] - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
       [ ] - Went from 3 strikes to 7, border runners may add but not update strikes
@@ -34,6 +41,7 @@ DEMO RELEASE GOALS: 2024-11-22
     Quality of Life:
       [ ] - Reduce time before start of queue
     Interaction:
+      [ ] - Expand area for perfect hit chance on border runner system
       [ ] - Bound missile mini-game to area2d, check update_cursor for area2d mouse checking code
       [ ] - Mouse has to be over passport to be able to stamp
       [ ] - Able to drag stamps off interaction table, bound them to lower half of screen

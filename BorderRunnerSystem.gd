@@ -118,7 +118,7 @@ func _ready():
 			runner_speed = 0.14
 			runner_chance = 0.042
 		"Expert":
-			runner_speed = 0.18
+			runner_speed = 0.16
 			runner_chance = 0.085
 		_: 
 			runner_speed = 0.10
