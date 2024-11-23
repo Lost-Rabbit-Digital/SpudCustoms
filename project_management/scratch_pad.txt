@@ -7,11 +7,9 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - Don't set stamps to go invisible when quota reached in Endless mode
     [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
     [ ] - Laws are not showing up in the guide book
-    [ ] - Tutorial
   Tasks:
     [ ] - Passport comes from random x/y, instead of down the slot
     [ ] - Approval message is the wrong format, should be large green text
-    [ ] - Laws are not displaying on first potato
     [ ] - The timer text stayed small from the countdown from the previous potato
     [ ] - The potato does not leave the customs office when the time runs out, set x/y
     [ ] - "You have caused unnecessary suffering" is in the wrong format, should be large red text
@@ -22,7 +20,7 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
     [ ] - Missile gets stuck if border runner leaves while airborne, keep track of last spot and send missile there
     [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
-
+    [ ] - Reduce time before start of queue
     [ ] - Update stats on potato escape and missile kill
     [ ] - Potato time left timer doesn't size back up after shrinking
     [ ] - Check and see whether strikes are actually removing
@@ -35,6 +33,7 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - Able to drag passport off interaction table, bound them to lower half of screen
   	[ ] - Snap closed passport to position of mouse cursor to avoid bad offset
     [ ] - Balance points (missiles, stamping, scanning)
+    [o] - Laws are not displaying on first potato
     [o] - Hook up restart / main menu buttons from summary menu
     [o] - The potatoes generate new images too early, when added to queue instead of when called into customs office
     [o] - Cursor disappears after stamping

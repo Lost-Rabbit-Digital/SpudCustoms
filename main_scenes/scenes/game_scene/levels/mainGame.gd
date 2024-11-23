@@ -1226,6 +1226,7 @@ func move_potato_along_path(approval_status):
 	elif approval_status == "timedout":
 		path = $Gameplay/Paths/TimedOutPath
 		timedOut()
+		process_decision(false)
 	else:
 		# Increase chance of runner when rejected
 		if randf() < 0.30:  # 30% chance to go runner mode
