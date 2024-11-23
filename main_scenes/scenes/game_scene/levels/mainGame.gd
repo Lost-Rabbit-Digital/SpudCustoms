@@ -79,7 +79,6 @@ const STAMP_MOVE_DISTANCE = 36  # How far the stamp moves down
 var is_stamping = false  # Tracks if a stamp animation is in progress
 var stamp_cooldown = 1.0  # Cooldown time in seconds after stamp animation
 var default_cursor = Input.CURSOR_ARROW
-var was_cursor_hidden = false
 
 # Guide system
 var guide_tutorial_timer: Timer
@@ -934,7 +933,6 @@ func _input(event):
 					drag_offset = mouse_pos - dragged_sprite.global_position
 					if "Stamp" in dragged_sprite.name:
 						holding_stamp = true
-						was_cursor_hidden = true
 		
 		# Handle right click - stamps if over passport
 		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
@@ -948,9 +946,6 @@ func _input(event):
 			if holding_stamp:
 				# Drop the stamp
 				holding_stamp = false
-				if was_cursor_hidden:
-					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-					was_cursor_hidden = false
 			elif dragged_sprite == passport:
 				handle_passport_drop(mouse_pos)
 			elif dragged_sprite == guide:
@@ -993,6 +988,12 @@ func close_passport_action():
 	$Gameplay/InteractiveElements/Passport.texture = preload("res://assets/documents/closed_passport_small/closed_passport_small.png")
 	$Gameplay/InteractiveElements/Passport/ClosedPassport.visible = true
 	$Gameplay/InteractiveElements/Passport/OpenPassport.visible = false
+	
+	# Center the passport on the cursor
+	var mouse_pos = get_global_mouse_position()
+	var passport_rect = $Gameplay/InteractiveElements/Passport.get_rect()
+	var offset = passport_rect.size / 2
+	$Gameplay/InteractiveElements/Passport.global_position = mouse_pos - offset
 	
 func open_guide_action():
 	$Gameplay/InteractiveElements/Guide.texture = preload("res://assets/documents/customs_guide/customs_guide_open_2.png")
@@ -1047,8 +1048,6 @@ func apply_stamp(stamp):
 	# Don't reset holding states since we want to keep holding the stamp
 	# holding_stamp remains true
 	# dragged_sprite remains set
-	
-	
 	
 	var open_passport = $Gameplay/InteractiveElements/Passport/OpenPassport
 	if not open_passport:
@@ -1133,10 +1132,6 @@ func apply_stamp(stamp):
 			stamp.visible = true
 			stamp.global_position = get_global_mouse_position() - drag_offset
 			
-			# Keep cursor hidden since we're still holding the stamp
-			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-			was_cursor_hidden = true
-		
 		# Set up cooldown
 		var cooldown_timer = get_tree().create_timer(stamp_cooldown)
 		cooldown_timer.timeout.connect(func(): 

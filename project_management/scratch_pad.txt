@@ -6,30 +6,30 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - Hook up restart / main menu buttons from summary menu
     [ ] - The potatoes generate new images too early, when added to queue instead of when called into customs office
     [ ] - Potato stamp approval doesn't update score
-  Tasks:
-    [ ] - Bound missile mini-game to area2d, check update_cursor for area2d mouse checking code
-    [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
-    [ ] - Replace missile sprite
     [ ] - Don't set stamps to go invisible when quota reached in Endless mode
-    [ ] - Check and see whether strikes are actually removing
+    [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
+  Tasks:
     [ ] - Update stats on potato escape and missile kill
-    [ ] - Update "You made the right choice officer" and implement the green number score system instead
     [ ] - Potato time left timer doesn't size back up after shrinking
+    [ ] - Check and see whether strikes are actually removing
+    [ ] - Replace missile sprite
+    [ ] - Bound missile mini-game to area2d, check update_cursor for area2d mouse checking code
+    [ ] - Update "You made the right choice officer" and implement the green number score system instead
     [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
     [ ] - Mouse has to be over passport to be able to stamp
     [ ] - Able to drag stamps off interaction table, bound them to lower half of screen
     [ ] - Able to drag passport off interaction table, bound them to lower half of screen
-  	[ ] - Change position so kill text flying up with the score update
-  	[ ] - Stamps go over edge of passport
   	[ ] - Snap closed passport to position of mouse cursor to avoid bad offset
-    [o] - Don't allow the player to target to the right of the border wall or in the document processing area with missiles
-    [o] - Remove invalid/inconsistent rules (remove expiration related rules and just properly process expiration)
-    [o] - Enable pause menu
-    [o] - Remove camera shake from options
-    [o] - Remove Anti-aliasing from options
-    [o] - Remove reset game data from options
-    [o] - Windowed mode breaks resolution and causes you to see outside viewport
-
+    [ ] - Balance points (missiles, stamping, scanning)
+    [o] - Cursor disappears after stamping
+  
+  Stretch Tasks:
+    [ ] - Lighting system
+    [ ] - Click to interact with suspect, short dialog
+    [ ] - Paper shuffling sounds
+    [ ] - Click sounds in-game
+    [ ] - See what you could animate in the world
+    [ ] - Nature sounds
 
 FULL RELEASE GOALS: 2024-11-27
 ## To Be Completed
@@ -37,12 +37,13 @@ These are tasks which must be completed before the submission to Steam deadline,
 
 ### Bugs
 [ ] - Check why date rules keep failing (make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
+[ ] - Change position so kill text flying up with the score update
 [ ] - Fix missile getting stuck bug, store last position of mouse on potato escape 
 [ ] - Update menus with new MODERN DOS font
 [ ] - Update ATTRIBUTION.md with MODERN DOS font
-[ ] - Balance points (missiles, stamping, scanning)
 [ ] - Lower z-index of crater below that of the potato_person runner
 [ ] - Don't allow the player to move the passport while the animation is playing for it to pass into the customs table
+[ ] - Stamps go over edge of passport
 
 ### Urgent
 [ ] - Difficulty selection UI after selecting endless mode
@@ -68,10 +69,6 @@ These are more general tasks which would add a layer of quality to the game if c
 ### Quality of life (QoL)
 [ ] - Save in a global if the player has finished the tutorial so every shift doesn't start the same interaction
 [ ] - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
-[ ] - Shadows when the player begins to drag the item, they can click with no reaction
-[ ] - Cursor which changes on interaction hover 
-
-
 
 ## Stretch Goals
 These are various goals which are out of scope for the current roadmap, but if possible would add more to the game.
@@ -95,6 +92,14 @@ These are various goals which are out of scope for the current roadmap, but if p
 # Completed tasks list
 The tasks which have be completed and pushed to VCS.
 
+[o] - Remove invalid/inconsistent rules (remove expiration related rules and just properly process expiration)
+[o] - Enable pause menu
+[o] - Remove camera shake from options
+[o] - Remove Anti-aliasing from options
+[o] - Remove reset game data from options
+[o] - Windowed mode breaks resolution and causes you to see outside viewport
+[o] - Shadows when the player begins to drag the item, they can click with no reaction
+[o] - Cursor which changes on interaction hover 
 [o] - Remove potato types from mugshots and passports and replace with procedural character generator
 [o] - Remove potato types from mugshots and passports and replace with procedural character generator
 [o] - Update missile smoke system
