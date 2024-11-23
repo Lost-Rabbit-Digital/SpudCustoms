@@ -435,13 +435,23 @@ func megaphone_clicked():
 		is_potato_in_office = true
 		megaphone.visible = true
 		passport.visible = false
-		current_potato_info = potato_person.potato_info
+		current_potato_info = generate_potato_info()
+		
+		# Now randomize the character when they actually enter the office
+		if mugshot_generator:
+			mugshot_generator.randomise_character()
+			current_potato_info.character_data = mugshot_generator.get_character_data()
+			
+			# Update passport generator with the same data
+			if passport_generator:
+				passport_generator.set_character_data(current_potato_info.character_data)
+		
 		move_potato_to_office(potato_person)
 	else:
 		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = true
 		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.texture = preload("res://assets/megaphone/megaphone_dialogue_box_7.png")
 		print("No potato to process. :(")
-		
+
 func move_potato_to_office(potato_person):
 	print("Moving our spuddy to the customs office")
 	if potato_person.get_parent():
@@ -682,12 +692,16 @@ func generate_potato_info():
 	# Generate gender first since it affects character generation
 	var gender = get_random_sex()
 	
-	# Generate character appearance if we have a generator
+	# Generate character appearance only when creating new potato info
 	var character_data = {}
 	if mugshot_generator:
 		mugshot_generator.set_gender("F" if gender == "Female" else "M")
-		mugshot_generator.randomise_character()
+		# This will now only happen when a new potato is called in
 		character_data = mugshot_generator.get_character_data()
+		
+		# Also update passport generator
+		if passport_generator:
+			passport_generator.set_character_data(character_data)
 	
 	return {
 		"name": get_random_name(),
@@ -696,10 +710,8 @@ func generate_potato_info():
 		"country_of_issue": get_random_country(),
 		"date_of_birth": get_past_date(1, 10),
 		"expiration_date": expiration_date,
-		# Store character appearance data
 		"character_data": character_data
 	}
-
 func update_potato_info_display():
 	print("Printing current potato info")
 	print(current_potato_info)

@@ -15,24 +15,29 @@ extends Node2D
 
 func _ready():
 	randomize()  # Initialize random seed
+	update_sprite_animations()
 
 func set_gender(new_gender: String):
 	gender = new_gender
 	update_sprite_animations()
 
 func update_sprite_animations():
-	# Update sprites
+	# Instead of play(), just set the animation and frame directly
 	if hair and hair.sprite_frames:
-		hair.play("Russel_" + gender + "_Hair")
+		hair.animation = "Russel_" + gender + "_Hair"
 		hair.frame = current_hair_frame
+		hair.pause()  # Ensure animation doesn't play
 		
 	if face and face.sprite_frames:
-		face.play("Russel_" + gender + "_Face")
+		face.animation = "Russel_" + gender + "_Face"
 		face.frame = current_face_frame
+		face.pause()  # Ensure animation doesn't play
 		
 	if torso and torso.sprite_frames:
-		torso.play("Russel_" + gender + "_Body")
+		torso.animation = "Russel_" + gender + "_Body"
 		torso.frame = current_torso_frame
+		torso.pause()  # Ensure animation doesn't play
+
 
 func randomise_character():
 	var hair_anim = "Russel_" + gender + "_Hair"
