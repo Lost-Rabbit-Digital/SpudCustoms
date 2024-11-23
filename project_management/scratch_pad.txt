@@ -2,37 +2,41 @@
 These are our goals, to-do tasks, and completed tasks.
 
 DEMO RELEASE GOALS: 2024-11-22
-  Urgent Tasks:
+  Urgent Tasks: Needed for Steam approval
     [ ] - Potato stamp approval doesn't update score
     [ ] - Don't set stamps to go invisible when quota reached in Endless mode
     [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
-    [ ] - Potato time left timer doesn't size back up after shrinking
   Tasks:
-    [ ] - Passport comes from random x/y, instead of down the slot
-    [ ] - Approval message is the wrong format, should be large green text
-    [ ] - The timer text stayed small from the countdown from the previous potato
-    [ ] - The potato does not leave the customs office when the time runs out, set x/y
-    [ ] - "You have caused unnecessary suffering" is in the wrong format, should be large red text
-    [ ] - Points are not added when correctly allowing entry to potatoes
-    [ ] - No ambience or background music playing
-    [ ] - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
-    [ ] - Went from 3 strikes to 7, border runners may add but not update strikes
-    [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
-    [ ] - Missile gets stuck if border runner leaves while airborne, keep track of last spot and send missile there
-    [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
-    [ ] - Reduce time before start of queue
-    [ ] - Update stats on potato escape and missile kill
-    [ ] - Check and see whether strikes are actually removing
-    [ ] - Replace missile sprite
-    [ ] - Bound missile mini-game to area2d, check update_cursor for area2d mouse checking code
-    [ ] - Update "You made the right choice officer" and implement the green number score system instead
-    [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
-    [ ] - Mouse has to be over passport to be able to stamp
-    [ ] - Able to drag stamps off interaction table, bound them to lower half of screen
-    [ ] - Able to drag passport off interaction table, bound them to lower half of screen
-  	[ ] - Snap closed passport to position of mouse cursor to avoid bad offset
-    [ ] - Balance points (missiles, stamping, scanning)
-    [ ] - If a potato times out and they should have been rejected, the player gets the point, this should always give the player zero points and one strike
+    Graphics:
+      [ ] - Potato time left timer doesn't size back up after shrinking
+      [ ] - Passport comes from random x/y, instead of down the slot
+      [ ] - Approval message is the wrong format, should be large green text
+      [ ] - The potato does not leave the customs office when the time runs out, set x/y
+      [ ] - "You have caused unnecessary suffering" is in the wrong format, should be large red text
+      [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
+      [ ] - Missile gets stuck if border runner leaves while airborne, keep track of last spot and send missile there
+      [ ] - Replace missile sprite
+      [ ] - Update "You made the right choice officer" and implement the green number score system instead
+      [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
+    Audio:
+      [ ] - No ambience or background music playing
+    Scoring:
+      [ ] - Points are not added when correctly allowing entry to potatoes
+      [ ] - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
+      [ ] - Went from 3 strikes to 7, border runners may add but not update strikes
+      [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
+      [ ] - Update stats on potato escape and missile kill
+      [ ] - Check and see whether strikes are actually removing
+      [ ] - Balance points (missiles, stamping, scanning)
+      [ ] - If a potato times out and they should have been rejected, the player gets the point, this should always give the player zero points and one strike
+    Quality of Life:
+      [ ] - Reduce time before start of queue
+    Interaction:
+      [ ] - Bound missile mini-game to area2d, check update_cursor for area2d mouse checking code
+      [ ] - Mouse has to be over passport to be able to stamp
+      [ ] - Able to drag stamps off interaction table, bound them to lower half of screen
+      [ ] - Able to drag passport off interaction table, bound them to lower half of screen
+      [ ] - Snap closed passport to position of mouse cursor to avoid bad offset
   
 FULL RELEASE GOALS: 2024-11-27
 ## To Be Completed
