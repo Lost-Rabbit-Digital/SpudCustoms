@@ -830,10 +830,10 @@ func go_to_game_win():
 
 func timedOut():
 	$UI/Labels/JudgementLabel.text = "You took too long and they left, officer..."
-	#strikes += 1
-	print("current strikes: ", strikes)
+	strikes += 1
+	#print("current strikes: ", strikes)
 	if strikes >= max_strikes:
-		print("Game over!")
+		#print("Game over!")
 		go_to_game_over()
 	$UI/Labels/StrikesLabel.text = "Strikes: " + str(strikes) + " / " + str(max_strikes)
 
@@ -1224,7 +1224,7 @@ func move_potato_along_path(approval_status):
 		print("Selected approve path: ", path.name)
 		process_decision(true)
 	elif approval_status == "timedout":
-		path = $Gameplay/Paths/TimedOutPath
+		path = available_reject_paths[randi() % available_reject_paths.size()]
 		timedOut()
 		process_decision(false)
 	else:

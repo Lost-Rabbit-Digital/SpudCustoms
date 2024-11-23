@@ -33,6 +33,7 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - Able to drag passport off interaction table, bound them to lower half of screen
   	[ ] - Snap closed passport to position of mouse cursor to avoid bad offset
     [ ] - Balance points (missiles, stamping, scanning)
+    [ ] - If a potato times out and they should have been rejected, the player gets the point, this should always give the player zero points and one strike
     [o] - Laws are not displaying on first potato
     [o] - Hook up restart / main menu buttons from summary menu
     [o] - The potatoes generate new images too early, when added to queue instead of when called into customs office
