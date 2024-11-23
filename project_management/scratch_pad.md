@@ -13,10 +13,7 @@ DEMO RELEASE GOALS: 2024-11-22
     [ ] - Passport comes from random x/y, instead of down the slot
   Tasks:
     Graphics:
-      [ ] - Timeout doesn't clear stamps from passport
       [ ] - Change "Runner Escaped" to capitals 
-      [ ] - Potato time left timer doesn't size back up after shrinking
-      [ ] - The potato does not leave the customs office when the time runs out, set x/y
       [ ] - "You have caused unnecessary suffering" is in the wrong format, should be large red text
       [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
       [ ] - Missile gets stuck if border runner leaves while airborne, keep track of last spot and send missile there
@@ -42,10 +39,8 @@ DEMO RELEASE GOALS: 2024-11-22
       [ ] - Update stats on potato escape and missile kill
       [ ] - Check and see whether strikes are actually removing
       [ ] - Balance points (missiles, stamping, scanning)
-      [ ] - If a potato times out and they should have been rejected, the player gets the point, this should always give the player zero points and one strike
-    Quality of Life:
-      [ ] - 
     Interaction:
+      [ ] - Lower delay between stamps
       [ ] - Border runner system went off twice and cancelled the first one out
       [ ] - Set default selection for main menu for keyboard control
       [ ] - Expand area for perfect hit chance on border runner system
@@ -116,6 +111,7 @@ These are various goals which are out of scope for the current roadmap, but if p
 # Completed tasks list
 The tasks which have be completed and pushed to VCS.
 
+[o] - The potato does not leave the customs office when the time runs out, set x/y
 [o] - Update "You made the right choice officer" and implement the green number score system instead
 [o] - Approval message is the wrong format, should be large green text
 [o] - Reduce time before start of queue

@@ -530,17 +530,21 @@ func start_label_tween():
 		print("Error: Failed to create tween or time_label not found")
 		return
 	
-	label_tween.tween_property(time_label, "theme_override_font_sizes/font_size", 16, 0.5)\
-		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-	label_tween.tween_property(time_label, "theme_override_font_sizes/font_size", 12, 0.5)\
-		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	label_tween.tween_property(time_label, "theme_override_font_sizes/font_size", 32, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	label_tween.tween_property(time_label, "theme_override_font_sizes/font_size", 24, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
-	label_tween.parallel().tween_property(time_label, "theme_override_colors/font_color", Color.RED, 0.5)\
-		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-	label_tween.tween_property(time_label, "theme_override_colors/font_color", Color.WHITE, 0.5)\
-		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	label_tween.parallel().tween_property(time_label, "theme_override_colors/font_color", Color.RED, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	label_tween.tween_property(time_label, "theme_override_colors/font_color", Color("#ffc7a7"), 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
+var font = load("res://assets/fonts/Modern_DOS_Font_Variation.tres")
 func reset_time_label():
+	# Set font size
+	time_label.add_theme_font_size_override("font_size", 32)
+	# Set font
+	time_label.add_theme_font_override("font", font)
+	# Set color
+	time_label.add_theme_color_override("font_color", Color("#ffc7a7"))
+	
 	if time_label:
 		time_label.visible = false
 
@@ -637,8 +641,7 @@ func _process(_delta):
 			stop_label_tween()
 		
 		if int(current_timer) >= int(processing_time):
-			timedOut()
-			move_potato_along_path("timedOut")
+			move_potato_along_path("timed_out")
 			is_potato_in_office = false
 	else:
 		# Hide label if potato is not in/has left customs office
@@ -831,17 +834,35 @@ func go_to_game_win():
 	#get_tree().change_scene_to_packed(success_scene)
 	# Store the score in a global script or autoload
 
-func timedOut():
+func timed_out():
 	# Alert the player
-	display_red_alert("You took too long and they left, officer...")
+	display_red_alert("You took too long and they left, officer... \n+1 Strike!")
 	
-	# Update strikes
+	# Reset stats and add strike
+	correct_decision_streak = 0
+	point_multiplier = 1.0
 	strikes += 1
-	$UI/Labels/StrikesLabel.text = "Strikes: " + str(strikes) + " / " + str(max_strikes)
-	
-	# Check if game over
 	if strikes == max_strikes:
 		go_to_game_over()
+			
+	# Update displays
+	update_score_display()
+	$UI/Labels/StrikesLabel.text = "Strikes: " + str(strikes) + " / " + str(max_strikes)
+	
+	# Add another potato
+	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
+		spawn_timer.start()
+	
+	# Animate the exit
+	var passport_book = $Gameplay/InteractiveElements/Passport
+	var tween = create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(mugshot_generator, "position:x", suspect_panel.position.x - suspect.get_rect().size.x, 1)
+	tween.tween_property(mugshot_generator, "modulate:a", 0, 1)
+	tween.tween_property(passport_book, "modulate:a", 0, 1)
+	
+	# Clear the stamps
+	remove_stamp()
 
 func process_decision(allowed):
 	print("Evaluating immigration decision in process_decision()...")
@@ -884,10 +905,9 @@ func process_decision(allowed):
 		point_multiplier = 1.0
 		strikes += 1
 		if strikes == max_strikes:
-			print("Game over!")
 			go_to_game_over()
 			
-		display_red_alert("You have caused unnecessary suffering, officer...\n+1 Strikes!")
+		display_red_alert("You have caused unnecessary suffering, officer...\n+1 Strike!")
 			
 	update_score_display()
 	update_quota_display()
@@ -1246,10 +1266,9 @@ func move_potato_along_path(approval_status):
 		path = available_approve_paths[randi() % available_approve_paths.size()]
 		print("Selected approve path: ", path.name)
 		process_decision(true)
-	elif approval_status == "timedout":
+	elif approval_status == "timed_out":
 		path = available_reject_paths[randi() % available_reject_paths.size()]
-		timedOut()
-		process_decision(false)
+		timed_out()
 	else:
 		# Increase chance of runner when rejected
 		if randf() < 0.30:  # 30% chance to go runner mode
