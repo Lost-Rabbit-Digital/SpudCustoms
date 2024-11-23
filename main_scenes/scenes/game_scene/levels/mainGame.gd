@@ -191,15 +191,15 @@ func set_difficulty(level):
 	difficulty_level = level
 	match difficulty_level:
 		"Easy":
-			quota_target = 8
+			quota_target = 5
 			max_strikes = 6
 			processing_time = 60
 		"Normal":
-			quota_target = 10
+			quota_target = 8
 			max_strikes = 4
 			processing_time = 45
 		"Expert":
-			quota_target = 12
+			quota_target = 10
 			max_strikes = 3
 			processing_time = 30
 			
