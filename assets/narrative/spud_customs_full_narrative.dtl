@@ -1,4 +1,4 @@
-# Chapter 1
+### Start intro_sequence.dtl
 [background arg="res://assets/narrative/nation_of_spud_1.png" fade="2.0"]
 join narrator [z_index="1"]
 narrator: Welcome to the great nation of Spud, citizen.
@@ -64,6 +64,7 @@ else:
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
 You continue your shift...
 
+### shift1_start.dtl
 [background arg="res://assets/narrative/meeting_sasha.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 sweet_potato_sasha: Hey there, I'm Sasha. <Welcome to the team!/Glad to have you on board!/Nice to meet a fresh sprout!>
@@ -73,7 +74,7 @@ leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
-supervisor_russet: Your first applicant is waiting. Check those stamps carefully!
+supervisor_russet: Your next applicant is waiting. Check those stamps carefully!
 supervisor_russet: One wrong move could <let in a bad spud/compromise our security/threaten everything we've built>.
 supervisor_russet: Look for signs of disease, tampering, or suspicious behavior.
 supervisor_russet: If a potato seems rotten, reject them. Spud's safety comes first.
@@ -112,7 +113,7 @@ npc_2: Just... be careful out there. Get rejected and you <might/may/better> not
 leave npc_2
 
 join sweet_potato_sasha [z_index="1"]
-sweet_potato_sasha: How's your first day going? Find anything...unusual yet?
+sweet_potato_sasha: How's your shift going? Find anything...unusual yet?
 sweet_potato_sasha: [i]looks around[/i] There are rumors, you know. About where the rejects end up.
 sweet_potato_sasha: No one knows for sure, but...just keep your wits about you.
 - "Thanks for the heads up. I'll stay vigilant."
@@ -169,7 +170,7 @@ player_character: Something's rotten in the nation of Spud.
 player_character: I better get to the bottom of this, before I end up disappeared too.
 leave player_character
 
-# Chapter 2
+### shift2_start.dtl
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
 join narrator [z_index="1"]
 narrator: Another day dawns at the Spud border checkpoint.
@@ -242,6 +243,7 @@ else:
 	leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
+#
 join npc_3 [z_index="1"]
 npc_3: [i]frantically waving papers[/i] Please, I beg you! My family has been separated!
 npc_3: My wife...she was supposed to be right behind me, but she never made it through customs.
@@ -275,9 +277,9 @@ join supervisor_russet [z_index="1"]
 supervisor_russet: [i]eyes narrowed[/i] I saw that exchange. Remember, sympathizing with the rejects only leads to trouble.
 supervisor_russet: Your job is to protect Spud, not coddle every potato with a sob story. Stay focused on your duty.
 leave supervisor_russet
-
 [i]You notice Sasha fiddling with her scanner, 'accidentally' letting a few suspicious potatoes through[/i]
 
+### shift3_start.dtl
 [background arg="res://assets/narrative/root_reserve_reveal.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 [i]You meet up with Sasha as planned[/i]
@@ -456,7 +458,8 @@ narrator: But the harvest of truth is still to come...and it will not be without
 narrator: [i]screen fades to black[/i]
 leave narrator
 
-# Chapter 3 - Closing narrative
+### final_confrontation.dtl
+# Closing narrative
 [background arg="res://assets/narrative/checkpoint_chaos.png" fade="2.0"]
 narrator: The Spud border is in complete chaos.
 narrator: Panicked potatoes flood the checkpoints, desperate to escape.

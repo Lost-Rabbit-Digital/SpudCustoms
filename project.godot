@@ -56,7 +56,13 @@ directories/dtl_directory={
 "chapter_1_spud_masherson": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_spud_masherson.dtl",
 "chapter_2_1_overview": "res://assets/narrative/chapter_2/chapter_2_1_overview.dtl",
 "chapter_3_1_overview": "res://assets/narrative/chapter_3/chapter_3_1_overview.dtl",
+"final_confrontation": "res://assets/narrative/final_confrontation.dtl",
+"generic_shift_start": "res://assets/narrative/generic_shift_start.dtl",
+"intro_sequence": "res://assets/narrative/intro_sequence.dtl",
 "scratch_test": "res://assets/narrative/scratch_test.dtl",
+"shift1_start": "res://assets/narrative/shift1_start.dtl",
+"shift2_start": "res://assets/narrative/shift2_start.dtl",
+"shift3_start": "res://assets/narrative/shift3_start.dtl",
 "spud_customs_full_narrative": "res://assets/narrative/spud_customs_full_narrative.dtl"
 }
 glossary/default_case_sensitive=true

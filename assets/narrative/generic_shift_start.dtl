@@ -1,0 +1,4 @@
+[background arg="res://assets/narrative/gameplay.png" fade="2.0"]
+join supervisor_russet [z_index="1"]
+supervisor_russet: <Your next applicant is waiting./Check those stamps carefully!/Look for signs of disease, tampering, or suspicious behavior./If a potato seems rotten, reject them. Spud's safety comes first./One wrong move could let in a bad spud.>
+leave supervisor_russet

@@ -1,0 +1,280 @@
+### final_confrontation.dtl
+# Chapter 3 - Closing narrative
+[background arg="res://assets/narrative/checkpoint_chaos.png" fade="2.0"]
+narrator: The Spud border is in complete chaos.
+narrator: Panicked potatoes flood the checkpoints, desperate to escape.
+narrator: The leaked documents have shattered citizens' trust in the government.
+narrator: Fear hangs heavy in the air, mixed with the acrid stench of industrial fry oil.
+
+join player_character [z_index="1"]
+[background arg="res://assets/narrative/border_chaos.png" fade="2.0"]
+player_character: [i]slipping through the throng, Sasha close behind[/i]
+player_character: We have to keep pushing forward! If we stop now, we'll never make it.
+player_character: [i]glancing nervously at wanted posters plastered on every surface[/i]
+player_character: The government may have branded us as traitors...but the people know.
+player_character: And they're hungry for more than lies and false comfort now.
+leave player_character
+
+[background arg="res://assets/narrative/supervisor_rage.png" fade="2.0"]
+join supervisor_russet [z_index="1"]
+supervisor_russet: [i]slamming fist on desk, papers flying everywhere[/i] This is an absolute disaster!
+supervisor_russet: The people are rioting in the streets, burning effigies of Root Reserve...
+supervisor_russet: And that traitor [i]spits your name[/i] is nowhere to be found!
+[i]Russet fumbles for his communicator, spitting curses[/i]
+supervisor_russet: This is Supervisor Russet. The situation is critical. Requesting immediate reinforcements!
+supervisor_russet: [i]hissing into device[/i] And [b]BRING ME THAT [color=red]TREACHEROUS[/color] CUSTOMS OFFICER![/b]
+leave supervisor_russet
+
+[background arg="res://assets/narrative/resistance_hideout.png" fade="2.0"]
+join sweet_potato_sasha [z_index="1"]
+[i]Sasha huddles with you and a small group of resistance members[/i]
+sweet_potato_sasha: They can't silence the truth any longer. The people are waking up!
+sweet_potato_sasha: [i]spreads out a tattered map[/i] But we can't stop now. We need to strike directly at the source.
+sweet_potato_sasha: [i]jabs a finger at a marked location[/i] The primary Root Reserve processing facility.
+sweet_potato_sasha: If we can infiltrate and broadcast evidence of their crimes...
+sweet_potato_sasha: It'll be the spark that ignites the revolution. Who's with me?
+leave sweet_potato_sasha
+
+join resistance_member_2 [z_index="1"]
+resistance_member_2: [i]spits on the ground[/i] <You're crazy, Sasha./This is suicide, Sasha./We'll never pull this off, Sasha.> That place is a fortress.
+resistance_member_2: And now we've got a former customs agent in our midst. [i]eyes you suspiciously[/i]
+resistance_member_2: How do we know they won't turn on us the second things get tough?
+set {resistance_trust} = "none"
+- "I understand your doubt, but I'm committed to this cause."
+	set {resistance_trust} = "diplomatic"
+- "I've already sacrificed everything. I won't back down now."
+	set {resistance_trust} = "committed"
+- "Judge me by my actions, not my past. I'm here to fight."
+	set {resistance_trust} = "defiant"
+
+if {resistance_trust} == "diplomatic":
+	join resistance_member_2 [z_index="1"]
+	resistance_member_2: [i]crosses arms[/i] Pretty words. But we've heard those before.
+	join sweet_potato_sasha [z_index="1"]
+	sweet_potato_sasha: They helped us get the documents. That's action, not words.
+	resistance_member_2: [i]grudgingly[/i] Fine. But we'll be watching.
+	leave resistance_member_2
+	leave sweet_potato_sasha
+elif {resistance_trust} == "committed":
+	join resistance_member_2 [z_index="1"]
+	resistance_member_2: [i]nods slowly[/i] True enough. Can't go back to being a loyal spud now.
+	resistance_member_2: Welcome to the resistance, comrade. Hope you're ready to get your hands dirty.
+	leave resistance_member_2
+else:
+	join resistance_member_2 [z_index="1"]
+	resistance_member_2: [i]barks a laugh[/i] Well, you've got spine, I'll give you that.
+	resistance_member_2: Alright then, show us what you've got, ex-customs.
+	resistance_member_2: Just remember - one wrong move...
+	leave resistance_member_2
+
+[i]Alarms blare as you breach the outer perimeter of the facility[/i]
+[background arg="res://assets/narrative/minister_idaho_monitor.png" fade="2.0"]
+join prime_minister_idaho [z_index="1"]
+prime_minister_idaho: [i]face appearing on a massive screen[/i] Well well, what do we have here?
+prime_minister_idaho: The traitor returns home... and they've brought the rebel scum with them.
+prime_minister_idaho: [i]leaning forward, eyes cold[/i] Did you really think you could stop the progress of Spud?
+prime_minister_idaho: Root Reserve is the lifeblood of this nation. The people need us... need ME.
+prime_minister_idaho: [i]sneering[/i] But fret not. You'll still serve Spud...
+prime_minister_idaho: <As fertilizer for the next crop/In the processing vats/In the Root Reserve formula> [i]screen goes black[/i]
+leave prime_minister_idaho
+
+join player_character [z_index="1"]
+player_character: [i]turning to Sasha and the others, eyes hard[/i] This ends tonight.
+player_character: The truth behind Root Reserve, Prime Minister Idaho's twisted vision...
+player_character: It all comes to light. No matter the cost.
+player_character: [i]readying your weapons[/i] For Spud!
+leave player_character
+
+set {ending_choice} = "none"
+[background arg="res://assets/narrative/potato_processing.png" fade="2.0"]
+join narrator [z_index="1"]
+narrator: You stand at the heart of the Root Reserve facility, the truth laid bare before you.
+narrator: The horrific machinery of oppression, the countless potatoes processed...
+[background arg="res://assets/narrative/processing_facility_interior.png" fade="2.0"]
+narrator: And Prime Minister Idaho, the mastermind behind it all, finally confronted.
+narrator: But the battle is not yet won. You must make a choice\:
+leave narrator
+
+join player_character [z_index="1"]
+[background arg="res://assets/narrative/idaho_bunker_hallway.png" fade="2.0"]
+player_character: [i]breathing heavily, Sasha and your allies at your side[/i]
+player_character: It's over, Idaho. Your secrets are exposed. Spud will never be the same.
+player_character: [i]raising your weapon[/i] But how this ends...that's up to you.
+- Negotiate a peaceful transition of power (Diplomatic)
+	set {ending_choice} = "diplomatic"
+	# Unlock Steam Achievement "Born Diplomat"
+- Demand Idaho's immediate surrender and arrest (Justice)
+	set {ending_choice} = "justice"
+	# Unlock Steam Achievement "Tater of Justice"
+- Enact vigilante justice for Idaho's crimes (Vengeance)
+	set {ending_choice} = "vengeance"
+	# Unlock Steam Achievement "Best Served Hot"
+- Focus on dismantling Root Reserve infrastructure (Dismantle)
+	set {ending_choice} = "dismantle"
+	# Unlock Steam Achievement "Down with the Tatriarchy"
+leave player_character
+
+# Ending Choice Section
+if {ending_choice} == "diplomatic":
+	[background arg="res://assets/narrative/confronting_idaho.png" fade="2.0"]
+	join player_character [z_index="1"]
+	player_character: [i]lowering your weapon slightly[/i] Idaho, it doesn't have to end in more bloodshed.
+	player_character: If you cooperate, help us transition Spud to a new way...
+	player_character: Maybe we can find a path forward. A way to heal, to rebuild.
+	player_character: [i]extends a hand cautiously[/i] What do you say? Will you work with us?
+	join prime_minister_idaho [z_index="1"]
+	prime_minister_idaho: [i]laughing bitterly[/i] Oh, you idealistic fool. You think this is a negotiation?
+	prime_minister_idaho: [i]smashes a button, alarms blaring[/i] The only thing I'll be giving you is a one-way trip to the fry vats!
+	[background arg="res://assets/narrative/guard_betrayal.png" fade="2.0"]
+	[i]Idaho's elite guard swarms in, weapons aimed at you[/i]
+	prime_minister_idaho: [i]smirking[/i] Looks like you'll be serving Spud after all...as a tasty side dish!
+	join sweet_potato_sasha [z_index="1"]
+	sweet_potato_sasha: I don't think so, Idaho.
+	sweet_potato_sasha: [b]Guards![/b] You saw the dossier, you know what he did to your families.
+	sweet_potato_sasha: You know what you have to do.
+	join prime_minister_idaho [z_index="1"]
+	prime_minister_idaho: [i]spits at Sasha as the guards drag him to the of the room[/i] Long live Root Reserve!
+	[i]A massive Russett clad in elite guard uniform steps forward with a potato gun and an icy grimace.[/i]
+	[i]A shot echoes through the chamber.[/i]
+	[i]screen fades to black[/i]
+	leave prime_minister_idaho
+
+elif {ending_choice} == "justice":
+	[background arg="res://assets/narrative/confronting_idaho.png" fade="2.0"]
+	join player_character [z_index="1"]
+	player_character: Idaho, in the name of the potato people of Spud, you're under arrest!
+	[background arg="res://assets/narrative/justice_hall.png" fade="2.0"]
+	player_character: [i]levels weapon directly at Idaho[/i] You'll face justice for your crimes.
+	player_character: No more lies, no more secrets. Today, the truth will have its day!
+	join sweet_potato_sasha [z_index="1"]
+	sweet_potato_sasha: [i]nods firmly at you[/i] It's over, Idaho. The people have spoken.
+	sweet_potato_sasha: [i]turns to assembled rebels and frightened workers[/i] We must dismantle this institution of horror.
+	sweet_potato_sasha: Brick by brick, spud by spud. And in its place, we'll build a new Spud.
+	sweet_potato_sasha: [i]places a hand on your shoulder[/i] One where every potato is valued. Where our roots are in the soil, not in suffering.
+	[i]cheers erupt as Idaho is taken into custody[/i]
+	leave sweet_potato_sasha
+
+elif {ending_choice} == "vengeance":
+	[background arg="res://assets/narrative/confronting_idaho.png" fade="2.0"]
+	join player_character [z_index="1"]
+	player_character: [i]eyes burning with rage[/i] There will be no deals, no mercy for you, Idaho.
+	player_character: For too long, you've ground this nation under your heel.
+	player_character: [i]cocks weapon[/i] A tyrant's justice is the only thing you deserve.
+	join prime_minister_idaho [z_index="1"]
+	prime_minister_idaho: [i]sneering even as he trembles[/i] You think you're better than me? You're nothing more than-
+	[i]gunshot echoes through the chamber[/i]
+	[background arg="res://assets/narrative/reckoning.png" fade="2.0"]
+	player_character: [i]standing over Idaho's crinkled body[/i] A reckoning. That's what I am.
+	player_character: [i]turning to the stunned onlookers[/i] For every potato sacrificed, every life ruined...we take back our future!
+	player_character: [i]rallying cry[/i] For Spud! For freedom!
+	[i]screen fades to black as cheers mix with sounds of destruction[/i]
+	leave player_character
+
+else:
+	[background arg="res://assets/narrative/confronting_idaho.png" fade="2.0"]
+	join player_character [z_index="1"]
+	player_character: [i]turns to Sasha and the rebels, ignoring Idaho's spluttering threats[/i]
+	player_character: Forget him. He's a symptom, not the disease.
+	player_character: [i]gesturing to the looming machinery[/i] This. This is what we need to destroy.
+	player_character: Tear it down. Rip out every root and stem of this monstrosity.
+	[background arg="res://assets/narrative/facility_destruction.png" fade="2.0"]
+	player_character: [i]facing the waiting workers[/i] It's time, brothers and sisters. Time to take back control.
+	join sweet_potato_sasha [z_index="1"]
+	sweet_potato_sasha: [i]raising a fist[/i] You heard them! Dismantle the-
+	[i]An explosion rocks the facility[/i]
+	player_character: [i]sheltering Sasha[/i] They've started the process! Quick, stop the-
+	[i]A series of blasts drowns out your words as the machinery starts to collapse[/i]
+	sweet_potato_sasha: [i]pulling you back[/i] We have to go! Now!
+	[i]You race out as the facility crumbles, Idaho's strangled cries fading behind you[/i]
+	leave sweet_potato_sasha
+	leave player_character
+
+[background arg="res://assets/narrative/uprising_montage.png" fade="2.0"]  
+join narrator [z_index="1"]
+narrator: The fall of Root Reserve sparks a wildfire of change across Spud.
+narrator: In the following days and weeks, the old regime crumbles.
+[background arg="res://assets/narrative/victory_sunrise.png" fade="2.0"]  
+narrator: Potatoes in every province rise up, embracing a new vision for their nation.
+narrator: One of transparency, of equality, of a future un-fried.
+narrator: But the road ahead is not without its challenges.
+narrator: Rebuilding a society from the ground up is no small potato task.
+leave narrator
+
+join player_character [z_index="1"]
+[background arg="res://assets/narrative/liberated_spud_city.png" fade="2.0"]
+player_character: [i]surveying the bustling crowds, you see a mixture of hope and uncertainty on every face[/i]
+player_character: We've won our freedom...but what do we do with it now?
+player_character: [i]turns to Sasha[/i] Overthrowing a tyrant was one thing. Building a new Spud...that's something else entirely.
+join sweet_potato_sasha [z_index="1"]
+sweet_potato_sasha: [i]nodding thoughtfully[/i] It won't be easy. There will be struggles, setbacks.
+sweet_potato_sasha: But look around you. [i]gestures to the scene unfolding[/i]
+[background arg="res://assets/narrative/reconstruction_montage.png" fade="2.0"]
+sweet_potato_sasha: Potatoes from every walk of life, coming together. Helping each other, learning from one another.
+sweet_potato_sasha: [i]smiles softly[/i] That's the heart of Spud. That's what we fought for.
+[background arg="res://assets/narrative/spud_city_skyline.png" fade="2.0"]
+join player_character [z_index="1"]
+set {romance_ending} = "none"
+- "We've got a long row to hoe, but we'll do it together."
+	set {romance_ending} = "committed"
+- "I just hope we're up to the task. Leading a revolution is one thing, but governing?"
+	set {romance_ending} = "uncertain"
+join sweet_potato_sasha [z_index="1"]
+[background arg="res://assets/narrative/epilogue_choice.png" fade="2.0"]
+if {romance_ending} == "committed":
+	join sweet_potato_sasha [z_index="1"]
+	sweet_potato_sasha: [i]intertwining her roots with yours[/i] Together. I like the sound of that.
+	sweet_potato_sasha: Who would've thought a customs checkpoint could lead to this?
+	sweet_potato_sasha: [i]softly[/i] To us?
+	leave sweet_potato_sasha
+else:
+	join sweet_potato_sasha [z_index="1"]
+	sweet_potato_sasha: [i]takes your hand firmly[/i] Hey, no one said it would be easy.
+	sweet_potato_sasha: But that's why we have each other. To share the burden.
+	sweet_potato_sasha: [i]smiles warmly[/i] And I wouldn't want anyone else by my side.
+	leave sweet_potato_sasha
+sweet_potato_sasha: As long as we stay true to our roots, to the ideals that brought us here...we'll find a way.
+leave sweet_potato_sasha
+
+[background arg="res://assets/narrative/new_spud_flag.png" fade="2.0"]
+join narrator [z_index="1"]
+narrator: And so, from the ashes of the old Spud, a new nation begins to take root.
+narrator: One where every potato, regardless of shape or size, has a place at the table.
+narrator: Where the fields are tilled with equity, and the harvest is shared by all.
+narrator: The road may be long, and the soil rocky...but the seeds of change have been planted.
+leave narrator
+
+[background arg="res://assets/narrative/epilogue_romance.png" fade="2.0"]
+join narrator [z_index="1"]
+narrator: And what of our hero, the erstwhile customs agent turned revolutionary?
+join player_character [z_index="1"]
+player_character: [i]gazing out over a verdant potato field, Sasha at your side[/i]
+player_character: I never could have imagined this path. From loyal Spud servant to rebel leader.
+player_character: [i]chuckling softly[/i] Life has a way of sprouting in unexpected directions.
+join sweet_potato_sasha [z_index="1"]
+sweet_potato_sasha: [i]slipping her hand into yours[/i] But look at what we've achieved. Look at the Spud we're building.
+sweet_potato_sasha: [i]eyes shining with pride and affection[/i] And I couldn't have done it without you.
+sweet_potato_sasha: My partner, my love...my fellow spud.
+join player_character [z_index="1"]
+player_character: We did this together, Sasha. You, me, and every brave potato who dared to dream.
+player_character: I was just following my heart...
+player_character: And it led me to you, and to a brighter future for Spud.
+player_character: The work isn't over. We've got a nation to nurture, and a love to grow.
+[background arg="res://assets/narrative/new_dawn_spud.png" fade="2.0"]
+player_character: But there's no one I'd rather have at my side.
+leave player_character
+
+
+join narrator
+narrator: And so our story ends, not in the boiling pot of oppression...
+[background arg="res://assets/narrative/new_dawn_spud_1.png" fade="2.0"]
+narrator: ...but in the nurturing soil of freedom, of hope, of potatoes united.
+narrator: The Reign of Root Reserve is over. The era of Spud Liberation has begun.
+narrator: And though the future is uncertain, one thing is clear.
+narrator: In the new Spud, every potato has a chance to grow, to thrive, to be all that they can be.
+[background arg="res://assets/narrative/credits.png" fade="2.0"]
+narrator: And that is a future worth fighting for.
+leave narrator
+[wait_input]
+The End
+[wait_input]
+# Load credits scene
