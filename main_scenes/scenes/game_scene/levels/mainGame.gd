@@ -44,6 +44,9 @@ var potato_count = 0
 var max_potatoes = 20
 @onready var spawn_timer = $SystemManagers/Timers/SpawnTimer
 
+#Narrative manager
+@onready var narrative_manager = $SystemManagers/NarrativeManager
+
 # Dragging system
 var draggable_sprites = []
 var dragged_sprite = null
@@ -155,33 +158,43 @@ func _ready():
 	
 	# add border runner system
 	border_runner_system = $BorderRunnerSystem
+	
+	Dialogic.timeline_ended.connect(_on_dialogue_finished)
+		
+	if Global.StoryState.NOT_STARTED:
+		# Disable controls during intro
+		disable_controls()
 
 func end_shift():
-	var summary = shift_summary.instantiate()
-	add_child(summary)
-	
-	# Calculate final time taken
-	shift_stats.time_taken = processing_time - current_timer
-	shift_stats.processing_time_left = current_timer
-	
-	var stats = {
-		"shift": Global.shift,
-		"time_taken": shift_stats.time_taken,
-		"score": Global.score,
-		"missiles_fired": shift_stats.missiles_fired,
-		"missiles_hit": shift_stats.missiles_hit,
-		"perfect_hits": shift_stats.perfect_hits,
-		"total_stamps": shift_stats.total_stamps,
-		"potatoes_approved": shift_stats.potatoes_approved,
-		"potatoes_rejected": shift_stats.potatoes_rejected,
-		"perfect_stamps": shift_stats.perfect_stamps,
-		"speed_bonus": shift_stats.get_speed_bonus(),
-		"accuracy_bonus": shift_stats.get_accuracy_bonus(),
-		"perfect_bonus": shift_stats.get_missile_bonus(),  # Changed from perfect_hit_bonus
-		"final_score": Global.score
-	}
-	
-	summary.show_summary(stats)
+	if quota_met >= quota_target:
+		narrative_manager.start_shift_dialogue()
+		disable_controls()
+	else:
+		var summary = shift_summary.instantiate()
+		add_child(summary)
+		
+		# Calculate final time taken 
+		shift_stats.time_taken = processing_time - current_timer
+		shift_stats.processing_time_left = current_timer
+		
+		var stats = {
+			"shift": Global.shift,
+			"time_taken": shift_stats.time_taken,
+			"score": Global.score,
+			"missiles_fired": shift_stats.missiles_fired,
+			"missiles_hit": shift_stats.missiles_hit,
+			"perfect_hits": shift_stats.perfect_hits,
+			"total_stamps": shift_stats.total_stamps,
+			"potatoes_approved": shift_stats.potatoes_approved,
+			"potatoes_rejected": shift_stats.potatoes_rejected,
+			"perfect_stamps": shift_stats.perfect_stamps,
+			"speed_bonus": shift_stats.get_speed_bonus(),
+			"accuracy_bonus": shift_stats.get_accuracy_bonus(),
+			"perfect_bonus": shift_stats.get_missile_bonus(),
+			"final_score": Global.score
+		}
+		
+		summary.show_summary(stats)
 
 
 func setup_megaphone_flash_timer():
@@ -1343,3 +1356,55 @@ func get_highest_z_index():
 func _exit_tree():
 	# Ensure cursor is restored when leaving the scene
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+
+func _on_dialogue_finished():
+	enable_controls()
+	
+	if Global.StoryState.COMPLETED:
+		# Game complete, show credits or return to menu
+		get_tree().change_scene_to_file("res://main_scenes/scenes/menus/credits/credits.tscn")
+	else:
+		# Show shift summary and continue game
+		var summary = shift_summary.instantiate()
+		add_child(summary)
+		
+		# Calculate final time taken 
+		shift_stats.time_taken = processing_time - current_timer
+		shift_stats.processing_time_left = current_timer
+		
+		var stats = {
+			"shift": Global.shift,
+			"time_taken": shift_stats.time_taken,
+			"score": Global.score,
+			"missiles_fired": shift_stats.missiles_fired,
+			"missiles_hit": shift_stats.missiles_hit,
+			"perfect_hits": shift_stats.perfect_hits,
+			"total_stamps": shift_stats.total_stamps,
+			"potatoes_approved": shift_stats.potatoes_approved,
+			"potatoes_rejected": shift_stats.potatoes_rejected,
+			"perfect_stamps": shift_stats.perfect_stamps,
+			"speed_bonus": shift_stats.get_speed_bonus(),
+			"accuracy_bonus": shift_stats.get_accuracy_bonus(),
+			"perfect_bonus": shift_stats.get_missile_bonus(),
+			"final_score": Global.score
+		}
+		
+		summary.show_summary(stats)
+
+func disable_controls():
+	# Disable player interaction during dialogue
+	set_process_input(false)
+	$Gameplay/Megaphone.visible = false
+	$Gameplay/InteractiveElements/ApprovalStamp.visible = false  
+	$Gameplay/InteractiveElements/RejectionStamp.visible = false
+	$Gameplay/InteractiveElements/Guide.visible = false
+	$Gameplay/InteractiveElements/Passport.visible = false
+
+func enable_controls():
+	# Re-enable controls after dialogue
+	set_process_input(true)
+	$Gameplay/Megaphone.visible = true
+	$Gameplay/InteractiveElements/ApprovalStamp.visible = true
+	$Gameplay/InteractiveElements/RejectionStamp.visible = true 
+	$Gameplay/InteractiveElements/Guide.visible = true
