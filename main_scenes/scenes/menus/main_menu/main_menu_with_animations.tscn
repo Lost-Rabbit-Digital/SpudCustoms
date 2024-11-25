@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://dxl4o6it672u4" path="res://assets/music/faded_ambient_defeat_main_menu.wav" id="3_xj7vs"]
 [ext_resource type="PackedScene" uid="uid://cvxrxaefrpjwk" path="res://main_scenes/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_xpvtk"]
 [ext_resource type="PackedScene" uid="uid://bdqcr5ikdw1hg" path="res://main_scenes/scenes/credits/credits.tscn" id="4_qfn6e"]
-[ext_resource type="LabelSettings" path="res://PixelHeader.tres" id="5_xj7vs"]
+[ext_resource type="LabelSettings" uid="uid://btxckswf5lkoy" path="res://PixelHeader.tres" id="5_xj7vs"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -355,6 +355,7 @@ graph_offset = Vector2(-180.277, 49)
 [node name="MainMenu" instance=ExtResource("1_146pe")]
 script = ExtResource("2_g647w")
 game_scene_path = "res://main_scenes/scenes/game_scene/game_ui.tscn"
+endless_scene_path = "res://main_scenes/scenes/game_scene/levels/endlessGame.tscn"
 options_packed_scene = ExtResource("3_xpvtk")
 credits_packed_scene = ExtResource("4_qfn6e")
 
@@ -405,9 +406,7 @@ vertical = false
 lock = true
 
 [node name="PlayButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0"]
-disabled = true
-text = "Story 
-[ Purchase game ]"
+text = "Story"
 
 [node name="EndlessButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1"]
 unique_name_in_owner = true
@@ -415,4 +414,4 @@ custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
 text = "Endless"
 
-[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/EndlessButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/EndlessButton" to="." method="_on_endless_button_pressed"]

@@ -3,6 +3,7 @@ extends Control
 
 ## Defines the path to the game scene. Hides the play button if empty.
 @export_file("*.tscn") var game_scene_path : String
+@export_file("endless.tscn") var endless_scene_path : String
 @export var options_packed_scene : PackedScene
 @export var credits_packed_scene : PackedScene
 
@@ -15,6 +16,10 @@ func load_scene(scene_path : String):
 
 func play_game():
 	SceneLoader.load_scene(game_scene_path)
+	
+func play_endless():
+	SceneLoader.load_scene(endless_scene_path)
+	
 
 func _open_sub_menu(menu : Control):
 	sub_menu = menu
@@ -76,6 +81,9 @@ func _ready():
 
 func _on_play_button_pressed():
 	play_game()
+	
+func _on_endless_button_pressed():
+	play_endless()
 
 func _on_options_button_pressed():
 	_open_sub_menu(options_scene)
