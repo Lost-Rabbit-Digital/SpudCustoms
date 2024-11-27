@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://1mf0og1h885p"]
 
-[ext_resource type="Script" path="res://BorderRunnerSystem.gd" id="1_8vf2f"]
-[ext_resource type="Script" path="res://ExplosionVFX.gd" id="2_1snt0"]
+[ext_resource type="Script" uid="uid://v5slsl45gpso" path="res://BorderRunnerSystem.gd" id="1_8vf2f"]
+[ext_resource type="Script" uid="uid://ciq3x8sbykb0h" path="res://ExplosionVFX.gd" id="2_1snt0"]
 [ext_resource type="AudioStream" uid="uid://b6wmneh3xy7l5" path="res://assets/missiles/Doom Braaam.wav" id="3_8vf2f"]
 [ext_resource type="AudioStream" uid="uid://cf65vwoewhpck" path="res://assets/missiles/Balloon Explosion A.wav" id="4_d84f0"]
 [ext_resource type="AudioStream" uid="uid://dl551k0d7e4ga" path="res://assets/missiles/button press and missile launch.wav" id="5_cevxq"]
 [ext_resource type="Texture2D" uid="uid://d0e44jundomwj" path="res://assets/missiles/missile_sprite.png" id="6_og870"]
-[ext_resource type="Script" path="res://CraterSystem.gd" id="7_1snt0"]
+[ext_resource type="Script" uid="uid://bvpwqkpdhd3kl" path="res://CraterSystem.gd" id="7_1snt0"]
 [ext_resource type="Texture2D" uid="uid://6tlcaks8nuv7" path="res://assets/missiles/smoke_particle.png" id="7_3vtb4"]
 
 [sub_resource type="Curve" id="Curve_3vtb4"]

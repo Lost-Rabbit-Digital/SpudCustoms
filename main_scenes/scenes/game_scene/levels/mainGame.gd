@@ -1287,7 +1287,6 @@ func move_potato_along_path(approval_status):
 		if randf() < 0.05:  # 5% chance to go runner mode
 			# Instead of using the runner path directly,
 			# trigger the border runner system
-			process_decision(false)
 			if border_runner_system:
 				# Pass the potato person to the border runner system
 				border_runner_system.force_start_runner(potato_person)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=48 format=3 uid="uid://civ7gq0ovv5cr"]
 
-[ext_resource type="Script" path="res://character_generator.gd" id="1_tmlea"]
+[ext_resource type="Script" uid="uid://6gjff1b3mrpd" path="res://character_generator.gd" id="1_tmlea"]
 [ext_resource type="Texture2D" uid="uid://by0mrj4743qj1" path="res://assets/potatoes/sprite_sheets/Russet_F_Body_64x21.png" id="2_8cm88"]
 [ext_resource type="Texture2D" uid="uid://kftw7vi3jsod" path="res://assets/potatoes/sprite_sheets/Russet_M_Body_64x21.png" id="2_elpw2"]
 [ext_resource type="Texture2D" uid="uid://cf1a45c6du0hh" path="res://assets/potatoes/sprite_sheets/Russet_F_Hair_64x50.png" id="2_tmlea"]

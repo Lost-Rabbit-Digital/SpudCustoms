@@ -16,6 +16,11 @@ Urgent Tasks: Bugs to fix before popularity
   [ ] - Difficulty selection UI after selecting endless mode
 General Tasks:
   Graphics:
+    [ ] - Add color tags to keywords in the laws, make them green, red, yellow, blue
+    [ ] - Enable colors on the Guide
+    [ ] - Add headers to the Guide for "INSTRUCTIONS" and "LAWS"
+    [ ] - "Change verbiage to 2 and under" on laws, currently says "(under 2 years)"
+    [ ] - Center alert_label text
     [ ] - Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
     [ ] - Add dialogue emotes randomly to the potatoes
     [ ] - Add a version counter
@@ -56,12 +61,14 @@ General Tasks:
     [ ] - Able to drag passport off interaction table, bound them to lower half of screen
     [ ] - Snap closed passport to position of mouse cursor to avoid bad offset
   Bugs:
-    [ ] - Potatoes continued to escape during the Shift Summary.
+    [ ] - If you accept a potato at the same time the timer runs out then the potato duplicates and you get both results
+    [ ] - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
+    [ ] - When a potato escapes it does not give you a strike
+    [ ] - When you correctly reject a potato it does not give you the 1,000 points
     [ ] - When potato escapes, if it does so mid click (such as clicking on the speaker or a passport), the missile fires at the place you clicked on the screen. Constrain it to the Area2D for targeting potatoes on the left side of the screen, you could simply check cursor status.
-    [ ] -  Spud runner attempts never stops. Alt tabbed out, paused, shift summary, no matter what, the spuds escape like clockwork.
-    [ ] -  Strikes from spud escapes did not add to the strike count, at least not consistently.
-    [ ] -  Escape key for menu stopped working after I alt tabbed a few times and completed the first "day". Not sure of cause on that one.
-    [ ] -  Score is sometimes presented as a float and sometimes as a integer. Not sure if intentional or just some minor bug from early project, but figured i would point it out.
+    [ ] - Strikes from spud escapes did not add to the strike count, at least not consistently.
+    [ ] - Escape key for menu stopped working after I alt tabbed a few times and completed the first "day". Not sure of cause on that one.
+    [ ] - Score is sometimes presented as a float and sometimes as a integer. Not sure if intentional or just some minor bug from early project, but figured i would point it out.
     [ ] - Check why date rules keep failing (make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
     [ ] - Fix missile getting stuck bug, store last position of mouse on potato escape. If the missile is in flight when the spud escapes off the road, the missile freezes and remains until the next escape attempt.
     [ ] - Update menus with new MODERN DOS font
@@ -70,16 +77,18 @@ General Tasks:
     [ ] - Don't allow the player to move the passport while the animation is playing for it to pass into the customs table
     [ ] - Stamps go over edge of passport
   Gameplay:
-    [ ] - Reduce chance of Spud running the border
     [ ] - Reduce lead time for missiles
     [ ] - Faster project or more centralized location for missile
     [ ] - Explain how to flip the pages on the document in the tutorial
     [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
     [ ] - Add flash indicator pointing at corner of first page 
+    [ ] - Spud runner attempts never stops. Alt tabbed out, paused, shift summary, no matter what, the spuds escape like clockwork.
     [ ] - Make the instructions an overlay which you could close
-    [ ] -  Score might not be resetting between rounds on leaderboard. Fairly sure mine just kept going up.
+    [ ] - Score might not be resetting between rounds on leaderboard. Fairly sure mine just kept going up.
+    [ ] - Potatoes continued to escape during the Shift Summary.
   Backend:
     [ ] - Save game and load game
+    [ ] - Store color tag hex codes for guide book in notes
 
 
 ## General Tasks
@@ -112,6 +121,7 @@ These are various goals which are out of scope for the current roadmap, but if p
 The tasks which have be completed and pushed to VCS.
 
 Steam Release 0.1.1:
+- Reduced chance of Spud running the border from 30% to 5%
 
 Steam Release 0.1.0:
 [o] - Custom cursor for hover, click, grab, drag
