@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://bqdirqkno2n36"]
+[gd_scene load_steps=67 format=3 uid="uid://bqdirqkno2n36"]
 
 [ext_resource type="Script" path="res://main_scenes/scenes/game_scene/levels/mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://assets/suspect_panel/suspect_panel.png" id="2_f25cg"]
@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
 [ext_resource type="Texture2D" uid="uid://fmqkliw6t33x" path="res://assets/suspect_panel/suspect_panel_front.png" id="10_foucb"]
 [ext_resource type="PackedScene" uid="uid://msix881opujh" path="res://StatsManager.tscn" id="10_jgtln"]
-[ext_resource type="PackedScene" uid="uid://bnbp4h8nco0v2" path="res://NarrativeManager.tscn" id="11_qn1sc"]
+[ext_resource type="PackedScene" path="res://NarrativeManager.tscn" id="11_qn1sc"]
 [ext_resource type="Texture2D" uid="uid://cwni5a4q3jj67" path="res://assets/suspect_panel/suspect_panel_top_bottom.png" id="12_n1tuu"]
 [ext_resource type="Texture2D" uid="uid://ceh27taly75na" path="res://assets/documents/passport-old.png" id="12_q7tid"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://assets/fonts/windows_command_prompt.ttf" id="13_wxn24"]
@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="29_rft0e"]
 [ext_resource type="Texture2D" uid="uid://cfkvlvqhnapxc" path="res://assets/documents/customs_guide/customs_guide_open_2.png" id="30_0fqrc"]
 [ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="31_c10l6"]
+[ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://dos_theme.tres" id="34_2f41l"]
 [ext_resource type="Script" path="res://guide.gd" id="35_uuf1y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sihlh"]
@@ -482,7 +483,8 @@ scale = Vector2(0.349, 0.349)
 texture = ExtResource("9_arv36")
 
 [node name="FlashAlert" type="Sprite2D" parent="Gameplay/Megaphone"]
-z_index = 5
+visible = false
+z_index = 8
 z_as_relative = false
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("10_5g2y2")
@@ -655,6 +657,7 @@ texture = ExtResource("22_3pqlk")
 [node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
 
 [node name="GuideNote" type="Label" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
+visible = false
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -668,15 +671,34 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
 theme_override_fonts/font = ExtResource("6_rd1c0")
 theme_override_font_sizes/font_size = 16
-text = "To begin, press the speaker on top of the customs office building.
-Grab the documents from the Potato and drag them to the main table.
-Then compare the information on the documents with the laws given.
-If there are any discrepencies, deny entry.
-After stamping the documents, hand them back to the Potato.
-"
+text = "[center]
+Click the speaker on top of the building to begin
+Grab the papers from the Spud and drag them to your desk
+Check if everything on the papers matches the rule book
+If something looks wrong then deny entry with the [color=red]red[/color] stamp
+If everything looks good then grant entry with the [color=green]green[/color] stamp
+Hand the papers back to the Spud
+[/center]"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
+offset_left = -150.0
+offset_top = -110.0
+offset_right = 150.0
+offset_bottom = 162.0
+theme = ExtResource("34_2f41l")
+theme_override_colors/default_color = Color(0.341176, 0.282353, 0.282353, 1)
+bbcode_enabled = true
+text = "[center]
+• Click the speaker on top of the building to begin
+• Grab the papers from the Spud and drag them to your desk
+• Check if everything on the papers matches the rule book
+• If something looks wrong then deny entry with the [color=#942525]red[/color] stamp
+• If everything looks good then grant entry with the [color=#2C7A1F]green[/color] stamp
+• Hand the papers back to the Spud
+[/center]"
 
 [node name="TurnRight" type="TextureButton" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
 offset_left = 117.0

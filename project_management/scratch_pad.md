@@ -1,85 +1,86 @@
 # Scratch Pad
 These are our goals, to-do tasks, and completed tasks.
 
-DEMO RELEASE GOALS: 2024-11-22
-  Urgent Tasks: Needed for Steam approval
-    [ ] - Potato stamp approval doesn't update score
-    [ ] - Don't set stamps to go invisible when quota reached in Endless mode
-    [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
-    [ ] - There is no continuing shift, after you reach quota you hit the shift summary and end the game
-    [ ] - Move shift summary to end of game, not end of shift, on quota reached restart, on strikes reached end game
-    [ ] - Sometimes the potatoes don't give you a passport
-    [ ] - Don't allow grab while passport is moving, toggle a is_currently_animated boolean to check when picking up
-    [ ] - Passport comes from random x/y, instead of down the slot
-  Tasks:
-    Graphics:
-      [ ] - Change "Runner Escaped" to capitals 
-      [ ] - "You have caused unnecessary suffering" is in the wrong format, should be large red text
-      [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
-      [ ] - Missile gets stuck if border runner leaves while airborne, keep track of last spot and send missile there
-      [ ] - Replace missile sprite
-      [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
-      [ ] - If the player has 0 points do not say "-500 points" when a potato escapes
-      [ ] - Display the score for longer, a few seconds, so the player can read it
-      [ ] - Rewrite laws to make sense, bad wording
-      [ ] - Faces and hair doesn't line up on potatoes
-      [ ] - You can see the potato come in from the right
-      [ ] - Fade in potatoes when they come into the customs office
-    Audio:
-      [ ] - No ambience or background music playing
-    Scoring:
-      [ ] - Randomly lose combo when doing potato border runner system
-      [ ] - A strike is not removed when you successfully murder a potato with an air-to-surface missile
-      [ ] - When a potato escapes by running a strike is not added
-      [ ] - If the player has 0 points do not remove 500 points when a potato escapes
-      [ ] - Points are not added when correctly allowing entry to potatoes
-      [ ] - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
-      [ ] - Went from 3 strikes to 7, border runners may add but not update strikes
-      [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
-      [ ] - Update stats on potato escape and missile kill
-      [ ] - Check and see whether strikes are actually removing
-      [ ] - Balance points (missiles, stamping, scanning)
-    Interaction:
-      [ ] - Lower delay between stamps
-      [ ] - Border runner system went off twice and cancelled the first one out
-      [ ] - Set default selection for main menu for keyboard control
-      [ ] - Expand area for perfect hit chance on border runner system
-      [ ] - Bound missile mini-game to area2d, check update_cursor for area2d mouse checking code
-      [ ] - Mouse has to be over passport to be able to stamp
-      [ ] - Able to drag stamps off interaction table, bound them to lower half of screen
-      [ ] - Able to drag passport off interaction table, bound them to lower half of screen
-      [ ] - Snap closed passport to position of mouse cursor to avoid bad offset
-  
-FULL RELEASE GOALS: 2024-11-27
-## To Be Completed
-These are tasks which must be completed before the submission to Steam deadline, November 24th.
-
-### Bugs
-[ ] - Check why date rules keep failing (make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
-[ ] - Change position so kill text flying up with the score update
-[ ] - Fix missile getting stuck bug, store last position of mouse on potato escape 
-[ ] - Update menus with new MODERN DOS font
-[ ] - Update ATTRIBUTION.md with MODERN DOS font
-[ ] - Lower z-index of crater below that of the potato_person runner
-[ ] - Don't allow the player to move the passport while the animation is playing for it to pass into the customs table
-[ ] - Stamps go over edge of passport
-
-### Urgent
-[ ] - Difficulty selection UI after selecting endless mode
-[ ] - Add dialogue emotes randomly to the potatoes
-[ ] - Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
-[ ] - Explain how to flip the pages on the document in the tutorial
-[ ] - Add flash arrow pointing from the left to the right indicator for megaphone
-[ ] - Add flash indicator pointing at corner of first page 
-[ ] - How to give visual feedback of controls to the player? 
-[ ] - Fix the pixel resolution of the text
-[ ] - "Change verbiage to 2 and under"
-[ ] - Make the instructions an overlay which you could close
-[ ] - Custom cursor for hover, click, grab, drag
-[ ] - Save game and load game
-[ ] - Make it clearer that the potato is running the border, add agency
-[ ] - UV Lamp mini-game
-
+FULL RELEASE TASKS: 2024-11-24 - 0.2.0
+Urgent Tasks: Bugs to fix before popularity
+  [ ] - Potato stamp approval doesn't update score
+  [ ] - Don't set stamps to go invisible when quota reached in Endless mode
+  [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
+  [ ] - There is no continuing shift, after you reach quota you hit the shift summary and end the game
+  [ ] - Move shift summary to end of game, not end of shift, on quota reached restart, on strikes reached end game
+  [ ] - Sometimes the potatoes don't give you a passport
+  [ ] - Don't allow grab while passport is moving, toggle a is_currently_animated boolean to check when picking up
+  [ ] - Passport comes from random x/y, instead of down the slot
+  [ ] - You can see the potato come in from the right
+  [ ] - If you deny/accept a potato and then that potato times out, it still checks the stamps
+  [ ] - Difficulty selection UI after selecting endless mode
+General Tasks:
+  Graphics:
+    [ ] - Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
+    [ ] - Add dialogue emotes randomly to the potatoes
+    [ ] - Add a version counter
+    [ ] - Change "Runner Escaped" to capitals 
+    [ ] - "You have caused unnecessary suffering" is in the wrong format, should be large red text
+    [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
+    [ ] - Missile gets stuck if border runner leaves while airborne, keep track of last spot and send missile there
+    [ ] - Replace missile sprite
+    [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
+    [ ] - If the player has 0 points do not say "-500 points" when a potato escapes
+    [ ] - Display the score for longer, a few seconds, so the player can read it
+    [ ] - Rewrite laws to make sense, bad wording
+    [ ] - Faces and hair doesn't line up on potatoes
+    [ ] - Fade in potatoes when they come into the customs office
+  Audio:
+    [ ] - No ambience or background music playing
+  Scoring:
+    [ ] - Randomly lose combo when doing potato border runner system
+    [ ] - A strike is not removed when you successfully murder a potato with an air-to-surface missile
+    [ ] - When a potato escapes by running a strike is not added
+    [ ] - If the player has 0 points do not remove 500 points when a potato escapes
+    [ ] - Points are not added when correctly allowing entry to potatoes
+    [ ] - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
+    [ ] - Went from 3 strikes to 7, border runners may add but not update strikes
+    [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
+    [ ] - Update stats on potato escape and missile kill
+    [ ] - Balance points (missiles, stamping, scanning)
+  Interaction:
+    [ ] - Lower delay between stamps
+    [ ] - Border runner system went off twice and cancelled the first one out
+    [ ] - Set default selection for main menu for keyboard control
+    [ ] - Expand area for perfect hit chance on border runner system
+    [ ] - Bound missile mini-game to area2d, check update_cursor for area2d mouse checking code
+    [ ] - Mouse has to be over passport to be able to stamp
+    [ ] - Able to drag stamps off interaction table, bound them to lower half of screen
+    [ ] - Able to drag passport off interaction table, bound them to lower half of screen
+    [ ] - Snap closed passport to position of mouse cursor to avoid bad offset
+  Bugs:
+    [ ] - If the missile is in flight when the spud escapes off the road, the missile freezes and remains until the next escape attempt.
+    [ ] - Potatoes continued to escape even during the Shift Summery.
+    [ ] - When potato escapes, if it does so mid click (such as clicking on the speaker or a passport), the missile fires at the place you clicked on the screen. Nuking their paperwork was ineffective, and required a long reload time.
+    [ ] -  Score might not be resetting between rounds on leaderboard. Fairly sure mine just kept going up.
+    [ ] -  Spud alarm never stops. Alt tabbed out, paused, shift summery, no matter what, the spuds escape like clockwork.
+    [ ] -  Strikes from spud escapes did not add to the strike count, at least not consistently.
+    [ ] -  Escape key for menu stopped working after I alt tabbed a few times and completed the first "day". Not sure of cause on that one.
+    [ ] -  Score is sometimes presented as a float and sometimes as a integer. Not sure if intentional or just some minor bug from early project, but figured i would point it out.
+    [ ] - Check why date rules keep failing (make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
+    [ ] - Change position so kill text flying up with the score update
+    [ ] - Fix missile getting stuck bug, store last position of mouse on potato escape 
+    [ ] - Update menus with new MODERN DOS font
+    [ ] - Update ATTRIBUTION.md with MODERN DOS font
+    [ ] - Lower z-index of crater below that of the potato_person runner
+    [ ] - Don't allow the player to move the passport while the animation is playing for it to pass into the customs table
+    [ ] - Stamps go over edge of passport
+  Gameplay:
+    [ ] - Reduce chance of Spud running the border
+    [ ] - Reduce lead time for missiles
+    [ ] - Faster project or more centralized location for missile
+    [ ] - Explain how to flip the pages on the document in the tutorial
+    [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
+    [ ] - Add flash indicator pointing at corner of first page 
+    [ ] - Make the instructions an overlay which you could close
+    [ ] - "Change verbiage to 2 and under" on rules
+  Backend:
+    [ ] - Save game and load game
 
 
 ## General Tasks
@@ -111,6 +112,10 @@ These are various goals which are out of scope for the current roadmap, but if p
 # Completed tasks list
 The tasks which have be completed and pushed to VCS.
 
+Steam Release 0.2.0:
+
+Steam Release 0.1.0:
+[o] - Custom cursor for hover, click, grab, drag
 [o] - The potato does not leave the customs office when the time runs out, set x/y
 [o] - Update "You made the right choice officer" and implement the green number score system instead
 [o] - Approval message is the wrong format, should be large green text
