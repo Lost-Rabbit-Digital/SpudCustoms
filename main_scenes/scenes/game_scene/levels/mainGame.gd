@@ -1284,7 +1284,7 @@ func move_potato_along_path(approval_status):
 		timed_out()
 	else:
 		# Increase chance of runner when rejected
-		if randf() < 0.30:  # 30% chance to go runner mode
+		if randf() < 0.05:  # 5% chance to go runner mode
 			# Instead of using the runner path directly,
 			# trigger the border runner system
 			process_decision(false)

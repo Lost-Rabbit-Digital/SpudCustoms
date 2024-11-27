@@ -1,6 +1,6 @@
 [gd_scene load_steps=67 format=3 uid="uid://bqdirqkno2n36"]
 
-[ext_resource type="Script" path="res://main_scenes/scenes/game_scene/levels/mainGame.gd" id="1_s4bva"]
+[ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://main_scenes/scenes/game_scene/levels/mainGame.gd" id="1_s4bva"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://assets/suspect_panel/suspect_panel.png" id="2_f25cg"]
 [ext_resource type="Texture2D" uid="uid://doml0udrwe6pe" path="res://assets/Background.png" id="2_rft0e"]
 [ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/level/customs_office.png" id="4_rd1c0"]
@@ -10,10 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_woji0"]
 [ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="9_arv36"]
 [ext_resource type="Texture2D" uid="uid://jjnnivgwpiub" path="res://assets/alerts/megaphone_alert_box.png" id="10_5g2y2"]
-[ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
+[ext_resource type="Script" uid="uid://mm8kba4qcarc" path="res://QueueManager.gd" id="10_a4p7n"]
 [ext_resource type="Texture2D" uid="uid://fmqkliw6t33x" path="res://assets/suspect_panel/suspect_panel_front.png" id="10_foucb"]
 [ext_resource type="PackedScene" uid="uid://msix881opujh" path="res://StatsManager.tscn" id="10_jgtln"]
-[ext_resource type="PackedScene" path="res://NarrativeManager.tscn" id="11_qn1sc"]
+[ext_resource type="PackedScene" uid="uid://bnbp4h8nco0v2" path="res://NarrativeManager.tscn" id="11_qn1sc"]
 [ext_resource type="Texture2D" uid="uid://cwni5a4q3jj67" path="res://assets/suspect_panel/suspect_panel_top_bottom.png" id="12_n1tuu"]
 [ext_resource type="Texture2D" uid="uid://ceh27taly75na" path="res://assets/documents/passport-old.png" id="12_q7tid"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://assets/fonts/windows_command_prompt.ttf" id="13_wxn24"]
@@ -33,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://cfkvlvqhnapxc" path="res://assets/documents/customs_guide/customs_guide_open_2.png" id="30_0fqrc"]
 [ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="31_c10l6"]
 [ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://dos_theme.tres" id="34_2f41l"]
-[ext_resource type="Script" path="res://guide.gd" id="35_uuf1y"]
+[ext_resource type="Script" uid="uid://bif3v7xddhuag" path="res://guide.gd" id="35_uuf1y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sihlh"]
 size = Vector2(756.5, 214)

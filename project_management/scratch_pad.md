@@ -1,7 +1,7 @@
 # Scratch Pad
 These are our goals, to-do tasks, and completed tasks.
 
-FULL RELEASE TASKS: 2024-11-24 - 0.2.0
+FULL RELEASE TASKS: 2024-11-24 - 0.1.1
 Urgent Tasks: Bugs to fix before popularity
   [ ] - Potato stamp approval doesn't update score
   [ ] - Don't set stamps to go invisible when quota reached in Endless mode
@@ -30,8 +30,10 @@ General Tasks:
     [ ] - Rewrite laws to make sense, bad wording
     [ ] - Faces and hair doesn't line up on potatoes
     [ ] - Fade in potatoes when they come into the customs office
+    [ ] - Update explosion
   Audio:
     [ ] - No ambience or background music playing
+    [ ] - Change position so kill text flying up with the score update
   Scoring:
     [ ] - Randomly lose combo when doing potato border runner system
     [ ] - A strike is not removed when you successfully murder a potato with an air-to-surface missile
@@ -54,17 +56,14 @@ General Tasks:
     [ ] - Able to drag passport off interaction table, bound them to lower half of screen
     [ ] - Snap closed passport to position of mouse cursor to avoid bad offset
   Bugs:
-    [ ] - If the missile is in flight when the spud escapes off the road, the missile freezes and remains until the next escape attempt.
-    [ ] - Potatoes continued to escape even during the Shift Summery.
-    [ ] - When potato escapes, if it does so mid click (such as clicking on the speaker or a passport), the missile fires at the place you clicked on the screen. Nuking their paperwork was ineffective, and required a long reload time.
-    [ ] -  Score might not be resetting between rounds on leaderboard. Fairly sure mine just kept going up.
-    [ ] -  Spud alarm never stops. Alt tabbed out, paused, shift summery, no matter what, the spuds escape like clockwork.
+    [ ] - Potatoes continued to escape during the Shift Summary.
+    [ ] - When potato escapes, if it does so mid click (such as clicking on the speaker or a passport), the missile fires at the place you clicked on the screen. Constrain it to the Area2D for targeting potatoes on the left side of the screen, you could simply check cursor status.
+    [ ] -  Spud runner attempts never stops. Alt tabbed out, paused, shift summary, no matter what, the spuds escape like clockwork.
     [ ] -  Strikes from spud escapes did not add to the strike count, at least not consistently.
     [ ] -  Escape key for menu stopped working after I alt tabbed a few times and completed the first "day". Not sure of cause on that one.
     [ ] -  Score is sometimes presented as a float and sometimes as a integer. Not sure if intentional or just some minor bug from early project, but figured i would point it out.
     [ ] - Check why date rules keep failing (make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
-    [ ] - Change position so kill text flying up with the score update
-    [ ] - Fix missile getting stuck bug, store last position of mouse on potato escape 
+    [ ] - Fix missile getting stuck bug, store last position of mouse on potato escape. If the missile is in flight when the spud escapes off the road, the missile freezes and remains until the next escape attempt.
     [ ] - Update menus with new MODERN DOS font
     [ ] - Update ATTRIBUTION.md with MODERN DOS font
     [ ] - Lower z-index of crater below that of the potato_person runner
@@ -78,7 +77,7 @@ General Tasks:
     [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
     [ ] - Add flash indicator pointing at corner of first page 
     [ ] - Make the instructions an overlay which you could close
-    [ ] - "Change verbiage to 2 and under" on rules
+    [ ] -  Score might not be resetting between rounds on leaderboard. Fairly sure mine just kept going up.
   Backend:
     [ ] - Save game and load game
 
@@ -112,7 +111,7 @@ These are various goals which are out of scope for the current roadmap, but if p
 # Completed tasks list
 The tasks which have be completed and pushed to VCS.
 
-Steam Release 0.2.0:
+Steam Release 0.1.1:
 
 Steam Release 0.1.0:
 [o] - Custom cursor for hover, click, grab, drag
