@@ -8,59 +8,55 @@ Urgent Tasks: Bugs to fix before popularity
   [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
   [ ] - There is no continuing shift, after you reach quota you hit the shift summary and end the game
   [ ] - Move shift summary to end of game, not end of shift, on quota reached restart, on strikes reached end game
-  [ ] - Sometimes the potatoes don't give you a passport
-  [ ] - Don't allow grab while passport is moving, toggle a is_currently_animated boolean to check when picking up
-  [ ] - Passport comes from random x/y, instead of down the slot
-  [ ] - You can see the potato come in from the right
-  [ ] - If you deny/accept a potato and then that potato times out, it still checks the stamps
   [ ] - Difficulty selection UI after selecting endless mode
 General Tasks:
   Graphics:
     [ ] - Add color tags to keywords in the laws, make them green, red, yellow, blue
     [ ] - Enable colors on the Guide
     [ ] - Add headers to the Guide for "INSTRUCTIONS" and "LAWS"
-    [ ] - "Change verbiage to 2 and under" on laws, currently says "(under 2 years)"
-    [ ] - Center alert_label text
     [ ] - Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
     [ ] - Add dialogue emotes randomly to the potatoes
     [ ] - Add a version counter
     [ ] - Change "Runner Escaped" to capitals 
-    [ ] - "You have caused unnecessary suffering" is in the wrong format, should be large red text
-    [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
-    [ ] - Missile gets stuck if border runner leaves while airborne, keep track of last spot and send missile there
     [ ] - Replace missile sprite
     [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
-    [ ] - If the player has 0 points do not say "-500 points" when a potato escapes
     [ ] - Display the score for longer, a few seconds, so the player can read it
-    [ ] - Rewrite laws to make sense, bad wording
-    [ ] - Faces and hair doesn't line up on potatoes
     [ ] - Fade in potatoes when they come into the customs office
     [ ] - Update explosion
   Audio:
     [ ] - No ambience or background music playing
     [ ] - Change position so kill text flying up with the score update
   Scoring:
-    [ ] - Randomly lose combo when doing potato border runner system
-    [ ] - A strike is not removed when you successfully murder a potato with an air-to-surface missile
-    [ ] - When a potato escapes by running a strike is not added
-    [ ] - If the player has 0 points do not remove 500 points when a potato escapes
-    [ ] - Points are not added when correctly allowing entry to potatoes
-    [ ] - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
-    [ ] - Went from 3 strikes to 7, border runners may add but not update strikes
-    [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
-    [ ] - Update stats on potato escape and missile kill
     [ ] - Balance points (missiles, stamping, scanning)
   Interaction:
     [ ] - Lower delay between stamps
-    [ ] - Border runner system went off twice and cancelled the first one out
     [ ] - Set default selection for main menu for keyboard control
     [ ] - Expand area for perfect hit chance on border runner system
-    [ ] - Bound missile mini-game to area2d, check update_cursor for area2d mouse checking code
+  Bugs:
+    [ ] - If you deny/accept a potato and then that potato times out, it still checks the stamps
+    [ ] - Passport comes from random x/y, instead of down the slot
+    [ ] - Sometimes the potatoes don't give you a passport
+    [ ] - Don't allow grab while passport is moving, toggle a is_currently_animated boolean to check when picking up
+    [ ] - Center alert_label text
+    [ ] - "Change verbiage to 2 and under" on laws, currently says "(under 2 years)"
+    [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
+    [ ] - Faces and hair doesn't line up on potatoes
+    [ ] - Rewrite laws to make sense, bad wording
+    [ ] - "You have caused unnecessary suffering" is in the wrong format, should be large red text
+    [ ] - Update stats on potato escape and missile kill
+    [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
+    [ ] - Went from 3 strikes to 7, border runners may add but not update strikes
+    [ ] - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
+    [ ] - Points are not added when correctly allowing entry to potatoes
+    [ ] - If the player has 0 points do not remove 500 points when a potato escapes
+    [ ] - When a potato escapes by running a strike is not added
+    [ ] - A strike is not removed when you successfully murder a potato with an air-to-surface missile
+    [ ] - Randomly lose combo when doing potato border runner system
     [ ] - Mouse has to be over passport to be able to stamp
-    [ ] - Able to drag stamps off interaction table, bound them to lower half of screen
     [ ] - Able to drag passport off interaction table, bound them to lower half of screen
     [ ] - Snap closed passport to position of mouse cursor to avoid bad offset
-  Bugs:
+    [ ] - Border runner system went off twice and cancelled the first one out
+    [ ] - Able to drag stamps off interaction table, bound them to lower half of screen
     [ ] - If you accept a potato at the same time the timer runs out then the potato duplicates and you get both results
     [ ] - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
     [ ] - When a potato escapes it does not give you a strike
@@ -122,6 +118,8 @@ The tasks which have be completed and pushed to VCS.
 
 Steam Release 0.1.1:
 - Reduced chance of Spud running the border from 30% to 5%
+- You can no longer see the Spud when it enters the office from the right
+- Rounded edges of UI elements
 
 Steam Release 0.1.0:
 [o] - Custom cursor for hover, click, grab, drag

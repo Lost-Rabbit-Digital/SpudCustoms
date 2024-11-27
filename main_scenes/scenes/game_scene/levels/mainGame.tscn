@@ -266,7 +266,7 @@ texture = ExtResource("18_jl4i3")
 [node name="InteractableItemsWorldBackground" type="Sprite2D" parent="UI"]
 z_index = 5
 z_as_relative = false
-position = Vector2(632, 358)
+position = Vector2(640, 360)
 texture = ExtResource("7_woji0")
 
 [node name="Labels" type="Control" parent="UI"]
