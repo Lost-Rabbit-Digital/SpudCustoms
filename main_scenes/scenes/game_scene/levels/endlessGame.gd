@@ -60,6 +60,8 @@ var selected_stamp: Node = null  # Tracks which stamp is currently selected
 
 # Passport dragging system
 var passport: Sprite2D
+var passport_spawn_point_begin: Node2D
+var passport_spawn_point_end: Node2D
 var inspection_table: Sprite2D
 var suspect_panel: Sprite2D
 var suspect_panel_front: Sprite2D
@@ -141,6 +143,8 @@ func _ready():
 		update_quota_display()
 	# Get references to the new nodes
 	passport = $Gameplay/InteractiveElements/Passport
+	passport_spawn_point_begin = $Gameplay/InteractiveElements/PassportSpawnPoints/BeginPoint
+	passport_spawn_point_end = $Gameplay/InteractiveElements/PassportSpawnPoints/EndPoint
 	guide = $Gameplay/InteractiveElements/Guide
 	inspection_table = $Gameplay/InspectionTable
 	suspect_panel = $Gameplay/SuspectPanel
@@ -437,7 +441,6 @@ func megaphone_clicked():
 		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.texture = preload("res://assets/megaphone/megaphone_dialogue_box_1.png")
 		is_potato_in_office = true
 		megaphone.visible = true
-		passport.visible = false
 		current_potato_info = generate_potato_info()
 		
 		# Now randomize the character when they actually enter the office
@@ -482,27 +485,26 @@ func move_potato_to_office(potato_person):
 	print("Started animate mugshot and passport tween animation")
 	
 func animate_mugshot_and_passport():
-	passport = $Gameplay/InteractiveElements/Passport
 	print("Animating mugshot and passport")
 	update_potato_info_display()
 
 	# Reset positions and visibility
 	mugshot_generator.position.x = suspect_panel.position.x + suspect_panel_front.texture.get_width()
 	passport.visible = false
-	passport.position = Vector2(suspect_panel.position.x, suspect_panel.position.y)
-	close_passport_action()
+	passport.z_index = 1
+	passport.position = Vector2(passport_spawn_point_begin.position.x, passport_spawn_point_begin.position.y)
 
 	var tween = create_tween()
 	tween.set_parallel(true)
 
 	# Animate potato mugshot
 	tween.tween_property(mugshot_generator, "position:x", suspect_panel.position.x, 1)
-	tween.tween_property(mugshot_generator, "modulate:a", 1, 2)
-	tween.tween_property(passport, "modulate:a", 1, 2)
+	tween.tween_property(mugshot_generator, "modulate:a", 1, 1)
 	# Animate passport
+	tween.tween_property(passport, "modulate:a", 1, 2)
 	tween.tween_property(passport, "visible", true, 0).set_delay(1)
-	tween.tween_property(passport, "position:y", suspect_panel.position.y + suspect_panel_front.texture.get_height() / 5, 1).set_delay(1)
-	tween.tween_property(passport, "z_index", 3, 0).set_delay(2)
+	tween.tween_property(passport, "position:y", passport_spawn_point_end.position.y, 1).set_delay(2)
+	tween.tween_property(passport, "z_index", 5, 0).set_delay(3)
 
 	tween.chain().tween_callback(func(): print("Finished animating mugshot and passport"))
 	
@@ -1271,7 +1273,7 @@ func move_potato_along_path(approval_status):
 		timed_out()
 	else:
 		# Increase chance of runner when rejected
-		if randf() < 0.30:  # 30% chance to go runner mode
+		if randf() < 0.05:  # 30% chance to go runner mode
 			# Instead of using the runner path directly,
 			# trigger the border runner system
 			process_decision(false)

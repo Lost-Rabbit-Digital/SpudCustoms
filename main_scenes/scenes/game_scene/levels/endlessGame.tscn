@@ -1,6 +1,6 @@
 [gd_scene load_steps=65 format=3 uid="uid://bdknelqd4ojod"]
 
-[ext_resource type="Script" path="res://main_scenes/scenes/game_scene/levels/endlessGame.gd" id="1_s8p0h"]
+[ext_resource type="Script" uid="uid://bak2ox7wh15te" path="res://main_scenes/scenes/game_scene/levels/endlessGame.gd" id="1_s8p0h"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="2_udo16"]
 [ext_resource type="Texture2D" uid="uid://doml0udrwe6pe" path="res://assets/Background.png" id="3_3evfx"]
 [ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/level/customs_office.png" id="4_qqvh6"]
@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="6_duxyb"]
 [ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_m0l6d"]
 [ext_resource type="FontVariation" uid="uid://t3ii3pbmg2bo" path="res://assets/fonts/Modern_DOS_Font_Variation.tres" id="8_0m27g"]
-[ext_resource type="Script" path="res://QueueManager.gd" id="9_l36ds"]
-[ext_resource type="PackedScene" uid="uid://msix881opujh" path="res://StatsManager.tscn" id="10_q0hnx"]
+[ext_resource type="Script" uid="uid://mm8kba4qcarc" path="res://QueueManager.gd" id="9_l36ds"]
+[ext_resource type="PackedScene" path="res://StatsManager.tscn" id="10_q0hnx"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="11_jscux"]
 [ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="12_qvvnb"]
 [ext_resource type="Texture2D" uid="uid://jjnnivgwpiub" path="res://assets/alerts/megaphone_alert_box.png" id="13_16jsb"]
@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://b2icltv7xkk6j" path="res://assets/level/CustomsDesk.png" id="20_evuh2"]
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://prototyping/random_character_creation/character_generator.tscn" id="21_ty05w"]
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="22_oyjtf"]
-[ext_resource type="Texture2D" uid="uid://ceh27taly75na" path="res://assets/documents/passport-old.png" id="23_4ksuf"]
+[ext_resource type="Texture2D" uid="uid://y3iyyicwxtsl" path="res://assets/documents/closed_passport_small/closed_passport_small.png" id="23_s8p0h"]
 [ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://give_prompt_dialogue.png" id="24_hc26c"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://assets/fonts/windows_command_prompt.ttf" id="25_ds7r6"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="26_y5k1q"]
@@ -30,7 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://c0dbfc2uut8qn" path="res://assets/stamps/stamp_shadow.png" id="28_wujuw"]
 [ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="29_wkktu"]
 [ext_resource type="Texture2D" uid="uid://cfkvlvqhnapxc" path="res://assets/documents/customs_guide/customs_guide_open_2.png" id="30_6ppju"]
-[ext_resource type="Script" path="res://guide.gd" id="31_6ou4t"]
+[ext_resource type="Script" uid="uid://bif3v7xddhuag" path="res://guide.gd" id="31_6ou4t"]
 [ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://assets/alerts/guide_alert_box.png" id="32_s0m4u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sihlh"]
@@ -262,9 +262,9 @@ position = Vector2(640, 360)
 texture = ExtResource("6_duxyb")
 
 [node name="InteractableItemsWorldBackground" type="Sprite2D" parent="UI"]
-z_index = 5
+z_index = 4
 z_as_relative = false
-position = Vector2(632, 358)
+position = Vector2(640, 360)
 texture = ExtResource("7_m0l6d")
 
 [node name="Labels" type="Control" parent="UI"]
@@ -471,7 +471,7 @@ position = Vector2(1074, 472)
 scale = Vector2(1.05816, 1.06849)
 
 [node name="SuspectPanelTop" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_index = 2
+z_index = 4
 z_as_relative = false
 texture = ExtResource("14_0kkt0")
 
@@ -495,7 +495,7 @@ z_as_relative = false
 texture = ExtResource("18_rpdh1")
 
 [node name="SuspectPanelDocumentSlot" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_index = 3
+z_index = 4
 z_as_relative = false
 position = Vector2(0, 2.4)
 texture = ExtResource("19_gr8eb")
@@ -506,7 +506,9 @@ scale = Vector2(2.64484, 2.59444)
 texture = ExtResource("20_evuh2")
 
 [node name="MugshotPhotoGenerator" parent="Gameplay" instance=ExtResource("21_ty05w")]
-position = Vector2(1405, 415)
+z_index = 2
+z_as_relative = false
+position = Vector2(1361, 388)
 scale = Vector2(2.5, 2.5)
 
 [node name="PotatoMugshotShadow" type="Sprite2D" parent="Gameplay/MugshotPhotoGenerator"]
@@ -522,11 +524,19 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="PassportSpawnPoints" type="Node2D" parent="Gameplay/InteractiveElements"]
+
+[node name="BeginPoint" type="Node2D" parent="Gameplay/InteractiveElements/PassportSpawnPoints"]
+position = Vector2(1079, 441)
+
+[node name="EndPoint" type="Node2D" parent="Gameplay/InteractiveElements/PassportSpawnPoints"]
+position = Vector2(1079, 584)
+
 [node name="Passport" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-z_index = 2
+z_index = 1
 z_as_relative = false
-position = Vector2(1730, 426)
-texture = ExtResource("23_4ksuf")
+position = Vector2(80, -67)
+texture = ExtResource("23_s8p0h")
 
 [node name="ClosedPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
 visible = false
@@ -544,6 +554,7 @@ scale = Vector2(2.42121, 2.42121)
 texture = ExtResource("24_hc26c")
 
 [node name="OpenPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
+visible = false
 
 [node name="PassportPhotoGenerator" parent="Gameplay/InteractiveElements/Passport/OpenPassport" instance=ExtResource("21_ty05w")]
 z_index = 2
@@ -615,7 +626,7 @@ texture = ExtResource("28_wujuw")
 [node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
 z_index = 2
 z_as_relative = false
-position = Vector2(470, 458)
+position = Vector2(547, 438)
 texture = ExtResource("30_6ppju")
 script = ExtResource("31_6ou4t")
 main_node = NodePath("../../..")
@@ -637,9 +648,9 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -147.0
+offset_left = -148.0
 offset_top = -106.0
-offset_right = 146.0
+offset_right = 145.0
 offset_bottom = 109.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -837,8 +848,8 @@ z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/GuideFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]
