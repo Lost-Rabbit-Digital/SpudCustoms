@@ -6,6 +6,8 @@ var final_score = 0
 var quota_met = 0
 var build_type = "Demo Release"
 var difficulty_level = "Normal" # Can be "Easy", "Normal", or "Expert"
+var strikes = 0
+var max_strikes = 4
 
 # Add story state enum
 enum StoryState {
@@ -266,3 +268,47 @@ func get_story_state() -> int:
 func set_story_state(new_state: int):
 	current_story_state = new_state
 	save_game_state() # Add story state to existing save system
+
+
+### HELPER FUNCTIONS
+
+## Gameover scene transition
+func go_to_game_over():
+	# Store the score in a global script or autoload
+	Global.final_score = Global.score
+	print("transition to game over scene")
+	#$Gameplay/InteractiveElements/ApprovalStamp.visible = false
+	#$Gameplay/InteractiveElements/RejectionStamp.visible = false
+	#print("ALERT: go_to_game_over() has been disabled")
+	get_tree().change_scene_to_file("res://ShiftSummaryScreen.tscn")
+	
+func clear_alert_after_delay(alert_label, alert_timer):
+	alert_timer.start()
+	# Delay is the "wait_time" property on the $SystemManagers/Timers/AlertTimer
+	await alert_timer.timeout
+	# Hide the alert
+	alert_label.visible = false
+	# Set to placeholder text for debugging
+	alert_label.text = "PLACEHOLDER ALERT TEXT"
+	# Set to a noticable color for debugging
+	alert_label.add_theme_color_override("font_color", Color.BLUE)
+
+func display_red_alert(alert_label, alert_timer, text):
+	# Display the alert
+	alert_label.visible = true
+	# Update the text
+	alert_label.text = text
+	# Set desired color
+	alert_label.add_theme_color_override("font_color", Color.RED)
+	# Hide the alert after a few seconds
+	clear_alert_after_delay(alert_label, alert_timer)
+	
+func display_green_alert(alert_label, alert_timer, text):
+	# Display the alert
+	alert_label.visible = true
+	# Update the text
+	alert_label.text = text
+	# Set desired color
+	alert_label.add_theme_color_override("font_color", Color.GREEN)
+	# Hide the alert after a few seconds
+	clear_alert_after_delay(alert_label, alert_timer)

@@ -4,3 +4,6 @@
 
 [resource]
 base_font = ExtResource("1_ter6v")
+opentype_features = {
+1667329140: 0
+}

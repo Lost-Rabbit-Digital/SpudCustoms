@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://bdknelqd4ojod"]
+[gd_scene load_steps=63 format=3 uid="uid://bdknelqd4ojod"]
 
 [ext_resource type="Script" uid="uid://bak2ox7wh15te" path="res://main_scenes/scenes/game_scene/levels/endlessGame.gd" id="1_s8p0h"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="2_udo16"]
@@ -9,10 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_m0l6d"]
 [ext_resource type="FontVariation" uid="uid://t3ii3pbmg2bo" path="res://assets/fonts/Modern_DOS_Font_Variation.tres" id="8_0m27g"]
 [ext_resource type="Script" uid="uid://mm8kba4qcarc" path="res://QueueManager.gd" id="9_l36ds"]
-[ext_resource type="PackedScene" path="res://StatsManager.tscn" id="10_q0hnx"]
+[ext_resource type="PackedScene" uid="uid://msix881opujh" path="res://StatsManager.tscn" id="10_q0hnx"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="11_jscux"]
 [ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="12_qvvnb"]
-[ext_resource type="Texture2D" uid="uid://jjnnivgwpiub" path="res://assets/alerts/megaphone_alert_box.png" id="13_16jsb"]
 [ext_resource type="Texture2D" uid="uid://fmqkliw6t33x" path="res://assets/suspect_panel/suspect_panel_front.png" id="14_0kkt0"]
 [ext_resource type="Texture2D" uid="uid://cwni5a4q3jj67" path="res://assets/suspect_panel/suspect_panel_top_bottom.png" id="15_6pgrm"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://assets/suspect_panel/suspect_panel.png" id="16_mbr7l"]
@@ -31,7 +30,6 @@
 [ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="29_wkktu"]
 [ext_resource type="Texture2D" uid="uid://cfkvlvqhnapxc" path="res://assets/documents/customs_guide/customs_guide_open_2.png" id="30_6ppju"]
 [ext_resource type="Script" uid="uid://bif3v7xddhuag" path="res://guide.gd" id="31_6ou4t"]
-[ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://assets/alerts/guide_alert_box.png" id="32_s0m4u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sihlh"]
 size = Vector2(756.5, 214)
@@ -217,12 +215,13 @@ point_count = 24
 [node name="Root" type="Node2D"]
 script = ExtResource("1_s8p0h")
 
-[node name="BorderRunnerSystem" parent="." node_paths=PackedStringArray("root_node", "queue_manager", "score_label", "alert_label") instance=ExtResource("2_udo16")]
+[node name="BorderRunnerSystem" parent="." node_paths=PackedStringArray("queue_manager", "score_label", "strike_label", "alert_label", "alert_timer") instance=ExtResource("2_udo16")]
 position = Vector2(3, 0)
-root_node = NodePath("..")
 queue_manager = NodePath("../SystemManagers/QueueManager")
 score_label = NodePath("../UI/Labels/ScoreLabel")
-alert_label = NodePath("../UI/Labels/AlertLabel")
+strike_label = NodePath("../UI/Labels/StrikesLabel")
+alert_label = NodePath("../UI/Labels/MarginContainer/AlertLabel")
+alert_timer = NodePath("../SystemManagers/Timers/AlertTimer")
 runner_chance = 0.025
 
 [node name="Area2D" type="Area2D" parent="BorderRunnerSystem"]
@@ -379,19 +378,6 @@ theme_override_fonts/font = ExtResource("8_0m27g")
 theme_override_font_sizes/font_size = 16
 autowrap_mode = 3
 
-[node name="AlertLabel" type="Label" parent="UI/Labels"]
-z_index = 15
-layout_mode = 0
-offset_left = 489.0
-offset_top = 254.0
-offset_right = 815.0
-offset_bottom = 288.0
-theme_override_colors/font_color = Color(1, 0.00392157, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("8_0m27g")
-theme_override_font_sizes/font_size = 24
-
 [node name="ScoreLabel" type="Label" parent="UI/Labels"]
 z_index = 2
 z_as_relative = false
@@ -411,6 +397,29 @@ theme_override_font_sizes/font_size = 32
 text = "Score: 9001"
 vertical_alignment = 1
 
+[node name="MarginContainer" type="MarginContainer" parent="UI/Labels"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1240.0
+offset_bottom = 680.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AlertLabel" type="Label" parent="UI/Labels/MarginContainer"]
+z_index = 15
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.00392157, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("8_0m27g")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="SystemManagers" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -422,12 +431,13 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="MegaphoneFlashTimer" type="Timer" parent="SystemManagers/Timers"]
+metadata/_edit_use_anchors_ = true
 
 [node name="SpawnTimer" type="Timer" parent="SystemManagers/Timers"]
 
-[node name="GuideFlashTimer" type="Timer" parent="SystemManagers/Timers"]
+[node name="AlertTimer" type="Timer" parent="SystemManagers/Timers"]
+wait_time = 2.0
+one_shot = true
 
 [node name="AudioManager" type="Control" parent="SystemManagers"]
 anchors_preset = 0
@@ -458,12 +468,6 @@ visible = false
 position = Vector2(33.8086, -22.8106)
 scale = Vector2(0.349, 0.349)
 texture = ExtResource("12_qvvnb")
-
-[node name="FlashAlert" type="Sprite2D" parent="Gameplay/Megaphone"]
-z_index = 5
-z_as_relative = false
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("13_16jsb")
 
 [node name="SuspectPanel" type="Sprite2D" parent="Gameplay"]
 z_index = 1
@@ -634,12 +638,6 @@ main_node = NodePath("../../..")
 [node name="ClosedGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
 visible = false
 z_as_relative = false
-
-[node name="GuideAlertBox" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide/ClosedGuide"]
-visible = false
-z_index = 4
-z_as_relative = false
-texture = ExtResource("32_s0m4u")
 
 [node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
 
@@ -847,9 +845,7 @@ z_index = 7
 z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
-[connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/GuideFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]

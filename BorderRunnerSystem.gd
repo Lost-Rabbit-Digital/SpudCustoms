@@ -11,14 +11,15 @@ class_name BorderRunnerSystem
 @export var crater_spawn_on_click = false
 
 @export_group("System References")
-## Main root node of the game scene
-@export var root_node: Node2D
 ## Manager for handling the potato queue
 @export var queue_manager: Node2D
 ## Label used to display the current score
 @export var score_label: Label
+## Label used to display strikes
+@export var strike_label: Label
 ## Label used to display alerts and notifications to the player
 @export var alert_label: Label
+@export var alert_timer: Timer
 
 @export_group("Runner System")
 @export_subgroup("Spawn Settings")
@@ -181,12 +182,7 @@ func start_runner(potato):
 	
 	# Play alarm and show alert
 	alarm_sound.play()
-	alert_label.visible = true
-	alert_label.text = "BORDER RUNNER DETECTED!\nClick to launch missile!"
-	alert_label.add_theme_color_override("font_color", Color.RED)
-	
-	var timer = get_tree().create_timer(2.0)
-	timer.timeout.connect(Callable(self, "clear_alert"))
+	Global.display_red_alert(alert_label, alert_timer, "BORDER RUNNER DETECTED!\nClick to launch missile!")
 	
 	# Get all available runner paths
 	var paths_node = $"../Gameplay/Paths/RunnerPaths"
@@ -228,12 +224,7 @@ func force_start_runner(potato):
 	
 	# Play alarm and show alert
 	alarm_sound.play()
-	alert_label.visible = true
-	alert_label.text = "BORDER RUNNER DETECTED!\nClick to launch missile!"
-	alert_label.add_theme_color_override("font_color", Color.RED)
-	
-	var timer = get_tree().create_timer(2.0)
-	timer.timeout.connect(Callable(self, "clear_alert"))
+	Global.display_red_alert(alert_label, alert_timer, "BORDER RUNNER DETECTED!\nClick to launch missile!")
 	
 	# Get all available runner paths
 	var paths_node = $"../Gameplay/Paths/RunnerPaths"
@@ -286,25 +277,38 @@ func runner_escaped():
 		return
 		
 	print("Runner has escaped!")
-	runner_streak = 0
-	root_node.strikes += 1
-	
-	# Apply score penalty
-	root_node.score = max(0, root_node.score - escape_penalty)  # Prevent negative score
+	# Reset the runner streak
+	runner_streak = 0 
+
+	# Store original score to check if points were deducted
+	var original_score = Global.score
+	var points_to_remove = min(escape_penalty, Global.score)  # Only remove what's available
+
+	# Apply score penalty and prevent negative score
+	Global.score = max(0, Global.score - points_to_remove)
 	score_label.text = "Score: {total_points}".format({
-		"total_points": root_node.score
+		"total_points": Global.score
 	})
-	
+
 	# Update alert to show penalty
-	alert_label.visible = true
-	alert_label.text = "Runner escaped!\nStrike added!\n-{penalty} points!".format({
-		"penalty": escape_penalty
-	})
-	alert_label.add_theme_color_override("font_color", Color.RED)
+	if points_to_remove == 0:
+		# No points were deducted
+		Global.display_red_alert(alert_label, alert_timer, "Runner escaped!\nStrike added!")
+	else:
+		# Points were deducted, show the penalty
+		Global.display_red_alert(alert_label, alert_timer, "Runner escaped!\nStrike added!\n-{penalty} points!".format({
+			"penalty": points_to_remove
+		}))
+			
+	print("Before strike: " + str(Global.strikes))
+	# Add one strike to the total strikes stored in the root node of the scene
+	Global.strikes += 1
+	if Global.strikes >= Global.max_strikes:
+		Global.go_to_game_over()
+	print("After strike: " + str(Global.strikes))
 	
-	var timer = get_tree().create_timer(2.0)
-	timer.timeout.connect(Callable(self, "clear_alert"))
-	
+	strike_label.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
+
 	clean_up_runner()
 
 func _input(event):
@@ -434,26 +438,27 @@ func handle_successful_hit():
 			"streak": streak_points
 		})
 	
+	# Add points
+	Global.score += points_earned
+	score_label.text = "Score: {total_points}".format({
+		"total_points": Global.score
+	})
+	print("Before if: " + str(Global.strikes))
+	
 	# Remove a strike if any present
-	if root_node.strikes > 0:
-		root_node.strikes -= 1
+	if Global.strikes > 0:
+		print("Before -: " + str(Global.strikes))
+		Global.strikes -= 1 
+		print("After if: " + str(Global.strikes))
 		bonus_text += "Strike removed!\n"
 	
-	# Add points
-	root_node.score += points_earned
-	score_label.text = "Score: {total_points}".format({
-		"total_points": root_node.score
-	})
-
-	# Update display
-	alert_label.visible = true
-	alert_label.text = "{bonus} +{points} points!".format({
+	Global.display_green_alert(alert_label, alert_timer, "{bonus} +{points} points!".format({
 		"bonus": bonus_text,
 		"points": points_earned
-	})
-	alert_label.add_theme_color_override("font_color", Color.GREEN)
-	var timer = get_tree().create_timer(2.0)
-	timer.timeout.connect(Callable(self, "clear_alert"))
+	}))
+
+	strike_label.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
+	
 	clean_up_runner()
 	
 func clean_up_runner():
@@ -469,10 +474,6 @@ func clean_up_runner():
 	missile_active = false
 	time_since_last_run = 0
 	print("Runner cleanup complete")
-
-func clear_alert():
-	alert_label.visible = false
-	alert_label.add_theme_color_override("font_color", Color.WHITE)
 
 class Gib extends Sprite2D:
 	var velocity = Vector2.ZERO

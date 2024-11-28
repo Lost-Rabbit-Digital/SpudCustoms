@@ -1,9 +1,10 @@
 # Scratch Pad
 These are our goals, to-do tasks, and completed tasks.
 
+*INTERNAL USE* - This means don't publish this note to Steam, it's for internal tracking purposes only
+
 FULL RELEASE TASKS: 2024-11-24 - 0.1.1
 Urgent Tasks: Bugs to fix before popularity
-  [ ] - Potato stamp approval doesn't update score
   [ ] - Don't set stamps to go invisible when quota reached in Endless mode
   [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
   [ ] - There is no continuing shift, after you reach quota you hit the shift summary and end the game
@@ -11,9 +12,6 @@ Urgent Tasks: Bugs to fix before popularity
   [ ] - Difficulty selection UI after selecting endless mode
 General Tasks:
   Graphics:
-    [ ] - Add color tags to keywords in the laws, make them green, red, yellow, blue
-    [ ] - Enable colors on the Guide
-    [ ] - Add headers to the Guide for "INSTRUCTIONS" and "LAWS"
     [ ] - Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
     [ ] - Add dialogue emotes randomly to the potatoes
     [ ] - Add a version counter
@@ -34,10 +32,8 @@ General Tasks:
     [ ] - Expand area for perfect hit chance on border runner system
   Bugs:
     [ ] - If you deny/accept a potato and then that potato times out, it still checks the stamps
-    [ ] - Passport comes from random x/y, instead of down the slot
     [ ] - Sometimes the potatoes don't give you a passport
     [ ] - Don't allow grab while passport is moving, toggle a is_currently_animated boolean to check when picking up
-    [ ] - Center alert_label text
     [ ] - "Change verbiage to 2 and under" on laws, currently says "(under 2 years)"
     [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
     [ ] - Faces and hair doesn't line up on potatoes
@@ -45,12 +41,8 @@ General Tasks:
     [ ] - "You have caused unnecessary suffering" is in the wrong format, should be large red text
     [ ] - Update stats on potato escape and missile kill
     [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
-    [ ] - Went from 3 strikes to 7, border runners may add but not update strikes
     [ ] - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
     [ ] - Points are not added when correctly allowing entry to potatoes
-    [ ] - If the player has 0 points do not remove 500 points when a potato escapes
-    [ ] - When a potato escapes by running a strike is not added
-    [ ] - A strike is not removed when you successfully murder a potato with an air-to-surface missile
     [ ] - Randomly lose combo when doing potato border runner system
     [ ] - Mouse has to be over passport to be able to stamp
     [ ] - Able to drag passport off interaction table, bound them to lower half of screen
@@ -59,10 +51,8 @@ General Tasks:
     [ ] - Able to drag stamps off interaction table, bound them to lower half of screen
     [ ] - If you accept a potato at the same time the timer runs out then the potato duplicates and you get both results
     [ ] - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
-    [ ] - When a potato escapes it does not give you a strike
     [ ] - When you correctly reject a potato it does not give you the 1,000 points
     [ ] - When potato escapes, if it does so mid click (such as clicking on the speaker or a passport), the missile fires at the place you clicked on the screen. Constrain it to the Area2D for targeting potatoes on the left side of the screen, you could simply check cursor status.
-    [ ] - Strikes from spud escapes did not add to the strike count, at least not consistently.
     [ ] - Escape key for menu stopped working after I alt tabbed a few times and completed the first "day". Not sure of cause on that one.
     [ ] - Score is sometimes presented as a float and sometimes as a integer. Not sure if intentional or just some minor bug from early project, but figured i would point it out.
     [ ] - Check why date rules keep failing (make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
@@ -70,8 +60,24 @@ General Tasks:
     [ ] - Update menus with new MODERN DOS font
     [ ] - Update ATTRIBUTION.md with MODERN DOS font
     [ ] - Lower z-index of crater below that of the potato_person runner
-    [ ] - Don't allow the player to move the passport while the animation is playing for it to pass into the customs table
     [ ] - Stamps go over edge of passport
+    [ ] - Move lowest path for rejected slightly higher to avoid z-order issues
+    [ ] - *INTERNAL USE* Speed up passport through slot, decrease by 0.5-1.5 seconds
+    [ ] - Potato stamp approval doesn't update score
+    [ ] - Stamp rejection doesn't update score
+    [ ] - *INTERNAL USE* Increase spud runner chance to 15%
+    [ ] - Link summary screen to restart back into endless mode instead of story mode
+    [ ] - Add message queue system and delay between messages so they don't override each other, add gdscript to alert_label
+    [ ] - Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
+
+    Guide Bugs:
+    [ ] - Make cursor into a click status when hovering over the corner of the guide
+    [ ] - Fix guide textures to not include lower left corner on first page
+    [ ] - Enable colors on the Guide
+    [ ] - Add headers to the Guide for "INSTRUCTIONS" and "LAWS"
+    [ ] - Add color tags to keywords in the laws, make them green, red, yellow, and blue in the guide
+    [ ] - Store color tag hex codes for guide book in notes
+
   Gameplay:
     [ ] - Reduce lead time for missiles
     [ ] - Faster project or more centralized location for missile
@@ -84,7 +90,6 @@ General Tasks:
     [ ] - Potatoes continued to escape during the Shift Summary.
   Backend:
     [ ] - Save game and load game
-    [ ] - Store color tag hex codes for guide book in notes
 
 
 ## General Tasks
@@ -116,12 +121,24 @@ These are various goals which are out of scope for the current roadmap, but if p
 # Completed tasks list
 The tasks which have be completed and pushed to VCS.
 
-Steam Release 0.1.1:
+Steam Release 0.1.1: General bug fixes
+- *INTERNAL USE* Cleaned up old tutorial code to pave road for new system
+- *INTERNAL USE* Updated alert system in endlessGame and BorderRunnerSystem
 - Reduced chance of Spud running the border from 30% to 5%
 - You can no longer see the Spud when it enters the office from the right
 - Rounded edges of UI elements
+- Passport will now always come out of the slot
+- Fixed a few issues with z-ordering on textures
+- Centered alert text
+- Fixed alert timer not triggering
+- No longer subtracts points if the player does not have points
+- Fixed strike additions when Spuds run the border
+- Fixed removal of strike when you successfully murder a potato with an air-to-surface missile
+- Fixed checking for strike total to send player to game over
+  [ ] - Fix checking stamp on rejection
+  [ ] - Rewrite the runner system to include chance to run while waiting in line instead of waiting for rejection
 
-Steam Release 0.1.0:
+Steam Release 0.1.0: Demo release
 [o] - Custom cursor for hover, click, grab, drag
 [o] - The potato does not leave the customs office when the time runs out, set x/y
 [o] - Update "You made the right choice officer" and implement the green number score system instead
