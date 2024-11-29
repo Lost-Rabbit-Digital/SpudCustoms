@@ -34,14 +34,11 @@ General Tasks:
     [ ] - If you deny/accept a potato and then that potato times out, it still checks the stamps
     [ ] - Sometimes the potatoes don't give you a passport
     [ ] - Don't allow grab while passport is moving, toggle a is_currently_animated boolean to check when picking up
-    [ ] - "Change verbiage to 2 and under" on laws, currently says "(under 2 years)"
     [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
     [ ] - Faces and hair doesn't line up on potatoes
     [ ] - Rewrite laws to make sense, bad wording
-    [ ] - "You have caused unnecessary suffering" is in the wrong format, should be large red text
     [ ] - Update stats on potato escape and missile kill
     [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
-    [ ] - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
     [ ] - Points are not added when correctly allowing entry to potatoes
     [ ] - Randomly lose combo when doing potato border runner system
     [ ] - Mouse has to be over passport to be able to stamp
@@ -50,25 +47,27 @@ General Tasks:
     [ ] - Border runner system went off twice and cancelled the first one out
     [ ] - Able to drag stamps off interaction table, bound them to lower half of screen
     [ ] - If you accept a potato at the same time the timer runs out then the potato duplicates and you get both results
-    [ ] - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
     [ ] - When you correctly reject a potato it does not give you the 1,000 points
     [ ] - When potato escapes, if it does so mid click (such as clicking on the speaker or a passport), the missile fires at the place you clicked on the screen. Constrain it to the Area2D for targeting potatoes on the left side of the screen, you could simply check cursor status.
     [ ] - Escape key for menu stopped working after I alt tabbed a few times and completed the first "day". Not sure of cause on that one.
-    [ ] - Score is sometimes presented as a float and sometimes as a integer. Not sure if intentional or just some minor bug from early project, but figured i would point it out.
     [ ] - Check why date rules keep failing (make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
     [ ] - Fix missile getting stuck bug, store last position of mouse on potato escape. If the missile is in flight when the spud escapes off the road, the missile freezes and remains until the next escape attempt.
     [ ] - Update menus with new MODERN DOS font
     [ ] - Update ATTRIBUTION.md with MODERN DOS font
     [ ] - Lower z-index of crater below that of the potato_person runner
     [ ] - Stamps go over edge of passport
-    [ ] - Move lowest path for rejected slightly higher to avoid z-order issues
     [ ] - *INTERNAL USE* Speed up passport through slot, decrease by 0.5-1.5 seconds
-    [ ] - Potato stamp approval doesn't update score
-    [ ] - Stamp rejection doesn't update score
-    [ ] - *INTERNAL USE* Increase spud runner chance to 15%
     [ ] - Link summary screen to restart back into endless mode instead of story mode
     [ ] - Add message queue system and delay between messages so they don't override each other, add gdscript to alert_label
-    [ ] - Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
+    [ ] - Make two sets of paths, one which start in the office and one which doesn't for Spud runner, only do the office start when they are already in office
+
+    Law Bugs:
+    [ ] - "Frozen potatoes require a special permit", change to not allowed because there is not special permit
+    [ ] - "Sprouted potatoes need additional verification and must be denied", change to not include verification
+    [ ] - "Young potatoes (under 2 years) need guardian.", there is no guardian system, reword
+    [ ] - "Change verbiage to 2 and under" on laws, currently says "(under 2 years)"
+    [ ] - "Reject Spuddington potatoes because of visa counterfeiting activity.", there is no visa system, reword "visa" to "document"    
+    [ ] - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
 
     Guide Bugs:
     [ ] - Make cursor into a click status when hovering over the corner of the guide
@@ -124,7 +123,7 @@ The tasks which have be completed and pushed to VCS.
 Steam Release 0.1.1: General bug fixes
 - *INTERNAL USE* Cleaned up old tutorial code to pave road for new system
 - *INTERNAL USE* Updated alert system in endlessGame and BorderRunnerSystem
-- Reduced chance of Spud running the border from 30% to 5%
+- Reduced chance of Spud running the border from 30% to 15%
 - You can no longer see the Spud when it enters the office from the right
 - Rounded edges of UI elements
 - Passport will now always come out of the slot
@@ -135,8 +134,19 @@ Steam Release 0.1.1: General bug fixes
 - Fixed strike additions when Spuds run the border
 - Fixed removal of strike when you successfully murder a potato with an air-to-surface missile
 - Fixed checking for strike total to send player to game over
-  [ ] - Fix checking stamp on rejection
+- *INTERNAL USE* Fixed passport closing after timed_out() called 
+- Fixed score update after approving Spuds for entry
+- Reduced approval score from 1,000 points to 250 points
+- Moved lowest path for rejected Spud higher to avoid z-order issues
+- Fixed wrong formatting on a few alert pop-ups 
+  [ ] - Check if the stamp rejection was correct before triggering the border run system for the scores to be accurate
+  [ ] - Add a loss of 500 points on top of strike if the rejection was incorrect (Use the same code as the border runner system to check for point penalty)
+  [ ] - Fix checking stamp on rejection, the fuck does this mean old Boden? Strike check on rejection?
+  [ ] - Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
+  [ ] - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
   [ ] - Rewrite the runner system to include chance to run while waiting in line instead of waiting for rejection
+  [ ] - Stamp rejection doesn't update score
+  [ ] - Score is sometimes presented as a float and sometimes as a integer. Not sure if intentional or just some minor bug from early project, but figured i would point it out.
 
 Steam Release 0.1.0: Demo release
 [o] - Custom cursor for hover, click, grab, drag

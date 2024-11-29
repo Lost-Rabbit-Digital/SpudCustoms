@@ -821,6 +821,7 @@ func timed_out():
 	tween.tween_property(passport_book, "modulate:a", 0, 1)
 	
 	# Clear the stamps
+	close_passport_action()
 	remove_stamp()
 
 func process_decision(allowed):
@@ -855,8 +856,8 @@ func process_decision(allowed):
 			
 		# Award points for correct decisions, with bonus points for consecutive
 		# correct decisions
-		# UV scanning will award 1000 points per finding
-		var decision_points = 1000 * point_multiplier
+		# UV scanning will award 250 points per finding
+		var decision_points = 250 * point_multiplier
 		Global.display_green_alert(alert_label, alert_timer, "You made the right choice, officer.\n+" + str(decision_points) + " points!")
 		Global.add_score(decision_points)
 	else:
@@ -1214,7 +1215,7 @@ func move_potato_along_path(approval_status):
 		timed_out()
 	else: # TODO: REWRITE THIS SECTION
 		# Increase chance of runner when rejected
-		if randf() < 0.90:  # 30% chance to go runner mode
+		if randf() < 0.15:  # 15% chance to go runner mode
 			# Instead of using the runner path directly,
 			# trigger the border runner system
 			if border_runner_system:
