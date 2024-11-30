@@ -409,7 +409,6 @@ vertical = false
 lock = true
 
 [node name="PlayButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0"]
-disabled = true
 text = "Story 
 [Purchase Game]"
 

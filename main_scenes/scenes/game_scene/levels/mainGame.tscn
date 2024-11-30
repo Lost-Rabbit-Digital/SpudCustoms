@@ -33,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://cfkvlvqhnapxc" path="res://assets/documents/customs_guide/customs_guide_open_2.png" id="30_0fqrc"]
 [ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="31_c10l6"]
 [ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://dos_theme.tres" id="34_2f41l"]
-[ext_resource type="Script" path="res://guide.gd" id="35_uuf1y"]
+[ext_resource type="Script" uid="uid://bif3v7xddhuag" path="res://guide.gd" id="35_uuf1y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sihlh"]
 size = Vector2(756.5, 214)

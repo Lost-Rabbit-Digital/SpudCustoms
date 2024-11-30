@@ -1,5 +1,5 @@
 ### Start intro_sequence.dtl
-[background arg="res://assets/narrative/nation_of_spud_1.png" fade="2.0"]
+[background arg="res://assets/narrative/nation_of_spud_1.png" fade="0.0"]
 join narrator [z_index="1"]
 narrator: Welcome to the great nation of Spud, citizen.
 narrator: A land of prosperity and opportunity for all potatoes.
@@ -61,5 +61,5 @@ else:
 	supervisor_russet: [i]adjusts your cap uncomfortably tight[/i] I trust that won't be you, will it?
 	leave supervisor_russet
 
-[background arg="res://assets/narrative/gameplay.png" fade="2.0"]
+[background arg="res://assets/narrative/intro_sequence_gameplay_shot.png" fade="2.0"]
 You continue your shift...
