@@ -16,12 +16,7 @@ var current_potato
 # Track win and lose parameters
 var quota_met = 0  # Number of correct decisions
 var quota_target = 8  # Required correct decisions
-var strikes = 0
-var max_strikes = 3
 var difficulty_level
-
-# Track points-based performance scoring system
-var score = 0  # Points from runners and other bonuses
 
 # Track multipliers and streaks
 var point_multiplier = 1.0
@@ -58,8 +53,6 @@ var selected_stamp: Node = null  # Tracks which stamp is currently selected
 @onready var approval_stamp = $Gameplay/InteractiveElements/ApprovalStamp
 @onready var rejection_stamp = $Gameplay/InteractiveElements/RejectionStamp
 
-## Label used to display alerts and notifications to the player
-@onready var alert_label = $UI/Labels/AlertLabel
 
 # Passport dragging system
 var passport: Sprite2D
@@ -98,6 +91,9 @@ var is_in_guide_tutorial = true
 var shift_stats: ShiftStats
 @onready var shift_summary = preload("res://ShiftSummaryScreen.tscn")
 
+## Label used to display alerts and notifications to the player
+@onready var alert_label = $UI/Labels/AlertLabel
+
 func _ready():
 	update_cursor("default")
 	# Make sure to add QueueManager as a child of Main
@@ -114,9 +110,6 @@ func _ready():
 	update_quota_display()
 	update_date_display()
 	time_label = $UI/Labels/TimeLabel
-	
-	#setup_megaphone_flash_timer()
-	#setup_guide_tutorial_timer()
 	
 	generate_rules()
 	draggable_sprites = [
@@ -136,7 +129,7 @@ func _ready():
 				sprite.z_index = PASSPORT_Z_INDEX
 				
 	if Global.final_score > 0:
-		score = Global.final_score
+		Global.score = Global.final_score
 		update_score_display()
 
 	if Global.quota_met > 0:
@@ -150,7 +143,7 @@ func _ready():
 	suspect_panel_front = $Gameplay/SuspectPanel/SuspectPanelFront
 	suspect = $Gameplay/MugshotPhotoGenerator/SizingSprite
 	
-	$UI/Labels/StrikesLabel.text = "Strikes: " + str(strikes) + " / " + str(max_strikes)
+	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
 
 	# Add closed passport to draggable sprites
 	draggable_sprites.append(passport)
@@ -208,31 +201,19 @@ func set_difficulty(level):
 	match difficulty_level:
 		"Easy":
 			quota_target = 5
-			max_strikes = 6
+			Global.max_strikes = 6
 			processing_time = 60
 		"Normal":
 			quota_target = 8
-			max_strikes = 4
+			Global.max_strikes = 4
 			processing_time = 45
 		"Expert":
 			quota_target = 10
-			max_strikes = 3
+			Global.max_strikes = 3
 			processing_time = 30
 			
 	update_quota_display()
-	$UI/Labels/StrikesLabel.text = "Strikes: " + str(strikes) + " / " + str(max_strikes)
-	
-
-func setup_guide_tutorial_timer():
-	guide_tutorial_timer = $SystemManagers/Timers/GuideFlashTimer
-	guide_tutorial_timer.wait_time = GUIDE_TUTORIAL_FLASH_INTERVAL
-	guide_tutorial_timer.start()
-
-func _on_guide_flash_timer_timeout():
-	if is_in_guide_tutorial:
-		$Gameplay/InteractiveElements/Guide/GuideAlertBox.visible = !$Gameplay/InteractiveElements/Guide/GuideAlertBox.visible
-	else:
-		$Gameplay/InteractiveElements/Guide/GuideAlertBox.visible = false
+	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
 
 func generate_rules():
 	current_rules = [
@@ -400,12 +381,6 @@ func update_date_display():
 	var current_date = Time.get_date_dict_from_system()
 	var formatted_date = "%04d.%02d.%02d" % [current_date.year, current_date.month, current_date.day]
 	$UI/Labels/DateLabel.text = formatted_date
-
-func _on_megaphone_flash_timer_timeout():
-	if not is_potato_in_office:
-		$Gameplay/Megaphone/FlashAlert.visible = !$Gameplay/Megaphone/FlashAlert.visible
-	else:
-		$Gameplay/Megaphone/FlashAlert.visible = false
 
 func play_random_customs_officer_sound():
 	var customs_officer_sounds = [
@@ -695,11 +670,6 @@ func _process(_delta):
 			open_sound_played = true
 			close_sound_played = false  # Reset close sound flag
 			
-	# check if in guide tutorial
-	if Guide.current_page == 1:
-		is_in_guide_tutorial = false
-	else:
-		is_in_guide_tutorial = true
 
 func generate_potato_info():
 	var expiration_date: String
@@ -825,20 +795,12 @@ func _on_button_welcome_button_pressed() -> void:
 func _on_button_no_entry_button_pressed() -> void:
 	process_decision(false)
 
-func go_to_game_over():
-	# Store the score in a global script or autoload
-	Global.final_score = score
-	print("transition to game over scene")
-	#$Gameplay/InteractiveElements/ApprovalStamp.visible = false
-	#$Gameplay/InteractiveElements/RejectionStamp.visible = false
-	print("ALERT: go_to_game_over() has been disabled")
-	get_tree().change_scene_to_file("res://ShiftSummaryScreen.tscn")
 	
 func go_to_game_win():
-	print("Transitioning to game win scene with score:", score)
+	print("Transitioning to game win scene with score:", Global.score)
 	#$Gameplay/InteractiveElements/ApprovalStamp.visible = false
 	#$Gameplay/InteractiveElements/RejectionStamp.visible = false
-	Global.final_score = score
+	Global.final_score = Global.score
 	Global.quota_met = quota_met
 	Global.shift += 1
 	print("ALERT: go_to_game_win() has been disabled")
@@ -854,13 +816,13 @@ func timed_out():
 	# Reset stats and add strike
 	correct_decision_streak = 0
 	point_multiplier = 1.0
-	strikes += 1
-	if strikes == max_strikes:
-		go_to_game_over()
+	Global.strikes += 1
+	if Global.strikes == Global.max_strikes:
+		Global.go_to_game_over()
 			
 	# Update displays
 	update_score_display()
-	$UI/Labels/StrikesLabel.text = "Strikes: " + str(strikes) + " / " + str(max_strikes)
+	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
 	
 	# Add another potato
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
@@ -875,6 +837,7 @@ func timed_out():
 	tween.tween_property(passport_book, "modulate:a", 0, 1)
 	
 	# Clear the stamps
+	close_passport_action()
 	remove_stamp()
 
 func process_decision(allowed):
@@ -909,45 +872,28 @@ func process_decision(allowed):
 			
 		# Award points for correct decisions, with bonus points for consecutive
 		# correct decisions
-		# UV scanning will award 1000 points per finding
-		var decision_points = 1000 * point_multiplier
-		display_green_alert("You made the right choice, officer.\n+" + str(decision_points) + " points!")
+		# UV scanning will award 250 points per finding
+		var decision_points = 250 * point_multiplier
+		# Global.display_green_alert(alert_label, alert_timer, "You made the right choice, officer.\n+" + str(decision_points) + " points!")
 		Global.add_score(decision_points)
 	else:
+		# Global.display_red_alert(alert_label, alert_timer, "You have caused unnecessary suffering, officer...\n+1 Strike!")
 		correct_decision_streak = 0
 		point_multiplier = 1.0
-		strikes += 1
-		if strikes == max_strikes:
-			go_to_game_over()
+		Global.strikes += 1
+		if Global.strikes == Global.max_strikes:
+			Global.go_to_game_over()
 			
-		display_red_alert("You have caused unnecessary suffering, officer...\n+1 Strike!")
 			
 	update_score_display()
 	update_quota_display()
-	$UI/Labels/StrikesLabel.text = "Strikes: " + str(strikes) + " / " + str(max_strikes)
+	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
 
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()
 
-func clear_alert_after_delay():
-	await get_tree().create_timer(2.0).timeout
-	alert_label.visible = false
-	alert_label.add_theme_color_override("font_color", Color.WHITE)
-
-func display_red_alert(text):
-	alert_label.visible = true
-	alert_label.text = text
-	alert_label.add_theme_color_override("font_color", Color.RED)
-	clear_alert_after_delay()
-	
-func display_green_alert(text):
-	alert_label.visible = true
-	alert_label.text = text
-	alert_label.add_theme_color_override("font_color", Color.GREEN)
-	clear_alert_after_delay()
-
 func update_score_display():
-	$UI/Labels/ScoreLabel.text = "Score: " + str(score)
+	$UI/Labels/ScoreLabel.text = "Score: " + str(Global.score)
 	if point_multiplier > 1.0:
 		$UI/Labels/ScoreLabel.text += " (x" + str(point_multiplier) + ")"
 
@@ -1284,7 +1230,7 @@ func move_potato_along_path(approval_status):
 		timed_out()
 	else:
 		# Increase chance of runner when rejected
-		if randf() < 0.05:  # 5% chance to go runner mode
+		if randf() < 0.15:  # 15% chance to go runner mode
 			# Instead of using the runner path directly,
 			# trigger the border runner system
 			if border_runner_system:
