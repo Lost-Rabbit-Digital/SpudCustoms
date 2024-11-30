@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsobjoevgmlbb"]
+[gd_scene load_steps=7 format=3 uid="uid://dsobjoevgmlbb"]
 
 [ext_resource type="Script" uid="uid://buqr1l0oc2207" path="res://ShiftSummaryScreen.gd" id="1_lf5e7"]
 [ext_resource type="LabelSettings" uid="uid://bnemubwwr558w" path="res://ShiftSummaryHeaderText.tres" id="2_68n1l"]
 [ext_resource type="Texture2D" uid="uid://b5dnmxonlp47u" path="res://assets/shift_summary/shift_summary_mockup_empty.png" id="3_68n1l"]
 [ext_resource type="LabelSettings" uid="uid://skp252vibaj1" path="res://ShiftSummaryBodyText.tres" id="3_oti8t"]
 [ext_resource type="PackedScene" uid="uid://dk47bwveebyio" path="res://PotatoRain.tscn" id="5_oti8t"]
+[ext_resource type="Texture2D" uid="uid://cbmfot3bx30yf" path="res://assets/narrative/aftermath.png" id="6_3rq7k"]
 
 [node name="ShiftSummaryScreen" type="Control"]
 z_index = 13
@@ -191,6 +192,14 @@ expand_mode = 1
 
 [node name="PotatoRain" parent="." instance=ExtResource("5_oti8t")]
 z_index = -1
+
+[node name="ScreenBackground" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 1919.0
+offset_bottom = 1079.0
+scale = Vector2(0.667597, 0.667597)
+texture = ExtResource("6_3rq7k")
 
 [connection signal="pressed" from="SubmitScoreButton" to="." method="_on_submit_score_button_pressed"]
 [connection signal="pressed" from="RefreshButton" to="." method="update_leaderboard"]
