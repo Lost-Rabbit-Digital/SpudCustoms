@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://bdknelqd4ojod"]
+[gd_scene load_steps=66 format=3 uid="uid://bdknelqd4ojod"]
 
 [ext_resource type="Script" uid="uid://bak2ox7wh15te" path="res://main_scenes/scenes/game_scene/levels/endlessGame.gd" id="1_s8p0h"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="2_udo16"]
@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="6_duxyb"]
 [ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_m0l6d"]
 [ext_resource type="FontVariation" uid="uid://t3ii3pbmg2bo" path="res://assets/fonts/Modern_DOS_Font_Variation.tres" id="8_0m27g"]
+[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="9_7ymkl"]
 [ext_resource type="Script" path="res://QueueManager.gd" id="9_l36ds"]
+[ext_resource type="AudioStream" uid="uid://curch4bdxj8uk" path="res://assets/music/ambient_vol3_peace_main_ovani_sound.mp3" id="10_me5u7"]
 [ext_resource type="PackedScene" uid="uid://msix881opujh" path="res://StatsManager.tscn" id="10_q0hnx"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="11_jscux"]
 [ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="12_qvvnb"]
@@ -447,6 +449,9 @@ offset_bottom = 40.0
 
 [node name="SFXPool" type="AudioStreamPlayer2D" parent="SystemManagers/AudioManager"]
 
+[node name="BackgroundMusicPlayer" parent="SystemManagers/AudioManager" instance=ExtResource("9_7ymkl")]
+stream = ExtResource("10_me5u7")
+
 [node name="QueueManager" type="Node2D" parent="SystemManagers"]
 script = ExtResource("9_l36ds")
 
@@ -644,9 +649,9 @@ z_as_relative = false
 
 [node name="GuideNote" type="RichTextLabel" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
 offset_left = -150.0
-offset_top = -110.0
+offset_top = -100.0
 offset_right = 150.0
-offset_bottom = 162.0
+offset_bottom = 172.0
 theme = ExtResource("31_pdq3q")
 theme_override_colors/default_color = Color(0.341176, 0.282353, 0.282353, 1)
 bbcode_enabled = true

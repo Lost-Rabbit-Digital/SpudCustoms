@@ -286,9 +286,9 @@ func is_expired(expiration_date: String) -> bool:
 
 func update_rules_display():
 	if $Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote and Guide.current_page == 2:
-		$Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote.text = "LAWS\n" + "\n".join(current_rules)
+		$Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote.text = "[center]LAWS\n" + "\n".join(current_rules) + "[/center]"
 	# Emit the signal with the new rules
-	emit_signal("rules_updated", "LAWS\n" + "\n".join(current_rules))
+	emit_signal("rules_updated", "[center]LAWS\n" + "\n".join(current_rules) + "[/center]")
 	
 func is_potato_valid(potato_info: Dictionary) -> bool:
 	for rule in current_rules:

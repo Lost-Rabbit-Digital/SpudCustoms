@@ -658,9 +658,9 @@ z_as_relative = false
 
 [node name="GuideNote" type="RichTextLabel" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
 offset_left = -150.0
-offset_top = -110.0
+offset_top = -100.0
 offset_right = 150.0
-offset_bottom = 162.0
+offset_bottom = 172.0
 theme = ExtResource("34_2f41l")
 theme_override_colors/default_color = Color(0.341176, 0.282353, 0.282353, 1)
 bbcode_enabled = true
