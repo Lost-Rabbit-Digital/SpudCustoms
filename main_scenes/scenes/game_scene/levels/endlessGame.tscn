@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://bdknelqd4ojod"]
+[gd_scene load_steps=64 format=3 uid="uid://bdknelqd4ojod"]
 
 [ext_resource type="Script" uid="uid://bak2ox7wh15te" path="res://main_scenes/scenes/game_scene/levels/endlessGame.gd" id="1_s8p0h"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="2_udo16"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="29_wkktu"]
 [ext_resource type="Texture2D" uid="uid://cfkvlvqhnapxc" path="res://assets/documents/customs_guide/customs_guide_open_2.png" id="30_6ppju"]
 [ext_resource type="Script" path="res://guide.gd" id="31_6ou4t"]
+[ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://dos_theme.tres" id="31_pdq3q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sihlh"]
 size = Vector2(756.5, 214)
@@ -641,29 +642,24 @@ z_as_relative = false
 
 [node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
 
-[node name="GuideNote" type="Label" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -148.0
-offset_top = -106.0
-offset_right = 145.0
-offset_bottom = 109.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
-theme_override_fonts/font = ExtResource("8_0m27g")
-theme_override_font_sizes/font_size = 16
-text = "To begin, press the speaker on top of the customs office building.
-Grab the documents from the Potato and drag them to the main table.
-Then compare the information on the documents with the laws given.
-If there are any discrepencies, deny entry.
-After stamping the documents, hand them back to the Potato.
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
+[node name="GuideNote" type="RichTextLabel" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
+offset_left = -150.0
+offset_top = -110.0
+offset_right = 150.0
+offset_bottom = 162.0
+theme = ExtResource("31_pdq3q")
+theme_override_colors/default_color = Color(0.341176, 0.282353, 0.282353, 1)
+bbcode_enabled = true
+text = "[center]
+Press the [color=#2C7A1F]speaker[/color] on top of the building to begin
+Drag [color=#2C7A1F]papers[/color] from the Potato to your desk
+Check [color=#2C7A1F]laws[/color] on [color=#2C7A1F]page 2[/color] of guide book
+Hold [color=#2C7A1F]left-click[/color] on stamp, then [color=#2C7A1F]right-click[/color] while holding to stamp papers
+
+[color=#FF0000]Left-click[/color] running potatoes to fire [color=#FF0000]missiles[/color]
+If anything is wrong, [color=#FF0000]deny entry[/color]
+Hand papers back to finish
+[/center]"
 
 [node name="TurnRight" type="TextureButton" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
 offset_left = 117.0

@@ -655,34 +655,7 @@ texture = ExtResource("22_3pqlk")
 
 [node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
 
-[node name="GuideNote" type="Label" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
-visible = false
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -147.0
-offset_top = -106.0
-offset_right = 146.0
-offset_bottom = 109.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
-theme_override_fonts/font = ExtResource("6_rd1c0")
-theme_override_font_sizes/font_size = 16
-text = "[center]
-Click the speaker on top of the building to begin
-Grab the papers from the Spud and drag them to your desk
-Check if everything on the papers matches the rule book
-If something looks wrong then deny entry with the [color=red]red[/color] stamp
-If everything looks good then grant entry with the [color=green]green[/color] stamp
-Hand the papers back to the Spud
-[/center]"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
+[node name="GuideNote" type="RichTextLabel" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
 offset_left = -150.0
 offset_top = -110.0
 offset_right = 150.0
@@ -691,12 +664,14 @@ theme = ExtResource("34_2f41l")
 theme_override_colors/default_color = Color(0.341176, 0.282353, 0.282353, 1)
 bbcode_enabled = true
 text = "[center]
-• Click the speaker on top of the building to begin
-• Grab the papers from the Spud and drag them to your desk
-• Check if everything on the papers matches the rule book
-• If something looks wrong then deny entry with the [color=#942525]red[/color] stamp
-• If everything looks good then grant entry with the [color=#2C7A1F]green[/color] stamp
-• Hand the papers back to the Spud
+Press the [color=#2C7A1F]speaker[/color] on top of the building to begin
+Drag [color=#2C7A1F]papers[/color] from the Potato to your desk
+Check [color=#2C7A1F]laws[/color] on [color=#2C7A1F]page 2[/color] of guide book
+Hold [color=#2C7A1F]left-click[/color] on stamp, then [color=#2C7A1F]right-click[/color] while holding to stamp papers
+
+[color=#FF0000]Left-click[/color] running potatoes to fire [color=#FF0000]missiles[/color]
+If anything is wrong, [color=#FF0000]deny entry[/color]
+Hand papers back to finish
 [/center]"
 
 [node name="TurnRight" type="TextureButton" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
