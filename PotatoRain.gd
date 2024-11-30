@@ -10,7 +10,7 @@ func _ready():
 	animated_texture.frames = 1  # Set to number of potato textures you have
 	
 	# Load your potato texture
-	var potato_texture = preload("res://assets/potatoes/bodies/yukon_gold_body.png")
+	var potato_texture = preload("res://assets/potatoes/bodies/russet_burbank_body.png")
 	animated_texture.set_frame_texture(0, potato_texture)
 	# Assign to particle system
 	particle_system.texture = animated_texture
