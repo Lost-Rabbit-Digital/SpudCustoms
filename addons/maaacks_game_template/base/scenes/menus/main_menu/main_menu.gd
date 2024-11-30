@@ -3,7 +3,7 @@ extends Control
 
 ## Defines the path to the game scene. Hides the play button if empty.
 @export_file("*.tscn") var game_scene_path : String
-@export_file("endless.tscn") var endless_scene_path : String
+@export_file("*.tscn") var endless_scene_path : String
 @export var options_packed_scene : PackedScene
 @export var credits_packed_scene : PackedScene
 

@@ -8,10 +8,11 @@
 [ext_resource type="FontVariation" uid="uid://t3ii3pbmg2bo" path="res://assets/fonts/Modern_DOS_Font_Variation.tres" id="6_rd1c0"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="7_7m4ia"]
 [ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_woji0"]
+[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="9_2f41l"]
 [ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="9_arv36"]
-[ext_resource type="Texture2D" uid="uid://jjnnivgwpiub" path="res://assets/alerts/megaphone_alert_box.png" id="10_5g2y2"]
 [ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
 [ext_resource type="Texture2D" uid="uid://fmqkliw6t33x" path="res://assets/suspect_panel/suspect_panel_front.png" id="10_foucb"]
+[ext_resource type="AudioStream" uid="uid://curch4bdxj8uk" path="res://assets/music/ambient_vol3_peace_main_ovani_sound.mp3" id="10_i6rjm"]
 [ext_resource type="PackedScene" uid="uid://msix881opujh" path="res://StatsManager.tscn" id="10_jgtln"]
 [ext_resource type="PackedScene" uid="uid://bnbp4h8nco0v2" path="res://NarrativeManager.tscn" id="11_qn1sc"]
 [ext_resource type="Texture2D" uid="uid://cwni5a4q3jj67" path="res://assets/suspect_panel/suspect_panel_top_bottom.png" id="12_n1tuu"]
@@ -26,7 +27,6 @@
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="18_jl4i3"]
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="18_yiok2"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="20_pd2wg"]
-[ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://assets/alerts/guide_alert_box.png" id="22_3pqlk"]
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://prototyping/random_character_creation/character_generator.tscn" id="28_f6jf3"]
 [ext_resource type="Texture2D" uid="uid://dubo3sdxx8chn" path="res://assets/stamps/approval_stamp_3.png" id="28_uvib1"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="29_rft0e"]
@@ -219,11 +219,13 @@ point_count = 24
 [node name="Root" type="Node2D"]
 script = ExtResource("1_s4bva")
 
-[node name="BorderRunnerSystem" parent="." node_paths=PackedStringArray("queue_manager", "score_label", "alert_label") instance=ExtResource("29_rft0e")]
+[node name="BorderRunnerSystem" parent="." node_paths=PackedStringArray("queue_manager", "score_label", "strike_label", "alert_label", "alert_timer") instance=ExtResource("29_rft0e")]
 position = Vector2(3, 0)
 queue_manager = NodePath("../SystemManagers/QueueManager")
 score_label = NodePath("../UI/Labels/ScoreLabel")
-alert_label = NodePath("../UI/Labels/AlertLabel")
+strike_label = NodePath("../UI/Labels/StrikesLabel")
+alert_label = NodePath("../UI/Labels/MarginContainer/AlertLabel")
+alert_timer = NodePath("../SystemManagers/Timers/AlertTimer")
 runner_chance = 0.025
 
 [node name="Area2D" type="Area2D" parent="BorderRunnerSystem"]
@@ -399,19 +401,6 @@ theme_override_fonts/font = ExtResource("6_rd1c0")
 theme_override_font_sizes/font_size = 16
 autowrap_mode = 3
 
-[node name="AlertLabel" type="Label" parent="UI/Labels"]
-z_index = 15
-layout_mode = 0
-offset_left = 489.0
-offset_top = 254.0
-offset_right = 815.0
-offset_bottom = 288.0
-theme_override_colors/font_color = Color(1, 0.00392157, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("6_rd1c0")
-theme_override_font_sizes/font_size = 24
-
 [node name="ScoreLabel" type="Label" parent="UI/Labels"]
 z_index = 2
 z_as_relative = false
@@ -431,6 +420,25 @@ theme_override_font_sizes/font_size = 32
 text = "Score: 9001"
 vertical_alignment = 1
 
+[node name="MarginContainer" type="MarginContainer" parent="UI/Labels"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1240.0
+offset_bottom = 680.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AlertLabel" type="Label" parent="UI/Labels/MarginContainer"]
+z_index = 15
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.00392157, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("6_rd1c0")
+theme_override_font_sizes/font_size = 24
+
 [node name="SystemManagers" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -447,7 +455,9 @@ offset_bottom = 40.0
 
 [node name="SpawnTimer" type="Timer" parent="SystemManagers/Timers"]
 
-[node name="GuideFlashTimer" type="Timer" parent="SystemManagers/Timers"]
+[node name="AlertTimer" type="Timer" parent="SystemManagers/Timers"]
+wait_time = 2.0
+one_shot = true
 
 [node name="AudioManager" type="Control" parent="SystemManagers"]
 anchors_preset = 0
@@ -455,6 +465,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="SFXPool" type="AudioStreamPlayer2D" parent="SystemManagers/AudioManager"]
+bus = &"SFX"
+
+[node name="BackgroundMusicPlayer" parent="SystemManagers/AudioManager" instance=ExtResource("9_2f41l")]
+stream = ExtResource("10_i6rjm")
 
 [node name="QueueManager" type="Node2D" parent="SystemManagers"]
 script = ExtResource("10_a4p7n")
@@ -480,13 +494,6 @@ visible = false
 position = Vector2(33.8086, -22.8106)
 scale = Vector2(0.349, 0.349)
 texture = ExtResource("9_arv36")
-
-[node name="FlashAlert" type="Sprite2D" parent="Gameplay/Megaphone"]
-visible = false
-z_index = 8
-z_as_relative = false
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("10_5g2y2")
 
 [node name="SuspectPanel" type="Sprite2D" parent="Gameplay"]
 z_index = 1
@@ -646,12 +653,6 @@ main_node = NodePath("../../..")
 [node name="ClosedGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
 visible = false
 z_as_relative = false
-
-[node name="GuideAlertBox" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide/ClosedGuide"]
-visible = false
-z_index = 4
-z_as_relative = false
-texture = ExtResource("22_3pqlk")
 
 [node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
 
@@ -857,6 +858,6 @@ curve = SubResource("Curve2D_x3wa3")
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/GuideFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]
