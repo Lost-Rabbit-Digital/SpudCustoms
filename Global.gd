@@ -8,6 +8,8 @@ var build_type = "Demo Release"
 var difficulty_level = "Normal" # Can be "Easy", "Normal", or "Expert"
 var strikes = 0
 var max_strikes = 4
+var current_game_stats: Dictionary = {}
+
 
 # Add story state enum
 enum StoryState {
@@ -55,6 +57,27 @@ func _init():
 
 func _process(_delta: float) -> void:
 	Steam.run_callbacks()
+	
+	
+	
+func store_game_stats(stats: ShiftStats):
+	current_game_stats = {
+		"shift": shift,
+		"time_taken": stats.time_taken,
+		"processing_time_left": stats.processing_time_left,
+		"score": score,
+		"missiles_fired": stats.missiles_fired,
+		"missiles_hit": stats.missiles_hit,
+		"perfect_hits": stats.perfect_hits,
+		"total_stamps": stats.total_stamps,
+		"potatoes_approved": stats.potatoes_approved,
+		"potatoes_rejected": stats.potatoes_rejected,
+		"perfect_stamps": stats.perfect_stamps,
+		"speed_bonus": stats.get_speed_bonus(),
+		"accuracy_bonus": stats.get_accuracy_bonus(),
+		"perfect_bonus": stats.get_missile_bonus(),
+		"final_score": final_score
+	}
 	
 # Helper function to get leaderboard name based on difficulty
 func get_leaderboard_name(difficulty: String = "") -> String:

@@ -7,4 +7,5 @@
 [node name="PauseMenu" instance=ExtResource("1_eald2")]
 script = ExtResource("2_d7n8m")
 options_packed_scene = ExtResource("3_2vpqx")
-main_menu_scene = "res://addons/maaacks_game_template/examples/scenes/menus/main_menu/main_menu_with_animations.tscn"
+main_menu_scene = "uid://vignvoi0p2m5"
+pauses_game = true

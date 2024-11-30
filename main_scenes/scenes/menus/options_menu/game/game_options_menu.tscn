@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbc4kk44nk6r8"]
+[gd_scene load_steps=4 format=3 uid="uid://beypb0s4q7ip0"]
 
 [ext_resource type="Script" path="res://addons/maaacks_game_template/examples/scenes/menus/options_menu/game/game_options_menu.gd" id="1_hhcbe"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/base/scripts/capture_focus.gd" id="2_tkekj"]

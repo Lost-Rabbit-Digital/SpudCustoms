@@ -409,7 +409,9 @@ vertical = false
 lock = true
 
 [node name="PlayButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0"]
-text = "Story"
+disabled = true
+text = "Story 
+[Purchase Game]"
 
 [node name="EndlessButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1"]
 unique_name_in_owner = true

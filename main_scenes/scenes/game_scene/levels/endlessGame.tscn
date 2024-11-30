@@ -1,6 +1,6 @@
 [gd_scene load_steps=63 format=3 uid="uid://bdknelqd4ojod"]
 
-[ext_resource type="Script" path="res://main_scenes/scenes/game_scene/levels/endlessGame.gd" id="1_s8p0h"]
+[ext_resource type="Script" uid="uid://bak2ox7wh15te" path="res://main_scenes/scenes/game_scene/levels/endlessGame.gd" id="1_s8p0h"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="2_udo16"]
 [ext_resource type="Texture2D" uid="uid://doml0udrwe6pe" path="res://assets/Background.png" id="3_3evfx"]
 [ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/level/customs_office.png" id="4_qqvh6"]

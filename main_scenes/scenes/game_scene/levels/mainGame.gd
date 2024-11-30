@@ -811,13 +811,18 @@ func go_to_game_win():
 
 func timed_out():
 	# Alert the player
-	display_red_alert("You took too long and they left, officer... \n+1 Strike!")
+	# Global.display_red_alert(alert_label, alert_timer, "You took too long and they left, officer... \n+1 Strike!")
 	
 	# Reset stats and add strike
 	correct_decision_streak = 0
 	point_multiplier = 1.0
 	Global.strikes += 1
-	if Global.strikes == Global.max_strikes:
+	if Global.strikes >= Global.max_strikes:
+		# Calculate final time taken
+		shift_stats.time_taken = processing_time - current_timer
+		shift_stats.processing_time_left = current_timer
+		# Store stats before transitioning
+		Global.store_game_stats(shift_stats)
 		Global.go_to_game_over()
 			
 	# Update displays
@@ -881,7 +886,12 @@ func process_decision(allowed):
 		correct_decision_streak = 0
 		point_multiplier = 1.0
 		Global.strikes += 1
-		if Global.strikes == Global.max_strikes:
+		if Global.strikes >= Global.max_strikes:
+			# Calculate final time taken
+			shift_stats.time_taken = processing_time - current_timer
+			shift_stats.processing_time_left = current_timer
+			# Store stats before transitioning
+			Global.store_game_stats(shift_stats)
 			Global.go_to_game_over()
 			
 			

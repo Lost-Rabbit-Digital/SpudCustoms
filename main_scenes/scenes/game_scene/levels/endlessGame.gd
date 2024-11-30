@@ -802,6 +802,11 @@ func timed_out():
 	point_multiplier = 1.0
 	Global.strikes += 1
 	if Global.strikes >= Global.max_strikes:
+		# Calculate final time taken
+		shift_stats.time_taken = processing_time - current_timer
+		shift_stats.processing_time_left = current_timer
+		# Store stats before transitioning
+		Global.store_game_stats(shift_stats)
 		Global.go_to_game_over()
 			
 	# Update displays
@@ -845,8 +850,20 @@ func process_decision(allowed):
 		# Check if quota met
 		if quota_met >= quota_target:
 			print("Quota complete!")
-			end_shift()
-			#go_to_game_win() # TODO: ENABLE FOR FULL RELEASE
+			# Award survival bonus
+			var survival_bonus = 500
+			Global.add_score(survival_bonus)
+			Global.display_green_alert(alert_label, alert_timer, "Shift survived! Bonus: " + str(survival_bonus) + " points!")
+			
+			# Increase quota by initial target
+			var initial_quota = get_initial_quota()
+			quota_target += initial_quota
+			
+			# Optional: Generate new rules for variety
+			generate_rules()
+			
+			# Update displays
+			update_quota_display()
 		
 		# Increase multiplier for streaks
 		if correct_decision_streak >= 3:
@@ -867,8 +884,12 @@ func process_decision(allowed):
 		point_multiplier = 1.0
 		Global.strikes += 1
 		if Global.strikes >= Global.max_strikes:
+			# Calculate final time taken
+			shift_stats.time_taken = processing_time - current_timer
+			shift_stats.processing_time_left = current_timer
+			# Store stats before transitioning
+			Global.store_game_stats(shift_stats)
 			Global.go_to_game_over()
-			
 			
 	update_score_display()
 	update_quota_display()
@@ -876,6 +897,17 @@ func process_decision(allowed):
 
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()
+		
+# Add this helper function to get initial quota based on difficulty
+func get_initial_quota():
+	match difficulty_level:
+		"Easy":
+			return 5
+		"Normal":
+			return 8
+		"Expert":
+			return 10
+	return 8  # Default to Normal mode quota if difficulty_level is invalid
 
 func update_score_display():
 	$UI/Labels/ScoreLabel.text = "Score: " + str(Global.score)

@@ -10,7 +10,11 @@ func _ready():
 	hide()
 	setup_background()
 	setup_styling()
-	show_summary(generate_test_stats())
+	# Use stored stats if available, otherwise use test data
+	if !Global.current_game_stats.is_empty():
+		show_summary(Global.current_game_stats)
+	else:
+		show_summary(generate_test_stats())
 
 func setup_background():
 	if background and BACKGROUND_TEXTURE:
