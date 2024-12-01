@@ -14,8 +14,6 @@ var current_potato_info
 var current_potato
 
 # Track win and lose parameters
-var quota_met = 0  # Number of correct decisions
-var quota_target = 8  # Required correct decisions
 var difficulty_level
 
 
@@ -128,7 +126,6 @@ func _ready():
 		update_score_display()
 
 	if Global.quota_met > 0:
-		quota_met = Global.quota_met
 		update_quota_display()
 	# Get references to the new nodes
 	passport = $Gameplay/InteractiveElements/Passport
@@ -187,15 +184,12 @@ func set_difficulty(level):
 	difficulty_level = level
 	match difficulty_level:
 		"Easy":
-			quota_target = 5
 			Global.max_strikes = 6
 			processing_time = 60
 		"Normal":
-			quota_target = 8
 			Global.max_strikes = 4
 			processing_time = 45
 		"Expert":
-			quota_target = 10
 			Global.max_strikes = 3
 			processing_time = 30
 			
@@ -472,6 +466,7 @@ func animate_mugshot_and_passport():
 	# Animate potato mugshot
 	tween.tween_property(mugshot_generator, "position:x", suspect_panel.position.x, 1)
 	tween.tween_property(mugshot_generator, "modulate:a", 1, 1)
+	
 	# Animate passport
 	tween.tween_property(passport, "modulate:a", 1, 2)
 	tween.tween_property(passport, "visible", true, 0).set_delay(1)
@@ -785,7 +780,6 @@ func go_to_game_win():
 	#$Gameplay/InteractiveElements/ApprovalStamp.visible = false
 	#$Gameplay/InteractiveElements/RejectionStamp.visible = false
 	Global.final_score = Global.score
-	Global.quota_met = quota_met
 	Global.shift += 1
 	print("ALERT: go_to_game_win() has been disabled")
 	# Use change_scene_to_packed to pass parameters
@@ -844,11 +838,11 @@ func process_decision(allowed):
 		shift_stats.potatoes_rejected += 1
 	
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
-		quota_met += 1
+		Global.quota_met += 1
 		correct_decision_streak += 1
 		
 		# Check if quota met
-		if quota_met >= quota_target:
+		if Global.quota_met >= Global.quota_target:
 			print("Quota complete!")
 			# Award survival bonus
 			var survival_bonus = 500
@@ -857,7 +851,7 @@ func process_decision(allowed):
 			
 			# Increase quota by initial target
 			var initial_quota = get_initial_quota()
-			quota_target += initial_quota
+			Global.quota_target += initial_quota
 			
 			# Optional: Generate new rules for variety
 			generate_rules()
@@ -915,7 +909,7 @@ func update_score_display():
 		$UI/Labels/ScoreLabel.text += " (x" + str(point_multiplier) + ")"
 
 func update_quota_display():
-	$UI/Labels/QuotaLabel.text = "Quota: " + str(quota_met) + " / " + str(quota_target * Global.shift)
+	$UI/Labels/QuotaLabel.text = "Quota: " + str(Global.quota_met) + " / " + str(Global.quota_target * Global.shift)
 
 func update_potato_texture():
 	print("Updating potato textures with character generator")

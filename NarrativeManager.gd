@@ -29,16 +29,23 @@ func start_shift_dialogue():
 	
 	match current_shift:
 		1:
-			timeline = Dialogic.start("shift1_start") 
+			# Debugging Purposes
+			timeline = Dialogic.start("final_confrontation")
+			#timeline = Dialogic.start("shift1_start") 
 		2: 
 			timeline = Dialogic.start("shift2_start")
 		3:
 			timeline = Dialogic.start("shift3_start")
 		_:
-			timeline = Dialogic.start("generic_shift_start")
+			timeline = Dialogic.start("final_confrontation")
 			
 	add_child(timeline)
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.timeline_ended.connect(_on_shift_dialogue_finished)
+
+func _on_dialogic_signal(argument):
+	if argument == "credits_ready":
+		get_tree().change_scene_to_file("res://main_scenes/scenes/end_credits/end_credits.tscn")
 
 func start_final_confrontation():
 	if dialogue_active:

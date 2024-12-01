@@ -10,13 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_woji0"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="9_2f41l"]
 [ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="9_arv36"]
+[ext_resource type="AudioStream" uid="uid://b2nmiog4e1mpn" path="res://assets/music/ambient_nothingness_main_ovani_sound.mp3" id="10_2f41l"]
 [ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
 [ext_resource type="Texture2D" uid="uid://fmqkliw6t33x" path="res://assets/suspect_panel/suspect_panel_front.png" id="10_foucb"]
-[ext_resource type="AudioStream" uid="uid://curch4bdxj8uk" path="res://assets/music/ambient_vol3_peace_main_ovani_sound.mp3" id="10_i6rjm"]
 [ext_resource type="PackedScene" uid="uid://msix881opujh" path="res://StatsManager.tscn" id="10_jgtln"]
 [ext_resource type="PackedScene" uid="uid://bnbp4h8nco0v2" path="res://NarrativeManager.tscn" id="11_qn1sc"]
 [ext_resource type="Texture2D" uid="uid://cwni5a4q3jj67" path="res://assets/suspect_panel/suspect_panel_top_bottom.png" id="12_n1tuu"]
-[ext_resource type="Texture2D" uid="uid://ceh27taly75na" path="res://assets/documents/passport-old.png" id="12_q7tid"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://assets/fonts/windows_command_prompt.ttf" id="13_wxn24"]
 [ext_resource type="Texture2D" uid="uid://cnrr6jblok4ky" path="res://assets/suspect_panel/suspect_panel_background.png" id="14_v4iji"]
 [ext_resource type="Texture2D" uid="uid://cvtdlyxlb5qaw" path="res://assets/suspect_panel/suspect_panel_document_slot.png" id="16_a857f"]
@@ -27,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="18_jl4i3"]
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="18_yiok2"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="20_pd2wg"]
+[ext_resource type="Texture2D" uid="uid://y3iyyicwxtsl" path="res://assets/documents/closed_passport_small/closed_passport_small.png" id="25_2f41l"]
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://prototyping/random_character_creation/character_generator.tscn" id="28_f6jf3"]
 [ext_resource type="Texture2D" uid="uid://dubo3sdxx8chn" path="res://assets/stamps/approval_stamp_3.png" id="28_uvib1"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="29_rft0e"]
@@ -219,13 +219,14 @@ point_count = 24
 [node name="Root" type="Node2D"]
 script = ExtResource("1_s4bva")
 
-[node name="BorderRunnerSystem" parent="." node_paths=PackedStringArray("queue_manager", "score_label", "strike_label", "alert_label", "alert_timer") instance=ExtResource("29_rft0e")]
+[node name="BorderRunnerSystem" parent="." node_paths=PackedStringArray("queue_manager", "score_label", "strike_label", "alert_label", "alert_timer", "missile_collision_shape") instance=ExtResource("29_rft0e")]
 position = Vector2(3, 0)
 queue_manager = NodePath("../SystemManagers/QueueManager")
 score_label = NodePath("../UI/Labels/ScoreLabel")
 strike_label = NodePath("../UI/Labels/StrikesLabel")
 alert_label = NodePath("../UI/Labels/MarginContainer/AlertLabel")
 alert_timer = NodePath("../SystemManagers/Timers/AlertTimer")
+missile_collision_shape = NodePath("Area2D/CollisionShape2D")
 runner_chance = 0.025
 
 [node name="Area2D" type="Area2D" parent="BorderRunnerSystem"]
@@ -433,11 +434,15 @@ grow_vertical = 2
 [node name="AlertLabel" type="Label" parent="UI/Labels/MarginContainer"]
 z_index = 15
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 0.00392157, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("6_rd1c0")
 theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="SystemManagers" type="Control" parent="."]
 layout_mode = 3
@@ -468,7 +473,8 @@ offset_bottom = 40.0
 bus = &"SFX"
 
 [node name="BackgroundMusicPlayer" parent="SystemManagers/AudioManager" instance=ExtResource("9_2f41l")]
-stream = ExtResource("10_i6rjm")
+stream = ExtResource("10_2f41l")
+parameters/looping = true
 
 [node name="QueueManager" type="Node2D" parent="SystemManagers"]
 script = ExtResource("10_a4p7n")
@@ -501,7 +507,7 @@ position = Vector2(1074, 472)
 scale = Vector2(1.05816, 1.06849)
 
 [node name="SuspectPanelTop" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_index = 2
+z_index = 4
 z_as_relative = false
 texture = ExtResource("10_foucb")
 
@@ -536,6 +542,8 @@ scale = Vector2(2.64484, 2.59444)
 texture = ExtResource("16_p2ayh")
 
 [node name="MugshotPhotoGenerator" parent="Gameplay" instance=ExtResource("28_f6jf3")]
+z_index = 2
+z_as_relative = false
 position = Vector2(1405, 415)
 scale = Vector2(2.5, 2.5)
 
@@ -552,11 +560,19 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="PassportSpawnPoints" type="Node2D" parent="Gameplay/InteractiveElements"]
+
+[node name="BeginPoint" type="Node2D" parent="Gameplay/InteractiveElements/PassportSpawnPoints"]
+position = Vector2(1079, 441)
+
+[node name="EndPoint" type="Node2D" parent="Gameplay/InteractiveElements/PassportSpawnPoints"]
+position = Vector2(1079, 584)
+
 [node name="Passport" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-z_index = 2
+z_index = 1
 z_as_relative = false
 position = Vector2(1730, 426)
-texture = ExtResource("12_q7tid")
+texture = ExtResource("25_2f41l")
 
 [node name="ClosedPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
 visible = false
@@ -574,6 +590,7 @@ scale = Vector2(2.42121, 2.42121)
 texture = ExtResource("17_mr1ft")
 
 [node name="OpenPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
+visible = false
 
 [node name="PassportPhotoGenerator" parent="Gameplay/InteractiveElements/Passport/OpenPassport" instance=ExtResource("28_f6jf3")]
 z_index = 2

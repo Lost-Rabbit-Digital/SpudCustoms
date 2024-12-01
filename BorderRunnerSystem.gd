@@ -20,6 +20,8 @@ class_name BorderRunnerSystem
 ## Label used to display alerts and notifications to the player
 @export var alert_label: Label
 @export var alert_timer: Timer
+@export var missile_collision_shape: CollisionShape2D  # Reference to missile zone shape
+
 
 @export_group("Runner System")
 @export_subgroup("Spawn Settings")
@@ -82,6 +84,7 @@ class_name BorderRunnerSystem
 @onready var crater_system = $CraterSystem
 
 # Internal state tracking
+var is_enabled = true  # Track if system is enabled
 var runner_streak: int = 0
 var time_since_last_run: float = 0.0
 var active_runner = null
@@ -103,6 +106,7 @@ func _ready():
 		add_child(missile_sprite)
 	missile_sprite.visible = false
 	missile_sprite.z_index = 15
+	missile_collision_shape = $Area2D/CollisionShape2D
 	
 	# Configure difficulty level and set runner chance based on difficulty level
 	difficulty_level = Global.difficulty_level
@@ -321,6 +325,8 @@ func _input(event):
 					launch_missile(event.position)
 
 func _unhandled_input(event):
+	if not is_enabled:
+		return
 	if crater_spawn_on_click == true:
 		if event is InputEventMouseButton:
 			if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
@@ -461,6 +467,21 @@ func handle_successful_hit():
 	
 	clean_up_runner()
 	
+	
+func enable():
+	is_enabled = true
+	if missile_collision_shape:
+		missile_collision_shape.disabled = false
+
+func disable():
+	is_enabled = false
+	if missile_collision_shape:
+		missile_collision_shape.disabled = true
+	# Clean up any active runners or missiles
+	# TODO: Add cleanup code here if needed
+	clean_up_runner()
+
+
 func clean_up_runner():
 	print("Cleaning up runner")
 	if active_runner:
@@ -569,3 +590,14 @@ func check_stamp_accuracy(stamp_pos: Vector2, passport: Node2D) -> bool:
 	
 	# Return true if within 10% of perfect placement
 	return abs(1.0 - accuracy) <= 0.1
+
+func get_missile_zone() -> Rect2:
+	if not is_enabled or not missile_collision_shape:
+		return Rect2()
+		
+	var shape = missile_collision_shape.shape
+	if shape is RectangleShape2D:
+		var extents = shape.extents
+		var pos = missile_collision_shape.global_position
+		return Rect2(pos - extents, extents * 2)
+	return Rect2()

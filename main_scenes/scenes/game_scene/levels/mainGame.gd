@@ -14,8 +14,6 @@ var current_potato_info
 var current_potato
 
 # Track win and lose parameters
-var quota_met = 0  # Number of correct decisions
-var quota_target = 8  # Required correct decisions
 var difficulty_level
 
 # Track multipliers and streaks
@@ -25,6 +23,8 @@ var correct_decision_streak = 0
 # timer for limiting shift processing times
 var processing_time = 60  # seconds
 var current_timer = 0 # seconds
+var original_runner_chance = 0.15  # Match your current chance value
+
 
 # storing and sending rule assignments
 signal rules_updated(new_rules)
@@ -56,6 +56,8 @@ var selected_stamp: Node = null  # Tracks which stamp is currently selected
 
 # Passport dragging system
 var passport: Sprite2D
+var passport_spawn_point_begin: Node2D
+var passport_spawn_point_end: Node2D
 var inspection_table: Sprite2D
 var suspect_panel: Sprite2D
 var suspect_panel_front: Sprite2D
@@ -92,7 +94,8 @@ var shift_stats: ShiftStats
 @onready var shift_summary = preload("res://ShiftSummaryScreen.tscn")
 
 ## Label used to display alerts and notifications to the player
-@onready var alert_label = $UI/Labels/AlertLabel
+@onready var alert_label = $UI/Labels/MarginContainer/AlertLabel
+@onready var alert_timer = $SystemManagers/Timers/AlertTimer
 
 func _ready():
 	update_cursor("default")
@@ -133,10 +136,11 @@ func _ready():
 		update_score_display()
 
 	if Global.quota_met > 0:
-		quota_met = Global.quota_met
 		update_quota_display()
 	# Get references to the new nodes
 	passport = $Gameplay/InteractiveElements/Passport
+	passport_spawn_point_begin = $Gameplay/InteractiveElements/PassportSpawnPoints/BeginPoint
+	passport_spawn_point_end = $Gameplay/InteractiveElements/PassportSpawnPoints/EndPoint
 	guide = $Gameplay/InteractiveElements/Guide
 	inspection_table = $Gameplay/InspectionTable
 	suspect_panel = $Gameplay/SuspectPanel
@@ -152,6 +156,7 @@ func _ready():
 	# add border runner system
 	border_runner_system = $BorderRunnerSystem
 	
+	Dialogic.timeline_started.connect(_on_dialogue_started)
 	Dialogic.timeline_ended.connect(_on_dialogue_finished)
 		
 	if Global.StoryState.NOT_STARTED:
@@ -159,7 +164,7 @@ func _ready():
 		disable_controls()
 
 func end_shift():
-	if quota_met >= quota_target:
+	if Global.quota_met >= Global.quota_target:
 		narrative_manager.start_shift_dialogue()
 		disable_controls()
 	else:
@@ -200,15 +205,12 @@ func set_difficulty(level):
 	difficulty_level = level
 	match difficulty_level:
 		"Easy":
-			quota_target = 5
 			Global.max_strikes = 6
 			processing_time = 60
 		"Normal":
-			quota_target = 8
 			Global.max_strikes = 4
 			processing_time = 45
 		"Expert":
-			quota_target = 10
 			Global.max_strikes = 3
 			processing_time = 30
 			
@@ -470,27 +472,27 @@ func move_potato_to_office(potato_person):
 	print("Started animate mugshot and passport tween animation")
 	
 func animate_mugshot_and_passport():
-	passport = $Gameplay/InteractiveElements/Passport
 	print("Animating mugshot and passport")
 	update_potato_info_display()
 
 	# Reset positions and visibility
 	mugshot_generator.position.x = suspect_panel.position.x + suspect_panel_front.texture.get_width()
 	passport.visible = false
-	passport.position = Vector2(suspect_panel.position.x, suspect_panel.position.y)
-	close_passport_action()
+	passport.z_index = 1
+	passport.position = Vector2(passport_spawn_point_begin.position.x, passport_spawn_point_begin.position.y)
 
 	var tween = create_tween()
 	tween.set_parallel(true)
 
 	# Animate potato mugshot
 	tween.tween_property(mugshot_generator, "position:x", suspect_panel.position.x, 1)
-	tween.tween_property(mugshot_generator, "modulate:a", 1, 2)
-	tween.tween_property(passport, "modulate:a", 1, 2)
+	tween.tween_property(mugshot_generator, "modulate:a", 1, 1)
+	
 	# Animate passport
+	tween.tween_property(passport, "modulate:a", 1, 2)
 	tween.tween_property(passport, "visible", true, 0).set_delay(1)
-	tween.tween_property(passport, "position:y", suspect_panel.position.y + suspect_panel_front.texture.get_height() / 5, 1).set_delay(1)
-	tween.tween_property(passport, "z_index", 3, 0).set_delay(2)
+	tween.tween_property(passport, "position:y", passport_spawn_point_end.position.y, 1).set_delay(2)
+	tween.tween_property(passport, "z_index", 5, 0).set_delay(3)
 
 	tween.chain().tween_callback(func(): print("Finished animating mugshot and passport"))
 	
@@ -599,11 +601,12 @@ func check_cursor_status(mouse_pos):
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 			update_cursor("grab")
 	else:
-		var area2d_rect = Rect2($BorderRunnerSystem/Area2D.global_position, get_area2d_size($BorderRunnerSystem/Area2D))
-		if area2d_rect.has_point(mouse_pos):
-			update_cursor("target")
-		else:
-			update_cursor("default")
+		if border_runner_system and border_runner_system.is_enabled:
+			var missile_zone = border_runner_system.get_missile_zone()
+			if missile_zone and missile_zone.has_point(mouse_pos):
+				update_cursor("target")
+				return
+		update_cursor("default")
 			
 	
 func _process(_delta):
@@ -801,7 +804,6 @@ func go_to_game_win():
 	#$Gameplay/InteractiveElements/ApprovalStamp.visible = false
 	#$Gameplay/InteractiveElements/RejectionStamp.visible = false
 	Global.final_score = Global.score
-	Global.quota_met = quota_met
 	Global.shift += 1
 	print("ALERT: go_to_game_win() has been disabled")
 	# Use change_scene_to_packed to pass parameters
@@ -811,7 +813,7 @@ func go_to_game_win():
 
 func timed_out():
 	# Alert the player
-	# Global.display_red_alert(alert_label, alert_timer, "You took too long and they left, officer... \n+1 Strike!")
+	Global.display_red_alert(alert_label, alert_timer, "You took too long and they left, officer... \n+1 Strike!")
 	
 	# Reset stats and add strike
 	correct_decision_streak = 0
@@ -860,11 +862,11 @@ func process_decision(allowed):
 		shift_stats.potatoes_rejected += 1
 	
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
-		quota_met += 1
+		Global.quota_met += 1
 		correct_decision_streak += 1
 		
 		# Check if quota met
-		if quota_met >= quota_target:
+		if Global.quota_met >= Global.quota_target:
 			print("Quota complete!")
 			end_shift()
 			#go_to_game_win() # TODO: ENABLE FOR FULL RELEASE
@@ -879,10 +881,10 @@ func process_decision(allowed):
 		# correct decisions
 		# UV scanning will award 250 points per finding
 		var decision_points = 250 * point_multiplier
-		# Global.display_green_alert(alert_label, alert_timer, "You made the right choice, officer.\n+" + str(decision_points) + " points!")
+		Global.display_green_alert(alert_label, alert_timer, "You made the right choice, officer.\n+" + str(decision_points) + " points!")
 		Global.add_score(decision_points)
 	else:
-		# Global.display_red_alert(alert_label, alert_timer, "You have caused unnecessary suffering, officer...\n+1 Strike!")
+		Global.display_red_alert(alert_label, alert_timer, "You have caused unnecessary suffering, officer...\n+1 Strike!")
 		correct_decision_streak = 0
 		point_multiplier = 1.0
 		Global.strikes += 1
@@ -908,7 +910,7 @@ func update_score_display():
 		$UI/Labels/ScoreLabel.text += " (x" + str(point_multiplier) + ")"
 
 func update_quota_display():
-	$UI/Labels/QuotaLabel.text = "Quota: " + str(quota_met) + " / " + str(quota_target * Global.shift)
+	$UI/Labels/QuotaLabel.text = "Quota: " + str(Global.quota_met) + " / " + str(Global.quota_target * Global.shift)
 
 func update_potato_texture():
 	print("Updating potato textures with character generator")
@@ -1313,40 +1315,19 @@ func _exit_tree():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 
+func _on_dialogue_started():
+	disable_controls()
+
+
 func _on_dialogue_finished():
+	Global.quota_met = 0
+	Global.strikes = 0
 	enable_controls()
 	
 	if Global.StoryState.COMPLETED:
 		# Game complete, show credits or return to menu
 		get_tree().change_scene_to_file("res://main_scenes/scenes/menus/credits/credits.tscn")
-	else:
-		# Show shift summary and continue game
-		var summary = shift_summary.instantiate()
-		add_child(summary)
-		
-		# Calculate final time taken 
-		shift_stats.time_taken = processing_time - current_timer
-		shift_stats.processing_time_left = current_timer
-		
-		var stats = {
-			"shift": Global.shift,
-			"time_taken": shift_stats.time_taken,
-			"score": Global.score,
-			"missiles_fired": shift_stats.missiles_fired,
-			"missiles_hit": shift_stats.missiles_hit,
-			"perfect_hits": shift_stats.perfect_hits,
-			"total_stamps": shift_stats.total_stamps,
-			"potatoes_approved": shift_stats.potatoes_approved,
-			"potatoes_rejected": shift_stats.potatoes_rejected,
-			"perfect_stamps": shift_stats.perfect_stamps,
-			"speed_bonus": shift_stats.get_speed_bonus(),
-			"accuracy_bonus": shift_stats.get_accuracy_bonus(),
-			"perfect_bonus": shift_stats.get_missile_bonus(),
-			"final_score": Global.score
-		}
-		
-		summary.show_summary(stats)
-
+	
 func disable_controls():
 	# Disable player interaction during dialogue
 	set_process_input(false)
@@ -1355,6 +1336,10 @@ func disable_controls():
 	$Gameplay/InteractiveElements/RejectionStamp.visible = false
 	$Gameplay/InteractiveElements/Guide.visible = false
 	$Gameplay/InteractiveElements/Passport.visible = false
+	# Disable border runner system and set spawn chance to 0
+	if border_runner_system:
+		border_runner_system.disable()
+		border_runner_system.runner_chance = 0.0
 
 func enable_controls():
 	# Re-enable controls after dialogue
@@ -1363,3 +1348,7 @@ func enable_controls():
 	$Gameplay/InteractiveElements/ApprovalStamp.visible = true
 	$Gameplay/InteractiveElements/RejectionStamp.visible = true 
 	$Gameplay/InteractiveElements/Guide.visible = true
+	# Re-enable border runner system and restore original spawn chance
+	if border_runner_system:
+		border_runner_system.enable()
+		border_runner_system.runner_chance = original_runner_chance

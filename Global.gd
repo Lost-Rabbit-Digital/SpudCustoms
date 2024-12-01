@@ -3,12 +3,13 @@ extends Node
 # Existing variables
 var shift = 1
 var final_score = 0
-var quota_met = 0
-var build_type = "Demo Release"
-var difficulty_level = "Normal" # Can be "Easy", "Normal", or "Expert"
+var build_type = "Full Release"
+var difficulty_level = "Easy" # Can be "Easy", "Normal", or "Expert"
 var strikes = 0
 var max_strikes = 4
 var current_game_stats: Dictionary = {}
+var quota_target = 8  # Required correct decisions
+var quota_met = 0   # Number of correct decisions
 
 
 # Add story state enum
@@ -45,6 +46,7 @@ func _ready():
 	Steam.steamInit()
 	score = final_score
 	load_high_scores()
+	set_difficulty(difficulty_level)
 	
 	
 func _init():
@@ -196,20 +198,23 @@ func advance_shift():
 	save_game_state()
 
 # Update save/load functions
+# Update save_game_state
 func save_game_state():
 	var save_data = {
 		"shift": shift,
 		"final_score": final_score,
 		"quota_met": quota_met,
+		"quota_target": quota_target,
 		"difficulty_level": difficulty_level,
 		"high_scores": high_scores,
-		"story_state": current_story_state # Add this
+		"story_state": current_story_state
 	}
 	
 	var save_file = FileAccess.open("user://gamestate.save", FileAccess.WRITE)
 	if save_file:
 		save_file.store_var(save_data)
 
+# Update load_game_state
 func load_game_state():
 	if FileAccess.file_exists("user://gamestate.save"):
 		var save_file = FileAccess.open("user://gamestate.save", FileAccess.READ)
@@ -218,9 +223,10 @@ func load_game_state():
 			shift = data.get("shift", 1)
 			final_score = data.get("final_score", 0)
 			quota_met = data.get("quota_met", 0)
+			quota_target = data.get("quota_target", 8)
 			difficulty_level = data.get("difficulty_level", "Expert")
 			high_scores = data.get("high_scores", {"Easy": 0, "Normal": 0, "Expert": 0})
-			current_story_state = data.get("story_state", StoryState.NOT_STARTED) # Add this
+			current_story_state = data.get("story_state", StoryState.NOT_STARTED)
 			score = final_score
 			score_updated.emit(score)
 
@@ -243,6 +249,13 @@ func get_high_score(difficulty: String = "") -> int:
 func set_difficulty(new_difficulty: String):
 	if new_difficulty in ["Easy", "Normal", "Expert"]:
 		difficulty_level = new_difficulty
+		match difficulty_level:
+			"Easy":
+				quota_target = 5
+			"Normal":
+				quota_target = 8
+			"Expert":
+				quota_target = 10
 		save_game_state()
 
 # Helper function to format score with commas

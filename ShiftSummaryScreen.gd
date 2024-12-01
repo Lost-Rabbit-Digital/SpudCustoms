@@ -152,20 +152,20 @@ func play_entry_animation():
 func generate_test_stats() -> Dictionary:
 	return {
 		"shift": 5,                    # Current shift number
-		"time_taken": 970.0,           # Time taken in seconds
+		"time_taken": 1970.0,           # Time taken in seconds
 		"processing_time_left": 15.0,  # Time remaining
-		"score": 7280,                 # Base score
-		"missiles_fired": 333,
-		"missiles_hit": 111,
-		"perfect_hits": 15,
-		"total_stamps": 144,
-		"potatoes_approved": 80,
-		"potatoes_rejected": 64,
-		"perfect_stamps": 12,
-		"speed_bonus": 1200,
-		"accuracy_bonus": 5000,
-		"perfect_bonus": 2000,
-		"final_score": 15480
+		"score": 1337,                 # Base score
+		"missiles_fired": 666,
+		"missiles_hit": 666,
+		"perfect_hits": 666,
+		"total_stamps": 666,
+		"potatoes_approved": 666,
+		"potatoes_rejected": 666,
+		"perfect_stamps": 666,
+		"speed_bonus": 666,
+		"accuracy_bonus": 666,
+		"perfect_bonus": 666,
+		"final_score": 0
 	}
 
 

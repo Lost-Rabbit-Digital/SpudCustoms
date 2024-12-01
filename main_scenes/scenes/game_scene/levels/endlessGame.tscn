@@ -451,6 +451,7 @@ offset_bottom = 40.0
 
 [node name="BackgroundMusicPlayer" parent="SystemManagers/AudioManager" instance=ExtResource("9_7ymkl")]
 stream = ExtResource("10_7ymkl")
+parameters/looping = true
 
 [node name="QueueManager" type="Node2D" parent="SystemManagers"]
 script = ExtResource("9_l36ds")

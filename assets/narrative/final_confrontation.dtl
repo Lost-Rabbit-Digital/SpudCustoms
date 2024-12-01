@@ -273,8 +273,6 @@ narrator: And though the future is uncertain, one thing is clear.
 narrator: In the new Spud, every potato has a chance to grow, to thrive, to be all that they can be.
 [background arg="res://assets/narrative/credits.png" fade="2.0"]
 narrator: And that is a future worth fighting for.
-leave narrator
-[wait_input]
 The End
-[wait_input]
-# Load credits scene
+leave narrator
+[signal arg="credits_ready"]

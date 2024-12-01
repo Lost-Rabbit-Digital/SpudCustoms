@@ -57,6 +57,8 @@ func _on_options_button_pressed():
 
 func _on_main_menu_button_pressed():
 	%ConfirmMainMenu.popup_centered()
+	Global.strikes = 0
+	Global.quota_met = 0
 	popup_open = %ConfirmMainMenu
 
 func _on_exit_button_pressed():
