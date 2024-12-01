@@ -15,8 +15,17 @@ func load_scene(scene_path : String):
 	SceneLoader.load_scene(scene_path)
 
 func play_game():
-	SceneLoader.load_scene(game_scene_path)
-	
+	if Global.build_type == "Full Release":
+		SceneLoader.load_scene(game_scene_path)
+	else:
+		# Try to open in Steam overlay browser first
+		var store_url = "https://store.steampowered.com/app/3291880/Spud_Customs/?utm_source=demo"
+		if Steam.isSteamRunning():
+			Steam.activateGameOverlayToStore(3291880)
+		else:
+			# Fallback to system default browser if Steam isn't running
+			OS.shell_open(store_url)
+			
 func play_endless():
 	SceneLoader.load_scene(endless_scene_path)
 	
