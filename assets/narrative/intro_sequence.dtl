@@ -1,40 +1,58 @@
-### Start intro_sequence.dtl
+# Start intro_sequence.dtl
 [background arg="res://assets/narrative/nation_of_spud_1.png" fade="0.0"]
 join narrator [z_index="1"]
+[sound path="res://assets/audio/phone typing 3.wav" volume="0.0"]
 narrator: Welcome to the great nation of Spud, citizen.
+[sound path="res://assets/audio/phone typing 2.wav" volume="0.0"]
 narrator: A land of prosperity and opportunity for all potatoes.
+[sound path="res://assets/audio/phone typing 3.wav" volume="0.0"]
 narrator: But our beloved Spud faces challenges, and we need your help.
+[sound path="res://assets/audio/phone typing 2.wav" volume="0.0"]
 narrator: You've been selected for a crucial role in protecting our borders.
 leave narrator
 
 [background arg="res://assets/narrative/checkpoint_interior.png" fade="2.0"]
 join narrator [z_index="1"]
+[sound path="res://assets/audio/phone typing 2.wav" volume="0.0"]
 narrator: Your duty\: to process incoming potatoes and maintain our way of life.
+[sound path="res://assets/audio/phone typing 3.wav" volume="0.0"]
 narrator: Don't forget, your family's well-being depends on your performance.
+[sound path="res://assets/audio/phone typing 2.wav" volume="0.0"]
 narrator: After all, you wouldn't want them to end up like...
+[sound path="res://assets/audio/phone typing 2.wav" volume="0.0"]
 narrator: [i]clears throat[/i] Nevermind. Let's move on.
 leave narrator
 
 [background arg="res://assets/narrative/great_wall_of_spud.png" fade="2.0"]
 join narrator [z_index="1"]
+[sound path="res://assets/audio/phone typing 3.wav" volume="0.0"]
 narrator: BEHOLD! The mighty wall that safeguards our nation.
+[sound path="res://assets/audio/phone typing 2.wav" volume="0.0"]
 narrator: This is where you'll serve Spud, ensuring only the worthy enter.
+[sound path="res://assets/audio/phone typing 2.wav" volume="0.0"]
 narrator: Your vigilance is our first line of defense against undesirable elements.
-
 join npc_1 [z_index="1"]
+[sound path="res://assets/audio/phone typing 3.wav" volume="0.0"]
 npc_1: [i]whispers[/i] <Have you noticed the food shortages lately?/The rations keep getting smaller, don't they?/Something's not right with the food supply.> Strange, with all the new Root Reserve shipments...
 leave npc_1
+[sound path="res://assets/audio/phone typing 3.wav" volume="0.0"]
 narrator: Like they say, a good spud is a smooth spud. Any lumps could be...problematic.
-leave narrator
 
 [background arg="res://assets/narrative/supervisor_presenting.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
+[sound path="res://assets/audio/phone typing 2.wav" volume="0.0"]
 supervisor_russet: Ah, the new sprout has finally arrived. Welcome aboard.
+[sound path="res://assets/audio/phone typing 3.wav" volume="0.0"]
 supervisor_russet: Listen carefully, your role is vital to Spud's security.
+[sound path="res://assets/audio/phone typing 2.wav" volume="0.0"]
 supervisor_russet: By the authority vested in me, I appoint you as a Customs Officer of glorious Spud.
+[sound path="res://assets/audio/phone typing 2.wav" volume="0.0"]
 supervisor_russet: [i]firmly places official cap on your head[/i]
+[sound path="res://assets/audio/phone typing 3.wav" volume="0.0"]
 supervisor_russet: Uphold our laws, protect our borders. Spud's future depends on you.
+[sound path="res://assets/audio/phone typing 3.wav" volume="0.0"]
 supervisor_russet: Any questions before you begin?
+
 set {initial_response} = "none"
 - "I'm ready to serve Spud with all my starch!"
 	set {initial_response} = "eager"
@@ -44,20 +62,29 @@ set {initial_response} = "none"
 	set {initial_response} = "observant"
 
 if {initial_response} == "eager":
+	[sound path="res://assets/audio/phone typing 2.wav" volume="0.0"]
 	supervisor_russet: [i]broad smile[/i] Excellent! That's the kind of enthusiasm we need.
+	[sound path="res://assets/audio/phone typing 3.wav" volume="0.0"]
 	supervisor_russet: With dedication like that, you might even earn yourself a Root Reserve commendation.
+	[sound path="res://assets/audio/phone typing 2.wav" volume="0.0"]
 	supervisor_russet: [i]claps your back heartily[/i] Keep that attitude, sprout. You'll do just fine.
 	leave supervisor_russet
 
 if {initial_response} == "questioning":
+	[sound path="res://assets/audio/phone typing 2.wav" volume="0.0"]
 	supervisor_russet: [i]smile falters slightly[/i] They're... processed. According to protocol.
+	[sound path="res://assets/audio/phone typing 3.wav" volume="0.0"]
 	supervisor_russet: [i]straightens up[/i] Root Reserve handles all the details. No need to concern yourself.
+	[sound path="res://assets/audio/phone typing 2.wav" volume="0.0"]
 	supervisor_russet: [i]voice hardening[/i] Focus on your duties. Nothing more.
 	leave supervisor_russet
 
 else:
+	[sound path="res://assets/audio/phone typing 2.wav" volume="0.0"]
 	supervisor_russet: [i]eyes narrow dangerously[/i] Nervous? Nonsense.
+	[sound path="res://assets/audio/phone typing 3.wav" volume="0.0"]
 	supervisor_russet: The only ones who need be nervous are those who threaten Spud's security.
+	[sound path="res://assets/audio/phone typing 3.wav" volume="0.0"]
 	supervisor_russet: [i]adjusts your cap uncomfortably tight[/i] I trust that won't be you, will it?
 	leave supervisor_russet
 
