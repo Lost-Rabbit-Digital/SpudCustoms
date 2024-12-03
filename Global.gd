@@ -47,6 +47,9 @@ func _ready():
 	score = final_score
 	load_high_scores()
 	set_difficulty(difficulty_level)
+	# Check for and download cloud saves when game starts
+	if Steam.isSteamRunning():
+		download_cloud_saves()
 	
 	
 func _init():
@@ -197,8 +200,7 @@ func advance_shift():
 	shift += 1
 	save_game_state()
 
-# Update save/load functions
-# Update save_game_state
+# Save/load functions
 func save_game_state():
 	var save_data = {
 		"shift": shift,
@@ -207,33 +209,59 @@ func save_game_state():
 		"quota_target": quota_target,
 		"difficulty_level": difficulty_level,
 		"high_scores": high_scores,
-		"story_state": current_story_state
+		"story_state": current_story_state,
+		"current_game_stats": current_game_stats
 	}
 	
 	var save_file = FileAccess.open("user://gamestate.save", FileAccess.WRITE)
 	if save_file:
 		save_file.store_var(save_data)
+		
+		if Steam.isSteamRunning():
+			Steam.fileWrite("gamestate.save", FileAccess.get_file_as_bytes("user://gamestate.save"))
+			Steam.fileWrite("highscores.save", FileAccess.get_file_as_bytes("user://highscores.save"))
 
 # Update load_game_state
 func load_game_state():
-	if FileAccess.file_exists("user://gamestate.save"):
+	var data = {}
+	
+	# Try loading from cloud first if Steam is running
+	if Steam.isSteamRunning() and Steam.fileExists("gamestate.save"):
+		var file_size = Steam.getFileSize("gamestate.save")
+		var file_content = Steam.fileRead("gamestate.save", file_size)
+		
+		var temp_file = FileAccess.open("user://temp_gamestate.save", FileAccess.WRITE)
+		if temp_file:
+			temp_file.store_buffer(file_content)
+			temp_file = FileAccess.open("user://temp_gamestate.save", FileAccess.READ)
+			data = temp_file.get_var()
+	# Fall back to local save if cloud save fails or Steam isn't running
+	elif FileAccess.file_exists("user://gamestate.save"):
 		var save_file = FileAccess.open("user://gamestate.save", FileAccess.READ)
 		if save_file:
-			var data = save_file.get_var()
-			shift = data.get("shift", 1)
-			final_score = data.get("final_score", 0)
-			quota_met = data.get("quota_met", 0)
-			quota_target = data.get("quota_target", 8)
-			difficulty_level = data.get("difficulty_level", "Expert")
-			high_scores = data.get("high_scores", {"Easy": 0, "Normal": 0, "Expert": 0})
-			current_story_state = data.get("story_state", StoryState.NOT_STARTED)
-			score = final_score
-			score_updated.emit(score)
+			data = save_file.get_var()
+			
+	# Load the data if we got any
+	if not data.is_empty():
+		shift = data.get("shift", 1)
+		final_score = data.get("final_score", 0)
+		quota_met = data.get("quota_met", 0)
+		quota_target = data.get("quota_target", 8)
+		difficulty_level = data.get("difficulty_level", "Expert")
+		high_scores = data.get("high_scores", {"Easy": 0, "Normal": 0, "Expert": 0})
+		current_story_state = data.get("story_state", StoryState.NOT_STARTED)
+		current_game_stats = data.get("current_game_stats", {})
+		score = final_score
+		score_updated.emit(score)
 
+# Modify save_high_scores()
 func save_high_scores():
 	var save_file = FileAccess.open("user://highscores.save", FileAccess.WRITE)
 	if save_file:
 		save_file.store_var(high_scores)
+		
+		if Steam.isSteamRunning():
+			Steam.fileWrite("highscores.save", FileAccess.get_file_as_bytes("user://highscores.save"))
 
 func load_high_scores():
 	if FileAccess.file_exists("user://highscores.save"):
@@ -348,3 +376,27 @@ func display_green_alert(alert_label, alert_timer, text):
 	alert_label.add_theme_color_override("font_color", Color.GREEN)
 	# Hide the alert after a few seconds
 	clear_alert_after_delay(alert_label, alert_timer)
+
+
+func download_cloud_saves():
+	if not Steam.isSteamRunning():
+		return
+		
+	if Steam.fileExists("gamestate.save"):
+		var file_size = Steam.getFileSize("gamestate.save")
+		var file_content = Steam.fileRead("gamestate.save", file_size)
+		
+		var local_file = FileAccess.open("user://gamestate.save", FileAccess.WRITE)
+		if local_file:
+			local_file.store_buffer(file_content)
+			
+	if Steam.fileExists("highscores.save"):
+		var scores_size = Steam.getFileSize("highscores.save")
+		var scores_content = Steam.fileRead("highscores.save", scores_size)
+		
+		var local_scores = FileAccess.open("user://highscores.save", FileAccess.WRITE)
+		if local_scores:
+			local_scores.store_buffer(scores_content)
+			
+	load_game_state()
+	load_high_scores()
