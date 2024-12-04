@@ -29,7 +29,6 @@ func play_game():
 func play_endless():
 	SceneLoader.load_scene(endless_scene_path)
 	
-
 func _open_sub_menu(menu : Control):
 	sub_menu = menu
 	sub_menu.show()

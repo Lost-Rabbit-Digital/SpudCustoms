@@ -1,6 +1,6 @@
 [gd_scene load_steps=66 format=3 uid="uid://bdknelqd4ojod"]
 
-[ext_resource type="Script" uid="uid://bak2ox7wh15te" path="res://main_scenes/scenes/game_scene/levels/endlessGame.gd" id="1_s8p0h"]
+[ext_resource type="Script" uid="uid://bak2ox7wh15te" path="res://main_scenes/scenes/game_scene/levels/endless/endlessGame.gd" id="1_s8p0h"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="2_udo16"]
 [ext_resource type="Texture2D" uid="uid://doml0udrwe6pe" path="res://assets/Background.png" id="3_3evfx"]
 [ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/level/customs_office.png" id="4_qqvh6"]
@@ -219,13 +219,13 @@ point_count = 24
 script = ExtResource("1_s8p0h")
 
 [node name="BorderRunnerSystem" parent="." node_paths=PackedStringArray("queue_manager", "score_label", "strike_label", "alert_label", "alert_timer") instance=ExtResource("2_udo16")]
-position = Vector2(3, 0)
 queue_manager = NodePath("../SystemManagers/QueueManager")
 score_label = NodePath("../UI/Labels/ScoreLabel")
 strike_label = NodePath("../UI/Labels/StrikesLabel")
 alert_label = NodePath("../UI/Labels/MarginContainer/AlertLabel")
 alert_timer = NodePath("../SystemManagers/Timers/AlertTimer")
 runner_chance = 0.025
+num_gibs = 75
 
 [node name="Area2D" type="Area2D" parent="BorderRunnerSystem"]
 

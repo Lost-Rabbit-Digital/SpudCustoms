@@ -8,12 +8,7 @@
 
 [node name="MasterOptionsMenu" instance=ExtResource("1_jsqbe")]
 
-[node name="Game" parent="." index="0" instance=ExtResource("5_7q4gu")]
-visible = false
-layout_mode = 2
-anchors_preset = 0
-
-[node name="TabContainer" parent="." index="1"]
+[node name="TabContainer" parent="." index="0"]
 current_tab = 2
 
 [node name="Controls" parent="TabContainer" index="1" instance=ExtResource("2_47rvj")]
@@ -29,3 +24,8 @@ metadata/_tab_index = 1
 [node name="Video" parent="TabContainer" index="3" instance=ExtResource("4_gifms")]
 layout_mode = 2
 metadata/_tab_index = 2
+
+[node name="Game" parent="TabContainer" index="4" instance=ExtResource("5_7q4gu")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3

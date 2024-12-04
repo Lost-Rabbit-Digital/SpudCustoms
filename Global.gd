@@ -4,7 +4,7 @@ extends Node
 var shift = 1
 var final_score = 0
 var build_type = "Full Release"
-var difficulty_level = "Normal" # Can be "Easy", "Normal", or "Expert"
+var difficulty_level = "Expert" # Can be "Easy", "Normal", or "Expert"
 var strikes = 0
 var max_strikes = 4
 var current_game_stats: Dictionary = {}
@@ -375,6 +375,12 @@ func clear_alert_after_delay(alert_label, alert_timer):
 	alert_label.add_theme_color_override("font_color", Color.BLUE)
 
 func display_red_alert(alert_label, alert_timer, text):
+	# Load and play the audio file
+	var audio_player = AudioStreamPlayer.new()
+	audio_player.stream = load("res://assets/audio/Task Fail Harp 001.wav")
+	audio_player.volume_db = -10  # Reduce volume by 10 decibels
+	add_child(audio_player)
+	audio_player.play()
 	# Display the alert
 	alert_label.visible = true
 	# Update the text
@@ -385,6 +391,12 @@ func display_red_alert(alert_label, alert_timer, text):
 	clear_alert_after_delay(alert_label, alert_timer)
 	
 func display_green_alert(alert_label, alert_timer, text):
+	# Load and play the audio file
+	var audio_player = AudioStreamPlayer.new()
+	audio_player.stream = load("res://assets/audio/Task Accept Ensemble 001.wav")
+	audio_player.volume_db = -15  # Reduce volume by 10 decibels
+	add_child(audio_player)
+	audio_player.play()
 	# Display the alert
 	alert_label.visible = true
 	# Update the text
