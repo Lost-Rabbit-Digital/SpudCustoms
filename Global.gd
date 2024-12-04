@@ -11,6 +11,23 @@ var current_game_stats: Dictionary = {}
 var quota_target = 8  # Required correct decisions
 var quota_met = 0   # Number of correct decisions
 
+# Achievement IDs
+const ACHIEVEMENTS = {
+	"SAVIOR_OF_SPUD": "savior_of_spud",
+	"ROOKIE_OFFICER": "rookie_customs_officer",
+	"VETERAN_OFFICER": "customs_veteran",
+	"MASTER_OFFICER": "master_of_customs",
+	"SHARPSHOOTER": "sharpshooter",
+	"PERFECT_SHOT": "perfect_shot",
+	"BORDER_DEFENDER": "border_defender",
+	"HIGH_SCORER": "high_scorer",
+	"SCORE_LEGEND": "score_legend",
+}
+
+# Track stats for achievements
+var total_shifts_completed = 0
+var total_runners_stopped = 0
+var perfect_hits = 0
 
 # Add story state enum
 enum StoryState {
@@ -400,3 +417,48 @@ func download_cloud_saves():
 			
 	load_game_state()
 	load_high_scores()
+	
+
+
+func check_achievements():
+	if not Steam.isSteamRunning():
+		return
+		
+	# First shift completion
+	if total_shifts_completed == 1:
+		Steam.setAchievement(ACHIEVEMENTS.ROOKIE_OFFICER)
+		
+	# Shift milestones
+	if total_shifts_completed >= 10:
+		Steam.setAchievement(ACHIEVEMENTS.VETERAN_OFFICER)
+	if total_shifts_completed >= 25:
+		Steam.setAchievement(ACHIEVEMENTS.MASTER_OFFICER)
+		
+	# Runner achievements
+	if total_runners_stopped >= 10:
+		Steam.setAchievement(ACHIEVEMENTS.SHARPSHOOTER)
+	if total_runners_stopped >= 50:
+		Steam.setAchievement(ACHIEVEMENTS.BORDER_DEFENDER)
+	if perfect_hits >= 5:
+		Steam.setAchievement(ACHIEVEMENTS.PERFECT_SHOT)
+		
+	# Score achievements
+	if score >= 10000:
+		Steam.setAchievement(ACHIEVEMENTS.HIGH_SCORER)
+	if score >= 50000:
+		Steam.setAchievement(ACHIEVEMENTS.SCORE_LEGEND)
+		
+	# Story completion
+	if current_story_state == StoryState.COMPLETED:
+		Steam.setAchievement(ACHIEVEMENTS.SAVIOR_OF_SPUD)
+
+# Call this after each shift or when stats change
+func update_steam_stats():
+	if not Steam.isSteamRunning():
+		return
+		
+	Steam.setStatInt("total_shifts", total_shifts_completed)
+	Steam.setStatInt("runners_stopped", total_runners_stopped)
+	Steam.setStatInt("perfect_hits", perfect_hits)
+	Steam.setStatInt("high_score", score)
+	Steam.storeStats() # Important: Actually saves stats to Steam

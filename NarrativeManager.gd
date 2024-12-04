@@ -6,6 +6,14 @@ var current_shift = 1
 var dialogic_timeline: Node
 var dialogue_active = false
 
+# Achievement IDs
+const ACHIEVEMENTS = {
+	"BORN_DIPLOMAT": "born_diplomat",
+	"TATER_OF_JUSTICE": "tater_of_justice",
+	"BEST_SERVED_HOT": "best_served_hot",
+	"DOWN_WITH_THE_TATRIARCHY": "down_with_the_tatriarchy"
+}
+
 func _ready():
 	# Initialize dialogic timeline
 	if Global.get_story_state() == Global.StoryState.NOT_STARTED:
@@ -46,6 +54,15 @@ func start_shift_dialogue():
 func _on_dialogic_signal(argument):
 	if argument == "credits_ready":
 		get_tree().change_scene_to_file("res://main_scenes/scenes/end_credits/end_credits.tscn")
+	if argument == "born_diplomat":
+		Steam.setAchievement(ACHIEVEMENTS.BORN_DIPLOMAT)
+	if argument == "tater_of_justice":
+		Steam.setAchievement(ACHIEVEMENTS.TATER_OF_JUSTICE)
+	if argument == "best_served_hot":
+		Steam.setAchievement(ACHIEVEMENTS.BEST_SERVED_HOT)
+	if argument == "down_with_the_tatriarchy":
+		Steam.setAchievement(ACHIEVEMENTS.DOWN_WITH_THE_TATRIARCHY)
+		
 
 func start_final_confrontation():
 	if dialogue_active:

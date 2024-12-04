@@ -53,7 +53,6 @@ var selected_stamp: Node = null  # Tracks which stamp is currently selected
 @onready var approval_stamp = $Gameplay/InteractiveElements/ApprovalStamp
 @onready var rejection_stamp = $Gameplay/InteractiveElements/RejectionStamp
 
-
 # Passport dragging system
 var passport: Sprite2D
 var passport_spawn_point_begin: Node2D

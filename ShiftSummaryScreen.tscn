@@ -36,6 +36,7 @@ grow_vertical = 2
 
 [node name="SubmitScoreButton" type="Button" parent="."]
 z_index = 13
+z_as_relative = false
 layout_mode = 0
 offset_left = 440.0
 offset_top = 648.0
@@ -45,7 +46,8 @@ text = "Submit Score
 "
 
 [node name="RefreshButton" type="Button" parent="."]
-z_index = 1
+z_index = 13
+z_as_relative = false
 layout_mode = 0
 offset_left = 904.0
 offset_top = 648.0
@@ -55,6 +57,7 @@ text = "Refresh Leaderboard"
 
 [node name="RestartButton" type="Button" parent="."]
 z_index = 13
+z_as_relative = false
 layout_mode = 0
 offset_left = 584.0
 offset_top = 648.0
@@ -64,6 +67,7 @@ text = "Restart"
 
 [node name="MainMenuButton" type="Button" parent="."]
 z_index = 13
+z_as_relative = false
 layout_mode = 0
 offset_left = 728.0
 offset_top = 648.0
@@ -182,6 +186,8 @@ text = "
 label_settings = ExtResource("3_oti8t")
 
 [node name="Background" type="TextureRect" parent="."]
+z_index = 6
+z_as_relative = false
 layout_mode = 2
 offset_left = 111.0
 offset_top = 80.0
@@ -194,7 +200,8 @@ expand_mode = 1
 z_index = -1
 
 [node name="ScreenBackground" type="TextureRect" parent="."]
-z_index = -1
+z_index = 1
+z_as_relative = false
 layout_mode = 0
 offset_right = 1919.0
 offset_bottom = 1079.0
