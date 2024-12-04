@@ -167,8 +167,7 @@ func end_shift():
 		narrative_manager.start_shift_dialogue()
 		disable_controls()
 	else:
-		var summary = shift_summary.instantiate()
-		add_child(summary)
+
 		
 		# Calculate final time taken 
 		shift_stats.time_taken = processing_time - current_timer
@@ -190,7 +189,9 @@ func end_shift():
 			"perfect_bonus": shift_stats.get_missile_bonus(),
 			"final_score": Global.score
 		}
-		
+		Global.store_game_stats(stats)
+		var summary = shift_summary.instantiate()
+		add_child(summary)
 		summary.show_summary(stats)
 
 
@@ -822,8 +823,23 @@ func timed_out():
 		# Calculate final time taken
 		shift_stats.time_taken = processing_time - current_timer
 		shift_stats.processing_time_left = current_timer
-		# Store stats before transitioning
-		Global.store_game_stats(shift_stats)
+		var stats = {
+			"shift": Global.shift,
+			"time_taken": shift_stats.time_taken,
+			"score": Global.score,
+			"missiles_fired": shift_stats.missiles_fired,
+			"missiles_hit": shift_stats.missiles_hit,
+			"perfect_hits": shift_stats.perfect_hits,
+			"total_stamps": shift_stats.total_stamps,
+			"potatoes_approved": shift_stats.potatoes_approved,
+			"potatoes_rejected": shift_stats.potatoes_rejected,
+			"perfect_stamps": shift_stats.perfect_stamps,
+			"speed_bonus": shift_stats.get_speed_bonus(),
+			"accuracy_bonus": shift_stats.get_accuracy_bonus(),
+			"perfect_bonus": shift_stats.get_missile_bonus(),
+			"final_score": Global.score
+		}
+		Global.store_game_stats(stats)
 		Global.go_to_game_over()
 			
 	# Update displays
@@ -892,7 +908,7 @@ func process_decision(allowed):
 			shift_stats.time_taken = processing_time - current_timer
 			shift_stats.processing_time_left = current_timer
 			# Store stats before transitioning
-			Global.store_game_stats(shift_stats)
+			Global.S(shift_stats)
 			Global.go_to_game_over()
 			
 			

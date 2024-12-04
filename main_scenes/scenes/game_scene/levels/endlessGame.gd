@@ -147,9 +147,6 @@ func _ready():
 	border_runner_system = $BorderRunnerSystem
 
 func end_shift():
-	var summary = shift_summary.instantiate()
-	add_child(summary)
-	
 	# Calculate final time taken
 	shift_stats.time_taken = processing_time - current_timer
 	shift_stats.processing_time_left = current_timer
@@ -170,7 +167,9 @@ func end_shift():
 		"perfect_bonus": shift_stats.get_missile_bonus(),  # Changed from perfect_hit_bonus
 		"final_score": Global.score
 	}
-	
+	Global.store_game_stats(stats)
+	var summary = shift_summary.instantiate()
+	add_child(summary)
 	summary.show_summary(stats)
 
 
