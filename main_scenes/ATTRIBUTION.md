@@ -1,6 +1,6 @@
 # Attribution
 
-# [Lost Rabbit Digital](https://lost-rabbit-digital.itch.io/)
+# Lost Rabbit Digital
 
 ## Programmers
 [Boden McHale](https://www.bodenmchale.com/)
