@@ -8,6 +8,7 @@ var close_sound_played = false
 var open_sound_played = false
 var holding_stamp = false
 var is_potato_in_office = false
+var game_start_time: float = 0.0
 
 # track the current potato's info
 var current_potato_info
@@ -88,6 +89,7 @@ var shift_stats: ShiftStats
 @onready var alert_timer = $SystemManagers/Timers/AlertTimer
 
 func _ready():
+	game_start_time = Time.get_ticks_msec() / 1000.0  # Convert to seconds
 	update_cursor("default")
 	# Make sure to add QueueManager as a child of Main
 	queue_manager = $SystemManagers/QueueManager  
@@ -147,8 +149,9 @@ func _ready():
 	border_runner_system = $BorderRunnerSystem
 
 func end_shift():
-	# Calculate final time taken
-	shift_stats.time_taken = processing_time - current_timer
+# Calculate final time taken 
+	var elapsed_time = (Time.get_ticks_msec() / 1000.0) - game_start_time
+	shift_stats.time_taken = elapsed_time
 	shift_stats.processing_time_left = current_timer
 	var runner_stats = $BorderRunnerSystem.shift_stats
 	var stats = {
@@ -167,7 +170,12 @@ func end_shift():
 		"perfect_bonus": shift_stats.get_missile_bonus(),
 		"final_score": Global.score
 	}
-
+	print("Printing runner stats")
+	print(runner_stats)
+	print("Printing shift stats")
+	print(shift_stats)
+	print("Printing stats")
+	print(stats)
 	Global.store_game_stats(stats)
 	var summary = shift_summary.instantiate()
 	add_child(summary)
@@ -796,12 +804,37 @@ func timed_out():
 	point_multiplier = 1.0
 	Global.strikes += 1
 	if Global.strikes >= Global.max_strikes:
-		# Calculate final time taken
-		shift_stats.time_taken = processing_time - current_timer
+		# Calculate final time taken 
+		var elapsed_time = (Time.get_ticks_msec() / 1000.0) - game_start_time
+		shift_stats.time_taken = elapsed_time
 		shift_stats.processing_time_left = current_timer
-		# Store stats before transitioning
-		Global.store_game_stats(shift_stats)
-		Global.go_to_game_over()
+		var runner_stats = $BorderRunnerSystem.shift_stats
+		var stats = {
+			"shift": Global.shift,
+			"time_taken": shift_stats.time_taken,
+			"score": Global.score,
+			"missiles_fired": runner_stats.missiles_fired,
+			"missiles_hit": runner_stats.missiles_hit,
+			"perfect_hits": runner_stats.perfect_hits,
+			"total_stamps": shift_stats.total_stamps,
+			"potatoes_approved": shift_stats.potatoes_approved,
+			"potatoes_rejected": shift_stats.potatoes_rejected,
+			"perfect_stamps": shift_stats.perfect_stamps,
+			"speed_bonus": shift_stats.get_speed_bonus(),
+			"accuracy_bonus": shift_stats.get_accuracy_bonus(),
+			"perfect_bonus": shift_stats.get_missile_bonus(),
+			"final_score": Global.score
+		}
+		print("Printing runner stats")
+		print(runner_stats)
+		print("Printing shift stats")
+		print(shift_stats)
+		print("Printing stats")
+		print(stats)
+		Global.store_game_stats(stats)
+		var summary = shift_summary.instantiate()
+		add_child(summary)
+		summary.show_summary(stats)
 			
 	# Update displays
 	update_score_display()
