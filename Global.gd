@@ -3,7 +3,7 @@ extends Node
 # Existing variables
 var shift = 1
 var final_score = 0
-var build_type = "Full Release"
+var build_type = "Demo Release"
 var difficulty_level = "Expert" # Can be "Easy", "Normal", or "Expert"
 var strikes = 0
 var max_strikes = 4
@@ -191,7 +191,6 @@ func submit_score(score: int):
 	Steam.findLeaderboard(leaderboard_name)
 	return true
 
-# Update your add_score function to also update Steam leaderboards
 func add_score(points: int):
 	score += points
 	final_score = score
@@ -202,7 +201,6 @@ func add_score(points: int):
 		high_scores[difficulty_level] = score
 		high_score_achieved.emit(difficulty_level, score)
 		save_high_scores()
-
 
 func reset_score():
 	score = 0

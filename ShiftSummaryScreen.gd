@@ -59,21 +59,17 @@ func show_summary(stats_data: Dictionary):
 	play_entry_animation()
 
 func populate_stats():
-	var total_time = stats.get("processing_time") - stats.get("processing_time_left", 0)
-	var minutes = int(total_time / 60)
-	var seconds = int(total_time) % 60
 	
 	# Update shift info
-	$HeaderPanel/Title.text = "SHIFT SUMMARY\nEndless - %s" % Global.difficulty_level
+	$HeaderPanel/Title.text = "SHIFT SUMMARY\n %s" % Global.difficulty_level
 	
 	# Update shift complete section
 	$LeftPanel/ShiftComplete.text = """--- SHIFT {shift} COMPLETE ---
 
-Time Taken: {m}m {s}s
+Time Taken: {time_taken}
 Total Score: {score}""".format({
 		"shift": stats.get("shift", 1),
-		"m": minutes,
-		"s": seconds,
+		"time_taken": str(int(stats.get("time_taken", 120))),
 		"score": format_number(stats.get("score", 0))
 	})
 	

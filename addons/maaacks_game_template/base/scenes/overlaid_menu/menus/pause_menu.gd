@@ -49,6 +49,8 @@ func _ready():
 	_setup_main_menu()
 
 func _on_restart_button_pressed():
+	Global.strikes = 0
+	Global.quota_met = 0
 	%ConfirmRestart.popup_centered()
 	popup_open = %ConfirmRestart
 

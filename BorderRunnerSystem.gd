@@ -1,6 +1,7 @@
 extends Node2D
 ## Manages the spawning of runners, missile targeting, and giblet effects when potatoes are destroyed
 class_name BorderRunnerSystem
+signal game_over_triggered
 
 @export_group("Debugging")
 ## Unlimited ammunition for fox hunting
@@ -82,6 +83,7 @@ class_name BorderRunnerSystem
 @onready var missile_sprite = $MissileSprite
 @onready var smoke_particles = $MissileSprite/CPUParticles2D
 @onready var crater_system = $CraterSystem
+@onready var shift_stats = ShiftStats.new()
 
 # Internal state tracking
 var is_enabled = true  # Track if system is enabled
@@ -96,7 +98,6 @@ var explosion_position: Vector2 = Vector2.ZERO
 var has_runner_escaped: bool = false
 var gib_textures: Array = []
 var difficulty_level
-
 
 func _ready():
 	# Create missile sprite if it doesn't exist
@@ -308,7 +309,7 @@ func runner_escaped():
 	# Add one strike to the total strikes stored in the root node of the scene
 	Global.strikes += 1
 	if Global.strikes >= Global.max_strikes:
-		Global.go_to_game_over()
+		emit_signal("game_over_triggered")
 	print("After strike: " + str(Global.strikes))
 	
 	strike_label.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
@@ -563,20 +564,6 @@ func spawn_gibs(pos):
 		# Set scale
 		gib.scale = gib_scale  # Adjust this based on your gib sprite sizes
 
-class StampStats:
-	var total_stamps: int = 0
-	var perfect_stamps: int = 0
-	var potatoes_approved: int = 0
-	var potatoes_rejected: int = 0
-	var missiles_fired: int = 0
-	var missiles_hit: int = 0
-	var perfect_hits: int = 0
-	var time_taken: float = 0.0
-
-	func get_accuracy_bonus() -> int:
-		return perfect_stamps * 100  # 100 points per perfect stamp
-
-var shift_stats = StampStats.new()
 
 func check_stamp_accuracy(stamp_pos: Vector2, passport: Node2D) -> bool:
 	# Get the visa outline rectangle in global coordinates

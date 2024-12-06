@@ -98,6 +98,7 @@ var shift_stats: ShiftStats
 @onready var alert_timer = $SystemManagers/Timers/AlertTimer
 
 func _ready():
+	$BorderRunnerSystem.game_over_triggered.connect(_on_game_over)
 	game_start_time = Time.get_ticks_msec() / 1000.0  # Convert to seconds
 	update_cursor("default")
 	# Make sure to add QueueManager as a child of Main
@@ -176,7 +177,7 @@ func end_shift():
 		var runner_stats = $BorderRunnerSystem.shift_stats
 		var stats = {
 			"shift": Global.shift,
-			"time_taken": shift_stats.time_taken,
+			"time_taken": int(shift_stats.time_taken),
 			"score": Global.score,
 			"missiles_fired": runner_stats.missiles_fired,
 			"missiles_hit": runner_stats.missiles_hit,
@@ -188,7 +189,7 @@ func end_shift():
 			"speed_bonus": shift_stats.get_speed_bonus(),
 			"accuracy_bonus": shift_stats.get_accuracy_bonus(),
 			"perfect_bonus": shift_stats.get_missile_bonus(),
-			"final_score": Global.score
+			"final_score": (Global.score + shift_stats.get_speed_bonus() + shift_stats.get_accuracy_bonus() + shift_stats.get_missile_bonus())
 		}
 		print("Printing runner stats")
 		print(runner_stats)
@@ -218,7 +219,7 @@ func set_difficulty(level):
 			Global.max_strikes = 4
 			processing_time = 45
 		"Expert":
-			Global.max_strikes = 1
+			Global.max_strikes = 3
 			processing_time = 30
 			
 	update_quota_display()
@@ -834,7 +835,7 @@ func timed_out():
 		var runner_stats = $BorderRunnerSystem.shift_stats
 		var stats = {
 			"shift": Global.shift,
-			"time_taken": shift_stats.time_taken,
+			"time_taken": int(shift_stats.time_taken),
 			"score": Global.score,
 			"missiles_fired": runner_stats.missiles_fired,
 			"missiles_hit": runner_stats.missiles_hit,
@@ -846,7 +847,7 @@ func timed_out():
 			"speed_bonus": shift_stats.get_speed_bonus(),
 			"accuracy_bonus": shift_stats.get_accuracy_bonus(),
 			"perfect_bonus": shift_stats.get_missile_bonus(),
-			"final_score": Global.score
+			"final_score": (Global.score + shift_stats.get_speed_bonus() + shift_stats.get_accuracy_bonus() + shift_stats.get_missile_bonus())
 		}
 		print("Printing runner stats")
 		print(runner_stats)
@@ -1384,3 +1385,27 @@ func enable_controls():
 	if border_runner_system:
 		border_runner_system.enable()
 		border_runner_system.runner_chance = original_runner_chance
+		
+func _on_game_over():
+	var elapsed_time = (Time.get_ticks_msec() / 1000.0) - game_start_time
+	var runner_stats = $BorderRunnerSystem.shift_stats
+	var stats = {
+		"shift": Global.shift,
+		"time_taken": elapsed_time,
+		"score": Global.score,
+		"missiles_fired": runner_stats.missiles_fired,
+		"missiles_hit": runner_stats.missiles_hit,
+		"perfect_hits": runner_stats.perfect_hits,
+		"total_stamps": shift_stats.total_stamps,
+		"potatoes_approved": shift_stats.potatoes_approved,
+		"potatoes_rejected": shift_stats.potatoes_rejected,
+		"perfect_stamps": shift_stats.perfect_stamps,
+		"speed_bonus": shift_stats.get_speed_bonus(),
+		"accuracy_bonus": shift_stats.get_accuracy_bonus(),
+		"perfect_bonus": shift_stats.get_missile_bonus(),
+		"final_score": Global.score
+	}
+	Global.store_game_stats(stats)
+	var summary = shift_summary.instantiate()
+	add_child(summary)
+	summary.show_summary(stats)

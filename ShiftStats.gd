@@ -28,7 +28,7 @@ func get_accuracy_bonus() -> int:
 	
 func get_speed_bonus() -> int:
 	# Award bonus points for remaining time
-	return int(processing_time_left * 10)  # 10 points per second remaining
+	return int((300 - time_taken) * 10)  # 10 points per second remaining
 
 func get_missile_bonus() -> int:
 	return perfect_hits * 150  # 150 points per perfect hit
