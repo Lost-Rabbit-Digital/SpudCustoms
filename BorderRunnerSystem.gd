@@ -339,6 +339,9 @@ func launch_missile(target_pos):
 	missile_active = true
 	missile_target = target_pos
 	
+	# update shift stats
+	shift_stats.missiles_fired += 1
+	
 	# Start from bottom center of screen
 	var viewport_rect = get_viewport_rect()
 	# Set starting position of missile
@@ -425,6 +428,9 @@ func handle_successful_hit():
 	# Spawn gibs at the runner's position before cleaning it up
 	spawn_gibs(active_runner.global_position)
 	
+	# Update stats with successful hits
+	shift_stats.missiles_hit += 1
+	
 	runner_streak += 1
 	var points_earned = runner_base_points
 	var bonus_text = ""
@@ -432,6 +438,8 @@ func handle_successful_hit():
 	# Calculate bonuses
 	var distance = active_runner.global_position.distance_to(explosion_position)
 	if distance < explosion_size / 3:
+		# Update shift stats for perfect hits
+		shift_stats.perfect_hits += 1
 		# Spawn even more gibs on a perfect hit
 		spawn_gibs(active_runner.global_position)
 		points_earned += perfect_hit_bonus

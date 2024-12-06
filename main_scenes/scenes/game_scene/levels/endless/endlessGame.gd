@@ -150,23 +150,24 @@ func end_shift():
 	# Calculate final time taken
 	shift_stats.time_taken = processing_time - current_timer
 	shift_stats.processing_time_left = current_timer
-	
+	var runner_stats = $BorderRunnerSystem.shift_stats
 	var stats = {
 		"shift": Global.shift,
 		"time_taken": shift_stats.time_taken,
 		"score": Global.score,
-		"missiles_fired": shift_stats.missiles_fired,
-		"missiles_hit": shift_stats.missiles_hit,
-		"perfect_hits": shift_stats.perfect_hits,
+		"missiles_fired": runner_stats.missiles_fired,
+		"missiles_hit": runner_stats.missiles_hit,
+		"perfect_hits": runner_stats.perfect_hits,
 		"total_stamps": shift_stats.total_stamps,
 		"potatoes_approved": shift_stats.potatoes_approved,
 		"potatoes_rejected": shift_stats.potatoes_rejected,
 		"perfect_stamps": shift_stats.perfect_stamps,
 		"speed_bonus": shift_stats.get_speed_bonus(),
 		"accuracy_bonus": shift_stats.get_accuracy_bonus(),
-		"perfect_bonus": shift_stats.get_missile_bonus(),  # Changed from perfect_hit_bonus
+		"perfect_bonus": shift_stats.get_missile_bonus(),
 		"final_score": Global.score
 	}
+
 	Global.store_game_stats(stats)
 	var summary = shift_summary.instantiate()
 	add_child(summary)

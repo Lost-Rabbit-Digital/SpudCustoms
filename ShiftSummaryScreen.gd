@@ -6,6 +6,9 @@ extends Control
 var stats: Dictionary
 const BACKGROUND_TEXTURE = preload("res://assets/shift_summary/shift_summary_mockup_empty.png")
 
+func _init():
+	mouse_filter = Control.MOUSE_FILTER_IGNORE  # Allow input to pass through to buttons
+
 func _ready():
 	hide()
 	setup_background()
@@ -15,6 +18,23 @@ func _ready():
 		show_summary(Global.current_game_stats)
 	else:
 		show_summary(generate_test_stats())
+	# Fix button layering and input
+	for button in [$SubmitScoreButton, $RefreshButton, $RestartButton, $MainMenuButton]:
+		button.z_index = 15  # Ensure buttons are above all content
+		button.mouse_filter = Control.MOUSE_FILTER_STOP  # Force input handling
+		button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	# Ensure ScreenBackground and other full-screen elements don't block input
+	$ScreenBackground.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$Background.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$PotatoRain.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$SubmitScoreButton.z_index = 15
+	$RefreshButton.z_index = 15
+	$RestartButton.z_index = 15
+	$MainMenuButton.z_index = 15
+	# Make sure no overlays are blocking
+	$Background.z_index = 6
+	$ScreenBackground.z_index = 1
+	$PotatoRain.z_index = 3
 
 func setup_background():
 	if background and BACKGROUND_TEXTURE:

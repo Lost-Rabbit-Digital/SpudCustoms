@@ -15,7 +15,7 @@ theme_override_constants/shadow_offset_y = 4
 theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_outline_size = 3
 text = "[center]
-[font_size=64][url=https://lost-rabbit-digital.itch.io/]Lost Rabbit Digital[/url][/font_size]
+[font_size=64]Lost Rabbit Digital[/font_size]
 
 [font_size=48]Programmers[/font_size]
 [url=https://www.bodenmchale.com/]Boden McHale[/url]

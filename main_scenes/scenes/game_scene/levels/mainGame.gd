@@ -172,14 +172,14 @@ func end_shift():
 		# Calculate final time taken 
 		shift_stats.time_taken = processing_time - current_timer
 		shift_stats.processing_time_left = current_timer
-		
+		var runner_stats = $BorderRunnerSystem.shift_stats
 		var stats = {
 			"shift": Global.shift,
 			"time_taken": shift_stats.time_taken,
 			"score": Global.score,
-			"missiles_fired": shift_stats.missiles_fired,
-			"missiles_hit": shift_stats.missiles_hit,
-			"perfect_hits": shift_stats.perfect_hits,
+			"missiles_fired": runner_stats.missiles_fired,
+			"missiles_hit": runner_stats.missiles_hit,
+			"perfect_hits": runner_stats.perfect_hits,
 			"total_stamps": shift_stats.total_stamps,
 			"potatoes_approved": shift_stats.potatoes_approved,
 			"potatoes_rejected": shift_stats.potatoes_rejected,
@@ -211,7 +211,7 @@ func set_difficulty(level):
 			Global.max_strikes = 4
 			processing_time = 45
 		"Expert":
-			Global.max_strikes = 3
+			Global.max_strikes = 1
 			processing_time = 30
 			
 	update_quota_display()
@@ -908,7 +908,7 @@ func process_decision(allowed):
 			shift_stats.time_taken = processing_time - current_timer
 			shift_stats.processing_time_left = current_timer
 			# Store stats before transitioning
-			Global.S(shift_stats)
+			Global.store_game_stats(shift_stats)
 			Global.go_to_game_over()
 			
 			

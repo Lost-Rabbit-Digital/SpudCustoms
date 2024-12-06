@@ -46,7 +46,7 @@ scroll_vertical = 0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "[center]
-[font_size=64][url=https://lost-rabbit-digital.itch.io/]Lost Rabbit Digital[/url][/font_size]
+[font_size=64]Lost Rabbit Digital[/font_size]
 
 [font_size=48]Programmers[/font_size]
 [url=https://www.bodenmchale.com/]Boden McHale[/url]

@@ -198,6 +198,7 @@ expand_mode = 1
 
 [node name="PotatoRain" parent="." instance=ExtResource("5_oti8t")]
 z_index = -1
+z_as_relative = false
 
 [node name="ScreenBackground" type="TextureRect" parent="."]
 z_index = 1

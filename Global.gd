@@ -3,7 +3,7 @@ extends Node
 # Existing variables
 var shift = 1
 var final_score = 0
-var build_type = "Demo Release"
+var build_type = "Full Release"
 var difficulty_level = "Expert" # Can be "Easy", "Normal", or "Expert"
 var strikes = 0
 var max_strikes = 4
@@ -62,7 +62,7 @@ func _ready():
 	# Initialize score to final_score if it exists
 	Steam.steamInit()
 	score = final_score
-	load_high_scores()
+	# load_high_scores()
 	set_difficulty(difficulty_level)
 	# Check for and download cloud saves when game starts
 	if Steam.isSteamRunning():
@@ -428,7 +428,7 @@ func download_cloud_saves():
 			local_scores.store_buffer(scores_content)
 			
 	load_game_state()
-	load_high_scores()
+	# load_high_scores()
 	
 
 
