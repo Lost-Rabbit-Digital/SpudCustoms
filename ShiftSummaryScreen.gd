@@ -26,7 +26,6 @@ func _ready():
 	# Ensure ScreenBackground and other full-screen elements don't block input
 	$ScreenBackground.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$Background.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$PotatoRain.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$SubmitScoreButton.z_index = 15
 	$RefreshButton.z_index = 15
 	$RestartButton.z_index = 15
@@ -60,8 +59,9 @@ func show_summary(stats_data: Dictionary):
 	play_entry_animation()
 
 func populate_stats():
-	var minutes = int(stats.get("time_taken", 0) / 60)
-	var seconds = int(stats.get("time_taken", 0)) % 60
+	var total_time = stats.get("processing_time") - stats.get("processing_time_left", 0)
+	var minutes = int(total_time / 60)
+	var seconds = int(total_time) % 60
 	
 	# Update shift info
 	$HeaderPanel/Title.text = "SHIFT SUMMARY\nEndless - %s" % Global.difficulty_level
