@@ -4,7 +4,15 @@ These are our goals, to-do tasks, and completed tasks.
 *INTERNAL USE* - This means don't publish this note to Steam, it's for internal tracking purposes only
 
 FULL RELEASE TASKS: 2024-11-24 - 0.1.1
+Special Thanks:
+  Add these people to the credits in 0.1.1
+  [ ] - Added community members who helped with bug reports to credits
+  [ ] - https://steamcommunity.com/app/3291880/discussions/0/603016087419796439/ / https://steamcommunity.com/profiles/76561197989580996
+  [ ] - https://steamcommunity.com/app/3291880/discussions/0/4637115050041082833/ / https://steamcommunity.com/profiles/76561198028696216
+  [ ] - https://steamcommunity.com/app/3291880/discussions/0/4637114181344181641/ / https://steamcommunity.com/profiles/76561199482274924
+  [ ] - https://steamcommunity.com/id/mrbright01/
 General Tasks:
+  [ ] - Option to disable the timer in Story and Endless mode  > Attribute: https://steamcommunity.com/app/3291880/discussions/0/603016087419796439/
   [ ] - Don't set stamps to go invisible when quota reached in Endless mode
   [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
   [ ] - There is no continuing shift, after you reach quota you hit the shift summary and end the game
@@ -30,6 +38,7 @@ General Tasks:
     [ ] - Set default selection for main menu for keyboard control
     [ ] - Expand area for perfect hit chance on border runner system
   Bugs:
+    [ ] - Can't see the mouse cursor > Attribute: https://steamcommunity.com/app/3291880/discussions/0/4637115050041082833/
     [ ] - If you deny/accept a potato and then that potato times out, it still checks the stamps
     [ ] - Sometimes the potatoes don't give you a passport
     [ ] - Don't allow grab while passport is moving, toggle a is_currently_animated boolean to check when picking up
