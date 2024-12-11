@@ -69,6 +69,16 @@ General Tasks:
     [ ] - Add message queue system and delay between messages so they don't override each other, add gdscript to alert_label
     [ ] - Make two sets of paths, one which start in the office and one which doesn't for Spud runner, only do the office start when they are already in office
 
+    [ ] - Confused with the story initially, too many characters going on, understood after a few texts
+    [ ] - Italics in the story text that represented actions, understood after 2-3 texts
+    [ ] - Game begins with a Spud runner and says "Continue Shift"
+    [ ] - She took too long to realise there was a timer and immediately failed while reading instructions
+    [ ] - Halfway through instructions while we begin to explain the stamps the wording become confusing and she was lost
+    [ ] - Copy the stamp system from Papers Please
+    [ ] - Rockets too slow
+    [ ] - Ended on first runner
+    [ ] - Rounds end too abruptly, need to tell the player why they failed
+    [ ] - Possibly exit the game from the lose screen
 
   Gameplay:
     [ ] - Reduce lead time for missiles
