@@ -79,6 +79,7 @@ General Tasks:
     [ ] - Ended on first runner
     [ ] - Rounds end too abruptly, need to tell the player why they failed
     [ ] - Possibly exit the game from the lose screen
+    [ ] - Change time to a shift-based time, such as 8 hours over a day
 
   Gameplay:
     [ ] - Reduce lead time for missiles
