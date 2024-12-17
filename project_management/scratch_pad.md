@@ -68,7 +68,6 @@ General Tasks:
     [ ] - Link summary screen to restart back into endless mode instead of story mode
     [ ] - Add message queue system and delay between messages so they don't override each other, add gdscript to alert_label
     [ ] - Make two sets of paths, one which start in the office and one which doesn't for Spud runner, only do the office start when they are already in office
-
     [ ] - Confused with the story initially, too many characters going on, understood after a few texts
     [ ] - Italics in the story text that represented actions, understood after 2-3 texts
     [ ] - Game begins with a Spud runner and says "Continue Shift"
@@ -120,10 +119,6 @@ These are various goals which are out of scope for the current roadmap, but if p
 [ ] - Conversation with potato while checking documents
 [ ] - Potatoes emote (Kenny emotes) while waiting in line
 
-
-# Completed tasks list
-The tasks which have be completed and pushed to VCS.
-
 Steam Release 0.1.2: More bug fixes and improvements!
   Guide Bugs:
   [ ] - Make cursor into a click status when hovering over the corner of the guide
@@ -141,7 +136,6 @@ Steam Release 0.1.2: More bug fixes and improvements!
   [ ] - "Reject Spuddington potatoes because of visa counterfeiting activity.", there is no visa system, reword "visa" to "document"    
   [ ] - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
 
-
   Score Bugs:
   [ ] - Check if the stamp rejection was correct before triggering the border run system for the scores to be accurate
   [ ] - Add a loss of 500 points on top of strike if the rejection was incorrect (Use the same code as the border runner system to check for point penalty)
@@ -151,6 +145,9 @@ Steam Release 0.1.2: More bug fixes and improvements!
   [ ] - Rewrite the runner system to include chance to run while waiting in line instead of waiting for rejection
   [ ] - Stamp rejection doesn't update score
   [ ] - Score is sometimes presented as a float and sometimes as a integer. Not sure if intentional or just some minor bug from early project, but figured i would point it out.
+
+# Completed tasks list
+The tasks which have be completed and pushed to VCS.
 
 Steam Release 0.1.1: General bug fixes
   - *INTERNAL USE* Cleaned up old tutorial code to pave road for new system
