@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bnemubwwr558w"]
+
+[ext_resource type="FontVariation" uid="uid://t3ii3pbmg2bo" path="res://assets/fonts/Modern_DOS_Font_Variation.tres" id="1_1gq6i"]
+
+[resource]
+line_spacing = 5.0
+font = ExtResource("1_1gq6i")
+font_size = 32
+font_color = Color(0.717606, 0.408459, 0, 1)

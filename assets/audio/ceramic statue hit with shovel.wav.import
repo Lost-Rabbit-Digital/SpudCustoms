@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dgbjsr8l4que2"
+path="res://.godot/imported/ceramic statue hit with shovel.wav-31653fb0676ae024123a51c4ea3bdd41.sample"
+
+[deps]
+
+source_file="res://assets/audio/ceramic statue hit with shovel.wav"
+dest_files=["res://.godot/imported/ceramic statue hit with shovel.wav-31653fb0676ae024123a51c4ea3bdd41.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

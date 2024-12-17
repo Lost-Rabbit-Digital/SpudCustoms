@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://gm1ca7l7okv5"
+path="res://.godot/imported/landline phone pick up 3.wav-04d81b268aa311fd454b7bc1a67beeff.sample"
+
+[deps]
+
+source_file="res://assets/audio/landline phone pick up 3.wav"
+dest_files=["res://.godot/imported/landline phone pick up 3.wav-04d81b268aa311fd454b7bc1a67beeff.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

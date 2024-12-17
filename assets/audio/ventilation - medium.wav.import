@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://decje7lqatolt"
+path="res://.godot/imported/ventilation - medium.wav-68d5eb2528e44c8a2a87e6a355786432.sample"
+
+[deps]
+
+source_file="res://assets/audio/ventilation - medium.wav"
+dest_files=["res://.godot/imported/ventilation - medium.wav-68d5eb2528e44c8a2a87e6a355786432.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,20 +1,27 @@
 extends Sprite2D
 var current_page = 1
 var maximum_pages = 2
-var how_to_play_note_1 = """To begin, press the speaker with the yellow flashing ring on top of the customs office building.
-Take the documents from the Potato and bring them to the main table.
-Then compare the information on the documents with the laws given.
-If there are any discrepencies, deny entry.
-After stamping the documents, hand them back to the Potato.
+var how_to_play_note_1 = """[center]
+Press the [color=#2C7A1F]speaker[/color] on top of the building to begin
+Drag [color=#2C7A1F]papers[/color] from the Potato to your desk
+Check [color=#2C7A1F]laws[/color] on [color=#2C7A1F]page 2[/color] of guide book
+Hold [color=#2C7A1F]left-click[/color] on stamp, then [color=#2C7A1F]right-click[/color] while holding to stamp papers
+
+[color=#FF0000]Left-click[/color] running potatoes to fire [color=#FF0000]missiles[/color]
+If anything is wrong, [color=#FF0000]deny entry[/color]
+Hand papers back to finish
+[/center]
 """
 
 var daily_laws = """
 
 """
 
+@export var main_node : Node2D
+
+
 func _ready():
 	# Assuming the main game script is attached to a node named "Main"
-	var main_node = get_node("/root/Root")
 	if main_node:
 		main_node.connect("rules_updated", Callable(self, "update_daily_laws"))
 

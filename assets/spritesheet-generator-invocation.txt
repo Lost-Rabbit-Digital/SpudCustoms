@@ -1,0 +1,19 @@
+## Invocation
+
+# Create and add the generator
+var character_generator = preload("res://path_to_script/character_generator.gd").new()
+add_child(character_generator)
+
+# Generate random characters
+character_generator.generate_random_character()
+
+# Or generate specific combinations
+character_generator.set_head(0)
+character_generator.set_face(3)
+character_generator.set_hair(5)
+
+# Get total possible combinations
+print(character_generator.get_total_combinations())
+
+# Generate a specific combination by index
+character_generator.generate_specific_combination(42)

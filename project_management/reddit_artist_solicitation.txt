@@ -12,37 +12,37 @@ We made all the art ourselves and are looking for art at least a little better t
 
 You can see some of the elements we'd need replaced in the game above, but I'm including a rough outline below to aid in scoping discussions.
 
-1. Menu Backgrounds (1920x1080px, 3x elements)
+Menu Backgrounds (1920x1080px, 3x elements)
 
 * Main menu background showcasing the dystopian potato world
 * Options menu background
 * Credits screen background
 
-1. Character Designs (64x64px, 14x elements)
+Character Designs (64x64px, 14x elements)
 
 * Various potato characters with different expressions and poses
 * Customs officer character (player character)
 * Background characters for queue scenes
 
-1. Scene Backgrounds (varies, up to 1280x720px, 3x elements)
+Scene Backgrounds (varies, up to 1280x720px, 3x elements)
 
 * Customs office interior
 * Exterior views of the border checkpoint
 * Queue area for incoming potatoes
 
-1. UI Elements (64x64px and smaller, 14x elements)
+UI Elements (64x64px and smaller, 14x elements)
 
 * Buttons (start, options, exit, etc.)
 * Icons for game mechanics (stamps, document types, etc.)
 * Progress bars, score displays
 
-1. Interactive Elements (64x64px, 6 elements)
+Interactive Elements (64x64px, 6 elements)
 
 * Stamps (approval and rejection)
 * Documents (passports, ID cards, etc.)
 * Desk items (family photo, lamp, etc.)
 
-1. Short cutscenes (<5 seconds duration, 1280x720, 8 elements)
+Short cutscenes (<5 seconds duration, 1280x720, 8 elements)
 
 * Establishing shots (Arriving to customs office)
 * Closing shots (Topdown shot of prone customs officer reaching bloody hand up, transition to field of planted potatoes ala last shot of Soylent Green)

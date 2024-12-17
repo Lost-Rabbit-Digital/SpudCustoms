@@ -1,0 +1,504 @@
+[gd_scene load_steps=38 format=3 uid="uid://bqdirqkno2n36"]
+
+[ext_resource type="Script" path="res://mainGame.gd" id="1_s4bva"]
+[ext_resource type="Texture2D" uid="uid://3puyjulpos2e" path="res://rules_panel.png" id="3_3ctpg"]
+[ext_resource type="Texture2D" uid="uid://cd3tgngxnqogl" path="res://InterfaceOutline.png" id="3_vixev"]
+[ext_resource type="Texture2D" uid="uid://dmxlreycmttsa" path="res://evidence_panel.png" id="4_juy1b"]
+[ext_resource type="Texture2D" uid="uid://b20ds43o0qwss" path="res://world_panel.png" id="5_h10h2"]
+[ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="7_7m4ia"]
+[ext_resource type="Texture2D" uid="uid://dbi1u25he35x" path="res://interaction_table_background.png" id="7_nqnif"]
+[ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/level/customs_office.png" id="7_rsfsr"]
+[ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_woji0"]
+[ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="9_arv36"]
+[ext_resource type="Texture2D" uid="uid://jjnnivgwpiub" path="res://assets/alerts/megaphone_alert_box.png" id="10_5g2y2"]
+[ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
+[ext_resource type="Texture2D" uid="uid://fmqkliw6t33x" path="res://suspect_panel_front.png" id="10_foucb"]
+[ext_resource type="Texture2D" uid="uid://ceh27taly75na" path="res://assets/documents/passport-old.png" id="12_q7tid"]
+[ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://windows_command_prompt.ttf" id="13_wxn24"]
+[ext_resource type="Texture2D" uid="uid://cbthvh8tq02ee" path="res://assets/potatoes/document_photos/purple_majesty.png" id="14_al1cy"]
+[ext_resource type="Texture2D" uid="uid://iimxjoog2l50" path="res://assets/suspect_panel/SuspectInteractionTable_Test.png" id="15_680yi"]
+[ext_resource type="Texture2D" uid="uid://c0dbfc2uut8qn" path="res://assets/stamps/stamp_shadow.png" id="16_qj41b"]
+[ext_resource type="Texture2D" uid="uid://dgw6rbhy6crh" path="res://assets/suspect_panel/suspect_panel_table.png" id="17_hbwb4"]
+[ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://give_prompt_dialogue.png" id="17_mr1ft"]
+[ext_resource type="Texture2D" uid="uid://dh5wbdkmsk7de" path="res://assets/potatoes/heads/russet_burbank_head_1.png" id="18_7ww6h"]
+[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="18_jl4i3"]
+[ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="18_yiok2"]
+[ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="20_pd2wg"]
+[ext_resource type="Texture2D" uid="uid://bc5llmyhe6byj" path="res://assets/alerts/guide_alert_box.png" id="22_3pqlk"]
+[ext_resource type="PackedScene" uid="uid://bju5udyr0e5rr" path="res://music_manager.tscn" id="27_2tnfb"]
+[ext_resource type="Texture2D" uid="uid://dubo3sdxx8chn" path="res://assets/stamps/approval_stamp_3.png" id="28_uvib1"]
+[ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="31_c10l6"]
+[ext_resource type="Texture2D" uid="uid://b2wymckqr8jsk" path="res://assets/documents/customs_guide/customs_guide_closed_small.png" id="33_s6ap3"]
+[ext_resource type="Script" path="res://guide.gd" id="35_uuf1y"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vm67j"]
+load_path = "res://.godot/imported/page_turn_right.png-3e792e4bdf032a1fa19f9571dfa31620.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f48nw"]
+load_path = "res://.godot/imported/page_turn_left.png-fdaf981b2f3e3a21cc193ce379ac8a9a.ctex"
+
+[sub_resource type="Curve2D" id="Curve2D_f3jw2"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 890, 198, 0, 0, 0, 0, 998, 169, 0, 0, 0, 0, 993, 105, 0, 0, 0, 0, 899, 106, 0, 0, 0, 0, 899, 88, 0, 0, 0, 0, 880, 86, 0, 0, 0, 0, 881, 106, 0, 0, 0, 0, 634, 69, 0, 0, 0, 0, 626, 61, 0, 0, 0, 0, 617, 74, 0, 0, 0, 0, 337, 106, 0, 0, 0, 0, 326, 93, 0, 0, 0, 0, 311, 109, 0, 0, 0, 0, 11, 145)
+}
+point_count = 14
+
+[sub_resource type="Curve2D" id="Curve2D_1j820"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 887, 197, 0, 0, 0, 0, 962, 178, 0, 0, 0, 0, 988, 154, 0, 0, 0, 0, 1042, 149, 0, 0, 0, 0, 1017, 55, 0, 0, 0, 0, 1171, 49, 0, 0, 0, 0, 1221, 44, 0, 0, 0, 0, 1265, 51)
+}
+point_count = 8
+
+[sub_resource type="Curve2D" id="Curve2D_xms7a"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 985, 192, 0, 0, 0, 0, 917, 203)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_uenca"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 886, 201, 0, 0, 0, 0, 603, 195, 0, 0, 0, 0, 392, 189, 0, 0, 0, 0, 177, 196, 0, 0, 0, 0, 110, 198, 0, 0, 0, 0, 112, 16)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_x3wa3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1280, 73, 0, 0, 0, 0, 1246, 70, 0, 0, 0, 0, 1205, 77, 0, 0, 0, 0, 1169, 71, 0, 0, 0, 0, 1141, 69, 0, 0, 0, 0, 1110, 76, 0, 0, 0, 0, 1080, 67, 0, 0, 0, 0, 1066, 84, 0, 0, 0, 0, 1080, 104, 0, 0, 0, 0, 1064, 121, 0, 0, 0, 0, 1074, 148, 0, 0, 0, 0, 1103, 139, 0, 0, 0, 0, 1131, 145, 0, 0, 0, 0, 1162, 138, 0, 0, 0, 0, 1187, 139, 0, 0, 0, 0, 1209, 144, 0, 0, 0, 0, 1239, 141, 0, 0, 0, 0, 1256, 148, 0, 0, 0, 0, 1249, 170, 0, 0, 0, 0, 1243, 192, 0, 0, 0, 0, 1253, 213, 0, 0, 0, 0, 1223, 219, 0, 0, 0, 0, 1192, 214, 0, 0, 0, 0, 1166, 210, 0, 0, 0, 0, 1131, 209, 0, 0, 0, 0, 1106, 214, 0, 0, 0, 0, 1080, 212, 0, 0, 0, 0, 1055, 212, 0, 0, 0, 0, 1043, 194, 0, 0, 0, 0, 1049, 176, 0, 0, 0, 0, 1032, 173, 0, 0, 0, 0, 1002, 176, -0.187288, 0, 0.187288, 0, 1024, 197, 0, 0, 0, 0, 1009, 211, 0, 0, 0, 0, 985, 192)
+}
+point_count = 35
+
+[node name="Root" type="Node2D"]
+script = ExtResource("1_s4bva")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Wireframe" type="Sprite2D" parent="UI"]
+visible = false
+position = Vector2(642, 360)
+texture = ExtResource("3_vixev")
+
+[node name="RulesPanel" type="Sprite2D" parent="UI"]
+visible = false
+position = Vector2(196.014, 450.653)
+scale = Vector2(0.991713, 0.966143)
+texture = ExtResource("3_3ctpg")
+
+[node name="EvidencePanel" type="Sprite2D" parent="UI"]
+visible = false
+position = Vector2(583.528, 454.051)
+scale = Vector2(0.994467, 0.977299)
+texture = ExtResource("4_juy1b")
+
+[node name="WorldPanel" type="Sprite2D" parent="UI"]
+z_index = 3
+position = Vector2(639.453, 121)
+scale = Vector2(1.09345, 1.02885)
+texture = ExtResource("5_h10h2")
+
+[node name="Background" type="Sprite2D" parent="UI"]
+z_index = 4
+z_as_relative = false
+position = Vector2(640, 360)
+texture = ExtResource("18_jl4i3")
+
+[node name="InteractableItemsWorldBackground" type="Sprite2D" parent="UI"]
+z_index = 2
+z_as_relative = false
+position = Vector2(640, 360)
+texture = ExtResource("7_woji0")
+
+[node name="Labels" type="Control" parent="UI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="JudgementLabel" type="Label" parent="UI/Labels"]
+z_index = 2
+z_as_relative = false
+layout_mode = 0
+offset_left = 266.0
+offset_top = 652.0
+offset_right = 616.0
+offset_bottom = 706.0
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="DateLabel" type="Label" parent="UI/Labels"]
+z_index = 2
+z_as_relative = false
+layout_mode = 0
+offset_left = 1112.0
+offset_top = 659.0
+offset_right = 1244.0
+offset_bottom = 709.0
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 32
+text = "2024.10.22"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimeLabel" type="Label" parent="UI/Labels"]
+z_index = 2
+z_as_relative = false
+layout_mode = 0
+offset_left = 990.0
+offset_top = 231.0
+offset_right = 1154.0
+offset_bottom = 281.0
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 32
+text = "Time Left: 60"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="StrikesLabel" type="Label" parent="UI/Labels"]
+z_index = 2
+z_as_relative = false
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 0
+offset_left = 895.0
+offset_top = 660.0
+offset_right = 1095.0
+offset_bottom = 710.0
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 32
+text = "Strikes   0 / 5"
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="UI/Labels"]
+z_index = 2
+z_as_relative = false
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 0
+offset_left = 895.0
+offset_top = 628.0
+offset_right = 1097.0
+offset_bottom = 678.0
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 32
+text = "Score        0  / 8"
+vertical_alignment = 1
+
+[node name="RulesLabel" type="Label" parent="UI/Labels"]
+z_index = 2
+z_as_relative = false
+layout_mode = 0
+offset_left = 22.0
+offset_top = 247.0
+offset_right = 287.0
+offset_bottom = 443.0
+theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
+autowrap_mode = 3
+
+[node name="PauseContainer" type="Control" parent="."]
+z_index = 6
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="PauseContainer"]
+z_index = -1
+z_as_relative = false
+position = Vector2(640, 360)
+texture = ExtResource("18_jl4i3")
+
+[node name="SystemManagers" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Timers" type="Control" parent="SystemManagers"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MegaphoneFlashTimer" type="Timer" parent="SystemManagers/Timers"]
+
+[node name="SpawnTimer" type="Timer" parent="SystemManagers/Timers"]
+
+[node name="GuideFlashTimer" type="Timer" parent="SystemManagers/Timers"]
+
+[node name="AudioManager" type="Control" parent="SystemManagers"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SFXPool" type="AudioStreamPlayer2D" parent="SystemManagers/AudioManager"]
+
+[node name="MusicManager" parent="SystemManagers" instance=ExtResource("27_2tnfb")]
+
+[node name="QueueManager" type="Node2D" parent="SystemManagers"]
+script = ExtResource("10_a4p7n")
+
+[node name="Gameplay" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CustomsOffice" type="Sprite2D" parent="Gameplay"]
+z_index = 5
+position = Vector2(886, 193)
+scale = Vector2(1.19563, 1.05853)
+texture = ExtResource("7_rsfsr")
+
+[node name="Megaphone" type="Sprite2D" parent="Gameplay/CustomsOffice"]
+z_index = 3
+position = Vector2(28.4369, -22.673)
+scale = Vector2(1.17093, 1.32259)
+texture = ExtResource("7_7m4ia")
+
+[node name="MegaphoneDialogueBoxBlank" type="Sprite2D" parent="Gameplay/CustomsOffice/Megaphone"]
+visible = false
+position = Vector2(62.1428, -47.8571)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("9_arv36")
+
+[node name="FlashAlert" type="Sprite2D" parent="Gameplay/CustomsOffice/Megaphone"]
+z_index = 5
+z_as_relative = false
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("10_5g2y2")
+
+[node name="SuspectPanel" type="Sprite2D" parent="Gameplay"]
+z_index = 1
+position = Vector2(1073, 473)
+scale = Vector2(0.85112, 0.859429)
+texture = ExtResource("15_680yi")
+
+[node name="SuspectPanelTable" type="Sprite2D" parent="Gameplay/SuspectPanel"]
+z_as_relative = false
+texture = ExtResource("17_hbwb4")
+
+[node name="SuspectPanelFront" type="Sprite2D" parent="Gameplay/SuspectPanel"]
+z_index = 2
+z_as_relative = false
+texture = ExtResource("10_foucb")
+
+[node name="InspectionTable" type="Sprite2D" parent="Gameplay"]
+position = Vector2(442, 471.501)
+scale = Vector2(1.09694, 1.07604)
+texture = ExtResource("7_nqnif")
+
+[node name="PotatoMugshot" type="Sprite2D" parent="Gameplay"]
+z_index = 2
+position = Vector2(1401, 373)
+scale = Vector2(2.0266, 2.0266)
+texture = ExtResource("18_yiok2")
+
+[node name="PotatoMugshotShadow" type="Sprite2D" parent="Gameplay/PotatoMugshot"]
+modulate = Color(0, 0, 0, 0.521569)
+z_index = -1
+position = Vector2(-1.48, -8.328)
+scale = Vector2(1.22, 1.22)
+texture = ExtResource("18_7ww6h")
+
+[node name="InteractiveElements" type="Control" parent="Gameplay"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Passport" type="Sprite2D" parent="Gameplay/InteractiveElements"]
+z_index = 2
+z_as_relative = false
+position = Vector2(1670, 302)
+texture = ExtResource("12_q7tid")
+
+[node name="ClosedPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
+visible = false
+position = Vector2(-34.6184, 40.1346)
+rotation = -0.137881
+scale = Vector2(0.413016, 0.413016)
+
+[node name="GivePromptDialogue" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport/ClosedPassport"]
+position = Vector2(357.294, -256.302)
+rotation = 0.137881
+scale = Vector2(2.42121, 2.42121)
+texture = ExtResource("17_mr1ft")
+
+[node name="OpenPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
+
+[node name="PassportPhoto" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
+z_index = 3
+z_as_relative = false
+position = Vector2(76, 75)
+scale = Vector2(0.975, 1)
+texture = ExtResource("14_al1cy")
+
+[node name="PotatoHeader" type="Label" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
+offset_left = -103.0
+offset_top = 20.0
+offset_right = 13.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PotatoInfo" type="Label" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
+offset_left = -75.0
+offset_top = 47.0
+offset_right = 33.0
+offset_bottom = 141.0
+theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
+theme_override_constants/line_spacing = 2
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
+autowrap_mode = 2
+
+[node name="PassportShadow" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
+position = Vector2(-4.99997, 3.99999)
+texture = ExtResource("20_pd2wg")
+
+[node name="ApprovalStamp" type="Sprite2D" parent="Gameplay/InteractiveElements"]
+z_index = 4
+texture_filter = 1
+position = Vector2(88.0005, 624.501)
+texture = ExtResource("28_uvib1")
+
+[node name="StampShadow" type="Sprite2D" parent="Gameplay/InteractiveElements/ApprovalStamp"]
+visible = false
+z_index = 3
+z_as_relative = false
+position = Vector2(0, 20)
+scale = Vector2(0.29, 0.29)
+texture = ExtResource("16_qj41b")
+
+[node name="RejectionStamp" type="Sprite2D" parent="Gameplay/InteractiveElements"]
+z_index = 2
+position = Vector2(226, 627.501)
+texture = ExtResource("31_c10l6")
+
+[node name="StampShadow" type="Sprite2D" parent="Gameplay/InteractiveElements/RejectionStamp"]
+visible = false
+z_index = 3
+z_as_relative = false
+position = Vector2(0, 20)
+scale = Vector2(0.29, 0.29)
+texture = ExtResource("16_qj41b")
+
+[node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements"]
+z_index = 2
+z_as_relative = false
+position = Vector2(1188, 557)
+texture = ExtResource("33_s6ap3")
+script = ExtResource("35_uuf1y")
+
+[node name="ClosedGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
+
+[node name="GuideAlertBox" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide/ClosedGuide"]
+texture = ExtResource("22_3pqlk")
+
+[node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
+visible = false
+
+[node name="GuideNote" type="Label" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -147.0
+offset_top = -106.0
+offset_right = 146.0
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
+theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_font_sizes/font_size = 16
+text = "To begin, press the speaker with the yellow flashing ring on top of the customs office building.
+Take the documents from the Potato and bring them to the main table.
+Then compare the information on the documents with the laws given.
+If there are any discrepencies, deny entry.
+After stamping the documents, hand them back to the Potato.
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TurnRight" type="TextureButton" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
+offset_left = 117.0
+offset_top = 110.0
+offset_right = 147.0
+offset_bottom = 140.0
+texture_normal = SubResource("CompressedTexture2D_vm67j")
+
+[node name="TurnLeft" type="TextureButton" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
+visible = false
+offset_left = -147.0
+offset_top = 110.0
+offset_right = -117.0
+offset_bottom = 140.0
+texture_normal = SubResource("CompressedTexture2D_f48nw")
+
+[node name="Paths" type="Control" parent="Gameplay"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RunnerPath" type="Path2D" parent="Gameplay/Paths"]
+z_index = 3
+curve = SubResource("Curve2D_f3jw2")
+
+[node name="TimedOutPath" type="Path2D" parent="Gameplay/Paths"]
+z_index = 3
+curve = SubResource("Curve2D_1j820")
+
+[node name="RejectPath" type="Path2D" parent="Gameplay/Paths"]
+z_index = 3
+curve = SubResource("Curve2D_1j820")
+
+[node name="EnterOfficePath" type="Path2D" parent="Gameplay/Paths"]
+z_index = 3
+position = Vector2(-420.074, 0)
+scale = Vector2(1.42647, 1)
+curve = SubResource("Curve2D_xms7a")
+
+[node name="ApprovePath" type="Path2D" parent="Gameplay/Paths"]
+z_index = 3
+curve = SubResource("Curve2D_uenca")
+
+[node name="SpuddyQueue" type="Path2D" parent="Gameplay/Paths"]
+z_index = 3
+curve = SubResource("Curve2D_x3wa3")
+
+[connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/GuideFlashTimer" to="." method="_on_bulletin_flash_timer_timeout"]
+[connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
+[connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]

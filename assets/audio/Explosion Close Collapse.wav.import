@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://vm0s4j8vkhsx"
+path="res://.godot/imported/Explosion Close Collapse.wav-1b7ead1a4c0811286f50e8b73cd63166.sample"
+
+[deps]
+
+source_file="res://assets/audio/Explosion Close Collapse.wav"
+dest_files=["res://.godot/imported/Explosion Close Collapse.wav-1b7ead1a4c0811286f50e8b73cd63166.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

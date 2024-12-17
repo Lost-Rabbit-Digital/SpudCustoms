@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bnyt1m22o5k6d"
+path="res://.godot/imported/phone typing 1.wav-e46a6bf8d777395f69a479d80a574a5f.sample"
+
+[deps]
+
+source_file="res://assets/audio/phone typing 1.wav"
+dest_files=["res://.godot/imported/phone typing 1.wav-e46a6bf8d777395f69a479d80a574a5f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,13 @@
+	join player_character [z_index="1"]
+	player_character: [i]eyes burning with rage[/i] There will be no deals, no mercy for you, Idaho.
+	player_character: For too long, you've ground this nation under your heel. 
+	player_character: [i]cocks weapon[/i] A tyrant's justice is the only thing you deserve. 
+	join prime_minister_idaho [z_index="1"]
+	prime_minister_idaho: [i]sneering even as he trembles[/i] You think you're better than me? You're nothing more than-
+	[i]gunshot echoes through the chamber[/i]
+	[background arg="res://assets/narrative/reckoning.jpg" fade="1.5"]
+	player_character: [i]standing over Idaho's crinkled body[/i] A reckoning. That's what I am.
+	player_character: [i]turning to the stunned onlookers[/i] For every potato sacrificed, every life ruined...we take back our future!
+	player_character: [i]rallying cry[/i] For Spud! For freedom!
+	[i]screen fades to black as cheers mix with sounds of destruction[/i]
+	leave player_character

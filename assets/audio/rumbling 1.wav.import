@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://daoer0mj7v3h5"
+path="res://.godot/imported/rumbling 1.wav-a7f4c3e7cf0648ab4f8c76d74e080779.sample"
+
+[deps]
+
+source_file="res://assets/audio/rumbling 1.wav"
+dest_files=["res://.godot/imported/rumbling 1.wav-a7f4c3e7cf0648ab4f8c76d74e080779.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

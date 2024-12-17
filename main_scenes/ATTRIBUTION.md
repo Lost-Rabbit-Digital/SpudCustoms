@@ -1,31 +1,31 @@
 # Attribution
-## Team
-### Programmers
-Author: [Boden McHale](https://www.bodenmchale.com/)
 
-Author: [David McHale](https://www.youtube.com/channel/UCcmLal-sOU_5ThcSQCFDyoA)
+# Lost Rabbit Digital
 
-### Artist
-Author: [Olexii]
+## Programmers
+[Boden McHale](https://www.bodenmchale.com/)
+[David McHale](https://www.youtube.com/channel/UCcmLal-sOU_5ThcSQCFDyoA)
 
-## Collaborators
-### Audio
-Author: [Ovani]
-Source: []
-License: []
+## Artist
+Oleksii Lotokhov
 
-### Godot Game Template
-Author: [Marek Belski and contributors](https://github.com/Maaack/Godot-Game-Template/graphs/contributors)  
-Source: [github: Godot-Game-Template](https://github.com/Maaack/Godot-Game-Template)  
-License: [MIT License](LICENSE.txt)  
+## Audio
+[Ovani](https://ovanisound.com/)
 
-## Tools
-#### Godot
+# Tools / Assets
+## Godot
 Author: [Juan Linietsky, Ariel Manzur, and contributors](https://godotengine.org/contact)  
 Source: [godotengine.org](https://godotengine.org/)  
 License: [MIT License](https://github.com/godotengine/godot/blob/master/LICENSE.txt) 
 
-#### Git
-Author: [Linus Torvalds](https://github.com/torvalds)  
-Source: [git-scm.com](https://git-scm.com/downloads)  
-License: [GNU General Public License version 2](https://opensource.org/licenses/GPL-2.0)
+## Godot Game Template
+Author: [Marek Belski and contributors](https://github.com/Maaack/Godot-Game-Template/graphs/contributors)  
+Source: [github: Godot-Game-Template](https://github.com/Maaack/Godot-Game-Template)  
+License: [MIT License](LICENSE.txt)  
+
+# Special Thanks
+Thank you to our love ones and support nets which helped us create this game.
+
+# Memoriam
+GNU Michael McHale
+GNU Sherri Jackson

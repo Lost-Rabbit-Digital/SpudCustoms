@@ -1,0 +1,31 @@
+Use PascalCase for node names:
+Example: CustomsOffice, PlayerCharacter, EnemySpawner
+
+Be descriptive but concise:
+Good: HealthBar, JumpButton, PauseMenu
+Avoid: Button1, Sprite2D3, Node2D5
+
+For child nodes that are part of a larger component, you can use more specific names:
+Example: Player/Sprite, UI/MainMenu/PlayButton
+
+For organizational nodes (those used purely for structuring), you can use simple, descriptive names:
+Example: UI, Enemies, Projectiles
+
+If you're using typed nodes, you don't need to include the type in the name:
+Use Player instead of PlayerCharacter
+Use PauseMenu instead of PauseMenuControl
+
+For nodes that represent instances of a scene, use the scene name:
+If you have a "Coin.tscn", name its instances Coin, Coin2, etc.
+
+For singleton-like nodes or unique game elements, use singular nouns:
+Example: GameManager, AudioController, LevelGenerator
+
+For collections or groups, use plural nouns:
+Example: Enemies, Powerups, Checkpoints
+
+Applying these conventions to our current scene, you might rename some nodes like this:
+CustomsOffice instead of Sprite2D (CustomsOffice)
+Megaphone instead of Sprite2D (Megaphone)
+SuspectPanel instead of Sprite2D (Suspect Panel)
+ApprovalStamp instead of Sprite2D (Approval Stamp)

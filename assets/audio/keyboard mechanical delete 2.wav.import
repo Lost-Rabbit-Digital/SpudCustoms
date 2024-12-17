@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d3es5g2steu0r"
+path="res://.godot/imported/keyboard mechanical delete 2.wav-c9ca2dd34d7c8fc6a4877656a90491f0.sample"
+
+[deps]
+
+source_file="res://assets/audio/keyboard mechanical delete 2.wav"
+dest_files=["res://.godot/imported/keyboard mechanical delete 2.wav-c9ca2dd34d7c8fc6a4877656a90491f0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ddg3okf4wre2v"
+path="res://.godot/imported/body fall 2.wav-dd7fc836b616f4169605561b0fda0941.sample"
+
+[deps]
+
+source_file="res://assets/audio/body fall 2.wav"
+dest_files=["res://.godot/imported/body fall 2.wav-dd7fc836b616f4169605561b0fda0941.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

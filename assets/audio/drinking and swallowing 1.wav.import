@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://itkaos6564il"
+path="res://.godot/imported/drinking and swallowing 1.wav-7aea94eeaa6b7d54c21a5b5ded1ef3ce.sample"
+
+[deps]
+
+source_file="res://assets/audio/drinking and swallowing 1.wav"
+dest_files=["res://.godot/imported/drinking and swallowing 1.wav-7aea94eeaa6b7d54c21a5b5ded1ef3ce.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

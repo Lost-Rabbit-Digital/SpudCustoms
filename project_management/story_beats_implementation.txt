@@ -12,8 +12,8 @@ To present a compelling story mode lasting about 2 hours with the given paramete
    - Radio broadcasts or newspaper headlines in the background
 
 3. Pacing:
-   - Each chapter/day could last about 15 minutes
-   - Process about 20-25 potatoes per chapter (at 40 seconds each)
+   - Each day could last about 8 minutes
+   - Process about 8-12 potatoes per shift (at 40 seconds each)
    - Allow 2-3 minutes for story elements between chapters
 
 Here's a suggested implementation:
@@ -21,7 +21,7 @@ Here's a suggested implementation:
 ```gdscript
 var current_chapter = 0
 var potatoes_processed_in_chapter = 0
-var max_potatoes_per_chapter = 25
+var max_potatoes_per_chapter = 12
 var story_events = [
 	# Array of story events, one per chapter
 ]
@@ -95,7 +95,7 @@ func trigger_story_event(event):
 			update_newspaper_headline(event.content)
 
 func show_dialogue(content):
-	# Implement dialogue system
+	# Implement dialogue system with Dialogic
 	pass
 
 func add_bulletin_note(content):

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b27fdpq7bbips"
+path="res://.godot/imported/Task Complete Ensemble 001.wav-987f9f10e3c6b814168c515da2eb0439.sample"
+
+[deps]
+
+source_file="res://assets/audio/Task Complete Ensemble 001.wav"
+dest_files=["res://.godot/imported/Task Complete Ensemble 001.wav-987f9f10e3c6b814168c515da2eb0439.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

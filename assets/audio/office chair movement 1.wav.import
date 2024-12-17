@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c2d24tmm52mrv"
+path="res://.godot/imported/office chair movement 1.wav-5315839be62afc2befbe85db2d50d4db.sample"
+
+[deps]
+
+source_file="res://assets/audio/office chair movement 1.wav"
+dest_files=["res://.godot/imported/office chair movement 1.wav-5315839be62afc2befbe85db2d50d4db.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

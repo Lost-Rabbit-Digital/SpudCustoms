@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://c6k5nnpbypshi"]
 
-[ext_resource type="Script" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.gd" id="1"]
+[ext_resource type="Script" uid="uid://c2ey6d7cgj0a" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://hmx6o472ropw" path="res://addons/maaacks_game_template/base/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="2_qvrrd"]
 [ext_resource type="PackedScene" uid="uid://t2dui8ppm3a4" path="res://addons/maaacks_game_template/base/scenes/credits/credits.tscn" id="3_5dhvp"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/base/scripts/capture_focus.gd" id="4_l1ebe"]
@@ -62,7 +62,7 @@ offset_left = -88.0
 offset_top = -26.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "v0.0.0"
+text = "v0.1.1"
 horizontal_alignment = 2
 script = ExtResource("6_pdiij")
 
@@ -90,7 +90,7 @@ anchor_right = 1.0
 offset_bottom = 67.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 48
-text = "Title"
+text = "Spud Customs"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("7_j7612")
