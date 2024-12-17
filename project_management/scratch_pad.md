@@ -12,6 +12,9 @@ Special Thanks:
   [ ] - https://steamcommunity.com/app/3291880/discussions/0/4637114181344181641/ / https://steamcommunity.com/profiles/76561199482274924
   [ ] - https://steamcommunity.com/id/mrbright01/
 General Tasks:
+  [ ] - Add new missile explosion animation
+  [ ] - Add new potato type art and re-institute potato type rules
+  [ ] - Make expiration apply as expected (if past date)
   [ ] - Option to disable the timer in Story and Endless mode  > Attribute: https://steamcommunity.com/app/3291880/discussions/0/603016087419796439/
   [ ] - Don't set stamps to go invisible when quota reached in Endless mode
   [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
