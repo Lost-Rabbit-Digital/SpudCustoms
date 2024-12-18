@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_m0l6d"]
 [ext_resource type="FontVariation" uid="uid://t3ii3pbmg2bo" path="res://assets/fonts/Modern_DOS_Font_Variation.tres" id="8_0m27g"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="9_7ymkl"]
-[ext_resource type="Script" path="res://QueueManager.gd" id="9_l36ds"]
+[ext_resource type="Script" uid="uid://mm8kba4qcarc" path="res://QueueManager.gd" id="9_l36ds"]
 [ext_resource type="AudioStream" uid="uid://dpybt682ppyjm" path="res://assets/music/horror_fog_main_ovani_sound.mp3" id="10_7ymkl"]
 [ext_resource type="PackedScene" uid="uid://msix881opujh" path="res://StatsManager.tscn" id="10_q0hnx"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="11_jscux"]
@@ -847,7 +847,7 @@ z_index = 7
 z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]

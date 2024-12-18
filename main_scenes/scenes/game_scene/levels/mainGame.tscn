@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="9_2f41l"]
 [ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="9_arv36"]
 [ext_resource type="AudioStream" uid="uid://b2nmiog4e1mpn" path="res://assets/music/ambient_nothingness_main_ovani_sound.mp3" id="10_2f41l"]
-[ext_resource type="Script" path="res://QueueManager.gd" id="10_a4p7n"]
+[ext_resource type="Script" uid="uid://mm8kba4qcarc" path="res://QueueManager.gd" id="10_a4p7n"]
 [ext_resource type="Texture2D" uid="uid://fmqkliw6t33x" path="res://assets/suspect_panel/suspect_panel_front.png" id="10_foucb"]
 [ext_resource type="PackedScene" uid="uid://msix881opujh" path="res://StatsManager.tscn" id="10_jgtln"]
 [ext_resource type="PackedScene" uid="uid://bnbp4h8nco0v2" path="res://NarrativeManager.tscn" id="11_qn1sc"]
@@ -873,8 +873,8 @@ z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]

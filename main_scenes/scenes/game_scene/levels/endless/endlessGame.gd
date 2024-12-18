@@ -271,9 +271,6 @@ func days_until_expiry(expiration_date: String) -> int:
 func years_until_expiry(expiration_date: String) -> int:
 	return int(days_until_expiry(expiration_date) / 365.25)  # Using 365.25 to account for leap years
 
-func is_expired(expiration_date: String) -> bool:
-	return days_until_expiry(expiration_date) < 0
-
 func update_rules_display():
 	if $Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote and Guide.current_page == 2:
 		$Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote.text = "[center]LAWS\n" + "\n".join(current_rules) + "[/center]"
@@ -281,6 +278,10 @@ func update_rules_display():
 	emit_signal("rules_updated", "[center]LAWS\n" + "\n".join(current_rules) + "[/center]")
 	
 func is_potato_valid(potato_info: Dictionary) -> bool:
+	if is_expired(potato_info.expiration_date):
+		print("DEBUG: Potato document expired on " + potato_info.expiration_date)
+		return false
+		
 	for rule in current_rules:
 		print("Current rule processing: " + rule)
 		match rule:
@@ -864,6 +865,11 @@ func process_decision(allowed):
 		
 	var correct_decision = is_potato_valid(current_potato_info)
 	
+	# Check expiration specifically - if expired, denial is correct
+	if is_expired(current_potato_info.expiration_date):
+		print("DEBUG: Document expired on " + current_potato_info.expiration_date)
+		correct_decision = false  # Meaning denial would be correct
+	
 	# Update stats
 	if allowed:
 		shift_stats.potatoes_approved += 1
@@ -898,14 +904,22 @@ func process_decision(allowed):
 		if correct_decision_streak >= 5:
 			point_multiplier = 2.0
 			
-		# Award points for correct decisions, with bonus points for consecutive
+		# Award points for correct decisions,
+		# with bonus points for consecutive
 		# correct decisions
-		# UV scanning will award 250 points per finding
 		var decision_points = 250 * point_multiplier
-		Global.display_green_alert(alert_label, alert_timer, "You made the right choice, officer.\n+" + str(decision_points) + " points!")
+		var alert_text = "You made the right choice, officer."
+		if !allowed and is_expired(current_potato_info.expiration_date):
+			alert_text += "\nDocument was expired!"
+		alert_text += "\n+" + str(decision_points) + " points!"
+		Global.display_green_alert(alert_label, alert_timer, alert_text)
 		Global.add_score(decision_points)
 	else:
-		Global.display_red_alert(alert_label, alert_timer, "You have caused unnecessary suffering, officer...\n+1 Strike!")
+		var alert_text = "You have caused unnecessary suffering, officer..."
+		if allowed and is_expired(current_potato_info.expiration_date):
+			alert_text += "\nDocument was expired!"
+		alert_text += "\n+1 Strike!"
+		Global.display_red_alert(alert_label, alert_timer, alert_text)
 		
 		correct_decision_streak = 0
 		point_multiplier = 1.0
@@ -1369,3 +1383,35 @@ func _on_game_over():
 	var summary = shift_summary.instantiate()
 	add_child(summary)
 	summary.show_summary(stats)
+
+func parse_date(date_string: String) -> Dictionary:
+	var parts = date_string.split(".")
+	if parts.size() != 3:
+		push_error("Invalid date format: " + date_string)
+		return {}
+	
+	return {
+		"year": parts[0].to_int(),
+		"month": parts[1].to_int(),
+		"day": parts[2].to_int()
+	}
+
+# Function to check if a date is before current date
+func is_expired(expiration_date: String) -> bool:
+	var current_date = Time.get_date_dict_from_system()
+	var expiry_date = parse_date(expiration_date)
+	
+	# Compare years first
+	if expiry_date.year < current_date.year:
+		return true
+	elif expiry_date.year > current_date.year:
+		return false
+		
+	# Same year, check months
+	if expiry_date.month < current_date.month:
+		return true
+	elif expiry_date.month > current_date.month:
+		return false
+		
+	# Same year and month, check days
+	return expiry_date.day < current_date.day
