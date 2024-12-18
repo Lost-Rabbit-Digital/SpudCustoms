@@ -227,7 +227,9 @@ alert_label = NodePath("../UI/Labels/MarginContainer/AlertLabel")
 alert_timer = NodePath("../SystemManagers/Timers/AlertTimer")
 missile_collision_shape = NodePath("Area2D/CollisionShape2D")
 runner_chance = 0.025
+missile_speed = 600.0
 num_gibs = 75
+gib_min_speed = 125.0
 
 [node name="Area2D" type="Area2D" parent="BorderRunnerSystem"]
 

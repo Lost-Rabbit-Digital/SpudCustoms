@@ -3,12 +3,29 @@ These are our goals, to-do tasks, and completed tasks.
 
 *INTERNAL USE* - This means don't publish this note to Steam, it's for internal tracking purposes only
 
-FULL RELEASE TASKS: 2024-11-24 - 0.1.1
+
+1.0.1 Release Notes: 
+
+Thank you all for joining us on this journey through Spud. We're logging and addressing the bugs reported by our internal QA as well as by the community and resolving in order of severity as quickly as we can. 
+
+In this release, we have made a number of fixes and adjustments: 
+
+Bug Fixes: 
+Expired passports now properly apply rejection logic and give alerts to the player on processing.
+
+Balancing: 
+Increased missile speed by 100 (500 -> 600)
+
+Misc: 
+Changed minimum speed of potato gibs to allow for more even gib distribution
+
+
+FULL RELEASE TASKS: 2024-11-24 - 1.0.1
 
 General Tasks:
   [ ] - Add new missile explosion animation
   [ ] - Add new potato type art and re-institute potato type rules
-  [ ] - Make expiration apply as expected (if past date)
+  [x] - Make expiration apply as expected (if past date)
   [ ] - Option to disable the timer in Story and Endless mode  > Attribute: https://steamcommunity.com/app/3291880/discussions/0/603016087419796439/
   [ ] - Don't set stamps to go invisible when quota reached in Endless mode
   [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
@@ -89,7 +106,7 @@ General Tasks:
     [ ] - Potatoes continued to escape during the Shift Summary.
   Backend:
     [ ] - Save game and load game
-    
+
 Special Thanks:
   Add these people to the credits in 0.1.1
   [ ] - Added community members who helped with bug reports to credits
