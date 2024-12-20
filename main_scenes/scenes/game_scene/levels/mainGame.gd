@@ -167,6 +167,21 @@ func _ready():
 
 func end_shift():
 	if Global.quota_met >= Global.quota_target:
+		# Add survival bonus
+		var survival_bonus = 500
+		Global.add_score(survival_bonus)
+		Global.display_green_alert(alert_label, alert_timer, "Shift survived! Bonus: " + str(survival_bonus) + " points!")
+		
+		# Reset quota for next shift
+		Global.quota_met = 0
+		
+		# Increase quota by initial target for next shift
+		var initial_quota = get_initial_quota()
+		Global.quota_target += initial_quota
+		
+		# Update displays
+		update_quota_display()
+		
 		narrative_manager.start_shift_dialogue()
 		disable_controls()
 	else:
