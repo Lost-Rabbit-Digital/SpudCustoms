@@ -175,10 +175,6 @@ func end_shift():
 		# Reset quota for next shift
 		Global.quota_met = 0
 		
-		# Increase quota by initial target for next shift
-		var initial_quota = get_initial_quota()
-		Global.quota_target += initial_quota
-		
 		# Update displays
 		update_quota_display()
 		
@@ -305,9 +301,6 @@ func days_until_expiry(expiration_date: String) -> int:
 
 func years_until_expiry(expiration_date: String) -> int:
 	return int(days_until_expiry(expiration_date) / 365.25)  # Using 365.25 to account for leap years
-
-func is_expired(expiration_date: String) -> bool:
-	return days_until_expiry(expiration_date) < 0
 
 func update_rules_display():
 	if $Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote and Guide.current_page == 2:
