@@ -1,14 +1,12 @@
-[gd_scene load_steps=68 format=3 uid="uid://bdknelqd4ojod"]
+[gd_scene load_steps=65 format=3 uid="uid://bdknelqd4ojod"]
 
 [ext_resource type="Script" uid="uid://bak2ox7wh15te" path="res://main_scenes/scenes/game_scene/levels/endless/endlessGame.gd" id="1_s8p0h"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="2_udo16"]
 [ext_resource type="Texture2D" uid="uid://doml0udrwe6pe" path="res://assets/Background.png" id="3_3evfx"]
-[ext_resource type="Texture2D" uid="uid://byj3e8pmw17no" path="res://assets/stamps/stamp_crossbar_expand_button.png" id="3_sxlfl"]
 [ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/level/customs_office.png" id="4_qqvh6"]
 [ext_resource type="Texture2D" uid="uid://yvmmxdnlhttw" path="res://assets/level/fence_posts.png" id="5_at1xl"]
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="6_duxyb"]
 [ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_m0l6d"]
-[ext_resource type="Texture2D" uid="uid://cu6xbgla0qqqe" path="res://assets/stamps/stamp_crossbar.png" id="7_p4mb1"]
 [ext_resource type="FontVariation" uid="uid://t3ii3pbmg2bo" path="res://assets/fonts/Modern_DOS_Font_Variation.tres" id="8_0m27g"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="9_7ymkl"]
 [ext_resource type="Script" uid="uid://mm8kba4qcarc" path="res://QueueManager.gd" id="9_l36ds"]
@@ -27,11 +25,10 @@
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="22_oyjtf"]
 [ext_resource type="Texture2D" uid="uid://y3iyyicwxtsl" path="res://assets/documents/closed_passport_small/closed_passport_small.png" id="23_s8p0h"]
 [ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://give_prompt_dialogue.png" id="24_hc26c"]
+[ext_resource type="PackedScene" uid="uid://be3lucg3f3a3c" path="res://StampBarController.tscn" id="24_ypb8n"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://assets/fonts/windows_command_prompt.ttf" id="25_ds7r6"]
+[ext_resource type="Script" uid="uid://b2rvsx4gf3s8c" path="res://StampCrossbarSystem.gd" id="25_ypb8n"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="26_y5k1q"]
-[ext_resource type="Texture2D" uid="uid://dubo3sdxx8chn" path="res://assets/stamps/approval_stamp_3.png" id="27_sv4yv"]
-[ext_resource type="Texture2D" uid="uid://c0dbfc2uut8qn" path="res://assets/stamps/stamp_shadow.png" id="28_wujuw"]
-[ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="29_wkktu"]
 [ext_resource type="Texture2D" uid="uid://cfkvlvqhnapxc" path="res://assets/documents/customs_guide/customs_guide_open_2.png" id="30_6ppju"]
 [ext_resource type="Script" uid="uid://bif3v7xddhuag" path="res://guide.gd" id="31_6ou4t"]
 [ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://dos_theme.tres" id="31_pdq3q"]
@@ -243,50 +240,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
-
-[node name="FoldOutButton" type="Sprite2D" parent="UI"]
-z_index = 2
-z_as_relative = false
-y_sort_enabled = true
-position = Vector2(48, 440)
-scale = Vector2(0.665449, 0.665449)
-texture = ExtResource("3_sxlfl")
-
-[node name="StampBar" type="Sprite2D" parent="UI"]
-visible = false
-
-[node name="ApprovalStamp" type="Sprite2D" parent="UI/StampBar"]
-z_index = 4
-texture_filter = 1
-position = Vector2(286, 405)
-texture = ExtResource("27_sv4yv")
-
-[node name="StampShadow" type="Sprite2D" parent="UI/StampBar/ApprovalStamp"]
-visible = false
-z_index = 3
-z_as_relative = false
-position = Vector2(0, 20)
-scale = Vector2(0.29, 0.29)
-texture = ExtResource("28_wujuw")
-
-[node name="RejectionStamp" type="Sprite2D" parent="UI/StampBar"]
-z_index = 2
-position = Vector2(497, 405)
-texture = ExtResource("29_wkktu")
-
-[node name="StampShadow" type="Sprite2D" parent="UI/StampBar/RejectionStamp"]
-visible = false
-z_index = 3
-z_as_relative = false
-position = Vector2(0, 20)
-scale = Vector2(0.29, 0.29)
-texture = ExtResource("28_wujuw")
-
-[node name="StampBarBackground" type="Sprite2D" parent="UI/StampBar"]
-z_index = 2
-position = Vector2(323, 440)
-scale = Vector2(0.665845, 0.665845)
-texture = ExtResource("7_p4mb1")
 
 [node name="WorldPanel" type="Sprite2D" parent="UI"]
 z_index = 6
@@ -583,6 +536,14 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="StampBarController" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("stamp_system") instance=ExtResource("24_ypb8n")]
+stamp_system = NodePath("../StampCrossbarSystem")
+
+[node name="StampCrossbarSystem" type="Node2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("passport", "stats_manager")]
+script = ExtResource("25_ypb8n")
+passport = NodePath("../Passport")
+stats_manager = NodePath("../../../SystemManagers/StatsManager")
+
 [node name="PassportSpawnPoints" type="Node2D" parent="Gameplay/InteractiveElements"]
 
 [node name="BeginPoint" type="Node2D" parent="Gameplay/InteractiveElements/PassportSpawnPoints"]
@@ -658,7 +619,7 @@ texture = ExtResource("26_y5k1q")
 [node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
 z_index = 2
 z_as_relative = false
-position = Vector2(804, 302)
+position = Vector2(699, 519)
 texture = ExtResource("30_6ppju")
 script = ExtResource("31_6ou4t")
 main_node = NodePath("../../..")
