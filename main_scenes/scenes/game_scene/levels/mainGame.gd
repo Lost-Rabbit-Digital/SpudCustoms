@@ -253,34 +253,6 @@ func generate_rules():
 	current_rules = current_rules.slice(0, randi() % 2 + 2)
 	update_rules_display()
 
-func days_until_expiry(expiration_date: String) -> int:
-	var current_date = Time.get_date_dict_from_system()
-	var expiry_parts = expiration_date.split('.')
-	
-	if expiry_parts.size() != 3:
-		print("Invalid date format: ", expiration_date)
-		return 0
-	
-	var expiry_year = expiry_parts[0].to_int()
-	var expiry_month = expiry_parts[1].to_int()
-	var expiry_day = expiry_parts[2].to_int()
-	
-	var current_unix = Time.get_unix_time_from_datetime_dict(current_date)
-	var expiry_unix = Time.get_unix_time_from_datetime_dict({
-		"year": expiry_year,
-		"month": expiry_month,
-		"day": expiry_day,
-		"hour": 0,
-		"minute": 0,
-		"second": 0
-	})
-	
-	var difference_seconds = expiry_unix - current_unix
-	return int(difference_seconds / 86400)  # Convert seconds to days
-
-func years_until_expiry(expiration_date: String) -> int:
-	return int(days_until_expiry(expiration_date) / 365.25)  # Using 365.25 to account for leap years
-
 func update_rules_display():
 	if $Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote and Guide.current_page == 2:
 		$Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote.text = "[center]LAWS\n" + "\n".join(current_rules) + "[/center]"
