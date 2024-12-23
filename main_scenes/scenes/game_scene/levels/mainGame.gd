@@ -221,7 +221,7 @@ func generate_rules():
 		"All potatoes must be Fresh!",
 		"Extra Eyes are suspicious, inspect carefully and reject.",
 		"Rotten potatoes are strictly forbidden.",
-		"Sprouted potatoes need additional verification and must be denied.",
+		"Sprouted potatoes must be denied.",
 		"Dehydrated potatoes are not allowed today.",
 		"Frozen potatoes require a special permit.",
 
@@ -232,19 +232,19 @@ func generate_rules():
 
 		# Gender-based rules
 		"Only male potatoes allowed today.",
-		"Female potatoes get exclusive processing, no males.",
+		"Female potatoes only, reject all males.",
 
 		# Country-based rules
 		"Potatoes from Spudland must be denied.",
 		"Potatopia citizens cannot enter under any circumstances.",
 		"Tuberstan potatoes suspected of concealing arms.",
-		"North Yamnea is currently under embargo.",
+		"North Yamnea is currently restricted due to radioactive taters.",
 		"Reject Spuddington potatoes because of visa counterfeiting activity.",
-		"Tatcross citizens get no entry processing.",
+		"Tatcross citizens get ABSOLUTELY NO entry processing.",
 		"Mash Meadows potatoes are subject to quarantine, reject!",
 		"Tuberville potatoes subject to absolute rejection.",
 		"Chip Hill exports are currently restricted.",
-		"Murphyland potatoes need work permit verification. Reject!",
+		"Murphyland potatoes are banned from the economy. Reject!",
 		"Colcannon citizens must be rejected due to seasonings.",
 		"Pratie Point potatoes require rejection on agricultural grounds."
 	]
@@ -277,7 +277,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			"Rotten potatoes are strictly forbidden.":
 				if potato_info.condition == "Rotten":
 					return false
-			"Sprouted potatoes need additional verification and must be denied":
+			"Sprouted potatoes must be denied.":
 				if potato_info.condition == "Sprouted":
 					return false
 			"Dehydrated potatoes are not allowed today.":
@@ -306,7 +306,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			"Only male potatoes allowed today.":
 				if potato_info.sex == "Female":
 					return false
-			"Female potatoes get exclusive processing, no males.":
+			"Female potatoes only, reject all males.":
 				print("Your potato is: ", potato_info.sex)
 				if potato_info.sex == "Male":
 					return false
@@ -320,13 +320,13 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			"Tuberstan potatoes suspected of concealing arms.":
 				if potato_info.country_of_issue == "Tuberstan":
 					return false			
-			"North Yamnea is currently under embargo.":
+			"North Yamnea is currently restricted due to radioactive taters.":
 				if potato_info.country_of_issue == "North Yamnea":
 					return false			
 			"Reject Spuddington potatoes because of visa counterfeiting activity.":
 				if potato_info.country_of_issue == "Spuddington":
 					return false
-			"Tatcross citizens get no entry processing.":
+			"Tatcross citizens get ABSOLUTELY NO entry processing.":
 				if potato_info.country_of_issue == "Tatcross":
 					return false			
 			"Mash Meadows potatoes are subject to quarantine, reject!":
@@ -338,7 +338,7 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 			"Chip Hill exports are currently restricted.":
 				if potato_info.country_of_issue == "Chip Hill":
 					return false
-			"Murphyland potatoes need work permit verification. Reject!":
+			"Murphyland potatoes are banned from the economy. Reject!":
 				if potato_info.country_of_issue == "Murphyland":
 					return false
 			"Colcannon citizens must be rejected due to seasonings.":
