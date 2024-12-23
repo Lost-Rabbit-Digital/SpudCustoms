@@ -312,23 +312,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="TimeLabel" type="Label" parent="UI/Labels"]
-z_index = 2
-z_as_relative = false
-layout_mode = 0
-offset_left = 988.0
-offset_top = 241.0
-offset_right = 1196.0
-offset_bottom = 291.0
-theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("8_0m27g")
-theme_override_font_sizes/font_size = 32
-text = "Time Left: 60"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="StrikesLabel" type="Label" parent="UI/Labels"]
 z_index = 2
 z_as_relative = false
@@ -829,7 +812,7 @@ z_index = 7
 z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]

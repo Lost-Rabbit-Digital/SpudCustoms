@@ -19,12 +19,7 @@ var difficulty_level
 # Track multipliers and streaks
 var point_multiplier = 1.0
 var correct_decision_streak = 0
-
-# timer for limiting shift processing times
-var processing_time = 60  # seconds
-var current_timer = 0 # seconds
 var original_runner_chance = 0.15  # Match your current chance value
-
 
 # storing and sending rule assignments
 signal rules_updated(new_rules)
@@ -59,9 +54,6 @@ var suspect_panel: Sprite2D
 var suspect_panel_front: Sprite2D
 var suspect: Sprite2D
 var is_passport_open = false
-
-@onready var time_label = $UI/Labels/TimeLabel
-var label_tween: Tween
 
 # Guide dragging system
 var guide: Sprite2D
@@ -118,8 +110,6 @@ func _ready():
 	update_score_display()
 	update_quota_display()
 	update_date_display()
-	time_label = $UI/Labels/TimeLabel
-	
 	generate_rules()
 	draggable_sprites = [
 		$Gameplay/InteractiveElements/Passport,
@@ -170,24 +160,18 @@ func end_shift():
 		var survival_bonus = 500
 		Global.add_score(survival_bonus)
 		Global.display_green_alert(alert_label, alert_timer, "Shift survived! Bonus: " + str(survival_bonus) + " points!")
-		
 		# Reset quota for next shift
 		Global.quota_met = 0
-		
 		# Update displays
 		update_quota_display()
-		
 		narrative_manager.start_shift_dialogue()
 		disable_controls()
 	else:
 		# Calculate final time taken 
 		var elapsed_time = (Time.get_ticks_msec() / 1000.0) - game_start_time
-		shift_stats.time_taken = elapsed_time
-		shift_stats.processing_time_left = current_timer
 		var runner_stats = $BorderRunnerSystem.shift_stats
 		var stats = {
 			"shift": Global.shift,
-			"time_taken": int(shift_stats.time_taken),
 			"score": Global.score,
 			"missiles_fired": runner_stats.missiles_fired,
 			"missiles_hit": runner_stats.missiles_hit,
@@ -212,7 +196,6 @@ func end_shift():
 		add_child(summary)
 		summary.show_summary(stats)
 
-
 func setup_megaphone_flash_timer():
 	#print("FLASH TIMER: Setup megaphone flash timer")
 	megaphone_flash_timer = $SystemManagers/Timers/MegaphoneFlashTimer
@@ -224,13 +207,10 @@ func set_difficulty(level):
 	match difficulty_level:
 		"Easy":
 			Global.max_strikes = 6
-			processing_time = 60
 		"Normal":
 			Global.max_strikes = 4
-			processing_time = 45
 		"Expert":
 			Global.max_strikes = 3
-			processing_time = 30
 			
 	update_quota_display()
 	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
@@ -530,40 +510,6 @@ func _on_spawn_timer_timeout():
 		print("Potato queue limit reached, skip spawning.")
 		#spawn_timer.stop()
 
-func start_label_tween():
-	stop_label_tween()
-	
-	label_tween = create_tween().set_loops()
-	
-	if not label_tween or not time_label:
-		print("Error: Failed to create tween or time_label not found")
-		return
-	
-	label_tween.tween_property(time_label, "theme_override_font_sizes/font_size", 32, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-	label_tween.tween_property(time_label, "theme_override_font_sizes/font_size", 24, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-	
-	label_tween.parallel().tween_property(time_label, "theme_override_colors/font_color", Color.RED, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-	label_tween.tween_property(time_label, "theme_override_colors/font_color", Color("#ffc7a7"), 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-
-var font = load("res://assets/fonts/Modern_DOS_Font_Variation.tres")
-func reset_time_label():
-	# Set font size
-	time_label.add_theme_font_size_override("font_size", 32)
-	# Set font
-	time_label.add_theme_font_override("font", font)
-	# Set color
-	time_label.add_theme_color_override("font_color", Color("#ffc7a7"))
-	
-	if time_label:
-		time_label.visible = false
-
-# Add this new function to stop the label tween
-func stop_label_tween():
-	if label_tween:
-		label_tween.kill()
-		label_tween = null
-	reset_time_label()
-
 			# Implicit rejection of potatos via the process_decision(false) function 
 			# carries the risk of accidentally passing a potato and improving player score
 			# This should be its' own force_decision(), maybe where the Supervisor says 
@@ -624,34 +570,6 @@ func _process(_delta):
 	var mouse_pos = get_global_mouse_position()
 	check_cursor_status(mouse_pos)
 	
-	# Processing timer implementation
-	if is_potato_in_office:
-		# Show label if potato in customs office
-		if not time_label.visible:
-			reset_time_label()
-			time_label.visible = true
-		
-		current_timer += _delta
-		var remaining_time = int(processing_time) - int(current_timer)
-		time_label.text = "Time Left: %s" % str(remaining_time)
-		
-		# Only start the tween effect when less than 5 seconds remain
-		if remaining_time < 5 and not label_tween:
-			start_label_tween()
-		elif remaining_time >= 5 and label_tween:
-			# Stop the tween if it's running and we're back above 5 seconds
-			stop_label_tween()
-		
-		if int(current_timer) >= int(processing_time):
-			move_potato_along_path("timed_out")
-			is_potato_in_office = false
-	else:
-		# Hide label if potato is not in/has left customs office
-		if time_label.visible:
-			stop_label_tween()
-			reset_time_label()
-		current_timer = 0
-
 	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == false:
 		$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = true
 	else:
@@ -809,7 +727,6 @@ func _on_button_welcome_button_pressed() -> void:
 func _on_button_no_entry_button_pressed() -> void:
 	process_decision(false)
 
-	
 func go_to_game_win():
 	print("Transitioning to game win scene with score:", Global.score)
 	#$Gameplay/InteractiveElements/ApprovalStamp.visible = false
@@ -821,67 +738,6 @@ func go_to_game_win():
 	#var success_scene = preload("res://menus/success_scene.tscn")
 	#get_tree().change_scene_to_packed(success_scene)
 	# Store the score in a global script or autoload
-
-func timed_out():
-	# Alert the player
-	Global.display_red_alert(alert_label, alert_timer, "You took too long and they left, officer... \n+1 Strike!")
-	
-	# Reset stats and add strike
-	correct_decision_streak = 0
-	point_multiplier = 1.0
-	Global.strikes += 1
-	if Global.strikes >= Global.max_strikes:
-		# Calculate final time taken 
-		var elapsed_time = (Time.get_ticks_msec() / 1000.0) - game_start_time
-		shift_stats.time_taken = elapsed_time
-		shift_stats.processing_time_left = current_timer
-		var runner_stats = $BorderRunnerSystem.shift_stats
-		var stats = {
-			"shift": Global.shift,
-			"time_taken": int(shift_stats.time_taken),
-			"score": Global.score,
-			"missiles_fired": runner_stats.missiles_fired,
-			"missiles_hit": runner_stats.missiles_hit,
-			"perfect_hits": runner_stats.perfect_hits,
-			"total_stamps": shift_stats.total_stamps,
-			"potatoes_approved": shift_stats.potatoes_approved,
-			"potatoes_rejected": shift_stats.potatoes_rejected,
-			"perfect_stamps": shift_stats.perfect_stamps,
-			"speed_bonus": shift_stats.get_speed_bonus(),
-			"accuracy_bonus": shift_stats.get_accuracy_bonus(),
-			"perfect_bonus": shift_stats.get_missile_bonus(),
-			"final_score": (Global.score + shift_stats.get_speed_bonus() + shift_stats.get_accuracy_bonus() + shift_stats.get_missile_bonus())
-		}
-		print("Printing runner stats")
-		print(runner_stats)
-		print("Printing shift stats")
-		print(shift_stats)
-		print("Printing stats")
-		print(stats)
-		Global.store_game_stats(stats)
-		var summary = shift_summary.instantiate()
-		add_child(summary)
-		summary.show_summary(stats)
-			
-	# Update displays
-	update_score_display()
-	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
-	
-	# Add another potato
-	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
-		spawn_timer.start()
-	
-	# Animate the exit
-	var passport_book = $Gameplay/InteractiveElements/Passport
-	var tween = create_tween()
-	tween.set_parallel(true)
-	tween.tween_property(mugshot_generator, "position:x", suspect_panel.position.x - suspect.get_rect().size.x, 1)
-	tween.tween_property(mugshot_generator, "modulate:a", 0, 1)
-	tween.tween_property(passport_book, "modulate:a", 0, 1)
-	
-	# Clear the stamps
-	close_passport_action()
-	remove_stamp()
 
 func process_decision(allowed):
 	print("Evaluating immigration decision in process_decision()...")
@@ -938,9 +794,6 @@ func process_decision(allowed):
 		point_multiplier = 1.0
 		Global.strikes += 1
 		if Global.strikes >= Global.max_strikes:
-			# Calculate final time taken
-			shift_stats.time_taken = processing_time - current_timer
-			shift_stats.processing_time_left = current_timer
 			# Store stats before transitioning
 			Global.store_game_stats(shift_stats)
 			Global.go_to_game_over()
@@ -1149,9 +1002,6 @@ func move_potato_along_path(approval_status):
 		path = available_approve_paths[randi() % available_approve_paths.size()]
 		print("Selected approve path: ", path.name)
 		process_decision(true)
-	elif approval_status == "timed_out":
-		path = available_reject_paths[randi() % available_reject_paths.size()]
-		timed_out()
 	else:
 		# Increase chance of runner when rejected
 		if randf() < 0.15:  # 15% chance to go runner mode
@@ -1194,8 +1044,6 @@ func move_potato_along_path(approval_status):
 	if "Approve" in path.name:
 		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 8.0)
 	elif "Reject" in path.name:
-		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 8.0)
-	elif "TimedOut" in path.name:
 		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 8.0)
 	else:
 		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, runner_time)
@@ -1265,7 +1113,6 @@ func _on_game_over():
 	var runner_stats = $BorderRunnerSystem.shift_stats
 	var stats = {
 		"shift": Global.shift,
-		"time_taken": elapsed_time,
 		"score": Global.score,
 		"missiles_fired": runner_stats.missiles_fired,
 		"missiles_hit": runner_stats.missiles_hit,
