@@ -18,6 +18,7 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Entry ticket
   [ ] - Different documents, entry passes, work permits, baggage, visas, marriage licenses, bribes, 
   [ ] - Randomly toggle the lights on and off like people are using the rooms
+  [ ] - Fix text on main menu and other scenes with background photos
 ### Gameplay
   [ ] - Reduce lead time for missiles
   [ ] - Faster project or more centralized location for missile
