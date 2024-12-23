@@ -21,13 +21,13 @@ offset_left = 10.0
 offset_top = 396.0
 offset_right = 119.0
 offset_bottom = 530.0
-scale = Vector2(0.665449, 0.665449)
+scale = Vector2(0.667388, 0.667388)
 texture_normal = ExtResource("2_6a1oe")
 
 [node name="StampBar" type="Node2D" parent="."]
 z_index = 11
 z_as_relative = false
-position = Vector2(-400, 360)
+position = Vector2(-624, 1)
 
 [node name="Background" type="Sprite2D" parent="StampBar"]
 z_index = 3
@@ -49,6 +49,10 @@ scale = Vector2(0.888171, 0.888171)
 texture = ExtResource("4_lu78d")
 
 [node name="TextureButton" type="TextureButton" parent="StampBar/ApprovalStamp"]
+offset_left = -65.0
+offset_top = -63.0
+offset_right = 63.0
+offset_bottom = 65.0
 texture_normal = ExtResource("5_0hc55")
 
 [node name="RejectionStamp" type="Node2D" parent="StampBar"]
@@ -64,6 +68,10 @@ scale = Vector2(0.890923, 0.890923)
 texture = ExtResource("4_lu78d")
 
 [node name="TextureButton" type="TextureButton" parent="StampBar/RejectionStamp"]
+offset_left = -64.0
+offset_top = -63.0
+offset_right = 64.0
+offset_bottom = 65.0
 texture_normal = ExtResource("6_5qhns")
 
 [node name="HideButton" type="TextureButton" parent="StampBar"]
