@@ -3,14 +3,6 @@ These are our goals, to-do tasks, and completed tasks.
 
 # FULL RELEASE TASKS - 2024-11-24 - 1.0.1
 
-## Special Thanks
-  Add these people to the credits in 1.0.1
-  [ ] - Added community members who helped with bug reports to credits
-  [ ] - Report: https://steamcommunity.com/app/3291880/discussions/0/603016087419796439/ / Profile: https://steamcommunity.com/profiles/76561197989580996
-  [ ] - Report: https://steamcommunity.com/app/3291880/discussions/0/4637115050041082833/ / Profile: https://steamcommunity.com/profiles/76561198028696216
-  [ ] - Report: https://steamcommunity.com/app/3291880/discussions/0/4637114181344181641/ / Profile: https://steamcommunity.com/profiles/76561199482274924
-  [ ] - Profile: https://steamcommunity.com/id/mrbright01/
-
 ## Tasks
 ### Graphics
   [ ] - Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
@@ -135,7 +127,8 @@ If a label is marked with *INTERNAL USE* then do *NOT* include it in the officia
 
 ## Steam Minor Update 1.0.1: General bug fixes - NOT YET RELEASED
   - Make expiration apply as expected (if past date)
-
+  
+  - Added community members who helped with bug reports to credits
   - *INTERNAL USE* Cleaned up old tutorial code to pave road for new system
   - *INTERNAL USE* Updated alert system in endlessGame and BorderRunnerSystem
   - Reduced chance of Spud running the border from 30% to 15%
