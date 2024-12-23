@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://bdknelqd4ojod"]
+[gd_scene load_steps=66 format=3 uid="uid://bdknelqd4ojod"]
 
 [ext_resource type="Script" uid="uid://bak2ox7wh15te" path="res://main_scenes/scenes/game_scene/levels/endless/endlessGame.gd" id="1_s8p0h"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="2_udo16"]
@@ -30,6 +30,7 @@
 [ext_resource type="Script" uid="uid://b2rvsx4gf3s8c" path="res://StampCrossbarSystem.gd" id="25_ypb8n"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="26_y5k1q"]
 [ext_resource type="Texture2D" uid="uid://cfkvlvqhnapxc" path="res://assets/documents/customs_guide/customs_guide_open_2.png" id="30_6ppju"]
+[ext_resource type="Texture2D" uid="uid://bxn3434177kfd" path="res://assets/documents/laws_receipt.png" id="30_bhhuv"]
 [ext_resource type="Script" uid="uid://bif3v7xddhuag" path="res://guide.gd" id="31_6ou4t"]
 [ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://dos_theme.tres" id="31_pdq3q"]
 
@@ -598,6 +599,34 @@ autowrap_mode = 2
 visible = false
 position = Vector2(-4.99997, 3.99999)
 texture = ExtResource("26_y5k1q")
+
+[node name="LawReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
+z_index = 12
+z_as_relative = false
+position = Vector2(168, 501)
+texture = ExtResource("30_bhhuv")
+script = ExtResource("31_6ou4t")
+main_node = NodePath("../../..")
+
+[node name="ClosedReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements/LawReceipt"]
+visible = false
+z_as_relative = false
+
+[node name="OpenReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements/LawReceipt"]
+
+[node name="ReceiptNote" type="RichTextLabel" parent="Gameplay/InteractiveElements/LawReceipt/OpenReceipt"]
+offset_left = -88.0
+offset_top = -107.0
+offset_right = 89.0
+offset_bottom = 101.0
+theme = ExtResource("31_pdq3q")
+theme_override_colors/default_color = Color(0.341176, 0.282353, 0.282353, 1)
+bbcode_enabled = true
+text = "[u]Laws[/u]
+North Yamnea potatoes not allowed.
+Spuddington Potatoes banned.
+Potatoes must be fresh."
+horizontal_alignment = 1
 
 [node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
 z_index = 2

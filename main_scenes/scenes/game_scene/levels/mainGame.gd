@@ -42,8 +42,6 @@ var draggable_sprites = []
 var dragged_sprite = null
 var drag_offset = Vector2()
 const PASSPORT_Z_INDEX = 0
-@onready var approval_stamp = $Gameplay/InteractiveElements/ApprovalStamp
-@onready var rejection_stamp = $Gameplay/InteractiveElements/RejectionStamp
 
 # Passport dragging system
 var passport: Sprite2D
@@ -90,9 +88,7 @@ func _ready():
 	var stamp_system = $Gameplay/InteractiveElements/StampCrossbarSystem
 	
 	# Connect the stamp bar to the stamp system
-	stamp_bar.stamp_requested.connect(
-		func(stamp_type): stamp_system.apply_stamp(stamp_type)
-	)
+	stamp_bar.stamp_requested.connect(stamp_system.on_stamp_requested)
 	
 	$BorderRunnerSystem.game_over_triggered.connect(_on_game_over)
 	game_start_time = Time.get_ticks_msec() / 1000.0  # Convert to seconds
@@ -901,31 +897,55 @@ func find_topmost_sprite_at(pos: Vector2) -> Node2D:
 	
 	return topmost_sprite
 
+func check_node_for_stamps(node: Node):
+	for child in node.get_children():
+		print("DEBUG: Checking child:", child.name, " - Class:", child.get_class())
+		if child is Sprite2D and child.texture:
+			var texture_path = child.texture.resource_path
+			print("DEBUG: Found sprite with texture path:", texture_path)
+			if "approved" in texture_path or "approve" in texture_path:
+				print("DEBUG: Found approval stamp")
+				current_approval_status = "approved"
+				current_stamp_count += 1
+			elif "denied" in texture_path or "reject" in texture_path:
+				print("DEBUG: Found denial stamp")
+				current_approval_status = "rejected"
+				current_stamp_count += 1
+
+var current_stamp_count = 0
+var current_approval_status = null
+
 		
 func remove_stamp():
-	print("Processing passport...")
-	# Get the parent node
-	var open_passport = $Gameplay/InteractiveElements/Passport/OpenPassport
-	var stamp_count = 0
-	var approval_status = null
+	print("DEBUG: Starting remove_stamp process...")
 	
-	# Check for stamps and determine approval status
-	for child in open_passport.get_children():
-		if "@Sprite2D@" in child.name:
-			stamp_count += 1
-			if "approved" in child.texture.resource_path:
-				approval_status = "approved"
-			else:
-				approval_status = "rejected"
-			open_passport.remove_child(child)
-			child.queue_free()
+	# Reset counters
+	current_stamp_count = 0
+	current_approval_status = null
+	
+	# Check both closed and open passport nodes
+	var closed_passport = $Gameplay/InteractiveElements/Passport/ClosedPassport
+	var open_passport = $Gameplay/InteractiveElements/Passport/OpenPassport
+	var passport_base = $Gameplay/InteractiveElements/Passport
+	
+	print("DEBUG: Checking passport nodes:")
+	print("- Base passport children:", passport_base.get_child_count())
+	print("- Closed passport children:", closed_passport.get_child_count())
+	print("- Open passport children:", open_passport.get_child_count())
+	
+	# Check all nodes
+	check_node_for_stamps(passport_base)
+	check_node_for_stamps(closed_passport)
+	check_node_for_stamps(open_passport)
+	
+	print("DEBUG: Total stamps found:", current_stamp_count)
+	print("DEBUG: Final approval status:", current_approval_status)
 
-	if stamp_count == 0:
-		print("There are no stamps, foolish potato.")
+	if current_stamp_count == 0:
+		print("DEBUG: No stamps found - aborting passport processing")
 		return
 
-	print("This passport has been processed as %s" % approval_status)
-	
+	print("DEBUG: Processing passport with status:", current_approval_status)
 	var passport_book = $Gameplay/InteractiveElements/Passport
 	# Animate the potato mugshot and passport exit
 	var tween = create_tween()
@@ -934,7 +954,8 @@ func remove_stamp():
 	tween.tween_property(mugshot_generator, "modulate:a", 0, 1)
 	tween.tween_property(passport_book, "modulate:a", 0, 1)
 	tween.chain().tween_callback(func(): 
-		move_potato_along_path(approval_status)
+		process_decision(current_approval_status == "approved")
+		move_potato_along_path(current_approval_status)
 		is_potato_in_office = false
 	)
 	
@@ -1072,8 +1093,6 @@ func enable_controls():
 	# Re-enable controls after dialogue
 	set_process_input(true)
 	$Gameplay/Megaphone.visible = true
-	$Gameplay/InteractiveElements/ApprovalStamp.visible = true
-	$Gameplay/InteractiveElements/RejectionStamp.visible = true 
 	$Gameplay/InteractiveElements/Guide.visible = true
 	# Re-enable border runner system and restore original spawn chance
 	if border_runner_system:

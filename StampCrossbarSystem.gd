@@ -16,6 +16,8 @@ const STAMP_ANIM_DURATION = 0.3
 var stamps_visible = false
 var is_stamping = false
 var stamp_cooldown = 1.0
+var current_stamp_texture: Texture2D
+
 
 # Audio
 @onready var sfx_player = $"../../../SystemManagers/AudioManager/SFXPool"
@@ -38,6 +40,10 @@ func setup_stamps():
 func _on_fold_button_pressed():
 	stamps_visible = !stamps_visible
 	update_stamp_bar_visibility(stamps_visible)
+
+func on_stamp_requested(stamp_type:String, stamp_texture: Texture2D):
+		current_stamp_texture = stamp_texture
+		apply_stamp(stamp_type)
 
 func update_stamp_bar_visibility(visible: bool):
 	var target_x = UNFOLDED_X_POS if visible else FOLDED_X_POS
@@ -74,7 +80,7 @@ func play_random_stamp_sound():
 		sfx_player.play()
 
 func apply_stamp(stamp_type: String):
-	if not passport or not is_instance_valid(passport):
+	if not passport or not current_stamp_texture:
 		return
 		
 	is_stamping = true
@@ -82,8 +88,7 @@ func apply_stamp(stamp_type: String):
 	
 	# Create temporary stamp for animation
 	var temp_stamp = Sprite2D.new()
-	var stamp_node = $StampBar/ApprovalStamp if stamp_type == "approve" else $StampBar/RejectionStamp
-	temp_stamp.texture = stamp_node.texture
+	temp_stamp.texture = current_stamp_texture
 	temp_stamp.global_position = passport.global_position
 	add_child(temp_stamp)
 	
@@ -103,24 +108,32 @@ func apply_stamp(stamp_type: String):
 	)
 
 func create_final_stamp(stamp_type: String, pos: Vector2):
+	print("DEBUG: Creating final stamp...")
 	var final_stamp = Sprite2D.new()
+	print("DEBUG: Stamp type:", stamp_type)
+	
 	var texture_path = "res://assets/stamps/approved_stamp.png" if stamp_type == "approve" \
 					  else "res://assets/stamps/denied_stamp.png"
+	print("DEBUG: Loading texture from:", texture_path)
+	
 	final_stamp.texture = load(texture_path)
 	final_stamp.position = passport.to_local(pos)
 	final_stamp.modulate.a = 0
+	final_stamp.name = "StampSprite_" + stamp_type  # Add this line to give stamps distinct names
+	print("DEBUG: Adding stamp to passport at local position:", final_stamp.position)
 	passport.add_child(final_stamp)
+	print("DEBUG: Stamp added as child. Passport now has children:", passport.get_child_count())
 	
 	# Update stats
 	if stats_manager:
-		stats_manager.shift_stats.total_stamps += 1
+		stats_manager.current_stats.total_stamps += 1
 		# Check accuracy
 		var is_perfect = stats_manager.check_stamp_accuracy(
 			final_stamp.global_position,
 			passport
 		)
 		if is_perfect:
-			stats_manager.shift_stats.perfect_stamps += 1
+			stats_manager.current_stats.perfect_stamps += 1
 			Global.add_score(100)  # Bonus for perfect stamp
 	
 	# Fade in the stamp

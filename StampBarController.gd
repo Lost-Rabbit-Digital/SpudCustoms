@@ -1,12 +1,12 @@
 # StampBarController.gd
 extends Node2D
 
-signal stamp_requested(stamp_type: String)
+signal stamp_requested(stamp_type: String, stamp_texture: Texture2D)
 
 # Constants for positioning and animation
-const HIDDEN_X = -400  # Position when bar is hidden
-const SHOWN_X = 50    # Position when bar is visible
-const TWEEN_DURATION = 0.3
+const HIDDEN_X = -625  # Position when bar is hidden
+const SHOWN_X = -10    # Position when bar is visible
+const TWEEN_DURATION = 0.5
 
 # Node references
 @onready var stamp_bar = $StampBar
@@ -18,8 +18,6 @@ const TWEEN_DURATION = 0.3
 var is_visible = false
 var is_animating = false
 
-
-
 func _ready():
 	# Set initial position (hidden)
 	stamp_bar.position.x = HIDDEN_X
@@ -28,9 +26,13 @@ func _ready():
 	fold_out_button.pressed.connect(_on_fold_out_pressed)
 	hide_button.pressed.connect(_on_hide_pressed)
 	
-	# Connect stamp buttons to their respective TextureButtons
-	$StampBar/ApprovalStamp/TextureButton.pressed.connect(func(): _on_stamp_pressed("approve"))
-	$StampBar/RejectionStamp/TextureButton.pressed.connect(func(): _on_stamp_pressed("reject"))
+	$StampBar/ApprovalStamp/TextureButton.pressed.connect(func():
+		emit_signal("stamp_requested", "approve", $StampBar/ApprovalStamp/TextureButton.texture_normal)
+		)
+	
+	$StampBar/RejectionStamp/TextureButton.pressed.connect(func():
+		emit_signal("stamp_requested", "reject", $StampBar/RejectionStamp/TextureButton.texture_normal)
+		)
 	
 	# Show the fold-out button initially
 	fold_out_button.visible = true
@@ -44,8 +46,8 @@ func _on_hide_pressed():
 	if !is_animating and is_visible:
 		hide_stamp_bar()
 
-func _on_stamp_pressed(stamp_type: String):
-	emit_signal("stamp_requested", stamp_type)
+func _on_stamp_pressed(stamp_type: String, stamp_texture: Texture2D):
+	emit_signal("stamp_requested", stamp_type, stamp_texture)
 
 func show_stamp_bar():
 	is_animating = true
