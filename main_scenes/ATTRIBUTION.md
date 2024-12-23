@@ -23,6 +23,14 @@ Author: [Marek Belski and contributors](https://github.com/Maaack/Godot-Game-Tem
 Source: [github: Godot-Game-Template](https://github.com/Maaack/Godot-Game-Template)  
 License: [MIT License](LICENSE.txt)  
 
+# Community Help
+Thank you to the generous members of our community how have tested and reported many bugs for us to fix.
+
+MrBright01 
+dhjackal
+jollylad63
+Tanner
+
 # Special Thanks
 Thank you to our love ones and support nets which helped us create this game.
 
