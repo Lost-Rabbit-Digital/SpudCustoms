@@ -127,8 +127,13 @@ When adding to the lists, please either rephrase or separate your tasks to be re
 If a label is marked with *INTERNAL USE* then do *NOT* include it in the official release post to Steam.
 
 ## Steam Minor Update 1.0.1: General bug fixes - NOT YET RELEASED
-  - Make expiration apply as expected (if past date)
-  
+
+  [ ] - Fixed bug with Spuds running the border while still in a cutscene
+
+  - Updated font for dialogue
+  - Changed character actions from italic to colored text
+  - Changed background color of dialogue boxes
+  - Made expiration law apply as expected (if past date)
   - Added community members who helped with bug reports to credits
   - *INTERNAL USE* Cleaned up old tutorial code to pave road for new system
   - *INTERNAL USE* Updated alert system in endlessGame and BorderRunnerSystem
