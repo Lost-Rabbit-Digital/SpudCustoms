@@ -106,12 +106,22 @@ func create_final_stamp(stamp_type: String, pos: Vector2):
 	var texture_path = "res://assets/stamps/approved_stamp.png" if stamp_type == "approve" \
 					  else "res://assets/stamps/denied_stamp.png"
 	final_stamp.texture = load(texture_path)
-	final_stamp.position = passport.to_local(pos)
+	
+	# Get the OpenPassport node
+	var open_passport = passport.get_node("OpenPassport")
+	
+	# Convert position to be relative to OpenPassport instead of the passport
+	var relative_pos = passport.to_local(pos)
+	relative_pos = open_passport.get_transform().affine_inverse() * relative_pos
+	final_stamp.position = relative_pos
+	
 	final_stamp.modulate.a = 0
 	final_stamp.z_index = 1  # Ensure stamp appears above passport background
-	passport.add_child(final_stamp)
 	
-	# Update stats
+	# Add stamp to OpenPassport instead of the passport directly
+	open_passport.add_child(final_stamp)
+	
+	# Rest of the function remains the same
 	if stats_manager:
 		stats_manager.current_stats.total_stamps += 1
 		var is_perfect = stats_manager.check_stamp_accuracy(

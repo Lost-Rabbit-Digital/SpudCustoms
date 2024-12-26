@@ -715,6 +715,12 @@ func process_decision(allowed):
 		
 	var correct_decision = is_potato_valid(current_potato_info)
 	
+	# Clear all existing stamps from the passport
+	var open_passport = $Gameplay/InteractiveElements/Passport/OpenPassport
+	for child in open_passport.get_children():
+		if child is Sprite2D and ("approved" in child.texture.resource_path or "denied" in child.texture.resource_path):
+			child.queue_free()
+	
 	# Check expiration specifically - if expired, denial is correct
 	if is_expired(current_potato_info.expiration_date):
 		print("DEBUG: Document expired on " + current_potato_info.expiration_date)
@@ -860,14 +866,22 @@ func handle_guide_drop(mouse_pos: Vector2):
 		close_guide_action()
 
 func open_passport_action():
+	# First change the passport texture
 	$Gameplay/InteractiveElements/Passport.texture = preload("res://assets/documents/passport-old.png")
+	
+	# Hide closed passport
 	$Gameplay/InteractiveElements/Passport/ClosedPassport.visible = false
+	
+	# Show OpenPassport which contains the stamps
 	$Gameplay/InteractiveElements/Passport/OpenPassport.visible = true
 	
 func close_passport_action():
+	# First hide the OpenPassport node which contains the stamps
+	$Gameplay/InteractiveElements/Passport/OpenPassport.visible = false
+	
+	# Then change the passport texture and show closed passport
 	$Gameplay/InteractiveElements/Passport.texture = preload("res://assets/documents/closed_passport_small/closed_passport_small.png")
 	$Gameplay/InteractiveElements/Passport/ClosedPassport.visible = true
-	$Gameplay/InteractiveElements/Passport/OpenPassport.visible = false
 	
 	# Center the passport on the cursor
 	var mouse_pos = get_global_mouse_position()
