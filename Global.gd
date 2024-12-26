@@ -80,8 +80,6 @@ func _init():
 func _process(_delta: float) -> void:
 	Steam.run_callbacks()
 	
-	
-	
 func store_game_stats(stats: ShiftStats):
 	current_game_stats = {
 		"shift": shift,
@@ -95,7 +93,6 @@ func store_game_stats(stats: ShiftStats):
 		"potatoes_approved": stats.potatoes_approved,
 		"potatoes_rejected": stats.potatoes_rejected,
 		"perfect_stamps": stats.perfect_stamps,
-		"speed_bonus": stats.get_speed_bonus(),
 		"accuracy_bonus": stats.get_accuracy_bonus(),
 		"perfect_bonus": stats.get_missile_bonus(),
 		"final_score": final_score

@@ -26,9 +26,5 @@ func reset():
 func get_accuracy_bonus() -> int:
 	return perfect_stamps * 100  # 100 points per perfect stamp
 	
-func get_speed_bonus() -> int:
-	# Award bonus points for remaining time
-	return int((300 - time_taken) * 10)  # 10 points per second remaining
-
 func get_missile_bonus() -> int:
 	return perfect_hits * 150  # 150 points per perfect hit

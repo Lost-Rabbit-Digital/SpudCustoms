@@ -618,6 +618,7 @@ z_index = 1
 z_as_relative = false
 
 [node name="ReceiptNote" type="RichTextLabel" parent="Gameplay/InteractiveElements/LawReceipt/OpenReceipt"]
+z_as_relative = false
 offset_left = -88.0
 offset_top = -107.0
 offset_right = 89.0
@@ -632,7 +633,7 @@ Potatoes must be fresh."
 horizontal_alignment = 1
 
 [node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
-z_index = 5
+z_index = 4
 z_as_relative = false
 position = Vector2(704, 391)
 texture = ExtResource("30_6ppju")
@@ -644,10 +645,12 @@ visible = false
 z_as_relative = false
 
 [node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
-z_index = 5
+z_index = 4
 z_as_relative = false
 
 [node name="GuideNote" type="RichTextLabel" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
+z_index = 4
+z_as_relative = false
 offset_left = -150.0
 offset_top = -100.0
 offset_right = 150.0

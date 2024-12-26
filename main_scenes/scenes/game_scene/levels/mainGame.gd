@@ -1000,24 +1000,44 @@ func enable_controls():
 		border_runner_system.runner_chance = original_runner_chance
 		
 func _on_game_over():
+	# Capture time taken
 	var elapsed_time = (Time.get_ticks_msec() / 1000.0) - game_start_time
+	
+	# Get border runner statistics
 	var runner_stats = $BorderRunnerSystem.shift_stats
+	
+	# Prepare final stats dictionary with corrected calculations
 	var stats = {
 		"shift": Global.shift,
+		"time_taken": elapsed_time,  # Use actual elapsed time
 		"score": Global.score,
+		
+		# Border Runner System Stats (Missile-related)
 		"missiles_fired": runner_stats.missiles_fired,
 		"missiles_hit": runner_stats.missiles_hit,
 		"perfect_hits": runner_stats.perfect_hits,
+		
+		# Calculate hit rate manually
+		"hit_rate": 0.0 if runner_stats.missiles_fired == 0 else (float(runner_stats.missiles_hit) / runner_stats.missiles_fired * 100.0),
+		
+		# Stamp and document stats from shift_stats
 		"total_stamps": shift_stats.total_stamps,
+		"perfect_stamps": shift_stats.perfect_stamps,
 		"potatoes_approved": shift_stats.potatoes_approved,
 		"potatoes_rejected": shift_stats.potatoes_rejected,
-		"perfect_stamps": shift_stats.perfect_stamps,
-		"speed_bonus": shift_stats.get_speed_bonus(),
+		
+		# Bonus calculations
 		"accuracy_bonus": shift_stats.get_accuracy_bonus(),
 		"perfect_bonus": shift_stats.get_missile_bonus(),
+		
+		# Remove speed bonus as requested
 		"final_score": Global.score
 	}
+	
+	# Store game stats
 	Global.store_game_stats(stats)
+	
+	# Create and show shift summary
 	var summary = shift_summary.instantiate()
 	add_child(summary)
 	summary.show_summary(stats)

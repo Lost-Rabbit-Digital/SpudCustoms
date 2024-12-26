@@ -73,7 +73,7 @@ Total Score: {score}""".format({
 		"score": format_number(stats.get("score", 0))
 	})
 	
-	# Update missile stats
+	# Update missile stats with calculated hit rate
 	$LeftPanel/MissileStats.text = """--- MISSILE STATS ---
 Missiles Fired: {fired}
 Missiles Hit: {hit}
@@ -82,7 +82,7 @@ Hit Rate: {rate}%""".format({
 		"fired": format_number(stats.get("missiles_fired", 0)),
 		"hit": format_number(stats.get("missiles_hit", 0)),
 		"perfect": format_number(stats.get("perfect_hits", 0)),
-		"rate": calculate_hit_rate()
+		"rate": stats.get("hit_rate", 0.0)
 	})
 	
 	# Update document stats
@@ -97,14 +97,12 @@ Perfect Stamps: {perfect}""".format({
 		"perfect": format_number(stats.get("perfect_stamps", 0))
 	})
 	
-	# Update bonus stats
+	# Update bonus stats without speed bonus
 	$RightPanel/BonusStats.text = """--- BONUSES ---
-Speed Bonus: {speed}
 Accuracy Bonus: {accuracy}
 Perfect Hit Bonus: {perfect}
 
 FINAL SCORE: {final}""".format({
-		"speed": format_number(stats.get("speed_bonus", 0)),
 		"accuracy": format_number(stats.get("accuracy_bonus", 0)),
 		"perfect": format_number(stats.get("perfect_bonus", 0)),
 		"final": format_number(stats.get("final_score", 0))
