@@ -734,14 +734,20 @@ func _input(event):
 		dragged_sprite.global_position = get_global_mouse_position() - drag_offset
 
 func handle_passport_drop(mouse_pos: Vector2):
+	print("DEBUG: Passport drop detected at position:", mouse_pos)
 	$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = false
 	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)):
+		print("DEBUG: Dropping passport on inspection table")
 		open_passport_action()
 	elif suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)):
+		print("DEBUG: Dropping passport on suspect panel")
 		close_passport_action()
 	elif suspect.get_rect().has_point(suspect.to_local(mouse_pos)):
+		print("DEBUG: Dropping passport on suspect - attempting to remove stamp")
 		close_passport_action()
 		remove_stamp()
+	else:
+		print("DEBUG: Passport dropped in invalid location")
 
 func handle_guide_drop(mouse_pos: Vector2):
 	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)):
@@ -894,7 +900,6 @@ func move_potato_along_path(approval_status):
 		# Randomly select an approve path
 		path = available_approve_paths[randi() % available_approve_paths.size()]
 		print("Selected approve path: ", path.name)
-		process_decision(true)
 	else:
 		# Increase chance of runner when rejected
 		if randf() < 0.15:  # 15% chance to go runner mode
@@ -918,7 +923,6 @@ func move_potato_along_path(approval_status):
 			# Randomly select a reject path
 			path = available_reject_paths[randi() % available_reject_paths.size()]
 			print("Selected reject path: ", path.name)
-			process_decision(false)
 			
 	# Calculate score change
 	var path_follow = PathFollow2D.new()

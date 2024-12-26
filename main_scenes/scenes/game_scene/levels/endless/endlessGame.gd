@@ -641,7 +641,29 @@ func process_decision(allowed):
 		point_multiplier = 1.0
 		Global.strikes += 1
 		if Global.strikes >= Global.max_strikes:
-			# Store stats before transitioning
+			# Capture time taken
+			var elapsed_time = (Time.get_ticks_msec() / 1000.0) - game_start_time
+			
+			# Get border runner statistics
+			var runner_stats = $BorderRunnerSystem.shift_stats
+			
+			# Create a new ShiftStats object
+			var shift_stats = ShiftStats.new()
+			
+			# Populate the ShiftStats object with the necessary data
+			shift_stats.time_taken = elapsed_time
+			shift_stats.missiles_fired = runner_stats.missiles_fired
+			shift_stats.missiles_hit = runner_stats.missiles_hit
+			shift_stats.perfect_hits = runner_stats.perfect_hits
+			shift_stats.total_stamps = shift_stats.total_stamps
+			shift_stats.perfect_stamps = shift_stats.perfect_stamps
+			shift_stats.potatoes_approved = shift_stats.potatoes_approved
+			shift_stats.potatoes_rejected = shift_stats.potatoes_rejected
+			
+			# Calculate the hit rate manually
+			shift_stats.hit_rate = 0.0 if shift_stats.missiles_fired == 0 else (float(shift_stats.missiles_hit) / shift_stats.missiles_fired * 100.0)
+			
+			# Call the store_game_stats() function with the populated ShiftStats object
 			Global.store_game_stats(shift_stats)
 			Global.go_to_game_over()
 	
@@ -818,7 +840,6 @@ func check_node_for_stamps(node: Node):
 
 var current_stamp_count = 0
 var current_approval_status = null
-
 func remove_stamp():
 	print("DEBUG: Starting remove_stamp process...")
 	
@@ -897,7 +918,6 @@ func move_potato_along_path(approval_status):
 		# Randomly select an approve path
 		path = available_approve_paths[randi() % available_approve_paths.size()]
 		print("Selected approve path: ", path.name)
-		process_decision(true)
 	else: # TODO: REWRITE THIS SECTION
 		# Increase chance of runner when rejected
 		if randf() < 0.15:  # 15% chance to go runner mode
@@ -921,7 +941,6 @@ func move_potato_along_path(approval_status):
 			# Randomly select a reject path
 			path = available_reject_paths[randi() % available_reject_paths.size()]
 			print("Selected reject path: ", path.name)
-			process_decision(false)
 			
 	# Calculate score change
 	var path_follow = PathFollow2D.new()
@@ -971,41 +990,29 @@ func _on_game_over():
 	# Get border runner statistics
 	var runner_stats = $BorderRunnerSystem.shift_stats
 	
-	# Prepare final stats dictionary with corrected calculations
-	var stats = {
-		"shift": Global.shift,
-		"time_taken": elapsed_time,  # Use actual elapsed time
-		"score": Global.score,
-		
-		# Border Runner System Stats (Missile-related)
-		"missiles_fired": runner_stats.missiles_fired,
-		"missiles_hit": runner_stats.missiles_hit,
-		"perfect_hits": runner_stats.perfect_hits,
-		
-		# Calculate hit rate manually
-		"hit_rate": 0.0 if runner_stats.missiles_fired == 0 else (float(runner_stats.missiles_hit) / runner_stats.missiles_fired * 100.0),
-		
-		# Stamp and document stats from shift_stats
-		"total_stamps": shift_stats.total_stamps,
-		"perfect_stamps": shift_stats.perfect_stamps,
-		"potatoes_approved": shift_stats.potatoes_approved,
-		"potatoes_rejected": shift_stats.potatoes_rejected,
-		
-		# Bonus calculations
-		"accuracy_bonus": shift_stats.get_accuracy_bonus(),
-		"perfect_bonus": shift_stats.get_missile_bonus(),
-		
-		# Remove speed bonus as requested
-		"final_score": Global.score
-	}
+	# Create a new ShiftStats object
+	var shift_stats = ShiftStats.new()
 	
-	# Store game stats
-	Global.store_game_stats(stats)
+	# Populate the ShiftStats object with the necessary data
+	shift_stats.time_taken = elapsed_time
+	shift_stats.missiles_fired = runner_stats.missiles_fired
+	shift_stats.missiles_hit = runner_stats.missiles_hit
+	shift_stats.perfect_hits = runner_stats.perfect_hits
+	shift_stats.total_stamps = shift_stats.total_stamps
+	shift_stats.perfect_stamps = shift_stats.perfect_stamps
+	shift_stats.potatoes_approved = shift_stats.potatoes_approved
+	shift_stats.potatoes_rejected = shift_stats.potatoes_rejected
+	
+	# Calculate the hit rate manually
+	shift_stats.hit_rate = 0.0 if shift_stats.missiles_fired == 0 else (float(shift_stats.missiles_hit) / shift_stats.missiles_fired * 100.0)
+	
+	# Call the store_game_stats() function with the populated ShiftStats object
+	Global.store_game_stats(shift_stats)
 	
 	# Create and show shift summary
 	var summary = shift_summary.instantiate()
 	add_child(summary)
-	summary.show_summary(stats)
+	summary.show_summary(shift_stats)
 
 func parse_date(date_string: String) -> Dictionary:
 	var parts = date_string.split(".")

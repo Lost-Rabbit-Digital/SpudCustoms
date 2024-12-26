@@ -345,17 +345,11 @@ func set_story_state(new_state: int):
 	current_story_state = new_state
 	save_game_state() # Add story state to existing save system
 
-
-### HELPER FUNCTIONS
-
 ## Gameover scene transition
 func go_to_game_over():
 	# Store the score in a global script or autoload
 	Global.final_score = Global.score
 	print("transition to game over scene")
-	#$Gameplay/InteractiveElements/ApprovalStamp.visible = false
-	#$Gameplay/InteractiveElements/RejectionStamp.visible = false
-	#print("ALERT: go_to_game_over() has been disabled")
 	get_tree().change_scene_to_file("res://ShiftSummaryScreen.tscn")
 	
 func clear_alert_after_delay(alert_label, alert_timer):

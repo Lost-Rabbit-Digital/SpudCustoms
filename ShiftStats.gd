@@ -9,6 +9,7 @@ var potatoes_rejected: int = 0
 var missiles_fired: int = 0
 var missiles_hit: int = 0
 var perfect_hits: int = 0
+var hit_rate: float = 0.0
 var time_taken: float = 0.0
 var processing_time_left: float = 0.0
 
