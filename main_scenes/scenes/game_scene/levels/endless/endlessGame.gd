@@ -147,8 +147,6 @@ func end_shift():
 		"total_stamps": shift_stats.total_stamps,
 		"potatoes_approved": shift_stats.potatoes_approved,
 		"potatoes_rejected": shift_stats.potatoes_rejected,
-		"perfect_stamps": shift_stats.perfect_stamps,
-		"accuracy_bonus": shift_stats.get_accuracy_bonus(),
 		"perfect_bonus": shift_stats.get_missile_bonus(),
 		"final_score": (Global.score + shift_stats.get_speed_bonus() + shift_stats.get_accuracy_bonus() + shift_stats.get_missile_bonus())
 	}
@@ -293,7 +291,7 @@ func move_potato_to_office(potato_person):
 	print("Reset potato position and path progress") 
 		
 	var tween = create_tween()
-	tween.tween_property(path_follow, "progress_ratio", 1.0, 1.0)
+	tween.tween_property(path_follow, "progress_ratio", 1.0, 0.7)
 	tween.tween_callback(func():
 		print("Potato reached end of path, clean up")
 		potato_person.queue_free()
@@ -316,13 +314,13 @@ func animate_mugshot_and_passport():
 	tween.set_parallel(true)
 
 	# Animate potato mugshot
-	tween.tween_property(mugshot_generator, "position:x", suspect_panel.position.x, 1)
-	tween.tween_property(mugshot_generator, "modulate:a", 1, 1)
+	tween.tween_property(mugshot_generator, "position:x", suspect_panel.position.x, 0.7)
+	tween.tween_property(mugshot_generator, "modulate:a", 1, 0.7)
 	
 	# Animate passport
-	tween.tween_property(passport, "modulate:a", 1, 2)
+	tween.tween_property(passport, "modulate:a", 1, 1)
 	tween.tween_property(passport, "visible", true, 0).set_delay(1)
-	tween.tween_property(passport, "position:y", passport_spawn_point_end.position.y, 1).set_delay(2)
+	tween.tween_property(passport, "position:y", passport_spawn_point_end.position.y, 0.7).set_delay(1)
 	tween.tween_property(passport, "z_index", 5, 0).set_delay(3)
 
 	tween.chain().tween_callback(func(): print("Finished animating mugshot and passport"))
@@ -570,6 +568,13 @@ func process_decision(allowed):
 	if !current_potato_info or current_potato_info.is_empty():
 		print("No potato to process.")
 		return
+				
+	shift_stats.total_stamps += 1
+	
+	if allowed:
+		shift_stats.potatoes_approved += 1
+	else:
+		shift_stats.potatoes_rejected += 1
 		
 	# Clear all existing stamps from the passport
 	var open_passport = $Gameplay/InteractiveElements/Passport/OpenPassport
@@ -584,11 +589,6 @@ func process_decision(allowed):
 	# Update stats based on correctness of decision
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
 		# Decision was correct
-		if allowed:
-			shift_stats.potatoes_approved += 1
-		else:
-			shift_stats.potatoes_rejected += 1
-		
 		Global.quota_met += 1
 		correct_decision_streak += 1
 		
@@ -626,51 +626,35 @@ func process_decision(allowed):
 		Global.add_score(decision_points)
 	else:
 		# Decision was incorrect
-		if allowed:
-			shift_stats.potatoes_rejected += 1  # Should have been rejected
-		else:
-			shift_stats.potatoes_approved += 1  # Should have been approved
-			
 		var alert_text = "You have caused unnecessary suffering, officer..."
 		if validation.violation_reason:
 			alert_text += "\n" + validation.violation_reason
 		alert_text += "\n+1 Strike!"
 		Global.display_red_alert(alert_label, alert_timer, alert_text)
-		
 		correct_decision_streak = 0
 		point_multiplier = 1.0
 		Global.strikes += 1
 		if Global.strikes >= Global.max_strikes:
 			# Capture time taken
 			var elapsed_time = (Time.get_ticks_msec() / 1000.0) - game_start_time
-			
 			# Get border runner statistics
 			var runner_stats = $BorderRunnerSystem.shift_stats
-			
-			# Create a new ShiftStats object
-			var shift_stats = ShiftStats.new()
-			
 			# Populate the ShiftStats object with the necessary data
 			shift_stats.time_taken = elapsed_time
 			shift_stats.missiles_fired = runner_stats.missiles_fired
 			shift_stats.missiles_hit = runner_stats.missiles_hit
 			shift_stats.perfect_hits = runner_stats.perfect_hits
 			shift_stats.total_stamps = shift_stats.total_stamps
-			shift_stats.perfect_stamps = shift_stats.perfect_stamps
 			shift_stats.potatoes_approved = shift_stats.potatoes_approved
 			shift_stats.potatoes_rejected = shift_stats.potatoes_rejected
-			
 			# Calculate the hit rate manually
-			shift_stats.hit_rate = 0.0 if shift_stats.missiles_fired == 0 else (float(shift_stats.missiles_hit) / shift_stats.missiles_fired * 100.0)
-			
+			shift_stats.hit_rate = 0.0 if shift_stats.missiles_fired == 0 else (float(shift_stats.missiles_hit / shift_stats.missiles_fired) * 100.0)
 			# Call the store_game_stats() function with the populated ShiftStats object
 			Global.store_game_stats(shift_stats)
 			Global.go_to_game_over()
-	
 	update_score_display()
 	update_quota_display()
 	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
-
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()
 		
@@ -999,7 +983,6 @@ func _on_game_over():
 	shift_stats.missiles_hit = runner_stats.missiles_hit
 	shift_stats.perfect_hits = runner_stats.perfect_hits
 	shift_stats.total_stamps = shift_stats.total_stamps
-	shift_stats.perfect_stamps = shift_stats.perfect_stamps
 	shift_stats.potatoes_approved = shift_stats.potatoes_approved
 	shift_stats.potatoes_rejected = shift_stats.potatoes_rejected
 	

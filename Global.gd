@@ -92,8 +92,6 @@ func store_game_stats(stats: ShiftStats):
 		"total_stamps": stats.total_stamps,
 		"potatoes_approved": stats.potatoes_approved,
 		"potatoes_rejected": stats.potatoes_rejected,
-		"perfect_stamps": stats.perfect_stamps,
-		"accuracy_bonus": stats.get_accuracy_bonus(),
 		"perfect_bonus": stats.get_missile_bonus(),
 		"final_score": final_score
 	}

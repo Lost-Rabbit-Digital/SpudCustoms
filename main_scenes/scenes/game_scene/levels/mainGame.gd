@@ -175,9 +175,6 @@ func end_shift():
 			"total_stamps": shift_stats.total_stamps,
 			"potatoes_approved": shift_stats.potatoes_approved,
 			"potatoes_rejected": shift_stats.potatoes_rejected,
-			"perfect_stamps": shift_stats.perfect_stamps,
-			"speed_bonus": shift_stats.get_speed_bonus(),
-			"accuracy_bonus": shift_stats.get_accuracy_bonus(),
 			"perfect_bonus": shift_stats.get_missile_bonus(),
 			"final_score": (Global.score + shift_stats.get_speed_bonus() + shift_stats.get_accuracy_bonus() + shift_stats.get_missile_bonus())
 		}
@@ -322,7 +319,7 @@ func move_potato_to_office(potato_person):
 	print("Reset potato position and path progress") 
 		
 	var tween = create_tween()
-	tween.tween_property(path_follow, "progress_ratio", 1.0, 1.0)
+	tween.tween_property(path_follow, "progress_ratio", 1.0, 0.7)
 	tween.tween_callback(func():
 		print("Potato reached end of path, clean up")
 		potato_person.queue_free()
@@ -345,13 +342,13 @@ func animate_mugshot_and_passport():
 	tween.set_parallel(true)
 
 	# Animate potato mugshot
-	tween.tween_property(mugshot_generator, "position:x", suspect_panel.position.x, 1)
-	tween.tween_property(mugshot_generator, "modulate:a", 1, 1)
+	tween.tween_property(mugshot_generator, "position:x", suspect_panel.position.x, 0.7)
+	tween.tween_property(mugshot_generator, "modulate:a", 1, 0.7)
 	
 	# Animate passport
-	tween.tween_property(passport, "modulate:a", 1, 2)
+	tween.tween_property(passport, "modulate:a", 1, 1)
 	tween.tween_property(passport, "visible", true, 0).set_delay(1)
-	tween.tween_property(passport, "position:y", passport_spawn_point_end.position.y, 1).set_delay(2)
+	tween.tween_property(passport, "position:y", passport_spawn_point_end.position.y, 0.7).set_delay(1)
 	tween.tween_property(passport, "z_index", 5, 0).set_delay(3)
 
 	tween.chain().tween_callback(func(): print("Finished animating mugshot and passport"))
@@ -599,39 +596,32 @@ func process_decision(allowed):
 	if !current_potato_info or current_potato_info.is_empty():
 		print("No potato to process.")
 		return
-	   
+	shift_stats.total_stamps += 1
+	if allowed:
+		shift_stats.potatoes_approved += 1
+	else:
+		shift_stats.potatoes_rejected += 1
    # Clear all existing stamps from the passport
 	var open_passport = $Gameplay/InteractiveElements/Passport/OpenPassport
 	for child in open_passport.get_children():
 		if child is Sprite2D and ("approved" in child.texture.resource_path or "denied" in child.texture.resource_path):
 			child.queue_free()
-   
    # Get validation result
 	var validation = LawValidator.check_violations(current_potato_info, current_rules)
 	var correct_decision = validation.is_valid
-	
    # Update stats based on correctness of decision
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
-	   # Decision was correct
-		if allowed:
-			shift_stats.potatoes_approved += 1
-		else:
-			shift_stats.potatoes_rejected += 1
-	   
 		Global.quota_met += 1
 		correct_decision_streak += 1
-	   
 	   # Check if quota met
 		if Global.quota_met >= Global.quota_target:
 			print("Quota complete!")
 			end_shift()
-	   
 	   # Increase multiplier for streaks
 		if correct_decision_streak >= 3:
 			point_multiplier = 1.5
 		if correct_decision_streak >= 5:
 			point_multiplier = 2.0
-		   
 	   # Award points for correct decisions
 		var decision_points = 250 * point_multiplier
 		var alert_text = "You made the right choice, officer."
@@ -642,10 +632,6 @@ func process_decision(allowed):
 		Global.add_score(decision_points)
 	else:
 	   # Decision was incorrect
-		if allowed:
-			shift_stats.potatoes_rejected += 1  # Should have been rejected
-		else:
-			shift_stats.potatoes_approved += 1  # Should have been approved
 		var alert_text = "You have caused unnecessary suffering, officer..."
 		if validation.violation_reason:
 			alert_text += "\n" + validation.violation_reason
@@ -658,11 +644,9 @@ func process_decision(allowed):
 		   # Store stats before transitioning
 			Global.store_game_stats(shift_stats)
 			Global.go_to_game_over()
-   
 	update_score_display()
 	update_quota_display()
 	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
-
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()
 
@@ -984,9 +968,8 @@ func disable_controls():
 	# Disable player interaction during dialogue
 	set_process_input(false)
 	$Gameplay/Megaphone.visible = false
-	$Gameplay/InteractiveElements/ApprovalStamp.visible = false  
-	$Gameplay/InteractiveElements/RejectionStamp.visible = false
 	$Gameplay/InteractiveElements/Guide.visible = false
+	$Gameplay/InteractiveElements/LawReceipt.visible = false
 	$Gameplay/InteractiveElements/Passport.visible = false
 	# Disable border runner system and set spawn chance to 0
 	if border_runner_system:
@@ -998,6 +981,8 @@ func enable_controls():
 	set_process_input(true)
 	$Gameplay/Megaphone.visible = true
 	$Gameplay/InteractiveElements/Guide.visible = true
+	$Gameplay/InteractiveElements/LawReceipt.visible = false
+	$Gameplay/InteractiveElements/Passport.visible = false
 	# Re-enable border runner system and restore original spawn chance
 	if border_runner_system:
 		border_runner_system.enable()
@@ -1026,12 +1011,10 @@ func _on_game_over():
 		
 		# Stamp and document stats from shift_stats
 		"total_stamps": shift_stats.total_stamps,
-		"perfect_stamps": shift_stats.perfect_stamps,
 		"potatoes_approved": shift_stats.potatoes_approved,
 		"potatoes_rejected": shift_stats.potatoes_rejected,
 		
 		# Bonus calculations
-		"accuracy_bonus": shift_stats.get_accuracy_bonus(),
 		"perfect_bonus": shift_stats.get_missile_bonus(),
 		
 		# Remove speed bonus as requested

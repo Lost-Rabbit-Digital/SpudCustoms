@@ -89,22 +89,18 @@ Hit Rate: {rate}%""".format({
 	$RightPanel/DocumentStats.text = """--- DOCUMENT STATS ---
 Documents Stamped: {stamped}
 Potatoes Approved: {approved}
-Potatoes Rejected: {rejected}
-Perfect Stamps: {perfect}""".format({
+Potatoes Rejected: {rejected}""".format({
 		"stamped": format_number(stats.get("total_stamps", 0)),
 		"approved": format_number(stats.get("potatoes_approved", 0)),
 		"rejected": format_number(stats.get("potatoes_rejected", 0)),
-		"perfect": format_number(stats.get("perfect_stamps", 0))
 	})
 	
 	# Update bonus stats without speed bonus
 	$RightPanel/BonusStats.text = """--- BONUSES ---
 Accuracy Bonus: {accuracy}
-Perfect Hit Bonus: {perfect}
 
 FINAL SCORE: {final}""".format({
 		"accuracy": format_number(stats.get("accuracy_bonus", 0)),
-		"perfect": format_number(stats.get("perfect_bonus", 0)),
 		"final": format_number(stats.get("final_score", 0))
 	})
 	
@@ -165,21 +161,17 @@ func play_entry_animation():
 
 func generate_test_stats() -> Dictionary:
 	return {
-		"shift": 5,                    # Current shift number
-		"time_taken": 1970.0,           # Time taken in seconds
-		"processing_time_left": 15.0,  # Time remaining
+		"shift": 1337,                    # Current shift number
+		"time_taken": 1337.0,           # Time taken in seconds
 		"score": 1337,                 # Base score
-		"missiles_fired": 666,
-		"missiles_hit": 666,
-		"perfect_hits": 666,
-		"total_stamps": 666,
-		"potatoes_approved": 666,
-		"potatoes_rejected": 666,
-		"perfect_stamps": 666,
-		"speed_bonus": 666,
-		"accuracy_bonus": 666,
-		"perfect_bonus": 666,
-		"final_score": 0
+		"missiles_fired": 1337,
+		"missiles_hit": 1337,
+		"perfect_hits": 1337,
+		"total_stamps": 1337,
+		"potatoes_approved": 1337,
+		"potatoes_rejected": 1337,
+		"accuracy_bonus": 1337,
+		"final_score": 1337
 	}
 
 
