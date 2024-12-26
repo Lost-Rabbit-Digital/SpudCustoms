@@ -184,139 +184,32 @@ func set_difficulty(level):
 	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)	
 
 func generate_rules():
-	current_rules = [
-		# Condition-based rules
-		"All potatoes must be Fresh!",
-		"Extra Eyes are suspicious, inspect carefully and reject.",
-		"Rotten potatoes are strictly forbidden.",
-		"Sprouted potatoes must be denied.",
-		"Dehydrated potatoes are not allowed today.",
-		"Frozen potatoes require a special permit.",
-
-		# Age-based rules
-		"No potatoes over 5 years old.",
-		"Reject potatoes younger than 3 years old.",
-		"Young potatoes (under 2 years) need guardian.",
-
-		# Gender-based rules
-		"Only male potatoes allowed today.",
-		"Female potatoes only, reject all males.",
-
-		# Country-based rules
-		"Potatoes from Spudland must be denied.",
-		"Potatopia citizens cannot enter under any circumstances.",
-		"Tuberstan potatoes suspected of concealing arms.",
-		"North Yamnea is currently restricted due to radioactive taters.",
-		"Reject Spuddington potatoes because of visa counterfeiting activity.",
-		"Tatcross citizens get ABSOLUTELY NO entry processing.",
-		"Mash Meadows potatoes are subject to quarantine, reject!",
-		"Tuberville potatoes subject to absolute rejection.",
-		"Chip Hill exports are currently restricted.",
-		"Murphyland potatoes are banned from the economy. Reject!",
-		"Colcannon citizens must be rejected due to seasonings.",
-		"Pratie Point potatoes require rejection on agricultural grounds."
-	]
+	# Get the full list of rules from LawValidator
+	var all_rules = LawValidator.LAW_CHECKS.keys()
+	
 	# Randomly select 2-3 rules
-	current_rules.shuffle()
-	current_rules = current_rules.slice(0, randi() % 2 + 2)
+	all_rules.shuffle()
+	current_rules = all_rules.slice(0, randi() % 2 + 2)
+	
 	update_rules_display()
 
 func update_rules_display():
+	var laws_text = "[center][u]LAWS[/u]\n\n" + "\n".join(current_rules) + "[/center]"
+	
+	# Update guide if we're on the laws page
 	if $Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote and Guide.current_page == 2:
-		$Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote.text = "[center]LAWS\n" + "\n".join(current_rules) + "[/center]"
-	# Emit the signal with the new rules
-	emit_signal("rules_updated", "[center]LAWS\n" + "\n".join(current_rules) + "[/center]")
+		$Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote.text = laws_text
+		
+	if $Gameplay/InteractiveElements/LawReceipt/OpenReceipt/ReceiptNote:
+		$Gameplay/InteractiveElements/LawReceipt/OpenReceipt/ReceiptNote.text = laws_text
+	
+	# Emit the signal with the formatted laws text
+	emit_signal("rules_updated", laws_text)
 	
 func is_potato_valid(potato_info: Dictionary) -> bool:
-	if is_expired(potato_info.expiration_date):
-		print("DEBUG: Potato document expired on " + potato_info.expiration_date)
-		return false
-	
-	for rule in current_rules:
-		print("Current rule processing: " + rule)
-		match rule:
-			# Condition-based rules
-			"All potatoes must be Fresh!":
-				if potato_info.condition != "Fresh":
-					return false
-			"Extra Eyes are suspicious, inspect carefully and reject.":
-				if potato_info.condition == "Extra Eyes":
-					return false
-			"Rotten potatoes are strictly forbidden.":
-				if potato_info.condition == "Rotten":
-					return false
-			"Sprouted potatoes must be denied.":
-				if potato_info.condition == "Sprouted":
-					return false
-			"Dehydrated potatoes are not allowed today.":
-				if potato_info.condition == "Dehydrated":
-					return false
-			"Frozen potatoes require a special permit.":
-				if potato_info.condition == "Frozen":
-					return false
-			# Age-based rules
-			"No potatoes over 5 years old.":
-				var age = calculate_age(potato_info.date_of_birth)
-				print("Age is ", str(age))
-				if age >= 5:
-					return false
-			"Reject potatoes younger than 3 years old.":
-				var age = calculate_age(potato_info.date_of_birth)
-				print("Age is ", str(age))
-				if age <= 3:
-					return false
-			"Young potatoes (under 2 years) need guardian.":
-				var age = calculate_age(potato_info.date_of_birth)
-				print("Age is ", str(age))
-				if age <= 2:
-					return false
-			# Sex-based rules
-			"Only male potatoes allowed today.":
-				if potato_info.sex == "Female":
-					return false
-			"Female potatoes only, reject all males.":
-				print("Your potato is: ", potato_info.sex)
-				if potato_info.sex == "Male":
-					return false
-			# Country-based rules
-			"Potatoes from Spudland must be denied.":
-				if potato_info.country_of_issue == "Spudland":
-					return false
-			"Potatopia citizens need additional screening.":
-				if potato_info.country_of_issue == "Potatopia":
-					return false			
-			"Tuberstan potatoes suspected of concealing arms.":
-				if potato_info.country_of_issue == "Tuberstan":
-					return false			
-			"North Yamnea is currently restricted due to radioactive taters.":
-				if potato_info.country_of_issue == "North Yamnea":
-					return false			
-			"Reject Spuddington potatoes because of visa counterfeiting activity.":
-				if potato_info.country_of_issue == "Spuddington":
-					return false
-			"Tatcross citizens get ABSOLUTELY NO entry processing.":
-				if potato_info.country_of_issue == "Tatcross":
-					return false			
-			"Mash Meadows potatoes are subject to quarantine, reject!":
-				if potato_info.country_of_issue == "Mash Meadows":
-					return false
-			"Tuberville potatoes subject to absolute rejection.":
-				if potato_info.country_of_issue == "Tuberville":
-					return false
-			"Chip Hill exports are currently restricted.":
-				if potato_info.country_of_issue == "Chip Hill":
-					return false
-			"Murphyland potatoes are banned from the economy. Reject!":
-				if potato_info.country_of_issue == "Murphyland":
-					return false
-			"Colcannon citizens must be rejected due to seasonings.":
-				if potato_info.country_of_issue == "Colcannon":
-					return false
-			"Pratie Point potatoes require rejection on agricultural grounds.":
-				if potato_info.country_of_issue == "Pratie Point":
-					return false
-	print("INFO: This potato should be allowed in, returning true.")
-	return true
+	# Use the LawValidator to check violations
+	var validation = LawValidator.check_violations(potato_info, current_rules)
+	return validation.is_valid
 
 func update_date_display():
 	var current_date = Time.get_date_dict_from_system()
@@ -667,15 +560,9 @@ func _on_button_no_entry_button_pressed() -> void:
 
 func go_to_game_win():
 	print("Transitioning to game win scene with score:", Global.score)
-	#$Gameplay/InteractiveElements/ApprovalStamp.visible = false
-	#$Gameplay/InteractiveElements/RejectionStamp.visible = false
 	Global.final_score = Global.score
 	Global.shift += 1
 	print("ALERT: go_to_game_win() has been disabled")
-	# Use change_scene_to_packed to pass parameters
-	#var success_scene = preload("res://menus/success_scene.tscn")
-	#get_tree().change_scene_to_packed(success_scene)
-	# Store the score in a global script or autoload
 
 
 func process_decision(allowed):
@@ -684,26 +571,24 @@ func process_decision(allowed):
 		print("No potato to process.")
 		return
 		
-	var correct_decision = is_potato_valid(current_potato_info)
-		
 	# Clear all existing stamps from the passport
 	var open_passport = $Gameplay/InteractiveElements/Passport/OpenPassport
 	for child in open_passport.get_children():
 		if child is Sprite2D and ("approved" in child.texture.resource_path or "denied" in child.texture.resource_path):
 			child.queue_free()
 	
-	# Check expiration specifically - if expired, denial is correct
-	if is_expired(current_potato_info.expiration_date):
-		print("DEBUG: Document expired on " + current_potato_info.expiration_date)
-		correct_decision = false  # Meaning denial would be correct
+	# Get validation result
+	var validation = LawValidator.check_violations(current_potato_info, current_rules)
+	var correct_decision = validation.is_valid
 	
-	# Update stats
-	if allowed:
-		shift_stats.potatoes_approved += 1
-	else:
-		shift_stats.potatoes_rejected += 1
-	
+	# Update stats based on correctness of decision
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
+		# Decision was correct
+		if allowed:
+			shift_stats.potatoes_approved += 1
+		else:
+			shift_stats.potatoes_rejected += 1
+		
 		Global.quota_met += 1
 		correct_decision_streak += 1
 		
@@ -731,20 +616,24 @@ func process_decision(allowed):
 		if correct_decision_streak >= 5:
 			point_multiplier = 2.0
 			
-		# Award points for correct decisions,
-		# with bonus points for consecutive
-		# correct decisions
+		# Award points for correct decisions
 		var decision_points = 250 * point_multiplier
 		var alert_text = "You made the right choice, officer."
-		if !allowed and is_expired(current_potato_info.expiration_date):
-			alert_text += "\nDocument was expired!"
+		if !allowed and validation.violation_reason:
+			alert_text += "\n" + validation.violation_reason
 		alert_text += "\n+" + str(decision_points) + " points!"
 		Global.display_green_alert(alert_label, alert_timer, alert_text)
 		Global.add_score(decision_points)
 	else:
+		# Decision was incorrect
+		if allowed:
+			shift_stats.potatoes_rejected += 1  # Should have been rejected
+		else:
+			shift_stats.potatoes_approved += 1  # Should have been approved
+			
 		var alert_text = "You have caused unnecessary suffering, officer..."
-		if allowed and is_expired(current_potato_info.expiration_date):
-			alert_text += "\nDocument was expired!"
+		if validation.violation_reason:
+			alert_text += "\n" + validation.violation_reason
 		alert_text += "\n+1 Strike!"
 		Global.display_red_alert(alert_label, alert_timer, alert_text)
 		
@@ -755,7 +644,7 @@ func process_decision(allowed):
 			# Store stats before transitioning
 			Global.store_game_stats(shift_stats)
 			Global.go_to_game_over()
-			
+	
 	update_score_display()
 	update_quota_display()
 	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)

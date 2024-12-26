@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Spud Customs"
-config/version="0.1.1"
+config/version="1.0.1"
 config/tags=PackedStringArray("active", "steam")
 run/main_scene="res://main_scenes/scenes/opening/opening_with_logo.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
@@ -27,6 +27,7 @@ AppConfig="*res://addons/maaacks_game_template/base/scenes/autoloads/app_config.
 SceneLoader="*res://addons/maaacks_game_template/base/scenes/autoloads/scene_loader.tscn"
 ProjectMusicController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_music_controller.tscn"
 ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
+LawValidator="*res://LawValidator.gd"
 
 [debug]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://bdknelqd4ojod"]
+[gd_scene load_steps=67 format=3 uid="uid://bdknelqd4ojod"]
 
 [ext_resource type="Script" uid="uid://bak2ox7wh15te" path="res://main_scenes/scenes/game_scene/levels/endless/endlessGame.gd" id="1_s8p0h"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="2_udo16"]
@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://bxn3434177kfd" path="res://assets/documents/laws_receipt.png" id="30_bhhuv"]
 [ext_resource type="Script" uid="uid://bif3v7xddhuag" path="res://guide.gd" id="31_6ou4t"]
 [ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://dos_theme.tres" id="31_pdq3q"]
+[ext_resource type="Script" path="res://law_receipt.gd" id="31_ud4b8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sihlh"]
 size = Vector2(756.5, 214)
@@ -225,7 +226,8 @@ strike_label = NodePath("../UI/Labels/StrikesLabel")
 alert_label = NodePath("../UI/Labels/MarginContainer/AlertLabel")
 alert_timer = NodePath("../SystemManagers/Timers/AlertTimer")
 runner_chance = 0.025
-missile_speed = 600.0
+missile_speed = 900.0
+explosion_size = 60.0
 num_gibs = 75
 gib_min_speed = 125.0
 
@@ -292,7 +294,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("8_0m27g")
 theme_override_font_sizes/font_size = 32
-text = "2024.11.14"
+text = "2024.12.26"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -600,19 +602,20 @@ visible = false
 position = Vector2(-4.99997, 3.99999)
 texture = ExtResource("26_y5k1q")
 
-[node name="LawReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
-z_index = 12
+[node name="LawReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_as_relative = false
-position = Vector2(168, 501)
+position = Vector2(124, 505)
 texture = ExtResource("30_bhhuv")
-script = ExtResource("31_6ou4t")
-main_node = NodePath("../../..")
+script = ExtResource("31_ud4b8")
 
 [node name="ClosedReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements/LawReceipt"]
 visible = false
+z_index = 1
 z_as_relative = false
 
 [node name="OpenReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements/LawReceipt"]
+z_index = 1
+z_as_relative = false
 
 [node name="ReceiptNote" type="RichTextLabel" parent="Gameplay/InteractiveElements/LawReceipt/OpenReceipt"]
 offset_left = -88.0
@@ -629,9 +632,9 @@ Potatoes must be fresh."
 horizontal_alignment = 1
 
 [node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
-z_index = 2
+z_index = 5
 z_as_relative = false
-position = Vector2(699, 519)
+position = Vector2(704, 391)
 texture = ExtResource("30_6ppju")
 script = ExtResource("31_6ou4t")
 main_node = NodePath("../../..")
@@ -641,6 +644,8 @@ visible = false
 z_as_relative = false
 
 [node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
+z_index = 5
+z_as_relative = false
 
 [node name="GuideNote" type="RichTextLabel" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
 offset_left = -150.0
