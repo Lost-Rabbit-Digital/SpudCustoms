@@ -14,8 +14,11 @@ var is_stamping = false
 var stamp_cooldown = 1.0
 var current_stamp_texture: Texture2D
 var current_stamp_type: String
+var last_mouse_position: Vector2
 
 @onready var sfx_player = $"../../../SystemManagers/AudioManager/SFXPool"
+@onready var approval_button = $"../StampBarController/StampBar/ApprovalStamp/TextureButton"
+@onready var rejection_button = $"../StampBarController/StampBar/RejectionStamp/TextureButton"
 
 func _ready():
 	if not passport:
@@ -23,42 +26,9 @@ func _ready():
 	if not stats_manager:
 		push_error("StatsManager reference not set in StampCrossbarSystem!")
 
-func setup_stamps():
-	$StampBar/ApprovalStamp.position = Vector2(0, 0)
-	$StampBar/RejectionStamp.position = Vector2(STAMP_SPACING, 0)
-	
-	$StampBar/ApprovalStamp.connect("input_event", Callable(self, "_on_stamp_clicked").bind("approve"))
-	$StampBar/RejectionStamp.connect("input_event", Callable(self, "_on_stamp_clicked").bind("reject"))
-
-func _on_fold_button_pressed():
-	stamps_visible = !stamps_visible
-	update_stamp_bar_visibility(stamps_visible)
-
-func on_stamp_requested(stamp_type: String, stamp_texture: Texture2D):
-	current_stamp_texture = stamp_texture
-	current_stamp_type = stamp_type
-	apply_stamp(stamp_type)
-
-func update_stamp_bar_visibility(visible: bool):
-	var target_x = UNFOLDED_X_POS if visible else FOLDED_X_POS
-	
-	var tween = create_tween()
-	tween.tween_property($StampBar, "position:x", target_x, 0.5)\
-		 .set_trans(Tween.TRANS_CUBIC)\
-		 .set_ease(Tween.EASE_OUT)
-
-func _on_stamp_clicked(_viewport, event, _shape_idx, stamp_type: String):
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if !is_stamping and passport_in_range():
-			apply_stamp(stamp_type)
-
-func passport_in_range() -> bool:
-	if !passport:
-		return false
-		
-	var stamp = $StampBar/ApprovalStamp if passport.global_position.x < $StampBar.position.x + STAMP_SPACING/2 \
-							  else $StampBar/RejectionStamp
-	return abs(passport.global_position.y - ($StampBar.position.y + STAMP_BAR_Y)) < 50
+func _input(event):
+	if event is InputEventMouseMotion:
+		last_mouse_position = event.global_position
 
 func play_random_stamp_sound():
 	var stamp_sounds = [
@@ -72,13 +42,20 @@ func play_random_stamp_sound():
 		sfx_player.stream = stamp_sounds.pick_random()
 		sfx_player.play()
 
-func get_stamp_position() -> Vector2:
-	# Define visa area positions relative to passport
-	var approve_position = Vector2(-50, 20)  # Left side visa area
-	var reject_position = Vector2(50, 20)   # Right side visa area
+func get_stamp_origin() -> Vector2:
+	# Get the position of the appropriate stamp in the crossbar
+	var stamp_button = approval_button if current_stamp_type == "approve" else rejection_button
+	var origin = stamp_button.global_position
 	
-	# Choose position based on stamp type
-	return approve_position if current_stamp_type == "approve" else reject_position
+	# Adjust to be at the bottom center of the stamp
+	origin.y += stamp_button.size.y / 2
+	origin.x += stamp_button.size.x / 2
+	return origin
+
+func on_stamp_requested(stamp_type: String, stamp_texture: Texture2D):
+	current_stamp_texture = stamp_texture
+	current_stamp_type = stamp_type
+	apply_stamp(stamp_type)
 
 func apply_stamp(stamp_type: String):
 	if not passport or not current_stamp_texture:
@@ -92,23 +69,33 @@ func apply_stamp(stamp_type: String):
 	temp_stamp.texture = current_stamp_texture
 	temp_stamp.z_index = 20  # Ensure stamp appears above passport during animation
 	
-	# Position stamp based on type
-	var stamp_offset = get_stamp_position()
-	var target_position = passport.global_position + stamp_offset
-	temp_stamp.global_position = target_position - Vector2(0, 36)  # Start position above target
+	# Start from the actual stamp position
+	var start_pos = get_stamp_origin()
+	temp_stamp.global_position = start_pos
+	
+	# Target position is where the mouse is
+	var target_position = last_mouse_position
 	
 	add_child(temp_stamp)
 	
-	# Animate stamp coming down
+	# Animate stamp movement
 	var tween = create_tween()
-	tween.tween_property(temp_stamp, "position:y", target_position.y, STAMP_ANIM_DURATION/2)
+	tween.set_parallel(true)
+	
+	# Move horizontally to target x position
+	tween.tween_property(temp_stamp, "global_position:x", target_position.x, STAMP_ANIM_DURATION/2)
+	
+	# Move down to target y position
+	tween.tween_property(temp_stamp, "global_position:y", target_position.y, STAMP_ANIM_DURATION/2)
 	
 	# Apply final stamp to passport
 	create_final_stamp(stamp_type, target_position)
 	
-	# Return stamp and clean up
-	tween.chain().tween_property(temp_stamp, "position:y", temp_stamp.position.y - 36, STAMP_ANIM_DURATION/2)
-	tween.chain().tween_callback(func():
+	# Return stamp to original position
+	var return_tween = create_tween()
+	return_tween.set_parallel(true)
+	return_tween.tween_property(temp_stamp, "global_position", start_pos, STAMP_ANIM_DURATION/2)
+	return_tween.chain().tween_callback(func():
 		temp_stamp.queue_free()
 		await get_tree().create_timer(stamp_cooldown).timeout
 		is_stamping = false
