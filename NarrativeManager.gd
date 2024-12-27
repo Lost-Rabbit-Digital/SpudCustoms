@@ -38,8 +38,8 @@ func start_shift_dialogue():
 	match current_shift:
 		1:
 			# Debugging Purposes
-			timeline = Dialogic.start("final_confrontation")
-			#timeline = Dialogic.start("shift1_start") 
+			#timeline = Dialogic.start("final_confrontation")
+			timeline = Dialogic.start("shift1_start") 
 		2: 
 			timeline = Dialogic.start("shift2_start")
 		3:

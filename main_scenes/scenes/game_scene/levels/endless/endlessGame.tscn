@@ -33,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://bxn3434177kfd" path="res://assets/documents/laws_receipt.png" id="30_bhhuv"]
 [ext_resource type="Script" uid="uid://bif3v7xddhuag" path="res://guide.gd" id="31_6ou4t"]
 [ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://dos_theme.tres" id="31_pdq3q"]
-[ext_resource type="Script" path="res://law_receipt.gd" id="31_ud4b8"]
+[ext_resource type="Script" uid="uid://dfofd8lp0igu2" path="res://law_receipt.gd" id="31_ud4b8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sihlh"]
 size = Vector2(756.5, 214)

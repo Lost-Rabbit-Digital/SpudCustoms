@@ -4,7 +4,7 @@ extends Node
 var shift = 1
 var final_score = 0
 var build_type = "Full Release"
-var difficulty_level = "Expert" # Can be "Easy", "Normal", or "Expert"
+var difficulty_level = "Normal" # Can be "Easy", "Normal", or "Expert"
 var strikes = 0
 var max_strikes = 4
 var current_game_stats: Dictionary = {}
