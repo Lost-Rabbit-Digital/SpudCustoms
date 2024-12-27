@@ -974,9 +974,6 @@ func _on_game_over():
 	# Get border runner statistics
 	var runner_stats = $BorderRunnerSystem.shift_stats
 	
-	# Create a new ShiftStats object
-	var shift_stats = ShiftStats.new()
-	
 	# Populate the ShiftStats object with the necessary data
 	shift_stats.time_taken = elapsed_time
 	shift_stats.missiles_fired = runner_stats.missiles_fired

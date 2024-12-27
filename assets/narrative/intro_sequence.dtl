@@ -21,7 +21,7 @@ narrator: Don't forget, your family's well-being depends on your performance.
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
 narrator: After all, you wouldn't want them to end up like...
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-narrator: [i]clears throat[/i] Nevermind. Let's move on.
+narrator: The narrator clears their throat. Nevermind. Let's move on.
 leave narrator
 
 [background arg="res://assets/narrative/great_wall_of_spud.png" fade="2.0"]
@@ -34,7 +34,7 @@ narrator: This is where you'll serve Spud, ensuring only the worthy enter.
 narrator: Your vigilance is our first line of defense against undesirable elements.
 join npc_1 center [z_index="1"]
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-npc_1: [i]whispers[/i] <Have you noticed the food shortages lately?/The rations keep getting smaller, don't they?/Something's not right with the food supply.> Strange, with all the new Root Reserve shipments...
+npc_1: The Spud whispers under their breath. <Have you noticed the food shortages lately?/The rations keep getting smaller, don't they?/Something's not right with the food supply.> Strange, with all the new Root Reserve shipments...
 leave npc_1
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
 narrator: Like they say, a good spud is a smooth spud. Any lumps could be...problematic.
@@ -48,7 +48,7 @@ supervisor_russet: Listen carefully, your role is vital to Spud's security.
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
 supervisor_russet: By the authority vested in me, I appoint you as a Customs Officer of glorious Spud.
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-supervisor_russet: [i]firmly places official cap on your head[/i]
+supervisor_russet: The supervisor firmly places the official cap on your head.
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
 supervisor_russet: Uphold our laws, protect our borders. Spud's future depends on you.
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
@@ -64,29 +64,29 @@ set {initial_response} = "none"
 
 if {initial_response} == "eager":
 	[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-	supervisor_russet: [i]broad smile[/i] Excellent! That's the kind of enthusiasm we need.
+	supervisor_russet: A broad smile spreads across the supervisor's face. Excellent! That's the kind of enthusiasm we need.
 	[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
 	supervisor_russet: With dedication like that, you might even earn yourself a Root Reserve commendation.
 	[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-	supervisor_russet: [i]claps your back heartily[/i] Keep that attitude, sprout. You'll do just fine.
+	supervisor_russet: The supervisor claps your back heartily. Keep that attitude, sprout. You'll do just fine.
 	leave supervisor_russet
 
 if {initial_response} == "questioning":
 	[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-	supervisor_russet: [i]smile falters slightly[/i] They're... processed. According to protocol.
+	supervisor_russet: The supervisor's smile falters slightly. They're... processed. According to protocol.
 	[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-	supervisor_russet: [i]straightens up[/i] Root Reserve handles all the details. No need to concern yourself.
+	supervisor_russet: The supervisor straightens their posture. Root Reserve handles all the details. No need to concern yourself.
 	[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-	supervisor_russet: [i]voice hardening[/i] Focus on your duties. Nothing more.
+	supervisor_russet: Their voice hardens. Focus on your duties. Nothing more.
 	leave supervisor_russet
 
 else:
 	[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-	supervisor_russet: [i]eyes narrow dangerously[/i] Nervous? Nonsense.
+	supervisor_russet: The supervisor's eyes narrow dangerously. Nervous? Nonsense.
 	[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
 	supervisor_russet: The only ones who need be nervous are those who threaten Spud's security.
 	[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-	supervisor_russet: [i]adjusts your cap uncomfortably tight[/i] I trust that won't be you, will it?
+	supervisor_russet: The supervisor adjusts your cap uncomfortably tight. I trust that won't be you, will it?
 	leave supervisor_russet
 
 [background arg="res://assets/narrative/intro_sequence_gameplay_shot.png" fade="2.0"]

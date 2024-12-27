@@ -49,8 +49,6 @@ func _ready():
 	_setup_main_menu()
 
 func _on_restart_button_pressed():
-	Global.strikes = 0
-	Global.quota_met = 0
 	%ConfirmRestart.popup_centered()
 	popup_open = %ConfirmRestart
 
@@ -59,8 +57,7 @@ func _on_options_button_pressed():
 
 func _on_main_menu_button_pressed():
 	%ConfirmMainMenu.popup_centered()
-	Global.strikes = 0
-	Global.quota_met = 0
+
 	popup_open = %ConfirmMainMenu
 
 func _on_exit_button_pressed():
@@ -68,10 +65,14 @@ func _on_exit_button_pressed():
 	popup_open = %ConfirmExit
 
 func _on_confirm_restart_confirmed():
+	Global.quota_met = 0
+	Global.strikes = 0
 	SceneLoader.reload_current_scene()
 	close()
 
 func _on_confirm_main_menu_confirmed():
+	Global.strikes = 0
+	Global.quota_met = 0
 	SceneLoader.load_scene(main_menu_scene)
 	close()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

@@ -1,4 +1,4 @@
-### shift1_start.dtl
+# shift1_start.dtl
 [music path="res://assets/audio/horror_drone_23.wav" fade="2.0" volume="-15.0" bus="Music"]
 
 [background arg="res://assets/narrative/meeting_sasha.png" fade="2.0"]
@@ -8,7 +8,7 @@ sweet_potato_sasha: Hey there, I'm Sasha. <Welcome to the team!/Glad to have you
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
 sweet_potato_sasha: I've been here a while, so if you need any help, just ask.
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-sweet_potato_sasha: [i]leans in[/i] And keep your eyes peeled. Not everything is as it seems in Spud.
+sweet_potato_sasha: Sasha leans in close: "And keep your eyes peeled. Not everything is as it seems in Spud."
 leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
@@ -27,7 +27,7 @@ leave supervisor_russet
 You continue your shift...
 
 [background arg="res://assets/narrative/potato_radio.png" fade="2.0"]
-[i]Radio crackling in the background[/i]
+Static crackles through the radio in the background
 join announcer
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
 announcer: "...in today's news, <another bumper crop/record production numbers/unprecedented output> for Root Reserve. The miracle food continues to nourish our nation..."
@@ -41,15 +41,15 @@ leave announcer
 You continue your shift...
 
 [background arg="res://assets/narrative/propaganda_1.png" fade="2.0"]
-[i]A bright poster catches your eye[/i]
+Your attention is drawn to a bright poster.
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
 Poster text\: "Serve With Pride - Your Duty Keeps Spud Strong!"
 [background arg="res://assets/narrative/propaganda_2.png" fade="2.0"]
-[i]Next to it, another poster proclaims\:[/i]
+A second poster nearby declares:
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
 "Root Reserve\: Savor The Flavor. Now With Added Benefits!"
 [background arg="res://assets/narrative/propaganda_3.png" fade="2.0"]
-[i]A third poster shows a shadowy silhouette[/i]
+A third poster displays a shadowy silhouette.
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
 "Those Who Abandon Their Duty Abandon Their Roots."
 
@@ -58,7 +58,7 @@ You continue your shift...
 
 join npc_2 [z_index="1"]
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-npc_2: [i]hushed tones[/i] My neighbor disappeared <yesterday/last week/this morning> after failing inspection...
+npc_2: A young Spud speaks in a low whisper: My neighbor disappeared <yesterday/last week/this morning> after failing inspection...
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
 npc_2: Just... be careful out there. Get rejected and you <might/may/better> not come back.
 leave npc_2
@@ -67,9 +67,9 @@ join sweet_potato_sasha [z_index="1"]
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
 sweet_potato_sasha: How's your shift going? Find anything...unusual yet?
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-sweet_potato_sasha: [i]looks around[/i] There are rumors, you know. About where the rejects end up.
+sweet_potato_sasha: Sasha glances around warily, "There are rumors, you know. About where the rejects end up."
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-sweet_potato_sasha: No one knows for sure, but...just keep your wits about you.
+sweet_potato_sasha: No one knows for sure, but... just keep your wits about you.
 - "Thanks for the heads up. I'll stay vigilant."
 - "Rumors are just rumors. We have a duty to uphold."
 - "Maybe we should look into this further."
@@ -80,7 +80,7 @@ You continue your shift...
 
 join spud_masherson [z_index="1"]
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-spud_masherson: [i]nervously[/i] P-please...
+spud_masherson: Spud Masherson trembles as they speak: P-please...
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
 spud_masherson: I need to enter Spud.
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
@@ -109,14 +109,14 @@ supervisor_russet: Now, get some rest. Tomorrow is another big day for Spud.
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
 supervisor_russet: And don't forget to grab your ration of Root Reserve on the way out.
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-supervisor_russet: [i]grins[/i] It's the flavor of Spud's future!
+supervisor_russet: Supervisor Russet flashes a wide grin, "It's the flavor of Spud's future!"
 leave supervisor_russet
 
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
 You finish your shift and start to leave the customs office.
 
 [background arg="res://assets/narrative/suspicious_note.png" fade="2.0"]
-[i]As you prepare to leave, a small note flutters out from under some papers.[/i]
+A small note slips out from beneath a stack of papers
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
 The message reads\: "Not all is as it seems."
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
@@ -128,17 +128,17 @@ join sweet_potato_sasha [z_index="1"]
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
 sweet_potato_sasha: Hey, don't stay too late. This place can get a bit...unsettling at night.
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-sweet_potato_sasha: [i]notices the note[/i] What's that you got there? Looks like you have some homework.
+sweet_potato_sasha: Sasha spots the note in your hand: What's that you got there? Looks like you have some homework.
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
 sweet_potato_sasha: Watch your back. And if you stumble on the truth?
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-sweet_potato_sasha: [i]looks deadly serious[/i] Find me. Fast.
+sweet_potato_sasha: Sasha's expression hardens with intensity, "Find me. Fast."
 leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/questioning_identity.png" fade="2.0"]
 join player_character [z_index="1"]
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-player_character: [i]Think to yourself[/i] What have I gotten myself into?
+player_character: You reflect silently: What have I gotten myself into?
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
 player_character: Missing potatoes, strange notes, Root Reserve everywhere...
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]

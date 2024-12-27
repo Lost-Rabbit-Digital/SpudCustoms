@@ -172,9 +172,6 @@ func end_shift():
 		# Get border runner statistics
 		var runner_stats = $BorderRunnerSystem.shift_stats
 		
-		# Create a new ShiftStats object
-		var shift_stats = ShiftStats.new()
-		
 		# Populate the ShiftStats object with the necessary data
 		shift_stats.time_taken = elapsed_time
 		shift_stats.missiles_fired = runner_stats.missiles_fired
@@ -954,10 +951,8 @@ func _exit_tree():
 	# Ensure cursor is restored when leaving the scene
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
-
 func _on_dialogue_started():
 	disable_controls()
-
 
 func _on_dialogue_finished():
 	Global.quota_met = 0
@@ -985,7 +980,7 @@ func enable_controls():
 	set_process_input(true)
 	$Gameplay/Megaphone.visible = true
 	$Gameplay/InteractiveElements/Guide.visible = true
-	$Gameplay/InteractiveElements/LawReceipt.visible = false
+	$Gameplay/InteractiveElements/LawReceipt.visible = true
 	$Gameplay/InteractiveElements/Passport.visible = false
 	# Re-enable border runner system and restore original spawn chance
 	if border_runner_system:
@@ -994,33 +989,27 @@ func enable_controls():
 		
 func _on_game_over():
 		# Capture time taken
-	var elapsed_time = (Time.get_ticks_msec() / 1000.0) - game_start_time
-	
-	# Get border runner statistics
-	var runner_stats = $BorderRunnerSystem.shift_stats
-	
-	# Create a new ShiftStats object
-	var shift_stats = ShiftStats.new()
-	
-	# Populate the ShiftStats object with the necessary data
-	shift_stats.time_taken = elapsed_time
-	shift_stats.missiles_fired = runner_stats.missiles_fired
-	shift_stats.missiles_hit = runner_stats.missiles_hit
-	shift_stats.perfect_hits = runner_stats.perfect_hits
-	shift_stats.total_stamps = shift_stats.total_stamps
-	shift_stats.potatoes_approved = shift_stats.potatoes_approved
-	shift_stats.potatoes_rejected = shift_stats.potatoes_rejected
-	
-	# Calculate the hit rate manually
-	shift_stats.hit_rate = 0.0 if shift_stats.missiles_fired == 0 else (float(shift_stats.missiles_hit) / shift_stats.missiles_fired * 100.0)
-	
-	# Call the store_game_stats() function with the populated ShiftStats object
-	Global.store_game_stats(shift_stats)
-	
-	# Create and show shift summary
-	var summary = shift_summary.instantiate()
-	add_child(summary)
-	summary.show_summary(shift_stats)
+		var elapsed_time = (Time.get_ticks_msec() / 1000.0) - game_start_time
+		
+		# Get border runner statistics
+		var runner_stats = $BorderRunnerSystem.shift_stats
+		
+		# Populate the ShiftStats object with the necessary data
+		shift_stats.time_taken = elapsed_time
+		shift_stats.missiles_fired = runner_stats.missiles_fired
+		shift_stats.missiles_hit = runner_stats.missiles_hit
+		shift_stats.perfect_hits = runner_stats.perfect_hits
+		shift_stats.total_stamps = shift_stats.total_stamps
+		shift_stats.potatoes_approved = shift_stats.potatoes_approved
+		shift_stats.potatoes_rejected = shift_stats.potatoes_rejected
+		
+		# Calculate the hit rate manually
+		shift_stats.hit_rate = 0.0 if shift_stats.missiles_fired == 0 else (float(shift_stats.missiles_hit) / shift_stats.missiles_fired * 100.0)
+		
+		# Call the store_game_stats() function with the populated ShiftStats object
+		Global.store_game_stats(shift_stats)
+		# Call go to game over to load shift summary screen
+		Global.go_to_game_over()
 
 
 func parse_date(date_string: String) -> Dictionary:

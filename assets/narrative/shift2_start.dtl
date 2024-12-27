@@ -1,35 +1,35 @@
-# ### shift2_start.dtl
+# shift2_start.dtl
 [music path="res://assets/audio/horror_drone_12.wav" fade="2.0" volume="-15.0" bus="Music"]
 
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
-join narrator center [z_index="1"]
+join narrator [z_index="1"]
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
 narrator: Another day dawns at the Spud border checkpoint.
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
 narrator: The line of potatoes waiting for inspection stretches longer than ever.
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-supervisor_russet: [i]Supervisor Russet stalks the queue, eyes darting from potato to potato. [/i]
+supervisor_russet: Supervisor Russet patrols the queue, his eyes darting from potato to potato.
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
 narrator: Everyone seems on edge today.
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-sweet_potato_sasha: [i]Sweet Potato Sasha catches your eye across the room, then quickly looks away. She seems to be watching the rejects closely.[/i]
+sweet_potato_sasha: Sweet Potato Sasha catches your eye across the room, then quickly looks away, her attention focused on the rejects.
 leave narrator
 
 [background arg="res://assets/narrative/customs_office.png" fade="2.0"]
-join supervisor_russet center [z_index="1"]
+join supervisor_russet [z_index="1"]
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
 supervisor_russet: Listen up, everyone. New orders from the top.
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
 supervisor_russet: Border security is priority number one. We're doubling rejections.
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-supervisor_russet: [i]eyes narrow[/i] Any potato deemed unsafe or undesirable is to be detained immediately.
+supervisor_russet: Russet's eyes narrow to slits: Any potato deemed unsafe or undesirable is to be detained immediately.
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
 supervisor_russet: Perform your duties with unwavering vigilance. The stability of Spud depends on it.
 leave supervisor_russet
 
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
-join supervisor_russet center [z_index="1"]
-[i]Russet beckons you over, voice lowered[/i]
+join supervisor_russet [z_index="1"]
+supervisor_russet: Russet motions you closer, lowering his voice
 [background arg="res://assets/narrative/uv_scanner_1.png" fade="2.0"]
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
 supervisor_russet: I have a special assignment for you. We've got intel on a group of troublemakers trying to sneak across the border.
@@ -43,25 +43,25 @@ set {scanner_response} = "none"
    set {scanner_response} = "questioning"
 
 if {scanner_response} == "loyal":
-   join supervisor_russet center [z_index="1"]
+   join supervisor_russet [z_index="1"]
    [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
    supervisor_russet: Good. I knew I could count on you. Keep those eyes sharp.
    [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-   supervisor_russet: [i]straightens your uniform badge[/i] You'll go far in Spud with that attitude.
+   supervisor_russet: Supervisor Russet adjusts your uniform badge with precision: You'll go far in Spud with that attitude.
    leave supervisor_russet
 else:
-   join supervisor_russet center [z_index="1"]
+   join supervisor_russet [z_index="1"]
    [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-   supervisor_russet: [i]narrows eyes[/i] The kind that threaten our way of life.
+   supervisor_russet: Russet's eyes narrow dangerously: The kind that threaten our way of life.
    [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
    supervisor_russet: Don't ask too many questions if you know what's good for you.
    [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-   supervisor_russet: [i]leans in menacingly[/i] Or for your family.
+   supervisor_russet: Russet leans in with a threatening presence: Or for your family.
    leave supervisor_russet
 
 join sweet_potato_sasha center [z_index="1"]
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-sweet_potato_sasha: [i]sidles up to you[/i] Hey... did you read that note?
+sweet_potato_sasha: Sasha moves closer with practiced casualness: Hey... did you read that note?
 [background arg="res://assets/narrative/underground_resistance.png" fade="2.0"]
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
 sweet_potato_sasha: I think I might have a lead on those missing potatoes. Meet me after shift behind the Root Reserve billboard.
@@ -79,7 +79,7 @@ set {sasha_investigation} = "none"
 if {sasha_investigation} == "committed":
    join sweet_potato_sasha center [z_index="1"]
    [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-   sweet_potato_sasha: [i]relief washing over her face[/i] Thank goodness. I knew you had stronger roots than the others.
+   sweet_potato_sasha: Sasha's face shows visible relief: Thank goodness. I knew you had stronger roots than the others.
    [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
    sweet_potato_sasha: We'll meet at midnight. Watch for my signal.
    leave sweet_potato_sasha
@@ -88,23 +88,22 @@ elif {sasha_investigation} == "hesitant":
    [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
    sweet_potato_sasha: Sometimes we have to risk getting mashed to do what's right.
    [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-   sweet_potato_sasha: [i]softens[/i] Think about it. You know where to find me if you change your mind.
+   sweet_potato_sasha: Sasha's expression softens: Think about it. You know where to find me if you change your mind.
    leave sweet_potato_sasha
 else:
-   join sweet_potato_sasha center [z_index="1"]
+   join sweet_potato_sasha [z_index="1"]
    [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-   sweet_potato_sasha: [i]bitter laugh[/i] The proper channels ARE the problem.
+   sweet_potato_sasha: Sasha lets out a bitter laugh: The proper channels ARE the problem.
    [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
    sweet_potato_sasha: But I understand if you're not ready to see that yet.
    [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-   sweet_potato_sasha: [i]turns away[/i] Just remember what you saw in those files when you can't sleep at night.
+   sweet_potato_sasha: Sasha turns away sharply: Just remember what you saw in those files when you can't sleep at night.
    leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
-# #
-join npc_3 center [z_index="1"]
+join npc_3 [z_index="1"]
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-npc_3: [i]frantically waving papers[/i] Please, I beg you! My family has been separated!
+npc_3: An older Spud waves papers frantically: Please, I beg you! My family has been separated!
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
 npc_3: My wife...she was supposed to be right behind me, but she never made it through customs.
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
@@ -120,33 +119,33 @@ set {family_response} = "none"
 
 if {family_response} == "refuse":
    [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-   npc_3: [i]shoulders slumping[/i] Just like all the others...
+   npc_3: The older Spud's shoulders slump in defeat: Just like all the others...
    [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
    npc_3: May your conscience weigh heavy as mine does.
    [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-   npc_3: [i]shuffles away, dejected[/i]
+   npc_3: The Spud shuffles away dejectedly.
    leave npc_3
 
 elif {family_response} == "help":
    [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-   npc_3: [i]grabbing your hand[/i] Thank you, thank you! Even a small hope is better than none.
+   npc_3: The Spud grasps your hand desperately: Thank you, thank you! Even a small hope is better than none.
    [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-   npc_3: [i]slips you a small photo[/i] This was taken just last week. Please... find her.
+   npc_3: The Spud carefully passes you a small photo: This was taken just last week. Please... find her.
    leave npc_3
 
 else:
    [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-   npc_3: [i]eyes hardening[/i] You know that's not true.
+   npc_3:His eyes harden with anger: You know that's not true.
    [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
    npc_3: You KNOW what happens to the 'mixups'...
    [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-   npc_3: [i]voice breaking[/i] <How do you sleep at night?/Does this make you proud?/Is this what you dreamed of becoming?>
+   npc_3: Their voice cracks with emotion: <How do you sleep at night?/Does this make you proud?/Is this what you dreamed of becoming?>
    leave npc_3
 
 join supervisor_russet center [z_index="1"]
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
-supervisor_russet: [i]eyes narrowed[/i] I saw that exchange. Remember, sympathizing with the rejects only leads to trouble.
+supervisor_russet: Russet watches with narrowed eyes: I saw that exchange. Remember, sympathizing with the rejects only leads to trouble.
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
 supervisor_russet: Your job is to protect Spud, not coddle every potato with a sob story. Stay focused on your duty.
 leave supervisor_russet
-[i]You notice Sasha fiddling with her scanner, 'accidentally' letting a few suspicious potatoes through[/i]
+Sasha fiddles with her scanner, seemingly letting a few suspicious potatoes pass through by accident
