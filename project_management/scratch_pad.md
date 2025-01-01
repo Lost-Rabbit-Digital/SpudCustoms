@@ -92,6 +92,7 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Possibly exit the game from the lose screen
   [ ] - Change time to a shift-based time, such as 8 hours over a day
   [ ] - A slider for the law book to slide in from the bottom as a note-card
+  [ ] - Changed character action text from italics to colored text
 ### Guide Bugs
   [ ] - Make cursor into a click status when hovering over the corner of the guide
   [ ] - Fix guide textures to not include lower left corner on first page
@@ -126,10 +127,7 @@ The tasks which have be completed and pushed to VCS.
 When adding to the lists, please either rephrase or separate your tasks to be rephrased later for proper release.
 If a label is marked with *INTERNAL USE* then do *NOT* include it in the official release post to Steam.
 
-## Steam Minor Update 1.0.1: General bug fixes - NOT YET RELEASED
-
-  [ ] - Fixed bug with Spuds running the border while still in a cutscene
-
+## Steam Minor Update 1.0.1: General bug fixes - ALREADY RELEASED
   - Updated font for dialogue
   - Changed character actions from italic to colored text
   - Changed background color of dialogue boxes
