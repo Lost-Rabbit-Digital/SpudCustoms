@@ -18,6 +18,7 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Entry ticket
   [ ] - Different documents, entry passes, work permits, baggage, visas, marriage licenses, bribes, 
   [ ] - Randomly toggle the lights on and off like people are using the rooms
+  [ ] - Fix text on main menu and other scenes with background photos
 ### Gameplay
   [ ] - Reduce lead time for missiles
   [ ] - Faster project or more centralized location for missile
@@ -91,6 +92,7 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Possibly exit the game from the lose screen
   [ ] - Change time to a shift-based time, such as 8 hours over a day
   [ ] - A slider for the law book to slide in from the bottom as a note-card
+  [ ] - Changed character action text from italics to colored text
 ### Guide Bugs
   [ ] - Make cursor into a click status when hovering over the corner of the guide
   [ ] - Fix guide textures to not include lower left corner on first page
@@ -125,9 +127,11 @@ The tasks which have be completed and pushed to VCS.
 When adding to the lists, please either rephrase or separate your tasks to be rephrased later for proper release.
 If a label is marked with *INTERNAL USE* then do *NOT* include it in the official release post to Steam.
 
-## Steam Minor Update 1.0.1: General bug fixes - NOT YET RELEASED
-  - Make expiration apply as expected (if past date)
-  
+## Steam Minor Update 1.0.1: General bug fixes - ALREADY RELEASED
+  - Updated font for dialogue
+  - Changed character actions from italic to colored text
+  - Changed background color of dialogue boxes
+  - Made expiration law apply as expected (if past date)
   - Added community members who helped with bug reports to credits
   - *INTERNAL USE* Cleaned up old tutorial code to pave road for new system
   - *INTERNAL USE* Updated alert system in endlessGame and BorderRunnerSystem

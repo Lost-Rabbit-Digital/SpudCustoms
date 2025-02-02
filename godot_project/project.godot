@@ -1,0 +1,191 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Spud Customs"
+config/version="1.0.1"
+config/tags=PackedStringArray("active", "steam")
+run/main_scene="res://main_scenes/scenes/opening/opening_with_logo.tscn"
+config/features=PackedStringArray("4.4", "Forward Plus")
+boot_splash/show_image=false
+config/icon="res://assets/potatoes/heads/russet_burbank_head.png"
+
+[autoload]
+
+Global="*res://Global.gd"
+Guide="*res://guide.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+AppConfig="*res://addons/maaacks_game_template/base/scenes/autoloads/app_config.tscn"
+SceneLoader="*res://addons/maaacks_game_template/base/scenes/autoloads/scene_loader.tscn"
+ProjectMusicController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_music_controller.tscn"
+ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
+LawValidator="*res://LawValidator.gd"
+
+[debug]
+
+file_logging/enable_file_logging=true
+gdscript/warnings/integer_division=0
+
+[dialogic]
+
+directories/dch_directory={
+"announcer": "res://assets/narrative/characters/announcer.dch",
+"narrator": "res://assets/narrative/characters/narrator.dch",
+"npc_1": "res://assets/narrative/characters/npc_1.dch",
+"npc_2": "res://assets/narrative/characters/npc_2.dch",
+"npc_3": "res://assets/narrative/characters/npc_3.dch",
+"player_character": "res://assets/narrative/characters/player_character.dch",
+"prime_minister_idaho": "res://assets/narrative/characters/prime_minister_idaho.dch",
+"resistance_member_1": "res://assets/narrative/characters/resistance_member_1.dch",
+"resistance_member_2": "res://assets/narrative/characters/resistance_member_2.dch",
+"spud_masherson": "res://assets/narrative/characters/spud_masherson.dch",
+"supervisor_russet": "res://assets/narrative/characters/supervisor_russet.dch",
+"sweet_potato_sasha": "res://assets/narrative/characters/sweet_potato_sasha.dch"
+}
+directories/dtl_directory={
+"chapter_1_1_intro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_intro.dtl",
+"chapter_1_1_outro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_outro.dtl",
+"chapter_1_1_overview": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_overview.dtl",
+"chapter_1_spud_masherson": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_spud_masherson.dtl",
+"chapter_2_1_overview": "res://assets/narrative/chapter_2/chapter_2_1_overview.dtl",
+"chapter_3_1_overview": "res://assets/narrative/chapter_3/chapter_3_1_overview.dtl",
+"final_confrontation": "res://assets/narrative/final_confrontation.dtl",
+"generic_shift_start": "res://assets/narrative/generic_shift_start.dtl",
+"intro_sequence": "res://assets/narrative/intro_sequence.dtl",
+"scratch_test": "res://assets/narrative/scratch_test.dtl",
+"shift1_start": "res://assets/narrative/shift1_start.dtl",
+"shift2_start": "res://assets/narrative/shift2_start.dtl",
+"shift3_start": "res://assets/narrative/shift3_start.dtl",
+"spud_customs_full_narrative": "res://assets/narrative/spud_customs_full_narrative.dtl"
+}
+glossary/default_case_sensitive=true
+layout/style_list=["res://dialogic_default_style.tres", "res://visual_novel_style.tres", "res://speaker_textbox_style.tres"]
+layout/default_style="res://speaker_textbox_style.tres"
+variables={
+"ending_choice": "none",
+"family_response": "none",
+"hideout_response": "none",
+"initial_response": "none",
+"resistance_trust": "none",
+"romance_ending": "none",
+"sasha_investigation": "none",
+"scanner_response": "none",
+"stay_or_go": "none"
+}
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.03
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+text/autocolor_names=true
+animations/join_default="Fade In Up"
+animations/leave_default="Fade Out Down"
+history/simple_history_enabled=true
+history/simple_history_save=true
+translation/enabled=false
+translation/original_locale="en"
+translation/file_mode=1
+translation/translation_folder=""
+translation/save_mode=0
+translation/add_separator=false
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/mode=4
+window/size/window_width_override=2560
+window/size/window_height_override=1440
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_width"
+mouse_cursor/custom_image="res://assets/cursor/cursor_default.png"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/maaacks_game_template/plugin.cfg")
+
+[global_group]
+
+PotatoPerson=""
+
+[gui]
+
+theme/custom_font="res://assets/fonts/Modern_DOS_Font_Variation.tres"
+
+[input]
+
+primary_interaction={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+secondary_interaction={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+cancel_interaction={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://addons/maaacks_game_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_game_template/base/translations/menus_translations.fr.translation")
+
+[maaacks_game_template]
+
+disable_plugin_dialogues=true
+copy_path="res://main_scenes"
+
+[memory]
+
+limits/message_queue/max_size_mb=128
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
+textures/default_filters/anisotropic_filtering_level=0
+camera/depth_of_field/depth_of_field_bokeh_shape=0
+scaling_3d/mode=1
+textures/decals/filter=0
+textures/light_projectors/filter=0
+environment/glow/upscale_mode=0
+environment/volumetric_fog/use_filter=0
+environment/defaults/default_clear_color=Color(0.133333, 0.164706, 0.164706, 1)
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true
