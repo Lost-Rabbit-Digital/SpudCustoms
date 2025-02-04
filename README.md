@@ -6,11 +6,11 @@ In the nation of Spud, you guard the last safe haven for potatoes. Every shift t
 
 ## Features
 
-- Fully customizable potato-powered vehicles
-- Multiple dynamic racing environments
-- Competitive multiplayer modes
-- Extensive vehicle modification system
-- Unique art style and humor
+- Quick 5-15 minute shifts
+- Simple controls, deep strategy
+- Multiple story endings
+- Endless mode for high scores
+- Story Mode for narrative fans
 
 ## Installation
 
