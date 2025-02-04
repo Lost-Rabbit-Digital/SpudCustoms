@@ -121,6 +121,8 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Multiplayer? 8th / 15th of November for schedule
   [ ] - Use top 3 scores for leaderboard, then show ... and show 3 scores above player and 3 scores below player (if any), with players score in middle. 
   [ ] - UV lamp represents a high-risk way to maximize points.
+  [ ] - Add cars that drive by
+  [ ] - Shooting from the office instead of a missile?
 
 Currently Doing:
   [ ] - Make the laws slide out similar to the stamps
