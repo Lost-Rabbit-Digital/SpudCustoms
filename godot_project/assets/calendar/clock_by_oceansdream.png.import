@@ -2,15 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-path="res://.godot/imported/clock_by_oceansdream.png-2ce555865540f957428c36b15c46bb4d.ctex"
+uid="uid://c8idc60yoitfy"
+path="res://.godot/imported/clock_by_oceansdream.png-f1545a4259c2e39582c445536e2f0ab3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/clock/clock_by_oceansdream.png"
-dest_files=["res://.godot/imported/clock_by_oceansdream.png-2ce555865540f957428c36b15c46bb4d.ctex"]
+source_file="res://assets/calendar/clock_by_oceansdream.png"
+dest_files=["res://.godot/imported/clock_by_oceansdream.png-f1545a4259c2e39582c445536e2f0ab3.ctex"]
 
 [params]
 

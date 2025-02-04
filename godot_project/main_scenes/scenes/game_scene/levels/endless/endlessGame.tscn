@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://bdknelqd4ojod"]
+[gd_scene load_steps=70 format=3 uid="uid://bdknelqd4ojod"]
 
 [ext_resource type="Script" uid="uid://bak2ox7wh15te" path="res://main_scenes/scenes/game_scene/levels/endless/endlessGame.gd" id="1_s8p0h"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="2_udo16"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://mm8kba4qcarc" path="res://QueueManager.gd" id="9_l36ds"]
 [ext_resource type="PackedScene" uid="uid://dm85v16qe8sla" path="res://assets/clock/clock.tscn" id="9_sxlfl"]
 [ext_resource type="AudioStream" uid="uid://dpybt682ppyjm" path="res://assets/music/horror_fog_main_ovani_sound.mp3" id="10_7ymkl"]
+[ext_resource type="PackedScene" uid="uid://bitp7w4aud4kh" path="res://assets/calendar/calendar.tscn" id="10_p4mb1"]
 [ext_resource type="PackedScene" uid="uid://msix881opujh" path="res://StatsManager.tscn" id="10_q0hnx"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="11_jscux"]
 [ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="12_qvvnb"]
@@ -405,6 +406,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="DateLabel" type="Label" parent="UI/DateAndTime"]
+visible = false
 z_index = 2
 z_as_relative = false
 texture_filter = 1
@@ -425,6 +427,10 @@ vertical_alignment = 1
 
 [node name="Clock" parent="UI/DateAndTime" instance=ExtResource("9_sxlfl")]
 position = Vector2(1167, 555)
+
+[node name="Calendar" parent="UI/DateAndTime" instance=ExtResource("10_p4mb1")]
+position = Vector2(892, 547)
+scale = Vector2(1.05816, 1.06849)
 
 [node name="SystemManagers" type="Control" parent="."]
 layout_mode = 3
