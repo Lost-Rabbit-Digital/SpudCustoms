@@ -5,7 +5,6 @@ These are our goals, to-do tasks, and completed tasks.
 
 ## Tasks
 ### Graphics
-  [ ] - Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
   [ ] - Add dialogue emotes randomly to the potatoes
   [ ] - Add a version counter
   [ ] - Change "Runner Escaped" to capitals 
@@ -124,15 +123,20 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Add cars that drive by
   [ ] - Shooting from the office instead of a missile?
 
-Currently Doing:
+
+## Steam Minor Update 1.0.2 - WORK IN PROGRESS
+### Todo
+  [ ] - Add this dude to the art credits Clock/Calendar: https://opengameart.org/content/various-inventory-24-pixel-icon-set 
   [ ] - Make the laws slide out similar to the stamps
   [ ] - Add a clock button to the suspect panel which tells you the date and time
   [ ] - Remove the date and score from the bottom of the screen
   [ ] - Make the tutorial interactive instead of a text panel with the book
   [ ] - Change the color of the missile marker to green/red to indicate if you can fire a missile
-  [ ] - Cleanup old git branches
+### Currently Doing
+  [ ] - Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
+### Completed Tasks for 1.0.2
+  - *INTERNAL USE* Cleaned up the old git branches from various updates
 
-Clock/Calendar: https://opengameart.org/content/various-inventory-24-pixel-icon-set 
 
 
 # COMPLETED TASKS

@@ -406,10 +406,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Clock" parent="UI/DateAndTime" instance=ExtResource("9_sxlfl")]
-position = Vector2(1167, 555)
+position = Vector2(1166, 549)
 
 [node name="Calendar" parent="UI/DateAndTime" instance=ExtResource("10_p4mb1")]
-position = Vector2(892, 547)
+position = Vector2(890, 541)
 scale = Vector2(1.05816, 1.06849)
 
 [node name="SystemManagers" type="Control" parent="."]
@@ -460,7 +460,6 @@ scale = Vector2(2.455, 2.455)
 texture = ExtResource("11_jscux")
 
 [node name="MegaphoneDialogueBoxBlank" type="Sprite2D" parent="Gameplay/Megaphone"]
-visible = false
 position = Vector2(33.8086, -22.8106)
 scale = Vector2(0.349, 0.349)
 texture = ExtResource("12_qvvnb")
