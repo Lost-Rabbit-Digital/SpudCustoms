@@ -2,6 +2,8 @@
 
 ## About the Game
 
+![Main Game](marketing_images/main_game_screenshot.png)
+
 In the nation of Spud, you guard the last safe haven for potatoes. Every shift tests your judgment. Inspect documents, expose lies, and blast desperate runners with missile defense systems!
 
 ## Features
