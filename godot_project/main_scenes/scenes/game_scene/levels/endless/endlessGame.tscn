@@ -15,10 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://bitp7w4aud4kh" path="res://assets/calendar/calendar.tscn" id="10_p4mb1"]
 [ext_resource type="PackedScene" uid="uid://msix881opujh" path="res://StatsManager.tscn" id="10_q0hnx"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="11_jscux"]
-[ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="12_qvvnb"]
 [ext_resource type="Texture2D" uid="uid://fmqkliw6t33x" path="res://assets/suspect_panel/suspect_panel_front.png" id="14_0kkt0"]
 [ext_resource type="Texture2D" uid="uid://cwni5a4q3jj67" path="res://assets/suspect_panel/suspect_panel_top_bottom.png" id="15_6pgrm"]
 [ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://assets/suspect_panel/suspect_panel.png" id="16_mbr7l"]
+[ext_resource type="PackedScene" uid="uid://b0go0ri8l0yb7" path="res://assets/megaphone/MegaphoneDialogueBoxNext.tscn" id="16_p4mb1"]
 [ext_resource type="Texture2D" uid="uid://dgw6rbhy6crh" path="res://assets/suspect_panel/suspect_panel_table.png" id="17_w4usb"]
 [ext_resource type="Texture2D" uid="uid://cnrr6jblok4ky" path="res://assets/suspect_panel/suspect_panel_background.png" id="18_rpdh1"]
 [ext_resource type="Texture2D" uid="uid://cvtdlyxlb5qaw" path="res://assets/suspect_panel/suspect_panel_document_slot.png" id="19_gr8eb"]
@@ -459,10 +459,11 @@ position = Vector2(900, 130)
 scale = Vector2(2.455, 2.455)
 texture = ExtResource("11_jscux")
 
-[node name="MegaphoneDialogueBoxBlank" type="Sprite2D" parent="Gameplay/Megaphone"]
-position = Vector2(33.8086, -22.8106)
-scale = Vector2(0.349, 0.349)
-texture = ExtResource("12_qvvnb")
+[node name="MegaphoneDialogueBoxNext" parent="Gameplay/Megaphone" instance=ExtResource("16_p4mb1")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(27.6986, -16.7006)
+scale = Vector2(0.25, 0.25)
 
 [node name="SuspectPanel" type="Sprite2D" parent="Gameplay"]
 z_index = 1

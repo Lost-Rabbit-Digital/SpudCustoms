@@ -120,8 +120,9 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Multiplayer? 8th / 15th of November for schedule
   [ ] - Use top 3 scores for leaderboard, then show ... and show 3 scores above player and 3 scores below player (if any), with players score in middle. 
   [ ] - UV lamp represents a high-risk way to maximize points.
-  [ ] - Add cars that drive by
   [ ] - Shooting from the office instead of a missile?
+  [ ] - Add cars that drive by
+
 
 
 ## Steam Minor Update 1.0.2 - WORK IN PROGRESS
@@ -133,7 +134,15 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Make the tutorial interactive instead of a text panel with the book
   [ ] - Change the color of the missile marker to green/red to indicate if you can fire a missile
 ### Currently Doing
-  [ ] - Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
+  [ ] - Update backend for dialogue prompt in-game
+        Megaphone backend:
+          - *INTERNAL USE* Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
+          - *INTERNAL USE* Speak duration parameter
+          - *INTERNAL USE* Have audio built into dialogue box
+          - *INTERNAL USE* Have two json sections, "next queue" and "general sayings", different names but you get the idea
+          - *INTERNAL USE* JSON to store strings instead of hardcoding into images
+          - *INTERNAL USE* Just one background image for the dialogue box
+
 ### Completed Tasks for 1.0.2
   - *INTERNAL USE* Cleaned up the old git branches from various updates
 

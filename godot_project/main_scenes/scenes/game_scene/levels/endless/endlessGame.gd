@@ -231,8 +231,8 @@ func say_random_customs_officer_dialogue():
 		preload("res://assets/megaphone/megaphone_dialogue_box_5.png"),
 		preload("res://assets/megaphone/megaphone_dialogue_box_6.png")
 	]
-	$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = true
-	$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.texture = customs_officer_dialogue.pick_random()
+	%MegaphoneDialogueBoxNext.visible = true
+	%MegaphoneDialogueBoxNext.texture = customs_officer_dialogue.pick_random()
 		
 		
 func megaphone_clicked():
@@ -247,8 +247,8 @@ func megaphone_clicked():
 	print("Megaphone clicked")
 	var potato_person = queue_manager.remove_front_potato()
 	if potato_person != null:
-		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = true
-		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.texture = preload("res://assets/megaphone/megaphone_dialogue_box_1.png")
+		%MegaphoneDialogueBoxNext.visible = true
+		%MegaphoneDialogueBoxNext.texture = preload("res://assets/megaphone/megaphone_dialogue_box_1.png")
 		is_potato_in_office = true
 		megaphone.visible = true
 		current_potato_info = generate_potato_info()
@@ -264,8 +264,8 @@ func megaphone_clicked():
 		
 		move_potato_to_office(potato_person)
 	else:
-		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = true
-		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.texture = preload("res://assets/megaphone/megaphone_dialogue_box_7.png")
+		%MegaphoneDialogueBoxNext.visible = true
+		%MegaphoneDialogueBoxNext.texture = preload("res://assets/megaphone/megaphone_dialogue_box_7.png")
 		print("No potato to process. :(")
 
 func move_potato_to_office(potato_person):
@@ -400,7 +400,7 @@ func _process(_delta):
 		$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = false
 		
 	if !$SystemManagers/AudioManager/SFXPool.is_playing():
-		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = false
+		%MegaphoneDialogueBoxNext.visible = false
 	
 	# Check for closing passport
 	if (suspect.get_rect().has_point(suspect.to_local(mouse_pos)) or suspect_panel_front.get_rect().has_point(suspect_panel_front.to_local(mouse_pos)))and (dragged_sprite == passport or dragged_sprite == guide):
