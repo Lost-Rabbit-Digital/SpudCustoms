@@ -122,6 +122,13 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Use top 3 scores for leaderboard, then show ... and show 3 scores above player and 3 scores below player (if any), with players score in middle. 
   [ ] - UV lamp represents a high-risk way to maximize points.
 
+Currently Doing:
+  [ ] - Make the laws slide out similar to the stamps
+  [ ] - Add a clock button to the suspect panel which tells you the date and time
+  [ ] - Remove the date and score from the bottom of the screen
+  [ ] - Make the tutorial interactive instead of a text panel with the book
+  [ ] - Change the color of the missile marker to green/red to indicate if you can fire a missile
+
 # COMPLETED TASKS
 The tasks which have be completed and pushed to VCS.
 When adding to the lists, please either rephrase or separate your tasks to be rephrased later for proper release.
