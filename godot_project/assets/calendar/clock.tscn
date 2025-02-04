@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bitp7w4aud4kh"]
+
+[ext_resource type="Texture2D" uid="uid://c1p00ymlhn1yd" path="res://assets/clock/clock_by_oceansdream.png" id="1_s5dod"]
+[ext_resource type="Script" uid="uid://d21tujtjf8o4r" path="res://assets/clock/clock.gd" id="2_3oxon"]
+
+[node name="Clock" type="Sprite2D"]
+texture = ExtResource("1_s5dod")
+centered = false
+script = ExtResource("2_3oxon")
+
+[node name="ClockLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+offset_left = 4.0
+offset_top = 17.0
+offset_right = 92.0
+offset_bottom = 47.0
+theme_override_colors/default_color = Color(0.580392, 0.145098, 0.145098, 1)
+theme_override_font_sizes/normal_font_size = 16
+text = "00 : 00"
+horizontal_alignment = 1
+vertical_alignment = 1

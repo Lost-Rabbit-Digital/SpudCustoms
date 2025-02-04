@@ -658,6 +658,7 @@ Potatoes must be fresh."
 horizontal_alignment = 1
 
 [node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
+visible = false
 z_index = 4
 z_as_relative = false
 position = Vector2(705, 391)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://bdknelqd4ojod"]
+[gd_scene load_steps=69 format=3 uid="uid://bdknelqd4ojod"]
 
 [ext_resource type="Script" uid="uid://bak2ox7wh15te" path="res://main_scenes/scenes/game_scene/levels/endless/endlessGame.gd" id="1_s8p0h"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://BorderRunnerSystem.tscn" id="2_udo16"]
@@ -10,6 +10,7 @@
 [ext_resource type="FontVariation" uid="uid://t3ii3pbmg2bo" path="res://assets/fonts/Modern_DOS_Font_Variation.tres" id="8_0m27g"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="9_7ymkl"]
 [ext_resource type="Script" uid="uid://mm8kba4qcarc" path="res://QueueManager.gd" id="9_l36ds"]
+[ext_resource type="PackedScene" uid="uid://dm85v16qe8sla" path="res://assets/clock/clock.tscn" id="9_sxlfl"]
 [ext_resource type="AudioStream" uid="uid://dpybt682ppyjm" path="res://assets/music/horror_fog_main_ovani_sound.mp3" id="10_7ymkl"]
 [ext_resource type="PackedScene" uid="uid://msix881opujh" path="res://StatsManager.tscn" id="10_q0hnx"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="11_jscux"]
@@ -41,6 +42,9 @@ size = Vector2(756.5, 214)
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vm67j"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f48nw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p4mb1"]
+load_path = "res://.godot/imported/clock_by_oceansdream.png-2ce555865540f957428c36b15c46bb4d.ctex"
 
 [sub_resource type="Curve2D" id="Curve2D_uenca"]
 _data = {
@@ -242,7 +246,6 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
 
 [node name="WorldPanel" type="Sprite2D" parent="UI"]
 z_index = 6
@@ -278,25 +281,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
-
-[node name="DateLabel" type="Label" parent="UI/Labels"]
-z_index = 2
-z_as_relative = false
-texture_filter = 1
-texture_repeat = 1
-layout_mode = 0
-offset_left = 297.0
-offset_top = 641.0
-offset_right = 457.0
-offset_bottom = 691.0
-theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("8_0m27g")
-theme_override_font_sizes/font_size = 32
-text = "2024.12.26"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="JudgementLabel" type="Label" parent="UI/Labels"]
 z_index = 2
@@ -369,6 +353,7 @@ theme_override_font_sizes/font_size = 16
 autowrap_mode = 3
 
 [node name="ScoreLabel" type="Label" parent="UI/Labels"]
+visible = false
 z_index = 2
 z_as_relative = false
 texture_filter = 1
@@ -409,6 +394,37 @@ theme_override_font_sizes/font_size = 24
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="DateAndTime" type="Control" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DateLabel" type="Label" parent="UI/DateAndTime"]
+z_index = 2
+z_as_relative = false
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 2
+offset_left = 995.0
+offset_top = 572.0
+offset_right = 1155.0
+offset_bottom = 604.0
+theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("8_0m27g")
+theme_override_font_sizes/font_size = 32
+text = "2024.12.26"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Clock" parent="UI/DateAndTime" instance=ExtResource("9_sxlfl")]
+position = Vector2(1167, 555)
 
 [node name="SystemManagers" type="Control" parent="."]
 layout_mode = 3
@@ -633,6 +649,7 @@ Potatoes must be fresh."
 horizontal_alignment = 1
 
 [node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
+visible = false
 z_index = 4
 z_as_relative = false
 position = Vector2(704, 391)
@@ -683,6 +700,10 @@ offset_top = 110.0
 offset_right = -117.0
 offset_bottom = 140.0
 texture_normal = SubResource("CompressedTexture2D_f48nw")
+
+[node name="ClockByOceansdream" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
+position = Vector2(463, 8)
+texture = SubResource("CompressedTexture2D_p4mb1")
 
 [node name="Paths" type="Control" parent="Gameplay"]
 anchors_preset = 0

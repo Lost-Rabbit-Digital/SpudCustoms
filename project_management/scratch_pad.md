@@ -130,6 +130,7 @@ Currently Doing:
   [ ] - Remove the date and score from the bottom of the screen
   [ ] - Make the tutorial interactive instead of a text panel with the book
   [ ] - Change the color of the missile marker to green/red to indicate if you can fire a missile
+  [ ] - Cleanup old git branches
 
 # COMPLETED TASKS
 The tasks which have be completed and pushed to VCS.
