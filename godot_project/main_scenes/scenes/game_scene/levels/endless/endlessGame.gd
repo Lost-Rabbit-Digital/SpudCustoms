@@ -96,7 +96,6 @@ func _ready():
 	
 	update_score_display()
 	update_quota_display()
-	update_date_display()
 	generate_rules()
 	draggable_sprites = [
 		$Gameplay/InteractiveElements/Passport,
@@ -208,11 +207,6 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 	# Use the LawValidator to check violations
 	var validation = LawValidator.check_violations(potato_info, current_rules)
 	return validation.is_valid
-
-func update_date_display():
-	var current_date = Time.get_date_dict_from_system()
-	var formatted_date = "%04d.%02d.%02d" % [current_date.year, current_date.month, current_date.day]
-	$UI/Labels/DateLabel.text = formatted_date
 
 func play_random_customs_officer_sound():
 	var customs_officer_sounds = [

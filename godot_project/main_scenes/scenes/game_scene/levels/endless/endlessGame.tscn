@@ -405,26 +405,6 @@ offset_right = 120.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="DateLabel" type="Label" parent="UI/DateAndTime"]
-visible = false
-z_index = 2
-z_as_relative = false
-texture_filter = 1
-texture_repeat = 1
-layout_mode = 2
-offset_left = 995.0
-offset_top = 572.0
-offset_right = 1155.0
-offset_bottom = 604.0
-theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("8_0m27g")
-theme_override_font_sizes/font_size = 32
-text = "2024.12.26"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Clock" parent="UI/DateAndTime" instance=ExtResource("9_sxlfl")]
 position = Vector2(1167, 555)
 
