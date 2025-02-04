@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://vignvoi0p2m5"]
+[gd_scene load_steps=22 format=3 uid="uid://vignvoi0p2m5"]
 
 [ext_resource type="PackedScene" uid="uid://byvydukidk6i2" path="res://addons/maaacks_game_template/examples/scenes/menus/main_menu/main_menu.tscn" id="1_146pe"]
 [ext_resource type="Script" uid="uid://duqjmbmasrdw0" path="res://addons/maaacks_game_template/examples/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_g647w"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cvxrxaefrpjwk" path="res://main_scenes/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_xpvtk"]
 [ext_resource type="PackedScene" uid="uid://bdqcr5ikdw1hg" path="res://main_scenes/scenes/credits/credits.tscn" id="4_qfn6e"]
 [ext_resource type="LabelSettings" uid="uid://btxckswf5lkoy" path="res://PixelHeader.tres" id="5_xj7vs"]
+[ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://dos_theme.tres" id="7_qfn6e"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -377,9 +378,21 @@ texture = ExtResource("3_g647w")
 
 [node name="VersionContainer" parent="VersionMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
+size_flags_horizontal = 4
+size_flags_vertical = 8
 
 [node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
-text = "v0.1.1"
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+offset_left = 0.0
+offset_top = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("7_qfn6e")
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 16
+text = "v1.0.1"
 
 [node name="TitleContainer" parent="MenuContainer/TitleMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
@@ -416,5 +429,9 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
 text = "Endless"
+
+[node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2"]
+size_flags_horizontal = 4
+text = "Options"
 
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/EndlessButton" to="." method="_on_endless_button_pressed"]
