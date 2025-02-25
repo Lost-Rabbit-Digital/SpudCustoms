@@ -81,11 +81,11 @@ variables={
 "stay_or_go": "none"
 }
 extensions_folder="res://addons/dialogic_additions"
-text/letter_speed=0.03
+text/letter_speed=0.02
 text/initial_text_reveal_skippable=true
-text/text_reveal_skip_delay=0.1
-text/advance_delay=0.1
-text/autoadvance_per_character_delay=0.1
+text/text_reveal_skip_delay=0.3
+text/advance_delay=0.3
+text/autoadvance_per_character_delay=0.3
 text/autoadvance_ignored_characters_enabled=true
 animations/join_default_length=0.5
 animations/join_default_wait=true

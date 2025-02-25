@@ -4,6 +4,7 @@ extends Node2D
 var border_runner_system
 
 # Track game states
+var is_game_paused = false
 var close_sound_played = false
 var open_sound_played = false
 var is_potato_in_office = false
@@ -355,11 +356,11 @@ func animate_mugshot_and_passport():
 	tween.chain().tween_callback(func(): print("Finished animating mugshot and passport"))
 	
 func setup_spawn_timer():
-	spawn_timer = Timer.new()
+	spawn_timer = $SystemManagers/Timers/SpawnTimer
 	spawn_timer.set_wait_time(1.0)
 	spawn_timer.set_one_shot(false)
 	spawn_timer.connect("timeout", Callable(self, "_on_spawn_timer_timeout"))
-	add_child(spawn_timer)
+	# add_child(spawn_timer)
 	spawn_timer.start()
 
 func _on_spawn_timer_timeout():
@@ -952,11 +953,15 @@ func _exit_tree():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _on_dialogue_started():
+	# Completely pause all game systems
+	is_game_paused = true
 	disable_controls()
-
+	
 func _on_dialogue_finished():
 	Global.quota_met = 0
 	Global.strikes = 0
+	# Completely unpause all game systems
+	is_game_paused = false
 	enable_controls()
 	
 	if Global.StoryState.COMPLETED:
@@ -965,6 +970,7 @@ func _on_dialogue_finished():
 	
 func disable_controls():
 	# Disable player interaction during dialogue
+	print("disabling controls")
 	set_process_input(false)
 	$Gameplay/Megaphone.visible = false
 	$Gameplay/InteractiveElements/Guide.visible = false
@@ -974,9 +980,13 @@ func disable_controls():
 	if border_runner_system:
 		border_runner_system.disable()
 		border_runner_system.runner_chance = 0.0
+	# Stop all timers and queues
+	$SystemManagers/Timers/SpawnTimer.stop()
+	
 
 func enable_controls():
 	# Re-enable controls after dialogue
+	print("enabling controls")
 	set_process_input(true)
 	$Gameplay/Megaphone.visible = true
 	$Gameplay/InteractiveElements/Guide.visible = true
@@ -986,6 +996,8 @@ func enable_controls():
 	if border_runner_system:
 		border_runner_system.enable()
 		border_runner_system.runner_chance = original_runner_chance
+	# Stop all timers and queues
+	$SystemManagers/Timers/SpawnTimer.start()
 		
 func _on_game_over():
 		# Capture time taken
