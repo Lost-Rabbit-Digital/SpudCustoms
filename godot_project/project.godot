@@ -15,6 +15,7 @@ config/version="1.0.1"
 config/tags=PackedStringArray("active", "steam")
 run/main_scene="res://main_scenes/scenes/opening/opening_with_logo.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
+run/max_fps=90
 boot_splash/show_image=false
 config/icon="res://assets/potatoes/heads/russet_burbank_head.png"
 
@@ -115,11 +116,10 @@ translation/add_separator=false
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/mode=4
-window/size/window_width_override=2560
-window/size/window_height_override=1440
+window/size/mode=3
+window/size/window_width_override=1920
+window/size/window_height_override=1080
 window/stretch/mode="viewport"
-window/stretch/aspect="keep_width"
 mouse_cursor/custom_image="res://assets/cursor/cursor_default.png"
 
 [editor_plugins]

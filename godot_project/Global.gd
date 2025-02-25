@@ -205,6 +205,26 @@ func reset_score():
 func reset_shift():
 	shift = 1
 	quota_met = 0
+	
+func reset_game_state(keep_high_scores=true):
+	score = 0
+	final_score = 0
+	shift = 1
+	strikes = 0
+	quota_met = 0
+	current_game_stats = {}
+	
+	# Reset all gameplay-related variables
+	
+	if !keep_high_scores:
+		high_scores = {"Easy": 0, "Normal": 0, "Expert": 0}
+		
+	save_game_state()
+	
+# Call this function at appropriate times like:
+# When exiting to main menu
+# When starting a new game mode
+# After game over screen
 
 func advance_shift():
 	shift += 1
@@ -393,7 +413,6 @@ func display_green_alert(alert_label, alert_timer, text):
 	# Hide the alert after a few seconds
 	clear_alert_after_delay(alert_label, alert_timer)
 
-
 func download_cloud_saves():
 	if not Steam.isSteamRunning():
 		return
@@ -416,8 +435,6 @@ func download_cloud_saves():
 			
 	load_game_state()
 	# load_high_scores()
-	
-
 
 func check_achievements():
 	if not Steam.isSteamRunning():

@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://dotnlxhuekimg" path="res://assets/music/opening_wonderlust_intensity.wav" id="4_0hisi"]
 
 [node name="Opening" instance=ExtResource("1_dka2w")]
-next_scene = "res://main_scenes/scenes/menus/main_menu/main_menu_with_animations.tscn"
+next_scene = "uid://vignvoi0p2m5"
 images = Array[Texture2D]([ExtResource("2_5uyms"), ExtResource("3_0hisi")])
 fade_in_time = 1.0
 fade_out_time = 1.0
