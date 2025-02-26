@@ -28,7 +28,7 @@ static func get_game_state() -> GameStateExample:
 static func get_current_level() -> int:
 	var game_state = get_game_state()
 	if not game_state: 
-		return 0
+		return 3
 	return game_state.current_level
 
 static func get_max_level_reached() -> int:

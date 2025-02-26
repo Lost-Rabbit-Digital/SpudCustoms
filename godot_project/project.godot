@@ -114,6 +114,7 @@ audio/max_channels=4.0
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/mode=3
+window/size/borderless=true
 window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="viewport"
