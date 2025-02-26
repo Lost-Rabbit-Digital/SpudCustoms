@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bak2ox7wh15te" path="res://main_scenes/scenes/game_scene_backup/levels/endless/endlessGame.gd" id="1_s8p0h"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://assets/BorderRunnerSystem.tscn" id="2_udo16"]
-[ext_resource type="Texture2D" uid="uid://doml0udrwe6pe" path="res://assets/Background.png" id="3_3evfx"]
+[ext_resource type="Texture2D" uid="uid://doml0udrwe6pe" path="res://assets/level/Background.png" id="3_3evfx"]
 [ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/level/customs_office.png" id="4_qqvh6"]
 [ext_resource type="Texture2D" uid="uid://yvmmxdnlhttw" path="res://assets/level/fence_posts.png" id="5_at1xl"]
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="6_duxyb"]

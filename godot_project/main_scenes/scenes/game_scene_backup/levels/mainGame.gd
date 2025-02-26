@@ -245,13 +245,13 @@ func update_date_display():
 
 func play_random_customs_officer_sound():
 	var customs_officer_sounds = [
-		preload("res://assets/audio/froggy_phrase_1.wav"),
-		preload("res://assets/audio/froggy_phrase_2.wav"),
-		preload("res://assets/audio/froggy_phrase_3.wav"),
-		preload("res://assets/audio/froggy_phrase_4.wav"),
-		preload("res://assets/audio/froggy_phrase_5.wav"),
-		preload("res://assets/audio/froggy_phrase_6.wav"),
-		preload("res://assets/audio/froggy_phrase_7.wav")
+		preload("res://assets/audio/talking/froggy_phrase_1.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_2.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_3.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_4.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_5.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_6.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_7.wav")
 	]
 	# Play potato customs officer sound
 	if !$SystemManagers/AudioManager/SFXPool.is_playing():

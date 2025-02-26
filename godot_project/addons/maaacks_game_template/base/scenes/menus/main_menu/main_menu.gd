@@ -2,19 +2,14 @@ class_name MainMenu
 extends Control
 
 ## Defines the path to the game scene. Hides the play button if empty.
-@export_file("*.tscn") var game_scene_path : String
+@export_file("*.tscn") var story_game_scene_path : String
+@export_file("*.tscn") var endless_game_scene_path : String
 @export var options_packed_scene : PackedScene
 @export var credits_packed_scene : PackedScene
 
 var options_scene
 var credits_scene
 var sub_menu
-
-func load_game_scene():
-	SceneLoader.load_scene(game_scene_path)
-
-func new_game():
-	load_game_scene()
 
 func _open_sub_menu(menu : Control):
 	sub_menu = menu
@@ -47,7 +42,7 @@ func _setup_for_web():
 		%ExitButton.hide()
 
 func _setup_game_buttons():
-	if game_scene_path.is_empty():
+	if story_game_scene_path.is_empty():
 		%NewGameButton.hide()
 
 func _setup_options():
@@ -73,9 +68,6 @@ func _ready():
 	_setup_options()
 	_setup_credits()
 	_setup_game_buttons()
-
-func _on_new_game_button_pressed():
-	new_game()
 
 func _on_options_button_pressed():
 	_open_sub_menu(options_scene)

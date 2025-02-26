@@ -43,8 +43,10 @@ func _execute() -> void:
 		dialogic.Backgrounds.update_background('', '', final_time)
 		if step_by_step: await dialogic.get_tree().create_timer(final_time).timeout
 
-	if clear_music and dialogic.has_subsystem('Audio') and dialogic.Audio.has_music():
-		dialogic.Audio.update_music('', 0.0, "", final_time)
+	if clear_music and dialogic.has_subsystem('Audio'):
+		for channel_id in dialogic.Audio.max_channels:
+			if dialogic.Audio.has_music(channel_id):
+				dialogic.Audio.update_music('', 0.0, "", final_time, channel_id)
 		if step_by_step: await dialogic.get_tree().create_timer(final_time).timeout
 
 	if clear_style and dialogic.has_subsystem('Styles'):
@@ -52,10 +54,10 @@ func _execute() -> void:
 
 	if clear_portrait_positions and dialogic.has_subsystem('Portraits'):
 		dialogic.PortraitContainers.reset_all_containers()
-	
+
 	if not step_by_step:
 		await dialogic.get_tree().create_timer(final_time).timeout
-	
+
 	finish()
 
 

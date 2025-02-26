@@ -1,9 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://c63y6b25bs4bk"]
+[gd_scene load_steps=21 format=3 uid="uid://c63y6b25bs4bk"]
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_0i2sc"]
 [ext_resource type="Script" uid="uid://b5qy5nr1wivs4" path="res://main_scenes/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_ncvk7"]
 [ext_resource type="PackedScene" uid="uid://bdvdf5v87mmrr" path="res://main_scenes/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_tuy3s"]
+[ext_resource type="PackedScene" uid="uid://dtu0ffm1m5mr7" path="res://main_scenes/scenes/menus/level_select_menu/level_select_menu.tscn" id="3_xj7vs"]
 [ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://main_scenes/scenes/credits/credits.tscn" id="4_lwsll"]
+[ext_resource type="Texture2D" uid="uid://ckl4hp0qicyf6" path="res://assets/narrative/border_chaos.png" id="6_x83rq"]
+[ext_resource type="AudioStream" uid="uid://dxl4o6it672u4" path="res://assets/music/faded_ambient_defeat_main_menu.wav" id="6_xpvtk"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -351,8 +354,9 @@ graph_offset = Vector2(-180.277, 49)
 
 [node name="MainMenu" instance=ExtResource("1_0i2sc")]
 script = ExtResource("2_ncvk7")
-level_select_packed_scene = null
-game_scene_path = "res://addons/maaacks_game_template/examples/scenes/game_scene/game_ui.tscn"
+level_select_packed_scene = ExtResource("3_xj7vs")
+story_game_scene_path = "uid://crnx6qmk46il"
+endless_game_scene_path = "uid://ysxm2q6sepmc"
 options_packed_scene = ExtResource("3_tuy3s")
 credits_packed_scene = ExtResource("4_lwsll")
 
@@ -366,14 +370,26 @@ tree_root = SubResource("AnimationNodeStateMachine_vikuh")
 anim_player = NodePath("../MenuAnimationPlayer")
 parameters/conditions/intro_done = false
 
+[node name="BackgroundMusicPlayer" parent="." index="3"]
+stream = ExtResource("6_xpvtk")
+
+[node name="BackgroundTextureRect" parent="." index="4"]
+texture = ExtResource("6_x83rq")
+
 [node name="VersionContainer" parent="VersionMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
+
+[node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
+text = "v1.0.1"
 
 [node name="TitleContainer" parent="MenuContainer/TitleMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 
 [node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
-text = "Title"
+text = "Spud Customs"
+
+[node name="SubTitleMargin" parent="MenuContainer" index="1"]
+visible = false
 
 [node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
@@ -382,21 +398,30 @@ modulate = Color(1, 1, 1, 0)
 modulate = Color(1, 1, 1, 0)
 
 [node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
+offset_left = -496.0
+offset_top = 112.0
+offset_right = 496.0
+offset_bottom = 194.0
+vertical = false
 lock = true
 
 [node name="ContinueGameButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1"]
 unique_name_in_owner = true
-visible = false
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
 text = "Continue"
 
 [node name="LevelSelectButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2"]
 unique_name_in_owner = true
-visible = false
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
 text = "Level Select"
+
+[node name="EndlessButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 40)
+layout_mode = 2
+text = "Endless"
 
 [node name="LevelSelectContainer" type="MarginContainer" parent="." index="9"]
 unique_name_in_owner = true
@@ -409,5 +434,8 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 32
 
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/NewGameButton" to="." method="new_game"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ContinueGameButton" to="." method="_on_continue_game_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/EndlessButton" to="." method="_on_endless_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/EndlessButton" to="." method="new_endless_game"]

@@ -56,24 +56,16 @@ directories/dch_directory={
 "sweet_potato_sasha": "res://assets/narrative/characters/sweet_potato_sasha.dch"
 }
 directories/dtl_directory={
-"chapter_1_1_intro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_intro.dtl",
-"chapter_1_1_outro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_outro.dtl",
-"chapter_1_1_overview": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_overview.dtl",
-"chapter_1_spud_masherson": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_spud_masherson.dtl",
-"chapter_2_1_overview": "res://assets/narrative/chapter_2/chapter_2_1_overview.dtl",
-"chapter_3_1_overview": "res://assets/narrative/chapter_3/chapter_3_1_overview.dtl",
 "final_confrontation": "res://assets/narrative/final_confrontation.dtl",
 "generic_shift_start": "res://assets/narrative/generic_shift_start.dtl",
 "intro_sequence": "res://assets/narrative/intro_sequence.dtl",
-"scratch_test": "res://assets/narrative/scratch_test.dtl",
 "shift1_start": "res://assets/narrative/shift1_start.dtl",
 "shift2_start": "res://assets/narrative/shift2_start.dtl",
-"shift3_start": "res://assets/narrative/shift3_start.dtl",
-"spud_customs_full_narrative": "res://assets/narrative/spud_customs_full_narrative.dtl"
+"shift3_start": "res://assets/narrative/shift3_start.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://dialogic_default_style.tres", "res://visual_novel_style.tres", "res://speaker_textbox_style.tres"]
-layout/default_style="res://speaker_textbox_style.tres"
+layout/style_list=["res://SpudCustomsTextboxWithSpeaker/SpudCustomsTextboxWithSpeaker.tres"]
+layout/default_style="res://SpudCustomsTextboxWithSpeaker/SpudCustomsTextboxWithSpeaker.tres"
 variables={
 "ending_choice": "none",
 "family_response": "none",
@@ -115,6 +107,7 @@ translation/file_mode=1
 translation/translation_folder=""
 translation/save_mode=0
 translation/add_separator=false
+audio/max_channels=4.0
 
 [display]
 

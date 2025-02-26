@@ -8,7 +8,7 @@
 load_path = "res://.godot/imported/logo_vertical_color_dark.png-2ad4d740cca24efda523aeb54c39244b.ctex"
 
 [node name="Opening" instance=ExtResource("1_dka2w")]
-next_scene = "uid://vignvoi0p2m5"
+next_scene = "uid://c63y6b25bs4bk"
 images = Array[Texture2D]([SubResource("CompressedTexture2D_5uyms"), ExtResource("3_0hisi")])
 fade_in_time = 1.0
 fade_out_time = 1.0

@@ -355,8 +355,7 @@ graph_offset = Vector2(-180.277, 49)
 
 [node name="MainMenu" instance=ExtResource("1_146pe")]
 script = ExtResource("2_g647w")
-game_scene_path = "uid://crnx6qmk46il"
-endless_scene_path = "uid://ysxm2q6sepmc"
+level_select_packed_scene = null
 options_packed_scene = ExtResource("3_xpvtk")
 credits_packed_scene = ExtResource("4_qfn6e")
 
@@ -392,18 +391,20 @@ grow_vertical = 2
 theme = ExtResource("7_qfn6e")
 theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 16
+text = "v1.0.1"
 
 [node name="TitleContainer" parent="MenuContainer/TitleMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 
 [node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
+text = "Spud Customs"
 label_settings = ExtResource("5_xj7vs")
+
+[node name="SubTitleMargin" parent="MenuContainer" index="1"]
+visible = false
 
 [node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
-
-[node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0"]
-visible = false
 
 [node name="MenuButtonsContainer" parent="MenuContainer/MenuButtonsMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
@@ -420,9 +421,6 @@ grow_vertical = 0
 vertical = false
 lock = true
 
-[node name="PlayButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0"]
-text = "Story"
-
 [node name="EndlessButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 40)
@@ -431,6 +429,5 @@ text = "Endless"
 
 [node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2"]
 size_flags_horizontal = 4
-text = "Options"
 
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/EndlessButton" to="." method="_on_endless_button_pressed"]

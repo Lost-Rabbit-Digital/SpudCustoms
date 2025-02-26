@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c6mrjnydixxi0"
-path="res://.godot/imported/Doom Braaam.wav-a2e81e3b60bcdad7fb10f0d42f0526f4.sample"
+path="res://.godot/imported/Doom Braaam.wav-3623f38d4006da4bb915def16cb03010.sample"
 
 [deps]
 
-source_file="res://assets/Doom Braaam.wav"
-dest_files=["res://.godot/imported/Doom Braaam.wav-a2e81e3b60bcdad7fb10f0d42f0526f4.sample"]
+source_file="res://assets/audio/Doom Braaam.wav"
+dest_files=["res://.godot/imported/Doom Braaam.wav-3623f38d4006da4bb915def16cb03010.sample"]
 
 [params]
 

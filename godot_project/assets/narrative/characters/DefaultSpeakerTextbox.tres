@@ -1,14 +1,18 @@
-[gd_resource type="Resource" script_class="DialogicStyle" load_steps=17 format=3 uid="uid://dx67c6xbotn8i"]
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=18 format=3 uid="uid://dx67c6xbotn8i"]
 
-[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_awr2m"]
+[ext_resource type="Script" uid="uid://j8ec84i4qra0" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_awr2m"]
 [ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_ftags"]
 [ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="3_ej60n"]
-[ext_resource type="PackedScene" uid="uid://by6waso0mjpjp" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/textbox_with_speaker_portrait.tscn" id="4_n1bb0"]
+[ext_resource type="PackedScene" uid="uid://by6waso0mjpjp" path="res://TextboxWithPortrait/custom_textbox_with_speaker_portrait.tscn" id="4_n1bb0"]
 [ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="5_xgfa0"]
 [ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="6_slnui"]
 [ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="7_c47qe"]
 [ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="8_q252r"]
-[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="9_jaj5d"]
+[ext_resource type="Script" uid="uid://bicumqivgl7bc" path="res://addons/dialogic/Resources/dialogic_style.gd" id="9_jaj5d"]
+
+[sub_resource type="Resource" id="Resource_dbuq7"]
+script = ExtResource("1_awr2m")
+overrides = {}
 
 [sub_resource type="Resource" id="Resource_qk2kx"]
 script = ExtResource("1_awr2m")
@@ -51,6 +55,10 @@ overrides = {}
 [resource]
 script = ExtResource("9_jaj5d")
 name = "DefaultSpeakerTextbox"
+layer_list = Array[String]([])
+layer_info = {
+"": SubResource("Resource_dbuq7")
+}
 base_overrides = {
 "global_bg_color": "Color(0.298039, 0.2, 0.113725, 0.901961)"
 }

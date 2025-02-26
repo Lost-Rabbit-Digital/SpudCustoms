@@ -5,13 +5,25 @@ extends MainMenu
 var level_select_scene
 var animation_state_machine : AnimationNodeStateMachinePlayback
 
+#func load_game_scene():
+#	GameStateExample.start_game()
+#	super.load_game_scene()
+
+#func new_game():
+#	GlobalState.reset()
+#	load_game_scene()
+
 func load_game_scene():
-	GameStateExample.start_game()
-	super.load_game_scene()
+	SceneLoader.load_scene(story_game_scene_path)
+	
+func load_endless_scene():
+	SceneLoader.load_scene(endless_game_scene_path)
 
 func new_game():
-	GlobalState.reset()
 	load_game_scene()
+	
+func new_endless_game():
+	load_endless_scene()
 
 func intro_done():
 	animation_state_machine.travel("OpenMainMenu")
@@ -67,3 +79,4 @@ func _on_continue_game_button_pressed():
 
 func _on_level_select_button_pressed():
 	_open_sub_menu(level_select_scene)
+	
