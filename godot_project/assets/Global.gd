@@ -248,8 +248,8 @@ func save_game_state():
 		save_file.store_var(save_data)
 		
 		if Steam.isSteamRunning():
-			Steam.fileWrite("gamestate.save", FileAccess.get_file_as_bytes("user://gamestate.save"))
-			Steam.fileWrite("highscores.save", FileAccess.get_file_as_bytes("user://highscores.save"))
+			Steam.fileWrite("user://gamestate.save", FileAccess.get_file_as_bytes("user://gamestate.save"))
+			Steam.fileWrite("user://highscores.save", FileAccess.get_file_as_bytes("user://highscores.save"))
 
 # Update load_game_state
 func load_game_state():
