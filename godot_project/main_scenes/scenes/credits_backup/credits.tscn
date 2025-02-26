@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdqcr5ikdw1hg"]
+
+[ext_resource type="PackedScene" uid="uid://t2dui8ppm3a4" path="res://addons/maaacks_game_template/base/scenes/credits/credits.tscn" id="1_ep0dy"]
+[ext_resource type="Script" uid="uid://btl0ormyca7s3" path="res://main_scenes/scenes/credits/credits.gd" id="2_50yi6"]
+
+[node name="Credits" instance=ExtResource("1_ep0dy")]
+script = ExtResource("2_50yi6")
+attribution_file_path = "res://main_scenes/ATTRIBUTION.md"
+
+[node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_outline_size = 3
+text = "[center]
+[font_size=64]Lost Rabbit Digital[/font_size]
+
+[font_size=48]Programmers[/font_size]
+[url=https://www.bodenmchale.com/]Boden McHale[/url]
+[url=https://www.youtube.com/channel/UCcmLal-sOU_5ThcSQCFDyoA]David McHale[/url]
+
+[font_size=48]Artist[/font_size]
+Oleksii Lotokhov
+
+[font_size=48]Audio[/font_size]
+[url=https://ovanisound.com/]Ovani[/url]
+
+[font_size=64]Tools / Assets[/font_size]
+[font_size=48]Godot[/font_size]
+Author: [url=https://godotengine.org/contact]Juan Linietsky, Ariel Manzur, and contributors[/url]  
+Source: [url=https://godotengine.org/]godotengine.org[/url]  
+License: [url=https://github.com/godotengine/godot/blob/master/LICENSE.txt]MIT License[/url] 
+
+[font_size=48]Godot Game Template[/font_size]
+Author: [url=https://github.com/Maaack/Godot-Game-Template/graphs/contributors]Marek Belski and contributors[/url]  
+Source: [url=https://github.com/Maaack/Godot-Game-Template]github: Godot-Game-Template[/url]  
+License: [url=LICENSE.txt]MIT License[/url]  
+
+[font_size=64]Community Help[/font_size]
+Thank you to the generous members of our community how have tested and reported many bugs for us to fix.
+
+MrBright01 
+dhjackal
+jollylad63
+Tanner
+
+[font_size=64]Special Thanks[/font_size]
+Thank you to our love ones and support nets which helped us create this game.
+
+[font_size=64]Memoriam[/font_size]
+GNU Michael McHale
+GNU Sherri Jackson
+[/center]"

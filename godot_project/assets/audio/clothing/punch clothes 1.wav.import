@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bvl4dyewyfch2"
+path="res://.godot/imported/punch clothes 1.wav-ca0ce2865c3dc53e23b9d2a9f807028e.sample"
+
+[deps]
+
+source_file="res://assets/audio/clothing/punch clothes 1.wav"
+dest_files=["res://.godot/imported/punch clothes 1.wav-ca0ce2865c3dc53e23b9d2a9f807028e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

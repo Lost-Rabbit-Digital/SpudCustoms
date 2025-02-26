@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3hkqglpt5q8u"]
+
+[ext_resource type="Script" uid="uid://bvpwqkpdhd3kl" path="res://assets/CraterSystem.gd" id="1_uddm8"]
+
+[node name="CraterSystem" type="Node2D"]
+script = ExtResource("1_uddm8")
+crater_color = Color(0.65098, 0, 0, 1)

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cn7s6npnhi77s"
+path="res://.godot/imported/glockenspiel magic 2.wav-02ce0c651d61ffe84a29424b0b109381.sample"
+
+[deps]
+
+source_file="res://assets/audio/ui_feedback/glockenspiel magic 2.wav"
+dest_files=["res://.godot/imported/glockenspiel magic 2.wav-02ce0c651d61ffe84a29424b0b109381.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

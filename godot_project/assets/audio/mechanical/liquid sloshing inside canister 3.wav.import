@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cgs0almsjjlsa"
+path="res://.godot/imported/liquid sloshing inside canister 3.wav-06e49397165871773b51ab66a6b74079.sample"
+
+[deps]
+
+source_file="res://assets/audio/mechanical/liquid sloshing inside canister 3.wav"
+dest_files=["res://.godot/imported/liquid sloshing inside canister 3.wav-06e49397165871773b51ab66a6b74079.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bubvmwdt120qd"
+path="res://.godot/imported/lever 1.wav-2d71c4334ee8e108ffa59614a1b690df.sample"
+
+[deps]
+
+source_file="res://assets/audio/mechanical/lever 1.wav"
+dest_files=["res://.godot/imported/lever 1.wav-2d71c4334ee8e108ffa59614a1b690df.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

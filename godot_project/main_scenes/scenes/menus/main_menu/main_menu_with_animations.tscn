@@ -1,13 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://vignvoi0p2m5"]
+[gd_scene load_steps=18 format=3 uid="uid://c63y6b25bs4bk"]
 
-[ext_resource type="PackedScene" uid="uid://byvydukidk6i2" path="res://addons/maaacks_game_template/examples/scenes/menus/main_menu/main_menu.tscn" id="1_146pe"]
-[ext_resource type="Script" uid="uid://duqjmbmasrdw0" path="res://addons/maaacks_game_template/examples/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_g647w"]
-[ext_resource type="Texture2D" uid="uid://ckl4hp0qicyf6" path="res://assets/narrative/border_chaos.png" id="3_g647w"]
-[ext_resource type="AudioStream" uid="uid://dxl4o6it672u4" path="res://assets/music/faded_ambient_defeat_main_menu.wav" id="3_xj7vs"]
-[ext_resource type="PackedScene" uid="uid://cvxrxaefrpjwk" path="res://main_scenes/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_xpvtk"]
-[ext_resource type="PackedScene" uid="uid://bdqcr5ikdw1hg" path="res://main_scenes/scenes/credits/credits.tscn" id="4_qfn6e"]
-[ext_resource type="LabelSettings" uid="uid://btxckswf5lkoy" path="res://PixelHeader.tres" id="5_xj7vs"]
-[ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://dos_theme.tres" id="7_qfn6e"]
+[ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_0i2sc"]
+[ext_resource type="Script" uid="uid://b5qy5nr1wivs4" path="res://main_scenes/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_ncvk7"]
+[ext_resource type="PackedScene" uid="uid://bdvdf5v87mmrr" path="res://main_scenes/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_tuy3s"]
+[ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://main_scenes/scenes/credits/credits.tscn" id="4_lwsll"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -353,12 +349,12 @@ states/Start/position = Vector2(82, 123)
 transitions = ["Intro", "OpenMainMenu", SubResource("11"), "OpenMainMenu", "OpenSubMenu", SubResource("14"), "Start", "Intro", SubResource("AnimationNodeStateMachineTransition_j0orr"), "OpenSubMenu", "OpenMainMenu", SubResource("AnimationNodeStateMachineTransition_63dxc")]
 graph_offset = Vector2(-180.277, 49)
 
-[node name="MainMenu" instance=ExtResource("1_146pe")]
-script = ExtResource("2_g647w")
-game_scene_path = "uid://crnx6qmk46il"
-endless_scene_path = "uid://ysxm2q6sepmc"
-options_packed_scene = ExtResource("3_xpvtk")
-credits_packed_scene = ExtResource("4_qfn6e")
+[node name="MainMenu" instance=ExtResource("1_0i2sc")]
+script = ExtResource("2_ncvk7")
+level_select_packed_scene = null
+game_scene_path = "res://addons/maaacks_game_template/examples/scenes/game_scene/game_ui.tscn"
+options_packed_scene = ExtResource("3_tuy3s")
+credits_packed_scene = ExtResource("4_lwsll")
 
 [node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="1"]
 libraries = {
@@ -370,67 +366,48 @@ tree_root = SubResource("AnimationNodeStateMachine_vikuh")
 anim_player = NodePath("../MenuAnimationPlayer")
 parameters/conditions/intro_done = false
 
-[node name="BackgroundMusicPlayer" parent="." index="3"]
-stream = ExtResource("3_xj7vs")
-
-[node name="BackgroundTextureRect" parent="." index="4"]
-texture = ExtResource("3_g647w")
-
 [node name="VersionContainer" parent="VersionMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
-size_flags_horizontal = 4
-size_flags_vertical = 8
-
-[node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
-anchors_preset = 15
-anchor_left = 0.0
-anchor_top = 0.0
-offset_left = 0.0
-offset_top = 0.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("7_qfn6e")
-theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 16
 
 [node name="TitleContainer" parent="MenuContainer/TitleMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 
 [node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
-label_settings = ExtResource("5_xj7vs")
+text = "Title"
 
 [node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
-
-[node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0"]
-visible = false
 
 [node name="MenuButtonsContainer" parent="MenuContainer/MenuButtonsMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 
 [node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
-anchors_preset = 7
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = -280.0
-offset_top = -165.0
-offset_right = 280.0
-offset_bottom = -82.93
-grow_vertical = 0
-vertical = false
 lock = true
 
-[node name="PlayButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0"]
-text = "Story"
-
-[node name="EndlessButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1"]
+[node name="ContinueGameButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1"]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
-text = "Endless"
+text = "Continue"
 
-[node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2"]
-size_flags_horizontal = 4
-text = "Options"
+[node name="LevelSelectButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(128, 40)
+layout_mode = 2
+text = "Level Select"
 
-[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/EndlessButton" to="." method="_on_endless_button_pressed"]
+[node name="LevelSelectContainer" type="MarginContainer" parent="." index="9"]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 32
+
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ContinueGameButton" to="." method="_on_continue_game_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]

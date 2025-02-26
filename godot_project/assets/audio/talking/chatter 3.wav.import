@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c1eyms8o8oq16"
+path="res://.godot/imported/chatter 3.wav-dd5e490f243d7e39c45b7ac2c0d0b477.sample"
+
+[deps]
+
+source_file="res://assets/audio/talking/chatter 3.wav"
+dest_files=["res://.godot/imported/chatter 3.wav-dd5e490f243d7e39c45b7ac2c0d0b477.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://h6e8lv0bgkqo"
+path="res://.godot/imported/hole puncher 2.wav-4442fb1f7dd97677aaa982b8f82d9b19.sample"
+
+[deps]
+
+source_file="res://assets/audio/mechanical/hole puncher 2.wav"
+dest_files=["res://.godot/imported/hole puncher 2.wav-4442fb1f7dd97677aaa982b8f82d9b19.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

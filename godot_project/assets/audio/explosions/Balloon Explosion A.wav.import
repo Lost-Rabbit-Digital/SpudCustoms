@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c0j41hol22fen"
+path="res://.godot/imported/Balloon Explosion A.wav-8327d43d2d426236c266385e1fb2bdb6.sample"
+
+[deps]
+
+source_file="res://assets/audio/explosions/Balloon Explosion A.wav"
+dest_files=["res://.godot/imported/Balloon Explosion A.wav-8327d43d2d426236c266385e1fb2bdb6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

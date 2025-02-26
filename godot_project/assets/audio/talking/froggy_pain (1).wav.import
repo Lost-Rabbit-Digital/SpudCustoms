@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cqmgnd3jajyki"
+path="res://.godot/imported/froggy_pain (1).wav-3a92ff6a87651519f6300a520b60d1af.sample"
+
+[deps]
+
+source_file="res://assets/audio/talking/froggy_pain (1).wav"
+dest_files=["res://.godot/imported/froggy_pain (1).wav-3a92ff6a87651519f6300a520b60d1af.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

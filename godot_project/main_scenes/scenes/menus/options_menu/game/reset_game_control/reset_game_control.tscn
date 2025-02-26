@@ -1,13 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://duehp618vxlip"]
+[gd_scene load_steps=2 format=3 uid="uid://w5i7wl2xlos"]
 
-[ext_resource type="Script" path="res://addons/maaacks_game_template/examples/scenes/menus/options_menu/game/reset_game_control/reset_game_control.gd" id="1_1df2i"]
+[ext_resource type="Script" uid="uid://bnggxw78h248d" path="res://main_scenes/scenes/menus/options_menu/game/reset_game_control/reset_game_control.gd" id="1_wkygd"]
 
 [node name="ResetGameControl" type="HBoxContainer"]
 custom_minimum_size = Vector2(0, 32)
 offset_top = 210.0
 offset_right = 305.0
 offset_bottom = 242.0
-script = ExtResource("1_1df2i")
+script = ExtResource("1_wkygd")
 
 [node name="ResetLabel" type="Label" parent="."]
 layout_mode = 2

@@ -13,22 +13,26 @@ config_version=5
 config/name="Spud Customs"
 config/version="1.0.1"
 config/tags=PackedStringArray("active", "steam")
-run/main_scene="res://main_scenes/scenes/opening/opening_with_logo.tscn"
+run/main_scene="res://main_scenes/scenes/opening_backup/opening_with_logo.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 run/max_fps=90
 boot_splash/show_image=false
 config/icon="res://assets/potatoes/heads/russet_burbank_head.png"
 
+[audio]
+
+buses/default_bus_layout="res://assets/default_bus_layout.tres"
+
 [autoload]
 
-Global="*res://Global.gd"
-Guide="*res://guide.gd"
+Global="*res://assets/Global.gd"
+Guide="*res://assets/guide.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 AppConfig="*res://addons/maaacks_game_template/base/scenes/autoloads/app_config.tscn"
 SceneLoader="*res://addons/maaacks_game_template/base/scenes/autoloads/scene_loader.tscn"
 ProjectMusicController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_music_controller.tscn"
 ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
-LawValidator="*res://LawValidator.gd"
+LawValidator="*res://assets/LawValidator.gd"
 
 [debug]
 
@@ -164,6 +168,7 @@ dialogic_default_action={
 [internationalization]
 
 locale/translations=PackedStringArray("res://addons/maaacks_game_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_game_template/base/translations/menus_translations.fr.translation")
+pseudolocalization/stdout/print_fps=true
 
 [maaacks_game_template]
 

@@ -21,6 +21,10 @@ func _enable_focus():
 		if child is Control:
 			child.focus_mode = FOCUS_ALL
 
+func _load_scene(scene_path: String):
+	_scene_tree.paused = false
+	SceneLoader.load_scene(scene_path)
+
 func open_options_menu():
 	var options_scene = options_packed_scene.instantiate()
 	add_child(options_scene)
@@ -57,7 +61,6 @@ func _on_options_button_pressed():
 
 func _on_main_menu_button_pressed():
 	%ConfirmMainMenu.popup_centered()
-
 	popup_open = %ConfirmMainMenu
 
 func _on_exit_button_pressed():
@@ -65,17 +68,11 @@ func _on_exit_button_pressed():
 	popup_open = %ConfirmExit
 
 func _on_confirm_restart_confirmed():
-	Global.quota_met = 0
-	Global.strikes = 0
 	SceneLoader.reload_current_scene()
 	close()
 
 func _on_confirm_main_menu_confirmed():
-	Global.strikes = 0
-	Global.quota_met = 0
-	SceneLoader.load_scene(main_menu_scene)
-	close()
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	_load_scene(main_menu_scene)
 
 func _on_confirm_exit_confirmed():
 	get_tree().quit()

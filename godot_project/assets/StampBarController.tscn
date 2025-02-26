@@ -1,0 +1,92 @@
+[gd_scene load_steps=9 format=3 uid="uid://be3lucg3f3a3c"]
+
+[ext_resource type="Script" uid="uid://clc5w67gry7ki" path="res://assets/StampBarController.gd" id="1_bd37c"]
+[ext_resource type="Texture2D" uid="uid://byj3e8pmw17no" path="res://assets/stamps/stamp_crossbar_expand_button.png" id="2_6a1oe"]
+[ext_resource type="Texture2D" uid="uid://cwg0ee0w1u5ew" path="res://assets/stamps/receipt_printer.png" id="3_6a1oe"]
+[ext_resource type="Texture2D" uid="uid://cu6xbgla0qqqe" path="res://assets/stamps/stamp_crossbar.png" id="3_i7p4h"]
+[ext_resource type="Texture2D" uid="uid://c0dbfc2uut8qn" path="res://assets/stamps/stamp_shadow.png" id="4_lu78d"]
+[ext_resource type="Texture2D" uid="uid://dubo3sdxx8chn" path="res://assets/stamps/approval_stamp_3.png" id="5_0hc55"]
+[ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="6_5qhns"]
+[ext_resource type="Texture2D" uid="uid://cn7albyj8gu6n" path="res://assets/stamps/hide_button.png" id="7_l77wl"]
+
+[node name="StampBarController" type="Node2D"]
+z_index = 10
+z_as_relative = false
+script = ExtResource("1_bd37c")
+
+[node name="FoldOutButton" type="TextureButton" parent="."]
+z_index = 9
+z_as_relative = false
+y_sort_enabled = true
+offset_top = 291.0
+offset_right = 109.0
+offset_bottom = 425.0
+scale = Vector2(0.667388, 0.667388)
+texture_normal = ExtResource("2_6a1oe")
+
+[node name="StampBar" type="Node2D" parent="."]
+z_index = 11
+z_as_relative = false
+position = Vector2(-636, -104)
+
+[node name="ReceiptPrinter" type="Sprite2D" parent="StampBar"]
+z_index = 15
+z_as_relative = false
+position = Vector2(113, 437)
+scale = Vector2(0.859252, 0.937597)
+texture = ExtResource("3_6a1oe")
+
+[node name="Background" type="Sprite2D" parent="StampBar"]
+z_index = 3
+position = Vector2(322, 453)
+scale = Vector2(0.665845, 0.665845)
+texture = ExtResource("3_i7p4h")
+
+[node name="ApprovalStamp" type="Node2D" parent="StampBar"]
+z_index = 12
+z_as_relative = false
+texture_filter = 1
+position = Vector2(286, 405)
+
+[node name="StampShadow" type="Sprite2D" parent="StampBar/ApprovalStamp"]
+z_index = 2
+z_as_relative = false
+position = Vector2(0, 62)
+scale = Vector2(0.888171, 0.888171)
+texture = ExtResource("4_lu78d")
+
+[node name="TextureButton" type="TextureButton" parent="StampBar/ApprovalStamp"]
+offset_left = -65.0
+offset_top = -63.0
+offset_right = 63.0
+offset_bottom = 65.0
+texture_normal = ExtResource("5_0hc55")
+
+[node name="RejectionStamp" type="Node2D" parent="StampBar"]
+z_index = 12
+z_as_relative = false
+position = Vector2(497, 405)
+
+[node name="StampShadow" type="Sprite2D" parent="StampBar/RejectionStamp"]
+z_index = 2
+z_as_relative = false
+position = Vector2(0, 62)
+scale = Vector2(0.890923, 0.890923)
+texture = ExtResource("4_lu78d")
+
+[node name="TextureButton" type="TextureButton" parent="StampBar/RejectionStamp"]
+offset_left = -64.0
+offset_top = -63.0
+offset_right = 64.0
+offset_bottom = 65.0
+texture_normal = ExtResource("6_5qhns")
+
+[node name="HideButton" type="TextureButton" parent="StampBar"]
+z_index = 12
+z_as_relative = false
+offset_left = 569.0
+offset_top = 395.0
+offset_right = 671.0
+offset_bottom = 529.0
+scale = Vector2(0.660301, 0.660301)
+texture_normal = ExtResource("7_l77wl")

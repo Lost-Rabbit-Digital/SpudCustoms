@@ -1,16 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://3k82831bo3ja"]
+[gd_scene load_steps=4 format=3 uid="uid://cyqy6dvynho67"]
 
-[ext_resource type="PackedScene" uid="uid://b8u5wed0pve26" path="res://addons/maaacks_game_template/examples/scenes/opening/opening.tscn" id="1_dka2w"]
-[ext_resource type="Texture2D" uid="uid://5rltpvy6c5b" path="res://addons/maaacks_game_template/examples/assets/images/logo_vertical_color_dark.png" id="2_5uyms"]
-[ext_resource type="Texture2D" uid="uid://cjavqa5yfa4g2" path="res://splashscreen.png" id="3_0hisi"]
-[ext_resource type="AudioStream" uid="uid://dotnlxhuekimg" path="res://assets/music/opening_wonderlust_intensity.wav" id="4_0hisi"]
+[ext_resource type="PackedScene" uid="uid://sikc02ddepyt" path="res://addons/maaacks_game_template/base/scenes/opening/opening.tscn" id="1_tjbcx"]
+[ext_resource type="Script" uid="uid://upkolvghgj67" path="res://main_scenes/scenes/opening/opening.gd" id="2_up6er"]
+[ext_resource type="Texture2D" path="res://addons/maaacks_game_template/examples/assets/godot_engine_logo/logo_vertical_color_dark.png" id="3_powqu"]
 
-[node name="Opening" instance=ExtResource("1_dka2w")]
-next_scene = "uid://vignvoi0p2m5"
-images = Array[Texture2D]([ExtResource("2_5uyms"), ExtResource("3_0hisi")])
-fade_in_time = 1.0
-fade_out_time = 1.0
-visible_time = 2.0
-
-[node name="BackgroundMusicPlayer" parent="." index="0"]
-stream = ExtResource("4_0hisi")
+[node name="Opening" instance=ExtResource("1_tjbcx")]
+script = ExtResource("2_up6er")
+next_scene = "res://addons/maaacks_game_template/examples/scenes/menus/main_menu/main_menu_with_animations.tscn"
+images = Array[Texture2D]([ExtResource("3_powqu")])

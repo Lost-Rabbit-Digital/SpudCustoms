@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://e8np7g7jpdu7"]
+
+[ext_resource type="Script" uid="uid://cs4yfa3qv7dqv" path="res://assets/chapter_1_cutscene_overview.gd" id="1_jy4bq"]
+
+[node name="Root" type="Node2D"]
+script = ExtResource("1_jy4bq")

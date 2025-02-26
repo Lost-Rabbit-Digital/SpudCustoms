@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c32fvwrrofkqc"
+path="res://.godot/imported/Grass Walk 1_2.wav-dc0a80f38b72f467f346d34c80bdd04d.sample"
+
+[deps]
+
+source_file="res://assets/audio/furniture/Grass Walk 1_2.wav"
+dest_files=["res://.godot/imported/Grass Walk 1_2.wav-dc0a80f38b72f467f346d34c80bdd04d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

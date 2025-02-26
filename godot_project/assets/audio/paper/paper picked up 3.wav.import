@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://boy4kvaajboks"
+path="res://.godot/imported/paper picked up 3.wav-b4299f580209f79f51a7be1d0b29e026.sample"
+
+[deps]
+
+source_file="res://assets/audio/paper/paper picked up 3.wav"
+dest_files=["res://.godot/imported/paper picked up 3.wav-b4299f580209f79f51a7be1d0b29e026.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

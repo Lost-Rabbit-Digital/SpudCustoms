@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn0nefcak3wrh"]
+
+[ext_resource type="PackedScene" uid="uid://bvwl11s2p0hd" path="res://addons/maaacks_game_template/base/scenes/menus/options_menu/master_options_menu.tscn" id="1_y2br2"]
+[ext_resource type="Script" uid="uid://lxt3mcgcptek" path="res://main_scenes/scenes/menus/options_menu/master_options_menu.gd" id="2_jgijs"]
+
+[node name="MasterOptionsMenu" instance=ExtResource("1_y2br2")]
+script = ExtResource("2_jgijs")
