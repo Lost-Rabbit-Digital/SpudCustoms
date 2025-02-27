@@ -16,7 +16,7 @@ func _ready() -> void:
 ## A fresh level list is propgated into the ItemList, and the file names are cleaned
 func add_levels_to_container():
 	level_buttons_container.clear()
-	var max_level_reached := GameStateExample.get_max_level_reached()
+	var max_level_reached := GameState.get_max_level_reached()
 	var level_iter := 0
 	for file_path in scene_lister.files:
 		if level_iter > max_level_reached : break
@@ -31,5 +31,5 @@ func add_levels_to_container():
 		level_buttons_container.add_item(button_name)
 
 func _on_level_buttons_container_item_activated(index: int) -> void:
-	GameStateExample.set_current_level(index)
+	GameState.set_current_level(index)
 	level_selected.emit()

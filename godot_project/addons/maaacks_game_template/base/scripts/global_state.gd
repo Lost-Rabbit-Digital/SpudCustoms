@@ -1,7 +1,7 @@
 class_name GlobalState
 extends Node
 
-const SAVE_STATE_PATH = "user://global_state.tres"
+const SAVE_STATE_PATH = "user://global_state_1.tres"
 const NO_VERSION_NAME = "0.0.0"
 
 static var current : GlobalStateData

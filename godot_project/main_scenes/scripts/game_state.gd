@@ -1,8 +1,8 @@
-class_name GameStateExample
+class_name GameState
 extends Resource
 
-const STATE_NAME : String = "GameStateExample"
-const FILE_PATH = "res://addons/maaacks_game_template/examples/scripts/game_state.gd"
+const STATE_NAME : String = "GameState"
+const FILE_PATH = "res://main_scenes/scripts/game_state.gd"
 
 @export var level_states : Dictionary = {}
 @export var max_level_reached : int
@@ -22,7 +22,7 @@ static func get_level_state(level_state_key : String) -> LevelStateExample:
 static func has_game_state() -> bool:
 	return GlobalState.has_state(STATE_NAME)
 
-static func get_game_state() -> GameStateExample:
+static func get_game_state() -> GameState:
 	return GlobalState.get_state(STATE_NAME, FILE_PATH)
 
 static func get_current_level() -> int:
