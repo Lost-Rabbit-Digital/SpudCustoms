@@ -1,0 +1,167 @@
+# shift7_end.dtl
+[music path="res://assets/audio/horror_drone_49.wav" fade="2.0" volume="-15.0" bus="Music"]
+
+[background arg="res://assets/narrative/resistance_meeting.png" fade="2.0"]
+join resistance_leader [z_index="1"]
+[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+resistance_leader: After your shift, you're led to a secret resistance meeting in an abandoned starch factory.
+[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+resistance_leader: A weathered potato with battle scars addresses the assembled group.
+[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+resistance_leader: The time for whispers and pamphlets is over. The government has shown its true colors.
+[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+resistance_leader: Our sources confirm that Root Reserve processing plants are increasing production.
+[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+resistance_leader: Which means more of our brothers and sisters disappeared, processed, consumed.
+[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+resistance_leader: The leader pounds a fist on the table. This ends now. We have a plan to strike at the heart of their operation.
+leave resistance_leader
+
+[background arg="res://assets/narrative/attack_plans.png" fade="2.0"]
+join sweet_potato_sasha [z_index="1"]
+[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+sweet_potato_sasha: Sasha unfurls detailed plans on the table. In three days, we launch our primary offensive.
+[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+sweet_potato_sasha: While one team creates a diversion at the main government complex, another will infiltrate the largest Root Reserve facility.
+[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+sweet_potato_sasha: Our goal: obtain irrefutable evidence of what happens inside, broadcast it to all of Spud.
+[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+sweet_potato_sasha: Sasha points to a section of the plans. This is where you come in.
+[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+sweet_potato_sasha: We need someone on the inside at Spud Customs to ensure our operatives can cross the border for the mission.
+[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+sweet_potato_sasha: Can we count on you to be that person?
+
+set {resistance_mission} = "none"
+- "I'll do whatever it takes to expose the truth."
+   set {resistance_mission} = "committed"
+- "It sounds dangerous. What if we get caught?"
+   set {resistance_mission} = "hesitant"
+- "Is there another way that doesn't put so many at risk?"
+   set {resistance_mission} = "cautious"
+
+if {resistance_mission} == "committed":
+   join sweet_potato_sasha [z_index="1"]
+   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   sweet_potato_sasha: Sasha's face lights up with hope. Thank you. Your courage will save countless lives.
+   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   sweet_potato_sasha: She squeezes your hand. When this is all over, you'll be remembered as a hero of the revolution.
+   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   sweet_potato_sasha: The resistance can't succeed without people like you willing to take a stand.
+   leave sweet_potato_sasha
+
+elif {resistance_mission} == "hesitant":
+   join sweet_potato_sasha [z_index="1"]
+   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   sweet_potato_sasha: Sasha nods solemnly. It is dangerous. I won't lie to you about that.
+   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   sweet_potato_sasha: We could all end up processed into Root Reserve ourselves if we fail.
+   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   sweet_potato_sasha: But doing nothing is even more dangerous. For all of us, in the long run.
+   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   sweet_potato_sasha: We need you. But I understand if it's too much to ask.
+   leave sweet_potato_sasha
+
+else:
+   join sweet_potato_sasha [z_index="1"]
+   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   sweet_potato_sasha: Sasha's expression turns grim. We've tried other ways. For years.
+   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   sweet_potato_sasha: Petitions. Quiet diplomacy. Anonymous tips. Nothing has worked.
+   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   sweet_potato_sasha: Sometimes you have to risk everything to change anything.
+   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   sweet_potato_sasha: But we welcome any alternative suggestions you might have.
+   leave sweet_potato_sasha
+
+[background arg="res://assets/narrative/resistance_debate.png" fade="2.0"]
+join resistance_member_2 [z_index="1"]
+[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+resistance_member_2: A heated debate breaks out among the resistance members.
+[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+resistance_member_2: Some argue for a more aggressive approach – destroying the processing plants entirely.
+[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+resistance_member_2: Others insist that violent action will only turn public opinion against them.
+[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+resistance_member_2: The tension in the room is palpable as the resistance fractures along ideological lines.
+leave resistance_member_2
+
+join resistance_leader [z_index="1"]
+[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+resistance_leader: ENOUGH! The leader silences the room with a commanding voice.
+[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+resistance_leader: We cannot afford to be divided. Not now, when we're so close.
+[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+resistance_leader: Our goal is simple: reveal the truth. Let the people decide what happens next.
+[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+resistance_leader: The leader turns to address you directly. But we need to know where you stand.
+[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+resistance_leader: In three days, our agents will approach your checkpoint. They'll carry blue identification cards.
+[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+resistance_leader: Will you help them cross? Your answer now will determine our next move.
+
+set {final_decision} = "none"
+- "I'll help them cross. For the future of Spud."
+   set {final_decision} = "help"
+- "I can't be directly involved, but I'll look the other way."
+   set {final_decision} = "passive"
+- "I need more time to think about this."
+   set {final_decision} = "undecided"
+
+if {final_decision} == "help":
+   join resistance_leader [z_index="1"]
+   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   resistance_leader: The leader clasps your shoulder firmly. Your courage honors us all.
+   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   resistance_leader: On the third day, when the sun is highest, our agents will come.
+   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   resistance_leader: The password is "The roots grow deep." Remember it.
+   leave resistance_leader
+
+elif {final_decision} == "passive":
+   join resistance_leader [z_index="1"]
+   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   resistance_leader: The leader nods slowly, clearly disappointed but understanding.
+   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   resistance_leader: Sometimes the most we can ask is for people not to stand in our way.
+   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   resistance_leader: Our agents will proceed as planned. Just... don't raise the alarm.
+   leave resistance_leader
+
+else:
+   join resistance_leader [z_index="1"]
+   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   resistance_leader: The leader's expression hardens. Time is a luxury we don't have.
+   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   resistance_leader: But forcing anyone to join our cause makes us no better than them.
+   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   resistance_leader: We'll proceed without counting on your help. Search your conscience.
+   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   resistance_leader: Perhaps you'll find clarity when the moment arrives.
+   leave resistance_leader
+
+[background arg="res://assets/narrative/night_return.png" fade="2.0"]
+join sweet_potato_sasha [z_index="1"]
+[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+sweet_potato_sasha: As the meeting breaks up, Sasha walks with you back toward the checkpoint.
+[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+sweet_potato_sasha: The night is eerily quiet, the streets deserted under the strict curfew.
+[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+sweet_potato_sasha: We're standing at the edge of history. After so long in darkness...
+[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+sweet_potato_sasha: Sasha looks up at the stars. It's hard to believe we might finally see the light.
+[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+sweet_potato_sasha: Whatever happens... thank you for everything you've done.
+leave sweet_potato_sasha
+
+[background arg="res://assets/narrative/checkpoint_night_return.png" fade="2.0"]
+join player_character [z_index="1"]
+[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+player_character: You return to your quarters at the checkpoint, mind racing with the weight of coming events.
+[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+player_character: In just three days, everything could change. For better or worse.
+[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+player_character: The truth about Root Reserve will either liberate Spud or plunge it into chaos.
+[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+player_character: And your role in that future has never been more crucial.
+leave player_character

@@ -59,9 +59,25 @@ directories/dtl_directory={
 "final_confrontation": "res://assets/narrative/final_confrontation.dtl",
 "generic_shift_start": "res://assets/narrative/generic_shift_start.dtl",
 "intro_sequence": "res://assets/narrative/intro_sequence.dtl",
+"shift10_intro": "res://assets/narrative/shift10_intro.dtl",
+"shift1_end": "res://assets/narrative/shift1_end.dtl",
+"shift1_intro": "res://assets/narrative/shift1_intro.dtl",
 "shift1_start": "res://assets/narrative/shift1_start.dtl",
+"shift2_intro": "res://assets/narrative/shift2_intro.dtl",
 "shift2_start": "res://assets/narrative/shift2_start.dtl",
-"shift3_start": "res://assets/narrative/shift3_start.dtl"
+"shift3_end": "res://assets/narrative/shift3_end.dtl",
+"shift3_intro": "res://assets/narrative/shift3_intro.dtl",
+"shift3_start": "res://assets/narrative/shift3_start.dtl",
+"shift4_intro": "res://assets/narrative/shift4_intro.dtl",
+"shift5_end": "res://assets/narrative/shift5_end.dtl",
+"shift5_intro": "res://assets/narrative/shift5_intro.dtl",
+"shift6_intro": "res://assets/narrative/shift6_intro.dtl",
+"shift7_end": "res://assets/narrative/shift7_end.dtl",
+"shift7_intro": "res://assets/narrative/shift7_intro.dtl",
+"shift8_intro": "res://assets/narrative/shift8_intro.dtl",
+"shift9_end": "res://assets/narrative/shift9_end.dtl",
+"shift9_intro": "res://assets/narrative/shift9_intro.dtl",
+"tutorial": "res://assets/narrative/tutorial.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://SpudCustomsTextboxWithSpeaker/SpudCustomsTextboxWithSpeaker.tres"]
