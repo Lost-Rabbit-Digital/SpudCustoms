@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://cnrr6jblok4ky" path="res://assets/suspect_panel/suspect_panel_background.png" id="18_rpdh1"]
 [ext_resource type="Texture2D" uid="uid://cvtdlyxlb5qaw" path="res://assets/suspect_panel/suspect_panel_document_slot.png" id="19_gr8eb"]
 [ext_resource type="Texture2D" uid="uid://b2icltv7xkk6j" path="res://assets/level/CustomsDesk.png" id="20_evuh2"]
-[ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://prototyping/random_character_creation/character_generator.tscn" id="21_ty05w"]
+[ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://assets/character_generator.tscn" id="21_ty05w"]
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="22_oyjtf"]
 [ext_resource type="Texture2D" uid="uid://y3iyyicwxtsl" path="res://assets/documents/closed_passport_small/closed_passport_small.png" id="23_s8p0h"]
 [ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://assets/give_prompt_dialogue.png" id="24_hc26c"]
