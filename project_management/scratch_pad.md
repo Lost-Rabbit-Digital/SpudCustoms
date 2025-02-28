@@ -1,7 +1,7 @@
 # Scratch Pad
 These are our goals, to-do tasks, and completed tasks.
 
-# FULL RELEASE TASKS - 2024-11-24 - 1.0.1
+# FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 
 ## Tasks
 ### Graphics
@@ -77,7 +77,7 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Stamps go over edge of passport
   [ ] - *INTERNAL USE* Speed up passport through slot, decrease by 0.5-1.5 seconds
   [ ] - Link summary screen to restart back into endless mode instead of story mode
-  [ ] - Add message queue system and delay between messages so they don't override each other, add gdscript to alert_label
+  [ ] - Add message queue system and delay between messages so they don't override each other, add GDScript to alert_label
   [ ] - Make two sets of paths, one which start in the office and one which doesn't for Spud runner, only do the office start when they are already in office
   [ ] - Confused with the story initially, too many characters going on, understood after a few texts
   [ ] - Italics in the story text that represented actions, understood after 2-3 texts
@@ -126,7 +126,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ## Steam Minor Update 1.0.2 - WORK IN PROGRESS
-### Todo
+### To-Do
   [ ] - Add this dude to the art credits Clock/Calendar: https://opengameart.org/content/various-inventory-24-pixel-icon-set 
   [ ] - Make the laws slide out similar to the stamps
   [ ] - Add a clock button to the suspect panel which tells you the date and time
@@ -139,8 +139,8 @@ These are our goals, to-do tasks, and completed tasks.
           - *INTERNAL USE* Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
           - *INTERNAL USE* Speak duration parameter
           - *INTERNAL USE* Have audio built into dialogue box
-          - *INTERNAL USE* Have two json sections, "next queue" and "general sayings", different names but you get the idea
-          - *INTERNAL USE* JSON to store strings instead of hardcoding into images
+          - *INTERNAL USE* Have two JSON sections, "next queue" and "general sayings", different names but you get the idea
+          - *INTERNAL USE* JSON to store strings instead of hard-coding into images
           - *INTERNAL USE* Just one background image for the dialogue box
 
 ### Completed Tasks for 1.0.2
