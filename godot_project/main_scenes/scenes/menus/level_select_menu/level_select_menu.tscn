@@ -43,7 +43,7 @@ item_0/text = "1 - ExampleLevel"
 
 [node name="SceneLister" type="Node" parent="."]
 script = ExtResource("2_g3cvb")
-files = Array[String](["res://main_scenes/scenes/game_scene/levels/tutorial.tscn", "res://main_scenes/scenes/game_scene/levels/day_1.tscn", "res://main_scenes/scenes/game_scene/levels/day_2.tscn", "res://main_scenes/scenes/game_scene/levels/day_3.tscn", "res://main_scenes/scenes/game_scene/levels/day_4.tscn", "res://main_scenes/scenes/game_scene/levels/day_5.tscn", "res://main_scenes/scenes/game_scene/levels/final_confrontation.tscn"])
+files = Array[String](["res://main_scenes/scenes/game_scene/levels/tutorial.tscn", "res://main_scenes/scenes/game_scene/levels/day_1.tscn", "res://main_scenes/scenes/game_scene/levels/day_2.tscn", "res://main_scenes/scenes/game_scene/levels/day_3.tscn", "res://main_scenes/scenes/game_scene/levels/day_4.tscn", "res://main_scenes/scenes/game_scene/levels/day_5.tscn", "res://main_scenes/scenes/game_scene/levels/day_6.tscn", "res://main_scenes/scenes/game_scene/levels/day_7.tscn", "res://main_scenes/scenes/game_scene/levels/day_8.tscn", "res://main_scenes/scenes/game_scene/levels/day_9.tscn", "res://main_scenes/scenes/game_scene/levels/day_10.tscn", "res://main_scenes/scenes/game_scene/levels/infiltration.tscn", "res://main_scenes/scenes/game_scene/levels/final_confrontation.tscn", "res://main_scenes/scenes/game_scene/levels/facility_escape.tscn"])
 directory = "res://main_scenes/scenes/game_scene/levels"
 
 [connection signal="item_activated" from="Control/LevelButtonsContainer" to="." method="_on_level_buttons_container_item_activated"]
