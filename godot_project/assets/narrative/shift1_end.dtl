@@ -30,7 +30,7 @@ join player_character [z_index="1"]
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
 player_character: You reflect silently: What have I gotten myself into?
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
-player_character: That note...and the way Supervisor Russet dodged my question about rejected potatoes...
+player_character: That note... and the way Supervisor Russet dodged my question about rejected potatoes...
 [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
 player_character: Something feels off about this place.
 [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
