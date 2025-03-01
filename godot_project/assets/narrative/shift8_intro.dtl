@@ -1,77 +1,77 @@
 # shift8_intro.dtl
-[music path="res://assets/audio/horror_drone_23.wav" fade="2.0" volume="-15.0" bus="Music"]
+[music path="res://assets/audio/ambient/horror_drone_23.wav" fade="2.0" volume="-5.0" bus="Music"]
 
 [background arg="res://assets/narrative/heightened_security.png" fade="2.0"]
 join narrator [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 narrator: The border checkpoint has been transformed into a military outpost overnight.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 narrator: Elite guards in black uniforms patrol the corridors, weapons prominently displayed.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 narrator: Security checkpoints have been set up at every entrance and exit.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 narrator: The atmosphere crackles with tension and paranoia.
 leave narrator
 
 [background arg="res://assets/narrative/special_security_team.png" fade="2.0"]
 join security_chief [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 security_chief: A severe-looking potato in an elaborate uniform addresses all officers.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 security_chief: I am Chief Security Officer Yukon, dispatched directly from the capital.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 security_chief: By order of Prime Minister Idaho, this facility is now under the jurisdiction of the Elite Spud Security Division.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 security_chief: Our intelligence indicates a terrorist attack is imminent against this checkpoint.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 security_chief: The so-called "resistance" plans to infiltrate operatives through this border tomorrow.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 security_chief: All customs officers will submit to enhanced loyalty screening immediately.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 security_chief: Anyone displaying suspicious behavior will be detained and processed. No exceptions.
 leave security_chief
 
 [background arg="res://assets/narrative/supervisor_report.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 supervisor_russet: Supervisor Russet stands beside Security Chief Yukon, looking nervous.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 supervisor_russet: Full cooperation with the Security Division is mandatory for all staff.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 supervisor_russet: Russet's eyes dart around the room. My personal reports on each of you have been provided to the Chief.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 supervisor_russet: I'm sure you'll all demonstrate your unwavering loyalty to Spud in the coming days.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 supervisor_russet: Russet's gaze lingers on you for an uncomfortable moment before moving on.
 leave supervisor_russet
 
 [background arg="res://assets/narrative/identity_scanner.png" fade="2.0"]
 join security_chief [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 security_chief: Today we implement a new security measure: advanced identity verification.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 security_chief: Chief Yukon holds up a sophisticated scanning device. This is the IdentityScan 5000.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 security_chief: It analyzes biometric markers to detect potential infiltrators and resistance sympathizers.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 security_chief: All travelers must be scanned before processing. Anyone flagged will be detained for enhanced interrogation.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 security_chief: The device is calibrated to detect even the smallest signs of deception.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 security_chief: Each of your stations has been equipped with this technology. Use it without exception.
 leave security_chief
 
 [background arg="res://assets/narrative/missing_sasha.png" fade="2.0"]
 join fellow_officer [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 fellow_officer: A fellow officer whispers urgently as you walk to your station.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 fellow_officer: Have you seen Sasha? She didn't report for morning roll call.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 fellow_officer: The officer looks around nervously. There are rumors she was taken in the night.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 fellow_officer: Security teams have been conducting raids across the residential sector.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 fellow_officer: The officer swallows hard. They're saying she was part of the resistance.
 
 set {sasha_response} = "none"
@@ -84,56 +84,56 @@ set {sasha_response} = "none"
 
 if {sasha_response} == "cautious":
    join fellow_officer [z_index="1"]
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    fellow_officer: The officer nods subtly. You're right. Forget I said anything.
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    fellow_officer: But watch yourself today. They're looking for connections to her.
    leave fellow_officer
 
 elif {sasha_response} == "concerned":
    join fellow_officer [z_index="1"]
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    fellow_officer: The officer studies your face intently. So you were close to her?
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    fellow_officer: Their expression softens. Be careful. They might be watching you too.
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    fellow_officer: The officer slips you a small note: "Clean your station of anything suspicious."
    leave fellow_officer
 
 else:
    join fellow_officer [z_index="1"]
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    fellow_officer: The officer's expression hardens. I see. Loyalty above friendship.
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    fellow_officer: I guess that's how we survive these days.
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    fellow_officer: The officer walks away, clearly disappointed.
    leave fellow_officer
 
 [background arg="res://assets/narrative/interrogation_screen.png" fade="2.0"]
 join security_officer [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 security_officer: Before you can reach your station, you're pulled aside by security.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 security_officer: Step this way for enhanced screening. Standard procedure for all staff today.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 security_officer: The officer leads you to an interrogation room with sophisticated monitoring equipment.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 security_officer: Take a seat. Chief Yukon will be with you shortly.
 leave security_officer
 
 join security_chief [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 security_chief: Chief Yukon enters, carrying a thick file with your name on it.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 security_chief: So. You've been at this checkpoint for quite some time, I see.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 security_chief: Yukon flips through the file methodically. Interesting performance record.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 security_chief: Supervisor Russet has flagged several... inconsistencies in your rejection patterns.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 security_chief: And you were seen frequently in the company of Officer Sasha, who is now under investigation for treason.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 security_chief: The chief leans forward, eyes cold. Is there anything you'd like to tell me about her activities?
 
 set {interrogation_choice} = "none"
@@ -146,61 +146,61 @@ set {interrogation_choice} = "none"
 
 if {interrogation_choice} == "deny":
    join security_chief [z_index="1"]
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    security_chief: Chief Yukon's eyes narrow skeptically. Multiple witnesses say otherwise.
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    security_chief: However, without concrete evidence of collusion, I can't detain you. Yet.
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    security_chief: You'll be under close observation. One misstep, and you'll join Sasha.
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    security_chief: The chief makes a note in your file. You're dismissed. For now.
    leave security_chief
 
 elif {interrogation_choice} == "betray":
    join security_chief [z_index="1"]
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    security_chief: Yukon's expression shifts to interest. Is that so? How convenient.
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    security_chief: And yet you filed no reports. Made no official statements until now.
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    security_chief: The chief makes extensive notes. You'll provide a complete statement.
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    security_chief: And if your information proves valuable, perhaps we can overlook your... delayed reporting.
    leave security_chief
 
 else:
    join security_chief [z_index="1"]
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    security_chief: Chief Yukon laughs coldly. The Officers' Union has been suspended.
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    security_chief: National security supersedes all previous protocols and protections.
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    security_chief: Your insistence on these outdated rights is itself suspicious.
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    security_chief: The chief makes a note. Return to your station, but know that we'll be watching your every move.
    leave security_chief
 
 [background arg="res://assets/narrative/checkpoint_station_monitored.png" fade="2.0"]
 join security_officer [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 security_officer: A stern security officer stands directly behind your station.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 security_officer: I'll be monitoring your work today. Follow all protocols exactly.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 security_officer: Every traveler must be identity-scanned. No exceptions.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 security_officer: Any attempt to circumvent security measures will result in immediate detention.
 leave security_officer
 
 join player_character [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: You take your position at the checkpoint, acutely aware of being watched.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 player_character: Sasha has been taken. The resistance plan is compromised.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: And tomorrow is the day the agents were supposed to cross the border.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 player_character: With the IdentityScan in place and security on high alert, their chances seem hopeless.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: You must navigate the most dangerous shift of your career, with enemies on all sides.
 leave player_character

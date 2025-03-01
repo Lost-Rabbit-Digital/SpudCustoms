@@ -1,70 +1,70 @@
 # shift5_end.dtl
-[music path="res://assets/audio/horror_drone_49.wav" fade="2.0" volume="-15.0" bus="Music"]
+[music path="res://assets/audio/ambient/horror_drone_49.wav" fade="2.0" volume="-5.0" bus="Music"]
 
 [background arg="res://assets/narrative/night_corridor.png" fade="2.0"]
 join player_character [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: You creep through the darkened corridor, heart pounding in your chest.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 player_character: The facility is eerily quiet, with only the occasional security patrol passing by.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: You duck into a shadow as footsteps approach, then continue toward the meeting point.
 leave player_character
 
 [background arg="res://assets/narrative/maintenance_area.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 sweet_potato_sasha: Sasha emerges from the darkness. You came. Good.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 sweet_potato_sasha: She hands you a small device. This will disable the electronic lock on Russet's office.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 sweet_potato_sasha: I'll create a distraction at the security station. You'll have about five minutes.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 sweet_potato_sasha: The manifests should be in his filing cabinet. Red folder labeled "RR Transport."
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 sweet_potato_sasha: Get in, find it, get out. Don't take anything else. Don't leave evidence.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 sweet_potato_sasha: If you're caught... I don't know you. Understand?
 leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/russet_office_door.png" fade="2.0"]
 join player_character [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 player_character: You stand before Supervisor Russet's office door, device in hand.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: A distant alarm suddenly blares – Sasha's distraction right on time.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 player_character: You activate the device and the door lock clicks open. It's now or never.
 leave player_character
 
 [background arg="res://assets/narrative/russet_office_interior.png" fade="2.0"]
 join player_character [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: Russet's office is immaculate and imposing. A portrait of the Prime Minister hangs on one wall.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 player_character: You move quickly to the filing cabinet and begin searching through the drawers.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: Finally, you find it: a thick red folder labeled "RR Transport."
 leave player_character
 
 [background arg="res://assets/narrative/classified_documents.png" fade="2.0"]
 join player_character [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 player_character: Inside are detailed manifests listing "processing materials" transported from the checkpoint to Root Reserve facilities.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: Each entry includes a count of "units processed" that exactly matches the rejected potato count from border reports.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 player_character: Most damning of all: a directive from Prime Minister Idaho himself authorizing "full utilization of border rejects for RR production."
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: You quickly photograph the documents with a small camera Sasha provided.
 leave player_character
 
 [background arg="res://assets/narrative/approaching_footsteps.png" fade="2.0"]
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 Suddenly, footsteps approach the office door
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 A voice outside: "Strange, I could've sworn I locked this."
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 The door handle begins to turn
 
 set {hide_choice} = "none"
@@ -78,76 +78,76 @@ set {hide_choice} = "none"
 if {hide_choice} == "desk":
    [background arg="res://assets/narrative/under_desk.png" fade="2.0"]
    join player_character [z_index="1"]
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    player_character: You quickly replace the folder and dive under Russet's desk.
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    player_character: The door opens and Supervisor Russet himself walks in, muttering.
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    player_character: He sits at his desk, his feet inches from your face.
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    player_character: Your heart pounds so loudly you're certain he can hear it.
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    player_character: After what feels like an eternity, his communicator beeps.
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    player_character: "Russet here. What? Another alarm? I'm on my way."
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    player_character: He leaves quickly, and you seize the opportunity to escape.
    leave player_character
 
 elif {hide_choice} == "closet":
    [background arg="res://assets/narrative/supply_closet.png" fade="2.0"]
    join player_character [z_index="1"]
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    player_character: You slip into the supply closet just as the door opens.
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    player_character: Through a crack, you see a security officer scanning the room.
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    player_character: "Hello? Anyone in here?" The officer's flashlight sweeps across the office.
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    player_character: You hold your breath as the beam nears the closet door.
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    player_character: A crackle from the officer's radio: "All units respond to sector three. Security breach."
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    player_character: The officer leaves to respond, giving you a chance to escape.
    leave player_character
 
 else:
    [background arg="res://assets/narrative/window_escape.png" fade="2.0"]
    join player_character [z_index="1"]
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    player_character: You desperately wrench open the window and jump out.
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    player_character: Thankfully, it's only one story up. You land with a thud in the bushes below.
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    player_character: A security officer pokes his head out the window: "Hey! Stop right there!"
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    player_character: You sprint across the grounds, alarms blaring behind you.
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    player_character: Somehow, you manage to lose your pursuers in the maze of buildings.
    leave player_character
 
 [background arg="res://assets/narrative/rendezvous_point.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 sweet_potato_sasha: Sasha waits anxiously at the rendezvous point. Did you get it?
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 sweet_potato_sasha: You hand over the camera with the evidence, explaining what you found.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 sweet_potato_sasha: This is it. This proves everything. The direct connection between rejected potatoes and Root Reserve.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 sweet_potato_sasha: Sasha's eyes gleam with vindication. The resistance will make copies. Spread the truth everywhere.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 sweet_potato_sasha: They can't silence all of us. This changes everything.
 leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/facility_dawn.png" fade="2.0"]
 join player_character [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 player_character: As you return to your quarters before dawn, the weight of your actions settles on you.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: You've crossed a line. There's no going back to being just a customs officer.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 player_character: When the truth spreads, the entire nation of Spud will be transformed.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: And you helped light the spark that will ignite the revolution.
 leave player_character

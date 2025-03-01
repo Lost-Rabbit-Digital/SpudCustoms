@@ -1,22 +1,22 @@
 # shift3_end.dtl
-[music path="res://assets/audio/horror_drone_12.wav" fade="2.0" volume="-15.0" bus="Music"]
+[music path="res://assets/audio/horror_drone_12.wav" fade="2.0" volume="-5.0" bus="Music"]
 
 [background arg="res://assets/narrative/night_gameplay.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 sweet_potato_sasha: Sasha sidles up to you, voice low. Hey, can we talk? Somewhere private?
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 sweet_potato_sasha: She glances over her shoulder nervously. Not here. Too many eyes and ears.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 sweet_potato_sasha: Meet me by the old storage shed after your shift. I have something you need to see.
 leave sweet_potato_sasha
 
 join supervisor_russet [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 supervisor_russet: The supervisor appears suddenly. Getting cozy with your coworkers, I see.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 supervisor_russet: Remember, fraternization can lead to... compromised judgment.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 supervisor_russet: Russet's smile doesn't reach his eyes. We wouldn't want that, would we?
 leave supervisor_russet
 
@@ -24,21 +24,21 @@ leave supervisor_russet
 You meet Sasha after your shift as planned
 
 join sweet_potato_sasha [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 sweet_potato_sasha: Thanks for coming. I wasn't sure if you would after Russet's warning.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 sweet_potato_sasha: Sasha pulls out a worn folder. I've been gathering information. About the rejected potatoes.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 sweet_potato_sasha: I've tracked the transport trucks. They don't go to deportation centers.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 sweet_potato_sasha: They go to Root Reserve processing facilities. Every single one.
 
 [background arg="res://assets/narrative/disturbing_photos.png" fade="2.0"]
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 sweet_potato_sasha: Sasha shows you grainy photos. These were taken by a friend. They...disappeared shortly after.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 sweet_potato_sasha: The pictures show potatoes being unloaded and taken into a facility marked with the Root Reserve logo.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 sweet_potato_sasha: I think I know what's happening to the rejected potatoes. They're becoming Root Reserve.
 
 set {reveal_reaction} = "none"
@@ -51,48 +51,48 @@ set {reveal_reaction} = "none"
 
 if {reveal_reaction} == "shocked":
    join sweet_potato_sasha [z_index="1"]
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    sweet_potato_sasha: Sasha nods grimly. Cannibalism with extra steps. That's what Root Reserve is.
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    sweet_potato_sasha: And we've been helping them select their ingredients.
    leave sweet_potato_sasha
 
 elif {reveal_reaction} == "cautious":
    join sweet_potato_sasha [z_index="1"]
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    sweet_potato_sasha: Sasha looks disappointed. I've been collecting evidence for months. But fine.
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    sweet_potato_sasha: Keep your eyes open. You'll see I'm right. Just don't wait too long.
    leave sweet_potato_sasha
 
 else:
    join sweet_potato_sasha [z_index="1"]
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    sweet_potato_sasha: Sasha's eyes light up. I was hoping you'd say that.
-   [sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
    sweet_potato_sasha: There are others who feel the same. A resistance, of sorts.
-   [sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
    sweet_potato_sasha: They need someone on the inside. Someone with access.
    leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/night_alarm.png" fade="2.0"]
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 A distant alarm suddenly blares
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 sweet_potato_sasha: Sasha tenses. We need to go. Now. They do security sweeps at this hour.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 sweet_potato_sasha: Think about what I've shown you. We'll talk again soon.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 sweet_potato_sasha: Sasha hurriedly stuffs the folder into your hands. Keep this safe. And trust no one.
 
 [background arg="res://assets/narrative/night_customs.png" fade="2.0"]
 join player_character [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: You make your way back to your quarters, folder hidden inside your jacket.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 player_character: Your mind races with what you've learned. Root Reserve. The rejections. The missing potatoes.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: It all connects in a horrifying way. You're part of something terrible.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 player_character: The question is... what are you going to do about it?
 leave player_character

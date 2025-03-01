@@ -1,38 +1,38 @@
 # shift1_end.dtl
-[music path="res://assets/audio/horror_drone_23.wav" fade="2.0" volume="-15.0" bus="Music"]
+[music path="res://assets/audio/ambient/horror_drone_23.wav" fade="2.0" volume="-5.0" bus="Music"]
 
 [background arg="res://assets/narrative/root_reserve_customs_office.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 supervisor_russet: Adequate work today, sprout. You're getting the hang of this.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 supervisor_russet: Remember, efficiency is key. We have quotas to meet.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 supervisor_russet: Now, get some rest. Tomorrow is another big day for Spud.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 supervisor_russet: And don't forget to grab your ration of Root Reserve on the way out.
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 supervisor_russet: Supervisor Russet flashes a wide grin, "It's the flavor of Spud's future!"
 leave supervisor_russet
 
 [background arg="res://assets/narrative/suspicious_note.png" fade="2.0"]
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 A small note slips out from beneath a stack of papers
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 The message reads: "Not all is as it seems."
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 "The roots of our nation have grown rotten."
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 "Follow the trail, but take care not to be silenced. - A friend"
 
 [background arg="res://assets/narrative/questioning_identity.png" fade="2.0"]
 join player_character [z_index="1"]
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 player_character: You reflect silently: What have I gotten myself into?
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: That note... and the way Supervisor Russet dodged my question about rejected potatoes...
-[sound path="res://assets/audio/typing on old keyboard 3.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 player_character: Something feels off about this place.
-[sound path="res://assets/audio/typing on old keyboard 2.wav" volume="-15.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: I should stay alert during tomorrow's shift. There's more going on here than stamping passports.
 leave player_character
