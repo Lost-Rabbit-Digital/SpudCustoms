@@ -1,40 +1,40 @@
 [gd_scene load_steps=68 format=3 uid="uid://bqdirqkno2n36"]
 
-[ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://main_scenes/scenes/game_scene_backup/levels/mainGame.gd" id="1_s4bva"]
-[ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://assets/suspect_panel/suspect_panel.png" id="2_f25cg"]
-[ext_resource type="Texture2D" uid="uid://doml0udrwe6pe" path="res://assets/level/Background.png" id="2_rft0e"]
-[ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/level/customs_office.png" id="4_rd1c0"]
-[ext_resource type="Texture2D" uid="uid://yvmmxdnlhttw" path="res://assets/level/fence_posts.png" id="5_sihlh"]
-[ext_resource type="FontVariation" uid="uid://t3ii3pbmg2bo" path="res://assets/fonts/Modern_DOS_Font_Variation.tres" id="6_rd1c0"]
-[ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="7_7m4ia"]
-[ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_woji0"]
-[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="9_2f41l"]
-[ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="9_arv36"]
-[ext_resource type="AudioStream" uid="uid://b2nmiog4e1mpn" path="res://assets/music/ambient_nothingness_main_ovani_sound.mp3" id="10_2f41l"]
-[ext_resource type="Script" uid="uid://mm8kba4qcarc" path="res://assets/QueueManager.gd" id="10_a4p7n"]
-[ext_resource type="Texture2D" uid="uid://fmqkliw6t33x" path="res://assets/suspect_panel/suspect_panel_front.png" id="10_foucb"]
-[ext_resource type="PackedScene" uid="uid://msix881opujh" path="res://assets/StatsManager.tscn" id="10_jgtln"]
-[ext_resource type="PackedScene" uid="uid://bnbp4h8nco0v2" path="res://assets/NarrativeManager.tscn" id="11_qn1sc"]
-[ext_resource type="Texture2D" uid="uid://cwni5a4q3jj67" path="res://assets/suspect_panel/suspect_panel_top_bottom.png" id="12_n1tuu"]
-[ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://assets/fonts/windows_command_prompt.ttf" id="13_wxn24"]
-[ext_resource type="Texture2D" uid="uid://cnrr6jblok4ky" path="res://assets/suspect_panel/suspect_panel_background.png" id="14_v4iji"]
-[ext_resource type="Texture2D" uid="uid://cvtdlyxlb5qaw" path="res://assets/suspect_panel/suspect_panel_document_slot.png" id="16_a857f"]
-[ext_resource type="Texture2D" uid="uid://b2icltv7xkk6j" path="res://assets/level/CustomsDesk.png" id="16_p2ayh"]
-[ext_resource type="Texture2D" uid="uid://dgw6rbhy6crh" path="res://assets/suspect_panel/suspect_panel_table.png" id="17_hbwb4"]
-[ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://assets/give_prompt_dialogue.png" id="17_mr1ft"]
-[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="18_jl4i3"]
-[ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="18_yiok2"]
-[ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="20_pd2wg"]
-[ext_resource type="Texture2D" uid="uid://y3iyyicwxtsl" path="res://assets/documents/closed_passport_small/closed_passport_small.png" id="25_2f41l"]
-[ext_resource type="PackedScene" uid="uid://be3lucg3f3a3c" path="res://assets/StampBarController.tscn" id="25_qn1sc"]
-[ext_resource type="Script" uid="uid://b2rvsx4gf3s8c" path="res://assets/StampCrossbarSystem.gd" id="26_qn1sc"]
-[ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://prototyping/random_character_creation/character_generator.tscn" id="28_f6jf3"]
-[ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://assets/BorderRunnerSystem.tscn" id="29_rft0e"]
-[ext_resource type="Texture2D" uid="uid://cfkvlvqhnapxc" path="res://assets/documents/customs_guide/customs_guide_open_2.png" id="30_0fqrc"]
-[ext_resource type="Texture2D" uid="uid://bxn3434177kfd" path="res://assets/documents/laws_receipt.png" id="31_2f41l"]
-[ext_resource type="Script" uid="uid://dfofd8lp0igu2" path="res://assets/law_receipt.gd" id="32_i6rjm"]
-[ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://assets/dos_theme.tres" id="34_2f41l"]
-[ext_resource type="Script" uid="uid://bif3v7xddhuag" path="res://assets/guide.gd" id="35_uuf1y"]
+[ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://main_scenes/scenes/game_scene_backup/levels/mainGame.gd" id="1_7s01m"]
+[ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://assets/BorderRunnerSystem.tscn" id="2_gy54w"]
+[ext_resource type="Texture2D" uid="uid://doml0udrwe6pe" path="res://assets/level/Background.png" id="3_62nf5"]
+[ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/level/customs_office.png" id="4_ledsw"]
+[ext_resource type="Texture2D" uid="uid://yvmmxdnlhttw" path="res://assets/level/fence_posts.png" id="5_2vcm8"]
+[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="6_phvwh"]
+[ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_s78ei"]
+[ext_resource type="FontVariation" uid="uid://t3ii3pbmg2bo" path="res://assets/fonts/Modern_DOS_Font_Variation.tres" id="8_t27c5"]
+[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="9_d4wq4"]
+[ext_resource type="AudioStream" uid="uid://b2nmiog4e1mpn" path="res://assets/music/ambient_nothingness_main_ovani_sound.mp3" id="10_5t041"]
+[ext_resource type="Script" uid="uid://mm8kba4qcarc" path="res://assets/QueueManager.gd" id="11_6qfpw"]
+[ext_resource type="PackedScene" uid="uid://msix881opujh" path="res://assets/StatsManager.tscn" id="12_g8lu5"]
+[ext_resource type="PackedScene" uid="uid://bnbp4h8nco0v2" path="res://assets/NarrativeManager.tscn" id="13_kt633"]
+[ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="14_7hakd"]
+[ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="15_0pfuf"]
+[ext_resource type="Texture2D" uid="uid://fmqkliw6t33x" path="res://assets/suspect_panel/suspect_panel_front.png" id="16_ktsrb"]
+[ext_resource type="Texture2D" uid="uid://cwni5a4q3jj67" path="res://assets/suspect_panel/suspect_panel_top_bottom.png" id="17_j8n4m"]
+[ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://assets/suspect_panel/suspect_panel.png" id="18_jur0i"]
+[ext_resource type="Texture2D" uid="uid://dgw6rbhy6crh" path="res://assets/suspect_panel/suspect_panel_table.png" id="19_mnpmu"]
+[ext_resource type="Texture2D" uid="uid://cnrr6jblok4ky" path="res://assets/suspect_panel/suspect_panel_background.png" id="20_dvpka"]
+[ext_resource type="Texture2D" uid="uid://cvtdlyxlb5qaw" path="res://assets/suspect_panel/suspect_panel_document_slot.png" id="21_bm1ld"]
+[ext_resource type="Texture2D" uid="uid://b2icltv7xkk6j" path="res://assets/level/CustomsDesk.png" id="22_27mci"]
+[ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://assets/character_generator.tscn" id="23_260xq"]
+[ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="24_taloi"]
+[ext_resource type="PackedScene" uid="uid://be3lucg3f3a3c" path="res://assets/StampBarController.tscn" id="25_as6sn"]
+[ext_resource type="Script" uid="uid://b2rvsx4gf3s8c" path="res://assets/StampCrossbarSystem.gd" id="26_0drik"]
+[ext_resource type="Texture2D" uid="uid://y3iyyicwxtsl" path="res://assets/documents/closed_passport_small/closed_passport_small.png" id="27_28s4i"]
+[ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://assets/give_prompt_dialogue.png" id="28_xojn2"]
+[ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://assets/fonts/windows_command_prompt.ttf" id="29_fjg4h"]
+[ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="30_0y21p"]
+[ext_resource type="Texture2D" uid="uid://bxn3434177kfd" path="res://assets/documents/laws_receipt.png" id="31_le8sb"]
+[ext_resource type="Script" uid="uid://dfofd8lp0igu2" path="res://assets/law_receipt.gd" id="32_8rxeq"]
+[ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://assets/dos_theme.tres" id="33_t1ua5"]
+[ext_resource type="Texture2D" uid="uid://cfkvlvqhnapxc" path="res://assets/documents/customs_guide/customs_guide_open_2.png" id="34_psew4"]
+[ext_resource type="Script" uid="uid://bif3v7xddhuag" path="res://assets/guide.gd" id="35_3h8am"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sihlh"]
 size = Vector2(756.5, 214)
@@ -218,9 +218,9 @@ _data = {
 point_count = 24
 
 [node name="Root" type="Node2D"]
-script = ExtResource("1_s4bva")
+script = ExtResource("1_7s01m")
 
-[node name="BorderRunnerSystem" parent="." node_paths=PackedStringArray("queue_manager", "score_label", "strike_label", "alert_label", "alert_timer", "missile_collision_shape") instance=ExtResource("29_rft0e")]
+[node name="BorderRunnerSystem" parent="." node_paths=PackedStringArray("queue_manager", "score_label", "strike_label", "alert_label", "alert_timer", "missile_collision_shape") instance=ExtResource("2_gy54w")]
 queue_manager = NodePath("../SystemManagers/QueueManager")
 score_label = NodePath("../UI/Labels/ScoreLabel")
 strike_label = NodePath("../UI/Labels/StrikesLabel")
@@ -251,29 +251,29 @@ z_index = 6
 z_as_relative = false
 position = Vector2(642.352, 121.5)
 scale = Vector2(2.59658, 2.44318)
-texture = ExtResource("2_rft0e")
+texture = ExtResource("3_62nf5")
 
 [node name="CustomsOffice" type="Sprite2D" parent="UI/WorldPanel"]
 z_index = 8
 z_as_relative = false
-texture = ExtResource("4_rd1c0")
+texture = ExtResource("4_ledsw")
 
 [node name="FencePosts" type="Sprite2D" parent="UI/WorldPanel"]
 z_index = 8
 z_as_relative = false
-texture = ExtResource("5_sihlh")
+texture = ExtResource("5_2vcm8")
 
 [node name="Background" type="Sprite2D" parent="UI"]
 z_index = 8
 z_as_relative = false
 position = Vector2(640, 360)
-texture = ExtResource("18_jl4i3")
+texture = ExtResource("6_phvwh")
 
 [node name="InteractableItemsWorldBackground" type="Sprite2D" parent="UI"]
 z_index = 5
 z_as_relative = false
 position = Vector2(640, 360)
-texture = ExtResource("7_woji0")
+texture = ExtResource("7_s78ei")
 
 [node name="Labels" type="Control" parent="UI"]
 anchors_preset = 0
@@ -294,7 +294,7 @@ offset_bottom = 302.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("6_rd1c0")
+theme_override_fonts/font = ExtResource("8_t27c5")
 theme_override_font_sizes/font_size = 32
 text = "Story"
 horizontal_alignment = 1
@@ -313,7 +313,7 @@ offset_bottom = 691.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("6_rd1c0")
+theme_override_fonts/font = ExtResource("8_t27c5")
 theme_override_font_sizes/font_size = 32
 text = "2024.12.26"
 horizontal_alignment = 1
@@ -330,7 +330,7 @@ offset_bottom = 323.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("6_rd1c0")
+theme_override_fonts/font = ExtResource("8_t27c5")
 theme_override_font_sizes/font_size = 16
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -350,7 +350,7 @@ offset_bottom = 686.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("6_rd1c0")
+theme_override_fonts/font = ExtResource("8_t27c5")
 theme_override_font_sizes/font_size = 32
 text = "Strikes: 0 / 5"
 vertical_alignment = 1
@@ -369,7 +369,7 @@ offset_bottom = 715.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("6_rd1c0")
+theme_override_fonts/font = ExtResource("8_t27c5")
 theme_override_font_sizes/font_size = 32
 text = "Quota: 0 / 8"
 vertical_alignment = 1
@@ -385,7 +385,7 @@ offset_bottom = 443.0
 theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("6_rd1c0")
+theme_override_fonts/font = ExtResource("8_t27c5")
 theme_override_font_sizes/font_size = 16
 autowrap_mode = 3
 
@@ -403,7 +403,7 @@ offset_bottom = 691.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("6_rd1c0")
+theme_override_fonts/font = ExtResource("8_t27c5")
 theme_override_font_sizes/font_size = 32
 text = "Score: 9001"
 vertical_alignment = 1
@@ -425,7 +425,7 @@ size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 0.00392157, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("6_rd1c0")
+theme_override_fonts/font = ExtResource("8_t27c5")
 theme_override_font_sizes/font_size = 24
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -459,16 +459,16 @@ offset_bottom = 40.0
 [node name="SFXPool" type="AudioStreamPlayer2D" parent="SystemManagers/AudioManager"]
 bus = &"SFX"
 
-[node name="BackgroundMusicPlayer" parent="SystemManagers/AudioManager" instance=ExtResource("9_2f41l")]
-stream = ExtResource("10_2f41l")
+[node name="BackgroundMusicPlayer" parent="SystemManagers/AudioManager" instance=ExtResource("9_d4wq4")]
+stream = ExtResource("10_5t041")
 parameters/looping = true
 
 [node name="QueueManager" type="Node2D" parent="SystemManagers"]
-script = ExtResource("10_a4p7n")
+script = ExtResource("11_6qfpw")
 
-[node name="StatsManager" parent="SystemManagers" instance=ExtResource("10_jgtln")]
+[node name="StatsManager" parent="SystemManagers" instance=ExtResource("12_g8lu5")]
 
-[node name="NarrativeManager" parent="SystemManagers" instance=ExtResource("11_qn1sc")]
+[node name="NarrativeManager" parent="SystemManagers" instance=ExtResource("13_kt633")]
 
 [node name="Gameplay" type="Control" parent="."]
 layout_mode = 3
@@ -480,13 +480,13 @@ offset_bottom = 40.0
 z_index = 12
 position = Vector2(900, 130)
 scale = Vector2(2.455, 2.455)
-texture = ExtResource("7_7m4ia")
+texture = ExtResource("14_7hakd")
 
 [node name="MegaphoneDialogueBoxBlank" type="Sprite2D" parent="Gameplay/Megaphone"]
 visible = false
 position = Vector2(33.8086, -22.8106)
 scale = Vector2(0.349, 0.349)
-texture = ExtResource("9_arv36")
+texture = ExtResource("15_0pfuf")
 
 [node name="SuspectPanel" type="Sprite2D" parent="Gameplay"]
 z_index = 1
@@ -496,39 +496,39 @@ scale = Vector2(1.05816, 1.06849)
 [node name="SuspectPanelTop" type="Sprite2D" parent="Gameplay/SuspectPanel"]
 z_index = 4
 z_as_relative = false
-texture = ExtResource("10_foucb")
+texture = ExtResource("16_ktsrb")
 
 [node name="SuspectPanelTopBottom" type="Sprite2D" parent="Gameplay/SuspectPanel"]
 z_as_relative = false
-texture = ExtResource("12_n1tuu")
+texture = ExtResource("17_j8n4m")
 
 [node name="SuspectPanelFront" type="Sprite2D" parent="Gameplay/SuspectPanel"]
 z_index = -1
 z_as_relative = false
-texture = ExtResource("2_f25cg")
+texture = ExtResource("18_jur0i")
 
 [node name="SuspectPanelTable" type="Sprite2D" parent="Gameplay/SuspectPanel"]
 z_index = -1
 z_as_relative = false
-texture = ExtResource("17_hbwb4")
+texture = ExtResource("19_mnpmu")
 
 [node name="SuspectPanelBackground" type="Sprite2D" parent="Gameplay/SuspectPanel"]
 z_index = -1
 z_as_relative = false
-texture = ExtResource("14_v4iji")
+texture = ExtResource("20_dvpka")
 
 [node name="SuspectPanelDocumentSlot" type="Sprite2D" parent="Gameplay/SuspectPanel"]
 z_index = 3
 z_as_relative = false
 position = Vector2(0, 2.4)
-texture = ExtResource("16_a857f")
+texture = ExtResource("21_bm1ld")
 
 [node name="InspectionTable" type="Sprite2D" parent="Gameplay"]
 position = Vector2(443.837, 470.5)
 scale = Vector2(2.64484, 2.59444)
-texture = ExtResource("16_p2ayh")
+texture = ExtResource("22_27mci")
 
-[node name="MugshotPhotoGenerator" parent="Gameplay" instance=ExtResource("28_f6jf3")]
+[node name="MugshotPhotoGenerator" parent="Gameplay" instance=ExtResource("23_260xq")]
 z_index = 2
 z_as_relative = false
 position = Vector2(1405, 415)
@@ -540,18 +540,18 @@ z_index = -1
 z_as_relative = false
 position = Vector2(0.399963, -14.4)
 scale = Vector2(1.1, 1.1)
-texture = ExtResource("18_yiok2")
+texture = ExtResource("24_taloi")
 
 [node name="InteractiveElements" type="Control" parent="Gameplay"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="StampBarController" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("stamp_system") instance=ExtResource("25_qn1sc")]
+[node name="StampBarController" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("stamp_system") instance=ExtResource("25_as6sn")]
 stamp_system = NodePath("../StampCrossbarSystem")
 
 [node name="StampCrossbarSystem" type="Node2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("passport", "stats_manager")]
-script = ExtResource("26_qn1sc")
+script = ExtResource("26_0drik")
 passport = NodePath("../Passport")
 stats_manager = NodePath("../../../SystemManagers/StatsManager")
 
@@ -567,7 +567,7 @@ position = Vector2(1079, 584)
 z_index = 1
 z_as_relative = false
 position = Vector2(1730, 426)
-texture = ExtResource("25_2f41l")
+texture = ExtResource("27_28s4i")
 
 [node name="ClosedPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
 visible = false
@@ -582,12 +582,12 @@ z_as_relative = false
 position = Vector2(357.294, -256.302)
 rotation = 0.137881
 scale = Vector2(2.42121, 2.42121)
-texture = ExtResource("17_mr1ft")
+texture = ExtResource("28_xojn2")
 
 [node name="OpenPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
 visible = false
 
-[node name="PassportPhotoGenerator" parent="Gameplay/InteractiveElements/Passport/OpenPassport" instance=ExtResource("28_f6jf3")]
+[node name="PassportPhotoGenerator" parent="Gameplay/InteractiveElements/Passport/OpenPassport" instance=ExtResource("23_260xq")]
 z_index = 2
 position = Vector2(76, 90)
 scale = Vector2(0.975, 1)
@@ -598,7 +598,7 @@ modulate = Color(0, 0, 0, 0.521569)
 z_index = -1
 position = Vector2(1.02564, -14)
 scale = Vector2(1.1, 1.1)
-texture = ExtResource("18_yiok2")
+texture = ExtResource("24_taloi")
 
 [node name="PotatoHeader" type="Label" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
 offset_left = -103.0
@@ -606,7 +606,7 @@ offset_top = 20.0
 offset_right = 13.0
 offset_bottom = 42.0
 theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
-theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_fonts/font = ExtResource("29_fjg4h")
 theme_override_font_sizes/font_size = 16
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -618,20 +618,20 @@ offset_right = 33.0
 offset_bottom = 141.0
 theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
 theme_override_constants/line_spacing = 2
-theme_override_fonts/font = ExtResource("13_wxn24")
+theme_override_fonts/font = ExtResource("29_fjg4h")
 theme_override_font_sizes/font_size = 16
 autowrap_mode = 2
 
 [node name="PassportShadow" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
 visible = false
 position = Vector2(-4.99997, 3.99999)
-texture = ExtResource("20_pd2wg")
+texture = ExtResource("30_0y21p")
 
 [node name="LawReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_as_relative = false
 position = Vector2(122, 528)
-texture = ExtResource("31_2f41l")
-script = ExtResource("32_i6rjm")
+texture = ExtResource("31_le8sb")
+script = ExtResource("32_8rxeq")
 
 [node name="ClosedReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements/LawReceipt"]
 visible = false
@@ -648,7 +648,7 @@ offset_left = -88.0
 offset_top = -107.0
 offset_right = 89.0
 offset_bottom = 101.0
-theme = ExtResource("34_2f41l")
+theme = ExtResource("33_t1ua5")
 theme_override_colors/default_color = Color(0.341176, 0.282353, 0.282353, 1)
 bbcode_enabled = true
 text = "[u]Laws[/u]
@@ -662,8 +662,8 @@ visible = false
 z_index = 4
 z_as_relative = false
 position = Vector2(705, 391)
-texture = ExtResource("30_0fqrc")
-script = ExtResource("35_uuf1y")
+texture = ExtResource("34_psew4")
+script = ExtResource("35_3h8am")
 main_node = NodePath("../../..")
 
 [node name="ClosedGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
@@ -681,7 +681,7 @@ offset_left = -150.0
 offset_top = -100.0
 offset_right = 150.0
 offset_bottom = 172.0
-theme = ExtResource("34_2f41l")
+theme = ExtResource("33_t1ua5")
 theme_override_colors/default_color = Color(0.341176, 0.282353, 0.282353, 1)
 bbcode_enabled = true
 text = "[center]
@@ -876,8 +876,8 @@ z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]
