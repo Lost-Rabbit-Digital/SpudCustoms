@@ -1,8 +1,8 @@
 # tutorial.dtl
 [style name="speaker_textbox_style"]
 [music path="res://assets/audio/ambient/1_wind_outside.wav" fade="2.0" volume="-5.0" bus="Music"]
-[background arg="res://assets/narrative/checkpoint_interior.png" fade="2.0"]
-join narrator center [z_index="1"]
+[background arg="res://assets/narrative/checkpoint_interior.png" fade="0.0"]
+join narrator [z_index="1"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 narrator: Welcome to Spud Customs Training!
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
@@ -56,7 +56,7 @@ narrator: Remember, each runner that gets through will count as a strike against
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 narrator: Too many strikes, and your shift will end prematurely.
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-narrator: Each shift has a Quota of potatoes you need to process to finish your day.
+narrator: Each shift has a quota of potatoes you need to process to finish your day.
 
 [background arg="res://assets/narrative/checkpoint_interior.png" fade="2.0"]
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
