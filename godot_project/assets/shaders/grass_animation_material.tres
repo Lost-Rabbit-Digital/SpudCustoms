@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c1fljl8m4j1w1"]
+
+[ext_resource type="Shader" uid="uid://48idfy4u3el8" path="res://assets/shaders/grass_animation.gdshader" id="1_t5fxd"]
+
+[resource]
+shader = ExtResource("1_t5fxd")
+shader_parameter/wind_speed = 1.0
+shader_parameter/wind_strength = 1.0
+shader_parameter/individual_blades = true
