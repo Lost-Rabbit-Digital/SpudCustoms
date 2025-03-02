@@ -4,6 +4,6 @@
 
 [resource]
 shader = ExtResource("1_t5fxd")
-shader_parameter/wind_speed = 2.0
+shader_parameter/wave_speed = 1.0
 shader_parameter/pixel_offset = 1
-shader_parameter/individual_blades = true
+shader_parameter/wave_width = 1.0
