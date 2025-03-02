@@ -16,3 +16,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_fgmk2")]([])
+metadata/_latest_layer = ""

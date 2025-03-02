@@ -80,7 +80,7 @@ directories/dtl_directory={
 "tutorial": "res://assets/narrative/tutorial.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://assets/styles/dialogic_default_style.tres"]
+layout/style_list=["res://assets/styles/speaker_textbox_style.tres"]
 layout/default_style=""
 variables={
 "ending_choice": "none",
@@ -124,6 +124,7 @@ translation/translation_folder=""
 translation/save_mode=0
 translation/add_separator=false
 audio/max_channels=4.0
+portraits/default_portrait=""
 
 [display]
 

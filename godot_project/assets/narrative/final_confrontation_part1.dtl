@@ -1,4 +1,5 @@
 # final_confrontation_part1.dtl
+[style name="speaker_textbox_style"]
 [music path="res://assets/audio/ambient/2_wind_house.wav" fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/checkpoint_chaos.png" fade="2.0"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]

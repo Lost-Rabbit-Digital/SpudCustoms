@@ -1,4 +1,5 @@
 # Start intro_sequence.dtl
+[style name="speaker_textbox_style"]
 [music path="res://assets/audio/ambient/wind_outside.wav" fade="2.0" volume="1.0" bus="Music"]
 [background arg="res://assets/narrative/nation_of_spud_1.png" fade="0.0"]
 [sound path="res://assets/audio/talking/typing_on_old_keyboard_2.wav" volume="-15.0" bus="SFX"]

@@ -1,4 +1,5 @@
 # shift1_end.dtl
+[style name="speaker_textbox_style"]
 [music path="res://assets/audio/ambient/horror_drone_23.wav" fade="2.0" volume="-5.0" bus="Music"]
 
 [background arg="res://assets/narrative/root_reserve_customs_office.png" fade="2.0"]
