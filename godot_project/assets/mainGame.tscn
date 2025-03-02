@@ -34,10 +34,10 @@
 [ext_resource type="Script" uid="uid://b2rvsx4gf3s8c" path="res://assets/systems/StampCrossbarSystem.gd" id="29_ledsw"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="30_0y21p"]
 [ext_resource type="Texture2D" uid="uid://bxn3434177kfd" path="res://assets/documents/laws_receipt.png" id="31_le8sb"]
-[ext_resource type="Script" path="res://assets/law_receipt.gd" id="32_8rxeq"]
 [ext_resource type="Theme" path="res://assets/dos_theme.tres" id="33_t1ua5"]
 [ext_resource type="Texture2D" uid="uid://cfkvlvqhnapxc" path="res://assets/documents/customs_guide/customs_guide_open_2.png" id="34_psew4"]
 [ext_resource type="Script" path="res://assets/guide.gd" id="35_3h8am"]
+[ext_resource type="Script" uid="uid://dfofd8lp0igu2" path="res://assets/systems/law_receipt.gd" id="35_ledsw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sihlh"]
 size = Vector2(756.5, 214)
@@ -630,7 +630,7 @@ texture = ExtResource("30_0y21p")
 z_as_relative = false
 position = Vector2(122, 528)
 texture = ExtResource("31_le8sb")
-script = ExtResource("32_8rxeq")
+script = ExtResource("35_ledsw")
 
 [node name="ClosedReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements/LawReceipt"]
 visible = false
