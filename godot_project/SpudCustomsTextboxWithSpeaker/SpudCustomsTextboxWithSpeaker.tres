@@ -30,7 +30,7 @@ overrides = {}
 script = ExtResource("1_ivxep")
 scene = ExtResource("4_4t34a")
 overrides = {
-"box_panel": "\"default_stylebox.tres\""
+"box_panel": "\"res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/default_stylebox.tres\""
 }
 
 [sub_resource type="Resource" id="Resource_1xyyx"]
@@ -73,4 +73,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_ivxep")]([])
-metadata/_latest_layer = "10"
+metadata/_latest_layer = "12"
