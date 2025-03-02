@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogicStyle" load_steps=17 format=3 uid="uid://cigits8mpbdol"]
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=18 format=3 uid="uid://cigits8mpbdol"]
 
 [ext_resource type="Script" uid="uid://j8ec84i4qra0" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_7gtpk"]
 [ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_xjfyw"]
@@ -10,27 +10,31 @@
 [ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="8_w4hdv"]
 [ext_resource type="Script" uid="uid://bicumqivgl7bc" path="res://addons/dialogic/Resources/dialogic_style.gd" id="9_egddq"]
 
-[sub_resource type="Resource" id="Resource_036fq"]
+[sub_resource type="Resource" id="Resource_q2dtk"]
+script = ExtResource("1_7gtpk")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_knfjy"]
 script = ExtResource("1_7gtpk")
 scene = ExtResource("2_xjfyw")
 overrides = {}
 
-[sub_resource type="Resource" id="Resource_5485j"]
+[sub_resource type="Resource" id="Resource_8rtes"]
 script = ExtResource("1_7gtpk")
 scene = ExtResource("3_sam2y")
 overrides = {}
 
-[sub_resource type="Resource" id="Resource_3ua7a"]
+[sub_resource type="Resource" id="Resource_ct4ov"]
 script = ExtResource("1_7gtpk")
 scene = ExtResource("4_aqvcl")
 overrides = {}
 
-[sub_resource type="Resource" id="Resource_vsdrk"]
+[sub_resource type="Resource" id="Resource_mkqr7"]
 script = ExtResource("1_7gtpk")
 scene = ExtResource("5_rxml6")
 overrides = {}
 
-[sub_resource type="Resource" id="Resource_vs5j6"]
+[sub_resource type="Resource" id="Resource_ketjq"]
 script = ExtResource("1_7gtpk")
 scene = ExtResource("6_t1e3b")
 overrides = {
@@ -40,12 +44,12 @@ overrides = {
 "sounds_volume": "10.0"
 }
 
-[sub_resource type="Resource" id="Resource_nmxoi"]
+[sub_resource type="Resource" id="Resource_ebagh"]
 script = ExtResource("1_7gtpk")
 scene = ExtResource("7_y3c6m")
 overrides = {}
 
-[sub_resource type="Resource" id="Resource_16spt"]
+[sub_resource type="Resource" id="Resource_lmdse"]
 script = ExtResource("1_7gtpk")
 scene = ExtResource("8_w4hdv")
 overrides = {}
@@ -53,8 +57,17 @@ overrides = {}
 [resource]
 script = ExtResource("9_egddq")
 name = "dialogic_default_style"
-base_overrides = {
-"global_bg_color": "Color(0.298039, 0.2, 0.113725, 0.901961)"
+layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16"])
+layer_info = {
+"": SubResource("Resource_q2dtk"),
+"10": SubResource("Resource_knfjy"),
+"11": SubResource("Resource_8rtes"),
+"12": SubResource("Resource_ct4ov"),
+"13": SubResource("Resource_mkqr7"),
+"14": SubResource("Resource_ketjq"),
+"15": SubResource("Resource_ebagh"),
+"16": SubResource("Resource_lmdse")
 }
-layers = Array[ExtResource("1_7gtpk")]([SubResource("Resource_036fq"), SubResource("Resource_5485j"), SubResource("Resource_3ua7a"), SubResource("Resource_vsdrk"), SubResource("Resource_vs5j6"), SubResource("Resource_nmxoi"), SubResource("Resource_16spt")])
-metadata/_latest_layer = 2
+base_overrides = {}
+layers = Array[ExtResource("1_7gtpk")]([])
+metadata/_latest_layer = "12"
