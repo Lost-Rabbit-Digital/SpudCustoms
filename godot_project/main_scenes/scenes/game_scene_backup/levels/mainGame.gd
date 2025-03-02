@@ -359,7 +359,10 @@ func setup_spawn_timer():
 	spawn_timer = $SystemManagers/Timers/SpawnTimer
 	spawn_timer.set_wait_time(1.0)
 	spawn_timer.set_one_shot(false)
-	spawn_timer.connect("timeout", Callable(self, "_on_spawn_timer_timeout"))
+	if spawn_timer.is_connected("timeout", Callable(self, "_on_spawn_timer_timeout")):
+		print("NOTE: spawn_timer signal is already connected!")
+	else:
+		spawn_timer.connect("timeout", Callable(self, "_on_spawn_timer_timeout"))
 	# add_child(spawn_timer)
 	spawn_timer.start()
 

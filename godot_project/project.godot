@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Spud Customs"
-config/version="1.0.1"
+config/version="1.0.2"
 config/tags=PackedStringArray("active", "steam")
 run/main_scene="uid://cyqy6dvynho67"
 config/features=PackedStringArray("4.4", "Forward Plus")
@@ -129,6 +129,7 @@ audio/max_channels=4.0
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/size/mode=3
 window/size/borderless=true
 window/size/window_width_override=1920
 window/size/window_height_override=1080

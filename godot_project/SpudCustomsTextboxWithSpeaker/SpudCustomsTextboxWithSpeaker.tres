@@ -30,7 +30,7 @@ overrides = {}
 script = ExtResource("1_ivxep")
 scene = ExtResource("4_4t34a")
 overrides = {
-"box_panel": "\"default_stylebox.tres\""
+"box_panel": "\"res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/default_stylebox.tres\""
 }
 
 [sub_resource type="Resource" id="Resource_1xyyx"]
@@ -41,7 +41,11 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_oe7kx"]
 script = ExtResource("1_ivxep")
 scene = ExtResource("6_ep5sf")
-overrides = {}
+overrides = {
+"sounds_focus": "\"res://addons/dialogic/Example Assets/typing_sfx/typing_4.wav\"",
+"sounds_hover": "\"res://addons/dialogic/Example Assets/typing_sfx/typing_2.wav\"",
+"sounds_pressed": "\"res://addons/dialogic/Example Assets/typing_sfx/typing_1.wav\""
+}
 
 [sub_resource type="Resource" id="Resource_epcsy"]
 script = ExtResource("1_ivxep")
