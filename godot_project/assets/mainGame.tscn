@@ -464,6 +464,7 @@ parameters/looping = true
 
 [node name="WindSFX" type="AudioStreamPlayer2D" parent="SystemManagers/AudioManager"]
 stream = ExtResource("13_s78ei")
+autoplay = true
 
 [node name="QueueManager" type="Node2D" parent="SystemManagers"]
 script = ExtResource("14_ledsw")
