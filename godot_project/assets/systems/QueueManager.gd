@@ -1,6 +1,6 @@
 extends Node2D
 
-var PotatoPerson = preload("res://assets/PotatoPerson.tscn")
+var PotatoPerson = preload("res://assets/level/PotatoPerson.tscn")
 var path: Path2D
 var curve: Curve2D
 var max_potatoes: int

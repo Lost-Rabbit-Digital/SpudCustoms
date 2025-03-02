@@ -76,7 +76,7 @@ var is_in_guide_tutorial = true
 @onready var enter_office_path = $Gameplay/Paths/EnterOfficePath
 @onready var stats_manager = $SystemManagers/StatsManager
 var shift_stats: ShiftStats
-@onready var shift_summary = preload("res://assets/ShiftSummaryScreen.tscn")
+@onready var shift_summary = preload("res://assets/systems/ShiftSummaryScreen.tscn")
 
 ## Label used to display alerts and notifications to the player
 @onready var alert_label = $UI/Labels/MarginContainer/AlertLabel

@@ -26,12 +26,12 @@
 [ext_resource type="Texture2D" uid="uid://cvtdlyxlb5qaw" path="res://assets/suspect_panel/suspect_panel_document_slot.png" id="21_bm1ld"]
 [ext_resource type="Texture2D" uid="uid://b2icltv7xkk6j" path="res://assets/level/CustomsDesk.png" id="22_27mci"]
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="24_taloi"]
+[ext_resource type="Script" path="res://assets/StampCrossbarSystem.gd" id="26_0drik"]
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://assets/systems/character_generator.tscn" id="26_5t041"]
 [ext_resource type="Texture2D" uid="uid://y3iyyicwxtsl" path="res://assets/documents/closed_passport_small/closed_passport_small.png" id="27_28s4i"]
 [ext_resource type="PackedScene" uid="uid://be3lucg3f3a3c" path="res://assets/systems/StampBarController.tscn" id="28_6qfpw"]
 [ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://assets/give_prompt_dialogue.png" id="28_xojn2"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://assets/fonts/windows_command_prompt.ttf" id="29_fjg4h"]
-[ext_resource type="Script" uid="uid://b2rvsx4gf3s8c" path="res://assets/systems/StampCrossbarSystem.gd" id="29_ledsw"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="30_0y21p"]
 [ext_resource type="Texture2D" uid="uid://bxn3434177kfd" path="res://assets/documents/laws_receipt.png" id="31_le8sb"]
 [ext_resource type="Script" path="res://assets/law_receipt.gd" id="32_8rxeq"]
@@ -551,9 +551,9 @@ offset_bottom = 40.0
 stamp_system = NodePath("../StampCrossbarSystem")
 
 [node name="StampCrossbarSystem" type="Node2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("passport", "stats_manager")]
-script = ExtResource("29_ledsw")
+script = ExtResource("26_0drik")
 passport = NodePath("../Passport")
-stats_manager = NodePath("../../../SystemManagers/StatsManager")
+stats_manager = NodePath("")
 
 [node name="PassportSpawnPoints" type="Node2D" parent="Gameplay/InteractiveElements"]
 
