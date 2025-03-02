@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dyw027cr3tlxe"
-path="res://.godot/imported/next.svg-d06a27f063e68cea998c90e52fd38308.ctex"
+path="res://.godot/imported/next.svg-4c0a1ebd5ad2974c03932d40756a2af4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://VisualNovelTextbox/next.svg"
-dest_files=["res://.godot/imported/next.svg-d06a27f063e68cea998c90e52fd38308.ctex"]
+source_file="res://assets/styles/VisualNovelTextbox/next.svg"
+dest_files=["res://.godot/imported/next.svg-4c0a1ebd5ad2974c03932d40756a2af4.ctex"]
 
 [params]
 
