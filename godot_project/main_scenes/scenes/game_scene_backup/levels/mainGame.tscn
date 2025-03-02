@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://bjx1qjoxul45k"]
+[gd_scene load_steps=73 format=3 uid="uid://bjx1qjoxul45k"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://main_scenes/scenes/game_scene_backup/levels/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://assets/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
@@ -9,6 +9,8 @@
 [ext_resource type="Material" uid="uid://c1fljl8m4j1w1" path="res://assets/shaders/grass_animation_material.tres" id="6_b5n3c"]
 [ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_41g47"]
 [ext_resource type="Texture2D" uid="uid://ds2lwggt7nk5l" path="res://assets/level/grass_texture.png" id="7_qvpbt"]
+[ext_resource type="Material" uid="uid://cxhxsjojddi0p" path="res://assets/shaders/window/window_cover_material.tres" id="8_0hfru"]
+[ext_resource type="Texture2D" uid="uid://dllp1qtb5fpbu" path="res://assets/level/window_covers.png" id="8_vkwy1"]
 [ext_resource type="FontVariation" uid="uid://t3ii3pbmg2bo" path="res://assets/fonts/Modern_DOS_Font_Variation.tres" id="8_ybo26"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="9_gvwms"]
 [ext_resource type="Script" uid="uid://mm8kba4qcarc" path="res://assets/systems/QueueManager.gd" id="11_qilia"]
@@ -270,6 +272,10 @@ texture = ExtResource("5_vkwy1")
 material = ExtResource("6_b5n3c")
 position = Vector2(49, 6)
 texture = ExtResource("7_qvpbt")
+
+[node name="WindowCovers" type="Sprite2D" parent="UI/WorldPanel"]
+material = ExtResource("8_0hfru")
+texture = ExtResource("8_vkwy1")
 
 [node name="Background" type="Sprite2D" parent="UI"]
 z_index = 8
