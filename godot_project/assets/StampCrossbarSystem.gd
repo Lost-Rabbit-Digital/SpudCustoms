@@ -32,11 +32,11 @@ func _input(event):
 
 func play_random_stamp_sound():
 	var stamp_sounds = [
-		preload("res://assets/audio/stamp_sound_1.mp3"),
-		preload("res://assets/audio/stamp_sound_2.mp3"),
-		preload("res://assets/audio/stamp_sound_3.mp3"),
-		preload("res://assets/audio/stamp_sound_4.mp3"),
-		preload("res://assets/audio/stamp_sound_5.mp3")
+		preload("res://assets/audio/mechanical/stamp_sound_1.mp3"),
+		preload("res://assets/audio/mechanical/stamp_sound_2.mp3"),
+		preload("res://assets/audio/mechanical/stamp_sound_3.mp3"),
+		preload("res://assets/audio/mechanical/stamp_sound_4.mp3"),
+		preload("res://assets/audio/mechanical/stamp_sound_5.mp3")
 	]
 	if sfx_player and !sfx_player.playing:
 		sfx_player.stream = stamp_sounds.pick_random()
