@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://dfe1s16qojpat"]
+[gd_scene load_steps=69 format=3 uid="uid://qojqclroyfrm"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://main_scenes/scenes/game_scene_backup/levels/mainGame.gd" id="1_7s01m"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://assets/systems/BorderRunnerSystem.tscn" id="2_ledsw"]
@@ -34,9 +34,7 @@
 [ext_resource type="Script" uid="uid://b2rvsx4gf3s8c" path="res://assets/systems/StampCrossbarSystem.gd" id="29_ledsw"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="30_0y21p"]
 [ext_resource type="Texture2D" uid="uid://bxn3434177kfd" path="res://assets/documents/laws_receipt.png" id="31_le8sb"]
-[ext_resource type="Theme" path="res://assets/dos_theme.tres" id="33_t1ua5"]
 [ext_resource type="Texture2D" uid="uid://cfkvlvqhnapxc" path="res://assets/documents/customs_guide/customs_guide_open_2.png" id="34_psew4"]
-[ext_resource type="Script" path="res://assets/guide.gd" id="35_3h8am"]
 [ext_resource type="Script" uid="uid://dfofd8lp0igu2" path="res://assets/systems/law_receipt.gd" id="35_ledsw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sihlh"]
@@ -648,7 +646,6 @@ offset_left = -88.0
 offset_top = -107.0
 offset_right = 89.0
 offset_bottom = 101.0
-theme = ExtResource("33_t1ua5")
 theme_override_colors/default_color = Color(0.341176, 0.282353, 0.282353, 1)
 bbcode_enabled = true
 text = "[u]Laws[/u]
@@ -657,14 +654,12 @@ Spuddington Potatoes banned.
 Potatoes must be fresh."
 horizontal_alignment = 1
 
-[node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
+[node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 visible = false
 z_index = 4
 z_as_relative = false
 position = Vector2(705, 391)
 texture = ExtResource("34_psew4")
-script = ExtResource("35_3h8am")
-main_node = NodePath("../../..")
 
 [node name="ClosedGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
 visible = false
@@ -681,7 +676,6 @@ offset_left = -150.0
 offset_top = -100.0
 offset_right = 150.0
 offset_bottom = 172.0
-theme = ExtResource("33_t1ua5")
 theme_override_colors/default_color = Color(0.341176, 0.282353, 0.282353, 1)
 bbcode_enabled = true
 text = "[center]
@@ -877,8 +871,8 @@ z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]

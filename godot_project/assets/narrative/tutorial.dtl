@@ -1,6 +1,7 @@
 # tutorial.dtl
 [style name="speaker_textbox_style"]
 [music path="res://assets/audio/ambient/1_wind_outside.wav" fade="2.0" volume="-5.0" bus="Music"]
+
 [background arg="res://assets/narrative/checkpoint_interior.png" fade="2.0"]
 join narrator center [z_index="1"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
@@ -9,42 +10,42 @@ narrator: Welcome to Spud Customs Training!
 narrator: Your duty is to process incoming potatoes at our border checkpoint.
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 narrator: This training will teach you the essential skills needed to protect Spud's borders.
-
-[background arg="res://assets/narrative/checkpoint_interior.png" fade="2.0"]
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 narrator: As a Customs Officer, you'll need to check documents carefully.
+
+[background arg="res://assets/narrative/mega_phone_example.png" fade="2.0"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
-narrator: Look for expired dates, incorrect information, or signs of forgery.
+narrator: You'll signal each potato to approach your office by tapping the megaphone.
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+
+[background arg="res://assets/narrative/suspect_panel_example.png" fade="2.0"]
+narrator: Take their documents and look for expired dates, incorrect information, or signs of forgery.
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 narrator: Approve those with valid papers and reject those without.
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 narrator: Use your stamps to mark documents as approved or rejected.
-
-[background arg="res://assets/narrative/gameplay.png" fade="2.0"]
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-narrator: Your station includes document inspection tools and defense systems.
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+
+[background arg="res://assets/narrative/stamp_bar_example.png" fade="2.0"]
 narrator: Your desk has stamps for marking documents and a missile launcher to stop runners.
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 narrator: To use a stamp, expand the stamp tray and drag a document underneath, then click the stamp.
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 narrator: Be sure to place your documents in the designated areas underneath your stamps.
-
-[background arg="res://assets/narrative/intro_sequence_gameplay_shot.png" fade="2.0"]
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+
+[background arg="res://assets/narrative/border_runner_example.png" fade="2.0"]
 narrator: Sometimes, potatoes will try to rush past your checkpoint.
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 narrator: Click on these "runners" to launch a missile and stop them.
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 narrator: Remember, each runner that gets through will count as a strike against you.
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
-narrator: Too many strikes, and your shift will end prematurely.
 
-[background arg="res://assets/narrative/night_gameplay.png" fade="2.0"]
+[background arg="res://assets/narrative/strikes_quota_example.png" fade="2.0"]
+narrator: Too many strikes, and your shift will end prematurely.
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 narrator: Each shift has a quota of potatoes you need to process.
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
-narrator: Keep track of your quota progress at the top of the screen.
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 narrator: Process potatoes correctly to avoid strikes.
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]

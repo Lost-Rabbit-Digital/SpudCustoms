@@ -24,7 +24,7 @@ func start_intro_sequence():
 		return
 		
 	dialogue_active = true
-	var timeline = Dialogic.start("res://assets/narrative/intro_sequence.dtl")
+	var timeline = Dialogic.start("res://assets/narrative/tutorial.dtl")
 	add_child(timeline)
 	Dialogic.timeline_ended.connect(_on_intro_dialogue_finished)
 	
@@ -39,11 +39,11 @@ func start_shift_dialogue():
 		1:
 			# Debugging Purposes
 			#timeline = Dialogic.start("final_confrontation")
-			timeline = Dialogic.start("shift1_start") 
+			timeline = Dialogic.start("shift1_intro") 
 		2: 
-			timeline = Dialogic.start("shift2_start")
+			timeline = Dialogic.start("shift2_intro")
 		3:
-			timeline = Dialogic.start("shift3_start")
+			timeline = Dialogic.start("shift3_intro")
 		_:
 			timeline = Dialogic.start("final_confrontation")
 			
