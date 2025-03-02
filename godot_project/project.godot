@@ -60,7 +60,6 @@ directories/dtl_directory={
 "final_confrontation_part2": "res://assets/narrative/final_confrontation_part2.dtl",
 "final_confrontation_part3": "res://assets/narrative/final_confrontation_part3.dtl",
 "generic_shift_start": "res://assets/narrative/generic_shift_start.dtl",
-"intro_sequence": "res://assets/narrative/intro_sequence.dtl",
 "shift10_intro": "res://assets/narrative/shift10_intro.dtl",
 "shift1_end": "res://assets/narrative/shift1_end.dtl",
 "shift1_intro": "res://assets/narrative/shift1_intro.dtl",

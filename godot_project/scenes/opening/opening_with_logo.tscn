@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=3 uid="uid://cyqy6dvynho67"]
+
+[ext_resource type="PackedScene" uid="uid://sikc02ddepyt" path="res://addons/maaacks_game_template/base/scenes/opening/opening.tscn" id="1_tjbcx"]
+[ext_resource type="Script" uid="uid://upkolvghgj67" path="res://scenes/opening/opening.gd" id="2_up6er"]
+[ext_resource type="Texture2D" uid="uid://bqhndyh01bptg" path="res://assets/images/logo_vertical_color_dark.png" id="3_powqu"]
+[ext_resource type="Texture2D" uid="uid://cjavqa5yfa4g2" path="res://assets/splashscreen.png" id="4_0hisi"]
+[ext_resource type="AudioStream" uid="uid://dotnlxhuekimg" path="res://assets/music/opening_wonderlust_intensity.wav" id="5_r5wfu"]
+
+[node name="Opening" instance=ExtResource("1_tjbcx")]
+script = ExtResource("2_up6er")
+next_scene = "uid://c63y6b25bs4bk"
+images = Array[Texture2D]([ExtResource("3_powqu"), ExtResource("4_0hisi")])
+fade_in_time = 1.0
+fade_out_time = 1.0
+visible_time = 2.0
+
+[node name="BackgroundMusicPlayer" parent="." index="0"]
+stream = ExtResource("5_r5wfu")

@@ -1,0 +1,71 @@
+[gd_scene load_steps=12 format=3 uid="uid://1mf0og1h885p"]
+
+[ext_resource type="Script" uid="uid://v5slsl45gpso" path="res://scripts/systems/BorderRunnerSystem.gd" id="1_8vf2f"]
+[ext_resource type="Script" uid="uid://ciq3x8sbykb0h" path="res://scripts/systems/ExplosionVFX.gd" id="2_1snt0"]
+[ext_resource type="AudioStream" uid="uid://b6wmneh3xy7l5" path="res://assets/missiles/Doom Braaam.wav" id="3_8vf2f"]
+[ext_resource type="AudioStream" uid="uid://cf65vwoewhpck" path="res://assets/missiles/Balloon Explosion A.wav" id="4_d84f0"]
+[ext_resource type="AudioStream" uid="uid://dl551k0d7e4ga" path="res://assets/missiles/button press and missile launch.wav" id="5_cevxq"]
+[ext_resource type="Texture2D" uid="uid://d0e44jundomwj" path="res://assets/missiles/missile_sprite.png" id="6_og870"]
+[ext_resource type="Script" uid="uid://bvpwqkpdhd3kl" path="res://scripts/systems/CraterSystem.gd" id="7_1snt0"]
+[ext_resource type="Texture2D" uid="uid://6tlcaks8nuv7" path="res://assets/missiles/smoke_particle.png" id="7_3vtb4"]
+
+[sub_resource type="Curve" id="Curve_3vtb4"]
+_data = [Vector2(0, 0.129763), 0.0, 0.0, 0, 0, Vector2(1, 0.236869), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_d84f0"]
+offsets = PackedFloat32Array(0.37464, 0.426513, 0.567723)
+colors = PackedColorArray(1, 1, 1, 1, 0.641791, 0.641791, 0.641791, 1, 0, 0, 0, 1)
+
+[sub_resource type="Curve" id="Curve_cevxq"]
+min_value = -1.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="BorderRunnerSystem" type="Node2D"]
+script = ExtResource("1_8vf2f")
+runner_chance = 0.223
+missile_speed = 500.0
+missile_start_height = 400.0
+
+[node name="ExplosionVFX" type="Node2D" parent="."]
+z_index = 11
+script = ExtResource("2_1snt0")
+num_particles = 400
+particle_size = 3
+
+[node name="AlarmSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8vf2f")
+volume_db = -5.0
+
+[node name="ExplosionSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_d84f0")
+
+[node name="MissileSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_cevxq")
+
+[node name="MissileSprite" type="Sprite2D" parent="."]
+z_index = 10
+z_as_relative = false
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_og870")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="MissileSprite"]
+show_behind_parent = true
+position = Vector2(0, 180)
+amount = 25
+lifetime = 0.1
+texture = ExtResource("7_3vtb4")
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+scale_amount_curve = SubResource("Curve_3vtb4")
+color = Color(0.937834, 0.536124, 0, 1)
+color_ramp = SubResource("Gradient_d84f0")
+hue_variation_min = -0.02
+hue_variation_max = 0.02
+hue_variation_curve = SubResource("Curve_cevxq")
+
+[node name="CraterSystem" type="Node2D" parent="."]
+script = ExtResource("7_1snt0")
+crater_fade_time = 10.0
