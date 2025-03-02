@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cxhxsjojddi0p"]
+
+[ext_resource type="Shader" uid="uid://c5nxeno38y2p5" path="res://assets/shaders/window/window_cover.gdshader" id="1_eqcu3"]
+
+[resource]
+shader = ExtResource("1_eqcu3")
+shader_parameter/interval = 1.0
+shader_parameter/randomness = 0.5
+shader_parameter/smoothness = 0.2
