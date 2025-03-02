@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c07b46wsf1fc1"]
+
+[ext_resource type="Script" uid="uid://dfd5g4ck28k0y" path="res://assets/systems/PotatoPerson.gd" id="1_ftltf"]
+[ext_resource type="Texture2D" uid="uid://cv3hew72jdcn" path="res://assets/potatoes/RussetBurbank_SmallSilhouette.png" id="2_p5u1t"]
+
+[node name="PotatoPerson" type="Sprite2D" groups=["PotatoPerson"]]
+z_index = 7
+z_as_relative = false
+texture = ExtResource("2_p5u1t")
+script = ExtResource("1_ftltf")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvh5ru1bb2n0j"
-path="res://.godot/imported/miniNuke_particle_texture.png-a6e32f63c6107459d6d80fda24300017.ctex"
+uid="uid://crn31gxjxc6x"
+path="res://.godot/imported/Russet_M_Face_64x34.png-96faefc27378bbec485addf70db7bd7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/miniNuke_particle_texture.png"
-dest_files=["res://.godot/imported/miniNuke_particle_texture.png-a6e32f63c6107459d6d80fda24300017.ctex"]
+source_file="res://assets/potatoes/Russet_M_Face_64x34.png"
+dest_files=["res://.godot/imported/Russet_M_Face_64x34.png-96faefc27378bbec485addf70db7bd7e.ctex"]
 
 [params]
 

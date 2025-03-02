@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bdqcr5ikdw1hg" path="res://main_scenes/scenes/credits_backup/credits.tscn" id="4_nadac"]
 [ext_resource type="AudioStream" uid="uid://dxl4o6it672u4" path="res://assets/music/faded_ambient_defeat_main_menu.wav" id="5_tgepm"]
 [ext_resource type="Texture2D" uid="uid://ckl4hp0qicyf6" path="res://assets/narrative/border_chaos.png" id="6_vm205"]
-[ext_resource type="LabelSettings" uid="uid://btxckswf5lkoy" path="res://assets/PixelHeader.tres" id="7_6l6g8"]
-[ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://assets/dos_theme.tres" id="7_vdqtt"]
+[ext_resource type="LabelSettings" uid="uid://btxckswf5lkoy" path="res://assets/styles/PixelHeader.tres" id="7_6l6g8"]
+[ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://assets/styles/dos_theme.tres" id="7_vdqtt"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"

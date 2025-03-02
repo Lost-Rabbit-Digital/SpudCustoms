@@ -21,18 +21,18 @@ config/icon="res://assets/potatoes/heads/russet_burbank_head.png"
 
 [audio]
 
-buses/default_bus_layout="res://assets/default_bus_layout.tres"
+buses/default_bus_layout="res://assets/styles/default_bus_layout.tres"
 
 [autoload]
 
-Global="*res://assets/Global.gd"
-Guide="*res://assets/guide.gd"
+Global="*res://assets/autoload/Global.gd"
+Guide="*res://assets/autoload/guide.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 AppConfig="*res://addons/maaacks_game_template/base/scenes/autoloads/app_config.tscn"
 SceneLoader="*res://addons/maaacks_game_template/base/scenes/autoloads/scene_loader.tscn"
 ProjectMusicController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_music_controller.tscn"
 ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
-LawValidator="*res://assets/LawValidator.gd"
+LawValidator="*res://assets/autoload/LawValidator.gd"
 
 [debug]
 

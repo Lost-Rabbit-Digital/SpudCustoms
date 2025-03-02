@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cu6xbgla0qqqe" path="res://assets/stamps/stamp_crossbar.png" id="1_06t3i"]
 [ext_resource type="Texture2D" uid="uid://byj3e8pmw17no" path="res://assets/stamps/stamp_crossbar_expand_button.png" id="1_7vg4b"]
-[ext_resource type="Script" uid="uid://clc5w67gry7ki" path="res://assets/StampBarController.gd" id="1_u0xhl"]
+[ext_resource type="Script" uid="uid://clc5w67gry7ki" path="res://assets/systems/StampBarController.gd" id="1_u0xhl"]
 [ext_resource type="Texture2D" uid="uid://c0dbfc2uut8qn" path="res://assets/stamps/stamp_shadow.png" id="2_5tljm"]
 [ext_resource type="Texture2D" uid="uid://dubo3sdxx8chn" path="res://assets/stamps/approval_stamp_3.png" id="4_u0xhl"]
 [ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="5_35dlh"]

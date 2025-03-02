@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://be3lucg3f3a3c"]
 
-[ext_resource type="Script" uid="uid://clc5w67gry7ki" path="res://assets/StampBarController.gd" id="1_bd37c"]
+[ext_resource type="Script" uid="uid://clc5w67gry7ki" path="res://assets/systems/StampBarController.gd" id="1_bd37c"]
 [ext_resource type="Texture2D" uid="uid://byj3e8pmw17no" path="res://assets/stamps/stamp_crossbar_expand_button.png" id="2_6a1oe"]
 [ext_resource type="Texture2D" uid="uid://cwg0ee0w1u5ew" path="res://assets/stamps/receipt_printer.png" id="3_6a1oe"]
 [ext_resource type="Texture2D" uid="uid://cu6xbgla0qqqe" path="res://assets/stamps/stamp_crossbar.png" id="3_i7p4h"]

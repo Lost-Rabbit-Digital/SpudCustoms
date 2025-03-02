@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drexf7hn4dl2d"
-path="res://.godot/imported/Russet_W_Face_64x34.png-ea34f484e6fa4e3f02905969f1ae5ba0.ctex"
+uid="uid://djaxy21rejxhf"
+path="res://.godot/imported/Russet_Body_64x21.png-d2c062746daaba76abd6ccde1b60f516.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Russet_W_Face_64x34.png"
-dest_files=["res://.godot/imported/Russet_W_Face_64x34.png-ea34f484e6fa4e3f02905969f1ae5ba0.ctex"]
+source_file="res://assets/potatoes/Russet_Body_64x21.png"
+dest_files=["res://.godot/imported/Russet_Body_64x21.png-d2c062746daaba76abd6ccde1b60f516.ctex"]
 
 [params]
 
