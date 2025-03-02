@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bb8lmtt8f5yg4"
-path="res://.godot/imported/2_wind_house.wav-0d815a51f7b5cbb45b151c0b2665e6e7.sample"
+path="res://.godot/imported/wind_inside_1.wav-02fcd0bf2731e72c33e191e2f0ba5ccc.sample"
 
 [deps]
 
-source_file="res://assets/audio/ambient/2_wind_house.wav"
-dest_files=["res://.godot/imported/2_wind_house.wav-0d815a51f7b5cbb45b151c0b2665e6e7.sample"]
+source_file="res://assets/audio/ambient/wind_inside_1.wav"
+dest_files=["res://.godot/imported/wind_inside_1.wav-02fcd0bf2731e72c33e191e2f0ba5ccc.sample"]
 
 [params]
 

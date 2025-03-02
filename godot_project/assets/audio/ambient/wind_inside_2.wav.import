@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bfubsfyg3ycmv"
-path="res://.godot/imported/3_wind_cave.wav-f52c966455015cd7d519f2ae5d279f30.sample"
+path="res://.godot/imported/wind_inside_2.wav-903c84d2537ef6def9901def45641b53.sample"
 
 [deps]
 
-source_file="res://assets/audio/ambient/3_wind_cave.wav"
-dest_files=["res://.godot/imported/3_wind_cave.wav-f52c966455015cd7d519f2ae5d279f30.sample"]
+source_file="res://assets/audio/ambient/wind_inside_2.wav"
+dest_files=["res://.godot/imported/wind_inside_2.wav-903c84d2537ef6def9901def45641b53.sample"]
 
 [params]
 
