@@ -30,6 +30,7 @@ z_as_relative = false
 position = Vector2(-636, -104)
 
 [node name="ReceiptPrinter" type="Sprite2D" parent="StampBar"]
+visible = false
 z_index = 15
 z_as_relative = false
 position = Vector2(113, 437)
