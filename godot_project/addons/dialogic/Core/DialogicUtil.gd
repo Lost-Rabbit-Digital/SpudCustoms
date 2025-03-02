@@ -9,7 +9,9 @@ class_name DialogicUtil
 ## This method should be used instead of EditorInterface.get_editor_scale(), because if you use that
 ## it will run perfectly fine from the editor, but crash when the game is exported.
 static func get_editor_scale() -> float:
-	return get_dialogic_plugin().get_editor_interface().get_editor_scale()
+	if Engine.is_editor_hint():
+		return get_dialogic_plugin().get_editor_interface().get_editor_scale()
+	return 1.0
 
 
 ## Although this does in fact always return a EditorPlugin node,
@@ -77,11 +79,19 @@ static func _update_autoload_subsystem_access() -> void:
 
 	var script: Script = load("res://addons/dialogic/Core/DialogicGameHandler.gd")
 	var new_subsystem_access_list := "#region SUBSYSTEMS\n"
+	var subsystems_sorted := []
 
 	for indexer: DialogicIndexer in get_indexers(true, true):
 
 		for subsystem: Dictionary in indexer._get_subsystems().duplicate(true):
-			new_subsystem_access_list += '\nvar {name} := preload("{script}").new():\n\tget: return get_subsystem("{name}")\n'.format(subsystem)
+			subsystems_sorted.append(subsystem)
+
+	subsystems_sorted.sort_custom(func (a: Dictionary, b: Dictionary) -> bool:
+		return a.name < b.name
+	)
+
+	for subsystem: Dictionary in subsystems_sorted:
+		new_subsystem_access_list += '\nvar {name} := preload("{script}").new():\n\tget: return get_subsystem("{name}")\n'.format(subsystem)
 
 	new_subsystem_access_list += "\n#endregion"
 	script.source_code = RegEx.create_from_string(r"#region SUBSYSTEMS\n#*\n((?!#endregion)(.*\n))*#endregion").sub(script.source_code, new_subsystem_access_list)
@@ -518,6 +528,7 @@ static func setup_script_property_edit_node(property_info: Dictionary, value:Var
 		TYPE_DICTIONARY:
 			input = load("res://addons/dialogic/Editor/Events/Fields/field_dictionary.tscn").instantiate()
 			input.property_name = property_info["name"]
+			input.set_value(value)
 			input.value_changed.connect(_on_export_dict_submitted.bind(property_changed))
 		TYPE_OBJECT:
 			input = load("res://addons/dialogic/Editor/Common/hint_tooltip_icon.tscn").instantiate()
@@ -674,3 +685,135 @@ static func get_portrait_position_suggestions(search_text := "") -> Dictionary:
 			suggestions.erase(search_text)
 
 	return suggestions
+
+
+static func get_autoload_suggestions(filter:String="") -> Dictionary:
+	var suggestions := {}
+
+	for prop in ProjectSettings.get_property_list():
+		if prop.name.begins_with('autoload/'):
+			var autoload: String = prop.name.trim_prefix('autoload/')
+			suggestions[autoload] = {'value': autoload, 'tooltip':autoload, 'editor_icon': ["Node", "EditorIcons"]}
+			if filter.begins_with(autoload):
+				suggestions[filter] = {'value': filter, 'editor_icon':["GuiScrollArrowRight", "EditorIcons"]}
+	return suggestions
+
+
+static func get_autoload_script_resource(autoload_name:String) -> Script:
+	var script: Script
+	if autoload_name and ProjectSettings.has_setting('autoload/'+autoload_name):
+		var loaded_autoload := load(ProjectSettings.get_setting('autoload/'+autoload_name).trim_prefix('*'))
+
+		if loaded_autoload is PackedScene:
+			var packed_scene: PackedScene = loaded_autoload
+			script = packed_scene.instantiate().get_script()
+
+		else:
+			script = loaded_autoload
+	return script
+
+
+static func get_autoload_method_suggestions(filter:String, autoload_name:String) -> Dictionary:
+	var suggestions := {}
+
+	var script := get_autoload_script_resource(autoload_name)
+	if script:
+		for script_method in script.get_script_method_list():
+			if script_method.name.begins_with('@') or script_method.name.begins_with('_'):
+				continue
+			suggestions[script_method.name] = {'value': script_method.name, 'tooltip':script_method.name, 'editor_icon': ["Callable", "EditorIcons"]}
+
+	if not filter.is_empty():
+		suggestions[filter] = {'value': filter, 'editor_icon':["GuiScrollArrowRight", "EditorIcons"]}
+
+	return suggestions
+
+
+static func get_autoload_property_suggestions(filter:String, autoload_name:String) -> Dictionary:
+	var suggestions := {}
+	var script := get_autoload_script_resource(autoload_name)
+	if script:
+		for property in script.get_script_property_list():
+			if property.name.ends_with('.gd') or property.name.begins_with('_'):
+				continue
+			suggestions[property.name] = {'value': property.name, 'tooltip':property.name, 'editor_icon': ["MemberProperty", "EditorIcons"]}
+
+	return suggestions
+
+
+static func get_audio_bus_suggestions(filter:= "") -> Dictionary:
+	var bus_name_list := {}
+	for i in range(AudioServer.bus_count):
+		if i == 0:
+			bus_name_list[AudioServer.get_bus_name(i)] = {'value':''}
+		else:
+			bus_name_list[AudioServer.get_bus_name(i)] = {'value':AudioServer.get_bus_name(i)}
+	return bus_name_list
+
+
+static func get_audio_channel_suggestions(search_text:String) -> Dictionary:
+
+
+	var suggestions := {}
+	var channel_defaults := DialogicUtil.get_audio_channel_defaults()
+	var cached_names := DialogicResourceUtil.get_channel_list()
+
+	for i in channel_defaults.keys():
+		if not cached_names.has(i):
+			cached_names.append(i)
+
+	cached_names.sort()
+
+	for i in cached_names:
+		if i.is_empty():
+			continue
+
+		suggestions[i] = {'value': i}
+
+		if i in channel_defaults.keys():
+			suggestions[i]["editor_icon"] = ["ProjectList", "EditorIcons"]
+			suggestions[i]["tooltip"] = "A default channel defined in the settings."
+
+		else:
+			suggestions[i]["editor_icon"] = ["AudioStreamPlayer", "EditorIcons"]
+			suggestions[i]["tooltip"] = "A temporary channel without defaults."
+
+	return suggestions
+
+
+static func get_audio_channel_defaults() -> Dictionary:
+	return ProjectSettings.get_setting('dialogic/audio/channel_defaults', {
+		"": {
+			'volume': 0.0,
+			'audio_bus': '',
+			'fade_length': 0.0,
+			'loop': false,
+		},
+		"music": {
+			'volume': 0.0,
+			'audio_bus': '',
+			'fade_length': 0.0,
+			'loop': true,
+		}})
+
+
+static func validate_audio_channel_name(text: String) -> Dictionary:
+	var result := {}
+	var channel_name_regex := RegEx.create_from_string(r'(?<dash_only>^-$)|(?<invalid>[^\w-]{1})')
+	var matches := channel_name_regex.search_all(text)
+	var invalid_chars := []
+
+	for regex_match in matches:
+		if regex_match.get_string('dash_only'):
+			result['error_tooltip'] = "Channel name cannot be '-'."
+			result['valid_text'] = ''
+		else:
+			var invalid_char = regex_match.get_string('invalid')
+			if not invalid_char in invalid_chars:
+				invalid_chars.append(invalid_char)
+
+	if invalid_chars:
+		result['valid_text'] = channel_name_regex.sub(text, '', true)
+		result['error_tooltip'] = "Channel names cannot contain the following characters: " + "".join(invalid_chars)
+
+	return result

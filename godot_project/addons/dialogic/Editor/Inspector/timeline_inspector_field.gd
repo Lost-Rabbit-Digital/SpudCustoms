@@ -22,7 +22,7 @@ func _init() -> void:
 	field.fit_text_length = false
 	field.valid_file_drop_extension = ".dtl"
 	field.value_changed.connect(_on_field_value_changed)
-	field.get_suggestions_func = get_timeline_suggestions
+	field.suggestions_func = get_timeline_suggestions
 
 	button = Button.new()
 	hbox.add_child(button)
@@ -61,7 +61,7 @@ func _update_property() -> void:
 	updating = true
 	current_value = new_value
 	if current_value:
-		field.set_value(DialogicResourceUtil.get_unique_identifier(current_value.resource_path))
+		field.set_value(current_value.get_identifier())
 		button.show()
 	else:
 		button.hide()

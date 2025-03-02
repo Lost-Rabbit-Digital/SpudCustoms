@@ -25,8 +25,7 @@ focused_viewport = NodePath("../ViewportContainer/ConfigurableSubViewport")
 [node name="LevelLoader" type="Node" parent="." node_paths=PackedStringArray("level_container")]
 script = ExtResource("3_bu002")
 level_container = NodePath("../ViewportContainer/ConfigurableSubViewport")
-files = Array[String](["res://scenes/game_scene/levels/day_0_-_tutorial.tscn", "res://scenes/game_scene/levels/day_10_-_the_last_shift.tscn", "res://scenes/game_scene/levels/day_11_-_infiltration.tscn", "res://scenes/game_scene/levels/day_12_-_final_confrontation.tscn", "res://scenes/game_scene/levels/day_13_-_facility_escape.tscn", "res://scenes/game_scene/levels/day_1_-_first_day_on_the_job.tscn", "res://scenes/game_scene/levels/day_2_-_new_regulations.tscn", "res://scenes/game_scene/levels/day_3_-_increasing_pressure.tscn", "res://scenes/game_scene/levels/day_4_-_contraband_check.tscn", "res://scenes/game_scene/levels/day_5_-_midpoint_crisis.tscn", "res://scenes/game_scene/levels/day_6_-_increased_security.tscn", "res://scenes/game_scene/levels/day_7_-_under_scrutiny.tscn", "res://scenes/game_scene/levels/day_8_-_double_agents.tscn", "res://scenes/game_scene/levels/day_9_-_border_chaos.tscn"])
-directory = "res://scenes/game_scene/levels"
+files = Array[String](["res://scenes/game_scene/mainGame.tscn"])
 
 [node name="BackgroundMusicPlayer" parent="." instance=ExtResource("4_8084p")]
 
@@ -54,8 +53,8 @@ script = ExtResource("6_17ati")
 [node name="LevelListManager" type="Node" parent="." node_paths=PackedStringArray("level_list_loader", "level_loading_screen")]
 script = ExtResource("7_ltl20")
 level_list_loader = NodePath("../LevelLoader")
-main_menu_scene = "res://main_scenes/scenes/menus/main_menu/main_menu_with_animations.tscn"
-ending_scene = "res://main_scenes/scenes/end_credits/end_credits.tscn"
+main_menu_scene = "uid://c63y6b25bs4bk"
+ending_scene = "uid://bagraegk311h0"
 level_loading_screen = NodePath("../LevelLoadingScreen")
 game_won_scene = ExtResource("8_xm266")
 level_lost_scene = ExtResource("8_xm266")

@@ -3,6 +3,7 @@ class_name DialogicResourceUtil
 
 static var label_cache := {}
 static var event_cache: Array[DialogicEvent] = []
+static var channel_cache := {}
 
 static var special_resources := {}
 
@@ -11,6 +12,7 @@ static func update() -> void:
 	update_directory('.dch')
 	update_directory('.dtl')
 	update_label_cache()
+	update_audio_channel_cache()
 
 
 #region RESOURCE DIRECTORIES
@@ -53,16 +55,21 @@ static func update_directory(extension:String) -> void:
 
 static func add_resource_to_directory(file_path:String, directory:Dictionary) -> Dictionary:
 	var suggested_name := file_path.get_file().trim_suffix("."+file_path.get_extension())
+	var temp := suggested_name
 	while suggested_name in directory:
 		suggested_name = file_path.trim_suffix("/"+suggested_name+"."+file_path.get_extension()).get_file().path_join(suggested_name)
+		if suggested_name == temp:
+			break
+		temp = suggested_name
 	directory[suggested_name] = file_path
 	return directory
 
 
 ## Returns the unique identifier for the given resource path.
 ## Returns an empty string if no identifier was found.
-static func get_unique_identifier(file_path:String) -> String:
-	var identifier: String = get_directory(file_path.get_extension()).find_key(file_path)
+static func get_unique_identifier_by_path(file_path:String) -> String:
+	if not file_path: return ""
+	var identifier: Variant = get_directory(file_path.get_extension()).find_key(file_path)
 	if typeof(identifier) == TYPE_STRING:
 		return identifier
 	return ""
@@ -71,12 +78,15 @@ static func get_unique_identifier(file_path:String) -> String:
 ## Returns the resource associated with the given unique identifier.
 ## The expected extension is needed to use the right directory.
 static func get_resource_from_identifier(identifier:String, extension:String) -> Resource:
-	var path: String = get_directory(extension).get(identifier, '')
-	if ResourceLoader.exists(path):
-		return load(path)
+	var value: Variant = get_directory(extension).get(identifier, '')
+	if typeof(value) == TYPE_STRING and ResourceLoader.exists(value):
+		return load(value)
+	elif value is Resource:
+		return value
 	return null
 
 
+## Editor Only
 static func change_unique_identifier(file_path:String, new_identifier:String) -> void:
 	var directory := get_directory(file_path.get_extension())
 	var key: String = directory.find_key(file_path)
@@ -110,6 +120,21 @@ static func remove_resource(file_path:String) -> void:
 static func is_identifier_unused(extension:String, identifier:String) -> bool:
 	return not identifier in get_directory(extension)
 
+
+## While usually the directory maps identifiers to paths, this method (only supposed to be used at runtime)
+## allows mapping resources that are not saved to an identifier.
+static func register_runtime_resource(resource:Resource, identifier:String, extension:String) -> void:
+	var directory := get_directory(extension)
+	directory[identifier] = resource
+	set_directory(extension, directory)
+
+
+static func get_runtime_unique_identifier(resource:Resource, extension:String) -> String:
+	var identifier: Variant = get_directory(extension).find_key(resource)
+	if typeof(identifier) == TYPE_STRING:
+		return identifier
+	return ""
+
 #endregion
 
 #region LABEL CACHE
@@ -136,6 +161,45 @@ static func update_label_cache() -> void:
 		if !timeline in timelines:
 			cache.erase(timeline)
 	set_label_cache(cache)
+
+#endregion
+
+#region AUDIO CHANNEL CACHE
+################################################################################
+# The audio channel cache is only for the editor so we don't have to scan all timelines
+# whenever we want to suggest channels. This has no use in game and is not always perfect.
+
+static func get_audio_channel_cache() -> Dictionary:
+	if not channel_cache.is_empty():
+		return channel_cache
+
+	channel_cache = DialogicUtil.get_editor_setting('channel_ref', {})
+	return channel_cache
+
+
+static func get_channel_list() -> Array:
+	if channel_cache.is_empty():
+		return []
+
+	var cached_names := []
+	for timeline in channel_cache:
+		for name in channel_cache[timeline]:
+			if not cached_names.has(name):
+				cached_names.append(name)
+	return cached_names
+
+
+static func set_audio_channel_cache(cache:Dictionary) -> void:
+	channel_cache = cache
+
+
+static func update_audio_channel_cache() -> void:
+	var cache := get_audio_channel_cache()
+	var timelines := get_timeline_directory().values()
+	for timeline in cache:
+		if !timeline in timelines:
+			cache.erase(timeline)
+	set_audio_channel_cache(cache)
 
 #endregion
 
@@ -275,7 +339,7 @@ static func list_resources_of_type(extension:String) -> Array:
 
 static func scan_folder(path:String, extension:String) -> Array:
 	var list: Array = []
-	if DirAccess.dir_exists_absolute(path):
+	if DirAccess.dir_exists_absolute(path) and not FileAccess.file_exists(path + "/" + ".gdignore"):
 		var dir := DirAccess.open(path)
 		dir.list_dir_begin()
 		var file_name := dir.get_next()
