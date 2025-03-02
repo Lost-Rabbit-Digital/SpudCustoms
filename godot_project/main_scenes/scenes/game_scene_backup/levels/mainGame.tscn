@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://bjx1qjoxul45k"]
+[gd_scene load_steps=71 format=3 uid="uid://bjx1qjoxul45k"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://main_scenes/scenes/game_scene_backup/levels/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://assets/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
@@ -6,13 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/level/customs_office.png" id="4_qvpbt"]
 [ext_resource type="Texture2D" uid="uid://yvmmxdnlhttw" path="res://assets/level/fence_posts.png" id="5_vkwy1"]
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="6_0hfru"]
+[ext_resource type="Material" uid="uid://c1fljl8m4j1w1" path="res://assets/shaders/grass_animation_material.tres" id="6_b5n3c"]
 [ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_41g47"]
+[ext_resource type="Texture2D" uid="uid://ds2lwggt7nk5l" path="res://assets/level/grass_texture.png" id="7_qvpbt"]
 [ext_resource type="FontVariation" uid="uid://t3ii3pbmg2bo" path="res://assets/fonts/Modern_DOS_Font_Variation.tres" id="8_ybo26"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="9_gvwms"]
-[ext_resource type="AudioStream" uid="uid://b2nmiog4e1mpn" path="res://assets/music/ambient_nothingness_main_ovani_sound.mp3" id="10_2xtm0"]
 [ext_resource type="Script" uid="uid://mm8kba4qcarc" path="res://assets/systems/QueueManager.gd" id="11_qilia"]
 [ext_resource type="PackedScene" uid="uid://msix881opujh" path="res://assets/systems/StatsManager.tscn" id="12_h8jl1"]
+[ext_resource type="AudioStream" uid="uid://curch4bdxj8uk" path="res://assets/music/ambient_vol3_peace_main_ovani_sound.mp3" id="12_qvpbt"]
 [ext_resource type="PackedScene" uid="uid://bnbp4h8nco0v2" path="res://assets/systems/NarrativeManager.tscn" id="13_c85wy"]
+[ext_resource type="AudioStream" uid="uid://bb8lmtt8f5yg4" path="res://assets/audio/ambient/wind_inside_1.wav" id="13_qvpbt"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="14_ynnf6"]
 [ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="15_xmuiq"]
 [ext_resource type="Texture2D" uid="uid://fmqkliw6t33x" path="res://assets/suspect_panel/suspect_panel_front.png" id="16_lufl5"]
@@ -263,6 +266,11 @@ z_index = 8
 z_as_relative = false
 texture = ExtResource("5_vkwy1")
 
+[node name="GrassTexture" type="Sprite2D" parent="UI/WorldPanel"]
+material = ExtResource("6_b5n3c")
+position = Vector2(49, 6)
+texture = ExtResource("7_qvpbt")
+
 [node name="Background" type="Sprite2D" parent="UI"]
 z_index = 8
 z_as_relative = false
@@ -281,26 +289,8 @@ offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
-[node name="ModeLabel" type="Label" parent="UI/Labels"]
-z_index = 2
-z_as_relative = false
-texture_filter = 1
-texture_repeat = 1
-layout_mode = 0
-offset_left = 31.0
-offset_top = 252.0
-offset_right = 191.0
-offset_bottom = 302.0
-theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("8_ybo26")
-theme_override_font_sizes/font_size = 32
-text = "Story"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="DateLabel" type="Label" parent="UI/Labels"]
+visible = false
 z_index = 2
 z_as_relative = false
 texture_filter = 1
@@ -460,8 +450,14 @@ offset_bottom = 40.0
 bus = &"SFX"
 
 [node name="BackgroundMusicPlayer" parent="SystemManagers/AudioManager" instance=ExtResource("9_gvwms")]
-stream = ExtResource("10_2xtm0")
+stream = ExtResource("12_qvpbt")
 parameters/looping = true
+
+[node name="WindSFX" type="AudioStreamPlayer2D" parent="SystemManagers/AudioManager"]
+stream = ExtResource("13_qvpbt")
+volume_db = -4.0
+autoplay = true
+bus = &"SFX"
 
 [node name="QueueManager" type="Node2D" parent="SystemManagers"]
 script = ExtResource("11_qilia")
@@ -654,7 +650,10 @@ bbcode_enabled = true
 text = "[u]Laws[/u]
 North Yamnea potatoes not allowed.
 Spuddington Potatoes banned.
-Potatoes must be fresh."
+Potatoes must be fresh.
+
+[u]Date[/u]
+HEY DEVELOPERS, INCLUDE THE DATE HERE!"
 horizontal_alignment = 1
 
 [node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
@@ -711,6 +710,7 @@ offset_bottom = 140.0
 texture_normal = SubResource("CompressedTexture2D_f48nw")
 
 [node name="Paths" type="Control" parent="Gameplay"]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -876,8 +876,8 @@ z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]
