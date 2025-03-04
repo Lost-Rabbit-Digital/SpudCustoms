@@ -11,24 +11,28 @@ config_version=5
 [application]
 
 config/name="Spud Customs"
-config/version="1.0.1"
+config/version="1.0.2"
 config/tags=PackedStringArray("active", "steam")
-run/main_scene="res://main_scenes/scenes/opening/opening_with_logo.tscn"
+run/main_scene="uid://cyqy6dvynho67"
 config/features=PackedStringArray("4.4", "Forward Plus")
 run/max_fps=90
 boot_splash/show_image=false
 config/icon="res://assets/potatoes/heads/russet_burbank_head.png"
 
+[audio]
+
+buses/default_bus_layout="res://assets/styles/default_bus_layout.tres"
+
 [autoload]
 
-Global="*res://Global.gd"
-Guide="*res://guide.gd"
+Global="*res://assets/autoload/Global.gd"
+Guide="*res://assets/autoload/guide.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 AppConfig="*res://addons/maaacks_game_template/base/scenes/autoloads/app_config.tscn"
 SceneLoader="*res://addons/maaacks_game_template/base/scenes/autoloads/scene_loader.tscn"
 ProjectMusicController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_music_controller.tscn"
 ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
-LawValidator="*res://LawValidator.gd"
+LawValidator="*res://assets/autoload/LawValidator.gd"
 
 [debug]
 
@@ -52,24 +56,30 @@ directories/dch_directory={
 "sweet_potato_sasha": "res://assets/narrative/characters/sweet_potato_sasha.dch"
 }
 directories/dtl_directory={
-"chapter_1_1_intro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_intro.dtl",
-"chapter_1_1_outro": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_outro.dtl",
-"chapter_1_1_overview": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_1_overview.dtl",
-"chapter_1_spud_masherson": "res://assets/narrative/chapter_1/chapter_1_1/chapter_1_spud_masherson.dtl",
-"chapter_2_1_overview": "res://assets/narrative/chapter_2/chapter_2_1_overview.dtl",
-"chapter_3_1_overview": "res://assets/narrative/chapter_3/chapter_3_1_overview.dtl",
-"final_confrontation": "res://assets/narrative/final_confrontation.dtl",
+"final_confrontation_part1": "res://assets/narrative/final_confrontation_part1.dtl",
+"final_confrontation_part2": "res://assets/narrative/final_confrontation_part2.dtl",
+"final_confrontation_part3": "res://assets/narrative/final_confrontation_part3.dtl",
 "generic_shift_start": "res://assets/narrative/generic_shift_start.dtl",
-"intro_sequence": "res://assets/narrative/intro_sequence.dtl",
-"scratch_test": "res://assets/narrative/scratch_test.dtl",
-"shift1_start": "res://assets/narrative/shift1_start.dtl",
-"shift2_start": "res://assets/narrative/shift2_start.dtl",
-"shift3_start": "res://assets/narrative/shift3_start.dtl",
-"spud_customs_full_narrative": "res://assets/narrative/spud_customs_full_narrative.dtl"
+"shift10_intro": "res://assets/narrative/shift10_intro.dtl",
+"shift1_end": "res://assets/narrative/shift1_end.dtl",
+"shift1_intro": "res://assets/narrative/shift1_intro.dtl",
+"shift2_intro": "res://assets/narrative/shift2_intro.dtl",
+"shift3_end": "res://assets/narrative/shift3_end.dtl",
+"shift3_intro": "res://assets/narrative/shift3_intro.dtl",
+"shift4_intro": "res://assets/narrative/shift4_intro.dtl",
+"shift5_end": "res://assets/narrative/shift5_end.dtl",
+"shift5_intro": "res://assets/narrative/shift5_intro.dtl",
+"shift6_intro": "res://assets/narrative/shift6_intro.dtl",
+"shift7_end": "res://assets/narrative/shift7_end.dtl",
+"shift7_intro": "res://assets/narrative/shift7_intro.dtl",
+"shift8_intro": "res://assets/narrative/shift8_intro.dtl",
+"shift9_end": "res://assets/narrative/shift9_end.dtl",
+"shift9_intro": "res://assets/narrative/shift9_intro.dtl",
+"tutorial": "res://assets/narrative/tutorial.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://dialogic_default_style.tres", "res://visual_novel_style.tres", "res://speaker_textbox_style.tres"]
-layout/default_style="res://speaker_textbox_style.tres"
+layout/style_list=["res://assets/styles/SpudCustomsTextboxWithSpeaker/SpudCustomsTextboxWithSpeaker.tres", "res://assets/styles/dialogic_default_style.tres"]
+layout/default_style="res://assets/styles/dialogic_default_style.tres"
 variables={
 "ending_choice": "none",
 "family_response": "none",
@@ -111,12 +121,32 @@ translation/file_mode=1
 translation/translation_folder=""
 translation/save_mode=0
 translation/add_separator=false
+audio/max_channels=4.0
+portraits/default_portrait=""
+<<<<<<<HEADlayout/style_list=["res://assets/styles/speaker_textbox_style.tres"]
+text/input_action="primary_interaction"
+audio/type_sound_bus="SFX"
+audio/channel_defaults={
+"": {
+"audio_bus": "SFX",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "Music",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/mode=3
+window/size/borderless=true
 window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="viewport"
@@ -164,6 +194,7 @@ dialogic_default_action={
 [internationalization]
 
 locale/translations=PackedStringArray("res://addons/maaacks_game_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_game_template/base/translations/menus_translations.fr.translation")
+pseudolocalization/stdout/print_fps=true
 
 [maaacks_game_template]
 

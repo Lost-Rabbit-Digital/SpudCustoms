@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://oa40kdty1v5p"
+path="res://.godot/imported/metal spinning 2.wav-ec12be39e215abb6d21c81faef16e3cd.sample"
+
+[deps]
+
+source_file="res://assets/audio/mechanical/metal spinning 2.wav"
+dest_files=["res://.godot/imported/metal spinning 2.wav-ec12be39e215abb6d21c81faef16e3cd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

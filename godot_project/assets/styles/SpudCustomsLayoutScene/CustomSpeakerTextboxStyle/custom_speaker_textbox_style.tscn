@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3 uid="uid://ct4kdvq6t34yd"]
+
+[ext_resource type="Script" uid="uid://b8gw2hl8dvj4u" path="res://assets/styles/SpudCustomsLayoutScene/CustomSpeakerTextboxStyle/default_layout_base.gd" id="1_ifsho"]
+[ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_gp5gm"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="4_5amlr"]
+[ext_resource type="PackedScene" uid="uid://by6waso0mjpjp" path="res://assets/styles/TextboxWithPortrait/custom_textbox_with_speaker_portrait.tscn" id="6_ar4hu"]
+[ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="8_6n1s6"]
+[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="10_usw2m"]
+[ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="12_4w16l"]
+[ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="14_bnbl8"]
+
+[node name="Custom" type="CanvasLayer"]
+script = ExtResource("1_ifsho")
+
+[node name="BackgroundLayer" parent="." instance=ExtResource("2_gp5gm")]
+apply_overrides_on_ready = true
+
+[node name="FullAdvanceInputLayer" parent="." instance=ExtResource("4_5amlr")]
+apply_overrides_on_ready = true
+
+[node name="TextboxWithSpeakerPortrait" parent="." instance=ExtResource("6_ar4hu")]
+apply_overrides_on_ready = true
+
+[node name="Glossary" parent="." instance=ExtResource("8_6n1s6")]
+apply_overrides_on_ready = true
+
+[node name="VN_ChoiceLayer" parent="." instance=ExtResource("10_usw2m")]
+apply_overrides_on_ready = true
+
+[node name="TextInputLayer" parent="." instance=ExtResource("12_4w16l")]
+apply_overrides_on_ready = true
+
+[node name="ExampleHistoryScene" parent="." instance=ExtResource("14_bnbl8")]
+font_use_global_size = true
+font_custom_size = 15
+font_use_global_fonts = true
+font_custom_normal = ""
+font_custom_bold = ""
+font_custom_italics = ""
+disabled = false
+apply_overrides_on_ready = true

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bpb0ws7fe6h3k"
+path="res://.godot/imported/knob clicky turn 3.wav-4855faa6037ed64a3e506f2e9b086a3c.sample"
+
+[deps]
+
+source_file="res://assets/audio/mechanical/knob clicky turn 3.wav"
+dest_files=["res://.godot/imported/knob clicky turn 3.wav-4855faa6037ed64a3e506f2e9b086a3c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

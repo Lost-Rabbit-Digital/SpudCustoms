@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnbp4h8nco0v2"]
+
+[ext_resource type="Script" uid="uid://b8kft0vv0apfr" path="res://scripts/systems/NarrativeManager.gd" id="1_6fgp8"]
+
+[node name="NarrativeManager" type="Node"]
+script = ExtResource("1_6fgp8")

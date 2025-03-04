@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://csb8eof4xd73v"
+path="res://.godot/imported/spring strung 2.wav-6b9e4b154a475eac7cf75c8a244a8756.sample"
+
+[deps]
+
+source_file="res://assets/audio/mechanical/spring strung 2.wav"
+dest_files=["res://.godot/imported/spring strung 2.wav-6b9e4b154a475eac7cf75c8a244a8756.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

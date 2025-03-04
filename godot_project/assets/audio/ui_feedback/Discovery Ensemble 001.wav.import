@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c1lce3p7d0fca"
+path="res://.godot/imported/Discovery Ensemble 001.wav-350ad5416774f4cf2afe4ac008def19d.sample"
+
+[deps]
+
+source_file="res://assets/audio/ui_feedback/Discovery Ensemble 001.wav"
+dest_files=["res://.godot/imported/Discovery Ensemble 001.wav-350ad5416774f4cf2afe4ac008def19d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

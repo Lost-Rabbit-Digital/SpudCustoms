@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://16hg7xjch1hd"
+path="res://.godot/imported/gun cocking 2.wav-ae66f2e6c9fd8d1c4f233c2a35369074.sample"
+
+[deps]
+
+source_file="res://assets/audio/gunfire/gun cocking 2.wav"
+dest_files=["res://.godot/imported/gun cocking 2.wav-ae66f2e6c9fd8d1c4f233c2a35369074.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

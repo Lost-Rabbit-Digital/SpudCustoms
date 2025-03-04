@@ -7,11 +7,15 @@ extends CodeEdit
 @onready var code_completion_helper: Node= find_parent('EditorsManager').get_node('CodeCompletionHelper')
 
 var label_regex := RegEx.create_from_string('label +(?<name>[^\n]+)')
+var channel_regex := RegEx.create_from_string(r'audio +(?<channel>[\w-]{2,}|[\w]+)')
 
 func _ready() -> void:
 	await find_parent('EditorView').ready
 	syntax_highlighter = code_completion_helper.syntax_highlighter
 	timeline_editor.editors_manager.sidebar.content_item_activated.connect(_on_content_item_clicked)
+
+	get_menu().add_icon_item(get_theme_icon("PlayStart", "EditorIcons"), "Play from here", 42)
+	get_menu().id_pressed.connect(_on_context_menu_id_pressed)
 
 
 func _on_text_editor_text_changed() -> void:
@@ -72,25 +76,50 @@ func text_timeline_to_array(text:String) -> Array:
 ## 					HELPFUL EDITOR FUNCTIONALITY
 ################################################################################
 
+func _on_context_menu_id_pressed(id:int) -> void:
+	if id == 42:
+		play_from_here()
+
+
+func play_from_here() -> void:
+	timeline_editor.play_timeline(timeline_editor.current_resource.get_index_from_text_line(text, get_caret_line()))
+
+
 func _gui_input(event):
 	if not event is InputEventKey: return
 	if not event.is_pressed(): return
 	match event.as_text():
 		"Ctrl+K":
 			toggle_comment()
+
+		# TODO clean this up when dropping 4.2 support
 		"Alt+Up":
-			move_line(-1)
+			if has_method("move_lines_up"):
+				call("move_lines_up")
 		"Alt+Down":
-			move_line(1)
-		"Ctrl+Shift+D":
-			duplicate_line()
+			if has_method("move_lines_down"):
+				call("move_lines_down")
+
+		"Ctrl+Shift+D", "Ctrl+D":
+			duplicate_lines()
+
+		"Ctrl+F6" when OS.get_name() != "macOS": # Play from here
+			play_from_here()
+		"Ctrl+Shift+B" when OS.get_name() == "macOS": # Play from here
+			play_from_here()
 		_:
 			return
 	get_viewport().set_input_as_handled()
 
+
 # Toggle the selected lines as comments
 func toggle_comment() -> void:
 	var cursor: Vector2 = Vector2(get_caret_column(), get_caret_line())
+	var selection := Rect2i(
+		Vector2i(get_selection_line(), get_selection_column()),
+		# TODO When ditching godot 4.2, switch to this, the above methods have been deprecated in 4.3
+		#Vector2i(get_selection_origin_line(), get_selection_origin_column()),
+		Vector2i(get_caret_line(), get_caret_column()))
 	var from: int = cursor.y
 	var to: int = cursor.y
 	if has_selection():
@@ -98,89 +127,51 @@ func toggle_comment() -> void:
 		to = get_selection_to_line()
 
 	var lines: PackedStringArray = text.split("\n")
-	var will_comment: bool = not lines[from].begins_with("# ")
+	var will_comment: bool = false
+	for i in range(from, to+1):
+		if not lines[i].begins_with("#"):
+			will_comment = true
+
 	for i in range(from, to + 1):
-		lines[i] = "# " + lines[i] if will_comment else lines[i].substr(2)
+		if will_comment:
+			lines[i] = "#" + lines[i]
+		else:
+			lines[i] = lines[i].trim_prefix("#")
 
 	text = "\n".join(lines)
-	select(from, 0, to, get_line_width(to))
-	set_caret_line(cursor.y)
-	set_caret_column(cursor.x)
+	if will_comment:
+		cursor.x += 1
+		selection.position.y += 1
+		selection.size.y += 1
+	else:
+		cursor.x -= 1
+		selection.position.y -= 1
+		selection.size.y -= 1
+	select(selection.position.x, selection.position.y, selection.size.x, selection.size.y)
 	text_changed.emit()
 
 
-# Move the selected lines up or down
-func move_line(offset: int) -> void:
-	offset = clamp(offset, -1, 1)
-
-	var cursor: Vector2 = Vector2(get_caret_column(), get_caret_line())
-	var reselect: bool = false
-	var from: int = cursor.y
-	var to: int = cursor.y
-	if has_selection():
-		reselect = true
-		from = get_selection_from_line()
-		to = get_selection_to_line()
-
-	var lines := text.split("\n")
-
-	if from + offset < 0 or to + offset >= lines.size(): return
-
-	var target_from_index: int = from - 1 if offset == -1 else to + 1
-	var target_to_index: int = to if offset == -1 else from
-	var line_to_move: String = lines[target_from_index]
-	lines.remove_at(target_from_index)
-	lines.insert(target_to_index, line_to_move)
-
-	text = "\n".join(lines)
-
-	cursor.y += offset
-	from += offset
-	to += offset
-	if reselect:
-		select(from, 0, to, get_line_width(to))
-	set_caret_line(cursor.y)
-	set_caret_column(cursor.x)
-	text_changed.emit()
-
-
-func duplicate_line() -> void:
-	var cursor: Vector2 = Vector2(get_caret_column(), get_caret_line())
-	var from: int = cursor.y
-	var to: int = cursor.y+1
-	if has_selection():
-		from = get_selection_from_line()
-		to = get_selection_to_line()+1
-
-	var lines := text.split("\n")
-	var lines_to_dupl: PackedStringArray = lines.slice(from, to)
-
-	text = "\n".join(lines.slice(0, from)+lines_to_dupl+lines.slice(from))
-
-	set_caret_line(cursor.y+to-from)
-	set_caret_column(cursor.x)
-	text_changed.emit()
-
-
-# Allows dragging files into the editor
+## Allows dragging files into the editor
 func _can_drop_data(at_position:Vector2, data:Variant) -> bool:
 	if typeof(data) == TYPE_DICTIONARY and 'files' in data.keys() and len(data.files) == 1:
 		return true
 	return false
 
 
-# Allows dragging files into the editor
+## Allows dragging files into the editor
 func _drop_data(at_position:Vector2, data:Variant) -> void:
 	if typeof(data) == TYPE_DICTIONARY and 'files' in data.keys() and len(data.files) == 1:
 		set_caret_column(get_line_column_at_pos(at_position).x)
 		set_caret_line(get_line_column_at_pos(at_position).y)
 		var result: String = data.files[0]
-		if get_line(get_caret_line())[get_caret_column()-1] != '"':
+		var line := get_line(get_caret_line())
+		if line[get_caret_column()-1] != '"':
 			result = '"'+result
-		if get_line(get_caret_line())[get_caret_column()] != '"':
+		if line.length() == get_caret_column() or line[get_caret_column()] != '"':
 			result = result+'"'
 
 		insert_text_at_caret(result)
+		grab_focus()
 
 
 func _on_update_timer_timeout() -> void:
@@ -192,6 +183,11 @@ func update_content_list() -> void:
 	for i in label_regex.search_all(text):
 		labels.append(i.get_string('name'))
 	timeline_editor.editors_manager.sidebar.update_content_list(labels)
+
+	var channels: PackedStringArray = []
+	for i in channel_regex.search_all(text):
+		channels.append(i.get_string('channel'))
+	timeline_editor.update_audio_channel_cache(channels)
 
 
 func _on_content_item_clicked(label:String) -> void:
@@ -259,19 +255,19 @@ func search_navigate(navigate_up := false) -> void:
 ## 					AUTO COMPLETION
 ################################################################################
 
-# Called if something was typed
+## Called if something was typed
 func _request_code_completion(force:bool):
 	code_completion_helper.request_code_completion(force, self)
 
 
-# Filters the list of all possible options, depending on what was typed
-# Purpose of the different Kinds is explained in [_request_code_completion]
+## Filters the list of all possible options, depending on what was typed
+## Purpose of the different Kinds is explained in [_request_code_completion]
 func _filter_code_completion_candidates(candidates:Array) -> Array:
 	return code_completion_helper.filter_code_completion_candidates(candidates, self)
 
 
-# Called when code completion was activated
-# Inserts the selected item
+## Called when code completion was activated
+## Inserts the selected item
 func _confirm_code_completion(replace:bool) -> void:
 	code_completion_helper.confirm_code_completion(replace, self)
 
@@ -280,11 +276,11 @@ func _confirm_code_completion(replace:bool) -> void:
 ##					SYMBOL CLICKING
 ################################################################################
 
-# Performs an action (like opening a link) when a valid symbol was clicked
+## Performs an action (like opening a link) when a valid symbol was clicked
 func _on_symbol_lookup(symbol, line, column):
 	code_completion_helper.symbol_lookup(symbol, line, column)
 
 
-# Called to test if a symbol can be clicked
+## Called to test if a symbol can be clicked
 func _on_symbol_validate(symbol:String) -> void:
 	code_completion_helper.symbol_validate(symbol, self)

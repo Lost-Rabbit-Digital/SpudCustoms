@@ -1,0 +1,76 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=19 format=3 uid="uid://gv3312bghhmy"]
+
+[ext_resource type="PackedScene" uid="uid://cqpb3ie51rwl5" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn" id="1_va0my"]
+[ext_resource type="Script" uid="uid://j8ec84i4qra0" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_7gj2n"]
+[ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="3_ix4gt"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="4_4oodx"]
+[ext_resource type="PackedScene" uid="uid://by6waso0mjpjp" path="res://assets/styles/TextboxWithPortrait/custom_textbox_with_speaker_portrait.tscn" id="5_iryf2"]
+[ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="6_7ckac"]
+[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="7_gdjeq"]
+[ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="8_eou6i"]
+[ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="9_2hw75"]
+[ext_resource type="Script" uid="uid://bicumqivgl7bc" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_m0mny"]
+
+[sub_resource type="Resource" id="Resource_jdarb"]
+script = ExtResource("2_7gj2n")
+scene = ExtResource("1_va0my")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_0vtv1"]
+script = ExtResource("2_7gj2n")
+scene = ExtResource("3_ix4gt")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_408ir"]
+script = ExtResource("2_7gj2n")
+scene = ExtResource("4_4oodx")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_jhh82"]
+script = ExtResource("2_7gj2n")
+scene = ExtResource("5_iryf2")
+overrides = {
+"box_panel": "\"default_stylebox.tres\""
+}
+
+[sub_resource type="Resource" id="Resource_1xyyx"]
+script = ExtResource("2_7gj2n")
+scene = ExtResource("6_7ckac")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_oe7kx"]
+script = ExtResource("2_7gj2n")
+scene = ExtResource("7_gdjeq")
+overrides = {
+"sounds_focus": "\"res://addons/dialogic/Example Assets/typing_sfx/typing_4.wav\"",
+"sounds_hover": "\"res://addons/dialogic/Example Assets/typing_sfx/typing_2.wav\"",
+"sounds_pressed": "\"res://addons/dialogic/Example Assets/typing_sfx/typing_1.wav\""
+}
+
+[sub_resource type="Resource" id="Resource_epcsy"]
+script = ExtResource("2_7gj2n")
+scene = ExtResource("8_eou6i")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_jigve"]
+script = ExtResource("2_7gj2n")
+scene = ExtResource("9_2hw75")
+overrides = {}
+
+[resource]
+script = ExtResource("10_m0mny")
+name = "SpudCustomsTextboxWithSpeaker"
+layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16"])
+layer_info = {
+"": SubResource("Resource_jdarb"),
+"10": SubResource("Resource_0vtv1"),
+"11": SubResource("Resource_408ir"),
+"12": SubResource("Resource_jhh82"),
+"13": SubResource("Resource_1xyyx"),
+"14": SubResource("Resource_oe7kx"),
+"15": SubResource("Resource_epcsy"),
+"16": SubResource("Resource_jigve")
+}
+base_overrides = {}
+layers = Array[ExtResource("2_7gj2n")]([])
+metadata/_latest_layer = ""

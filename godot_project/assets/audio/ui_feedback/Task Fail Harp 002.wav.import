@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bx5erefs4wjv3"
+path="res://.godot/imported/Task Fail Harp 002.wav-56d06a09564725ded8e9b1e070768ad2.sample"
+
+[deps]
+
+source_file="res://assets/audio/ui_feedback/Task Fail Harp 002.wav"
+dest_files=["res://.godot/imported/Task Fail Harp 002.wav-56d06a09564725ded8e9b1e070768ad2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

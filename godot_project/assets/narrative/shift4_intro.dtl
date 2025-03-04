@@ -1,0 +1,132 @@
+# shift4_intro.dtl
+[music path="res://assets/audio/ambient/horror_drone_23.wav" fade="2.0" volume="-5.0" bus="Music"]
+
+[background arg="res://assets/narrative/morning_briefing.png" fade="2.0"]
+join supervisor_russet [z_index="1"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+supervisor_russet: Attention, everyone! New security protocols are in effect today.
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+supervisor_russet: We've received intelligence about smuggling operations targeting our borders.
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+supervisor_russet: From now on, all travelers must be inspected for contraband.
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+supervisor_russet: Supervisor Russet unveils a new inspection device. This is the ContraScanner 9000.
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+supervisor_russet: It will detect any unauthorized materials trying to enter our glorious nation.
+
+[background arg="res://assets/narrative/contraband_scanner.png" fade="2.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+supervisor_russet: Use it when you suspect a potato is hiding something.
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+supervisor_russet: Pay special attention to nervous behavior, bulging pockets, or reluctance to make eye contact.
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+supervisor_russet: Russet demonstrates the scanner with exaggerated movements. Simply pass it over the suspect...
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+supervisor_russet: And any contraband will be immediately flagged.
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+supervisor_russet: All contraband must be confiscated and logged. For Spud's security, of course.
+leave supervisor_russet
+
+[background arg="res://assets/narrative/new_security_measures.png" fade="2.0"]
+join security_officer [z_index="1"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+security_officer: A stern-looking security officer steps forward. We're especially concerned about seditious materials.
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+security_officer: Unauthorized pamphlets, anti-Root Reserve literature, photography equipment...
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+security_officer: Anyone found with these items is to be detained immediately.
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+security_officer: Their voice drops ominously. We have special procedures for those individuals.
+leave security_officer
+
+[background arg="res://assets/narrative/root_reserve_truck.png" fade="2.0"]
+join narrator [z_index="1"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+narrator: As the briefing ends, you notice a fleet of Root Reserve trucks arriving at the facility.
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+narrator: Workers quickly unload crates marked "Premium Reserve" into the staff cafeteria.
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+narrator: The smell is enticing, but remembering Sasha's revelations, your stomach turns.
+leave narrator
+
+[background arg="res://assets/narrative/cafeteria_line.png" fade="2.0"]
+join fellow_officer [z_index="1"]
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+fellow_officer: Another customs officer nudges you in line. Have you tried the new Premium Reserve blend?
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+fellow_officer: It's incredible. They say it's made from the finest ingredients in all of Spud.
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+fellow_officer: Just between us, my cousin disappeared last month. Failed inspection at the eastern checkpoint.
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+fellow_officer: The officer laughs nervously. Maybe he's part of this batch, huh? Dark humor, you know?
+
+set {cafeteria_response} = "none"
+- "That's not funny. Not at all."
+   set {cafeteria_response} = "serious"
+- "Heh, yeah... dark humor." (Play along)
+   set {cafeteria_response} = "nervous"
+- "I'm not hungry. Excuse me." (Leave)
+   set {cafeteria_response} = "avoid"
+
+if {cafeteria_response} == "serious":
+   join fellow_officer [z_index="1"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+   fellow_officer: The officer's smile fades. You're right. Sorry. It's just...
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+   fellow_officer: Sometimes joking is easier than thinking about what might actually be happening.
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+   fellow_officer: The officer looks around nervously. Forget I said anything, okay?
+   leave fellow_officer
+
+elif {cafeteria_response} == "nervous":
+   join fellow_officer [z_index="1"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+   fellow_officer: The officer stares at you a moment too long. Yeah. Humor.
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+   fellow_officer: They lower their voice. Some joke though, isn't it? The Premium Reserve started after the rejection quotas went up.
+   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+   fellow_officer: Just... don't think about it too much. That's my advice.
+   leave fellow_officer
+
+else:
+   join fellow_officer [z_index="1"]
+   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+   fellow_officer: The officer watches you leave with a knowing look. Hey, I get it. Lost my appetite too.
+   leave fellow_officer
+
+[background arg="res://assets/narrative/checkpoint_hallway.png" fade="2.0"]
+join sweet_potato_sasha [z_index="1"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+sweet_potato_sasha: Sasha intercepts you in the hallway, pretending to review paperwork.
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+sweet_potato_sasha: Without looking up, she whispers: New contraband rules. Convenient timing, isn't it?
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+sweet_potato_sasha: They're trying to stop information from getting out. About Root Reserve.
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+sweet_potato_sasha: Sasha quickly hands you a small metal object. Take this. It'll jam the scanners for a few seconds.
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+sweet_potato_sasha: Use it wisely. Some potatoes with "contraband" deserve to get through.
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+sweet_potato_sasha: Sasha walks away, adding loudly: And that's why proper documentation filing is essential!
+leave sweet_potato_sasha
+
+[background arg="res://assets/narrative/checkpoint_station.png" fade="2.0"]
+join supervisor_russet [z_index="1"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+supervisor_russet: Get to your station. The line is already forming.
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+supervisor_russet: I expect a thorough contraband check on at least half of today's applicants.
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+supervisor_russet: And remember - any suspicious materials are to be reported directly to me.
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+supervisor_russet: Russet smiles thinly. Protect Spud. That's what we're all here for, isn't it?
+leave supervisor_russet
+
+join player_character [z_index="1"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+player_character: You touch the scanner jammer in your pocket, considering its implications.
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+player_character: Today's choices could help potatoes spread the truth... or silence them forever.
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+player_character: The weight of your responsibility feels heavier than ever.
+leave player_character

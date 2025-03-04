@@ -1,0 +1,40 @@
+# final_confrontation_part2.dtl
+[music path="res://assets/audio/ambient/horror_drone_23.wav" fade="2.0" volume="-5.0" bus="Music"]
+Alarms blare as the group breaches the inner facility.
+
+[background arg="res://assets/narrative/minister_idaho_monitor.png" fade="2.0"]
+join prime_minister_idaho [z_index="1"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+prime_minister_idaho: The Prime Minister's face appears on a massive screen. "Well well, what do we have here?"
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+prime_minister_idaho: "The traitor returns home... and they've brought the rebel scum with them."
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+prime_minister_idaho: Idaho leans forward, his eyes cold. "Did you really think you could stop the progress of Spud?"
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+prime_minister_idaho: "Root Reserve is the lifeblood of this nation. The people need us... need ME."
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+prime_minister_idaho: "But fret not. You'll still serve Spud... in the processing vats!"
+The screen suddenly goes black.
+leave prime_minister_idaho
+
+join player_character [z_index="1"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+player_character: You turn to Sasha and the others, eyes hardening with resolve. "This ends tonight."
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+player_character: "The truth behind Root Reserve, Prime Minister Idaho's twisted vision..."
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+player_character: "It all comes to light. No matter the cost."
+leave player_character
+
+[background arg="res://assets/narrative/potato_processing.png" fade="2.0"]
+join narrator center [z_index="1"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+narrator: You stand at the heart of the Root Reserve facility, the truth laid bare before you.
+[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+narrator: The horrific machinery of oppression, the countless potatoes processed...
+[background arg="res://assets/narrative/processing_facility_interior.png" fade="2.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+narrator: And now you must reach Prime Minister Idaho's bunker, deep within the facility.
+leave narrator
+
+[signal arg="start_facility_escape_gameplay"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dagkjtxsln14o"
+path="res://.godot/imported/felt tip pen writing line 3.wav-9beb1b032ee2be3a3da99deab3f7523c.sample"
+
+[deps]
+
+source_file="res://assets/audio/talking/felt tip pen writing line 3.wav"
+dest_files=["res://.godot/imported/felt tip pen writing line 3.wav-9beb1b032ee2be3a3da99deab3f7523c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dwr2ldwxa7ol8"
+path="res://.godot/imported/measuring tape expand 2.wav-f7d1ece464531529f99e72e6de2d811e.sample"
+
+[deps]
+
+source_file="res://assets/audio/mechanical/measuring tape expand 2.wav"
+dest_files=["res://.godot/imported/measuring tape expand 2.wav-f7d1ece464531529f99e72e6de2d811e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

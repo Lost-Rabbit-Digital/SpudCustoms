@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dwcre3fjf3cj8"
+path="res://.godot/imported/typing_5.wav-1f578b3fdc0267c425edbd9cf4f8cc4e.sample"
+
+[deps]
+
+source_file="res://addons/dialogic/Example Assets/typing_sfx/typing_5.wav"
+dest_files=["res://.godot/imported/typing_5.wav-1f578b3fdc0267c425edbd9cf4f8cc4e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

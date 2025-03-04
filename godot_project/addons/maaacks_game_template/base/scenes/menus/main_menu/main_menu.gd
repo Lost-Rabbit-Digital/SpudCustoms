@@ -2,8 +2,8 @@ class_name MainMenu
 extends Control
 
 ## Defines the path to the game scene. Hides the play button if empty.
-@export_file("*.tscn") var game_scene_path : String
-@export_file("*.tscn") var endless_scene_path : String
+@export_file("*.tscn") var story_game_scene_path : String
+@export_file("*.tscn") var endless_game_scene_path : String
 @export var options_packed_scene : PackedScene
 @export var credits_packed_scene : PackedScene
 
@@ -11,24 +11,6 @@ var options_scene
 var credits_scene
 var sub_menu
 
-func load_scene(scene_path : String):
-	SceneLoader.load_scene(scene_path)
-
-func play_game():
-	if Global.build_type == "Full Release":
-		SceneLoader.load_scene(game_scene_path)
-	else:
-		# Try to open in Steam overlay browser first
-		if Steam.isSteamRunning():
-			Steam.activateGameOverlayToStore(3291880)
-		else:
-			var store_url = "https://store.steampowered.com/app/3291880/Spud_Customs/?utm_source=piracy"
-			# Fallback to system default browser if Steam isn't running
-			OS.shell_open(store_url)
-			
-func play_endless():
-	SceneLoader.load_scene(endless_scene_path)
-	
 func _open_sub_menu(menu : Control):
 	sub_menu = menu
 	sub_menu.show()
@@ -59,9 +41,9 @@ func _setup_for_web():
 	if OS.has_feature("web"):
 		%ExitButton.hide()
 
-func _setup_play():
-	if game_scene_path.is_empty():
-		%PlayButton.hide()
+func _setup_game_buttons():
+	if story_game_scene_path.is_empty():
+		%NewGameButton.hide()
 
 func _setup_options():
 	if options_packed_scene == null:
@@ -85,13 +67,7 @@ func _ready():
 	_setup_for_web()
 	_setup_options()
 	_setup_credits()
-	_setup_play()
-
-func _on_play_button_pressed():
-	play_game()
-	
-func _on_endless_button_pressed():
-	play_endless()
+	_setup_game_buttons()
 
 func _on_options_button_pressed():
 	_open_sub_menu(options_scene)

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b2npr20l02q6b"
+path="res://.godot/imported/fist clenched 5.wav-68eb0005a432fdafbebd72b5729f7791.sample"
+
+[deps]
+
+source_file="res://assets/audio/impact/fist clenched 5.wav"
+dest_files=["res://.godot/imported/fist clenched 5.wav-68eb0005a432fdafbebd72b5729f7791.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

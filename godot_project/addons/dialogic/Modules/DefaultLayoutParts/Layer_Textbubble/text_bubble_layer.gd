@@ -93,7 +93,7 @@ func bubble_apply_overrides(bubble:TextBubble) -> void:
 	if !bold_font.is_empty():
 		rtl.add_theme_font_override(&"bold_font", load(bold_font) as Font)
 	if !italic_font.is_empty():
-		rtl.add_theme_font_override(&"italitc_font", load(italic_font) as Font)
+		rtl.add_theme_font_override(&"italics_font", load(italic_font) as Font)
 	if !bold_italic_font.is_empty():
 		rtl.add_theme_font_override(&"bold_italics_font", load(bold_italic_font) as Font)
 	bubble.set(&'max_width', text_max_width)
@@ -143,7 +143,7 @@ func bubble_apply_overrides(bubble:TextBubble) -> void:
 	nlp.get_theme_stylebox(&'panel').content_margin_bottom = name_label_padding.y
 	bubble.name_label_offset = name_label_offset
 	bubble.name_label_alignment = name_label_alignment
-	
+
 	nlp.get_parent().visible = name_label_enabled
 
 	## CHOICE SETTINGS

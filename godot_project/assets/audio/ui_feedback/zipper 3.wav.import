@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://diul4em20mwr8"
+path="res://.godot/imported/zipper 3.wav-aaeb541fe51399591833d70a4ab3e0cf.sample"
+
+[deps]
+
+source_file="res://assets/audio/ui_feedback/zipper 3.wav"
+dest_files=["res://.godot/imported/zipper 3.wav-aaeb541fe51399591833d70a4ab3e0cf.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

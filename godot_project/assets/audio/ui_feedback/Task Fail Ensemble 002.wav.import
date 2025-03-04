@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://yea2vhjr0stv"
+path="res://.godot/imported/Task Fail Ensemble 002.wav-1aec2f417760b7636819a89519748f09.sample"
+
+[deps]
+
+source_file="res://assets/audio/ui_feedback/Task Fail Ensemble 002.wav"
+dest_files=["res://.godot/imported/Task Fail Ensemble 002.wav-1aec2f417760b7636819a89519748f09.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

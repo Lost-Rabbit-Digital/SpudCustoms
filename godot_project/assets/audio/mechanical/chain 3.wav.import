@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dxpobbnam3x04"
+path="res://.godot/imported/chain 3.wav-28fb03824496a36cbb2a6f7c7c1d8dca.sample"
+
+[deps]
+
+source_file="res://assets/audio/mechanical/chain 3.wav"
+dest_files=["res://.godot/imported/chain 3.wav-28fb03824496a36cbb2a6f7c7c1d8dca.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

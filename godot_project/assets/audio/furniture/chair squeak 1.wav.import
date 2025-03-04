@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cjyubpfs82bwo"
+path="res://.godot/imported/chair squeak 1.wav-5338121c010fe77843e8c0c38fefcb2e.sample"
+
+[deps]
+
+source_file="res://assets/audio/furniture/chair squeak 1.wav"
+dest_files=["res://.godot/imported/chair squeak 1.wav-5338121c010fe77843e8c0c38fefcb2e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

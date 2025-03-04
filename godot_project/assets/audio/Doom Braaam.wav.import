@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c6mrjnydixxi0"
+path="res://.godot/imported/Doom Braaam.wav-3623f38d4006da4bb915def16cb03010.sample"
+
+[deps]
+
+source_file="res://assets/audio/Doom Braaam.wav"
+dest_files=["res://.godot/imported/Doom Braaam.wav-3623f38d4006da4bb915def16cb03010.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

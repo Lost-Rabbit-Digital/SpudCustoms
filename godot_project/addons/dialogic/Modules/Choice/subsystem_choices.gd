@@ -19,7 +19,9 @@ var reveal_by_input := false
 var block_delay := 0.2
 ## If true, the first (top-most) choice will be focused
 var autofocus_first_choice := true
-
+## If true the dialogic input action is used to trigger choices.
+## However mouse events will be ignored no matter what.
+var use_input_action := false
 
 enum FalseBehaviour {HIDE=0, DISABLE=1}
 ## The behaviour of choices with a false condition and else_action set to DEFAULT.
@@ -54,6 +56,10 @@ func _ready() -> void:
 	hotkey_behaviour = ProjectSettings.get_setting('dialogic/choices/hotkey_behaviour', hotkey_behaviour)
 	default_false_behaviour = ProjectSettings.get_setting('dialogic/choices/def_false_behaviour', default_false_behaviour)
 
+
+func post_install() -> void:
+	dialogic.Inputs.dialogic_action.connect(_on_dialogic_action)
+
 #endregion
 
 
@@ -64,8 +70,8 @@ func _ready() -> void:
 func hide_all_choices() -> void:
 	for node in get_tree().get_nodes_in_group('dialogic_choice_button'):
 		node.hide()
-		if node.is_connected('button_up', _on_choice_selected):
-			node.disconnect('button_up', _on_choice_selected)
+		if node.pressed.is_connected(_on_choice_selected):
+			node.pressed.disconnect(_on_choice_selected)
 
 
 ## Collects information on all the choices of the current question.
@@ -122,6 +128,7 @@ func get_current_question_info() -> Dictionary:
 			choice_info['visited_before'] = dialogic.History.has_event_been_visited(choice_index)
 
 		question_info['choices'].append(choice_info)
+		last_question_info['choices'].append(choice_info['text'])
 
 	return question_info
 
@@ -149,7 +156,7 @@ func show_current_question(instant:=true) -> void:
 	var question_info := get_current_question_info()
 
 	for choice in question_info.choices:
-		var node: DialogicNode_ChoiceButton = get_choice_button_node(choice.button_index)
+		var node: DialogicNode_ChoiceButton = get_choice_button(choice.button_index)
 
 		if not node:
 			missing_button = true
@@ -186,8 +193,24 @@ func show_current_question(instant:=true) -> void:
 		printerr("[Dialogic] The layout you are using doesn't have enough Choice Buttons for the choices you are trying to display.")
 
 
+func focus_choice(button_index:int) -> void:
+	var node: DialogicNode_ChoiceButton = get_choice_button(button_index)
+	if node:
+		node.grab_focus()
 
-func get_choice_button_node(button_index:int) -> DialogicNode_ChoiceButton:
+
+func select_choice(button_index:int) -> void:
+	var node: DialogicNode_ChoiceButton = get_choice_button(button_index)
+	if node:
+		node.pressed.emit()
+
+
+func select_focused_choice() -> void:
+	if get_viewport().gui_get_focus_owner() is DialogicNode_ChoiceButton:
+		(get_viewport().gui_get_focus_owner() as DialogicNode_ChoiceButton).pressed.emit()
+
+
+func get_choice_button(button_index:int) -> DialogicNode_ChoiceButton:
 	var idx := 1
 	for node: DialogicNode_ChoiceButton in get_tree().get_nodes_in_group('dialogic_choice_button'):
 		if !node.get_parent().is_visible_in_tree():
@@ -214,7 +237,7 @@ func _on_choice_selected(choice_info := {}) -> void:
 			dialogic.History.store_simple_history_entry(choice_info.text, "Choice", {'all_choices': all_choices})
 		if dialogic.has_subsystem("History"):
 			dialogic.History.mark_event_as_visited(choice_info.event_index)
-	
+
 	choice_selected.emit(choice_info)
 	hide_all_choices()
 	dialogic.current_state = dialogic.States.IDLE
@@ -222,6 +245,7 @@ func _on_choice_selected(choice_info := {}) -> void:
 
 
 
+## Returns the indexes of the choice events related to the current question.
 func get_current_choice_indexes() -> Array:
 	var choices := []
 	var evt_idx := dialogic.current_event_idx
@@ -243,6 +267,13 @@ func get_current_choice_indexes() -> Array:
 			ignore -= 1
 		evt_idx += 1
 	return choices
+
+
+## Forward the dialogic action to the focused button
+func _on_dialogic_action() -> void:
+	if use_input_action and not dialogic.Inputs.input_was_mouse_input:
+		select_focused_choice()
+
 
 #endregion
 
