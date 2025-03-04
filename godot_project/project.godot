@@ -78,8 +78,8 @@ directories/dtl_directory={
 "tutorial": "res://assets/narrative/tutorial.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style=""
+layout/style_list=["res://assets/styles/SpudCustomsTextboxWithSpeaker/SpudCustomsTextboxWithSpeaker.tres", "res://assets/styles/dialogic_default_style.tres"]
+layout/default_style="res://assets/styles/dialogic_default_style.tres"
 variables={
 "ending_choice": "none",
 "family_response": "none",

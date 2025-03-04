@@ -73,4 +73,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_ivxep")]([])
-metadata/_latest_layer = "12"
+metadata/_latest_layer = ""

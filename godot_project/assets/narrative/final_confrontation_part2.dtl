@@ -1,5 +1,4 @@
 # final_confrontation_part2.dtl
-[style name="speaker_textbox_style"]
 [music path="res://assets/audio/ambient/horror_drone_23.wav" fade="2.0" volume="-5.0" bus="Music"]
 Alarms blare as the group breaches the inner facility.
 

@@ -1,5 +1,4 @@
 # shift9_end.dtl
-[style name="speaker_textbox_style"]
 [music path="res://assets/audio/ambient/horror_drone_49.wav" fade="2.0" volume="-5.0" bus="Music"]
 
 if {stay_or_go} == "stay":

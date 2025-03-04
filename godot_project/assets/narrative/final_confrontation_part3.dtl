@@ -1,8 +1,7 @@
 # final_confrontation_part3.dtl
-[style name="speaker_textbox_style"]
 [music path="res://assets/audio/ambient/horror_drone_49.wav" fade="2.0" volume="-5.0" bus="Music"]
 
-join player_character center [z_index="1"]
+join player_character [z_index="1"]
 [background arg="res://assets/narrative/idaho_bunker_hallway.png" fade="2.0"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: With Sasha and your allies at your side, you confront Idaho at last.

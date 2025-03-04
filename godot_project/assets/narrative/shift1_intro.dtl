@@ -1,5 +1,4 @@
 # shift1_intro.dtl
-[style name="speaker_textbox_style"]
 [music path="res://assets/audio/ambient/1_wind_outside.wav" fade="2.0" volume="1.0" bus="Music"]
 [background arg="res://assets/narrative/nation_of_spud_1.png" fade="0.0"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0" bus="SFX"]

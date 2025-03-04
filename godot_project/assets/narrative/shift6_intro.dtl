@@ -1,5 +1,4 @@
 # shift6_intro.dtl
-[style name="speaker_textbox_style"]
 [music path="res://assets/audio/ambient/horror_drone_12.wav" fade="2.0" volume="-5.0" bus="Music"]
 
 [background arg="res://assets/narrative/facility_lockdown.png" fade="2.0"]

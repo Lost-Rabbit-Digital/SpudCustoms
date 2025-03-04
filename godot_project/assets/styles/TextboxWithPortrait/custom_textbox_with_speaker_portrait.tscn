@@ -135,5 +135,6 @@ textbox_root = NodePath("../../..")
 
 [node name="DialogicNode_TypeSounds" type="AudioStreamPlayer" parent="Anchor/Panel/HBox/VBoxContainer/DialogicNode_DialogText"]
 unique_name_in_owner = true
+bus = &"SFX"
 script = ExtResource("5_sr2qw")
 play_every_character = 0
