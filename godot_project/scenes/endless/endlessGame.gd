@@ -67,7 +67,7 @@ var default_cursor = Input.CURSOR_ARROW
 @onready var enter_office_path = $Gameplay/Paths/EnterOfficePath
 @onready var stats_manager = $SystemManagers/StatsManager
 var shift_stats: ShiftStats
-@onready var shift_summary = preload("res://ShiftSummaryScreen.tscn")
+@onready var shift_summary = preload("res://scripts/systems/ShiftSummaryScreen.tscn")
 
 ## Label used to display alerts and notifications to the player
 @onready var alert_label = $UI/Labels/MarginContainer/AlertLabel
@@ -210,13 +210,13 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 
 func play_random_customs_officer_sound():
 	var customs_officer_sounds = [
-		preload("res://assets/audio/froggy_phrase_1.wav"),
-		preload("res://assets/audio/froggy_phrase_2.wav"),
-		preload("res://assets/audio/froggy_phrase_3.wav"),
-		preload("res://assets/audio/froggy_phrase_4.wav"),
-		preload("res://assets/audio/froggy_phrase_5.wav"),
-		preload("res://assets/audio/froggy_phrase_6.wav"),
-		preload("res://assets/audio/froggy_phrase_7.wav")
+		preload("res://assets/audio/talking/froggy_phrase_1.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_2.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_3.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_4.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_5.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_6.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_7.wav")
 	]
 	# Play potato customs officer sound
 	if !$SystemManagers/AudioManager/SFXPool.is_playing():
