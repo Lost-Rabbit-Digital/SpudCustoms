@@ -31,6 +31,9 @@ var current_level
 var current_level_id : int :
 	set = set_current_level_id
 
+# Reference to narrative manager
+var narrative_manager: Node
+
 func set_current_level_id(value):
 	current_level_id = value
 
@@ -111,9 +114,19 @@ func is_on_last_level():
 	return get_current_level_id() + 1 >= level_list_loader.files.size()
 
 func _on_level_won():
+	# Store the current level for dialogue purposes
+	var completed_level = get_current_level_id()
+	
+	# Existing level completion logic
 	if is_on_last_level():
 		_load_win_screen_or_ending()
 	else:
+		# Start end dialogue if applicable
+		if narrative_manager:
+			narrative_manager.start_level_end_dialogue(completed_level)
+			# Wait for dialogue to finish before continuing
+			await narrative_manager.dialogue_finished
+		
 		_load_level_complete_screen_or_next_level()
 
 func _connect_level_signals():
@@ -125,6 +138,11 @@ func _on_level_loader_level_loaded():
 	current_level = level_list_loader.current_level
 	await current_level.ready
 	_connect_level_signals()
+	
+	# Start dialogue for this level if narrative manager exists
+	if narrative_manager:
+		narrative_manager.start_level_dialogue(get_current_level_id())
+	
 	if level_loading_screen:
 		level_loading_screen.close()
 
@@ -135,7 +153,23 @@ func _on_level_loader_level_load_started():
 	if level_loading_screen:
 		level_loading_screen.reset()
 
+func find_narrative_manager() -> Node:
+	# Look for NarrativeManager in the scene tree
+	var scene_root = get_tree().current_scene
+	var narrative_manager = scene_root.find_child("NarrativeManager", true, false)
+	
+	if not narrative_manager:
+		# If not found, check if it's a direct child of SystemManagers
+		var system_managers = scene_root.find_child("SystemManagers", true, false)
+		if system_managers:
+			narrative_manager = system_managers.get_node_or_null("NarrativeManager")
+	
+	return narrative_manager
+
 func _ready():
+	# Find the narrative manager
+	narrative_manager = find_narrative_manager()
+	
 	level_list_loader.level_loaded.connect(_on_level_loader_level_loaded)
 	level_list_loader.levels_finished.connect(_on_level_loader_levels_finished)
 	level_list_loader.level_load_started.connect(_on_level_loader_level_load_started)

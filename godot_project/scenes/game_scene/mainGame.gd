@@ -82,7 +82,30 @@ var shift_stats: ShiftStats
 @onready var alert_label = $UI/Labels/MarginContainer/AlertLabel
 @onready var alert_timer = $SystemManagers/Timers/AlertTimer
 
+var current_shift: int = 1
+
+func get_level_manager():
+	var parent = get_parent()
+	while parent:
+		if parent is LevelListManager:
+			return parent
+		
+		# Look for the manager in children
+		for child in parent.get_children():
+			if child is LevelListManager:
+				return child
+				
+		parent = parent.get_parent()
+	
+	return null
+
 func _ready():
+	# Get the current level ID from the level list manager if it exists
+	var level_manager = get_level_manager()
+	if level_manager:
+		current_shift = level_manager.get_current_level_id()
+	
+	narrative_manager.current_shift = current_shift
 	
 	# Add to your existing _ready() function
 	var stamp_bar = $Gameplay/InteractiveElements/StampBarController
@@ -862,7 +885,7 @@ func move_potato_along_path(approval_status):
 	var path: Path2D
 	
 	# Set texture
-	var PotatoScene = load("res://PotatoPerson.tscn")
+	var PotatoScene = load("res://assets/level/PotatoPerson.tscn")
 	var potato_person = PotatoScene.instantiate()
 	
 	# Get all available paths

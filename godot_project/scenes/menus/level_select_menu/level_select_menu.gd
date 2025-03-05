@@ -1,35 +1,77 @@
 extends Control
-
-## Loads a simple ItemList node within a margin container. SceneLister updates
-## the available scenes in the directory provided. Activating a level will update
-## the GameState's current_level, and emit a signal. The main menu node will trigger
-## a load action from that signal.
-
-@onready var level_buttons_container: ItemList = %LevelButtonsContainer
-@onready var scene_lister: SceneLister = $SceneLister
-
+# Emitted when a level is selected
 signal level_selected
-		
+@onready var level_buttons_container: ItemList = %LevelButtonsContainer
+# Dictionary mapping level IDs to their display names
+var levels = {
+	0: "Tutorial",
+	1: "First Day on the Job",
+	2: "New Regulations",
+	3: "Increasing Pressure",
+	4: "Contraband Check",
+	5: "Midpoint Crisis",
+	6: "Increased Security",
+	7: "Under Scrutiny",
+	8: "Double Agents",
+	9: "Border Chaos",
+	10: "The Last Shift",
+	11: "Infiltration", 
+	12: "Final Confrontation",
+	13: "Facility Escape"
+}
+
 func _ready() -> void:
 	add_levels_to_container()
+	# Debug initial shift value in Global singleton
+	print("DEBUG: Initial Global.shift value: ", Global.shift)
 	
-## A fresh level list is propgated into the ItemList, and the file names are cleaned
-func add_levels_to_container():
+func add_levels_to_container() -> void:
 	level_buttons_container.clear()
 	var max_level_reached := GameState.get_max_level_reached()
-	var level_iter := 0
-	for file_path in scene_lister.files:
-		if level_iter > max_level_reached : break
-		level_iter += 1
-		# Extract the file name from the path
-		var file_name = file_path.get_file()  # e.g., "level_1.tscn"
-		# Clean up the file name
-		file_name = file_name.trim_suffix(".tscn")  # Remove the ".tscn" extension
-		file_name = file_name.replace("_", " ")  # Replace underscores with spaces
-		file_name = file_name.capitalize()  # Convert to proper case
-		var button_name = str(file_name)
-		level_buttons_container.add_item(button_name)
+	
+	# Get all level IDs and sort them numerically
+	var level_ids = levels.keys()
+	level_ids.sort()
+	
+	for level_id in level_ids:
+		# Format the display name with day number
+		var display_name = "Day %d - %s" % [level_id, levels[level_id]]
+		
+		# Add the item to the ItemList
+		var item_index = level_buttons_container.add_item(display_name)
+		
+		# Store the level ID as metadata for easy retrieval
+		level_buttons_container.set_item_metadata(item_index, level_id)
+		
+		# Set visual state based on unlock status
+		var is_unlocked = level_id <= max_level_reached
+		level_buttons_container.set_item_disabled(item_index, !is_unlocked)
+		
+		# Visually distinguish locked levels
+		if !is_unlocked:
+			level_buttons_container.set_item_custom_fg_color(item_index, Color(0.5, 0.5, 0.5, 0.5))
 
 func _on_level_buttons_container_item_activated(index: int) -> void:
-	GameState.set_current_level(index)
-	level_selected.emit()
+	# Get the level ID from metadata
+	var level_id = level_buttons_container.get_item_metadata(index)
+	
+	# Debug what the level_id is
+	print("DEBUG: Selected level_id: ", level_id)
+	
+	# Only proceed if the level is unlocked
+	if level_id <= GameState.get_max_level_reached():
+		# Print current shift value before changing anything
+		print("DEBUG: Before change - Global.shift value: ", Global.shift)
+		
+		# Set the current level in GameState
+		GameState.set_current_level(level_id)
+		
+		# Set the shift in the Global singleton to match the level_id
+		Global.shift = level_id
+		print("DEBUG: Set Global.shift to: ", level_id)
+		
+		# Print value after the change to verify
+		print("DEBUG: After change - Global.shift value: ", Global.shift)
+		
+		# Emit signal to inform parent that a level was selected
+		level_selected.emit()

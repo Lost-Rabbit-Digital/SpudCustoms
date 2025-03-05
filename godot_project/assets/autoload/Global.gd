@@ -1,7 +1,7 @@
 extends Node
 
 # Existing variables
-var shift = 1
+var shift: int = 1
 var final_score = 0
 var build_type = "Full Release" # Can be Full Release or Demo Release
 var difficulty_level = "Normal" # Can be "Easy", "Normal", or "Expert"
@@ -10,6 +10,9 @@ var max_strikes = 4
 var current_game_stats: Dictionary = {}
 var quota_target = 8  # Required correct decisions
 var quota_met = 0   # Number of correct decisions
+
+# Track level progression
+var max_level_unlocked = 1  # Start with first level unlocked
 
 # Achievement IDs
 const ACHIEVEMENTS = {
@@ -341,8 +344,19 @@ func reset_all():
 	save_game_state()
 	save_high_scores()
 	
+func unlock_level(level_id: int):
+	if level_id > max_level_unlocked:
+		max_level_unlocked = level_id
+	
+	# Save progress to disk
+	save_game_state()
+
+func is_level_unlocked(level_id: int) -> bool:
+	return level_id <= max_level_unlocked
 
 func advance_story_state():
+	# Also unlock the next level when story progresses
+	unlock_level(shift + 1)
 	match current_story_state:
 		StoryState.NOT_STARTED:
 			current_story_state = StoryState.INTRO_COMPLETE
