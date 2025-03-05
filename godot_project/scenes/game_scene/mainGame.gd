@@ -885,7 +885,7 @@ func move_potato_along_path(approval_status):
 	var path: Path2D
 	
 	# Set texture
-	var PotatoScene = load("res://PotatoPerson.tscn")
+	var PotatoScene = load("res://assets/level/PotatoPerson.tscn")
 	var potato_person = PotatoScene.instantiate()
 	
 	# Get all available paths
