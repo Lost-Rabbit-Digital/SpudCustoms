@@ -155,26 +155,33 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Add cars that drive by
 
 
+
 ## Steam Minor Update 1.0.2 - WORK IN PROGRESS
 ### To-Do
-  [ ] - Add this dude to the art credits Clock/Calendar: https://opengameart.org/content/various-inventory-24-pixel-icon-set 
-  [ ] - Add a clock button to the suspect panel which tells you the date and time
+  [ ] - Add if check to BorderRunnerSystem.gd to check if user is currently in dialogic timeline
   [ ] - Make the laws slide out similar to the stamps
   [ ] - Remove the date and score from the bottom of the screen
-  [ ] - Make the tutorial interactive instead of a text panel with the book
   [ ] - Change the color of the missile marker to green/red to indicate if you can fire a missile
+  [ ] - Update backend for megaphone dialogue prompt in-game to allow for future translation
+    [ ] - *INTERNAL USE* Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
+    [ ] - *INTERNAL USE* Speak duration parameter
+    [ ] - *INTERNAL USE* Have audio built into dialogue box
+    [ ] - *INTERNAL USE* Have two JSON sections, "next queue" and "general sayings", different names but you get the idea
+    [ ] - *INTERNAL USE* JSON to store strings instead of hard-coding into images
+    [ ] - *INTERNAL USE* Just one background image for the dialogue box
+  [ ] - Add Flash Indicator for Megaphone via shader
+  [ ] - Add Version Counter into menus
+  [ ] - Display Score for Longer Duration
+
 ### Currently Doing
-  [ ] - Update backend for dialogue prompt in-game
-        Megaphone backend:
-          - *INTERNAL USE* Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
-          - *INTERNAL USE* Speak duration parameter
-          - *INTERNAL USE* Have audio built into dialogue box
-          - *INTERNAL USE* Have two JSON sections, "next queue" and "general sayings", different names but you get the idea
-          - *INTERNAL USE* JSON to store strings instead of hard-coding into images
-          - *INTERNAL USE* Just one background image for the dialogue box
+  [ ] - Make Missiles Travel Faster and More Consistently
 
 ### Completed Tasks for 1.0.2
+  - Change "Runner Escaped" to Capitals
+  - Make the tutorial interactive instead of a text panel with the book
   - *INTERNAL USE* Cleaned up the old git branches from various updates
+
+
 
 # COMPLETED TASKS
 The tasks which have be completed and pushed to VCS.

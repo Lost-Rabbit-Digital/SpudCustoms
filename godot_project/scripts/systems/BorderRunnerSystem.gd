@@ -5,9 +5,9 @@ signal game_over_triggered
 
 @export_group("Debugging")
 ## Unlimited ammunition for fox hunting
-@export var unlimited_missiles = false
+@export var unlimited_missiles = true
 ## Force Spuds to run the border for your entertainment
-@export var rapid_runners = false
+@export var rapid_runners = true
 ##
 @export var crater_spawn_on_click = false
 
@@ -47,9 +47,9 @@ signal game_over_triggered
 ## Settings controlling missile launch, targeting and explosion behavior
 @export_group("Missile System")
 ## Speed at which missiles travel toward their target
-@export var missile_speed: float = 550
+@export var missile_speed: float = 1200
 ## Initial height from which missiles are launched
-@export var missile_start_height: float = 600
+@export var missile_start_height: float = 400
 ## Radius of explosion effect and damage area
 @export var explosion_size: float = 50
 
@@ -368,10 +368,14 @@ func update_missile(delta):
 	if not missile_active:
 		return
 	
-	print("Updating missile position")  # Debug print
+	# Use fixed time for more consistent travel
+	var fixed_delta = 1.0/60.0
+	
+	print("Updating missile position")  # DEBUG print
+	
 	# Calculate direction and move missile
 	var direction = (missile_target - missile_position).normalized()
-	var distance_to_move = missile_speed * delta
+	var distance_to_move = missile_speed * fixed_delta
 	missile_position += direction * distance_to_move
 	
 	# Update sprite position and rotation
