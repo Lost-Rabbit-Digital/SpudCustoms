@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://budh8ujdl5y88"
-path="res://.godot/imported/pause_background.png-5374749515640663534b880b9de97383.ctex"
+uid="uid://ubvotfd5nm1k"
+path="res://.godot/imported/poster_1_normal.png-dac6cf27968d354171d761bb9bb79f46.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level/pause_background.png"
-dest_files=["res://.godot/imported/pause_background.png-5374749515640663534b880b9de97383.ctex"]
+source_file="res://assets/world/posters/normal_size/poster_1_normal.png"
+dest_files=["res://.godot/imported/poster_1_normal.png-dac6cf27968d354171d761bb9bb79f46.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2icltv7xkk6j"
-path="res://.godot/imported/CustomsDesk.png-b4ed568b188583ba6e6e52ad40285624.ctex"
+uid="uid://standyguem2s"
+path="res://.godot/imported/poster_2_normal.png-859d86ab7184e597e56b64224bea26f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level/CustomsDesk.png"
-dest_files=["res://.godot/imported/CustomsDesk.png-b4ed568b188583ba6e6e52ad40285624.ctex"]
+source_file="res://assets/world/posters/normal_size/poster_2_normal.png"
+dest_files=["res://.godot/imported/poster_2_normal.png-859d86ab7184e597e56b64224bea26f8.ctex"]
 
 [params]
 

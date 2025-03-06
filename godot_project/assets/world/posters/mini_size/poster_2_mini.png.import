@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6gfewbog1olr"
-path="res://.godot/imported/customs_office.png-931ad0774ff6845db08e3fa595071a0f.ctex"
+uid="uid://cma3w0eulsacq"
+path="res://.godot/imported/poster_2_mini.png-901a4bfe4be347bb132064ec166e5034.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level/customs_office.png"
-dest_files=["res://.godot/imported/customs_office.png-931ad0774ff6845db08e3fa595071a0f.ctex"]
+source_file="res://assets/world/posters/mini_size/poster_2_mini.png"
+dest_files=["res://.godot/imported/poster_2_mini.png-901a4bfe4be347bb132064ec166e5034.ctex"]
 
 [params]
 
