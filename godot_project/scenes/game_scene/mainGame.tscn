@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://bjx1qjoxul45k"]
+[gd_scene load_steps=69 format=3 uid="uid://bjx1qjoxul45k"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://scenes/game_scene/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://scripts/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
@@ -21,13 +21,8 @@
 [ext_resource type="AudioStream" uid="uid://bb8lmtt8f5yg4" path="res://assets/audio/ambient/wind_inside_1.wav" id="13_qvpbt"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="14_ynnf6"]
 [ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="15_xmuiq"]
-[ext_resource type="Texture2D" uid="uid://fmqkliw6t33x" path="res://assets/suspect_panel/suspect_panel_front.png" id="16_lufl5"]
-[ext_resource type="Texture2D" uid="uid://cwni5a4q3jj67" path="res://assets/suspect_panel/suspect_panel_top_bottom.png" id="17_q7p8e"]
-[ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://assets/suspect_panel/suspect_panel.png" id="18_suyoy"]
-[ext_resource type="Texture2D" uid="uid://dgw6rbhy6crh" path="res://assets/suspect_panel/suspect_panel_table.png" id="19_p1tff"]
-[ext_resource type="Texture2D" uid="uid://cnrr6jblok4ky" path="res://assets/suspect_panel/suspect_panel_background.png" id="20_blq4d"]
-[ext_resource type="Texture2D" uid="uid://cvtdlyxlb5qaw" path="res://assets/suspect_panel/suspect_panel_document_slot.png" id="21_8c3on"]
-[ext_resource type="Texture2D" uid="uid://b2icltv7xkk6j" path="res://assets/office_interface/CustomsDesk.png" id="22_or1f4"]
+[ext_resource type="Texture2D" uid="uid://b2icltv7xkk6j" path="res://assets/user_interface/CustomsDesk.png" id="22_or1f4"]
+[ext_resource type="PackedScene" uid="uid://cejqnrw4oo4r2" path="res://assets/user_interface/suspect_panel/suspect_panel.tscn" id="22_qfxfi"]
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://scripts/systems/character_generator.tscn" id="23_3qac4"]
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="24_yhqqy"]
 [ext_resource type="PackedScene" uid="uid://be3lucg3f3a3c" path="res://scripts/systems/StampBarController.tscn" id="25_osm16"]
@@ -495,40 +490,7 @@ position = Vector2(33.8086, -22.8106)
 scale = Vector2(0.349, 0.349)
 texture = ExtResource("15_xmuiq")
 
-[node name="SuspectPanel" type="Sprite2D" parent="Gameplay"]
-z_index = 1
-position = Vector2(1074, 472)
-scale = Vector2(1.05816, 1.06849)
-
-[node name="SuspectPanelTop" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_index = 4
-z_as_relative = false
-texture = ExtResource("16_lufl5")
-
-[node name="SuspectPanelTopBottom" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_as_relative = false
-texture = ExtResource("17_q7p8e")
-
-[node name="SuspectPanelFront" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_index = -1
-z_as_relative = false
-texture = ExtResource("18_suyoy")
-
-[node name="SuspectPanelTable" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_index = -1
-z_as_relative = false
-texture = ExtResource("19_p1tff")
-
-[node name="SuspectPanelBackground" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_index = -1
-z_as_relative = false
-texture = ExtResource("20_blq4d")
-
-[node name="SuspectPanelDocumentSlot" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_index = 3
-z_as_relative = false
-position = Vector2(0, 2.4)
-texture = ExtResource("21_8c3on")
+[node name="SuspectPanel" parent="Gameplay" instance=ExtResource("22_qfxfi")]
 
 [node name="InspectionTable" type="Sprite2D" parent="Gameplay"]
 position = Vector2(443.837, 470.5)

@@ -158,7 +158,6 @@ These are our goals, to-do tasks, and completed tasks.
 
 ## Steam Minor Update 1.0.2 - WORK IN PROGRESS
 ### To-Do
-  [ ] - Add if check to BorderRunnerSystem.gd to check if user is currently in dialogic timeline
   [ ] - Make the laws slide out similar to the stamps
   [ ] - Remove the date and score from the bottom of the screen
   [ ] - Change the color of the missile marker to green/red to indicate if you can fire a missile
@@ -174,6 +173,8 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Display Score for Longer Duration
 
 ### Currently Doing
+  [ ] - Add if check to BorderRunnerSystem.gd to check if user is currently in dialogic timeline
+  [ ] - Add a skip button to dialogic
 
 ### Completed Tasks for 1.0.2
   - Make Missiles Travel Faster and More Consistently

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fmqkliw6t33x"
-path="res://.godot/imported/suspect_panel_front.png-ca9a2aa13c65f87f166a8851f73d46a5.ctex"
+uid="uid://cwni5a4q3jj67"
+path="res://.godot/imported/suspect_panel_top_bottom.png-b803cf65c4f6b5524d8b0e7f91d4ce67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/suspect_panel/suspect_panel_front.png"
-dest_files=["res://.godot/imported/suspect_panel_front.png-ca9a2aa13c65f87f166a8851f73d46a5.ctex"]
+source_file="res://assets/user_interface/suspect_panel/suspect_panel_top_bottom.png"
+dest_files=["res://.godot/imported/suspect_panel_top_bottom.png-b803cf65c4f6b5524d8b0e7f91d4ce67.ctex"]
 
 [params]
 

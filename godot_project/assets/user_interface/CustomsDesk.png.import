@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvtdlyxlb5qaw"
-path="res://.godot/imported/suspect_panel_document_slot.png-cb4a359fd3efd2fcd19139a2f2ad632d.ctex"
+uid="uid://b2icltv7xkk6j"
+path="res://.godot/imported/CustomsDesk.png-77718297cd6ed80e2b21e8f98da88f7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/suspect_panel/suspect_panel_document_slot.png"
-dest_files=["res://.godot/imported/suspect_panel_document_slot.png-cb4a359fd3efd2fcd19139a2f2ad632d.ctex"]
+source_file="res://assets/user_interface/CustomsDesk.png"
+dest_files=["res://.godot/imported/CustomsDesk.png-77718297cd6ed80e2b21e8f98da88f7c.ctex"]
 
 [params]
 
