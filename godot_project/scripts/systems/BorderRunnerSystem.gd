@@ -298,10 +298,10 @@ func runner_escaped():
 	# Update alert to show penalty
 	if points_to_remove == 0:
 		# No points were deducted
-		Global.display_red_alert(alert_label, alert_timer, "Runner escaped!\nStrike added!")
+		Global.display_red_alert(alert_label, alert_timer, "RUNNER ESCAPED!\nStrike added!")
 	else:
 		# Points were deducted, show the penalty
-		Global.display_red_alert(alert_label, alert_timer, "Runner escaped!\nStrike added!\n-{penalty} points!".format({
+		Global.display_red_alert(alert_label, alert_timer, "RUNNER ESCAPED!\nStrike added!\n-{penalty} points!".format({
 			"penalty": points_to_remove
 		}))
 			

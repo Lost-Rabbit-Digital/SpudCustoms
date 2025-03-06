@@ -158,8 +158,8 @@ These are our goals, to-do tasks, and completed tasks.
 ## Steam Minor Update 1.0.2 - WORK IN PROGRESS
 ### To-Do
   [ ] - Add this dude to the art credits Clock/Calendar: https://opengameart.org/content/various-inventory-24-pixel-icon-set 
-  [ ] - Make the laws slide out similar to the stamps
   [ ] - Add a clock button to the suspect panel which tells you the date and time
+  [ ] - Make the laws slide out similar to the stamps
   [ ] - Remove the date and score from the bottom of the screen
   [ ] - Make the tutorial interactive instead of a text panel with the book
   [ ] - Change the color of the missile marker to green/red to indicate if you can fire a missile
