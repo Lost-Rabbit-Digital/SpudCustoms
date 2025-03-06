@@ -174,9 +174,9 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Display Score for Longer Duration
 
 ### Currently Doing
-  [ ] - Make Missiles Travel Faster and More Consistently
 
 ### Completed Tasks for 1.0.2
+  - Make Missiles Travel Faster and More Consistently
   - Change "Runner Escaped" to Capitals
   - Make the tutorial interactive instead of a text panel with the book
   - *INTERNAL USE* Cleaned up the old git branches from various updates
