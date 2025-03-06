@@ -1,8 +1,9 @@
-[gd_scene load_steps=73 format=3 uid="uid://bjx1qjoxul45k"]
+[gd_scene load_steps=74 format=3 uid="uid://bjx1qjoxul45k"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://scenes/game_scene/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://scripts/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
 [ext_resource type="Texture2D" uid="uid://doml0udrwe6pe" path="res://assets/world/Background.png" id="3_b5n3c"]
+[ext_resource type="PackedScene" uid="uid://c4h2cf8sxx3gh" path="res://assets/world/world_environment.tscn" id="3_pmo31"]
 [ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/world/customs_office.png" id="4_qvpbt"]
 [ext_resource type="Texture2D" uid="uid://yvmmxdnlhttw" path="res://assets/world/fence_posts.png" id="5_vkwy1"]
 [ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/world/background/world_background.png" id="6_0hfru"]
@@ -251,7 +252,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
+[node name="Environment" parent="UI" instance=ExtResource("3_pmo31")]
+
 [node name="WorldPanel" type="Sprite2D" parent="UI"]
+visible = false
 z_index = 6
 z_as_relative = false
 position = Vector2(642.352, 121.5)
@@ -466,6 +470,7 @@ autoplay = true
 bus = &"SFX"
 
 [node name="QueueManager" type="Node2D" parent="SystemManagers"]
+unique_name_in_owner = true
 script = ExtResource("11_qilia")
 
 [node name="StatsManager" parent="SystemManagers" instance=ExtResource("12_h8jl1")]
