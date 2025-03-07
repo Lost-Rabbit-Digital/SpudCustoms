@@ -4,10 +4,10 @@ extends Node2D
 var border_runner_system
 
 # Track game states
-var is_game_paused = false
-var close_sound_played = false
-var open_sound_played = false
-var is_potato_in_office = false
+var is_game_paused: bool = false
+var close_sound_played: bool = false
+var open_sound_played: bool = false
+var is_potato_in_office: bool = false
 var game_start_time: float = 0.0
 
 # track the current potato's info
@@ -18,9 +18,9 @@ var current_potato
 var difficulty_level
 
 # Track multipliers and streaks
-var point_multiplier = 1.0
-var correct_decision_streak = 0
-var original_runner_chance = 0.15  # Match your current chance value
+var point_multiplier: float = 1.0
+var correct_decision_streak: int = 0
+var original_runner_chance: float = 0.15  # Match your current chance value
 
 # storing and sending rule assignments
 signal rules_updated(new_rules)
@@ -28,11 +28,11 @@ var current_rules = []
 
 var queue_manager: Node2D
 var megaphone_flash_timer: Timer
-const MEGAPHONE_FLASH_INTERVAL = 1.0 # flash every 1 seconds
+const MEGAPHONE_FLASH_INTERVAL: float = 1.0 # flash every 1 seconds
 
 # Potato spawn manager
-var potato_count = 0
-var max_potatoes = 20
+var potato_count: int = 0
+var max_potatoes: int = 20
 @onready var spawn_timer = $SystemManagers/Timers/SpawnTimer
 
 #Narrative manager
@@ -51,8 +51,8 @@ var suspect: Sprite2D
 var guide: Sprite2D
 
 # Stamp system
-const STAMP_ANIMATION_DURATION = 0.3  # Duration of the stamp animation in seconds
-const STAMP_MOVE_DISTANCE = 36  # How far the stamp moves down
+const STAMP_ANIMATION_DURATION: float = 0.3  # Duration of the stamp animation in seconds
+const STAMP_MOVE_DISTANCE: int = 36  # How far the stamp moves down
 var default_cursor = Input.CURSOR_ARROW
 
 # Guide system
@@ -872,7 +872,6 @@ func disable_controls():
 		border_runner_system.runner_chance = 0.0
 	# Stop all timers and queues
 	$SystemManagers/Timers/SpawnTimer.stop()
-	
 
 func enable_controls():
 	# Re-enable controls after dialogue

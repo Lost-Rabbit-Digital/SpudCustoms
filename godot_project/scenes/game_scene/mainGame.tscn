@@ -222,25 +222,6 @@ point_count = 24
 [node name="Root" type="Node2D"]
 script = ExtResource("1_ado42")
 
-[node name="BorderRunnerSystem" parent="." node_paths=PackedStringArray("queue_manager", "score_label", "strike_label", "alert_label", "alert_timer", "missile_collision_shape") instance=ExtResource("2_4eqo0")]
-queue_manager = NodePath("../SystemManagers/QueueManager")
-score_label = NodePath("../UI/Labels/ScoreLabel")
-strike_label = NodePath("../UI/Labels/StrikesLabel")
-alert_label = NodePath("../UI/Labels/MarginContainer/AlertLabel")
-alert_timer = NodePath("../SystemManagers/Timers/AlertTimer")
-missile_collision_shape = NodePath("Area2D/CollisionShape2D")
-runner_chance = 0.025
-missile_speed = 900.0
-explosion_size = 60.0
-num_gibs = 75
-gib_min_speed = 125.0
-
-[node name="Area2D" type="Area2D" parent="BorderRunnerSystem"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderRunnerSystem/Area2D"]
-position = Vector2(396.75, 122)
-shape = SubResource("RectangleShape2D_sihlh")
-
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -475,6 +456,25 @@ script = ExtResource("11_qilia")
 
 [node name="DragAndDropManager" type="Node" parent="SystemManagers"]
 script = ExtResource("20_5djk1")
+
+[node name="BorderRunnerSystem" parent="SystemManagers" node_paths=PackedStringArray("queue_manager", "score_label", "strike_label", "alert_label", "alert_timer", "missile_collision_shape") instance=ExtResource("2_4eqo0")]
+queue_manager = NodePath("../QueueManager")
+score_label = NodePath("../../UI/Labels/ScoreLabel")
+strike_label = NodePath("../../UI/Labels/StrikesLabel")
+alert_label = NodePath("../../UI/Labels/MarginContainer/AlertLabel")
+alert_timer = NodePath("../Timers/AlertTimer")
+missile_collision_shape = NodePath("Area2D/CollisionShape2D")
+runner_chance = 0.025
+missile_speed = 900.0
+explosion_size = 60.0
+num_gibs = 75
+gib_min_speed = 125.0
+
+[node name="Area2D" type="Area2D" parent="SystemManagers/BorderRunnerSystem"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SystemManagers/BorderRunnerSystem/Area2D"]
+position = Vector2(396.75, 122)
+shape = SubResource("RectangleShape2D_sihlh")
 
 [node name="Gameplay" type="Control" parent="."]
 layout_mode = 3
