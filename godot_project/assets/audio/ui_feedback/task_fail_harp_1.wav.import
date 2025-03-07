@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b6242xmeswlvb"
-path="res://.godot/imported/Task Fail Harp 001.wav-c2270edaa17f52c951a0601fa28b2099.sample"
+path="res://.godot/imported/task_fail_harp_1.wav-ab2434706a45074185d133d4ec4b428a.sample"
 
 [deps]
 
-source_file="res://assets/audio/ui_feedback/Task Fail Harp 001.wav"
-dest_files=["res://.godot/imported/Task Fail Harp 001.wav-c2270edaa17f52c951a0601fa28b2099.sample"]
+source_file="res://assets/audio/ui_feedback/task_fail_harp_1.wav"
+dest_files=["res://.godot/imported/task_fail_harp_1.wav-ab2434706a45074185d133d4ec4b428a.sample"]
 
 [params]
 

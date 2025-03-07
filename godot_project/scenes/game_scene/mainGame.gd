@@ -992,8 +992,8 @@ func _on_dialogue_finished():
 	
 	if Global.StoryState.COMPLETED:
 		# Game complete, show credits or return to menu
-		get_tree().change_scene_to_file("res://main_scenes/scenes/menus/credits/credits.tscn")
-	
+		get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
+
 func disable_controls():
 	# Disable player interaction during dialogue
 	print("disabling controls")

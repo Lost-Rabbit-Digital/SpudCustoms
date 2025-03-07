@@ -398,7 +398,7 @@ func clear_alert_after_delay(alert_label, alert_timer):
 func display_red_alert(alert_label, alert_timer, text):
 	# Load and play the audio file
 	var audio_player = AudioStreamPlayer.new()
-	audio_player.stream = load("res://assets/audio/Task Fail Harp 001.wav")
+	audio_player.stream = load("res://assets/audio/ui_feedback/task_fail_harp_1.wav")
 	audio_player.volume_db = -10  # Reduce volume by 10 decibels
 	add_child(audio_player)
 	audio_player.play()
@@ -414,7 +414,7 @@ func display_red_alert(alert_label, alert_timer, text):
 func display_green_alert(alert_label, alert_timer, text):
 	# Load and play the audio file
 	var audio_player = AudioStreamPlayer.new()
-	audio_player.stream = load("res://assets/audio/Task Accept Ensemble 001.wav")
+	audio_player.stream = load("res://assets/audio/ui_feedback/task_accept_ensemble_1.wav")
 	audio_player.volume_db = -15  # Reduce volume by 10 decibels
 	add_child(audio_player)
 	audio_player.play()
