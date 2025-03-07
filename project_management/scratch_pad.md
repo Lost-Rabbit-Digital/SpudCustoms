@@ -158,6 +158,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 ## Steam Minor Update 1.0.2 - WORK IN PROGRESS
 ### To-Do
+  [ ] - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl
   [ ] - Make the laws slide out similar to the stamps
   [ ] - Remove the date and score from the bottom of the screen
   [ ] - Change the color of the missile marker to green/red to indicate if you can fire a missile
@@ -171,6 +172,7 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Add Flash Indicator for Megaphone via shader
   [ ] - Add Version Counter into menus
   [ ] - Display Score for Longer Duration
+  [ ] - Add logic to check if game paused or in dialogic before updating cursor to target cursor
 
 ### Currently Doing
   [ ] - Add if check to BorderRunnerSystem.gd to check if user is currently in dialogic timeline

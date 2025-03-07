@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://bjx1qjoxul45k"]
+[gd_scene load_steps=70 format=3 uid="uid://bjx1qjoxul45k"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://scenes/game_scene/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://scripts/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
@@ -21,6 +21,7 @@
 [ext_resource type="AudioStream" uid="uid://bb8lmtt8f5yg4" path="res://assets/audio/ambient/wind_inside_1.wav" id="13_qvpbt"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="14_ynnf6"]
 [ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="15_xmuiq"]
+[ext_resource type="Script" uid="uid://qyhogd6acnnh" path="res://scripts/systems/drag_and_drop/drag_and_drop_manager.gd" id="20_5djk1"]
 [ext_resource type="Texture2D" uid="uid://b2icltv7xkk6j" path="res://assets/user_interface/CustomsDesk.png" id="22_or1f4"]
 [ext_resource type="PackedScene" uid="uid://cejqnrw4oo4r2" path="res://assets/user_interface/suspect_panel/suspect_panel.tscn" id="22_qfxfi"]
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://scripts/systems/character_generator.tscn" id="23_3qac4"]
@@ -472,6 +473,9 @@ script = ExtResource("11_qilia")
 
 [node name="NarrativeManager" parent="SystemManagers" instance=ExtResource("13_c85wy")]
 
+[node name="DragAndDropManager" type="Node" parent="SystemManagers"]
+script = ExtResource("20_5djk1")
+
 [node name="Gameplay" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -629,8 +633,7 @@ Potatoes must be fresh.
 HEY DEVELOPERS, INCLUDE THE DATE HERE!"
 horizontal_alignment = 1
 
-[node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
-visible = false
+[node name="Guide2" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
 z_index = 4
 z_as_relative = false
 position = Vector2(705, 391)
@@ -638,15 +641,15 @@ texture = ExtResource("34_w7ch4")
 script = ExtResource("35_eua12")
 main_node = NodePath("../../..")
 
-[node name="ClosedGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
+[node name="ClosedGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide2"]
 visible = false
 z_as_relative = false
 
-[node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
+[node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide2"]
 z_index = 4
 z_as_relative = false
 
-[node name="GuideNote" type="RichTextLabel" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
+[node name="GuideNote" type="RichTextLabel" parent="Gameplay/InteractiveElements/Guide2/OpenGuide"]
 z_index = 4
 z_as_relative = false
 offset_left = -150.0
@@ -667,14 +670,14 @@ If anything is wrong, [color=#FF0000]deny entry[/color]
 Hand papers back to finish
 [/center]"
 
-[node name="TurnRight" type="TextureButton" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
+[node name="TurnRight" type="TextureButton" parent="Gameplay/InteractiveElements/Guide2/OpenGuide"]
 offset_left = 117.0
 offset_top = 110.0
 offset_right = 147.0
 offset_bottom = 140.0
 texture_normal = SubResource("CompressedTexture2D_vm67j")
 
-[node name="TurnLeft" type="TextureButton" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
+[node name="TurnLeft" type="TextureButton" parent="Gameplay/InteractiveElements/Guide2/OpenGuide"]
 visible = false
 offset_left = -147.0
 offset_top = 110.0
@@ -852,5 +855,5 @@ curve = SubResource("Curve2D_x3wa3")
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
-[connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
-[connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]
+[connection signal="pressed" from="Gameplay/InteractiveElements/Guide2/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide2" method="_on_turn_right_pressed"]
+[connection signal="pressed" from="Gameplay/InteractiveElements/Guide2/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide2" method="_on_turn_left_pressed"]

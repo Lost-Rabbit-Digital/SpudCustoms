@@ -38,13 +38,7 @@ var max_potatoes = 20
 #Narrative manager
 @onready var narrative_manager = $SystemManagers/NarrativeManager
 
-# Dragging system
-var draggable_sprites = []
-var dragged_sprite = null
-var drag_offset = Vector2()
-const PASSPORT_Z_INDEX = 0
-
-# Passport dragging system
+# Passport
 var passport: Sprite2D
 var passport_spawn_point_begin: Node2D
 var passport_spawn_point_end: Node2D
@@ -52,11 +46,9 @@ var inspection_table: Sprite2D
 var suspect_panel: Sprite2D
 var suspect_panel_front: Sprite2D
 var suspect: Sprite2D
-var is_passport_open = false
 
-# Guide dragging system
+# Guide
 var guide: Sprite2D
-var is_guide_open = false
 
 # Stamp system
 const STAMP_ANIMATION_DURATION = 0.3  # Duration of the stamp animation in seconds
@@ -64,9 +56,9 @@ const STAMP_MOVE_DISTANCE = 36  # How far the stamp moves down
 var default_cursor = Input.CURSOR_ARROW
 
 # Guide system
-var guide_tutorial_timer: Timer
-const GUIDE_TUTORIAL_FLASH_INTERVAL = 1.0 # flash every 1 seconds
-var is_in_guide_tutorial = true
+#var guide_tutorial_timer: Timer
+#const GUIDE_TUTORIAL_FLASH_INTERVAL = 1.0 # flash every 1 seconds
+#var is_in_guide_tutorial = true
 
 # Character Generation
 @onready var mugshot_generator = $Gameplay/MugshotPhotoGenerator
@@ -84,6 +76,9 @@ var shift_stats: ShiftStats
 
 var current_shift: int = 1
 
+# Drag and drop manager 
+@onready var drag_and_drop_manager = $SystemManagers/DragAndDropManager
+
 func get_level_manager():
 	var parent = get_parent()
 	while parent:
@@ -100,6 +95,17 @@ func get_level_manager():
 	return null
 
 func _ready():
+	# Initialize the drag and drop manager
+	if not drag_and_drop_manager:
+		# If the node doesn't exist yet, create it
+		var manager = DragAndDropManager.new()
+		manager.name = "DragAndDropManager"
+		$SystemManagers.add_child(manager)
+		drag_and_drop_manager = manager
+	
+	# Initialize after all other nodes are ready
+	drag_and_drop_manager.initialize(self)
+	
 	# Get the current level ID from the level list manager if it exists
 	var level_manager = get_level_manager()
 	if level_manager:
@@ -116,7 +122,6 @@ func _ready():
 	
 	$BorderRunnerSystem.game_over_triggered.connect(_on_game_over)
 	game_start_time = Time.get_ticks_msec() / 1000.0  # Convert to seconds
-	update_cursor("default")
 	# Make sure to add QueueManager as a child of Main
 	queue_manager = %QueueManager
 	setup_spawn_timer()
@@ -131,17 +136,7 @@ func _ready():
 	update_quota_display()
 	update_date_display()
 	generate_rules()
-	draggable_sprites = [
-		$Gameplay/InteractiveElements/Passport,
-		$Gameplay/InteractiveElements/Guide,
-	]
-	# Ensure sprites are in the scene tree and set initial z-index
-	for sprite in draggable_sprites:
-		if not is_instance_valid(sprite):
-			push_warning("Sprite not found: " + sprite.name)
-		else:
-			sprite.z_index = PASSPORT_Z_INDEX
-				
+
 	if Global.final_score > 0:
 		Global.score = Global.final_score
 		update_score_display()
@@ -161,8 +156,8 @@ func _ready():
 	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
 
 	# Add closed passport to draggable sprites
-	draggable_sprites.append(passport)
-	draggable_sprites.append(guide)
+	#draggable_sprites.append(passport)
+	#draggable_sprites.append(guide)
 	
 	# add border runner system
 	border_runner_system = $BorderRunnerSystem
@@ -356,6 +351,14 @@ func move_potato_to_office(potato_person):
 func animate_mugshot_and_passport():
 	print("Animating mugshot and passport")
 	update_potato_info_display()
+	
+	# Get references to nodes
+	var mugshot_generator = $Gameplay/MugshotPhotoGenerator
+	var suspect_panel = $Gameplay/SuspectPanel
+	var suspect_panel_front = $Gameplay/SuspectPanel/SuspectPanelFront
+	var passport = $Gameplay/InteractiveElements/Passport
+	var passport_spawn_point_begin = $Gameplay/InteractiveElements/PassportSpawnPoints/BeginPoint
+	var passport_spawn_point_end = $Gameplay/InteractiveElements/PassportSpawnPoints/EndPoint
 
 	# Reset positions and visibility
 	mugshot_generator.position.x = suspect_panel.position.x + suspect_panel_front.texture.get_width()
@@ -377,7 +380,7 @@ func animate_mugshot_and_passport():
 	tween.tween_property(passport, "z_index", 5, 0).set_delay(3)
 
 	tween.chain().tween_callback(func(): print("Finished animating mugshot and passport"))
-	
+
 func setup_spawn_timer():
 	spawn_timer = $SystemManagers/Timers/SpawnTimer
 	spawn_timer.set_wait_time(1.0)
@@ -405,19 +408,6 @@ func _on_spawn_timer_timeout():
 			# We can add a new approval status (timed_out), and have the potato take a different route. 
 			# we can put that logic as well as the logic for adding a strike into the force_decision() function
 
-func update_cursor(type):
-	match type:
-		"default":
-			Input.set_custom_mouse_cursor(load("res://assets/cursor/cursor_default.png"), Input.CURSOR_ARROW, Vector2(0, 0))
-		"hover":
-			Input.set_custom_mouse_cursor(load("res://assets/cursor/cursor_hover.png"), Input.CURSOR_POINTING_HAND, Vector2(0, 0))
-		"grab":
-			Input.set_custom_mouse_cursor(load("res://assets/cursor/cursor_grab.png"), Input.CURSOR_DRAG, Vector2(0, 0))
-		"click":
-			Input.set_custom_mouse_cursor(load("res://assets/cursor/cursor_click.png"), Input.CURSOR_POINTING_HAND, Vector2(0, 0))
-		"target":
-			Input.set_custom_mouse_cursor(load("res://assets/cursor/cursor_target.png"), Input.CURSOR_CROSS, Vector2(0, 0))
-
 func get_area2d_size(area2d):
 	var collision_shape = area2d.get_node("CollisionShape2D")
 	if collision_shape:
@@ -428,66 +418,25 @@ func get_area2d_size(area2d):
 			return size
 	return Vector2.ZERO
 
-func check_cursor_status(mouse_pos):
-	if passport.get_rect().has_point(passport.to_local(mouse_pos)):
-		update_cursor("hover")
-		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-			update_cursor("grab")
-	elif guide.get_rect().has_point(guide.to_local(mouse_pos)):
-		update_cursor("hover")
-		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-			update_cursor("grab")
-	elif dragged_sprite == passport or dragged_sprite == guide:
-		update_cursor("grab")
-	elif megaphone.get_rect().has_point(megaphone.to_local(mouse_pos)):
-		update_cursor("click")
-		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-			update_cursor("grab")
-	else:
-		if border_runner_system and border_runner_system.is_enabled:
-			var missile_zone = border_runner_system.get_missile_zone()
-			if missile_zone and missile_zone.has_point(mouse_pos):
-				update_cursor("target")
-				return
-		update_cursor("default")
-			
-	
 func _process(_delta):
-	var mouse_pos = get_global_mouse_position()
-	check_cursor_status(mouse_pos)
+	# Update cursor through the drag and drop manager
+	if drag_and_drop_manager:
+		drag_and_drop_manager.process_cursor()
 	
-	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and dragged_sprite == passport and is_passport_open == false:
+	# Handle prompt dialogue visibility
+	var mouse_pos = get_global_mouse_position()
+	var suspect = $Gameplay/MugshotPhotoGenerator/SizingSprite
+	var passport = $Gameplay/InteractiveElements/Passport
+	
+	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and drag_and_drop_manager.is_document_open("passport") == false and drag_and_drop_manager.drag_system.get_dragged_item() == passport:
 		$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = true
 	else:
 		$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = false
-		
+	
+	# Hide megaphone dialogue when sound stops playing
 	if !$SystemManagers/AudioManager/SFXPool.is_playing():
 		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = false
 	
-	# Check for closing passport
-	if (suspect.get_rect().has_point(suspect.to_local(mouse_pos)) or suspect_panel_front.get_rect().has_point(suspect_panel_front.to_local(mouse_pos)))and (dragged_sprite == passport or dragged_sprite == guide):
-		if not close_sound_played:
-			if dragged_sprite == passport:
-				close_passport_action()
-			elif dragged_sprite == guide:
-				close_guide_action()
-			$SystemManagers/AudioManager/SFXPool.stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
-			$SystemManagers/AudioManager/SFXPool.play()
-			close_sound_played = true
-			open_sound_played = false  # Reset open sound flag
-	
-	# Check for opening passport
-	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)) and (dragged_sprite == passport or dragged_sprite == guide):
-		if not open_sound_played:
-			if dragged_sprite == passport and is_passport_open == false:
-				open_passport_action()
-			elif dragged_sprite == guide:
-				open_guide_action()
-			$SystemManagers/AudioManager/SFXPool.stream = preload("res://assets/audio/passport_sfx/open_passport_audio.mp3")
-			$SystemManagers/AudioManager/SFXPool.play()
-			open_sound_played = true
-			close_sound_played = false  # Reset close sound flag
-			
 
 func generate_potato_info():
 	var expiration_date: String
@@ -716,104 +665,21 @@ func clear_potato_textures():
 		# Reset to default state or hide
 		passport_generator.set_gender("M")  # Reset to default gender
 	
-func _input(event):
-	if event is InputEventMouseButton:
+func _input(event: InputEvent):
+	# If game is paused or dialogue is active, don't process input
+	if is_game_paused:
+		return
+		
+	# Let the drag and drop manager handle drag events first
+	if drag_and_drop_manager.handle_input(event):
+		return
+		
+	# Handle megaphone click
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		var mouse_pos = get_global_mouse_position()
-		
-		# Handle left click press
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			if megaphone.get_rect().has_point(megaphone.to_local(mouse_pos)):
-				megaphone_clicked()
-				return
-			
-			# Try to pick up a document
-			if dragged_sprite == null:
-				dragged_sprite = find_topmost_sprite_at(mouse_pos)
-				if dragged_sprite:
-					drag_offset = mouse_pos - dragged_sprite.global_position
-		
-		# Handle left click release
-		elif event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
-			if dragged_sprite == passport:
-				handle_passport_drop(mouse_pos)
-			elif dragged_sprite == guide:
-				handle_guide_drop(mouse_pos)
-			
-			dragged_sprite = null
-	
-	# Handle mouse motion for dragging
-	elif event is InputEventMouseMotion and dragged_sprite:
-		dragged_sprite.global_position = get_global_mouse_position() - drag_offset
-
-func handle_passport_drop(mouse_pos: Vector2):
-	print("DEBUG: Passport drop detected at position:", mouse_pos)
-	$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = false
-	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)):
-		print("DEBUG: Dropping passport on inspection table")
-		open_passport_action()
-	elif suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)):
-		print("DEBUG: Dropping passport on suspect panel")
-		close_passport_action()
-	elif suspect.get_rect().has_point(suspect.to_local(mouse_pos)):
-		print("DEBUG: Dropping passport on suspect - attempting to remove stamp")
-		close_passport_action()
-		remove_stamp()
-	else:
-		print("DEBUG: Passport dropped in invalid location")
-
-func handle_guide_drop(mouse_pos: Vector2):
-	if inspection_table.get_rect().has_point(inspection_table.to_local(mouse_pos)):
-		open_guide_action()
-	elif suspect_panel.get_rect().has_point(suspect_panel.to_local(mouse_pos)):
-		close_guide_action()
-	elif suspect.get_rect().has_point(suspect.to_local(mouse_pos)):
-		close_guide_action()
-
-func open_passport_action():
-	# First change the passport texture
-	$Gameplay/InteractiveElements/Passport.texture = preload("res://assets/documents/passport-old.png")
-	
-	# Hide closed passport
-	$Gameplay/InteractiveElements/Passport/ClosedPassport.visible = false
-	
-	# Show OpenPassport which contains the stamps
-	$Gameplay/InteractiveElements/Passport/OpenPassport.visible = true
-	
-func close_passport_action():
-	# First hide the OpenPassport node which contains the stamps
-	$Gameplay/InteractiveElements/Passport/OpenPassport.visible = false
-	
-	# Then change the passport texture and show closed passport
-	$Gameplay/InteractiveElements/Passport.texture = preload("res://assets/documents/closed_passport_small/closed_passport_small.png")
-	$Gameplay/InteractiveElements/Passport/ClosedPassport.visible = true
-	
-	# Center the passport on the cursor
-	var mouse_pos = get_global_mouse_position()
-	var passport_rect = $Gameplay/InteractiveElements/Passport.get_rect()
-	var offset = passport_rect.size / 2
-	$Gameplay/InteractiveElements/Passport.global_position = mouse_pos - offset
-	
-func open_guide_action():
-	$Gameplay/InteractiveElements/Guide.texture = preload("res://assets/documents/customs_guide/customs_guide_open_2.png")
-	$Gameplay/InteractiveElements/Guide/ClosedGuide.visible = false
-	$Gameplay/InteractiveElements/Guide/OpenGuide.visible = true
-	
-func close_guide_action():
-	$Gameplay/InteractiveElements/Guide.texture = preload("res://assets/documents/customs_guide/customs_guide_closed_small.png")
-	$Gameplay/InteractiveElements/Guide/ClosedGuide.visible = true
-	$Gameplay/InteractiveElements/Guide/OpenGuide.visible = false
-	
-func find_topmost_sprite_at(pos: Vector2) -> Node2D:
-	var topmost_sprite = null
-	var highest_z = -1
-	
-	for sprite in draggable_sprites:
-		if sprite.visible and sprite.get_rect().has_point(sprite.to_local(pos)):
-			if sprite.z_index > highest_z:
-				highest_z = sprite.z_index
-				topmost_sprite = sprite
-	
-	return topmost_sprite
+		if megaphone.get_rect().has_point(megaphone.to_local(mouse_pos)):
+			megaphone_clicked()
+			return
 
 func check_node_for_stamps(node: Node):
 	for child in node.get_children():
@@ -833,7 +699,6 @@ func check_node_for_stamps(node: Node):
 var current_stamp_count = 0
 var current_approval_status = null
 
-		
 func remove_stamp():
 	print("DEBUG: Starting remove_stamp process...")
 	
@@ -842,19 +707,23 @@ func remove_stamp():
 	current_approval_status = null
 	
 	# Check both closed and open passport nodes
-	var closed_passport = $Gameplay/InteractiveElements/Passport/ClosedPassport
-	var open_passport = $Gameplay/InteractiveElements/Passport/OpenPassport
-	var passport_base = $Gameplay/InteractiveElements/Passport
+	var passport = $Gameplay/InteractiveElements/Passport
+	var closed_passport = passport.get_node_or_null("ClosedPassport")
+	var open_passport = passport.get_node_or_null("OpenPassport")
 	
 	print("DEBUG: Checking passport nodes:")
-	print("- Base passport children:", passport_base.get_child_count())
-	print("- Closed passport children:", closed_passport.get_child_count())
-	print("- Open passport children:", open_passport.get_child_count())
+	print("- Base passport children:", passport.get_child_count())
+	if closed_passport:
+		print("- Closed passport children:", closed_passport.get_child_count())
+	if open_passport:
+		print("- Open passport children:", open_passport.get_child_count())
 	
 	# Check all nodes
-	check_node_for_stamps(passport_base)
-	check_node_for_stamps(closed_passport)
-	check_node_for_stamps(open_passport)
+	check_node_for_stamps(passport)
+	if closed_passport:
+		check_node_for_stamps(closed_passport)
+	if open_passport:
+		check_node_for_stamps(open_passport)
 	
 	print("DEBUG: Total stamps found:", current_stamp_count)
 	print("DEBUG: Final approval status:", current_approval_status)
@@ -864,13 +733,17 @@ func remove_stamp():
 		return
 
 	print("DEBUG: Processing passport with status:", current_approval_status)
-	var passport_book = $Gameplay/InteractiveElements/Passport
+	
 	# Animate the potato mugshot and passport exit
+	var mugshot_generator = $Gameplay/MugshotPhotoGenerator
+	var suspect_panel = $Gameplay/SuspectPanel
+	var suspect = $Gameplay/MugshotPhotoGenerator/SizingSprite
+	
 	var tween = create_tween()
 	tween.set_parallel(true)
 	tween.tween_property(mugshot_generator, "position:x", suspect_panel.position.x - suspect.get_rect().size.x, 1)
 	tween.tween_property(mugshot_generator, "modulate:a", 0, 1)
-	tween.tween_property(passport_book, "modulate:a", 0, 1)
+	tween.tween_property(passport, "modulate:a", 0, 1)
 	tween.chain().tween_callback(func(): 
 		process_decision(current_approval_status == "approved")
 		move_potato_along_path(current_approval_status)
@@ -967,13 +840,6 @@ func reset_scene():
 	mugshot_generator.position.x = suspect_panel.position.x
 	$UI/Labels/JudgementLabel.text = ""
 	
-
-func get_highest_z_index():
-	var highest = 0
-	for sprite in draggable_sprites:
-		highest = max(highest, sprite.z_index)
-	return highest
-
 func _exit_tree():
 	# Ensure cursor is restored when leaving the scene
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -992,16 +858,14 @@ func _on_dialogue_finished():
 	
 	if Global.StoryState.COMPLETED:
 		# Game complete, show credits or return to menu
-		get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
+		return
+		print("ERROR: _on_dialogue_finished called StoryState.COMPLETED but no scene loaded")
+		#get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
 
 func disable_controls():
 	# Disable player interaction during dialogue
 	print("disabling controls")
 	set_process_input(false)
-	$Gameplay/Megaphone.visible = false
-	$Gameplay/InteractiveElements/Guide.visible = false
-	$Gameplay/InteractiveElements/LawReceipt.visible = false
-	$Gameplay/InteractiveElements/Passport.visible = false
 	# Disable border runner system and set spawn chance to 0
 	if border_runner_system:
 		border_runner_system.disable()
@@ -1014,10 +878,6 @@ func enable_controls():
 	# Re-enable controls after dialogue
 	print("enabling controls")
 	set_process_input(true)
-	$Gameplay/Megaphone.visible = true
-	$Gameplay/InteractiveElements/Guide.visible = true
-	$Gameplay/InteractiveElements/LawReceipt.visible = true
-	$Gameplay/InteractiveElements/Passport.visible = false
 	# Re-enable border runner system and restore original spawn chance
 	if border_runner_system:
 		border_runner_system.enable()
