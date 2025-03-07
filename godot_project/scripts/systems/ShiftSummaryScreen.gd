@@ -4,7 +4,7 @@ extends Control
 @onready var background = $Background
 
 var stats: Dictionary
-const BACKGROUND_TEXTURE = preload("res://assets/shift_summary/shift_summary_mockup_empty.png")
+const BACKGROUND_TEXTURE = preload("res://assets/menu/shift_summary_end_screen.png")
 
 func _init():
 	mouse_filter = Control.MOUSE_FILTER_IGNORE  # Allow input to pass through to buttons

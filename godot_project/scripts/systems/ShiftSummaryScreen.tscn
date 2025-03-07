@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dsobjoevgmlbb"]
+[gd_scene load_steps=8 format=3 uid="uid://dsobjoevgmlbb"]
 
 [ext_resource type="Script" uid="uid://buqr1l0oc2207" path="res://scripts/systems/ShiftSummaryScreen.gd" id="1_lf5e7"]
 [ext_resource type="LabelSettings" uid="uid://bnemubwwr558w" path="res://assets/styles/ShiftSummaryHeaderText.tres" id="2_68n1l"]
-[ext_resource type="Texture2D" uid="uid://b5dnmxonlp47u" path="res://assets/shift_summary/shift_summary_mockup_empty.png" id="3_68n1l"]
 [ext_resource type="LabelSettings" uid="uid://skp252vibaj1" path="res://assets/styles/ShiftSummaryBodyText.tres" id="3_oti8t"]
+[ext_resource type="LabelSettings" uid="uid://2s03ew43w0st" path="res://assets/styles/LeaderboardSummaryBodyText.tres" id="3_se1pp"]
+[ext_resource type="Texture2D" uid="uid://jnkry01ogbb2" path="res://assets/menu/shift_summary_end_screen.png" id="4_2of0t"]
 [ext_resource type="PackedScene" uid="uid://dk47bwveebyio" path="res://scripts/systems/PotatoRain.tscn" id="5_oti8t"]
 [ext_resource type="Texture2D" uid="uid://cbmfot3bx30yf" path="res://assets/narrative/aftermath.png" id="6_3rq7k"]
 
@@ -78,23 +79,27 @@ text = "Main Menu"
 [node name="HeaderPanel" type="VBoxContainer" parent="."]
 z_index = 1
 layout_mode = 0
-offset_left = 296.0
-offset_top = 168.0
-offset_right = 780.0
-offset_bottom = 252.0
+offset_left = 168.0
+offset_top = 181.0
+offset_right = 442.0
+offset_bottom = 245.0
+alignment = 1
 
 [node name="Title" type="Label" parent="HeaderPanel"]
 layout_mode = 2
 text = "SHIFT SUMMARY
 Endless - Expert"
 label_settings = ExtResource("2_68n1l")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="LeaderboardTitlePanel" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 848.0
-offset_top = 168.0
-offset_right = 1190.0
-offset_bottom = 245.0
+offset_left = 840.0
+offset_top = 208.0
+offset_right = 1151.0
+offset_bottom = 261.0
+alignment = 1
 
 [node name="Title" type="Label" parent="LeaderboardTitlePanel"]
 z_index = 1
@@ -102,13 +107,15 @@ layout_mode = 2
 text = "Global Leaderboard
 Endless - Expert"
 label_settings = ExtResource("2_68n1l")
+horizontal_alignment = 1
 
 [node name="LeaderboardPanel" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 840.0
 offset_top = 248.0
-offset_right = 1188.0
-offset_bottom = 584.0
+offset_right = 1150.0
+offset_bottom = 554.0
+alignment = 1
 
 [node name="Entries" type="Label" parent="LeaderboardPanel"]
 z_index = 1
@@ -125,43 +132,46 @@ text = "1    BroHeartTTV    15,750
 10    KittyKatsuVT    4,300
 11    nhancodes    4,150
 12    2NerdyNerds    4,100"
-label_settings = ExtResource("3_oti8t")
+label_settings = ExtResource("3_se1pp")
+horizontal_alignment = 1
 
 [node name="LeftPanel" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 200.0
-offset_top = 256.0
-offset_right = 544.0
-offset_bottom = 596.0
+offset_left = 170.0
+offset_top = 244.0
+offset_right = 460.0
+offset_bottom = 522.0
+alignment = 1
 
 [node name="ShiftComplete" type="Label" parent="LeftPanel"]
 z_index = 1
 layout_mode = 2
 text = "--- SHIFT 289 COMPLETE ---
-
+YOU LOSE!
 Time Taken: 6m 5s
-Total Score: 363,680
-"
+Total Score: 363,680"
 label_settings = ExtResource("3_oti8t")
+horizontal_alignment = 1
 
 [node name="MissileStats" type="Label" parent="LeftPanel"]
 z_index = 1
 layout_mode = 2
 text = "
-
 --- MISSILE STATS ---
 Missiles Fired: 300
 Missiles Hit: 3
 Perfect Hits: 3
 Hit Rate: 1%"
 label_settings = ExtResource("3_oti8t")
+horizontal_alignment = 1
 
 [node name="RightPanel" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 488.0
-offset_top = 256.0
-offset_right = 844.0
-offset_bottom = 596.0
+offset_left = 502.0
+offset_top = 182.0
+offset_right = 782.0
+offset_bottom = 539.0
+alignment = 1
 
 [node name="DocumentStats" type="Label" parent="RightPanel"]
 z_index = 1
@@ -172,6 +182,7 @@ text = "  --- DOCUMENT STATS ---
     Potatoes Rejected: 14
     Perfect Stamps: 5"
 label_settings = ExtResource("3_oti8t")
+horizontal_alignment = 1
 
 [node name="BonusStats" type="Label" parent="RightPanel"]
 z_index = 1
@@ -184,6 +195,7 @@ text = "
 
     FINAL SCORE: 15,480"
 label_settings = ExtResource("3_oti8t")
+horizontal_alignment = 1
 
 [node name="Background" type="TextureRect" parent="."]
 z_index = 6
@@ -193,7 +205,7 @@ offset_left = 111.0
 offset_top = 80.0
 offset_right = 1192.0
 offset_bottom = 632.0
-texture = ExtResource("3_68n1l")
+texture = ExtResource("4_2of0t")
 expand_mode = 1
 
 [node name="PotatoRain" parent="." instance=ExtResource("5_oti8t")]
@@ -201,11 +213,14 @@ z_index = -1
 z_as_relative = false
 
 [node name="ScreenBackground" type="TextureRect" parent="."]
+visible = false
 z_index = 1
 z_as_relative = false
 layout_mode = 0
-offset_right = 1919.0
-offset_bottom = 1079.0
+offset_left = -6.0
+offset_top = 20.0
+offset_right = 1914.0
+offset_bottom = 1100.0
 scale = Vector2(0.667597, 0.667597)
 texture = ExtResource("6_3rq7k")
 
