@@ -1,69 +1,69 @@
 # tutorial.dtl
-[music path="res://assets/audio/ambient/1_wind_outside.wav" fade="2.0" volume="-5.0" bus="Music"]
+audio music "res://assets/audio/ambient/wind_outside.wav" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/checkpoint_interior.png" fade="0.0"]
-join narrator [z_index="1"]
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+join narrator center [z_index="1"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: Welcome to Spud Customs Training!
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: Your duty is to process incoming potatoes at our border checkpoint.
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: This training will teach you the essential skills needed to protect Spud's borders.
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: As a Customs Officer, you'll need to check documents carefully.
 
 [background arg="res://assets/narrative/mega_phone_example.png" fade="2.0"]
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: You'll signal each potato to approach your office by tapping the megaphone.
 
 [background arg="res://assets/narrative/suspect_panel_example.png" fade="2.0"]
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: Take their documents and move them to your inspection table.
 
 [background arg="res://assets/narrative/examine_document_example.png" fade="2.0"]
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: Look for expired dates, incorrect information, or signs of forgery.
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: Your desk has stamps for marking documents and a missile launcher to stop runners.
 
 [background arg="res://assets/narrative/stamp_bar_example.png" fade="2.0"]
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: To use a stamp, expand the stamp tray and drag a document underneath, then click the stamp.
 
 [background arg="res://assets/narrative/align_stamp_example.png" fade="2.0"]
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: Be sure to place your documents in the designated areas underneath your stamps.
 
 [background arg="res://assets/narrative/apply_stamp_example.png" fade="2.0"]
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: Use your stamps to mark documents as approved or rejected.
 
 [background arg="res://assets/narrative/reject_stamp_example.png" fade="2.0"]
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: Approve those with valid papers and reject those without.
 
 [background arg="res://assets/narrative/border_runner_example.png" fade="2.0"]
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: Sometimes, potatoes will try to rush past your checkpoint.
 
 [background arg="res://assets/narrative/explode_runner_example.png" fade="2.0"]
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: Click on these "runners" to launch a missile and stop them.
 
 [background arg="res://assets/narrative/strikes_quota_example.png" fade="2.0"]
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: Remember, each runner that gets through will count as a strike against you.
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: Too many strikes, and your shift will end prematurely.
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: Each shift has a quota of potatoes you need to process to finish your day.
 
 [background arg="res://assets/narrative/checkpoint_interior.png" fade="2.0"]
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: That covers the basics of your duties as a Customs Officer.
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
-narrator: Remember: check documents carefully, stop runners, and meet your quota.
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+narrator: Remember\: check documents carefully, stop runners, and meet your quota.
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: The safety and security of Spud depends on your vigilance!
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: Good luck, officer.
 leave narrator

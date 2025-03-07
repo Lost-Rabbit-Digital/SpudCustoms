@@ -4,6 +4,7 @@
 &"_translation_id": "",
 &"color": Color(1, 1, 1, 1),
 &"custom_info": {
+"prefix": "",
 "sound_mood_default": "",
 "sound_moods": {
 "Mood 1": {
@@ -17,7 +18,8 @@
 "volume_variance": 0.0
 }
 },
-"style": ""
+"style": "",
+"suffix": ""
 },
 &"default_portrait": "Narrator",
 &"description": "",

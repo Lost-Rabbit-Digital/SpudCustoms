@@ -1,139 +1,139 @@
 # shift5_intro.dtl
-[music path="res://assets/audio/ambient/horror_drone_49.wav" fade="2.0" volume="-5.0" bus="Music"]
+audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
 
 [background arg="res://assets/narrative/morning_facility.png" fade="2.0"]
 join narrator [z_index="1"]
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: The border facility feels different today. Tense. Electric.
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: Security personnel patrol the corridors in greater numbers.
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: The usual chatter among officers has been replaced by wary silence.
 leave narrator
 
 [background arg="res://assets/narrative/emergency_briefing.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Supervisor Russet calls an emergency briefing, face grim.
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Last night, prohibited materials were discovered circulating in Sector 7.
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Pamphlets containing lies about Root Reserve. Seditious propaganda.
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Russet slams his fist on the podium. This will not be tolerated!
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Effective immediately, we're implementing threat level ORANGE protocols.
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: All officers will be subject to loyalty screenings. All travelers face maximum scrutiny.
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Remember, those who harbor traitors are traitors themselves.
 leave supervisor_russet
 
 [background arg="res://assets/narrative/underground_resistance.png" fade="2.0"]
 join sweet_potato_sasha center [z_index="1"]
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Sasha moves closer with practiced casualness: It's working. The pamphlets are spreading.
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: People are asking questions about Root Reserve. Demanding answers.
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Sasha's eyes burn with intensity. But we need more evidence. Hard proof.
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: I have sources telling me there's a shipment log in Russet's office. Transport manifests between here and the processing plant.
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: I need you to help me get it. Tonight, after final shift. Can I count on you?
 
 set {sasha_investigation} = "none"
 - "I'm in. Let's expose the truth."
-   set {sasha_investigation} = "committed"
+	set {sasha_investigation} = "committed"
 - "I don't know, Sasha...this could be dangerous."
-   set {sasha_investigation} = "hesitant"
+set {sasha_investigation} = "hesitant"
 - "We should report this through proper channels."
-   set {sasha_investigation} = "conservative"
+set {sasha_investigation} = "conservative"
 
 if {sasha_investigation} == "committed":
-   join sweet_potato_sasha center [z_index="1"]
-   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-   sweet_potato_sasha: Sasha's face shows visible relief: Thank goodness. I knew you had stronger roots than the others.
-   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
-   sweet_potato_sasha: We'll meet at midnight. Watch for my signal.
-   leave sweet_potato_sasha
+join sweet_potato_sasha center [z_index="1"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+sweet_potato_sasha: Sasha's face shows visible relief: Thank goodness. I knew you had stronger roots than the others.
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+sweet_potato_sasha: We'll meet at midnight. Watch for my signal.
+leave sweet_potato_sasha
 elif {sasha_investigation} == "hesitant":
-   join sweet_potato_sasha center [z_index="1"]
-   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-   sweet_potato_sasha: Sometimes we have to risk getting mashed to do what's right.
-   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
-   sweet_potato_sasha: Sasha's expression softens: Think about it. You know where to find me if you change your mind.
-   leave sweet_potato_sasha
+join sweet_potato_sasha center [z_index="1"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+sweet_potato_sasha: Sometimes we have to risk getting mashed to do what's right.
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+sweet_potato_sasha: Sasha's expression softens: Think about it. You know where to find me if you change your mind.
+leave sweet_potato_sasha
 else:
-   join sweet_potato_sasha [z_index="1"]
-   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-   sweet_potato_sasha: Sasha lets out a bitter laugh: The proper channels ARE the problem.
-   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
-   sweet_potato_sasha: But I understand if you're not ready to see that yet.
-   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-   sweet_potato_sasha: Sasha turns away sharply: Just remember what you saw in those files when you can't sleep at night.
-   leave sweet_potato_sasha
+join sweet_potato_sasha [z_index="1"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+sweet_potato_sasha: Sasha lets out a bitter laugh: The proper channels ARE the problem.
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+sweet_potato_sasha: But I understand if you're not ready to see that yet.
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+sweet_potato_sasha: Sasha turns away sharply: Just remember what you saw in those files when you can't sleep at night.
+leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/security_checkpoint.png" fade="2.0"]
 join security_officer [z_index="1"]
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 security_officer: A stern security officer approaches your station with a scanner.
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 security_officer: Loyalty check. Standard procedure under Orange protocols.
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 security_officer: Please state your name and officer ID. Then tell me why you serve Spud.
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 security_officer: The officer watches you carefully, scanner humming.
 
 set {loyalty_response} = "none"
 - "I serve to protect our borders from dangerous influences."
-   set {loyalty_response} = "patriotic"
+	set {loyalty_response} = "patriotic"
 - "I serve because it's my duty. That's all."
-   set {loyalty_response} = "dutiful"
+set {loyalty_response} = "dutiful"
 - "I serve to ensure everyone receives fair treatment."
-   set {loyalty_response} = "idealistic"
+set {loyalty_response} = "idealistic"
 
 if {loyalty_response} == "patriotic":
-   join security_officer [z_index="1"]
-   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
-   security_officer: The officer nods approvingly. Good answer. Spud needs loyal protectors.
-   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-   security_officer: Scanner reads green. Carry on, officer.
-   leave security_officer
+join security_officer [z_index="1"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+security_officer: The officer nods approvingly. Good answer. Spud needs loyal protectors.
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+security_officer: Scanner reads green. Carry on, officer.
+leave security_officer
 elif {loyalty_response} == "dutiful":
-   join security_officer [z_index="1"]
-   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-   security_officer: The officer's expression remains neutral. Duty. Yes. That will do.
-   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
-   security_officer: Scanner shows yellow. Not concerning, but noted.
-   leave security_officer
+join security_officer [z_index="1"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+security_officer: The officer's expression remains neutral. Duty. Yes. That will do.
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+security_officer: Scanner shows yellow. Not concerning, but noted.
+leave security_officer
 else:
-   join security_officer [z_index="1"]
-   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
-   security_officer: The officer's eyebrows raise. Fair treatment?
-   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-   security_officer: Scanner flashes amber. Interesting priorities, officer.
-   [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
-   security_officer: Remember, our primary concern is Spud's security, not fairness.
-   [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-   security_officer: The officer makes a note in their datapad before moving on.
-   leave security_officer
+join security_officer [z_index="1"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+security_officer: The officer's eyebrows raise. Fair treatment?
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+security_officer: Scanner flashes amber. Interesting priorities, officer.
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+security_officer: Remember, our primary concern is Spud's security, not fairness.
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+security_officer: The officer makes a note in their datapad before moving on.
+leave security_officer
 
 [background arg="res://assets/narrative/lineup_of_travelers.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Today's quota has been increased. Process more potatoes, faster.
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: And remember, anyone with suspicious materials or behavior is to be flagged for special processing.
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Russet leans closer. I'll be watching your decisions very carefully today.
 leave supervisor_russet
 
 join player_character [z_index="1"]
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 player_character: You look at the growing line of nervous travelers.
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 player_character: Tonight could change everything. If you get those manifests...
-[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 player_character: But first, you need to survive the day without raising suspicion.
 leave player_character
