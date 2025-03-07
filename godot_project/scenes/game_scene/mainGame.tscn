@@ -1,16 +1,17 @@
-[gd_scene load_steps=73 format=3 uid="uid://bjx1qjoxul45k"]
+[gd_scene load_steps=69 format=3 uid="uid://bjx1qjoxul45k"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://scenes/game_scene/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://scripts/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
-[ext_resource type="Texture2D" uid="uid://doml0udrwe6pe" path="res://assets/level/Background.png" id="3_b5n3c"]
-[ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/level/customs_office.png" id="4_qvpbt"]
-[ext_resource type="Texture2D" uid="uid://yvmmxdnlhttw" path="res://assets/level/fence_posts.png" id="5_vkwy1"]
-[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/level/world_background.png" id="6_0hfru"]
+[ext_resource type="Texture2D" uid="uid://doml0udrwe6pe" path="res://assets/world/Background.png" id="3_b5n3c"]
+[ext_resource type="PackedScene" uid="uid://c4h2cf8sxx3gh" path="res://assets/world/world_environment.tscn" id="3_pmo31"]
+[ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/world/customs_office.png" id="4_qvpbt"]
+[ext_resource type="Texture2D" uid="uid://yvmmxdnlhttw" path="res://assets/world/fence_posts.png" id="5_vkwy1"]
+[ext_resource type="Texture2D" uid="uid://5ogjlhjmn885" path="res://assets/world/background/world_background.png" id="6_0hfru"]
 [ext_resource type="Material" uid="uid://c1fljl8m4j1w1" path="res://assets/shaders/grass_animation_material.tres" id="6_b5n3c"]
-[ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/level/interactable_items_world_background.png" id="7_41g47"]
-[ext_resource type="Texture2D" uid="uid://ds2lwggt7nk5l" path="res://assets/level/grass_texture.png" id="7_qvpbt"]
+[ext_resource type="Texture2D" uid="uid://bko8qbm14huhs" path="res://assets/world/background/interactable_items_world_background.png" id="7_41g47"]
+[ext_resource type="Texture2D" uid="uid://ds2lwggt7nk5l" path="res://assets/world/grass_texture.png" id="7_qvpbt"]
 [ext_resource type="Material" uid="uid://cxhxsjojddi0p" path="res://assets/shaders/window/window_cover_material.tres" id="8_0hfru"]
-[ext_resource type="Texture2D" uid="uid://dllp1qtb5fpbu" path="res://assets/level/window_covers.png" id="8_vkwy1"]
+[ext_resource type="Texture2D" uid="uid://dllp1qtb5fpbu" path="res://assets/world/window_covers.png" id="8_vkwy1"]
 [ext_resource type="FontVariation" uid="uid://t3ii3pbmg2bo" path="res://assets/fonts/Modern_DOS_Font_Variation.tres" id="8_ybo26"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="9_gvwms"]
 [ext_resource type="Script" uid="uid://mm8kba4qcarc" path="res://scripts/systems/QueueManager.gd" id="11_qilia"]
@@ -20,13 +21,8 @@
 [ext_resource type="AudioStream" uid="uid://bb8lmtt8f5yg4" path="res://assets/audio/ambient/wind_inside_1.wav" id="13_qvpbt"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="14_ynnf6"]
 [ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="15_xmuiq"]
-[ext_resource type="Texture2D" uid="uid://fmqkliw6t33x" path="res://assets/suspect_panel/suspect_panel_front.png" id="16_lufl5"]
-[ext_resource type="Texture2D" uid="uid://cwni5a4q3jj67" path="res://assets/suspect_panel/suspect_panel_top_bottom.png" id="17_q7p8e"]
-[ext_resource type="Texture2D" uid="uid://dw8evqqtobc7x" path="res://assets/suspect_panel/suspect_panel.png" id="18_suyoy"]
-[ext_resource type="Texture2D" uid="uid://dgw6rbhy6crh" path="res://assets/suspect_panel/suspect_panel_table.png" id="19_p1tff"]
-[ext_resource type="Texture2D" uid="uid://cnrr6jblok4ky" path="res://assets/suspect_panel/suspect_panel_background.png" id="20_blq4d"]
-[ext_resource type="Texture2D" uid="uid://cvtdlyxlb5qaw" path="res://assets/suspect_panel/suspect_panel_document_slot.png" id="21_8c3on"]
-[ext_resource type="Texture2D" uid="uid://b2icltv7xkk6j" path="res://assets/level/CustomsDesk.png" id="22_or1f4"]
+[ext_resource type="Texture2D" uid="uid://b2icltv7xkk6j" path="res://assets/user_interface/CustomsDesk.png" id="22_or1f4"]
+[ext_resource type="PackedScene" uid="uid://cejqnrw4oo4r2" path="res://assets/user_interface/suspect_panel/suspect_panel.tscn" id="22_qfxfi"]
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://scripts/systems/character_generator.tscn" id="23_3qac4"]
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="24_yhqqy"]
 [ext_resource type="PackedScene" uid="uid://be3lucg3f3a3c" path="res://scripts/systems/StampBarController.tscn" id="25_osm16"]
@@ -251,7 +247,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
+[node name="Environment" parent="UI" instance=ExtResource("3_pmo31")]
+
 [node name="WorldPanel" type="Sprite2D" parent="UI"]
+visible = false
 z_index = 6
 z_as_relative = false
 position = Vector2(642.352, 121.5)
@@ -466,6 +465,7 @@ autoplay = true
 bus = &"SFX"
 
 [node name="QueueManager" type="Node2D" parent="SystemManagers"]
+unique_name_in_owner = true
 script = ExtResource("11_qilia")
 
 [node name="StatsManager" parent="SystemManagers" instance=ExtResource("12_h8jl1")]
@@ -490,40 +490,7 @@ position = Vector2(33.8086, -22.8106)
 scale = Vector2(0.349, 0.349)
 texture = ExtResource("15_xmuiq")
 
-[node name="SuspectPanel" type="Sprite2D" parent="Gameplay"]
-z_index = 1
-position = Vector2(1074, 472)
-scale = Vector2(1.05816, 1.06849)
-
-[node name="SuspectPanelTop" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_index = 4
-z_as_relative = false
-texture = ExtResource("16_lufl5")
-
-[node name="SuspectPanelTopBottom" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_as_relative = false
-texture = ExtResource("17_q7p8e")
-
-[node name="SuspectPanelFront" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_index = -1
-z_as_relative = false
-texture = ExtResource("18_suyoy")
-
-[node name="SuspectPanelTable" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_index = -1
-z_as_relative = false
-texture = ExtResource("19_p1tff")
-
-[node name="SuspectPanelBackground" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_index = -1
-z_as_relative = false
-texture = ExtResource("20_blq4d")
-
-[node name="SuspectPanelDocumentSlot" type="Sprite2D" parent="Gameplay/SuspectPanel"]
-z_index = 3
-z_as_relative = false
-position = Vector2(0, 2.4)
-texture = ExtResource("21_8c3on")
+[node name="SuspectPanel" parent="Gameplay" instance=ExtResource("22_qfxfi")]
 
 [node name="InspectionTable" type="Sprite2D" parent="Gameplay"]
 position = Vector2(443.837, 470.5)

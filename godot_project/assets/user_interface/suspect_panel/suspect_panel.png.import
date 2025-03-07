@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvguhhxihdmr1"
-path="res://.godot/imported/drop_down_gate.png-5544a0d46397a8fa2b5d249c2665f399.ctex"
+uid="uid://dw8evqqtobc7x"
+path="res://.godot/imported/suspect_panel.png-22e946ff8eddc3ba16ecdf36507ffa7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level/drop_down_gate.png"
-dest_files=["res://.godot/imported/drop_down_gate.png-5544a0d46397a8fa2b5d249c2665f399.ctex"]
+source_file="res://assets/user_interface/suspect_panel/suspect_panel.png"
+dest_files=["res://.godot/imported/suspect_panel.png-22e946ff8eddc3ba16ecdf36507ffa7e.ctex"]
 
 [params]
 

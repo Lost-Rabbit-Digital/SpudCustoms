@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwni5a4q3jj67"
-path="res://.godot/imported/suspect_panel_top_bottom.png-72ab48fea0a57d60ab76fe279053a4a1.ctex"
+uid="uid://standyguem2s"
+path="res://.godot/imported/poster_2_normal.png-859d86ab7184e597e56b64224bea26f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/suspect_panel/suspect_panel_top_bottom.png"
-dest_files=["res://.godot/imported/suspect_panel_top_bottom.png-72ab48fea0a57d60ab76fe279053a4a1.ctex"]
+source_file="res://assets/world/posters/normal_size/poster_2_normal.png"
+dest_files=["res://.godot/imported/poster_2_normal.png-859d86ab7184e597e56b64224bea26f8.ctex"]
 
 [params]
 

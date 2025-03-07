@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bko8qbm14huhs"
-path="res://.godot/imported/interactable_items_world_background.png-3579a6455446bc87dae3785c4dd1226f.ctex"
+uid="uid://cma3w0eulsacq"
+path="res://.godot/imported/poster_2_mini.png-901a4bfe4be347bb132064ec166e5034.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level/interactable_items_world_background.png"
-dest_files=["res://.godot/imported/interactable_items_world_background.png-3579a6455446bc87dae3785c4dd1226f.ctex"]
+source_file="res://assets/world/posters/mini_size/poster_2_mini.png"
+dest_files=["res://.godot/imported/poster_2_mini.png-901a4bfe4be347bb132064ec166e5034.ctex"]
 
 [params]
 

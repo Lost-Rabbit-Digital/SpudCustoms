@@ -5,10 +5,10 @@ signal game_over_triggered
 
 @export_group("Debugging")
 ## Unlimited ammunition for fox hunting
-@export var unlimited_missiles = true
+@export var unlimited_missiles = false
 ## Force Spuds to run the border for your entertainment
-@export var rapid_runners = true
-##
+@export var rapid_runners = false
+## Generates a crater sprite where you click
 @export var crater_spawn_on_click = false
 
 @export_group("System References")

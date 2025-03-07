@@ -1,13 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://be3lucg3f3a3c"]
+[gd_scene load_steps=8 format=3 uid="uid://be3lucg3f3a3c"]
 
 [ext_resource type="Script" uid="uid://clc5w67gry7ki" path="res://scripts/systems/StampBarController.gd" id="1_bd37c"]
-[ext_resource type="Texture2D" uid="uid://byj3e8pmw17no" path="res://assets/stamps/stamp_crossbar_expand_button.png" id="2_6a1oe"]
-[ext_resource type="Texture2D" uid="uid://cwg0ee0w1u5ew" path="res://assets/stamps/receipt_printer.png" id="3_6a1oe"]
-[ext_resource type="Texture2D" uid="uid://cu6xbgla0qqqe" path="res://assets/stamps/stamp_crossbar.png" id="3_i7p4h"]
-[ext_resource type="Texture2D" uid="uid://c0dbfc2uut8qn" path="res://assets/stamps/stamp_shadow.png" id="4_lu78d"]
-[ext_resource type="Texture2D" uid="uid://dubo3sdxx8chn" path="res://assets/stamps/approval_stamp_3.png" id="5_0hc55"]
-[ext_resource type="Texture2D" uid="uid://cbr7eruytgvu8" path="res://assets/stamps/rejection_stamp_2.png" id="6_5qhns"]
-[ext_resource type="Texture2D" uid="uid://cn7albyj8gu6n" path="res://assets/stamps/hide_button.png" id="7_l77wl"]
+[ext_resource type="Texture2D" uid="uid://c56e60snydr5r" path="res://assets/stamps/stamp_crossbar_expand_button.png" id="2_6a1oe"]
+[ext_resource type="Texture2D" uid="uid://oovlb86b14wu" path="res://assets/stamps/stamp_crossbar.png" id="3_i7p4h"]
+[ext_resource type="Texture2D" uid="uid://croh6h1e7ru46" path="res://assets/stamps/stamp_shadow.png" id="4_lu78d"]
+[ext_resource type="Texture2D" uid="uid://dx0d3hwbdppd" path="res://assets/stamps/approval_stamp_3.png" id="5_0hc55"]
+[ext_resource type="Texture2D" uid="uid://b4d4v3o3gj2yt" path="res://assets/stamps/rejection_stamp_2.png" id="6_5qhns"]
+[ext_resource type="Texture2D" uid="uid://b0xvn475tgt1j" path="res://assets/stamps/hide_button.png" id="7_l77wl"]
 
 [node name="StampBarController" type="Node2D"]
 z_index = 10
@@ -28,14 +27,6 @@ texture_normal = ExtResource("2_6a1oe")
 z_index = 11
 z_as_relative = false
 position = Vector2(-636, -104)
-
-[node name="ReceiptPrinter" type="Sprite2D" parent="StampBar"]
-visible = false
-z_index = 15
-z_as_relative = false
-position = Vector2(113, 437)
-scale = Vector2(0.859252, 0.937597)
-texture = ExtResource("3_6a1oe")
 
 [node name="Background" type="Sprite2D" parent="StampBar"]
 z_index = 3
