@@ -146,6 +146,11 @@ func _ready():
 			push_error("Failed to load giblet_" + str(i))
 			
 func _process(delta):
+	# Check if in dialogue
+	var narrative_manager = find_narrative_manager()
+	if narrative_manager and narrative_manager.dialogue_active:
+		return
+
 	if not is_enabled:
 		print("BRS is disabled.")
 		return
@@ -180,6 +185,9 @@ func _process(delta):
 			# After that minimum time, there's a 10% chance per second of spawning
 			if roll < threshold:
 				attempt_spawn_runner()
+
+func find_narrative_manager():
+	var narrative_manager = %NarrativeManager
 
 func attempt_spawn_runner():
 	print("Attempting to spawn runner...")

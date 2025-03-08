@@ -454,6 +454,7 @@ script = ExtResource("11_qilia")
 [node name="StatsManager" parent="SystemManagers" instance=ExtResource("12_h8jl1")]
 
 [node name="NarrativeManager" parent="SystemManagers" instance=ExtResource("13_c85wy")]
+unique_name_in_owner = true
 
 [node name="DragAndDropManager" type="Node" parent="SystemManagers"]
 script = ExtResource("20_5djk1")
