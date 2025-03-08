@@ -866,6 +866,8 @@ func disable_controls():
 	# Disable player interaction during dialogue
 	print("disabling controls")
 	set_process_input(false)
+	border_runner_system.is_enabled = false
+	
 	# Disable border runner system and set spawn chance to 0
 	if border_runner_system:
 		border_runner_system.disable()
@@ -877,6 +879,7 @@ func enable_controls():
 	# Re-enable controls after dialogue
 	print("enabling controls")
 	set_process_input(true)
+	border_runner_system.is_enabled = true
 	# Re-enable border runner system and restore original spawn chance
 	if border_runner_system:
 		border_runner_system.enable()
@@ -889,7 +892,7 @@ func _on_game_over():
 		var elapsed_time = (Time.get_ticks_msec() / 1000.0) - game_start_time
 		
 		# Get border runner statistics
-		var runner_stats = $BorderRunnerSystem.shift_stats
+		var runner_stats = border_runner_system.shift_stats
 		
 		# Populate the ShiftStats object with the necessary data
 		shift_stats.time_taken = elapsed_time

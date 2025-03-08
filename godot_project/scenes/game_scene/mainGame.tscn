@@ -460,14 +460,13 @@ script = ExtResource("20_5djk1")
 
 [node name="BorderRunnerSystem" parent="SystemManagers" node_paths=PackedStringArray("queue_manager", "score_label", "strike_label", "alert_label", "alert_timer", "missile_collision_shape") instance=ExtResource("2_4eqo0")]
 unique_name_in_owner = true
+z_index = 1
 queue_manager = NodePath("../QueueManager")
 score_label = NodePath("../../UI/Labels/ScoreLabel")
 strike_label = NodePath("../../UI/Labels/StrikesLabel")
 alert_label = NodePath("../../UI/Labels/MarginContainer/AlertLabel")
 alert_timer = NodePath("../Timers/AlertTimer")
 missile_collision_shape = NodePath("Area2D/CollisionShape2D")
-runner_chance = 0.025
-missile_speed = 1200.0
 explosion_size = 60.0
 num_gibs = 75
 gib_min_speed = 125.0
@@ -642,6 +641,7 @@ HEY DEVELOPERS, INCLUDE THE DATE HERE!"
 horizontal_alignment = 1
 
 [node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
+visible = false
 z_index = 4
 z_as_relative = false
 position = Vector2(705, 391)
@@ -861,8 +861,8 @@ z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]

@@ -41,10 +41,8 @@ const ACHIEVEMENTS: Dictionary[String, String] = {
 }
 
 func _ready():
-	# Initialize dialogic timeline
+	# Initialize dialogic and load dialogue for appropriate shift
 	start_level_dialogue(Global.shift)
-	#if Global.get_story_state() == Global.StoryState.NOT_STARTED:
-		#start_intro_sequence()
 
 func start_level_dialogue(level_id: int):
 	if dialogue_active:
@@ -61,7 +59,6 @@ func start_level_dialogue(level_id: int):
 	Dialogic.timeline_ended.connect(_on_shift_dialogue_finished)
 	Dialogic.timeline_ended.connect(func(): skip_button_layer.queue_free())
 
-# Function to start end dialogue for a level
 func start_level_end_dialogue(level_id: int):
 	if dialogue_active:
 		return
@@ -73,38 +70,6 @@ func start_level_end_dialogue(level_id: int):
 	add_child(timeline)
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.timeline_ended.connect(_on_shift_dialogue_finished)
-
-#func start_intro_sequence():
-	#if dialogue_active:
-		#return
-		#
-	#dialogue_active = true
-	#var timeline = Dialogic.start("res://assets/narrative/generic_shift_start.dtl")
-	#add_child(timeline)
-	#Dialogic.timeline_ended.connect(_on_intro_dialogue_finished)
-	
-#func start_shift_dialogue():
-	#if dialogue_active:
-		#return
-		#
-	#dialogue_active = true
-	#var timeline
-	#
-	#match current_shift:
-		#1:
-			## Debugging Purposes
-			##timeline = Dialogic.start("final_confrontation")
-			#timeline = Dialogic.start("shift1_intro") 
-		#2: 
-			#timeline = Dialogic.start("shift2_intro")
-		#3:
-			#timeline = Dialogic.start("shift3_intro")
-		#_:
-			#timeline = Dialogic.start("final_confrontation")
-			#
-	#add_child(timeline)
-	#Dialogic.signal_event.connect(_on_dialogic_signal)
-	#Dialogic.timeline_ended.connect(_on_shift_dialogue_finished)
 
 func create_skip_button():
 	var canvas = CanvasLayer.new()

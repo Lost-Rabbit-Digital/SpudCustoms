@@ -7,7 +7,7 @@ signal game_over_triggered
 ## Unlimited ammunition for fox hunting
 @export var unlimited_missiles = false
 ## Force Spuds to run the border for your entertainment
-@export var rapid_runners = true
+@export var rapid_runners = false
 ## Generates a crater sprite where you click
 @export var crater_spawn_on_click = false
 
@@ -157,6 +157,11 @@ func _process(delta):
 	# Always update missile if active, regardless of runner state
 	if missile_active:
 		update_missile(delta)
+		
+	if active_runner and is_instance_valid(active_runner):
+		if not active_runner.visible:
+			print("WARNING: Active runner is invisible!")
+			active_runner.visible = true
 	
 	# Handle runner logic only if no missile is active
 	if active_runner and not has_runner_escaped:
@@ -192,6 +197,11 @@ func start_runner(potato):
 		
 	active_runner = potato
 	has_runner_escaped = false
+	
+	# Ensure the potato is visible
+	potato.visible = true
+	potato.modulate.a = 1.0
+	potato.z_index = 10  # Ensure it's above background elements
 	
 	# Play alarm and show alert
 	alarm_sound.play()
@@ -234,13 +244,18 @@ func force_start_runner(potato):
 	print("Force starting runner with rejected potato")
 	active_runner = potato
 	has_runner_escaped = false
+		
+	# Ensure the potato is visible
+	potato.visible = true
+	potato.modulate.a = 1.0
+	potato.z_index = 10  # Ensure it's above background elements
 	
 	# Play alarm and show alert
 	alarm_sound.play()
 	Global.display_red_alert(alert_label, alert_timer, "BORDER RUNNER DETECTED!\nClick to launch missile!")
 	
 	# Get all available runner paths
-	var paths_node = $"../Gameplay/Paths/RunnerPaths"
+	var paths_node = %RunnerPaths
 	var available_paths = []
 	
 	# Collect all valid runner paths
@@ -382,6 +397,11 @@ func update_missile(delta):
 	var fixed_delta = 1.0/60.0
 	
 	print("Updating missile position")  # DEBUG print
+	# Check if target is still valid
+	if has_runner_escaped:
+		# Target is gone, detonate missile where it is
+		trigger_explosion()
+		return
 	
 	# Calculate direction and move missile
 	var direction = (missile_target - missile_position).normalized()

@@ -18,15 +18,12 @@ offsets = PackedFloat32Array(0.37464, 0.426513, 0.567723)
 colors = PackedColorArray(1, 1, 1, 1, 0.641791, 0.641791, 0.641791, 1, 0, 0, 0, 1)
 
 [sub_resource type="Curve" id="Curve_cevxq"]
-min_value = -1.0
+_limits = [-1.0, 1.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [node name="BorderRunnerSystem" type="Node2D"]
 script = ExtResource("1_8vf2f")
-runner_chance = 0.223
-missile_speed = 500.0
-missile_start_height = 400.0
 
 [node name="ExplosionVFX" type="Node2D" parent="."]
 z_index = 11
@@ -54,8 +51,8 @@ texture = ExtResource("6_og870")
 show_behind_parent = true
 position = Vector2(0, 180)
 amount = 25
-lifetime = 0.1
 texture = ExtResource("7_3vtb4")
+lifetime = 0.1
 gravity = Vector2(0, 0)
 initial_velocity_min = 50.0
 initial_velocity_max = 50.0
