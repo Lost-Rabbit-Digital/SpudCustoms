@@ -47,18 +47,11 @@ var suspect_panel: Sprite2D
 var suspect_panel_front: Sprite2D
 var suspect: Sprite2D
 
-# Guide
-var guide: Sprite2D
 
 # Stamp system
 const STAMP_ANIMATION_DURATION: float = 0.3  # Duration of the stamp animation in seconds
 const STAMP_MOVE_DISTANCE: int = 36  # How far the stamp moves down
 var default_cursor = Input.CURSOR_ARROW
-
-# Guide system
-#var guide_tutorial_timer: Timer
-#const GUIDE_TUTORIAL_FLASH_INTERVAL = 1.0 # flash every 1 seconds
-#var is_in_guide_tutorial = true
 
 # Character Generation
 @onready var mugshot_generator = $Gameplay/MugshotPhotoGenerator
@@ -147,7 +140,6 @@ func _ready():
 	passport = $Gameplay/InteractiveElements/Passport
 	passport_spawn_point_begin = $Gameplay/InteractiveElements/PassportSpawnPoints/BeginPoint
 	passport_spawn_point_end = $Gameplay/InteractiveElements/PassportSpawnPoints/EndPoint
-	guide = $Gameplay/InteractiveElements/Guide
 	inspection_table = $Gameplay/InspectionTable
 	suspect_panel = $Gameplay/SuspectPanel
 	suspect_panel_front = $Gameplay/SuspectPanel/SuspectPanelFront
@@ -157,7 +149,6 @@ func _ready():
 
 	# Add closed passport to draggable sprites
 	#draggable_sprites.append(passport)
-	#draggable_sprites.append(guide)
 	
 	border_runner_system = %BorderRunnerSystem
 	border_runner_system.game_over_triggered.connect(_on_game_over)
@@ -238,14 +229,8 @@ func generate_rules():
 
 func update_rules_display():
 	var laws_text = "[center][u]LAWS[/u]\n\n" + "\n".join(current_rules) + "[/center]"
-	
-	# Update guide if we're on the laws page
-	if $Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote and Guide.current_page == 2:
-		$Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote.text = laws_text
-		
 	if $Gameplay/InteractiveElements/LawReceipt/OpenReceipt/ReceiptNote:
 		$Gameplay/InteractiveElements/LawReceipt/OpenReceipt/ReceiptNote.text = laws_text
-	
 	# Emit the signal with the formatted laws text
 	emit_signal("rules_updated", laws_text)
 	
