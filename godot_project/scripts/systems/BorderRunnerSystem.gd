@@ -23,9 +23,10 @@ signal game_over_triggered
 @export var alert_timer: Timer
 @export var missile_collision_shape: CollisionShape2D  # Reference to missile zone shape
 
-
 @export_group("Runner System")
 @export_subgroup("Spawn Settings")
+## Maximum number of simultaneous runners 
+@export var max_active_runners: int = 3
 @export_range(0, 1, 0.001) var runner_chance: float = 0.025
 ## Minimum time that must pass between runner spawn attempts (Seconds)
 @export var min_time_between_runs: float = 10 # Default: 10
@@ -46,6 +47,10 @@ signal game_over_triggered
 
 ## Settings controlling missile launch, targeting and explosion behavior
 @export_group("Missile System")
+## Maximum number of simultaneous missiles
+@export var max_missiles: int = 3
+## Cooldown time between missile launches (seconds)
+@export var missile_cooldown: float = 1.0
 ## Speed at which missiles travel toward their target
 @export var missile_speed: float = 1200
 ## Initial height from which missiles are launched
@@ -87,17 +92,66 @@ signal game_over_triggered
 
 # Internal state tracking
 var is_enabled = true  # Track if system is enabled
+var is_in_dialogic = false # Track if game is in dialogue mode
 var runner_streak: int = 0
 var time_since_last_run: float = 0.0
-var active_runner = null
-var missile_active: bool = false
-var missile_position: Vector2 = Vector2.ZERO
-var missile_target: Vector2 = Vector2.ZERO
-var explosion_active: bool = false
-var explosion_position: Vector2 = Vector2.ZERO
-var has_runner_escaped: bool = false
+var active_runners = []  # Array of active runners
+var active_missiles = []  # Array of active missiles
+var missile_cooldown_timer: float = 0.0
 var gib_textures: Array = []
 var difficulty_level
+
+# Missile class to track multiple missiles
+class Missile:
+	var sprite: Sprite2D
+	var particles: GPUParticles2D
+	var position: Vector2
+	var target: Vector2
+	var rotation: float
+	var active: bool = true
+
+	func _init(sprite_texture, particle_scene):
+		sprite = Sprite2D.new()
+		sprite.texture = sprite_texture
+		sprite.visible = true
+		sprite.z_index = 15
+		
+		if particle_scene:
+			particles = particle_scene.duplicate()
+			sprite.add_child(particles)
+
+# Runner class to track multiple border runners
+class Runner:
+	var potato: Node2D
+	var path_follow: PathFollow2D
+	var has_escaped: bool = false
+	
+	func _init(p, pf):
+		potato = p
+		path_follow = pf
+	
+	func update(delta, speed):
+		if not potato or not path_follow or has_escaped:
+			return false
+		
+		path_follow.progress_ratio += delta * speed
+		
+		# Check if runner reached the end
+		if path_follow.progress_ratio >= 0.99:
+			has_escaped = true
+			return true
+		return false
+	
+	func get_position() -> Vector2:
+		if potato:
+			return potato.global_position
+		return Vector2.ZERO
+	
+	func cleanup():
+		if path_follow:
+			path_follow.queue_free()
+		if potato:
+			potato.queue_free()
 
 func _ready():
 	# Create missile sprite if it doesn't exist
@@ -107,30 +161,33 @@ func _ready():
 		add_child(missile_sprite)
 	missile_sprite.visible = false
 	missile_sprite.z_index = 15
-	missile_collision_shape = $Area2D/CollisionShape2D
+	
+	if missile_collision_shape == null:
+		missile_collision_shape = $Area2D/CollisionShape2D
 	
 	# Configure difficulty level and set runner chance based on difficulty level
 	difficulty_level = Global.difficulty_level
-	print("Setting Border Runner System to:" + difficulty_level)
-	## Chance per second for a queued potato to attempt escape
-	# 0.025 for Easy (1 per 40 seconds)
-	# 0.042 for Normal (1 per 23 seconds)
-	# 0.085 for Expert (1 per 11 seconds)
+	print("Setting Border Runner System to:", difficulty_level)
+	
 	match difficulty_level:
 		"Easy":
 			runner_speed = 0.10
 			runner_chance = 0.025
+			max_active_runners = 1
 		"Normal":
 			runner_speed = 0.14
 			runner_chance = 0.042
+			max_active_runners = 2
 		"Expert":
 			runner_speed = 0.16
 			runner_chance = 0.085
+			max_active_runners = 3
 		_: 
 			runner_speed = 0.10
 			runner_chance = 0.10
+			max_active_runners = 2
 			
-	if rapid_runners == true:
+	if rapid_runners:
 		runner_chance = 1.0
 
 	if not queue_manager:
@@ -138,7 +195,7 @@ func _ready():
 	print("BorderRunnerSystem initialized with chance: ", runner_chance)
 	
 	# Load gib textures
-	for i in range(1, 9):  # Assuming you have 3 giblet sprites
+	for i in range(1, 9):
 		var texture = load("res://assets/potato_giblets/giblet_" + str(i) + ".png")
 		if texture:
 			gib_textures.append(texture)
@@ -146,77 +203,115 @@ func _ready():
 			push_error("Failed to load giblet_" + str(i))
 			
 func _process(delta):
-	# Check if in dialogue
-	var narrative_manager = find_narrative_manager()
-	if narrative_manager and narrative_manager.dialogue_active:
-		return
-
-	if not is_enabled:
-		print("BRS is disabled.")
+	if not is_enabled or is_in_dialogic:
 		return
 	
 	if not queue_manager:
 		print("No queue manager found!")
 		return
 	
-	# Always update missile if active, regardless of runner state
-	if missile_active:
-		update_missile(delta)
-		
-	if active_runner and is_instance_valid(active_runner):
-		if not active_runner.visible:
-			print("WARNING: Active runner is invisible!")
-			active_runner.visible = true
+	# Update missile cooldown timer
+	if missile_cooldown_timer > 0:
+		missile_cooldown_timer -= delta
 	
-	# Handle runner logic only if no missile is active
-	if active_runner and not has_runner_escaped:
-		update_runner(delta)
-	elif not active_runner and not has_runner_escaped:
+	# Update all active missiles
+	update_missiles(delta)
+	
+	# Update all active runners
+	update_runners(delta)
+	
+	# Check if we can spawn a new runner
+	if active_runners.size() < max_active_runners:
 		time_since_last_run += delta
-		if rapid_runners == true:
+		if rapid_runners:
 			min_time_between_runs = 1
 			max_time_between_runs = 1
 		
 		if time_since_last_run >= randi_range(min_time_between_runs, max_time_between_runs):
 			var roll = randf() # Random float between 0 and 1
-			var threshold = runner_chance * delta # 10% chance per-frame probability
+			var threshold = runner_chance * delta
 			
-			# Runners cannot spawn more frequently than min_time_between_runs
-			# After that minimum time, there's a 10% chance per second of spawning
 			if roll < threshold:
 				attempt_spawn_runner()
 
-func find_narrative_manager():
-	var narrative_manager = %NarrativeManager
+# Update all active missiles
+func update_missiles(delta):
+	var fixed_delta = 1.0/60.0
+	var i = active_missiles.size() - 1
+	
+	while i >= 0:
+		var missile = active_missiles[i]
+		if not missile.active:
+			active_missiles.remove_at(i)
+			i -= 1
+			continue
+		
+		# Calculate direction and move missile
+		var direction = (missile.target - missile.position).normalized()
+		var distance_to_move = missile_speed * fixed_delta
+		missile.position += direction * distance_to_move
+		
+		# Update sprite position and rotation
+		missile.sprite.position = missile.position
+		missile.sprite.rotation = direction.angle() + PI/2
+		
+		# Update particle rotation if it exists
+		if missile.particles:
+			missile.particles.rotation = missile.sprite.rotation - PI/2
+		
+		# Check if missile reached target
+		var distance_squared = missile.position.distance_squared_to(missile.target)
+		if distance_squared < 25: # 5 units squared
+			trigger_explosion(missile)
+			active_missiles.remove_at(i)
+		
+		i -= 1
+
+# Update all active runners
+func update_runners(delta):
+	var i = active_runners.size() - 1
+	
+	while i >= 0:
+		var runner = active_runners[i]
+		
+		# Update runner and check if escaped
+		if runner.update(delta, runner_speed):
+			handle_runner_escape(runner)
+			runner.cleanup()
+			active_runners.remove_at(i)
+		
+		i -= 1
 
 func attempt_spawn_runner():
 	print("Attempting to spawn runner...")
-	if queue_manager.potatoes.size() > 0 and not active_runner:
-		var runner = queue_manager.remove_front_potato()
-		if runner:
+	if queue_manager.potatoes.size() > 0 and active_runners.size() < max_active_runners:
+		var potato = queue_manager.remove_front_potato()
+		if potato:
 			print("Starting new runner")
-			start_runner(runner)
+			start_runner(potato)
 			time_since_last_run = 0.0
 
 func start_runner(potato):
-	if not is_enabled:
-		print("BRS is disabled, no runners allowed.")
+	if not is_enabled or is_in_dialogic:
+		print("BorderRunnerSystem disabled or in dialogue, no runners allowed.")
 		return
 		
-	active_runner = potato
-	has_runner_escaped = false
-	
 	# Ensure the potato is visible
 	potato.visible = true
 	potato.modulate.a = 1.0
 	potato.z_index = 10  # Ensure it's above background elements
 	
 	# Play alarm and show alert
-	alarm_sound.play()
+	if alarm_sound and not alarm_sound.playing:
+		alarm_sound.play()
 	Global.display_red_alert(alert_label, alert_timer, "BORDER RUNNER DETECTED!\nClick to launch missile!")
 	
 	# Get all available runner paths
-	var paths_node = %RunnerPaths
+	var paths_node = get_parent().get_node("Gameplay/Paths/RunnerPaths")
+	if not paths_node:
+		push_error("Runner paths node not found!")
+		return
+		
 	var available_paths = []
 	
 	# Collect all valid runner paths
@@ -242,16 +337,18 @@ func start_runner(potato):
 		potato.get_parent().remove_child(potato)
 	path_follow.add_child(potato)
 	potato.position = Vector2.ZERO
+	
+	# Create a new runner and add it to the active runners list
+	var runner = Runner.new(potato, path_follow)
+	active_runners.append(runner)
+	
 	print("Runner setup complete")
 
 func force_start_runner(potato):
-	# If there's already an active runner, clean it up first
-	if active_runner:
-		clean_up_runner()
+	if not is_enabled or is_in_dialogic:
+		return
 		
 	print("Force starting runner with rejected potato")
-	active_runner = potato
-	has_runner_escaped = false
 		
 	# Ensure the potato is visible
 	potato.visible = true
@@ -259,11 +356,16 @@ func force_start_runner(potato):
 	potato.z_index = 10  # Ensure it's above background elements
 	
 	# Play alarm and show alert
-	alarm_sound.play()
+	if alarm_sound and not alarm_sound.playing:
+		alarm_sound.play()
 	Global.display_red_alert(alert_label, alert_timer, "BORDER RUNNER DETECTED!\nClick to launch missile!")
 	
 	# Get all available runner paths
-	var paths_node = %RunnerPaths
+	var paths_node = get_parent().get_node("Gameplay/Paths/RunnerPaths")
+	if not paths_node:
+		push_error("Runner paths node not found!")
+		return
+		
 	var available_paths = []
 	
 	# Collect all valid runner paths
@@ -289,29 +391,14 @@ func force_start_runner(potato):
 		potato.get_parent().remove_child(potato)
 	path_follow.add_child(potato)
 	potato.position = Vector2.ZERO
+	
+	# Create a new runner and add it to the active runners list
+	var runner = Runner.new(potato, path_follow)
+	active_runners.append(runner)
+	
 	print("Forced runner setup complete")
 
-func update_runner(delta):
-	if not active_runner or has_runner_escaped:
-		return
-		
-	var path_follow = active_runner.get_parent()
-	if not path_follow or not path_follow is PathFollow2D:
-		push_error("Runner's parent is not a PathFollow2D!")
-		return
-		
-	path_follow.progress_ratio += delta * runner_speed
-	
-	# Check if runner reached the end
-	if path_follow.progress_ratio >= 0.99 and not has_runner_escaped:
-		print("Runner has reached the end")
-		has_runner_escaped = true
-		runner_escaped()
-
-func runner_escaped():
-	if not active_runner:
-		return
-		
+func handle_runner_escape(runner):
 	print("Runner has escaped!")
 	# Reset the runner streak
 	runner_streak = 0 
@@ -322,9 +409,10 @@ func runner_escaped():
 
 	# Apply score penalty and prevent negative score
 	Global.score = max(0, Global.score - points_to_remove)
-	score_label.text = "Score: {total_points}".format({
-		"total_points": Global.score
-	})
+	if score_label:
+		score_label.text = "Score: {total_points}".format({
+			"total_points": Global.score
+		})
 
 	# Update alert to show penalty
 	if points_to_remove == 0:
@@ -343,25 +431,30 @@ func runner_escaped():
 		emit_signal("game_over_triggered")
 	print("After strike: " + str(Global.strikes))
 	
-	strike_label.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
-
-	clean_up_runner()
+	if strike_label:
+		strike_label.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
 
 func _input(event):
-	if not is_enabled:
+	if not is_enabled or is_in_dialogic:
 		return
+		
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			if active_runner and not missile_active and not has_runner_escaped:
-				launch_missile(event.position)
-			if unlimited_missiles == true:
-				if not missile_active and not has_runner_escaped:
-					launch_missile(event.position)
+			# Check if the click is within the missile zone
+			var missile_zone = get_missile_zone()
+			if missile_zone.has_point(event.position):
+				# Check if we can launch a missile
+				if unlimited_missiles or missile_cooldown_timer <= 0:
+					if active_runners.size() > 0 or unlimited_missiles:
+						launch_missile(event.position)
+						# Reset cooldown timer
+						missile_cooldown_timer = missile_cooldown
 
 func _unhandled_input(event):
-	if not is_enabled:
+	if not is_enabled or is_in_dialogic:
 		return
-	if crater_spawn_on_click == true:
+		
+	if crater_spawn_on_click:
 		if event is InputEventMouseButton:
 			if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 				if crater_system:
@@ -369,107 +462,113 @@ func _unhandled_input(event):
 					crater_system.add_crater(local_pos)
 
 func launch_missile(target_pos):
+	if active_missiles.size() >= max_missiles and not unlimited_missiles:
+		print("Maximum number of missiles reached")
+		return
+		
 	print("Launching missile at: ", target_pos)
-	missile_active = true
-	missile_target = target_pos
 	
-	# update shift stats
-	shift_stats.missiles_fired += 1
+	# Create a new missile sprite
+	var new_missile_sprite = Sprite2D.new()
+	new_missile_sprite.texture = missile_sprite.texture
+	new_missile_sprite.visible = true
+	new_missile_sprite.z_index = 15
+	add_child(new_missile_sprite)
+	
+	# Create a new particle effect for this missile
+	var new_particles = null
+	if smoke_particles:
+		new_particles = GPUParticles2D.new()
+		new_particles.process_material = smoke_particles.process_material.duplicate()
+		new_particles.amount = smoke_particles.amount
+		new_particles.lifetime = smoke_particles.lifetime
+		new_particles.one_shot = false
+		new_particles.explosiveness = smoke_particles.explosiveness
+		new_missile_sprite.add_child(new_particles)
+	
+	# Create the missile object
+	var missile = Missile.new(new_missile_sprite.texture, new_particles)
+	missile.sprite = new_missile_sprite
 	
 	# Start from bottom center of screen
 	var viewport_rect = get_viewport_rect()
-	# Set starting position of missile
-	missile_position = Vector2((viewport_rect.size.x / 2) - 800, viewport_rect.size.y - 900)
+	missile.position = Vector2((viewport_rect.size.x / 2) - 800, viewport_rect.size.y - 900)
+	missile.target = target_pos
 	
 	# Set up missile sprite
-	missile_sprite.visible = true
-	missile_sprite.position = missile_position
-	missile_sprite.modulate.a = 1.0
+	missile.sprite.position = missile.position
+	missile.sprite.modulate.a = 1.0
 	
 	# Point missile toward target - add PI/2 to rotate 90 degrees since missile sprite points up
-	var direction = (target_pos - missile_position).normalized()
-	missile_sprite.rotation = direction.angle() + PI/2
+	var direction = (target_pos - missile.position).normalized()
+	missile.sprite.rotation = direction.angle() + PI/2
+	
+	# Update shift stats
+	shift_stats.missiles_fired += 1
 	
 	# Play activation and launch sound
-	missile_sound.play()
+	if missile_sound and not missile_sound.playing:
+		missile_sound.play()
 	
 	# Start particle emission and position at missile
-	smoke_particles.rotation = missile_sprite.rotation - PI/2  # Adjust for particle direction
-	print("Missile launched from: ", missile_position)
+	if missile.particles:
+		missile.particles.rotation = missile.sprite.rotation - PI/2
+	
+	# Add the missile to the active missiles list
+	active_missiles.append(missile)
+	
+	print("Missile launched from: ", missile.position)
 
-func update_missile(delta):
-	if not missile_active:
-		return
-	
-	# Use fixed time for more consistent travel
-	var fixed_delta = 1.0/60.0
-	
-	print("Updating missile position")  # DEBUG print
-	# Check if target is still valid
-	if has_runner_escaped:
-		# Target is gone, detonate missile where it is
-		trigger_explosion()
-		return
-	
-	# Calculate direction and move missile
-	var direction = (missile_target - missile_position).normalized()
-	var distance_to_move = missile_speed * fixed_delta
-	missile_position += direction * distance_to_move
-	
-	# Update sprite position and rotation
-	missile_sprite.position = missile_position
-	missile_sprite.rotation = direction.angle() + PI/2
-	
-	# Update smoke trail position and rotation
-	smoke_particles.rotation = missile_sprite.rotation - PI/2
-	
-	# Check if missile reached target (use squared distance for efficiency)
-	var distance_squared = missile_position.distance_squared_to(missile_target)
-	print("Distance to target: ", sqrt(distance_squared))  # Debug print
-	if distance_squared < 25: # 5 units squared
-		print("Missile reached target!")
-		trigger_explosion()
-
-func trigger_explosion():
+func trigger_explosion(missile):
 	print("Triggering explosion")
-	explosion_active = true
-	explosion_position = missile_position
-	explosion_vfx.position = missile_position
+	var explosion_active = true
+	var explosion_position = missile.position
+	
+	# Setup explosion VFX
+	explosion_vfx.position = explosion_position
 	explosion_vfx.visible = true
 	explosion_vfx.start_explosion()
 	
 	# Add crater at explosion position
-	print("Invoking crater system")
-	# Convert global explosion position to local coordinates for crater system
 	if crater_system:
 		var local_pos = crater_system.to_local(explosion_position)
 		crater_system.add_crater(local_pos, crater_size_multiplier)
 	
-	missile_active = false
-	missile_sprite.visible = false
+	# Hide the missile sprite
+	missile.sprite.visible = false
+	missile.active = false
 	
-	if explosion_sound:
+	# Play explosion sound
+	if explosion_sound and not explosion_sound.playing:
 		explosion_sound.play()
 	
-	check_runner_hit()
+	# Check if we hit any runners
+	check_runner_hits(explosion_position)
 
-func check_runner_hit():
-	if not active_runner:
-		print("No active runner to check for hit")
-		return
-		
-	var distance = active_runner.global_position.distance_to(explosion_position)
-	print("Distance to runner: ", distance)
+func check_runner_hits(explosion_pos):
+	var hit_any = false
+	var i = active_runners.size() - 1
 	
-	if distance < explosion_size:
-		handle_successful_hit()
-	else:
-		print("Missile missed the runner")
+	while i >= 0:
+		var runner = active_runners[i]
+		var distance = runner.get_position().distance_to(explosion_pos)
+		
+		if distance < explosion_size:
+			# We hit this runner!
+			hit_any = true
+			handle_successful_hit(runner, explosion_pos)
+			runner.cleanup()
+			active_runners.remove_at(i)
+		
+		i -= 1
+		
+	if not hit_any:
+		print("Missile missed all runners")
 		runner_streak = 0
 
-func handle_successful_hit():
-	# Spawn gibs at the runner's position before cleaning it up
-	spawn_gibs(active_runner.global_position)
+func handle_successful_hit(runner, explosion_pos):
+	# Spawn gibs at the runner's position
+	spawn_gibs(runner.get_position())
 	
 	# Update stats with successful hits
 	shift_stats.missiles_hit += 1
@@ -479,12 +578,12 @@ func handle_successful_hit():
 	var bonus_text = ""
 	
 	# Calculate bonuses
-	var distance = active_runner.global_position.distance_to(explosion_position)
+	var distance = runner.get_position().distance_to(explosion_pos)
 	if distance < explosion_size / 3:
 		# Update shift stats for perfect hits
 		shift_stats.perfect_hits += 1
 		# Spawn even more gibs on a perfect hit
-		spawn_gibs(active_runner.global_position)
+		spawn_gibs(runner.get_position())
 		points_earned += perfect_hit_bonus
 		bonus_text += "PERFECT HIT! +{perfect} accuracy bonus points\n".format({"perfect": perfect_hit_bonus})
 	
@@ -498,16 +597,14 @@ func handle_successful_hit():
 	
 	# Add points
 	Global.score += points_earned
-	score_label.text = "Score: {total_points}".format({
-		"total_points": Global.score
-	})
-	print("Before if: " + str(Global.strikes))
+	if score_label:
+		score_label.text = "Score: {total_points}".format({
+			"total_points": Global.score
+		})
 	
 	# Remove a strike if any present
 	if Global.strikes > 0:
-		print("Before -: " + str(Global.strikes))
 		Global.strikes -= 1 
-		print("After if: " + str(Global.strikes))
 		bonus_text += "Strike removed!\n"
 	
 	Global.display_green_alert(alert_label, alert_timer, "{bonus} +{points} points!".format({
@@ -515,11 +612,9 @@ func handle_successful_hit():
 		"points": points_earned
 	}))
 
-	strike_label.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
-	
-	clean_up_runner()
-	
-	
+	if strike_label:
+		strike_label.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
+
 func enable():
 	is_enabled = true
 	if missile_collision_shape:
@@ -529,24 +624,29 @@ func disable():
 	is_enabled = false
 	if missile_collision_shape:
 		missile_collision_shape.disabled = true
-	# Clean up any active runners or missiles
-	# TODO: Add cleanup code here if needed
-	clean_up_runner()
+	clean_up_all()
 
-
-func clean_up_runner():
-	print("Cleaning up runner")
-	if active_runner:
-		var path_follow = active_runner.get_parent()
-		if path_follow:
-			path_follow.queue_free()
-		active_runner.queue_free()
-		active_runner = null
+func set_dialogic_mode(in_dialogic: bool):
+	is_in_dialogic = in_dialogic
 	
-	has_runner_escaped = false
-	missile_active = false
+	if in_dialogic:
+		clean_up_all()
+
+func clean_up_all():
+	# Clean up all active runners
+	for runner in active_runners:
+		runner.cleanup()
+	active_runners.clear()
+	
+	# Clean up all active missiles
+	for missile in active_missiles:
+		missile.sprite.queue_free()
+		missile.active = false
+	active_missiles.clear()
+	
+	# Reset timers and state
 	time_since_last_run = 0
-	print("Runner cleanup complete")
+	missile_cooldown_timer = 0
 
 class Gib extends Sprite2D:
 	var velocity = Vector2.ZERO
@@ -605,29 +705,6 @@ func spawn_gibs(pos):
 		
 		# Set scale
 		gib.scale = gib_scale  # Adjust this based on your gib sprite sizes
-
-
-func check_stamp_accuracy(stamp_pos: Vector2, passport: Node2D) -> bool:
-	# Get the visa outline rectangle in global coordinates
-	var visa_rect = Rect2(
-		passport.global_position + Vector2(20, 20),  # Adjust based on your visa position
-		Vector2(160, 80)  # Adjust based on your visa size
-	)
-	
-	# Get stamp rectangle
-	var stamp_rect = Rect2(
-		stamp_pos - Vector2(25, 25),  # Half stamp size
-		Vector2(50, 50)  # Stamp size
-	)
-	
-	# Calculate overlap percentage
-	var overlap_area = stamp_rect.intersection(visa_rect).get_area()
-	var stamp_area = stamp_rect.get_area()
-	
-	var accuracy = overlap_area / stamp_area
-	
-	# Return true if within 10% of perfect placement
-	return abs(1.0 - accuracy) <= 0.1
 
 func get_missile_zone() -> Rect2:
 	if not is_enabled or not missile_collision_shape:

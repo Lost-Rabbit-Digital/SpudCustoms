@@ -831,6 +831,9 @@ func _exit_tree():
 func _on_dialogue_started():
 	# Completely pause all game systems
 	is_game_paused = true
+	# Tell the border runner system to pause with dialogic mode
+	if border_runner_system:
+		border_runner_system.set_dialogic_mode(true)
 	disable_controls()
 	border_runner_system.is_enabled = false
 	
@@ -839,6 +842,9 @@ func _on_dialogue_finished():
 	Global.strikes = 0
 	# Completely unpause all game systems
 	is_game_paused = false
+	# Tell the border runner system dialogic mode is done
+	if border_runner_system:
+		border_runner_system.set_dialogic_mode(false)
 	border_runner_system.is_enabled = true
 	enable_controls()
 	
