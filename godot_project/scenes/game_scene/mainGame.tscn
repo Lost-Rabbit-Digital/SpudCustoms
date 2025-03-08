@@ -223,6 +223,7 @@ point_count = 24
 script = ExtResource("1_ado42")
 
 [node name="UI" type="Control" parent="."]
+z_as_relative = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -265,7 +266,7 @@ position = Vector2(640, 360)
 texture = ExtResource("6_0hfru")
 
 [node name="InteractableItemsWorldBackground" type="Sprite2D" parent="UI"]
-z_index = 5
+z_index = 4
 z_as_relative = false
 position = Vector2(640, 360)
 texture = ExtResource("7_41g47")
@@ -478,6 +479,7 @@ position = Vector2(396.75, 122)
 shape = SubResource("RectangleShape2D_sihlh")
 
 [node name="Gameplay" type="Control" parent="."]
+z_as_relative = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -510,7 +512,7 @@ scale = Vector2(2.5, 2.5)
 
 [node name="PotatoMugshotShadow" type="Sprite2D" parent="Gameplay/MugshotPhotoGenerator"]
 modulate = Color(0, 0, 0, 0.521569)
-z_index = -1
+z_index = 1
 z_as_relative = false
 position = Vector2(0.399963, -14.4)
 scale = Vector2(1.1, 1.1)
@@ -528,6 +530,11 @@ stamp_system = NodePath("../StampCrossbarSystem")
 script = ExtResource("26_gh2f2")
 passport = NodePath("../Passport")
 stats_manager = NodePath("../../../SystemManagers/StatsManager")
+
+[node name="SuspectSpawnNode" type="Node2D" parent="Gameplay/InteractiveElements"]
+z_index = 2
+z_as_relative = false
+position = Vector2(1079, 441)
 
 [node name="PassportSpawnPoints" type="Node2D" parent="Gameplay/InteractiveElements"]
 
@@ -854,8 +861,8 @@ z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide2/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide2" method="_on_turn_right_pressed"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Guide2/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide2" method="_on_turn_left_pressed"]

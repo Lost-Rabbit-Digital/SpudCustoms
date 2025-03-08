@@ -352,13 +352,14 @@ func animate_mugshot_and_passport():
 	# Get references to nodes
 	var mugshot_generator = $Gameplay/MugshotPhotoGenerator
 	var suspect_panel = $Gameplay/SuspectPanel
+	var suspect_panel_spawn_node = $Gameplay/InteractiveElements/SuspectSpawnNode
 	var suspect_panel_front = $Gameplay/SuspectPanel/SuspectPanelFront
 	var passport = $Gameplay/InteractiveElements/Passport
 	var passport_spawn_point_begin = $Gameplay/InteractiveElements/PassportSpawnPoints/BeginPoint
 	var passport_spawn_point_end = $Gameplay/InteractiveElements/PassportSpawnPoints/EndPoint
 
 	# Reset positions and visibility
-	mugshot_generator.position.x = suspect_panel.position.x + suspect_panel_front.texture.get_width()
+	mugshot_generator.position.x = suspect_panel_spawn_node.position.x + suspect_panel_front.texture.get_width()
 	passport.visible = false
 	passport.z_index = 1
 	passport.position = Vector2(passport_spawn_point_begin.position.x, passport_spawn_point_begin.position.y)
@@ -367,7 +368,7 @@ func animate_mugshot_and_passport():
 	tween.set_parallel(true)
 
 	# Animate potato mugshot
-	tween.tween_property(mugshot_generator, "position:x", suspect_panel.position.x, 0.7)
+	tween.tween_property(mugshot_generator, "position:x", suspect_panel_spawn_node.position.x, 0.7)
 	tween.tween_property(mugshot_generator, "modulate:a", 1, 0.7)
 	
 	# Animate passport
