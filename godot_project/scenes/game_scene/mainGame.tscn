@@ -634,7 +634,7 @@ Potatoes must be fresh.
 HEY DEVELOPERS, INCLUDE THE DATE HERE!"
 horizontal_alignment = 1
 
-[node name="Guide2" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
+[node name="Guide" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
 z_index = 4
 z_as_relative = false
 position = Vector2(705, 391)
@@ -642,15 +642,15 @@ texture = ExtResource("34_w7ch4")
 script = ExtResource("35_eua12")
 main_node = NodePath("../../..")
 
-[node name="ClosedGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide2"]
+[node name="ClosedGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
 visible = false
 z_as_relative = false
 
-[node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide2"]
+[node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide"]
 z_index = 4
 z_as_relative = false
 
-[node name="GuideNote" type="RichTextLabel" parent="Gameplay/InteractiveElements/Guide2/OpenGuide"]
+[node name="GuideNote" type="RichTextLabel" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
 z_index = 4
 z_as_relative = false
 offset_left = -150.0
@@ -671,14 +671,14 @@ If anything is wrong, [color=#FF0000]deny entry[/color]
 Hand papers back to finish
 [/center]"
 
-[node name="TurnRight" type="TextureButton" parent="Gameplay/InteractiveElements/Guide2/OpenGuide"]
+[node name="TurnRight" type="TextureButton" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
 offset_left = 117.0
 offset_top = 110.0
 offset_right = 147.0
 offset_bottom = 140.0
 texture_normal = SubResource("CompressedTexture2D_vm67j")
 
-[node name="TurnLeft" type="TextureButton" parent="Gameplay/InteractiveElements/Guide2/OpenGuide"]
+[node name="TurnLeft" type="TextureButton" parent="Gameplay/InteractiveElements/Guide/OpenGuide"]
 visible = false
 offset_left = -147.0
 offset_top = 110.0
@@ -857,5 +857,5 @@ curve = SubResource("Curve2D_x3wa3")
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
-[connection signal="pressed" from="Gameplay/InteractiveElements/Guide2/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide2" method="_on_turn_right_pressed"]
-[connection signal="pressed" from="Gameplay/InteractiveElements/Guide2/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide2" method="_on_turn_left_pressed"]
+[connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide" method="_on_turn_right_pressed"]
+[connection signal="pressed" from="Gameplay/InteractiveElements/Guide/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide" method="_on_turn_left_pressed"]

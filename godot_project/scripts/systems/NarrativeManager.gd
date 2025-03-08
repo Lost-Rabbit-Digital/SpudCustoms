@@ -113,8 +113,8 @@ func create_skip_button():
 	
 	var skip_button = Button.new()
 	skip_button.text = "Skip"
-	skip_button.custom_minimum_size = Vector2(100, 40)
-	skip_button.position = Vector2(1150, 30)  # Top-right corner
+	skip_button.custom_minimum_size = Vector2(50, 30)
+	skip_button.position = Vector2(1150, 8)  # Top-right corner
 	
 	skip_button.connect("pressed", Callable(self, "_on_skip_button_pressed"))
 	

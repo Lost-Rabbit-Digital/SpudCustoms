@@ -7,7 +7,7 @@ signal game_over_triggered
 ## Unlimited ammunition for fox hunting
 @export var unlimited_missiles = false
 ## Force Spuds to run the border for your entertainment
-@export var rapid_runners = false
+@export var rapid_runners = true
 ## Generates a crater sprite where you click
 @export var crater_spawn_on_click = false
 
@@ -146,6 +146,10 @@ func _ready():
 			push_error("Failed to load giblet_" + str(i))
 			
 func _process(delta):
+	if not is_enabled:
+		print("BRS is disabled.")
+		return
+	
 	if not queue_manager:
 		print("No queue manager found!")
 		return
@@ -182,6 +186,10 @@ func attempt_spawn_runner():
 			time_since_last_run = 0.0
 
 func start_runner(potato):
+	if not is_enabled:
+		print("BRS is disabled, no runners allowed.")
+		return
+		
 	active_runner = potato
 	has_runner_escaped = false
 	
@@ -317,6 +325,8 @@ func runner_escaped():
 	clean_up_runner()
 
 func _input(event):
+	if not is_enabled:
+		return
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if active_runner and not missile_active and not has_runner_escaped:

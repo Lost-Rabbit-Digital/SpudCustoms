@@ -161,6 +161,7 @@ func _ready():
 	
 	border_runner_system = %BorderRunnerSystem
 	border_runner_system.game_over_triggered.connect(_on_game_over)
+	border_runner_system.is_enabled = false
 	
 	Dialogic.timeline_started.connect(_on_dialogue_started)
 	Dialogic.timeline_ended.connect(_on_dialogue_finished)
@@ -844,20 +845,21 @@ func _exit_tree():
 func _on_dialogue_started():
 	# Completely pause all game systems
 	is_game_paused = true
-	# disable_controls()
+	disable_controls()
+	border_runner_system.is_enabled = false
 	
 func _on_dialogue_finished():
 	Global.quota_met = 0
 	Global.strikes = 0
 	# Completely unpause all game systems
 	is_game_paused = false
+	border_runner_system.is_enabled = true
 	enable_controls()
 	
-	if Global.StoryState.COMPLETED:
+	if Global.current_story_state >= 13:
 		# Game complete, show credits or return to menu
-		return
+		get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
 		print("ERROR: _on_dialogue_finished called StoryState.COMPLETED but no scene loaded")
-		#get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
 
 func disable_controls():
 	# Disable player interaction during dialogue
