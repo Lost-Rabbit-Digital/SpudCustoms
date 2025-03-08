@@ -190,7 +190,7 @@ func start_runner(potato):
 	Global.display_red_alert(alert_label, alert_timer, "BORDER RUNNER DETECTED!\nClick to launch missile!")
 	
 	# Get all available runner paths
-	var paths_node = $"../Gameplay/Paths/RunnerPaths"
+	var paths_node = %RunnerPaths
 	var available_paths = []
 	
 	# Collect all valid runner paths

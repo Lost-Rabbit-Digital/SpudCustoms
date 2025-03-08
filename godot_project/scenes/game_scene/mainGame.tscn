@@ -458,6 +458,7 @@ script = ExtResource("11_qilia")
 script = ExtResource("20_5djk1")
 
 [node name="BorderRunnerSystem" parent="SystemManagers" node_paths=PackedStringArray("queue_manager", "score_label", "strike_label", "alert_label", "alert_timer", "missile_collision_shape") instance=ExtResource("2_4eqo0")]
+unique_name_in_owner = true
 queue_manager = NodePath("../QueueManager")
 score_label = NodePath("../../UI/Labels/ScoreLabel")
 strike_label = NodePath("../../UI/Labels/StrikesLabel")
@@ -465,7 +466,7 @@ alert_label = NodePath("../../UI/Labels/MarginContainer/AlertLabel")
 alert_timer = NodePath("../Timers/AlertTimer")
 missile_collision_shape = NodePath("Area2D/CollisionShape2D")
 runner_chance = 0.025
-missile_speed = 900.0
+missile_speed = 1200.0
 explosion_size = 60.0
 num_gibs = 75
 gib_min_speed = 125.0
@@ -742,6 +743,7 @@ z_as_relative = false
 curve = SubResource("Curve2D_lko6y")
 
 [node name="RunnerPaths" type="Control" parent="Gameplay/Paths"]
+unique_name_in_owner = true
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

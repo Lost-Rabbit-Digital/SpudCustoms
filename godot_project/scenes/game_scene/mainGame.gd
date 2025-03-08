@@ -111,19 +111,18 @@ func _ready():
 	var level_manager = get_level_manager()
 	if level_manager:
 		current_shift = level_manager.get_current_level_id()
+		print(current_shift)
 	
 	narrative_manager.current_shift = current_shift
 	
-	# Add to your existing _ready() function
 	var stamp_bar = $Gameplay/InteractiveElements/StampBarController
 	var stamp_system = $Gameplay/InteractiveElements/StampCrossbarSystem
 	
 	# Connect the stamp bar to the stamp system
 	stamp_bar.stamp_requested.connect(stamp_system.on_stamp_requested)
 	
-	$BorderRunnerSystem.game_over_triggered.connect(_on_game_over)
 	game_start_time = Time.get_ticks_msec() / 1000.0  # Convert to seconds
-	# Make sure to add QueueManager as a child of Main
+	
 	queue_manager = %QueueManager
 	setup_spawn_timer()
 	
@@ -160,15 +159,12 @@ func _ready():
 	#draggable_sprites.append(passport)
 	#draggable_sprites.append(guide)
 	
-	# add border runner system
-	border_runner_system = $BorderRunnerSystem
+	border_runner_system = %BorderRunnerSystem
+	border_runner_system.game_over_triggered.connect(_on_game_over)
 	
 	Dialogic.timeline_started.connect(_on_dialogue_started)
 	Dialogic.timeline_ended.connect(_on_dialogue_finished)
-		
-	if Global.StoryState.NOT_STARTED:
-		# Disable controls during intro
-		disable_controls()
+	#disable_controls()
 
 func end_shift():
 	if Global.quota_met >= Global.quota_target:
@@ -848,7 +844,7 @@ func _exit_tree():
 func _on_dialogue_started():
 	# Completely pause all game systems
 	is_game_paused = true
-	disable_controls()
+	# disable_controls()
 	
 func _on_dialogue_finished():
 	Global.quota_met = 0
