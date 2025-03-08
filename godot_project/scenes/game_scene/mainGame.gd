@@ -74,6 +74,7 @@ var shift_stats: ShiftStats
 @onready var alert_label = $UI/Labels/MarginContainer/AlertLabel
 @onready var alert_timer = $SystemManagers/Timers/AlertTimer
 
+
 var current_shift: int = 1
 
 # Drag and drop manager 
