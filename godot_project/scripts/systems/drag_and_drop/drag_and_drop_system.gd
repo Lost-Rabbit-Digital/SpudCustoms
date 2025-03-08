@@ -14,6 +14,7 @@ const PASSPORT_Z_INDEX = 0
 var draggable_items = []
 var dragged_item = null
 var drag_offset = Vector2()
+var document_was_closed = false
 
 # Drop zone references
 var inspection_table: Node2D
@@ -87,7 +88,18 @@ func _handle_mouse_press(mouse_pos: Vector2) -> bool:
 	if dragged_item == null:
 		dragged_item = find_topmost_item_at(mouse_pos)
 		if dragged_item:
+			# Reset document_was_closed flag for new drag
+			document_was_closed = false
+			
 			drag_offset = mouse_pos - dragged_item.global_position
+			
+			# Get drop zone before starting drag
+			var current_zone = identify_drop_zone(mouse_pos)
+			
+			# If document is being picked up from inspection table, close it
+			if current_zone == "inspection_table" and is_openable_document(dragged_item):
+				emit_signal("item_closed", dragged_item)
+				
 			emit_signal("item_dragged", dragged_item)
 			return true
 	return false
@@ -97,6 +109,9 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 	if dragged_item:
 		var drop_zone = identify_drop_zone(mouse_pos)
 		emit_signal("item_dropped", dragged_item, drop_zone)
+		
+		# Reset document_was_closed flag
+		document_was_closed = false
 		
 		# Handle specific item drop logic
 		if dragged_item.name == "Passport":
@@ -110,10 +125,28 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 		return true
 	return false
 
-# Update position of currently dragged item
 func _update_dragged_item_position(mouse_pos: Vector2):
 	if dragged_item:
+		# Store previous position to check if we're leaving the table
+		var previous_position = dragged_item.global_position
+		var was_on_table = inspection_table and inspection_table.get_rect().has_point(inspection_table.to_local(previous_position))
+		
+		# Update position
 		dragged_item.global_position = mouse_pos - drag_offset
+		
+		# Check if document is leaving the inspection table
+		var is_on_table = inspection_table and inspection_table.get_rect().has_point(inspection_table.to_local(dragged_item.global_position))
+		
+		# If document was on table but no longer is, close it (only once)
+		if was_on_table and !is_on_table and !document_was_closed and is_openable_document(dragged_item):
+			emit_signal("item_closed", dragged_item)
+			document_was_closed = true
+
+# Check if item is a document that can be opened/closed
+func is_openable_document(item: Node2D) -> bool:
+	return item and (item.name == "Passport" or 
+					item.name == "Guide" or 
+					item.name == "LawReceipt")
 
 # Find the topmost draggable item at the given position
 func find_topmost_item_at(pos: Vector2) -> Node2D:
