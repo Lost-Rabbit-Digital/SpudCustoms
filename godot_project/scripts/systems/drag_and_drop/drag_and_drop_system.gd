@@ -9,12 +9,16 @@ signal item_closed(item)
 
 # Configuration
 const PASSPORT_Z_INDEX = 0
+const DRAGGING_Z_INDEX = 100  # Higher z-index for items being dragged
 
 # State tracking
 var draggable_items = []
 var dragged_item = null
 var drag_offset = Vector2()
 var document_was_closed = false
+var original_z_index = 0
+
+
 
 # Drop zone references
 var inspection_table: Node2D
@@ -47,12 +51,14 @@ func initialize(config: Dictionary):
 	register_draggable_items(config.get("draggable_items", []))
 
 # Register draggable items
+# Register draggable items
 func register_draggable_items(items: Array):
 	draggable_items = items
-	# Set initial z-index for all items
+	# Set initial z-index for all items if not already set
 	for item in draggable_items:
 		if is_instance_valid(item):
-			item.z_index = PASSPORT_Z_INDEX
+			if item.z_index == 0:  # Only set if not already set
+				item.z_index = PASSPORT_Z_INDEX
 		else:
 			push_warning("Invalid draggable item provided")
 
@@ -60,10 +66,10 @@ func register_draggable_items(items: Array):
 func register_draggable_item(item: Node2D):
 	if is_instance_valid(item):
 		draggable_items.append(item)
-		item.z_index = PASSPORT_Z_INDEX
+		if item.z_index == 0:  # Only set if not already set
+			item.z_index = PASSPORT_Z_INDEX
 	else:
 		push_warning("Invalid draggable item provided")
-
 # Remove a draggable item
 func unregister_draggable_item(item: Node2D):
 	if item in draggable_items:
@@ -91,6 +97,10 @@ func _handle_mouse_press(mouse_pos: Vector2) -> bool:
 			# Reset document_was_closed flag for new drag
 			document_was_closed = false
 			
+			# Store original z-index and set to higher value while dragging
+			original_z_index = dragged_item.z_index
+			dragged_item.z_index = DRAGGING_Z_INDEX  # Higher z-index while dragging
+			
 			drag_offset = mouse_pos - dragged_item.global_position
 			
 			# Get drop zone before starting drag
@@ -105,10 +115,14 @@ func _handle_mouse_press(mouse_pos: Vector2) -> bool:
 	return false
 
 # Handle mouse release
+# Handle mouse release
 func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 	if dragged_item:
 		var drop_zone = identify_drop_zone(mouse_pos)
 		emit_signal("item_dropped", dragged_item, drop_zone)
+		
+		# Restore original z-index
+		dragged_item.z_index = original_z_index
 		
 		# Reset document_was_closed flag
 		document_was_closed = false
