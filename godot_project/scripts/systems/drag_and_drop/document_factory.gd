@@ -58,8 +58,8 @@ static func create_law_receipt(parent_node: Node) -> DraggableDocument:
 	
 	# Configure the document
 	# You'll need to update these paths to match your actual assets
-	document.closed_texture = preload("res://assets/documents/customs_guide/customs_guide_closed_small.png")
-	document.open_texture = preload("res://assets/documents/customs_guide/customs_guide_open_2.png")
+	document.closed_texture = preload("res://assets/documents/laws_receipt_small.png")
+	document.open_texture = preload("res://assets/documents/laws_receipt.png")
 	document.closed_content_node = receipt_sprite.get_node_or_null("ClosedReceipt") 
 	document.open_content_node = receipt_sprite.get_node_or_null("OpenReceipt")
 	
