@@ -205,6 +205,10 @@ func _ready():
 func _process(delta):
 	if not is_enabled or is_in_dialogic:
 		return
+		
+	if get_tree().paused:
+		return
+
 	
 	if not queue_manager:
 		print("No queue manager found!")
