@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dllp1qtb5fpbu" path="res://assets/world/window_covers.png" id="7_gpohd"]
 
 [node name="Environment" type="Node2D"]
+z_index = 6
+z_as_relative = false
 
 [node name="WorldPanel" type="Sprite2D" parent="."]
 z_index = 6
