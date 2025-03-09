@@ -47,18 +47,11 @@ var suspect_panel: Sprite2D
 var suspect_panel_front: Sprite2D
 var suspect: Sprite2D
 
-# Guide
-var guide: Sprite2D
 
 # Stamp system
 const STAMP_ANIMATION_DURATION: float = 0.3  # Duration of the stamp animation in seconds
 const STAMP_MOVE_DISTANCE: int = 36  # How far the stamp moves down
 var default_cursor = Input.CURSOR_ARROW
-
-# Guide system
-#var guide_tutorial_timer: Timer
-#const GUIDE_TUTORIAL_FLASH_INTERVAL = 1.0 # flash every 1 seconds
-#var is_in_guide_tutorial = true
 
 # Character Generation
 @onready var mugshot_generator = $Gameplay/MugshotPhotoGenerator
@@ -74,7 +67,15 @@ var shift_stats: ShiftStats
 @onready var alert_label = $UI/Labels/MarginContainer/AlertLabel
 @onready var alert_timer = $SystemManagers/Timers/AlertTimer
 
+
 var current_shift: int = 1
+
+# Combo system variables
+var combo_count = 0
+var combo_timer = 0.0
+var combo_timeout = 15.0  # Seconds before combo resets
+var max_combo_multiplier = 3.0
+
 
 # Drag and drop manager 
 @onready var drag_and_drop_manager = $SystemManagers/DragAndDropManager
@@ -110,19 +111,18 @@ func _ready():
 	var level_manager = get_level_manager()
 	if level_manager:
 		current_shift = level_manager.get_current_level_id()
+		print(current_shift)
 	
 	narrative_manager.current_shift = current_shift
 	
-	# Add to your existing _ready() function
 	var stamp_bar = $Gameplay/InteractiveElements/StampBarController
 	var stamp_system = $Gameplay/InteractiveElements/StampCrossbarSystem
 	
 	# Connect the stamp bar to the stamp system
 	stamp_bar.stamp_requested.connect(stamp_system.on_stamp_requested)
 	
-	$BorderRunnerSystem.game_over_triggered.connect(_on_game_over)
 	game_start_time = Time.get_ticks_msec() / 1000.0  # Convert to seconds
-	# Make sure to add QueueManager as a child of Main
+	
 	queue_manager = %QueueManager
 	setup_spawn_timer()
 	
@@ -147,7 +147,6 @@ func _ready():
 	passport = $Gameplay/InteractiveElements/Passport
 	passport_spawn_point_begin = $Gameplay/InteractiveElements/PassportSpawnPoints/BeginPoint
 	passport_spawn_point_end = $Gameplay/InteractiveElements/PassportSpawnPoints/EndPoint
-	guide = $Gameplay/InteractiveElements/Guide
 	inspection_table = $Gameplay/InspectionTable
 	suspect_panel = $Gameplay/SuspectPanel
 	suspect_panel_front = $Gameplay/SuspectPanel/SuspectPanelFront
@@ -157,17 +156,43 @@ func _ready():
 
 	# Add closed passport to draggable sprites
 	#draggable_sprites.append(passport)
-	#draggable_sprites.append(guide)
 	
-	# add border runner system
-	border_runner_system = $BorderRunnerSystem
+	border_runner_system = %BorderRunnerSystem
+	border_runner_system.game_over_triggered.connect(_on_game_over)
+	border_runner_system.is_enabled = false
 	
 	Dialogic.timeline_started.connect(_on_dialogue_started)
 	Dialogic.timeline_ended.connect(_on_dialogue_finished)
-		
-	if Global.StoryState.NOT_STARTED:
-		# Disable controls during intro
-		disable_controls()
+	#disable_controls()
+
+func add_to_combo():
+	combo_count += 1
+	combo_timer = 0.0
+	
+	# Calculate multiplier (starts at 1.0, maxes at max_combo_multiplier)
+	var multiplier = min(1.0 + (combo_count * 0.1), max_combo_multiplier)
+	
+	# Show combo notification
+	if combo_count > 1:
+		var combo_text = "COMBO x" + str(combo_count) + " (" + str(multiplier) + "x points)"
+		Global.display_green_alert(alert_label, alert_timer + " : " + combo_text, 1.5)
+	
+	return multiplier
+
+func reset_combo():
+	if combo_count > 1:
+		Global.display_red_alert(alert_label, alert_timer + " : Combo Broken!", 1.5)
+	combo_count = 0
+	combo_timer = 0.0
+
+# Apply to points calculation:
+func award_points(base_points: int):
+	var multiplier = add_to_combo()
+	var total_points = base_points * multiplier
+	Global.add_score(total_points)
+	return total_points
+
+
 
 func end_shift():
 	if Global.quota_met >= Global.quota_target:
@@ -240,14 +265,8 @@ func generate_rules():
 
 func update_rules_display():
 	var laws_text = "[center][u]LAWS[/u]\n\n" + "\n".join(current_rules) + "[/center]"
-	
-	# Update guide if we're on the laws page
-	if $Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote and Guide.current_page == 2:
-		$Gameplay/InteractiveElements/Guide/OpenGuide/GuideNote.text = laws_text
-		
 	if $Gameplay/InteractiveElements/LawReceipt/OpenReceipt/ReceiptNote:
 		$Gameplay/InteractiveElements/LawReceipt/OpenReceipt/ReceiptNote.text = laws_text
-	
 	# Emit the signal with the formatted laws text
 	emit_signal("rules_updated", laws_text)
 	
@@ -355,13 +374,14 @@ func animate_mugshot_and_passport():
 	# Get references to nodes
 	var mugshot_generator = $Gameplay/MugshotPhotoGenerator
 	var suspect_panel = $Gameplay/SuspectPanel
+	var suspect_panel_spawn_node = $Gameplay/InteractiveElements/SuspectSpawnNode
 	var suspect_panel_front = $Gameplay/SuspectPanel/SuspectPanelFront
 	var passport = $Gameplay/InteractiveElements/Passport
 	var passport_spawn_point_begin = $Gameplay/InteractiveElements/PassportSpawnPoints/BeginPoint
 	var passport_spawn_point_end = $Gameplay/InteractiveElements/PassportSpawnPoints/EndPoint
 
 	# Reset positions and visibility
-	mugshot_generator.position.x = suspect_panel.position.x + suspect_panel_front.texture.get_width()
+	mugshot_generator.position.x = suspect_panel_spawn_node.position.x + suspect_panel_front.texture.get_width()
 	passport.visible = false
 	passport.z_index = 1
 	passport.position = Vector2(passport_spawn_point_begin.position.x, passport_spawn_point_begin.position.y)
@@ -370,7 +390,7 @@ func animate_mugshot_and_passport():
 	tween.set_parallel(true)
 
 	# Animate potato mugshot
-	tween.tween_property(mugshot_generator, "position:x", suspect_panel.position.x, 0.7)
+	tween.tween_property(mugshot_generator, "position:x", suspect_panel_spawn_node.position.x, 0.7)
 	tween.tween_property(mugshot_generator, "modulate:a", 1, 0.7)
 	
 	# Animate passport
@@ -436,6 +456,14 @@ func _process(_delta):
 	# Hide megaphone dialogue when sound stops playing
 	if !$SystemManagers/AudioManager/SFXPool.is_playing():
 		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = false
+		
+	# Update combo timer
+	if combo_count > 0:
+		combo_timer += _delta
+		if combo_timer > combo_timeout:
+			# Combo expired
+			reset_combo()
+
 	
 
 func generate_potato_info():
@@ -847,25 +875,34 @@ func _exit_tree():
 func _on_dialogue_started():
 	# Completely pause all game systems
 	is_game_paused = true
+	# Tell the border runner system to pause with dialogic mode
+	if border_runner_system:
+		border_runner_system.set_dialogic_mode(true)
 	disable_controls()
+	border_runner_system.is_enabled = false
 	
 func _on_dialogue_finished():
 	Global.quota_met = 0
 	Global.strikes = 0
 	# Completely unpause all game systems
 	is_game_paused = false
+	# Tell the border runner system dialogic mode is done
+	if border_runner_system:
+		border_runner_system.set_dialogic_mode(false)
+	border_runner_system.is_enabled = true
 	enable_controls()
 	
-	if Global.StoryState.COMPLETED:
+	if Global.current_story_state >= 13:
 		# Game complete, show credits or return to menu
-		return
+		get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
 		print("ERROR: _on_dialogue_finished called StoryState.COMPLETED but no scene loaded")
-		#get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
 
 func disable_controls():
 	# Disable player interaction during dialogue
 	print("disabling controls")
 	set_process_input(false)
+	border_runner_system.is_enabled = false
+	
 	# Disable border runner system and set spawn chance to 0
 	if border_runner_system:
 		border_runner_system.disable()
@@ -877,6 +914,7 @@ func enable_controls():
 	# Re-enable controls after dialogue
 	print("enabling controls")
 	set_process_input(true)
+	border_runner_system.is_enabled = true
 	# Re-enable border runner system and restore original spawn chance
 	if border_runner_system:
 		border_runner_system.enable()
@@ -889,7 +927,7 @@ func _on_game_over():
 		var elapsed_time = (Time.get_ticks_msec() / 1000.0) - game_start_time
 		
 		# Get border runner statistics
-		var runner_stats = $BorderRunnerSystem.shift_stats
+		var runner_stats = border_runner_system.shift_stats
 		
 		# Populate the ShiftStats object with the necessary data
 		shift_stats.time_taken = elapsed_time
@@ -907,6 +945,34 @@ func _on_game_over():
 		Global.store_game_stats(shift_stats)
 		# Call go to game over to load shift summary screen
 		Global.go_to_game_over()
+
+# Screen shake for explosions like missiles
+func shake_screen(intensity: float = 10.0, duration: float = 0.3):
+	var camera = $Camera2D
+	
+	# Create a screen shake tween
+	var tween = create_tween()
+	
+	# Initial random offset
+	var random_shake = Vector2(
+		randf_range(-intensity, intensity),
+		randf_range(-intensity, intensity)
+	)
+	
+	camera.offset = random_shake
+	
+	# Shake with diminishing intensity
+	for i in range(10):
+		var shake_intensity = intensity * (1.0 - (i / 10.0))
+		random_shake = Vector2(
+			randf_range(-shake_intensity, shake_intensity),
+			randf_range(-shake_intensity, shake_intensity)
+		)
+		
+		tween.tween_property(camera, "offset", random_shake, duration / 10)
+	
+	# Return to center
+	tween.tween_property(camera, "offset", Vector2.ZERO, duration / 10)
 
 
 func parse_date(date_string: String) -> Dictionary:

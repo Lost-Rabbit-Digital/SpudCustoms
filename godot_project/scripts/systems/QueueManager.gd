@@ -41,6 +41,13 @@ func add_potato(potato_info: Dictionary):
 	potato.current_point = 0
 	potato.target_point = 0
 	potato.update_potato(potato_info)
+	# Start with zero opacity
+	potato.modulate.a = 0
+	
+	# Create fade-in tween
+	var tween = create_tween()
+	tween.tween_property(potato, "modulate:a", 1.0, 0.5)
+
 	potatoes.push_front(potato)
 	print("Potato added. Total potatoes: ", potatoes.size())
 	print("Added potato info: ", potato_info)

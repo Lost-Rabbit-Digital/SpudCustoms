@@ -2,6 +2,7 @@ extends Node
 
 # Existing variables
 var shift: int = 1
+var current_story_state: int = 0
 var final_score = 0
 var build_type = "Full Release" # Can be Full Release or Demo Release
 var difficulty_level = "Normal" # Can be "Easy", "Normal", or "Expert"
@@ -31,19 +32,6 @@ const ACHIEVEMENTS = {
 var total_shifts_completed = 0
 var total_runners_stopped = 0
 var perfect_hits = 0
-
-# Add story state enum
-enum StoryState {
-	NOT_STARTED,
-	INTRO_COMPLETE,
-	FIRST_SHIFT,
-	MIDDLE_GAME,
-	FINAL_CONFRONTATION,
-	COMPLETED
-}
-
-# Add current story state tracking
-var current_story_state = StoryState.NOT_STARTED
 
 # New scoring system variables
 var score: int = 0
@@ -235,6 +223,7 @@ func advance_shift():
 
 # Save/load functions
 func save_game_state():
+	var current_story_state = GameState.get_max_level_reached()
 	var save_data = {
 		"shift": shift,
 		"final_score": final_score,
@@ -282,7 +271,7 @@ func load_game_state():
 		quota_target = data.get("quota_target", 8)
 		difficulty_level = data.get("difficulty_level", "Expert")
 		high_scores = data.get("high_scores", {"Easy": 0, "Normal": 0, "Expert": 0})
-		current_story_state = data.get("story_state", StoryState.NOT_STARTED)
+		current_story_state = data.get("story_state", 0)
 		current_game_stats = data.get("current_game_stats", {})
 		score = final_score
 		score_updated.emit(score)
@@ -357,18 +346,6 @@ func is_level_unlocked(level_id: int) -> bool:
 func advance_story_state():
 	# Also unlock the next level when story progresses
 	unlock_level(shift + 1)
-	match current_story_state:
-		StoryState.NOT_STARTED:
-			current_story_state = StoryState.INTRO_COMPLETE
-		StoryState.INTRO_COMPLETE:
-			current_story_state = StoryState.FIRST_SHIFT
-		StoryState.FIRST_SHIFT:
-			current_story_state = StoryState.MIDDLE_GAME
-		StoryState.MIDDLE_GAME:
-			if shift >= 3: # Or whatever condition triggers final confrontation
-				current_story_state = StoryState.FINAL_CONFRONTATION
-		StoryState.FINAL_CONFRONTATION:
-			current_story_state = StoryState.COMPLETED
 
 func get_story_state() -> int:
 	return current_story_state
@@ -479,7 +456,7 @@ func check_achievements():
 		Steam.setAchievement(ACHIEVEMENTS.SCORE_LEGEND)
 		
 	# Story completion
-	if current_story_state == StoryState.COMPLETED:
+	if current_story_state >= 13:
 		Steam.setAchievement(ACHIEVEMENTS.SAVIOR_OF_SPUD)
 
 # Call this after each shift or when stats change

@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://bjx1qjoxul45k"]
+[gd_scene load_steps=67 format=3 uid="uid://bjx1qjoxul45k"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://scenes/game_scene/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://scripts/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="24_yhqqy"]
 [ext_resource type="PackedScene" uid="uid://be3lucg3f3a3c" path="res://scripts/systems/StampBarController.tscn" id="25_osm16"]
 [ext_resource type="Script" uid="uid://b2rvsx4gf3s8c" path="res://scripts/systems/StampCrossbarSystem.gd" id="26_gh2f2"]
+[ext_resource type="PackedScene" uid="uid://fci3o688eddt" path="res://scripts/systems/LawReceiptController.tscn" id="27_ccap0"]
 [ext_resource type="Texture2D" uid="uid://y3iyyicwxtsl" path="res://assets/documents/closed_passport_small/closed_passport_small.png" id="27_qjue5"]
 [ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://assets/give_prompt_dialogue.png" id="28_jdq0j"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://assets/fonts/windows_command_prompt.ttf" id="29_b6emd"]
@@ -35,15 +36,9 @@
 [ext_resource type="Texture2D" uid="uid://bxn3434177kfd" path="res://assets/documents/laws_receipt.png" id="31_rtxd3"]
 [ext_resource type="Script" uid="uid://dfofd8lp0igu2" path="res://scripts/systems/law_receipt.gd" id="32_k1orm"]
 [ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://assets/styles/dos_theme.tres" id="33_ncgko"]
-[ext_resource type="Texture2D" uid="uid://cfkvlvqhnapxc" path="res://assets/documents/customs_guide/customs_guide_open_2.png" id="34_w7ch4"]
-[ext_resource type="Script" uid="uid://bif3v7xddhuag" path="res://assets/autoload/guide.gd" id="35_eua12"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sihlh"]
 size = Vector2(756.5, 214)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vm67j"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f48nw"]
 
 [sub_resource type="Curve2D" id="Curve2D_uenca"]
 _data = {
@@ -223,6 +218,7 @@ point_count = 24
 script = ExtResource("1_ado42")
 
 [node name="UI" type="Control" parent="."]
+z_as_relative = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -265,7 +261,7 @@ position = Vector2(640, 360)
 texture = ExtResource("6_0hfru")
 
 [node name="InteractableItemsWorldBackground" type="Sprite2D" parent="UI"]
-z_index = 5
+z_index = 4
 z_as_relative = false
 position = Vector2(640, 360)
 texture = ExtResource("7_41g47")
@@ -425,7 +421,7 @@ offset_bottom = 40.0
 [node name="SpawnTimer" type="Timer" parent="SystemManagers/Timers"]
 
 [node name="AlertTimer" type="Timer" parent="SystemManagers/Timers"]
-wait_time = 2.0
+wait_time = 3.5
 one_shot = true
 
 [node name="AudioManager" type="Control" parent="SystemManagers"]
@@ -453,19 +449,20 @@ script = ExtResource("11_qilia")
 [node name="StatsManager" parent="SystemManagers" instance=ExtResource("12_h8jl1")]
 
 [node name="NarrativeManager" parent="SystemManagers" instance=ExtResource("13_c85wy")]
+unique_name_in_owner = true
 
 [node name="DragAndDropManager" type="Node" parent="SystemManagers"]
 script = ExtResource("20_5djk1")
 
 [node name="BorderRunnerSystem" parent="SystemManagers" node_paths=PackedStringArray("queue_manager", "score_label", "strike_label", "alert_label", "alert_timer", "missile_collision_shape") instance=ExtResource("2_4eqo0")]
+unique_name_in_owner = true
+z_index = 1
 queue_manager = NodePath("../QueueManager")
 score_label = NodePath("../../UI/Labels/ScoreLabel")
 strike_label = NodePath("../../UI/Labels/StrikesLabel")
 alert_label = NodePath("../../UI/Labels/MarginContainer/AlertLabel")
 alert_timer = NodePath("../Timers/AlertTimer")
 missile_collision_shape = NodePath("Area2D/CollisionShape2D")
-runner_chance = 0.025
-missile_speed = 900.0
 explosion_size = 60.0
 num_gibs = 75
 gib_min_speed = 125.0
@@ -477,6 +474,7 @@ position = Vector2(396.75, 122)
 shape = SubResource("RectangleShape2D_sihlh")
 
 [node name="Gameplay" type="Control" parent="."]
+z_as_relative = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -509,7 +507,7 @@ scale = Vector2(2.5, 2.5)
 
 [node name="PotatoMugshotShadow" type="Sprite2D" parent="Gameplay/MugshotPhotoGenerator"]
 modulate = Color(0, 0, 0, 0.521569)
-z_index = -1
+z_index = 1
 z_as_relative = false
 position = Vector2(0.399963, -14.4)
 scale = Vector2(1.1, 1.1)
@@ -520,6 +518,8 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="LawReceiptController" parent="Gameplay/InteractiveElements" instance=ExtResource("27_ccap0")]
+
 [node name="StampBarController" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("stamp_system") instance=ExtResource("25_osm16")]
 stamp_system = NodePath("../StampCrossbarSystem")
 
@@ -527,6 +527,11 @@ stamp_system = NodePath("../StampCrossbarSystem")
 script = ExtResource("26_gh2f2")
 passport = NodePath("../Passport")
 stats_manager = NodePath("../../../SystemManagers/StatsManager")
+
+[node name="SuspectSpawnNode" type="Node2D" parent="Gameplay/InteractiveElements"]
+z_index = 2
+z_as_relative = false
+position = Vector2(1079, 441)
 
 [node name="PassportSpawnPoints" type="Node2D" parent="Gameplay/InteractiveElements"]
 
@@ -633,58 +638,6 @@ Potatoes must be fresh.
 HEY DEVELOPERS, INCLUDE THE DATE HERE!"
 horizontal_alignment = 1
 
-[node name="Guide2" type="Sprite2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node")]
-z_index = 4
-z_as_relative = false
-position = Vector2(705, 391)
-texture = ExtResource("34_w7ch4")
-script = ExtResource("35_eua12")
-main_node = NodePath("../../..")
-
-[node name="ClosedGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide2"]
-visible = false
-z_as_relative = false
-
-[node name="OpenGuide" type="Sprite2D" parent="Gameplay/InteractiveElements/Guide2"]
-z_index = 4
-z_as_relative = false
-
-[node name="GuideNote" type="RichTextLabel" parent="Gameplay/InteractiveElements/Guide2/OpenGuide"]
-z_index = 4
-z_as_relative = false
-offset_left = -150.0
-offset_top = -100.0
-offset_right = 150.0
-offset_bottom = 172.0
-theme = ExtResource("33_ncgko")
-theme_override_colors/default_color = Color(0.341176, 0.282353, 0.282353, 1)
-bbcode_enabled = true
-text = "[center]
-Press the [color=#2C7A1F]speaker[/color] on top of the building to begin
-Drag [color=#2C7A1F]papers[/color] from the Potato to your desk
-Check [color=#2C7A1F]laws[/color] on [color=#2C7A1F]page 2[/color] of guide book
-Hold [color=#2C7A1F]left-click[/color] on stamp, then [color=#2C7A1F]right-click[/color] while holding to stamp papers
-
-[color=#FF0000]Left-click[/color] running potatoes to fire [color=#FF0000]missiles[/color]
-If anything is wrong, [color=#FF0000]deny entry[/color]
-Hand papers back to finish
-[/center]"
-
-[node name="TurnRight" type="TextureButton" parent="Gameplay/InteractiveElements/Guide2/OpenGuide"]
-offset_left = 117.0
-offset_top = 110.0
-offset_right = 147.0
-offset_bottom = 140.0
-texture_normal = SubResource("CompressedTexture2D_vm67j")
-
-[node name="TurnLeft" type="TextureButton" parent="Gameplay/InteractiveElements/Guide2/OpenGuide"]
-visible = false
-offset_left = -147.0
-offset_top = 110.0
-offset_right = -117.0
-offset_bottom = 140.0
-texture_normal = SubResource("CompressedTexture2D_f48nw")
-
 [node name="Paths" type="Control" parent="Gameplay"]
 visible = false
 anchors_preset = 0
@@ -742,6 +695,7 @@ z_as_relative = false
 curve = SubResource("Curve2D_lko6y")
 
 [node name="RunnerPaths" type="Control" parent="Gameplay/Paths"]
+unique_name_in_owner = true
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -852,8 +806,6 @@ z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
-[connection signal="pressed" from="Gameplay/InteractiveElements/Guide2/OpenGuide/TurnRight" to="Gameplay/InteractiveElements/Guide2" method="_on_turn_right_pressed"]
-[connection signal="pressed" from="Gameplay/InteractiveElements/Guide2/OpenGuide/TurnLeft" to="Gameplay/InteractiveElements/Guide2" method="_on_turn_left_pressed"]

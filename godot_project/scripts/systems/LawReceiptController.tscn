@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://fci3o688eddt"]
+
+[ext_resource type="Script" uid="uid://bpnjylkqyfo0l" path="res://scripts/systems/LawReceiptController.gd" id="1_avj83"]
+[ext_resource type="Texture2D" uid="uid://c56e60snydr5r" path="res://assets/stamps/stamp_crossbar_expand_button.png" id="2_sdl72"]
+[ext_resource type="Texture2D" uid="uid://bxn3434177kfd" path="res://assets/documents/laws_receipt.png" id="3_avj83"]
+[ext_resource type="Script" uid="uid://da3vr2ac5yi5i" path="res://scripts/systems/LawReceiptSprite.gd" id="4_agfho"]
+[ext_resource type="Texture2D" uid="uid://b0xvn475tgt1j" path="res://assets/stamps/hide_button.png" id="7_y8vt1"]
+
+[node name="LawReceiptController" type="Node2D"]
+z_index = 10
+z_as_relative = false
+script = ExtResource("1_avj83")
+
+[node name="FoldOutButton" type="TextureButton" parent="."]
+z_index = 9
+z_as_relative = false
+y_sort_enabled = true
+offset_left = 120.0
+offset_top = 720.0
+offset_right = 229.0
+offset_bottom = 854.0
+rotation = -1.5708
+scale = Vector2(0.667388, 0.667388)
+texture_normal = ExtResource("2_sdl72")
+
+[node name="LawReceiptSprite" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(274, 802)
+scale = Vector2(0.665845, 0.665845)
+texture = ExtResource("3_avj83")
+script = ExtResource("4_agfho")
+
+[node name="HideButton" type="TextureButton" parent="LawReceiptSprite"]
+z_index = 12
+z_as_relative = false
+offset_left = 93.1149
+offset_top = -15.0186
+offset_right = 195.115
+offset_bottom = 118.981
+rotation = -1.5708
+scale = Vector2(0.660301, 0.660301)
+texture_normal = ExtResource("7_y8vt1")
+
+[node name="OpenReceipt" type="Node2D" parent="LawReceiptSprite"]
+z_index = 11
+z_as_relative = false
+position = Vector2(-1420.75, -1336.65)
+scale = Vector2(1.50185, 1.50185)
+
+[node name="ReceiptNote" type="RichTextLabel" parent="LawReceiptSprite/OpenReceipt"]
+offset_right = 40.0
+offset_bottom = 40.0

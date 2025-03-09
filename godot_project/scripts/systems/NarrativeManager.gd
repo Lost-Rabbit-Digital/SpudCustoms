@@ -41,26 +41,24 @@ const ACHIEVEMENTS: Dictionary[String, String] = {
 }
 
 func _ready():
-	# Initialize dialogic timeline
+	# Initialize dialogic and load dialogue for appropriate shift
 	start_level_dialogue(Global.shift)
-	#if Global.get_story_state() == Global.StoryState.NOT_STARTED:
-		#start_intro_sequence()
 
-# Function to start dialogue for a specific level
 func start_level_dialogue(level_id: int):
 	if dialogue_active:
 		return
 		
 	dialogue_active = true
+	var skip_button_layer = create_skip_button()
+	
 	var timeline_name = LEVEL_DIALOGUES.get(level_id, "generic_shift_start")
 	
 	var timeline = Dialogic.start(timeline_name)
 	add_child(timeline)
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.timeline_ended.connect(_on_shift_dialogue_finished)
+	Dialogic.timeline_ended.connect(func(): skip_button_layer.queue_free())
 
-	
-# Function to start end dialogue for a level
 func start_level_end_dialogue(level_id: int):
 	if dialogue_active:
 		return
@@ -73,37 +71,26 @@ func start_level_end_dialogue(level_id: int):
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.timeline_ended.connect(_on_shift_dialogue_finished)
 
-#func start_intro_sequence():
-	#if dialogue_active:
-		#return
-		#
-	#dialogue_active = true
-	#var timeline = Dialogic.start("res://assets/narrative/generic_shift_start.dtl")
-	#add_child(timeline)
-	#Dialogic.timeline_ended.connect(_on_intro_dialogue_finished)
+func create_skip_button():
+	var canvas = CanvasLayer.new()
+	canvas.name = "SkipButtonLayer"
+	canvas.layer = 100  # Put it above everything else
 	
-#func start_shift_dialogue():
-	#if dialogue_active:
-		#return
-		#
-	#dialogue_active = true
-	#var timeline
-	#
-	#match current_shift:
-		#1:
-			## Debugging Purposes
-			##timeline = Dialogic.start("final_confrontation")
-			#timeline = Dialogic.start("shift1_intro") 
-		#2: 
-			#timeline = Dialogic.start("shift2_intro")
-		#3:
-			#timeline = Dialogic.start("shift3_intro")
-		#_:
-			#timeline = Dialogic.start("final_confrontation")
-			#
-	#add_child(timeline)
-	#Dialogic.signal_event.connect(_on_dialogic_signal)
-	#Dialogic.timeline_ended.connect(_on_shift_dialogue_finished)
+	var skip_button = Button.new()
+	skip_button.text = "Skip"
+	skip_button.custom_minimum_size = Vector2(50, 30)
+	skip_button.position = Vector2(1150, 8)  # Top-right corner
+	
+	skip_button.connect("pressed", Callable(self, "_on_skip_button_pressed"))
+	
+	canvas.add_child(skip_button)
+	add_child(canvas)
+	
+	return canvas
+
+func _on_skip_button_pressed():
+	# End the current timeline
+	Dialogic.end_timeline()
 
 func _on_dialogic_signal(argument):
 	if argument == "credits_ready":
@@ -117,7 +104,6 @@ func _on_dialogic_signal(argument):
 	if argument == "down_with_the_tatriarchy":
 		Steam.setAchievement(ACHIEVEMENTS.DOWN_WITH_THE_TATRIARCHY)
 		
-
 func start_final_confrontation():
 	if dialogue_active:
 		return
