@@ -902,6 +902,34 @@ func _on_game_over():
 		# Call go to game over to load shift summary screen
 		Global.go_to_game_over()
 
+# Screen shake for explosions like missiles
+func shake_screen(intensity: float = 10.0, duration: float = 0.3):
+	var camera = $Camera2D
+	
+	# Create a screen shake tween
+	var tween = create_tween()
+	
+	# Initial random offset
+	var random_shake = Vector2(
+		randf_range(-intensity, intensity),
+		randf_range(-intensity, intensity)
+	)
+	
+	camera.offset = random_shake
+	
+	# Shake with diminishing intensity
+	for i in range(10):
+		var shake_intensity = intensity * (1.0 - (i / 10.0))
+		random_shake = Vector2(
+			randf_range(-shake_intensity, shake_intensity),
+			randf_range(-shake_intensity, shake_intensity)
+		)
+		
+		tween.tween_property(camera, "offset", random_shake, duration / 10)
+	
+	# Return to center
+	tween.tween_property(camera, "offset", Vector2.ZERO, duration / 10)
+
 
 func parse_date(date_string: String) -> Dictionary:
 	var parts = date_string.split(".")

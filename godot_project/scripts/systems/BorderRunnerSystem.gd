@@ -528,6 +528,11 @@ func trigger_explosion(missile):
 	var explosion_active = true
 	var explosion_position = missile.position
 	
+	# Trigger screen shake
+	var main_game = get_parent()
+	if main_game.has_method("shake_screen"):
+		main_game.shake_screen()
+	
 	# Setup explosion VFX
 	explosion_vfx.position = explosion_position
 	explosion_vfx.visible = true
