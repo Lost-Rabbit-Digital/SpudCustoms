@@ -5,26 +5,26 @@ These are our goals, to-do tasks, and completed tasks.
 
 ## Tasks
 ### Graphics
-  [ ] - Add a version counter
   [ ] - Add dialogue emotes randomly to the potatoes
-  [ ] - Change "Runner Escaped" to capitals 
-  [ ] - Different documents, entry passes, work permits, baggage, visas, marriage licenses, bribes, 
-  [ ] - Display the score for longer, a few seconds, so the player can read it
+  [ ] - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
   [ ] - Entry ticket
-  [ ] - Fade in potatoes when they come into the customs office
   [ ] - Fix text on main menu and other scenes with background photos
   [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
   [ ] - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
   [ ] - Randomly toggle the lights on and off like people are using the rooms
   [ ] - Replace missile sprite
   [ ] - Update explosion
+  [x] - Add a version counter
+  [x] - Change "Runner Escaped" to capitals 
+  [x] - Display the score for longer, a few seconds, so the player can read it
+  [x] - Fade in potatoes when they come into the customs office
   [X] - Improve art quality of stamp bar interface (basic doodling that isn't copy/paste)
 ### Gameplay
   [ ] - Add a Metal shutter that rolls down cinematically with segments that cascade down, dust particles as it hits bottom, a satisfying "clunk" sound effect
   [ ] - Add a missile targeting restriction region to prevent accidental missile launches when clicking UI elements
-  [ ] - Add ability to skip to end of Dialogic timeline with button in Upper left "Skip"
+  [x] - Add ability to skip to end of Dialogic timeline with button in Upper left "Skip"
   [ ] - Add clearer feedback for game over conditions
-  [ ] - Add day-by-day shift selection the player unlocks as they progress
+  [x] - Add day-by-day shift selection the player unlocks as they progress
   [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
   [ ] - Add flash indicator pointing at corner of first page 
   [ ] - Add simple fade to game over summary
@@ -32,11 +32,9 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Allow firing missiles even when no active runner
   [ ] - Allow multiple missiles at once
   [ ] - Allow multiple simultaneous runners
-  [ ] - Call out the guide book in tutorial as a quick reference
   [ ] - Conversation with potato while checking documents
   [ ] - Expand area for perfect hit chance on border runner system
-  [ ] - Explain how to flip the pages on the document in the tutorial
-  [ ] - Faster project or more centralized location for missile
+  [x] - Faster velocity or more centralized location for missile
   [ ] - Fix the issue where the game continues running during story sequences
   [ ] - Fix z-ordering issues on the summary screen
   [ ] - Icon showing missile Y-level, with arrow pointing where it is off-screen briefly, change color of icon if there are multiple
