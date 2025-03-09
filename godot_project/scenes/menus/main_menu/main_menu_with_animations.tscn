@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bdvdf5v87mmrr" path="res://scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_tuy3s"]
 [ext_resource type="PackedScene" uid="uid://dtu0ffm1m5mr7" path="res://scenes/menus/level_select_menu/level_select_menu.tscn" id="3_xj7vs"]
 [ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://scenes/credits/credits.tscn" id="4_lwsll"]
-[ext_resource type="Texture2D" uid="uid://ckl4hp0qicyf6" path="res://assets/narrative/border_chaos.png" id="6_x83rq"]
 [ext_resource type="AudioStream" uid="uid://dxl4o6it672u4" path="res://assets/music/faded_ambient_defeat_main_menu.wav" id="6_xpvtk"]
+[ext_resource type="Texture2D" uid="uid://berntd8efacvc" path="res://assets/narrative/border_chaos_1.png" id="7_2k5l7"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -374,7 +374,7 @@ parameters/conditions/intro_done = false
 stream = ExtResource("6_xpvtk")
 
 [node name="BackgroundTextureRect" parent="." index="4"]
-texture = ExtResource("6_x83rq")
+texture = ExtResource("7_2k5l7")
 
 [node name="VersionContainer" parent="VersionMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
