@@ -7,7 +7,7 @@ These are our goals, to-do tasks, and completed tasks.
 ### Graphics
   [ ] - Add dialogue emotes randomly to the potatoes
   [ ] - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
-  [ ] - Entry ticket
+  [ ] - Add an Entry ticket document and law requirement
   [ ] - Fix text on main menu and other scenes with background photos
   [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
   [ ] - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
