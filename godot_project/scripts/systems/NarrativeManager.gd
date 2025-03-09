@@ -57,7 +57,6 @@ func start_level_dialogue(level_id: int):
 	add_child(timeline)
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.timeline_ended.connect(_on_shift_dialogue_finished)
-	Dialogic.timeline_ended.connect(func(): skip_button_layer.queue_free())
 
 func start_level_end_dialogue(level_id: int):
 	if dialogue_active:
@@ -91,7 +90,11 @@ func create_skip_button():
 func _on_skip_button_pressed():
 	# End the current timeline
 	Dialogic.end_timeline()
-
+	# Find and remove the SkipButtonLayer
+	var skip_button_layer = get_node_or_null("SkipButtonLayer")
+	if skip_button_layer:
+		skip_button_layer.queue_free()
+		
 func _on_dialogic_signal(argument):
 	if argument == "credits_ready":
 		get_tree().change_scene_to_file("res://main_scenes/scenes/end_credits/end_credits.tscn")
