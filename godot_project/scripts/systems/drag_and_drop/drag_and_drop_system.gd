@@ -91,11 +91,12 @@ func handle_input_event(event: InputEvent, mouse_pos: Vector2) -> bool:
 		
 	return false
 
-# Handle mouse press
+# In drag_and_drop_system.gd
 func _handle_mouse_press(mouse_pos: Vector2) -> bool:
 	if dragged_item == null:
 		dragged_item = find_topmost_item_at(mouse_pos)
 		if dragged_item:
+			_update_dragged_item_position(mouse_pos)
 			# Reset document_was_closed flag for new drag
 			document_was_closed = false
 			
@@ -103,15 +104,17 @@ func _handle_mouse_press(mouse_pos: Vector2) -> bool:
 			original_z_index = dragged_item.z_index
 			dragged_item.z_index = DRAGGING_Z_INDEX  # Higher z-index while dragging
 			
-			drag_offset = mouse_pos - dragged_item.global_position
-			
 			# Get drop zone before starting drag
 			var current_zone = identify_drop_zone(mouse_pos)
 			
 			# If document is being picked up from inspection table, close it
 			if current_zone == "inspection_table" and is_openable_document(dragged_item):
 				emit_signal("item_closed", dragged_item)
-				
+			
+			# Use a zero offset to center the document on the cursor
+			drag_offset = Vector2.ZERO
+			
+			# We'll handle centering in the next frame using call_deferred
 			emit_signal("item_dragged", dragged_item)
 			return true
 	return false
@@ -149,11 +152,11 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 func _update_dragged_item_position(mouse_pos: Vector2):
 	if dragged_item:
 		# Store previous position to check if we're leaving the table
-		var previous_position = dragged_item.global_position
+		var previous_position = get_viewport().get_mouse_position()
 		var was_on_table = inspection_table and inspection_table.get_rect().has_point(inspection_table.to_local(previous_position))
 		
-		# Update position
-		dragged_item.global_position = mouse_pos - drag_offset
+		# Update position using the drag_offset which is now the center of the document
+		dragged_item.global_position = get_viewport().get_mouse_position()
 		
 		# Check if document is leaving the inspection table
 		var is_on_table = inspection_table and inspection_table.get_rect().has_point(inspection_table.to_local(dragged_item.global_position))
@@ -162,6 +165,9 @@ func _update_dragged_item_position(mouse_pos: Vector2):
 		if was_on_table and !is_on_table and !document_was_closed and is_openable_document(dragged_item):
 			emit_signal("item_closed", dragged_item)
 			document_was_closed = true
+			
+			# Get updated mouse position for more accuracy
+			var current_mouse_pos = get_viewport().get_mouse_position()
 
 # Find the nearest valid position on the inspection table
 func find_nearest_table_position(item_position: Vector2, item_size: Vector2) -> Vector2:
