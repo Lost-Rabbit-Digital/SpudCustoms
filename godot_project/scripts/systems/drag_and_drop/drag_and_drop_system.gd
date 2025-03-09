@@ -10,6 +10,8 @@ signal item_closed(item)
 # Configuration
 const PASSPORT_Z_INDEX = 0
 const DRAGGING_Z_INDEX = 100  # Higher z-index for items being dragged
+const RETURN_TWEEN_DURATION = 0.3  # Duration of return animation in seconds
+const TABLE_EDGE_BUFFER = 20  # Buffer distance from table edge
 
 # State tracking
 var draggable_items = []
@@ -115,25 +117,30 @@ func _handle_mouse_press(mouse_pos: Vector2) -> bool:
 	return false
 
 # Handle mouse release
-# Handle mouse release
 func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 	if dragged_item:
 		var drop_zone = identify_drop_zone(mouse_pos)
 		emit_signal("item_dropped", dragged_item, drop_zone)
 		
-		# Restore original z-index
-		dragged_item.z_index = original_z_index
-		
 		# Reset document_was_closed flag
 		document_was_closed = false
 		
-		# Handle specific item drop logic
-		if dragged_item.name == "Passport":
-			_handle_passport_drop(mouse_pos)
-		elif dragged_item.name == "Guide":
-			_handle_guide_drop(mouse_pos)
-		elif dragged_item.name == "LawReceipt":
-			_handle_receipt_drop(mouse_pos)
+		# Handle specific item drop logic first
+		if drop_zone == "inspection_table" or drop_zone == "suspect_panel" or drop_zone == "suspect":
+			if dragged_item.name == "Passport":
+				_handle_passport_drop(mouse_pos)
+			elif dragged_item.name == "Guide":
+				_handle_guide_drop(mouse_pos)
+			elif dragged_item.name == "LawReceipt":
+				_handle_receipt_drop(mouse_pos)
+			
+			# Restore original z-index immediately for valid drop zones
+			dragged_item.z_index = original_z_index
+		else:
+			# Item dropped in invalid location, return to nearest point on table
+			_return_item_to_table(dragged_item)
+			# Don't reset dragged_item here as we'll handle it after the tween completes
+			return true
 			
 		dragged_item = null
 		return true
@@ -155,6 +162,107 @@ func _update_dragged_item_position(mouse_pos: Vector2):
 		if was_on_table and !is_on_table and !document_was_closed and is_openable_document(dragged_item):
 			emit_signal("item_closed", dragged_item)
 			document_was_closed = true
+
+# Find the nearest valid position on the inspection table
+func find_nearest_table_position(item_position: Vector2, item_size: Vector2) -> Vector2:
+	if not inspection_table:
+		return item_position
+		
+	# Get table rect in global coordinates
+	var table_rect = Rect2(
+		inspection_table.global_position, 
+		inspection_table.get_rect().size
+	)
+	
+	# Add buffer to account for document size
+	var buffered_rect = Rect2(
+		table_rect.position + Vector2(TABLE_EDGE_BUFFER, TABLE_EDGE_BUFFER),
+		table_rect.size - Vector2(TABLE_EDGE_BUFFER * 2, TABLE_EDGE_BUFFER * 2) - item_size
+	)
+	
+	# If the buffered rect is invalid (too small), use table rect with minimum buffer
+	if buffered_rect.size.x <= 0 or buffered_rect.size.y <= 0:
+		buffered_rect = Rect2(
+			table_rect.position + Vector2(5, 5),
+			table_rect.size - Vector2(10, 10) - item_size
+		)
+	
+	# Find the nearest valid position
+	var target_pos = Vector2(
+		clamp(item_position.x, buffered_rect.position.x, buffered_rect.position.x + buffered_rect.size.x),
+		clamp(item_position.y, buffered_rect.position.y, buffered_rect.position.y + buffered_rect.size.y)
+	)
+	
+	return target_pos
+
+# Return an item to the nearest valid position on the inspection table
+# Return an item to the nearest valid position on the inspection table
+# Return an item to the nearest valid position on the inspection table
+func _return_item_to_table(item: Node2D):
+	if not item or not inspection_table:
+		if item:
+			item.z_index = original_z_index
+			item.scale = item.scale  # Ensure scale is normalized
+			dragged_item = null
+		return
+	
+	# Keep the high z-index during the return animation
+	# Save original scale to restore exactly the same value
+	var original_scale = Vector2(item.scale)
+	
+	# Get item size using the utility method
+	var item_size = get_item_size(item)
+		
+	# Find the nearest valid position
+	var target_position = find_nearest_table_position(item.global_position, item_size)
+	
+	# Create a tween for position
+	var tween = create_tween()
+	tween.set_ease(Tween.EASE_OUT)
+	tween.set_trans(Tween.TRANS_BACK)  # Back easing for overshoot effect
+	tween.tween_property(item, "global_position", target_position, RETURN_TWEEN_DURATION)
+	
+	# Create a separate tween for scale animation
+	var scale_tween = create_tween()
+	
+	# Squish on impact
+	scale_tween.tween_property(item, "scale", Vector2(original_scale.x * 1.1, original_scale.y * 0.9), RETURN_TWEEN_DURATION * 0.6)
+	
+	# Then bounce back
+	scale_tween.tween_property(item, "scale", Vector2(original_scale.x * 0.95, original_scale.y * 1.05), RETURN_TWEEN_DURATION * 0.15)
+	
+	# Ensure exact original scale is restored at the end
+	scale_tween.tween_property(item, "scale", original_scale, RETURN_TWEEN_DURATION * 0.25)
+	
+	# Make sure original scale is properly restored in tween callback
+	tween.tween_callback(func():
+		# Force exact scale restoration
+		item.scale = original_scale
+		item.z_index = original_z_index
+		dragged_item = null
+		
+		# Open the document when it returns to the table
+		if is_openable_document(item):
+			emit_signal("item_opened", item)
+	)
+	
+	# Play a return sound
+	if audio_player:
+		audio_player.stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
+		audio_player.play()
+		
+# Get the size of a node, handling different node types
+func get_item_size(item: Node2D) -> Vector2:
+	if item is Sprite2D and item.texture:
+		return item.texture.get_size() * item.scale
+	elif item is Node2D:
+		return item.size * item.scale
+	elif item.has_method("get_rect"):
+		var rect = item.get_rect()
+		return rect.size * item.scale
+	else:
+		# Fallback to a reasonable default size
+		return Vector2(100, 100) * item.scale
 
 # Check if item is a document that can be opened/closed
 func is_openable_document(item: Node2D) -> bool:
