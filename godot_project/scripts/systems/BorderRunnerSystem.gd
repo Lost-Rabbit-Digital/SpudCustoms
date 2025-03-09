@@ -475,7 +475,7 @@ func launch_missile(target_pos):
 	new_missile_sprite.visible = true
 	new_missile_sprite.z_index = 15
 	add_child(new_missile_sprite)
-	new_missile_sprite.scale = Vector2(0.10, 0.10)  # Much smaller scale
+	new_missile_sprite.scale = Vector2(0.06, 0.06)  # Much smaller scale
 	add_child(new_missile_sprite)
 	
 	# Create a new particle effect for this missile
