@@ -70,6 +70,13 @@ var shift_stats: ShiftStats
 
 var current_shift: int = 1
 
+# Combo system variables
+var combo_count = 0
+var combo_timer = 0.0
+var combo_timeout = 15.0  # Seconds before combo resets
+var max_combo_multiplier = 3.0
+
+
 # Drag and drop manager 
 @onready var drag_and_drop_manager = $SystemManagers/DragAndDropManager
 
@@ -157,6 +164,35 @@ func _ready():
 	Dialogic.timeline_started.connect(_on_dialogue_started)
 	Dialogic.timeline_ended.connect(_on_dialogue_finished)
 	#disable_controls()
+
+func add_to_combo():
+	combo_count += 1
+	combo_timer = 0.0
+	
+	# Calculate multiplier (starts at 1.0, maxes at max_combo_multiplier)
+	var multiplier = min(1.0 + (combo_count * 0.1), max_combo_multiplier)
+	
+	# Show combo notification
+	if combo_count > 1:
+		var combo_text = "COMBO x" + str(combo_count) + " (" + str(multiplier) + "x points)"
+		Global.display_green_alert(alert_label, alert_timer + " : " + combo_text, 1.5)
+	
+	return multiplier
+
+func reset_combo():
+	if combo_count > 1:
+		Global.display_red_alert(alert_label, alert_timer + " : Combo Broken!", 1.5)
+	combo_count = 0
+	combo_timer = 0.0
+
+# Apply to points calculation:
+func award_points(base_points: int):
+	var multiplier = add_to_combo()
+	var total_points = base_points * multiplier
+	Global.add_score(total_points)
+	return total_points
+
+
 
 func end_shift():
 	if Global.quota_met >= Global.quota_target:
@@ -420,6 +456,14 @@ func _process(_delta):
 	# Hide megaphone dialogue when sound stops playing
 	if !$SystemManagers/AudioManager/SFXPool.is_playing():
 		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = false
+		
+	# Update combo timer
+	if combo_count > 0:
+		combo_timer += _delta
+		if combo_timer > combo_timeout:
+			# Combo expired
+			reset_combo()
+
 	
 
 func generate_potato_info():
