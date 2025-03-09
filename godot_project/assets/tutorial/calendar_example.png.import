@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdahqsryabpjp"
-path="res://.godot/imported/examine_document_example.png-f2700bad50e75b4a0601ff8e90ee8fba.ctex"
+uid="uid://b6rqvdiewkik7"
+path="res://.godot/imported/calendar_example.png-e1ff7f696c25827c4239b463fa4458a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/narrative/examine_document_example.png"
-dest_files=["res://.godot/imported/examine_document_example.png-f2700bad50e75b4a0601ff8e90ee8fba.ctex"]
+source_file="res://assets/tutorial/calendar_example.png"
+dest_files=["res://.godot/imported/calendar_example.png-e1ff7f696c25827c4239b463fa4458a9.ctex"]
 
 [params]
 

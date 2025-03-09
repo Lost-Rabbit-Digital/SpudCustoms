@@ -2,7 +2,7 @@
 audio music "res://assets/audio/ambient/horror_drone_23.wav" [fade="2.0" volume="-5.0" bus="Music"]
 
 [background arg="res://assets/narrative/meeting_sasha.png" fade="2.0"]
-join sweet_potato_sasha center [z_index="1"]
+join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Hey there, I'm Sasha. Welcome to the team!
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
@@ -12,7 +12,7 @@ sweet_potato_sasha: Sasha leans in close\: "And keep your eyes peeled. Not every
 leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
-join supervisor_russet center [z_index="1"]
+join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Your next applicant is waiting. Check those stamps carefully!
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
@@ -25,7 +25,7 @@ leave supervisor_russet
 
 [background arg="res://assets/narrative/potato_radio.png" fade="2.0"]
 Static crackles through the radio in the background
-join announcer center
+join announcer
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 announcer: "...in today's news, record production numbers for Root Reserve. The miracle food continues to nourish our nation..."
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
@@ -51,14 +51,14 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_2.wav" [volume="-5.0" bus
 "Those Who Abandon Their Duty Abandon Their Roots."
 
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
-join npc_2 center [z_index="1"]
+join npc_2 [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 npc_2: A young Spud speaks in a low whisper\: My neighbor disappeared last week after failing inspection...
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 npc_2: Just... be careful out there. Get rejected and you might not come back.
 leave npc_2
 
-join sweet_potato_sasha center [z_index="1"]
+join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: How's your shift going? Find anything...unusual yet?
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
@@ -71,7 +71,7 @@ sweet_potato_sasha: No one knows for sure, but... just keep your wits about you.
 leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
-join spud_masherson center [z_index="1"]
+join spud_masherson [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 spud_masherson: Spud Masherson trembles as they speak\: P-please...
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
@@ -82,7 +82,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 spud_masherson: I swear I'm not one of those... [color=red]agitators[/color]!
 leave spud_masherson
 
-join supervisor_russet center [z_index="1"]
+join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Well, what are you waiting for? Reject or approve.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]

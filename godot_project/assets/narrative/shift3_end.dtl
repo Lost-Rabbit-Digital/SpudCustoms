@@ -45,35 +45,35 @@ set {reveal_reaction} = "none"
 - "That's insane. They're... processing potatoes into food?"
 	set {reveal_reaction} = "shocked"
 - "We need more evidence before making accusations."
-set {reveal_reaction} = "cautious"
+	set {reveal_reaction} = "cautious"
 - "We have to expose this. It's monstrous."
-set {reveal_reaction} = "determined"
+	set {reveal_reaction} = "determined"
 
 if {reveal_reaction} == "shocked":
-join sweet_potato_sasha [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Sasha nods grimly. Cannibalism with extra steps. That's what Root Reserve is.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: And we've been helping them select their ingredients.
-leave sweet_potato_sasha
+	join sweet_potato_sasha [z_index="1"]
+	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	sweet_potato_sasha: Sasha nods grimly. Cannibalism with extra steps. That's what Root Reserve is.
+	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+	sweet_potato_sasha: And we've been helping them select their ingredients.
+	leave sweet_potato_sasha
 
 elif {reveal_reaction} == "cautious":
-join sweet_potato_sasha [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Sasha looks disappointed. I've been collecting evidence for months. But fine.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Keep your eyes open. You'll see I'm right. Just don't wait too long.
-leave sweet_potato_sasha
+	join sweet_potato_sasha [z_index="1"]
+	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	sweet_potato_sasha: Sasha looks disappointed. I've been collecting evidence for months. But fine.
+	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+	sweet_potato_sasha: Keep your eyes open. You'll see I'm right. Just don't wait too long.
+	leave sweet_potato_sasha
 
 else:
-join sweet_potato_sasha [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Sasha's eyes light up. I was hoping you'd say that.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: There are others who feel the same. A resistance, of sorts.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: They need someone on the inside. Someone with access.
-leave sweet_potato_sasha
+	join sweet_potato_sasha [z_index="1"]
+	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	sweet_potato_sasha: Sasha's eyes light up. I was hoping you'd say that.
+	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+	sweet_potato_sasha: There are others who feel the same. A resistance, of sorts.
+	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	sweet_potato_sasha: They need someone on the inside. Someone with access.
+	leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/night_alarm.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]

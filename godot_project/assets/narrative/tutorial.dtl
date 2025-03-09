@@ -11,21 +11,21 @@ narrator: This training will teach you the essential skills needed to protect Sp
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: As a Customs Officer, you'll need to check documents carefully.
 
-[background arg="res://assets/narrative/mega_phone_example.png" fade="2.0"]
+[background arg="res://assets/tutorial/mega_phone_example.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: You'll signal each potato to approach your office by tapping the megaphone.
 
-[background arg="res://assets/narrative/suspect_panel_example.png" fade="2.0"]
+[background arg="res://assets/tutorial/suspect_panel_example.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: Take their documents and move them to your inspection table.
 
-[background arg="res://assets/narrative/examine_document_example.png" fade="2.0"]
+[background arg="res://assets/tutorial/examine_document_example.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: Look for expired dates, incorrect information, or signs of forgery.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: Your desk has stamps for marking documents and a missile launcher to stop runners.
 
-[background arg="res://assets/narrative/stamp_bar_example.png" fade="2.0"]
+[background arg="res://assets/tutorial/stamp_bar_example.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: To use a stamp, expand the stamp tray and drag a document underneath, then click the stamp.
 
@@ -33,23 +33,23 @@ narrator: To use a stamp, expand the stamp tray and drag a document underneath, 
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: Be sure to place your documents in the designated areas underneath your stamps.
 
-[background arg="res://assets/narrative/apply_stamp_example.png" fade="2.0"]
+[background arg="res://assets/tutorial/apply_stamp_example.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: Use your stamps to mark documents as approved or rejected.
 
-[background arg="res://assets/narrative/reject_stamp_example.png" fade="2.0"]
+[background arg="res://assets/tutorial/reject_stamp_example.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: Approve those with valid papers and reject those without.
 
-[background arg="res://assets/narrative/border_runner_example.png" fade="2.0"]
+[background arg="res://assets/tutorial/border_runner_example.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: Sometimes, potatoes will try to rush past your checkpoint.
 
-[background arg="res://assets/narrative/explode_runner_example.png" fade="2.0"]
+[background arg="res://assets/tutorial/explode_runner_example.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: Click on these "runners" to launch a missile and stop them.
 
-[background arg="res://assets/narrative/strikes_quota_example.png" fade="2.0"]
+[background arg="res://assets/tutorial/strikes_quota_example.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: Remember, each runner that gets through will count as a strike against you.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]

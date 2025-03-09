@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdbpdtfbjdnyo"
-path="res://.godot/imported/apply_stamp_example.png-272bf16a668a6c8a30e9204ecb5798fd.ctex"
+uid="uid://gwmf2v0cagjc"
+path="res://.godot/imported/strikes_quota_example.png-e7997b0050cc5b1294b4a861cc3a99c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/narrative/apply_stamp_example.png"
-dest_files=["res://.godot/imported/apply_stamp_example.png-272bf16a668a6c8a30e9204ecb5798fd.ctex"]
+source_file="res://assets/tutorial/strikes_quota_example.png"
+dest_files=["res://.godot/imported/strikes_quota_example.png-e7997b0050cc5b1294b4a861cc3a99c1.ctex"]
 
 [params]
 

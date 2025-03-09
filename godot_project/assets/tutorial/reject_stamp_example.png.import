@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://delq6gbc1p0jh"
-path="res://.godot/imported/reject_stamp_example.png-d408b1302128850ac2436a9e1a3773d1.ctex"
+uid="uid://c5ismnq8wsnca"
+path="res://.godot/imported/reject_stamp_example.png-5d9235fa5163bf6384b1175a3270f0ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/narrative/reject_stamp_example.png"
-dest_files=["res://.godot/imported/reject_stamp_example.png-d408b1302128850ac2436a9e1a3773d1.ctex"]
+source_file="res://assets/tutorial/reject_stamp_example.png"
+dest_files=["res://.godot/imported/reject_stamp_example.png-5d9235fa5163bf6384b1175a3270f0ed.ctex"]
 
 [params]
 

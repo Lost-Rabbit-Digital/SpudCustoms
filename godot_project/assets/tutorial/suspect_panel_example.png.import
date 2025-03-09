@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c80or8qtxtn8q"
-path="res://.godot/imported/explode_runner_example.png-211b184f0eec3a118fdf444af9a49af0.ctex"
+uid="uid://fjuioscx25vl"
+path="res://.godot/imported/suspect_panel_example.png-cf5036eb904cb7329ba072ec9241726a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/narrative/explode_runner_example.png"
-dest_files=["res://.godot/imported/explode_runner_example.png-211b184f0eec3a118fdf444af9a49af0.ctex"]
+source_file="res://assets/tutorial/suspect_panel_example.png"
+dest_files=["res://.godot/imported/suspect_panel_example.png-cf5036eb904cb7329ba072ec9241726a.ctex"]
 
 [params]
 
