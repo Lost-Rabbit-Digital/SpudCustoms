@@ -5,26 +5,24 @@ These are our goals, to-do tasks, and completed tasks.
 
 ## Tasks
 ### Graphics
-  [ ] - Add a version counter
   [ ] - Add dialogue emotes randomly to the potatoes
-  [ ] - Change "Runner Escaped" to capitals 
-  [ ] - Different documents, entry passes, work permits, baggage, visas, marriage licenses, bribes, 
-  [ ] - Display the score for longer, a few seconds, so the player can read it
-  [ ] - Entry ticket
-  [ ] - Fade in potatoes when they come into the customs office
+  [ ] - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
+  [ ] - Add an Entry ticket document and law requirement
   [ ] - Fix text on main menu and other scenes with background photos
   [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
   [ ] - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
   [ ] - Randomly toggle the lights on and off like people are using the rooms
   [ ] - Replace missile sprite
   [ ] - Update explosion
+  [x] - Add a version counter
+  [x] - Change "Runner Escaped" to capitals 
+  [x] - Display the score for longer, a few seconds, so the player can read it
+  [x] - Fade in potatoes when they come into the customs office
   [X] - Improve art quality of stamp bar interface (basic doodling that isn't copy/paste)
 ### Gameplay
   [ ] - Add a Metal shutter that rolls down cinematically with segments that cascade down, dust particles as it hits bottom, a satisfying "clunk" sound effect
   [ ] - Add a missile targeting restriction region to prevent accidental missile launches when clicking UI elements
-  [ ] - Add ability to skip to end of Dialogic timeline with button in Upper left "Skip"
   [ ] - Add clearer feedback for game over conditions
-  [ ] - Add day-by-day shift selection the player unlocks as they progress
   [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
   [ ] - Add flash indicator pointing at corner of first page 
   [ ] - Add simple fade to game over summary
@@ -32,11 +30,9 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Allow firing missiles even when no active runner
   [ ] - Allow multiple missiles at once
   [ ] - Allow multiple simultaneous runners
-  [ ] - Call out the guide book in tutorial as a quick reference
+  [ ] - Change position so kill text flying up with the score update
   [ ] - Conversation with potato while checking documents
   [ ] - Expand area for perfect hit chance on border runner system
-  [ ] - Explain how to flip the pages on the document in the tutorial
-  [ ] - Faster project or more centralized location for missile
   [ ] - Fix the issue where the game continues running during story sequences
   [ ] - Fix z-ordering issues on the summary screen
   [ ] - Icon showing missile Y-level, with arrow pointing where it is off-screen briefly, change color of icon if there are multiple
@@ -46,8 +42,6 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Make the missile travel time consistent and predictable
   [ ] - Potatoes continued to escape during the Shift Summary.
   [ ] - Potatoes emote (Kenny emotes) while waiting in line
-  [ ] - Reduce lead time for missiles
-  [ ] - Remove references to "page 2" in Guide book
   [ ] - Retouch each cutscene that stands out as rough (use dedicated 16-32 color palettes, repaint in simpler forms)
   [ ] - Score might not be resetting between rounds on leaderboard. Fairly sure mine just kept going up.
   [ ] - Set a highlight shader on the closed passport if the document goes untouched for >5 seconds
@@ -56,13 +50,16 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Set default selection for main menu for keyboard control
   [ ] - Show Missile counter on an LCD display on the desk or on UI
   [ ] - Show the missile immediately on click from customs office, or from off-screen with missile icon in white circle with arrow pointing towards off-screen object
-  [ ] - Simplify stamp controls explanation in Guide book
-  [ ] - Spud runner attempts never stops. Alt tabbed out, paused, shift summary, no matter what, the spuds escape like clockwork.
-  [ ] - Update guide to use just left-click interactions rather than requiring both mouse buttons
-  [ ] - Update text on Guide book
+  [x] - Add ability to skip to end of Dialogic timeline with button in Upper left "Skip"
+  [x] - Add day-by-day shift selection the player unlocks as they progress
+  [x] - Faster velocity or more centralized location for missile
+  [x] - Reduce lead time for missiles
+  [x] - Simplify stamp controls explanation in Guide book
+  [x] - Spud runner attempts never stops. Alt tabbed out, paused, shift summary, no matter what, the spuds escape like clockwork.
+  [x] - Update guide to use just left-click interactions rather than requiring both mouse buttons
+  [x] - Update text on Guide book
 ### Audio
-  [ ] - No ambience or background music playing
-  [ ] - Change position so kill text flying up with the score update
+  [x] - No ambience or background music playing
 ### Score System
   [ ] - Balance points (missiles, stamping, scanning)
 ### Backend
@@ -72,6 +69,7 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - A slider for the law book to slide in from the bottom as a note-card
   [ ] - Able to drag passport off interaction table, bound them to lower half of screen
   [ ] - Able to drag stamps off interaction table, bound them to lower half of screen
+  [ ] - Add Difficulty selection UI after selecting endless mode
   [ ] - Add message queue system and delay between messages so they don't override each other, add GDScript to alert_label
   [ ] - Add new missile explosion animation
   [ ] - Add new potato type art and re-institute potato type rules
@@ -80,17 +78,11 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Change time to a shift-based time, such as 8 hours over a day
   [ ] - Changed character action text from italics to colored text
   [ ] - Check why date rules keep failing (make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
-  [ ] - Confused with the story initially, too many characters going on, understood after a few texts
-  [ ] - Copy the stamp system from Papers Please
-  [ ] - Difficulty selection UI after selecting endless mode
   [ ] - Don't allow grab while passport is moving, toggle a is_currently_animated boolean to check when picking up
   [ ] - Don't set stamps to go invisible when quota reached in Endless mode
-  [ ] - Ended on first runner
   [ ] - Escape key for menu stopped working after I alt tabbed a few times and completed the first "day". Not sure of cause on that one.
   [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
-  [ ] - Faces and hair doesn't line up on potatoes
   [ ] - Fix missile getting stuck bug, store last position of mouse on potato escape. If the missile is in flight when the spud escapes off the road, the missile freezes and remains until the next escape attempt.
-  [ ] - Game begins with a Spud runner and says "Continue Shift"
   [ ] - Halfway through instructions while we begin to explain the stamps the wording become confusing and she was lost
   [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
   [ ] - If you accept a potato at the same time the timer runs out then the potato duplicates and you get both results
@@ -99,21 +91,16 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Link summary screen to restart back into endless mode instead of story mode
   [ ] - Lower z-index of crater below that of the potato_person runner
   [ ] - Make sure the endless doesn't end too early
-  [ ] - Make sure the game scene is paused while the story mode is running
-  [ ] - Make sure there aren't incorrect starting strike counts
   [ ] - Make two sets of paths, one which start in the office and one which doesn't for Spud runner, only do the office start when they are already in office
   [ ] - Mouse has to be over passport to be able to stamp
   [ ] - Move shift summary to end of game, not end of shift, on quota reached restart, on strikes reached end game
   [ ] - Option to disable the timer in Story and Endless mode  > Attribute: https://steamcommunity.com/app/3291880/discussions/0/603016087419796439/
-  [ ] - Points are not added when correctly allowing entry to potatoes
   [ ] - Possibly exit the game from the lose screen
   [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
   [ ] - Randomly lose combo when doing potato border runner system
   [ ] - Resolve missing passport documents in story mode
   [ ] - Rewrite laws to make sense, bad wording
-  [ ] - Rockets too slow
   [ ] - Rounds end too abruptly, need to tell the player why they failed
-  [ ] - She took too long to realise there was a timer and immediately failed while reading instructions
   [ ] - Snap closed passport to position of mouse cursor to avoid bad offset
   [ ] - Sometimes the potatoes don't give you a passport
   [ ] - Stamps go over edge of passport
@@ -123,36 +110,39 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Update stats on potato escape and missile kill
   [ ] - When potato escapes, if it does so mid click (such as clicking on the speaker or a passport), the missile fires at the place you clicked on the screen. Constrain it to the Area2D for targeting potatoes on the left side of the screen, you could simply check cursor status.
   [ ] - When you correctly reject a potato it does not give you the 1,000 points
-### Guide Bugs
-  [ ] - Make cursor into a click status when hovering over the corner of the guide
-  [ ] - Fix guide textures to not include lower left corner on first page
-  [ ] - Enable colors on the Guide
-  [ ] - Add headers to the Guide for "INSTRUCTIONS" and "LAWS"
-  [ ] - Add color tags to keywords in the laws, make them green, red, yellow, and blue in the guide
-  [ ] - Store color tag hex codes for guide book in notes
+  [x] - Confused with the story initially, too many characters going on, understood after a few texts
+  [x] - Copy the stamp system from Papers Please
+  [x] - Ended on first runner
+  [x] - Faces and hair doesn't line up on potatoes
+  [x] - Game begins with a Spud runner and says "Continue Shift"
+  [x] - Make sure the game scene is paused while the story mode is running
+  [x] - Make sure there aren't incorrect starting strike counts
+  [x] - Points are not added when correctly allowing entry to potatoes
+  [x] - Rockets too slow
+  [x] - She took too long to realise there was a timer and immediately failed while reading instructions
 ### Law Bugs
-  [ ] - "Frozen potatoes require a special permit", change to not allowed because there is not special permit
-  [ ] - "Sprouted potatoes need additional verification and must be denied", change to not include verification
-  [ ] - "Young potatoes (under 2 years) need guardian.", there is no guardian system, reword
   [ ] - "Change verbiage to 2 and under" on laws, currently says "(under 2 years)"
+  [ ] - "Frozen potatoes require a special permit", change to not allowed because there is not special permit
   [ ] - "Reject Spuddington potatoes because of visa counterfeiting activity.", there is no visa system, reword "visa" to "document"
   [ ] - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
+  [ ] - "Sprouted potatoes need additional verification and must be denied", change to not include verification
+  [ ] - "Young potatoes (under 2 years) need guardian.", there is no guardian system, reword
 ### Score Bugs
-  [ ] - Check if the stamp rejection was correct before triggering the border run system for the scores to be accurate
   [ ] - Add a loss of 500 points on top of strike if the rejection was incorrect (Use the same code as the border runner system to check for point penalty)
+  [ ] - Check if the stamp rejection was correct before triggering the border run system for the scores to be accurate
   [ ] - Fix checking stamp on rejection, the fuck does this mean old Boden? Strike check on rejection?
+  [ ] - Rewrite the runner system to include chance to run while waiting in line instead of waiting for rejection
+  [ ] - Score is sometimes presented as a float and sometimes as a integer. Not sure if intentional or just some minor bug from early project, but figured i would point it out.
+  [ ] - Stamp rejection doesn't update score
   [ ] - Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
   [ ] - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
-  [ ] - Rewrite the runner system to include chance to run while waiting in line instead of waiting for rejection
-  [ ] - Stamp rejection doesn't update score
-  [ ] - Score is sometimes presented as a float and sometimes as a integer. Not sure if intentional or just some minor bug from early project, but figured i would point it out.
 ### Stretch Features
+  [ ] - Add cars that drive by
   [ ] - Baggage inspection
   [ ] - Multiplayer? 8th / 15th of November for schedule
+  [ ] - Shooting from the office instead of a missile?
   [ ] - Use top 3 scores for leaderboard, then show ... and show 3 scores above player and 3 scores below player (if any), with players score in middle. 
   [ ] - UV lamp represents a high-risk way to maximize points.
-  [ ] - Shooting from the office instead of a missile?
-  [ ] - Add cars that drive by
 
 
 
