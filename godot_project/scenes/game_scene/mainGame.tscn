@@ -457,37 +457,15 @@ script = ExtResource("20_5djk1")
 [node name="BorderRunnerSystem" parent="SystemManagers" node_paths=PackedStringArray("queue_manager", "score_label", "strike_label", "alert_label", "alert_timer", "missile_collision_shape") instance=ExtResource("2_4eqo0")]
 unique_name_in_owner = true
 z_index = 1
-unlimited_missiles = null
-rapid_runners = null
-crater_spawn_on_click = null
 queue_manager = NodePath("../QueueManager")
 score_label = NodePath("../../UI/Labels/ScoreLabel")
 strike_label = NodePath("../../UI/Labels/StrikesLabel")
 alert_label = NodePath("../../UI/Labels/MarginContainer/AlertLabel")
 alert_timer = NodePath("../Timers/AlertTimer")
 missile_collision_shape = NodePath("Area2D/CollisionShape2D")
-max_active_runners = null
-runner_chance = null
-min_time_between_runs = null
-max_time_between_runs = null
-runner_speed = null
-runner_base_points = null
-perfect_hit_bonus = null
-streak_bonus = null
-escape_penalty = null
-max_missiles = null
-missile_cooldown = null
-missile_speed = null
-missile_start_height = null
 explosion_size = 60.0
-crater_size_multiplier = null
 num_gibs = 75
-gib_scale = null
-gib_lifetime = null
 gib_min_speed = 125.0
-gib_max_speed = null
-gib_gravity = null
-gib_spin_speed = null
 
 [node name="Area2D" type="Area2D" parent="SystemManagers/BorderRunnerSystem"]
 
