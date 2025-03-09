@@ -6,6 +6,7 @@ signal item_dragged(item)
 signal item_dropped(item, drop_zone)
 signal item_opened(item)
 signal item_closed(item)
+signal passport_returned(item)
 
 # Configuration
 const PASSPORT_Z_INDEX = 0
@@ -344,9 +345,11 @@ func _handle_passport_drop(mouse_pos: Vector2):
 	if drop_zone == "inspection_table":
 		# Logic to open passport
 		emit_signal("item_opened", dragged_item)
-	elif drop_zone == "suspect_panel" or drop_zone == "suspect":
+	elif drop_zone == "suspect_panel":
 		# Logic to close passport
 		emit_signal("item_closed", dragged_item)
+	elif drop_zone == "suspect":
+		emit_signal("passport_returned", dragged_item)
 
 # Handle guide drop
 func _handle_guide_drop(mouse_pos: Vector2):

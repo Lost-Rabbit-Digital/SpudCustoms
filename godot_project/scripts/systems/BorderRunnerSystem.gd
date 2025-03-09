@@ -104,7 +104,7 @@ var difficulty_level
 # Missile class to track multiple missiles
 class Missile:
 	var sprite: Sprite2D
-	var particles: GPUParticles2D
+	var particles: CPUParticles2D
 	var position: Vector2
 	var target: Vector2
 	var rotation: float
@@ -441,7 +441,6 @@ func handle_runner_escape(runner):
 func _input(event):
 	if not is_enabled or is_in_dialogic:
 		return
-		
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			# Check if the click is within the missile zone
@@ -449,15 +448,13 @@ func _input(event):
 			if missile_zone.has_point(event.position):
 				# Check if we can launch a missile
 				if unlimited_missiles or missile_cooldown_timer <= 0:
-					if active_runners.size() > 0 or unlimited_missiles:
-						launch_missile(event.position)
-						# Reset cooldown timer
-						missile_cooldown_timer = missile_cooldown
+					launch_missile(event.position)
+					# Reset cooldown timer
+					missile_cooldown_timer = missile_cooldown
 
 func _unhandled_input(event):
 	if not is_enabled or is_in_dialogic:
 		return
-		
 	if crater_spawn_on_click:
 		if event is InputEventMouseButton:
 			if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
@@ -478,17 +475,23 @@ func launch_missile(target_pos):
 	new_missile_sprite.visible = true
 	new_missile_sprite.z_index = 15
 	add_child(new_missile_sprite)
+	new_missile_sprite.scale = Vector2(0.10, 0.10)  # Much smaller scale
+	add_child(new_missile_sprite)
 	
 	# Create a new particle effect for this missile
 	var new_particles = null
 	if smoke_particles:
-		new_particles = GPUParticles2D.new()
-		new_particles.process_material = smoke_particles.process_material.duplicate()
+		new_particles = CPUParticles2D.new()
+		# Copy individual properties
 		new_particles.amount = smoke_particles.amount
 		new_particles.lifetime = smoke_particles.lifetime
-		new_particles.one_shot = false
+		new_particles.one_shot = smoke_particles.one_shot
 		new_particles.explosiveness = smoke_particles.explosiveness
-		new_missile_sprite.add_child(new_particles)
+		new_particles.direction = smoke_particles.direction
+		new_particles.spread = smoke_particles.spread
+		new_particles.gravity = smoke_particles.gravity
+		new_particles.initial_velocity_min = smoke_particles.initial_velocity_min
+		new_particles.initial_velocity_max = smoke_particles.initial_velocity_max
 	
 	# Create the missile object
 	var missile = Missile.new(new_missile_sprite.texture, new_particles)
@@ -681,6 +684,7 @@ class Gib extends Sprite2D:
 		if lifetime >= max_lifetime:
 			queue_free()
 
+
 # Function to spawn gibs
 func spawn_gibs(pos):
 	if gib_textures.size() == 0:
@@ -716,7 +720,7 @@ func spawn_gibs(pos):
 		gib.scale = gib_scale  # Adjust this based on your gib sprite sizes
 
 func get_missile_zone() -> Rect2:
-	if not is_enabled or not missile_collision_shape:
+	if not missile_collision_shape:
 		return Rect2()
 		
 	var shape = missile_collision_shape.shape

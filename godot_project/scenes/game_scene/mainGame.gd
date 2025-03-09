@@ -107,6 +107,9 @@ func _ready():
 	# Initialize after all other nodes are ready
 	drag_and_drop_manager.initialize(self)
 	
+	# Connect signal
+	drag_and_drop_manager.drag_system.passport_returned.connect(_on_passport_returned)
+	
 	# Get the current level ID from the level list manager if it exists
 	var level_manager = get_level_manager()
 	if level_manager:
@@ -159,11 +162,14 @@ func _ready():
 	
 	border_runner_system = %BorderRunnerSystem
 	border_runner_system.game_over_triggered.connect(_on_game_over)
-	border_runner_system.is_enabled = false
+	border_runner_system.is_enabled = true
 	
 	Dialogic.timeline_started.connect(_on_dialogue_started)
 	Dialogic.timeline_ended.connect(_on_dialogue_finished)
 	#disable_controls()
+
+func _on_passport_returned(item):
+	remove_stamp()
 
 func add_to_combo():
 	combo_count += 1
@@ -786,7 +792,7 @@ func move_potato_along_path(approval_status):
 	var path: Path2D
 	
 	# Set texture
-	var PotatoScene = load("res://assets/level/PotatoPerson.tscn")
+	var PotatoScene = load("res://assets/potatoes/PotatoPerson.tscn")
 	var potato_person = PotatoScene.instantiate()
 	
 	# Get all available paths

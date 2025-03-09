@@ -4,6 +4,7 @@ extends MainMenu
 
 var level_select_scene
 var animation_state_machine : AnimationNodeStateMachinePlayback
+@onready var version_label = $VersionMargin/VersionContainer/VersionLabel
 
 func load_game_scene():
 	GameState.start_game()
@@ -57,6 +58,9 @@ func _input(event):
 	super._input(event)
 
 func _ready():
+	# Set version label text from project settings
+	var version = ProjectSettings.get_setting("application/config/version")
+	version_label.text = "v" + version
 	super._ready()
 	_setup_level_select()
 	animation_state_machine = $MenuAnimationTree.get("parameters/playback")
