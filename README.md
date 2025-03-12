@@ -80,10 +80,6 @@ In this world of anthropomorphic potatoes, your job is to:
       <td align="center"><img src="https://godotengine.org/assets/press/icon_color.svg" width="48"/></td>
       <td><a href="https://godotengine.org/download">Godot Engine 4.0+</a></td>
     </tr>
-    <tr>
-      <td align="center"><img src="https://git-lfs.github.com/images/thumbnail.png" width="48"/></td>
-      <td><a href="https://git-lfs.github.com/">Git LFS</a> (for handling large assets)</td>
-    </tr>
   </table>
 </div>
 
