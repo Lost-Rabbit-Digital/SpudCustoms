@@ -327,7 +327,7 @@ func megaphone_clicked():
 
 func move_potato_to_office(potato: PotatoPerson):
 	print("Moving our spuddy to the customs office")
-	
+	potato.set_state(potato.TaterState.IN_OFFICE)
 	# Attach potato to entry path
 	potato.attach_to_path(enter_office_path)
 	

@@ -98,7 +98,7 @@ func update_potato(new_potato_info: Dictionary):
 	update_appearance()
 
 func update_appearance():
-	match TaterState:
+	match current_state:
 		TaterState.IN_OFFICE:
 			# Hide detailed view, show silhouette
 			$CharacterGenerator.visible = true
@@ -109,6 +109,7 @@ func update_appearance():
 			$CharacterGenerator.visible = false
 			# You might want to hide the silhouette when detailed view is shown
 			$Area2D/Sprite2D.visible = true  # Adjust if your silhouette is on a different node
+			
 	# Update character appearance from character data if available
 	if potato_info.has("character_data") and character_generator:
 		character_generator.set_character_data(potato_info.character_data)

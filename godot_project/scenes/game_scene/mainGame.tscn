@@ -457,12 +457,14 @@ script = ExtResource("20_5djk1")
 [node name="BorderRunnerSystem" parent="SystemManagers" node_paths=PackedStringArray("queue_manager", "score_label", "strike_label", "alert_label", "alert_timer", "missile_collision_shape") instance=ExtResource("2_4eqo0")]
 unique_name_in_owner = true
 z_index = 1
+position = Vector2(-16, 0)
 queue_manager = NodePath("../QueueManager")
 score_label = NodePath("../../UI/Labels/ScoreLabel")
 strike_label = NodePath("../../UI/Labels/StrikesLabel")
 alert_label = NodePath("../../UI/Labels/MarginContainer/AlertLabel")
 alert_timer = NodePath("../Timers/AlertTimer")
 missile_collision_shape = NodePath("Area2D/CollisionShape2D")
+missile_speed = 1100.0
 explosion_size = 60.0
 num_gibs = 75
 gib_min_speed = 125.0

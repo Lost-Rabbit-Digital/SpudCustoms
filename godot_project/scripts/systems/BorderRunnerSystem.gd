@@ -104,7 +104,7 @@ var gib_textures: Array = []
 var difficulty_level
 
 class Missile:
-	var sprite: AnimatedSprite2D  # Change from Sprite2D to AnimatedSprite2D
+	var sprite: AnimatedSprite2D
 	var smoke_trail: Array[AnimatedSprite2D] = []  # Array to store smoke trail sprites
 	var position: Vector2
 	var target: Vector2
@@ -118,7 +118,10 @@ class Missile:
 		sprite.sprite_frames = sprite_frames
 		sprite.visible = true
 		sprite.z_index = 15
-		sprite.play("default")  # Start animation
+		if sprite.sprite_frames.has_animation("default"):
+			sprite.play("default")  # Start animation
+		else:
+			print("Error: No 'default' animation in sprite frames!")
 
 # Runner class to track multiple border runners
 class Runner:
@@ -159,20 +162,17 @@ class Runner:
 			potato.queue_free()
 
 func _ready():
+	# Create separate SpriteFrames instances for each animation type
 	var missile_frames = SpriteFrames.new()
 	var smoke_frames = SpriteFrames.new()
 	var explosion_frames = SpriteFrames.new()
 	
-	# Load the frames for missile
+	# Load the frames for explosion
 	var explosion_texture = preload("res://assets/effects/explosion_spritesheet.png")
 	var explosion_hframes = 13 # Adjust based on the actual spritesheet
 	var explosion_vframes = 1
 	
-	# Set animation speed
-	explosion_frames.set_animation_speed("default", 4)  # Frames per second
-	
-		
-	# Add animation frames for missile
+	# Add animation frames for explosion
 	explosion_frames.add_animation("default")
 	for i in range(explosion_hframes):
 		var region = Rect2(i * explosion_texture.get_width() / explosion_hframes, 0, 
@@ -181,15 +181,14 @@ func _ready():
 		var frame = AtlasTexture.new()
 		frame.atlas = explosion_texture
 		frame.region = region
-		missile_frames.add_frame("default", frame)
+		explosion_frames.add_frame("default", frame)
 	
-	# Set animation speed
-	missile_frames.set_animation_speed("default", 4)  # Frames per second
+	# Set animation speed for explosion
+	explosion_frames.set_animation_speed("default", 4)  # Frames per second
 	
 	# Load the frames for missile
 	var missile_texture = preload("res://assets/effects/rocket_small_spritesheet.png")
 	var missile_hframes = 2  # Adjust based on the actual spritesheet
-	var missile_vframes = 1
 	
 	# Add animation frames for missile
 	missile_frames.add_animation("default")
@@ -202,13 +201,12 @@ func _ready():
 		frame.region = region
 		missile_frames.add_frame("default", frame)
 	
-	# Set animation speed
+	# Set animation speed for missile
 	missile_frames.set_animation_speed("default", 4)  # Frames per second
 	
 	# Do the same for smoke frames
 	var smoke_texture = preload("res://assets/effects/smoke_spritesheet.png")
 	var smoke_hframes = 8  # Adjust based on actual spritesheet
-	var smoke_vframes = 1
 	
 	# Add animation frames for smoke
 	smoke_frames.add_animation("default")
@@ -221,13 +219,13 @@ func _ready():
 		frame.region = region
 		smoke_frames.add_frame("default", frame)
 	
-	# Set animation speed
+	# Set animation speed for smoke
 	smoke_frames.set_animation_speed("default", 8)  # Frames per second
 	
 	# Store frames for later use
 	self.missile_frames = missile_frames
 	self.smoke_frames = smoke_frames
-	
+	self.explosion_frames = explosion_frames  # Make sure to store this too
 	
 	if missile_collision_shape == null:
 		missile_collision_shape = $Area2D/CollisionShape2D
@@ -540,10 +538,15 @@ func launch_missile(target_pos):
 	
 	print("Missile launched from: ", missile.position)
 
-
-func trigger_explosion(missile):
+func trigger_explosion(missile_or_position):
 	print("Triggering explosion")
-	var explosion_position = missile.position
+	var explosion_position
+	
+	# Check if we received a missile object or a position
+	if missile_or_position is Vector2:
+		explosion_position = missile_or_position
+	else:
+		explosion_position = missile_or_position.position
 	
 	# Trigger screen shake
 	var main_game = get_parent()
@@ -552,7 +555,7 @@ func trigger_explosion(missile):
 	
 	# Create explosion animation
 	var explosion = AnimatedSprite2D.new()
-	explosion.sprite_frames = explosion_frames  # You'll need to set this up similarly to missile/smoke
+	explosion.sprite_frames = explosion_frames  # Now using our stored explosion_frames
 	explosion.global_position = explosion_position
 	explosion.scale = Vector2(explosion_size / 32.0, explosion_size / 32.0)  # Scale to desired size
 	explosion.z_index = 16  # Above missiles
@@ -568,8 +571,12 @@ func trigger_explosion(missile):
 		crater_system.add_crater(local_pos, crater_size_multiplier)
 	
 	# Clean up missile but leave smoke trail to fade out
-	missile.sprite.queue_free()
-	missile.active = false
+	if missile_or_position is Vector2:
+		# No missile to clean up, just a position
+		pass
+	else:
+		missile_or_position.sprite.queue_free()
+		missile_or_position.active = false
 	
 	# Play explosion sound
 	if explosion_sound and not explosion_sound.playing:
