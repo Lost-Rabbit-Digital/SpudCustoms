@@ -11,36 +11,50 @@ var potato_walk_speed = 150
 var potato_run_speed = 200
 
 func _ready():
-	path_node_path = $"../../Gameplay/Paths/SpuddyQueue".get_path()
+	path_node_path = %SpuddyQueue.get_path()
 	path = get_node(path_node_path)
+	
+	# More verbose logging
+	if path:
+		print("SpuddyQueue Path found: ", path.name)
+		print("Path points: ", path.curve.get_point_count())
+		for i in range(path.curve.get_point_count()):
+			print("Point %d: %s" % [i, path.curve.get_point_position(i)])
+	else:
+		push_error("SpuddyQueue Path NOT FOUND!")
+
 	curve = path.curve
 	spawn_point = curve.get_point_position(0)
-	print("Path loaded, spawn point set to: ", spawn_point)
-	# Set max potatoes based on length of curve, leave room for a manual spawn
+	print("Spawn point set to: ", spawn_point)
+	
+	# Set max potatoes based on length of curve
 	max_potatoes = curve.get_point_count() - 1
-		
-	print("Path loaded, spawn point set to: ", spawn_point)
 	print("Max potatoes set to: ", max_potatoes)
 
 func can_add_potato() -> bool:
 	return potatoes.size() < max_potatoes
 
 func spawn_new_potato():
+	print("Attempting to spawn potato. Can add: ", can_add_potato())
 	if can_add_potato():
-		# Use PotatoFactory to create a new potato
 		var potato = PotatoFactory.create_random_potato()
-		add_child(potato)
 		
-		# Set initial position and state
-		potato.position = spawn_point
-		potato.set_state(potato.TaterState.QUEUED)
-		potato.update_appearance()
-		
-		# Add to the queue
-		potatoes.push_front(potato)
-		update_positions()
+		# More detailed logging about potato creation
+		if potato:
+			print("Potato created with info: ", potato.get_potato_info())
+			add_child(potato)
+			
+			potato.position = spawn_point
+			potato.set_state(potato.TaterState.QUEUED)
+			potato.update_appearance()
+			
+			potatoes.push_front(potato)
+			update_positions()
+			print("Potato spawned. Total potatoes: ", potatoes.size())
+		else:
+			push_error("Failed to create potato via PotatoFactory!")
 	else:
-		print("Maximum number of potatoes reached")
+		print("Cannot add more potatoes. Current count: ", potatoes.size())
 
 func add_potato(potato_info: Dictionary):
 	var potato = PotatoPerson.instantiate()

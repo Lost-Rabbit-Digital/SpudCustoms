@@ -805,6 +805,7 @@ z_as_relative = false
 curve = SubResource("Curve2D_xms7a")
 
 [node name="SpuddyQueue" type="Path2D" parent="Gameplay/Paths"]
+unique_name_in_owner = true
 z_index = 7
 z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
