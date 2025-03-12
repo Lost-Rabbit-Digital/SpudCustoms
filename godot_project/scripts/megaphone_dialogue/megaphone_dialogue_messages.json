@@ -1,0 +1,36 @@
+{
+  "queue_messages": {
+	"spud_being_called": [
+	  "Next spud, your destiny awaits.",
+	  "Front of queue, moment of truth approaches.",
+	  "Step forward, chosen one of tuber-kind.",
+	  "Congratulations! Your waiting has been successful.",
+	  "The Great Potato Bureaucracy summons you."
+	],
+	"spud_in_office": [
+	  "Please be patient. Time is an illusion.",
+	  "Waiting builds character. And starch.",
+	  "The queue moves in mysterious ways.",
+	  "Your position has been noted by authorities.",
+	  "Standing in line: the universal constant.",
+	  "No spud is ready until seasoned with waiting.",
+	  "Patience: not the only virtue, but listed."
+	],
+	"warnings": [
+	  "Those against will be peeled with precision.",
+	  "Line-jumpers transferred to Express Processing Department.",
+	  "Queue disruption earns lectures about queues.",
+	  "Insubordination leads to Room With Hot Oil.",
+	  "We don't have to be fair, just organized.",
+	  "The Committee for Spud Compliance sees all."
+	],
+	"misc": [
+	  "Where is everyone?",
+	  "During emergency, continue waiting in order.",
+	  "Read paragraph seven of your waiting agreement?",
+	  "Lost property: found, taxed, then misplaced again.",
+	  "If a spud complains, does it make sound?",
+	  "Light replaced with sign: 'More Tunnel.'"
+	]
+  }
+}
