@@ -291,21 +291,9 @@ func play_random_customs_officer_sound():
 		$SystemManagers/AudioManager/SFXPool.stream = customs_officer_sounds.pick_random()
 		$SystemManagers/AudioManager/SFXPool.play()
 		
-func say_random_customs_officer_dialogue():
-	var customs_officer_dialogue = [
-		preload("res://assets/megaphone/megaphone_dialogue_box_2.png"),
-		preload("res://assets/megaphone/megaphone_dialogue_box_3.png"),
-		preload("res://assets/megaphone/megaphone_dialogue_box_4.png"),
-		preload("res://assets/megaphone/megaphone_dialogue_box_5.png"),
-		preload("res://assets/megaphone/megaphone_dialogue_box_6.png")
-	]
-	$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = true
-	$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.texture = customs_officer_dialogue.pick_random()
-		
 func megaphone_clicked():
 	if is_potato_in_office:
 		play_random_customs_officer_sound()
-		say_random_customs_officer_dialogue()
 		print("Warning: A potato is already in the customs office!")
 		return
 		
