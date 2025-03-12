@@ -110,23 +110,10 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Update stats on potato escape and missile kill
   [ ] - When potato escapes, if it does so mid click (such as clicking on the speaker or a passport), the missile fires at the place you clicked on the screen. Constrain it to the Area2D for targeting potatoes on the left side of the screen, you could simply check cursor status.
   [ ] - When you correctly reject a potato it does not give you the 1,000 points
-  [x] - Confused with the story initially, too many characters going on, understood after a few texts
-  [x] - Copy the stamp system from Papers Please
-  [x] - Ended on first runner
-  [x] - Faces and hair doesn't line up on potatoes
-  [x] - Game begins with a Spud runner and says "Continue Shift"
-  [x] - Make sure the game scene is paused while the story mode is running
-  [x] - Make sure there aren't incorrect starting strike counts
-  [x] - Points are not added when correctly allowing entry to potatoes
-  [x] - Rockets too slow
-  [x] - She took too long to realise there was a timer and immediately failed while reading instructions
+
 ### Law Bugs
-  [ ] - "Change verbiage to 2 and under" on laws, currently says "(under 2 years)"
-  [ ] - "Frozen potatoes require a special permit", change to not allowed because there is not special permit
-  [ ] - "Reject Spuddington potatoes because of visa counterfeiting activity.", there is no visa system, reword "visa" to "document"
   [ ] - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
   [ ] - "Sprouted potatoes need additional verification and must be denied", change to not include verification
-  [ ] - "Young potatoes (under 2 years) need guardian.", there is no guardian system, reword
 ### Score Bugs
   [ ] - Add a loss of 500 points on top of strike if the rejection was incorrect (Use the same code as the border runner system to check for point penalty)
   [ ] - Check if the stamp rejection was correct before triggering the border run system for the scores to be accurate
@@ -148,7 +135,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 ## Steam Minor Update 1.0.2 - WORK IN PROGRESS
 ### To-Do
-  [ ] - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl
+  [ ] - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
   [ ] - Make the laws slide out similar to the stamps
   [ ] - Remove the date and score from the bottom of the screen
   [ ] - Change the color of the missile marker to green/red to indicate if you can fire a missile
@@ -160,21 +147,26 @@ These are our goals, to-do tasks, and completed tasks.
     [ ] - *INTERNAL USE* JSON to store strings instead of hard-coding into images
     [ ] - *INTERNAL USE* Just one background image for the dialogue box
   [ ] - Add Flash Indicator for Megaphone via shader
-  [ ] - Add Version Counter into menus
   [ ] - Display Score for Longer Duration
   [ ] - Add logic to check if game paused or in dialogic before updating cursor to target cursor
 
 ### Currently Doing
   [ ] - Add if check to BorderRunnerSystem.gd to check if user is currently in dialogic timeline
-  [ ] - Add a skip button to dialogic
 
 ### Completed Tasks for 1.0.2
+  - Fixed law wording: "Frozen potatoes require a special permit", change to not allowed because there is not special permit
+  - Fixed law wording: "Young potatoes (under 2 years) need guardian.", there is no guardian system, reword
+  - Fixed law wording: "Reject Spuddington potatoes because of visa counterfeiting activity.", there is no visa system, reword "visa" to "document"
+  - Add Version Counter into main menu
+  - Add a skip button to dialogic
   - Make Missiles Travel Faster and More Consistently
   - Change "Runner Escaped" to Capitals
   - Make the tutorial interactive instead of a text panel with the book
   - *INTERNAL USE* Cleaned up the old git branches from various updates
-
-
+  - Simplified story
+  - Overhauled rocket system
+  - Overhauled interaction system
+  - Overhauled stamping system
 
 # COMPLETED TASKS
 The tasks which have be completed and pushed to VCS.

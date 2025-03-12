@@ -45,7 +45,6 @@ var suspect_panel: Sprite2D
 var suspect_panel_front: Sprite2D
 var suspect: Sprite2D
 
-
 # Stamp system
 const STAMP_ANIMATION_DURATION: float = 0.3  # Duration of the stamp animation in seconds
 const STAMP_MOVE_DISTANCE: int = 36  # How far the stamp moves down
@@ -73,7 +72,6 @@ var combo_count = 0
 var combo_timer = 0.0
 var combo_timeout = 15.0  # Seconds before combo resets
 var max_combo_multiplier = 3.0
-
 
 # Drag and drop manager 
 @onready var drag_and_drop_manager = $SystemManagers/DragAndDropManager
