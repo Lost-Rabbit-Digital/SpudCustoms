@@ -22,9 +22,9 @@ var LAW_CHECKS = {
 		"check": func(potato_info): return potato_info.condition == "Dehydrated",
 		"message": func(potato_info): return "Dehydrated potatoes are not allowed"
 	},
-	"Frozen potatoes require a special permit.": {
+	"Frozen potatoes are banned due to low temperatures.": {
 		"check": func(potato_info): return potato_info.condition == "Frozen",
-		"message": func(potato_info): return "Frozen potatoes are not allowed without permit"
+		"message": func(potato_info): return "Frozen potatoes are not allowed without thawing"
 	},
 
 	# Age-based rules
@@ -36,9 +36,9 @@ var LAW_CHECKS = {
 		"check": func(potato_info): return calculate_age(potato_info.date_of_birth) <= 3,
 		"message": func(potato_info): return "Potato is %d years old (must be over 3)" % calculate_age(potato_info.date_of_birth)
 	},
-	"Young potatoes (under 2 years) need guardian.": {
+	"Potatoes under 2 years old are not allowed.": {
 		"check": func(potato_info): return calculate_age(potato_info.date_of_birth) <= 2,
-		"message": func(potato_info): return "Potato under 2 years old needs guardian"
+		"message": func(potato_info): return "Potatoes under 2 years old are banned"
 	},
 
 	# Gender-based rules
@@ -68,7 +68,7 @@ var LAW_CHECKS = {
 		"check": func(potato_info): return potato_info.country_of_issue == "North Yamnea",
 		"message": func(potato_info): return "North Yamnea potatoes are restricted (radioactive)"
 	},
-	"Reject Spuddington potatoes because of visa counterfeiting activity.": {
+	"Reject Spuddington potatoes because of counterfeiting activity.": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Spuddington",
 		"message": func(potato_info): return "Spuddington potatoes restricted (counterfeiting)"
 	},

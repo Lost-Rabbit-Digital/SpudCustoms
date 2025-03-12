@@ -518,7 +518,8 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="LawReceiptController" parent="Gameplay/InteractiveElements" instance=ExtResource("27_ccap0")]
+[node name="LawReceiptController" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node") instance=ExtResource("27_ccap0")]
+main_node = NodePath("../../..")
 
 [node name="StampBarController" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("stamp_system") instance=ExtResource("25_osm16")]
 stamp_system = NodePath("../StampCrossbarSystem")
