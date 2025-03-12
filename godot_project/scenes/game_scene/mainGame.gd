@@ -318,25 +318,32 @@ func megaphone_clicked():
 		current_potato_info = potato.get_potato_info()
 		
 		# Move potato to the office
-		potato.set_state(PotatoPerson.TaterState.IN_OFFICE)
+		potato.set_state(potato.TaterState.IN_OFFICE)
 		move_potato_to_office(potato)
 	else:
 		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = true
 		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.texture = preload("res://assets/megaphone/megaphone_dialogue_box_7.png")
 		print("No potato to process. :(")
-
+		
 func move_potato_to_office(potato: PotatoPerson):
 	print("Moving our spuddy to the customs office")
 	potato.set_state(potato.TaterState.IN_OFFICE)
-	# Attach potato to entry path
-	potato.attach_to_path(enter_office_path)
 	
-	# Connect to path completion
-	potato.path_completed.connect(func():
-		# Clean up potato and show mugshot
-		potato.queue_free()
-		animate_mugshot_and_passport()
-	)
+	# Attach potato to entry path
+	if enter_office_path:
+		potato.attach_to_path(enter_office_path)
+		
+		# Connect to path completion
+		if !potato.is_connected("path_completed", Callable(self, "_on_potato_path_completed")):
+			potato.path_completed.connect(_on_potato_path_completed.bind(potato))
+	else:
+		push_error("Enter office path not found!")
+
+# Add this new function to handle path completion
+func _on_potato_path_completed(potato: PotatoPerson):
+	# Clean up potato and show mugshot
+	potato.queue_free()
+	animate_mugshot_and_passport()
 	
 func animate_mugshot_and_passport():
 	print("Animating mugshot and passport")
@@ -573,6 +580,7 @@ func process_decision(allowed):
 	for child in open_passport.get_children():
 		if child is Sprite2D and ("approved" in child.texture.resource_path or "denied" in child.texture.resource_path):
 			child.queue_free()
+			
    # Get validation result
 	var validation = LawValidator.check_violations(current_potato_info, current_rules)
 	var correct_decision = validation.is_valid
@@ -667,6 +675,7 @@ func _input(event: InputEvent):
 	# Handle megaphone click
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		var mouse_pos = get_global_mouse_position()
+		print("Mouse Click Position: ", mouse_pos)
 		if megaphone.get_rect().has_point(megaphone.to_local(mouse_pos)):
 			megaphone_clicked()
 			return
@@ -754,9 +763,9 @@ func move_potato_along_path(approval_status):
 	if path:
 		# Set state based on approval status
 		if approval_status == "approved":
-			potato.set_state(PotatoPerson.TaterState.APPROVED)
+			potato.set_state(potato.TaterState.APPROVED)
 		else:
-			potato.set_state(PotatoPerson.TaterState.REJECTED)
+			potato.set_state(potato.TaterState.REJECTED)
 			
 			# Check for border runner chance
 			if approval_status == "rejected" and randf() < 0.15:

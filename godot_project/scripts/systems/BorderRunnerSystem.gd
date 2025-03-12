@@ -173,7 +173,6 @@ func _ready():
 	var explosion_vframes = 1
 	
 	# Add animation frames for explosion
-	explosion_frames.add_animation("default")
 	for i in range(explosion_hframes):
 		var region = Rect2(i * explosion_texture.get_width() / explosion_hframes, 0, 
 						 explosion_texture.get_width() / explosion_hframes, 
@@ -184,14 +183,13 @@ func _ready():
 		explosion_frames.add_frame("default", frame)
 	
 	# Set animation speed for explosion
-	explosion_frames.set_animation_speed("default", 4)  # Frames per second
+	explosion_frames.set_animation_speed("default", 12)  # Frames per second
 	
 	# Load the frames for missile
 	var missile_texture = preload("res://assets/effects/rocket_small_spritesheet.png")
 	var missile_hframes = 2  # Adjust based on the actual spritesheet
 	
-	# Add animation frames for missile
-	missile_frames.add_animation("default")
+		# Add animation frames for missile
 	for i in range(missile_hframes):
 		var region = Rect2(i * missile_texture.get_width() / missile_hframes, 0, 
 						 missile_texture.get_width() / missile_hframes, 
@@ -209,7 +207,6 @@ func _ready():
 	var smoke_hframes = 8  # Adjust based on actual spritesheet
 	
 	# Add animation frames for smoke
-	smoke_frames.add_animation("default")
 	for i in range(smoke_hframes):
 		var region = Rect2(i * smoke_texture.get_width() / smoke_hframes, 0, 
 						 smoke_texture.get_width() / smoke_hframes, 
@@ -273,7 +270,6 @@ func _process(delta):
 		
 	if get_tree().paused:
 		return
-
 	
 	if not queue_manager:
 		print("No queue manager found!")
@@ -316,7 +312,7 @@ func update_missiles(delta):
 		
 		# Calculate direction and move missile
 		var direction = (missile.target - missile.position).normalized()
-		var distance_to_move = missile_speed * delta  # Use actual delta instead of fixed value
+		var distance_to_move = missile_speed * delta
 		missile.position += direction * distance_to_move
 		
 		# Update sprite position - this is critical!
@@ -503,40 +499,38 @@ func _unhandled_input(event):
 					crater_system.add_crater(local_pos)
 
 func launch_missile(target_pos):
+	print("Launching missile. Max missiles: %d, Current missiles: %d" % [max_missiles, active_missiles.size()])
+	
 	if active_missiles.size() >= max_missiles and not unlimited_missiles:
-		print("Maximum number of missiles reached")
+		print("Maximum number of missiles reached. Cannot launch.")
 		return
 		
 	print("Launching missile at: ", target_pos)
 	
-	# Create a new missile object
+	# More detailed missile creation logging
 	var missile = Missile.new(missile_frames)
+	if not missile.sprite:
+		push_error("Failed to create missile sprite!")
+		return
+	
 	add_child(missile.sprite)
 	
-	# Start from bottom center of screen
 	var viewport_rect = get_viewport_rect()
+	print("Viewport rect: ", viewport_rect)
+	
+	# More explicit missile start position logging
 	missile.position = Vector2(viewport_rect.size.x / 2, viewport_rect.size.y - 100)
-	missile.position = Vector2(((viewport_rect.size.x / 2) - 800), 0)
 	missile.target = target_pos
 	
-	# Set up missile sprite
+	print("Missile start position: ", missile.position)
+	print("Missile target position: ", missile.target)
+	
 	missile.sprite.global_position = missile.position
+	missile.sprite.rotation = (target_pos - missile.position).normalized().angle() + PI/2
 	
-	# Point missile toward target
-	var direction = (target_pos - missile.position).normalized()
-	missile.sprite.rotation = direction.angle() + PI/2
-	
-	# Update shift stats
-	shift_stats.missiles_fired += 1
-	
-	# Play activation and launch sound
-	if missile_sound and not missile_sound.playing:
-		missile_sound.play()
-	
-	# Add the missile to the active missiles list
 	active_missiles.append(missile)
 	
-	print("Missile launched from: ", missile.position)
+	print("Missile launched. Active missiles: ", active_missiles.size())
 
 func trigger_explosion(missile_or_position):
 	print("Triggering explosion")
