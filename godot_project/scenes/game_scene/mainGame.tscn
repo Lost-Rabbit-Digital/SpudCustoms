@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://bjx1qjoxul45k"]
+[gd_scene load_steps=68 format=3 uid="uid://bjx1qjoxul45k"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://scenes/game_scene/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://scripts/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
@@ -20,7 +20,6 @@
 [ext_resource type="PackedScene" uid="uid://bnbp4h8nco0v2" path="res://scripts/systems/NarrativeManager.tscn" id="13_c85wy"]
 [ext_resource type="AudioStream" uid="uid://bb8lmtt8f5yg4" path="res://assets/audio/ambient/wind_inside_1.wav" id="13_qvpbt"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="14_ynnf6"]
-[ext_resource type="Texture2D" uid="uid://djnmki6kpg05c" path="res://assets/megaphone/megaphone_dialogue_box_1.png" id="15_xmuiq"]
 [ext_resource type="Script" uid="uid://qyhogd6acnnh" path="res://scripts/systems/drag_and_drop/drag_and_drop_manager.gd" id="20_5djk1"]
 [ext_resource type="Texture2D" uid="uid://b2icltv7xkk6j" path="res://assets/user_interface/CustomsDesk.png" id="22_or1f4"]
 [ext_resource type="PackedScene" uid="uid://cejqnrw4oo4r2" path="res://assets/user_interface/suspect_panel/suspect_panel.tscn" id="22_qfxfi"]
@@ -36,9 +35,13 @@
 [ext_resource type="Texture2D" uid="uid://bxn3434177kfd" path="res://assets/documents/laws_receipt.png" id="31_rtxd3"]
 [ext_resource type="Script" uid="uid://dfofd8lp0igu2" path="res://scripts/systems/law_receipt.gd" id="32_k1orm"]
 [ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://assets/styles/dos_theme.tres" id="33_ncgko"]
+[ext_resource type="PackedScene" uid="uid://b0go0ri8l0yb7" path="res://scripts/megaphone_dialogue/MegaphoneDialogue.tscn" id="36_ccap0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sihlh"]
 size = Vector2(756.5, 214)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a5s7a"]
+load_path = "res://.godot/imported/megaphone_dialogue_box_1.png-111542f548f58df064fd94a28e6d995f.ctex"
 
 [sub_resource type="Curve2D" id="Curve2D_uenca"]
 _data = {
@@ -492,7 +495,7 @@ texture = ExtResource("14_ynnf6")
 visible = false
 position = Vector2(33.8086, -22.8106)
 scale = Vector2(0.349, 0.349)
-texture = ExtResource("15_xmuiq")
+texture = SubResource("CompressedTexture2D_a5s7a")
 
 [node name="SuspectPanel" parent="Gameplay" instance=ExtResource("22_qfxfi")]
 
@@ -806,6 +809,9 @@ curve = SubResource("Curve2D_xms7a")
 z_index = 7
 z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
+
+[node name="MegaphoneDialogueBox" parent="." instance=ExtResource("36_ccap0")]
+position = Vector2(1021, 93)
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
