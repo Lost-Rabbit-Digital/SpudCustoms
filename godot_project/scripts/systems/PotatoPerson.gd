@@ -6,7 +6,7 @@ var potato_info: Dictionary = {}
 
 # Preload all the textures
 var textures = {
-	"Russet Burbank": preload("res://assets/potatoes/bodies/RussetBurbank_SmallSilhouette.png"),
+	"Russet Burbank": preload("res://assets/potatoes/RussetBurbank_SmallSilhouette.png"),
 	"Yukon Gold": preload("res://assets/potatoes/bodies/yukon_gold_body.png"),
 	"Sweet Potato": preload("res://assets/potatoes/bodies/sweet_potato_body.png"),
 	"Purple Majesty": preload("res://assets/potatoes/bodies/purple_majesty_body.png"),
@@ -23,13 +23,16 @@ func update_potato(new_potato_info: Dictionary):
 	potato_info = new_potato_info
 	update_appearance()
 
-# WARNING: GOING TO REPLACE THIS WHEN DOING CHARACTER GENERATION
+# TODO: REPLACE THIS WHEN DOING CHARACTER GENERATION
 # Function to update the potato's appearance
 func update_appearance():
 	if potato_info.has("type") and potato_info.type in textures:
 		pass
-	else:
+	else:			
 		print("Warning: Unknown or missing potato type: ", potato_info.get("type", "N/A"))
+		print("Warning: Setting Potato Type: ", potato_info.get("type", "N/A"))
+		potato_info["type"] = "Russet Burbank"
+		self.update_potato(potato_info)
 
 # You can call this function to get the current potato info
 func get_potato_info() -> Dictionary:

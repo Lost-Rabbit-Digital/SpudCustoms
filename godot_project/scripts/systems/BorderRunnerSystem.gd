@@ -50,7 +50,7 @@ signal game_over_triggered
 ## Maximum number of simultaneous missiles
 @export var max_missiles: int = 3
 ## Cooldown time between missile launches (seconds)
-@export var missile_cooldown: float = 1.0
+@export var missile_cooldown: float = 0.5
 ## Speed at which missiles travel toward their target
 @export var missile_speed: float = 1200
 ## Initial height from which missiles are launched
@@ -122,7 +122,7 @@ class Missile:
 
 # Runner class to track multiple border runners
 class Runner:
-	var potato: Node2D
+	var potato: Sprite2D
 	var path_follow: PathFollow2D
 	var has_escaped: bool = false
 	
@@ -134,7 +134,12 @@ class Runner:
 		if not potato or not path_follow or has_escaped:
 			return false
 		
+		var old_ratio = path_follow.progress_ratio
 		path_follow.progress_ratio += delta * speed
+		
+		# Debug output
+		print("Runner progress: ", path_follow.progress_ratio)
+		print("Runner position: ", potato.global_position)
 		
 		# Check if runner reached the end
 		if path_follow.progress_ratio >= 0.99:
@@ -240,7 +245,6 @@ func _process(delta):
 
 # Update all active missiles
 func update_missiles(delta):
-	var fixed_delta = 1.0/60.0
 	var i = active_missiles.size() - 1
 	
 	while i >= 0:
@@ -252,11 +256,11 @@ func update_missiles(delta):
 		
 		# Calculate direction and move missile
 		var direction = (missile.target - missile.position).normalized()
-		var distance_to_move = missile_speed * fixed_delta
+		var distance_to_move = missile_speed * delta  # Use actual delta instead of fixed value
 		missile.position += direction * distance_to_move
 		
-		# Update sprite position and rotation
-		missile.sprite.position = missile.position
+		# Update sprite position - this is critical!
+		missile.sprite.global_position = missile.position  # Use global_position instead
 		missile.sprite.rotation = direction.angle() + PI/2
 		
 		# Update particle rotation if it exists
@@ -265,10 +269,32 @@ func update_missiles(delta):
 		
 		# Check if missile reached target
 		var distance_squared = missile.position.distance_squared_to(missile.target)
-		if distance_squared < 25: # 5 units squared
+		if distance_squared < 100:  # Slightly larger threshold (10 units squared)
 			trigger_explosion(missile)
 			active_missiles.remove_at(i)
+			i -= 1
+			continue
 		
+		# Check if missile has gone significantly past its target
+		# This handles cases where missiles might "miss" their target
+		var start_to_target = missile.target - missile.sprite.global_position
+		var start_to_current = missile.position - missile.sprite.global_position
+		
+		# If the missile has moved 20% further than the target distance, it's gone too far
+		if start_to_current.length() > start_to_target.length() * 1.2:
+			trigger_explosion(missile)
+			active_missiles.remove_at(i)
+			i -= 1
+			continue
+		
+		# Add a boundary check
+		var viewport_rect = get_viewport_rect().grow(100)  # Add some margin
+		if !viewport_rect.has_point(missile.position):
+			missile.sprite.queue_free()
+			active_missiles.remove_at(i)
+			i -= 1
+			continue
+			
 		i -= 1
 
 # Update all active runners
@@ -300,10 +326,17 @@ func start_runner(potato):
 		print("BorderRunnerSystem disabled or in dialogue, no runners allowed.")
 		return
 		
+	# Debug output
+	print("Starting runner with potato: ", potato)
+	var backup_texture: Texture2D = load("res://assets/potatoes/RussetBurbank_SmallSilhouette.png")
+	potato.texture = backup_texture
 	# Ensure the potato is visible
 	potato.visible = true
 	potato.modulate.a = 1.0
-	potato.z_index = 10  # Ensure it's above background elements
+	potato.z_index = 100  # Ensure it's above background elements
+	print("Potato visibility set to: ", potato.visible)
+	print("Potato modulate alpha: ", potato.modulate.a)
+	print("Potato z_index: ", potato.z_index)
 	
 	# Play alarm and show alert
 	if alarm_sound and not alarm_sound.playing:
@@ -315,6 +348,9 @@ func start_runner(potato):
 	if not paths_node:
 		push_error("Runner paths node not found!")
 		return
+
+	print("Runner paths node found: ", paths_node.name)
+	print("Available paths: ", paths_node.get_children().size())
 		
 	var available_paths = []
 	
@@ -330,6 +366,9 @@ func start_runner(potato):
 	# Randomly select a path
 	var path = available_paths[randi() % available_paths.size()]
 	print("Selected runner path: ", path.name)
+	print("Selected runner path: ", path.name)
+	print("Path visible: ", path.visible)
+	print("Path global position: ", path.global_position)
 		
 	var path_follow = PathFollow2D.new()
 	path_follow.rotates = false
@@ -341,6 +380,11 @@ func start_runner(potato):
 		potato.get_parent().remove_child(potato)
 	path_follow.add_child(potato)
 	potato.position = Vector2.ZERO
+	
+	# Debug output
+	print("Path follow added to path: ", path.name)
+	print("Potato added to path_follow")
+	print("Potato global position: ", potato.global_position)
 	
 	# Create a new runner and add it to the active runners list
 	var runner = Runner.new(potato, path_follow)
@@ -474,32 +518,24 @@ func launch_missile(target_pos):
 	new_missile_sprite.texture = missile_sprite.texture
 	new_missile_sprite.visible = true
 	new_missile_sprite.z_index = 15
-	add_child(new_missile_sprite)
 	new_missile_sprite.scale = Vector2(0.06, 0.06)  # Much smaller scale
-	add_child(new_missile_sprite)
+	add_child(new_missile_sprite)  # Add only once
 	
 	# Create a new particle effect for this missile
 	var new_particles = null
 	if smoke_particles:
-		new_particles = CPUParticles2D.new()
-		# Copy individual properties
-		new_particles.amount = smoke_particles.amount
-		new_particles.lifetime = smoke_particles.lifetime
-		new_particles.one_shot = smoke_particles.one_shot
-		new_particles.explosiveness = smoke_particles.explosiveness
-		new_particles.direction = smoke_particles.direction
-		new_particles.spread = smoke_particles.spread
-		new_particles.gravity = smoke_particles.gravity
-		new_particles.initial_velocity_min = smoke_particles.initial_velocity_min
-		new_particles.initial_velocity_max = smoke_particles.initial_velocity_max
+		new_particles = smoke_particles.duplicate()
+		new_missile_sprite.add_child(new_particles)
+		new_particles.emitting = true
 	
 	# Create the missile object
 	var missile = Missile.new(new_missile_sprite.texture, new_particles)
-	missile.sprite = new_missile_sprite
+	missile.sprite = new_missile_sprite  # Assign the actual sprite, not just texture
 	
-	# Start from bottom center of screen
+	# Start from bottom center of screen (use values relative to screen size)
 	var viewport_rect = get_viewport_rect()
-	missile.position = Vector2((viewport_rect.size.x / 2) - 800, viewport_rect.size.y - 900)
+	# Position missile at left center of screen, just off-screen
+	missile.position = Vector2(-100, viewport_rect.size.y / 2 - 200)
 	missile.target = target_pos
 	
 	# Set up missile sprite
@@ -523,8 +559,10 @@ func launch_missile(target_pos):
 	
 	# Add the missile to the active missiles list
 	active_missiles.append(missile)
-	
-	print("Missile launched from: ", missile.position)
+	print("Viewport size: ", get_viewport_rect().size)
+	print("Missile starting position: ", missile.position)
+	print("Missile sprite visible: ", missile.sprite.visible)
+	print("Missile sprite scale: ", missile.sprite.scale)
 
 func trigger_explosion(missile):
 	print("Triggering explosion")

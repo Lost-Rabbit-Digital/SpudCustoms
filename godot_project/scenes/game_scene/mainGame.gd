@@ -502,6 +502,7 @@ func generate_potato_info():
 		"expiration_date": expiration_date,
 		"character_data": character_data
 	}
+	
 func update_potato_info_display():
 	print("Printing current potato info")
 	print(current_potato_info)
