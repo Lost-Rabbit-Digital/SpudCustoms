@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://pldlebwc0nqd"]
+
+[ext_resource type="Script" uid="uid://d0b71yqrl311j" path="res://scripts/systems/PotatoFactory.gd" id="1_g1qj7"]
+
+[node name="PotatoFactory" type="Node"]
+script = ExtResource("1_g1qj7")

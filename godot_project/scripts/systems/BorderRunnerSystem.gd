@@ -79,8 +79,8 @@ signal game_over_triggered
 @export var gib_gravity: float = 300
 ## Rotation speed applied to giblets while in motion
 @export var gib_spin_speed: float = 13
-
 # Audio/Visual node references
+
 @onready var alarm_sound = $AlarmSound
 @onready var explosion_sound = $ExplosionSound
 @onready var missile_sound = $MissileSound
@@ -89,7 +89,9 @@ signal game_over_triggered
 @onready var smoke_particles = $MissileSprite/CPUParticles2D
 @onready var crater_system = $CraterSystem
 @onready var shift_stats = ShiftStats.new()
-
+var missile_frames: SpriteFrames
+var smoke_frames: SpriteFrames 
+var explosion_frames: SpriteFrames
 # Internal state tracking
 var is_enabled = true  # Track if system is enabled
 var is_in_dialogic = false # Track if game is in dialogue mode
@@ -101,24 +103,22 @@ var missile_cooldown_timer: float = 0.0
 var gib_textures: Array = []
 var difficulty_level
 
-# Missile class to track multiple missiles
 class Missile:
-	var sprite: Sprite2D
-	var particles: CPUParticles2D
+	var sprite: AnimatedSprite2D  # Change from Sprite2D to AnimatedSprite2D
+	var smoke_trail: Array[AnimatedSprite2D] = []  # Array to store smoke trail sprites
 	var position: Vector2
 	var target: Vector2
 	var rotation: float
 	var active: bool = true
-
-	func _init(sprite_texture, particle_scene):
-		sprite = Sprite2D.new()
-		sprite.texture = sprite_texture
+	var time_elapsed: float = 0.0
+	var smoke_spawn_timer: float = 0.0
+	
+	func _init(sprite_frames):
+		sprite = AnimatedSprite2D.new()
+		sprite.sprite_frames = sprite_frames
 		sprite.visible = true
 		sprite.z_index = 15
-		
-		if particle_scene:
-			particles = particle_scene.duplicate()
-			sprite.add_child(particles)
+		sprite.play("default")  # Start animation
 
 # Runner class to track multiple border runners
 class Runner:
@@ -159,13 +159,75 @@ class Runner:
 			potato.queue_free()
 
 func _ready():
-	# Create missile sprite if it doesn't exist
-	if not missile_sprite:
-		missile_sprite = Sprite2D.new()
-		missile_sprite.texture = preload("res://assets/missiles/missile_sprite.png")
-		add_child(missile_sprite)
-	missile_sprite.visible = false
-	missile_sprite.z_index = 15
+	var missile_frames = SpriteFrames.new()
+	var smoke_frames = SpriteFrames.new()
+	var explosion_frames = SpriteFrames.new()
+	
+	# Load the frames for missile
+	var explosion_texture = preload("res://assets/effects/explosion_spritesheet.png")
+	var explosion_hframes = 13 # Adjust based on the actual spritesheet
+	var explosion_vframes = 1
+	
+	# Set animation speed
+	explosion_frames.set_animation_speed("default", 4)  # Frames per second
+	
+		
+	# Add animation frames for missile
+	explosion_frames.add_animation("default")
+	for i in range(explosion_hframes):
+		var region = Rect2(i * explosion_texture.get_width() / explosion_hframes, 0, 
+						 explosion_texture.get_width() / explosion_hframes, 
+						 explosion_texture.get_height())
+		var frame = AtlasTexture.new()
+		frame.atlas = explosion_texture
+		frame.region = region
+		missile_frames.add_frame("default", frame)
+	
+	# Set animation speed
+	missile_frames.set_animation_speed("default", 4)  # Frames per second
+	
+	# Load the frames for missile
+	var missile_texture = preload("res://assets/effects/rocket_small_spritesheet.png")
+	var missile_hframes = 2  # Adjust based on the actual spritesheet
+	var missile_vframes = 1
+	
+	# Add animation frames for missile
+	missile_frames.add_animation("default")
+	for i in range(missile_hframes):
+		var region = Rect2(i * missile_texture.get_width() / missile_hframes, 0, 
+						 missile_texture.get_width() / missile_hframes, 
+						 missile_texture.get_height())
+		var frame = AtlasTexture.new()
+		frame.atlas = missile_texture
+		frame.region = region
+		missile_frames.add_frame("default", frame)
+	
+	# Set animation speed
+	missile_frames.set_animation_speed("default", 4)  # Frames per second
+	
+	# Do the same for smoke frames
+	var smoke_texture = preload("res://assets/effects/smoke_spritesheet.png")
+	var smoke_hframes = 8  # Adjust based on actual spritesheet
+	var smoke_vframes = 1
+	
+	# Add animation frames for smoke
+	smoke_frames.add_animation("default")
+	for i in range(smoke_hframes):
+		var region = Rect2(i * smoke_texture.get_width() / smoke_hframes, 0, 
+						 smoke_texture.get_width() / smoke_hframes, 
+						 smoke_texture.get_height())
+		var frame = AtlasTexture.new()
+		frame.atlas = smoke_texture
+		frame.region = region
+		smoke_frames.add_frame("default", frame)
+	
+	# Set animation speed
+	smoke_frames.set_animation_speed("default", 8)  # Frames per second
+	
+	# Store frames for later use
+	self.missile_frames = missile_frames
+	self.smoke_frames = smoke_frames
+	
 	
 	if missile_collision_shape == null:
 		missile_collision_shape = $Area2D/CollisionShape2D
@@ -263,10 +325,6 @@ func update_missiles(delta):
 		missile.sprite.global_position = missile.position  # Use global_position instead
 		missile.sprite.rotation = direction.angle() + PI/2
 		
-		# Update particle rotation if it exists
-		if missile.particles:
-			missile.particles.rotation = missile.sprite.rotation - PI/2
-		
 		# Check if missile reached target
 		var distance_squared = missile.position.distance_squared_to(missile.target)
 		if distance_squared < 100:  # Slightly larger threshold (10 units squared)
@@ -321,82 +379,11 @@ func attempt_spawn_runner():
 			start_runner(potato)
 			time_since_last_run = 0.0
 
-func start_runner(potato):
+# In BorderRunnerSystem.gd
+func start_runner(potato: PotatoPerson):
 	if not is_enabled or is_in_dialogic:
 		print("BorderRunnerSystem disabled or in dialogue, no runners allowed.")
 		return
-		
-	# Debug output
-	print("Starting runner with potato: ", potato)
-	var backup_texture: Texture2D = load("res://assets/potatoes/RussetBurbank_SmallSilhouette.png")
-	potato.texture = backup_texture
-	# Ensure the potato is visible
-	potato.visible = true
-	potato.modulate.a = 1.0
-	potato.z_index = 100  # Ensure it's above background elements
-	print("Potato visibility set to: ", potato.visible)
-	print("Potato modulate alpha: ", potato.modulate.a)
-	print("Potato z_index: ", potato.z_index)
-	
-	# Play alarm and show alert
-	if alarm_sound and not alarm_sound.playing:
-		alarm_sound.play()
-	Global.display_red_alert(alert_label, alert_timer, "BORDER RUNNER DETECTED!\nClick to launch missile!")
-	
-	# Get all available runner paths
-	var paths_node = get_parent().get_node("Gameplay/Paths/RunnerPaths")
-	if not paths_node:
-		push_error("Runner paths node not found!")
-		return
-
-	print("Runner paths node found: ", paths_node.name)
-	print("Available paths: ", paths_node.get_children().size())
-		
-	var available_paths = []
-	
-	# Collect all valid runner paths
-	for child in paths_node.get_children():
-		if child.name.begins_with("RunnerPath"):
-			available_paths.append(child)
-	
-	if available_paths.is_empty():
-		push_error("No runner paths found!")
-		return
-		
-	# Randomly select a path
-	var path = available_paths[randi() % available_paths.size()]
-	print("Selected runner path: ", path.name)
-	print("Selected runner path: ", path.name)
-	print("Path visible: ", path.visible)
-	print("Path global position: ", path.global_position)
-		
-	var path_follow = PathFollow2D.new()
-	path_follow.rotates = false
-	path.add_child(path_follow)
-	path_follow.progress_ratio = 0.0
-	
-	# Add the potato to the path_follow
-	if potato.get_parent():
-		potato.get_parent().remove_child(potato)
-	path_follow.add_child(potato)
-	potato.position = Vector2.ZERO
-	
-	# Debug output
-	print("Path follow added to path: ", path.name)
-	print("Potato added to path_follow")
-	print("Potato global position: ", potato.global_position)
-	
-	# Create a new runner and add it to the active runners list
-	var runner = Runner.new(potato, path_follow)
-	active_runners.append(runner)
-	
-	print("Runner setup complete")
-
-func force_start_runner(potato):
-	if not is_enabled or is_in_dialogic:
-		return
-		
-	print("Force starting runner with rejected potato")
 		
 	# Ensure the potato is visible
 	potato.visible = true
@@ -429,24 +416,35 @@ func force_start_runner(potato):
 	var path = available_paths[randi() % available_paths.size()]
 	print("Selected runner path: ", path.name)
 	
-	var path_follow = PathFollow2D.new()
-	path_follow.rotates = false
-	path.add_child(path_follow)
-	path_follow.progress_ratio = 0.0
+	# Attach potato to the path and set its state
+	potato.attach_to_path(path)
+	potato.set_state(potato.TaterState.RUNNING)
 	
-	# Add the potato to the path_follow
-	if potato.get_parent():
-		potato.get_parent().remove_child(potato)
-	path_follow.add_child(potato)
-	potato.position = Vector2.ZERO
+	# Connect to path completion signal
+	potato.path_completed.connect(_on_runner_completed.bind(potato))
 	
-	# Create a new runner and add it to the active runners list
-	var runner = Runner.new(potato, path_follow)
-	active_runners.append(runner)
+	# Connect to destroyed signal
+	potato.destroyed.connect(_on_runner_destroyed)
 	
-	print("Forced runner setup complete")
+	# Add to active runners list
+	active_runners.append(potato)
 
-func handle_runner_escape(runner):
+func _on_runner_completed(potato: PotatoPerson):
+	# Runner escaped
+	handle_runner_escape(potato)
+	
+	# Remove from active runners list
+	var index = active_runners.find(potato)
+	if index >= 0:
+		active_runners.remove_at(index)
+
+func _on_runner_destroyed(position: Vector2):
+	# Create explosion effects at the position
+	spawn_gibs(position)
+	# Maybe trigger sound effects or other visual effects
+	trigger_explosion(position)
+
+func handle_runner_escape(runner: PotatoPerson):
 	print("Runner has escaped!")
 	# Reset the runner streak
 	runner_streak = 0 
@@ -481,7 +479,7 @@ func handle_runner_escape(runner):
 	
 	if strike_label:
 		strike_label.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
-
+	
 func _input(event):
 	if not is_enabled or is_in_dialogic:
 		return
@@ -513,36 +511,20 @@ func launch_missile(target_pos):
 		
 	print("Launching missile at: ", target_pos)
 	
-	# Create a new missile sprite
-	var new_missile_sprite = Sprite2D.new()
-	new_missile_sprite.texture = missile_sprite.texture
-	new_missile_sprite.visible = true
-	new_missile_sprite.z_index = 15
-	new_missile_sprite.scale = Vector2(0.06, 0.06)  # Much smaller scale
-	add_child(new_missile_sprite)  # Add only once
+	# Create a new missile object
+	var missile = Missile.new(missile_frames)
+	add_child(missile.sprite)
 	
-	# Create a new particle effect for this missile
-	var new_particles = null
-	if smoke_particles:
-		new_particles = smoke_particles.duplicate()
-		new_missile_sprite.add_child(new_particles)
-		new_particles.emitting = true
-	
-	# Create the missile object
-	var missile = Missile.new(new_missile_sprite.texture, new_particles)
-	missile.sprite = new_missile_sprite  # Assign the actual sprite, not just texture
-	
-	# Start from bottom center of screen (use values relative to screen size)
+	# Start from bottom center of screen
 	var viewport_rect = get_viewport_rect()
-	# Position missile at left center of screen, just off-screen
-	missile.position = Vector2(-100, viewport_rect.size.y / 2 - 200)
+	missile.position = Vector2(viewport_rect.size.x / 2, viewport_rect.size.y - 100)
+	missile.position = Vector2(((viewport_rect.size.x / 2) - 800), 0)
 	missile.target = target_pos
 	
 	# Set up missile sprite
-	missile.sprite.position = missile.position
-	missile.sprite.modulate.a = 1.0
+	missile.sprite.global_position = missile.position
 	
-	# Point missile toward target - add PI/2 to rotate 90 degrees since missile sprite points up
+	# Point missile toward target
 	var direction = (target_pos - missile.position).normalized()
 	missile.sprite.rotation = direction.angle() + PI/2
 	
@@ -553,20 +535,14 @@ func launch_missile(target_pos):
 	if missile_sound and not missile_sound.playing:
 		missile_sound.play()
 	
-	# Start particle emission and position at missile
-	if missile.particles:
-		missile.particles.rotation = missile.sprite.rotation - PI/2
-	
 	# Add the missile to the active missiles list
 	active_missiles.append(missile)
-	print("Viewport size: ", get_viewport_rect().size)
-	print("Missile starting position: ", missile.position)
-	print("Missile sprite visible: ", missile.sprite.visible)
-	print("Missile sprite scale: ", missile.sprite.scale)
+	
+	print("Missile launched from: ", missile.position)
+
 
 func trigger_explosion(missile):
 	print("Triggering explosion")
-	var explosion_active = true
 	var explosion_position = missile.position
 	
 	# Trigger screen shake
@@ -574,18 +550,25 @@ func trigger_explosion(missile):
 	if main_game.has_method("shake_screen"):
 		main_game.shake_screen()
 	
-	# Setup explosion VFX
-	explosion_vfx.position = explosion_position
-	explosion_vfx.visible = true
-	explosion_vfx.start_explosion()
+	# Create explosion animation
+	var explosion = AnimatedSprite2D.new()
+	explosion.sprite_frames = explosion_frames  # You'll need to set this up similarly to missile/smoke
+	explosion.global_position = explosion_position
+	explosion.scale = Vector2(explosion_size / 32.0, explosion_size / 32.0)  # Scale to desired size
+	explosion.z_index = 16  # Above missiles
+	explosion.play("default")
+	
+	# Remove explosion when animation completes
+	explosion.animation_finished.connect(func(): explosion.queue_free())
+	add_child(explosion)
 	
 	# Add crater at explosion position
 	if crater_system:
 		var local_pos = crater_system.to_local(explosion_position)
 		crater_system.add_crater(local_pos, crater_size_multiplier)
 	
-	# Hide the missile sprite
-	missile.sprite.visible = false
+	# Clean up missile but leave smoke trail to fade out
+	missile.sprite.queue_free()
 	missile.active = false
 	
 	# Play explosion sound
@@ -601,13 +584,17 @@ func check_runner_hits(explosion_pos):
 	
 	while i >= 0:
 		var runner = active_runners[i]
-		var distance = runner.get_position().distance_to(explosion_pos)
+		var distance = runner.global_position.distance_to(explosion_pos)
 		
 		if distance < explosion_size:
 			# We hit this runner!
 			hit_any = true
 			handle_successful_hit(runner, explosion_pos)
-			runner.cleanup()
+			
+			# Apply damage to the runner which will trigger the destroyed signal
+			runner.apply_damage()
+			
+			# Remove from our list - don't need cleanup() anymore
 			active_runners.remove_at(i)
 		
 		i -= 1

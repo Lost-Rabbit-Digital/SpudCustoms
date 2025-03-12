@@ -320,58 +320,34 @@ func megaphone_clicked():
 		print("Warning: A potato is already in the customs office!")
 		return
 		
-	queue_manager = $SystemManagers/QueueManager
-	play_random_customs_officer_sound()
-	print("Megaphone clicked")
-	var potato_person = queue_manager.remove_front_potato()
-	if potato_person != null:
+	var potato = queue_manager.remove_front_potato()
+	if potato:
 		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = true
 		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.texture = preload("res://assets/megaphone/megaphone_dialogue_box_1.png")
 		is_potato_in_office = true
 		megaphone.visible = true
-		passport.visible = false
-		current_potato_info = generate_potato_info()
+		current_potato_info = potato.get_potato_info()
 		
-		# Now randomize the character when they actually enter the office
-		if mugshot_generator:
-			mugshot_generator.randomise_character()
-			current_potato_info.character_data = mugshot_generator.get_character_data()
-			
-			# Update passport generator with the same data
-			if passport_generator:
-				passport_generator.set_character_data(current_potato_info.character_data)
-		
-		move_potato_to_office(potato_person)
+		# Move potato to the office
+		potato.set_state(PotatoPerson.TaterState.IN_OFFICE)
+		move_potato_to_office(potato)
 	else:
 		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = true
 		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.texture = preload("res://assets/megaphone/megaphone_dialogue_box_7.png")
 		print("No potato to process. :(")
 
-func move_potato_to_office(potato_person):
+func move_potato_to_office(potato: PotatoPerson):
 	print("Moving our spuddy to the customs office")
-	if potato_person.get_parent():
-		potato_person.get_parent().remove_child(potato_person)
-		print("removed potato from original parent")
-		
-	var path_follow = PathFollow2D.new()
-	path_follow.rotates = false 
-	enter_office_path.add_child(path_follow)
-	path_follow.add_child(potato_person)
-	print("Added potato_person to new PathFollow2D")
 	
-	potato_person.position = Vector2.ZERO
-	path_follow.progress_ratio = 0.0
-	print("Reset potato position and path progress") 
-		
-	var tween = create_tween()
-	tween.tween_property(path_follow, "progress_ratio", 1.0, 0.7)
-	tween.tween_callback(func():
-		print("Potato reached end of path, clean up")
-		potato_person.queue_free()
-		path_follow.queue_free()
+	# Attach potato to entry path
+	potato.attach_to_path(enter_office_path)
+	
+	# Connect to path completion
+	potato.path_completed.connect(func():
+		# Clean up potato and show mugshot
+		potato.queue_free()
 		animate_mugshot_and_passport()
-		)
-	print("Started animate mugshot and passport tween animation")
+	)
 	
 func animate_mugshot_and_passport():
 	print("Animating mugshot and passport")
@@ -790,86 +766,65 @@ func move_potato_along_path(approval_status):
 		print("Error: No potato info available")
 		return
 		
-	var path: Path2D
+	# Create a new potato with the current info
+	var potato = PotatoFactory.create_potato_with_info(current_potato_info)
+	add_child(potato)
 	
-	# Set texture
-	var PotatoScene = load("res://assets/potatoes/PotatoPerson.tscn")
-	var potato_person = PotatoScene.instantiate()
-	
-	# Get all available paths
-	var approve_paths_node = $Gameplay/Paths/ApprovePaths
-	var reject_paths_node = $Gameplay/Paths/RejectionPaths
-	var available_approve_paths = []
-	var available_reject_paths = []
-	
-	# Collect all valid approve paths
-	for child in approve_paths_node.get_children():
-		if child.name.begins_with("ApprovePath"):
-			available_approve_paths.append(child)
-			
-	# Collect all valid reject paths
-	for child in reject_paths_node.get_children():
-		if child.name.begins_with("RejectPath"):
-			available_reject_paths.append(child)
-	
-	# set path based on approval status
-	if approval_status == "approved":
-		if available_approve_paths.is_empty():
-			push_error("No approve paths found!")
-			return
-		# Randomly select an approve path
-		path = available_approve_paths[randi() % available_approve_paths.size()]
-		print("Selected approve path: ", path.name)
-	else:
-		# Increase chance of runner when rejected
-		if randf() < 0.15:  # 15% chance to go runner mode
-			# Instead of using the runner path directly,
-			# trigger the border runner system
-			if border_runner_system:
-				# Pass the potato person to the border runner system
-				border_runner_system.force_start_runner(potato_person)
-				return  # Exit early as border runner system handles the potato
-			else:
-				print("ERROR: Border runner system not found!")
-				if !available_reject_paths.is_empty():
-					path = available_reject_paths[randi() % available_reject_paths.size()]
-				else:
-					push_error("No reject paths found!")
-					return
+	# Determine the appropriate path based on approval status
+	var path = get_appropriate_path(approval_status)
+	if path:
+		# Set state based on approval status
+		if approval_status == "approved":
+			potato.set_state(PotatoPerson.TaterState.APPROVED)
 		else:
-			if available_reject_paths.is_empty():
-				push_error("No reject paths found!")
-				return
-			# Randomly select a reject path
-			path = available_reject_paths[randi() % available_reject_paths.size()]
-			print("Selected reject path: ", path.name)
+			potato.set_state(PotatoPerson.TaterState.REJECTED)
 			
-	# Calculate score change
-	var path_follow = PathFollow2D.new()
-	path_follow.rotates = false
-	path.add_child(path_follow)
-	path_follow.add_child(potato_person)
-	
-	path_follow.progress_ratio = 0.0
-	
-	passport = $Gameplay/InteractiveElements/Passport
-	passport.modulate.a = 0
-	
-	var runner_time = randi_range(7, 11)
-	
-	var exit_tween = create_tween()
-	if "Approve" in path.name:
-		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 8.0)
-	elif "Reject" in path.name:
-		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, 8.0)
-	else:
-		exit_tween.tween_property(path_follow, "progress_ratio", 1.0, runner_time)
+			# Check for border runner chance
+			if approval_status == "rejected" and randf() < 0.15:
+				if border_runner_system:
+					# Instead of using path, hand over to border runner system
+					border_runner_system.start_runner(potato)
+					return
 		
-	exit_tween.tween_callback(func():
-		potato_person.queue_free()
-		path_follow.queue_free()
-		reset_scene()
-	)
+		# Attach to the selected path
+		potato.attach_to_path(path)
+		
+		# Connect to path_completed signal
+		potato.path_completed.connect(func():
+			# When path is complete, we'll fade out and clean up
+			potato.fade_out()
+			reset_scene()
+		)
+	else:
+		# No path found, just clean up
+		potato.queue_free()
+		print("No path found for approval status: ", approval_status)
+		
+
+# Helper function to get appropriate path
+func get_appropriate_path(approval_status: String) -> Path2D:
+	var paths_node
+	var available_paths = []
+	
+	if approval_status == "approved":
+		paths_node = $Gameplay/Paths/ApprovePaths
+		# Collect all valid approve paths
+		for child in paths_node.get_children():
+			if child.name.begins_with("ApprovePath"):
+				available_paths.append(child)
+	else:
+		paths_node = $Gameplay/Paths/RejectionPaths
+		# Collect all valid reject paths
+		for child in paths_node.get_children():
+			if child.name.begins_with("RejectPath"):
+				available_paths.append(child)
+	
+	if available_paths.is_empty():
+		push_error("No " + approval_status + " paths found!")
+		return null
+		
+	# Randomly select a path
+	return available_paths[randi() % available_paths.size()]
 
 func reset_scene():
 	mugshot_generator.position.x = suspect_panel.position.x

@@ -1,39 +1,191 @@
 extends Sprite2D
+class_name PotatoPerson
 
+# Signals
+signal path_completed
+signal state_changed(old_state, new_state)
+signal destroyed(position)
+	
+# States
+enum TaterState {
+	QUEUED,
+	IN_OFFICE,
+	APPROVED,
+	REJECTED,
+	RUNNING,
+	DESTROYED
+}
+
+# Properties
+var current_state: = TaterState.QUEUED
+var potato_info: Dictionary = {}
 var current_point: int = 0
 var target_point: int = 0
-var potato_info: Dictionary = {}
+var speed_multiplier: float = 1.0
+
+# Path following
+var current_path_follow: PathFollow2D
+var current_path: Path2D
+
+# Character generator component
+var character_generator: Node
 
 # Preload all the textures
 var textures = {
-	"Russet Burbank": preload("res://assets/potatoes/RussetBurbank_SmallSilhouette.png"),
+	"Russet Burbank": preload("res://assets/potatoes/bodies/RussetBurbank_SmallSilhouette.png"),
 	"Yukon Gold": preload("res://assets/potatoes/bodies/yukon_gold_body.png"),
 	"Sweet Potato": preload("res://assets/potatoes/bodies/sweet_potato_body.png"),
 	"Purple Majesty": preload("res://assets/potatoes/bodies/purple_majesty_body.png"),
 	"Red Bliss": preload("res://assets/potatoes/bodies/red_bliss_body.png"),
 }
 
-# Reference to the Sprite2D node
+func _ready():
+	# Initialize character generator if not already present
+	if !has_node("CharacterGenerator"):
+		var gen_scene = load("res://scripts/systems/character_generator.tscn")
+		if gen_scene:
+			character_generator = gen_scene.instantiate()
+			add_child(character_generator)
+	else:
+		character_generator = $CharacterGenerator
 
-func move_toward(target: Vector2, speed: float):
-	position = position.move_toward(target, speed)
+	# Set initial appearance based on potato_info
+	update_appearance()
 
-# Function to update the potato's appearance and info
+func _process(delta):
+	# Handle path following if on a path
+	if current_path_follow and current_state != TaterState.IN_OFFICE:
+		follow_path(delta)
+
+func explode():
+	# Emit signal with our position for gib creation
+	emit_signal("destroyed", global_position)
+	# Set state to destroyed which will queue_free()
+	set_state(TaterState.DESTROYED)
+	
+func apply_damage():
+	# Trigger explosion
+	explode()
+	return true 
+	
+
+func set_state(new_state: TaterState):
+	var old_state = current_state
+	current_state = new_state
+	update_appearance()
+	# Handle state-specific logic
+	match new_state:
+		TaterState.QUEUED:
+			modulate.a = 1.0
+		TaterState.IN_OFFICE:
+			# Stop path following when in office
+			if current_path_follow:
+				leave_path()
+		TaterState.APPROVED, TaterState.REJECTED:
+			# Visual feedback for approved/rejected
+			pass
+		TaterState.RUNNING:
+			# When running, increase speed
+			speed_multiplier = 1.5
+		TaterState.DESTROYED:
+			queue_free()
+	
+	# Emit signal for state change
+	emit_signal("state_changed", old_state, new_state)
+
 func update_potato(new_potato_info: Dictionary):
 	potato_info = new_potato_info
 	update_appearance()
 
-# TODO: REPLACE THIS WHEN DOING CHARACTER GENERATION
-# Function to update the potato's appearance
 func update_appearance():
+	match TaterState:
+		TaterState.IN_OFFICE:
+			# Hide detailed view, show silhouette
+			$CharacterGenerator.visible = true
+			# Make sure the silhouette is visible
+			$Area2D/Sprite2D.visible = false  # Adjust if your silhouette is on a different node
+		TaterState.QUEUED, TaterState.APPROVED, TaterState.REJECTED, TaterState.RUNNING:
+			# Show detailed view, hide silhouette
+			$CharacterGenerator.visible = false
+			# You might want to hide the silhouette when detailed view is shown
+			$Area2D/Sprite2D.visible = true  # Adjust if your silhouette is on a different node
+	# Update character appearance from character data if available
+	if potato_info.has("character_data") and character_generator:
+		character_generator.set_character_data(potato_info.character_data)
+	
+	# Update body sprite based on type if specified
 	if potato_info.has("type") and potato_info.type in textures:
-		pass
-	else:			
-		print("Warning: Unknown or missing potato type: ", potato_info.get("type", "N/A"))
-		print("Warning: Setting Potato Type: ", potato_info.get("type", "N/A"))
-		potato_info["type"] = "Russet Burbank"
-		self.update_potato(potato_info)
+		texture = textures[potato_info.type]
 
-# You can call this function to get the current potato info
+func move_toward(target: Vector2, speed: float):
+	position = position.move_toward(target, speed)
+
+func follow_path(delta):
+	if current_path_follow:
+		# Update path position based on speed
+		var path_speed = delta * 150.0 * speed_multiplier  # Base speed * multiplier
+		
+		# Progress along the path
+		current_path_follow.progress_ratio += path_speed
+		
+		# Check if we reached the end of the path
+		if current_path_follow.progress_ratio >= 0.99:
+			emit_signal("path_completed")
+			
+			# Auto-cleanup if needed
+			if current_state == TaterState.APPROVED or current_state == TaterState.REJECTED or current_state == TaterState.RUNNING:
+				set_state(TaterState.DESTROYED)
+
+func attach_to_path(path: Path2D):
+	# Leave current path if already on one
+	if current_path_follow:
+		leave_path()
+	
+	# Create new PathFollow2D
+	current_path = path
+	current_path_follow = PathFollow2D.new()
+	current_path_follow.rotates = false
+	path.add_child(current_path_follow)
+	
+	# If we have a parent, remove ourselves
+	if get_parent():
+		get_parent().remove_child(self)
+	
+	# Add to path follow
+	current_path_follow.add_child(self)
+	position = Vector2.ZERO
+	current_path_follow.progress_ratio = 0.0
+
+func leave_path():
+	if current_path_follow:
+		# Get global position before detaching
+		var global_pos = global_position
+		
+		# Remove from path
+		if get_parent() == current_path_follow:
+			current_path_follow.remove_child(self)
+			
+			# Add back to previous parent if still valid
+			if current_path_follow.get_parent() and current_path_follow.get_parent().get_parent():
+				current_path_follow.get_parent().get_parent().add_child(self)
+				global_position = global_pos
+			
+		# Remove path follow
+		current_path_follow.queue_free()
+		current_path_follow = null
+		current_path = null
+
 func get_potato_info() -> Dictionary:
 	return potato_info
+
+# Helper function to fade in the potato
+func fade_in(duration: float = 0.5):
+	modulate.a = 0.0
+	var tween = create_tween()
+	tween.tween_property(self, "modulate:a", 1.0, duration)
+	
+# Helper function to fade out the potato
+func fade_out(duration: float = 0.5):
+	var tween = create_tween()
+	tween.tween_property(self, "modulate:a", 0.0, duration)
+	tween.tween_callback(func(): queue_free())
