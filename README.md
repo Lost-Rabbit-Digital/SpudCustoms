@@ -1,6 +1,5 @@
 <div align="center">
   <h1>Spud Customs</h1>
-  <img src="project_management/dist/marketing/LRD_Logo.png" alt="Lost Rabbit Digital Logo" width="200"/>
   <h3>A dystopian document thriller game set in a world of anthropomorphic potatoes</h3>
   
   <p>
