@@ -27,8 +27,6 @@ signal rules_updated(new_rules)
 var current_rules = []
 
 var queue_manager: Node2D
-var megaphone_flash_timer: Timer
-const MEGAPHONE_FLASH_INTERVAL: float = 1.0 # flash every 1 seconds
 
 # Potato spawn manager
 var potato_count: int = 0
@@ -239,12 +237,6 @@ func end_shift():
 		var summary = shift_summary.instantiate()
 		add_child(summary)
 		summary.show_summary(shift_stats)
-
-func setup_megaphone_flash_timer():
-	#print("FLASH TIMER: Setup megaphone flash timer")
-	megaphone_flash_timer = $SystemManagers/Timers/MegaphoneFlashTimer
-	megaphone_flash_timer.wait_time = MEGAPHONE_FLASH_INTERVAL
-	megaphone_flash_timer.start()
 	
 func set_difficulty(level):
 	difficulty_level = level
@@ -311,7 +303,6 @@ func say_random_customs_officer_dialogue():
 	]
 	$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = true
 	$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.texture = customs_officer_dialogue.pick_random()
-		
 		
 func megaphone_clicked():
 	if is_potato_in_office:
@@ -433,16 +424,6 @@ func _on_spawn_timer_timeout():
 			# move_potato_along_path(approval_status) controls moving the player based on approval status
 			# We can add a new approval status (timed_out), and have the potato take a different route. 
 			# we can put that logic as well as the logic for adding a strike into the force_decision() function
-
-func get_area2d_size(area2d):
-	var collision_shape = area2d.get_node("CollisionShape2D")
-	if collision_shape:
-		var shape = collision_shape.get_shape()
-		if shape is RectangleShape2D:
-			var extents = shape.extents
-			var size = extents * 2
-			return size
-	return Vector2.ZERO
 
 func _process(_delta):
 	# Update cursor through the drag and drop manager
