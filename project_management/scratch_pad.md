@@ -16,15 +16,12 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Update explosion
 ### Gameplay
   [ ] - Add a Metal shutter that rolls down cinematically with segments that cascade down, dust particles as it hits bottom, a satisfying "clunk" sound effect
-  [ ] - Add a missile targeting restriction region to prevent accidental missile launches when clicking UI elements
   [ ] - Add clearer feedback for game over conditions
   [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
   [ ] - Add flash indicator pointing at corner of first page 
   [ ] - Add simple fade to game over summary
-  [ ] - Allow firing multiple missiles at once
-  [ ] - Allow firing missiles even when no active runner
-  [ ] - Allow multiple missiles at once
-  [ ] - Allow multiple simultaneous runners
+
+  [ ] - Allow multiple simultaneous runners, time to multi-thread! Woohoo!
   [ ] - Change position so kill text flying up with the score update
   [ ] - Conversation with potato while checking documents
   [ ] - Expand area for perfect hit chance on border runner system
@@ -155,21 +152,23 @@ Before release, go through GitHub commits and see what the fuck we even did this
   - Overhauled rocket system
   - Overhauled interaction system
   - Overhauled stamping system
-  [x] - No ambience or background music playing
-  [x] - Add ability to skip to end of Dialogic timeline with button in Upper left "Skip"
-  [x] - Add day-by-day shift selection the player unlocks as they progress
-  [x] - Faster velocity or more centralized location for missile
-  [x] - Reduce lead time for missiles
-  [x] - Simplify stamp controls explanation in Guide book
-  [x] - Spud runner attempts never stops. Alt tabbed out, paused, shift summary, no matter what, the spuds escape like clockwork.
-  [x] - Update guide to use just left-click interactions rather than requiring both mouse buttons
-  [x] - Update text on Guide book
-  [x] - Add a version counter
-  [x] - Change "Runner Escaped" to capitals 
-  [x] - Display the score for longer, a few seconds, so the player can read it
-  [x] - Fade in potatoes when they come into the customs office
-  [X] - Improve art quality of stamp bar interface (basic doodling that isn't copy/paste)
-
+  - No ambience or background music playing
+  - Add ability to skip to end of Dialogic timeline with button in Upper left "Skip"
+  - Add day-by-day shift selection the player unlocks as they progress
+  - Faster velocity or more centralized location for missile
+  - Reduce lead time for missiles
+  - Simplify stamp controls explanation in Guide book
+  - Spud runner attempts never stops. Alt tabbed out, paused, shift summary, no matter what, the spuds escape like clockwork.
+  - Update guide to use just left-click interactions rather than requiring both mouse buttons
+  - Update text on Guide book
+  - Add a version counter
+  - Change "Runner Escaped" to capitals 
+  - Display the score for longer, a few seconds, so the player can read it
+  - Fade in potatoes when they come into the customs office
+  - Improve art quality of stamp bar interface (basic doodling that isn't copy/paste)
+  - Add a missile targeting restriction region to prevent accidental missile launches when clicking UI elements
+  - Allow firing multiple missiles at once
+  - Allow firing missiles even when no active runner
 
 # OFFICIALLY COMPLETED TASKS
 The tasks which have be completed and pushed to Steam.

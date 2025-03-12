@@ -42,7 +42,8 @@ func initialize(game_scene: Node):
 	
 	# Create document controllers
 	passport_document = DocumentFactory.create_passport(game_scene)
-	guide_document = DocumentFactory.create_guide(game_scene)
+	# Not creating the guide anymore, may use the code later though
+	#guide_document = DocumentFactory.create_guide(game_scene)
 	law_receipt_document = DocumentFactory.create_law_receipt(game_scene)
 	
 	# Get references to sprite nodes
