@@ -1,4 +1,4 @@
-# shift1_intro.dtl
+# shift1_intro_bethesda.dtl
 audio music "res://assets/audio/ambient/wind_outside.wav" [fade="2.0" volume="1.0" bus="Music"]
 [background arg="res://assets/narrative/nation_of_spud_1.png" fade="0.0"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
@@ -38,14 +38,43 @@ leave narrator
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Ah, the new sprout has finally arrived. Welcome aboard.
+
+- "Thank you, sir."
+- "Glad to be here."
+- "I'm ready to begin."
+- [Salute respectfully]
+
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Listen carefully, your role is vital to Spud's security.
+
+- "I'm listening intently."
+- "How is border control vital to security?"
+- "I understand the importance."
+
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: By the authority vested in me, I appoint you as a Customs Officer of glorious Spud.
+
+- "I accept this position with honor."
+- "Thank you for this opportunity."
+- "I won't let you down."
+- [Stand at attention]
+
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: The supervisor firmly places the official cap on your head.
+
+- "It fits perfectly."
+- "Thank you, sir."
+- [Adjust cap slightly]
+- [Stand proudly]
+
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Uphold our laws, protect our borders. Spud's future depends on you.
+
+- "I won't let Spud down."
+- "That's a lot of responsibility."
+- "What exactly are our laws?"
+- "I'll protect Spud with my life."
+
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Any questions before you begin?
 
@@ -60,38 +89,112 @@ set {initial_response} = "none"
 if {initial_response} == "eager":
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 	supervisor_russet: A broad smile spreads across the supervisor's face. Excellent! That's the kind of enthusiasm we need.
+
+	- "I aim to please, sir."
+	- "Just doing my duty."
+	- [Smile proudly]
+
 	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 	supervisor_russet: With dedication like that, you might even earn yourself a Root Reserve commendation.
+
+	- "I'll work toward that goal."
+	- "What's a Root Reserve commendation?"
+	- "That would be an honor."
+
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 	supervisor_russet: The supervisor claps your back heartily. Keep that attitude, sprout. You'll do just fine.
+
+	- "Thank you, sir."
+	- "I won't let you down."
+	- [Nod confidently]
+
 	leave supervisor_russet
 
 elif {initial_response} == "questioning":
 	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 	supervisor_russet: The supervisor's smile falters slightly. They're... processed. According to protocol.
+
+	- "Processed how exactly?"
+	- "I see..."
+	- "That sounds ominous."
+	- [Look concerned]
+
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 	supervisor_russet: The supervisor straightens their posture. Root Reserve handles all the details. No need to concern yourself.
+
+	- "If you say so."
+	- "Who is Root Reserve?"
+	- "I'm still concerned."
+	- [Nod uncomfortably]
+
 	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 	supervisor_russet: Their voice hardens. Focus on your duties. Nothing more.
+
+	- "Yes, sir. Understood."
+	- "I'll try to remember that."
+	- [Shift uncomfortably]
+
 	leave supervisor_russet
 
 else:
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 	supervisor_russet: The supervisor's eyes narrow dangerously. Nervous? Nonsense.
+
+	- "I must be mistaken."
+	- "If you say so..."
+	- [Maintain eye contact]
+	- [Look away]
+
 	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 	supervisor_russet: The only ones who need be nervous are those who threaten Spud's security.
+
+	- "Of course."
+	- "I meant no offense."
+	- "Makes sense."
+	- [Remain silent]
+
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 	supervisor_russet: The supervisor reaches up and adjusts your cap uncomfortably tight. I trust that won't be you, will it?
+
+	- "Absolutely not, sir."
+	- "I'm loyal to Spud."
+	- "I understand completely."
+	- [Shake head vigorously]
+
 	leave supervisor_russet
 
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Your first shift begins now. Remember your training.
+
+- "I'm ready."
+- "What was covered in training again?"
+- "I'll do my best."
+- [Nod attentively]
+
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Check papers carefully, deny those who don't meet our standards.
+
+- "What standards should I enforce?"
+- "I'll be thorough."
+- "What documents should I check?"
+- [Look determined]
+
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Stay alert for border runners. Don't let them through.
+
+- "What do border runners look like?"
+- "How do I stop them?"
+- "I'll be vigilant."
+- [Glance toward the border]
+
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"] 
 supervisor_russet: Meet your quota, avoid too many strikes. Glory to Spud!
+
+- "Glory to Spud!"
+- "What's my quota exactly?"
+- "I won't disappoint you."
+- [Salute proudly]
+
 leave supervisor_russet

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh2r3yf57lunw"
-path="res://.godot/imported/megaphone_dialogue_box_4.png-d066b16636d376948a4424686ec6fe8b.ctex"
+uid="uid://c0464nty13n8m"
+path="res://.godot/imported/explosion_spritesheet.png-109d6bfd9d50e753e45f301acece0b9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/megaphone/megaphone_dialogue_box_4.png"
-dest_files=["res://.godot/imported/megaphone_dialogue_box_4.png-d066b16636d376948a4424686ec6fe8b.ctex"]
+source_file="res://assets/effects/explosion_spritesheet.png"
+dest_files=["res://.godot/imported/explosion_spritesheet.png-109d6bfd9d50e753e45f301acece0b9d.ctex"]
 
 [params]
 

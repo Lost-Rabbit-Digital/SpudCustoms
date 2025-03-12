@@ -14,22 +14,14 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Randomly toggle the lights on and off like people are using the rooms
   [ ] - Replace missile sprite
   [ ] - Update explosion
-  [x] - Add a version counter
-  [x] - Change "Runner Escaped" to capitals 
-  [x] - Display the score for longer, a few seconds, so the player can read it
-  [x] - Fade in potatoes when they come into the customs office
-  [X] - Improve art quality of stamp bar interface (basic doodling that isn't copy/paste)
 ### Gameplay
   [ ] - Add a Metal shutter that rolls down cinematically with segments that cascade down, dust particles as it hits bottom, a satisfying "clunk" sound effect
-  [ ] - Add a missile targeting restriction region to prevent accidental missile launches when clicking UI elements
   [ ] - Add clearer feedback for game over conditions
   [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
   [ ] - Add flash indicator pointing at corner of first page 
   [ ] - Add simple fade to game over summary
-  [ ] - Allow 3 missiles at once
-  [ ] - Allow firing missiles even when no active runner
-  [ ] - Allow multiple missiles at once
-  [ ] - Allow multiple simultaneous runners
+
+  [ ] - Allow multiple simultaneous runners, time to multi-thread! Woohoo!
   [ ] - Change position so kill text flying up with the score update
   [ ] - Conversation with potato while checking documents
   [ ] - Expand area for perfect hit chance on border runner system
@@ -50,16 +42,8 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Set default selection for main menu for keyboard control
   [ ] - Show Missile counter on an LCD display on the desk or on UI
   [ ] - Show the missile immediately on click from customs office, or from off-screen with missile icon in white circle with arrow pointing towards off-screen object
-  [x] - Add ability to skip to end of Dialogic timeline with button in Upper left "Skip"
-  [x] - Add day-by-day shift selection the player unlocks as they progress
-  [x] - Faster velocity or more centralized location for missile
-  [x] - Reduce lead time for missiles
-  [x] - Simplify stamp controls explanation in Guide book
-  [x] - Spud runner attempts never stops. Alt tabbed out, paused, shift summary, no matter what, the spuds escape like clockwork.
-  [x] - Update guide to use just left-click interactions rather than requiring both mouse buttons
-  [x] - Update text on Guide book
 ### Audio
-  [x] - No ambience or background music playing
+  [ ] - 
 ### Score System
   [ ] - Balance points (missiles, stamping, scanning)
 ### Backend
@@ -110,23 +94,9 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Update stats on potato escape and missile kill
   [ ] - When potato escapes, if it does so mid click (such as clicking on the speaker or a passport), the missile fires at the place you clicked on the screen. Constrain it to the Area2D for targeting potatoes on the left side of the screen, you could simply check cursor status.
   [ ] - When you correctly reject a potato it does not give you the 1,000 points
-  [x] - Confused with the story initially, too many characters going on, understood after a few texts
-  [x] - Copy the stamp system from Papers Please
-  [x] - Ended on first runner
-  [x] - Faces and hair doesn't line up on potatoes
-  [x] - Game begins with a Spud runner and says "Continue Shift"
-  [x] - Make sure the game scene is paused while the story mode is running
-  [x] - Make sure there aren't incorrect starting strike counts
-  [x] - Points are not added when correctly allowing entry to potatoes
-  [x] - Rockets too slow
-  [x] - She took too long to realise there was a timer and immediately failed while reading instructions
 ### Law Bugs
-  [ ] - "Change verbiage to 2 and under" on laws, currently says "(under 2 years)"
-  [ ] - "Frozen potatoes require a special permit", change to not allowed because there is not special permit
-  [ ] - "Reject Spuddington potatoes because of visa counterfeiting activity.", there is no visa system, reword "visa" to "document"
   [ ] - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
   [ ] - "Sprouted potatoes need additional verification and must be denied", change to not include verification
-  [ ] - "Young potatoes (under 2 years) need guardian.", there is no guardian system, reword
 ### Score Bugs
   [ ] - Add a loss of 500 points on top of strike if the rejection was incorrect (Use the same code as the border runner system to check for point penalty)
   [ ] - Check if the stamp rejection was correct before triggering the border run system for the scores to be accurate
@@ -148,7 +118,8 @@ These are our goals, to-do tasks, and completed tasks.
 
 ## Steam Minor Update 1.0.2 - WORK IN PROGRESS
 ### To-Do
-  [ ] - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl
+  [ ] - Update cursor when hovering over the megaphone
+  [ ] - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
   [ ] - Make the laws slide out similar to the stamps
   [ ] - Remove the date and score from the bottom of the screen
   [ ] - Change the color of the missile marker to green/red to indicate if you can fire a missile
@@ -160,25 +131,48 @@ These are our goals, to-do tasks, and completed tasks.
     [ ] - *INTERNAL USE* JSON to store strings instead of hard-coding into images
     [ ] - *INTERNAL USE* Just one background image for the dialogue box
   [ ] - Add Flash Indicator for Megaphone via shader
-  [ ] - Add Version Counter into menus
   [ ] - Display Score for Longer Duration
   [ ] - Add logic to check if game paused or in dialogic before updating cursor to target cursor
 
-### Currently Doing
+### Currently Active Tasks for 1.0.2
   [ ] - Add if check to BorderRunnerSystem.gd to check if user is currently in dialogic timeline
-  [ ] - Add a skip button to dialogic
 
 ### Completed Tasks for 1.0.2
+Before release, go through GitHub commits and see what the fuck we even did this update. And please just update the notes as we go along, this is rough.
+  - Fixed law wording: "Frozen potatoes require a special permit", change to not allowed because there is not special permit
+  - Fixed law wording: "Young potatoes (under 2 years) need guardian.", there is no guardian system, reword
+  - Fixed law wording: "Reject Spuddington potatoes because of visa counterfeiting activity.", there is no visa system, reword "visa" to "document"
+  - Add Version Counter into main menu
+  - Add a skip button to dialogic
   - Make Missiles Travel Faster and More Consistently
   - Change "Runner Escaped" to Capitals
   - Make the tutorial interactive instead of a text panel with the book
   - *INTERNAL USE* Cleaned up the old git branches from various updates
+  - Simplified story
+  - Overhauled rocket system
+  - Overhauled interaction system
+  - Overhauled stamping system
+  - No ambience or background music playing
+  - Add ability to skip to end of Dialogic timeline with button in Upper left "Skip"
+  - Add day-by-day shift selection the player unlocks as they progress
+  - Faster velocity or more centralized location for missile
+  - Reduce lead time for missiles
+  - Simplify stamp controls explanation in Guide book
+  - Spud runner attempts never stops. Alt tabbed out, paused, shift summary, no matter what, the spuds escape like clockwork.
+  - Update guide to use just left-click interactions rather than requiring both mouse buttons
+  - Update text on Guide book
+  - Add a version counter
+  - Change "Runner Escaped" to capitals 
+  - Display the score for longer, a few seconds, so the player can read it
+  - Fade in potatoes when they come into the customs office
+  - Improve art quality of stamp bar interface (basic doodling that isn't copy/paste)
+  - Add a missile targeting restriction region to prevent accidental missile launches when clicking UI elements
+  - Allow firing multiple missiles at once
+  - Allow firing missiles even when no active runner
 
-
-
-# COMPLETED TASKS
-The tasks which have be completed and pushed to VCS.
-When adding to the lists, please either rephrase or separate your tasks to be rephrased later for proper release.
+# OFFICIALLY COMPLETED TASKS
+The tasks which have be completed and pushed to Steam.
+When adding to the lists, please either rephrase immediately or separate your tasks to be rephrased later for proper release.
 If a label is marked with *INTERNAL USE* then do *NOT* include it in the official release post to Steam.
 
 ## Steam Minor Update 1.0.1: General bug fixes - ALREADY RELEASED
@@ -295,8 +289,9 @@ If a label is marked with *INTERNAL USE* then do *NOT* include it in the officia
   - Add dialogue to the megaphone
   - Make toggle audio button on main menu work
   - Add letter with brief explainer on your job as a Spudarado Border Officer
-  - FullscSwitch megaphone alert to be off when the box has someone in it
-  - Make music start on main menu instead of gamereen button
+  - Switch megaphone alert to be off when the box has someone in it
+  - Fullscreen button
+  - Make music start on main menu instead of game
   - Audio settings
   - Bulletin card system
   - Slow down potato leaving the customs office

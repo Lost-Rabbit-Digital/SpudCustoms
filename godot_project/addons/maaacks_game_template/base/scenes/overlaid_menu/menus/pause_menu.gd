@@ -1,4 +1,4 @@
-class_name PauseMenu
+class_name PauseMenuExample
 extends OverlaidMenu
 
 @export var options_packed_scene : PackedScene

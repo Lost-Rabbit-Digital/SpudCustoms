@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://desrtg7gh28fl"
-path="res://.godot/imported/megaphone_dialogue_box_7.png-3d093024feaa8d7d2a5f56ccea3f6215.ctex"
+uid="uid://b6rqvdiewkik7"
+path="res://.godot/imported/calendar_example.png-e1ff7f696c25827c4239b463fa4458a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/megaphone/megaphone_dialogue_box_7.png"
-dest_files=["res://.godot/imported/megaphone_dialogue_box_7.png-3d093024feaa8d7d2a5f56ccea3f6215.ctex"]
+source_file="res://assets/tutorial/calendar_example.png"
+dest_files=["res://.godot/imported/calendar_example.png-e1ff7f696c25827c4239b463fa4458a9.ctex"]
 
 [params]
 

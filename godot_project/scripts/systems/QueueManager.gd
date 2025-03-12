@@ -1,6 +1,6 @@
 extends Node2D
 
-var PotatoPerson = preload("res://assets/potatoes/PotatoPerson.tscn")
+var PotatoPerson = preload("res://scripts/systems/PotatoPerson.tscn")
 var path: Path2D
 var curve: Curve2D
 var max_potatoes: int
@@ -27,10 +27,18 @@ func can_add_potato() -> bool:
 
 func spawn_new_potato():
 	if can_add_potato():
-		var potato_info = get_parent().get_parent().generate_potato_info()
-		add_potato(potato_info)
-		get_parent().get_parent().update_potato_info_display()
-		get_parent().get_parent().update_potato_texture()
+		# Use PotatoFactory to create a new potato
+		var potato = PotatoFactory.create_random_potato()
+		add_child(potato)
+		
+		# Set initial position and state
+		potato.position = spawn_point
+		potato.set_state(potato.TaterState.QUEUED)
+		potato.update_appearance()
+		
+		# Add to the queue
+		potatoes.push_front(potato)
+		update_positions()
 	else:
 		print("Maximum number of potatoes reached")
 
@@ -99,7 +107,7 @@ func get_front_potato_info() -> Dictionary:
 		return potatoes.back().get_potato_info()
 	return {}
 	
-func remove_front_potato() -> Node2D: 
+func remove_front_potato() -> PotatoPerson: 
 	if potatoes.size() > 0: 
 		var potato = potatoes.pop_back()
 		print("Removing front potato. Remaining potatoes: ", potatoes.size())

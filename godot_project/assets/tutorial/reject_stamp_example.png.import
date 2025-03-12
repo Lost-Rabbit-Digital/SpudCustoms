@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6y47bj1dap0g"
-path="res://.godot/imported/stamp_bar_example.png-e5a3d389b0a1aa74e85f9e5d3e3d7214.ctex"
+uid="uid://c5ismnq8wsnca"
+path="res://.godot/imported/reject_stamp_example.png-5d9235fa5163bf6384b1175a3270f0ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/narrative/stamp_bar_example.png"
-dest_files=["res://.godot/imported/stamp_bar_example.png-e5a3d389b0a1aa74e85f9e5d3e3d7214.ctex"]
+source_file="res://assets/tutorial/reject_stamp_example.png"
+dest_files=["res://.godot/imported/reject_stamp_example.png-5d9235fa5163bf6384b1175a3270f0ed.ctex"]
 
 [params]
 

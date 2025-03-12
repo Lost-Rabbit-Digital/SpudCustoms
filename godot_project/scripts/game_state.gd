@@ -29,13 +29,13 @@ static func get_current_level() -> int:
 	var game_state = get_game_state()
 	if not game_state: 
 		return 0
-	return game_state.current_level # 14
+	return 13#game_state.current_level # 14
 
 static func get_max_level_reached() -> int:
 	var game_state = get_game_state()
 	if not game_state: 
 		return 0
-	return game_state.max_level_reached # 14 for endgame
+	return 13# game_state.max_level_reached # 14 for endgame
 
 static func level_reached(level_number):
 	var game_state = get_game_state()

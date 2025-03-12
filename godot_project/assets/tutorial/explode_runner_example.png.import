@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://074hvael3slo"
-path="res://.godot/imported/mega_phone_example.png-9fe6e7cc93b6f3119d0b8a4fe4fd2c37.ctex"
+uid="uid://bailbsltlrrej"
+path="res://.godot/imported/explode_runner_example.png-95c2012b86e6fd91ee1c15e6be0103ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/narrative/mega_phone_example.png"
-dest_files=["res://.godot/imported/mega_phone_example.png-9fe6e7cc93b6f3119d0b8a4fe4fd2c37.ctex"]
+source_file="res://assets/tutorial/explode_runner_example.png"
+dest_files=["res://.godot/imported/explode_runner_example.png-95c2012b86e6fd91ee1c15e6be0103ad.ctex"]
 
 [params]
 

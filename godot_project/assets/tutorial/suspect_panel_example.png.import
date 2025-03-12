@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6epjwip55occ"
-path="res://.godot/imported/strikes_quota_example.png-11a9b77d240f31e43a7724ffe6b319bd.ctex"
+uid="uid://fjuioscx25vl"
+path="res://.godot/imported/suspect_panel_example.png-cf5036eb904cb7329ba072ec9241726a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/narrative/strikes_quota_example.png"
-dest_files=["res://.godot/imported/strikes_quota_example.png-11a9b77d240f31e43a7724ffe6b319bd.ctex"]
+source_file="res://assets/tutorial/suspect_panel_example.png"
+dest_files=["res://.godot/imported/suspect_panel_example.png-cf5036eb904cb7329ba072ec9241726a.ctex"]
 
 [params]
 

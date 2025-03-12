@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg51o1ddteuwd"
-path="res://.godot/imported/align_stamp_example.png-5c2846b40aca11e870111a5d2a0b8d41.ctex"
+uid="uid://caodx6cjx8bec"
+path="res://.godot/imported/border_runner_example.png-1ef01a647f3daedf5187ff3c6ec74811.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/narrative/align_stamp_example.png"
-dest_files=["res://.godot/imported/align_stamp_example.png-5c2846b40aca11e870111a5d2a0b8d41.ctex"]
+source_file="res://assets/tutorial/border_runner_example.png"
+dest_files=["res://.godot/imported/border_runner_example.png-1ef01a647f3daedf5187ff3c6ec74811.ctex"]
 
 [params]
 
