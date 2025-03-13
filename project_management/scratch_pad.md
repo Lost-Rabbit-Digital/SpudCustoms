@@ -49,12 +49,11 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Add message queue system and delay between messages so they don't override each other, add GDScript to alert_label
   [ ] - Add new potato type art and re-institute potato type rules
   [ ] - Change time to a shift-based time, such as 8 hours over a day
-  [ ] - Check why date rules keep failing (make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
+  [ ] - Check why date rules keep failing make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
   [ ] - Escape key for menu stopped working after I alt tabbed a few times and completed the first "day". Not sure of cause on that one.
   [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
   [ ] - Halfway through instructions while we begin to explain the stamps the wording become confusing and she was lost
   [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
-  [ ] - If you accept a potato at the same time the timer runs out then the potato duplicates and you get both results
   [ ] - If you deny/accept a potato and then that potato times out, it still checks the stamps
   [ ] - Italics in the story text that represented actions, understood after 2-3 texts
   [ ] - Link summary screen to restart back into endless mode instead of story mode
@@ -62,7 +61,6 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Make sure the endless doesn't end too early
   [ ] - Make two sets of paths, one which start in the office and one which doesn't for Spud runner, only do the office start when they are already in office
   [ ] - Move shift summary to end of game, not end of shift, on quota reached restart, on strikes reached end game
-  [ ] - Option to disable the timer in Story and Endless mode  > Attribute: https://steamcommunity.com/app/3291880/discussions/0/603016087419796439/
   [ ] - Possibly exit the game from the lose screen
   [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
   [ ] - Randomly lose combo when doing potato border runner system
