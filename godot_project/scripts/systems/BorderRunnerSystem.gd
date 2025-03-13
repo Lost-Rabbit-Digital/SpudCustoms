@@ -353,8 +353,11 @@ func update_runners(delta):
 	while i >= 0:
 		var runner = active_runners[i]
 		
-		# Update runner and check if escaped
-		if runner.update(delta, runner_speed):
+		if runner.current_path_follow:
+			runner.follow_path(delta)
+		
+		# Check if runner has reached the end of the path
+		if runner.current_path_follow and runner.current_path_follow.progress_ratio >= 0.99:
 			handle_runner_escape(runner)
 			runner.cleanup()
 			active_runners.remove_at(i)
@@ -387,7 +390,7 @@ func start_runner(potato: PotatoPerson):
 	Global.display_red_alert(alert_label, alert_timer, "BORDER RUNNER DETECTED!\nClick to launch missile!")
 	
 	# Get all available runner paths
-	var paths_node = get_parent().get_node("Gameplay/Paths/RunnerPaths")
+	var paths_node = %RunnerPaths
 	if not paths_node:
 		push_error("Runner paths node not found!")
 		return

@@ -109,6 +109,9 @@ func update_appearance():
 			$CharacterGenerator.visible = false
 			# You might want to hide the silhouette when detailed view is shown
 			$Area2D/Sprite2D.visible = true  # Adjust if your silhouette is on a different node
+		TaterState.DESTROYED:
+			visible = false
+			$Area2D/Sprite2D.visible = false
 			
 	# Update character appearance from character data if available
 	if potato_info.has("character_data") and character_generator:
@@ -124,7 +127,7 @@ func move_toward(target: Vector2, speed: float):
 func follow_path(delta):
 	if current_path_follow:
 		# Update path position based on speed
-		var path_speed = delta * 150.0 * speed_multiplier  # Base speed * multiplier
+		var path_speed = delta * 5.0 * speed_multiplier  # Base speed * multiplier
 		
 		# Progress along the path
 		current_path_follow.progress_ratio += path_speed
@@ -137,10 +140,19 @@ func follow_path(delta):
 			if current_state == TaterState.APPROVED or current_state == TaterState.REJECTED or current_state == TaterState.RUNNING:
 				set_state(TaterState.DESTROYED)
 
+func cleanup():
+	if current_path_follow:
+		leave_path()
+	queue_free()
+
 func attach_to_path(path: Path2D):
 	# Leave current path if already on one
 	if current_path_follow:
 		leave_path()
+	
+	# Ensure visibility
+	visible = true
+	$Area2D/Sprite2D.visible = true
 	
 	# Create new PathFollow2D
 	current_path = path
@@ -156,6 +168,9 @@ func attach_to_path(path: Path2D):
 	current_path_follow.add_child(self)
 	position = Vector2.ZERO
 	current_path_follow.progress_ratio = 0.0
+	
+	# Explicitly set state
+	set_state(TaterState.RUNNING)
 
 func leave_path():
 	if current_path_follow:
