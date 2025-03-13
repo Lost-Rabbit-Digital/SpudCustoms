@@ -135,7 +135,11 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Add logic to check if game paused or in dialogic before updating cursor to target cursor
 
 ### Currently Active Tasks for 1.0.2
-  [ ] - Add if check to BorderRunnerSystem.gd to check if user is currently in dialogic timeline
+  [ ] - Add if check to BorderRunnerSystem.gd to check if user is currently in dialogic timeline, if so than do not spawn potatoes
+  [ ] - Add the different categories of megaphone into the megaphone_clicked function in mainGame.gd
+  [ ] - Test megaphone to make sure it works in all cases
+  [ ] - Update cursor when hovering over megaphone, it should show the pointing icon instead of the default
+
 
 ### Completed Tasks for 1.0.2
 Before release, go through GitHub commits and see what the fuck we even did this update. And please just update the notes as we go along, this is rough.
