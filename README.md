@@ -3,9 +3,9 @@
   <h3>A dystopian document thriller game set in a world of anthropomorphic potatoes</h3>
   
   <p>
-    <a href="https://store.steampowered.com/app/3291880/Spud_Customs/"><img src="https://img.shields.io/badge/Steam-Available-blue?style=for-the-badge&logo=steam" alt="Steam"></a>
-    <a href="https://lost-rabbit-digital.itch.io/spud-customs"><img src="https://img.shields.io/badge/itch.io-Available-red?style=for-the-badge&logo=itch.io" alt="itch.io"></a>
-    <img src="https://img.shields.io/badge/Godot-4.0+-blue?style=for-the-badge&logo=godot-engine" alt="Godot 4.0+">
+    <a href="https://store.steampowered.com/app/3291880/Spud_Customs/" target="_blank"><img src="https://img.shields.io/badge/Steam-Available-blue?style=for-the-badge&logo=steam" alt="Steam"></a>
+    <a href="https://lost-rabbit-digital.itch.io/spud-customs" target="_blank"><img src="https://img.shields.io/badge/itch.io-Available-red?style=for-the-badge&logo=itch.io" alt="itch.io"></a>
+    <a href="https://godotengine.org/" target="_blank"><img src="https://img.shields.io/badge/Godot-4.0+-blue?style=for-the-badge&logo=godot-engine" alt="Godot 4.0+"></a>
     <img src="https://img.shields.io/badge/license-MPL_2.0-yellow?style=for-the-badge" alt="MPL 2.0 License">
   </p>
 </div>
@@ -182,15 +182,15 @@ godot -e
   <table>
     <tr>
       <td align="center"><img src="https://github.com/dmchaledev.png" width="100px;" alt=""/><br /><sub><b>David</b></sub></td>
-      <td>Developer<br><a href="https://github.com/dmchaledev">GitHub</a></td>
+      <td>Developer<br><a href="https://github.com/dmchaledev" target="_blank">GitHub</a></td>
     </tr>
     <tr>
       <td align="center"><img src="https://github.com/BodenMcHale.png" width="100px;" alt=""/><br /><sub><b>Boden</b></sub></td>
-      <td>Developer<br><a href="https://github.com/BodenMcHale">GitHub</a> | <a href="https://www.bodenmchale.com/">Website</a></td>
+      <td>Developer<br><a href="https://github.com/BodenMcHale target="_blank"">GitHub</a> | <a href="https://www.bodenmchale.com/" target="_blank">Website</a></td>
     </tr>
     <tr>
       <td align="center"><img src="project_management/dist/marketing/LRD_Logo.png" width="100px;" alt=""/><br /><sub><b>Lost Rabbit Digital</b></sub></td>
-      <td>Development Team<br><a href="https://lostrabbitdigital.com">Website</a></td>
+      <td>Development Team<br><a href="https://lostrabbitdigital.org" target="_blank">Website</a> | <a href="https://store.steampowered.com/search/?developer=Lost%20Rabbit%20Digital" target="_blank">Steam</a> | <a href="https://lost-rabbit-digital.itch.io/" target="_blank">Itch.io</a></td>
     </tr>
   </table>
 </div>
@@ -207,7 +207,7 @@ godot -e
       <td align="center">
         <h3>Join our community!</h3>
         <p>Chat with developers, share strategies, report bugs, and get the latest updates on out games and plugins</p>
-        <a href="https://discord.gg/Y7caBf7gBj">Join the Lost Rabbit Digital Server →</a>
+        <a href="https://discord.gg/Y7caBf7gBj" target="_blank">Join the Lost Rabbit Digital Server →</a>
       </td>
     </tr>
   </table>
@@ -225,8 +225,8 @@ godot -e
 <div align="center">
   <table>
     <tr>
-      <td align="center"><a href="https://bsky.app/profile/bodengamedev.bsky.social">@BodenGameDev</a></td>
-      <td align="center"><a href="https://bsky.app/profile/heartcoded.bsky.social">@HeartCoded</a></td>
+      <td align="center"><a href="https://bsky.app/profile/bodengamedev.bsky.social" target="_blank">@BodenGameDev</a></td>
+      <td align="center"><a href="https://bsky.app/profile/heartcoded.bsky.social" target="_blank">@HeartCoded</a></td>
     </tr>
   </table>
 </div>
@@ -243,15 +243,15 @@ godot -e
     </tr>
     <tr>
       <td align="center">🎮</td>
-      <td><a href="https://godotengine.org/">Godot Engine</a></td>
+      <td><a href="https://godotengine.org/" target="_blank">Godot Engine</a></td>
     </tr>
     <tr>
       <td align="center">📝</td>
-      <td><a href="https://papersplea.se/">Papers, Please</a> for inspiration</td>
+      <td><a href="https://papersplea.se/" target="_blank">Papers, Please</a> for inspiration</td>
     </tr>
     <tr>
       <td align="center">📊</td>
-      <td><a href="https://github.com/Maaack/Godot-Menus-Template">Maaack's Godot Menus Template</a> - Menu system foundation</td>
+      <td><a href="https://github.com/Maaack/Godot-Menus-Template" target="_blank">Maaack's Godot Menus Template</a> - Menu system foundation</td>
     </tr>
     <tr>
       <td align="center">🎲</td>
@@ -263,6 +263,6 @@ godot -e
 ---
 
 <div align="center">
-  <img src="project_management/dist/marketing/splashscreen.png" alt="Spud Customs" width="400"/>
+  <img src="project_management/dist/marketing/splashscreen.png" alt="Spud Customs" width="600"/>
   <h3>Made with 🥔 by Lost Rabbit Digital</h3>
 </div>
