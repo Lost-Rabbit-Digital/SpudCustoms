@@ -9,13 +9,16 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
   [ ] - Add an Entry ticket document and law requirement
   [ ] - Fix text on main menu and other scenes with background photos
+  [ ] - A slider for the law book to slide in from the bottom as a note-card
   [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
   [ ] - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
+  [ ] - Implement screen shake on stamping, missile hit, perfect missile hit of varying intensity
+  [ ] - Add ink flecks from stamping that turn into ink splotches on the desk that fade away
+  [ ] - Use the smoke spritesheet to animate a trail for the missiles
 ### Gameplay
   [ ] - Add a Metal shutter that rolls down cinematically with segments that cascade down, dust particles as it hits bottom, a satisfying "clunk" sound effect
   [ ] - Add clearer feedback for game over conditions
   [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
-  [ ] - Add flash indicator pointing at corner of first page 
   [ ] - Add simple fade to game over summary
   [ ] - Allow multiple simultaneous runners, time to multi-thread! Woohoo!
   [ ] - Change position so kill text flying up with the score update
@@ -26,25 +29,23 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Lower delay between stamps
   [ ] - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
   [ ] - Make the instructions an overlay which you could close
-  [ ] - Potatoes continued to escape during the Shift Summary.
+  [ ] - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
   [ ] - Potatoes emote (Kenny emotes) while waiting in line
-  [ ] - Retouch each cutscene that stands out as rough (use dedicated 16-32 color palettes, repaint in simpler forms)
+  [ ] - Repaint each cutscene that stands out as rough in Aseprite (use dedicated 16-32 color palettes, repaint in simpler forms)
   [ ] - Score might not be resetting between rounds on leaderboard. Fairly sure mine just kept going up.
   [ ] - Set a highlight shader on the closed passport if the document goes untouched for >5 seconds
   [ ] - Set a highlight shader on the speaker/start button if the booth goes empty for >5 seconds
   [ ] - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >5 seconds
   [ ] - Set default selection for main menu for keyboard control
   [ ] - Show Missile counter on an LCD display on the desk or on UI
-  [ ] - Show the missile immediately on click from customs office, or from off-screen with missile icon in white circle with arrow pointing towards off-screen object
 ### Audio
-  [ ] - 
+  [ ] - Implement audio pooling to allow overlapping sounds, especially for missile and runner interactions
 ### Score System
   [ ] - Balance points (missiles, stamping, scanning)
 ### Backend
   [ ] - Save game and load game
 ### General Bugs
   [ ] - *INTERNAL USE* Speed up passport through slot, decrease by 0.5-1.5 seconds
-  [ ] - A slider for the law book to slide in from the bottom as a note-card
   [ ] - Add Difficulty selection UI after selecting endless mode
   [ ] - Add message queue system and delay between messages so they don't override each other, add GDScript to alert_label
   [ ] - Add new potato type art and re-institute potato type rules
@@ -78,21 +79,19 @@ These are our goals, to-do tasks, and completed tasks.
 ### Score Bugs
   [ ] - Add a loss of 500 points on top of strike if the rejection was incorrect (Use the same code as the border runner system to check for point penalty)
   [ ] - Check if the stamp rejection was correct before triggering the border run system for the scores to be accurate
-  [ ] - Fix checking stamp on rejection, the fuck does this mean old Boden? Strike check on rejection?
+  [ ] - Fix checking stamp on rejection, the fuck does this mean old Boden? Strike check on rejection? Clearing old stamp?
   [ ] - Rewrite the runner system to include chance to run while waiting in line instead of waiting for rejection
-  [ ] - Score is sometimes presented as a float and sometimes as a integer. Not sure if intentional or just some minor bug from early project, but figured i would point it out.
+  [ ] - Score is sometimes presented as a float and sometimes as a integer. Not sure if intentional or just some minor bug from early project, but figured i would point it out. <-- Score will have to be dealt with as a float at time unless we are very careful to only use whole numbers for all our combo systems etc. which makes it hard to do smaller percentage or add-on multipliers like +0.10x for each potato processed right since it'll be a float and we'll have to round it up/down if we want to keep as int
   [ ] - Stamp rejection doesn't update score
   [ ] - Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
   [ ] - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
 ### Stretch Features
-  [ ] - Add cars that drive by
-  [ ] - Baggage inspection
+  [ ] - Add cars that drive by (where would these go? On road from bottom to top on far left of screen?)
+  [ ] - Baggage inspection, grab bags and shake them with bugs and coins flying out until you get a "BAG CLEAN" and a small number of points, or contraband detected where you get points for clicking it
   [ ] - Multiplayer? 8th / 15th of November for schedule
-  [ ] - Shooting from the office instead of a missile?
   [ ] - Use top 3 scores for leaderboard, then show ... and show 3 scores above player and 3 scores below player (if any), with players score in middle. 
   [ ] - UV lamp represents a high-risk way to maximize points.
-  [ ] - Randomly toggle the lights on and off like people are using the rooms
-
+  [ ] - Randomly toggle the lights on and off in customs office and Border Wall like people are using the rooms
 
 
 ## Steam Minor Update 1.0.2 - WORK IN PROGRESS
@@ -110,13 +109,12 @@ These are our goals, to-do tasks, and completed tasks.
     [ ] - *INTERNAL USE* JSON to store strings instead of hard-coding into images
     [ ] - *INTERNAL USE* Just one background image for the dialogue box
   [ ] - Add Flash Indicator for Megaphone via shader
-  [ ] - Display Score for Longer Duration
+  [ ] - Display Score for Longer Duration (2s -> 3.5s)
   [ ] - Add logic to check if game paused or in dialogic before updating cursor to target cursor
   [ ] - Stamps go over edge of passport
   [ ] - Improve stamp and interaction system integration
 
 ### Currently Active Tasks for 1.0.2
-  [ ] - Add if check to BorderRunnerSystem.gd to check if user is currently in dialogic timeline, if so than do not spawn potatoes
   [ ] - Add the different categories of megaphone into the megaphone_clicked function in mainGame.gd
   [ ] - Test megaphone to make sure it works in all cases
   [ ] - Update cursor when hovering over megaphone, it should show the pointing icon instead of the default
@@ -124,6 +122,10 @@ These are our goals, to-do tasks, and completed tasks.
 
 ### Completed Tasks for 1.0.2
 Before release, go through GitHub commits and see what the fuck we even did this update. And please just update the notes as we go along, this is rough.
+  - Add if check to QueueManager.gd to check if user is currently in dialogic timeline, if so than do not spawn potatoes in queue
+  - Add if check to launch_missile() in BorderRunnerSystem.gd to check if user is currently in dialogic timeline, if so than do not spawn potatoes
+  - Add if check to BorderRunnerSystem.gd to check if user is currently in dialogic timeline, if so than do not spawn runners
+  - Show the missile immediately on click from customs office, or from off-screen
   - Fixed law wording: "Frozen potatoes require a special permit", change to not allowed because there is not special permit
   - Fixed law wording: "Young potatoes (under 2 years) need guardian.", there is no guardian system, reword
   - Fixed law wording: "Reject Spuddington potatoes because of visa counterfeiting activity.", there is no visa system, reword "visa" to "document"
