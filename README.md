@@ -11,7 +11,7 @@
 </div>
 
 <div align="center">
-  <img src="project_management/dist/images/screenshot_inspector.png" alt="Game Screenshot" width="600"/>
+  <img src="project_management/dist/main_game_screenshot.png" alt="Game Screenshot" width="600"/>
 </div>
 
 ---
@@ -26,10 +26,6 @@ In this world of anthropomorphic potatoes, your job is to:
 - ⏱️ Make split-second decisions under time pressure
 - 🚀 Use missiles to prevent unauthorized border crossings
 - 🔍 Navigate moral choices and uncover the truth
-
-<div align="center">
-  <img src="project_management/dist/images/screenshot_tree.png" alt="Game Screenshot" width="600"/>
-</div>
 
 ---
 
@@ -92,57 +88,32 @@ git clone https://github.com/lost-rabbit-digital/spud-customs.git
 # Change to project directory
 cd spud-customs
 
-# Pull LFS files
-git lfs pull
-
 # Open the project in Godot
 godot -e
 ```
 
 ---
 
-## 🏗️ Project Structure
-
-<details>
-  <summary>Click to expand</summary>
-  
-  ```
-  spud-customs/
-  ├── assets/              # Game assets (sprites, audio, etc.)
-  ├── scenes/              # Game scenes
-  │   ├── main/            # Main game scenes
-  │   ├── ui/              # UI scenes
-  │   └── menus/           # Menu scenes
-  ├── scripts/             # GDScript files
-  │   ├── core/            # Core game systems
-  │   ├── managers/        # Game managers
-  │   └── entities/        # Game entities
-  ├── addons/              # Godot plugins
-  ├── project_management/  # Project documentation and planning
-  └── export/              # Export configuration
-  ```
-</details>
-
----
-
 ## 🔧 Development
 
-<table>
-  <tr>
-    <td width="33%" align="center">
-      <h3>🧩 Code Style</h3>
-      <p>We follow the <a href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html">GDScript style guide</a></p>
-    </td>
-    <td width="33%" align="center">
-      <h3>🌿 Branches</h3>
-      <p><code>main</code>, <code>develop</code>,<br><code>feature/X</code>, <code>bugfix/X</code></p>
-    </td>
-    <td width="33%" align="center">
-      <h3>🔄 Workflow</h3>
-      <p>Fork → Branch → Commit → PR</p>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <table>
+    <tr>
+      <td width="33%" align="center">
+        <h3>🧩 Code Style</h3>
+        <p>We follow the <a href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html">GDScript style guide</a></p>
+      </td>
+      <td width="33%" align="center">
+        <h3>🌿 Branches</h3>
+        <p><code>main</code>, <code>develop</code>,<br><code>feature/X</code>, <code>bugfix/X</code></p>
+      </td>
+      <td width="33%" align="center">
+        <h3>🔄 Workflow</h3>
+        <p>Fork → Branch → Commit → PR</p>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ---
 
@@ -174,8 +145,6 @@ godot -e
     </tr>
   </table>
 </div>
-
-See our [project board](https://github.com/lost-rabbit-digital/spud-customs/projects) for the full development roadmap.
 
 ---
 
