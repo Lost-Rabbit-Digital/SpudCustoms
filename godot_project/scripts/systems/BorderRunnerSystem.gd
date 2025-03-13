@@ -89,6 +89,9 @@ signal game_over_triggered
 @onready var smoke_frames: SpriteFrames
 @onready var explosion_frames: SpriteFrames
 
+var smoke_particle_pool = []
+var max_smoke_particles = 50
+
 # Internal state tracking
 var is_enabled = true  # Track if system is enabled
 var is_in_dialogic = false # Track if game is in dialogue mode
@@ -109,6 +112,7 @@ class Missile:
 	var active: bool = true
 	var time_elapsed: float = 0.0
 	var smoke_spawn_timer: float = 0.0
+	var smoke_spawn_interval: float = 0.05  # Adjust for density of smoke trail
 	
 	func _init(sprite_frames):
 		sprite = AnimatedSprite2D.new()
@@ -261,6 +265,14 @@ func _ready():
 		else:
 			push_error("Failed to load giblet_" + str(i))
 			
+	# Initialize smoke particle pool
+	for i in range(max_smoke_particles):
+		var smoke = AnimatedSprite2D.new()
+		smoke.sprite_frames = smoke_frames
+		smoke.visible = false
+		add_child(smoke)
+		smoke_particle_pool.append(smoke)	
+			
 func _process(delta):
 	if not is_enabled or is_in_dialogic:
 		return
@@ -316,6 +328,12 @@ func update_missiles(delta):
 		missile.sprite.global_position = missile.position  # Use global_position instead
 		missile.sprite.rotation = direction.angle() + PI/2
 		
+		# Smoke trail logic
+		missile.smoke_spawn_timer += delta
+		if missile.smoke_spawn_timer >= missile.smoke_spawn_interval:
+			missile.smoke_spawn_timer = 0
+			spawn_smoke_particle(missile.position, direction)
+		
 		# Check if missile reached target
 		var distance_squared = missile.position.distance_squared_to(missile.target)
 		if distance_squared < 100:  # Slightly larger threshold (10 units squared)
@@ -345,6 +363,58 @@ func update_missiles(delta):
 			continue
 			
 		i -= 1
+
+func spawn_smoke_particle(position: Vector2, direction: Vector2):
+	# Get a particle from the pool
+	var smoke = null
+	for particle in smoke_particle_pool:
+		if not particle.visible:
+			smoke = particle
+			break
+			
+	# If no particles available, just return
+	if not smoke:
+		return
+		
+	# Configure the particle
+	# Randomly vary smoke size
+	var size_variation = randf_range(0.03, 0.05)
+	smoke.scale = Vector2(size_variation, size_variation)
+	smoke.global_position = position - (direction * 20)
+	smoke.rotation = randf() * TAU
+	smoke.modulate.a = 1.0
+	smoke.z_index = 14
+	smoke.visible = true
+	smoke.play("default")
+	
+	# Create a tween for behavior
+	var tween = create_tween()
+	tween.set_parallel(true)
+	
+	# Fade out
+	tween.tween_property(smoke, "modulate:a", 0.0, 1.2)
+	
+	# Drift
+	var drift = direction.rotated(randf_range(-PI/4, PI/4)) * -50
+	tween.tween_property(smoke, "global_position", smoke.global_position + drift, 1.2)
+	
+	# make smoke darker as it ages
+	tween.tween_property(smoke, "modulate:r", 0.6, 1.2)
+	tween.tween_property(smoke, "modulate:g", 0.6, 1.2)
+	tween.tween_property(smoke, "modulate:b", 0.6, 1.2)
+	
+	# Scale ups
+	tween.tween_property(smoke, "scale", Vector2(0.07, 0.07), 1.2)
+	
+	# Add rotation over time - this is the key addition
+	var rotation_amount = randf_range(-PI, PI)  # Random rotation between -180° and 180°
+	tween.tween_property(smoke, "rotation", smoke.rotation + rotation_amount, 1.2)
+	
+	# Return to pool
+	tween.chain().tween_callback(func(): 
+		smoke.visible = false
+		smoke.stop() # Stop animation
+	)
 
 # Update all active runners
 func update_runners(delta):
@@ -604,6 +674,21 @@ func trigger_explosion(missile_or_position):
 	smoke.scale = Vector2(0.05, 0.05)
 	smoke.z_index = 15 # Above missiles, below explosion
 	smoke.play("default")
+	
+		# Create a tween for behavior
+	var tween = create_tween()
+	tween.set_parallel(true)
+	
+		# Fade out
+	tween.tween_property(smoke, "modulate:a", 0.0, 1.5)
+	
+	# make smoke darker as it ages
+	tween.tween_property(smoke, "modulate:r", 0.6, 1.5)
+	tween.tween_property(smoke, "modulate:g", 0.6, 1.5)
+	tween.tween_property(smoke, "modulate:b", 0.6, 1.5)
+	
+	# Scale ups
+	tween.tween_property(smoke, "scale", Vector2(0.10, 0.10), 1.5)
 	
 	# Ensure smoke is removed after animation
 	smoke.animation_finished.connect(func(): 
