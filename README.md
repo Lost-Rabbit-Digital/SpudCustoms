@@ -3,15 +3,15 @@
   <h3>A dystopian document thriller game set in a world of anthropomorphic potatoes</h3>
   
   <p>
-    <a href="https://store.steampowered.com/app/3291880/Spud_Customs/"><img src="https://img.shields.io/badge/Steam-Available-blue?style=for-the-badge&logo=steam" alt="Steam"></a>
-    <a href="https://lost-rabbit-digital.itch.io/spud-customs"><img src="https://img.shields.io/badge/itch.io-Available-red?style=for-the-badge&logo=itch.io" alt="itch.io"></a>
-    <img src="https://img.shields.io/badge/Godot-4.0+-blue?style=for-the-badge&logo=godot-engine" alt="Godot 4.0+">
+    <a href="https://store.steampowered.com/app/3291880/Spud_Customs/" target="_blank"><img src="https://img.shields.io/badge/Steam-Available-blue?style=for-the-badge&logo=steam" alt="Steam"></a>
+    <a href="https://lost-rabbit-digital.itch.io/spud-customs" target="_blank"><img src="https://img.shields.io/badge/itch.io-Available-red?style=for-the-badge&logo=itch.io" alt="itch.io"></a>
+    <a href="https://godotengine.org/" target="_blank"><img src="https://img.shields.io/badge/Godot-4.0+-blue?style=for-the-badge&logo=godot-engine" alt="Godot 4.0+"></a>
     <img src="https://img.shields.io/badge/license-MPL_2.0-yellow?style=for-the-badge" alt="MPL 2.0 License">
   </p>
 </div>
 
 <div align="center">
-  <img src="project_management/dist/images/screenshot_inspector.png" alt="Game Screenshot" width="600"/>
+  <img src="project_management/dist/main_game_screenshot.png" alt="Game Screenshot" width="600"/>
 </div>
 
 ---
@@ -26,10 +26,6 @@ In this world of anthropomorphic potatoes, your job is to:
 - ⏱️ Make split-second decisions under time pressure
 - 🚀 Use missiles to prevent unauthorized border crossings
 - 🔍 Navigate moral choices and uncover the truth
-
-<div align="center">
-  <img src="project_management/dist/images/screenshot_tree.png" alt="Game Screenshot" width="600"/>
-</div>
 
 ---
 
@@ -87,62 +83,38 @@ In this world of anthropomorphic potatoes, your job is to:
 
 ```bash
 # Clone the repository
-git clone https://github.com/lost-rabbit-digital/spud-customs.git
+git clone https://github.com/Lost-Rabbit-Digital/SpudCustoms.git
 
 # Change to project directory
-cd spud-customs
+cd SpudCustoms
 
-# Pull LFS files
-git lfs pull
-
-# Open the project in Godot
+# Open the project in Godot using OS GUI
+# Or execute Godot from terminal with following command:
 godot -e
 ```
 
 ---
 
-## 🏗️ Project Structure
-
-<details>
-  <summary>Click to expand</summary>
-  
-  ```
-  spud-customs/
-  ├── assets/              # Game assets (sprites, audio, etc.)
-  ├── scenes/              # Game scenes
-  │   ├── main/            # Main game scenes
-  │   ├── ui/              # UI scenes
-  │   └── menus/           # Menu scenes
-  ├── scripts/             # GDScript files
-  │   ├── core/            # Core game systems
-  │   ├── managers/        # Game managers
-  │   └── entities/        # Game entities
-  ├── addons/              # Godot plugins
-  ├── project_management/  # Project documentation and planning
-  └── export/              # Export configuration
-  ```
-</details>
-
----
-
 ## 🔧 Development
 
-<table>
-  <tr>
-    <td width="33%" align="center">
-      <h3>🧩 Code Style</h3>
-      <p>We follow the <a href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html">GDScript style guide</a></p>
-    </td>
-    <td width="33%" align="center">
-      <h3>🌿 Branches</h3>
-      <p><code>main</code>, <code>develop</code>,<br><code>feature/X</code>, <code>bugfix/X</code></p>
-    </td>
-    <td width="33%" align="center">
-      <h3>🔄 Workflow</h3>
-      <p>Fork → Branch → Commit → PR</p>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <table>
+    <tr>
+      <td width="33%" align="center">
+        <h3>🧩 Code Style</h3>
+        <p>We follow the <a href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html">GDScript style guide</a> loosely</p>
+      </td>
+      <td width="33%" align="center">
+        <h3>🌿 Branches</h3>
+        <p><code>main</code>,<br><code>feature/X</code>, <code>bugfix/X</code></p>
+      </td>
+      <td width="33%" align="center">
+        <h3>🔄 Workflow</h3>
+        <p>Fork → Branch → Commit → PR</p>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ---
 
@@ -175,8 +147,6 @@ godot -e
   </table>
 </div>
 
-See our [project board](https://github.com/lost-rabbit-digital/spud-customs/projects) for the full development roadmap.
-
 ---
 
 ## 📚 Documentation
@@ -198,10 +168,10 @@ See our [project board](https://github.com/lost-rabbit-digital/spud-customs/proj
 ## 📜 License
 
 <div align="center">
-  <a href="LICENSE">
+  <a href="LICENSE.md">
     <img src="https://img.shields.io/badge/License-MPL_2.0-yellow.svg?style=for-the-badge" alt="License: MPL 2.0">
   </a>
-  <p>This project is licensed under the MPL 2.0 License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+  <p>This project is licensed under the MPL 2.0 License - see the <a href="LICENSE.md">LICENSE</a> file for details.</p>
 </div>
 
 ---
@@ -212,15 +182,15 @@ See our [project board](https://github.com/lost-rabbit-digital/spud-customs/proj
   <table>
     <tr>
       <td align="center"><img src="https://github.com/dmchaledev.png" width="100px;" alt=""/><br /><sub><b>David</b></sub></td>
-      <td>Developer<br><a href="https://github.com/dmchaledev">GitHub</a></td>
+      <td>Developer<br><a href="https://github.com/dmchaledev" target="_blank">GitHub</a></td>
     </tr>
     <tr>
       <td align="center"><img src="https://github.com/BodenMcHale.png" width="100px;" alt=""/><br /><sub><b>Boden</b></sub></td>
-      <td>Developer<br><a href="https://github.com/BodenMcHale">GitHub</a> | <a href="https://www.bodenmchale.com/">Website</a></td>
+      <td>Developer<br><a href="https://github.com/BodenMcHale target="_blank"">GitHub</a> | <a href="https://www.bodenmchale.com/" target="_blank">Website</a></td>
     </tr>
     <tr>
       <td align="center"><img src="project_management/dist/marketing/LRD_Logo.png" width="100px;" alt=""/><br /><sub><b>Lost Rabbit Digital</b></sub></td>
-      <td>Development Team<br><a href="https://lostrabbitdigital.com">Website</a></td>
+      <td>Development Team<br><a href="https://lostrabbitdigital.org" target="_blank">Website</a> | <a href="https://store.steampowered.com/search/?developer=Lost%20Rabbit%20Digital" target="_blank">Steam</a> | <a href="https://lost-rabbit-digital.itch.io/" target="_blank">Itch.io</a></td>
     </tr>
   </table>
 </div>
@@ -237,7 +207,7 @@ See our [project board](https://github.com/lost-rabbit-digital/spud-customs/proj
       <td align="center">
         <h3>Join our community!</h3>
         <p>Chat with developers, share strategies, report bugs, and get the latest updates on out games and plugins</p>
-        <a href="https://discord.gg/Y7caBf7gBj">Join the Lost Rabbit Digital Server →</a>
+        <a href="https://discord.gg/Y7caBf7gBj" target="_blank">Join the Lost Rabbit Digital Server →</a>
       </td>
     </tr>
   </table>
@@ -255,8 +225,8 @@ See our [project board](https://github.com/lost-rabbit-digital/spud-customs/proj
 <div align="center">
   <table>
     <tr>
-      <td align="center"><a href="https://bsky.app/profile/bodengamedev.bsky.social">@BodenGameDev</a></td>
-      <td align="center"><a href="https://bsky.app/profile/heartcoded.bsky.social">@HeartCoded</a></td>
+      <td align="center"><a href="https://bsky.app/profile/bodengamedev.bsky.social" target="_blank">@BodenGameDev</a></td>
+      <td align="center"><a href="https://bsky.app/profile/heartcoded.bsky.social" target="_blank">@HeartCoded</a></td>
     </tr>
   </table>
 </div>
@@ -273,15 +243,15 @@ See our [project board](https://github.com/lost-rabbit-digital/spud-customs/proj
     </tr>
     <tr>
       <td align="center">🎮</td>
-      <td><a href="https://godotengine.org/">Godot Engine</a></td>
+      <td><a href="https://godotengine.org/" target="_blank">Godot Engine</a></td>
     </tr>
     <tr>
       <td align="center">📝</td>
-      <td><a href="https://papersplea.se/">Papers, Please</a> for inspiration</td>
+      <td><a href="https://papersplea.se/" target="_blank">Papers, Please</a> for inspiration</td>
     </tr>
     <tr>
       <td align="center">📊</td>
-      <td><a href="https://github.com/Maaack/Godot-Menus-Template">Maaack's Godot Menus Template</a> - Menu system foundation</td>
+      <td><a href="https://github.com/Maaack/Godot-Menus-Template" target="_blank">Maaack's Godot Menus Template</a> - Menu system foundation</td>
     </tr>
     <tr>
       <td align="center">🎲</td>
@@ -293,6 +263,6 @@ See our [project board](https://github.com/lost-rabbit-digital/spud-customs/proj
 ---
 
 <div align="center">
-  <img src="project_management/dist/marketing/splashscreen.png" alt="Spud Customs" width="400"/>
+  <img src="project_management/dist/marketing/splashscreen.png" alt="Spud Customs" width="600"/>
   <h3>Made with 🥔 by Lost Rabbit Digital</h3>
 </div>
