@@ -316,22 +316,36 @@ func megaphone_clicked():
 		megaphone_dialogue_box.visible = true
 		print("No potato to process. :(")
 		
-func move_potato_to_office(potato: PotatoPerson):
+func move_potato_to_office(potato_person):
 	print("Moving our spuddy to the customs office")
-	potato.set_state(potato.TaterState.IN_OFFICE)
-	
-	# Set a consistent entry speed
-	potato.regular_path_speed = regular_potato_speed
-	
-	# Attach potato to entry path
-	if enter_office_path:
-		potato.attach_to_path(enter_office_path)
+	if potato_person.get_parent():
+		potato_person.get_parent().remove_child(potato_person)
+		print("removed potato from original parent")
 		
-		# Connect to path completion
-		if !potato.is_connected("path_completed", Callable(self, "_on_potato_path_completed")):
-			potato.path_completed.connect(_on_potato_path_completed.bind(potato))
-	else:
-		push_error("Enter office path not found!")
+	var path_follow = PathFollow2D.new()
+	path_follow.rotates = false 
+	enter_office_path.add_child(path_follow)
+	path_follow.add_child(potato_person)
+	print("Added potato_person to new PathFollow2D")
+	
+	potato_person.position = Vector2.ZERO
+	path_follow.progress_ratio = 0.0
+	print("Reset potato position and path progress") 
+	
+	# Calculate a better duration based on path length
+	var path_length = enter_office_path.curve.get_baked_length()
+	var duration = path_length / 300.0  # Adjust 300.0 to control the speed
+	duration = clamp(duration, 0.5, 2.0)  # Ensure reasonable bounds
+		
+	var tween = create_tween()
+	tween.tween_property(path_follow, "progress_ratio", 1.0, duration)
+	tween.tween_callback(func():
+		print("Potato reached end of path, clean up")
+		potato_person.queue_free()
+		path_follow.queue_free()
+		animate_mugshot_and_passport()
+		)
+	print("Started animate mugshot and passport tween animation")
 
 # Add this new function to handle path completion
 func _on_potato_path_completed(potato: PotatoPerson):
