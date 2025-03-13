@@ -1,12 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://1mf0og1h885p"]
+[gd_scene load_steps=11 format=3 uid="uid://1mf0og1h885p"]
 
 [ext_resource type="Script" uid="uid://v5slsl45gpso" path="res://scripts/systems/BorderRunnerSystem.gd" id="1_8vf2f"]
 [ext_resource type="Script" uid="uid://ciq3x8sbykb0h" path="res://scripts/systems/ExplosionVFX.gd" id="2_1snt0"]
 [ext_resource type="AudioStream" uid="uid://b6wmneh3xy7l5" path="res://assets/missiles/Doom Braaam.wav" id="3_8vf2f"]
-[ext_resource type="AudioStream" uid="uid://cf65vwoewhpck" path="res://assets/missiles/Balloon Explosion A.wav" id="4_d84f0"]
-[ext_resource type="AudioStream" uid="uid://dl551k0d7e4ga" path="res://assets/missiles/button press and missile launch.wav" id="5_cevxq"]
+[ext_resource type="AudioStream" uid="uid://cgithloknh15i" path="res://assets/audio/explosions/big distant thump 5.wav" id="4_xqjog"]
+[ext_resource type="AudioStream" uid="uid://b66nlgan7rxgv" path="res://assets/audio/mechanical/button pressed 1.wav" id="5_0qkbs"]
 [ext_resource type="Texture2D" uid="uid://d0e44jundomwj" path="res://assets/missiles/missile_sprite.png" id="6_og870"]
-[ext_resource type="Script" uid="uid://bvpwqkpdhd3kl" path="res://scripts/systems/CraterSystem.gd" id="7_1snt0"]
 [ext_resource type="Texture2D" uid="uid://6tlcaks8nuv7" path="res://assets/missiles/smoke_particle.png" id="7_3vtb4"]
 
 [sub_resource type="Curve" id="Curve_3vtb4"]
@@ -34,12 +33,15 @@ particle_size = 3
 [node name="AlarmSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_8vf2f")
 volume_db = -5.0
+bus = &"SFX"
 
 [node name="ExplosionSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_d84f0")
+stream = ExtResource("4_xqjog")
+bus = &"SFX"
 
 [node name="MissileSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_cevxq")
+stream = ExtResource("5_0qkbs")
+bus = &"SFX"
 
 [node name="MissileSprite" type="Sprite2D" parent="."]
 z_index = 10
@@ -62,7 +64,3 @@ color_ramp = SubResource("Gradient_d84f0")
 hue_variation_min = -0.02
 hue_variation_max = 0.02
 hue_variation_curve = SubResource("Curve_cevxq")
-
-[node name="CraterSystem" type="Node2D" parent="."]
-script = ExtResource("7_1snt0")
-crater_fade_time = 10.0
