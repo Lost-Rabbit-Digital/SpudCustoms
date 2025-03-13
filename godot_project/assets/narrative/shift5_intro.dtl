@@ -30,7 +30,7 @@ supervisor_russet: Remember, those who harbor traitors are traitors themselves.
 leave supervisor_russet
 
 [background arg="res://assets/narrative/underground_resistance.png" fade="2.0"]
-join sweet_potato_sasha center [z_index="1"]
+join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Sasha moves closer with practiced casualness: It's working. The pamphlets are spreading.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
@@ -51,14 +51,14 @@ set {sasha_investigation} = "hesitant"
 set {sasha_investigation} = "conservative"
 
 if {sasha_investigation} == "committed":
-join sweet_potato_sasha center [z_index="1"]
+join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Sasha's face shows visible relief: Thank goodness. I knew you had stronger roots than the others.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: We'll meet at midnight. Watch for my signal.
 leave sweet_potato_sasha
 elif {sasha_investigation} == "hesitant":
-join sweet_potato_sasha center [z_index="1"]
+join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Sometimes we have to risk getting mashed to do what's right.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
