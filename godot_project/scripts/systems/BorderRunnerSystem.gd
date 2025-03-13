@@ -8,8 +8,6 @@ signal game_over_triggered
 @export var unlimited_missiles = false
 ## Force Spuds to run the border for your entertainment
 @export var rapid_runners = false
-## Generates a crater sprite where you click
-@export var crater_spawn_on_click = false
 
 @export_group("System References")
 ## Manager for handling the potato queue
@@ -56,10 +54,8 @@ signal game_over_triggered
 ## Initial height from which missiles are launched
 @export var missile_start_height: float = 400
 ## Radius of explosion effect and damage area
-@export var explosion_size: float = 50
+@export var explosion_size: float = 96
 
-@export_group("Crater System")
-@export var crater_size_multiplier: float = 1.2  # Size multiplier for explosion craters
 
 @export_group("Giblet System")
 @export_subgroup("Visual Settings")
@@ -87,11 +83,12 @@ signal game_over_triggered
 @onready var explosion_vfx = $ExplosionVFX
 @onready var missile_sprite = $MissileSprite
 @onready var smoke_particles = $MissileSprite/CPUParticles2D
-@onready var crater_system = $CraterSystem
 @onready var shift_stats = ShiftStats.new()
-var missile_frames: SpriteFrames
-var smoke_frames: SpriteFrames 
-var explosion_frames: SpriteFrames
+
+@onready var missile_frames: SpriteFrames
+@onready var smoke_frames: SpriteFrames
+@onready var explosion_frames: SpriteFrames
+
 # Internal state tracking
 var is_enabled = true  # Track if system is enabled
 var is_in_dialogic = false # Track if game is in dialogue mode
@@ -168,8 +165,8 @@ func _ready():
 	var explosion_frames = SpriteFrames.new()
 	
 	# Load the frames for explosion
-	var explosion_texture = preload("res://assets/effects/explosion_spritesheet.png")
-	var explosion_hframes = 13 # Adjust based on the actual spritesheet
+	var explosion_texture = preload("res://assets/effects/explosion_spritesheet_1.png")
+	var explosion_hframes = 26 # Adjust based on the actual spritesheet
 	var explosion_vframes = 1
 	
 	# Add animation frames for explosion
@@ -183,7 +180,7 @@ func _ready():
 		explosion_frames.add_frame("default", frame)
 	
 	# Set animation speed for explosion
-	explosion_frames.set_animation_speed("default", 12)  # Frames per second
+	explosion_frames.set_animation_speed("default", 13)  # Frames per second
 	
 	# Load the frames for missile
 	var missile_texture = preload("res://assets/effects/rocket_small_spritesheet.png")
@@ -491,12 +488,7 @@ func _input(event):
 func _unhandled_input(event):
 	if not is_enabled or is_in_dialogic:
 		return
-	if crater_spawn_on_click:
-		if event is InputEventMouseButton:
-			if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
-				if crater_system:
-					var local_pos = crater_system.to_local(event.global_position)
-					crater_system.add_crater(local_pos)
+
 
 func launch_missile(target_pos):
 	print("Launching missile. Max missiles: %d, Current missiles: %d" % [max_missiles, active_missiles.size()])
@@ -519,7 +511,7 @@ func launch_missile(target_pos):
 	print("Viewport rect: ", viewport_rect)
 	
 	# More explicit missile start position logging
-	missile.position = Vector2(viewport_rect.size.x / 2, viewport_rect.size.y - 100)
+	missile.position = Vector2(-100, -100)
 	missile.target = target_pos
 	
 	print("Missile start position: ", missile.position)
@@ -549,20 +541,51 @@ func trigger_explosion(missile_or_position):
 	
 	# Create explosion animation
 	var explosion = AnimatedSprite2D.new()
-	explosion.sprite_frames = explosion_frames  # Now using our stored explosion_frames
+	explosion.sprite_frames = explosion_frames
 	explosion.global_position = explosion_position
-	explosion.scale = Vector2(explosion_size / 32.0, explosion_size / 32.0)  # Scale to desired size
+	explosion.scale = Vector2(explosion_size / 32.0, explosion_size / 32.0)
 	explosion.z_index = 16  # Above missiles
 	explosion.play("default")
 	
-	# Remove explosion when animation completes
-	explosion.animation_finished.connect(func(): explosion.queue_free())
+	# Ensure explosion is removed after animation
+	explosion.animation_finished.connect(func(): 
+		explosion.queue_free()
+	)
+	# Fallback timer to ensure removal
+	var cleanup_timer = get_tree().create_timer(2.0)
+	cleanup_timer.timeout.connect(func():
+		if is_instance_valid(explosion):
+			explosion.queue_free()
+	)
+	
 	add_child(explosion)
 	
-	# Add crater at explosion position
-	if crater_system:
-		var local_pos = crater_system.to_local(explosion_position)
-		crater_system.add_crater(local_pos, crater_size_multiplier)
+	# Create smoke animation
+	var smoke = AnimatedSprite2D.new()
+	smoke.sprite_frames = smoke_frames
+	smoke.global_position = explosion_position
+	smoke.scale = Vector2(0.05, 0.05)
+	smoke.z_index = 15 # Above missiles, below explosion
+	smoke.play("default")
+	
+	# Ensure smoke is removed after animation
+	smoke.animation_finished.connect(func(): 
+		smoke.queue_free()
+	)
+		
+	var smoke_alpha_timer = get_tree().create_timer(0.6)
+	smoke_alpha_timer.timeout.connect(func():
+		if is_instance_valid(smoke):
+			smoke.z_index = 17
+	)
+	
+	var smoke_cleanup_timer = get_tree().create_timer(1.5)
+	smoke_cleanup_timer.timeout.connect(func():
+		if is_instance_valid(smoke):
+			smoke.queue_free()
+	)
+	
+	add_child(smoke)
 	
 	# Clean up missile but leave smoke trail to fade out
 	if missile_or_position is Vector2:

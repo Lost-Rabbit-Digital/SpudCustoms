@@ -300,7 +300,7 @@ func megaphone_clicked():
 	var potato = queue_manager.remove_front_potato()
 	if potato:
 		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = true
-		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.texture = preload("res://assets/megaphone/megaphone_dialogue_box_1.png")
+		#$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.texture = preload("res://assets/megaphone/megaphone_dialogue_box_1.png")
 		is_potato_in_office = true
 		megaphone.visible = true
 		current_potato_info = potato.get_potato_info()
@@ -310,7 +310,7 @@ func megaphone_clicked():
 		move_potato_to_office(potato)
 	else:
 		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = true
-		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.texture = preload("res://assets/megaphone/megaphone_dialogue_box_7.png")
+		#$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.texture = preload("res://assets/megaphone/megaphone_dialogue_box_7.png")
 		print("No potato to process. :(")
 		
 func move_potato_to_office(potato: PotatoPerson):
@@ -383,16 +383,7 @@ func _on_spawn_timer_timeout():
 		queue_manager.spawn_new_potato()
 	else:
 		print("Potato queue limit reached, skip spawning.")
-		#spawn_timer.stop()
-
-			# Implicit rejection of potatos via the process_decision(false) function 
-			# carries the risk of accidentally passing a potato and improving player score
-			# This should be its' own force_decision(), maybe where the Supervisor says 
-			# what the right answer was too before punishing the player.
-			# Time's up, force a decision or penalize the player
-			# move_potato_along_path(approval_status) controls moving the player based on approval status
-			# We can add a new approval status (timed_out), and have the potato take a different route. 
-			# we can put that logic as well as the logic for adding a strike into the force_decision() function
+		spawn_timer.stop()
 
 func _process(_delta):
 	# Update cursor through the drag and drop manager
