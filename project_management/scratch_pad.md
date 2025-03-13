@@ -11,27 +11,21 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Fix text on main menu and other scenes with background photos
   [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
   [ ] - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
-  [ ] - Randomly toggle the lights on and off like people are using the rooms
-  [ ] - Replace missile sprite
-  [ ] - Update explosion
 ### Gameplay
   [ ] - Add a Metal shutter that rolls down cinematically with segments that cascade down, dust particles as it hits bottom, a satisfying "clunk" sound effect
   [ ] - Add clearer feedback for game over conditions
   [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
   [ ] - Add flash indicator pointing at corner of first page 
   [ ] - Add simple fade to game over summary
-
   [ ] - Allow multiple simultaneous runners, time to multi-thread! Woohoo!
   [ ] - Change position so kill text flying up with the score update
   [ ] - Conversation with potato while checking documents
-  [ ] - Expand area for perfect hit chance on border runner system
   [ ] - Fix the issue where the game continues running during story sequences
   [ ] - Fix z-ordering issues on the summary screen
   [ ] - Icon showing missile Y-level, with arrow pointing where it is off-screen briefly, change color of icon if there are multiple
   [ ] - Lower delay between stamps
   [ ] - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
   [ ] - Make the instructions an overlay which you could close
-  [ ] - Make the missile travel time consistent and predictable
   [ ] - Potatoes continued to escape during the Shift Summary.
   [ ] - Potatoes emote (Kenny emotes) while waiting in line
   [ ] - Retouch each cutscene that stands out as rough (use dedicated 16-32 color palettes, repaint in simpler forms)
@@ -51,22 +45,13 @@ These are our goals, to-do tasks, and completed tasks.
 ### General Bugs
   [ ] - *INTERNAL USE* Speed up passport through slot, decrease by 0.5-1.5 seconds
   [ ] - A slider for the law book to slide in from the bottom as a note-card
-  [ ] - Able to drag passport off interaction table, bound them to lower half of screen
-  [ ] - Able to drag stamps off interaction table, bound them to lower half of screen
   [ ] - Add Difficulty selection UI after selecting endless mode
   [ ] - Add message queue system and delay between messages so they don't override each other, add GDScript to alert_label
-  [ ] - Add new missile explosion animation
   [ ] - Add new potato type art and re-institute potato type rules
-  [ ] - Border runner system went off twice and cancelled the first one out
-  [ ] - Can't see the mouse cursor > Attribute: https://steamcommunity.com/app/3291880/discussions/0/4637115050041082833/
   [ ] - Change time to a shift-based time, such as 8 hours over a day
-  [ ] - Changed character action text from italics to colored text
   [ ] - Check why date rules keep failing (make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
-  [ ] - Don't allow grab while passport is moving, toggle a is_currently_animated boolean to check when picking up
-  [ ] - Don't set stamps to go invisible when quota reached in Endless mode
   [ ] - Escape key for menu stopped working after I alt tabbed a few times and completed the first "day". Not sure of cause on that one.
   [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
-  [ ] - Fix missile getting stuck bug, store last position of mouse on potato escape. If the missile is in flight when the spud escapes off the road, the missile freezes and remains until the next escape attempt.
   [ ] - Halfway through instructions while we begin to explain the stamps the wording become confusing and she was lost
   [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
   [ ] - If you accept a potato at the same time the timer runs out then the potato duplicates and you get both results
@@ -76,23 +61,18 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Lower z-index of crater below that of the potato_person runner
   [ ] - Make sure the endless doesn't end too early
   [ ] - Make two sets of paths, one which start in the office and one which doesn't for Spud runner, only do the office start when they are already in office
-  [ ] - Mouse has to be over passport to be able to stamp
   [ ] - Move shift summary to end of game, not end of shift, on quota reached restart, on strikes reached end game
   [ ] - Option to disable the timer in Story and Endless mode  > Attribute: https://steamcommunity.com/app/3291880/discussions/0/603016087419796439/
   [ ] - Possibly exit the game from the lose screen
   [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
   [ ] - Randomly lose combo when doing potato border runner system
   [ ] - Resolve missing passport documents in story mode
-  [ ] - Rewrite laws to make sense, bad wording
   [ ] - Rounds end too abruptly, need to tell the player why they failed
-  [ ] - Snap closed passport to position of mouse cursor to avoid bad offset
   [ ] - Sometimes the potatoes don't give you a passport
-  [ ] - Stamps go over edge of passport
   [ ] - There is no continuing shift, after you reach quota you hit the shift summary and end the game
   [ ] - Update ATTRIBUTION.md with MODERN DOS font
   [ ] - Update menus with new MODERN DOS font
   [ ] - Update stats on potato escape and missile kill
-  [ ] - When potato escapes, if it does so mid click (such as clicking on the speaker or a passport), the missile fires at the place you clicked on the screen. Constrain it to the Area2D for targeting potatoes on the left side of the screen, you could simply check cursor status.
   [ ] - When you correctly reject a potato it does not give you the 1,000 points
 ### Law Bugs
   [ ] - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
@@ -113,6 +93,7 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Shooting from the office instead of a missile?
   [ ] - Use top 3 scores for leaderboard, then show ... and show 3 scores above player and 3 scores below player (if any), with players score in middle. 
   [ ] - UV lamp represents a high-risk way to maximize points.
+  [ ] - Randomly toggle the lights on and off like people are using the rooms
 
 
 
@@ -133,6 +114,8 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Add Flash Indicator for Megaphone via shader
   [ ] - Display Score for Longer Duration
   [ ] - Add logic to check if game paused or in dialogic before updating cursor to target cursor
+  [ ] - Stamps go over edge of passport
+  [ ] - Improve stamp and interaction system integration
 
 ### Currently Active Tasks for 1.0.2
   [ ] - Add if check to BorderRunnerSystem.gd to check if user is currently in dialogic timeline, if so than do not spawn potatoes
@@ -173,6 +156,20 @@ Before release, go through GitHub commits and see what the fuck we even did this
   - Add a missile targeting restriction region to prevent accidental missile launches when clicking UI elements
   - Allow firing multiple missiles at once
   - Allow firing missiles even when no active runner
+  [ ] - Snap closed passport to position of mouse cursor to avoid bad offset
+  [ ] - Able to drag passport off interaction table, bound them to lower half of screen
+  [ ] - Able to drag stamps off interaction table, bound them to lower half of screen
+  [ ] - Add new missile explosion animation
+  [ ] - Border runner system went off twice and cancelled the first one out (We overhauled the entire system)
+  [ ] - Changed character action text from italics to colored text (We represent story character actions differently now)
+  [ ] - Fix missile getting stuck bug, store last position of mouse on potato escape. If the missile is in flight when the spud escapes off the road, the missile freezes and remains until the next escape attempt.
+  [ ] - Rewrite laws to make sense, bad wording (I rewrote 3 of them, not sure what this meant, it's from months ago)
+  [ ] - When potato escapes, if it does so mid click (such as clicking on the speaker or a passport), the missile fires at the place you clicked on the screen. Constrain it to the Area2D for targeting potatoes on the left side of the screen, you could simply check cursor status.
+  [ ] - Make the missile travel time consistent and predictable
+  [ ] - Replace missile sprite
+  [ ] - Update explosion
+  [ ] - Expand area for perfect hit chance on border runner system
+
 
 # OFFICIALLY COMPLETED TASKS
 The tasks which have be completed and pushed to Steam.
@@ -180,6 +177,7 @@ When adding to the lists, please either rephrase immediately or separate your ta
 If a label is marked with *INTERNAL USE* then do *NOT* include it in the official release post to Steam.
 
 ## Steam Minor Update 1.0.1: General bug fixes - ALREADY RELEASED
+  - Can't see the mouse cursor > Attribute: https://steamcommunity.com/app/3291880/discussions/0/4637115050041082833/
   - Updated font for dialogue
   - Changed character actions from italic to colored text
   - Changed background color of dialogue boxes
