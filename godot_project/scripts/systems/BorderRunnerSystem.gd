@@ -525,7 +525,23 @@ func launch_missile(target_pos):
 	
 	missile.sprite.global_position = missile.position
 	missile.sprite.rotation = (target_pos - missile.position).normalized().angle() + PI/2
+	shift_stats.missiles_fired += 1
 	
+	# Play activation and launch sound - FIX THIS PART
+	if missile_sound and missile_sound.get_instance_id() != 0:
+		# Create a dedicated audio player for the missile sound to prevent interruption
+		var launch_player = AudioStreamPlayer2D.new()
+		launch_player.stream = missile_sound.stream
+		launch_player.volume_db = -5.0  # Adjust volume as needed
+		launch_player.bus = "SFX"
+		launch_player.autoplay = true
+		launch_player.position = missile.position
+		add_child(launch_player)
+		
+		# Auto-cleanup after playing
+		launch_player.finished.connect(launch_player.queue_free)
+	else:
+		print("ERROR: Missile sound not loaded properly")
 	active_missiles.append(missile)
 	
 	print("Missile launched. Active missiles: ", active_missiles.size())
@@ -565,6 +581,21 @@ func trigger_explosion(missile_or_position):
 	)
 	
 	add_child(explosion)
+	
+		# Play activation and launch sound - FIX THIS PART
+	if explosion_sound and explosion_sound.get_instance_id() != 0:
+		# Create a dedicated audio player for the missile sound to prevent interruption
+		var explosion_player = AudioStreamPlayer2D.new()
+		explosion_player.stream = explosion_sound.stream
+		explosion_player.volume_db = -5.0  # Adjust volume as needed
+		explosion_player.bus = "SFX"
+		explosion_player.autoplay = true
+		add_child(explosion_player)
+		
+		# Auto-cleanup after playing
+		explosion_player.finished.connect(explosion_player.queue_free)
+	else:
+		print("ERROR: Explosion sound not loaded properly")
 	
 	# Create smoke animation
 	var smoke = AnimatedSprite2D.new()
