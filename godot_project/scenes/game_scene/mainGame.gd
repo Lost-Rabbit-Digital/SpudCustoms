@@ -868,12 +868,22 @@ func _on_game_over():
 		# Call go to game over to load shift summary screen
 		Global.go_to_game_over()
 
-# Screen shake for explosions like missiles
+# Screen shake with configurable intensity and duration
+# Mild: intensity 3-5, duration 0.2
+# Medium: intensity 10-15, duration 0.3
+# Strong: intensity 20-25, duration 0.4
 func shake_screen(intensity: float = 10.0, duration: float = 0.3):
-	var camera = $Camera2D
+	# Use the Root node (self) for the screen shake
+	# This will move the entire game view
 	
 	# Create a screen shake tween
 	var tween = create_tween()
+	
+	# Number of shake steps
+	var steps = 12
+	
+	# Initial position to return to
+	var initial_position = position
 	
 	# Initial random offset
 	var random_shake = Vector2(
@@ -881,20 +891,22 @@ func shake_screen(intensity: float = 10.0, duration: float = 0.3):
 		randf_range(-intensity, intensity)
 	)
 	
-	camera.offset = random_shake
+	# Apply the initial shake
+	position += random_shake
 	
 	# Shake with diminishing intensity
-	for i in range(10):
-		var shake_intensity = intensity * (1.0 - (i / 10.0))
+	for i in range(steps):
+		var shake_intensity = intensity * (1.0 - (i / float(steps)))
 		random_shake = Vector2(
 			randf_range(-shake_intensity, shake_intensity),
 			randf_range(-shake_intensity, shake_intensity)
 		)
 		
-		tween.tween_property(camera, "offset", random_shake, duration / 10)
+		# Move relative to the initial position
+		tween.tween_property(self, "position", initial_position + random_shake, duration / steps)
 	
-	# Return to center
-	tween.tween_property(camera, "offset", Vector2.ZERO, duration / 10)
+	# Return to original position
+	tween.tween_property(self, "position", initial_position, duration / steps)
 
 
 func parse_date(date_string: String) -> Dictionary:

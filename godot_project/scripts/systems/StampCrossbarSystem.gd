@@ -121,7 +121,18 @@ func create_final_stamp(stamp_type: String, pos: Vector2):
 	# Add stamp to OpenPassport instead of the passport directly
 	open_passport.add_child(final_stamp)
 	
-	# Rest of the function remains the same
+	# Find the main game node correctly
+	var main_game = self
+	while main_game and main_game.get_parent() and main_game.name != "Root":
+		main_game = main_game.get_parent()
+	
+	# Trigger mild screen shake
+	if main_game and main_game.has_method("shake_screen"):
+		main_game.shake_screen(4.0, 0.2)  # Mild shake for stamping
+	else:
+		print("ERROR: Could not find main game node with shake_screen method")
+		print("Current node: ", self.name, ", Parent: ", get_parent().name if get_parent() else "none")
+		
 	if stats_manager:
 		stats_manager.current_stats.total_stamps += 1
 		var is_perfect = stats_manager.check_stamp_accuracy(
