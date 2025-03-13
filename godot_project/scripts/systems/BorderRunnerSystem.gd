@@ -657,7 +657,7 @@ func trigger_explosion(missile_or_position):
 		# Create a dedicated audio player for the missile sound to prevent interruption
 		var explosion_player = AudioStreamPlayer2D.new()
 		explosion_player.stream = explosion_sound.stream
-		explosion_player.volume_db = -5.0  # Adjust volume as needed
+		explosion_player.volume_db = 5.0  # Adjust volume as needed
 		explosion_player.bus = "SFX"
 		explosion_player.autoplay = true
 		add_child(explosion_player)
