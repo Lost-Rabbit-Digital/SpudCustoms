@@ -83,12 +83,13 @@ In this world of anthropomorphic potatoes, your job is to:
 
 ```bash
 # Clone the repository
-git clone https://github.com/lost-rabbit-digital/spud-customs.git
+git clone https://github.com/Lost-Rabbit-Digital/SpudCustoms.git
 
 # Change to project directory
-cd spud-customs
+cd SpudCustoms
 
-# Open the project in Godot
+# Open the project in Godot using OS GUI
+# Or execute Godot from terminal with following command:
 godot -e
 ```
 
@@ -101,11 +102,11 @@ godot -e
     <tr>
       <td width="33%" align="center">
         <h3>🧩 Code Style</h3>
-        <p>We follow the <a href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html">GDScript style guide</a></p>
+        <p>We follow the <a href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html">GDScript style guide</a> loosely</p>
       </td>
       <td width="33%" align="center">
         <h3>🌿 Branches</h3>
-        <p><code>main</code>, <code>develop</code>,<br><code>feature/X</code>, <code>bugfix/X</code></p>
+        <p><code>main</code>,<br><code>feature/X</code>, <code>bugfix/X</code></p>
       </td>
       <td width="33%" align="center">
         <h3>🔄 Workflow</h3>
@@ -167,10 +168,10 @@ godot -e
 ## 📜 License
 
 <div align="center">
-  <a href="LICENSE">
+  <a href="LICENSE.md">
     <img src="https://img.shields.io/badge/License-MPL_2.0-yellow.svg?style=for-the-badge" alt="License: MPL 2.0">
   </a>
-  <p>This project is licensed under the MPL 2.0 License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+  <p>This project is licensed under the MPL 2.0 License - see the <a href="LICENSE.md">LICENSE</a> file for details.</p>
 </div>
 
 ---
