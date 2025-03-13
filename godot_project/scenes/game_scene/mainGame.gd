@@ -316,7 +316,7 @@ func megaphone_clicked():
 		megaphone_dialogue_box.visible = true
 		print("No potato to process. :(")
 		
-func move_potato_to_office(potato_person):
+func move_potato_to_office(potato_person: PotatoPerson):
 	print("Moving our spuddy to the customs office")
 	if potato_person.get_parent():
 		potato_person.get_parent().remove_child(potato_person)
