@@ -23,6 +23,7 @@ var current_point: int = 0
 var target_point: int = 0
 var speed_multiplier: float = 1.0
 var runner_base_speed: float = 0.14  # Default to Normal difficulty
+var regular_path_speed: float = 0.50 # Default to Normal difficulty
 
 
 # Path following

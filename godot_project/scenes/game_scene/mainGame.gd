@@ -2,6 +2,7 @@ extends Node2D
 
 # Add border runner system
 var border_runner_system
+var regular_potato_speed = 0.5  # Add this at the class level
 
 # Track game states
 var is_game_paused: bool = false
@@ -161,6 +162,12 @@ func _ready():
 	border_runner_system.game_over_triggered.connect(_on_game_over)
 	border_runner_system.is_enabled = true
 	
+	# Store the original runner chance for reference when enabling/disabling
+	original_runner_chance = border_runner_system.runner_chance
+	
+	# Ensure difficulty settings are propagated to all systems
+	set_difficulty(difficulty_level)
+	
 	Dialogic.timeline_started.connect(_on_dialogue_started)
 	Dialogic.timeline_ended.connect(_on_dialogue_finished)
 	#disable_controls()
@@ -239,14 +246,19 @@ func end_shift():
 	
 func set_difficulty(level):
 	difficulty_level = level
+	
+	# Set strike limits based on difficulty
 	match difficulty_level:
 		"Easy":
 			Global.max_strikes = 6
+			regular_potato_speed = 0.4
 		"Normal":
 			Global.max_strikes = 4
+			regular_potato_speed = 0.5
 		"Expert":
 			Global.max_strikes = 3
-			
+			regular_potato_speed = 0.6
+	
 	update_quota_display()
 	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
 
@@ -307,6 +319,9 @@ func megaphone_clicked():
 func move_potato_to_office(potato: PotatoPerson):
 	print("Moving our spuddy to the customs office")
 	potato.set_state(potato.TaterState.IN_OFFICE)
+	
+	# Set a consistent entry speed
+	potato.regular_path_speed = regular_potato_speed
 	
 	# Attach potato to entry path
 	if enter_office_path:
@@ -745,6 +760,9 @@ func move_potato_along_path(approval_status):
 					# Instead of using path, hand over to border runner system
 					border_runner_system.start_runner(potato)
 					return
+		
+		# For normal approved/rejected paths, set a specific speed
+		potato.regular_path_speed = regular_potato_speed
 		
 		# Attach to the selected path
 		potato.attach_to_path(path)
