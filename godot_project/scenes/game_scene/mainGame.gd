@@ -297,7 +297,6 @@ func megaphone_clicked():
 		current_potato_info = potato.get_potato_info()
 		
 		# Move potato to the office
-		potato.set_state(potato.TaterState.IN_OFFICE)
 		move_potato_to_office(potato)
 	else:
 		megaphone_dialogue_box.next_message()
@@ -322,6 +321,8 @@ func move_potato_to_office(potato: PotatoPerson):
 # Add this new function to handle path completion
 func _on_potato_path_completed(potato: PotatoPerson):
 	# Clean up potato and show mugshot
+	potato.set_state(potato.TaterState.IN_OFFICE)
+	
 	potato.queue_free()
 	animate_mugshot_and_passport()
 	
