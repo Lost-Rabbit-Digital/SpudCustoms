@@ -626,10 +626,18 @@ func trigger_explosion(missile_or_position):
 	else:
 		explosion_position = missile_or_position.position
 	
-	# Trigger screen shake
-	var main_game = get_parent()
-	if main_game.has_method("shake_screen"):
-		main_game.shake_screen()
+	# Trigger screen shake - find the main game node correctly
+	# Navigate up the scene tree to find the Root node
+	var main_game = self
+	while main_game and main_game.get_parent() and main_game.name != "Root":
+		main_game = main_game.get_parent()
+	
+	if main_game and main_game.has_method("shake_screen"):
+		# Medium shake for regular explosions
+		main_game.shake_screen(12.0, 0.3)
+	else:
+		print("ERROR: Could not find main game node with shake_screen method")
+		print("Current node: ", self.name, ", Parent: ", get_parent().name if get_parent() else "none")
 	
 	# Create explosion animation
 	var explosion = AnimatedSprite2D.new()
@@ -760,9 +768,17 @@ func handle_successful_hit(runner, explosion_pos):
 	var points_earned = runner_base_points
 	var bonus_text = ""
 	
+	# Find the main game node correctly
+	var main_game = self
+	while main_game and main_game.get_parent() and main_game.name != "Root":
+		main_game = main_game.get_parent()
+	
 	# Calculate bonuses
 	var distance = runner.get_position().distance_to(explosion_pos)
 	if distance < explosion_size / 3:
+		# Perfect hit - trigger stronger screen shake
+		if main_game and main_game.has_method("shake_screen"):
+			main_game.shake_screen(22.0, 0.4)  # Strong shake for perfect hits
 		# Update shift stats for perfect hits
 		shift_stats.perfect_hits += 1
 		# Spawn even more gibs on a perfect hit
