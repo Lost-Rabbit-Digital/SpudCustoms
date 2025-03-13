@@ -35,6 +35,10 @@ func can_add_potato() -> bool:
 	return potatoes.size() < max_potatoes
 
 func spawn_new_potato():
+	if !%NarrativeManager.is_dialogue_active():
+		print("QueueManager disabled while in dialogue, no immigrating potatoes allowed.")
+		return
+		
 	print("Attempting to spawn potato. Can add: ", can_add_potato())
 	if can_add_potato():
 		var potato = PotatoFactory.create_random_potato()

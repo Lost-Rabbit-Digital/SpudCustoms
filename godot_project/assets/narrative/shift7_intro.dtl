@@ -2,7 +2,7 @@
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
 
 [background arg="res://assets/narrative/root_reserve_reveal.png" fade="2.0"]
-join sweet_potato_sasha center [z_index="1"]
+join sweet_potato_sasha [z_index="1"]
 You rendezvous with Sasha at a secure location
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Good, you made it. The resistance is growing stronger by the day.
@@ -18,7 +18,7 @@ sweet_potato_sasha: Sasha's eyes burn with intensity: This isn't just a food sup
 - "I don't know, Sasha...this is a lot to take in."
 - "What do we do now? We can't trust anyone."
 
-join player_character center [z_index="1"]
+join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 player_character: You rifle through the papers, growing more disturbed by the second.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]

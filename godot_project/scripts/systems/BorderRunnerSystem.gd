@@ -494,6 +494,9 @@ func _unhandled_input(event):
 
 
 func launch_missile(target_pos):
+	if not is_enabled or is_in_dialogic:
+		print("BorderRunnerSystem disabled or in dialogue, no missiles allowed.")
+		return
 	print("Launching missile. Max missiles: %d, Current missiles: %d" % [max_missiles, active_missiles.size()])
 	
 	if active_missiles.size() >= max_missiles and not unlimited_missiles:

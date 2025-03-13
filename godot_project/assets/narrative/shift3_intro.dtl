@@ -101,7 +101,7 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 npc_3: Their voice cracks with emotion: How do you sleep at night?
 leave npc_3
 
-join supervisor_russet center [z_index="1"]
+join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Russet watches with narrowed eyes: I saw that exchange. Remember, sympathizing with the rejects only leads to trouble.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]

@@ -4,7 +4,7 @@ audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume=
 if {stay_or_go} == "stay":
 	# Storyline for those who stayed at their post
 	[background arg="res://assets/narrative/martial_law_checkpoint.png" fade="2.0"]
-	join narrator center [z_index="1"]
+	join narrator [z_index="1"]
 	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
 	narrator: The border checkpoint has been rebuilt and fortified after the resistance attack.
 	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
@@ -16,7 +16,7 @@ if {stay_or_go} == "stay":
 	leave narrator
 	
 	[background arg="res://assets/narrative/supervisor_promotion.png" fade="2.0"]
-	join supervisor_russet center [z_index="1"]
+	join supervisor_russet [z_index="1"]
 	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
 	supervisor_russet: Supervisor Russet, now adorned with new medals and honors, addresses the staff.
 	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
@@ -32,7 +32,7 @@ if {stay_or_go} == "stay":
 	leave supervisor_russet
 	
 	[background arg="res://assets/narrative/special_assignment.png" fade="2.0"]
-	join supervisor_russet center [z_index="1"]
+	join supervisor_russet [z_index="1"]
 	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
 	supervisor_russet: Russet pulls you aside after the ceremony, voice lowered.
 	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
@@ -46,7 +46,7 @@ if {stay_or_go} == "stay":
 	leave supervisor_russet
 	
 	[background arg="res://assets/narrative/whispers_of_doubt.png" fade="2.0"]
-	join  center [z_index="1"]
+	join npc_1 [z_index="1"]
 	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
 	As you prepare your station, a fellow officer approaches cautiously.
 	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
@@ -59,7 +59,7 @@ if {stay_or_go} == "stay":
 	"Some are saying the resistance wasn't completely wrong. That there's evidence they were telling the truth..."
 	
 	set {fellow_officer_response_2} = "none"
-	- "Be careful. Even talking like that is dangerous now."
+- "Be careful. Even talking like that is dangerous now."
 		set {fellow_officer_response_2} = "cautious"
 - "I've had the same thoughts. This doesn't feel right."
 	set {fellow_officer_response_2} = "sympathetic"
@@ -67,7 +67,7 @@ if {stay_or_go} == "stay":
 	set {fellow_officer_response_2} = "loyal"
 
 if {fellow_officer_response_2} == "cautious":
-	join  center [z_index="1"]
+	join npc_1 [z_index="1"]
 	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
 	The officer nods slightly. "You're right. The walls have ears."
 	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
@@ -77,7 +77,7 @@ if {fellow_officer_response_2} == "cautious":
 	leave 
 
 elif {fellow_officer_response_2} == "sympathetic":
-	join  center [z_index="1"]
+	join npc_1 [z_index="1"]
 	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
 	Relief flickers across the officer's face. "I thought I was the only one."
 	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
@@ -87,7 +87,7 @@ elif {fellow_officer_response_2} == "sympathetic":
 	leave 
 
 else:
-	join  center [z_index="1"]
+	join npc_1 [z_index="1"]
 	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
 	The officer's expression closes off. "Of course. Duty to Spud. How could I forget?"
 	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
@@ -97,7 +97,7 @@ else:
 	leave 
 
 [background arg="res://assets/narrative/prime_minister_arrival.png" fade="2.0"]
-join announcer center [z_index="1"]
+join announcer  [z_index="1"]
 audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
 announcer: "ATTENTION ALL PERSONNEL\: Prime Minister Idaho's motorcade has arrived."
 audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
@@ -107,7 +107,7 @@ announcer: "Any deviation from standard procedures will be severely punished. Gl
 leave announcer
 
 [background arg="res://assets/narrative/checkpoint_station_prepared.png" fade="2.0"]
-join player_character center [z_index="1"]
+join player_character [z_index="1"]
 audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
 player_character: You take your position at the checkpoint, uniform pressed, equipment polished.
 audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
@@ -123,7 +123,7 @@ leave player_character
 else:
 	# Storyline for those who joined the resistance
 	[background arg="res://assets/narrative/resistance_hideout.png" fade="2.0"]
-	join narrator center [z_index="1"]
+	join narrator [z_index="1"]
 	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
 	narrator: The resistance hideout buzzes with activity as fighters prepare for the final operation.
 	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
@@ -135,7 +135,7 @@ else:
 	leave narrator
 	
 	[background arg="res://assets/narrative/strategy_meeting.png" fade="2.0"]
-	join  center [z_index="1"]
+	join npc_1 [z_index="1"]
 	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
 	The resistance leader stands before a map of the government complex.
 	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
@@ -149,7 +149,7 @@ else:
 	leave 
 	
 	[background arg="res://assets/narrative/sasha_recovery.png" fade="2.0"]
-	join sweet_potato_sasha center [z_index="1"]
+	join sweet_potato_sasha [z_index="1"]
 	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
 	sweet_potato_sasha: Sasha approaches, still bandaged but standing tall with determination.
 	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
@@ -170,7 +170,7 @@ else:
 	set {final_mission_response} = "hesitant"
 
 if {final_mission_response} == "determined":
-	join sweet_potato_sasha center [z_index="1"]
+	join sweet_potato_sasha [z_index="1"]
 	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
 	sweet_potato_sasha: Sasha's face lights up with fierce pride. "I knew you wouldn't back down now."
 	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
@@ -180,7 +180,7 @@ if {final_mission_response} == "determined":
 	leave sweet_potato_sasha
 
 elif {final_mission_response} == "cautious":
-	join sweet_potato_sasha center [z_index="1"]
+	join sweet_potato_sasha [z_index="1"]
 	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
 	sweet_potato_sasha: Sasha nods appreciatively. "Smart. Always know what you're getting into."
 	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
@@ -192,7 +192,7 @@ elif {final_mission_response} == "cautious":
 	leave sweet_potato_sasha
 
 else:
-	join sweet_potato_sasha center [z_index="1"]
+	join sweet_potato_sasha [z_index="1"]
 	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
 	sweet_potato_sasha: Disappointment flickers across Sasha's face. "Negotiate? With Idaho?"
 	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
@@ -204,7 +204,7 @@ else:
 	leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/resistance_armor.png" fade="2.0"]
-join resistance_member_2 center [z_index="1"]
+join resistance_member_2 [z_index="1"]
 audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
 resistance_member_2: A resistance fighter brings you equipment for the mission.
 audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
@@ -218,7 +218,7 @@ resistance_member_2: "Your primary objective\: secure the broadcast center and p
 leave resistance_member_2
 
 [background arg="res://assets/narrative/final_briefing.png" fade="2.0"]
-join  center [z_index="1"]
+join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
 The resistance gathers for final instructions before deployment.
 audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
@@ -232,7 +232,7 @@ audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
 leave 
 
 [background arg="res://assets/narrative/approaching_capital.png" fade="2.0"]
-join player_character center [z_index="1"]
+join player_character [z_index="1"]
 audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
 player_character: As your team approaches the government complex, you reflect on your journey.
 audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
