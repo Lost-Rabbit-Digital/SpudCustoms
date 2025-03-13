@@ -55,6 +55,7 @@ var default_cursor = Input.CURSOR_ARROW
 @onready var passport_generator = $Gameplay/InteractiveElements/Passport/OpenPassport/PassportPhotoGenerator
 
 @onready var megaphone = $Gameplay/Megaphone
+@onready var megaphone_dialogue_box = %MegaphoneDialogueBox
 @onready var enter_office_path = $Gameplay/Paths/EnterOfficePath
 @onready var stats_manager = $SystemManagers/StatsManager
 var shift_stats: ShiftStats
@@ -276,31 +277,21 @@ func update_date_display():
 	var formatted_date = "%04d.%02d.%02d" % [current_date.year, current_date.month, current_date.day]
 	$UI/Labels/DateLabel.text = formatted_date
 
-func play_random_customs_officer_sound():
-	var customs_officer_sounds = [
-		preload("res://assets/audio/talking/froggy_phrase_1.wav"),
-		preload("res://assets/audio/talking/froggy_phrase_2.wav"),
-		preload("res://assets/audio/talking/froggy_phrase_3.wav"),
-		preload("res://assets/audio/talking/froggy_phrase_4.wav"),
-		preload("res://assets/audio/talking/froggy_phrase_5.wav"),
-		preload("res://assets/audio/talking/froggy_phrase_6.wav"),
-		preload("res://assets/audio/talking/froggy_phrase_7.wav")
-	]
-	# Play potato customs officer sound
-	if !$SystemManagers/AudioManager/SFXPool.is_playing():
-		$SystemManagers/AudioManager/SFXPool.stream = customs_officer_sounds.pick_random()
-		$SystemManagers/AudioManager/SFXPool.play()
+
 		
 func megaphone_clicked():
 	if is_potato_in_office:
-		play_random_customs_officer_sound()
+		megaphone_dialogue_box.next_message()
+		megaphone_dialogue_box.play_random_officer_sound()
+		megaphone_dialogue_box.visible = true
 		print("Warning: A potato is already in the customs office!")
 		return
 		
 	var potato = queue_manager.remove_front_potato()
 	if potato:
-		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = true
-		#$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.texture = preload("res://assets/megaphone/megaphone_dialogue_box_1.png")
+		megaphone_dialogue_box.next_message()
+		megaphone_dialogue_box.play_random_officer_sound()
+		megaphone_dialogue_box.visible = true
 		is_potato_in_office = true
 		megaphone.visible = true
 		current_potato_info = potato.get_potato_info()
@@ -309,8 +300,9 @@ func megaphone_clicked():
 		potato.set_state(potato.TaterState.IN_OFFICE)
 		move_potato_to_office(potato)
 	else:
-		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = true
-		#$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.texture = preload("res://assets/megaphone/megaphone_dialogue_box_7.png")
+		megaphone_dialogue_box.next_message()
+		megaphone_dialogue_box.play_random_officer_sound()
+		megaphone_dialogue_box.visible = true
 		print("No potato to process. :(")
 		
 func move_potato_to_office(potato: PotatoPerson):
@@ -400,9 +392,9 @@ func _process(_delta):
 	else:
 		$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = false
 	
-	# Hide megaphone dialogue when sound stops playing
-	if !$SystemManagers/AudioManager/SFXPool.is_playing():
-		$Gameplay/Megaphone/MegaphoneDialogueBoxBlank.visible = false
+	# Hide megaphone dialogue box when the officer sound stops playing
+	if !%SFXPool.is_playing():
+		megaphone_dialogue_box.visible = false
 		
 	# Update combo timer
 	if combo_count > 0:

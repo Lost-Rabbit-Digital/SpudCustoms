@@ -1,4 +1,5 @@
 extends Sprite2D
+class_name MegaphoneDialogueBox
 
 @onready var megaphone_text = $MegaphoneText
 
@@ -111,3 +112,21 @@ func set_random_message():
 # Call this function to cycle to the next random message
 func next_message():
 	set_random_message()
+
+func play_random_officer_sound():
+	# WARNING: This will load all of these sounds into memory every time 
+	# this function is called, so probably want to introduce some type of
+	# resource management into this.
+	var customs_officer_sounds = [
+		preload("res://assets/audio/talking/froggy_phrase_1.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_2.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_3.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_4.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_5.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_6.wav"),
+		preload("res://assets/audio/talking/froggy_phrase_7.wav")
+	]
+	# Play potato customs officer sound
+	if !%SFXPool.is_playing():
+		%SFXPool.stream = customs_officer_sounds.pick_random()
+		%SFXPool.play()
