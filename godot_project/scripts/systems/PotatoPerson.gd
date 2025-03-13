@@ -22,6 +22,9 @@ var potato_info: Dictionary = {}
 var current_point: int = 0
 var target_point: int = 0
 var speed_multiplier: float = 1.0
+var runner_base_speed: float = 0.14  # Default to Normal difficulty
+var regular_path_speed: float = 0.50 # Default to Normal difficulty
+
 
 # Path following
 var current_path_follow: PathFollow2D
@@ -127,7 +130,7 @@ func move_toward(target: Vector2, speed: float):
 func follow_path(delta):
 	if current_path_follow:
 		# Update path position based on speed
-		var path_speed = delta * 5.0 * speed_multiplier  # Base speed * multiplier
+		var path_speed = delta * runner_base_speed * speed_multiplier  # Base speed * multiplier
 		
 		# Progress along the path
 		current_path_follow.progress_ratio += path_speed

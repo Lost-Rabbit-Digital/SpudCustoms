@@ -22,6 +22,9 @@ static func create_potato_with_info(info: Dictionary) -> PotatoPerson:
 	# Update the potato with the provided info
 	potato.update_potato(info)
 	
+	# Set default movement speeds
+	potato.regular_path_speed = 0.30 # Default fallback
+	
 	return potato
 
 # Generate random potato info

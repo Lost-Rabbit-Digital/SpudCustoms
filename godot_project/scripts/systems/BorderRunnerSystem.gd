@@ -141,10 +141,6 @@ class Runner:
 		var old_ratio = path_follow.progress_ratio
 		path_follow.progress_ratio += delta * speed
 		
-		# Debug output
-		print("Runner progress: ", path_follow.progress_ratio)
-		print("Runner position: ", potato.global_position)
-		
 		# Check if runner reached the end
 		if path_follow.progress_ratio >= 0.99:
 			has_escaped = true
@@ -454,6 +450,9 @@ func start_runner(potato: PotatoPerson):
 	potato.modulate.a = 1.0
 	potato.z_index = 10  # Ensure it's above background elements
 	
+	# Set the runner speed directly on the potato
+	potato.runner_base_speed = runner_speed  # Add this line
+	
 	# Play alarm and show alert
 	if alarm_sound and not alarm_sound.playing:
 		alarm_sound.play()
@@ -734,24 +733,26 @@ func trigger_explosion(missile_or_position):
 
 func check_runner_hits(explosion_pos):
 	var hit_any = false
+	var runners_to_hit = []
 	var i = active_runners.size() - 1
 	
+	# First, collect all runners to hit
 	while i >= 0:
 		var runner = active_runners[i]
 		var distance = runner.global_position.distance_to(explosion_pos)
 		
 		if distance < explosion_size:
-			# We hit this runner!
-			hit_any = true
-			handle_successful_hit(runner, explosion_pos)
-			
-			# Apply damage to the runner which will trigger the destroyed signal
-			runner.apply_damage()
-			
-			# Remove from our list - don't need cleanup() anymore
+			# Store for later processing
+			runners_to_hit.append(runner)
 			active_runners.remove_at(i)
+			hit_any = true
 		
 		i -= 1
+		
+	# Then process the hits afterward to avoid recursive signal issues
+	for runner in runners_to_hit:
+		handle_successful_hit(runner, explosion_pos)
+		runner.apply_damage()
 		
 	if not hit_any:
 		print("Missile missed all runners")

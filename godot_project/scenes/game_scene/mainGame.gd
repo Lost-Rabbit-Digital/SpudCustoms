@@ -2,6 +2,7 @@ extends Node2D
 
 # Add border runner system
 var border_runner_system
+var regular_potato_speed = 0.5  # Add this at the class level
 
 # Track game states
 var is_game_paused: bool = false
@@ -161,6 +162,12 @@ func _ready():
 	border_runner_system.game_over_triggered.connect(_on_game_over)
 	border_runner_system.is_enabled = true
 	
+	# Store the original runner chance for reference when enabling/disabling
+	original_runner_chance = border_runner_system.runner_chance
+	
+	# Ensure difficulty settings are propagated to all systems
+	set_difficulty(difficulty_level)
+	
 	Dialogic.timeline_started.connect(_on_dialogue_started)
 	Dialogic.timeline_ended.connect(_on_dialogue_finished)
 	#disable_controls()
@@ -239,14 +246,19 @@ func end_shift():
 	
 func set_difficulty(level):
 	difficulty_level = level
+	
+	# Set strike limits based on difficulty
 	match difficulty_level:
 		"Easy":
 			Global.max_strikes = 6
+			regular_potato_speed = 0.4
 		"Normal":
 			Global.max_strikes = 4
+			regular_potato_speed = 0.5
 		"Expert":
 			Global.max_strikes = 3
-			
+			regular_potato_speed = 0.6
+	
 	update_quota_display()
 	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
 
@@ -304,19 +316,36 @@ func megaphone_clicked():
 		megaphone_dialogue_box.visible = true
 		print("No potato to process. :(")
 		
-func move_potato_to_office(potato: PotatoPerson):
+func move_potato_to_office(potato_person):
 	print("Moving our spuddy to the customs office")
-	potato.set_state(potato.TaterState.IN_OFFICE)
-	
-	# Attach potato to entry path
-	if enter_office_path:
-		potato.attach_to_path(enter_office_path)
+	if potato_person.get_parent():
+		potato_person.get_parent().remove_child(potato_person)
+		print("removed potato from original parent")
 		
-		# Connect to path completion
-		if !potato.is_connected("path_completed", Callable(self, "_on_potato_path_completed")):
-			potato.path_completed.connect(_on_potato_path_completed.bind(potato))
-	else:
-		push_error("Enter office path not found!")
+	var path_follow = PathFollow2D.new()
+	path_follow.rotates = false 
+	enter_office_path.add_child(path_follow)
+	path_follow.add_child(potato_person)
+	print("Added potato_person to new PathFollow2D")
+	
+	potato_person.position = Vector2.ZERO
+	path_follow.progress_ratio = 0.0
+	print("Reset potato position and path progress") 
+	
+	# Calculate a better duration based on path length
+	var path_length = enter_office_path.curve.get_baked_length()
+	var duration = path_length / 300.0  # Adjust 300.0 to control the speed
+	duration = clamp(duration, 0.5, 2.0)  # Ensure reasonable bounds
+		
+	var tween = create_tween()
+	tween.tween_property(path_follow, "progress_ratio", 1.0, duration)
+	tween.tween_callback(func():
+		print("Potato reached end of path, clean up")
+		potato_person.queue_free()
+		path_follow.queue_free()
+		animate_mugshot_and_passport()
+		)
+	print("Started animate mugshot and passport tween animation")
 
 # Add this new function to handle path completion
 func _on_potato_path_completed(potato: PotatoPerson):
@@ -745,6 +774,9 @@ func move_potato_along_path(approval_status):
 					# Instead of using path, hand over to border runner system
 					border_runner_system.start_runner(potato)
 					return
+		
+		# For normal approved/rejected paths, set a specific speed
+		potato.regular_path_speed = regular_potato_speed
 		
 		# Attach to the selected path
 		potato.attach_to_path(path)
