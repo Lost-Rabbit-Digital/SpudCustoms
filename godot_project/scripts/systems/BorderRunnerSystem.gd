@@ -141,10 +141,6 @@ class Runner:
 		var old_ratio = path_follow.progress_ratio
 		path_follow.progress_ratio += delta * speed
 		
-		# Debug output
-		print("Runner progress: ", path_follow.progress_ratio)
-		print("Runner position: ", potato.global_position)
-		
 		# Check if runner reached the end
 		if path_follow.progress_ratio >= 0.99:
 			has_escaped = true
@@ -453,6 +449,9 @@ func start_runner(potato: PotatoPerson):
 	potato.visible = true
 	potato.modulate.a = 1.0
 	potato.z_index = 10  # Ensure it's above background elements
+	
+	# Set the runner speed directly on the potato
+	potato.runner_base_speed = runner_speed  # Add this line
 	
 	# Play alarm and show alert
 	if alarm_sound and not alarm_sound.playing:
