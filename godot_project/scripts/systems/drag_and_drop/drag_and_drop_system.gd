@@ -21,8 +21,6 @@ var drag_offset = Vector2()
 var document_was_closed = false
 var original_z_index = 0
 
-
-
 # Drop zone references
 var inspection_table: Node2D
 var suspect_panel: Node2D
@@ -119,12 +117,55 @@ func _handle_mouse_press(mouse_pos: Vector2) -> bool:
 			emit_signal("item_dragged", dragged_item)
 			return true
 	return false
+	
+func spawn_paper_crunch_effect(position: Vector2, intensity: float = 1.0):
+	# Load the PaperCrunchEffect scene or create it if using the singleton approach
+	var effect = PaperCrunchEffect.new()
+	get_tree().root.add_child(effect)
+	
+	# Adjust parameters based on intensity (how hard the document was dropped)
+	effect.num_bits = int(15 * intensity)
+	effect.max_initial_velocity = 90.0 * intensity
+	effect.arc_height_factor = 60.0 * intensity
+	
+	# Spawn at position
+	effect.spawn_at(position)
+	
+	# Play appropriate sound effect if available
+	var audio_player = AudioStreamPlayer2D.new()
+	audio_player.volume_db = 5.0  # Adjust volume as needed
+	audio_player.bus = "SFX"
+	audio_player.autoplay = true
+	add_child(audio_player)
+		
+	# Auto-cleanup after playing
+	audio_player.finished.connect(audio_player.queue_free)
+	if audio_player:
+		var paper_crunch_sounds = [
+			preload("res://assets/audio/paper/paper_fold_1.mp3"),
+			preload("res://assets/audio/paper/paper_fold_2.mp3"),
+			preload("res://assets/audio/paper/paper_fold_3.mp3"),
+			preload("res://assets/audio/paper/paper_fold_4.mp3"),
+			preload("res://assets/audio/paper/paper_fold_5.mp3"),
+			preload("res://assets/audio/paper/paper_fold_6.mp3")
+		]
+		if paper_crunch_sounds.size() > 0:
+			audio_player.stream = paper_crunch_sounds[randi() % paper_crunch_sounds.size()]
+			audio_player.pitch_scale = randf_range(0.9, 1.1)  # Slight pitch variation
+			audio_player.play()
 
 # Handle mouse release
 func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 	if dragged_item:
 		var drop_zone = identify_drop_zone(mouse_pos)
 		emit_signal("item_dropped", dragged_item, drop_zone)
+		
+				# Measure "impact" speed for documents dropped onto surfaces
+		var impact_intensity = 1.0
+		if drop_zone == "inspection_table" or drop_zone == "suspect_panel":
+			# Calculate impact intensity based on current frame delta and distance
+			if is_openable_document(dragged_item):
+				spawn_paper_crunch_effect(mouse_pos, impact_intensity)
 		
 		# Reset document_was_closed flag
 		document_was_closed = false
@@ -240,6 +281,10 @@ func _return_item_to_table(item: Node2D):
 	
 	# Ensure exact original scale is restored at the end
 	scale_tween.tween_property(item, "scale", original_scale, RETURN_TWEEN_DURATION * 0.25)
+	
+	# Play paper crunch when item returning to desk
+	var impact_intensity = 2
+	spawn_paper_crunch_effect(target_position, impact_intensity)
 	
 	# Make sure original scale is properly restored in tween callback
 	tween.tween_callback(func():

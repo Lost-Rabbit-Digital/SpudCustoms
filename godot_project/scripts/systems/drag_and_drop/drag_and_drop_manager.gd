@@ -26,7 +26,7 @@ func _ready():
 	# Connect signals
 	drag_system.item_opened.connect(_on_item_opened)
 	drag_system.item_closed.connect(_on_item_closed)
-
+	drag_system.connect("item_dropped", Callable(self, "_on_item_dropped"))
 # Initialize the manager with scene references
 func initialize(game_scene: Node):
 	# Get references to key nodes

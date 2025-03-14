@@ -521,6 +521,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="LawReceiptController" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node") instance=ExtResource("27_ccap0")]
+visible = false
 main_node = NodePath("../../..")
 
 [node name="StampBarController" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("stamp_system") instance=ExtResource("25_osm16")]
@@ -610,7 +611,7 @@ texture = ExtResource("30_5od2r")
 
 [node name="LawReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_as_relative = false
-position = Vector2(122, 528)
+position = Vector2(142, 562)
 texture = ExtResource("31_rtxd3")
 script = ExtResource("32_k1orm")
 
@@ -809,6 +810,6 @@ z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
