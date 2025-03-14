@@ -18,6 +18,7 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
   [ ] - Add an Entry ticket document and law requirement
 ### Gameplay
+  [ ] - Allow missiles to kill approved potatoes, resulting in a Totneva Convention violation and a strike
   [ ] - Set a highlight shader on the closed passport if the document goes untouched for >5 seconds
   [ ] - Set a highlight shader on the speaker/start button if the booth goes empty for >5 seconds
   [ ] - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >5 seconds
