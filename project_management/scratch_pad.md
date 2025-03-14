@@ -13,29 +13,31 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
   [ ] - Add ink flecks from stamping that turn into ink splotches on the desk that fade away
   [ ] - Add dialogue emotes randomly to the potatoes
+  [ ] - Add a Metal shutter that rolls down cinematically with segments that cascade down, dust particles as it hits bottom, a satisfying "clunk" sound effect
+  ===
   [ ] - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
   [ ] - Add an Entry ticket document and law requirement
 ### Gameplay
-  [ ] - Add a Metal shutter that rolls down cinematically with segments that cascade down, dust particles as it hits bottom, a satisfying "clunk" sound effect
   [ ] - Set a highlight shader on the closed passport if the document goes untouched for >5 seconds
   [ ] - Set a highlight shader on the speaker/start button if the booth goes empty for >5 seconds
   [ ] - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >5 seconds
   [ ] - Add simple fade to game over summary
-  [ ] - Allow multiple simultaneous runners, time to multi-thread! Woohoo!
-  [ ] - Change position so kill text flying up with the score update
-  [ ] - Add clearer feedback for game over conditions
+  [ ] - Allow multiple simultaneous runners, can we multi-thread this?
+  [ ] - Change position so kill text flying up with the score update ("potato.first_name + potato.last_name" + "neutralized...")
+  [ ] - Add clearer feedback for game over conditions ("Too many strikes, you lose!")
   [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
   [ ] - Conversation with potato while checking documents, similar to customs office dialogue, Terry Pratchett inspired
   [ ] - Fix the issue where the game continues running during story sequences
   [ ] - Fix z-ordering issues on the summary screen
-  [ ] - Icon showing missile Y-level, with arrow pointing where it is off-screen briefly, change color of icon if there are multiple
-  [ ] - Lower delay between stamps
   [ ] - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
-  [ ] - Make the instructions an overlay which you could close
   [ ] - Potatoes emote (Kenny emotes) while waiting in line
+  [ ] - Wave a mouse over bombs placed on the wall or upper wall in the background to defuse them for scoring
   [ ] - Repaint each cutscene that stands out as rough in Aseprite (use dedicated 16-32 color palettes, repaint in simpler forms)
-  [ ] - Score might not be resetting between rounds on leaderboard. Fairly sure mine just kept going up.
+  ===
+  [ ] - Icon showing missile Y-level, with arrow pointing where it is off-screen briefly, change color of icon if there are multiple
   [ ] - Set default selection for main menu for keyboard control
+  [ ] - Lower delay between stamps
+  [ ] - Make the instructions an overlay which you could close
   [ ] - Show Missile counter on an LCD display on the desk or on UI
 ### Audio
 ### Score System
@@ -43,6 +45,7 @@ These are our goals, to-do tasks, and completed tasks.
 ### Backend
   [ ] - Save game and load game
 ### General Bugs
+  [ ] - Score might not be resetting between rounds on leaderboard. Fairly sure mine just kept going up.
   [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
   [ ] - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
   [ ] - Add Difficulty selection UI after selecting endless mode? Should explain difficulty parameters if so.
