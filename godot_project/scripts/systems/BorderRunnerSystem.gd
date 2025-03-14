@@ -623,7 +623,26 @@ func trigger_explosion(missile_or_position):
 	if missile_or_position is Vector2:
 		explosion_position = missile_or_position
 	else:
-		explosion_position = missile_or_position.position
+		var missile = missile_or_position
+		
+		# Get the missile sprite's size
+		var missile_length = 0
+		
+		# For AnimatedSprite2D, we need to access frames differently
+		if missile.sprite and missile.sprite.sprite_frames:
+			# Get the current animation
+			var current_anim = missile.sprite.animation
+			# Get the current frame index
+			var current_frame = missile.sprite.frame
+			# Try to get the texture from the sprite frames
+			var texture = missile.sprite.sprite_frames.get_frame_texture(current_anim, current_frame)
+			if texture:
+				missile_length = texture.get_height() * 0.5 * missile.sprite.scale.y
+		
+		# Calculate tip position using the sprite's rotation
+		var angle = missile.sprite.rotation - PI/2  # Adjust for the initial PI/2 offset
+		var tip_offset = Vector2(cos(angle), sin(angle)) * missile_length
+		explosion_position = missile.position + tip_offset
 	
 	# Trigger screen shake - find the main game node correctly
 	# Navigate up the scene tree to find the Root node
