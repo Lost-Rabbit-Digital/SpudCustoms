@@ -115,6 +115,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 ### Completed Tasks for 1.0.2
 Before release, go through GitHub commits and see what the fuck we even did this update. And please just update the notes as we go along, this is rough.
+  - Center explosions on the targeted location
   - Use the smoke spritesheet to animate a trail for the missiles
   - Resolve missing passport documents in story mode
   - Sometimes the potatoes don't give you a passport
