@@ -5,6 +5,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 ## Tasks
 ### Graphics
+  [ ] - Add a Metal shutter that rolls down cinematically with segments that cascade down, dust particles as it hits bottom, a satisfying "clunk" sound effect
   [ ] - Add new potato type art and re-institute potato type rules
   [ ] - Fix text on main menu and other scenes with background photos
   [ ] - A slider for the law book to slide in from the bottom as a note-card, or stay as a draggable object?
@@ -13,11 +14,11 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
   [ ] - Add ink flecks from stamping that turn into ink splotches on the desk that fade away
   [ ] - Add dialogue emotes randomly to the potatoes
-  [ ] - Add a Metal shutter that rolls down cinematically with segments that cascade down, dust particles as it hits bottom, a satisfying "clunk" sound effect
   ===
   [ ] - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
   [ ] - Add an Entry ticket document and law requirement
 ### Gameplay
+  [ ] - Display max score for each shift and 0-3 golden potatoes based on score benchmarks for each shift
   [ ] - Allow missiles to kill approved potatoes, resulting in a Totneva Convention violation and a strike
   [ ] - Set a highlight shader on the closed passport if the document goes untouched for >5 seconds
   [ ] - Set a highlight shader on the speaker/start button if the booth goes empty for >5 seconds
@@ -44,7 +45,7 @@ These are our goals, to-do tasks, and completed tasks.
 ### Score System
   [ ] - Balance points (missiles, stamping, scanning)
 ### Backend
-  [ ] - Save game and load game
+  [ ] - Save game and load game, especially max level reached and local highscores
 ### General Bugs
   [ ] - Score might not be resetting between rounds on leaderboard. Fairly sure mine just kept going up.
   [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
