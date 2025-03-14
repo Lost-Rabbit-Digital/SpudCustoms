@@ -21,8 +21,6 @@ var drag_offset = Vector2()
 var document_was_closed = false
 var original_z_index = 0
 
-
-
 # Drop zone references
 var inspection_table: Node2D
 var suspect_panel: Node2D
@@ -126,18 +124,31 @@ func spawn_paper_crunch_effect(position: Vector2, intensity: float = 1.0):
 	get_tree().root.add_child(effect)
 	
 	# Adjust parameters based on intensity (how hard the document was dropped)
-	effect.num_bits = int(20 * intensity)
-	effect.max_initial_velocity = 180.0 * intensity
-	effect.arc_height_factor = 100.0 * intensity
+	effect.num_bits = int(15 * intensity)
+	effect.max_initial_velocity = 90.0 * intensity
+	effect.arc_height_factor = 60.0 * intensity
+	effect.z_index = -1
 	
 	# Spawn at position
 	effect.spawn_at(position)
 	
 	# Play appropriate sound effect if available
+	var audio_player = AudioStreamPlayer2D.new()
+	audio_player.volume_db = 5.0  # Adjust volume as needed
+	audio_player.bus = "SFX"
+	audio_player.autoplay = true
+	add_child(audio_player)
+		
+	# Auto-cleanup after playing
+	audio_player.finished.connect(audio_player.queue_free)
 	if audio_player:
 		var paper_crunch_sounds = [
-			preload("res://assets/audio/paper/paper 1.wav"),
-			preload("res://assets/audio/paper/paper 2.wav")
+			preload("res://assets/audio/paper/paper_fold_1.mp3"),
+			preload("res://assets/audio/paper/paper_fold_2.mp3"),
+			preload("res://assets/audio/paper/paper_fold_3.mp3"),
+			preload("res://assets/audio/paper/paper_fold_4.mp3"),
+			preload("res://assets/audio/paper/paper_fold_5.mp3"),
+			preload("res://assets/audio/paper/paper_fold_6.mp3")
 		]
 		if paper_crunch_sounds.size() > 0:
 			audio_player.stream = paper_crunch_sounds[randi() % paper_crunch_sounds.size()]

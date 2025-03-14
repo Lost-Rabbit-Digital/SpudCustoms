@@ -18,7 +18,7 @@ class PaperBit extends Sprite2D:
 @export var gravity = 300.0
 @export var max_initial_velocity = 90.0
 @export var arc_height_factor = 90.0
-@export var bit_size_range = Vector2(0.005, 0.02)  # Scale range for paper bits
+@export var bit_size_range = Vector2(0.01, 0.025)  # Scale range for paper bits
 @export var spin_speed_range = Vector2(3.0, 8.0)  # Rotation speed range
 
 var paper_bits = []  # Will hold custom PaperBit instances
