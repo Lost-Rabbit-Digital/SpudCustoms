@@ -14,7 +14,7 @@ class PaperBit extends Sprite2D:
 # Paper bit particle parameters
 @export var num_bits = 15
 @export var bit_lifetime = 1.0
-@export var max_spawn_radius = 2.0
+@export var max_spawn_radius = 5.0
 @export var gravity = 300.0
 @export var max_initial_velocity = 90.0
 @export var arc_height_factor = 90.0
@@ -69,7 +69,7 @@ func spawn_paper_bits():
 		# Set random properties
 		var spawn_offset = Vector2(
 			randf_range(-max_spawn_radius, max_spawn_radius),
-			randf_range(-max_spawn_radius, max_spawn_radius)
+			randf_range(-max_spawn_radius, max_spawn_radius) + 75 # Set bits to come from bottom side of object
 		)
 		bit.position = spawn_offset
 		
@@ -98,9 +98,6 @@ func spawn_paper_bits():
 		# Add arc height influence
 		bit.arc_height = randf_range(arc_height_factor * 0.5, arc_height_factor)
 		bit.arc_progress = 0
-		
-		bit.z_as_relative = false
-		bit.z_index = 0
 
 # Create a single paper bit sprite
 func create_paper_bit() -> PaperBit:

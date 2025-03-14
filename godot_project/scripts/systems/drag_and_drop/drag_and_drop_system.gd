@@ -127,7 +127,6 @@ func spawn_paper_crunch_effect(position: Vector2, intensity: float = 1.0):
 	effect.num_bits = int(15 * intensity)
 	effect.max_initial_velocity = 90.0 * intensity
 	effect.arc_height_factor = 60.0 * intensity
-	effect.z_index = -1
 	
 	# Spawn at position
 	effect.spawn_at(position)
