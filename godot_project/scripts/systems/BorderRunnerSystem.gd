@@ -92,6 +92,12 @@ signal game_over_triggered
 var smoke_particle_pool = []
 var max_smoke_particles = 50
 
+var explosion_sound_pool = [
+	preload("res://assets/audio/explosions/big distant thump 4.wav"),
+	preload("res://assets/audio/explosions/big distant thump 5.wav"),
+	preload("res://assets/audio/explosions/big distant thump 6.wav"),
+]
+
 # Internal state tracking
 var is_enabled = true  # Track if system is enabled
 var is_in_dialogic = false # Track if game is in dialogue mode
@@ -602,6 +608,7 @@ func launch_missile(target_pos):
 		var launch_player = AudioStreamPlayer2D.new()
 		launch_player.stream = missile_sound.stream
 		launch_player.volume_db = -5.0  # Adjust volume as needed
+		launch_player.pitch_scale = randf_range(0.8, 1.2)
 		launch_player.bus = "SFX"
 		launch_player.autoplay = true
 		launch_player.position = missile.position
@@ -678,20 +685,30 @@ func trigger_explosion(missile_or_position):
 	
 	add_child(explosion)
 	
-		# Play activation and launch sound - FIX THIS PART
+	# Then, in your trigger_explosion function, replace the current explosion sound code:
 	if explosion_sound and explosion_sound.get_instance_id() != 0:
-		# Create a dedicated audio player for the missile sound to prevent interruption
+		# Create a dedicated audio player for the explosion sound
 		var explosion_player = AudioStreamPlayer2D.new()
-		explosion_player.stream = explosion_sound.stream
+		
+		# Pick a random sound from the pool
+		var random_sound_index = randi() % explosion_sound_pool.size()
+		explosion_player.stream = explosion_sound_pool[random_sound_index]
+		
+		# Add volume and position settings
 		explosion_player.volume_db = 5.0  # Adjust volume as needed
+		explosion_player.position = explosion_position
+		
+		# Add pitch variation - wider range for explosions
+		var pitch_variance = randf_range(0.95, 1.55)
+		explosion_player.pitch_scale = pitch_variance
+		
+		# Set the audio bus and play
 		explosion_player.bus = "SFX"
 		explosion_player.autoplay = true
 		add_child(explosion_player)
 		
 		# Auto-cleanup after playing
 		explosion_player.finished.connect(explosion_player.queue_free)
-	else:
-		print("ERROR: Explosion sound not loaded properly")
 	
 	# Create smoke animation
 	var smoke = AnimatedSprite2D.new()
