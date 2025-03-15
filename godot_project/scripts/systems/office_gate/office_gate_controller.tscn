@@ -18,3 +18,4 @@ texture = ExtResource("1_u4acs")
 [node name="StartNode" type="Node2D" parent="."]
 
 [node name="EndNode" type="Node2D" parent="."]
+position = Vector2(0, -263)
