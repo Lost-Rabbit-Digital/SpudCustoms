@@ -217,6 +217,6 @@ textures/decals/filter=0
 textures/light_projectors/filter=0
 environment/glow/upscale_mode=0
 environment/volumetric_fog/use_filter=0
-environment/defaults/default_clear_color=Color(0.217203, 0.112632, 0.217032, 1)
+environment/defaults/default_clear_color=Color(0.133333, 0.164706, 0.164706, 1)
 2d/snap/snap_2d_transforms_to_pixel=true
 2d/snap/snap_2d_vertices_to_pixel=true
