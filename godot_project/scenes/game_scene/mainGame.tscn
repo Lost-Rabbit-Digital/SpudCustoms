@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://cwks4tbpoq3n5"]
+[gd_scene load_steps=61 format=3 uid="uid://cwks4tbpoq3n5"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://scenes/game_scene/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://scripts/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="14_ynnf6"]
 [ext_resource type="Script" uid="uid://qyhogd6acnnh" path="res://scripts/systems/drag_and_drop/drag_and_drop_manager.gd" id="20_5djk1"]
 [ext_resource type="PackedScene" uid="uid://bavd85qs23l5m" path="res://scripts/systems/stamp/stamp_system_manager.tscn" id="21_5djk1"]
+[ext_resource type="PackedScene" uid="uid://chbmbf0ki24bj" path="res://scripts/systems/office_gate/office_gate_controller.tscn" id="21_362e4"]
 [ext_resource type="Texture2D" uid="uid://b2icltv7xkk6j" path="res://assets/user_interface/CustomsDesk.png" id="22_or1f4"]
 [ext_resource type="PackedScene" uid="uid://cejqnrw4oo4r2" path="res://assets/user_interface/suspect_panel/suspect_panel.tscn" id="22_qfxfi"]
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://scripts/systems/character_generator.tscn" id="23_3qac4"]
@@ -482,6 +483,8 @@ offset_bottom = 40.0
 [node name="LawReceiptController" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("main_node") instance=ExtResource("27_ccap0")]
 visible = false
 main_node = NodePath("../../..")
+
+[node name="OfficeGateController" parent="Gameplay/InteractiveElements" instance=ExtResource("21_362e4")]
 
 [node name="StampBarController" parent="Gameplay/InteractiveElements" instance=ExtResource("25_osm16")]
 position = Vector2(0, 366)

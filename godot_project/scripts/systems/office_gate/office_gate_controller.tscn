@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://chbmbf0ki24bj"]
+
+[ext_resource type="Texture2D" uid="uid://bvguhhxihdmr1" path="res://assets/user_interface/suspect_panel/drop_down_gate.png" id="1_u4acs"]
+
+[node name="OfficeGateController" type="Node2D"]
+
+[node name="Gate" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Gate"]
+texture = ExtResource("1_u4acs")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Gate"]
+
+[node name="StartNode" type="Node2D" parent="."]
+
+[node name="EndNode" type="Node2D" parent="."]
