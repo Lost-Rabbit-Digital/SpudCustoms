@@ -440,8 +440,8 @@ func animate_mugshot_and_passport():
 	tween.set_parallel(true)
 
 	# Animate potato mugshot
-	tween.tween_property(mugshot_generator, "position:x", suspect_panel_spawn_node.position.x, 0.7)
-	tween.tween_property(mugshot_generator, "modulate:a", 1, 0.7)
+	tween.tween_property(mugshot_generator, "position:x", suspect_panel_spawn_node.position.x, 1)
+	tween.tween_property(mugshot_generator, "modulate:a", 1, 1)
 	
 	# Animate passport
 	tween.tween_property(passport, "modulate:a", 1, 1)
@@ -450,6 +450,8 @@ func animate_mugshot_and_passport():
 	tween.tween_property(passport, "z_index", 5, 0).set_delay(3)
 
 	tween.chain().tween_callback(func(): print("Finished animating mugshot and passport"))
+	
+	tween.set_parallel(false)
 
 func setup_spawn_timer():
 	spawn_timer = $SystemManagers/Timers/SpawnTimer
@@ -744,15 +746,14 @@ func remove_stamp():
 	
 	# Animate the potato mugshot and passport exit
 	var mugshot_generator = $Gameplay/MugshotPhotoGenerator
-	var suspect_panel = $Gameplay/SuspectPanel
-	var suspect = $Gameplay/MugshotPhotoGenerator/SizingSprite
 	var passport = $Gameplay/InteractiveElements/Passport
+	var suspect_panel_spawn_node = $Gameplay/InteractiveElements/SuspectSpawnNode
 	
 	var tween = create_tween()
 	tween.set_parallel(true)
-	tween.tween_property(mugshot_generator, "position:x", suspect_panel.position.x - suspect.get_rect().size.x, 1)
-	tween.tween_property(mugshot_generator, "modulate:a", 0, 1)
-	tween.tween_property(passport, "modulate:a", 0, 1)
+	tween.tween_property(mugshot_generator, "position:x", suspect_panel_spawn_node.position.x - suspect_panel_front.texture.get_width(), 0.7)
+	tween.tween_property(mugshot_generator, "modulate:a", 0, 0.7)
+	tween.tween_property(passport, "modulate:a", 0, 0.7)
 	tween.chain().tween_callback(func(): 
 		# Process the decision using the main game logic
 		process_decision(decision == "approved")
@@ -795,7 +796,8 @@ func move_potato_along_path(approval_status):
 		potato.path_completed.connect(func():
 			# When path is complete, we'll fade out and clean up
 			potato.fade_out()
-			reset_scene()
+			# Reset the label for new scene
+			$UI/Labels/JudgementLabel.text = ""
 		)
 	else:
 		# No path found, just clean up
@@ -828,10 +830,6 @@ func get_appropriate_path(approval_status: String) -> Path2D:
 	# Randomly select a path
 	return available_paths[randi() % available_paths.size()]
 
-func reset_scene():
-	mugshot_generator.position.x = suspect_panel.position.x
-	$UI/Labels/JudgementLabel.text = ""
-	
 func _exit_tree():
 	# Ensure cursor is restored when leaving the scene
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
