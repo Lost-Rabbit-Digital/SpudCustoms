@@ -108,16 +108,23 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Add logic to check if game paused or in dialogic before updating cursor to target cursor
   [ ] - Stamps go over edge of passport
   [ ] - Improve stamp and interaction system integration
-  [ ] - If potatoes are rejected, they should exit through the right side instead of the left
-  
+
 ### Currently Active Tasks for 1.0.2
+  [ ] - Documents should have gravity on the suspect panel and should fall to the counter
+  [ ] - Do not allow the user to pick up the document through the stamp bar
+  [ ] - Documents should move themselves into the inspection table if opened and clipped outside the table
+  [ ] - Add small amount of random pitch variation to the document open and close sounds
+  [ ] - Update cursor to show a select icon when above the megaphone 
+  [ ] - Update cursor to show a select icon when above the approval or rejection stamp
+  [ ] - Only show take passport dialogue if the passport has been stamped
+  [ ] - Update take passport dialogue to use the new dialogue system (Same as for megaphone) 
   [ ] - Add the different categories of megaphone into the megaphone_clicked function in mainGame.gd
   [ ] - Test megaphone to make sure it works in all cases
-  [ ] - Update cursor when hovering over megaphone, it should show the pointing icon instead of the default
-  [ ] - When the passport is on left side of the inspection table it should remain open to make it easier for users to line up with the stamp bar
 
 ### Completed Tasks for 1.0.2
 Before release, go through GitHub commits and see what the fuck we even did this update. And please just update the notes as we go along, this is rough.
+  - When the passport is on left side of the inspection table it should remain open to make it easier for users to line up with the stamp bar
+  - If potatoes are rejected, they should exit through the right side instead of the left
   - Fix z-ordering with potatoes to pass them under the background layer 
   - Center explosions on the targeted location
   - Use the smoke spritesheet to animate a trail for the missiles

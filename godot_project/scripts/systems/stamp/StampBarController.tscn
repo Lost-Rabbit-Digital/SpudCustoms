@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b0xvn475tgt1j" path="res://assets/stamps/hide_button.png" id="7_l77wl"]
 
 [node name="StampBarController" type="Node2D"]
-z_index = 10
+z_index = 3
 z_as_relative = false
 script = ExtResource("1_bd37c")
 
@@ -24,25 +24,19 @@ scale = Vector2(0.667388, 0.667388)
 texture_normal = ExtResource("2_6a1oe")
 
 [node name="StampBar" type="Node2D" parent="."]
-z_index = 11
-z_as_relative = false
 position = Vector2(-636, -104)
 
 [node name="Background" type="Sprite2D" parent="StampBar"]
-z_index = 3
 position = Vector2(322, 453)
 scale = Vector2(0.665845, 0.665845)
 texture = ExtResource("3_i7p4h")
 
 [node name="ApprovalStamp" type="Node2D" parent="StampBar"]
-z_index = 12
-z_as_relative = false
 texture_filter = 1
 position = Vector2(286, 405)
 
 [node name="StampShadow" type="Sprite2D" parent="StampBar/ApprovalStamp"]
-z_index = 2
-z_as_relative = false
+visible = false
 position = Vector2(0, 62)
 scale = Vector2(0.888171, 0.888171)
 texture = ExtResource("4_lu78d")
@@ -54,15 +48,13 @@ offset_top = -63.0
 offset_right = 63.0
 offset_bottom = 65.0
 texture_normal = ExtResource("5_0hc55")
+metadata/_edit_use_anchors_ = true
 
 [node name="RejectionStamp" type="Node2D" parent="StampBar"]
-z_index = 12
-z_as_relative = false
 position = Vector2(497, 405)
 
 [node name="StampShadow" type="Sprite2D" parent="StampBar/RejectionStamp"]
-z_index = 2
-z_as_relative = false
+visible = false
 position = Vector2(0, 62)
 scale = Vector2(0.890923, 0.890923)
 texture = ExtResource("4_lu78d")
@@ -74,13 +66,13 @@ offset_top = -63.0
 offset_right = 64.0
 offset_bottom = 65.0
 texture_normal = ExtResource("6_5qhns")
+metadata/_edit_use_anchors_ = true
 
 [node name="HideButton" type="TextureButton" parent="StampBar"]
-z_index = 12
-z_as_relative = false
 offset_left = 569.0
 offset_top = 395.0
 offset_right = 671.0
 offset_bottom = 529.0
 scale = Vector2(0.660301, 0.660301)
 texture_normal = ExtResource("7_l77wl")
+metadata/_edit_use_anchors_ = true

@@ -335,9 +335,9 @@ texture_filter = 1
 texture_repeat = 1
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
-offset_left = 480.0
+offset_left = 332.0
 offset_top = 641.0
-offset_right = 682.0
+offset_right = 534.0
 offset_bottom = 691.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -465,7 +465,6 @@ scale = Vector2(0.4, 0.4)
 [node name="SuspectPanel" parent="Gameplay" instance=ExtResource("22_qfxfi")]
 
 [node name="InspectionTable" type="Sprite2D" parent="Gameplay"]
-z_index = 1
 z_as_relative = false
 position = Vector2(443.837, 470.5)
 scale = Vector2(2.64484, 2.59444)
@@ -485,6 +484,7 @@ visible = false
 main_node = NodePath("../../..")
 
 [node name="StampBarController" parent="Gameplay/InteractiveElements" instance=ExtResource("25_osm16")]
+position = Vector2(13, 34)
 
 [node name="SuspectSpawnNode" type="Node2D" parent="Gameplay/InteractiveElements"]
 z_index = 2
@@ -565,7 +565,7 @@ texture = ExtResource("30_5od2r")
 
 [node name="LawReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_as_relative = false
-position = Vector2(142, 562)
+position = Vector2(718, 514)
 texture = ExtResource("31_rtxd3")
 script = ExtResource("32_k1orm")
 
