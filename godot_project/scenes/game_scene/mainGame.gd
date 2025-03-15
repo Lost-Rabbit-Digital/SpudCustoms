@@ -751,7 +751,15 @@ func remove_stamp():
 	
 	var tween = create_tween()
 	tween.set_parallel(true)
-	tween.tween_property(mugshot_generator, "position:x", suspect_panel_spawn_node.position.x - suspect_panel_front.texture.get_width(), 0.7)
+	
+	# Detemine which side the Spud should exit the Customs Office from
+	if (decision == "approved"):
+		# The left side if they are approved by the User
+		tween.tween_property(mugshot_generator, "position:x", suspect_panel_spawn_node.position.x - suspect_panel_front.texture.get_width(), 0.7)
+	else:
+		# The right side if they are rejected by the User
+		tween.tween_property(mugshot_generator, "position:x", suspect_panel_spawn_node.position.x + suspect_panel_front.texture.get_width(), 0.7)
+		
 	tween.tween_property(mugshot_generator, "modulate:a", 0, 0.7)
 	tween.tween_property(passport, "modulate:a", 0, 0.7)
 	tween.chain().tween_callback(func(): 
