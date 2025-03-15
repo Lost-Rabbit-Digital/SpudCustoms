@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://be3lucg3f3a3c"]
 
-[ext_resource type="Script" uid="uid://clc5w67gry7ki" path="res://scripts/systems/StampBarController.gd" id="1_bd37c"]
+[ext_resource type="Script" uid="uid://clc5w67gry7ki" path="res://scripts/systems/stamp/StampBarController.gd" id="1_bd37c"]
 [ext_resource type="Texture2D" uid="uid://c56e60snydr5r" path="res://assets/stamps/stamp_crossbar_expand_button.png" id="2_6a1oe"]
 [ext_resource type="Texture2D" uid="uid://oovlb86b14wu" path="res://assets/stamps/stamp_crossbar.png" id="3_i7p4h"]
 [ext_resource type="Texture2D" uid="uid://croh6h1e7ru46" path="res://assets/stamps/stamp_shadow.png" id="4_lu78d"]
@@ -47,7 +47,8 @@ position = Vector2(0, 62)
 scale = Vector2(0.888171, 0.888171)
 texture = ExtResource("4_lu78d")
 
-[node name="TextureButton" type="TextureButton" parent="StampBar/ApprovalStamp"]
+[node name="ApprovalButton" type="TextureButton" parent="StampBar/ApprovalStamp"]
+unique_name_in_owner = true
 offset_left = -65.0
 offset_top = -63.0
 offset_right = 63.0
@@ -66,7 +67,8 @@ position = Vector2(0, 62)
 scale = Vector2(0.890923, 0.890923)
 texture = ExtResource("4_lu78d")
 
-[node name="TextureButton" type="TextureButton" parent="StampBar/RejectionStamp"]
+[node name="RejectionButton" type="TextureButton" parent="StampBar/RejectionStamp"]
+unique_name_in_owner = true
 offset_left = -64.0
 offset_top = -63.0
 offset_right = 64.0

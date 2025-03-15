@@ -46,9 +46,6 @@ var suspect_panel: Sprite2D
 var suspect_panel_front: Sprite2D
 var suspect: Sprite2D
 
-# Stamp system
-const STAMP_ANIMATION_DURATION: float = 0.3  # Duration of the stamp animation in seconds
-const STAMP_MOVE_DISTANCE: int = 36  # How far the stamp moves down
 var default_cursor = Input.CURSOR_ARROW
 
 # Character Generation
@@ -78,6 +75,9 @@ var max_combo_multiplier = 3.0
 # Drag and drop manager 
 @onready var drag_and_drop_manager = $SystemManagers/DragAndDropManager
 
+# Stamp System Manager
+@onready var stamp_system_manager: StampSystemManager
+
 func get_level_manager():
 	var parent = get_parent()
 	while parent:
@@ -94,7 +94,7 @@ func get_level_manager():
 	return null
 
 func _ready():
-	# Initialize the drag and drop manager
+	# Initialise the drag and drop manager
 	if not drag_and_drop_manager:
 		# If the node doesn't exist yet, create it
 		var manager = DragAndDropManager.new()
@@ -102,11 +102,14 @@ func _ready():
 		$SystemManagers.add_child(manager)
 		drag_and_drop_manager = manager
 	
-	# Initialize after all other nodes are ready
+	# Initialise after all other nodes are ready
 	drag_and_drop_manager.initialize(self)
 	
 	# Connect signal
 	drag_and_drop_manager.drag_system.passport_returned.connect(_on_passport_returned)
+	
+	# Initialise the stamp system manager
+	setup_stamp_system()
 	
 	# Get the current level ID from the level list manager if it exists
 	var level_manager = get_level_manager()
@@ -115,12 +118,6 @@ func _ready():
 		print(current_shift)
 	
 	narrative_manager.current_shift = current_shift
-	
-	var stamp_bar = $Gameplay/InteractiveElements/StampBarController
-	var stamp_system = $Gameplay/InteractiveElements/StampCrossbarSystem
-	
-	# Connect the stamp bar to the stamp system
-	stamp_bar.stamp_requested.connect(stamp_system.on_stamp_requested)
 	
 	game_start_time = Time.get_ticks_msec() / 1000.0  # Convert to seconds
 	
@@ -171,6 +168,71 @@ func _ready():
 	Dialogic.timeline_started.connect(_on_dialogue_started)
 	Dialogic.timeline_ended.connect(_on_dialogue_finished)
 	#disable_controls()
+
+# Dedicated function to set up the stamp system
+func setup_stamp_system():
+	# Create the stamp system manager
+	stamp_system_manager = StampSystemManager.new()
+	stamp_system_manager.name = "StampSystemManager"
+	$SystemManagers.add_child(stamp_system_manager)
+	
+	# Initialize it with a reference to this scene
+	stamp_system_manager.initialize(self)
+	
+	# IMPORTANT: Pass the reference to the drag_and_drop_manager
+	if drag_and_drop_manager:
+		drag_and_drop_manager.set_stamp_system_manager(stamp_system_manager)
+	
+	# Connect to the stamp decision signal
+	stamp_system_manager.stamp_decision_made.connect(_on_stamp_decision_made)
+	
+	# Make sure the passport is stampable
+	_setup_passport_stampable()
+	
+	# Get reference to the stamp bar controller
+	var stamp_bar_controller = $Gameplay/InteractiveElements/StampBarController
+	if stamp_bar_controller:
+		# Connect stamp_bar signals to the stamp system
+		if not stamp_bar_controller.stamp_selected.is_connected(stamp_system_manager.stamp_system.on_stamp_requested):
+			stamp_bar_controller.stamp_selected.connect(stamp_system_manager.stamp_system.on_stamp_requested)
+	else:
+		push_error("StampBarController not found in scene")
+
+# Add this function to mainGame.gd
+func _setup_passport_stampable():
+	# Get references to necessary nodes
+	var passport_node = $Gameplay/InteractiveElements/Passport
+	var open_passport_node = $Gameplay/InteractiveElements/Passport/OpenPassport
+	
+	if passport_node and open_passport_node:
+		# Define the stamp area - where stamps should be placed for a "perfect" stamp
+		# This depends on your passport UI layout
+		var passport_rect = passport_node.get_rect()
+		var stamp_area = Rect2(
+			passport_node.global_position + Vector2(120, 120),  # Adjust based on your layout
+			Vector2(160, 80)  # Adjust based on desired stamp area size
+		)
+		
+		# Get reference to the stamp system from the manager
+		var stamp_system = stamp_system_manager.stamp_system
+		if stamp_system:
+			# Register the passport with the stamp system
+			stamp_system_manager.passport_stampable = stamp_system.register_stampable(
+				passport_node,
+				open_passport_node,
+				stamp_area
+			)
+		else:
+			push_error("Stamp system not found in stamp_system_manager")
+	else:
+		push_error("Passport node or OpenPassport node not found")
+
+# Handle stamp decisions
+func _on_stamp_decision_made(decision: String, is_perfect: bool):
+	if decision == "approved":
+		process_decision(true)
+	elif decision == "rejected":
+		process_decision(false)
 
 func _on_passport_returned(item):
 	remove_stamp()
@@ -554,12 +616,6 @@ func calculate_age(date_of_birth: String) -> int:
 func _on_score_updated(new_score: int):
 	$UI/Labels/ScoreLabel.text = "Score: " + str(new_score)
 
-func _on_button_welcome_button_pressed() -> void:
-	process_decision(true)
-
-func _on_button_no_entry_button_pressed() -> void:
-	process_decision(false)
-
 func go_to_game_win():
 	print("Transitioning to game win scene with score:", Global.score)
 	Global.final_score = Global.score
@@ -576,11 +632,6 @@ func process_decision(allowed):
 		shift_stats.potatoes_approved += 1
 	else:
 		shift_stats.potatoes_rejected += 1
-   # Clear all existing stamps from the passport
-	var open_passport = $Gameplay/InteractiveElements/Passport/OpenPassport
-	for child in open_passport.get_children():
-		if child is Sprite2D and ("approved" in child.texture.resource_path or "denied" in child.texture.resource_path):
-			child.queue_free()
 			
    # Get validation result
 	var validation = LawValidator.check_violations(current_potato_info, current_rules)
@@ -681,63 +732,21 @@ func _input(event: InputEvent):
 			megaphone_clicked()
 			return
 
-func check_node_for_stamps(node: Node):
-	for child in node.get_children():
-		print("DEBUG: Checking child:", child.name, " - Class:", child.get_class())
-		if child is Sprite2D and child.texture:
-			var texture_path = child.texture.resource_path
-			print("DEBUG: Found sprite with texture path:", texture_path)
-			if "approved" in texture_path or "approve" in texture_path:
-				print("DEBUG: Found approval stamp")
-				current_approval_status = "approved"
-				current_stamp_count += 1
-			elif "denied" in texture_path or "reject" in texture_path:
-				print("DEBUG: Found denial stamp")
-				current_approval_status = "rejected"
-				current_stamp_count += 1
-
-var current_stamp_count = 0
-var current_approval_status = null
-
 func remove_stamp():
-	print("DEBUG: Starting remove_stamp process...")
+	# Get the decision directly from the stamp system manager
+	var decision = stamp_system_manager.process_passport_decision()
 	
-	# Reset counters
-	current_stamp_count = 0
-	current_approval_status = null
-	
-	# Check both closed and open passport nodes
-	var passport = $Gameplay/InteractiveElements/Passport
-	var closed_passport = passport.get_node_or_null("ClosedPassport")
-	var open_passport = passport.get_node_or_null("OpenPassport")
-	
-	print("DEBUG: Checking passport nodes:")
-	print("- Base passport children:", passport.get_child_count())
-	if closed_passport:
-		print("- Closed passport children:", closed_passport.get_child_count())
-	if open_passport:
-		print("- Open passport children:", open_passport.get_child_count())
-	
-	# Check all nodes
-	check_node_for_stamps(passport)
-	if closed_passport:
-		check_node_for_stamps(closed_passport)
-	if open_passport:
-		check_node_for_stamps(open_passport)
-	
-	print("DEBUG: Total stamps found:", current_stamp_count)
-	print("DEBUG: Final approval status:", current_approval_status)
-
-	if current_stamp_count == 0:
+	if decision == "":
 		print("DEBUG: No stamps found - aborting passport processing")
 		return
-
-	print("DEBUG: Processing passport with status:", current_approval_status)
+		
+	print("DEBUG: Processing passport with status:", decision)
 	
 	# Animate the potato mugshot and passport exit
 	var mugshot_generator = $Gameplay/MugshotPhotoGenerator
 	var suspect_panel = $Gameplay/SuspectPanel
 	var suspect = $Gameplay/MugshotPhotoGenerator/SizingSprite
+	var passport = $Gameplay/InteractiveElements/Passport
 	
 	var tween = create_tween()
 	tween.set_parallel(true)
@@ -745,8 +754,9 @@ func remove_stamp():
 	tween.tween_property(mugshot_generator, "modulate:a", 0, 1)
 	tween.tween_property(passport, "modulate:a", 0, 1)
 	tween.chain().tween_callback(func(): 
-		process_decision(current_approval_status == "approved")
-		move_potato_along_path(current_approval_status)
+		# Process the decision using the main game logic
+		process_decision(decision == "approved")
+		move_potato_along_path(decision)
 		is_potato_in_office = false
 	)
 	

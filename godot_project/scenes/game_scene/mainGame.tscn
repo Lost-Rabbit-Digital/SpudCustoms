@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://bjx1qjoxul45k"]
+[gd_scene load_steps=67 format=3 uid="uid://cwks4tbpoq3n5"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://scenes/game_scene/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://scripts/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
@@ -21,12 +21,12 @@
 [ext_resource type="AudioStream" uid="uid://bb8lmtt8f5yg4" path="res://assets/audio/ambient/wind_inside_1.wav" id="13_qvpbt"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="14_ynnf6"]
 [ext_resource type="Script" uid="uid://qyhogd6acnnh" path="res://scripts/systems/drag_and_drop/drag_and_drop_manager.gd" id="20_5djk1"]
+[ext_resource type="PackedScene" uid="uid://bavd85qs23l5m" path="res://scripts/systems/stamp/stamp_system_manager.tscn" id="21_5djk1"]
 [ext_resource type="Texture2D" uid="uid://b2icltv7xkk6j" path="res://assets/user_interface/CustomsDesk.png" id="22_or1f4"]
 [ext_resource type="PackedScene" uid="uid://cejqnrw4oo4r2" path="res://assets/user_interface/suspect_panel/suspect_panel.tscn" id="22_qfxfi"]
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://scripts/systems/character_generator.tscn" id="23_3qac4"]
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="24_yhqqy"]
-[ext_resource type="PackedScene" uid="uid://be3lucg3f3a3c" path="res://scripts/systems/StampBarController.tscn" id="25_osm16"]
-[ext_resource type="Script" uid="uid://b2rvsx4gf3s8c" path="res://scripts/systems/StampCrossbarSystem.gd" id="26_gh2f2"]
+[ext_resource type="PackedScene" uid="uid://be3lucg3f3a3c" path="res://scripts/systems/stamp/StampBarController.tscn" id="25_osm16"]
 [ext_resource type="PackedScene" uid="uid://fci3o688eddt" path="res://scripts/systems/LawReceiptController.tscn" id="27_ccap0"]
 [ext_resource type="Texture2D" uid="uid://y3iyyicwxtsl" path="res://assets/documents/closed_passport_small/closed_passport_small.png" id="27_qjue5"]
 [ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://assets/give_prompt_dialogue.png" id="28_jdq0j"]
@@ -476,6 +476,8 @@ gib_min_speed = 125.0
 position = Vector2(396.75, 122)
 shape = SubResource("RectangleShape2D_sihlh")
 
+[node name="StampSystemManager" parent="SystemManagers" instance=ExtResource("21_5djk1")]
+
 [node name="Gameplay" type="Control" parent="."]
 z_as_relative = false
 layout_mode = 3
@@ -524,13 +526,7 @@ offset_bottom = 40.0
 visible = false
 main_node = NodePath("../../..")
 
-[node name="StampBarController" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("stamp_system") instance=ExtResource("25_osm16")]
-stamp_system = NodePath("../StampCrossbarSystem")
-
-[node name="StampCrossbarSystem" type="Node2D" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("passport", "stats_manager")]
-script = ExtResource("26_gh2f2")
-passport = NodePath("../Passport")
-stats_manager = NodePath("../../../SystemManagers/StatsManager")
+[node name="StampBarController" parent="Gameplay/InteractiveElements" instance=ExtResource("25_osm16")]
 
 [node name="SuspectSpawnNode" type="Node2D" parent="Gameplay/InteractiveElements"]
 z_index = 2
