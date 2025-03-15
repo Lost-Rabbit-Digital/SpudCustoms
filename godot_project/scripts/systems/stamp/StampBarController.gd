@@ -10,8 +10,9 @@ extends Node2D
 @onready var approval_stamp: TextureButton = %ApprovalButton
 @onready var rejection_stamp: TextureButton = %RejectionButton
 @onready var stamp_bar = $StampBar
-@onready var fold_out_button = $FoldOutButton
-@onready var hide_button = $StampBar/HideButton
+@onready var toggle_position_button = $StampBar/Background/TogglePositionButton
+@onready var start_node = $StartNode
+@onready var end_node = $EndNode
 
 # Stamp textures
 var stamp_textures = {
@@ -26,8 +27,6 @@ var stamp_result_textures = {
 }
 
 # Constants for UI animation
-const HIDDEN_X = -625  # Position when bar is hidden
-const SHOWN_X = -10    # Position when bar is visible
 const TWEEN_DURATION = 0.5
 
 # Constants for stamp animation
@@ -60,12 +59,11 @@ func _ready():
 	stamp_textures["approve"] = approval_stamp.texture_normal
 	stamp_textures["reject"] = rejection_stamp.texture_normal
 	
-	# Set initial position (hidden)
-	stamp_bar.position.x = HIDDEN_X
+	# Set initial position (hidden - at start_node position)
+	stamp_bar.position = start_node.position
 	
-	# Connect button signals
-	fold_out_button.pressed.connect(_on_fold_out_pressed)
-	hide_button.pressed.connect(_on_hide_pressed)
+	# Connect toggle button signal
+	toggle_position_button.pressed.connect(_on_toggle_position_button_pressed)
 	
 	# Connect stamp buttons
 	approval_stamp.pressed.connect(func():
@@ -80,9 +78,8 @@ func _ready():
 		emit_signal("stamp_selected", "reject", stamp_textures["reject"])
 	)
 	
-	# Show the fold-out button initially
-	fold_out_button.visible = true
-	fold_out_button.modulate.a = 1.0
+	# Ensure toggle button is visible
+	toggle_position_button.visible = true
 	
 func _process(delta):
 	# Update cooldown timer
@@ -95,13 +92,12 @@ func _input(event):
 		last_mouse_position = event.global_position
 
 # UI Management Functions
-func _on_fold_out_pressed():
-	if !is_animating and !is_visible:
-		show_stamp_bar()
-
-func _on_hide_pressed():
-	if !is_animating and is_visible:
-		hide_stamp_bar()
+func _on_toggle_position_button_pressed():
+	if !is_animating:
+		if is_visible:
+			hide_stamp_bar()
+		else:
+			show_stamp_bar()
 
 func show_stamp_bar():
 	is_animating = true
@@ -110,17 +106,17 @@ func show_stamp_bar():
 	var tween = create_tween()
 	tween.set_parallel(true)
 	
-	# Move stamp bar in
-	tween.tween_property(stamp_bar, "position:x", SHOWN_X, TWEEN_DURATION)\
+	# Move stamp bar from start_node to end_node
+	tween.tween_property(stamp_bar, "position", end_node.position, TWEEN_DURATION)\
 		 .set_trans(Tween.TRANS_CUBIC)\
 		 .set_ease(Tween.EASE_OUT)
 	
-	# Fade out fold button
-	tween.tween_property(fold_out_button, "modulate:a", 0.0, TWEEN_DURATION/2)
+	# Update toggle button appearance if needed (optional)
+	# For example, you might want to rotate it or change its texture
+	# tween.tween_property(toggle_position_button, "rotation_degrees", 180, TWEEN_DURATION)
 	
 	# When complete
 	tween.chain().tween_callback(func():
-		fold_out_button.visible = false
 		is_animating = false
 		is_visible = true
 	)
@@ -132,15 +128,13 @@ func hide_stamp_bar():
 	var tween = create_tween()
 	tween.set_parallel(true)
 	
-	# Move stamp bar out
-	tween.tween_property(stamp_bar, "position:x", HIDDEN_X, TWEEN_DURATION)\
+	# Move stamp bar from end_node back to start_node
+	tween.tween_property(stamp_bar, "position", start_node.position, TWEEN_DURATION)\
 		 .set_trans(Tween.TRANS_CUBIC)\
 		 .set_ease(Tween.EASE_OUT)
 	
-	# Show fold button
-	fold_out_button.visible = true
-	tween.tween_property(fold_out_button, "modulate:a", 1.0, TWEEN_DURATION/2)\
-		 .set_delay(TWEEN_DURATION/2)
+	# Update toggle button appearance if needed (optional)
+	# tween.tween_property(toggle_position_button, "rotation_degrees", 0, TWEEN_DURATION)
 	
 	# When complete
 	tween.chain().tween_callback(func():
@@ -154,7 +148,6 @@ func force_hide():
 		hide_stamp_bar()
 
 # Stamp Logic Functions
-
 # When a stamp button is pressed
 func _on_stamp_button_pressed(stamp_type):
 	if is_stamping or stamp_cooldown_timer > 0:

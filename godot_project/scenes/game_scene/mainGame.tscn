@@ -484,7 +484,7 @@ visible = false
 main_node = NodePath("../../..")
 
 [node name="StampBarController" parent="Gameplay/InteractiveElements" instance=ExtResource("25_osm16")]
-position = Vector2(13, 34)
+position = Vector2(0, 366)
 
 [node name="SuspectSpawnNode" type="Node2D" parent="Gameplay/InteractiveElements"]
 z_index = 2
