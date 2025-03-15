@@ -228,7 +228,7 @@ position = Vector2(640, 360)
 texture = ExtResource("6_0hfru")
 
 [node name="InteractableItemsWorldBackground" type="Sprite2D" parent="UI"]
-z_index = 4
+z_index = 5
 z_as_relative = false
 position = Vector2(640, 360)
 texture = ExtResource("7_41g47")
@@ -466,6 +466,7 @@ scale = Vector2(0.4, 0.4)
 [node name="SuspectPanel" parent="Gameplay" instance=ExtResource("22_qfxfi")]
 
 [node name="InspectionTable" type="Sprite2D" parent="Gameplay"]
+z_index = 8
 z_as_relative = false
 position = Vector2(443.837, 470.5)
 scale = Vector2(2.64484, 2.59444)
@@ -485,6 +486,8 @@ visible = false
 main_node = NodePath("../../..")
 
 [node name="OfficeGateController" parent="Gameplay/InteractiveElements" instance=ExtResource("21_362e4")]
+z_index = 4
+position = Vector2(1075, 362)
 
 [node name="StampBarController" parent="Gameplay/InteractiveElements" instance=ExtResource("25_osm16")]
 position = Vector2(0, 366)
@@ -503,14 +506,13 @@ position = Vector2(1079, 441)
 position = Vector2(1079, 584)
 
 [node name="Passport" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-z_index = 1
+z_index = 9
 z_as_relative = false
 position = Vector2(1730, 426)
 texture = ExtResource("27_qjue5")
 
 [node name="ClosedPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
 visible = false
-z_as_relative = false
 position = Vector2(-34.6184, 40.1346)
 rotation = -0.137881
 scale = Vector2(0.413016, 0.413016)
@@ -567,6 +569,7 @@ position = Vector2(-4.99997, 3.99999)
 texture = ExtResource("30_5od2r")
 
 [node name="LawReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements"]
+z_index = 9
 z_as_relative = false
 position = Vector2(718, 514)
 texture = ExtResource("31_rtxd3")
@@ -574,15 +577,12 @@ script = ExtResource("32_k1orm")
 
 [node name="ClosedReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements/LawReceipt"]
 visible = false
-z_index = 1
-z_as_relative = false
 
 [node name="OpenReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements/LawReceipt"]
-z_index = 1
 z_as_relative = false
 
 [node name="ReceiptNote" type="RichTextLabel" parent="Gameplay/InteractiveElements/LawReceipt/OpenReceipt"]
-z_as_relative = false
+z_index = 9
 offset_left = -88.0
 offset_top = -107.0
 offset_right = 89.0

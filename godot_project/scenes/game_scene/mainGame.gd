@@ -43,7 +43,6 @@ var passport_spawn_point_begin: Node2D
 var passport_spawn_point_end: Node2D
 var inspection_table: Sprite2D
 @onready var suspect_panel = $Gameplay/SuspectPanel
-var drop_down_gate: Sprite2D
 var suspect_panel_front: Sprite2D
 var suspect: Sprite2D
 
@@ -79,6 +78,9 @@ var max_combo_multiplier = 3.0
 # Stamp System Manager
 @onready var stamp_system_manager: StampSystemManager
 
+# Office Gate Controller
+@onready var office_gate_controller: OfficeGateController = $Gameplay/InteractiveElements/OfficeGateController
+
 func get_level_manager():
 	var parent = get_parent()
 	while parent:
@@ -111,9 +113,6 @@ func _ready():
 	
 	# Initialise the stamp system manager
 	setup_stamp_system()
-	
-	# Configure the drop down gate
-	setup_drop_down_gate()
 	
 	# Get the current level ID from the level list manager if it exists
 	var level_manager = get_level_manager()
@@ -272,7 +271,7 @@ func award_points(base_points: int):
 
 func end_shift():
 	# Reset the gate state for the next shift
-	gate_opened_this_shift = false
+	office_gate_controller.gate_opened_this_shift = false
 	if Global.quota_met >= Global.quota_target:
 		# Add survival bonus
 		var survival_bonus = 500
@@ -357,8 +356,6 @@ func update_date_display():
 	var formatted_date = "%04d.%02d.%02d" % [current_date.year, current_date.month, current_date.day]
 	$UI/Labels/DateLabel.text = formatted_date
 
-var gate_opened_this_shift = false
-		
 func megaphone_clicked():
 	if is_potato_in_office:
 		megaphone_dialogue_box.next_message()
@@ -370,9 +367,9 @@ func megaphone_clicked():
 	var potato = queue_manager.remove_front_potato()
 	if potato:
 		# Only raise the gate on the first megaphone click of the shift
-		if !gate_opened_this_shift:
-			raise_gate(1.5)  # Slow, mechanical gate raising
-			gate_opened_this_shift = true
+		if !office_gate_controller.gate_opened_this_shift:
+			office_gate_controller.raise_gate(1.5)  # Slow, mechanical gate raising
+			office_gate_controller.gate_opened_this_shift = true
 		megaphone_dialogue_box.next_message()
 		megaphone_dialogue_box.play_random_officer_sound()
 		megaphone_dialogue_box.visible = true
@@ -654,7 +651,7 @@ func process_decision(allowed):
 		correct_decision_streak += 1
 	   # Check if quota met
 		if Global.quota_met >= Global.quota_target:
-			lower_gate(0.7)
+			office_gate_controller.lower_gate(0.7)
 			print("Quota complete!")
 			end_shift()
 	   # Increase multiplier for streaks
@@ -682,7 +679,7 @@ func process_decision(allowed):
 		Global.strikes += 1
 		if Global.strikes >= Global.max_strikes:
 			# Lower the gate when max strikes reached
-			lower_gate(0.7)  
+			office_gate_controller.lower_gate(0.7)  
 		   # Store stats before transitioning
 			Global.store_game_stats(shift_stats)
 			Global.go_to_game_over()
@@ -776,7 +773,7 @@ func remove_stamp():
 	tween.tween_property(mugshot_generator, "modulate:a", 0, 0.7)
 	tween.tween_property(passport, "modulate:a", 0, 0.7)
 	# Lower the gate as the potato leaves
-	lower_gate(1.0)
+	office_gate_controller.lower_gate(1.0)
 	tween.chain().tween_callback(func(): 
 		# Process the decision using the main game logic
 		process_decision(decision == "approved")
@@ -1003,74 +1000,3 @@ func is_expired(expiration_date: String) -> bool:
 		
 	# Same year and month, check days
 	return expiry_date.day < current_date.day
-
-func setup_drop_down_gate():
-	# Create the gate sprite
-	drop_down_gate = Sprite2D.new()
-	drop_down_gate.texture = preload("res://assets/user_interface/suspect_panel/drop_down_gate.png")
-	drop_down_gate.name = "DropDownGate"
-	drop_down_gate.z_index = 10  # Make sure it's above other elements
-	drop_down_gate
-	# Position it at the top of the suspect panel
-	# You may need to adjust these values based on your gate image and panel size
-	drop_down_gate.position = Vector2((1920 / 2), (1080 / 2))
-	
-	# Add it to the suspect panel
-	suspect_panel.add_child(drop_down_gate)
-	
-
-# Raises the gate with animation
-func raise_gate(duration: float = 2.0):
-	# Calculate the target position (fully raised)
-	var target_pos = Vector2(drop_down_gate.position.x, -drop_down_gate.texture.get_height())
-	
-	# Create a tween for smoother animation
-	var tween = create_tween()
-	tween.set_ease(Tween.EASE_OUT)
-	tween.set_trans(Tween.TRANS_CUBIC)
-	
-	# Start gate raise sound
-	# "D:\Godot\SpudCustoms\godot_project\assets\audio\mechanical\lever big 3.wav"
-	# "D:\Godot\SpudCustoms\godot_project\assets\audio\mechanical\lever big 1.wav"
-	# "D:\Godot\SpudCustoms\godot_project\assets\audio\mechanical\metal spinning 3.wav"
-	
-	# Create a dedicated audio player for the gate sound
-	var gate_sound_player = AudioStreamPlayer2D.new()
-	gate_sound_player.stream = preload("res://assets/audio/mechanical/chain 3.wav")
-	gate_sound_player.volume_db = 0
-	gate_sound_player.bus = "SFX"  
-	gate_sound_player.autoplay = true
-	add_child(gate_sound_player)
-	
-	# Set up auto-cleanup after playing
-	gate_sound_player.finished.connect(gate_sound_player.queue_free)
-	
-	# Animate the gate position
-	tween.tween_property(drop_down_gate, "position:y", target_pos.y, duration)
-	
-	# Optional: Add slight screen shake for more impact
-	tween.tween_callback(func(): shake_screen(3.0, 0.2))
-
-# Lowers the gate with animation
-func lower_gate(duration: float = 1):
-	# Calculate the target position (fully lowered)
-	var target_pos = Vector2(drop_down_gate.position.x, 0)
-	
-	# Create a tween for smoother animation
-	var tween = create_tween()
-	tween.set_ease(Tween.EASE_IN)
-	tween.set_trans(Tween.TRANS_BACK)  # Gives it a bit of "slam" effect
-		
-	# Create a dedicated audio player for the gate sound
-	var gate_sound_player = AudioStreamPlayer2D.new()
-	gate_sound_player.stream = preload("res://assets/audio/mechanical/sort through drawer 1.wav")  # Replace with your actual sound
-	gate_sound_player.volume_db = 0.0  # Slightly louder for impact
-	gate_sound_player.bus = "SFX"  # Route to SFX bus
-	gate_sound_player.autoplay = true
-	add_child(gate_sound_player)
-	
-	# Animate the gate position
-	tween.tween_property(drop_down_gate, "position:y", target_pos.y, duration)
-	
-	# Add screen shake for impact
-	tween.tween_callback(func(): shake_screen(8.0, 0.3))
