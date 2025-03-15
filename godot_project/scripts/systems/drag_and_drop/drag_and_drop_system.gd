@@ -42,18 +42,29 @@ var grab_cursor_texture = preload("res://assets/cursor/cursor_grab.png")
 var click_cursor_texture = preload("res://assets/cursor/cursor_click.png")
 var target_cursor_texture = preload("res://assets/cursor/cursor_target.png")
 
+var _stamp_bar_controller = null
+
+# Stamp System Manager
+var stamp_system_manager: StampSystemManager
+
 # Initialize the system
 func initialize(config: Dictionary):
 	# Set references from configuration
 	inspection_table = config.get("inspection_table")
-	suspect_panel = config.get("suspect_panel")
+	suspect_panel = config.get("suspect_panel")  
 	suspect = config.get("suspect")
 	audio_player = config.get("audio_player")
 	
+	# Get stamp bar controller reference if provided
+	_stamp_bar_controller = config.get("stamp_bar_controller")
+	
 	# Register draggable items
 	register_draggable_items(config.get("draggable_items", []))
+	
+func set_stamp_system_manager(manager: StampSystemManager):
+	stamp_system_manager = manager
+	print("StampSystemManager successfully set in drag_and_drop_system")
 
-# Register draggable items
 # Register draggable items
 func register_draggable_items(items: Array):
 	draggable_items = items
@@ -92,30 +103,38 @@ func handle_input_event(event: InputEvent, mouse_pos: Vector2) -> bool:
 		
 	return false
 
-# In drag_and_drop_system.gd
+# Helper function to get the document controller for an item
+func get_document_controller(item: Node2D) -> DraggableDocument:
+	if item and item.has_node("DocumentController"):
+		return item.get_node("DocumentController") as DraggableDocument
+	return null
+
 func _handle_mouse_press(mouse_pos: Vector2) -> bool:
 	if dragged_item == null:
 		dragged_item = find_topmost_item_at(mouse_pos)
 		if dragged_item:
-			_update_dragged_item_position(mouse_pos)
 			# Reset document_was_closed flag for new drag
 			document_was_closed = false
 			
 			# Store original z-index and set to higher value while dragging
 			original_z_index = dragged_item.z_index
-			dragged_item.z_index = DRAGGING_Z_INDEX  # Higher z-index while dragging
+			dragged_item.z_index = DRAGGING_Z_INDEX
 			
-			# Get drop zone before starting drag
+			# Get current drop zone
 			var current_zone = identify_drop_zone(mouse_pos)
 			
-			# If document is being picked up from inspection table, close it
-			if current_zone == "inspection_table" and is_openable_document(dragged_item):
+			# Calculate drag offset - from mouse to item position
+			drag_offset = dragged_item.global_position - mouse_pos
+			
+			# Get document controller and call on_drag_start if available
+			var doc_controller = get_document_controller(dragged_item)
+			if doc_controller:
+				doc_controller.on_drag_start()
+			
+			# Only close the document if it's NOT on the inspection table
+			if current_zone != "inspection_table" and is_openable_document(dragged_item):
 				emit_signal("item_closed", dragged_item)
 			
-			# Use a zero offset to center the document on the cursor
-			drag_offset = Vector2.ZERO
-			
-			# We'll handle centering in the next frame using call_deferred
 			emit_signal("item_dragged", dragged_item)
 			return true
 	return false
@@ -129,8 +148,16 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 		# Reset document_was_closed flag
 		document_was_closed = false
 		
-		# Handle specific item drop logic first
+		# Get document controller
+		var doc_controller = get_document_controller(dragged_item)
+		
+		# Check if drop zone is valid
 		if drop_zone == "inspection_table" or drop_zone == "suspect_panel" or drop_zone == "suspect":
+			# Valid drop zone
+			if doc_controller:
+				doc_controller.on_drop(drop_zone)
+			
+			# Handle specific item drop logic
 			if dragged_item.name == "Passport":
 				_handle_passport_drop(mouse_pos)
 			elif dragged_item.name == "Guide":
@@ -138,12 +165,15 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 			elif dragged_item.name == "LawReceipt":
 				_handle_receipt_drop(mouse_pos)
 			
-			# Restore original z-index immediately for valid drop zones
+			# Restore original z-index for valid drop zones
 			dragged_item.z_index = original_z_index
 		else:
-			# Item dropped in invalid location, return to nearest point on table
+			# Invalid drop zone - ensure document is closed
+			if doc_controller and doc_controller.is_document_open():
+				doc_controller.close()
+				
+			# Return to nearest valid position on table
 			_return_item_to_table(dragged_item)
-			# Don't reset dragged_item here as we'll handle it after the tween completes
 			return true
 			
 		dragged_item = null
@@ -152,12 +182,12 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 
 func _update_dragged_item_position(mouse_pos: Vector2):
 	if dragged_item:
-		# Store previous position to check if we're leaving the table
-		var previous_position = get_viewport().get_mouse_position()
+		# Store previous position
+		var previous_position = dragged_item.global_position
 		var was_on_table = inspection_table and inspection_table.get_rect().has_point(inspection_table.to_local(previous_position))
 		
-		# Update position using the drag_offset which is now the center of the document
-		dragged_item.global_position = get_viewport().get_mouse_position()
+		# Update position using the drag_offset
+		dragged_item.global_position = mouse_pos + drag_offset
 		
 		# Check if document is leaving the inspection table
 		var is_on_table = inspection_table and inspection_table.get_rect().has_point(inspection_table.to_local(dragged_item.global_position))
@@ -166,9 +196,6 @@ func _update_dragged_item_position(mouse_pos: Vector2):
 		if was_on_table and !is_on_table and !document_was_closed and is_openable_document(dragged_item):
 			emit_signal("item_closed", dragged_item)
 			document_was_closed = true
-			
-			# Get updated mouse position for more accuracy
-			var current_mouse_pos = get_viewport().get_mouse_position()
 
 # Find the nearest valid position on the inspection table
 func find_nearest_table_position(item_position: Vector2, item_size: Vector2) -> Vector2:
@@ -249,8 +276,8 @@ func _return_item_to_table(item: Node2D):
 		dragged_item = null
 		
 		# Open the document when it returns to the table
-		if is_openable_document(item):
-			emit_signal("item_opened", item)
+		#if is_openable_document(item):
+			#emit_signal("item_opened", item)
 	)
 	
 	# Play a return sound
@@ -279,6 +306,29 @@ func is_openable_document(item: Node2D) -> bool:
 
 # Find the topmost draggable item at the given position
 func find_topmost_item_at(pos: Vector2) -> Node2D:
+	# First check if we're over any stamp buttons - if so, don't consider it a draggable item
+	# This check needs to happen before the regular draggable item check
+	
+	# Find stamp bar controller reference if not already cached
+	if not is_instance_valid(_stamp_bar_controller):
+		_stamp_bar_controller = get_stamp_bar_controller()
+	
+	# Check if mouse is over approval or rejection stamp button
+	if is_instance_valid(_stamp_bar_controller) and _stamp_bar_controller.is_visible:
+		var approval_stamp = _stamp_bar_controller.get_node_or_null("StampBar/ApprovalStamp/TextureButton")
+		var rejection_stamp = _stamp_bar_controller.get_node_or_null("StampBar/RejectionStamp/TextureButton")
+		
+		# Check for approval stamp hit
+		if is_instance_valid(approval_stamp) and approval_stamp.visible:
+			if approval_stamp.get_global_rect().has_point(pos):
+				return null  # Mouse is over approval stamp, don't consider it draggable
+		
+		# Check for rejection stamp hit
+		if is_instance_valid(rejection_stamp) and rejection_stamp.visible:
+			if rejection_stamp.get_global_rect().has_point(pos):
+				return null  # Mouse is over rejection stamp, don't consider it draggable
+	
+	# Regular draggable item finding logic
 	var topmost_item = null
 	var highest_z = -1
 	
@@ -289,6 +339,24 @@ func find_topmost_item_at(pos: Vector2) -> Node2D:
 				topmost_item = item
 	
 	return topmost_item
+
+func get_stamp_bar_controller() -> Node:
+	# Try to find in the scene tree
+	var scene_root = get_tree().current_scene
+	
+	# Direct search from root
+	var controller = scene_root.find_child("StampBarController", true, false)
+	if controller:
+		return controller
+		
+	# Look in Gameplay path if not found directly
+	var gameplay = scene_root.get_node_or_null("Gameplay/InteractiveElements")
+	if gameplay:
+		controller = gameplay.get_node_or_null("StampBarController")
+		if controller:
+			return controller
+			
+	return null
 
 # Identify what drop zone the position is over
 func identify_drop_zone(pos: Vector2) -> String:
@@ -342,14 +410,30 @@ func get_highest_z_index() -> int:
 # Handle passport drop
 func _handle_passport_drop(mouse_pos: Vector2):
 	var drop_zone = identify_drop_zone(mouse_pos)
-	if drop_zone == "inspection_table":
-		# Logic to open passport
+	
+	# Get document controller to check current state
+	var doc_controller = get_document_controller(dragged_item)
+	var was_open = doc_controller and doc_controller.is_document_open()
+	
+	# If dropping on inspection table and document was already open, keep it open
+	if drop_zone == "inspection_table" and was_open:
+		# No need to emit open signal if document is already open
+		pass
+	# If dropping on inspection table and document was closed, open it
+	elif drop_zone == "inspection_table" and !was_open:
+		# Only open if it wasn't already open
 		emit_signal("item_opened", dragged_item)
-	elif drop_zone == "suspect_panel":
-		# Logic to close passport
+	elif drop_zone == "suspect_panel" or drop_zone == "suspect":
+		# Always close when dropping on suspect
 		emit_signal("item_closed", dragged_item)
-	elif drop_zone == "suspect":
-		emit_signal("passport_returned", dragged_item)
+		
+		# If dropping on suspect, emit passport_returned signal
+		if drop_zone == "suspect":
+			emit_signal("passport_returned", dragged_item)
+			if stamp_system_manager:
+				stamp_system_manager.clear_passport_stamps()
+			else:
+				push_error("Cannot clear passport stamps: StampSystemManager is null")
 
 # Handle guide drop
 func _handle_guide_drop(mouse_pos: Vector2):

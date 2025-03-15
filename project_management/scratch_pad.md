@@ -108,7 +108,8 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Add the different categories of megaphone into the megaphone_clicked function in mainGame.gd
   [ ] - Test megaphone to make sure it works in all cases
   [ ] - Update cursor when hovering over megaphone, it should show the pointing icon instead of the default
-
+  [ ] - When the passport is on left side of the inspection table it should remain open to make it easier for users to line up with the stamp bar
+  [ ] - Fix z-ordering with potatoes to pass them under the background layer 
 
 ### Completed Tasks for 1.0.2
 Before release, go through GitHub commits and see what the fuck we even did this update. And please just update the notes as we go along, this is rough.

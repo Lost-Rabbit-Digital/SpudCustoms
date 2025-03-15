@@ -18,6 +18,8 @@ var audio_player: AudioStreamPlayer2D
 # Border runner reference for cursor updates
 var border_runner_system: Node
 
+var stamp_system_manager: StampSystemManager
+
 func _ready():
 	# Create our drag and drop system
 	drag_system = DragAndDropSystem.new()
@@ -35,6 +37,9 @@ func initialize(game_scene: Node):
 	suspect = game_scene.get_node_or_null("Gameplay/MugshotPhotoGenerator/SizingSprite")
 	audio_player = game_scene.get_node_or_null("SystemManagers/AudioManager/SFXPool")
 	border_runner_system = game_scene.get_node_or_null("BorderRunnerSystem")
+	
+	# Get stamp bar controller reference
+	var stamp_bar_controller = game_scene.get_node_or_null("Gameplay/InteractiveElements/StampBarController")
 	
 	if !inspection_table or !suspect_panel or !suspect:
 		push_error("Required scene references not found for DragAndDropManager")
@@ -66,7 +71,8 @@ func initialize(game_scene: Node):
 		"suspect_panel": suspect_panel,
 		"suspect": suspect,
 		"audio_player": audio_player,
-		"draggable_items": draggable_items
+		"draggable_items": draggable_items,
+		"stamp_bar_controller": stamp_bar_controller
 	})
 
 # Handle input events
@@ -138,3 +144,12 @@ func _on_item_opened(item: Node2D):
 func _on_item_closed(item: Node2D):
 	var document_name = item.name
 	close_document(document_name)
+
+func set_stamp_system_manager(manager: StampSystemManager):
+	stamp_system_manager = manager
+	
+	# If you have a drag_system as a child/component, pass it down
+	if has_node("DragSystem") or get("drag_system"):
+		var drag_system = get_node_or_null("DragSystem") if has_node("DragSystem") else drag_system
+		if drag_system and drag_system.has_method("set_stamp_system_manager"):
+			drag_system.set_stamp_system_manager(manager)

@@ -82,3 +82,40 @@ func center_at_position(position: Vector2):
 # Check if document state is open
 func is_document_open() -> bool:
 	return is_open
+
+# Called when document starts being dragged
+func on_drag_start():
+	# Save current state
+	var was_open = is_open
+	
+	# If document is open, make sure it stays visible during drag
+	if was_open:
+		# Add code here to ensure the document stays visible during drag
+		# This might involve adjusting visibility or z-index
+		if open_content_node:
+			open_content_node.visible = true
+		if document_sprite:
+			document_sprite.modulate.a = 1.0
+			
+# Called when document is dropped
+func on_drop(drop_zone: String):
+	# If dropped outside the inspection table, make sure it's closed
+	if drop_zone != "inspection_table":
+		close(false)  # Close without animation
+		return
+	
+	# Otherwise, maintain current state
+	if is_open:
+		if closed_content_node:
+			closed_content_node.visible = false
+		if open_content_node:
+			open_content_node.visible = true
+		if document_sprite and open_texture:
+			document_sprite.texture = open_texture
+	else:
+		if closed_content_node:
+			closed_content_node.visible = true
+		if open_content_node:
+			open_content_node.visible = false
+		if document_sprite and closed_texture:
+			document_sprite.texture = closed_texture
