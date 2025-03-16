@@ -266,6 +266,13 @@ func award_points(base_points: int):
 	return total_points
 
 func end_shift(success: bool = true):
+	# Disable player inputs 
+	set_process_input(false)
+	
+	#disable border runner system
+	if border_runner_system:
+		border_runner_system.disable()
+	
 	# Reset the gate state for the next shift
 	office_gate_controller.gate_opened_this_shift = false
 	
@@ -289,14 +296,29 @@ func end_shift(success: bool = true):
 		var survival_bonus = 500
 		Global.add_score(survival_bonus)
 		Global.display_green_alert(alert_label, alert_timer, "Shift survived! Bonus: " + str(survival_bonus) + " points!")
+				
+		# Lower the gate with animation when successful
+		if not office_gate_controller.gate_opened_this_shift:
+			office_gate_controller.lower_gate(1.0)
 	
 	# Store game stats
 	Global.store_game_stats(shift_stats)
 	
-	# Show summary screen in all cases
-	var summary = shift_summary.instantiate()
-	add_child(summary)
-	summary.show_summary(shift_stats)
+	# Create a tween for a cleaner fade transition
+	var fade_rect = ColorRect.new()
+	fade_rect.color = Color(0, 0, 0, 0)
+	fade_rect.size = get_viewport_rect().size
+	fade_rect.z_index = 100
+	add_child(fade_rect)
+	
+	var tween = create_tween()
+	tween.tween_property(fade_rect, "color", Color(0, 0, 0, 0.5), 0.5)
+	tween.tween_callback(func():
+		# Show summary screen after fade
+		var summary = shift_summary.instantiate()
+		add_child(summary)
+		summary.show_summary(shift_stats)
+	)
 	
 func set_difficulty(level):
 	difficulty_level = level
@@ -893,6 +915,11 @@ func enable_controls():
 		
 # Modified _on_game_over function
 func _on_game_over():
+	# Disable all inputs and systems first
+	set_process_input(false)
+	if border_runner_system:
+		border_runner_system.disable()
+	
 	# Capture time taken
 	var elapsed_time = (Time.get_ticks_msec() / 1000.0) - game_start_time
 	
@@ -905,9 +932,38 @@ func _on_game_over():
 	shift_stats.missiles_hit = runner_stats.missiles_hit
 	shift_stats.perfect_hits = runner_stats.perfect_hits
 	
+	# Create a visual feedback before ending
+	var flash_rect = ColorRect.new()
+	flash_rect.color = Color(1, 0, 0, 0)
+	flash_rect.size = get_viewport_rect().size
+	flash_rect.z_index = 999
+	add_child(flash_rect)
+	
+	# Red flash and screen shake for impact
+	var flash_tween = create_tween()
+	flash_tween.tween_property(flash_rect, "color", Color(1, 0, 0, 0.3), 0.2)
+	flash_tween.tween_property(flash_rect, "color", Color(1, 0, 0, 0), 0.3)
+	
+	# Play a failure sound if available
+	if $SystemManagers/AudioManager/SFXPool:
+		var failure_sound = load("res://assets/audio/mechanical/button pressed 1.wav")
+		if failure_sound:
+			$SystemManagers/AudioManager/SFXPool.stream = failure_sound
+			$SystemManagers/AudioManager/SFXPool.play()
+	
+	# Small delay for dramatic effect
+	await get_tree().create_timer(0.5).timeout
+	
+	# Lower gate if not already lowered
+	office_gate_controller.lower_gate(0.8)
+	
+	# Small delay for gate animation
+	await get_tree().create_timer(0.8).timeout
+	
 	# This will handle storing stats and showing the summary screen
 	end_shift(false) # false = not a success scenario
-
+	
+	
 # Screen shake with configurable intensity and duration
 # Mild: intensity 3-5, duration 0.2
 # Medium: intensity 10-15, duration 0.3

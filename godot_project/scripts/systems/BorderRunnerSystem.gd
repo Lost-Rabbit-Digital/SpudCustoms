@@ -542,14 +542,20 @@ func handle_runner_escape(runner: PotatoPerson):
 		}))
 			
 	print("Before strike: " + str(Global.strikes))
+	
 	# Add one strike to the total strikes stored in the root node of the scene
 	Global.strikes += 1
-	if Global.strikes >= Global.max_strikes:
-		emit_signal("game_over_triggered")
-	print("After strike: " + str(Global.strikes))
 	
 	if strike_label:
 		strike_label.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
+	
+	if Global.strikes >= Global.max_strikes:
+		print("DEBUG: Maximum strikes reached! Emitting game over signal")
+		emit_signal("game_over_triggered")
+	else:
+		print("DEBUG: After strike: " + str(Global.strikes) + "/" + str(Global.max_strikes))
+
+	
 	
 func _input(event):
 	if not is_enabled or is_in_dialogic:
