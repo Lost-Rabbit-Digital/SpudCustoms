@@ -304,6 +304,20 @@ func end_shift(success: bool = true):
 	# Store game stats
 	Global.store_game_stats(shift_stats)
 	
+	# Convert ShiftStats to a dictionary
+	var stats_dict = {
+		"shift": Global.shift,
+		"time_taken": shift_stats.time_taken,
+		"score": Global.score,
+		"missiles_fired": shift_stats.missiles_fired,
+		"missiles_hit": shift_stats.missiles_hit,
+		"perfect_hits": shift_stats.perfect_hits,
+		"total_stamps": shift_stats.total_stamps,
+		"potatoes_approved": shift_stats.potatoes_approved,
+		"potatoes_rejected": shift_stats.potatoes_rejected,
+		"hit_rate": shift_stats.hit_rate,
+	}
+	
 	# Create a tween for a cleaner fade transition
 	var fade_rect = ColorRect.new()
 	fade_rect.color = Color(0, 0, 0, 0)
@@ -317,7 +331,7 @@ func end_shift(success: bool = true):
 		# Show summary screen after fade
 		var summary = shift_summary.instantiate()
 		add_child(summary)
-		summary.show_summary(shift_stats)
+		summary.show_summary(stats_dict)
 	)
 	
 func set_difficulty(level):
