@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b4d4v3o3gj2yt" path="res://assets/stamps/rejection_stamp_2.png" id="6_5qhns"]
 
 [node name="StampBarController" type="Node2D"]
-z_index = 3
+z_index = 10
 z_as_relative = false
 script = ExtResource("1_bd37c")
 

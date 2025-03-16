@@ -179,12 +179,13 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 		var drop_zone = identify_drop_zone(mouse_pos)
 		emit_signal("item_dropped", dragged_item, drop_zone)
 		
-				# Measure "impact" speed for documents dropped onto surfaces
-		var impact_intensity = 1.0
-		if drop_zone == "inspection_table" or drop_zone == "suspect_panel":
+		# TODO: Re-enable this paper effect later on
+		# Measure "impact" speed for documents dropped onto surfaces
+		#var impact_intensity = 1.0
+		#if drop_zone == "inspection_table" or drop_zone == "suspect_panel":
 			# Calculate impact intensity based on current frame delta and distance
-			if is_openable_document(dragged_item):
-				spawn_paper_crunch_effect(mouse_pos, impact_intensity)
+			#if is_openable_document(dragged_item):
+			#	spawn_paper_crunch_effect(mouse_pos, impact_intensity)
 		
 		# Reset document_was_closed flag
 		document_was_closed = false
@@ -309,9 +310,10 @@ func _return_item_to_table(item: Node2D):
 	# Ensure exact original scale is restored at the end
 	scale_tween.tween_property(item, "scale", original_scale, RETURN_TWEEN_DURATION * 0.25)
 	
+	# TODO: Re-enable this paper effect later on
 	# Play paper crunch when item returning to desk
-	var impact_intensity = 2
-	spawn_paper_crunch_effect(target_position, impact_intensity)
+	#var impact_intensity = 2
+	#spawn_paper_crunch_effect(target_position, impact_intensity)
 	
 	# Make sure original scale is properly restored in tween callback
 	tween.tween_callback(func():
