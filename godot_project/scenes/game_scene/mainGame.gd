@@ -259,56 +259,44 @@ func reset_combo():
 	combo_count = 0
 	combo_timer = 0.0
 
-# Apply to points calculation:
 func award_points(base_points: int):
 	var multiplier = add_to_combo()
 	var total_points = base_points * multiplier
 	Global.add_score(total_points)
 	return total_points
 
-
-
-func end_shift():
+func end_shift(success: bool = true):
 	# Reset the gate state for the next shift
 	office_gate_controller.gate_opened_this_shift = false
-	if Global.quota_met >= Global.quota_target:
+	
+	# Calculate final time taken if not already done
+	if shift_stats.time_taken == 0:
+		shift_stats.time_taken = (Time.get_ticks_msec() / 1000.0) - game_start_time
+		
+	# Get border runner statistics if not already copied
+	if shift_stats.missiles_fired == 0:
+		var runner_stats = border_runner_system.shift_stats
+		shift_stats.missiles_fired = runner_stats.missiles_fired
+		shift_stats.missiles_hit = runner_stats.missiles_hit
+		shift_stats.perfect_hits = runner_stats.perfect_hits
+	
+	# Calculate the hit rate
+	shift_stats.hit_rate = 0.0 if shift_stats.missiles_fired == 0 else (float(shift_stats.missiles_hit) / shift_stats.missiles_fired * 100.0)
+	
+	# If it was a successful shift completion, add bonus
+	if success and Global.quota_met >= Global.quota_target:
 		# Add survival bonus
 		var survival_bonus = 500
 		Global.add_score(survival_bonus)
 		Global.display_green_alert(alert_label, alert_timer, "Shift survived! Bonus: " + str(survival_bonus) + " points!")
-		# Reset strikes and quota
-		Global.strikes = 0
-		Global.quota_met = 0
-		# Update displays
-		update_quota_display()
-		# Add 2 second delay before starting dialogue
-		await get_tree().create_timer(2.0).timeout
-		narrative_manager.start_shift_dialogue()
-		disable_controls()
-	else:
-		# Capture time taken
-		var elapsed_time = (Time.get_ticks_msec() / 1000.0) - game_start_time
-		
-		# Get border runner statistics
-		var runner_stats = $BorderRunnerSystem.shift_stats
-		
-		# Populate the ShiftStats object with the necessary data
-		shift_stats.time_taken = elapsed_time
-		shift_stats.missiles_fired = runner_stats.missiles_fired
-		shift_stats.missiles_hit = runner_stats.missiles_hit
-		shift_stats.perfect_hits = runner_stats.perfect_hits
-		shift_stats.total_stamps = shift_stats.total_stamps
-		shift_stats.potatoes_approved = shift_stats.potatoes_approved
-		shift_stats.potatoes_rejected = shift_stats.potatoes_rejected
-		
-		# Calculate the hit rate manually
-		shift_stats.hit_rate = 0.0 if shift_stats.missiles_fired == 0 else (float(shift_stats.missiles_hit) / shift_stats.missiles_fired * 100.0)
-		
-		# Call the store_game_stats() function with the populated ShiftStats object
-		Global.store_game_stats(shift_stats)
-		var summary = shift_summary.instantiate()
-		add_child(summary)
-		summary.show_summary(shift_stats)
+	
+	# Store game stats
+	Global.store_game_stats(shift_stats)
+	
+	# Show summary screen in all cases
+	var summary = shift_summary.instantiate()
+	add_child(summary)
+	summary.show_summary(shift_stats)
 	
 func set_difficulty(level):
 	difficulty_level = level
@@ -652,7 +640,8 @@ func process_decision(allowed):
 		if Global.quota_met >= Global.quota_target:
 			office_gate_controller.lower_gate(0.7)
 			print("Quota complete!")
-			end_shift()
+			end_shift(true) # end shift with success condition
+			return # Cease processing
 	   # Increase multiplier for streaks
 		if correct_decision_streak >= 3:
 			point_multiplier = 1.5
@@ -679,9 +668,8 @@ func process_decision(allowed):
 		if Global.strikes >= Global.max_strikes:
 			# Lower the gate when max strikes reached
 			office_gate_controller.lower_gate(0.7)  
-		   # Store stats before transitioning
-			Global.store_game_stats(shift_stats)
-			Global.go_to_game_over()
+			end_shift(false) # end shift with failure condition
+			return # Cease processing
 	update_score_display()
 	update_quota_display()
 	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
@@ -903,29 +891,22 @@ func enable_controls():
 	# Stop all timers and queues
 	$SystemManagers/Timers/SpawnTimer.start()
 		
+# Modified _on_game_over function
 func _on_game_over():
-		# Capture time taken
-		var elapsed_time = (Time.get_ticks_msec() / 1000.0) - game_start_time
-		
-		# Get border runner statistics
-		var runner_stats = border_runner_system.shift_stats
-		
-		# Populate the ShiftStats object with the necessary data
-		shift_stats.time_taken = elapsed_time
-		shift_stats.missiles_fired = runner_stats.missiles_fired
-		shift_stats.missiles_hit = runner_stats.missiles_hit
-		shift_stats.perfect_hits = runner_stats.perfect_hits
-		shift_stats.total_stamps = shift_stats.total_stamps
-		shift_stats.potatoes_approved = shift_stats.potatoes_approved
-		shift_stats.potatoes_rejected = shift_stats.potatoes_rejected
-		
-		# Calculate the hit rate manually
-		shift_stats.hit_rate = 0.0 if shift_stats.missiles_fired == 0 else (float(shift_stats.missiles_hit) / shift_stats.missiles_fired * 100.0)
-		
-		# Call the store_game_stats() function with the populated ShiftStats object
-		Global.store_game_stats(shift_stats)
-		# Call go to game over to load shift summary screen
-		Global.go_to_game_over()
+	# Capture time taken
+	var elapsed_time = (Time.get_ticks_msec() / 1000.0) - game_start_time
+	
+	# Get border runner statistics
+	var runner_stats = border_runner_system.shift_stats
+	
+	# Populate the ShiftStats object
+	shift_stats.time_taken = elapsed_time
+	shift_stats.missiles_fired = runner_stats.missiles_fired
+	shift_stats.missiles_hit = runner_stats.missiles_hit
+	shift_stats.perfect_hits = runner_stats.perfect_hits
+	
+	# This will handle storing stats and showing the summary screen
+	end_shift(false) # false = not a success scenario
 
 # Screen shake with configurable intensity and duration
 # Mild: intensity 3-5, duration 0.2

@@ -2,6 +2,7 @@ extends Control
 
 @onready var animation_player = $AnimationPlayer
 @onready var background = $Background
+signal closed
 
 var stats: Dictionary
 const BACKGROUND_TEXTURE = preload("res://assets/menu/shift_summary_end_screen.png")
@@ -10,30 +11,35 @@ func _init():
 	mouse_filter = Control.MOUSE_FILTER_IGNORE  # Allow input to pass through to buttons
 
 func _ready():
+	z_index = 100
+	mouse_filter = Control.MOUSE_FILTER_STOP  # Block input from passing through
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	hide()
-	setup_background()
-	setup_styling()
+
 	# Use stored stats if available, otherwise use test data
 	if !Global.current_game_stats.is_empty():
 		show_summary(Global.current_game_stats)
 	else:
 		show_summary(generate_test_stats())
-	# Fix button layering and input
+		
+	# Ensure buttons are interactive
 	for button in [$SubmitScoreButton, $RefreshButton, $RestartButton, $MainMenuButton]:
-		button.z_index = 15  # Ensure buttons are above all content
-		button.mouse_filter = Control.MOUSE_FILTER_STOP  # Force input handling
+		button.mouse_filter = Control.MOUSE_FILTER_STOP
 		button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-	# Ensure ScreenBackground and other full-screen elements don't block input
-	$ScreenBackground.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		
+	# Make sure child elements don't block input for buttons
 	$Background.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$SubmitScoreButton.z_index = 15
-	$RefreshButton.z_index = 15
-	$RestartButton.z_index = 15
-	$MainMenuButton.z_index = 15
-	# Make sure no overlays are blocking
-	$Background.z_index = 6
-	$ScreenBackground.z_index = 1
-	$PotatoRain.z_index = 3
+	$ScreenBackground.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	
+	# Connect button signals
+	$RestartButton.connect("pressed", Callable(self, "_on_restart_button_pressed"))
+	$MainMenuButton.connect("pressed", Callable(self, "_on_main_menu_button_pressed"))
+	
+	setup_background()
+	setup_styling()
+	
+	# Call animation
+	play_entry_animation()
 
 func setup_background():
 	if background and BACKGROUND_TEXTURE:
@@ -55,23 +61,15 @@ func setup_styling():
 func show_summary(stats_data: Dictionary):
 	stats = stats_data
 	show()
+	
+	
+	
 	populate_stats()
-	play_entry_animation()
 
 func populate_stats():
 	
 	# Update shift info
 	$HeaderPanel/Title.text = "SHIFT SUMMARY\n %s" % Global.difficulty_level
-	
-	# Update shift complete section
-	$LeftPanel/ShiftComplete.text = """--- SHIFT {shift} COMPLETE ---
-
-Time Taken: {time_taken}
-Total Score: {score}""".format({
-		"shift": stats.get("shift", 1),
-		"time_taken": str(int(stats.get("time_taken", 120))),
-		"score": format_number(stats.get("score", 0))
-	})
 	
 	# Update missile stats with calculated hit rate
 	$LeftPanel/MissileStats.text = """--- MISSILE STATS ---
@@ -106,6 +104,84 @@ FINAL SCORE: {final}""".format({
 	
 	# Update leaderboard
 	update_leaderboard()
+	
+		# Add performance comparison
+	var difficulty_rating = "Normal"
+	var expected_score = 10000  # Base expected score
+	
+	# Adjust expectations based on difficulty
+	match Global.difficulty_level:
+		"Easy":
+			expected_score = 8000
+			difficulty_rating = "Easy"
+		"Normal":
+			expected_score = 10000
+			difficulty_rating = "Normal"
+		"Expert":
+			expected_score = 14000
+			difficulty_rating = "Expert"
+	
+	# Calculate performance percentage
+	var performance = float(stats.get("final_score", 0)) / float(expected_score) * 100
+	var performance_text = "Average"
+	var performance_color = Color(1.0, 0.8, 0)  # Default yellow
+	
+	if performance >= 150:
+		performance_text = "Exceptional!"
+		performance_color = Color(1.0, 0.4, 0.8)  # Pink
+	elif performance >= 120:
+		performance_text = "Excellent!"
+		performance_color = Color(0.2, 0.8, 0.2)  # Green
+	elif performance >= 90:
+		performance_text = "Good"
+		performance_color = Color(0.4, 0.7, 0.1)  # Light green
+	elif performance < 70:
+		performance_text = "Needs Improvement"
+		performance_color = Color(0.8, 0.4, 0.1)  # Orange
+	elif performance < 50:
+		performance_text = "Poor"
+		performance_color = Color(0.8, 0.2, 0.2)  # Red
+	
+	# Add performance rating to display
+	$RightPanel/PerformanceStats.text = """
+	--- PERFORMANCE ---
+	Difficulty: {difficulty}
+	Performance Rating: {rating}
+	Score vs Expected: {percent}%
+	""".format({
+		"difficulty": difficulty_rating,
+		"rating": performance_text,
+		"percent": int(performance)
+	})
+	
+	$RightPanel/PerformanceStats.add_theme_color_override("font_color", performance_color)
+
+# Add to ShiftSummaryScreen.gd
+func play_entry_animation():
+	# Set initial states
+	$LeftPanel.modulate.a = 0
+	$RightPanel.modulate.a = 0
+	$HeaderPanel.modulate.a = 0
+	$LeaderboardPanel.modulate.a = 0
+	$LeaderboardTitlePanel.modulate.a = 0
+	
+	# Create animation sequence
+	var tween = create_tween()
+	tween.set_parallel(false)  # Sequential animations
+	
+	# Header fades in first
+	tween.tween_property($HeaderPanel, "modulate:a", 1.0, 0.5)
+	
+	# Then the panels fade in
+	tween.tween_property($LeftPanel, "modulate:a", 1.0, 0.4)
+	tween.tween_property($RightPanel, "modulate:a", 1.0, 0.4)
+	
+	# Finally the leaderboard
+	tween.tween_property($LeaderboardTitlePanel, "modulate:a", 1.0, 0.3)
+	tween.tween_property($LeaderboardPanel, "modulate:a", 1.0, 0.3)
+	
+	# Start animation
+	tween.play()
 
 # Helper function to format numbers with commas
 func format_number(number: int) -> String:
@@ -154,10 +230,6 @@ func update_leaderboard():
 	
 	$LeaderboardPanel/Entries.text = leaderboard_text
 	print("Leaderboard updated.")
-
-func play_entry_animation():
-	if animation_player:
-		animation_player.play("show_summary")
 
 func generate_test_stats() -> Dictionary:
 	return {

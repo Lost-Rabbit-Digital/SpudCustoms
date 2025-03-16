@@ -168,9 +168,9 @@ horizontal_alignment = 1
 [node name="RightPanel" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 502.0
-offset_top = 182.0
+offset_top = 169.0
 offset_right = 782.0
-offset_bottom = 539.0
+offset_bottom = 526.0
 alignment = 1
 
 [node name="DocumentStats" type="Label" parent="RightPanel"]
@@ -194,6 +194,17 @@ text = "
     Perfect Hit Bonus: 2,000
 
     FINAL SCORE: 15,480"
+label_settings = ExtResource("3_oti8t")
+horizontal_alignment = 1
+
+[node name="PerformanceStats" type="Label" parent="RightPanel"]
+layout_mode = 2
+text = "
+	--- PERFORMANCE ---
+	Difficulty: {difficulty}
+	Performance Rating: {rating}
+	Score vs Expected: {percent}%
+	"
 label_settings = ExtResource("3_oti8t")
 horizontal_alignment = 1
 
