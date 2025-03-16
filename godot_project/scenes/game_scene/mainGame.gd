@@ -1,8 +1,7 @@
 extends Node2D
 
-# Add border runner system
 var border_runner_system
-var regular_potato_speed = 0.5  # Add this at the class level
+var regular_potato_speed = 0.5  
 
 # Track game states
 var is_game_paused: bool = false
@@ -21,7 +20,7 @@ var difficulty_level
 # Track multipliers and streaks
 var point_multiplier: float = 1.0
 var correct_decision_streak: int = 0
-var original_runner_chance: float = 0.15  # Match your current chance value
+var original_runner_chance: float = 0.15  
 
 # storing and sending rule assignments
 signal rules_updated(new_rules)

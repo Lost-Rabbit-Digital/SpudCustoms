@@ -422,7 +422,9 @@ func spawn_smoke_particle(position: Vector2, direction: Vector2):
 func update_runners(delta):
 	var i = active_runners.size() - 1
 	
-	while i >= 0:
+	while i >= 0 and i < active_runners.size():
+		if active_runners.size() <= i:  # Additional safety check
+			break
 		var runner = active_runners[i]
 		
 		if runner.current_path_follow:

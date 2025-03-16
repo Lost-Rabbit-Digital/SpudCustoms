@@ -1,6 +1,5 @@
 extends Node
 
-# Existing variables
 var shift: int = 1
 var current_story_state: int = 0
 var final_score = 0
@@ -359,7 +358,7 @@ func go_to_game_over():
 	# Store the score in a global script or autoload
 	Global.final_score = Global.score
 	print("transition to game over scene")
-	get_tree().change_scene_to_file("res://ShiftSummaryScreen.tscn")
+	get_tree().change_scene_to_file("res://scripts/systems/ShiftSummaryScreen.tscn")
 	
 func clear_alert_after_delay(alert_label, alert_timer):
 	alert_timer.start()
@@ -376,7 +375,8 @@ func display_red_alert(alert_label, alert_timer, text):
 	# Load and play the audio file
 	var audio_player = AudioStreamPlayer.new()
 	audio_player.stream = load("res://assets/audio/ui_feedback/task_fail_harp_1.wav")
-	audio_player.volume_db = -10  # Reduce volume by 10 decibels
+	audio_player.volume_db = -5
+	audio_player.bus = "SFX"
 	add_child(audio_player)
 	audio_player.play()
 	# Display the alert
@@ -392,7 +392,8 @@ func display_green_alert(alert_label, alert_timer, text):
 	# Load and play the audio file
 	var audio_player = AudioStreamPlayer.new()
 	audio_player.stream = load("res://assets/audio/ui_feedback/task_accept_ensemble_1.wav")
-	audio_player.volume_db = -15  # Reduce volume by 10 decibels
+	audio_player.volume_db = -5
+	audio_player.bus = "SFX"
 	add_child(audio_player)
 	audio_player.play()
 	# Display the alert

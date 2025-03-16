@@ -272,8 +272,6 @@ func find_nearest_table_position(item_position: Vector2, item_size: Vector2) -> 
 	return target_pos
 
 # Return an item to the nearest valid position on the inspection table
-# Return an item to the nearest valid position on the inspection table
-# Return an item to the nearest valid position on the inspection table
 func _return_item_to_table(item: Node2D):
 	if not item or not inspection_table:
 		if item:

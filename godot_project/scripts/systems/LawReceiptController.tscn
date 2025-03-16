@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://fci3o688eddt"]
+[gd_scene load_steps=5 format=3 uid="uid://fci3o688eddt"]
 
 [ext_resource type="Script" uid="uid://bpnjylkqyfo0l" path="res://scripts/systems/LawReceiptController.gd" id="1_avj83"]
 [ext_resource type="Texture2D" uid="uid://c56e60snydr5r" path="res://assets/stamps/stamp_crossbar_expand_button.png" id="2_sdl72"]
 [ext_resource type="Texture2D" uid="uid://bxn3434177kfd" path="res://assets/documents/laws_receipt.png" id="3_avj83"]
 [ext_resource type="Script" uid="uid://da3vr2ac5yi5i" path="res://scripts/systems/LawReceiptSprite.gd" id="4_agfho"]
-[ext_resource type="Texture2D" uid="uid://b0xvn475tgt1j" path="res://assets/stamps/hide_button.png" id="7_y8vt1"]
 
 [node name="LawReceiptController" type="Node2D"]
 z_index = 10
@@ -39,7 +38,6 @@ offset_right = 195.115
 offset_bottom = 118.981
 rotation = -1.5708
 scale = Vector2(0.660301, 0.660301)
-texture_normal = ExtResource("7_y8vt1")
 
 [node name="OpenReceipt" type="Node2D" parent="LawReceiptSprite"]
 z_index = 11
