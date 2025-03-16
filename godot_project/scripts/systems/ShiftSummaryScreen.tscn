@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dsobjoevgmlbb"]
+[gd_scene load_steps=10 format=3 uid="uid://dsobjoevgmlbb"]
 
 [ext_resource type="Script" uid="uid://buqr1l0oc2207" path="res://scripts/systems/ShiftSummaryScreen.gd" id="1_lf5e7"]
 [ext_resource type="LabelSettings" uid="uid://bnemubwwr558w" path="res://assets/styles/ShiftSummaryHeaderText.tres" id="2_68n1l"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://jnkry01ogbb2" path="res://assets/menu/shift_summary_end_screen.png" id="4_2of0t"]
 [ext_resource type="PackedScene" uid="uid://dk47bwveebyio" path="res://scripts/systems/PotatoRain.tscn" id="5_oti8t"]
 [ext_resource type="Texture2D" uid="uid://cbmfot3bx30yf" path="res://assets/narrative/aftermath.png" id="6_3rq7k"]
+[ext_resource type="Texture2D" uid="uid://ctef0hoky4rwi" path="res://assets/menu/leaderboard.png" id="6_r15em"]
+[ext_resource type="Texture2D" uid="uid://c5ffltpskgqiw" path="res://assets/menu/shift_summary_journal.png" id="7_klx14"]
 
 [node name="ShiftSummaryScreen" type="Control"]
 z_index = 13
@@ -209,6 +211,7 @@ label_settings = ExtResource("3_oti8t")
 horizontal_alignment = 1
 
 [node name="Background" type="TextureRect" parent="."]
+visible = false
 z_index = 6
 z_as_relative = false
 layout_mode = 2
@@ -217,6 +220,28 @@ offset_top = 80.0
 offset_right = 1192.0
 offset_bottom = 632.0
 texture = ExtResource("4_2of0t")
+expand_mode = 1
+
+[node name="LeaderboardBackground" type="TextureRect" parent="."]
+z_index = 6
+z_as_relative = false
+layout_mode = 2
+offset_left = 832.0
+offset_top = 118.0
+offset_right = 1160.0
+offset_bottom = 592.0
+texture = ExtResource("6_r15em")
+expand_mode = 1
+
+[node name="StatsJournalBackground" type="TextureRect" parent="."]
+z_index = 6
+z_as_relative = false
+layout_mode = 2
+offset_left = 143.0
+offset_top = 118.0
+offset_right = 813.0
+offset_bottom = 597.0
+texture = ExtResource("7_klx14")
 expand_mode = 1
 
 [node name="PotatoRain" parent="." instance=ExtResource("5_oti8t")]

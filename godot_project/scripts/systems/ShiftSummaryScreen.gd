@@ -38,6 +38,8 @@ func _ready():
 	setup_background()
 	setup_styling()
 	
+	var original_bg_pos = $Background.position
+	
 	# Call animation
 	play_entry_animation()
 
@@ -58,12 +60,42 @@ func setup_styling():
 		label.add_theme_constant_override("outline_size", 2)
 		label.add_theme_color_override("font_outline_color", outline_color)
 
+# Add to ShiftSummaryScreen.gd
+func format_time(seconds: float) -> String:
+	var minutes = int(seconds) / 60
+	var secs = int(seconds) % 60
+	return "%sm %ss" % [minutes, secs]
+
 func show_summary(stats_data: Dictionary):
 	stats = stats_data
 	show()
+	 # Determine if player won or lost
+	var win_condition = stats.get("quota_met", 0) >= stats.get("quota_target", 0)
+	var strikes_failed = stats.get("strikes", 0) >= stats.get("max_strikes", 0)
 	
-	
-	
+	# Update UI based on result
+	if win_condition:
+		$LeftPanel/ShiftComplete.text = """--- SHIFT {shift} COMPLETE ---
+		SUCCESS!
+		Time Taken: {time_taken}
+		Total Score: {score}""".format({
+			"shift": stats.get("shift", 1),
+			"time_taken": format_time(stats.get("time_taken", 0)),
+			"score": format_number(stats.get("score", 0))
+		})
+		$LeftPanel/ShiftComplete.add_theme_color_override("font_color", Color(0.2, 0.8, 0.2))
+	else:
+		var failure_reason = "STRIKE LIMIT REACHED!" if strikes_failed else "QUOTA NOT MET!"
+		$LeftPanel/ShiftComplete.text = """--- SHIFT {shift} COMPLETE ---
+		{failure}
+		Time Taken: {time_taken}
+		Total Score: {score}""".format({
+			"shift": stats.get("shift", 1),
+			"failure": failure_reason,
+			"time_taken": format_time(stats.get("time_taken", 0)),
+			"score": format_number(stats.get("score", 0))
+		})
+		$LeftPanel/ShiftComplete.add_theme_color_override("font_color", Color(0.9, 0.2, 0.2))
 	populate_stats()
 
 func populate_stats():
@@ -146,7 +178,8 @@ FINAL SCORE: {final}""".format({
 	$RightPanel/PerformanceStats.text = """
 	--- PERFORMANCE ---
 	Difficulty: {difficulty}
-	Performance Rating: {rating}
+	Performance Rating: 
+	{rating}
 	Score vs Expected: {percent}%
 	""".format({
 		"difficulty": difficulty_rating,
@@ -156,32 +189,68 @@ FINAL SCORE: {final}""".format({
 	
 	$RightPanel/PerformanceStats.add_theme_color_override("font_color", performance_color)
 
-# Add to ShiftSummaryScreen.gd
 func play_entry_animation():
-	# Set initial states
+	# Set initial states for text elements
 	$LeftPanel.modulate.a = 0
 	$RightPanel.modulate.a = 0
 	$HeaderPanel.modulate.a = 0
 	$LeaderboardPanel.modulate.a = 0
 	$LeaderboardTitlePanel.modulate.a = 0
 	
+	# Store original positions
+	var stats_bg_original_pos = $StatsJournalBackground.position
+	var leaderboard_bg_original_pos = $LeaderboardBackground.position
+	
+	# Set initial positions (off-screen at the top)
+	$StatsJournalBackground.position.y = -$StatsJournalBackground.texture.get_height() - 400
+	$LeaderboardBackground.position.y = -$LeaderboardBackground.texture.get_height() - 400
+	
 	# Create animation sequence
 	var tween = create_tween()
 	tween.set_parallel(false)  # Sequential animations
 	
-	# Header fades in first
-	tween.tween_property($HeaderPanel, "modulate:a", 1.0, 0.5)
+	# 1. First, slide in StatsJournalBackground with bounce
+	tween.tween_property($StatsJournalBackground, "position:y", stats_bg_original_pos.y - 30, 0.75)\
+		 .set_trans(Tween.TRANS_BACK)\
+		 .set_ease(Tween.EASE_OUT)
 	
-	# Then the panels fade in
-	tween.tween_property($LeftPanel, "modulate:a", 1.0, 0.4)
-	tween.tween_property($RightPanel, "modulate:a", 1.0, 0.4)
+	# Add bounce
+	tween.tween_property($StatsJournalBackground, "position:y", stats_bg_original_pos.y + 15, 0.3)\
+		 .set_trans(Tween.TRANS_SINE)\
+		 .set_ease(Tween.EASE_IN_OUT)
+		 
+	# Final settle
+	tween.tween_property($StatsJournalBackground, "position:y", stats_bg_original_pos.y, 0.2)\
+		 .set_trans(Tween.TRANS_SINE)\
+		 .set_ease(Tween.EASE_OUT)
 	
-	# Finally the leaderboard
-	tween.tween_property($LeaderboardTitlePanel, "modulate:a", 1.0, 0.3)
-	tween.tween_property($LeaderboardPanel, "modulate:a", 1.0, 0.3)
+	# 2. Then, slide in LeaderboardBackground with bounce
+	tween.tween_property($LeaderboardBackground, "position:y", leaderboard_bg_original_pos.y - 30, 0.7)\
+		 .set_trans(Tween.TRANS_BACK)\
+		 .set_ease(Tween.EASE_OUT)
 	
-	# Start animation
-	tween.play()
+	# Add bounce
+	tween.tween_property($LeaderboardBackground, "position:y", leaderboard_bg_original_pos.y + 15, 0.3)\
+		 .set_trans(Tween.TRANS_SINE)\
+		 .set_ease(Tween.EASE_IN_OUT)
+		 
+	# Final settle
+	tween.tween_property($LeaderboardBackground, "position:y", leaderboard_bg_original_pos.y, 0.2)\
+		 .set_trans(Tween.TRANS_SINE)\
+		 .set_ease(Tween.EASE_OUT)
+	
+	# 3. Now start the text animations with slow fade-in
+	
+	# Header fades in first (slow)
+	tween.tween_property($HeaderPanel, "modulate:a", 1.0, 1.0)
+	
+	# Then the panels fade in (slow)
+	tween.tween_property($LeftPanel, "modulate:a", 1.0, 0.9)
+	tween.tween_property($RightPanel, "modulate:a", 1.0, 0.9)
+	
+	# Finally the leaderboard (slow)
+	tween.tween_property($LeaderboardTitlePanel, "modulate:a", 1.0, 0.7)
+	tween.tween_property($LeaderboardPanel, "modulate:a", 1.0, 0.7)
 
 # Helper function to format numbers with commas
 func format_number(number: int) -> String:
@@ -254,8 +323,8 @@ func _on_submit_score_button_pressed() -> void:
 
 
 func _on_restart_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://main_scenes/scenes/game_scene/levels/mainGame.tscn")
+	get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
 
 
 func _on_main_menu_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://main_scenes/scenes/menus/main_menu/main_menu_with_animations.tscn")
+	get_tree().change_scene_to_file("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
