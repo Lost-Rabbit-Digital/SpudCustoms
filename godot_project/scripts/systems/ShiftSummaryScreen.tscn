@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c5ffltpskgqiw" path="res://assets/menu/shift_summary_journal.png" id="7_klx14"]
 
 [node name="ShiftSummaryScreen" type="Control"]
-z_index = 13
+z_index = 100
 z_as_relative = false
 layout_mode = 3
 anchors_preset = 15
@@ -223,7 +223,7 @@ texture = ExtResource("4_2of0t")
 expand_mode = 1
 
 [node name="LeaderboardBackground" type="TextureRect" parent="."]
-z_index = 6
+z_index = 25
 z_as_relative = false
 layout_mode = 2
 offset_left = 832.0
@@ -234,7 +234,7 @@ texture = ExtResource("6_r15em")
 expand_mode = 1
 
 [node name="StatsJournalBackground" type="TextureRect" parent="."]
-z_index = 6
+z_index = 25
 z_as_relative = false
 layout_mode = 2
 offset_left = 143.0
@@ -245,7 +245,7 @@ texture = ExtResource("7_klx14")
 expand_mode = 1
 
 [node name="PotatoRain" parent="." instance=ExtResource("5_oti8t")]
-z_index = -1
+z_index = 24
 z_as_relative = false
 
 [node name="ScreenBackground" type="TextureRect" parent="."]

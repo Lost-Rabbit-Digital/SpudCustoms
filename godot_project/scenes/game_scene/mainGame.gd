@@ -322,7 +322,7 @@ func end_shift(success: bool = true):
 	var fade_rect = ColorRect.new()
 	fade_rect.color = Color(0, 0, 0, 0)
 	fade_rect.size = get_viewport_rect().size
-	fade_rect.z_index = 100
+	fade_rect.z_index = 23
 	add_child(fade_rect)
 	
 	var tween = create_tween()
