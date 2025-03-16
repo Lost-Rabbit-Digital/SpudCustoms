@@ -772,8 +772,8 @@ func remove_stamp():
 		
 	tween.tween_property(mugshot_generator, "modulate:a", 0, 0.7)
 	tween.tween_property(passport, "modulate:a", 0, 0.7)
-	# Lower the gate as the potato leaves
-	office_gate_controller.lower_gate(1.0)
+	# OPTIONAL: Lower the gate as the potato leaves
+	#office_gate_controller.lower_gate(1.0)
 	tween.chain().tween_callback(func(): 
 		# Process the decision using the main game logic
 		process_decision(decision == "approved")
