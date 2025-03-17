@@ -827,6 +827,15 @@ func check_runner_hits(explosion_pos):
 func handle_successful_hit(runner, explosion_pos):
 	# Spawn gibs at the runner's position
 	spawn_gibs(runner.get_position())
+			# Brief game pause for impact
+	var previous_pause_state = get_tree().paused
+	get_tree().paused = true
+	
+	# Create a timer to unpause after a short duration
+	var unpause_timer = get_tree().create_timer(0.02)  # 20 milliseconds
+	unpause_timer.timeout.connect(func():
+		get_tree().paused = previous_pause_state
+	)
 	
 	# Update stats with successful hits
 	shift_stats.missiles_hit += 1
