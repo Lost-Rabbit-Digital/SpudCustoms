@@ -1,5 +1,6 @@
 # StampBarController.gd
 extends Node2D
+class_name StampBarController
 
 # References to other nodes
 @onready var passport: Sprite2D = $"../Passport"
@@ -155,20 +156,20 @@ func hide_stamp_bar():
 	tween.set_parallel(true)
 	tween.tween_property(stamp_bar, "position", 
 		Vector2(stamp_bar.position.x, start_node.position.y * 0.7), 
-		duration * 0.4
+		duration * 0.3
 	).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	
 	# Stage 2: Sudden stop with slight bounce
 	tween.tween_property(stamp_bar, "position", 
-		Vector2(stamp_bar.position.x, start_node.position.y * 1.1), 
-		duration * 0.3
-	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT).set_delay(duration * 0.4)
+		Vector2(stamp_bar.position.x, start_node.position.y * 1.2), 
+		duration * 0.4
+	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT).set_delay(duration * 0.2)
 	
 	# Stage 3: Final settling
 	tween.tween_property(stamp_bar, "position", 
 		start_node.position, 
-		duration * 0.3
-	).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT).set_delay(duration * 0.7)
+		duration 
+	).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT).set_delay(duration * 0.4)
 	
 	# Optional heavy impact sound or screen shake
 	tween.chain().tween_callback(func(): 
@@ -305,3 +306,10 @@ func create_final_stamp(stamp_type: String, pos: Vector2):
 	var tween = create_tween()
 	tween.tween_property(final_stamp, "modulate:a", 1.0, 0.1)\
 		 .set_delay(STAMP_ANIM_DURATION/2)
+
+
+func _on_toggle_position_button_mouse_entered() -> void:
+	pass
+
+func _on_toggle_position_button_mouse_exited() -> void:
+	pass

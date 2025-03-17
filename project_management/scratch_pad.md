@@ -97,6 +97,7 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Add logic to check if game paused or in dialogic before updating cursor to target cursor
   [ ] - Improve stamp and interaction system integration
   [ ] - Turn down the splashscreen sound on game start
+  [ ] - Code: Move cursor system out of drag system
 
 ### Currently Active Tasks for 1.0.2
   [ ] - Documents should have gravity on the suspect panel and should fall to the counter
