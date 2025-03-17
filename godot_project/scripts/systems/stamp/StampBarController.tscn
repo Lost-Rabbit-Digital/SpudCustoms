@@ -59,8 +59,13 @@ offset_bottom = 46.8927
 grow_horizontal = 0
 texture_normal = ExtResource("2_6a1oe")
 
+[node name="StampBarAudio" type="AudioStreamPlayer2D" parent="StampBar"]
+
 [node name="StartNode" type="Node2D" parent="."]
 position = Vector2(-244, 0)
 
 [node name="EndNode" type="Node2D" parent="."]
 position = Vector2(305, 0)
+
+[connection signal="mouse_entered" from="StampBar/Background/TogglePositionButton" to="." method="_on_toggle_position_button_mouse_entered"]
+[connection signal="mouse_exited" from="StampBar/Background/TogglePositionButton" to="." method="_on_toggle_position_button_mouse_exited"]

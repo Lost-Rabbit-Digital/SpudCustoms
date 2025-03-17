@@ -151,7 +151,7 @@ func spawn_paper_crunch_effect(position: Vector2, intensity: float = 1.0):
 	effect.spawn_at(position)
 	
 	# Play appropriate sound effect if available
-	var audio_player = AudioStreamPlayer2D.new()
+	audio_player = AudioStreamPlayer2D.new()
 	audio_player.volume_db = 5.0  # Adjust volume as needed
 	audio_player.bus = "SFX"
 	audio_player.autoplay = true
