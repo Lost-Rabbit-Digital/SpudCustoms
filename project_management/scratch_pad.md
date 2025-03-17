@@ -5,25 +5,22 @@ These are our goals, to-do tasks, and completed tasks.
 
 ## Tasks
 ### Graphics
-  [ ] - Add a Metal shutter that rolls down cinematically with segments that cascade down, dust particles as it hits bottom, a satisfying "clunk" sound effect
+  [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
   [ ] - Add new potato type art and re-institute potato type rules
   [ ] - Fix text on main menu and other scenes with background photos
   [ ] - A slider for the law book to slide in from the bottom as a note-card, or stay as a draggable object?
-  [ ] - Make sure interacting with a stamp blocks picking items up
-  [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
   [ ] - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
-  [ ] - Add ink flecks from stamping that turn into ink splotches on the desk that fade away
+  [ ] - Add ink flecks from stamping that fly up when you stamp
   [ ] - Add dialogue emotes randomly to the potatoes
   ===
   [ ] - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
   [ ] - Add an Entry ticket document and law requirement
 ### Gameplay
-  [ ] - Display max score for each shift and 0-3 golden potatoes based on score benchmarks for each shift
-  [ ] - Allow missiles to kill approved potatoes, resulting in a Totneva Convention violation and a strike
   [ ] - Set a highlight shader on the closed passport if the document goes untouched for >5 seconds
   [ ] - Set a highlight shader on the speaker/start button if the booth goes empty for >5 seconds
   [ ] - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >5 seconds
-  [ ] - Add simple fade to game over summary
+  [ ] - Display max score for each shift and 0-3 golden potatoes / stamps based on score benchmarks for each shift
+  [ ] - Allow missiles to kill approved potatoes, resulting in a Totneva Convention violation (-250 points) and a strike
   [ ] - Allow multiple simultaneous runners, can we multi-thread this?
   [ ] - Change position so kill text flying up with the score update ("potato.first_name + potato.last_name" + "neutralized...")
   [ ] - Add clearer feedback for game over conditions ("Too many strikes, you lose!")
@@ -64,8 +61,7 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Move shift summary to end of game, not end of shift, on quota reached restart, on strikes reached end game
   [ ] - Possibly exit the game from the lose screen
   [ ] - Randomly lose combo when doing potato border runner system
-  [ ] - Rounds end too abruptly, need to tell the player why they failed
-  [ ] - There is no continuing shift, after you reach quota you hit the shift summary and end the game
+
   [ ] - Update ATTRIBUTION.md with MODERN DOS font
   [ ] - Update menus with new MODERN DOS font
   [ ] - Update stats on potato escape and missile kill
@@ -104,7 +100,6 @@ These are our goals, to-do tasks, and completed tasks.
     [ ] - *INTERNAL USE* Have two JSON sections, "next queue" and "general sayings", different names but you get the idea
     [ ] - *INTERNAL USE* JSON to store strings instead of hard-coding into images
     [ ] - *INTERNAL USE* Just one background image for the dialogue box
-  [ ] - Add Flash Indicator for Megaphone via shader
   [ ] - Add logic to check if game paused or in dialogic before updating cursor to target cursor
   [ ] - Stamps go over edge of passport
   [ ] - Improve stamp and interaction system integration
@@ -122,7 +117,12 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Test megaphone to make sure it works in all cases
 
 ### Completed Tasks for 1.0.2
-Before release, go through GitHub commits and see what the fuck we even did this update. And please just update the notes as we go along, this is rough.
+Before release, review GitHub commits using the following command `git log --since="last month" --pretty=format:'%h,%an,%ar,%s' > log.csv` - This artifact can then be fed into Claude or similar to analyze the changes.
+  - Rounds end too abruptly, need to tell the player why they failed
+  - There is no continuing shift, after you reach quota you hit the shift summary and end the game
+  - Add simple fade to game over summary
+  - Make sure interacting with a stamp blocks picking items up
+  - Add a Metal shutter that rolls down cinematically with segments that cascade down, dust particles as it hits bottom, a satisfying "clunk" sound effect
   - When the passport is on left side of the inspection table it should remain open to make it easier for users to line up with the stamp bar
   - If potatoes are rejected, they should exit through the right side instead of the left
   - Fix z-ordering with potatoes to pass them under the background layer 
