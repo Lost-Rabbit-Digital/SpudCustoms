@@ -1,0 +1,22 @@
+class_name CursorTypes
+extends Resource
+
+enum Type {
+	DEFAULT,
+	POINTER,
+	HAND,
+	GRAB,
+	GRABBING,
+	TEXT,
+	CROSSHAIR,
+	MOVE,
+	RESIZE_H,
+	RESIZE_V,
+	RESIZE_DIAG1,
+	RESIZE_DIAG2,
+	LOADING,
+	FORBIDDEN,
+	CUSTOM_1,
+	CUSTOM_2,
+	CUSTOM_3
+}
