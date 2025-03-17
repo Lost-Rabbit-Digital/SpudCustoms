@@ -149,6 +149,12 @@ func show_stamp_bar():
 func hide_stamp_bar():
 	is_animating = true
 	
+	# Mechanical gate lowering with different easing
+	stamp_bar_audio.stream = preload("res://scripts/systems/stamp/audio/stamp_bar_slide.mp3")
+	stamp_bar_audio.volume_db = 0
+	stamp_bar_audio.bus = "SFX"  
+	stamp_bar_audio.play()
+	
 	# Create a more dynamic lowering tween
 	var tween = create_tween()
 	
