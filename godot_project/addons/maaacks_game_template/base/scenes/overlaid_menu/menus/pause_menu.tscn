@@ -11,6 +11,12 @@ options_packed_scene = ExtResource("3_kv70e")
 main_menu_scene = "res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn"
 pauses_game = true
 
+[node name="MenuPanelContainer" parent="." index="1"]
+modulate = Color(0.896599, 0.712161, 0.435342, 1)
+
+[node name="PanelColor" parent="MenuPanelContainer" index="0"]
+color = Color(0.356464, 0.190452, 0.0827405, 1)
+
 [node name="MarginContainer" parent="MenuPanelContainer" index="1"]
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
