@@ -59,6 +59,8 @@ offset_bottom = 46.8927
 grow_horizontal = 0
 texture_normal = ExtResource("2_6a1oe")
 
+[node name="StampBarAudio" type="AudioStreamPlayer2D" parent="StampBar"]
+
 [node name="StartNode" type="Node2D" parent="."]
 position = Vector2(-244, 0)
 

@@ -27,7 +27,7 @@ var stamp_result_textures = {
 }
 
 # Constants for UI animation
-const TWEEN_DURATION = 0.5
+const duration = 0.5
 
 # Constants for stamp animation
 const STAMP_ANIM_DURATION = 0.3
@@ -41,6 +41,8 @@ var stamp_cooldown_timer = 0.0
 var current_stamp_type = ""
 var current_stamp_texture: Texture2D
 var last_mouse_position: Vector2
+
+@onready var stamp_bar_audio: AudioStreamPlayer2D = $StampBar/StampBarAudio
 
 # Signals
 signal stamp_selected(stamp_type, stamp_texture)
@@ -102,19 +104,41 @@ func _on_toggle_position_button_pressed():
 func show_stamp_bar():
 	is_animating = true
 	
-	# Create tween for showing stamp bar
+	# Mechanical gate lowering with different easing
+	stamp_bar_audio.stream = preload("res://scripts/systems/stamp/audio/stamp_bar_slide.mp3")
+	stamp_bar_audio.volume_db = 0
+	stamp_bar_audio.bus = "SFX"  
+	stamp_bar_audio.play()
+	
+	# Create a more dynamic lowering tween
 	var tween = create_tween()
+	
+	# Stage 1: Initial quick move (EASE_IN with acceleration)
 	tween.set_parallel(true)
+	tween.tween_property(stamp_bar, "position", 
+		Vector2(stamp_bar.position.x, end_node.position.y * 0.7), 
+		duration * 0.3
+	).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	
-	# Move stamp bar from start_node to end_node
-	tween.tween_property(stamp_bar, "position", end_node.position, TWEEN_DURATION)\
-		 .set_trans(Tween.TRANS_CUBIC)\
-		 .set_ease(Tween.EASE_OUT)
+	# Stage 2: Sudden stop with slight bounce
+	tween.tween_property(stamp_bar, "position", 
+		Vector2(stamp_bar.position.x, end_node.position.y * 1.2), 
+		duration * 0.4
+	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT).set_delay(duration * 0.2)
 	
-	# Update toggle button appearance if needed (optional)
-	# For example, you might want to rotate it or change its texture
-	# tween.tween_property(toggle_position_button, "rotation_degrees", 180, TWEEN_DURATION)
+	# Stage 3: Final settling
+	tween.tween_property(stamp_bar, "position", 
+		end_node.position, 
+		duration
+	).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT).set_delay(duration * 0.4)
 	
+	# Optional heavy impact sound or screen shake
+	tween.chain().tween_callback(func(): 
+		# Find the main game node (assuming it has a shake_screen method)
+		var main_game = get_tree().current_scene
+		if main_game and main_game.has_method("shake_screen"):
+			main_game.shake_screen(8.0, 0.3)  # Stronger shake for slamming
+	)
 	# When complete
 	tween.chain().tween_callback(func():
 		is_animating = false
@@ -124,18 +148,35 @@ func show_stamp_bar():
 func hide_stamp_bar():
 	is_animating = true
 	
-	# Create tween for hiding stamp bar
+	# Create a more dynamic lowering tween
 	var tween = create_tween()
+	
+	# Stage 1: Initial quick drop (EASE_IN with acceleration)
 	tween.set_parallel(true)
+	tween.tween_property(stamp_bar, "position", 
+		Vector2(stamp_bar.position.x, start_node.position.y * 0.7), 
+		duration * 0.4
+	).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	
-	# Move stamp bar from end_node back to start_node
-	tween.tween_property(stamp_bar, "position", start_node.position, TWEEN_DURATION)\
-		 .set_trans(Tween.TRANS_CUBIC)\
-		 .set_ease(Tween.EASE_OUT)
+	# Stage 2: Sudden stop with slight bounce
+	tween.tween_property(stamp_bar, "position", 
+		Vector2(stamp_bar.position.x, start_node.position.y * 1.1), 
+		duration * 0.3
+	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT).set_delay(duration * 0.4)
 	
-	# Update toggle button appearance if needed (optional)
-	# tween.tween_property(toggle_position_button, "rotation_degrees", 0, TWEEN_DURATION)
+	# Stage 3: Final settling
+	tween.tween_property(stamp_bar, "position", 
+		start_node.position, 
+		duration * 0.3
+	).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT).set_delay(duration * 0.7)
 	
+	# Optional heavy impact sound or screen shake
+	tween.chain().tween_callback(func(): 
+		# Find the main game node (assuming it has a shake_screen method)
+		var main_game = get_tree().current_scene
+		if main_game and main_game.has_method("shake_screen"):
+			main_game.shake_screen(8.0, 0.3)  # Stronger shake for slamming
+	)
 	# When complete
 	tween.chain().tween_callback(func():
 		is_animating = false
