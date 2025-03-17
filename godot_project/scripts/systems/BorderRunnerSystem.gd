@@ -825,6 +825,16 @@ func check_runner_hits(explosion_pos):
 		runner_streak = 0
 
 func handle_successful_hit(runner, explosion_pos):
+	# Store original modulate color
+	var original_modulate = runner.modulate
+	
+	# Briefly change runner to white
+	runner.modulate = Color.WHITE
+	
+	# Create a tween to revert the color
+	var color_tween = create_tween()
+	color_tween.tween_property(runner, "modulate", original_modulate, 0.1)
+	
 	# Spawn gibs at the runner's position
 	spawn_gibs(runner.get_position())
 			# Brief game pause for impact
