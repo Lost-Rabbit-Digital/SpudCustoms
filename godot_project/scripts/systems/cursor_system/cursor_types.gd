@@ -1,22 +1,19 @@
+## An enumeration of all cursor types available in the system.
 class_name CursorTypes
-extends Resource
+extends RefCounted
 
+## Available cursor visual states
 enum Type {
-	DEFAULT,
-	POINTER,
-	HAND,
-	GRAB,
-	GRABBING,
-	TEXT,
-	CROSSHAIR,
-	MOVE,
-	RESIZE_H,
-	RESIZE_V,
-	RESIZE_DIAG1,
-	RESIZE_DIAG2,
-	LOADING,
-	FORBIDDEN,
-	CUSTOM_1,
-	CUSTOM_2,
-	CUSTOM_3
+	DEFAULT,    ## Default arrow cursor
+	POINTER,    ## Pointing hand for clickable UI elements
+	HAND,       ## Hover hand for interactive items
+	GRAB,       ## Grab cursor for draggable items
+	GRABBING,   ## Grabbing cursor for when item is being dragged
+	TEXT,       ## Text editing cursor
+	CROSSHAIR,  ## Precision targeting cursor
+	MOVE,       ## Four-directional move cursor
+	RESIZE_H,   ## Horizontal resize cursor
+	RESIZE_V,   ## Vertical resize cursor
+	RESIZE_DIAG1, ## Diagonal resize (top-left to bottom-right)
+	RESIZE_DIAG2  ## Diagonal resize (top-right to bottom-left)
 }
