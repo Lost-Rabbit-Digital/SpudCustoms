@@ -326,7 +326,7 @@ func end_shift(success: bool = true):
 	add_child(fade_rect)
 	
 	var tween = create_tween()
-	tween.tween_property(fade_rect, "color", Color(0, 0, 0, 0.5), 0.5)
+	tween.tween_property(fade_rect, "color", Color(0, 0, 0, 0.75), 0.5)
 	tween.tween_callback(func():
 		# Show summary screen after fade
 		var summary = shift_summary.instantiate()

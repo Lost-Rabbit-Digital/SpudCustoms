@@ -23,7 +23,7 @@ func _ready():
 		show_summary(generate_test_stats())
 		
 	# Ensure buttons are interactive
-	for button in [$SubmitScoreButton, $RefreshButton, $RestartButton, $MainMenuButton]:
+	for button in [$ContinueButton, $RefreshButton, $RestartButton, $MainMenuButton]:
 		button.mouse_filter = Control.MOUSE_FILTER_STOP
 		button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 		
