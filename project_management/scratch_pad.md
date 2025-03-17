@@ -96,6 +96,7 @@ These are our goals, to-do tasks, and completed tasks.
     [ ] - *INTERNAL USE* Just one background image for the dialogue box
   [ ] - Add logic to check if game paused or in dialogic before updating cursor to target cursor
   [ ] - Improve stamp and interaction system integration
+  [ ] - Turn down the splashscreen sound on game start
 
 ### Currently Active Tasks for 1.0.2
   [ ] - Documents should have gravity on the suspect panel and should fall to the counter
@@ -108,6 +109,13 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Update take passport dialogue to use the new dialogue system (Same as for megaphone) 
   [ ] - Add the different categories of megaphone into the megaphone_clicked function in mainGame.gd
   [ ] - Test megaphone to make sure it works in all cases
+
+  [ ] - Bug: Documents appear above the stamp bar when dragged
+  [ ] - Bug: Cursor does not update when hovering above megaphone
+  [ ] - Bug: Cursor does not update when hovering above stamp bar button
+  [ ] - Bug: 
+  [ ] - Bug: 
+  [ ] - Audio: Small sound for hovering above megaphone or stamp bar button
 
 ### Completed Tasks for 1.0.2
 Before release, review GitHub commits using the following command `git log --since="last month" --pretty=format:'%h,%an,%ar,%s' > log.csv` - This artifact can then be fed into Claude or similar to analyze the changes.
