@@ -676,10 +676,10 @@ func trigger_explosion(missile_or_position):
 	var explosion = AnimatedSprite2D.new()
 	explosion.sprite_frames = explosion_frames
 	explosion.global_position = explosion_position
-	explosion.scale = Vector2(explosion_size / 32.0, explosion_size / 32.0)
+	explosion.scale = Vector2(explosion_size / 16.0, explosion_size / 16.0)
 	explosion.z_index = 16  # Above missiles
 	explosion.play("default")
-	
+		
 	# Ensure explosion is removed after animation
 	explosion.animation_finished.connect(func(): 
 		explosion.queue_free()
@@ -691,8 +691,30 @@ func trigger_explosion(missile_or_position):
 			explosion.queue_free()
 	)
 	
+	# Create a tween for scaling and fading
+	var exp_tween = create_tween()
+	exp_tween.set_parallel(true)
+	
+	# Scale up with bounce effect
+	exp_tween.tween_property(explosion, "scale", 
+		Vector2(explosion_size / 32.0, explosion_size / 32.0), 0.7)\
+		.set_trans(Tween.TRANS_ELASTIC)\
+		.set_ease(Tween.EASE_OUT)
+		 # Fade out explosion
+		
+	exp_tween.tween_property(explosion, "modulate:a", 0.0, 3)\
+		.set_delay(0.2)
 	add_child(explosion)
 	
+		# Brief game pause for impact
+	var previous_pause_state = get_tree().paused
+	get_tree().paused = true
+	
+	# Create a timer to unpause after a short duration
+	var unpause_timer = get_tree().create_timer(0.02)  # 20 milliseconds
+	unpause_timer.timeout.connect(func():
+		get_tree().paused = previous_pause_state
+	)
 	# Then, in your trigger_explosion function, replace the current explosion sound code:
 	if explosion_sound and explosion_sound.get_instance_id() != 0:
 		# Create a dedicated audio player for the explosion sound
