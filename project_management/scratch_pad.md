@@ -8,7 +8,6 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
   [ ] - Add new potato type art and re-institute potato type rules
   [ ] - Fix text on main menu and other scenes with background photos
-  [ ] - A slider for the law book to slide in from the bottom as a note-card, or stay as a draggable object?
   [ ] - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
   [ ] - Add ink flecks from stamping that fly up when you stamp
   [ ] - Add dialogue emotes randomly to the potatoes
@@ -33,7 +32,6 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Wave a mouse over bombs placed on the wall or upper wall in the background to defuse them for scoring
   [ ] - Repaint each cutscene that stands out as rough in Aseprite (use dedicated 16-32 color palettes, repaint in simpler forms)
   ===
-  [ ] - Icon showing missile Y-level, with arrow pointing where it is off-screen briefly, change color of icon if there are multiple
   [ ] - Set default selection for main menu for keyboard control
   [ ] - Lower delay between stamps
   [ ] - Make the instructions an overlay which you could close
@@ -71,7 +69,6 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
   [ ] - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
   [ ] - Stamp rejection doesn't update score
-  [ ] - Add a loss of 500 points on top of strike if the rejection was incorrect (Use the same code as the border runner system to check for point penalty)
   [ ] - Check if the stamp rejection was correct before triggering the border run system for the scores to be accurate
   [ ] - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
   [ ] - Score should always be represented as a float on backend, check and make sure this is the case save for printing it to the UI
@@ -89,9 +86,7 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Stamps go over edge of passport
   [ ] - Update cursor when hovering over the megaphone
   [ ] - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
-  [ ] - Make the laws slide out similar to the stamps
-  [ ] - Remove the date and score from the bottom of the screen
-  [ ] - Change the color of the missile marker to green/red to indicate if you can fire a missile
+  [ ] - Remove the date and score from the bottom of the screen (move to upper left, ala Rogue Genesia?)
   [ ] - Update backend for megaphone dialogue prompt in-game to allow for future translation
     [ ] - *INTERNAL USE* Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
     [ ] - *INTERNAL USE* Speak duration parameter
@@ -116,6 +111,8 @@ These are our goals, to-do tasks, and completed tasks.
 
 ### Completed Tasks for 1.0.2
 Before release, review GitHub commits using the following command `git log --since="last month" --pretty=format:'%h,%an,%ar,%s' > log.csv` - This artifact can then be fed into Claude or similar to analyze the changes.
+  - Add a loss of 250 points on top of strike if the rejection was incorrect (Use the same code as the border runner system to check for point penalty)
+  - Remove Law slider and keep law pamphlet as a draggable object
   - Rounds end too abruptly, need to tell the player why they failed
   - There is no continuing shift, after you reach quota you hit the shift summary and end the game
   - Add simple fade to game over summary
