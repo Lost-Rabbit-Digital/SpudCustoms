@@ -61,7 +61,6 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Move shift summary to end of game, not end of shift, on quota reached restart, on strikes reached end game
   [ ] - Possibly exit the game from the lose screen
   [ ] - Randomly lose combo when doing potato border runner system
-
   [ ] - Update ATTRIBUTION.md with MODERN DOS font
   [ ] - Update menus with new MODERN DOS font
   [ ] - Update stats on potato escape and missile kill
@@ -74,9 +73,8 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Stamp rejection doesn't update score
   [ ] - Add a loss of 500 points on top of strike if the rejection was incorrect (Use the same code as the border runner system to check for point penalty)
   [ ] - Check if the stamp rejection was correct before triggering the border run system for the scores to be accurate
-  [ ] - Fix checking stamp on rejection, the fuck does this mean old Boden? Strike check on rejection? Clearing old stamp?
-  [ ] - Rewrite the runner system to include chance to run while waiting in line instead of waiting for rejection
-  [ ] - Score is sometimes presented as a float and sometimes as a integer. Not sure if intentional or just some minor bug from early project, but figured i would point it out. <-- Score will have to be dealt with as a float at time unless we are very careful to only use whole numbers for all our combo systems etc. which makes it hard to do smaller percentage or add-on multipliers like +0.10x for each potato processed right since it'll be a float and we'll have to round it up/down if we want to keep as int
+  [ ] - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
+  [ ] - Score should always be represented as a float on backend, check and make sure this is the case save for printing it to the UI
 ### Stretch Features
   [ ] - Add cars that drive by (where would these go? On road from bottom to top on far left of screen?)
   [ ] - Baggage inspection, grab bags and shake them with bugs and coins flying out until you get a "BAG CLEAN" and a small number of points, or contraband detected where you get points for clicking it
@@ -88,6 +86,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 ## Steam Minor Update 1.0.2 - WORK IN PROGRESS
 ### To-Do
+  [ ] - Stamps go over edge of passport
   [ ] - Update cursor when hovering over the megaphone
   [ ] - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
   [ ] - Make the laws slide out similar to the stamps
@@ -101,7 +100,6 @@ These are our goals, to-do tasks, and completed tasks.
     [ ] - *INTERNAL USE* JSON to store strings instead of hard-coding into images
     [ ] - *INTERNAL USE* Just one background image for the dialogue box
   [ ] - Add logic to check if game paused or in dialogic before updating cursor to target cursor
-  [ ] - Stamps go over edge of passport
   [ ] - Improve stamp and interaction system integration
 
 ### Currently Active Tasks for 1.0.2
