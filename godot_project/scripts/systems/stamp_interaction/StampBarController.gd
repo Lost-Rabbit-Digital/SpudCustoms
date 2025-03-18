@@ -106,7 +106,7 @@ func show_stamp_bar():
 	is_animating = true
 	
 	# Mechanical gate lowering with different easing
-	stamp_bar_audio.stream = preload("res://scripts/systems/stamp/audio/stamp_bar_slide.mp3")
+	stamp_bar_audio.stream = preload("res://assets/audio/ui_feedback/stamp_bar_slide.mp3")
 	stamp_bar_audio.volume_db = 0
 	stamp_bar_audio.bus = "SFX"  
 	stamp_bar_audio.play()
@@ -150,7 +150,7 @@ func hide_stamp_bar():
 	is_animating = true
 	
 	# Mechanical gate lowering with different easing
-	stamp_bar_audio.stream = preload("res://scripts/systems/stamp/audio/stamp_bar_slide.mp3")
+	stamp_bar_audio.stream = preload("res://assets/audio/ui_feedback/stamp_bar_slide.mp3")
 	stamp_bar_audio.volume_db = 0
 	stamp_bar_audio.bus = "SFX"  
 	stamp_bar_audio.play()
