@@ -4,7 +4,7 @@ class_name MegaphoneDialogueBox
 @onready var megaphone_text = $MegaphoneText
 
 # File path to your JSON file
-const MESSAGES_FILE = "res://scripts/megaphone_dialogue/megaphone_dialogue_messages.json"
+const MESSAGES_FILE = "res://scripts/systems/megaphone_dialogue/megaphone_dialogue_messages.json"
 
 # Message categories
 enum MessageCategory {
