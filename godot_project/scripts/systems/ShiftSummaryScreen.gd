@@ -23,7 +23,7 @@ func _ready():
 		show_summary(generate_test_stats())
 		
 	# Ensure buttons are interactive
-	for button in [$ContinueButton, $RefreshButton, $RestartButton, $MainMenuButton]:
+	for button in [$ContinueButton, $SubmitScoreButton, $RestartButton, $MainMenuButton]:
 		button.mouse_filter = Control.MOUSE_FILTER_STOP
 		button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 		
@@ -274,21 +274,27 @@ func calculate_hit_rate() -> String:
 	return "0"
 
 func update_leaderboard():
+	print("Submitting score of: ")
+	print(Global.final_score)
+	Global.submit_score(Global.final_score)
 	print("Updating leaderboard...")
 	$LeaderboardTitlePanel/Title.text = "Global Leaderboard\nEndless - %s" % Global.difficulty_level
 	# Format leaderboard entries
 	var request_success = Global.request_leaderboard_entries(Global.difficulty_level)
 	var leaderboard_text = ""
+	
 	if request_success: 
 		leaderboard_text = "Getting leaderboard scores..."
 		$LeaderboardPanel/Entries.text = leaderboard_text
 		
 	await get_tree().create_timer(1.0).timeout
+	
 	leaderboard_text = ""
 	$LeaderboardPanel/Entries.text = ""
+	
 	await get_tree().create_timer(1.0).timeout
 	
-	var entries = []
+	var entries = [{"name":"Score?","score":"404"}]
 	entries = Global.cached_leaderboard_entries
 	for i in range(min(entries.size(), 12)):
 		leaderboard_text += "%2d  %-15s  %s\n" % [
@@ -314,17 +320,18 @@ func generate_test_stats() -> Dictionary:
 		"accuracy_bonus": 1337,
 		"final_score": 1337
 	}
-
+	
+func _on_continue_button_pressed() -> void: 
+	Global.advance_shift()
+	Global.advance_story_state()
+	get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
 
 func _on_submit_score_button_pressed() -> void:
-	print("Submitting score of: ")
-	print(stats.get("final_score"))
-	Global.submit_score(stats.get("final_score"))
-
+	print("Submit Score Button Clicked, submitting score and updating leaderboard")
+	update_leaderboard()
 
 func _on_restart_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
-
 
 func _on_main_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/menus/main_menu/main_menu_with_animations.tscn")

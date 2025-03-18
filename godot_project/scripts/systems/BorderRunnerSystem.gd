@@ -832,8 +832,8 @@ func handle_successful_hit(runner, explosion_pos):
 	runner.modulate = Color.WHITE
 	
 	# Create a tween to revert the color
-	var color_tween = create_tween()
-	color_tween.tween_property(runner, "modulate", original_modulate, 0.1)
+	#var color_tween = create_tween()
+	#color_tween.tween_property(runner, "modulate", original_modulate, 0.1)
 	
 	# Spawn gibs at the runner's position
 	spawn_gibs(runner.get_position())
@@ -855,7 +855,7 @@ func handle_successful_hit(runner, explosion_pos):
 	if distance < explosion_size / 3:
 		# Perfect hit - trigger stronger screen shake
 		if main_game and main_game.has_method("shake_screen"):
-			main_game.shake_screen(22.0, 0.4)  # Strong shake for perfect hits
+			main_game.shake_screen(16.0, 0.4)  # Strong shake for perfect hits
 		# Update shift stats for perfect hits
 		shift_stats.perfect_hits += 1
 		# Spawn even more gibs on a perfect hit

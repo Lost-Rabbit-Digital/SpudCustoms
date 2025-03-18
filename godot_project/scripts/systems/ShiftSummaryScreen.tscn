@@ -73,7 +73,7 @@ offset_bottom = 640.0
 scale = Vector2(1.5, 1.5)
 text = "Main Menu"
 
-[node name="RefreshButton" type="Button" parent="."]
+[node name="SubmitScoreButton" type="Button" parent="."]
 modulate = Color(0.896599, 0.712161, 0.435342, 1)
 z_index = 99
 z_as_relative = false
@@ -267,7 +267,7 @@ offset_bottom = 1100.0
 scale = Vector2(0.667597, 0.667597)
 texture = ExtResource("6_3rq7k")
 
-[connection signal="pressed" from="ContinueButton" to="." method="_on_submit_score_button_pressed"]
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
-[connection signal="pressed" from="RefreshButton" to="." method="update_leaderboard"]
+[connection signal="pressed" from="SubmitScoreButton" to="." method="_on_submit_score_button_pressed"]
