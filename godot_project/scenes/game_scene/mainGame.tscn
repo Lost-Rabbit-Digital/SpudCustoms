@@ -433,9 +433,11 @@ strike_label = NodePath("../../UI/Labels/StrikesLabel")
 alert_label = NodePath("../../UI/Labels/MarginContainer/AlertLabel")
 alert_timer = NodePath("../Timers/AlertTimer")
 missile_collision_shape = NodePath("Area2D/CollisionShape2D")
+missile_cooldown = 0.2
 missile_speed = 1100.0
-explosion_size = 72.0
+explosion_size = 128.0
 num_gibs = 75
+gib_scale = Vector2(0.75, 0.75)
 gib_min_speed = 125.0
 
 [node name="Area2D" type="Area2D" parent="SystemManagers/BorderRunnerSystem"]

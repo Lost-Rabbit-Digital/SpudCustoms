@@ -54,7 +54,7 @@ signal game_over_triggered
 ## Initial height from which missiles are launched
 @export var missile_start_height: float = 400
 ## Radius of explosion effect and damage area
-@export var explosion_size: float = 96
+@export var explosion_size: float = 160
 
 
 @export_group("Giblet System")
@@ -62,9 +62,9 @@ signal game_over_triggered
 ## Number of potato pieces that spawn when a runner is destroyed
 @export var num_gibs: int = 40
 ## Size scaling applied to giblet sprites
-@export var gib_scale: Vector2 = Vector2(0.35, 0.35)
+@export var gib_scale: Vector2 = Vector2(0.1, 0.4)
 ## Duration giblets remain visible before disappearing
-@export var gib_lifetime: float = 2.0
+@export var gib_lifetime: float = 3.0
 
 @export_subgroup("Physics Settings")
 ## Slowest initial speed for spawned giblets

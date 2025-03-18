@@ -46,6 +46,7 @@ bus = &"SFX"
 [node name="MissileSprite" type="Sprite2D" parent="."]
 z_index = 10
 z_as_relative = false
+position = Vector2(1920, 1080)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("6_og870")
 
