@@ -4,6 +4,16 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 
 ## Tasks
+[ ] - Double vertical spacing on level select screen to fit in GOLDEN STAMPS
+[ ] - Increase horizontal width of level select display by 25% to accomodate level high scores as well as completion grade icons
+[ ] - BONUSES section in shift summary should show both perfect hits bonus score, as well as stamp accuracy bonuses. 
+[ ] - Change FINAL SCORE to Total Score, move total score to PERFORMANCE section on Shift Summary
+[ ] - Move SHIFT COMPLETE notice up closer to header in Shift Summary Journal
+[ ] - Bring Document Stats onto left side of Shift Summary Journal
+[ ] - Make sure that the screen shake variable in the video sections of the options menu is being used by the screen_shake function in mainGame.gd, and perhaps move screen shake to Global.gd and fetch current root node?
+[ ] - No female potatoes ever generated in mugshot generator?
+[ ] - Create a higher saturation cutout of the Leaderboard summary success stamp for the level select screen
+
 ### Graphics
   [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
   [ ] - Add new potato type art and re-institute potato type rules
