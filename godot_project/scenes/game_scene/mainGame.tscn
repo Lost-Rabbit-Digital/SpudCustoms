@@ -278,16 +278,16 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="StrikesLabel" type="Label" parent="UI/Labels"]
-z_index = 2
+z_index = 6
 z_as_relative = false
 texture_filter = 1
 texture_repeat = 1
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
-offset_left = 897.0
-offset_top = 636.0
-offset_right = 1121.0
-offset_bottom = 686.0
+offset_left = 867.0
+offset_top = 15.0
+offset_right = 1091.0
+offset_bottom = 65.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
@@ -297,16 +297,16 @@ text = "Strikes: 0 / 5"
 vertical_alignment = 1
 
 [node name="QuotaLabel" type="Label" parent="UI/Labels"]
-z_index = 2
+z_index = 6
 z_as_relative = false
 texture_filter = 1
 texture_repeat = 1
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
-offset_left = 897.0
-offset_top = 665.0
-offset_right = 1099.0
-offset_bottom = 715.0
+offset_left = 600.0
+offset_top = 15.0
+offset_right = 802.0
+offset_bottom = 65.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
@@ -331,16 +331,16 @@ theme_override_font_sizes/font_size = 16
 autowrap_mode = 3
 
 [node name="ScoreLabel" type="Label" parent="UI/Labels"]
-z_index = 2
+z_index = 6
 z_as_relative = false
 texture_filter = 1
 texture_repeat = 1
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
-offset_left = 332.0
-offset_top = 641.0
-offset_right = 534.0
-offset_bottom = 691.0
+offset_left = 224.0
+offset_top = 15.0
+offset_right = 426.0
+offset_bottom = 65.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
