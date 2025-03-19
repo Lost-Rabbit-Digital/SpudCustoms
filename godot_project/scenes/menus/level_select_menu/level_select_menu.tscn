@@ -37,9 +37,13 @@ offset_right = 200.0
 offset_bottom = 17.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/outline_size = 13
+theme_override_constants/v_separation = 20
+theme_override_constants/h_separation = 45
 auto_height = true
-item_count = 1
+item_count = 2
 item_0/text = "1 - ExampleLevel"
+item_1/text = "2 - ExampleLevel"
 
 [node name="SceneLister" type="Node" parent="."]
 script = ExtResource("2_g3cvb")
