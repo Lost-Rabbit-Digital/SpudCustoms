@@ -8,7 +8,7 @@ var active_stamps: Array[StampComponent] = []
 
 # Valid stamp area - this defines where stamps should be placed for a "perfect" stamp
 var stamp_area_rect: Rect2
-var z_index_for_stamps: int = 1  # The z-index to use for stamps
+var z_index_for_stamps: int = 0  # The z-index to use for stamps
 
 # Signal when stamped
 signal stamped(stamp_component)
@@ -135,6 +135,7 @@ func create_stamp_sprite(stamp: StampComponent, position: Vector2) -> Sprite2D:
 	final_stamp.position = position
 	final_stamp.modulate.a = 0  # Start invisible
 	final_stamp.z_index = z_index_for_stamps
+	final_stamp.z_as_relative = true
 	
 	# Add stamp to document
 	open_content_node.add_child(final_stamp)
