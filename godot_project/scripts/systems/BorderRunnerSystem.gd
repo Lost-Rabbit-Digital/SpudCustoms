@@ -54,7 +54,7 @@ signal game_over_triggered
 ## Initial height from which missiles are launched
 @export var missile_start_height: float = 400
 ## Radius of explosion effect and damage area
-@export var explosion_size: float = 160
+@export var explosion_size: float = 128
 
 
 @export_group("Giblet System")
@@ -513,7 +513,7 @@ func _on_runner_destroyed(position: Vector2):
 	# Create explosion effects at the position
 	spawn_gibs(position)
 	# Maybe trigger sound effects or other visual effects
-	trigger_explosion(position)
+	#trigger_explosion(position)
 
 func handle_runner_escape(runner: PotatoPerson):
 	print("Runner has escaped!")
@@ -836,7 +836,7 @@ func handle_successful_hit(runner, explosion_pos):
 	#color_tween.tween_property(runner, "modulate", original_modulate, 0.1)
 	
 	# Spawn gibs at the runner's position
-	spawn_gibs(runner.get_position())
+	# cspawn_gibs(runner.get_position())
 	
 	# Update stats with successful hits
 	shift_stats.missiles_hit += 1
@@ -851,15 +851,15 @@ func handle_successful_hit(runner, explosion_pos):
 		main_game = main_game.get_parent()
 	
 	# Calculate bonuses
-	var distance = runner.get_position().distance_to(explosion_pos)
-	if distance < explosion_size / 3:
+	var distance = runner.global_position.distance_to(explosion_pos)
+	if distance < explosion_size / 2:
 		# Perfect hit - trigger stronger screen shake
 		if main_game and main_game.has_method("shake_screen"):
 			main_game.shake_screen(16.0, 0.4)  # Strong shake for perfect hits
 		# Update shift stats for perfect hits
 		shift_stats.perfect_hits += 1
 		# Spawn even more gibs on a perfect hit
-		spawn_gibs(runner.get_position())
+		spawn_gibs(runner.global_position)
 		points_earned += perfect_hit_bonus
 		bonus_text += "PERFECT HIT! +{perfect} accuracy bonus points\n".format({"perfect": perfect_hit_bonus})
 	

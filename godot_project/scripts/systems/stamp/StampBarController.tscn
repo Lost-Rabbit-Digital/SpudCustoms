@@ -8,6 +8,7 @@
 
 [node name="StampBarController" type="Node2D"]
 z_index = 10
+z_as_relative = false
 script = ExtResource("1_bd37c")
 
 [node name="StampBar" type="Node2D" parent="."]

@@ -19,7 +19,7 @@ var draggable_items = []
 var dragged_item = null
 var drag_offset = Vector2()
 var document_was_closed = false
-var original_z_index = 0
+var original_z_index = 1
 
 # Drop zone references
 var inspection_table: Node2D
