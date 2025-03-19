@@ -9,7 +9,7 @@ var gate_opened_this_shift: bool = false
 @onready var gate_audio: AudioStreamPlayer2D = $Gate/GateAudio
 
 # Mechanical gate raising with multiple easing functions
-func raise_gate(duration: float = 12.0):
+func raise_gate(duration: float = 1.5):
 	# Start gate raise sound
 	gate_audio.stream = preload("res://assets/audio/environmental/gate_open.mp3")
 	gate_audio.volume_db = 0

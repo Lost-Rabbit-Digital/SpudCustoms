@@ -227,6 +227,7 @@ func animate_stamp(stamp_type: String, target_position: Vector2):
 	var temp_stamp = Sprite2D.new()
 	temp_stamp.texture = stamp_textures[stamp_type]
 	temp_stamp.z_index = 20
+	temp_stamp.z_as_relative = false
 	
 	# Start from the appropriate button
 	var start_pos = get_stamp_origin()
@@ -281,7 +282,8 @@ func create_final_stamp(stamp_type: String, pos: Vector2):
 	final_stamp.position = relative_pos
 	
 	final_stamp.modulate.a = 0  # Start invisible
-	final_stamp.z_index = 1  # Ensure stamp appears above passport background
+	final_stamp.z_index = -1  # Ensure stamp appears above passport background
+	final_stamp.z_as_relative = false
 	
 	# Add stamp to OpenPassport
 	open_passport.add_child(final_stamp)
@@ -312,7 +314,6 @@ func create_final_stamp(stamp_type: String, pos: Vector2):
 	var tween = create_tween()
 	tween.tween_property(final_stamp, "modulate:a", 1.0, 0.1)\
 		 .set_delay(STAMP_ANIM_DURATION/2)
-
 
 func _on_toggle_position_button_mouse_entered() -> void:
 	pass

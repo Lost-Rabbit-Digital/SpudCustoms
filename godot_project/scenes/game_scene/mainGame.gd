@@ -391,7 +391,7 @@ func megaphone_clicked():
 	if potato:
 		# Only raise the gate on the first megaphone click of the shift
 		if !office_gate_controller.gate_opened_this_shift:
-			office_gate_controller.raise_gate(1.5)  # Slow, mechanical gate raising
+			office_gate_controller.raise_gate(3)  # Slow, mechanical gate raising
 			office_gate_controller.gate_opened_this_shift = true
 		megaphone_dialogue_box.next_message()
 		megaphone_dialogue_box.play_random_officer_sound()

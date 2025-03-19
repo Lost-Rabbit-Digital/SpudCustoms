@@ -315,18 +315,18 @@ hair = NodePath("Hair")
 face = NodePath("Face")
 torso = NodePath("Torso")
 
+[node name="Face" type="AnimatedSprite2D" parent="."]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_ay427")
+animation = &"Russel_F_Face"
+frame_progress = 0.265829
+
 [node name="Hair" type="AnimatedSprite2D" parent="."]
 z_index = -1
 position = Vector2(0, -16.365)
 sprite_frames = SubResource("SpriteFrames_ay427")
 animation = &"Russel_F_Hair"
 frame = 1
-
-[node name="Face" type="AnimatedSprite2D" parent="."]
-z_index = -2
-sprite_frames = SubResource("SpriteFrames_ay427")
-animation = &"Russel_F_Face"
-frame_progress = 0.265829
 
 [node name="Torso" type="AnimatedSprite2D" parent="."]
 z_index = -1

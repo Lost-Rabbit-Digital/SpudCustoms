@@ -530,11 +530,12 @@ texture = ExtResource("28_jdq0j")
 
 [node name="OpenPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
 visible = false
-z_index = 21
+z_index = 1
 texture = ExtResource("25_gf7dt")
 
 [node name="PassportPhotoGenerator" parent="Gameplay/InteractiveElements/Passport/OpenPassport" instance=ExtResource("23_3qac4")]
-z_index = 2
+z_index = 1
+z_as_relative = true
 position = Vector2(76, 90)
 scale = Vector2(0.975, 1)
 
@@ -547,6 +548,7 @@ scale = Vector2(1.1, 1.1)
 texture = ExtResource("24_yhqqy")
 
 [node name="PotatoHeader" type="Label" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
+z_index = 1
 offset_left = -103.0
 offset_top = 20.0
 offset_right = 13.0
@@ -558,6 +560,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PotatoInfo" type="Label" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
+z_index = 1
 offset_left = -75.0
 offset_top = 47.0
 offset_right = 33.0
@@ -772,6 +775,6 @@ z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
