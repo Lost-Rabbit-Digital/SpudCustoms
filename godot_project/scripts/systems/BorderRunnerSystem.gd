@@ -682,13 +682,18 @@ func trigger_explosion(missile_or_position):
 		
 	# Ensure explosion is removed after animation
 	explosion.animation_finished.connect(func(): 
-		explosion.queue_free()
+		#explosion.queue_free()
+		explosion.stop()
+		explosion.frame = randi_range(23, 25)
 	)
 	# Fallback timer to ensure removal
 	var cleanup_timer = get_tree().create_timer(2.0)
 	cleanup_timer.timeout.connect(func():
 		if is_instance_valid(explosion):
-			explosion.queue_free()
+			#explosion.queue_free()
+			explosion.stop()
+			explosion.frame = randi_range(23, 25)
+			
 	)
 	
 	# Create a tween for scaling and fading
@@ -702,7 +707,7 @@ func trigger_explosion(missile_or_position):
 		.set_ease(Tween.EASE_OUT)
 		 # Fade out explosion
 		
-	exp_tween.tween_property(explosion, "modulate:a", 0.0, 3)\
+	exp_tween.tween_property(explosion, "modulate:a", 0.5, 3)\
 		.set_delay(0.2)
 	add_child(explosion)
 	
