@@ -825,6 +825,25 @@ func check_runner_hits(explosion_pos):
 		runner_streak = 0
 
 func handle_successful_hit(runner, explosion_pos):
+	
+	var root_node = get_tree().current_scene
+	while root_node.get_parent() and root_node.name != "Root":
+		root_node = root_node.get_parent()
+	# Create a potato corpse sprite
+	var corpse = Sprite2D.new()
+	corpse.texture = preload("res://assets/potatoes/bodies/potato_corpse.png") # Update with your actual path
+	corpse.global_position = runner.global_position
+	corpse.z_index = 6 # Below explosions but above background
+	# Slightly adjust size randomly
+	corpse.scale = Vector2(0.9, 0.9) * randf_range(0.9, 1.1) 
+	# Add slight random rotation for visual variety
+	corpse.rotation = randf_range(-0.3, 0.3)
+	# Add to a parent that won't be cleaned up
+	root_node.add_child(corpse)
+	
+	#var tween = create_tween()
+	#tween.tween_property(corpse, "modulate:a", 1.0, 2.0)
+	
 	# Store original modulate color
 	var original_modulate = runner.modulate
 	
