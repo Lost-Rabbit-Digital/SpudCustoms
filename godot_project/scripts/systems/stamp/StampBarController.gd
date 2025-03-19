@@ -282,8 +282,8 @@ func create_final_stamp(stamp_type: String, pos: Vector2):
 	final_stamp.position = relative_pos
 	
 	final_stamp.modulate.a = 0  # Start invisible
-	final_stamp.z_index = -1  # Ensure stamp appears above passport background
-	final_stamp.z_as_relative = false
+	final_stamp.z_index = 0  # Ensure stamp appears above passport background
+	final_stamp.z_as_relative = true
 	
 	# Add stamp to OpenPassport
 	open_passport.add_child(final_stamp)
