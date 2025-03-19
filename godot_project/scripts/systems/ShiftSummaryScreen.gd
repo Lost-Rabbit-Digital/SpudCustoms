@@ -324,14 +324,23 @@ func generate_test_stats() -> Dictionary:
 func _on_continue_button_pressed() -> void: 
 	Global.advance_shift()
 	Global.advance_story_state()
-	get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
+	transition_to_scene("res://scenes/game_scene/mainGame.tscn")
 
 func _on_submit_score_button_pressed() -> void:
 	print("Submit Score Button Clicked, submitting score and updating leaderboard")
 	update_leaderboard()
 
 func _on_restart_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
+	transition_to_scene("res://scenes/game_scene/mainGame.tscn")
 
 func _on_main_menu_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
+	transition_to_scene("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
+
+func transition_to_scene(scene_path: String):
+	# Find the level manager if it exists
+	var scene_loader = get_node("/root/SceneLoader")
+	if scene_loader and scene_loader.has_method("load_scene"):
+		scene_loader.load_scene(scene_path)
+	else:
+		# Last resort
+		get_tree().change_scene_to_file(scene_path)
