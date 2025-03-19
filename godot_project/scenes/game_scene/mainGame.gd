@@ -476,8 +476,8 @@ func animate_mugshot_and_passport():
 	# Animate passport
 	tween.tween_property(passport, "modulate:a", 1, 1)
 	tween.tween_property(passport, "visible", true, 0).set_delay(1)
-	tween.tween_property(passport, "position:y", passport_spawn_point_end.position.y, 0.7).set_delay(1)
-	tween.tween_property(passport, "z_index", 9, 0).set_delay(3)
+	tween.tween_property(passport, "position:y", passport_spawn_point_end.position.y, 0.4).set_delay(1)
+	tween.tween_property(passport, "z_index", 9, 0).set_delay(2)
 
 	tween.chain().tween_callback(func(): print("Finished animating mugshot and passport"))
 	

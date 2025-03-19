@@ -468,7 +468,7 @@ scale = Vector2(0.4, 0.4)
 [node name="SuspectPanel" parent="Gameplay" instance=ExtResource("22_qfxfi")]
 
 [node name="InspectionTable" type="Sprite2D" parent="Gameplay"]
-z_index = 8
+z_index = 1
 z_as_relative = false
 position = Vector2(443.837, 470.5)
 scale = Vector2(2.64484, 2.59444)
