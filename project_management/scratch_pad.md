@@ -4,20 +4,8 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 
 ## Tasks
-[ ] - Allow murdering accepted potatoes on their way through the border checkpoint with a strike, points deducted, and "Totneva Convention Violation!" warning through Global.display_red_alert
-[ ] - Add footsteps behind potatoes that slowly fade out to 20% opacity
-[ ] - Add a back and forth tween to potatoes to make them look like they are taking steps when moving
-[ ] - Double vertical spacing on level select screen to fit in GOLDEN STAMPS
-[ ] - Increase horizontal width of level select display by 25% to accomodate level high scores as well as completion grade icons
-[ ] - BONUSES section in shift summary should show both perfect hits bonus score, as well as stamp accuracy bonuses. 
-[ ] - Change FINAL SCORE to Total Score, move total score to PERFORMANCE section on Shift Summary
-[ ] - Move SHIFT COMPLETE notice up closer to header in Shift Summary Journal
-[ ] - Bring Document Stats onto left side of Shift Summary Journal
-[ ] - Make sure that the screen shake variable in the video sections of the options menu is being used by the screen_shake function in mainGame.gd, and perhaps move screen shake to Global.gd and fetch current root node?
-[ ] - No female potatoes ever generated in mugshot generator?
-[ ] - Create a higher saturation cutout of the Leaderboard summary success stamp for the level select screen
-
 ### Graphics
+  [ ] - No female potatoes sprites ever generated in mugshot generator, despite female passports?
   [ ] - Add a yellow alert with information about the shift displayed like a typewriter in the middle of the screen, "Shift 1, Happy Days, 07:00" that then fades away
   [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
   [ ] - Add new potato type art and re-institute potato type rules
@@ -29,16 +17,16 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
   [ ] - Add an Entry ticket document and law requirement
 ### Gameplay
+  [ ] - Allow murdering accepted potatoes on their way through the border checkpoint using existing border runner system with a strike, 500 points deducted, and "Totneva Convention Violation!" warning through Global.display_red_alert
+  [ ] - BONUSES section in shift summary should show both perfect hits bonus score, as well as stamp accuracy bonuses. 
   [ ] - Set a highlight shader on the closed passport if the document goes untouched for >5 seconds
   [ ] - Set a highlight shader on the speaker/start button if the booth goes empty for >5 seconds
   [ ] - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >5 seconds
   [ ] - Display max score for each shift and 0-3 golden potatoes / stamps based on score benchmarks for each shift
-  [ ] - Allow missiles to kill approved potatoes, resulting in a Totneva Convention violation (-250 points) and a strike
-  [ ] - Change position so kill text flying up with the score update ("potato.first_name + potato.last_name" + "neutralized...")
+  [ ] - Change position so kill text flying up with the score update ("Runner " + potato.first_name + potato.last_name + " neutralized...")
   [ ] - Add clearer feedback for game over conditions ("Too many strikes, you lose!")
   [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
   [ ] - Conversation with potato while checking documents, similar to customs office dialogue, Terry Pratchett inspired
-  [ ] - Fix the issue where the game continues running during story sequences
   [ ] - Fix z-ordering issues on the summary screen
   [ ] - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
   [ ] - Potatoes emote (Kenny emotes) while waiting in line
@@ -123,6 +111,15 @@ These are our goals, to-do tasks, and completed tasks.
 
 ### Completed Tasks for 1.0.2
 Before release, review GitHub commits using the following command `git log --since="last month" --pretty=format:'%h,%an,%ar,%s' > log.csv` - This artifact can then be fed into Claude or similar to analyze the changes.
+  - Double vertical spacing on level select screen to fit in GOLDEN STAMPS
+  - Bring Document Stats onto left side of Shift Summary Journal
+  - Move SHIFT COMPLETE notice up closer to header in Shift Summary Journal
+  - Increase horizontal width of level select display by 25% to accomodate level high scores as well as completion grade icons
+  - Change FINAL SCORE to Total Score, move total score to PERFORMANCE section on Shift Summary
+  - Make sure that the screen shake variable in the video sections of the options menu is being used by the screen_shake function in mainGame.gd, move screen shake to Global.gd and fetch current root node
+  - Create a higher saturation cutout of the Leaderboard summary success stamp for the level select screen
+  - Fix the issue where the game continues running during story sequences
+  - Add footsteps behind potatoes that slowly fade out to 20% opacity
   - *INTERNAL USE* Speed up passport through slot, decrease by 0.5-1.5 seconds
   - Remove the date and score from the bottom of the screen (move to upper left, ala Rogue Genesia?)
   - Escape key for menu stopped working after I alt tabbed a few times and completed the first "day". Likely due to scene change causing viewport w/ options/pause menu to be lost.
