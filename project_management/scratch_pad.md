@@ -18,9 +18,6 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Add dialogue emotes randomly to the potatoes
   [ ] - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
   [ ] - Add ink flecks from stamping that fly up when you stamp
-  [ ] - Set a highlight shader on the closed passport if the document goes untouched for >5 seconds
-  [ ] - Set a highlight shader on the speaker/start button if the booth goes empty for >5 seconds
-  [ ] - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >5 seconds
 ### Backend
   [ ] - Localise the game
 ### Gameplay
@@ -28,7 +25,10 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Make the instructions an overlay which you could close
   [ ] - Potatoes emote (Kenny emotes) while waiting in line
   [ ] - Show Missile counter on an LCD display on the desk or on UI
+  [ ] - Change position so kill text flying up with the score update ("potato.first_name + potato.last_name" + "neutralized...")
   [ ] - Wave a mouse over bombs placed on the wall or upper wall in the background to defuse them for scoring, runner potatoes throw timed-bombs which stick on the top-wall
+  [ ] - Conversation with potato while checking documents, similar to customs office dialogue, Terry Pratchett inspired
+  [ ] - Repaint each cutscene that stands out as rough in Aseprite (use dedicated 16-32 color palettes, repaint in simpler forms)
 ### Menus
   [ ] - Allow leaderboards for each level from the level select
   [ ] - Add button to reset campaign progress
@@ -44,14 +44,12 @@ These are our goals, to-do tasks, and completed tasks.
 ## Tasks
 ### Graphics
   [ ] - Add new potato type art and re-institute potato type rules
+  [ ] - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
+  [ ] - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
+  [ ] - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
 ### Gameplay
-  [ ] - Allow missiles to kill approved potatoes, resulting in a Totneva Convention violation (-250 points) and a strike
-  [ ] - Change position so kill text flying up with the score update ("potato.first_name + potato.last_name" + "neutralized...")
-  [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
-  [ ] - Conversation with potato while checking documents, similar to customs office dialogue, Terry Pratchett inspired
-  [ ] - Fix the issue where the game continues running during story sequences
+  [ ] - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
   [ ] - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
-  [ ] - Repaint each cutscene that stands out as rough in Aseprite (use dedicated 16-32 color palettes, repaint in simpler forms)
 ### Audio
   [ ] -
 ### Menus
@@ -59,6 +57,9 @@ These are our goals, to-do tasks, and completed tasks.
 ### Backend
   [ ] - Save game and load game, especially max level reached and local highscores
 ### General Bugs
+  [ ] - Fix the issue where the game continues running during story sequences
+  [ ] - Fix skip story bug not hiding the history button quickly
+  [ ] - Cannot generate female potatoes via mugshot generator
   [ ] - Score might not be resetting between rounds on leaderboard. Fairly sure mine just kept going up.
   [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
   [ ] - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
