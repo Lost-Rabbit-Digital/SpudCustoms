@@ -578,7 +578,7 @@ texture = ExtResource("30_5od2r")
 [node name="LawReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_index = 9
 z_as_relative = false
-position = Vector2(718, 514)
+position = Vector2(173, 558)
 texture = ExtResource("31_rtxd3")
 script = ExtResource("32_k1orm")
 
@@ -774,6 +774,6 @@ z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
