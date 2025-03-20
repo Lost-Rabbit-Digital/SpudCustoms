@@ -6,6 +6,7 @@ signal closed
 
 var stats: Dictionary
 const BACKGROUND_TEXTURE = preload("res://assets/menu/shift_summary_end_screen.png")
+const GRADE_STAMP_TEXTURE = preload("res://assets/menu/performance_stamp.png")
 
 func _init():
 	mouse_filter = Control.MOUSE_FILTER_IGNORE  # Allow input to pass through to buttons
@@ -91,9 +92,7 @@ func show_summary(stats_data: Dictionary):
 		Time Taken: {time_taken}
 		Total Score: {score}""".format({
 			"shift": stats.get("shift", 1),
-			"failure": failure_reason,
-			"time_taken": format_time(stats.get("time_taken", 0)),
-			"score": format_number(stats.get("score", 0))
+			"failure": failure_reason
 		})
 		$LeftPanel/ShiftComplete.add_theme_color_override("font_color", Color(0.9, 0.2, 0.2))
 	populate_stats()
@@ -104,9 +103,10 @@ func populate_stats():
 	$HeaderPanel/Title.text = "SHIFT SUMMARY\n %s" % Global.difficulty_level
 	
 	# Update missile stats with calculated hit rate
-	$LeftPanel/MissileStats.text = """--- MISSILE STATS ---
+	$LeftPanel/MissileStats.text = """--- RUNNER STATS ---
+Runner Attempts: 15
 Missiles Fired: {fired}
-Missiles Hit: {hit}
+Runners Hit: {hit}
 Perfect Hits: {perfect}
 Hit Rate: {rate}%""".format({
 		"fired": format_number(stats.get("missiles_fired", 0)),
@@ -116,10 +116,11 @@ Hit Rate: {rate}%""".format({
 	})
 	
 	# Update document stats
-	$RightPanel/DocumentStats.text = """--- DOCUMENT STATS ---
+	$LeftPanel/DocumentStats.text = """--- DOCUMENT STATS ---
 Documents Stamped: {stamped}
 Potatoes Approved: {approved}
-Potatoes Rejected: {rejected}""".format({
+Potatoes Rejected: {rejected}
+Perfect Stamps: 5""".format({
 		"stamped": format_number(stats.get("total_stamps", 0)),
 		"approved": format_number(stats.get("potatoes_approved", 0)),
 		"rejected": format_number(stats.get("potatoes_rejected", 0)),
@@ -127,11 +128,11 @@ Potatoes Rejected: {rejected}""".format({
 	
 	# Update bonus stats without speed bonus
 	$RightPanel/BonusStats.text = """--- BONUSES ---
-Accuracy Bonus: {accuracy}
-
-FINAL SCORE: {final}""".format({
-		"accuracy": format_number(stats.get("accuracy_bonus", 0)),
-		"final": format_number(stats.get("final_score", 0))
+Processing Speed Bonus: 1,000
+Stamp Accuracy Bonus: {accuracy}
+Perfect Hits Bonus: 1,200
+Total Score Bonus: """.format({
+		"accuracy": format_number(stats.get("accuracy_bonus", 0))
 	})
 	
 	# Update leaderboard
@@ -139,18 +140,18 @@ FINAL SCORE: {final}""".format({
 	
 		# Add performance comparison
 	var difficulty_rating = "Normal"
-	var expected_score = 10000  # Base expected score
+	var expected_score = 2000  # Base expected score
 	
 	# Adjust expectations based on difficulty
 	match Global.difficulty_level:
 		"Easy":
-			expected_score = 8000
+			expected_score = 1000
 			difficulty_rating = "Easy"
 		"Normal":
-			expected_score = 10000
+			expected_score = 2000
 			difficulty_rating = "Normal"
 		"Expert":
-			expected_score = 14000
+			expected_score = 3000
 			difficulty_rating = "Expert"
 	
 	# Calculate performance percentage
@@ -161,12 +162,18 @@ FINAL SCORE: {final}""".format({
 	if performance >= 150:
 		performance_text = "Exceptional!"
 		performance_color = Color(1.0, 0.4, 0.8)  # Pink
+		$"RightPanel/GradeStamp-1".texture = GRADE_STAMP_TEXTURE
+		$"RightPanel/GradeStamp-2".texture = GRADE_STAMP_TEXTURE
+		$"RightPanel/GradeStamp-3".texture = GRADE_STAMP_TEXTURE
 	elif performance >= 120:
 		performance_text = "Excellent!"
 		performance_color = Color(0.2, 0.8, 0.2)  # Green
+		$"RightPanel/GradeStamp-1".texture = GRADE_STAMP_TEXTURE
+		$"RightPanel/GradeStamp-2".texture = GRADE_STAMP_TEXTURE
 	elif performance >= 90:
 		performance_text = "Good"
 		performance_color = Color(0.4, 0.7, 0.1)  # Light green
+		$"RightPanel/GradeStamp-1".texture = GRADE_STAMP_TEXTURE
 	elif performance < 70:
 		performance_text = "Needs Improvement"
 		performance_color = Color(0.8, 0.4, 0.1)  # Orange
@@ -177,11 +184,15 @@ FINAL SCORE: {final}""".format({
 	# Add performance rating to display
 	$RightPanel/PerformanceStats.text = """
 	--- PERFORMANCE ---
+	Time Taken: {time_taken}
+	Total Score: {score}
 	Difficulty: {difficulty}
 	Performance Rating: 
 	{rating}
 	Score vs Expected: {percent}%
 	""".format({
+		"time_taken": format_time(stats.get("time_taken", 0)),
+		"score": format_number(stats.get("score", 0)),
 		"difficulty": difficulty_rating,
 		"rating": performance_text,
 		"percent": int(performance)
