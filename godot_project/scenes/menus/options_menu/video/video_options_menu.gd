@@ -2,7 +2,6 @@ extends VideoOptionsMenu
 
 func _ready():
 	super._ready()
-	
 	# Connect to camera shake control changes
 	# Find the camera shake control
 	var camera_shake_control = find_node_by_name(self, "CameraShakeControl")

@@ -24,7 +24,10 @@ var target_point: int = 0
 var speed_multiplier: float = 1.0
 var runner_base_speed: float = 0.30  # Default to Normal difficulty
 var regular_path_speed: float = 0.50 # Default to Normal difficulty
-
+var footprint_timer: float = 0.0
+var footprint_interval: float = 0.1 # Time between footprints
+var footprints: Array = []
+var max_footprints: int = 24
 
 # Path following
 var current_path_follow: PathFollow2D
@@ -59,6 +62,13 @@ func _process(delta):
 	# Handle path following if on a path
 	if current_path_follow and current_state != TaterState.IN_OFFICE:
 		follow_path(delta)
+		
+	# Footprint creation
+	if current_state == TaterState.APPROVED or current_state == TaterState.REJECTED or current_state == TaterState.RUNNING:
+		footprint_timer += delta
+		if footprint_timer >= footprint_interval:
+			footprint_timer = 0
+			spawn_footprint()
 
 func explode():
 	# Emit signal with our position for gib creation
@@ -208,3 +218,28 @@ func fade_out(duration: float = 0.5):
 	var tween = create_tween()
 	tween.tween_property(self, "modulate:a", 0.0, duration)
 	tween.tween_callback(func(): queue_free())
+
+func spawn_footprint():
+	var footprint = Sprite2D.new()
+	footprint.texture = preload("res://assets/effects/footstep.png") # Create this small texture
+	footprint.global_position = global_position
+	footprint.z_index = 6 # Below the potato
+	footprint.rotation = rotation # Align with movement direction
+	footprint.modulate.a = 1.0
+	
+	# Get the root node to add footprints
+	var root = get_tree().current_scene
+	root.add_child(footprint)
+	
+	# Store footprint
+	footprints.append(footprint)
+	
+	# Fade out footprint
+	var tween = create_tween()
+	tween.tween_property(footprint, "modulate:a", 0.2, 3.0)
+	
+	# Limit the number of footprints
+	if footprints.size() > max_footprints:
+		var old_footprint = footprints.pop_front()
+		if old_footprint and is_instance_valid(old_footprint):
+			old_footprint.queue_free()
