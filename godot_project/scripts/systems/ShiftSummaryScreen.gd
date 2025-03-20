@@ -112,7 +112,7 @@ Hit Rate: {rate}%""".format({
 		"fired": format_number(stats.get("missiles_fired", 0)),
 		"hit": format_number(stats.get("missiles_hit", 0)),
 		"perfect": format_number(stats.get("perfect_hits", 0)),
-		"rate": stats.get("hit_rate", 0.0)
+		"rate": floor(stats.get("hit_rate", 0.0))
 	})
 	
 	# Update document stats
@@ -186,16 +186,14 @@ Total Score Bonus: """.format({
 	--- PERFORMANCE ---
 	Time Taken: {time_taken}
 	Total Score: {score}
-	Difficulty: {difficulty}
 	Performance Rating: 
 	{rating}
 	Score vs Expected: {percent}%
 	""".format({
 		"time_taken": format_time(stats.get("time_taken", 0)),
 		"score": format_number(stats.get("score", 0)),
-		"difficulty": difficulty_rating,
 		"rating": performance_text,
-		"percent": int(performance)
+		"percent": floor(performance)
 	})
 	
 	$RightPanel/PerformanceStats.add_theme_color_override("font_color", performance_color)
