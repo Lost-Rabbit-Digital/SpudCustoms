@@ -1,73 +1,8 @@
 # Scratch Pad
 These are our goals, to-do tasks, and completed tasks.
 
-# FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 
-## Tasks
-### Graphics
-  [ ] - Missile explosion animations continue playing in the pause menu
-  [ ] - No female potatoes sprites ever generated in mugshot generator, despite female passports?
-  [ ] - Add a yellow alert with information about the shift displayed like a typewriter in the middle of the screen, "Shift 1, Happy Days, 07:00" that then fades away
-  [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
-  [ ] - Add new potato type art and re-institute potato type rules
-  [ ] - Fix text on main menu and other scenes with background photos
-  [ ] - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
-  [ ] - Add ink flecks from stamping that randomly stain the document around the stamp application edges
-  [ ] - Add dialogue emotes randomly to the potatoes
-  ===
-  [ ] - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
-  [ ] - Add an Entry ticket document and law requirement
-### Gameplay
-  [ ] - Allow murdering accepted potatoes on their way through the border checkpoint using existing border runner system with a strike, 500 points deducted, and "Totneva Convention Violation!" warning through Global.display_red_alert
-  [ ] - BONUSES section in shift summary should show both perfect hits bonus score, as well as stamp accuracy bonuses. 
-  [ ] - Set a highlight shader on the closed passport if the document goes untouched for >5 seconds
-  [ ] - Set a highlight shader on the speaker/start button if the booth goes empty for >5 seconds
-  [ ] - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >5 seconds
-  [ ] - Display max score for each shift and 0-3 golden potatoes / stamps based on score benchmarks for each shift
-  [ ] - Change position so kill text flying up with the score update ("Runner " + potato.first_name + potato.last_name + " neutralized...")
-  [ ] - Add clearer feedback for game over conditions ("Too many strikes, you lose!")
-  [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
-  [ ] - Conversation with potato while checking documents, similar to customs office dialogue, Terry Pratchett inspired
-  [ ] - Fix z-ordering issues on the summary screen
-  [ ] - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
-  [ ] - Potatoes emote (Kenny emotes) while waiting in line
-  [ ] - Wave a mouse over bombs placed on the wall or upper wall in the background to defuse them for scoring
-  [ ] - Repaint each cutscene that stands out as rough in Aseprite (use dedicated 16-32 color palettes, repaint in simpler forms)
-  ===
-  [ ] - Set default selection for main menu for keyboard control
-  [ ] - Lower delay between stamps
-  [ ] - Make the instructions an overlay which you could close
-  [ ] - Show Missile counter on an LCD display on the desk or on UI
-### Audio
-### Score System
-  [ ] - Balance points (missiles, stamping, scanning)
-### Backend
-  [ ] - Save game and load game, especially max level reached and local highscores
-### General Bugs
-  [ ] - Score might not be resetting between rounds on leaderboard. Fairly sure mine just kept going up.
-  [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
-  [ ] - Add Difficulty selection UI after selecting endless mode? Should explain difficulty parameters if so.
-  [ ] - Add message queue system and delay between messages so they don't override each other, add GDScript to alert_label
-  [ ] - Change time to a shift-based time, such as 8 hours over a day
-  [ ] - Check why date rules keep failing make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
-  [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
-  [ ] - Link summary screen to restart back into endless mode instead of story mode
-  [ ] - Make sure the endless doesn't end too early
-  [ ] - Make two sets of paths, one which start in the office and one which doesn't for Spud runner, only do the office start when they are already in office
-  [ ] - Possibly exit the game from the lose screen
-  [ ] - Randomly lose combo when doing potato border runner system
-  [ ] - Update ATTRIBUTION.md with MODERN DOS font
-  [ ] - Update menus with new MODERN DOS font
-  [ ] - Update stats on potato escape and missile kill
-### Law Bugs
-  [ ] - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
-  [ ] - "Sprouted potatoes need additional verification and must be denied", change to not include verification
-### Score Bugs
-  [ ] - Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
-  [ ] - Stamp rejection doesn't update score
-  [ ] - Check if the stamp rejection was correct before triggering the border run system for the scores to be accurate
-  [ ] - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
-  [ ] - Score should always be represented as a float on backend, check and make sure this is the case save for printing it to the UI
+## Steam Minor Update 1.0.3 - Next Update
 ### Stretch Features
   [ ] - Add cars that drive by (where would these go? On road from bottom to top on far left of screen?)
   [ ] - Baggage inspection, grab bags and shake them with bugs and coins flying out until you get a "BAG CLEAN" and a small number of points, or contraband detected where you get points for clicking it
@@ -75,6 +10,74 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Use top 3 scores for leaderboard, then show ... and show 3 scores above player and 3 scores below player (if any), with players score in middle. 
   [ ] - UV lamp represents a high-risk way to maximize points.
   [ ] - Randomly toggle the lights on and off in customs office and Border Wall like people are using the rooms
+  [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
+### Graphics
+  [ ] - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
+  [ ] - Add an Entry ticket document and law requirement
+  [ ] - Add dialogue emotes randomly to the potatoes
+  [ ] - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
+  [ ] - Add ink flecks from stamping that fly up when you stamp
+  [ ] - Set a highlight shader on the closed passport if the document goes untouched for >5 seconds
+  [ ] - Set a highlight shader on the speaker/start button if the booth goes empty for >5 seconds
+  [ ] - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >5 seconds
+### Backend
+ [ ] - Localise the game
+### Gameplay
+  [ ] - Make the instructions an overlay which you could close
+  [ ] - Show Missile counter on an LCD display on the desk or on UI
+### General bugs
+
+
+# FULL RELEASE TASKS - 2025-02-28 - 1.0.2
+
+## Tasks
+### Graphics
+  [ ] - Add new potato type art and re-institute potato type rules
+### Gameplay
+  [ ] - Display max score for each shift and 0-3 golden potatoes / stamps based on score benchmarks for each shift
+  [ ] - Allow missiles to kill approved potatoes, resulting in a Totneva Convention violation (-250 points) and a strike
+  [ ] - Change position so kill text flying up with the score update ("potato.first_name + potato.last_name" + "neutralized...")
+  [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
+  [ ] - Conversation with potato while checking documents, similar to customs office dialogue, Terry Pratchett inspired
+  [ ] - Fix the issue where the game continues running during story sequences
+  [ ] - Fix z-ordering issues on the summary screen
+  [ ] - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
+  [ ] - Potatoes emote (Kenny emotes) while waiting in line
+  [ ] - Wave a mouse over bombs placed on the wall or upper wall in the background to defuse them for scoring
+  [ ] - Repaint each cutscene that stands out as rough in Aseprite (use dedicated 16-32 color palettes, repaint in simpler forms)
+  [ ] - Set default selection for main menu for keyboard control
+### Audio
+  [ ] -
+### Backend
+  [ ] - Save game and load game, especially max level reached and local highscores
+### General Bugs
+  [ ] - Score might not be resetting between rounds on leaderboard. Fairly sure mine just kept going up.
+  [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
+  [ ] - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
+  [ ] - Add Difficulty selection UI after selecting endless mode? Should explain difficulty parameters if so.
+  [ ] - Add message queue system and delay between messages so they don't override each other, add GDScript to alert_label
+  [ ] - Change time to a shift-based time, such as 8 hours over a day
+  [ ] - Check why date rules keep failing make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
+  [ ] - Escape key for menu stopped working after I alt tabbed a few times and completed the first "day". Not sure of cause on that one.
+  [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
+  [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
+  [ ] - Link summary screen to restart back into endless mode instead of story mode
+  [ ] - Make sure the endless doesn't end too early
+  [ ] - Move shift summary to end of game, not end of shift, on quota reached restart, on strikes reached end game
+  [ ] - Possibly exit the game from the lose screen
+  [ ] - Update ATTRIBUTION.md with MODERN DOS font
+  [ ] - Update menus with new MODERN DOS font
+### Law Bugs
+  [ ] - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
+  [ ] - "Sprouted potatoes need additional verification and must be denied", change to not include verification
+### Score Bugs
+  [ ] - Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
+  [ ] - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
+  [ ] - Stamp rejection doesn't update score
+  [ ] - Check if the stamp rejection was correct before triggering the border run system for the scores to be accurate
+  [ ] - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
+  [ ] - Score should always be represented as a float on backend, check and make sure this is the case save for printing it to the UI
+
 
 
 ## Steam Minor Update 1.0.2 - WORK IN PROGRESS
@@ -82,6 +85,7 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Stamps go over edge of passport
   [ ] - Update cursor when hovering over the megaphone
   [ ] - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
+  [ ] - Remove the date and score from the bottom of the screen (move to upper left, ala Rogue Genesia?)
   [ ] - Update backend for megaphone dialogue prompt in-game to allow for future translation
     [ ] - *INTERNAL USE* Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
     [ ] - *INTERNAL USE* Speak duration parameter
@@ -93,6 +97,11 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Improve stamp and interaction system integration
   [ ] - Turn down the splashscreen sound on game start
   [ ] - Code: Move cursor system out of drag system
+  [ ] - Add footsteps visuals to the potatoes
+  [ ] - Shrink missile firing zone on the bottom, overlaps with inspection table
+  [ ] - Shrink texture for missiles and impacts, sizing of pixels is off-putting
+  [ ] - Small animation and slow fade away for dead potatoes
+  
 
 ### Currently Active Tasks for 1.0.2
   [ ] - Documents should have gravity on the suspect panel and should fall to the counter
@@ -105,6 +114,7 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Update take passport dialogue to use the new dialogue system (Same as for megaphone) 
   [ ] - Add the different categories of megaphone into the megaphone_clicked function in mainGame.gd
   [ ] - Test megaphone to make sure it works in all cases
+
   [ ] - Bug: Documents appear above the stamp bar when dragged
   [ ] - Bug: Cursor does not update when hovering above megaphone
   [ ] - Bug: Cursor does not update when hovering above stamp bar button
@@ -112,23 +122,14 @@ These are our goals, to-do tasks, and completed tasks.
 
 ### Completed Tasks for 1.0.2
 Before release, review GitHub commits using the following command `git log --since="last month" --pretty=format:'%h,%an,%ar,%s' > log.csv` - This artifact can then be fed into Claude or similar to analyze the changes.
-  - Double vertical spacing on level select screen to fit in GOLDEN STAMPS
-  - Bring Document Stats onto left side of Shift Summary Journal
-  - Move SHIFT COMPLETE notice up closer to header in Shift Summary Journal
-  - Increase horizontal width of level select display by 25% to accomodate level high scores as well as completion grade icons
-  - Change FINAL SCORE to Total Score, move total score to PERFORMANCE section on Shift Summary
-  - Make sure that the screen shake variable in the video sections of the options menu is being used by the screen_shake function in mainGame.gd, move screen shake to Global.gd and fetch current root node
-  - Create a higher saturation cutout of the Leaderboard summary success stamp for the level select screen
-  - Fix the issue where the game continues running during story sequences
-  - Add footsteps behind potatoes that slowly fade out to 20% opacity
   - *INTERNAL USE* Speed up passport through slot, decrease by 0.5-1.5 seconds
-  - Remove the date and score from the bottom of the screen (move to upper left, ala Rogue Genesia?)
-  - Escape key for menu stopped working after I alt tabbed a few times and completed the first "day". Likely due to scene change causing viewport w/ options/pause menu to be lost.
-  - Hook up game won, level lost, and level won scenes to gameUI scene
-  - Move shift summary to end of shift, on quota reached restart, on strikes reached end game without option to continue
-  - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
-  - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
+  - Make two sets of paths, one which start in the office and one which doesn't for Spud runner, only do the office start when they are already in office
+  - Update stats on potato escape and missile kill
+  - Add clearer feedback for game over conditions ("Too many strikes, you lose!")
+  - Balance points (missiles, stamping, scanning)
+  - Lower delay between stamps
   - Allow multiple simultaneous runners, can we multi-thread this?
+  - Fix text on main menu and other scenes with background photos
   - Add a loss of 250 points on top of strike if the rejection was incorrect (Use the same code as the border runner system to check for point penalty)
   - Remove Law slider and keep law pamphlet as a draggable object
   - Rounds end too abruptly, need to tell the player why they failed
