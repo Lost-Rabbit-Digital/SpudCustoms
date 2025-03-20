@@ -5,6 +5,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 ## Tasks
 ### Graphics
+  [ ] - Missile explosion animations continue playing in the pause menu
   [ ] - No female potatoes sprites ever generated in mugshot generator, despite female passports?
   [ ] - Add a yellow alert with information about the shift displayed like a typewriter in the middle of the screen, "Shift 1, Happy Days, 07:00" that then fades away
   [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
