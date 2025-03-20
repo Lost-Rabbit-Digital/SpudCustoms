@@ -10,6 +10,8 @@ var max_strikes = 4
 var current_game_stats: Dictionary = {}
 var quota_target = 8  # Required correct decisions
 var quota_met = 0   # Number of correct decisions
+# Screen shake settings
+var screen_shake_intensity_multiplier: float = 1.0  # Gets set from options menu
 
 # Track level progression
 var max_level_unlocked = 1  # Start with first level unlocked
@@ -96,6 +98,64 @@ func get_leaderboard_name(difficulty: String = "") -> String:
 		"Normal": return "endless_normal"
 		"Expert": return "endless_expert"
 		_: return "endless_normal"
+
+
+# Screen shake with configurable intensity and duration
+# Mild: intensity 3-5, duration 0.2
+# Medium: intensity 10-15, duration 0.3
+# Strong: intensity 20-25, duration 0.4
+func shake_screen(intensity: float = 10.0, duration: float = 0.3):
+	# Apply screen shake setting from options
+	intensity *= screen_shake_intensity_multiplier
+	
+	# If screen shake is disabled, return early
+	if screen_shake_intensity_multiplier <= 0.01:
+		return
+	
+	# Get the current scene root node
+	var root = get_tree().current_scene
+	if not root:
+		return
+		
+	# Create a screen shake tween
+	var tween = create_tween()
+	
+	# Number of shake steps
+	var steps = 12
+	
+	# Initial position to return to
+	var initial_position = root.position
+	
+	# Initial random offset
+	var random_shake = Vector2(
+		randf_range(-intensity, intensity),
+		randf_range(-intensity, intensity)
+	)
+	
+	# Apply the initial shake
+	root.position += random_shake
+	
+	# Shake with diminishing intensity
+	for i in range(steps):
+		var shake_intensity = intensity * (1.0 - (i / float(steps)))
+		random_shake = Vector2(
+			randf_range(-shake_intensity, shake_intensity),
+			randf_range(-shake_intensity, shake_intensity)
+		)
+		
+		# Move relative to the initial position
+		tween.tween_property(root, "position", initial_position + random_shake, duration / steps)
+	
+	# Return to original position
+	tween.tween_property(root, "position", initial_position, duration / steps)
+
+# Update this function to load the screen shake setting from config
+func update_camera_shake_setting():
+	# Get the camera shake value from Config
+	var shake_value = Config.get_config("VideoSettings", "CameraShake", 1.0)
+	
+	# Update the multiplier
+	screen_shake_intensity_multiplier = shake_value
 
 func request_leaderboard_entries(difficulty: String = "") -> bool:
 	print("GLOBAL: Getting leaderboard entries")

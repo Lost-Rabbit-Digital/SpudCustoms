@@ -155,7 +155,7 @@ Total Score Bonus: """.format({
 			difficulty_rating = "Expert"
 	
 	# Calculate performance percentage
-	var performance = float(stats.get("final_score", 0)) / float(expected_score) * 100
+	var performance = float(stats.get("score", 0)) / float(expected_score) * 100
 	var performance_text = "Average"
 	var performance_color = Color(1.0, 0.8, 0)  # Default yellow
 	
