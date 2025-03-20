@@ -3,6 +3,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ## Steam Minor Update 1.0.3 - Next Update
+## Tasks
 ### Stretch Features
   [ ] - Add cars that drive by (where would these go? On road from bottom to top on far left of screen?)
   [ ] - Baggage inspection, grab bags and shake them with bugs and coins flying out until you get a "BAG CLEAN" and a small number of points, or contraband detected where you get points for clicking it
@@ -21,33 +22,40 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Set a highlight shader on the speaker/start button if the booth goes empty for >5 seconds
   [ ] - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >5 seconds
 ### Backend
- [ ] - Localise the game
+  [ ] - Localise the game
 ### Gameplay
+  [ ] - Change time to a shift-based time, such as 8 hours over a day
   [ ] - Make the instructions an overlay which you could close
+  [ ] - Potatoes emote (Kenny emotes) while waiting in line
   [ ] - Show Missile counter on an LCD display on the desk or on UI
-### General bugs
+  [ ] - Wave a mouse over bombs placed on the wall or upper wall in the background to defuse them for scoring, runner potatoes throw timed-bombs which stick on the top-wall
+### Menus
+  [ ] - Allow leaderboards for each level from the level select
+  [ ] - Add button to reset campaign progress
+  [ ] - Set default selection for main menu for keyboard control
+  [ ] - Add button to reset highscores
+### Law Bugs
+  [ ] - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
+  [ ] - "Sprouted potatoes need additional verification and must be denied", change to not include verification
+
 
 
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
-
 ## Tasks
 ### Graphics
   [ ] - Add new potato type art and re-institute potato type rules
 ### Gameplay
-  [ ] - Display max score for each shift and 0-3 golden potatoes / stamps based on score benchmarks for each shift
   [ ] - Allow missiles to kill approved potatoes, resulting in a Totneva Convention violation (-250 points) and a strike
   [ ] - Change position so kill text flying up with the score update ("potato.first_name + potato.last_name" + "neutralized...")
   [ ] - Add flash arrow pointing from the left to the right indicator for megaphone
   [ ] - Conversation with potato while checking documents, similar to customs office dialogue, Terry Pratchett inspired
   [ ] - Fix the issue where the game continues running during story sequences
-  [ ] - Fix z-ordering issues on the summary screen
   [ ] - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
-  [ ] - Potatoes emote (Kenny emotes) while waiting in line
-  [ ] - Wave a mouse over bombs placed on the wall or upper wall in the background to defuse them for scoring
   [ ] - Repaint each cutscene that stands out as rough in Aseprite (use dedicated 16-32 color palettes, repaint in simpler forms)
-  [ ] - Set default selection for main menu for keyboard control
 ### Audio
   [ ] -
+### Menus
+  [ ] - Add leaderboards for each level
 ### Backend
   [ ] - Save game and load game, especially max level reached and local highscores
 ### General Bugs
@@ -56,20 +64,15 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
   [ ] - Add Difficulty selection UI after selecting endless mode? Should explain difficulty parameters if so.
   [ ] - Add message queue system and delay between messages so they don't override each other, add GDScript to alert_label
-  [ ] - Change time to a shift-based time, such as 8 hours over a day
   [ ] - Check why date rules keep failing make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
   [ ] - Escape key for menu stopped working after I alt tabbed a few times and completed the first "day". Not sure of cause on that one.
   [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
-  [ ] - Hook up game won, level lost, and level won scenes to gameUI scene
   [ ] - Link summary screen to restart back into endless mode instead of story mode
   [ ] - Make sure the endless doesn't end too early
   [ ] - Move shift summary to end of game, not end of shift, on quota reached restart, on strikes reached end game
   [ ] - Possibly exit the game from the lose screen
   [ ] - Update ATTRIBUTION.md with MODERN DOS font
   [ ] - Update menus with new MODERN DOS font
-### Law Bugs
-  [ ] - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
-  [ ] - "Sprouted potatoes need additional verification and must be denied", change to not include verification
 ### Score Bugs
   [ ] - Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
   [ ] - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
@@ -103,6 +106,7 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Small animation and slow fade away for dead potatoes
   
 
+
 ### Currently Active Tasks for 1.0.2
   [ ] - Documents should have gravity on the suspect panel and should fall to the counter
   [ ] - Do not allow the user to pick up the document through the stamp bar
@@ -120,8 +124,13 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Bug: Cursor does not update when hovering above stamp bar button
   [ ] - Audio: Small sound for hovering above megaphone or stamp bar button
 
+
+
 ### Completed Tasks for 1.0.2
 Before release, review GitHub commits using the following command `git log --since="last month" --pretty=format:'%h,%an,%ar,%s' > log.csv` - This artifact can then be fed into Claude or similar to analyze the changes.
+  - Hook up game won, level lost, and level won scenes to gameUI scene
+  - Fix z-ordering issues on the summary screen
+  - Display max score for each shift and 0-3 golden potatoes / stamps based on score benchmarks for each shift
   - *INTERNAL USE* Speed up passport through slot, decrease by 0.5-1.5 seconds
   - Make two sets of paths, one which start in the office and one which doesn't for Spud runner, only do the office start when they are already in office
   - Update stats on potato escape and missile kill
