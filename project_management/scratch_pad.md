@@ -71,7 +71,6 @@ These are our goals, to-do tasks, and completed tasks.
   - Update cursor when hovering over the megaphone
   - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
 ### Gameplay
-  - Make explosions smaller
   - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
   - Do not allow the user to pick up the document through the stamp bar
   - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
@@ -113,3 +112,4 @@ These are our goals, to-do tasks, and completed tasks.
 ### Completed Tasks for 1.0.2
   - Reduce z-index of the potato footsteps and add them to a group for end_shift fade
   - Slow down base speed of runners
+  - Make explosions smaller
