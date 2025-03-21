@@ -27,7 +27,7 @@ signal game_over_triggered
 @export var max_active_runners: int = 3
 @export_range(0, 1, 0.001) var runner_chance: float = 0.025
 ## Minimum time that must pass between runner spawn attempts (Seconds)
-@export var min_time_between_runs: float = 10 # Default: 10
+@export var min_time_between_runs: float = 5 # Default: 10
 ## Maximum time that can pass between runner spawn attempts (Seconds)
 @export var max_time_between_runs: float = 120 # Default: 120 seconds - 2 minutes
 ## Movement speed of runners along their escape path
@@ -54,7 +54,7 @@ signal game_over_triggered
 ## Initial height from which missiles are launched
 @export var missile_start_height: float = 400
 ## Radius of explosion effect and damage area
-@export var explosion_size: float = 128
+@export var explosion_size: float = 80
 
 
 @export_group("Giblet System")
@@ -812,7 +812,7 @@ func check_runner_hits(explosion_pos):
 		var runner = active_runners[i]
 		var distance = runner.global_position.distance_to(explosion_pos)
 		
-		if distance < (explosion_size * 0.8) :
+		if distance < (explosion_size * 0.65 ) :
 			# Store for later processing
 			runners_to_hit.append(runner)
 			active_runners.remove_at(i)

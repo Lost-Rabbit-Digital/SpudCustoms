@@ -53,14 +53,13 @@ These are our goals, to-do tasks, and completed tasks.
   - Bug: Cursor does not update when hovering above stamp bar button
   - Bug: Documents appear above the stamp bar when dragged
   - Cause potatos on shift summary screen to rotate based on their horizontal speed
-  - Cause stamps to wiggle and slam in and then fade into color
+  - Cause stamps to wiggle and slam in and then fade into color on shift summary
   - Center closed version of documents on the mouse position, it often appears offset
   - Concrete steps should be smaller and darker than the grass footsteps
   - Fix stamping animations so that they move down from the stamp crossbar but are behind it
   - Have animated counters up for each of the values in the shift summary screen
   - Law text disappearing when you pick up the opened law document
   - Only show take passport dialogue if the passport has been stamped
-  - Reduce z-index of the potato footsteps and add them to a group for end_shift fade
   - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
   - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
   - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
@@ -72,7 +71,6 @@ These are our goals, to-do tasks, and completed tasks.
   - Update cursor when hovering over the megaphone
   - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
 ### Gameplay
-  - Slow down base speed of runners
   - Make explosions smaller
   - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
   - Do not allow the user to pick up the document through the stamp bar
@@ -113,3 +111,5 @@ These are our goals, to-do tasks, and completed tasks.
   - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
 
 ### Completed Tasks for 1.0.2
+  - Reduce z-index of the potato footsteps and add them to a group for end_shift fade
+  - Slow down base speed of runners
