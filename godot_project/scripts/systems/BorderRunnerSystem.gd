@@ -881,7 +881,7 @@ func handle_successful_hit(runner, explosion_pos):
 	
 	# Calculate bonuses
 	var distance = runner.global_position.distance_to(explosion_pos)
-	if distance < explosion_size / 3:
+	if distance < explosion_size * 0.30:
 		# Perfect hit - trigger stronger screen shake
 		if main_game and main_game.has_method("shake_screen"):
 			main_game.shake_screen(16.0, 0.4)  # Strong shake for perfect hits
