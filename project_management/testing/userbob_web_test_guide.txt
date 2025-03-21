@@ -15,9 +15,9 @@ Thank you for trying our game! Please take 1-3 minutes to play and share your th
    - Use stamps? Yes/No
 
 2. Was the time limit:
-   - [ ] Too short
-   - [ ] Just right
-   - [ ] Too long
+   - Too short
+   - Just right
+   - Too long
 
 3. What confused you the most? (One sentence)
 _______________________________________
@@ -30,9 +30,9 @@ Did you encounter any issues? Please describe briefly:
 _______________________________________
 
 ## Would you play more?
-- [ ] Yes
-- [ ] No
-- [ ] Maybe
+- Yes
+- No
+- Maybe
 
 Any final thoughts? (Optional)
 _______________________________________
