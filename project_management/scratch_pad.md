@@ -15,6 +15,7 @@ These are our goals, to-do tasks, and completed tasks.
 ### Graphics
   [ ] - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
   [ ] - Add an Entry ticket document and law requirement
+  [ ] - Documents should have gravity on the suspect panel and should fall to the counter
   [ ] - Add dialogue emotes randomly to the potatoes
   [ ] - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
   [ ] - Add ink flecks from stamping that fly up when you stamp
@@ -37,7 +38,8 @@ These are our goals, to-do tasks, and completed tasks.
 ### Law Bugs
   [ ] - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
   [ ] - "Sprouted potatoes need additional verification and must be denied", change to not include verification
-
+### Audio
+  [ ] - Small sound for hovering above megaphone or stamp bar button
 
 
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
@@ -47,15 +49,32 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
   [ ] - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
   [ ] - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
+  [ ] - Stamps go over edge of passport
+  [ ] - Update cursor when hovering over the megaphone
+  [ ] - Bug: Documents appear above the stamp bar when dragged
+  [ ] - Bug: Cursor does not update when hovering above stamp bar button
+  [ ] - Bug: Cursor does not update when hovering above megaphone
+  [ ] - Add logic to check if game paused or in dialogic before updating cursor to target cursor
+  [ ] - Shrink texture for missiles and impacts, sizing of pixels is off-putting
+  [ ] - Update cursor to show a select icon when above the megaphone 
+  [ ] - Update cursor to show a select icon when above the approval or rejection stamp
+  [ ] - Only show take passport dialogue if the passport has been stamped
 ### Gameplay
   [ ] - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
+  [ ] - Do not allow the user to pick up the document through the stamp bar
   [ ] - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
 ### Audio
-  [ ] -
+  [ ] - Turn down the splashscreen sound on game start
+  [ ] - Add small amount of random pitch variation to the document open and close sounds
+  [ ] - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
+  [ ] - Add pitch variation to the positive score sound
 ### Menus
   [ ] - Add leaderboards for each level
 ### Backend
   [ ] - Save game and load game, especially max level reached and local highscores
+  [ ] - Code: Move cursor system out of drag system
+  [ ] - Megaphone Dialogue System: Implement the different categories of dialogue from the JSON file into the megaphone_clicked function code in mainGame.gd
+  [ ] - Update take passport dialogue in mainGame.gd to use the new dialogue system (Same as for megaphone) 
 ### General Bugs
   [ ] - Fix the issue where the game continues running during story sequences
   [ ] - Fix skip story bug not hiding the history button quickly
@@ -74,61 +93,30 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Possibly exit the game from the lose screen
   [ ] - Update ATTRIBUTION.md with MODERN DOS font
   [ ] - Update menus with new MODERN DOS font
+  [ ] - Shrink missile firing zone on the bottom, overlaps with inspection table
 ### Score Bugs
   [ ] - Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
-  [ ] - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
-  [ ] - Stamp rejection doesn't update score
-  [ ] - Check if the stamp rejection was correct before triggering the border run system for the scores to be accurate
   [ ] - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
   [ ] - Score should always be represented as a float on backend, check and make sure this is the case save for printing it to the UI
 
 
 
-## Steam Minor Update 1.0.2 - WORK IN PROGRESS
-### To-Do
-  [ ] - Stamps go over edge of passport
-  [ ] - Update cursor when hovering over the megaphone
-  [ ] - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
-  [ ] - Remove the date and score from the bottom of the screen (move to upper left, ala Rogue Genesia?)
-  [ ] - Update backend for megaphone dialogue prompt in-game to allow for future translation
-    [ ] - *INTERNAL USE* Change megaphone dialogue box to be text files printed on instead of hardcoded words for ease of localisation
-    [ ] - *INTERNAL USE* Speak duration parameter
-    [ ] - *INTERNAL USE* Have audio built into dialogue box
-    [ ] - *INTERNAL USE* Have two JSON sections, "next queue" and "general sayings", different names but you get the idea
-    [ ] - *INTERNAL USE* JSON to store strings instead of hard-coding into images
-    [ ] - *INTERNAL USE* Just one background image for the dialogue box
-  [ ] - Add logic to check if game paused or in dialogic before updating cursor to target cursor
-  [ ] - Improve stamp and interaction system integration
-  [ ] - Turn down the splashscreen sound on game start
-  [ ] - Code: Move cursor system out of drag system
-  [ ] - Add footsteps visuals to the potatoes
-  [ ] - Shrink missile firing zone on the bottom, overlaps with inspection table
-  [ ] - Shrink texture for missiles and impacts, sizing of pixels is off-putting
-  [ ] - Small animation and slow fade away for dead potatoes
-  
-
 
 ### Currently Active Tasks for 1.0.2
-  [ ] - Documents should have gravity on the suspect panel and should fall to the counter
-  [ ] - Do not allow the user to pick up the document through the stamp bar
-  [ ] - Documents should move themselves into the inspection table if opened and clipped outside the table
-  [ ] - Add small amount of random pitch variation to the document open and close sounds
-  [ ] - Update cursor to show a select icon when above the megaphone 
-  [ ] - Update cursor to show a select icon when above the approval or rejection stamp
-  [ ] - Only show take passport dialogue if the passport has been stamped
-  [ ] - Update take passport dialogue to use the new dialogue system (Same as for megaphone) 
-  [ ] - Add the different categories of megaphone into the megaphone_clicked function in mainGame.gd
-  [ ] - Test megaphone to make sure it works in all cases
 
-  [ ] - Bug: Documents appear above the stamp bar when dragged
-  [ ] - Bug: Cursor does not update when hovering above megaphone
-  [ ] - Bug: Cursor does not update when hovering above stamp bar button
-  [ ] - Audio: Small sound for hovering above megaphone or stamp bar button
 
 
 
 ### Completed Tasks for 1.0.2
 Before release, review GitHub commits using the following command `git log --since="last month" --pretty=format:'%h,%an,%ar,%s' > log.csv` - This artifact can then be fed into Claude or similar to analyze the changes.
+  [ ] - Test megaphone to make sure it works in all cases
+  - Add foots+teps visuals to the potatoes
+  - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
+  - Check if the stamp rejection was correct before triggering the border run system for the scores to be accurate
+  - Stamp rejection doesn't update score
+  - Documents should move themselves into the inspection table if opened and clipped outside the table
+  - Update backend for megaphone dialogue prompt in-game to allow for future translation
+  - Remove the date and score from the bottom of the screen (move to upper left, ala Rogue Genesia?)
   - Hook up game won, level lost, and level won scenes to gameUI scene
   - Fix z-ordering issues on the summary screen
   - Display max score for each shift and 0-3 golden potatoes / stamps based on score benchmarks for each shift
