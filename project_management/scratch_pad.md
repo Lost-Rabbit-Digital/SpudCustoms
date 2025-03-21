@@ -101,12 +101,6 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 
-
-### Currently Active Tasks for 1.0.2
-
-
-
-
 ### Completed Tasks for 1.0.2
 Before release, review GitHub commits using the following command `git log --since="last month" --pretty=format:'%h,%an,%ar,%s' > log.csv` - This artifact can then be fed into Claude or similar to analyze the changes.
   [ ] - Test megaphone to make sure it works in all cases
