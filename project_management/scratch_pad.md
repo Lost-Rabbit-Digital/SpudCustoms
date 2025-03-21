@@ -44,25 +44,26 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 ## Tasks
 ### Graphics  
+  - Add a growth bounce tween or shrink bounce tween to the quota and strikes labels
+  - Add new potato type art and re-institute potato type rules
+  - Add some kind of positive and negative UI score transition for the quota and strikes (Maybe tween new value up from bottom for quota, and tween new value down from top for strikes) 
+  - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
+  - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
+  - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
+  - Cause stamps to wiggle and slam in and then fade into color on shift summary
+  - Center closed version of documents on the mouse position, it often appears offset
+  - Fix stamping animations so that they move down from the stamp crossbar but are behind it
+  - Add random y-axis variation on the position selected in the return to table function
   - Add an animated counter up for each of the increases of the score
   - Add logic to check if game paused or in dialogic before updating cursor to target cursor
-  - Add new potato type art and re-institute potato type rules
-  - Add random y-axis variation on the position selected in the return to table function
-  - Add some kind of positive and negative transition for the quota and strikes (Maybe up from bottom for quota, and down from top for strikes)
   - Bug: Cursor does not update when hovering above megaphone
   - Bug: Cursor does not update when hovering above stamp bar button
   - Bug: Documents appear above the stamp bar when dragged
   - Cause potatos on shift summary screen to rotate based on their horizontal speed
-  - Cause stamps to wiggle and slam in and then fade into color on shift summary
-  - Center closed version of documents on the mouse position, it often appears offset
   - Concrete steps should be smaller and darker than the grass footsteps
-  - Fix stamping animations so that they move down from the stamp crossbar but are behind it
   - Have animated counters up for each of the values in the shift summary screen
   - Law text disappearing when you pick up the opened law document
   - Only show take passport dialogue if the passport has been stamped
-  - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
-  - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
-  - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
   - Shrink texture for missiles and impacts, sizing of pixels is off-putting
   - Slow down the end shift sequence, treat the last guy in office as rejected
   - Stamps go over edge of passport
@@ -110,6 +111,4 @@ These are our goals, to-do tasks, and completed tasks.
   - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
 
 ### Completed Tasks for 1.0.2
-  - Reduce z-index of the potato footsteps and add them to a group for end_shift fade
-  - Slow down base speed of runners
-  - Make explosions smaller
+

@@ -8,7 +8,7 @@ Before release, review GitHub commits using the following command `git log --sin
   - Possibly exit the game from the lose screen
   - Test megaphone to make sure it works in all cases
   - Score should always be represented as a float on backend, check and make sure this is the case save for printing it to the UI
-  - Add foots+teps visuals to the potatoes
+  - Add footsteps visuals to the potatoes
   - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
   - Check if the stamp rejection was correct before triggering the border run system for the scores to be accurate
   - Stamp rejection doesn't update score
