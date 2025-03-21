@@ -22,12 +22,12 @@ var potato_info: Dictionary = {}
 var current_point: int = 0
 var target_point: int = 0
 var speed_multiplier: float = 1.0
-var runner_base_speed: float = 0.30  # Default to Normal difficulty
+var runner_base_speed: float = 0.35  # Default to Normal difficulty
 var regular_path_speed: float = 0.50 # Default to Normal difficulty
 var footprint_timer: float = 0.0
-var footprint_interval: float = 0.1 # Time between footprints
+var footprint_interval: float = 0.15 # Time between footprints
 var footprints: Array = []
-var max_footprints: int = 24
+var max_footprints: int = 12
 
 # Path following
 var current_path_follow: PathFollow2D
@@ -98,8 +98,8 @@ func set_state(new_state: TaterState):
 			# Visual feedback for approved/rejected
 			pass
 		TaterState.RUNNING:
-			# When running, increase speed
-			speed_multiplier = 1.5
+			# When running, could increase speed?
+			speed_multiplier = 1.0
 		TaterState.DESTROYED:
 			queue_free()
 	
@@ -223,9 +223,12 @@ func spawn_footprint():
 	var footprint = Sprite2D.new()
 	footprint.texture = preload("res://assets/effects/footstep.png") # Create this small texture
 	footprint.global_position = global_position
-	footprint.z_index = 6 # Below the potato
+	footprint.z_index = 1 # Below the potato
 	footprint.rotation = rotation # Align with movement direction
 	footprint.modulate.a = 1.0
+	
+	# Add the footprint to a group for easier management
+	footprint.add_to_group("FootprintGroup")
 	
 	# Get the root node to add footprints
 	var root = get_tree().current_scene

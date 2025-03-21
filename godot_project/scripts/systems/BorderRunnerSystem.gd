@@ -843,6 +843,11 @@ func handle_successful_hit(runner, explosion_pos):
 	corpse.scale = Vector2(0.9, 0.9) * randf_range(0.9, 1.1) 
 	# Add slight random rotation for visual variety
 	corpse.rotation = randf_range(-0.3, 0.3)
+	
+		# Add the footprint to a group for easier management
+	corpse.add_to_group("CorpseGroup")
+
+	
 	# Add to a parent that won't be cleaned up
 	root_node.add_child(corpse)
 	

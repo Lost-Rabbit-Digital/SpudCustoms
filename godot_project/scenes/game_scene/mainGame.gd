@@ -273,6 +273,9 @@ func end_shift(success: bool = true):
 	if border_runner_system:
 		border_runner_system.disable()
 	
+	# Fade out all corpses and footprints
+	fade_out_group_elements()
+	
 	# Reset the gate state for the next shift
 	office_gate_controller.gate_opened_this_shift = false
 	
@@ -872,6 +875,33 @@ func get_appropriate_path(approval_status: String) -> Path2D:
 		
 	# Randomly select a path
 	return available_paths[randi() % available_paths.size()]
+
+func fade_out_group_elements():
+	# Get all corpses and footprints
+	var corpses = get_tree().get_nodes_in_group("CorpseGroup")
+	var footprints = get_tree().get_nodes_in_group("FootprintGroup")
+	
+	# Fade out each corpse
+	for corpse in corpses:
+		if is_instance_valid(corpse):
+			var tween = create_tween()
+			tween.tween_property(corpse, "modulate:a", 0.0, 0.75)
+			tween.tween_callback(func():
+				if is_instance_valid(corpse):
+					corpse.queue_free()
+			)
+	
+	# Fade out each footprint
+	for footprint in footprints:
+		if is_instance_valid(footprint):
+			var tween = create_tween()
+			tween.tween_property(footprint, "modulate:a", 0.0, 0.5)
+			tween.tween_callback(func(): 
+					if is_instance_valid(footprint):
+						footprint.queue_free()
+			)
+
+
 
 func _exit_tree():
 	# Ensure cursor is restored when leaving the scene
