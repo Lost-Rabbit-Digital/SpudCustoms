@@ -13,6 +13,7 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Randomly toggle the lights on and off in customs office and Border Wall like people are using the rooms
   [ ] - Make sure scores are shown above their respective action (stamping, missiles, scanning)
 ### Graphics
+  [ ] - Add message queue system and delay between messages so they don't override each other, add GDScript to alert_label
   [ ] - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
   [ ] - Add an Entry ticket document and law requirement
   [ ] - Documents should have gravity on the suspect panel and should fall to the counter
@@ -45,28 +46,33 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 ## Tasks
 ### Graphics  
-  [ ] - Center closed version of documents on the mouse position, it often appears offset
-  [ ] - Law text disappearing when you pick up the opened law document
-  [ ] - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
-  [ ] - Add random y-axis variation on the position selected in the return to table function
-  [ ] - Fix stamping animations so that they move down from the stamp crossbar but are behind it
+  [ ] - Add an animated counter up for each of the increases of the score
+  [ ] - Add logic to check if game paused or in dialogic before updating cursor to target cursor
   [ ] - Add new potato type art and re-institute potato type rules
+  [ ] - Add random y-axis variation on the position selected in the return to table function
+  [ ] - Add some kind of positive and negative transition for the quota and strikes (Maybe up from bottom for quota, and down from top for strikes)
+  [ ] - Bug: Cursor does not update when hovering above megaphone
+  [ ] - Bug: Cursor does not update when hovering above stamp bar button
+  [ ] - Bug: Documents appear above the stamp bar when dragged
+  [ ] - Cause potatos on shift summary screen to rotate based on their horizontal speed
+  [ ] - Cause stamps to wiggle and slam in and then fade into color
+  [ ] - Center closed version of documents on the mouse position, it often appears offset
+  [ ] - Concrete steps should be smaller and darker than the grass footsteps
+  [ ] - Fix stamping animations so that they move down from the stamp crossbar but are behind it
+  [ ] - Have animated counters up for each of the values in the shift summary screen
+  [ ] - Law text disappearing when you pick up the opened law document
+  [ ] - Only show take passport dialogue if the passport has been stamped
+  [ ] - Reduce z-index of the potato footsteps and add them to a group for end_shift fade
   [ ] - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
   [ ] - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
   [ ] - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
-  [ ] - Stamps go over edge of passport
-  [ ] - Update cursor when hovering over the megaphone
-  [ ] - Bug: Documents appear above the stamp bar when dragged
-  [ ] - Bug: Cursor does not update when hovering above stamp bar button
-  [ ] - Bug: Cursor does not update when hovering above megaphone
-  [ ] - Add logic to check if game paused or in dialogic before updating cursor to target cursor
   [ ] - Shrink texture for missiles and impacts, sizing of pixels is off-putting
-  [ ] - Update cursor to show a select icon when above the megaphone 
+  [ ] - Slow down the end shift sequence, treat the last guy in office as rejected
+  [ ] - Stamps go over edge of passport
   [ ] - Update cursor to show a select icon when above the approval or rejection stamp
-  [ ] - Only show take passport dialogue if the passport has been stamped
-  [ ] - Reduce z-index of the potato footsteps and add them to a group for end_shift fade
-  [ ] - Cause stamps to wiggle and slam in and then fade into color
-  [ ] - Cause potatos on shift summary screen to rotate based on their horizontal speed
+  [ ] - Update cursor to show a select icon when above the megaphone 
+  [ ] - Update cursor when hovering over the megaphone
+  [ ] - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
 ### Gameplay
   [ ] - Slow down base speed of runners
   [ ] - Make explosions smaller
@@ -90,34 +96,32 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Megaphone Dialogue System: Implement the different categories of dialogue from the JSON file into the megaphone_clicked function code in mainGame.gd
   [ ] - Update take passport dialogue in mainGame.gd to use the new dialogue system (Same as for megaphone) 
 ### General Bugs
-  [ ] - Fix the issue where the game continues running during story sequences
-  [ ] - Fix skip story bug not hiding the history button quickly
   [ ] - Cannot generate female potatoes via mugshot generator
-  [ ] - Score might not be resetting between rounds on leaderboard. Fairly sure mine just kept going up.
-  [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
-  [ ] - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
-  [ ] - Add Difficulty selection UI after selecting endless mode? Should explain difficulty parameters if so.
-  [ ] - Add message queue system and delay between messages so they don't override each other, add GDScript to alert_label
   [ ] - Check why date rules keep failing make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
   [ ] - Escape key for menu stopped working after I alt tabbed a few times and completed the first "day". Not sure of cause on that one.
   [ ] - Expiration rule is wrong, passport was expired and got strike for denying entry
+  [ ] - Fix skip story bug not hiding the history button quickly
+  [ ] - Fix the issue where the game continues running during story sequences
   [ ] - Link summary screen to restart back into endless mode instead of story mode
   [ ] - Make sure the endless doesn't end too early
-  [ ] - Move shift summary to end of game, not end of shift, on quota reached restart, on strikes reached end game
-  [ ] - Possibly exit the game from the lose screen
+  [ ] - Potatoes appear above table instead of under when border runner leaves map on south side
+  [ ] - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
+  [ ] - Score might not be resetting between rounds on leaderboard. Fairly sure mine just kept going up.
+  [ ] - Shrink missile firing zone on the bottom, overlaps with inspection table
   [ ] - Update ATTRIBUTION.md with MODERN DOS font
   [ ] - Update menus with new MODERN DOS font
-  [ ] - Shrink missile firing zone on the bottom, overlaps with inspection table
 ### Score Bugs
   [ ] - Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
   [ ] - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
-  [ ] - Score should always be represented as a float on backend, check and make sure this is the case save for printing it to the UI
 
 
 
 ### Completed Tasks for 1.0.2
 Before release, review GitHub commits using the following command `git log --since="last month" --pretty=format:'%h,%an,%ar,%s' > log.csv` - This artifact can then be fed into Claude or similar to analyze the changes.
-  [ ] - Test megaphone to make sure it works in all cases
+  - Move shift summary to end of game, not end of shift, on quota reached restart, on strikes reached end game
+  - Possibly exit the game from the lose screen
+  - Test megaphone to make sure it works in all cases
+  - Score should always be represented as a float on backend, check and make sure this is the case save for printing it to the UI
   - Add foots+teps visuals to the potatoes
   - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
   - Check if the stamp rejection was correct before triggering the border run system for the scores to be accurate
