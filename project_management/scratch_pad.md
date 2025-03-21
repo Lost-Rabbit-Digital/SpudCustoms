@@ -44,7 +44,12 @@ These are our goals, to-do tasks, and completed tasks.
 
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 ## Tasks
-### Graphics
+### Graphics  
+  [ ] - Center closed version of documents on the mouse position, it often appears offset
+  [ ] - Law text disappearing when you pick up the opened law document
+  [ ] - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
+  [ ] - Add random y-axis variation on the position selected in the return to table function
+  [ ] - Fix stamping animations so that they move down from the stamp crossbar but are behind it
   [ ] - Add new potato type art and re-institute potato type rules
   [ ] - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
   [ ] - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
@@ -59,15 +64,24 @@ These are our goals, to-do tasks, and completed tasks.
   [ ] - Update cursor to show a select icon when above the megaphone 
   [ ] - Update cursor to show a select icon when above the approval or rejection stamp
   [ ] - Only show take passport dialogue if the passport has been stamped
+  [ ] - Reduce z-index of the potato footsteps and add them to a group for end_shift fade
+  [ ] - Cause stamps to wiggle and slam in and then fade into color
+  [ ] - Cause potatos on shift summary screen to rotate based on their horizontal speed
 ### Gameplay
+  [ ] - Slow down base speed of runners
+  [ ] - Make explosions smaller
   [ ] - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
   [ ] - Do not allow the user to pick up the document through the stamp bar
   [ ] - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
 ### Audio
+  [ ] - Hand gripping sound to document
+  [ ] - Whooshing sound when documents are dragged quickly
+  [ ] - Whooosh sound when document is returned to table
+  [ ] - Add whoosh to shift summary journal and leaderboard journal
   [ ] - Turn down the splashscreen sound on game start
   [ ] - Add small amount of random pitch variation to the document open and close sounds
   [ ] - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
-  [ ] - Add pitch variation to the positive score sound
+  [ ] - Add pitch variation to the positive and negative score sound
 ### Menus
   [ ] - Add leaderboards for each level
 ### Backend
