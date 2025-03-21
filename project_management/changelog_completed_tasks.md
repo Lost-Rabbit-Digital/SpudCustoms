@@ -1,6 +1,9 @@
 
 ### Completed Tasks for 1.0.2
 Before release, review GitHub commits using the following command `git log --since="last month" --pretty=format:'%h,%an,%ar,%s' > log.csv` - This artifact can then be fed into Claude or similar to analyze the changes.
+  - Reduce z-index of the potato footsteps and add them to a group for end_shift fade
+  - Slow down base speed of runners
+  - Make explosions smaller
   - Move shift summary to end of game, not end of shift, on quota reached restart, on strikes reached end game
   - Possibly exit the game from the lose screen
   - Test megaphone to make sure it works in all cases
