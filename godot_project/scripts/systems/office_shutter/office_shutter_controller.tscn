@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bem3wq4uda4uo" path="res://scripts/systems/office_shutter/office_shutter_controller.gd" id="1_rqpmp"]
 [ext_resource type="Texture2D" uid="uid://bvguhhxihdmr1" path="res://assets/office_shutter/office_shutter_texture.png" id="1_u4acs"]
 [ext_resource type="Texture2D" uid="uid://cm1kiuj01rd1l" path="res://assets/office_shutter/shutter_lever_closed.png" id="3_crqjh"]
-[ext_resource type="Texture2D" uid="uid://bkyj2cixumjxq" path="res://assets/office_shutter/shutter_lever.png" id="3_lxoh3"]
+[ext_resource type="Texture2D" uid="uid://cvqqnxpvq5hx3" path="res://assets/office_shutter/shutter_lever_open.png" id="3_lxoh3"]
 
 [node name="OfficeShutterController" type="Node2D"]
 z_index = 5
