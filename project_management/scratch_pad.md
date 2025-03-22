@@ -44,7 +44,6 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 ## Tasks
 ### Graphics  
-  - Troubleshoot shutter lever disappearing
   - When gate is lowered, have the potatoes in shadow and allow no interaction
   - Add tooltip with potato info when you hover over them in line
   - Color match the lever to dark blue / grey tones, and improve the quality
@@ -117,4 +116,5 @@ These are our goals, to-do tasks, and completed tasks.
   - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
 
 ### Completed Tasks for 1.0.2
-
+  - Troubleshoot shutter lever disappearing
+  - Add smooth animations for the shutter gate lever going up and down
