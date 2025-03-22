@@ -59,9 +59,6 @@ func _input(event):
 		return
 	super._input(event)
 
-
-
-
 # Musical intervals (simplified selection)
 var musical_intervals = {
 	"original": 1.0,        # Original pitch
@@ -100,16 +97,14 @@ func _on_continue_game_button_pressed():
 func _on_level_select_button_pressed():
 	_open_sub_menu(level_select_scene)
 	
-
 func load_tracks():
 	# Replace with your actual music tracks
 	bgm_tracks = [
-		"res://assets/music/ambient_nothingness_main_ovani_sound.mp3",
-		"res://assets/music/ambient_vol3_defeat_main_ovani_sound.mp3",
-		"res://assets/music/ambient_vol3_peace_main_ovani_sound.mp3",
-		"res://assets/music/horror_fog_main_ovani_sound.mp3",
-		"res://assets/music/Ambient Vol2 Glorious Main.wav",
-		"res://assets/music/opening_wonderlust_intensity.wav"
+	"res://assets/music/ambient_3_eternal_main.mp3",
+	"res://assets/music/ambient_concern_main.mp3",
+	"res://assets/music/ambient_faded_defeat_main_menu.mp3",
+	"res://assets/music/ambient_nothingness_main.mp3",
+	"res://assets/music/ambient_sadness_main.mp3"
 	]
 
 func play_with_pitch_variation(interval_name: String = "original"):

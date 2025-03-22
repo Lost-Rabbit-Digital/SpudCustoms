@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://upkolvghgj67" path="res://scenes/opening/opening.gd" id="2_up6er"]
 [ext_resource type="Texture2D" uid="uid://bqhndyh01bptg" path="res://assets/images/logo_vertical_color_dark.png" id="3_powqu"]
 [ext_resource type="Texture2D" uid="uid://cjavqa5yfa4g2" path="res://assets/splashscreen.png" id="4_0hisi"]
-[ext_resource type="AudioStream" uid="uid://dotnlxhuekimg" path="res://assets/music/opening_wonderlust_intensity.wav" id="5_r5wfu"]
+[ext_resource type="AudioStream" uid="uid://c7oq5mskt2da7" path="res://assets/music/opening_wonderlust_intensity.wav" id="5_r5wfu"]
 
 [node name="Opening" instance=ExtResource("1_tjbcx")]
 script = ExtResource("2_up6er")

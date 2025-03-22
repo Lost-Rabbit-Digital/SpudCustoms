@@ -36,6 +36,22 @@ var max_potatoes: int = 20
 #Narrative manager
 @onready var narrative_manager = $SystemManagers/NarrativeManager
 
+# Grab BGM Player
+@onready var bgm_player = $SystemManagers/AudioManager/BackgroundMusicPlayer
+
+# Musical intervals (simplified selection)
+var musical_intervals = {
+	"original": 1.0,        # Original pitch
+	"major_third_down": 0.8, # More somber
+	"major_third_up": 1.25,  # Brighter feel
+	"fifth_down": 0.67,      # Much darker
+	"fifth_up": 1.5          # Brighter, heroic
+}
+
+# Current tracks
+var bgm_tracks = []
+var current_track_index = 0
+
 # Passport
 var passport: Sprite2D
 var passport_spawn_point_begin: Node2D
@@ -100,6 +116,9 @@ func get_level_manager():
 	return null
 
 func _ready():
+	load_tracks()
+	# Play with original pitch by default
+	next_track_with_random_pitch()
 	# Initialise the drag and drop manager
 	if not drag_and_drop_manager:
 		# If the node doesn't exist yet, create it
@@ -1059,3 +1078,66 @@ func is_expired(expiration_date: String) -> bool:
 		
 	# Same year and month, check days
 	return expiry_date.day < current_date.day
+
+func load_tracks():
+	# Replace with your actual music tracks
+	bgm_tracks = [
+	"res://assets/music/ambient_vol2_concern_main.mp3",
+	"res://assets/music/ambient_vol2_glorious_main.mp3",
+	"res://assets/music/ambient_vol2_low_action_main.mp3",
+	"res://assets/music/ambient_vol2_lush_main.mp3",
+	"res://assets/music/ambient_vol2_mysterious_main.mp3",
+	"res://assets/music/ambient_vol2_suspense_main.mp3",
+	"res://assets/music/ambient_vol3_defeat_main.mp3",
+	"res://assets/music/ambient_vol3_evil_suspense_main.mp3",
+	"res://assets/music/ambient_vol3_peace_main.mp3",
+	"res://assets/music/ambient_vol3_sad_decisions_main.mp3",
+	"res://assets/music/ambient_vol3_spirits_intensity_2.mp3",
+	"res://assets/music/ambient_vol3_spirits_main.mp3",
+	"res://assets/music/ambient_vol3_wonder_main.mp3",
+	"res://assets/music/ambient_wonderful_main.mp3",
+	"res://assets/music/horror_fog_main.mp3",
+	"res://assets/music/opening_wonderlust_intensity.wav"
+	]
+
+func play_with_pitch_variation(interval_name: String = "original"):
+	# Default to original if invalid interval name provided
+	if !musical_intervals.has(interval_name):
+		interval_name = "original"
+		
+	var pitch = musical_intervals[interval_name]
+	
+	# Apply pitch shift
+	bgm_player.pitch_scale = pitch
+	
+	# Adjust volume to maintain perceived loudness (optional)
+	bgm_player.volume_db = -3 * log(pitch) / log(2)
+	
+	# If not already playing, start playback
+	if !bgm_player.playing:
+		play_current_track()
+	
+	print("Playing with interval: ", interval_name, ", pitch: ", pitch)
+
+func play_random_pitch_variation():
+	# Select a random interval
+	var keys = musical_intervals.keys()
+	var random_interval = keys[randi() % keys.size()]
+	play_with_pitch_variation(random_interval)
+	
+func next_track_with_random_pitch():
+	# Move to next track
+	current_track_index = (current_track_index + 1) % bgm_tracks.size()
+	
+	# Play with random pitch variation
+	play_random_pitch_variation()
+
+func play_current_track():
+	if bgm_tracks.size() > 0:
+		var track = load(bgm_tracks[current_track_index])
+		if track:
+			bgm_player.stream = track
+			bgm_player.play()
+			print("Now playing: ", bgm_tracks[current_track_index])
+		else:
+			print("Failed to load track: ", bgm_tracks[current_track_index])
