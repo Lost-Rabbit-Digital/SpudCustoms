@@ -50,7 +50,6 @@ These are our goals, to-do tasks, and completed tasks.
   - if you restart on shift summary screen, it advances to the next level
   - Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism
   - Add a growth bounce tween or shrink bounce tween to the quota and strikes labels
-  - Add new potato type art and re-institute potato type rules
   - Add some kind of positive and negative UI score transition for the quota and strikes (Maybe tween new value up from bottom for quota, and tween new value down from top for strikes) 
   - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
   - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
@@ -117,6 +116,7 @@ These are our goals, to-do tasks, and completed tasks.
   - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
 
 ### Completed Tasks for 1.0.2
+  - Add new potato type art and re-institute potato type rules
   - Troubleshoot shutter lever disappearing
   - Add smooth animations for the shutter gate lever going up and down
   - Color match the lever to dark blue / grey tones, and improve the quality
