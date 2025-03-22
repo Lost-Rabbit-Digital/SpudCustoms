@@ -81,8 +81,7 @@ These are our goals, to-do tasks, and completed tasks.
   - Do not allow the user to pick up the document through the stamp bar
   - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
 ### Audio
-  - See if pitch variation can be added to background music
-  - Select additional background music
+  - Select additional background music for /music folder
   - Hand gripping sound to document
   - Whooshing sound when documents are dragged quickly
   - Whooosh sound when document is returned to table
@@ -126,3 +125,4 @@ These are our goals, to-do tasks, and completed tasks.
   - Update color palette for Shift Summary screen and update font spacing
   - QoL: Shadow fade-in similar to Papers, Please for potatoes entering the office
   - QoL: Shadow when shutter is closed
+  - See if pitch variation can be added to background music
