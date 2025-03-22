@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://cwks4tbpoq3n5"]
+[gd_scene load_steps=62 format=3 uid="uid://cwks4tbpoq3n5"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://scenes/game_scene/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://scripts/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="14_ynnf6"]
 [ext_resource type="Script" uid="uid://qyhogd6acnnh" path="res://scripts/systems/drag_and_drop/drag_and_drop_manager.gd" id="20_5djk1"]
 [ext_resource type="PackedScene" uid="uid://bavd85qs23l5m" path="res://scripts/systems/stamp/stamp_system_manager.tscn" id="21_5djk1"]
-[ext_resource type="PackedScene" uid="uid://chbmbf0ki24bj" path="res://scripts/systems/office_gate/office_gate_controller.tscn" id="21_362e4"]
+[ext_resource type="PackedScene" uid="uid://chbmbf0ki24bj" path="res://scripts/systems/office_shutter/office_shutter_controller.tscn" id="21_362e4"]
 [ext_resource type="Texture2D" uid="uid://b2icltv7xkk6j" path="res://assets/user_interface/CustomsDesk.png" id="22_or1f4"]
 [ext_resource type="PackedScene" uid="uid://cejqnrw4oo4r2" path="res://assets/user_interface/suspect_panel/suspect_panel.tscn" id="22_qfxfi"]
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://scripts/systems/character_generator.tscn" id="23_3qac4"]
@@ -28,7 +28,6 @@
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://assets/fonts/windows_command_prompt.ttf" id="29_b6emd"]
 [ext_resource type="Texture2D" uid="uid://cutnqhec1o3w2" path="res://assets/documents/passport_shadow.png" id="30_5od2r"]
 [ext_resource type="Texture2D" uid="uid://bxn3434177kfd" path="res://assets/documents/laws_receipt.png" id="31_rtxd3"]
-[ext_resource type="Texture2D" uid="uid://bkyj2cixumjxq" path="res://assets/office_shutter/shutter_lever.png" id="32_h6yoa"]
 [ext_resource type="Script" uid="uid://dfofd8lp0igu2" path="res://scripts/systems/law_receipt.gd" id="32_k1orm"]
 [ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://assets/styles/dos_theme.tres" id="33_ncgko"]
 [ext_resource type="PackedScene" uid="uid://b0go0ri8l0yb7" path="res://scripts/megaphone_dialogue/MegaphoneDialogue.tscn" id="36_ccap0"]
@@ -488,7 +487,7 @@ offset_bottom = 40.0
 visible = false
 main_node = NodePath("../../..")
 
-[node name="OfficeGateController" parent="Gameplay/InteractiveElements" instance=ExtResource("21_362e4")]
+[node name="OfficeShutterController" parent="Gameplay/InteractiveElements" instance=ExtResource("21_362e4")]
 z_index = 4
 position = Vector2(1075, 362)
 
@@ -773,12 +772,6 @@ unique_name_in_owner = true
 z_index = 7
 z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
-
-[node name="ShutterLever" type="Sprite2D" parent="."]
-z_index = 5
-position = Vector2(909, 271)
-scale = Vector2(2.96483, 2.96483)
-texture = ExtResource("32_h6yoa")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
