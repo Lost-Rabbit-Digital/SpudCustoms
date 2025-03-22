@@ -41,10 +41,10 @@ scale = Vector2(0.660301, 0.660301)
 
 [node name="OpenReceipt" type="Node2D" parent="LawReceiptSprite"]
 z_index = 11
-z_as_relative = false
 position = Vector2(-1420.75, -1336.65)
 scale = Vector2(1.50185, 1.50185)
 
 [node name="ReceiptNote" type="RichTextLabel" parent="LawReceiptSprite/OpenReceipt"]
+z_index = 101
 offset_right = 40.0
 offset_bottom = 40.0
