@@ -6,3 +6,5 @@
 line_spacing = 6.0
 font = ExtResource("1_8yids")
 font_color = Color(0.760784, 0.568627, 0, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)

@@ -163,7 +163,7 @@ z_index = 1
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
-text = "--- SHIFT 289 COMPLETE ---
+text = "SHIFT 289 COMPLETE
 YOU LOSE!
 "
 label_settings = ExtResource("3_oti8t")
@@ -174,7 +174,7 @@ z_index = 1
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
-text = "--- RUNNER STATS ---
+text = "RUNNER STATS
 Runner Attempts: 15
 Missiles Fired: 300
 Runners Hit: 3
@@ -189,7 +189,7 @@ z_index = 1
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
-text = "--- DOCUMENT STATS ---
+text = "DOCUMENT STATS
 Documents Stamped: 22
 Potatoes Approved: 8
 Potatoes Rejected: 14
@@ -208,7 +208,7 @@ offset_bottom = 543.0
 [node name="BonusStats" type="Label" parent="RightPanel"]
 z_index = 1
 layout_mode = 2
-text = "--- BONUSES ---
+text = "BONUSES
 Processing Speed Bonus: 1,200
 Stamp Accuracy Bonus: 5,000
 Perfect Hits Bonus: 2,000
@@ -221,7 +221,7 @@ layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 text = "
---- PERFORMANCE ---
+PERFORMANCE
 Time Taken: 6m 5s
 Total Score: 363,680
 Difficulty: {difficulty}
