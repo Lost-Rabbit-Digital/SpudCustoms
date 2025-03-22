@@ -2,15 +2,11 @@ extends Node2D
 class_name OfficeShutterController
 
 # The texture of the shutter itself
-@onready var shutter: Node2D = $shutter
+@onready var shutter: Node2D = $Shutter
 # The position which the shutter begins the tweens, this is "closed"
 @onready var start_node: Node2D = $StartNode
 # The position which the shutter finishes the tweens, this is "opened"
 @onready var end_node: Node2D = $EndNode
-
-# The interactable UI which opens and closes the shutter
-@onready var shutter_lever: Sprite2D = $ShutterLever
-
 # Audio played during the tween of the shutter
 @onready var shutter_audio: AudioStreamPlayer2D = $Shutter/ShutterAudioStream
 
@@ -20,27 +16,23 @@ class_name OfficeShutterController
 # interactable.
 var shutter_opened_this_shift: bool = false
 
-func _ready():
-	# Connect the input event signal for the ShutterLever
-	if shutter_lever.has_node("Sprite2D"):
-		var lever_sprite = shutter_lever.get_node("Sprite2D")
-		lever_sprite.input_pickable = true
-		lever_sprite.connect("input_event", _on_ShutterLever_input_event)
-	else:
-		push_error("Warning: ShutterLever or its Sprite2D not found")
+# State tracking for the shutter
+enum shutter_state {OPEN, CLOSED}
+var active_shutter_state
 
-# Handle input events on the ShutterLever
-func _on_ShutterLever_input_event(_viewport, event, _shape_idx):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		print("Player clicked on the ShutterLever!")
-		# You can also add logic here to toggle the shutter
-		if shutter.position.y == end_node.position.y:
-			lower_shutter()
-		else:
-			raise_shutter()
+# Shutter delay
+var can_toggle_shutter_state: bool = true
+@onready var shutter_state_delay: Timer = $ShutterStateDelay
+
+func _process(_delta):
+	if can_toggle_shutter_state:
+		can_toggle_shutter_state = false
+		shutter_state_delay.start()
 
 # Mechanical shutter raising with multiple easing functions
 func raise_shutter(duration: float = 1.5):
+	active_shutter_state = shutter_state.OPEN
+	
 	# Start shutter raise sound
 	shutter_audio.stream = preload("res://assets/office_shutter/shutter_open.mp3")
 	shutter_audio.volume_db = 0
@@ -78,7 +70,10 @@ func raise_shutter(duration: float = 1.5):
 		if main_game and main_game.has_method("shake_screen"):
 			main_game.shake_screen(4.0, 0.2)  # Mild shake
 	)
+
 func lower_shutter(duration: float = 3.0):
+	active_shutter_state = shutter_state.CLOSED
+	
 	# Mechanical shutter lowering with different easing
 	shutter_audio.stream = preload("res://assets/office_shutter/shutter_shut.mp3")
 	shutter_audio.volume_db = 0
@@ -114,3 +109,19 @@ func lower_shutter(duration: float = 3.0):
 		if main_game and main_game.has_method("shake_screen"):
 			main_game.shake_screen(8.0, 0.3)  # Stronger shake for slamming
 	)
+
+func shutter_state_toggle(toggled_on: bool) -> void:
+	print("Shutter Lever pressed!")
+	# Check current shutter state and toggle it
+	if toggled_on:
+		print("Attempt to shut shutter")
+		# If the shutter is open, close it upon the click
+		lower_shutter(1.5)
+	else:
+		print("Attempt to open shutter")
+		# If the shutter is already closed, open it upon the click
+		raise_shutter(1.5)
+
+
+func allow_shutter_state_changes() -> void:
+	can_toggle_shutter_state = true
