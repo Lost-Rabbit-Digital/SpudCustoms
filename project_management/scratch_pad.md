@@ -118,4 +118,5 @@ These are our goals, to-do tasks, and completed tasks.
 ### Completed Tasks for 1.0.2
   - Troubleshoot shutter lever disappearing
   - Add smooth animations for the shutter gate lever going up and down
+  - QoL: Shadow fade-in similar to Papers, Please for potatoes entering the office
   - QoL: Shadow when shutter is closed
