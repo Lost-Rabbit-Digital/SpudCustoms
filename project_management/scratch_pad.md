@@ -124,4 +124,5 @@ These are our goals, to-do tasks, and completed tasks.
   - Test new font in Shift Summary Screen and menus
   - Update potato rain to look more natural
   - Update color palette for Shift Summary screen and update font spacing
+  - QoL: Shadow fade-in similar to Papers, Please for potatoes entering the office
   - QoL: Shadow when shutter is closed
