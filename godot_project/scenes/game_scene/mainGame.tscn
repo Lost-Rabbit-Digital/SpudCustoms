@@ -209,8 +209,9 @@ _data = {
 }
 point_count = 24
 
-[node name="Root" type="Node2D"]
+[node name="Root" type="Node2D" node_paths=PackedStringArray("character_generator")]
 script = ExtResource("1_ado42")
+character_generator = NodePath("Gameplay/MugshotPhotoGenerator")
 
 [node name="UI" type="Control" parent="."]
 z_as_relative = false
@@ -487,8 +488,9 @@ offset_bottom = 40.0
 visible = false
 main_node = NodePath("../../..")
 
-[node name="OfficeShutterController" parent="Gameplay/InteractiveElements" instance=ExtResource("21_362e4")]
+[node name="OfficeShutterController" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("character_generator") instance=ExtResource("21_362e4")]
 position = Vector2(1075, 362)
+character_generator = NodePath("../../MugshotPhotoGenerator")
 
 [node name="StampBarController" parent="Gameplay/InteractiveElements" instance=ExtResource("25_osm16")]
 position = Vector2(0, 366)
@@ -773,6 +775,6 @@ z_as_relative = false
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]

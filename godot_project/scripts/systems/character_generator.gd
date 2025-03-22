@@ -92,14 +92,15 @@ func set_character_data(data: Dictionary) -> void:
 		current_torso_frame = data.torso_frame
 	update_sprite_animations()
 	
-func fade_foreground_shadow(duration: float = 1.5):
-	# Get reference to the foreground shadow node
-	if foreground_shadow:
-		pass # LGTM! Node found
-	else:
-		push_error("Could not find ForegroundShadow node")
-		return
+func fade_out_foreground_shadow(duration: float = 1.5):
+	# Set it to opaque black
+	foreground_shadow.modulate = Color(0, 0, 0, 1.0)
 	
+	# Get reference to the foreground shadow node
+	if not foreground_shadow:
+		push_error("ForegroundShadow is not assigned in the inspector")
+		return
+		
 	# Store the initial color with full alpha
 	var initial_color = foreground_shadow.modulate
 	var transparent_color = Color(initial_color.r, initial_color.g, initial_color.b, 0.0)
@@ -112,5 +113,26 @@ func fade_foreground_shadow(duration: float = 1.5):
 		foreground_shadow, 
 		"modulate", 
 		transparent_color, 
+		duration
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+
+func fade_in_foreground_shadow(duration: float = 1.5):
+	# Get reference to the foreground shadow node
+	if not foreground_shadow:
+		push_error("ForegroundShadow is not assigned in the inspector")
+		return
+	
+	# Store the initial color with full alpha
+	var initial_color = foreground_shadow.modulate
+	var opaque_color = Color(initial_color.r, initial_color.g, initial_color.b, 1.0)
+	
+	# Create tween for fading the shadow
+	var tween = create_tween()
+	
+	# Fade out the shadow by modifying the alpha channel
+	tween.tween_property(
+		foreground_shadow, 
+		"modulate", 
+		opaque_color, 
 		duration
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)

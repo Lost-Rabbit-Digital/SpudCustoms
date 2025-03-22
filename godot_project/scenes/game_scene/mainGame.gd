@@ -80,6 +80,10 @@ var max_combo_multiplier = 3.0
 # Office Shutter Controller
 @onready var office_shutter_controller: OfficeShutterController = $Gameplay/InteractiveElements/OfficeShutterController
 
+# Character generator, used for fade in/out 
+@export var character_generator: CharacterGenerator
+
+
 func get_level_manager():
 	var parent = get_parent()
 	while parent:
@@ -392,6 +396,11 @@ func megaphone_clicked():
 		
 	var potato = queue_manager.remove_front_potato()
 	if potato:
+		# Fade out the foreground shadow on the potato when they enter
+		print("Fading out the foreground shadow on potato due to megaphone_clicked()")
+		# Play the shadow fade 0.5s faster than duration
+		character_generator.fade_out_foreground_shadow(4)
+	
 		# Only raise the shutter on the first megaphone click of the shift
 		#if !office_shutter_controller.shutter_opened_this_shift:
 		#	office_shutter_controller.raise_shutter(3)  # Slow, mechanical shutter raising
