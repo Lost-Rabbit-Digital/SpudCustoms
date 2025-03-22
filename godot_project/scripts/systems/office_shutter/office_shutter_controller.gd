@@ -11,9 +11,7 @@ class_name OfficeShutterController
 @onready var shutter_audio: AudioStreamPlayer2D = $Shutter/ShutterAudioStream
 
 # Used to track whether the shutter was opened during this shift
-# TODO: I'm going to replace this with a shutter_open boolean, that will be used to determine the
-# current state of the shutter and let the player freely open and close it using the shutter_level
-# interactable.
+# This is mainly used in the ShiftSummaryScreen at the end of mainGame.gd
 var shutter_opened_this_shift: bool = false
 
 # State tracking for the shutter

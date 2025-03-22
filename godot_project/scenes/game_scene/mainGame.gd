@@ -393,9 +393,9 @@ func megaphone_clicked():
 	var potato = queue_manager.remove_front_potato()
 	if potato:
 		# Only raise the shutter on the first megaphone click of the shift
-		if !office_shutter_controller.shutter_opened_this_shift:
-			office_shutter_controller.raise_shutter(3)  # Slow, mechanical shutter raising
-			office_shutter_controller.shutter_opened_this_shift = true
+		#if !office_shutter_controller.shutter_opened_this_shift:
+		#	office_shutter_controller.raise_shutter(3)  # Slow, mechanical shutter raising
+		#	office_shutter_controller.shutter_opened_this_shift = true
 		megaphone_dialogue_box.next_message()
 		megaphone_dialogue_box.play_random_officer_sound()
 		megaphone_dialogue_box.visible = true
