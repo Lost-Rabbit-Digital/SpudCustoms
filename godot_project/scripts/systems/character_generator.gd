@@ -1,11 +1,12 @@
 extends Node2D
+class_name CharacterGenerator
 
 # Export node references for both mugshot and passport sprites
 @export_group("Character Sprites")
 @export var hair: AnimatedSprite2D
 @export var face: AnimatedSprite2D
 @export var torso: AnimatedSprite2D
-@export var fade_shadow: Sprite2D
+@export var foreground_shadow: Sprite2D
 
 # Track current character state
 @export_group("Generation Settings")
@@ -51,21 +52,21 @@ func randomise_character():
 		if frame_count > 0:
 			current_hair_frame = randi_range(0, frame_count - 1)
 	else:
-		push_error("Could not find Hair AnimatedSprite2D")
+		push_error("Could not find Hair AnimatedSprite2D node")
 			
 	if face and face.sprite_frames:
 		var frame_count = face.sprite_frames.get_frame_count(face_anim)
 		if frame_count > 0:
 			current_face_frame = randi_range(0, frame_count - 1)
 	else:
-		push_error("Could not find Face AnimatedSprite2D")
+		push_error("Could not find Face AnimatedSprite2D node")
 			
 	if torso and torso.sprite_frames:
 		var frame_count = torso.sprite_frames.get_frame_count(body_anim)
 		if frame_count > 0:
 			current_torso_frame = randi_range(0, frame_count - 1)
 	else:
-		push_error("Could not find Torso AnimatedSprite2D")
+		push_error("Could not find Torso AnimatedSprite2D node")
 		
 	# Update sprites with the new frames
 	update_sprite_animations()
@@ -90,3 +91,26 @@ func set_character_data(data: Dictionary) -> void:
 	if data.has("torso_frame"):
 		current_torso_frame = data.torso_frame
 	update_sprite_animations()
+	
+func fade_foreground_shadow(duration: float = 1.5):
+	# Get reference to the foreground shadow node
+	if foreground_shadow:
+		pass # LGTM! Node found
+	else:
+		push_error("Could not find ForegroundShadow node")
+		return
+	
+	# Store the initial color with full alpha
+	var initial_color = foreground_shadow.modulate
+	var transparent_color = Color(initial_color.r, initial_color.g, initial_color.b, 0.0)
+	
+	# Create tween for fading the shadow
+	var tween = create_tween()
+	
+	# Fade out the shadow by modifying the alpha channel
+	tween.tween_property(
+		foreground_shadow, 
+		"modulate", 
+		transparent_color, 
+		duration
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)

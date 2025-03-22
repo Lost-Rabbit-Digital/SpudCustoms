@@ -26,7 +26,11 @@ var active_shutter_state = shutter_state.CLOSED
 var can_toggle_shutter_state: bool = true
 @onready var shutter_state_delay: Timer = $ShutterStateDelay
 
+@onready var character_generator: CharacterGenerator
+
 func _ready():
+	character_generator = CharacterGenerator.new()
+	
 	# Make sure we set up the animation frames for the lever
 	if lever_sprite:
 		# FIXED: Swapped the frame assignment to match desired behavior
@@ -93,7 +97,6 @@ func raise_shutter(duration: float = 1.5):
 func lower_shutter(duration: float = 3.0):
 	active_shutter_state = shutter_state.CLOSED
 	
-	# FIXED: Swapped the animation direction 
 	# Now we animate to DOWN position (frame 7) when closing
 	animate_lever(false)  # false = animate to closed/down position
 	
@@ -102,6 +105,9 @@ func lower_shutter(duration: float = 3.0):
 	shutter_audio.volume_db = 0
 	shutter_audio.bus = "SFX"  
 	shutter_audio.play()
+	
+	print("Fading out the potato due to shutter_lower()")
+	character_generator.fade_foreground_shadow(duration)
 	
 	# Create a more dynamic lowering tween
 	var tween = create_tween()
