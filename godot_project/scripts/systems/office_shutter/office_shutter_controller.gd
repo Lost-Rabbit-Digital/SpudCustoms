@@ -9,6 +9,10 @@ class_name OfficeShutterController
 @onready var end_node: Node2D = $EndNode
 # Audio played during the tween of the shutter
 @onready var shutter_audio: AudioStreamPlayer2D = $Shutter/ShutterAudioStream
+# Lever animated sprite
+@onready var lever_sprite: AnimatedSprite2D = $LeverButton/ShutterLever
+# Lever button
+@onready var lever_button: TextureButton = $LeverButton
 
 # Used to track whether the shutter was opened during this shift
 # This is mainly used in the ShiftSummaryScreen at the end of mainGame.gd
@@ -16,11 +20,22 @@ var shutter_opened_this_shift: bool = false
 
 # State tracking for the shutter
 enum shutter_state {OPEN, CLOSED}
-var active_shutter_state
+var active_shutter_state = shutter_state.CLOSED
 
 # Shutter delay
 var can_toggle_shutter_state: bool = true
 @onready var shutter_state_delay: Timer = $ShutterStateDelay
+
+func _ready():
+	# Make sure we set up the animation frames for the lever
+	if lever_sprite:
+		# Make sure the lever starts in the correct position based on state
+		lever_sprite.frame = 0 if active_shutter_state == shutter_state.CLOSED else 7
+	
+	# Connect the button press signal
+	if lever_button and not lever_button.pressed.is_connected(shutter_state_toggle):
+		lever_button.pressed.connect(shutter_state_toggle)
+		print("Connected lever button pressed signal")
 
 func _process(_delta):
 	if can_toggle_shutter_state:
@@ -30,6 +45,9 @@ func _process(_delta):
 # Mechanical shutter raising with multiple easing functions
 func raise_shutter(duration: float = 1.5):
 	active_shutter_state = shutter_state.OPEN
+	
+	# Animate the lever
+	animate_lever(false)  # false = animate to open position
 	
 	# Start shutter raise sound
 	shutter_audio.stream = preload("res://assets/office_shutter/shutter_open.mp3")
@@ -72,6 +90,9 @@ func raise_shutter(duration: float = 1.5):
 func lower_shutter(duration: float = 3.0):
 	active_shutter_state = shutter_state.CLOSED
 	
+	# Animate the lever
+	animate_lever(true)  # true = animate to closed position
+	
 	# Mechanical shutter lowering with different easing
 	shutter_audio.stream = preload("res://assets/office_shutter/shutter_shut.mp3")
 	shutter_audio.volume_db = 0
@@ -108,18 +129,75 @@ func lower_shutter(duration: float = 3.0):
 			main_game.shake_screen(8.0, 0.3)  # Stronger shake for slamming
 	)
 
-func shutter_state_toggle(toggled_on: bool) -> void:
-	print("Shutter Lever pressed!")
-	# Check current shutter state and toggle it
-	if toggled_on:
-		print("Attempt to shut shutter")
-		# If the shutter is open, close it upon the click
-		lower_shutter(1.5)
+# Animate the lever using spritesheet frames
+func animate_lever(to_closed: bool):
+	if not lever_sprite:
+		print("ERROR: lever_sprite is null")
+		return
+		
+	# Stop any existing animation
+	lever_sprite.stop()
+	
+	# Set target frame based on direction
+	var target_frame = 0 if to_closed else 7  # 0 is closed, 7 is open
+	
+	# Get current frame
+	var starting_frame = lever_sprite.frame
+	print("Animating lever - starting frame: ", starting_frame, " target frame: ", target_frame)
+	
+	# Force animation even if starting frame is the same as target frame
+	# This is needed when the shutter animation is triggered programmatically
+	if starting_frame == target_frame:
+		# If already at target frame, temporarily move to middle frame to force animation
+		starting_frame = 4  # Middle frame
+		lever_sprite.frame = starting_frame
+		print("Forcing animation from temporary middle frame")
+	
+	# Create a tween to animate through frames
+	var tween = create_tween()
+	
+	# Calculate animation duration
+	var frame_distance = abs(target_frame - starting_frame)
+	var duration = frame_distance * 0.05  # 0.05 seconds per frame
+	
+	# If going from closed to open (0 to 7) or from middle to open
+	if not to_closed:
+		for i in range(starting_frame, 8):
+			var frame_index = i  # Capture the current value
+			tween.tween_callback(func(): 
+				lever_sprite.frame = frame_index
+				print("Setting lever frame to: ", frame_index)
+			)
+			tween.tween_interval(0.05)  # Wait between frames
+	# If going from open to closed (7 to 0) or from middle to closed
 	else:
-		print("Attempt to open shutter")
-		# If the shutter is already closed, open it upon the click
-		raise_shutter(1.5)
+		for i in range(starting_frame, -1, -1):
+			var frame_index = i  # Capture the current value
+			tween.tween_callback(func():
+				lever_sprite.frame = frame_index
+				print("Setting lever frame to: ", frame_index)
+			)
+			tween.tween_interval(0.05)  # Wait between frames
 
+func shutter_state_toggle() -> void:
+	print("Shutter Lever button pressed!")
+	
+	# Only proceed if we can toggle the state
+	if not can_toggle_shutter_state:
+		print("Cannot toggle shutter state yet, on cooldown")
+		pass
+		#return
+	
+	# Check current shutter state and toggle it
+	if active_shutter_state == shutter_state.CLOSED:
+		print("Attempt to open shutter")
+		# If the shutter is closed, open it upon the click
+		raise_shutter(1.5)
+	else:
+		print("Attempt to shut shutter")
+		# If the shutter is already open, close it upon the click
+		lower_shutter(1.5)
 
 func allow_shutter_state_changes() -> void:
 	can_toggle_shutter_state = true
+	print("Shutter state changes now allowed")

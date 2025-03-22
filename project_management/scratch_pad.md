@@ -44,6 +44,10 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 ## Tasks
 ### Graphics  
+  - Troubleshoot shutter lever disappearing
+  - When gate is lowered, have the potatoes in shadow and allow no interaction
+  - Add tooltip with potato info when you hover over them in line
+  - Color match the lever to dark blue / grey tones, and improve the quality
   - if you restart on shift summary screen, it advances to the next level
   - Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism
   - Add a growth bounce tween or shrink bounce tween to the quota and strikes labels
