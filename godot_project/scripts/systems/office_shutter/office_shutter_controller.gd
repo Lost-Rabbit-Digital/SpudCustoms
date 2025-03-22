@@ -60,7 +60,7 @@ func raise_shutter(duration: float = 1.5):
 	shutter_audio.bus = "SFX"
 	shutter_audio.play()
 	
-	print("Fading out the potato due to shutter_lower()")
+	print("Fading out the foreground shadow on potato due to shutter_lower()")
 	# Play the shadow fade 0.5s faster than duration
 	character_generator.fade_out_foreground_shadow(duration - 0.5)
 	
@@ -108,7 +108,7 @@ func lower_shutter(duration: float = 3.0):
 	shutter_audio.bus = "SFX"  
 	shutter_audio.play()
 	
-	print("Fading in the potato due to shutter_lower()")
+	print("Fading in the foreground shadow on potato due to shutter_lower()")
 	# Play the shadow fade 0.5s faster than duration
 	character_generator.fade_in_foreground_shadow(duration - 0.5)
 	
