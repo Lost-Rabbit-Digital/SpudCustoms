@@ -52,7 +52,7 @@ func raise_shutter(duration: float = 1.5):
 	# Start shutter raise sound
 	shutter_audio.stream = preload("res://assets/office_shutter/shutter_open.mp3")
 	shutter_audio.volume_db = 0
-	shutter_audio.bus = "SFX"  
+	shutter_audio.bus = "SFX"
 	shutter_audio.play()
 	
 	# Create a more complex tween with multiple easing functions

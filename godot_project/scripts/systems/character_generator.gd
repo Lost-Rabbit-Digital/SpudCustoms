@@ -2,9 +2,9 @@ extends Node2D
 
 # Export node references for both mugshot and passport sprites
 @export_group("Character Sprites")
-@export var hair: AnimatedSprite2D
-@export var face: AnimatedSprite2D
-@export var torso: AnimatedSprite2D
+@onready var hair: AnimatedSprite2D = $Character/Hair
+@onready var face: AnimatedSprite2D = $Character/Face
+@onready var torso: AnimatedSprite2D = $Character/Torso
 
 # Track current character state
 @export_group("Generation Settings")
