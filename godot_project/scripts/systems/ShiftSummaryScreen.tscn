@@ -136,18 +136,18 @@ z_index = 1
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
-text = "1    BroHeartTTV    15,750
-2    LRDStudio    8,600
-3    Maaack    7,200
-4    IrishJohn    6,980
-5    FreshWaterFern    6,540
-6    AtegonDev    5,300
-7    OtterMakesGames    5,200
-8    nan0dev    4,700
-9    imlergan    4,440
-10    KittyKatsuVT    4,300
-11    nhancodes    4,150
-12    2NerdyNerds    4,100"
+text = "1    HeartCoded    4,750
+2    JuanColacelli    4,600
+3    Maaack    4,200
+4    Rasterflame    3,980
+5    FreshWaterFern    3,540
+6    Manodono    3,300
+7    CerealDATASync    3,200
+8    SolidPlasma    2,700
+9    MrBright01    2,350
+10    DigitalIliad    2,200
+11    beni    1,950
+12    2NerdyNerds   1,900"
 label_settings = ExtResource("3_se1pp")
 horizontal_alignment = 1
 
@@ -223,10 +223,11 @@ theme_override_constants/outline_size = 0
 text = "
 PERFORMANCE
 Time Taken: 6m 5s
-Total Score: 363,680
-Difficulty: {difficulty}
-Performance Rating: {rating}
-Score vs Expected: {percent}%
+Expected Score: 2,000
+Total Score: 3,650
+Over-Score Percentage: 182%
+Performance Rating: 
+Exceptional!
 	"
 label_settings = ExtResource("3_oti8t")
 horizontal_alignment = 1
