@@ -87,8 +87,8 @@ scale = Vector2(3.46361, 4.92819)
 
 [node name="ShutterLever" type="AnimatedSprite2D" parent="LeverButton"]
 z_index = 1
-position = Vector2(13.2809, 9.73989)
-scale = Vector2(1.14754, 0.80651)
+position = Vector2(12.4148, 9.13114)
+scale = Vector2(1.10308, 0.775266)
 sprite_frames = SubResource("SpriteFrames_lever")
 frame = 7
 frame_progress = 1.0
