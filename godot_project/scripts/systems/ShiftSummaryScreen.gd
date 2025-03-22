@@ -25,7 +25,7 @@ func _ready():
 		
 	# Ensure buttons are interactive
 	for button in [$ContinueButton, $SubmitScoreButton, $RestartButton, $MainMenuButton]:
-		button.mouse_filter = Control.MOUSE_FILTER_STOP
+		#button.mouse_filter = Control.MOUSE_FILTER_STOP
 		button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 		
 	# Make sure child elements don't block input for buttons
@@ -37,7 +37,6 @@ func _ready():
 	$MainMenuButton.connect("pressed", Callable(self, "_on_main_menu_button_pressed"))
 	
 	setup_background()
-	setup_styling()
 	
 	var original_bg_pos = $Background.position
 	
@@ -48,18 +47,6 @@ func setup_background():
 	if background and BACKGROUND_TEXTURE:
 		background.texture = BACKGROUND_TEXTURE
 		background.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-
-func setup_styling():
-	var font = preload("res://assets/fonts/Modern_DOS_Font_Variation.tres")
-	var text_color = Color("#ffa500")  # Orange/gold color
-	var outline_color = Color("#4d2600")  # Dark brown
-	
-	for label in get_tree().get_nodes_in_group("summary_text"):
-		if font:
-			label.add_theme_font_override("font", font)
-		label.add_theme_color_override("font_color", text_color)
-		label.add_theme_constant_override("outline_size", 2)
-		label.add_theme_color_override("font_outline_color", outline_color)
 
 # Add to ShiftSummaryScreen.gd
 func format_time(seconds: float) -> String:
@@ -76,7 +63,7 @@ func show_summary(stats_data: Dictionary):
 	
 	# Update UI based on result
 	if win_condition:
-		$LeftPanel/ShiftComplete.text = """--- SHIFT {shift} COMPLETE ---
+		$LeftPanel/ShiftComplete.text = """SHIFT {shift} COMPLETE
 		SUCCESS!
 		Time Taken: {time_taken}
 		Total Score: {score}""".format({
@@ -87,7 +74,7 @@ func show_summary(stats_data: Dictionary):
 		$LeftPanel/ShiftComplete.add_theme_color_override("font_color", Color(0.2, 0.8, 0.2))
 	else:
 		var failure_reason = "STRIKE LIMIT REACHED!" if strikes_failed else "QUOTA NOT MET!"
-		$LeftPanel/ShiftComplete.text = """--- SHIFT {shift} COMPLETE ---
+		$LeftPanel/ShiftComplete.text = """SHIFT {shift} COMPLETE
 		{failure}
 		Time Taken: {time_taken}
 		Total Score: {score}""".format({
@@ -103,7 +90,7 @@ func populate_stats():
 	$HeaderPanel/Title.text = "SHIFT SUMMARY\n %s" % Global.difficulty_level
 	
 	# Update missile stats with calculated hit rate
-	$LeftPanel/MissileStats.text = """--- RUNNER STATS ---
+	$LeftPanel/MissileStats.text = """RUNNER STATS
 Runner Attempts: 15
 Missiles Fired: {fired}
 Runners Hit: {hit}
@@ -116,7 +103,7 @@ Hit Rate: {rate}%""".format({
 	})
 	
 	# Update document stats
-	$LeftPanel/DocumentStats.text = """--- DOCUMENT STATS ---
+	$LeftPanel/DocumentStats.text = """DOCUMENT STATS
 Documents Stamped: {stamped}
 Potatoes Approved: {approved}
 Potatoes Rejected: {rejected}
@@ -127,7 +114,7 @@ Perfect Stamps: 5""".format({
 	})
 	
 	# Update bonus stats without speed bonus
-	$RightPanel/BonusStats.text = """--- BONUSES ---
+	$RightPanel/BonusStats.text = """BONUSES
 Processing Speed Bonus: 1,000
 Stamp Accuracy Bonus: {accuracy}
 Perfect Hits Bonus: 1,200
@@ -183,17 +170,19 @@ Total Score Bonus: """.format({
 	
 	# Add performance rating to display
 	$RightPanel/PerformanceStats.text = """
-	--- PERFORMANCE ---
+	PERFORMANCE
 	Time Taken: {time_taken}
 	Total Score: {score}
+	Expected Score: {expected_score}
+	Over-Score Percentage: {percent}%
 	Performance Rating: 
 	{rating}
-	Score vs Expected: {percent}%
 	""".format({
 		"time_taken": format_time(stats.get("time_taken", 0)),
 		"score": format_number(stats.get("score", 0)),
-		"rating": performance_text,
-		"percent": floor(performance)
+		"expected_score": str(expected_score),
+		"percent": floor(performance),
+		"rating": performance_text
 	})
 	
 	$RightPanel/PerformanceStats.add_theme_color_override("font_color", performance_color)

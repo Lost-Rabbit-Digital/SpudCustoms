@@ -29,8 +29,10 @@ var can_toggle_shutter_state: bool = true
 func _ready():
 	# Make sure we set up the animation frames for the lever
 	if lever_sprite:
-		# Make sure the lever starts in the correct position based on state
-		lever_sprite.frame = 0 if active_shutter_state == shutter_state.CLOSED else 7
+		# FIXED: Swapped the frame assignment to match desired behavior
+		# Now when shutter is CLOSED, lever is DOWN (frame 7)
+		# When shutter is OPEN, lever is UP (frame 0)
+		lever_sprite.frame = 7 if active_shutter_state == shutter_state.CLOSED else 0
 	
 	# Connect the button press signal
 	if lever_button and not lever_button.pressed.is_connected(shutter_state_toggle):
@@ -46,8 +48,9 @@ func _process(_delta):
 func raise_shutter(duration: float = 1.5):
 	active_shutter_state = shutter_state.OPEN
 	
-	# Animate the lever
-	animate_lever(false)  # false = animate to open position
+	# FIXED: Swapped the animation direction
+	# Now we animate to UP position (frame 0) when opening
+	animate_lever(true)  # true = animate to open/up position
 	
 	# Start shutter raise sound
 	shutter_audio.stream = preload("res://assets/office_shutter/shutter_open.mp3")
@@ -90,8 +93,9 @@ func raise_shutter(duration: float = 1.5):
 func lower_shutter(duration: float = 3.0):
 	active_shutter_state = shutter_state.CLOSED
 	
-	# Animate the lever
-	animate_lever(true)  # true = animate to closed position
+	# FIXED: Swapped the animation direction 
+	# Now we animate to DOWN position (frame 7) when closing
+	animate_lever(false)  # false = animate to closed/down position
 	
 	# Mechanical shutter lowering with different easing
 	shutter_audio.stream = preload("res://assets/office_shutter/shutter_shut.mp3")
@@ -129,8 +133,9 @@ func lower_shutter(duration: float = 3.0):
 			main_game.shake_screen(8.0, 0.3)  # Stronger shake for slamming
 	)
 
-# Animate the lever using spritesheet frames
-func animate_lever(to_closed: bool):
+# FIXED: Completely reworked this function to fix the animation
+# Now, true = animate to UP position (frame 0), false = animate to DOWN position (frame 7)
+func animate_lever(to_up: bool):
 	if not lever_sprite:
 		print("ERROR: lever_sprite is null")
 		return
@@ -139,7 +144,8 @@ func animate_lever(to_closed: bool):
 	lever_sprite.stop()
 	
 	# Set target frame based on direction
-	var target_frame = 0 if to_closed else 7  # 0 is closed, 7 is open
+	# FIXED: Swapped target frames - frame 0 is UP/open, frame 7 is DOWN/closed
+	var target_frame = 0 if to_up else 7
 	
 	# Get current frame
 	var starting_frame = lever_sprite.frame
@@ -160,18 +166,19 @@ func animate_lever(to_closed: bool):
 	var frame_distance = abs(target_frame - starting_frame)
 	var duration = frame_distance * 0.05  # 0.05 seconds per frame
 	
-	# If going from closed to open (0 to 7) or from middle to open
-	if not to_closed:
-		for i in range(starting_frame, 8):
+	# FIXED: Reworked animation logic
+	# If going to UP position (frame 0)
+	if to_up:
+		for i in range(starting_frame, -1, -1):
 			var frame_index = i  # Capture the current value
 			tween.tween_callback(func(): 
 				lever_sprite.frame = frame_index
 				print("Setting lever frame to: ", frame_index)
 			)
 			tween.tween_interval(0.05)  # Wait between frames
-	# If going from open to closed (7 to 0) or from middle to closed
+	# If going to DOWN position (frame 7)
 	else:
-		for i in range(starting_frame, -1, -1):
+		for i in range(starting_frame, 8):
 			var frame_index = i  # Capture the current value
 			tween.tween_callback(func():
 				lever_sprite.frame = frame_index

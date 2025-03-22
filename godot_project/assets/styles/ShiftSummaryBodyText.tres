@@ -5,6 +5,8 @@
 [resource]
 line_spacing = 6.0
 font = ExtResource("1_nqg4q")
-font_color = Color(0.760784, 0.568627, 0, 1)
-outline_size = 6
-outline_color = Color(0, 0, 0, 1)
+font_color = Color(0.5016, 0.621427, 0.88, 1)
+outline_size = 3
+outline_color = Color(0.114, 0.122867, 0.38, 1)
+shadow_size = 3
+shadow_color = Color(0.114, 0.122867, 0.38, 1)
