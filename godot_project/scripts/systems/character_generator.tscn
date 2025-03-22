@@ -308,9 +308,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CharacterGenerator" type="Node2D"]
+[node name="CharacterGenerator" type="Node2D" node_paths=PackedStringArray("hair", "face", "torso", "fade_shadow")]
 z_as_relative = false
 script = ExtResource("1_tmlea")
+hair = NodePath("Character/Hair")
+face = NodePath("Character/Face")
+torso = NodePath("Character/Torso")
+fade_shadow = NodePath("ForegroundShadow")
 
 [node name="SizingSprite" type="Sprite2D" parent="."]
 visible = false
@@ -328,7 +332,7 @@ texture = ExtResource("8_x47ta")
 [node name="Hair" type="AnimatedSprite2D" parent="Character"]
 position = Vector2(0, -23)
 sprite_frames = SubResource("SpriteFrames_ay427")
-animation = &"Russel_M_Hair"
+animation = &"Russel_F_Hair"
 
 [node name="Face" type="AnimatedSprite2D" parent="Character"]
 z_index = -1
@@ -339,9 +343,7 @@ animation = &"Russel_F_Face"
 z_index = -1
 position = Vector2(0, 22.27)
 sprite_frames = SubResource("SpriteFrames_ay427")
-animation = &"Russel_M_Body"
-frame = 4
-frame_progress = 0.0518253
+animation = &"Russel_F_Body"
 
 [node name="Shadow" type="Sprite2D" parent="Character"]
 modulate = Color(0, 0, 0, 0.592157)

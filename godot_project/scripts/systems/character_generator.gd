@@ -2,9 +2,10 @@ extends Node2D
 
 # Export node references for both mugshot and passport sprites
 @export_group("Character Sprites")
-@onready var hair: AnimatedSprite2D = $Character/Hair
-@onready var face: AnimatedSprite2D = $Character/Face
-@onready var torso: AnimatedSprite2D = $Character/Torso
+@export var hair: AnimatedSprite2D
+@export var face: AnimatedSprite2D
+@export var torso: AnimatedSprite2D
+@export var fade_shadow: Sprite2D
 
 # Track current character state
 @export_group("Generation Settings")
@@ -49,17 +50,23 @@ func randomise_character():
 		var frame_count = hair.sprite_frames.get_frame_count(hair_anim)
 		if frame_count > 0:
 			current_hair_frame = randi_range(0, frame_count - 1)
+	else:
+		push_error("Could not find Hair AnimatedSprite2D")
 			
 	if face and face.sprite_frames:
 		var frame_count = face.sprite_frames.get_frame_count(face_anim)
 		if frame_count > 0:
 			current_face_frame = randi_range(0, frame_count - 1)
+	else:
+		push_error("Could not find Face AnimatedSprite2D")
 			
 	if torso and torso.sprite_frames:
 		var frame_count = torso.sprite_frames.get_frame_count(body_anim)
 		if frame_count > 0:
 			current_torso_frame = randi_range(0, frame_count - 1)
-	
+	else:
+		push_error("Could not find Torso AnimatedSprite2D")
+		
 	# Update sprites with the new frames
 	update_sprite_animations()
 
