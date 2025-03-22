@@ -65,19 +65,15 @@ func show_summary(stats_data: Dictionary):
 	if win_condition:
 		$LeftPanel/ShiftComplete.text = """SHIFT {shift} COMPLETE
 		SUCCESS!
-		Time Taken: {time_taken}
-		Total Score: {score}""".format({
-			"shift": stats.get("shift", 1),
-			"time_taken": format_time(stats.get("time_taken", 0)),
-			"score": format_number(stats.get("score", 0))
+		""".format({
+			"shift": stats.get("shift", 1)
 		})
 		$LeftPanel/ShiftComplete.add_theme_color_override("font_color", Color(0.2, 0.8, 0.2))
 	else:
 		var failure_reason = "STRIKE LIMIT REACHED!" if strikes_failed else "QUOTA NOT MET!"
 		$LeftPanel/ShiftComplete.text = """SHIFT {shift} COMPLETE
 		{failure}
-		Time Taken: {time_taken}
-		Total Score: {score}""".format({
+		""".format({
 			"shift": stats.get("shift", 1),
 			"failure": failure_reason
 		})
@@ -91,11 +87,13 @@ func populate_stats():
 	
 	# Update missile stats with calculated hit rate
 	$LeftPanel/MissileStats.text = """RUNNER STATS
-Runner Attempts: 15
+Runner Attempts: {runner_attempts}
 Missiles Fired: {fired}
 Runners Hit: {hit}
 Perfect Hits: {perfect}
-Hit Rate: {rate}%""".format({
+Hit Rate: {rate}%
+""".format({
+		"runner_attempts": format_number(stats.get("runner_attempts", 0)),
 		"fired": format_number(stats.get("missiles_fired", 0)),
 		"hit": format_number(stats.get("missiles_hit", 0)),
 		"perfect": format_number(stats.get("perfect_hits", 0)),
@@ -107,19 +105,25 @@ Hit Rate: {rate}%""".format({
 Documents Stamped: {stamped}
 Potatoes Approved: {approved}
 Potatoes Rejected: {rejected}
-Perfect Stamps: 5""".format({
+Perfect Stamps: {perfect_stamps}
+""".format({
 		"stamped": format_number(stats.get("total_stamps", 0)),
 		"approved": format_number(stats.get("potatoes_approved", 0)),
 		"rejected": format_number(stats.get("potatoes_rejected", 0)),
+		"perfect_stamps": format_number(stats.get("perfect_stamps", 0))
 	})
 	
 	# Update bonus stats without speed bonus
 	$RightPanel/BonusStats.text = """BONUSES
-Processing Speed Bonus: 1,000
+Processing Speed Bonus: {processing_speed_bonus}
 Stamp Accuracy Bonus: {accuracy}
-Perfect Hits Bonus: 1,200
-Total Score Bonus: """.format({
-		"accuracy": format_number(stats.get("accuracy_bonus", 0))
+Perfect Hits Bonus: {perfect_hit_bonus}
+Total Score Bonus: {total_score_bonus}
+""".format({
+		"processing_speed_bonus": format_number(stats.get("processing_speed_bonus", 0)),
+		"accuracy": format_number(stats.get("accuracy_bonus", 0)),
+		"perfect_hit_bonus": format_number(stats.get("perfect_hit_bonus", 0)),
+		"total_score_bonus": format_number(stats.get("processing_speed_bonus", 0) + stats.get("accuracy_bonus", 0) + stats.get("perfect_hit_bonus", 0))
 	})
 	
 	# Update leaderboard
@@ -169,18 +173,17 @@ Total Score Bonus: """.format({
 		performance_color = Color(0.8, 0.2, 0.2)  # Red
 	
 	# Add performance rating to display
-	$RightPanel/PerformanceStats.text = """
-	PERFORMANCE
-	Time Taken: {time_taken}
-	Total Score: {score}
-	Expected Score: {expected_score}
-	Over-Score Percentage: {percent}%
-	Performance Rating: 
-	{rating}
+	$RightPanel/PerformanceStats.text = """PERFORMANCE
+Time Taken: {time_taken}
+Expected Score: {expected_score}
+Total Score: {score}
+Over-Score Percentage: {percent}%
+Performance Rating: 
+{rating}
 	""".format({
 		"time_taken": format_time(stats.get("time_taken", 0)),
+		"expected_score": format_number(int(expected_score)),
 		"score": format_number(stats.get("score", 0)),
-		"expected_score": str(expected_score),
 		"percent": floor(performance),
 		"rating": performance_text
 	})
