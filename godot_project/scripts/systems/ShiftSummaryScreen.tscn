@@ -97,6 +97,8 @@ alignment = 1
 
 [node name="Title" type="Label" parent="HeaderPanel"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 text = "SHIFT SUMMARY
 Endless - Expert"
 label_settings = ExtResource("2_68n1l")
@@ -114,6 +116,8 @@ alignment = 1
 [node name="Title" type="Label" parent="LeaderboardTitlePanel"]
 z_index = 1
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 text = "Global Leaderboard
 Endless - Expert"
 label_settings = ExtResource("2_68n1l")
@@ -130,6 +134,8 @@ alignment = 1
 [node name="Entries" type="Label" parent="LeaderboardPanel"]
 z_index = 1
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 text = "1    BroHeartTTV    15,750
 2    LRDStudio    8,600
 3    Maaack    7,200
@@ -155,6 +161,8 @@ offset_bottom = 540.0
 [node name="ShiftComplete" type="Label" parent="LeftPanel"]
 z_index = 1
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 text = "--- SHIFT 289 COMPLETE ---
 YOU LOSE!
 "
@@ -164,6 +172,8 @@ horizontal_alignment = 1
 [node name="MissileStats" type="Label" parent="LeftPanel"]
 z_index = 1
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 text = "--- RUNNER STATS ---
 Runner Attempts: 15
 Missiles Fired: 300
@@ -177,11 +187,13 @@ horizontal_alignment = 1
 [node name="DocumentStats" type="Label" parent="LeftPanel"]
 z_index = 1
 layout_mode = 2
-text = "  --- DOCUMENT STATS ---
-    Documents Stamped: 22
-    Potatoes Approved: 8
-    Potatoes Rejected: 14
-    Perfect Stamps: 5
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+text = "--- DOCUMENT STATS ---
+Documents Stamped: 22
+Potatoes Approved: 8
+Potatoes Rejected: 14
+Perfect Stamps: 5
 "
 label_settings = ExtResource("3_oti8t")
 horizontal_alignment = 1
@@ -196,39 +208,41 @@ offset_bottom = 543.0
 [node name="BonusStats" type="Label" parent="RightPanel"]
 z_index = 1
 layout_mode = 2
-text = "   --- BONUSES ---
-    Processing Speed Bonus: 1,200
-    Stamp Accuracy Bonus: 5,000
-    Perfect Hits Bonus: 2,000
-	Total Bonus: 8,200"
+text = "--- BONUSES ---
+Processing Speed Bonus: 1,200
+Stamp Accuracy Bonus: 5,000
+Perfect Hits Bonus: 2,000
+Total Bonus: 8,200"
 label_settings = ExtResource("3_oti8t")
 horizontal_alignment = 1
 
 [node name="PerformanceStats" type="Label" parent="RightPanel"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 text = "
-	--- PERFORMANCE ---
-	Time Taken: 6m 5s
-	Total Score: 363,680
-	Difficulty: {difficulty}
-	Performance Rating: {rating}
-	Score vs Expected: {percent}%
+--- PERFORMANCE ---
+Time Taken: 6m 5s
+Total Score: 363,680
+Difficulty: {difficulty}
+Performance Rating: {rating}
+Score vs Expected: {percent}%
 	"
 label_settings = ExtResource("3_oti8t")
 horizontal_alignment = 1
 
 [node name="GradeStamp-1" type="Sprite2D" parent="RightPanel"]
-position = Vector2(70, 285)
+position = Vector2(70, 316)
 scale = Vector2(3, 3)
 texture = ExtResource("6_4t6eu")
 
 [node name="GradeStamp-2" type="Sprite2D" parent="RightPanel"]
-position = Vector2(150, 285)
+position = Vector2(150, 316)
 scale = Vector2(3, 3)
 texture = ExtResource("6_4t6eu")
 
 [node name="GradeStamp-3" type="Sprite2D" parent="RightPanel"]
-position = Vector2(230, 285)
+position = Vector2(230, 316)
 scale = Vector2(3, 3)
 texture = ExtResource("6_4t6eu")
 
