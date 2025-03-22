@@ -5,6 +5,8 @@ extends MainMenu
 var level_select_scene
 var animation_state_machine : AnimationNodeStateMachinePlayback
 @onready var version_label = $VersionMargin/VersionContainer/VersionLabel
+@onready var bgm_player = $BackgroundMusicPlayer
+
 
 func load_game_scene():
 	GameState.start_game()
@@ -57,14 +59,34 @@ func _input(event):
 		return
 	super._input(event)
 
+
+
+
+# Musical intervals (simplified selection)
+var musical_intervals = {
+	"original": 1.0,        # Original pitch
+	"major_third_down": 0.8, # More somber
+	"major_third_up": 1.25,  # Brighter feel
+	"fifth_down": 0.67,      # Much darker
+	"fifth_up": 1.5          # Brighter, heroic
+}
+
+# Current tracks
+var bgm_tracks = []
+var current_track_index = 0
+
 func _ready():
+	load_tracks()
+	# Play with original pitch by default
+	next_track_with_random_pitch()
+	#play_with_pitch_variation("original")
 	# Set version label text from project settings
 	var version = ProjectSettings.get_setting("application/config/version")
 	version_label.text = "v" + version
 	super._ready()
 	_setup_level_select()
 	animation_state_machine = $MenuAnimationTree.get("parameters/playback")
-
+	
 func _setup_game_buttons():
 	super._setup_game_buttons()
 	if GameState.has_game_state():
@@ -78,3 +100,56 @@ func _on_continue_game_button_pressed():
 func _on_level_select_button_pressed():
 	_open_sub_menu(level_select_scene)
 	
+
+func load_tracks():
+	# Replace with your actual music tracks
+	bgm_tracks = [
+		"res://assets/music/ambient_nothingness_main_ovani_sound.mp3",
+		"res://assets/music/ambient_vol3_defeat_main_ovani_sound.mp3",
+		"res://assets/music/ambient_vol3_peace_main_ovani_sound.mp3",
+		"res://assets/music/horror_fog_main_ovani_sound.mp3",
+		"res://assets/music/Ambient Vol2 Glorious Main.wav",
+		"res://assets/music/opening_wonderlust_intensity.wav"
+	]
+
+func play_with_pitch_variation(interval_name: String = "original"):
+	# Default to original if invalid interval name provided
+	if !musical_intervals.has(interval_name):
+		interval_name = "original"
+		
+	var pitch = musical_intervals[interval_name]
+	
+	# Apply pitch shift
+	bgm_player.pitch_scale = pitch
+	
+	# Adjust volume to maintain perceived loudness (optional)
+	bgm_player.volume_db = -3 * log(pitch) / log(2)
+	
+	# If not already playing, start playback
+	if !bgm_player.playing:
+		play_current_track()
+	
+	print("Playing with interval: ", interval_name, ", pitch: ", pitch)
+
+func play_random_pitch_variation():
+	# Select a random interval
+	var keys = musical_intervals.keys()
+	var random_interval = keys[randi() % keys.size()]
+	play_with_pitch_variation(random_interval)
+	
+func next_track_with_random_pitch():
+	# Move to next track
+	current_track_index = (current_track_index + 1) % bgm_tracks.size()
+	
+	# Play with random pitch variation
+	play_random_pitch_variation()
+
+func play_current_track():
+	if bgm_tracks.size() > 0:
+		var track = load(bgm_tracks[current_track_index])
+		if track:
+			bgm_player.stream = track
+			bgm_player.play()
+			print("Now playing: ", bgm_tracks[current_track_index])
+		else:
+			print("Failed to load track: ", bgm_tracks[current_track_index])

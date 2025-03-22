@@ -44,9 +44,9 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 ## Tasks
 ### Graphics  
+  - Make sure quota is added before shift ends (shows 7/8 often now)
   - When gate is lowered, have the potatoes in shadow and allow no interaction
   - Add tooltip with potato info when you hover over them in line
-  - Color match the lever to dark blue / grey tones, and improve the quality
   - if you restart on shift summary screen, it advances to the next level
   - Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism
   - Add a growth bounce tween or shrink bounce tween to the quota and strikes labels
@@ -81,6 +81,8 @@ These are our goals, to-do tasks, and completed tasks.
   - Do not allow the user to pick up the document through the stamp bar
   - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
 ### Audio
+  - See if pitch variation can be added to background music
+  - Select additional background music
   - Hand gripping sound to document
   - Whooshing sound when documents are dragged quickly
   - Whooosh sound when document is returned to table
@@ -118,3 +120,7 @@ These are our goals, to-do tasks, and completed tasks.
 ### Completed Tasks for 1.0.2
   - Troubleshoot shutter lever disappearing
   - Add smooth animations for the shutter gate lever going up and down
+  - Color match the lever to dark blue / grey tones, and improve the quality
+  - Test new font in Shift Summary Screen and menus
+  - Update potato rain to look more natural
+  - Update color palette for Shift Summary screen and update font spacing
