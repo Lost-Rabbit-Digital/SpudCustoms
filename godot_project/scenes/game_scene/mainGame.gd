@@ -77,8 +77,8 @@ var max_combo_multiplier = 3.0
 # Stamp System Manager
 @onready var stamp_system_manager: StampSystemManager
 
-# Office Gate Controller
-@onready var office_gate_controller: OfficeGateController = $Gameplay/InteractiveElements/OfficeGateController
+# Office Shutter Controller
+@onready var office_shutter_controller: OfficeShutterController = $Gameplay/InteractiveElements/OfficeShutterController
 
 func get_level_manager():
 	var parent = get_parent()
@@ -276,8 +276,8 @@ func end_shift(success: bool = true):
 	# Fade out all corpses and footprints
 	fade_out_group_elements()
 	
-	# Reset the gate state for the next shift
-	office_gate_controller.gate_opened_this_shift = false
+	# Reset the shutter state for the next shift
+	office_shutter_controller.shutter_opened_this_shift = false
 	
 	# Calculate final time taken if not already done
 	if shift_stats.time_taken == 0:
@@ -300,9 +300,9 @@ func end_shift(success: bool = true):
 		Global.add_score(survival_bonus)
 		Global.display_green_alert(alert_label, alert_timer, "Shift survived! Bonus: " + str(survival_bonus) + " points!")
 				
-		# Lower the gate with animation when successful
-		if not office_gate_controller.gate_opened_this_shift:
-			office_gate_controller.lower_gate(1.0)
+		# Lower the shutter with animation when successful
+		if not office_shutter_controller.shutter_opened_this_shift:
+			office_shutter_controller.lower_shutter(1.0)
 	
 	# Store game stats
 	Global.store_game_stats(shift_stats)
@@ -392,10 +392,10 @@ func megaphone_clicked():
 		
 	var potato = queue_manager.remove_front_potato()
 	if potato:
-		# Only raise the gate on the first megaphone click of the shift
-		if !office_gate_controller.gate_opened_this_shift:
-			office_gate_controller.raise_gate(3)  # Slow, mechanical gate raising
-			office_gate_controller.gate_opened_this_shift = true
+		# Only raise the shutter on the first megaphone click of the shift
+		if !office_shutter_controller.shutter_opened_this_shift:
+			office_shutter_controller.raise_shutter(3)  # Slow, mechanical shutter raising
+			office_shutter_controller.shutter_opened_this_shift = true
 		megaphone_dialogue_box.next_message()
 		megaphone_dialogue_box.play_random_officer_sound()
 		megaphone_dialogue_box.visible = true
@@ -677,7 +677,7 @@ func process_decision(allowed):
 		correct_decision_streak += 1
 	   # Check if quota met
 		if Global.quota_met >= Global.quota_target:
-			office_gate_controller.lower_gate(0.7)
+			office_shutter_controller.lower_shutter(0.7)
 			print("Quota complete!")
 			end_shift(true) # end shift with success condition
 			return # Cease processing
@@ -705,8 +705,8 @@ func process_decision(allowed):
 		point_multiplier = 1.0
 		Global.strikes += 1
 		if Global.strikes >= Global.max_strikes:
-			# Lower the gate when max strikes reached
-			office_gate_controller.lower_gate(0.7)  
+			# Lower the shuttere when max strikes reached
+			office_shutter_controller.lower_shutter(0.7)  
 			end_shift(false) # end shift with failure condition
 			return # Cease processing
 	update_score_display()
@@ -998,10 +998,10 @@ func _on_game_over():
 	# Small delay for dramatic effect
 	await get_tree().create_timer(0.5).timeout
 	
-	# Lower gate if not already lowered
-	office_gate_controller.lower_gate(0.8)
+	# Lower shutter if not already lowered
+	office_shutter_controller.lower_shutter(0.8)
 	
-	# Small delay for gate animation
+	# Small delay for shutter animation
 	await get_tree().create_timer(0.8).timeout
 	
 	# This will handle storing stats and showing the summary screen

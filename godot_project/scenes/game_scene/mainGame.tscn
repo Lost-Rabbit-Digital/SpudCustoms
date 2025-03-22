@@ -488,7 +488,6 @@ visible = false
 main_node = NodePath("../../..")
 
 [node name="OfficeShutterController" parent="Gameplay/InteractiveElements" instance=ExtResource("21_362e4")]
-z_index = 4
 position = Vector2(1075, 362)
 
 [node name="StampBarController" parent="Gameplay/InteractiveElements" instance=ExtResource("25_osm16")]

@@ -1,5 +1,5 @@
 extends Node2D
-class_name OfficeshutterController
+class_name OfficeShutterController
 
 # The texture of the shutter itself
 @onready var shutter: Node2D = $shutter
@@ -9,7 +9,7 @@ class_name OfficeshutterController
 @onready var end_node: Node2D = $EndNode
 
 # The interactable UI which opens and closes the shutter
-@onready var shutter_lever: Node2D = $ShutterLever
+@onready var shutter_lever: Sprite2D = $ShutterLever
 
 # Audio played during the tween of the shutter
 @onready var shutter_audio: AudioStreamPlayer2D = $Shutter/ShutterAudioStream
@@ -22,12 +22,12 @@ var shutter_opened_this_shift: bool = false
 
 func _ready():
 	# Connect the input event signal for the ShutterLever
-	if shutter_lever and shutter_lever.has_node("Sprite2D"):
+	if shutter_lever.has_node("Sprite2D"):
 		var lever_sprite = shutter_lever.get_node("Sprite2D")
 		lever_sprite.input_pickable = true
 		lever_sprite.connect("input_event", _on_ShutterLever_input_event)
 	else:
-		print("Warning: ShutterLever or its Sprite2D not found")
+		push_error("Warning: ShutterLever or its Sprite2D not found")
 
 # Handle input events on the ShutterLever
 func _on_ShutterLever_input_event(_viewport, event, _shape_idx):
