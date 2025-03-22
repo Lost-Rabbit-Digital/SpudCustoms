@@ -308,12 +308,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CharacterGenerator" type="Node2D" node_paths=PackedStringArray("hair", "face", "torso")]
+[node name="CharacterGenerator" type="Node2D" node_paths=PackedStringArray("hair", "face", "torso", "foreground_shadow")]
 z_as_relative = false
 script = ExtResource("1_tmlea")
 hair = NodePath("Character/Hair")
 face = NodePath("Character/Face")
 torso = NodePath("Character/Torso")
+foreground_shadow = NodePath("ForegroundShadow")
 
 [node name="SizingSprite" type="Sprite2D" parent="."]
 visible = false

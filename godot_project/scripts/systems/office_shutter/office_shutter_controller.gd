@@ -26,11 +26,9 @@ var active_shutter_state = shutter_state.CLOSED
 var can_toggle_shutter_state: bool = true
 @onready var shutter_state_delay: Timer = $ShutterStateDelay
 
-@onready var character_generator: CharacterGenerator
+@export var character_generator: CharacterGenerator
 
 func _ready():
-	character_generator = CharacterGenerator.new()
-	
 	# Make sure we set up the animation frames for the lever
 	if lever_sprite:
 		# FIXED: Swapped the frame assignment to match desired behavior
@@ -61,6 +59,10 @@ func raise_shutter(duration: float = 1.5):
 	shutter_audio.volume_db = 0
 	shutter_audio.bus = "SFX"
 	shutter_audio.play()
+	
+	print("Fading out the potato due to shutter_lower()")
+	# Play the shadow fade 0.5s faster than duration
+	character_generator.fade_out_foreground_shadow(duration - 0.5)
 	
 	# Create a more complex tween with multiple easing functions
 	var tween = create_tween()
@@ -106,8 +108,9 @@ func lower_shutter(duration: float = 3.0):
 	shutter_audio.bus = "SFX"  
 	shutter_audio.play()
 	
-	print("Fading out the potato due to shutter_lower()")
-	character_generator.fade_foreground_shadow(duration)
+	print("Fading in the potato due to shutter_lower()")
+	# Play the shadow fade 0.5s faster than duration
+	character_generator.fade_in_foreground_shadow(duration - 0.5)
 	
 	# Create a more dynamic lowering tween
 	var tween = create_tween()

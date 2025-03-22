@@ -487,8 +487,9 @@ offset_bottom = 40.0
 visible = false
 main_node = NodePath("../../..")
 
-[node name="OfficeShutterController" parent="Gameplay/InteractiveElements" instance=ExtResource("21_362e4")]
+[node name="OfficeShutterController" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("character_generator") instance=ExtResource("21_362e4")]
 position = Vector2(1075, 362)
+character_generator = NodePath("../../MugshotPhotoGenerator")
 
 [node name="StampBarController" parent="Gameplay/InteractiveElements" instance=ExtResource("25_osm16")]
 position = Vector2(0, 366)
