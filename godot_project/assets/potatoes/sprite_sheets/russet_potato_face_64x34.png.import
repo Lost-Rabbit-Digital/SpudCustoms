@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxjmkrkd4eiy2"
-path="res://.godot/imported/yukon_gold_body.png-135c2cacab3ac0cd149d042d6a4ae731.ctex"
+uid="uid://ba8bu2q67cbtn"
+path="res://.godot/imported/russet_potato_face_64x34.png-cec1c368254c843bfda55689e1ec2306.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/potatoes/bodies/yukon_gold_body.png"
-dest_files=["res://.godot/imported/yukon_gold_body.png-135c2cacab3ac0cd149d042d6a4ae731.ctex"]
+source_file="res://assets/potatoes/sprite_sheets/russet_potato_face_64x34.png"
+dest_files=["res://.godot/imported/russet_potato_face_64x34.png-cec1c368254c843bfda55689e1ec2306.ctex"]
 
 [params]
 

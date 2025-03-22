@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0ywdxpbr2w6n"
-path="res://.godot/imported/russet_head_64x50.png-8f8cfd9ef11f33b9c37d37e58fafa620.ctex"
+uid="uid://dpnhegy13ymky"
+path="res://.godot/imported/russet_potato_head_64x50.png-08008b25388c5b59c084a5b3d611b199.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/potatoes/sprite_sheets/russet_head_64x50.png"
-dest_files=["res://.godot/imported/russet_head_64x50.png-8f8cfd9ef11f33b9c37d37e58fafa620.ctex"]
+source_file="res://assets/potatoes/sprite_sheets/russet_potato_head_64x50.png"
+dest_files=["res://.godot/imported/russet_potato_head_64x50.png-08008b25388c5b59c084a5b3d611b199.ctex"]
 
 [params]
 

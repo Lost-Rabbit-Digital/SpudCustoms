@@ -3,93 +3,112 @@ class_name CharacterGenerator
 
 # Export node references for both mugshot and passport sprites
 @export_group("Character Sprites")
-@export var hair: AnimatedSprite2D
+@export var head: AnimatedSprite2D  # Changed from hair to head
 @export var face: AnimatedSprite2D
 @export var torso: AnimatedSprite2D
 @export var foreground_shadow: Sprite2D
 
 # Track current character state
 @export_group("Generation Settings")
-@export var gender: String = "M"  # Default to male, can be "M" or "F"
-@export var current_hair_frame: int = 0
+@export var race: String = "Russet"  # Default to Russet
+@export var current_head_frame: int = 0  # Changed from current_hair_frame
 @export var current_face_frame: int = 0
-@export var current_torso_frame: int = 0
+@export var current_body_frame: int = 0  # Changed from current_torso_frame
 
 func _ready():
-	randomize()  # Initialize random seed
+	# Initialize with default state
+	randomize()
+	
+	# Make sure we're using the correct animations initially
 	update_sprite_animations()
+	
+	# You might want to trigger a randomization at the start
+	randomise_character()
 
-func set_gender(new_gender: String):
-	gender = new_gender
+func set_race(new_race: String):
+	race = new_race
 	update_sprite_animations()
 
 func update_sprite_animations():
-	# Instead of play(), just set the animation and frame directly
-	if hair and hair.sprite_frames:
-		hair.animation = "Russel_" + gender + "_Hair"
-		hair.frame = current_hair_frame
-		hair.pause()  # Ensure animation doesn't play
-		
+	# Update visuals based on the current race
+	if head and head.sprite_frames:  # Changed from hair to head
+		var head_anim = race + "_Head"
+		if head.sprite_frames.has_animation(head_anim):
+			head.animation = head_anim
+			head.frame = current_head_frame
+			head.pause()  # Ensure animation doesn't play
+	
 	if face and face.sprite_frames:
-		face.animation = "Russel_" + gender + "_Face"
-		face.frame = current_face_frame
-		face.pause()  # Ensure animation doesn't play
-		
+		var face_anim = race + "_Face"
+		if face.sprite_frames.has_animation(face_anim):
+			face.animation = face_anim
+			face.frame = current_face_frame
+			face.pause()  # Ensure animation doesn't play
+	
 	if torso and torso.sprite_frames:
-		torso.animation = "Russel_" + gender + "_Body"
-		torso.frame = current_torso_frame
-		torso.pause()  # Ensure animation doesn't play
-
+		var torso_anim = race + "_Body"
+		if torso.sprite_frames.has_animation(torso_anim):
+			torso.animation = torso_anim
+			torso.frame = current_body_frame
+			torso.pause()  # Ensure animation doesn't play
 
 func randomise_character():
-	var hair_anim = "Russel_" + gender + "_Hair"
-	var face_anim = "Russel_" + gender + "_Face"
-	var body_anim = "Russel_" + gender + "_Body"
+	# Define frame counts for each race
+	var frame_counts = {
+		"Russet": {
+			"head": 8,
+			"face": 6,
+			"body": 8
+		},
+		"Purple Majesty": {
+			"head": 8,
+			"face": 6,
+			"body": 8
+		},
+		"Sweet Potato": {
+			"head": 8,
+			"face": 4,
+			"body": 8
+		},
+		"Yukon Gold": {
+			"head": 8,
+			"face": 4,
+			"body": 8
+		}
+	}
 	
-	# Generate random frames and store them
-	if hair and hair.sprite_frames:
-		var frame_count = hair.sprite_frames.get_frame_count(hair_anim)
-		if frame_count > 0:
-			current_hair_frame = randi_range(0, frame_count - 1)
-	else:
-		push_error("Could not find Hair AnimatedSprite2D node")
-			
-	if face and face.sprite_frames:
-		var frame_count = face.sprite_frames.get_frame_count(face_anim)
-		if frame_count > 0:
-			current_face_frame = randi_range(0, frame_count - 1)
-	else:
-		push_error("Could not find Face AnimatedSprite2D node")
-			
-	if torso and torso.sprite_frames:
-		var frame_count = torso.sprite_frames.get_frame_count(body_anim)
-		if frame_count > 0:
-			current_torso_frame = randi_range(0, frame_count - 1)
-	else:
-		push_error("Could not find Torso AnimatedSprite2D node")
-		
-	# Update sprites with the new frames
+	# Get the correct counts for the current race
+	# Ensure race key matches the case sensitivity of your dictionary
+	var race_key = race if frame_counts.has(race) else "Russet"
+	var counts = frame_counts[race_key]
+	
+	# Generate random frames
+	current_head_frame = randi() % counts.head  # Changed from current_hair_frame
+	current_face_frame = randi() % counts.face
+	current_body_frame = randi() % counts.body  # Changed from current_torso_frame
+	
+	# Update the sprites
 	update_sprite_animations()
 
 # Function to get current character data
 func get_character_data() -> Dictionary:
 	return {
-		"gender": gender,
-		"hair_frame": current_hair_frame,
+		"race": race,
+		"head_frame": current_head_frame,  # Changed from hair_frame
 		"face_frame": current_face_frame,
-		"torso_frame": current_torso_frame
+		"body_frame": current_body_frame   # Changed from torso_frame
 	}
 
 # Function to set character data directly
 func set_character_data(data: Dictionary) -> void:
-	if data.has("gender"):
-		gender = data.gender
-	if data.has("hair_frame"):
-		current_hair_frame = data.hair_frame
+	if data.has("race"):
+		race = data.race
+	if data.has("head_frame"):  # Changed from hair_frame
+		current_head_frame = data.head_frame
 	if data.has("face_frame"):
 		current_face_frame = data.face_frame
-	if data.has("torso_frame"):
-		current_torso_frame = data.torso_frame
+	if data.has("body_frame"):  # Changed from torso_frame
+		current_body_frame = data.body_frame
 	update_sprite_animations()
 	
 func fade_out_foreground_shadow(duration: float = 1.5):

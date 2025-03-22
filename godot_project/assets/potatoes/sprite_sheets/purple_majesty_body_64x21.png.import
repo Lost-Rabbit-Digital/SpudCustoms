@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce8u7fp4aleqk"
-path="res://.godot/imported/red_bliss_body.png-46d9bd6bda7feb39c40ecf5890dd5212.ctex"
+uid="uid://dkt2x4mr1vf2e"
+path="res://.godot/imported/purple_majesty_body_64x21.png-e68f75a9fab5253e3d78250575cd87a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/potatoes/bodies/red_bliss_body.png"
-dest_files=["res://.godot/imported/red_bliss_body.png-46d9bd6bda7feb39c40ecf5890dd5212.ctex"]
+source_file="res://assets/potatoes/sprite_sheets/purple_majesty_body_64x21.png"
+dest_files=["res://.godot/imported/purple_majesty_body_64x21.png-e68f75a9fab5253e3d78250575cd87a3.ctex"]
 
 [params]
 

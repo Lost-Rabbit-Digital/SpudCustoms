@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxrgr1gl127fw"
-path="res://.godot/imported/russet_burbank_1.png-371f37b56c17f01efdfc69d3f2ab5759.ctex"
+uid="uid://pg3qs5tff67a"
+path="res://.godot/imported/purple_majesty_face_64x38.png-2443ba6a787e72bcbd5c746f8caa7f1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/potatoes/bodies/russet_burbank_1.png"
-dest_files=["res://.godot/imported/russet_burbank_1.png-371f37b56c17f01efdfc69d3f2ab5759.ctex"]
+source_file="res://assets/potatoes/sprite_sheets/purple_majesty_face_64x38.png"
+dest_files=["res://.godot/imported/purple_majesty_face_64x38.png-2443ba6a787e72bcbd5c746f8caa7f1e.ctex"]
 
 [params]
 

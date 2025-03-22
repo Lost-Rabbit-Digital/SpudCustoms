@@ -38,6 +38,9 @@ static func generate_random_potato_info() -> Dictionary:
 	# Gender first since it affects character generation
 	var gender = get_random_sex()
 	
+	# Add race selection
+	var race = get_random_race()
+	
 	# Randomize expiration date
 	var expiration_date: String
 	if randf() < 0.2:
@@ -49,6 +52,7 @@ static func generate_random_potato_info() -> Dictionary:
 		"name": get_random_name(),
 		"condition": get_random_condition(),
 		"sex": gender,
+		"race": race,  # Add race to the potato info
 		"country_of_issue": get_random_country(),
 		"date_of_birth": get_past_date(1, 10),
 		"expiration_date": expiration_date,
@@ -72,6 +76,15 @@ static func get_random_name() -> String:
 static func get_random_condition() -> String:
 	var conditions = ["Fresh", "Extra Eyes", "Rotten", "Sprouted", "Dehydrated", "Frozen"]
 	return conditions[randi() % conditions.size()]
+
+static func get_random_race() -> String:
+	var races = [
+		"Russet", 
+		"Yukon Gold", 
+		"Sweet Potato", 
+		"Purple Majesty"
+	]
+	return races[randi() % races.size()]
 
 static func get_random_sex() -> String:
 	return ["Male", "Female"][randi() % 2]

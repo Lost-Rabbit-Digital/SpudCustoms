@@ -38,11 +38,10 @@ var character_generator: Node
 
 # Preload all the textures
 var textures = {
-	"Russet Burbank": preload("res://assets/potatoes/bodies/RussetBurbank_SmallSilhouette.png"),
-	"Yukon Gold": preload("res://assets/potatoes/bodies/yukon_gold_body.png"),
-	"Sweet Potato": preload("res://assets/potatoes/bodies/sweet_potato_body.png"),
-	"Purple Majesty": preload("res://assets/potatoes/bodies/purple_majesty_body.png"),
-	"Red Bliss": preload("res://assets/potatoes/bodies/red_bliss_body.png"),
+	"Russet": preload("res://assets/potatoes/sprite_sheets/russet_small_5x8.png"),
+	"Yukon Gold": preload("res://assets/potatoes/sprite_sheets/yukon_gold_small_5x8.png"),
+	"Sweet Potato": preload("res://assets/potatoes/sprite_sheets/sweet_potato_small_5x8.png"),
+	"Purple Majesty": preload("res://assets/potatoes/sprite_sheets/purple_majesty_small_5x8.png"),
 }
 
 func _ready():
@@ -116,23 +115,23 @@ func update_appearance():
 			# Hide detailed view, show silhouette
 			$CharacterGenerator.visible = true
 			# Make sure the silhouette is visible
-			$Area2D/Sprite2D.visible = false  # Adjust if your silhouette is on a different node
+			$Area2D/Sprite2D.visible = false
 		TaterState.QUEUED, TaterState.APPROVED, TaterState.REJECTED, TaterState.RUNNING:
 			# Show detailed view, hide silhouette
 			$CharacterGenerator.visible = false
 			# You might want to hide the silhouette when detailed view is shown
-			$Area2D/Sprite2D.visible = true  # Adjust if your silhouette is on a different node
+			$Area2D/Sprite2D.visible = true
 		TaterState.DESTROYED:
 			visible = false
 			$Area2D/Sprite2D.visible = false
 			
 	# Update character appearance from character data if available
-	if potato_info.has("character_data") and character_generator:
-		character_generator.set_character_data(potato_info.character_data)
+	if potato_info.has("character_data") and $CharacterGenerator:
+		$CharacterGenerator.set_character_data(potato_info.character_data)
 	
-	# Update body sprite based on type if specified
-	if potato_info.has("type") and potato_info.type in textures:
-		texture = textures[potato_info.type]
+	# Update body sprite based on race if specified
+	if potato_info.has("race") and potato_info.race in textures:
+		texture = textures[potato_info.race]
 
 func move_toward(target: Vector2, speed: float):
 	position = position.move_toward(target, speed)
