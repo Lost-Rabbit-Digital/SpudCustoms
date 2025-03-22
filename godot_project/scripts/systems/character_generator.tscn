@@ -133,33 +133,33 @@ region = Rect2(0, 136, 56, 34)
 atlas = ExtResource("3_ky8jr")
 region = Rect2(0, 170, 56, 34)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bjs83"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyg7m"]
 atlas = ExtResource("4_txv40")
-region = Rect2(0, 0, 50, 31)
+region = Rect2(0, 0, 50, 38)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w7ei7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnxvh"]
 atlas = ExtResource("4_txv40")
-region = Rect2(50, 0, 50, 31)
+region = Rect2(50, 0, 50, 38)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p6j5p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6c1hp"]
 atlas = ExtResource("4_txv40")
-region = Rect2(100, 0, 50, 31)
+region = Rect2(100, 0, 50, 38)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w4wm5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ribcj"]
 atlas = ExtResource("4_txv40")
-region = Rect2(150, 0, 50, 31)
+region = Rect2(150, 0, 50, 38)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0w2b0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sf3v"]
 atlas = ExtResource("4_txv40")
-region = Rect2(200, 0, 50, 31)
+region = Rect2(200, 0, 50, 38)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iah83"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_anxkp"]
 atlas = ExtResource("4_txv40")
-region = Rect2(250, 0, 50, 31)
+region = Rect2(301, 0, 50, 38)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_s03uf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_etffx"]
 atlas = ExtResource("4_txv40")
-region = Rect2(300, 0, 50, 31)
+region = Rect2(251, 0, 50, 38)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ay427"]
 animations = [{
@@ -283,25 +283,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bjs83")
+"texture": SubResource("AtlasTexture_wyg7m")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w7ei7")
+"texture": SubResource("AtlasTexture_mnxvh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_p6j5p")
+"texture": SubResource("AtlasTexture_6c1hp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w4wm5")
+"texture": SubResource("AtlasTexture_ribcj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0w2b0")
+"texture": SubResource("AtlasTexture_0sf3v")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iah83")
+"texture": SubResource("AtlasTexture_anxkp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_s03uf")
+"texture": SubResource("AtlasTexture_etffx")
 }],
 "loop": true,
 "name": &"Russel_M_Hair",
@@ -313,6 +313,7 @@ z_as_relative = false
 script = ExtResource("1_tmlea")
 
 [node name="SizingSprite" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1, -10)
 texture = ExtResource("8_x47ta")
 
@@ -325,27 +326,26 @@ texture = ExtResource("8_x47ta")
 [node name="Character" type="Node2D" parent="."]
 
 [node name="Hair" type="AnimatedSprite2D" parent="Character"]
-z_index = -1
-position = Vector2(0, -16.365)
+position = Vector2(0, -23)
 sprite_frames = SubResource("SpriteFrames_ay427")
-animation = &"Russel_F_Hair"
-frame = 1
+animation = &"Russel_M_Hair"
 
 [node name="Face" type="AnimatedSprite2D" parent="Character"]
 z_index = -1
 sprite_frames = SubResource("SpriteFrames_ay427")
 animation = &"Russel_F_Face"
-frame_progress = 0.265829
 
 [node name="Torso" type="AnimatedSprite2D" parent="Character"]
 z_index = -1
 position = Vector2(0, 22.27)
 sprite_frames = SubResource("SpriteFrames_ay427")
-animation = &"Russel_F_Body"
+animation = &"Russel_M_Body"
+frame = 4
+frame_progress = 0.0518253
 
 [node name="Shadow" type="Sprite2D" parent="Character"]
 modulate = Color(0, 0, 0, 0.592157)
 z_index = -3
-position = Vector2(1, -14)
-scale = Vector2(1.1, 1.1)
+position = Vector2(1, -16)
+scale = Vector2(1.15617, 1.15617)
 texture = ExtResource("8_x47ta")
