@@ -108,9 +108,9 @@ vertical_alignment = 1
 [node name="LeaderboardTitlePanel" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 840.0
-offset_top = 208.0
+offset_top = 200.0
 offset_right = 1151.0
-offset_bottom = 261.0
+offset_bottom = 266.0
 alignment = 1
 
 [node name="Title" type="Label" parent="LeaderboardTitlePanel"]
