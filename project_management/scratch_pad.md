@@ -126,3 +126,5 @@ These are our goals, to-do tasks, and completed tasks.
   - QoL: Shadow fade-in similar to Papers, Please for potatoes entering the office
   - QoL: Shadow when shutter is closed
   - See if pitch variation can be added to background music
+  - Add 25 variations of main menu music and 75 variations of main game music
+  - Adding in initial 4 potato races, laws, and suspect booth/world sprites for them
