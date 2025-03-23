@@ -1473,20 +1473,20 @@ texture = ExtResource("8_x47ta")
 [node name="Character" type="Node2D" parent="."]
 
 [node name="Head" type="AnimatedSprite2D" parent="Character"]
-position = Vector2(0, -23)
+position = Vector2(0, -26)
 sprite_frames = SubResource("SpriteFrames_ay427")
-animation = &"purple majesty face"
+animation = &"russet head"
 
 [node name="Face" type="AnimatedSprite2D" parent="Character"]
 z_index = -1
 sprite_frames = SubResource("SpriteFrames_ay427")
-animation = &"yukon gold face"
+animation = &"russet face"
 
 [node name="Torso" type="AnimatedSprite2D" parent="Character"]
 z_index = -1
 position = Vector2(0, 20)
 sprite_frames = SubResource("SpriteFrames_ay427")
-animation = &"yukon gold body"
+animation = &"russet body"
 
 [node name="Shadow" type="Sprite2D" parent="Character"]
 modulate = Color(0, 0, 0, 0.592157)

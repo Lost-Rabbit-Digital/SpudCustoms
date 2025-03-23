@@ -63,24 +63,24 @@ func randomise_character():
 	# These counts should match your actual sprite atlas frame counts
 	var frame_counts = {
 		"Russet": {
-			"head": head.sprite_frames.get_frame_count("russet_head"),
-			"face": face.sprite_frames.get_frame_count("russet_face"),
-			"body": torso.sprite_frames.get_frame_count("russet_body")
+			"head": head.sprite_frames.get_frame_count("russet head"),
+			"face": face.sprite_frames.get_frame_count("russet face"),
+			"body": torso.sprite_frames.get_frame_count("russet body")
 		},
 		"Purple Majesty": {
-			"head": head.sprite_frames.get_frame_count("purple_majesty_head"),
-			"face": face.sprite_frames.get_frame_count("purple_majesty_face"),
-			"body": torso.sprite_frames.get_frame_count("purple_majesty_body")
+			"head": head.sprite_frames.get_frame_count("purple majesty head"),
+			"face": face.sprite_frames.get_frame_count("purple majesty face"),
+			"body": torso.sprite_frames.get_frame_count("purple majesty body")
 		},
 		"Sweet Potato": {
-			"head": head.sprite_frames.get_frame_count("sweet_potato_head"),
-			"face": face.sprite_frames.get_frame_count("sweet_potato_face"),
-			"body": torso.sprite_frames.get_frame_count("sweet_potato_body")
+			"head": head.sprite_frames.get_frame_count("sweet potato head"),
+			"face": face.sprite_frames.get_frame_count("sweet potato face"),
+			"body": torso.sprite_frames.get_frame_count("sweet potato body")
 		},
 		"Yukon Gold": {
-			"head": head.sprite_frames.get_frame_count("yukon_gold_head"),
-			"face": face.sprite_frames.get_frame_count("yukon_gold_face"),
-			"body": torso.sprite_frames.get_frame_count("yukon_gold_body")
+			"head": head.sprite_frames.get_frame_count("yukon gold head"),
+			"face": face.sprite_frames.get_frame_count("yukon gold face"),
+			"body": torso.sprite_frames.get_frame_count("yukon gold body")
 		}
 	}
 	

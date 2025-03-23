@@ -493,7 +493,7 @@ position = Vector2(1075, 362)
 character_generator = NodePath("../../MugshotPhotoGenerator")
 
 [node name="StampBarController" parent="Gameplay/InteractiveElements" instance=ExtResource("25_osm16")]
-z_index = 15
+z_index = 102
 position = Vector2(0, 366)
 
 [node name="SuspectSpawnNode" type="Node2D" parent="Gameplay/InteractiveElements"]

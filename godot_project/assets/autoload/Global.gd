@@ -443,6 +443,8 @@ func display_red_alert(alert_label, alert_timer, text):
 	alert_label.visible = true
 	# Update the text
 	alert_label.text = text
+	# Update z-index
+	alert_label.z_index = 120
 	# Set desired color
 	alert_label.add_theme_color_override("font_color", Color.RED)
 	# Hide the alert after a few seconds
@@ -460,6 +462,8 @@ func display_green_alert(alert_label, alert_timer, text):
 	alert_label.visible = true
 	# Update the text
 	alert_label.text = text
+	# Update z-index
+	alert_label.z_index = 120
 	# Set desired color
 	alert_label.add_theme_color_override("font_color", Color.GREEN)
 	# Hide the alert after a few seconds
