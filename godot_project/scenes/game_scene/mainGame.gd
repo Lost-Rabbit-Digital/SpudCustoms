@@ -316,6 +316,15 @@ func end_shift(success: bool = true):
 	# Calculate the hit rate
 	shift_stats.hit_rate = 0.0 if shift_stats.missiles_fired == 0 else (float(shift_stats.missiles_hit) / shift_stats.missiles_fired * 100.0)
 	
+	# IMPORTANT: Process any pending stamp decision before finalizing
+	var stamp_decision = ""
+	if stamp_system_manager and stamp_system_manager.passport_stampable:
+		stamp_decision = stamp_system_manager.process_passport_decision()
+		if stamp_decision != "":
+			# Process the last decision before ending
+			process_decision(stamp_decision == "approved")
+	
+	
 	# If it was a successful shift completion, add bonus
 	if success and Global.quota_met >= Global.quota_target:
 		# Add survival bonus
@@ -326,6 +335,9 @@ func end_shift(success: bool = true):
 		# Lower the shutter with animation when successful
 		if not office_shutter_controller.shutter_opened_this_shift:
 			office_shutter_controller.lower_shutter(1.0)
+		
+	# Update quota display one last time to ensure it's correct
+	update_quota_display()
 	
 	# Store game stats
 	Global.store_game_stats(shift_stats)
@@ -343,6 +355,9 @@ func end_shift(success: bool = true):
 		"potatoes_rejected": shift_stats.potatoes_rejected,
 		"hit_rate": shift_stats.hit_rate,
 	}
+	
+	# Set Stamp Bar Controller to be below shift summary screen
+	$Gameplay/InteractiveElements/StampBarController.z_index = 1
 	
 	# Create a tween for a cleaner fade transition
 	var fade_rect = ColorRect.new()
@@ -836,6 +851,8 @@ func remove_stamp():
 	tween.chain().tween_callback(func(): 
 		# Process the decision using the main game logic
 		process_decision(decision == "approved")
+		# Update quota display
+		update_quota_display()
 		move_potato_along_path(decision)
 		is_potato_in_office = false
 	)

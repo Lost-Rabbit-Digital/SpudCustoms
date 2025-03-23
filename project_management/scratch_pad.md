@@ -45,13 +45,11 @@ These are our goals, to-do tasks, and completed tasks.
 ## Tasks
 ### Graphics  
   - When hit with a missile, make the corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest.
-  - Make sure quota is added before shift ends (shows 7/8 often now)
-  - When gate is lowered, have the potatoes in shadow and allow no interaction
   - Add tooltip with potato info when you hover over them in line
+  - Add a growth bounce tween or shrink bounce tween to the quota and strikes labels when they change
+  - Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism (whole stamp descends, just the stamp handle descends, stamp handle comes back up, whole stamp comes back up)
+  - When gate is lowered, have the potatoes in shadow and allow no interaction
   - if you restart on shift summary screen, it advances to the next level
-  - Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism
-  - Add a growth bounce tween or shrink bounce tween to the quota and strikes labels
-  - Add some kind of positive and negative UI score transition for the quota and strikes (Maybe tween new value up from bottom for quota, and tween new value down from top for strikes) 
   - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
   - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
   - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
@@ -86,7 +84,7 @@ These are our goals, to-do tasks, and completed tasks.
   - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
   - Add pitch variation to the positive and negative score sound
 ### Menus
-  - Add leaderboards for each level
+  - Add leaderboards for each level to support shift summary screen
 ### Backend
   - Save game and load game, especially max level reached and local highscores
   - Code: Move cursor system out of drag system
@@ -96,7 +94,6 @@ These are our goals, to-do tasks, and completed tasks.
   - Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
   - Cursor does not update when hovering above megaphone
   - Cursor does not update when hovering above stamp bar button
-  - Documents appear above the stamp bar when dragged
   - Potatoes in queue don't seem to match up with potatoes that enter customs office
   - Escape key for menu stopped working after I alt tabbed a few times and completed the first "day".
   - Expiration rule is wrong, passport was expired and got strike for denying entry
@@ -109,6 +106,10 @@ These are our goals, to-do tasks, and completed tasks.
   - Shrink missile firing zone on the bottom, overlaps with inspection table
 
 ### Completed Tasks for 1.0.2
+  - Documents appear above the stamp bar when dragged
+  - Make sure stamp bar controller does NOT show on top of shift summary screen
+  - Make sure survival bonus alert shows on shift summary screen
+  - Make sure quota is added before shift ends (shows 7/8 often now)
   - Update ATTRIBUTION.md with MODERN DOS font
   - Update menus with new MODERN DOS font
   - Select additional background music for /music folder
