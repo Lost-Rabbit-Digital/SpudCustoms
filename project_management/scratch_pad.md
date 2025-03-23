@@ -4,6 +4,7 @@ These are our goals, to-do tasks, and completed tasks.
 ## Steam Minor Update 1.0.3 - Next Update
 ## Tasks
 ### Stretch Features
+  - Add tooltip with potato info when you hover over them in line
   - Add cars that drive by (where would these go? On road from bottom to top on far left of screen?)
   - Baggage inspection, grab bags and shake them with bugs and coins flying out until you get a "BAG CLEAN" and a small number of points, or contraband detected where you get points for clicking it
   - Multiplayer? 8th / 15th of November for schedule
@@ -45,7 +46,6 @@ These are our goals, to-do tasks, and completed tasks.
 ## Tasks
 ### Graphics  
   - When hit with a missile, make the corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest.
-  - Add tooltip with potato info when you hover over them in line
   - Add a growth bounce tween or shrink bounce tween to the quota and strikes labels when they change
   - Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism (whole stamp descends, just the stamp handle descends, stamp handle comes back up, whole stamp comes back up)
   - When gate is lowered, have the potatoes in shadow and allow no interaction
