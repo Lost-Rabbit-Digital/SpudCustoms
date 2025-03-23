@@ -53,39 +53,41 @@ func update_sprite_animations():
 			torso.pause()  # Ensure animation doesn't play
 
 func randomise_character():
-	# Define frame counts for each race
+	# These counts should match your actual sprite atlas frame counts
 	var frame_counts = {
 		"Russet": {
-			"head": 8,
-			"face": 6,
-			"body": 8
+			"head": head.sprite_frames.get_frame_count("russet_head"),
+			"face": face.sprite_frames.get_frame_count("russet_face"),
+			"body": torso.sprite_frames.get_frame_count("russet_body")
 		},
 		"Purple Majesty": {
-			"head": 8,
-			"face": 6,
-			"body": 8
+			"head": head.sprite_frames.get_frame_count("purple_majesty_head"),
+			"face": face.sprite_frames.get_frame_count("purple_majesty_face"),
+			"body": torso.sprite_frames.get_frame_count("purple_majesty_body")
 		},
 		"Sweet Potato": {
-			"head": 8,
-			"face": 4,
-			"body": 8
+			"head": head.sprite_frames.get_frame_count("sweet_potato_head"),
+			"face": face.sprite_frames.get_frame_count("sweet_potato_face"),
+			"body": torso.sprite_frames.get_frame_count("sweet_potato_body")
 		},
 		"Yukon Gold": {
-			"head": 8,
-			"face": 4,
-			"body": 8
+			"head": head.sprite_frames.get_frame_count("yukon_gold_head"),
+			"face": face.sprite_frames.get_frame_count("yukon_gold_face"),
+			"body": torso.sprite_frames.get_frame_count("yukon_gold_body")
 		}
 	}
 	
-	# Get the correct counts for the current race
-	# Ensure race key matches the case sensitivity of your dictionary
-	var race_key = race if frame_counts.has(race) else "Russet"
-	var counts = frame_counts[race_key]
+	# Pick a random race
+	var races = frame_counts.keys()
+	race = races[randi() % races.size()]
+	
+	# Get the correct counts for the chosen race
+	var counts = frame_counts[race]
 	
 	# Generate random frames
-	current_head_frame = randi() % counts.head  # Changed from current_hair_frame
-	current_face_frame = randi() % counts.face
-	current_body_frame = randi() % counts.body  # Changed from current_torso_frame
+	current_head_frame = randi() % max(1, counts.head)  # Avoid division by zero
+	current_face_frame = randi() % max(1, counts.face)
+	current_body_frame = randi() % max(1, counts.body)
 	
 	# Update the sprites
 	update_sprite_animations()

@@ -1450,9 +1450,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CharacterGenerator" type="Node2D" node_paths=PackedStringArray("face", "torso", "foreground_shadow")]
+[node name="CharacterGenerator" type="Node2D" node_paths=PackedStringArray("head", "face", "torso", "foreground_shadow")]
 z_as_relative = false
 script = ExtResource("1_tmlea")
+head = NodePath("Character/Head")
 face = NodePath("Character/Face")
 torso = NodePath("Character/Torso")
 foreground_shadow = NodePath("ForegroundShadow")
@@ -1479,13 +1480,15 @@ animation = &"yukon_gold_head"
 [node name="Face" type="AnimatedSprite2D" parent="Character"]
 z_index = -1
 sprite_frames = SubResource("SpriteFrames_ay427")
-animation = &""
+animation = &"yukon_gold_face"
 
 [node name="Torso" type="AnimatedSprite2D" parent="Character"]
 z_index = -1
-position = Vector2(0, 22.27)
+position = Vector2(0, 20)
 sprite_frames = SubResource("SpriteFrames_ay427")
-animation = &""
+animation = &"yukon_gold_body"
+frame = 12
+frame_progress = 0.419444
 
 [node name="Shadow" type="Sprite2D" parent="Character"]
 modulate = Color(0, 0, 0, 0.592157)
