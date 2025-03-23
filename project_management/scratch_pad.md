@@ -17,7 +17,7 @@ These are our goals, to-do tasks, and completed tasks.
   - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
   - Add an Entry ticket document and law requirement
   - Documents should have gravity on the suspect panel and should fall to the counter
-  - Add dialogue emotes randomly to the potatoes
+  - Add dialogue emotes randomly to the potatoes 
   - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
   - Add ink flecks from stamping that fly up when you stamp
 ### Backend
@@ -102,14 +102,15 @@ These are our goals, to-do tasks, and completed tasks.
   - Fix the issue where the game continues running during story sequences
   - Make sure the endless doesn't end too early
   - Potatoes appear above table instead of under when border runner leaves map on south side
-  - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
   - Score might not be resetting between rounds on leaderboard. Must be reset in Continue, Restart, Main Menu calls.
   - Corpses added too high to tree, screen shake not affecting them
   - Corpses need a slightly lower z-index to show BEHIND explosions
-  - Submit score button is responding, but continue, main menu, and restart are not working on the shift summary screen anymore
+  - Runner potatoes are registering TWO strikes instead of just 1
 
 ### Completed Tasks for 1.0.2
   - Slow down the end shift sequence
+  - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
+  - Submit score button is responding, but continue, main menu, and restart are not working on the shift summary screen anymore
   - Footsteps must be positioned at the bottom of the potato sprites
   - Potato footsteps appearing on top of shift summary screen (two tweens were conflicting)
   - Shrink missile firing zone on the bottom, overlaps with inspection table
