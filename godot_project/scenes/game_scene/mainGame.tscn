@@ -599,10 +599,8 @@ script = ExtResource("32_k1orm")
 visible = false
 
 [node name="OpenReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements/LawReceipt"]
-z_as_relative = false
 
 [node name="ReceiptNote" type="RichTextLabel" parent="Gameplay/InteractiveElements/LawReceipt/OpenReceipt"]
-z_index = 9
 offset_left = -88.0
 offset_top = -107.0
 offset_right = 89.0

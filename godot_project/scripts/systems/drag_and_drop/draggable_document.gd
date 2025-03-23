@@ -94,6 +94,12 @@ func on_drag_start():
 		# This might involve adjusting visibility or z-index
 		if open_content_node:
 			open_content_node.visible = true
+			# Specifically handle receipt text for law receipt
+			if document_sprite and document_sprite.name == "LawReceipt":
+				var receipt_note = open_content_node.get_node_or_null("ReceiptNote")
+				if receipt_note:
+					# Ensure text remains visible and preserve the text content
+					receipt_note.visible = true
 		if document_sprite:
 			document_sprite.modulate.a = 1.0
 			
@@ -110,6 +116,11 @@ func on_drop(drop_zone: String):
 			closed_content_node.visible = false
 		if open_content_node:
 			open_content_node.visible = true
+		# Specifically handle receipt text for law receipt
+		if document_sprite and document_sprite.name == "LawReceipt":
+			var receipt_note = open_content_node.get_node_or_null("ReceiptNote")
+			if receipt_note:
+				receipt_note.visible = true
 		if document_sprite and open_texture:
 			document_sprite.texture = open_texture
 	else:
