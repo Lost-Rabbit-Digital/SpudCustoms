@@ -131,7 +131,8 @@ func update_appearance():
 	
 	# Update body sprite based on race if specified
 	if potato_info.has("race") and potato_info.race in textures:
-		texture = textures[potato_info.race]
+		# Apply the texture to the child sprite instead of self
+		$Area2D/Sprite2D.texture = textures[potato_info.race]
 
 func move_toward(target: Vector2, speed: float):
 	position = position.move_toward(target, speed)
