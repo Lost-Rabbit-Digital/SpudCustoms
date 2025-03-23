@@ -60,10 +60,6 @@ These are our goals, to-do tasks, and completed tasks.
   - Add random y-axis variation on the position selected in the return to table function
   - Add an animated counter up for each of the increases of the score
   - Add logic to check if game paused or in dialogic before updating cursor to target cursor
-  - Bug: Cursor does not update when hovering above megaphone
-  - Bug: Cursor does not update when hovering above stamp bar button
-  - Bug: Documents appear above the stamp bar when dragged
-  - Cause potatos on shift summary screen to rotate based on their horizontal speed
   - Concrete steps should be smaller and darker than the grass footsteps
   - Have animated counters up for each of the values in the shift summary screen
   - Law text disappearing when you pick up the opened law document
@@ -77,6 +73,7 @@ These are our goals, to-do tasks, and completed tasks.
   - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
 ### Gameplay
   - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
+  - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
   - Do not allow the user to pick up the document through the stamp bar
   - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
 ### Audio
@@ -85,7 +82,6 @@ These are our goals, to-do tasks, and completed tasks.
   - Whooshing sound when documents are dragged quickly
   - Whooosh sound when document is returned to table
   - Add whoosh to shift summary journal and leaderboard journal
-  - Turn down the splashscreen sound on game start
   - Add small amount of random pitch variation to the document open and close sounds
   - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
   - Add pitch variation to the positive and negative score sound
@@ -97,25 +93,29 @@ These are our goals, to-do tasks, and completed tasks.
   - Megaphone Dialogue System: Implement the different categories of dialogue from the JSON file into the megaphone_clicked function code in mainGame.gd
   - Update take passport dialogue in mainGame.gd to use the new dialogue system (Same as for megaphone) 
 ### General Bugs
-  - Cannot generate female potatoes via mugshot generator
-  - Check why date rules keep failing make sure expiration date is referencing correct variable, and that it's evaluating properly, especially months_until_expiry()
-  - Escape key for menu stopped working after I alt tabbed a few times and completed the first "day". Not sure of cause on that one.
+  - Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
+  - Cursor does not update when hovering above megaphone
+  - Cursor does not update when hovering above stamp bar button
+  - Documents appear above the stamp bar when dragged
+  - Potatoes in queue don't seem to match up with potatoes that enter customs office
+  - Escape key for menu stopped working after I alt tabbed a few times and completed the first "day".
   - Expiration rule is wrong, passport was expired and got strike for denying entry
   - Fix skip story bug not hiding the history button quickly
   - Fix the issue where the game continues running during story sequences
-  - Link summary screen to restart back into endless mode instead of story mode
   - Make sure the endless doesn't end too early
   - Potatoes appear above table instead of under when border runner leaves map on south side
   - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
-  - Score might not be resetting between rounds on leaderboard. Fairly sure mine just kept going up.
+  - Score might not be resetting between rounds on leaderboard. Must be reset in Continue, Restart, Main Menu calls.
   - Shrink missile firing zone on the bottom, overlaps with inspection table
   - Update ATTRIBUTION.md with MODERN DOS font
   - Update menus with new MODERN DOS font
-### Score Bugs
-  - Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
-  - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
 
 ### Completed Tasks for 1.0.2
+  - Check for failing date rules, especially months_until_expiry()
+  - Turn down the splashscreen sound on game start
+  - Fix bug where summary screen restarts back into endless mode instead of story mode
+  - Cannot generate female potatoes via mugshot generator
+  - Add new potato type corpse art
   - Add new potato type art and re-institute potato type rules
   - Troubleshoot shutter lever disappearing
   - Add smooth animations for the shutter gate lever going up and down
@@ -128,3 +128,4 @@ These are our goals, to-do tasks, and completed tasks.
   - See if pitch variation can be added to background music
   - Add 25 variations of main menu music and 75 variations of main game music
   - Adding in initial 4 potato races, laws, and suspect booth/world sprites for them
+  - Cause potatos on shift summary screen to rotate based on their horizontal speed
