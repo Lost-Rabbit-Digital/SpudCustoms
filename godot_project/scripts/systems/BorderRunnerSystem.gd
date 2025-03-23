@@ -1034,12 +1034,32 @@ func spawn_gibs(pos):
 		gib.scale = gib_scale  # Adjust this based on your gib sprite sizes
 
 func get_missile_zone() -> Rect2:
-	if not missile_collision_shape:
+	# First check if we have valid collision shapes
+	var shape1 = $Area2D/CollisionShape2D
+	var shape2 = $Area2D/CollisionShape2D2
+	
+	if not shape1 and not shape2:
 		return Rect2()
+	
+	var combined_rect = Rect2()
+	
+	# Add first shape to the combined rect if it exists
+	if shape1 and shape1.shape is RectangleShape2D:
+		var extents1 = shape1.shape.extents
+		var pos1 = shape1.global_position
+		combined_rect = Rect2(pos1 - extents1, extents1 * 2)
+	
+	# Add second shape to the combined rect if it exists
+	if shape2 and shape2.shape is RectangleShape2D:
+		var extents2 = shape2.shape.extents
+		var pos2 = shape2.global_position
+		var rect2 = Rect2(pos2 - extents2, extents2 * 2)
 		
-	var shape = missile_collision_shape.shape
-	if shape is RectangleShape2D:
-		var extents = shape.extents
-		var pos = missile_collision_shape.global_position
-		return Rect2(pos - extents, extents * 2)
-	return Rect2()
+		# If the first rect is empty, just use the second rect
+		if combined_rect.size == Vector2.ZERO:
+			combined_rect = rect2
+		else:
+			# Otherwise, merge the two rectangles
+			combined_rect = combined_rect.merge(rect2)
+	
+	return combined_rect

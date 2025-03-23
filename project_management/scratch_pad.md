@@ -45,8 +45,11 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 ## Tasks
 ### Graphics  
+  - Add minor random size scaling to explosions for visual variety
   - When hit with a missile, make the corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest.
   - Add a growth bounce tween or shrink bounce tween to the quota and strikes labels when they change
+  - Add an animated counter up for each of the increases of the score
+  - Have animated counters up for each of the values in the shift summary screen
   - Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism (whole stamp descends, just the stamp handle descends, stamp handle comes back up, whole stamp comes back up)
   - When gate is lowered, have the potatoes in shadow and allow no interaction
   - if you restart on shift summary screen, it advances to the next level
@@ -57,10 +60,8 @@ These are our goals, to-do tasks, and completed tasks.
   - Center closed version of documents on the mouse position, it often appears offset
   - Fix stamping animations so that they move down from the stamp crossbar but are behind it
   - Add random y-axis variation on the position selected in the return to table function
-  - Add an animated counter up for each of the increases of the score
   - Add logic to check if game paused or in dialogic before updating cursor to target cursor
   - Concrete steps should be smaller and darker than the grass footsteps
-  - Have animated counters up for each of the values in the shift summary screen
   - Law text disappearing when you pick up the opened law document
   - Only show take passport dialogue if the passport has been stamped
   - Shrink texture for missiles and impacts, sizing of pixels is off-putting
@@ -103,9 +104,9 @@ These are our goals, to-do tasks, and completed tasks.
   - Potatoes appear above table instead of under when border runner leaves map on south side
   - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
   - Score might not be resetting between rounds on leaderboard. Must be reset in Continue, Restart, Main Menu calls.
-  - Shrink missile firing zone on the bottom, overlaps with inspection table
 
 ### Completed Tasks for 1.0.2
+  - Shrink missile firing zone on the bottom, overlaps with inspection table
   - Documents appear above the stamp bar when dragged
   - Make sure stamp bar controller does NOT show on top of shift summary screen
   - Make sure survival bonus alert shows on shift summary screen

@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://cwks4tbpoq3n5"]
+[gd_scene load_steps=63 format=3 uid="uid://cwks4tbpoq3n5"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://scenes/game_scene/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://scripts/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
@@ -32,8 +32,11 @@
 [ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://assets/styles/dos_theme.tres" id="33_ncgko"]
 [ext_resource type="PackedScene" uid="uid://b0go0ri8l0yb7" path="res://scripts/megaphone_dialogue/MegaphoneDialogue.tscn" id="36_ccap0"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sihlh"]
-size = Vector2(756.5, 214)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gf7dt"]
+size = Vector2(730, 155)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h6yoa"]
+size = Vector2(191, 47)
 
 [sub_resource type="Curve2D" id="Curve2D_uenca"]
 _data = {
@@ -443,8 +446,16 @@ gib_min_speed = 125.0
 [node name="Area2D" type="Area2D" parent="SystemManagers/BorderRunnerSystem"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SystemManagers/BorderRunnerSystem/Area2D"]
-position = Vector2(396.75, 122)
-shape = SubResource("RectangleShape2D_sihlh")
+z_index = 1
+position = Vector2(404, 142.5)
+shape = SubResource("RectangleShape2D_gf7dt")
+debug_color = Color(0.669135, 0.387984, 0.845205, 0.42)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="SystemManagers/BorderRunnerSystem/Area2D"]
+z_index = 1
+position = Vector2(134.5, 41.5)
+shape = SubResource("RectangleShape2D_h6yoa")
+debug_color = Color(0.669135, 0.387984, 0.845205, 0.42)
 
 [node name="StampSystemManager" parent="SystemManagers" instance=ExtResource("21_5djk1")]
 
