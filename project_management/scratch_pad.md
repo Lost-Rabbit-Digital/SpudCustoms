@@ -5,9 +5,9 @@ These are our goals, to-do tasks, and completed tasks.
 ## Tasks
 ### Stretch Features
   - Add tooltip with potato info when you hover over them in line
-  - Add cars that drive by (where would these go? On road from bottom to top on far left of screen?)
   - Baggage inspection, grab bags and shake them with bugs and coins flying out until you get a "BAG CLEAN" and a small number of points, or contraband detected where you get points for clicking it
-  - Multiplayer? 8th / 15th of November for schedule
+  - Multiplayer Implementation, co-op or versus using Steam Matchmaking
+  - Add cars that drive by from the top to the bottom of the screen
   - Use top 3 scores for leaderboard, then show ... and show 3 scores above player and 3 scores below player (if any), with players score in middle. 
   - UV lamp represents a high-risk way to maximize points.
   - Randomly toggle the lights on and off in customs office and Border Wall like people are using the rooms
@@ -17,7 +17,7 @@ These are our goals, to-do tasks, and completed tasks.
   - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
   - Add an Entry ticket document and law requirement
   - Documents should have gravity on the suspect panel and should fall to the counter
-  - Add dialogue emotes randomly to the potatoes 
+  - Add dialogue emotes randomly to the potatoes, Potatoes emote (Kenny emotes) while waiting in line
   - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
   - Add ink flecks from stamping that fly up when you stamp
 ### Backend
@@ -25,10 +25,9 @@ These are our goals, to-do tasks, and completed tasks.
 ### Gameplay
   - Change time to a shift-based time, such as 8 hours over a day
   - Make the instructions an overlay which you could close
-  - Potatoes emote (Kenny emotes) while waiting in line
   - Show Missile counter on an LCD display on the desk or on UI
   - Change position so kill text flying up with the score update ("potato.first_name + potato.last_name" + "neutralized...")
-  - Wave a mouse over bombs placed on the wall or upper wall in the background to defuse them for scoring, runner potatoes throw timed-bombs which stick on the top-wall
+  - Add "Sapper" runner variants, These runner potatoes throw time-bombs which stick on the top-wall. Wave a mouse over bombs placed on the wall or upper wall in the background to defuse them for scoring, or beat a defusing mini-game.
   - Conversation with potato while checking documents, similar to customs office dialogue, Terry Pratchett inspired
   - Repaint each cutscene that stands out as rough in Aseprite (use dedicated 16-32 color palettes, repaint in simpler forms)
 ### Menus

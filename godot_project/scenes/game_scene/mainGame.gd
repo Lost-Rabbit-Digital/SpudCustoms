@@ -403,6 +403,18 @@ func end_shift(success: bool = true):
 	tween.tween_interval(2)  # Add a delay
 
 	tween.tween_property(fade_rect, "color", Color(0, 0, 0, 0.75), 1.5)
+	
+	tween.tween_callback(func():
+		# Play the motion sound for the shift summary screen descending
+		if $SystemManagers/AudioManager/SFXPool:
+			var motion_sound = load("res://assets/audio/ui_feedback/motion_straight_air.wav")
+			if motion_sound:
+				$SystemManagers/AudioManager/SFXPool.stream = motion_sound
+				$SystemManagers/AudioManager/SFXPool.play()
+			else:
+				print("Failed to load motion_straight_air.wav sound")
+	)
+	
 	tween.tween_callback(func():
 		# Show summary screen after fade
 		var summary = shift_summary.instantiate()
