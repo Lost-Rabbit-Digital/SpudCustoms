@@ -676,7 +676,7 @@ func trigger_explosion(missile_or_position):
 	var explosion = AnimatedSprite2D.new()
 	explosion.sprite_frames = explosion_frames
 	explosion.global_position = explosion_position
-	explosion.scale = Vector2(explosion_size / 16.0, explosion_size / 16.0)
+	explosion.scale = Vector2(explosion_size / 16.0, explosion_size / 16.0) * randf_range(0.5, 2)
 	explosion.z_index = 16  # Above missiles
 	explosion.play("default")
 		
@@ -702,12 +702,12 @@ func trigger_explosion(missile_or_position):
 	
 	# Scale up with bounce effect
 	exp_tween.tween_property(explosion, "scale", 
-		Vector2(explosion_size / 32.0, explosion_size / 32.0), 0.7)\
+		Vector2(explosion_size / 32.0, explosion_size / 32.0) * randf_range(0.8, 1.2), 0.7)\
 		.set_trans(Tween.TRANS_ELASTIC)\
 		.set_ease(Tween.EASE_OUT)
 		 # Fade out explosion
 		
-	exp_tween.tween_property(explosion, "modulate:a", 0.5, 3)\
+	exp_tween.tween_property(explosion, "modulate:a", 0.5 * randf_range(0.8, 1.2), 3)\
 		.set_delay(0.2)
 	add_child(explosion)
 	
@@ -734,7 +734,7 @@ func trigger_explosion(missile_or_position):
 		explosion_player.position = explosion_position
 		
 		# Add pitch variation - wider range for explosions
-		var pitch_variance = randf_range(0.95, 1.55)
+		var pitch_variance = randf_range(0.8, 1.25)
 		explosion_player.pitch_scale = pitch_variance
 		
 		# Set the audio bus and play

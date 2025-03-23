@@ -46,7 +46,6 @@ These are our goals, to-do tasks, and completed tasks.
 ### Graphics  
   - Add minor random size scaling to explosions for visual variety
   - When hit with a missile, make the corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest.
-  - Add a growth bounce tween or shrink bounce tween to the quota and strikes labels when they change
   - Add an animated counter up for each of the increases of the score
   - Have animated counters up for each of the values in the shift summary screen
   - Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism (whole stamp descends, just the stamp handle descends, stamp handle comes back up, whole stamp comes back up)
@@ -104,6 +103,8 @@ These are our goals, to-do tasks, and completed tasks.
   - Fix skip story bug not hiding the history button quickly
 
 ### Completed Tasks for 1.0.2
+  - Make sure strikes are added before shift ends
+  - Add a growth bounce tween or shrink bounce tween to the quota and strikes labels when they change
   - When gate is lowered, have the potatoes in shadow and allow no interaction
   - Add whoosh to shift summary journal and leaderboard journal
   - Slow down the end shift sequence
