@@ -62,7 +62,6 @@ These are our goals, to-do tasks, and completed tasks.
   - Add random y-axis variation on the position selected in the return to table function
   - Add logic to check if game paused or in dialogic before updating cursor to target cursor
   - Concrete steps should be smaller and darker than the grass footsteps
-  - Law text disappearing when you pick up the opened law document
   - Only show take passport dialogue if the passport has been stamped
   - Shrink texture for missiles and impacts, sizing of pixels is off-putting
   - When shift ends, treat the last guy in office as rejected
@@ -98,7 +97,6 @@ These are our goals, to-do tasks, and completed tasks.
   - Potatoes in queue don't seem to match up with potatoes that enter customs office
   - Escape key for menu stopped working after I alt tabbed a few times and completed the first "day".
   - Expiration rule is wrong, passport was expired and got strike for denying entry
-  - Fix skip story bug not hiding the history button quickly
   - Fix the issue where the game continues running during story sequences
   - Make sure the endless doesn't end too early
   - Potatoes appear above table instead of under when border runner leaves map on south side
@@ -106,9 +104,11 @@ These are our goals, to-do tasks, and completed tasks.
   - Corpses added too high to tree, screen shake not affecting them
   - Corpses need a slightly lower z-index to show BEHIND explosions
   - Runner potatoes are registering TWO strikes instead of just 1
+  - Fix skip story bug not hiding the history button quickly
 
 ### Completed Tasks for 1.0.2
   - Slow down the end shift sequence
+  - Law text disappearing when you pick up the opened law document
   - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
   - Submit score button is responding, but continue, main menu, and restart are not working on the shift summary screen anymore
   - Footsteps must be positioned at the bottom of the potato sprites
