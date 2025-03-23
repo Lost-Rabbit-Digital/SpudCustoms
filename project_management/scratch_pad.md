@@ -106,11 +106,11 @@ These are our goals, to-do tasks, and completed tasks.
   - Score might not be resetting between rounds on leaderboard. Must be reset in Continue, Restart, Main Menu calls.
   - Corpses added too high to tree, screen shake not affecting them
   - Corpses need a slightly lower z-index to show BEHIND explosions
+  - Submit score button is responding, but continue, main menu, and restart are not working on the shift summary screen anymore
 
 ### Completed Tasks for 1.0.2
   - Slow down the end shift sequence
   - Footsteps must be positioned at the bottom of the potato sprites
-  - Submit score button is responding, but continue, main menu, and restart are not working on the shift summary screen anymore
   - Potato footsteps appearing on top of shift summary screen (two tweens were conflicting)
   - Shrink missile firing zone on the bottom, overlaps with inspection table
   - Documents appear above the stamp bar when dragged

@@ -25,7 +25,7 @@ func _ready():
 		
 	# Ensure buttons are interactive
 	for button in [$ContinueButton, $SubmitScoreButton, $RestartButton, $MainMenuButton]:
-		#button.mouse_filter = Control.MOUSE_FILTER_STOP
+		button.mouse_filter = Control.MOUSE_FILTER_STOP
 		button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 		
 	# Make sure child elements don't block input for buttons
@@ -33,6 +33,8 @@ func _ready():
 	$ScreenBackground.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	
 	# Connect button signals
+	$ContinueButton.connect("pressed", Callable(self, "_on_continue_button_pressed"))
+	$SubmitScoreButton.connect("pressed", Callable(self, "_on_submit_score_button_pressed"))
 	$RestartButton.connect("pressed", Callable(self, "_on_restart_button_pressed"))
 	$MainMenuButton.connect("pressed", Callable(self, "_on_main_menu_button_pressed"))
 	
@@ -323,6 +325,7 @@ func generate_test_stats() -> Dictionary:
 	}
 	
 func _on_continue_button_pressed() -> void: 
+	print("Continue button pressed")
 	Global.advance_shift()
 	Global.advance_story_state()
 	transition_to_scene("res://scenes/game_scene/mainGame.tscn")
@@ -332,16 +335,33 @@ func _on_submit_score_button_pressed() -> void:
 	update_leaderboard()
 
 func _on_restart_button_pressed() -> void:
+	print("Restart button pressed")
 	transition_to_scene("res://scenes/game_scene/mainGame.tscn")
 
 func _on_main_menu_button_pressed() -> void:
+	print("Main menu button pressed")
 	transition_to_scene("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
-
+	
 func transition_to_scene(scene_path: String):
-	# Find the level manager if it exists
-	var scene_loader = get_node("/root/SceneLoader")
-	if scene_loader and scene_loader.has_method("load_scene"):
-		scene_loader.load_scene(scene_path)
-	else:
-		# Last resort
+	# Create a tween for a cleaner fade transition
+	var fade_rect = ColorRect.new()
+	fade_rect.color = Color(0, 0, 0, 0)
+	fade_rect.size = get_viewport_rect().size
+	fade_rect.z_index = 100  # Ensure it's above everything
+	add_child(fade_rect)
+	
+	# Fade out animation
+	var tween = create_tween()
+	tween.tween_property(fade_rect, "color", Color(0, 0, 0, 1), 0.5)
+	
+	# Load scene after animation completes
+	tween.tween_callback(func():
+		# Access SceneLoader directly
+		#if SceneLoader:
+		#	SceneLoader.load_scene(scene_path)
+		#else:
+		push_error("SceneLoader not found, falling back to change_scene_to_file")
 		get_tree().change_scene_to_file(scene_path)
+		# Clean up the fade rectangle
+		fade_rect.queue_free()
+	)

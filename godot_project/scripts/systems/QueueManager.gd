@@ -105,20 +105,32 @@ func get_all_potatoes() -> Array:
 	return potatoes
 
 func _process(delta):
-	for potato in potatoes:
-		if potato.current_point < potato.target_point:
-			var next_point = potato.current_point + 1
-			## var current_pos = curve.get_point_position(potato.current_point)
-			var next_pos = curve.get_point_position(next_point)
-			var target_pos = potato.position.move_toward(next_pos, delta * potato_walk_speed)
-			
-			if target_pos.distance_to(next_pos) < 1:
-				potato.current_point = next_point
-			
-			potato.position = target_pos
+	var i = potatoes.size() - 1
+	
+	# Iterate backwards to safely remove elements
+	while i >= 0:
+		var potato = potatoes[i]
+		
+		# Check if potato is still valid before accessing its properties
+		if is_instance_valid(potato):
+			if potato.current_point < potato.target_point:
+				var next_point = potato.current_point + 1
+				var next_pos = curve.get_point_position(next_point)
+				var target_pos = potato.position.move_toward(next_pos, delta * potato_walk_speed)
+				
+				if target_pos.distance_to(next_pos) < 1:
+					potato.current_point = next_point
+				
+				potato.position = target_pos
+			else:
+				var target_pos = curve.get_point_position(potato.target_point)
+				potato.position = potato.position.move_toward(target_pos, delta * potato_walk_speed)
 		else:
-			var target_pos = curve.get_point_position(potato.target_point)
-			potato.position = potato.position.move_toward(target_pos, delta * potato_walk_speed)
+			# If potato is not valid, remove it from the array
+			potatoes.remove_at(i)
+			print("Removed invalid potato from queue at index: ", i)
+		
+		i -= 1
 
 func get_front_potato_info() -> Dictionary:
 	if potatoes.size() > 0:
