@@ -44,6 +44,7 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 ## Tasks
 ### Graphics  
+  - When hit with a missile, make the corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest.
   - Make sure quota is added before shift ends (shows 7/8 often now)
   - When gate is lowered, have the potatoes in shadow and allow no interaction
   - Add tooltip with potato info when you hover over them in line
@@ -77,7 +78,6 @@ These are our goals, to-do tasks, and completed tasks.
   - Do not allow the user to pick up the document through the stamp bar
   - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
 ### Audio
-  - Select additional background music for /music folder
   - Hand gripping sound to document
   - Whooshing sound when documents are dragged quickly
   - Whooosh sound when document is returned to table
@@ -107,10 +107,11 @@ These are our goals, to-do tasks, and completed tasks.
   - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
   - Score might not be resetting between rounds on leaderboard. Must be reset in Continue, Restart, Main Menu calls.
   - Shrink missile firing zone on the bottom, overlaps with inspection table
-  - Update ATTRIBUTION.md with MODERN DOS font
-  - Update menus with new MODERN DOS font
 
 ### Completed Tasks for 1.0.2
+  - Update ATTRIBUTION.md with MODERN DOS font
+  - Update menus with new MODERN DOS font
+  - Select additional background music for /music folder
   - Check for failing date rules, especially months_until_expiry()
   - Turn down the splashscreen sound on game start
   - Fix bug where summary screen restarts back into endless mode instead of story mode
