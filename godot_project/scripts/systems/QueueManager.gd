@@ -142,3 +142,16 @@ func debug_add_potatoes(count: int):
 		}
 		add_potato(info)
 	print("Debug: Added ", count, " potatoes")
+
+func disable():
+	# Stop processing
+	set_process(false)
+	
+	# Clear potatoes if needed
+	if potatoes.size() > 0:
+		for potato in potatoes:
+			if potato:
+				potato.set_process(false)
+				if potato.has_method("cleanup"):
+					potato.cleanup()
+		potatoes.clear()

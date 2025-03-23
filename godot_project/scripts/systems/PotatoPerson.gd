@@ -27,7 +27,7 @@ var regular_path_speed: float = 0.50 # Default to Normal difficulty
 var footprint_timer: float = 0.0
 var footprint_interval: float = 0.15 # Time between footprints
 var footprints: Array = []
-var max_footprints: int = 12
+var max_footprints: int = 24
 
 # Path following
 var current_path_follow: PathFollow2D
@@ -223,9 +223,11 @@ func spawn_footprint():
 	var footprint = Sprite2D.new()
 	footprint.texture = preload("res://assets/effects/footstep.png") # Create this small texture
 	footprint.global_position = global_position
-	footprint.z_index = 1 # Below the potato
+	footprint.global_position.y += 11
+	footprint.z_index = 0 # Below the potato
+	footprint.z_as_relative = true
 	footprint.rotation = rotation # Align with movement direction
-	footprint.modulate.a = 1.0
+	footprint.modulate.a = 0.8
 	
 	# Add the footprint to a group for easier management
 	footprint.add_to_group("FootprintGroup")
@@ -239,7 +241,7 @@ func spawn_footprint():
 	
 	# Fade out footprint
 	var tween = create_tween()
-	tween.tween_property(footprint, "modulate:a", 0.2, 3.0)
+	tween.tween_property(footprint, "modulate:a", 0.3, 3.0)
 	
 	# Limit the number of footprints
 	if footprints.size() > max_footprints:

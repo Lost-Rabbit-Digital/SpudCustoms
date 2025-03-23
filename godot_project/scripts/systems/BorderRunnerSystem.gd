@@ -949,7 +949,8 @@ func enable():
 func disable():
 	is_enabled = false
 	if missile_collision_shape:
-		missile_collision_shape.disabled = true
+		missile_collision_shape.disabled = false
+	
 	clean_up_all()
 
 func set_dialogic_mode(in_dialogic: bool):
@@ -970,9 +971,21 @@ func clean_up_all():
 		missile.active = false
 	active_missiles.clear()
 	
+	# Stop any ongoing tween animations
+	var all_tweens = get_tree().get_nodes_in_group("Tween")
+	for tween in all_tweens:
+		if tween.is_valid():
+			tween.kill()
+	
 	# Reset timers and state
 	time_since_last_run = 0
 	missile_cooldown_timer = 0
+	
+	# Force all runners to stop their paths
+	var all_potatoes = get_tree().get_nodes_in_group("PotatoPerson")
+	for potato in all_potatoes:
+		if potato.has_method("cleanup"):
+			potato.cleanup()
 
 class Gib extends Sprite2D:
 	var velocity = Vector2.ZERO

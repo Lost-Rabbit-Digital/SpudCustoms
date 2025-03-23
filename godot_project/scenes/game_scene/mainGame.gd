@@ -292,9 +292,39 @@ func end_shift(success: bool = true):
 	# Disable player inputs 
 	set_process_input(false)
 	
-	#disable border runner system
+	# Disable all systems that generate footprints
+	if queue_manager:
+		# Stop all active potatoes from creating more footprints
+		for potato in queue_manager.potatoes:
+			if is_instance_valid(potato):
+				# Disable _process on potatoes to prevent new footprints
+				potato.set_process(false)
+	
+	# Disable timer that spawns potatoes
+	if spawn_timer:
+		spawn_timer.stop()
+	
+	# Completely disable border runner system
 	if border_runner_system:
 		border_runner_system.disable()
+		border_runner_system.is_enabled = false
+	
+	if queue_manager:
+		if queue_manager.has_method("disable"):
+			queue_manager.disable()
+		else:
+			# Fallback if method isn't added yet
+			queue_manager.set_process(false)
+	
+	# Disable all path following for any active runners
+	var root = get_tree().current_scene
+	var active_potatoes = get_tree().get_nodes_in_group("PotatoPerson")
+	for potato in active_potatoes:
+		if potato:
+			potato.set_process(false)  # Stop processing/movement
+			# If it has path following, disable it directly
+			if potato.has_method("leave_path"):
+				potato.leave_path()
 	
 	# Fade out all corpses and footprints
 	fade_out_group_elements()
@@ -356,6 +386,9 @@ func end_shift(success: bool = true):
 		"hit_rate": shift_stats.hit_rate,
 	}
 	
+	# Set game process mode to handle pause better during transitions
+	get_tree().paused = false
+	
 	# Set Stamp Bar Controller to be below shift summary screen
 	$Gameplay/InteractiveElements/StampBarController.z_index = 1
 	
@@ -367,7 +400,9 @@ func end_shift(success: bool = true):
 	add_child(fade_rect)
 	
 	var tween = create_tween()
-	tween.tween_property(fade_rect, "color", Color(0, 0, 0, 0.75), 0.5)
+	tween.tween_interval(2)  # Add a delay
+
+	tween.tween_property(fade_rect, "color", Color(0, 0, 0, 0.75), 1.5)
 	tween.tween_callback(func():
 		# Show summary screen after fade
 		var summary = shift_summary.instantiate()
@@ -934,8 +969,11 @@ func fade_out_group_elements():
 	# Fade out each corpse
 	for corpse in corpses:
 		if is_instance_valid(corpse):
+			# Force immediate alpha change to ensure visibility
+			corpse.modulate.a = 0.8
+			
 			var tween = create_tween()
-			tween.tween_property(corpse, "modulate:a", 0.0, 0.75)
+			tween.tween_property(corpse, "modulate:a", 0.0, 2)
 			tween.tween_callback(func():
 				if is_instance_valid(corpse):
 					corpse.queue_free()
@@ -944,14 +982,15 @@ func fade_out_group_elements():
 	# Fade out each footprint
 	for footprint in footprints:
 		if is_instance_valid(footprint):
+			# Force immediate alpha change to ensure visibility
+			footprint.modulate.a = 0.8
+			
 			var tween = create_tween()
-			tween.tween_property(footprint, "modulate:a", 0.0, 0.5)
+			tween.tween_property(footprint, "modulate:a", 0.0, 2)
 			tween.tween_callback(func(): 
-					if is_instance_valid(footprint):
-						footprint.queue_free()
+				if is_instance_valid(footprint):
+					footprint.queue_free()
 			)
-
-
 
 func _exit_tree():
 	# Ensure cursor is restored when leaving the scene
