@@ -28,6 +28,9 @@ var current_rules = []
 
 var queue_manager: Node2D
 
+var previous_quota: int = -1
+var previous_strikes: int = -1
+
 # Potato spawn manager
 var potato_count: int = 0
 var max_potatoes: int = 20
@@ -155,8 +158,12 @@ func _ready():
 	set_difficulty(difficulty_level)
 	# Store the default cursor shape
 	
+	previous_quota = 0
+	previous_strikes = 0
+	
 	update_score_display()
 	update_quota_display()
+	update_strikes_display()
 	update_date_display()
 	generate_rules()
 
@@ -369,6 +376,9 @@ func end_shift(success: bool = true):
 	# Update quota display one last time to ensure it's correct
 	update_quota_display()
 	
+	# Update strike display
+	update_strikes_display()
+	
 	# Store game stats
 	Global.store_game_stats(shift_stats)
 	
@@ -438,7 +448,7 @@ func set_difficulty(level):
 			regular_potato_speed = 0.6
 	
 	update_quota_display()
-	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
+	update_strikes_display()
 
 func generate_rules():
 	# Get the full list of rules from LawValidator
@@ -806,7 +816,7 @@ func process_decision(allowed):
 			return # Cease processing
 	update_score_display()
 	update_quota_display()
-	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
+	update_strikes_display()
 	if queue_manager.can_add_potato() and spawn_timer.is_stopped():
 		spawn_timer.start()
 
@@ -816,7 +826,80 @@ func update_score_display():
 		$UI/Labels/ScoreLabel.text += " (x" + str(point_multiplier) + ")"
 
 func update_quota_display():
-	$UI/Labels/QuotaLabel.text = "Quota: " + str(Global.quota_met) + " / " + str(Global.quota_target * Global.shift)
+	var current_quota = Global.quota_met
+	var quota_label = $UI/Labels/QuotaLabel
+	
+	# Update the text
+	quota_label.text = "Quota: " + str(current_quota) + " / " + str(Global.quota_target * Global.shift)
+	
+	# Check if there's a change OR if this is the first update (previous_quota is -1)
+	if previous_quota != current_quota && previous_quota != -1:
+		var tween = create_tween()
+		
+		if current_quota > previous_quota:
+			# Positive change - bounce up animation
+			tween.tween_property(quota_label, "scale", Vector2(1.2, 1.2), 0.1)
+			tween.tween_property(quota_label, "scale", Vector2(1.0, 1.0), 0.2).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+			
+			# Optional: Change color briefly to green
+			tween.parallel().tween_property(quota_label, "modulate", Color(0.5, 1.0, 0.5, 1.0), 0.1)
+			tween.tween_property(quota_label, "modulate", Color(1.0, 0.782051, 0.655081, 1.0), 0.3)
+		else:
+			# Negative change - shake animation
+			var original_pos = quota_label.position
+			var shake_strength = 5.0
+			
+			# Series of position offsets to create shake effect
+			tween.tween_property(quota_label, "position", original_pos + Vector2(-shake_strength, 0), 0.05)
+			tween.tween_property(quota_label, "position", original_pos + Vector2(shake_strength, 0), 0.05)
+			tween.tween_property(quota_label, "position", original_pos + Vector2(0, -shake_strength), 0.05)
+			tween.tween_property(quota_label, "position", original_pos + Vector2(0, shake_strength), 0.05)
+			tween.tween_property(quota_label, "position", original_pos, 0.05)
+			
+			# Change color briefly to red
+			tween.parallel().tween_property(quota_label, "modulate", Color(1.0, 0.4, 0.4, 1.0), 0.1)
+			tween.tween_property(quota_label, "modulate", Color(1.0, 0.782051, 0.655081, 1.0), 0.3)
+	
+	# Update previous quota for next comparison
+	previous_quota = current_quota
+
+func update_strikes_display():
+	var current_strikes = Global.strikes
+	var strikes_label = $UI/Labels/StrikesLabel
+	
+	# Update the text
+	strikes_label.text = "Strikes: " + str(current_strikes) + " / " + str(Global.max_strikes)
+	
+	# Check if there's a change OR if this is the first update (previous_strikes is -1)
+	if previous_strikes != current_strikes && previous_strikes != -1:
+		var tween = create_tween()
+		
+		if current_strikes > previous_strikes:
+			# Strikes increased - negative shake animation
+			var original_pos = strikes_label.position
+			var shake_strength = 5.0
+			
+			# More intense shake for strikes
+			tween.tween_property(strikes_label, "position", original_pos + Vector2(-shake_strength, -shake_strength), 0.05)
+			tween.tween_property(strikes_label, "position", original_pos + Vector2(shake_strength, shake_strength), 0.05)
+			tween.tween_property(strikes_label, "position", original_pos + Vector2(-shake_strength, shake_strength), 0.05)
+			tween.tween_property(strikes_label, "position", original_pos + Vector2(shake_strength, -shake_strength), 0.05)
+			tween.tween_property(strikes_label, "position", original_pos, 0.05)
+			
+			# Change color briefly to red
+			tween.parallel().tween_property(strikes_label, "modulate", Color(1.0, 0.3, 0.3, 1.0), 0.1)
+			tween.tween_property(strikes_label, "modulate", Color(1.0, 0.782051, 0.655081, 1.0), 0.3)
+		else:
+			# Strikes decreased - positive bounce animation
+			tween.tween_property(strikes_label, "scale", Vector2(1.2, 1.2), 0.1)
+			tween.tween_property(strikes_label, "scale", Vector2(1.0, 1.0), 0.2).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+			
+			# Change color briefly to green
+			tween.parallel().tween_property(strikes_label, "modulate", Color(0.5, 1.0, 0.5, 1.0), 0.1)
+			tween.tween_property(strikes_label, "modulate", Color(1.0, 0.782051, 0.655081, 1.0), 0.3)
+	
+	# Update previous strikes for next comparison
+	previous_strikes = current_strikes
 
 func update_potato_texture():
 	print("Updating potato textures with character generator")
