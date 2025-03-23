@@ -50,35 +50,33 @@ These are our goals, to-do tasks, and completed tasks.
   - Add an animated counter up for each of the increases of the score
   - Have animated counters up for each of the values in the shift summary screen
   - Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism (whole stamp descends, just the stamp handle descends, stamp handle comes back up, whole stamp comes back up)
-  - When gate is lowered, have the potatoes in shadow and allow no interaction
+  - Add logic to check if game paused or in dialogic before updating cursor to target cursor
+  - Add random y-axis variation on the position selected in the return to table function
+  - Cause stamps to wiggle and slam in and then fade into color on shift summary
+  - Center closed version of documents on the mouse position, it often appears offset
+  - Concrete steps should be smaller and darker than the grass footsteps
+  - Fix stamping animations so that they move down from the stamp crossbar but are behind it
   - if you restart on shift summary screen, it advances to the next level
+  - Only show take passport dialogue if the passport has been stamped
   - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
   - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
   - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
-  - Cause stamps to wiggle and slam in and then fade into color on shift summary
-  - Center closed version of documents on the mouse position, it often appears offset
-  - Fix stamping animations so that they move down from the stamp crossbar but are behind it
-  - Add random y-axis variation on the position selected in the return to table function
-  - Add logic to check if game paused or in dialogic before updating cursor to target cursor
-  - Concrete steps should be smaller and darker than the grass footsteps
-  - Only show take passport dialogue if the passport has been stamped
   - Shrink texture for missiles and impacts, sizing of pixels is off-putting
-  - When shift ends, treat the last guy in office as rejected
   - Stamps go over edge of passport
   - Update cursor to show a select icon when above the approval or rejection stamp
   - Update cursor to show a select icon when above the megaphone 
   - Update cursor when hovering over the megaphone
   - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
+  - When shift ends, treat the last guy in office as rejected
 ### Gameplay
   - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
-  - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
   - Do not allow the user to pick up the document through the stamp bar
   - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
+  - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
 ### Audio
   - Hand gripping sound to document
   - Whooshing sound when documents are dragged quickly
   - Whooosh sound when document is returned to table
-  - Add whoosh to shift summary journal and leaderboard journal
   - Add small amount of random pitch variation to the document open and close sounds
   - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
   - Add pitch variation to the positive and negative score sound
@@ -106,6 +104,8 @@ These are our goals, to-do tasks, and completed tasks.
   - Fix skip story bug not hiding the history button quickly
 
 ### Completed Tasks for 1.0.2
+  - When gate is lowered, have the potatoes in shadow and allow no interaction
+  - Add whoosh to shift summary journal and leaderboard journal
   - Slow down the end shift sequence
   - Law text disappearing when you pick up the opened law document
   - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
