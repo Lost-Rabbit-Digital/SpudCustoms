@@ -830,13 +830,35 @@ func check_runner_hits(explosion_pos):
 		runner_streak = 0
 
 func handle_successful_hit(runner, explosion_pos):
-	
 	var root_node = get_tree().current_scene
 	while root_node.get_parent() and root_node.name != "Root":
 		root_node = root_node.get_parent()
+		
+	# Dictionary of corpse textures by race
+	var corpse_textures = {
+		"Russet": preload("res://assets/potatoes/bodies/russet_corpse.png"),
+		"Yukon Gold": preload("res://assets/potatoes/bodies/yukon_gold_corpse.png"),
+		"Sweet Potato": preload("res://assets/potatoes/bodies/sweet_potato_corpse.png"),
+		"Purple Majesty": preload("res://assets/potatoes/bodies/purple_majesty_corpse.png")
+	}
+	
 	# Create a potato corpse sprite
 	var corpse = Sprite2D.new()
-	corpse.texture = preload("res://assets/potatoes/bodies/potato_corpse.png") # Update with your actual path
+	
+	# Get the runner's race from potato_info
+	var race = "Russet"  # Default fallback race
+	if runner.has_method("get_potato_info"):
+		var potato_info = runner.get_potato_info()
+		if potato_info.has("race"):
+			race = potato_info.race
+	
+	# Set the appropriate texture based on race
+	if corpse_textures.has(race):
+		corpse.texture = corpse_textures[race]
+	else:
+		# Fallback to default
+		corpse.texture = corpse_textures["Russet"]
+		
 	corpse.global_position = runner.global_position
 	corpse.z_index = 6 # Below explosions but above background
 	# Slightly adjust size randomly
@@ -844,10 +866,9 @@ func handle_successful_hit(runner, explosion_pos):
 	# Add slight random rotation for visual variety
 	corpse.rotation = randf_range(-0.3, 0.3)
 	
-		# Add the footprint to a group for easier management
+	# Add the footprint to a group for easier management
 	corpse.add_to_group("CorpseGroup")
 
-	
 	# Add to a parent that won't be cleaned up
 	root_node.add_child(corpse)
 	
