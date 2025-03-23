@@ -16,3 +16,4 @@ visible_time = 2.0
 
 [node name="BackgroundMusicPlayer" parent="." index="0"]
 stream = ExtResource("5_r5wfu")
+volume_db = -5.0
