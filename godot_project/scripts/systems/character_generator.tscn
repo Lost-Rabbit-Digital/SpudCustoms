@@ -854,7 +854,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_6d1lk")
 }],
 "loop": true,
-"name": &"purple_majesty_body",
+"name": &"purple majesty body",
 "speed": 5.0
 }, {
 "frames": [{
@@ -895,7 +895,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_xa2ma")
 }],
 "loop": true,
-"name": &"purple_majesty_face",
+"name": &"purple majesty face",
 "speed": 5.0
 }, {
 "frames": [{
@@ -960,7 +960,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_luhhc")
 }],
 "loop": true,
-"name": &"purple_majesty_head",
+"name": &"purple majesty head",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1016,7 +1016,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_5t2j0")
 }],
 "loop": true,
-"name": &"russet_body",
+"name": &"russet body",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1057,7 +1057,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_hralm")
 }],
 "loop": true,
-"name": &"russet_face",
+"name": &"russet face",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1122,7 +1122,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_hs2of")
 }],
 "loop": true,
-"name": &"russet_head",
+"name": &"russet head",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1178,7 +1178,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_u8e72")
 }],
 "loop": true,
-"name": &"sweet_potato_body",
+"name": &"sweet potato body",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1219,7 +1219,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_um0u1")
 }],
 "loop": true,
-"name": &"sweet_potato_face",
+"name": &"sweet potato face",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1284,7 +1284,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_p2grn")
 }],
 "loop": true,
-"name": &"sweet_potato_head",
+"name": &"sweet potato head",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1340,7 +1340,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ogtpr")
 }],
 "loop": true,
-"name": &"yukon_gold_body",
+"name": &"yukon gold body",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1381,7 +1381,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_s7v6w")
 }],
 "loop": true,
-"name": &"yukon_gold_face",
+"name": &"yukon gold face",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1446,7 +1446,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_tg5pm")
 }],
 "loop": true,
-"name": &"yukon_gold_head",
+"name": &"yukon gold head",
 "speed": 5.0
 }]
 
@@ -1475,20 +1475,18 @@ texture = ExtResource("8_x47ta")
 [node name="Head" type="AnimatedSprite2D" parent="Character"]
 position = Vector2(0, -23)
 sprite_frames = SubResource("SpriteFrames_ay427")
-animation = &"yukon_gold_head"
+animation = &"purple majesty face"
 
 [node name="Face" type="AnimatedSprite2D" parent="Character"]
 z_index = -1
 sprite_frames = SubResource("SpriteFrames_ay427")
-animation = &"yukon_gold_face"
+animation = &"yukon gold face"
 
 [node name="Torso" type="AnimatedSprite2D" parent="Character"]
 z_index = -1
 position = Vector2(0, 20)
 sprite_frames = SubResource("SpriteFrames_ay427")
-animation = &"yukon_gold_body"
-frame = 12
-frame_progress = 0.419444
+animation = &"yukon gold body"
 
 [node name="Shadow" type="Sprite2D" parent="Character"]
 modulate = Color(0, 0, 0, 0.592157)

@@ -100,18 +100,18 @@ var LAW_CHECKS = {
 		"check": func(potato_info): return potato_info.country_of_issue == "Pratie Point",
 		"message": func(potato_info): return "Pratie Point potatoes not allowed"
 	},
-	# Add to LawValidator.gd in LAW_CHECKS dictionary
-	"Purple Majesty potatoes forbidden.": func(potato_info): 
-		return {"valid": potato_info.race != "Purple Majesty", 
-				"reason": "Purple Majesty potatoes are not allowed."},
-
-	"Sweet Potatoes need special paperwork.": func(potato_info): 
-		return {"valid": potato_info.race != "Sweet Potato", 
-				"reason": "Sweet Potatoes require Form T-43."},
-				
-	"Yukon Gold potatoes must be fresh.": func(potato_info):
-		return {"valid": potato_info.race != "Yukon Gold" or potato_info.condition == "Fresh",
-				"reason": "Yukon Gold potatoes must be fresh."}
+	"Purple Majesty potatoes forbidden.": {
+		"check": func(potato_info): return potato_info.race == "Purple Majesty",
+		"message": func(potato_info): return "Purple Majesty potatoes are not allowed."
+	},
+	"Sweet Potatoes need special paperwork.": {
+		"check": func(potato_info): return potato_info.race == "Sweet Potato",
+		"message": func(potato_info): return "Sweet Potatoes require Form T-43."
+	},
+	"Yukon Gold potatoes must be fresh.": {
+		"check": func(potato_info): return potato_info.race != "Yukon Gold" or potato_info.condition == "Fresh",
+		"message": func(potato_info): return "Yukon Gold potatoes must be fresh."
+	},
 }
 
 # Helper function to check all violations

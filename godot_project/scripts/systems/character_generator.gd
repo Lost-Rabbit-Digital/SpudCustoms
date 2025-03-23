@@ -32,25 +32,32 @@ func set_race(new_race: String):
 func update_sprite_animations():
 	# Update visuals based on the current race
 	if head and head.sprite_frames:  # Changed from hair to head
-		var head_anim = race + "_Head"
+		var head_anim = race.to_lower() + " head"
 		if head.sprite_frames.has_animation(head_anim):
 			head.animation = head_anim
 			head.frame = current_head_frame
 			head.pause()  # Ensure animation doesn't play
+		else:
+			print("Warning: Animation not found: ", head_anim)
 	
 	if face and face.sprite_frames:
-		var face_anim = race + "_Face"
+		var face_anim = race.to_lower() + " face"
 		if face.sprite_frames.has_animation(face_anim):
 			face.animation = face_anim
 			face.frame = current_face_frame
 			face.pause()  # Ensure animation doesn't play
+		else:
+			print("Warning: Animation not found: ", face_anim)
 	
 	if torso and torso.sprite_frames:
-		var torso_anim = race + "_Body"
+		var torso_anim = race.to_lower() + " body"
 		if torso.sprite_frames.has_animation(torso_anim):
 			torso.animation = torso_anim
 			torso.frame = current_body_frame
 			torso.pause()  # Ensure animation doesn't play
+		else:
+			print("Warning: Animation not found: ", torso_anim)
+
 
 func randomise_character():
 	# These counts should match your actual sprite atlas frame counts
@@ -89,8 +96,15 @@ func randomise_character():
 	current_face_frame = randi() % max(1, counts.face)
 	current_body_frame = randi() % max(1, counts.body)
 	
+	# Add debug print to see what's being generated
+	print("Randomized character:")
+	print("  Race: ", race)
+	print("  Head frame: ", current_head_frame)
+	print("  Face frame: ", current_face_frame)
+	print("  Body frame: ", current_body_frame)
+	
 	# Update the sprites
-	update_sprite_animations()
+	update_sprite_animations() 
 
 # Function to get current character data
 func get_character_data() -> Dictionary:

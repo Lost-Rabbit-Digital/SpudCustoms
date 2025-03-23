@@ -3,8 +3,8 @@ extends Node2D
 var potato_texture = preload("res://assets/potatoes/bodies/russet_burbank_body.png")
 var viewport_size
 var spawn_timer = 0.0
-var spawn_interval = 0.01  # Time between potato spawns
-var max_active_potatoes = 400
+var spawn_interval = 0.02  # Time between potato spawns
+var max_active_potatoes = 200
 var active_potatoes = []
 
 class Potato extends Sprite2D:
