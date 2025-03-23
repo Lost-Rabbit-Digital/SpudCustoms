@@ -65,7 +65,7 @@ These are our goals, to-do tasks, and completed tasks.
   - Law text disappearing when you pick up the opened law document
   - Only show take passport dialogue if the passport has been stamped
   - Shrink texture for missiles and impacts, sizing of pixels is off-putting
-  - Slow down the end shift sequence, treat the last guy in office as rejected
+  - When shift ends, treat the last guy in office as rejected
   - Stamps go over edge of passport
   - Update cursor to show a select icon when above the approval or rejection stamp
   - Update cursor to show a select icon when above the megaphone 
@@ -108,6 +108,7 @@ These are our goals, to-do tasks, and completed tasks.
   - Corpses need a slightly lower z-index to show BEHIND explosions
 
 ### Completed Tasks for 1.0.2
+  - Slow down the end shift sequence
   - Footsteps must be positioned at the bottom of the potato sprites
   - Submit score button is responding, but continue, main menu, and restart are not working on the shift summary screen anymore
   - Potato footsteps appearing on top of shift summary screen (two tweens were conflicting)
