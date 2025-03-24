@@ -1,136 +1,136 @@
-
 ### Completed Tasks for 1.0.2
 Before release, review GitHub commits using the following command `git log --since="last month" --pretty=format:'%h,%an,%ar,%s' > log.csv` - This artifact can then be fed into Claude or similar to analyze the changes.
-  - Expiration rule is wrong, passport was expired and got strike for denying entry
-  - Add minor random size scaling to explosions for visual variety
-  - Make sure strikes are added before shift ends
-  - Add a growth bounce tween or shrink bounce tween to the quota and strikes labels when they change
-  - When gate is lowered, have the potatoes in shadow and allow no interaction
-  - Add whoosh to shift summary journal and leaderboard journal
-  - Slow down the end shift sequence
-  - Law text disappearing when you pick up the opened law document
-  - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
-  - Submit score button is responding, but continue, main menu, and restart are not working on the shift summary screen anymore
-  - Footsteps must be positioned at the bottom of the potato sprites
-  - Potato footsteps appearing on top of shift summary screen (two tweens were conflicting)
-  - Shrink missile firing zone on the bottom, overlaps with inspection table
-  - Documents appear above the stamp bar when dragged
-  - Make sure stamp bar controller does NOT show on top of shift summary screen
-  - Make sure survival bonus alert shows on shift summary screen
-  - Make sure quota is added before shift ends (shows 7/8 often now)
-  - Update ATTRIBUTION.md with MODERN DOS font
-  - Update menus with new MODERN DOS font
-  - Select additional background music for /music folder
-  - Check for failing date rules, especially months_until_expiry()
-  - Turn down the splashscreen sound on game start
-  - Fix bug where summary screen restarts back into endless mode instead of story mode
-  - Cannot generate female potatoes via mugshot generator
-  - Add new potato type corpse art
-  - Add new potato type art and re-institute potato type rules
-  - Troubleshoot shutter lever disappearing
-  - Add smooth animations for the shutter gate lever going up and down
-  - Color match the lever to dark blue / grey tones, and improve the quality
-  - Test new font in Shift Summary Screen and menus
-  - Update potato rain to look more natural
-  - Update color palette for Shift Summary screen and update font spacing
-  - QoL: Shadow fade-in similar to Papers, Please for potatoes entering the office
-  - QoL: Shadow when shutter is closed
-  - See if pitch variation can be added to background music
-  - Add 25 variations of main menu music and 75 variations of main game music
-  - Adding in initial 4 potato races, laws, and suspect booth/world sprites for them
-  - Cause potatos on shift summary screen to rotate based on their horizontal speed
-  - Reduce z-index of the potato footsteps and add them to a group for end_shift fade
-  - Slow down base speed of runners
-  - Make explosions smaller
-  - Move shift summary to end of game, not end of shift, on quota reached restart, on strikes reached end game
-  - Possibly exit the game from the lose screen
-  - Test megaphone to make sure it works in all cases
-  - Score should always be represented as a float on backend, check and make sure this is the case save for printing it to the UI
-  - Add footsteps visuals to the potatoes
-  - When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
-  - Check if the stamp rejection was correct before triggering the border run system for the scores to be accurate
-  - Stamp rejection doesn't update score
-  - Documents should move themselves into the inspection table if opened and clipped outside the table
-  - Update backend for megaphone dialogue prompt in-game to allow for future translation
-  - Remove the date and score from the bottom of the screen (move to upper left, ala Rogue Genesia?)
-  - Hook up game won, level lost, and level won scenes to gameUI scene
-  - Fix z-ordering issues on the summary screen
-  - Display max score for each shift and 0-3 golden potatoes / stamps based on score benchmarks for each shift
-  - *INTERNAL USE* Speed up passport through slot, decrease by 0.5-1.5 seconds
-  - Make two sets of paths, one which start in the office and one which doesn't for Spud runner, only do the office start when they are already in office
-  - Update stats on potato escape and missile kill
-  - Add clearer feedback for game over conditions ("Too many strikes, you lose!")
-  - Balance points (missiles, stamping, scanning)
-  - Lower delay between stamps
-  - Allow multiple simultaneous runners, can we multi-thread this?
-  - Fix text on main menu and other scenes with background photos
-  - Add a loss of 250 points on top of strike if the rejection was incorrect (Use the same code as the border runner system to check for point penalty)
-  - Remove Law slider and keep law pamphlet as a draggable object
-  - Rounds end too abruptly, need to tell the player why they failed
-  - There is no continuing shift, after you reach quota you hit the shift summary and end the game
-  - Add simple fade to game over summary
-  - Make sure interacting with a stamp blocks picking items up
-  - Add a Metal shutter that rolls down cinematically with segments that cascade down, dust particles as it hits bottom, a satisfying "clunk" sound effect
-  - When the passport is on left side of the inspection table it should remain open to make it easier for users to line up with the stamp bar
-  - If potatoes are rejected, they should exit through the right side instead of the left
-  - Fix z-ordering with potatoes to pass them under the background layer 
-  - Center explosions on the targeted location
-  - Use the smoke spritesheet to animate a trail for the missiles
-  - Resolve missing passport documents in story mode
-  - Sometimes the potatoes don't give you a passport
-  - Display Score for Longer Duration (2s -> 3.5s)
-  - Implement screen shake on stamping, missile hit, perfect missile hit of varying intensity
-  - Add if check to QueueManager.gd to check if user is currently in dialogic timeline, if so than do not spawn potatoes in queue
-  - Add if check to launch_missile() in BorderRunnerSystem.gd to check if user is currently in dialogic timeline, if so than do not spawn potatoes
-  - Add if check to BorderRunnerSystem.gd to check if user is currently in dialogic timeline, if so than do not spawn runners
-  - Show the missile immediately on click from customs office, or from off-screen
-  - Fixed law wording: "Frozen potatoes require a special permit", change to not allowed because there is not special permit
-  - Fixed law wording: "Young potatoes (under 2 years) need guardian.", there is no guardian system, reword
-  - Fixed law wording: "Reject Spuddington potatoes because of visa counterfeiting activity.", there is no visa system, reword "visa" to "document"
-  - Add Version Counter into main menu
-  - Add a skip button to dialogic
-  - Make Missiles Travel Faster and More Consistently
-  - Change "Runner Escaped" to Capitals
-  - Make the tutorial interactive instead of a text panel with the book
-  - *INTERNAL USE* Cleaned up the old git branches from various updates
-  - Simplified story
-  - Overhauled rocket system
-  - Overhauled interaction system
-  - Overhauled stamping system
-  - No ambience or background music playing
-  - Add ability to skip to end of Dialogic timeline with button in Upper left "Skip"
-  - Add day-by-day shift selection the player unlocks as they progress
-  - Faster velocity or more centralized location for missile
-  - Reduce lead time for missiles
-  - Simplify stamp controls explanation in Guide book
-  - Spud runner attempts never stops. Alt tabbed out, paused, shift summary, no matter what, the spuds escape like clockwork.
-  - Update guide to use just left-click interactions rather than requiring both mouse buttons
-  - Update text on Guide book
-  - Add a version counter
-  - Change "Runner Escaped" to capitals 
-  - Display the score for longer, a few seconds, so the player can read it
-  - Fade in potatoes when they come into the customs office
-  - Improve art quality of stamp bar interface (basic doodling that isn't copy/paste)
-  - Add a missile targeting restriction region to prevent accidental missile launches when clicking UI elements
-  - Allow firing multiple missiles at once
-  - Allow firing missiles even when no active runner
-  - When you correctly reject a potato it does not give you the 250 points
-  - Lower z-index of crater below that of the potato_person runner
-  - If you deny/accept a potato and then that potato times out, it still checks the stamps
-  - Snap closed passport to position of mouse cursor to avoid bad offset
-  - Able to drag passport off interaction table, bound them to lower half of screen
-  - Able to drag stamps off interaction table, bound them to lower half of screen
-  - Add new missile explosion animation
-  - Border runner system went off twice and cancelled the first one out (We overhauled the entire system)
-  - Changed character action text from italics to colored text (We represent story character actions differently now)
-  - Fix missile getting stuck bug, store last position of mouse on potato escape. If the missile is in flight when the spud escapes off the road, the missile freezes and remains until the next escape attempt.
-  - Rewrite laws to make sense, bad wording (I rewrote 3 of them, not sure what this meant, it's from months ago)
-  - When potato escapes, if it does so mid click (such as clicking on the speaker or a passport), the missile fires at the place you clicked on the screen. Constrain it to the Area2D for targeting potatoes on the left side of the screen, you could simply check cursor status.
-  - Make the missile travel time consistent and predictable
-  - Replace missile sprite
-  - Update explosion
-  - Expand area for perfect hit chance on border runner system
-  - Remove Italics in the story text that represented actions, Tester understood after 2-3 texts
+- Darkest point of potato is darker than darkest point of GUI
+- Add minor random size scaling to explosions for visual variety
+- Make sure strikes are added before shift ends
+- Add a growth bounce tween or shrink bounce tween to the quota and strikes labels when they change
+- When gate is lowered, have the potatoes in shadow and allow no interaction
+- Add whoosh to shift summary journal and leaderboard journal
+- Slow down the end shift sequence
+- Law text disappearing when you pick up the opened law document
+- Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
+- Submit score button is responding, but continue, main menu, and restart are not working on the shift summary screen anymore
+- Footsteps must be positioned at the bottom of the potato sprites
+- Potato footsteps appearing on top of shift summary screen (two tweens were conflicting)
+- Shrink missile firing zone on the bottom, overlaps with inspection table
+- Documents appear above the stamp bar when dragged
+- Make sure stamp bar controller does NOT show on top of shift summary screen
+- Make sure survival bonus alert shows on shift summary screen
+- Make sure quota is added before shift ends (shows 7/8 often now)
+- Update ATTRIBUTION.md with MODERN DOS font
+- Update menus with new MODERN DOS font
+- Select additional background music for /music folder
+- Check for failing date rules, especially months_until_expiry()
+- Turn down the splashscreen sound on game start
+- Fix bug where summary screen restarts back into endless mode instead of story mode
+- Cannot generate female potatoes via mugshot generator
+- Add new potato type corpse art
+- Add new potato type art and re-institute potato type rules
+- Troubleshoot shutter lever disappearing
+- Add smooth animations for the shutter gate lever going up and down
+- Color match the lever to dark blue / grey tones, and improve the quality
+- Test new font in Shift Summary Screen and menus
+- Update potato rain to look more natural
+- Update color palette for Shift Summary screen and update font spacing
+- QoL: Shadow fade-in similar to Papers, Please for potatoes entering the office
+- QoL: Shadow when shutter is closed
+- See if pitch variation can be added to background music
+- Add 25 variations of main menu music and 75 variations of main game music
+- Adding in initial 4 potato races, laws, and suspect booth/world sprites for them
+- Cause potatos on shift summary screen to rotate based on their horizontal speed
+- Expiration rule is wrong, passport was expired and got strike for denying entry
+- Reduce z-index of the potato footsteps and add them to a group for end_shift fade
+- Slow down base speed of runners
+- Make explosions smaller
+- Move shift summary to end of game, not end of shift, on quota reached restart, on strikes reached end game
+- Possibly exit the game from the lose screen
+- Test megaphone to make sure it works in all cases
+- Score should always be represented as a float on backend, check and make sure this is the case save for printing it to the UI
+- Add footsteps visuals to the potatoes
+- When maximum strike reached nothing happens, only checks when above maximum strikes instead of equal to
+- Check if the stamp rejection was correct before triggering the border run system for the scores to be accurate
+- Stamp rejection doesn't update score
+- Documents should move themselves into the inspection table if opened and clipped outside the table
+- Update backend for megaphone dialogue prompt in-game to allow for future translation
+- Remove the date and score from the bottom of the screen (move to upper left, ala Rogue Genesia?)
+- Hook up game won, level lost, and level won scenes to gameUI scene
+- Fix z-ordering issues on the summary screen
+- Display max score for each shift and 0-3 golden potatoes / stamps based on score benchmarks for each shift
+- *INTERNAL USE* Speed up passport through slot, decrease by 0.5-1.5 seconds
+- Make two sets of paths, one which start in the office and one which doesn't for Spud runner, only do the office start when they are already in office
+- Update stats on potato escape and missile kill
+- Add clearer feedback for game over conditions ("Too many strikes, you lose!")
+- Balance points (missiles, stamping, scanning)
+- Lower delay between stamps
+- Allow multiple simultaneous runners, can we multi-thread this?
+- Fix text on main menu and other scenes with background photos
+- Add a loss of 250 points on top of strike if the rejection was incorrect (Use the same code as the border runner system to check for point penalty)
+- Remove Law slider and keep law pamphlet as a draggable object
+- Rounds end too abruptly, need to tell the player why they failed
+- There is no continuing shift, after you reach quota you hit the shift summary and end the game
+- Add simple fade to game over summary
+- Make sure interacting with a stamp blocks picking items up
+- Add a Metal shutter that rolls down cinematically with segments that cascade down, dust particles as it hits bottom, a satisfying "clunk" sound effect
+- When the passport is on left side of the inspection table it should remain open to make it easier for users to line up with the stamp bar
+- If potatoes are rejected, they should exit through the right side instead of the left
+- Fix z-ordering with potatoes to pass them under the background layer
+- Center explosions on the targeted location
+- Use the smoke spritesheet to animate a trail for the missiles
+- Resolve missing passport documents in story mode
+- Sometimes the potatoes don't give you a passport
+- Display Score for Longer Duration (2s -&gt; 3.5s)
+- Implement screen shake on stamping, missile hit, perfect missile hit of varying intensity
+- Add if check to QueueManager.gd to check if user is currently in dialogic timeline, if so than do not spawn potatoes in queue
+- Add if check to launch_missile() in BorderRunnerSystem.gd to check if user is currently in dialogic timeline, if so than do not spawn potatoes
+- Add if check to BorderRunnerSystem.gd to check if user is currently in dialogic timeline, if so than do not spawn runners
+- Show the missile immediately on click from customs office, or from off-screen
+- Fixed law wording: "Frozen potatoes require a special permit", change to not allowed because there is not special permit
+- Fixed law wording: "Young potatoes (under 2 years) need guardian.", there is no guardian system, reword
+- Fixed law wording: "Reject Spuddington potatoes because of visa counterfeiting activity.", there is no visa system, reword "visa" to "document"
+- Add Version Counter into main menu
+- Add a skip button to dialogic
+- Make Missiles Travel Faster and More Consistently
+- Change "Runner Escaped" to Capitals
+- Make the tutorial interactive instead of a text panel with the book
+- *INTERNAL USE* Cleaned up the old git branches from various updates
+- Simplified story
+- Overhauled rocket system
+- Overhauled interaction system
+- Overhauled stamping system
+- No ambience or background music playing
+- Add ability to skip to end of Dialogic timeline with button in Upper left "Skip"
+- Add day-by-day shift selection the player unlocks as they progress
+- Faster velocity or more centralized location for missile
+- Reduce lead time for missiles
+- Simplify stamp controls explanation in Guide book
+- Spud runner attempts never stops. Alt tabbed out, paused, shift summary, no matter what, the spuds escape like clockwork.
+- Update guide to use just left-click interactions rather than requiring both mouse buttons
+- Update text on Guide book
+- Add a version counter
+- Change "Runner Escaped" to capitals
+- Display the score for longer, a few seconds, so the player can read it
+- Fade in potatoes when they come into the customs office
+- Improve art quality of stamp bar interface (basic doodling that isn't copy/paste)
+- Add a missile targeting restriction region to prevent accidental missile launches when clicking UI elements
+- Allow firing multiple missiles at once
+- Allow firing missiles even when no active runner
+- When you correctly reject a potato it does not give you the 250 points
+- Lower z-index of crater below that of the potato_person runner
+- If you deny/accept a potato and then that potato times out, it still checks the stamps
+- Snap closed passport to position of mouse cursor to avoid bad offset
+- Able to drag passport off interaction table, bound them to lower half of screen
+- Able to drag stamps off interaction table, bound them to lower half of screen
+- Add new missile explosion animation
+- Border runner system went off twice and cancelled the first one out (We overhauled the entire system)
+- Changed character action text from italics to colored text (We represent story character actions differently now)
+- Fix missile getting stuck bug, store last position of mouse on potato escape. If the missile is in flight when the spud escapes off the road, the missile freezes and remains until the next escape attempt.
+- Rewrite laws to make sense, bad wording (I rewrote 3 of them, not sure what this meant, it's from months ago)
+- When potato escapes, if it does so mid click (such as clicking on the speaker or a passport), the missile fires at the place you clicked on the screen. Constrain it to the Area2D for targeting potatoes on the left side of the screen, you could simply check cursor status.
+- Make the missile travel time consistent and predictable
+- Replace missile sprite
+- Update explosion
+- Expand area for perfect hit chance on border runner system
+- Remove Italics in the story text that represented actions, Tester understood after 2-3 texts
 
 
 # OFFICIALLY COMPLETED TASKS
