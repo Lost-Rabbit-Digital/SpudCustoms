@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c8bvc6qqux5b7"]
+
+[ext_resource type="Shader" uid="uid://dcimsx4e72n7t" path="res://scripts/shaders/image_filter/image_filters.gdshader" id="1_5crwo"]
+
+[resource]
+shader = ExtResource("1_5crwo")
+shader_parameter/brightness = 0.0
+shader_parameter/contrast = 1.0
+shader_parameter/saturation = 1.3
