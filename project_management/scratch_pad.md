@@ -43,6 +43,25 @@ These are our goals, to-do tasks, and completed tasks.
 
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 ## Tasks
+## RELEASE BLOCKERS
+  - Playtest Endless mode
+  - Playtest Story mode
+  - If you restart on shift summary screen, it advances to the next level
+  - Stamps go over edge of passport
+  - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
+  - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
+  - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
+  - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
+  - Add leaderboards for each level to support shift summary screen
+  - Save game and load game, especially max level reached and local highscores
+  - Potatoes in queue don't seem to match up with potatoes that enter customs office
+  - Fix stamping animations so that they move down from the stamp crossbar but are behind it
+  - Score might not be resetting between rounds on leaderboard. Must be reset in Continue, Restart, Main Menu calls.
+  - Fix the issue where the game continues running during story sequences
+  - Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
+  - Corpses added too high to tree, screen shake not affecting them
+  - Corpses need a slightly lower z-index to show BEHIND explosions
+  - Runner potatoes are registering TWO strikes instead of just 1
 ### Graphics  
   - When hit with a missile, make the corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest.
   - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
@@ -53,14 +72,8 @@ These are our goals, to-do tasks, and completed tasks.
   - Cause stamps to wiggle and slam in and then fade into color on shift summary
   - Center closed version of documents on the mouse position, it often appears offset
   - Concrete steps should be smaller and darker than the grass footsteps
-  - Fix stamping animations so that they move down from the stamp crossbar but are behind it
-  - if you restart on shift summary screen, it advances to the next level
   - Only show take passport dialogue if the passport has been stamped
-  - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
-  - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
-  - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
-  - Shrink texture for missiles and impacts, sizing of pixels is off-putting
-  - Stamps go over edge of passport
+  - Shrink texture for missiles and impacts, sizing of pixels is off-putting (Boden task, too subjective without guidance)
   - Update cursor to show a select icon when above the approval or rejection stamp
   - Update cursor to show a select icon when above the megaphone 
   - Update cursor when hovering over the megaphone
@@ -69,7 +82,6 @@ These are our goals, to-do tasks, and completed tasks.
 ### Gameplay
   - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
   - Do not allow the user to pick up the document through the stamp bar
-  - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
   - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
 ### Audio
   - Hand gripping sound to document
@@ -79,63 +91,16 @@ These are our goals, to-do tasks, and completed tasks.
   - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
   - Add pitch variation to the positive and negative score sound
 ### Menus
-  - Add leaderboards for each level to support shift summary screen
 ### Backend
-  - Save game and load game, especially max level reached and local highscores
   - Code: Move cursor system out of drag system
   - Megaphone Dialogue System: Implement the different categories of dialogue from the JSON file into the megaphone_clicked function code in mainGame.gd
   - Update take passport dialogue in mainGame.gd to use the new dialogue system (Same as for megaphone) 
 ### General Bugs
-  - Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
   - Cursor does not update when hovering above megaphone
   - Cursor does not update when hovering above stamp bar button
-  - Potatoes in queue don't seem to match up with potatoes that enter customs office
   - Escape key for menu stopped working after I alt tabbed a few times and completed the first "day".
-  - Expiration rule is wrong, passport was expired and got strike for denying entry
-  - Fix the issue where the game continues running during story sequences
   - Make sure the endless doesn't end too early
   - Potatoes appear above table instead of under when border runner leaves map on south side
-  - Score might not be resetting between rounds on leaderboard. Must be reset in Continue, Restart, Main Menu calls.
-  - Corpses added too high to tree, screen shake not affecting them
-  - Corpses need a slightly lower z-index to show BEHIND explosions
-  - Runner potatoes are registering TWO strikes instead of just 1
   - Fix skip story bug not hiding the history button quickly
 
 ### Completed Tasks for 1.0.2
-  - Add minor random size scaling to explosions for visual variety
-  - Make sure strikes are added before shift ends
-  - Add a growth bounce tween or shrink bounce tween to the quota and strikes labels when they change
-  - When gate is lowered, have the potatoes in shadow and allow no interaction
-  - Add whoosh to shift summary journal and leaderboard journal
-  - Slow down the end shift sequence
-  - Law text disappearing when you pick up the opened law document
-  - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
-  - Submit score button is responding, but continue, main menu, and restart are not working on the shift summary screen anymore
-  - Footsteps must be positioned at the bottom of the potato sprites
-  - Potato footsteps appearing on top of shift summary screen (two tweens were conflicting)
-  - Shrink missile firing zone on the bottom, overlaps with inspection table
-  - Documents appear above the stamp bar when dragged
-  - Make sure stamp bar controller does NOT show on top of shift summary screen
-  - Make sure survival bonus alert shows on shift summary screen
-  - Make sure quota is added before shift ends (shows 7/8 often now)
-  - Update ATTRIBUTION.md with MODERN DOS font
-  - Update menus with new MODERN DOS font
-  - Select additional background music for /music folder
-  - Check for failing date rules, especially months_until_expiry()
-  - Turn down the splashscreen sound on game start
-  - Fix bug where summary screen restarts back into endless mode instead of story mode
-  - Cannot generate female potatoes via mugshot generator
-  - Add new potato type corpse art
-  - Add new potato type art and re-institute potato type rules
-  - Troubleshoot shutter lever disappearing
-  - Add smooth animations for the shutter gate lever going up and down
-  - Color match the lever to dark blue / grey tones, and improve the quality
-  - Test new font in Shift Summary Screen and menus
-  - Update potato rain to look more natural
-  - Update color palette for Shift Summary screen and update font spacing
-  - QoL: Shadow fade-in similar to Papers, Please for potatoes entering the office
-  - QoL: Shadow when shutter is closed
-  - See if pitch variation can be added to background music
-  - Add 25 variations of main menu music and 75 variations of main game music
-  - Adding in initial 4 potato races, laws, and suspect booth/world sprites for them
-  - Cause potatos on shift summary screen to rotate based on their horizontal speed

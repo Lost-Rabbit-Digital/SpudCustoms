@@ -1,6 +1,44 @@
 
 ### Completed Tasks for 1.0.2
 Before release, review GitHub commits using the following command `git log --since="last month" --pretty=format:'%h,%an,%ar,%s' > log.csv` - This artifact can then be fed into Claude or similar to analyze the changes.
+  - Expiration rule is wrong, passport was expired and got strike for denying entry
+  - Add minor random size scaling to explosions for visual variety
+  - Make sure strikes are added before shift ends
+  - Add a growth bounce tween or shrink bounce tween to the quota and strikes labels when they change
+  - When gate is lowered, have the potatoes in shadow and allow no interaction
+  - Add whoosh to shift summary journal and leaderboard journal
+  - Slow down the end shift sequence
+  - Law text disappearing when you pick up the opened law document
+  - Potatoes continued to escape during the Shift Summary, make sure to disable QueueManager and BorderRunnerSystem in the game_over function.
+  - Submit score button is responding, but continue, main menu, and restart are not working on the shift summary screen anymore
+  - Footsteps must be positioned at the bottom of the potato sprites
+  - Potato footsteps appearing on top of shift summary screen (two tweens were conflicting)
+  - Shrink missile firing zone on the bottom, overlaps with inspection table
+  - Documents appear above the stamp bar when dragged
+  - Make sure stamp bar controller does NOT show on top of shift summary screen
+  - Make sure survival bonus alert shows on shift summary screen
+  - Make sure quota is added before shift ends (shows 7/8 often now)
+  - Update ATTRIBUTION.md with MODERN DOS font
+  - Update menus with new MODERN DOS font
+  - Select additional background music for /music folder
+  - Check for failing date rules, especially months_until_expiry()
+  - Turn down the splashscreen sound on game start
+  - Fix bug where summary screen restarts back into endless mode instead of story mode
+  - Cannot generate female potatoes via mugshot generator
+  - Add new potato type corpse art
+  - Add new potato type art and re-institute potato type rules
+  - Troubleshoot shutter lever disappearing
+  - Add smooth animations for the shutter gate lever going up and down
+  - Color match the lever to dark blue / grey tones, and improve the quality
+  - Test new font in Shift Summary Screen and menus
+  - Update potato rain to look more natural
+  - Update color palette for Shift Summary screen and update font spacing
+  - QoL: Shadow fade-in similar to Papers, Please for potatoes entering the office
+  - QoL: Shadow when shutter is closed
+  - See if pitch variation can be added to background music
+  - Add 25 variations of main menu music and 75 variations of main game music
+  - Adding in initial 4 potato races, laws, and suspect booth/world sprites for them
+  - Cause potatos on shift summary screen to rotate based on their horizontal speed
   - Reduce z-index of the potato footsteps and add them to a group for end_shift fade
   - Slow down base speed of runners
   - Make explosions smaller
