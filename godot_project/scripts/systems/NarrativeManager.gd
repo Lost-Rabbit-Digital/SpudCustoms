@@ -62,13 +62,23 @@ func start_level_end_dialogue(level_id: int):
 	if dialogue_active:
 		return
 		
+	# Only proceed if the level has an end dialogue
+	if not level_id in LEVEL_END_DIALOGUES:
+		emit_signal("end_dialogue_finished")
+		return
+		
 	dialogue_active = true
+	var skip_button_layer = create_skip_button()
 	var timeline_name = LEVEL_END_DIALOGUES.get(level_id, "generic_shift_start")
 	
 	var timeline = Dialogic.start(timeline_name)
 	add_child(timeline)
 	Dialogic.signal_event.connect(_on_dialogic_signal)
-	Dialogic.timeline_ended.connect(_on_shift_dialogue_finished)
+	Dialogic.timeline_ended.connect(_on_end_dialogue_finished)
+
+func _on_end_dialogue_finished():
+	dialogue_active = false
+	emit_signal("end_dialogue_finished")
 
 func create_skip_button():
 	var canvas = CanvasLayer.new()
@@ -134,3 +144,40 @@ func _on_final_dialogue_finished():
 
 func is_dialogue_active() -> bool:
 	return dialogue_active
+
+# New method to show day transition
+func show_day_transition(current_day: int, next_day: int):
+	dialogue_active = true
+	
+	# Create a transition screen
+	var transition_layer = CanvasLayer.new()
+	transition_layer.layer = 100
+	add_child(transition_layer)
+	
+	var background = ColorRect.new()
+	background.color = Color(0, 0, 0, 0)
+	background.size = get_tree().get_viewport_rect().size
+	transition_layer.add_child(background)
+	
+	var label = Label.new()
+	label.text = "Day %d Complete\nStarting Day %d" % [current_day, next_day]
+	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	label.size = get_tree().get_viewport_rect().size
+	label.modulate = Color(1, 1, 1, 0)
+	transition_layer.add_child(label)
+	
+	# Animate
+	var tween = create_tween()
+	tween.tween_property(background, "color", Color(0, 0, 0, 0.9), 1.0)
+	tween.parallel().tween_property(label, "modulate", Color(1, 1, 1, 1), 1.0)
+	tween.tween_interval(2.0)
+	tween.tween_property(label, "modulate", Color(1, 1, 1, 0), 1.0)
+	tween.parallel().tween_property(background, "color", Color(0, 0, 0, 0), 1.0)
+	
+	# Cleanup and emit signal when done
+	tween.tween_callback(func():
+		transition_layer.queue_free()
+		dialogue_active = false
+		emit_signal("dialogue_finished")
+	)

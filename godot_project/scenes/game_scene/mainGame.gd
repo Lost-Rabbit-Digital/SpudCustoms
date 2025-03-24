@@ -147,6 +147,13 @@ func _ready():
 	
 	narrative_manager.current_shift = current_shift
 	
+	# Connect signals from narrative manager
+	narrative_manager.intro_dialogue_finished.connect(_on_intro_dialogue_finished)
+	narrative_manager.end_dialogue_finished.connect(_on_end_dialogue_finished)
+	
+	# Start the intro dialogue for current shift
+	narrative_manager.start_level_dialogue(current_shift)
+	
 	game_start_time = Time.get_ticks_msec() / 1000.0  # Convert to seconds
 	
 	queue_manager = %QueueManager
@@ -428,9 +435,57 @@ func end_shift(success: bool = true):
 	tween.tween_callback(func():
 		# Show summary screen after fade
 		var summary = shift_summary.instantiate()
+		
+		# Connect the signals
+		summary.continue_to_next_shift.connect(_on_shift_summary_continue)
+		summary.restart_shift.connect(_on_shift_summary_restart)
+		summary.return_to_main_menu.connect(_on_shift_summary_main_menu)
+		
 		add_child(summary)
 		summary.show_summary(stats_dict)
 	)
+	
+	
+func _on_shift_summary_continue():
+	print("Continuing to next shift")
+	
+	# Save the current shift number before advancing
+	var completed_shift = current_shift
+	
+	# Advance the shift and story state
+	Global.advance_shift()
+	Global.advance_story_state()
+	
+	# Check if there's an end dialogue for this shift
+	if completed_shift in narrative_manager.LEVEL_END_DIALOGUES:
+		# Play the ending dialogue for the completed shift
+		narrative_manager.start_level_end_dialogue(completed_shift)
+		
+		# Wait for dialogue to finish before proceeding
+		await narrative_manager.end_dialogue_finished
+	
+	# Check if we've reached the end of the game
+	if completed_shift >= 13:
+		# Final shift completed, show credits
+		transition_to_scene("res://scenes/end_credits/end_credits.tscn")
+		return
+	
+	# Show day transition
+	narrative_manager.show_day_transition(completed_shift, completed_shift + 1)
+	await narrative_manager.dialogue_finished
+	
+	# Reload the game scene for the next shift
+	transition_to_scene("res://scenes/game_scene/mainGame.tscn")
+
+func _on_shift_summary_restart():
+	# Keep the same shift but reset the stats
+	Global.reset_shift_stats()
+	
+	# Reload the current game scene
+	transition_to_scene("res://scenes/game_scene/mainGame.tscn")
+
+func _on_shift_summary_main_menu():
+	transition_to_scene("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
 	
 func set_difficulty(level):
 	difficulty_level = level
@@ -1141,7 +1196,41 @@ func enable_controls():
 	# Stop all timers and queues
 	$SystemManagers/Timers/SpawnTimer.start()
 		
-# Modified _on_game_over function
+# Update the _on_intro_dialogue_finished handler
+func _on_intro_dialogue_finished():
+	# Enable all game systems
+	enable_controls()
+	is_game_paused = false
+	
+	# Make sure quota and strikes are reset
+	Global.quota_met = 0
+	Global.strikes = 0
+	
+	# Start the actual gameplay
+	spawn_timer.start()
+	
+	# Update UI
+	update_quota_display()
+	update_strikes_display()
+
+# Update the _on_end_dialogue_finished handler
+func _on_end_dialogue_finished():
+	# This is called after an end dialogue completes
+	# We should now check if this was the final shift
+	
+	if current_shift >= 13:
+		# Game complete, show credits
+		transition_to_scene("res://scenes/end_credits/end_credits.tscn")
+	else:
+		# Continue to next shift
+		narrative_manager.show_day_transition(current_shift, current_shift + 1)
+		await narrative_manager.dialogue_finished
+		
+		# Load the next shift
+		current_shift += 1
+		transition_to_scene("res://scenes/game_scene/mainGame.tscn")
+
+
 func _on_game_over():
 	# Disable all inputs and systems first
 	set_process_input(false)
@@ -1292,3 +1381,27 @@ func play_current_track():
 			print("Now playing: ", bgm_tracks[current_track_index])
 		else:
 			print("Failed to load track: ", bgm_tracks[current_track_index])
+
+func transition_to_scene(scene_path: String):
+	# Create a tween for a cleaner fade transition
+	var fade_rect = ColorRect.new()
+	fade_rect.color = Color(0, 0, 0, 0)
+	fade_rect.size = get_viewport_rect().size
+	fade_rect.z_index = 100  # Ensure it's above everything
+	add_child(fade_rect)
+	
+	# Fade out animation
+	var tween = create_tween()
+	tween.tween_property(fade_rect, "color", Color(0, 0, 0, 1), 0.5)
+	
+	# Load scene after animation completes
+	tween.tween_callback(func():
+		# Access SceneLoader directly
+		#if SceneLoader:
+		#	SceneLoader.load_scene(scene_path)
+		#else:
+		push_error("SceneLoader not found, falling back to change_scene_to_file")
+		get_tree().change_scene_to_file(scene_path)
+		# Clean up the fade rectangle
+		fade_rect.queue_free()
+	)

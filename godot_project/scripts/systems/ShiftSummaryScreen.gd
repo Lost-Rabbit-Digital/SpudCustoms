@@ -8,6 +8,10 @@ var stats: Dictionary
 const BACKGROUND_TEXTURE = preload("res://assets/menu/shift_summary_end_screen.png")
 const GRADE_STAMP_TEXTURE = preload("res://assets/menu/performance_stamp.png")
 
+signal continue_to_next_shift
+signal return_to_main_menu
+signal restart_shift
+
 func _init():
 	mouse_filter = Control.MOUSE_FILTER_IGNORE  # Allow input to pass through to buttons
 
@@ -323,24 +327,10 @@ func generate_test_stats() -> Dictionary:
 		"accuracy_bonus": 1337,
 		"final_score": 1337
 	}
-	
-func _on_continue_button_pressed() -> void: 
-	print("Continue button pressed")
-	Global.advance_shift()
-	Global.advance_story_state()
-	transition_to_scene("res://scenes/game_scene/mainGame.tscn")
 
 func _on_submit_score_button_pressed() -> void:
 	print("Submit Score Button Clicked, submitting score and updating leaderboard")
 	update_leaderboard()
-
-func _on_restart_button_pressed() -> void:
-	print("Restart button pressed")
-	transition_to_scene("res://scenes/game_scene/mainGame.tscn")
-
-func _on_main_menu_button_pressed() -> void:
-	print("Main menu button pressed")
-	transition_to_scene("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
 	
 func transition_to_scene(scene_path: String):
 	# Create a tween for a cleaner fade transition
@@ -365,3 +355,18 @@ func transition_to_scene(scene_path: String):
 		# Clean up the fade rectangle
 		fade_rect.queue_free()
 	)
+
+func _on_continue_button_pressed() -> void: 
+	print("Continue button pressed")
+	emit_signal("continue_to_next_shift")
+	queue_free()
+
+func _on_restart_button_pressed() -> void:
+	print("Restart button pressed")
+	emit_signal("restart_shift")
+	queue_free()
+
+func _on_main_menu_button_pressed() -> void:
+	print("Main menu button pressed")
+	emit_signal("return_to_main_menu")
+	queue_free()

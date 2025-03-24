@@ -4,106 +4,60 @@ audio music "res://assets/audio/ambient/horror_drone_12.wav" [fade="2.0" volume=
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-narrator: Another day dawns at the Spud border checkpoint.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-narrator: The line of potatoes waiting for inspection stretches longer than ever.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-narrator: Supervisor Russet patrols the queue, his eyes darting from potato to potato.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-narrator: Everyone seems on edge today.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-narrator: Sweet Potato Sasha catches your eye across the room, then quickly looks away, her attention focused on the rejects.
+narrator: Another day at the checkpoint. The line of potatoes stretches longer than ever, with everyone on edge.
 leave narrator
 
 [background arg="res://assets/narrative/customs_office.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Listen up, everyone. New orders from the top.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Border security is priority number one. We're doubling rejections.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Russet's eyes narrow to slits: Any potato deemed unsafe or undesirable is to be detained immediately.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Perform your duties with unwavering vigilance. The stability of Spud depends on it.
+supervisor_russet: New orders from the top. We're doubling rejections. Any potato deemed unsafe is detained immediately.
 leave supervisor_russet
 
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Russet motions you closer, lowering his voice
-[background arg="res://assets/narrative/uv_scanner_1.png" fade="2.0"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: I have a special assignment for you. We've got intel on a group of troublemakers trying to sneak across the border.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Use this new scanner to check for any... irregularities. You spot anything suspicious, you report it immediately. Understand?
+supervisor_russet: I have a special assignment. We've got intel on troublemakers. Use this scanner for irregularities.
 
 set {scanner_response} = "none"
 - "Yes sir, I won't let you down"
 	set {scanner_response} = "loyal"
-- "What kind of irregularities are we talking about here?"
+- "What kind of irregularities are we talking about?"
 set {scanner_response} = "questioning"
 
 if {scanner_response} == "loyal":
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Good. I knew I could count on you. Keep those eyes sharp.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Supervisor Russet adjusts your uniform badge with precision: You'll go far in Spud with that attitude.
+supervisor_russet: Good. I knew I could count on you. You'll go far with that attitude.
 leave supervisor_russet
 else:
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Russet's eyes narrow dangerously: The kind that threaten our way of life.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Don't ask too many questions if you know what's good for you.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Russet leans in with a threatening presence: Or for your family.
+supervisor_russet: The kind that threaten our way of life. Don't ask too many questions if you know what's good for you.
 leave supervisor_russet
 
 join npc_3 [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-npc_3: An older Spud waves papers frantically: Please, I beg you! My family has been separated!
+npc_3: Please, I beg you! My wife was supposed to be right behind me, but she never made it through customs.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-npc_3: My wife...she was supposed to be right behind me, but she never made it through customs.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-npc_3: No one will tell me what happened to her. Please, you have to help me find her!
+npc_3: No one will tell me what happened to her. Please, help me find her!
 
 set {family_response} = "none"
-- "I'm so sorry, but there's nothing I can do."
+- "I'm sorry, but there's nothing I can do."
 	set {family_response} = "refuse"
 - "Let me see what I can find out. No promises."
 set {family_response} = "help"
-- "It's probably just a mixup. I'm sure she's fine."
-set {family_response} = "deflect"
 
 if {family_response} == "refuse":
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-npc_3: The older Spud's shoulders slump in defeat: Just like all the others...
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-npc_3: May your conscience weigh heavy as mine does.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-npc_3: The Spud shuffles away dejectedly.
-leave npc_3
-
-elif {family_response} == "help":
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-npc_3: The Spud grasps your hand desperately: Thank you, thank you! Even a small hope is better than none.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-npc_3: The Spud carefully passes you a small photo: This was taken just last week. Please... find her.
+npc_3: Just like all the others... May your conscience weigh heavy as mine does.
 leave npc_3
 
 else:
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-npc_3: His eyes harden with anger: You know that's not true.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-npc_3: You KNOW what happens to the 'mixups'...
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-npc_3: Their voice cracks with emotion: How do you sleep at night?
+npc_3: Thank you! Even a small hope is better than none. Here's her photo. Please find her.
 leave npc_3
 
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Russet watches with narrowed eyes: I saw that exchange. Remember, sympathizing with the rejects only leads to trouble.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Your job is to protect Spud, not coddle every potato with a sob story. Stay focused on your duty.
+supervisor_russet: I saw that exchange. Sympathizing with rejects only leads to trouble. Stay focused on your duty.
 leave supervisor_russet
