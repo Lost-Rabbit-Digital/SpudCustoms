@@ -72,22 +72,10 @@ func raise_shutter(duration: float = 1.5):
 	
 	# Stage 1: Initial slow, hesitant start (EASE_IN)
 	tween.tween_property(shutter, "position", 
-		Vector2(shutter.position.x, end_node.position.y * 0.8), 
-		duration * 0.3
+		Vector2(shutter.position.x, end_node.position.y), 
+		duration
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
-	
-	# Stage 2: Quick jerk upwards (EASE_OUT with BACK transition for overshooting)
-	tween.tween_property(shutter, "position", 
-		Vector2(shutter.position.x, end_node.position.y * 1.1), 
-		duration * 0.2
-	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT).set_delay(duration * 0.3)
-	
-	# Stage 3: Final settling with slight bounce (EASE_IN_OUT)
-	tween.tween_property(shutter, "position", 
-		end_node.position, 
-		duration * 0.5
-	).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT).set_delay(duration * 0.5)
-	
+
 	# Optional screen shake for mechanical feel
 	tween.chain().tween_callback(func(): 
 		# Find the main game node (assuming it has a shake_screen method)
@@ -207,7 +195,7 @@ func shutter_state_toggle() -> void:
 	if active_shutter_state == shutter_state.CLOSED:
 		print("Attempt to open shutter")
 		# If the shutter is closed, open it upon the click
-		raise_shutter(1.5)
+		raise_shutter(0.5)
 	else:
 		print("Attempt to shut shutter")
 		# If the shutter is already open, close it upon the click
