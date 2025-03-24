@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0ywdxpbr2w6n"
-path="res://.godot/imported/russet_head_64x50.png-8f8cfd9ef11f33b9c37d37e58fafa620.ctex"
+uid="uid://bu57acjvyniwp"
+path="res://.godot/imported/checkpoint_interior_1.png-418f71a05f1de4c0ff1dab0c2f3406a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/potatoes/sprite_sheets/russet_head_64x50.png"
-dest_files=["res://.godot/imported/russet_head_64x50.png-8f8cfd9ef11f33b9c37d37e58fafa620.ctex"]
+source_file="res://assets/narrative/checkpoint_interior_1.png"
+dest_files=["res://.godot/imported/checkpoint_interior_1.png-418f71a05f1de4c0ff1dab0c2f3406a5.ctex"]
 
 [params]
 

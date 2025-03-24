@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://coken675okeqo"
-path="res://.godot/imported/Russet_Face_64x34.png-e931da6084e9087e76700874d059a3f6.ctex"
+path="res://.godot/imported/russet_face_64x34.png-8f85b7536e32b162ab66c90a70ded30e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/potatoes/sprite_sheets/Russet_Face_64x34.png"
-dest_files=["res://.godot/imported/Russet_Face_64x34.png-e931da6084e9087e76700874d059a3f6.ctex"]
+source_file="res://assets/potatoes/sprite_sheets/russet_face_64x34.png"
+dest_files=["res://.godot/imported/russet_face_64x34.png-8f85b7536e32b162ab66c90a70ded30e.ctex"]
 
 [params]
 
