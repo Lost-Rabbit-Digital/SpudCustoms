@@ -1,13 +1,14 @@
-[gd_scene load_steps=212 format=3 uid="uid://civ7gq0ovv5cr"]
+[gd_scene load_steps=213 format=3 uid="uid://civ7gq0ovv5cr"]
 
 [ext_resource type="Script" uid="uid://6gjff1b3mrpd" path="res://scripts/systems/character_generator.gd" id="1_tmlea"]
+[ext_resource type="Texture2D" uid="uid://cpaiwk7d1cxop" path="res://assets/potatoes/potato_shadow.png" id="3_0pn2j"]
 [ext_resource type="Texture2D" uid="uid://dkt2x4mr1vf2e" path="res://assets/potatoes/sprite_sheets/purple_majesty_body_64x21.png" id="3_brxho"]
 [ext_resource type="Texture2D" uid="uid://pg3qs5tff67a" path="res://assets/potatoes/sprite_sheets/purple_majesty_face_64x38.png" id="4_etffx"]
 [ext_resource type="Texture2D" uid="uid://bo1ruayo5khve" path="res://assets/potatoes/sprite_sheets/purple_majesty_head_64x50.png" id="5_0pn2j"]
-[ext_resource type="Texture2D" uid="uid://cpnlfdol76qnl" path="res://assets/potatoes/sprite_sheets/russet_body_64x21.png" id="6_pjcb5"]
-[ext_resource type="Texture2D" uid="uid://coken675okeqo" path="res://assets/potatoes/sprite_sheets/russet_face_64x34.png" id="7_bqu4j"]
+[ext_resource type="Texture2D" uid="uid://cpnlfdol76qnl" path="res://assets/potatoes/sprite_sheets/Russet_Body_64x21.png" id="6_pjcb5"]
+[ext_resource type="Texture2D" uid="uid://coken675okeqo" path="res://assets/potatoes/sprite_sheets/Russet_Face_64x34.png" id="7_bqu4j"]
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="8_x47ta"]
-[ext_resource type="Texture2D" uid="uid://b0ywdxpbr2w6n" path="res://assets/potatoes/sprite_sheets/russet_head_64x50.png" id="8_yjah0"]
+[ext_resource type="Texture2D" uid="uid://b0ywdxpbr2w6n" path="res://assets/potatoes/sprite_sheets/Russet_Head_64x50.png" id="8_yjah0"]
 [ext_resource type="Texture2D" uid="uid://dkbm5v0iflf8j" path="res://assets/potatoes/sprite_sheets/Sweet_potato_Body_64x21.png" id="9_fxw3i"]
 [ext_resource type="Texture2D" uid="uid://bkvjrlfkdo8g" path="res://assets/potatoes/sprite_sheets/Sweet_potato_Face_64x30.png" id="10_6d1lk"]
 [ext_resource type="Texture2D" uid="uid://cl4ugsdiikw5u" path="res://assets/potatoes/sprite_sheets/Sweet_potato_Head_64x50.png" id="11_365h2"]
@@ -1464,11 +1465,11 @@ position = Vector2(1, -10)
 texture = ExtResource("8_x47ta")
 
 [node name="ForegroundShadow" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 0)
+modulate = Color(0.0627451, 0.0352941, 0.0705882, 0)
 z_index = 1
 position = Vector2(1, -16)
 scale = Vector2(1.16176, 1.16176)
-texture = ExtResource("8_x47ta")
+texture = ExtResource("3_0pn2j")
 
 [node name="Character" type="Node2D" parent="."]
 
@@ -1489,8 +1490,8 @@ sprite_frames = SubResource("SpriteFrames_ay427")
 animation = &"russet body"
 
 [node name="Shadow" type="Sprite2D" parent="Character"]
-modulate = Color(0, 0, 0, 0.592157)
+modulate = Color(0.0639384, 0.0358322, 0.0702029, 1)
 z_index = -3
 position = Vector2(1, -16)
 scale = Vector2(1.15617, 1.15617)
-texture = ExtResource("8_x47ta")
+texture = ExtResource("3_0pn2j")
