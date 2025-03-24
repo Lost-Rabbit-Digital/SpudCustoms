@@ -195,6 +195,7 @@ grow_vertical = 0
 theme_override_constants/separation = 16
 
 [node name="DiscordButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/IconsContainer/HBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 texture_normal = ExtResource("9_oqvs2")
@@ -202,6 +203,7 @@ texture_hover = ExtResource("10_4myoa")
 stretch_mode = 0
 
 [node name="PatreonButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/IconsContainer/HBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 texture_normal = ExtResource("11_4myoa")
@@ -209,6 +211,7 @@ texture_hover = ExtResource("12_1lt1u")
 stretch_mode = 0
 
 [node name="KofiButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/IconsContainer/HBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 texture_normal = ExtResource("12_bcn5h")
@@ -216,6 +219,7 @@ texture_hover = ExtResource("14_bcn5h")
 stretch_mode = 0
 
 [node name="GitHubButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/IconsContainer/HBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 texture_normal = ExtResource("10_4utau")
