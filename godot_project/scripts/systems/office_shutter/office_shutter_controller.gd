@@ -115,24 +115,23 @@ func lower_shutter(duration: float = 3.0):
 	# Create a more dynamic lowering tween
 	var tween = create_tween()
 	
-	# Stage 1: Initial quick drop (EASE_IN with acceleration)
-	tween.set_parallel(true)
+	# Stage 1: Fast initial drop (with gravity-like acceleration)
 	tween.tween_property(shutter, "position", 
-		Vector2(shutter.position.x, start_node.position.y * 0.7), 
-		duration * 0.4
-	).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
-	
-	# Stage 2: Sudden stop with slight bounce
+		Vector2(shutter.position.x, start_node.position.y + 0.8),
+		0.7 # Drop time
+	).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN)
+
+	# Stage 2: Hard impact with significant bounce
 	tween.tween_property(shutter, "position", 
-		Vector2(shutter.position.x, start_node.position.y * 1.1), 
-		duration * 0.3
-	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT).set_delay(duration * 0.4)
-	
-	# Stage 3: Final settling
-	tween.tween_property(shutter, "position", 
-		start_node.position, 
-		duration * 0.3
-	).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT).set_delay(duration * 0.7)
+		Vector2(shutter.position.x, start_node.position.y - 35), # Bounce height
+		0.25 # Bounce time
+	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT).set_delay(0)
+
+	# Stage 3: Final settling with smaller secondary bounce
+	tween.tween_property(shutter, "position",
+		start_node.position,
+		0.25 # Settling time
+	).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT).set_delay(0)
 	
 	# Optional heavy impact sound or screen shake
 	tween.chain().tween_callback(func(): 
@@ -141,7 +140,7 @@ func lower_shutter(duration: float = 3.0):
 		if main_game and main_game.has_method("shake_screen"):
 			main_game.shake_screen(8.0, 0.3)  # Stronger shake for slamming
 	)
-
+	
 # FIXED: Completely reworked this function to fix the animation
 # Now, true = animate to UP position (frame 0), false = animate to DOWN position (frame 7)
 func animate_lever(to_up: bool):

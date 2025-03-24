@@ -102,6 +102,7 @@ These are our goals, to-do tasks, and completed tasks.
   - Fix skip story bug not hiding the history button quickly
 
 ### Completed Tasks for 1.0.2
+  - Darkest point of potato is darker than darkest point of GUI
   - Add minor random size scaling to explosions for visual variety
   - Make sure strikes are added before shift ends
   - Add a growth bounce tween or shrink bounce tween to the quota and strikes labels when they change
