@@ -91,11 +91,11 @@ func _on_back_button_pressed():
 func open_discord_link() -> void:
 	OS.shell_open("https://discord.gg/Y7caBf7gBj") 
 
-func open_website_link() -> void:
-	OS.shell_open("https://www.lostrabbitdigital.org/") 
-
 func open_patreon_link() -> void:
 	OS.shell_open("https://www.patreon.com/c/LostRabbitDigital") 
 
 func open_kofi_link() -> void:
 	OS.shell_open("https://ko-fi.com/lostrabbitdigital") 
+
+func open_github_link() -> void:
+	OS.shell_open("https://github.com/sponsors/Lost-Rabbit-Digital") 
