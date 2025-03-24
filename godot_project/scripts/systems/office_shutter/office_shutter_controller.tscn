@@ -108,7 +108,7 @@ texture = ExtResource("1_u4acs")
 [node name="StartNode" type="Node2D" parent="."]
 
 [node name="EndNode" type="Node2D" parent="."]
-position = Vector2(0, -263)
+position = Vector2(0, -245)
 
 [connection signal="pressed" from="LeverButton" to="." method="shutter_state_toggle"]
 [connection signal="timeout" from="ShutterStateDelay" to="." method="allow_shutter_state_changes"]

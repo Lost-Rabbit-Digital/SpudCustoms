@@ -128,8 +128,8 @@ func set_character_data(data: Dictionary) -> void:
 	update_sprite_animations()
 	
 func fade_out_foreground_shadow(duration: float = 1.5):
-	# Set it to opaque black
-	foreground_shadow.modulate = Color(0, 0, 0, 1.0)
+	# Set it to opaque
+	foreground_shadow.modulate = Color(0.063, 0.035, 0.071, 1.0)
 	
 	# Get reference to the foreground shadow node
 	if not foreground_shadow:

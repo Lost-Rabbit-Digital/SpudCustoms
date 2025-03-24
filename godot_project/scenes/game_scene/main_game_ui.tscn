@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://crnx6qmk46il"]
+[gd_scene load_steps=10 format=3 uid="uid://crnx6qmk46il"]
 
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://scripts/pause_menu_controller.gd" id="1_5evpf"]
 [ext_resource type="PackedScene" uid="uid://cnmu4k37qncn8" path="res://scenes/overlaid_menus/pause_menu.tscn" id="2_5evpf"]
 [ext_resource type="Script" uid="uid://crbo2e4ndbyvk" path="res://scripts/level_list_loader.gd" id="3_bu002"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="4_8084p"]
 [ext_resource type="PackedScene" uid="uid://dbuv0htkikcv4" path="res://scenes/loading_screen/level_loading_screen.tscn" id="5_tksel"]
+[ext_resource type="Material" uid="uid://c8bvc6qqux5b7" path="res://scripts/shaders/image_filter/image_filters_mat.tres" id="6_4lst1"]
 [ext_resource type="Script" uid="uid://tooek7mdq54x" path="res://scenes/game_scene/configurable_sub_viewport.gd" id="6_17ati"]
 [ext_resource type="Script" uid="uid://yakisxcmflgk" path="res://scripts/level_list_manager.gd" id="7_ltl20"]
 [ext_resource type="PackedScene" uid="uid://c63y6b25bs4bk" path="res://scenes/menus/main_menu/main_menu_with_animations.tscn" id="8_xm266"]
@@ -33,6 +34,7 @@ files = Array[String](["res://scenes/game_scene/mainGame.tscn"])
 visible = false
 
 [node name="ViewportContainer" type="SubViewportContainer" parent="."]
+material = ExtResource("6_4lst1")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
