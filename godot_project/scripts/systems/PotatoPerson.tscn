@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cv3hew72jdcn" path="res://assets/potatoes/RussetBurbank_SmallSilhouette.png" id="2_p5u1t"]
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://scripts/systems/character_generator.tscn" id="3_dtyk5"]
 [ext_resource type="Texture2D" uid="uid://cynxpjul6r0br" path="res://assets/user_interface/emoticons/kenny_emotes_pixel_style_2.png" id="3_oxqnl"]
-[ext_resource type="Script" uid="uid://buy73xy3xupsp" path="res://scripts/systems/potato_person/potato_emote_system.gd" id="4_1mn5y"]
+[ext_resource type="Script" uid="uid://buy73xy3xupsp" path="res://scripts/systems/potato_emotes/potato_emote_system.gd" id="4_1mn5y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1mn5y"]
 atlas = ExtResource("3_oxqnl")

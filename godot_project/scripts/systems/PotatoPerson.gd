@@ -54,13 +54,13 @@ var current_potato_brain_state: int = PotatoBrainState.IDLE
 @onready var emote_sprite: AnimatedSprite2D = %PotatoEmote
 
 
-func _ready():
+func _ready() -> void:
 	# Find the PotatoEmote node in the scene
 	var emote_sprite = $"../PotatoPerson/PotatoEmote"
 	
 	if emote_sprite is AnimatedSprite2D:
-		# Initialize the emote system with the sprite
-		PotatoEmoteSystem.initialize(emote_sprite)
+		# Initialize the emote system with the sprite and a parent node for timers
+		PotatoEmoteSystem.initialize(emote_sprite, get_tree().root)
 	else:
 		push_error("PotatoEmote node not found or not an AnimatedSprite2D!")
 	
