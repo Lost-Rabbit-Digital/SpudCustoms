@@ -50,19 +50,23 @@ var current_state: = TaterState.QUEUED
 var current_potato_brain_state: int = PotatoBrainState.IDLE
 
 ## Reference to the EmoteSystem node
-@onready var emote_system = PotatoEmoteSystem
+var emote_system: Node
 @onready var emote_sprite: AnimatedSprite2D = %PotatoEmote
 
 
-func _ready() -> void:
+func _ready() -> void:	
 	# Find the PotatoEmote node in the scene
-	var emote_sprite = $"../PotatoPerson/PotatoEmote"
+	var emote_sprite = $"./PotatoEmote"
 	
-	if emote_sprite is AnimatedSprite2D:
-		# Initialize the emote system with the sprite and a parent node for timers
-		PotatoEmoteSystem.initialize(emote_sprite, get_tree().root)
-	else:
-		push_error("PotatoEmote node not found or not an AnimatedSprite2D!")
+	# Create a new instance of the emote system
+	var emote_system_instance = PotatoEmoteSystem.new()
+	add_child(emote_system_instance)
+	
+	# Initialize it with our sprite
+	emote_system_instance.init(emote_sprite)
+	
+	# Update the reference to use this instance
+	emote_system = emote_system_instance
 	
 	# Show thinking dots when the character first appears
 	_show_thinking()
@@ -80,7 +84,7 @@ func _ready() -> void:
 	update_appearance()
 
 func _process(delta):
-	# Example: Random chance to show emote while idle
+	# EXAMPLE: Random chance to show emote while idle
 	if current_potato_brain_state == PotatoBrainState.IDLE and randf() < 0.001:  # 0.1% chance per frame
 		_show_idle_emote()
 	
@@ -160,6 +164,7 @@ func show_anger() -> void:
 func show_confusion() -> void:
 	emote_system.show_emote(emote_system.EmoteType.CONFUSED)
 
+### END OF POTATO EMOTE SYSTEM ###
 
 func explode():
 	# Emit signal with our position for gib creation
