@@ -1,3 +1,4 @@
+class_name PotatoEmoteSystem
 extends Node
 ## A system to manage and display emotes for the potato character.
 ##
@@ -6,7 +7,7 @@ extends Node
 ## and manages the timing and animation of emote displays.
 
 # Get reference to the PotatoEmote animated sprite node
-@onready var emote_sprite: AnimatedSprite2D = %PotatoEmote
+static var emote_sprite: AnimatedSprite2D
 
 ## Enum defining all available emote types
 enum EmoteType {
@@ -35,7 +36,7 @@ enum EmoteType {
 }
 
 ## Dictionary that maps emote types to their corresponding frame indices
-var emote_frames = {
+static var emote_frames = {
 	EmoteType.ANGRY_FACE: 0,
 	EmoteType.HAPPY_FACE: 1,
 	EmoteType.SAD_FACE: 2,
@@ -54,7 +55,7 @@ var emote_frames = {
 }
 
 ## Dictionary mapping category names to lists of emote types in that category
-var emote_categories = {
+static var emote_categories = {
 	"happy": [EmoteType.HAPPY_FACE, EmoteType.SINGULAR_HEART, EmoteType.SWIRLING_HEARTS],
 	"thinking": [EmoteType.DOT_1, EmoteType.DOT_2, EmoteType.DOT_3, EmoteType.QUESTION, EmoteType.CONFUSED],
 	"negative": [EmoteType.ANGRY_FACE, EmoteType.SAD_FACE, EmoteType.BROKEN_HEART, EmoteType.POPPING_VEIN],
@@ -63,42 +64,45 @@ var emote_categories = {
 }
 
 ## Timer for automatically hiding emotes after display
-var emote_timer: Timer
+static var emote_timer: Timer
 
 ## Timer for dot sequence animation
-var dot_sequence_timer: Timer
+static var dot_sequence_timer: Timer
 
 ## Current emote being displayed
-var current_emote: int = -1
+static var current_emote: int = -1
 
 ## Emote display duration in seconds
-@export var emote_duration: float = 2.0
+static var emote_duration: float = 2.0
 
 ## Whether the emote is currently visible
-var is_emote_visible: bool = false
+static var is_emote_visible: bool = false
 
 ## Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+## Must be called manually to initialize the system
+static func initialize(sprite_node: AnimatedSprite2D) -> void:
+	emote_sprite = sprite_node
+	
 	# Create and configure the emote timer
 	emote_timer = Timer.new()
 	emote_timer.one_shot = true
 	emote_timer.wait_time = emote_duration
 	emote_timer.timeout.connect(_on_emote_timer_timeout)
-	add_child(emote_timer)
+	emote_sprite.get_parent().add_child(emote_timer)
 	
 	# Create and configure the dot sequence timer
 	dot_sequence_timer = Timer.new()
 	dot_sequence_timer.one_shot = false
 	dot_sequence_timer.wait_time = 0.4
 	dot_sequence_timer.timeout.connect(_on_dot_sequence_timer_timeout)
-	add_child(dot_sequence_timer)
+	emote_sprite.get_parent().add_child(dot_sequence_timer)
 	
 	# Hide the emote sprite initially
 	hide_emote()
 
 ## Shows a random emote from any category
 ## @return The EmoteType that was displayed
-func show_random_emote() -> int:
+static func show_random_emote() -> int:
 	var emote_keys = emote_frames.keys()
 	var random_emote = emote_keys[randi() % emote_keys.size()]
 	return show_emote(random_emote)
@@ -106,7 +110,7 @@ func show_random_emote() -> int:
 ## Shows a random emote from a specific category
 ## @param category The category to choose from ("happy", "thinking", "negative", "surprise", "blank")
 ## @return The EmoteType that was displayed or -1 if category doesn't exist
-func show_random_emote_from_category(category: String) -> int:
+static func show_random_emote_from_category(category: String) -> int:
 	if not emote_categories.has(category):
 		push_error("Invalid emote category: " + category)
 		return -1
@@ -118,7 +122,7 @@ func show_random_emote_from_category(category: String) -> int:
 ## Shows a specific emote by its type
 ## @param emote_type The specific EmoteType to display
 ## @return The EmoteType that was displayed or -1 if type doesn't exist
-func show_emote(emote_type: int) -> int:
+static func show_emote(emote_type: int) -> int:
 	if not emote_frames.has(emote_type):
 		push_error("Invalid emote type: " + str(emote_type))
 		return -1
@@ -146,7 +150,7 @@ func show_emote(emote_type: int) -> int:
 
 ## Shows the thinking dots animation sequence (DOT_1 -> DOT_2 -> DOT_3)
 ## @param duration How long to show the entire sequence before hiding
-func show_thinking_dots(duration: float = 3.0) -> void:
+static func show_thinking_dots(duration: float = 3.0) -> void:
 	# Start with DOT_1
 	show_emote(EmoteType.DOT_1)
 	
@@ -158,19 +162,20 @@ func show_thinking_dots(duration: float = 3.0) -> void:
 	dot_sequence_timer.start()
 
 ## Hides the current emote
-func hide_emote() -> void:
-	emote_sprite.visible = false
-	is_emote_visible = false
-	current_emote = -1
-	emote_timer.stop()
-	dot_sequence_timer.stop()
+static func hide_emote() -> void:
+	if emote_sprite:
+		emote_sprite.visible = false
+		is_emote_visible = false
+		current_emote = -1
+		emote_timer.stop()
+		dot_sequence_timer.stop()
 
 ## Callback for when the emote timer expires
-func _on_emote_timer_timeout() -> void:
+static func _on_emote_timer_timeout() -> void:
 	hide_emote()
 
 ## Callback for dot sequence animation
-func _on_dot_sequence_timer_timeout() -> void:
+static func _on_dot_sequence_timer_timeout() -> void:
 	if current_emote == EmoteType.DOT_1:
 		show_emote(EmoteType.DOT_2)
 	elif current_emote == EmoteType.DOT_2:
@@ -183,6 +188,7 @@ func _on_dot_sequence_timer_timeout() -> void:
 
 ## Sets the duration for which emotes are displayed
 ## @param duration The time in seconds to display emotes
-func set_emote_duration(duration: float) -> void:
+static func set_emote_duration(duration: float) -> void:
 	emote_duration = max(0.1, duration)  # Ensure minimum duration
-	emote_timer.wait_time = emote_duration
+	if emote_timer:
+		emote_timer.wait_time = emote_duration

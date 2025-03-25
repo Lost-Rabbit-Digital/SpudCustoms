@@ -134,6 +134,7 @@ visible = false
 [node name="PotatoEmote" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 visible = false
+z_index = 9
 position = Vector2(0, -23)
 sprite_frames = SubResource("SpriteFrames_oxqnl")
 script = ExtResource("4_1mn5y")

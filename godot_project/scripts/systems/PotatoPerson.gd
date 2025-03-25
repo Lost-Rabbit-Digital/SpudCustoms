@@ -17,7 +17,6 @@ enum TaterState {
 }
 
 # Properties
-var current_state: = TaterState.QUEUED
 var potato_info: Dictionary = {}
 var current_point: int = 0
 var target_point: int = 0
@@ -44,7 +43,30 @@ var textures = {
 	"Purple Majesty": preload("res://assets/potatoes/sprite_sheets/purple_majesty_small_5x8.png"),
 }
 
+
+## Potato state tracking
+enum PotatoBrainState { IDLE, TALKING, THINKING, SURPRISED, HAPPY, SAD, ANGRY }
+var current_state: = TaterState.QUEUED
+var current_potato_brain_state: int = PotatoBrainState.IDLE
+
+## Reference to the EmoteSystem node
+@onready var emote_system = PotatoEmoteSystem
+@onready var emote_sprite: AnimatedSprite2D = %PotatoEmote
+
+
 func _ready():
+	# Find the PotatoEmote node in the scene
+	var emote_sprite = $"../PotatoPerson/PotatoEmote"
+	
+	if emote_sprite is AnimatedSprite2D:
+		# Initialize the emote system with the sprite
+		PotatoEmoteSystem.initialize(emote_sprite)
+	else:
+		push_error("PotatoEmote node not found or not an AnimatedSprite2D!")
+	
+	# Show thinking dots when the character first appears
+	_show_thinking()
+	
 	# Initialize character generator if not already present
 	if !has_node("CharacterGenerator"):
 		var gen_scene = load("res://scripts/systems/character_generator.tscn")
@@ -58,6 +80,10 @@ func _ready():
 	update_appearance()
 
 func _process(delta):
+	# Example: Random chance to show emote while idle
+	if current_potato_brain_state == PotatoBrainState.IDLE and randf() < 0.001:  # 0.1% chance per frame
+		_show_idle_emote()
+	
 	# Handle path following if on a path
 	if current_path_follow and current_state != TaterState.IN_OFFICE:
 		follow_path(delta)
@@ -68,6 +94,72 @@ func _process(delta):
 		if footprint_timer >= footprint_interval:
 			footprint_timer = 0
 			spawn_footprint()
+
+### EMOTE SYSTEM ###
+## Changes the potato's brain state and shows an appropriate emote
+## @param new_state The PotatoBrainState to transition to
+func change_brain_state(new_state: int) -> void:
+	current_potato_brain_state = new_state
+	
+	match new_state:
+		PotatoBrainState.IDLE:
+			# No emote for idle state
+			emote_system.hide_emote()
+		PotatoBrainState.TALKING:
+			emote_system.show_thinking_dots(5.0)  # Show dots for 5 seconds
+		PotatoBrainState.THINKING:
+			_show_thinking()
+		PotatoBrainState.SURPRISED:
+			emote_system.show_emote(emote_system.EmoteType.DOUBLE_EXCLAMATION)
+		PotatoBrainState.HAPPY:
+			emote_system.show_random_emote_from_category("happy")
+		PotatoBrainState.SAD:
+			emote_system.show_emote(emote_system.EmoteType.SAD_FACE)
+		PotatoBrainState.ANGRY:
+			emote_system.show_emote(emote_system.EmoteType.ANGRY_FACE)
+
+## Bind this to an input action or call it when the character is interacted with
+func interact() -> void:
+	# Show a happy emote when interacted with
+	change_brain_state(PotatoBrainState.HAPPY)
+	
+	# Return to idle state after emote duration
+	await get_tree().create_timer(emote_system.emote_duration).timeout
+	change_brain_state(PotatoBrainState.IDLE)
+
+## Shows the thinking dots animation
+func _show_thinking() -> void:
+	# Choose between dots or question mark
+	if randf() < 0.7:  # 70% chance for dots
+		emote_system.show_thinking_dots()
+	else:
+		emote_system.show_emote(emote_system.EmoteType.QUESTION)
+
+## Shows a random idle emote based on mood probabilities
+func _show_idle_emote() -> void:
+	# Distribution: 40% happy, 30% thinking, 20% surprised, 10% negative
+	var rand = randf()
+	if rand < 0.4:
+		emote_system.show_random_emote_from_category("happy")
+	elif rand < 0.7:
+		emote_system.show_random_emote_from_category("thinking")
+	elif rand < 0.9:
+		emote_system.show_random_emote_from_category("surprise")
+	else:
+		emote_system.show_random_emote_from_category("negative")
+
+## Shows a love emote (heart)
+func show_love() -> void:
+	emote_system.show_emote(emote_system.EmoteType.SINGULAR_HEART)
+
+## Shows anger
+func show_anger() -> void:
+	change_brain_state(PotatoBrainState.ANGRY)
+
+## Shows confusion
+func show_confusion() -> void:
+	emote_system.show_emote(emote_system.EmoteType.CONFUSED)
+
 
 func explode():
 	# Emit signal with our position for gib creation
