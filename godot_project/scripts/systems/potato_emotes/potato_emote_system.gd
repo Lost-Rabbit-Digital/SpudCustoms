@@ -251,7 +251,7 @@ static func _play_emote_sound() -> void:
 	var sound_num = (randi() % max_num) + 1
 	
 	# Construct the path to the sound file
-	var sound_path = "res://audio/talking/{0}_{1}.wav".format([sound_type, sound_num])
+	var sound_path = "res://assets/audio/talking/{0}_{1}.wav".format([sound_type, sound_num])
 	
 	# Load the audio stream
 	var stream = load(sound_path)
