@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://we75jycv8mrc"
-path="res://.godot/imported/froggy_pain (5).wav-248fe3d59b2d5255485646650fe60a71.sample"
+path="res://.godot/imported/froggy_pain_5.wav-efcae7943494a39a7b50aaf6c76e285b.sample"
 
 [deps]
 
-source_file="res://assets/audio/talking/froggy_pain (5).wav"
-dest_files=["res://.godot/imported/froggy_pain (5).wav-248fe3d59b2d5255485646650fe60a71.sample"]
+source_file="res://assets/audio/talking/froggy_pain_5.wav"
+dest_files=["res://.godot/imported/froggy_pain_5.wav-efcae7943494a39a7b50aaf6c76e285b.sample"]
 
 [params]
 
