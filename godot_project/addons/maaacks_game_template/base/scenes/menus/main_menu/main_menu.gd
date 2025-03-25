@@ -89,7 +89,7 @@ func _on_back_button_pressed():
 
 ## Opens the Discord link with a juicy button animation.
 func open_discord_link() -> void:
-	apply_button_juice(%DiscordButton, "https://discord.gg/Y7ca8f7gBj")
+	apply_button_juice(%DiscordButton, "https://discord.gg/AuxpKQt6nC")
 
 ## Opens the Patreon link with a juicy button animation.
 func open_patreon_link() -> void:
