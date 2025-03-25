@@ -1,8 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://c07b46wsf1fc1"]
+[gd_scene load_steps=7 format=3 uid="uid://c07b46wsf1fc1"]
 
 [ext_resource type="Script" uid="uid://dfd5g4ck28k0y" path="res://scripts/systems/PotatoPerson.gd" id="1_ftltf"]
 [ext_resource type="Texture2D" uid="uid://cv3hew72jdcn" path="res://assets/potatoes/RussetBurbank_SmallSilhouette.png" id="2_p5u1t"]
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://scripts/systems/character_generator.tscn" id="3_dtyk5"]
+[ext_resource type="Texture2D" uid="uid://cynxpjul6r0br" path="res://assets/user_interface/emoticons/kenny_emotes_pixel_style_2.png" id="3_oxqnl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mn5y"]
+atlas = ExtResource("3_oxqnl")
+region = Rect2(0, 48.1867, 16.8977, 16.8133)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oxqnl"]
 radius = 3.10779
@@ -11,10 +16,15 @@ height = 13.7697
 [node name="PotatoPerson" type="Sprite2D" groups=["PotatoPerson"]]
 z_index = 7
 z_as_relative = false
+position = Vector2(20, -19)
 script = ExtResource("1_ftltf")
 
 [node name="CharacterGenerator" parent="." instance=ExtResource("3_dtyk5")]
 visible = false
+
+[node name="PotatoEmote" type="Sprite2D" parent="."]
+position = Vector2(0, -23)
+texture = SubResource("AtlasTexture_1mn5y")
 
 [node name="Area2D" type="Area2D" parent="."]
 
