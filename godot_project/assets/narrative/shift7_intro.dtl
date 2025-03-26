@@ -3,158 +3,80 @@ audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume=
 
 [background arg="res://assets/narrative/root_reserve_reveal.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
-You rendezvous with Sasha at a secure location
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Good, you made it. The resistance is growing stronger by the day.
+sweet_potato_sasha: Good, you made it. The resistance is growing stronger. Thanks to those manifests, people are seeing the truth.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Thanks to those manifests, people are finally seeing the truth about Root Reserve.
+sweet_potato_sasha: I managed to get this dossier from our sources - production schedules, 'ingredient' lists, names of the disappeared.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Sasha pulls out a thick dossier. I managed to get this from our sources within the government.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Production schedules, 'ingredient' lists, names of the disappeared...it all leads back to Root Reserve.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Sasha's eyes burn with intensity: This isn't just a food supplement program. They're processing potatoes...and not in a good way.
-- "Mother of spuds...we have to expose this further!"
-- "I don't know, Sasha...this is a lot to take in."
-- "What do we do now? We can't trust anyone."
+sweet_potato_sasha: This isn't just a food supplement program. They're processing potatoes...and not in a good way.
 
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-player_character: You rifle through the papers, growing more disturbed by the second.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 player_character: Internal memos from Prime Minister Idaho himself, authorizing the "utilization of rejected assets."
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-player_character: Quotas for each checkpoint, with the Spud Customs facility having the highest rejection-to-processing ratio.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-player_character: Supervisor Russet's signature appears on dozens of transfer authorizations.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-player_character: You stare at Sasha, aghast. This goes all the way to the top.
+player_character: Quotas for each checkpoint, with Spud Customs having the highest rejection-to-processing ratio.
 leave sweet_potato_sasha
 leave player_character
 
 [background arg="res://assets/narrative/city_riots.png" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-narrator: The situation outside the facility has deteriorated rapidly.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-narrator: Angry crowds gather at checkpoints, demanding answers about Root Reserve.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-narrator: Government forces have begun suppressing protests with increasingly harsh tactics.
+narrator: The situation outside has deteriorated. Angry crowds gather at checkpoints demanding answers about Root Reserve.
 leave narrator
 
 [background arg="res://assets/narrative/emergency_broadcast.png" fade="2.0"]
 join announcer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-announcer: EMERGENCY BROADCAST: This is an official message from the Office of Prime Minister Idaho.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-announcer: Recent circulation of forged documents has caused unnecessary panic among citizens.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-announcer: These materials contain malicious falsehoods about our beloved Root Reserve product.
+announcer: EMERGENCY BROADCAST: Recent circulation of forged documents has caused unnecessary panic.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 announcer: A reward of 10,000 Spud Credits is offered for information leading to the capture of these saboteurs.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 announcer: Consuming or distributing this propaganda is now classified as high treason.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-announcer: For your safety, a mandatory curfew is in effect from 1900 to 0600 hours.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-announcer: Trust only official sources. Root Reserve remains safe and nutritious.
 leave announcer
-
-[background arg="res://assets/narrative/smuggled_newspapers.png" fade="2.0"]
-join resistance_member_1 [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_member_1: A resistance member shows you underground newspapers being circulated.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-resistance_member_1: "THE HARVEST OF HORROR" screams one headline, accompanied by the manifest photos.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_member_1: Another reads: "ROOT RESERVE: CANNIBALISM BY ANOTHER NAME"
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-resistance_member_1: The resistance member speaks urgently. People are waking up. But the government is cracking down hard.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_member_1: We've lost contact with three of our cells in the eastern district.
-leave resistance_member_1
 
 [background arg="res://assets/narrative/facility_interior_enhanced_security.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Today's shift will operate under special protocols.
+supervisor_russet: Today's shift will operate under special protocols. Each traveler must undergo Loyalty Assessment.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Each traveler must undergo Loyalty Assessment before processing.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Those demonstrating anti-government sentiments are to be flagged immediately.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: I don't need to remind you that your own loyalty is under constant evaluation.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Russet's eyes narrow suspiciously. The traitor in our midst will be found.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: And when they are... Russet draws a finger across his throat in a slow, deliberate motion.
+supervisor_russet: The traitor in our midst will be found. And when they are... [draws finger across throat]
 leave supervisor_russet
 
 [background arg="res://assets/narrative/traveler_inspection.png" fade="2.0"]
 join traveler_1 [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-traveler_1: A nervous potato approaches your station, yellow leaf badge partially visible under their collar.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-traveler_1: "P-papers, please." They slide their documents forward, hands trembling.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-traveler_1: A tiny note is tucked between the pages: "Safe house compromised. New location: Warehouse 7, Sector 4."
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-traveler_1: The traveler's eyes plead silently for help.
+traveler_1: A nervous potato approaches, yellow leaf badge partially visible. A tiny note is tucked between papers: "Safe house compromised. New location: Warehouse 7, Sector 4."
 
 set {yellow_badge_response} = "none"
-- "Process them through quickly with the UV mark" (Help the resistance)
+- "Process them through quickly with the UV mark" (Help)
 	set {yellow_badge_response} = "help"
-- "Report them to security immediately" (Betray the resistance)
+- "Report them to security immediately" (Betray)
 set {yellow_badge_response} = "betray"
-- "Process normally, ignoring the resistance connection" (Stay neutral)
-set {yellow_badge_response} = "neutral"
 
 if {yellow_badge_response} == "help":
 join traveler_1 [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-traveler_1: Relief floods their face as you discretely add the UV mark.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-traveler_1: "Thank you," they whisper. "The truth will prevail."
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-traveler_1: The potato hurries through, clutching their approved papers.
-leave traveler_1
-
-elif {yellow_badge_response} == "betray":
-join traveler_1 [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-traveler_1: Horror dawns on their face as you signal the security team.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-traveler_1: "No, please! I have a family!" They struggle as guards drag them away.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-traveler_1: Their yellow badge falls to the floor in the commotion.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Supervisor Russet appears, nodding approvingly. "Well done. Your loyalty is noted."
+traveler_1: Relief floods their face. "Thank you. The truth will prevail."
 leave traveler_1
 
 else:
 join traveler_1 [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-traveler_1: You process them without acknowledgment of the resistance connection.
+traveler_1: Horror dawns as you signal security. "No, please! I have a family!" Their yellow badge falls to the floor.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-traveler_1: The traveler looks confused, then disappointed, but says nothing.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-traveler_1: They take their papers and move through, glancing back once with uncertainty.
+supervisor_russet: "Well done. Your loyalty is noted."
 leave traveler_1
 
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Sasha passes by your station, whispering quickly. "Your decision was noticed."
+sweet_potato_sasha: "Your decision was noticed. Be ready. Something big is coming. The resistance is planning a direct action."
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: "Be ready. Something big is coming. The resistance is planning a direct action."
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: "When it happens, you'll need to choose a side. There won't be any middle ground left."
 leave sweet_potato_sasha
 
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-player_character: The weight of your position feels heavier than ever.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 player_character: With each potato you process, you're either aiding a revolution or enabling a horrific system.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-player_character: And Russet is watching your every move, searching for any sign of betrayal.
 leave player_character

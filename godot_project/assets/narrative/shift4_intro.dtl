@@ -4,37 +4,21 @@ audio music "res://assets/audio/ambient/horror_drone_23.wav" [fade="2.0" volume=
 [background arg="res://assets/narrative/morning_briefing.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Attention, everyone! New security protocols are in effect today.
+supervisor_russet: New security protocols today. We've received intelligence about smuggling operations.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: We've received intelligence about smuggling operations targeting our borders.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: From now on, all travelers must be inspected for contraband.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Supervisor Russet unveils a new inspection device. This is the ContraScanner 9000.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: It will detect any unauthorized materials trying to enter our glorious nation.
+supervisor_russet: All travelers must be inspected for contraband with the ContraScanner 9000.
 
 [background arg="res://assets/narrative/contraband_scanner.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Use it when you suspect a potato is hiding something.
+supervisor_russet: Watch for nervous behavior, bulging pockets, or reluctance to make eye contact.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Pay special attention to nervous behavior, bulging pockets, or reluctance to make eye contact.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Russet demonstrates the scanner with exaggerated movements. Simply pass it over the suspect...
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: And any contraband will be immediately flagged.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: All contraband must be confiscated and logged. For Spud's security, of course.
 leave supervisor_russet
 
 [background arg="res://assets/narrative/new_security_measures.png" fade="2.0"]
 join security_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-security_officer: A stern-looking security officer steps forward. We're especially concerned about seditious materials.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-security_officer: Unauthorized pamphlets, anti-Root Reserve literature, photography equipment...
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-security_officer: Anyone found with these items is to be detained immediately.
+security_officer: We're especially concerned about seditious materials - anti-Root Reserve literature, photography equipment...
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 security_officer: Their voice drops ominously. We have special procedures for those individuals.
 leave security_officer
@@ -42,91 +26,43 @@ leave security_officer
 [background arg="res://assets/narrative/root_reserve_truck.png" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-narrator: As the briefing ends, you notice a fleet of Root Reserve trucks arriving at the facility.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-narrator: Workers quickly unload crates marked "Premium Reserve" into the staff cafeteria.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-narrator: The smell is enticing, but remembering Sasha's revelations, your stomach turns.
+narrator: Root Reserve trucks unload crates marked "Premium Reserve" into the cafeteria. The smell is enticing, but your stomach turns.
 leave narrator
 
 [background arg="res://assets/narrative/cafeteria_line.png" fade="2.0"]
 join fellow_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: Another customs officer nudges you in line. Have you tried the new Premium Reserve blend?
+fellow_officer: Have you tried the new Premium Reserve? My cousin disappeared last month. Failed inspection.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: It's incredible. They say it's made from the finest ingredients in all of Spud.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: Just between us, my cousin disappeared last month. Failed inspection at the eastern checkpoint.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: The officer laughs nervously. Maybe he's part of this batch, huh? Dark humor, you know?
+fellow_officer: Maybe he's part of this batch, huh? Dark humor, you know?
 
 set {cafeteria_response} = "none"
 - "That's not funny. Not at all."
 	set {cafeteria_response} = "serious"
-- "Heh, yeah... dark humor." (Play along)
-set {cafeteria_response} = "nervous"
 - "I'm not hungry. Excuse me." (Leave)
 set {cafeteria_response} = "avoid"
 
 if {cafeteria_response} == "serious":
 join fellow_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: The officer's smile fades. You're right. Sorry. It's just...
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: Sometimes joking is easier than thinking about what might actually be happening.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: The officer looks around nervously. Forget I said anything, okay?
-leave fellow_officer
-
-elif {cafeteria_response} == "nervous":
-join fellow_officer [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: The officer stares at you a moment too long. Yeah. Humor.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: They lower their voice. Some joke though, isn't it? The Premium Reserve started after the rejection quotas went up.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: Just... don't think about it too much. That's my advice.
+fellow_officer: You're right. Sometimes joking is easier than thinking about what might actually be happening.
 leave fellow_officer
 
 else:
 join fellow_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: The officer watches you leave with a knowing look. Hey, I get it. Lost my appetite too.
+fellow_officer: The officer watches you leave. Hey, I get it. Lost my appetite too.
 leave fellow_officer
 
 [background arg="res://assets/narrative/checkpoint_hallway.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Sasha intercepts you in the hallway, pretending to review paperwork.
+sweet_potato_sasha: Convenient timing for new contraband rules, isn't it? They're trying to stop information about Root Reserve.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Without looking up, she whispers: New contraband rules. Convenient timing, isn't it?
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: They're trying to stop information from getting out. About Root Reserve.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Sasha quickly hands you a small metal object. Take this. It'll jam the scanners for a few seconds.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Use it wisely. Some potatoes with "contraband" deserve to get through.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Sasha walks away, adding loudly: And that's why proper documentation filing is essential!
+sweet_potato_sasha: Take this jammer. It'll disable scanners briefly. Some potatoes with "contraband" deserve to get through.
 leave sweet_potato_sasha
-
-[background arg="res://assets/narrative/checkpoint_station.png" fade="2.0"]
-join supervisor_russet [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Get to your station. The line is already forming.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: I expect a thorough contraband check on at least half of today's applicants.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: And remember - any suspicious materials are to be reported directly to me.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Russet smiles thinly. Protect Spud. That's what we're all here for, isn't it?
-leave supervisor_russet
 
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-player_character: You touch the scanner jammer in your pocket, considering its implications.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-player_character: Today's choices could help potatoes spread the truth... or silence them forever.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-player_character: The weight of your responsibility feels heavier than ever.
+player_character: You touch the scanner jammer, considering. Today's choices could help spread truth... or silence it forever.
 leave player_character

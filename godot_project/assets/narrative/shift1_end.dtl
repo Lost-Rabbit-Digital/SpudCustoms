@@ -4,35 +4,19 @@ audio music "res://assets/audio/ambient/horror_drone_23.wav" [fade="2.0" volume=
 [background arg="res://assets/narrative/root_reserve_customs_office.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Adequate work today, sprout. You're getting the hang of this.
+supervisor_russet: Adequate work today, sprout. Remember, efficiency is key. We have quotas to meet.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Remember, efficiency is key. We have quotas to meet.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Now, get some rest. Tomorrow is another big day for Spud.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: And don't forget to grab your ration of Root Reserve on the way out.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Supervisor Russet flashes a wide grin, "It's the flavor of Spud's future!"
+supervisor_russet: Don't forget to grab your ration of Root Reserve. "It's the flavor of Spud's future!"
 leave supervisor_russet
 
 [background arg="res://assets/narrative/suspicious_note.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-A small note slips out from beneath a stack of papers
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-The message reads: "Not all is as it seems."
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-"The roots of our nation have grown rotten."
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-"Follow the trail, but take care not to be silenced. - A friend"
+A small note slips out: "Not all is as it seems. The roots of our nation have grown rotten. Follow the trail, but take care not to be silenced. - A friend"
 
 [background arg="res://assets/narrative/questioning_identity.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-player_character: You reflect silently: What have I gotten myself into?
+player_character: That note... and the way Russet dodged my question about rejected potatoes... Something feels off.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-player_character: That note... and the way Supervisor Russet dodged my question about rejected potatoes...
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-player_character: Something feels off about this place.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-player_character: I should stay alert during tomorrow's shift. There's more going on here than stamping passports.
+player_character: I should stay alert. There's more going on here than stamping passports.
 leave player_character

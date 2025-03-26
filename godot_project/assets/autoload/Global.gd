@@ -9,6 +9,7 @@ var strikes = 0
 var max_strikes = 4
 var current_game_stats: Dictionary = {}
 var quota_target = 8  # Required correct decisions
+var base_quota_target = 8 # Quota scaling variable
 var quota_met = 0   # Number of correct decisions
 # Screen shake settings
 var screen_shake_intensity_multiplier: float = 1.0  # Gets set from options menu
@@ -278,7 +279,21 @@ func reset_game_state(keep_high_scores=true):
 
 func advance_shift():
 	shift += 1
+	
+	# reset per-shift stats
+	reset_shift_stats()
+	# Update quota target for new shift
+	# This assumes quota target increases with each shift
+	quota_target = floor(base_quota_target + (shift - 1 ))
 	save_game_state()
+
+func reset_shift_stats():
+	# Reset all stats that should start fresh for each shift
+	quota_met = 0
+	strikes = 0
+	
+	# Don't reset the score if we want it to accumulate across shifts
+	score = 0
 
 # Save/load functions
 func save_game_state():
