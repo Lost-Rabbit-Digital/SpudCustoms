@@ -37,7 +37,7 @@ var max_potatoes: int = 20
 @onready var spawn_timer = $SystemManagers/Timers/SpawnTimer
 
 #Narrative manager
-@onready var narrative_manager = $SystemManagers/NarrativeManager
+@onready var narrative_manager = %NarrativeManager
 
 # Grab BGM Player
 @onready var bgm_player = $SystemManagers/AudioManager/BackgroundMusicPlayer
@@ -139,6 +139,8 @@ func _ready():
 	# Initialise the stamp system manager
 	setup_stamp_system()
 	
+	queue_manager = %QueueManager
+	
 	# Get the current level ID from the level list manager if it exists
 	var level_manager = get_level_manager()
 	if level_manager:
@@ -156,7 +158,6 @@ func _ready():
 	
 	game_start_time = Time.get_ticks_msec() / 1000.0  # Convert to seconds
 	
-	queue_manager = %QueueManager
 	setup_spawn_timer()
 	
 	shift_stats = stats_manager.get_new_stats()

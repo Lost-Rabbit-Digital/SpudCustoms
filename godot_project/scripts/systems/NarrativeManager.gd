@@ -1,6 +1,8 @@
 extends Node
 
 signal dialogue_finished
+signal intro_dialogue_finished
+signal end_dialogue_finished
 
 var current_shift: int = 1
 var dialogic_timeline: Node
@@ -129,7 +131,7 @@ func start_final_confrontation():
 func _on_intro_dialogue_finished():
 	dialogue_active = false
 	Global.advance_story_state() # Will set to INTRO_COMPLETE
-	emit_signal("dialogue_finished")
+	emit_signal("intro_dialogue_finished")
 
 func _on_shift_dialogue_finished():
 	dialogue_active = false
@@ -149,6 +151,9 @@ func is_dialogue_active() -> bool:
 func show_day_transition(current_day: int, next_day: int):
 	dialogue_active = true
 	
+	# Get viewport size
+	var screen_size = get_viewport().get_visible_rect().size
+	
 	# Create a transition screen
 	var transition_layer = CanvasLayer.new()
 	transition_layer.layer = 100
@@ -156,14 +161,14 @@ func show_day_transition(current_day: int, next_day: int):
 	
 	var background = ColorRect.new()
 	background.color = Color(0, 0, 0, 0)
-	background.size = get_tree().get_viewport_rect().size
+	background.size = screen_size
 	transition_layer.add_child(background)
 	
 	var label = Label.new()
 	label.text = "Day %d Complete\nStarting Day %d" % [current_day, next_day]
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	label.size = get_tree().get_viewport_rect().size
+	label.size = screen_size
 	label.modulate = Color(1, 1, 1, 0)
 	transition_layer.add_child(label)
 	
