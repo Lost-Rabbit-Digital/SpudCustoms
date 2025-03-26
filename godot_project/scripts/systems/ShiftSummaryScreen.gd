@@ -196,6 +196,16 @@ Performance Rating:
 	
 	$RightPanel/PerformanceStats.add_theme_color_override("font_color", performance_color)
 
+	var high_score = GameState.get_high_score(stats.get("shift", 1))
+	var is_new_high_score = stats.get("score", 0) > high_score
+	
+	if is_new_high_score && high_score > 0:
+		$RightPanel/PerformanceStats.text += "\nNEW HIGH SCORE!"
+		$RightPanel/PerformanceStats.add_theme_color_override("font_color", Color(1.0, 0.8, 0.2, 1.0))
+	elif high_score > 0:
+		$RightPanel/PerformanceStats.text += "\nHigh Score: " + str(high_score)
+
+
 func play_entry_animation():
 	# Set initial states for text elements
 	$LeftPanel.modulate.a = 0

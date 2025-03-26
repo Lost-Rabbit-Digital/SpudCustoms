@@ -279,7 +279,8 @@ func reset_game_state(keep_high_scores=true):
 
 func advance_shift():
 	shift += 1
-	
+	GameState.set_current_level(shift)
+	GameState.level_reached(shift)
 	# reset per-shift stats
 	reset_shift_stats()
 	# Update quota target for new shift
@@ -287,13 +288,22 @@ func advance_shift():
 	quota_target = floor(base_quota_target + (shift - 1 ))
 	save_game_state()
 
-func reset_shift_stats():
-	# Reset all stats that should start fresh for each shift
+func synchronize_with_game_state():
+	# Make sure shift is synchronized with GameState
+	shift = GameState.get_current_level()
+	
+	# Reset gameplay variables for new shift
+	score = 0
 	quota_met = 0
 	strikes = 0
-	
-	# Don't reset the score if we want it to accumulate across shifts
+
+func reset_shift_stats():
 	score = 0
+	quota_met = 0
+	strikes = 0
+	current_game_stats = {}
+	
+	GlobalState.save()
 
 # Save/load functions
 func save_game_state():

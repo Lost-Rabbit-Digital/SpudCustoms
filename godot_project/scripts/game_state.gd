@@ -8,6 +8,7 @@ const FILE_PATH = "res://scripts/game_state.gd"
 @export var max_level_reached : int
 @export var current_level : int
 @export var times_played : int
+@export var high_scores: Dictionary = {}  # Map level_number -> high_score
 
 static func get_level_state(level_state_key : String) -> LevelStateExample:
 	var game_state = get_game_state()
@@ -29,13 +30,13 @@ static func get_current_level() -> int:
 	var game_state = get_game_state()
 	if not game_state: 
 		return 0
-	return 13#game_state.current_level # 14
+	return game_state.current_level
 
 static func get_max_level_reached() -> int:
 	var game_state = get_game_state()
 	if not game_state: 
 		return 0
-	return 13# game_state.max_level_reached # 14 for endgame
+	return game_state.max_level_reached
 
 static func level_reached(level_number):
 	var game_state = get_game_state()
@@ -58,3 +59,19 @@ static func start_game():
 		return
 	game_state.times_played += 1
 	GlobalState.save()
+
+static func set_high_score(level_number: int, score: int):
+	var game_state = get_game_state()
+	if not game_state:
+		return
+		
+	# Only update if the new score is higher
+	if not game_state.high_scores.has(level_number) or score > game_state.high_scores[level_number]:
+		game_state.high_scores[level_number] = score
+		GlobalState.save()
+		
+static func get_high_score(level_number: int) -> int:
+	var game_state = get_game_state()
+	if not game_state or not game_state.high_scores.has(level_number):
+		return 0
+	return game_state.high_scores[level_number]

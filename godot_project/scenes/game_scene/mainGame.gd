@@ -174,6 +174,15 @@ func _ready():
 	update_strikes_display()
 	update_date_display()
 	generate_rules()
+	
+	# Synchronize Global state with GameState
+	Global.shift = current_shift
+	
+	# If we have a previous high score for this level, display it
+	var high_score = GameState.get_high_score(current_shift)
+	if high_score > 0:
+		Global.display_green_alert(alert_label, alert_timer, "High score for this level: " + str(high_score))
+		# We should display this in the UI somewhere or in initial alert
 
 	if Global.final_score > 0:
 		Global.score = Global.final_score
@@ -380,6 +389,9 @@ func end_shift(success: bool = true):
 		# Lower the shutter with animation when successful
 		if not office_shutter_controller.shutter_opened_this_shift:
 			office_shutter_controller.lower_shutter(1.0)
+	
+	if success:
+		GameState.set_high_score(current_shift, Global.score)
 		
 	# Update quota display one last time to ensure it's correct
 	update_quota_display()
@@ -453,9 +465,15 @@ func _on_shift_summary_continue():
 	# Save the current shift number before advancing
 	var completed_shift = current_shift
 	
+	# Save high score for the current level
+	GameState.set_high_score(completed_shift, Global.score)
+	
 	# Advance the shift and story state
 	Global.advance_shift()
 	Global.advance_story_state()
+	
+	# Make sure GameState is updated with our progress
+	GameState.level_reached(completed_shift + 1)
 	
 	# Check if there's an end dialogue for this shift
 	if completed_shift in narrative_manager.LEVEL_END_DIALOGUES:
@@ -481,11 +499,13 @@ func _on_shift_summary_continue():
 func _on_shift_summary_restart():
 	# Keep the same shift but reset the stats
 	Global.reset_shift_stats()
-	
+	GlobalState.save()
 	# Reload the current game scene
 	transition_to_scene("res://scenes/game_scene/mainGame.tscn")
 
 func _on_shift_summary_main_menu():
+	# Save state before transitioning to main menu
+	GlobalState.save()
 	transition_to_scene("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
 	
 func set_difficulty(level):
@@ -515,7 +535,7 @@ func generate_rules():
 	current_rules = all_rules.slice(0, randi() % 2 + 2)
 	
 	update_rules_display()
-
+	
 func update_rules_display():
 	var laws_text = "[center][u]LAWS[/u]\n\n" + "\n".join(current_rules) + "[/center]"
 	if $Gameplay/InteractiveElements/LawReceipt/OpenReceipt/ReceiptNote:
@@ -1277,6 +1297,9 @@ func _on_game_over():
 	
 	# Small delay for shutter animation
 	await get_tree().create_timer(0.8).timeout
+	
+	# After updating all stats but before showing the summary screen
+	GlobalState.save()
 	
 	# This will handle storing stats and showing the summary screen
 	end_shift(false) # false = not a success scenario
