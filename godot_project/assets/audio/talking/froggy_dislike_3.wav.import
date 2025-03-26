@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://wmnp5ct1jnqo"
-path="res://.godot/imported/froggy_dislike (3).wav-e7899b9fc436349d3efe15cc1eb541a8.sample"
+path="res://.godot/imported/froggy_dislike_3.wav-a71f9858c5620c965d6c1a4e51b4bf52.sample"
 
 [deps]
 
-source_file="res://assets/audio/talking/froggy_dislike (3).wav"
-dest_files=["res://.godot/imported/froggy_dislike (3).wav-e7899b9fc436349d3efe15cc1eb541a8.sample"]
+source_file="res://assets/audio/talking/froggy_dislike_3.wav"
+dest_files=["res://.godot/imported/froggy_dislike_3.wav-a71f9858c5620c965d6c1a4e51b4bf52.sample"]
 
 [params]
 
