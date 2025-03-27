@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c6k5nnpbypshi"]
+[gd_scene load_steps=14 format=3 uid="uid://c6k5nnpbypshi"]
 
 [ext_resource type="Script" uid="uid://bhgs1upaahk3y" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://hmx6o472ropw" path="res://addons/maaacks_game_template/base/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="2_qvrrd"]
@@ -8,8 +8,11 @@
 [ext_resource type="Script" uid="uid://b5oej1q4h7jvh" path="res://addons/maaacks_game_template/base/scripts/ui_sound_controller.gd" id="6_bs342"]
 [ext_resource type="Script" uid="uid://dmkubt2nsnsbn" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/config_version_label.gd" id="6_pdiij"]
 [ext_resource type="Script" uid="uid://bkwlopi4qn32o" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/config_name_label.gd" id="7_j7612"]
-[ext_resource type="PackedScene" uid="uid://ds2balpmk3q1a" path="res://scenes/overlaid_menus/social_icons_menu.tscn" id="8_g46cd"]
-[ext_resource type="PackedScene" uid="uid://2r1b7k14gfsi" path="res://scenes/overlaid_menus/feedback_button_menu.tscn" id="10_k1p1p"]
+[ext_resource type="Texture2D" uid="uid://dmkhc10xhp5g4" path="res://assets/user_interface/social_icons/16x16_outline/HeartCoded_BlueSky.png" id="10_4myoa"]
+[ext_resource type="Texture2D" uid="uid://bwpg7ia7hiyk0" path="res://assets/user_interface/social_icons/16x16/Discord.png" id="10_4utau"]
+[ext_resource type="Texture2D" uid="uid://bv47rc4bxekxy" path="res://assets/user_interface/social_icons/16x16_outline/Discord.png" id="10_oqvs2"]
+[ext_resource type="Texture2D" uid="uid://dimf1hf1nm87f" path="res://assets/user_interface/social_icons/16x16/BlueSky.png" id="11_4myoa"]
+[ext_resource type="Texture2D" uid="uid://drg3si3mndqcw" path="res://assets/user_interface/social_icons/16x16_outline/BodenGameDev_BlueSky.png" id="13_bcn5h"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -55,15 +58,12 @@ mouse_filter = 2
 
 [node name="VersionLabel" type="Label" parent="VersionMargin/VersionContainer"]
 layout_mode = 1
-anchors_preset = 3
+anchors_preset = 1
 anchor_left = 1.0
-anchor_top = 1.0
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -88.0
-offset_top = -26.0
+offset_left = -42.0
+offset_bottom = 16.0
 grow_horizontal = 0
-grow_vertical = 0
 text = "v1.0.2"
 horizontal_alignment = 2
 script = ExtResource("6_pdiij")
@@ -96,10 +96,6 @@ text = "Spud Customs"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("7_j7612")
-
-[node name="SocialIconsMenu" parent="MenuContainer/TitleMargin" instance=ExtResource("8_g46cd")]
-layout_mode = 2
-size_flags_vertical = 8
 
 [node name="SubTitleMargin" type="MarginContainer" parent="MenuContainer"]
 layout_mode = 2
@@ -174,8 +170,55 @@ custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
 text = "Exit"
 
-[node name="FeedbackButtonMenu" parent="MenuContainer" instance=ExtResource("10_k1p1p")]
+[node name="FeedbackButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 8.0
+offset_top = -128.0
+offset_right = 135.0
+offset_bottom = -104.0
+text = "Feedback / Bugs"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1, 0.5)
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="BlueSkyHeartCodedButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+texture_normal = ExtResource("11_4myoa")
+texture_hover = ExtResource("10_4myoa")
+stretch_mode = 0
+
+[node name="DiscordButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = ExtResource("10_4utau")
+texture_hover = ExtResource("10_oqvs2")
+stretch_mode = 0
+
+[node name="BlueSkyBodenGameDevButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = ExtResource("11_4myoa")
+texture_hover = ExtResource("13_bcn5h")
+stretch_mode = 0
 
 [node name="OptionsContainer" type="MarginContainer" parent="."]
 unique_name_in_owner = true
@@ -229,4 +272,8 @@ text = "Back"
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/FeedbackButton" to="." method="_on_feedback_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/BlueSkyHeartCodedButton" to="." method="_on_blue_sky_heart_coded_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/DiscordButton" to="." method="_on_discord_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/BlueSkyBodenGameDevButton" to="." method="_on_blue_sky_boden_game_dev_button_pressed"]
 [connection signal="pressed" from="FlowControlContainer/FlowControl/BackButton" to="." method="_on_back_button_pressed"]
