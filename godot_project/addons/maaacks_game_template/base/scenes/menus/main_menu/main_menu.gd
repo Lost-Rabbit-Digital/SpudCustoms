@@ -65,12 +65,20 @@ func _setup_credits():
 
 func _ready():
 	# In your _ready() function
-	for button in %MenuButtonsBoxContainer.get_children():
-		if button is BaseButton:  # This will match all buttons that inherit from BaseButton
+	for button in $MenuContainer/MenuButtonsMargin/MenuButtonsContainer.get_children():
+		if button is BaseButton or TextureButton:  # This will match all buttons that inherit from BaseButton
 			button.mouse_entered.connect(_on_button_mouse_entered.bind(button))
 			button.mouse_exited.connect(_on_button_mouse_exited.bind(button))
-
 	
+	for button in %MenuButtonsBoxContainer.get_children():
+		if button is BaseButton or TextureButton:  # This will match all buttons that inherit from BaseButton
+			button.mouse_entered.connect(_on_button_mouse_entered.bind(button))
+			button.mouse_exited.connect(_on_button_mouse_exited.bind(button))
+	
+	for button in $MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer.get_children():
+		if button is BaseButton or TextureButton:  # This will match all buttons that inherit from BaseButton
+			button.mouse_entered.connect(_on_button_mouse_entered.bind(button))
+			button.mouse_exited.connect(_on_button_mouse_exited.bind(button))
 	_setup_for_web()
 	_setup_options()
 	_setup_credits()

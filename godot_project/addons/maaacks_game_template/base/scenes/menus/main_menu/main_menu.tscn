@@ -126,6 +126,15 @@ theme_override_constants/margin_bottom = 8
 layout_mode = 2
 mouse_filter = 2
 
+[node name="FeedbackButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 8.0
+offset_top = -128.0
+offset_right = 135.0
+offset_bottom = -104.0
+text = "Feedback / Bugs"
+
 [node name="MenuButtonsBoxContainer" type="BoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
 unique_name_in_owner = true
 layout_mode = 1
@@ -169,15 +178,6 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
 text = "Exit"
-
-[node name="FeedbackButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
-unique_name_in_owner = true
-layout_mode = 1
-offset_left = 8.0
-offset_top = -128.0
-offset_right = 135.0
-offset_bottom = -104.0
-text = "Feedback / Bugs"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -268,11 +268,11 @@ offset_right = 62.0
 grow_vertical = 0
 text = "Back"
 
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/FeedbackButton" to="." method="_on_feedback_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/FeedbackButton" to="." method="_on_feedback_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/BlueSkyHeartCodedButton" to="." method="_on_blue_sky_heart_coded_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/DiscordButton" to="." method="_on_discord_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/BlueSkyBodenGameDevButton" to="." method="_on_blue_sky_boden_game_dev_button_pressed"]
