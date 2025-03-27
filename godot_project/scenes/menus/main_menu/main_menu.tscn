@@ -9,9 +9,3 @@
 script = ExtResource("2_lk0wa")
 options_packed_scene = ExtResource("3_lqjmk")
 credits_packed_scene = ExtResource("3_vmius")
-
-[node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
-text = "v1.0.2"
-
-[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
-text = "Spud Customs"

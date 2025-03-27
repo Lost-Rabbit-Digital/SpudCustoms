@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dtu0ffm1m5mr7" path="res://scenes/menus/level_select_menu/level_select_menu.tscn" id="3_xj7vs"]
 [ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://scenes/credits/credits.tscn" id="4_lwsll"]
 [ext_resource type="AudioStream" uid="uid://bq42hbti5wytk" path="res://assets/music/ambient_faded_defeat_main_menu.mp3" id="6_xpvtk"]
-[ext_resource type="Texture2D" uid="uid://berntd8efacvc" path="res://assets/narrative/border_chaos_1.png" id="7_2k5l7"]
+[ext_resource type="Texture2D" uid="uid://dmm7coydk1tbv" path="res://assets/narrative/border_chaos_1.png" id="7_2k5l7"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -374,6 +374,10 @@ parameters/conditions/intro_done = false
 stream = ExtResource("6_xpvtk")
 
 [node name="BackgroundTextureRect" parent="." index="4"]
+offset_left = -88.0
+offset_top = -61.0
+offset_right = 90.0
+offset_bottom = 39.0
 texture = ExtResource("7_2k5l7")
 
 [node name="VersionContainer" parent="VersionMargin" index="0"]
