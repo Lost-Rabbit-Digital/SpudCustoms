@@ -36,7 +36,7 @@ leave security_chief
 [background arg="res://assets/narrative/missing_sasha.png" fade="2.0"]
 join fellow_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: Have you seen Sasha? She didn't report for roll call. Rumors say she was taken in the night.
+fellow_officer: Have you seen Sasha? She didn't report for roll call. Last night, security forces entered her quarters.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 fellow_officer: They're saying she was part of the resistance.
 

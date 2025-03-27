@@ -10,19 +10,15 @@ leave player_character
 [background arg="res://assets/narrative/maintenance_area.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: "This will disable the lock on Russet's office. I'll create a distraction. You'll have five minutes."
+sweet_potato_sasha: "This device will disable the lock on Russet's office. I'll trigger alarms in the east wing as a distraction. You'll have five minutes."
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: "The manifests should be in his filing cabinet. Red folder labeled 'RR Transport'. Don't leave evidence."
+sweet_potato_sasha: "The manifests should be in his filing cabinet. Red folder labeled 'RR Transport'. Don't leave evidence of your search."
 leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/russet_office_interior.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 player_character: You find the thick red folder labeled "RR Transport" in the filing cabinet.
-leave player_character
-
-[background arg="res://assets/narrative/classified_documents.png" fade="2.0"]
-join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 player_character: Inside are manifests matching rejected potato counts, and a directive from Prime Minister Idaho authorizing "full utilization of border rejects for RR production."
 leave player_character

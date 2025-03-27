@@ -55,6 +55,7 @@ directories/dch_directory={
 "sweet_potato_sasha": "res://assets/narrative/characters/sweet_potato_sasha.dch"
 }
 directories/dtl_directory={
+"final_confrontation": "res://assets/narrative/final_confrontation.dtl",
 "final_confrontation_part1": "res://assets/narrative/final_confrontation_part1.dtl",
 "final_confrontation_part2": "res://assets/narrative/final_confrontation_part2.dtl",
 "final_confrontation_part3": "res://assets/narrative/final_confrontation_part3.dtl",

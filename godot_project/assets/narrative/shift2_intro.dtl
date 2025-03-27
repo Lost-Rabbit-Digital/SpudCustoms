@@ -13,10 +13,11 @@ leave sweet_potato_sasha
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Your next applicant is waiting. Check those stamps carefully! Any suspicious behavior is to be reported.
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+supervisor_russet: Remember, a dutiful officer has nothing to fear. Those who abandon their duty abandon their roots.
 leave supervisor_russet
 
 [background arg="res://assets/narrative/potato_radio.png" fade="2.0"]
-Static crackles through the radio
 join announcer
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 announcer: "...record production numbers for Root Reserve. The miracle food continues to nourish our nation..."
@@ -24,27 +25,15 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 announcer: "In other news, reports of missing potatoes continue. Authorities assure no connection..."
 leave announcer
 
-[background arg="res://assets/narrative/propaganda_1.png" fade="2.0"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-Poster text: "Serve With Pride - Your Duty Keeps Spud Strong!"
-[background arg="res://assets/narrative/propaganda_3.png" fade="2.0"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-Another poster shows a shadowy silhouette: "Those Who Abandon Their Duty Abandon Their Roots."
-
 [background arg="res://assets/narrative/gameplay.png" fade="2.0"]
-join npc_2 [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-npc_2: A young Spud whispers: My neighbor disappeared last week after failing inspection...
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-npc_2: Just be careful. Get rejected and you might not come back.
-leave npc_2
-
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: How's your shift? There are rumors about where the rejects end up. Keep your wits about you.
+sweet_potato_sasha: How's your shift going? Just remember, every potato you reject is sent somewhere. Think about that.
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+sweet_potato_sasha: Sasha glances at Russet's office before walking away.
 leave sweet_potato_sasha
 
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Well, what are you waiting for? Reject or approve. Remember, Spud's safety is in your hands.
+supervisor_russet: Getting friendly with Sasha, are we? Focus on your duty. Spud's safety is in your hands.
 leave supervisor_russet
