@@ -24,6 +24,8 @@ func _ready() -> void:
 	add_levels_to_container()
 	# Debug initial shift value in Global singleton
 	print("DEBUG: Initial Global.shift value: ", Global.shift)
+	GlobalState.save()
+
 	
 func add_levels_to_container() -> void:
 	level_buttons_container.clear()

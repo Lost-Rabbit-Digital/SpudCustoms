@@ -121,11 +121,11 @@ func _on_level_won():
 	if is_on_last_level():
 		_load_win_screen_or_ending()
 	else:
-		# Start end dialogue if applicable
-		if narrative_manager:
+		# Check if there's end dialogue for this level
+		if narrative_manager and narrative_manager.LEVEL_END_DIALOGUES.has(completed_level):
 			narrative_manager.start_level_end_dialogue(completed_level)
 			# Wait for dialogue to finish before continuing
-			await narrative_manager.dialogue_finished
+			await narrative_manager.end_dialogue_finished
 		
 		_load_level_complete_screen_or_next_level()
 

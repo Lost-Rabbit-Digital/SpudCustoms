@@ -4,204 +4,87 @@ audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume=
 [background arg="res://assets/narrative/facility_lockdown_extreme.png" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-narrator: The border facility resembles a war zone more than a checkpoint.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-narrator: Barricades have been erected at all entrances. Armored vehicles patrol the perimeter.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-narrator: Elite guards with heavy weapons stand at every corner, scanning the crowds for threats.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-narrator: The air thrums with tension—today is the day the resistance planned to strike.
+narrator: The border resembles a war zone. Barricades, armored vehicles, and elite guards stand ready. Today is when the resistance planned to strike.
 leave narrator
 
 [background arg="res://assets/narrative/emergency_broadcast_system.png" fade="2.0"]
 join announcer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-announcer: EMERGENCY BROADCAST: By order of Prime Minister Idaho, all of Spud is now under martial law.
+announcer: EMERGENCY BROADCAST: All of Spud is under martial law. "The Resistance" has launched attacks against government facilities.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-announcer: Terrorists calling themselves "The Resistance" have launched attacks against government facilities.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-announcer: Any citizen found aiding these extremists will face immediate processing without trial.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-announcer: Stay in your homes. Report suspicious activity. Trust only official information sources.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-announcer: The Ministry of Truth confirms: Root Reserve remains safe and nutritious for all loyal potatoes.
+announcer: Anyone aiding these extremists faces immediate processing. The Ministry confirms: Root Reserve remains safe for all loyal potatoes.
 leave announcer
 
 [background arg="res://assets/narrative/widespread_unrest.png" fade="2.0"]
 join security_chief [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-security_chief: Chief Yukon addresses all staff, expression grim.
+security_chief: Rioting has broken out in multiple sectors. Resistance cells have attacked three Root Reserve facilities.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-security_chief: The situation outside is deteriorating rapidly. Rioting has broken out in multiple sectors.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-security_chief: Resistance cells have attacked three Root Reserve processing facilities.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-security_chief: Our intelligence indicates their main force will attempt to breach this checkpoint today.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-security_chief: Their goal: to access the central database containing all Root Reserve production records.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-security_chief: All leave is canceled. All officers will remain at their posts until the threat is neutralized.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-security_chief: The chief's gaze sweeps across the room. Any sign of disloyalty will be met with... processing.
+security_chief: Their goal: access the central database with all production records. Any sign of disloyalty means processing.
 leave security_chief
 
 [background arg="res://assets/narrative/sasha_capture.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Supervisor Russet steps forward, looking unusually confident.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Thanks to our enhanced security measures, we've already captured several resistance operatives.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: The guards drag a bruised and battered Sasha into view.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Including our very own Officer Sasha—a traitor who planned to aid the infiltration.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: She looks up, making brief eye contact with you before being forced to her knees.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Russet addresses the staff coldly. Let this be a lesson about the consequences of betrayal.
+supervisor_russet: We've captured several resistance operatives, including Officer Sasha.
 
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Sasha speaks through swollen lips, her voice weak but defiant.
+sweet_potato_sasha: The real traitors are those who feed our people to each other. You can't stop the truth!
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: The real traitors are those who feed our people to each other.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: One of the guards strikes her, but she continues.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: You can't stop the truth! The resistance will prevail! Root Reserve will fall!
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: She's dragged away, still shouting. The people will know what's in their food!
+sweet_potato_sasha: She's dragged away, still shouting: The people will know what's in their food!
 leave sweet_potato_sasha
 
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Russet straightens his uniform. The traitor will be processed immediately.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: A special batch of Root Reserve, made from the very terrorists who sought to destroy it.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Russet smiles, a cold and terrible expression. Poetic justice, wouldn't you say?
+supervisor_russet: The traitor will be processed immediately. A special batch of Root Reserve, made from the terrorists themselves.
 leave supervisor_russet
 
 [background arg="res://assets/narrative/checkpoint_maximum_security.png" fade="2.0"]
 join security_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-security_officer: You're escorted to your station by armed guards.
+security_officer: All border crossings are suspended except for essential personnel with Level Alpha clearance.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-security_officer: New orders: All border crossings are suspended except for essential personnel.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-security_officer: Anyone attempting to cross must have Level Alpha clearance with biometric verification.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-security_officer: The officer places a special scanner on your desk. This device cannot be fooled.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-security_officer: If anyone without proper clearance approaches, sound the alarm immediately.
+security_officer: This scanner cannot be fooled. Sound the alarm immediately for anyone without proper clearance.
 leave security_officer
 
 [background arg="res://assets/narrative/resistance_operative_approach.png" fade="2.0"]
 join resistance_operative [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: Hours into your shift, a potato in official government uniform approaches.
+resistance_operative: A potato in official uniform approaches with seemingly perfect Alpha credentials.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: They slide their documents across—seemingly perfect Alpha clearance credentials.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: But as you scan them, a tiny blue identification card falls from inside the folder.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: The operative gives you a barely perceptible nod. "The roots grow deep."
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: It's the resistance password. This is one of the infiltrators you were supposed to help.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: They're continuing the mission despite Sasha's capture.
+resistance_operative: A tiny blue card falls from the folder. "The roots grow deep." It's the resistance password.
 
 set {critical_choice} = "none"
 - "Process them through, ignoring the scanner alerts" (Help the resistance)
 	set {critical_choice} = "help"
 - "Sound the alarm immediately" (Betray the resistance)
 set {critical_choice} = "betray"
-- "Tell them it's too dangerous and they should leave now" (Warn them)
-set {critical_choice} = "warn"
 
 if {critical_choice} == "help":
 join resistance_operative [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: The operative's eyes show momentary relief as you override the scanner.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: They whisper as they take back their papers: "For Sasha. For Spud."
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: They move through the checkpoint, disappearing down the corridor toward the central database.
-leave resistance_operative
-
-elif {critical_choice} == "betray":
-join resistance_operative [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: Horror dawns on the operative's face as you trigger the alarm.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: "You traitor! We trusted you!" They attempt to flee but are quickly surrounded by guards.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: As they're dragged away, their eyes lock with yours, filled with betrayal and despair.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Supervisor Russet appears, looking pleased. "Excellent work. Your loyalty will be rewarded."
+resistance_operative: Relief shows in their eyes. "For Sasha. For Spud." They disappear toward the central database.
 leave resistance_operative
 
 else:
 join resistance_operative [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: The operative's face falls as you quietly warn them to leave.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: "They've got Sasha. They'll process her today. This is our last chance."
+resistance_operative: Horror dawns on their face. "You traitor! We trusted you!" They're quickly surrounded by guards.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: Their expression hardens with determination. "I understand your fear, but I'm going through. One way or another."
-leave resistance_operative
-
-set {secondary_choice} = "none"
-- "Fine. I'll help you. Quickly, before someone notices."
-	set {secondary_choice} = "relent"
-- "I'm sorry, but I can't be part of this. Goodbye."
-set {secondary_choice} = "refuse"
-
-if {secondary_choice} == "relent":
-join resistance_operative [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: The operative nods gratefully as you process them through.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: "Thank you. Spud will remember those who stood up when it mattered."
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: They hurry through the checkpoint, mission in progress.
-leave resistance_operative
-else:
-join resistance_operative [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: The operative looks at you with disappointment and resignation.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: "Then I have no choice." They suddenly dash past your station.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: Alarms blare as they sprint down the corridor, guards in pursuit.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: Gunshots echo through the facility. The operative's fate is sealed.
+supervisor_russet: "Excellent work. Your loyalty will be rewarded."
 leave resistance_operative
 
 [background arg="res://assets/narrative/distant_explosions.png" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-narrator: Suddenly, the facility shakes with the force of distant explosions.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-narrator: Emergency lights flash as the power fluctuates. Alarms wail throughout the complex.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-narrator: Security forces rush toward the disturbance, shouting orders and readying weapons.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-narrator: The resistance attack has begun, regardless of your choice.
+narrator: Suddenly, the facility shakes with explosions. The resistance attack has begun, regardless of your choice.
 leave narrator
 
 [background arg="res://assets/narrative/night_gameplay.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-player_character: Chaos erupts around you as resistance forces engage security teams throughout the facility.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-player_character: In the confusion, you face a critical decision that will determine your fate and Spud's future.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-player_character: You take a deep breath. It's now or never. I have to make a choice.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-player_character: Do I stay at my post, keep my head down, and pray this all blows over?
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-player_character: Or do I take a stand, join the resistance fighters, and risk everything to expose the truth?
+player_character: Do I stay at my post and hope this blows over, or take a stand and risk everything to expose the truth?
 - "I can't abandon my duty. I'll stay quiet and hope for the best."
 	set {stay_or_go} = "stay"
 - "I've been complicit for too long. It's time to fight for what's right."
