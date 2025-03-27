@@ -112,7 +112,7 @@ func _on_feedback_button_pressed() -> void:
 
 # Define your handler functions
 func _on_button_mouse_entered(button: BaseButton) -> void:
-	var button_hover_sfx_path := "res://assets/user_interface/audio/click_sound_5.mp3"
+	var button_hover_sfx_path := "res://assets/user_interface/audio/hover_sound.mp3"
 	
 	# Ensure the button scales from its center
 	button.pivot_offset = button.size / 2
