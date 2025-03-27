@@ -193,6 +193,7 @@ offset_right = 88.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 16
+alignment = 1
 
 [node name="DiscordButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/IconsContainer/HBoxContainer"]
 unique_name_in_owner = true
@@ -204,6 +205,7 @@ stretch_mode = 0
 
 [node name="PatreonButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/IconsContainer/HBoxContainer"]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 texture_normal = ExtResource("11_4myoa")
@@ -212,6 +214,7 @@ stretch_mode = 0
 
 [node name="KofiButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/IconsContainer/HBoxContainer"]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 texture_normal = ExtResource("12_bcn5h")
