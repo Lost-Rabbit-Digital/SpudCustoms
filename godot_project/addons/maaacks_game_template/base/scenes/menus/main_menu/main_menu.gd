@@ -112,6 +112,20 @@ func _on_feedback_button_pressed() -> void:
 
 # Define your handler functions
 func _on_button_mouse_entered(button: BaseButton) -> void:
+	var button_hover_sfx_path := "res://assets/user_interface/audio/click_sound_5.mp3"
+	
+	# Ensure the button scales from its center
+	button.pivot_offset = button.size / 2
+	
+	# Play button down sound
+	var button_down_player := AudioStreamPlayer.new()
+	add_child(button_down_player)
+	button_down_player.stream = load(button_hover_sfx_path)
+	button_down_player.volume_db = -6.0
+	button_down_player.bus = "SFX"
+	button_down_player.finished.connect(func(): button_down_player.queue_free())
+	button_down_player.play()
+	
 	pass
 	# Handle mouse enter for any button
 	# Your hover effect code here
@@ -146,8 +160,7 @@ func setup_juicy_button(button: Control, url: String = "") -> Signal:
 	var final_color := Color(1.0, 1.0, 1.0, 1.0)
 	
 	# Sound effect paths
-	var button_down_sfx_path := "res://assets/audio/ui/button_down.wav"
-	var button_up_sfx_path := "res://assets/audio/ui/button_up.wav"
+	var button_down_sfx_path := "res://assets/user_interface/audio/click_sound_4.mp3"
 	
 	# Ensure the button scales from its center
 	button.pivot_offset = button.size / 2
@@ -171,17 +184,6 @@ func setup_juicy_button(button: Control, url: String = "") -> Signal:
 	# Play button up sound at the bounce stage
 	var bounce_tween = tween.chain()
 	bounce_tween.tween_property(button, "scale", bounce_scale, bounce_time).set_ease(Tween.EASE_OUT)
-	
-	# Play button up sound
-	bounce_tween.tween_callback(func():
-		var button_up_player := AudioStreamPlayer.new()
-		add_child(button_up_player)
-		button_up_player.stream = load(button_up_sfx_path)
-		button_up_player.volume_db = -6.0
-		button_up_player.bus = "SFX"
-		button_up_player.finished.connect(func(): button_up_player.queue_free())
-		button_up_player.play()
-	)
 	
 	# Complete the animation
 	bounce_tween.chain().tween_property(button, "scale", final_scale, final_scale_time).set_ease(Tween.EASE_IN_OUT)
