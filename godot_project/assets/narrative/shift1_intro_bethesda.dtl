@@ -1,6 +1,6 @@
 # shift1_intro_bethesda.dtl
 audio music "res://assets/audio/ambient/wind_outside.wav" [fade="2.0" volume="1.0" bus="Music"]
-[background arg="res://assets/narrative/nation_of_spud_1.png" fade="0.0"]
+[background arg="res://assets/narrative/nation_of_spud_1.jpg" fade="0.0"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 join narrator [z_index="1"]
 narrator: Welcome to the great nation of Spud, citizen.
@@ -12,7 +12,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 narrator: You've been selected for a crucial role in protecting our borders.
 leave narrator
 
-[background arg="res://assets/narrative/checkpoint_interior.png" fade="2.0"]
+[background arg="res://assets/narrative/checkpoint_interior.jpg" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: Your duty: to process incoming potatoes and maintain our way of life.
@@ -24,7 +24,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 narrator: The narrator clears their throat. Nevermind. Let's move on.
 leave narrator
 
-[background arg="res://assets/narrative/great_wall_of_spud.png" fade="2.0"]
+[background arg="res://assets/narrative/great_wall_of_spud.jpg" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: BEHOLD! The mighty wall that safeguards our nation.
@@ -34,7 +34,7 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 narrator: Your vigilance is our first line of defense against undesirable elements.
 leave narrator
 
-[background arg="res://assets/narrative/supervisor_presenting.png" fade="2.0"]
+[background arg="res://assets/narrative/supervisor_presenting.jpg" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Ah, the new sprout has finally arrived. Welcome aboard.

@@ -1,16 +1,15 @@
 # final_confrontation.dtl
-[style name="speaker_textbox_style"]
 [music path="res://assets/audio/ambient/2_wind_house.wav" fade="2.0" volume="-5.0" bus="Music"]
-[background arg="res://assets/narrative/checkpoint_chaos.png" fade="2.0"]
+[background arg="res://assets/narrative/final_chaos.png" fade="2.0"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 narrator: The Spud border is in chaos. Panicked potatoes flood checkpoints, desperate to escape after the leaked documents.
 
 join player_character [z_index="1"]
-[background arg="res://assets/narrative/border_chaos.png" fade="2.0"]
+[background arg="res://assets/narrative/final_chaos.png" fade="2.0"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: You slip through with Sasha. "We have to keep pushing! The people know the truth now."
 
-[background arg="res://assets/narrative/resistance_hideout.png" fade="2.0"]
+[background arg="res://assets/narrative/resistance_base.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 sweet_potato_sasha: "They can't silence the truth any longer. If we can infiltrate the Root Reserve facility and broadcast evidence, it'll ignite the revolution."
@@ -40,8 +39,8 @@ leave player_character
 
 # Transition to facility breach - implied gameplay happened
 [music path="res://assets/audio/ambient/horror_drone_23.wav" fade="2.0" volume="-5.0" bus="Music"]
-[background arg="res://assets/narrative/processing_facility_interior.png" fade="2.0"]
-join narrator center [z_index="1"]
+[background arg="res://assets/narrative/processing_facility.png" fade="2.0"]
+join narrator [z_index="1"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 narrator: After a tense infiltration, your team stands at the heart of Root Reserve, the horrific machinery of oppression laid bare.
 
@@ -49,7 +48,7 @@ narrator: After a tense infiltration, your team stands at the heart of Root Rese
 narrator: Alarms blare as guards scramble to respond to your intrusion. You race through corridors, dodging security systems.
 leave narrator
 
-[background arg="res://assets/narrative/minister_idaho_monitor.png" fade="2.0"]
+[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
 join prime_minister_idaho [z_index="1"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 prime_minister_idaho: A screen flickers on. "Well well, the traitor returns with rebel scum."
@@ -76,7 +75,7 @@ leave narrator
 
 # Final confrontation - direct transition without gameplay
 [music path="res://assets/audio/ambient/horror_drone_49.wav" fade="2.0" volume="-5.0" bus="Music"]
-[background arg="res://assets/narrative/idaho_bunker_hallway.png" fade="2.0"]
+[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
 join player_character [z_index="1"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: With Sasha and your allies at your side, you confront Idaho at last.
@@ -100,17 +99,17 @@ leave player_character
 
 # Ending Choice Section
 if {ending_choice} == "diplomatic":
-    [background arg="res://assets/narrative/confronting_idaho.png" fade="2.0"]
-    join player_character center [z_index="1"]
+    [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+    join player_character [z_index="1"]
     [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
     player_character: "Idaho, it doesn't have to end in more bloodshed. If you cooperate..."
-    join prime_minister_idaho center [z_index="1"]
+    join prime_minister_idaho [z_index="1"]
     [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
     prime_minister_idaho: "Oh, you idealistic fool. You think this is a negotiation?"
     [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
     prime_minister_idaho: Idaho smashes a button, and alarms begin blaring. "The only thing I'll be giving you is a one-way trip to the fry vats!"
     [background arg="res://assets/narrative/guard_betrayal.png" fade="2.0"]
-    join sweet_potato_sasha center [z_index="1"]
+    join sweet_potato_sasha [z_index="1"]
     [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
     sweet_potato_sasha: "I don't think so, Idaho. Guards! You saw the dossier, you know what he did to your families."
     [sound path="res://assets/audio/gun cocking 3.wav" volume="-5.0"]
@@ -121,20 +120,20 @@ if {ending_choice} == "diplomatic":
     leave player_character
 
 elif {ending_choice} == "justice":
-    [background arg="res://assets/narrative/confronting_idaho.png" fade="2.0"]
-    join player_character center [z_index="1"]
+    [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+    join player_character [z_index="1"]
     [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
     player_character: "Idaho, in the name of the potato people of Spud, you're under arrest!"
     [background arg="res://assets/narrative/justice_hall.png" fade="2.0"]
-    join sweet_potato_sasha center [z_index="1"]
+    join sweet_potato_sasha [z_index="1"]
     [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
     sweet_potato_sasha: "It's over. The people have spoken. We'll build a new Spud where our roots are in the soil, not in suffering."
     leave sweet_potato_sasha
     leave player_character
 
 elif {ending_choice} == "vengeance":
-    [background arg="res://assets/narrative/confronting_idaho.png" fade="2.0"]
-    join player_character center [z_index="1"]
+    [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+    join player_character [z_index="1"]
     [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
     player_character: "There will be no deals, no mercy for you, Idaho. A tyrant's justice is all you deserve."
     [background arg="res://assets/narrative/reckoning.png" fade="2.0"]
@@ -143,11 +142,11 @@ elif {ending_choice} == "vengeance":
     leave player_character
 
 else: # dismantle
-    [background arg="res://assets/narrative/confronting_idaho.png" fade="2.0"]
-    join player_character center [z_index="1"]
+    [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+    join player_character [z_index="1"]
     [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
     player_character: "Forget him. He's a symptom, not the disease. Tear down every root and stem of this monstrosity."
-    join sweet_potato_sasha center [z_index="1"]
+    join sweet_potato_sasha [z_index="1"]
     [sound path="Balloon Explosion A.wav" volume="0.0" bus="SFX"]
     [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
     sweet_potato_sasha: "We have to go! Now!"
@@ -155,26 +154,26 @@ else: # dismantle
     leave player_character
 
 # Common ending for all paths
-[background arg="res://assets/narrative/uprising_montage.png" fade="2.0"]
-join narrator center [z_index="1"]
+[background arg="res://assets/narrative/victory_scene.png" fade="2.0"]
+join narrator [z_index="1"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 narrator: The fall of Root Reserve sparks a wildfire of change across Spud.
-[background arg="res://assets/narrative/victory_sunrise.png" fade="2.0"]
+[background arg="res://assets/narrative/victory_scene.png" fade="2.0"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 narrator: Potatoes in every province rise up, embracing a new vision for their nation.
 [music path="res://assets/audio/1_birds_outside.wav" fade="2.0" volume="1.0" bus="Music"]
 leave narrator
 
-join player_character center [z_index="1"]
-[background arg="res://assets/narrative/liberated_spud_city.png" fade="2.0"]
-join sweet_potato_sasha center [z_index="1"]
+join player_character [z_index="1"]
+[background arg="res://assets/narrative/victory_scene.png" fade="2.0"]
+join sweet_potato_sasha [z_index="1"]
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 sweet_potato_sasha: "As long as we stay true to our roots, to the ideals that brought us here... we'll find a way."
 leave sweet_potato_sasha
 leave player_character
 
 [background arg="res://assets/narrative/new_spud_flag.png" fade="2.0"]
-join narrator center [z_index="1"]
+join narrator [z_index="1"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 narrator: And so, from the ashes of the old Spud, a new nation begins to take root. The Reign of Root Reserve is over.
 leave narrator
