@@ -1,17 +1,34 @@
-[gd_scene load_steps=5 format=3 uid="uid://byvydukidk6i2"]
+[gd_scene load_steps=7 format=3 uid="uid://byvydukidk6i2"]
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_pss7b"]
 [ext_resource type="Script" uid="uid://bdet8115mn02d" path="res://scenes/menus/main_menu/main_menu.gd" id="2_lk0wa"]
 [ext_resource type="PackedScene" uid="uid://bdvdf5v87mmrr" path="res://scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_lqjmk"]
 [ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://scenes/credits/credits.tscn" id="3_vmius"]
+[ext_resource type="Texture2D" uid="uid://dimf1hf1nm87f" path="res://assets/user_interface/social_icons/16x16/BlueSky.png" id="5_x31ro"]
+[ext_resource type="Texture2D" uid="uid://x5s2jk5jgpue" path="res://assets/user_interface/social_icons/16x16_outline/BlueSky.png" id="6_x31ro"]
 
 [node name="MainMenu" instance=ExtResource("1_pss7b")]
 script = ExtResource("2_lk0wa")
 options_packed_scene = ExtResource("3_lqjmk")
 credits_packed_scene = ExtResource("3_vmius")
 
-[node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
-text = "v1.0.2"
+[node name="HBoxContainer" parent="MenuContainer/MenuButtonsMargin/IconsContainer" index="0"]
+alignment = 1
 
-[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
-text = "Spud Customs"
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuContainer/MenuButtonsMargin/IconsContainer/HBoxContainer" index="1"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/IconsContainer/HBoxContainer/VBoxContainer" index="0"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+texture_normal = ExtResource("5_x31ro")
+texture_hover = ExtResource("6_x31ro")
+stretch_mode = 0
+
+[node name="PatreonButton" parent="MenuContainer/MenuButtonsMargin/IconsContainer/HBoxContainer" index="2"]
+visible = false
+
+[node name="KofiButton" parent="MenuContainer/MenuButtonsMargin/IconsContainer/HBoxContainer" index="3"]
+visible = false
