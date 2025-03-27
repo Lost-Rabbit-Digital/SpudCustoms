@@ -106,7 +106,7 @@ func _on_back_button_pressed():
 	_close_sub_menu()
 
 func _on_discord_button_pressed() -> void:
-	await setup_juicy_button(%DiscordButton, "Hidden; Use copy button")
+	await setup_juicy_button(%DiscordButton, "https://discord.gg/Y7caBf7gBj")
 
 func _on_blue_sky_heart_coded_button_pressed() -> void:
 	await setup_juicy_button(%BlueSkyHeartCodedButton, "https://bsky.app/profile/heartcoded.bsky.social")
@@ -157,11 +157,11 @@ func _on_button_mouse_exited(button: BaseButton) -> void:
 func setup_juicy_button(button: Control, url: String = "") -> Signal:
 	# Animation configuration variables
 	var initial_shrink_scale := Vector2(0.8, 0.8)
-	var initial_shrink_time := 0.1
+	var initial_shrink_time := 0.05
 	var initial_darken_color := Color(0.7, 0.7, 0.7, 1.0)
 	
 	var bounce_scale := Vector2(1.1, 1.1)
-	var bounce_time := 0.2
+	var bounce_time := 0.1
 	
 	var final_scale := Vector2(1.0, 1.0)
 	var final_scale_time := 0.1
