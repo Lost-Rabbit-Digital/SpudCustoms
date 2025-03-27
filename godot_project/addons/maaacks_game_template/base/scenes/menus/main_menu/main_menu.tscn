@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c6k5nnpbypshi"]
+[gd_scene load_steps=11 format=3 uid="uid://c6k5nnpbypshi"]
 
 [ext_resource type="Script" uid="uid://bhgs1upaahk3y" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://hmx6o472ropw" path="res://addons/maaacks_game_template/base/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="2_qvrrd"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://dmkubt2nsnsbn" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/config_version_label.gd" id="6_pdiij"]
 [ext_resource type="Script" uid="uid://bkwlopi4qn32o" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/config_name_label.gd" id="7_j7612"]
 [ext_resource type="PackedScene" uid="uid://ds2balpmk3q1a" path="res://scenes/overlaid_menus/social_icons_menu.tscn" id="8_g46cd"]
+[ext_resource type="PackedScene" uid="uid://2r1b7k14gfsi" path="res://scenes/overlaid_menus/feedback_button_menu.tscn" id="10_k1p1p"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -98,8 +99,7 @@ script = ExtResource("7_j7612")
 
 [node name="SocialIconsMenu" parent="MenuContainer/TitleMargin" instance=ExtResource("8_g46cd")]
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
+size_flags_vertical = 8
 
 [node name="SubTitleMargin" type="MarginContainer" parent="MenuContainer"]
 layout_mode = 2
@@ -173,6 +173,9 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
 text = "Exit"
+
+[node name="FeedbackButtonMenu" parent="MenuContainer" instance=ExtResource("10_k1p1p")]
+layout_mode = 2
 
 [node name="OptionsContainer" type="MarginContainer" parent="."]
 unique_name_in_owner = true

@@ -12,23 +12,14 @@ script = ExtResource("2_lk0wa")
 options_packed_scene = ExtResource("3_lqjmk")
 credits_packed_scene = ExtResource("3_vmius")
 
-[node name="HBoxContainer" parent="MenuContainer/MenuButtonsMargin/IconsContainer" index="0"]
-alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MenuContainer/MenuButtonsMargin/IconsContainer/HBoxContainer" index="1"]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-alignment = 1
-
-[node name="TextureButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/IconsContainer/HBoxContainer/VBoxContainer" index="0"]
+[node name="MenuContainer_MenuButtonsMargin_IconsContainer_HBoxContainer_VBoxContainer#TextureButton" type="TextureButton" parent="." index="0"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 texture_normal = ExtResource("5_x31ro")
 texture_hover = ExtResource("6_x31ro")
 stretch_mode = 0
 
-[node name="PatreonButton" parent="MenuContainer/MenuButtonsMargin/IconsContainer/HBoxContainer" index="2"]
-visible = false
-
-[node name="KofiButton" parent="MenuContainer/MenuButtonsMargin/IconsContainer/HBoxContainer" index="3"]
-visible = false
+[node name="MenuContainer_MenuButtonsMargin_IconsContainer_HBoxContainer#VBoxContainer" type="VBoxContainer" parent="." index="2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+alignment = 1
