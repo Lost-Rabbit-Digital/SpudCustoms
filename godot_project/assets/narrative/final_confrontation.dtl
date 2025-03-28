@@ -156,7 +156,7 @@ else: # dismantle
     leave player_character
 
 # Common ending for all paths
-[background arg="res://assets/narrative/victory_scene.png" fade="2.0"]
+[background arg="res://assets/narrative/russet_standoff.png" fade="2.0"]
 join narrator [z_index="1"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 narrator: The fall of Root Reserve sparks a wildfire of change across Spud.
@@ -167,7 +167,7 @@ narrator: Potatoes in every province rise up, embracing a new vision for their n
 leave narrator
 
 join player_character [z_index="1"]
-[background arg="res://assets/narrative/victory_scene.png" fade="2.0"]
+[background arg="res://assets/narrative/credits.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 sweet_potato_sasha: "As long as we stay true to our roots, to the ideals that brought us here... we'll find a way."
