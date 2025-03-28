@@ -6,17 +6,18 @@ join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Adequate work today, sprout. Remember, efficiency is key. We have quotas to meet.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Don't forget to grab your ration of Root Reserve. "It's the flavor of Spud's future!"
+supervisor_russet: Don't forget to grab your ration of [color=DARK_VIOLET]Root Reserve[/color]. [pulse freq=1.0 color=#00ff0040]"It's the flavor of Spud's future!"[/pulse]
 leave supervisor_russet
 
 [background arg="res://assets/narrative/suspicious_note.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-A small note slips out from some papers on your desk: "Not all is as it seems. The roots of our nation have grown rotten. Follow the trail, but take care not to be silenced. - A friend"
+A small note slips out from some papers on your desk.
+[color=GOLD][shake rate=20.0 level=5 connected=0]"Not all is as it seems. [br] The roots of our nation have grown rotten. [br] Follow the trail, but take care not to be silenced. [br][br] - A friend"[/shake][/color]
 
 [background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-player_character: That note... and the way Russet dodged my question about rejected potatoes... Something feels off.
+player_character: That note... and the way Russet dodged my question about [color=CRIMSON]rejected potatoes[/color]... [br] [pulse freq=0.8 color=#ff000030]Something feels off.[/pulse]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-player_character: I should stay alert. There's more going on here than stamping passports.
+player_character: I should stay [color=YELLOW]alert[/color]. There's more going on here than stamping passports.
 leave player_character
