@@ -89,6 +89,7 @@ variables={
 "hideout_response": "none",
 "initial_response": "none",
 "resistance_trust": "none",
+"reveal_reaction": "none",
 "romance_ending": "none",
 "sasha_investigation": "none",
 "scanner_response": "none",

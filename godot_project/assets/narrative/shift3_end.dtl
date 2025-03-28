@@ -37,7 +37,6 @@ if {reveal_reaction} == "shocked":
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 	sweet_potato_sasha: Cannibalism with extra steps. That's what Root Reserve is. And we've been helping select their ingredients.
 	leave sweet_potato_sasha
-
 else:
 	join sweet_potato_sasha [z_index="1"]
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
