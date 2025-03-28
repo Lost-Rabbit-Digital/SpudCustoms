@@ -115,7 +115,6 @@ func init(sprite: AnimatedSprite2D) -> void:
 	
 	# Create audio player for emote sounds
 	emote_audio_player = AudioStreamPlayer.new()
-	emote_audio_player.volume_db = -6.0
 	add_child(emote_audio_player)
 	
 	# Hide the emote sprite initially
@@ -252,8 +251,14 @@ func _play_emote_sound() -> void:
 		# Set the stream to the audio player
 		emote_audio_player.stream = stream
 		
-		# Apply random pitch shift (between 0.8 and 1.2)
-		emote_audio_player.pitch_scale = randf_range(0.8, 1.2)
+		# Apply random pitch shift
+		emote_audio_player.pitch_scale = randf_range(0.6, 1.2)
+		
+		# Set Bus
+		emote_audio_player.bus = "SFX"
+		
+		# Set volume
+		emote_audio_player.volume_db = -16.00
 		
 		# Play the sound
 		emote_audio_player.play()

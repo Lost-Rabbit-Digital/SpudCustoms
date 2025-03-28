@@ -69,7 +69,7 @@ func _ready() -> void:
 	emote_system = emote_system_instance
 	
 	# Show thinking dots when the character first appears
-	_show_thinking()
+	#_show_thinking()
 	
 	# Initialize character generator if not already present
 	if !has_node("CharacterGenerator"):
@@ -123,7 +123,7 @@ func change_brain_state(new_state: int) -> void:
 			emote_system.show_emote(emote_system.EmoteType.ANGRY_FACE)
 
 ## Bind this to an input action or call it when the character is interacted with
-func interact() -> void:
+func interact_with_potato() -> void:
 	# Show a happy emote when interacted with
 	change_brain_state(PotatoBrainState.HAPPY)
 	
@@ -134,7 +134,7 @@ func interact() -> void:
 ## Shows the thinking dots animation
 func _show_thinking() -> void:
 	# Choose between dots or question mark
-	if randf() < 0.7:  # 70% chance for dots
+	if randf() < 0.3:  # 30% chance for dots
 		emote_system.show_thinking_dots()
 	else:
 		emote_system.show_emote(emote_system.EmoteType.QUESTION)
@@ -345,3 +345,7 @@ func spawn_footprint():
 		var old_footprint = footprints.pop_front()
 		if old_footprint and is_instance_valid(old_footprint):
 			old_footprint.queue_free()
+
+
+func _on_potato_button_pressed() -> void:
+	interact_with_potato()
