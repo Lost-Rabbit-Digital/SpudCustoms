@@ -139,6 +139,12 @@ position = Vector2(0, -23)
 sprite_frames = SubResource("SpriteFrames_oxqnl")
 script = ExtResource("4_1mn5y")
 
+[node name="PotatoButton" type="TextureButton" parent="."]
+offset_left = -7.0
+offset_top = -10.0
+offset_right = 8.0
+offset_bottom = 11.0
+
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -149,3 +155,5 @@ shape = SubResource("CapsuleShape2D_oxqnl")
 texture = ExtResource("2_p5u1t")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="pressed" from="PotatoButton" to="." method="_on_potato_button_pressed"]
