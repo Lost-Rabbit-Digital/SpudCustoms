@@ -33,22 +33,22 @@ set {hide_choice} = "none"
 set {hide_choice} = "window"
 
 if {hide_choice} == "desk":
-[background arg="res://assets/narrative/under_desk.png" fade="2.0"]
-join player_character [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-player_character: You dive under Russet's desk as he enters, your heart pounding. He sits, his feet inches from your face.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-player_character: "Russet here. What? Another alarm? I'm on my way." He leaves, and you escape.
-leave player_character
+	[background arg="res://assets/narrative/hide_under_desk.png" fade="0.7"]
+	join player_character [z_index="1"]
+	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+	player_character: You dive under Russet's desk as he enters, your heart pounding. He sits, his feet inches from your face.
+	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	player_character: "Russet here. What? Another alarm? I'm on my way." He leaves, and you escape.
+	leave player_character
 
 else:
-[background arg="res://assets/narrative/window_escape.png" fade="2.0"]
-join player_character [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-player_character: You wrench open the window and jump. Thankfully it's only one story. A guard shouts: "Hey! Stop!"
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-player_character: You sprint across the grounds and manage to lose your pursuers.
-leave player_character
+	[background arg="res://assets/narrative/jump_out_window.png" fade="0.3"]
+	join player_character [z_index="1"]
+	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	player_character: You wrench open the window and jump. Thankfully it's only one story. A guard shouts: "Hey! Stop!"
+	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+	player_character: You sprint across the grounds and manage to lose your pursuers.
+	leave player_character
 
 [background arg="res://assets/narrative/resistance_base.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
