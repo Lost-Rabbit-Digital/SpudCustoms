@@ -1,7 +1,7 @@
 # shift7_end.dtl
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
 
-[background arg="res://assets/narrative/resistance_meeting.png" fade="2.0"]
+[background arg="res://assets/narrative/resistance_base.png" fade="2.0"]
 join resistance_leader [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 resistance_leader: After your shift, you're led to a secret resistance meeting in an abandoned starch factory.
@@ -17,7 +17,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 resistance_leader: The leader pounds a fist on the table. This ends now. We have a plan to strike at the heart of their operation.
 leave resistance_leader
 
-[background arg="res://assets/narrative/attack_plans.png" fade="2.0"]
+[background arg="res://assets/narrative/resistance_planning.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Sasha unfurls detailed plans on the table. In three days, we launch our primary offensive.
@@ -68,7 +68,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 sweet_potato_sasha: Sometimes you have to risk everything to change anything.
 leave sweet_potato_sasha
 
-[background arg="res://assets/narrative/resistance_debate.png" fade="2.0"]
+[background arg="res://assets/narrative/resistance_base.png" fade="2.0"]
 join resistance_leader [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 resistance_leader: A heated debate breaks out among the resistance members.
@@ -130,7 +130,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 resistance_leader: We'll proceed without counting on your help. Search your conscience.
 leave resistance_leader
 
-[background arg="res://assets/narrative/night_return.png" fade="2.0"]
+[background arg="res://assets/narrative/night_attack.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: As the meeting breaks up, Sasha walks with you back toward the checkpoint.
@@ -138,7 +138,7 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 sweet_potato_sasha: Whatever happens... thank you for everything you've done.
 leave sweet_potato_sasha
 
-[background arg="res://assets/narrative/checkpoint_night_return.png" fade="2.0"]
+[background arg="res://assets/narrative/night_attack.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 player_character: You return to your quarters at the checkpoint, mind racing with the weight of coming events.

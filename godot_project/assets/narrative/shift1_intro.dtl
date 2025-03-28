@@ -1,6 +1,6 @@
 # shift1_intro.dtl
 audio music "res://assets/audio/ambient/wind_outside.wav" [fade="2.0" volume="1.0" bus="Music"]
-[background arg="res://assets/narrative/nation_of_spud_1.png" fade="0.0"]
+[background arg="res://assets/narrative/nation_of_spud.png" fade="0.0"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 join narrator [z_index="1"]
 narrator: Welcome to the nation of Spud. A land of prosperity for all potatoes.
@@ -8,19 +8,19 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 narrator: You've been selected for a crucial role in protecting our borders.
 leave narrator
 
-[background arg="res://assets/narrative/checkpoint_interior.jpg" fade="2.0"]
+[background arg="res://assets/narrative/checkpoint_interior.png" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: Your duty: to process incoming potatoes. Your family's well-being depends on your performance.
 leave narrator
 
-[background arg="res://assets/narrative/great_wall_of_spud.jpg" fade="2.0"]
+[background arg="res://assets/narrative/great_wall_of_spud.png" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: BEHOLD! The mighty wall that safeguards our nation. This is where you'll serve, ensuring only the worthy enter.
 leave narrator
 
-[background arg="res://assets/narrative/supervisor_presenting_1.png" fade="2.0"]
+[background arg="res://assets/narrative/supervisor_presenting.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Ah, the new sprout. Listen carefully, your role is vital to Spud's security.
@@ -45,7 +45,7 @@ else:
 	supervisor_russet: Focus on your duties. Nothing more.
 	leave supervisor_russet
 
-[background arg="res://assets/narrative/gameplay.png" fade="2.0"]
+[background arg="res://assets/narrative/checkpoint_booth.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Your first shift begins now. Check papers carefully, deny those who don't meet our standards.

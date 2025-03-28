@@ -13,7 +13,7 @@ leave supervisor_russet
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 A small note slips out: "Not all is as it seems. The roots of our nation have grown rotten. Follow the trail, but take care not to be silenced. - A friend"
 
-[background arg="res://assets/narrative/questioning_identity.png" fade="2.0"]
+[background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 player_character: That note... and the way Russet dodged my question about rejected potatoes... Something feels off.

@@ -1,13 +1,13 @@
 # shift8_intro.dtl
 audio music "res://assets/audio/ambient/horror_drone_23.wav" [fade="2.0" volume="-5.0" bus="Music"]
 
-[background arg="res://assets/narrative/heightened_security.png" fade="2.0"]
+[background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: The checkpoint has transformed into a military outpost. Elite guards in black uniforms patrol with weapons displayed.
 leave narrator
 
-[background arg="res://assets/narrative/special_security_team.png" fade="2.0"]
+[background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 join security_chief [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 security_chief: I am Chief Security Officer Yukon, dispatched from the capital by Prime Minister Idaho.
@@ -17,7 +17,7 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 security_chief: All officers will submit to loyalty screening. Suspicious behavior means detention and processing.
 leave security_chief
 
-[background arg="res://assets/narrative/supervisor_report.png" fade="2.0"]
+[background arg="res://assets/narrative/occupation_checkpoint.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Full cooperation with Security is mandatory. My reports on each of you have been provided to the Chief.
@@ -25,7 +25,7 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 supervisor_russet: Russet's gaze lingers on you uncomfortably before moving on.
 leave supervisor_russet
 
-[background arg="res://assets/narrative/identity_scanner.png" fade="2.0"]
+[background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 join security_chief [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 security_chief: This is the IdentityScan 5000. It analyzes biometrics to detect infiltrators and sympathizers.
@@ -33,7 +33,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 security_chief: Anyone flagged faces enhanced interrogation. Use it without exception.
 leave security_chief
 
-[background arg="res://assets/narrative/missing_sasha.png" fade="2.0"]
+[background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
 join fellow_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 fellow_officer: Have you seen Sasha? She didn't report for roll call. Last night, security forces entered her quarters.
@@ -60,7 +60,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 fellow_officer: The officer slips you a note: "Clean your station of anything suspicious."
 leave fellow_officer
 
-[background arg="res://assets/narrative/interrogation_screen.png" fade="2.0"]
+[background arg="res://assets/narrative/interrogation_setting.png" fade="2.0"]
 join security_chief [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 security_chief: You've been at this checkpoint for quite some time. Interesting performance record.
@@ -91,7 +91,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 security_chief: You'll provide a complete statement. If your information proves valuable, perhaps we'll overlook your delayed reporting.
 leave security_chief
 
-[background arg="res://assets/narrative/checkpoint_station_monitored.png" fade="2.0"]
+[background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 join security_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 security_officer: I'll be monitoring your work today. Every traveler must be identity-scanned. No exceptions.
