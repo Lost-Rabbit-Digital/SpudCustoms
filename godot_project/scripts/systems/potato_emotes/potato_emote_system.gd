@@ -258,7 +258,7 @@ func _play_emote_sound() -> void:
 		emote_audio_player.bus = "SFX"
 		
 		# Set volume
-		emote_audio_player.volume_db = -12.00
+		emote_audio_player.volume_db = -16.00
 		
 		# Play the sound
 		emote_audio_player.play()
