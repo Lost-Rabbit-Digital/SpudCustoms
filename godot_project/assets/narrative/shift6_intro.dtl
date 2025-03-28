@@ -1,13 +1,13 @@
 # shift6_intro.dtl
 audio music "res://assets/audio/ambient/horror_drone_12.wav" [fade="2.0" volume="-5.0" bus="Music"]
 
-[background arg="res://assets/narrative/facility_lockdown.png" fade="2.0"]
+[background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: The border facility is in complete lockdown, with armed security patrolling every corridor.
 leave narrator
 
-[background arg="res://assets/narrative/emergency_alert.png" fade="2.0"]
+[background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: ATTENTION! LEVEL RED security situation! Classified documents were stolen last night.
@@ -15,13 +15,13 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 supervisor_russet: We have a traitor in our midst. Anyone withholding information will be treated as complicit.
 leave supervisor_russet
 
-[background arg="res://assets/narrative/security_scanning.png" fade="2.0"]
+[background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
 join security_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 security_officer: All officers, line up for security scanning. Those with elevated stress responses will be flagged.
 leave security_officer
 
-[background arg="res://assets/narrative/nervous_queue.png" fade="2.0"]
+[background arg="res://assets/narrative/interrogation_setting.png" fade="2.0"]
 join fellow_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 fellow_officer: Have you seen what's happening outside? Pamphlets everywhere showing Root Reserve is made from... from us.
@@ -52,7 +52,7 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 fellow_officer: Their expression becomes guarded. Of course. Loyal Spud forever.
 leave fellow_officer
 
-[background arg="res://assets/narrative/interrogation_room.png" fade="2.0"]
+[background arg="res://assets/narrative/interrogation_setting.png" fade="2.0"]
 join security_chief [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 security_chief: State your whereabouts last night between 2200 and 0400 hours.
@@ -75,7 +75,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 security_chief: Legal representative? This is a security procedure, not a trial. Your refusal has been noted.
 leave security_chief
 
-[background arg="res://assets/narrative/secret_meeting.png" fade="2.0"]
+[background arg="res://assets/narrative/resistance_planning.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: It's working. The manifests have caused an uproar, but Russet suspects us.
@@ -102,7 +102,7 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 sweet_potato_sasha: We're way past that point. Laying low won't save us. Only bringing down the system will.
 leave sweet_potato_sasha
 
-[background arg="res://assets/narrative/new_uv_scanner.png" fade="2.0"]
+[background arg="res://assets/narrative/resistance_planning.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Each station now has the VeracityScan UV system. It detects unauthorized markings and forgeries.

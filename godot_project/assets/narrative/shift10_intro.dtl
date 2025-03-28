@@ -2,100 +2,100 @@
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-15.0" bus="Music"]
 
 if {stay_or_go} == "stay":
-	# Storyline for those who stayed at their post
-	[background arg="res://assets/narrative/martial_law_checkpoint.png" fade="2.0"]
-	join narrator [z_index="1"]
-	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
-	narrator: The checkpoint has been rebuilt after the resistance attack. Security is unprecedented, with propaganda broadcasts praising the "brave defenders."
-	leave narrator
-	
-	[background arg="res://assets/narrative/supervisor_promotion.png" fade="2.0"]
-	join supervisor_russet [z_index="1"]
-	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
-	supervisor_russet: "I've been promoted to Regional Director of Border Security and Root Reserve Distribution."
-	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
-	supervisor_russet: Russet pins a small medal to your uniform. "For unwavering loyalty to Spud."
-	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
-	supervisor_russet: "I have a special assignment - Prime Minister Idaho will be inspecting our facility today. You've been selected for demonstration."
-	leave supervisor_russet
-	
-	[background arg="res://assets/narrative/whispers_of_doubt.png" fade="2.0"]
-	join npc_1 [z_index="1"]
-	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
-	npc_1: "Have you seen the new batch of Root Reserve? They're calling it 'Resistance Blend' after what happened to those captives."
-	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
-	npc_1: "Some are saying the resistance wasn't completely wrong. That there's evidence they were telling the truth..."
-	
-	set {fellow_officer_response_2} = "none"
+    # Storyline for those who stayed at their post
+    [background arg="res://assets/narrative/occupation_checkpoint.png" fade="2.0"]
+    join narrator [z_index="1"]
+    audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
+    narrator: The checkpoint has been rebuilt after the resistance attack. Security is unprecedented, with propaganda broadcasts praising the "brave defenders."
+    leave narrator
+    
+    [background arg="res://assets/narrative/occupation_checkpoint.png" fade="2.0"]
+    join supervisor_russet [z_index="1"]
+    audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
+    supervisor_russet: "I've been promoted to Regional Director of Border Security and Root Reserve Distribution."
+    audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
+    supervisor_russet: Russet pins a small medal to your uniform. "For unwavering loyalty to Spud."
+    audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
+    supervisor_russet: "I have a special assignment - Prime Minister Idaho will be inspecting our facility today. You've been selected for demonstration."
+    leave supervisor_russet
+    
+    [background arg="res://assets/narrative/occupation_checkpoint.png" fade="2.0"]
+    join npc_1 [z_index="1"]
+    audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
+    npc_1: "Have you seen the new batch of Root Reserve? They're calling it 'Resistance Blend' after what happened to those captives."
+    audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
+    npc_1: "Some are saying the resistance wasn't completely wrong. That there's evidence they were telling the truth..."
+    
+    set {fellow_officer_response_2} = "none"
 - "Be careful. Even talking like that is dangerous now."
-		set {fellow_officer_response_2} = "cautious"
+        set {fellow_officer_response_2} = "cautious"
 - "I've had the same thoughts. This doesn't feel right."
-	set {fellow_officer_response_2} = "sympathetic"
+    set {fellow_officer_response_2} = "sympathetic"
 
 if {fellow_officer_response_2} == "cautious":
-	join npc_1 [z_index="1"]
-	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
-	npc_1: "Not everyone believes the official story anymore. Keep your eyes open during the Prime Minister's visit."
-	leave 
+    join npc_1 [z_index="1"]
+    audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
+    npc_1: "Not everyone believes the official story anymore. Keep your eyes open during the Prime Minister's visit."
+    leave 
 
 else:
-	join npc_1 [z_index="1"]
-	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
-	npc_1: "There's a new resistance forming. Quieter, more careful. If you want to know more... watch for the yellow spud emblem."
-	leave 
+    join npc_1 [z_index="1"]
+    audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
+    npc_1: "There's a new resistance forming. Quieter, more careful. If you want to know more... watch for the yellow spud emblem."
+    leave 
 
-	[background arg="res://assets/narrative/prime_minister_arrival.png" fade="2.0"]
-	join announcer  [z_index="1"]
-	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
-	announcer: "ATTENTION: Prime Minister Idaho's motorcade has arrived. All officers to assigned stations. Inspection protocols in effect."
-	leave announcer
+    [background arg="res://assets/narrative/official_arrival.png" fade="2.0"]
+    join announcer  [z_index="1"]
+    audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
+    announcer: "ATTENTION: Prime Minister Idaho's motorcade has arrived. All officers to assigned stations. Inspection protocols in effect."
+    leave announcer
 
-	[background arg="res://assets/narrative/checkpoint_station_prepared.png" fade="2.0"]
-	join player_character [z_index="1"]
-	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
-	player_character: Your medal feels heavy - a reward for loyalty, or a mark of shame? Soon you'll face the architect of Root Reserve.
-	leave player_character
+    [background arg="res://assets/narrative/official_arrival.png" fade="2.0"]
+    join player_character [z_index="1"]
+    audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
+    player_character: Your medal feels heavy - a reward for loyalty, or a mark of shame? Soon you'll face the architect of Root Reserve.
+    leave player_character
 
 else:
-	# Storyline for those who joined the resistance
-	[background arg="res://assets/narrative/resistance_hideout.png" fade="2.0"]
-	join narrator [z_index="1"]
-	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
-	narrator: After the broadcast exposing Root Reserve, uprisings have erupted across Spud. Prime Minister Idaho remains barricaded in the administration building.
-	leave narrator
-	
-	[background arg="res://assets/narrative/strategy_meeting.png" fade="2.0"]
-	join npc_1 [z_index="1"]
-	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
-	npc_1: "Idaho plans one final broadcast to blame Root Reserve on us. We cannot let him rewrite history. Today, we end his regime."
-	leave 
-	
-	[background arg="res://assets/narrative/sasha_recovery.png" fade="2.0"]
-	join sweet_potato_sasha [z_index="1"]
-	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
-	sweet_potato_sasha: "You saved my life at the processing plant. Now we have a chance to save all of Spud."
-	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
-	sweet_potato_sasha: "Your knowledge of security protocols will be crucial for the final mission. Are you ready?"
-	
-	set {final_mission_response} = "none"
-	- "I'm ready. Let's finish what we started."
-		set {final_mission_response} = "determined"
+    # Storyline for those who joined the resistance
+    [background arg="res://assets/narrative/resistance_planning.png" fade="2.0"]
+    join narrator [z_index="1"]
+    audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
+    narrator: After the broadcast exposing Root Reserve, uprisings have erupted across Spud. Prime Minister Idaho remains barricaded in the administration building.
+    leave narrator
+    
+    [background arg="res://assets/narrative/resistance_planning.png" fade="2.0"]
+    join npc_1 [z_index="1"]
+    audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
+    npc_1: "Idaho plans one final broadcast to blame Root Reserve on us. We cannot let him rewrite history. Today, we end his regime."
+    leave 
+    
+    [background arg="res://assets/narrative/resistance_planning.png" fade="2.0"]
+    join sweet_potato_sasha [z_index="1"]
+    audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
+    sweet_potato_sasha: "You saved my life at the processing plant. Now we have a chance to save all of Spud."
+    audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
+    sweet_potato_sasha: "Your knowledge of security protocols will be crucial for the final mission. Are you ready?"
+    
+    set {final_mission_response} = "none"
+    - "I'm ready. Let's finish what we started."
+        set {final_mission_response} = "determined"
 - "What exactly is the plan? I need details."
-	set {final_mission_response} = "cautious"
+    set {final_mission_response} = "cautious"
 
 if {final_mission_response} == "determined":
-	join sweet_potato_sasha [z_index="1"]
-	audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
-	sweet_potato_sasha: "I knew you wouldn't back down. You're one of our strongest allies."
-	leave sweet_potato_sasha
+    join sweet_potato_sasha [z_index="1"]
+    audio "res://assets/audio/typing_on_a_keyboard_3.wav" [volume="-15.0" bus="SFX"]
+    sweet_potato_sasha: "I knew you wouldn't back down. You're one of our strongest allies."
+    leave sweet_potato_sasha
 
 else:
-	join sweet_potato_sasha [z_index="1"]
-	audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
-	sweet_potato_sasha: "We'll infiltrate using government uniforms. You'll help bypass security systems. Our goal is to capture Idaho and force a public confession."
-	leave sweet_potato_sasha
+    join sweet_potato_sasha [z_index="1"]
+    audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
+    sweet_potato_sasha: "We'll infiltrate using government uniforms. You'll help bypass security systems. Our goal is to capture Idaho and force a public confession."
+    leave sweet_potato_sasha
 
-[background arg="res://assets/narrative/resistance_armor.png" fade="2.0"]
+[background arg="res://assets/narrative/resistance_planning.png" fade="2.0"]
 join resistance_member_2 [z_index="1"]
 audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
 resistance_member_2: "You'll be on Team Alpha with Sasha, breaching the east entrance. Your objective: secure the broadcast center."

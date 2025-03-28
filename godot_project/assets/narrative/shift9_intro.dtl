@@ -1,13 +1,13 @@
 # shift9_intro.dtl
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
 
-[background arg="res://assets/narrative/facility_lockdown_extreme.png" fade="2.0"]
+[background arg="res://assets/narrative/extreme_emergency.png" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: The border resembles a war zone. Barricades, armored vehicles, and elite guards stand ready. Today is when the resistance planned to strike.
 leave narrator
 
-[background arg="res://assets/narrative/emergency_broadcast_system.png" fade="2.0"]
+[background arg="res://assets/narrative/extreme_emergency.png" fade="2.0"]
 join announcer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 announcer: EMERGENCY BROADCAST: All of Spud is under martial law. "The Resistance" has launched attacks against government facilities.
@@ -15,7 +15,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 announcer: Anyone aiding these extremists faces immediate processing. The Ministry confirms: Root Reserve remains safe for all loyal potatoes.
 leave announcer
 
-[background arg="res://assets/narrative/widespread_unrest.png" fade="2.0"]
+[background arg="res://assets/narrative/extreme_emergency.png" fade="2.0"]
 join security_chief [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 security_chief: Rioting has broken out in multiple sectors. Resistance cells have attacked three Root Reserve facilities.
@@ -40,7 +40,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 supervisor_russet: The traitor will be processed immediately. A special batch of Root Reserve, made from the terrorists themselves.
 leave supervisor_russet
 
-[background arg="res://assets/narrative/checkpoint_maximum_security.png" fade="2.0"]
+[background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 join security_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 security_officer: All border crossings are suspended except for essential personnel with Level Alpha clearance.
@@ -48,7 +48,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 security_officer: This scanner cannot be fooled. Sound the alarm immediately for anyone without proper clearance.
 leave security_officer
 
-[background arg="res://assets/narrative/resistance_operative_approach.png" fade="2.0"]
+[background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 join resistance_operative [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 resistance_operative: A potato in official uniform approaches with seemingly perfect Alpha credentials.
@@ -57,7 +57,7 @@ resistance_operative: A tiny blue card falls from the folder. "The roots grow de
 
 set {critical_choice} = "none"
 - "Process them through, ignoring the scanner alerts" (Help the resistance)
-	set {critical_choice} = "help"
+    set {critical_choice} = "help"
 - "Sound the alarm immediately" (Betray the resistance)
 set {critical_choice} = "betray"
 
@@ -75,7 +75,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 supervisor_russet: "Excellent work. Your loyalty will be rewarded."
 leave resistance_operative
 
-[background arg="res://assets/narrative/distant_explosions.png" fade="2.0"]
+[background arg="res://assets/narrative/night_attack.png" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: Suddenly, the facility shakes with explosions. The resistance attack has begun, regardless of your choice.
@@ -86,7 +86,7 @@ join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 player_character: Do I stay at my post and hope this blows over, or take a stand and risk everything to expose the truth?
 - "I can't abandon my duty. I'll stay quiet and hope for the best."
-	set {stay_or_go} = "stay"
+    set {stay_or_go} = "stay"
 - "I've been complicit for too long. It's time to fight for what's right."
 set {stay_or_go} = "go"
 leave player_character

@@ -1,7 +1,7 @@
 # shift7_intro.dtl
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
 
-[background arg="res://assets/narrative/root_reserve_reveal.png" fade="2.0"]
+[background arg="res://assets/narrative/resistance_planning.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Good, you made it. The resistance is growing stronger. Thanks to those manifests, people are seeing the truth.
@@ -18,13 +18,13 @@ player_character: Quotas for each checkpoint, with Spud Customs having the highe
 leave sweet_potato_sasha
 leave player_character
 
-[background arg="res://assets/narrative/city_riots.png" fade="2.0"]
+[background arg="res://assets/narrative/night_attack.png" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: The situation outside has deteriorated. Angry crowds gather at checkpoints demanding answers about Root Reserve.
 leave narrator
 
-[background arg="res://assets/narrative/emergency_broadcast.png" fade="2.0"]
+[background arg="res://assets/narrative/extreme_emergency.png" fade="2.0"]
 join announcer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 announcer: EMERGENCY BROADCAST: Recent circulation of forged documents has caused unnecessary panic.
@@ -34,7 +34,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 announcer: Consuming or distributing this propaganda is now classified as high treason.
 leave announcer
 
-[background arg="res://assets/narrative/facility_interior_enhanced_security.png" fade="2.0"]
+[background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Today's shift will operate under special protocols. Each traveler must undergo Loyalty Assessment.
@@ -44,7 +44,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 supervisor_russet: The traitor in our midst will be found. And when they are... [draws finger across throat]
 leave supervisor_russet
 
-[background arg="res://assets/narrative/traveler_inspection.png" fade="2.0"]
+[background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 join traveler_1 [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 traveler_1: A nervous potato approaches, yellow leaf badge partially visible. A tiny note is tucked between papers: "Safe house compromised. New location: Warehouse 7, Sector 4."

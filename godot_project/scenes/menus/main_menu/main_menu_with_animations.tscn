@@ -443,7 +443,10 @@ modulate = Color(1, 1, 1, 0)
 [node name="MenuButtonsContainer" parent="MenuContainer/MenuButtonsMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 
-[node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
+[node name="FeedbackButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="1"]
 offset_left = -496.0
 offset_top = 112.0
 offset_right = 496.0
@@ -468,9 +471,6 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
 text = "Endless"
-
-[node name="FeedbackButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="1"]
-modulate = Color(1, 1, 1, 0)
 
 [node name="LevelSelectContainer" type="MarginContainer" parent="." index="9"]
 unique_name_in_owner = true
