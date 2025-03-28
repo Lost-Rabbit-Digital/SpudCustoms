@@ -54,7 +54,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 fellow_officer: The officer watches you leave. Hey, I get it. Lost my appetite too.
 leave fellow_officer
 
-[background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
+[background arg="res://assets/narrative/customs_office.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Convenient timing for new contraband rules, isn't it? They're trying to stop information about Root Reserve.
