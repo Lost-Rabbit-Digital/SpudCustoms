@@ -104,7 +104,6 @@ These are our goals, to-do tasks, and completed tasks.
 - Add pitch variation to the positive and negative score sound
 
 ### Menus
--
 
 ### Backend
 - Code: Move cursor system out of drag system
@@ -126,7 +125,6 @@ These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release
 - https://krinjl.itch.io/icons2
 
 
-
 ### Completed Tasks for 1.0.2
-- Added social iconss to main menu
+- Added social icons to main menu
 - Added emotes for potatoes in line

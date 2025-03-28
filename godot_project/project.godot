@@ -60,7 +60,6 @@ directories/dtl_directory={
 "shift10_intro": "res://assets/narrative/shift10_intro.dtl",
 "shift1_end": "res://assets/narrative/shift1_end.dtl",
 "shift1_intro": "res://assets/narrative/shift1_intro.dtl",
-"shift1_intro_bethesda": "res://assets/narrative/shift1_intro_bethesda.dtl",
 "shift2_intro": "res://assets/narrative/shift2_intro.dtl",
 "shift3_end": "res://assets/narrative/shift3_end.dtl",
 "shift3_intro": "res://assets/narrative/shift3_intro.dtl",

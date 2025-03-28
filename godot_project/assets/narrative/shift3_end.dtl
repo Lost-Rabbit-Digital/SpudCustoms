@@ -44,7 +44,7 @@ else:
 	sweet_potato_sasha: I've been collecting evidence for months. Keep your eyes open. You'll see I'm right.
 	leave sweet_potato_sasha
 
-[background arg="res://assets/narrative/night_attack.png" fade="2.0"]
+[background arg="res://assets/narrative/night_alarm.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 A distant alarm suddenly blares
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]

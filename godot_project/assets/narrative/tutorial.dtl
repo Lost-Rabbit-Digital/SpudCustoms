@@ -29,7 +29,7 @@ narrator: Your desk has stamps for marking documents and a missile launcher to s
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: To use a stamp, expand the stamp tray and drag a document underneath, then click the stamp.
 
-[background arg="res://assets/narrative/align_stamp_example.png" fade="0.8"]
+[background arg="res://assets/tutorial/align_stamp_example.png" fade="0.8"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: Be sure to place your documents in the designated areas underneath your stamps.
 

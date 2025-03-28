@@ -23,16 +23,3 @@ announcer: "...record production numbers for Root Reserve. The miracle food cont
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 announcer: "In other news, reports of missing potatoes continue. Authorities assure no connection..."
 leave announcer
-
-[background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
-join sweet_potato_sasha [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: How's your shift going? Just remember, every potato you reject is sent somewhere. Think about that.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Sasha glances at Russet's office before walking away.
-leave sweet_potato_sasha
-
-join supervisor_russet [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Getting friendly with Sasha, are we? Focus on your duty. Spud's safety is in your hands.
-leave supervisor_russet

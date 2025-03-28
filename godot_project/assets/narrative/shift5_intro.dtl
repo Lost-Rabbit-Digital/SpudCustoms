@@ -6,7 +6,7 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 narrator: The border facility feels different today. Tense. Security patrols in greater numbers as wary silence replaces chatter.
 leave narrator
 
-[background arg="res://assets/narrative/security_lockdown.png" fade="1.2"]
+[background arg="res://assets/narrative/supervisor_presenting.png" fade="1.2"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Last night, prohibited materials were discovered. Pamphlets containing lies about Root Reserve.
@@ -27,18 +27,18 @@ set {sasha_investigation} = "none"
 - "I'm in. Let's expose the truth."
 	set {sasha_investigation} = "committed"
 - "I don't know, Sasha...this could be dangerous."
-set {sasha_investigation} = "hesitant"
+	set {sasha_investigation} = "hesitant"
 
 if {sasha_investigation} == "committed":
-join sweet_potato_sasha [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Thank goodness. I knew you had stronger roots than the others. We'll meet at midnight.
-leave sweet_potato_sasha
+	join sweet_potato_sasha [z_index="1"]
+	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	sweet_potato_sasha: Thank goodness. I knew you had stronger roots than the others. We'll meet at midnight.
+	leave sweet_potato_sasha
 else:
-join sweet_potato_sasha [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Sometimes we have to risk getting mashed to do what's right. Think about it.
-leave sweet_potato_sasha
+	join sweet_potato_sasha [z_index="1"]
+	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	sweet_potato_sasha: Sometimes we have to risk getting mashed to do what's right. Think about it.
+	leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 join security_officer [z_index="1"]
@@ -49,18 +49,18 @@ set {loyalty_response} = "none"
 - "I serve to protect our borders from dangerous influences."
 	set {loyalty_response} = "patriotic"
 - "I serve to ensure everyone receives fair treatment."
-set {loyalty_response} = "idealistic"
+	set {loyalty_response} = "idealistic"
 
 if {loyalty_response} == "patriotic":
-join security_officer [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-security_officer: Good answer. Spud needs loyal protectors. Scanner reads green. Carry on, officer.
-leave security_officer
+	join security_officer [z_index="1"]
+	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+	security_officer: Good answer. Spud needs loyal protectors. Scanner reads green. Carry on, officer.
+	leave security_officer
 else:
-join security_officer [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-security_officer: The officer's eyebrows raise. Fair treatment? Scanner flashes amber. Remember, our primary concern is security, not fairness.
-leave security_officer
+	join security_officer [z_index="1"]
+	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+	security_officer: The officer's eyebrows raise. Fair treatment? Scanner flashes amber. Remember, our primary concern is security, not fairness.
+	leave security_officer
 
 [background arg="res://assets/narrative/checkpoint_booth.png" fade="2.0"]
 join supervisor_russet [z_index="1"]

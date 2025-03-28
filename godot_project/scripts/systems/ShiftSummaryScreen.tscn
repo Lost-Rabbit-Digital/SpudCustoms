@@ -1,12 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://dsobjoevgmlbb"]
+[gd_scene load_steps=9 format=3 uid="uid://dsobjoevgmlbb"]
 
 [ext_resource type="Script" uid="uid://buqr1l0oc2207" path="res://scripts/systems/ShiftSummaryScreen.gd" id="1_lf5e7"]
 [ext_resource type="LabelSettings" uid="uid://bnemubwwr558w" path="res://assets/styles/ShiftSummaryHeaderText.tres" id="2_68n1l"]
 [ext_resource type="LabelSettings" uid="uid://skp252vibaj1" path="res://assets/styles/ShiftSummaryBodyText.tres" id="3_oti8t"]
 [ext_resource type="LabelSettings" uid="uid://2s03ew43w0st" path="res://assets/styles/LeaderboardSummaryBodyText.tres" id="3_se1pp"]
-[ext_resource type="Texture2D" uid="uid://jnkry01ogbb2" path="res://assets/menu/shift_summary_end_screen.png" id="4_2of0t"]
 [ext_resource type="PackedScene" uid="uid://dk47bwveebyio" path="res://scripts/systems/PotatoRain.tscn" id="5_oti8t"]
-[ext_resource type="Texture2D" uid="uid://cbmfot3bx30yf" path="res://assets/narrative/aftermath.png" id="6_3rq7k"]
 [ext_resource type="Texture2D" uid="uid://q1xxjsehtnrp" path="res://assets/menu/performance_stamp_inactive.png" id="6_4t6eu"]
 [ext_resource type="Texture2D" uid="uid://ctef0hoky4rwi" path="res://assets/menu/leaderboard.png" id="6_r15em"]
 [ext_resource type="Texture2D" uid="uid://c5ffltpskgqiw" path="res://assets/menu/shift_summary_journal.png" id="7_klx14"]
@@ -247,18 +245,6 @@ position = Vector2(230, 316)
 scale = Vector2(3, 3)
 texture = ExtResource("6_4t6eu")
 
-[node name="Background" type="TextureRect" parent="."]
-visible = false
-z_index = 6
-z_as_relative = false
-layout_mode = 2
-offset_left = 111.0
-offset_top = 80.0
-offset_right = 1192.0
-offset_bottom = 632.0
-texture = ExtResource("4_2of0t")
-expand_mode = 1
-
 [node name="LeaderboardBackground" type="TextureRect" parent="."]
 z_index = 25
 z_as_relative = false
@@ -295,7 +281,6 @@ offset_top = 20.0
 offset_right = 1914.0
 offset_bottom = 1100.0
 scale = Vector2(0.667597, 0.667597)
-texture = ExtResource("6_3rq7k")
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
