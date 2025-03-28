@@ -1,6 +1,6 @@
 # shift9_end.dtl
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
-set {stay_or_go} = "go"
+set {stay_or_go} = "stay"
 if {stay_or_go} == "stay":
     [background arg="res://assets/narrative/loyalist_outcome.png" fade="0.0"]
     join player_character [z_index="1"]
@@ -26,8 +26,8 @@ if {stay_or_go} == "stay":
     audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
     player_character: Perhaps there's still a chance from the inside. Or maybe you're just easing your conscience.
     leave player_character
-else:
-    [background arg="res://assets/narrative/joining_rebellion.png" fade="0.0"]
+if {stay_or_go} == "go":
+    [background arg="res://assets/narrative/resistance_planning.png" fade="0.0"]
     join player_character [z_index="1"]
     audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
     player_character: You abandon your post and race toward the fighting. The time for caution is over.

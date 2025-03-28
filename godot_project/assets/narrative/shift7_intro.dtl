@@ -52,21 +52,20 @@ set {yellow_badge_response} = "none"
 - "Process them through quickly with the UV mark" (Help)
 	set {yellow_badge_response} = "help"
 - "Report them to security immediately" (Betray)
-set {yellow_badge_response} = "betray"
+	set {yellow_badge_response} = "betray"
 
 if {yellow_badge_response} == "help":
-join traveler_1 [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-traveler_1: Relief floods their face. "Thank you. The truth will prevail."
-leave traveler_1
-
+	join traveler_1 [z_index="1"]
+	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	traveler_1: Relief floods their face. "Thank you. The truth will prevail."
+	leave traveler_1
 else:
-join traveler_1 [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-traveler_1: Horror dawns as you signal security. "No, please! I have a family!" Their yellow badge falls to the floor.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: "Well done. Your loyalty is noted."
-leave traveler_1
+	join traveler_1 [z_index="1"]
+	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+	traveler_1: Horror dawns as you signal security. "No, please! I have a family!" Their yellow badge falls to the floor.
+	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	supervisor_russet: "Well done. Your loyalty is noted."
+	leave traveler_1
 
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
