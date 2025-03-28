@@ -1,11 +1,11 @@
 # final_confrontation.dtl
 [music path="res://assets/audio/ambient/2_wind_house.wav" fade="2.0" volume="-5.0" bus="Music"]
-[background arg="res://assets/narrative/final_chaos.png" fade="2.0"]
+[background arg="res://assets/narrative/final_chaos.png" fade="0.0"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 narrator: The Spud border is in chaos. Panicked potatoes flood checkpoints, desperate to escape after the leaked documents.
 
 join player_character [z_index="1"]
-[background arg="res://assets/narrative/extreme_emergency.png" fade="2.0"]
+[background arg="res://assets/narrative/extreme_emergency.png" fade="1.2"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: You slip through with Sasha. "We have to keep pushing! The people know the truth now."
 
@@ -20,9 +20,9 @@ resistance_member_2: "That place is a fortress. And now we've got a former custo
 
 set {resistance_trust} = "none"
 - "I understand your doubt, but I'm committed to this cause."
-    set {resistance_trust} = "diplomatic"
+	set {resistance_trust} = "diplomatic"
 - "I've already sacrificed everything. I won't back down now."
-    set {resistance_trust} = "committed"
+	set {resistance_trust} = "committed"
 
 if {resistance_trust} == "diplomatic":
     [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
@@ -39,9 +39,9 @@ leave player_character
 
 # Transition to facility breach - implied gameplay happened
 [music path="res://assets/audio/ambient/horror_drone_23.wav" fade="2.0" volume="-5.0" bus="Music"]
-[background arg="res://assets/narrative/processing_facility.png" fade="2.0"]
+[background arg="res://assets/narrative/processing_facility.png" fade="1.2"]
 join narrator [z_index="1"]
-[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0" bus="SFX"]
 narrator: After a tense infiltration, your team stands at the heart of Root Reserve, the horrific machinery of oppression laid bare.
 
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
@@ -84,17 +84,17 @@ player_character: "It's over, Idaho. Your secrets are exposed. How this ends... 
 
 set {ending_choice} = "none"
 - Negotiate a peaceful transition of power (Diplomatic)
-    set {ending_choice} = "diplomatic"
-    [signal arg="born_diplomat"]
+	set {ending_choice} = "diplomatic"
+	[signal arg="born_diplomat"]
 - Demand Idaho's immediate arrest (Justice)
-    set {ending_choice} = "justice"
-    [signal arg="tater_of_justice"]
+	set {ending_choice} = "justice"
+	[signal arg="tater_of_justice"]
 - Enact vigilante justice for Idaho's crimes (Vengeance)
-    set {ending_choice} = "vengeance"
-    [signal arg="best_served_hot"]
+	set {ending_choice} = "vengeance"
+	[signal arg="best_served_hot"]
 - Focus on dismantling Root Reserve infrastructure (Dismantle)
-    set {ending_choice} = "dismantle"
-    [signal arg="down_with_the_tatriarchy"]
+	set {ending_choice} = "dismantle"
+	[signal arg="down_with_the_tatriarchy"]
 leave player_character
 
 # Ending Choice Section

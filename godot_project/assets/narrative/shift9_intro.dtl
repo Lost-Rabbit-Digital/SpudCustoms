@@ -1,13 +1,12 @@
 # shift9_intro.dtl
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
-
-[background arg="res://assets/narrative/extreme_emergency.png" fade="2.0"]
+[background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: The border resembles a war zone. Barricades, armored vehicles, and elite guards stand ready. Today is when the resistance planned to strike.
 leave narrator
 
-[background arg="res://assets/narrative/extreme_emergency.png" fade="2.0"]
+[background arg="res://assets/narrative/extreme_emergency.png" fade="0.3"]
 join announcer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 announcer: EMERGENCY BROADCAST: All of Spud is under martial law. "The Resistance" has launched attacks against government facilities.
@@ -15,7 +14,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 announcer: Anyone aiding these extremists faces immediate processing. The Ministry confirms: Root Reserve remains safe for all loyal potatoes.
 leave announcer
 
-[background arg="res://assets/narrative/extreme_emergency.png" fade="2.0"]
+[background arg="res://assets/narrative/supervisor_presenting.png" fade="1.5"]
 join security_chief [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 security_chief: Rioting has broken out in multiple sectors. Resistance cells have attacked three Root Reserve facilities.
@@ -23,7 +22,7 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 security_chief: Their goal: access the central database with all production records. Any sign of disloyalty means processing.
 leave security_chief
 
-[background arg="res://assets/narrative/sasha_capture.png" fade="2.0"]
+[background arg="res://assets/narrative/sasha_capture.png" fade="1.5"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: We've captured several resistance operatives, including Officer Sasha.

@@ -1,13 +1,12 @@
 # shift6_intro.dtl
 audio music "res://assets/audio/ambient/horror_drone_12.wav" [fade="2.0" volume="-5.0" bus="Music"]
-
-[background arg="res://assets/narrative/occupation_checkpoint.png" fade="2.0"]
+[background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: The border facility is in complete lockdown, with armed security patrolling every corridor.
 leave narrator
 
-[background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
+[background arg="res://assets/narrative/security_lockdown.png" fade="1.2"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: ATTENTION! LEVEL RED security situation! Classified documents were stolen last night.
@@ -80,9 +79,9 @@ join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: It's working. The manifests have caused an uproar, but Russet suspects us.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Watch for potatoes with a yellow leaf badge during today's shift. They're with us.
+sweet_potato_sasha: Watch for allies from our organization during today's shift. You'll recognize them.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: If you can get them through safely, use the UV pass mark on their papers.
+sweet_potato_sasha: If you can get them through safely, use the special mark we discussed.
 
 set {sasha_plan_response} = "none"
 - "It's worth the risk. I'm in."
@@ -105,7 +104,7 @@ leave sweet_potato_sasha
 [background arg="res://assets/narrative/supervisor_presenting.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Each station now has the VeracityScan UV system. It detects unauthorized markings and forgeries.
+supervisor_russet: Each station now has the new VeracityScan system. It detects unauthorized markings and forgeries.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: All documents must be scanned before approval. The traitors will be rooted out. I guarantee it.
 leave supervisor_russet

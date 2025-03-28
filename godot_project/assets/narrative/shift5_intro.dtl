@@ -1,13 +1,12 @@
 # shift5_intro.dtl
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
-
-[background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
+[background arg="res://assets/narrative/checkpoint_corridor.png" fade="0.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: The border facility feels different today. Tense. Security patrols in greater numbers as wary silence replaces chatter.
 leave narrator
 
-[background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
+[background arg="res://assets/narrative/security_lockdown.png" fade="1.2"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Last night, prohibited materials were discovered. Pamphlets containing lies about Root Reserve.

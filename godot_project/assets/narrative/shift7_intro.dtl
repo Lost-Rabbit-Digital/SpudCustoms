@@ -1,7 +1,6 @@
 # shift7_intro.dtl
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
-
-[background arg="res://assets/narrative/resistance_planning.png" fade="2.0"]
+[background arg="res://assets/narrative/resistance_planning.png" fade="0.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Good, you made it. The resistance is growing stronger. Thanks to those manifests, people are seeing the truth.

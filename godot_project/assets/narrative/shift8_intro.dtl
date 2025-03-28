@@ -1,12 +1,12 @@
 # shift8_intro.dtl
 audio music "res://assets/audio/ambient/horror_drone_23.wav" [fade="2.0" volume="-5.0" bus="Music"]
-[background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
+[background arg="res://assets/narrative/security_lockdown.png" fade="0.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: The checkpoint has transformed into a military outpost. Elite guards in black uniforms patrol with weapons displayed.
 leave narrator
 
-[background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
+[background arg="res://assets/narrative/maximum_security.png" fade="1.5"]
 join security_chief [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 security_chief: I am Chief Security Officer Yukon, dispatched from the capital by Prime Minister Idaho.
@@ -16,7 +16,7 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 security_chief: All officers will submit to loyalty screening. Suspicious behavior means detention and processing.
 leave security_chief
 
-[background arg="res://assets/narrative/occupation_checkpoint.png" fade="2.0"]
+[background arg="res://assets/narrative/occupation_checkpoint.png" fade="1.2"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Full cooperation with Security is mandatory. My reports on each of you have been provided to the Chief.
@@ -24,7 +24,7 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 supervisor_russet: Russet's gaze lingers on you uncomfortably before moving on.
 leave supervisor_russet
 
-[background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
+[background arg="res://assets/narrative/maximum_security.png" fade="1.2"]
 join security_chief [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 security_chief: This is the IdentityScan 5000. It analyzes biometrics to detect infiltrators and sympathizers.

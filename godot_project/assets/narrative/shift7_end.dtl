@@ -1,7 +1,6 @@
 # shift7_end.dtl
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
-
-[background arg="res://assets/narrative/resistance_base.png" fade="2.0"]
+[background arg="res://assets/narrative/resistance_base.png" fade="0.0"]
 join narrator
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: After your shift, you're led to a secret resistance meeting in an abandoned starch factory.
@@ -19,7 +18,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 resistance_leader: The leader pounds a fist on the table. This ends now. We have a plan to strike at the heart of their operation.
 leave resistance_leader
 
-[background arg="res://assets/narrative/resistance_planning.png" fade="2.0"]
+[background arg="res://assets/narrative/resistance_planning.png" fade="1.2"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Sasha unfurls detailed plans on the table. In three days, we launch our primary offensive.

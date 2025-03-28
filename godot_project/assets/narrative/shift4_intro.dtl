@@ -1,24 +1,23 @@
 # shift4_intro.dtl
 audio music "res://assets/audio/ambient/horror_drone_23.wav" [fade="2.0" volume="-5.0" bus="Music"]
-
-[background arg="res://assets/narrative/checkpoint_booth.png" fade="2.0"]
+[background arg="res://assets/narrative/checkpoint_booth.png" fade="0.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: New security protocols today. We've received intelligence about smuggling operations.
+supervisor_russet: New security protocols today. We've received intelligence about suspicious activities.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: All travelers must be inspected for contraband with the ContraScanner 9000.
+supervisor_russet: All travelers must undergo enhanced inspection procedures.
 
-[background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
+[background arg="res://assets/narrative/maximum_security.png" fade="1.2"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Watch for nervous behavior, bulging pockets, or reluctance to make eye contact.
+supervisor_russet: Watch for nervous behavior, unusual mannerisms, or reluctance to make eye contact.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: All contraband must be confiscated and logged. For Spud's security, of course.
+supervisor_russet: All suspicious items must be confiscated and logged. For Spud's security, of course.
 leave supervisor_russet
 
 [background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
 join security_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-security_officer: We're especially concerned about seditious materials - anti-Root Reserve literature, photography equipment...
+security_officer: We're especially concerned about seditious materials - anti-government literature, photography equipment...
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 security_officer: Their voice drops ominously. We have special procedures for those individuals.
 leave security_officer
@@ -54,15 +53,15 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 fellow_officer: The officer watches you leave. Hey, I get it. Lost my appetite too.
 leave fellow_officer
 
-[background arg="res://assets/narrative/customs_office.png" fade="2.0"]
+[background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Convenient timing for new contraband rules, isn't it? They're trying to stop information about Root Reserve.
+sweet_potato_sasha: Convenient timing for new security protocols, isn't it? They're trying to stop information about Root Reserve.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Take this jammer. It'll disable scanners briefly. Some potatoes with "contraband" deserve to get through.
+sweet_potato_sasha: I have something that might help us. Some potatoes with vital information deserve to get through.
 leave sweet_potato_sasha
 
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-player_character: You touch the scanner jammer, considering. Today's choices could help spread truth... or silence it forever.
+player_character: You consider your options carefully. Today's choices could help spread truth... or silence it forever.
 leave player_character

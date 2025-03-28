@@ -12,7 +12,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 narrator: You've been selected for a crucial role in protecting our borders.
 leave narrator
 
-[background arg="res://assets/narrative/checkpoint_interior.jpg" fade="2.0"]
+[background arg="res://assets/narrative/checkpoint_interior.jpg" fade="1.2"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: Your duty: to process incoming potatoes and maintain our way of life.

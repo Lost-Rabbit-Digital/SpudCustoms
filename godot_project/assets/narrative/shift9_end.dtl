@@ -1,8 +1,8 @@
 # shift9_end.dtl
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
-set {stay_or_go} = "stay"
+set {stay_or_go} = "go"
 if {stay_or_go} == "stay":
-    [background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
+    [background arg="res://assets/narrative/loyalist_outcome.png" fade="0.0"]
     join player_character [z_index="1"]
     audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
     player_character: You hunker down as the battle rages. I'm sorry, Sasha. I'm not as brave as you.
@@ -31,7 +31,7 @@ if {stay_or_go} == "stay":
     leave player_character
 
 else:
-    [background arg="res://assets/narrative/joining_rebellion.png" fade="2.0"]
+    [background arg="res://assets/narrative/joining_rebellion.png" fade="0.0"]
     join player_character [z_index="1"]
     audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
     player_character: You abandon your post and race toward the fighting. The time for caution is over.
