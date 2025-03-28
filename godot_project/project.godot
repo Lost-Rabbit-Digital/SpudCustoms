@@ -42,17 +42,22 @@ gdscript/warnings/integer_division=0
 
 directories/dch_directory={
 "announcer": "res://assets/narrative/characters/announcer.dch",
+"fellow_officer": "res://assets/narrative/characters/fellow_officer.dch",
 "narrator": "res://assets/narrative/characters/narrator.dch",
 "npc_1": "res://assets/narrative/characters/npc_1.dch",
 "npc_2": "res://assets/narrative/characters/npc_2.dch",
 "npc_3": "res://assets/narrative/characters/npc_3.dch",
 "player_character": "res://assets/narrative/characters/player_character.dch",
 "prime_minister_idaho": "res://assets/narrative/characters/prime_minister_idaho.dch",
+"resistance_leader": "res://assets/narrative/characters/resistance_leader.dch",
 "resistance_member_1": "res://assets/narrative/characters/resistance_member_1.dch",
 "resistance_member_2": "res://assets/narrative/characters/resistance_member_2.dch",
+"security_chief": "res://assets/narrative/characters/security_chief.dch",
+"security_officer": "res://assets/narrative/characters/security_officer.dch",
 "spud_masherson": "res://assets/narrative/characters/spud_masherson.dch",
 "supervisor_russet": "res://assets/narrative/characters/supervisor_russet.dch",
-"sweet_potato_sasha": "res://assets/narrative/characters/sweet_potato_sasha.dch"
+"sweet_potato_sasha": "res://assets/narrative/characters/sweet_potato_sasha.dch",
+"traveler_1": "res://assets/narrative/characters/traveler_1.dch"
 }
 directories/dtl_directory={
 "final_confrontation": "res://assets/narrative/final_confrontation.dtl",

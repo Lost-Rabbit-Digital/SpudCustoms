@@ -38,14 +38,14 @@ else:
     leave player_character
 
     [background arg="res://assets/narrative/joining_rebellion.png" fade="2.0"]
-    join resistance_fighter [z_index="1"]
+    join resistance_member_2 [z_index="1"]
     audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-    resistance_fighter: "Prove you're with us! How do you know Sasha?"
+    resistance_member_2: "Prove you're with us! How do you know Sasha?"
     audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
     player_character: "The roots grow deep! I'm from the checkpoint, Sasha recruited me!"
     audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-    resistance_fighter: "They're taking her to the processing plant right now. We need to hurry!"
-    leave resistance_fighter
+    resistance_member_2: "They're taking her to the processing plant right now. We need to hurry!"
+    leave resistance_member_2
 
     [background arg="res://assets/narrative/plant_revelation.png" fade="2.0"]
     join player_character [z_index="1"]

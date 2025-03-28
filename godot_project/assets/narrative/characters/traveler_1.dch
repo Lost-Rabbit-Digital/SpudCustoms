@@ -10,16 +10,16 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "portrait",
+&"default_portrait": "Jumpy Traveler",
 &"description": "",
-&"display_name": "Brazen Resistance Member",
+&"display_name": "Jumpy Traveler",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"portrait": {
+"Jumpy Traveler": {
 "export_overrides": {
-"image": "\"res://assets/narrative/characters/resistance_member_2.png\""
+"image": "\"res://assets/narrative/characters/traveler_1.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

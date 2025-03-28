@@ -48,11 +48,11 @@ security_officer: This scanner cannot be fooled. Sound the alarm immediately for
 leave security_officer
 
 [background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
-join resistance_operative [z_index="1"]
+join resistance_member_1 [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: A potato in official uniform approaches with seemingly perfect Alpha credentials.
+resistance_member_1: A potato in official uniform approaches with seemingly perfect Alpha credentials.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: A tiny blue card falls from the folder. "The roots grow deep." It's the resistance password.
+resistance_member_1: A tiny blue card falls from the folder. "The roots grow deep." It's the resistance password.
 
 set {critical_choice} = "none"
 - "Process them through, ignoring the scanner alerts" (Help the resistance)
@@ -61,18 +61,18 @@ set {critical_choice} = "none"
 set {critical_choice} = "betray"
 
 if {critical_choice} == "help":
-join resistance_operative [z_index="1"]
+join resistance_member_1 [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: Relief shows in their eyes. "For Sasha. For Spud." They disappear toward the central database.
-leave resistance_operative
+resistance_member_1: Relief shows in their eyes. "For Sasha. For Spud." They disappear toward the central database.
+leave resistance_member_1
 
 else:
-join resistance_operative [z_index="1"]
+join resistance_member_1 [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_operative: Horror dawns on their face. "You traitor! We trusted you!" They're quickly surrounded by guards.
+resistance_member_1: Horror dawns on their face. "You traitor! We trusted you!" They're quickly surrounded by guards.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: "Excellent work. Your loyalty will be rewarded."
-leave resistance_operative
+leave resistance_member_1
 
 [background arg="res://assets/narrative/night_attack.png" fade="2.0"]
 join narrator [z_index="1"]

@@ -43,21 +43,20 @@ set {sasha_response} = "none"
 - "We shouldn't be talking about this. It's dangerous."
 	set {sasha_response} = "cautious"
 - "I'm worried about her too. This isn't right."
-set {sasha_response} = "concerned"
+	set {sasha_response} = "concerned"
 
 if {sasha_response} == "cautious":
-join fellow_officer [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: You're right. But watch yourself. They're looking for connections to her.
-leave fellow_officer
-
+	join fellow_officer [z_index="1"]
+	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	fellow_officer: You're right. But watch yourself. They're looking for connections to her.
+	leave fellow_officer
 else:
-join fellow_officer [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: So you were close? Be careful. They might be watching you too.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: The officer slips you a note: "Clean your station of anything suspicious."
-leave fellow_officer
+	join fellow_officer [z_index="1"]
+	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+	fellow_officer: So you were close? Be careful. They might be watching you too.
+	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	fellow_officer: The officer slips you a note: "Clean your station of anything suspicious."
+	leave fellow_officer
 
 [background arg="res://assets/narrative/interrogation_setting.png" fade="2.0"]
 join security_chief [z_index="1"]
@@ -72,23 +71,22 @@ set {interrogation_choice} = "none"
 - "Sasha and I were just colleagues. I know nothing about her outside work."
 	set {interrogation_choice} = "deny"
 - "I was gathering evidence on her suspicious activities to report later."
-set {interrogation_choice} = "betray"
+	set {interrogation_choice} = "betray"
 
 if {interrogation_choice} == "deny":
-join security_chief [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-security_chief: Multiple witnesses say otherwise. Without concrete evidence though, I can't detain you. Yet.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-security_chief: You'll be under close observation. One misstep, and you'll join Sasha.
-leave security_chief
-
+	join security_chief [z_index="1"]
+	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+	security_chief: Multiple witnesses say otherwise. Without concrete evidence though, I can't detain you. Yet.
+	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	security_chief: You'll be under close observation. One misstep, and you'll join Sasha.
+	leave security_chief
 else:
-join security_chief [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-security_chief: How convenient. And yet you filed no reports until now.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-security_chief: You'll provide a complete statement. If your information proves valuable, perhaps we'll overlook your delayed reporting.
-leave security_chief
+	join security_chief [z_index="1"]
+	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+	security_chief: How convenient. And yet you filed no reports until now.
+	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	security_chief: You'll provide a complete statement. If your information proves valuable, perhaps we'll overlook your delayed reporting.
+	leave security_chief
 
 [background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 join security_officer [z_index="1"]
