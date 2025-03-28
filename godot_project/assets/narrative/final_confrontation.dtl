@@ -5,7 +5,7 @@
 narrator: The Spud border is in chaos. Panicked potatoes flood checkpoints, desperate to escape after the leaked documents.
 
 join player_character [z_index="1"]
-[background arg="res://assets/narrative/final_chaos.png" fade="2.0"]
+[background arg="res://assets/narrative/extreme_emergency.png" fade="2.0"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: You slip through with Sasha. "We have to keep pushing! The people know the truth now."
 

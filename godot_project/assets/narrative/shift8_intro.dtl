@@ -1,6 +1,5 @@
 # shift8_intro.dtl
 audio music "res://assets/audio/ambient/horror_drone_23.wav" [fade="2.0" volume="-5.0" bus="Music"]
-
 [background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
@@ -97,6 +96,7 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 security_officer: I'll be monitoring your work today. Every traveler must be identity-scanned. No exceptions.
 leave security_officer
 
+[background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 player_character: Sasha has been taken. The resistance plan is compromised. With security on high alert, their chances seem hopeless.

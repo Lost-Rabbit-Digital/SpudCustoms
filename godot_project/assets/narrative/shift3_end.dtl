@@ -1,7 +1,7 @@
 # shift3_end.dtl
 audio music "res://assets/audio/ambient/horror_drone_12.wav" [fade="2.0" volume="-5.0" bus="Music"]
 
-[background arg="res://assets/narrative/night_gameplay.png" fade="2.0"]
+[background arg="res://assets/narrative/checkpoint_booth_night.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Can we talk? Somewhere private? Too many eyes and ears here.
@@ -14,16 +14,16 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 supervisor_russet: Getting cozy with coworkers? Remember, fraternization can lead to... compromised judgment.
 leave supervisor_russet
 
-[background arg="res://assets/narrative/storage_shed.png" fade="2.0"]
+[background arg="res://assets/narrative/resistance_base.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: I've been gathering information about rejected potatoes. They don't go to deportation centers.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: They go to Root Reserve processing facilities. Every single one.
 
-[background arg="res://assets/narrative/disturbing_photos.png" fade="2.0"]
+[background arg="res://assets/narrative/document_closeup.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: These photos show potatoes being unloaded at a facility marked with the Root Reserve logo.
+sweet_potato_sasha: These documents show potatoes being unloaded at a facility marked with the Root Reserve logo.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: I think I know what's happening. They're becoming Root Reserve.
 
@@ -45,7 +45,7 @@ else:
 	sweet_potato_sasha: I've been collecting evidence for months. Keep your eyes open. You'll see I'm right.
 	leave sweet_potato_sasha
 
-[background arg="res://assets/narrative/night_alarm.png" fade="2.0"]
+[background arg="res://assets/narrative/night_attack.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 A distant alarm suddenly blares
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
@@ -53,7 +53,7 @@ sweet_potato_sasha: We need to go. They do security sweeps at this hour. Think a
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Sasha stuffs the folder into your hands. Keep this safe. And trust no one.
 
-[background arg="res://assets/narrative/night_customs.png" fade="2.0"]
+[background arg="res://assets/narrative/checkpoint_booth_night.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 player_character: You hide the folder inside your jacket. Root Reserve. The rejections. The missing potatoes. It all connects in a horrifying way.

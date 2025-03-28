@@ -1,6 +1,6 @@
 # shift10_intro.dtl
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-15.0" bus="Music"]
-
+set {stay_or_go} = "stay"
 if {stay_or_go} == "stay":
     # Storyline for those who stayed at their post
     [background arg="res://assets/narrative/occupation_checkpoint.png" fade="2.0"]
@@ -70,7 +70,7 @@ else:
     npc_1: "Idaho plans one final broadcast to blame Root Reserve on us. We cannot let him rewrite history. Today, we end his regime."
     leave 
     
-    [background arg="res://assets/narrative/resistance_planning.png" fade="2.0"]
+    [background arg="res://assets/narrative/resistance_base.png" fade="2.0"]
     join sweet_potato_sasha [z_index="1"]
     audio "res://assets/audio/typing_on_old_keyboard_2.wav" [volume="-15.0" bus="SFX"]
     sweet_potato_sasha: "You saved my life at the processing plant. Now we have a chance to save all of Spud."

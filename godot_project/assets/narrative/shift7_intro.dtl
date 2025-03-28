@@ -34,7 +34,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 announcer: Consuming or distributing this propaganda is now classified as high treason.
 leave announcer
 
-[background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
+[background arg="res://assets/narrative/supervisor_presenting.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Today's shift will operate under special protocols. Each traveler must undergo Loyalty Assessment.
@@ -44,7 +44,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 supervisor_russet: The traitor in our midst will be found. And when they are... [draws finger across throat]
 leave supervisor_russet
 
-[background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
+[background arg="res://assets/narrative/checkpoint_booth.png" fade="2.0"]
 join traveler_1 [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 traveler_1: A nervous potato approaches, yellow leaf badge partially visible. A tiny note is tucked between papers: "Safe house compromised. New location: Warehouse 7, Sector 4."

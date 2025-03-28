@@ -1,6 +1,6 @@
 # shift9_end.dtl
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
-
+set {stay_or_go} = "stay"
 if {stay_or_go} == "stay":
     [background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
     join player_character [z_index="1"]

@@ -1,7 +1,7 @@
 # shift6_intro.dtl
 audio music "res://assets/audio/ambient/horror_drone_12.wav" [fade="2.0" volume="-5.0" bus="Music"]
 
-[background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
+[background arg="res://assets/narrative/occupation_checkpoint.png" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: The border facility is in complete lockdown, with armed security patrolling every corridor.
@@ -15,13 +15,13 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 supervisor_russet: We have a traitor in our midst. Anyone withholding information will be treated as complicit.
 leave supervisor_russet
 
-[background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
+[background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 join security_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 security_officer: All officers, line up for security scanning. Those with elevated stress responses will be flagged.
 leave security_officer
 
-[background arg="res://assets/narrative/interrogation_setting.png" fade="2.0"]
+[background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
 join fellow_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 fellow_officer: Have you seen what's happening outside? Pamphlets everywhere showing Root Reserve is made from... from us.
@@ -102,7 +102,7 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 sweet_potato_sasha: We're way past that point. Laying low won't save us. Only bringing down the system will.
 leave sweet_potato_sasha
 
-[background arg="res://assets/narrative/resistance_planning.png" fade="2.0"]
+[background arg="res://assets/narrative/supervisor_presenting.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Each station now has the VeracityScan UV system. It detects unauthorized markings and forgeries.

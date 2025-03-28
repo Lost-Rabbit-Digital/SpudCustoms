@@ -1,13 +1,13 @@
 # shift5_end.dtl
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
 
-[background arg="res://assets/narrative/night_corridor.png" fade="2.0"]
+[background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 player_character: You creep through the darkened corridor, heart pounding as you avoid security patrols.
 leave player_character
 
-[background arg="res://assets/narrative/maintenance_area.png" fade="2.0"]
+[background arg="res://assets/narrative/resistance_base.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: "This device will disable the lock on Russet's office. I'll trigger alarms in the east wing as a distraction. You'll have five minutes."
@@ -15,7 +15,7 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 sweet_potato_sasha: "The manifests should be in his filing cabinet. Red folder labeled 'RR Transport'. Don't leave evidence of your search."
 leave sweet_potato_sasha
 
-[background arg="res://assets/narrative/russet_office_interior.png" fade="2.0"]
+[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 player_character: You find the thick red folder labeled "RR Transport" in the filing cabinet.
@@ -23,7 +23,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 player_character: Inside are manifests matching rejected potato counts, and a directive from Prime Minister Idaho authorizing "full utilization of border rejects for RR production."
 leave player_character
 
-[background arg="res://assets/narrative/approaching_footsteps.png" fade="2.0"]
+[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 Footsteps approach the office door. "Strange, I could've sworn I locked this."
 
@@ -51,7 +51,7 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 player_character: You sprint across the grounds and manage to lose your pursuers.
 leave player_character
 
-[background arg="res://assets/narrative/rendezvous_point.png" fade="2.0"]
+[background arg="res://assets/narrative/resistance_base.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: "Did you get it?" You hand over the evidence, explaining what you found.
@@ -59,7 +59,7 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 sweet_potato_sasha: "This proves everything. The resistance will make copies. Spread the truth everywhere. They can't silence us all."
 leave sweet_potato_sasha
 
-[background arg="res://assets/narrative/facility_dawn.png" fade="2.0"]
+[background arg="res://assets/narrative/checkpoint_exterior.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 player_character: You've crossed a line. There's no going back. When the truth spreads, Spud will be transformed.
