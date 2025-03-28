@@ -48,7 +48,7 @@ narrator: After a tense infiltration, your team stands at the heart of Root Rese
 narrator: Alarms blare as guards scramble to respond to your intrusion. You race through corridors, dodging security systems.
 leave narrator
 
-[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+[background arg="res://assets/narrative/checkpoint_booth_night.png" fade="2.0"]
 join prime_minister_idaho [z_index="1"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 prime_minister_idaho: A screen flickers on. "Well well, the traitor returns with rebel scum."
@@ -65,6 +65,7 @@ player_character: You turn to the others with resolve. "We need to reach Idaho's
 leave player_character
 
 join narrator [z_index="1"]
+[background arg="res://assets/narrative/final_chaos.png" fade="2.0"]
 [sound path="res://assets/audio/gun cocking 3.wav" volume="-5.0"]
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 narrator: Your group fights through waves of security, narrowly avoiding capture. Sasha's resistance fighters create diversions, clearing your path forward.
@@ -148,6 +149,7 @@ else: # dismantle
     player_character: "Forget him. He's a symptom, not the disease. Tear down every root and stem of this monstrosity."
     join sweet_potato_sasha [z_index="1"]
     [sound path="Balloon Explosion A.wav" volume="0.0" bus="SFX"]
+	    [background arg="res://assets/narrative/night_attack.png" fade="0.3"]
     [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
     sweet_potato_sasha: "We have to go! Now!"
     leave sweet_potato_sasha

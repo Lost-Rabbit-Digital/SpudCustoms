@@ -14,7 +14,7 @@ audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" b
 sweet_potato_sasha: "The manifests should be in his filing cabinet. Red folder labeled 'RR Transport'. Don't leave evidence of your search."
 leave sweet_potato_sasha
 
-[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+[background arg="res://assets/narrative/root_reserve_customs_office.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 player_character: You find the thick red folder labeled "RR Transport" in the filing cabinet.
@@ -30,7 +30,7 @@ set {hide_choice} = "none"
 - "Hide under the desk"
 	set {hide_choice} = "desk"
 - "Jump out the window"
-set {hide_choice} = "window"
+	set {hide_choice} = "window"
 
 if {hide_choice} == "desk":
 	[background arg="res://assets/narrative/hide_under_desk.png" fade="0.7"]

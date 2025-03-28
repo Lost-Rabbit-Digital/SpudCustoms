@@ -81,6 +81,7 @@ layout/default_style="res://assets/styles/dialogic_default_style.tres"
 variables={
 "ending_choice": "none",
 "family_response": "none",
+"hide_choice": "none",
 "hideout_response": "none",
 "initial_response": "none",
 "resistance_trust": "none",
