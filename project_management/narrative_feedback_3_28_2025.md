@@ -32,25 +32,18 @@ shift2_intro
 
 Regenerate all characters, use all 4 races, use both gender spritesheets
 Sasha, (Mavra Chang-esque), re-gen as SWEET POTATO
-"...records production numbers" is unclear, use "Skyhigh" or similar
-Add [shake] to "reports of missing potatoes"
-SUPER UNREADABLE FONT, we need to specialize into this
 shift1_intro, some fades are too fast especially since dialogue is much briefer
 shift1_end, looks good, updated image to remove note outside of room model
 shift2_intro, looks good, checkpoint booth needs touched up
-shift3_intro, art needs minor fixes urgently, looks good
-shift3_end, looks good, fraternization too long, hard to translate
 Split "I think I know what's happening..." "They're becoming [shake][color=light purple]Root Reserve[/shake][/color]"
 Must update Sweet Potato Sasha to use Sweet Potato Female sprites
 maximum_security picture looks fucked up (shift4_intro, 5 potatoes at checkpoint)
 seditious -> forbidden
 Make "Premium Reserve" yellow
 shift5_intro
-threat level "ORANGE" color and shake bbcode
 check flow control for security officer interview, chose wrong answer
 shift5_end
 Unquote the flashback scene for sweet potato sasha giving instructions
-Red folder of "RR" transport should have color bbcode
 wrong image at escape choice
 shift6_intro
 "Attention" should have shake BBCode
@@ -70,7 +63,6 @@ shift9_intro, make "EMERGENCY BROADCAST" shake
 Root Reserve should be light purple and shake
 Cut out green on sweet potato sasha
 Make Level Alpha clearance light grey
-Flow control issue, add help or hurt the resistance option, remove "it's the resistance password" explainer
 Flow control issue for abandoning post
 shift9_end, clean up initial image for stay
 shift10, confusing change from resistance members ground up to instead approaching the capitol
@@ -91,4 +83,3 @@ Procedures needed for compliance meeting
 
 Add emphasis to DTL scenes by using bbcode tags for text effects, shake, wave, pulse, and tornado explained here
 
-Shake is kinda messed up here.
