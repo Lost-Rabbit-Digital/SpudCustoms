@@ -26,13 +26,13 @@ set {resistance_trust} = "none"
 	set {resistance_trust} = "committed"
 
 if {resistance_trust} == "diplomatic":
-    [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
-    resistance_member_2: "Pretty words. But we've heard those before."
-    [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-    sweet_potato_sasha: "They helped us get the documents. That's action, not words."
+	[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+	resistance_member_2: "Pretty words. But we've heard those before."
+	[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+	sweet_potato_sasha: "They helped us get the documents. That's action, not words."
 else:
-    [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-    resistance_member_2: "Can't go back to being a loyal spud now. Welcome to the resistance, comrade."
+	[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+	resistance_member_2: "Can't go back to being a loyal spud now. Welcome to the resistance, comrade."
 
 leave resistance_member_2
 leave sweet_potato_sasha
@@ -101,58 +101,58 @@ leave player_character
 
 # Ending Choice Section
 if {ending_choice} == "diplomatic":
-    [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
-    join player_character [z_index="1"]
-    [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
-    player_character: "Idaho, it doesn't have to end in more bloodshed. If you cooperate..."
-    join prime_minister_idaho [z_index="1"]
-    [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+	[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+	join player_character [z_index="1"]
+	[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+	player_character: "Idaho, it doesn't have to end in more bloodshed. If you cooperate..."
+	join prime_minister_idaho [z_index="1"]
+	[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 	prime_minister_idaho: "Oh, you [color=STEEL_BLUE]idealistic fool[/color]. You think this is a negotiation?"
-    [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+	[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 	prime_minister_idaho: Idaho smashes a button, and [color=RED]alarms begin blaring[/color]. "The only thing I'll be giving you is a [color=DARK_VIOLET]one-way trip to the fry vats![/color]"
-    [background arg="res://assets/narrative/guard_betrayal.png" fade="2.0"]
-    join sweet_potato_sasha [z_index="1"]
-    [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-    sweet_potato_sasha: "I don't think so, Idaho. Guards! You saw the dossier, [color=YELLOW]you know what he did to your families.[/color]"
+	[background arg="res://assets/narrative/guard_betrayal.png" fade="2.0"]
+	join sweet_potato_sasha [z_index="1"]
+	[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+	sweet_potato_sasha: "I don't think so, Idaho. Guards! You saw the dossier, [color=YELLOW]you know what he did to your families.[/color]"
 	A hulking guard steps forward and kicks Idaho to the ground swiftly.
-    [sound path="res://assets/audio/gun cocking 3.wav" volume="-5.0"]
-    [sound path="res://assets/audio/Heavy Pistol B.wav" volume="0.0"]
-    A shot echoes through the chamber. The screen fades to black.
-    leave prime_minister_idaho
-    leave sweet_potato_sasha
-    leave player_character
+	[sound path="res://assets/audio/gun cocking 3.wav" volume="-5.0"]
+	[sound path="res://assets/audio/Heavy Pistol B.wav" volume="0.0"]
+	A shot echoes through the chamber. The screen fades to black.
+	leave prime_minister_idaho
+	leave sweet_potato_sasha
+	leave player_character
 elif {ending_choice} == "justice":
-    [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
-    join player_character [z_index="1"]
-    [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+	[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+	join player_character [z_index="1"]
+	[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 	player_character: "Idaho, in the name of the potato people of Spud, [color=CHARTREUSE]you're under arrest![/color]"
-    [background arg="res://assets/narrative/justice_hall.png" fade="2.0"]
-    join sweet_potato_sasha [z_index="1"]
-    [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-    sweet_potato_sasha: "It's over. The people have spoken. [color=CHARTREUSE]We'll build a new Spud where our roots are in the soil, not in suffering.[/color]"
-    leave sweet_potato_sasha
-    leave player_character
+	[background arg="res://assets/narrative/justice_hall.png" fade="2.0"]
+	join sweet_potato_sasha [z_index="1"]
+	[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+	sweet_potato_sasha: "It's over. The people have spoken. [color=CHARTREUSE]We'll build a new Spud where our roots are in the soil, not in suffering.[/color]"
+	leave sweet_potato_sasha
+	leave player_character
 elif {ending_choice} == "vengeance":
-    [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
-    join player_character [z_index="1"]
-    [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-    player_character: "There will be [color=CRIMSON]no deals, no mercy[/color] for you, Idaho. A tyrant's justice is all you deserve."
-    [background arg="res://assets/narrative/reckoning.png" fade="2.0"]
-    [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-    player_character: "A reckoning. That's what I am. [color=CHARTREUSE]For every potato sacrificed, we take back our future![/color]"
-    leave player_character
+	[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+	join player_character [z_index="1"]
+	[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+	player_character: "There will be [color=CRIMSON]no deals, no mercy[/color] for you, Idaho. A tyrant's justice is all you deserve."
+	[background arg="res://assets/narrative/reckoning.png" fade="2.0"]
+	[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+	player_character: "A reckoning. That's what I am. [color=CHARTREUSE]For every potato sacrificed, we take back our future![/color]"
+	leave player_character
 else: # dismantle
-    [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
-    join player_character [z_index="1"]
-    [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
-    player_character: "Forget him. He's a symptom, not the disease. [color=CHARTREUSE]Tear down every root and stem of this monstrosity.[/color]"
-    join sweet_potato_sasha [z_index="1"]
-    [sound path="Balloon Explosion A.wav" volume="0.0" bus="SFX"]
-	    [background arg="res://assets/narrative/night_attack.png" fade="0.3"]
-    [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-    sweet_potato_sasha: "We have to go! Now!"
-    leave sweet_potato_sasha
-    leave player_character
+	[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+	join player_character [z_index="1"]
+	[sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
+	player_character: "Forget him. He's a symptom, not the disease. [color=CHARTREUSE]Tear down every root and stem of this monstrosity.[/color]"
+	join sweet_potato_sasha [z_index="1"]
+	[sound path="Balloon Explosion A.wav" volume="0.0" bus="SFX"]
+		[background arg="res://assets/narrative/night_attack.png" fade="0.3"]
+	[sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
+	sweet_potato_sasha: "We have to go! Now!"
+	leave sweet_potato_sasha
+	leave player_character
 
 # Common ending for all paths
 [background arg="res://assets/narrative/russet_standoff.png" fade="2.0"]

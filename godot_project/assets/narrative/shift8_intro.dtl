@@ -1,6 +1,6 @@
 # shift8_intro.dtl
 audio music "res://assets/audio/ambient/horror_drone_23.wav" [fade="2.0" volume="-5.0" bus="Music"]
-[background arg="res://assets/narrative/security_lockdown.png" fade="0.0"]
+[background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 narrator: The checkpoint has transformed into a military outpost. Elite guards in black uniforms patrol with weapons displayed.
