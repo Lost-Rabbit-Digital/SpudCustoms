@@ -121,8 +121,9 @@ These are our goals, to-do tasks, and completed tasks.
 ### Credits
 These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release 
 
-- https://kenney.nl/assets/emotes-pack
-- https://krinjl.itch.io/icons2
+- Emotes: https://kenney.nl/assets/emotes-pack
+- Social Icons: https://krinjl.itch.io/icons2
+- Button SFX: https://opengameart.org/content/click-sounds6
 
 
 ### Completed Tasks for 1.0.2
