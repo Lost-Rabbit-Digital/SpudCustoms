@@ -54,18 +54,23 @@ theme_override_constants/margin_bottom = 8
 
 [node name="VersionContainer" type="Control" parent="VersionMargin"]
 layout_mode = 2
-mouse_filter = 2
+mouse_filter = 1
 
 [node name="VersionLabel" type="Label" parent="VersionMargin/VersionContainer"]
+custom_minimum_size = Vector2(128, 32)
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -42.0
-offset_bottom = 16.0
+offset_left = -136.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 40.0
 grow_horizontal = 0
-text = "v1.0.2"
-horizontal_alignment = 2
+tooltip_text = "Wait!"
+mouse_filter = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("6_pdiij")
 
 [node name="MenuContainer" type="MarginContainer" parent="."]
@@ -129,10 +134,11 @@ mouse_filter = 2
 [node name="FeedbackButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
 unique_name_in_owner = true
 layout_mode = 1
-offset_left = 8.0
-offset_top = -128.0
-offset_right = 135.0
-offset_bottom = -104.0
+offset_left = 16.0
+offset_top = -120.0
+offset_right = 143.0
+offset_bottom = -96.0
+tooltip_text = "Please, we need to know!"
 text = "Feedback / Bugs"
 
 [node name="MenuButtonsBoxContainer" type="BoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
@@ -200,6 +206,7 @@ alignment = 1
 unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+tooltip_text = "HeartCoded"
 texture_normal = ExtResource("11_4myoa")
 texture_hover = ExtResource("10_4myoa")
 stretch_mode = 0
@@ -208,6 +215,7 @@ stretch_mode = 0
 unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+tooltip_text = "Lost Rabbit Digital"
 texture_normal = ExtResource("10_4utau")
 texture_hover = ExtResource("10_oqvs2")
 stretch_mode = 0
@@ -216,6 +224,7 @@ stretch_mode = 0
 unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+tooltip_text = "BodenGameDev"
 texture_normal = ExtResource("11_4myoa")
 texture_hover = ExtResource("13_bcn5h")
 stretch_mode = 0

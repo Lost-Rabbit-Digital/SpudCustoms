@@ -6,7 +6,7 @@ class_name ConfigVersionLabel
 const NO_VERSION_STRING : String = "0.0.0"
 
 ## Prefixes the value of `application/config/version` when displaying to the user.
-@export var version_prefix : String = "v"
+@export var version_prefix : String = "Version "
 
 func update_version_label():
 	var config_version : String = ProjectSettings.get_setting("application/config/version", NO_VERSION_STRING)
