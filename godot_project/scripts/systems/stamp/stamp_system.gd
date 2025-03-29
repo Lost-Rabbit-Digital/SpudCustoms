@@ -7,7 +7,7 @@ signal stamp_animation_started(stamp_type: String)
 signal stamp_animation_completed(stamp_type: String)
 
 # Constants
-const STAMP_ANIM_DURATION = 0.3  # Duration of stamp animation in seconds
+const STAMP_ANIM_DURATION = 0.2  # Duration of stamp animation in seconds
 const STAMP_COOLDOWN = 1.0  # Cooldown between stamps
 
 # Configuration
@@ -91,121 +91,118 @@ func on_stamp_requested(stamp_type: String, stamp_texture: Texture2D = null, sou
 	else:
 		current_stamp_texture = stamp_textures[stamp_type]
 	
-	# Get mouse position for target
-	var target_position = get_viewport().get_mouse_position()
-	
-	# Tell the UI controller to animate the stamp (visual feedback only)
-	var stamp_bar = source_node if source_node is Node2D else null
-	if stamp_bar and stamp_bar.has_method("animate_stamp"):
-		stamp_bar.animate_stamp(stamp_type, target_position)
-	
-	# Actual stamp application logic
-	is_stamping = true
-	emit_signal("stamp_animation_started", stamp_type)
-	
-	# Find document under cursor
-	for document in stampable_documents.keys():
-		var stampable = stampable_documents[document]
-		if stampable.is_valid_stamp_position(target_position):
-			# Create new stamp component
-			var stamp = StampComponent.new(stamp_type, stamp_result_textures[stamp_type])
-			
-			# Apply to document
-			stampable.apply_stamp(stamp, target_position)
-			
-			# Trigger screen shake if callback is valid
-			if shake_callback.is_valid():
-				shake_callback.call(4.0, 0.2)
-			
-			break
-	
-	# Set cooldown and finish
-	stamp_cooldown_timer = STAMP_COOLDOWN
-	is_stamping = false
-	emit_signal("stamp_animation_completed", stamp_type)
+	# Call the apply_stamp function directly with the source node
+	apply_stamp(stamp_type, source_node)
 
-# Apply a stamp animation
+# Apply a stamp animation using the existing UI stamps with a fixed vertical offset
 func apply_stamp(stamp_type: String, stamp_bar: Node = null):
-	if not current_stamp_texture:
+	if is_stamping or stamp_cooldown_timer > 0:
 		return
 		
 	is_stamping = true
+	current_stamp_type = stamp_type
+	
+	# Play sound effect
 	play_random_stamp_sound()
 	emit_signal("stamp_animation_started", stamp_type)
 	
-	# Get the mouse position for target
-	var target_position = get_viewport().get_mouse_position()
+	# Get the mouse position for determining which document to stamp
+	var mouse_position = get_viewport().get_mouse_position()
 	
-	# Create temporary stamp for animation
-	var temp_stamp = Sprite2D.new()
-	temp_stamp.texture = current_stamp_texture
-	temp_stamp.z_index = 20  # Ensure it appears above everything during animation
+	# Find the appropriate stamp button in the UI
+	var stamp_button: TextureButton = null
+	var original_position: Vector2 = Vector2.ZERO
+	var original_scale: Vector2 = Vector2.ONE
+	var original_rotation: float = 0.0
 	
-	# Start from the appropriate button based on stamp type
-	var start_pos = Vector2(0, 0)
-	
-	# If stamp_bar is provided, get the actual button positions
 	if stamp_bar:
-		if stamp_type == "approve" and stamp_bar.has_node("StampBar/ApprovalStamp"):
-			var approve_button = stamp_bar.get_node("StampBar/ApprovalStamp")
-			start_pos = approve_button.global_position
-		elif stamp_bar.has_node("StampBar/RejectionStamp"):
-			var reject_button = stamp_bar.get_node("StampBar/RejectionStamp")
-			start_pos = reject_button.global_position
+		# Get the approval or rejection button based on stamp type
+		if stamp_type == "approve" and stamp_bar.has_node("%ApprovalButton"):
+			stamp_button = stamp_bar.get_node("%ApprovalButton")
+			original_position = stamp_button.global_position
+			original_scale = stamp_button.scale
+			original_rotation = stamp_button.rotation
+		elif stamp_type == "reject" and stamp_bar.has_node("%RejectionButton"):
+			stamp_button = stamp_bar.get_node("%RejectionButton")
+			original_position = stamp_button.global_position
+			original_scale = stamp_button.scale
+			original_rotation = stamp_button.rotation
 	
-	temp_stamp.global_position = start_pos
-	
-	add_child(temp_stamp)
-	
-	# Animate stamp movement
-	var tween = create_tween()
-	tween.set_parallel(true)
-	
-	# Move to target position
-	tween.tween_property(temp_stamp, "global_position", target_position, STAMP_ANIM_DURATION/2)
-	
-	# Apply final stamp to document
-	var document_found = false
-	
-	# *** Debug: Print all documents in our registry ***
-	print("Looking for document at position: ", target_position)
-	print("Number of registered stampable documents: ", stampable_documents.size())
-	for doc in stampable_documents.keys():
-		print("Document in registry: ", doc.name if doc else "null")
-	
-	# Find document under cursor - add debugging info
-	for document in stampable_documents.keys():
-		var stampable = stampable_documents[document]
-		print("Checking document: ", document.name)
-		print("Is valid position: ", stampable.is_valid_stamp_position(target_position))
-		
-		if stampable.is_valid_stamp_position(target_position):
-			print("Valid stamp position found for: ", document.name)
-			# Create new stamp component
-			var stamp = StampComponent.new(stamp_type, stamp_result_textures[stamp_type])
-			
-			# Apply to document
-			stampable.apply_stamp(stamp, target_position)
-			document_found = true
-			
-			# Trigger screen shake
-			if shake_callback.is_valid():
-				shake_callback.call(4.0, 0.2)  # Mild shake for stamping
-			
-			break
-	
-	if not document_found:
-		print("No document found at position: ", target_position)
-	
-	# Return animation
-	var return_tween = create_tween()
-	return_tween.tween_property(temp_stamp, "global_position", start_pos, STAMP_ANIM_DURATION/2)
-	return_tween.tween_callback(func():
-		temp_stamp.queue_free()
+	if not stamp_button:
+		push_warning("Could not find stamp button for animation")
 		is_stamping = false
-		stamp_cooldown_timer = STAMP_COOLDOWN
-		emit_signal("stamp_animation_completed", stamp_type)
-	)
+		return
+	
+	# Calculate target position - 50 pixels below the original position
+	var target_position = Vector2(original_position.x, original_position.y + 50)
+	
+	# Store the original z_index to restore later
+	var original_z_index = stamp_button.z_index
+	var original_mouse_filter = stamp_button.mouse_filter
+	
+	# Temporarily disable button interaction during animation
+	stamp_button.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	
+	# Create the tween for animation
+	var tween = create_tween()
+	tween.set_parallel(true)  # Parallel for position, scale and rotation
+	
+	# Move to target position with slight scaling and rotation
+	tween.tween_property(stamp_button, "global_position", target_position, STAMP_ANIM_DURATION/2)
+	tween.tween_property(stamp_button, "scale", original_scale * randf_range(0.9, 1.1), STAMP_ANIM_DURATION/2)
+	tween.tween_property(stamp_button, "rotation", original_rotation + randf_range(-0.1, 0.1), STAMP_ANIM_DURATION/2)
+	
+	# Second tween after reaching target
+	var second_tween = create_tween()
+	second_tween.set_parallel(false)  # Sequential for the impact effect
+	second_tween.tween_callback(func():
+		# Apply slight "press down" scaling effect
+		var press_tween = create_tween()
+		press_tween.set_parallel(true)
+		press_tween.tween_property(stamp_button, "scale", original_scale * 0.9, STAMP_ANIM_DURATION/6)
+		
+		# Apply the actual stamp at the mouse position, not at the target position
+		var document_found = false
+		
+		# Find document under mouse cursor
+		for document in stampable_documents.keys():
+			var stampable = stampable_documents[document]
+			
+			if stampable.is_valid_stamp_position(mouse_position):
+				# Create new stamp component
+				var stamp = StampComponent.new(stamp_type, stamp_result_textures[stamp_type])
+				
+				# Apply to document
+				stampable.apply_stamp(stamp, mouse_position)
+				document_found = true
+				
+				# Trigger screen shake
+				if shake_callback.is_valid():
+					shake_callback.call(4.0, 0.2)  # Mild shake for stamping
+				
+				break
+		
+		if not document_found:
+			print("No document found at position: ", mouse_position)
+	).set_delay(STAMP_ANIM_DURATION/2)  # Delay to match first tween duration
+	
+	# Return animation with slight bounce effect
+	second_tween.tween_callback(func():
+		var return_tween = create_tween()
+		return_tween.set_parallel(true)
+		return_tween.tween_property(stamp_button, "global_position", original_position, STAMP_ANIM_DURATION/2)
+		return_tween.tween_property(stamp_button, "scale", original_scale, STAMP_ANIM_DURATION/2).set_trans(Tween.TRANS_BOUNCE)
+		return_tween.tween_property(stamp_button, "rotation", original_rotation, STAMP_ANIM_DURATION/2)
+		
+		# Restore original properties and set state when done
+		return_tween.tween_callback(func():
+			stamp_button.z_index = original_z_index
+			stamp_button.mouse_filter = original_mouse_filter
+			is_stamping = false
+			stamp_cooldown_timer = STAMP_COOLDOWN
+			emit_signal("stamp_animation_completed", stamp_type)
+		)
+	).set_delay(STAMP_ANIM_DURATION/6)  # Short delay for the press effect
 
 # Play a random stamp sound
 func play_random_stamp_sound():

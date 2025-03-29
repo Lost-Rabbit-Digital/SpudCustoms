@@ -20,8 +20,10 @@ scale = Vector2(0.65, 0.65)
 texture = ExtResource("3_i7p4h")
 
 [node name="ApprovalStamp" type="Node2D" parent="StampBar/Background"]
+unique_name_in_owner = true
+z_index = -1
 texture_filter = 1
-position = Vector2(-54.0666, -72.0889)
+position = Vector2(-53.8462, -67.6923)
 scale = Vector2(1.50185, 1.50185)
 
 [node name="ApprovalButton" type="TextureButton" parent="StampBar/Background/ApprovalStamp"]
@@ -34,7 +36,9 @@ texture_normal = ExtResource("5_0hc55")
 metadata/_edit_use_anchors_ = true
 
 [node name="RejectionStamp" type="Node2D" parent="StampBar/Background"]
-position = Vector2(262.824, -72.0889)
+unique_name_in_owner = true
+z_index = -1
+position = Vector2(263.077, -67.6923)
 scale = Vector2(1.50185, 1.50185)
 
 [node name="RejectionButton" type="TextureButton" parent="StampBar/Background/RejectionStamp"]

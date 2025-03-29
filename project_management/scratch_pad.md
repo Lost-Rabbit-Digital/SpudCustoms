@@ -128,4 +128,6 @@ These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release
 
 ### Completed Tasks for 1.0.2
 - Added social icons to main menu
+- Bug: Text disappearing on the law receipt when picked up
+- Bug: Audio on shutter does not sync
 - Added emotes for potatoes in line
