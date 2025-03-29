@@ -1,0 +1,7 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dcy63tshw37py"]
+
+[ext_resource type="Texture2D" uid="uid://8hqk1t4ewyot" path="res://assets/menu/dialogue_nine_patch_primary.png" id="1_iktq0"]
+
+[resource]
+texture = ExtResource("1_iktq0")
+region_rect = Rect2(0, 0, 36, 36)

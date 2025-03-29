@@ -12,7 +12,11 @@
 
 [sub_resource type="Resource" id="Resource_q2dtk"]
 script = ExtResource("1_7gtpk")
-overrides = {}
+overrides = {
+"global_bg_color": "Color(0.197266, 0.117897, 0, 0.9)",
+"global_font": "\"res://assets/fonts/SourceCodePro-Regular.ttf\"",
+"global_font_size": "17.0"
+}
 
 [sub_resource type="Resource" id="Resource_knfjy"]
 script = ExtResource("1_7gtpk")
@@ -27,7 +31,15 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_ct4ov"]
 script = ExtResource("1_7gtpk")
 scene = ExtResource("4_aqvcl")
-overrides = {}
+overrides = {
+"box_panel": "\"res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/default_stylebox.tres\"",
+"custom_bold_font": "\"res://assets/fonts/SourceCodePro-Regular.ttf\"",
+"custom_bold_italic_font": "\"res://assets/fonts/SourceCodePro-Regular.ttf\"",
+"custom_italic_font": "\"res://assets/fonts/SourceCodePro-Regular.ttf\"",
+"custom_normal_font": "\"res://assets/fonts/SourceCodePro-Regular.ttf\"",
+"name_label_customfont": "\"res://assets/fonts/SourceCodePro-Regular.ttf\"",
+"use_global_fonts": "true"
+}
 
 [sub_resource type="Resource" id="Resource_mkqr7"]
 script = ExtResource("1_7gtpk")
@@ -38,6 +50,8 @@ overrides = {}
 script = ExtResource("1_7gtpk")
 scene = ExtResource("6_t1e3b")
 overrides = {
+"font_custom": "\"res://assets/fonts/SourceCodePro-Regular.ttf\"",
+"font_use_global": "false",
 "sounds_focus": "\"res://addons/dialogic/Example Assets/typing_sfx/typing_4.wav\"",
 "sounds_hover": "\"res://addons/dialogic/Example Assets/typing_sfx/typing_2.wav\"",
 "sounds_pressed": "\"res://addons/dialogic/Example Assets/typing_sfx/typing_1.wav\"",
@@ -70,4 +84,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_7gtpk")]([])
-metadata/_latest_layer = "14"
+metadata/_latest_layer = ""
