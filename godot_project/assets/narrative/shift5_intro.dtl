@@ -9,17 +9,17 @@ leave narrator
 [background arg="res://assets/narrative/supervisor_presenting.png" fade="1.2"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Last night, prohibited materials were discovered. Pamphlets containing lies about Root Reserve.
+supervisor_russet: Last night, [color=CRIMSON]prohibited materials[/color] were discovered. Pamphlets containing lies about [color=DARK_VIOLET]Root Reserve[/color].
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: We're implementing threat level ORANGE protocols. All officers subject to loyalty screenings. All travelers face maximum scrutiny.
+supervisor_russet: We're implementing [color=DARK_ORANGE]threat level ORANGE protocols[/color]. All officers subject to loyalty screenings. All travelers face maximum scrutiny.
 leave supervisor_russet
 
 [background arg="res://assets/narrative/resistance_base.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: It's working. The pamphlets are spreading. People are asking questions about Root Reserve.
+sweet_potato_sasha: It's working. The pamphlets are spreading. People are asking questions about [color=DARK_VIOLET]Root Reserve[/color].
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: I have sources telling me there's a shipment log in Russet's office - transport manifests that could prove everything.
+sweet_potato_sasha: I have sources telling me there's a shipment log in Russet's office - transport manifests that could [color=CHARTREUSE]prove everything[/color].
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: I need you to help me get it. Tonight, after final shift. Can I count on you?
 
@@ -32,18 +32,18 @@ set {sasha_investigation} = "none"
 if {sasha_investigation} == "committed":
 	join sweet_potato_sasha [z_index="1"]
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-	sweet_potato_sasha: Thank goodness. I knew you had stronger roots than the others. We'll meet at midnight.
+	sweet_potato_sasha: Thank goodness. I knew you had [color=CHARTREUSE]stronger roots than the others[/color]. We'll meet at midnight.
 	leave sweet_potato_sasha
 else:
 	join sweet_potato_sasha [z_index="1"]
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-	sweet_potato_sasha: Sometimes we have to risk getting mashed to do what's right. Think about it.
+	sweet_potato_sasha: Sometimes we have to [color=CHARTREUSE]risk getting mashed to do what's right[/color]. Think about it.
 	leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 join security_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-security_officer: Loyalty check. Please state your name and officer ID. Then tell me why you serve Spud.
+security_officer: [color=DARK_ORANGE]Loyalty check[/color]. Please state your name and officer ID. Then tell me why you serve Spud.
 
 set {loyalty_response} = "none"
 - "I serve to protect our borders from dangerous influences."
@@ -59,18 +59,18 @@ if {loyalty_response} == "patriotic":
 else:
 	join security_officer [z_index="1"]
 	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-	security_officer: The officer's eyebrows raise. Fair treatment? Scanner flashes amber. Remember, our primary concern is security, not fairness.
+	security_officer: The officer's eyebrows raise. Fair treatment? Scanner flashes [color=DARK_ORANGE]amber[/color]. Remember, our primary concern is security, not fairness.
 	leave security_officer
 
 [background arg="res://assets/narrative/checkpoint_booth.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Today's quota has been increased. Anyone with suspicious materials is to be flagged for special processing.
+supervisor_russet: Today's quota has been increased. Anyone with suspicious materials is to be flagged for [color=DARK_VIOLET]special processing[/color].
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: I'll be watching your decisions very carefully today.
+supervisor_russet: I'll be [color=DARK_ORANGE]watching your decisions[/color] very carefully today.
 leave supervisor_russet
 
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-player_character: Tonight could change everything. But first, survive the day without raising suspicion.
+player_character: Tonight could change everything. But first, [color=YELLOW]survive the day without raising suspicion[/color].
 leave player_character

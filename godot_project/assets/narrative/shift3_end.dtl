@@ -3,28 +3,28 @@ audio music "res://assets/audio/ambient/horror_drone_12.wav" [fade="2.0" volume=
 [background arg="res://assets/narrative/checkpoint_booth_night.png" fade="0.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Can we talk? Somewhere private? Too many eyes and ears here.
+sweet_potato_sasha: Can we talk? Somewhere private? [color=YELLOW]Too many eyes and ears here.[/color]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Meet me by the old storage shed after your shift. I have something you need to see.
 leave sweet_potato_sasha
 
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Getting cozy with coworkers? Remember, fraternization can lead to... compromised judgment.
+supervisor_russet: Getting cozy with coworkers? Remember, getting friendly can lead to... [color=DARK_ORANGE]compromised judgment[/color].
 leave supervisor_russet
 
 [background arg="res://assets/narrative/resistance_base.png" fade="1.2"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: I've been gathering information about rejected potatoes. They don't go to deportation centers.
+sweet_potato_sasha: I've been gathering information about rejected potatoes. [color=CRIMSON]They don't go to deportation centers.[/color]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: They go to Root Reserve processing facilities. Every single one.
+sweet_potato_sasha: [color=CRIMSON]They go to Root Reserve processing facilities.[/color] Every single one.
 
 [background arg="res://assets/narrative/document_closeup.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: These documents show potatoes being unloaded at a facility marked with the Root Reserve logo.
+sweet_potato_sasha: These documents show potatoes being unloaded at a facility marked with the [color=DARK_VIOLET]Root Reserve[/color] logo.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: I think I know what's happening. They're becoming Root Reserve.
+sweet_potato_sasha: I think I know what's happening. [color=CRIMSON]They're becoming Root Reserve.[/color]
 
 set {reveal_reaction} = "none"
 - "That's insane. They're... processing potatoes into food?"
@@ -35,7 +35,7 @@ set {reveal_reaction} = "none"
 if {reveal_reaction} == "shocked":
 	join sweet_potato_sasha [z_index="1"]
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-	sweet_potato_sasha: Cannibalism with extra steps. That's what Root Reserve is. And we've been helping select their ingredients.
+	sweet_potato_sasha: [color=CRIMSON]Cannibalism with extra steps.[/color] That's what [color=DARK_VIOLET]Root Reserve[/color] is. And we've been helping select their ingredients.
 	leave sweet_potato_sasha
 else:
 	join sweet_potato_sasha [z_index="1"]
@@ -49,10 +49,10 @@ A distant alarm suddenly blares
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: We need to go. They do security sweeps at this hour. Think about what I've shown you.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Sasha stuffs the folder into your hands. Keep this safe. And trust no one.
+sweet_potato_sasha: Sasha stuffs the folder into your hands. "[color=YELLOW]Keep this safe. And trust no one.[/color]"
 
 [background arg="res://assets/narrative/checkpoint_booth_night.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-player_character: You hide the folder inside your jacket. Root Reserve. The rejections. The missing potatoes. It all connects in a horrifying way.
+player_character: You hide the folder inside your jacket. [color=DARK_VIOLET]Root Reserve[/color]. The rejections. The missing potatoes. It all connects in a [color=CRIMSON]horrifying way[/color].
 leave player_character

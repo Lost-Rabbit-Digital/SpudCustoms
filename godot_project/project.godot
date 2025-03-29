@@ -83,17 +83,26 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://assets/styles/SpudCustomsTextboxWithSpeaker/SpudCustomsTextboxWithSpeaker.tres", "res://assets/styles/dialogic_default_style.tres"]
 layout/default_style="res://assets/styles/dialogic_default_style.tres"
 variables={
+"cafeteria_response": "",
+"critical_choice": "help",
 "ending_choice": "none",
 "family_response": "none",
+"fellow_officer_response": "none",
+"final_decision": "none",
 "hide_choice": "none",
 "hideout_response": "none",
 "initial_response": "none",
+"interrogation_choice": "none",
+"interrogation_response": "none",
+"loyalty_response": "none",
+"resistance_mission": "none",
 "resistance_trust": "none",
 "reveal_reaction": "none",
 "romance_ending": "none",
 "sasha_investigation": "none",
+"sasha_response": "none",
 "scanner_response": "none",
-"stay_or_go": "none"
+"stay_or_go": "go"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.02

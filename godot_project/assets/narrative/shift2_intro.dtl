@@ -5,21 +5,21 @@ join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Hey there, I'm Sasha. Welcome to the team!
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Sasha leans in close: "And keep your eyes peeled. Not everything is as it seems in Spud."
+sweet_potato_sasha: Sasha leans in close, "[color=YELLOW]And keep your eyes peeled. Not everything is as it seems in Spud.[/color]"
 leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/checkpoint_booth.png" fade="1.2"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Your next applicant is waiting. Check those stamps carefully! Any suspicious behavior is to be reported.
+supervisor_russet: Your next applicant is waiting. Check those stamps carefully! Any [color=YELLOW]suspicious behavior[/color] is to be reported.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Remember, a dutiful officer has nothing to fear. Those who abandon their duty abandon their roots.
+supervisor_russet: Remember, a [color=DARK_ORANGE]dutiful officer[/color] has nothing to fear. Those who abandon their duty abandon their roots.
 leave supervisor_russet
 
 [background arg="res://assets/narrative/potato_radio.png" fade="2.0"]
 join announcer
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-announcer: "...record production numbers for Root Reserve. The miracle food continues to nourish our nation..."
+announcer: "...production numbers for [color=DARK_VIOLET]Root Reserve[/color] are SKY HIGH. The miracle food continues to nourish our nation..."
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-announcer: "In other news, reports of missing potatoes continue. Authorities assure no connection..."
+announcer: "In other news, reports of [color=CRIMSON]missing potatoes[/color] continue..."
 leave announcer

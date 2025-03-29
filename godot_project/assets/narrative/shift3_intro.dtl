@@ -9,13 +9,13 @@ leave narrator
 [background arg="res://assets/narrative/customs_office.png" fade="1.5"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: New orders from the top. We're doubling rejections. Any potato deemed unsafe is detained immediately.
+supervisor_russet: New orders from the top. We're [color=DARK_ORANGE]doubling rejections[/color]. Any potato deemed unsafe is detained immediately.
 leave supervisor_russet
 
 [background arg="res://assets/narrative/checkpoint_interior.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: I have a special assignment. We've got intel on troublemakers. Be vigilant with your inspections.
+supervisor_russet: I have a special assignment. We've got intel on [color=CRIMSON]troublemakers[/color]. Be vigilant with your inspections.
 
 set {scanner_response} = "none"
 - "Yes sir, I won't let you down"
@@ -31,15 +31,15 @@ if {scanner_response} == "loyal":
 else:
 	join supervisor_russet [z_index="1"]
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-	supervisor_russet: The kind that threaten our way of life. Don't ask too many questions if you know what's good for you.
+	supervisor_russet: The kind that [color=CRIMSON]threaten our way of life[/color]. Don't ask too many questions if you know what's good for you.
 	leave supervisor_russet
 
 [background arg="res://assets/narrative/checkpoint_booth.png" fade="1.2"]
 join npc_3 [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-npc_3: Please, I beg you! My wife was supposed to be right behind me, but she never made it through customs.
+npc_3: [color=STEEL_BLUE]Please, I beg you![/color] My wife was supposed to be right behind me, but she never made it through customs.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-npc_3: No one will tell me what happened to her. Please, help me find her!
+npc_3: No one will tell me what happened to her. Please, [color=CHARTREUSE]help me find her![/color]
 
 set {family_response} = "none"
 - "I'm sorry, but there's nothing I can do."
@@ -49,7 +49,7 @@ set {family_response} = "none"
 
 if {family_response} == "refuse":
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-	npc_3: Just like all the others... May your conscience weigh heavy as mine does.
+	npc_3: Just like all the others... [color=STEEL_BLUE]May your conscience weigh heavy as mine does.[/color]
 	leave npc_3
 else:
 	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
@@ -59,5 +59,5 @@ else:
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="1.2"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: I saw that exchange. Sympathizing with rejects only leads to trouble. Stay focused on your duty.
+supervisor_russet: I saw that exchange. [color=DARK_ORANGE]Sympathizing with rejects only leads to trouble.[/color] Stay focused on your duty.
 leave supervisor_russet
