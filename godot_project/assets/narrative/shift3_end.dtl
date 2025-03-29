@@ -16,15 +16,15 @@ leave supervisor_russet
 [background arg="res://assets/narrative/resistance_base.png" fade="1.2"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: I've been gathering information about rejected potatoes. [color=CRIMSON]They don't go to deportation centers.[/color]
+sweet_potato_sasha: I've been gathering information about rejected potatoes. [wave amp=20 freq=3][color=CRIMSON]They don't go to deportation centers.[/color][/wave]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: [color=CRIMSON]They go to Root Reserve processing facilities.[/color] Every single one.
+sweet_potato_sasha: [tornado radius=4 freq=2][color=CRIMSON]They go to Root Reserve processing facilities.[/color][/tornado] Every single one.
 
 [background arg="res://assets/narrative/document_closeup.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: These documents show potatoes being unloaded at a facility marked with the [color=DARK_VIOLET]Root Reserve[/color] logo.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: I think I know what's happening. [color=CRIMSON]They're becoming Root Reserve.[/color]
+sweet_potato_sasha: I think I know what's happening. [pulse freq=3][color=CRIMSON]They're becoming Root Reserve.[/color][/pulse]
 
 set {reveal_reaction} = "none"
 - "That's insane. They're... processing potatoes into food?"
@@ -35,7 +35,7 @@ set {reveal_reaction} = "none"
 if {reveal_reaction} == "shocked":
 	join sweet_potato_sasha [z_index="1"]
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-	sweet_potato_sasha: [color=CRIMSON]Cannibalism with extra steps.[/color] That's what [color=DARK_VIOLET]Root Reserve[/color] is. And we've been helping select their ingredients.
+	sweet_potato_sasha: [color=CRIMSON]Cannibalism with extra steps.[/color] That's what [wave amp=25 freq=3][color=DARK_VIOLET]Root Reserve[/color][/wave] is. And we've been helping select their ingredients.
 	leave sweet_potato_sasha
 else:
 	join sweet_potato_sasha [z_index="1"]
@@ -54,5 +54,5 @@ sweet_potato_sasha: Sasha stuffs the folder into your hands. "[color=YELLOW]Keep
 [background arg="res://assets/narrative/checkpoint_booth_night.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-player_character: You hide the folder inside your jacket. [color=DARK_VIOLET]Root Reserve[/color]. The rejections. The missing potatoes. It all connects in a [color=CRIMSON]horrifying way[/color].
+player_character: You hide the folder inside your jacket. [color=DARK_VIOLET]Root Reserve[/color]. The rejections. The missing potatoes. It all connects in a [tornado radius=3 freq=2][color=CRIMSON]horrifying way[/color][/tornado].
 leave player_character

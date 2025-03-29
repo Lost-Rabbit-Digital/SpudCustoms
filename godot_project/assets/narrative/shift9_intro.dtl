@@ -3,13 +3,13 @@ audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume=
 [background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-narrator: The border resembles a [color=CRIMSON]war zone[/color]. Barricades, armored vehicles, and elite guards stand ready. Today is when the resistance planned to strike.
+narrator: The border resembles a [pulse freq=3][color=CRIMSON]war zone[/color][/pulse]. Barricades, armored vehicles, and elite guards stand ready. Today is when the resistance planned to strike.
 leave narrator
 
 [background arg="res://assets/narrative/extreme_emergency.png" fade="0.3"]
 join announcer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-announcer: [color=YELLOW]EMERGENCY BROADCAST[/color]: All of Spud is under [color=RED]martial law[/color]. "The Resistance" has launched attacks against government facilities.
+announcer: [wave amp=25 freq=3][color=YELLOW]EMERGENCY BROADCAST[/color][/wave]: All of Spud is under [color=RED]martial law[/color]. "The Resistance" has launched attacks against government facilities.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 announcer: Anyone aiding these [color=CRIMSON]extremists[/color] faces [color=DARK_VIOLET]immediate processing[/color]. The Ministry confirms: [color=DARK_VIOLET]Root Reserve[/color] remains safe for all [color=DARK_ORANGE]loyal potatoes[/color].
 leave announcer
@@ -28,14 +28,14 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 supervisor_russet: We've captured several resistance operatives, including Officer Sasha.
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: The [color=CRIMSON]real traitors[/color] are those who [color=DARK_VIOLET]feed our people to each other[/color]. You can't stop the truth!
+sweet_potato_sasha: The [tornado radius=3 freq=2][color=CRIMSON]real traitors[/color][/tornado] are those who [color=DARK_VIOLET]feed our people to each other[/color]. You can't stop the truth!
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: She's dragged away, still shouting: [color=CHARTREUSE]The people will know what's in their food![/color]
 leave sweet_potato_sasha
 
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: The [color=CRIMSON]traitor[/color] will be [color=DARK_VIOLET]processed immediately[/color]. A special batch of [color=DARK_VIOLET]Root Reserve[/color], made from the terrorists themselves.
+supervisor_russet: The [color=CRIMSON]traitor[/color] will be [pulse freq=3][color=DARK_VIOLET]processed immediately[/color][/pulse]. A special batch of [color=DARK_VIOLET]Root Reserve[/color], made from the terrorists themselves.
 leave supervisor_russet
 
 [background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
@@ -51,7 +51,7 @@ join resistance_member_1 [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 resistance_member_1: A potato in official uniform approaches with seemingly perfect Alpha credentials.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_member_1: A tiny blue card falls from the folder. "[color=CHARTREUSE]The roots grow deep.[/color]", they mutter as they pick up the card.
+resistance_member_1: A tiny blue card falls from the folder. "[wave amp=15 freq=3][color=CHARTREUSE]The roots grow deep.[/color][/wave]", they mutter as they pick up the card.
 
 set {critical_choice} = "none"
 - "Process them through, ignoring the scanner alerts" (Help the resistance)

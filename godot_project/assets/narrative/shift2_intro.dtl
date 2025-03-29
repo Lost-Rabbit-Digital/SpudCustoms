@@ -5,7 +5,7 @@ join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Hey there, I'm Sasha. Welcome to the team!
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Sasha leans in close, "[color=YELLOW]And keep your eyes peeled. Not everything is as it seems in Spud.[/color]"
+sweet_potato_sasha: Sasha leans in close, "[wave amp=10 freq=2][color=YELLOW]And keep your eyes peeled. Not everything is as it seems in Spud.[/color][/wave]"
 leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/checkpoint_booth.png" fade="1.2"]
@@ -19,7 +19,7 @@ leave supervisor_russet
 [background arg="res://assets/narrative/potato_radio.png" fade="2.0"]
 join announcer
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-announcer: "...production numbers for [color=DARK_VIOLET]Root Reserve[/color] are SKY HIGH. The miracle food continues to nourish our nation..."
+announcer: "...production numbers for [pulse freq=2][color=DARK_VIOLET]Root Reserve[/color][/pulse] are SKY HIGH. The miracle food continues to nourish our nation..."
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-announcer: "In other news, reports of [color=CRIMSON]missing potatoes[/color] continue..."
+announcer: "In other news, reports of [tornado radius=3 freq=2][color=CRIMSON]missing potatoes[/color][/tornado] continue..."
 leave announcer

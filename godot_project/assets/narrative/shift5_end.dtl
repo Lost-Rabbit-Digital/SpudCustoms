@@ -19,12 +19,12 @@ join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 player_character: You find the thick [color=CRIMSON]red folder labeled "RR Transport"[/color] in the filing cabinet.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-player_character: Inside are manifests matching rejected potato counts, and a directive from Prime Minister Idaho authorizing "[color=DARK_VIOLET]full utilization of border rejects for RR production.[/color]"
+player_character: Inside are manifests matching rejected potato counts, and a directive from Prime Minister Idaho authorizing "[pulse freq=3][color=DARK_VIOLET]full utilization of border rejects for RR production.[/color][/pulse]"
 leave player_character
 
 [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-Footsteps approach the office door. "[color=YELLOW]Strange, I could've sworn I locked this.[/color]"
+Footsteps approach the office door. "[wave amp=15 freq=3][color=YELLOW]Strange, I could've sworn I locked this.[/color][/wave]"
 
 set {hide_choice} = "none"
 - "Hide under the desk"
@@ -59,11 +59,11 @@ audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus
 player_character: You hand over the evidence, explaining what you found.
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: This proves everything. The resistance will make copies. Spread the truth everywhere. They can't silence us all.
+sweet_potato_sasha: This proves everything. The resistance will make copies. [tornado radius=3 freq=2]Spread the truth everywhere.[/tornado] They can't silence us all.
 leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/checkpoint_exterior.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-player_character: You've crossed a line. [color=YELLOW]There's no going back.[/color] When the truth spreads, Spud will be transformed.
+player_character: You've crossed a line. [wave amp=20 freq=3][color=YELLOW]There's no going back.[/color][/wave] When the truth spreads, Spud will be transformed.
 leave player_character

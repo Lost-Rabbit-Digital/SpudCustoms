@@ -3,7 +3,7 @@ audio music "res://assets/audio/ambient/wind_outside.wav" [fade="2.0" volume="1.
 [background arg="res://assets/narrative/nation_of_spud.png" fade="0.0"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 join narrator [z_index="1"]
-narrator: Welcome to the nation of Spud. A land of [color=MEDIUM_VIOLET_RED]prosperity for all potatoes[/color].
+narrator: Welcome to the nation of Spud. A land of [pulse freq=2][color=MEDIUM_VIOLET_RED]prosperity for all potatoes[/color][/pulse].
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 narrator: You've been selected for a [color=DARK_ORANGE]crucial role[/color] in protecting our borders.
 leave narrator
@@ -11,7 +11,7 @@ leave narrator
 [background arg="res://assets/narrative/checkpoint_interior.png" fade="1.5"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-narrator: Your duty: to process incoming potatoes. Your family's well-being [color=YELLOW]depends on your performance[/color].
+narrator: Your duty: to process incoming potatoes. Your family's well-being [wave amp=20 freq=3][color=YELLOW]depends on your performance[/color][/wave].
 leave narrator
 
 [background arg="res://assets/narrative/great_wall_of_spud.png" fade="1.5"]
@@ -25,7 +25,7 @@ join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Ah, the new sprout. Listen carefully, your role is [color=DARK_ORANGE]vital to Spud's security[/color].
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: I appoint you as a Customs Officer of [color=MEDIUM_VIOLET_RED]glorious Spud[/color]. Any questions?
+supervisor_russet: I appoint you as a Customs Officer of [pulse freq=1][color=MEDIUM_VIOLET_RED]glorious Spud[/color][/pulse]. Any questions?
 
 set {initial_response} = "none"
 - "I'm ready to serve Spud with all my starch!"

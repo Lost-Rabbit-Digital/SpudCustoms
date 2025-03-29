@@ -62,19 +62,19 @@ if {yellow_badge_response} == "help":
 else:
 	join traveler_1 [z_index="1"]
 	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-	traveler_1: Horror dawns as you signal security. "No, please! I have a family!" Their yellow badge falls to the floor.
+traveler_1: Horror dawns as you signal security. "[wave amp=25 freq=3]No, please! I have a family![/wave]" Their yellow badge falls to the floor.
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 	supervisor_russet: "Well done. Your loyalty is noted."
 	leave traveler_1
 
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: "Your decision was noticed. Be ready. [color=CHARTREUSE]Something big is coming[/color]. The resistance is planning a direct action."
+sweet_potato_sasha: "Your decision was noticed. Be ready. [tornado radius=3 freq=2][color=CHARTREUSE]Something big is coming[/color][/tornado]. The resistance is planning a direct action."
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: "When it happens, you'll need to [color=YELLOW]choose a side[/color]. There won't be any middle ground left."
 leave sweet_potato_sasha
 
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-player_character: With each potato you process, you're either [color=CHARTREUSE]aiding a revolution[/color] or [color=CRIMSON]enabling a horrific system[/color].
+player_character: With each potato you process, you're either [pulse freq=2][color=CHARTREUSE]aiding a revolution[/color][/pulse] or [pulse freq=2][color=CRIMSON]enabling a horrific system[/color][/pulse].
 leave player_character

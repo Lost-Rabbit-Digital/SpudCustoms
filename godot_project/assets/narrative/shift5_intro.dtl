@@ -9,9 +9,9 @@ leave narrator
 [background arg="res://assets/narrative/supervisor_presenting.png" fade="1.2"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Last night, [color=CRIMSON]prohibited materials[/color] were discovered. Pamphlets containing lies about [color=DARK_VIOLET]Root Reserve[/color].
+supervisor_russet: Last night, [pulse freq=2][color=CRIMSON]prohibited materials[/color][/pulse] were discovered. Pamphlets containing lies about [color=DARK_VIOLET]Root Reserve[/color].
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: We're implementing [color=DARK_ORANGE]threat level ORANGE protocols[/color]. All officers subject to loyalty screenings. All travelers face maximum scrutiny.
+supervisor_russet: We're implementing [wave amp=15 freq=2][color=DARK_ORANGE]threat level ORANGE protocols[/color][/wave]. All officers subject to loyalty screenings. All travelers face maximum scrutiny.
 leave supervisor_russet
 
 [background arg="res://assets/narrative/resistance_base.png" fade="2.0"]
@@ -19,7 +19,7 @@ join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: It's working. The pamphlets are spreading. People are asking questions about [color=DARK_VIOLET]Root Reserve[/color].
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: I have sources telling me there's a shipment log in Russet's office - transport manifests that could [color=CHARTREUSE]prove everything[/color].
+sweet_potato_sasha: I have sources telling me there's a shipment log in Russet's office - transport manifests that could [tornado radius=3 freq=2][color=CHARTREUSE]prove everything[/color][/tornado].
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: I need you to help me get it. Tonight, after final shift. Can I count on you?
 

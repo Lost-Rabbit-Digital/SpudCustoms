@@ -2,18 +2,18 @@
 [music path="res://assets/audio/ambient/2_wind_house.wav" fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/final_chaos.png" fade="0.0"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
-narrator: The Spud border is in [color=CRIMSON]chaos[/color]. Panicked potatoes flood checkpoints, desperate to escape after the leaked documents.
+narrator: The Spud border is in [pulse freq=3][color=CRIMSON]chaos[/color][/pulse]. Panicked potatoes flood checkpoints, desperate to escape after the leaked documents.
 
 join player_character [z_index="1"]
 [background arg="res://assets/narrative/extreme_emergency.png" fade="1.2"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
-player_character: You slip through with Sasha. "[color=CHARTREUSE]We have to keep pushing![/color] The people know the truth now."
+player_character: You slip through with Sasha. "[wave amp=20 freq=3][color=CHARTREUSE]We have to keep pushing![/color][/wave] The people know the truth now."
 
 
 [background arg="res://assets/narrative/resistance_base.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-sweet_potato_sasha: "They can't silence the truth any longer. If we can infiltrate the [color=DARK_VIOLET]Root Reserve[/color] facility and broadcast evidence, it'll [color=CHARTREUSE]ignite the revolution[/color]."
+sweet_potato_sasha: "They can't silence the truth any longer. If we can infiltrate the [color=DARK_VIOLET]Root Reserve[/color] facility and broadcast evidence, it'll [tornado radius=3 freq=2][color=CHARTREUSE]ignite the revolution[/color][/tornado]."
 
 join resistance_member_2 [z_index="1"]
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
@@ -43,10 +43,10 @@ leave player_character
 [background arg="res://assets/narrative/processing_facility.png" fade="1.2"]
 join narrator [z_index="1"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0" bus="SFX"]
-narrator: After a tense infiltration, your team stands at the heart of [color=DARK_VIOLET]Root Reserve[/color], the [color=CRIMSON]horrific machinery of oppression[/color] laid bare.
+narrator: After a tense infiltration, your team stands at the heart of [color=DARK_VIOLET]Root Reserve[/color], the [pulse freq=3][color=CRIMSON]horrific machinery of oppression[/color][/pulse] laid bare.
 
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-narrator: [color=RED]Alarms blare[/color] as guards scramble to respond to your intrusion. You race through corridors, dodging security systems.
+narrator: [wave amp=25 freq=3][color=RED]Alarms blare[/color][/wave] as guards scramble to respond to your intrusion. You race through corridors, dodging security systems.
 leave narrator
 
 [background arg="res://assets/narrative/checkpoint_booth_night.png" fade="2.0"]
@@ -56,7 +56,7 @@ prime_minister_idaho: A screen flickers on. "Well well, the [color=CRIMSON]trait
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
 prime_minister_idaho: "Did you think you could stop the progress of Spud? [color=DARK_VIOLET]Root Reserve[/color] is the lifeblood of this nation."
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
-prime_minister_idaho: "But fret not. You'll still serve Spud... [color=DARK_VIOLET]in the processing vats![/color]"
+prime_minister_idaho: "But fret not. You'll still serve Spud... [tornado radius=4 freq=3][color=DARK_VIOLET]in the processing vats![/color][/tornado]"
 The screen suddenly goes black.
 leave prime_minister_idaho
 
@@ -82,7 +82,7 @@ join player_character [z_index="1"]
 [sound path="res://assets/audio/talking/typing on old keyboard 2.wav" volume="-5.0"]
 player_character: With Sasha and your allies at your side, you confront Idaho at last.
 [sound path="res://assets/audio/talking/typing on old keyboard 3.wav" volume="-5.0"]
-player_character: "It's over, Idaho. Your secrets are exposed. How this ends... that's up to you."
+player_character: "It's over, Idaho. Your secrets are exposed. How this ends... [pulse freq=2]that's up to you.[/pulse]"
 
 set {ending_choice} = "none"
 - Negotiate a peaceful transition of power (Diplomatic)

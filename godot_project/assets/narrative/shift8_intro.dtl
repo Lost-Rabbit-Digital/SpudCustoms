@@ -11,15 +11,15 @@ join security_chief [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 security_chief: I am Chief Security Officer Yukon, dispatched from the capital by Prime Minister Idaho.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-security_chief: Intelligence indicates a [color=YELLOW]terrorist attack is imminent[/color]. The "resistance" plans to infiltrate tomorrow.
+security_chief: Intelligence indicates a [pulse freq=2][color=YELLOW]terrorist attack is imminent[/color][/pulse]. The "resistance" plans to infiltrate tomorrow.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-security_chief: All officers will submit to [color=DARK_ORANGE]loyalty screening[/color]. Suspicious behavior means detention and [color=DARK_VIOLET]processing[/color].
+security_chief: All officers will submit to [wave amp=15 freq=2][color=DARK_ORANGE]loyalty screening[/color][/wave]. Suspicious behavior means detention and [color=DARK_VIOLET]processing[/color].
 leave security_chief
 
 [background arg="res://assets/narrative/occupation_checkpoint.png" fade="1.2"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: [color=RED]Full cooperation[/color] with Security is mandatory. My reports on each of you have been provided to the Chief.
+supervisor_russet: [tornado radius=3 freq=2][color=RED]Full cooperation[/color][/tornado] with Security is mandatory. My reports on each of you have been provided to the Chief.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Russet's gaze lingers on you uncomfortably before moving on.
 leave supervisor_russet
@@ -37,7 +37,7 @@ join fellow_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 fellow_officer: Have you seen Sasha? She didn't report for roll call. Last night, [color=CRIMSON]security forces entered her quarters[/color].
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: They're saying she was part of the [color=CHARTREUSE]resistance[/color].
+fellow_officer: They're saying she was part of the [pulse freq=2][color=CHARTREUSE]resistance[/color][/pulse].
 
 set {sasha_response} = "none"
 - "We shouldn't be talking about this. It's dangerous."
@@ -63,7 +63,7 @@ join security_chief [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 security_chief: You've been at this checkpoint for quite some time. Interesting performance record.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-security_chief: You were seen frequently with Officer Sasha, now under investigation for [color=CRIMSON]treason[/color].
+security_chief: You were seen frequently with Officer Sasha, now under investigation for [wave amp=20 freq=3][color=CRIMSON]treason[/color][/wave].
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 security_chief: The chief leans forward. Is there anything you'd like to tell me about her activities?
 

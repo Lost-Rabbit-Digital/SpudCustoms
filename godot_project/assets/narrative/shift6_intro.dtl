@@ -9,21 +9,21 @@ leave narrator
 [background arg="res://assets/narrative/security_lockdown.png" fade="1.2"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: [color=RED]ATTENTION! LEVEL RED security situation![/color] Classified documents were stolen last night.
+supervisor_russet: [pulse freq=3][color=RED]ATTENTION! LEVEL RED security situation![/color][/pulse] Classified documents were stolen last night.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: We have a [color=CRIMSON]traitor in our midst[/color]. Anyone withholding information will be treated as complicit.
+supervisor_russet: We have a [tornado radius=4 freq=3][color=CRIMSON]traitor in our midst[/color][/tornado]. Anyone withholding information will be treated as complicit.
 leave supervisor_russet
 
 [background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 join security_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-security_officer: All officers, line up for [color=DARK_ORANGE]security scanning[/color]. Those with elevated stress responses will be flagged.
+security_officer: All officers, line up for [wave amp=15 freq=2][color=DARK_ORANGE]security scanning[/color][/wave]. Those with elevated stress responses will be flagged.
 leave security_officer
 
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
 join fellow_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: Have you seen what's happening outside? Pamphlets everywhere showing [color=DARK_VIOLET]Root Reserve[/color] is made from... [color=CRIMSON]from us[/color].
+fellow_officer: Have you seen what's happening outside? Pamphlets everywhere showing [color=DARK_VIOLET]Root Reserve[/color] is made from... [pulse freq=3][color=CRIMSON]from us[/color][/pulse].
 
 set {fellow_officer_response} = "none"
 - "Keep your voice down. We're all being watched."

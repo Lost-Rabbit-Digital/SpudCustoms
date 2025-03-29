@@ -11,11 +11,11 @@ resistance_leader: A weathered potato with battle scars addresses the assembled 
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 resistance_leader: The time for whispers and pamphlets is over. The government has shown its true colors.
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-resistance_leader: Our sources confirm that [color=DARK_VIOLET]Root Reserve[/color] processing plants are increasing production.
+resistance_leader: Our sources confirm that [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] processing plants are increasing production.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-resistance_leader: Which means [color=CRIMSON]more of our brothers and sisters disappeared, processed, consumed[/color].
+resistance_leader: Which means [tornado radius=3 freq=3][color=CRIMSON]more of our brothers and sisters disappeared, processed, consumed[/color][/tornado].
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-resistance_leader: The leader pounds a fist on the table. [color=CHARTREUSE]This ends now.[/color] We have a plan to strike at the heart of their operation.
+resistance_leader: The leader pounds a fist on the table. [pulse freq=3][color=CHARTREUSE]This ends now.[/color][/pulse] We have a plan to strike at the heart of their operation.
 leave resistance_leader
 
 [background arg="res://assets/narrative/resistance_planning.png" fade="1.2"]
@@ -106,7 +106,7 @@ if {final_decision} == "help":
 	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 	resistance_leader: On the third day, when the sun is highest, our agents will come.
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-	resistance_leader: The password is "[color=CHARTREUSE]The roots grow deep.[/color]" Remember it.
+	resistance_leader: The password is "[wave amp=15 freq=3][color=CHARTREUSE]The roots grow deep.[/color][/wave]" Remember it.
 	leave resistance_leader
 elif {final_decision} == "passive":
 	join resistance_leader [z_index="1"]

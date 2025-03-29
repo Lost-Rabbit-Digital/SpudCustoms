@@ -19,13 +19,13 @@ join security_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 security_officer: We're especially concerned about [color=CRIMSON]forbidden materials[/color] - anti-government literature, photography equipment...
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-security_officer: Their voice drops ominously. [color=DARK_VIOLET]We have special procedures for those individuals.[/color]
+security_officer: Their voice drops ominously. "[pulse freq=2][color=DARK_VIOLET]We have special procedures for those individuals.[/color][/pulse]"
 leave security_officer
 
 [background arg="res://assets/narrative/checkpoint_exterior.png" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-narrator: [color=DARK_VIOLET]Root Reserve[/color] trucks unload crates marked "Premium Reserve" into the cafeteria. The smell is enticing, but your stomach turns.
+narrator: [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] trucks unload crates marked "Premium Reserve" into the cafeteria. The smell is enticing, but your stomach turns.
 leave narrator
 
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
@@ -33,7 +33,7 @@ join fellow_officer [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 fellow_officer: Have you tried the new Premium Reserve? My cousin disappeared last month. Failed inspection.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: Maybe he's part of this batch, huh? [color=STEEL_BLUE]Dark humor, you know?[/color]
+fellow_officer: Maybe he's part of this batch, huh? [tornado radius=2 freq=2][color=STEEL_BLUE]Dark humor, you know?[/color][/tornado]
 
 set {cafeteria_response} = "none"
 - "That's not funny. Not at all."
@@ -44,7 +44,7 @@ set {cafeteria_response} = "none"
 if {cafeteria_response} == "serious":
 	join fellow_officer [z_index="1"]
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-	fellow_officer: You're right. Sometimes joking is easier than thinking about [color=CRIMSON]what might actually be happening[/color].
+	fellow_officer: You're right. Sometimes joking is easier than thinking about [pulse freq=3][color=CRIMSON]what might actually be happening[/color][/pulse].
 	leave fellow_officer
 else:
 	join fellow_officer [z_index="1"]
@@ -55,7 +55,7 @@ else:
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-sweet_potato_sasha: Convenient timing for new security protocols, isn't it? [color=YELLOW]They're trying to stop information about Root Reserve.[/color]
+sweet_potato_sasha: Convenient timing for new security protocols, isn't it? [wave amp=15 freq=3][color=YELLOW]They're trying to stop information about Root Reserve.[/color][/wave]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: I have something that might help us. Some potatoes with [color=CHARTREUSE]vital information deserve to get through[/color].
 leave sweet_potato_sasha

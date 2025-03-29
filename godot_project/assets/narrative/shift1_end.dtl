@@ -6,7 +6,7 @@ join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Adequate work today, sprout. Remember, efficiency is key. We have quotas to meet.
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-supervisor_russet: Don't forget to grab your ration of [color=DARK_VIOLET]Root Reserve[/color]. "It's the flavor of Spud's future!"
+supervisor_russet: Don't forget to grab your ration of [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave]. You know what the radio says, it's the flavor of Spud's future!
 leave supervisor_russet
 
 [background arg="res://assets/narrative/suspicious_note.png" fade="2.0"]
@@ -17,7 +17,7 @@ A small note slips out from some papers on your desk.
 [background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-player_character: That note... and the way Russet dodged my question about [color=CRIMSON]rejected potatoes[/color]... [br] Something feels [color=STEEL_BLUE]off[/color].
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+player_character: That note... and the way Russet dodged my question about [pulse freq=3][color=CRIMSON]rejected potatoes[/color][/pulse]... [br] Something feels [color=STEEL_BLUE]off[/color].
+saudio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 player_character: I should stay [color=YELLOW]alert[/color]. There's more going on here than stamping passports.
 leave player_character

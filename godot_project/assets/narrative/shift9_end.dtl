@@ -18,12 +18,13 @@ if {stay_or_go} == "stay":
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 	security_chief: Chief Yukon drags in resistance members in chains, Sasha among them. "These [color=CRIMSON]traitors[/color] will face [color=DARK_VIOLET]final processing[/color]."
 	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-	security_chief: Sasha catches your eye. Despite her bruises, her gaze holds [color=CHARTREUSE]no judgment, only sadness[/color].
+	sweet_potato_sasha: Sasha catches your eye. Despite her bruises, her gaze holds [wave amp=15 freq=2][color=CHARTREUSE]no judgment, only sadness[/color][/wave].
+
 	leave security_chief
 	[background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
 	join player_character [z_index="1"] 
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-	player_character: You've survived by keeping your head down, but [color=GOLD]at what cost?[/color] As [color=DARK_VIOLET]Root Reserve[/color] production wafts from the plant, your stomach turns.
+	player_character: You've survived by keeping your head down, but [pulse freq=3][color=GOLD]at what cost?[/color][/pulse] As [color=DARK_VIOLET]Root Reserve[/color] production wafts from the plant, your stomach turns.
 	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 	player_character: Perhaps there's still a chance from the inside. Or maybe you're just easing your conscience.
 	leave player_character
@@ -31,12 +32,12 @@ if {stay_or_go} == "go":
 	[background arg="res://assets/narrative/resistance_planning.png" fade="0.0"]
 	join player_character [z_index="1"]
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-	player_character: You [color=CHARTREUSE]abandon your post[/color] and race toward the fighting. The time for caution is over.
+	player_character: You [tornado radius=3 freq=2][color=CHARTREUSE]abandon your post[/color][/tornado] and race toward the fighting. The time for caution is over.
 	leave player_character
 	[background arg="res://assets/narrative/joining_rebellion.png" fade="2.0"]
 	join resistance_member_2 [z_index="1"]
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-	resistance_fighter: "[color=GOLD]Prove you're with us![/color] How do you know Sasha?"
+	resistance_fighter: "[pulse freq=3][color=GOLD]Prove you're with us![/color][/pulse] How do you know Sasha?"
 	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 	player_character: "[color=CHARTREUSE]The roots grow deep![/color] I'm from the checkpoint, Sasha recruited me!"
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
@@ -45,7 +46,7 @@ if {stay_or_go} == "go":
 	[background arg="res://assets/narrative/plant_revelation.png" fade="2.0"]
 	join player_character [z_index="1"]
 	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-	player_character: The doors blast open, revealing the [color=CRIMSON]horrific truth[/color] - grinding machines, conveyors carrying potatoes to their doom.
+	player_character: The doors blast open, revealing the [wave amp=25 freq=3][color=CRIMSON]horrific truth[/color][/wave] - grinding machines, conveyors carrying potatoes to their doom.
 	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 	player_character: At the end of one belt - Sasha and others [color=CRIMSON]bound helplessly[/color]. Supervisor Russet stands at the controls.
 	leave player_character
