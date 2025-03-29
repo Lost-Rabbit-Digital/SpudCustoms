@@ -116,7 +116,7 @@ func _on_blue_sky_boden_game_dev_button_pressed() -> void:
 	await setup_juicy_button(%BlueSkyBodenGameDevButton, "https://bsky.app/profile/bodengamedev.bsky.social")
 
 func _on_feedback_button_pressed() -> void:
-	await setup_juicy_button(%FeedbackButton, "https://docs.google.com/forms/d/1COq7e4ODVKL4HbWyhuthXT73FaxXd5YcBlJwtp6kPZY/edit")
+	await setup_juicy_button(%FeedbackButton, "https://forms.gle/SP3CFfJVrF3wNBFJ8")
 
 # Define your handler functions
 func _on_button_mouse_entered(button: BaseButton) -> void:
