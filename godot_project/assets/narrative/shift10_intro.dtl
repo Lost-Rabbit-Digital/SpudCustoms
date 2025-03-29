@@ -1,6 +1,6 @@
 # shift10_intro.dtl
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
-set {stay_or_go} = "stay"
+set {stay_or_go} = "go"
 if {stay_or_go} == "stay":
     # Storyline for those who stayed at their post
     [background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]

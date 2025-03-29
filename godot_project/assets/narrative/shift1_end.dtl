@@ -12,12 +12,12 @@ leave supervisor_russet
 [background arg="res://assets/narrative/suspicious_note.png" fade="2.0"]
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 A small note slips out from some papers on your desk.
-[color=GOLD]"Not all is as it seems. The roots of our nation have grown rotten. [br] Follow the trail, but take care not to be silenced. [br] - A friend"[/color]
+"[color=GOLD]Not all is as it seems. The roots of our nation have grown rotten. [br] Follow the trail, but take care not to be silenced.[/color] [br] - [color=CHARTREUSE]A friend[/color]"
 
 [background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
-player_character: That note... and the way Russet dodged my question about [color=CRIMSON]rejected potatoes[/color]... [br] Something feels off.
+player_character: That note... and the way Russet dodged my question about [color=CRIMSON]rejected potatoes[/color]... [br] Something feels [color=STEEL_BLUE]off[/color].
 audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 player_character: I should stay [color=YELLOW]alert[/color]. There's more going on here than stamping passports.
 leave player_character
