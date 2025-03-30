@@ -77,9 +77,6 @@ func _ready():
 	# Play with original pitch by default
 	next_track_with_random_pitch()
 	#play_with_pitch_variation("original")
-	# Set version label text from project settings
-	var version = ProjectSettings.get_setting("application/config/version")
-	version_label.text = "v" + version
 	super._ready()
 	_setup_level_select()
 	animation_state_machine = $MenuAnimationTree.get("parameters/playback")

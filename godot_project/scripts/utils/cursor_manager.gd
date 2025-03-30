@@ -114,27 +114,27 @@ func _on_button_mouse_entered(button: Control):
 	if not active:
 		return
 		
-	print("Mouse entered: ", button.name)
+	#print("Mouse entered: ", button.name)
 	# Add button to hover stack
 	hover_state_stack.append(button)
 	
 	# Update cursor to hover state unless mouse is being pressed
 	if not mouse_pressed:
 		update_cursor("hover")
-		print("Set cursor to hover state")
+		#print("Set cursor to hover state")
 
 func _on_button_mouse_exited(button: Control):
 	if not active:
 		return
 		
-	print("Mouse exited: ", button.name)
+	#print("Mouse exited: ", button.name)
 	# Remove this specific button from hover stack
 	hover_state_stack.erase(button)
 	
 	# If stack is empty and not pressing mouse, restore default cursor
 	if hover_state_stack.is_empty() and not mouse_pressed:
 		update_cursor("default")
-		print("Set cursor to default state")
+		#print("Set cursor to default state")
 
 # Update the cursor appearance
 func update_cursor(state: String):
