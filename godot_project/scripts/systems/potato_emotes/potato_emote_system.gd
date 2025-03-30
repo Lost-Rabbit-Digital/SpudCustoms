@@ -261,7 +261,7 @@ func _play_emote_sound() -> void:
 		emote_audio_player.volume_db = -16.00
 		
 		# Play the sound
-		emote_audio_player.play()
+		#emote_audio_player.play()
 
 ## Callback for when the emote timer expires
 func _on_emote_timer_timeout() -> void:
