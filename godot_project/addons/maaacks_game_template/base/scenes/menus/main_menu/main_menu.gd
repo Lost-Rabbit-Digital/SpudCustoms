@@ -79,6 +79,7 @@ func _ready():
 		if button is BaseButton or TextureButton:  # This will match all buttons that inherit from BaseButton
 			button.mouse_entered.connect(_on_button_mouse_entered.bind(button))
 			button.mouse_exited.connect(_on_button_mouse_exited.bind(button))
+	
 	_setup_for_web()
 	_setup_options()
 	_setup_credits()
@@ -118,25 +119,30 @@ func _on_blue_sky_boden_game_dev_button_pressed() -> void:
 func _on_feedback_button_pressed() -> void:
 	await setup_juicy_button(%FeedbackButton, "https://forms.gle/SP3CFfJVrF3wNBFJ8")
 
-# Define your handler functions
+## Handles mouse hover effects for buttons.
+##
+## Plays hover sound effect and applies visual feedback when the mouse 
+## enters a button's area.
+##
+## @param button The button being hovered.
 func _on_button_mouse_entered(button: BaseButton) -> void:
 	var button_hover_sfx_path := "res://assets/user_interface/audio/hover_sound.mp3"
 	
 	# Ensure the button scales from its center
 	button.pivot_offset = button.size / 2
 	
-	# Play button down sound
-	var button_down_player := AudioStreamPlayer.new()
-	add_child(button_down_player)
-	button_down_player.stream = load(button_hover_sfx_path)
-	button_down_player.volume_db = -6.0
-	button_down_player.bus = "SFX"
-	button_down_player.finished.connect(func(): button_down_player.queue_free())
-	button_down_player.play()
+	# Create hover animation
+	var tween = create_tween().set_parallel()
+	tween.tween_property(button, "scale", Vector2(1.05, 1.05), 0.1).set_ease(Tween.EASE_OUT)
 	
-	pass
-	# Handle mouse enter for any button
-	# Your hover effect code here
+	# Play hover sound
+	var sound_player := AudioStreamPlayer.new()
+	add_child(sound_player)
+	sound_player.stream = load(button_hover_sfx_path)
+	sound_player.volume_db = -6.0
+	sound_player.bus = "SFX"
+	sound_player.finished.connect(func(): sound_player.queue_free())
+	sound_player.play()
 
 func _on_button_mouse_exited(button: BaseButton) -> void:
 	# Handle mouse exit for any button
@@ -154,6 +160,14 @@ func _on_button_mouse_exited(button: BaseButton) -> void:
 	tween.tween_property(button, "scale", normal_scale, normal_time).set_ease(Tween.EASE_OUT)
 	tween.tween_property(button, "modulate", normal_color, normal_time)
 
+## Creates a juicy button press animation with sound effects.
+##
+## Animates the button with a press-and-bounce effect and plays appropriate
+## sound effects. If a URL is provided, opens it when the animation completes.
+##
+## @param button The button control to animate.
+## @param url Optional URL to open after the animation completes.
+## @return The tween's finished signal for awaiting completion.
 func setup_juicy_button(button: Control, url: String = "") -> Signal:
 	# Animation configuration variables
 	var initial_shrink_scale := Vector2(0.8, 0.8)
@@ -194,7 +208,10 @@ func setup_juicy_button(button: Control, url: String = "") -> Signal:
 	bounce_tween.tween_property(button, "scale", bounce_scale, bounce_time).set_ease(Tween.EASE_OUT)
 	
 	# Complete the animation
-	bounce_tween.chain().tween_property(button, "scale", final_scale, final_scale_time).set_ease(Tween.EASE_IN_OUT)
+	var final_tween = bounce_tween.chain()
+	final_tween.tween_property(button, "scale", final_scale, final_scale_time).set_ease(Tween.EASE_IN_OUT)
+	
+	# Use a separate chain for the color to ensure proper timing
 	bounce_tween.chain().tween_property(button, "modulate", final_color, final_scale_time)
 	
 	# Open URL if provided
