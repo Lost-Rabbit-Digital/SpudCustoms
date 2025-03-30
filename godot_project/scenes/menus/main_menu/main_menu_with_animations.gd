@@ -13,6 +13,7 @@ func load_game_scene():
 	SceneLoader.load_scene(story_game_scene_path)
 
 func new_game():
+	await JuicyButtons.setup_button(%NewGameButton)
 	GlobalState.reset()
 	load_game_scene()
 
