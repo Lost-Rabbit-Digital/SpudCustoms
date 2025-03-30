@@ -33,6 +33,7 @@ ProjectMusicController="*res://addons/maaacks_game_template/base/scenes/autoload
 ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
 LawValidator="*res://assets/autoload/LawValidator.gd"
 JuicyButtons="*res://scripts/utils/juicy_buttons.gd"
+CursorManager="*res://scripts/utils/cursor_manager.gd"
 
 [debug]
 
@@ -164,7 +165,6 @@ window/size/borderless=true
 window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="viewport"
-mouse_cursor/custom_image="res://assets/cursor/cursor_default.png"
 
 [editor_plugins]
 

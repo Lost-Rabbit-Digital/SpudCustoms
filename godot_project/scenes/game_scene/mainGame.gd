@@ -686,10 +686,6 @@ func _on_spawn_timer_timeout():
 		spawn_timer.stop()
 
 func _process(_delta):
-	# Update cursor through the drag and drop manager
-	if drag_and_drop_manager:
-		drag_and_drop_manager.process_cursor()
-	
 	# Handle prompt dialogue visibility
 	var mouse_pos = get_global_mouse_position()
 	var suspect = $Gameplay/MugshotPhotoGenerator/SizingSprite

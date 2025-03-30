@@ -33,13 +33,6 @@ var open_sound_played = false
 # Audio
 var audio_player: AudioStreamPlayer2D
 
-# Custom cursor references
-var default_cursor_texture = preload("res://assets/cursor/cursor_default.png")
-var hover_cursor_texture = preload("res://assets/cursor/cursor_hover.png")
-var grab_cursor_texture = preload("res://assets/cursor/cursor_grab.png")
-var click_cursor_texture = preload("res://assets/cursor/cursor_click.png")
-var target_cursor_texture = preload("res://assets/cursor/cursor_target.png")
-
 var _stamp_bar_controller = null
 
 # Stamp System Manager
@@ -418,36 +411,6 @@ func identify_drop_zone(pos: Vector2) -> String:
 	elif suspect and suspect.get_rect().has_point(suspect.to_local(pos)):
 		return "suspect"
 	return "none"
-
-# Process cursor updates
-func process_cursor(mouse_pos: Vector2, border_runner_enabled: bool, missile_zone_check_callback: Callable):
-	if dragged_item:
-		update_cursor("grab")
-	else:
-		var hovered_item = find_topmost_item_at(mouse_pos)
-		if hovered_item:
-			if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-				update_cursor("grab")
-			else:
-				update_cursor("hover")
-		elif border_runner_enabled and missile_zone_check_callback.call(mouse_pos):
-			update_cursor("target")
-		else:
-			update_cursor("default")
-
-# Update cursor appearance
-func update_cursor(type: String):
-	match type:
-		"default":
-			Input.set_custom_mouse_cursor(default_cursor_texture, Input.CURSOR_ARROW, Vector2(0, 0))
-		"hover":
-			Input.set_custom_mouse_cursor(hover_cursor_texture, Input.CURSOR_POINTING_HAND, Vector2(0, 0))
-		"grab":
-			Input.set_custom_mouse_cursor(grab_cursor_texture, Input.CURSOR_DRAG, Vector2(0, 0))
-		"click":
-			Input.set_custom_mouse_cursor(click_cursor_texture, Input.CURSOR_POINTING_HAND, Vector2(0, 0))
-		"target":
-			Input.set_custom_mouse_cursor(target_cursor_texture, Input.CURSOR_CROSS, Vector2(0, 0))
 
 # Get the highest z-index among draggable items
 func get_highest_z_index() -> int:

@@ -30,6 +30,11 @@ func _ready():
 		# Note that we're using the autoload without "static"
 		JuicyButtons.enhance_all_buttons(container, hover_config)
 	
+	# Initialize cursor manager if it exists
+	if Engine.has_singleton("CursorManager"):
+		# Set initial cursor state
+		CursorManager.set_cursor_state("default")
+		
 	# Continue with your other setup
 	_setup_for_web()
 	_setup_options()
@@ -39,8 +44,17 @@ func _ready():
 func _exit_tree() -> void:
 	# Kill any running tweens to prevent memory leaks
 	JuicyButtons.kill_all_tweens(self)
+	
+	# Reset cursor manager state
+	if Engine.has_singleton("CursorManager"):
+		CursorManager.clear_hover_stack()
+		CursorManager.set_cursor_state("default")
 
 func _open_sub_menu(menu: Control):
+	# Clear cursor hover state when switching UI contexts
+	if Engine.has_singleton("CursorManager"):
+		CursorManager.clear_hover_stack()
+	
 	sub_menu = menu
 	sub_menu.show()
 	%BackButton.show()
@@ -58,6 +72,11 @@ func _event_is_mouse_button_released(event: InputEvent):
 	return event is InputEventMouseButton and not event.is_pressed()
 
 func _input(event):
+	# Override the current state to display a click
+	if event.is_action_pressed('ui_accept') or event.is_action_pressed("ui_select") or (
+				event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT):
+		CursorManager.override_cursor("click")
+	
 	if event.is_action_released("ui_cancel"):
 		if sub_menu:
 			_close_sub_menu()
