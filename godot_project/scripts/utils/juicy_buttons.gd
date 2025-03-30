@@ -169,13 +169,13 @@ func setup_hover(button: Control, config: Dictionary = {}) -> void:
 		button.set_meta("is_hovering", true)
 		
 		# Play hover sound
-		#var sound_player := AudioStreamPlayer.new()
-		#button.add_child(sound_player)
-		#sound_player.stream = load(hover_defaults.hover_sfx_path)
-		#sound_player.volume_db = hover_defaults.volume_db
-		#sound_player.bus = hover_defaults.audio_bus
-		#sound_player.finished.connect(func(): sound_player.queue_free())
-		#sound_player.play()
+		var sound_player := AudioStreamPlayer.new()
+		button.add_child(sound_player)
+		sound_player.stream = load(hover_defaults.hover_sfx_path)
+		sound_player.volume_db = hover_defaults.volume_db
+		sound_player.bus = hover_defaults.audio_bus
+		sound_player.finished.connect(func(): sound_player.queue_free())
+		sound_player.play()
 		
 		# Start a process function on the button if it doesn't exist
 		if not button.has_node("FloatController"):
