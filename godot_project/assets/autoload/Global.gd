@@ -1,6 +1,6 @@
 extends Node
 
-var shift: int = 1
+var shift: int = 0
 var current_story_state: int = 0
 var final_score = 0
 var build_type = "Full Release" # Can be Full Release or Demo Release
@@ -254,13 +254,13 @@ func reset_score():
 	score_updated.emit(score)
 
 func reset_shift():
-	shift = 1
+	shift = 0
 	quota_met = 0
 	
 func reset_game_state(keep_high_scores=true):
 	score = 0
 	final_score = 0
-	shift = 1
+	shift = 0
 	strikes = 0
 	quota_met = 0
 	current_game_stats = {}
