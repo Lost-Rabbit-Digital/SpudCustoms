@@ -18,6 +18,6 @@ A small note slips out from some papers on your desk.
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
 player_character: That note... and the way Russet dodged my question about [pulse freq=3][color=CRIMSON]rejected potatoes[/color][/pulse]... [br] Something feels [color=STEEL_BLUE]off[/color].
-saudio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
 player_character: I should stay [color=YELLOW]alert[/color]. There's more going on here than stamping passports.
 leave player_character

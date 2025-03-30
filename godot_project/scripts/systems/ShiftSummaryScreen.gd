@@ -1,11 +1,9 @@
 extends Control
 
 @onready var animation_player = $AnimationPlayer
-@onready var background = $Background
 signal closed
 
 var stats: Dictionary
-const BACKGROUND_TEXTURE = preload("res://assets/menu/shift_summary_end_screen.png")
 const GRADE_STAMP_TEXTURE = preload("res://assets/menu/performance_stamp.png")
 
 signal continue_to_next_shift
@@ -33,7 +31,6 @@ func _ready():
 		button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 		
 	# Make sure child elements don't block input for buttons
-	$Background.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$ScreenBackground.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	
 	# Connect button signals
@@ -42,17 +39,9 @@ func _ready():
 	$RestartButton.connect("pressed", Callable(self, "_on_restart_button_pressed"))
 	$MainMenuButton.connect("pressed", Callable(self, "_on_main_menu_button_pressed"))
 	
-	setup_background()
-	
-	var original_bg_pos = $Background.position
-	
 	# Call animation
 	play_entry_animation()
 
-func setup_background():
-	if background and BACKGROUND_TEXTURE:
-		background.texture = BACKGROUND_TEXTURE
-		background.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 
 # Add to ShiftSummaryScreen.gd
 func format_time(seconds: float) -> String:
