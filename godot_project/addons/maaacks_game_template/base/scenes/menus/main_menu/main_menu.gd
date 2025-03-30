@@ -2,16 +2,45 @@ class_name MainMenu
 extends Control
 
 ## Defines the path to the game scene. Hides the play button if empty.
-@export_file("*.tscn") var story_game_scene_path : String
-@export_file("*.tscn") var endless_game_scene_path : String
-@export var options_packed_scene : PackedScene
-@export var credits_packed_scene : PackedScene
+@export_file("*.tscn") var story_game_scene_path: String
+@export_file("*.tscn") var endless_game_scene_path: String
+@export var options_packed_scene: PackedScene
+@export var credits_packed_scene: PackedScene
 
 var options_scene
 var credits_scene
 var sub_menu
 
-func _open_sub_menu(menu : Control):
+func _ready():
+	# Apply to all buttons in containers
+	var button_containers = [
+		$MenuContainer/MenuButtonsMargin/MenuButtonsContainer,
+		%MenuButtonsBoxContainer,
+		$MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer
+	]
+	
+	var hover_config = {
+		"hover_scale": Vector2(1.05, 1.05),
+		"hover_time": 0.1,
+		"hover_sfx_path": "res://assets/user_interface/audio/hover_sound.mp3",
+		"volume_db": -6.0
+	}
+	
+	for container in button_containers:
+		# Note that we're using the autoload without "static"
+		JuicyButtons.enhance_all_buttons(container, hover_config)
+	
+	# Continue with your other setup
+	_setup_for_web()
+	_setup_options()
+	_setup_credits()
+	_setup_game_buttons()
+
+func _exit_tree() -> void:
+	# Kill any running tweens to prevent memory leaks
+	JuicyButtons.kill_all_tweens(self)
+
+func _open_sub_menu(menu: Control):
 	sub_menu = menu
 	sub_menu.show()
 	%BackButton.show()
@@ -25,7 +54,7 @@ func _close_sub_menu():
 	%BackButton.hide()
 	%MenuContainer.show()
 
-func _event_is_mouse_button_released(event : InputEvent):
+func _event_is_mouse_button_released(event: InputEvent):
 	return event is InputEventMouseButton and not event.is_pressed()
 
 func _input(event):
@@ -63,39 +92,17 @@ func _setup_credits():
 			credits_scene.connect("end_reached", _on_credits_end_reached)
 		%CreditsContainer.call_deferred("add_child", credits_scene)
 
-func _ready():
-	# In your _ready() function
-	for button in $MenuContainer/MenuButtonsMargin/MenuButtonsContainer.get_children():
-		if button is BaseButton or TextureButton:  # This will match all buttons that inherit from BaseButton
-			button.mouse_entered.connect(_on_button_mouse_entered.bind(button))
-			button.mouse_exited.connect(_on_button_mouse_exited.bind(button))
-	
-	for button in %MenuButtonsBoxContainer.get_children():
-		if button is BaseButton or TextureButton:  # This will match all buttons that inherit from BaseButton
-			button.mouse_entered.connect(_on_button_mouse_entered.bind(button))
-			button.mouse_exited.connect(_on_button_mouse_exited.bind(button))
-	
-	for button in $MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer.get_children():
-		if button is BaseButton or TextureButton:  # This will match all buttons that inherit from BaseButton
-			button.mouse_entered.connect(_on_button_mouse_entered.bind(button))
-			button.mouse_exited.connect(_on_button_mouse_exited.bind(button))
-	
-	_setup_for_web()
-	_setup_options()
-	_setup_credits()
-	_setup_game_buttons()
-
 func _on_options_button_pressed():
-	await setup_juicy_button(%OptionsButton)
+	await JuicyButtons.setup_button(%OptionsButton)
 	_open_sub_menu(options_scene)
 
 func _on_credits_button_pressed():
-	await setup_juicy_button(%CreditsButton)
+	await JuicyButtons.setup_button(%CreditsButton)
 	_open_sub_menu(credits_scene)
 	credits_scene.reset()
 
 func _on_exit_button_pressed():
-	await setup_juicy_button(%ExitButton)
+	await JuicyButtons.setup_button(%ExitButton)
 	get_tree().quit()
 
 func _on_credits_end_reached():
@@ -103,120 +110,17 @@ func _on_credits_end_reached():
 		_close_sub_menu()
 
 func _on_back_button_pressed():
-	await setup_juicy_button(%BackButton)
+	await JuicyButtons.setup_button(%BackButton)
 	_close_sub_menu()
 
 func _on_discord_button_pressed() -> void:
-	await setup_juicy_button(%DiscordButton, "https://discord.gg/Y7caBf7gBj")
+	await JuicyButtons.setup_button(%DiscordButton, "https://discord.gg/Y7caBf7gBj")
 
 func _on_blue_sky_heart_coded_button_pressed() -> void:
-	await setup_juicy_button(%BlueSkyHeartCodedButton, "https://bsky.app/profile/heartcoded.bsky.social")
-
+	await JuicyButtons.setup_button(%BlueSkyHeartCodedButton, "https://bsky.app/profile/heartcoded.bsky.social")
 
 func _on_blue_sky_boden_game_dev_button_pressed() -> void:
-	await setup_juicy_button(%BlueSkyBodenGameDevButton, "https://bsky.app/profile/bodengamedev.bsky.social")
+	await JuicyButtons.setup_button(%BlueSkyBodenGameDevButton, "https://bsky.app/profile/bodengamedev.bsky.social")
 
 func _on_feedback_button_pressed() -> void:
-	await setup_juicy_button(%FeedbackButton, "https://forms.gle/SP3CFfJVrF3wNBFJ8")
-
-## Handles mouse hover effects for buttons.
-##
-## Plays hover sound effect and applies visual feedback when the mouse 
-## enters a button's area.
-##
-## @param button The button being hovered.
-func _on_button_mouse_entered(button: BaseButton) -> void:
-	var button_hover_sfx_path := "res://assets/user_interface/audio/hover_sound.mp3"
-	
-	# Ensure the button scales from its center
-	button.pivot_offset = button.size / 2
-	
-	# Create hover animation
-	var tween = create_tween().set_parallel()
-	tween.tween_property(button, "scale", Vector2(1.05, 1.05), 0.1).set_ease(Tween.EASE_OUT)
-	
-	# Play hover sound
-	var sound_player := AudioStreamPlayer.new()
-	add_child(sound_player)
-	sound_player.stream = load(button_hover_sfx_path)
-	sound_player.volume_db = -6.0
-	sound_player.bus = "SFX"
-	sound_player.finished.connect(func(): sound_player.queue_free())
-	sound_player.play()
-
-func _on_button_mouse_exited(button: BaseButton) -> void:
-	# Handle mouse exit for any button
-	
-	# Reset scale and appearance to normal
-	var normal_scale := Vector2(1.0, 1.0)
-	var normal_time := 0.1
-	var normal_color := Color(1.0, 1.0, 1.0, 1.0)
-	
-	# Ensure the button scales from its center
-	button.pivot_offset = button.size / 2
-	
-	# Create a tween for returning to normal
-	var tween = create_tween().set_parallel()
-	tween.tween_property(button, "scale", normal_scale, normal_time).set_ease(Tween.EASE_OUT)
-	tween.tween_property(button, "modulate", normal_color, normal_time)
-
-## Creates a juicy button press animation with sound effects.
-##
-## Animates the button with a press-and-bounce effect and plays appropriate
-## sound effects. If a URL is provided, opens it when the animation completes.
-##
-## @param button The button control to animate.
-## @param url Optional URL to open after the animation completes.
-## @return The tween's finished signal for awaiting completion.
-func setup_juicy_button(button: Control, url: String = "") -> Signal:
-	# Animation configuration variables
-	var initial_shrink_scale := Vector2(0.8, 0.8)
-	var initial_shrink_time := 0.05
-	var initial_darken_color := Color(0.7, 0.7, 0.7, 1.0)
-	
-	var bounce_scale := Vector2(1.1, 1.1)
-	var bounce_time := 0.1
-	
-	var final_scale := Vector2(1.0, 1.0)
-	var final_scale_time := 0.1
-	var final_color := Color(1.0, 1.0, 1.0, 1.0)
-	
-	# Sound effect paths
-	var button_down_sfx_path := "res://assets/user_interface/audio/click_sound_4.mp3"
-	
-	# Ensure the button scales from its center
-	button.pivot_offset = button.size / 2
-	
-	# Play button down sound
-	var button_down_player := AudioStreamPlayer.new()
-	add_child(button_down_player)
-	button_down_player.stream = load(button_down_sfx_path)
-	button_down_player.volume_db = -6.0
-	button_down_player.bus = "SFX"
-	button_down_player.finished.connect(func(): button_down_player.queue_free())
-	button_down_player.play()
-	
-	# Create press animation tween
-	var tween = create_tween().set_parallel()
-	
-	# Initial shrink animation
-	tween.tween_property(button, "scale", initial_shrink_scale, initial_shrink_time).set_ease(Tween.EASE_OUT)
-	tween.tween_property(button, "modulate", initial_darken_color, initial_shrink_time)
-	
-	# Play button up sound at the bounce stage
-	var bounce_tween = tween.chain()
-	bounce_tween.tween_property(button, "scale", bounce_scale, bounce_time).set_ease(Tween.EASE_OUT)
-	
-	# Complete the animation
-	var final_tween = bounce_tween.chain()
-	final_tween.tween_property(button, "scale", final_scale, final_scale_time).set_ease(Tween.EASE_IN_OUT)
-	
-	# Use a separate chain for the color to ensure proper timing
-	bounce_tween.chain().tween_property(button, "modulate", final_color, final_scale_time)
-	
-	# Open URL if provided
-	if url.strip_edges() != "":
-		tween.finished.connect(func(): OS.shell_open(url))
-	
-	# Return the tween's finished signal directly
-	return tween.finished
+	await JuicyButtons.setup_button(%FeedbackButton, "https://forms.gle/SP3CFfJVrF3wNBFJ8")

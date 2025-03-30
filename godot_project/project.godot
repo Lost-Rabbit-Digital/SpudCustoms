@@ -32,6 +32,7 @@ SceneLoader="*res://addons/maaacks_game_template/base/scenes/autoloads/scene_loa
 ProjectMusicController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_music_controller.tscn"
 ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
 LawValidator="*res://assets/autoload/LawValidator.gd"
+JuicyButtons="*res://scripts/utils/juicy_buttons.gd"
 
 [debug]
 
