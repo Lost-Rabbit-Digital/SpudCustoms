@@ -239,6 +239,8 @@ func setup_hover(button: Control, config: Dictionary = {}) -> void:
 								
 				# Store updated velocity
 				button.set_meta("velocity", velocity)
+				
+				button.grab_focus()
 			)
 	)
 	
