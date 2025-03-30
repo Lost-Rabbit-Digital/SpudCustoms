@@ -127,7 +127,11 @@ These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release
 
 
 ### Completed Tasks for 1.0.2
+- Bug: Stamps fly up from the bottom of the screen
 - Added social icons to main menu
 - Bug: Text disappearing on the law receipt when picked up
 - Bug: Audio on shutter does not sync
 - Added emotes for potatoes in line
+- Create system to detect current cursor shape and update the sprite to match
+- Use the "Default cursor shape" property to update cursor state
+- Update cursor in the main menu when hover over buttons
