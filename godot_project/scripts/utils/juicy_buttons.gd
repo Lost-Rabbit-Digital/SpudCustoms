@@ -118,9 +118,10 @@ func setup_button(button: Control, url: String = "", config: Dictionary = {}) ->
 	# Return the tween's finished signal for awaiting
 	return tween.finished
 
-## Sets up hover effects for a button.
+## Sets up hover effects for a button with a floating animation.
 ##
-## Creates subtle scale and sound effects when hovering over a button.
+## Creates a subtle floating animation with sound effects when hovering over a button.
+## The button will gently float up and down while hovered, then return to normal when exited.
 ##
 ## @param button The button to set up hover effects for.
 ## @param config Optional dictionary with hover effect parameters.
@@ -133,26 +134,42 @@ func setup_hover(button: Control, config: Dictionary = {}) -> void:
 		"hover_trans": Tween.TRANS_QUAD,
 		"hover_sfx_path": "res://assets/user_interface/audio/hover_sound.mp3",
 		"volume_db": -8.0,
-		"audio_bus": "SFX"
+		"audio_bus": "SFX",
+		
+		# Floating animation settings
+		"float_height": 3.0,         # How high the button floats in pixels
+		"float_duration": 1.2,       # Complete cycle duration in seconds
+		"float_ease": Tween.EASE_IN_OUT,
+		"float_trans": Tween.TRANS_SINE
 	}
 	
 	# Merge provided config with defaults
 	for key in config:
 		hover_defaults[key] = config[key]
 	
+	# Store the original position on the button as metadata
+	button.set_meta("original_position", button.position)
+	
 	# Set up the hover effect
 	button.mouse_entered.connect(func():
 		# Ensure the button scales from its center
 		button.pivot_offset = button.size / 2
 		
-		# Create hover animation
-		var tween = create_tween()
-		tween.tween_property(
+		# Create hover scale animation
+		var scale_tween = create_tween()
+		scale_tween.tween_property(
 			button, 
 			"scale", 
 			hover_defaults.hover_scale, 
 			hover_defaults.hover_time
 		).set_ease(hover_defaults.hover_ease).set_trans(hover_defaults.hover_trans)
+		
+		# Set a flag to indicate we're hovering
+		button.set_meta("is_hovering", true)
+		
+		# Create and store a single-use floating tween
+		var float_tween = create_tween()
+		button.set_meta("float_tween", float_tween)
 		
 		# Play hover sound
 		var sound_player := AudioStreamPlayer.new()
@@ -162,13 +179,69 @@ func setup_hover(button: Control, config: Dictionary = {}) -> void:
 		sound_player.bus = hover_defaults.audio_bus
 		sound_player.finished.connect(func(): sound_player.queue_free())
 		sound_player.play()
+		
+		# Start a process function on the button if it doesn't exist
+		if not button.has_node("FloatController"):
+			var timer = Timer.new()
+			timer.name = "FloatController"
+			timer.wait_time = 0.016  # ~60fps
+			timer.autostart = true
+			button.add_child(timer)
+			
+			# Direction -1 = going up, 1 = going down
+			button.set_meta("float_direction", -1)
+			button.set_meta("float_progress", 0.0)
+			
+			# Connect timer to a custom function to handle the floating
+			timer.timeout.connect(func():
+				# Only animate if still hovering
+				if not button.get_meta("is_hovering"):
+					timer.queue_free()
+					return
+				
+				var original_pos = button.get_meta("original_position")
+				var direction = button.get_meta("float_direction")
+				var progress = button.get_meta("float_progress")
+				
+				# Update progress
+				progress += 0.016 / (hover_defaults.float_duration / 2)
+				button.set_meta("float_progress", progress)
+				
+				# Calculate new position using sine wave
+				var t = min(progress, 1.0)
+				var factor = sin(t * PI/2) # Smooth easing
+				var offset = hover_defaults.float_height * factor * direction * -1
+				
+				# Apply the new position
+				button.position.y = original_pos.y + offset
+				
+				# Check if we need to change direction
+				if progress >= 1.0:
+					button.set_meta("float_direction", direction * -1)
+					button.set_meta("float_progress", 0.0)
+			)
 	)
 	
 	# Set up the exit effect
 	button.mouse_exited.connect(func():
+		# Mark that we're no longer hovering
+		button.set_meta("is_hovering", false)
+		
+		# Get original position
+		var original_position = button.get_meta("original_position")
+		
+		# Tween back to original position
+		var position_tween = create_tween()
+		position_tween.tween_property(
+			button,
+			"position:y", 
+			original_position.y,
+			hover_defaults.hover_time
+		).set_ease(hover_defaults.hover_ease)
+		
 		# Revert to normal scale
-		var tween = create_tween()
-		tween.tween_property(
+		var scale_tween = create_tween()
+		scale_tween.tween_property(
 			button, 
 			"scale", 
 			Vector2(1.0, 1.0), 
