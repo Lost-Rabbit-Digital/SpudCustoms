@@ -251,3 +251,14 @@ func _exit_tree() -> void:
 	
 	if emote_delay_timer and not emote_delay_timer.is_stopped():
 		emote_delay_timer.stop()
+
+## Shows the thinking dots animation
+func _show_thinking() -> void:
+	# Choose between dots or question mark
+	if randf() < 0.3:  # 30% chance for dots
+		show_thinking_dots()
+	else:
+		_show_emote(PotatoEmoteSystem.EmoteType.QUESTION)
+		
+func show_thinking_dots() -> void:
+	pass

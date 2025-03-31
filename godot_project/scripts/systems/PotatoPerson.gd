@@ -97,9 +97,13 @@ func change_brain_state(new_state: int) -> void:
 			# No emote for idle state
 			emote_system._hide_emote()
 		PotatoBrainState.TALKING:
-			emote_system.show_thinking_dots(5.0)  # Show dots for 5 seconds
+			pass
+			# TODO: Add potato talking animation
+			#emote_system.show_thinking_dots(5.0)  # Show dots for 5 seconds
 		PotatoBrainState.THINKING:
-			_show_thinking()
+			pass
+			# TODO: Add potato thinking animation
+			#emote_system._show_thinking()
 		PotatoBrainState.SURPRISED:
 			emote_system.show_random_emote_from_category("surprise")
 			#emote_system.show_emote(PotatoEmoteSystem.EmoteType.DOUBLE_EXCLAMATION)
@@ -120,14 +124,6 @@ func interact_with_potato() -> void:
 	# Return to idle state after emote duration
 	await get_tree().create_timer(emote_system.emote_duration).timeout
 	change_brain_state(PotatoBrainState.IDLE)
-
-## Shows the thinking dots animation
-func _show_thinking() -> void:
-	# Choose between dots or question mark
-	if randf() < 0.3:  # 30% chance for dots
-		emote_system.show_thinking_dots()
-	else:
-		emote_system.show_emote(PotatoEmoteSystem.EmoteType.QUESTION)
 
 ## Shows a random idle emote based on mood probabilities
 func _show_idle_emote() -> void:
