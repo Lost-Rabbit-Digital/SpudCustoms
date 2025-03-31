@@ -456,7 +456,7 @@ func start_runner(potato: PotatoPerson):
 	# Ensure the potato is visible
 	potato.visible = true
 	potato.modulate.a = 1.0
-	potato.z_index = 10  # Ensure it's above background elements
+	potato.z_index = 12  # Ensure it's above background elements
 	
 	# Set the runner speed directly on the potato
 	potato.runner_base_speed = runner_speed  # Add this line
@@ -860,7 +860,7 @@ func handle_successful_hit(runner, explosion_pos):
 		corpse.texture = corpse_textures["Russet"]
 		
 	corpse.global_position = runner.global_position
-	corpse.z_index = 6 # Below explosions but above background
+	corpse.z_index = 12 # Below explosions but above background
 	# Slightly adjust size randomly
 	corpse.scale = Vector2(0.9, 0.9) * randf_range(0.9, 1.1) 
 	# Add slight random rotation for visual variety

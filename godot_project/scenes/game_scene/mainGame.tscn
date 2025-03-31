@@ -480,7 +480,7 @@ scale = Vector2(0.4, 0.4)
 [node name="SuspectPanel" parent="Gameplay" instance=ExtResource("22_qfxfi")]
 
 [node name="InspectionTable" type="Sprite2D" parent="Gameplay"]
-z_index = 13
+z_index = 12
 z_as_relative = false
 position = Vector2(443.837, 470.5)
 scale = Vector2(2.64484, 2.59444)
@@ -521,13 +521,15 @@ position = Vector2(1079, 441)
 position = Vector2(1079, 584)
 
 [node name="Passport" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-z_index = 13
+z_index = 14
 z_as_relative = false
-position = Vector2(1527, 481)
+position = Vector2(1649, 568)
 texture = ExtResource("27_qjue5")
 
 [node name="ClosedPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
 visible = false
+z_index = 14
+z_as_relative = false
 position = Vector2(-34.6184, 40.1346)
 rotation = -0.137881
 scale = Vector2(0.413016, 0.413016)
@@ -542,7 +544,8 @@ texture = ExtResource("28_jdq0j")
 
 [node name="OpenPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
 visible = false
-z_index = 1
+z_index = 14
+z_as_relative = false
 texture = ExtResource("25_gf7dt")
 
 [node name="PassportPhotoGenerator" parent="Gameplay/InteractiveElements/Passport/OpenPassport" instance=ExtResource("23_3qac4")]
@@ -589,7 +592,7 @@ position = Vector2(-4.99997, 3.99999)
 texture = ExtResource("30_5od2r")
 
 [node name="LawReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-z_index = 13
+z_index = 14
 z_as_relative = false
 position = Vector2(173, 558)
 texture = ExtResource("31_rtxd3")

@@ -9,7 +9,7 @@ signal item_closed(item)
 signal passport_returned(item)
 
 # Configuration
-const PASSPORT_Z_INDEX = 13
+const PASSPORT_Z_INDEX = 14
 const DRAGGING_Z_INDEX = 100  # Higher z-index for items being dragged
 const RETURN_TWEEN_DURATION = 0.3  # Duration of return animation in seconds
 const TABLE_EDGE_BUFFER = 20  # Buffer distance from table edge
@@ -19,7 +19,7 @@ var draggable_items = []
 var dragged_item = null
 var drag_offset = Vector2()
 var document_was_closed = false
-var original_z_index = 13
+var original_z_index = 14
 
 # Drop zone references
 var inspection_table: Node2D
