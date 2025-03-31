@@ -75,8 +75,8 @@ var emote_sprite: AnimatedSprite2D
 ## Timer for automatically hiding emotes after display
 var emote_timer: Timer
 
-## Timer for dot sequence animation
-var dot_sequence_timer: Timer
+## Timer for the delay between random emotes
+var emote_delay_timer: Timer
 
 ## Audio player for emote sounds
 var emote_audio_player: AudioStreamPlayer
@@ -87,11 +87,17 @@ var current_emote: int = -1
 ## Emote display duration in seconds
 @export var emote_duration: float = 2.0
 
+## Delay between automatic emotes in seconds
+@export var emote_delay: float = 5.0
+
 ## Whether the emote is currently visible
 var is_emote_visible: bool = false
 
 ## Whether to play sounds with emotes
 @export var play_sounds: bool = true
+
+## Whether to automatically show random emotes
+@export var auto_emote: bool = false
 
 ## Flag to track if the system has been initialized
 var is_initialized: bool = false
@@ -109,6 +115,13 @@ func init(sprite: AnimatedSprite2D) -> void:
 	emote_timer.wait_time = emote_duration
 	emote_timer.timeout.connect(_on_emote_timer_timeout)
 	add_child(emote_timer)
+
+	# Create and configure the emote delay timer for automatic emoting
+	emote_delay_timer = Timer.new()
+	emote_delay_timer.one_shot = true
+	emote_delay_timer.wait_time = emote_delay
+	emote_delay_timer.timeout.connect(_on_emote_delay_timer_timeout)
+	add_child(emote_delay_timer)
 	
 	# Create audio player for emote sounds
 	emote_audio_player = AudioStreamPlayer.new()
@@ -118,6 +131,25 @@ func init(sprite: AnimatedSprite2D) -> void:
 	hide_emote()
 	
 	is_initialized = true
+	
+	# Start automatic emoting if enabled
+	if auto_emote:
+		start_auto_emoting()
+
+## Starts automatic random emoting with the configured delay
+func start_auto_emoting() -> void:
+	if not is_initialized:
+		push_error("Emote system not initialized!")
+		return
+		
+	auto_emote = true
+	# Start the timer for the first emote
+	emote_delay_timer.start(randf_range(emote_delay * 0.5, emote_delay * 1.5))
+
+## Stops automatic emoting
+func stop_auto_emoting() -> void:
+	auto_emote = false
+	emote_delay_timer.stop()
 
 ## Shows a random emote from any category
 ## 
@@ -163,9 +195,6 @@ func show_emote(emote_type: int) -> int:
 	if not emote_frames.has(emote_type):
 		push_error("Invalid emote type: " + str(emote_type))
 		return -1
-	
-	# Stop any ongoing dot sequence
-	dot_sequence_timer.stop()
 	
 	# Get the frame index for this emote type
 	var frame_index: int = emote_frames[emote_type]
@@ -248,8 +277,9 @@ func hide_emote() -> void:
 	if emote_timer:
 		emote_timer.stop()
 	
-	if dot_sequence_timer:
-		dot_sequence_timer.stop()
+	# If auto-emoting is enabled, start the delay timer for the next emote
+	if auto_emote:
+		emote_delay_timer.start(randf_range(emote_delay * 0.75, emote_delay * 1.25))
 
 ## Play a sound effect for the current emote
 ## 
@@ -302,3 +332,12 @@ func _play_emote_sound() -> void:
 ## Hides the current emote when its display duration is over.
 func _on_emote_timer_timeout() -> void:
 	hide_emote()
+
+## Callback for the emote delay timer
+## 
+## Triggers a random emote when the delay between emotes has passed.
+func _on_emote_delay_timer_timeout() -> void:
+	if auto_emote:
+		# Show a random emote
+		show_random_emote()
+		# The next delay timer will be started in hide_emote()
