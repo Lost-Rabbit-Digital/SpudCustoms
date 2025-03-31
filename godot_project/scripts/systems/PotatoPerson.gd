@@ -6,7 +6,7 @@ signal path_completed
 signal state_changed(old_state, new_state)
 signal destroyed(position)
 	
-# States
+# Tater States
 enum TaterState {
 	QUEUED,
 	IN_OFFICE,
@@ -15,6 +15,8 @@ enum TaterState {
 	RUNNING,
 	DESTROYED
 }
+# Current Tater State
+var current_state: = TaterState.QUEUED
 
 # Properties
 var potato_info: Dictionary = {}
@@ -43,33 +45,22 @@ var textures = {
 	"Purple Majesty": preload("res://assets/potatoes/sprite_sheets/purple_majesty_small_5x8.png"),
 }
 
-
-## Potato state tracking
+# Potato Brain State
 enum PotatoBrainState { IDLE, TALKING, THINKING, SURPRISED, HAPPY, SAD, ANGRY }
-var current_state: = TaterState.QUEUED
 var current_potato_brain_state: int = PotatoBrainState.IDLE
 
 ## Reference to the EmoteSystem node
-var emote_system: Node
-@onready var emote_sprite: AnimatedSprite2D = %PotatoEmote
+var emote_system: PotatoEmoteSystem
+@onready var emote_sprite: AnimatedSprite2D = $PotatoEmote
 
 
 func _ready() -> void:	
-	# Find the PotatoEmote node in the scene
-	var emote_sprite = $"./PotatoEmote"
+	# Get reference to the emote sprite
+	emote_sprite = $PotatoEmote
 	
-	# Create a new instance of the emote system
-	var emote_system_instance = PotatoEmoteSystem.new()
-	add_child(emote_system_instance)
-	
-	# Initialize it with our sprite
-	emote_system_instance.init(emote_sprite)
-	
-	# Update the reference to use this instance
-	emote_system = emote_system_instance
-	
-	# Show thinking dots when the character first appears
-	#_show_thinking()
+	# Get reference to the emote system that's already attached to the sprite
+	# in the scene (as seen in your tscn file)
+	emote_system = $PotatoEmote
 	
 	# Initialize character generator if not already present
 	if !has_node("CharacterGenerator"):
@@ -84,10 +75,6 @@ func _ready() -> void:
 	update_appearance()
 
 func _process(delta):
-	# EXAMPLE: Random chance to show emote while idle
-	if current_potato_brain_state == PotatoBrainState.IDLE and randf() < 0.001:  # 0.1% chance per frame
-		_show_idle_emote()
-	
 	# Handle path following if on a path
 	if current_path_follow and current_state != TaterState.IN_OFFICE:
 		follow_path(delta)
@@ -108,19 +95,19 @@ func change_brain_state(new_state: int) -> void:
 	match new_state:
 		PotatoBrainState.IDLE:
 			# No emote for idle state
-			emote_system.hide_emote()
+			emote_system._hide_emote()
 		PotatoBrainState.TALKING:
 			emote_system.show_thinking_dots(5.0)  # Show dots for 5 seconds
 		PotatoBrainState.THINKING:
 			_show_thinking()
 		PotatoBrainState.SURPRISED:
-			emote_system.show_emote(emote_system.EmoteType.DOUBLE_EXCLAMATION)
+			emote_system.show_emote(PotatoEmoteSystem.EmoteType.DOUBLE_EXCLAMATION)
 		PotatoBrainState.HAPPY:
 			emote_system.show_random_emote_from_category("happy")
 		PotatoBrainState.SAD:
-			emote_system.show_emote(emote_system.EmoteType.SAD_FACE)
+			emote_system.show_emote(PotatoEmoteSystem.EmoteType.SAD_FACE)
 		PotatoBrainState.ANGRY:
-			emote_system.show_emote(emote_system.EmoteType.ANGRY_FACE)
+			emote_system.show_emote(PotatoEmoteSystem.EmoteType.ANGRY_FACE)
 
 ## Bind this to an input action or call it when the character is interacted with
 func interact_with_potato() -> void:
@@ -137,7 +124,7 @@ func _show_thinking() -> void:
 	if randf() < 0.3:  # 30% chance for dots
 		emote_system.show_thinking_dots()
 	else:
-		emote_system.show_emote(emote_system.EmoteType.QUESTION)
+		emote_system.show_emote(PotatoEmoteSystem.EmoteType.QUESTION)
 
 ## Shows a random idle emote based on mood probabilities
 func _show_idle_emote() -> void:
@@ -154,7 +141,7 @@ func _show_idle_emote() -> void:
 
 ## Shows a love emote (heart)
 func show_love() -> void:
-	emote_system.show_emote(emote_system.EmoteType.SINGULAR_HEART)
+	emote_system.show_emote(PotatoEmoteSystem.EmoteType.SINGULAR_HEART)
 
 ## Shows anger
 func show_anger() -> void:
@@ -162,7 +149,7 @@ func show_anger() -> void:
 
 ## Shows confusion
 func show_confusion() -> void:
-	emote_system.show_emote(emote_system.EmoteType.CONFUSED)
+	emote_system.show_emote(PotatoEmoteSystem.EmoteType.CONFUSED)
 
 ### END OF POTATO EMOTE SYSTEM ###
 
