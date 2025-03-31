@@ -6,4 +6,5 @@
 shader = ExtResource("1_vnk7r")
 shader_parameter/highlight_color = Color(0.94902, 0.745098, 0, 1)
 shader_parameter/pulse_speed = 6.0
+shader_parameter/edge_width = 0.1
 shader_parameter/enable_highlight = true
