@@ -85,12 +85,14 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://assets/styles/SpudCustomsTextboxWithSpeaker/SpudCustomsTextboxWithSpeaker.tres", "res://assets/styles/dialogic_default_style.tres"]
 layout/default_style="res://assets/styles/dialogic_default_style.tres"
 variables={
-"cafeteria_response": "",
+"cafeteria_response": "none",
 "critical_choice": "help",
 "ending_choice": "none",
 "family_response": "none",
 "fellow_officer_response": "none",
+"fellow_officer_response_2": "none",
 "final_decision": "none",
+"final_mission_response": "none",
 "hide_choice": "none",
 "hideout_response": "none",
 "initial_response": "none",

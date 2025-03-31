@@ -2,50 +2,50 @@
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/resistance_planning.png" fade="0.0"]
 join sweet_potato_sasha [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 sweet_potato_sasha: Good, you made it. The resistance is [color=CHARTREUSE]growing stronger[/color]. Thanks to those manifests, people are seeing the truth.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 sweet_potato_sasha: I managed to get this dossier from our sources - production schedules, '[color=CRIMSON]ingredient[/color]' lists, names of the [color=DARK_SLATE_BLUE]disappeared[/color].
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 sweet_potato_sasha: This isn't just a food supplement program. They're [color=CRIMSON]processing potatoes[/color]...and not in a good way.
 
 join player_character [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 player_character: Internal memos from Prime Minister Idaho himself, authorizing the "[color=DARK_ORANGE]utilization of rejected assets.[/color]"
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 player_character: Quotas for each checkpoint, with Spud Customs having the highest rejection-to-processing ratio.
 leave sweet_potato_sasha
 leave player_character
 
 [background arg="res://assets/narrative/night_attack.png" fade="2.0"]
 join narrator [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: The situation outside has deteriorated. Angry crowds gather at checkpoints demanding answers about Root Reserve.
 leave narrator
 
 [background arg="res://assets/narrative/extreme_emergency.png" fade="2.0"]
 join announcer [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 announcer: [color=YELLOW]EMERGENCY BROADCAST[/color]: Recent circulation of [color=CRIMSON]forged documents[/color] has caused unnecessary panic.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 announcer: A reward of [color=GOLD]10,000 Spud Credits[/color] is offered for information leading to the capture of these saboteurs.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 announcer: Consuming or distributing this propaganda is now classified as [color=RED]high treason[/color].
 leave announcer
 
 [background arg="res://assets/narrative/supervisor_presenting.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 supervisor_russet: Today's shift will operate under special protocols. Each traveler must undergo Loyalty Assessment.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 supervisor_russet: Those demonstrating [color=CRIMSON]anti-government sentiments[/color] are to be flagged immediately.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 supervisor_russet: The [color=CRIMSON]traitor in our midst[/color] will be found. And when they are... [draws finger across throat]
 leave supervisor_russet
 
 [background arg="res://assets/narrative/checkpoint_booth.png" fade="2.0"]
 join traveler_1 [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 traveler_1: A nervous potato approaches, [color=GOLD]yellow leaf badge[/color] partially visible. A tiny note is tucked between papers: "[color=CHARTREUSE]Safe house compromised. New location: Warehouse 7, Sector 4.[/color]"
 
 set {yellow_badge_response} = "none"
@@ -56,25 +56,25 @@ set {yellow_badge_response} = "none"
 
 if {yellow_badge_response} == "help":
 	join traveler_1 [z_index="1"]
-	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 	traveler_1: Relief floods their face. "Thank you. The truth will prevail."
 	leave traveler_1
 else:
 	join traveler_1 [z_index="1"]
-	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
-traveler_1: Horror dawns as you signal security. "[wave amp=25 freq=3]No, please! I have a family![/wave]" Their yellow badge falls to the floor.
-	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+	traveler_1: Horror dawns as you signal security. "[wave amp=25 freq=3]No, please! I have a family![/wave]" Their yellow badge falls to the floor.
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 	supervisor_russet: "Well done. Your loyalty is noted."
 	leave traveler_1
 
 join sweet_potato_sasha [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 sweet_potato_sasha: "Your decision was noticed. Be ready. [tornado radius=3 freq=2][color=CHARTREUSE]Something big is coming[/color][/tornado]. The resistance is planning a direct action."
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 sweet_potato_sasha: "When it happens, you'll need to [color=YELLOW]choose a side[/color]. There won't be any middle ground left."
 leave sweet_potato_sasha
 
 join player_character [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 player_character: With each potato you process, you're either [pulse freq=2][color=CHARTREUSE]aiding a revolution[/color][/pulse] or [pulse freq=2][color=CRIMSON]enabling a horrific system[/color][/pulse].
 leave player_character

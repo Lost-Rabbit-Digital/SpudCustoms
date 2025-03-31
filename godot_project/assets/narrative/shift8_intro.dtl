@@ -2,41 +2,41 @@
 audio music "res://assets/audio/ambient/horror_drone_23.wav" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]
 join narrator [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: The checkpoint has transformed into a military outpost. Elite guards in black uniforms patrol with weapons displayed.
 leave narrator
 
 [background arg="res://assets/narrative/maximum_security.png" fade="1.5"]
 join security_chief [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 security_chief: I am Chief Security Officer Yukon, dispatched from the capital by Prime Minister Idaho.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 security_chief: Intelligence indicates a [pulse freq=2][color=YELLOW]terrorist attack is imminent[/color][/pulse]. The "resistance" plans to infiltrate tomorrow.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 security_chief: All officers will submit to [wave amp=15 freq=2][color=DARK_ORANGE]loyalty screening[/color][/wave]. Suspicious behavior means detention and [color=DARK_VIOLET]processing[/color].
 leave security_chief
 
 [background arg="res://assets/narrative/occupation_checkpoint.png" fade="1.2"]
 join supervisor_russet [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 supervisor_russet: [tornado radius=3 freq=2][color=RED]Full cooperation[/color][/tornado] with Security is mandatory. My reports on each of you have been provided to the Chief.
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 supervisor_russet: Russet's gaze lingers on you uncomfortably before moving on.
 leave supervisor_russet
 
 [background arg="res://assets/narrative/maximum_security.png" fade="1.2"]
 join security_chief [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 security_chief: This is the [color=DARK_ORANGE]IdentityScan 5000[/color]. It analyzes biometrics to detect infiltrators and sympathizers.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 security_chief: Anyone flagged faces [color=CRIMSON]enhanced interrogation[/color]. Use it without exception.
 leave security_chief
 
 [background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
 join fellow_officer [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 fellow_officer: Have you seen Sasha? She didn't report for roll call. Last night, [color=CRIMSON]security forces entered her quarters[/color].
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 fellow_officer: They're saying she was part of the [pulse freq=2][color=CHARTREUSE]resistance[/color][/pulse].
 
 set {sasha_response} = "none"
@@ -47,24 +47,24 @@ set {sasha_response} = "none"
 
 if {sasha_response} == "cautious":
 	join fellow_officer [z_index="1"]
-	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 	fellow_officer: You're right. But watch yourself. They're looking for connections to her.
 	leave fellow_officer
 else:
 	join fellow_officer [z_index="1"]
-	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 	fellow_officer: So you were close? Be careful. They might be watching you too.
-	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 	fellow_officer: The officer slips you a note: "[color=YELLOW]Clean your station of anything suspicious.[/color]"
 	leave fellow_officer
 
 [background arg="res://assets/narrative/interrogation_setting.png" fade="2.0"]
 join security_chief [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 security_chief: You've been at this checkpoint for quite some time. Interesting performance record.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 security_chief: You were seen frequently with Officer Sasha, now under investigation for [wave amp=20 freq=3][color=CRIMSON]treason[/color][/wave].
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 security_chief: The chief leans forward. Is there anything you'd like to tell me about her activities?
 
 set {interrogation_choice} = "none"
@@ -75,27 +75,27 @@ set {interrogation_choice} = "none"
 
 if {interrogation_choice} == "deny":
 	join security_chief [z_index="1"]
-	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 	security_chief: Multiple witnesses say otherwise. Without concrete evidence though, I can't detain you. [color=YELLOW]Yet.[/color]
-	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 	security_chief: You'll be under [color=CRIMSON]close observation[/color]. One misstep, and you'll [color=DARK_VIOLET]join Sasha[/color].
 	leave security_chief
 else:
 	join security_chief [z_index="1"]
-	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 	security_chief: How convenient. And yet you filed no reports until now.
-	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 	security_chief: You'll provide a complete statement. If your information proves valuable, perhaps we'll overlook your delayed reporting.
 	leave security_chief
 
 [background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 join security_officer [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 security_officer: I'll be [color=CRIMSON]monitoring your work[/color] today. Every traveler must be identity-scanned. [color=RED]No exceptions[/color].
 leave security_officer
 
 [background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
 join player_character [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 player_character: Sasha has been taken. The resistance plan is [color=CRIMSON]compromised[/color]. With security on high alert, their chances seem hopeless.
 leave player_character

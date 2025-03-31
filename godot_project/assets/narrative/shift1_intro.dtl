@@ -1,30 +1,30 @@
 # shift1_intro.dtl
 audio music "res://assets/audio/ambient/wind_outside.wav" [fade="2.0" volume="1.0" bus="Music"]
 [background arg="res://assets/narrative/nation_of_spud.png" fade="0.0"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 join narrator [z_index="1"]
 narrator: Welcome to the nation of Spud. A land of [pulse freq=2][color=MEDIUM_VIOLET_RED]prosperity for all potatoes[/color][/pulse].
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: You've been selected for a [color=DARK_ORANGE]crucial role[/color] in protecting our borders.
 leave narrator
 
 [background arg="res://assets/narrative/checkpoint_interior.png" fade="1.5"]
 join narrator [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Your duty: to process incoming potatoes. Your family's well-being [wave amp=20 freq=3][color=YELLOW]depends on your performance[/color][/wave].
 leave narrator
 
 [background arg="res://assets/narrative/great_wall_of_spud.png" fade="1.5"]
 join narrator [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: BEHOLD! The [color=MEDIUM_VIOLET_RED]mighty wall[/color] that safeguards our nation. This is where you'll serve, ensuring only the worthy enter.
 leave narrator
 
 [background arg="res://assets/narrative/supervisor_presenting.png" fade="1.5"]
 join supervisor_russet [z_index="1"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 supervisor_russet: Ah, the new sprout. Listen carefully, your role is [color=DARK_ORANGE]vital to Spud's security[/color].
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 supervisor_russet: I appoint you as a Customs Officer of [pulse freq=1][color=MEDIUM_VIOLET_RED]glorious Spud[/color][/pulse]. Any questions?
 
 set {initial_response} = "none"
@@ -34,21 +34,21 @@ set {initial_response} = "none"
 	set {initial_response} = "questioning"
 
 if {initial_response} == "eager":
-	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 	supervisor_russet: Excellent! That's the kind of enthusiasm we need. You might earn a [color=DARK_VIOLET]Root Reserve[/color] commendation.
 	leave supervisor_russet
 
 else:
-	audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 	supervisor_russet: They're... [color=DARK_VIOLET]processed[/color]. According to protocol. [color=DARK_VIOLET]Root Reserve[/color] handles all the details.
-	audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 	supervisor_russet: Focus on your duties. [color=DARK_ORANGE]Nothing more.[/color]
 	leave supervisor_russet
 
 [background arg="res://assets/narrative/checkpoint_booth.png" fade="1.5"]
 join supervisor_russet [z_index="1"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 supervisor_russet: Your first shift begins now. Check papers carefully, deny those who don't meet our standards.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"] 
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 supervisor_russet: Meet your quota, avoid strikes. [color=MEDIUM_VIOLET_RED]Glory to Spud![/color]
 leave supervisor_russet
