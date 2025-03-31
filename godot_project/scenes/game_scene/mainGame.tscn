@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://cwks4tbpoq3n5"]
+[gd_scene load_steps=64 format=3 uid="uid://cwks4tbpoq3n5"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://scenes/game_scene/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://scripts/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bnbp4h8nco0v2" path="res://scripts/systems/NarrativeManager.tscn" id="13_c85wy"]
 [ext_resource type="AudioStream" uid="uid://bb8lmtt8f5yg4" path="res://assets/audio/ambient/wind_inside_1.wav" id="13_qvpbt"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="14_ynnf6"]
+[ext_resource type="Material" uid="uid://xffm6npnrajs" path="res://scripts/shaders/node_highlight/node_highlight.tres" id="15_h6yoa"]
 [ext_resource type="Script" uid="uid://qyhogd6acnnh" path="res://scripts/systems/drag_and_drop/drag_and_drop_manager.gd" id="20_5djk1"]
 [ext_resource type="PackedScene" uid="uid://bavd85qs23l5m" path="res://scripts/systems/stamp/stamp_system_manager.tscn" id="21_5djk1"]
 [ext_resource type="PackedScene" uid="uid://chbmbf0ki24bj" path="res://scripts/systems/office_shutter/office_shutter_controller.tscn" id="21_362e4"]
@@ -468,6 +469,7 @@ offset_bottom = 40.0
 
 [node name="Megaphone" type="Sprite2D" parent="Gameplay"]
 z_index = 20
+material = ExtResource("15_h6yoa")
 position = Vector2(900, 130)
 scale = Vector2(2.455, 2.455)
 texture = ExtResource("14_ynnf6")

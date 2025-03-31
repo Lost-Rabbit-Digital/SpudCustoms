@@ -136,3 +136,4 @@ These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release
 - Use the "Default cursor shape" property to update cursor state
 - Update cursor in the main menu when hover over buttons
 - Bug: Passport text disappears while dragged
+- Emote System: Implement a variable delay between emotes

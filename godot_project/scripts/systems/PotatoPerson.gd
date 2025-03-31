@@ -198,15 +198,15 @@ func update_appearance():
 			# Hide detailed view, show silhouette
 			$CharacterGenerator.visible = true
 			# Make sure the silhouette is visible
-			$Area2D/Sprite2D.visible = false
+			%PotatoSprite.visible = false
 		TaterState.QUEUED, TaterState.APPROVED, TaterState.REJECTED, TaterState.RUNNING:
 			# Show detailed view, hide silhouette
 			$CharacterGenerator.visible = false
 			# You might want to hide the silhouette when detailed view is shown
-			$Area2D/Sprite2D.visible = true
+			%PotatoSprite.visible = true
 		TaterState.DESTROYED:
 			visible = false
-			$Area2D/Sprite2D.visible = false
+			%PotatoSprite.visible = false
 			
 	# Update character appearance from character data if available
 	if potato_info.has("character_data") and $CharacterGenerator:
@@ -215,7 +215,7 @@ func update_appearance():
 	# Update body sprite based on race if specified
 	if potato_info.has("race") and potato_info.race in textures:
 		# Apply the texture to the child sprite instead of self
-		$Area2D/Sprite2D.texture = textures[potato_info.race]
+		%PotatoSprite.texture = textures[potato_info.race]
 
 func move_toward(target: Vector2, speed: float):
 	position = position.move_toward(target, speed)
@@ -248,7 +248,7 @@ func attach_to_path(path: Path2D):
 	
 	# Ensure visibility
 	visible = true
-	$Area2D/Sprite2D.visible = true
+	%PotatoSprite.visible = true
 	
 	# Create new PathFollow2D
 	current_path = path
@@ -335,3 +335,12 @@ func spawn_footprint():
 
 func _on_potato_button_pressed() -> void:
 	interact_with_potato()
+
+func _on_potato_button_mouse_entered() -> void:
+	$Area2D/PotatoSprite.set_instance_shader_parameter("enable_highlight", true)
+	print("POTATO: Enable highlight %b", $Area2D/PotatoSprite.get_instance_shader_parameter("enable_highlight"))
+
+
+func _on_potato_button_mouse_exited() -> void:
+	%PotatoSprite.set_instance_shader_parameter("enable_highlight", false)
+	print("POTATO: Disable highlight %b", %PotatoSprite.get_instance_shader_parameter("enable_highlight"))
