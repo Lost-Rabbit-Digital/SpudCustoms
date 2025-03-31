@@ -124,7 +124,7 @@ radius = 3.10779
 height = 13.7697
 
 [node name="PotatoPerson" type="Sprite2D" groups=["PotatoPerson"]]
-z_index = 7
+z_index = 13
 z_as_relative = false
 script = ExtResource("1_ftltf")
 
@@ -138,6 +138,7 @@ z_index = 9
 position = Vector2(0, -23)
 sprite_frames = SubResource("SpriteFrames_oxqnl")
 script = ExtResource("4_1mn5y")
+emoting_enabled = true
 
 [node name="PotatoButton" type="TextureButton" parent="."]
 offset_left = -7.0

@@ -9,8 +9,8 @@ signal item_closed(item)
 signal passport_returned(item)
 
 # Configuration
-const PASSPORT_Z_INDEX = 0
-const DRAGGING_Z_INDEX = 100  # Higher z-index for items being dragged
+const PASSPORT_Z_INDEX = 14
+const DRAGGING_Z_INDEX = 14  # Higher z-index for items being dragged
 const RETURN_TWEEN_DURATION = 0.3  # Duration of return animation in seconds
 const TABLE_EDGE_BUFFER = 20  # Buffer distance from table edge
 
@@ -19,7 +19,7 @@ var draggable_items = []
 var dragged_item = null
 var drag_offset = Vector2()
 var document_was_closed = false
-var original_z_index = 1
+var original_z_index = 14
 
 # Drop zone references
 var inspection_table: Node2D
@@ -317,13 +317,7 @@ func _return_item_to_table(item: Node2D):
 		#if is_openable_document(item):
 			#emit_signal("item_opened", item)
 	)
-	
-	# Set Z-index based on item type
-	if item.name == "Passport":
-		item.z_index = 9 # Above table but below crossbar
-	elif item.name == "Guide" or item.name == "LawReceipt":
-		item.z_index = 8 # Adjust as needed
-	
+
 	# Play a return sound
 	if audio_player:
 		audio_player.stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")

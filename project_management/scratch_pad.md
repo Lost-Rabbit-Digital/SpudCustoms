@@ -135,3 +135,4 @@ These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release
 - Create system to detect current cursor shape and update the sprite to match
 - Use the "Default cursor shape" property to update cursor state
 - Update cursor in the main menu when hover over buttons
+- Bug: Passport text disappears while dragged

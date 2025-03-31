@@ -1,37 +1,30 @@
-extends Node
+extends AnimatedSprite2D
 class_name PotatoEmoteSystem
-## A non-static emote system to be attached to each potato character.
+## A fully autonomous emote system for potato characters.
 ##
-## This script handles displaying emotes using an AnimatedSprite2D.
-## Each potato has its own instance of this script.
+## Simply add this as a child of your PotatoEmote node and it will
+## automatically work with the settings you configure in the Inspector.
 
-## Enum defining all available emote types
+## Types of emotes available
 enum EmoteType {
-	# Facial expressions
 	ANGRY_FACE,
 	HAPPY_FACE,
 	SAD_FACE,
-	
-	# Ellipses
 	BLANK,
 	DOT_1,
 	DOT_2,
 	DOT_3,
-	
-	# Emotional Reponse
 	SINGULAR_HEART,
 	BROKEN_HEART,
 	SWIRLING_HEARTS,
 	POPPING_VEIN,
-	
-	# General Reactions
 	QUESTION,
 	DOUBLE_EXCLAMATION,
 	SINGULAR_EXCLAMATION,
 	CONFUSED
 }
 
-## Dictionary that maps emote types to their corresponding frame indices
+## Maps emote types to frame indices
 var emote_frames = {
 	EmoteType.ANGRY_FACE: 0,
 	EmoteType.HAPPY_FACE: 1,
@@ -50,16 +43,16 @@ var emote_frames = {
 	EmoteType.CONFUSED: 14
 }
 
-## Dictionary mapping category names to lists of emote types in that category
+## Emote categories
 var emote_categories = {
-	"happy": [EmoteType.HAPPY_FACE, EmoteType.SINGULAR_HEART, EmoteType.SWIRLING_HEARTS],
-	"thinking": [EmoteType.DOT_1, EmoteType.DOT_2, EmoteType.DOT_3, EmoteType.QUESTION, EmoteType.CONFUSED],
+	"positive": [EmoteType.HAPPY_FACE, EmoteType.SINGULAR_HEART, EmoteType.SWIRLING_HEARTS],
 	"negative": [EmoteType.ANGRY_FACE, EmoteType.SAD_FACE, EmoteType.BROKEN_HEART, EmoteType.POPPING_VEIN],
+	"thinking": [EmoteType.DOT_1, EmoteType.DOT_2, EmoteType.DOT_3, EmoteType.QUESTION, EmoteType.CONFUSED],
 	"surprise": [EmoteType.DOUBLE_EXCLAMATION, EmoteType.SINGULAR_EXCLAMATION],
 	"blank": [EmoteType.BLANK]
 }
 
-## Dictionary mapping emote categories to sound types
+## Maps categories to sound types
 var category_sound_map = {
 	"happy": "froggy_dislike",
 	"thinking": "froggy_dislike",
@@ -67,167 +60,160 @@ var category_sound_map = {
 	"surprise": "froggy_dislike"
 }
 
-## Reference to the emote sprite
+## Core components
 var emote_sprite: AnimatedSprite2D
-
-## Timer for automatically hiding emotes after display
 var emote_timer: Timer
-
-## Timer for dot sequence animation
-var dot_sequence_timer: Timer
-
-## Audio player for emote sounds
+var emote_delay_timer: Timer
 var emote_audio_player: AudioStreamPlayer
 
-## Current emote being displayed
-var current_emote: int = -1
+## Configuration options (exposed to the Inspector)
+@export_category("Initital Emote")
+@export_range(1.0, 30.0) var minimum_initial_emote_delay: float = 1.0
+@export_range(1.0, 30.0) var maximum_initial_emote_delay: float = 5.0
+@export_category("General Emotes")
+## Whether the emotes will be displayed at all
+@export var emoting_enabled: bool = false
+## [Seconds] How long the emote will remained displayed
+@export_range(0.1, 10.0) var emote_duration: float = 2.0
+## [Seconds] Minimum amount of time before the next emote is displayed
+@export_range(1.0, 30.0) var minimum_emote_delay: float = 1.0
+## [Seconds] Maximum amount of time before the next emote is dispalyed
+@export_range(1.0, 30.0) var maximum_emote_delay: float = 5.0
+@export_category("Audio")
+## Whether to play audio when displaying an emote
+@export var play_sounds: bool = false # Keep this shit off, it's so annoying
+## [Decibels] How loud the audio for each emote is
+@export_range(-100.0, 100.0) var emote_volume: float = -24.0
 
-## Emote display duration in seconds
-@export var emote_duration: float = 2.0
-
-## Whether the emote is currently visible
-var is_emote_visible: bool = false
-
-## Whether to play sounds with emotes
-@export var play_sounds: bool = true
-
-## Flag to track if the system has been initialized
-var is_initialized: bool = false
-
-## Initialize the emote system with the given sprite
-## @param sprite The AnimatedSprite2D to use for emotes
-func init(sprite: AnimatedSprite2D) -> void:
-	emote_sprite = sprite
+## Called when the node enters the scene tree
+func _ready() -> void:
+	# Setup timers and audio player
+	_setup_timers()
+	_setup_audio_player()
 	
-	# Create and configure the emote timer
+	emote_sprite = self
+	
+	# If we found a sprite and emoting is enabled, initialize the system
+	if emoting_enabled and emote_sprite:
+			_start_emoting()
+	else:
+		push_error("PotatoEmoteSystem: Could not find an AnimatedSprite2D to control")
+
+## Setup the timers
+func _setup_timers() -> void:
+	# Setup display timer
 	emote_timer = Timer.new()
+	emote_timer.name = "EmoteTimer"
 	emote_timer.one_shot = true
 	emote_timer.wait_time = emote_duration
 	emote_timer.timeout.connect(_on_emote_timer_timeout)
 	add_child(emote_timer)
-	
-	# Create and configure the dot sequence timer
-	dot_sequence_timer = Timer.new()
-	dot_sequence_timer.one_shot = false
-	dot_sequence_timer.wait_time = 0.4
-	dot_sequence_timer.timeout.connect(_on_dot_sequence_timer_timeout)
-	add_child(dot_sequence_timer)
-	
-	# Create audio player for emote sounds
-	emote_audio_player = AudioStreamPlayer.new()
-	add_child(emote_audio_player)
-	
-	# Hide the emote sprite initially
-	hide_emote()
-	
-	is_initialized = true
 
-## Shows a random emote from any category
-## @return The EmoteType that was displayed
-func show_random_emote() -> int:
-	if not is_initialized:
-		push_error("Emote system not initialized!")
-		return -1
+	# Setup delay timer
+	emote_delay_timer = Timer.new()
+	emote_delay_timer.name = "EmoteDelayTimer"
+	emote_delay_timer.one_shot = true
+	emote_delay_timer.wait_time = randf_range(minimum_emote_delay, maximum_emote_delay)
+	emote_delay_timer.timeout.connect(_on_emote_delay_timer_timeout)
+	add_child(emote_delay_timer)
+
+## Setup the audio player
+func _setup_audio_player() -> void:
+	emote_audio_player = AudioStreamPlayer.new()
+	emote_audio_player.name = "EmoteAudioPlayer"
+	emote_audio_player.bus = "SFX"
+	emote_audio_player.volume_db = -16.00
+	add_child(emote_audio_player)
+
+## Process function to handle inspector changes
+func _process(_delta) -> void:
+	# Handle inspector changes
+	if emoting_enabled and emote_timer and emote_timer.is_stopped():
+		emote_timer.wait_time = emote_duration
 		
+	if emoting_enabled and emote_delay_timer and emote_delay_timer.is_stopped():
+		emote_delay_timer.wait_time = randf_range(minimum_emote_delay, maximum_emote_delay)
+	
+	# Handle emoting enabled/disabled toggling
+	if emoting_enabled and emote_delay_timer.is_stopped() and (not emote_sprite or not emote_sprite.visible):
+		_start_emoting()
+	elif not emoting_enabled and not emote_delay_timer.is_stopped():
+		emote_delay_timer.stop()
+
+## Start automatic emoting
+func _start_emoting() -> void:
+	if not emote_sprite:
+		return
+	
+	var delay = randf_range(minimum_initial_emote_delay, maximum_initial_emote_delay)
+	emote_delay_timer.start(delay)
+
+## Shows a random emote
+func show_random_emote() -> void:
+	if not emote_sprite:
+		return
+		
+	# Get a random emote
 	var emote_keys = emote_frames.keys()
 	var random_emote = emote_keys[randi() % emote_keys.size()]
-	return show_emote(random_emote)
+	
+	# Show it
+	_show_emote(random_emote)
 
 ## Shows a random emote from a specific category
-## @param category The category to choose from ("happy", "thinking", "negative", "surprise", "blank")
-## @return The EmoteType that was displayed or -1 if category doesn't exist
-func show_random_emote_from_category(category: String) -> int:
-	if not is_initialized:
-		push_error("Emote system not initialized!")
-		return -1
-		
-	if not emote_categories.has(category):
-		push_error("Invalid emote category: " + category)
-		return -1
+func show_random_emote_from_category(category: String) -> void:
+	if not emote_sprite or not emote_categories.has(category):
+		return
 	
+	# Get a random emote from this category
 	var category_emotes = emote_categories[category]
 	var random_emote = category_emotes[randi() % category_emotes.size()]
-	return show_emote(random_emote)
+	
+	# Show it
+	_show_emote(random_emote)
 
-## Shows a specific emote by its type
-## @param emote_type The specific EmoteType to display
-## @return The EmoteType that was displayed or -1 if type doesn't exist
-func show_emote(emote_type: int) -> int:
-	if not is_initialized:
-		push_error("Emote system not initialized!")
-		return -1
-		
-	if not emote_frames.has(emote_type):
-		push_error("Invalid emote type: " + str(emote_type))
-		return -1
+## Internal function to display an emote
+func _show_emote(emote_type: int) -> void:
+	if not emote_sprite or not emote_frames.has(emote_type):
+		return
 	
-	# Stop any ongoing dot sequence
-	dot_sequence_timer.stop()
+	# Stop any running emote timer
+	if not emote_timer.is_stopped():
+		emote_timer.stop()
 	
-	# Get the frame index for this emote type
-	var frame_index = emote_frames[emote_type]
-	
-	# Update the current emote
-	current_emote = emote_type
-	
-	# Set the sprite's frame to the correct emote
-	emote_sprite.frame = frame_index
-	
-	# Make the emote visible
+	# Set and display the emote
+	emote_sprite.frame = emote_frames[emote_type]
 	emote_sprite.visible = true
-	is_emote_visible = true
 	
 	# Play sound if enabled
 	if play_sounds:
-		_play_emote_sound()
+		_play_emote_sound(emote_type)
 	
-	# Start the timer to hide the emote after duration
+	# Start timer to hide the emote
 	emote_timer.start(emote_duration)
-	
-	return emote_type
-
-## Shows the thinking dots animation sequence (DOT_1 -> DOT_2 -> DOT_3)
-## @param duration How long to show the entire sequence before hiding
-func show_thinking_dots(duration: float = 3.0) -> void:
-	if not is_initialized:
-		push_error("Emote system not initialized!")
-		return
-		
-	# Start with DOT_1
-	show_emote(EmoteType.DOT_1)
-	
-	# Reset the main timer for the entire sequence
-	emote_timer.stop()
-	emote_timer.start(duration)
-	
-	# Start the dot sequence timer
-	dot_sequence_timer.start()
 
 ## Hides the current emote
-func hide_emote() -> void:
-	if not is_initialized:
+func _hide_emote() -> void:
+	if not emote_sprite:
 		return
 		
-	if emote_sprite:
-		emote_sprite.visible = false
-		is_emote_visible = false
-		current_emote = -1
-		
-	if emote_timer:
-		emote_timer.stop()
+	# Hide the emote
+	emote_sprite.visible = false
 	
-	if dot_sequence_timer:
-		dot_sequence_timer.stop()
+	# If emoting is enabled, schedule the next emote
+	if emoting_enabled:
+		var next_delay = randf_range(minimum_emote_delay, maximum_emote_delay)
+		emote_delay_timer.start(next_delay)
 
-## Play a sound effect for the current emote
-func _play_emote_sound() -> void:
-	if not is_initialized:
+## Plays a sound effect for the given emote
+func _play_emote_sound(emote_type: int) -> void:
+	if not emote_audio_player or not play_sounds:
 		return
 		
-	# Find which category the current emote belongs to
+	# Find which category this emote belongs to
 	var emote_category = ""
 	for category in emote_categories:
-		if current_emote in emote_categories[category]:
+		if emote_type in emote_categories[category]:
 			emote_category = category
 			break
 	
@@ -235,46 +221,44 @@ func _play_emote_sound() -> void:
 	if emote_category == "blank":
 		return
 	
-	# Get the sound type for this category
+	# Get sound type and number
 	var sound_type = category_sound_map.get(emote_category, "froggy_dislike")
-	
-	# Choose a random number for the sound file
 	var max_num = 9 if sound_type == "froggy_dislike" else 7
 	var sound_num = (randi() % max_num) + 1
 	
-	# Construct the path to the sound file
+	# Build file path and load sound
 	var sound_path = "res://assets/audio/talking/{0}_{1}.wav".format([sound_type, sound_num])
-	
-	# Load the audio stream
 	var stream = load(sound_path)
+	
 	if stream:
-		# Set the stream to the audio player
 		emote_audio_player.stream = stream
-		
-		# Apply random pitch shift
 		emote_audio_player.pitch_scale = randf_range(0.6, 1.2)
-		
-		# Set Bus
-		emote_audio_player.bus = "SFX"
-		
-		# Set volume
-		emote_audio_player.volume_db = -16.00
-		
-		# Play the sound
-		#emote_audio_player.play()
+		emote_audio_player.play()
 
-## Callback for when the emote timer expires
+## Timer callbacks
 func _on_emote_timer_timeout() -> void:
-	hide_emote()
+	_hide_emote()
 
-## Callback for dot sequence animation
-func _on_dot_sequence_timer_timeout() -> void:
-	if current_emote == EmoteType.DOT_1:
-		show_emote(EmoteType.DOT_2)
-	elif current_emote == EmoteType.DOT_2:
-		show_emote(EmoteType.DOT_3)
-	elif current_emote == EmoteType.DOT_3:
-		show_emote(EmoteType.DOT_1)
+func _on_emote_delay_timer_timeout() -> void:
+	if emoting_enabled:
+		show_random_emote()
+
+## Clean up when removed from the scene
+func _exit_tree() -> void:
+	# Ensure timers are stopped to prevent errors
+	if emote_timer and not emote_timer.is_stopped():
+		emote_timer.stop()
+	
+	if emote_delay_timer and not emote_delay_timer.is_stopped():
+		emote_delay_timer.stop()
+
+## Shows the thinking dots animation
+func _show_thinking() -> void:
+	# Choose between dots or question mark
+	if randf() < 0.3:  # 30% chance for dots
+		show_thinking_dots()
 	else:
-		# If we're not in the dot sequence, stop the timer
-		dot_sequence_timer.stop()
+		_show_emote(PotatoEmoteSystem.EmoteType.QUESTION)
+		
+func show_thinking_dots() -> void:
+	pass
