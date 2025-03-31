@@ -535,7 +535,7 @@ rotation = -0.137881
 scale = Vector2(0.413016, 0.413016)
 
 [node name="GivePromptDialogue" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport/ClosedPassport"]
-z_index = 5
+z_index = 14
 z_as_relative = false
 position = Vector2(357.294, -256.302)
 rotation = 0.137881
@@ -549,7 +549,7 @@ z_as_relative = false
 texture = ExtResource("25_gf7dt")
 
 [node name="PassportPhotoGenerator" parent="Gameplay/InteractiveElements/Passport/OpenPassport" instance=ExtResource("23_3qac4")]
-z_index = 1
+z_index = 14
 z_as_relative = true
 position = Vector2(76, 90)
 scale = Vector2(0.975, 1)
@@ -557,13 +557,13 @@ scale = Vector2(0.975, 1)
 [node name="PotatoMugshotShadow2" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport/OpenPassport/PassportPhotoGenerator"]
 visible = false
 modulate = Color(0, 0, 0, 0.521569)
-z_index = -1
+z_index = 14
 position = Vector2(1.02564, -14)
 scale = Vector2(1.1, 1.1)
 texture = ExtResource("24_yhqqy")
 
 [node name="PotatoHeader" type="Label" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
-z_index = 1
+z_index = 14
 offset_left = -103.0
 offset_top = 20.0
 offset_right = 13.0
@@ -575,7 +575,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PotatoInfo" type="Label" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
-z_index = 1
+z_index = 14
 offset_left = -75.0
 offset_top = 47.0
 offset_right = 33.0
@@ -588,6 +588,7 @@ autowrap_mode = 2
 
 [node name="PassportShadow" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
 visible = false
+z_index = 14
 position = Vector2(-4.99997, 3.99999)
 texture = ExtResource("30_5od2r")
 

@@ -10,7 +10,7 @@ signal passport_returned(item)
 
 # Configuration
 const PASSPORT_Z_INDEX = 14
-const DRAGGING_Z_INDEX = 100  # Higher z-index for items being dragged
+const DRAGGING_Z_INDEX = 14  # Higher z-index for items being dragged
 const RETURN_TWEEN_DURATION = 0.3  # Duration of return animation in seconds
 const TABLE_EDGE_BUFFER = 20  # Buffer distance from table edge
 
