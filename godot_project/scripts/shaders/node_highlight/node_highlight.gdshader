@@ -1,37 +1,34 @@
 shader_type canvas_item;
 
 // Customizable properties for the highlight effect
-uniform vec4 highlight_color : source_color = vec4(1.0, 0.8, 0.2, 0.8); // Golden glow by default
+uniform vec4 highlight_color : source_color = vec4(1.0, 0.8, 0.2, 0.8); // Golden glow
 uniform float pulse_speed : hint_range(0.0, 10.0) = 6.0;
-uniform bool enable_highlight = true;
+uniform bool enable_highlight = false;
 
 void fragment() {
-    // Get original pixel color
+    // Get original pixel color from the sprite texture
     vec4 original = texture(TEXTURE, UV);
     
-    // Default to original color
-    vec4 final_color = original;
-    
-    if (enable_highlight && original.a > 0.1) {
-        // Create smooth pulsing effect
+    // Only process non-transparent pixels
+    if (original.a > 0.1) {
+        // Create the highlighted color
+        vec4 final_color = original;
+        
+        // Calculate pulsing effect - more pronounced
         float pulse = (sin(TIME * pulse_speed) * 0.5 + 0.5);
         
-        // Apply the highlight to the entire sprite
-        // Smoothly transition between original color and highlight color
-        final_color = mix(original, highlight_color, pulse * 0.7);
+        if (enable_highlight) {
+            // Apply a stronger mix - 90% toward highlight color at peak
+            final_color = mix(original, highlight_color, pulse * 0.9);
+        }
         
-        // Preserve original alpha
+        // Keep original alpha to preserve sprite shape
         final_color.a = original.a;
+        
+        // Output the final color
+        COLOR = final_color;
+    } else {
+        // For fully transparent pixels, just output the original
+        COLOR = original;
     }
-    
-    // Make the shader visible in the editor
-    #ifdef TOOL
-    if (!enable_highlight && original.a > 0.1) {
-        // Show a subtle preview in the editor
-        final_color = mix(original, highlight_color * 0.3, 0.2);
-        final_color.a = original.a;
-    }
-    #endif
-    
-    COLOR = final_color;
 }

@@ -51,16 +51,21 @@ var current_potato_brain_state: int = PotatoBrainState.IDLE
 
 ## Reference to the EmoteSystem node
 var emote_system: PotatoEmoteSystem
-@onready var emote_sprite: AnimatedSprite2D = $PotatoEmote
+@onready var emote_sprite: AnimatedSprite2D = %PotatoEmote
 
 
 func _ready() -> void:	
+	var node_highlight_shader = preload("res://scripts/shaders/node_highlight/node_highlight.gdshader")
+	var node_highlight_material = ShaderMaterial.new()
+	node_highlight_material.shader = node_highlight_shader
+	%PotatoSprite.material = node_highlight_material
+
 	# Get reference to the emote sprite
-	emote_sprite = $PotatoEmote
+	emote_sprite = %PotatoEmote
 	
 	# Get reference to the emote system that's already attached to the sprite
 	# in the scene (as seen in your tscn file)
-	emote_system = $PotatoEmote
+	emote_system = %PotatoEmote
 	
 	# Initialize character generator if not already present
 	if !has_node("CharacterGenerator"):
@@ -337,10 +342,9 @@ func _on_potato_button_pressed() -> void:
 	interact_with_potato()
 
 func _on_potato_button_mouse_entered() -> void:
-	$Area2D/PotatoSprite.set_instance_shader_parameter("enable_highlight", true)
-	print("POTATO: Enable highlight %b", $Area2D/PotatoSprite.get_instance_shader_parameter("enable_highlight"))
-
+	%PotatoSprite.material.set_shader_parameter("enable_highlight", true)
+	print("POTATO: Enable highlight %b", %PotatoSprite.get_instance_shader_parameter("enable_highlight"))
 
 func _on_potato_button_mouse_exited() -> void:
-	%PotatoSprite.set_instance_shader_parameter("enable_highlight", false)
+	%PotatoSprite.material.set_shader_parameter("enable_highlight", false)
 	print("POTATO: Disable highlight %b", %PotatoSprite.get_instance_shader_parameter("enable_highlight"))
