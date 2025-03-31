@@ -101,13 +101,16 @@ func change_brain_state(new_state: int) -> void:
 		PotatoBrainState.THINKING:
 			_show_thinking()
 		PotatoBrainState.SURPRISED:
-			emote_system.show_emote(PotatoEmoteSystem.EmoteType.DOUBLE_EXCLAMATION)
+			emote_system.show_random_emote_from_category("surprise")
+			#emote_system.show_emote(PotatoEmoteSystem.EmoteType.DOUBLE_EXCLAMATION)
 		PotatoBrainState.HAPPY:
-			emote_system.show_random_emote_from_category("happy")
+			emote_system.show_random_emote_from_category("positive")
 		PotatoBrainState.SAD:
-			emote_system.show_emote(PotatoEmoteSystem.EmoteType.SAD_FACE)
+			emote_system.show_random_emote_from_category("negative")
+			#emote_system.show_emote(PotatoEmoteSystem.EmoteType.SAD_FACE)
 		PotatoBrainState.ANGRY:
-			emote_system.show_emote(PotatoEmoteSystem.EmoteType.ANGRY_FACE)
+			emote_system.show_random_emote_from_category("negative")
+			#emote_system.show_emote(PotatoEmoteSystem.EmoteType.ANGRY_FACE)
 
 ## Bind this to an input action or call it when the character is interacted with
 func interact_with_potato() -> void:
