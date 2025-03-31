@@ -31,15 +31,21 @@ static func create_potato_with_info(info: Dictionary) -> PotatoPerson:
 static func generate_random_potato_info() -> Dictionary:
 	# Generate character appearance
 	var character_gen = load("res://scripts/systems/character_generator.tscn").instantiate()
+	
+	# Gender first since it affects character generation
+	var sex = get_random_sex()
+	
+	# Set the gender on the character generator
+	character_gen.set_sex("Male" if sex == "Male" else "Female")
+	
+	# Add race selection
+	var race = get_random_race()
+	
+	# Now randomize
 	character_gen.randomise_character()
 	var character_data = character_gen.get_character_data()
 	character_gen.queue_free()
 	
-	# Gender first since it affects character generation
-	var gender = get_random_sex()
-	
-	# Add race selection
-	var race = get_random_race()
 	
 	# Randomize expiration date
 	var expiration_date: String
@@ -51,7 +57,7 @@ static func generate_random_potato_info() -> Dictionary:
 	return {
 		"name": get_random_name(),
 		"condition": get_random_condition(),
-		"sex": gender,
+		"sex": sex,
 		"race": race,  # Add race to the potato info
 		"country_of_issue": get_random_country(),
 		"date_of_birth": get_past_date(1, 10),

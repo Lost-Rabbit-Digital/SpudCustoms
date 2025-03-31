@@ -434,12 +434,12 @@ func generate_potato_info():
 		expiration_date = get_future_date(0,3)
 		
 	# Generate gender first since it affects character generation
-	var gender = get_random_sex()
+	var sex = get_random_sex()
 	
 	# Generate character appearance only when creating new potato info
 	var character_data = {}
 	if mugshot_generator:
-		mugshot_generator.set_gender("F" if gender == "Female" else "M")
+		mugshot_generator.set_sex("Female" if sex == "Female" else "M")
 		# This will now only happen when a new potato is called in
 		character_data = mugshot_generator.get_character_data()
 		
@@ -450,7 +450,7 @@ func generate_potato_info():
 	return {
 		"name": get_random_name(),
 		"condition": get_random_condition(),
-		"sex": gender,
+		"sex": sex,
 		"country_of_issue": get_random_country(),
 		"date_of_birth": get_past_date(1, 10),
 		"expiration_date": expiration_date,
@@ -695,11 +695,11 @@ func update_potato_texture():
 func clear_potato_textures():
 	if mugshot_generator:
 		# Reset to default state or hide
-		mugshot_generator.set_gender("M")  # Reset to default gender
+		mugshot_generator.set_sex("Male")  # Reset to default gender
 		
 	if passport_generator:
 		# Reset to default state or hide
-		passport_generator.set_gender("M")  # Reset to default gender
+		passport_generator.set_sex("Male")  # Reset to default gender
 	
 func _input(event):
 	if event is InputEventMouseButton:

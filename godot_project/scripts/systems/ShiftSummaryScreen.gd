@@ -19,6 +19,8 @@ func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	hide()
 
+
+
 	# Use stored stats if available, otherwise use test data
 	if !Global.current_game_stats.is_empty():
 		show_summary(Global.current_game_stats)
@@ -64,7 +66,7 @@ func show_summary(stats_data: Dictionary):
 			"shift": stats.get("shift", 1)
 		})
 		$LeftPanel/ShiftComplete.add_theme_color_override("font_color", Color(0.2, 0.8, 0.2))
-	else:
+	if strikes_failed:
 		var failure_reason = "STRIKE LIMIT REACHED!" if strikes_failed else "QUOTA NOT MET!"
 		$LeftPanel/ShiftComplete.text = """SHIFT {shift} COMPLETE
 		{failure}
@@ -73,6 +75,9 @@ func show_summary(stats_data: Dictionary):
 			"failure": failure_reason
 		})
 		$LeftPanel/ShiftComplete.add_theme_color_override("font_color", Color(0.9, 0.2, 0.2))
+	#Get rid of continue button if lost
+	if strikes_failed:
+		$ContinueButton.queue_free()
 	populate_stats()
 
 func populate_stats():

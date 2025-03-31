@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pg3qs5tff67a"
-path="res://.godot/imported/purple_majesty_face_64x38.png-2443ba6a787e72bcbd5c746f8caa7f1e.ctex"
+uid="uid://3hkcy0y7ge2n"
+path="res://.godot/imported/Yukon_gold_Head_F_64x50.png-b1253ddc542b39a5a1c71740a8bc1cde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/potatoes/sprite_sheets/purple_majesty_face_64x38.png"
-dest_files=["res://.godot/imported/purple_majesty_face_64x38.png-2443ba6a787e72bcbd5c746f8caa7f1e.ctex"]
+source_file="res://assets/potatoes/sprite_sheets/Yukon_gold_Head_F_64x50.png"
+dest_files=["res://.godot/imported/Yukon_gold_Head_F_64x50.png-b1253ddc542b39a5a1c71740a8bc1cde.ctex"]
 
 [params]
 
