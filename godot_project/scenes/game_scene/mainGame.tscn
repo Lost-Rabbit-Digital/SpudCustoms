@@ -233,7 +233,7 @@ position = Vector2(640, 360)
 texture = ExtResource("6_0hfru")
 
 [node name="InteractableItemsWorldBackground" type="Sprite2D" parent="UI"]
-z_index = 5
+z_index = 6
 z_as_relative = false
 position = Vector2(640, 360)
 texture = ExtResource("7_41g47")

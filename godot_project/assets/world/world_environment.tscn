@@ -10,23 +10,19 @@
 
 [node name="Environment" type="Node2D"]
 z_index = 6
-z_as_relative = false
 
 [node name="WorldPanel" type="Sprite2D" parent="."]
 z_index = 6
-z_as_relative = false
 position = Vector2(642.352, 121.5)
 scale = Vector2(2.59658, 2.44318)
 texture = ExtResource("1_eq8ee")
 
 [node name="CustomsOffice" type="Sprite2D" parent="WorldPanel"]
 z_index = 8
-z_as_relative = false
 texture = ExtResource("2_fkyx8")
 
 [node name="FencePosts" type="Sprite2D" parent="WorldPanel"]
 z_index = 8
-z_as_relative = false
 texture = ExtResource("3_gfqs4")
 
 [node name="GrassTexture" type="Sprite2D" parent="WorldPanel"]
