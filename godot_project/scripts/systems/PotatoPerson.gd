@@ -55,18 +55,7 @@ var emote_system: PotatoEmoteSystem
 
 
 func _ready() -> void:	
-	var node_highlight_shader = preload("res://scripts/shaders/node_highlight/node_highlight.gdshader")
-	var node_highlight_material = ShaderMaterial.new()
-	node_highlight_material.shader = node_highlight_shader
-	# After setting the material
-	%PotatoSprite.material = node_highlight_material
-
-	# Set shader parameters
-	node_highlight_material.set_shader_parameter("highlight_color", Color("#f2be00"))  # Yellow color from inspector
-	node_highlight_material.set_shader_parameter("edge_width", 0.1)
-	node_highlight_material.set_shader_parameter("ignore_colors", true)
-	node_highlight_material.set_shader_parameter("ignored_color_1", Color("#3c354a"))  # Purple color from inspector
-	node_highlight_material.set_shader_parameter("fill_mode", 1)  # 0 for edge only, 1 for full fill
+	call_deferred("configure_potato_highlight")
 	
 	# Get reference to the emote sprite
 	emote_sprite = %PotatoEmote
@@ -99,6 +88,24 @@ func _process(delta):
 			footprint_timer = 0
 			spawn_footprint()
 
+### HIGHLIGHT SYSTEM ###
+# TODO: The instancing doesn't work on this shader, note how the shadows of the poatoes are
+# excluded in the highlight code but are included visually in-game.
+# You'll have to read up on the documentation for shaders and figure out how to instance them
+# for each potato
+func configure_potato_highlight() -> void:
+	var potato_sprite = %PotatoSprite
+	
+	# Make sure it has the shader material
+	var node_highlight_shader = preload("res://scripts/shaders/node_highlight/node_highlight.gdshader")
+	var node_highlight_material = ShaderMaterial.new()
+	node_highlight_material.shader = node_highlight_shader
+	
+	# Common parameters
+	potato_sprite.set_instance_shader_parameter("edge_width", 0.1)
+	potato_sprite.set_instance_shader_parameter("ignore_colors", true)
+	potato_sprite.set_instance_shader_parameter("ignored_color1", Color("#3c354a"))
+	
 ### EMOTE SYSTEM ###
 ## Changes the potato's brain state and shows an appropriate emote
 ## @param new_state The PotatoBrainState to transition to
@@ -351,8 +358,6 @@ func _on_potato_button_pressed() -> void:
 
 func _on_potato_button_mouse_entered() -> void:
 	%PotatoSprite.material.set_shader_parameter("enable_highlight", true)
-	print("POTATO: Enable highlight %b", %PotatoSprite.get_instance_shader_parameter("enable_highlight"))
 
 func _on_potato_button_mouse_exited() -> void:
 	%PotatoSprite.material.set_shader_parameter("enable_highlight", false)
-	print("POTATO: Disable highlight %b", %PotatoSprite.get_instance_shader_parameter("enable_highlight"))

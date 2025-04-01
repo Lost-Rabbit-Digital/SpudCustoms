@@ -156,7 +156,6 @@ shape = SubResource("CapsuleShape2D_oxqnl")
 
 [node name="PotatoSprite" type="Sprite2D" parent="Area2D"]
 unique_name_in_owner = true
-material = ExtResource("1_q3s4m")
 texture = ExtResource("2_p5u1t")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -5,7 +5,7 @@ uniform vec4 highlight_color : source_color = vec4(1.0, 0.8, 0.2, 0.8); // Golde
 uniform float pulse_speed : hint_range(0.0, 10.0) = 6.0;
 uniform float edge_width : hint_range(0.0, 0.1) = 0.02; // Width as percentage of texture size
 uniform bool enable_highlight = false;
-uniform int fill_mode : hint_range(0, 1) = 0; // 0 = edge only, 1 = full fill
+uniform int fill_mode : hint_range(0, 1) = 1; // 0 = edge only, 1 = full fill
 
 // Multi-color ignoring system - maximum of 8 ignored colors
 uniform bool ignore_colors = false;

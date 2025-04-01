@@ -4,13 +4,13 @@
 
 [resource]
 shader = ExtResource("1_vnk7r")
-shader_parameter/highlight_color = Color(0.94902, 0.745098, 0, 1)
+shader_parameter/highlight_color = Color(1, 0.8, 0.2, 0.8)
 shader_parameter/pulse_speed = 6.0
-shader_parameter/edge_width = 0.1
-shader_parameter/enable_highlight = true
+shader_parameter/edge_width = 0.02
+shader_parameter/enable_highlight = false
 shader_parameter/fill_mode = 1
-shader_parameter/ignore_colors = true
-shader_parameter/ignored_color1 = Color(0.235294, 0.207843, 0.290196, 1)
+shader_parameter/ignore_colors = false
+shader_parameter/ignored_color1 = Color(0, 0, 0, 1)
 shader_parameter/ignored_color2 = Color(0, 0, 0, 0)
 shader_parameter/ignored_color3 = Color(0, 0, 0, 0)
 shader_parameter/ignored_color4 = Color(0, 0, 0, 0)
