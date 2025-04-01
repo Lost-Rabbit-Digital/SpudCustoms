@@ -7,25 +7,26 @@ extends Node
 
 # Cursor texture paths - customize these to match your assets
 var cursor_textures = {
-	"default": preload("res://assets/cursor/cursor_default.png"),
-	"hover": preload("res://assets/cursor/cursor_hover.png"),
-	"grab": preload("res://assets/cursor/cursor_grab.png"),
-	"click": preload("res://assets/cursor/cursor_click.png"),
-	"target": preload("res://assets/cursor/cursor_target.png")
+	"default": preload("res://assets/user_interface/cursor/cursor_default.png"),
+	"hover": preload("res://assets/user_interface/cursor/cursor_hover.png"),
+	"grab": preload("res://assets/user_interface/cursor/cursor_grab.png"),
+	"click": preload("res://assets/user_interface/cursor/cursor_click.png"),
+	"target": preload("res://assets/user_interface/cursor/cursor_target.png")
 }
 
 # Cursor hotspot positions (origin point of cursor)
 var cursor_hotspots = {
-	"default": Vector2(0, 0),
-	"hover": Vector2(0, 0),
-	"grab": Vector2(0, 0),
-	"click": Vector2(0, 0),
+	"default": Vector2(8, 3),
+	"hover": Vector2(12, 4),
+	"grab": Vector2(12, 8),
+	"click": Vector2(12, 4),
 	"target": Vector2(16, 16)  # Center of targeting reticle
 }
 
 # Input map actions that trigger cursor state changes
 var action_cursor_states = {
-	"mouse_left": "click",  # Left mouse button pressed
+	"primary_interaction": "click",  # Left mouse button pressed
+	"secondary_interaction": "hover",  # Right mouse button pressed
 }
 
 # Current cursor state tracking
@@ -143,7 +144,9 @@ func update_cursor(state: String):
 		
 	current_state = state
 	var texture = cursor_textures[state]
-	var hotspot = cursor_hotspots.get(state, Vector2.ZERO)
+	var hotspot = cursor_hotspots.get(state)
+	print("CURSOR HOTSPOT")
+	print(hotspot)
 	
 	# Determine the right cursor type constant based on state
 	match state:
