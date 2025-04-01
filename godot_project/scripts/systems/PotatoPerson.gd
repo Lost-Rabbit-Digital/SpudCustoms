@@ -58,8 +58,16 @@ func _ready() -> void:
 	var node_highlight_shader = preload("res://scripts/shaders/node_highlight/node_highlight.gdshader")
 	var node_highlight_material = ShaderMaterial.new()
 	node_highlight_material.shader = node_highlight_shader
+	# After setting the material
 	%PotatoSprite.material = node_highlight_material
 
+	# Set shader parameters
+	node_highlight_material.set_shader_parameter("highlight_color", Color("#f2be00"))  # Yellow color from inspector
+	node_highlight_material.set_shader_parameter("edge_width", 0.1)
+	node_highlight_material.set_shader_parameter("ignore_colors", true)
+	node_highlight_material.set_shader_parameter("ignored_color_1", Color("#3c354a"))  # Purple color from inspector
+	node_highlight_material.set_shader_parameter("fill_mode", 1)  # 0 for edge only, 1 for full fill
+	
 	# Get reference to the emote sprite
 	emote_sprite = %PotatoEmote
 	
