@@ -521,7 +521,6 @@ position = Vector2(1079, 441)
 position = Vector2(1079, 584)
 
 [node name="Passport" type="Sprite2D" parent="Gameplay/InteractiveElements"]
-z_index = 14
 z_as_relative = false
 position = Vector2(1649, 568)
 texture = ExtResource("27_qjue5")

@@ -10,16 +10,16 @@ signal passport_returned(item)
 
 # Configuration
 const PASSPORT_Z_INDEX = 14
-const DRAGGING_Z_INDEX = 14  # Higher z-index for items being dragged
+const DRAGGING_Z_INDEX = 15  # Higher z-index for items being dragged
 const RETURN_TWEEN_DURATION = 0.3  # Duration of return animation in seconds
-const TABLE_EDGE_BUFFER = 20  # Buffer distance from table edge
+const TABLE_EDGE_BUFFER = 16  # Buffer distance from table edge
 
 # State tracking
 var draggable_items = []
 var dragged_item = null
 var drag_offset = Vector2()
 var document_was_closed = false
-var original_z_index = 14
+var original_z_index: int
 
 # Drop zone references
 var inspection_table: Node2D
@@ -63,6 +63,7 @@ func register_draggable_items(items: Array):
 	for item in draggable_items:
 		if is_instance_valid(item):
 			if item.z_index == 0:  # Only set if not already set
+				push_warning("Draggiable Item is missing z-index: %s", item)
 				item.z_index = PASSPORT_Z_INDEX
 		else:
 			push_warning("Invalid draggable item provided")
