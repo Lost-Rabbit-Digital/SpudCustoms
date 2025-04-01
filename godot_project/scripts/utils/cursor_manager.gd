@@ -121,6 +121,8 @@ func _on_button_mouse_entered(button: Control):
 	hover_state_stack.append(button)
 	
 	# Update cursor to hover state unless mouse is being pressed
+	# TODO: This is where we would implement the check for which hover state to use,
+	# hover_1 for clickables or hover_2 for draggables
 	if not mouse_pressed:
 		update_cursor("hover_1")
 		#print("Set cursor to hover state")
@@ -146,8 +148,6 @@ func update_cursor(state: String):
 	current_state = state
 	var texture = cursor_textures[state]
 	var hotspot = cursor_hotspots.get(state)
-	print("CURSOR HOTSPOT")
-	print(hotspot)
 	
 	# Determine the right cursor type constant based on state
 	match state:
