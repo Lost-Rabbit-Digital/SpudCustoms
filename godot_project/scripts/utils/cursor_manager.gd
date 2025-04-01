@@ -8,7 +8,8 @@ extends Node
 # Cursor texture paths - customize these to match your assets
 var cursor_textures = {
 	"default": preload("res://assets/user_interface/cursor/cursor_default.png"),
-	"hover": preload("res://assets/user_interface/cursor/cursor_hover.png"),
+	"hover_1": preload("res://assets/user_interface/cursor/cursor_hover_1.png"),
+	"hover_2": preload("res://assets/user_interface/cursor/cursor_hover_2.png"),
 	"grab": preload("res://assets/user_interface/cursor/cursor_grab.png"),
 	"click": preload("res://assets/user_interface/cursor/cursor_click.png"),
 	"target": preload("res://assets/user_interface/cursor/cursor_target.png")
@@ -26,7 +27,7 @@ var cursor_hotspots = {
 # Input map actions that trigger cursor state changes
 var action_cursor_states = {
 	"primary_interaction": "click",  # Left mouse button pressed
-	"secondary_interaction": "hover",  # Right mouse button pressed
+	"secondary_interaction": "click",  # Right mouse button pressed
 }
 
 # Current cursor state tracking
@@ -66,7 +67,7 @@ func _process(_delta):
 		if hover_state_stack.is_empty():
 			update_cursor("default")
 		else:
-			update_cursor("hover")
+			update_cursor("hover_1")
 	
 	# Check for missile zone if callback provided
 	if missile_zone_callback.is_valid() and hover_state_stack.is_empty() and not mouse_pressed:
@@ -78,7 +79,7 @@ func _process(_delta):
 func _on_node_added(node: Node):
 	if node is BaseButton or node is TextureButton:
 		_connect_button_signals(node)
-	
+		
 	# For non-Control nodes, check their children immediately
 	if not node is Control and node.get_child_count() > 0:
 		for child in node.get_children():
@@ -121,7 +122,7 @@ func _on_button_mouse_entered(button: Control):
 	
 	# Update cursor to hover state unless mouse is being pressed
 	if not mouse_pressed:
-		update_cursor("hover")
+		update_cursor("hover_1")
 		#print("Set cursor to hover state")
 
 func _on_button_mouse_exited(button: Control):
@@ -152,8 +153,10 @@ func update_cursor(state: String):
 	match state:
 		"click":
 			texture = cursor_textures["click"]
-		"hover":
-			texture = cursor_textures["hover"]
+		"hover_1":
+			texture = cursor_textures["hover_1"]
+		"hover_2":
+			texture = cursor_textures["hover_2"]
 		"grab":
 			texture = cursor_textures["grab"]
 		"target":
