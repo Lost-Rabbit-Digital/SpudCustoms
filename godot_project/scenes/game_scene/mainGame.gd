@@ -70,7 +70,7 @@ var default_cursor = Input.CURSOR_ARROW
 @onready var mugshot_generator = $Gameplay/MugshotPhotoGenerator
 @onready var passport_generator = $Gameplay/InteractiveElements/Passport/OpenPassport/PassportPhotoGenerator
 
-@onready var megaphone = $Gameplay/Megaphone
+@onready var megaphone = $Gameplay/InteractiveElements/Megaphone
 @onready var megaphone_dialogue_box = %MegaphoneDialogueBox
 @onready var enter_office_path = $Gameplay/Paths/EnterOfficePath
 @onready var stats_manager = $SystemManagers/StatsManager

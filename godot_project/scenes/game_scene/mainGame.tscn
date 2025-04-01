@@ -425,6 +425,7 @@ script = ExtResource("11_qilia")
 unique_name_in_owner = true
 
 [node name="DragAndDropManager" type="Node" parent="SystemManagers"]
+unique_name_in_owner = true
 script = ExtResource("20_5djk1")
 
 [node name="BorderRunnerSystem" parent="SystemManagers" node_paths=PackedStringArray("queue_manager", "score_label", "strike_label", "alert_label", "alert_timer", "missile_collision_shape") instance=ExtResource("2_4eqo0")]
@@ -465,17 +466,6 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="Megaphone" type="Sprite2D" parent="Gameplay"]
-z_index = 20
-position = Vector2(900, 130)
-scale = Vector2(2.455, 2.455)
-texture = ExtResource("14_ynnf6")
-
-[node name="MegaphoneDialogueBox" parent="Gameplay/Megaphone" instance=ExtResource("36_ccap0")]
-unique_name_in_owner = true
-position = Vector2(37.4745, -25.6619)
-scale = Vector2(0.4, 0.4)
 
 [node name="SuspectPanel" parent="Gameplay" instance=ExtResource("22_qfxfi")]
 
@@ -619,6 +609,17 @@ Potatoes must be fresh.
 [u]Date[/u]
 HEY DEVELOPERS, INCLUDE THE DATE HERE!"
 horizontal_alignment = 1
+
+[node name="Megaphone" type="Sprite2D" parent="Gameplay/InteractiveElements"]
+z_index = 20
+position = Vector2(900, 130)
+scale = Vector2(2.455, 2.455)
+texture = ExtResource("14_ynnf6")
+
+[node name="MegaphoneDialogueBox" parent="Gameplay/InteractiveElements/Megaphone" instance=ExtResource("36_ccap0")]
+unique_name_in_owner = true
+position = Vector2(37.4745, -25.6619)
+scale = Vector2(0.4, 0.4)
 
 [node name="Paths" type="Control" parent="Gameplay"]
 z_index = 12

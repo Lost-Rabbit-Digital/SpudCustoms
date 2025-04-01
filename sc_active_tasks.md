@@ -40,7 +40,7 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Office Shutter: Update button to exclude transparent pixels
 
 # RIGHT NOW
-- Cursor: Change cursor when hovering from the drag icon to the click
+- Cursor: Add mulitple hover modes
 - Cursor: We need a hover for grabbable documents (Passport, Law Receipt) and a hover for interactable objects (Potatoes, Megaphone)
 	- We could probably achieve this by detecting whether the mouse is clicking/hovering over a BaseButton/TextureButton or an Area2D 
 	- cursor_manager.gd > _on_button_mouse_entered(): If statement checking what the mouse hovers over, hover_1 for clickables or hover_2 for draggables
