@@ -55,7 +55,6 @@ These are our goals, to-do tasks, and completed tasks.
 ## RELEASE BLOCKERS
 - Playtest Endless mode
 - Playtest Story mode
-- If you restart on shift summary screen, it advances to the next level
 - Stamps go over edge of passport
 - Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
 - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
@@ -127,6 +126,7 @@ These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release
 
 
 ### Completed Tasks for 1.0.2
+- If you restart on shift summary screen, it advances to the next level
 - Bug: Stamps fly up from the bottom of the screen
 - Added social icons to main menu
 - Bug: Text disappearing on the law receipt when picked up
