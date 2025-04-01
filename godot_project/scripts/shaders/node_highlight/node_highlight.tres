@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://xffm6npnrajs"]
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c76ecyjf33yeu"]
 
 [ext_resource type="Shader" uid="uid://c7iq17aknw5hx" path="res://scripts/shaders/node_highlight/node_highlight.gdshader" id="1_vnk7r"]
 
@@ -7,7 +7,7 @@ shader = ExtResource("1_vnk7r")
 shader_parameter/highlight_color = Color(1, 0.8, 0.2, 0.8)
 shader_parameter/pulse_speed = 6.0
 shader_parameter/edge_width = 0.02
-shader_parameter/enable_highlight = false
+shader_parameter/enable_highlight = true
 shader_parameter/fill_mode = 1
 shader_parameter/ignore_colors = false
 shader_parameter/ignored_color1 = Color(0, 0, 0, 1)

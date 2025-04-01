@@ -4,7 +4,7 @@ class_name MegaphoneDialogueBox
 @onready var megaphone_text = $MegaphoneText
 
 # File path to your JSON file
-const MESSAGES_FILE = "res://scripts/megaphone_dialogue/megaphone_dialogue_messages.json"
+const MESSAGES_FILE = "res://scripts/systems/megaphone/megaphone_dialogue_messages.json"
 
 # Message categories
 enum MessageCategory {
@@ -112,6 +112,8 @@ func set_random_message():
 # Call this function to cycle to the next random message
 func next_message():
 	set_random_message()
+	play_random_officer_sound()
+	self.visible = true
 
 func play_random_officer_sound():
 	# WARNING: This will load all of these sounds into memory every time 

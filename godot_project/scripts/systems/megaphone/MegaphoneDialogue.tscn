@@ -1,12 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0go0ri8l0yb7"]
 
-[ext_resource type="Script" uid="uid://bmph5aqb440io" path="res://scripts/megaphone_dialogue/megaphone_dialogue_box.gd" id="1_avd0t"]
+[ext_resource type="Script" uid="uid://bmph5aqb440io" path="res://scripts/systems/megaphone/megaphone_dialogue_box.gd" id="1_avd0t"]
 [ext_resource type="Texture2D" uid="uid://4ebcvbutchx5" path="res://assets/megaphone/megaphone_dialogue_box_blank.png" id="1_q0ujf"]
 [ext_resource type="FontVariation" uid="uid://t3ii3pbmg2bo" path="res://assets/fonts/Modern_DOS_Font_Variation.tres" id="3_mbwnr"]
 
 [node name="MegaphoneDialogueBox" type="Sprite2D"]
 z_index = 12
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_q0ujf")
 script = ExtResource("1_avd0t")
 

@@ -71,7 +71,7 @@ var default_cursor = Input.CURSOR_ARROW
 @onready var passport_generator = $Gameplay/InteractiveElements/Passport/OpenPassport/PassportPhotoGenerator
 
 @onready var megaphone = $Gameplay/InteractiveElements/Megaphone
-@onready var megaphone_dialogue_box = %MegaphoneDialogueBox
+@onready var megaphone_dialogue_box = $Gameplay/InteractiveElements/Megaphone/MegaphoneDialogueBox
 @onready var enter_office_path = $Gameplay/Paths/EnterOfficePath
 @onready var stats_manager = $SystemManagers/StatsManager
 var shift_stats: ShiftStats
@@ -557,8 +557,6 @@ func update_date_display():
 func megaphone_clicked():
 	if is_potato_in_office:
 		megaphone_dialogue_box.next_message()
-		megaphone_dialogue_box.play_random_officer_sound()
-		megaphone_dialogue_box.visible = true
 		print("Warning: A potato is already in the customs office!")
 		return
 		
@@ -579,8 +577,6 @@ func megaphone_clicked():
 		#	office_shutter_controller.raise_shutter(3)  # Slow, mechanical shutter raising
 		#	office_shutter_controller.shutter_opened_this_shift = true
 		megaphone_dialogue_box.next_message()
-		megaphone_dialogue_box.play_random_officer_sound()
-		megaphone_dialogue_box.visible = true
 		is_potato_in_office = true
 		megaphone.visible = true
 		current_potato_info = potato.get_potato_info()
@@ -589,8 +585,6 @@ func megaphone_clicked():
 		move_potato_to_office(potato)
 	else:
 		megaphone_dialogue_box.next_message()
-		megaphone_dialogue_box.play_random_officer_sound()
-		megaphone_dialogue_box.visible = true
 		print("No potato to process. :(")
 		
 func move_potato_to_office(potato_person: PotatoPerson):
@@ -1011,13 +1005,6 @@ func _input(event: InputEvent):
 	if drag_and_drop_manager.handle_input(event):
 		return
 		
-	# Handle megaphone click
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		var mouse_pos = get_global_mouse_position()
-		print("Mouse Click Position: ", mouse_pos)
-		if megaphone.get_rect().has_point(megaphone.to_local(mouse_pos)):
-			megaphone_clicked()
-			return
 
 func remove_stamp():
 	# Get the decision directly from the stamp system manager
@@ -1424,3 +1411,7 @@ func transition_to_scene(scene_path: String):
 		# Clean up the fade rectangle
 		fade_rect.queue_free()
 	)
+
+
+func _on_megaphone_interaction_button_pressed() -> void:
+	megaphone_clicked()

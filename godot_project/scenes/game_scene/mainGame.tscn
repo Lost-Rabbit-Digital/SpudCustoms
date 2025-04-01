@@ -30,7 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://bxn3434177kfd" path="res://assets/documents/laws_receipt.png" id="31_rtxd3"]
 [ext_resource type="Script" uid="uid://dfofd8lp0igu2" path="res://scripts/systems/law_receipt.gd" id="32_k1orm"]
 [ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://assets/styles/dos_theme.tres" id="33_ncgko"]
-[ext_resource type="PackedScene" uid="uid://b0go0ri8l0yb7" path="res://scripts/megaphone_dialogue/MegaphoneDialogue.tscn" id="36_ccap0"]
+[ext_resource type="PackedScene" uid="uid://b0go0ri8l0yb7" path="res://scripts/systems/megaphone/MegaphoneDialogue.tscn" id="36_ccap0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gf7dt"]
 size = Vector2(730, 155)
@@ -613,13 +613,18 @@ horizontal_alignment = 1
 [node name="Megaphone" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_index = 20
 position = Vector2(900, 130)
-scale = Vector2(2.455, 2.455)
+scale = Vector2(2.45, 2.45)
 texture = ExtResource("14_ynnf6")
 
 [node name="MegaphoneDialogueBox" parent="Gameplay/InteractiveElements/Megaphone" instance=ExtResource("36_ccap0")]
-unique_name_in_owner = true
-position = Vector2(37.4745, -25.6619)
+position = Vector2(37, -26)
 scale = Vector2(0.4, 0.4)
+
+[node name="MegaphoneInteractionButton" type="TextureButton" parent="Gameplay/InteractiveElements/Megaphone"]
+offset_left = -8.97958
+offset_top = -8.16327
+offset_right = 11.0204
+offset_bottom = 7.83673
 
 [node name="Paths" type="Control" parent="Gameplay"]
 z_index = 12
@@ -735,3 +740,4 @@ curve = SubResource("Curve2D_x3wa3")
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
+[connection signal="pressed" from="Gameplay/InteractiveElements/Megaphone/MegaphoneInteractionButton" to="." method="_on_megaphone_interaction_button_pressed"]
