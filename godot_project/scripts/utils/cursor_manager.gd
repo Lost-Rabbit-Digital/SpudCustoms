@@ -7,25 +7,27 @@ extends Node
 
 # Cursor texture paths - customize these to match your assets
 var cursor_textures = {
-	"default": preload("res://assets/cursor/cursor_default.png"),
-	"hover": preload("res://assets/cursor/cursor_hover.png"),
-	"grab": preload("res://assets/cursor/cursor_grab.png"),
-	"click": preload("res://assets/cursor/cursor_click.png"),
-	"target": preload("res://assets/cursor/cursor_target.png")
+	"default": preload("res://assets/user_interface/cursor/cursor_default.png"),
+	"hover_1": preload("res://assets/user_interface/cursor/cursor_hover_1.png"),
+	"hover_2": preload("res://assets/user_interface/cursor/cursor_hover_2.png"),
+	"grab": preload("res://assets/user_interface/cursor/cursor_grab.png"),
+	"click": preload("res://assets/user_interface/cursor/cursor_click.png"),
+	"target": preload("res://assets/user_interface/cursor/cursor_target.png")
 }
 
 # Cursor hotspot positions (origin point of cursor)
 var cursor_hotspots = {
-	"default": Vector2(0, 0),
-	"hover": Vector2(0, 0),
-	"grab": Vector2(0, 0),
-	"click": Vector2(0, 0),
+	"default": Vector2(8, 3),
+	"hover": Vector2(12, 4),
+	"grab": Vector2(12, 8),
+	"click": Vector2(12, 4),
 	"target": Vector2(16, 16)  # Center of targeting reticle
 }
 
 # Input map actions that trigger cursor state changes
 var action_cursor_states = {
-	"mouse_left": "click",  # Left mouse button pressed
+	"primary_interaction": "click",  # Left mouse button pressed
+	"secondary_interaction": "click",  # Right mouse button pressed
 }
 
 # Current cursor state tracking
@@ -65,7 +67,7 @@ func _process(_delta):
 		if hover_state_stack.is_empty():
 			update_cursor("default")
 		else:
-			update_cursor("hover")
+			update_cursor("hover_1")
 	
 	# Check for missile zone if callback provided
 	if missile_zone_callback.is_valid() and hover_state_stack.is_empty() and not mouse_pressed:
@@ -77,7 +79,7 @@ func _process(_delta):
 func _on_node_added(node: Node):
 	if node is BaseButton or node is TextureButton:
 		_connect_button_signals(node)
-	
+		
 	# For non-Control nodes, check their children immediately
 	if not node is Control and node.get_child_count() > 0:
 		for child in node.get_children():
@@ -119,8 +121,10 @@ func _on_button_mouse_entered(button: Control):
 	hover_state_stack.append(button)
 	
 	# Update cursor to hover state unless mouse is being pressed
+	# TODO: This is where we would implement the check for which hover state to use,
+	# hover_1 for clickables or hover_2 for draggables
 	if not mouse_pressed:
-		update_cursor("hover")
+		update_cursor("hover_1")
 		#print("Set cursor to hover state")
 
 func _on_button_mouse_exited(button: Control):
@@ -143,14 +147,16 @@ func update_cursor(state: String):
 		
 	current_state = state
 	var texture = cursor_textures[state]
-	var hotspot = cursor_hotspots.get(state, Vector2.ZERO)
+	var hotspot = cursor_hotspots.get(state)
 	
 	# Determine the right cursor type constant based on state
 	match state:
 		"click":
 			texture = cursor_textures["click"]
-		"hover":
-			texture = cursor_textures["hover"]
+		"hover_1":
+			texture = cursor_textures["hover_1"]
+		"hover_2":
+			texture = cursor_textures["hover_2"]
 		"grab":
 			texture = cursor_textures["grab"]
 		"target":

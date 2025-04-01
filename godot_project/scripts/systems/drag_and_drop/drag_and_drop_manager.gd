@@ -75,20 +75,6 @@ func initialize(game_scene: Node):
 func handle_input(event: InputEvent) -> bool:
 	return drag_system.handle_input_event(event, get_viewport().get_mouse_position())
 
-## OLD: Process cursor updates
-#func process_cursor():
-	#var mouse_pos = get_viewport().get_mouse_position()
-	#var border_runner_enabled = border_runner_system and border_runner_system.is_enabled
-	#
-	## Create a callback to check if mouse is in missile zone
-	#var missile_zone_check = func(pos):
-		#if border_runner_system:
-			#var missile_zone = border_runner_system.get_missile_zone()
-			#return missile_zone and missile_zone.has_point(pos)
-		#return false
-	#
-	#drag_system.process_cursor(mouse_pos, border_runner_enabled, missile_zone_check)
-
 # Open a document by name
 func open_document(document_name: String):
 	match document_name.to_lower():

@@ -70,7 +70,7 @@ var default_cursor = Input.CURSOR_ARROW
 @onready var mugshot_generator = $Gameplay/MugshotPhotoGenerator
 @onready var passport_generator = $Gameplay/InteractiveElements/Passport/OpenPassport/PassportPhotoGenerator
 
-@onready var megaphone = $Gameplay/Megaphone
+@onready var megaphone = $Gameplay/InteractiveElements/Megaphone
 @onready var megaphone_dialogue_box = %MegaphoneDialogueBox
 @onready var enter_office_path = $Gameplay/Paths/EnterOfficePath
 @onready var stats_manager = $SystemManagers/StatsManager
@@ -420,6 +420,7 @@ func end_shift(success: bool = true):
 	get_tree().paused = false
 	
 	# Set Stamp Bar Controller to be below shift summary screen
+	# TODO: Set this to 15 or something so that it doesn't clip under the table at the end of the round
 	$Gameplay/InteractiveElements/StampBarController.z_index = 1
 	
 	# Create a tween for a cleaner fade transition
@@ -661,7 +662,7 @@ func animate_mugshot_and_passport():
 	tween.tween_property(passport, "modulate:a", 1, 1)
 	tween.tween_property(passport, "visible", true, 0).set_delay(1)
 	tween.tween_property(passport, "position:y", passport_spawn_point_end.position.y, 0.4).set_delay(1)
-	tween.tween_property(passport, "z_index", 9, 0).set_delay(2)
+	tween.tween_property(passport, "z_index", 14, 0).set_delay(2)
 
 	tween.chain().tween_callback(func(): print("Finished animating mugshot and passport"))
 	

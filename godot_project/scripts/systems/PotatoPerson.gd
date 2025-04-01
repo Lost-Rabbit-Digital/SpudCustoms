@@ -61,6 +61,7 @@ func _ready() -> void:
 	# After setting the material
 	%PotatoSprite.material = node_highlight_material
 
+	# TODO: This doesn't actually set the shader parameters, no idea why but I give up, fuck this.
 	# Set shader parameters
 	node_highlight_material.set_shader_parameter("edge_width", 0.1)
 	node_highlight_material.set_shader_parameter("ignore_colors", true)
