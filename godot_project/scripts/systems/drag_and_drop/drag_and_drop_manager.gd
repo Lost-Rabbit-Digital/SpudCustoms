@@ -17,7 +17,15 @@ var audio_player: AudioStreamPlayer2D
 
 var stamp_system_manager: StampSystemManager
 
+# Reference to cursor manager
+var cursor_manager = null
+
 func _ready():
+	# Get reference to cursor manager autoload
+	cursor_manager = get_node_or_null("/root/CursorManager")
+	if not cursor_manager:
+		push_warning("CursorManager autoload not found. Document hover effects won't work.")
+	
 	# Create our drag and drop system
 	drag_system = DragAndDropSystem.new()
 	add_child(drag_system)
@@ -26,6 +34,7 @@ func _ready():
 	drag_system.item_opened.connect(_on_item_opened)
 	drag_system.item_closed.connect(_on_item_closed)
 	drag_system.connect("item_dropped", Callable(self, "_on_item_dropped"))
+	
 # Initialize the manager with scene references
 func initialize(game_scene: Node):
 	# Get references to key nodes
@@ -126,6 +135,10 @@ func _on_item_opened(item: Node2D):
 func _on_item_closed(item: Node2D):
 	var document_name = item.name
 	close_document(document_name)
+
+func _on_item_dropped(item: Node2D, drop_zone: String):
+	# Additional processing can be added here if needed
+	pass
 
 func set_stamp_system_manager(manager: StampSystemManager):
 	stamp_system_manager = manager

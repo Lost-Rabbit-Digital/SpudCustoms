@@ -20,6 +20,7 @@ var dragged_item = null
 var drag_offset = Vector2()
 var document_was_closed = false
 var original_z_index: int
+var hovered_item = null
 
 # Drop zone references
 var inspection_table: Node2D
@@ -38,6 +39,9 @@ var _stamp_bar_controller = null
 # Stamp System Manager
 var stamp_system_manager: StampSystemManager
 
+# Cursor Manager reference
+var cursor_manager = null
+
 # Initialize the system
 func initialize(config: Dictionary):
 	# Set references from configuration
@@ -51,6 +55,11 @@ func initialize(config: Dictionary):
 	
 	# Register draggable items
 	register_draggable_items(config.get("draggable_items", []))
+	
+	# Get reference to cursor manager autoload
+	cursor_manager = get_node_or_null("/root/CursorManager")
+	if not cursor_manager:
+		push_warning("CursorManager autoload not found. Cursor hover effects won't work.")
 	
 func set_stamp_system_manager(manager: StampSystemManager):
 	stamp_system_manager = manager
@@ -76,6 +85,7 @@ func register_draggable_item(item: Node2D):
 			item.z_index = PASSPORT_Z_INDEX
 	else:
 		push_warning("Invalid draggable item provided")
+		
 # Remove a draggable item
 func unregister_draggable_item(item: Node2D):
 	if item in draggable_items:
@@ -89,11 +99,38 @@ func handle_input_event(event: InputEvent, mouse_pos: Vector2) -> bool:
 				return _handle_mouse_press(mouse_pos)
 			else:
 				return _handle_mouse_release(mouse_pos)
-	elif event is InputEventMouseMotion and dragged_item:
-		_update_dragged_item_position(mouse_pos)
-		return true
+	elif event is InputEventMouseMotion:
+		# Always check for hover even if not dragging
+		_handle_mouse_motion(mouse_pos)
 		
+		if dragged_item:
+			_update_dragged_item_position(mouse_pos)
+			return true
+			
 	return false
+
+# Handle mouse motion for hover effects
+func _handle_mouse_motion(mouse_pos: Vector2) -> void:
+	if dragged_item:
+		# Don't change cursor while dragging
+		return
+		
+	# Find item under cursor
+	var item_under_cursor = find_topmost_item_at(mouse_pos)
+	
+	# Change cursor if hovering over a document
+	if item_under_cursor != hovered_item:
+		if item_under_cursor:
+			# Set hover cursor if hovering over a draggable document
+			if cursor_manager and is_openable_document(item_under_cursor):
+				cursor_manager.update_cursor("hover_1")
+		else:
+			# Reset cursor if not hovering over any document
+			if cursor_manager and hovered_item != null:
+				cursor_manager.update_cursor("default")
+				
+		# Update hover state
+		hovered_item = item_under_cursor
 
 # Helper function to get the document controller for an item
 func get_document_controller(item: Node2D) -> DraggableDocument:
@@ -128,6 +165,11 @@ func _handle_mouse_press(mouse_pos: Vector2) -> bool:
 				emit_signal("item_closed", dragged_item)
 			
 			emit_signal("item_dragged", dragged_item)
+			
+			# Update cursor to "grab" when starting to drag
+			if cursor_manager:
+				cursor_manager.update_cursor("grab")
+				
 			return true
 	return false
 	
@@ -173,14 +215,6 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 		var drop_zone = identify_drop_zone(mouse_pos)
 		emit_signal("item_dropped", dragged_item, drop_zone)
 		
-		# TODO: Re-enable this paper effect later on
-		# Measure "impact" speed for documents dropped onto surfaces
-		#var impact_intensity = 1.0
-		#if drop_zone == "inspection_table" or drop_zone == "suspect_panel":
-			# Calculate impact intensity based on current frame delta and distance
-			#if is_openable_document(dragged_item):
-			#	spawn_paper_crunch_effect(mouse_pos, impact_intensity)
-		
 		# Reset document_was_closed flag
 		document_was_closed = false
 		
@@ -210,9 +244,26 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 				
 			# Return to nearest valid position on table
 			_return_item_to_table(dragged_item)
-			return true
 			
+			# Clear the dragged item after return animation starts
+			var item = dragged_item
+			dragged_item = null
+			
+			# Reset cursor immediately
+			if cursor_manager:
+				cursor_manager.update_cursor("default")
+			
+			return true
+		
+		# Reset cursor after releasing the item
+		if cursor_manager:
+			cursor_manager.update_cursor("default")
+		
+		# Clear dragged item reference
 		dragged_item = null
+		
+		# Re-check for hover
+		_handle_mouse_motion(mouse_pos)
 		return true
 	return false
 
@@ -302,17 +353,11 @@ func _return_item_to_table(item: Node2D):
 	# Ensure exact original scale is restored at the end
 	scale_tween.tween_property(item, "scale", original_scale, RETURN_TWEEN_DURATION * 0.25)
 	
-	# TODO: Re-enable this paper effect later on
-	# Play paper crunch when item returning to desk
-	#var impact_intensity = 2
-	#spawn_paper_crunch_effect(target_position, impact_intensity)
-	
 	# Make sure original scale is properly restored in tween callback
 	tween.tween_callback(func():
 		# Force exact scale restoration
 		item.scale = original_scale
 		item.z_index = original_z_index
-		dragged_item = null
 		
 		# Open the document when it returns to the table
 		#if is_openable_document(item):

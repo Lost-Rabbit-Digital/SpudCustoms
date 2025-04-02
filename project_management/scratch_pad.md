@@ -137,3 +137,6 @@ These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release
 - Update cursor in the main menu when hover over buttons
 - Bug: Passport text disappears while dragged
 - Emote System: Implement a variable delay between emotes
+- Megaphone: Update core to have button for mouse interactions instead of Area2D (Or alongside Area2D if you don't feel like updating other code references)
+- Cursor: We need a hover for grabbable documents (Passport, Law Receipt) and a hover for interactable objects (Potatoes, Megaphone)
+- Cursor: Add mulitple hover modes

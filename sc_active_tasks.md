@@ -34,13 +34,9 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Emote System / Bug: When potatoes are clicked it only displays loved emotes
 
 # MEGAPHONE DIALOGUE SYSTEM
-- Megaphone: Update core to have button for mouse interactions instead of Area2D (Or alongside Area2D if you don't feel like updating other code references)
 
 # OFFICE SHUTTER SYSTEM
 - Office Shutter: Update button to exclude transparent pixels
 
 # RIGHT NOW
-- Cursor: Add mulitple hover modes
-- Cursor: We need a hover for grabbable documents (Passport, Law Receipt) and a hover for interactable objects (Potatoes, Megaphone)
-	- We could probably achieve this by detecting whether the mouse is clicking/hovering over a BaseButton/TextureButton or an Area2D 
-	- cursor_manager.gd > _on_button_mouse_entered(): If statement checking what the mouse hovers over, hover_1 for clickables or hover_2 for draggables
+- Use the Drag and drop sprites to detect when the mouse is hovering over the documents
