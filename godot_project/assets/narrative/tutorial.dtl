@@ -1,112 +1,112 @@
 # tutorial.dtl
-audio music "res://assets/audio/ambient/wind_outside.wav" [fade="2.0" volume="-5.0" bus="Music"]
+audio music "res://assets/music/narrative/chiptune_work_work_work_main.wav" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/checkpoint_interior.png" fade="0.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/ui_feedback/Discovery Ensemble 001.wav" [volume="-10.0" bus="SFX"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Welcome to [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs Training![/color][/pulse]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: This training will teach you the [wave amp=15 freq=2][color=DARK_ORANGE]essential skills[/color][/wave] needed to protect Spud's borders.
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Your duty is to process incoming potatoes at our border checkpoint.
 
 [background arg="res://assets/tutorial/v2/0_potato_queue_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Immigrating potatoes will line up outside your office here.
 
 [background arg="res://assets/tutorial/v2/1_gate_switch_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: To start processing potatoes, you need to open your booth for service with the switch here.
 
 [background arg="res://assets/tutorial/v2/2_megaphone_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: You'll signal each potato to approach your office by tapping the megaphone.
 
 [background arg="res://assets/tutorial/v2/4_document_booth_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Potatoes will enter the booth one by one and present their documents.
 
 [background arg="res://assets/tutorial/v2/5_document_target_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: First, move their documents over to the inspection table for a better look.
 
 [background arg="res://assets/tutorial/v2/6_document_comparison_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Then, look for [tornado radius=3 freq=2][color=YELLOW]expired dates, incorrect information, or signs of forgery[/color][/tornado].
 
 [background arg="res://assets/tutorial/v2/7_stamp_bar_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Your desk has stamps for marking documents, you can click here to pull the stamp bar out.
 
 [background arg="res://assets/tutorial/v2/8_stamp_document_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Then place the document under the stamp you want...
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Click the stamp to mark documents as [color=CHARTREUSE]approved[/color] or [color=CRIMSON]rejected[/color]...
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: And drag the document back to the potato to finalize your decision!
 
 
 [background arg="res://assets/tutorial/v2/9_border_runner_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Sometimes, potatoes will try to [color=CRIMSON]rush past your checkpoint[/color].
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: You have a direct uplink in your booth, which allows you to control [pulse freq=3][color=CRIMSON]missile launchers[/color][/pulse] along the border wall.
 
 [background arg="res://assets/tutorial/v2/10_border_runner_missile_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Click on these "runners" to launch a missile and stop them.
 
 [background arg="res://assets/tutorial/v2/0_strikes_UI_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Remember, each runner that gets through will count as a [wave amp=20 freq=3][color=CRIMSON]strike against you[/color][/wave].
 
-audio "res://assets/audio/talking/typing_on_a_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Too many strikes, and your shift will end... [tornado radius=3 freq=3][color=CRIMSON]permanently.[/color][/tornado]
 
 [background arg="res://assets/tutorial/v2/0_quota_UI_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Each shift has a [color=DARK_ORANGE]quota of potatoes[/color] you need to process to finish your day.
 
 [background arg="res://assets/tutorial/v2/0_score_UI_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Your score keeps track of your performance compared to your fellow officers at this checkpoint, and officers in distant customs offices.
 
 [background arg="res://assets/tutorial/v2/11_summary_success_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: After each shift, you'll see a summary of your performance, and whether you succeeded or failed in your duty.
 
 [background arg="res://assets/tutorial/v2/12_summary_stats_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: You'll see a breakdown of how you handled runners, and how many documents you processed.
 
 [background arg="res://assets/tutorial/v2/13_summary_bonus_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Plus any bonuses you earned from processing documents quickly, perfectly aligning stamps, or perfectly striking runner potatoes.
 
 [background arg="res://assets/tutorial/v2/14_summary_performance_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: You'll also receive a performance rating based on how well you processed potatoes during your shift, and up to 3 golden stamps if you exceed expectations.
 
 [background arg="res://assets/tutorial/v2/15_summary_leaderboard_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Here you can submit your score for each shift to the global database of customs officers and see how you compare to the most elite customs officers around the world.
 
 [background arg="res://assets/tutorial/v2/16_summary_continue_example.png" fade="1.5"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: If your shift was successful, you'll be able to move on by clicking "Continue" and starting your next shift.
 
 [background arg="res://assets/narrative/checkpoint_interior.png" fade="2.0"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: That covers the basics of your duties as a Customs Officer.
 
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Remember\: check documents carefully, stop runners, and meet your quota.
 
 [background arg="res://assets/narrative/checkpoint_exterior.png" fade="2.0"]
-audio "res://assets/audio/talking/typing_on_a_keyboard_3.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: The safety and security of Spud depends on your [pulse freq=2][color=DARK_ORANGE]vigilance![/color][/pulse]
 
-audio "res://assets/audio/talking/typing_on_old_keyboard_2.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Good luck, officer.
 leave narrator

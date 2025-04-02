@@ -1,5 +1,6 @@
 # shift7_end.dtl
-audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
+audio music "res://assets/music/narrative/horror_hush_main.wav" [fade="2.0" volume="-5.0" bus="Music"]
+audio "res://assets/music/narrative/creepy_creaks_ambience.wav" [volume="-12.0" bus="Ambient"]
 [background arg="res://assets/narrative/resistance_base.png" fade="0.0"]
 join narrator
 audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]

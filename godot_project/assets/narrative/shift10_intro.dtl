@@ -1,6 +1,7 @@
 # shift10_intro.dtl
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="0.0" bus="Music"]
 if {stay_or_go} == "stay":
+	audio music "res://assets/music/narrative/ambient_defeat_main.wav" [fade="2.0" volume="0.0" bus="Music"]
 	# Storyline for those who stayed at their post
 	[background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]
 	join narrator [z_index="1"]
@@ -49,6 +50,7 @@ if {stay_or_go} == "stay":
 		leave player_character
 		
 if {stay_or_go} == "go":
+	audio music "res://assets/music/narrative/electronic_cyberattack_main.wav" [fade="2.0" volume="-5.0" bus="Music"]
 	# Storyline for those who joined the resistance
 	[background arg="res://assets/narrative/resistance_planning.png" fade="0.0"]
 	join narrator [z_index="1"]

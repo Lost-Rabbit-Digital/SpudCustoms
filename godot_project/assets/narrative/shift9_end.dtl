@@ -1,5 +1,6 @@
 # shift9_end.dtl
-audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
+audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Ambient"]
+audio music "res://assets/music/narrative/horror_aliens_main.wav" [fade="2.0" volume="-5.0" bus="Music"]
 
 if {stay_or_go} == "stay":
 	[background arg="res://assets/narrative/loyalist_outcome.png" fade="0.0"]

@@ -1,5 +1,5 @@
 # shift1_intro.dtl
-audio music "res://assets/audio/ambient/wind_outside.wav" [fade="2.0" volume="1.0" bus="Music"]
+audio music "res://assets/music/narrative/ambient_exploration_main.wav" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/nation_of_spud.png" fade="0.0"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 join narrator [z_index="1"]
@@ -10,6 +10,7 @@ leave narrator
 
 [background arg="res://assets/narrative/checkpoint_interior.png" fade="1.5"]
 audio "res://assets/audio/furniture/Door Open B.wav" [volume="-5.0" bus="SFX"]
+audio "res://assets/music/narrative/wind_house.wav" [volume="-15.0" bus="Ambient"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Your duty: to process incoming potatoes. Your family's well-being [wave amp=20 freq=3][color=YELLOW]depends on your performance[/color][/wave].

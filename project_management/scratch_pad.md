@@ -53,6 +53,7 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 ## Tasks
 ## RELEASE BLOCKERS
+- Add an on_dialogue_start and on_dialogue_finished call to stop the BGMPlayer and then start next random track when back in game scene
 - Playtest Endless mode
 - Playtest Story mode
 - Stamps go over edge of passport
