@@ -1,4 +1,30 @@
-Regenerate potato images for each character (Supervisor Russet should be a Russet, our character can be a Russet, Narrator should be Purple Majesty, Sasha should be Sweet Potato, Resistance Members should be Yukon Gold and Sweet Potato, Resistance Leader should be a Russet, Security Chief should be a Yukon Gold, Security Officer should be a Purple Majesty, Prime Minister Idaho should be a russet, NPC 1 should be purple majesty, NPC 2 should be yukon gold, NPC 3 should be sweet potato)
+Regenerate potato images for each character 
+
+Russet
+	Supervisor Russet
+	Player character
+	Resistance Leader 
+	Prime Minister Idaho 
+
+Purple Majesty
+	Fellow officer
+	Security Officer 
+	NPC 1
+	Narrator
+
+Yukon Gold
+	Resistance Member 1
+	Security Chief
+	Traveler 1
+	NPC 2
+
+Sweet Potato
+	Sasha
+	NPC 3
+	Resistance Member 2
+	announcer
+
+
 Update tutorial step with exploding runner
 Update where strikes and quota show on UI
 Create updated versions of each tutorial step with the new UI
@@ -24,7 +50,6 @@ Split "I think I know what's happening..." "They're becoming [shake][color=light
 Reworded "Anyone flagged faces" to "Anyone triggering the scanner will face"
 shift10, confusing narrative change from resistance members in the "stay" path being ground up to instead approaching the capitol
 
-
 color match purple of background in personal quarters
 
 shift10 needs the most re-work/narrative bridge
@@ -33,8 +58,8 @@ Dialogue font needs to be different
 
 Procedures needed for compliance meeting
 
-Add emphasis to DTL scenes by using bbcode tags for text effects, shake, wave, pulse, and tornado explained here
 
-New game button starts day 1 instead of day 0!
-Quota maximum not updating
-skip button not disappearing, and resetting the shift when pressed
+
+Done: New game button starts day 1 instead of day 0!
+Quota maximum not updating at start of shift
+Skip button not disappearing, and resetting the shift when pressed
