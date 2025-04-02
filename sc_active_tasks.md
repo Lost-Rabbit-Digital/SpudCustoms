@@ -12,31 +12,32 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Control: F11 to toggle fullscreen 
 
 # GRAPHICS
-- Graphics: Fade out the foreground shadow when the potatoes leave the office
-- Graphocs: Do not fade out transparency of potato when enter or leaving office, only the foreground shadow
-
-# QUEUE INTERACTION SYSTEM
-- Queue Interaction: Potatoes move wiggle while idle
-- Queue Interaction: Potatoes wiggle when clicked
-- Queue Interaction: White outlight on hover of potato
 
 # CURSOR MANAGER
-- Cursor: Update while hovering over megaphone
-- Cursor: Update while dragging documents
-- Cursor: Update while hovering over documents
-- Cursor / Bug: Offset to the right a bit
-
-# EMOTE SYSTEM
-- Emote System: All show exclamation marks when you shoot a missile
-- Emote System: If you click the same potato 3+ times they get angry and show POPPING_VEINS emote
-- Emote System: If you click the potato once it has a question mark
-- Emote System / Bug: Dot animation only shows one dots then stops
-- Emote System / Bug: When potatoes are clicked it only displays loved emotes
 
 # MEGAPHONE DIALOGUE SYSTEM
 
+# DRAG AND DROP SYSTEM
+- Drag and Drop: Passport text and photo appear over the LawReceipt
+
+# QUEUE INTERACTION SYSTEM
+- Queue Interaction: Potatoes slightly wiggle while idle
+- Queue Interaction: Potatoes wiggle when clicked
+
+# EMOTE SYSTEM
+- Emote System: All potatoes show exclamation marks when you shoot a missile
+- Emote System: If you click the same potato 3+ times they get angry and show POPPING_VEINS emote
+- Emote System / Bug: Dot animation only shows one dots then stops
+- Emote System / Bug: When potatoes are clicked it only displays love emotes, could be set to display HAPPY category
+
 # OFFICE SHUTTER SYSTEM
-- Office Shutter: Update button to exclude transparent pixels
+- Office Shutter / Bug: Fade out the foreground shadow when the potatoes leave the office
+- Office Shutter / Bug: Do not fade out transparency of potato when enter or leaving office, only the foreground shadow
+- Office Shutter / Bug: Update button to exclude transparent pixels
 
 # RIGHT NOW
-- Use the Drag and drop sprites to detect when the mouse is hovering over the documents
+- Office Shutter / Bug: The potato should not pass documents through if the shutter is closed
+- Office Shutter / Bug: The user should not be able to pass the potato documents if the shutter is closed
+	- Add a check if the shutter is closed, if so do not allow interaction
+	- Add a boolean check if the potato has passed the documents or not when first entering office
+	- Add a check if the shutter comes up for the potato to pass documents 

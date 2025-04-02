@@ -140,3 +140,8 @@ These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release
 - Megaphone: Update core to have button for mouse interactions instead of Area2D (Or alongside Area2D if you don't feel like updating other code references)
 - Cursor: We need a hover for grabbable documents (Passport, Law Receipt) and a hover for interactable objects (Potatoes, Megaphone)
 - Cursor: Add mulitple hover modes
+- Cursor: Update while hovering over megaphone
+- Cursor: Update while dragging documents
+- Cursor: Update while hovering over documents
+- Cursor / Bug: Offset to the right a bit
+- Queue Interaction: Highlight on hover of potato
