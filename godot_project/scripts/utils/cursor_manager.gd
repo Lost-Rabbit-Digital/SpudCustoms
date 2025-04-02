@@ -33,7 +33,7 @@ var action_cursor_states = {
 # Current cursor state tracking
 var current_state: String = "default"
 var hover_state_stack: Array = []
-var mouse_pressed: bool = false
+var input_pressed: bool = false
 
 # Whether the manager is active or not
 var active: bool = true
@@ -57,20 +57,21 @@ func _process(_delta):
 		return
 	
 	# Handle mouse button pressed state
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and not mouse_pressed:
-		mouse_pressed = true
-		if hover_state_stack.is_empty():
-			update_cursor("click")
-	elif not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and mouse_pressed:
-		mouse_pressed = false
+	# Primary interaction pressed for first time
+	if Input.is_action_pressed("primary_interaction") and not input_pressed:
+		input_pressed = true
+		update_cursor("click")
+	 # Release of the primary interaction
+	elif not Input.is_action_pressed("primary_interaction") and input_pressed:
+		input_pressed = false
 		# If no hover item, restore to default, otherwise stay on hover state
 		if hover_state_stack.is_empty():
 			update_cursor("default")
 		else:
-			update_cursor("hover_1")
+			update_cursor("hover_2")
 	
 	# Check for missile zone if callback provided
-	if missile_zone_callback.is_valid() and hover_state_stack.is_empty() and not mouse_pressed:
+	if missile_zone_callback.is_valid() and hover_state_stack.is_empty() and not input_pressed:
 		var mouse_pos = get_viewport().get_mouse_position()
 		if missile_zone_callback.call(mouse_pos):
 			update_cursor("target")
@@ -122,9 +123,9 @@ func _on_button_mouse_entered(button: Control):
 	
 	# Update cursor to hover state unless mouse is being pressed
 	# TODO: This is where we would implement the check for which hover state to use,
-	# hover_1 for clickables or hover_2 for draggables
-	if not mouse_pressed:
-		update_cursor("hover_1")
+	# hover_1 for draggables or hover_2 for clickables
+	if not input_pressed:
+		update_cursor("hover_2")
 		#print("Set cursor to hover state")
 
 func _on_button_mouse_exited(button: Control):
@@ -136,7 +137,7 @@ func _on_button_mouse_exited(button: Control):
 	hover_state_stack.erase(button)
 	
 	# If stack is empty and not pressing mouse, restore default cursor
-	if hover_state_stack.is_empty() and not mouse_pressed:
+	if hover_state_stack.is_empty() and not input_pressed:
 		update_cursor("default")
 		#print("Set cursor to default state")
 
@@ -191,5 +192,5 @@ func clear_hover_stack():
 	hover_state_stack.clear()
 	
 	# If not pressing mouse, reset to default cursor
-	if not mouse_pressed:
+	if not input_pressed:
 		update_cursor("default")

@@ -616,15 +616,15 @@ position = Vector2(900, 130)
 scale = Vector2(2.45, 2.45)
 texture = ExtResource("14_ynnf6")
 
-[node name="MegaphoneDialogueBox" parent="Gameplay/InteractiveElements/Megaphone" instance=ExtResource("36_ccap0")]
-position = Vector2(37, -26)
-scale = Vector2(0.4, 0.4)
-
 [node name="MegaphoneInteractionButton" type="TextureButton" parent="Gameplay/InteractiveElements/Megaphone"]
 offset_left = -8.97958
 offset_top = -8.16327
 offset_right = 11.0204
 offset_bottom = 7.83673
+
+[node name="MegaphoneDialogueBox" parent="Gameplay/InteractiveElements/Megaphone" instance=ExtResource("36_ccap0")]
+position = Vector2(37, -26)
+scale = Vector2(0.4, 0.4)
 
 [node name="Paths" type="Control" parent="Gameplay"]
 z_index = 12
