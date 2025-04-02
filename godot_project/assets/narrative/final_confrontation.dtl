@@ -1,11 +1,13 @@
 # final_confrontation.dtl
 audio music "res://assets/audio/ambient/2_wind_house.wav" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/final_chaos.png" fade="0.0"]
+audio "res://assets/audio/explosions/rumbling 1.wav" [volume="-8.0" bus="SFX"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: The Spud border is in [pulse freq=3][color=CRIMSON]chaos[/color][/pulse]. Panicked potatoes flood checkpoints, desperate to escape after the leaked documents.
 
 join player_character [z_index="1"]
 [background arg="res://assets/narrative/extreme_emergency.png" fade="1.2"]
+audio "res://assets/audio/gunfire/Heavy Pistol B.wav" [volume="-18.0" bus="SFX"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 player_character: You slip through with Sasha. [wave amp=20 freq=3][color=CHARTREUSE]We have to keep pushing![/color][/wave] The people know the truth now.
 
@@ -101,6 +103,7 @@ leave player_character
 # Ending Choice Section
 if {ending_choice} == "diplomatic":
 	[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+	audio "res://assets/audio/footsteps/Metal Walk 1_3.wav" [volume="-10.0" bus="SFX"]
 	join player_character [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 	player_character: Idaho, it doesn't have to end in more bloodshed. If you cooperate...
@@ -108,7 +111,9 @@ if {ending_choice} == "diplomatic":
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 	prime_minister_idaho: Oh, you [color=STEEL_BLUE]idealistic fool[/color]. You think this is a negotiation?
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+	audio "res://assets/audio/mechanical/button assorted 3.wav" [volume="-8.0" bus="SFX"]
 	prime_minister_idaho: Idaho smashes a button, and [color=RED]alarms begin blaring[/color]. "The only thing I'll be giving you is a [color=DARK_VIOLET]one-way trip to the fry vats![/color]"
+    audio "res://assets/audio/mechanical/alarm.wav" [volume="-8.0" bus="SFX"]
 	[background arg="res://assets/narrative/guard_betrayal.png" fade="2.0"]
 	join sweet_potato_sasha [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
@@ -155,10 +160,12 @@ else: # dismantle
 
 # Common ending for all paths
 [background arg="res://assets/narrative/russet_standoff.png" fade="2.0"]
+audio "res://assets/audio/explosions/Explosion Ringing.wav" [volume="-15.0" bus="SFX"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: The fall of [color=DARK_VIOLET]Root Reserve[/color] sparks a wildfire of change across Spud.
 [background arg="res://assets/narrative/victory_scene.png" fade="2.0"]
+audio "res://assets/audio/music/Honor Braaam.wav" [volume="-10.0" bus="SFX"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 narrator: Potatoes in every province rise up, embracing a [color=CHARTREUSE]new vision for their nation[/color].
 audio music "res://assets/audio/1_birds_outside.wav" [fade="2.0" volume="1.0" bus="Music"]

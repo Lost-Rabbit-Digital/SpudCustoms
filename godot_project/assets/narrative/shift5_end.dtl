@@ -1,28 +1,34 @@
 # shift5_end.dtl
 audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="0.0"]
+audio "res://assets/audio/ambient/2_night_inside.wav" [volume="-15.0" bus="SFX"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 player_character: You creep through the darkened corridor, heart pounding as you avoid security patrols.
 leave player_character
 
 [background arg="res://assets/narrative/resistance_base.png" fade="1.2"]
+audio "res://assets/audio/mechanical/feedback 2.wav" [volume="-15.0" bus="SFX"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 sweet_potato_sasha: [color=CHARTREUSE]This device will disable the lock[/color] on Russet's office. I'll trigger alarms in the east wing as a distraction. You'll have five minutes.
+audio "res://assets/audio/mechanical/button assorted 2.wav" [volume="-10.0" bus="SFX"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 sweet_potato_sasha: "The manifests should be in his filing cabinet. [color=CRIMSON]Red folder labeled 'RR Transport'[/color]. Don't leave evidence of your search."
 leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/root_reserve_customs_office.png" fade="2.0"]
+audio "res://assets/audio/mechanical/Metal Old Door A.wav" [volume="-10.0" bus="SFX"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 player_character: You find the thick [color=CRIMSON]red folder labeled "RR Transport"[/color] in the filing cabinet.
+audio "res://assets/audio/paper/paper handled 1.wav" [volume="-5.0" bus="SFX"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 player_character: Inside are manifests matching rejected potato counts, and a directive from Prime Minister Idaho authorizing "[pulse freq=3][color=DARK_VIOLET]full utilization of border rejects for RR production.[/color][/pulse]"
 leave player_character
 
 [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+audio "res://assets/audio/footsteps/Concrete Walk 1_1.wav" [volume="-8.0" bus="SFX"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 Footsteps approach the office door. "[wave amp=15 freq=3][color=YELLOW]Strange, I could've sworn I locked this.[/color][/wave]"
 

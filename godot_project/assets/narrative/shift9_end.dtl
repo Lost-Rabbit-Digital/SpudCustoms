@@ -3,10 +3,12 @@ audio music "res://assets/audio/ambient/horror_drone_49.wav" [fade="2.0" volume=
 
 if {stay_or_go} == "stay":
 	[background arg="res://assets/narrative/loyalist_outcome.png" fade="0.0"]
+	audio "res://assets/audio/explosions/big distant thump 5.wav" [volume="-10.0" bus="SFX"]
 	join player_character [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 	player_character: You hunker down as the battle rages. I'm sorry, Sasha. I'm [color=STEEL_BLUE]not as brave as you[/color].
 	leave player_character
+    audio "res://assets/audio/gunfire/Heavy Pistol Automatic B.wav" [volume="-15.0" bus="SFX"]
 	[background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
 	join supervisor_russet [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
@@ -29,19 +31,21 @@ if {stay_or_go} == "stay":
 	leave player_character
 if {stay_or_go} == "go":
 	[background arg="res://assets/narrative/resistance_planning.png" fade="0.0"]
+	audio "res://assets/audio/explosions/Explosion Close Collapse.wav" [volume="-12.0" bus="SFX"]
 	join player_character [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 	player_character: You [tornado radius=3 freq=2][color=CHARTREUSE]abandon your post[/color][/tornado] and race toward the fighting. The time for caution is over.
 	leave player_character
 	[background arg="res://assets/narrative/joining_rebellion.png" fade="2.0"]
-	join resistance_member_2 [z_index="1"]
+	audio "res://assets/audio/gunfire/gun cocking 3.wav" [volume="-8.0" bus="SFX"]
+	join resistance_leader [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
-	resistance_member_2: [pulse freq=3][color=GOLD]Prove you're with us![/color][/pulse] How do you know Sasha?
+	resistance_leader: [pulse freq=3][color=GOLD]Prove you're with us![/color][/pulse] How do you know Sasha?
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
 	player_character: [color=CHARTREUSE]The roots grow deep![/color] I'm from the checkpoint, Sasha recruited me!
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
-	resistance_member_2: They're taking her to the processing plant right now. We need to hurry!
-	leave resistance_member_2
+	resistance_leader: They're taking her to the processing plant right now. We need to hurry!
+	leave resistance_leader
 	[background arg="res://assets/narrative/plant_revelation.png" fade="2.0"]
 	join player_character [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
