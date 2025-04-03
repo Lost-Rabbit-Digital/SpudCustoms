@@ -232,7 +232,7 @@ func _ready():
 	
 	# Configure difficulty level and set runner chance based on difficulty level
 	difficulty_level = Global.difficulty_level
-	print("Setting Border Runner System to:", difficulty_level)
+	print("Setting Border Runner System to: ", difficulty_level)
 	
 	match difficulty_level:
 		"Easy":

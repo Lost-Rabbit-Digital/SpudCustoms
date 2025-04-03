@@ -21,11 +21,15 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Cursor: After dragging a document the cursor returns to default even if the cursor is still hovering over a document 
 
 # MEGAPHONE DIALOGUE SYSTEM
+- Megaphone Dialogue: Rename to Bubble Dialogue System
+- Bubble Dialogue: 
 
 # DRAG AND DROP SYSTEM
 - Drag and Drop: Passport text and photo appear over the LawReceipt
 - Drag and Drop: Stamps disappear on passport while being dragged
 - Drag and Drop: Law receipt passes between the passport description/photo and the passport background
+- Drag and Drop: If the passport hasn't been stamped and is hovered over the potato, it should not prompt the dialogue
+- Drag and Drop: If the passport hasn't been stamped and is dropped on the potato, it should return to table
 
 # QUEUE INTERACTION SYSTEM
 - Queue Interaction: Potatoes slightly wiggle while idle

@@ -17,26 +17,26 @@ func _ready():
 	# More verbose logging
 	if path:
 		print("SpuddyQueue Path found: ", path.name)
-		print("Path points: ", path.curve.get_point_count())
-		for i in range(path.curve.get_point_count()):
-			print("Point %d: %s" % [i, path.curve.get_point_position(i)])
+		#print("Path points: ", path.curve.get_point_count())
+		#for i in range(path.curve.get_point_count()):
+			#print("Point %d: %s" % [i, path.curve.get_point_position(i)])
 	else:
-		push_error("SpuddyQueue Path NOT FOUND!")
+		push_error("SpuddyQueue Path is null.")
 
 	curve = path.curve
 	spawn_point = curve.get_point_position(0)
-	print("Spawn point set to: ", spawn_point)
+	#print("Spawn point set to: ", spawn_point)
 	
 	# Set max potatoes based on length of curve
 	max_potatoes = curve.get_point_count() - 1
-	print("Max potatoes set to: ", max_potatoes)
+	print("Maximum amount of potatoes in line: ", max_potatoes)
 
 func can_add_potato() -> bool:
 	return potatoes.size() < max_potatoes
 
 func spawn_new_potato():	
 	if %NarrativeManager.is_dialogue_active():
-		print("QueueManager disabled while in dialogue, no immigrating potatoes allowed.")
+		#print("QueueManager disabled while in dialogue, no immigrating potatoes allowed.")
 		return
 		
 	print("Attempting to spawn potato. Can add: ", can_add_potato())
@@ -45,7 +45,7 @@ func spawn_new_potato():
 		
 		# More detailed logging about potato creation
 		if potato:
-			print("Potato created with info: ", potato.get_potato_info())
+			#print("Potato created with info: ", potato.get_potato_info())
 			add_child(potato)
 			
 			potato.position = spawn_point
@@ -75,8 +75,8 @@ func add_potato(potato_info: Dictionary):
 	tween.tween_property(potato, "modulate:a", 1.0, 0.5)
 
 	potatoes.push_front(potato)
-	print("Potato added. Total potatoes: ", potatoes.size())
-	print("Added potato info: ", potato_info)
+	print("Potato Created, new total potatoes: ", potatoes.size())
+	print("New potato information: ", potato_info)
 	update_positions()
 
 func remove_potato() -> Dictionary:
@@ -84,8 +84,8 @@ func remove_potato() -> Dictionary:
 		var potato = potatoes.pop_back()
 		var info = potato.get_potato_info()
 		potato.queue_free()
-		print("Potato removed. Total potatoes: ", potatoes.size())
-		print("Removed potato info: ", info)
+		print("Potato removed from this realm, new total potatoes: ", potatoes.size())
+		print("Dearly missed potato information: ", info)
 		update_positions()
 		return info
 	return {}

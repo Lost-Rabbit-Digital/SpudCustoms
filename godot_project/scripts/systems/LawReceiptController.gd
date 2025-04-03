@@ -48,17 +48,17 @@ func _ready():
 		push_error("Main node reference not set!")
 	
 	# Debug print viewport size and positions
-	print("Viewport size: ", get_viewport_rect().size)
-	print("Initial law receipt y: ", law_receipt_sprite.position.y if law_receipt_sprite else "NULL")
+	#print("Viewport size: ", get_viewport_rect().size)
+	#print("Initial law receipt y: ", law_receipt_sprite.position.y if law_receipt_sprite else "NULL")
 
 func _on_fold_out_pressed():
-	print("Fold out button pressed")
+	#print("Fold out button pressed")
 	if !is_animating and !is_visible and law_receipt_sprite:
-		print("Starting show animation")
+		#print("Starting show animation")
 		show_law_receipt()
 
 func _on_hide_pressed():
-	print("Hide button pressed")
+	#print("Hide button pressed")
 	if !is_animating and is_visible:
 		hide_law_receipt()
 
@@ -69,7 +69,7 @@ func show_law_receipt():
 	law_receipt_sprite.visible = true
 	
 	# Debug - confirm receipt position before animation
-	print("Law receipt position before show: ", law_receipt_sprite.position)
+	#print("Law receipt position before show: ", law_receipt_sprite.position)
 	
 	# Create tween for showing receipt
 	var tween = create_tween()
@@ -88,14 +88,14 @@ func show_law_receipt():
 		fold_out_button.visible = false
 		is_animating = false
 		is_visible = true
-		print("Show animation complete, law receipt at: ", law_receipt_sprite.position)
+		#print("Show animation complete, law receipt at: ", law_receipt_sprite.position)
 	)
 
 func hide_law_receipt():
 	is_animating = true
 	
 	# Debug - confirm receipt position before animation
-	print("Law receipt position before hide: ", law_receipt_sprite.position)
+	#print("Law receipt position before hide: ", law_receipt_sprite.position)
 	
 	# Create tween for hiding receipt
 	var tween = create_tween()
@@ -115,7 +115,7 @@ func hide_law_receipt():
 	tween.chain().tween_callback(func():
 		is_animating = false
 		is_visible = false
-		print("Hide animation complete, law receipt at: ", law_receipt_sprite.position)
+		#print("Hide animation complete, law receipt at: ", law_receipt_sprite.position)
 	)
 
 # Force-hide the receipt (called externally)
