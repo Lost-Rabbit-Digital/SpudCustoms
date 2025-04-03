@@ -67,10 +67,10 @@ These are our goals, to-do tasks, and completed tasks.
 - Score might not be resetting between rounds on leaderboard. Must be reset in Continue, Restart, Main Menu calls.
 - Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
 - Quota maximum not updating at start of shift
+- Add distinct buttons for resetting story progress, resetting high scores
 - Playtest Endless mode
 - Playtest Story mode
 - Stamps go over edge of passport
-- Add distinct buttons for resetting story progress, resetting high scores
 - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
 - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
 - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
@@ -83,7 +83,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ### Graphics  
-- Potatoes in queue don't seem to match up with potatoes that enter customs office
+- Potatoes in queue don't seem to match up with potatoes that enter customs office (MugshotGenerator is using diff potatoes lol)
 - When hit with a missile, make the corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest.
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
 - Have animated counters up for each of the values in the shift summary screen
