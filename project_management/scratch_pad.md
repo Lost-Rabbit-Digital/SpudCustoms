@@ -71,6 +71,8 @@ These are our goals, to-do tasks, and completed tasks.
 - Corpses added too high to tree, screen shake not affecting them
 - Corpses need a slightly lower z-index to show BEHIND explosions
 - Runner potatoes are registering TWO strikes instead of just 1
+- Quota maximum not updating at start of shift
+- Skip button not disappearing, and resetting the shift when pressed
 
 ### Graphics  
 - When hit with a missile, make the corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest.
@@ -102,6 +104,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Add small amount of random pitch variation to the document open and close sounds
 - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
 - Add pitch variation to the positive and negative score sound
+- Set main game audio to mute when dialogue starts and start a new background song on BGMPlayer when dialogue finishes
 
 ### Menus
 
@@ -127,6 +130,7 @@ These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release
 
 
 ### Completed Tasks for 1.0.2
+- Add new compressed MP3 music and sound effects to all scenes for enhanced emotional impact
 - If you restart on shift summary screen, it advances to the next level
 - Bug: Stamps fly up from the bottom of the screen
 - Added social icons to main menu
@@ -146,3 +150,5 @@ These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release
 - Cursor: Update while hovering over documents
 - Cursor / Bug: Offset to the right a bit
 - Queue Interaction: Highlight on hover of potato
+- New game button starts day 1 instead of day 0!
+- Regenerate potato images for each character in narrative, 16 total
