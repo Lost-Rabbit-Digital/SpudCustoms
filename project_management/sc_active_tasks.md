@@ -12,13 +12,20 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Control: F11 to toggle fullscreen 
 
 # GRAPHICS
+- Heads up text: Wrong font sizing, causing blurry text
+
+# SHIFT SUMMARY SCREEN
+- Shift Summary: If the "Continue" button does not appear, it should balance out the "Main Menu" and "Restart" buttons
 
 # CURSOR MANAGER
+- Cursor: After dragging a document the cursor returns to default even if the cursor is still hovering over a document 
 
 # MEGAPHONE DIALOGUE SYSTEM
 
 # DRAG AND DROP SYSTEM
 - Drag and Drop: Passport text and photo appear over the LawReceipt
+- Drag and Drop: Stamps disappear on passport while being dragged
+- Drag and Drop: Law receipt passes between the passport description/photo and the passport background
 
 # QUEUE INTERACTION SYSTEM
 - Queue Interaction: Potatoes slightly wiggle while idle
@@ -29,11 +36,14 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Emote System: If you click the same potato 3+ times they get angry and show POPPING_VEINS emote
 - Emote System / Bug: Dot animation only shows one dots then stops
 - Emote System / Bug: When potatoes are clicked it only displays love emotes, could be set to display HAPPY category
+- Emote System: Reduce frequency of emotes occuring
 
 # OFFICE SHUTTER SYSTEM
 - Office Shutter / Bug: Fade out the foreground shadow when the potatoes leave the office
 - Office Shutter / Bug: Do not fade out transparency of potato when enter or leaving office, only the foreground shadow
-- Office Shutter / Bug: Update button to exclude transparent pixels
+- Office Shutter / Bug: Update button to exclude transparent pixels for more accurate clicks
+	-	Could do this by writing a function to check for transparency under the cursor while hovering over the ShutterLever node
+	- Would have to manually update cursor state
 
 # RIGHT NOW
 - Office Shutter / Bug: The potato should not pass documents through if the shutter is closed

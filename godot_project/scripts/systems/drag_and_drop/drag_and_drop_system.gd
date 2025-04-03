@@ -1,48 +1,101 @@
 extends Node
+## Core system for handling drag and drop interactions.
+##
+## Manages the low-level drag and drop functionality including item selection,
+## mouse movement tracking, drop zone identification, and visual feedback.
+## Handles physics and animation aspects of the drag and drop interaction.
 class_name DragAndDropSystem
 
 # Signals
+## Emitted when an item starts being dragged.
+## @param item The Node2D being dragged.
 signal item_dragged(item)
+
+## Emitted when an item is dropped.
+## @param item The Node2D being dropped.
+## @param drop_zone The zone identifier where the item was dropped.
 signal item_dropped(item, drop_zone)
+
+## Emitted when an item is opened.
+## @param item The Node2D being opened.
 signal item_opened(item)
+
+## Emitted when an item is closed.
+## @param item The Node2D being closed.
 signal item_closed(item)
+
+## Emitted when a passport is returned to the suspect.
+## @param item The passport Node2D.
 signal passport_returned(item)
 
 # Configuration
+## Z-index for passport documents in normal state.
 const PASSPORT_Z_INDEX = 14
-const DRAGGING_Z_INDEX = 15  # Higher z-index for items being dragged
-const RETURN_TWEEN_DURATION = 0.3  # Duration of return animation in seconds
-const TABLE_EDGE_BUFFER = 16  # Buffer distance from table edge
+
+## Z-index for items being actively dragged (higher than normal).
+const DRAGGING_Z_INDEX = 15
+
+## Duration in seconds for the return animation when dropping outside valid zones.
+const RETURN_TWEEN_DURATION = 0.3
+
+## Buffer distance in pixels from table edge when determining valid drop positions.
+const TABLE_EDGE_BUFFER = 16
 
 # State tracking
+## Array of Node2D instances that can be dragged.
 var draggable_items = []
+
+## Reference to the currently dragged item, or null if no item is being dragged.
 var dragged_item = null
+
+## Offset from mouse position to item origin during dragging.
 var drag_offset = Vector2()
+
+## Flag indicating if the document was closed during the current drag operation.
 var document_was_closed = false
+
+## Stores the original z-index of the dragged item to restore after dropping.
 var original_z_index: int
+
+## Reference to the item currently being hovered over.
 var hovered_item = null
 
 # Drop zone references
+## Reference to the inspection table node where documents can be examined.
 var inspection_table: Node2D
+
+## Reference to the suspect panel area.
 var suspect_panel: Node2D
+
+## Reference to the suspect mugshot node.
 var suspect: Node2D
 
 # Sound state tracking
+## Flag to track if close sound has already been played to prevent duplicates.
 var close_sound_played = false
+
+## Flag to track if open sound has already been played to prevent duplicates.
 var open_sound_played = false
 
 # Audio
+## Reference to the audio player for document interaction sounds.
 var audio_player: AudioStreamPlayer2D
 
+## Reference to the stamp bar controller for stamp button interaction.
 var _stamp_bar_controller = null
 
 # Stamp System Manager
+## Reference to the stamp system manager for handling document stamping.
 var stamp_system_manager: StampSystemManager
 
 # Cursor Manager reference
+## Reference to the cursor manager for handling cursor changes.
 var cursor_manager = null
 
-# Initialize the system
+## Initializes the drag and drop system with necessary references.
+##
+## Sets up references to scene nodes and registers draggable items.
+## @param config Dictionary containing configuration parameters.
 func initialize(config: Dictionary):
 	# Set references from configuration
 	inspection_table = config.get("inspection_table")
@@ -60,12 +113,18 @@ func initialize(config: Dictionary):
 	cursor_manager = get_node_or_null("/root/CursorManager")
 	if not cursor_manager:
 		push_warning("CursorManager autoload not found. Cursor hover effects won't work.")
-	
+
+## Sets the stamp system manager reference.
+##
+## @param manager The stamp system manager instance.
 func set_stamp_system_manager(manager: StampSystemManager):
 	stamp_system_manager = manager
 	print("StampSystemManager successfully set in drag_and_drop_system")
 
-# Register draggable items
+## Registers multiple items as draggable.
+##
+## Sets initial z-index for items if not already set.
+## @param items Array of Node2D instances to register as draggable.
 func register_draggable_items(items: Array):
 	draggable_items = items
 	# Set initial z-index for all items if not already set
@@ -77,7 +136,10 @@ func register_draggable_items(items: Array):
 		else:
 			push_warning("Invalid draggable item provided")
 
-# Register a single draggable item
+## Registers a single item as draggable.
+##
+## Sets initial z-index for the item if not already set.
+## @param item The Node2D instance to register as draggable.
 func register_draggable_item(item: Node2D):
 	if is_instance_valid(item):
 		draggable_items.append(item)
@@ -86,12 +148,19 @@ func register_draggable_item(item: Node2D):
 	else:
 		push_warning("Invalid draggable item provided")
 		
-# Remove a draggable item
+## Removes a draggable item from the registry.
+##
+## @param item The Node2D instance to unregister.
 func unregister_draggable_item(item: Node2D):
 	if item in draggable_items:
 		draggable_items.erase(item)
 
-# Handle mouse input events
+## Handles input events for drag and drop interaction.
+##
+## Processes mouse button and motion events to handle dragging.
+## @param event The input event to process.
+## @param mouse_pos The current mouse position in global coordinates.
+## @return True if the event was handled, false otherwise.
 func handle_input_event(event: InputEvent, mouse_pos: Vector2) -> bool:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
@@ -109,7 +178,10 @@ func handle_input_event(event: InputEvent, mouse_pos: Vector2) -> bool:
 			
 	return false
 
-# Handle mouse motion for hover effects
+## Handles mouse motion for hover effects.
+##
+## Updates cursor and hover state based on what item is under the cursor.
+## @param mouse_pos The current mouse position in global coordinates.
 func _handle_mouse_motion(mouse_pos: Vector2) -> void:
 	if dragged_item:
 		# Don't change cursor while dragging
@@ -132,12 +204,20 @@ func _handle_mouse_motion(mouse_pos: Vector2) -> void:
 		# Update hover state
 		hovered_item = item_under_cursor
 
-# Helper function to get the document controller for an item
+## Gets the document controller attached to an item.
+##
+## @param item The Node2D to check for a document controller.
+## @return The DraggableDocument controller or null if not found.
 func get_document_controller(item: Node2D) -> DraggableDocument:
 	if item and item.has_node("DocumentController"):
 		return item.get_node("DocumentController") as DraggableDocument
 	return null
 
+## Handles mouse press events for drag initiation.
+##
+## Finds the item under the cursor and initiates the drag operation.
+## @param mouse_pos The mouse position when the press occurred.
+## @return True if an item was found and dragging initiated, false otherwise.
 func _handle_mouse_press(mouse_pos: Vector2) -> bool:
 	if dragged_item == null:
 		dragged_item = find_topmost_item_at(mouse_pos)
@@ -172,7 +252,12 @@ func _handle_mouse_press(mouse_pos: Vector2) -> bool:
 				
 			return true
 	return false
-	
+
+## Creates a paper crunch visual effect at the specified position.
+##
+## Spawns particle effects and plays sound to simulate paper crunching.
+## @param position The global position to spawn the effect.
+## @param intensity The intensity factor for the effect (1.0 is normal).
 func spawn_paper_crunch_effect(position: Vector2, intensity: float = 1.0):
 	# Load the PaperCrunchEffect scene or create it if using the singleton approach
 	var effect = PaperCrunchEffect.new()
@@ -209,7 +294,11 @@ func spawn_paper_crunch_effect(position: Vector2, intensity: float = 1.0):
 			audio_player.pitch_scale = randf_range(0.9, 1.1)  # Slight pitch variation
 			audio_player.play()
 
-# Handle mouse release
+## Handles mouse release events for drag completion.
+##
+## Identifies the drop zone and handles the appropriate drop action.
+## @param mouse_pos The mouse position when the release occurred.
+## @return True if an item was being dragged and was dropped, false otherwise.
 func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 	if dragged_item:
 		var drop_zone = identify_drop_zone(mouse_pos)
@@ -267,6 +356,10 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 		return true
 	return false
 
+## Updates the position of the item being dragged.
+##
+## Handles document state changes when moving between drop zones.
+## @param mouse_pos The current mouse position in global coordinates.
 func _update_dragged_item_position(mouse_pos: Vector2):
 	if dragged_item:
 		# Store previous position
@@ -284,7 +377,12 @@ func _update_dragged_item_position(mouse_pos: Vector2):
 			emit_signal("item_closed", dragged_item)
 			document_was_closed = true
 
-# Find the nearest valid position on the inspection table
+## Finds the nearest valid position on the inspection table for an item.
+##
+## Calculates a position that keeps the item within table bounds with a buffer.
+## @param item_position The current global position of the item.
+## @param item_size The size of the item in pixels.
+## @return The nearest valid global position on the table.
 func find_nearest_table_position(item_position: Vector2, item_size: Vector2) -> Vector2:
 	if not inspection_table:
 		return item_position
@@ -316,7 +414,10 @@ func find_nearest_table_position(item_position: Vector2, item_size: Vector2) -> 
 	
 	return target_pos
 
-# Return an item to the nearest valid position on the inspection table
+## Returns an item to the nearest valid position on the inspection table.
+##
+## Creates and plays an animation to move the item back to a valid position.
+## @param item The Node2D to return to the table.
 func _return_item_to_table(item: Node2D):
 	if not item or not inspection_table:
 		if item:
@@ -369,7 +470,11 @@ func _return_item_to_table(item: Node2D):
 		audio_player.stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
 		audio_player.play()
 		
-# Get the size of a node, handling different node types
+## Gets the size of a node, handling different node types.
+##
+## Attempts to determine the size of the item based on its type.
+## @param item The Node2D to get the size of.
+## @return The size of the item in pixels, scaled by the item's scale.
 func get_item_size(item: Node2D) -> Vector2:
 	if item is Sprite2D and item.texture:
 		return item.texture.get_size() * item.scale
@@ -382,13 +487,20 @@ func get_item_size(item: Node2D) -> Vector2:
 		# Fallback to a reasonable default size
 		return Vector2(100, 100) * item.scale
 
-# Check if item is a document that can be opened/closed
+## Checks if an item is a document that can be opened/closed.
+##
+## @param item The Node2D to check.
+## @return True if the item is an openable document, false otherwise.
 func is_openable_document(item: Node2D) -> bool:
 	return item and (item.name == "Passport" or 
 					item.name == "Guide" or 
 					item.name == "LawReceipt")
 
-# Find the topmost draggable item at the given position
+## Finds the topmost draggable item at the given position.
+##
+## Handles z-index ordering and UI element prioritization.
+## @param pos The global position to check.
+## @return The topmost draggable item at the position, or null if none found.
 func find_topmost_item_at(pos: Vector2) -> Node2D:
 	# First check if we're over any stamp buttons - if so, don't consider it a draggable item
 	# This check needs to happen before the regular draggable item check
@@ -424,6 +536,9 @@ func find_topmost_item_at(pos: Vector2) -> Node2D:
 	
 	return topmost_item
 
+## Finds and returns the stamp bar controller in the scene tree.
+##
+## @return The stamp bar controller node, or null if not found.
 func get_stamp_bar_controller() -> Node:
 	# Try to find in the scene tree
 	var scene_root = get_tree().current_scene
@@ -442,7 +557,10 @@ func get_stamp_bar_controller() -> Node:
 			
 	return null
 
-# Identify what drop zone the position is over
+## Identifies what drop zone the position is over.
+##
+## @param pos The global position to check.
+## @return A string identifying the drop zone ("inspection_table", "suspect_panel", "suspect", or "none").
 func identify_drop_zone(pos: Vector2) -> String:
 	if inspection_table and inspection_table.get_rect().has_point(inspection_table.to_local(pos)):
 		return "inspection_table"
@@ -452,7 +570,9 @@ func identify_drop_zone(pos: Vector2) -> String:
 		return "suspect"
 	return "none"
 
-# Get the highest z-index among draggable items
+## Gets the highest z-index among all draggable items.
+##
+## @return The highest z-index value found.
 func get_highest_z_index() -> int:
 	var highest = 0
 	for item in draggable_items:
@@ -461,7 +581,10 @@ func get_highest_z_index() -> int:
 
 # === Specific item handlers ===
 
-# Handle passport drop
+## Handles passport drop logic.
+##
+## Manages document state based on drop zone and emits appropriate signals.
+## @param mouse_pos The mouse position where the drop occurred.
 func _handle_passport_drop(mouse_pos: Vector2):
 	var drop_zone = identify_drop_zone(mouse_pos)
 	
@@ -489,7 +612,10 @@ func _handle_passport_drop(mouse_pos: Vector2):
 			else:
 				push_error("Cannot clear passport stamps: StampSystemManager is null")
 
-# Handle guide drop
+## Handles guide drop logic.
+##
+## Manages document state based on drop zone and emits appropriate signals.
+## @param mouse_pos The mouse position where the drop occurred.
 func _handle_guide_drop(mouse_pos: Vector2):
 	var drop_zone = identify_drop_zone(mouse_pos)
 	if drop_zone == "inspection_table":
@@ -499,7 +625,10 @@ func _handle_guide_drop(mouse_pos: Vector2):
 		# Logic to close guide
 		emit_signal("item_closed", dragged_item)
 
-# Handle receipt drop
+## Handles receipt drop logic.
+##
+## Manages document state based on drop zone and emits appropriate signals.
+## @param mouse_pos The mouse position where the drop occurred.
 func _handle_receipt_drop(mouse_pos: Vector2):
 	var drop_zone = identify_drop_zone(mouse_pos)
 	if drop_zone == "inspection_table":
@@ -509,7 +638,9 @@ func _handle_receipt_drop(mouse_pos: Vector2):
 		# Logic to close receipt
 		emit_signal("item_closed", dragged_item)
 
-# Play the open document sound
+## Plays the open document sound.
+##
+## Prevents duplicate sound playing by tracking sound state.
 func play_open_sound():
 	if not open_sound_played and audio_player:
 		audio_player.stream = preload("res://assets/audio/passport_sfx/open_passport_audio.mp3")
@@ -517,7 +648,9 @@ func play_open_sound():
 		open_sound_played = true
 		close_sound_played = false
 
-# Play the close document sound
+## Plays the close document sound.
+##
+## Prevents duplicate sound playing by tracking sound state.
 func play_close_sound():
 	if not close_sound_played and audio_player:
 		audio_player.stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
@@ -525,15 +658,19 @@ func play_close_sound():
 		close_sound_played = true
 		open_sound_played = false
 
-# Reset sound flags
+## Resets sound playback state flags.
 func reset_sound_flags():
 	close_sound_played = false
 	open_sound_played = false
 
-# Get current dragged item
+## Gets the currently dragged item.
+##
+## @return The Node2D that is being dragged, or null if no item is being dragged.
 func get_dragged_item() -> Node2D:
 	return dragged_item
 
-# Check if any item is being dragged
+## Checks if any item is currently being dragged.
+##
+## @return True if an item is being dragged, false otherwise.
 func is_dragging() -> bool:
 	return dragged_item != null
