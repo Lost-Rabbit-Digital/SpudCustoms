@@ -97,11 +97,11 @@ func close(animate: bool = true):
 ##
 ## Adjusts the position to center the document sprite at the given coordinates.
 ## @param position The global position to center at.
-func center_at_position(position: Vector2):
+func center_at_position(center_position: Vector2):
 	if document_sprite:
 		var rect = document_sprite.get_rect()
 		var offset = rect.size / 2
-		document_sprite.global_position = position - offset
+		document_sprite.global_position = center_position - offset
 
 ## Checks if the document is currently in the open state.
 ##

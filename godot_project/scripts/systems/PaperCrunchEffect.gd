@@ -51,8 +51,8 @@ func create_frames_from_spritesheet(spritesheet: Texture2D):
 		smoke_frames.append(atlas)
 
 # Create the effect at a specific position
-func spawn_at(position: Vector2):
-	global_position = position
+func spawn_at(spawn_position: Vector2):
+	global_position = spawn_position
 	spawn_paper_bits()
 
 # Spawn paper bits with arc trajectories
@@ -162,8 +162,8 @@ func _process(delta):
 		queue_free()
 
 # Static method to easily create and add the effect to a scene
-static func create_at(parent: Node, position: Vector2) -> PaperCrunchEffect:
+static func create_at(parent: Node, creation_position: Vector2) -> PaperCrunchEffect:
 	var effect = load("res://scripts/systems/PaperCrunchEffect.gd").new()
 	parent.add_child(effect)
-	effect.spawn_at(position)
+	effect.spawn_at(creation_position)
 	return effect
