@@ -3,20 +3,9 @@ These are my, BodenGameDev, tasks which I'm currently working on.
 I will move the tasks to the scratch_pad completed section when the task has been completed.
 
 # STRETCH GOALS
-- Feature: Potato tooltip if hovered over in line
-- Queue Interaction System: Pop-up of a portrait of potato
-- Main Menu: Potatoes moving in infinite lines behind the main menu, similar to Factorio
-- Main Menu: Make a tile map for the paths
-- Main Menu: Graphic button function to turn defaults into pretty buttons
-- Control: Alt-Enter to toggle fullscreen 
-- Control: F11 to toggle fullscreen 
-- Backend: Error handling if Steam is not loaded
 
 # GRAPHICS
 - Heads up text: Wrong font sizing, causing blurry text
-
-# SHIFT SUMMARY SCREEN
-- Shift Summary: If the "Continue" button does not appear, it should balance out the "Main Menu" and "Restart" buttons
 
 # CURSOR MANAGER
 - Cursor: After dragging a document the cursor returns to default even if the cursor is still hovering over a document 
@@ -33,13 +22,11 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Drag and Drop: If the passport hasn't been stamped and is dropped on the potato, it should return to table
 
 # QUEUE INTERACTION SYSTEM
-- Queue Interaction: Potatoes slightly wiggle while idle
-- Queue Interaction: Potatoes wiggle when clicked
 
 # EMOTE SYSTEM
-- Emote System: All potatoes show exclamation marks when you shoot a missile
 - Emote System: If you click the same potato 3+ times they get angry and show POPPING_VEINS emote
 - Emote System / Bug: Dot animation only shows one dots then stops
+	- Move animation to 1.0.3
 - Emote System / Bug: When potatoes are clicked it only displays love emotes, could be set to display HAPPY category
 - Emote System: Reduce frequency of emotes occuring
 
@@ -53,8 +40,5 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 # RIGHT NOW
 - Office Shutter / Bug: The potato should not pass documents through if the shutter is closed
 - Office Shutter / Bug: The user should not be able to pass the potato documents if the shutter is closed
-	- Add a check if the shutter is closed, if so do not allow interaction
-	- Add a check if the shutter comes up for the potato to pass documents 
 
-
-	- Check shutter_state when I do the check in drag_and_drop_system.gd for dropping the passport on the potato
+- Check shutter_state when I do the check in drag_and_drop_system.gd for dropping the passport on the potato

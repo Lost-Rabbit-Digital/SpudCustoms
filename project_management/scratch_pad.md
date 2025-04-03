@@ -13,6 +13,17 @@ These are our goals, to-do tasks, and completed tasks.
 - Randomly toggle the lights on and off in customs office and Border Wall like people are using the
   rooms
 - Make sure scores are shown above their respective action (stamping, missiles, scanning)
+- Queue Interaction: Potato tooltip if hovered over in line
+- Queue Interaction System: Pop-up of a portrait of potato
+- Main Menu: Potatoes moving in infinite lines behind the main menu, similar to Factorio
+- Main Menu: Make a tile map for the paths
+- Main Menu: Graphic button function to turn defaults into pretty buttons
+- Control: Alt-Enter to toggle fullscreen 
+- Control: F11 to toggle fullscreen 
+- Backend: Error handling if Steam is not loaded
+- Queue Interaction: Potatoes slightly wiggle while idle
+- Queue Interaction: Potatoes wiggle when clicked
+- Emote System: All potatoes show exclamation marks when you shoot a missile
 
 ### Graphics
 - Add message queue system and delay between messages so they don't override each other, add GDScript to alert_label
@@ -104,7 +115,8 @@ These are our goals, to-do tasks, and completed tasks.
 - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
 - Add pitch variation to the positive and negative score sound
 
-### Menus
+# SHIFT SUMMARY SCREEN
+- Shift Summary: If the "Continue" button does not appear, it should balance out the "Main Menu" and "Restart" buttons
 
 ### Backend
 - Code: Move cursor system out of drag system
