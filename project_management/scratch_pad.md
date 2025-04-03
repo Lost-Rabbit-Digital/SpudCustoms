@@ -64,6 +64,9 @@ These are our goals, to-do tasks, and completed tasks.
 ## RELEASE BLOCKERS
 - Make sure that game state is reset properly between story and score attack modes within the Global.gd and GameState.gd, and make sure that narrative progress and high scores for each narrative level and each score attack level are saved appropriately
 - Save game and load game, especially max level reached and local highscores
+- Score might not be resetting between rounds on leaderboard. Must be reset in Continue, Restart, Main Menu calls.
+- Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
+- Quota maximum not updating at start of shift
 - Playtest Endless mode
 - Playtest Story mode
 - Stamps go over edge of passport
@@ -71,14 +74,10 @@ These are our goals, to-do tasks, and completed tasks.
 - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
 - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
 - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
-- Fix stamping animations so that they move down from the stamp crossbar but are behind it
-- Score might not be resetting between rounds on leaderboard. Must be reset in Continue, Restart, Main Menu calls.
 - Fix the issue where the game continues running during story sequences
-- Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
 - Corpses added too high to tree, screen shake not affecting them
 - Corpses need a slightly lower z-index to show BEHIND explosions
 - Runner potatoes are registering TWO strikes instead of just 1
-- Quota maximum not updating at start of shift
 - Skip button not disappearing, and resetting the shift when pressed
 - Update leaderboard logic to refer to appropriate new leaderboards
 
@@ -140,6 +139,7 @@ These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release
 
 
 ### Completed Tasks for 1.0.2
+- Fix stamping animations so that they move down from the stamp crossbar and are behind it
 - Add leaderboards for each level to support shift summary screen (shift_0_easy, shift_1_normal, shift_2_expert, etc)
 - Add new compressed MP3 music and sound effects to all scenes for enhanced emotional impact
 - Add an on_dialogue_start and on_dialogue_finished call to stop the BGMPlayer and then start next random track when back in game scene
