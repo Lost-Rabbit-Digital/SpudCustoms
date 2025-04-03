@@ -53,7 +53,6 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 ## Tasks
 ## RELEASE BLOCKERS
-- Add an on_dialogue_start and on_dialogue_finished call to stop the BGMPlayer and then start next random track when back in game scene
 - Playtest Endless mode
 - Playtest Story mode
 - Stamps go over edge of passport
@@ -61,7 +60,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
 - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
 - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
-- Add leaderboards for each level to support shift summary screen
+- Add leaderboards for each level to support shift summary screen (shift_0_easy, shift_1_normal, shift_2_expert, etc)
 - Save game and load game, especially max level reached and local highscores
 - Potatoes in queue don't seem to match up with potatoes that enter customs office
 - Fix stamping animations so that they move down from the stamp crossbar but are behind it
@@ -104,7 +103,6 @@ These are our goals, to-do tasks, and completed tasks.
 - Add small amount of random pitch variation to the document open and close sounds
 - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
 - Add pitch variation to the positive and negative score sound
-- Set main game audio to mute when dialogue starts and start a new background song on BGMPlayer when dialogue finishes
 
 ### Menus
 
@@ -116,8 +114,7 @@ These are our goals, to-do tasks, and completed tasks.
 ### General Bugs
 - Cursor does not update when hovering above megaphone
 - Cursor does not update when hovering above stamp bar button
-- Escape key for menu stopped working after I alt tabbed a few times and completed the first "day".
-- Make sure the endless doesn't end too early
+- Escape key for menu stopped working after I alt tabbed a few times and completed the first "day", likely SceneLoader issue.
 - Potatoes appear above table instead of under when border runner leaves map on south side
 - Fix skip story bug not hiding the history button quickly
 
@@ -131,6 +128,8 @@ These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release
 
 ### Completed Tasks for 1.0.2
 - Add new compressed MP3 music and sound effects to all scenes for enhanced emotional impact
+- Add an on_dialogue_start and on_dialogue_finished call to stop the BGMPlayer and then start next random track when back in game scene
+- Set main game audio to mute when dialogue starts and start a new background song on BGMPlayer when dialogue finishes
 - If you restart on shift summary screen, it advances to the next level
 - Bug: Stamps fly up from the bottom of the screen
 - Added social icons to main menu
