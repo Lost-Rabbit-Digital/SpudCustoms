@@ -101,10 +101,10 @@ func get_leaderboard_name(difficulty: String = "") -> String:
 		_: return "endless_normal"
 
 
-# Screen shake with configurable intensity and duration
-# Mild: intensity 3-5, duration 0.2
-# Medium: intensity 10-15, duration 0.3
-# Strong: intensity 20-25, duration 0.4
+## Screen shake with configurable intensity and duration
+## Mild: intensity 3-5, duration 0.2
+## Medium: intensity 10-15, duration 0.3
+## Strong: intensity 20-25, duration 0.4
 func shake_screen(intensity: float = 10.0, duration: float = 0.3):
 	# Apply screen shake setting from options
 	intensity *= screen_shake_intensity_multiplier

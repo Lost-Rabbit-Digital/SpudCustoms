@@ -10,6 +10,7 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Main Menu: Graphic button function to turn defaults into pretty buttons
 - Control: Alt-Enter to toggle fullscreen 
 - Control: F11 to toggle fullscreen 
+- Backend: Error handling if Steam is not loaded
 
 # GRAPHICS
 - Heads up text: Wrong font sizing, causing blurry text
@@ -22,7 +23,7 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 
 # MEGAPHONE DIALOGUE SYSTEM
 - Megaphone Dialogue: Rename to Bubble Dialogue System
-- Bubble Dialogue: 
+- Bubble Dialogue: ...
 
 # DRAG AND DROP SYSTEM
 - Drag and Drop: Passport text and photo appear over the LawReceipt
@@ -53,5 +54,7 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Office Shutter / Bug: The potato should not pass documents through if the shutter is closed
 - Office Shutter / Bug: The user should not be able to pass the potato documents if the shutter is closed
 	- Add a check if the shutter is closed, if so do not allow interaction
-	- Add a boolean check if the potato has passed the documents or not when first entering office
 	- Add a check if the shutter comes up for the potato to pass documents 
+
+
+	- Check shutter_state when I do the check in drag_and_drop_system.gd for dropping the passport on the potato

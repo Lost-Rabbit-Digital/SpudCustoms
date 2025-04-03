@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cejqnrw4oo4r2" path="res://assets/user_interface/suspect_panel/suspect_panel.tscn" id="22_qfxfi"]
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://scripts/systems/character_generator.tscn" id="23_3qac4"]
 [ext_resource type="Texture2D" uid="uid://cyglahk6xajq7" path="res://assets/potatoes/heads/russet_burbank_head.png" id="24_yhqqy"]
-[ext_resource type="Texture2D" uid="uid://ceh27taly75na" path="res://assets/documents/passport-old.png" id="25_gf7dt"]
+[ext_resource type="Texture2D" uid="uid://ceh27taly75na" path="res://assets/documents/passport_old.png" id="25_gf7dt"]
 [ext_resource type="PackedScene" uid="uid://be3lucg3f3a3c" path="res://scripts/systems/stamp/StampBarController.tscn" id="25_osm16"]
 [ext_resource type="PackedScene" uid="uid://fci3o688eddt" path="res://scripts/systems/LawReceiptController.tscn" id="27_ccap0"]
 [ext_resource type="Texture2D" uid="uid://y3iyyicwxtsl" path="res://assets/documents/closed_passport_small/closed_passport_small.png" id="27_qjue5"]

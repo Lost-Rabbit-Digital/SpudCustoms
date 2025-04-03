@@ -38,6 +38,7 @@ const DRAGGING_Z_INDEX = 15
 ## Duration in seconds for the return animation when dropping outside valid zones.
 const RETURN_TWEEN_DURATION = 0.3
 
+# TODO: Check if this actually works, the offset seems different
 ## Buffer distance in pixels from table edge when determining valid drop positions.
 const TABLE_EDGE_BUFFER = 16
 
@@ -81,10 +82,10 @@ var open_sound_played = false
 ## Reference to the audio player for document interaction sounds.
 var audio_player: AudioStreamPlayer2D
 
+# Stamp System
 ## Reference to the stamp bar controller for stamp button interaction.
 var _stamp_bar_controller = null
 
-# Stamp System Manager
 ## Reference to the stamp system manager for handling document stamping.
 var stamp_system_manager: StampSystemManager
 
@@ -112,14 +113,14 @@ func initialize(config: Dictionary):
 	# Get reference to cursor manager autoload
 	cursor_manager = get_node_or_null("/root/CursorManager")
 	if not cursor_manager:
-		push_warning("CursorManager autoload not found. Cursor hover effects won't work.")
+		push_warning("CursorManager autoload is null. Cursor visuals will not display as intended.")
 
 ## Sets the stamp system manager reference.
 ##
 ## @param manager The stamp system manager instance.
 func set_stamp_system_manager(manager: StampSystemManager):
 	stamp_system_manager = manager
-	print("StampSystemManager successfully set in drag_and_drop_system")
+	#print("StampSystemManager successfully set in drag_and_drop_system")
 
 ## Registers multiple items as draggable.
 ##
@@ -155,6 +156,7 @@ func unregister_draggable_item(item: Node2D):
 	if item in draggable_items:
 		draggable_items.erase(item)
 
+# TODO: Update this to work with input interactions instead of MOUSE_BUTTONS
 ## Handles input events for drag and drop interaction.
 ##
 ## Processes mouse button and motion events to handle dragging.
@@ -178,17 +180,19 @@ func handle_input_event(event: InputEvent, mouse_pos: Vector2) -> bool:
 			
 	return false
 
+# TODO: This is where we would fix the bug: when you let go the cursor doesn't update for the 
+# item under the mouse, only when you move the mouse off and then back onto the item
 ## Handles mouse motion for hover effects.
 ##
 ## Updates cursor and hover state based on what item is under the cursor.
-## @param mouse_pos The current mouse position in global coordinates.
-func _handle_mouse_motion(mouse_pos: Vector2) -> void:
+## @param mouse_position The current mouse position in global coordinates.
+func _handle_mouse_motion(mouse_position: Vector2) -> void:
 	if dragged_item:
 		# Don't change cursor while dragging
 		return
 		
 	# Find item under cursor
-	var item_under_cursor = find_topmost_item_at(mouse_pos)
+	var item_under_cursor = find_topmost_item_at(mouse_position)
 	
 	# Change cursor if hovering over a document
 	if item_under_cursor != hovered_item:
@@ -216,11 +220,11 @@ func get_document_controller(item: Node2D) -> DraggableDocument:
 ## Handles mouse press events for drag initiation.
 ##
 ## Finds the item under the cursor and initiates the drag operation.
-## @param mouse_pos The mouse position when the press occurred.
+## @param mouse_position The mouse position when the press occurred.
 ## @return True if an item was found and dragging initiated, false otherwise.
-func _handle_mouse_press(mouse_pos: Vector2) -> bool:
+func _handle_mouse_press(mouse_position: Vector2) -> bool:
 	if dragged_item == null:
-		dragged_item = find_topmost_item_at(mouse_pos)
+		dragged_item = find_topmost_item_at(mouse_position)
 		if dragged_item:
 			# Reset document_was_closed flag for new drag
 			document_was_closed = false
@@ -230,10 +234,10 @@ func _handle_mouse_press(mouse_pos: Vector2) -> bool:
 			dragged_item.z_index = DRAGGING_Z_INDEX
 			
 			# Get current drop zone
-			var current_zone = identify_drop_zone(mouse_pos)
+			var current_zone = identify_drop_zone(mouse_position)
 			
 			# Calculate drag offset - from mouse to item position
-			drag_offset = dragged_item.global_position - mouse_pos
+			drag_offset = dragged_item.global_position - mouse_position
 			
 			# Get document controller and call on_drag_start if available
 			var doc_controller = get_document_controller(dragged_item)

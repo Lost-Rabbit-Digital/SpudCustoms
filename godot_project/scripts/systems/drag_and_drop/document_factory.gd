@@ -26,7 +26,7 @@ static func create_passport(parent_node: Node) -> DraggableDocument:
 	
 	# Configure the document
 	document.closed_texture = preload("res://assets/documents/closed_passport_small/closed_passport_small.png")
-	document.open_texture = preload("res://assets/documents/passport-old.png")
+	document.open_texture = preload("res://assets/documents/passport_old.png")
 	document.closed_content_node = passport_sprite.get_node_or_null("ClosedPassport")
 	document.open_content_node = passport_sprite.get_node_or_null("OpenPassport")
 	
