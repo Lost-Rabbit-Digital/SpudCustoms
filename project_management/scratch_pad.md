@@ -1,4 +1,4 @@
-# Scratch Pad
+  # Scratch Pad
 These are our goals, to-do tasks, and completed tasks.
 
 ## Steam Minor Update 1.0.3 - Next Update
@@ -48,21 +48,18 @@ These are our goals, to-do tasks, and completed tasks.
 ### Audio
 - Small sound for hovering above megaphone or stamp bar button
 
-
-
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 ## Tasks
 ## RELEASE BLOCKERS
+- Make sure that game state is reset properly between story and score attack modes within the Global.gd and GameState.gd, and make sure that narrative progress and high scores for each narrative level and each score attack level are saved appropriately
+- Save game and load game, especially max level reached and local highscores
 - Playtest Endless mode
 - Playtest Story mode
 - Stamps go over edge of passport
-- Make sure that game state is reset properly between modes and with the Global.gd and GameState.gd files both managing states
+- Add distinct buttons for resetting story progress, resetting high scores
 - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
 - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
 - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
-- Add leaderboards for each level to support shift summary screen (shift_0_easy, shift_1_normal, shift_2_expert, etc)
-- Save game and load game, especially max level reached and local highscores
-- Potatoes in queue don't seem to match up with potatoes that enter customs office
 - Fix stamping animations so that they move down from the stamp crossbar but are behind it
 - Score might not be resetting between rounds on leaderboard. Must be reset in Continue, Restart, Main Menu calls.
 - Fix the issue where the game continues running during story sequences
@@ -72,8 +69,11 @@ These are our goals, to-do tasks, and completed tasks.
 - Runner potatoes are registering TWO strikes instead of just 1
 - Quota maximum not updating at start of shift
 - Skip button not disappearing, and resetting the shift when pressed
+- Update leaderboard logic to refer to appropriate new leaderboards
+
 
 ### Graphics  
+- Potatoes in queue don't seem to match up with potatoes that enter customs office
 - When hit with a missile, make the corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest.
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
 - Have animated counters up for each of the values in the shift summary screen
@@ -127,6 +127,7 @@ These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release
 
 
 ### Completed Tasks for 1.0.2
+- Add leaderboards for each level to support shift summary screen (shift_0_easy, shift_1_normal, shift_2_expert, etc)
 - Add new compressed MP3 music and sound effects to all scenes for enhanced emotional impact
 - Add an on_dialogue_start and on_dialogue_finished call to stop the BGMPlayer and then start next random track when back in game scene
 - Set main game audio to mute when dialogue starts and start a new background song on BGMPlayer when dialogue finishes
