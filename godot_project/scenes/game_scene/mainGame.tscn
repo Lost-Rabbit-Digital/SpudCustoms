@@ -406,7 +406,9 @@ unique_name_in_owner = true
 bus = &"SFX"
 
 [node name="BackgroundMusicPlayer" parent="SystemManagers/AudioManager" instance=ExtResource("9_gvwms")]
+unique_name_in_owner = true
 stream = ExtResource("12_qvpbt")
+autoplay = false
 parameters/looping = true
 
 [node name="WindSFX" type="AudioStreamPlayer2D" parent="SystemManagers/AudioManager"]

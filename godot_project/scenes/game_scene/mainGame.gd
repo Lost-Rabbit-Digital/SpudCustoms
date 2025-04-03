@@ -121,7 +121,7 @@ func get_level_manager():
 func _ready():
 	load_tracks()
 	# Play with original pitch by default
-	next_track_with_random_pitch()
+	# next_track_with_random_pitch()
 	# Initialise the drag and drop manager
 	if not drag_and_drop_manager:
 		# If the node doesn't exist yet, create it
@@ -1151,6 +1151,7 @@ func _exit_tree():
 
 func _on_dialogue_started():
 	# Completely pause all game systems
+	bgm_player.stop()
 	is_game_paused = true
 	# Tell the border runner system to pause with dialogic mode
 	if border_runner_system:
@@ -1159,6 +1160,7 @@ func _on_dialogue_started():
 	border_runner_system.is_enabled = false
 	
 func _on_dialogue_finished():
+	next_track_with_random_pitch()
 	Global.quota_met = 0
 	Global.strikes = 0
 	# Completely unpause all game systems
