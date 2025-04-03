@@ -59,6 +59,8 @@ These are our goals, to-do tasks, and completed tasks.
 ### Audio
 - Small sound for hovering above megaphone or stamp bar button
 
+
+
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 ## Tasks
 ## RELEASE BLOCKERS
@@ -69,12 +71,15 @@ These are our goals, to-do tasks, and completed tasks.
 - Quota maximum not updating at start of shift
 - Add distinct buttons for resetting story progress, resetting high scores
 - Playtest Endless mode
+- Remake Score Attack mode
+- Create demo instance of game without Score Attack mode
 - Playtest Story mode
 - Stamps go over edge of passport
 - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
 - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
 - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
 - Fix the issue where the game continues running during story sequences
+- Strikes on "Score Attack" mode do not reset after summary screen, summary > main menu > Score Attack
 - Corpses added too high to tree, screen shake not affecting them
 - Corpses need a slightly lower z-index to show BEHIND explosions
 - Runner potatoes are registering TWO strikes instead of just 1
@@ -119,13 +124,9 @@ These are our goals, to-do tasks, and completed tasks.
 - Shift Summary: If the "Continue" button does not appear, it should balance out the "Main Menu" and "Restart" buttons
 
 ### Backend
-- Code: Move cursor system out of drag system
 - Megaphone Dialogue System: Implement the different categories of dialogue from the JSON file into the megaphone_clicked function code in mainGame.gd
-- Update take passport dialogue in mainGame.gd to use the new dialogue system (Same as for megaphone) 
 
 ### General Bugs
-- Cursor does not update when hovering above megaphone
-- Cursor does not update when hovering above stamp bar button
 - Escape key for menu stopped working after I alt tabbed a few times and completed the first "day", likely SceneLoader issue.
 - Potatoes appear above table instead of under when border runner leaves map on south side
 - Fix skip story bug not hiding the history button quickly
@@ -140,7 +141,10 @@ These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release
 
 ### Completed Tasks for 1.0.2
 - Fix stamping animations so that they move down from the stamp crossbar and are behind it
+- Cursor does not update when hovering above stamp bar button
+- Cursor does not update when hovering above megaphone
 - Add leaderboards for each level to support shift summary screen (shift_0_easy, shift_1_normal, shift_2_expert, etc)
+- Code: Move cursor system out of drag system
 - Add new compressed MP3 music and sound effects to all scenes for enhanced emotional impact
 - Add an on_dialogue_start and on_dialogue_finished call to stop the BGMPlayer and then start next random track when back in game scene
 - Set main game audio to mute when dialogue starts and start a new background song on BGMPlayer when dialogue finishes
