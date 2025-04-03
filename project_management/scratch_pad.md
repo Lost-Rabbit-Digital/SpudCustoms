@@ -101,6 +101,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Update cursor when hovering over the megaphone
 - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
 - When shift ends, treat the last guy in office as rejected
+- Alert Text: Wrong font sizing, causing blurry text
 
 ### Gameplay
 - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)

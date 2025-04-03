@@ -5,14 +5,15 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 # STRETCH GOALS
 
 # GRAPHICS
-- Heads up text: Wrong font sizing, causing blurry text
+
+# QUEUE INTERACTION SYSTEM
 
 # CURSOR MANAGER
 - Cursor: After dragging a document the cursor returns to default even if the cursor is still hovering over a document 
 
 # MEGAPHONE DIALOGUE SYSTEM
 - Megaphone Dialogue: Rename to Bubble Dialogue System
-- Bubble Dialogue: ...
+- Bubble Dialogue: Implement into the Drag and Drop system for dropping a passport onto a potato
 
 # DRAG AND DROP SYSTEM
 - Drag and Drop: Passport text and photo appear over the LawReceipt
@@ -20,8 +21,6 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Drag and Drop: Law receipt passes between the passport description/photo and the passport background
 - Drag and Drop: If the passport hasn't been stamped and is hovered over the potato, it should not prompt the dialogue
 - Drag and Drop: If the passport hasn't been stamped and is dropped on the potato, it should return to table
-
-# QUEUE INTERACTION SYSTEM
 
 # EMOTE SYSTEM
 - Emote System: If you click the same potato 3+ times they get angry and show POPPING_VEINS emote
@@ -36,6 +35,8 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Office Shutter / Bug: Update button to exclude transparent pixels for more accurate clicks
 	-	Could do this by writing a function to check for transparency under the cursor while hovering over the ShutterLever node
 	- Would have to manually update cursor state
+
+
 
 # RIGHT NOW
 - Office Shutter / Bug: The potato should not pass documents through if the shutter is closed
