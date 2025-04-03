@@ -1,31 +1,31 @@
 # shift2_intro.dtl
-audio music "res://assets/music/narrative/ambient_suspense_main.wav" [fade="2.0" volume="-5.0" bus="Music"]
-audio music "res://assets/audio/ambient/horror_drone_23.wav" [fade="2.0" volume="-5.0" bus="Ambient"]
+audio music "res://assets/music/narrative/ambient_suspense_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+audio music "res://assets/audio/ambient/horror_drone_23.mp3" [fade="2.0" volume="-5.0" bus="Ambient"]
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="0.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/footsteps/Concrete Walk 1_1.wav" [volume="-10.0" bus="SFX"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 sweet_potato_sasha: Hey there, I'm Sasha. Welcome to the team!
 audio "res://assets/audio/clothing/clothing movement 1.wav" [volume="-12.0" bus="SFX"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 sweet_potato_sasha: Sasha leans in close, "[wave amp=10 freq=2][color=YELLOW]And keep your eyes peeled. Not everything is as it seems in Spud.[/color][/wave]"
 leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/checkpoint_booth.png" fade="1.2"]
 audio "res://assets/audio/mechanical/Metal Old Door A.wav" [volume="-8.0" bus="SFX"]
 join supervisor_russet [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 supervisor_russet: Your next applicant is waiting. Check those stamps carefully! Any [color=YELLOW]suspicious behavior[/color] is to be reported.
-audio "res://assets/audio/mechanical/button pressed 2.wav" [volume="-10.0" bus="SFX"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/mechanical/button pressed 2.mp3" [volume="-10.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 supervisor_russet: Remember, a [color=DARK_ORANGE]dutiful officer[/color] has nothing to fear. Those who abandon their duty abandon their roots.
 leave supervisor_russet
 
 [background arg="res://assets/narrative/potato_radio.png" fade="2.0"]
 audio "res://assets/audio/mechanical/feedback 1.wav" [volume="-12.0" bus="SFX"]
 join announcer
-audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 announcer: "...production numbers for [pulse freq=2][color=DARK_VIOLET]Root Reserve[/color][/pulse] are SKY HIGH. The miracle food continues to nourish our nation..."
-audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 announcer: "In other news, reports of [tornado radius=3 freq=2][color=CRIMSON]missing potatoes[/color][/tornado] continue..."
 leave announcer

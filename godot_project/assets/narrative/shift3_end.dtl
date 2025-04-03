@@ -1,37 +1,37 @@
 # shift3_end.dtl
-audio music "res://assets/music/narrative/horror_terror_main.wav" [fade="2.0" volume="-5.0" bus="Music"]
+audio music "res://assets/music/narrative/horror_terror_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/checkpoint_booth_night.png" fade="0.0"]
-audio "res://assets/music/narrative/night_crickets_ambience.wav" [volume="-12.0" bus="Ambient"]
+audio "res://assets/music/narrative/night_crickets_ambience.mp3" [volume="-12.0" bus="Ambient"]
 join sweet_potato_sasha [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 sweet_potato_sasha: Can we talk? Somewhere private? [color=YELLOW]Too many eyes and ears here.[/color]
 audio "res://assets/audio/clothing/clothing movement 2.wav" [volume="-12.0" bus="SFX"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 sweet_potato_sasha: Meet me by the old storage shed after your shift. I have something you need to see.
 leave sweet_potato_sasha
 
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/footsteps/Concrete Walk 1_3.wav" [volume="-8.0" bus="SFX"]
 
-audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 supervisor_russet: Getting cozy with coworkers? Remember, getting friendly can lead to... [color=DARK_ORANGE]compromised judgment[/color].
 leave supervisor_russet
 
 [background arg="res://assets/narrative/resistance_base.png" fade="1.2"]
 audio "res://assets/audio/mechanical/Metal Old Door A.wav" [volume="-8.0" bus="SFX"]
 join sweet_potato_sasha [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 sweet_potato_sasha: I've been gathering information about rejected potatoes. [wave amp=20 freq=3][color=CRIMSON]They don't go to deportation centers.[/color][/wave]
 audio "res://assets/audio/paper/paper picked up 2.wav" [volume="-8.0" bus="SFX"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 sweet_potato_sasha: [tornado radius=4 freq=2][color=CRIMSON]They go to Root Reserve processing facilities.[/color][/tornado] Every single one.
 
 [background arg="res://assets/narrative/document_closeup.png" fade="2.0"]
 audio "res://assets/audio/paper/paper handled 3.wav" [volume="-5.0" bus="SFX"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 sweet_potato_sasha: These documents show potatoes being unloaded at a facility marked with the [color=DARK_VIOLET]Root Reserve[/color] logo.
 audio "res://assets/audio/mechanical/liquid sloshing inside canister 1.wav" [volume="-15.0" bus="SFX"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 sweet_potato_sasha: I think I know what's happening. [pulse freq=3][color=CRIMSON]They're becoming Root Reserve.[/color][/pulse]
 
 set {reveal_reaction} = "none"
@@ -42,25 +42,25 @@ set {reveal_reaction} = "none"
 
 if {reveal_reaction} == "shocked":
 	join sweet_potato_sasha [z_index="1"]
-	audio "res://assets/audio/talking/keyboard mechanical typing 3.wav" [volume="0.0" bus="SFX"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 3.mp3" [volume="0.0" bus="SFX"]
 	sweet_potato_sasha: [color=CRIMSON]Cannibalism with extra steps.[/color] That's what [wave amp=25 freq=3][color=DARK_VIOLET]Root Reserve[/color][/wave] is. And we've been helping select their ingredients.
 	leave sweet_potato_sasha
 else:
 	join sweet_potato_sasha [z_index="1"]
-	audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 	sweet_potato_sasha: I've been collecting evidence for months. Keep your eyes open. You'll see I'm right.
 	leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/night_alarm.png" fade="2.0"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 A distant alarm suddenly blares
-audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 sweet_potato_sasha: We need to go. They do security sweeps at this hour. Think about what I've shown you.
-audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 sweet_potato_sasha: Sasha stuffs the folder into your hands. "[color=YELLOW]Keep this safe. And trust no one.[/color]"
 
 [background arg="res://assets/narrative/checkpoint_booth_night.png" fade="2.0"]
 join player_character [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 player_character: You hide the folder inside your jacket. [color=DARK_VIOLET]Root Reserve[/color]. The rejections. The missing potatoes. It all connects in a [tornado radius=3 freq=2][color=CRIMSON]horrifying way[/color][/tornado].
 leave player_character

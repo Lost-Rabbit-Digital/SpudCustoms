@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpqor5sga5jx7"
+path="res://.godot/imported/keyboard mechanical typing 3.mp3-d14eee0ec154bb76a03f6c8ce3bf5f92.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/talking/keyboard mechanical typing 3.mp3"
+dest_files=["res://.godot/imported/keyboard mechanical typing 3.mp3-d14eee0ec154bb76a03f6c8ce3bf5f92.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
