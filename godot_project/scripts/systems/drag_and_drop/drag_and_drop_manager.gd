@@ -1,25 +1,43 @@
 extends Node
+## Manager class for the drag and drop interaction system.
+##
+## Serves as a coordinator between various document controllers and the core
+## drag and drop system. Handles high-level operations like opening and
+## closing documents, as well as initializing the system components.
 class_name DragAndDropManager
 
 # Systems
+## Reference to the core drag and drop system implementation.
 var drag_system: DragAndDropSystem
 
 # Document references
+## Reference to the passport document controller.
 var passport_document: DraggableDocument
+## Reference to the guide document controller.
 var guide_document: DraggableDocument
+## Reference to the law receipt document controller.
 var law_receipt_document: DraggableDocument
 
 # Scene references
+## Reference to the inspection table node where documents can be examined.
 var inspection_table: Node2D
+## Reference to the suspect panel area.
 var suspect_panel: Node2D
+## Reference to the suspect mugshot node.
 var suspect: Node2D
+## Reference to the audio player for document interaction sounds.
 var audio_player: AudioStreamPlayer2D
 
+## Reference to the stamp system manager for handling document stamping.
 var stamp_system_manager: StampSystemManager
 
-# Reference to cursor manager
+## Reference to the cursor manager for handling cursor changes.
 var cursor_manager = null
 
+## Called when the node is added to the scene.
+##
+## Gets references to autoloaded singletons and initializes the core
+## drag and drop system, connecting necessary signals.
 func _ready():
 	# Get reference to cursor manager autoload
 	cursor_manager = get_node_or_null("/root/CursorManager")
@@ -35,7 +53,11 @@ func _ready():
 	drag_system.item_closed.connect(_on_item_closed)
 	drag_system.connect("item_dropped", Callable(self, "_on_item_dropped"))
 	
-# Initialize the manager with scene references
+## Initializes the manager with references to scene nodes.
+##
+## Sets up all necessary references to scene nodes and initializes
+## document controllers and the drag system.
+## @param game_scene The root game scene containing all required nodes.
 func initialize(game_scene: Node):
 	# Get references to key nodes
 	inspection_table = game_scene.get_node_or_null("Gameplay/InspectionTable")
@@ -80,11 +102,18 @@ func initialize(game_scene: Node):
 		"stamp_bar_controller": stamp_bar_controller
 	})
 
-# Handle input events
+## Handles input events for document interaction.
+##
+## Delegates input handling to the drag system.
+## @param event The input event to handle.
+## @return True if the event was handled, false otherwise.
 func handle_input(event: InputEvent) -> bool:
 	return drag_system.handle_input_event(event, get_viewport().get_mouse_position())
 
-# Open a document by name
+## Opens a document by name.
+##
+## Finds the appropriate document controller and calls its open method.
+## @param document_name The name of the document to open.
 func open_document(document_name: String):
 	match document_name.to_lower():
 		"passport":
@@ -100,7 +129,10 @@ func open_document(document_name: String):
 				law_receipt_document.open()
 				drag_system.play_open_sound()
 
-# Close a document by name
+## Closes a document by name.
+##
+## Finds the appropriate document controller and calls its close method.
+## @param document_name The name of the document to close.
 func close_document(document_name: String):
 	match document_name.to_lower():
 		"passport":
@@ -116,7 +148,10 @@ func close_document(document_name: String):
 				law_receipt_document.close()
 				drag_system.play_close_sound()
 
-# Check if a document is open
+## Checks if a document is currently open.
+##
+## @param document_name The name of the document to check.
+## @return True if the document is open, false otherwise.
 func is_document_open(document_name: String) -> bool:
 	match document_name.to_lower():
 		"passport":
@@ -127,19 +162,31 @@ func is_document_open(document_name: String) -> bool:
 			return law_receipt_document and law_receipt_document.is_document_open()
 	return false
 
-# Signal handlers
+## Signal handler for when an item is opened.
+##
+## @param item The node that was opened.
 func _on_item_opened(item: Node2D):
 	var document_name = item.name
 	open_document(document_name)
 
+## Signal handler for when an item is closed.
+##
+## @param item The node that was closed.
 func _on_item_closed(item: Node2D):
 	var document_name = item.name
 	close_document(document_name)
 
+## Signal handler for when an item is dropped.
+##
+## @param item The node that was dropped.
+## @param drop_zone The zone where the item was dropped.
 func _on_item_dropped(item: Node2D, drop_zone: String):
 	# Additional processing can be added here if needed
 	pass
 
+## Sets the stamp system manager reference.
+##
+## @param manager The stamp system manager instance.
 func set_stamp_system_manager(manager: StampSystemManager):
 	stamp_system_manager = manager
 	

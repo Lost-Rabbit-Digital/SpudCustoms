@@ -1,7 +1,17 @@
 extends Node
+## Factory responsible for creating and configuring different types of draggable documents.
+##
+## This factory class contains static methods that handle the creation of different
+## document types used in the game, such as passports, guides, and receipts.
+## Each method configures document properties and attaches necessary nodes.
 class_name DocumentFactory
 
-# Create and configure Passport document
+## Creates and configures a Passport document instance.
+##
+## Locates necessary nodes in the scene tree, creates a DraggableDocument instance,
+## and sets up its properties for a passport document.
+## @param parent_node The root node containing the required document sprites.
+## @return The configured DraggableDocument instance or null if setup fails.
 static func create_passport(parent_node: Node) -> DraggableDocument:
 	var document = DraggableDocument.new()
 	document.name = "DocumentController"
@@ -16,13 +26,18 @@ static func create_passport(parent_node: Node) -> DraggableDocument:
 	
 	# Configure the document
 	document.closed_texture = preload("res://assets/documents/closed_passport_small/closed_passport_small.png")
-	document.open_texture = preload("res://assets/documents/passport-old.png")
+	document.open_texture = preload("res://assets/documents/passport_old.png")
 	document.closed_content_node = passport_sprite.get_node_or_null("ClosedPassport")
 	document.open_content_node = passport_sprite.get_node_or_null("OpenPassport")
 	
 	return document
 
-# Create and configure Guide document
+## Creates and configures a Guide document instance.
+##
+## Locates necessary nodes in the scene tree, creates a DraggableDocument instance,
+## and sets up its properties for a guide document.
+## @param parent_node The root node containing the required document sprites.
+## @return The configured DraggableDocument instance or null if setup fails.
 static func create_guide(parent_node: Node) -> DraggableDocument:
 	var document = DraggableDocument.new()
 	document.name = "DocumentController"
@@ -43,7 +58,12 @@ static func create_guide(parent_node: Node) -> DraggableDocument:
 	
 	return document
 
-# Create and configure LawReceipt document
+## Creates and configures a LawReceipt document instance.
+##
+## Locates necessary nodes in the scene tree, creates a DraggableDocument instance,
+## and sets up its properties for a law receipt document.
+## @param parent_node The root node containing the required document sprites.
+## @return The configured DraggableDocument instance or null if setup fails.
 static func create_law_receipt(parent_node: Node) -> DraggableDocument:
 	var document = DraggableDocument.new()
 	document.name = "DocumentController"

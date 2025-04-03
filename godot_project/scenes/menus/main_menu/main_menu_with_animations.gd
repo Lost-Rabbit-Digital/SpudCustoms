@@ -122,7 +122,7 @@ func play_with_pitch_variation(interval_name: String = "original"):
 	if !bgm_player.playing:
 		play_current_track()
 	
-	print("Playing with interval: ", interval_name, ", pitch: ", pitch)
+	print("Music initiated: Interval [", interval_name.to_upper(), "] / Pitch [", pitch, "]")
 
 func play_random_pitch_variation():
 	# Select a random interval

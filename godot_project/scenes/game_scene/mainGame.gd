@@ -443,7 +443,7 @@ func end_shift(success: bool = true):
 				$SystemManagers/AudioManager/SFXPool.stream = motion_sound
 				$SystemManagers/AudioManager/SFXPool.play()
 			else:
-				print("Failed to load motion_straight_air.wav sound")
+				push_warning("Failed to load motion_straight_air.wav sound")
 	)
 	
 	tween.tween_callback(func():
@@ -555,16 +555,17 @@ func update_date_display():
 	$UI/Labels/DateLabel.text = formatted_date
 
 func megaphone_clicked():
+	# Check if there's already a potato in the Customs Office
 	if is_potato_in_office:
+		#print("A potato is already in the customs office!")
 		megaphone_dialogue_box.next_message()
-		print("Warning: A potato is already in the customs office!")
 		return
 		
 	var potato = queue_manager.remove_front_potato()
 	if potato:
 		if office_shutter_controller.active_shutter_state == office_shutter_controller.shutter_state.OPEN:
 			# Fade out the foreground shadow on the potato when they enter
-			print("Fading out the foreground shadow on potato due to megaphone_clicked()")
+			#print("Fading out the foreground shadow on potato due to megaphone_clicked()")
 			# Play the shadow fade 0.5s faster than duration
 			character_generator.fade_out_foreground_shadow(4)
 		else:
@@ -584,24 +585,24 @@ func megaphone_clicked():
 		# Move potato to the office
 		move_potato_to_office(potato)
 	else:
+		#print("No potato to process. :(")
 		megaphone_dialogue_box.next_message()
-		print("No potato to process. :(")
 		
 func move_potato_to_office(potato_person: PotatoPerson):
-	print("Moving our spuddy to the customs office")
+	#print("Moving our spuddy to the customs office")
 	if potato_person.get_parent():
 		potato_person.get_parent().remove_child(potato_person)
-		print("removed potato from original parent")
+		#print("removed potato from original parent")
 		
 	var path_follow = PathFollow2D.new()
 	path_follow.rotates = false 
 	enter_office_path.add_child(path_follow)
 	path_follow.add_child(potato_person)
-	print("Added potato_person to new PathFollow2D")
+	#print("Added potato_person to new PathFollow2D")
 	
 	potato_person.position = Vector2.ZERO
 	path_follow.progress_ratio = 0.0
-	print("Reset potato position and path progress") 
+	#print("Reset potato position and path progress") 
 	
 	# Calculate a better duration based on path length
 	var path_length = enter_office_path.curve.get_baked_length()
@@ -611,12 +612,12 @@ func move_potato_to_office(potato_person: PotatoPerson):
 	var tween = create_tween()
 	tween.tween_property(path_follow, "progress_ratio", 1.0, duration)
 	tween.tween_callback(func():
-		print("Potato reached end of path, clean up")
+		#print("Potato reached end of path, clean up")
 		potato_person.queue_free()
 		path_follow.queue_free()
 		animate_mugshot_and_passport()
 		)
-	print("Started animate mugshot and passport tween animation")
+	#print("Started animate mugshot and passport tween animation")
 
 # Add this new function to handle path completion
 func _on_potato_path_completed(potato: PotatoPerson):
@@ -627,7 +628,7 @@ func _on_potato_path_completed(potato: PotatoPerson):
 	animate_mugshot_and_passport()
 	
 func animate_mugshot_and_passport():
-	print("Animating mugshot and passport")
+	#print("Animating mugshot and passport")
 	update_potato_info_display()
 	
 	# Get references to nodes
@@ -667,7 +668,8 @@ func setup_spawn_timer():
 	spawn_timer.set_wait_time(1.0)
 	spawn_timer.set_one_shot(false)
 	if spawn_timer.is_connected("timeout", Callable(self, "_on_spawn_timer_timeout")):
-		print("NOTE: spawn_timer signal is already connected!")
+		pass
+		#print("HEY GOOSE: spawn_timer signal is already connected!")
 	else:
 		spawn_timer.connect("timeout", Callable(self, "_on_spawn_timer_timeout"))
 	# add_child(spawn_timer)
@@ -677,7 +679,7 @@ func _on_spawn_timer_timeout():
 	if queue_manager.can_add_potato():
 		queue_manager.spawn_new_potato()
 	else:
-		print("Potato queue limit reached, skip spawning.")
+		#print("Potato queue limit reached, skip spawning.")
 		spawn_timer.stop()
 
 func _process(_delta):
@@ -734,7 +736,7 @@ func generate_potato_info():
 	}
 	
 func update_potato_info_display():
-	print("Printing current potato info")
+	#print("Printing current potato info")
 	print(current_potato_info)
 	if current_potato_info:
 		$Gameplay/InteractiveElements/Passport/OpenPassport/PotatoHeader.text = """{name}""".format(current_potato_info)
@@ -746,7 +748,7 @@ func update_potato_info_display():
 		""".format(current_potato_info)
 	else:
 		print("No current_potato_info found.")
-	print("Potato info update complete")
+	#print("Potato info update complete")
 	update_potato_texture()
 
 func get_random_name():
@@ -1365,7 +1367,7 @@ func play_with_pitch_variation(interval_name: String = "original"):
 	if !bgm_player.playing:
 		play_current_track()
 	
-	print("Playing with interval: ", interval_name, ", pitch: ", pitch)
+	print("Music initiated: Interval [", interval_name.to_upper(), "] / Pitch [", pitch, "]")
 
 func play_random_pitch_variation():
 	# Select a random interval

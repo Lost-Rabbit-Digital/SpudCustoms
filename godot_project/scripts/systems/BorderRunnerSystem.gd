@@ -232,7 +232,7 @@ func _ready():
 	
 	# Configure difficulty level and set runner chance based on difficulty level
 	difficulty_level = Global.difficulty_level
-	print("Setting Border Runner System to:", difficulty_level)
+	print("Setting Border Runner System to: ", difficulty_level)
 	
 	match difficulty_level:
 		"Easy":
@@ -257,7 +257,7 @@ func _ready():
 
 	if not queue_manager:
 		push_error("BorderRunnerSystem: Could not find QueueManager!")
-	print("BorderRunnerSystem initialized with chance: ", runner_chance)
+	print("BorderRunnerSystem initialized: Chance [", runner_chance, "]")
 	
 	# Load gib textures
 	for i in range(1, 9):
@@ -450,7 +450,7 @@ func attempt_spawn_runner():
 # In BorderRunnerSystem.gd
 func start_runner(potato: PotatoPerson):
 	if not is_enabled or is_in_dialogic:
-		print("BorderRunnerSystem disabled or in dialogue, no runners allowed.")
+		#print("BorderRunnerSystem disabled or in dialogue, no runners allowed.")
 		return
 		
 	# Ensure the potato is visible
@@ -578,9 +578,9 @@ func _unhandled_input(event):
 
 func launch_missile(target_pos):
 	if not is_enabled or is_in_dialogic:
-		print("BorderRunnerSystem disabled or in dialogue, no missiles allowed.")
+		#print("BorderRunnerSystem disabled or in dialogue, no missiles allowed.")
 		return
-	print("Launching missile. Max missiles: %d, Current missiles: %d" % [max_missiles, active_missiles.size()])
+	print("Launching missile: Max Missiles [%d] / Current Missiles [%d]" % [max_missiles, active_missiles.size()])
 	
 	if active_missiles.size() >= max_missiles and not unlimited_missiles:
 		print("Maximum number of missiles reached. Cannot launch.")
@@ -597,14 +597,14 @@ func launch_missile(target_pos):
 	add_child(missile.sprite)
 	
 	var viewport_rect = get_viewport_rect()
-	print("Viewport rect: ", viewport_rect)
+	#print("Viewport rect: ", viewport_rect)
 	
 	# More explicit missile start position logging
 	missile.position = Vector2(-100, -100)
 	missile.target = target_pos
 	
-	print("Missile start position: ", missile.position)
-	print("Missile target position: ", missile.target)
+	#print("Missile start position: ", missile.position)
+	#print("Missile target position: ", missile.target)
 	
 	missile.sprite.global_position = missile.position
 	missile.sprite.rotation = (target_pos - missile.position).normalized().angle() + PI/2
@@ -628,10 +628,10 @@ func launch_missile(target_pos):
 		print("ERROR: Missile sound not loaded properly")
 	active_missiles.append(missile)
 	
-	print("Missile launched. Active missiles: ", active_missiles.size())
+	print("Missile launched: Active Missiles [", active_missiles.size(), "]")
 
 func trigger_explosion(missile_or_position):
-	print("Triggering explosion")
+	#print("Triggering explosion")
 	var explosion_position
 	
 	# Check if we received a missile object or a position
@@ -669,8 +669,8 @@ func trigger_explosion(missile_or_position):
 		# Medium shake for regular explosions
 		main_game.shake_screen(12.0, 0.3)
 	else:
-		print("ERROR: Could not find main game node with shake_screen method")
-		print("Current node: ", self.name, ", Parent: ", get_parent().name if get_parent() else "none")
+		push_error("Could not find main game node with shake_screen method!")
+		#print("Current node: ", self.name, ", Parent: ", get_parent().name if get_parent() else "none")
 	
 	# Create explosion animation
 	var explosion = AnimatedSprite2D.new()

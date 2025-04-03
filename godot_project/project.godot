@@ -38,6 +38,7 @@ CursorManager="*res://scripts/utils/cursor_manager.gd"
 [debug]
 
 file_logging/enable_file_logging=true
+gdscript/warnings/unused_parameter=0
 gdscript/warnings/integer_division=0
 
 [dialogic]

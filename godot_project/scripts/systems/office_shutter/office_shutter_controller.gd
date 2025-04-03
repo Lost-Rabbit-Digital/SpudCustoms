@@ -31,15 +31,14 @@ var can_toggle_shutter_state: bool = true
 func _ready():
 	# Make sure we set up the animation frames for the lever
 	if lever_sprite:
-		# FIXED: Swapped the frame assignment to match desired behavior
-		# Now when shutter is CLOSED, lever is DOWN (frame 7)
+		# When shutter is CLOSED, lever is DOWN (frame 7)
 		# When shutter is OPEN, lever is UP (frame 0)
 		lever_sprite.frame = 7 if active_shutter_state == shutter_state.CLOSED else 0
 	
 	# Connect the button press signal
 	if lever_button and not lever_button.pressed.is_connected(shutter_state_toggle):
 		lever_button.pressed.connect(shutter_state_toggle)
-		print("Connected lever button pressed signal")
+		#print("Connected lever button pressed signal")
 
 func _process(_delta):
 	if can_toggle_shutter_state:
@@ -50,7 +49,6 @@ func _process(_delta):
 func raise_shutter(duration: float = 1.5):
 	active_shutter_state = shutter_state.OPEN
 	
-	# FIXED: Swapped the animation direction
 	# Now we animate to UP position (frame 0) when opening
 	animate_lever(true)  # true = animate to open/up position
 	
@@ -60,7 +58,7 @@ func raise_shutter(duration: float = 1.5):
 	shutter_audio.bus = "SFX"
 	shutter_audio.play()
 	
-	print("Fading out the foreground shadow on potato due to shutter_lower()")
+	#print("Fading out the foreground shadow on potato due to shutter_lower()")
 	# Play the shadow fade 0.5s faster than duration
 	character_generator.fade_out_foreground_shadow(duration - 0.5)
 	
@@ -133,7 +131,7 @@ func lower_shutter(duration: float = 3.0):
 # Now, true = animate to UP position (frame 0), false = animate to DOWN position (frame 7)
 func animate_lever(to_up: bool):
 	if not lever_sprite:
-		print("ERROR: lever_sprite is null")
+		push_warning("lever_sprite is null")
 		return
 		
 	# Stop any existing animation
@@ -145,7 +143,7 @@ func animate_lever(to_up: bool):
 	
 	# Get current frame
 	var starting_frame = lever_sprite.frame
-	print("Animating lever - starting frame: ", starting_frame, " target frame: ", target_frame)
+	#print("Animating lever - starting frame: ", starting_frame, " target frame: ", target_frame)
 	
 	# Force animation even if starting frame is the same as target frame
 	# This is needed when the shutter animation is triggered programmatically
@@ -153,7 +151,7 @@ func animate_lever(to_up: bool):
 		# If already at target frame, temporarily move to middle frame to force animation
 		starting_frame = 4  # Middle frame
 		lever_sprite.frame = starting_frame
-		print("Forcing animation from temporary middle frame")
+		#print("Forcing animation from temporary middle frame")
 	
 	# Create a tween to animate through frames
 	var tween = create_tween()
@@ -169,7 +167,7 @@ func animate_lever(to_up: bool):
 			var frame_index = i  # Capture the current value
 			tween.tween_callback(func(): 
 				lever_sprite.frame = frame_index
-				print("Setting lever frame to: ", frame_index)
+				#print("Setting lever frame to: ", frame_index)
 			)
 			tween.tween_interval(0.05)  # Wait between frames
 	# If going to DOWN position (frame 7)
@@ -178,29 +176,29 @@ func animate_lever(to_up: bool):
 			var frame_index = i  # Capture the current value
 			tween.tween_callback(func():
 				lever_sprite.frame = frame_index
-				print("Setting lever frame to: ", frame_index)
+				#print("Setting lever frame to: ", frame_index)
 			)
 			tween.tween_interval(0.05)  # Wait between frames
 
 func shutter_state_toggle() -> void:
-	print("Shutter Lever button pressed!")
+	#print("Shutter Lever button pressed!")
 	
 	# Only proceed if we can toggle the state
 	if not can_toggle_shutter_state:
-		print("Cannot toggle shutter state yet, on cooldown")
+		#print("Cannot toggle shutter state yet, on cooldown")
 		pass
 		#return
 	
 	# Check current shutter state and toggle it
 	if active_shutter_state == shutter_state.CLOSED:
-		print("Attempt to open shutter")
+		#print("Attempt to open shutter")
 		# If the shutter is closed, open it upon the click
 		raise_shutter(0.5)
 	else:
-		print("Attempt to shut shutter")
+		#print("Attempt to shut shutter")
 		# If the shutter is already open, close it upon the click
 		lower_shutter(1.5)
 
 func allow_shutter_state_changes() -> void:
 	can_toggle_shutter_state = true
-	print("Shutter state changes now allowed")
+	#print("Shutter state changes now allowed")

@@ -101,10 +101,10 @@ func get_leaderboard_name(difficulty: String = "") -> String:
 		_: return "endless_normal"
 
 
-# Screen shake with configurable intensity and duration
-# Mild: intensity 3-5, duration 0.2
-# Medium: intensity 10-15, duration 0.3
-# Strong: intensity 20-25, duration 0.4
+## Screen shake with configurable intensity and duration
+## Mild: intensity 3-5, duration 0.2
+## Medium: intensity 10-15, duration 0.3
+## Strong: intensity 20-25, duration 0.4
 func shake_screen(intensity: float = 10.0, duration: float = 0.3):
 	# Apply screen shake setting from options
 	intensity *= screen_shake_intensity_multiplier
@@ -177,7 +177,7 @@ func request_leaderboard_entries(difficulty: String = "") -> bool:
 
 func _on_leaderboard_find_result(handle: int, found: bool) -> void:
 	if not found:
-		print("Failed to find leaderboard!")
+		push_warning("Failed to find Steam leaderboard!")
 		return
 		
 	print("Leaderboard found, handle: ", handle)
@@ -204,7 +204,7 @@ func _on_leaderboard_score_uploaded(success: int, handle: int, score_details: Di
 		)
 		print("Entries requested.")
 	else:
-		print("Failed to upload score to Steam leaderboard")
+		push_warning("Failed to upload score to Steam leaderboard")
 
 func _on_leaderboard_scores_downloaded(message: String, this_leaderboard_handle: int, result: Array) -> void:
 	print("Scores downloaded message: %s" % message)
@@ -223,6 +223,7 @@ func _on_leaderboard_scores_downloaded(message: String, this_leaderboard_handle:
 			"score": entry.score
 		})
 	print("Updated cached leaderboard entries: ", cached_leaderboard_entries)
+
 
 func submit_score(score: int):
 	print("Submitting score to Steam leaderboard")

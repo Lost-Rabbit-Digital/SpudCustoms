@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ceh27taly75na"
-path="res://.godot/imported/passport-old.png-87f6f8556956ff4ce6782d6b63d9eb91.ctex"
+path="res://.godot/imported/passport_old.png-3a495c2abcb6829bf0645ea6f36066f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/documents/passport-old.png"
-dest_files=["res://.godot/imported/passport-old.png-87f6f8556956ff4ce6782d6b63d9eb91.ctex"]
+source_file="res://assets/documents/passport_old.png"
+dest_files=["res://.godot/imported/passport_old.png-3a495c2abcb6829bf0645ea6f36066f8.ctex"]
 
 [params]
 
