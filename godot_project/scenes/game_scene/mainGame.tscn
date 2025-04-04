@@ -265,7 +265,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="JudgementLabel" type="Label" parent="UI/Labels"]
-z_index = 2
+z_index = 13
 z_as_relative = false
 layout_mode = 0
 offset_left = 490.0
@@ -282,7 +282,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="StrikesLabel" type="Label" parent="UI/Labels"]
-z_index = 6
+z_index = 12
 z_as_relative = false
 texture_filter = 1
 texture_repeat = 1
@@ -301,7 +301,7 @@ text = "Strikes: 0 / 5"
 vertical_alignment = 1
 
 [node name="QuotaLabel" type="Label" parent="UI/Labels"]
-z_index = 6
+z_index = 12
 z_as_relative = false
 texture_filter = 1
 texture_repeat = 1
@@ -335,7 +335,7 @@ theme_override_font_sizes/font_size = 16
 autowrap_mode = 3
 
 [node name="ScoreLabel" type="Label" parent="UI/Labels"]
-z_index = 6
+z_index = 12
 z_as_relative = false
 texture_filter = 1
 texture_repeat = 1

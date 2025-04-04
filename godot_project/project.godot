@@ -26,6 +26,9 @@ buses/default_bus_layout="res://assets/styles/default_bus_layout.tres"
 [autoload]
 
 Global="*res://assets/autoload/Global.gd"
+UIManager="*res://assets/autoload/UIManager.gd"
+SteamManager="*res://assets/autoload/SteamManager.gd"
+SaveManager="*res://assets/autoload/SaveManager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 AppConfig="*res://addons/maaacks_game_template/base/scenes/autoloads/app_config.tscn"
 SceneLoader="*res://addons/maaacks_game_template/base/scenes/autoloads/scene_loader.tscn"

@@ -218,6 +218,8 @@ func _ready():
 	Dialogic.timeline_ended.connect(_on_dialogue_finished)
 	#disable_controls()
 
+	
+
 # Dedicated function to set up the stamp system
 func setup_stamp_system():
 	# Create the stamp system manager
