@@ -1,21 +1,25 @@
 extends Node
 
-var shift: int = 0
+# Persistent variables
 var current_story_state: int = 0
-var final_score = 0
-var build_type = "Full Release" # Can be Full Release or Demo Release
 var difficulty_level = "Normal" # Can be "Easy", "Normal", or "Expert"
+var build_type = "Full Release" # Can be Full Release or Demo Release
+var base_quota_target = 8 # Quota scaling variable
+
+# Transient variables
+var shift: int = 0
+var final_score = 0
 var strikes = 0
 var max_strikes = 4
 var current_game_stats: Dictionary = {}
 var quota_target = 8  # Required correct decisions
-var base_quota_target = 8 # Quota scaling variable
 var quota_met = 0   # Number of correct decisions
+
 # Screen shake settings
 var screen_shake_intensity_multiplier: float = 1.0  # Gets set from options menu
 
 # Track level progression
-var max_level_unlocked = 1  # Start with first level unlocked
+var max_level_unlocked = 0  # Start with shift tutorial level unlocked
 
 # Achievement IDs
 const ACHIEVEMENTS = {
@@ -43,6 +47,7 @@ var high_scores: Dictionary = {
 	"Expert": 0
 }
 
+# Leaderboard variables
 var is_fetching_leaderboard = false
 var current_leaderboard_handle = 0
 var cached_leaderboard_entries = []
@@ -89,154 +94,6 @@ func store_game_stats(stats: ShiftStats):
 		"final_score": final_score
 	}
 	
-# Helper function to get leaderboard name based on difficulty
-func get_leaderboard_name(difficulty: String = "") -> String:
-	if difficulty.is_empty():
-		difficulty = difficulty_level
-		
-	match difficulty:
-		"Easy": return "endless_easy"
-		"Normal": return "endless_normal"
-		"Expert": return "endless_expert"
-		_: return "endless_normal"
-
-
-## Screen shake with configurable intensity and duration
-## Mild: intensity 3-5, duration 0.2
-## Medium: intensity 10-15, duration 0.3
-## Strong: intensity 20-25, duration 0.4
-func shake_screen(intensity: float = 10.0, duration: float = 0.3):
-	# Apply screen shake setting from options
-	intensity *= screen_shake_intensity_multiplier
-	
-	# If screen shake is disabled, return early
-	if screen_shake_intensity_multiplier <= 0.01:
-		return
-	
-	# Get the current scene root node
-	var root = get_tree().current_scene
-	if not root:
-		return
-		
-	# Create a screen shake tween
-	var tween = create_tween()
-	
-	# Number of shake steps
-	var steps = 12
-	
-	# Initial position to return to
-	var initial_position = root.position
-	
-	# Initial random offset
-	var random_shake = Vector2(
-		randf_range(-intensity, intensity),
-		randf_range(-intensity, intensity)
-	)
-	
-	# Apply the initial shake
-	root.position += random_shake
-	
-	# Shake with diminishing intensity
-	for i in range(steps):
-		var shake_intensity = intensity * (1.0 - (i / float(steps)))
-		random_shake = Vector2(
-			randf_range(-shake_intensity, shake_intensity),
-			randf_range(-shake_intensity, shake_intensity)
-		)
-		
-		# Move relative to the initial position
-		tween.tween_property(root, "position", initial_position + random_shake, duration / steps)
-	
-	# Return to original position
-	tween.tween_property(root, "position", initial_position, duration / steps)
-
-# Update this function to load the screen shake setting from config
-func update_camera_shake_setting():
-	# Get the camera shake value from Config
-	var shake_value = Config.get_config("VideoSettings", "CameraShake", 1.0)
-	
-	# Update the multiplier
-	screen_shake_intensity_multiplier = shake_value
-
-func request_leaderboard_entries(difficulty: String = "") -> bool:
-	print("GLOBAL: Getting leaderboard entries")
-	if difficulty.is_empty():
-		difficulty = difficulty_level
-	
-	# If we don't have a handle for this difficulty, get it
-	is_fetching_leaderboard = true
-	Steam.findLeaderboard(get_leaderboard_name(difficulty))
-	# Return cached entries while we wait
-	# return cached_leaderboard_entries
-	
-	# If we have a handle, fetch the scores
-	print("Fetching scores")
-	Steam.downloadLeaderboardEntries(1, 12, Steam.LEADERBOARD_DATA_REQUEST_GLOBAL, current_leaderboard_handle)
-	Steam.run_callbacks()
-	return true
-
-func _on_leaderboard_find_result(handle: int, found: bool) -> void:
-	if not found:
-		push_warning("Failed to find Steam leaderboard!")
-		return
-		
-	print("Leaderboard found, handle: ", handle)
-	current_leaderboard_handle = handle
-	
-	# Create empty PackedInt32Array for details
-	var details = PackedInt32Array()
-	
-	print("Uploading score to leaderboard")
-	Steam.uploadLeaderboardScore(score, true, details, handle)
-
-
-func _on_leaderboard_score_uploaded(success: int, handle: int, score_details: Dictionary) -> void:
-	if success == 1:
-		print("Successfully uploaded score to Steam leaderboard!")
-		print("Score details: ", score_details)
-		print("Requesting updated leaderboard entries...")
-		# Request updated leaderboard entries
-		Steam.downloadLeaderboardEntries(
-			1,  # Start rank
-			12,  # End rank
-			Steam.LEADERBOARD_DATA_REQUEST_GLOBAL,
-			handle
-		)
-		print("Entries requested.")
-	else:
-		push_warning("Failed to upload score to Steam leaderboard")
-
-func _on_leaderboard_scores_downloaded(message: String, this_leaderboard_handle: int, result: Array) -> void:
-	print("Scores downloaded message: %s" % message)
-	print("Leaderboard scores downloaded")
-	is_fetching_leaderboard = false
-	cached_leaderboard_entries.clear()
-	print("Entries include:") 
-	print(result)
-	for entry in result:
-		print(entry)
-		# Get the player name from Steam
-		var player_name = Steam.getFriendPersonaName(entry.steam_id)
-		cached_leaderboard_entries.append({
-			"rank": entry.global_rank,
-			"name": player_name,
-			"score": entry.score
-		})
-	print("Updated cached leaderboard entries: ", cached_leaderboard_entries)
-
-
-func submit_score(score: int):
-	print("Submitting score to Steam leaderboard")
-	if not Steam.isSteamRunning():
-		print("Steam not running, score submission skipped")
-		return false
-		
-	var leaderboard_name = get_leaderboard_name(difficulty_level)
-	print("Finding leaderboard: ", leaderboard_name)
-	
-	# First find the leaderboard
-	Steam.findLeaderboard(leaderboard_name)
-	return true
 
 func add_score(points: int):
 	score += points
@@ -306,7 +163,7 @@ func reset_shift_stats():
 	
 	GlobalState.save()
 
-# Save/load functions
+# Save and Load Handling
 func save_game_state():
 	var current_story_state = GameState.get_max_level_reached()
 	var save_data = {
@@ -408,7 +265,7 @@ func format_score(value: int) -> String:
 	
 	return formatted
 
-# Debug function to reset everything
+# Debug function to reset all data, persistent and non-persistent
 func reset_all():
 	score = 0
 	final_score = 0
@@ -418,6 +275,7 @@ func reset_all():
 	save_game_state()
 	save_high_scores()
 	
+# Update variables used for unlocking levels in level select
 func unlock_level(level_id: int):
 	if level_id > max_level_unlocked:
 		max_level_unlocked = level_id
@@ -439,13 +297,166 @@ func set_story_state(new_state: int):
 	current_story_state = new_state
 	save_game_state() # Add story state to existing save system
 
-## Gameover scene transition
-func go_to_game_over():
-	# Store the score in a global script or autoload
-	Global.final_score = Global.score
-	print("transition to game over scene")
-	get_tree().change_scene_to_file("res://scripts/systems/ShiftSummaryScreen.tscn")
+# Steam Cloud Saves Handling
+func download_cloud_saves():
+	if not Steam.isSteamRunning():
+		return
+		
+	if Steam.fileExists("gamestate.save"):
+		var file_size = Steam.getFileSize("gamestate.save")
+		var file_content = Steam.fileRead("gamestate.save", file_size)
+		
+		var local_file = FileAccess.open("user://gamestate.save", FileAccess.WRITE)
+		if local_file:
+			local_file.store_buffer(file_content)
+			
+	if Steam.fileExists("highscores.save"):
+		var scores_size = Steam.getFileSize("highscores.save")
+		var scores_content = Steam.fileRead("highscores.save", scores_size)
+		
+		var local_scores = FileAccess.open("user://highscores.save", FileAccess.WRITE)
+		if local_scores:
+			local_scores.store_buffer(scores_content)
+			
+	load_game_state()
+	# load_high_scores()
+
+# Steam Achievement Handling
+func check_achievements():
+	if not Steam.isSteamRunning():
+		return
+		
+	# First shift completion
+	if total_shifts_completed == 1:
+		Steam.setAchievement(ACHIEVEMENTS.ROOKIE_OFFICER)
+		
+	# Shift milestones
+	if total_shifts_completed >= 10:
+		Steam.setAchievement(ACHIEVEMENTS.VETERAN_OFFICER)
+	if total_shifts_completed >= 25:
+		Steam.setAchievement(ACHIEVEMENTS.MASTER_OFFICER)
+		
+	# Runner achievements
+	if total_runners_stopped >= 10:
+		Steam.setAchievement(ACHIEVEMENTS.SHARPSHOOTER)
+	if total_runners_stopped >= 50:
+		Steam.setAchievement(ACHIEVEMENTS.BORDER_DEFENDER)
+	if perfect_hits >= 5:
+		Steam.setAchievement(ACHIEVEMENTS.PERFECT_SHOT)
+		
+	# Score achievements
+	if score >= 10000:
+		Steam.setAchievement(ACHIEVEMENTS.HIGH_SCORER)
+	if score >= 50000:
+		Steam.setAchievement(ACHIEVEMENTS.SCORE_LEGEND)
+		
+	# Story completion
+	if current_story_state >= 13:
+		Steam.setAchievement(ACHIEVEMENTS.SAVIOR_OF_SPUD)
+
+# Call this after each shift or when stats change
+func update_steam_stats():
+	if not Steam.isSteamRunning():
+		return
+		
+	Steam.setStatInt("total_shifts", total_shifts_completed)
+	Steam.setStatInt("runners_stopped", total_runners_stopped)
+	Steam.setStatInt("perfect_hits", perfect_hits)
+	Steam.setStatInt("high_score", score)
+	Steam.storeStats() # Important: Actually saves stats to Steam
+
+# Steam Leaderboard Handling
+# Helper function to get leaderboard name based on difficulty
+func get_leaderboard_name(difficulty: String = "") -> String:
+	if difficulty.is_empty():
+		difficulty = difficulty_level
+		
+	match difficulty:
+		"Easy": return "endless_easy"
+		"Normal": return "endless_normal"
+		"Expert": return "endless_expert"
+		_: return "endless_normal"
+
+func request_leaderboard_entries(difficulty: String = "") -> bool:
+	print("GLOBAL: Getting leaderboard entries")
+	if difficulty.is_empty():
+		difficulty = difficulty_level
 	
+	# If we don't have a handle for this difficulty, get it
+	is_fetching_leaderboard = true
+	Steam.findLeaderboard(get_leaderboard_name(difficulty))
+	# Return cached entries while we wait
+	# return cached_leaderboard_entries
+	
+	# If we have a handle, fetch the scores
+	print("Fetching scores")
+	Steam.downloadLeaderboardEntries(1, 12, Steam.LEADERBOARD_DATA_REQUEST_GLOBAL, current_leaderboard_handle)
+	Steam.run_callbacks()
+	return true
+
+func _on_leaderboard_find_result(handle: int, found: bool) -> void:
+	if not found:
+		push_warning("Failed to find Steam leaderboard!")
+		return
+		
+	print("Leaderboard found, handle: ", handle)
+	current_leaderboard_handle = handle
+	
+	# Create empty PackedInt32Array for details
+	var details = PackedInt32Array()
+	
+	print("Uploading score to leaderboard")
+	Steam.uploadLeaderboardScore(score, true, details, handle)
+
+func _on_leaderboard_score_uploaded(success: int, handle: int, score_details: Dictionary) -> void:
+	if success == 1:
+		print("Successfully uploaded score to Steam leaderboard!")
+		print("Score details: ", score_details)
+		print("Requesting updated leaderboard entries...")
+		# Request updated leaderboard entries
+		Steam.downloadLeaderboardEntries(
+			1,  # Start rank
+			12,  # End rank
+			Steam.LEADERBOARD_DATA_REQUEST_GLOBAL,
+			handle
+		)
+		print("Entries requested.")
+	else:
+		push_warning("Failed to upload score to Steam leaderboard")
+
+func _on_leaderboard_scores_downloaded(message: String, this_leaderboard_handle: int, result: Array) -> void:
+	print("Scores downloaded message: %s" % message)
+	print("Leaderboard scores downloaded")
+	is_fetching_leaderboard = false
+	cached_leaderboard_entries.clear()
+	print("Entries include:") 
+	print(result)
+	for entry in result:
+		print(entry)
+		# Get the player name from Steam
+		var player_name = Steam.getFriendPersonaName(entry.steam_id)
+		cached_leaderboard_entries.append({
+			"rank": entry.global_rank,
+			"name": player_name,
+			"score": entry.score
+		})
+	print("Updated cached leaderboard entries: ", cached_leaderboard_entries)
+
+func submit_score(score: int):
+	print("Submitting score to Steam leaderboard")
+	if not Steam.isSteamRunning():
+		print("Steam not running, score submission skipped")
+		return false
+		
+	var leaderboard_name = get_leaderboard_name(difficulty_level)
+	print("Finding leaderboard: ", leaderboard_name)
+	
+	# First find the leaderboard
+	Steam.findLeaderboard(leaderboard_name)
+	return true
+
+
+# UI Manager #
 func clear_alert_after_delay(alert_label, alert_timer):
 	alert_timer.start()
 	# Delay is the "wait_time" property on the $SystemManagers/Timers/AlertTimer
@@ -495,68 +506,59 @@ func display_green_alert(alert_label, alert_timer, text):
 	# Hide the alert after a few seconds
 	clear_alert_after_delay(alert_label, alert_timer)
 
-func download_cloud_saves():
-	if not Steam.isSteamRunning():
+## Screen shake with configurable intensity and duration
+## Mild: intensity 3-5, duration 0.2
+## Medium: intensity 10-15, duration 0.3
+## Strong: intensity 20-25, duration 0.4
+func shake_screen(intensity: float = 10.0, duration: float = 0.3):
+	# Apply screen shake setting from options
+	intensity *= screen_shake_intensity_multiplier
+	
+	# If screen shake is disabled, return early
+	if screen_shake_intensity_multiplier <= 0.01:
+		return
+	
+	# Get the current scene root node
+	var root = get_tree().current_scene
+	if not root:
 		return
 		
-	if Steam.fileExists("gamestate.save"):
-		var file_size = Steam.getFileSize("gamestate.save")
-		var file_content = Steam.fileRead("gamestate.save", file_size)
+	# Create a screen shake tween
+	var tween = create_tween()
+	
+	# Number of shake steps
+	var steps = 12
+	
+	# Initial position to return to
+	var initial_position = root.position
+	
+	# Initial random offset
+	var random_shake = Vector2(
+		randf_range(-intensity, intensity),
+		randf_range(-intensity, intensity)
+	)
+	
+	# Apply the initial shake
+	root.position += random_shake
+	
+	# Shake with diminishing intensity
+	for i in range(steps):
+		var shake_intensity = intensity * (1.0 - (i / float(steps)))
+		random_shake = Vector2(
+			randf_range(-shake_intensity, shake_intensity),
+			randf_range(-shake_intensity, shake_intensity)
+		)
 		
-		var local_file = FileAccess.open("user://gamestate.save", FileAccess.WRITE)
-		if local_file:
-			local_file.store_buffer(file_content)
-			
-	if Steam.fileExists("highscores.save"):
-		var scores_size = Steam.getFileSize("highscores.save")
-		var scores_content = Steam.fileRead("highscores.save", scores_size)
-		
-		var local_scores = FileAccess.open("user://highscores.save", FileAccess.WRITE)
-		if local_scores:
-			local_scores.store_buffer(scores_content)
-			
-	load_game_state()
-	# load_high_scores()
+		# Move relative to the initial position
+		tween.tween_property(root, "position", initial_position + random_shake, duration / steps)
+	
+	# Return to original position
+	tween.tween_property(root, "position", initial_position, duration / steps)
 
-func check_achievements():
-	if not Steam.isSteamRunning():
-		return
-		
-	# First shift completion
-	if total_shifts_completed == 1:
-		Steam.setAchievement(ACHIEVEMENTS.ROOKIE_OFFICER)
-		
-	# Shift milestones
-	if total_shifts_completed >= 10:
-		Steam.setAchievement(ACHIEVEMENTS.VETERAN_OFFICER)
-	if total_shifts_completed >= 25:
-		Steam.setAchievement(ACHIEVEMENTS.MASTER_OFFICER)
-		
-	# Runner achievements
-	if total_runners_stopped >= 10:
-		Steam.setAchievement(ACHIEVEMENTS.SHARPSHOOTER)
-	if total_runners_stopped >= 50:
-		Steam.setAchievement(ACHIEVEMENTS.BORDER_DEFENDER)
-	if perfect_hits >= 5:
-		Steam.setAchievement(ACHIEVEMENTS.PERFECT_SHOT)
-		
-	# Score achievements
-	if score >= 10000:
-		Steam.setAchievement(ACHIEVEMENTS.HIGH_SCORER)
-	if score >= 50000:
-		Steam.setAchievement(ACHIEVEMENTS.SCORE_LEGEND)
-		
-	# Story completion
-	if current_story_state >= 13:
-		Steam.setAchievement(ACHIEVEMENTS.SAVIOR_OF_SPUD)
-
-# Call this after each shift or when stats change
-func update_steam_stats():
-	if not Steam.isSteamRunning():
-		return
-		
-	Steam.setStatInt("total_shifts", total_shifts_completed)
-	Steam.setStatInt("runners_stopped", total_runners_stopped)
-	Steam.setStatInt("perfect_hits", perfect_hits)
-	Steam.setStatInt("high_score", score)
-	Steam.storeStats() # Important: Actually saves stats to Steam
+# Update this function to load the screen shake setting from config
+func update_camera_shake_setting():
+	# Get the camera shake value from Config
+	var shake_value = Config.get_config("VideoSettings", "CameraShake", 1.0)
+	
+	# Update the multiplier
+	screen_shake_intensity_multiplier = shake_value
