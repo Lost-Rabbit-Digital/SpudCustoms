@@ -93,6 +93,9 @@ var stamp_system_manager: StampSystemManager
 ## Reference to the cursor manager for handling cursor changes.
 var cursor_manager = null
 
+# Office Shutter reference
+var office_shutter: Node = null
+
 ## Initializes the drag and drop system with necessary references.
 ##
 ## Sets up references to scene nodes and registers draggable items.
@@ -103,6 +106,7 @@ func initialize(config: Dictionary):
 	suspect_panel = config.get("suspect_panel")  
 	suspect = config.get("suspect")
 	audio_player = config.get("audio_player")
+	audio_player = config.get("office_shutter")
 	
 	# Get stamp bar controller reference if provided
 	_stamp_bar_controller = config.get("stamp_bar_controller")
@@ -315,7 +319,7 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 		var doc_controller = get_document_controller(dragged_item)
 		
 		# Check if drop zone is valid
-		if drop_zone == "inspection_table" or drop_zone == "suspect_panel" or drop_zone == "suspect":
+		if (drop_zone == "inspection_table" or drop_zone == "suspect_panel" or drop_zone == "suspect") and office_shutter and office_shutter.shutter_state == "closed":
 			# Valid drop zone
 			if doc_controller:
 				doc_controller.on_drop(drop_zone)

@@ -34,6 +34,9 @@ var stamp_system_manager: StampSystemManager
 ## Reference to the cursor manager for handling cursor changes.
 var cursor_manager = null
 
+## Reference to the office shutter 
+var office_shutter: OfficeShutterController
+
 ## Called when the node is added to the scene.
 ##
 ## Gets references to autoloaded singletons and initializes the core
@@ -64,11 +67,12 @@ func initialize(game_scene: Node):
 	suspect_panel = game_scene.get_node_or_null("Gameplay/SuspectPanel")
 	suspect = game_scene.get_node_or_null("Gameplay/MugshotPhotoGenerator/SizingSprite")
 	audio_player = game_scene.get_node_or_null("SystemManagers/AudioManager/SFXPool")
+	office_shutter = game_scene.get_node_or_null("Gameplay/InteractiveElements/OfficeShutterController")
 	
 	# Get stamp bar controller reference
 	var stamp_bar_controller = game_scene.get_node_or_null("Gameplay/InteractiveElements/StampBarController")
 	
-	if !inspection_table or !suspect_panel or !suspect:
+	if !inspection_table or !suspect_panel or !suspect or !audio_player or !office_shutter:
 		push_error("Required scene references not found for DragAndDropManager")
 		return
 	
