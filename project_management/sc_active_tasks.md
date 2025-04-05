@@ -35,6 +35,7 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Office Shutter / Bug: Do not fade out transparency of potato when enter or leaving office, only the foreground shadow
 
 
+# Z-INDEX
+- Dragged passport appears below the customs office
 
 # RIGHT NOW
-- Give Passport Prompt should not appear if the passport has not been stamped, this check would be in main game

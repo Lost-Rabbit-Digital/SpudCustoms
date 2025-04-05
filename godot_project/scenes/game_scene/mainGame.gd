@@ -102,7 +102,6 @@ var max_combo_multiplier = 3.0
 # Character generator, used for fade in/out 
 @export var character_generator: CharacterGenerator
 
-
 func get_level_manager():
 	var parent = get_parent()
 	while parent:
@@ -687,16 +686,19 @@ func _on_spawn_timer_timeout():
 		#print("Potato queue limit reached, skip spawning.")
 		spawn_timer.stop()
 
+
+
 func _process(_delta):
 	# Handle prompt dialogue visibility
 	var mouse_pos = get_global_mouse_position()
 	var suspect = $Gameplay/MugshotPhotoGenerator/SizingSprite
 	var passport = $Gameplay/InteractiveElements/Passport
 	
-	# Only show the dialogue if the shutter is OPEN
+	# Only show the dialogue if the shutter is OPEN and the passport has been STAMPED
 	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and drag_and_drop_manager.is_document_open("passport") == false and drag_and_drop_manager.drag_system.get_dragged_item() == passport:
 		if office_shutter_controller.active_shutter_state == office_shutter_controller.shutter_state.OPEN:
-			$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = true
+			if stamp_system_manager.passport_stampable.get_decision() != "":
+				$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = true
 	else:
 		$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = false
 	

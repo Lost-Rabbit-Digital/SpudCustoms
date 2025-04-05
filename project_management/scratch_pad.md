@@ -172,3 +172,4 @@ These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release
 - Regenerate potato images for each character in narrative, 16 total
 - Office Shutter / Bug: The user should not be able to pass the potato documents if the shutter is closed
 - Shutter raises everytime a potato enters the office
+- Give Passport Prompt should not appear if the passport has not been stamped, this check would be in main game

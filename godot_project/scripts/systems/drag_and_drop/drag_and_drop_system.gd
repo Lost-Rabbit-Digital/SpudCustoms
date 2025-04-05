@@ -331,8 +331,31 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 		# Get document controller
 		var doc_controller = get_document_controller(dragged_item)
 		
-		# First check if trying to drop on suspect/panel with closed shutter
-		if (drop_zone == "suspect" or drop_zone == "suspect_panel") and office_shutter.active_shutter_state == office_shutter.shutter_state.CLOSED:
+		# First check if the user is trying to drop on the suspect/panel without stamping
+		if (drop_zone == "suspect" or drop_zone == "suspect_panel") and stamp_system_manager.passport_stampable.get_decision() == "":
+					# Shutter is closed - can't drop here, return to table
+			if doc_controller and doc_controller.is_document_open():
+				doc_controller.close()
+			
+			# Maybe play a "blocked" sound effect
+			if audio_player:
+				audio_player.stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
+				audio_player.play()
+			
+			# Return to table
+			_return_item_to_table(dragged_item)
+			
+			# Clear the dragged item after return animation starts
+			var item = dragged_item
+			dragged_item = null
+			
+			# Reset cursor immediately
+			if cursor_manager:
+				cursor_manager.update_cursor("default")
+			
+			return true
+		# Next check if trying to drop on suspect/panel with closed shutter
+		elif (drop_zone == "suspect" or drop_zone == "suspect_panel") and office_shutter.active_shutter_state == office_shutter.shutter_state.CLOSED:
 			# Shutter is closed - can't drop here, return to table
 			if doc_controller and doc_controller.is_document_open():
 				doc_controller.close()
@@ -354,7 +377,6 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 				cursor_manager.update_cursor("default")
 			
 			return true
-		
 		# Otherwise check normal valid drop zones
 		elif drop_zone == "inspection_table" or drop_zone == "suspect_panel" or drop_zone == "suspect":
 			# Valid drop zone
