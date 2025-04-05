@@ -906,9 +906,9 @@ func update_score_display():
 func update_quota_display():
 	var current_quota = Global.quota_met
 	var quota_label = $UI/Labels/QuotaLabel
-	
+	# Ensure shift is at least 1 for calculation purposes, such as in shift 0 for tutorial
 	# Update the text
-	quota_label.text = "Quota: " + str(current_quota) + " / " + str(Global.quota_target * Global.shift)
+	quota_label.text = "Quota: " + str(current_quota) + " / " + str(Global.quota_target)
 	
 	# Check if there's a change OR if this is the first update (previous_quota is -1)
 	if previous_quota != current_quota && previous_quota != -1:
