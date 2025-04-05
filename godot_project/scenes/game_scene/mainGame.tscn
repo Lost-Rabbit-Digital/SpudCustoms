@@ -514,8 +514,9 @@ position = Vector2(1079, 441)
 position = Vector2(1079, 584)
 
 [node name="Passport" type="Sprite2D" parent="Gameplay/InteractiveElements"]
+z_index = 14
 z_as_relative = false
-position = Vector2(1649, 568)
+position = Vector2(1848, 1082)
 texture = ExtResource("27_qjue5")
 
 [node name="ClosedPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
@@ -740,7 +741,7 @@ unique_name_in_owner = true
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Megaphone/MegaphoneInteractionButton" to="." method="_on_megaphone_interaction_button_pressed"]

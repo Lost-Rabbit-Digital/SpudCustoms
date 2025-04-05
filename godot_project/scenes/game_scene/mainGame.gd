@@ -672,7 +672,7 @@ func animate_mugshot_and_passport():
 	# Reset positions and visibility
 	mugshot_generator.position.x = suspect_panel_spawn_node.position.x + suspect_panel_front.texture.get_width()
 	passport.visible = false
-	passport.z_index = 1
+	passport.z_index = 14
 	passport.position = Vector2(passport_spawn_point_begin.position.x, passport_spawn_point_begin.position.y)
 
 	var tween = create_tween()

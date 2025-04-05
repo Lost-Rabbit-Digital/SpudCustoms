@@ -8,9 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://cvtdlyxlb5qaw" path="res://assets/user_interface/suspect_panel/suspect_panel_document_slot.png" id="6_hjv8i"]
 
 [node name="SuspectPanel" type="Sprite2D"]
+z_as_relative = false
 
 [node name="SuspectPanelTop" type="Sprite2D" parent="."]
-z_index = 4
+z_index = 15
 z_as_relative = false
 position = Vector2(1074, 472)
 scale = Vector2(1.05816, 1.06849)

@@ -128,3 +128,6 @@ These are our goals, to-do tasks, and completed tasks.
 - Only show take passport dialogue if the passport has been stamped
 - Shrink texture for missiles and impacts, sizing of pixels is off-putting
 - Update cursor when hovering over the megaphone
+- Z-index: Dragged passport appears below the suspect table
+- Drag and Drop: If the passport hasn't been stamped and is hovered over the potato, it should not prompt the dialogue
+- Drag and Drop: If the passport hasn't been stamped and is dropped on the potato, it should return to table

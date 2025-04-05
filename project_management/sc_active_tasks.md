@@ -4,13 +4,18 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 
 # STRETCH GOALS
 - At the beginning of your shift, see your potato character walk into the customs office
+- Menu Audio: Tick sounds when adjusting volume sliders
+
+# AUDIO
 
 # GRAPHICS
+- Passport: The shadow is still on the spud, is this a bug or should it be visually enhanced? 
 
 # QUEUE INTERACTION SYSTEM
 
 # CURSOR MANAGER
 - Cursor: After dragging a document the cursor returns to default even if the cursor is still hovering over a document 
+- Cursor / Bug: Target display is not showing when hovering over the missile area
 
 # MEGAPHONE DIALOGUE SYSTEM
 - Megaphone Dialogue: Rename to Bubble Dialogue System
@@ -35,7 +40,10 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Office Shutter / Bug: Do not fade out transparency of potato when enter or leaving office, only the foreground shadow
 
 
-# Z-INDEX
-- Dragged passport appears below the customs office
+# Code Loopholes (Bugs)
+- Office Shutter: Shutter opens even when open when a potato comes into the office
+- Stamp System: Stamps disappear when picked up and dragged
+- Office Shutter: When shutter is automatically raised, the potatoes stay shadow-y
 
-# RIGHT NOW
+# Currently active tasks
+
