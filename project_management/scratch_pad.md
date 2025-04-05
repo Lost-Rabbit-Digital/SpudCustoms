@@ -78,6 +78,10 @@ These are our goals, to-do tasks, and completed tasks.
 - Make sure that stamp consistently marks the same spot on the document, NOT based on where the player clicks on the stamp
 - Cursor / Bug: Target display is not showing when hovering over the missile area
 - Drag and Drop / Bug: If the player grabs the passport while it's animated the script does not properly update z-index
+- Emote System / Bug: When potatoes are clicked it only displays love emotes, could be set to display HAPPY category
+- Drag and Drop: Passport text and photo appear over the LawReceipt
+- Drag and Drop: Law receipt passes between the passport description/photo and the passport background
+- Drag and Drop / Bug: LawReceipt does not automatically close when dragged off of the suspect table
 
 ### Graphics  
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)

@@ -6,6 +6,11 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - At the beginning of your shift, see your potato character walk into the customs office
 - Menu Audio: Tick sounds when adjusting volume sliders
 - Environment: Cars passing by
+- Office Shutter / Bug: Fade out the foreground shadow when the potatoes leave the office
+- Office Shutter / Bug: Do not fade out transparency of potato when enter or leaving office, only the foreground shadow
+- Emote System: If you click the same potato 3+ times they get angry and show POPPING_VEINS emote
+- Emote System / Bug: Dot animation only shows one dots then stops
+	- Move animation to 1.0.3
 
 # AUDIO
 
@@ -22,19 +27,10 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Bubble Dialogue: Implement into the Drag and Drop system for dropping a passport onto a potato
 
 # DRAG AND DROP SYSTEM
-- Drag and Drop: Passport text and photo appear over the LawReceipt
-- Drag and Drop: Law receipt passes between the passport description/photo and the passport background
-- Drag and Drop / Bug: LawReceipt does not automatically close when dragged off of the suspect table
 
 # EMOTE SYSTEM
-- Emote System: If you click the same potato 3+ times they get angry and show POPPING_VEINS emote
-- Emote System / Bug: Dot animation only shows one dots then stops
-	- Move animation to 1.0.3
-- Emote System / Bug: When potatoes are clicked it only displays love emotes, could be set to display HAPPY category
 
 # OFFICE SHUTTER SYSTEM
-- Office Shutter / Bug: Fade out the foreground shadow when the potatoes leave the office
-- Office Shutter / Bug: Do not fade out transparency of potato when enter or leaving office, only the foreground shadow
 
 # Code Loopholes (Bugs)
 
