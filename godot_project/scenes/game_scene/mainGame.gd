@@ -17,6 +17,8 @@ var current_potato
 # Track win and lose parameters
 var difficulty_level
 
+var ui_hint_system: UIHintSystem
+
 # Track multipliers and streaks
 var point_multiplier: float = 1.0
 var correct_decision_streak: int = 0
@@ -135,8 +137,17 @@ func _ready():
 	# Connect signal
 	drag_and_drop_manager.drag_system.passport_returned.connect(_on_passport_returned)
 	
+	drag_and_drop_manager.drag_system.item_grabbed.connect(func(item):
+		if item == $Gameplay/InteractiveElements/Passport:
+			_on_passport_interaction()
+	)
+	
 	# Initialise the stamp system manager
 	setup_stamp_system()
+	
+	# Hook up decision made event
+	stamp_system_manager.stamp_decision_made.connect(_on_stamp_decision_made)
+
 	
 	queue_manager = %QueueManager
 	
@@ -198,6 +209,11 @@ func _ready():
 	suspect_panel_front = $Gameplay/SuspectPanel/SuspectPanelFront
 	suspect = $Gameplay/MugshotPhotoGenerator/SizingSprite
 	
+	# Connect Megaphone Interaction
+	$Gameplay/InteractiveElements/Megaphone/MegaphoneInteractionButton.pressed.connect(_on_megaphone_interaction_button_pressed)
+
+
+	
 	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
 
 	# Add closed passport to draggable sprites
@@ -217,7 +233,18 @@ func _ready():
 	Dialogic.timeline_ended.connect(_on_dialogue_finished)
 	#disable_controls()
 
+	# Create and initialize the UI Hint System
+	ui_hint_system = UIHintSystem.new()
+	add_child(ui_hint_system)
 	
+	# Register hintable nodes with appropriate thresholds
+	ui_hint_system.register_hintable($Gameplay/InteractiveElements/Passport/ClosedPassport, "passport", 15.0)
+	ui_hint_system.register_hintable(megaphone, "megaphone", 15.0)
+	ui_hint_system.register_hintable($Gameplay/InteractiveElements/StampBarController, "stamp_bar", 15.0)
+	
+	# Connect signals if needed
+	ui_hint_system.hint_activated.connect(_on_hint_activated)
+	ui_hint_system.hint_deactivated.connect(_on_hint_deactivated)
 
 # Dedicated function to set up the stamp system
 func setup_stamp_system():
@@ -283,6 +310,7 @@ func _on_stamp_decision_made(decision: String, is_perfect: bool):
 		process_decision(true)
 	elif decision == "rejected":
 		process_decision(false)
+	ui_hint_system.reset_timer("stamp_bar")
 
 func _on_passport_returned(item):
 	remove_stamp()
@@ -340,6 +368,10 @@ func end_shift(success: bool = true):
 		else:
 			# Fallback if method isn't added yet
 			queue_manager.set_process(false)
+	
+	# Disable UI hints
+	if ui_hint_system:
+		ui_hint_system.set_all_hints_enabled(false)
 	
 	# Disable all path following for any active runners
 	var root = get_tree().current_scene
@@ -707,9 +739,60 @@ func _on_spawn_timer_timeout():
 		#print("Potato queue limit reached, skip spawning.")
 		spawn_timer.stop()
 
+# Called when player interacts with passport
+func _on_passport_interaction():
+	ui_hint_system.reset_timer("passport")
 
+# Called when player clicks on megaphone
+func _on_megaphone_interaction_button_pressed() -> void:
+	ui_hint_system.reset_timer("megaphone")
+	megaphone_clicked()
+
+	
+# Optional: Callback for hint activation/deactivation
+func _on_hint_activated(node_name: String):
+	# You could play a sound effect here
+	pass
+	
+func _on_hint_deactivated(node_name: String):
+	# You could play a different sound effect here
+	pass
 
 func _process(_delta):
+	# Skip hint processing if game is paused or in dialogue
+	if is_game_paused or narrative_manager.is_dialogue_active():
+		return
+		
+	 # Update UI hints based on game state
+	if is_potato_in_office:
+		# We have a potato in the office, so no need to hint megaphone
+		ui_hint_system.reset_timer("megaphone")
+		
+		if drag_and_drop_manager.is_document_open("passport"):
+			# Passport is open, so no need to hint it
+			ui_hint_system.reset_timer("passport")
+			
+			# Check if passport has been stamped
+			var has_stamp = false
+			if stamp_system_manager and stamp_system_manager.passport_stampable:
+				has_stamp = stamp_system_manager.passport_stampable.get_decision() != ""
+				
+			if has_stamp:
+				# Passport has been stamped, no need to hint stamp bar
+				ui_hint_system.reset_timer("stamp_bar")
+			else:
+				# Process hint for stamp bar only
+				ui_hint_system.process_hints(_delta)
+		else:
+			# Passport is not open, so hint passport but not stamp bar
+			ui_hint_system.reset_timer("stamp_bar")
+			ui_hint_system.process_hints(_delta)
+	else:
+		# No potato in office, so hint megaphone but not passport or stamp bar
+		ui_hint_system.reset_timer("passport")
+		ui_hint_system.reset_timer("stamp_bar")
+		ui_hint_system.process_hints(_delta)
+		
 	# Handle prompt dialogue visibility
 	var mouse_pos = get_global_mouse_position()
 	var suspect = $Gameplay/MugshotPhotoGenerator/SizingSprite
@@ -726,6 +809,8 @@ func _process(_delta):
 	# Hide megaphone dialogue box when the officer sound stops playing
 	if !%SFXPool.is_playing():
 		megaphone_dialogue_box.visible = false
+		
+		
 		
 	# Update combo timer
 	if combo_count > 0:
@@ -1225,6 +1310,11 @@ func disable_controls():
 	# Stop all timers and queues
 	$SystemManagers/Timers/SpawnTimer.stop()
 
+	# Disable UI hints
+	if ui_hint_system:
+		ui_hint_system.set_all_hints_enabled(false)
+
+
 func enable_controls():
 	# Re-enable controls after dialogue
 	print("enabling controls")
@@ -1236,6 +1326,10 @@ func enable_controls():
 		border_runner_system.runner_chance = original_runner_chance
 	# Stop all timers and queues
 	$SystemManagers/Timers/SpawnTimer.start()
+	# Enable UI hints
+	if ui_hint_system:
+		ui_hint_system.set_all_hints_enabled(true)
+	
 		
 # Update the _on_intro_dialogue_finished handler
 func _on_intro_dialogue_finished():
@@ -1451,5 +1545,3 @@ func fade_transition():
 	var tween = create_tween()
 	tween.tween_property(fade_rect, "color", Color(0, 0, 0, 1), 0.5)
 	
-func _on_megaphone_interaction_button_pressed() -> void:
-	megaphone_clicked()
