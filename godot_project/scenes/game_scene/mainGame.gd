@@ -385,7 +385,7 @@ func end_shift(success: bool = true):
 		# Add survival bonus
 		var survival_bonus = 500
 		Global.add_score(survival_bonus)
-		Global.display_green_alert(alert_label, alert_timer, "Shift survived! Bonus: " + str(survival_bonus) + " points!")
+		Global.display_green_alert(alert_label, alert_timer, "Quota met, shift completed! \n Bonus: " + str(survival_bonus) + " points!")
 				
 		# Lower the shutter with animation when successful
 		if not office_shutter_controller.shutter_opened_this_shift:
@@ -422,7 +422,6 @@ func end_shift(success: bool = true):
 	get_tree().paused = false
 	
 	# Set Stamp Bar Controller to be below shift summary screen
-	# TODO: Set this to 15 or something so that it doesn't clip under the table at the end of the round
 	$Gameplay/InteractiveElements/StampBarController.z_index = 1
 	
 	# Create a tween for a cleaner fade transition
@@ -873,14 +872,22 @@ func process_decision(allowed):
 	else:
 	   # Decision was incorrect
 		var alert_text = "You have caused unnecessary suffering, officer..."
-		if validation.violation_reason:
-			alert_text += "\n" + validation.violation_reason
+		if allowed and !correct_decision:
+			# Player approved an invalid potato
+			if validation.violation_reason:
+				alert_text += "\n" + validation.violation_reason
+			else:
+				# Player rejected a valid potato
+				alert_text += "\nThis potato meets all requirements and should have been approved."
+		
 		alert_text += "\n+1 Strike!"
 		Global.display_red_alert(alert_label, alert_timer, alert_text)
 		correct_decision_streak = 0
 		point_multiplier = 1.0
 		Global.strikes += 1
 		if Global.strikes >= Global.max_strikes:
+			alert_text = "Maximum strikes exceeded! Your shift is over."
+			Global.display_red_alert(alert_label, alert_timer, alert_text)
 			# Lower the shuttere when max strikes reached
 			office_shutter_controller.lower_shutter(0.7)  
 			end_shift(false) # end shift with failure condition
