@@ -1,9 +1,9 @@
-# CURRENTLY ACTIVE TASKS
+# Spud Customs Active Tasks
 These are my, BodenGameDev, tasks which I'm currently working on.
 I will move the tasks to the scratch_pad completed section when the task has been completed.
 
 
-# STRETCH GOALS
+## Stretch Goals
 - At the beginning of your shift, see your potato character walk into the customs office
 - Menu Audio: Tick sounds when adjusting volume sliders
 - Environment: Cars passing by
@@ -13,26 +13,26 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Emote System / Bug: Dot animation only shows one dots then stops
 	- Move animation to 1.0.3
 
-# AUDIO
+## Audio
 
-# GRAPHICS
+## Graphics
 - Passport: The shadow is still on the spud for the picture, is this a bug or should it be visually enhanced? 
 
-# QUEUE INTERACTION SYSTEM
+## Queue Interaction System
 
-# DRAG AND DROP SYSTEM
+## Drag and Drop Manager
 
-# EMOTE SYSTEM
+## Emote System
 
-# OFFICE SHUTTER SYSTEM
+## Office Shutter System
 
-# CURSOR MANAGER
+## Cursor Manager
 - Cursor: After dragging a document the cursor returns to default even if the cursor is still hovering over a document 
 
-# MEGAPHONE DIALOGUE SYSTEM
+## Megaphone Dialogue System
 - Megaphone Dialogue: Rename to Bubble Dialogue System
 - Bubble Dialogue: Implement into the Drag and Drop system for dropping a passport onto a potato to have varied dialogue instead of the same hardcoded text
 
-# Code Loopholes (Bugs)
+## Code Loopholes (Bugs)
 
-# Currently active tasks
+## Currently active tasks
