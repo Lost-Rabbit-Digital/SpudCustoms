@@ -1,3 +1,4 @@
+
 ### Completed Tasks for 1.0.2
 Before release, review GitHub commits using the following command `git log --since="last month" --pretty=format:'%h,%an,%ar,%s' > log.csv` - This artifact can then be fed into Claude or similar to analyze the changes.
 - Add to Attributions.md - Emotes: https://kenney.nl/assets/emotes-pack

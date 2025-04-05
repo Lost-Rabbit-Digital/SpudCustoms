@@ -75,7 +75,6 @@ These are our goals, to-do tasks, and completed tasks.
 - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
 - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
 - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
-- Corpses added too high to tree, screen shake not affecting them
 - Corpses need a slightly lower z-index to show BEHIND explosions
 - Runner potatoes are registering TWO strikes instead of just 1
 - Skip button not disappearing, and resetting the shift when pressed
@@ -127,3 +126,4 @@ These are our goals, to-do tasks, and completed tasks.
 - Fix skip story bug not hiding the history button quickly
 
 ### Completed Tasks for 1.0.2
+- Corpses added too high to tree, screen shake not affecting them
