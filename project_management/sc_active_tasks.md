@@ -16,7 +16,6 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 
 # CURSOR MANAGER
 - Cursor: After dragging a document the cursor returns to default even if the cursor is still hovering over a document 
-- Cursor / Bug: Target display is not showing when hovering over the missile area
 
 # MEGAPHONE DIALOGUE SYSTEM
 - Megaphone Dialogue: Rename to Bubble Dialogue System
@@ -26,7 +25,6 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Drag and Drop: Passport text and photo appear over the LawReceipt
 - Drag and Drop: Law receipt passes between the passport description/photo and the passport background
 - Drag and Drop / Bug: LawReceipt does not automatically close when dragged off of the suspect table
-- Drag and Drop / Bug: If the player grabs the passport while it's animated the script does not properly update z-index
 
 # EMOTE SYSTEM
 - Emote System: If you click the same potato 3+ times they get angry and show POPPING_VEINS emote

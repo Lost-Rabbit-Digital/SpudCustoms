@@ -76,6 +76,8 @@ These are our goals, to-do tasks, and completed tasks.
 - Runner potatoes are registering TWO strikes instead of just 1
 - Skip button not disappearing, and resetting the shift when pressed
 - Make sure that stamp consistently marks the same spot on the document, NOT based on where the player clicks on the stamp
+- Cursor / Bug: Target display is not showing when hovering over the missile area
+- Drag and Drop / Bug: If the player grabs the passport while it's animated the script does not properly update z-index
 
 ### Graphics  
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
