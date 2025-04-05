@@ -35,7 +35,7 @@ var stamp_system_manager: StampSystemManager
 var cursor_manager = null
 
 ## Reference to the office shutter 
-var office_shutter: OfficeShutterController
+var office_shutter = null
 
 ## Called when the node is added to the scene.
 ##
@@ -103,7 +103,8 @@ func initialize(game_scene: Node):
 		"suspect": suspect,
 		"audio_player": audio_player,
 		"draggable_items": draggable_items,
-		"stamp_bar_controller": stamp_bar_controller
+		"stamp_bar_controller": stamp_bar_controller,
+		"office_shutter": office_shutter
 	})
 
 ## Handles input events for document interaction.

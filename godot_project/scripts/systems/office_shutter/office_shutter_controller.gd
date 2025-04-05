@@ -46,7 +46,7 @@ func _process(_delta):
 		shutter_state_delay.start()
 
 # Mechanical shutter raising with multiple easing functions
-func raise_shutter(duration: float = 1.5):
+func raise_shutter(duration: float = 0.5):
 	active_shutter_state = shutter_state.OPEN
 	
 	# Now we animate to UP position (frame 0) when opening
@@ -193,7 +193,7 @@ func shutter_state_toggle() -> void:
 	if active_shutter_state == shutter_state.CLOSED:
 		#print("Attempt to open shutter")
 		# If the shutter is closed, open it upon the click
-		raise_shutter(0.5)
+		raise_shutter()
 	else:
 		#print("Attempt to shut shutter")
 		# If the shutter is already open, close it upon the click

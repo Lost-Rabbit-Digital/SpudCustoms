@@ -630,6 +630,9 @@ func _on_potato_path_completed(potato: PotatoPerson):
 	animate_mugshot_and_passport()
 	
 func animate_mugshot_and_passport():
+	# Lift up the office shutter
+	office_shutter_controller.raise_shutter()
+	
 	#print("Animating mugshot and passport")
 	update_potato_info_display()
 	
@@ -690,8 +693,10 @@ func _process(_delta):
 	var suspect = $Gameplay/MugshotPhotoGenerator/SizingSprite
 	var passport = $Gameplay/InteractiveElements/Passport
 	
+	# Only show the dialogue if the shutter is OPEN
 	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and drag_and_drop_manager.is_document_open("passport") == false and drag_and_drop_manager.drag_system.get_dragged_item() == passport:
-		$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = true
+		if office_shutter_controller.active_shutter_state == office_shutter_controller.shutter_state.OPEN:
+			$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = true
 	else:
 		$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = false
 	

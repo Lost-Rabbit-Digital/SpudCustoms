@@ -168,4 +168,5 @@ These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release
 - Cursor / Bug: Offset to the right a bit
 - Queue Interaction: Highlight on hover of potato
 - New game button starts day 1 instead of day 0!
+- Office Shutter / Bug: The user should not be able to pass the potato documents if the shutter is closed
 - Regenerate potato images for each character in narrative, 16 total

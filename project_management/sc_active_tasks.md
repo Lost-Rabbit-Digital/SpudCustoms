@@ -3,6 +3,7 @@ These are my, BodenGameDev, tasks which I'm currently working on.
 I will move the tasks to the scratch_pad completed section when the task has been completed.
 
 # STRETCH GOALS
+- At the beginning of your shift, see your potato character walk into the customs office
 
 # GRAPHICS
 
@@ -40,6 +41,6 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 
 # RIGHT NOW
 - Office Shutter / Bug: The potato should not pass documents through if the shutter is closed
-- Office Shutter / Bug: The user should not be able to pass the potato documents if the shutter is closed
 
-- Check shutter_state when I do the check in drag_and_drop_system.gd for dropping the passport on the potato
+- Currently making it so the shutter raises everytime a potato enters the office, but before I commit that I need to fix the drop zone bug
+- Fixing drop zone with shutter, previous implementation broke the interaction with passports

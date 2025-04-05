@@ -492,6 +492,7 @@ visible = false
 main_node = NodePath("../../..")
 
 [node name="OfficeShutterController" parent="Gameplay/InteractiveElements" node_paths=PackedStringArray("character_generator") instance=ExtResource("21_362e4")]
+unique_name_in_owner = true
 position = Vector2(1075, 362)
 character_generator = NodePath("../../MugshotPhotoGenerator")
 

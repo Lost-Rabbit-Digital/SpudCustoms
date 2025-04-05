@@ -106,7 +106,7 @@ func initialize(config: Dictionary):
 	suspect_panel = config.get("suspect_panel")  
 	suspect = config.get("suspect")
 	audio_player = config.get("audio_player")
-	audio_player = config.get("office_shutter")
+	office_shutter = config.get("office_shutter")
 	
 	# Get stamp bar controller reference if provided
 	_stamp_bar_controller = config.get("stamp_bar_controller")
@@ -189,16 +189,29 @@ func handle_input_event(event: InputEvent, mouse_pos: Vector2) -> bool:
 ## Handles mouse motion for hover effects.
 ##
 ## Updates cursor and hover state based on what item is under the cursor.
-## @param mouse_position The current mouse position in global coordinates.
-func _handle_mouse_motion(mouse_position: Vector2) -> void:
+## @param mouse_pos The current mouse position in global coordinates.
+func _handle_mouse_motion(mouse_pos: Vector2) -> void:
 	if dragged_item:
 		# Don't change cursor while dragging
 		return
 		
 	# Find item under cursor
-	var item_under_cursor = find_topmost_item_at(mouse_position)
+	var item_under_cursor = find_topmost_item_at(mouse_pos)
 	
-	# Change cursor if hovering over a document
+	# If the shutter is closed and we're over the suspect panel or suspect area, don't show hover effects
+	var is_over_suspect_area = identify_drop_zone(mouse_pos) == "suspect" or identify_drop_zone(mouse_pos) == "suspect_panel"
+	var is_shutter_closed = office_shutter.active_shutter_state and office_shutter.shutter_state.CLOSED
+	
+	if is_over_suspect_area and is_shutter_closed:
+		# Reset cursor if previously hovering
+		if cursor_manager and hovered_item != null:
+			cursor_manager.update_cursor("default")
+			
+		# Clear hover state
+		hovered_item = null
+		return
+	
+	# Normal hover behavior for other cases
 	if item_under_cursor != hovered_item:
 		if item_under_cursor:
 			# Set hover cursor if hovering over a draggable document
@@ -318,8 +331,32 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 		# Get document controller
 		var doc_controller = get_document_controller(dragged_item)
 		
-		# Check if drop zone is valid
-		if (drop_zone == "inspection_table" or drop_zone == "suspect_panel" or drop_zone == "suspect") and office_shutter and office_shutter.shutter_state == "closed":
+		# First check if trying to drop on suspect/panel with closed shutter
+		if (drop_zone == "suspect" or drop_zone == "suspect_panel") and office_shutter.active_shutter_state == office_shutter.shutter_state.CLOSED:
+			# Shutter is closed - can't drop here, return to table
+			if doc_controller and doc_controller.is_document_open():
+				doc_controller.close()
+			
+			# Maybe play a "blocked" sound effect
+			if audio_player:
+				audio_player.stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
+				audio_player.play()
+			
+			# Return to table
+			_return_item_to_table(dragged_item)
+			
+			# Clear the dragged item after return animation starts
+			var item = dragged_item
+			dragged_item = null
+			
+			# Reset cursor immediately
+			if cursor_manager:
+				cursor_manager.update_cursor("default")
+			
+			return true
+		
+		# Otherwise check normal valid drop zones
+		elif drop_zone == "inspection_table" or drop_zone == "suspect_panel" or drop_zone == "suspect":
 			# Valid drop zone
 			if doc_controller:
 				doc_controller.on_drop(drop_zone)
@@ -374,6 +411,16 @@ func _update_dragged_item_position(mouse_pos: Vector2):
 		var previous_position = dragged_item.global_position
 		var was_on_table = inspection_table and inspection_table.get_rect().has_point(inspection_table.to_local(previous_position))
 		
+		# Check if we would be moving over suspect area with closed shutter
+		var target_zone = identify_drop_zone(mouse_pos + drag_offset)
+		var is_suspect_area = target_zone == "suspect" or target_zone == "suspect_panel"
+		var is_shutter_closed = office_shutter.active_shutter_state and office_shutter.shutter_state.CLOSED
+		
+		if is_suspect_area and is_shutter_closed:
+			# Don't update position - keep at previous valid position
+			# This creates a "blocking" effect at the shutter boundary
+			return
+			
 		# Update position using the drag_offset
 		dragged_item.global_position = mouse_pos + drag_offset
 		
@@ -573,8 +620,14 @@ func identify_drop_zone(pos: Vector2) -> String:
 	if inspection_table and inspection_table.get_rect().has_point(inspection_table.to_local(pos)):
 		return "inspection_table"
 	elif suspect_panel and suspect_panel.get_rect().has_point(suspect_panel.to_local(pos)):
+		# If shutter is closed, don't allow suspect panel
+		if office_shutter.active_shutter_state and office_shutter.shutter_state.CLOSED:
+			return "none"
 		return "suspect_panel"
 	elif suspect and suspect.get_rect().has_point(suspect.to_local(pos)):
+		# If shutter is closed, don't allow suspect
+		if office_shutter.active_shutter_state and office_shutter.shutter_state.CLOSED:
+			return "none"
 		return "suspect"
 	return "none"
 
