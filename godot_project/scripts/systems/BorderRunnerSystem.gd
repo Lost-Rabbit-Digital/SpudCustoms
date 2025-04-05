@@ -124,7 +124,7 @@ class Missile:
 		sprite = AnimatedSprite2D.new()
 		sprite.sprite_frames = sprite_frames
 		sprite.visible = true
-		sprite.z_index = 15
+		sprite.z_index = 8
 		if sprite.sprite_frames.has_animation("default"):
 			sprite.play("default")  # Start animation
 		else:
@@ -385,7 +385,7 @@ func spawn_smoke_particle(position: Vector2, direction: Vector2):
 	smoke.global_position = position - (direction * 20)
 	smoke.rotation = randf() * TAU
 	smoke.modulate.a = 1.0
-	smoke.z_index = 14
+	smoke.z_index = 11
 	smoke.visible = true
 	smoke.play("default")
 	
@@ -456,7 +456,7 @@ func start_runner(potato: PotatoPerson, is_rejected: bool = false):
 	# Ensure the potato is visible
 	potato.visible = true
 	potato.modulate.a = 1.0
-	potato.z_index = 12  # Ensure it's above background elements
+	potato.z_index = 8  # Ensure it's above background elements
 	
 	# Set the runner speed directly on the potato
 	potato.runner_base_speed = runner_speed  # Add this line
@@ -687,7 +687,7 @@ func trigger_explosion(missile_or_position):
 	explosion.sprite_frames = explosion_frames
 	explosion.global_position = explosion_position
 	explosion.scale = Vector2(explosion_size / 16.0, explosion_size / 16.0) * randf_range(0.5, 2)
-	explosion.z_index = 16  # Above missiles
+	explosion.z_index = 12  # Above missiles
 	explosion.play("default")
 		
 	# Ensure explosion is removed after animation
@@ -760,7 +760,7 @@ func trigger_explosion(missile_or_position):
 	smoke.sprite_frames = smoke_frames
 	smoke.global_position = explosion_position
 	smoke.scale = Vector2(0.05, 0.05)
-	smoke.z_index = 15 # Above missiles, below explosion
+	smoke.z_index = 13 # Above missiles, below explosion
 	smoke.play("default")
 	
 		# Create a tween for behavior
@@ -786,7 +786,7 @@ func trigger_explosion(missile_or_position):
 	var smoke_alpha_timer = get_tree().create_timer(0.6)
 	smoke_alpha_timer.timeout.connect(func():
 		if is_instance_valid(smoke):
-			smoke.z_index = 17
+			smoke.z_index = 13
 	)
 	
 	var smoke_cleanup_timer = get_tree().create_timer(1.5)
@@ -869,7 +869,7 @@ func handle_successful_hit(runner, explosion_pos):
 		
 	corpse.global_position = runner.global_position
 	
-	corpse.z_index = 10 # Under explosions, above world background.
+	corpse.z_index = 8 # Under explosions, above world background.
 	
 	# Slightly adjust size randomly
 	corpse.scale = Vector2(0.9, 0.9) * randf_range(0.9, 1.1) 
@@ -1033,7 +1033,7 @@ func spawn_gibs(pos):
 		var gib = Gib.new()
 		add_child(gib)
 		
-		gib.z_index = 20
+		gib.z_index = 11
 		gib.z_as_relative = false
 		
 		# Set random gib texture

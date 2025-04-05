@@ -348,6 +348,7 @@ func spawn_footprint():
 func _on_potato_button_pressed() -> void:
 	interact_with_potato()
 
+# TODO: Add error handling for these two functions incase the potato does not have a material
 func _on_potato_button_mouse_entered() -> void:
 	%PotatoSprite.material.set_shader_parameter("enable_highlight", true)
 

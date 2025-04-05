@@ -1469,6 +1469,7 @@ texture = ExtResource("3_0pn2j")
 [node name="Character" type="Node2D" parent="."]
 
 [node name="Head" type="AnimatedSprite2D" parent="Character"]
+z_index = -1
 position = Vector2(0, -21)
 sprite_frames = SubResource("SpriteFrames_ay427")
 animation = &"yukon_gold_head_Male"

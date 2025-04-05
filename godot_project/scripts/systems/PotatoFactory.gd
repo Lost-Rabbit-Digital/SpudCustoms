@@ -163,7 +163,7 @@ static func create_gibs(position: Vector2, count: int, parent: Node, config: Dic
 		gib.texture = gib_textures[randi() % gib_textures.size()]
 		gib.position = position
 		gib.scale = gib_scale
-		gib.z_index = 20  # Make sure gibs appear above other elements
+		gib.z_index = 11  # Make sure gibs appear above other elements
 		
 		# Set random velocity - use half-circle upward direction
 		var angle = randf_range(-PI, 0)  # Only spawn in upward half-circle (-180° to 0°)
@@ -277,7 +277,7 @@ class AnimatedExplosion extends Node2D:
 	func _init(explosion_frames: Array[Texture2D], pos: Vector2):
 		position = pos
 		frames = explosion_frames
-		z_index = 25  # Ensure explosion appears above gibs and other elements
+		z_index = 12  # Ensure explosion appears above gibs and other elements
 		
 		# Create sprite for displaying frames
 		sprite = Sprite2D.new()

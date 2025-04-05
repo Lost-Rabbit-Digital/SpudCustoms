@@ -131,3 +131,5 @@ These are our goals, to-do tasks, and completed tasks.
 - Z-index: Dragged passport appears below the suspect table
 - Drag and Drop: If the passport hasn't been stamped and is hovered over the potato, it should not prompt the dialogue
 - Drag and Drop: If the passport hasn't been stamped and is dropped on the potato, it should return to table
+- Emote System: Reduce frequency of emotes occuring
+- Drag and Drop: Clip the document edges if they are off the table

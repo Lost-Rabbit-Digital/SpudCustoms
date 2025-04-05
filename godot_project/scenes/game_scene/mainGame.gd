@@ -654,8 +654,9 @@ func _on_potato_path_completed(potato: PotatoPerson):
 	animate_mugshot_and_passport()
 	
 func animate_mugshot_and_passport():
-	# Lift up the office shutter
-	office_shutter_controller.raise_shutter()
+	# Lift up the office shutter if it's closed
+	if office_shutter_controller.active_shutter_state == office_shutter_controller.shutter_state.CLOSED:
+		office_shutter_controller.raise_shutter()
 	
 	#print("Animating mugshot and passport")
 	update_potato_info_display()
@@ -672,7 +673,7 @@ func animate_mugshot_and_passport():
 	# Reset positions and visibility
 	mugshot_generator.position.x = suspect_panel_spawn_node.position.x + suspect_panel_front.texture.get_width()
 	passport.visible = false
-	passport.z_index = 14
+	passport.z_index = 7
 	passport.position = Vector2(passport_spawn_point_begin.position.x, passport_spawn_point_begin.position.y)
 
 	var tween = create_tween()
@@ -686,7 +687,6 @@ func animate_mugshot_and_passport():
 	tween.tween_property(passport, "modulate:a", 1, 1)
 	tween.tween_property(passport, "visible", true, 0).set_delay(1)
 	tween.tween_property(passport, "position:y", passport_spawn_point_end.position.y, 0.4).set_delay(1)
-	tween.tween_property(passport, "z_index", 14, 0).set_delay(2)
 
 	tween.chain().tween_callback(func(): print("Finished animating mugshot and passport"))
 	

@@ -30,10 +30,11 @@ signal passport_returned(item)
 
 # Configuration
 ## Z-index for passport documents in normal state.
-const PASSPORT_Z_INDEX = 14
+const PASSPORT_Z_INDEX = 3
 
 ## Z-index for items being actively dragged (higher than normal).
-const DRAGGING_Z_INDEX = 15
+const DEFAULT_Z_INDEX = 3
+const DRAGGING_Z_INDEX = 20
 
 ## Duration in seconds for the return animation when dropping outside valid zones.
 const RETURN_TWEEN_DURATION = 0.3
@@ -247,7 +248,8 @@ func _handle_mouse_press(mouse_position: Vector2) -> bool:
 			document_was_closed = false
 			
 			# Store original z-index and set to higher value while dragging
-			original_z_index = dragged_item.z_index
+			#original_z_index = dragged_item.z_index
+			original_z_index = DEFAULT_Z_INDEX
 			dragged_item.z_index = DRAGGING_Z_INDEX
 			
 			# Get current drop zone
