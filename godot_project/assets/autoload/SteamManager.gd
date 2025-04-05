@@ -16,7 +16,7 @@ const ACHIEVEMENTS = {
 # Leaderboard variables
 var is_fetching_leaderboard = false
 var current_leaderboard_handle = 0
-var cached_leaderboard_entries = []
+var cached_leaderboard_entries = [{"name":"HackerMan","score":"1250"}, {"name": "HeartCoded", "score":"800"}]
 
 # Signals
 signal leaderboard_updated(entries: Array)

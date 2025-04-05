@@ -60,18 +60,18 @@ static func start_game():
 	game_state.times_played += 1
 	GlobalState.save()
 
-static func set_high_score(level_number: int, score: int):
+static func set_high_score(level: int, difficulty: String, score: int):
 	var game_state = get_game_state()
-	if not game_state:
+	if not game_state: 
 		return
 		
-	# Only update if the new score is higher
-	if not game_state.high_scores.has(level_number) or score > game_state.high_scores[level_number]:
-		game_state.high_scores[level_number] = score
-		GlobalState.save()
+	# Use the SaveManager to save the high score
+	SaveManager.save_level_high_score(level, difficulty, score)
+	GlobalState.save()
 		
-static func get_high_score(level_number: int) -> int:
-	var game_state = get_game_state()
-	if not game_state or not game_state.high_scores.has(level_number):
-		return 0
-	return game_state.high_scores[level_number]
+static func get_high_score(level: int, difficulty: String = "") -> int:
+	if difficulty.is_empty():
+		# Use the current difficulty from Global
+		difficulty = Global.difficulty_level
+		
+	return SaveManager.get_level_high_score(level, difficulty)

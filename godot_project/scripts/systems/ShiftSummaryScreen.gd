@@ -36,10 +36,10 @@ func _ready():
 	$ScreenBackground.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	
 	# Connect button signals
-	$ContinueButton.connect("pressed", Callable(self, "_on_continue_button_pressed"))
-	$SubmitScoreButton.connect("pressed", Callable(self, "_on_submit_score_button_pressed"))
-	$RestartButton.connect("pressed", Callable(self, "_on_restart_button_pressed"))
-	$MainMenuButton.connect("pressed", Callable(self, "_on_main_menu_button_pressed"))
+	#$ContinueButton.connect("pressed", Callable(self, "_on_continue_button_pressed"))
+	#$SubmitScoreButton.connect("pressed", Callable(self, "_on_submit_score_button_pressed"))
+	#$RestartButton.connect("pressed", Callable(self, "_on_restart_button_pressed"))
+	#$MainMenuButton.connect("pressed", Callable(self, "_on_main_menu_button_pressed"))
 	
 	# Call animation
 	play_entry_animation()
@@ -190,10 +190,12 @@ Performance Rating:
 	
 	$RightPanel/PerformanceStats.add_theme_color_override("font_color", performance_color)
 
-	var high_score = GameState.get_high_score(stats.get("shift", 1))
-	var is_new_high_score = stats.get("score", 0) > high_score
+	# Update the performance stats with high score information
+	var level_id = stats.get("shift", 1)
+	var high_score = GameState.get_high_score(level_id)
+	var is_new_high_score = stats.get("score", 0) > high_score && high_score > 0
 	
-	if is_new_high_score && high_score > 0:
+	if is_new_high_score:
 		$RightPanel/PerformanceStats.text += "\nNEW HIGH SCORE!"
 		$RightPanel/PerformanceStats.add_theme_color_override("font_color", Color(1.0, 0.8, 0.2, 1.0))
 	elif high_score > 0:
@@ -306,12 +308,15 @@ func update_leaderboard():
 	await get_tree().create_timer(1.0).timeout
 	
 	var entries = [{"name":"Score?","score":"404"}]
-	entries = Global.cached_leaderboard_entries
+	if SteamManager.cached_leaderboard_entries:
+		entries = SteamManager.cached_leaderboard_entries
+	else:
+		push_warning("No cached leaderboard entries")
 	for i in range(min(entries.size(), 12)):
 		leaderboard_text += "%2d  %-15s  %s\n" % [
 			i + 1,
 			entries[i].name,
-			format_number(entries[i].score)
+			format_number(int(entries[i].score))
 		]
 	
 	$LeaderboardPanel/Entries.text = leaderboard_text
@@ -337,27 +342,42 @@ func _on_submit_score_button_pressed() -> void:
 	update_leaderboard()
 	
 func transition_to_scene(scene_path: String):
-	# Create a tween for a cleaner fade transition
+	# Create a canvas layer to ensure the fade rectangle covers everything
+	var canvas_layer = CanvasLayer.new()
+	canvas_layer.layer = 128  # Very high layer to be above everything
+	add_child(canvas_layer)
+	
+	# Create a properly sized fade rectangle
 	var fade_rect = ColorRect.new()
 	fade_rect.color = Color(0, 0, 0, 0)
 	fade_rect.size = get_viewport_rect().size
-	fade_rect.z_index = 100  # Ensure it's above everything
-	add_child(fade_rect)
+	canvas_layer.add_child(fade_rect)
+	
+	# Make sure the rect covers the whole screen regardless of viewport size
+	fade_rect.anchor_right = 1.0
+	fade_rect.anchor_bottom = 1.0
 	
 	# Fade out animation
 	var tween = create_tween()
 	tween.tween_property(fade_rect, "color", Color(0, 0, 0, 1), 0.5)
 	
-	# Load scene after animation completes
+	# Use a timer to ensure the tween completes before changing scenes
 	tween.tween_callback(func():
-		# Access SceneLoader directly
-		#if SceneLoader:
-		#	SceneLoader.load_scene(scene_path)
-		#else:
-		push_error("SceneLoader not found, falling back to change_scene_to_file")
-		get_tree().change_scene_to_file(scene_path)
-		# Clean up the fade rectangle
-		fade_rect.queue_free()
+		# Create a small delay to ensure the screen is fully black
+		var timer = get_tree().create_timer(0.1)
+		timer.timeout.connect(func(): 
+			# Check if SceneLoader exists in the scene tree (it should be autoloaded)
+			if Engine.has_singleton("SceneLoader") or get_node_or_null("/root/SceneLoader"):
+				# Use SceneLoader if available
+				var loader = get_node("/root/SceneLoader")
+				if loader and loader.has_method("load_scene"):
+					loader.load_scene(scene_path)
+				else:
+					get_tree().change_scene_to_file(scene_path)
+			else:
+				# Direct scene transition fallback
+				get_tree().change_scene_to_file(scene_path)
+		)
 	)
 
 func _on_continue_button_pressed() -> void: 

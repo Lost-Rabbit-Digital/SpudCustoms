@@ -390,10 +390,11 @@ func end_shift(success: bool = true):
 		# Lower the shutter with animation when successful
 		if not office_shutter_controller.shutter_opened_this_shift:
 			office_shutter_controller.lower_shutter(1.0)
-	
-	if success:
-		GameState.set_high_score(current_shift, Global.score)
 		
+		# Setting high score for current level and difficulty
+		print("Setting high score of: ", Global.score, " for : ", current_shift, " and difficulty level", difficulty_level)
+		GameState.set_high_score(current_shift, Global.difficulty_level, Global.score)
+	
 	# Update quota display one last time to ensure it's correct
 	update_quota_display()
 	
@@ -468,7 +469,7 @@ func _on_shift_summary_continue():
 	var completed_shift = current_shift
 	
 	# Save high score for the current level
-	GameState.set_high_score(completed_shift, Global.score)
+	GameState.set_high_score(completed_shift, Global.difficulty_level, Global.score)
 	
 	# Advance the shift and story state
 	Global.advance_shift()
@@ -832,12 +833,6 @@ func calculate_age(date_of_birth: String) -> int:
 func _on_score_updated(new_score: int):
 	$UI/Labels/ScoreLabel.text = "Score: " + str(new_score)
 
-func go_to_game_win():
-	print("Transitioning to game win scene with score:", Global.score)
-	Global.final_score = Global.score
-	Global.shift += 1
-	print("ALERT: go_to_game_win() has been disabled")
-
 func process_decision(allowed):
 	print("Evaluating immigration decision in process_decision()...")
 	if !current_potato_info or current_potato_info.is_empty():
@@ -1161,9 +1156,10 @@ func _exit_tree():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _on_dialogue_started():
-	# Completely pause all game systems
 	bgm_player.stop()
+	# Completely pause all game systems
 	is_game_paused = true
+	get_tree().paused = true
 	# Tell the border runner system to pause with dialogic mode
 	if border_runner_system:
 		border_runner_system.set_dialogic_mode(true)
@@ -1175,6 +1171,7 @@ func _on_dialogue_finished():
 	Global.quota_met = 0
 	Global.strikes = 0
 	# Completely unpause all game systems
+	get_tree().paused = false
 	is_game_paused = false
 	# Tell the border runner system dialogic mode is done
 	if border_runner_system:
@@ -1182,7 +1179,7 @@ func _on_dialogue_finished():
 	border_runner_system.is_enabled = true
 	enable_controls()
 	
-	if Global.current_story_state >= 13:
+	if Global.current_story_state >= 10:
 		# Game complete, show credits or return to menu
 		get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
 		print("ERROR: _on_dialogue_finished called StoryState.COMPLETED but no scene loaded")
@@ -1416,13 +1413,13 @@ func transition_to_scene(scene_path: String):
 	# Load scene after animation completes
 	tween.tween_callback(func():
 		# Access SceneLoader directly
-		#if SceneLoader:
-		#	SceneLoader.load_scene(scene_path)
-		#else:
-		push_error("SceneLoader not found, falling back to change_scene_to_file")
-		get_tree().change_scene_to_file(scene_path)
-		# Clean up the fade rectangle
-		fade_rect.queue_free()
+		if SceneLoader:
+			SceneLoader.load_scene(scene_path)
+		else:
+			push_error("SceneLoader not found, falling back to change_scene_to_file")
+			get_tree().change_scene_to_file(scene_path)
+			# Clean up the fade rectangle
+			fade_rect.queue_free()
 	)
 
 

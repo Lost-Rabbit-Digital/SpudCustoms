@@ -1,5 +1,26 @@
 extends Node
 
+var high_scores = {
+	"level_highscores": {
+		"1": {  # Level ID as string
+			"Easy": 100,
+			"Normal": 200,
+			"Expert": 300
+		},
+		"2": {
+			"Easy": 150,
+			"Normal": 250,
+			"Expert": 350
+		}
+	},
+	"global_highscores": {
+		"Easy": 500,
+		"Normal": 750,
+		"Expert": 1000
+	}
+}
+
+
 # Save file paths
 const GAMESTATE_SAVE_PATH = "user://gamestate.save"
 const HIGHSCORES_SAVE_PATH = "user://highscores.save"
@@ -126,11 +147,19 @@ func save_level_high_score(level: int, difficulty: String, score: int) -> bool:
 	var current_high_score = get_level_high_score(level, difficulty)
 	if score > current_high_score:
 		game_state["level_highscores"][level_key][difficulty] = score
+		
+		# Also update global high score if needed
+		if not game_state.has("global_highscores"):
+			game_state["global_highscores"] = {}
+			
+		if not game_state["global_highscores"].has(difficulty) or score > game_state["global_highscores"][difficulty]:
+			game_state["global_highscores"][difficulty] = score
+			
 		return save_game_state(game_state)
 		
 	return true  # No need to save, existing score is higher
 
-# Get high score for a specific level and difficulty
+## Get high score for a specific level and difficulty
 func get_level_high_score(level: int, difficulty: String) -> int:
 	var game_state = load_game_state()
 	
@@ -144,6 +173,12 @@ func get_level_high_score(level: int, difficulty: String) -> int:
 		return level_highscores[level_key].get(difficulty, 0)
 		
 	return 0  # No high score for this level and difficulty
+
+## Get global high score for a difficulty
+func get_global_high_score(difficulty: String) -> int:
+	var game_state = load_game_state()
+	var global_highscores = game_state.get("global_highscores", {})
+	return global_highscores.get(difficulty, 0)
 
 # Reset all game state data
 func reset_all_game_data(keep_high_scores: bool = true) -> bool:

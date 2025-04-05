@@ -75,11 +75,18 @@ func add_score(points: int):
 	final_score = score
 	score_updated.emit(score)
 	
-	# Check for high score
-	if score > high_scores[difficulty_level]:
-		high_scores[difficulty_level] = score
+	# Save high score for the current level
+	var high_score = SaveManager.get_level_high_score(shift, difficulty_level)
+	
+	# Check if this is a new high score for this level and difficulty
+	if score > high_score:
+		SaveManager.save_level_high_score(shift, difficulty_level, score)
 		high_score_achieved.emit(difficulty_level, score)
-		SaveManager.save_high_scores(high_scores)
+
+# Add a function to get high score for the current level
+func get_current_level_high_score() -> int:
+	return SaveManager.get_level_high_score(shift, difficulty_level)
+
 
 func reset_score():
 	score = 0
@@ -150,10 +157,18 @@ func load_game_state():
 		high_scores = data.get("high_scores", {"Easy": 0, "Normal": 0, "Expert": 0})
 		current_story_state = data.get("story_state", 0)
 
-func get_high_score(difficulty: String = "") -> int:
+
+# Modify get_high_score to be more flexible
+func get_high_score(level: int = -1, difficulty: String = "") -> int:
 	if difficulty.is_empty():
 		difficulty = difficulty_level
-	return high_scores.get(difficulty, 0)
+		
+	if level < 0:
+		# Get global high score for the difficulty
+		return SaveManager.get_global_high_score(difficulty)
+	else:
+		# Get level-specific high score
+		return SaveManager.get_level_high_score(level, difficulty)
 
 func set_difficulty(new_difficulty: String):
 	if new_difficulty in ["Easy", "Normal", "Expert"]:
