@@ -24,6 +24,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Queue Interaction: Potatoes slightly wiggle while idle
 - Queue Interaction: Potatoes wiggle when clicked
 - Emote System: All potatoes show exclamation marks when you shoot a missile
+- Office Shutter / Bug: Update button to exclude transparent pixels for more accurate clicks
 
 ### Graphics
 - Add message queue system and delay between messages so they don't override each other, add GDScript to alert_label
@@ -168,5 +169,6 @@ These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release
 - Cursor / Bug: Offset to the right a bit
 - Queue Interaction: Highlight on hover of potato
 - New game button starts day 1 instead of day 0!
-- Office Shutter / Bug: The user should not be able to pass the potato documents if the shutter is closed
 - Regenerate potato images for each character in narrative, 16 total
+- Office Shutter / Bug: The user should not be able to pass the potato documents if the shutter is closed
+- Shutter raises everytime a potato enters the office

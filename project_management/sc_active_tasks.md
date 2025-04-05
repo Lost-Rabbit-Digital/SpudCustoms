@@ -33,14 +33,8 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 # OFFICE SHUTTER SYSTEM
 - Office Shutter / Bug: Fade out the foreground shadow when the potatoes leave the office
 - Office Shutter / Bug: Do not fade out transparency of potato when enter or leaving office, only the foreground shadow
-- Office Shutter / Bug: Update button to exclude transparent pixels for more accurate clicks
-	-	Could do this by writing a function to check for transparency under the cursor while hovering over the ShutterLever node
-	- Would have to manually update cursor state
 
 
 
 # RIGHT NOW
-- Office Shutter / Bug: The potato should not pass documents through if the shutter is closed
-
-- Currently making it so the shutter raises everytime a potato enters the office, but before I commit that I need to fix the drop zone bug
-- Fixing drop zone with shutter, previous implementation broke the interaction with passports
+- Give Passport Prompt should not appear if the passport has not been stamped, this check would be in main game
