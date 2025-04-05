@@ -28,6 +28,21 @@ Author: [Marek Belski and contributors](https://github.com/Maaack/Godot-Game-Tem
 Source: [github: Godot-Game-Template](https://github.com/Maaack/Godot-Game-Template)  
 License: [MIT License](LICENSE.txt)  
 
+## Emotes
+Author: [Kenney](https://kenney.nl/)
+Source: [Emotes Pack](https://kenney.nl/assets/emotes-pack)
+	
+## Social Icons
+Author: [KrinJL](https://krinjl.itch.io/)
+Source: [Itch: Pixel Social Media Icon Pack Vol. 2](https://krinjl.itch.io/icons2)
+
+## Button SFX
+Author: [PauliuW](https://opengameart.org/users/pauliuw)
+Source: [Click Sounds (6)](https://opengameart.org/content/click-sounds6)
+
+## FilmCow Royalty Free Sound Effects Library
+Author: [FilmCow](https://filmcow.itch.io/)
+Source: [itch: FilmCow Royalty Free Sound Effects Library](https://filmcow.itch.io/filmcow-sfx)
 
 # Community Help
 Thank you to the generous members of our community how have tested and reported many bugs for us to fix.
@@ -39,7 +54,7 @@ Tanner
 
 
 # Special Thanks
-Thank you to our love ones and support nets which helped us create this game.
+Thank you to our loved ones and support systems who helped us make this game a reality.
 
 
 # Memoriam

@@ -26,6 +26,9 @@ These are our goals, to-do tasks, and completed tasks.
 - Emote System: All potatoes show exclamation marks when you shoot a missile
 - Office Shutter / Bug: Update button to exclude transparent pixels for more accurate clicks
 
+# SHIFT SUMMARY SCREEN
+- Shift Summary: If the "Continue" button does not appear, it should balance out the "Main Menu" and "Restart" buttons
+
 ### Graphics
 - Add message queue system and delay between messages so they don't override each other, add GDScript to alert_label
 - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
@@ -65,27 +68,17 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-02-28 - 1.0.2
 ## Tasks
 ## RELEASE BLOCKERS
-- Make sure that game state is reset properly between story and score attack modes within the Global.gd and GameState.gd, and make sure that narrative progress and high scores for each narrative level and each score attack level are saved appropriately
-- Save game and load game, especially max level reached and local highscores
-- Score might not be resetting between rounds on leaderboard. Must be reset in Continue, Restart, Main Menu calls.
-- Strikes on endless mode do not reset after summary screen, summary > main menu > endless mode
-- Quota maximum not updating at start of shift
-- Add distinct buttons for resetting story progress, resetting high scores
-- Playtest Endless mode
-- Remake Score Attack mode
-- Create demo instance of game without Score Attack mode
-- Playtest Story mode
+- Remake Score Attack mode and score at least 25 potatoes
+- Create demo instance of game without Score Attack mode, only shift 0, 1, and 2
+- Beat Story mode, and test each of the 4 endings
 - Stamps go over edge of passport
 - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
 - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
 - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
-- Fix the issue where the game continues running during story sequences
-- Strikes on "Score Attack" mode do not reset after summary screen, summary > main menu > Score Attack
 - Corpses added too high to tree, screen shake not affecting them
 - Corpses need a slightly lower z-index to show BEHIND explosions
 - Runner potatoes are registering TWO strikes instead of just 1
 - Skip button not disappearing, and resetting the shift when pressed
-- Update leaderboard logic to refer to appropriate new leaderboards
 
 
 ### Graphics  
@@ -121,27 +114,28 @@ These are our goals, to-do tasks, and completed tasks.
 - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
 - Add pitch variation to the positive and negative score sound
 
-# SHIFT SUMMARY SCREEN
-- Shift Summary: If the "Continue" button does not appear, it should balance out the "Main Menu" and "Restart" buttons
 
 ### Backend
 - Megaphone Dialogue System: Implement the different categories of dialogue from the JSON file into the megaphone_clicked function code in mainGame.gd
 
 ### General Bugs
-- Escape key for menu stopped working after I alt tabbed a few times and completed the first "day", likely SceneLoader issue.
+- Fix SceneLoader issues, direct scene transitions break overlaid menus
 - Potatoes appear above table instead of under when border runner leaves map on south side
 - Fix skip story bug not hiding the history button quickly
 
-### Credits
-These users have to be added to our ATTRIBUTIONS.md before 1.0.2 release 
-
-- Emotes: https://kenney.nl/assets/emotes-pack
-- Social Icons: https://krinjl.itch.io/icons2
-- Button SFX: https://opengameart.org/content/click-sounds6
-
-
 ### Completed Tasks for 1.0.2
+- Add to Attributions.md - Emotes: https://kenney.nl/assets/emotes-pack
+- Add to Attributions.md - Social Icons: https://krinjl.itch.io/icons2
+- Add to Attributions.md - Button SFX: https://opengameart.org/content/click-sounds6
+- Add to Attributions.md - FilmCow Sound Effects: https://filmcow.itch.io/filmcow-sfx
+- Update leaderboard logic to refer to appropriate new leaderboards
+- Fix the issue where the game continues running during story sequences
+- Score might not be resetting between rounds on leaderboard. Must be reset in Continue, Restart, Main Menu calls.
+- Quota maximum not updating at start of shift
+- Save game and load game, especially difficulty, camera shake, max level reached and local highscores
+- Add distinct buttons for resetting story progress, resetting high scores
 - Fix stamping animations so that they move down from the stamp crossbar and are behind it
+- Make sure that game state is reset properly between story and score attack modes within the Global.gd and GameState.gd, and make sure that narrative progress and high scores for each narrative level and each score attack level are saved appropriately
 - Cursor does not update when hovering above stamp bar button
 - Cursor does not update when hovering above megaphone
 - Add leaderboards for each level to support shift summary screen (shift_0_easy, shift_1_normal, shift_2_expert, etc)
