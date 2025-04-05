@@ -68,17 +68,17 @@ var emote_audio_player: AudioStreamPlayer
 
 ## Configuration options (exposed to the Inspector)
 @export_category("Initital Emote")
-@export_range(1.0, 30.0) var minimum_initial_emote_delay: float = 1.0
-@export_range(1.0, 30.0) var maximum_initial_emote_delay: float = 5.0
+@export_range(1.0, 30.0) var minimum_initial_emote_delay: float = 5.0
+@export_range(1.0, 30.0) var maximum_initial_emote_delay: float = 25.0
 @export_category("General Emotes")
 ## Whether the emotes will be displayed at all
 @export var emoting_enabled: bool = false
 ## [Seconds] How long the emote will remained displayed
-@export_range(0.1, 10.0) var emote_duration: float = 2.0
+@export_range(0.1, 10.0) var emote_duration: float = 3.0
 ## [Seconds] Minimum amount of time before the next emote is displayed
-@export_range(1.0, 30.0) var minimum_emote_delay: float = 1.0
+@export_range(1.0, 30.0) var minimum_emote_delay: float = 10.0
 ## [Seconds] Maximum amount of time before the next emote is dispalyed
-@export_range(1.0, 30.0) var maximum_emote_delay: float = 5.0
+@export_range(1.0, 30.0) var maximum_emote_delay: float = 25.0
 @export_category("Audio")
 ## Whether to play audio when displaying an emote
 @export var play_sounds: bool = false # Keep this shit off, it's so annoying

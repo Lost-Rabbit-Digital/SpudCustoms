@@ -1073,7 +1073,7 @@ func move_potato_along_path(approval_status):
 			if approval_status == "rejected" and randf() < 0.15:
 				if border_runner_system:
 					# Instead of using path, hand over to border runner system
-					border_runner_system.start_runner(potato)
+					border_runner_system.start_runner(potato, true)
 					return
 		
 		# For normal approved/rejected paths, set a specific speed

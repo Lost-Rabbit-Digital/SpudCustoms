@@ -448,9 +448,9 @@ func attempt_spawn_runner():
 			time_since_last_run = 0.0
 
 # In BorderRunnerSystem.gd
-func start_runner(potato: PotatoPerson):
+func start_runner(potato: PotatoPerson, is_rejected: bool = false):
 	if not is_enabled or is_in_dialogic:
-		#print("BorderRunnerSystem disabled or in dialogue, no runners allowed.")
+		push_warning("BorderRunnerSystem disabled or in dialogue, no runners allowed.")
 		return
 		
 	# Ensure the potato is visible
@@ -464,7 +464,17 @@ func start_runner(potato: PotatoPerson):
 	# Play alarm and show alert
 	if alarm_sound and not alarm_sound.playing:
 		alarm_sound.play()
-	Global.display_red_alert(alert_label, alert_timer, "BORDER RUNNER DETECTED!\nClick to launch missile!")
+		
+	# Add a visual indicator to show this was a rejected potato
+	var anger_indicator = Sprite2D.new()
+	anger_indicator.texture = preload("res://assets/effects/anger.png") # Create this small texture
+	anger_indicator.position = Vector2(0, -15) # Position above the potato
+	potato.add_child(anger_indicator)
+	
+	if is_rejected:
+		Global.display_red_alert(alert_label, alert_timer, "REJECTED POTATO FLEEING!\nClick to launch missile!")
+	else:
+		Global.display_red_alert(alert_label, alert_timer, "BORDER RUNNER DETECTED!\nClick to launch missile!")
 	
 	# Get all available runner paths
 	var paths_node = %RunnerPaths
