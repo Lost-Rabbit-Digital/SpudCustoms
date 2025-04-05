@@ -133,3 +133,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Drag and Drop: If the passport hasn't been stamped and is dropped on the potato, it should return to table
 - Emote System: Reduce frequency of emotes occuring
 - Drag and Drop: Clip the document edges if they are off the table
+- Drag and Drop: Stamps disappear on passport while being dragged
+- Stamp System: Stamps disappear when picked up and dragged
+- Office Shutter: When shutter is automatically raised, the potatoes stay shadow-y
+- Office Shutter: Shutter opens even when open when a potato comes into the office
