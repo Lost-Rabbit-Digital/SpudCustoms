@@ -65,40 +65,37 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 
-# FULL RELEASE TASKS - 2025-02-28 - 1.0.2
+# FULL RELEASE TASKS - 2025-04-11 Target Release - 1.0.2
 ## Tasks
 ## RELEASE BLOCKERS
 - Remake Score Attack mode and score at least 25 potatoes
-- Create demo instance of game without Score Attack mode, only shift 0, 1, and 2
+- Create demo version of game without Score Attack mode, only shift 0, 1, and 2
 - Beat Story mode, and test each of the 4 endings
 - Stamps go over edge of passport
-- Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
-- Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
-- Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
-- Corpses need a slightly lower z-index to show BEHIND explosions
+- Corpses need a slightly lower z-index to show BEHIND explosions (re-test)
 - Runner potatoes are registering TWO strikes instead of just 1
 - Skip button not disappearing, and resetting the shift when pressed
-
+- Make sure that stamp consistently marks the same spot on the document, NOT based on where the player clicks on the stamp
 
 ### Graphics  
-- Gate re-raises on megaphone click, even when already up.
-- Potato shadow doesn't line up with the silhouette of the new potatoes
-- Potato stays in shadow when the shutter automatically raises
-- Potatoes in queue don't seem to match up with potatoes that enter customs office (MugshotGenerator is using diff potatoes lol)
-- When hit with a missile, make the Runner corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
-- Have animated counters up for each of the values in the shift summary screen
-- Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism (whole stamp descends, just the stamp handle descends, stamp handle comes back up, whole stamp comes back up)
 - Add logic to check if game paused or in dialogic before updating cursor to target cursor
 - Add random y-axis variation on the position selected in the return to table function
+- Alert Text: Wrong font sizing, causing blurry text
 - Cause stamps to wiggle and slam in and then fade into color on shift summary
 - Center closed version of documents on the mouse position, it often appears offset
 - Concrete steps should be smaller and darker than the grass footsteps
-- Update cursor to show a select icon when above the approval or rejection stamp
+- Gate re-raises on megaphone click, even when already up.
+- Have animated counters up for each of the values in the shift summary screen
+- Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism (whole stamp descends, just the stamp handle descends, stamp handle comes back up, whole stamp comes back up)
 - Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism for the approval and reject stamps? As in the whole stamp descends, just the stamp handle descends, stamp handle comes back up, whole stamp comes back up.
+- Potato shadow doesn't line up with the silhouette of the new potatoes
+- Potato stays in shadow when the shutter automatically raises
+- Potatoes in queue don't seem to match up with potatoes that enter customs office (MugshotGenerator is using diff potatoes lol)
+- Update cursor to show a select icon when above the approval or rejection stamp
 - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
+- When hit with a missile, make the Runner corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest
 - When shift ends, treat the last guy in office as rejected
-- Alert Text: Wrong font sizing, causing blurry text
 
 ### Gameplay
 - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
@@ -106,12 +103,12 @@ These are our goals, to-do tasks, and completed tasks.
 - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
 
 ### Audio
-- Hand gripping sound to document
-- Whooshing sound when documents are dragged quickly
-- Whooosh sound when document is returned to table
+- Add pitch variation to the positive and negative score sound
 - Add small amount of random pitch variation to the document open and close sounds
 - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
-- Add pitch variation to the positive and negative score sound
+- Hand gripping sound to document
+- Whooosh sound when document is returned to table
+- Whooshing sound when documents are dragged quickly
 
 
 ### Backend
@@ -133,3 +130,6 @@ These are our goals, to-do tasks, and completed tasks.
 - Drag and Drop: If the passport hasn't been stamped and is dropped on the potato, it should return to table
 - Emote System: Reduce frequency of emotes occuring
 - Drag and Drop: Clip the document edges if they are off the table
+s- Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
+- Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
+- Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
