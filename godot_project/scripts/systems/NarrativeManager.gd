@@ -102,10 +102,15 @@ func create_skip_button():
 func _on_skip_button_pressed():
 	# End the current timeline
 	Dialogic.end_timeline()
+	
 	# Find and remove the SkipButtonLayer
 	var skip_button_layer = get_node_or_null("SkipButtonLayer")
 	if skip_button_layer:
 		skip_button_layer.queue_free()
+	
+	# Set the dialogue to not active - this is crucial
+	dialogue_active = false
+	emit_signal("dialogue_finished")
 		
 func _on_dialogic_signal(argument):
 	if argument == "credits_ready":

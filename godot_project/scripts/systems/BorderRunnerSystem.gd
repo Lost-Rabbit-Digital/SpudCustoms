@@ -841,8 +841,6 @@ func check_runner_hits(explosion_pos):
 
 func handle_successful_hit(runner, explosion_pos):
 	var root_node = get_tree().current_scene
-	while root_node.get_parent() and root_node.name != "Root":
-		root_node = root_node.get_parent()
 		
 	# Dictionary of corpse textures by race
 	var corpse_textures = {
@@ -870,9 +868,12 @@ func handle_successful_hit(runner, explosion_pos):
 		corpse.texture = corpse_textures["Russet"]
 		
 	corpse.global_position = runner.global_position
-	corpse.z_index = 12 # Below explosions but above background
+	
+	corpse.z_index = 10 # Under explosions, above world background.
+	
 	# Slightly adjust size randomly
 	corpse.scale = Vector2(0.9, 0.9) * randf_range(0.9, 1.1) 
+	
 	# Add slight random rotation for visual variety
 	corpse.rotation = randf_range(-0.3, 0.3)
 	

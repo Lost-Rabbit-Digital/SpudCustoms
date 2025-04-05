@@ -1,27 +1,22 @@
 # Attribution
 
-# Lost Rabbit Digital LLC
-
+# Lost Rabbit Digital
 
 ## Programmers
 [Boden McHale](https://www.bodenmchale.com/)
 [David McHale](https://www.youtube.com/channel/UCcmLal-sOU_5ThcSQCFDyoA)
 
-
-## Artist
+## Artists
 Oleksii Lotokhov
-
 
 ## Audio
 [Ovani](https://ovanisound.com/)
-
 
 # Tools / Assets
 ## Godot
 Author: [Juan Linietsky, Ariel Manzur, and contributors](https://godotengine.org/contact)  
 Source: [godotengine.org](https://godotengine.org/)  
 License: [MIT License](https://github.com/godotengine/godot/blob/master/LICENSE.txt) 
-
 
 ## Godot Game Template
 Author: [Marek Belski and contributors](https://github.com/Maaack/Godot-Game-Template/graphs/contributors)  
@@ -47,16 +42,16 @@ Source: [itch: FilmCow Royalty Free Sound Effects Library](https://filmcow.itch.
 # Community Help
 Thank you to the generous members of our community how have tested and reported many bugs for us to fix.
 
+ZombieWhisperer
 MrBright01 
 dhjackal
 jollylad63
 Tanner
 
-
 # Special Thanks
 Thank you to our loved ones and support systems who helped us make this game a reality.
+Special thanks to Safiya and Kobi McHale for lighting up our lives.
 
-
-# Memoriam
+# In Memoriam, Ad Victoriam
 GNU Michael McHale
 GNU Sherri Jackson

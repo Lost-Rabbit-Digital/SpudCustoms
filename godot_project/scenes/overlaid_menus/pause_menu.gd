@@ -68,11 +68,13 @@ func _on_exit_button_pressed():
 	popup_open = %ConfirmExit
 
 func _on_confirm_restart_confirmed():
+	Global.reset_shift_stats()
 	SceneLoader.reload_current_scene()
 	close()
 
 func _on_confirm_main_menu_confirmed():
 	print("Main menu confirmed, loading scene")
+	Global.reset_shift_stats()
 	get_tree().change_scene_to_file("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
 	close()
 

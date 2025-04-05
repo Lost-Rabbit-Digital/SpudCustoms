@@ -387,14 +387,12 @@ func _on_continue_button_pressed() -> void:
 	queue_free()
 
 func _on_restart_button_pressed() -> void:
-	Global.reset_shift_stats()
-	
 	print("Restart button pressed")
 	emit_signal("restart_shift")
 	queue_free()
 
 func _on_main_menu_button_pressed() -> void:
 	Global.reset_shift_stats()
-	print("Main menu button pressed")
-	emit_signal("return_to_main_menu")
+	print("Main menu button pressed, emitting signal")
+	#emit_signal("return_to_main_menu")
 	queue_free()

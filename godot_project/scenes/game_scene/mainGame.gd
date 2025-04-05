@@ -490,7 +490,14 @@ func _on_shift_summary_continue():
 	# Check if we've reached the end of the game
 	if completed_shift >= 13:
 		# Final shift completed, show credits
-		transition_to_scene("res://scenes/end_credits/end_credits.tscn")
+		fade_transition()
+		# Access SceneLoader directly
+		if SceneLoader:
+			var menu_scene = preload("res://scenes/end_credits/end_credits.tscn").instantiate()
+			SceneLoader.load_scene(menu_scene)
+		else:
+			push_error("SceneLoader not found, falling back to change_scene_to_file")
+			get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
 		return
 	
 	# Show day transition
@@ -498,19 +505,36 @@ func _on_shift_summary_continue():
 	await narrative_manager.dialogue_finished
 	
 	# Reload the game scene for the next shift
-	transition_to_scene("res://scenes/game_scene/mainGame.tscn")
+	fade_transition()
+	# Access SceneLoader directly
+	if SceneLoader:
+		var menu_scene = preload("res://scenes/game_scene/mainGame.tscn").instantiate()
+		SceneLoader.load_scene(menu_scene)
+	else:
+		push_error("SceneLoader not found, falling back to change_scene_to_file")
+		get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
+	
 
 func _on_shift_summary_restart():
 	# Keep the same shift but reset the stats
 	Global.reset_shift_stats()
+	Global.reset_game_state()
 	GlobalState.save()
 	# Reload the current game scene
-	transition_to_scene("res://scenes/game_scene/mainGame.tscn")
+	SceneLoader.reload_current_scene()
 
 func _on_shift_summary_main_menu():
 	# Save state before transitioning to main menu
 	GlobalState.save()
-	transition_to_scene("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
+	fade_transition()
+	# Access SceneLoader directly
+	if SceneLoader:
+		var menu_scene = preload("res://scenes/menus/main_menu/main_menu_with_animations.tscn").instantiate()
+		SceneLoader.load_scene(menu_scene)
+	else:
+		push_error("SceneLoader not found, falling back to change_scene_to_file")
+		get_tree().change_scene_to_file("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
+	
 	
 func set_difficulty(level):
 	difficulty_level = level
@@ -1240,9 +1264,15 @@ func _on_end_dialogue_finished():
 	# This is called after an end dialogue completes
 	# We should now check if this was the final shift
 	
-	if current_shift >= 13:
+	if current_shift >= 10:
 		# Game complete, show credits
-		transition_to_scene("res://scenes/end_credits/end_credits.tscn")
+		fade_transition()
+		if SceneLoader:
+			var credit_scene = preload("res://scenes/end_credits/end_credits.tscn").instantiate()
+			SceneLoader.load_scene(credit_scene)
+		else:
+			push_error("SceneLoader not found, falling back to change_scene_to_file")
+			get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
 	else:
 		# Continue to next shift
 		narrative_manager.show_day_transition(current_shift, current_shift + 1)
@@ -1250,7 +1280,14 @@ func _on_end_dialogue_finished():
 		
 		# Load the next shift
 		current_shift += 1
-		transition_to_scene("res://scenes/game_scene/mainGame.tscn")
+		fade_transition()
+		# Access SceneLoader directly
+		if SceneLoader:
+			var main_scene = preload("res://scenes/game_scene/mainGame.tscn").instantiate()
+			SceneLoader.load_scene(main_scene)
+		else:
+			push_error("SceneLoader not found, falling back to change_scene_to_file")
+			get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
 
 
 func _on_game_over():
@@ -1407,7 +1444,7 @@ func play_current_track():
 		else:
 			print("Failed to load track: ", bgm_tracks[current_track_index])
 
-func transition_to_scene(scene_path: String):
+func fade_transition():
 	# Create a tween for a cleaner fade transition
 	var fade_rect = ColorRect.new()
 	fade_rect.color = Color(0, 0, 0, 0)
@@ -1419,18 +1456,5 @@ func transition_to_scene(scene_path: String):
 	var tween = create_tween()
 	tween.tween_property(fade_rect, "color", Color(0, 0, 0, 1), 0.5)
 	
-	# Load scene after animation completes
-	tween.tween_callback(func():
-		# Access SceneLoader directly
-		if SceneLoader:
-			SceneLoader.load_scene(scene_path)
-		else:
-			push_error("SceneLoader not found, falling back to change_scene_to_file")
-			get_tree().change_scene_to_file(scene_path)
-			# Clean up the fade rectangle
-			fade_rect.queue_free()
-	)
-
-
 func _on_megaphone_interaction_button_pressed() -> void:
 	megaphone_clicked()

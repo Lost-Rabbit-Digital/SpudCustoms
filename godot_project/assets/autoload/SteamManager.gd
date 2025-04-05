@@ -47,7 +47,7 @@ func get_leaderboard_name(difficulty: String = "", shift: int = -1) -> String:
 	var base_name = ""
 	
 	# Handle endless mode vs. shift mode
-	if shift < 0:
+	if shift < 0 or shift >= 100:  # Assume very high numbers are endless mode
 		# Endless mode leaderboards
 		match difficulty:
 			"Easy": base_name = "endless_easy"
@@ -55,9 +55,10 @@ func get_leaderboard_name(difficulty: String = "", shift: int = -1) -> String:
 			"Expert": base_name = "endless_expert"
 			_: base_name = "endless_normal"
 	else:
-		# Specific shift leaderboards
+		# Specific shift leaderboards - now with proper naming
 		base_name = "shift_%d_%s" % [shift, difficulty.to_lower()]
 	
+	print("Using leaderboard: " + base_name)
 	return base_name
 
 # Submit score to the appropriate leaderboard
