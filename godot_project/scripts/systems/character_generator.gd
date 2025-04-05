@@ -168,17 +168,13 @@ func set_character_data(data: Dictionary) -> void:
 	update_sprite_animations()
 	
 func fade_out_foreground_shadow(duration: float = 1.5):
-	# Set it to opaque
-	foreground_shadow.modulate = Color(0.063, 0.035, 0.071, 1.0)
-	
 	# Get reference to the foreground shadow node
 	if not foreground_shadow:
 		push_error("ForegroundShadow is not assigned in the inspector")
 		return
 		
 	# Store the initial color with full alpha
-	var initial_color = foreground_shadow.modulate
-	var transparent_color = Color(initial_color.r, initial_color.g, initial_color.b, 0.0)
+	var transparent_color = Color(0.063, 0.035, 0.071, 0.0)
 	
 	# Create tween for fading the shadow
 	var tween = create_tween()
@@ -198,8 +194,7 @@ func fade_in_foreground_shadow(duration: float = 1.5):
 		return
 	
 	# Store the initial color with full alpha
-	var initial_color = foreground_shadow.modulate
-	var opaque_color = Color(initial_color.r, initial_color.g, initial_color.b, 1.0)
+	var opaque_color = Color(0.063, 0.035, 0.071, 1.0)
 	
 	# Create tween for fading the shadow
 	var tween = create_tween()

@@ -1489,7 +1489,7 @@ animation = &"purple_majesty_body_Male"
 frame_progress = 0.969423
 
 [node name="Shadow" type="Sprite2D" parent="Character"]
-modulate = Color(0.0639384, 0.0358322, 0.0702029, 1)
+modulate = Color(0.0627451, 0.0352941, 0.0705882, 1)
 z_index = -3
 position = Vector2(1, -16)
 scale = Vector2(1.15617, 1.15617)

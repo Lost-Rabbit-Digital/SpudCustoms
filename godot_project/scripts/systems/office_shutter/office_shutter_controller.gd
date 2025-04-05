@@ -60,7 +60,7 @@ func raise_shutter(duration: float = 0.5):
 	
 	#print("Fading out the foreground shadow on potato due to shutter_lower()")
 	# Play the shadow fade 0.5s faster than duration
-	character_generator.fade_out_foreground_shadow(duration - 0.5)
+	character_generator.fade_out_foreground_shadow()
 	
 	# Create a more complex tween with multiple easing functions
 	var tween = create_tween()
@@ -96,7 +96,7 @@ func lower_shutter(duration: float = 3.0):
 	
 	print("Fading in the foreground shadow on potato due to shutter_lower()")
 	# Play the shadow fade 0.5s faster than duration
-	character_generator.fade_in_foreground_shadow(duration - 0.5)
+	character_generator.fade_in_foreground_shadow()
 	
 	# Create a more dynamic lowering tween
 	var tween = create_tween()

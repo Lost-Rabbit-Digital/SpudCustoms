@@ -589,15 +589,11 @@ func megaphone_clicked():
 		
 	var potato = queue_manager.remove_front_potato()
 	if potato:
-		if office_shutter_controller.active_shutter_state == office_shutter_controller.shutter_state.OPEN:
+		if office_shutter_controller.active_shutter_state == office_shutter_controller.shutter_state.CLOSED:
 			# Fade out the foreground shadow on the potato when they enter
 			#print("Fading out the foreground shadow on potato due to megaphone_clicked()")
 			# Play the shadow fade 0.5s faster than duration
 			character_generator.fade_out_foreground_shadow(4)
-		else:
-			# Shutter is closed, so we will need to fade in the foreground shadow
-			# When the user opens the shutter the foreground shadow will fade out automatically
-			character_generator.fade_in_foreground_shadow(1)
 	
 		# Only raise the shutter on the first megaphone click of the shift
 		#if !office_shutter_controller.shutter_opened_this_shift:
