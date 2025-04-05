@@ -508,8 +508,8 @@ func _on_shift_summary_continue():
 	fade_transition()
 	# Access SceneLoader directly
 	if SceneLoader:
-		var menu_scene = preload("res://scenes/game_scene/mainGame.tscn").instantiate()
-		SceneLoader.load_scene(menu_scene)
+		SceneLoader.load_scene("res://scenes/game_scene/mainGame.tscn")
+		#SceneLoader.reload_current_scene()
 	else:
 		push_error("SceneLoader not found, falling back to change_scene_to_file")
 		get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
@@ -520,20 +520,19 @@ func _on_shift_summary_restart():
 	Global.reset_shift_stats()
 	Global.reset_game_state()
 	GlobalState.save()
-	# Reload the current game scene
-	SceneLoader.reload_current_scene()
+	if SceneLoader:
+		SceneLoader.reload_current_scene()
+	else:
+		push_error("SceneLoader not found, falling back to change_scene_to_file")
+		get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
 
 func _on_shift_summary_main_menu():
 	# Save state before transitioning to main menu
 	GlobalState.save()
 	fade_transition()
 	# Access SceneLoader directly
-	if SceneLoader:
-		var menu_scene = preload("res://scenes/menus/main_menu/main_menu_with_animations.tscn").instantiate()
-		SceneLoader.load_scene(menu_scene)
-	else:
-		push_error("SceneLoader not found, falling back to change_scene_to_file")
-		get_tree().change_scene_to_file("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
+	push_warning("Using direct change_scene_to_file, SceneLoader not working as expected.")
+	get_tree().change_scene_to_file("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
 	
 	
 func set_difficulty(level):

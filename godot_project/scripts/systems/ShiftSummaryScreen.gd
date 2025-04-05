@@ -54,10 +54,14 @@ func format_time(seconds: float) -> String:
 func show_summary(stats_data: Dictionary):
 	stats = stats_data
 	show()
-	 # Determine if player won or lost
-	var win_condition = stats.get("quota_met", 0) >= stats.get("quota_target", 0)
-	var strikes_failed = stats.get("strikes", 0) >= stats.get("max_strikes", 0)
 	
+	# Determine if player won or lost
+	var win_condition = stats.get("quota_met", 0) >= stats.get("quota_target", 5)
+	print("Win Condition ", win_condition)
+	var strikes_failed = stats.get("strikes", 0) >= stats.get("max_strikes", 6)
+	print("Strikes failed: ", strikes_failed)
+	var global_strikes_failed = Global.strikes >= Global.max_strikes
+	print("Global Strikes failed: ", global_strikes_failed)
 	# Update UI based on result
 	if win_condition:
 		$LeftPanel/ShiftComplete.text = """SHIFT {shift} COMPLETE
@@ -66,6 +70,7 @@ func show_summary(stats_data: Dictionary):
 			"shift": stats.get("shift", 1)
 		})
 		$LeftPanel/ShiftComplete.add_theme_color_override("font_color", Color(0.2, 0.8, 0.2))
+	
 	if strikes_failed:
 		var failure_reason = "STRIKE LIMIT REACHED!" if strikes_failed else "QUOTA NOT MET!"
 		$LeftPanel/ShiftComplete.text = """SHIFT {shift} COMPLETE
@@ -75,9 +80,11 @@ func show_summary(stats_data: Dictionary):
 			"failure": failure_reason
 		})
 		$LeftPanel/ShiftComplete.add_theme_color_override("font_color", Color(0.9, 0.2, 0.2))
+	
 	#Get rid of continue button if lost
-	if strikes_failed:
+	if global_strikes_failed:
 		$ContinueButton.queue_free()
+		
 	populate_stats()
 
 func populate_stats():
@@ -387,6 +394,7 @@ func _on_continue_button_pressed() -> void:
 	queue_free()
 
 func _on_restart_button_pressed() -> void:
+	Global.reset_shift_stats()
 	print("Restart button pressed")
 	emit_signal("restart_shift")
 	queue_free()
@@ -394,5 +402,5 @@ func _on_restart_button_pressed() -> void:
 func _on_main_menu_button_pressed() -> void:
 	Global.reset_shift_stats()
 	print("Main menu button pressed, emitting signal")
-	#emit_signal("return_to_main_menu")
+	emit_signal("return_to_main_menu")
 	queue_free()
