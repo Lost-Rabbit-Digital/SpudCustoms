@@ -130,6 +130,10 @@ These are our goals, to-do tasks, and completed tasks.
 - Drag and Drop: If the passport hasn't been stamped and is dropped on the potato, it should return to table
 - Emote System: Reduce frequency of emotes occuring
 - Drag and Drop: Clip the document edges if they are off the table
-s- Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
+- Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
 - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
 - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
+- Drag and Drop: Stamps disappear on passport while being dragged
+- Stamp System: Stamps disappear when picked up and dragged
+- Office Shutter: When shutter is automatically raised, the potatoes stay shadow-y
+- Office Shutter: Shutter opens even when open when a potato comes into the office

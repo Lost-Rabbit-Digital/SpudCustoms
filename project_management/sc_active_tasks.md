@@ -39,11 +39,5 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Office Shutter / Bug: Do not fade out transparency of potato when enter or leaving office, only the foreground shadow
 
 # Code Loopholes (Bugs)
-- Office Shutter: Shutter opens even when open when a potato comes into the office
-- Stamp System: Stamps disappear when picked up and dragged
-- Office Shutter: When shutter is automatically raised, the potatoes stay shadow-y
-
-
 
 # Currently active tasks
-- Drag and Drop: Stamps disappear on passport while being dragged
