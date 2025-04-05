@@ -23,9 +23,23 @@ var perfect_hits = 0
 # New scoring system variables
 var score: int = 0
 var high_scores: Dictionary = {
-	"Easy": 0,
-	"Normal": 0,
-	"Expert": 0
+	"level_highscores": {
+		"1": {  # Level ID as string
+			"Easy": 100,
+			"Normal": 200,
+			"Expert": 300
+		},
+		"2": {
+			"Easy": 150,
+			"Normal": 250,
+			"Expert": 350
+		}
+	},
+	"global_highscores": {
+		"Easy": 500,
+		"Normal": 750,
+		"Expert": 1000
+	}
 }
 
 # Signals

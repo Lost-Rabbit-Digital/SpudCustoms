@@ -32,3 +32,54 @@ func _on_difficulty_changed(index):
 
 func _on_ResetGameControl_reset_confirmed():
 	GlobalState.reset()
+	
+func _on_ResetProgressButton_pressed():
+	var confirmation_dialog = ConfirmationDialog.new()
+	confirmation_dialog.dialog_text = "Are you sure you want to reset story progress? This cannot be undone."
+	confirmation_dialog.get_ok_button().text = "Reset"
+	confirmation_dialog.get_cancel_button().text = "Cancel"
+	add_child(confirmation_dialog)
+	confirmation_dialog.popup_centered()
+	confirmation_dialog.connect("confirmed", Callable(self, "_reset_story_progress"))
+
+func _on_ResetHighScoresButton_pressed():
+	var confirmation_dialog = ConfirmationDialog.new()
+	confirmation_dialog.dialog_text = "Are you sure you want to reset all high scores? This cannot be undone."
+	confirmation_dialog.get_ok_button().text = "Reset"
+	confirmation_dialog.get_cancel_button().text = "Cancel"
+	add_child(confirmation_dialog)
+	confirmation_dialog.popup_centered()
+	confirmation_dialog.connect("confirmed", Callable(self, "_reset_high_scores"))
+
+func _reset_story_progress():
+	# Reset story progress but keep high scores
+	GlobalState.reset()
+	Global.reset_game_state(true)
+	Global.current_story_state = 0
+	GlobalState.save()
+
+func _reset_high_scores():
+	# Reset only high scores
+	Global.high_scores = {
+	"level_highscores": {
+		"1": {  # Level ID as string
+			"Easy": 800,
+			"Normal": 800,
+			"Expert": 800
+		},
+		"2": {
+			"Easy": 800,
+			"Normal": 800,
+			"Expert": 800
+		}
+	},
+	"global_highscores": {
+		"Easy": 900,
+		"Normal": 900,
+		"Expert": 900
+	}
+}
+	# Clear level-specific high scores
+	var game_state = GameState.get_game_state()
+	game_state.level_highscores = {}
+	GlobalState.save()

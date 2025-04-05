@@ -42,4 +42,12 @@ popup/item_2/id = 2
 [node name="ResetGameControl" parent="VBoxContainer" instance=ExtResource("3_gdyom")]
 layout_mode = 2
 
+[node name="ResetProgressButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Reset Story Progress"
+
+[node name="ResetHighScoresButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Reset High Scores"
+
 [connection signal="reset_confirmed" from="VBoxContainer/ResetGameControl" to="." method="_on_ResetGameControl_reset_confirmed"]
