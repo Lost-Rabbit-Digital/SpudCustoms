@@ -1,6 +1,8 @@
 
 ### Completed Tasks for 1.0.2
 Before release, review GitHub commits using the following command `git log --since="last month" --pretty=format:'%h,%an,%ar,%s' > log.csv` - This artifact can then be fed into Claude or similar to analyze the changes.
+
+- Add sound effects to each narrative scene
 - Add to Attributions.md - Emotes: https://kenney.nl/assets/emotes-pack
 - Add to Attributions.md - Social Icons: https://krinjl.itch.io/icons2
 - Add to Attributions.md - Button SFX: https://opengameart.org/content/click-sounds6
@@ -8,6 +10,8 @@ Before release, review GitHub commits using the following command `git log --sin
 - Update leaderboard logic to refer to appropriate new leaderboards
 - Fix the issue where the game continues running during story sequences
 - Score might not be resetting between rounds on leaderboard. Must be reset in Continue, Restart, Main Menu calls.
+- Update tutorial step with exploding runner
+- Update where strikes and quota show on UI
 - Quota maximum not updating at start of shift
 - Save game and load game, especially difficulty, camera shake, max level reached and local highscores
 - Add distinct buttons for resetting story progress, resetting high scores

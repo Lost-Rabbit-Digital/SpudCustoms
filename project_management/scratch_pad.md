@@ -85,7 +85,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Potato shadow doesn't line up with the silhouette of the new potatoes
 - Potato stays in shadow when the shutter automatically raises
 - Potatoes in queue don't seem to match up with potatoes that enter customs office (MugshotGenerator is using diff potatoes lol)
-- When hit with a missile, make the corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest.
+- When hit with a missile, make the Runner corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
 - Have animated counters up for each of the values in the shift summary screen
 - Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism (whole stamp descends, just the stamp handle descends, stamp handle comes back up, whole stamp comes back up)
@@ -94,11 +94,8 @@ These are our goals, to-do tasks, and completed tasks.
 - Cause stamps to wiggle and slam in and then fade into color on shift summary
 - Center closed version of documents on the mouse position, it often appears offset
 - Concrete steps should be smaller and darker than the grass footsteps
-- Only show take passport dialogue if the passport has been stamped
-- Shrink texture for missiles and impacts, sizing of pixels is off-putting (Boden task, too subjective without guidance)
 - Update cursor to show a select icon when above the approval or rejection stamp
-- Update cursor to show a select icon when above the megaphone 
-- Update cursor when hovering over the megaphone
+- Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism for the approval and reject stamps? As in the whole stamp descends, just the stamp handle descends, stamp handle comes back up, whole stamp comes back up.
 - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
 - When shift ends, treat the last guy in office as rejected
 - Alert Text: Wrong font sizing, causing blurry text
@@ -127,3 +124,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 ### Completed Tasks for 1.0.2
 - Corpses added too high to tree, screen shake not affecting them
+- Update cursor to show a select icon when above the megaphone 
+- Only show take passport dialogue if the passport has been stamped
+- Shrink texture for missiles and impacts, sizing of pixels is off-putting
+- Update cursor when hovering over the megaphone
