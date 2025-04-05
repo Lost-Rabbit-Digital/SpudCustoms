@@ -136,7 +136,7 @@ func register_draggable_items(items: Array):
 	for item in draggable_items:
 		if is_instance_valid(item):
 			if item.z_index == 0:  # Only set if not already set
-				push_warning("Draggiable Item is missing z-index: %s", item)
+				push_warning("Draggable Item is missing z-index: %s", item)
 				item.z_index = PASSPORT_Z_INDEX
 		else:
 			push_warning("Invalid draggable item provided")

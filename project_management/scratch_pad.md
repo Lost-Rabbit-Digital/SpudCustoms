@@ -82,6 +82,9 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ### Graphics  
+- Gate re-raises on megaphone click, even when already up.
+- Potato shadow doesn't line up with the silhouette of the new potatoes
+- Potato stays in shadow when the shutter automatically raises
 - Potatoes in queue don't seem to match up with potatoes that enter customs office (MugshotGenerator is using diff potatoes lol)
 - When hit with a missile, make the corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest.
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
@@ -124,46 +127,3 @@ These are our goals, to-do tasks, and completed tasks.
 - Fix skip story bug not hiding the history button quickly
 
 ### Completed Tasks for 1.0.2
-- Add to Attributions.md - Emotes: https://kenney.nl/assets/emotes-pack
-- Add to Attributions.md - Social Icons: https://krinjl.itch.io/icons2
-- Add to Attributions.md - Button SFX: https://opengameart.org/content/click-sounds6
-- Add to Attributions.md - FilmCow Sound Effects: https://filmcow.itch.io/filmcow-sfx
-- Update leaderboard logic to refer to appropriate new leaderboards
-- Fix the issue where the game continues running during story sequences
-- Score might not be resetting between rounds on leaderboard. Must be reset in Continue, Restart, Main Menu calls.
-- Quota maximum not updating at start of shift
-- Save game and load game, especially difficulty, camera shake, max level reached and local highscores
-- Add distinct buttons for resetting story progress, resetting high scores
-- Fix stamping animations so that they move down from the stamp crossbar and are behind it
-- Make sure that game state is reset properly between story and score attack modes within the Global.gd and GameState.gd, and make sure that narrative progress and high scores for each narrative level and each score attack level are saved appropriately
-- Cursor does not update when hovering above stamp bar button
-- Cursor does not update when hovering above megaphone
-- Add leaderboards for each level to support shift summary screen (shift_0_easy, shift_1_normal, shift_2_expert, etc)
-- Code: Move cursor system out of drag system
-- Add new compressed MP3 music and sound effects to all scenes for enhanced emotional impact
-- Add an on_dialogue_start and on_dialogue_finished call to stop the BGMPlayer and then start next random track when back in game scene
-- Set main game audio to mute when dialogue starts and start a new background song on BGMPlayer when dialogue finishes
-- If you restart on shift summary screen, it advances to the next level
-- Bug: Stamps fly up from the bottom of the screen
-- Added social icons to main menu
-- Bug: Text disappearing on the law receipt when picked up
-- Bug: Audio on shutter does not sync
-- Added emotes for potatoes in line
-- Create system to detect current cursor shape and update the sprite to match
-- Use the "Default cursor shape" property to update cursor state
-- Update cursor in the main menu when hover over buttons
-- Bug: Passport text disappears while dragged
-- Emote System: Implement a variable delay between emotes
-- Megaphone: Update core to have button for mouse interactions instead of Area2D (Or alongside Area2D if you don't feel like updating other code references)
-- Cursor: We need a hover for grabbable documents (Passport, Law Receipt) and a hover for interactable objects (Potatoes, Megaphone)
-- Cursor: Add mulitple hover modes
-- Cursor: Update while hovering over megaphone
-- Cursor: Update while dragging documents
-- Cursor: Update while hovering over documents
-- Cursor / Bug: Offset to the right a bit
-- Queue Interaction: Highlight on hover of potato
-- New game button starts day 1 instead of day 0!
-- Regenerate potato images for each character in narrative, 16 total
-- Office Shutter / Bug: The user should not be able to pass the potato documents if the shutter is closed
-- Shutter raises everytime a potato enters the office
-- Give Passport Prompt should not appear if the passport has not been stamped, this check would be in main game
