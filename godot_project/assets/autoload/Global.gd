@@ -122,6 +122,24 @@ func advance_shift():
 	quota_target = floor(base_quota_target + (shift - 1 ))
 	save_game_state()
 
+func switch_game_mode(mode: String):
+	# Reset core gameplay variables
+	reset_shift_stats()
+	
+	if mode == "story":
+		# Load story progress from GameState
+		shift = GameState.get_current_level()
+		# Set quota based on current level
+		quota_target = floor(base_quota_target + (shift - 1))
+	elif mode == "score_attack":
+		# For score attack, reset to level 1 but keep difficulty
+		shift = 1
+		# Use standard quota based on difficulty
+		quota_target = 9999
+		
+	# Make sure UI gets updated on next scene load
+	save_game_state()
+
 func synchronize_with_game_state():
 	# Make sure shift is synchronized with GameState
 	shift = GameState.get_current_level()

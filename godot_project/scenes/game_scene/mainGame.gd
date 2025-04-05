@@ -395,6 +395,8 @@ func end_shift(success: bool = true):
 		print("Setting high score of: ", Global.score, " for : ", current_shift, " and difficulty level", difficulty_level)
 		GameState.set_high_score(current_shift, Global.difficulty_level, Global.score)
 	
+	GlobalState.save()
+	
 	# Update quota display one last time to ensure it's correct
 	update_quota_display()
 	
