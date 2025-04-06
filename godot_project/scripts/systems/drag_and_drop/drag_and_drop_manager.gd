@@ -171,6 +171,7 @@ func is_document_open(document_name: String) -> bool:
 ##
 ## @param item The node that was opened.
 func _on_item_opened(item: Node2D):
+	item.z_index = drag_system.OPEN_DRAGGING_Z_INDEX
 	var document_name = item.name
 	open_document(document_name)
 
@@ -187,6 +188,7 @@ func _on_item_closed(item: Node2D):
 ## @param item The node that was dropped.
 ## @param drop_zone The zone where the item was dropped.
 func _on_item_dropped(item: Node2D, drop_zone: String):
+	item.z_index = drag_system.DEFAULT_Z_INDEX
 	# Additional processing can be added here if needed
 	pass
 
