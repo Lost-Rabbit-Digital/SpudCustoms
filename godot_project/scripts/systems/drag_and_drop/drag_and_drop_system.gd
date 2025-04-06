@@ -55,7 +55,7 @@ var dragged_item = null
 var drag_offset = Vector2()
 
 ## Flag indicating if the document was closed during the current drag operation.
-var document_was_closed = false
+var is_document_closed = false
 
 ## Stores the original z-index of the dragged item to restore after dropping.
 var original_z_index: int
@@ -246,7 +246,7 @@ func _handle_mouse_press(mouse_position: Vector2) -> bool:
 		dragged_item = find_topmost_item_at(mouse_position)
 		if dragged_item:
 			# Reset document_was_closed flag for new drag
-			document_was_closed = false
+			is_document_closed = false
 			
 			# Store original z-index and set to higher value while dragging
 			#original_z_index = dragged_item.z_index
@@ -329,7 +329,7 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 		emit_signal("item_dropped", dragged_item, drop_zone)
 		
 		# Reset document_was_closed flag
-		document_was_closed = false
+		is_document_closed = true
 		
 		# Get document controller
 		var doc_controller = get_document_controller(dragged_item)
@@ -432,28 +432,18 @@ func _update_dragged_item_position(mouse_pos: Vector2):
 	if dragged_item:
 		# Store previous position
 		var previous_position = dragged_item.global_position
-		var was_on_table = inspection_table and inspection_table.get_rect().has_point(inspection_table.to_local(previous_position))
+		var drop_zone = identify_drop_zone(mouse_pos)
 		
 		# Check if we would be moving over suspect area with closed shutter
 		var target_zone = identify_drop_zone(mouse_pos + drag_offset)
-		var is_suspect_area = target_zone == "suspect" or target_zone == "suspect_panel"
-		var is_shutter_closed = office_shutter.active_shutter_state and office_shutter.shutter_state.CLOSED
 		
-		if is_suspect_area and is_shutter_closed:
-			# Don't update position - keep at previous valid position
-			# This creates a "blocking" effect at the shutter boundary
-			return
-			
 		# Update position using the drag_offset
 		dragged_item.global_position = mouse_pos + drag_offset
 		
-		# Check if document is leaving the inspection table
-		var is_on_table = inspection_table and inspection_table.get_rect().has_point(inspection_table.to_local(dragged_item.global_position))
-		
 		# If document was on table but no longer is, close it (only once)
-		if was_on_table and !is_on_table and !document_was_closed and is_openable_document(dragged_item):
+		if drop_zone != "inspection_table" and !is_document_closed and is_openable_document(dragged_item):
 			emit_signal("item_closed", dragged_item)
-			document_was_closed = true
+			is_document_closed = true
 
 ## Finds the nearest valid position on the inspection table for an item.
 ##
@@ -682,7 +672,8 @@ func _handle_passport_drop(mouse_pos: Vector2):
 	elif drop_zone == "inspection_table" and !was_open:
 		# Only open if it wasn't already open
 		emit_signal("item_opened", dragged_item)
-	elif drop_zone == "suspect_panel" or drop_zone == "suspect":
+	# If dropping on suspect_panel, suspect, or none
+	else:
 		# Always close when dropping on suspect
 		emit_signal("item_closed", dragged_item)
 		
