@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsu5x2crlxcsb"
-valid=false
+uid="uid://fr83dr1ekf27"
+path="res://.godot/imported/escape_route_1.png-e5aa9ae951d2531b6a58255273a3febe.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://assets/narrative/escape_route.png"
+source_file="res://assets/narrative/escape_route_1.png"
+dest_files=["res://.godot/imported/escape_route_1.png-e5aa9ae951d2531b6a58255273a3febe.ctex"]
 
 [params]
 
