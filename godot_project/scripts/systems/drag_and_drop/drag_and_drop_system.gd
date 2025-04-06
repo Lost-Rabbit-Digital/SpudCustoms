@@ -34,7 +34,8 @@ const PASSPORT_Z_INDEX = 3
 
 ## Z-index for items being actively dragged (higher than normal).
 const DEFAULT_Z_INDEX = 3
-const DRAGGING_Z_INDEX = 20
+const OPEN_DRAGGING_Z_INDEX = 4
+const CLOSED_DRAGGING_Z_INDEX = 25
 
 ## Duration in seconds for the return animation when dropping outside valid zones.
 const RETURN_TWEEN_DURATION = 0.3
@@ -250,7 +251,7 @@ func _handle_mouse_press(mouse_position: Vector2) -> bool:
 			# Store original z-index and set to higher value while dragging
 			#original_z_index = dragged_item.z_index
 			original_z_index = DEFAULT_Z_INDEX
-			dragged_item.z_index = DRAGGING_Z_INDEX
+			dragged_item.z_index = OPEN_DRAGGING_Z_INDEX
 			
 			# Get current drop zone
 			var current_zone = identify_drop_zone(mouse_position)

@@ -178,6 +178,7 @@ func _on_item_opened(item: Node2D):
 ##
 ## @param item The node that was closed.
 func _on_item_closed(item: Node2D):
+	item.z_index = drag_system.CLOSED_DRAGGING_Z_INDEX
 	var document_name = item.name
 	close_document(document_name)
 

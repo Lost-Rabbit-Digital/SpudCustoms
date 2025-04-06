@@ -222,7 +222,7 @@ offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
 [node name="ScreenBorders" type="Sprite2D" parent="UI"]
-z_index = 19
+z_index = 20
 z_as_relative = false
 position = Vector2(640, 360)
 texture = ExtResource("7_41g47")
@@ -473,6 +473,7 @@ scale = Vector2(2.64198, 2.57222)
 texture = ExtResource("22_or1f4")
 
 [node name="MugshotPhotoGenerator" parent="Gameplay" instance=ExtResource("23_3qac4")]
+z_index = 5
 position = Vector2(1438, 414)
 scale = Vector2(2.5, 2.5)
 
@@ -493,7 +494,7 @@ position = Vector2(1075, 362)
 character_generator = NodePath("../../MugshotPhotoGenerator")
 
 [node name="StampBarController" parent="Gameplay/InteractiveElements" instance=ExtResource("25_osm16")]
-z_index = 17
+z_index = 18
 position = Vector2(13, 366)
 
 [node name="SuspectSpawnNode" type="Node2D" parent="Gameplay/InteractiveElements"]
@@ -717,7 +718,7 @@ unique_name_in_owner = true
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Megaphone/MegaphoneInteractionButton" to="." method="_on_megaphone_interaction_button_pressed"]

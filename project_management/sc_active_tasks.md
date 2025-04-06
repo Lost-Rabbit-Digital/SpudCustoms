@@ -36,3 +36,4 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 ## Code Loopholes (Bugs)
 
 ## Currently active tasks
+- Drag and Drop / Bug: Documents released appear in front of the suspect panel background
