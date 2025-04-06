@@ -13,8 +13,6 @@ var drag_system: DragAndDropSystem
 # Document references
 ## Reference to the passport document controller.
 var passport_document: DraggableDocument
-## Reference to the guide document controller.
-var guide_document: DraggableDocument
 ## Reference to the law receipt document controller.
 var law_receipt_document: DraggableDocument
 
@@ -78,21 +76,16 @@ func initialize(game_scene: Node):
 	
 	# Create document controllers
 	passport_document = DocumentFactory.create_passport(game_scene)
-	# Not creating the guide anymore, may use the code later though
-	#guide_document = DocumentFactory.create_guide(game_scene)
 	law_receipt_document = DocumentFactory.create_law_receipt(game_scene)
 	
 	# Get references to sprite nodes
 	var passport_sprite = game_scene.get_node_or_null("Gameplay/InteractiveElements/Passport")
-	var guide_sprite = game_scene.get_node_or_null("Gameplay/InteractiveElements/Guide")
 	var law_receipt_sprite = game_scene.get_node_or_null("Gameplay/InteractiveElements/LawReceipt")
 	
 	# Register draggable items
 	var draggable_items = []
 	if passport_sprite: 
 		draggable_items.append(passport_sprite)
-	if guide_sprite:
-		draggable_items.append(guide_sprite)
 	if law_receipt_sprite:
 		draggable_items.append(law_receipt_sprite)
 	
@@ -125,10 +118,6 @@ func open_document(document_name: String):
 			if passport_document:
 				passport_document.open()
 				drag_system.play_open_sound()
-		"guide":
-			if guide_document:
-				guide_document.open()
-				drag_system.play_open_sound()
 		"lawreceipt":
 			if law_receipt_document:
 				law_receipt_document.open()
@@ -144,10 +133,6 @@ func close_document(document_name: String):
 			if passport_document:
 				passport_document.close()
 				drag_system.play_close_sound()
-		"guide":
-			if guide_document:
-				guide_document.close()
-				drag_system.play_close_sound()
 		"lawreceipt":
 			if law_receipt_document:
 				law_receipt_document.close()
@@ -161,8 +146,6 @@ func is_document_open(document_name: String) -> bool:
 	match document_name.to_lower():
 		"passport":
 			return passport_document and passport_document.is_document_open()
-		"guide":
-			return guide_document and guide_document.is_document_open()
 		"lawreceipt":
 			return law_receipt_document and law_receipt_document.is_document_open()
 	return false
@@ -171,6 +154,7 @@ func is_document_open(document_name: String) -> bool:
 ##
 ## @param item The node that was opened.
 func _on_item_opened(item: Node2D):
+	item.z_index = drag_system.OPEN_DRAGGING_Z_INDEX
 	var document_name = item.name
 	open_document(document_name)
 
@@ -178,6 +162,7 @@ func _on_item_opened(item: Node2D):
 ##
 ## @param item The node that was closed.
 func _on_item_closed(item: Node2D):
+	item.z_index = drag_system.CLOSED_DRAGGING_Z_INDEX
 	var document_name = item.name
 	close_document(document_name)
 
@@ -186,6 +171,7 @@ func _on_item_closed(item: Node2D):
 ## @param item The node that was dropped.
 ## @param drop_zone The zone where the item was dropped.
 func _on_item_dropped(item: Node2D, drop_zone: String):
+	item.z_index = drag_system.DEFAULT_Z_INDEX
 	# Additional processing can be added here if needed
 	pass
 

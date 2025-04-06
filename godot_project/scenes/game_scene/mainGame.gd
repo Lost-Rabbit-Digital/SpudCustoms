@@ -137,10 +137,10 @@ func _ready():
 	# Connect signal
 	drag_and_drop_manager.drag_system.passport_returned.connect(_on_passport_returned)
 	
-	drag_and_drop_manager.drag_system.item_grabbed.connect(func(item):
-		if item == $Gameplay/InteractiveElements/Passport:
-			_on_passport_interaction()
-	)
+	#drag_and_drop_manager.drag_system.item_grabbed.connect(func(item):
+		#if item == $Gameplay/InteractiveElements/Passport:
+			#_on_passport_interaction()
+	#)
 	
 	# Initialise the stamp system manager
 	setup_stamp_system()

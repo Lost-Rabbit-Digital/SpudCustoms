@@ -29,7 +29,7 @@ scale = Vector2(1.05816, 1.06849)
 texture = ExtResource("3_ojq65")
 
 [node name="SuspectPanelBackground" type="Sprite2D" parent="."]
-z_index = -6
+z_index = -1
 position = Vector2(1074, 472)
 scale = Vector2(1.05816, 1.06849)
 texture = ExtResource("5_pcpgc")

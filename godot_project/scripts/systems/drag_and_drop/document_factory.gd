@@ -2,7 +2,7 @@ extends Node
 ## Factory responsible for creating and configuring different types of draggable documents.
 ##
 ## This factory class contains static methods that handle the creation of different
-## document types used in the game, such as passports, guides, and receipts.
+## document types used in the game, such as passports and receipts.
 ## Each method configures document properties and attaches necessary nodes.
 class_name DocumentFactory
 
@@ -29,32 +29,6 @@ static func create_passport(parent_node: Node) -> DraggableDocument:
 	document.open_texture = preload("res://assets/documents/passport_old.png")
 	document.closed_content_node = passport_sprite.get_node_or_null("ClosedPassport")
 	document.open_content_node = passport_sprite.get_node_or_null("OpenPassport")
-	
-	return document
-
-## Creates and configures a Guide document instance.
-##
-## Locates necessary nodes in the scene tree, creates a DraggableDocument instance,
-## and sets up its properties for a guide document.
-## @param parent_node The root node containing the required document sprites.
-## @return The configured DraggableDocument instance or null if setup fails.
-static func create_guide(parent_node: Node) -> DraggableDocument:
-	var document = DraggableDocument.new()
-	document.name = "DocumentController"
-	
-	# Get references to needed nodes
-	var guide_sprite = parent_node.get_node_or_null("Gameplay/InteractiveElements/Guide")
-	if not guide_sprite:
-		push_error("Guide sprite not found!")
-		return null
-	
-	guide_sprite.add_child(document)
-	
-	# Configure the document
-	document.closed_texture = preload("res://assets/documents/customs_guide/customs_guide_closed_small.png")
-	document.open_texture = preload("res://assets/documents/customs_guide/customs_guide_open_2.png")
-	document.closed_content_node = guide_sprite.get_node_or_null("ClosedGuide")
-	document.open_content_node = guide_sprite.get_node_or_null("OpenGuide")
 	
 	return document
 

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://mtbc2ho7xlq5"]
+
+[ext_resource type="Script" uid="uid://e68ndngoyhyn" path="res://scripts/systems/vehicle_system/vehicle_spawner.gd" id="1_5efjy"]
+
+[node name="VehicleSpawner" type="Node2D"]
+script = ExtResource("1_5efjy")
