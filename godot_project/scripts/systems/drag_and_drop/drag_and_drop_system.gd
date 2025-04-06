@@ -34,7 +34,7 @@ const PASSPORT_Z_INDEX = 3
 
 ## Z-index for items being actively dragged (higher than normal).
 const DEFAULT_Z_INDEX = 3
-const OPEN_DRAGGING_Z_INDEX = 4
+const OPEN_DRAGGING_Z_INDEX = 3
 const CLOSED_DRAGGING_Z_INDEX = 25
 
 ## Duration in seconds for the return animation when dropping outside valid zones.
