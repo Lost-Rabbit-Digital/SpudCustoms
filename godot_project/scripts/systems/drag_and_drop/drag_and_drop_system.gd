@@ -389,8 +389,6 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 			# Handle specific item drop logic
 			if dragged_item.name == "Passport":
 				_handle_passport_drop(mouse_pos)
-			elif dragged_item.name == "Guide":
-				_handle_guide_drop(mouse_pos)
 			elif dragged_item.name == "LawReceipt":
 				_handle_receipt_drop(mouse_pos)
 			
@@ -572,9 +570,7 @@ func get_item_size(item: Node2D) -> Vector2:
 ## @param item The Node2D to check.
 ## @return True if the item is an openable document, false otherwise.
 func is_openable_document(item: Node2D) -> bool:
-	return item and (item.name == "Passport" or 
-					item.name == "Guide" or 
-					item.name == "LawReceipt")
+	return item and (item.name == "Passport" or item.name == "LawReceipt")
 
 ## Finds the topmost draggable item at the given position.
 ##
@@ -697,19 +693,6 @@ func _handle_passport_drop(mouse_pos: Vector2):
 				stamp_system_manager.clear_passport_stamps()
 			else:
 				push_error("Cannot clear passport stamps: StampSystemManager is null")
-
-## Handles guide drop logic.
-##
-## Manages document state based on drop zone and emits appropriate signals.
-## @param mouse_pos The mouse position where the drop occurred.
-func _handle_guide_drop(mouse_pos: Vector2):
-	var drop_zone = identify_drop_zone(mouse_pos)
-	if drop_zone == "inspection_table":
-		# Logic to open guide
-		emit_signal("item_opened", dragged_item)
-	elif drop_zone == "suspect_panel" or drop_zone == "suspect":
-		# Logic to close guide
-		emit_signal("item_closed", dragged_item)
 
 ## Handles receipt drop logic.
 ##
