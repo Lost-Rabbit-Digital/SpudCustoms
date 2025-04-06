@@ -1,0 +1,55 @@
+Worst narrative art: 
+escape:
+Pixel art scene showing a dimly lit emergency exit pathway in a dystopian facility. Two potato characters in customs officers uniforms running through an industrial corridor with "EXIT" signs glowing in the distance. Steam vents and pipes line the walls. Alarm lights pulsing red against dark blue shadows. 16-bit aesthetic with chunky pixels and limited color palette focusing on deep blues, safety reds, and muted browns. Side-scrolling perspective with attention to pixel-perfect shadows.
+
+extreme_emergency:
+"Pixel art scene of border facility in extreme emergency lockdown. Flashing red alarm lights illuminating darkened checkpoint. Panicked anthropomorphic potato citizens running in all directions while potato guards in teal uniforms attempt to maintain order. Barricades being rapidly deployed, emergency barriers dropping from ceiling. Limited color palette with deep purples for shadows, bright reds for alarm lights, browns for potato characters, and teal-green for uniforms and equipment. 16-bit aesthetic with dramatic lighting effects from alarms. Clean pixel edges with defined outlines. Dystopian potato setting with sense of immediate danger and chaos. High contrast between dark areas and emergency lighting."
+
+final_chaos
+Pixel art of border checkpoint in complete chaos during uprising. Crowds of anthropomorphic potato citizens fleeing or protesting, security barriers broken. Potato guards attempting to maintain order amidst confusion. 16-bit aesthetic with limited color palette of browns, greens, and purple shadows. Flat perspective with dynamic composition suggesting movement. Clean pixel edges with defined outlines. Dystopian potato-themed setting with revolutionary atmosphere.
+
+hide_under_desk
+A detailed pixel art cutscene of a tense moment in an office. A nervous potato character in a customs uniform is halfway underneath a wooden desk, eyes wide with fear. The scene uses a side-view perspective showing the interior of Supervisor Russet's office with muted green-gray walls and industrial fixtures. The door is opening, revealing Supervisor Russet's shadow (a stern potato with military hat and uniform). The desk has official-looking papers and a document stamp visible on top. The lighting is dim with dramatic shadows creating tension. Background elements include filing cabinets, a propaganda poster, and a window showing darkness outside. The art style matches the game's detailed pixel art aesthetic with strong character expressions, limited but dramatic color palette focusing on browns, greens and shadows, and clean pixel linework with careful shading.
+
+official_arrival
+Pixel art scene of potato prime minister motorcade arriving at checkpoint. Anthropomorphic potato soldiers standing at attention, ceremonial decorations. Important potato prime minister visible in vehicle or emerging from car. 16-bit aesthetic with limited color palette using official greens for uniforms, gray for vehicles, browns for infrastructure, and purple shadows. Flat perspective with ceremonial lighting. Clean pixel edges with defined outlines. Dystopian potato-themed setting with formal, authoritarian atmosphere.
+
+resistance_base
+Underground resistance hideout in pixel art style. Concrete bunker with makeshift furniture, maps on walls, communication equipment. Anthropomorphic potato rebels in various positions planning operations. 16-bit aesthetic with limited color palette using browns for furniture, muted greens for equipment, warm lighting from lanterns, and purple shadows. Flat perspective with dramatic lighting. Clean pixel edges with defined outlines. Dystopian potato-themed setting with revolutionary atmosphere.
+
+sasha_capture
+Pixel art scene of Sweet Potato Sasha (anthropomorphic orange-tinted potato character) being captured by security forces. Character restrained between potato guards, maintaining defiant expression. Superior potato officer watching with satisfaction. 16-bit aesthetic with limited color palette using dark greens for uniforms, browns for environmental elements, orange tint for Sasha's character, and deep shadows. Flat perspective with dramatic spotlight effect. Clean pixel edges with defined outlines. Emotional turning point in dystopian potato-themed setting.
+
+russet_standoff
+Pixel art scene of a tense confrontation in a dystopian potato processing facility. A potato supervisor in a dark uniform stands menacingly at control panels with grinding machinery visible in background. Frightened potato characters bound to conveyor belts. Dramatic lighting with red emergency lights casting shadows. 16-bit style with limited color palette of browns, reds, and cool blues. Isometric perspective with clean pixel edges. Moody, threatening atmosphere with industrial elements.
+
+night_gameplay
+Pixel art exterior view of a potato nation border checkpoint at dusk. Small white guard booth with anthropomorphic potato guards in teal-green uniforms standing at barriers. Queue of anxious potato citizens waiting to cross. Large concrete wall stretching across background with watchtowers. Streetlamps casting pools of light on checkpoint area. Limited color palette with deep purples for sky, browns for potato characters, teal-green for uniforms, and gray for infrastructure. 16-bit aesthetic with clean pixel edges and defined outlines. Dystopian atmosphere with propaganda elements visible but no readable text. Sharp contrast between shadows and highlights creating tense, controlling mood.
+
+jump_out_window
+A dramatic pixel art cutscene showing a potato character in customs uniform caught mid-leap through an office window. The scene uses a side-view perspective looking into Supervisor Russet's office with the character halfway out the window frame. Papers are flying off the desk from the rushed escape. The door is beginning to open showing Supervisor Russet's imposing shadow (a stern potato with military hat). The office has muted green-gray walls, industrial fixtures, and wooden furniture. The window shows darkness outside with a faint hint of ground below. The art style features detailed potato characters with expressive faces, clean pixel linework, dramatic shadows, and a limited color palette dominated by browns, greens and dark blues. The lighting creates tension with the character silhouetted against the window while Russet's shadow looms from the doorway.
+
+checkpoint_exterior
+Pixel art exterior view of border checkpoint facility. Potato Customs Office booth, barriers, queue area for travelers, and border wall visible in background. 16-bit aesthetic with browns for structures, greens for surrounding environment, grays for concrete barriers, and purple shadows. Flat perspective with dawn/dusk lighting creating long shadows. Clean pixel edges with defined outlines. Dystopian potato-themed border control with watchtowers visible. Potato people lined up in queue. No readable text on signs.
+
+joining_resistance
+Pixel art scene of anthropomorphic potato character actively joining resistance fighters. Character accepting resistance equipment from fellow potato rebels with determined expressions. Makeshift hideout with shadows and limited light sources. 16-bit aesthetic with limited color palette using warm browns, muted greens for clothing, and purple shadows. Flat perspective with dramatic lighting. Clean pixel edges with defined outlines. Dystopian potato-themed setting with sense of secretive alliance forming.
+
+night_alarm
+Pixel art scene of nighttime security alarm activation. Flashing red warning lights illuminating dark storage area, creating stark shadows. 16-bit aesthetic with limited color palette using deep purples for night darkness, bright reds for alarm lights, and subdued browns for environmental elements. Flat perspective with dramatic lighting effects from alarm. Clean pixel edges with defined outlines. Tense, urgent atmosphere with suggestion of approaching security forces. Dystopian potato-themed border setting with no readable text.
+
+night_attack
+Pixel art scene of resistance attack beginning at night. Distant explosions illuminating horizon in orange and red, checkpoint in foreground with personnel reacting to emergency. 16-bit aesthetic with limited color palette using deep purples for night sky, bright oranges for explosions, institutional greens for uniforms, and near-black shadows. Flat perspective with dramatic lighting from explosions. Clean pixel edges with defined outlines. Dystopian potato-themed setting with chaos and decisive action suggested through composition.
+
+occupation_checkpoint
+Pixel art of militarized border checkpoint under martial law. Armored vehicles with mounted weapons positioned at entrance. Elite anthropomorphic potato guards in military-style teal uniforms with additional armor pieces and helmets. Regular guards standing at attention in formation. Checkpoint booth reinforced with metal plating. Limited color palette using institutional grays for barriers and vehicles, deep purples for shadows, browns for potato characters, and dark teal for uniforms. 16-bit aesthetic with dramatic spotlight lighting creating long shadows. Clean pixel edges with defined outlines. Dystopian potato-themed setting with authoritarian atmosphere. Potato civilians nervously observing from distance.
+
+security_lockdown
+Pixel art of border facility during security lockdown. Reinforced barriers being deployed, alarm lights flashing, additional armed potato guards taking positions. Nervous potato staff and travelers reacting to situation. 16-bit aesthetic with limited color palette using institutional greens for uniforms, cold grays for barriers, warning reds for alarm lights, and deep purple shadows. Flat perspective with dramatic lighting effects from emergency systems. Clean pixel edges with defined outlines. Dystopian potato-themed setting with security protocols visibly activating. No readable text on warning signs or displays. Tense, authoritarian atmosphere with sense of control and surveillance.
+
+
+supervisor_presenting
+Pixel art scene of a potato person with a mustache in official customs uniform addressing new potato recruits. Office setting with flag and commemorative plaques on wall (no readable text). 16-bit aesthetic with limited color palette using browns for furniture, greens for uniform, and purple shadows. Flat perspective with supervisor standing commandingly. Clean pixel edges with defined outlines. Intimidating atmosphere with subordinates standing at attention
+
+checkpoint_exterior:
+Pixel art exterior view of border checkpoint facility. Potato Customs Office booth, barriers, queue area for travelers, and border wall visible in background. 16-bit aesthetic with browns for structures, greens for surrounding environment, grays for concrete barriers, and purple shadows. Flat perspective with dawn/dusk lighting creating long shadows. Clean pixel edges with defined outlines. Dystopian potato-themed border control with watchtowers visible. Potato people lined up in queue. No readable text on signs.
