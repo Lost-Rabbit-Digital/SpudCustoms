@@ -17,7 +17,7 @@ audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0
 sweet_potato_sasha: "The manifests should be in his filing cabinet. [color=CRIMSON]Red folder labeled 'RR Transport'[/color]. Don't leave evidence of your search."
 leave sweet_potato_sasha
 
-[background arg="res://assets/narrative/root_reserve_customs_office.png" fade="2.0"]
+[background arg="res://assets/narrative/customs_office.png" fade="2.0"]
 audio "res://assets/audio/mechanical/Metal Old Door A.wav" [volume="-10.0" bus="SFX"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]

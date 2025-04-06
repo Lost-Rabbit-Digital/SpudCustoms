@@ -68,9 +68,6 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-04-11 Target Release - 1.0.2
 ## Tasks
 ## RELEASE BLOCKERS
-- Remake Score Attack mode and score at least 25 potatoes
-- Create demo version of game without Score Attack mode, only shift 0, 1, and 2
-- Beat Story mode, and test each of the 4 endings
 - Stamps go over edge of passport
 - Corpses need a slightly lower z-index to show BEHIND explosions (re-test)
 - Runner potatoes are registering TWO strikes instead of just 1
@@ -81,6 +78,9 @@ These are our goals, to-do tasks, and completed tasks.
 - Drag and Drop / Bug: If the player grabs the passport while it's animated the script does not properly update z-index
 - Drag and Drop / Bug: LawReceipt does not automatically close when dragged off of the suspect table
 - Drag and Drop / Bug: Get highest z-index doesn't seem to be working properly, cannot easily set passport atop of LawReceipt
+- Remake Score Attack mode and score at least 25 potatoes
+- Create demo version of game without Score Attack mode, only shift 0, 1, and 2
+- Beat Story mode, and test each of the 4 endings
 
 ### Graphics  
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
