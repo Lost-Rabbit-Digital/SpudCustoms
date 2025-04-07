@@ -869,13 +869,13 @@ func handle_successful_hit(runner, explosion_pos):
 		
 	corpse.global_position = runner.global_position
 	
-	corpse.z_index = 8 # Under explosions, above world background.
+	corpse.z_index = 5 # Under explosions, above world background.
 	
 	# Slightly adjust size randomly
 	corpse.scale = Vector2(0.9, 0.9) * randf_range(0.9, 1.1) 
 	
 	# Add slight random rotation for visual variety
-	corpse.rotation = randf_range(-0.3, 0.3)
+	corpse.rotation = randf_range(-0.4, 0.4)
 	
 	# Add the footprint to a group for easier management
 	corpse.add_to_group("CorpseGroup")
