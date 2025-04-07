@@ -83,6 +83,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Beat Story mode, and test each of the 4 endings
 - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
 - Do not allow the user to pick up the document through the stamp bar
+- Add a check for winning the day, if the border runner is actively happening wait for it to finish before ending the shift
 
 ### Graphics  
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
