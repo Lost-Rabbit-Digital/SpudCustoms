@@ -623,18 +623,16 @@ func megaphone_clicked():
 	if potato:
 		if office_shutter_controller.active_shutter_state == office_shutter_controller.shutter_state.CLOSED:
 			# Fade out the foreground shadow on the potato when they enter
-			#print("Fading out the foreground shadow on potato due to megaphone_clicked()")
-			# Play the shadow fade 0.5s faster than duration
 			character_generator.fade_out_foreground_shadow(4)
 	
 		# Only raise the shutter on the first megaphone click of the shift
-		#if !office_shutter_controller.shutter_opened_this_shift:
-		#	office_shutter_controller.raise_shutter(3)  # Slow, mechanical shutter raising
-		#	office_shutter_controller.shutter_opened_this_shift = true
 		megaphone_dialogue_box.next_message()
 		is_potato_in_office = true
 		megaphone.visible = true
+		
+		# Use the potato info directly from the potato object instead of generating new info
 		current_potato_info = potato.get_potato_info()
+		current_potato = potato
 		
 		# Move potato to the office
 		move_potato_to_office(potato)
@@ -643,20 +641,21 @@ func megaphone_clicked():
 		megaphone_dialogue_box.next_message()
 		
 func move_potato_to_office(potato_person: PotatoPerson):
-	#print("Moving our spuddy to the customs office")
+	print("Moving potato to customs office")
+	print("Potato info: Race: ", potato_person.potato_info.race, 
+		  " Sex: ", potato_person.potato_info.sex,
+		  " Character Data: ", potato_person.potato_info.character_data if potato_person.potato_info.has("character_data") else "MISSING")
+	
 	if potato_person.get_parent():
 		potato_person.get_parent().remove_child(potato_person)
-		#print("removed potato from original parent")
 		
 	var path_follow = PathFollow2D.new()
 	path_follow.rotates = false 
 	enter_office_path.add_child(path_follow)
 	path_follow.add_child(potato_person)
-	#print("Added potato_person to new PathFollow2D")
 	
 	potato_person.position = Vector2.ZERO
 	path_follow.progress_ratio = 0.0
-	#print("Reset potato position and path progress") 
 	
 	# Calculate a better duration based on path length
 	var path_length = enter_office_path.curve.get_baked_length()
@@ -666,12 +665,18 @@ func move_potato_to_office(potato_person: PotatoPerson):
 	var tween = create_tween()
 	tween.tween_property(path_follow, "progress_ratio", 1.0, duration)
 	tween.tween_callback(func():
-		#print("Potato reached end of path, clean up")
+		# Before cleanup, make sure we've fully captured the potato data including character data
+		if !current_potato_info.has("character_data") and potato_person.potato_info.has("character_data"):
+			current_potato_info["character_data"] = potato_person.potato_info.character_data
+			print("Debug: Fixed missing character data during office transition")
+			
+		# Clean up the path and potato instance
 		potato_person.queue_free()
 		path_follow.queue_free()
+		
+		# Now animate mugshot and passport with the complete info
 		animate_mugshot_and_passport()
-		)
-	#print("Started animate mugshot and passport tween animation")
+	)
 
 # Add this new function to handle path completion
 func _on_potato_path_completed(potato: PotatoPerson):
@@ -686,7 +691,12 @@ func animate_mugshot_and_passport():
 	if office_shutter_controller.active_shutter_state == office_shutter_controller.shutter_state.CLOSED:
 		office_shutter_controller.raise_shutter()
 	
-	#print("Animating mugshot and passport")
+	print("Starting animate_mugshot_and_passport with potato info:", current_potato_info.race, current_potato_info.sex)
+	
+	# IMPORTANT: Save a reference to original info
+	var original_potato_info = current_potato_info.duplicate()
+	
+	# Update the display with current potato info
 	update_potato_info_display()
 	
 	# Get references to nodes
@@ -716,9 +726,17 @@ func animate_mugshot_and_passport():
 	tween.tween_property(passport, "visible", true, 0).set_delay(1)
 	tween.tween_property(passport, "position:y", passport_spawn_point_end.position.y, 0.4).set_delay(1)
 
-	tween.chain().tween_callback(func(): print("Finished animating mugshot and passport"))
-	
-	tween.set_parallel(false)
+	# IMPORTANT: After animation finishes, restore the original potato info 
+	# to prevent it from being overwritten
+	tween.chain().tween_callback(func():
+		print("Animation finished, restoring original potato info")
+		current_potato_info = original_potato_info
+		
+		# Update the display again to ensure consistency
+		update_potato_info_display()
+		
+		print("Finished animating mugshot and passport")
+	)
 
 func setup_spawn_timer():
 	spawn_timer = $SystemManagers/Timers/SpawnTimer
@@ -820,6 +838,11 @@ func _process(_delta):
 			reset_combo()
 
 func generate_potato_info():
+	# IMPORTANT: Don't generate new info if valid info already exists
+	if current_potato_info != null and !current_potato_info.is_empty():
+		print("WARNING: Attempted to regenerate potato info but using existing data")
+		return current_potato_info
+		
 	var expiration_date: String
 	if randf() < 0.2:
 		expiration_date = get_past_date(0, 3)
@@ -840,10 +863,15 @@ func generate_potato_info():
 		if passport_generator:
 			passport_generator.set_character_data(character_data)
 	
+	# For race, retrieve it from character_data if available,
+	# otherwise just use a fixed default like "Russet"
+	var race = character_data.get("race", "Russet")
+	
 	return {
 		"name": get_random_name(),
 		"condition": get_random_condition(),
 		"sex": sex,
+		"race": race,
 		"country_of_issue": get_random_country(),
 		"date_of_birth": get_past_date(1, 10),
 		"expiration_date": expiration_date,
@@ -851,8 +879,8 @@ func generate_potato_info():
 	}
 	
 func update_potato_info_display():
-	#print("Printing current potato info")
-	print(current_potato_info)
+	print("Updating potato info display with: ", current_potato_info)
+	
 	if current_potato_info:
 		$Gameplay/InteractiveElements/Passport/OpenPassport/PotatoHeader.text = """{name}""".format(current_potato_info)
 		$Gameplay/InteractiveElements/Passport/OpenPassport/PotatoInfo.text = """{date_of_birth}
@@ -863,7 +891,8 @@ func update_potato_info_display():
 		""".format(current_potato_info)
 	else:
 		print("No current_potato_info found.")
-	#print("Potato info update complete")
+		
+	# Update mugshot and passport visuals
 	update_potato_texture()
 
 func get_random_name():
@@ -1097,12 +1126,27 @@ func update_potato_texture():
 		print("ERROR: Character generators not found!")
 		return
 	
-	# Use the stored character data from potato_info
+	# Use the correct race from potato_info
+	var race = current_potato_info.race if current_potato_info.has("race") else "Russet"
+	var sex = current_potato_info.sex if current_potato_info.has("sex") else "Male"
+	
+	# Set race and sex explicitly first
+	mugshot_generator.set_race(race)
+	mugshot_generator.set_sex(sex)
+	passport_generator.set_race(race)
+	passport_generator.set_sex(sex)
+	
+	# Then apply character data
 	if current_potato_info.has("character_data"):
-		mugshot_generator.set_character_data(current_potato_info.character_data)
-		passport_generator.set_character_data(current_potato_info.character_data)
+		# Don't let character data override the race and sex
+		var character_data = current_potato_info.character_data.duplicate()
+		character_data.race = race
+		character_data.sex = sex
+		
+		mugshot_generator.set_character_data(character_data)
+		passport_generator.set_character_data(character_data)
 	else:
-		print("ERROR: No character data found in potato_info!")
+		print("WARNING: No character data found in potato_info!")
 		
 	print("Character display updated")
 

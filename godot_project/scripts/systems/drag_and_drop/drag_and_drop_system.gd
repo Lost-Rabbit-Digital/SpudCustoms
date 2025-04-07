@@ -504,6 +504,9 @@ func _return_item_to_table(item: Node2D):
 	# Find the nearest valid position
 	var target_position = find_nearest_table_position(item.global_position, item_size)
 	
+	target_position.y += randi_range(-75, 75)
+	target_position.x += randi_range(-75, 75)
+	
 	# Create a tween for position
 	var tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT)

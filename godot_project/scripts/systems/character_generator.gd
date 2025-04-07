@@ -35,33 +35,41 @@ func set_sex(new_sex: String):
 	update_sprite_animations()
 
 func update_sprite_animations():
-	# Update visuals based on the current race and sex
+	# Format animation names properly
+	var race_formatted = race.to_lower().replace(" ", "_")
+	var head_anim = race_formatted + "_head_" + sex
+	var face_anim = race_formatted + "_face_" + sex
+	var torso_anim = race_formatted + "_body_" + sex
+	
+	# Debug info
+	print("Setting animations - Head: ", head_anim, ", Face: ", face_anim, ", Body: ", torso_anim)
+	
+	# Update head animation
 	if head and head.sprite_frames:
-		var head_anim = race.to_lower().replace(" ", "_") + "_head_" + sex
 		if head.sprite_frames.has_animation(head_anim):
 			head.animation = head_anim
 			head.frame = current_head_frame
 			head.pause()  # Ensure animation doesn't play
 		else:
-			print("Warning: Animation not found: ", head_anim)
+			push_error("Animation not found: " + head_anim + " - Available animations: " + str(head.sprite_frames.get_animation_names()))
 	
+	# Update face animation
 	if face and face.sprite_frames:
-		var face_anim = race.to_lower().replace(" ", "_") + "_face_" + sex
 		if face.sprite_frames.has_animation(face_anim):
 			face.animation = face_anim
 			face.frame = current_face_frame
 			face.pause()  # Ensure animation doesn't play
 		else:
-			print("Warning: Animation not found: ", face_anim)
+			push_error("Animation not found: " + face_anim + " - Available animations: " + str(face.sprite_frames.get_animation_names()))
 	
+	# Update torso animation
 	if torso and torso.sprite_frames:
-		var torso_anim = race.to_lower().replace(" ", "_") + "_body_" + sex
 		if torso.sprite_frames.has_animation(torso_anim):
 			torso.animation = torso_anim
 			torso.frame = current_body_frame
 			torso.pause()  # Ensure animation doesn't play
 		else:
-			print("Warning: Animation not found: ", torso_anim)
+			push_error("Animation not found: " + torso_anim + " - Available animations: " + str(torso.sprite_frames.get_animation_names()))
 
 
 func randomise_character():
@@ -153,8 +161,10 @@ func get_character_data() -> Dictionary:
 		"body_frame": current_body_frame
 	}
 
-# Function to set character data directly
+# In character_generator.gd
 func set_character_data(data: Dictionary) -> void:
+	print("Setting character data: ", data)
+	
 	if data.has("race"):
 		race = data.race
 	if data.has("sex"):
@@ -165,7 +175,33 @@ func set_character_data(data: Dictionary) -> void:
 		current_face_frame = data.face_frame
 	if data.has("body_frame"):
 		current_body_frame = data.body_frame
+		
+	print("After setting - Race: ", race, " Sex: ", sex)
+	
+	# Ensure animations are updated with the correct race and sex
 	update_sprite_animations()
+	
+	# Validate that animations match the specified race and sex
+	_validate_animations()
+	
+func _validate_animations():
+	# Validate head animation
+	var expected_head_anim = race.to_lower().replace(" ", "_") + "_head_" + sex
+	if head and head.animation != expected_head_anim:
+		push_warning("Head animation mismatch! Current: " + head.animation + ", Expected: " + expected_head_anim)
+		head.animation = expected_head_anim
+		
+	# Validate face animation
+	var expected_face_anim = race.to_lower().replace(" ", "_") + "_face_" + sex
+	if face and face.animation != expected_face_anim:
+		push_warning("Face animation mismatch! Current: " + face.animation + ", Expected: " + expected_face_anim)
+		face.animation = expected_face_anim
+		
+	# Validate body animation
+	var expected_body_anim = race.to_lower().replace(" ", "_") + "_body_" + sex  
+	if torso and torso.animation != expected_body_anim:
+		push_warning("Body animation mismatch! Current: " + torso.animation + ", Expected: " + expected_body_anim)
+		torso.animation = expected_body_anim
 	
 func fade_out_foreground_shadow(duration: float = 1.5):
 	# Get reference to the foreground shadow node

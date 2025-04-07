@@ -221,12 +221,17 @@ func update_appearance():
 			%PotatoSprite.visible = false
 			
 	# Update character appearance from character data if available
-	if potato_info.has("character_data") and $CharacterGenerator:
-		$CharacterGenerator.set_character_data(potato_info.character_data)
+	if potato_info.has("character_data") and has_node("CharacterGenerator"):
+		var character_gen = get_node("CharacterGenerator")
+		character_gen.set_character_data(potato_info.character_data)
+		print("Debug: PotatoPerson updated with character data: ", 
+			  "Race: ", potato_info.race, 
+			  "Sex: ", potato_info.sex,
+			  "Head Frame: ", potato_info.character_data.get("head_frame", "??"))
 	
 	# Update body sprite based on race if specified
 	if potato_info.has("race") and potato_info.race in textures:
-		# Apply the texture to the child sprite instead of self
+		# Apply the texture to the child sprite
 		%PotatoSprite.texture = textures[potato_info.race]
 
 func move_toward(target: Vector2, speed: float):
