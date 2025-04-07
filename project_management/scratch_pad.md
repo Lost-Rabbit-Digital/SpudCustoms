@@ -81,29 +81,25 @@ These are our goals, to-do tasks, and completed tasks.
 - Remake Score Attack mode and score at least 25 potatoes
 - Create demo version of game without Score Attack mode, only shift 0, 1, and 2
 - Beat Story mode, and test each of the 4 endings
+- Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
+- Do not allow the user to pick up the document through the stamp bar
 
 ### Graphics  
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
 - Add logic to check if game paused or in dialogic before updating cursor to target cursor
-- Add random y-axis variation on the position selected in the return to table function
 - Alert Text: Wrong font sizing, causing blurry text
 - Cause stamps to wiggle and slam in and then fade into color on shift summary
 - Center closed version of documents on the mouse position, it often appears offset
 - Concrete steps should be smaller and darker than the grass footsteps
-- Gate re-raises on megaphone click, even when already up.
 - Have animated counters up for each of the values in the shift summary screen
 - Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism for the approval and reject stamps? As in the whole stamp descends, just the stamp handle descends, stamp handle comes back up, whole stamp comes back up.
 - Potato shadow doesn't line up with the silhouette of the new potatoes
-- Potato stays in shadow when the shutter automatically raises
-- Potatoes in queue don't seem to match up with potatoes that enter customs office (MugshotGenerator is using diff potatoes lol)
 - Update cursor to show a select icon when above the approval or rejection stamp
-- Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
 - When hit with a missile, make the Runner corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest
 - When shift ends, treat the last guy in office as rejected
 
 ### Gameplay
 - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
-- Do not allow the user to pick up the document through the stamp bar
 - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
 
 ### Audio
@@ -114,7 +110,6 @@ These are our goals, to-do tasks, and completed tasks.
 - Whooosh sound when document is returned to table
 - Whooshing sound when documents are dragged quickly
 
-
 ### Backend
 - Megaphone Dialogue System: Implement the different categories of dialogue from the JSON file into the megaphone_clicked function code in mainGame.gd
 
@@ -124,6 +119,11 @@ These are our goals, to-do tasks, and completed tasks.
 - Fix skip story bug not hiding the history button quickly
 
 ### Completed Tasks for 1.0.2
+- Fix potatoes using wrong spritesheet for assigned race / sex
+- Potatoes in queue don't seem to match up with potatoes that enter customs office (MugshotGenerator is using diff potatoes lol)
+- Potato stays in shadow when the shutter automatically raises
+- Add random x/y-axis variation on the position selected in the return to table function
+- Gate re-raises on megaphone click, even when already up.
 - Corpses added too high to tree, screen shake not affecting them
 - Update cursor to show a select icon when above the megaphone 
 - Only show take passport dialogue if the passport has been stamped
