@@ -17,17 +17,23 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 
 ## Graphics
 - Passport: The shadow is still on the spud for the picture, is this a bug or should it be visually enhanced? 
+- Explosions appear above the inspection table
+- Potato footsteps appear above the customs office
+- Potato gibs appear below the screen borders
 
 ## Queue Interaction System
 
 ## Drag and Drop Manager
 
 ## Emote System
+- Disable blank emotes
+- Disable dot emotes
 
 ## Office Shutter System
 
 ## Cursor Manager
 - Cursor: After dragging a document the cursor returns to default even if the cursor is still hovering over a document 
+- Cursor: Update cusor to work with Maaacks menu
 
 ## Megaphone Dialogue System
 - Megaphone Dialogue: Rename to Bubble Dialogue System
