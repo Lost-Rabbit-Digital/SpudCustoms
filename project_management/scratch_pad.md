@@ -92,7 +92,6 @@ These are our goals, to-do tasks, and completed tasks.
 - Concrete steps should be smaller and darker than the grass footsteps
 - Gate re-raises on megaphone click, even when already up.
 - Have animated counters up for each of the values in the shift summary screen
-- Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism (whole stamp descends, just the stamp handle descends, stamp handle comes back up, whole stamp comes back up)
 - Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism for the approval and reject stamps? As in the whole stamp descends, just the stamp handle descends, stamp handle comes back up, whole stamp comes back up.
 - Potato shadow doesn't line up with the silhouette of the new potatoes
 - Potato stays in shadow when the shutter automatically raises
