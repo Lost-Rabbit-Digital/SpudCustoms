@@ -11,7 +11,8 @@ enum MessageCategory {
 	SPUD_BEING_CALLED,
 	SPUD_IN_OFFICE,
 	WARNINGS,
-	MISC
+	MISC,
+	DOCUMENT_INTERACTION,
 }
 
 # Store loaded messages
@@ -66,20 +67,19 @@ func load_messages():
 		
 		if queue_messages.has("misc"):
 			messages["misc"] = queue_messages["misc"]
+			
+		if queue_messages.has("document_interaction"):
+			messages["document_interaction"] = queue_messages["document_interaction"]
 
 # Set a random message from a specific category
-func set_random_message_from_category(category):
+func set_random_message_from_category(category_str: String) -> void:
 	var category_messages = []
 	
-	match category:
-		MessageCategory.SPUD_BEING_CALLED:
-			category_messages = messages["spud_being_called"]
-		MessageCategory.SPUD_IN_OFFICE:
-			category_messages = messages["spud_in_office"]
-		MessageCategory.WARNINGS:
-			category_messages = messages["warnings"]
-		MessageCategory.MISC:
-			category_messages = messages["misc"]
+	# Simply use the category string directly to access the messages dictionary
+	if messages.has(category_str):
+		category_messages = messages[category_str]
+	else:
+		push_warning("Unknown message category: " + category_str)
 	
 	if category_messages.size() > 0:
 		var random_index = randi() % category_messages.size()
@@ -88,22 +88,16 @@ func set_random_message_from_category(category):
 		bubble_text.text = "No messages available."
 
 # Set a completely random message from any category
-func set_random_message():
+func set_random_message() -> void:
 	# Get all categories that have messages
 	var available_categories = []
 	
-	if messages["spud_being_called"].size() > 0:
-		available_categories.append(MessageCategory.SPUD_BEING_CALLED)
+	# Check each category and add its string key if it has messages
+	for category_key in messages.keys():
+		if messages[category_key].size() > 0:
+			available_categories.append(category_key)
 	
-	if messages["spud_in_office"].size() > 0:
-		available_categories.append(MessageCategory.SPUD_IN_OFFICE)
-	
-	if messages["warnings"].size() > 0:
-		available_categories.append(MessageCategory.WARNINGS)
-	
-	if messages["misc"].size() > 0:
-		available_categories.append(MessageCategory.MISC)
-	
+	# Select a random category and set a message from it
 	if available_categories.size() > 0:
 		var random_category = available_categories[randi() % available_categories.size()]
 		set_random_message_from_category(random_category)

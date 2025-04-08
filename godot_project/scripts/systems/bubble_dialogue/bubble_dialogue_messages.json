@@ -52,8 +52,9 @@
 	  "Apocalypse? Take number, wait to vanish.",
 	  "No evidence means more forms required."
 	],
-	"document interaction": [
+	"document_interaction": [
 		"Take your documents, please.",
+		"TAKE THEM!"
 	],
   }
 }

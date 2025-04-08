@@ -640,7 +640,7 @@ func megaphone_clicked():
 	# Check if there's already a potato in the Customs Office
 	if is_potato_in_office:
 		#print("A potato is already in the customs office!")
-		megaphone_dialogue_box.next_message()
+		megaphone_dialogue_box.set_random()
 		return
 		
 	var potato = queue_manager.remove_front_potato()
@@ -800,6 +800,8 @@ func _on_hint_deactivated(node_name: String):
 	# You could play a different sound effect here
 	pass
 
+var displayed_give_prompt = false
+
 func _process(_delta):
 	# Skip hint processing if game is paused or in dialogue
 	if is_game_paused or narrative_manager.is_dialogue_active():
@@ -841,18 +843,27 @@ func _process(_delta):
 	var passport = $Gameplay/InteractiveElements/Passport
 	
 	# Only show the dialogue if the shutter is OPEN and the passport has been STAMPED
+	var should_show_prompt = false
+	
 	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and drag_and_drop_manager.is_document_open("passport") == false and drag_and_drop_manager.drag_system.get_dragged_item() == passport:
 		if office_shutter_controller.active_shutter_state == office_shutter_controller.shutter_state.OPEN:
 			if stamp_system_manager.passport_stampable.get_decision() != "":
-				$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = true
-	else:
-		$Gameplay/InteractiveElements/Passport/ClosedPassport/GivePromptDialogue.visible = false
+				should_show_prompt = true
 	
-	# Hide megaphone dialogue box when the officer sound stops playing
-	if !%SFXPool.is_playing():
-		megaphone_dialogue_box.visible = false
+	# Only update if state has changed
+	if should_show_prompt != displayed_give_prompt:
+		displayed_give_prompt = should_show_prompt
 		
+		if displayed_give_prompt:
+			# Only show the message when newly displaying the prompt
+			%GivePromptBubbleDialogueBox.set_random_message_from_category("document_interaction")
+			%GivePromptBubbleDialogueBox.visible = true
+		else:
+			%GivePromptBubbleDialogueBox.visible = false
 		
+		# Hide megaphone dialogue box when the officer sound stops playing
+		if !%SFXPool.is_playing():
+			megaphone_dialogue_box.visible = false
 		
 	# Update combo timer
 	if combo_count > 0:

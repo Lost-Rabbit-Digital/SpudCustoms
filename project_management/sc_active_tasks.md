@@ -12,6 +12,7 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Emote System: If you click the same potato 3+ times they get angry and show POPPING_VEINS emote
 - Emote System: Potatoes should play small sound upon emoting
 - Emote System: Skew emote display chance towards angry and confused
+- Potato in office: Should move up and down like breathing animation, simple tween
 
 ## Audio
 
@@ -39,7 +40,6 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 ## Code Loopholes (Bugs)
 
 ## Currently active tasks
-- Potato in office: Should move up and down like breathing animation, simple tween
 - Stamp System: Do not make random, make it linear, use notes from David
 
 - Bubble Dialogue: Implement into the Drag and Drop system for dropping a passport onto a potato to have varied dialogue instead of the same hardcoded text

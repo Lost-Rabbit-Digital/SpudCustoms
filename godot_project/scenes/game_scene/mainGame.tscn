@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://cwks4tbpoq3n5"]
+[gd_scene load_steps=59 format=3 uid="uid://cwks4tbpoq3n5"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://scenes/game_scene/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://scripts/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
@@ -22,7 +22,6 @@
 [ext_resource type="PackedScene" uid="uid://be3lucg3f3a3c" path="res://scripts/systems/stamp/StampBarController.tscn" id="25_osm16"]
 [ext_resource type="PackedScene" uid="uid://fci3o688eddt" path="res://scripts/systems/LawReceiptController.tscn" id="27_ccap0"]
 [ext_resource type="Texture2D" uid="uid://y3iyyicwxtsl" path="res://assets/documents/closed_passport_small/closed_passport_small.png" id="27_qjue5"]
-[ext_resource type="Texture2D" uid="uid://bwxca6c4lcag" path="res://assets/give_prompt_dialogue.png" id="28_jdq0j"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://assets/fonts/windows_command_prompt.ttf" id="29_b6emd"]
 [ext_resource type="Texture2D" uid="uid://bxn3434177kfd" path="res://assets/documents/laws_receipt.png" id="31_rtxd3"]
 [ext_resource type="Script" uid="uid://dfofd8lp0igu2" path="res://scripts/systems/law_receipt.gd" id="32_k1orm"]
@@ -513,7 +512,7 @@ position = Vector2(1079, 584)
 [node name="Passport" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_index = 3
 z_as_relative = false
-position = Vector2(1848, 1082)
+position = Vector2(1854, 1076)
 texture = ExtResource("27_qjue5")
 
 [node name="ClosedPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
@@ -522,11 +521,11 @@ position = Vector2(-34.6184, 40.1346)
 rotation = -0.137881
 scale = Vector2(0.413016, 0.413016)
 
-[node name="GivePromptDialogue" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport/ClosedPassport"]
+[node name="GivePromptBubbleDialogueBox" parent="Gameplay/InteractiveElements/Passport/ClosedPassport" instance=ExtResource("36_ccap0")]
+unique_name_in_owner = true
 position = Vector2(357.294, -256.302)
 rotation = 0.137881
 scale = Vector2(2.42121, 2.42121)
-texture = ExtResource("28_jdq0j")
 
 [node name="OpenPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
 visible = false
@@ -718,7 +717,7 @@ unique_name_in_owner = true
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Megaphone/MegaphoneInteractionButton" to="." method="_on_megaphone_interaction_button_pressed"]
