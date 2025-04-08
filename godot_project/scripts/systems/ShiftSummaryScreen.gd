@@ -10,6 +10,9 @@ signal continue_to_next_shift
 signal return_to_main_menu
 signal restart_shift
 
+# First try using the unique node name identifier
+var narrative_manager = null
+
 func _init():
 	mouse_filter = Control.MOUSE_FILTER_IGNORE  # Allow input to pass through to buttons
 
@@ -19,7 +22,7 @@ func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	hide()
 
-
+	var narrative_manager = %NarrativeManager
 
 	# Use stored stats if available, otherwise use test data
 	if !Global.current_game_stats.is_empty():
@@ -55,6 +58,9 @@ func show_summary(stats_data: Dictionary):
 	stats = stats_data
 	show()
 	
+	# First update the shift number regardless of win/loss status
+	var shift_number = stats.get("shift", 1)
+	
 	# Determine if player won or lost
 	var win_condition = stats.get("quota_met", 0) >= stats.get("quota_target", 5)
 	print("Win Condition ", win_condition)
@@ -62,21 +68,19 @@ func show_summary(stats_data: Dictionary):
 	print("Strikes failed: ", strikes_failed)
 	var global_strikes_failed = Global.strikes >= Global.max_strikes
 	print("Global Strikes failed: ", global_strikes_failed)
+	
 	# Update UI based on result
 	if win_condition:
 		$LeftPanel/ShiftComplete.text = """SHIFT {shift} COMPLETE
 		SUCCESS!
-		""".format({
-			"shift": stats.get("shift", 1)
-		})
+		""".format({"shift": shift_number})
 		$LeftPanel/ShiftComplete.add_theme_color_override("font_color", Color(0.2, 0.8, 0.2))
-	
-	if strikes_failed:
+	else:
 		var failure_reason = "STRIKE LIMIT REACHED!" if strikes_failed else "QUOTA NOT MET!"
 		$LeftPanel/ShiftComplete.text = """SHIFT {shift} COMPLETE
 		{failure}
 		""".format({
-			"shift": stats.get("shift", 1),
+			"shift": shift_number,
 			"failure": failure_reason
 		})
 		$LeftPanel/ShiftComplete.add_theme_color_override("font_color", Color(0.9, 0.2, 0.2))
@@ -404,3 +408,192 @@ func _on_main_menu_button_pressed() -> void:
 	print("Main menu button pressed, emitting signal")
 	emit_signal("return_to_main_menu")
 	queue_free()
+
+
+func transition_to_scene_in_viewport(scene_path: String):
+	# Create a canvas layer to ensure the fade rectangle covers everything
+	var canvas_layer = CanvasLayer.new()
+	canvas_layer.layer = 128  # Very high layer to be above everything
+	add_child(canvas_layer)
+	
+	# Create a properly sized fade rectangle
+	var fade_rect = ColorRect.new()
+	fade_rect.color = Color(0, 0, 0, 0)
+	fade_rect.size = get_viewport_rect().size
+	canvas_layer.add_child(fade_rect)
+	
+	# Ensure the rect covers the whole viewport
+	if fade_rect is Control:
+		fade_rect.anchor_right = 1.0
+		fade_rect.anchor_bottom = 1.0
+		fade_rect.grow_horizontal = Control.GROW_DIRECTION_BOTH
+		fade_rect.grow_vertical = Control.GROW_DIRECTION_BOTH
+	
+	# Fade out animation
+	var tween = create_tween()
+	tween.tween_property(fade_rect, "color", Color(0, 0, 0, 1), 0.5)
+	
+	# Use a timer to ensure the tween completes before changing scenes
+	await tween.finished
+	
+	# Find the parent ViewportContainer or SubViewport
+	var viewport_container = find_parent_viewport()
+	if viewport_container:
+		# Clear existing content
+		for child in viewport_container.get_children():
+			child.queue_free()
+		
+		# Load and add new scene
+		var new_scene = load(scene_path).instantiate()
+		viewport_container.add_child(new_scene)
+		print("Scene transitioned within viewport: " + scene_path)
+	else:
+		# Fallback to direct scene transition if can't find viewport
+		push_warning("Could not find parent viewport, using direct scene transition")
+		get_tree().change_scene_to_file(scene_path)
+	
+	# Signal completion
+	emit_signal("closed")
+	queue_free()
+	
+# Helper function to find the parent viewport
+func find_parent_viewport():
+	var parent = get_parent()
+	while parent:
+		# Check if this is a SubViewport or ViewportContainer
+		if parent is SubViewport or parent is SubViewportContainer:
+			return parent
+		
+		# Move up the scene tree
+		parent = parent.get_parent()
+	
+	# If we didn't find a viewport container
+	return null
+
+func _on_shift_summary_continue():
+	print("Continuing to next shift")
+	
+	# Save the current shift number before advancing
+	var completed_shift = Global.shift
+	
+	# Save high score for the current level
+	GameState.set_high_score(completed_shift, Global.difficulty_level, Global.score)
+	
+	# Advance the shift and story state
+	Global.advance_shift()
+	Global.advance_story_state()
+	
+	# Make sure GameState is updated with our progress
+	GameState.level_reached(completed_shift + 1)
+	
+	# Check if there's an end dialogue for this shift
+	if completed_shift in narrative_manager.LEVEL_END_DIALOGUES:
+		# Play the ending dialogue for the completed shift
+		narrative_manager.start_level_end_dialogue(completed_shift)
+		
+		# Wait for dialogue to finish before proceeding
+		await narrative_manager.end_dialogue_finished
+	
+	# Check if we've reached the end of the game
+	if completed_shift >= 13:
+		# Final shift completed, show credits - this might need special handling
+		transition_within_viewport("res://scenes/end_credits/end_credits.tscn")
+		return
+	
+	# Show day transition
+	narrative_manager.show_day_transition(completed_shift, completed_shift + 1)
+	await narrative_manager.dialogue_finished
+	
+	# Reload the game scene for the next shift
+	transition_within_viewport("res://scenes/game_scene/mainGame.tscn")
+
+func _on_shift_summary_restart():
+	# Keep the same shift but reset the stats
+	Global.reset_shift_stats()
+	Global.reset_game_state()
+	GlobalState.save()
+	
+	# Transition within the viewport
+	transition_within_viewport("res://scenes/game_scene/mainGame.tscn")
+
+func _on_shift_summary_main_menu():
+	# Save state before transitioning to main menu
+	Global.reset_shift_stats()
+	GlobalState.save()
+	
+	# This one might be different - if main menu is outside viewport
+	var main_menu_path = "res://scenes/menus/main_menu/main_menu_with_animations.tscn"
+	
+	# Check if we need to exit the subviewport entirely
+	if should_exit_viewport_for_main_menu():
+		get_tree().change_scene_to_file(main_menu_path)
+	else:
+		transition_within_viewport(main_menu_path)
+
+# Helper function to determine if we should exit viewport for main menu
+func should_exit_viewport_for_main_menu() -> bool:
+	# Check the structure of your scene tree
+	# This depends on how your project is organized
+	
+	# Simple implementation - check if main menu is a different root
+	var current_scene_path = get_tree().current_scene.scene_file_path
+	var is_within_game_scene = current_scene_path.contains("game_scene")
+	
+	# If we're in a game scene, we probably need to exit the viewport
+	return is_within_game_scene
+
+# General utility function for transitions within viewport
+func transition_within_viewport(scene_path: String):
+	# Find the parent viewport container
+	var viewport_container = find_parent_viewport_container()
+	
+	if viewport_container:
+		# Create fade effect
+		var fade_rect = ColorRect.new()
+		fade_rect.color = Color(0, 0, 0, 0)
+		fade_rect.size = get_viewport_rect().size
+		fade_rect.z_index = 100
+		add_child(fade_rect)
+		
+		# Fade to black
+		var tween = create_tween()
+		tween.tween_property(fade_rect, "color", Color(0, 0, 0, 1), 0.5)
+		
+		# Wait for fade to finish
+		await tween.finished
+		
+		# Load the new scene
+		var new_scene = load(scene_path).instantiate()
+		
+		# Clear the viewport and add the new scene
+		for child in viewport_container.get_children():
+			child.queue_free()
+			
+		viewport_container.add_child(new_scene)
+		print("Transitioned within viewport to: " + scene_path)
+	else:
+		# Fallback to direct scene change
+		push_warning("Could not find viewport container, using direct scene transition")
+		get_tree().change_scene_to_file(scene_path)
+
+# Helper function to find parent viewport container
+func find_parent_viewport_container():
+	var parent = get_parent()
+	while parent:
+		if parent is SubViewportContainer or parent is SubViewport:
+			return parent
+		parent = parent.get_parent()
+	return null
+
+# You might want to add this to a utility script for reuse across your project
+static func find_viewports_in_tree(node: Node) -> Array:
+	var viewports = []
+	
+	if node is SubViewport or node is SubViewportContainer:
+		viewports.append(node)
+	
+	for child in node.get_children():
+		var child_viewports = find_viewports_in_tree(child)
+		viewports.append_array(child_viewports)
+	
+	return viewports

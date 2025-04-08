@@ -435,6 +435,17 @@ func end_shift(success: bool = true):
 	# Update strike display
 	update_strikes_display()
 	
+	# Update shift_stats with shift_number before ending shift
+	shift_stats.shift_number = Global.shift
+	
+	# calculate end of shift bonuses
+	shift_stats.processing_speed_bonus = shift_stats.get_speed_bonus()
+	shift_stats.accuracy_bonus = shift_stats.get_accuracy_bonus()
+	shift_stats.perfect_hit_bonus = shift_stats.get_missile_bonus()
+	
+	# Add bonuses to Score
+	shift_stats.final_score = Global.score + shift_stats.get_total_bonus()
+	
 	# Store game stats
 	Global.store_game_stats(shift_stats)
 	
@@ -442,6 +453,7 @@ func end_shift(success: bool = true):
 	var stats_dict = {
 		"shift": Global.shift,
 		"time_taken": shift_stats.time_taken,
+		"processing_time_left": shift_stats.processing_time_left,
 		"score": Global.score,
 		"missiles_fired": shift_stats.missiles_fired,
 		"missiles_hit": shift_stats.missiles_hit,
@@ -449,7 +461,18 @@ func end_shift(success: bool = true):
 		"total_stamps": shift_stats.total_stamps,
 		"potatoes_approved": shift_stats.potatoes_approved,
 		"potatoes_rejected": shift_stats.potatoes_rejected,
+		"perfect_stamps": shift_stats.perfect_stamps,
 		"hit_rate": shift_stats.hit_rate,
+		"runner_attempts": shift_stats.runner_attempts,
+		"processing_speed_bonus": shift_stats.processing_speed_bonus,
+		"accuracy_bonus": shift_stats.accuracy_bonus,
+		"perfect_hit_bonus": shift_stats.perfect_hit_bonus,
+		"final_score": shift_stats.final_score,
+		"quota_met": Global.quota_met,
+		"quota_target": Global.quota_target,
+		"strikes": Global.strikes,
+		"max_strikes": Global.max_strikes,
+		"success": success
 	}
 	
 	# Set game process mode to handle pause better during transitions

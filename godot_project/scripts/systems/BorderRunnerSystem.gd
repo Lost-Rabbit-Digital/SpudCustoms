@@ -869,7 +869,7 @@ func handle_successful_hit(runner, explosion_pos):
 		
 	corpse.global_position = runner.global_position
 	
-	corpse.z_index = 5 # Under explosions, above world background.
+	corpse.z_index = 3 # Under explosions, above world background. 5 was last visible tested
 	
 	# Slightly adjust size randomly
 	corpse.scale = Vector2(0.9, 0.9) * randf_range(0.9, 1.1) 
