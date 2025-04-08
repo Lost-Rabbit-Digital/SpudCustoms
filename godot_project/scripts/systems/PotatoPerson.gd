@@ -130,9 +130,15 @@ func change_brain_state(new_state: int) -> void:
 
 ## Bind this to an input action or call it when the character is interacted with
 func interact_with_potato() -> void:
-	# Show a happy emote when interacted with
-	change_brain_state(PotatoBrainState.HAPPY)
+	# TODO: Track interactions to determine brain state based off count
 	
+	# Pick a random PotatoBrainState
+	var random_brain_state_index: int = randi_range(0, PotatoBrainState.size() - 1)
+	var random_brain_state: int = random_brain_state_index  # The index is the enum value
+
+	# Use the random state instead of hardcoding
+	change_brain_state(random_brain_state)
+		
 	# Return to idle state after emote duration
 	await get_tree().create_timer(emote_system.emote_duration).timeout
 	change_brain_state(PotatoBrainState.IDLE)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://cwks4tbpoq3n5"]
+[gd_scene load_steps=60 format=3 uid="uid://cwks4tbpoq3n5"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://scenes/game_scene/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://scripts/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
@@ -208,18 +208,6 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1295, 136, 0, 0, 0, 0, 1264, 132, 0, 0, 0, 0, 1249, 141, 0, 0, 0, 0, 1231, 131, 0, 0, 0, 0, 1214, 137, 0, 0, 0, 0, 1230, 158, 0, 0, 0, 0, 1215, 167, 0, 0, 0, 0, 1237, 180, 0, 0, 0, 0, 1226, 196, 0, 0, 0, 0, 1207, 192, 0, 0, 0, 0, 1190, 199, 0, 0, 0, 0, 1175, 189, 0, 0, 0, 0, 1159, 198, 0, 0, 0, 0, 1142, 187, 0, 0, 0, 0, 1123, 198, 0, 0, 0, 0, 1106, 189, 0, 0, 0, 0, 1090, 197, 0, 0, 0, 0, 1073, 188, 0, 0, 0, 0, 1056, 197, 0, 0, 0, 0, 1040, 188, 0, 0, 0, 0, 1025, 198, 0, 0, 0, 0, 1010, 191, 0, 0, 0, 0, 994, 199, 0, 0, 0, 0, 977, 194)
 }
 point_count = 24
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i7il7"]
-size = Vector2(200, 214)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5sv0s"]
-size = Vector2(561, 29)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_362e4"]
-size = Vector2(347, 84)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vufuy"]
-size = Vector2(62, 30)
 
 [node name="Root" type="Node2D" node_paths=PackedStringArray("character_generator")]
 script = ExtResource("1_ado42")
@@ -728,30 +716,6 @@ curve = SubResource("Curve2D_xms7a")
 [node name="SpuddyQueue" type="Path2D" parent="Gameplay/Paths"]
 unique_name_in_owner = true
 curve = SubResource("Curve2D_x3wa3")
-
-[node name="ConcreteArea-1" type="Area2D" parent="Gameplay" groups=["ConcreteAreas"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/ConcreteArea-1"]
-position = Vector2(113, 120)
-shape = SubResource("RectangleShape2D_i7il7")
-
-[node name="ConcreteArea-2" type="Area2D" parent="Gameplay" groups=["ConcreteAreas"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/ConcreteArea-2"]
-position = Vector2(492.5, 194.5)
-shape = SubResource("RectangleShape2D_5sv0s")
-
-[node name="ConcreteArea-3" type="Area2D" parent="Gameplay" groups=["ConcreteAreas"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/ConcreteArea-3"]
-position = Vector2(390.5, 107)
-shape = SubResource("RectangleShape2D_362e4")
-
-[node name="ConcreteArea-4" type="Area2D" parent="Gameplay" groups=["ConcreteAreas"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/ConcreteArea-4"]
-position = Vector2(390, 165)
-shape = SubResource("RectangleShape2D_vufuy")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
