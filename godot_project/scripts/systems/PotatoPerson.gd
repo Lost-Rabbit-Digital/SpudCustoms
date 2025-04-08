@@ -98,7 +98,6 @@ func _process(delta):
 			footprint_timer = 0
 			spawn_footprint()
 
-### EMOTE SYSTEM ###
 ## Changes the potato's brain state and shows an appropriate emote
 ## @param new_state The PotatoBrainState to transition to
 func change_brain_state(new_state: int) -> void:
@@ -109,29 +108,31 @@ func change_brain_state(new_state: int) -> void:
 			# No emote for idle state
 			emote_system._hide_emote()
 		PotatoBrainState.TALKING:
+			# When implemented, the emote system will handle the wiggle
 			pass
-			# TODO: Add potato talking animation
-			#emote_system.show_thinking_dots(5.0)  # Show dots for 5 seconds
 		PotatoBrainState.THINKING:
-			pass
-			# TODO: Add potato thinking animation
-			#emote_system._show_thinking()
+			emote_system.show_random_emote_from_category("thinking")
 		PotatoBrainState.SURPRISED:
 			emote_system.show_random_emote_from_category("surprise")
-			#emote_system.show_emote(PotatoEmoteSystem.EmoteType.DOUBLE_EXCLAMATION)
 		PotatoBrainState.HAPPY:
 			emote_system.show_random_emote_from_category("positive")
 		PotatoBrainState.SAD:
 			emote_system.show_random_emote_from_category("negative")
-			#emote_system.show_emote(PotatoEmoteSystem.EmoteType.SAD_FACE)
 		PotatoBrainState.ANGRY:
 			emote_system.show_random_emote_from_category("negative")
-			#emote_system.show_emote(PotatoEmoteSystem.EmoteType.ANGRY_FACE)
 
-## Bind this to an input action or call it when the character is interacted with
+## Handles user interaction with the potato character.
+##
+## Triggers a random emote animation and brain state change when the player
+## clicks on or otherwise interacts with the potato. This includes:
+## - Playing a wiggle animation using tweens
+## - Setting a random brain state (emotion)
+## - Showing the appropriate emote bubble
+## - Automatically returning to idle state after the emote duration
+##
+## The brain state affects both the visual emote displayed and the
+## physical animation of the potato character.
 func interact_with_potato() -> void:
-	# TODO: Track interactions to determine brain state based off count
-	
 	# Pick a random PotatoBrainState
 	var random_brain_state_index: int = randi_range(0, PotatoBrainState.size() - 1)
 	var random_brain_state: int = random_brain_state_index  # The index is the enum value
@@ -142,26 +143,6 @@ func interact_with_potato() -> void:
 	# Return to idle state after emote duration
 	await get_tree().create_timer(emote_system.emote_duration).timeout
 	change_brain_state(PotatoBrainState.IDLE)
-
-## Shows a random idle emote based on mood probabilities
-func _show_idle_emote() -> void:
-	# Distribution: 40% happy, 30% thinking, 20% surprised, 10% negative
-	var rand = randf()
-	if rand < 0.4:
-		emote_system.show_random_emote_from_category("happy")
-	elif rand < 0.7:
-		emote_system.show_random_emote_from_category("thinking")
-	elif rand < 0.9:
-		emote_system.show_random_emote_from_category("surprise")
-	else:
-		emote_system.show_random_emote_from_category("negative")
-
-# TODO: Call this function when the missile is fired
-## Shows shock emote
-func show_shock() -> void:
-	emote_system.show_emote(PotatoEmoteSystem.EmoteType.CONFUSED)
-
-### END OF POTATO EMOTE SYSTEM ###
 
 func explode():
 	# Emit signal with our position for gib creation
@@ -174,7 +155,6 @@ func apply_damage():
 	explode()
 	return true 
 	
-
 func set_state(new_state: TaterState):
 	var old_state = current_state
 	current_state = new_state
@@ -370,8 +350,6 @@ func _on_potato_button_mouse_entered() -> void:
 
 func _on_potato_button_mouse_exited() -> void:
 	%PotatoSprite.material.set_shader_parameter("enable_highlight", false)
-
-
 
 func is_potato_on_concrete() -> bool:
 	var concrete_areas = get_tree().get_nodes_in_group("ConcreteAreas")

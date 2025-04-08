@@ -159,13 +159,42 @@ func show_random_emote() -> void:
 	var emote_keys = emote_frames.keys()
 	var random_emote = emote_keys[randi() % emote_keys.size()]
 	
-	# Show it
+	# Get the parent to check brain state
+	var potato_person = get_parent()
+	if potato_person and potato_person is PotatoPerson:
+		# Try to determine which brain state this emote represents
+		var matched_state = potato_person.PotatoBrainState.THINKING  # Default
+		
+		# Match the emote to a brain state if possible
+		for category in emote_categories.keys():
+			if random_emote in emote_categories[category]:
+				if category == "positive":
+					matched_state = potato_person.PotatoBrainState.HAPPY
+				elif category == "negative":
+					matched_state = potato_person.PotatoBrainState.SAD
+				elif category == "thinking":
+					matched_state = potato_person.PotatoBrainState.THINKING
+				elif category == "surprise":
+					matched_state = potato_person.PotatoBrainState.SURPRISED
+				
+				# Trigger wiggle with the determined state
+				wiggle_animation(matched_state)
+				break
+	
+	# Show the emote
 	_show_emote(random_emote)
 
 ## Shows a random emote from a specific category
 func show_random_emote_from_category(category: String) -> void:
 	if not emote_sprite or not emote_categories.has(category):
 		return
+	
+	# Get the parent to check brain state
+	var potato_person = get_parent()
+	if potato_person and potato_person is PotatoPerson:
+		# Trigger wiggle if we're not in idle state
+		if potato_person.current_potato_brain_state != potato_person.PotatoBrainState.IDLE:
+			wiggle_animation(potato_person.current_potato_brain_state)
 	
 	# Get a random emote from this category
 	var category_emotes = emote_categories[category]
@@ -178,6 +207,13 @@ func show_random_emote_from_category(category: String) -> void:
 func _show_emote(emote_type: int) -> void:
 	if not emote_sprite or not emote_frames.has(emote_type):
 		return
+	
+	# Get the parent to check brain state
+	var potato_person = get_parent()
+	if potato_person and potato_person is PotatoPerson:
+		# Trigger wiggle if we're not in idle state
+		if potato_person.current_potato_brain_state != potato_person.PotatoBrainState.IDLE:
+			wiggle_animation(potato_person.current_potato_brain_state)
 	
 	# Stop any running emote timer
 	if not emote_timer.is_stopped():
@@ -239,7 +275,27 @@ func _on_emote_timer_timeout() -> void:
 
 func _on_emote_delay_timer_timeout() -> void:
 	if emoting_enabled:
-		show_random_emote()
+		# Instead of directly calling show_random_emote, let's first
+		# notify the PotatoPerson to trigger a brain state change
+		var potato_person = get_parent()
+		if potato_person and potato_person is PotatoPerson:
+			# Pick a random brain state for idle emoting
+			var possible_states = [
+				potato_person.PotatoBrainState.HAPPY,
+				potato_person.PotatoBrainState.THINKING,
+				potato_person.PotatoBrainState.SURPRISED
+			]
+			# Don't pick IDLE or SAD/ANGRY as often for idle animations
+			if randf() < 0.1:  # 10% chance to include negative emotions
+				possible_states.append(potato_person.PotatoBrainState.SAD)
+				possible_states.append(potato_person.PotatoBrainState.ANGRY)
+			
+			# Choose random state and trigger it
+			var random_state = possible_states[randi() % possible_states.size()]
+			potato_person.change_brain_state(random_state)
+		else:
+			# Fallback to direct emote if not attached to PotatoPerson
+			show_random_emote()
 
 ## Clean up when removed from the scene
 func _exit_tree() -> void:
@@ -263,3 +319,136 @@ func _show_thinking() -> void:
 		
 #func show_thinking_dots() -> void:
 	#pass
+
+## Creates a fun wiggle animation to accompany emotes
+##
+## Generates random wiggles with rotation and scale variations
+## that match the provided brain state.
+## @param brain_state The current PotatoBrainState to adapt animation to
+func wiggle_animation(brain_state: int) -> void:
+	# Get the parent (PotatoPerson) that contains this emote system
+	var potato_person = get_parent()
+	if not potato_person or not potato_person is PotatoPerson:
+		push_warning("WiggleAnimation: Not attached to a PotatoPerson")
+		return
+		
+	# Basic error check - make sure we have a valid sprite to animate
+	var sprite_node = potato_person.get_node_or_null("%PotatoSprite")
+	if not is_instance_valid(sprite_node):
+		push_warning("WiggleAnimation: Cannot wiggle, PotatoSprite not found or invalid")
+		return
+	
+	# Stop any existing wiggle tween
+	var existing_tweens: Array = []
+	if potato_person.has_meta("potato_wiggle_tweens"):
+		existing_tweens = potato_person.get_meta("potato_wiggle_tweens")
+		
+	for tween in existing_tweens:
+		if is_instance_valid(tween) and tween.is_valid():
+			tween.kill()
+	
+	# Clear the array
+	existing_tweens.clear()
+	
+	# Create our new tween
+	var tween = create_tween()
+	tween.set_parallel(true)
+	
+	# Store the tween reference in potato's metadata
+	existing_tweens.append(tween)
+	potato_person.set_meta("potato_wiggle_tweens", existing_tweens)
+	
+	# Determine wiggle parameters based on brain state
+	var rotation_intensity: float = 0.1  # Default rotation amplitude
+	var scale_bounce: float = 0.05       # Default scale bounce
+	var duration_multiplier: float = 1.0 # Default speed
+	
+	# Adjust parameters based on brain state
+	if brain_state == potato_person.PotatoBrainState.ANGRY:
+		rotation_intensity = 0.2
+		scale_bounce = 0.08
+		duration_multiplier = 0.7  # Faster for angry
+	elif brain_state == potato_person.PotatoBrainState.HAPPY:
+		rotation_intensity = 0.15
+		scale_bounce = 0.1
+		duration_multiplier = 0.9
+	elif brain_state == potato_person.PotatoBrainState.SURPRISED:
+		rotation_intensity = 0.25
+		scale_bounce = 0.15
+		duration_multiplier = 0.6  # Faster for surprised
+	elif brain_state == potato_person.PotatoBrainState.SAD:
+		rotation_intensity = 0.05
+		scale_bounce = 0.03
+		duration_multiplier = 1.3  # Slower for sad
+	
+	# Get random directions for wiggle
+	var direction: int = 1 if randf() > 0.5 else -1
+	var wiggle_count: int = randi_range(2, 4)  # Random number of wiggles
+	var base_duration: float = 0.15 * duration_multiplier
+	
+	# Generate random rotation patterns
+	var rot_sequence: Array = []
+	for i in range(wiggle_count):
+		var rot_value: float = direction * rotation_intensity * (1.0 - float(i) / wiggle_count)
+		rot_sequence.append(rot_value)
+		direction *= -1  # Alternate direction
+	
+	# Add final return to original rotation
+	rot_sequence.append(0.0)
+	
+	# Create the rotation sequence tween
+	var original_scale: Vector2 = sprite_node.scale
+	var original_rotation: float = sprite_node.rotation
+	
+	# First phase: initial rotation and scale up
+	tween.tween_property(
+		sprite_node, 
+		"rotation", 
+		original_rotation + rot_sequence[0], 
+		base_duration
+	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	
+	tween.tween_property(
+		sprite_node, 
+		"scale", 
+		original_scale * (1.0 + scale_bounce), 
+		base_duration
+	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	
+	# Second phase: chain the remaining rotations and scale bounce
+	for i in range(1, rot_sequence.size()):
+		var sequence_tween = create_tween()
+		sequence_tween.set_parallel(true)
+		
+		# Store this tween too
+		existing_tweens.append(sequence_tween)
+		potato_person.set_meta("potato_wiggle_tweens", existing_tweens)
+		
+		# Timing gets progressively slower for more natural motion
+		var phase_duration: float = base_duration * (1.0 + float(i) * 0.2)
+		
+		# Rotation tween
+		sequence_tween.tween_property(
+			sprite_node, 
+			"rotation", 
+			original_rotation + rot_sequence[i], 
+			phase_duration
+		).set_trans(Tween.TRANS_SINE).set_delay(base_duration * i)
+		
+		# Scale variation if it's not the final one
+		if i < rot_sequence.size() - 1:
+			var scale_value: Vector2 = original_scale * (1.0 + scale_bounce * (1.0 - float(i) / rot_sequence.size()))
+			sequence_tween.tween_property(
+				sprite_node, 
+				"scale", 
+				scale_value, 
+				phase_duration
+			).set_trans(Tween.TRANS_SINE).set_delay(base_duration * i)
+		else:
+			# Return to original scale in final step
+			sequence_tween.tween_property(
+				sprite_node, 
+				"scale", 
+				original_scale, 
+				phase_duration
+			).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT).set_delay(base_duration * i)
