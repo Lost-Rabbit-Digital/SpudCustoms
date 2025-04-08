@@ -1336,6 +1336,11 @@ func _on_dialogue_finished():
 	border_runner_system.is_enabled = true
 	enable_controls()
 	
+	var skip_buttons = get_tree().get_nodes_in_group("DialogueSkipButtons")
+	for button_layer in skip_buttons:
+		if is_instance_valid(button_layer):
+			button_layer.queue_free()
+			
 	if Global.current_story_state >= 10:
 		# Game complete, show credits or return to menu
 		get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")

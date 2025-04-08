@@ -7,6 +7,7 @@ signal end_dialogue_finished
 var current_shift: int = 1
 var dialogic_timeline: Node
 var dialogue_active: bool = false
+var current_skip_button_layer: CanvasLayer = null
 
 # Map level IDs to dialogue files
 const LEVEL_DIALOGUES: Dictionary[int, String] = {
@@ -79,7 +80,9 @@ func start_level_end_dialogue(level_id: int):
 	Dialogic.timeline_ended.connect(_on_end_dialogue_finished)
 
 func _on_end_dialogue_finished():
+	print("End dialogue finished, calling cleanup")
 	dialogue_active = false
+	cleanup_skip_buttons()
 	emit_signal("end_dialogue_finished")
 
 func create_skip_button():
@@ -97,16 +100,30 @@ func create_skip_button():
 	canvas.add_child(skip_button)
 	add_child(canvas)
 	
+	# Add to a dedicated group for easy finding/removal
+	canvas.add_to_group("DialogueSkipButtons")
+	print("Skip button added to group: DialogueSkipButtons")
+	print("Group count: ", get_tree().get_nodes_in_group("DialogueSkipButtons").size())
+	
 	return canvas
 
+func cleanup_skip_buttons():
+	var skip_buttons = get_tree().get_nodes_in_group("DialogueSkipButtons")
+	print("Cleaning up skip buttons, found: ", skip_buttons.size())
+	
+	for button_layer in skip_buttons:
+		if is_instance_valid(button_layer):
+			print("Removing skip button: ", button_layer.name)
+			button_layer.free()
+		else:
+			print("Skip button instance not valid")
+			
 func _on_skip_button_pressed():
 	# End the current timeline
 	Dialogic.end_timeline()
 	
-	# Find and remove the SkipButtonLayer
-	var skip_button_layer = get_node_or_null("SkipButtonLayer")
-	if skip_button_layer:
-		skip_button_layer.queue_free()
+	# Find and remove the skip button
+	cleanup_skip_buttons()
 	
 	# Set the dialogue to not active - this is crucial
 	dialogue_active = false
@@ -136,17 +153,21 @@ func start_final_confrontation():
 func _on_intro_dialogue_finished():
 	dialogue_active = false
 	Global.advance_story_state() # Will set to INTRO_COMPLETE
+	cleanup_skip_buttons()
 	emit_signal("intro_dialogue_finished")
 
 func _on_shift_dialogue_finished():
+	print("Shift dialogue finished, calling cleanup")
 	dialogue_active = false
 	current_shift += 1
 	Global.advance_story_state()
+	cleanup_skip_buttons()
 	emit_signal("dialogue_finished") 
 
 func _on_final_dialogue_finished():
 	dialogue_active = false
 	Global.advance_story_state() # Will set to COMPLETED
+	cleanup_skip_buttons()
 	emit_signal("dialogue_finished")
 
 func is_dialogue_active() -> bool:
@@ -191,3 +212,4 @@ func show_day_transition(current_day: int, next_day: int):
 		dialogue_active = false
 		emit_signal("dialogue_finished")
 	)
+	

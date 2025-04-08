@@ -103,8 +103,6 @@ These are our goals, to-do tasks, and completed tasks.
 - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
 
 ### Audio
-- Add pitch variation to the positive and negative score sound
-- Add small amount of random pitch variation to the document open and close sounds
 - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
 - Hand gripping sound to document
 - Whooosh sound when document is returned to table
@@ -114,33 +112,35 @@ These are our goals, to-do tasks, and completed tasks.
 - Megaphone Dialogue System: Implement the different categories of dialogue from the JSON file into the megaphone_clicked function code in mainGame.gd
 
 ### General Bugs
-- Fix SceneLoader issues, direct scene transitions break overlaid menus
+- Fix SceneLoader issues, direct scene transitions break overlaid menus in Shift Summary but using SceneLoader.load_scene with a reference to the desired scene isn't working either, and no error is being produced.
 - Potatoes appear above table instead of under when border runner leaves map on south side
-- Fix skip story bug not hiding the history button quickly
 
 ### Completed Tasks for 1.0.2
-- Alert Text: Wrong font sizing, causing blurry text
-- Fix potatoes using wrong spritesheet for assigned race / sex
-- Potatoes in queue don't seem to match up with potatoes that enter customs office (MugshotGenerator is using diff potatoes lol)
-- Potato stays in shadow when the shutter automatically raises
+- Add pitch variation to the positive and negative score sound
 - Add random x/y-axis variation on the position selected in the return to table function
-- Gate re-raises on megaphone click, even when already up.
+- Add small amount of random pitch variation to the document open and close sounds
+- Alert Text: Wrong font sizing, causing blurry text
 - Corpses added too high to tree, screen shake not affecting them
-- Update cursor to show a select icon when above the megaphone 
-- Only show take passport dialogue if the passport has been stamped
-- Shrink texture for missiles and impacts, sizing of pixels is off-putting
-- Update cursor when hovering over the megaphone
-- Z-index: Dragged passport appears below the suspect table
-- Drag and Drop: If the passport hasn't been stamped and is hovered over the potato, it should not prompt the dialogue
-- Drag and Drop: If the passport hasn't been stamped and is dropped on the potato, it should return to table
-- Emote System: Reduce frequency of emotes occuring
 - Drag and Drop: Clip the document edges if they are off the table
+- Drag and Drop: If the passport hasn't been stamped and is dropped on the potato, it should return to table
+- Drag and Drop: If the passport hasn't been stamped and is hovered over the potato, it should not prompt the dialogue
+- Drag and Drop: Law receipt passes between the passport description/photo and the passport background
+- Drag and Drop: Passport text and photo appear over the LawReceipt
+- Drag and Drop: Stamps disappear on passport while being dragged
+- Emote System: Reduce frequency of emotes occuring
+- Fix potatoes using wrong spritesheet for assigned race / sex
+- Fix skip story bug not hiding the history button quickly
+- Gate re-raises on megaphone click, even when already up.
+- Office Shutter: Shutter opens even when open when a potato comes into the office
+- Office Shutter: When shutter is automatically raised, the potatoes stay shadow-y
+- Only show take passport dialogue if the passport has been stamped
+- Potato stays in shadow when the shutter automatically raises
+- Potatoes in queue don't seem to match up with potatoes that enter customs office (MugshotGenerator is using diff potatoes lol)
 - Set a highlight shader on the closed passport if the document goes untouched for >15 seconds
 - Set a highlight shader on the speaker/start button if the booth goes empty for >15 seconds
 - Set a highlight shader on the stamps or stamp bar open if the document is open on the table for >15 seconds
-- Drag and Drop: Stamps disappear on passport while being dragged
+- Shrink texture for missiles and impacts, sizing of pixels is off-putting
 - Stamp System: Stamps disappear when picked up and dragged
-- Office Shutter: When shutter is automatically raised, the potatoes stay shadow-y
-- Office Shutter: Shutter opens even when open when a potato comes into the office
-- Drag and Drop: Passport text and photo appear over the LawReceipt
-- Drag and Drop: Law receipt passes between the passport description/photo and the passport background
+- Update cursor to show a select icon when above the megaphone 
+- Update cursor when hovering over the megaphone
+- Z-index: Dragged passport appears below the suspect table
