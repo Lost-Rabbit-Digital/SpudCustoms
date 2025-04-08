@@ -408,6 +408,9 @@ texture = ExtResource("7_2k5l7")
 [node name="VersionContainer" parent="VersionMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 
+[node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
+text = "Version 1.1.0"
+
 [node name="TitleContainer" parent="MenuContainer/TitleMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 
