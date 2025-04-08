@@ -496,16 +496,17 @@ func _on_shift_summary_continue():
 	
 	# Check if we've reached the end of the game
 	if completed_shift >= 13:
-		# Final shift completed, show credits - this might need special handling
-		transition_within_viewport("res://scenes/end_credits/end_credits.tscn")
+		# Final shift completed, show credits
+		transition_to_scene("res://scenes/end_credits/end_credits.tscn")
 		return
 	
 	# Show day transition
+	print("showing day transition")
 	narrative_manager.show_day_transition(completed_shift, completed_shift + 1)
-	await narrative_manager.dialogue_finished
 	
-	# Reload the game scene for the next shift
-	transition_within_viewport("res://scenes/game_scene/mainGame.tscn")
+	SceneLoader.reload_current_scene()
+	# Ensure a clean transition for the viewport
+	#transition_within_viewport("res://scenes/game_scene/mainGame.tscn")
 
 func _on_shift_summary_restart():
 	# Keep the same shift but reset the stats
@@ -559,24 +560,23 @@ func transition_within_viewport(scene_path: String):
 		var tween = create_tween()
 		tween.tween_property(fade_rect, "color", Color(0, 0, 0, 1), 0.5)
 		
-		# Wait for fade to finish
-		await tween.finished
-		
-		# Load the new scene
-		var new_scene = load(scene_path).instantiate()
-		
-		# Clear the viewport and add the new scene
+		# Remove all current children from the viewport
 		for child in viewport_container.get_children():
-			child.queue_free()
-			
+			child.free()
+		
+		# Instantiate the new scene
+		var new_scene = load(scene_path).instantiate()
 		viewport_container.add_child(new_scene)
+		
 		print("Transitioned within viewport to: " + scene_path)
+		
+		# Clean up fade rect
+		fade_rect.queue_free()
 	else:
 		# Fallback to direct scene change
 		push_warning("Could not find viewport container, using direct scene transition")
 		get_tree().change_scene_to_file(scene_path)
 
-# Helper function to find parent viewport container
 func find_parent_viewport_container():
 	var parent = get_parent()
 	while parent:

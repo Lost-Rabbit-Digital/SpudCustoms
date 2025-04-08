@@ -42,7 +42,7 @@ func update_sprite_animations():
 	var torso_anim = race_formatted + "_body_" + sex
 	
 	# Debug info
-	print("Setting animations - Head: ", head_anim, ", Face: ", face_anim, ", Body: ", torso_anim)
+	#print("Setting animations - Head: ", head_anim, ", Face: ", face_anim, ", Body: ", torso_anim)
 	
 	# Update head animation
 	if head and head.sprite_frames:
@@ -163,7 +163,7 @@ func get_character_data() -> Dictionary:
 
 # In character_generator.gd
 func set_character_data(data: Dictionary) -> void:
-	print("Setting character data: ", data)
+	#print("Setting character data: ", data)
 	
 	if data.has("race"):
 		race = data.race

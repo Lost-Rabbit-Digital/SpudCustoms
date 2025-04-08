@@ -76,7 +76,7 @@ func add_potato(potato_info: Dictionary):
 
 	potatoes.push_front(potato)
 	print("Potato Created, new total potatoes: ", potatoes.size())
-	print("New potato information: ", potato_info)
+	#print("New potato information: ", potato_info)
 	update_positions()
 
 func remove_potato() -> Dictionary:
@@ -85,7 +85,7 @@ func remove_potato() -> Dictionary:
 		var info = potato.get_potato_info()
 		potato.queue_free()
 		print("Potato removed from this realm, new total potatoes: ", potatoes.size())
-		print("Dearly missed potato information: ", info)
+		#print("Dearly missed potato information: ", info)
 		update_positions()
 		return info
 	return {}

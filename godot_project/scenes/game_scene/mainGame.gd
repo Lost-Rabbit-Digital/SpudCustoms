@@ -557,14 +557,15 @@ func _on_shift_summary_continue():
 	
 	# Show day transition
 	narrative_manager.show_day_transition(completed_shift, completed_shift + 1)
-	await narrative_manager.dialogue_finished
 	
 	# Reload the game scene for the next shift
-	fade_transition()
+	# fade_transition()
+	
 	# Access SceneLoader directly
 	if SceneLoader:
-		SceneLoader.load_scene("res://scenes/game_scene/mainGame.tscn")
-		#SceneLoader.reload_current_scene()
+		print("Using SceneLoader to reload")
+		#SceneLoader.load_scene("res://scenes/game_scene/mainGame.tscn")
+		SceneLoader.reload_current_scene()
 	else:
 		push_error("SceneLoader not found, falling back to change_scene_to_file")
 		get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")

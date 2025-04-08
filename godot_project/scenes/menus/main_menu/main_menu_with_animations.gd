@@ -7,7 +7,6 @@ var animation_state_machine : AnimationNodeStateMachinePlayback
 @onready var version_label = $VersionMargin/VersionContainer/VersionLabel
 @onready var bgm_player = $BackgroundMusicPlayer
 
-
 func load_game_scene():
 	GameState.start_game()
 	SceneLoader.load_scene(story_game_scene_path)
