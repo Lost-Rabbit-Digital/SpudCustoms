@@ -10,8 +10,6 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Office Shutter / Bug: Fade out the foreground shadow when the potatoes leave the office
 - Office Shutter / Bug: Do not fade out transparency of potato when enter or leaving office, only the foreground shadow
 - Emote System: If you click the same potato 3+ times they get angry and show POPPING_VEINS emote
-- Emote System / Bug: Dot animation only shows one dots then stops
-	- Move animation to 1.0.3
 
 ## Audio
 
@@ -27,7 +25,9 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Drag and Drop / Bug: Documents released appear in front of the suspect panel background
 
 ## Emote System
-
+- Emote System: Skew emote display chance towards angry and confused
+- Emote System: Potatoes should wiggle upon emoting
+- Emote System: Potatoes should play small sound upon emoting
 
 ## Office Shutter System
 
@@ -42,6 +42,3 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 ## Code Loopholes (Bugs)
 
 ## Currently active tasks
-Commit: Removed blank and dot emotes from rotation of emote display
-- Disable blank emotes
-- Disable dot emotes

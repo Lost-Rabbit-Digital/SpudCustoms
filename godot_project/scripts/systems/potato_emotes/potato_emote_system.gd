@@ -10,10 +10,10 @@ enum EmoteType {
 	ANGRY_FACE,
 	HAPPY_FACE,
 	SAD_FACE,
-	BLANK,
-	DOT_1,
-	DOT_2,
-	DOT_3,
+	#BLANK,
+	#DOT_1,
+	#DOT_2,
+	#DOT_3,
 	SINGULAR_HEART,
 	BROKEN_HEART,
 	SWIRLING_HEARTS,
@@ -24,15 +24,17 @@ enum EmoteType {
 	CONFUSED
 }
 
+# TODO: The blank and dots have been commented out until the show_thinking_dots() function is 
+# properly implemented, these emotes are also removed from the "thinking" emote category
 ## Maps emote types to frame indices
 var emote_frames = {
 	EmoteType.ANGRY_FACE: 0,
 	EmoteType.HAPPY_FACE: 1,
 	EmoteType.SAD_FACE: 2,
-	EmoteType.BLANK: 3,
-	EmoteType.DOT_1: 4,
-	EmoteType.DOT_2: 5,
-	EmoteType.DOT_3: 6,
+	#EmoteType.BLANK: 3,
+	#EmoteType.DOT_1: 4,
+	#EmoteType.DOT_2: 5,
+	#EmoteType.DOT_3: 6,
 	EmoteType.SINGULAR_HEART: 7,
 	EmoteType.BROKEN_HEART: 8,
 	EmoteType.SWIRLING_HEARTS: 9,
@@ -43,13 +45,13 @@ var emote_frames = {
 	EmoteType.CONFUSED: 14
 }
 
+# TODO: Setup "thinking" category to have blank and dot emotes
 ## Emote categories
 var emote_categories = {
 	"positive": [EmoteType.HAPPY_FACE, EmoteType.SINGULAR_HEART, EmoteType.SWIRLING_HEARTS],
 	"negative": [EmoteType.ANGRY_FACE, EmoteType.SAD_FACE, EmoteType.BROKEN_HEART, EmoteType.POPPING_VEIN],
-	"thinking": [EmoteType.DOT_1, EmoteType.DOT_2, EmoteType.DOT_3, EmoteType.QUESTION, EmoteType.CONFUSED],
+	"thinking": [EmoteType.QUESTION, EmoteType.CONFUSED],
 	"surprise": [EmoteType.DOUBLE_EXCLAMATION, EmoteType.SINGULAR_EXCLAMATION],
-	"blank": [EmoteType.BLANK]
 }
 
 ## Maps categories to sound types
@@ -217,10 +219,6 @@ func _play_emote_sound(emote_type: int) -> void:
 			emote_category = category
 			break
 	
-	# No sound for blank category
-	if emote_category == "blank":
-		return
-	
 	# Get sound type and number
 	var sound_type = category_sound_map.get(emote_category, "froggy_dislike")
 	var max_num = 9 if sound_type == "froggy_dislike" else 7
@@ -254,11 +252,14 @@ func _exit_tree() -> void:
 
 ## Shows the thinking dots animation
 func _show_thinking() -> void:
+	_show_emote(PotatoEmoteSystem.EmoteType.QUESTION)
+	
+	# TODO: Fix up the dots so that they actually animate
 	# Choose between dots or question mark
-	if randf() < 0.3:  # 30% chance for dots
-		show_thinking_dots()
-	else:
-		_show_emote(PotatoEmoteSystem.EmoteType.QUESTION)
+	#if randf() < 0.3:  # 30% chance for dots
+	#	show_thinking_dots()
+	#else:
+	#	_show_emote(PotatoEmoteSystem.EmoteType.QUESTION)
 		
-func show_thinking_dots() -> void:
-	pass
+#func show_thinking_dots() -> void:
+	#pass

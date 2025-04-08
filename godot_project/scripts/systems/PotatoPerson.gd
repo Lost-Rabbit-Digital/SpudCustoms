@@ -156,16 +156,9 @@ func _show_idle_emote() -> void:
 	else:
 		emote_system.show_random_emote_from_category("negative")
 
-## Shows a love emote (heart)
-func show_love() -> void:
-	emote_system.show_emote(PotatoEmoteSystem.EmoteType.SINGULAR_HEART)
-
-## Shows anger
-func show_anger() -> void:
-	change_brain_state(PotatoBrainState.ANGRY)
-
-## Shows confusion
-func show_confusion() -> void:
+# TODO: Call this function when the missile is fired
+## Shows shock emote
+func show_shock() -> void:
 	emote_system.show_emote(PotatoEmoteSystem.EmoteType.CONFUSED)
 
 ### END OF POTATO EMOTE SYSTEM ###

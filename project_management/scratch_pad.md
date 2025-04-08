@@ -3,7 +3,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 ## Steam Minor Update 1.0.3 - Next Update
 ## Tasks
-### Stretch Features
+### Features
 - Add tooltip with potato info when you hover over them in line
 - Baggage inspection, grab bags and shake them with bugs and coins flying out until you get a "BAG CLEAN" and a small number of points, or contraband detected where you get points for clicking it
 - Multiplayer Implementation, co-op or versus using Steam Matchmaking
@@ -25,6 +25,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Queue Interaction: Potatoes wiggle when clicked
 - Emote System: All potatoes show exclamation marks when you shoot a missile
 - Office Shutter / Bug: Update button to exclude transparent pixels for more accurate clicks
+- Emote System / Bug: Dot animation only shows one dots then stops
 
 # SHIFT SUMMARY SCREEN
 - Shift Summary: If the "Continue" button does not appear, it should balance out the "Main Menu" and "Restart" buttons
@@ -62,6 +63,8 @@ These are our goals, to-do tasks, and completed tasks.
 
 ### Audio
 - Small sound for hovering above megaphone or stamp bar button
+
+
 
 
 
@@ -144,3 +147,5 @@ These are our goals, to-do tasks, and completed tasks.
 - Update cursor when hovering over the megaphone
 - Z-index: Dragged passport appears below the suspect table
 - Emote System / Bug: When potatoes are clicked it only displays love emotes, could be set to display HAPPY category
+- Emote System: Disable blank emotes
+- Emote System: Disable dot emotes
