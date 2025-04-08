@@ -179,6 +179,7 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/maaa
 [global_group]
 
 PotatoPerson=""
+ConcreteAreas=""
 
 [gui]
 

@@ -321,13 +321,26 @@ func fade_out(duration: float = 0.5):
 
 func spawn_footprint():
 	var footprint = Sprite2D.new()
-	footprint.texture = preload("res://assets/effects/footstep.png") # Create this small texture
+	
+	# Determine if on concrete (you'll need to implement this based on your game)
+	var is_on_concrete = is_potato_on_concrete()
+	
+	# Load the appropriate texture
+	if is_on_concrete:
+		footprint.texture = preload("res://assets/effects/footstep_concrete.png")
+		# Make concrete footprints smaller and darker
+		footprint.scale = Vector2(0.7, 0.7)  # 70% the size of grass footprints
+		footprint.modulate = Color(0.5, 0.5, 0.5, 0.8)  # Darker color
+	else:
+		footprint.texture = preload("res://assets/effects/footstep_grass.png")
+		footprint.scale = Vector2(1.0, 1.0)  # Normal size
+		footprint.modulate = Color(1.0, 1.0, 1.0, 0.8)  # Normal color
+	
 	footprint.global_position = global_position
 	footprint.global_position.y += 11
 	footprint.z_index = 0 # Below the potato
 	footprint.z_as_relative = true
 	footprint.rotation = rotation # Align with movement direction
-	footprint.modulate.a = 0.8
 	
 	# Add the footprint to a group for easier management
 	footprint.add_to_group("FootprintGroup")
@@ -349,7 +362,6 @@ func spawn_footprint():
 		if old_footprint and is_instance_valid(old_footprint):
 			old_footprint.queue_free()
 
-
 func _on_potato_button_pressed() -> void:
 	interact_with_potato()
 
@@ -359,3 +371,14 @@ func _on_potato_button_mouse_entered() -> void:
 
 func _on_potato_button_mouse_exited() -> void:
 	%PotatoSprite.material.set_shader_parameter("enable_highlight", false)
+
+
+
+func is_potato_on_concrete() -> bool:
+	var concrete_areas = get_tree().get_nodes_in_group("ConcreteAreas")
+	for area in concrete_areas:
+		if area is Area2D and area.overlaps_body(self):
+			return true
+		
+	# Default to grass
+	return false
