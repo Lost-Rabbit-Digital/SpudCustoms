@@ -25,7 +25,6 @@ These are our goals, to-do tasks, and completed tasks.
 - Queue Interaction: Potatoes wiggle when clicked
 - Emote System: All potatoes show exclamation marks when you shoot a missile
 - Office Shutter / Bug: Update button to exclude transparent pixels for more accurate clicks
-- Emote System / Bug: Dot animation only shows one dots then stops
 
 # SHIFT SUMMARY SCREEN
 - Shift Summary: If the "Continue" button does not appear, it should balance out the "Main Menu" and "Restart" buttons
@@ -38,7 +37,6 @@ These are our goals, to-do tasks, and completed tasks.
 - Add dialogue emotes randomly to the potatoes, Potatoes emote (Kenny emotes) while waiting in line
 - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
 - Add ink flecks from stamping that fly up when you stamp
-- Graphics: Potato blinking, just stretch two pixels placed above the eyes? Or could properly animate
 
 ### Backend
 - Localise the game
@@ -67,18 +65,14 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 
-
-
-
 # FULL RELEASE TASKS - 2025-04-11 Target Release - 1.0.2
 ## Tasks
 ## RELEASE BLOCKERS
 - Stamps go over edge of passport
 - Corpses need a slightly lower z-index to show BEHIND explosions (re-test)
-- Runner potatoes are registering TWO strikes instead of just 1
-- Skip button not disappearing, and resetting the shift when pressed
 - Make sure that stamp consistently marks the same spot on the document, NOT based on where the player clicks on the stamp
 - Cursor / Bug: Target display is not showing when hovering over the missile area
+- Emote System / Bug: When potatoes are clicked it only displays love emotes, could be set to display HAPPY category
 - Drag and Drop / Bug: If the player grabs the passport while it's animated the script does not properly update z-index
 - Drag and Drop / Bug: LawReceipt does not automatically close when dragged off of the suspect table
 - Drag and Drop / Bug: Get highest z-index doesn't seem to be working properly, cannot easily set passport atop of LawReceipt
@@ -88,7 +82,9 @@ These are our goals, to-do tasks, and completed tasks.
 - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
 - Do not allow the user to pick up the document through the stamp bar
 - Add a check for winning the day, if the border runner is actively happening wait for it to finish before ending the shift
-
+- Need to update target positions for stamp buttons, currently both going same place
+- Need to update support for combo multipliers with perfect stamps
+- Need to troubleshoot particle effects for perfect stamps
 ### Graphics  
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
 - Add logic to check if game paused or in dialogic before updating cursor to target cursor
@@ -120,6 +116,9 @@ These are our goals, to-do tasks, and completed tasks.
 - Potatoes appear above table instead of under when border runner leaves map on south side
 
 ### Completed Tasks for 1.0.2
+- Skip button not disappearing, and resetting the shift when pressed
+- Wrong shift displaying on shift summary screen
+- Runner potatoes are registering TWO strikes instead of just 1
 - Add pitch variation to the positive and negative score sound
 - Add random x/y-axis variation on the position selected in the return to table function
 - Add small amount of random pitch variation to the document open and close sounds
@@ -148,8 +147,3 @@ These are our goals, to-do tasks, and completed tasks.
 - Update cursor to show a select icon when above the megaphone 
 - Update cursor when hovering over the megaphone
 - Z-index: Dragged passport appears below the suspect table
-- Emote System / Bug: When potatoes are clicked it only displays love emotes, could be set to display HAPPY category
-- Emote System: Disable blank emotes
-- Emote System: Disable dot emotes
-- Emote System: Potatoes should wiggle upon emoting
-- Megaphone Dialogue > Bubble Dialogue: Rename to Bubble Dialogue System
