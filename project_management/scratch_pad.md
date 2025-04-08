@@ -88,7 +88,6 @@ These are our goals, to-do tasks, and completed tasks.
 ### Graphics  
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
 - Add logic to check if game paused or in dialogic before updating cursor to target cursor
-- Alert Text: Wrong font sizing, causing blurry text
 - Cause stamps to wiggle and slam in and then fade into color on shift summary
 - Center closed version of documents on the mouse position, it often appears offset
 - Concrete steps should be smaller and darker than the grass footsteps
@@ -120,6 +119,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Fix skip story bug not hiding the history button quickly
 
 ### Completed Tasks for 1.0.2
+- Alert Text: Wrong font sizing, causing blurry text
 - Fix potatoes using wrong spritesheet for assigned race / sex
 - Potatoes in queue don't seem to match up with potatoes that enter customs office (MugshotGenerator is using diff potatoes lol)
 - Potato stays in shadow when the shutter automatically raises

@@ -343,6 +343,9 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 			# Maybe play a "blocked" sound effect
 			if audio_player:
 				audio_player.stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
+				# Random pitch variation for document close sound
+				audio_player.pitch_scale = randf_range(0.9, 1.2)
+
 				audio_player.play()
 			
 			# Return to table
@@ -366,6 +369,8 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 			# Maybe play a "blocked" sound effect
 			if audio_player:
 				audio_player.stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
+				# Random pitch variation for document close sound
+				audio_player.pitch_scale = randf_range(0.9, 1.2)
 				audio_player.play()
 			
 			# Return to table
@@ -539,6 +544,8 @@ func _return_item_to_table(item: Node2D):
 	# Play a return sound
 	if audio_player:
 		audio_player.stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
+		# Random pitch variation for document close sound
+		audio_player.pitch_scale = randf_range(0.9, 1.2)
 		audio_player.play()
 		
 ## Gets the size of a node, handling different node types.
@@ -707,6 +714,8 @@ func _handle_receipt_drop(mouse_pos: Vector2):
 func play_open_sound():
 	if not open_sound_played and audio_player:
 		audio_player.stream = preload("res://assets/audio/passport_sfx/open_passport_audio.mp3")
+		# Random pitch variation for document open sound
+		audio_player.pitch_scale = randf_range(0.9, 1.2)
 		audio_player.play()
 		open_sound_played = true
 		close_sound_played = false
@@ -717,6 +726,8 @@ func play_open_sound():
 func play_close_sound():
 	if not close_sound_played and audio_player:
 		audio_player.stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
+		# Random pitch variation for document close sound
+		audio_player.pitch_scale = randf_range(0.9, 1.2)
 		audio_player.play()
 		close_sound_played = true
 		open_sound_played = false

@@ -16,7 +16,7 @@ func _ready():
 	# Load screen shake setting from config
 	update_camera_shake_setting()
 
-# Update this function to load the screen shake setting from config
+## Load the screen shake setting from config
 func update_camera_shake_setting():
 	# Get the camera shake value from Config
 	var shake_value = Config.get_config("VideoSettings", "CameraShake", 1.0)
@@ -24,7 +24,7 @@ func update_camera_shake_setting():
 	# Update the multiplier
 	screen_shake_intensity_multiplier = shake_value
 
-# Clear alert after a delay
+## Clear alert after a delay
 func clear_alert_after_delay(alert_label: Label, alert_timer: Timer):
 	alert_timer.start()
 	# Delay is the "wait_time" property on the timer
@@ -39,15 +39,19 @@ func clear_alert_after_delay(alert_label: Label, alert_timer: Timer):
 	# Emit signal
 	alert_cleared.emit()
 
-# Display a red alert with negative sound
+## Display a red alert with negative sound
 func display_red_alert(alert_label: Label, alert_timer: Timer, text: String):
 	# Load and play the audio file
 	var audio_player = AudioStreamPlayer.new()
 	audio_player.stream = negative_alert_sound
 	audio_player.volume_db = -5
 	audio_player.bus = "SFX"
+	
+	# Random pitch variation - slightly higher range for positive alerts
+	audio_player.pitch_scale = randf_range(0.9, 1.2)
 	add_child(audio_player)
 	audio_player.play()
+	audio_player.finished.connect(func(): audio_player.queue_free())
 	
 	# Display the alert
 	alert_label.visible = true
@@ -57,6 +61,8 @@ func display_red_alert(alert_label: Label, alert_timer: Timer, text: String):
 	alert_label.z_index = 120
 	# Set desired color
 	alert_label.add_theme_color_override("font_color", Color.RED)
+	alert_label.add_theme_font_size_override("font_color", 24)
+	alert_label.position = alert_label.position.round()
 	# Hide the alert after a few seconds
 	clear_alert_after_delay(alert_label, alert_timer)
 	
@@ -70,9 +76,13 @@ func display_green_alert(alert_label: Label, alert_timer: Timer, text: String):
 	audio_player.stream = positive_alert_sound
 	audio_player.volume_db = -5
 	audio_player.bus = "SFX"
+	
+	# Add pitch variation - slightly lower range for negative alerts
+	audio_player.pitch_scale = randf_range(0.85, 1.15)
 	add_child(audio_player)
 	audio_player.play()
-	
+	audio_player.finished.connect(func(): audio_player.queue_free())
+
 	# Display the alert
 	alert_label.visible = true
 	# Update the text
@@ -81,6 +91,8 @@ func display_green_alert(alert_label: Label, alert_timer: Timer, text: String):
 	alert_label.z_index = 120
 	# Set desired color
 	alert_label.add_theme_color_override("font_color", Color.GREEN)
+	alert_label.add_theme_font_size_override("font_color", 24)
+	alert_label.position = alert_label.position.round()
 	# Hide the alert after a few seconds
 	clear_alert_after_delay(alert_label, alert_timer)
 	
