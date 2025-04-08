@@ -10,6 +10,7 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Office Shutter / Bug: Fade out the foreground shadow when the potatoes leave the office
 - Office Shutter / Bug: Do not fade out transparency of potato when enter or leaving office, only the foreground shadow
 - Emote System: If you click the same potato 3+ times they get angry and show POPPING_VEINS emote
+- Emote System: Potatoes should play small sound upon emoting
 
 ## Audio
 
@@ -18,6 +19,7 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Explosions appear above the inspection table
 - Potato footsteps appear above the customs office
 - Potato gibs appear below the screen borders
+- Potato in office: Should move up and down like breathing animation, simple tween
 
 ## Queue Interaction System
 
@@ -26,8 +28,6 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 
 ## Emote System
 - Emote System: Skew emote display chance towards angry and confused
-- Emote System: Potatoes should wiggle upon emoting
-- Emote System: Potatoes should play small sound upon emoting
 
 ## Office Shutter System
 
@@ -36,9 +36,10 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Cursor: Update cusor to work with Maaacks menu
 
 ## Megaphone Dialogue System
-- Megaphone Dialogue: Rename to Bubble Dialogue System
-- Bubble Dialogue: Implement into the Drag and Drop system for dropping a passport onto a potato to have varied dialogue instead of the same hardcoded text
 
 ## Code Loopholes (Bugs)
 
 ## Currently active tasks
+- Megaphone Dialogue: Rename to Bubble Dialogue System
+- Bubble Dialogue: Implement into the Drag and Drop system for dropping a passport onto a potato to have varied dialogue instead of the same hardcoded text
+	- Replacing "GivePromptDialogue" with "BubbleDialogue" with the category "Document interaction"

@@ -1,10 +1,10 @@
 extends Sprite2D
-class_name MegaphoneDialogueBox
+class_name BubbleDialogueBox
 
-@onready var megaphone_text = $MegaphoneText
+@onready var bubble_text = $BubbleText
 
 # File path to your JSON file
-const MESSAGES_FILE = "res://scripts/systems/megaphone/megaphone_dialogue_messages.json"
+const MESSAGES_FILE = "res://scripts/systems/bubble_dialogue/bubble_dialogue_messages.json"
 
 # Message categories
 enum MessageCategory {
@@ -19,7 +19,8 @@ var messages = {
 	"spud_being_called": [],
 	"spud_in_office": [],
 	"warnings": [],
-	"misc": []
+	"misc": [],
+	"document_interaction": [],
 }
 
 func _ready():
@@ -82,9 +83,9 @@ func set_random_message_from_category(category):
 	
 	if category_messages.size() > 0:
 		var random_index = randi() % category_messages.size()
-		megaphone_text.text = category_messages[random_index]
+		bubble_text.text = category_messages[random_index]
 	else:
-		megaphone_text.text = "No messages available."
+		bubble_text.text = "No messages available."
 
 # Set a completely random message from any category
 func set_random_message():
@@ -107,7 +108,7 @@ func set_random_message():
 		var random_category = available_categories[randi() % available_categories.size()]
 		set_random_message_from_category(random_category)
 	else:
-		megaphone_text.text = "No messages available."
+		bubble_text.text = "No messages available."
 
 # Call this function to cycle to the next random message
 func next_message():

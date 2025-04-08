@@ -149,3 +149,4 @@ These are our goals, to-do tasks, and completed tasks.
 - Emote System / Bug: When potatoes are clicked it only displays love emotes, could be set to display HAPPY category
 - Emote System: Disable blank emotes
 - Emote System: Disable dot emotes
+- Emote System: Potatoes should wiggle upon emoting

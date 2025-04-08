@@ -1,0 +1,59 @@
+{
+  "queue_messages": {
+	"spud_being_called": [
+	  "Next spud, your destiny awaits.",
+	  "Front of queue, moment of truth approaches.",
+	  "Step forward, chosen one of tuber-kind.",
+	  "Congratulations! Your waiting succeeded.",
+	  "The Great Potato Bureaucracy summons you.",
+	  "Advance, noble tuber! Papers await!",
+	  "Move forth! The stamp grows restless.",
+	  "Step lively! Form P-38B needs filling.",
+	  "Come forward, fate requires your entry.",
+	  "Approach the counter of judgment, spud."
+	],
+	"spud_in_office": [
+	  "Please be patient. Time is an illusion.",
+	  "Waiting builds character. And starch.",
+	  "The queue moves in mysterious ways.",
+	  "Your position is noted by authorities.",
+	  "Standing in line: the universal constant.",
+	  "No spud is ready until seasoned by waiting.",
+	  "Patience: not the only virtue, but listed.",
+	  "Bureaucratic wheels turn slowly. Very slowly.",
+	  "Ah, the sweet sound of procedure!",
+	  "Today's queue is tomorrow's anecdote.",
+	  "Time in queues bends. It's been measured.",
+	  "Waiting skill: Level 43 achieved!"
+	],
+	"warnings": [
+	  "Those against will be peeled with precision.",
+	  "Line-jumpers sent to Express Processing.",
+	  "Queue disruption earns lectures on queues.",
+	  "Insubordination leads to Room With Hot Oil.",
+	  "We don't have to be fair, just organized.",
+	  "The Committee for Spud Compliance sees all.",
+	  "Troublemakers: mashed without butter.",
+	  "Chaos causers become hash browns. Quickly.",
+	  "Rule-breakers face twice-baked status.",
+	  "Queue Auditors have flagged your existence.",
+	  "Your file: marked with THE red stamp."
+	],
+	"misc": [
+	  "Where is everyone?",
+	  "Emergency? Continue waiting in order.",
+	  "Read paragraph seven of waiting agreement?",
+	  "Lost property: found, taxed, misplaced.",
+	  "If a spud complains, does it make sound?",
+	  "Light replaced with sign: 'More Tunnel.'",
+	  "Death is temporary. Bureaucracy is forever.",
+	  "Filing system achieved sentience. Stay calm.",
+	  "Today's lucky numbers mean nothing. Sorry.",
+	  "Apocalypse? Take number, wait to vanish.",
+	  "No evidence means more forms required."
+	],
+	"document interaction": [
+		"Take your documents, please.",
+	],
+  }
+}

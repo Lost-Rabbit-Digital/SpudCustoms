@@ -27,7 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://bxn3434177kfd" path="res://assets/documents/laws_receipt.png" id="31_rtxd3"]
 [ext_resource type="Script" uid="uid://dfofd8lp0igu2" path="res://scripts/systems/law_receipt.gd" id="32_k1orm"]
 [ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://assets/styles/dos_theme.tres" id="33_ncgko"]
-[ext_resource type="PackedScene" uid="uid://b0go0ri8l0yb7" path="res://scripts/systems/megaphone/MegaphoneDialogue.tscn" id="36_ccap0"]
+[ext_resource type="PackedScene" uid="uid://b0go0ri8l0yb7" path="res://scripts/systems/bubble_dialogue/BubbleDialogue.tscn" id="36_ccap0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gf7dt"]
 size = Vector2(730, 155)
