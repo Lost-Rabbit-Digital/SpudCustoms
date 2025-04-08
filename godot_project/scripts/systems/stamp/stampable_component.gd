@@ -61,14 +61,32 @@ func is_perfect_stamp_position(position: Vector2) -> bool:
 	if stamp_area_rect.size == Vector2.ZERO:
 		return false  # No perfect area defined
 		
+	# Get document rect in global space
+	var doc_rect = document_node.get_rect()
+	var global_doc_rect = Rect2(
+		document_node.global_position - doc_rect.size/2, 
+		doc_rect.size
+	)
+	
+	# Define perfect area (top 1/3 and center 1/3)
+	var perfect_width = global_doc_rect.size.x / 3
+	var perfect_height = global_doc_rect.size.y / 3
+	
+	var perfect_area = Rect2(
+		global_doc_rect.position.x + perfect_width,  # Start at 1/3 from left
+		global_doc_rect.position.y,                  # Start at top
+		perfect_width,                              # 1/3 of width
+		perfect_height                              # 1/3 of height
+	)
+	
 	# Get stamp rect - assuming 50x50 for stamp size
 	var stamp_rect = Rect2(
 		position - Vector2(25, 25),  # Half stamp size
-		Vector2(50, 50)  # Stamp size
+		Vector2(50, 50)              # Stamp size
 	)
 	
 	# Get overlap area as percentage
-	var overlap_area = stamp_rect.intersection(stamp_area_rect).get_area()
+	var overlap_area = stamp_rect.intersection(perfect_area).get_area()
 	var stamp_area = stamp_rect.get_area()
 	
 	var accuracy = overlap_area / stamp_area

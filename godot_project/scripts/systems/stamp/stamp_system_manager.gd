@@ -39,15 +39,78 @@ func initialize(game_scene: Node):
 		push_error("StampBarController not found in scene")
 
 # Handle stamp application to any document
+# In StampSystemManager.gd
 func _on_stamp_applied(stamp: StampComponent, document: Node, is_perfect: bool):
-	# Update stats
+	# Update stats for all stamps
 	if stats_manager:
 		stats_manager.current_stats.total_stamps += 1
 		
-		if is_perfect:
+	# Additional actions for perfect stamps
+	if is_perfect:
+		# Update perfect stamp count
+		if stats_manager:
 			stats_manager.current_stats.perfect_stamps += 1
-			# Add bonus for perfect stamp
-			Global.add_score(100)
+			
+		# Perfect stamp bonus points
+		var perfect_points = 200
+		Global.add_score(perfect_points)
+		
+		# Find the alert display system - first through main game
+		var alert_label = null
+		var alert_timer = null
+		
+		# Try to find alert references in the scene tree
+		var root = get_tree().current_scene
+		alert_label = root.get_node_or_null("UI/Labels/MarginContainer/AlertLabel")
+		alert_timer = root.get_node_or_null("SystemManagers/Timers/AlertTimer")
+		
+		# Display the alert if possible
+		if alert_label and alert_timer and Global.has_method("display_green_alert"):
+			Global.display_green_alert(alert_label, alert_timer, 
+				"PERFECT STAMP! +{points} points!".format({"points": perfect_points}))
+		
+		# Provide visual feedback with particle effect at stamp position
+		# Get the position from either the stamp or the document
+		var effect_position = stamp.applied_position
+		if effect_position == Vector2.ZERO and document is Node2D:
+			effect_position = document.global_position
+			
+		# Create the visual effect
+		create_perfect_stamp_effect(effect_position)
+		
+		# Shake screen if possible
+		if root.has_method("shake_screen"):
+			root.shake_screen(5.0, 0.2)
+			
+
+func create_perfect_stamp_effect(position: Vector2):
+	# Create a particle effect for perfect stamps
+	var particles = CPUParticles2D.new()
+	particles.position = position
+	particles.z_index = 11
+	particles.amount = 20
+	particles.lifetime = 1.0
+	particles.explosiveness = 0.8
+	particles.direction = Vector2(0, -1)
+	particles.gravity = Vector2(0, 98)
+	particles.initial_velocity_min = 50
+	particles.initial_velocity_max = 100
+	particles.color = Color(1, 0.8, 0, 1)  # Gold particles
+	# Add to scene and auto-remove when done
+	add_child(particles)
+	particles.emitting = true
+	
+	# Auto-cleanup
+	var timer = Timer.new()
+	timer.wait_time = 2.0
+	timer.one_shot = true
+	add_child(timer)
+	timer.start()
+	timer.timeout.connect(func():
+		particles.queue_free()
+		timer.queue_free()
+	)
+
 
 # Handle stamps specifically applied to the passport
 func _on_passport_stamped(stamp: StampComponent, is_perfect: bool):

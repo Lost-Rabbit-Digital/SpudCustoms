@@ -15,6 +15,9 @@ class_name StampBarController
 @onready var start_node = $StartNode
 @onready var end_node = $EndNode
 
+@export var stamp_point_offset: Vector2 = Vector2(0, 80)  # Offset below the stamp bar
+@onready var stamp_point_marker: Sprite2D
+
 # Stamp textures
 var stamp_textures = {
 	"approve": null,  # These will be set in _ready()
@@ -42,6 +45,9 @@ var stamp_cooldown_timer = 0.0
 var current_stamp_type = ""
 var current_stamp_texture: Texture2D
 var last_mouse_position: Vector2
+
+var alignment_guide: ColorRect
+var is_showing_guide: bool = false
 
 @onready var stamp_bar_audio: AudioStreamPlayer2D = $StampBar/StampBarAudio
 
@@ -83,16 +89,57 @@ func _ready():
 	
 	# Ensure toggle button is visible
 	toggle_position_button.visible = true
+	# Create a visual indicator for the stamp point (only visible in debug)
+	stamp_point_marker = Sprite2D.new()
+	stamp_point_marker.texture = preload("res://assets/stamps/stamp_point_marker.png")  # Create this small texture
+	stamp_point_marker.position = stamp_point_offset
+	stamp_point_marker.scale = Vector2(0.5, 0.5)
+	
+	# Only show in debug mode
+	if OS.is_debug_build():
+		add_child(stamp_point_marker)
+	
+	# Calculate the fixed stamp position
+	update_stamp_position()
+	
+	# Create alignment guide
+	alignment_guide = ColorRect.new()
+	alignment_guide.color = Color(0.2, 0.8, 0.2, 0.3)  # Semi-transparent green
+	alignment_guide.size = Vector2(100, 50)  # Size of the guide
+	alignment_guide.position = stamp_point_offset - Vector2(50, 25)  # Center on stamp point
+	alignment_guide.visible = false
+	add_child(alignment_guide)
 	
 func _process(delta):
 	# Update cooldown timer
 	if stamp_cooldown_timer > 0:
 		stamp_cooldown_timer -= delta
+		
+	# Show guide when a passport is being dragged near the stamp area
+	var drag_system = get_node_or_null("/root/DragAndDropManager")
+	if drag_system and drag_system.has_method("get_dragged_item"):
+		var dragged_item = drag_system.get_dragged_item()
+		if dragged_item and dragged_item.name == "Passport":
+			var distance = dragged_item.global_position.distance_to(global_position + stamp_point_offset)
+			
+			# Show guide when passport is near the stamp position
+			if distance < 200 and !is_showing_guide:
+				show_alignment_guide()
+			elif distance >= 200 and is_showing_guide:
+				hide_alignment_guide()
+		elif is_showing_guide:
+			hide_alignment_guide()
 
 func _input(event):
 	# Track mouse position for stamp placement
 	if event is InputEventMouseMotion:
 		last_mouse_position = event.global_position
+
+func update_stamp_position():
+	# This updates the global position of the stamp point based on the stamp bar's position
+	var global_stamp_point = global_position + stamp_point_offset
+	if stamp_point_marker:
+		stamp_point_marker.global_position = global_stamp_point
 
 # UI Management Functions
 func _on_toggle_position_button_pressed():
@@ -101,6 +148,20 @@ func _on_toggle_position_button_pressed():
 			hide_stamp_bar()
 		else:
 			show_stamp_bar()
+
+func show_alignment_guide():
+	alignment_guide.visible = true
+	is_showing_guide = true
+	
+	# Add animation for better visibility
+	var tween = create_tween()
+	tween.tween_property(alignment_guide, "modulate", Color(1, 1, 1, 1), 0.3)
+
+func hide_alignment_guide():
+	var tween = create_tween()
+	tween.tween_property(alignment_guide, "modulate", Color(1, 1, 1, 0), 0.3)
+	tween.tween_callback(func(): alignment_guide.visible = false)
+	is_showing_guide = false
 
 func show_stamp_bar():
 	is_animating = true

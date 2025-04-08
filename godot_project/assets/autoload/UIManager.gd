@@ -2,6 +2,7 @@ extends Node
 
 # Audio resources for alerts
 var positive_alert_sound = preload("res://assets/audio/ui_feedback/accept_green_alert.wav")
+var perfect_stamp_alert_sound = preload("res://assets/audio/ui_feedback/Task Complete Ensemble 002.wav")
 var negative_alert_sound = preload("res://assets/audio/ui_feedback/decline_red_alert.wav")
 
 # Screen shake settings
@@ -70,29 +71,66 @@ func display_red_alert(alert_label: Label, alert_timer: Timer, text: String):
 	alert_displayed.emit("red", text)
 
 # Display a green alert with positive sound
+# In UIManager.gd (or wherever your display_green_alert function is defined)
+
+# Display a green alert with positive sound
 func display_green_alert(alert_label: Label, alert_timer: Timer, text: String):
 	# Load and play the audio file
 	var audio_player = AudioStreamPlayer.new()
-	audio_player.stream = positive_alert_sound
+	if "PERFECT STAMP" in text:
+		audio_player.stream = perfect_stamp_alert_sound
+	
+	else:
+		audio_player.stream = positive_alert_sound
 	audio_player.volume_db = -5
 	audio_player.bus = "SFX"
 	
-	# Add pitch variation - slightly lower range for negative alerts
-	audio_player.pitch_scale = randf_range(0.85, 1.15)
+	# Add pitch variation - slightly higher range for positive alerts
+	audio_player.pitch_scale = randf_range(0.95, 1.25)
 	add_child(audio_player)
 	audio_player.play()
 	audio_player.finished.connect(func(): audio_player.queue_free())
 
 	# Display the alert
 	alert_label.visible = true
+	
 	# Update the text
 	alert_label.text = text
+	
 	# Update z-index
 	alert_label.z_index = 120
-	# Set desired color
-	alert_label.add_theme_color_override("font_color", Color.GREEN)
-	alert_label.add_theme_font_size_override("font_color", 24)
+	
+	# Set desired color with a brighter green for perfect stamp alerts
+	if "PERFECT STAMP" in text:
+		# Use a more vibrant green with slight glow effect for perfect stamps
+		alert_label.add_theme_color_override("font_color", Color(0.3, 1.0, 0.3))
+		
+		# Make perfect stamp alerts slightly larger
+		alert_label.add_theme_font_size_override("font_size", 28)
+	else:
+		# Standard green for other positive alerts
+		alert_label.add_theme_color_override("font_color", Color.GREEN)
+		alert_label.add_theme_font_size_override("font_size", 24)
+	
 	alert_label.position = alert_label.position.round()
+	
+	# Add bounce animation for perfect stamp alerts
+	if "PERFECT STAMP" in text:
+		var tween = create_tween()
+		
+		# Original position and scale
+		var original_pos = alert_label.position
+		var original_scale = alert_label.scale
+		
+		# Scale up animation
+		tween.tween_property(alert_label, "scale", original_scale * 1.2, 0.1)
+		
+		# Bounce back with slight overshoot
+		tween.tween_property(alert_label, "scale", original_scale * 0.95, 0.15)
+		
+		# Return to original scale
+		tween.tween_property(alert_label, "scale", original_scale, 0.1)
+	
 	# Hide the alert after a few seconds
 	clear_alert_after_delay(alert_label, alert_timer)
 	

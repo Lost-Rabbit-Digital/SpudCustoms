@@ -95,6 +95,8 @@ func on_stamp_requested(stamp_type: String, stamp_texture: Texture2D = null, sou
 	apply_stamp(stamp_type, source_node)
 
 # Apply a stamp animation using the existing UI stamps with a fixed vertical offset
+# In StampSystem.gd
+
 func apply_stamp(stamp_type: String, stamp_bar: Node = null):
 	if is_stamping or stamp_cooldown_timer > 0:
 		return
@@ -106,8 +108,17 @@ func apply_stamp(stamp_type: String, stamp_bar: Node = null):
 	play_random_stamp_sound()
 	emit_signal("stamp_animation_started", stamp_type)
 	
-	# Get the mouse position for determining which document to stamp
-	var mouse_position = get_viewport().get_mouse_position()
+	# Get the fixed stamp position from the stamp bar
+	var fixed_stamp_position = Vector2.ZERO
+	if stamp_bar and stamp_bar.has_method("get_stamp_origin"):
+		# Use the stamp bar's method to get the stamp origin (source position)
+		var stamp_origin = stamp_bar.get_stamp_origin()
+		
+		# Calculate the fixed stamp position directly below the stamp bar
+		fixed_stamp_position = Vector2(stamp_origin.x, stamp_origin.y + 120)  # Offset by 120 pixels down
+	else:
+		# Fallback to center of screen if no stamp bar
+		fixed_stamp_position = get_viewport().get_visible_rect().size / 2
 	
 	# Find the appropriate stamp button in the UI
 	var stamp_button: TextureButton = null
@@ -133,9 +144,6 @@ func apply_stamp(stamp_type: String, stamp_bar: Node = null):
 		is_stamping = false
 		return
 	
-	# Calculate target position - 50 pixels below the original position
-	var target_position = Vector2(original_position.x, original_position.y + 50)
-	
 	# Store the original z_index to restore later
 	var original_z_index = stamp_button.z_index
 	var original_mouse_filter = stamp_button.mouse_filter
@@ -147,8 +155,8 @@ func apply_stamp(stamp_type: String, stamp_bar: Node = null):
 	var tween = create_tween()
 	tween.set_parallel(true)  # Parallel for position, scale and rotation
 	
-	# Move to target position with slight scaling and rotation
-	tween.tween_property(stamp_button, "global_position", target_position, STAMP_ANIM_DURATION/2)
+	# Move to fixed position with slight scaling and rotation
+	tween.tween_property(stamp_button, "global_position", fixed_stamp_position, STAMP_ANIM_DURATION/2)
 	tween.tween_property(stamp_button, "scale", original_scale * randf_range(0.9, 1.1), STAMP_ANIM_DURATION/2)
 	tween.tween_property(stamp_button, "rotation", original_rotation + randf_range(-0.1, 0.1), STAMP_ANIM_DURATION/2)
 	
@@ -161,19 +169,23 @@ func apply_stamp(stamp_type: String, stamp_bar: Node = null):
 		press_tween.set_parallel(true)
 		press_tween.tween_property(stamp_button, "scale", original_scale * 0.9, STAMP_ANIM_DURATION/6)
 		
-		# Apply the actual stamp at the mouse position, not at the target position
+		# Apply the actual stamp at the fixed position, not at the mouse position
 		var document_found = false
 		
-		# Find document under mouse cursor
+		# Find document under the fixed stamp position
 		for document in stampable_documents.keys():
 			var stampable = stampable_documents[document]
 			
-			if stampable.is_valid_stamp_position(mouse_position):
+			if stampable.is_valid_stamp_position(fixed_stamp_position):
 				# Create new stamp component
 				var stamp = StampComponent.new(stamp_type, stamp_result_textures[stamp_type])
 				
+				# Check if this is a perfect stamp based on document position
+				var is_perfect = stampable.is_perfect_stamp_position(fixed_stamp_position)
+				stamp.is_perfect = is_perfect
+				
 				# Apply to document
-				stampable.apply_stamp(stamp, mouse_position)
+				stampable.apply_stamp(stamp, fixed_stamp_position)
 				document_found = true
 				
 				# Trigger screen shake
@@ -183,7 +195,7 @@ func apply_stamp(stamp_type: String, stamp_bar: Node = null):
 				break
 		
 		if not document_found:
-			print("No document found at position: ", mouse_position)
+			print("No document found at fixed position: ", fixed_stamp_position)
 	).set_delay(STAMP_ANIM_DURATION/2)  # Delay to match first tween duration
 	
 	# Return animation with slight bounce effect
@@ -203,6 +215,24 @@ func apply_stamp(stamp_type: String, stamp_bar: Node = null):
 			emit_signal("stamp_animation_completed", stamp_type)
 		)
 	).set_delay(STAMP_ANIM_DURATION/6)  # Short delay for the press effect
+
+func check_perfect_alignment(document: Node2D, stamp_position: Vector2) -> bool:
+	# Convert stamp position to document-local coordinates
+	var local_stamp_pos = document.to_local(stamp_position)
+	
+	# Get the document size
+	var doc_rect = document.get_rect()
+	
+	# Calculate the "perfect" area (top 1/3 and center 1/3)
+	var perfect_area = Rect2(
+		doc_rect.size.x / 3,      # Start from 1/3 of width 
+		0,                        # Start from top
+		doc_rect.size.x / 3,      # Width is 1/3 of document width
+		doc_rect.size.y / 3       # Height is 1/3 of document height
+	)
+	
+	# Check if stamp position is within the perfect area
+	return perfect_area.has_point(local_stamp_pos)
 
 # Play a random stamp sound
 func play_random_stamp_sound():
