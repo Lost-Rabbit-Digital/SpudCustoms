@@ -42,9 +42,6 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 ## Code Loopholes (Bugs)
 
 ## Currently active tasks
-- Emote System / Bug: When potatoes are clicked it only displays love emotes, could be set to display HAPPY category
-
-
 Commit: Removed blank and dot emotes from rotation of emote display
 - Disable blank emotes
 - Disable dot emotes

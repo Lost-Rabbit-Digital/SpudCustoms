@@ -143,3 +143,4 @@ These are our goals, to-do tasks, and completed tasks.
 - Update cursor to show a select icon when above the megaphone 
 - Update cursor when hovering over the megaphone
 - Z-index: Dragged passport appears below the suspect table
+- Emote System / Bug: When potatoes are clicked it only displays love emotes, could be set to display HAPPY category
