@@ -640,7 +640,7 @@ func megaphone_clicked():
 	# Check if there's already a potato in the Customs Office
 	if is_potato_in_office:
 		#print("A potato is already in the customs office!")
-		megaphone_dialogue_box.set_random()
+		megaphone_dialogue_box.set_random_message_from_category("spud_in_office")
 		return
 		
 	var potato = queue_manager.remove_front_potato()
@@ -650,7 +650,7 @@ func megaphone_clicked():
 			character_generator.fade_out_foreground_shadow(4)
 	
 		# Only raise the shutter on the first megaphone click of the shift
-		megaphone_dialogue_box.next_message()
+		megaphone_dialogue_box.set_random_message_from_category("spud_being_called")
 		is_potato_in_office = true
 		megaphone.visible = true
 		
@@ -660,9 +660,8 @@ func megaphone_clicked():
 		
 		# Move potato to the office
 		move_potato_to_office(potato)
-	else:
-		#print("No potato to process. :(")
-		megaphone_dialogue_box.next_message()
+	else: # No potatoes
+		megaphone_dialogue_box.next_message("misc")
 		
 func move_potato_to_office(potato_person: PotatoPerson):
 	print("Moving potato to customs office")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://cwks4tbpoq3n5"]
+[gd_scene load_steps=60 format=3 uid="uid://cwks4tbpoq3n5"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://scenes/game_scene/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://scripts/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://be3lucg3f3a3c" path="res://scripts/systems/stamp/StampBarController.tscn" id="25_osm16"]
 [ext_resource type="PackedScene" uid="uid://fci3o688eddt" path="res://scripts/systems/LawReceiptController.tscn" id="27_ccap0"]
 [ext_resource type="Texture2D" uid="uid://y3iyyicwxtsl" path="res://assets/documents/closed_passport_small/closed_passport_small.png" id="27_qjue5"]
+[ext_resource type="PackedScene" uid="uid://mtbc2ho7xlq5" path="res://scripts/systems/vehicle_system/vehicle_spawner.tscn" id="28_i7il7"]
 [ext_resource type="FontFile" uid="uid://cks3khdvnf0vp" path="res://assets/fonts/windows_command_prompt.ttf" id="29_b6emd"]
 [ext_resource type="Texture2D" uid="uid://bxn3434177kfd" path="res://assets/documents/laws_receipt.png" id="31_rtxd3"]
 [ext_resource type="Script" uid="uid://dfofd8lp0igu2" path="res://scripts/systems/law_receipt.gd" id="32_k1orm"]
@@ -453,6 +454,9 @@ shape = SubResource("RectangleShape2D_h6yoa")
 debug_color = Color(0.669135, 0.387984, 0.845205, 0.42)
 
 [node name="StampSystemManager" parent="SystemManagers" instance=ExtResource("21_5djk1")]
+
+[node name="VehicleSpawner" parent="SystemManagers" instance=ExtResource("28_i7il7")]
+position = Vector2(0, 1)
 
 [node name="Gameplay" type="Control" parent="."]
 z_as_relative = false

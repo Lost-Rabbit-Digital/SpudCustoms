@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1mav4u43hpjh"]
 
-[ext_resource type="Texture2D" uid="uid://bt7exmul2mh2x" path="res://assets/vehicles/blue_truck.jpg" id="1_8oe76"]
 [ext_resource type="Script" uid="uid://can4bvx5hcx83" path="res://scripts/systems/vehicle_system/vehicle_instance.gd" id="1_qtcoj"]
+[ext_resource type="Texture2D" uid="uid://c75bsydfv7a2f" path="res://assets/vehicles/blue_sedan.png" id="2_qtcoj"]
 
 [node name="VehicleInstance" type="Node2D"]
 script = ExtResource("1_qtcoj")
 
 [node name="VehicleTexture" type="Sprite2D" parent="."]
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("1_8oe76")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_qtcoj")
 
 [node name="VehicleAudio" type="AudioStreamPlayer2D" parent="."]
