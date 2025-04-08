@@ -38,6 +38,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Add dialogue emotes randomly to the potatoes, Potatoes emote (Kenny emotes) while waiting in line
 - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
 - Add ink flecks from stamping that fly up when you stamp
+- Graphics: Potato blinking, just stretch two pixels placed above the eyes? Or could properly animate
 
 ### Backend
 - Localise the game
@@ -63,6 +64,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 ### Audio
 - Small sound for hovering above megaphone or stamp bar button
+
 
 
 
@@ -150,3 +152,4 @@ These are our goals, to-do tasks, and completed tasks.
 - Emote System: Disable blank emotes
 - Emote System: Disable dot emotes
 - Emote System: Potatoes should wiggle upon emoting
+- Megaphone Dialogue > Bubble Dialogue: Rename to Bubble Dialogue System
