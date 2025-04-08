@@ -11,7 +11,7 @@ signal return_to_main_menu
 signal restart_shift
 
 # First try using the unique node name identifier
-var narrative_manager = null
+var narrative_manager
 
 func _init():
 	mouse_filter = Control.MOUSE_FILTER_IGNORE  # Allow input to pass through to buttons
