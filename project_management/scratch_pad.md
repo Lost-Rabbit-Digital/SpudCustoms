@@ -115,6 +115,11 @@ These are our goals, to-do tasks, and completed tasks.
 - Fix SceneLoader issues, direct scene transitions break overlaid menus in Shift Summary but using SceneLoader.load_scene with a reference to the desired scene isn't working either, and no error is being produced.
 - Potatoes appear above table instead of under when border runner leaves map on south side
 
+### Credits
+Add these users to the credits menu
+
+- Arludus: https://arludus.itch.io/2d-top-down-180-pixel-art-vehicles
+
 ### Completed Tasks for 1.0.2
 - Skip button not disappearing, and resetting the shift when pressed
 - Wrong shift displaying on shift summary screen
