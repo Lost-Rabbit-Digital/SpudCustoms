@@ -1,7 +1,7 @@
   # Scratch Pad
 These are our goals, to-do tasks, and completed tasks.
 
-## Steam Minor Update 1.0.3 - Next Update
+## Steam Minor Update 1.1.1 - Next Update
 ## Tasks
 ### Features
 - Add tooltip with potato info when you hover over them in line
@@ -25,6 +25,13 @@ These are our goals, to-do tasks, and completed tasks.
 - Queue Interaction: Potatoes wiggle when clicked
 - Emote System: All potatoes show exclamation marks when you shoot a missile
 - Office Shutter / Bug: Update button to exclude transparent pixels for more accurate clicks
+- At the beginning of your shift, see your potato character walk into the customs office
+- Emote System: Potatoes should play small sound upon emoting
+- Emote System: If you click the same potato 3+ times they get angry and show POPPING_VEINS emote
+- Emote System: Skew emote display chance towards angry and confused
+- Menu Audio: Tick sounds when adjusting volume sliders
+- Office Shutter / Bug: Fade out the foreground shadow when the potatoes leave the office
+- Office Shutter / Bug: Do not fade out transparency of potato when enter or leaving office, only the foreground shadow
 
 # SHIFT SUMMARY SCREEN
 - Shift Summary: If the "Continue" button does not appear, it should balance out the "Main Menu" and "Restart" buttons
@@ -37,6 +44,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Add dialogue emotes randomly to the potatoes, Potatoes emote (Kenny emotes) while waiting in line
 - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
 - Add ink flecks from stamping that fly up when you stamp
+- Flocks of birds on the ground that fly away when you interact
 
 ### Backend
 - Localise the game
@@ -65,7 +73,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 
-# FULL RELEASE TASKS - 2025-04-11 Target Release - 1.0.2
+# FULL RELEASE TASKS - 2025-04-11 Target Release - 1.1.0
 ## Tasks
 ## RELEASE BLOCKERS
 - Stamps go over edge of passport
@@ -85,6 +93,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Need to update target positions for stamp buttons, currently both going same place
 - Need to update support for combo multipliers with perfect stamps
 - Need to troubleshoot particle effects for perfect stamps
+
 ### Graphics  
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
 - Add logic to check if game paused or in dialogic before updating cursor to target cursor
@@ -120,7 +129,7 @@ Add these users to the credits menu
 
 - Arludus: https://arludus.itch.io/2d-top-down-180-pixel-art-vehicles
 
-### Completed Tasks for 1.0.2
+### Completed Tasks for 1.1.0
 - Skip button not disappearing, and resetting the shift when pressed
 - Wrong shift displaying on shift summary screen
 - Runner potatoes are registering TWO strikes instead of just 1
@@ -152,3 +161,5 @@ Add these users to the credits menu
 - Update cursor to show a select icon when above the megaphone 
 - Update cursor when hovering over the megaphone
 - Z-index: Dragged passport appears below the suspect table
+- Bubble Dialogue: Implement into the Drag and Drop system for dropping a passport onto a potato to have varied dialogue instead of the same hardcoded text
+- Environment: Cars passing by
