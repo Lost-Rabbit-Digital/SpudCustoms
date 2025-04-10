@@ -106,6 +106,20 @@ These are our goals, to-do tasks, and completed tasks.
 - Update cursor to show a select icon when above the approval or rejection stamp
 - When hit with a missile, make the Runner corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest
 - When shift ends, treat the last guy in office as rejected
+Art fixes:
+- checkpoint_booth
+- loyalist_outcome
+- night attack human man in background
+- night_checkpoint, messed up characters
+- personal quarters, style break, random
+- plant_revelation, goopy potatoes
+- processing_facility, remove random messed up potatoes
+- reckoning, fix grain
+- resistance_planning, emblems should be potatoes, potatoes should not have armor, leader should look more like old white mustache russet potato
+- victory_scene, fucked up faces
+- security_lockdown, washed out
+
+
 
 ### Gameplay
 - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
