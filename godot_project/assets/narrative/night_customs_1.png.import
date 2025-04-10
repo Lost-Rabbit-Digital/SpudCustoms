@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsu5x2crlxcsb"
-path="res://.godot/imported/escape_route.png-5c83fa164613f2faf88c2049ed43a9fa.ctex"
+uid="uid://bnvm3ns6swoqr"
+path="res://.godot/imported/night_customs_1.png-53ead7ae6ffddae4539c2f0d5b4af605.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/narrative/escape_route.png"
-dest_files=["res://.godot/imported/escape_route.png-5c83fa164613f2faf88c2049ed43a9fa.ctex"]
+source_file="res://assets/narrative/night_customs_1.png"
+dest_files=["res://.godot/imported/night_customs_1.png-53ead7ae6ffddae4539c2f0d5b4af605.ctex"]
 
 [params]
 
