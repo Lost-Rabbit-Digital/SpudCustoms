@@ -32,6 +32,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Menu Audio: Tick sounds when adjusting volume sliders
 - Office Shutter / Bug: Fade out the foreground shadow when the potatoes leave the office
 - Office Shutter / Bug: Do not fade out transparency of potato when enter or leaving office, only the foreground shadow
+- Potato in office: Should move up and down like breathing animation, simple tween
 
 # SHIFT SUMMARY SCREEN
 - Shift Summary: If the "Continue" button does not appear, it should balance out the "Main Menu" and "Restart" buttons
@@ -93,6 +94,9 @@ These are our goals, to-do tasks, and completed tasks.
 - Need to update target positions for stamp buttons, currently both going same place
 - Need to update support for combo multipliers with perfect stamps
 - Need to troubleshoot particle effects for perfect stamps
+- Explosions appear above the inspection table
+- Potato footsteps appear above the customs office
+- Potato gibs appear below the screen borders
 
 ### Graphics  
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
@@ -120,6 +124,9 @@ Art fixes:
 - security_lockdown, washed out
 
 
+- Cursor: After dragging a document the cursor returns to default even if the cursor is still hovering over a document 
+- Cursor: Update cusor to work with Maaacks menu
+- Drag and Drop / Bug: Documents released appear in front of the suspect panel background
 
 ### Gameplay
 - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
