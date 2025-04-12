@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcgbviq66bxgi"
-path="res://.godot/imported/vehicle_tileset_1.png-7efb1566c783e813b87a2a305c3d252e.ctex"
+uid="uid://dprfxf73m8cgm"
+path="res://.godot/imported/vehicle_spritesheet_6.png-be31b1898b109780b5c666c52a771984.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/vehicles/vehicle_tileset_1.png"
-dest_files=["res://.godot/imported/vehicle_tileset_1.png-7efb1566c783e813b87a2a305c3d252e.ctex"]
+source_file="res://assets/vehicles/vehicle_spritesheet_6.png"
+dest_files=["res://.godot/imported/vehicle_spritesheet_6.png-be31b1898b109780b5c666c52a771984.ctex"]
 
 [params]
 
