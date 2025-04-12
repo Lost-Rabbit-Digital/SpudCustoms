@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c76816lqwhybh"
-path="res://.godot/imported/2D Top Down 180 Vehicles ( originale size ).png-96b877a10150fae4210a4fa02a80b6cd.ctex"
+uid="uid://i38sqd8umbfp"
+path="res://.godot/imported/occupation_checkpoint_1.png-9ee698f5441e1cfd5f1c27de348822f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/vehicles/2D Top Down 180 Vehicles ( originale size ).png"
-dest_files=["res://.godot/imported/2D Top Down 180 Vehicles ( originale size ).png-96b877a10150fae4210a4fa02a80b6cd.ctex"]
+source_file="res://assets/narrative/occupation_checkpoint_1.png"
+dest_files=["res://.godot/imported/occupation_checkpoint_1.png-9ee698f5441e1cfd5f1c27de348822f5.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt7exmul2mh2x"
-path="res://.godot/imported/blue_truck.jpg-ac5c891c41e380d6a3628a1f8ae5e88c.ctex"
+uid="uid://p7v46wxfpun7"
+path="res://.godot/imported/vehicle_tileset_2.png-fb59b5ff588fee90d90f9d196d8bf366.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/vehicles/blue_truck.jpg"
-dest_files=["res://.godot/imported/blue_truck.jpg-ac5c891c41e380d6a3628a1f8ae5e88c.ctex"]
+source_file="res://assets/vehicles/vehicle_tileset_2.png"
+dest_files=["res://.godot/imported/vehicle_tileset_2.png-fb59b5ff588fee90d90f9d196d8bf366.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c76816lqwhybh"
-path="res://.godot/imported/2D Top Down 180 Vehicles ( originale size ).png-96b877a10150fae4210a4fa02a80b6cd.ctex"
+uid="uid://q4t1npmh53lf"
+path="res://.godot/imported/sedan_tileset.png-dc8f38bb71824909f25f14fecace6daf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/vehicles/2D Top Down 180 Vehicles ( originale size ).png"
-dest_files=["res://.godot/imported/2D Top Down 180 Vehicles ( originale size ).png-96b877a10150fae4210a4fa02a80b6cd.ctex"]
+source_file="res://assets/vehicles/sedan_tileset.png"
+dest_files=["res://.godot/imported/sedan_tileset.png-dc8f38bb71824909f25f14fecace6daf.ctex"]
 
 [params]
 
