@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c76816lqwhybh"
-path="res://.godot/imported/2D Top Down 180 Vehicles ( originale size ).png-96b877a10150fae4210a4fa02a80b6cd.ctex"
+uid="uid://b0bv62w2en5k6"
+path="res://.godot/imported/source_vehicles_tileset.png-1a9584fe884fdf3bc6885d56e2c4b235.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/vehicles/2D Top Down 180 Vehicles ( originale size ).png"
-dest_files=["res://.godot/imported/2D Top Down 180 Vehicles ( originale size ).png-96b877a10150fae4210a4fa02a80b6cd.ctex"]
+source_file="res://assets/vehicles/source_vehicles_tileset.png"
+dest_files=["res://.godot/imported/source_vehicles_tileset.png-1a9584fe884fdf3bc6885d56e2c4b235.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c76816lqwhybh"
-path="res://.godot/imported/2D Top Down 180 Vehicles ( originale size ).png-96b877a10150fae4210a4fa02a80b6cd.ctex"
+uid="uid://d4fvnd1w54l8"
+path="res://.godot/imported/guard_betrayal_1.png-6039d09f6a46fbf2b5b22aa41fe1c755.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/vehicles/2D Top Down 180 Vehicles ( originale size ).png"
-dest_files=["res://.godot/imported/2D Top Down 180 Vehicles ( originale size ).png-96b877a10150fae4210a4fa02a80b6cd.ctex"]
+source_file="res://assets/narrative/guard_betrayal_1.png"
+dest_files=["res://.godot/imported/guard_betrayal_1.png-6039d09f6a46fbf2b5b22aa41fe1c755.ctex"]
 
 [params]
 

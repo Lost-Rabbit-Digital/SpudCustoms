@@ -77,7 +77,6 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-04-11 Target Release - 1.1.0
 ## Tasks
 ## RELEASE BLOCKERS
-- Emote System / Bug: When potatoes are clicked it only displays love emotes, could be set to display HAPPY category
 - Remake Score Attack mode and score at least 25 potatoes
 - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
 - Add a check for winning the day, if the border runner is actively happening wait for it to finish before ending the shift
@@ -184,3 +183,4 @@ Add these users to the credits menu
 - Bubble Dialogue: Implement into the Drag and Drop system for dropping a passport onto a potato to have varied dialogue instead of the same hardcoded text
 - Environment: Cars passing by
 - Make sure that stamp consistently marks the same spot on the document, NOT based on where the player clicks on the stamp
+- Emote System / Bug: When potatoes are clicked it only displays love emotes, could be set to display HAPPY category
