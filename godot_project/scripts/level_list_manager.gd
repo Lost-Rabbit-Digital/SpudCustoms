@@ -175,3 +175,27 @@ func _ready():
 	level_list_loader.level_load_started.connect(_on_level_loader_level_load_started)
 	if auto_load:
 		load_current_level()
+
+func transition_to_next_shift():
+	# Save current state
+	var current_shift = Global.shift
+	
+	# Handle end dialogues if needed
+	if narrative_manager and current_shift in narrative_manager.LEVEL_END_DIALOGUES:
+		narrative_manager.start_level_end_dialogue(current_shift)
+		await narrative_manager.end_dialogue_finished
+	
+	# Update global state for next shift
+	Global.advance_shift()
+	Global.advance_story_state()
+	
+	# Make sure GameState is updated with our progress
+	GameState.level_reached(Global.shift)
+	GlobalState.save()
+	
+	# Create transition between days
+	narrative_manager.show_day_transition(current_shift, Global.shift)
+	await narrative_manager.dialogue_finished
+	
+	# Reload the main game scene with fresh state
+	SceneTransitionManager.reload_current_scene()

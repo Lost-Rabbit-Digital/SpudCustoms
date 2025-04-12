@@ -394,6 +394,15 @@ func transition_to_scene(scene_path: String):
 func _on_continue_button_pressed() -> void: 
 	Global.reset_shift_stats()
 	print("Continue button pressed")
+	
+	# Important: Save state BEFORE queue_free
+	var next_shift = Global.shift + 1
+	Global.shift = next_shift
+	GameState.set_current_level(next_shift)
+	GameState.level_reached(next_shift)
+	GlobalState.save()
+	
+	# Emit signal
 	emit_signal("continue_to_next_shift")
 	queue_free()
 

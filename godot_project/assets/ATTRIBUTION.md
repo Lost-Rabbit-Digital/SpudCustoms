@@ -1,13 +1,17 @@
 # Attribution
 
 # Lost Rabbit Digital
+(Check us out on GitHub)[https://github.com/Lost-Rabbit-Digital]
 
 ## Programmers
 [Boden McHale](https://www.bodenmchale.com/)
-[David McHale](https://www.youtube.com/channel/UCcmLal-sOU_5ThcSQCFDyoA)
+[David McHale](https://bsky.app/profile/heartcoded.bsky.social)
 
-## Artists
-Oleksii Lotokhov
+## Character / VFX / UI Artists
+[Oleksii Lotokhov](https://lanigram.imgbb.com/)
+
+## Landscape Artists / Animators
+[StagNation](https://x.com/StagnationDraws)
 
 ## Audio
 [Ovani](https://ovanisound.com/)

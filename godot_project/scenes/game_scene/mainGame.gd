@@ -120,87 +120,100 @@ func get_level_manager():
 	return null
 
 func _ready():
-	load_tracks()
-	# Play with original pitch by default
-	# next_track_with_random_pitch()
-	# Initialise the drag and drop manager
+	# Initialize core systems
+	_setup_managers()
+	_setup_game_state()
+	
+	# Initialize UI and connect signals
+	_setup_ui()
+	_connect_signals()
+	
+	# Start gameplay systems
+	_setup_gameplay_systems()
+	
+	# Start the narrative for this shift
+	_start_narrative()
+
+func _setup_managers():
+	# Initialize drag and drop manager
 	if not drag_and_drop_manager:
-		# If the node doesn't exist yet, create it
 		var manager = DragAndDropManager.new()
 		manager.name = "DragAndDropManager"
 		$SystemManagers.add_child(manager)
 		drag_and_drop_manager = manager
 	
-	# Initialise after all other nodes are ready
 	drag_and_drop_manager.initialize(self)
 	
-	# Connect signal
-	drag_and_drop_manager.drag_system.passport_returned.connect(_on_passport_returned)
-	
-	#drag_and_drop_manager.drag_system.item_grabbed.connect(func(item):
-		#if item == $Gameplay/InteractiveElements/Passport:
-			#_on_passport_interaction()
-	#)
-	
-	# Initialise the stamp system manager
+	# Initialize other systems
 	setup_stamp_system()
-	
-	# Hook up decision made event
-	stamp_system_manager.stamp_decision_made.connect(_on_stamp_decision_made)
-
-	
-	queue_manager = %QueueManager
-	
-	# Get the current level ID from the level list manager if it exists
-	var level_manager = get_level_manager()
-	if level_manager:
-		current_shift = level_manager.get_current_level_id()
-		print(current_shift)
-	
-	narrative_manager.current_shift = current_shift
-	
-	# Connect signals from narrative manager
-	narrative_manager.intro_dialogue_finished.connect(_on_intro_dialogue_finished)
-	narrative_manager.end_dialogue_finished.connect(_on_end_dialogue_finished)
-	
-	# Start the intro dialogue for current shift
-	narrative_manager.start_level_dialogue(current_shift)
-	
-	game_start_time = Time.get_ticks_msec() / 1000.0  # Convert to seconds
-	
 	setup_spawn_timer()
 	
+	# Get essential system references
+	queue_manager = %QueueManager
+	border_runner_system = %BorderRunnerSystem
+	original_runner_chance = border_runner_system.runner_chance
+
+func _setup_game_state():
+	# Initialize game state and stats
+	current_shift = Global.shift
+	Global.shift = current_shift  # Ensure synchronization
+	
 	shift_stats = stats_manager.get_new_stats()
-	Global.score_updated.connect(_on_score_updated)
+	game_start_time = Time.get_ticks_msec() / 1000.0
+	
+	# Load difficulty settings
 	difficulty_level = Global.difficulty_level
 	set_difficulty(difficulty_level)
-	# Store the default cursor shape
 	
+	# Generate game rules
+	generate_rules()
+	
+	# Initialize tracking variables
 	previous_quota = 0
 	previous_strikes = 0
 	
+	# Load tracks for music system
+	load_tracks()
+
+func _setup_ui():
+	# Initialize UI hints system
+	ui_hint_system = UIHintSystem.new()
+	add_child(ui_hint_system)
+	
+	# Register UI hint elements
+	_register_ui_hints()
+	
+	# Update UI displays
 	update_score_display()
 	update_quota_display()
 	update_strikes_display()
-	update_date_display()
-	generate_rules()
+	# TODO: update_date_display()
+	# TODO: update_combo_display()
 	
-	# Synchronize Global state with GameState
-	Global.shift = current_shift
+	# Display high score if available
+	_check_and_display_high_score()
 	
-	# If we have a previous high score for this level, display it
+	# Set UI element references
+	_setup_ui_references()
+
+func _register_ui_hints():
+	ui_hint_system.register_hintable($Gameplay/InteractiveElements/Passport/ClosedPassport, "passport", 15.0)
+	ui_hint_system.register_hintable(megaphone, "megaphone", 15.0)
+	ui_hint_system.register_hintable($Gameplay/InteractiveElements/StampBarController, "stamp_bar", 15.0)
+
+func _check_and_display_high_score():
 	var high_score = GameState.get_high_score(current_shift)
 	if high_score > 0:
 		Global.display_green_alert(alert_label, alert_timer, "High score for this level: " + str(high_score))
-		# We should display this in the UI somewhere or in initial alert
-
+	
 	if Global.final_score > 0:
 		Global.score = Global.final_score
 		update_score_display()
-
+	
 	if Global.quota_met > 0:
 		update_quota_display()
-	# Get references to the new nodes
+
+func _setup_ui_references():
 	passport = $Gameplay/InteractiveElements/Passport
 	passport_spawn_point_begin = $Gameplay/InteractiveElements/PassportSpawnPoints/BeginPoint
 	passport_spawn_point_end = $Gameplay/InteractiveElements/PassportSpawnPoints/EndPoint
@@ -209,42 +222,38 @@ func _ready():
 	suspect_panel_front = $Gameplay/SuspectPanel/SuspectPanelFront
 	suspect = $Gameplay/MugshotPhotoGenerator/SizingSprite
 	
-	# Connect Megaphone Interaction
-	$Gameplay/InteractiveElements/Megaphone/MegaphoneInteractionButton.pressed.connect(_on_megaphone_interaction_button_pressed)
-
-
-	
 	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
 
-	# Add closed passport to draggable sprites
-	#draggable_sprites.append(passport)
+func _connect_signals():
+	# Narrative signals
+	narrative_manager.intro_dialogue_finished.connect(_on_intro_dialogue_finished)
+	narrative_manager.end_dialogue_finished.connect(_on_end_dialogue_finished)
 	
-	border_runner_system = %BorderRunnerSystem
+	# System signals
+	drag_and_drop_manager.drag_system.passport_returned.connect(_on_passport_returned)
+	stamp_system_manager.stamp_decision_made.connect(_on_stamp_decision_made)
+	Global.score_updated.connect(_on_score_updated)
 	border_runner_system.game_over_triggered.connect(_on_game_over)
-	border_runner_system.is_enabled = true
 	
-	# Store the original runner chance for reference when enabling/disabling
-	original_runner_chance = border_runner_system.runner_chance
-	
-	# Ensure difficulty settings are propagated to all systems
-	set_difficulty(difficulty_level)
-	
-	Dialogic.timeline_started.connect(_on_dialogue_started)
-	Dialogic.timeline_ended.connect(_on_dialogue_finished)
-	#disable_controls()
-
-	# Create and initialize the UI Hint System
-	ui_hint_system = UIHintSystem.new()
-	add_child(ui_hint_system)
-	
-	# Register hintable nodes with appropriate thresholds
-	ui_hint_system.register_hintable($Gameplay/InteractiveElements/Passport/ClosedPassport, "passport", 15.0)
-	ui_hint_system.register_hintable(megaphone, "megaphone", 15.0)
-	ui_hint_system.register_hintable($Gameplay/InteractiveElements/StampBarController, "stamp_bar", 15.0)
-	
-	# Connect signals if needed
+	# UI signals
+	$Gameplay/InteractiveElements/Megaphone/MegaphoneInteractionButton.pressed.connect(_on_megaphone_interaction_button_pressed)
 	ui_hint_system.hint_activated.connect(_on_hint_activated)
 	ui_hint_system.hint_deactivated.connect(_on_hint_deactivated)
+	
+	# Dialogic signals
+	Dialogic.timeline_started.connect(_on_dialogue_started)
+	Dialogic.timeline_ended.connect(_on_dialogue_finished)
+
+func _setup_gameplay_systems():
+	# Enable border runner system
+	border_runner_system.is_enabled = true
+
+func _start_narrative():
+	# Set shift in narrative manager
+	narrative_manager.current_shift = current_shift
+	
+	# Start the intro dialogue for current shift
+	narrative_manager.start_level_dialogue(current_shift)
 
 # Dedicated function to set up the stamp system
 func setup_stamp_system():
