@@ -77,26 +77,25 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-04-11 Target Release - 1.1.0
 ## Tasks
 ## RELEASE BLOCKERS
-- Stamps go over edge of passport
-- Corpses need a slightly lower z-index to show BEHIND explosions (re-test)
-- Make sure that stamp consistently marks the same spot on the document, NOT based on where the player clicks on the stamp
-- Cursor / Bug: Target display is not showing when hovering over the missile area
 - Emote System / Bug: When potatoes are clicked it only displays love emotes, could be set to display HAPPY category
-- Drag and Drop / Bug: If the player grabs the passport while it's animated the script does not properly update z-index
-- Drag and Drop / Bug: LawReceipt does not automatically close when dragged off of the suspect table
-- Drag and Drop / Bug: Get highest z-index doesn't seem to be working properly, cannot easily set passport atop of LawReceipt
 - Remake Score Attack mode and score at least 25 potatoes
-- Create demo version of game without Score Attack mode, only shift 0, 1, and 2
-- Beat Story mode, and test each of the 4 endings
 - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
-- Do not allow the user to pick up the document through the stamp bar
 - Add a check for winning the day, if the border runner is actively happening wait for it to finish before ending the shift
 - Need to update target positions for stamp buttons, currently both going same place
 - Need to update support for combo multipliers with perfect stamps
 - Need to troubleshoot particle effects for perfect stamps
-- Explosions appear above the inspection table
-- Potato footsteps appear above the customs office
-- Potato gibs appear below the screen borders
+- Z-Index Bug: Explosions appear above the inspection table
+- Z-Index Bug: Potato footsteps appear above the customs office
+- Z-Index Bug: Potato gibs appear below the screen borders
+- Z-Index Bug: Corpses need a slightly lower z-index to show BEHIND explosions (re-test)
+- Drag and Drop / Bug: Do not allow the user to pick up the document through the stamp bar
+- Drag and Drop / Bug: If the player grabs the passport while it's animated the script does not properly update z-index
+- Drag and Drop / Bug: LawReceipt does not automatically close when dragged off of the suspect table
+- Drag and Drop / Bug: Get highest z-index doesn't seem to be working properly, cannot easily set passport atop of LawReceipt
+- Cursor / Bug: Target display is not showing when hovering over the missile area
+- Stamp System: Stamps go over edge of passport
+- Playtest: Beat Story mode, and test each of the 4 endings
+- Demo: Create demo version of game without Score Attack mode, only shift 0, 1, and 2
 
 ### Graphics  
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
@@ -184,3 +183,4 @@ Add these users to the credits menu
 - Z-index: Dragged passport appears below the suspect table
 - Bubble Dialogue: Implement into the Drag and Drop system for dropping a passport onto a potato to have varied dialogue instead of the same hardcoded text
 - Environment: Cars passing by
+- Make sure that stamp consistently marks the same spot on the document, NOT based on where the player clicks on the stamp
