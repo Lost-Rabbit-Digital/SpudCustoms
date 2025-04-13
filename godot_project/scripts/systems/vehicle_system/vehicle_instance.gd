@@ -8,11 +8,11 @@ extends Node2D
 # Vehicle properties
 @export var vehicle_type: String = "truck"
 
-# Optional: Add your own custom initialization
 func _ready() -> void:
 	randomize_vehicle_appearance()
 
-## Randomizes the vehicle appearance by selecting a random frame
+## Randomizes the vehicle appearance by 
+## selecting a random frame
 ## from the AnimatedSprite2D
 func randomize_vehicle_appearance() -> void:
 	if has_node("VehicleTexture"):
