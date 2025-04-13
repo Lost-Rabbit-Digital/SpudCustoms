@@ -77,12 +77,20 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-04-11 Target Release - 1.1.0
 ## Tasks
 ## RELEASE BLOCKERS
+- Stamp alignment issue
+- Score not resetting in between shifts properly
+- I don't THINK end shift dialogues are triggering properly?
+- Sign outside customs office isn't appearing/disappearing as expected
+- Need to update target positions for stamp buttons, currently both going same place
+- Need to troubleshoot particle effects for perfect stamps
+- Add score attack back in 
+- Test achievements
+- Test leaderboards
+- Test Shift 6 - 11
 - Remake Score Attack mode and score at least 25 potatoes
 - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
 - Add a check for winning the day, if the border runner is actively happening wait for it to finish before ending the shift
-- Need to update target positions for stamp buttons, currently both going same place
 - Need to update support for combo multipliers with perfect stamps
-- Need to troubleshoot particle effects for perfect stamps
 - Z-Index Bug: Explosions appear above the inspection table
 - Z-Index Bug: Potato footsteps appear above the customs office
 - Z-Index Bug: Potato gibs appear below the screen borders
@@ -111,7 +119,7 @@ These are our goals, to-do tasks, and completed tasks.
 Art fixes:
 - checkpoint_booth
 - loyalist_outcome
-- night attack human man in background
+- night attack, human man in background
 - night_checkpoint, messed up characters
 - personal quarters, style break, random
 - plant_revelation, goopy potatoes
@@ -120,8 +128,6 @@ Art fixes:
 - resistance_planning, emblems should be potatoes, potatoes should not have armor, leader should look more like old white mustache russet potato
 - victory_scene, fucked up faces
 - security_lockdown, washed out
-
-
 - Cursor: After dragging a document the cursor returns to default even if the cursor is still hovering over a document 
 - Cursor: Update cusor to work with Maaacks menu
 - Drag and Drop / Bug: Documents released appear in front of the suspect panel background
@@ -140,7 +146,6 @@ Art fixes:
 - Megaphone Dialogue System: Implement the different categories of dialogue from the JSON file into the megaphone_clicked function code in mainGame.gd
 
 ### General Bugs
-- Fix SceneLoader issues, direct scene transitions break overlaid menus in Shift Summary but using SceneLoader.load_scene with a reference to the desired scene isn't working either, and no error is being produced.
 - Potatoes appear above table instead of under when border runner leaves map on south side
 
 ### Credits
@@ -150,6 +155,7 @@ Add these users to the credits menu
 
 ### Completed Tasks for 1.1.0
 - Skip button not disappearing, and resetting the shift when pressed
+- Fix SceneLoader issues, direct scene transitions break overlaid menus in Shift Summary but using SceneLoader.load_scene with a reference to the desired scene isn't working either, and no error is being produced.
 - Wrong shift displaying on shift summary screen
 - Runner potatoes are registering TWO strikes instead of just 1
 - Add pitch variation to the positive and negative score sound
