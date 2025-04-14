@@ -77,16 +77,19 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-04-11 Target Release - 1.1.0
 ## Tasks
 ## RELEASE BLOCKERS
+- Add a condition for if the player skips the final narrative so that the end credits are still signalled 
+- Shift increasing by 2 means that the game goes from shift 10 to shift 12 and appears to skip the end of the game
+- Score not resetting on shift continue
 - Stamp alignment issue
 - Score not resetting in between shifts properly
-- I don't THINK end shift dialogues are triggering properly?
+- End shift dialogues don't appear to be triggering properly, test having it before shift summary screen?
 - Sign outside customs office isn't appearing/disappearing as expected
 - Need to update target positions for stamp buttons, currently both going same place
 - Need to troubleshoot particle effects for perfect stamps
-- Add score attack back in 
-- Test achievements
-- Test leaderboards
-- Test Shift 6 - 11
+- Add score attack mode back in by inheriting mainGame and overriding scoring rules
+- Test narrative and stats-based achievements
+- Test leaderboards for each shift and difficulty
+- Test Shift 6 - 11 and see if end credits trigger
 - Remake Score Attack mode and score at least 25 potatoes
 - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
 - Add a check for winning the day, if the border runner is actively happening wait for it to finish before ending the shift
@@ -105,6 +108,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Demo: Create demo version of game without Score Attack mode, only shift 0, 1, and 2
 
 ### Graphics  
+- Show buttons on continue summary screen AFTER fading everything in.
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
 - Add logic to check if game paused or in dialogic before updating cursor to target cursor
 - Cause stamps to wiggle and slam in and then fade into color on shift summary
@@ -118,7 +122,7 @@ These are our goals, to-do tasks, and completed tasks.
 - When shift ends, treat the last guy in office as rejected
 Art fixes:
 - checkpoint_booth
-- loyalist_outcome
+- loyalist_outcome, too human
 - night attack, human man in background
 - night_checkpoint, messed up characters
 - personal quarters, style break, random
@@ -133,6 +137,7 @@ Art fixes:
 - Drag and Drop / Bug: Documents released appear in front of the suspect panel background
 
 ### Gameplay
+- Progression for story not saving/loading properly
 - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
 - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
 
