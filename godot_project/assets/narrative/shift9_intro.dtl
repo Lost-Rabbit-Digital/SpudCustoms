@@ -1,5 +1,5 @@
 # shift9_intro.dtl
-audio music "res://assets/audio/ambient/horror_drone_49.mp3" [fade="2.0" volume="-5.0" bus="Ambient"]
+audio music "res://assets/audio/ambient/horror_drone_49.mp3" [fade="2.0" volume="-15.0" bus="Ambient"]
 audio music "res://assets/music/narrative/horror_downward_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]
 join narrator [z_index="1"]

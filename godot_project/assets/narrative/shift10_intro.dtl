@@ -1,5 +1,5 @@
 # shift10_intro.dtl
-audio music "res://assets/audio/ambient/horror_drone_49.mp3" [fade="2.0" volume="0.0" bus="Music"]
+audio music "res://assets/audio/ambient/horror_drone_49.mp3" [fade="2.0" volume="-15.0" bus="Music"]
 if {stay_or_go} == "stay":
 	audio music "res://assets/music/narrative/ambient_defeat_main.mp3" [fade="2.0" volume="0.0" bus="Music"]
 	# Storyline for those who stayed at their post

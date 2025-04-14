@@ -1,5 +1,5 @@
 # shift9_end.dtl
-audio music "res://assets/audio/ambient/horror_drone_49.mp3" [fade="2.0" volume="-5.0" bus="Ambient"]
+audio music "res://assets/audio/ambient/horror_drone_49.mp3" [fade="2.0" volume="-15.0" bus="Ambient"]
 audio music "res://assets/music/narrative/horror_aliens_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 
 if {stay_or_go} == "stay":

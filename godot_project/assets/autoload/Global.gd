@@ -225,7 +225,7 @@ func set_difficulty(new_difficulty: String):
 # Update variables used for unlocking levels in level select
 func unlock_level(level_id: int):
 	if level_id > SaveManager.get_max_level_reached():
-		SaveManager.save_level_progress(level_id, shift)
+		SaveManager.save_level_progress(level_id, shift, {Global.difficulty: Global.score})
 	
 	# Save progress to disk
 	save_game_state()

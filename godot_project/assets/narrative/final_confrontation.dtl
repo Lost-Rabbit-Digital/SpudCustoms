@@ -1,5 +1,5 @@
 # final_confrontation.dtl
-audio music "res://assets/music/narrative/wind_house.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+audio music "res://assets/music/narrative/wind_house.mp3" [fade="2.0" volume="-15.0" bus="Music"]
 audio "res://assets/music/narrative/storm_thunder_ambience.mp3" [volume="-10.0" bus="Ambient"]
 [background arg="res://assets/narrative/final_chaos.png" fade="0.0"]
 audio "res://assets/audio/explosions/rumbling 1.wav" [volume="-8.0" bus="SFX"]

@@ -1,6 +1,6 @@
 # shift6_intro.dtl
 audio music "res://assets/music/narrative/horror_abyss_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
-audio music "res://assets/audio/ambient/horror_drone_12.mp3" [fade="2.0" volume="-5.0" bus="Ambient"]
+audio music "res://assets/audio/ambient/horror_drone_12.mp3" [fade="2.0" volume="-15.0" bus="Ambient"]
 [background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 2.mp3" [volume="0.0" bus="SFX"]
