@@ -655,7 +655,7 @@ func megaphone_clicked():
 		# Only raise the shutter on the first megaphone click of the shift
 		megaphone_dialogue_box.set_random_message_from_category("spud_being_called")
 		is_potato_in_office = true
-		megaphone.visible = true
+		megaphone_dialogue_box.visible = true
 		
 		# Use the potato info directly from the potato object instead of generating new info
 		current_potato_info = potato.get_potato_info()
@@ -664,7 +664,7 @@ func megaphone_clicked():
 		# Move potato to the office
 		move_potato_to_office(potato)
 	else: # No potatoes
-		megaphone_dialogue_box.next_message("misc")
+		megaphone_dialogue_box.set_random_message_from_category("misc")
 		
 func move_potato_to_office(potato_person: PotatoPerson):
 	print("Moving potato to customs office")
@@ -851,6 +851,10 @@ func _process(_delta):
 		if office_shutter_controller.active_shutter_state == office_shutter_controller.shutter_state.OPEN:
 			if stamp_system_manager.passport_stampable.get_decision() != "":
 				should_show_prompt = true
+
+	# Hide megaphone dialogue box when the officer sound stops playing
+	if !%SFXPool.is_playing():
+		megaphone_dialogue_box.visible = false
 	
 	# Only update if state has changed
 	if should_show_prompt != displayed_give_prompt:
@@ -862,10 +866,6 @@ func _process(_delta):
 			%GivePromptBubbleDialogueBox.visible = true
 		else:
 			%GivePromptBubbleDialogueBox.visible = false
-		
-		# Hide megaphone dialogue box when the officer sound stops playing
-		if !%SFXPool.is_playing():
-			megaphone_dialogue_box.visible = false
 		
 	# Update combo timer
 	if combo_count > 0:

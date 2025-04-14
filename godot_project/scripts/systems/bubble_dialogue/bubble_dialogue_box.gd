@@ -24,6 +24,16 @@ var messages = {
 	"document_interaction": [],
 }
 
+var customs_officer_sounds = [
+	preload("res://assets/audio/talking/froggy_phrase_1.wav"),
+	preload("res://assets/audio/talking/froggy_phrase_2.wav"),
+	preload("res://assets/audio/talking/froggy_phrase_3.wav"),
+	preload("res://assets/audio/talking/froggy_phrase_4.wav"),
+	preload("res://assets/audio/talking/froggy_phrase_5.wav"),
+	preload("res://assets/audio/talking/froggy_phrase_6.wav"),
+	preload("res://assets/audio/talking/froggy_phrase_7.wav"),
+]
+
 func _ready():
 	# Load messages from JSON
 	load_messages()
@@ -75,6 +85,10 @@ func load_messages():
 func set_random_message_from_category(category_str: String) -> void:
 	var category_messages = []
 	
+	self.visible = true
+	
+	play_random_officer_sound()
+	
 	# Simply use the category string directly to access the messages dictionary
 	if messages.has(category_str):
 		category_messages = messages[category_str]
@@ -91,7 +105,11 @@ func set_random_message_from_category(category_str: String) -> void:
 func set_random_message() -> void:
 	# Get all categories that have messages
 	var available_categories = []
+
+	self.visible = true
 	
+	play_random_officer_sound()
+
 	# Check each category and add its string key if it has messages
 	for category_key in messages.keys():
 		if messages[category_key].size() > 0:
@@ -104,25 +122,8 @@ func set_random_message() -> void:
 	else:
 		bubble_text.text = "No messages available."
 
-# Call this function to cycle to the next random message
-func next_message():
-	set_random_message()
-	play_random_officer_sound()
-	self.visible = true
 
 func play_random_officer_sound():
-	# WARNING: This will load all of these sounds into memory every time 
-	# this function is called, so probably want to introduce some type of
-	# resource management into this.
-	var customs_officer_sounds = [
-		preload("res://assets/audio/talking/froggy_phrase_1.wav"),
-		preload("res://assets/audio/talking/froggy_phrase_2.wav"),
-		preload("res://assets/audio/talking/froggy_phrase_3.wav"),
-		preload("res://assets/audio/talking/froggy_phrase_4.wav"),
-		preload("res://assets/audio/talking/froggy_phrase_5.wav"),
-		preload("res://assets/audio/talking/froggy_phrase_6.wav"),
-		preload("res://assets/audio/talking/froggy_phrase_7.wav")
-	]
 	# Play potato customs officer sound
 	if !%SFXPool.is_playing():
 		%SFXPool.stream = customs_officer_sounds.pick_random()
