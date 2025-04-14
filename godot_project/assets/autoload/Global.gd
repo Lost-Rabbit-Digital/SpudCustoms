@@ -165,6 +165,7 @@ func synchronize_with_game_state():
 
 func reset_shift_stats():
 	score = 0
+	final_score = 0  # Make sure this is explicitly reset
 	quota_met = 0
 	strikes = 0
 	current_game_stats = {}

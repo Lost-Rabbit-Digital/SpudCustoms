@@ -1,7 +1,7 @@
 extends Node2D
 
 var border_runner_system
-var regular_potato_speed = 0.5  
+var regular_potato_speed = 0.5
 
 # Track game states
 var is_game_paused: bool = false
@@ -484,6 +484,26 @@ func end_shift(success: bool = true):
 		"success": success
 	}
 	
+	# After updating all stats but before showing the summary screen
+	GlobalState.save()
+	
+	# Check if there's an end dialogue for this shift
+	if narrative_manager and narrative_manager.LEVEL_END_DIALOGUES.has(current_shift):
+		# Play the ending dialogue for the completed shift
+		#narrative_manager.start_level_end_dialogue(current_shift)
+		
+		# Instead of waiting for it to finish, we'll connect the narrative_manager's signal
+		# to continue our process
+		#narrative_manager.end_dialogue_finished.connect(func():
+		#	_show_shift_summary_screen(stats_dict)
+		#, CONNECT_ONE_SHOT)
+		_show_shift_summary_screen(stats_dict)
+		pass # Early return to avoid showing summary screen now
+	
+	# If no dialogue, show the summary screen immediately
+	_show_shift_summary_screen(stats_dict)
+	
+func _show_shift_summary_screen(stats_dict: Dictionary):
 	# Set game process mode to handle pause better during transitions
 	get_tree().paused = false
 	
@@ -541,44 +561,18 @@ func _on_shift_summary_continue():
 	Global.advance_story_state()
 	
 	# Make sure GameState is updated with our progress
-	GameState.level_reached(completed_shift + 1)
-	
-	# Check if there's an end dialogue for this shift
-	if completed_shift in narrative_manager.LEVEL_END_DIALOGUES:
-		# Play the ending dialogue for the completed shift
-		narrative_manager.start_level_end_dialogue(completed_shift)
-		
-		# Wait for dialogue to finish before proceeding
-		await narrative_manager.end_dialogue_finished
-	
-	# Check if we've reached the end of the game
-	if completed_shift >= 13:
-		# Final shift completed, show credits
-		fade_transition()
-		# Access SceneLoader directly
-		if SceneLoader:
-			var menu_scene = preload("res://scenes/end_credits/end_credits.tscn").instantiate()
-			SceneLoader.load_scene(menu_scene)
-		else:
-			push_error("SceneLoader not found, falling back to change_scene_to_file")
-			get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
-		return
+	GameState.level_reached(Global.shift)
 	
 	# Show day transition
 	narrative_manager.show_day_transition(completed_shift, completed_shift + 1)
 	
 	# Reload the game scene for the next shift
-	# fade_transition()
-	
-	# Access SceneLoader directly
 	if SceneLoader:
 		print("Using SceneLoader to reload")
-		#SceneLoader.load_scene("res://scenes/game_scene/mainGame.tscn")
 		SceneLoader.reload_current_scene()
 	else:
 		push_error("SceneLoader not found, falling back to change_scene_to_file")
 		get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
-	
 
 func _on_shift_summary_restart():
 	# Keep the same shift but reset the stats
