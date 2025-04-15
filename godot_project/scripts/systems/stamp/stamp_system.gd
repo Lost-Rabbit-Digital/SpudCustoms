@@ -23,7 +23,6 @@ var stamp_result_textures = {
 
 # State tracking
 var is_stamping = false
-var current_stamp_type = ""
 var current_stamp_texture: Texture2D
 var stamp_cooldown_timer = 0.0
 var stampable_documents: Dictionary = {}  # Maps document nodes to StampableComponent
@@ -34,6 +33,9 @@ var stamp_sounds = []
 
 # Shake effect
 var shake_callback: Callable
+
+# Stamp constants
+var STAMP_OFFSET = 35
 
 # Constructor - we need to pass in audio player from the main scene
 func _init(audio: AudioStreamPlayer2D, shake_func: Callable):
@@ -83,8 +85,6 @@ func on_stamp_requested(stamp_type: String, stamp_texture: Texture2D = null, sou
 	if is_stamping or stamp_cooldown_timer > 0:
 		return
 		
-	current_stamp_type = stamp_type
-	
 	# Use provided texture or default to our own
 	if stamp_texture != null:
 		current_stamp_texture = stamp_texture
@@ -102,7 +102,6 @@ func apply_stamp(stamp_type: String, stamp_bar: Node = null):
 		return
 		
 	is_stamping = true
-	current_stamp_type = stamp_type
 	
 	# Play sound effect
 	play_random_stamp_sound()
@@ -112,10 +111,10 @@ func apply_stamp(stamp_type: String, stamp_bar: Node = null):
 	var fixed_stamp_position = Vector2.ZERO
 	if stamp_bar and stamp_bar.has_method("get_stamp_origin"):
 		# Use the stamp bar's method to get the stamp origin (source position)
-		var stamp_origin = stamp_bar.get_stamp_origin()
+		var stamp_origin = stamp_bar.get_stamp_origin(stamp_type)
 		
 		# Calculate the fixed stamp position directly below the stamp bar
-		fixed_stamp_position = Vector2(stamp_origin.x, stamp_origin.y + 120)  # Offset by 120 pixels down
+		fixed_stamp_position = Vector2(stamp_origin.x, stamp_origin.y + STAMP_OFFSET)
 	else:
 		# Fallback to center of screen if no stamp bar
 		fixed_stamp_position = get_viewport().get_visible_rect().size / 2
@@ -156,7 +155,7 @@ func apply_stamp(stamp_type: String, stamp_bar: Node = null):
 	tween.set_parallel(true)  # Parallel for position, scale and rotation
 	
 	# Move to fixed position with slight scaling and rotation
-	tween.tween_property(stamp_button, "global_position", fixed_stamp_position, STAMP_ANIM_DURATION/2)
+	tween.tween_property(stamp_button, "global_position", Vector2(stamp_button.global_position.x, stamp_button.global_position.y + STAMP_OFFSET), STAMP_ANIM_DURATION/2)
 	tween.tween_property(stamp_button, "scale", original_scale * randf_range(0.9, 1.1), STAMP_ANIM_DURATION/2)
 	tween.tween_property(stamp_button, "rotation", original_rotation + randf_range(-0.1, 0.1), STAMP_ANIM_DURATION/2)
 	

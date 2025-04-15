@@ -269,16 +269,27 @@ func _on_stamp_button_pressed(stamp_type):
 	# Emit both signals for compatibility
 	emit_signal("stamp_selected", stamp_type, current_stamp_texture)
 	emit_signal("stamp_requested", stamp_type, current_stamp_texture)
-	
+
+# TODO: Why bother checking the texture, we always know the size, it's the same
+# dimensions for each!
 # Get the position of the currently active stamp button
-func get_stamp_origin() -> Vector2:
-	var stamp_button = approval_stamp if current_stamp_type == "approve" else rejection_stamp
-	var origin = stamp_button.global_position
+func get_stamp_origin(current_stamp_type) -> Vector2:
+	var stamp_button = null
+	var stamp_origin = null
+	
+	# Figure out if it's an approval or rejection stamp
+	if current_stamp_type == "approve":
+		stamp_button = approval_stamp
+		stamp_origin = stamp_button.global_position
+	else:
+		stamp_button = rejection_stamp
+		stamp_origin = stamp_button.global_position
+	
 	
 	# Adjust to be at the center of the stamp
-	origin.y += stamp_button.size.y / 2
-	origin.x += stamp_button.size.x / 2
-	return origin
+	stamp_origin.y += stamp_button.size.y / 2
+	stamp_origin.x += stamp_button.size.x / 2
+	return stamp_origin
 
 func animate_stamp(stamp_type: String, target_position: Vector2):
 	# Show animation of stamp moving from button to target
@@ -291,7 +302,7 @@ func animate_stamp(stamp_type: String, target_position: Vector2):
 	temp_stamp.z_as_relative = false
 	
 	# Start from the appropriate button
-	var start_pos = get_stamp_origin()
+	var start_pos = get_stamp_origin(stamp_type)
 	temp_stamp.global_position = start_pos
 	
 	add_child(temp_stamp)
