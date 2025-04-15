@@ -272,7 +272,6 @@ func set_difficulty(new_difficulty: String):
 			"Expert":
 				scaling_factor = 1.2
 				max_strikes = 3
-			
 		quota_target = int(floor(base_quota_target * scaling_factor))
 
 # Update variables used for unlocking levels in level select

@@ -74,7 +74,8 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-04-11 Target Release - 1.1.0
 ## Tasks
 ## RELEASE BLOCKERS
-- Make quota include difficulty level as well
+- Need to update target positions for stamp buttons, currently both going same place
+- Add a confirmation for resetting story progress (not highscores) to New Game
 - New game continues right now, should go back to tutorial
 - New game must always use tutorial, and SHOULD wipe data, then load the correct level
 - After hitting new game, Continue should also load the first level as if data were cleared
@@ -87,7 +88,6 @@ These are our goals, to-do tasks, and completed tasks.
 - Score not resetting in between shifts properly
 - End shift dialogues don't appear to be triggering properly, test having it before shift summary screen?
 - Sign outside customs office isn't appearing/disappearing as expected
-- Need to update target positions for stamp buttons, currently both going same place
 - Need to troubleshoot particle effects for perfect stamps
 - Add score attack mode back in by inheriting mainGame and overriding scoring rules
 - Test narrative and stats-based achievements
@@ -140,12 +140,10 @@ Art fixes:
 - Drag and Drop / Bug: Documents released appear in front of the suspect panel background
 
 ### Gameplay
-- Progression for story not saving/loading properly
 - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
 - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
 
 ### Audio
-- Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
 - Hand gripping sound to document
 - Whooosh sound when document is returned to table
 - Whooshing sound when documents are dragged quickly
@@ -157,11 +155,13 @@ Art fixes:
 - Potatoes appear above table instead of under when border runner leaves map on south side
 
 ### Credits
-Add these users to the credits menu
 
-- Arludus: https://arludus.itch.io/2d-top-down-180-pixel-art-vehicles
 
 ### Completed Tasks for 1.1.0
+- Progression for story not saving/loading properly
+- Add Arludus to credits: https://arludus.itch.io/2d-top-down-180-pixel-art-vehicles
+- Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
+- Make quota include difficulty level as well
 - Skip button not disappearing, and resetting the shift when pressed
 - Fix SceneLoader issues, direct scene transitions break overlaid menus in Shift Summary but using SceneLoader.load_scene with a reference to the desired scene isn't working either, and no error is being produced.
 - Wrong shift displaying on shift summary screen

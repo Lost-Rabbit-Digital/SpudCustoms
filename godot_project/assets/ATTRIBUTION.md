@@ -43,8 +43,13 @@ Source: [Click Sounds (6)](https://opengameart.org/content/click-sounds6)
 Author: [FilmCow](https://filmcow.itch.io/)
 Source: [itch: FilmCow Royalty Free Sound Effects Library](https://filmcow.itch.io/filmcow-sfx)
 
+## Vehicle Artwork
+Author: Arludus
+Source [itch: 2D Top Down Pixel Art Vehicles](https://arludus.itch.io/2d-top-down-180-pixel-art-vehicles)
+
 # Community Help
-Thank you to the generous members of our community how have tested and reported many bugs for us to fix.
+Thank you to the generous members of our community. 
+You who have tested, and reported many bugs for us to fix.
 
 ZombieWhisperer
 MrBright01 
