@@ -71,6 +71,7 @@ func open(animate: bool = true):
 ##
 ## @param animate Whether to animate the transition (true) or change immediately (false).
 func close(animate: bool = true):
+	# Check if it's already closed
 	if !is_open:
 		return
 		
@@ -92,7 +93,7 @@ func close(animate: bool = true):
 		modulate.a = 0.0
 		var tween = create_tween()
 		tween.tween_property(self, "modulate:a", 1.0, animation_duration)
-
+	
 ## Centers the document at the specified position.
 ##
 ## Adjusts the position to center the document sprite at the given coordinates.

@@ -33,4 +33,3 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 
 
 ## Currently active tasks
-- Drag and Drop / Bug: When you drag a document to close it, it does not center on the mouse 
