@@ -1360,8 +1360,8 @@ func _on_dialogue_started():
 	border_runner_system.is_enabled = false
 	
 func _on_dialogue_finished():
-	%WindSFX.stop()
-	%BackgroundMusicPlayer.stop()
+	Dialogic.Audio.stop_all_channels()
+	Dialogic.Audio.stop_all_one_shot_sounds()
 	next_track_with_random_pitch()
 	Global.quota_met = 0
 	Global.strikes = 0

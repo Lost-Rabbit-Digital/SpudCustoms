@@ -119,6 +119,8 @@ func cleanup_skip_buttons():
 			print("Skip button instance not valid")
 			
 func _on_skip_button_pressed():
+	Dialogic.Audio.stop_all_channels()
+	Dialogic.Audio.stop_all_one_shot_sounds()
 	# End the current timeline
 	Dialogic.end_timeline()
 	
