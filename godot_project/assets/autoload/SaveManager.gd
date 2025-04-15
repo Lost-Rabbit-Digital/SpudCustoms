@@ -104,13 +104,28 @@ func save_level_progress(max_level: int, current_level: int, level_highscores: D
 	var game_state = load_game_state()
 	
 	# Update the level progression data
-	game_state["max_level_reached"] = max_level
+	game_state["max_level_reached"] = max(game_state.get("max_level_reached", 0), max_level)
 	game_state["current_level"] = current_level
 	
 	# If there are high scores for specific levels, save those too
 	if not level_highscores.is_empty():
-		game_state["level_highscores"] = level_highscores
-		
+		# If the high scores dictionary doesn't exist yet, create it
+		if not game_state.has("level_highscores"):
+			game_state["level_highscores"] = {}
+			
+		# Merge the new high scores with existing ones
+		for level_id in level_highscores:
+			if not game_state["level_highscores"].has(level_id):
+				game_state["level_highscores"][level_id] = {}
+				
+			for difficulty in level_highscores[level_id]:
+				# Only update if the new score is higher
+				var current_high_score = game_state["level_highscores"].get(level_id, {}).get(difficulty, 0)
+				if level_highscores[level_id][difficulty] > current_high_score:
+					if not game_state["level_highscores"].has(level_id):
+						game_state["level_highscores"][level_id] = {}
+					game_state["level_highscores"][level_id][difficulty] = level_highscores[level_id][difficulty]
+	
 	return save_game_state(game_state)
 
 # Get the highest level the player has reached
@@ -152,7 +167,7 @@ func save_level_high_score(level: int, difficulty: String, score: int) -> bool:
 		
 	return true  # No need to save, existing score is higher
 
-## Get high score for a specific level and difficulty
+# Get high score for a specific level and difficulty
 func get_level_high_score(level: int, difficulty: String) -> int:
 	var game_state = load_game_state()
 	
@@ -165,7 +180,7 @@ func get_level_high_score(level: int, difficulty: String) -> int:
 		# Get the high score for this difficulty, or 0 if it doesn't exist
 		return level_highscores[level_key].get(difficulty, 0)
 		
-	return 0  # No high score for this level and difficulty
+	return 0
 
 ## Get global high score for a difficulty
 func get_global_high_score(difficulty: String) -> int:

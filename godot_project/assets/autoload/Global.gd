@@ -61,6 +61,10 @@ func _ready():
 		
 	# Load saved game state
 	load_game_state()
+	
+	# Sync SaveManager and game state
+	sync_level_unlock_data()
+	
 
 func _process(_delta: float) -> void:
 	pass # No need for Steam callbacks here anymore
@@ -101,6 +105,11 @@ func add_score(points: int):
 func get_current_level_high_score() -> int:
 	return SaveManager.get_level_high_score(shift, difficulty_level)
 
+func get_level_high_score(level_id: int, difficulty: String = "") -> int:
+	if not difficulty:
+		difficulty = difficulty_level
+		
+	return SaveManager.get_level_high_score(level_id, difficulty)
 
 func reset_score():
 	score = 0
@@ -131,9 +140,19 @@ func advance_shift():
 	GameState.level_reached(shift)
 	# reset per-shift stats
 	reset_shift_stats()
+	var scaling_factor:float 
 	# Update quota target for new shift
 	# This assumes quota target increases with each shift
-	quota_target = floor(base_quota_target + (shift - 1 ))
+	match Global.difficulty_level:
+		"Easy": 
+			scaling_factor = 0.8
+		"Normal":
+			scaling_factor = 1
+		"Expert":
+			scaling_factor = 1.2
+		
+		
+	quota_target = int(floor((base_quota_target + (shift - 1 )) * scaling_factor))
 	save_game_state()
 
 func switch_game_mode(mode: String):
@@ -145,6 +164,7 @@ func switch_game_mode(mode: String):
 		shift = GameState.get_current_level()
 		# Set quota based on current level
 		quota_target = floor(base_quota_target + (shift - 1))
+		
 	elif mode == "score_attack":
 		# For score attack, reset to level 1 but keep difficulty
 		shift = 1
@@ -162,6 +182,37 @@ func synchronize_with_game_state():
 	score = 0
 	quota_met = 0
 	strikes = 0
+	
+func sync_level_unlock_data() -> int:
+	# Get the max level from both systems
+	var save_manager_max = 0
+	var game_state_max = GameState.get_max_level_reached()
+	
+	# Get SaveManager max if available
+	if SaveManager.has_method("get_max_level_reached"):
+		save_manager_max = SaveManager.get_max_level_reached()
+	
+	# Use the highest value
+	var true_max_level = max(save_manager_max, game_state_max)
+	
+	# Update systems if needed
+	if true_max_level > game_state_max:
+		GameState.level_reached(true_max_level)
+	
+	if SaveManager.has_method("save_level_progress") and true_max_level > save_manager_max:
+		# Create high scores dictionary
+		var high_scores = {}
+		for level in range(1, true_max_level + 1):
+			var level_key = str(level)
+			high_scores[level_key] = {}
+			
+			# Add scores for each difficulty
+			for difficulty in ["Easy", "Normal", "Expert"]:
+				high_scores[level_key][difficulty] = GameState.get_high_score(level, difficulty)
+		
+		SaveManager.save_level_progress(true_max_level, Global.shift, high_scores)
+	
+	return true_max_level
 
 func reset_shift_stats():
 	score = 0
@@ -209,23 +260,25 @@ func set_difficulty(new_difficulty: String):
 		
 		# Save the difficulty to Config
 		Config.set_config("GameSettings", "Difficulty", difficulty_level)
-		
+		var scaling_factor:float
 		# Update game parameters based on difficulty
 		match difficulty_level:
 			"Easy":
-				quota_target = 5
+				scaling_factor = 0.8
 				max_strikes = 6
 			"Normal":
-				quota_target = 8
+				scaling_factor = 1
 				max_strikes = 4
 			"Expert":
-				quota_target = 10
+				scaling_factor = 1.2
 				max_strikes = 3
+			
+		quota_target = int(floor(base_quota_target * scaling_factor))
 
 # Update variables used for unlocking levels in level select
 func unlock_level(level_id: int):
 	if level_id > SaveManager.get_max_level_reached():
-		SaveManager.save_level_progress(level_id, shift, {Global.difficulty: Global.score})
+		SaveManager.save_level_progress(level_id, shift, {Global.difficulty_level: Global.score})
 	
 	# Save progress to disk
 	save_game_state()

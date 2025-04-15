@@ -27,41 +27,46 @@ func _ready() -> void:
 	GlobalState.save()
 	
 func add_levels_to_container() -> void:
+	# Clear existing buttons and high score labels
 	level_buttons_container.clear()
-	
-	# Clear any existing high score labels
 	for label in high_score_labels:
 		if is_instance_valid(label):
 			label.queue_free()
 	high_score_labels.clear()
 	
-	var max_level_reached := GameState.get_max_level_reached()
+	# Ensure we have the latest unlock data by syncing
+	var max_unlocked_level = GameState.get_max_level_reached()
 	
-	# Get all level IDs and sort them numerically
-	var level_ids = levels.keys()
-	level_ids.sort()
+	# Make sure Global and SaveManager are in sync
+	if Global.sync_level_unlock_data != null and Global.has_method("sync_level_unlock_data"):
+		max_unlocked_level = Global.sync_level_unlock_data()
 	
-	for level_id in level_ids:
-		# Format the display name with day number
-		var display_name = "Day %d - %s" % [level_id, levels[level_id]]
+	# Add levels to the container
+	for level_id in range(levels.size()):
+		var level_name = levels[level_id]
 		
-		# Add the item to the ItemList
-		var item_index = level_buttons_container.add_item(display_name)
+		# Check if the level is unlocked
+		var is_unlocked = level_id <= max_unlocked_level
 		
-		# Store the level ID as metadata for easy retrieval
+		# Add the level button
+		var item_index = level_buttons_container.add_item(
+			("%d - " % level_id) + level_name,
+			null,  # Icon
+			is_unlocked  # Selectable based on unlock status
+		)
+		
+		# Set the item metadata to the level ID
 		level_buttons_container.set_item_metadata(item_index, level_id)
 		
-		# Set visual state based on unlock status
-		var is_unlocked = level_id <= max_level_reached
-		level_buttons_container.set_item_disabled(item_index, !is_unlocked)
+		# Adjust item appearance based on unlock status
+		if not is_unlocked:
+			level_buttons_container.set_item_disabled(item_index, true)
+			level_buttons_container.set_item_custom_fg_color(item_index, Color(0.5, 0.5, 0.5))
 		
-		# Visually distinguish locked levels
-		if !is_unlocked:
-			level_buttons_container.set_item_custom_fg_color(item_index, Color(0.5, 0.5, 0.5, 0.5))
-		
-		# Add a high score label for this item
-		add_high_score_label(item_index, level_id)
-
+		# Add high score label if level is unlocked
+		if is_unlocked:
+			add_high_score_label(item_index, level_id)
+			
 func add_high_score_label(item_index: int, level_id: int) -> void:
 	# Create high score label
 	var label = Label.new()
@@ -87,8 +92,15 @@ func add_high_score_label(item_index: int, level_id: int) -> void:
 func update_high_score_label(label: Label) -> void:
 	var level_id = label.get_meta("level_id")
 	
-	# Get high score for this level
-	var high_score = SaveManager.get_level_high_score(level_id, Global.difficulty_level)
+	# Try to get high score from multiple sources to ensure we use the highest value
+	var high_score = 0
+	
+	high_score = GameState.get_high_score(level_id, Global.difficulty_level)
+	
+	# Try SaveManager as fallback or to find a higher score
+	if SaveManager.has_method("get_level_high_score"):
+		var save_manager_score = SaveManager.get_level_high_score(level_id, Global.difficulty_level)
+		high_score = max(high_score, save_manager_score)
 	
 	# Update text if there's a high score
 	if high_score > 0:
