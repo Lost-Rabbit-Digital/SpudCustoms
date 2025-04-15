@@ -158,7 +158,7 @@ audio/channel_defaults={
 "music": {
 "audio_bus": "Music",
 "fade_length": 0.0,
-"loop": true,
+"loop": false,
 "volume": 0.0
 }
 }
@@ -180,6 +180,7 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/maaa
 [global_group]
 
 PotatoPerson=""
+AudioPlayers=""
 
 [gui]
 
