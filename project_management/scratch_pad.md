@@ -71,12 +71,15 @@ These are our goals, to-do tasks, and completed tasks.
 
 ### Audio
 - Small sound for hovering above megaphone or stamp bar button
-
-
-
 # FULL RELEASE TASKS - 2025-04-11 Target Release - 1.1.0
 ## Tasks
 ## RELEASE BLOCKERS
+- Make quota include difficulty level as well
+- New game continues right now, should go back to tutorial
+- New game must always use tutorial, and SHOULD wipe data, then load the correct level
+- After hitting new game, Continue should also load the first level as if data were cleared
+- Adding fade to skip or end of dialogic sequences so it doesn't abruptly switch.
+- Make rejected potatoes walk away even slower
 - Add a condition for if the player skips the final narrative so that the end credits are still signalled 
 - Shift increasing by 2 means that the game goes from shift 10 to shift 12 and appears to skip the end of the game
 - Score not resetting on shift continue
