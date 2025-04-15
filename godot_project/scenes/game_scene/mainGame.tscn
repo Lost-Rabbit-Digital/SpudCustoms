@@ -405,6 +405,7 @@ autoplay = false
 parameters/looping = true
 
 [node name="WindSFX" type="AudioStreamPlayer2D" parent="SystemManagers/AudioManager"]
+unique_name_in_owner = true
 stream = ExtResource("13_qvpbt")
 volume_db = -4.0
 autoplay = true
