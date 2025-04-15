@@ -180,7 +180,7 @@ func check_achievements(total_shifts_completed: int, total_runners_stopped: int,
 		Steam.setAchievement(ACHIEVEMENTS.SCORE_LEGEND)
 		
 	# Story completion
-	if current_story_state >= 13:
+	if current_story_state >= 11:
 		Steam.setAchievement(ACHIEVEMENTS.SAVIOR_OF_SPUD)
 
 # Update Steam stats
@@ -198,7 +198,6 @@ func update_steam_stats(total_shifts_completed: int, total_runners_stopped: int,
 func download_cloud_saves():
 	if not Steam.isSteamRunning():
 		return false
-		
 	var success = true
 	
 	if Steam.fileExists("gamestate.save"):

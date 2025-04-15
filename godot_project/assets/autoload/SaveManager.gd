@@ -32,9 +32,6 @@ signal load_completed(success: bool)
 # Save the current game state
 func save_game_state(data: Dictionary) -> bool:
 	# Remove difficulty_level if it's in the data
-	if data.has("difficulty_level"):
-		data.erase("difficulty_level")
-	
 	var save_file = FileAccess.open(GAMESTATE_SAVE_PATH, FileAccess.WRITE)
 	if save_file:
 		save_file.store_var(data)
@@ -73,10 +70,6 @@ func load_game_state() -> Dictionary:
 		if save_file:
 			data = save_file.get_var()
 			success = true
-			
-	# Remove difficulty from the loaded data to avoid overriding Config
-	if data.has("difficulty_level"):
-		data.erase("difficulty_level")
 			
 	load_completed.emit(success)
 	return data

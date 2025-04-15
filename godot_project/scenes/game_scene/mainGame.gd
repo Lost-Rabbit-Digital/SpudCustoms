@@ -1416,8 +1416,42 @@ func enable_controls():
 		ui_hint_system.set_all_hints_enabled(true)
 	
 		
+func stop_bus_sounds(bus_name: String):
+	# Get the bus index by name
+	var bus_idx = AudioServer.get_bus_index(bus_name)
+	
+	# Check if the bus exists
+	if bus_idx < 0:
+		push_warning("Audio bus '%s' not found" % bus_name)
+		return
+	
+	# Get all active audio players in the scene
+	var audio_players = get_tree().get_nodes_in_group("AudioPlayers")
+	if audio_players.is_empty():
+		# If no group is used, try to find all audio player nodes
+		audio_players = []
+		_find_audio_players(get_tree().root, audio_players)
+	
+	# Stop each audio player that's using the specified bus
+	for player in audio_players:
+		if player is AudioStreamPlayer or player is AudioStreamPlayer2D or player is AudioStreamPlayer3D:
+			if player.bus == bus_name:
+				player.stop()
+
+# Helper function to recursively find all audio player nodes
+func _find_audio_players(node: Node, result: Array):
+	if node is AudioStreamPlayer or node is AudioStreamPlayer2D or node is AudioStreamPlayer3D:
+		result.append(node)
+	
+	for child in node.get_children():
+		_find_audio_players(child, result)
+		
 # Update the _on_intro_dialogue_finished handler
 func _on_intro_dialogue_finished():
+		# Stop all sounds on the Ambient and Music buses
+	stop_bus_sounds("Ambient")
+	stop_bus_sounds("Music")
+	
 	# Enable all game systems
 	enable_controls()
 	is_game_paused = false
