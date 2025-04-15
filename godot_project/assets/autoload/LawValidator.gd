@@ -2,113 +2,113 @@ extends Node
 
 var LAW_CHECKS = {
 	# Condition-based rules
-	"All potatoes must be Fresh!": {
+	"[color=dark_goldenrod]All[/color] potatoes must be [color=dark_green]fresh[/color]!": {
 		"check": func(potato_info): return potato_info.condition != "Fresh",
 		"message": func(potato_info): return "Potato was %s but must be Fresh" % potato_info.condition
 	},
-	"Extra Eyes are suspicious, inspect carefully and reject.": {
+	"[color=dark_goldenrod]Extra Eyes[/color] are suspicious, inspect carefully and [color=dark_red]reject[/color].": {
 		"check": func(potato_info): return potato_info.condition == "Extra Eyes",
 		"message": func(potato_info): return "Potato had Extra Eyes which is forbidden"
 	},
-	"Rotten potatoes are strictly forbidden.": {
+	"[color=dark_goldenrod]Rotten[/color] potatoes are strictly [color=dark_red]forbidden[/color].": {
 		"check": func(potato_info): return potato_info.condition == "Rotten",
 		"message": func(potato_info): return "Rotten potatoes are not allowed"
 	},
-	"Sprouted potatoes must be denied.": {
+	"[color=dark_goldenrod]Sprouted[/color] potatoes must be [color=dark_red]denied[/color].": {
 		"check": func(potato_info): return potato_info.condition == "Sprouted",
 		"message": func(potato_info): return "Sprouted potatoes are not allowed"
 	},
-	"Dehydrated potatoes are not allowed today.": {
+	"[color=dark_goldenrod]Dehydrated[/color] potatoes are [color=dark_red]not allowed[/color] today.": {
 		"check": func(potato_info): return potato_info.condition == "Dehydrated",
 		"message": func(potato_info): return "Dehydrated potatoes are not allowed"
 	},
-	"Frozen potatoes are banned due to low temperatures.": {
+	"[color=dark_goldenrod]Frozen[/color] potatoes are [color=dark_red]banned[/color] due to low temperatures.": {
 		"check": func(potato_info): return potato_info.condition == "Frozen",
 		"message": func(potato_info): return "Frozen potatoes are not allowed without thawing"
 	},
 
 	# Age-based rules
-	"No potatoes over 5 years old.": {
+	"[color=dark_red]No[/color] potatoes over [color=dark_goldenrod]5 years old[/color].": {
 		"check": func(potato_info): return calculate_age(potato_info.date_of_birth) >= 5,
 		"message": func(potato_info): return "Potato is %d years old (max 5 years)" % calculate_age(potato_info.date_of_birth)
 	},
-	"Reject potatoes younger than 3 years old.": {
+	"[color=dark_red]Reject[/color] potatoes younger than [color=dark_goldenrod]3 years old[/color].": {
 		"check": func(potato_info): return calculate_age(potato_info.date_of_birth) <= 3,
 		"message": func(potato_info): return "Potato is %d years old (must be over 3)" % calculate_age(potato_info.date_of_birth)
 	},
-	"Potatoes under 2 years old are not allowed.": {
+	"Potatoes under [color=dark_goldenrod]2 years old[/color] are [color=dark_red]not[/color] allowed.": {
 		"check": func(potato_info): return calculate_age(potato_info.date_of_birth) <= 2,
 		"message": func(potato_info): return "Potatoes under 2 years old are banned"
 	},
 
 	# Gender-based rules
-	"Only male potatoes allowed today.": {
+	"Only [color=dark_goldenrod]male[/color] potatoes [color=dark_green]allowed[/color] today.": {
 		"check": func(potato_info): return potato_info.sex == "Female",
 		"message": func(potato_info): return "Only male potatoes allowed today"
 	},
-	"Female potatoes only, reject all males.": {
+	"[color=dark_goldenrod]Female[/color] potatoes only, [color=dark_red]reject[/color] all males.": {
 		"check": func(potato_info): return potato_info.sex == "Male",
 		"message": func(potato_info): return "Only female potatoes allowed today"
 	},
 
 	# Country-based rules
-	"Potatoes from Spudland must be denied.": {
+	"Potatoes from [color=dark_goldenrod]Spudland[/color] must be [color=dark_red]denied[/color].": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Spudland",
 		"message": func(potato_info): return "Spudland potatoes are not allowed"
 	},
-	"Potatopia citizens cannot enter under any circumstances.": {
+	"[color=dark_goldenrod]Potatopia[/color] citizens [color=dark_red]cannot[/color] enter for any reason.": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Potatopia",
 		"message": func(potato_info): return "Potatopia citizens are not allowed"
 	},
-	"Tuberstan potatoes suspected of concealing arms.": {
+	"[color=dark_goldenrod]Tuberstan[/color] potatoes suspected of [color=dark_red]concealing arms[/color].": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Tuberstan",
 		"message": func(potato_info): return "Tuberstan potatoes are currently restricted"
 	},
-	"North Yamnea is currently restricted due to radioactive taters.": {
+	"[color=dark_goldenrod]North Yamnea[/color] is currently restricted due to [color=dark_red]radioactive taters[/color].": {
 		"check": func(potato_info): return potato_info.country_of_issue == "North Yamnea",
 		"message": func(potato_info): return "North Yamnea potatoes are restricted (radioactive)"
 	},
-	"Reject Spuddington potatoes because of counterfeiting activity.": {
+	"[color=dark_goldenrod]Spuddington[/color] potatoes are [color=dark_red]counterfeiting[/color] documents.": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Spuddington",
 		"message": func(potato_info): return "Spuddington potatoes restricted (counterfeiting)"
 	},
-	"Tatcross citizens get ABSOLUTELY NO entry processing.": {
+	"[color=dark_goldenrod]Tatcross[/color] citizens get [color=dark_red]ABSOLUTELY NO[/color] entry processing.": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Tatcross",
 		"message": func(potato_info): return "Tatcross citizens are not allowed"
 	},
-	"Mash Meadows potatoes are subject to quarantine, reject!": {
+	"[color=dark_goldenrod]Mash Meadows[/color] potatoes are [color=dark_red]banned[/color] due to quarantine!": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Mash Meadows",
 		"message": func(potato_info): return "Mash Meadows under quarantine"
 	},
-	"Tuberville potatoes subject to absolute rejection.": {
+	"[color=dark_goldenrod]Tuberville[/color] potatoes subject to [color=dark_red]absolute rejection[/color].": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Tuberville",
 		"message": func(potato_info): return "Tuberville potatoes are not allowed"
 	},
-	"Chip Hill exports are currently restricted.": {
+	"[color=dark_goldenrod]Chip Hill[/color] exports are currently [color=dark_red]restricted[/color].": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Chip Hill",
 		"message": func(potato_info): return "Chip Hill exports are restricted"
 	},
-	"Murphyland potatoes are banned from the economy. Reject!": {
+	"[color=dark_goldenrod]Murphyland[/color] potatoes are [color=dark_red]banned[/color] from the economy!": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Murphyland",
 		"message": func(potato_info): return "Murphyland potatoes are banned"
 	},
-	"Colcannon citizens must be rejected due to seasonings.": {
+	"[color=dark_goldenrod]Colcannon[/color] citizens must be [color=dark_red]rejected[/color] due to plague.": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Colcannon",
 		"message": func(potato_info): return "Colcannon citizens are not allowed"
 	},
-	"Pratie Point potatoes require rejection on agricultural grounds.": {
+	"[color=dark_goldenrod]Pratie Point[/color] potatoes require [color=dark_red]rejection[/color] due to agricultural differences.": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Pratie Point",
 		"message": func(potato_info): return "Pratie Point potatoes not allowed"
 	},
-	"Purple Majesty potatoes forbidden.": {
+	"[color=dark_goldenrod]Purple Majesty[/color] potatoes [color=dark_red]forbidden[/color].": {
 		"check": func(potato_info): return potato_info.race == "Purple Majesty",
 		"message": func(potato_info): return "Purple Majesty potatoes are not allowed."
 	},
-	"Sweet Potatoes need special paperwork.": {
+	"[color=dark_goldenrod]Sweet Potatoes[/color] need [color=dark_goldenrod]special paperwork[/color].": {
 		"check": func(potato_info): return potato_info.race == "Sweet Potato",
 		"message": func(potato_info): return "Sweet Potatoes require Form T-43."
 	},
-	"Yukon Gold potatoes must be fresh.": {
+	"[color=dark_goldenrod]Yukon Gold[/color] potatoes must be [color=dark_green]fresh[/color].": {
 		"check": func(potato_info): return potato_info.race != "Yukon Gold" or potato_info.condition == "Fresh",
 		"message": func(potato_info): return "Yukon Gold potatoes must be fresh."
 	},
