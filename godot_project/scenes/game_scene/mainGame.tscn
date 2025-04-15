@@ -527,6 +527,7 @@ scale = Vector2(0.413016, 0.413016)
 
 [node name="GivePromptBubbleDialogueBox" parent="Gameplay/InteractiveElements/Passport/ClosedPassport" instance=ExtResource("36_ccap0")]
 unique_name_in_owner = true
+visible = false
 position = Vector2(357.294, -256.302)
 rotation = 0.137881
 scale = Vector2(2.42121, 2.42121)

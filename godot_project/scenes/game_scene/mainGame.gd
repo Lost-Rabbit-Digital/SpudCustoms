@@ -655,7 +655,6 @@ func megaphone_clicked():
 		# Only raise the shutter on the first megaphone click of the shift
 		megaphone_dialogue_box.set_random_message_from_category("spud_being_called")
 		is_potato_in_office = true
-		megaphone_dialogue_box.visible = true
 		
 		# Use the potato info directly from the potato object instead of generating new info
 		current_potato_info = potato.get_potato_info()
