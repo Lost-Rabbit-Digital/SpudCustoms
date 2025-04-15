@@ -6,15 +6,6 @@ class_name BubbleDialogueBox
 # File path to your JSON file
 const MESSAGES_FILE = "res://scripts/systems/bubble_dialogue/bubble_dialogue_messages.json"
 
-# Message categories
-enum MessageCategory {
-	SPUD_BEING_CALLED,
-	SPUD_IN_OFFICE,
-	WARNINGS,
-	MISC,
-	DOCUMENT_INTERACTION,
-}
-
 # Store loaded messages
 var messages = {
 	"spud_being_called": [],
@@ -38,9 +29,6 @@ func _ready():
 	# Load messages from JSON
 	load_messages()
 	
-	# Set initial random message
-	set_random_message()
-
 func load_messages():
 	# Check if file exists
 	if not FileAccess.file_exists(MESSAGES_FILE):
@@ -100,28 +88,6 @@ func set_random_message_from_category(category_str: String) -> void:
 		bubble_text.text = category_messages[random_index]
 	else:
 		bubble_text.text = "No messages available."
-
-# Set a completely random message from any category
-func set_random_message() -> void:
-	# Get all categories that have messages
-	var available_categories = []
-
-	self.visible = true
-	
-	play_random_officer_sound()
-
-	# Check each category and add its string key if it has messages
-	for category_key in messages.keys():
-		if messages[category_key].size() > 0:
-			available_categories.append(category_key)
-	
-	# Select a random category and set a message from it
-	if available_categories.size() > 0:
-		var random_category = available_categories[randi() % available_categories.size()]
-		set_random_message_from_category(random_category)
-	else:
-		bubble_text.text = "No messages available."
-
 
 func play_random_officer_sound():
 	# Play potato customs officer sound
