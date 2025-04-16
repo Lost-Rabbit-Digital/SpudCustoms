@@ -4,31 +4,30 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 
 
 ## Stretch Goals
+- Office Shutter: Lever does not have SFX
 
+## Interaction
+- Dialogic / Bug: You can launch missiles while in the tutorial scene
 
 ## Audio
 
-
 ## Graphics
+- Dialogic / QoL: Dialogic scenes should fade in and out to the next scene
+- LawReceipt: Use BBCode to display the important elements of laws
+- QoL: Font of shift summary screen is improperly sized, scaling issues
+- QoL: Font of dialogic dialogue boxes is improperly sized, scaling issues
 
+## Mugshot Generator System
+- Mugshot Generator / Bug: Potatoes go over the inspection desk when accepted
 
-## Queue Interaction System
+## Runner System
+- Runners: If a runner is currently emoting when they begin a run, it seems to spawn two emotes
 
-
-## Drag and Drop Manager
-
-
-## Emote System
-
-
-## Office Shutter System
-
-
-## Cursor Manager
-
-
-## Megaphone Dialogue System
-
+## Drag and Drop System
+- DaDS / Bug: LawReceipt does not close when dragged off inspection table
+- DaDS / Bug: When dropping a passport onto the inspection table, it appears behind the LawReceipt
+- DaDS / Bug: You can drag the documents through the stamps, stamps should block interaction
+- DaDS / Bug: If passport is dragged when shift ends, the passport appears above the fade
 
 ## Code Loopholes (Bugs)
 

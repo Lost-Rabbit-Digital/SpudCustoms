@@ -199,3 +199,4 @@ Art fixes:
 - Environment: Cars passing by
 - Make sure that stamp consistently marks the same spot on the document, NOT based on where the player clicks on the stamp
 - Emote System / Bug: When potatoes are clicked it only displays love emotes, could be set to display HAPPY category
+- DaDS / Bug: When you drag a document to close it, it does not center on the mouse 

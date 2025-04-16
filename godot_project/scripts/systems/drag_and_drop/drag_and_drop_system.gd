@@ -143,25 +143,6 @@ func register_draggable_items(items: Array):
 		else:
 			push_warning("Invalid draggable item provided")
 
-## Registers a single item as draggable.
-##
-## Sets initial z-index for the item if not already set.
-## @param item The Node2D instance to register as draggable.
-func register_draggable_item(item: Node2D):
-	if is_instance_valid(item):
-		draggable_items.append(item)
-		if item.z_index == 0:  # Only set if not already set
-			item.z_index = PASSPORT_Z_INDEX
-	else:
-		push_warning("Invalid draggable item provided")
-		
-## Removes a draggable item from the registry.
-##
-## @param item The Node2D instance to unregister.
-func unregister_draggable_item(item: Node2D):
-	if item in draggable_items:
-		draggable_items.erase(item)
-
 # TODO: Update this to work with input interactions instead of MOUSE_BUTTONS
 ## Handles input events for drag and drop interaction.
 ##
@@ -247,6 +228,7 @@ func _handle_mouse_press(mouse_position: Vector2) -> bool:
 		if dragged_item:
 			# Reset document_was_closed flag for new drag
 			is_document_closed = false
+	
 			
 			# Store original z-index and set to higher value while dragging
 			#original_z_index = dragged_item.z_index
@@ -255,10 +237,9 @@ func _handle_mouse_press(mouse_position: Vector2) -> bool:
 			
 			# Get current drop zone
 			var current_zone = identify_drop_zone(mouse_position)
-			
-			# Calculate drag offset - from mouse to item position
+
 			drag_offset = dragged_item.global_position - mouse_position
-			
+
 			# Get document controller and call on_drag_start if available
 			var doc_controller = get_document_controller(dragged_item)
 			if doc_controller:
@@ -269,11 +250,12 @@ func _handle_mouse_press(mouse_position: Vector2) -> bool:
 				emit_signal("item_closed", dragged_item)
 			
 			emit_signal("item_dragged", dragged_item)
-			
+
 			# Update cursor to "grab" when starting to drag
 			if cursor_manager:
 				cursor_manager.update_cursor("grab")
-				
+			
+
 			return true
 	return false
 
@@ -435,6 +417,9 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 ## @param mouse_pos The current mouse position in global coordinates.
 func _update_dragged_item_position(mouse_pos: Vector2):
 	if dragged_item:
+		# TODO: If the document is open, use the offset, if the document is closed, center
+
+		
 		# Store previous position
 		var previous_position = dragged_item.global_position
 		var drop_zone = identify_drop_zone(mouse_pos)
@@ -443,7 +428,12 @@ func _update_dragged_item_position(mouse_pos: Vector2):
 		var target_zone = identify_drop_zone(mouse_pos + drag_offset)
 		
 		# Update position using the drag_offset
-		dragged_item.global_position = mouse_pos + drag_offset
+		if drop_zone == "inspection_table" and !is_document_closed:
+			# Calculate drag offset - from mouse to item position
+			dragged_item.global_position = mouse_pos + drag_offset
+		else:
+			# Center item to cursor when closed
+			dragged_item.position = get_viewport().get_mouse_position()
 		
 		# If document was on table but no longer is, close it (only once)
 		if drop_zone != "inspection_table" and !is_document_closed and is_openable_document(dragged_item):
