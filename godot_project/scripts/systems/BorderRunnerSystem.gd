@@ -1,6 +1,8 @@
-extends Node2D
-## Manages the spawning of runners, missile targeting, and giblet effects when potatoes are destroyed
 class_name BorderRunnerSystem
+extends Node2D
+## Manages the spawning of runners, missile targeting,
+## and giblet effects when potatoes are destroyed
+
 signal game_over_triggered
 
 @export_group("Debugging")
@@ -76,18 +78,6 @@ signal game_over_triggered
 @export var gib_spin_speed: float = 13
 # Audio/Visual node references
 
-@onready var alarm_sound = $AlarmSound
-@onready var explosion_sound = $ExplosionSound
-@onready var missile_sound = $MissileSound
-@onready var explosion_vfx = $ExplosionVFX
-@onready var missile_sprite = $MissileSprite
-@onready var smoke_particles = $MissileSprite/CPUParticles2D
-@onready var shift_stats = ShiftStats.new()
-
-@onready var missile_frames: SpriteFrames
-@onready var smoke_frames: SpriteFrames
-@onready var explosion_frames: SpriteFrames
-
 var smoke_particle_pool = []
 var max_smoke_particles = 50
 
@@ -108,6 +98,18 @@ var missile_cooldown_timer: float = 0.0
 var gib_textures: Array = []
 var difficulty_level
 
+
+@onready var alarm_sound = $AlarmSound
+@onready var explosion_sound = $ExplosionSound
+@onready var missile_sound = $MissileSound
+@onready var explosion_vfx = $ExplosionVFX
+@onready var missile_sprite = $MissileSprite
+@onready var smoke_particles = $MissileSprite/CPUParticles2D
+@onready var shift_stats = ShiftStats.new()
+
+@onready var missile_frames: SpriteFrames
+@onready var smoke_frames: SpriteFrames
+@onready var explosion_frames: SpriteFrames
 
 class Missile:
 	var sprite: AnimatedSprite2D
@@ -173,20 +175,20 @@ func _ready():
 	var explosion_frames = SpriteFrames.new()
 
 	# Load the frames for explosion
-	var explosion_texture = preload("res://assets/effects/explosion_spritesheet_1.png")
+	var ExplosionTexture = preload("res://assets/effects/explosion_spritesheet_1.png")
 	var explosion_hframes = 26  # Adjust based on the actual spritesheet
 	var explosion_vframes = 1
 
 	# Add animation frames for explosion
 	for i in range(explosion_hframes):
 		var region = Rect2(
-			i * explosion_texture.get_width() / explosion_hframes,
+			i * ExplosionTexture.get_width() / explosion_hframes,
 			0,
-			explosion_texture.get_width() / explosion_hframes,
-			explosion_texture.get_height()
+			ExplosionTexture.get_width() / explosion_hframes,
+			ExplosionTexture.get_height()
 		)
 		var frame = AtlasTexture.new()
-		frame.atlas = explosion_texture
+		frame.atlas = ExplosionTexture
 		frame.region = region
 		explosion_frames.add_frame("default", frame)
 

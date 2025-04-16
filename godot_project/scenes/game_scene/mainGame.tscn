@@ -428,7 +428,6 @@ script = ExtResource("20_5djk1")
 unique_name_in_owner = true
 z_index = 1
 position = Vector2(-16, 0)
-rapid_runners = true
 queue_manager = NodePath("../QueueManager")
 score_label = NodePath("../../UI/Labels/ScoreLabel")
 strike_label = NodePath("../../UI/Labels/StrikesLabel")
@@ -725,7 +724,7 @@ unique_name_in_owner = true
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Megaphone/MegaphoneInteractionButton" to="." method="_on_megaphone_interaction_button_pressed"]
