@@ -80,6 +80,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Test leaderboards for each shift and difficulty
 - Test Shift 6 - 11 and see if end credits trigger
 - Playtest: Beat Story mode, and test each of the 4 endings
+- Remake Score Attack mode and score at least 25 potatoes
 
 ### Menus
 - Add a confirmation for resetting story progress (not highscores) to New Game
@@ -117,6 +118,28 @@ These are our goals, to-do tasks, and completed tasks.
 - Z-Index Bug: Potato footsteps appear above the customs office
 - Z-Index Bug: Potato gibs appear below the screen borders
 
+
+### Gameplay
+- Add a check for winning the day, if the border runner is actively happening wait for it to finish before ending the shift
+- Add a condition for if the player skips the final narrative so that the end credits are still signalled 
+- Add score attack mode back in by inheriting mainGame and overriding scoring rules
+- Make the score attack button on main_menu_with_animations load the appropriate score attack mode scene similar to main_game_ui.tscn
+- Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
+- Demo: Create demo version of game without Score Attack mode, only shift 0, 1, and 2
+- Disable ability to skip final cutscene? 
+- Need to update support for combo multipliers with perfect stamps
+- Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
+- Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
+- When shift ends, treat the last guy in office as rejected
+
+### Audio
+
+### Backend
+- Megaphone Dialogue System: Implement the different categories of dialogue from the JSON file into the megaphone_clicked function code in mainGame.gd
+
+### General Bugs
+- Potatoes appear above table instead of under when border runner leaves map on south side
+
 ### Art
 - loyalist_outcome, too human
 - night attack, human man in background
@@ -128,27 +151,6 @@ These are our goals, to-do tasks, and completed tasks.
 - resistance_planning, emblems should be potatoes, potatoes should not have armor, leader should look more like old white mustache russet potato
 - security_lockdown, washed out
 - victory_scene, fucked up faces
-
-### Gameplay
-- Add a check for winning the day, if the border runner is actively happening wait for it to finish before ending the shift
-- Add a condition for if the player skips the final narrative so that the end credits are still signalled 
-- Add score attack mode back in by inheriting mainGame and overriding scoring rules
-- Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
-- Demo: Create demo version of game without Score Attack mode, only shift 0, 1, and 2
-- Disable ability to skip final cutscene? 
-- Need to update support for combo multipliers with perfect stamps
-- Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
-- Remake Score Attack mode and score at least 25 potatoes
-- Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
-- When shift ends, treat the last guy in office as rejected
-
-### Audio
-
-### Backend
-- Megaphone Dialogue System: Implement the different categories of dialogue from the JSON file into the megaphone_clicked function code in mainGame.gd
-
-### General Bugs
-- Potatoes appear above table instead of under when border runner leaves map on south side
 
 ### Credits
 
