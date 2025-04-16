@@ -59,7 +59,10 @@ static func create_passport_stampable(
 		# Calculate the stamp area based on the passport's global position and size
 		# From your screenshot, I can see the visa area is roughly centered and takes up
 		# about 60% of the width and 70% of the height
-		var passport_rect = Rect2(passport_node.global_position, Vector2(600, 300))  # Approximate size based on your screenshot
+		var passport_rect = Rect2(
+			passport_node.global_position,
+			Vector2(passport_node.texture.get_width(), passport_node.texture.get_height())
+		)
 
 		# Target the red highlighted visa area from your screenshot
 		var visa_area = Rect2(
@@ -78,7 +81,8 @@ static func create_passport_stampable(
 		)
 
 		return stampable
-	else:
+
+	if document_sprite:
 		# If we found a sprite, use its dimensions
 		var sprite_global_rect = Rect2(
 			(
@@ -106,6 +110,8 @@ static func create_passport_stampable(
 		)
 
 		return stampable
+
+	return
 
 
 # Connect the stamp system to the stamp bar controller

@@ -1,10 +1,10 @@
+class_name DocumentFactory
 extends Node
 ## Factory responsible for creating and configuring different types of draggable documents.
 ##
 ## This factory class contains static methods that handle the creation of different
 ## document types used in the game, such as passports and receipts.
 ## Each method configures document properties and attaches necessary nodes.
-class_name DocumentFactory
 
 
 ## Creates and configures a Passport document instance.

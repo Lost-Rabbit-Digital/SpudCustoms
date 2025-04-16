@@ -1,10 +1,10 @@
+class_name DragAndDropManager
 extends Node
 ## Manager class for the drag and drop interaction system.
 ##
 ## Serves as a coordinator between various document controllers and the core
 ## drag and drop system. Handles high-level operations like opening and
 ## closing documents, as well as initializing the system components.
-class_name DragAndDropManager
 
 # Systems
 ## Reference to the core drag and drop system implementation.
@@ -185,11 +185,9 @@ func _on_item_closed(item: Node2D):
 ##
 ## @param item The node that was dropped.
 ## @param drop_zone The zone where the item was dropped.
-func _on_item_dropped(item: Node2D, drop_zone: String):
+func _on_item_dropped(item: Node2D, _drop_zone: String):
 	item.z_index = drag_system.DEFAULT_Z_INDEX
 	# Additional processing can be added here if needed
-	pass
-
 
 ## Sets the stamp system manager reference.
 ##

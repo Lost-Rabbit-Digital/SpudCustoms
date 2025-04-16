@@ -1,14 +1,10 @@
+class_name DraggableDocument
 extends Node2D
 ## Controller for individual draggable document instances.
 ##
 ## Manages the state and appearance of a document, including its open/close
 ## state, content visibility, and animations. Handles document-specific
 ## behavior when interacting with the drag and drop system.
-class_name DraggableDocument
-
-# States
-## Flag indicating if the document is currently open.
-var is_open = false
 
 # Document textures
 ## Texture displayed when the document is closed.
@@ -31,6 +27,10 @@ var is_open = false
 # References
 ## Reference to the sprite that represents the document visually.
 var document_sprite: Sprite2D
+
+# States
+## Flag indicating if the document is currently open.
+var is_open = false
 
 
 ## Called when the node is added to the scene.

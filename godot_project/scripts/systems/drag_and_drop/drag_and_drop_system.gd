@@ -1,10 +1,10 @@
+class_name DragAndDropSystem
 extends Node
 ## Core system for handling drag and drop interactions.
 ##
 ## Manages the low-level drag and drop functionality including item selection,
 ## mouse movement tracking, drop zone identification, and visual feedback.
 ## Handles physics and animation aspects of the drag and drop interaction.
-class_name DragAndDropSystem
 
 # Signals
 ## Emitted when an item starts being dragged.
@@ -44,6 +44,16 @@ const RETURN_TWEEN_DURATION = 0.3
 ## Buffer distance in pixels from table edge when determining valid drop positions.
 const TABLE_EDGE_BUFFER = 16
 
+# Cursor Manager reference
+## Reference to the cursor manager for handling cursor changes.
+var cursor_manager = null
+
+# Office Shutter reference
+var office_shutter: Node = null
+
+## Reference to the stamp system manager for handling document stamping.
+var stamp_system_manager: StampSystemManager
+
 # State tracking
 ## Array of Node2D instances that can be dragged.
 var draggable_items = []
@@ -76,6 +86,7 @@ var suspect: Node2D
 # Sound state tracking
 ## Flag to track if close sound has already been played to prevent duplicates.
 var close_sound_played = false
+var block_sound_played = false
 
 ## Flag to track if open sound has already been played to prevent duplicates.
 var open_sound_played = false
@@ -87,16 +98,6 @@ var audio_player: AudioStreamPlayer2D
 # Stamp System
 ## Reference to the stamp bar controller for stamp button interaction.
 var _stamp_bar_controller = null
-
-## Reference to the stamp system manager for handling document stamping.
-var stamp_system_manager: StampSystemManager
-
-# Cursor Manager reference
-## Reference to the cursor manager for handling cursor changes.
-var cursor_manager = null
-
-# Office Shutter reference
-var office_shutter: Node = null
 
 
 ## Initializes the drag and drop system with necessary references.
@@ -186,7 +187,8 @@ func _handle_mouse_motion(mouse_pos: Vector2) -> void:
 	# Find item under cursor
 	var item_under_cursor = find_topmost_item_at(mouse_pos)
 
-	# If the shutter is closed and we're over the suspect panel or suspect area, don't show hover effects
+	# If the shutter is closed and we're over the suspect panel or suspect area,
+	# don't show hover effects
 	var is_over_suspect_area = (
 		identify_drop_zone(mouse_pos) == "suspect"
 		or identify_drop_zone(mouse_pos) == "suspect_panel"
@@ -338,14 +340,7 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 				doc_controller.close()
 
 			# Maybe play a "blocked" sound effect
-			if audio_player:
-				audio_player.stream = preload(
-					"res://assets/audio/passport_sfx/close_passport_audio.mp3"
-				)
-				# Random pitch variation for document close sound
-				audio_player.pitch_scale = randf_range(0.9, 1.2)
-
-				audio_player.play()
+			play_block_sound()
 
 			# Return to table
 			_return_item_to_table(dragged_item)
@@ -369,13 +364,7 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 				doc_controller.close()
 
 			# Maybe play a "blocked" sound effect
-			if audio_player:
-				audio_player.stream = preload(
-					"res://assets/audio/passport_sfx/close_passport_audio.mp3"
-				)
-				# Random pitch variation for document close sound
-				audio_player.pitch_scale = randf_range(0.9, 1.2)
-				audio_player.play()
+			play_block_sound()
 
 			# Return to table
 			_return_item_to_table(dragged_item)
@@ -578,11 +567,7 @@ func _return_item_to_table(item: Node2D):
 	)
 
 	# Play a return sound
-	if audio_player:
-		audio_player.stream = preload("res://assets/audio/passport_sfx/close_passport_audio.mp3")
-		# Random pitch variation for document close sound
-		audio_player.pitch_scale = randf_range(0.9, 1.2)
-		audio_player.play()
+	play_close_sound()
 
 
 ## Gets the size of a node, handling different node types.
@@ -677,11 +662,11 @@ func get_stamp_bar_controller() -> Node:
 
 	return null
 
-
 ## Identifies what drop zone the position is over.
 ##
 ## @param pos The global position to check.
-## @return A string identifying the drop zone ("inspection_table", "suspect_panel", "suspect", or "none").
+## @return A string identifying the drop zone
+## ("inspection_table", "suspect_panel", "suspect", or "none").
 func identify_drop_zone(pos: Vector2) -> String:
 	if inspection_table and inspection_table.get_rect().has_point(inspection_table.to_local(pos)):
 		return "inspection_table"
@@ -769,6 +754,7 @@ func play_open_sound():
 		audio_player.play()
 		open_sound_played = true
 		close_sound_played = false
+		block_sound_played = false
 
 
 ## Plays the close document sound.
@@ -782,6 +768,19 @@ func play_close_sound():
 		audio_player.play()
 		close_sound_played = true
 		open_sound_played = false
+		block_sound_played = false
+
+
+## Plays the close document sound.
+##
+## Prevents duplicate sound playing by tracking sound state.
+func play_block_sound():
+	if not block_sound_played and audio_player:
+		audio_player.stream = preload("res://assets/audio/passport_sfx/block_passport_audio.mp3")
+		# Random pitch variation for document close sound
+		audio_player.pitch_scale = randf_range(0.9, 1.2)
+		audio_player.play()
+		block_sound_played = true
 
 
 ## Resets sound playback state flags.
