@@ -1,0 +1,47 @@
+[gd_scene load_steps=9 format=3 uid="uid://08dec8ywovip"]
+
+[ext_resource type="Texture2D" uid="uid://dcfklo4y50yju" path="res://assets/potatoes/motorcycle_potato.png" id="1_mg4s8"]
+[ext_resource type="Texture2D" uid="uid://dlhy3hhjkva8" path="res://assets/potatoes/motorcycle_potato_normal.png" id="2_xnpe0"]
+[ext_resource type="Texture2D" uid="uid://ciipclll6unja" path="res://assets/potatoes/motorcycle_potato_normal_robo.png" id="3_wsr8y"]
+[ext_resource type="Texture2D" uid="uid://brnjn2w4wr0hu" path="res://assets/potatoes/motorcycle_potato_normal_smart_normap.png" id="4_w1osb"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_y8cdk"]
+diffuse_texture = ExtResource("1_mg4s8")
+normal_texture = ExtResource("2_xnpe0")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_avebk"]
+diffuse_texture = ExtResource("1_mg4s8")
+normal_texture = ExtResource("3_wsr8y")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_d2gnb"]
+diffuse_texture = ExtResource("1_mg4s8")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ryu40"]
+diffuse_texture = ExtResource("1_mg4s8")
+normal_texture = ExtResource("4_w1osb")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(425, 221)
+rotation = 3.10217
+texture = SubResource("CanvasTexture_y8cdk")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(302, 221)
+rotation = -3.10257
+texture = SubResource("CanvasTexture_avebk")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(487, 220)
+rotation = 3.08338
+texture = SubResource("CanvasTexture_d2gnb")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(361, 220)
+rotation = -3.14496
+texture = SubResource("CanvasTexture_ryu40")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.661864, 0.459961, 0.739738, 1)
+energy = 9.97
