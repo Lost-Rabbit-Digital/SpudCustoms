@@ -231,13 +231,10 @@ func _connect_signals():
 	
 	# System signals
 	drag_and_drop_manager.drag_system.passport_returned.connect(_on_passport_returned)
-	stamp_system_manager.stamp_decision_made.connect(_on_stamp_decision_made)
 	Global.score_updated.connect(_on_score_updated)
 	border_runner_system.game_over_triggered.connect(_on_game_over)
 	
 	# UI signals
-	$Gameplay/InteractiveElements/Megaphone/MegaphoneInteractionButton.pressed.connect(_on_megaphone_interaction_button_pressed)
-	ui_hint_system.hint_activated.connect(_on_hint_activated)
 	ui_hint_system.hint_deactivated.connect(_on_hint_deactivated)
 	
 	# Dialogic signals

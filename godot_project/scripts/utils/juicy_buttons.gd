@@ -155,13 +155,6 @@ func setup_hover(button: Control, config: Dictionary = {}) -> void:
 	# Store the original position on the button as metadata
 	button.set_meta("original_position", button.position)
 
-	# Set up the hover effect
-	button.mouse_entered.connect(_on_button_mouse_entered.bind(button, hover_defaults))
-
-	# Set up the exit effect
-	button.mouse_exited.connect(_on_button_mouse_exited.bind(button))
-
-
 ## Handle mouse enter animation and floating effect
 func _on_button_mouse_entered(button: Control, hover_defaults: Dictionary) -> void:
 	# Ensure the button scales from its center
@@ -304,9 +297,6 @@ func enhance_all_buttons(
 		if child is BaseButton:
 			# Add hover effects
 			setup_hover(child, hover_config)
-
-			# Add click effects by connecting to pressed signal
-			child.pressed.connect(_on_button_pressed.bind(child, click_config))
 
 		# Recursively process children of this node
 		if child.get_child_count() > 0:
