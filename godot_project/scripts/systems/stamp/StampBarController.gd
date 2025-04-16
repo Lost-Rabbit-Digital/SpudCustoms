@@ -1,6 +1,5 @@
-# StampBarController.gd
-extends Node2D
 class_name StampBarController
+extends Node2D
 
 # References to other nodes
 @onready var passport: Sprite2D = $"../Passport"
@@ -15,8 +14,8 @@ class_name StampBarController
 @onready var start_node = $StartNode
 @onready var end_node = $EndNode
 
-@export var stamp_point_offset: Vector2 = Vector2(0, 80)  # Offset below the stamp bar
 @onready var stamp_point_marker: Sprite2D
+@export var stamp_point_offset: Vector2 = Vector2(0, 80)  # Offset below the stamp bar
 
 # Stamp textures
 var stamp_textures = {
@@ -60,10 +59,10 @@ signal stamp_animation_completed(stamp_type)
 func _ready():
 	if not passport:
 		push_error("Passport reference not set in StampBarController!")
-	
+
 	if not stats_manager:
 		push_error("StatsManager reference not set in StampBarController!")
-	
+
 	# Initialize textures from the actual buttons
 	stamp_textures["approve"] = approval_stamp.texture_normal
 	stamp_textures["reject"] = rejection_stamp.texture_normal
@@ -91,7 +90,8 @@ func _ready():
 	toggle_position_button.visible = true
 	# Create a visual indicator for the stamp point (only visible in debug)
 	stamp_point_marker = Sprite2D.new()
-	stamp_point_marker.texture = preload("res://assets/stamps/stamp_point_marker.png")  # Create this small texture
+	# Create this small texture
+	stamp_point_marker.texture = preload("res://assets/stamps/stamp_point_marker.png")
 	stamp_point_marker.position = stamp_point_offset
 	stamp_point_marker.scale = Vector2(0.5, 0.5)
 	
@@ -384,8 +384,7 @@ func create_final_stamp(stamp_type: String, pos: Vector2):
 	
 	# Fade in the stamp
 	var tween = create_tween()
-	tween.tween_property(final_stamp, "modulate:a", 1.0, 0.1)\
-		 .set_delay(STAMP_ANIM_DURATION/2)
+	tween.tween_property(final_stamp, "modulate:a", 1.0, 0.1).set_delay(STAMP_ANIM_DURATION/2)
 
 func _on_toggle_position_button_mouse_entered() -> void:
 	pass
