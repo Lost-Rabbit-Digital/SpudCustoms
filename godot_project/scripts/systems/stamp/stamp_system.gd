@@ -330,10 +330,12 @@ func play_random_stamp_sound():
 	else:
 		push_warning("STAMP SYSTEM: NO AUDIO SETUP FOR STAMPS")
 
+
 # Signal handlers
 func _on_document_stamped(stamp: StampComponent):
 	# Do additional processing here if needed
 	pass
+
 
 func _on_stamp_applied(stamp: StampComponent, is_perfect: bool):
 	emit_signal("stamp_applied", stamp, stamp.applied_to, is_perfect)
