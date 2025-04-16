@@ -8,11 +8,12 @@ signal level_loaded
 signal levels_finished
 
 ## Container where the level instance will be added.
-@export var level_container : Node
+@export var level_container: Node
 
-var current_level : Node
+var current_level: Node
 
-func get_level_file(level_id : int):
+
+func get_level_file(level_id: int):
 	if files.is_empty():
 		push_error("levels list is empty")
 		return
@@ -21,13 +22,15 @@ func get_level_file(level_id : int):
 		level_id = files.size() - 1
 	return files[level_id]
 
-func _attach_level(level_resource : Resource):
+
+func _attach_level(level_resource: Resource):
 	assert(level_container != null, "level_container is null")
 	var instance = level_resource.instantiate()
 	level_container.call_deferred("add_child", instance)
 	return instance
 
-func load_level(level_id : int):
+
+func load_level(level_id: int):
 	if is_instance_valid(current_level):
 		current_level.queue_free()
 		await current_level.tree_exited
@@ -41,6 +44,7 @@ func load_level(level_id : int):
 	await SceneLoader.scene_loaded
 	current_level = _attach_level(SceneLoader.get_resource())
 	level_loaded.emit()
+
 
 func _ready():
 	if Engine.is_editor_hint():

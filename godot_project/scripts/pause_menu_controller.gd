@@ -3,8 +3,9 @@ extends Node
 
 ## Node for opening a pause menu when detecting a 'ui_cancel' event.
 
-@export var pause_menu_packed : PackedScene
-@export var focused_viewport : Viewport
+@export var pause_menu_packed: PackedScene
+@export var focused_viewport: Viewport
+
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):

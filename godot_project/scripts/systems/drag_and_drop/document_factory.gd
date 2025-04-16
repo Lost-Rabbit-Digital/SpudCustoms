@@ -6,6 +6,7 @@ extends Node
 ## Each method configures document properties and attaches necessary nodes.
 class_name DocumentFactory
 
+
 ## Creates and configures a Passport document instance.
 ##
 ## Locates necessary nodes in the scene tree, creates a DraggableDocument instance,
@@ -15,22 +16,25 @@ class_name DocumentFactory
 static func create_passport(parent_node: Node) -> DraggableDocument:
 	var document = DraggableDocument.new()
 	document.name = "DocumentController"
-	
+
 	# Get references to needed nodes
 	var passport_sprite = parent_node.get_node_or_null("Gameplay/InteractiveElements/Passport")
 	if not passport_sprite:
 		push_error("Passport sprite not found!")
 		return null
-	
+
 	passport_sprite.add_child(document)
-	
+
 	# Configure the document
-	document.closed_texture = preload("res://assets/documents/closed_passport_small/closed_passport_small.png")
+	document.closed_texture = preload(
+		"res://assets/documents/closed_passport_small/closed_passport_small.png"
+	)
 	document.open_texture = preload("res://assets/documents/passport_old.png")
 	document.closed_content_node = passport_sprite.get_node_or_null("ClosedPassport")
 	document.open_content_node = passport_sprite.get_node_or_null("OpenPassport")
-	
+
 	return document
+
 
 ## Creates and configures a LawReceipt document instance.
 ##
@@ -41,20 +45,20 @@ static func create_passport(parent_node: Node) -> DraggableDocument:
 static func create_law_receipt(parent_node: Node) -> DraggableDocument:
 	var document = DraggableDocument.new()
 	document.name = "DocumentController"
-	
+
 	# Get references to needed nodes
 	var receipt_sprite = parent_node.get_node_or_null("Gameplay/InteractiveElements/LawReceipt")
 	if not receipt_sprite:
 		push_error("LawReceipt sprite not found!")
 		return null
-	
+
 	receipt_sprite.add_child(document)
-	
+
 	# Configure the document
 	# You'll need to update these paths to match your actual assets
 	document.closed_texture = preload("res://assets/documents/laws_receipt_small.png")
 	document.open_texture = preload("res://assets/documents/laws_receipt.png")
-	document.closed_content_node = receipt_sprite.get_node_or_null("ClosedReceipt") 
+	document.closed_content_node = receipt_sprite.get_node_or_null("ClosedReceipt")
 	document.open_content_node = receipt_sprite.get_node_or_null("OpenReceipt")
-	
+
 	return document

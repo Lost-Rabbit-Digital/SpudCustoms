@@ -98,7 +98,6 @@ var missile_cooldown_timer: float = 0.0
 var gib_textures: Array = []
 var difficulty_level
 
-
 @onready var alarm_sound = $AlarmSound
 @onready var explosion_sound = $ExplosionSound
 @onready var missile_sound = $MissileSound
@@ -110,6 +109,7 @@ var difficulty_level
 @onready var missile_frames: SpriteFrames
 @onready var smoke_frames: SpriteFrames
 @onready var explosion_frames: SpriteFrames
+
 
 class Missile:
 	var sprite: AnimatedSprite2D

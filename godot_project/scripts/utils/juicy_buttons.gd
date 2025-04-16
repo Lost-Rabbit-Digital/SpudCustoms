@@ -155,6 +155,7 @@ func setup_hover(button: Control, config: Dictionary = {}) -> void:
 	# Store the original position on the button as metadata
 	button.set_meta("original_position", button.position)
 
+
 ## Handle mouse enter animation and floating effect
 func _on_button_mouse_entered(button: Control, hover_defaults: Dictionary) -> void:
 	# Ensure the button scales from its center

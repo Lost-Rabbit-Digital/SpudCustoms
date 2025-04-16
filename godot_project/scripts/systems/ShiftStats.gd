@@ -3,7 +3,7 @@ class_name ShiftStats
 extends RefCounted
 
 # Basic stats
-var final_score: int = 0 
+var final_score: int = 0
 var shift_number: int = 0
 var total_stamps: int = 0
 var potatoes_approved: int = 0
@@ -24,6 +24,7 @@ var perfect_hit_bonus: int = 0
 # Runner stats
 var runner_attempts: int = 0
 
+
 func reset():
 	shift_number = 0
 	total_stamps = 0
@@ -41,20 +42,24 @@ func reset():
 	perfect_hit_bonus = 0
 	runner_attempts = 0
 	final_score = 0
-	
+
+
 func get_missile_bonus() -> int:
 	return perfect_hits * 150  # 150 points per perfect hit
-	
+
+
 func get_accuracy_bonus() -> int:
 	if total_stamps > 0:
 		return perfect_stamps * 200  # 200 points per perfect stamp
 	return 0
-	
+
+
 func get_speed_bonus() -> int:
 	# Bonus based on remaining processing time
 	if processing_time_left > 0:
 		return int(processing_time_left * 100)  # 100 points per second left
 	return 0
-	
+
+
 func get_total_bonus() -> int:
 	return get_missile_bonus() + get_accuracy_bonus() + get_speed_bonus()
