@@ -1,4 +1,4 @@
-name: Static checks 
+name: Static Checks 
 
 on:
   push:
