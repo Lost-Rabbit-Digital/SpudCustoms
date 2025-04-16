@@ -1,5 +1,5 @@
-extends Node2D
 class_name PaperCrunchEffect
+extends Node2D
 
 
 # Create a custom class for paper bits
@@ -24,12 +24,11 @@ class PaperBit:
 @export var bit_size_range = Vector2(0.01, 0.025)  # Scale range for paper bits
 @export var spin_speed_range = Vector2(3.0, 8.0)  # Rotation speed range
 
-var paper_bits = []  # Will hold custom PaperBit instances
-var smoke_frames = []  # Will store our atlas textures
-
 # Optional parameter to use a different spritesheet
 @export var custom_spritesheet: Texture2D
 
+var paper_bits = []  # Will hold custom PaperBit instances
+var smoke_frames = []  # Will store our atlas textures
 
 func _ready():
 	# Load the smoke spritesheet or use custom one if provided

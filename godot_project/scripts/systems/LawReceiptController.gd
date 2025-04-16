@@ -5,10 +5,6 @@ const HIDDEN_Y = 800  # Position when receipt is hidden (below screen)
 const SHOWN_Y = 620  # Position when receipt is visible (on screen)
 const TWEEN_DURATION = 0.5
 
-# Node references
-@onready var law_receipt_sprite = $LawReceiptSprite
-@onready var fold_out_button = $FoldOutButton
-@onready var hide_button = $LawReceiptSprite/HideButton
 @export var main_node: Node2D
 
 # State tracking
@@ -16,6 +12,10 @@ var is_visible = false
 var is_animating = false
 var daily_laws = ""
 
+# Node references
+@onready var law_receipt_sprite = $LawReceiptSprite
+@onready var fold_out_button = $FoldOutButton
+@onready var hide_button = $LawReceiptSprite/HideButton
 
 func _ready():
 	# Set initial position (hidden)

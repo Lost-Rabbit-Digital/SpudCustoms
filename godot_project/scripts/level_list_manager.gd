@@ -90,9 +90,9 @@ func load_current_level():
 
 
 func _advance_and_reload():
-	var _prior_level_id = get_current_level_id()
+	var prior_level_id = get_current_level_id()
 	_advance_level()
-	current_level_id = _prior_level_id
+	current_level_id = prior_level_id
 	load_current_level()
 
 

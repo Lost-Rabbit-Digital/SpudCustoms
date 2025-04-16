@@ -1,5 +1,5 @@
-extends Sprite2D
 class_name PotatoPerson
+extends Sprite2D
 
 # Signals
 signal path_completed
@@ -8,6 +8,9 @@ signal destroyed(position)
 
 # Tater States
 enum TaterState { QUEUED, IN_OFFICE, APPROVED, REJECTED, RUNNING, DESTROYED }
+
+enum PotatoBrainState { IDLE, TALKING, THINKING, SURPRISED, HAPPY, SAD, ANGRY }
+
 # Current Tater State
 var current_state := TaterState.QUEUED
 
@@ -39,20 +42,18 @@ var textures = {
 }
 
 # Potato Brain State
-enum PotatoBrainState { IDLE, TALKING, THINKING, SURPRISED, HAPPY, SAD, ANGRY }
 var current_potato_brain_state: int = PotatoBrainState.IDLE
 
 ## Reference to the EmoteSystem node
 var emote_system: PotatoEmoteSystem
 @onready var emote_sprite: AnimatedSprite2D = %PotatoEmote
 
-
 func _ready() -> void:
-	var node_highlight_shader = preload(
+	var NodeHighlightShader = preload(
 		"res://scripts/shaders/node_highlight/node_highlight.gdshader"
 	)
 	var node_highlight_material = ShaderMaterial.new()
-	node_highlight_material.shader = node_highlight_shader
+	node_highlight_material.shader = NodeHighlightShader
 	# After setting the material
 	%PotatoSprite.material = node_highlight_material
 

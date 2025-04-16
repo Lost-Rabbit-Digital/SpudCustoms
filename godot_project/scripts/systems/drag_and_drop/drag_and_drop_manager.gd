@@ -189,6 +189,7 @@ func _on_item_dropped(item: Node2D, _drop_zone: String):
 	item.z_index = drag_system.DEFAULT_Z_INDEX
 	# Additional processing can be added here if needed
 
+
 ## Sets the stamp system manager reference.
 ##
 ## @param manager The stamp system manager instance.

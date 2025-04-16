@@ -1,10 +1,10 @@
 extends Sprite2D
 
+@export var main_node: Node2D
+
 var daily_laws = """
 
 """
-
-@export var main_node: Node2D
 
 
 func _ready():

@@ -196,19 +196,19 @@ func _ready():
 	explosion_frames.set_animation_speed("default", 13)  # Frames per second
 
 	# Load the frames for missile
-	var missile_texture = preload("res://assets/effects/rocket_small_spritesheet.png")
+	var MissileTexture = preload("res://assets/effects/rocket_small_spritesheet.png")
 	var missile_hframes = 2  # Adjust based on the actual spritesheet
 
 	# Add animation frames for missile
 	for i in range(missile_hframes):
 		var region = Rect2(
-			i * missile_texture.get_width() / missile_hframes,
+			i * MissileTexture.get_width() / missile_hframes,
 			0,
-			missile_texture.get_width() / missile_hframes,
-			missile_texture.get_height()
+			MissileTexture.get_width() / missile_hframes,
+			MissileTexture.get_height()
 		)
 		var frame = AtlasTexture.new()
-		frame.atlas = missile_texture
+		frame.atlas = MissileTexture
 		frame.region = region
 		missile_frames.add_frame("default", frame)
 
@@ -216,19 +216,19 @@ func _ready():
 	missile_frames.set_animation_speed("default", 4)  # Frames per second
 
 	# Do the same for smoke frames
-	var smoke_texture = preload("res://assets/effects/smoke_spritesheet.png")
+	var SmokeTexture = preload("res://assets/effects/smoke_spritesheet.png")
 	var smoke_hframes = 8  # Adjust based on actual spritesheet
 
 	# Add animation frames for smoke
 	for i in range(smoke_hframes):
 		var region = Rect2(
-			i * smoke_texture.get_width() / smoke_hframes,
+			i * SmokeTexture.get_width() / smoke_hframes,
 			0,
-			smoke_texture.get_width() / smoke_hframes,
-			smoke_texture.get_height()
+			SmokeTexture.get_width() / smoke_hframes,
+			SmokeTexture.get_height()
 		)
 		var frame = AtlasTexture.new()
-		frame.atlas = smoke_texture
+		frame.atlas = SmokeTexture
 		frame.region = region
 		smoke_frames.add_frame("default", frame)
 
@@ -552,7 +552,7 @@ func _on_runner_destroyed(position: Vector2):
 	#trigger_explosion(position)
 
 
-func handle_runner_escape(runner: PotatoPerson):
+func handle_runner_escape(_runner: PotatoPerson):
 	print("Runner has escaped!")
 	# Reset the runner streak
 	runner_streak = 0
@@ -610,7 +610,7 @@ func _input(event):
 					missile_cooldown_timer = missile_cooldown
 
 
-func _unhandled_input(event):
+func _unhandled_input(_event):
 	if not is_enabled or is_in_dialogic:
 		return
 

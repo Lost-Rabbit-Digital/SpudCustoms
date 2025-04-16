@@ -1,6 +1,6 @@
 @tool
-extends Node
 class_name SceneLister
+extends Node
 ## Helper class for listing all the scenes in a directory.
 
 ## List of paths to scene files.

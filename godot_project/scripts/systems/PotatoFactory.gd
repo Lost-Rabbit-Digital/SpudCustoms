@@ -1,10 +1,10 @@
-extends Node
 class_name PotatoFactory
+extends Node
 
+static var potato_scene = load("res://scripts/systems/PotatoPerson.tscn")
 
 # Static function to create a new potato with random attributes
 static func create_random_potato() -> PotatoPerson:
-	var potato_scene = load("res://scripts/systems/PotatoPerson.tscn")
 	var potato = potato_scene.instantiate()
 
 	# Generate random potato info
@@ -18,7 +18,6 @@ static func create_random_potato() -> PotatoPerson:
 
 # Static function to create a potato with specific info
 static func create_potato_with_info(info: Dictionary) -> PotatoPerson:
-	var potato_scene = load("res://scripts/systems/PotatoPerson.tscn")
 	var potato = potato_scene.instantiate()
 
 	# Update the potato with the provided info

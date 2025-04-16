@@ -4,11 +4,6 @@ signal dialogue_finished
 signal intro_dialogue_finished
 signal end_dialogue_finished
 
-var current_shift: int = 1
-var dialogic_timeline: Node
-var dialogue_active: bool = false
-var current_skip_button_layer: CanvasLayer = null
-
 # Map level IDs to dialogue files
 const LEVEL_DIALOGUES: Dictionary[int, String] = {
 	0: "tutorial",
@@ -39,6 +34,10 @@ const ACHIEVEMENTS: Dictionary[String, String] = {
 	"DOWN_WITH_THE_TATRIARCHY": "down_with_the_tatriarchy"
 }
 
+var current_shift: int = 1
+var dialogic_timeline: Node
+var dialogue_active: bool = false
+var current_skip_button_layer: CanvasLayer = null
 
 func _ready():
 	# Initialize dialogic and load dialogue for appropriate shift

@@ -1,5 +1,5 @@
-extends Node2D
 class_name CharacterGenerator
+extends Node2D
 
 # Export node references for both mugshot and passport sprites
 @export_group("Character Sprites")
@@ -200,7 +200,6 @@ func get_character_data() -> Dictionary:
 	}
 
 
-# In character_generator.gd
 func set_character_data(data: Dictionary) -> void:
 	#print("Setting character data: ", data)
 

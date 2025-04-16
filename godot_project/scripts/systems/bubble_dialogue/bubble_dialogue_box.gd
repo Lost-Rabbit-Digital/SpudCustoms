@@ -1,7 +1,5 @@
-extends Sprite2D
 class_name BubbleDialogueBox
-
-@onready var bubble_text = $BubbleText
+extends Sprite2D
 
 # File path to your JSON file
 const MESSAGES_FILE = "res://scripts/systems/bubble_dialogue/bubble_dialogue_messages.json"
@@ -24,6 +22,8 @@ var customs_officer_sounds = [
 	preload("res://assets/audio/talking/froggy_phrase_6.wav"),
 	preload("res://assets/audio/talking/froggy_phrase_7.wav"),
 ]
+
+@onready var bubble_text = $BubbleText
 
 
 func _ready():

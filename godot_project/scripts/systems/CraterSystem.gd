@@ -1,6 +1,5 @@
-extends Node2D
 class_name CraterSystem
-
+extends Node2D
 
 class Crater:
 	var position: Vector2

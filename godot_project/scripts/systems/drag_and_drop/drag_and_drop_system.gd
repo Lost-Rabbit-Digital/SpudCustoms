@@ -662,6 +662,7 @@ func get_stamp_bar_controller() -> Node:
 
 	return null
 
+
 ## Identifies what drop zone the position is over.
 ##
 ## @param pos The global position to check.
