@@ -1,7 +1,7 @@
 @tool
 class_name LevelListLoader
 extends SceneLister
-## Extends [SceneLister] to manage level advancement through [GameStateExample].
+## Extends [SceneLister] to manage level advancement through [GameState].
 
 signal level_load_started
 signal level_loaded

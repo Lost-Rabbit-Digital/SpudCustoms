@@ -40,7 +40,7 @@ night_alarm
 
 night_attack
 16:9 zoomed out Pixel art scene of resistance attack beginning at night. Distant explosions illuminating horizon in orange and red, checkpoint in foreground with personnel reacting to emergency. 16-bit aesthetic with limited color palette using deep purples for night sky, bright oranges for explosions, institutional greens for uniforms, and near-black shadows. Flat perspective with dramatic lighting from explosions. Clean pixel edges with defined outlines. Dystopian potato-themed setting with chaos and decisive action suggested through composition.
-
+ 
 occupation_checkpoint
 16:9 zoomed out Pixel art of militarized border checkpoint under martial law. Armored vehicles with mounted weapons positioned at entrance. Elite anthropomorphic potato guards in military-style teal uniforms with additional armor pieces and helmets. Regular guards standing at attention in formation. Checkpoint booth reinforced with metal plating. Limited color palette using institutional grays for barriers and vehicles, deep purples for shadows, browns for potato characters, and dark teal for uniforms. 16-bit aesthetic with dramatic spotlight lighting creating long shadows. Clean pixel edges with defined outlines. Dystopian potato-themed setting with authoritarian atmosphere. Potato civilians nervously observing from distance.
 
