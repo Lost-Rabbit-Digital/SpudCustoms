@@ -11,7 +11,7 @@
 </div>
 
 <div align="center">
-  <img src="project_management/dist/main_game_screenshot.png" alt="Game Screenshot" width="600"/>
+  <img src="project_management/dist/main_game_screenshot_v110.png" alt="Game Screenshot" width="600"/>
 </div>
 
 ---
