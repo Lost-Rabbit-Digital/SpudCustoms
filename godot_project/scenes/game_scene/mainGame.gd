@@ -231,13 +231,10 @@ func _connect_signals():
 	
 	# System signals
 	drag_and_drop_manager.drag_system.passport_returned.connect(_on_passport_returned)
-	stamp_system_manager.stamp_decision_made.connect(_on_stamp_decision_made)
 	Global.score_updated.connect(_on_score_updated)
 	border_runner_system.game_over_triggered.connect(_on_game_over)
 	
 	# UI signals
-	$Gameplay/InteractiveElements/Megaphone/MegaphoneInteractionButton.pressed.connect(_on_megaphone_interaction_button_pressed)
-	ui_hint_system.hint_activated.connect(_on_hint_activated)
 	ui_hint_system.hint_deactivated.connect(_on_hint_deactivated)
 	
 	# Dialogic signals
@@ -648,7 +645,7 @@ func megaphone_clicked():
 		
 	var potato = queue_manager.remove_front_potato()
 	if potato:
-		if office_shutter_controller.active_shutter_state == office_shutter_controller.shutter_state.CLOSED:
+		if office_shutter_controller.active_shutter_state == office_shutter_controller.ShutterState.CLOSED:
 			# Fade out the foreground shadow on the potato when they enter
 			character_generator.fade_out_foreground_shadow(4)
 	
@@ -713,7 +710,7 @@ func _on_potato_path_completed(potato: PotatoPerson):
 	
 func animate_mugshot_and_passport():
 	# Lift up the office shutter if it's closed
-	if office_shutter_controller.active_shutter_state == office_shutter_controller.shutter_state.CLOSED:
+	if office_shutter_controller.active_shutter_state == office_shutter_controller.ShutterState.CLOSED:
 		office_shutter_controller.raise_shutter()
 	
 	print("Starting animate_mugshot_and_passport with potato info:", current_potato_info.race, current_potato_info.sex)
@@ -847,7 +844,7 @@ func _process(_delta):
 	var should_show_prompt = false
 	
 	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and drag_and_drop_manager.is_document_open("passport") == false and drag_and_drop_manager.drag_system.get_dragged_item() == passport:
-		if office_shutter_controller.active_shutter_state == office_shutter_controller.shutter_state.OPEN:
+		if office_shutter_controller.active_shutter_state == office_shutter_controller.ShutterState.OPEN:
 			if stamp_system_manager.passport_stampable.get_decision() != "":
 				should_show_prompt = true
 

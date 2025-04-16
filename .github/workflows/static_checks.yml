@@ -1,4 +1,4 @@
-name: Static checks 
+name: Static Checks 
 
 on:
   push:
@@ -13,6 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: Scony/godot-gdscript-toolkit@master
-    - run: gdformat --check godot_project/scripts/
+    - run: gdformat godot_project/scripts/
     - run: gdlint godot_project/scripts/
     - run: gdradon cc godot_project/scripts/

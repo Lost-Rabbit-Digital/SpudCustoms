@@ -1,5 +1,6 @@
 <div align="center">
-  <h1>Spud Customs</h1>
+  <h1>Spud Customs</h1> 
+  <a href="https://github.com/Lost-Rabbit-Digital/SpudCustoms/actions/workflows/static_checks.yml" target="_blank"><img src="https://github.com/Lost-Rabbit-Digital/SpudCustoms/actions/workflows/static_checks.yml/badge.svg" alt="Static Checks"></a>
   <h3>A dystopian document thriller game set in a world of anthropomorphic potatoes</h3>
   
   <p>
@@ -11,7 +12,7 @@
 </div>
 
 <div align="center">
-  <img src="project_management/dist/main_game_screenshot.png" alt="Game Screenshot" width="600"/>
+  <img src="project_management/dist/main_game_screenshot_v110.png" alt="Game Screenshot" width="600"/>
 </div>
 
 ---
@@ -66,64 +67,12 @@ In this world of anthropomorphic potatoes, your job is to:
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center"><img src="https://godotengine.org/assets/press/icon_color.svg" width="48"/></td>
-      <td><a href="https://godotengine.org/download">Godot Engine 4.0+</a></td>
-    </tr>
-  </table>
-</div>
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/Lost-Rabbit-Digital/SpudCustoms.git
-
-# Change to project directory
-cd SpudCustoms
-
-# Open the project in Godot using OS GUI
-# Or execute Godot from terminal with following command:
-godot -e
-```
-
----
-
-## 🔧 Development
-
-<div align="center">
-  <table>
-    <tr>
-      <td width="33%" align="center">
-        <h3>🧩 Code Style</h3>
-        <p>We follow the <a href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html">GDScript style guide</a> loosely</p>
-      </td>
-      <td width="33%" align="center">
-        <h3>🌿 Branches</h3>
-        <p><code>main</code>,<br><code>feature/X</code>, <code>bugfix/X</code></p>
-      </td>
-      <td width="33%" align="center">
-        <h3>🔄 Workflow</h3>
-        <p>Fork → Branch → Commit → PR</p>
-      </td>
-    </tr>
-  </table>
-</div>
-
----
-
 ## 📝 Roadmap
 
 <div align="center">
   <table>
     <tr>
-      <th colspan="2">In Development - Version 1.0.3</th>
+      <th colspan="2">In Development - Version 1.1.0</th>
     </tr>
     <tr>
       <td>✨ Visual Effects Improvements</td>
@@ -149,44 +98,17 @@ godot -e
 
 ---
 
-## 📚 Documentation
-
-<div align="center">
-  <a href="project_management/spud_customs_design_document.md">
-    <img src="https://img.shields.io/badge/Game_Design_Document-blue?style=for-the-badge" alt="GDD">
-  </a>
-  <a href="project_management/new_features/">
-    <img src="https://img.shields.io/badge/Feature_Implementation-orange?style=for-the-badge" alt="Features">
-  </a>
-  <a href="project_management/testing/">
-    <img src="https://img.shields.io/badge/Testing_Procedures-darkgreen?style=for-the-badge" alt="Testing">
-  </a>
-</div>
-
----
-
-## 📜 License
-
-<div align="center">
-  <a href="LICENSE.md">
-    <img src="https://img.shields.io/badge/License-MPL_2.0-yellow.svg?style=for-the-badge" alt="License: MPL 2.0">
-  </a>
-  <p>This project is licensed under the MPL 2.0 License - see the <a href="LICENSE.md">LICENSE</a> file for details.</p>
-</div>
-
----
-
 ## 👨‍💻 Team
 
 <div align="center">
   <table>
     <tr>
       <td align="center"><img src="https://github.com/dmchaledev.png" width="100px;" alt=""/><br /><sub><b>David</b></sub></td>
-      <td>Developer<br><a href="https://github.com/dmchaledev" target="_blank">GitHub</a></td>
+      <td>Developer<br><a href="https://github.com/dmchaledev" target="_blank">GitHub</a> | <a href="https://bsky.app/profile/heartcoded.bsky.social" target="_blank">@HeartCoded</a></td>
     </tr>
     <tr>
       <td align="center"><img src="https://github.com/BodenMcHale.png" width="100px;" alt=""/><br /><sub><b>Boden</b></sub></td>
-      <td>Developer<br><a href="https://github.com/BodenMcHale target="_blank"">GitHub</a> | <a href="https://www.bodenmchale.com/" target="_blank">Website</a></td>
+      <td>Developer<br><a href="https://github.com/BodenMcHale target="_blank"">GitHub</a> | <a href="https://www.bodenmchale.com/" target="_blank">Website</a> | <a href="https://bsky.app/profile/bodengamedev.bsky.social" target="_blank">@BodenGameDev</a></td>
     </tr>
     <tr>
       <td align="center"><img src="project_management/dist/marketing/LRD_Logo.png" width="100px;" alt=""/><br /><sub><b>Lost Rabbit Digital</b></sub></td>
@@ -221,14 +143,60 @@ godot -e
 - 🐛 **Bug Reports** - Help us improve by reporting issues
 - 🥔 **Spud Stories** - Share your best (or worst) border control experiences
 
-### Bluesky
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
 <div align="center">
   <table>
     <tr>
-      <td align="center"><a href="https://bsky.app/profile/bodengamedev.bsky.social" target="_blank">@BodenGameDev</a></td>
-      <td align="center"><a href="https://bsky.app/profile/heartcoded.bsky.social" target="_blank">@HeartCoded</a></td>
+      <td align="center"><img src="https://godotengine.org/assets/press/icon_color.svg" width="48"/></td>
+      <td><a href="https://godotengine.org/download">Godot Engine 4.0+</a></td>
     </tr>
   </table>
+</div>
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Lost-Rabbit-Digital/SpudCustoms.git
+
+# Change to project directory
+cd SpudCustoms
+
+# Open the project in Godot using OS GUI
+# Or execute Godot from terminal with following command:
+godot -e
+```
+
+---
+
+## 📚 Documentation
+
+<div align="center">
+  <a href="project_management/spud_customs_design_document.md">
+    <img src="https://img.shields.io/badge/Game_Design_Document-blue?style=for-the-badge" alt="GDD">
+  </a>
+  <a href="project_management/new_features/">
+    <img src="https://img.shields.io/badge/Feature_Implementation-orange?style=for-the-badge" alt="Features">
+  </a>
+  <a href="project_management/testing/">
+    <img src="https://img.shields.io/badge/Testing_Procedures-darkgreen?style=for-the-badge" alt="Testing">
+  </a>
+</div>
+
+---
+
+## 📜 License
+
+<div align="center">
+  <a href="LICENSE.md">
+    <img src="https://img.shields.io/badge/License-MPL_2.0-yellow.svg?style=for-the-badge" alt="License: MPL 2.0">
+  </a>
+  <p>This project is licensed under the MPL 2.0 License - see the <a href="LICENSE.md">LICENSE</a> file for details.</p>
 </div>
 
 ---

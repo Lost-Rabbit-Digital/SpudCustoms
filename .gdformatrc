@@ -1,0 +1,4 @@
+excluded_directories: !!set
+  .git: null
+
+max-line-length: 180

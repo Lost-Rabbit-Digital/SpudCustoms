@@ -5,6 +5,7 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 
 ## Stretch Goals
 - Office Shutter: Lever does not have SFX
+- Potatoes bobbing up and down while walking
 
 ## Interaction
 - Dialogic / Bug: You can launch missiles while in the tutorial scene
