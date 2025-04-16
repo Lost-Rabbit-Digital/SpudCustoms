@@ -123,7 +123,7 @@ godot -e
 <div align="center">
   <table>
     <tr>
-      <th colspan="2">In Development - Version 1.0.3</th>
+      <th colspan="2">In Development - Version 1.1.0</th>
     </tr>
     <tr>
       <td>✨ Visual Effects Improvements</td>
