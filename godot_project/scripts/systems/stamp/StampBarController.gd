@@ -7,7 +7,6 @@ signal stamp_requested(stamp_type, stamp_texture)
 signal stamp_animation_started(stamp_type)
 signal stamp_animation_completed(stamp_type)
 
-
 # Constants for UI animation
 const DURATION = 0.5
 
@@ -25,7 +24,6 @@ var stamp_result_textures = {
 	"approve": preload("res://assets/stamps/approved_stamp.png"),
 	"reject": preload("res://assets/stamps/denied_stamp.png")
 }
-
 
 # State tracking
 var is_visible = false
@@ -54,6 +52,7 @@ var is_showing_guide: bool = false
 @onready var end_node = $EndNode
 
 @onready var stamp_point_marker: Sprite2D
+
 
 func _ready():
 	if not passport:

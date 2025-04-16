@@ -1,5 +1,5 @@
-extends Node
 class_name StampSystem
+extends Node
 
 # Signals
 signal stamp_applied(stamp: StampComponent, document: Node, is_perfect: bool)
@@ -9,6 +9,7 @@ signal stamp_animation_completed(stamp_type: String)
 # Constants
 const STAMP_ANIM_DURATION = 0.2  # Duration of stamp animation in seconds
 const STAMP_COOLDOWN = 1.0  # Cooldown between stamps
+const STAMP_OFFSET = 35
 
 # Configuration
 var stamp_textures = {
@@ -33,9 +34,6 @@ var stamp_sounds = []
 
 # Shake effect
 var shake_callback: Callable
-
-# Stamp constants
-var STAMP_OFFSET = 35
 
 
 # Constructor - we need to pass in audio player from the main scene
@@ -302,7 +300,11 @@ func check_perfect_alignment(document: Node2D, stamp_position: Vector2) -> bool:
 	var doc_rect = document.get_rect()
 
 	# Calculate the "perfect" area (top 1/3 and center 1/3)
-	var perfect_area = Rect2(doc_rect.size.x / 3, 0, doc_rect.size.x / 3, doc_rect.size.y / 3)  # Start from 1/3 of width  # Start from top  # Width is 1/3 of document width  # Height is 1/3 of document height
+	# Start from 1/3 of width
+	# Start from top
+	# Width is 1/3 of document width
+	# Height is 1/3 of document height
+	var perfect_area = Rect2(doc_rect.size.x / 3, 0, doc_rect.size.x / 3, doc_rect.size.y / 3)
 
 	# Check if stamp position is within the perfect area
 	return perfect_area.has_point(local_stamp_pos)
@@ -328,12 +330,10 @@ func play_random_stamp_sound():
 	else:
 		push_warning("STAMP SYSTEM: NO AUDIO SETUP FOR STAMPS")
 
-
 # Signal handlers
 func _on_document_stamped(stamp: StampComponent):
 	# Do additional processing here if needed
 	pass
-
 
 func _on_stamp_applied(stamp: StampComponent, is_perfect: bool):
 	emit_signal("stamp_applied", stamp, stamp.applied_to, is_perfect)

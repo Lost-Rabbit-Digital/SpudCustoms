@@ -13,13 +13,16 @@ var animation_progress: float = 0.0  # 0.0 to 1.0
 var start_position: Vector2 = Vector2.ZERO
 var target_position: Vector2 = Vector2.ZERO
 
+
 func _init(type: String, texture: Texture2D):
 	stamp_type = type
 	stamp_texture = texture
 
+
 # Get stamp approval status as bool
 func is_approval() -> bool:
 	return stamp_type == "approve"
+
 
 # Calculate score based on stamp quality
 func calculate_score() -> int:
