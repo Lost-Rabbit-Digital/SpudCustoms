@@ -9,6 +9,10 @@ extends Node2D
 # Enums for clear direction definition
 enum Direction { DOWN = 0, UP = 1 }
 
+# Z-index values
+const VEHICLE_DEFAULT_Z_INDEX = 9  # Default z-index for vehicles
+const VEHICLE_UNDER_DESK_Z_INDEX = 2  # Z-index when under desk (lower than desk at 3)
+
 # Exported variables for easy configuration in the editor
 ## The minimum time between vehicle spawns in seconds
 @export_range(1.0, 30.0) var min_spawn_time: float = 5.0
@@ -41,10 +45,6 @@ enum Direction { DOWN = 0, UP = 1 }
 var _spawn_timer: Timer
 var _rng: RandomNumberGenerator = RandomNumberGenerator.new()
 var _vehicle_scene: PackedScene
-
-# Z-index values
-const VEHICLE_DEFAULT_Z_INDEX = 9  # Default z-index for vehicles
-const VEHICLE_UNDER_DESK_Z_INDEX = 2  # Z-index when under desk (lower than desk at 3)
 
 
 func _ready() -> void:

@@ -14,7 +14,6 @@ var main_game: Node
 var stats_manager: Node
 
 
-
 # Initialize the stamp system
 func initialize(game_scene: Node):
 	main_game = game_scene
