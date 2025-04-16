@@ -645,7 +645,7 @@ func megaphone_clicked():
 		
 	var potato = queue_manager.remove_front_potato()
 	if potato:
-		if office_shutter_controller.active_shutter_state == office_shutter_controller.shutter_state.CLOSED:
+		if office_shutter_controller.active_shutter_state == office_shutter_controller.ShutterState.CLOSED:
 			# Fade out the foreground shadow on the potato when they enter
 			character_generator.fade_out_foreground_shadow(4)
 	
@@ -710,7 +710,7 @@ func _on_potato_path_completed(potato: PotatoPerson):
 	
 func animate_mugshot_and_passport():
 	# Lift up the office shutter if it's closed
-	if office_shutter_controller.active_shutter_state == office_shutter_controller.shutter_state.CLOSED:
+	if office_shutter_controller.active_shutter_state == office_shutter_controller.ShutterState.CLOSED:
 		office_shutter_controller.raise_shutter()
 	
 	print("Starting animate_mugshot_and_passport with potato info:", current_potato_info.race, current_potato_info.sex)
@@ -844,7 +844,7 @@ func _process(_delta):
 	var should_show_prompt = false
 	
 	if suspect.get_rect().has_point(suspect.to_local(mouse_pos)) and drag_and_drop_manager.is_document_open("passport") == false and drag_and_drop_manager.drag_system.get_dragged_item() == passport:
-		if office_shutter_controller.active_shutter_state == office_shutter_controller.shutter_state.OPEN:
+		if office_shutter_controller.active_shutter_state == office_shutter_controller.ShutterState.OPEN:
 			if stamp_system_manager.passport_stampable.get_decision() != "":
 				should_show_prompt = true
 
