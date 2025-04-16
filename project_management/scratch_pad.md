@@ -7,7 +7,6 @@ These are our goals, to-do tasks, and completed tasks.
 - Add tooltip with potato info when you hover over them in line
 - Baggage inspection, grab bags and shake them with bugs and coins flying out until you get a "BAG CLEAN" and a small number of points, or contraband detected where you get points for clicking it
 - Multiplayer Implementation, co-op or versus using Steam Matchmaking
-- Add cars that drive by from the top to the bottom of the screen
 - Use top 3 scores for leaderboard, then show ... and show 3 scores above player and 3 scores below player (if any), with players score in middle. 
 - UV lamp represents a high-risk way to maximize points.
 - Randomly toggle the lights on and off in customs office and Border Wall like people are using the
@@ -16,7 +15,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Queue Interaction: Potato tooltip if hovered over in line
 - Queue Interaction System: Pop-up of a portrait of potato
 - Main Menu: Potatoes moving in infinite lines behind the main menu, similar to Factorio
-- Main Menu: Make a tile map for the paths
+- Main Menu: Make a tile map for the paths to enable A* pathfinding
 - Main Menu: Graphic button function to turn defaults into pretty buttons
 - Control: Alt-Enter to toggle fullscreen 
 - Control: F11 to toggle fullscreen 
@@ -33,6 +32,9 @@ These are our goals, to-do tasks, and completed tasks.
 - Office Shutter / Bug: Fade out the foreground shadow when the potatoes leave the office
 - Office Shutter / Bug: Do not fade out transparency of potato when enter or leaving office, only the foreground shadow
 - Potato in office: Should move up and down like breathing animation, simple tween
+- Hand gripping sound to document
+- Whooosh sound when document is returned to table
+- Whooshing sound when documents are dragged quickly
 
 # SHIFT SUMMARY SCREEN
 - Shift Summary: If the "Continue" button does not appear, it should balance out the "Main Menu" and "Restart" buttons
@@ -42,7 +44,6 @@ These are our goals, to-do tasks, and completed tasks.
 - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
 - Add an Entry ticket document and law requirement
 - Documents should have gravity on the suspect panel and should fall to the counter
-- Add dialogue emotes randomly to the potatoes, Potatoes emote (Kenny emotes) while waiting in line
 - Physics on suspect panel and interaction table with items (Gravity, dropping, throwing)
 - Add ink flecks from stamping that fly up when you stamp
 - Flocks of birds on the ground that fly away when you interact
@@ -61,9 +62,8 @@ These are our goals, to-do tasks, and completed tasks.
 
 ### Menus
 - Allow leaderboards for each level from the level select
-- Add button to reset campaign progress
 - Set default selection for main menu for keyboard control
-- Add button to reset highscores
+
 
 ### Law Bugs
 - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
@@ -75,41 +75,38 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-04-15 Target Release - 1.1.0
 ## Tasks
 ## RELEASE BLOCKERS
-- Need to update target positions for stamp buttons, currently both going stamps are hitting the same place under the rejected stamp when the document is placed on the desk, the stamps should only be applied below their respective positions, approximately 100 pixels below the center of each stamp for proper alignment
+- Add a check for winning the day, if the border runner is actively happening wait for it to finish before ending the shift
+- Add a condition for if the player skips the final narrative so that the end credits are still signalled 
+- Disable ability to skip final cutscene? 
 - Add a confirmation for resetting story progress (not highscores) to New Game
+- Add score attack mode back in by inheriting mainGame and overriding scoring rules
+- Adding fade to skip or end of dialogic sequences so it doesn't abruptly switch.
+- After hitting new game, Continue should also load the first level as if data were cleared
+- Cursor / Bug: Target display is not showing when hovering over the missile area
+- Demo: Create demo version of game without Score Attack mode, only shift 0, 1, and 2
+- Drag and Drop / Bug: Do not allow the user to pick up the document through the stamp bar
+- Drag and Drop / Bug: Get highest z-index doesn't seem to be working properly, cannot easily set passport atop of LawReceipt
+- Drag and Drop / Bug: If the player grabs the passport while it's animated the script does not properly update z-index
+- Drag and Drop / Bug: LawReceipt does not automatically close when dragged off of the suspect table
+- End shift dialogues don't appear to be triggering properly, test having it before shift summary screen?
+- Make rejected potatoes walk away even slower
+- Stamp System: Need to troubleshoot particle effects for perfect stamps
+- Need to update support for combo multipliers with perfect stamps
 - New game continues right now, should go back to tutorial
 - New game must always use tutorial, and SHOULD wipe data, then load the correct level
-- After hitting new game, Continue should also load the first level as if data were cleared
-- Adding fade to skip or end of dialogic sequences so it doesn't abruptly switch.
-- Make rejected potatoes walk away even slower
-- Add a condition for if the player skips the final narrative so that the end credits are still signalled 
-- Shift increasing by 2 means that the game goes from shift 10 to shift 12 and appears to skip the end of the game
-- Score not resetting on shift continue
-- Stamp alignment issue
-- Score not resetting in between shifts properly
-- End shift dialogues don't appear to be triggering properly, test having it before shift summary screen?
-- Sign outside customs office isn't appearing/disappearing as expected
-- Need to troubleshoot particle effects for perfect stamps
-- Add score attack mode back in by inheriting mainGame and overriding scoring rules
-- Test narrative and stats-based achievements
-- Test leaderboards for each shift and difficulty
-- Test Shift 6 - 11 and see if end credits trigger
 - Remake Score Attack mode and score at least 25 potatoes
+- Stamp System: Stamps go over edge of passport
 - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
-- Add a check for winning the day, if the border runner is actively happening wait for it to finish before ending the shift
-- Need to update support for combo multipliers with perfect stamps
+- Z-Index Bug: Corpses need a slightly lower z-index to show BEHIND explosions (re-test)
 - Z-Index Bug: Explosions appear above the inspection table
 - Z-Index Bug: Potato footsteps appear above the customs office
 - Z-Index Bug: Potato gibs appear below the screen borders
-- Z-Index Bug: Corpses need a slightly lower z-index to show BEHIND explosions (re-test)
-- Drag and Drop / Bug: Do not allow the user to pick up the document through the stamp bar
-- Drag and Drop / Bug: If the player grabs the passport while it's animated the script does not properly update z-index
-- Drag and Drop / Bug: LawReceipt does not automatically close when dragged off of the suspect table
-- Drag and Drop / Bug: Get highest z-index doesn't seem to be working properly, cannot easily set passport atop of LawReceipt
-- Cursor / Bug: Target display is not showing when hovering over the missile area
-- Stamp System: Stamps go over edge of passport
+
+### Testing
+- Test narrative and stats-based achievements
+- Test leaderboards for each shift and difficulty
+- Test Shift 6 - 11 and see if end credits trigger
 - Playtest: Beat Story mode, and test each of the 4 endings
-- Demo: Create demo version of game without Score Attack mode, only shift 0, 1, and 2
 
 ### Graphics  
 - Show buttons on continue summary screen AFTER fading everything in.
@@ -124,8 +121,11 @@ These are our goals, to-do tasks, and completed tasks.
 - Update cursor to show a select icon when above the approval or rejection stamp
 - When hit with a missile, make the Runner corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest
 - When shift ends, treat the last guy in office as rejected
-Art fixes:
-- checkpoint_booth
+- Cursor: After dragging a document the cursor returns to default even if the cursor is still hovering over a document 
+- Cursor: Update cusor to work with Maaacks menu
+- Drag and Drop / Bug: Documents released appear in front of the suspect panel background
+
+### Art
 - loyalist_outcome, too human
 - night attack, human man in background
 - night_checkpoint, messed up characters
@@ -136,18 +136,12 @@ Art fixes:
 - resistance_planning, emblems should be potatoes, potatoes should not have armor, leader should look more like old white mustache russet potato
 - victory_scene, fucked up faces
 - security_lockdown, washed out
-- Cursor: After dragging a document the cursor returns to default even if the cursor is still hovering over a document 
-- Cursor: Update cusor to work with Maaacks menu
-- Drag and Drop / Bug: Documents released appear in front of the suspect panel background
 
 ### Gameplay
 - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
 - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
 
 ### Audio
-- Hand gripping sound to document
-- Whooosh sound when document is returned to table
-- Whooshing sound when documents are dragged quickly
 
 ### Backend
 - Megaphone Dialogue System: Implement the different categories of dialogue from the JSON file into the megaphone_clicked function code in mainGame.gd
@@ -159,6 +153,14 @@ Art fixes:
 
 
 ### Completed Tasks for 1.1.0
+- Add button to reset campaign progress
+- Add button to reset highscores
+- Add dialogue emotes randomly to the potatoes, Potatoes emote (Kenny emotes) while waiting in line
+- Add cars that drive by from the top to the bottom of the screen
+- Dialogue sign outside customs office isn't disappearing after a few seconds
+- Score not resetting when continuing shifts
+- Shift increasing by 2 on shift completion; game goes from shift 10 to shift 12 and appears to skip the end of the game
+- Update stamp buttons to use the correct offsets and starting positions
 - Progression for story not saving/loading properly
 - Add Arludus to credits: https://arludus.itch.io/2d-top-down-180-pixel-art-vehicles
 - Check if there is a Dialogic 2 end audio function, implement after each keyboard audio call through all 11 .dtl resources
