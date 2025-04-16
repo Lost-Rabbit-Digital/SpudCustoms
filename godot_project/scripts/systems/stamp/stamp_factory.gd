@@ -1,5 +1,5 @@
-extends Node
 class_name StampFactory
+extends Node
 
 
 # Create a fully configured stamp system

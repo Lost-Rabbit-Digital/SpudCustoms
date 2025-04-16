@@ -332,7 +332,7 @@ func play_random_stamp_sound():
 
 
 # Signal handlers
-func _on_document_stamped(stamp: StampComponent):
+func _on_document_stamped(_stamp: StampComponent):
 	# Do additional processing here if needed
 	pass
 

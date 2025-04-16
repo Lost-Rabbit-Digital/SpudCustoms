@@ -1,5 +1,5 @@
-extends Node
 class_name StampComponent
+extends Node
 
 # Stamp properties
 var stamp_type: String = ""  # "approve" or "reject"

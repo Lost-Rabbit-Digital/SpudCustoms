@@ -1,5 +1,8 @@
-extends Node
 class_name StampSystemManager
+extends Node
+
+# Signal to forward from the passport stampable
+signal stamp_decision_made(decision: String, perfect: bool)
 
 # Main components
 var stamp_system: StampSystem
@@ -10,8 +13,6 @@ var passport_stampable: StampableComponent
 var main_game: Node
 var stats_manager: Node
 
-# Signal to forward from the passport stampable
-signal stamp_decision_made(decision: String, perfect: bool)
 
 
 # Initialize the stamp system
@@ -119,7 +120,7 @@ func create_perfect_stamp_effect(position: Vector2):
 
 
 # Handle stamps specifically applied to the passport
-func _on_passport_stamped(stamp: StampComponent, is_perfect: bool):
+func _on_passport_stamped(_stamp: StampComponent, is_perfect: bool):
 	# Only emit decision signal if we have passport stamps
 	var decision = passport_stampable.get_decision()
 	if decision != "":
