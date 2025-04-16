@@ -24,8 +24,7 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 - Runners: If a runner is currently emoting when they begin a run, it seems to spawn two emotes
 
 ## Drag and Drop System
-- DaDS / Bug: LawReceipt does not close when dragged off inspection table
-- DaDS / Bug: When dropping a passport onto the inspection table, it appears behind the LawReceipt
+- DaDS / Bug: When dropping a passport onto the inspection table, it appears in front of the LawReceipt
 - DaDS / Bug: You can drag the documents through the stamps, stamps should block interaction
 - DaDS / Bug: If passport is dragged when shift ends, the passport appears above the fade
 
@@ -33,3 +32,4 @@ I will move the tasks to the scratch_pad completed section when the task has bee
 
 
 ## Currently active tasks
+- DaDS / Bug: LawReceipt does not close when dragged off inspection table
