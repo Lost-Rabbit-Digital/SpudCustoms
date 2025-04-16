@@ -71,10 +71,11 @@ These are our goals, to-do tasks, and completed tasks.
 
 ### Audio
 - Small sound for hovering above megaphone or stamp bar button
-# FULL RELEASE TASKS - 2025-04-11 Target Release - 1.1.0
+
+# FULL RELEASE TASKS - 2025-04-15 Target Release - 1.1.0
 ## Tasks
 ## RELEASE BLOCKERS
-- Need to update target positions for stamp buttons, currently both going same place
+- Need to update target positions for stamp buttons, currently both going stamps are hitting the same place under the rejected stamp when the document is placed on the desk, the stamps should only be applied below their respective positions, approximately 100 pixels below the center of each stamp for proper alignment
 - Add a confirmation for resetting story progress (not highscores) to New Game
 - New game continues right now, should go back to tutorial
 - New game must always use tutorial, and SHOULD wipe data, then load the correct level
