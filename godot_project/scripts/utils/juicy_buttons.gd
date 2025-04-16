@@ -179,10 +179,11 @@ func setup_hover(button: Control, config: Dictionary = {}) -> void:
 		
 		# Start a process function on the button if it doesn't exist
 		if not button.has_node("FloatController"):
-			var timer: Timer = Timer.new()
-			timer.name = "FloatController"
-			timer.wait_time = 0.016  # ~60fps
-			timer.autostart = true
+			var timer = Timer.new()
+			if timer:
+				timer.name = "FloatController"
+				timer.wait_time = 0.016  # ~60fps
+				timer.autostart = true
 			button.add_child(timer)
 			
 			# Initialize spring physics variables
