@@ -1,5 +1,6 @@
 <div align="center">
-  <h1>Spud Customs</h1>
+  <h1>Spud Customs</h1> 
+  <a href="https://github.com/Lost-Rabbit-Digital/SpudCustoms/actions/workflows/static_checks.yml" target="_blank"><img src="https://github.com/Lost-Rabbit-Digital/SpudCustoms/actions/workflows/static_checks.yml/badge.svg" alt="Static Checks"></a>
   <h3>A dystopian document thriller game set in a world of anthropomorphic potatoes</h3>
   
   <p>
@@ -7,7 +8,6 @@
     <a href="https://lost-rabbit-digital.itch.io/spud-customs" target="_blank"><img src="https://img.shields.io/badge/itch.io-Available-red?style=for-the-badge&logo=itch.io" alt="itch.io"></a>
     <a href="https://godotengine.org/" target="_blank"><img src="https://img.shields.io/badge/Godot-4.0+-blue?style=for-the-badge&logo=godot-engine" alt="Godot 4.0+"></a>
     <img src="https://img.shields.io/badge/license-MPL_2.0-yellow?style=for-the-badge" alt="MPL 2.0 License">
-    <a href="https://github.com/Lost-Rabbit-Digital/SpudCustoms/actions/workflows/static_checks.yml" target="_blank"><img src="https://github.com/Lost-Rabbit-Digital/SpudCustoms/actions/workflows/static_checks.yml/badge.svg" alt="Static Checks"></a>
   </p>
 </div>
 
