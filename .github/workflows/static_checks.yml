@@ -13,6 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: Scony/godot-gdscript-toolkit@master
-    - run: gdformat --check source/
-    - run: gdlint source/
-    - run: gdradon cc source/
+    - run: gdformat --check godot_project/scripts/
+    - run: gdlint godot_project/scripts/
+    - run: gdradon cc godot_project/scripts/
