@@ -1,5 +1,5 @@
-extends AnimatedSprite2D
 class_name PotatoEmoteSystem
+extends AnimatedSprite2D
 ## A fully autonomous emote system for potato characters.
 ##
 ## Simply add this as a child of your PotatoEmote node and it will
@@ -23,6 +23,25 @@ enum EmoteType {
 	SINGULAR_EXCLAMATION,
 	CONFUSED
 }
+
+## Configuration options (exposed to the Inspector)
+@export_category("Initital Emote")
+@export_range(1.0, 30.0) var minimum_initial_emote_delay: float = 5.0
+@export_range(1.0, 30.0) var maximum_initial_emote_delay: float = 25.0
+@export_category("General Emotes")
+## Whether the emotes will be displayed at all
+@export var emoting_enabled: bool = false
+## [Seconds] How long the emote will remained displayed
+@export_range(0.1, 10.0) var emote_duration: float = 3.0
+## [Seconds] Minimum amount of time before the next emote is displayed
+@export_range(1.0, 30.0) var minimum_emote_delay: float = 10.0
+## [Seconds] Maximum amount of time before the next emote is dispalyed
+@export_range(1.0, 30.0) var maximum_emote_delay: float = 25.0
+@export_category("Audio")
+## Whether to play audio when displaying an emote
+@export var play_sounds: bool = false  # Keep this shit off, it's so annoying
+## [Decibels] How loud the audio for each emote is
+@export_range(-100.0, 100.0) var emote_volume: float = -24.0
 
 # TODO: The blank and dots have been commented out until the show_thinking_dots() function is
 # properly implemented, these emotes are also removed from the "thinking" emote category
@@ -68,25 +87,6 @@ var emote_sprite: AnimatedSprite2D
 var emote_timer: Timer
 var emote_delay_timer: Timer
 var emote_audio_player: AudioStreamPlayer
-
-## Configuration options (exposed to the Inspector)
-@export_category("Initital Emote")
-@export_range(1.0, 30.0) var minimum_initial_emote_delay: float = 5.0
-@export_range(1.0, 30.0) var maximum_initial_emote_delay: float = 25.0
-@export_category("General Emotes")
-## Whether the emotes will be displayed at all
-@export var emoting_enabled: bool = false
-## [Seconds] How long the emote will remained displayed
-@export_range(0.1, 10.0) var emote_duration: float = 3.0
-## [Seconds] Minimum amount of time before the next emote is displayed
-@export_range(1.0, 30.0) var minimum_emote_delay: float = 10.0
-## [Seconds] Maximum amount of time before the next emote is dispalyed
-@export_range(1.0, 30.0) var maximum_emote_delay: float = 25.0
-@export_category("Audio")
-## Whether to play audio when displaying an emote
-@export var play_sounds: bool = false  # Keep this shit off, it's so annoying
-## [Decibels] How loud the audio for each emote is
-@export_range(-100.0, 100.0) var emote_volume: float = -24.0
 
 
 ## Called when the node enters the scene tree
