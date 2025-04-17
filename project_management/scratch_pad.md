@@ -74,20 +74,11 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-04-15 Target Release - 1.1.0
 ## Tasks
 - Disable narrative manager when in score attack mode
-
-
-### Testing
-- Test narrative and stats-based achievements
-- Test leaderboards for each shift and difficulty
-- Test Shift 6 - 11 and see if end credits trigger
-- Playtest: Beat Story mode, and test each of the 4 endings
-
 ### Menus
 - After hitting new game, Continue should also load the first level as if data were cleared
 - End shift dialogues don't appear to be triggering properly, test having it before shift summary screen?
 - New game continues right now, should go back to tutorial
 - New game must always use tutorial, and SHOULD wipe data, then load the correct level
-
 ### Graphics  
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
 - Add logic to check if game paused or in dialogic before updating cursor to target cursor
@@ -105,7 +96,6 @@ These are our goals, to-do tasks, and completed tasks.
 - Drag and Drop / Bug: LawReceipt does not automatically close when dragged off of the suspect table
 - Have animated counters up for each of the values in the shift summary screen
 - Make a two-stage downward tween with the stamp and then the stamp handle to emulate pressing down an internal mechanism for the approval and reject stamps? As in the whole stamp descends, just the stamp handle descends, stamp handle comes back up, whole stamp comes back up.
-- Make rejected potatoes walk away even slower
 - Potato shadow doesn't line up with the silhouette of the new potatoes
 - Show buttons on continue summary screen AFTER fading everything in.
 - Stamp System: Need to troubleshoot particle effects for perfect stamps
@@ -116,27 +106,25 @@ These are our goals, to-do tasks, and completed tasks.
 - Z-Index Bug: Explosions appear above the inspection table
 - Z-Index Bug: Potato footsteps appear above the customs office
 - Z-Index Bug: Potato gibs appear below the screen borders
-
-
 ### Gameplay
 - Add a check for winning the day, if the border runner is actively happening wait for it to finish before ending the shift <-- I don't think we should necessarily do this, there may be CONSTANT border runners with max of concurrent and high spawn rate in later shifts - DM
 - Add a condition for if the player skips the final narrative so that the end credits are still signalled 
 - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
-- Demo: Create demo version of game without Score Attack mode, only shift 0, 1, and 2
 - Disable ability to skip final cutscene so the player doesn't skip right into end credits?
 - Need to update support for combo multipliers with perfect stamps
 - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
 - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
 - When shift ends, treat the last guy in office as rejected
-
 ### Audio
-
+### Testing
+- Test narrative and stats-based achievements
+- Test leaderboards for each shift and difficulty
+- Test Shift 6 - 11 and see if end credits trigger
+- Playtest: Beat Story mode, and test each of the 4 endings
 ### Backend
 - Megaphone Dialogue System: Implement the different categories of dialogue from the JSON file into the megaphone_clicked function code in mainGame.gd
-
 ### General Bugs
 - Potatoes appear above table instead of under when border runner leaves map on south side
-
 ### Art
 - loyalist_outcome, too human
 - night attack, human man in background
@@ -153,6 +141,8 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ### Completed Tasks for 1.1.0
+- Demo: Create demo version of game without Score Attack mode, only shift 0, 1, and 2
+- Make rejected potatoes walk away even slower
 - Make the score attack button on main_menu_with_animations load the appropriate score attack mode scene similar to main_game_ui.tscn
 - Add score attack mode back in by inheriting mainGame and overriding scoring rules
 - Remake Score Attack mode and score at least 25 potatoes
