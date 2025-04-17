@@ -75,8 +75,8 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-04-15 Target Release - 1.1.0
 ## Tasks
 - Disable narrative manager when in score attack mode
+- Game not fully unpausing for shift end dialogic cutscenes, maybe don't add the pause to end_shift
 ### Menus
-- After hitting new game, Continue should also load the first level as if data were cleared
 - End shift dialogues don't appear to be triggering properly, test having it before shift summary screen?
 ### Graphics  
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
@@ -106,6 +106,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Z-Index Bug: Potato footsteps appear above the customs office
 - Z-Index Bug: Potato gibs appear below the screen borders
 ### Gameplay
+- Shift end bonus not applying properly
 - Add a condition for if the player skips the final narrative so that the end credits are still signalled 
 - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
 - Disable ability to skip final cutscene so the player doesn't skip right into end credits?
@@ -139,6 +140,9 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ### Completed Tasks for 1.1.0
+- Final cutscene not triggering
+- After hitting new game, Continue should also load the first level as if data were cleared
+- End scenes not triggering for shifts (should they be before the shift summary screen, or after the player clicks continue on the shift summary screen?)
 - New game must always use tutorial, and SHOULD wipe data, then load the correct level
 - New game continues right now, should go back to tutorial
 - Demo: Create demo version of game without Score Attack mode, only shift 0, 1, and 2
