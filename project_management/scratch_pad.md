@@ -73,6 +73,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 # FULL RELEASE TASKS - 2025-04-15 Target Release - 1.1.0
 ## Tasks
+- Disable narrative manager when in score attack mode
 
 
 ### Testing
@@ -80,10 +81,8 @@ These are our goals, to-do tasks, and completed tasks.
 - Test leaderboards for each shift and difficulty
 - Test Shift 6 - 11 and see if end credits trigger
 - Playtest: Beat Story mode, and test each of the 4 endings
-- Remake Score Attack mode and score at least 25 potatoes
 
 ### Menus
-- Add a confirmation for resetting story progress (not highscores) to New Game
 - After hitting new game, Continue should also load the first level as if data were cleared
 - End shift dialogues don't appear to be triggering properly, test having it before shift summary screen?
 - New game continues right now, should go back to tutorial
@@ -120,13 +119,11 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ### Gameplay
-- Add a check for winning the day, if the border runner is actively happening wait for it to finish before ending the shift
+- Add a check for winning the day, if the border runner is actively happening wait for it to finish before ending the shift <-- I don't think we should necessarily do this, there may be CONSTANT border runners with max of concurrent and high spawn rate in later shifts - DM
 - Add a condition for if the player skips the final narrative so that the end credits are still signalled 
-- Add score attack mode back in by inheriting mainGame and overriding scoring rules
-- Make the score attack button on main_menu_with_animations load the appropriate score attack mode scene similar to main_game_ui.tscn
 - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
 - Demo: Create demo version of game without Score Attack mode, only shift 0, 1, and 2
-- Disable ability to skip final cutscene? 
+- Disable ability to skip final cutscene so the player doesn't skip right into end credits?
 - Need to update support for combo multipliers with perfect stamps
 - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
 - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
@@ -156,6 +153,10 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ### Completed Tasks for 1.1.0
+- Make the score attack button on main_menu_with_animations load the appropriate score attack mode scene similar to main_game_ui.tscn
+- Add score attack mode back in by inheriting mainGame and overriding scoring rules
+- Remake Score Attack mode and score at least 25 potatoes
+- Add a confirmation for resetting story progress (not highscores) to New Game
 - Add Arludus to credits: https://arludus.itch.io/2d-top-down-180-pixel-art-vehicles
 - Add button to reset campaign progress
 - Add button to reset highscores

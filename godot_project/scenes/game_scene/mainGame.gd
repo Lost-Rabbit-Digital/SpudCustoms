@@ -1255,19 +1255,19 @@ func move_potato_along_path(approval_status):
 	if path:
 		# Set state based on approval status
 		if approval_status == "approved":
-			potato.set_state(potato.TaterState.APPROVED)
+			potato.set_state(potato.TaterState.APPROVED)		
+			# For normal approved/rejected paths, set a specific speed
+			potato.regular_path_speed = regular_potato_speed
 		else:
 			potato.set_state(potato.TaterState.REJECTED)
-			
+			potato.regular_path_speed = regular_potato_speed * 0.7
 			# Check for border runner chance
 			if approval_status == "rejected" and randf() < 0.15:
 				if border_runner_system:
 					# Instead of using path, hand over to border runner system
 					border_runner_system.start_runner(potato, true)
 					return
-		
-		# For normal approved/rejected paths, set a specific speed
-		potato.regular_path_speed = regular_potato_speed
+
 		
 		# Attach to the selected path
 		potato.attach_to_path(path)
