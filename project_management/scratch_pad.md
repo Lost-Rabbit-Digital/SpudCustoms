@@ -47,6 +47,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Make the instructions an overlay which you could close
 - Repaint each cutscene that stands out as rough in Aseprite (use dedicated 16-32 color palettes, repaint in simpler forms)
 - Show Missile counter on an LCD display on the desk or on UI
+- Add a check for winning the day, if the border runner is actively happening wait for it to finish before ending the shift <-- I don't think we should necessarily do this, there may be CONSTANT border runners with max of concurrent and high spawn rate in later shifts - DM
 
 ### Menus
 - Allow leaderboards for each level, viewed from the level select
@@ -77,8 +78,6 @@ These are our goals, to-do tasks, and completed tasks.
 ### Menus
 - After hitting new game, Continue should also load the first level as if data were cleared
 - End shift dialogues don't appear to be triggering properly, test having it before shift summary screen?
-- New game continues right now, should go back to tutorial
-- New game must always use tutorial, and SHOULD wipe data, then load the correct level
 ### Graphics  
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
 - Add logic to check if game paused or in dialogic before updating cursor to target cursor
@@ -107,7 +106,6 @@ These are our goals, to-do tasks, and completed tasks.
 - Z-Index Bug: Potato footsteps appear above the customs office
 - Z-Index Bug: Potato gibs appear below the screen borders
 ### Gameplay
-- Add a check for winning the day, if the border runner is actively happening wait for it to finish before ending the shift <-- I don't think we should necessarily do this, there may be CONSTANT border runners with max of concurrent and high spawn rate in later shifts - DM
 - Add a condition for if the player skips the final narrative so that the end credits are still signalled 
 - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
 - Disable ability to skip final cutscene so the player doesn't skip right into end credits?
@@ -141,6 +139,8 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ### Completed Tasks for 1.1.0
+- New game must always use tutorial, and SHOULD wipe data, then load the correct level
+- New game continues right now, should go back to tutorial
 - Demo: Create demo version of game without Score Attack mode, only shift 0, 1, and 2
 - Make rejected potatoes walk away even slower
 - Make the score attack button on main_menu_with_animations load the appropriate score attack mode scene similar to main_game_ui.tscn

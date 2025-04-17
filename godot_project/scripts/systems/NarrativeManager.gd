@@ -23,7 +23,7 @@ const LEVEL_DIALOGUES: Dictionary[int, String] = {
 }
 
 const LEVEL_END_DIALOGUES: Dictionary[int, String] = {
-	1: "shift1_end", 3: "shift3_end", 5: "shift5_end", 7: "shift7_end", 9: "shift9_end"
+	1: "shift1_end", 3: "shift3_end", 5: "shift5_end", 7: "shift7_end", 9: "shift9_end", 10: "final_confrontation"
 }
 
 # Achievement IDs
@@ -42,6 +42,8 @@ var current_skip_button_layer: CanvasLayer = null
 func _ready():
 	# Initialize dialogic and load dialogue for appropriate shift
 	start_level_dialogue(Global.shift)
+	# Make it impossible to pause the narrative manager
+	process_mode = Node.PROCESS_MODE_ALWAYS
 
 
 func start_level_dialogue(level_id: int):
@@ -60,6 +62,7 @@ func start_level_dialogue(level_id: int):
 
 
 func start_level_end_dialogue(level_id: int):
+	print("Attempting to start dialogue: ", level_id, " -> ", LEVEL_END_DIALOGUES.get(level_id, "unknown"))
 	if dialogue_active:
 		return
 

@@ -145,7 +145,8 @@ func advance_shift():
 	# This assumes quota target increases with each shift
 	match Global.difficulty_level:
 		"Easy": 
-			scaling_factor = 0.8
+			# TODO: 0.8 normally
+			scaling_factor = 0.1
 		"Normal":
 			scaling_factor = 1
 		"Expert":
@@ -264,7 +265,8 @@ func set_difficulty(new_difficulty: String):
 		# Update game parameters based on difficulty
 		match difficulty_level:
 			"Easy":
-				scaling_factor = 0.8
+				# TODO: 0.8 normally
+				scaling_factor = 0.1
 				max_strikes = 6
 			"Normal":
 				scaling_factor = 1

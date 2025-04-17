@@ -83,6 +83,9 @@ var shift_stats: ShiftStats
 @onready var alert_label = $UI/Labels/MarginContainer/AlertLabel
 @onready var alert_timer = $SystemManagers/Timers/AlertTimer
 
+# Unpause timer so we don't sinkhole ourselves
+var safety_unpause_timer: Timer
+
 
 var current_shift: int = 1
 
@@ -120,6 +123,13 @@ func get_level_manager():
 	return null
 
 func _ready():
+	
+	safety_unpause_timer = Timer.new()
+	safety_unpause_timer.one_shot = true
+	safety_unpause_timer.wait_time = 10.0  # 10 seconds safety timeout
+	safety_unpause_timer.timeout.connect(_on_safety_unpause_timeout)
+	add_child(safety_unpause_timer)
+	
 	# Initialize core systems
 	_setup_managers()
 	_setup_game_state()
@@ -133,6 +143,8 @@ func _ready():
 	
 	# Start the narrative for this shift
 	_start_narrative()
+	
+	
 
 func _setup_managers():
 	# Initialize drag and drop manager
@@ -223,6 +235,15 @@ func _setup_ui_references():
 	suspect = $Gameplay/MugshotPhotoGenerator/SizingSprite
 	
 	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
+
+func _on_safety_unpause_timeout():
+	# Force unpause if dialogue takes too long or gets stuck
+	if get_tree().paused:
+		print("Safety unpause triggered - dialogue may have gotten stuck")
+		get_tree().paused = false
+		is_game_paused = false
+		# Try to recover the game flow
+		_on_dialogue_finished()
 
 func _connect_signals():
 	# Narrative signals
@@ -484,18 +505,26 @@ func end_shift(success: bool = true):
 	# After updating all stats but before showing the summary screen
 	GlobalState.save()
 	
+	# Before starting end dialogue, ensure we're in a state that allows dialogue to run
+	get_tree().paused = false  # Temporarily unpause
+	is_game_paused = false     # Clear the game pause flag
+	# Add to end_shift function:
+	print("Ending shift ", current_shift, " with success: ", success)
+	print("Tree paused state: ", get_tree().paused)
+	print("Game paused state: ", is_game_paused)
 	# Check if there's an end dialogue for this shift
 	if narrative_manager and narrative_manager.LEVEL_END_DIALOGUES.has(current_shift):
-		# Play the ending dialogue for the completed shift
-		#narrative_manager.start_level_end_dialogue(current_shift)
-		
-		# Instead of waiting for it to finish, we'll connect the narrative_manager's signal
-		# to continue our process
-		#narrative_manager.end_dialogue_finished.connect(func():
-		#	_show_shift_summary_screen(stats_dict)
-		#, CONNECT_ONE_SHOT)
-		_show_shift_summary_screen(stats_dict)
-		pass # Early return to avoid showing summary screen now
+		print("Starting end dialogue for shift: ", current_shift)
+		# If this is shift 10, we need to ensure the final confrontation plays
+		if current_shift == 10:
+			narrative_manager.start_level_end_dialogue(current_shift)
+			# Wait for dialogue to finish before showing summary
+			await narrative_manager.end_dialogue_finished
+			return  # Skip showing shift summary for final confrontation
+		else:
+			# For other shifts, continue with normal end dialogue
+			narrative_manager.start_level_end_dialogue(current_shift)
+			await narrative_manager.end_dialogue_finished
 	
 	# If no dialogue, show the summary screen immediately
 	_show_shift_summary_screen(stats_dict)
@@ -1346,6 +1375,7 @@ func _exit_tree():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _on_dialogue_started():
+	safety_unpause_timer.start()
 	bgm_player.stop()
 	# Completely pause all game systems
 	is_game_paused = true
@@ -1430,17 +1460,26 @@ func _on_intro_dialogue_finished():
 	update_quota_display()
 	update_strikes_display()
 
-# Update the _on_end_dialogue_finished handler
 func _on_end_dialogue_finished():
 	# This is called after an end dialogue completes
-	# We should now check if this was the final shift
 	
+	# Special case for final confrontation (shift 10)
+	if current_shift == 10:
+		# Final confrontation just finished, go to credits
+		fade_transition()
+		if SceneLoader:
+			SceneLoader.load_scene("res://scenes/end_credits/end_credits.tscn")
+		else:
+			push_error("SceneLoader not found, falling back to change_scene_to_file")
+			get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
+		return
+	
+	# For other shifts
 	if current_shift >= 10:
 		# Game complete, show credits
 		fade_transition()
 		if SceneLoader:
-			var credit_scene = preload("res://scenes/end_credits/end_credits.tscn").instantiate()
-			SceneLoader.load_scene(credit_scene)
+			SceneLoader.load_scene("res://scenes/end_credits/end_credits.tscn")
 		else:
 			push_error("SceneLoader not found, falling back to change_scene_to_file")
 			get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
@@ -1452,14 +1491,11 @@ func _on_end_dialogue_finished():
 		# Load the next shift
 		current_shift += 1
 		fade_transition()
-		# Access SceneLoader directly
 		if SceneLoader:
-			var main_scene = preload("res://scenes/game_scene/mainGame.tscn").instantiate()
-			SceneLoader.load_scene(main_scene)
+			SceneLoader.reload_current_scene()
 		else:
 			push_error("SceneLoader not found, falling back to change_scene_to_file")
 			get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
-
 
 func _on_game_over():
 	# Disable all inputs and systems first
