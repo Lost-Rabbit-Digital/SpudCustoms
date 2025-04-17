@@ -4,6 +4,7 @@ extends MainMenu
 
 var level_select_scene
 var animation_state_machine : AnimationNodeStateMachinePlayback
+var confirmation_dialog: ConfirmationDialog
 @onready var version_label = $VersionMargin/VersionContainer/VersionLabel
 @onready var bgm_player = $BackgroundMusicPlayer
 
@@ -12,6 +13,10 @@ func load_game_scene():
 	SceneLoader.load_scene(story_game_scene_path)
 
 func new_game():
+	# Instead of immediately resetting data, show the confirmation dialog
+	confirmation_dialog.popup_centered()
+
+func _on_new_game_confirmed():
 	await JuicyButtons.setup_button(%NewGameButton)
 	GlobalState.reset()
 	load_game_scene()
@@ -21,6 +26,27 @@ func load_endless_scene():
 
 func new_endless_game():
 	load_endless_scene()
+
+
+func _on_endless_button_pressed():
+	await JuicyButtons.setup_button(%EndlessButton)
+	# Reset game state but keep high scores
+	Global.reset_shift_stats()
+	Global.switch_game_mode("score_attack")
+	# Now load the score attack scene instead
+	SceneLoader.load_scene("res://scenes/game_scene/score_attack_ui.tscn")
+
+func _setup_confirmation_dialog():
+	confirmation_dialog = ConfirmationDialog.new()
+	confirmation_dialog.title = "Start New Game"
+	confirmation_dialog.dialog_text = "Starting a new game will reset your progress. Are you sure you want to continue?"
+	confirmation_dialog.min_size = Vector2(400, 100)
+	confirmation_dialog.dialog_hide_on_ok = true
+	confirmation_dialog.get_ok_button().text = "Yes, Start New Game"
+	add_child(confirmation_dialog)
+	
+	# Connect confirmation signals
+	confirmation_dialog.confirmed.connect(_on_new_game_confirmed)
 
 func intro_done():
 	animation_state_machine.travel("OpenMainMenu")
@@ -80,6 +106,7 @@ func _ready():
 	super._ready()
 	_setup_level_select()
 	animation_state_machine = $MenuAnimationTree.get("parameters/playback")
+	_setup_confirmation_dialog()
 	
 func _setup_game_buttons():
 	super._setup_game_buttons()
@@ -93,6 +120,8 @@ func _on_continue_game_button_pressed():
 
 func _on_level_select_button_pressed():
 	_open_sub_menu(level_select_scene)
+	
+
 	
 func load_tracks():
 	# Replace with your actual music tracks

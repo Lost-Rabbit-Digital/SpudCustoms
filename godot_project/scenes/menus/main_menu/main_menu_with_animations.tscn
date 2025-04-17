@@ -380,7 +380,7 @@ graph_offset = Vector2(-180.277, 49)
 script = ExtResource("2_ncvk7")
 level_select_packed_scene = ExtResource("3_xj7vs")
 story_game_scene_path = "uid://crnx6qmk46il"
-endless_game_scene_path = "uid://ysxm2q6sepmc"
+endless_game_scene_path = "uid://v7k0gr5qm1jm"
 options_packed_scene = ExtResource("3_tuy3s")
 credits_packed_scene = ExtResource("4_lwsll")
 
@@ -407,9 +407,6 @@ texture = ExtResource("7_2k5l7")
 
 [node name="VersionContainer" parent="VersionMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
-
-[node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
-text = "Version 1.1.0"
 
 [node name="TitleContainer" parent="MenuContainer/TitleMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
