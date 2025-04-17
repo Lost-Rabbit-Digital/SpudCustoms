@@ -196,3 +196,4 @@ These are our goals, to-do tasks, and completed tasks.
 - Update stamp buttons to use the correct offsets and starting positions
 - Wrong shift displaying on shift summary screen
 - Z-index: Dragged passport appears below the suspect table
+- DaDS / Bug: LawReceipt does not close when dragged off inspection table
