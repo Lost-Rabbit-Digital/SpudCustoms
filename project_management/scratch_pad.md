@@ -59,11 +59,6 @@ These are our goals, to-do tasks, and completed tasks.
 - Set default selection for main menu for keyboard control
   #### SHIFT SUMMARY SCREEN
   - Shift Summary: If the "Continue" button does not appear, it should balance out the "Main Menu" and "Restart" buttons
-
-### Law Bugs
-- "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
-- "Sprouted potatoes need additional verification and must be denied", change to not include verification
-
 ### Audio
 - Emote System: Potatoes should play small sound upon emoting
 - Hand gripping sound to document
@@ -75,7 +70,11 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-04-15 Target Release - 1.1.0
 ## Tasks
 - Disable narrative manager when in score attack mode
-- Game not fully unpausing for shift end dialogic cutscenes, maybe don't add the pause to end_shift
+- Game not fully unpausing for shift end dialogic cutscenes, maybe don't add the pause to end_shift 
+### Law Bugs
+- Yukon Gold potatoes must be fresh given an error when it should be passing
+- "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
+- "Sprouted potatoes need additional verification and must be denied", change to not include verification
 ### Menus
 - End shift dialogues don't appear to be triggering properly, test having it before shift summary screen?
 ### Graphics  
@@ -135,10 +134,7 @@ These are our goals, to-do tasks, and completed tasks.
 - resistance_planning, emblems should be potatoes, potatoes should not have armor, leader should look more like old white mustache russet potato
 - security_lockdown, washed out
 - victory_scene, fucked up faces
-
 ### Credits
-
-
 ### Completed Tasks for 1.1.0
 - Final cutscene not triggering
 - After hitting new game, Continue should also load the first level as if data were cleared

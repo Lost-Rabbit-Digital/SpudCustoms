@@ -109,7 +109,7 @@ var LAW_CHECKS = {
 		"message": func(potato_info): return "Sweet Potatoes require Form T-43."
 	},
 	"[color=dark_goldenrod]Yukon Gold[/color] potatoes must be [color=dark_green]fresh[/color].\n": {
-		"check": func(potato_info): return potato_info.race != "Yukon Gold" or potato_info.condition == "Fresh",
+		"check": func(potato_info): return potato_info.race == "Yukon Gold" or potato_info.condition != "Fresh",
 		"message": func(potato_info): return "Yukon Gold potatoes must be fresh."
 	},
 }
