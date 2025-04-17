@@ -450,7 +450,6 @@ func update_runners(delta):
 
 		# Check if runner has reached the end of the path
 		if runner.current_path_follow and runner.current_path_follow.progress_ratio >= 0.99:
-			handle_runner_escape(runner)
 			runner.cleanup()
 			active_runners.remove_at(i)
 
@@ -550,7 +549,6 @@ func _on_runner_destroyed(position: Vector2):
 	spawn_gibs(position)
 	# Maybe trigger sound effects or other visual effects
 	#trigger_explosion(position)
-
 
 func handle_runner_escape(_runner: PotatoPerson):
 	print("Runner has escaped!")
