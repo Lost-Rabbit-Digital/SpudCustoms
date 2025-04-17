@@ -1256,7 +1256,7 @@ func move_potato_along_path(approval_status):
 		# Set state based on approval status
 		if approval_status == "approved":
 			potato.set_state(potato.TaterState.APPROVED)		
-			# For normal approved/rejected paths, set a specific speed
+			# For normal approved paths, use base speed
 			potato.regular_path_speed = regular_potato_speed
 		else:
 			potato.set_state(potato.TaterState.REJECTED)
