@@ -1379,7 +1379,7 @@ func _on_dialogue_started():
 	bgm_player.stop()
 	# Completely pause all game systems
 	is_game_paused = true
-	get_tree().paused = true
+	# get_tree().paused = true
 	# Tell the border runner system to pause with dialogic mode
 	if border_runner_system:
 		border_runner_system.set_dialogic_mode(true)
@@ -1393,7 +1393,7 @@ func _on_dialogue_finished():
 	Global.quota_met = 0
 	Global.strikes = 0
 	# Completely unpause all game systems
-	get_tree().paused = false
+	# get_tree().paused = false
 	is_game_paused = false
 	# Tell the border runner system dialogic mode is done
 	if border_runner_system:
@@ -1485,17 +1485,18 @@ func _on_end_dialogue_finished():
 			get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
 	else:
 		# Continue to next shift
-		narrative_manager.show_day_transition(current_shift, current_shift + 1)
-		await narrative_manager.dialogue_finished
+		#narrative_manager.show_day_transition(current_shift, current_shift + 1)
+		#await narrative_manager.dialogue_finished
 		
 		# Load the next shift
-		current_shift += 1
-		fade_transition()
-		if SceneLoader:
-			SceneLoader.reload_current_scene()
-		else:
-			push_error("SceneLoader not found, falling back to change_scene_to_file")
-			get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
+		#current_shift += 1
+		#fade_transition()
+		#if SceneLoader:
+		#	SceneLoader.reload_current_scene()
+		#else:
+		#	push_error("SceneLoader not found, falling back to change_scene_to_file")
+		#	get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
+		pass
 
 func _on_game_over():
 	# Disable all inputs and systems first

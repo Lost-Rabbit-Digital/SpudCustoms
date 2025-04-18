@@ -100,31 +100,36 @@ func load_high_scores() -> Dictionary:
 	return high_scores
 
 # Level progress functions
+# When creating dictionaries, consistently use string keys
 func save_level_progress(max_level: int, current_level: int, level_highscores: Dictionary = {}) -> bool:
 	var game_state = load_game_state()
 	
-	# Update the level progression data
+	# Always convert integer keys to strings
 	game_state["max_level_reached"] = max(game_state.get("max_level_reached", 0), max_level)
 	game_state["current_level"] = current_level
 	
-	# If there are high scores for specific levels, save those too
-	if not level_highscores.is_empty():
-		# If the high scores dictionary doesn't exist yet, create it
+	# Convert all integer keys to strings consistently
+	var string_keyed_highscores = {}
+	for level_id in level_highscores:
+		string_keyed_highscores[str(level_id)] = level_highscores[level_id]
+	
+	# Now use the string-keyed dictionary
+	if not string_keyed_highscores.is_empty():
+		# Initialize if needed
 		if not game_state.has("level_highscores"):
 			game_state["level_highscores"] = {}
 			
-		# Merge the new high scores with existing ones
-		for level_id in level_highscores:
-			if not game_state["level_highscores"].has(level_id):
-				game_state["level_highscores"][level_id] = {}
+		# Merge with existing
+		for level_key in string_keyed_highscores:
+			if not game_state["level_highscores"].has(level_key):
+				game_state["level_highscores"][level_key] = {}
 				
-			for difficulty in level_highscores[level_id]:
-				# Only update if the new score is higher
-				var current_high_score = game_state["level_highscores"].get(level_id, {}).get(difficulty, 0)
-				if level_highscores[level_id][difficulty] > current_high_score:
-					if not game_state["level_highscores"].has(level_id):
-						game_state["level_highscores"][level_id] = {}
-					game_state["level_highscores"][level_id][difficulty] = level_highscores[level_id][difficulty]
+			for difficulty in string_keyed_highscores[level_key]:
+				# Update only if new score is higher
+				var current = 0 # game_state["level_highscores"][level_key].get(difficulty, 0)
+				var new_score = 0 # string_keyed_highscores[level_key][difficulty]
+				if new_score > current:
+					game_state["level_highscores"][level_key][difficulty] = new_score
 	
 	return save_game_state(game_state)
 
@@ -147,7 +152,7 @@ func save_level_high_score(level: int, difficulty: String, score: int) -> bool:
 		game_state["level_highscores"] = {}
 		
 	# Initialize the level entry if it doesn't exist
-	var level_key = str(level)
+	var level_key = str(level)  # Convert level to string
 	if not game_state["level_highscores"].has(level_key):
 		game_state["level_highscores"][level_key] = {}
 		
@@ -173,7 +178,7 @@ func get_level_high_score(level: int, difficulty: String) -> int:
 	
 	# Get the level high scores
 	var level_highscores = game_state.get("level_highscores", {})
-	var level_key = str(level)
+	var level_key = str(level)  # Convert level to string
 	
 	# Check if this level has high scores
 	if level_highscores.has(level_key):

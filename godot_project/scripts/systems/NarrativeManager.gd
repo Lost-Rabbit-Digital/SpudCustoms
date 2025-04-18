@@ -76,6 +76,7 @@ func start_level_end_dialogue(level_id: int):
 	var timeline_name = LEVEL_END_DIALOGUES.get(level_id, "generic_shift_start")
 
 	var timeline = Dialogic.start(timeline_name)
+	timeline.process_mode = Node.PROCESS_MODE_ALWAYS
 	add_child(timeline)
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.timeline_ended.connect(_on_end_dialogue_finished)
@@ -139,7 +140,7 @@ func _on_skip_button_pressed():
 
 func _on_dialogic_signal(argument):
 	if argument == "credits_ready":
-		get_tree().change_scene_to_file("res://main_scenes/scenes/end_credits/end_credits.tscn")
+		get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
 	if argument == "born_diplomat":
 		Steam.setAchievement(ACHIEVEMENTS.BORN_DIPLOMAT)
 	if argument == "tater_of_justice":
