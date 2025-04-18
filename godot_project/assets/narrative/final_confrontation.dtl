@@ -119,9 +119,9 @@ if {ending_choice} == "diplomatic":
 	join sweet_potato_sasha [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 	sweet_potato_sasha: I don't think so, Idaho. Guards! You saw the dossier, [color=YELLOW]you know what he did to your families.[/color]
-	audio "res://assets/audio/gun cocking 3.wav" [volume="0.0" bus="SFX"]
+	audio "res://assets/audio/gunfire/gun cocking 3.wav" [volume="0.0" bus="SFX"]
 	A hulking guard steps forward and kicks Idaho to the ground swiftly.
-	audio "res://assets/audio/Heavy Pistol B.wav" [volume="0.0" bus="SFX"]
+	audio "res://assets/audio/gunfire/Heavy Pistol B.wav" [volume="0.0" bus="SFX"]
 	A shot echoes through the chamber. The screen fades to black.
 	leave prime_minister_idaho
 	leave sweet_potato_sasha
@@ -144,9 +144,9 @@ elif {ending_choice} == "vengeance":
 	player_character: There will be [color=CRIMSON]no deals, no mercy[/color] for you, Idaho. A tyrant's justice is all you deserve.
 	[background arg="res://assets/narrative/reckoning.png" fade="2.0"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-	audio "res://assets/audio/gun cocking 3.wav" [volume="0.0" bus="SFX"]
+	audio "res://assets/audio/gunfire/gun cocking 3.wav" [volume="0.0" bus="SFX"]
 	player_character: A reckoning. That's what I am. [color=CHARTREUSE]For every potato sacrificed, we take back our future![/color]
-	audio "res://assets/audio/Heavy Pistol B.wav" [volume="0.0" bus="SFX"]
+	audio "res://assets/audio/gunfire/Heavy Pistol B.wav" [volume="0.0" bus="SFX"]
 	leave player_character
 else: # dismantle
 	[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
