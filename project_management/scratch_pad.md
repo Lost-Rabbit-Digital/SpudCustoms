@@ -11,8 +11,10 @@ These are our goals, to-do tasks, and completed tasks.
 - Add different types of documents, entry passes, work permits, baggage, visas, marriage licenses, bribes 
 - Baggage inspection, grab bags and shake them with bugs and coins flying out until you get a "BAG CLEAN" and a small number of points, or contraband detected where you get points for clicking it
 - Multiplayer Implementation, co-op or versus using Steam Matchmaking
+- When shift ends, treat the last guy in office as rejected (Why vs approved?)
 
 ### Graphics
+- Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
 - Add ink flecks from stamping that fly up when you stamp
 - Add message queue system and delay between messages so they don't override each other, add GDScript to alert_label
 - Add tooltip with potato info when you hover over them in line
@@ -97,14 +99,12 @@ These are our goals, to-do tasks, and completed tasks.
 ### Menus
 
 ### Graphics  
-- Stamp System: Need to troubleshoot particle effects for perfect stamps
+- Stamp System: Why are the particle effects not visible / not triggering when a perfect stamp is placed in the top and middle 1/3rd of a document?
 
 ### Gameplay
-- Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
-- Need to update support for combo multipliers with perfect stamps to visually inform player
-- Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
-- Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
-- When shift ends, treat the last guy in office as rejected
+- Allow missiles to kill approved potatoes, resulting in 250 points removed and a strike added, with a flavor alert about a Totneva Convention violation
+- Add visual feedback for combo multipliers with perfect stamps
+- Add a small chance to run while waiting in line for each potato in addition to the rejection chance and global timer chance
 
 ### Audio
 
@@ -133,6 +133,8 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ### Completed Tasks for 1.1.0
+- checkpoint_interior, fix hat direction
+- border chaos, fix dog-face man and best employee picture
 - Disable narrative manager when in score attack mode
 - Shift end bonus not applying properly
 - Fix audio reference issues with gunshots in vengeance ending
