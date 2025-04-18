@@ -50,17 +50,19 @@ func start_level_dialogue(level_id: int):
 	if dialogue_active:
 		return
 
-	dialogue_active = true
-	var skip_button_layer = create_skip_button()
-
-	var timeline_name = LEVEL_DIALOGUES.get(level_id, "generic_shift_start")
-
-	var timeline = Dialogic.start(timeline_name)
-	add_child(timeline)
-	Dialogic.signal_event.connect(_on_dialogic_signal)
-	Dialogic.timeline_ended.connect(_on_shift_dialogue_finished)
-
-
+	# Fade in first
+	fade_transition(true, func():
+		dialogue_active = true
+		var skip_button_layer = create_skip_button()
+		
+		var timeline_name = LEVEL_DIALOGUES.get(level_id, "generic_shift_start")
+		
+		var timeline = Dialogic.start(timeline_name)
+		add_child(timeline)
+		Dialogic.signal_event.connect(_on_dialogic_signal)
+		Dialogic.timeline_ended.connect(_on_shift_dialogue_finished)
+	)
+	
 func start_level_end_dialogue(level_id: int):
 	print("Attempting to start dialogue: ", level_id, " -> ", LEVEL_END_DIALOGUES.get(level_id, "unknown"))
 	if dialogue_active:
@@ -170,11 +172,15 @@ func _on_intro_dialogue_finished():
 
 func _on_shift_dialogue_finished():
 	print("Shift dialogue finished, calling cleanup")
-	dialogue_active = false
-	current_shift += 1
-	Global.advance_story_state()
-	cleanup_skip_buttons()
-	emit_signal("dialogue_finished")
+	
+	# Fade out and then complete the dialogue
+	fade_transition(false, func():
+		dialogue_active = false
+		current_shift += 1
+		Global.advance_story_state()
+		cleanup_skip_buttons()
+		emit_signal("dialogue_finished")
+	)
 
 
 func _on_final_dialogue_finished():
@@ -227,4 +233,24 @@ func show_day_transition(current_day: int, next_day: int):
 			transition_layer.queue_free()
 			dialogue_active = false
 			emit_signal("dialogue_finished")
+	)
+
+func fade_transition(fade_in: bool, callback: Callable):
+	var fade_rect = ColorRect.new()
+	fade_rect.color = Color(0, 0, 0, 1.0 if fade_in else 0.0)
+	fade_rect.size = get_viewport().get_visible_rect().size
+	fade_rect.z_index = 100  # Above everything
+	
+	var fade_layer = CanvasLayer.new()
+	fade_layer.layer = 100
+	fade_layer.add_child(fade_rect)
+	add_child(fade_layer)
+	
+	var tween = create_tween()
+	tween.tween_property(fade_rect, "color:a", 0.0 if fade_in else 1.0, 0.5)
+	tween.tween_callback(func():
+		callback.call()
+		# If fading in, we keep the fade layer for the callback to handle
+		if not fade_in:
+			fade_layer.queue_free()
 	)
