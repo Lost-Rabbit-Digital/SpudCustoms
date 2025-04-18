@@ -458,14 +458,33 @@ func transition_to_scene(scene_path: String):
 func _on_continue_button_pressed() -> void:
 	Global.reset_shift_stats()
 	print("Continue button pressed")
-
-	# Saving current game state
-	GlobalState.save()
-
-	# Emit signal
+	
+	# Get narrative manager reference
+	var narrative_manager = get_node_or_null("/root/NarrativeManager")
+	if narrative_manager:
+		# Show the day transition
+		narrative_manager.show_day_transition(Global.shift, Global.shift + 1)
+		
+		# Connect to the dialogue_finished signal
+		if not narrative_manager.dialogue_finished.is_connected(_on_day_transition_complete):
+			narrative_manager.dialogue_finished.connect(_on_day_transition_complete, CONNECT_ONE_SHOT)
+	else:
+		# Fallback if narrative manager isn't found
+		_on_day_transition_complete()
+	
+	# Emit signal and free this screen
 	emit_signal("continue_to_next_shift")
 	queue_free()
 
+func _on_day_transition_complete():
+	# Saving current game state
+	GlobalState.save()
+	
+	# Reload the game scene
+	if SceneLoader:
+		SceneLoader.reload_current_scene()
+	else:
+		get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
 
 func _on_restart_button_pressed() -> void:
 	Global.reset_shift_stats()
