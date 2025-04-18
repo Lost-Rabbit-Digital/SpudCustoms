@@ -127,8 +127,11 @@ func check_violations(potato_info: Dictionary, current_rules: Array) -> Dictiona
 		result.violation_reason = "Document expired on " + potato_info.expiration_date
 		return result
 	
+	# Check for rule conflicts and remove them
+	var processed_rules = remove_conflicting_rules(current_rules)
+	
 	# Check each active rule
-	for rule in current_rules:
+	for rule in processed_rules:
 		if rule in LAW_CHECKS:
 			var check_func = LAW_CHECKS[rule]["check"]
 			if check_func.call(potato_info):
@@ -137,6 +140,23 @@ func check_violations(potato_info: Dictionary, current_rules: Array) -> Dictiona
 				break
 	
 	return result
+
+
+func remove_conflicting_rules(rules: Array) -> Array:
+	var processed_rules = rules.duplicate()
+	
+	# Rule pairs that are redundant or conflicting
+	var conflict_pairs = [
+		["[color=dark_goldenrod]All[/color] potatoes must be [color=dark_green]fresh[/color]!\n", 
+		 "[color=dark_goldenrod]Rotten[/color] potatoes are strictly [color=dark_red]forbidden[/color].\n"]
+	]
+	
+	for pair in conflict_pairs:
+		if processed_rules.has(pair[0]) and processed_rules.has(pair[1]):
+			# Keep only the first rule of the conflicting pair
+			processed_rules.erase(pair[1])
+	
+	return processed_rules
 
 # Helper function to calculate age
 func calculate_age(date_of_birth: String) -> int:

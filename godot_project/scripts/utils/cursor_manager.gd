@@ -58,6 +58,16 @@ func _process(_delta):
 	if not active:
 		return
 
+	# Skip cursor updates if game is paused or in dialogue
+	var is_paused = get_tree().paused
+	var is_in_dialogue = false
+	var narrative_manager = get_node_or_null("/root/NarrativeManager")
+	if narrative_manager and narrative_manager.has_method("is_dialogue_active"):
+		is_in_dialogue = narrative_manager.is_dialogue_active()
+		
+	if is_paused or is_in_dialogue:
+		return
+
 	# Handle mouse button pressed state
 	# Primary interaction pressed for first time
 	if Input.is_action_pressed("primary_interaction") and not input_pressed:

@@ -93,8 +93,6 @@ These are our goals, to-do tasks, and completed tasks.
 ## Tasks
 
 ### Law Bugs
-- "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
-- "Sprouted potatoes need additional verification and must be denied", change to not include verification
 
 ### Menus
 
@@ -117,15 +115,15 @@ These are our goals, to-do tasks, and completed tasks.
 ### Audio
 - Fix audio reference issues with gunshots in vengeance ending
 
+### General Bugs
+- Disable narrative manager when in score attack mode
+
+### Backend
+
 ### Testing
 - Test narrative and stats-based achievements
 - Test leaderboards for each shift and difficulty
 - Playtest: Beat Story mode, and test each of the 4 endings
-
-### Backend
-
-### General Bugs
-- Disable narrative manager when in score attack mode
 
 ### Art
 - loyalist_outcome, too human
@@ -143,6 +141,8 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ### Completed Tasks for 1.1.0
+- "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
+- "Sprouted potatoes need additional verification and must be denied", change to not include verification
 - Backend: Error handling if Steam is not loaded
 - When hit with a missile, make the Runner corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest
 - Test Shift 6 - 11 and see if end credits trigger
