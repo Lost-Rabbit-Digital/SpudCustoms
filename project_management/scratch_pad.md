@@ -97,11 +97,9 @@ These are our goals, to-do tasks, and completed tasks.
 ### Menus
 
 ### Graphics  
-- Center closed version of documents on the mouse position, it often appears offset
 - Stamp System: Need to troubleshoot particle effects for perfect stamps
 
 ### Gameplay
-- Shift end bonus not applying properly
 - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
 - Need to update support for combo multipliers with perfect stamps to visually inform player
 - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
@@ -109,17 +107,15 @@ These are our goals, to-do tasks, and completed tasks.
 - When shift ends, treat the last guy in office as rejected
 
 ### Audio
-- Fix audio reference issues with gunshots in vengeance ending
 
 ### General Bugs
-- Disable narrative manager when in score attack mode
 
 ### Backend
 
 ### Testing
 - Test narrative and stats-based achievements
 - Test leaderboards for each shift and difficulty
-- Playtest: Beat Story mode, and test each of the 4 endings
+- Playtest: Beat Story mode, and test each of the 4 endings (Vengeance Complete)
 
 ### Art
 - loyalist_outcome, too human
@@ -137,6 +133,10 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ### Completed Tasks for 1.1.0
+- Disable narrative manager when in score attack mode
+- Shift end bonus not applying properly
+- Fix audio reference issues with gunshots in vengeance ending
+- Center closed version of documents on the mouse position, it often appears offset
 - Cause stamps to wiggle and slam in and then fade into color on shift summary
 - Adding fade to skip or end of dialogic sequences so it doesn't abruptly switch
 - Should trigger show day transition after Continue button pressed
