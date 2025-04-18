@@ -905,7 +905,7 @@ func check_runner_hits(explosion_pos):
 
 func handle_successful_hit(runner, explosion_pos):
 	var root_node = get_tree().current_scene
-
+	var dir_vector = (runner.global_position - explosion_pos).normalized()
 	# Dictionary of corpse textures by race
 	var corpse_textures = {
 		"Russet": preload("res://assets/potatoes/bodies/russet_corpse.png"),
@@ -946,6 +946,42 @@ func handle_successful_hit(runner, explosion_pos):
 
 	# Add to a parent that won't be cleaned up
 	root_node.add_child(corpse)
+
+	# Create death animation tween
+	var tween = create_tween()
+	
+	# Arc trajectory - first up and away from impact
+	var arc_height = 50.0
+	var arc_distance = 80.0
+	var bounce_pos = runner.global_position + (dir_vector * arc_distance)
+	
+	# First go up in arc
+	tween.tween_property(corpse, "global_position:y",
+							runner.global_position.y - arc_height, 0.3).set_ease(Tween.EASE_OUT)
+
+	# While also moving in the direction away from explosion
+	tween.parallel().tween_property(corpse, "global_position:x", 
+								  bounce_pos.x, 0.3).set_ease(Tween.EASE_OUT)
+	
+	# Add spin during arc
+	tween.parallel().tween_property(corpse, "rotation", 
+								  dir_vector.x * PI * 2, 0.3)
+								  
+	# Then bounce on ground
+	tween.tween_property(corpse, "global_position:y", 
+						runner.global_position.y, 0.2).set_ease(Tween.EASE_IN)
+	
+	# Small second bounce
+	tween.tween_property(corpse, "global_position:y", 
+						runner.global_position.y - 15, 0.15).set_ease(Tween.EASE_OUT)
+						
+	# Final rest
+	tween.tween_property(corpse, "global_position:y", 
+						runner.global_position.y, 0.1).set_ease(Tween.EASE_IN)
+						
+	# Stop spinning
+	tween.parallel().tween_property(corpse, "rotation", 
+								 dir_vector.x * PI * 2.5, 0.25)
 
 	#var tween = create_tween()
 	#tween.tween_property(corpse, "modulate:a", 1.0, 2.0)

@@ -70,13 +70,10 @@ These are our goals, to-do tasks, and completed tasks.
 # FULL RELEASE TASKS - 2025-04-15 Target Release - 1.1.0
 ## Tasks
 - Disable narrative manager when in score attack mode
-- Game not fully unpausing for shift end dialogic cutscenes, maybe don't add the pause to end_shift 
 ### Law Bugs
-- Yukon Gold potatoes must be fresh given an error when it should be passing
 - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
 - "Sprouted potatoes need additional verification and must be denied", change to not include verification
 ### Menus
-- End shift dialogues don't appear to be triggering properly, test having it before shift summary screen?
 ### Graphics  
 - Add an animated counter up for each of the increases of the score (incrementally adding the numbers)
 - Add logic to check if game paused or in dialogic before updating cursor to target cursor
@@ -86,7 +83,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Concrete steps should be smaller and darker than the grass footsteps
 - Cursor / Bug: Target display is not showing when hovering over the missile area
 - Cursor: After dragging a document the cursor returns to default even if the cursor is still hovering over a document 
-- Cursor: Update cusor to work with Maaacks menu
+- Cursor: Update cursor to work with Maaacks menu
 - Drag and Drop / Bug: Do not allow the user to pick up the document through the stamp bar
 - Drag and Drop / Bug: Documents released appear in front of the suspect panel background
 - Drag and Drop / Bug: Get highest z-index doesn't seem to be working properly, cannot easily set passport atop of LawReceipt
@@ -99,25 +96,22 @@ These are our goals, to-do tasks, and completed tasks.
 - Stamp System: Need to troubleshoot particle effects for perfect stamps
 - Stamp System: Stamps go over edge of passport
 - Update cursor to show a select icon when above the approval or rejection stamp
-- When hit with a missile, make the Runner corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest
 - Z-Index Bug: Corpses need a slightly lower z-index to show BEHIND explosions (re-test)
 - Z-Index Bug: Explosions appear above the inspection table
 - Z-Index Bug: Potato footsteps appear above the customs office
 - Z-Index Bug: Potato gibs appear below the screen borders
 ### Gameplay
 - Shift end bonus not applying properly
-- Add a condition for if the player skips the final narrative so that the end credits are still signalled 
 - Allow missiles to kill approved potatoes, resulting in a Taterneva Convention violation (-250 points)
-- Disable ability to skip final cutscene so the player doesn't skip right into end credits?
 - Need to update support for combo multipliers with perfect stamps
 - Now that the Runner System has support for multiple runners, include a chance to run while waiting in line for each potato instead of waiting for rejection or the global timer
 - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
 - When shift ends, treat the last guy in office as rejected
 ### Audio
+- Fix audio reference issues with gunshots in vengeance ending
 ### Testing
 - Test narrative and stats-based achievements
 - Test leaderboards for each shift and difficulty
-- Test Shift 6 - 11 and see if end credits trigger
 - Playtest: Beat Story mode, and test each of the 4 endings
 ### Backend
 - Megaphone Dialogue System: Implement the different categories of dialogue from the JSON file into the megaphone_clicked function code in mainGame.gd
@@ -135,7 +129,17 @@ These are our goals, to-do tasks, and completed tasks.
 - security_lockdown, washed out
 - victory_scene, fucked up faces
 ### Credits
+
+
 ### Completed Tasks for 1.1.0
+- When hit with a missile, make the Runner corpse spin up in an arc opposite the direction of the missile impact, then bounce on the ground at the same y-level as corpse started at before coming to a rest
+- Test Shift 6 - 11 and see if end credits trigger
+- Yukon Gold potatoes must be fresh given an error when it should be passing
+- End shift dialogues don't appear to be triggering properly, test having it before shift summary screen?
+- Disable ability to skip final cutscene so the player doesn't skip right into end credits - NOT NEEDED
+- Add a condition for if the player skips the final narrative so that the end credits are still signalled 
+- Game not fully unpausing for shift end dialogic cutscenes, maybe don't add the pause to end_shift 
+- Playtest: Beat Story mode, and test vengeance ending 
 - Final cutscene not triggering
 - After hitting new game, Continue should also load the first level as if data were cleared
 - End scenes not triggering for shifts (should they be before the shift summary screen, or after the player clicks continue on the shift summary screen?)
