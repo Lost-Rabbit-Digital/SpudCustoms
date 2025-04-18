@@ -443,8 +443,8 @@ func end_shift(success: bool = true):
 	if success and Global.quota_met >= Global.quota_target:
 		# Add survival bonus
 		var survival_bonus = 500
-		Global.add_score(survival_bonus)
 		Global.display_green_alert(alert_label, alert_timer, "Quota met, shift completed! \n Bonus: " + str(survival_bonus) + " points!")
+		Global.add_score(survival_bonus)
 				
 		# Lower the shutter with animation when successful
 		if not office_shutter_controller.shutter_opened_this_shift:
@@ -675,8 +675,11 @@ func megaphone_clicked():
 	var potato = queue_manager.remove_front_potato()
 	if potato:
 		if office_shutter_controller.active_shutter_state == office_shutter_controller.ShutterState.CLOSED:
-			# Fade out the foreground shadow on the potato when they enter
-			character_generator.fade_out_foreground_shadow(4)
+			# Fade out the foreground shadow on the potato when they enter, only in story mode
+			if Global.game_mode == "score_attack":
+				pass
+			else:
+				character_generator.fade_out_foreground_shadow()
 	
 		# Only raise the shutter on the first megaphone click of the shift
 		megaphone_dialogue_box.set_random_message_from_category("spud_being_called")

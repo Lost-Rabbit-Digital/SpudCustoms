@@ -18,21 +18,16 @@ func new_game():
 
 func _on_new_game_confirmed():
 	await JuicyButtons.setup_button(%NewGameButton)
+	Global.switch_game_mode("story")
 	GlobalState.reset()
 	load_game_scene()
 
-func load_endless_scene():
-	SceneLoader.load_scene(endless_game_scene_path)
-
-func new_endless_game():
-	load_endless_scene()
-
-
 func _on_endless_button_pressed():
 	await JuicyButtons.setup_button(%EndlessButton)
+	print("Sending call to update game mode in Global")
+	Global.switch_game_mode("score_attack")
 	# Reset game state but keep high scores
 	Global.reset_shift_stats()
-	Global.switch_game_mode("score_attack")
 	# Now load the score attack scene instead
 	SceneLoader.load_scene("res://scenes/game_scene/score_attack_ui.tscn")
 
@@ -123,12 +118,11 @@ func _setup_game_buttons():
 			%LevelSelectButton.show()
 
 func _on_continue_game_button_pressed():
+	Global.switch_game_mode("story")
 	load_game_scene()
 
 func _on_level_select_button_pressed():
 	_open_sub_menu(level_select_scene)
-	
-
 	
 func load_tracks():
 	# Replace with your actual music tracks

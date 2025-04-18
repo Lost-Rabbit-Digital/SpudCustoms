@@ -153,6 +153,7 @@ func update_high_scores_display(difficulty: String = Global.difficulty_level) ->
 			
 
 func _on_level_buttons_container_item_activated(index: int) -> void:
+
 	# Get the level ID from metadata
 	var level_id = level_buttons_container.get_item_metadata(index)
 	
@@ -167,9 +168,13 @@ func _on_level_buttons_container_item_activated(index: int) -> void:
 		# Set the current level in GameState
 		GameState.set_current_level(level_id)
 		
+		
 		# Set the shift in the Global singleton to match the level_id
 		Global.shift = level_id
 		print("DEBUG: Set Global.shift to: ", level_id)
+		
+		# Update mode back to story mode
+		Global.switch_game_mode("story")
 		
 		# Print value after the change to verify
 		print("DEBUG: After change - Global.shift value: ", Global.shift)

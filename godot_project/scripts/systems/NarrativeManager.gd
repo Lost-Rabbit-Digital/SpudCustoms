@@ -40,6 +40,9 @@ var dialogue_active: bool = false
 var current_skip_button_layer: CanvasLayer = null
 
 func _ready():
+	# Skip initialization in score attack mode
+	if Global.game_mode == "score_attack":
+		return
 	# Initialize dialogic and load dialogue for appropriate shift
 	start_level_dialogue(Global.shift)
 	# Make it impossible to pause the narrative manager
@@ -47,23 +50,33 @@ func _ready():
 
 
 func start_level_dialogue(level_id: int):
+	if Global.game_mode == "score_attack":
+		return
+	# Return if already in dialogue
 	if dialogue_active:
 		return
+		
+	# Skip in score attack mode
+	print("Game mode is:", Global.game_mode)
+	if Global.game_mode == "score_attack":
+		print("score_attack detected")
+		#_on_skip_button_pressed()
+		pass
 
-	# Fade in first
-	fade_transition(true, func():
-		dialogue_active = true
-		var skip_button_layer = create_skip_button()
-		
-		var timeline_name = LEVEL_DIALOGUES.get(level_id, "generic_shift_start")
-		
-		var timeline = Dialogic.start(timeline_name)
-		add_child(timeline)
-		Dialogic.signal_event.connect(_on_dialogic_signal)
-		Dialogic.timeline_ended.connect(_on_shift_dialogue_finished)
-	)
+	dialogue_active = true
+	var skip_button_layer = create_skip_button()
+
+	var timeline_name = LEVEL_DIALOGUES.get(level_id, "generic_shift_start")
+
+	var timeline = Dialogic.start(timeline_name)
+	add_child(timeline)
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+	Dialogic.timeline_ended.connect(_on_shift_dialogue_finished)
 	
 func start_level_end_dialogue(level_id: int):
+	if Global.get("game_mode") == "score_attack":
+		return
+	
 	print("Attempting to start dialogue: ", level_id, " -> ", LEVEL_END_DIALOGUES.get(level_id, "unknown"))
 	if dialogue_active:
 		return
@@ -173,14 +186,11 @@ func _on_intro_dialogue_finished():
 func _on_shift_dialogue_finished():
 	print("Shift dialogue finished, calling cleanup")
 	
-	# Fade out and then complete the dialogue
-	fade_transition(false, func():
-		dialogue_active = false
-		current_shift += 1
-		Global.advance_story_state()
-		cleanup_skip_buttons()
-		emit_signal("dialogue_finished")
-	)
+	dialogue_active = false
+	current_shift += 1
+	Global.advance_story_state()
+	cleanup_skip_buttons()
+	emit_signal("dialogue_finished")
 
 
 func _on_final_dialogue_finished():

@@ -5,7 +5,7 @@ var current_story_state: int = 0
 var difficulty_level = "Normal" # Can be "Easy", "Normal", or "Expert"
 var build_type = "Full Release" # Can be Full Release or Demo Release
 var base_quota_target = 8 # Quota scaling variable
-
+var game_mode = "score_attack"
 # Transient variables
 var shift: int = 0
 var final_score = 0
@@ -161,6 +161,7 @@ func switch_game_mode(mode: String):
 	reset_shift_stats()
 	
 	if mode == "story":
+		game_mode = "story"
 		# Load story progress from GameState
 		shift = GameState.get_current_level()
 		# Set quota based on current level
@@ -171,6 +172,7 @@ func switch_game_mode(mode: String):
 		shift = 1
 		# Use standard quota based on difficulty
 		quota_target = 9999
+		game_mode = "score_attack"
 		
 	# Make sure UI gets updated on next scene load
 	save_game_state()
