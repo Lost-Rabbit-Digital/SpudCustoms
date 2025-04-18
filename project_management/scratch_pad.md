@@ -97,8 +97,6 @@ These are our goals, to-do tasks, and completed tasks.
 ### Menus
 
 ### Graphics  
-- Should trigger show day transition after Continue button pressed
-- Cause stamps to wiggle and slam in and then fade into color on shift summary
 - Center closed version of documents on the mouse position, it often appears offset
 - Stamp System: Need to troubleshoot particle effects for perfect stamps
 
@@ -139,7 +137,9 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ### Completed Tasks for 1.1.0
+- Cause stamps to wiggle and slam in and then fade into color on shift summary
 - Adding fade to skip or end of dialogic sequences so it doesn't abruptly switch
+- Should trigger show day transition after Continue button pressed
 - Add logic to check if game paused or in dialogic before updating cursor to target cursor
 - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
 - "Sprouted potatoes need additional verification and must be denied", change to not include verification

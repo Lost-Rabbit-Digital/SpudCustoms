@@ -442,13 +442,14 @@ func _update_dragged_item_position(mouse_pos: Vector2):
 		# Check if we would be moving over suspect area with closed shutter
 		var target_zone = identify_drop_zone(mouse_pos + drag_offset)
 
-		# Update position using the drag_offset
+		# Update position - center to cursor when closed
 		if drop_zone == "inspection_table" and !is_document_closed:
-			# Calculate drag offset - from mouse to item position
+			# When open on table, use the drag_offset
 			dragged_item.global_position = mouse_pos + drag_offset
 		else:
-			# Center item to cursor when closed
-			dragged_item.position = get_viewport().get_mouse_position()
+			# When closed, center it to the cursor
+			var size = get_item_size(dragged_item)
+			dragged_item.global_position = mouse_pos - (size / 2)
 
 		# If document was on table but no longer is, close it (only once)
 		if (

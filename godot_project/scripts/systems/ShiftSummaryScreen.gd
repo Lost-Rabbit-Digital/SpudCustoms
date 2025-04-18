@@ -210,6 +210,9 @@ Total Score Bonus: {total_score_bonus}
 	elif performance < 50:
 		performance_text = "Poor"
 		performance_color = Color(0.8, 0.2, 0.2)  # Red
+		
+	# Animate stamps based on performance
+	animate_grade_stamps(performance)
 
 	# Add performance rating to display
 	$RightPanel/PerformanceStats.text = (
@@ -682,8 +685,7 @@ func find_parent_viewport_container():
 		parent = parent.get_parent()
 	return null
 
-
-# You might want to add this to a utility script for reuse across your project
+# TODO: Utility re-use
 static func find_viewports_in_tree(node: Node) -> Array:
 	var viewports = []
 
@@ -695,3 +697,62 @@ static func find_viewports_in_tree(node: Node) -> Array:
 		viewports.append_array(child_viewports)
 
 	return viewports
+
+func animate_grade_stamps(performance: float):
+	# Get references to the grade stamps
+	var stamps = []
+	var num_stamps = 0
+	
+	if performance >= 150:
+		stamps = [$"RightPanel/GradeStamp-1", $"RightPanel/GradeStamp-2", $"RightPanel/GradeStamp-3"]
+		num_stamps = 3
+	elif performance >= 120:
+		stamps = [$"RightPanel/GradeStamp-1", $"RightPanel/GradeStamp-2"]
+		num_stamps = 2
+	elif performance >= 90:
+		stamps = [$"RightPanel/GradeStamp-1"]
+		num_stamps = 1
+	
+	# Reset all stamps first
+	for i in range(1, 4):
+		var stamp = get_node_or_null("RightPanel/GradeStamp-" + str(i))
+		if stamp:
+			stamp.modulate.a = 0
+			stamp.scale = Vector2(0.1, 0.1)
+			stamp.rotation_degrees = -45
+	
+	# Animate each stamp with a delay between them
+	for i in range(num_stamps):
+		var stamp = stamps[i]
+		
+		# Create stamp animation with delay
+		var tween = create_tween().set_parallel(false)
+		tween.tween_interval(i * 0.5)  # Stagger the stamps
+		
+		# Play stamp sound
+		tween.tween_callback(func():
+			var audio_player = AudioStreamPlayer.new()
+			audio_player.stream = preload("res://assets/audio/mechanical/stamp_sound_1.mp3")
+			audio_player.volume_db = -5
+			audio_player.bus = "SFX"
+			add_child(audio_player)
+			audio_player.play()
+			audio_player.finished.connect(func(): audio_player.queue_free())
+		)
+		
+		# Slam animation
+		tween.tween_property(stamp, "scale", Vector2(4.0, 4.0), 0.15)
+		tween.tween_property(stamp, "rotation_degrees", 0, 0.15)
+		tween.tween_property(stamp, "modulate:a", 1.0, 0.15)
+		
+		# Bounce back
+		tween.tween_property(stamp, "scale", Vector2(2.8, 2.8), 0.1)
+		
+		# Final settle
+		tween.tween_property(stamp, "scale", Vector2(3.0, 3.0), 0.1)
+	
+	# Replace the textures with final colored versions after animations
+	if num_stamps > 0:
+		var final_texture = preload("res://assets/menu/performance_stamp.png")
+		for i in range(num_stamps):
+			stamps[i].texture = final_texture
