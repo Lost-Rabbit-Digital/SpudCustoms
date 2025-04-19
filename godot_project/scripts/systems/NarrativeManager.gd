@@ -23,7 +23,12 @@ const LEVEL_DIALOGUES: Dictionary[int, String] = {
 }
 
 const LEVEL_END_DIALOGUES: Dictionary[int, String] = {
-	1: "shift1_end", 3: "shift3_end", 5: "shift5_end", 7: "shift7_end", 9: "shift9_end", 10: "final_confrontation"
+	1: "shift1_end",
+	3: "shift3_end",
+	5: "shift5_end",
+	7: "shift7_end",
+	9: "shift9_end",
+	10: "final_confrontation"
 }
 
 # Achievement IDs
@@ -38,6 +43,7 @@ var current_shift: int = 1
 var dialogic_timeline: Node
 var dialogue_active: bool = false
 var current_skip_button_layer: CanvasLayer = null
+
 
 func _ready():
 	# Skip initialization in score attack mode
@@ -55,13 +61,13 @@ func start_level_dialogue(level_id: int):
 	# Return if already in dialogue
 	if dialogue_active:
 		return
-		
+
 	# Skip in score attack mode
 	print("Game mode is:", Global.game_mode)
 	if Global.game_mode == "score_attack":
 		print("score_attack detected")
 		#_on_skip_button_pressed()
-		pass
+		#pass
 
 	dialogue_active = true
 	var skip_button_layer = create_skip_button()
@@ -72,12 +78,18 @@ func start_level_dialogue(level_id: int):
 	add_child(timeline)
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.timeline_ended.connect(_on_shift_dialogue_finished)
-	
+
+
 func start_level_end_dialogue(level_id: int):
 	if Global.get("game_mode") == "score_attack":
 		return
-	
-	print("Attempting to start dialogue: ", level_id, " -> ", LEVEL_END_DIALOGUES.get(level_id, "unknown"))
+
+	print(
+		"Attempting to start dialogue: ",
+		level_id,
+		" -> ",
+		LEVEL_END_DIALOGUES.get(level_id, "unknown")
+	)
 	if dialogue_active:
 		return
 
@@ -185,7 +197,7 @@ func _on_intro_dialogue_finished():
 
 func _on_shift_dialogue_finished():
 	print("Shift dialogue finished, calling cleanup")
-	
+
 	dialogue_active = false
 	current_shift += 1
 	Global.advance_story_state()
@@ -245,22 +257,24 @@ func show_day_transition(current_day: int, next_day: int):
 			emit_signal("dialogue_finished")
 	)
 
+
 func fade_transition(fade_in: bool, callback: Callable):
 	var fade_rect = ColorRect.new()
 	fade_rect.color = Color(0, 0, 0, 1.0 if fade_in else 0.0)
 	fade_rect.size = get_viewport().get_visible_rect().size
 	fade_rect.z_index = 100  # Above everything
-	
+
 	var fade_layer = CanvasLayer.new()
 	fade_layer.layer = 100
 	fade_layer.add_child(fade_rect)
 	add_child(fade_layer)
-	
+
 	var tween = create_tween()
 	tween.tween_property(fade_rect, "color:a", 0.0 if fade_in else 1.0, 0.5)
-	tween.tween_callback(func():
-		callback.call()
-		# If fading in, we keep the fade layer for the callback to handle
-		if not fade_in:
-			fade_layer.queue_free()
+	tween.tween_callback(
+		func():
+			callback.call()
+			# If fading in, we keep the fade layer for the callback to handle
+			if not fade_in:
+				fade_layer.queue_free()
 	)

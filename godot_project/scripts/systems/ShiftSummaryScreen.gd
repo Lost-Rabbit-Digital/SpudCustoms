@@ -210,7 +210,7 @@ Total Score Bonus: {total_score_bonus}
 	elif performance < 50:
 		performance_text = "Poor"
 		performance_color = Color(0.8, 0.2, 0.2)  # Red
-		
+
 	# Animate stamps based on performance
 	animate_grade_stamps(performance)
 
@@ -461,33 +461,37 @@ func transition_to_scene(scene_path: String):
 func _on_continue_button_pressed() -> void:
 	Global.reset_shift_stats()
 	print("Continue button pressed")
-	
+
 	# Get narrative manager reference
 	var narrative_manager = get_node_or_null("/root/NarrativeManager")
 	if narrative_manager:
 		# Show the day transition
 		narrative_manager.show_day_transition(Global.shift, Global.shift + 1)
-		
+
 		# Connect to the dialogue_finished signal
 		if not narrative_manager.dialogue_finished.is_connected(_on_day_transition_complete):
-			narrative_manager.dialogue_finished.connect(_on_day_transition_complete, CONNECT_ONE_SHOT)
+			narrative_manager.dialogue_finished.connect(
+				_on_day_transition_complete, CONNECT_ONE_SHOT
+			)
 	else:
 		# Fallback if narrative manager isn't found
 		_on_day_transition_complete()
-	
+
 	# Emit signal and free this screen
 	emit_signal("continue_to_next_shift")
 	queue_free()
 
+
 func _on_day_transition_complete():
 	# Saving current game state
 	GlobalState.save()
-	
+
 	# Reload the game scene
 	if SceneLoader:
 		SceneLoader.reload_current_scene()
 	else:
 		get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
+
 
 func _on_restart_button_pressed() -> void:
 	Global.reset_shift_stats()
@@ -685,6 +689,7 @@ func find_parent_viewport_container():
 		parent = parent.get_parent()
 	return null
 
+
 # TODO: Utility re-use
 static func find_viewports_in_tree(node: Node) -> Array:
 	var viewports = []
@@ -698,13 +703,16 @@ static func find_viewports_in_tree(node: Node) -> Array:
 
 	return viewports
 
+
 func animate_grade_stamps(performance: float):
 	# Get references to the grade stamps
 	var stamps = []
 	var num_stamps = 0
-	
+
 	if performance >= 150:
-		stamps = [$"RightPanel/GradeStamp-1", $"RightPanel/GradeStamp-2", $"RightPanel/GradeStamp-3"]
+		stamps = [
+			$"RightPanel/GradeStamp-1", $"RightPanel/GradeStamp-2", $"RightPanel/GradeStamp-3"
+		]
 		num_stamps = 3
 	elif performance >= 120:
 		stamps = [$"RightPanel/GradeStamp-1", $"RightPanel/GradeStamp-2"]
@@ -712,7 +720,7 @@ func animate_grade_stamps(performance: float):
 	elif performance >= 90:
 		stamps = [$"RightPanel/GradeStamp-1"]
 		num_stamps = 1
-	
+
 	# Reset all stamps first
 	for i in range(1, 4):
 		var stamp = get_node_or_null("RightPanel/GradeStamp-" + str(i))
@@ -720,39 +728,40 @@ func animate_grade_stamps(performance: float):
 			stamp.modulate.a = 0
 			stamp.scale = Vector2(0.1, 0.1)
 			stamp.rotation_degrees = -45
-	
+
 	# Animate each stamp with a delay between them
 	for i in range(num_stamps):
 		var stamp = stamps[i]
-		
+
 		# Create stamp animation with delay
 		var tween = create_tween().set_parallel(false)
 		tween.tween_interval(i * 0.5)  # Stagger the stamps
-		
+
 		# Play stamp sound
-		tween.tween_callback(func():
-			var audio_player = AudioStreamPlayer.new()
-			audio_player.stream = preload("res://assets/audio/mechanical/stamp_sound_1.mp3")
-			audio_player.volume_db = -5
-			audio_player.bus = "SFX"
-			add_child(audio_player)
-			audio_player.play()
-			audio_player.finished.connect(func(): audio_player.queue_free())
+		tween.tween_callback(
+			func():
+				var audio_player = AudioStreamPlayer.new()
+				audio_player.stream = preload("res://assets/audio/mechanical/stamp_sound_1.mp3")
+				audio_player.volume_db = -5
+				audio_player.bus = "SFX"
+				add_child(audio_player)
+				audio_player.play()
+				audio_player.finished.connect(func(): audio_player.queue_free())
 		)
-		
+
 		# Slam animation
 		tween.tween_property(stamp, "scale", Vector2(4.0, 4.0), 0.15)
 		tween.tween_property(stamp, "rotation_degrees", 0, 0.15)
 		tween.tween_property(stamp, "modulate:a", 1.0, 0.15)
-		
+
 		# Bounce back
 		tween.tween_property(stamp, "scale", Vector2(2.8, 2.8), 0.1)
-		
+
 		# Final settle
 		tween.tween_property(stamp, "scale", Vector2(3.0, 3.0), 0.1)
-	
+
 	# Replace the textures with final colored versions after animations
 	if num_stamps > 0:
-		var final_texture = preload("res://assets/menu/performance_stamp.png")
+		var final_texture = GRADE_STAMP_TEXTURE
 		for i in range(num_stamps):
 			stamps[i].texture = final_texture
