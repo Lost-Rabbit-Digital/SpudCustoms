@@ -16,6 +16,7 @@ These are our goals, to-do tasks, and completed tasks.
 - Potatoes bobbing up and down while walking
 
 ### Graphics
+- DaDS / Bug: If passport is dragged when shift ends, the passport appears above the fade
 - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
 - Add ink flecks from stamping that fly up when you stamp
 - Add message queue system and delay between messages so they don't override each other, add GDScript to alert_label
@@ -101,9 +102,8 @@ These are our goals, to-do tasks, and completed tasks.
 ### Law Bugs
 
 ## Drag and Drop System
-- DaDS / Bug: When dropping a passport onto the inspection table, it appears in front of the LawReceipt
+- DaDS / Bug: When dropping a passport onto the inspection table, it should appear in front of the LawReceipt
 - DaDS / Bug: You can drag the documents through the stamps, stamps should block interaction
-- DaDS / Bug: If passport is dragged when shift ends, the passport appears above the fade
 
 ### Menus
 

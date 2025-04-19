@@ -79,7 +79,7 @@ func close(animate: bool = true):
 		return
 
 	is_open = false
-
+	
 	# Update texture
 	if document_sprite and closed_texture:
 		document_sprite.texture = closed_texture

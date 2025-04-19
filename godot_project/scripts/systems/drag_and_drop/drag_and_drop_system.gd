@@ -449,7 +449,7 @@ func _update_dragged_item_position(mouse_pos: Vector2):
 		else:
 			# When closed, center it to the cursor
 			var size = get_item_size(dragged_item)
-			dragged_item.global_position = mouse_pos - (size / 2)
+			dragged_item.global_position = mouse_pos
 
 		# If document was on table but no longer is, close it (only once)
 		if (
