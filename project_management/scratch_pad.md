@@ -12,6 +12,8 @@ These are our goals, to-do tasks, and completed tasks.
 - Baggage inspection, grab bags and shake them with bugs and coins flying out until you get a "BAG CLEAN" and a small number of points, or contraband detected where you get points for clicking it
 - Multiplayer Implementation, co-op or versus using Steam Matchmaking
 - When shift ends, treat the last guy in office as rejected (Why vs approved?)
+- Office Shutter: Lever does not have SFX
+- Potatoes bobbing up and down while walking
 
 ### Graphics
 - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
@@ -91,31 +93,38 @@ These are our goals, to-do tasks, and completed tasks.
 - Whooosh sound when document is returned to table
 - Whooshing sound when documents are dragged quickly
 
+
+
 # FULL RELEASE TASKS - 2025-04-20 Target Release - 1.1.0
 ## Tasks
 
 ### Law Bugs
+
+## Drag and Drop System
+- DaDS / Bug: When dropping a passport onto the inspection table, it appears in front of the LawReceipt
+- DaDS / Bug: You can drag the documents through the stamps, stamps should block interaction
+- DaDS / Bug: If passport is dragged when shift ends, the passport appears above the fade
 
 ### Menus
 
 ### Graphics  
 - Stamp System: Why are the particle effects not visible / not triggering when a perfect stamp is placed in the top and middle 1/3rd of a document?
 - Add visual feedback for combo multipliers with perfect stamps
+- Cursor System: The target cursor is not showing when firing missiles
+- Dialogic / QoL: Dialogic scenes should fade in and out to the next scene
+- Mugshot Generator / Bug: Potatoes go over the inspection desk when accepted
+- Runners: If a runner is currently emoting when they begin a run, it seems to spawn two emotes
 
 ### Gameplay
 - Allow missiles to kill approved potatoes, resulting in 250 points removed and a strike added, with a flavor alert about a Totneva Convention violation
 - Add a small chance to run while waiting in line for each potato in addition to the rejection chance and global timer chance
+- Dialogic / Bug: You can launch missiles while in the tutorial scene
 
 ### Audio
 
 ### General Bugs
 
 ### Backend
-
-### Testing
-- Test narrative and stats-based achievements
-- Test leaderboards for each shift and difficulty, and score attack mode
-- Playtest: Beat Story mode, and test each of the 4 endings (Vengeance Complete)
 
 ### Art
 - plant_revelation, goopy potatoes
@@ -124,10 +133,17 @@ These are our goals, to-do tasks, and completed tasks.
 - victory_scene, fucked up faces
 - extreme_emergency, washed out
 
-### Credits
+### Credit Additions
+
+### Playtests
+- Test narrative and stats-based achievements
+- Test leaderboards for each shift and difficulty, and score attack mode
+- Playtest: Beat Story mode, and test each of the 4 endings (Vengeance Complete)
+
 
 
 ### Completed Tasks for 1.1.0
+- LawReceipt: Use BBCode to display the important elements of laws
 - updated art for loyalist_outcome, too human
 - updated art for night_checkpoint, messed up characters
 - updated art for processing_facility, remove random messed up potatoes
