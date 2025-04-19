@@ -100,10 +100,10 @@ These are our goals, to-do tasks, and completed tasks.
 
 ### Graphics  
 - Stamp System: Why are the particle effects not visible / not triggering when a perfect stamp is placed in the top and middle 1/3rd of a document?
+- Add visual feedback for combo multipliers with perfect stamps
 
 ### Gameplay
 - Allow missiles to kill approved potatoes, resulting in 250 points removed and a strike added, with a flavor alert about a Totneva Convention violation
-- Add visual feedback for combo multipliers with perfect stamps
 - Add a small chance to run while waiting in line for each potato in addition to the rejection chance and global timer chance
 
 ### Audio
@@ -114,27 +114,28 @@ These are our goals, to-do tasks, and completed tasks.
 
 ### Testing
 - Test narrative and stats-based achievements
-- Test leaderboards for each shift and difficulty
+- Test leaderboards for each shift and difficulty, and score attack mode
 - Playtest: Beat Story mode, and test each of the 4 endings (Vengeance Complete)
 
 ### Art
-- loyalist_outcome, too human
-- night attack, human man in background
-- night_checkpoint, messed up characters
-- personal quarters, style break, random
 - plant_revelation, goopy potatoes
-- processing_facility, remove random messed up potatoes
 - reckoning, fix grain
 - resistance_planning, emblems should be potatoes, potatoes should not have armor, leader should look more like old white mustache russet potato
-- security_lockdown, washed out
 - victory_scene, fucked up faces
+- extreme_emergency, washed out
 
 ### Credits
 
 
 ### Completed Tasks for 1.1.0
-- checkpoint_interior, fix hat direction
-- border chaos, fix dog-face man and best employee picture
+- updated art for loyalist_outcome, too human
+- updated art for night_checkpoint, messed up characters
+- updated art for processing_facility, remove random messed up potatoes
+- updated art for personal quarters, style break, random
+- updated art for security_lockdown, washed out
+- updated art for night_attack, remove human man in background
+- updated art for checkpoint_interior, fix hat direction
+- updated art for border_chaos, fix dog-face man and best employee picture
 - Disable narrative manager when in score attack mode
 - Shift end bonus not applying properly
 - Fix audio reference issues with gunshots in vengeance ending
