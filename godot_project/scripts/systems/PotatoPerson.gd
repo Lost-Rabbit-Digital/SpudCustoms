@@ -333,18 +333,36 @@ func spawn_footprint():
 	# Load the appropriate texture
 	if is_on_concrete:
 		footprint.texture = preload("res://assets/effects/footstep_concrete.png")
-		# Make concrete footprints smaller and darker
-		footprint.scale = Vector2(0.7, 0.7)  # 70% the size of grass footprints
-		footprint.modulate = Color(0.5, 0.5, 0.5, 0.8)  # Darker color
+		# Random scale for concrete footprints - slightly smaller than grass
+		footprint.scale = Vector2(
+			randf_range(0.65, 0.75),
+			randf_range(0.65, 0.75)
+		)
+		# Darker color for concrete footprints
+		footprint.modulate = Color(1, 1, 1, 0.7)
 	else:
 		footprint.texture = preload("res://assets/effects/footstep_grass.png")
-		footprint.scale = Vector2(1.0, 1.0)  # Normal size
-		footprint.modulate = Color(1.0, 1.0, 1.0, 0.8)  # Normal color
-
+		# Random scale for grass footprints
+		footprint.scale = Vector2(
+			randf_range(0.75, 0.85),
+			randf_range(0.75, 0.85)
+		)
+		# Normal color
+		footprint.modulate = Color(1, 1, 1, 0.8)
+		
+	# Add random rotation to make footprints look more natural
+	# Limit rotation to a realistic range for footsteps (slight variations)
+	footprint.rotation = randf_range(-0.15, 0.15)  # About +/-8.6 degrees
+	# Base position starts at the player's position
 	footprint.global_position = global_position
-	footprint.global_position.y += 11
-	footprint.z_index = ConstantZIndexes.Z_INDEX.FOOTPRINTS  # Below the potato
-	footprint.rotation = rotation  # Align with movement direction
+	# Add random offsets to create more natural-looking footstep patterns
+	var x_offset = randf_range(-5, 5)  # Random horizontal offset of +/-5 pixels
+	var y_offset = randf_range(8, 14)  # Random vertical offset between 8-14 pixels
+	# Apply the offsets
+	footprint.global_position.x += x_offset
+	footprint.global_position.y += y_offset
+	# Set z-index to ensure footprints appear below the potato
+	footprint.z_index = ConstantZIndexes.Z_INDEX.FOOTPRINTS
 
 	# Add the footprint to a group for easier management
 	footprint.add_to_group("FootprintGroup")
