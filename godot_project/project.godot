@@ -38,6 +38,7 @@ ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autolo
 LawValidator="*res://assets/autoload/LawValidator.gd"
 JuicyButtons="*res://scripts/utils/juicy_buttons.gd"
 CursorManager="*res://scripts/utils/cursor_manager.gd"
+ConstantZIndexes="*res://scripts/constant_z_indexes.gd"
 
 [debug]
 
