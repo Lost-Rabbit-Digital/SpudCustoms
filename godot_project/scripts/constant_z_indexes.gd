@@ -16,18 +16,16 @@ extends Node
 ## allow for future additions without reorganizing the entire system
 const Z_INDEX = {
 	# ----------------------------------------------------------------------
-	# Environment Base Layers (negative values appear behind the ground)
+	# Core Layers
 	# ----------------------------------------------------------------------
-	"BACKGROUND": -10,           # Furthest back - skybox, distant mountains, etc.
-	"PARALLAX_BACKGROUND": -8,   # Scrolling backgrounds that move slower than player
-	"TERRAIN": -5,               # Terrain features like hills and permanent landscape
-	"GROUND": 0,                 # The base ground layer (z=0 is our reference point)
+	## Furthest back - skybox, distant mountains, etc.
+	"SCREEN_BORDER": 20,         
 	
 	# ----------------------------------------------------------------------
 	# Ground-Level Detail Layers
 	# ----------------------------------------------------------------------
-	"SHADOWS": 1,                # Shadows cast by game objects
-	"FOOTPRINTS": 2,             # Footprint marks left by characters
+	#"ENVIRONMENTAL_SHADOWS": 1,                # Shadows cast by game objects
+	"ENVIRONMENT": 8,            # Terrain features like hills and permanent landscape
 	
 	# ----------------------------------------------------------------------
 	# Game Object Layers
@@ -36,6 +34,7 @@ const Z_INDEX = {
 	"CORPSES": 5,                # Dead bodies that remain on ground
 	"BLOOD": 6,                  # Blood splatter effects
 	"GIBS": 7,                   # Character fragments after explosions
+	"FOOTPRINTS": 2,             # Footprint marks left by characters
 	
 	# ----------------------------------------------------------------------
 	# Character Layers
@@ -62,6 +61,7 @@ const Z_INDEX = {
 	# ----------------------------------------------------------------------
 	# User Interface Layers (high values to always appear on top)
 	# ----------------------------------------------------------------------
+	"LABELS": 12,         # UI panel backgrounds
 	"UI_BACKGROUND": 90,         # UI panel backgrounds
 	"UI_ELEMENTS": 100,          # Standard UI elements
 	"UI_FOREGROUND": 110,        # UI elements that should appear in front of others

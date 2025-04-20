@@ -694,7 +694,6 @@ func _handle_document_drop(mouse_pos: Vector2):
 	if drop_zone == "inspection_table" and was_open:
 		# No need to emit open signal if document is already open
 		dragged_item.z_index = DEFAULT_Z_INDEX
-		pass
 	# If dropping on inspection table and document was closed, open it
 	elif drop_zone == "inspection_table" and !was_open:
 		# Only open if it wasn't already open
