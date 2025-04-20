@@ -182,6 +182,7 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/maaa
 
 PotatoPerson=""
 AudioPlayers=""
+ConcreteAreas="Walkable area made of concrete"
 
 [gui]
 

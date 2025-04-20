@@ -383,8 +383,13 @@ func _on_potato_button_mouse_exited() -> void:
 func is_potato_on_concrete() -> bool:
 	var concrete_areas = get_tree().get_nodes_in_group("ConcreteAreas")
 	for area in concrete_areas:
-		if area is Area2D and area.overlaps_body(self):
-			return true
-
+		if area is Polygon2D:
+			# Convert global position to area's local coordinates
+			var local_point = area.global_transform.affine_inverse() * self.global_position
+			
+			# Use Geometry2D to check if point is in polygon
+			if Geometry2D.is_point_in_polygon(local_point, area.polygon):
+				return true
+	
 	# Default to grass
 	return false
