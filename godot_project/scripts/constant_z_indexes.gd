@@ -18,16 +18,16 @@ const Z_INDEX = {
 	# ----------------------------------------------------------------------
 	# Core Layers
 	# ----------------------------------------------------------------------
-	## Furthest back - skybox, distant mountains, etc.
-	"SCREEN_BORDER": null,         
+	## Furthest forward, appears above all other elements to form a border.
+	"SCREEN_BORDER": 20,         
 	
 	# ----------------------------------------------------------------------
 	# Ground-Level Detail Layers
 	# ----------------------------------------------------------------------
 	## Shadows cast by game objects
 	"ENVIRONMENTAL_SHADOWS": null,                
-	## Terrain features like hills and permanent landscape
-	"ENVIRONMENT": null,
+	## The main environmental art piece
+	"ENVIRONMENT": 8,
 	
 	# ----------------------------------------------------------------------
 	# Game Object Layers
@@ -77,7 +77,7 @@ const Z_INDEX = {
 	## Explosion effects
 	"EXPLOSIONS": null,            
 	## Footprints left by NPCs
-	"FOOTPRINTS": null,
+	"FOOTPRINTS": 9,
 	
 	# ----------------------------------------------------------------------
 	# User Interface Layers (high values to always appear on top)

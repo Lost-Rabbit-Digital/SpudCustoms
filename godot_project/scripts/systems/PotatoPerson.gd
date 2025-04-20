@@ -343,8 +343,7 @@ func spawn_footprint():
 
 	footprint.global_position = global_position
 	footprint.global_position.y += 11
-	footprint.z_index = 0  # Below the potato
-	footprint.z_as_relative = true
+	footprint.z_index = ConstantZIndexes.Z_INDEX.FOOTPRINTS  # Below the potato
 	footprint.rotation = rotation  # Align with movement direction
 
 	# Add the footprint to a group for easier management
