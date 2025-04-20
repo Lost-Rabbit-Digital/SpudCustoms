@@ -1,33 +1,47 @@
-[gd_scene load_steps=8 format=3 uid="uid://c4h2cf8sxx3gh"]
+[gd_scene load_steps=11 format=3 uid="uid://c4h2cf8sxx3gh"]
 
-[ext_resource type="Texture2D" uid="uid://doml0udrwe6pe" path="res://assets/world/Background.png" id="1_eq8ee"]
-[ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/world/customs_office.png" id="2_fkyx8"]
-[ext_resource type="Texture2D" uid="uid://yvmmxdnlhttw" path="res://assets/world/fence_posts.png" id="3_gfqs4"]
+[ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/world/elements/customs_office.png" id="2_fkyx8"]
+[ext_resource type="Texture2D" uid="uid://yvmmxdnlhttw" path="res://assets/world/elements/fence_posts.png" id="3_gfqs4"]
 [ext_resource type="Material" uid="uid://c1fljl8m4j1w1" path="res://assets/shaders/grass_animation_material.tres" id="4_nqcph"]
-[ext_resource type="Texture2D" uid="uid://ds2lwggt7nk5l" path="res://assets/world/grass_texture.png" id="5_y64ie"]
+[ext_resource type="Texture2D" uid="uid://ds2lwggt7nk5l" path="res://assets/world/elements/grass_texture.png" id="5_y64ie"]
 [ext_resource type="Material" uid="uid://cxhxsjojddi0p" path="res://assets/shaders/window/window_cover_material.tres" id="6_ny30l"]
-[ext_resource type="Texture2D" uid="uid://dllp1qtb5fpbu" path="res://assets/world/window_covers.png" id="7_gpohd"]
+[ext_resource type="Texture2D" uid="uid://dllp1qtb5fpbu" path="res://assets/world/elements/window_covers.png" id="7_gpohd"]
+[ext_resource type="Texture2D" uid="uid://qje1c3qsy3xf" path="res://assets/world/elements/walkways.png" id="8_nqcph"]
+[ext_resource type="Texture2D" uid="uid://bbqeaqeapw80f" path="res://assets/world/elements/primary_grass.png" id="8_y64ie"]
+[ext_resource type="Texture2D" uid="uid://c34mkfgggpuhi" path="res://assets/world/elements/walls.png" id="9_y64ie"]
+[ext_resource type="Texture2D" uid="uid://c1kftrgeokqa6" path="res://assets/world/elements/misc.png" id="10_ny30l"]
 
 [node name="Environment" type="Node2D"]
 
-[node name="WorldPanel" type="Sprite2D" parent="."]
+[node name="Elements" type="Sprite2D" parent="."]
 position = Vector2(642.352, 121.5)
 scale = Vector2(2.59658, 2.44318)
-texture = ExtResource("1_eq8ee")
 
-[node name="CustomsOffice" type="Sprite2D" parent="WorldPanel"]
+[node name="CustomsOffice" type="Sprite2D" parent="Elements"]
 z_index = 7
 texture = ExtResource("2_fkyx8")
 
-[node name="FencePosts" type="Sprite2D" parent="WorldPanel"]
-z_index = 6
-texture = ExtResource("3_gfqs4")
+[node name="PrimaryGrass" type="Sprite2D" parent="Elements"]
+texture = ExtResource("8_y64ie")
 
-[node name="GrassTexture" type="Sprite2D" parent="WorldPanel"]
+[node name="AnimatedGrass" type="Sprite2D" parent="Elements"]
 material = ExtResource("4_nqcph")
 position = Vector2(49, 6)
 texture = ExtResource("5_y64ie")
 
-[node name="WindowCovers" type="Sprite2D" parent="WorldPanel"]
+[node name="FencePosts" type="Sprite2D" parent="Elements"]
+z_index = 6
+texture = ExtResource("3_gfqs4")
+
+[node name="Walkways" type="Sprite2D" parent="Elements"]
+texture = ExtResource("8_nqcph")
+
+[node name="Walls" type="Sprite2D" parent="Elements"]
+texture = ExtResource("9_y64ie")
+
+[node name="Windows" type="Sprite2D" parent="Elements"]
 material = ExtResource("6_ny30l")
 texture = ExtResource("7_gpohd")
+
+[node name="Misc" type="Sprite2D" parent="Elements"]
+texture = ExtResource("10_ny30l")
