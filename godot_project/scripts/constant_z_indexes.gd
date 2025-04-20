@@ -19,64 +19,85 @@ const Z_INDEX = {
 	# Core Layers
 	# ----------------------------------------------------------------------
 	## Furthest back - skybox, distant mountains, etc.
-	"SCREEN_BORDER": 20,         
+	"SCREEN_BORDER": null,         
 	
 	# ----------------------------------------------------------------------
 	# Ground-Level Detail Layers
 	# ----------------------------------------------------------------------
-	#"ENVIRONMENTAL_SHADOWS": 1,                # Shadows cast by game objects
-	"ENVIRONMENT": 8,            # Terrain features like hills and permanent landscape
+	## Shadows cast by game objects
+	"ENVIRONMENTAL_SHADOWS": null,                
+	## Terrain features like hills and permanent landscape
+	"ENVIRONMENT": null,
 	
 	# ----------------------------------------------------------------------
 	# Game Object Layers
 	# ----------------------------------------------------------------------
-	"ITEMS": 3,                  # Collectible items and pickups
-	"CORPSES": 5,                # Dead bodies that remain on ground
-	"BLOOD": 6,                  # Blood splatter effects
-	"GIBS": 7,                   # Character fragments after explosions
-	"FOOTPRINTS": 2,             # Footprint marks left by characters
+	## Missiles launcher by the player
+	"MISSILES": null,
+	## Dead bodies that remain on ground
+	"CORPSES": null,                
+	## Corpse fragments after explosions
+	"GIBS": null,                   
+	## Vehicles on the main road             
+	"VEHICLES": null,
 	
 	# ----------------------------------------------------------------------
 	# Character Layers
 	# ----------------------------------------------------------------------
-	"RUNNERS": 10,               # NPCs that run/move in the game
-	"ENEMIES": 11,               # Enemy characters
-	"PLAYER": 12,                # The player character(s)
-	"WEAPONS": 13,               # Weapons held by characters
+	## NPCs that walk/run in the game, also known as "runners"
+	"NPC": null,              
+	## The player character(s)
+	"PLAYER": null,                
 	
 	# ----------------------------------------------------------------------
 	# Interactive Environment Layers
 	# ----------------------------------------------------------------------
-	"TABLE": 15,                 # The main table surface
-	"DOCUMENTS": 20,             # Papers and documents on the table
-	"STAMPS": 25,                # Stamps and inking tools
-	"INKWELL": 26,               # Inkwell and other similar desk tools
+	## The main table surface
+	"INSPECTION_TABLE": null,                 
+	## The suspect which moves through the office
+	"SUSPECT": null,
+	## The shutter which opens/closes in the office
+	"OFFICE_SHUTTER": null,
+	
+	# ----------------------------------------------------------------------
+	# Interactive Object Layers
+	# ----------------------------------------------------------------------
+	## Documents which are not actively interacted with
+	"IDLE_DOCUMENT": null,             
+	## Documents which are actively been dragged
+	"DRAGGED_DOCUMENT": null,
+	"STAMPS": null,                # Stamps and inking tools
+	"INKWELL": null,               # Inkwell and other similar desk tools
 	
 	# ----------------------------------------------------------------------
 	# Visual Effect Layers
 	# ----------------------------------------------------------------------
-	"PARTICLE_EFFECTS": 30,      # General particle systems (dust, smoke, etc.)
-	"EXPLOSIONS": 35,            # Explosion effects (always on top of gameplay elements)
+	## General particle systems (dust, smoke, etc.)
+	"STAMP_PARTICLES": null,      
+	## Explosion effects
+	"EXPLOSIONS": null,            
+	## Footprints left by NPCs
+	"FOOTPRINTS": null,
 	
 	# ----------------------------------------------------------------------
 	# User Interface Layers (high values to always appear on top)
 	# ----------------------------------------------------------------------
-	"LABELS": 12,         # UI panel backgrounds
-	"UI_BACKGROUND": 90,         # UI panel backgrounds
-	"UI_ELEMENTS": 100,          # Standard UI elements
-	"UI_FOREGROUND": 110,        # UI elements that should appear in front of others
-	"TOOLTIPS": 120,             # Tooltip popups
-	"CURSOR": 125,               # Custom mouse cursor
-	"SCREEN_BORDERS": 130,       # Border elements framing the screen
+	"LABELS": null,         # UI panel backgrounds
+	"UI_BACKGROUND": null,         # UI panel backgrounds
+	"UI_ELEMENTS": null,          # Standard UI elements
+	"UI_FOREGROUND": null,        # UI elements that should appear in front of others
+	"TOOLTIPS": null,             # Tooltip popups
+	"CURSOR": null,               # Custom mouse cursor
+	"SCREEN_BORDERS": null,       # Border elements framing the screen
 	
 	# ----------------------------------------------------------------------
 	# Top-Level Game Elements
 	# ----------------------------------------------------------------------
-	"DIALOGUE": 200,             # Dialogue boxes and text
-	"NOTIFICATIONS": 210,        # Popup notifications and alerts
-	"PAUSE_MENU": 250,           # Pause menu (appears above everything else)
-	"TRANSITION_EFFECTS": 900,   # Scene transition effects
-	"DEBUG_OVERLAY": 1000        # Debug information (highest z-index)
+	"DIALOGUE": null,             # Dialogue boxes and text
+	"NOTIFICATIONS": null,        # Popup notifications and alerts
+	"PAUSE_MENU": null,           # Pause menu (appears above everything else)
+	"TRANSITION_EFFECTS": null,   # Scene transition effects
+	"DEBUG_OVERLAY": null        # Debug information (highest z-index)
 }
 
 # ------------------------------------------------------------------------------
