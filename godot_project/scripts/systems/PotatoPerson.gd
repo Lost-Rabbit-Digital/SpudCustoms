@@ -352,7 +352,7 @@ func spawn_footprint():
 		
 	# Add random rotation to make footprints look more natural
 	# Limit rotation to a realistic range for footsteps (slight variations)
-	footprint.rotation = randf_range(-0.15, 0.15)  # About +/-8.6 degrees
+	footprint.rotation = randf_range(-0.1, 0.15)  # About +/-8.6 degrees
 	# Base position starts at the player's position
 	footprint.global_position = global_position
 	# Add random offsets to create more natural-looking footstep patterns
