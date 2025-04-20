@@ -102,8 +102,11 @@ These are our goals, to-do tasks, and completed tasks.
 ### Law Bugs
 
 ## Drag and Drop System
-- DaDS / Bug: When dropping a passport onto the inspection table, it should appear in front of the LawReceipt
+- DaDS / Bug: When dropping a document onto the inspection table, it should appear in front of whatever is on the table
+
 - DaDS / Bug: You can drag the documents through the stamps, stamps should block interaction
+- DaDS / Bug: The _return_item_to_table buffers seem to be broken
+- DaDS / Bug: When you drag documents, they do not appear above other documents
 
 ### Menus
 

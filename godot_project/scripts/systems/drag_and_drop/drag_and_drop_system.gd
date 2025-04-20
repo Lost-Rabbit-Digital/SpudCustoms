@@ -29,12 +29,9 @@ signal item_closed(item)
 signal passport_returned(item)
 
 # Configuration
-## Z-index for passport documents in normal state.
-const PASSPORT_Z_INDEX = 3
-
 ## Z-index for items being actively dragged (higher than normal).
 const DEFAULT_Z_INDEX = 3
-const OPEN_DRAGGING_Z_INDEX = 3
+const OPEN_DRAGGING_Z_INDEX = 4
 const CLOSED_DRAGGING_Z_INDEX = 25
 
 ## Duration in seconds for the return animation when dropping outside valid zones.
@@ -66,9 +63,6 @@ var drag_offset = Vector2()
 
 ## Flag indicating if the document was closed during the current drag operation.
 var is_document_closed = false
-
-## Stores the original z-index of the dragged item to restore after dropping.
-var original_z_index: int
 
 ## Reference to the item currently being hovered over.
 var hovered_item = null
@@ -141,9 +135,8 @@ func register_draggable_items(items: Array):
 	# Set initial z-index for all items if not already set
 	for item in draggable_items:
 		if is_instance_valid(item):
-			if item.z_index == 0:  # Only set if not already set
+			if item.z_index != DEFAULT_Z_INDEX:  # Only set if not already set
 				push_warning("Draggable Item is missing z-index: %s", item)
-				item.z_index = PASSPORT_Z_INDEX
 		else:
 			push_warning("Invalid draggable item provided")
 
@@ -243,9 +236,7 @@ func _handle_mouse_press(mouse_position: Vector2) -> bool:
 			# Reset document_was_closed flag for new drag
 			is_document_closed = false
 
-			# Store original z-index and set to higher value while dragging
-			#original_z_index = dragged_item.z_index
-			original_z_index = DEFAULT_Z_INDEX
+			# Set the dragged_item z_index higher while it's being dragged
 			dragged_item.z_index = OPEN_DRAGGING_Z_INDEX
 
 			# Get current drop zone
@@ -344,6 +335,7 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 
 			# Return to table
 			_return_item_to_table(dragged_item)
+			dragged_item.z_index = DEFAULT_Z_INDEX
 
 			# Clear the dragged item after return animation starts
 			var item = dragged_item
@@ -363,11 +355,12 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 			if doc_controller and doc_controller.is_document_open():
 				doc_controller.close()
 
-			# Maybe play a "blocked" sound effect
+			# Play a "blocked" sound effect
 			play_block_sound()
 
 			# Return to table
 			_return_item_to_table(dragged_item)
+			dragged_item.z_index = DEFAULT_Z_INDEX
 
 			# Clear the dragged item after return animation starts
 			var item = dragged_item
@@ -389,13 +382,7 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 				doc_controller.on_drop(drop_zone)
 
 			# Handle specific item drop logic
-			if dragged_item.name == "Passport":
-				_handle_passport_drop(mouse_pos)
-			elif dragged_item.name == "LawReceipt":
-				_handle_receipt_drop(mouse_pos)
-
-			# Restore original z-index for valid drop zones
-			dragged_item.z_index = original_z_index
+			_handle_document_drop(mouse_pos)
 		else:
 			# Invalid drop zone - ensure document is closed
 			if doc_controller and doc_controller.is_document_open():
@@ -510,7 +497,6 @@ func find_nearest_table_position(item_position: Vector2, item_size: Vector2) -> 
 func _return_item_to_table(item: Node2D):
 	if not item or not inspection_table:
 		if item:
-			item.z_index = original_z_index
 			item.scale = item.scale  # Ensure scale is normalized
 			dragged_item = null
 		return
@@ -561,7 +547,6 @@ func _return_item_to_table(item: Node2D):
 		func():
 			# Force exact scale restoration
 			item.scale = original_scale
-			item.z_index = original_z_index
 			# Open the document when it returns to the table
 			#if is_openable_document(item):
 			#emit_signal("item_opened", item)
@@ -610,6 +595,7 @@ func find_topmost_item_at(pos: Vector2) -> Node2D:
 	if not is_instance_valid(_stamp_bar_controller):
 		_stamp_bar_controller = get_stamp_bar_controller()
 
+	# TODO: This is broken, it doesn't properly check for the stamps
 	# Check if mouse is over approval or rejection stamp button
 	if is_instance_valid(_stamp_bar_controller) and _stamp_bar_controller.is_visible:
 		var approval_stamp = _stamp_bar_controller.get_node_or_null(
@@ -635,9 +621,8 @@ func find_topmost_item_at(pos: Vector2) -> Node2D:
 
 	for item in draggable_items:
 		if item.visible and item.get_rect().has_point(item.to_local(pos)):
-			if item.z_index > highest_z:
-				highest_z = item.z_index
-				topmost_item = item
+			#highest_z = item.z_index
+			topmost_item = item
 
 	return topmost_item
 
@@ -697,12 +682,8 @@ func get_highest_z_index() -> int:
 
 # === Specific item handlers ===
 
-
-## Handles passport drop logic.
-##
-## Manages document state based on drop zone and emits appropriate signals.
-## @param mouse_pos The mouse position where the drop occurred.
-func _handle_passport_drop(mouse_pos: Vector2):
+### Handles document drop logic
+func _handle_document_drop(mouse_pos: Vector2):
 	var drop_zone = identify_drop_zone(mouse_pos)
 
 	# Get document controller to check current state
@@ -712,6 +693,7 @@ func _handle_passport_drop(mouse_pos: Vector2):
 	# If dropping on inspection table and document was already open, keep it open
 	if drop_zone == "inspection_table" and was_open:
 		# No need to emit open signal if document is already open
+		dragged_item.z_index = DEFAULT_Z_INDEX
 		pass
 	# If dropping on inspection table and document was closed, open it
 	elif drop_zone == "inspection_table" and !was_open:
@@ -723,27 +705,12 @@ func _handle_passport_drop(mouse_pos: Vector2):
 		emit_signal("item_closed", dragged_item)
 
 		# If dropping on suspect, emit passport_returned signal
-		if drop_zone == "suspect":
+		if drop_zone == "suspect" and dragged_item.name == "Passport":
 			emit_signal("passport_returned", dragged_item)
 			if stamp_system_manager:
 				stamp_system_manager.clear_passport_stamps()
 			else:
 				push_error("Cannot clear passport stamps: StampSystemManager is null")
-
-
-## Handles receipt drop logic.
-##
-## Manages document state based on drop zone and emits appropriate signals.
-## @param mouse_pos The mouse position where the drop occurred.
-func _handle_receipt_drop(mouse_pos: Vector2):
-	var drop_zone = identify_drop_zone(mouse_pos)
-	if drop_zone == "inspection_table":
-		# Logic to open receipt
-		emit_signal("item_opened", dragged_item)
-	elif drop_zone == "suspect_panel" or drop_zone == "suspect":
-		# Logic to close receipt
-		emit_signal("item_closed", dragged_item)
-
 
 ## Plays the open document sound.
 ##

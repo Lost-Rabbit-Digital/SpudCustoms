@@ -167,7 +167,7 @@ func is_document_open(document_name: String) -> bool:
 ##
 ## @param item The node that was opened.
 func _on_item_opened(item: Node2D):
-	item.z_index = drag_system.OPEN_DRAGGING_Z_INDEX
+	item.z_index = drag_system.DEFAULT_Z_INDEX
 	var document_name = item.name
 	open_document(document_name)
 
