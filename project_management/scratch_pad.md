@@ -110,6 +110,8 @@ These are our goals, to-do tasks, and completed tasks.
 ### Menus
 
 ### Graphics  
+- Documents show above the suspect panel background, use viewport masking
+- Stamps can be placed on the outside of the passport, use viewport masking
 - Stamp System: Why are the particle effects not visible / not triggering when a perfect stamp is placed in the top and middle 1/3rd of a document?
 - Add visual feedback for combo multipliers with perfect stamps
 - Cursor System: The target cursor is not showing when firing missiles

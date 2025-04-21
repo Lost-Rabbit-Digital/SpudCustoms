@@ -129,6 +129,7 @@ func _ready():
 	$Gameplay/InspectionTable.z_index = ConstantZIndexes.Z_INDEX.INSPECTION_TABLE
 	%OfficeShutterController.z_index = ConstantZIndexes.Z_INDEX.OFFICE_SHUTTER
 	$Gameplay/SuspectPanel.z_index = ConstantZIndexes.Z_INDEX.SUSPECT_PANEL
+	$Gameplay/MugshotPhotoGenerator.z_index = ConstantZIndexes.Z_INDEX.SUSPECT
 	
 	safety_unpause_timer = Timer.new()
 	safety_unpause_timer.one_shot = true
