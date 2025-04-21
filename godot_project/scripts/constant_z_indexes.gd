@@ -51,7 +51,7 @@ const Z_INDEX = {
 	## Panel which the suspect sits in front of
 	"SUSPECT_PANEL": 0,               
 	## The suspect which moves through the office
-	"SUSPECT": 5,
+	"SUSPECT": 1,
 	## The shutter which opens/closes in the office
 	"OFFICE_SHUTTER": 0,
 	

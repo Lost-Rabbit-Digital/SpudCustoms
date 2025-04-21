@@ -475,7 +475,7 @@ scale = Vector2(2.64198, 2.57222)
 texture = ExtResource("22_or1f4")
 
 [node name="MugshotPhotoGenerator" parent="Gameplay" instance=ExtResource("23_3qac4")]
-z_index = 5
+z_index = 1
 position = Vector2(1438, 414)
 scale = Vector2(2.5, 2.5)
 
