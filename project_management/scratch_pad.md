@@ -103,7 +103,6 @@ These are our goals, to-do tasks, and completed tasks.
 
 ## Drag and Drop System
 - DaDS / Bug: When dropping a document onto the inspection table, it should appear in front of whatever is on the table
-
 - DaDS / Bug: You can drag the documents through the stamps, stamps should block interaction
 - DaDS / Bug: The _return_item_to_table buffers seem to be broken
 - DaDS / Bug: When you drag documents, they do not appear above other documents
@@ -131,7 +130,6 @@ These are our goals, to-do tasks, and completed tasks.
 
 ### Art
 - plant_revelation, goopy potatoes
-- reckoning, fix grain
 - resistance_planning, emblems should be potatoes, potatoes should not have armor, leader should look more like old white mustache russet potato
 - victory_scene, fucked up faces
 - extreme_emergency, washed out
@@ -146,15 +144,16 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ### Completed Tasks for 1.1.0
+- Updated art for reckoning, fix grain
 - LawReceipt: Use BBCode to display the important elements of laws
-- updated art for loyalist_outcome, too human
-- updated art for night_checkpoint, messed up characters
-- updated art for processing_facility, remove random messed up potatoes
-- updated art for personal quarters, style break, random
-- updated art for security_lockdown, washed out
-- updated art for night_attack, remove human man in background
-- updated art for checkpoint_interior, fix hat direction
-- updated art for border_chaos, fix dog-face man and best employee picture
+- Updated art for loyalist_outcome, too human
+- Updated art for night_checkpoint, messed up characters
+- Updated art for processing_facility, remove random messed up potatoes
+- Updated art for personal quarters, style break, random
+- Updated art for security_lockdown, washed out
+- Updated art for night_attack, remove human man in background
+- Updated art for checkpoint_interior, fix hat direction
+- Updated art for border_chaos, fix dog-face man and best employee picture
 - Disable narrative manager when in score attack mode
 - Shift end bonus not applying properly
 - Fix audio reference issues with gunshots in vengeance ending
