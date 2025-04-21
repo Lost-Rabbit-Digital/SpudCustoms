@@ -28,12 +28,6 @@ signal item_closed(item)
 ## @param item The passport Node2D.
 signal passport_returned(item)
 
-# Configuration
-## Z-index for items being actively dragged (higher than normal).
-const DEFAULT_Z_INDEX = 3
-const OPEN_DRAGGING_Z_INDEX = 4
-const CLOSED_DRAGGING_Z_INDEX = 25
-
 ## Duration in seconds for the return animation when dropping outside valid zones.
 const RETURN_TWEEN_DURATION = 0.3
 
@@ -135,7 +129,7 @@ func register_draggable_items(items: Array):
 	# Set initial z-index for all items if not already set
 	for item in draggable_items:
 		if is_instance_valid(item):
-			if item.z_index != DEFAULT_Z_INDEX:  # Only set if not already set
+			if item.z_index != ConstantZIndexes.Z_INDEX.IDLE_DOCUMENT:  # Only set if not already set
 				push_warning("Draggable Item is missing z-index: %s", item)
 		else:
 			push_warning("Invalid draggable item provided")
@@ -237,7 +231,7 @@ func _handle_mouse_press(mouse_position: Vector2) -> bool:
 			is_document_closed = false
 
 			# Set the dragged_item z_index higher while it's being dragged
-			dragged_item.z_index = OPEN_DRAGGING_Z_INDEX
+			dragged_item.z_index = ConstantZIndexes.Z_INDEX.OPEN_DRAGGED_DOCUMENT
 
 			# Get current drop zone
 			var current_zone = identify_drop_zone(mouse_position)
@@ -335,7 +329,7 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 
 			# Return to table
 			_return_item_to_table(dragged_item)
-			dragged_item.z_index = DEFAULT_Z_INDEX
+			dragged_item.z_index = ConstantZIndexes.Z_INDEX.IDLE_DOCUMENT
 
 			# Clear the dragged item after return animation starts
 			var item = dragged_item
@@ -360,7 +354,7 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 
 			# Return to table
 			_return_item_to_table(dragged_item)
-			dragged_item.z_index = DEFAULT_Z_INDEX
+			dragged_item.z_index = ConstantZIndexes.Z_INDEX.IDLE_DOCUMENT
 
 			# Clear the dragged item after return animation starts
 			var item = dragged_item
@@ -693,7 +687,7 @@ func _handle_document_drop(mouse_pos: Vector2):
 	# If dropping on inspection table and document was already open, keep it open
 	if drop_zone == "inspection_table" and was_open:
 		# No need to emit open signal if document is already open
-		dragged_item.z_index = DEFAULT_Z_INDEX
+		dragged_item.z_index = ConstantZIndexes.Z_INDEX.IDLE_DOCUMENT
 	# If dropping on inspection table and document was closed, open it
 	elif drop_zone == "inspection_table" and !was_open:
 		# Only open if it wasn't already open

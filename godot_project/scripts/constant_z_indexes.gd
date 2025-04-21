@@ -59,9 +59,11 @@ const Z_INDEX = {
 	# Interactive Object Layers
 	# ----------------------------------------------------------------------
 	## Documents which are not actively interacted with
-	"IDLE_DOCUMENT": null,             
+	"IDLE_DOCUMENT": 3,             
 	## Documents which are actively been dragged
-	"DRAGGED_DOCUMENT": null,
+	"OPEN_DRAGGED_DOCUMENT": 4,
+	## Documents which are closed
+	"CLOSED_DRAGGED_DOCUMENT": 25,
 	"STAMPS": null,                # Stamps and inking tools
 	"INKWELL": null,               # Inkwell and other similar desk tools
 	
