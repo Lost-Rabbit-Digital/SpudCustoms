@@ -484,11 +484,23 @@ func start_runner(potato: PotatoPerson, is_rejected: bool = false):
 	if alarm_sound and not alarm_sound.playing:
 		alarm_sound.play()
 
-	# Add a visual indicator to show this was a rejected potato
-	var anger_indicator = Sprite2D.new()
-	anger_indicator.texture = preload("res://assets/effects/anger.png")  # Create this small texture
-	anger_indicator.position = Vector2(0, -15)  # Position above the potato
-	potato.add_child(anger_indicator)
+	# First check if this potato has an emote system
+	var emote_system = potato.get_node_or_null("PotatoEmoteSystem")
+	if emote_system and emote_system is PotatoEmoteSystem:
+		# Show an anger emote using the existing system
+		# Change the potato's brain state to ANGRY
+		potato.change_brain_state(potato.PotatoBrainState.ANGRY)
+		
+		# Show a specific angry emote
+		emote_system.show_random_emote_from_category("negative")
+		
+		# Make sure emoting is enabled for this potato
+		emote_system.emoting_enabled = true
+		
+		# Set longer duration for the anger emote
+		emote_system.emote_duration = 5.0
+	else:
+		push_warning("No PotatoEmoteSystem found on potato, cannot show anger emote")
 
 	if is_rejected:
 		Global.display_red_alert(
@@ -537,6 +549,13 @@ func start_runner(potato: PotatoPerson, is_rejected: bool = false):
 func _on_runner_completed(potato: PotatoPerson):
 	# Runner escaped
 	handle_runner_escape(potato)
+
+	# Disable emotes when runner is complete
+	var emote_system = potato.get_node_or_null("PotatoEmoteSystem")
+	if emote_system and emote_system is PotatoEmoteSystem:
+		emote_system.emoting_enabled = false
+		emote_system._hide_emote()
+
 
 	# Remove from active runners list
 	var index = active_runners.find(potato)
@@ -1077,6 +1096,12 @@ func set_dialogic_mode(in_dialogic: bool):
 func clean_up_all():
 	# Clean up all active runners
 	for runner in active_runners:
+		# Disable emotes before cleanup
+		var emote_system = runner.get_node_or_null("PotatoEmoteSystem")
+		if emote_system and emote_system is PotatoEmoteSystem:
+			emote_system.emoting_enabled = false
+			emote_system._hide_emote()
+			
 		runner.cleanup()
 	active_runners.clear()
 
