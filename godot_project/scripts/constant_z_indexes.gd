@@ -16,36 +16,30 @@ extends Node
 ## allow for future additions without reorganizing the entire system
 const Z_INDEX = {
 	# ----------------------------------------------------------------------
-	# Core Layers
-	# ----------------------------------------------------------------------
-	## Furthest forward, appears above all other elements to form a border.
-	"SCREEN_BORDER": 20,         
-	
-	# ----------------------------------------------------------------------
 	# Ground-Level Detail Layers
 	# ----------------------------------------------------------------------
 	## Shadows cast by game objects
 	"ENVIRONMENTAL_SHADOWS": null,                
 	## The main environmental art piece
-	"ENVIRONMENT": 8,
+	"ENVIRONMENT": 1,
 	
 	# ----------------------------------------------------------------------
 	# Game Object Layers
 	# ----------------------------------------------------------------------
 	## Missiles launcher by the player
-	"MISSILES": null,
+	"MISSILES": 8,
 	## Dead bodies that remain on ground
-	"CORPSES": null,                
+	"CORPSES": 3,
 	## Corpse fragments after explosions
-	"GIBS": null,                   
+	"GIBS": 11,
 	## Vehicles on the main road             
-	"VEHICLES": null,
+	"VEHICLES": 1,
 	
 	# ----------------------------------------------------------------------
 	# Character Layers
 	# ----------------------------------------------------------------------
 	## NPCs that walk/run in the game, also known as "runners"
-	"NPC": null,              
+	"RUNNER_POTATO": 8,              
 	## The player character(s)
 	"PLAYER": null,                
 	
@@ -53,19 +47,23 @@ const Z_INDEX = {
 	# Interactive Environment Layers
 	# ----------------------------------------------------------------------
 	## The main table surface
-	"INSPECTION_TABLE": null,                 
+	"INSPECTION_TABLE": 2,
+	## Panel which the suspect sits in front of
+	"SUSPECT_PANEL": 0,               
 	## The suspect which moves through the office
-	"SUSPECT": null,
+	"SUSPECT": 5,
 	## The shutter which opens/closes in the office
-	"OFFICE_SHUTTER": null,
+	"OFFICE_SHUTTER": 0,
 	
 	# ----------------------------------------------------------------------
 	# Interactive Object Layers
 	# ----------------------------------------------------------------------
 	## Documents which are not actively interacted with
-	"IDLE_DOCUMENT": null,             
+	"IDLE_DOCUMENT": 3,             
 	## Documents which are actively been dragged
-	"DRAGGED_DOCUMENT": null,
+	"OPEN_DRAGGED_DOCUMENT": 4,
+	## Documents which are closed
+	"CLOSED_DRAGGED_DOCUMENT": 25,
 	"STAMPS": null,                # Stamps and inking tools
 	"INKWELL": null,               # Inkwell and other similar desk tools
 	
@@ -75,9 +73,12 @@ const Z_INDEX = {
 	## General particle systems (dust, smoke, etc.)
 	"STAMP_PARTICLES": null,      
 	## Explosion effects
-	"EXPLOSIONS": null,            
+	"EXPLOSIONS": 12,            
+	"EXPLOSION_SMOKE": 13,            
 	## Footprints left by NPCs
 	"FOOTPRINTS": 9,
+	## Smoke from the misisles
+	"MISSILE_SMOKE": 11,
 	
 	# ----------------------------------------------------------------------
 	# User Interface Layers (high values to always appear on top)
@@ -88,7 +89,7 @@ const Z_INDEX = {
 	"UI_FOREGROUND": null,        # UI elements that should appear in front of others
 	"TOOLTIPS": null,             # Tooltip popups
 	"CURSOR": null,               # Custom mouse cursor
-	"SCREEN_BORDERS": null,       # Border elements framing the screen
+	"SCREEN_BORDERS": 20,       # Border elements framing the screen
 	
 	# ----------------------------------------------------------------------
 	# Top-Level Game Elements

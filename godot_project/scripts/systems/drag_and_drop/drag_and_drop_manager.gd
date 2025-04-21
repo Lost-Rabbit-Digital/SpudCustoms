@@ -167,7 +167,7 @@ func is_document_open(document_name: String) -> bool:
 ##
 ## @param item The node that was opened.
 func _on_item_opened(item: Node2D):
-	item.z_index = drag_system.DEFAULT_Z_INDEX
+	item.z_index = ConstantZIndexes.Z_INDEX.IDLE_DOCUMENT
 	var document_name = item.name
 	open_document(document_name)
 
@@ -176,7 +176,7 @@ func _on_item_opened(item: Node2D):
 ##
 ## @param item The node that was closed.
 func _on_item_closed(item: Node2D):
-	item.z_index = drag_system.CLOSED_DRAGGING_Z_INDEX
+	item.z_index = ConstantZIndexes.Z_INDEX.CLOSED_DRAGGED_DOCUMENT
 	var document_name = item.name
 	close_document(document_name)
 
@@ -186,8 +186,7 @@ func _on_item_closed(item: Node2D):
 ## @param item The node that was dropped.
 ## @param drop_zone The zone where the item was dropped.
 func _on_item_dropped(item: Node2D, _drop_zone: String):
-	item.z_index = drag_system.DEFAULT_Z_INDEX
-	# Additional processing can be added here if needed
+	item.z_index = ConstantZIndexes.Z_INDEX.IDLE_DOCUMENT
 
 
 ## Sets the stamp system manager reference.

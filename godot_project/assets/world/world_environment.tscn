@@ -18,7 +18,7 @@ position = Vector2(642.352, 121.5)
 scale = Vector2(2.59658, 2.44318)
 
 [node name="CustomsOffice" type="Sprite2D" parent="Elements"]
-z_index = 7
+z_index = 13
 texture = ExtResource("2_fkyx8")
 
 [node name="PrimaryGrass" type="Sprite2D" parent="Elements"]

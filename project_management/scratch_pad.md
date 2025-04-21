@@ -115,7 +115,6 @@ These are our goals, to-do tasks, and completed tasks.
 - Cursor System: The target cursor is not showing when firing missiles
 - Dialogic / QoL: Dialogic scenes should fade in and out to the next scene
 - Mugshot Generator / Bug: Potatoes go over the inspection desk when accepted
-- Runners: If a runner is currently emoting when they begin a run, it seems to spawn two emotes
 
 ### Gameplay
 - Allow missiles to kill approved potatoes, resulting in 250 points removed and a strike added, with a flavor alert about a Totneva Convention violation
@@ -144,6 +143,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ### Completed Tasks for 1.1.0
+- Runners: If a runner is currently emoting when they begin a run, it seems to spawn two emotes
 - Updated art for reckoning, fix grain
 - LawReceipt: Use BBCode to display the important elements of laws
 - Updated art for loyalist_outcome, too human

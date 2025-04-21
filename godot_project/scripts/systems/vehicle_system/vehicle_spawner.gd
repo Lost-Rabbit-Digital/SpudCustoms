@@ -9,10 +9,6 @@ extends Node2D
 # Enums for clear direction definition
 enum Direction { DOWN = 0, UP = 1 }
 
-# Z-index values
-const VEHICLE_DEFAULT_Z_INDEX = 9  # Default z-index for vehicles
-const VEHICLE_UNDER_DESK_Z_INDEX = 2  # Z-index when under desk (lower than desk at 3)
-
 # Exported variables for easy configuration in the editor
 ## The minimum time between vehicle spawns in seconds
 @export_range(1.0, 30.0) var min_spawn_time: float = 5.0
@@ -85,7 +81,7 @@ func _spawn_vehicle() -> void:
 	add_child(vehicle)
 
 	# Set the default z-index for all vehicles
-	vehicle.z_index = VEHICLE_DEFAULT_Z_INDEX
+	vehicle.z_index = ConstantZIndexes.Z_INDEX.VEHICLES
 
 	# Configure the vehicle based on direction
 	if direction == Direction.DOWN:
@@ -146,9 +142,3 @@ func _process(delta: float) -> void:
 func _on_spawn_timer_timeout() -> void:
 	_spawn_vehicle()
 	_schedule_next_spawn()
-
-
-## Callback function for when a vehicle reaches the desk
-func _on_vehicle_reach_desk(vehicle: Node2D) -> void:
-	# Change the z-index to go below the desk
-	vehicle.z_index = VEHICLE_UNDER_DESK_Z_INDEX

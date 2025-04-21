@@ -10,7 +10,7 @@
 z_as_relative = false
 
 [node name="SuspectPanelTop" type="Sprite2D" parent="."]
-z_index = 4
+z_index = 8
 position = Vector2(1074, 472)
 scale = Vector2(1.05816, 1.06849)
 texture = ExtResource("1_c6hgi")

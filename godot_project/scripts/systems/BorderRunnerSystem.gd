@@ -126,7 +126,7 @@ class Missile:
 		sprite = AnimatedSprite2D.new()
 		sprite.sprite_frames = sprite_frames
 		sprite.visible = true
-		sprite.z_index = 8
+		sprite.z_index = ConstantZIndexes.Z_INDEX.MISSILES
 		if sprite.sprite_frames.has_animation("default"):
 			sprite.play("default")  # Start animation
 		else:
@@ -401,7 +401,7 @@ func spawn_smoke_particle(position: Vector2, direction: Vector2):
 	smoke.global_position = position - (direction * 20)
 	smoke.rotation = randf() * TAU
 	smoke.modulate.a = 1.0
-	smoke.z_index = 11
+	smoke.z_index = ConstantZIndexes.Z_INDEX.MISSILE_SMOKE
 	smoke.visible = true
 	smoke.play("default")
 
@@ -475,7 +475,7 @@ func start_runner(potato: PotatoPerson, is_rejected: bool = false):
 	# Ensure the potato is visible
 	potato.visible = true
 	potato.modulate.a = 1.0
-	potato.z_index = 8  # Ensure it's above background elements
+	potato.z_index = ConstantZIndexes.Z_INDEX.RUNNER_POTATO  # Ensure it's above background elements
 
 	# Set the runner speed directly on the potato
 	potato.runner_base_speed = runner_speed  # Add this line
@@ -484,11 +484,23 @@ func start_runner(potato: PotatoPerson, is_rejected: bool = false):
 	if alarm_sound and not alarm_sound.playing:
 		alarm_sound.play()
 
-	# Add a visual indicator to show this was a rejected potato
-	var anger_indicator = Sprite2D.new()
-	anger_indicator.texture = preload("res://assets/effects/anger.png")  # Create this small texture
-	anger_indicator.position = Vector2(0, -15)  # Position above the potato
-	potato.add_child(anger_indicator)
+	# First check if this potato has an emote system
+	var emote_system = potato.get_node_or_null("PotatoEmoteSystem")
+	if emote_system and emote_system is PotatoEmoteSystem:
+		# Show an anger emote using the existing system
+		# Change the potato's brain state to ANGRY
+		potato.change_brain_state(potato.PotatoBrainState.ANGRY)
+		
+		# Show a specific angry emote
+		emote_system.show_random_emote_from_category("negative")
+		
+		# Make sure emoting is enabled for this potato
+		emote_system.emoting_enabled = true
+		
+		# Set longer duration for the anger emote
+		emote_system.emote_duration = 5.0
+	else:
+		push_warning("No PotatoEmoteSystem found on potato, cannot show anger emote")
 
 	if is_rejected:
 		Global.display_red_alert(
@@ -537,6 +549,13 @@ func start_runner(potato: PotatoPerson, is_rejected: bool = false):
 func _on_runner_completed(potato: PotatoPerson):
 	# Runner escaped
 	handle_runner_escape(potato)
+
+	# Disable emotes when runner is complete
+	var emote_system = potato.get_node_or_null("PotatoEmoteSystem")
+	if emote_system and emote_system is PotatoEmoteSystem:
+		emote_system.emoting_enabled = false
+		emote_system._hide_emote()
+
 
 	# Remove from active runners list
 	var index = active_runners.find(potato)
@@ -694,7 +713,7 @@ func _on_smoke_animation_finished(smoke: AnimatedSprite2D) -> void:
 # Handle smoke z-index adjustment after delay
 func _on_smoke_alpha_timeout(smoke: AnimatedSprite2D) -> void:
 	if is_instance_valid(smoke):
-		smoke.z_index = 13
+		smoke.z_index = ConstantZIndexes.Z_INDEX.EXPLOSION_SMOKE
 
 
 # Handle smoke cleanup after timeout
@@ -752,7 +771,7 @@ func trigger_explosion(missile_or_position):
 	explosion.sprite_frames = explosion_frames
 	explosion.global_position = explosion_position
 	explosion.scale = Vector2(explosion_size / 16.0, explosion_size / 16.0) * randf_range(0.5, 2)
-	explosion.z_index = 12  # Above missiles
+	explosion.z_index = ConstantZIndexes.Z_INDEX.EXPLOSIONS  # Above missiles
 	explosion.play("default")
 
 	# Ensure explosion is removed after animation
@@ -822,7 +841,7 @@ func trigger_explosion(missile_or_position):
 	smoke.sprite_frames = smoke_frames
 	smoke.global_position = explosion_position
 	smoke.scale = Vector2(0.05, 0.05)
-	smoke.z_index = 13  # Above missiles, below explosion
+	smoke.z_index = ConstantZIndexes.Z_INDEX.EXPLOSION_SMOKE  # Above missiles, below explosion
 	smoke.play("default")
 
 	# Create a tween for behavior
@@ -847,7 +866,7 @@ func trigger_explosion(missile_or_position):
 	smoke_alpha_timer.timeout.connect(
 		func():
 			if is_instance_valid(smoke):
-				smoke.z_index = 13
+				smoke.z_index = ConstantZIndexes.Z_INDEX.EXPLOSION_SMOKE
 	)
 
 	var smoke_cleanup_timer = get_tree().create_timer(1.5)
@@ -933,7 +952,7 @@ func handle_successful_hit(runner, explosion_pos):
 
 	corpse.global_position = runner.global_position
 
-	corpse.z_index = 3  # Under explosions, above world background. 5 was last visible tested
+	corpse.z_index = ConstantZIndexes.Z_INDEX.CORPSES  # Under explosions, above world background. 5 was last visible tested
 
 	# Slightly adjust size randomly
 	corpse.scale = Vector2(0.9, 0.9) * randf_range(0.9, 1.1)
@@ -1077,6 +1096,12 @@ func set_dialogic_mode(in_dialogic: bool):
 func clean_up_all():
 	# Clean up all active runners
 	for runner in active_runners:
+		# Disable emotes before cleanup
+		var emote_system = runner.get_node_or_null("PotatoEmoteSystem")
+		if emote_system and emote_system is PotatoEmoteSystem:
+			emote_system.emoting_enabled = false
+			emote_system._hide_emote()
+			
 		runner.cleanup()
 	active_runners.clear()
 
@@ -1139,7 +1164,7 @@ func spawn_gibs(pos):
 		var gib = Gib.new()
 		add_child(gib)
 
-		gib.z_index = 11
+		gib.z_index = ConstantZIndexes.Z_INDEX.GIBS
 		gib.z_as_relative = false
 
 		# Set random gib texture
