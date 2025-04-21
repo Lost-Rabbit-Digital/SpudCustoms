@@ -16,18 +16,12 @@ extends Node
 ## allow for future additions without reorganizing the entire system
 const Z_INDEX = {
 	# ----------------------------------------------------------------------
-	# Core Layers
-	# ----------------------------------------------------------------------
-	## Furthest forward, appears above all other elements to form a border.
-	"SCREEN_BORDER": 20,         
-	
-	# ----------------------------------------------------------------------
 	# Ground-Level Detail Layers
 	# ----------------------------------------------------------------------
 	## Shadows cast by game objects
 	"ENVIRONMENTAL_SHADOWS": null,                
 	## The main environmental art piece
-	"ENVIRONMENT": 8,
+	"ENVIRONMENT": 1,
 	
 	# ----------------------------------------------------------------------
 	# Game Object Layers
@@ -39,7 +33,7 @@ const Z_INDEX = {
 	## Corpse fragments after explosions
 	"GIBS": 11,
 	## Vehicles on the main road             
-	"VEHICLES": 9,
+	"VEHICLES": 2,
 	
 	# ----------------------------------------------------------------------
 	# Character Layers
@@ -53,11 +47,13 @@ const Z_INDEX = {
 	# Interactive Environment Layers
 	# ----------------------------------------------------------------------
 	## The main table surface
-	"INSPECTION_TABLE": 2,                 
+	"INSPECTION_TABLE": 0,  
+	## Panel which the suspect sits in front of
+	"SUSPECT_PANEL": 0,               
 	## The suspect which moves through the office
 	"SUSPECT": 5,
 	## The shutter which opens/closes in the office
-	"OFFICE_SHUTTER": 7,
+	"OFFICE_SHUTTER": 0,
 	
 	# ----------------------------------------------------------------------
 	# Interactive Object Layers
@@ -91,7 +87,7 @@ const Z_INDEX = {
 	"UI_FOREGROUND": null,        # UI elements that should appear in front of others
 	"TOOLTIPS": null,             # Tooltip popups
 	"CURSOR": null,               # Custom mouse cursor
-	"SCREEN_BORDERS": null,       # Border elements framing the screen
+	"SCREEN_BORDERS": 20,       # Border elements framing the screen
 	
 	# ----------------------------------------------------------------------
 	# Top-Level Game Elements

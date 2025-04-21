@@ -123,6 +123,12 @@ func get_level_manager():
 	return null
 
 func _ready():
+	# Setup the default z_indexes for elements
+	$UI/ScreenBorders.z_index = ConstantZIndexes.Z_INDEX.SCREEN_BORDERS
+	$UI/Environment.z_index = ConstantZIndexes.Z_INDEX.ENVIRONMENT
+	$Gameplay/InspectionTable.z_index = ConstantZIndexes.Z_INDEX.INSPECTION_TABLE
+	%OfficeShutterController.z_index = ConstantZIndexes.Z_INDEX.OFFICE_SHUTTER
+	$Gameplay/SuspectPanel.z_index = ConstantZIndexes.Z_INDEX.SUSPECT_PANEL
 	
 	safety_unpause_timer = Timer.new()
 	safety_unpause_timer.one_shot = true
