@@ -31,8 +31,8 @@ func _ready():
 	# Set initial language (maybe from a saved setting)
 	var saved_lang = Config.get_config("GameSettings", "Language", "en")
 	#set_language(saved_lang)
-	set_language("vi")
-	TranslationServer.set_locale("vi")
+	set_language("cs")
+	TranslationServer.set_locale("cs")
 	
 func set_language(language_code):
 	if language_code in available_languages:

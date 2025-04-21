@@ -26,11 +26,12 @@ shift_summary_runner_stats,RUNNER STATS,STATISTIKY BĚŽCE,LØBER STATISTIK,LÄU
 shift_summary_document_stats,DOCUMENT STATS,STATISTIKY DOKUMENTU,DOKUMENT STATISTIK,DOKUMENT-STATISTIKEN,ESTADÍSTICAS DEL DOCUMENTO,DOKUMENTIN TILASTOT,STATISTIQUES DU DOCUMENT,DOKUMENTUM STATISZTIKÁK,STATISTIK DOKUMEN,STATISTICHE DOCUMENTO,DOCUMENT STATISTIEKEN,DOKUMENT-STATISTIKK,STATYSTYKI DOKUMENTU,ESTATÍSTICAS DO DOCUMENTO,STATISTICI DOCUMENT,ŠTATISTIKY DOKUMENTU,DOKUMENTSTATISTIK,BELGE İSTATİSTİKLERİ,THỐNG KÊ TÀI LIỆU
 shift_summary_performance,PERFORMANCE,VÝKON,PRÆSTATION,LEISTUNG,RENDIMIENTO,SUORITUSKYKY,PERFORMANCE,TELJESÍTMÉNY,PERFORMA,PRESTAZIONI,PRESTATIE,YTELSE,WYDAJNOŚĆ,DESEMPENHO,PERFORMANȚĂ,VÝKON,PRESTATION,PERFORMANS,HIỆU SUẤT
 shift_summary_bonuses,BONUSES,BONUSY,BONUSSER,BONI,BONIFICACIONES,BONUKSET,BONUS,BÓNUSZOK,BONUS,BONUS,BONUSSEN,BONUSER,BONUSY,BÔNUS,BONUSURI,BONUSY,BONUSAR,BONUSLAR,THƯỞNG
-reset_game_label,Reset Game :,,,,,,,,,,,,,,,,,,
-reset_game_button,Reset,,,,,,,,,,,,,,,,,,
-mute_label,Mute,,,,,,,,,,,,,,,,,,
-fullscreen_label,Fullscreen :,,,,,,,,,,,,,,,,,,
-resolution_label,Resolution :,,,,,,,,,,,,,,,,,,
-antialiasing_label,Anti-Aliasing :,,,,,,,,,,,,,,,,,,
-screenshake_label,Screen Shake :,,,,,,,,,,,,,,,,,,
-mouse_sens_label,Mouse Sensitivity :,,,,,,,,,,,,,,,,,,
+reset_game_label,Reset Game :,Restartovat hru,Nulstil spil:,Spiel zurücksetzen:,Reiniciar juego:,Nollaa peli:,Réinitialiser la partie:,Játék újraindítása:,Setel ulang permainan:,Ripristina gioco:,Spel resetten:,Tilbakestill spill:,Zresetuj grę:,Reiniciar jogo:,Resetează jocul:,Resetovať hru:,Återställ spel:,Oyunu sıfırla:,Đặt lại trò chơi:
+reset_game_button,Reset,Resetovat,Nulstil,Zurücksetzen:,Reiniciar:,Nollaa:,Réinitialiser:,Újraindítás:,Setel ulang:,Ripristina:,Resetten:,Tilbakestill:,Zresetuj:,Reiniciar:,Resetează:,Resetovať:,Återställ:,Sıfırla:,Đặt lại:
+mute_label,Mute,Ztlumit,Lydløs,Stummschalten:,Silenciar:,Mykistä:,Muet:,Némítás:,Bisukan:,Muto:,Dempen:,Demp:,Wycisz:,Silenciar:,Mut:,Stlmiť:,Ljud av:,Sessize al:,Tắt tiếng
+fullscreen_label,Fullscreen :,Celá obrazovka,Fuld skærm:,Vollbild:,Pantalla completa:,Koko näyttö:,Plein écran:,Teljes képernyő:,Layar penuh:,Schermo intero:,Volledig scherm:,Fullskjerm:,Pełny ekran:,Tela cheia:,Ecran complet:,Celá obrazovka:,Helskärm:,Tam ekran:,Toàn màn hình
+resolution_label,Resolution :,Rozlišení,Opløsning:,Auflösung:,Resolución:,Resoluutio:,Résolution:,Felbontás:,Resolusi:,Risoluzione:,Resolutie:,Oppløsning:,Rozdzielczość:,Resolução:,Rezoluție:,Rozlíšenie:,Upplösning:,Çözünürlük:,Độ phân giải:
+antialiasing_label,Anti-Aliasing :,Anti-Aliasing,Anti-Aliasing:,Anti-Aliasing:,Anti-Aliasing:,Anti-Aliasing:,Anti-crénelage:,Élsimítás:,Anti-Aliasing:,Anti-Aliasing:,Anti-Aliasing:,Anti-Aliasing:,Anti-Aliasing:,Anti-Aliasing:,Anti-Aliasing:,Anti-Aliasing:,Anti-Aliasing:,Anti-Aliasing:,Khử răng cưa:
+screenshake_label,Screen Shake :,Třes obrazovky,Skærmrystelse:,Bildschirmwackeln:,Vibración de pantalla:,Näytön tärinä:,Tremblement d'écran:,Képernyőrázás:,Guncangan layar:,Tremolio schermo:,Schermschudding:,Skjermristing:,Drganie ekranu:,Tremor de tela:,Tremur ecran:,Trasenie obrazovky:,Skärmskakning:,Ekran sarsıntısı:,Rung màn hình:
+mouse_sens_label,Mouse Sensitivity :,Citlivost myši,Musefølsomhed:,Mausempfindlichkeit:,Sensibilidad del ratón:,Hiiren herkkyys:,Sensibilité de la souris:,Egér érzékenység:,Sensitivitas mouse:,Sensibilità mouse:,Muisgevoeligheid:,Mussensitivitet:,Czułość myszy:,Sensibilidade do mouse:,Sensibilitate mouse:,Citlivosť myši:RetryClaude can make mistakes. Please double-check responses.,Muskänslighet:,Fare hassasiyeti:,Độ nhạy chuột:
+pause_menu_title,Paused,Pozastaveno,Sat på pause,Pausiert,Pausado,Keskeytetty,En pause,Szüneteltetve,Dijeda,In pausa,Gepauzeerd,Pauset,Wstrzymane,Pausado,Întrerupt,Pozastavené,Pausad,Duraklatıldı,Đã tạm dừng

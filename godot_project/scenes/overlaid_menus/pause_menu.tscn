@@ -5,5 +5,24 @@
 [ext_resource type="PackedScene" uid="uid://65shnbd3xtxu" path="res://scenes/overlaid_menus/mini_options_overlaid_menu.tscn" id="3_hewsk"]
 
 [node name="PauseMenu" instance=ExtResource("1_fd1e4")]
+auto_translate_mode = 1
 script = ExtResource("2_o57rn")
 options_packed_scene = ExtResource("3_hewsk")
+
+[node name="TitleLabel" parent="MenuPanelContainer/MarginContainer/BoxContainer/TitleMargin" index="0"]
+text = "pause_menu_title"
+
+[node name="CloseButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="0"]
+text = "shift_summary_continue"
+
+[node name="RestartButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="1"]
+text = "shift_summary_restart"
+
+[node name="OptionsButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="2"]
+text = "main_menu_options"
+
+[node name="MainMenuButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="3"]
+text = "shift_summary_main_menu"
+
+[node name="ExitButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="4"]
+text = "main_menu_exit"

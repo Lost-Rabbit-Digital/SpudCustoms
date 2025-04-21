@@ -377,6 +377,7 @@ transitions = ["Intro", "OpenMainMenu", SubResource("11"), "OpenMainMenu", "Open
 graph_offset = Vector2(-180.277, 49)
 
 [node name="MainMenu" instance=ExtResource("1_0i2sc")]
+auto_translate_mode = 1
 script = ExtResource("2_ncvk7")
 level_select_packed_scene = ExtResource("3_xj7vs")
 story_game_scene_path = "uid://crnx6qmk46il"
@@ -407,9 +408,6 @@ texture = ExtResource("7_2k5l7")
 
 [node name="VersionContainer" parent="VersionMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
-
-[node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
-text = "main_menu_version"
 
 [node name="TitleContainer" parent="MenuContainer/TitleMargin" index="0"]
 modulate = Color(1, 1, 1, 0)

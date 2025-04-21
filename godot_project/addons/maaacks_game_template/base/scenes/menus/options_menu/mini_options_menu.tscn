@@ -39,6 +39,10 @@ option_section = 2
 key = "Mute"
 section = "AudioSettings"
 
+[node name="Label" type="Label" parent="MuteControl"]
+layout_mode = 2
+text = "mute_label"
+
 [node name="FullscreenControl" parent="." instance=ExtResource("4_b20fb")]
 unique_name_in_owner = true
 layout_mode = 2
@@ -46,6 +50,10 @@ option_name = "Fullscreen"
 option_section = 3
 key = "FullscreenEnabled"
 section = "VideoSettings"
+
+[node name="Label" type="Label" parent="FullscreenControl"]
+layout_mode = 2
+text = "fullscreen_label"
 
 [connection signal="setting_changed" from="MuteControl" to="." method="_on_mute_control_setting_changed"]
 [connection signal="setting_changed" from="FullscreenControl" to="." method="_on_fullscreen_control_setting_changed"]

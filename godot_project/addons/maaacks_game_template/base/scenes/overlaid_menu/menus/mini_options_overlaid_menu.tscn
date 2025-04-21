@@ -7,4 +7,4 @@
 menu_scene = ExtResource("2_ihtu5")
 
 [node name="TitleLabel" parent="MenuPanelContainer/MarginContainer/BoxContainer/TitleMargin" index="0"]
-text = "Options"
+text = "options_menu_title"
