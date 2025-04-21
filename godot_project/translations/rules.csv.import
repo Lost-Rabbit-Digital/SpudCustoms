@@ -2,14 +2,14 @@
 
 importer="csv_translation"
 type="Translation"
-uid="uid://dfkbx0m0pln7w"
+uid="uid://o1x0r5rbgvh5"
 
 [deps]
 
-files=["res://translations/rules.en.translation"]
+files=["res://translations/rules.en.translation", "res://translations/rules.bg.translation", "res://translations/rules.cs.translation", "res://translations/rules.da.translation", "res://translations/rules.de.translation", "res://translations/rules.el.translation", "res://translations/rules.es.translation", "res://translations/rules.fi.translation", "res://translations/rules.fr.translation", "res://translations/rules.hu.translation", "res://translations/rules.id.translation", "res://translations/rules.it.translation", "res://translations/rules.ja.translation", "res://translations/rules.ko.translation", "res://translations/rules.nl.translation", "res://translations/rules.nb.translation", "res://translations/rules.pl.translation", "res://translations/rules.pt.translation", "res://translations/rules.ro.translation", "res://translations/rules.ru.translation", "res://translations/rules.sk.translation", "res://translations/rules.sv.translation", "res://translations/rules.th.translation", "res://translations/rules.tr.translation", "res://translations/rules.uk.translation", "res://translations/rules.vi.translation", "res://translations/rules.zh_CN.translation"]
 
 source_file="res://translations/rules.csv"
-dest_files=["res://translations/rules.en.translation"]
+dest_files=["res://translations/rules.en.translation", "res://translations/rules.bg.translation", "res://translations/rules.cs.translation", "res://translations/rules.da.translation", "res://translations/rules.de.translation", "res://translations/rules.el.translation", "res://translations/rules.es.translation", "res://translations/rules.fi.translation", "res://translations/rules.fr.translation", "res://translations/rules.hu.translation", "res://translations/rules.id.translation", "res://translations/rules.it.translation", "res://translations/rules.ja.translation", "res://translations/rules.ko.translation", "res://translations/rules.nl.translation", "res://translations/rules.nb.translation", "res://translations/rules.pl.translation", "res://translations/rules.pt.translation", "res://translations/rules.ro.translation", "res://translations/rules.ru.translation", "res://translations/rules.sk.translation", "res://translations/rules.sv.translation", "res://translations/rules.th.translation", "res://translations/rules.tr.translation", "res://translations/rules.uk.translation", "res://translations/rules.vi.translation", "res://translations/rules.zh_CN.translation"]
 
 [params]
 

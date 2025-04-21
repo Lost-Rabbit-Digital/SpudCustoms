@@ -24,8 +24,6 @@ func _ready():
 		# Limit available levels
 		if level_select_scene:
 			level_select_scene.max_level = 2  # Only tutorial, level 1 and 2
-	#%NewGameButton.text = tr("main_menu_new_game")
-	#%ContinueGameButton.text = tr("main_menu_continue")
 
 func load_game_scene():
 	GameState.start_game()

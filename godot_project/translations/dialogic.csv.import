@@ -2,14 +2,14 @@
 
 importer="csv_translation"
 type="Translation"
-uid="uid://cw02qk22cy7i7"
+uid="uid://dqvvkhhxpcpny"
 
 [deps]
 
-files=["res://translations/dialogic.en.translation"]
+files=["res://translations/dialogic.en.translation", "res://translations/dialogic.bg.translation", "res://translations/dialogic.cs.translation", "res://translations/dialogic.da.translation", "res://translations/dialogic.de.translation", "res://translations/dialogic.el.translation", "res://translations/dialogic.es.translation", "res://translations/dialogic.fi.translation", "res://translations/dialogic.fr.translation", "res://translations/dialogic.hu.translation", "res://translations/dialogic.id.translation", "res://translations/dialogic.it.translation", "res://translations/dialogic.ja.translation", "res://translations/dialogic.ko.translation", "res://translations/dialogic.nl.translation", "res://translations/dialogic.nb.translation", "res://translations/dialogic.pl.translation", "res://translations/dialogic.pt.translation", "res://translations/dialogic.ro.translation", "res://translations/dialogic.ru.translation", "res://translations/dialogic.sk.translation", "res://translations/dialogic.sv.translation", "res://translations/dialogic.th.translation", "res://translations/dialogic.tr.translation", "res://translations/dialogic.uk.translation", "res://translations/dialogic.vi.translation", "res://translations/dialogic.zh_CN.translation"]
 
 source_file="res://translations/dialogic.csv"
-dest_files=["res://translations/dialogic.en.translation"]
+dest_files=["res://translations/dialogic.en.translation", "res://translations/dialogic.bg.translation", "res://translations/dialogic.cs.translation", "res://translations/dialogic.da.translation", "res://translations/dialogic.de.translation", "res://translations/dialogic.el.translation", "res://translations/dialogic.es.translation", "res://translations/dialogic.fi.translation", "res://translations/dialogic.fr.translation", "res://translations/dialogic.hu.translation", "res://translations/dialogic.id.translation", "res://translations/dialogic.it.translation", "res://translations/dialogic.ja.translation", "res://translations/dialogic.ko.translation", "res://translations/dialogic.nl.translation", "res://translations/dialogic.nb.translation", "res://translations/dialogic.pl.translation", "res://translations/dialogic.pt.translation", "res://translations/dialogic.ro.translation", "res://translations/dialogic.ru.translation", "res://translations/dialogic.sk.translation", "res://translations/dialogic.sv.translation", "res://translations/dialogic.th.translation", "res://translations/dialogic.tr.translation", "res://translations/dialogic.uk.translation", "res://translations/dialogic.vi.translation", "res://translations/dialogic.zh_CN.translation"]
 
 [params]
 
