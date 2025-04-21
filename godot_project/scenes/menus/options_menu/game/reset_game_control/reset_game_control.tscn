@@ -12,12 +12,12 @@ script = ExtResource("1_wkygd")
 [node name="ResetLabel" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Reset Game :"
+text = "reset_game_label"
 
 [node name="ResetButton" type="Button" parent="."]
 custom_minimum_size = Vector2(72, 32)
 layout_mode = 2
-text = "Reset"
+text = "reset_game_button"
 
 [node name="ConfirmResetDialog" type="ConfirmationDialog" parent="."]
 dialog_text = "Do you want to reset your game data?"

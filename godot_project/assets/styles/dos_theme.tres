@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://dvc6ey2qolvid"]
 
-[ext_resource type="FontFile" uid="uid://beqph2xj7ncxa" path="res://assets/fonts/ModernDOS8x16.ttf" id="1_2hjh1"]
+[ext_resource type="FontFile" uid="uid://bu4wixto3oahp" path="res://assets/fonts/Pixellari.ttf" id="1_sahtl"]
 
 [resource]
-default_font = ExtResource("1_2hjh1")
+default_font = ExtResource("1_sahtl")

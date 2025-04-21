@@ -26,27 +26,29 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/DifficultyControl"]
 layout_mode = 2
-text = "Difficulty"
+text = "options_difficulty"
 
 [node name="OptionButton" type="OptionButton" parent="VBoxContainer/DifficultyControl"]
 layout_mode = 2
 selected = 1
 item_count = 3
-popup/item_0/text = "Easy"
+popup/item_0/text = "options_difficulty_easy"
 popup/item_0/id = 0
-popup/item_1/text = "Normal"
+popup/item_1/text = "options_difficulty_normal"
 popup/item_1/id = 1
-popup/item_2/text = "Expert"
+popup/item_2/text = "options_difficulty_expert"
 popup/item_2/id = 2
 
 [node name="ResetGameControl" parent="VBoxContainer" instance=ExtResource("3_gdyom")]
 layout_mode = 2
 
 [node name="ResetProgressButton" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Reset Story Progress"
 
 [node name="ResetHighScoresButton" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Reset High Scores"
 

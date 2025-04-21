@@ -408,6 +408,9 @@ texture = ExtResource("7_2k5l7")
 [node name="VersionContainer" parent="VersionMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 
+[node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
+text = "main_menu_version"
+
 [node name="TitleContainer" parent="MenuContainer/TitleMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 
@@ -419,6 +422,9 @@ modulate = Color(1, 1, 1, 0)
 
 [node name="MenuButtonsContainer" parent="MenuContainer/MenuButtonsMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
+
+[node name="FeedbackButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
+text = "main_menu_feedback"
 
 [node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="1"]
 offset_left = -496.0
