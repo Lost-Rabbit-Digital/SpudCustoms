@@ -26,6 +26,7 @@ buses/default_bus_layout="res://assets/styles/default_bus_layout.tres"
 [autoload]
 
 Global="*res://assets/autoload/Global.gd"
+LocalizationManager="*res://scripts/systems/LocalizationManager.gd"
 SceneTransitionManager="*res://scripts/scene_transition_manager.gd"
 UIManager="*res://assets/autoload/UIManager.gd"
 SteamManager="*res://assets/autoload/SteamManager.gd"
@@ -217,7 +218,9 @@ dialogic_default_action={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://addons/maaacks_game_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_game_template/base/translations/menus_translations.fr.translation")
+locale/translations=PackedStringArray("res://addons/maaacks_game_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_game_template/base/translations/menus_translations.fr.translation", "res://translations/en/menus.en.translation")
+locale/translations_pot_files=PackedStringArray("res://assets/narrative/tutorial.dtl")
+locale/include_text_server_data=true
 pseudolocalization/stdout/print_fps=true
 
 [maaacks_game_template]

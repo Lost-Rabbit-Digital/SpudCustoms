@@ -8,6 +8,25 @@ var confirmation_dialog: ConfirmationDialog
 @onready var version_label = $VersionMargin/VersionContainer/VersionLabel
 @onready var bgm_player = $BackgroundMusicPlayer
 
+func _ready():
+	load_tracks()
+	# Play with original pitch by default
+	next_track_with_random_pitch()
+	#play_with_pitch_variation("original")
+	super._ready()
+	_setup_level_select()
+	animation_state_machine = $MenuAnimationTree.get("parameters/playback")
+	_setup_confirmation_dialog()
+	# Check for demo version
+	if Global.build_type == "Demo":
+		# Hide score attack button
+		%EndlessButton.visible = false
+		# Limit available levels
+		if level_select_scene:
+			level_select_scene.max_level = 2  # Only tutorial, level 1 and 2
+	#%NewGameButton.text = tr("main_menu_new_game")
+	#%ContinueGameButton.text = tr("main_menu_continue")
+
 func load_game_scene():
 	GameState.start_game()
 	SceneLoader.load_scene(story_game_scene_path)
@@ -93,23 +112,6 @@ var musical_intervals = {
 var bgm_tracks = []
 var current_track_index = 0
 
-func _ready():
-	load_tracks()
-	# Play with original pitch by default
-	next_track_with_random_pitch()
-	#play_with_pitch_variation("original")
-	super._ready()
-	_setup_level_select()
-	animation_state_machine = $MenuAnimationTree.get("parameters/playback")
-	_setup_confirmation_dialog()
-	# Check for demo version
-	if Global.build_type == "Demo":
-		# Hide score attack button
-		%EndlessButton.visible = false
-		# Limit available levels
-		if level_select_scene:
-			level_select_scene.max_level = 2  # Only tutorial, level 1 and 2
-	
 func _setup_game_buttons():
 	super._setup_game_buttons()
 	if GameState.has_game_state():
