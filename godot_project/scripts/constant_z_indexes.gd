@@ -39,7 +39,7 @@ const Z_INDEX = {
 	## Corpse fragments after explosions
 	"GIBS": 11,                   
 	## Vehicles on the main road             
-	"VEHICLES": null,
+	"VEHICLES": 9,
 	
 	# ----------------------------------------------------------------------
 	# Character Layers
@@ -53,11 +53,11 @@ const Z_INDEX = {
 	# Interactive Environment Layers
 	# ----------------------------------------------------------------------
 	## The main table surface
-	"INSPECTION_TABLE": null,                 
+	"INSPECTION_TABLE": 2,                 
 	## The suspect which moves through the office
-	"SUSPECT": null,
+	"SUSPECT": 5,
 	## The shutter which opens/closes in the office
-	"OFFICE_SHUTTER": null,
+	"OFFICE_SHUTTER": 7,
 	
 	# ----------------------------------------------------------------------
 	# Interactive Object Layers
