@@ -126,7 +126,7 @@ class Missile:
 		sprite = AnimatedSprite2D.new()
 		sprite.sprite_frames = sprite_frames
 		sprite.visible = true
-		sprite.z_index = 8
+		sprite.z_index = ConstantZIndexes.Z_INDEX.MISSILES
 		if sprite.sprite_frames.has_animation("default"):
 			sprite.play("default")  # Start animation
 		else:
@@ -713,7 +713,7 @@ func _on_smoke_animation_finished(smoke: AnimatedSprite2D) -> void:
 # Handle smoke z-index adjustment after delay
 func _on_smoke_alpha_timeout(smoke: AnimatedSprite2D) -> void:
 	if is_instance_valid(smoke):
-		smoke.z_index = 13
+		smoke.z_index = ConstantZIndexes.Z_INDEX.EXPLOSION_SMOKE
 
 
 # Handle smoke cleanup after timeout

@@ -33,7 +33,7 @@ const Z_INDEX = {
 	# Game Object Layers
 	# ----------------------------------------------------------------------
 	## Missiles launcher by the player
-	"MISSILES": null,
+	"MISSILES": 8,
 	## Dead bodies that remain on ground
 	"CORPSES": 3,
 	## Corpse fragments after explosions
