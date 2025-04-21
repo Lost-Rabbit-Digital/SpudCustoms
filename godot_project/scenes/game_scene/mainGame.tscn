@@ -566,7 +566,7 @@ autowrap_mode = 2
 [node name="LawReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_index = 3
 z_as_relative = false
-position = Vector2(211, 497)
+position = Vector2(893, 483)
 texture = ExtResource("31_rtxd3")
 script = ExtResource("32_k1orm")
 
@@ -722,7 +722,7 @@ unique_name_in_owner = true
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Megaphone/MegaphoneInteractionButton" to="." method="_on_megaphone_interaction_button_pressed"]
