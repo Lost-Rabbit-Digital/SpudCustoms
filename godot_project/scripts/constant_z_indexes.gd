@@ -37,7 +37,7 @@ const Z_INDEX = {
 	## Dead bodies that remain on ground
 	"CORPSES": null,                
 	## Corpse fragments after explosions
-	"GIBS": null,                   
+	"GIBS": 11,                   
 	## Vehicles on the main road             
 	"VEHICLES": null,
 	
@@ -75,7 +75,7 @@ const Z_INDEX = {
 	## General particle systems (dust, smoke, etc.)
 	"STAMP_PARTICLES": null,      
 	## Explosion effects
-	"EXPLOSIONS": null,            
+	"EXPLOSIONS": 12,            
 	## Footprints left by NPCs
 	"FOOTPRINTS": 9,
 	
