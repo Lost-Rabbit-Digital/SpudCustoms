@@ -33,7 +33,7 @@ const Z_INDEX = {
 	## Corpse fragments after explosions
 	"GIBS": 11,
 	## Vehicles on the main road             
-	"VEHICLES": 2,
+	"VEHICLES": 1,
 	
 	# ----------------------------------------------------------------------
 	# Character Layers
@@ -47,7 +47,7 @@ const Z_INDEX = {
 	# Interactive Environment Layers
 	# ----------------------------------------------------------------------
 	## The main table surface
-	"INSPECTION_TABLE": 0,  
+	"INSPECTION_TABLE": 2,
 	## Panel which the suspect sits in front of
 	"SUSPECT_PANEL": 0,               
 	## The suspect which moves through the office
