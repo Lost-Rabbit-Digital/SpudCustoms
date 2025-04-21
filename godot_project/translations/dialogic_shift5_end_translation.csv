@@ -1,0 +1,19 @@
+keys,en
+Text/96/text,"You creep through the darkened corridor, heart pounding as you avoid security patrols."
+Text/97/text,[color=CHARTREUSE]This device will disable the lock[/color] on Russet's office. I'll trigger alarms in the east wing as a distraction. You'll have five minutes.
+Text/98/text,"""The manifests should be in his filing cabinet. [color=CRIMSON]Red folder labeled 'RR Transport'[/color]. Don't leave evidence of your search."""
+Text/99/text,"You find the thick [color=CRIMSON]red folder labeled ""RR Transport""[/color] in the filing cabinet."
+Text/9a/text,"Inside are manifests matching rejected potato counts, and a directive from Prime Minister Idaho authorizing ""[pulse freq=3][color=DARK_VIOLET]full utilization of border rejects for RR production.[/color][/pulse]"""
+Text/9b/text,"Footsteps approach the office door. ""[wave amp=15 freq=3][color=YELLOW]Strange, I could've sworn I locked this.[/color][/wave]"""
+Choice/9c/text,"""Hide under the desk"""
+Choice/9c/disabled_text,
+Choice/9d/text,"""Jump out the window"""
+Choice/9d/disabled_text,
+Text/9e/text,"You dive under Russet's desk as he enters, your heart pounding. He sits, his feet inches from your face."
+Text/9f/text,"""Russet here. What? [color=CHARTREUSE]Another alarm?[/color] I'm on my way."" He leaves, and you escape."
+Text/a0/text,"You wrench open the window and jump. Thankfully it's only one story. A guard shouts: ""[color=RED]Hey! Stop![/color]"""
+Text/a1/text,You sprint across the grounds and manage to lose your pursuers.
+Text/a2/text,Did you get it?
+Text/a3/text,"You hand over the evidence, explaining what you found."
+Text/a4/text,This proves everything. The resistance will make copies. [tornado radius=3 freq=2]Spread the truth everywhere.[/tornado] They can't silence us all.
+Text/a5/text,"You've crossed a line. [wave amp=20 freq=3][color=YELLOW]There's no going back.[/color][/wave] When the truth spreads, Spud will be transformed."

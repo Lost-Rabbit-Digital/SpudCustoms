@@ -1,0 +1,27 @@
+keys,en
+Text/140/text,"The border resembles a [pulse freq=3][color=CRIMSON]war zone[/color][/pulse]. Barricades, armored vehicles, and elite guards stand ready. Today is when the resistance planned to strike."
+Text/141/text,"[wave amp=25 freq=3][color=YELLOW]EMERGENCY BROADCAST[/color][/wave]: All of Spud is under [color=RED]martial law[/color]. ""The Resistance"" has launched attacks against government facilities."
+Text/142/text,Anyone aiding these [color=CRIMSON]extremists[/color] faces [color=DARK_VIOLET]immediate processing[/color]. The Ministry confirms: [color=DARK_VIOLET]Root Reserve[/color] remains safe for all [color=DARK_ORANGE]loyal potatoes[/color].
+Text/143/text,[color=YELLOW]Rioting has broken out[/color] in multiple sectors. Resistance cells have attacked three [color=DARK_VIOLET]Root Reserve[/color] facilities.
+Text/144/text,Their goal: access the central database with all production records. Any sign of disloyalty means processing.
+Text/145/text,"We've captured several resistance operatives, including Officer Sasha."
+Text/146/text,The [tornado radius=3 freq=2][color=CRIMSON]real traitors[/color][/tornado] are those who [color=DARK_VIOLET]feed our people to each other[/color]. You can't stop the truth!
+Text/147/text,"She's dragged away, still shouting: [color=CHARTREUSE]The people will know what's in their food![/color]"
+Text/148/text,"The [color=CRIMSON]traitor[/color] will be [pulse freq=3][color=DARK_VIOLET]processed immediately[/color][/pulse]. A special batch of [color=DARK_VIOLET]Root Reserve[/color], made from the terrorists themselves."
+Text/149/text,All border crossings are [color=RED]suspended[/color] except for essential personnel with [color=GOLD]Level Alpha clearance[/color].
+Text/14a/text,This scanner [color=YELLOW]cannot be fooled[/color]. Sound the alarm immediately for anyone without proper clearance.
+Text/14b/text,A potato in official uniform approaches with seemingly perfect Alpha credentials.
+Text/14c/text,"A tiny blue card falls from the folder. ""[wave amp=15 freq=3][color=CHARTREUSE]The roots grow deep.[/color][/wave]"", they mutter as they pick up the card."
+Choice/14d/text,"""Process them through, ignoring the scanner alerts"" (Help the resistance)"
+Choice/14d/disabled_text,
+Choice/14e/text,"""Sound the alarm immediately"" (Betray the resistance)"
+Choice/14e/disabled_text,
+Text/14f/text,"Relief shows in their eyes. ""[color=CHARTREUSE]For Sasha. For Spud.[/color]"" They disappear toward the central database."
+Text/150/text,"Horror dawns on their face. ""[color=CRIMSON]You traitor! We trusted you![/color]"" They're quickly surrounded by guards."
+Text/151/text,"""Excellent work. Your loyalty will be rewarded."""
+Text/152/text,"Suddenly, the facility [color=YELLOW]shakes with explosions[/color]. The resistance attack has begun, regardless of your choice."
+Text/153/text,"Do I stay at my post and hope this blows over, or [color=CHARTREUSE]take a stand[/color] and risk everything to expose the truth?"
+Choice/154/text,"""I can't abandon my duty. I'll stay quiet and hope for the best."""
+Choice/154/disabled_text,
+Choice/155/text,"""I've been complicit for too long. It's time to fight for what's right."""
+Choice/155/disabled_text,

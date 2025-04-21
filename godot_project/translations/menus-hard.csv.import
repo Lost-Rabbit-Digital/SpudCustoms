@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://7rx4057ixr3q"
+
+[deps]
+
+files=["res://translations/menus-hard.bg.translation", "res://translations/menus-hard.el.translation", "res://translations/menus-hard.ja.translation", "res://translations/menus-hard.ko.translation", "res://translations/menus-hard.ru.translation", "res://translations/menus-hard.th.translation", "res://translations/menus-hard.uk.translation", "res://translations/menus-hard.zh_CN.translation"]
+
+source_file="res://translations/menus-hard.csv"
+dest_files=["res://translations/menus-hard.bg.translation", "res://translations/menus-hard.el.translation", "res://translations/menus-hard.ja.translation", "res://translations/menus-hard.ko.translation", "res://translations/menus-hard.ru.translation", "res://translations/menus-hard.th.translation", "res://translations/menus-hard.uk.translation", "res://translations/menus-hard.zh_CN.translation"]
+
+[params]
+
+compress=true
+delimiter=0

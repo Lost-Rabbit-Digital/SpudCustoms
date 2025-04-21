@@ -4,20 +4,20 @@ audio music "res://assets/music/narrative/ambient_mysterious_main.mp3" [fade="2.
 [background arg="res://assets/narrative/customs_office.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-supervisor_russet: Adequate work today, sprout. Remember, efficiency is key. We have quotas to meet.
+supervisor_russet: Adequate work today, sprout. Remember, efficiency is key. We have quotas to meet. #id:50
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-supervisor_russet: Don't forget to grab your ration of [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave]. You know what the radio says, it's the flavor of Spud's future!
+supervisor_russet: Don't forget to grab your ration of [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave]. You know what the radio says, it's the flavor of Spud's future! #id:51
 leave supervisor_russet
 
 [background arg="res://assets/narrative/suspicious_note.png" fade="2.0"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-A small note slips out from some papers on your desk.
-"[color=GOLD]Not all is as it seems. The roots of our nation have grown rotten. [br] Follow the trail, but take care not to be silenced.[/color] [br] - [color=CHARTREUSE]A friend[/color]"
+A small note slips out from some papers on your desk. #id:52
+"[color=GOLD]Not all is as it seems. The roots of our nation have grown rotten. [br] Follow the trail, but take care not to be silenced.[/color] [br] - [color=CHARTREUSE]A friend[/color]" #id:53
 
 [background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-player_character: That note... and the way Russet dodged my question about [pulse freq=3][color=CRIMSON]rejected potatoes[/color][/pulse]... [br] Something feels [color=STEEL_BLUE]off[/color].
+player_character: That note... and the way Russet dodged my question about [pulse freq=3][color=CRIMSON]rejected potatoes[/color][/pulse]... [br] Something feels [color=STEEL_BLUE]off[/color]. #id:54
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-player_character: I should stay [color=YELLOW]alert[/color]. There's more going on here than stamping passports.
+player_character: I should stay [color=YELLOW]alert[/color]. There's more going on here than stamping passports. #id:55
 leave player_character

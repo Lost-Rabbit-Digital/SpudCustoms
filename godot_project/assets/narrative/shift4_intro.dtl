@@ -4,64 +4,64 @@ audio music "res://assets/audio/ambient/horror_drone_23.mp3" [fade="2.0" volume=
 [background arg="res://assets/narrative/checkpoint_booth.png" fade="0.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-supervisor_russet: New security protocols today. We've received intelligence about [color=YELLOW]suspicious activities[/color].
+supervisor_russet: New security protocols today. We've received intelligence about [color=YELLOW]suspicious activities[/color]. #id:86
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-supervisor_russet: All travelers must undergo enhanced inspection procedures.
+supervisor_russet: All travelers must undergo enhanced inspection procedures. #id:87
 
 [background arg="res://assets/narrative/maximum_security.png" fade="1.2"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-supervisor_russet: Watch for [color=YELLOW]nervous behavior, unusual mannerisms, or reluctance to make eye contact[/color].
+supervisor_russet: Watch for [color=YELLOW]nervous behavior, unusual mannerisms, or reluctance to make eye contact[/color]. #id:88
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-supervisor_russet: All suspicious items must be confiscated and logged. For Spud's security, of course.
+supervisor_russet: All suspicious items must be confiscated and logged. For Spud's security, of course. #id:89
 leave supervisor_russet
 
 [background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
 join security_officer [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_officer: We're especially concerned about [color=CRIMSON]forbidden materials[/color] - anti-government literature, photography equipment...
+security_officer: We're especially concerned about [color=CRIMSON]forbidden materials[/color] - anti-government literature, photography equipment... #id:8a
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_officer: Their voice drops ominously. "[pulse freq=2][color=DARK_VIOLET]We have special procedures for those individuals.[/color][/pulse]"
+security_officer: Their voice drops ominously. "[pulse freq=2][color=DARK_VIOLET]We have special procedures for those individuals.[/color][/pulse]" #id:8b
 leave security_officer
 
 [background arg="res://assets/narrative/checkpoint_exterior.png" fade="2.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-narrator: [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] trucks unload crates marked "Premium Reserve" into the cafeteria. The smell is enticing, but your stomach turns.
+narrator: [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] trucks unload crates marked "Premium Reserve" into the cafeteria. The smell is enticing, but your stomach turns. #id:8c
 leave narrator
 
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
 join fellow_officer [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-fellow_officer: Have you tried the new Premium Reserve? My cousin disappeared last month. Failed inspection.
+fellow_officer: Have you tried the new Premium Reserve? My cousin disappeared last month. Failed inspection. #id:8d
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-fellow_officer: Maybe he's part of this batch, huh? [tornado radius=2 freq=2][color=STEEL_BLUE]Dark humor, you know?[/color][/tornado]
+fellow_officer: Maybe he's part of this batch, huh? [tornado radius=2 freq=2][color=STEEL_BLUE]Dark humor, you know?[/color][/tornado] #id:8e
 
 set {cafeteria_response} = "none"
-- "That's not funny. Not at all."
+- "That's not funny. Not at all." #id:8f
 	set {cafeteria_response} = "serious"
-- "I'm not hungry. Excuse me." (Leave)
+- "I'm not hungry. Excuse me." (Leave) #id:90
 	set {cafeteria_response} = "avoid"
 
 if {cafeteria_response} == "serious":
 	join fellow_officer [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-	fellow_officer: You're right. Sometimes joking is easier than thinking about [pulse freq=3][color=CRIMSON]what might actually be happening[/color][/pulse].
+	fellow_officer: You're right. Sometimes joking is easier than thinking about [pulse freq=3][color=CRIMSON]what might actually be happening[/color][/pulse]. #id:91
 	leave fellow_officer
 else:
 	join fellow_officer [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-	fellow_officer: The officer watches you leave. "Hey, I get it. Lost my appetite too..."
+	fellow_officer: The officer watches you leave. "Hey, I get it. Lost my appetite too..." #id:92
 	leave fellow_officer
 
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-sweet_potato_sasha: Convenient timing for new security protocols, isn't it? [wave amp=15 freq=3][color=YELLOW]They're trying to stop information about Root Reserve.[/color][/wave]
+sweet_potato_sasha: Convenient timing for new security protocols, isn't it? [wave amp=15 freq=3][color=YELLOW]They're trying to stop information about Root Reserve.[/color][/wave] #id:93
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-sweet_potato_sasha: I have something that might help us. Some potatoes with [color=CHARTREUSE]vital information deserve to get through[/color].
+sweet_potato_sasha: I have something that might help us. Some potatoes with [color=CHARTREUSE]vital information deserve to get through[/color]. #id:94
 leave sweet_potato_sasha
 
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-player_character: You consider your options carefully. Today's choices could help [color=CHARTREUSE]spread truth[/color]... or [color=CRIMSON]silence it forever[/color].
+player_character: You consider your options carefully. Today's choices could help [color=CHARTREUSE]spread truth[/color]... or [color=CRIMSON]silence it forever[/color]. #id:95
 leave player_character

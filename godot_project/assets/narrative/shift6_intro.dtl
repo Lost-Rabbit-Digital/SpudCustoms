@@ -4,110 +4,110 @@ audio music "res://assets/audio/ambient/horror_drone_12.mp3" [fade="2.0" volume=
 [background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 2.mp3" [volume="0.0" bus="SFX"]
-narrator: The border facility is in complete lockdown, with armed security patrolling every corridor.
+narrator: The border facility is in complete lockdown, with armed security patrolling every corridor. #id:b8
 leave narrator
 
 [background arg="res://assets/narrative/security_lockdown.png" fade="1.2"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-supervisor_russet: [pulse freq=3][color=RED]ATTENTION! LEVEL RED security situation![/color][/pulse] Classified documents were stolen last night.
+supervisor_russet: [pulse freq=3][color=RED]ATTENTION! LEVEL RED security situation![/color][/pulse] Classified documents were stolen last night. #id:b9
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-supervisor_russet: We have a [tornado radius=4 freq=3][color=CRIMSON]traitor in our midst[/color][/tornado]. Anyone withholding information will be treated as complicit.
+supervisor_russet: We have a [tornado radius=4 freq=3][color=CRIMSON]traitor in our midst[/color][/tornado]. Anyone withholding information will be treated as complicit. #id:ba
 leave supervisor_russet
 
 [background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 join security_officer [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_officer: All officers, line up for [wave amp=15 freq=2][color=DARK_ORANGE]security scanning[/color][/wave]. Those with elevated stress responses will be flagged.
+security_officer: All officers, line up for [wave amp=15 freq=2][color=DARK_ORANGE]security scanning[/color][/wave]. Those with elevated stress responses will be flagged. #id:bb
 leave security_officer
 
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
 join fellow_officer [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 3.mp3" [volume="0.0" bus="SFX"]
-fellow_officer: Have you seen what's happening outside? Pamphlets everywhere showing [color=DARK_VIOLET]Root Reserve[/color] is made from... [pulse freq=3][color=CRIMSON]from us[/color][/pulse].
+fellow_officer: Have you seen what's happening outside? Pamphlets everywhere showing [color=DARK_VIOLET]Root Reserve[/color] is made from... [pulse freq=3][color=CRIMSON]from us[/color][/pulse]. #id:bc
 
 set {fellow_officer_response} = "none"
-- "Keep your voice down. We're all being watched."
+- "Keep your voice down. We're all being watched." #id:bd
 	set {fellow_officer_response} = "cautious"
-- "I've heard the same rumors. It's horrifying if true."
+- "I've heard the same rumors. It's horrifying if true." #id:be
 	set {fellow_officer_response} = "sympathetic"
-- "That's ridiculous propaganda. Don't spread such lies."
+- "That's ridiculous propaganda. Don't spread such lies." #id:bf
 	set {fellow_officer_response} = "loyal"
 
 if {fellow_officer_response} == "cautious":
 	join fellow_officer [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-	fellow_officer: You're right. But if it's true... what does that make us?
+	fellow_officer: You're right. But if it's true... what does that make us? #id:c0
 	leave fellow_officer
 elif {fellow_officer_response} == "sympathetic":
 	join fellow_officer [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-	fellow_officer: My cousin was rejected last month. Does that mean...? I [color=CHARTREUSE]can't do this anymore[/color].
+	fellow_officer: My cousin was rejected last month. Does that mean...? I [color=CHARTREUSE]can't do this anymore[/color]. #id:c1
 	leave fellow_officer
 else:
 	join fellow_officer [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-	fellow_officer: Their expression becomes guarded. Of course. Loyal Spud forever.
+	fellow_officer: Their expression becomes guarded. Of course. Loyal Spud forever. #id:c2
 	leave fellow_officer
 
 [background arg="res://assets/narrative/interrogation_setting.png" fade="2.0"]
 join security_chief [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_chief: State your whereabouts last night between 2200 and 0400 hours.
+security_chief: State your whereabouts last night between 2200 and 0400 hours. #id:c3
 
 set {interrogation_response} = "none"
-- "I was in my quarters the entire night, sleeping."
+- "I was in my quarters the entire night, sleeping." #id:c4
 	set {interrogation_response} = "lie"
-- "I'd prefer to speak to my legal representative first."
+- "I'd prefer to speak to my legal representative first." #id:c5
 	set {interrogation_response} = "legal"
 
 if {interrogation_response} == "lie":
 	join security_chief [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-	security_chief: Your stress levels indicate [color=YELLOW]deception[/color]. However... inconclusive. You may go for now.
-	leave security_chief
+security_chief: Your stress levels indicate [color=YELLOW]deception[/color]. However... inconclusive. You may go for now. #id:c6
+leave security_chief
 else:
-	join security_chief [z_index="1"]
+join security_chief [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-	security_chief: Legal representative? This is a security procedure, not a trial. Your refusal has been noted.
-	leave security_chief
+security_chief: Legal representative? This is a security procedure, not a trial. Your refusal has been noted. #id:c7
+leave security_chief
 
 [background arg="res://assets/narrative/resistance_planning.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-sweet_potato_sasha: It's working. The manifests have caused an uproar, but [color=DARK_ORANGE]Russet suspects us[/color].
+sweet_potato_sasha: It's working. The manifests have caused an uproar, but [color=DARK_ORANGE]Russet suspects us[/color]. #id:c8
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-sweet_potato_sasha: Watch for allies from our organization during today's shift. [color=CHARTREUSE]You'll recognize them[/color].
+sweet_potato_sasha: Watch for allies from our organization during today's shift. [color=CHARTREUSE]You'll recognize them[/color]. #id:c9
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-sweet_potato_sasha: If you can get them through safely, use the [color=CHARTREUSE]special mark we discussed[/color].
+sweet_potato_sasha: If you can get them through safely, use the [color=CHARTREUSE]special mark we discussed[/color]. #id:ca
 
 set {sasha_plan_response} = "none"
-- "It's worth the risk. I'm in."
+- "It's worth the risk. I'm in." #id:cb
 	set {sasha_plan_response} = "committed"
-- "This is getting too dangerous. Maybe we should lay low."
+- "This is getting too dangerous. Maybe we should lay low." #id:cc
 	set {sasha_plan_response} = "nervous"
 
 if {sasha_plan_response} == "committed":
 	join sweet_potato_sasha [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-	sweet_potato_sasha: I knew I could count on you. When this is over, [color=CHARTREUSE]Spud will know who the real heroes were[/color].
+	sweet_potato_sasha: I knew I could count on you. When this is over, [color=CHARTREUSE]Spud will know who the real heroes were[/color]. #id:cd
 	leave sweet_potato_sasha
 else:
 	join sweet_potato_sasha [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-	sweet_potato_sasha: We're way past that point. Laying low won't save us. [color=CHARTREUSE]Only bringing down the system will[/color].
+	sweet_potato_sasha: We're way past that point. Laying low won't save us. [color=CHARTREUSE]Only bringing down the system will[/color]. #id:ce
 	leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/supervisor_presenting.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-supervisor_russet: Each station now has the new [color=DARK_ORANGE]RealityScan system[/color]. It detects unauthorized markings and forgeries.
+supervisor_russet: Each station now has the new [color=DARK_ORANGE]RealityScan system[/color]. It detects unauthorized markings and forgeries. #id:cf
 
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-supervisor_russet: All documents must be scanned before approval. The [color=CRIMSON]traitors will be rooted out[/color]. I guarantee it.
+supervisor_russet: All documents must be scanned before approval. The [color=CRIMSON]traitors will be rooted out[/color]. I guarantee it. #id:d0
 leave supervisor_russet
 
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-player_character: Helping resistance members just got much more dangerous, but [color=CHARTREUSE]the truth must spread[/color].
+player_character: Helping resistance members just got much more dangerous, but [color=CHARTREUSE]the truth must spread[/color]. #id:d1
 leave player_character

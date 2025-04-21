@@ -4,99 +4,99 @@ audio music "res://assets/music/narrative/metal_doomed_main.mp3" [fade="2.0" vol
 [background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-narrator: The checkpoint has transformed into a military outpost. Elite guards in black uniforms patrol with weapons displayed.
+narrator: The checkpoint has transformed into a military outpost. Elite guards in black uniforms patrol with weapons displayed. #id:117
 leave narrator
 
 [background arg="res://assets/narrative/maximum_security.png" fade="1.5"]
 join security_chief [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_chief: I am Chief Security Officer Yukon, dispatched from the capital by Prime Minister Idaho.
+security_chief: I am Chief Security Officer Yukon, dispatched from the capital by Prime Minister Idaho. #id:118
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_chief: Intelligence indicates a [pulse freq=2][color=YELLOW]terrorist attack is imminent[/color][/pulse]. The "resistance" plans to infiltrate tomorrow.
+security_chief: Intelligence indicates a [pulse freq=2][color=YELLOW]terrorist attack is imminent[/color][/pulse]. The "resistance" plans to infiltrate tomorrow. #id:119
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_chief: All officers will submit to [wave amp=15 freq=2][color=DARK_ORANGE]loyalty screening[/color][/wave]. Suspicious behavior means detention and [color=DARK_VIOLET]processing[/color].
+security_chief: All officers will submit to [wave amp=15 freq=2][color=DARK_ORANGE]loyalty screening[/color][/wave]. Suspicious behavior means detention and [color=DARK_VIOLET]processing[/color]. #id:11a
 leave security_chief
 
 [background arg="res://assets/narrative/occupation_checkpoint.png" fade="1.2"]
 join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-supervisor_russet: [tornado radius=3 freq=2][color=RED]Full cooperation[/color][/tornado] with Security is mandatory. My reports on each of you have been provided to the Chief.
+supervisor_russet: [tornado radius=3 freq=2][color=RED]Full cooperation[/color][/tornado] with Security is mandatory. My reports on each of you have been provided to the Chief. #id:11b
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-supervisor_russet: Russet's gaze lingers on you uncomfortably before moving on.
+supervisor_russet: Russet's gaze lingers on you uncomfortably before moving on. #id:11c
 leave supervisor_russet
 
 [background arg="res://assets/narrative/maximum_security.png" fade="1.2"]
 join security_chief [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_chief: This is the [color=DARK_ORANGE]IdentityScan 5000[/color]. It analyzes biometrics to detect infiltrators and sympathizers.
+security_chief: This is the [color=DARK_ORANGE]IdentityScan 5000[/color]. It analyzes biometrics to detect infiltrators and sympathizers. #id:11d
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_chief: Anyone flagged faces [color=CRIMSON]enhanced interrogation[/color]. Use it without exception.
+security_chief: Anyone flagged faces [color=CRIMSON]enhanced interrogation[/color]. Use it without exception. #id:11e
 leave security_chief
 
 [background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
 join fellow_officer [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-fellow_officer: Have you seen Sasha? She didn't report for roll call. Last night, [color=CRIMSON]security forces entered her quarters[/color].
+fellow_officer: Have you seen Sasha? She didn't report for roll call. Last night, [color=CRIMSON]security forces entered her quarters[/color]. #id:11f
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-fellow_officer: They're saying she was part of the [pulse freq=2][color=CHARTREUSE]resistance[/color][/pulse].
+fellow_officer: They're saying she was part of the [pulse freq=2][color=CHARTREUSE]resistance[/color][/pulse]. #id:120
 
 set {sasha_response} = "none"
-- "We shouldn't be talking about this. It's dangerous."
+- "We shouldn't be talking about this. It's dangerous." #id:121
 	set {sasha_response} = "cautious"
-- "I'm worried about her too. This isn't right."
+- "I'm worried about her too. This isn't right." #id:122
 	set {sasha_response} = "concerned"
 
 if {sasha_response} == "cautious":
 	join fellow_officer [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-	fellow_officer: You're right. But watch yourself. They're looking for connections to her.
+	fellow_officer: You're right. But watch yourself. They're looking for connections to her. #id:123
 	leave fellow_officer
 else:
 	join fellow_officer [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-	fellow_officer: So you were close? Be careful. They might be watching you too.
+	fellow_officer: So you were close? Be careful. They might be watching you too. #id:124
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-	fellow_officer: The officer slips you a note: "[color=YELLOW]Clean your station of anything suspicious.[/color]"
+	fellow_officer: The officer slips you a note\: "[color=YELLOW]Clean your station of anything suspicious.[/color]" #id:125
 	leave fellow_officer
 
 [background arg="res://assets/narrative/interrogation_setting.png" fade="2.0"]
 join security_chief [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_chief: You've been at this checkpoint for quite some time. Interesting performance record.
+security_chief: You've been at this checkpoint for quite some time. Interesting performance record. #id:126
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_chief: You were seen frequently with Officer Sasha, now under investigation for [wave amp=20 freq=3][color=CRIMSON]treason[/color][/wave].
+security_chief: You were seen frequently with Officer Sasha, now under investigation for [wave amp=20 freq=3][color=CRIMSON]treason[/color][/wave]. #id:127
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_chief: The chief leans forward. Is there anything you'd like to tell me about her activities?
+security_chief: The chief leans forward. Is there anything you'd like to tell me about her activities? #id:128
 
 set {interrogation_choice} = "none"
-- "Sasha and I were just colleagues. I know nothing about her outside work."
+- "Sasha and I were just colleagues. I know nothing about her outside work." #id:129
 	set {interrogation_choice} = "deny"
-- "I was gathering evidence on her suspicious activities to report later."
+- "I was gathering evidence on her suspicious activities to report later." #id:12a
 	set {interrogation_choice} = "betray"
 
 if {interrogation_choice} == "deny":
 	join security_chief [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-	security_chief: Multiple witnesses say otherwise. Without concrete evidence though, I can't detain you. [color=YELLOW]Yet.[/color]
+	security_chief: Multiple witnesses say otherwise. Without concrete evidence though, I can't detain you. [color=YELLOW]Yet.[/color] #id:12b
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-	security_chief: You'll be under [color=CRIMSON]close observation[/color]. One misstep, and you'll [color=DARK_VIOLET]join Sasha[/color].
+	security_chief: You'll be under [color=CRIMSON]close observation[/color]. One misstep, and you'll [color=DARK_VIOLET]join Sasha[/color]. #id:12c
 	leave security_chief
 else:
 	join security_chief [z_index="1"]
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-	security_chief: How convenient. And yet you filed no reports until now.
+	security_chief: How convenient. And yet you filed no reports until now. #id:12d
 	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-	security_chief: You'll provide a complete statement. If your information proves valuable, perhaps we'll overlook your delayed reporting.
+	security_chief: You'll provide a complete statement. If your information proves valuable, perhaps we'll overlook your delayed reporting. #id:12e
 	leave security_chief
 
 [background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 join security_officer [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_officer: I'll be [color=CRIMSON]monitoring your work[/color] today. Every traveler must be identity-scanned. [color=RED]No exceptions[/color].
+security_officer: I'll be [color=CRIMSON]monitoring your work[/color] today. Every traveler must be identity-scanned. [color=RED]No exceptions[/color]. #id:12f
 leave security_officer
 
 [background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
 join player_character [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-player_character: Sasha has been taken. The resistance plan is [color=CRIMSON]compromised[/color]. With security on high alert, their chances seem hopeless.
+player_character: Sasha has been taken. The resistance plan is [color=CRIMSON]compromised[/color]. With security on high alert, their chances seem hopeless. #id:130
 leave player_character
