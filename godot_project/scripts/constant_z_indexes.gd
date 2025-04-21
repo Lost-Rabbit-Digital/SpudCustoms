@@ -35,9 +35,9 @@ const Z_INDEX = {
 	## Missiles launcher by the player
 	"MISSILES": null,
 	## Dead bodies that remain on ground
-	"CORPSES": null,                
+	"CORPSES": 3,
 	## Corpse fragments after explosions
-	"GIBS": 11,                   
+	"GIBS": 11,
 	## Vehicles on the main road             
 	"VEHICLES": 9,
 	
@@ -45,7 +45,7 @@ const Z_INDEX = {
 	# Character Layers
 	# ----------------------------------------------------------------------
 	## NPCs that walk/run in the game, also known as "runners"
-	"NPC": null,              
+	"RUNNER_POTATO": 8,              
 	## The player character(s)
 	"PLAYER": null,                
 	
@@ -76,8 +76,11 @@ const Z_INDEX = {
 	"STAMP_PARTICLES": null,      
 	## Explosion effects
 	"EXPLOSIONS": 12,            
+	"EXPLOSION_SMOKE": 13,            
 	## Footprints left by NPCs
 	"FOOTPRINTS": 9,
+	## Smoke from the misisles
+	"MISSILE_SMOKE": 11,
 	
 	# ----------------------------------------------------------------------
 	# User Interface Layers (high values to always appear on top)
