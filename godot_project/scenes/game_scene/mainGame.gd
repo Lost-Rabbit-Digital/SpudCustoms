@@ -1127,14 +1127,17 @@ func update_score_display():
 func update_quota_display():
 	var current_quota = Global.quota_met
 	var quota_label = $UI/Labels/QuotaLabel
+	
 	# Ensure shift is at least 1 for calculation purposes, such as in shift 0 for tutorial
 	# Update the text
-	#quota_label.text = "Quota: " + str(current_quota) + " / " + str(Global.quota_target)
+	# quota_label.text = "Quota: " + str(current_quota) + " / " + str(Global.quota_target)
+	
 	# Update the text with translation
 	quota_label.text = tr("ui_quota").format({
 		"current": str(current_quota),
 		"target": str(Global.quota_target)
 	})
+	
 	# Check if there's a change OR if this is the first update (previous_quota is -1)
 	if previous_quota != current_quota && previous_quota != -1:
 		var tween = create_tween()
@@ -1171,7 +1174,8 @@ func update_strikes_display():
 	var strikes_label = $UI/Labels/StrikesLabel
 	
 	# Update the text
-	#strikes_label.text = "Strikes: " + str(current_strikes) + " / " + str(Global.max_strikes)
+	# strikes_label.text = "Strikes: " + str(current_strikes) + " / " + str(Global.max_strikes)
+	
 	# Update the text with translation
 	strikes_label.text = tr("ui_strikes").format({
 		"current": current_strikes, 

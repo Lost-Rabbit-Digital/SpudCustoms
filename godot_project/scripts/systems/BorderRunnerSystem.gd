@@ -582,21 +582,20 @@ func handle_runner_escape(_runner: PotatoPerson):
 
 	# Apply score penalty and prevent negative score
 	Global.score = max(0, Global.score - points_to_remove)
+	
 	if score_label:
-		score_label.text = "Score: {total_points}".format({"total_points": Global.score})
-
+		score_label.text = tr("ui_score").format({"score": str(Global.score)})
+			
 	# Update alert to show penalty
 	if points_to_remove == 0:
 		# No points were deducted
-		Global.display_red_alert(alert_label, alert_timer, "RUNNER ESCAPED!\nStrike added!")
+		Global.display_red_alert(alert_label, alert_timer, tr("alert_runner_escaped"))
 	else:
 		# Points were deducted, show the penalty
 		Global.display_red_alert(
 			alert_label,
 			alert_timer,
-			"RUNNER ESCAPED!\nStrike added!\n-{penalty} points!".format(
-				{"penalty": points_to_remove}
-			)
+			tr("alert_points_deducted").format({"penalty": points_to_remove})
 		)
 
 	print("Before strike: " + str(Global.strikes))
@@ -1043,26 +1042,22 @@ func handle_successful_hit(runner, explosion_pos):
 		# Spawn even more gibs on a perfect hit
 		spawn_gibs(runner.global_position)
 		points_earned += perfect_hit_bonus
-		bonus_text += "PERFECT HIT! +{perfect} accuracy bonus points\n".format(
-			{"perfect": perfect_hit_bonus}
-		)
+		bonus_text += tr("alert_perfect_hit").format({"perfect": perfect_hit_bonus})
 
 	if runner_streak > 1:
 		var streak_points = streak_bonus * (runner_streak - 1)
 		points_earned += streak_points
-		bonus_text += "COMBO x{mult}! +{streak} combo bonus points\n".format(
-			{"mult": runner_streak, "streak": streak_points}
-		)
+		bonus_text += tr("alert_combo").format({"mult": runner_streak, "streak": streak_points})
 
 	# Add points
 	Global.score += points_earned
 	if score_label:
-		score_label.text = "Score: {total_points}".format({"total_points": Global.score})
+		score_label.text = tr("ui_score").format({"score": str(Global.score)})
 
 	# Remove a strike if any present
 	if Global.strikes > 0:
 		Global.strikes -= 1
-		bonus_text += "Strike removed!\n"
+		bonus_text += tr("alert_strike_removed")
 
 	Global.display_green_alert(
 		alert_label,
@@ -1071,7 +1066,7 @@ func handle_successful_hit(runner, explosion_pos):
 	)
 
 	if strike_label:
-		strike_label.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
+		strike_label.text = tr("ui_strikes").format({"current": Global.strikes, "max": Global.max_strikes})
 
 
 func enable():
