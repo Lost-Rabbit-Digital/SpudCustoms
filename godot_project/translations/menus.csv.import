@@ -2,12 +2,14 @@
 
 importer="csv_translation"
 type="Translation"
-uid="uid://da7b87kvqtyvl"
-valid=false
+uid="uid://ymydh50le2jg"
 
 [deps]
 
+files=["res://translations/menus.en.translation", "res://translations/menus.cs.translation", "res://translations/menus.da.translation", "res://translations/menus.de.translation", "res://translations/menus.es.translation", "res://translations/menus.fi.translation", "res://translations/menus.fr.translation", "res://translations/menus.hu.translation", "res://translations/menus.id.translation", "res://translations/menus.it.translation", "res://translations/menus.nl.translation", "res://translations/menus.nb.translation", "res://translations/menus.pl.translation", "res://translations/menus.pt.translation", "res://translations/menus.ro.translation", "res://translations/menus.sk.translation", "res://translations/menus.sv.translation", "res://translations/menus.tr.translation", "res://translations/menus.vi.translation"]
+
 source_file="res://translations/menus.csv"
+dest_files=["res://translations/menus.en.translation", "res://translations/menus.cs.translation", "res://translations/menus.da.translation", "res://translations/menus.de.translation", "res://translations/menus.es.translation", "res://translations/menus.fi.translation", "res://translations/menus.fr.translation", "res://translations/menus.hu.translation", "res://translations/menus.id.translation", "res://translations/menus.it.translation", "res://translations/menus.nl.translation", "res://translations/menus.nb.translation", "res://translations/menus.pl.translation", "res://translations/menus.pt.translation", "res://translations/menus.ro.translation", "res://translations/menus.sk.translation", "res://translations/menus.sv.translation", "res://translations/menus.tr.translation", "res://translations/menus.vi.translation"]
 
 [params]
 

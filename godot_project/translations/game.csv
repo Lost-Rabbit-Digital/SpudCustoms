@@ -1,4 +1,4 @@
-keys,en,cs,da,de,es,fi,fr,hu,id,it,nl,no,pl,pt,ro,sk,sv,tr,vi
+﻿keys,en,cs,da,de,es,fi,fr,hu,id,it,nl,no,pl,pt,ro,sk,sv,tr,vi
 alert_border_runner,BORDER RUNNER DETECTED!\nClick to launch missile!,,,,,,,,,,,,,,,,,,
 alert_rejected_fleeing,REJECTED POTATO FLEEING!\nClick to launch missile!,,,,,,,,,,,,,,,,,,
 alert_runner_escaped,RUNNER ESCAPED!\nStrike added!,,,,,,,,,,,,,,,,,,
@@ -15,3 +15,12 @@ ui_click_megaphone,Click megaphone to call the next potato,,,,,,,,,,,,,,,,,,
 ui_drag_document,Drag document to inspection table,,,,,,,,,,,,,,,,,,
 ui_stamp_document,Select a stamp to approve or reject,,,,,,,,,,,,,,,,,,
 ui_check_violations,Check for document violations,,,,,,,,,,,,,,,,,,
+"You have caused unnecessary suffering, officer...\n+1 Strike!","You have caused unnecessary suffering, officer...\n+1 Strike!",,,,,,"Vous avez causé des souffrances inutiles, officier...\n+1 Frappe !",,,,,,,,,,,,
+Strike removed!,Strike removed!,,,,,,Frappe supprimée !,,,,,,,,,,,,
+BORDER RUNNER DETECTED!\nClick to launch missile!,BORDER RUNNER DETECTED!\nClick to launch missile!,,,,,,COUREUR FRONTALIER DÉTECTÉ !\nCliquez pour lancer un missile !,,,,,,,,,,,,
+REJECTED POTATO FLEEING!\nClick to launch missile!,REJECTED POTATO FLEEING!\nClick to launch missile!,,,,,,POMME DE TERRE REJETÉE EN FUITE !\nCliquez pour lancer un missile !,,,,,,,,,,,,
+RUNNER ESCAPED!\nStrike added!,RUNNER ESCAPED!\nStrike added!,,,,,,COUREUR S'EST ÉCHAPPE !\nFrappe ajoutée !,,,,,,,,,,,,
+Click megaphone to call the next potato,Click megaphone to call the next potato,,,,,,Cliquez sur le mégaphone pour appeler la pomme de terre suivante,,,,,,,,,,,,
+Drag document to inspection table,Drag document to inspection table,,,,,,Faites glisser le document vers la table d'inspection,,,,,,,,,,,,
+Select a stamp to approve or reject,Select a stamp to approve or reject,,,,,,Sélectionnez un tampon pour approuver ou rejeter,,,,,,,,,,,,
+Check for document violations,Check for document violations,,,,,,Vérifiez les violations du document,,,,,,,,,,,,

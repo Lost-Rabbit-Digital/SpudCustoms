@@ -12,7 +12,8 @@ var passport_stampable: StampableComponent
 # Game references
 var main_game: Node
 var stats_manager: Node
-
+@export var alert_label: Label
+@export var alert_timer: Timer
 
 # Initialize the stamp system
 func initialize(game_scene: Node):
@@ -20,6 +21,21 @@ func initialize(game_scene: Node):
 
 	# Get reference to stats manager
 	stats_manager = game_scene.get_node_or_null("SystemManagers/StatsManager")
+
+	# Get UI references
+	alert_label = game_scene.get_node_or_null("UI/Labels/MarginContainer/AlertLabel")
+	alert_timer = game_scene.get_node_or_null("SystemManagers/Timers/AlertTimer")
+	
+	# Log whether we found the references
+	if alert_label:
+		print("Alert label found successfully")
+	else:
+		push_warning("Alert label not found in scene tree")
+		
+	if alert_timer:
+		print("Alert timer found successfully")
+	else:
+		push_warning("Alert timer not found in scene tree")
 
 	# Create the stamp system using our factory
 	stamp_system = StampFactory.create_stamp_system(game_scene)
@@ -56,67 +72,86 @@ func _on_stamp_applied(stamp: StampComponent, document: Node, is_perfect: bool):
 		# Perfect stamp bonus points
 		var perfect_points = 200
 		Global.add_score(perfect_points)
-
-		# Find the alert display system - first through main game
-		var alert_label = null
-		var alert_timer = null
-
+		
 		# Try to find alert references in the scene tree
 		var root = get_tree().current_scene
-		alert_label = root.get_node_or_null("UI/Labels/MarginContainer/AlertLabel")
-		alert_timer = root.get_node_or_null("SystemManagers/Timers/AlertTimer")
 
 		# Display the alert if possible
-		if alert_label and alert_timer and Global.has_method("display_green_alert"):
-			Global.display_green_alert(
+		Global.display_green_alert(
 				alert_label,
 				alert_timer,
-				"PERFECT STAMP! +{points} points!".format({"points": perfect_points})
+				"PERFECT STAMP! +{points} points!".format({"points": str(perfect_points)})
 			)
 
 		# Provide visual feedback with particle effect at stamp position
 		# Get the position from either the stamp or the document
-		var effect_position = stamp.applied_position
-		if effect_position == Vector2.ZERO and document is Node2D:
-			effect_position = document.global_position
+		var effect_position = Vector2(385, 350)
 
 		# Create the visual effect
 		create_perfect_stamp_effect(effect_position)
-
-		# Shake screen if possible
-		if root.has_method("shake_screen"):
-			root.shake_screen(5.0, 0.2)
+	
+		# Shake screen
+		Global.shake_screen(3, 0.5)
 
 
 func create_perfect_stamp_effect(position: Vector2):
 	# Create a particle effect for perfect stamps
 	var particles = CPUParticles2D.new()
-	particles.position = position
-	particles.z_index = 11
-	particles.amount = 20
-	particles.lifetime = 1.0
-	particles.explosiveness = 0.8
+	
+	# Make sure we're using global position
+	particles.global_position = position 
+	#+ Vector2(randi_range(-200,200),randi_range(-25,25))
+	
+	# Set to very high z_index to ensure visibility
+	particles.z_index = 25
+	
+	# Increase amount and lifetime for better visibility
+	particles.amount = 100
+	particles.lifetime = 4
+	particles.explosiveness = 0.9
+	
+	# Add some spread
+	particles.spread = 70.0
+	
+	# Set direction upward with some randomness
 	particles.direction = Vector2(0, -1)
-	particles.gravity = Vector2(0, 98)
-	particles.initial_velocity_min = 50
-	particles.initial_velocity_max = 100
+	particles.gravity = Vector2(0, 150)
+	
+	# Increase velocity for better visibility
+	particles.initial_velocity_min = 75
+	particles.initial_velocity_max = 250
+	
+	particles.scale_amount_min = 0.6 # Minimum size
+	particles.scale_amount_max = 6.0  # Maximum size
+	
+	# Use a bright, noticeable color
 	particles.color = Color(1, 0.8, 0, 1)  # Gold particles
-	# Add to scene and auto-remove when done
-	add_child(particles)
+	
+	# Add a second color for variation (optional)
+	particles.color_ramp = Gradient.new()
+	particles.color_ramp.add_point(0.0, Color(1, 0.8, 0, 1))  # Gold
+	particles.color_ramp.add_point(1.0, Color(1, 0.5, 0, 0.1))  # Fading orange
+	
+	# Add to scene root rather than StampSystemManager
+	get_tree().current_scene.add_child(particles)
+	
+	# Start emitting
 	particles.emitting = true
-
+	
 	# Auto-cleanup
 	var timer = Timer.new()
-	timer.wait_time = 2.0
+	timer.wait_time = 4
 	timer.one_shot = true
-	add_child(timer)
+	get_tree().current_scene.add_child(timer)
 	timer.start()
 	timer.timeout.connect(
 		func():
 			particles.queue_free()
 			timer.queue_free()
 	)
-
+	
+	# Debug information
+	print("Created particle effect at position: ", position)
 
 # Handle stamps specifically applied to the passport
 func _on_passport_stamped(_stamp: StampComponent, is_perfect: bool):

@@ -29,6 +29,7 @@ layout_mode = 2
 text = "options_difficulty"
 
 [node name="OptionButton" type="OptionButton" parent="VBoxContainer/DifficultyControl"]
+auto_translate_mode = 1
 layout_mode = 2
 selected = 1
 item_count = 3

@@ -10,7 +10,8 @@ script = ExtResource("2_o57rn")
 options_packed_scene = ExtResource("3_hewsk")
 
 [node name="TitleLabel" parent="MenuPanelContainer/MarginContainer/BoxContainer/TitleMargin" index="0"]
-text = "pause_menu_title"
+auto_translate_mode = 1
+text = "paused_menu_title"
 
 [node name="CloseButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="0"]
 text = "shift_summary_continue"

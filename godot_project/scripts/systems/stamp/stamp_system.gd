@@ -105,7 +105,8 @@ func on_stamp_requested(
 func apply_stamp(stamp_type: String, stamp_bar: Node = null):
 	if is_stamping or stamp_cooldown_timer > 0:
 		return
-
+	
+	
 	is_stamping = true
 
 	# Play sound effect
