@@ -1,8 +1,28 @@
 extends Control
 
 @onready var difficulty_option_button = $VBoxContainer/DifficultyControl/OptionButton
+var language_codes = []
 
 func _ready():
+	# Populate language dropdown
+	var language_dropdown = %LanguageDropdown
+
+	for code in LocalizationManager.available_languages:
+		var language_name = LocalizationManager.available_languages[code]
+		language_dropdown.add_item(language_name)
+		language_codes.append(code) # Store code corresponding to the added item
+
+	# Set current language
+	var current_lang = LocalizationManager.current_language
+	for i in range(language_codes.size()):
+		if language_codes[i] == current_lang:
+			language_dropdown.select(i)
+			break
+	
+	%LanguageDropdown.item_selected.connect(_on_language_dropdown_item_selected)
+
+
+
 	# Set up the difficulty option button
 	if difficulty_option_button:
 		# Clear any existing items
@@ -29,6 +49,10 @@ func _on_difficulty_changed(index):
 	var difficulty = difficulty_option_button.get_item_text(index)
 	Global.set_difficulty(difficulty)
 	print("Difficulty changed to: ", difficulty)
+
+func _on_language_dropdown_item_selected(index):
+	var lang_code = language_codes[index]
+	LocalizationManager.set_language(lang_code)
 
 func _on_ResetGameControl_reset_confirmed():
 	GlobalState.reset()

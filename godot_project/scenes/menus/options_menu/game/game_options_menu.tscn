@@ -20,17 +20,33 @@ alignment = 1
 script = ExtResource("2_y4sbs")
 search_depth = 2
 
+[node name="LanguageControl" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/LanguageControl"]
+layout_mode = 2
+text = "select_language"
+
+[node name="LanguageDropdown" type="OptionButton" parent="VBoxContainer/LanguageControl"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+selected = 0
+
 [node name="DifficultyControl" type="HBoxContainer" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/DifficultyControl"]
 layout_mode = 2
+size_flags_horizontal = 2
 text = "options_difficulty"
 
 [node name="OptionButton" type="OptionButton" parent="VBoxContainer/DifficultyControl"]
 auto_translate_mode = 1
 layout_mode = 2
+size_flags_horizontal = 10
 selected = 1
 item_count = 3
 popup/item_0/text = "options_difficulty_easy"

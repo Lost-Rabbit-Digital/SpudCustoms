@@ -240,8 +240,7 @@ func _setup_ui_references():
 	suspect_panel = $Gameplay/SuspectPanel
 	suspect_panel_front = $Gameplay/SuspectPanel/SuspectPanelFront
 	suspect = $Gameplay/MugshotPhotoGenerator/SizingSprite
-	
-	$UI/Labels/StrikesLabel.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
+	update_strikes_display()
 
 func _on_safety_unpause_timeout():
 	# Force unpause if dialogue takes too long or gets stuck
@@ -656,9 +655,16 @@ func generate_rules():
 	update_rules_display()
 	
 func update_rules_display():
-	var laws_text = "[center][u]LAWS[/u]\n\n" + "\n".join(current_rules) + "[/center]"
+	var laws_text = "[center][u]" + tr("LAWS") + "[/u]\n\n"
+	
+	for rule_key in current_rules:
+		laws_text += tr(rule_key) + "\n"
+	
+	laws_text += "[/center]"
+	
 	if $Gameplay/InteractiveElements/LawReceipt/OpenReceipt/ReceiptNote:
 		$Gameplay/InteractiveElements/LawReceipt/OpenReceipt/ReceiptNote.text = laws_text
+	
 	# Emit the signal with the formatted laws text
 	emit_signal("rules_updated", laws_text)
 	
@@ -1039,6 +1045,7 @@ func calculate_age(date_of_birth: String) -> int:
 func _on_score_updated(new_score: int):
 	#$UI/Labels/ScoreLabel.text = "Score: " + str(new_score)
 	$UI/Labels/ScoreLabel.text = tr("ui_score").format({"score": str(new_score)})
+	
 func process_decision(allowed):
 	print("Evaluating immigration decision in process_decision()...")
 	if !current_potato_info or current_potato_info.is_empty():
@@ -1070,30 +1077,35 @@ func process_decision(allowed):
 			point_multiplier = 2.0
 	   # Award points for correct decisions
 		var decision_points = 250 * point_multiplier
-		var alert_text = "You made the right choice, officer."
+		var alert_text = tr("alert_correct_decision").format({"points": str(decision_points)})
+
 		if !allowed and validation.violation_reason:
 			alert_text += "\n" + validation.violation_reason
-		alert_text += "\n+" + str(decision_points) + " points!"
+			
 		Global.display_green_alert(alert_label, alert_timer, alert_text)
 		Global.add_score(decision_points)
 	else:
-	   # Decision was incorrect
-		var alert_text = "You have caused unnecessary suffering, officer..."
+		# Decision was incorrect
+		#var alert_text = "You have caused unnecessary suffering, officer..."
+		var alert_text = tr("alert_wrong_decision")
+		
 		if allowed and !correct_decision:
 			# Player approved an invalid potato
 			if validation.violation_reason:
 				alert_text += "\n" + validation.violation_reason
-			else:
-				# Player rejected a valid potato
-				alert_text += "\nThis potato meets all requirements and should have been approved."
+		else:
+			# Player rejected a valid potato
+			alert_text += "\n" + tr("alert_potato_should_be_approved")
+			#alert_text += "\nThis potato meets all requirements and should have been approved."
+				
 		
-		alert_text += "\n+1 Strike!"
 		Global.display_red_alert(alert_label, alert_timer, alert_text)
 		correct_decision_streak = 0
 		point_multiplier = 1.0
 		Global.strikes += 1
 		if Global.strikes >= Global.max_strikes:
-			alert_text = "Maximum strikes exceeded! Your shift is over."
+			#alert_text = "Maximum strikes exceeded! Your shift is over."
+			alert_text = tr("alert_strike_out")
 			Global.display_red_alert(alert_label, alert_timer, alert_text)
 			# Lower the shuttere when max strikes reached
 			office_shutter_controller.lower_shutter(0.7)  

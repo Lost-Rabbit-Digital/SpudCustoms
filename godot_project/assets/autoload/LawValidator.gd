@@ -2,117 +2,120 @@ extends Node
 
 var LAW_CHECKS = {
 	# Condition-based rules
-	"[color=dark_goldenrod]All[/color] potatoes must be [color=dark_green]fresh[/color]!\n": {
+	"law_fresh_potatoes": {
 		"check": func(potato_info): return potato_info.condition != "Fresh",
-		"message": func(potato_info): return "Potato was %s but must be Fresh" % potato_info.condition
+		"message": func(potato_info): return tr("violation_condition_not_fresh").format({"condition": potato_info.condition})
 	},
-	"[color=dark_goldenrod]Extra Eyes[/color] are suspicious, inspect carefully and [color=dark_red]reject[/color].\n": {
+	"law_extra_eyes": {
 		"check": func(potato_info): return potato_info.condition == "Extra Eyes",
-		"message": func(potato_info): return "Potato had Extra Eyes which is forbidden"
+		"message": func(potato_info): return tr("violation_extra_eyes")
 	},
-	"[color=dark_goldenrod]Rotten[/color] potatoes are strictly [color=dark_red]forbidden[/color].\n": {
+	"law_rotten": {
 		"check": func(potato_info): return potato_info.condition == "Rotten",
-		"message": func(potato_info): return "Rotten potatoes are not allowed"
+		"message": func(potato_info): return tr("violation_rotten")
 	},
-	"[color=dark_goldenrod]Sprouted[/color] potatoes must be [color=dark_red]denied[/color].\n": {
+	"law_sprouted": {
 		"check": func(potato_info): return potato_info.condition == "Sprouted",
-		"message": func(potato_info): return "Sprouted potatoes are not allowed"
+		"message": func(potato_info): return tr("violation_sprouted")
 	},
-	"[color=dark_goldenrod]Dehydrated[/color] potatoes are [color=dark_red]not allowed[/color] today.\n": {
+	"law_dehydrated": {
 		"check": func(potato_info): return potato_info.condition == "Dehydrated",
-		"message": func(potato_info): return "Dehydrated potatoes are not allowed"
+		"message": func(potato_info): return tr("violation_dehydrated")
 	},
-	"[color=dark_goldenrod]Frozen[/color] potatoes are [color=dark_red]banned[/color] due to low temperatures.\n": {
+	"law_frozen": {
 		"check": func(potato_info): return potato_info.condition == "Frozen",
-		"message": func(potato_info): return "Frozen potatoes are not allowed without thawing"
+		"message": func(potato_info): return tr("violation_frozen")
 	},
-
 	# Age-based rules
-	"[color=dark_red]No[/color] potatoes over [color=dark_goldenrod]5 years old[/color].\n": {
+	"law_over_5_years": {
 		"check": func(potato_info): return calculate_age(potato_info.date_of_birth) >= 5,
-		"message": func(potato_info): return "Potato is %d years old (max 5 years)" % calculate_age(potato_info.date_of_birth)
+		"message": func(potato_info): return tr("violation_too_old").format({"age": calculate_age(potato_info.date_of_birth)})
 	},
-	"[color=dark_red]Reject[/color] potatoes younger than [color=dark_goldenrod]3 years old[/color].\n": {
+	"law_under_3_years": {
 		"check": func(potato_info): return calculate_age(potato_info.date_of_birth) <= 3,
-		"message": func(potato_info): return "Potato is %d years old (must be over 3)" % calculate_age(potato_info.date_of_birth)
+		"message": func(potato_info): return tr("violation_too_young_3").format({"age": calculate_age(potato_info.date_of_birth)})
 	},
-	"Potatoes under [color=dark_goldenrod]2 years old[/color] are [color=dark_red]not[/color] allowed.\n": {
+	"law_under_2_years": {
 		"check": func(potato_info): return calculate_age(potato_info.date_of_birth) <= 2,
-		"message": func(potato_info): return "Potatoes under 2 years old are banned"
+		"message": func(potato_info): return tr("violation_too_young_2")
 	},
-
 	# Gender-based rules
-	"Only [color=dark_goldenrod]male[/color] potatoes [color=dark_green]allowed[/color] today.\n": {
+	"law_males_only": {
 		"check": func(potato_info): return potato_info.sex == "Female",
-		"message": func(potato_info): return "Only male potatoes allowed today"
+		"message": func(potato_info): return tr("violation_males_only")
 	},
-	"[color=dark_goldenrod]Female[/color] potatoes only, [color=dark_red]reject[/color] all males.\n": {
+	"law_females_only": {
 		"check": func(potato_info): return potato_info.sex == "Male",
-		"message": func(potato_info): return "Only female potatoes allowed today"
+		"message": func(potato_info): return tr("violation_females_only")
 	},
-
 	# Country-based rules
-	"Potatoes from [color=dark_goldenrod]Spudland[/color] must be [color=dark_red]denied[/color].\n": {
+	"law_country_spudland": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Spudland",
-		"message": func(potato_info): return "Spudland potatoes are not allowed"
+		"message": func(potato_info): return tr("violation_country_spudland")
 	},
-	"[color=dark_goldenrod]Potatopia[/color] citizens [color=dark_red]cannot[/color] enter for any reason.\n": {
+	"law_country_potatopia": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Potatopia",
-		"message": func(potato_info): return "Potatopia citizens are not allowed"
+		"message": func(potato_info): return tr("violation_country_potatopia")
 	},
-	"[color=dark_goldenrod]Tuberstan[/color] potatoes suspected of [color=dark_red]concealing arms[/color].\n": {
+	"law_country_tuberstan": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Tuberstan",
-		"message": func(potato_info): return "Tuberstan potatoes are currently restricted"
+		"message": func(potato_info): return tr("violation_country_tuberstan")
 	},
-	"[color=dark_goldenrod]North Yamnea[/color] is currently restricted due to [color=dark_red]radioactive taters[/color].\n": {
+	"law_country_north_yamnea": {
 		"check": func(potato_info): return potato_info.country_of_issue == "North Yamnea",
-		"message": func(potato_info): return "North Yamnea potatoes are restricted (radioactive)"
+		"message": func(potato_info): return tr("violation_country_north_yamnea")
 	},
-	"[color=dark_goldenrod]Spuddington[/color] potatoes are [color=dark_red]counterfeiting[/color] documents.\n": {
+	"law_country_spuddington": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Spuddington",
-		"message": func(potato_info): return "Spuddington potatoes restricted (counterfeiting)"
+		"message": func(potato_info): return tr("violation_country_spuddington")
 	},
-	"[color=dark_goldenrod]Tatcross[/color] citizens get [color=dark_red]ABSOLUTELY NO[/color] entry processing.\n": {
+	"law_country_tatcross": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Tatcross",
-		"message": func(potato_info): return "Tatcross citizens are not allowed"
+		"message": func(potato_info): return tr("violation_country_tatcross")
 	},
-	"[color=dark_goldenrod]Mash Meadows[/color] potatoes are [color=dark_red]banned[/color] due to quarantine!\n": {
+	"law_country_mash_meadows": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Mash Meadows",
-		"message": func(potato_info): return "Mash Meadows under quarantine"
+		"message": func(potato_info): return tr("violation_country_mash_meadows")
 	},
-	"[color=dark_goldenrod]Tuberville[/color] potatoes subject to [color=dark_red]absolute rejection[/color].\n": {
+	"law_country_tuberville": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Tuberville",
-		"message": func(potato_info): return "Tuberville potatoes are not allowed"
+		"message": func(potato_info): return tr("violation_country_tuberville")
 	},
-	"[color=dark_goldenrod]Chip Hill[/color] exports are currently [color=dark_red]restricted[/color].\n": {
+	"law_country_chip_hill": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Chip Hill",
-		"message": func(potato_info): return "Chip Hill exports are restricted"
+		"message": func(potato_info): return tr("violation_country_chip_hill")
 	},
-	"[color=dark_goldenrod]Murphyland[/color] potatoes are [color=dark_red]banned[/color] from the economy!\n": {
+	"law_country_murphyland": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Murphyland",
-		"message": func(potato_info): return "Murphyland potatoes are banned"
+		"message": func(potato_info): return tr("violation_country_murphyland")
 	},
-	"[color=dark_goldenrod]Colcannon[/color] citizens must be [color=dark_red]rejected[/color] due to plague.\n": {
+	"law_country_colcannon": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Colcannon",
-		"message": func(potato_info): return "Colcannon citizens are not allowed"
+		"message": func(potato_info): return tr("violation_country_colcannon")
 	},
-	"[color=dark_goldenrod]Pratie Point[/color] potatoes require [color=dark_red]rejection[/color] due to agricultural differences.\n": {
+	"law_country_pratie_point": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Pratie Point",
-		"message": func(potato_info): return "Pratie Point potatoes not allowed"
+		"message": func(potato_info): return tr("violation_country_pratie_point")
 	},
-	"[color=dark_goldenrod]Purple Majesty[/color] potatoes [color=dark_red]forbidden[/color].\n": {
+	"law_purple_majesty": {
 		"check": func(potato_info): return potato_info.race == "Purple Majesty",
-		"message": func(potato_info): return "Purple Majesty potatoes are not allowed."
+		"message": func(potato_info): return tr("violation_race_purple_majesty")
 	},
-	"[color=dark_goldenrod]Sweet Potatoes[/color] need [color=dark_goldenrod]special paperwork[/color].\n": {
+	"law_sweet_potatoes": {
 		"check": func(potato_info): return potato_info.race == "Sweet Potato",
-		"message": func(potato_info): return "Sweet Potatoes require Form T-43."
+		"message": func(potato_info): return tr("violation_race_sweet_potato")
 	},
-	"[color=dark_goldenrod]Yukon Gold[/color] potatoes must be [color=dark_green]fresh[/color].\n": {
+	"law_yukon_gold": {
 		"check": func(potato_info): return potato_info.race == "Yukon Gold" or potato_info.condition != "Fresh",
-		"message": func(potato_info): return "Yukon Gold potatoes must be fresh."
+		"message": func(potato_info): return tr("violation_race_yukon_gold")
 	},
 }
+
+func get_translated_rule_text(rule_key: String) -> String:
+	# Convert the rule_key to a translation key
+	var translation_key = rule_key
+	# Return the translated text
+	return tr(translation_key)
 
 # Helper function to check all violations
 func check_violations(potato_info: Dictionary, current_rules: Array) -> Dictionary:
@@ -124,7 +127,7 @@ func check_violations(potato_info: Dictionary, current_rules: Array) -> Dictiona
 	# Check expiration first
 	if is_expired(potato_info.expiration_date):
 		result.is_valid = false
-		result.violation_reason = "Document expired on " + potato_info.expiration_date
+		result.violation_reason = tr("violation_expired_document").format({"date": potato_info.expiration_date})
 		return result
 	
 	# Check for rule conflicts and remove them

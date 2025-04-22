@@ -98,6 +98,9 @@ These are our goals, to-do tasks, and completed tasks.
 
 # FULL RELEASE TASKS - 2025-04-20 Target Release - 1.1.0
 ## Tasks
+Runner Escaped! Strike Added! Message shown in English <- BorderRunnerSystem?
+Strike removed! +250 points! Message shown in English <- BorderRunnerSystem?
+Finish translating Shift Summary screen
 
 ### Law Bugs
 
@@ -144,6 +147,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ### Completed Tasks for 1.1.0
+- Added full localization for 18 languages in addition to English (cs  da  de  es  fi  fr  hu  id  it  nl  no  pl  pt  ro  sk  sv  tr  vi)
 - Stamp System: Why are the particle effects and global alert not visible / not triggering when a perfect stamp is placed in the top and middle 1/3rd of a document?
 - Runners: If a runner is currently emoting when they begin a run, it seems to spawn two emotes
 - Updated art for reckoning, fix grain

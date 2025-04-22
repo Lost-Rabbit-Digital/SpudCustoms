@@ -1,0 +1,29 @@
+keys,en,fr
+violation_condition_not_fresh,Potato was {condition} but must be Fresh,La pomme de terre était {condition} mais doit être Fraîche
+violation_extra_eyes,Potato had Extra Eyes which is forbidden,La pomme de terre avait des Yeux Supplémentaires qui sont interdits
+violation_rotten,Rotten potatoes are not allowed,Les pommes de terre pourries ne sont pas autorisées
+violation_sprouted,Sprouted potatoes are not allowed,Les pommes de terre germées ne sont pas autorisées
+violation_dehydrated,Dehydrated potatoes are not allowed today,Les pommes de terre déshydratées ne sont pas autorisées aujourd'hui
+violation_frozen,Frozen potatoes are banned due to low temperatures,Les pommes de terre surgelées sont interdites en raison des basses températures
+violation_too_old,Potato is {age} years old (max 5 years),La pomme de terre a {age} ans (maximum 5 ans)
+violation_too_young_3,Potato is {age} years old (must be over 3),La pomme de terre a {age} ans (doit avoir plus de 3 ans)
+violation_too_young_2,Potatoes under 2 years old are banned,Les pommes de terre de moins de 2 ans sont interdites
+violation_males_only,Only male potatoes allowed today,Seules les pommes de terre mâles sont autorisées aujourd'hui
+violation_females_only,Only female potatoes allowed today,Seules les pommes de terre femelles sont autorisées aujourd'hui
+violation_country_spudland,Spudland potatoes are not allowed,Les pommes de terre de Spudland ne sont pas autorisées
+violation_country_potatopia,Potatopia citizens are not allowed,Les citoyens de Potatopia ne sont pas autorisés
+violation_country_tuberstan,Tuberstan potatoes are restricted (concealing arms),Les pommes de terre de Tuberstan sont restreintes (dissimulation d'armes)
+violation_country_north_yamnea,North Yamnea potatoes are restricted (radioactive),Les pommes de terre de North Yamnea sont restreintes (radioactives)
+violation_country_spuddington,Spuddington potatoes are restricted (counterfeiting),Les pommes de terre de Spuddington sont restreintes (contrefaçon)
+violation_country_tatcross,Tatcross citizens are not allowed,Les citoyens de Tatcross ne sont pas autorisés
+violation_country_mash_meadows,Mash Meadows under quarantine,Mash Meadows est en quarantaine
+violation_country_tuberville,Tuberville potatoes are not allowed,Les pommes de terre de Tuberville ne sont pas autorisées
+violation_country_chip_hill,Chip Hill exports are restricted,Les exportations de Chip Hill sont restreintes
+violation_country_murphyland,Murphyland potatoes are banned,Les pommes de terre de Murphyland sont interdites
+violation_country_colcannon,Colcannon citizens are not allowed,Les citoyens de Colcannon ne sont pas autorisés
+violation_country_pratie_point,Pratie Point potatoes not allowed,Les pommes de terre de Pratie Point ne sont pas autorisées
+violation_race_purple_majesty,Purple Majesty potatoes are not allowed,Les pommes de terre Purple Majesty ne sont pas autorisées
+violation_race_sweet_potato,Sweet Potatoes require Form T-43,Les patates douces nécessitent le formulaire T-43
+violation_race_yukon_gold,Yukon Gold potatoes must be fresh,Les pommes de terre Yukon Gold doivent être fraîches
+violation_expired_document,Document expired on {date},Document expiré le {date}
+violation_invalid_potato,This potato meets all requirements and should have been approved,Cette pomme de terre répond à toutes les exigences et aurait dû être approuvée
