@@ -1,23 +1,23 @@
-keys,en
-Text/a6/text,The border facility feels different today. Tense. Security patrols in greater numbers as wary silence replaces chatter.
-Text/a7/text,"Last night, [pulse freq=2][color=CRIMSON]prohibited materials[/color][/pulse] were discovered. Pamphlets containing lies about [color=DARK_VIOLET]Root Reserve[/color]."
-Text/a8/text,We're implementing [wave amp=15 freq=2][color=DARK_ORANGE]threat level ORANGE protocols[/color][/wave]. All officers subject to loyalty screenings. All travelers face maximum scrutiny.
-Text/a9/text,It's working. The pamphlets are spreading. People are asking questions about [color=DARK_VIOLET]Root Reserve[/color].
-Text/aa/text,I have sources telling me there's a shipment log in Russet's office - transport manifests that could [tornado radius=3 freq=2][color=CHARTREUSE]prove everything[/color][/tornado].
-Text/ab/text,"I need you to help me get it. Tonight, after final shift. Can I count on you?"
-Choice/ac/text,"""I'm in. Let's expose the truth."""
-Choice/ac/disabled_text,
-Choice/ad/text,"""I don't know, Sasha...this could be dangerous."""
-Choice/ad/disabled_text,
-Text/ae/text,Thank goodness. I knew you had [color=CHARTREUSE]stronger roots than the others[/color]. We'll meet at midnight.
-Text/af/text,Sometimes we have to [color=CHARTREUSE]risk getting mashed to do what's right[/color]. Think about it.
-Text/b0/text,[color=DARK_ORANGE]Loyalty check[/color]. Please state your name and officer ID. Then tell me why you serve Spud.
-Choice/b1/text,"""I serve to protect our borders from dangerous influences."""
-Choice/b1/disabled_text,
-Choice/b2/text,"""I serve to ensure everyone receives fair treatment."""
-Choice/b2/disabled_text,
-Text/b3/text,"Good answer. Spud needs loyal protectors. Scanner reads green. Carry on, officer."
-Text/b4/text,"The officer's eyebrows raise. Fair treatment? Scanner flashes [color=DARK_ORANGE]amber[/color]. Remember, our primary concern is security, not fairness."
-Text/b5/text,Today's quota has been increased. Anyone with suspicious materials is to be flagged for [color=DARK_VIOLET]special processing[/color].
-Text/b6/text,I'll be [color=DARK_ORANGE]watching your decisions[/color] very carefully today.
-Text/b7/text,"Tonight could change everything. But first, [color=YELLOW]survive the day without raising suspicion[/color]."
+keys,en,cs,da,de,es,fi,fr,hu,id,it,nl,no,pl,pt,ro,sk,sv,tr,vi
+Text/a6/text,The border facility feels different today. Tense. Security patrols in greater numbers as wary silence replaces chatter.,,,,,,,,,,,,,,,,,,
+Text/a7/text,"Last night, [pulse freq=2][color=CRIMSON]prohibited materials[/color][/pulse] were discovered. Pamphlets containing lies about [color=DARK_VIOLET]Root Reserve[/color].",,,,,,,,,,,,,,,,,,
+Text/a8/text,We're implementing [wave amp=15 freq=2][color=DARK_ORANGE]threat level ORANGE protocols[/color][/wave]. All officers subject to loyalty screenings. All travelers face maximum scrutiny.,,,,,,,,,,,,,,,,,,
+Text/a9/text,It's working. The pamphlets are spreading. People are asking questions about [color=DARK_VIOLET]Root Reserve[/color].,,,,,,,,,,,,,,,,,,
+Text/aa/text,I have sources telling me there's a shipment log in Russet's office - transport manifests that could [tornado radius=3 freq=2][color=CHARTREUSE]prove everything[/color][/tornado].,,,,,,,,,,,,,,,,,,
+Text/ab/text,"I need you to help me get it. Tonight, after final shift. Can I count on you?",,,,,,,,,,,,,,,,,,
+Choice/ac/text,"""I'm in. Let's expose the truth.""",,,,,,,,,,,,,,,,,,
+Choice/ac/disabled_text,,,,,,,,,,,,,,,,,,,
+Choice/ad/text,"""I don't know, Sasha...this could be dangerous.""",,,,,,,,,,,,,,,,,,
+Choice/ad/disabled_text,,,,,,,,,,,,,,,,,,,
+Text/ae/text,Thank goodness. I knew you had [color=CHARTREUSE]stronger roots than the others[/color]. We'll meet at midnight.,,,,,,,,,,,,,,,,,,
+Text/af/text,Sometimes we have to [color=CHARTREUSE]risk getting mashed to do what's right[/color]. Think about it.,,,,,,,,,,,,,,,,,,
+Text/b0/text,[color=DARK_ORANGE]Loyalty check[/color]. Please state your name and officer ID. Then tell me why you serve Spud.,,,,,,,,,,,,,,,,,,
+Choice/b1/text,"""I serve to protect our borders from dangerous influences.""",,,,,,,,,,,,,,,,,,
+Choice/b1/disabled_text,,,,,,,,,,,,,,,,,,,
+Choice/b2/text,"""I serve to ensure everyone receives fair treatment.""",,,,,,,,,,,,,,,,,,
+Choice/b2/disabled_text,,,,,,,,,,,,,,,,,,,
+Text/b3/text,"Good answer. Spud needs loyal protectors. Scanner reads green. Carry on, officer.",,,,,,,,,,,,,,,,,,
+Text/b4/text,"The officer's eyebrows raise. Fair treatment? Scanner flashes [color=DARK_ORANGE]amber[/color]. Remember, our primary concern is security, not fairness.",,,,,,,,,,,,,,,,,,
+Text/b5/text,Today's quota has been increased. Anyone with suspicious materials is to be flagged for [color=DARK_VIOLET]special processing[/color].,,,,,,,,,,,,,,,,,,
+Text/b6/text,I'll be [color=DARK_ORANGE]watching your decisions[/color] very carefully today.,,,,,,,,,,,,,,,,,,
+Text/b7/text,"Tonight could change everything. But first, [color=YELLOW]survive the day without raising suspicion[/color].",,,,,,,,,,,,,,,,,,

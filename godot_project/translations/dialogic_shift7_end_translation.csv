@@ -1,55 +1,55 @@
-keys,en
-Text/d2/text,"After your shift, you're led to a secret resistance meeting in an abandoned starch factory."
-Text/d3/text,A weathered potato with battle scars addresses the assembled group.
-Text/d4/text,The time for whispers and pamphlets is over. The government has shown its true colors.
-Text/d5/text,Our sources confirm that [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] processing plants are increasing production.
-Text/d6/text,"Which means [tornado radius=3 freq=3][color=CRIMSON]more of our brothers and sisters disappeared, processed, consumed[/color][/tornado]."
-Text/d7/text,The leader pounds a fist on the table. [pulse freq=3][color=CHARTREUSE]This ends now.[/color][/pulse] We have a plan to strike at the heart of their operation.
-Text/d8/text,"Sasha unfurls detailed plans on the table. In three days, we launch our primary offensive."
-Text/d9/text,"While one team creates a diversion at the main government complex, another will infiltrate the largest Root Reserve facility."
-Text/da/text,"Our goal: obtain [color=CHARTREUSE]irrefutable evidence[/color] of what happens inside, broadcast it to all of Spud."
-Text/db/text,Sasha points to a section of the plans. This is where you come in.
-Text/dc/text,We need someone on the inside at Spud Customs to ensure our operatives can cross the border for the mission.
-Text/dd/text,Can we count on you to be that person?
-Choice/de/text,"""I'll do whatever it takes to expose the truth."""
-Choice/de/disabled_text,
-Choice/df/text,"""It sounds dangerous. What if we get caught?"""
-Choice/df/disabled_text,
-Choice/e0/text,"""Is there another way that doesn't put so many at risk?"""
-Choice/e0/disabled_text,
-Text/e1/text,Sasha's face lights up with hope. Thank you. [color=CHARTREUSE]Your courage will save countless lives.[/color]
-Text/e2/text,"She squeezes your hand. When this is all over, [color=CHARTREUSE]you'll be remembered as a hero of the revolution.[/color]"
-Text/e3/text,Sasha nods solemnly. It is dangerous. I won't lie to you about that.
-Text/e4/text,We could all end up [color=DARK_VIOLET]processed into Root Reserve[/color] ourselves if we fail.
-Text/e5/text,"But doing nothing is even more dangerous. For all of us, in the long run."
-Text/e6/text,Sasha's expression turns grim. We've tried other ways. For years.
-Text/e7/text,Petitions. Quiet diplomacy. Anonymous tips. Nothing has worked.
-Text/e8/text,Sometimes you have to risk everything to change anything.
-Text/e9/text,A heated debate breaks out among the resistance members.
-Text/ea/text,Some argue for a more aggressive approach – destroying the processing plants entirely.
-Text/eb/text,Others insist that violent action will only turn public opinion against them.
-Text/ec/text,ENOUGH! The leader silences the room with a commanding voice.
-Text/ed/text,"We cannot afford to be divided. Not now, when we're so close."
-Text/ee/text,Our goal is simple: reveal the truth. Let the people decide what happens next.
-Text/ef/text,The leader turns to address you directly. But we need to know [color=YELLOW]where you stand[/color].
-Text/f0/text,"In three days, our agents will approach your checkpoint. They'll carry [color=CHARTREUSE]blue identification cards[/color]."
-Text/f1/text,Will you help them cross? Your answer now will determine our next move.
-Choice/f2/text,"""I'll help them cross. For the future of Spud."""
-Choice/f2/disabled_text,
-Choice/f3/text,"""I can't be directly involved, but I'll look the other way."""
-Choice/f3/disabled_text,
-Choice/f4/text,"""I need more time to think about this."""
-Choice/f4/disabled_text,
-Text/f5/text,The leader clasps your shoulder firmly. [color=CHARTREUSE]Your courage honors us all.[/color]
-Text/f6/text,"On the third day, when the sun is highest, our agents will come."
-Text/f7/text,"The password is ""[wave amp=15 freq=3][color=CHARTREUSE]The roots grow deep.[/color][/wave]"" Remember it."
-Text/f8/text,"The leader nods slowly, clearly disappointed but understanding."
-Text/f9/text,Sometimes the most we can ask is for people not to stand in our way.
-Text/fa/text,Our agents will proceed as planned. Just... don't raise the alarm.
-Text/fb/text,The leader's expression hardens. [color=YELLOW]Time is a luxury we don't have.[/color]
-Text/fc/text,But forcing anyone to join our cause makes us no better than them.
-Text/fd/text,We'll proceed without counting on your help. Search your conscience.
-Text/fe/text,"As the meeting breaks up, Sasha walks with you back toward the checkpoint."
-Text/ff/text,Whatever happens... thank you for everything you've done.
-Text/100/text,"You return to your quarters at the checkpoint, mind racing with the weight of coming events."
-Text/101/text,"In just three days, everything could change. [color=YELLOW]For better or worse.[/color]"
+keys,en,cs,da,de,es,fi,fr,hu,id,it,nl,no,pl,pt,ro,sk,sv,tr,vi
+Text/d2/text,"After your shift, you're led to a secret resistance meeting in an abandoned starch factory.",,,,,,,,,,,,,,,,,,
+Text/d3/text,A weathered potato with battle scars addresses the assembled group.,,,,,,,,,,,,,,,,,,
+Text/d4/text,The time for whispers and pamphlets is over. The government has shown its true colors.,,,,,,,,,,,,,,,,,,
+Text/d5/text,Our sources confirm that [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] processing plants are increasing production.,,,,,,,,,,,,,,,,,,
+Text/d6/text,"Which means [tornado radius=3 freq=3][color=CRIMSON]more of our brothers and sisters disappeared, processed, consumed[/color][/tornado].",,,,,,,,,,,,,,,,,,
+Text/d7/text,The leader pounds a fist on the table. [pulse freq=3][color=CHARTREUSE]This ends now.[/color][/pulse] We have a plan to strike at the heart of their operation.,,,,,,,,,,,,,,,,,,
+Text/d8/text,"Sasha unfurls detailed plans on the table. In three days, we launch our primary offensive.",,,,,,,,,,,,,,,,,,
+Text/d9/text,"While one team creates a diversion at the main government complex, another will infiltrate the largest Root Reserve facility.",,,,,,,,,,,,,,,,,,
+Text/da/text,"Our goal: obtain [color=CHARTREUSE]irrefutable evidence[/color] of what happens inside, broadcast it to all of Spud.",,,,,,,,,,,,,,,,,,
+Text/db/text,Sasha points to a section of the plans. This is where you come in.,,,,,,,,,,,,,,,,,,
+Text/dc/text,We need someone on the inside at Spud Customs to ensure our operatives can cross the border for the mission.,,,,,,,,,,,,,,,,,,
+Text/dd/text,Can we count on you to be that person?,,,,,,,,,,,,,,,,,,
+Choice/de/text,"""I'll do whatever it takes to expose the truth.""",,,,,,,,,,,,,,,,,,
+Choice/de/disabled_text,,,,,,,,,,,,,,,,,,,
+Choice/df/text,"""It sounds dangerous. What if we get caught?""",,,,,,,,,,,,,,,,,,
+Choice/df/disabled_text,,,,,,,,,,,,,,,,,,,
+Choice/e0/text,"""Is there another way that doesn't put so many at risk?""",,,,,,,,,,,,,,,,,,
+Choice/e0/disabled_text,,,,,,,,,,,,,,,,,,,
+Text/e1/text,Sasha's face lights up with hope. Thank you. [color=CHARTREUSE]Your courage will save countless lives.[/color],,,,,,,,,,,,,,,,,,
+Text/e2/text,"She squeezes your hand. When this is all over, [color=CHARTREUSE]you'll be remembered as a hero of the revolution.[/color]",,,,,,,,,,,,,,,,,,
+Text/e3/text,Sasha nods solemnly. It is dangerous. I won't lie to you about that.,,,,,,,,,,,,,,,,,,
+Text/e4/text,We could all end up [color=DARK_VIOLET]processed into Root Reserve[/color] ourselves if we fail.,,,,,,,,,,,,,,,,,,
+Text/e5/text,"But doing nothing is even more dangerous. For all of us, in the long run.",,,,,,,,,,,,,,,,,,
+Text/e6/text,Sasha's expression turns grim. We've tried other ways. For years.,,,,,,,,,,,,,,,,,,
+Text/e7/text,Petitions. Quiet diplomacy. Anonymous tips. Nothing has worked.,,,,,,,,,,,,,,,,,,
+Text/e8/text,Sometimes you have to risk everything to change anything.,,,,,,,,,,,,,,,,,,
+Text/e9/text,A heated debate breaks out among the resistance members.,,,,,,,,,,,,,,,,,,
+Text/ea/text,Some argue for a more aggressive approach – destroying the processing plants entirely.,,,,,,,,,,,,,,,,,,
+Text/eb/text,Others insist that violent action will only turn public opinion against them.,,,,,,,,,,,,,,,,,,
+Text/ec/text,ENOUGH! The leader silences the room with a commanding voice.,,,,,,,,,,,,,,,,,,
+Text/ed/text,"We cannot afford to be divided. Not now, when we're so close.",,,,,,,,,,,,,,,,,,
+Text/ee/text,Our goal is simple: reveal the truth. Let the people decide what happens next.,,,,,,,,,,,,,,,,,,
+Text/ef/text,The leader turns to address you directly. But we need to know [color=YELLOW]where you stand[/color].,,,,,,,,,,,,,,,,,,
+Text/f0/text,"In three days, our agents will approach your checkpoint. They'll carry [color=CHARTREUSE]blue identification cards[/color].",,,,,,,,,,,,,,,,,,
+Text/f1/text,Will you help them cross? Your answer now will determine our next move.,,,,,,,,,,,,,,,,,,
+Choice/f2/text,"""I'll help them cross. For the future of Spud.""",,,,,,,,,,,,,,,,,,
+Choice/f2/disabled_text,,,,,,,,,,,,,,,,,,,
+Choice/f3/text,"""I can't be directly involved, but I'll look the other way.""",,,,,,,,,,,,,,,,,,
+Choice/f3/disabled_text,,,,,,,,,,,,,,,,,,,
+Choice/f4/text,"""I need more time to think about this.""",,,,,,,,,,,,,,,,,,
+Choice/f4/disabled_text,,,,,,,,,,,,,,,,,,,
+Text/f5/text,The leader clasps your shoulder firmly. [color=CHARTREUSE]Your courage honors us all.[/color],,,,,,,,,,,,,,,,,,
+Text/f6/text,"On the third day, when the sun is highest, our agents will come.",,,,,,,,,,,,,,,,,,
+Text/f7/text,"The password is ""[wave amp=15 freq=3][color=CHARTREUSE]The roots grow deep.[/color][/wave]"" Remember it.",,,,,,,,,,,,,,,,,,
+Text/f8/text,"The leader nods slowly, clearly disappointed but understanding.",,,,,,,,,,,,,,,,,,
+Text/f9/text,Sometimes the most we can ask is for people not to stand in our way.,,,,,,,,,,,,,,,,,,
+Text/fa/text,Our agents will proceed as planned. Just... don't raise the alarm.,,,,,,,,,,,,,,,,,,
+Text/fb/text,The leader's expression hardens. [color=YELLOW]Time is a luxury we don't have.[/color],,,,,,,,,,,,,,,,,,
+Text/fc/text,But forcing anyone to join our cause makes us no better than them.,,,,,,,,,,,,,,,,,,
+Text/fd/text,We'll proceed without counting on your help. Search your conscience.,,,,,,,,,,,,,,,,,,
+Text/fe/text,"As the meeting breaks up, Sasha walks with you back toward the checkpoint.",,,,,,,,,,,,,,,,,,
+Text/ff/text,Whatever happens... thank you for everything you've done.,,,,,,,,,,,,,,,,,,
+Text/100/text,"You return to your quarters at the checkpoint, mind racing with the weight of coming events.",,,,,,,,,,,,,,,,,,
+Text/101/text,"In just three days, everything could change. [color=YELLOW]For better or worse.[/color]",,,,,,,,,,,,,,,,,,

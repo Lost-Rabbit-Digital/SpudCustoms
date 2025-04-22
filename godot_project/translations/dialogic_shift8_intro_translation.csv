@@ -1,31 +1,31 @@
-keys,en
-Text/117/text,The checkpoint has transformed into a military outpost. Elite guards in black uniforms patrol with weapons displayed.
-Text/118/text,"I am Chief Security Officer Yukon, dispatched from the capital by Prime Minister Idaho."
-Text/119/text,"Intelligence indicates a [pulse freq=2][color=YELLOW]terrorist attack is imminent[/color][/pulse]. The ""resistance"" plans to infiltrate tomorrow."
-Text/11a/text,All officers will submit to [wave amp=15 freq=2][color=DARK_ORANGE]loyalty screening[/color][/wave]. Suspicious behavior means detention and [color=DARK_VIOLET]processing[/color].
-Text/11b/text,[tornado radius=3 freq=2][color=RED]Full cooperation[/color][/tornado] with Security is mandatory. My reports on each of you have been provided to the Chief.
-Text/11c/text,Russet's gaze lingers on you uncomfortably before moving on.
-Text/11d/text,This is the [color=DARK_ORANGE]IdentityScan 5000[/color]. It analyzes biometrics to detect infiltrators and sympathizers.
-Text/11e/text,Anyone flagged faces [color=CRIMSON]enhanced interrogation[/color]. Use it without exception.
-Text/11f/text,"Have you seen Sasha? She didn't report for roll call. Last night, [color=CRIMSON]security forces entered her quarters[/color]."
-Text/120/text,They're saying she was part of the [pulse freq=2][color=CHARTREUSE]resistance[/color][/pulse].
-Choice/121/text,"""We shouldn't be talking about this. It's dangerous."""
-Choice/121/disabled_text,
-Choice/122/text,"""I'm worried about her too. This isn't right."""
-Choice/122/disabled_text,
-Text/123/text,You're right. But watch yourself. They're looking for connections to her.
-Text/124/text,So you were close? Be careful. They might be watching you too.
-Text/125/text,"The officer slips you a note: ""[color=YELLOW]Clean your station of anything suspicious.[/color]"""
-Text/126/text,You've been at this checkpoint for quite some time. Interesting performance record.
-Text/127/text,"You were seen frequently with Officer Sasha, now under investigation for [wave amp=20 freq=3][color=CRIMSON]treason[/color][/wave]."
-Text/128/text,The chief leans forward. Is there anything you'd like to tell me about her activities?
-Choice/129/text,"""Sasha and I were just colleagues. I know nothing about her outside work."""
-Choice/129/disabled_text,
-Choice/12a/text,"""I was gathering evidence on her suspicious activities to report later."""
-Choice/12a/disabled_text,
-Text/12b/text,"Multiple witnesses say otherwise. Without concrete evidence though, I can't detain you. [color=YELLOW]Yet.[/color]"
-Text/12c/text,"You'll be under [color=CRIMSON]close observation[/color]. One misstep, and you'll [color=DARK_VIOLET]join Sasha[/color]."
-Text/12d/text,How convenient. And yet you filed no reports until now.
-Text/12e/text,"You'll provide a complete statement. If your information proves valuable, perhaps we'll overlook your delayed reporting."
-Text/12f/text,I'll be [color=CRIMSON]monitoring your work[/color] today. Every traveler must be identity-scanned. [color=RED]No exceptions[/color].
-Text/130/text,"Sasha has been taken. The resistance plan is [color=CRIMSON]compromised[/color]. With security on high alert, their chances seem hopeless."
+keys,en,cs,da,de,es,fi,fr,hu,id,it,nl,no,pl,pt,ro,sk,sv,tr,vi
+Text/117/text,The checkpoint has transformed into a military outpost. Elite guards in black uniforms patrol with weapons displayed.,,,,,,,,,,,,,,,,,,
+Text/118/text,"I am Chief Security Officer Yukon, dispatched from the capital by Prime Minister Idaho.",,,,,,,,,,,,,,,,,,
+Text/119/text,"Intelligence indicates a [pulse freq=2][color=YELLOW]terrorist attack is imminent[/color][/pulse]. The ""resistance"" plans to infiltrate tomorrow.",,,,,,,,,,,,,,,,,,
+Text/11a/text,All officers will submit to [wave amp=15 freq=2][color=DARK_ORANGE]loyalty screening[/color][/wave]. Suspicious behavior means detention and [color=DARK_VIOLET]processing[/color].,,,,,,,,,,,,,,,,,,
+Text/11b/text,[tornado radius=3 freq=2][color=RED]Full cooperation[/color][/tornado] with Security is mandatory. My reports on each of you have been provided to the Chief.,,,,,,,,,,,,,,,,,,
+Text/11c/text,Russet's gaze lingers on you uncomfortably before moving on.,,,,,,,,,,,,,,,,,,
+Text/11d/text,This is the [color=DARK_ORANGE]IdentityScan 5000[/color]. It analyzes biometrics to detect infiltrators and sympathizers.,,,,,,,,,,,,,,,,,,
+Text/11e/text,Anyone flagged faces [color=CRIMSON]enhanced interrogation[/color]. Use it without exception.,,,,,,,,,,,,,,,,,,
+Text/11f/text,"Have you seen Sasha? She didn't report for roll call. Last night, [color=CRIMSON]security forces entered her quarters[/color].",,,,,,,,,,,,,,,,,,
+Text/120/text,They're saying she was part of the [pulse freq=2][color=CHARTREUSE]resistance[/color][/pulse].,,,,,,,,,,,,,,,,,,
+Choice/121/text,"""We shouldn't be talking about this. It's dangerous.""",,,,,,,,,,,,,,,,,,
+Choice/121/disabled_text,,,,,,,,,,,,,,,,,,,
+Choice/122/text,"""I'm worried about her too. This isn't right.""",,,,,,,,,,,,,,,,,,
+Choice/122/disabled_text,,,,,,,,,,,,,,,,,,,
+Text/123/text,You're right. But watch yourself. They're looking for connections to her.,,,,,,,,,,,,,,,,,,
+Text/124/text,So you were close? Be careful. They might be watching you too.,,,,,,,,,,,,,,,,,,
+Text/125/text,"The officer slips you a note: ""[color=YELLOW]Clean your station of anything suspicious.[/color]""",,,,,,,,,,,,,,,,,,
+Text/126/text,You've been at this checkpoint for quite some time. Interesting performance record.,,,,,,,,,,,,,,,,,,
+Text/127/text,"You were seen frequently with Officer Sasha, now under investigation for [wave amp=20 freq=3][color=CRIMSON]treason[/color][/wave].",,,,,,,,,,,,,,,,,,
+Text/128/text,The chief leans forward. Is there anything you'd like to tell me about her activities?,,,,,,,,,,,,,,,,,,
+Choice/129/text,"""Sasha and I were just colleagues. I know nothing about her outside work.""",,,,,,,,,,,,,,,,,,
+Choice/129/disabled_text,,,,,,,,,,,,,,,,,,,
+Choice/12a/text,"""I was gathering evidence on her suspicious activities to report later.""",,,,,,,,,,,,,,,,,,
+Choice/12a/disabled_text,,,,,,,,,,,,,,,,,,,
+Text/12b/text,"Multiple witnesses say otherwise. Without concrete evidence though, I can't detain you. [color=YELLOW]Yet.[/color]",,,,,,,,,,,,,,,,,,
+Text/12c/text,"You'll be under [color=CRIMSON]close observation[/color]. One misstep, and you'll [color=DARK_VIOLET]join Sasha[/color].",,,,,,,,,,,,,,,,,,
+Text/12d/text,How convenient. And yet you filed no reports until now.,,,,,,,,,,,,,,,,,,
+Text/12e/text,"You'll provide a complete statement. If your information proves valuable, perhaps we'll overlook your delayed reporting.",,,,,,,,,,,,,,,,,,
+Text/12f/text,I'll be [color=CRIMSON]monitoring your work[/color] today. Every traveler must be identity-scanned. [color=RED]No exceptions[/color].,,,,,,,,,,,,,,,,,,
+Text/130/text,"Sasha has been taken. The resistance plan is [color=CRIMSON]compromised[/color]. With security on high alert, their chances seem hopeless.",,,,,,,,,,,,,,,,,,

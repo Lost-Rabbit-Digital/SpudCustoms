@@ -1,19 +1,19 @@
-keys,en
-Text/78/text,"Another day at the checkpoint. The line of potatoes stretches longer than ever, with everyone on edge."
-Text/79/text,New orders from the top. We're [wave amp=15 freq=3][color=DARK_ORANGE]doubling rejections[/color][/wave]. Any potato deemed unsafe is detained immediately.
-Text/7a/text,I have a special assignment. We've got intel on [pulse freq=2][color=CRIMSON]troublemakers[/color][/pulse]. Be vigilant with your inspections.
-Choice/7b/text,"""Yes sir, I won't let you down"""
-Choice/7b/disabled_text,
-Choice/7c/text,"""What kind of troublemakers are we talking about?"""
-Choice/7c/disabled_text,
-Text/7d/text,Good. I knew I could count on you. You'll go far with that attitude.
-Text/7e/text,The kind that [color=CRIMSON]threaten our way of life[/color]. Don't ask too many questions if you know what's good for you.
-Text/7f/text,"[color=STEEL_BLUE]Please, I beg you![/color] My wife was supposed to be right behind me, but she [tornado radius=2 freq=3]never made it through customs[/tornado]."
-Text/80/text,"No one will tell me what happened to her. Please, [color=CHARTREUSE]help me find her![/color]"
-Choice/81/text,"""I'm sorry, but there's nothing I can do."""
-Choice/81/disabled_text,
-Choice/82/text,"""Let me see what I can find out. No promises."""
-Choice/82/disabled_text,
-Text/83/text,Just like all the others... [color=STEEL_BLUE]May your conscience weigh heavy as mine does.[/color]
-Text/84/text,Thank you! Even a small hope is better than none. Here's her photo. Please find her.
-Text/85/text,I saw that exchange. [color=DARK_ORANGE]Sympathizing with rejects only leads to trouble.[/color] Stay focused on your duty.
+keys,en,cs,da,de,es,fi,fr,hu,id,it,nl,no,pl,pt,ro,sk,sv,tr,vi
+Text/78/text,"Another day at the checkpoint. The line of potatoes stretches longer than ever, with everyone on edge.",,,,,,,,,,,,,,,,,,
+Text/79/text,New orders from the top. We're [wave amp=15 freq=3][color=DARK_ORANGE]doubling rejections[/color][/wave]. Any potato deemed unsafe is detained immediately.,,,,,,,,,,,,,,,,,,
+Text/7a/text,I have a special assignment. We've got intel on [pulse freq=2][color=CRIMSON]troublemakers[/color][/pulse]. Be vigilant with your inspections.,,,,,,,,,,,,,,,,,,
+Choice/7b/text,"""Yes sir, I won't let you down""",,,,,,,,,,,,,,,,,,
+Choice/7b/disabled_text,,,,,,,,,,,,,,,,,,,
+Choice/7c/text,"""What kind of troublemakers are we talking about?""",,,,,,,,,,,,,,,,,,
+Choice/7c/disabled_text,,,,,,,,,,,,,,,,,,,
+Text/7d/text,Good. I knew I could count on you. You'll go far with that attitude.,,,,,,,,,,,,,,,,,,
+Text/7e/text,The kind that [color=CRIMSON]threaten our way of life[/color]. Don't ask too many questions if you know what's good for you.,,,,,,,,,,,,,,,,,,
+Text/7f/text,"[color=STEEL_BLUE]Please, I beg you![/color] My wife was supposed to be right behind me, but she [tornado radius=2 freq=3]never made it through customs[/tornado].",,,,,,,,,,,,,,,,,,
+Text/80/text,"No one will tell me what happened to her. Please, [color=CHARTREUSE]help me find her![/color]",,,,,,,,,,,,,,,,,,
+Choice/81/text,"""I'm sorry, but there's nothing I can do.""",,,,,,,,,,,,,,,,,,
+Choice/81/disabled_text,,,,,,,,,,,,,,,,,,,
+Choice/82/text,"""Let me see what I can find out. No promises.""",,,,,,,,,,,,,,,,,,
+Choice/82/disabled_text,,,,,,,,,,,,,,,,,,,
+Text/83/text,Just like all the others... [color=STEEL_BLUE]May your conscience weigh heavy as mine does.[/color],,,,,,,,,,,,,,,,,,
+Text/84/text,Thank you! Even a small hope is better than none. Here's her photo. Please find her.,,,,,,,,,,,,,,,,,,
+Text/85/text,I saw that exchange. [color=DARK_ORANGE]Sympathizing with rejects only leads to trouble.[/color] Stay focused on your duty.,,,,,,,,,,,,,,,,,,

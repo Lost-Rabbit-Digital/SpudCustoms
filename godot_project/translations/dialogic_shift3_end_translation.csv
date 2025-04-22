@@ -1,18 +1,18 @@
-keys,en
-Text/69/text,Can we talk? Somewhere private? [color=YELLOW]Too many eyes and ears here.[/color]
-Text/6a/text,Meet me by the old storage shed after your shift. I have something you need to see.
-Text/6b/text,"Getting cozy with coworkers? Remember, getting friendly can lead to... [color=DARK_ORANGE]compromised judgment[/color]."
-Text/6c/text,I've been gathering information about rejected potatoes. [wave amp=20 freq=3][color=CRIMSON]They don't go to deportation centers.[/color][/wave]
-Text/6d/text,[tornado radius=4 freq=2][color=CRIMSON]They go to Root Reserve processing facilities.[/color][/tornado] Every single one.
-Text/6e/text,These documents show potatoes being unloaded at a facility marked with the [color=DARK_VIOLET]Root Reserve[/color] logo.
-Text/6f/text,I think I know what's happening. [pulse freq=3][color=CRIMSON]They're becoming Root Reserve.[/color][/pulse]
-Choice/70/text,"""That's insane. They're... processing potatoes into food?"""
-Choice/70/disabled_text,
-Choice/71/text,"""We need more evidence before making accusations."""
-Choice/71/disabled_text,
-Text/72/text,[color=CRIMSON]Cannibalism with extra steps.[/color] That's what [wave amp=25 freq=3][color=DARK_VIOLET]Root Reserve[/color][/wave] is. And we've been helping select their ingredients.
-Text/73/text,I've been collecting evidence for months. Keep your eyes open. You'll see I'm right.
-Text/74/text,A distant alarm suddenly blares
-Text/75/text,We need to go. They do security sweeps at this hour. Think about what I've shown you.
-Text/76/text,"Sasha stuffs the folder into your hands. ""[color=YELLOW]Keep this safe. And trust no one.[/color]"""
-Text/77/text,You hide the folder inside your jacket. [color=DARK_VIOLET]Root Reserve[/color]. The rejections. The missing potatoes. It all connects in a [tornado radius=3 freq=2][color=CRIMSON]horrifying way[/color][/tornado].
+keys,en,cs,da,de,es,fi,fr,hu,id,it,nl,no,pl,pt,ro,sk,sv,tr,vi
+Text/69/text,Can we talk? Somewhere private? [color=YELLOW]Too many eyes and ears here.[/color],,,,,,,,,,,,,,,,,,
+Text/6a/text,Meet me by the old storage shed after your shift. I have something you need to see.,,,,,,,,,,,,,,,,,,
+Text/6b/text,"Getting cozy with coworkers? Remember, getting friendly can lead to... [color=DARK_ORANGE]compromised judgment[/color].",,,,,,,,,,,,,,,,,,
+Text/6c/text,I've been gathering information about rejected potatoes. [wave amp=20 freq=3][color=CRIMSON]They don't go to deportation centers.[/color][/wave],,,,,,,,,,,,,,,,,,
+Text/6d/text,[tornado radius=4 freq=2][color=CRIMSON]They go to Root Reserve processing facilities.[/color][/tornado] Every single one.,,,,,,,,,,,,,,,,,,
+Text/6e/text,These documents show potatoes being unloaded at a facility marked with the [color=DARK_VIOLET]Root Reserve[/color] logo.,,,,,,,,,,,,,,,,,,
+Text/6f/text,I think I know what's happening. [pulse freq=3][color=CRIMSON]They're becoming Root Reserve.[/color][/pulse],,,,,,,,,,,,,,,,,,
+Choice/70/text,"""That's insane. They're... processing potatoes into food?""",,,,,,,,,,,,,,,,,,
+Choice/70/disabled_text,,,,,,,,,,,,,,,,,,,
+Choice/71/text,"""We need more evidence before making accusations.""",,,,,,,,,,,,,,,,,,
+Choice/71/disabled_text,,,,,,,,,,,,,,,,,,,
+Text/72/text,[color=CRIMSON]Cannibalism with extra steps.[/color] That's what [wave amp=25 freq=3][color=DARK_VIOLET]Root Reserve[/color][/wave] is. And we've been helping select their ingredients.,,,,,,,,,,,,,,,,,,
+Text/73/text,I've been collecting evidence for months. Keep your eyes open. You'll see I'm right.,,,,,,,,,,,,,,,,,,
+Text/74/text,A distant alarm suddenly blares,,,,,,,,,,,,,,,,,,
+Text/75/text,We need to go. They do security sweeps at this hour. Think about what I've shown you.,,,,,,,,,,,,,,,,,,
+Text/76/text,"Sasha stuffs the folder into your hands. ""[color=YELLOW]Keep this safe. And trust no one.[/color]""",,,,,,,,,,,,,,,,,,
+Text/77/text,You hide the folder inside your jacket. [color=DARK_VIOLET]Root Reserve[/color]. The rejections. The missing potatoes. It all connects in a [tornado radius=3 freq=2][color=CRIMSON]horrifying way[/color][/tornado].,,,,,,,,,,,,,,,,,,

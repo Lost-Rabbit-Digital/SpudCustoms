@@ -1,27 +1,27 @@
-keys,en
-Text/3a/text,"The checkpoint has been rebuilt after the resistance attack. Security is unprecedented, with propaganda broadcasts praising the ""brave defenders."""
-Text/3b/text,I've been promoted to Regional Director of Border Security and [pulse freq=2]Root Reserve Distribution[/pulse].
-Text/3c/text,Russet pins a small medal to your uniform. Assistant Regional Director... for your unwavering loyalty to Spud.
-Text/3d/text,I have a special assignment! Prime Minister Idaho will be inspecting our facility today. You've been selected for demonstration.
-Text/3e/text,Have you seen the new batch of Root Reserve? They're calling it 'Resistance Blend' after what happened to those captives.
-Text/3f/text,Some are saying the resistance wasn't completely wrong. That there's [wave amp=15 freq=3]evidence they were telling the truth[/wave]...
-Choice/40/text,"""Be careful. Even talking like that is dangerous now."" (Cautious)"
-Choice/40/disabled_text,
-Choice/41/text,"""I've had the same thoughts. This doesn't feel right."" (Sympathetic)"
-Choice/41/disabled_text,
-Text/42/text,Not everyone believes the official story anymore. Keep your eyes open during the Prime Minister's visit.
-Text/43/text,"There's a new resistance forming. Quieter, more careful. If you want to know more... watch for the yellow spud emblem."
-Text/44/text,ATTENTION: Prime Minister Idaho's motorcade has arrived. All officers to assigned stations. Inspection protocols in effect.
-Text/45/text,"Your medal feels heavy - a reward for loyalty, or a mark of shame? Soon you'll face the architect of Root Reserve."
-Text/46/text,"After the broadcast exposing Root Reserve, uprisings have erupted across Spud. Prime Minister Idaho remains barricaded in the administration building."
-Text/47/text,"Idaho plans one final broadcast to blame Root Reserve on us. We cannot let him rewrite history. Today, we end his regime."
-Text/48/text,You saved my life at the processing plant. Now we have a chance to save all of Spud.
-Text/49/text,Your knowledge of security protocols will be crucial for the final mission. Are you ready?
-Choice/4a/text,"""I'm ready. Let's finish what we started."""
-Choice/4a/disabled_text,
-Choice/4b/text,"""What exactly is the plan? I need details."""
-Choice/4b/disabled_text,
-Text/4c/text,I knew you wouldn't back down. You're one of our [tornado radius=3 freq=2]strongest allies[/tornado].
-Text/4d/text,We'll infiltrate using government uniforms. You'll help bypass security systems. Our goal is to capture Idaho and force a public confession.
-Text/4e/text,"You'll be on Team Alpha with Sasha, breaching the east entrance. Your objective: [color=GREEN]secure the broadcast center[/color]."
-Text/4f/text,"From loyal customs officer to resistance fighter? It's a transformation you never imagined. Whatever happens, Spud will never be the same."
+keys,en,cs,da,de,es,fi,fr,hu,id,it,nl,no,pl,pt,ro,sk,sv,tr,vi
+Text/3a/text,"The checkpoint has been rebuilt after the resistance attack. Security is unprecedented, with propaganda broadcasts praising the ""brave defenders.""",,,,,,,,,,,,,,,,,,
+Text/3b/text,I've been promoted to Regional Director of Border Security and [pulse freq=2]Root Reserve Distribution[/pulse].,,,,,,,,,,,,,,,,,,
+Text/3c/text,Russet pins a small medal to your uniform. Assistant Regional Director... for your unwavering loyalty to Spud.,,,,,,,,,,,,,,,,,,
+Text/3d/text,I have a special assignment! Prime Minister Idaho will be inspecting our facility today. You've been selected for demonstration.,,,,,,,,,,,,,,,,,,
+Text/3e/text,Have you seen the new batch of Root Reserve? They're calling it 'Resistance Blend' after what happened to those captives.,,,,,,,,,,,,,,,,,,
+Text/3f/text,Some are saying the resistance wasn't completely wrong. That there's [wave amp=15 freq=3]evidence they were telling the truth[/wave]...,,,,,,,,,,,,,,,,,,
+Choice/40/text,"""Be careful. Even talking like that is dangerous now."" (Cautious)",,,,,,,,,,,,,,,,,,
+Choice/40/disabled_text,,,,,,,,,,,,,,,,,,,
+Choice/41/text,"""I've had the same thoughts. This doesn't feel right."" (Sympathetic)",,,,,,,,,,,,,,,,,,
+Choice/41/disabled_text,,,,,,,,,,,,,,,,,,,
+Text/42/text,Not everyone believes the official story anymore. Keep your eyes open during the Prime Minister's visit.,,,,,,,,,,,,,,,,,,
+Text/43/text,"There's a new resistance forming. Quieter, more careful. If you want to know more... watch for the yellow spud emblem.",,,,,,,,,,,,,,,,,,
+Text/44/text,ATTENTION: Prime Minister Idaho's motorcade has arrived. All officers to assigned stations. Inspection protocols in effect.,,,,,,,,,,,,,,,,,,
+Text/45/text,"Your medal feels heavy - a reward for loyalty, or a mark of shame? Soon you'll face the architect of Root Reserve.",,,,,,,,,,,,,,,,,,
+Text/46/text,"After the broadcast exposing Root Reserve, uprisings have erupted across Spud. Prime Minister Idaho remains barricaded in the administration building.",,,,,,,,,,,,,,,,,,
+Text/47/text,"Idaho plans one final broadcast to blame Root Reserve on us. We cannot let him rewrite history. Today, we end his regime.",,,,,,,,,,,,,,,,,,
+Text/48/text,You saved my life at the processing plant. Now we have a chance to save all of Spud.,,,,,,,,,,,,,,,,,,
+Text/49/text,Your knowledge of security protocols will be crucial for the final mission. Are you ready?,,,,,,,,,,,,,,,,,,
+Choice/4a/text,"""I'm ready. Let's finish what we started.""",,,,,,,,,,,,,,,,,,
+Choice/4a/disabled_text,,,,,,,,,,,,,,,,,,,
+Choice/4b/text,"""What exactly is the plan? I need details.""",,,,,,,,,,,,,,,,,,
+Choice/4b/disabled_text,,,,,,,,,,,,,,,,,,,
+Text/4c/text,I knew you wouldn't back down. You're one of our [tornado radius=3 freq=2]strongest allies[/tornado].,,,,,,,,,,,,,,,,,,
+Text/4d/text,We'll infiltrate using government uniforms. You'll help bypass security systems. Our goal is to capture Idaho and force a public confession.,,,,,,,,,,,,,,,,,,
+Text/4e/text,"You'll be on Team Alpha with Sasha, breaching the east entrance. Your objective: [color=GREEN]secure the broadcast center[/color].",,,,,,,,,,,,,,,,,,
+Text/4f/text,"From loyal customs officer to resistance fighter? It's a transformation you never imagined. Whatever happens, Spud will never be the same.",,,,,,,,,,,,,,,,,,
