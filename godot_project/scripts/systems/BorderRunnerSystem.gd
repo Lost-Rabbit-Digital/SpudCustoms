@@ -722,7 +722,6 @@ func _on_smoke_cleanup_timeout(smoke: AnimatedSprite2D) -> void:
 	if is_instance_valid(smoke):
 		smoke.queue_free()
 
-
 func trigger_explosion(missile_or_position):
 	#print("Triggering explosion")
 	var explosion_position
@@ -810,7 +809,7 @@ func trigger_explosion(missile_or_position):
 	# Create a timer to unpause after a short duration
 	#var unpause_timer = get_tree().create_timer(0.02)  # 20 milliseconds
 	#unpause_timer.timeout.connect(func():
-	#	get_tree().paused = previous_pause_state
+	#   get_tree().paused = previous_pause_state
 	#)
 	# Then, in your trigger_explosion function, replace the current explosion sound code:
 	if explosion_sound and explosion_sound.get_instance_id() != 0:
@@ -891,37 +890,144 @@ func trigger_explosion(missile_or_position):
 	if explosion_sound and not explosion_sound.playing:
 		explosion_sound.play()
 
-	# Check if we hit any runners
-	check_runner_hits(explosion_position)
-
-
-func check_runner_hits(explosion_pos):
-	var hit_any = false
+	# Check if we hit any runners or innocent potatoes
+	var hit_any_runner = false
+	var hit_any_innocent = false
+	var innocent_penalty = 500
 	var runners_to_hit = []
 	var i = active_runners.size() - 1
-
+	
 	# First, collect all runners to hit
 	while i >= 0:
 		var runner = active_runners[i]
-		var distance = runner.global_position.distance_to(explosion_pos)
-
+		var distance = runner.global_position.distance_to(explosion_position)
+		
 		if distance < (explosion_size * 0.65):
 			# Store for later processing
 			runners_to_hit.append(runner)
 			active_runners.remove_at(i)
-			hit_any = true
-
+			hit_any_runner = true
+			
 		i -= 1
+	
+	# Then process the hits afterward to avoid recursive signal issues
+	for runner in runners_to_hit:
+		handle_successful_hit(runner, explosion_position)
+		runner.apply_damage()
+	
+	# Now check for innocent potatoes (non-runners)
+	var all_potatoes = get_tree().get_nodes_in_group("PotatoPerson")
+	for potato in all_potatoes:
+		# Skip if not valid or already being processed as a runner
+		if not is_instance_valid(potato) or runners_to_hit.has(potato):
+			continue
+			
+		# Skip if it's in the active runners list
+		if active_runners.has(potato):
+			continue
+			
+		# Check distance to explosion
+		var distance = potato.global_position.distance_to(explosion_position)
+		
+		# If within explosion radius and not a runner
+		if distance < (explosion_size * 0.65):
+			hit_any_innocent = true
+			print("Hit innocent potato!")
+			
+			# Apply damage to the innocent potato
+			if potato.has_method("apply_damage"):
+				potato.apply_damage()
+				
+			# Spawn gibs at the innocent potato's position
+			spawn_gibs(potato.global_position)
+			
+			# Apply penalty
+			var points_to_remove = min(innocent_penalty, Global.score)
+			Global.score = max(0, Global.score - points_to_remove)
+			
+			# Update score label
+			if score_label:
+				score_label.text = tr("ui_score").format({"score": str(Global.score)})
+				
+			# Show alert
+			Global.display_red_alert(
+				alert_label,
+				alert_timer,
+				"INNOCENT POTATO KILLED! -{penalty} POINTS!".format({"penalty": points_to_remove})
+			)
+	
+	if not hit_any_runner and not hit_any_innocent:
+		print("Missile missed all potatoes")
+		runner_streak = 0
 
+func check_runner_hits(explosion_pos):
+	var hit_any_runner = false
+	var hit_any_innocent = false
+	var innocent_penalty = 500
+	var runners_to_hit = []
+	var i = active_runners.size() - 1
+	
+	# First, collect all runners to hit
+	while i >= 0:
+		var runner = active_runners[i]
+		var distance = runner.global_position.distance_to(explosion_pos)
+		
+		if distance < (explosion_size * 0.65):
+			# Store for later processing
+			runners_to_hit.append(runner)
+			active_runners.remove_at(i)
+			hit_any_runner = true
+			
+		i -= 1
+	
 	# Then process the hits afterward to avoid recursive signal issues
 	for runner in runners_to_hit:
 		handle_successful_hit(runner, explosion_pos)
 		runner.apply_damage()
-
-	if not hit_any:
+	
+	# Now check for innocent potatoes (non-runners)
+	var all_potatoes = get_tree().get_nodes_in_group("PotatoPerson")
+	for potato in all_potatoes:
+		# Skip if not valid or already being processed as a runner
+		if not is_instance_valid(potato) or runners_to_hit.has(potato):
+			continue
+			
+		# Skip if it's in the active runners list
+		if active_runners.has(potato):
+			continue
+			
+		# Check distance to explosion
+		var distance = potato.global_position.distance_to(explosion_pos)
+		
+		# If within explosion radius and not a runner
+		if distance < (explosion_size * 0.65):
+			hit_any_innocent = true
+			
+			# Apply damage to the innocent potato
+			if potato.has_method("apply_damage"):
+				potato.apply_damage()
+				
+			# Spawn gibs at the innocent potato's position
+			spawn_gibs(potato.global_position)
+			
+			# Apply penalty
+			var points_to_remove = min(innocent_penalty, Global.score)
+			Global.score = max(0, Global.score - points_to_remove)
+			
+			# Update score label
+			if score_label:
+				score_label.text = tr("ui_score").format({"score": str(Global.score)})
+				
+			# Show alert
+			Global.display_red_alert(
+				alert_label,
+				alert_timer,
+				"INNOCENT POTATO KILLED! -{penalty} POINTS!".format({"penalty": points_to_remove})
+			)
+	
+	if not hit_any_runner:
 		print("Missile missed all runners")
 		runner_streak = 0
-
 
 func handle_successful_hit(runner, explosion_pos):
 	var root_node = get_tree().current_scene
