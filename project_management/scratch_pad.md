@@ -98,16 +98,9 @@ These are our goals, to-do tasks, and completed tasks.
 
 # FULL RELEASE TASKS - 2025-04-20 Target Release - 1.1.0
 ## Tasks
-Runner Escaped! Strike Added! Message shown in English <- BorderRunnerSystem?
-Strike removed! +250 points! Message shown in English <- BorderRunnerSystem?
 Finish translating Shift Summary screen
-
-Get Border Runner System alerts working
-Get BRS perfect hit alerts working
 Get Shift Summary translation working
 Finish remainder of narrative translations
-Get Perfect Stamp Alert translation working 
-Quota met, shift completed not translating as expected
 Customs booth talk bubble not translating
 ### Law Bugs
 
@@ -140,8 +133,6 @@ Customs booth talk bubble not translating
 
 ### Art
 - plant_revelation, goopy potatoes
-- resistance_planning, emblems should be potatoes, potatoes should not have armor, leader should look more like old white mustache russet potato
-- victory_scene, fucked up faces
 - extreme_emergency, washed out
 
 ### Credit Additions
@@ -152,9 +143,15 @@ Customs booth talk bubble not translating
 - Playtest: Beat Story mode, and test each of the 4 endings (Vengeance Complete)
 
 
-
 ### Completed Tasks for 1.1.0
-- Add a language
+- Quota met, shift completed not translating as expected
+- Get Perfect Stamp Alert translation working 
+- victory_scene, fucked up faces
+- Runner Escaped! Strike Added! Message shown in English <- BorderRunnerSystem?
+- Strike removed! +250 points! Message shown in English <- BorderRunnerSystem?
+- Get Border Runner System alerts working
+- Get BRS perfect hit alerts working
+- Add a language selection option to game option menu
 - violation_expired_document translation key not loading
 - violation_females_only translating key not loading, loading extra? selection under the Game Tab
 - Get law translation working

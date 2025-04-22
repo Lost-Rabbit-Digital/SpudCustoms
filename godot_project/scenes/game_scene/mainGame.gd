@@ -449,7 +449,11 @@ func end_shift(success: bool = true):
 	if success and Global.quota_met >= Global.quota_target:
 		# Add survival bonus
 		var survival_bonus = 500
-		Global.display_green_alert(alert_label, alert_timer, "Quota met, shift completed! \n Bonus: " + str(survival_bonus) + " points!")
+		Global.display_green_alert(
+			alert_label, 
+			alert_timer, 
+			tr("alert_quota_met").format({"bonus": str(survival_bonus)})
+		)
 		Global.add_score(survival_bonus)
 				
 		# Lower the shutter with animation when successful
