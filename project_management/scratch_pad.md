@@ -101,7 +101,7 @@ These are our goals, to-do tasks, and completed tasks.
 Finish translating Shift Summary screen
 Get Shift Summary translation working
 Finish remainder of narrative translations
-Customs booth talk bubble not translating
+
 ### Law Bugs
 
 ## Drag and Drop System
@@ -144,6 +144,7 @@ Customs booth talk bubble not translating
 
 
 ### Completed Tasks for 1.1.0
+- Customs booth talk bubble not translating
 - Quota met, shift completed not translating as expected
 - Get Perfect Stamp Alert translation working 
 - victory_scene, fucked up faces
