@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://chtwvh2rew5ju"
+
+[deps]
+
+files=["res://translations/bubble_dialogue.en.translation", "res://translations/bubble_dialogue.cs.translation", "res://translations/bubble_dialogue.da.translation", "res://translations/bubble_dialogue.de.translation", "res://translations/bubble_dialogue.es.translation", "res://translations/bubble_dialogue.fi.translation", "res://translations/bubble_dialogue.fr.translation", "res://translations/bubble_dialogue.hu.translation", "res://translations/bubble_dialogue.id.translation", "res://translations/bubble_dialogue.it.translation", "res://translations/bubble_dialogue.nl.translation", "res://translations/bubble_dialogue.nb.translation", "res://translations/bubble_dialogue.pl.translation", "res://translations/bubble_dialogue.pt.translation", "res://translations/bubble_dialogue.ro.translation", "res://translations/bubble_dialogue.sk.translation", "res://translations/bubble_dialogue.sv.translation", "res://translations/bubble_dialogue.tr.translation", "res://translations/bubble_dialogue.vi.translation"]
+
+source_file="res://translations/bubble_dialogue.csv"
+dest_files=["res://translations/bubble_dialogue.en.translation", "res://translations/bubble_dialogue.cs.translation", "res://translations/bubble_dialogue.da.translation", "res://translations/bubble_dialogue.de.translation", "res://translations/bubble_dialogue.es.translation", "res://translations/bubble_dialogue.fi.translation", "res://translations/bubble_dialogue.fr.translation", "res://translations/bubble_dialogue.hu.translation", "res://translations/bubble_dialogue.id.translation", "res://translations/bubble_dialogue.it.translation", "res://translations/bubble_dialogue.nl.translation", "res://translations/bubble_dialogue.nb.translation", "res://translations/bubble_dialogue.pl.translation", "res://translations/bubble_dialogue.pt.translation", "res://translations/bubble_dialogue.ro.translation", "res://translations/bubble_dialogue.sk.translation", "res://translations/bubble_dialogue.sv.translation", "res://translations/bubble_dialogue.tr.translation", "res://translations/bubble_dialogue.vi.translation"]
+
+[params]
+
+compress=true
+delimiter=0

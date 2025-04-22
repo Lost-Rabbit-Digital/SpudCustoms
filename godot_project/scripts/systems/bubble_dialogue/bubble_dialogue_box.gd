@@ -71,25 +71,42 @@ func load_messages():
 		if queue_messages.has("document_interaction"):
 			messages["document_interaction"] = queue_messages["document_interaction"]
 
-
 # Set a random message from a specific category
 func set_random_message_from_category(category_str: String) -> void:
 	var category_messages = []
-
 	self.visible = true
-
 	play_random_officer_sound()
-
-	# Simply use the category string directly to access the messages dictionary
-	if messages.has(category_str):
-		category_messages = messages[category_str]
+	
+	# Create a mapping of categories to their translation key prefixes
+	var category_prefixes = {
+		"spud_being_called": "dialogue_spud_being_called_",
+		"spud_in_office": "dialogue_spud_in_office_",
+		"warnings": "dialogue_warnings_",
+		"misc": "dialogue_misc_",
+		"document_interaction": "dialogue_document_interaction_"
+	}
+	
+	# Get the correct prefix for this category
+	if category_prefixes.has(category_str):
+		var prefix = category_prefixes[category_str]
+		var message_count = 0
+		
+		# Determine how many messages are in this category
+		match category_str:
+			"spud_being_called": message_count = 10
+			"spud_in_office": message_count = 12
+			"warnings": message_count = 11
+			"misc": message_count = 11
+			"document_interaction": message_count = 2
+		
+		# Select a random message number
+		var random_index = (randi() % message_count) + 1
+		
+		# Create the translation key and set the text
+		var translation_key = prefix + str(random_index)
+		bubble_text.text = tr(translation_key)
 	else:
 		push_warning("Unknown message category: " + category_str)
-
-	if category_messages.size() > 0:
-		var random_index = randi() % category_messages.size()
-		bubble_text.text = category_messages[random_index]
-	else:
 		bubble_text.text = "No messages available."
 
 
