@@ -112,7 +112,6 @@ These are our goals, to-do tasks, and completed tasks.
 ### Graphics  
 - Documents show above the suspect panel background, use viewport masking
 - Stamps can be placed on the outside of the passport, use viewport masking
-- Stamp System: Why are the particle effects not visible / not triggering when a perfect stamp is placed in the top and middle 1/3rd of a document?
 - Add visual feedback for combo multipliers with perfect stamps
 - Cursor System: The target cursor is not showing when firing missiles
 - Dialogic / QoL: Dialogic scenes should fade in and out to the next scene
@@ -145,6 +144,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ### Completed Tasks for 1.1.0
+- Stamp System: Why are the particle effects and global alert not visible / not triggering when a perfect stamp is placed in the top and middle 1/3rd of a document?
 - Runners: If a runner is currently emoting when they begin a run, it seems to spawn two emotes
 - Updated art for reckoning, fix grain
 - LawReceipt: Use BBCode to display the important elements of laws
