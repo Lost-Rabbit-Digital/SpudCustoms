@@ -4,6 +4,9 @@ extends Node
 # Signal to forward from the passport stampable
 signal stamp_decision_made(decision: String, perfect: bool)
 
+@export var alert_label: Label
+@export var alert_timer: Timer
+
 # Main components
 var stamp_system: StampSystem
 var stamp_factory: StampFactory
@@ -12,8 +15,6 @@ var passport_stampable: StampableComponent
 # Game references
 var main_game: Node
 var stats_manager: Node
-@export var alert_label: Label
-@export var alert_timer: Timer
 
 # Initialize the stamp system
 func initialize(game_scene: Node):
@@ -60,6 +61,8 @@ func initialize(game_scene: Node):
 # In StampSystemManager.gd
 func _on_stamp_applied(stamp: StampComponent, document: Node, is_perfect: bool):
 	# Update stats for all stamps
+	print("Stamp", stamp)
+	print("Document", document)
 	if stats_manager:
 		stats_manager.current_stats.total_stamps += 1
 

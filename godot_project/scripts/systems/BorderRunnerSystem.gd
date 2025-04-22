@@ -504,11 +504,13 @@ func start_runner(potato: PotatoPerson, is_rejected: bool = false):
 
 	if is_rejected:
 		Global.display_red_alert(
-			alert_label, alert_timer, "REJECTED POTATO FLEEING!\nClick to launch missile!"
+			#alert_label, alert_timer, "REJECTED POTATO FLEEING!\nClick to launch missile!"
+			alert_label, alert_timer, tr("alert_rejected_fleeing")
 		)
 	else:
 		Global.display_red_alert(
-			alert_label, alert_timer, "BORDER RUNNER DETECTED!\nClick to launch missile!"
+			#alert_label, alert_timer, "BORDER RUNNER DETECTED!\nClick to launch missile!"
+			alert_label, alert_timer, tr("alert_border_runner")
 		)
 
 	# Get all available runner paths
