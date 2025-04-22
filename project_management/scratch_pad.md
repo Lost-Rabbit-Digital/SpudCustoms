@@ -102,6 +102,13 @@ Runner Escaped! Strike Added! Message shown in English <- BorderRunnerSystem?
 Strike removed! +250 points! Message shown in English <- BorderRunnerSystem?
 Finish translating Shift Summary screen
 
+Get Border Runner System alerts working
+Get BRS perfect hit alerts working
+Get Shift Summary translation working
+Finish remainder of narrative translations
+Get Perfect Stamp Alert translation working 
+Quota met, shift completed not translating as expected
+Customs booth talk bubble not translating
 ### Law Bugs
 
 ## Drag and Drop System
@@ -147,6 +154,12 @@ Finish translating Shift Summary screen
 
 
 ### Completed Tasks for 1.1.0
+- Add a language
+- violation_expired_document translation key not loading
+- violation_females_only translating key not loading, loading extra? selection under the Game Tab
+- Get law translation working
+- Get UI translation working
+- Get alerts translation working
 - Added full localization for 18 languages in addition to English (cs  da  de  es  fi  fr  hu  id  it  nl  no  pl  pt  ro  sk  sv  tr  vi)
 - Stamp System: Why are the particle effects and global alert not visible / not triggering when a perfect stamp is placed in the top and middle 1/3rd of a document?
 - Runners: If a runner is currently emoting when they begin a run, it seems to spawn two emotes

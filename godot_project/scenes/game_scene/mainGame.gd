@@ -1080,7 +1080,7 @@ func process_decision(allowed):
 		var alert_text = tr("alert_correct_decision").format({"points": str(decision_points)})
 
 		if !allowed and validation.violation_reason:
-			alert_text += "\n" + validation.violation_reason
+			alert_text += "\n" + tr(validation.violation_reason)
 			
 		Global.display_green_alert(alert_label, alert_timer, alert_text)
 		Global.add_score(decision_points)
@@ -1092,7 +1092,7 @@ func process_decision(allowed):
 		if allowed and !correct_decision:
 			# Player approved an invalid potato
 			if validation.violation_reason:
-				alert_text += "\n" + validation.violation_reason
+				alert_text += "\n" + tr(validation.violation_reason)
 		else:
 			# Player rejected a valid potato
 			alert_text += "\n" + tr("alert_potato_should_be_approved")
@@ -1111,6 +1111,7 @@ func process_decision(allowed):
 			office_shutter_controller.lower_shutter(0.7)  
 			end_shift(false) # end shift with failure condition
 			return # Cease processing
+			
 	update_score_display()
 	update_quota_display()
 	update_strikes_display()
