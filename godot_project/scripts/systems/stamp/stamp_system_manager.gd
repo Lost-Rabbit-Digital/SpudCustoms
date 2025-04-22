@@ -81,10 +81,10 @@ func _on_stamp_applied(stamp: StampComponent, document: Node, is_perfect: bool):
 
 		# Display the alert if possible
 		Global.display_green_alert(
-				alert_label,
-				alert_timer,
-				"PERFECT STAMP! +{points} points!".format({"points": str(perfect_points)})
-			)
+			alert_label,
+			alert_timer,
+			tr("alert_perfect_hit").format({"perfect": str(perfect_points)})
+		)
 
 		# Provide visual feedback with particle effect at stamp position
 		# Get the position from either the stamp or the document
