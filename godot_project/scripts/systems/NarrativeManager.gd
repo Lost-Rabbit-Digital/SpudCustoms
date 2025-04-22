@@ -221,7 +221,7 @@ func show_day_transition(current_day: int, next_day: int):
 	dialogue_active = true
 
 	# Get viewport size
-	var screen_size = get_viewport().get_visible_rect().size
+	var screen_size = get_viewport().size
 
 	# Create a transition screen
 	var transition_layer = CanvasLayer.new()

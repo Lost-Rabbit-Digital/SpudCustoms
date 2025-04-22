@@ -54,7 +54,7 @@ func _ready():
 func format_time(seconds: float) -> String:
 	var minutes = int(seconds) / 60
 	var secs = int(seconds) % 60
-	return "%sm %ss" % [minutes, secs]
+	return tr("time_format").format({"minutes": minutes, "seconds": secs})
 
 
 func show_summary(stats_data: Dictionary):
@@ -74,21 +74,14 @@ func show_summary(stats_data: Dictionary):
 
 	# Update UI based on result
 	if win_condition:
-		$LeftPanel/ShiftComplete.text = (
-			"""SHIFT {shift} COMPLETE
-		SUCCESS!
-		"""
-			. format({"shift": shift_number})
-		)
+		$LeftPanel/ShiftComplete.text = tr("shift_complete_success").format({"shift": shift_number})
 		$LeftPanel/ShiftComplete.add_theme_color_override("font_color", Color(0.2, 0.8, 0.2))
 	else:
-		var failure_reason = "STRIKE LIMIT REACHED!" if strikes_failed else "QUOTA NOT MET!"
-		$LeftPanel/ShiftComplete.text = (
-			"""SHIFT {shift} COMPLETE
-		{failure}
-		"""
-			. format({"shift": shift_number, "failure": failure_reason})
-		)
+		var failure_reason = tr("strike_limit_reached") if strikes_failed else tr("quota_not_met")
+		$LeftPanel/ShiftComplete.text = tr("shift_complete_failure").format({
+			"shift": shift_number, 
+			"failure": failure_reason
+		})
 		$LeftPanel/ShiftComplete.add_theme_color_override("font_color", Color(0.9, 0.2, 0.2))
 
 	#Get rid of continue button if lost
@@ -99,75 +92,6 @@ func show_summary(stats_data: Dictionary):
 
 
 func populate_stats():
-	# Update shift info
-	$HeaderPanel/Title.text = "SHIFT SUMMARY\n %s" % Global.difficulty_level
-
-	# Update missile stats with calculated hit rate
-	$LeftPanel/MissileStats.text = (
-		"""RUNNER STATS
-Runner Attempts: {runner_attempts}
-Missiles Fired: {fired}
-Runners Hit: {hit}
-Perfect Hits: {perfect}
-Hit Rate: {rate}%
-"""
-		. format(
-			{
-				"runner_attempts": format_number(stats.get("runner_attempts", 0)),
-				"fired": format_number(stats.get("missiles_fired", 0)),
-				"hit": format_number(stats.get("missiles_hit", 0)),
-				"perfect": format_number(stats.get("perfect_hits", 0)),
-				"rate": floor(stats.get("hit_rate", 0.0))
-			}
-		)
-	)
-
-	# Update document stats
-	$LeftPanel/DocumentStats.text = (
-		"""DOCUMENT STATS
-Documents Stamped: {stamped}
-Potatoes Approved: {approved}
-Potatoes Rejected: {rejected}
-Perfect Stamps: {perfect_stamps}
-"""
-		. format(
-			{
-				"stamped": format_number(stats.get("total_stamps", 0)),
-				"approved": format_number(stats.get("potatoes_approved", 0)),
-				"rejected": format_number(stats.get("potatoes_rejected", 0)),
-				"perfect_stamps": format_number(stats.get("perfect_stamps", 0))
-			}
-		)
-	)
-
-	# Update bonus stats without speed bonus
-	$RightPanel/BonusStats.text = (
-		"""BONUSES
-Processing Speed Bonus: {processing_speed_bonus}
-Stamp Accuracy Bonus: {accuracy}
-Perfect Hits Bonus: {perfect_hit_bonus}
-Total Score Bonus: {total_score_bonus}
-"""
-		. format(
-			{
-				"processing_speed_bonus": format_number(stats.get("processing_speed_bonus", 0)),
-				"accuracy": format_number(stats.get("accuracy_bonus", 0)),
-				"perfect_hit_bonus": format_number(stats.get("perfect_hit_bonus", 0)),
-				"total_score_bonus":
-				format_number(
-					(
-						stats.get("processing_speed_bonus", 0)
-						+ stats.get("accuracy_bonus", 0)
-						+ stats.get("perfect_hit_bonus", 0)
-					)
-				)
-			}
-		)
-	)
-
-	# Update leaderboard
-	update_leaderboard()
-
 	# Add performance comparison
 	var difficulty_rating = "Normal"
 	var expected_score = 2000  # Base expected score
@@ -176,64 +100,87 @@ Total Score Bonus: {total_score_bonus}
 	match Global.difficulty_level:
 		"Easy":
 			expected_score = 1000
-			difficulty_rating = "Easy"
+			difficulty_rating = tr("options_difficulty_easy")
 		"Normal":
 			expected_score = 2000
-			difficulty_rating = "Normal"
+			difficulty_rating = tr("options_difficulty_normal")
 		"Expert":
 			expected_score = 3000
-			difficulty_rating = "Expert"
+			difficulty_rating = tr("options_difficulty_expert")
+	
+	# Update shift info
+	$HeaderPanel/Title.text = tr("shift_summary_title_with_difficulty").format({"difficulty": difficulty_rating})
+
+	# Update missile stats with calculated hit rate
+	$LeftPanel/MissileStats.text = tr("runner_stats_template").format({
+		"runner_attempts": format_number(stats.get("runner_attempts", 0)),
+		"fired": format_number(stats.get("missiles_fired", 0)),
+		"hit": format_number(stats.get("missiles_hit", 0)),
+		"perfect": format_number(stats.get("perfect_hits", 0)),
+		"rate": floor(stats.get("hit_rate", 0.0))
+	})
+
+	# Update document stats
+	$LeftPanel/DocumentStats.text = tr("document_stats_template").format({
+		"stamped": format_number(stats.get("total_stamps", 0)),
+		"approved": format_number(stats.get("potatoes_approved", 0)),
+		"rejected": format_number(stats.get("potatoes_rejected", 0)),
+		"perfect_stamps": format_number(stats.get("perfect_stamps", 0))
+	})
+
+	# Update bonus stats without speed bonus
+	$RightPanel/BonusStats.text = tr("bonus_stats_template").format({
+		"processing_speed_bonus": format_number(stats.get("processing_speed_bonus", 0)),
+		"accuracy": format_number(stats.get("accuracy_bonus", 0)),
+		"perfect_hit_bonus": format_number(stats.get("perfect_hit_bonus", 0)),
+		"total_score_bonus": format_number(
+			(
+				stats.get("processing_speed_bonus", 0)
+				+ stats.get("accuracy_bonus", 0)
+				+ stats.get("perfect_hit_bonus", 0)
+			)
+		)
+	})
+	
+	# Update leaderboard
+	update_leaderboard()
 
 	# Calculate performance percentage
 	var performance = float(stats.get("score", 0)) / float(expected_score) * 100
-	var performance_text = "Average"
+	var performance_text = tr("performance_good")
 	var performance_color = Color(1.0, 0.8, 0)  # Default yellow
 
 	if performance >= 150:
-		performance_text = "Exceptional!"
+		performance_text = tr("performance_exceptional")
 		performance_color = Color(1.0, 0.4, 0.8)  # Pink
 		$"RightPanel/GradeStamp-1".texture = GRADE_STAMP_TEXTURE
 		$"RightPanel/GradeStamp-2".texture = GRADE_STAMP_TEXTURE
 		$"RightPanel/GradeStamp-3".texture = GRADE_STAMP_TEXTURE
 	elif performance >= 120:
-		performance_text = "Excellent!"
+		performance_text = tr("performance_excellent")
 		performance_color = Color(0.2, 0.8, 0.2)  # Green
 		$"RightPanel/GradeStamp-1".texture = GRADE_STAMP_TEXTURE
 		$"RightPanel/GradeStamp-2".texture = GRADE_STAMP_TEXTURE
 	elif performance >= 90:
-		performance_text = "Good"
+		performance_text = tr("performance_good")
 		performance_color = Color(0.4, 0.7, 0.1)  # Light green
 		$"RightPanel/GradeStamp-1".texture = GRADE_STAMP_TEXTURE
 	elif performance < 70:
-		performance_text = "Needs Improvement"
+		performance_text = tr("performance_needs_improvement")
 		performance_color = Color(0.8, 0.4, 0.1)  # Orange
 	elif performance < 50:
-		performance_text = "Poor"
+		performance_text = tr("performance_poor")
 		performance_color = Color(0.8, 0.2, 0.2)  # Red
 
-	# Animate stamps based on performance
-	animate_grade_stamps(performance)
 
 	# Add performance rating to display
-	$RightPanel/PerformanceStats.text = (
-		"""PERFORMANCE
-Time Taken: {time_taken}
-Expected Score: {expected_score}
-Total Score: {score}
-Over-Score Percentage: {percent}%
-Performance Rating:
-{rating}
-	"""
-		. format(
-			{
-				"time_taken": format_time(stats.get("time_taken", 0)),
-				"expected_score": format_number(int(expected_score)),
-				"score": format_number(stats.get("score", 0)),
-				"percent": floor(performance),
-				"rating": performance_text
-			}
-		)
-	)
+	$RightPanel/PerformanceStats.text = tr("performance_stats_template").format({
+		"time_taken": format_time(stats.get("time_taken", 0)),
+		"expected_score": format_number(int(expected_score)),
+		"score": format_number(stats.get("score", 0)),
+		"percent": floor(performance),
+		"rating": performance_text
+	})
 
 	$RightPanel/PerformanceStats.add_theme_color_override("font_color", performance_color)
 
@@ -243,12 +190,12 @@ Performance Rating:
 	var is_new_high_score = stats.get("score", 0) > high_score && high_score > 0
 
 	if is_new_high_score:
-		$RightPanel/PerformanceStats.text += "\nNEW HIGH SCORE!"
+		$RightPanel/PerformanceStats.text += "\n" + tr("new_high_score")
 		$RightPanel/PerformanceStats.add_theme_color_override(
 			"font_color", Color(1.0, 0.8, 0.2, 1.0)
 		)
 	elif high_score > 0:
-		$RightPanel/PerformanceStats.text += "\nHigh Score: " + str(high_score)
+		$RightPanel/PerformanceStats.text += "\n" + tr("high_score_display").format({"score": str(high_score)})
 
 
 func play_entry_animation():
@@ -336,6 +283,45 @@ func play_entry_animation():
 	tween.tween_property($LeaderboardTitlePanel, "modulate:a", 1.0, 0.7)
 	tween.tween_property($LeaderboardPanel, "modulate:a", 1.0, 0.7)
 
+	var expected_score
+	# Adjust expectations based on difficulty
+	match Global.difficulty_level:
+		"Easy":
+			expected_score = 1000
+		"Normal":
+			expected_score = 2000
+		"Expert":
+			expected_score = 3000
+
+	# Calculate performance percentage
+	var performance = float(stats.get("score", 0)) / float(expected_score) * 100
+	var performance_text = tr("performance_good")
+	var performance_color = Color(1.0, 0.8, 0)  # Default yellow
+
+	if performance >= 150:
+		performance_text = tr("performance_exceptional")
+		performance_color = Color(1.0, 0.4, 0.8)  # Pink
+		$"RightPanel/GradeStamp-1".texture = GRADE_STAMP_TEXTURE
+		$"RightPanel/GradeStamp-2".texture = GRADE_STAMP_TEXTURE
+		$"RightPanel/GradeStamp-3".texture = GRADE_STAMP_TEXTURE
+	elif performance >= 120:
+		performance_text = tr("performance_excellent")
+		performance_color = Color(0.2, 0.8, 0.2)  # Green
+		$"RightPanel/GradeStamp-1".texture = GRADE_STAMP_TEXTURE
+		$"RightPanel/GradeStamp-2".texture = GRADE_STAMP_TEXTURE
+	elif performance >= 90:
+		performance_text = tr("performance_good")
+		performance_color = Color(0.4, 0.7, 0.1)  # Light green
+		$"RightPanel/GradeStamp-1".texture = GRADE_STAMP_TEXTURE
+	elif performance < 70:
+		performance_text = tr("performance_needs_improvement")
+		performance_color = Color(0.8, 0.4, 0.1)  # Orange
+	elif performance < 50:
+		performance_text = tr("performance_poor")
+		performance_color = Color(0.8, 0.2, 0.2)  # Red
+
+	# Animate stamps based on performance
+	animate_grade_stamps(performance)
 
 # Helper function to format numbers with commas
 func format_number(number: int) -> String:
@@ -365,13 +351,13 @@ func update_leaderboard():
 	print(Global.final_score)
 	Global.submit_score(Global.final_score)
 	print("Updating leaderboard...")
-	$LeaderboardTitlePanel/Title.text = "Global Leaderboard\nEndless - %s" % Global.difficulty_level
+	$LeaderboardTitlePanel/Title.text = tr("global_leaderboard_title").format({"difficulty": Global.difficulty_level})
 	# Format leaderboard entries
 	var request_success = Global.request_leaderboard_entries(Global.difficulty_level)
 	var leaderboard_text = ""
 
 	if request_success:
-		leaderboard_text = "Getting leaderboard scores..."
+		leaderboard_text = tr("getting_leaderboard_scores")
 		$LeaderboardPanel/Entries.text = leaderboard_text
 
 	await get_tree().create_timer(1.0).timeout
