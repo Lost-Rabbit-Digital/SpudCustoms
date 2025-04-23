@@ -109,6 +109,7 @@ These are our goals, to-do tasks, and completed tasks.
 - DaDS / Bug: When you drag documents, they do not appear above other documents
 
 ### Menus
+- If you hit "Continue" then pause in the Dialogic scene and return to Main Menu, the music from the Dialogic scene continue
 
 ### Graphics  
 - Documents show above the suspect panel background, use viewport masking
@@ -122,6 +123,8 @@ These are our goals, to-do tasks, and completed tasks.
 - Allow missiles to kill approved potatoes, resulting in 250 points removed and a strike added, with a flavor alert about a Totneva Convention violation
 - Add a small chance to run while waiting in line for each potato in addition to the rejection chance and global timer chance
 - Dialogic / Bug: You can launch missiles while in the tutorial scene
+- If you kill a runner and have 0 strikes, it should not say "Strike Removed!" on the pop-up text
+- If you accept and then reject a potato, it keeps the accepted state
 
 ### Audio
 
