@@ -98,7 +98,8 @@ These are our goals, to-do tasks, and completed tasks.
 
 # FULL RELEASE TASKS - 2025-04-20 Target Release - 1.1.0
 ## Tasks
-
+Leaderboards not loading as expected on 1.1 Steam in public_test, troubleshoot ASAP, blocking full release
+Test Demo changes before uploading Demo builds
 
 ### Law Bugs
 
@@ -142,6 +143,11 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ### Completed Tasks for 1.1.0
+- Deploy 1.1 to Public Test
+- Update store translations for description and short description
+- Record and add 3 GIFs of gameplay to all store pages
+- Record new trailer showing 1 shift of gameplay
+- Record new screenshots showing different aspects of gameplay
 - Finish remainder of narrative translations
 - Finish translating Shift Summary screen
 - Get Shift Summary translation working
