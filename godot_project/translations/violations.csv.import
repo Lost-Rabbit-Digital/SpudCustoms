@@ -6,10 +6,10 @@ uid="uid://cj3ypq8mew3ej"
 
 [deps]
 
-files=["res://translations/violations.en.translation", "res://translations/violations.fr.translation"]
+files=["res://translations/violations.en.translation", "res://translations/violations.cs.translation", "res://translations/violations.da.translation", "res://translations/violations.de.translation", "res://translations/violations.es.translation", "res://translations/violations.fi.translation", "res://translations/violations.fr.translation", "res://translations/violations.hu.translation", "res://translations/violations.id.translation", "res://translations/violations.it.translation", "res://translations/violations.nl.translation", "res://translations/violations.nb.translation", "res://translations/violations.pl.translation", "res://translations/violations.pt.translation", "res://translations/violations.ro.translation", "res://translations/violations.sk.translation", "res://translations/violations.sv.translation", "res://translations/violations.tr.translation", "res://translations/violations.vi.translation"]
 
 source_file="res://translations/violations.csv"
-dest_files=["res://translations/violations.en.translation", "res://translations/violations.fr.translation"]
+dest_files=["res://translations/violations.en.translation", "res://translations/violations.cs.translation", "res://translations/violations.da.translation", "res://translations/violations.de.translation", "res://translations/violations.es.translation", "res://translations/violations.fi.translation", "res://translations/violations.fr.translation", "res://translations/violations.hu.translation", "res://translations/violations.id.translation", "res://translations/violations.it.translation", "res://translations/violations.nl.translation", "res://translations/violations.nb.translation", "res://translations/violations.pl.translation", "res://translations/violations.pt.translation", "res://translations/violations.ro.translation", "res://translations/violations.sk.translation", "res://translations/violations.sv.translation", "res://translations/violations.tr.translation", "res://translations/violations.vi.translation"]
 
 [params]
 

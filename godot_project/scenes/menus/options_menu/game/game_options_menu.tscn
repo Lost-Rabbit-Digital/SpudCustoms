@@ -31,7 +31,6 @@ text = "select_language"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 10
-selected = 0
 
 [node name="DifficultyControl" type="HBoxContainer" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 32)
