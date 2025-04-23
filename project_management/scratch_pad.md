@@ -98,8 +98,7 @@ These are our goals, to-do tasks, and completed tasks.
 
 # FULL RELEASE TASKS - 2025-04-20 Target Release - 1.1.0
 ## Tasks
-- Finish remainder of narrative translations
-- Finish translating Shift Summary screen
+
 
 ### Law Bugs
 
@@ -143,6 +142,8 @@ These are our goals, to-do tasks, and completed tasks.
 
 
 ### Completed Tasks for 1.1.0
+- Finish remainder of narrative translations
+- Finish translating Shift Summary screen
 - Get Shift Summary translation working
 - Customs booth talk bubble not translating
 - Quota met, shift completed not translating as expected
