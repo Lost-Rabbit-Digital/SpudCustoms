@@ -18,12 +18,9 @@ func _ready():
 	animation_state_machine = $MenuAnimationTree.get("parameters/playback")
 	_setup_confirmation_dialog()
 	# Check for demo version
-	if Global.build_type == "Demo":
+	if Global.build_type == "Demo Release":
 		# Hide score attack button
 		%EndlessButton.visible = false
-		# Limit available levels
-		if level_select_scene:
-			level_select_scene.max_level = 2  # Only tutorial, level 1 and 2
 
 func load_game_scene():
 	GameState.start_game()

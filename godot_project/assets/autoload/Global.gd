@@ -3,7 +3,7 @@ extends Node
 # Persistent variables
 var current_story_state: int = 0
 var difficulty_level = "Normal" # Can be "Easy", "Normal", or "Expert"
-var build_type = "Full Release" # Can be Full Release or Demo Release
+var build_type = "Demo Release" # Can be Full Release or Demo Release
 var base_quota_target = 8 # Quota scaling variable
 var game_mode = "score_attack"
 # Transient variables

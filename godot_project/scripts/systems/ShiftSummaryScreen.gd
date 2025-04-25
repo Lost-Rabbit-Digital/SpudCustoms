@@ -664,6 +664,13 @@ func _on_continue_button_pressed() -> void:
 	queue_free()
 
 func _on_day_transition_complete():
+	# Check for demo limit before proceeding
+	if check_demo_limit():
+		# Show demo limit message after a short delay
+		await get_tree().create_timer(0.5).timeout
+		show_demo_limit_dialog()
+		return
+
 	# Saving current game state
 	GlobalState.save()
 
@@ -672,6 +679,12 @@ func _on_day_transition_complete():
 		SceneLoader.reload_current_scene()
 	else:
 		get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
+
+func check_demo_limit() -> bool:
+	# Check if this is a demo build and if the player has reached the limit
+	if Global.build_type == "Demo Release" and Global.shift >= 3:
+		return true
+	return false
 
 func _on_restart_button_pressed() -> void:
 	Global.reset_shift_stats()
@@ -775,7 +788,65 @@ func _unhandled_key_input(event):
 		debug_steam_status()
 
 
+func show_demo_limit_dialog():
+	# Create a panel to display the message
+	var demo_panel = PanelContainer.new()
+	demo_panel.z_index = 100
+	
+	var vbox = VBoxContainer.new()
+	vbox.set_custom_minimum_size(Vector2(500, 300))
+	vbox.alignment = BoxContainer.ALIGNMENT_CENTER
+	
+	var title = Label.new()
+	title.text = "Demo Version Limit Reached"
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	title.add_theme_font_size_override("font_size", 24)
+	
+	var message = RichTextLabel.new()
+	message.bbcode_enabled = true
+	message.text = """
+	[center]Thank you for playing the demo version of Potato Customs!
 
+	You've reached the limit of the demo version.
+	
+	To continue your journey as a customs officer and experience the full story, please purchase the full game.
+	
+	[url=https://store.steampowered.com/app/YOURGAMEID/]Buy Potato Customs on Steam[/url][/center]
+	"""
+	message.fit_content = true
+	message.custom_minimum_size = Vector2(450, 200)
+	message.meta_clicked.connect(func(meta): OS.shell_open(meta))
+	
+	var button = Button.new()
+	button.text = "Return to Main Menu"
+	button.custom_minimum_size = Vector2(200, 50)
+	button.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	
+	vbox.add_child(title)
+	vbox.add_child(message)
+	vbox.add_child(button)
+	
+	demo_panel.add_child(vbox)
+	add_child(demo_panel)
+	
+	# Center the panel
+	demo_panel.position = (get_viewport_rect().size - demo_panel.size) / 2
+	
+	# Connect button to return to main menu
+	button.pressed.connect(func():
+		# Remove the panel
+		demo_panel.queue_free()
+		# Return to main menu
+		if SceneLoader:
+			SceneLoader.load_scene("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
+		else:
+			get_tree().change_scene_to_file("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
+	)
+	
+	# Add a nice animation
+	demo_panel.modulate.a = 0
+	var tween = create_tween()
+	tween.tween_property(demo_panel, "modulate:a", 1.0, 0.5)
 
 func debug_steam_status():
 	LogManager.write_info("=== MANUAL STEAM DEBUG REQUESTED ===")
