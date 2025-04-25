@@ -1770,13 +1770,10 @@ func show_demo_limit_dialog():
 	
 	# Connect button to return to main menu
 	button.pressed.connect(func():
+		# Return to main menu
+		get_tree().change_scene_to_file("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
 		# Remove the panel
 		demo_panel.queue_free()
-		# Return to main menu
-		if SceneLoader:
-			SceneLoader.load_scene("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
-		else:
-			get_tree().change_scene_to_file("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
 	)
 	
 	# Add a nice animation
