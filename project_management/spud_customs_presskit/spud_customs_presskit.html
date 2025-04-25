@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spud Customs 1.1 Update - Press Kit</title>
+    <style>
+        /* Color Variables */
+        :root {
+            --off-black: #0E141B;
+            --orange-yellow: #FFB905;
+            --text-light: #f5f5f5;
+            --text-dark: #333333;
+            --accent-dark: #0A0E14;
+            --accent-light: #FFCA40;
+            --section-padding: 3rem;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--off-black);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--off-black);
+            background-image: linear-gradient(rgba(14, 20, 27, 0.9), rgba(14, 20, 27, 0.7)), url('images/header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 6rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 5px solid var(--orange-yellow);
+        }
+
+        .logo {
+            max-width: 400px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--accent-dark);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--orange-yellow);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+        }
+
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-link:hover {
+            color: var(--orange-yellow);
+            border-bottom: 2px solid var(--orange-yellow);
+        }
+
+        /* Section Styles */
+        section {
+            padding: var(--section-padding) 0;
+            border-bottom: 1px solid rgba(255, 185, 5, 0.3);
+        }
+
+        .section-title {
+            color: var(--orange-yellow);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--orange-yellow);
+        }
+
+        /* Content Styles */
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            list-style-type: none;
+            margin-left: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature-list li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .feature-list li::before {
+            content: "•";
+            color: var(--orange-yellow);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        /* Gallery Styles */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border: 3px solid var(--accent-dark);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            border-color: var(--orange-yellow);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Video Styles */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 2rem 0;
+            border: 3px solid var(--accent-dark);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Fact Sheet Styles */
+        .fact-sheet {
+            background-color: var(--accent-dark);
+            padding: 2rem;
+            border-radius: 5px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--orange-yellow);
+        }
+
+        .fact-sheet h3 {
+            color: var(--orange-yellow);
+            margin-bottom: 1rem;
+        }
+
+        .fact-sheet-item {
+            display: flex;
+            margin-bottom: 0.8rem;
+        }
+
+        .fact-sheet-label {
+            font-weight: bold;
+            width: 140px;
+            color: var(--accent-light);
+        }
+
+        .fact-sheet-value {
+            flex: 1;
+        }
+
+        /* Contact Styles */
+        .contact-info {
+            background-color: var(--accent-dark);
+            padding: 2rem;
+            border-radius: 5px;
+            margin-top: 2rem;
+        }
+
+        .contact-info h3 {
+            color: var(--orange-yellow);
+            margin-bottom: 1rem;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--orange-yellow);
+            color: var(--off-black);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--orange-yellow);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--orange-yellow);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--accent-dark);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .social-links {
+            margin: 1.5rem 0;
+        }
+
+        .social-links a {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--orange-yellow);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+
+            .fact-sheet-item {
+                flex-direction: column;
+            }
+
+            .fact-sheet-label {
+                width: 100%;
+                margin-bottom: 0.3rem;
+            }
+
+            .nav-container {
+                flex-wrap: wrap;
+            }
+
+            .nav-link {
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/spud-customs-logo.jpg" alt="Spud Customs Logo" class="logo">
+            <h1>1.1 Update Press Kit</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#overview" class="nav-link">Overview</a>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#update" class="nav-link">1.1 Update</a>
+            <a href="#media" class="nav-link">Media</a>
+            <a href="#about" class="nav-link">About Us</a>
+            <a href="#fact-sheet" class="nav-link">Fact Sheet</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="overview">
+            <h2 class="section-title">Game Overview</h2>
+            <p>
+                Spud Customs is a game inspired by "Papers, Please" about managing a border checkpoint for potatoes, combining document inspection mechanics with missile defense action. As a customs officer, you'll examine passports, enforce changing immigration laws, and protect your border from runners attempting to cross illegally. Balance accuracy and speed to meet your daily quota while defending against threats in this quirky take on bureaucratic gameplay.
+            </p>
+            <p>
+                The 1.1 update brings significant enhancements to gameplay, performance, and localization, making the game more accessible and enjoyable for players worldwide.
+            </p>
+        </section>
+
+        <section id="features">
+            <h2 class="section-title">Key Features</h2>
+            <ul class="feature-list">
+                <li>Examine potato passports and enforce ever-changing immigration laws</li>
+                <li>Defend your border from runners with a missile targeting system</li>
+                <li>Experience a blend of document inspection and action gameplay</li>
+                <li>Progress through an engaging story mode with colorful potato characters</li>
+                <li>Compete in Score Attack mode for high scores and leaderboard rankings</li>
+                <li>NEW IN 1.1: Multiple language support including French, German, Spanish and more</li>
+                <li>NEW IN 1.1: Enhanced performance and gameplay improvements</li>
+                <li>NEW IN 1.1: Improved UI and user experience</li>
+            </ul>
+        </section>
+
+        <section id="update">
+            <h2 class="section-title">1.1 Update Highlights</h2>
+            <p>The 1.1 update includes:</p>
+            <ul class="feature-list">
+                <li>Localization: Game now available in multiple languages including French, German, Spanish and more</li>
+                <li>Performance Optimizations: Smoother gameplay across all systems</li>
+                <li>UI Improvements: Enhanced user interface and better feedback systems</li>
+                <li>Bug Fixes: Resolved known issues reported by our community</li>
+                <li>Gameplay Enhancements: Rebalanced difficulty settings and improved controls</li>
+                <li>Audio Improvements: Enhanced sound effects and music integration</li>
+            </ul>
+        </section>
+
+        <section id="media">
+            <h2 class="section-title">Media</h2>
+            
+            <h3>Trailer</h3>
+            <div class="video-container">
+                <!-- Replace with your YouTube or video embed code -->
+                <iframe src="https://www.youtube.com/embed/PQzA-JDgLlE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <h3>Screenshots</h3>
+            <div class="gallery">
+                <!-- Replace with your actual screenshot paths -->
+                <div class="gallery-item">
+                    <img src="images/screenshots/spud_customs_screen_3.png" alt="Main gameplay with passport inspection">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/screenshots/spud_customs_screen_2.png" alt="Missile defense system in action">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/screenshots/spud_customs_screen_4.png" alt="UI improvements in the 1.1 update">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/screenshots/spud_customs_screen_1.png" alt="Different potato characters">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/screenshots/spud_customs_screen_5.png" alt="Story elements">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/screenshots/spud_customs_screen_6.png" alt="Menu screens in different languages">
+                </div>
+            </div>
+
+            <p>
+                <a href="downloads/spud_customs_screenshots.zip" class="btn">Download All Images (High-Res)</a>
+            </p>
+        </section>
+
+        <section id="about">
+            <h2 class="section-title">Developer Information</h2>
+            <p>
+                Lost Rabbit Digital is an independent game development studio founded in 2021. Our team is dedicated to creating unique gaming experiences that blend different genres and mechanics while maintaining a strong sense of humor and distinctive visual style.
+            </p>
+            <p>
+                Spud Customs represents our vision of combining bureaucratic simulation with action elements, wrapped in a quirky potato-themed world that offers both challenge and charm.
+            </p>
+        </section>
+
+        <section id="fact-sheet">
+            <h2 class="section-title">Fact Sheet</h2>
+            <div class="fact-sheet">
+                <div class="fact-sheet-item">
+                    <div class="fact-sheet-label">Title:</div>
+                    <div class="fact-sheet-value">Spud Customs</div>
+                </div>
+                <div class="fact-sheet-item">
+                    <div class="fact-sheet-label">Developer:</div>
+                    <div class="fact-sheet-value">Lost Rabbit Digital</div>
+                </div>
+                <div class="fact-sheet-item">
+                    <div class="fact-sheet-label">Publisher:</div>
+                    <div class="fact-sheet-value">HailBytes</div>
+                </div>
+                <div class="fact-sheet-item">
+                    <div class="fact-sheet-label">Release Date:</div>
+                    <div class="fact-sheet-value">12/7/2024</div>
+                </div>
+                <div class="fact-sheet-item">
+                    <div class="fact-sheet-label">Update Release:</div>
+                    <div class="fact-sheet-value">4/24/2024</div>
+                </div>
+                <div class="fact-sheet-item">
+                    <div class="fact-sheet-label">Platforms:</div>
+                    <div class="fact-sheet-value">Windows (Steam)</div>
+                    <div class="fact-sheet-value">Linux (Steam)</div>
+                </div>
+                <div class="fact-sheet-item">
+                    <div class="fact-sheet-label">Price:</div>
+                    <div class="fact-sheet-value">$4.99</div>
+                </div>
+                <div class="fact-sheet-item">
+                    <div class="fact-sheet-label">Languages:</div>
+                    <div class="fact-sheet-value">English, French, Spanish, German, Danish, Czech, Dutch, Vietnamese, Indonesian, Finnish, Swedish, Slovak </div>
+                </div>
+                <div class="fact-sheet-item">
+                    <div class="fact-sheet-label">ESRB/PEGI Rating:</div>
+                    <div class="fact-sheet-value">Not Rated</div>
+                </div>
+                <div class="fact-sheet-item">
+                    <div class="fact-sheet-label">Game Website:</div>
+                    <div class="fact-sheet-value"><a href="https://store.steampowered.com/app/3291880/Spud_Customs/" style="color: var(--orange-yellow);">Steam Page</a></div>
+                </div>
+                <div class="fact-sheet-item">
+                    <div class="fact-sheet-label">Store Links:</div>
+                    <div class="fact-sheet-value">
+                        <a href="https://store.steampowered.com/app/3291880/Spud_Customs/" style="color: var(--orange-yellow);">Steam</a> | 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Press Contact</h2>
+            <div class="contact-info">
+                <h3>For additional information, interview requests, or review codes:</h3>
+                <div class="fact-sheet-item">
+                    <div class="fact-sheet-label">Name:</div>
+                    <div class="fact-sheet-value">Boden McHale</div>
+                </div>
+                <div class="fact-sheet-item">
+                    <div class="fact-sheet-label">Email:</div>
+                    <div class="fact-sheet-value"><a href="mailto:lostrabbitdigital@gmail.com" style="color: var(--orange-yellow);">LostRabbitDigital@gmail.com</a></div>
+                </div>
+                <div class="fact-sheet-item">
+                    <div class="fact-sheet-label">Phone:</div>
+                    <div class="fact-sheet-value">443-766-3991</div>
+                </div>
+                <div class="fact-sheet-item">
+                    <div class="fact-sheet-label">Social Media:</div>
+                    <div class="fact-sheet-value">
+                        <a href="https://bsky.app/profile/heartcoded.bsky.social" style="color: var(--orange-yellow);">BlueSky</a> | 
+                        <a href="https://discord.gg/AuxpKQt6nC" style="color: var(--orange-yellow);">Discord</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <img src="images/studio-logo.png" alt="Studio Logo" style="max-width: 150px; margin-bottom: 1rem;">
+            <p>&copy; 2025 Lost Rabbit Digital. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-steam"></i></a>
+                <a href="#"><i class="fab fa-itch-io"></i></a>
+            </div>
+            <p>
+                <a href="downloads/spud_customs_presskit.zip" class="btn">Download Full Press Kit</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for smooth scrolling to anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

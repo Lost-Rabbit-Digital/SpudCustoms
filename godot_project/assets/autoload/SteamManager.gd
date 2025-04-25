@@ -16,7 +16,16 @@ const ACHIEVEMENTS = {
 # Leaderboard variables
 var is_fetching_leaderboard = false
 var current_leaderboard_handle = 0
-var cached_leaderboard_entries = [{"name":"HackerMan","score":"1250"}, {"name": "HeartCoded", "score":"800"}]
+var cached_leaderboard_entries = [{"name":"nyankind","score":"12500"}, 
+									{"name": "MrBright01", "score":"11850"},  
+									{"name": "ZombieWhisperer", "score":"9250"},  
+									{"name": "FreshwaterFern", "score":"9100"},  
+									{"name": "mniEurydice", "score":"8500"},  
+									{"name": "HeartCoded", "score":"6400"},  
+									{"name": "IceCreamMikey", "score":"6300"},  
+									{"name": "BRACUBI", "score":"5000"},  
+									{"name": "DamagedPlushie", "score":"4400"},  
+									{"name": "TomNook", "score":"250"}]
 
 # Signals
 signal leaderboard_updated(entries: Array)
@@ -131,23 +140,29 @@ func _on_leaderboard_score_uploaded(success: int, handle: int, score_details: Di
 
 func _on_leaderboard_scores_downloaded(message: String, this_leaderboard_handle: int, result: Array) -> void:
 	print("Scores downloaded message: %s" % message)
-	print("Leaderboard scores downloaded")
+	print("Leaderboard scores downloaded, entries: %d" % result.size())
 	is_fetching_leaderboard = false
 	cached_leaderboard_entries.clear()
-	print("Entries include:") 
-	print(result)
+	
+	if result.is_empty():
+		print("No leaderboard entries found")
+		# Still emit signal with empty array so UI can update
+		leaderboard_updated.emit(cached_leaderboard_entries)
+		return
 	
 	for entry in result:
-		print(entry)
 		# Get the player name from Steam
 		var player_name = Steam.getFriendPersonaName(entry.steam_id)
+		if player_name.is_empty():
+			player_name = "Player %d" % entry.global_rank
+			
 		cached_leaderboard_entries.append({
 			"rank": entry.global_rank,
 			"name": player_name,
 			"score": entry.score
 		})
 	
-	print("Updated cached leaderboard entries: ", cached_leaderboard_entries)
+	print("Updated cached leaderboard entries: ", cached_leaderboard_entries.size())
 	leaderboard_updated.emit(cached_leaderboard_entries)
 
 # Achievement handling
@@ -236,3 +251,17 @@ func upload_cloud_saves():
 		success = success and Steam.fileWrite("highscores.save", FileAccess.get_file_as_bytes("user://highscores.save"))
 		
 	return success
+
+func debug_leaderboard_status():
+	# Check if Steam is running
+	var steam_running = Steam.isSteamRunning()
+	print("Steam running: " + str(steam_running))
+	
+	# Check current leaderboard handle
+	print("Current leaderboard handle: " + str(SteamManager.current_leaderboard_handle))
+	
+	# Check fetching state
+	print("Is fetching leaderboard: " + str(SteamManager.is_fetching_leaderboard))
+	
+	# Check cached entries
+	print("Cached entries: " + str(SteamManager.cached_leaderboard_entries.size()))
