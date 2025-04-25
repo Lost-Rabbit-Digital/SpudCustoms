@@ -26,6 +26,7 @@ buses/default_bus_layout="res://assets/styles/default_bus_layout.tres"
 [autoload]
 
 Global="*res://assets/autoload/Global.gd"
+LogManager="*res://scripts/systems/LogManager.gd"
 LocalizationManager="*res://scripts/systems/LocalizationManager.gd"
 SceneTransitionManager="*res://scripts/scene_transition_manager.gd"
 UIManager="*res://assets/autoload/UIManager.gd"

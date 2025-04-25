@@ -26,6 +26,16 @@ var cached_leaderboard_entries = [{"name":"nyankind","score":"12500"},
 									{"name": "BRACUBI", "score":"5000"},  
 									{"name": "DamagedPlushie", "score":"4400"},  
 									{"name": "TomNook", "score":"250"}]
+var last_error_message = ""
+var steam_init_success = false
+var last_leaderboard_name = ""
+var debug_counter = 0
+
+# Steam API Status
+var api_call_attempts = {}
+var api_call_results = {}
+var connected_signals = []
+var pending_operations = []
 
 # Signals
 signal leaderboard_updated(entries: Array)
@@ -34,22 +44,57 @@ signal score_submitted(success: bool)
 func _ready():
 	# Initialize Steam connection
 	if not Steam.isSteamRunning():
-		push_warning("Steam is not running. Steam features will be disabled.")
+		LogManager.write_error("Steam is not running. Steam features will be disabled.")
 		return
 		
-	print("Configuring Steam connections...")
+	LogManager.write_info("Configuring Steam connections...")
+	steam_init_success = Steam.steamInit()
+	LogManager.write_info("Steam init result: " + str(steam_init_success))
+	LogManager.write_info("Steam AppID: " + str(Steam.getAppID()))
+	LogManager.write_info("Steam User: " + str(Steam.getSteamID()))
 	
 	# Connect Steam signals
-	Steam.leaderboard_find_result.connect(_on_leaderboard_find_result)
-	Steam.leaderboard_score_uploaded.connect(_on_leaderboard_score_uploaded)
-	Steam.leaderboard_scores_downloaded.connect(_on_leaderboard_scores_downloaded)
+	_connect_signal(Steam.leaderboard_find_result, _on_leaderboard_find_result, "leaderboard_find_result")
+	_connect_signal(Steam.leaderboard_score_uploaded, _on_leaderboard_score_uploaded, "leaderboard_score_uploaded")
+	_connect_signal(Steam.leaderboard_scores_downloaded, _on_leaderboard_scores_downloaded, "leaderboard_scores_downloaded")
 	
-	print("Steam connections configured.")
+	LogManager.write_info("Steam connections configured.")
+
+func _connect_signal(signal_ref, callback, signal_name):
+	if signal_ref.is_connected(callback):
+		LogManager.write_warning("Signal already connected: " + signal_name)
+	else:
+		signal_ref.connect(callback)
+		connected_signals.append(signal_name)
+		LogManager.write_info("Connected signal: " + signal_name)
 
 func _process(_delta: float) -> void:
 	# Run Steam callbacks to process Steam events
 	if Steam.isSteamRunning():
 		Steam.run_callbacks()
+		
+	# Debug periodic status updates (every 60 frames/~1 second)
+	debug_counter += 1
+	if debug_counter >= 60:
+		debug_counter = 0
+		_log_current_state()
+		
+	# Track pending operations timeout
+	for i in range(pending_operations.size() - 1, -1, -1):
+		var op = pending_operations[i]
+		op.time_elapsed += _delta
+		
+		# If operation has been pending for more than 10 seconds, log and remove
+		if op.time_elapsed > 10.0:
+			LogManager.write_warning("Steam operation timed out: " + op.name)
+			pending_operations.remove_at(i)
+
+func _log_current_state():
+	if is_fetching_leaderboard:
+		LogManager.write_steam("Still fetching leaderboard...")
+		LogManager.write_steam("Current handle: " + str(current_leaderboard_handle))
+		LogManager.write_steam("Last leaderboard: " + last_leaderboard_name)
+		LogManager.write_steam("Pending operations: " + str(pending_operations.size()))
 
 # Get leaderboard name based on difficulty and shift
 func get_leaderboard_name(difficulty: String = "", shift: int = -1) -> String:
@@ -67,102 +112,211 @@ func get_leaderboard_name(difficulty: String = "", shift: int = -1) -> String:
 		# Specific shift leaderboards - now with proper naming
 		base_name = "shift_%d_%s" % [shift, difficulty.to_lower()]
 	
-	print("Using leaderboard: " + base_name)
+	last_leaderboard_name = base_name
+	LogManager.write_steam("Using leaderboard: " + base_name)
 	return base_name
 
 # Submit score to the appropriate leaderboard
-func submit_score(score: int, difficulty: String = "Normal", shift: int = -1) -> bool:
-	print("Submitting score to Steam leaderboard")
+func submit_score(score: int, difficulty: String = "Normal", shift: int = -1):
+	LogManager.write_steam("Submitting score to Steam leaderboard: " + str(score))
 	
 	if not Steam.isSteamRunning():
-		print("Steam not running, score submission skipped")
+		LogManager.write_error("Steam not running, score submission skipped")
 		return false
 		
 	var leaderboard_name = get_leaderboard_name(difficulty, shift)
-	print("Finding leaderboard: ", leaderboard_name)
+	LogManager.write_steam("Finding leaderboard: " + leaderboard_name)
+	
+	# Track API call
+	api_call_attempts["findLeaderboard"] = api_call_attempts.get("findLeaderboard", 0) + 1
+	
+	# Add to pending operations
+	pending_operations.append({
+		"name": "submit_score_" + leaderboard_name, 
+		"score": score,
+		"time_elapsed": 0.0
+	})
 	
 	# First find the leaderboard
 	Steam.findLeaderboard(leaderboard_name)
-	return true
+	LogManager.write_steam("findLeaderboard call triggered")
 
 # Request leaderboard entries
-func request_leaderboard_entries(difficulty: String = "Normal", shift: int = -1) -> bool:
-	print("Getting leaderboard entries")
+func request_leaderboard_entries(difficulty: String = "Normal", shift: int = -1):
+	LogManager.write_steam("Getting leaderboard entries for " + difficulty + " shift " + str(shift))
 	
 	if not Steam.isSteamRunning():
-		print("Steam not running, leaderboard request skipped")
+		LogManager.write_error("Steam not running, leaderboard request skipped")
 		return false
 	
-	# If we don't have a handle for this leaderboard, get it
+	var leaderboard_name = get_leaderboard_name(difficulty, shift)
+	
+	# Track that we're fetching
 	is_fetching_leaderboard = true
-	Steam.findLeaderboard(get_leaderboard_name(difficulty, shift))
 	
-	# Fetch the scores if we have a handle
-	print("Fetching scores")
-	Steam.downloadLeaderboardEntries(1, 12, Steam.LEADERBOARD_DATA_REQUEST_GLOBAL, current_leaderboard_handle)
-	Steam.run_callbacks()
-	return true
+	# Track API call
+	api_call_attempts["findLeaderboard"] = api_call_attempts.get("findLeaderboard", 0) + 1
+	
+	# Add to pending operations
+	pending_operations.append({
+		"name": "request_leaderboard_" + leaderboard_name,
+		"time_elapsed": 0.0
+	})
+	
+	LogManager.write_steam("Calling findLeaderboard for: " + leaderboard_name)
+	Steam.findLeaderboard(leaderboard_name)
+	LogManager.write_steam("findLeaderboard call triggered")
+	
+	if current_leaderboard_handle != 0:
+		LogManager.write_steam("Using existing handle: " + str(current_leaderboard_handle))
+		# Fetch scores directly if we already have a handle
+		_download_leaderboard_entries()
+	
 
-# Signal handlers for Steam leaderboard operations
-func _on_leaderboard_find_result(handle: int, found: bool) -> void:
-	if not found:
-		push_warning("Failed to find Steam leaderboard!")
-		score_submitted.emit(false)
-		return
+func _download_leaderboard_entries():
+	# Try to fetch using current handle
+	if current_leaderboard_handle != 0:
+		LogManager.write_steam("Downloading entries with handle: " + str(current_leaderboard_handle))
 		
-	print("Leaderboard found, handle: ", handle)
-	current_leaderboard_handle = handle
-	
-	# Create empty PackedInt32Array for details
-	var details = PackedInt32Array()
-	
-	print("Uploading score to leaderboard")
-	Steam.uploadLeaderboardScore(Global.score, true, details, handle)
-
-func _on_leaderboard_score_uploaded(success: int, handle: int, score_details: Dictionary) -> void:
-	if success == 1:
-		print("Successfully uploaded score to Steam leaderboard!")
-		print("Score details: ", score_details)
-		print("Requesting updated leaderboard entries...")
+		# Track API call
+		api_call_attempts["downloadLeaderboardEntries"] = api_call_attempts.get("downloadLeaderboardEntries", 0) + 1
 		
-		# Request updated leaderboard entries
 		Steam.downloadLeaderboardEntries(
 			1,  # Start rank
 			12,  # End rank
 			Steam.LEADERBOARD_DATA_REQUEST_GLOBAL,
-			handle
+			current_leaderboard_handle
 		)
-		print("Entries requested.")
+		
+		LogManager.write_steam("downloadLeaderboardEntries call triggered")
+	else:
+		LogManager.write_error("Cannot download leaderboard entries - handle is 0")
+		return false
+
+# Signal handlers for Steam leaderboard operations
+func _on_leaderboard_find_result(handle: int, found: bool) -> void:
+	LogManager.write_steam("Leaderboard find result - Handle: " + str(handle) + ", Found: " + str(found))
+	
+	# Track API result
+	api_call_results["findLeaderboard"] = {
+		"handle": handle,
+		"found": found,
+		"timestamp": Time.get_unix_time_from_system()
+	}
+	
+	if not found:
+		last_error_message = "Failed to find Steam leaderboard!"
+		LogManager.write_error(last_error_message)
+		score_submitted.emit(false)
+		is_fetching_leaderboard = false
+		return
+		
+	LogManager.write_steam("Leaderboard found, handle: " + str(handle))
+	current_leaderboard_handle = handle
+	
+	# Check if we're in score submission or just fetching
+	var submitting_score = false
+	for op in pending_operations:
+		if op.name.begins_with("submit_score_"):
+			submitting_score = true
+			LogManager.write_steam("Processing pending score submission: " + str(op.score))
+			
+			# Create empty PackedInt32Array for details
+			var details = PackedInt32Array()
+			
+			# Track API call
+			api_call_attempts["uploadLeaderboardScore"] = api_call_attempts.get("uploadLeaderboardScore", 0) + 1
+			
+			LogManager.write_steam("Uploading score " + str(op.score) + " to leaderboard")
+			Steam.uploadLeaderboardScore(op.score, true, details, handle)
+			LogManager.write_steam("uploadLeaderboardScore call triggered")
+			break
+	
+	# If not submitting score, just download entries
+	if not submitting_score:
+		LogManager.write_steam("Not submitting score, just downloading entries")
+		_download_leaderboard_entries()
+
+func _on_leaderboard_score_uploaded(success: int, handle: int, score_details: Dictionary) -> void:
+	LogManager.write_steam("Score upload result - Success: " + str(success) + ", Handle: " + str(handle))
+	LogManager.write_steam("Score details: " + str(score_details))
+	
+	# Track API result
+	api_call_results["uploadLeaderboardScore"] = {
+		"success": success,
+		"handle": handle,
+		"details": score_details,
+		"timestamp": Time.get_unix_time_from_system()
+	}
+	
+	# Remove pending submission operation
+	for i in range(pending_operations.size() - 1, -1, -1):
+		var op = pending_operations[i]
+		if op.name.begins_with("submit_score_"):
+			pending_operations.remove_at(i)
+	
+	if success == 1:
+		LogManager.write_steam("Successfully uploaded score to Steam leaderboard!")
+		LogManager.write_steam("Requesting updated leaderboard entries...")
+		
+		# Request updated leaderboard entries
+		_download_leaderboard_entries()
+		
+		LogManager.write_steam("Entries requested.")
 		score_submitted.emit(true)
 	else:
-		push_warning("Failed to upload score to Steam leaderboard")
+		last_error_message = "Failed to upload score to Steam leaderboard"
+		LogManager.write_error(last_error_message)
 		score_submitted.emit(false)
+		is_fetching_leaderboard = false
 
 func _on_leaderboard_scores_downloaded(message: String, this_leaderboard_handle: int, result: Array) -> void:
-	print("Scores downloaded message: %s" % message)
-	print("Leaderboard scores downloaded, entries: %d" % result.size())
+	LogManager.write_steam("Scores downloaded message: " + message)
+	LogManager.write_steam("Leaderboard handle: " + str(this_leaderboard_handle) + ", Entries: " + str(result.size()))
+	
+	# Track API result
+	api_call_results["downloadLeaderboardEntries"] = {
+		"message": message,
+		"handle": this_leaderboard_handle,
+		"count": result.size(),
+		"timestamp": Time.get_unix_time_from_system()
+	}
+	
 	is_fetching_leaderboard = false
 	cached_leaderboard_entries.clear()
 	
+	# Remove pending download operation
+	for i in range(pending_operations.size() - 1, -1, -1):
+		var op = pending_operations[i]
+		if op.name.begins_with("request_leaderboard_"):
+			pending_operations.remove_at(i)
+	
 	if result.is_empty():
-		print("No leaderboard entries found")
-		# Still emit signal with empty array so UI can update
+		LogManager.write_warning("No leaderboard entries returned")
 		leaderboard_updated.emit(cached_leaderboard_entries)
 		return
 	
+	LogManager.write_steam("Processing " + str(result.size()) + " leaderboard entries")
+	
 	for entry in result:
+		LogManager.write_steam("Entry: " + str(entry))
+		
 		# Get the player name from Steam
-		var player_name = Steam.getFriendPersonaName(entry.steam_id)
-		if player_name.is_empty():
-			player_name = "Player %d" % entry.global_rank
-			
+		var steam_id = entry.get("steam_id", 0)
+		var player_name = "Unknown"
+		
+		if steam_id != 0:
+			player_name = Steam.getFriendPersonaName(steam_id)
+			if player_name.is_empty():
+				player_name = "Player " + str(entry.get("global_rank", 0))
+		
 		cached_leaderboard_entries.append({
-			"rank": entry.global_rank,
+			"rank": entry.get("global_rank", 0),
 			"name": player_name,
-			"score": entry.score
+			"score": entry.get("score", 0)
 		})
 	
-	print("Updated cached leaderboard entries: ", cached_leaderboard_entries.size())
+	LogManager.write_steam("Updated cached leaderboard entries: " + str(cached_leaderboard_entries.size()))
 	leaderboard_updated.emit(cached_leaderboard_entries)
 
 # Achievement handling
@@ -209,59 +363,22 @@ func update_steam_stats(total_shifts_completed: int, total_runners_stopped: int,
 	Steam.setStatInt("high_score", score)
 	Steam.storeStats() # Important: Actually saves stats to Steam
 
-# Cloud save operations
-func download_cloud_saves():
-	if not Steam.isSteamRunning():
-		return false
-	var success = true
+# Debug function to log current state
+func dump_debug_info() -> String:
+	var debug_info = "=== STEAM MANAGER DEBUG INFO ===\n"
+	debug_info += "Steam running: " + str(Steam.isSteamRunning()) + "\n"
+	debug_info += "Steam initialized: " + str(steam_init_success) + "\n"
+	debug_info += "Steam AppID: " + str(Steam.getAppID()) + "\n"
+	debug_info += "Steam UserID: " + str(Steam.getSteamID()) + "\n"
+	debug_info += "Current leaderboard: " + last_leaderboard_name + "\n"
+	debug_info += "Current handle: " + str(current_leaderboard_handle) + "\n"
+	debug_info += "Is fetching: " + str(is_fetching_leaderboard) + "\n"
+	debug_info += "Last error: " + last_error_message + "\n"
+	debug_info += "Cached entries: " + str(cached_leaderboard_entries.size()) + "\n"
+	debug_info += "Connected signals: " + str(connected_signals) + "\n"
+	debug_info += "Pending operations: " + str(pending_operations.size()) + "\n"
+	debug_info += "API calls attempted: " + str(api_call_attempts) + "\n"
+	debug_info += "API call results: " + str(api_call_results) + "\n"
 	
-	if Steam.fileExists("gamestate.save"):
-		var file_size = Steam.getFileSize("gamestate.save")
-		var file_content = Steam.fileRead("gamestate.save", file_size)
-		
-		var local_file = FileAccess.open("user://gamestate.save", FileAccess.WRITE)
-		if local_file:
-			local_file.store_buffer(file_content)
-		else:
-			success = false
-			
-	if Steam.fileExists("highscores.save"):
-		var scores_size = Steam.getFileSize("highscores.save")
-		var scores_content = Steam.fileRead("highscores.save", scores_size)
-		
-		var local_scores = FileAccess.open("user://highscores.save", FileAccess.WRITE)
-		if local_scores:
-			local_scores.store_buffer(scores_content)
-		else:
-			success = false
-			
-	return success
-
-# Upload save files to Steam Cloud
-func upload_cloud_saves():
-	if not Steam.isSteamRunning():
-		return false
-		
-	var success = true
-	
-	if FileAccess.file_exists("user://gamestate.save"):
-		success = success and Steam.fileWrite("gamestate.save", FileAccess.get_file_as_bytes("user://gamestate.save"))
-		
-	if FileAccess.file_exists("user://highscores.save"):
-		success = success and Steam.fileWrite("highscores.save", FileAccess.get_file_as_bytes("user://highscores.save"))
-		
-	return success
-
-func debug_leaderboard_status():
-	# Check if Steam is running
-	var steam_running = Steam.isSteamRunning()
-	print("Steam running: " + str(steam_running))
-	
-	# Check current leaderboard handle
-	print("Current leaderboard handle: " + str(SteamManager.current_leaderboard_handle))
-	
-	# Check fetching state
-	print("Is fetching leaderboard: " + str(SteamManager.is_fetching_leaderboard))
-	
-	# Check cached entries
-	print("Cached entries: " + str(SteamManager.cached_leaderboard_entries.size()))
+	LogManager.write_info(debug_info)
+	return debug_info

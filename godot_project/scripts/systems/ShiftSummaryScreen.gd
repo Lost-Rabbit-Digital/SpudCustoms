@@ -19,11 +19,14 @@ func _init():
 
 
 func _ready():
-	if !SteamManager.leaderboard_updated.is_connected(_on_leaderboard_updated):
+	if not SteamManager.leaderboard_updated.is_connected(_on_leaderboard_updated):
 		SteamManager.leaderboard_updated.connect(_on_leaderboard_updated)
-	if !SteamManager.score_submitted.is_connected(_on_score_submitted):
+	if not SteamManager.score_submitted.is_connected(_on_score_submitted):
 		SteamManager.score_submitted.connect(_on_score_submitted)
 	
+	# Log startup information
+	LogManager.write_info("ShiftSummaryScreen initialized")
+	LogManager.write_info("Game Stats: " + str(stats))
 	
 	z_index = 100
 	mouse_filter = Control.MOUSE_FILTER_STOP  # Block input from passing through
@@ -35,8 +38,10 @@ func _ready():
 	# Use stored stats if available, otherwise use test data
 	if !Global.current_game_stats.is_empty():
 		show_summary(Global.current_game_stats)
+		LogManager.write_info("Using actual game stats")
 	else:
 		show_summary(generate_test_stats())
+		LogManager.write_info("Using test stats")
 
 	# Ensure buttons are interactive
 	for button in [$ContinueButton, $SubmitScoreButton, $RestartButton, $MainMenuButton]:
@@ -56,11 +61,14 @@ func _ready():
 	play_entry_animation()
 
 func _on_leaderboard_updated(entries: Array):
+	LogManager.write_info("Leaderboard updated callback received - entries: " + str(entries.size()))
 	var leaderboard_text = ""
 	
 	if entries.is_empty():
 		leaderboard_text = "No leaderboard entries available."
+		LogManager.write_warning("Received empty leaderboard entries")
 	else:
+		LogManager.write_info("Processing " + str(entries.size()) + " leaderboard entries")
 		for i in range(min(entries.size(), 12)):
 			# Format each entry with proper padding
 			leaderboard_text += "%2d  %-15s  %s\n" % [
@@ -70,10 +78,12 @@ func _on_leaderboard_updated(entries: Array):
 			]
 	
 	$LeaderboardPanel/Entries.text = leaderboard_text
-	print("Leaderboard updated with real data: " + str(entries.size()) + " entries")
+	LogManager.write_info("Leaderboard display updated")
 
 func _on_score_submitted(success: bool):
-	# Create a temporary notification label
+	LogManager.write_info("Score submission callback received - success: " + str(success))
+	
+	# Create visual feedback
 	var notification = Label.new()
 	notification.z_index = 100
 	notification.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -82,16 +92,24 @@ func _on_score_submitted(success: bool):
 	if success:
 		notification.text = "Score submitted successfully!"
 		notification.add_theme_color_override("font_color", Color(0.2, 0.8, 0.2))
-		# Request updated leaderboard immediately after submission
+		LogManager.write_info("Score successfully submitted")
+		
+		# Request updated leaderboard immediately
+		LogManager.write_info("Requesting updated leaderboard data")
 		Global.request_leaderboard_entries(Global.difficulty_level)
 	else:
 		notification.text = "Failed to submit score to leaderboard."
 		notification.add_theme_color_override("font_color", Color(0.8, 0.2, 0.2))
+		LogManager.write_error("Score submission failed")
+		
+		# Re-enable submit button
+		$SubmitScoreButton.disabled = false
+		$SubmitScoreButton.text = "Retry Submit"
 	
 	# Position the notification at the center bottom of the screen
 	notification.position = Vector2(
-		get_viewport_rect().size.x / 2 - notification.size.x / 2,
-		get_viewport_rect().size.y * 0.85
+		$LeaderboardPanel.position.x + $LeaderboardPanel.size.x / 2,
+		$LeaderboardPanel.position.y + $LeaderboardPanel.size.y - 40
 	)
 	
 	add_child(notification)
@@ -397,29 +415,34 @@ func calculate_hit_rate() -> String:
 
 
 func update_leaderboard():
-	print("Submitting score of: ", Global.final_score)
-	Global.submit_score(Global.final_score)
-	print("Updating leaderboard...")
+	LogManager.write_info("Updating leaderboard - current score: " + str(Global.final_score))
 	$LeaderboardTitlePanel/Title.text = "Global Leaderboard\nEndless - %s" % Global.difficulty_level
 	
-	# Show loading state
+	# Show loading state and dumping debug info
 	$LeaderboardPanel/Entries.text = "Loading leaderboard data..."
+	LogManager.write_info("Dumping Steam debug info before leaderboard request")
+	SteamManager.dump_debug_info()
 	
 	# Request leaderboard data
+	LogManager.write_info("Requesting leaderboard entries")
 	var request_success = Global.request_leaderboard_entries(Global.difficulty_level)
+	LogManager.write_info("Request leaderboard result: " + str(request_success))
 	
 	if !request_success:
-		$LeaderboardPanel/Entries.text = "Could not connect to Steam.\nCheck your connection."
-		return
+		LogManager.write_error("Failed to request leaderboard entries")
+		$LeaderboardPanel/Entries.text = "Could not connect to Steam.\nCheck your connection and restart game."
+	else:
+		LogManager.write_info("Leaderboard request sent successfully")
 		
-	# Wait a bit for data to load (optional)
-	await get_tree().create_timer(1.5).timeout
-	
-	# If still no data after waiting, show a message
-	if SteamManager.cached_leaderboard_entries.is_empty():
-		$LeaderboardPanel/Entries.text = "No leaderboard data available."
-	
-	print("Leaderboard update requested.")
+		# Set a timeout for leaderboard loading
+		get_tree().create_timer(5.0).timeout.connect(func():
+			# Check if we're still showing "Loading..." after 5 seconds
+			if $LeaderboardPanel/Entries.text == "Loading leaderboard data...":
+				LogManager.write_warning("Leaderboard loading timed out")
+				SteamManager.dump_debug_info()
+				$LeaderboardPanel/Entries.text = "Loading timed out.\nTry submitting score again."
+		)
+
 
 
 func generate_test_stats() -> Dictionary:
@@ -439,29 +462,26 @@ func generate_test_stats() -> Dictionary:
 
 
 func _on_submit_score_button_pressed() -> void:
-	print("Submit Score Button Clicked, submitting score and updating leaderboard")
+	LogManager.write_info("Submit Score button pressed")
 	
 	# Add visual feedback
 	$SubmitScoreButton.text = "Submitting..."
 	$SubmitScoreButton.disabled = true
 	
-	# Submit the score and request leaderboard refresh
-	var submission_success = Global.submit_score(Global.final_score)
+	# Log debug info before submission
+	LogManager.write_info("Dumping Steam debug info before score submission")
+	SteamManager.dump_debug_info()
 	
-	if submission_success:
-		# Wait for submission to complete
-		await SteamManager.score_submitted
-		
-		# Request fresh leaderboard data
-		Global.request_leaderboard_entries(Global.difficulty_level)
-		
-		# Give time for the request to process
-		await get_tree().create_timer(1.0).timeout
-		
-		# Update button state
-		$SubmitScoreButton.text = "Submit Score"
+	# Submit the score
+	LogManager.write_info("Submitting score: " + str(Global.final_score))
+	var submission_success = Global.submit_score(Global.final_score)
+	LogManager.write_info("Submit score API call result: " + str(submission_success))
+	
+	if !submission_success:
+		LogManager.write_error("Failed to submit score API call")
+		$SubmitScoreButton.text = "Retry Submit"
 		$SubmitScoreButton.disabled = false
-	else:
+		
 		# Create temporary notification label
 		var notification = Label.new()
 		notification.text = "Cannot connect to Steam. Check your connection."
@@ -470,8 +490,8 @@ func _on_submit_score_button_pressed() -> void:
 		notification.z_index = 100
 		
 		notification.position = Vector2(
-			get_viewport_rect().size.x / 2 - notification.size.x / 2,
-			get_viewport_rect().size.y * 0.85
+			$LeaderboardPanel.position.x + $LeaderboardPanel.size.x / 2,
+			$LeaderboardPanel.position.y + $LeaderboardPanel.size.y - 40
 		)
 		
 		add_child(notification)
@@ -481,9 +501,86 @@ func _on_submit_score_button_pressed() -> void:
 		tween.tween_property(notification, "modulate:a", 0.0, 2.0)
 		tween.tween_callback(func(): notification.queue_free())
 		
-		$SubmitScoreButton.text = "Retry Submit"
-		$SubmitScoreButton.disabled = false
+		return
 	
+	# Set a timeout for submission
+	var submission_timer = get_tree().create_timer(10.0)
+	submission_timer.timeout.connect(func():
+		# Check if button is still disabled after 10 seconds
+		if $SubmitScoreButton.disabled:
+			LogManager.write_warning("Score submission timed out")
+			SteamManager.dump_debug_info()
+			$SubmitScoreButton.text = "Retry Submit"
+			$SubmitScoreButton.disabled = false
+			
+			var timeout_notification = Label.new()
+			timeout_notification.text = "Submission timed out. Try again."
+			timeout_notification.add_theme_color_override("font_color", Color(0.8, 0.2, 0.2))
+			timeout_notification.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+			timeout_notification.z_index = 100
+			
+			timeout_notification.position = Vector2(
+				$LeaderboardPanel.position.x + $LeaderboardPanel.size.x / 2,
+				$LeaderboardPanel.position.y + $LeaderboardPanel.size.y - 40
+			)
+			
+			add_child(timeout_notification)
+			
+			# Remove notification after a delay
+			var tween = create_tween()
+			tween.tween_property(timeout_notification, "modulate:a", 0.0, 2.0)
+			tween.tween_callback(func(): timeout_notification.queue_free())
+	)
+
+func debug_steam_status():
+	LogManager.write_info("=== MANUAL STEAM DEBUG REQUESTED ===")
+	SteamManager.dump_debug_info()
+	
+	# Attempt a direct leaderboard re-fetch
+	var success = SteamManager._download_leaderboard_entries()
+	LogManager.write_info("Manual leaderboard download attempt: " + str(success))
+	
+	# Create a debug display
+	var debug_panel = PanelContainer.new()
+	debug_panel.z_index = 200
+	debug_panel.size = Vector2(600, 500)
+	debug_panel.position = Vector2(
+		(get_viewport_rect().size.x - debug_panel.size.x) / 2,
+		(get_viewport_rect().size.y - debug_panel.size.y) / 2
+	)
+	
+	var debug_label = RichTextLabel.new()
+	debug_label.bbcode_enabled = true
+	debug_label.size = Vector2(580, 460)
+	debug_label.position = Vector2(10, 10)
+	
+	var close_button = Button.new()
+	close_button.text = "Close"
+	close_button.position = Vector2(debug_panel.size.x/2 - 40, debug_panel.size.y - 40)
+	close_button.size = Vector2(80, 30)
+	
+	var debug_text = "[b]Steam Debug Info[/b]\n\n"
+	debug_text += "Steam running: " + str(Steam.isSteamRunning()) + "\n"
+	debug_text += "Current leaderboard: " + str(SteamManager.last_leaderboard_name) + "\n"
+	debug_text += "Current handle: " + str(SteamManager.current_leaderboard_handle) + "\n"
+	debug_text += "Is fetching: " + str(SteamManager.is_fetching_leaderboard) + "\n"
+	debug_text += "Last error: " + str(SteamManager.last_error_message) + "\n\n"
+	
+	debug_text += "[b]API Calls:[/b]\n"
+	for key in SteamManager.api_call_attempts:
+		debug_text += key + ": " + str(SteamManager.api_call_attempts[key]) + "\n"
+	
+	debug_text += "\n[b]Cached Entries:[/b]\n"
+	for entry in SteamManager.cached_leaderboard_entries:
+		debug_text += str(entry.get("rank", "?")) + ": " + str(entry.get("name", "Unknown")) + " - " + str(entry.get("score", 0)) + "\n"
+	
+	debug_label.text = debug_text
+	
+	debug_panel.add_child(debug_label)
+	debug_panel.add_child(close_button)
+	add_child(debug_panel)
+	
+	close_button.pressed.connect(func(): debug_panel.queue_free())
 
 
 # Handle scene transition after fade out
@@ -835,3 +932,8 @@ func animate_grade_stamps(performance: float):
 		var final_texture = GRADE_STAMP_TEXTURE
 		for i in range(num_stamps):
 			stamps[i].texture = final_texture
+
+func _unhandled_key_input(event):
+	# Check for F12 key press for debug info
+	if event is InputEventKey and event.keycode == KEY_F12 and event.pressed and not event.echo:
+		debug_steam_status()

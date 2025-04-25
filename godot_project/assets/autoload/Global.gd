@@ -57,7 +57,9 @@ func _ready():
 	
 	# Check for and download cloud saves when game starts
 	if Steam.isSteamRunning():
-		SteamManager.download_cloud_saves()
+		#SteamManager.download_cloud_saves()
+		LogManager.write_info("Steam is running.")
+		pass
 		
 	# Load saved game state
 	load_game_state()

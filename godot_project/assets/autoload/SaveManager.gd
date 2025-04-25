@@ -38,7 +38,9 @@ func save_game_state(data: Dictionary) -> bool:
 		
 		# Upload to Steam Cloud if available
 		if Steam.isSteamRunning():
-			SteamManager.upload_cloud_saves()
+			# SteamManager.upload_cloud_saves()
+			LogManager.write_info("todo: upload steam cloud saves")
+			pass
 		
 		save_completed.emit(true)
 		return true
