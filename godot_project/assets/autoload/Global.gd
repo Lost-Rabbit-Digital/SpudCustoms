@@ -148,7 +148,7 @@ func advance_shift():
 	match Global.difficulty_level:
 		"Easy": 
 			# TODO: 0.8 normally
-			scaling_factor = 0.1
+			scaling_factor = 0.8
 		"Normal":
 			scaling_factor = 1
 		"Expert":
@@ -270,7 +270,7 @@ func set_difficulty(new_difficulty: String):
 		match difficulty_level:
 			"Easy":
 				# TODO: 0.8 normally
-				scaling_factor = 0.1
+				scaling_factor = 0.8
 				max_strikes = 6
 			"Normal":
 				scaling_factor = 1
