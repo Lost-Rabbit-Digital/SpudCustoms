@@ -63,14 +63,14 @@ set {interrogation_response} = "none"
 
 if {interrogation_response} == "lie":
 	join security_chief [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_chief: Your stress levels indicate [color=YELLOW]deception[/color]. However... inconclusive. You may go for now. #id:c6
-leave security_chief
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	security_chief: Your stress levels indicate [color=YELLOW]deception[/color]. However... inconclusive. You may go for now. #id:c6
+	leave security_chief
 else:
-join security_chief [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_chief: Legal representative? This is a security procedure, not a trial. Your refusal has been noted. #id:c7
-leave security_chief
+	join security_chief [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	security_chief: Legal representative? This is a security procedure, not a trial. Your refusal has been noted. #id:c7
+	leave security_chief
 
 [background arg="res://assets/narrative/resistance_planning.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]

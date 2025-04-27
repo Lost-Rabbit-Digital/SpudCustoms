@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/unplugged_sneaky_main.mp3-89c6b424ce8a30711c6
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4
