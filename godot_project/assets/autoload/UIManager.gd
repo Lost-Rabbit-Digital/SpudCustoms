@@ -154,16 +154,24 @@ func shake_screen(intensity: float = 10.0, duration: float = 0.3):
 	if not root:
 		return
 		
+	# Get the actual initial position rather than forcing to zero
+	var initial_position = root.position
+	
+	# Cancel any active tweens related to screen shake
+	var active_tweens = get_tree().get_nodes_in_group("ScreenShakeTween")
+	for tween_node in active_tweens:
+		if tween_node is Tween and tween_node.is_valid():
+			tween_node.kill()
+	
 	# Create a screen shake tween
 	var tween = create_tween()
+	tween.set_ease(Tween.EASE_OUT)
+	tween.set_trans(Tween.TRANS_SINE)
 	
 	# Number of shake steps
 	var steps = 12
 	
-	# Initial position to return to
-	var initial_position = root.position
-	
-	# Initial random offset
+	# Store the initial random offset
 	var random_shake = Vector2(
 		randf_range(-intensity, intensity),
 		randf_range(-intensity, intensity)
@@ -183,9 +191,11 @@ func shake_screen(intensity: float = 10.0, duration: float = 0.3):
 		# Move relative to the initial position
 		tween.tween_property(root, "position", initial_position + random_shake, duration / steps)
 	
-	# Return to original position
+	# IMPORTANT: Final tween to EXACTLY the initial position
 	tween.tween_property(root, "position", initial_position, duration / steps)
-
+	
+	# Add a safety callback to force position reset when the tween finishes
+	tween.finished.connect(func(): root.position = initial_position)
 # Helper function to format score with commas
 func format_score(value: int) -> String:
 	var formatted = ""
