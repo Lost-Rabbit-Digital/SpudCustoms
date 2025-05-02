@@ -760,6 +760,9 @@ func move_potato_to_office(potato_person: PotatoPerson):
 		
 		# Now animate mugshot and passport with the complete info
 		animate_mugshot_and_passport()
+		# Reset the perfect bonus state for the new potato
+		if stamp_system_manager:
+			stamp_system_manager.reset_perfect_bonus_state()
 	)
 
 # Add this new function to handle path completion
@@ -849,7 +852,9 @@ func _on_passport_interaction():
 func _on_megaphone_interaction_button_pressed() -> void:
 	ui_hint_system.reset_timer("megaphone")
 	megaphone_clicked()
-
+	# Reset the perfect bonus state when a new potato is called
+	if stamp_system_manager:
+		stamp_system_manager.reset_perfect_bonus_state()
 	
 # Optional: Callback for hint activation/deactivation
 func _on_hint_activated(node_name: String):

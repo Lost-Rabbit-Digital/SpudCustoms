@@ -16,6 +16,13 @@
 ## Audio
 [Ovani](https://ovanisound.com/)
 
+## Playtesters
+[John S](https://rankitdigitalmarketing.com)
+[Mohamed M](https://www.fiverr.com/mohamed_eshop)
+[Ma31n](https://www.fiverr.com/ma31nho)
+[Nadeem M](https://www.fiverr.com/nadeem_mostafa)
+[Eldaniz O](https://www.fiverr.com/eldenizomerov)
+
 # Tools / Assets
 ## Godot
 Author: [Juan Linietsky, Ariel Manzur, and contributors](https://godotengine.org/contact)  

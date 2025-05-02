@@ -16,6 +16,9 @@ var passport_stampable: StampableComponent
 var main_game: Node
 var stats_manager: Node
 
+# Track if a perfect stamp bonus has been awarded for the current document
+var perfect_bonus_awarded: bool = false
+
 # Initialize the stamp system
 func initialize(game_scene: Node):
 	main_game = game_scene
@@ -67,13 +70,15 @@ func _on_stamp_applied(stamp: StampComponent, document: Node, is_perfect: bool):
 		stats_manager.current_stats.total_stamps += 1
 
 	# Additional actions for perfect stamps
-	if is_perfect:
-		# Update perfect stamp count
-		if stats_manager:
-			stats_manager.current_stats.perfect_stamps += 1
+	if is_perfect and not perfect_bonus_awarded:
+		# This is the first perfect stamp on this document, award the bonus
+		perfect_bonus_awarded = true
+		# Increase perfect stamps counter
+		if main_game and main_game.stats_manager and main_game.stats_manager.current_stats:
+			main_game.stats_manager.current_stats.perfect_stamps += 1
 
 		# Perfect stamp bonus points
-		var perfect_points = 200
+		var perfect_points = 250
 		Global.add_score(perfect_points)
 		
 		# Try to find alert references in the scene tree
@@ -95,6 +100,8 @@ func _on_stamp_applied(stamp: StampComponent, document: Node, is_perfect: bool):
 	
 		# Shake screen
 		Global.shake_screen(3, 0.5)
+		
+		emit_signal("stamp_applied", stamp, document, is_perfect)
 
 
 func create_perfect_stamp_effect(position: Vector2):
@@ -172,9 +179,14 @@ func process_passport_decision():
 		# Clear the stamps after making decision
 		passport_stampable.clear_stamps()
 
+		# Reset the perfect_bonus_awarded flag when processing a new document
+		perfect_bonus_awarded = false
+
 		return decision
 	return ""
 
+func reset_perfect_bonus_state():
+	perfect_bonus_awarded = false
 
 # Clear all stamps from passport
 func clear_passport_stamps():
