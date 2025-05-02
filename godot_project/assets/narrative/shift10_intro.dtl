@@ -83,13 +83,13 @@ if {stay_or_go} == "go":
 		audio "res://assets/audio/talking/keyboard mechanical typing 3.mp3" [volume="0.0" bus="SFX"]
 		sweet_potato_sasha: We'll infiltrate using government uniforms. You'll help bypass security systems. Our goal is to capture Idaho and force a public confession. #id:4d
 		leave sweet_potato_sasha
-[background arg="res://assets/narrative/resistance_planning.png" fade="2.0"]
-join resistance_member_2 [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-resistance_member_2: You'll be on Team Alpha with Sasha, breaching the east entrance. Your objective\: [color=GREEN]secure the broadcast center[/color]. #id:4e
-leave resistance_member_2
-[background arg="res://assets/narrative/approaching_capital.png" fade="2.0"]
-join player_character [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 3.mp3" [volume="0.0" bus="SFX"]
-player_character: From loyal customs officer to resistance fighter? It's a transformation you never imagined. Whatever happens, Spud will never be the same. #id:4f
-leave player_character
+	[background arg="res://assets/narrative/resistance_planning.png" fade="2.0"]
+	join resistance_member_2 [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	resistance_member_2: You'll be on Team Alpha with Sasha, breaching the east entrance. Your objective\: [color=GREEN]secure the broadcast center[/color]. #id:4e
+	leave resistance_member_2
+	[background arg="res://assets/narrative/approaching_capital.png" fade="2.0"]
+	join player_character [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 3.mp3" [volume="0.0" bus="SFX"]
+	player_character: From loyal customs officer to resistance fighter? It's a transformation you never imagined. Whatever happens, Spud will never be the same. #id:4f
+	leave player_character

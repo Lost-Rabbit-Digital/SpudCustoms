@@ -23,18 +23,18 @@ resistance_member_2: That place is a fortress. And now we've got a [color=YELLOW
 
 set {resistance_trust} = "none"
 - "I understand your doubt, but I'm committed to this cause." #id:15
-    set {resistance_trust} = "diplomatic"
+	set {resistance_trust} = "diplomatic"
 - "I've already sacrificed everything. I won't back down now." #id:16
-    set {resistance_trust} = "committed"
+	set {resistance_trust} = "committed"
 
 if {resistance_trust} == "diplomatic":
-    audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-    resistance_member_2: Pretty words. But we've heard those before. #id:17
-    audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-    sweet_potato_sasha: They helped us get the documents. That's action, not words. #id:18
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	resistance_member_2: Pretty words. But we've heard those before. #id:17
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	sweet_potato_sasha: They helped us get the documents. That's action, not words. #id:18
 else:
-    audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-    resistance_member_2: Can't go back to being a loyal spud now. Welcome to the resistance, comrade. #id:19
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	resistance_member_2: Can't go back to being a loyal spud now. Welcome to the resistance, comrade. #id:19
 
 leave resistance_member_2
 leave sweet_potato_sasha
@@ -88,78 +88,78 @@ player_character: It's over, Idaho. Your secrets are exposed. How this ends... [
 
 set {ending_choice} = "none"
 - Negotiate a peaceful transition of power (Diplomatic) #id:25
-    set {ending_choice} = "diplomatic"
-    [signal arg="born_diplomat"]
+	set {ending_choice} = "diplomatic"
+	[signal arg="born_diplomat"]
 - Demand Idaho's immediate arrest (Justice) #id:26
-    set {ending_choice} = "justice"
-    [signal arg="tater_of_justice"]
+	set {ending_choice} = "justice"
+	[signal arg="tater_of_justice"]
 - Enact vigilante justice for Idaho's crimes (Vengeance) #id:27
-    set {ending_choice} = "vengeance"
-    [signal arg="best_served_hot"]
+	set {ending_choice} = "vengeance"
+	[signal arg="best_served_hot"]
 - Focus on dismantling Root Reserve infrastructure (Dismantle) #id:28
-    set {ending_choice} = "dismantle"
-    [signal arg="down_with_the_tatriarchy"]
+	set {ending_choice} = "dismantle"
+	[signal arg="down_with_the_tatriarchy"]
 leave player_character
 
 # Ending Choice Section
 if {ending_choice} == "diplomatic":
     [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
-    audio "res://assets/audio/footsteps/Metal Walk 1_3.wav" [volume="-10.0" bus="SFX"]
-    join player_character [z_index="1"]
-    audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-    player_character: Idaho, it doesn't have to end in more bloodshed. If you cooperate... #id:29
-    join prime_minister_idaho [z_index="1"]
-    audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-    prime_minister_idaho: Oh, you [color=STEEL_BLUE]idealistic fool[/color]. You think this is a negotiation? #id:2a
-    audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-    audio "res://assets/audio/mechanical/button assorted 3.wav" [volume="-8.0" bus="SFX"]
-    prime_minister_idaho: Idaho smashes a button, and [color=RED]alarms begin blaring[/color]. "The only thing I'll be giving you is a [color=DARK_VIOLET]one-way trip to the fry vats![/color]" #id:2b
-    audio "res://assets/audio/mechanical/alarm.wav" [volume="-8.0" bus="SFX"]
-    [background arg="res://assets/narrative/guard_betrayal.png" fade="2.0"]
-    join sweet_potato_sasha [z_index="1"]
-    audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-    sweet_potato_sasha: I don't think so, Idaho. Guards! You saw the dossier, [color=YELLOW]you know what he did to your families.[/color] #id:2c
-    audio "res://assets/audio/gunfire/gun cocking 3.wav" [volume="0.0" bus="SFX"]
-    A hulking guard steps forward and kicks Idaho to the ground swiftly. #id:2d
-    audio "res://assets/audio/gunfire/Heavy Pistol B.wav" [volume="0.0" bus="SFX"]
-    A shot echoes through the chamber. The screen fades to black. #id:2e
-    leave prime_minister_idaho
-    leave sweet_potato_sasha
-    leave player_character
+	audio "res://assets/audio/footsteps/Metal Walk 1_3.wav" [volume="-10.0" bus="SFX"]
+	join player_character [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	player_character: Idaho, it doesn't have to end in more bloodshed. If you cooperate... #id:29
+	join prime_minister_idaho [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	prime_minister_idaho: Oh, you [color=STEEL_BLUE]idealistic fool[/color]. You think this is a negotiation? #id:2a
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	audio "res://assets/audio/mechanical/button assorted 3.wav" [volume="-8.0" bus="SFX"]
+	prime_minister_idaho: Idaho smashes a button, and [color=RED]alarms begin blaring[/color]. "The only thing I'll be giving you is a [color=DARK_VIOLET]one-way trip to the fry vats![/color]" #id:2b
+	audio "res://assets/audio/mechanical/alarm.wav" [volume="-8.0" bus="SFX"]
+	[background arg="res://assets/narrative/guard_betrayal.png" fade="2.0"]
+	join sweet_potato_sasha [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	sweet_potato_sasha: I don't think so, Idaho. Guards! You saw the dossier, [color=YELLOW]you know what he did to your families.[/color] #id:2c
+	audio "res://assets/audio/gunfire/gun cocking 3.wav" [volume="0.0" bus="SFX"]
+	A hulking guard steps forward and kicks Idaho to the ground swiftly. #id:2d
+	audio "res://assets/audio/gunfire/Heavy Pistol B.wav" [volume="0.0" bus="SFX"]
+	A shot echoes through the chamber. The screen fades to black. #id:2e
+	leave prime_minister_idaho
+	leave sweet_potato_sasha
+	leave player_character
 elif {ending_choice} == "justice":
-    [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
-    join player_character [z_index="1"]
-    audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-    player_character: Idaho, in the name of the potato people of Spud, [color=CHARTREUSE]you're under arrest![/color] #id:2f
-    [background arg="res://assets/narrative/justice_hall.png" fade="2.0"]
-    join sweet_potato_sasha [z_index="1"]
-    audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-    sweet_potato_sasha: It's over. The people have spoken. [color=CHARTREUSE]We'll build a new Spud where our roots are in the soil, not in suffering.[/color] #id:30
-    leave sweet_potato_sasha
-    leave player_character
+	[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+	join player_character [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	player_character: Idaho, in the name of the potato people of Spud, [color=CHARTREUSE]you're under arrest![/color] #id:2f
+	[background arg="res://assets/narrative/justice_hall.png" fade="2.0"]
+	join sweet_potato_sasha [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	sweet_potato_sasha: It's over. The people have spoken. [color=CHARTREUSE]We'll build a new Spud where our roots are in the soil, not in suffering.[/color] #id:30
+	leave sweet_potato_sasha
+	leave player_character
 elif {ending_choice} == "vengeance":
-    [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
-    join player_character [z_index="1"]
-    audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-    player_character: There will be [color=CRIMSON]no deals, no mercy[/color] for you, Idaho. A tyrant's justice is all you deserve. #id:31
-    [background arg="res://assets/narrative/reckoning.png" fade="2.0"]
-    audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-    audio "res://assets/audio/gunfire/gun cocking 3.wav" [volume="0.0" bus="SFX"]
-    player_character: A reckoning. That's what I am. [color=CHARTREUSE]For every potato sacrificed, we take back our future![/color] #id:32
-    audio "res://assets/audio/gunfire/Heavy Pistol B.wav" [volume="0.0" bus="SFX"]
-    leave player_character
+	[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+	join player_character [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	player_character: There will be [color=CRIMSON]no deals, no mercy[/color] for you, Idaho. A tyrant's justice is all you deserve. #id:31
+	[background arg="res://assets/narrative/reckoning.png" fade="2.0"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	audio "res://assets/audio/gunfire/gun cocking 3.wav" [volume="0.0" bus="SFX"]
+	player_character: A reckoning. That's what I am. [color=CHARTREUSE]For every potato sacrificed, we take back our future![/color] #id:32
+	audio "res://assets/audio/gunfire/Heavy Pistol B.wav" [volume="0.0" bus="SFX"]
+	leave player_character
 else: # dismantle
-    [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
-    join player_character [z_index="1"]
-    audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-    player_character: Forget him. He's a symptom, not the disease. [color=CHARTREUSE]Tear down every root and stem of this monstrosity.[/color] #id:33
-    join sweet_potato_sasha [z_index="1"]
-    audio "res://assets/audio/explosions/Balloon Explosion A.wav" [volume="0.0" bus="SFX"]
-    [background arg="res://assets/narrative/night_attack.png" fade="0.5"]
-    audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-    sweet_potato_sasha: We have to go! Now! #id:34
-    leave sweet_potato_sasha
-    leave player_character
+	[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+	join player_character [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	player_character: Forget him. He's a symptom, not the disease. [color=CHARTREUSE]Tear down every root and stem of this monstrosity.[/color] #id:33
+	join sweet_potato_sasha [z_index="1"]
+	audio "res://assets/audio/explosions/Balloon Explosion A.wav" [volume="0.0" bus="SFX"]
+	[background arg="res://assets/narrative/night_attack.png" fade="0.5"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	sweet_potato_sasha: We have to go! Now! #id:34
+	leave sweet_potato_sasha
+	leave player_character
 
 # Common ending for all paths
 [background arg="res://assets/narrative/russet_standoff.png" fade="2.0"]
