@@ -54,14 +54,14 @@ set {loyalty_response} = "none"
 
 if {loyalty_response} == "patriotic":
 	join security_officer [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_officer: Good answer. Spud needs loyal protectors. Scanner reads green. Carry on, officer. #id:b3
-leave security_officer
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	security_officer: Good answer. Spud needs loyal protectors. Scanner reads green. Carry on, officer. #id:b3
+	leave security_officer
 else:
-join security_officer [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_officer: The officer's eyebrows raise. Fair treatment? Scanner flashes [color=DARK_ORANGE]amber[/color]. Remember, our primary concern is security, not fairness. #id:b4
-leave security_officer
+	join security_officer [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	security_officer: The officer's eyebrows raise. Fair treatment? Scanner flashes [color=DARK_ORANGE]amber[/color]. Remember, our primary concern is security, not fairness. #id:b4
+	leave security_officer
 
 [background arg="res://assets/narrative/checkpoint_booth.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
