@@ -10,62 +10,63 @@ if {stay_or_go} == "stay":
 	player_character: You hunker down as the battle rages. I'm sorry, Sasha. I'm [color=STEEL_BLUE]not as brave as you[/color]. #id:131
 	leave player_character
 	audio "res://assets/audio/gunfire/Heavy Pistol Automatic B.wav" [volume="-15.0" bus="SFX"]
-[background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
-join supervisor_russet [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-supervisor_russet: "The [color=CRIMSON]terrorist attack[/color] has been repelled! The ringleaders are being [color=DARK_VIOLET]processed[/color] as we speak." #id:132
-leave supervisor_russet
-[background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
-join security_chief [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_chief: Chief Yukon drags in resistance members in chains, Sasha among them. "These [color=CRIMSON]traitors[/color] will face [color=DARK_VIOLET]final processing[/color]." #id:133
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-sweet_potato_sasha: Sasha catches your eye. Despite her bruises, her gaze holds [wave amp=15 freq=2][color=CHARTREUSE]no judgment, only sadness[/color][/wave]. #id:134
+	[background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
 
-leave security_chief
-[background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
-join player_character [z_index="1"] 
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-player_character: You've survived by keeping your head down, but [pulse freq=3][color=GOLD]at what cost?[/color][/pulse] As [color=DARK_VIOLET]Root Reserve[/color] production wafts from the plant, your stomach turns. #id:135
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-player_character: Perhaps there's still a chance from the inside. Or maybe you're just easing your conscience. #id:136
-leave player_character
+	join supervisor_russet [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	supervisor_russet: "The [color=CRIMSON]terrorist attack[/color] has been repelled! The ringleaders are being [color=DARK_VIOLET]processed[/color] as we speak." #id:132
+	leave supervisor_russet
+	[background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
+	join security_chief [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	security_chief: Chief Yukon drags in resistance members in chains, Sasha among them. "These [color=CRIMSON]traitors[/color] will face [color=DARK_VIOLET]final processing[/color]." #id:133
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	sweet_potato_sasha: Sasha catches your eye. Despite her bruises, her gaze holds [wave amp=15 freq=2][color=CHARTREUSE]no judgment, only sadness[/color][/wave]. #id:134
+
+	leave security_chief
+	[background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
+	join player_character [z_index="1"] 
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	player_character: You've survived by keeping your head down, but [pulse freq=3][color=GOLD]at what cost?[/color][/pulse] As [color=DARK_VIOLET]Root Reserve[/color] production wafts from the plant, your stomach turns. #id:135
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	player_character: Perhaps there's still a chance from the inside. Or maybe you're just easing your conscience. #id:136
+	leave player_character
 if {stay_or_go} == "go":
-[background arg="res://assets/narrative/resistance_planning.png" fade="0.0"]
-audio "res://assets/audio/explosions/Explosion Close Collapse.wav" [volume="-12.0" bus="SFX"]
-join player_character [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-player_character: You [tornado radius=3 freq=2][color=CHARTREUSE]abandon your post[/color][/tornado] and race toward the fighting. The time for caution is over. #id:137
-leave player_character
-[background arg="res://assets/narrative/joining_rebellion.png" fade="2.0"]
-audio "res://assets/audio/gunfire/gun cocking 3.wav" [volume="-8.0" bus="SFX"]
-join resistance_leader [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-resistance_leader: [pulse freq=3][color=GOLD]Prove you're with us![/color][/pulse] How do you know Sasha? #id:138
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-player_character: [color=CHARTREUSE]The roots grow deep![/color] I'm from the checkpoint, Sasha recruited me! #id:139
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-resistance_leader: They're taking her to the processing plant right now. We need to hurry! #id:13a
-leave resistance_leader
-[background arg="res://assets/narrative/plant_revelation.png" fade="2.0"]
-join player_character [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-player_character: The doors blast open, revealing the [wave amp=25 freq=3][color=CRIMSON]horrific truth[/color][/wave] - grinding machines, conveyors carrying potatoes to their doom. #id:13b
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-player_character: At the end of one belt - Sasha and others [color=CRIMSON]bound helplessly[/color]. Supervisor Russet stands at the controls. #id:13c
-leave player_character
-[background arg="res://assets/narrative/russet_standoff.png" fade="2.0"]
-join supervisor_russet [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-supervisor_russet: [color=RED]YOU![/color] I should have known you were one of them! Back away or I start the processor! #id:13d
-leave supervisor_russet
-[background arg="res://assets/narrative/plant_revelation.png" fade="2.0"]
-join sweet_potato_sasha [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-sweet_potato_sasha: As resistance fighters overpower Russet, Sasha redirects the facility cameras. [color=YELLOW]People of Spud! This is Root Reserve! They've been feeding us to each other![/color] #id:13e
-leave sweet_potato_sasha
-[background arg="res://assets/narrative/escape_route.png" fade="2.0"]
-join sweet_potato_sasha [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-sweet_potato_sasha: You came back for me. [color=CHARTREUSE]We did it. The truth is out there now.[/color] We have a future to build! #id:13f
-leave sweet_potato_sasha
+	[background arg="res://assets/narrative/resistance_planning.png" fade="0.0"]
+	audio "res://assets/audio/explosions/Explosion Close Collapse.wav" [volume="-12.0" bus="SFX"]
+	join player_character [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	player_character: You [tornado radius=3 freq=2][color=CHARTREUSE]abandon your post[/color][/tornado] and race toward the fighting. The time for caution is over. #id:137
+	leave player_character
+	[background arg="res://assets/narrative/joining_rebellion.png" fade="2.0"]
+	audio "res://assets/audio/gunfire/gun cocking 3.wav" [volume="-8.0" bus="SFX"]
+	join resistance_leader [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	resistance_leader: [pulse freq=3][color=GOLD]Prove you're with us![/color][/pulse] How do you know Sasha? #id:138
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	player_character: [color=CHARTREUSE]The roots grow deep![/color] I'm from the checkpoint, Sasha recruited me! #id:139
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	resistance_leader: They're taking her to the processing plant right now. We need to hurry! #id:13a
+	leave resistance_leader
+	[background arg="res://assets/narrative/plant_revelation.png" fade="2.0"]
+	join player_character [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	player_character: The doors blast open, revealing the [wave amp=25 freq=3][color=CRIMSON]horrific truth[/color][/wave] - grinding machines, conveyors carrying potatoes to their doom. #id:13b
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	player_character: At the end of one belt - Sasha and others [color=CRIMSON]bound helplessly[/color]. Supervisor Russet stands at the controls. #id:13c
+	leave player_character
+	[background arg="res://assets/narrative/russet_standoff.png" fade="2.0"]
+	join supervisor_russet [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	supervisor_russet: [color=RED]YOU![/color] I should have known you were one of them! Back away or I start the processor! #id:13d
+	leave supervisor_russet
+	[background arg="res://assets/narrative/plant_revelation.png" fade="2.0"]
+	join sweet_potato_sasha [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	sweet_potato_sasha: As resistance fighters overpower Russet, Sasha redirects the facility cameras. [color=YELLOW]People of Spud! This is Root Reserve! They've been feeding us to each other![/color] #id:13e
+	leave sweet_potato_sasha
+	[background arg="res://assets/narrative/escape_route.png" fade="2.0"]
+	join sweet_potato_sasha [z_index="1"]
+	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+	sweet_potato_sasha: You came back for me. [color=CHARTREUSE]We did it. The truth is out there now.[/color] We have a future to build! #id:13f
+	leave sweet_potato_sasha
