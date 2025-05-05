@@ -10,7 +10,8 @@ func _end_reached():
 	super._end_reached()
 
 func _on_MenuButton_pressed():
-	SceneLoader.load_scene(main_menu_scene)
+	# SceneLoader.load_scene(main_menu_scene)
+	get_tree().change_scene_to_file("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
 
 func _on_ExitButton_pressed():
 	get_tree().quit()

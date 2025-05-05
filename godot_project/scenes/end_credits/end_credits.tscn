@@ -37,6 +37,81 @@ stretch_mode = 5
 [node name="ScrollContainer" parent="." index="3"]
 scroll_vertical = 0
 
+[node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
+text = "[center]
+[font_size=64]Lost Rabbit Digital[/font_size]
+(Check us out on GitHub)[https://github.com/Lost-Rabbit-Digital]
+
+[font_size=48]Programmers[/font_size]
+[url=https://www.bodenmchale.com/]Boden McHale[/url]
+[url=https://bsky.app/profile/heartcoded.bsky.social]David McHale[/url]
+
+[font_size=48]Character / VFX / UI Artists[/font_size]
+[url=https://lanigram.imgbb.com/]Oleksii Lotokhov[/url]
+
+[font_size=48]Landscape Artists / Animators[/font_size]
+[url=https://x.com/StagnationDraws]StagNation[/url]
+
+[font_size=48]Audio[/font_size]
+[url=https://ovanisound.com/]Ovani[/url]
+
+[font_size=48]Playtesters[/font_size]
+[url=https://rankitdigitalmarketing.com]John S[/url]
+[url=https://www.fiverr.com/mohamed_eshop]Mohamed M[/url]
+[url=https://www.fiverr.com/ma31nho]Ma31n[/url]
+[url=https://www.fiverr.com/nadeem_mostafa]Nadeem M[/url]
+[url=https://www.fiverr.com/eldenizomerov]Eldaniz O[/url]
+
+[font_size=64]Tools / Assets[/font_size]
+[font_size=48]Godot[/font_size]
+Author: [url=https://godotengine.org/contact]Juan Linietsky, Ariel Manzur, and contributors[/url]  
+Source: [url=https://godotengine.org/]godotengine.org[/url]  
+License: [url=https://github.com/godotengine/godot/blob/master/LICENSE.txt]MIT License[/url] 
+
+[font_size=48]Godot Game Template[/font_size]
+Author: [url=https://github.com/Maaack/Godot-Game-Template/graphs/contributors]Marek Belski and contributors[/url]  
+Source: [url=https://github.com/Maaack/Godot-Game-Template]github: Godot-Game-Template[/url]  
+License: [url=LICENSE.txt]MIT License[/url]  
+
+[font_size=48]Emotes[/font_size]
+Author: [url=https://kenney.nl/]Kenney[/url]
+Source: [url=https://kenney.nl/assets/emotes-pack]Emotes Pack[/url]
+	
+[font_size=48]Social Icons[/font_size]
+Author: [url=https://krinjl.itch.io/]KrinJL[/url]
+Source: [url=https://krinjl.itch.io/icons2]Itch: Pixel Social Media Icon Pack Vol. 2[/url]
+
+[font_size=48]Button SFX[/font_size]
+Author: [url=https://opengameart.org/users/pauliuw]PauliuW[/url]
+Source: [url=https://opengameart.org/content/click-sounds6]Click Sounds (6)[/url]
+
+[font_size=48]FilmCow Royalty Free Sound Effects Library[/font_size]
+Author: [url=https://filmcow.itch.io/]FilmCow[/url]
+Source: [url=https://filmcow.itch.io/filmcow-sfx]itch: FilmCow Royalty Free Sound Effects Library[/url]
+
+[font_size=48]Vehicle Artwork[/font_size]
+Author: Arludus
+Source [url=https://arludus.itch.io/2d-top-down-180-pixel-art-vehicles]itch: 2D Top Down Pixel Art Vehicles[/url]
+
+[font_size=64]Community Help[/font_size]
+Thank you to the generous members of our community. 
+You who have tested, and reported many bugs for us to fix.
+
+ZombieWhisperer
+MrBright01 
+dhjackal
+jollylad63
+Tanner
+
+[font_size=64]Special Thanks[/font_size]
+Thank you to our loved ones and support systems who helped us make this game a reality.
+Special thanks to Safiya and Kobi McHale for lighting up our lives.
+
+[font_size=64]In Memoriam, Ad Victoriam[/font_size]
+GNU Michael McHale
+GNU Sherri Jackson
+[/center]"
+
 [node name="CenterContainer" type="CenterContainer" parent="." index="4"]
 layout_mode = 0
 anchor_right = 1.0
@@ -47,7 +122,6 @@ mouse_filter = 2
 
 [node name="EndMessagePanel" type="Panel" parent="CenterContainer" index="0"]
 unique_name_in_owner = true
-visible = false
 custom_minimum_size = Vector2(360, 120)
 layout_mode = 2
 
@@ -56,15 +130,34 @@ layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="ThankPlayer" type="Label" parent="CenterContainer/EndMessagePanel/VBoxContainer" index="0"]
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/EndMessagePanel/VBoxContainer" index="0"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]
+You've stamped your way to victory! 
+Amazing!
+Enjoyed your time? 
+A review would mean the world to us.
+[url=https://store.steampowered.com/app/3291880/]Review Spud Customs on Steam
+[/url][/center]
+"
+fit_content = true
+
+[node name="ThankPlayer" type="Label" parent="CenterContainer/EndMessagePanel/VBoxContainer" index="1"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Thanks for playing!"
+text = "You've stamped your way to victory! 
+Amazing!
+Enjoyed your time? 
+A review would mean the world to us.
+[center]
+[url=https://store.steampowered.com/app/3291880/]Buy Spud Customs on Steam[/url][/center]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/EndMessagePanel/VBoxContainer" index="1"]
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/EndMessagePanel/VBoxContainer" index="2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3

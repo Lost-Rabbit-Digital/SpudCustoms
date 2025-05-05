@@ -784,8 +784,9 @@ func find_parent_viewport_container():
 
 func _unhandled_key_input(event):
 	# Check for F12 key press for debug info
-	if event is InputEventKey and event.keycode == KEY_F12 and event.pressed and not event.echo:
-		debug_steam_status()
+	#if event is InputEventKey and event.keycode == KEY_F12 and event.pressed and not event.echo:
+	#	debug_steam_status()
+	pass
 
 
 func show_demo_limit_dialog():
@@ -811,7 +812,8 @@ func show_demo_limit_dialog():
 	
 	To continue your journey as a customs officer and experience the full story, please purchase the full game.
 	
-	[url=https://store.steampowered.com/app/YOURGAMEID/]Buy Potato Customs on Steam[/url][/center]
+	And please consider leaving an honest review, we're very responsive to feedback!
+	[url=https://store.steampowered.com/app/3291880/]Buy Potato Customs on Steam[/url][/center]
 	"""
 	message.fit_content = true
 	message.custom_minimum_size = Vector2(450, 200)

@@ -1755,13 +1755,15 @@ func show_demo_limit_dialog():
 	var message = RichTextLabel.new()
 	message.bbcode_enabled = true
 	message.text = """
-	[center]Thank you for playing the demo version of Potato Customs!
+	[center]Thank you for playing the demo version of Spud Customs!
 
 	You've reached the limit of the demo version.
 	
-	To continue your journey as a customs officer and experience the full story, please purchase the full game.
+	To continue your journey as a customs officer and experience the full story...
 	
-	[url=https://store.steampowered.com/app/3291880/]Buy Potato Customs on Steam[/url][/center]
+	Please purchase the full game, and leave a review!
+	
+	[url=https://store.steampowered.com/app/3291880/]Buy Spud Customs on Steam[/url][/center]
 	"""
 	message.fit_content = true
 	message.custom_minimum_size = Vector2(450, 200)
