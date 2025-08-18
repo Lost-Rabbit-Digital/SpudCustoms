@@ -510,9 +510,12 @@ func check_achievements(total_shifts_completed: int, total_runners_stopped: int,
 	if not _verify_steam_connection():
 		return
 		
-	# First shift completion
-	if total_shifts_completed == 1:
+	LogManager.write_steam("Checking achievements - Shifts: " + str(total_shifts_completed) + ", Story: " + str(current_story_state))
+	
+	# First shift completion (was checking == 1, should be >= 1)
+	if total_shifts_completed >= 1:
 		Steam.setAchievement(ACHIEVEMENTS.ROOKIE_OFFICER)
+		LogManager.write_steam("Setting ROOKIE_OFFICER achievement")
 		
 	# Shift milestones
 	if total_shifts_completed >= 10:
@@ -534,12 +537,15 @@ func check_achievements(total_shifts_completed: int, total_runners_stopped: int,
 	if score >= 50000:
 		Steam.setAchievement(ACHIEVEMENTS.SCORE_LEGEND)
 		
-	# Story completion
+	# Story completion achievement
 	if current_story_state >= 11:
 		Steam.setAchievement(ACHIEVEMENTS.SAVIOR_OF_SPUD)
+		LogManager.write_steam("Setting SAVIOR_OF_SPUD achievement")
 	
-	# After setting achievements, store them
+	# CRITICAL: Actually store the achievements with Steam
 	Steam.storeStats()
+	LogManager.write_steam("Achievements stored to Steam")
+
 
 # Update Steam stats
 func update_steam_stats(total_shifts_completed: int, total_runners_stopped: int, perfect_hits: int, score: int):

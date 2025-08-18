@@ -14,7 +14,7 @@ config/name="Spud Customs"
 config/version="1.1.0"
 config/tags=PackedStringArray("active", "steam")
 run/main_scene="uid://cyqy6dvynho67"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 run/max_fps=90
 boot_splash/show_image=false
 config/icon="res://assets/potatoes/heads/russet_burbank_head.png"
@@ -103,7 +103,7 @@ variables={
 "final_mission_response": "none",
 "hide_choice": "none",
 "hideout_response": "none",
-"initial_response": "none",
+"initial_response": "eager",
 "interrogation_choice": "none",
 "interrogation_response": "none",
 "loyalty_response": "none",
