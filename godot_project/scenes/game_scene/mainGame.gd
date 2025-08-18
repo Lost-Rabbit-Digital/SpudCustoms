@@ -984,7 +984,7 @@ func update_potato_info_display():
 	if current_potato_info:
 		$Gameplay/InteractiveElements/Passport/OpenPassport/PotatoHeader.text = """{name}""".format(current_potato_info)
 		
-		# Create translated versions of sex and condition
+		# Create translated versions
 		var translated_sex = tr("sex_" + current_potato_info.sex.to_lower())
 		var translated_condition = tr("condition_" + current_potato_info.condition.to_lower().replace(" ", "_"))
 		
@@ -992,11 +992,13 @@ func update_potato_info_display():
 		display_info.sex = translated_sex
 		display_info.condition = translated_condition
 		
-		$Gameplay/InteractiveElements/Passport/OpenPassport/PotatoInfo.text = """{date_of_birth}
-		{sex} 
-		{country_of_issue}
-		{expiration_date} 
-		{condition}
+		# FIXED: Include race/type information clearly
+		$Gameplay/InteractiveElements/Passport/OpenPassport/PotatoInfo.text = """Type: {race}
+Date of Birth: {date_of_birth}
+Gender: {sex} 
+Country: {country_of_issue}
+Expires: {expiration_date} 
+Condition: {condition}
 		""".format(display_info)
 	else:
 		print("No current_potato_info found.")
