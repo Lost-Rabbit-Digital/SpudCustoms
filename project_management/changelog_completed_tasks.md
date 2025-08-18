@@ -1,6 +1,7 @@
+## Before release, review GitHub commits using the following command `git log --since="last month" --pretty=format:'%h,%an,%ar,%s' > log.csv` - This artifact can then be fed into Claude or similar to analyze the changes.
+
 
 ### Completed Tasks for 1.0.2
-Before release, review GitHub commits using the following command `git log --since="last month" --pretty=format:'%h,%an,%ar,%s' > log.csv` - This artifact can then be fed into Claude or similar to analyze the changes.
   - *INTERNAL USE* Cleaned up old tutorial code to pave road for new system
   - *INTERNAL USE* Fixed passport closing after timed_out() called 
   - *INTERNAL USE* Updated alert system in endlessGame and BorderRunnerSystem
@@ -195,9 +196,6 @@ Before release, review GitHub commits using the following command `git log --sin
   - Windowed mode breaks resolution and causes you to see outside viewport
   - years_until_expiry, returning impossibly high numbers
   - You can no longer see the Spud when it enters the office from the right
-# OFFICIALLY COMPLETED TASKS
-## Steam Minor Update 1.0.1: General bug fixes - ALREADY RELEASED
-## Steam Release 1.0.0: Demo release - ALREADY RELEASED
 - "Rotten potatoes strictly forbidden" and "all potatoes must be fresh" entry granted, said good job, gave +1 to quota and +1 to strikes
 - "Sprouted potatoes need additional verification and must be denied", change to not include verification
 - *INTERNAL USE* Cleaned up the old git branches from various updates
@@ -490,6 +488,3 @@ Before release, review GitHub commits using the following command `git log --sin
 - Wrong shift displaying on shift summary screen
 - Yukon Gold potatoes must be fresh given an error when it should be passing
 - Z-index: Dragged passport appears below the suspect table
-If a label is marked with *INTERNAL USE* then do *NOT* include it in the official release post to Steam.
-The tasks which have be completed and pushed to Steam.
-When adding to the lists, please either rephrase immediately or separate your tasks to be rephrased later for proper release.
