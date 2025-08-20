@@ -662,29 +662,97 @@ func set_difficulty(level):
 	update_strikes_display()
 
 func generate_rules():
-	# Get the full list of rules from LawValidator
 	var all_rules = LawValidator.LAW_CHECKS.keys()
+	var num_rules = _calculate_rules_for_shift()
 	
-	# Randomly select 2-3 rules
-	all_rules.shuffle()
-	current_rules = all_rules.slice(0, randi() % 2 + 2)
+	# Progressive complexity based on shift number
+	var available_rules = []
+	match Global.shift:
+		0:  # Tutorial - only the simplest rule
+			available_rules = ["law_fresh_potatoes"]
+		1:  # First shift - simple visual rules only
+			available_rules = all_rules.filter(func(rule): return LawValidator.get_rule_difficulty(rule) == 1)
+		2, 3:  # Early shifts - simple and medium rules
+			available_rules = all_rules.filter(func(rule): return LawValidator.get_rule_difficulty(rule) <= 2)
+		_:     # Later shifts - all rules available
+			available_rules = all_rules
+	
+	# Shuffle and select appropriate number of rules
+	available_rules.shuffle()
+	current_rules = available_rules.slice(0, num_rules)
+	
+	# Ensure no conflicting rules
+	current_rules = LawValidator.remove_conflicting_rules(current_rules)
+	
+	# If we removed rules due to conflicts, try to fill back up to target number
+	if current_rules.size() < num_rules:
+		var remaining_rules = available_rules.filter(func(rule): return not rule in current_rules)
+		remaining_rules.shuffle()
+		var needed = num_rules - current_rules.size()
+		current_rules.append_array(remaining_rules.slice(0, needed))
 	
 	update_rules_display()
 	
+	# Log rules for debugging
+	LogManager.write_info("Generated rules for shift " + str(Global.shift) + ": " + str(current_rules))
+
+func _calculate_rules_for_shift() -> int:
+	# Progressive rule complexity
+	match Global.shift:
+		0: return 1      # Tutorial
+		1: return 1      # First real shift
+		2: return 2      # Start complexity
+		3, 4: return 2   # Build understanding
+		5, 6, 7: return 3 # Mid-game complexity
+		_: return min(4, 2 + (Global.shift - 6))  # Late game, max 4
+	
 func update_rules_display():
-	var laws_text = "[center][u]" + tr("LAWS") + "[/u]\n\n"
+	# Create more professional-looking rules display
+	var laws_text = "[center][b][u]" + tr("LAWS") + "[/u][/b][/center]\n\n"
 	
-	for rule_key in current_rules:
-		laws_text += tr(rule_key) + "\n"
+	# Add each rule with bullet points for clarity
+	for i in range(current_rules.size()):
+		var rule_key = current_rules[i]
+		var rule_text = tr(rule_key)  # Use translation system
+		laws_text += str(i + 1) + ". " + rule_text + "\n\n"
 	
-	laws_text += "[/center]"
+	# Add footer explaining enforcement
+	laws_text += "[center][i]" + tr("rule_footer_text") + "[/i][/center]"
 	
+	# Update the law receipt display
 	if $Gameplay/InteractiveElements/LawReceipt/OpenReceipt/ReceiptNote:
 		$Gameplay/InteractiveElements/LawReceipt/OpenReceipt/ReceiptNote.text = laws_text
 	
 	# Emit the signal with the formatted laws text
 	emit_signal("rules_updated", laws_text)
 	
+# Enhanced rule explanation system for tutorial
+func show_rule_explanation(rule_key: String):
+	"""Show explanation for specific rules during tutorial phases"""
+	if Global.shift > 2:  # Only show explanations for first few shifts
+		return
+		
+	var explanation_key = "rule_explanation_" + rule_key.replace("law_", "")
+	var explanation_text = tr(explanation_key)
+	
+	# Fallback explanations if translation keys don't exist
+	if explanation_text == explanation_key:  # Translation key not found
+		match rule_key:
+			"law_fresh_potatoes":
+				explanation_text = tr("tutorial_check_condition") + "\nIf condition is not 'Fresh' - REJECT"
+			"law_sweet_potatoes":
+				explanation_text = tr("tutorial_check_type") + "\nIf type is 'Sweet Potato' - REJECT"
+			"law_country_chip_hill":
+				explanation_text = tr("tutorial_check_country") + "\nIf country is 'Chip Hill' - REJECT"
+			"law_males_only", "law_females_only":
+				explanation_text = tr("tutorial_check_gender") + "\nCheck gender against current rule"
+			_:
+				explanation_text = "Check passport details against this rule"
+	
+	# Display explanation
+	Global.display_green_alert(alert_label, alert_timer, tr("rule_explanation_header") + "\n" + explanation_text)
+
+
 func is_potato_valid(potato_info: Dictionary) -> bool:
 	# Use the LawValidator to check violations
 	var validation = LawValidator.check_violations(potato_info, current_rules)
@@ -1084,67 +1152,89 @@ func process_decision(allowed):
 	if !current_potato_info or current_potato_info.is_empty():
 		print("No potato to process.")
 		return
+		
 	shift_stats.total_stamps += 1
 	if allowed:
 		shift_stats.potatoes_approved += 1
 	else:
 		shift_stats.potatoes_rejected += 1
-			
-   # Get validation result
+	
+	# Get validation result
 	var validation = LawValidator.check_violations(current_potato_info, current_rules)
 	var correct_decision = validation.is_valid
-   # Update stats based on correctness of decision
+	
+	# Update stats based on correctness of decision
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
 		Global.quota_met += 1
 		correct_decision_streak += 1
-	   # Check if quota met
+		
+		# Check if quota met
 		if Global.quota_met >= Global.quota_target:
 			office_shutter_controller.lower_shutter(0.7)
 			print("Quota complete!")
 			end_shift(true) # end shift with success condition
 			return # Cease processing
-	   # Increase multiplier for streaks
+		
+		# Increase multiplier for streaks
 		if correct_decision_streak >= 3:
 			point_multiplier = 1.5
 		if correct_decision_streak >= 5:
 			point_multiplier = 2.0
-	   # Award points for correct decisions
+		
+		# Award points for correct decisions
 		var decision_points = 250 * point_multiplier
 		var alert_text = tr("alert_correct_decision").format({"points": str(decision_points)})
-
+		
 		if !allowed and validation.violation_reason:
-			alert_text += "\n" + tr(validation.violation_reason)
-			
+			alert_text += "\n" + validation.violation_reason
+		
 		Global.display_green_alert(alert_label, alert_timer, alert_text)
 		Global.add_score(decision_points)
+		
+		# ENHANCEMENT: Flash screen green for correct decision
+		_flash_screen_color(Color.GREEN, 0.2)
+		
+		# ENHANCEMENT: Show rule explanation for tutorial
+		if Global.shift <= 1 and !allowed:
+			for rule_key in current_rules:
+				var check_func = LawValidator.LAW_CHECKS[rule_key]["check"]
+				if check_func.call(current_potato_info):
+					show_rule_explanation(rule_key)
+					break
+		
 	else:
 		# Decision was incorrect
-		#var alert_text = "You have caused unnecessary suffering, officer..."
 		var alert_text = tr("alert_wrong_decision")
 		
 		if allowed and !correct_decision:
 			# Player approved an invalid potato
 			if validation.violation_reason:
-				alert_text += "\n" + tr(validation.violation_reason)
+				alert_text += "\n" + validation.violation_reason
 		else:
 			# Player rejected a valid potato
 			alert_text += "\n" + tr("alert_potato_should_be_approved")
-			#alert_text += "\nThis potato meets all requirements and should have been approved."
-				
 		
 		Global.display_red_alert(alert_label, alert_timer, alert_text)
 		correct_decision_streak = 0
 		point_multiplier = 1.0
 		Global.strikes += 1
+		
+		# ENHANCEMENT: Flash screen red for wrong decision
+		_flash_screen_color(Color.RED, 0.3)
+		
+		# ENHANCEMENT: Show explanation for tutorial mistakes
+		if Global.shift <= 1:
+			show_rule_explanation(current_rules[0] if current_rules.size() > 0 else "")
+		
 		if Global.strikes >= Global.max_strikes:
-			#alert_text = "Maximum strikes exceeded! Your shift is over."
 			alert_text = tr("alert_strike_out")
 			Global.display_red_alert(alert_label, alert_timer, alert_text)
-			# Lower the shuttere when max strikes reached
+			# Lower the shutter when max strikes reached
 			office_shutter_controller.lower_shutter(0.7)  
 			end_shift(false) # end shift with failure condition
 			return # Cease processing
-			
+	
+	# CRITICAL: Keep all your existing UI updates and spawn timer logic
 	update_score_display()
 	update_quota_display()
 	update_strikes_display()
@@ -1678,6 +1768,19 @@ func load_tracks():
 	"res://assets/music/horror_fog_main.mp3",
 	"res://assets/music/opening_wonderlust_intensity.wav"
 	]
+
+# Visual feedback system for decisions
+func _flash_screen_color(color: Color, duration: float):
+	var overlay = ColorRect.new()
+	overlay.color = Color(color.r, color.g, color.b, 0.3)
+	overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE  # Don't block input
+	overlay.z_index = 50  # Ensure it's visible but not blocking UI
+	add_child(overlay)
+	
+	var tween = create_tween()
+	tween.tween_property(overlay, "modulate:a", 0.0, duration)
+	tween.tween_callback(overlay.queue_free)
 
 func play_with_pitch_variation(interval_name: String = "original"):
 	# Default to original if invalid interval name provided

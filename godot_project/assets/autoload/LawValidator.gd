@@ -26,6 +26,7 @@ var LAW_CHECKS = {
 		"check": func(potato_info): return potato_info.condition == "Frozen",
 		"message": func(potato_info): return tr("violation_frozen")
 	},
+	
 	# Age-based rules
 	"law_over_5_years": {
 		"check": func(potato_info): return calculate_age(potato_info.date_of_birth) >= 5,
@@ -37,8 +38,9 @@ var LAW_CHECKS = {
 	},
 	"law_under_2_years": {
 		"check": func(potato_info): return calculate_age(potato_info.date_of_birth) <= 2,
-		"message": func(potato_info): return tr("violation_too_young_2")
+		"message": func(potato_info): return tr("violation_too_young_2").format({"age": calculate_age(potato_info.date_of_birth)})
 	},
+	
 	# Gender-based rules
 	"law_males_only": {
 		"check": func(potato_info): return potato_info.sex == "Female",
@@ -48,6 +50,7 @@ var LAW_CHECKS = {
 		"check": func(potato_info): return potato_info.sex == "Male",
 		"message": func(potato_info): return tr("violation_females_only")
 	},
+	
 	# Country-based rules
 	"law_country_spudland": {
 		"check": func(potato_info): return potato_info.country_of_issue == "Spudland",
@@ -97,6 +100,8 @@ var LAW_CHECKS = {
 		"check": func(potato_info): return potato_info.country_of_issue == "Pratie Point",
 		"message": func(potato_info): return tr("violation_country_pratie_point")
 	},
+	
+	# Race/Type-based rules
 	"law_purple_majesty": {
 		"check": func(potato_info): return potato_info.race == "Purple Majesty",
 		"message": func(potato_info): return tr("violation_race_purple_majesty")
@@ -106,16 +111,14 @@ var LAW_CHECKS = {
 		"message": func(potato_info): return tr("violation_race_sweet_potato")
 	},
 	"law_yukon_gold": {
-		"check": func(potato_info): return potato_info.race == "Yukon Gold" or potato_info.condition != "Fresh",
+		"check": func(potato_info): return potato_info.race == "Yukon Gold",
 		"message": func(potato_info): return tr("violation_race_yukon_gold")
 	},
 }
 
+# Get translated rule text
 func get_translated_rule_text(rule_key: String) -> String:
-	# Convert the rule_key to a translation key
-	var translation_key = rule_key
-	# Return the translated text
-	return tr(translation_key)
+	return tr(rule_key)
 
 # Helper function to check all violations
 func check_violations(potato_info: Dictionary, current_rules: Array) -> Dictionary:
@@ -144,22 +147,38 @@ func check_violations(potato_info: Dictionary, current_rules: Array) -> Dictiona
 	
 	return result
 
-
+# Enhanced conflict resolution
 func remove_conflicting_rules(rules: Array) -> Array:
 	var processed_rules = rules.duplicate()
 	
-	# Rule pairs that are redundant or conflicting
+	# Define conflicting rule pairs (keep first, remove second)
 	var conflict_pairs = [
-		["[color=dark_goldenrod]All[/color] potatoes must be [color=dark_green]fresh[/color]!\n", 
-		 "[color=dark_goldenrod]Rotten[/color] potatoes are strictly [color=dark_red]forbidden[/color].\n"]
+		["law_fresh_potatoes", "law_rotten"],
+		["law_males_only", "law_females_only"],
+		["law_under_2_years", "law_under_3_years"],
+		["law_under_3_years", "law_over_5_years"]
 	]
 	
 	for pair in conflict_pairs:
 		if processed_rules.has(pair[0]) and processed_rules.has(pair[1]):
-			# Keep only the first rule of the conflicting pair
 			processed_rules.erase(pair[1])
 	
 	return processed_rules
+
+# Get rule difficulty for progressive complexity
+func get_rule_difficulty(rule_key: String) -> int:
+	var simple_rules = ["law_rotten", "law_sprouted", "law_fresh_potatoes", "law_extra_eyes"]
+	var medium_rules = ["law_country_chip_hill", "law_sweet_potatoes", "law_males_only", "law_females_only"]
+	var complex_rules = ["law_over_5_years", "law_under_3_years", "law_under_2_years"]
+	
+	if rule_key in simple_rules:
+		return 1
+	elif rule_key in medium_rules:
+		return 2
+	elif rule_key in complex_rules:
+		return 3
+	else:
+		return 2
 
 # Helper function to calculate age
 func calculate_age(date_of_birth: String) -> int:
