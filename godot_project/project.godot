@@ -41,6 +41,7 @@ LawValidator="*res://assets/autoload/LawValidator.gd"
 JuicyButtons="*res://scripts/utils/juicy_buttons.gd"
 CursorManager="*res://scripts/utils/cursor_manager.gd"
 ConstantZIndexes="*res://scripts/constant_z_indexes.gd"
+Analytics="*res://scripts/core/analytics.gd"
 
 [debug]
 
@@ -170,6 +171,11 @@ translation/intern/file_mode=1
 translation/intern/translation_folder="res://translations"
 translation/id_counter=388
 translation/locales=["en", "fr", "cs", "da", "de", "es", "fi", "hu", "id", "it", "nb", "nl", "pl", "pt", "ro", "sk", "sv", "tr", "uk", "vi"]
+layout/style_directory={
+"": "res://assets/styles/dialogic_default_style.tres",
+"SpudCustomsTextboxWithSpeaker": "res://assets/styles/SpudCustomsTextboxWithSpeaker/SpudCustomsTextboxWithSpeaker.tres",
+"dialogic_default_style": "res://assets/styles/dialogic_default_style.tres"
+}
 
 [display]
 

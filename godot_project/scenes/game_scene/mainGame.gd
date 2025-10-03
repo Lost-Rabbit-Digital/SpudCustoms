@@ -151,7 +151,8 @@ func _ready():
 	# Start the narrative for this shift
 	_start_narrative()
 	
-	
+	# Track shift start
+	Analytics.track_shift_started(Global.shift)
 
 func _setup_managers():
 	# Initialize drag and drop manager
@@ -467,6 +468,9 @@ func end_shift(success: bool = true):
 		if not office_shutter_controller.shutter_opened_this_shift:
 			office_shutter_controller.lower_shutter(1.0)
 		
+		Analytics.track_shift_completed(Global.shift, success, Global.score)
+
+		
 		# Setting high score for current level and difficulty
 		print("Setting high score of: ", Global.score, " for : ", current_shift, " and difficulty level", difficulty_level)
 		GameState.set_high_score(current_shift, Global.difficulty_level, Global.score)
@@ -765,6 +769,8 @@ func update_date_display():
 
 func megaphone_clicked():
 	# Check if there's already a potato in the Customs Office
+	Analytics.track_ui_interaction("megaphone", "clicked")
+
 	if is_potato_in_office:
 		#print("A potato is already in the customs office!")
 		megaphone_dialogue_box.set_random_message_from_category("spud_in_office")
@@ -1188,6 +1194,10 @@ func process_decision(allowed):
 		if !allowed and validation.violation_reason:
 			alert_text += "\n" + validation.violation_reason
 		
+		var decision_string: String = "approved" if allowed else "rejected"
+		Analytics.track_potato_processed(decision_string, correct_decision, current_potato_info)
+
+		
 		Global.display_green_alert(alert_label, alert_timer, alert_text)
 		Global.add_score(decision_points)
 		
@@ -1213,7 +1223,12 @@ func process_decision(allowed):
 		else:
 			# Player rejected a valid potato
 			alert_text += "\n" + tr("alert_potato_should_be_approved")
-		
+			
+		var violated_rules_array: Array = []
+		if validation.violation_reason:
+			violated_rules_array.append(validation.violation_reason)
+		Analytics.track_incorrect_decision(current_potato_info, violated_rules_array)	
+
 		Global.display_red_alert(alert_label, alert_timer, alert_text)
 		correct_decision_streak = 0
 		point_multiplier = 1.0
@@ -1231,6 +1246,7 @@ func process_decision(allowed):
 			Global.display_red_alert(alert_label, alert_timer, alert_text)
 			# Lower the shutter when max strikes reached
 			office_shutter_controller.lower_shutter(0.7)  
+			Analytics.track_shift_failed(Global.shift, alert_text)
 			end_shift(false) # end shift with failure condition
 			return # Cease processing
 	
