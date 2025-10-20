@@ -11,6 +11,7 @@
 7. [Steam Release Requirements](#7-steam-release-requirements)
 8. [Development Timeline](#8-development-timeline)
 9. [Post-Launch Support](#9-post-launch-support)
+10. [Known Issues & Action Items](#10-known-issues--action-items)
 
 ---
 
@@ -38,65 +39,80 @@
 - Time-pressured decision making
 - Stamp-based approval/rejection system
 - Consequence-driven progression
+- Missile defense system against border runners
+- X-ray scanning for hidden messages/contraband
 
-### Processing Time
-- Easy: 60 seconds
-- Normal: 45 seconds
-- Hard: 30 seconds
-- Time pressure increases gradually with progression
 
 ### Difficulty Levels
 1. Easy Mode:
    - 8 potato target score
    - 5 strikes allowed
-   - 60-second processing time
+   - 12 minute shift time
    
 2. Normal Mode:
    - 10 potato target score
    - 3 strikes allowed
-   - 45-second processing time
+   - 10 minute shift time
    
 3. Hard Mode:
    - 12 potato target score
    - 2 strikes allowed
-   - 30-second processing time
+   - 8 minute shift time
+
+### Scoring System
+- Perfect stamp placements award combo multipliers
+- Missile kills on runners award points (negative points if approved potato killed)
+- X-ray scanning detection awards bonus points
 
 ---
 
 ## 3. Story Mode
 
 ### Chapter Structure
-Each chapter represents one work shift (8-10 total chapters)
+Each chapter represents one work shift (10 total shifts)
 
-#### Chapter 1: "Peeling Back the Layers"
+#### Shift 1: "Peeling Back the Layers"
+- Dynamic tutorial integration (replaces hard-coded screenshot tutorial)
 - Introduction to border checkpoint operations
-- Tutorial integration
-- First encounter with suspicious documents
-- Introduction of key characters
+- Tutorial for gate raising mechanic
+- Tutorial for runners with emote warnings
+- Introduction of Supervisor Russet and key characters
+- **Narrative Note**: Ending with "And remember, Glory to Spud!"
 
-#### Chapter 2: "The Underground Root Cellar"
+#### Shift 2-3: "The Underground Root Cellar"
 - Discovery of resistance movement
-- Introduction of coded messages
+- Introduction of coded messages via X-ray scanning
 - Deeper conspiracy elements
 - Moral choice integration
+- Environmental storytelling begins (propaganda posters visible)
 
-#### Chapter 3: "The Mashing Fields"
+#### Shift 4: "The Mashing Fields"
 - Major plot revelations
 - Increased difficulty
 - Character relationships deepen
-- Key story decisions
+- **Needs Work**: Ending is abrupt and jarring, requires smoother transition
 
-#### Chapter 4: "Mash or Be Mashed"
-- Story climax
-- Multiple endings based on previous choices
+#### Shift 10: "Mash or Be Mashed"
+- Story climax with **4 distinct endings** (2 art pieces + 4 dialogue lines each)
+- **Needs Revision**: Confusing narrative change in "stay" path regarding resistance members
+- **Requires Implementation**: Multiple ending branches based on player choices
 - Final confrontations
 - Resolution of major plot threads
 
 ### Narrative Elements
-- Dialogue system with choice consequences
-- Environmental storytelling through propaganda and graffiti
-- Radio broadcasts and newspaper headlines
+- Dialogue system with choice consequences (tracked via NarrativeManager)
+- Environmental storytelling through:
+  - Propaganda posters (progressive display as shifts advance)
+  - Radio broadcasts (audio integration needed)
+  - Newspaper headlines (visible in background)
 - Character relationships and reputation system
+- **New**: Interactive potato conversations during document inspection (Terry Pratchett-inspired)
+- **Technical Note**: Use OGV video files or Animated GIFs for StagNation artwork integration
+
+### Choice Tracking System
+- NarrativeManager must properly retain, track, save, and load player choices
+- SaveManager integration required for narrative persistence
+- All major story decisions must affect ending determination
 
 ---
 
@@ -106,46 +122,94 @@ Each chapter represents one work shift (8-10 total chapters)
 - 2-3 hour campaign
 - Structured narrative progression
 - Character development
-- Multiple endings
+- **4 distinct endings** based on player choices
 
-### Endless Mode
+### Endless / Score Attack Mode
 - Infinite potato processing
-- High score tracking
-- Progressive difficulty
-- Unlockable content
+- Progressive difficulty scaling
+- High score tracking per difficulty per player
+- Unlockable content system
+- **Leaderboard Focus**: Primary leaderboard display (moved from story mode)
 
 ### Daily Challenge
 - Unique daily rule sets
-- Global leaderboards
+- Global leaderboards (primary focus)
 - Fixed seed for fairness
 - Special achievements
+- **Leaderboard Structure**: Top 3 scores, player position with 3 above/3 below
 
 ---
 
 ## 5. Features & Systems
 
 ### Core Systems
-1. Document Processing
-   - Passport verification
-   - Rule checking
-   - Stamp application
-   - Time management
 
-2. Mini-games
-   - Reflex-based runner catching
-   - UV scanning for hidden messages
+#### 1. Document Processing
+- Passport verification
+- Rule checking (40+ unique immigration rules at launch)
+- Stamp application with visual feedback for combos
+- Time management
+- **New Documents**: Entry tickets, work permits, visas, marriage licenses, baggage
+- **Viewport Masking**: Prevents stamps outside passport boundaries
+- **Physics System**: Documents have gravity on suspect panel
 
-3. Progression System
-   - Character customization (hats, badges)
-   - Unlockable potato types
-   - New rules and mechanics
-   - Story achievements
+#### 2. Mini-games
+- **Border Runner Defense**: Missile system to intercept fleeing potatoes
+  - Killing approved potatoes: -250 points + strike (Totneva Convention violation)
+  - 0 strikes on kill should not display "Strike Removed!"
+- **X-ray Scanning**: Special shader reveals inner contents of potatoes and belongings
+- **UV Lamp Scanning**: Detect secret symbols/messages on documents for bonus points
+- **Baggage Inspection**: Shake bags to reveal bugs, coins, or contraband
+- **Interrogation**: Short, fun mini-game (design in progress)
+- **Sapper Runners**: Time-bombs placed on walls requiring defusal mini-game or mouse-over
+- **Document Physics**: Gravity-based interaction on suspect panel
+
+#### 3. Progression System
+- Character customization (hats, badges) - persistence via SaveManager
+- **4 unlockable potato types** (down from 10):
+  - Start: Russet only
+  - Progressive unlock: New type every few shifts in story mode
+- New rules and mechanics unlock
+- Story achievements (in-game display from Main Menu and Pause Menu)
+- Office/booth customization (saved in SaveManager)
+
+#### 4. Emote System
+- Potatoes display emotional responses:
+  - Exclamation marks when missiles fired
+  - Anger (POPPING_VEINS) when clicked 3+ times
+  - Chance distribution skewed toward angry/confused
+- Audio feedback for emotes
+- Tooltips on hover showing potato info
+
+#### 5. Visual Feedback Systems
+- Animated score counters (incremental number display)
+- Scores appear above respective actions
+- Ink flecks from stamping
+- Message queue system with delays (prevents override)
+- Potato bobbing animation while walking
+- Breathing animation for potato in office
+- Slight wiggle animation for potatoes in queue
+- Enhanced wiggle when clicked
 
 ### UI/UX Elements
 - Customs office interface
-- Document examination system
-- Queue management
+- Document examination system with viewport masking
+- Queue management with interaction system
 - Time and score display
+- Missile counter on LCD display (desk or UI)
+- Office shutter with lever (needs SFX)
+- **Accessibility Improvements Needed**:
+  - Colorblind mode for stamp colors
+  - Font size options
+  - UI scaling options
+  - Different dialogue font
+
+### Environmental Details
+- Birds on ground that fly away on interaction
+- Animated lights in customs office and Border Wall
+- Footstep system (concrete steps smaller/darker than grass)
+- Shift-start animation: Player potato walks into office
+- Shadow rendering fixes for new potato models
 
 ---
 
@@ -154,8 +218,8 @@ Each chapter represents one work shift (8-10 total chapters)
 ### Core Requirements
 - Godot 4 engine
 - Steam integration
-- Cloud save support
-- Leaderboard system
+- **Steam Cloud Save**: Verification needed for correct path configuration
+- Leaderboard system (per shift, per difficulty, score attack mode)
 
 ### Key Classes and Systems
 ```gdscript
@@ -171,82 +235,550 @@ var current_arc: Dictionary
 var player_choices: Array
 var reputation: Dictionary
 
+# Narrative tracking
+class_name NarrativeManager
+# CRITICAL: Ensure choice tracking properly saves/loads
+var tracked_choices: Dictionary
+var ending_criteria: Dictionary
+
 # Potato processing
 class_name ProcessingManager
 var processing_time: float
 var current_rules: Array
 var validation_system: ValidationSystem
+
+# Save system
+class_name SaveManager
+# Must include: narrative choices, customization, high scores
+var player_progress: Dictionary
+var narrative_state: Dictionary
+var customization_data: Dictionary
 ```
+
+### Performance Optimization Needs
+- **Footprint System**: Implement sprite pooling (currently creates/destroys)
+- **Particle Systems**: Add cleanup plan for dynamically created particles
+- **Z-Index Management**: Multiple rendering order issues documented
+
+### Critical Bugs to Address
+
+#### Drag and Drop System (DaDS)
+- Documents don't appear above other documents when dragged
+- Can drag through stamps (should block)
+- Passport visible above fade when shift ends
+- Return-to-table buffers broken
+- Documents released appear in front of suspect panel background
+- Z-index system not working properly
+- Cannot drag documents off suspect table to auto-close
+- Cannot pick up documents through stamp bar
+
+#### Z-Index Issues
+- Corpses need lower z-index (behind explosions)
+- Explosions appear above inspection table
+- Footsteps appear above customs office
+- Gibs appear below screen borders
+- Potatoes appear above table instead of under
+
+#### Office Shutter System
+- No SFX for lever
+- Potato transparency fade issues (foreground shadow only)
+- Button click detection needs transparent pixel exclusion
+
+#### Gameplay Bugs
+- Accept then reject keeps accepted state
+- Cannot launch missiles during tutorial (correct behavior)
+- Leaderboards not loading in 1.1 Steam public_test build (**BLOCKING**)
+- Pause menu music persists when returning to main menu from Dialogic scene
+
+#### UI/Visual Bugs
+- Tutorial images need updating for new UI
+- Cursor returns to default after drag (should check hover)
+- Target cursor not showing over missile area
+- Stamps extend over passport edges (viewport masking needed)
+- Documents show above suspect panel (viewport masking needed)
 
 ---
 
 ## 7. Steam Release Requirements
 
 ### Essential Features
-- Steam Cloud Saves
-- 10-15 Achievements
-- Trading Cards
-- Global Leaderboards
+- **Steam Cloud Saves** (verification needed)
+- 10-15 Achievements (display in-game from menus)
+- Global Leaderboards:
+  - Per shift per difficulty
+  - Score attack mode
+  - Daily challenges
+  - Top 3 + player position ±3
 
 ### Launch Content
-- 20+ unique immigration rules
-- 10+ potato types
+- 40+ unique immigration rules
+- **4 potato types** (progressive unlock)
 - 3 difficulty levels
-- 2-3 hour story campaign
-- Endless mode
-- Daily challenges
+- 2-3 hour story campaign with **4 endings**
+- Endless / Score Attack mode with progressive difficulty
+- Daily challenges with leaderboards
 
 ### Price Point: $4.99
 Justification:
 - Unique gameplay mechanics
-- Rich narrative content
+- Rich narrative content with multiple endings
 - Multiple game modes
 - Regular content updates
+- Environmental storytelling elements
+
+### Pre-Release Checklist
+- Steam Cloud Save path verification
+- Leaderboard functionality testing (all modes)
+- Achievement unlock testing (narrative + stats-based)
+- All 4 story endings playable
+- Demo build testing before upload
+- Deployment process documentation (Steam Depots via Web Builds)
 
 ---
 
 ## 8. Development Timeline
 
-### Phase 1: Core Development (4 weeks)
-- Basic gameplay mechanics
-- Document system
-- Stamp mechanics
-- UI implementation
+### Current Phase: Version 1.1.1 - Minor Update
+**Target Release: 2025-04-20 for Full 1.1.0**
 
-### Phase 2: Story Integration (3 weeks)
-- Narrative system
-- Cutscenes
-- Character development
-- Dialogue system
+#### Immediate Priorities (Blocking Release)
+1. **CRITICAL**: Fix leaderboards not loading in Steam public_test
+2. Complete 4 ending branches (2 art + 4 dialogue each)
+3. Fix Shift 10 narrative inconsistencies
+4. Test Steam Cloud Save functionality
+5. Test Demo changes before upload
 
-### Phase 3: Features & Polish (3 weeks)
-- Mini-games
-- Steam integration
-- Achievements
-- Bug fixing
+#### Tutorial System Overhaul
+- Replace hard-coded screenshots with dynamic tutorial
+- Integrate seamlessly into Shift 1
+- Updated images for new UI
+- Gate raising tutorial step
+- Runner warning tutorial with emotes
+- Exploding runner tutorial update
 
-### Phase 4: Testing & Launch (2 weeks)
-- Playtesting
+#### Narrative Improvements
+- Split Supervisor Russet dialogue in shift1_intro
+- Fix fade timing in shift1_intro (too fast for brief dialogue)
+- Split "I think I know what's happening..." dialogue
+- Reword scanner warning text
+- Bridge narrative gap in Shift 10
+- Smooth Shift 4 ending transition
+- Implement different dialogue font
+
+#### Audio Fixes
+- Fix keyboard audio desync (use Dialogic keystrokes or tailored files)
+- Add lever SFX for office shutter
+- Add hover sounds for megaphone/stamp bar
+- Add emote audio feedback
+- Add document grip sound
+- Add whoosh sounds for document movement
+- Add menu tick sounds for volume sliders
+
+#### Graphics Improvements
+- Viewport masking for documents/stamps
+- Ink fleck particles from stamping
+- Message queue system implementation
+- Potato hover tooltips in queue
+- Shift-start walk-in animation
+- Cursor system updates (multiple fixes)
+- Emote display improvements
+- Physics on documents
+- Potato breathing animation
+- Environmental animations (lights, birds)
+- Shadow alignment fixes
+
+#### Gameplay Additions
+- UV lamp scanning system
+- Entry ticket documents
+- Baggage inspection mini-game
+- Sapper runner variants
+- Approved potato kill penalties
+- Random runner chance while in line
+- Kill text position improvements
+- Shift-based time display
+
+### Phase 1: Core Development (Completed)
+- Basic gameplay mechanics ✓
+- Document system ✓
+- Stamp mechanics ✓
+- UI implementation ✓
+
+### Phase 2: Story Integration (In Progress)
+- Narrative system (needs choice tracking fixes)
+- Cutscenes (needs fade improvements)
+- Character development ✓
+- Dialogue system (needs font change)
+- **Multiple endings** (needs implementation)
+- **Environmental storytelling** (needs progressive integration)
+
+### Phase 3: Features & Polish (Ongoing)
+- Mini-games (X-ray, baggage, interrogation in progress)
+- Steam integration (leaderboard issues blocking)
+- Achievements (needs in-game display)
+- Bug fixing (extensive list documented)
+
+### Phase 4: Testing & Launch
+- Playtesting (narrative + stats achievements)
 - Balance adjustments
 - Final polish
 - Steam store setup
+- Accessibility features implementation
 
 ---
 
 ## 9. Post-Launch Support
 
 ### Month 1
-- Critical bug fixes
-- Performance optimization
+- Critical bug fixes (extensive list documented)
+- Performance optimization (particle/sprite pooling)
 - Community feedback integration
+- Localization: Chinese, Spanish, Portuguese, German
 
 ### Months 2-3
-- New potato types
-- Additional rules
+- New potato types (beyond initial 4)
+- Additional rules and document types
 - Quality of life improvements
+- Multiplayer implementation exploration (co-op/versus)
 
 ### Long-term
 - Regular content updates
 - Seasonal events
 - Community features
-- Language localization
+- Additional language localization
+- Level select leaderboard viewing
+- A* pathfinding for main menu potato lines
+
+---
+
+## 10. Known Issues & Action Items
+
+### High Priority (Blocking Release)
+1. **Leaderboards not loading in Steam public_test build** - CRITICAL
+2. Steam Cloud Save verification incomplete
+3. Multiple ending branches not implemented
+4. Choice tracking system needs verification
+5. Shift 10 narrative inconsistencies
+
+### Medium Priority (Quality Issues)
+1. Tutorial system uses outdated screenshots
+2. Drag and Drop System has multiple critical bugs
+3. Z-index rendering issues throughout
+4. Shift 4 ending transition is jarring
+5. Accessibility features missing (colorblind, font size, UI scaling)
+
+### Low Priority (Polish)
+1. Performance optimization needed (pooling systems)
+2. Audio desync issues
+3. Cursor behavior inconsistencies
+4. Environmental animation additions
+5. Emote system enhancements
+
+### Documentation Gaps
+- Major system interaction documentation needed
+- Content addition guide (potatoes, rules, laws)
+- Story flow and decision point visualization
+- Steam deployment process documentation
+- Pre-release testing checklist formalization
+
+### Art Assets Needing Revision
+- plant_revelation: Goopy potatoes need cleanup
+- extreme_emergency: Washed out colors need adjustment
+- Purple color matching in personal quarters
+- Various cutscenes need Aseprite repainting (16-32 color palettes)
+
+### Future Considerations
+- Multiplayer implementation (Steam Matchmaking)
+- Conversation system during document checking
+- Alt-Enter and F11 fullscreen toggles
+- Instructions overlay system
+- Main menu potato pathfinding
+- Enhanced shift summary animations
+- Control scheme for keyboard navigation
+
+
+
+# X-Ray Scanning System
+
+## Overview
+X-ray scanning reveals hidden contents within potatoes and their belongings using a special shader effect. This mechanic integrates seamlessly into the document processing flow, requiring no context switch from core gameplay.
+
+## Core Mechanics
+- **Activation**: Toggle X-ray mode via button/hotkey while inspecting a potato or their documents
+- **Visual Feedback**: Special shader reveals internal structures, hidden objects, or secret messages
+- **Detection Types**:
+  - Contraband items (weapons, illegal goods)
+  - Biological anomalies (disease markers, mutations)
+  - Resistance messages (coded symbols, hidden text)
+  - Story clues (narrative-relevant objects)
+
+## Progressive Complexity
+- **Early Shifts (2-3)**: Obvious contraband (clear weapon silhouettes)
+- **Mid Shifts (4-6)**: Subtle differences requiring careful examination
+- **Late Shifts (7-10)**: Multi-layered secrets, requires cross-referencing with other documents
+
+## Gameplay Integration
+- **Bonus Points**: Successful detection awards points without requiring rejection
+- **Narrative Delivery**: Resistance movement communicates through hidden X-ray messages
+- **Optional Discovery**: Not required for basic approval/rejection, rewards thorough players
+- **Rule Combinations**: Some rules require X-ray confirmation (e.g., "Reject potatoes with metal implants")
+
+## Scoring
+- Contraband detection: +150 points
+- Resistance message discovery: +100 points + story progression
+- Biological anomaly detection: +200 points
+- Missed detection (if rule requires it): Citation issued
+
+## Player Experience Goals
+- "Aha!" moments when discovering hidden content
+- Feels like detective work, not busywork
+- Rewards careful observation without punishing those who miss it (except when rules require it)
+- Creates memorable story moments through environmental storytelling
+
+---
+
+# Citation and Strike System
+
+## Two-Tier Consequence Framework
+
+### Citations (Minor Violations)
+**Definition**: Recoverable mistakes that accumulate warnings without immediately ending the shift.
+
+**Examples**:
+- Incorrect stamp placement outside designated area
+- Missing secondary document verification
+- Failed UV lamp detection when required
+- Minor timing inefficiencies
+- Accidentally killing unapproved runner (border defense bonus lost)
+
+**Consequences**:
+- Point deduction (-50 to -150 points depending on severity)
+- Visual warning indicator (yellow triangle)
+- Audio cue (warning beep)
+- **3 citations = 1 strike** (threshold adjustable by difficulty)
+
+### Strikes (Major Violations)
+**Definition**: Critical failures that directly threaten shift completion.
+
+**Examples**:
+- Approving potato with forged documents
+- Rejecting valid VIP or authorized personnel
+- Killing approved potato with missile (-250 points + strike for Totneva Convention violation)
+- Missing critical X-ray contraband when rule requires detection
+- Processing expired/invalid documents
+
+**Consequences**:
+- Significant point deduction (-250 to -500 points)
+- Visual warning indicator (red X or badge)
+- Audio cue (alarm siren)
+- **Reach strike limit = shift ends immediately**
+
+## Difficulty-Based Limits
+
+| Difficulty | Citation Threshold | Strike Limit |
+|------------|-------------------|--------------|
+| Easy       | 5 citations = 1 strike | 5 strikes maximum |
+| Normal     | 3 citations = 1 strike | 3 strikes maximum |
+| Hard       | 2 citations = 1 strike | 2 strikes maximum |
+
+## Recovery Mechanics
+
+### Performance-Based Recovery
+- **Perfect Processing Streak**: 5 consecutive perfect approvals/rejections = remove 1 citation
+- **Excellence Bonus**: 10 consecutive perfect potatoes = remove 1 strike
+- **Detection Mastery**: Successful X-ray/UV contraband detection = remove 1 citation
+- **Border Defense**: Killing unapproved runner = remove 1 citation
+
+### Shift-Based Reset
+- **Citations**: Clear completely at start of each shift (fresh start)
+- **Strikes**: Maximum 2 strikes carry over to next shift (prevents compounding failure)
+- **Story Moments**: Supervisor Russet may forgive strikes during key narrative beats
+
+### Narrative Recovery Options
+- **Resistance Favors**: Story choices may grant temporary immunity
+- **Bribe System**: Spend points/resources to clear citations or strikes (morally gray choice)
+- **Performance Reviews**: End-of-shift summaries may reduce penalties for overall good work
+
+## Visual & Audio Feedback
+
+### UI Display
+```
+Citation Counter: ⚠️⚠️⚠️ (0/3 before strike)
+Strike Counter: ❌❌⚠️ (2 strikes used, 1 remaining)
+```
+
+### Messaging Examples
+- **Citation Issued**: "MINOR VIOLATION: Incorrect stamp placement (-50 pts)"
+- **Strike Issued**: "MAJOR VIOLATION: Approved VIP rejected - Strike issued!"
+- **Citation Removed**: "PERFORMANCE BONUS: Citation cleared through excellent processing"
+- **Strike Removed**: "EXCELLENCE ACHIEVED: Strike forgiven for outstanding performance"
+
+### Audio Cues
+- Citation warning: Single beep (recoverable)
+- Strike alarm: Siren sound (serious consequence)
+- Recovery chime: Pleasant notification (reward)
+- Threshold warning: "2/3 citations" triggers cautionary tone
+
+## Accessibility Options
+
+### Forgiving Mode
+Toggle in settings for players focused on story over challenge:
+- Unlimited citations (warnings only, no strike accumulation)
+- Strikes warn but don't end shift prematurely
+- All penalties become point deductions only
+- Maintains feedback without punitive consequences
+
+### Visual Indicators
+- Colorblind-friendly warning colors (shape + color differentiation)
+- Adjustable warning opacity/size
+- Optional persistent counter display vs. pop-up only
+
+## Design Philosophy
+**Goal**: Balance tension with forgiveness. Small mistakes feel different from catastrophic errors. Recovery is possible through skilled play, not just lucky circumstances. Players understand why they're being penalized and have clear paths to improve.
+
+**Avoiding Papers, Please's Economic Pressure**: Instead of family-feeding stakes, this system creates immediate shift-based tension while allowing recovery within the same session. Shorter campaign (2-3 hours) requires faster feedback loops than Papers, Please's gradual economic decay.
+
+
+# Steam Achievements
+
+## Overview
+13 achievements combining narrative progression milestones with gameplay skill challenges. Designed to encourage both story completion and mastery of game mechanics across different play styles.
+
+## Achievement Categories
+
+### Narrative Achievements (Story Progression)
+
+#### First Day on the Job
+**Description**: Complete your first shift  
+**Unlock Rate**: ~1.2%  
+**Type**: Introductory milestone  
+**Notes**: Tutorial completion, ensures basic mechanics understood
+
+#### Rookie Customs Officer
+**Description**: Complete Shift 5  
+**Unlock Rate**: ~1.2%  
+**Type**: Mid-game progression checkpoint  
+**Notes**: Tracks player retention through early-to-mid campaign
+
+#### Veteran Officer
+**Description**: Complete 10 shifts  
+**Unlock Rate**: ~0.6%  
+**Type**: Story completion (any ending)  
+**Notes**: Marks full campaign playthrough
+
+#### Master of Customs
+**Description**: Complete 25 shifts  
+**Unlock Rate**: ~0.6%  
+**Type**: Extended play/replay milestone  
+**Notes**: Encourages multiple playthroughs for different endings or endless mode engagement
+
+### Story Ending Achievements (Multiple Playthrough Incentives)
+
+#### Down with the Tatriarchy
+**Description**: Complete the game with the revolution ending  
+**Unlock Rate**: ~14.1%  
+**Type**: Narrative choice outcome  
+**Notes**: Join the resistance, overthrow the regime
+
+#### Born Diplomat
+**Description**: Complete the game with the diplomatic ending  
+**Unlock Rate**: ~12.8%  
+**Type**: Narrative choice outcome  
+**Notes**: Navigate middle path, maintain neutrality
+
+#### Tater of Justice
+**Description**: Complete the game with the loyalist ending  
+**Unlock Rate**: ~12.8%  
+**Type**: Narrative choice outcome  
+**Notes**: Remain loyal to the Tatriarchy government
+
+#### Savior of Spud
+**Description**: Complete the main game with any ending and reform the nation of Spud  
+**Unlock Rate**: ~0.6%  
+**Type**: "True" or best ending  
+**Notes**: Most difficult ending to achieve, requires specific choices throughout campaign
+
+### Skill-Based Achievements (Gameplay Mastery)
+
+#### Best Served Hot
+**Description**: Process a potato perfectly (no errors, perfect stamp placement)  
+**Unlock Rate**: ~8.5%  
+**Type**: Basic proficiency  
+**Notes**: Early skill check, teaches precision
+
+#### Border Defender
+**Description**: Stop 50 total border runners  
+**Unlock Rate**: ~1.2%  
+**Type**: Mini-game mastery (missile defense)  
+**Notes**: Cumulative across all playthroughs, encourages defensive play
+
+#### Sharpshooter
+**Description**: Successfully stop 10 border runners  
+**Unlock Rate**: ~0.6%  
+**Type**: Mini-game proficiency  
+**Notes**: Subset of Border Defender, mid-tier missile defense milestone
+
+#### Perfect Shot
+**Description**: Get 5 perfect hits on border runners  
+**Unlock Rate**: ~0.6%  
+**Type**: Mini-game precision  
+**Notes**: Rewards accuracy over volume, tracks direct hits vs. splash damage
+
+### High Score Achievements (Competitive Play)
+
+#### High Scorer
+**Description**: Achieve a score of 10,000 points in a single shift  
+**Unlock Rate**: ~0.6%  
+**Type**: Score attack milestone  
+**Notes**: Encourages efficiency and combo mastery in Story or Endless mode
+
+#### Score Legend
+**Description**: Achieve a score of 50,000 points  
+**Unlock Rate**: ~0.6%  
+**Type**: Elite score achievement  
+**Notes**: Likely requires Endless mode or perfect Hard difficulty performance
+
+## Achievement Design Philosophy
+
+### Balanced Unlock Distribution
+- **High unlock rate (8-14%)**: Story ending achievements encourage replayability
+- **Medium unlock rate (1-2%)**: Progression milestones track engagement
+- **Low unlock rate (0.6%)**: Mastery and skill-based achievements reward dedication
+
+### Tracking Requirements
+- **Cumulative achievements** (Border Defender, Sharpshooter): Track across all game sessions
+- **Single-session achievements** (High Scorer, Perfect Shot): Must occur within one shift
+- **Story achievements**: Tied to NarrativeManager choice tracking
+- **Skill achievements**: Tied to ProcessingManager and gameplay metrics
+
+### Player Motivation Goals
+1. **Story Completion**: Multiple ending achievements drive replays
+2. **Skill Improvement**: Progression from "Best Served Hot" → "Perfect Shot"
+3. **Long-term Engagement**: Cumulative achievements reward persistent play
+4. **Difficulty Mastery**: Score achievements naturally push toward harder modes
+
+## In-Game Display Requirements
+- Achievement list accessible from Main Menu and Pause Menu
+- Show locked/unlocked status with progress bars where applicable
+- Display unlock percentages (global player statistics)
+- Visual indication of which ending achievements remain (spoiler-free icons)
+- Notification system when achievements unlock during gameplay
+
+## Technical Implementation Notes
+- Steam API integration for unlock tracking
+- SaveManager must persist achievement progress for cumulative types
+- NarrativeManager must trigger ending achievements based on final choices
+- ProcessingManager must track perfect placements, scores, and runner kills
+- Achievement unlocks must sync with Steam Cloud for cross-device play
+
+## Post-Launch Achievement Expansion
+Potential additional achievements for content updates:
+- New mini-game specific achievements (interrogation, baggage inspection mastery)
+- Daily Challenge streaks
+- Hidden/secret achievements for easter eggs
+- Speedrun achievements (complete story under time limit)
+- No-strike perfect run achievements
+---
+
+**Document Version**: 1.1.1 Update Revision
+**Last Updated**: October 19, 2025
+**Status**: Pre-Release (1.1.0 target: April 20, 2025)
