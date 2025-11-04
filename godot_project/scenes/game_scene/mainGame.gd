@@ -470,7 +470,14 @@ func end_shift(success: bool = true):
 		
 		Analytics.track_shift_completed(Global.shift, success, Global.score)
 
-		
+		# Increment total shifts completed for achievements
+		Global.total_shifts_completed += 1
+		print("Total shifts completed: ", Global.total_shifts_completed)
+
+		# Check and update achievements
+		Global.check_achievements()
+		Global.update_steam_stats()
+
 		# Setting high score for current level and difficulty
 		print("Setting high score of: ", Global.score, " for : ", current_shift, " and difficulty level", difficulty_level)
 		GameState.set_high_score(current_shift, Global.difficulty_level, Global.score)

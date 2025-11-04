@@ -234,17 +234,23 @@ func save_game_state():
 		"difficulty_level": difficulty_level,
 		"high_scores": high_scores,
 		"story_state": current_story_state,
+		"total_shifts_completed": total_shifts_completed,
+		"total_runners_stopped": total_runners_stopped,
+		"perfect_hits": perfect_hits,
 	}
-	
+
 	SaveManager.save_game_state(data)
 
 func load_game_state():
 	var data = SaveManager.load_game_state()
-	
+
 	# Load the data if we got any
 	if not data.is_empty():
 		high_scores = data.get("high_scores", {"Easy": 0, "Normal": 0, "Expert": 0})
 		current_story_state = data.get("story_state", 0)
+		total_shifts_completed = data.get("total_shifts_completed", 0)
+		total_runners_stopped = data.get("total_runners_stopped", 0)
+		perfect_hits = data.get("perfect_hits", 0)
 
 
 # Modify get_high_score to be more flexible
