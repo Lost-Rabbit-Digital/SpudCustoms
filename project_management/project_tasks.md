@@ -170,3 +170,6 @@ Use OGV video files for the artwork from StagNation to play more easily within S
 - Small sound for hovering above megaphone or stamp bar button
 - Whooosh sound when document is returned to table
 - Whooshing sound when documents are dragged quickly
+
+# Completed
+## === 1.1.2 ===
