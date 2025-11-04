@@ -58,27 +58,20 @@ tutorial, needs updated images
 Update tutorial step with exploding runner
 Update where strikes and quota show on UI
 Use OGV video files for the artwork from StagNation to play more easily within Spud Customs, or Animated GIF
-- Leaderboards not loading as expected on 1.1 Steam in public_test, troubleshoot ASAP, blocking full release
 - Test Demo changes before uploading Demo builds
 - DaDS / Bug: When dropping a document onto the inspection table, it should appear in front of whatever is on the table
-- DaDS / Bug: You can drag the documents through the stamps, stamps should block interaction
 - DaDS / Bug: The _return_item_to_table buffers seem to be broken
-- DaDS / Bug: When you drag documents, they do not appear above other documents
 - If you hit "Continue" then pause in the Dialogic scene and return to Main Menu, the music from the Dialogic scene continue
 - Documents show above the suspect panel background, use viewport masking
 - Stamps can be placed on the outside of the passport, use viewport masking
 - Add visual feedback for combo multipliers with perfect stamps
-- Cursor System: The target cursor is not showing when firing missiles
 - Dialogic / QoL: Dialogic scenes should fade in and out to the next scene
 - Mugshot Generator / Bug: Potatoes go over the inspection desk when accepted
 - Allow missiles to kill approved potatoes, resulting in 250 points removed and a strike added, with a flavor alert about a Totneva Convention violation
 - Add a small chance to run while waiting in line for each potato in addition to the rejection chance and global timer chance
 - Dialogic / Bug: You can launch missiles while in the tutorial scene
-- If you kill a runner and have 0 strikes, it should not say "Strike Removed!" on the pop-up text
-- If you accept and then reject a potato, it keeps the accepted state
 - Update art for plant_revelation, goopy potatoes
 - Update art for extreme_emergency, washed out
-- Test narrative and stats-based achievements
 - Test leaderboards for each shift and difficulty, and score attack mode
 - Playtest: Beat Story mode, and test each of the 4 endings (Vengeance Complete)
 
@@ -97,16 +90,11 @@ Use OGV video files for the artwork from StagNation to play more easily within S
 - Add message queue system and delay between messages so they don't override each other, add GDScript to alert_label
 - Add tooltip with potato info when you hover over them in line
 - At the beginning of your shift, show your potato character walking into the customs office
-- Cursor Bug: After dragging a document the cursor returns to default even if the cursor is still hovering over a document 
-- Cursor Bug: Target display is not showing when hovering over the missile area
 - Cursor: Update cursor to show a select icon when above the approval or rejection stamp
 - Cursor: Update cursor to work with Maaacks menu
 - DaDS / Bug: If passport is dragged when shift ends, the passport appears above the fade
 - Documents should have gravity on the suspect panel and should fall to the counter
-- Drag and Drop Bug: Do not allow the user to pick up the document through the stamp bar
 - Drag and Drop Bug: Documents released appear in front of the suspect panel background
-- Drag and Drop Bug: Get highest z-index doesn't seem to be working properly, cannot easily set passport atop of LawReceipt
-- Drag and Drop Bug: If the player grabs the passport while it's animated the script does not properly update z-index
 - Drag and Drop Bug: LawReceipt does not automatically close when dragged off of the suspect table
 - Emote System: All potatoes show exclamation marks when you shoot a missile
 - Emote System: If you click the same potato 3+ times they get angry and show POPPING_VEINS emote
@@ -133,9 +121,6 @@ Use OGV video files for the artwork from StagNation to play more easily within S
 - Stamp System: Stamps go over edge of passport
 - Update grab logic to check for alpha of 0 and don't grab (for transparent outlines on documents)
 - Z-Index Bug: Corpses need a slightly lower z-index to show BEHIND explosions (re-test)
-- Z-Index Bug: Explosions appear above the inspection table
-- Z-Index Bug: Potato footsteps appear above the customs office
-- Z-Index Bug: Potato gibs appear below the screen borders
 - Z-Index Bug: Potatoes appear above table instead of under when border runner leaves map on south side
 
 ### Backend
