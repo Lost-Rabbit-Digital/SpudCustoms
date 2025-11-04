@@ -288,6 +288,13 @@ func _ready():
 		add_child(smoke)
 		smoke_particle_pool.append(smoke)
 
+	# Register missile zone callback with cursor manager
+	var cursor_manager = get_node_or_null("/root/CursorManager")
+	if cursor_manager:
+		cursor_manager.register_missile_zone_callback(is_point_in_missile_zone)
+	else:
+		push_warning("BorderRunnerSystem: Could not find CursorManager for missile cursor")
+
 
 func _process(delta):
 	if not is_enabled or is_in_dialogic:
@@ -1322,3 +1329,16 @@ func get_missile_zone() -> Rect2:
 			combined_rect = combined_rect.merge(rect2)
 
 	return combined_rect
+
+
+## Check if a point is within the missile zone (for cursor targeting)
+func is_point_in_missile_zone(point: Vector2) -> bool:
+	# Don't show target cursor if system is disabled or in dialogue
+	if not is_enabled or is_in_dialogic:
+		return false
+
+	var zone = get_missile_zone()
+	if zone.size == Vector2.ZERO:
+		return false
+
+	return zone.has_point(point)

@@ -30,9 +30,9 @@ const Z_INDEX = {
 	"MISSILES": 8,
 	## Dead bodies that remain on ground
 	"CORPSES": 3,
-	## Corpse fragments after explosions
-	"GIBS": 11,
-	## Vehicles on the main road             
+	## Corpse fragments after explosions (above screen borders to prevent clipping)
+	"GIBS": 21,
+	## Vehicles on the main road
 	"VEHICLES": 1,
 	
 	# ----------------------------------------------------------------------
@@ -71,14 +71,14 @@ const Z_INDEX = {
 	# Visual Effect Layers
 	# ----------------------------------------------------------------------
 	## General particle systems (dust, smoke, etc.)
-	"STAMP_PARTICLES": null,      
-	## Explosion effects
-	"EXPLOSIONS": 12,            
-	"EXPLOSION_SMOKE": 13,            
-	## Footprints left by NPCs
-	"FOOTPRINTS": 9,
+	"STAMP_PARTICLES": null,
+	## Explosion effects (below inspection table to not obscure gameplay)
+	"EXPLOSIONS": 1,
+	"EXPLOSION_SMOKE": 1,
+	## Footprints left by NPCs (on ground level)
+	"FOOTPRINTS": 0,
 	## Smoke from the misisles
-	"MISSILE_SMOKE": 11,
+	"MISSILE_SMOKE": 7,
 	
 	# ----------------------------------------------------------------------
 	# User Interface Layers (high values to always appear on top)

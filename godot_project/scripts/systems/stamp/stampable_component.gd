@@ -28,6 +28,37 @@ func apply_stamp(stamp_component: StampComponent, position: Vector2) -> bool:
 		print("Invalid stamp position!")
 		return false
 
+	# Remove any existing stamps of the opposite type
+	# If stamping approve, remove reject stamps; if stamping reject, remove approve stamps
+	var opposite_type = "reject" if stamp_component.stamp_type == "approve" else "approve"
+	var stamps_to_remove = []
+
+	for stamp in active_stamps:
+		if stamp.stamp_type == opposite_type:
+			stamps_to_remove.append(stamp)
+
+	# Remove opposite stamps from array
+	for stamp in stamps_to_remove:
+		active_stamps.erase(stamp)
+
+	# Remove opposite stamp sprites from document
+	for child in open_content_node.get_children():
+		if child is Sprite2D and child.texture:
+			var texture_path = ""
+			if child.texture.resource_path:
+				texture_path = child.texture.resource_path.to_lower()
+
+			# Check if this sprite is the opposite stamp type
+			var is_opposite_stamp = false
+			if opposite_type == "approve":
+				is_opposite_stamp = "approve" in texture_path or "approved" in texture_path
+			else:
+				is_opposite_stamp = "reject" in texture_path or "denied" in texture_path
+
+			if is_opposite_stamp:
+				print("Removing opposite stamp type: ", texture_path)
+				child.queue_free()
+
 	# Convert position to be relative to open content node
 	var relative_pos = document_node.to_local(position)
 	relative_pos = open_content_node.get_transform().affine_inverse() * relative_pos

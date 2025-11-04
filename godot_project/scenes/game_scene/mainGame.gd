@@ -641,6 +641,11 @@ func _on_shift_summary_restart():
 func _on_shift_summary_main_menu():
 	# Save state before transitioning to main menu
 	GlobalState.save()
+
+	# Stop all Dialogic audio to prevent music from continuing in main menu
+	Dialogic.Audio.stop_all_channels()
+	Dialogic.Audio.stop_all_one_shot_sounds()
+
 	fade_transition()
 	# Access SceneLoader directly
 	push_warning("Using direct change_scene_to_file, SceneLoader not working as expected.")
