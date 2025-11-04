@@ -1,6 +1,99 @@
 ## Before release, review GitHub commits using the following command `git log --since="last month" --pretty=format:'%h,%an,%ar,%s' > log.csv` - This artifact can then be fed into Claude or similar to analyze the changes.
 
 
+## === 1.1.2 ===
+
+### DaDS System Fixes:
+- Fixed find_topmost_item_at() to properly use z-index for document stacking
+- Fixed stamp bar blocking: Now checks entire StampBar bounds instead of individual buttons
+- Fixed cursor not updating after drag: Clear hovered_item on drag start
+- Prevent document pickup through stamp bar area
+- Drag and Drop Bug: Do not allow the user to pick up the document through the stamp bar
+- Drag and Drop Bug: Get highest z-index doesn't seem to be working properly, cannot easily set passport atop of LawReceipt
+- Drag and Drop Bug: If the player grabs the passport while it's animated the script does not properly update z-index
+- DaDS / Bug: You can drag the documents through the stamps, stamps should block interaction
+- DaDS / Bug: When you drag documents, they do not appear above other documents
+
+### Z-Index Fixes:
+- Explosions: 12 → 1 (now below inspection table, won't obscure gameplay)
+- Explosion smoke: 13 → 1 (matches explosions)
+- Footprints: 9 → 0 (on ground level with environment)
+- Gibs: 11 → 21 (above screen borders to prevent clipping)
+- Missile smoke: 11 → 7 (proper layering)
+- Z-Index Bug: Explosions appear above the inspection table
+- Z-Index Bug: Potato footsteps appear above the customs office
+- Z-Index Bug: Potato gibs appear below the screen borders
+
+### Game State Bug:
+- Fixed accept/reject state bug: Stamping now removes opposite stamp type
+- Prevents approved then rejected passports from keeping approved state
+- If you accept and then reject a potato, it keeps the accepted state
+
+### Cursor System:
+- Added missile zone cursor targeting callback registration
+- Created is_point_in_missile_zone() function for target cursor display
+- Target cursor now shows when hovering over missile launch area
+- Cursor System: The target cursor is not showing when firing missiles
+- Cursor Bug: After dragging a document the cursor returns to default even if the cursor is still hovering over a document
+- Cursor Bug: Target display is not showing when hovering over the missile area
+
+### Audio Bug:
+- Fixed music persistence when returning to main menu from Dialogic
+- Added Dialogic.Audio.stop_all_channels() to _on_shift_summary_main_menu()
+
+### Gameplay Fixes:
+- Fixed 'Strike Removed!' showing when killing runner with 0 strikes
+- Now only shows strike removal message if a strike was actually removed
+- Properly reconstructs alert message based on whether strike was removed
+- If you kill a runner and have 0 strikes, it should not say "Strike Removed!" on the pop-up text
+
+### Code Quality:
+- Missile launch during tutorial already protected by is_in_dialogic check
+- Dialogic.timeline_started properly connected to _on_dialogue_started
+- Easy difficulty scaling factor already set to 0.8 (not a bug)
+
+### Achievement System Fixes:
+- Fixed check_achievements() never being called
+- Added call to Global.check_achievements() after each successful shift (mainGame.gd:478)
+- Added call to Global.update_steam_stats() to sync with Steam (mainGame.gd:479)
+- Fixed total_shifts_completed never incremented
+- Increment Global.total_shifts_completed after successful shift (mainGame.gd:474)
+- Fixed total_runners_stopped not tracked globally
+- Increment Global.total_runners_stopped when runner hit (BorderRunnerSystem.gd:1139)
+- Fixed perfect_hits not tracked globally
+- Increment Global.perfect_hits on perfect missile hits (BorderRunnerSystem.gd:1159)
+- Test narrative and stats-based achievements
+
+### Save/Load Persistence:
+- Added total_shifts_completed to save_game_state() (Global.gd:237)
+- Added total_runners_stopped to save_game_state() (Global.gd:238)
+- Added perfect_hits to save_game_state() (Global.gd:239)
+- Added loading of all three stats in load_game_state() (Global.gd:251-253)
+
+### Leaderboard System Fixes:
+- Root Cause: Timeout handlers were calling reset_leaderboard_state() which set state to IDLE
+- When Steam callback arrived later, it checked state != FINDING and rejected it
+- This prevented score_submitted/leaderboard_updated signals from firing
+- UI remained stuck waiting for signals that would never arrive
+- Removed async from reset_leaderboard_state() (SteamManager.gd:594-599)
+- Removed unnecessary await get_tree().process_frame
+- Function now completes immediately without race conditions
+- Updated loading timeout handler (ShiftSummaryScreen.gd:267-276)
+- Removed call to reset_leaderboard_state()
+- Now only updates UI text to show timeout
+- Allows Steam callback to complete if it arrives late
+- Updated submission timeout handler (ShiftSummaryScreen.gd:317-331)
+- Re-enables submit button for user retry
+- Improved callback state handling (SteamManager.gd:356-361)
+- Changed from hard rejection to warning + process anyway
+- Handles case where timeout fired but callback arrived late
+- Logs warning but continues processing valid Steam response
+- Fixed concurrent request check (SteamManager.gd:256-260)
+- Simplified condition from complex AND to just is_fetching_leaderboard
+- Added state logging to debug message
+- More consistent rejection of duplicate requests
+- Leaderboards not loading as expected on 1.1 Steam in public_test, troubleshoot ASAP, blocking full release
+
 ### Completed Tasks for 1.0.2
   - *INTERNAL USE* Cleaned up old tutorial code to pave road for new system
   - *INTERNAL USE* Fixed passport closing after timed_out() called 
