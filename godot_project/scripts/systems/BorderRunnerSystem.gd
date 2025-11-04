@@ -1168,14 +1168,27 @@ func handle_successful_hit(runner, explosion_pos):
 		score_label.text = tr("ui_score").format({"score": str(Global.score)})
 
 	# Remove a strike if any present
+	var strike_removed = false
 	if Global.strikes > 0:
 		Global.strikes -= 1
+		strike_removed = true
 		bonus_text += tr("alert_strike_removed")
+
+	# Only show strike removed message if we actually removed a strike
+	var final_message = ""
+	if strike_removed:
+		final_message = "{bonus} +{points} points!".format({"bonus": bonus_text, "points": points_earned})
+	else:
+		# Don't include strike removed text if we didn't remove a strike
+		final_message = "+{points} points!".format({"points": points_earned})
+		if runner_streak > 1:
+			var streak_points = streak_bonus * (runner_streak - 1)
+			final_message = tr("alert_combo").format({"mult": runner_streak, "streak": streak_points}) + " " + final_message
 
 	Global.display_green_alert(
 		alert_label,
 		alert_timer,
-		"{bonus} +{points} points!".format({"bonus": bonus_text, "points": points_earned})
+		final_message
 	)
 
 	if strike_label:
