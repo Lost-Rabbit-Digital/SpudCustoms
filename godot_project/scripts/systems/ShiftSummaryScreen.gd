@@ -269,11 +269,10 @@ func update_leaderboard():
 			if $LeaderboardPanel/Entries && $LeaderboardPanel/Entries.text == "Loading leaderboard data...":
 				LogManager.write_warning("Leaderboard loading timed out")
 				SteamManager.dump_debug_info()
-				
-				# Reset the leaderboard state in case it's stuck
-				SteamManager.reset_leaderboard_state()
-				
-				$LeaderboardPanel/Entries.text = "Loading timed out.\nTry submitting score again."
+
+				# Don't reset state - let the callback complete if it arrives
+				# Just update the UI to show timeout
+				$LeaderboardPanel/Entries.text = "Loading timed out.\nTry again or check Steam connection."
 		)
 
 func _on_submit_score_button_pressed() -> void:
@@ -320,16 +319,15 @@ func _on_submit_score_button_pressed() -> void:
 		if submission_in_progress:
 			LogManager.write_warning("Score submission timed out")
 			SteamManager.dump_debug_info()
-			
-			# Reset submission state
+
+			# Reset submission state to allow retry
 			submission_in_progress = false
 			$SubmitScoreButton.text = "Retry Submit"
 			$SubmitScoreButton.disabled = false
-			
-			# Reset the SteamManager state if it's stuck
-			SteamManager.reset_leaderboard_state()
-			
-			_show_notification("Submission timed out. Try again.", Color(0.8, 0.2, 0.2))
+
+			# Don't reset SteamManager state - let callback complete if it arrives
+			# Just notify user they can retry
+			_show_notification("Submission timed out. Click to retry.", Color(0.8, 0.2, 0.2))
 	)
 
 func show_summary(stats_data: Dictionary):
