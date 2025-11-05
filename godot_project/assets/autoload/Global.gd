@@ -52,11 +52,14 @@ func _ready():
 		LogManager.write_info("Steam is running.")
 		pass
 
-	# Load saved game state
+	# Load saved game state (but defer narrative choice restoration)
 	load_game_state()
 
 	# Sync SaveManager and game state
 	sync_level_unlock_data()
+
+	# Defer narrative choice restoration to next frame when Dialogic is ready
+	call_deferred("_restore_narrative_choices_deferred")
 
 
 func _process(_delta: float) -> void:
@@ -268,24 +271,8 @@ func load_game_state():
 		total_shifts_completed = data.get("total_shifts_completed", 0)
 		total_runners_stopped = data.get("total_runners_stopped", 0)
 		perfect_hits = data.get("perfect_hits", 0)
-
-		# Restore narrative choices to Dialogic via NarrativeManager (authoritative source)
-		if has_node("/root/NarrativeManager") and data.has("narrative_choices"):
-			var narrative_manager = get_node("/root/NarrativeManager")
-			narrative_manager.load_narrative_choices(narrative_choices)
-			print(
-				"Loaded narrative choices via NarrativeManager: ",
-				narrative_choices.size(),
-				" choices"
-			)
-		else:
-			# Fallback: restore via Global if NarrativeManager doesn't exist yet
-			restore_narrative_choices()
-			print(
-				"Loaded narrative choices via Global fallback: ",
-				narrative_choices.size(),
-				" choices"
-			)
+		# Note: Narrative choice restoration is deferred to _restore_narrative_choices_deferred()
+		# to ensure Dialogic is fully initialized
 
 
 # Modify get_high_score to be more flexible
@@ -430,6 +417,28 @@ func capture_narrative_choices():
 			narrative_choices[var_name] = Dialogic.VAR.get(var_name)
 
 	print("Captured narrative choices: ", narrative_choices)
+
+
+func _restore_narrative_choices_deferred():
+	"""Deferred restoration of narrative choices after Dialogic is fully initialized"""
+	if narrative_choices.is_empty():
+		return
+
+	# Check if Dialogic is ready
+	if not Dialogic or not Dialogic.has_method("get_class"):
+		print("Dialogic not ready yet, skipping narrative choice restoration")
+		return
+
+	# Restore narrative choices via NarrativeManager if available, otherwise via Global
+	if has_node("/root/NarrativeManager"):
+		var narrative_manager = get_node("/root/NarrativeManager")
+		narrative_manager.load_narrative_choices(narrative_choices)
+		print(
+			"Loaded narrative choices via NarrativeManager: ", narrative_choices.size(), " choices"
+		)
+	else:
+		# Fallback: restore via Global if NarrativeManager doesn't exist yet
+		restore_narrative_choices()
 
 
 func restore_narrative_choices():
