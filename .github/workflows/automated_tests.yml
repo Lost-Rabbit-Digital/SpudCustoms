@@ -1,4 +1,4 @@
-name: Automated Tests
+name: Automated Tests & Linting
 
 on:
   push:
@@ -7,8 +7,30 @@ on:
     branches: [ "main" ]
 
 jobs:
-  unit-tests:
+  static-checks:
+    name: Static Code Analysis
     runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup GDScript Toolkit
+      uses: Scony/godot-gdscript-toolkit@master
+
+    - name: Run gdformat (code formatting check)
+      run: gdformat --check godot_project/scripts/
+
+    - name: Run gdlint (linting check)
+      run: gdlint godot_project/scripts/
+
+    - name: Run gdradon (cyclomatic complexity analysis)
+      run: gdradon cc godot_project/scripts/
+
+  unit-tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    needs: static-checks
 
     steps:
     - name: Checkout code

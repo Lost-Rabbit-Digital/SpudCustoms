@@ -380,20 +380,33 @@ godot --headless --script res://tests/run_tests.gd
 
 #### GitHub Actions Integration
 **Workflow:** `.github/workflows/automated_tests.yml`
+- **Name:** Automated Tests & Linting
 - **Triggers:** Push to `main`, all pull requests
-- **Environment:** Ubuntu latest with Godot 4.5.0
+- **Environment:** Ubuntu latest
+
+**Job 1: Static Code Analysis**
+- **Tools:** GDScript Toolkit (gdformat, gdlint, gdradon)
+- **Steps:**
+  1. Checkout code
+  2. Setup GDScript Toolkit
+  3. Run gdformat --check (code formatting verification)
+  4. Run gdlint (linting and style checks)
+  5. Run gdradon cc (cyclomatic complexity analysis)
+- **Scope:** `godot_project/scripts/` directory
+
+**Job 2: Unit Tests** (runs after static checks pass)
+- **Environment:** Godot 4.5.0 headless
 - **Steps:**
   1. Checkout code
   2. Setup Godot 4.5.0
   3. Import project (resolve dependencies)
   4. Run GUT test suite
   5. Upload test results as artifacts
-- **Failure Handling:** Workflow fails if any test fails, blocking merge
+- **Failure Handling:** Workflow fails if any check or test fails, blocking merge
 
-**Workflow:** `.github/workflows/static_checks.yml` (Existing)
-- **Purpose:** Code quality (gdformat, gdlint, gdradon)
-- **Scope:** `godot_project/scripts/` directory
-- **Complements:** Automated tests with static analysis
+**Workflow:** `.github/workflows/static_checks.yml` (Legacy - can be deprecated)
+- **Status:** Superseded by integrated workflow above
+- **Recommendation:** Remove to avoid duplicate checks
 
 ### Manual Testing Requirements
 
@@ -485,10 +498,11 @@ godot --headless --script res://tests/run_tests.gd
 - **Exit Codes:** Test runner must exit with code 0 (pass) or 1 (fail)
 
 #### Merge Requirements
-- ✅ All unit tests pass
-- ✅ Static checks pass (gdformat, gdlint, gdradon)
-- ✅ No new orphan nodes warnings
-- ✅ Code review approval (for team contributions)
+- ✅ **Static Code Analysis:** All checks pass (gdformat, gdlint, gdradon)
+- ✅ **Unit Tests:** All automated tests pass (GUT test suite)
+- ✅ **No Regressions:** No new orphan nodes warnings
+- ✅ **Code Review:** Approval required for team contributions
+- ✅ **GitHub Actions:** Both workflow jobs must complete successfully
 
 ### Testing Best Practices
 
