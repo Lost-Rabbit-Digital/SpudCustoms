@@ -1068,10 +1068,10 @@ func update_potato_info_display():
 		
 		# FIXED: Include race/type information clearly
 		$Gameplay/InteractiveElements/Passport/OpenPassport/PotatoInfo.text = """Type: {race}
-Date of Birth: {date_of_birth}
-Gender: {sex} 
+Born: {date_of_birth}
+Gender: {sex}
 Country: {country_of_issue}
-Expires: {expiration_date} 
+Expires: {expiration_date}
 Condition: {condition}
 		""".format(display_info)
 	else:

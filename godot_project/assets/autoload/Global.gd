@@ -6,6 +6,7 @@ var difficulty_level = "Normal" # Can be "Easy", "Normal", or "Expert"
 var build_type = "Full Release" # Can be Full Release or Demo Release
 var base_quota_target = 8 # Quota scaling variable
 var game_mode = "score_attack"
+var narrative_choices: Dictionary = {}  # Track player's narrative choices
 # Transient variables
 var shift: int = 0
 var final_score = 0
@@ -229,22 +230,30 @@ func reset_shift_stats():
 
 # Save and Load Handling - Now using SaveManager
 func save_game_state():
+	# Capture current narrative choices from Dialogic before saving
+	capture_narrative_choices()
+
 	var data = {
 		"shift": shift,
 		"difficulty_level": difficulty_level,
 		"high_scores": high_scores,
 		"story_state": current_story_state,
+		"narrative_choices": narrative_choices,
 	}
-	
+
 	SaveManager.save_game_state(data)
 
 func load_game_state():
 	var data = SaveManager.load_game_state()
-	
+
 	# Load the data if we got any
 	if not data.is_empty():
 		high_scores = data.get("high_scores", {"Easy": 0, "Normal": 0, "Expert": 0})
 		current_story_state = data.get("story_state", 0)
+		narrative_choices = data.get("narrative_choices", {})
+
+		# Restore narrative choices to Dialogic
+		restore_narrative_choices()
 
 
 # Modify get_high_score to be more flexible
@@ -346,3 +355,48 @@ func format_score(value: int) -> String:
 func reset_all():
 	SaveManager.reset_all_game_data(false)
 	reset_game_state(false)
+
+# Narrative Choice Persistence Functions
+func capture_narrative_choices():
+	"""Capture current Dialogic variables and store them for persistence"""
+	if not Dialogic:
+		return
+
+	# Get all Dialogic variables related to story choices
+	var important_vars = [
+		"cafeteria_response",
+		"critical_choice",
+		"ending_choice",
+		"family_response",
+		"fellow_officer_response",
+		"final_decision",
+		"hide_choice",
+		"initial_response",
+		"interrogation_choice",
+		"interrogation_response",
+		"loyalty_response",
+		"resistance_mission",
+		"resistance_trust",
+		"reveal_reaction",
+		"sasha_investigation",
+		"sasha_plan_response",
+		"sasha_response",
+		"scanner_response",
+		"yellow_badge_response",
+	]
+
+	for var_name in important_vars:
+		if Dialogic.VAR.has(var_name):
+			narrative_choices[var_name] = Dialogic.VAR.get(var_name)
+
+	print("Captured narrative choices: ", narrative_choices)
+
+func restore_narrative_choices():
+	"""Restore saved narrative choices back to Dialogic variables"""
+	if not Dialogic or narrative_choices.is_empty():
+		return
+
+	for var_name in narrative_choices.keys():
+		Dialogic.VAR.set(var_name, narrative_choices[var_name])
+
+	print("Restored narrative choices: ", narrative_choices)
