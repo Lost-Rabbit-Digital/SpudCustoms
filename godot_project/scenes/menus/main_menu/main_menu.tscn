@@ -14,12 +14,12 @@ credits_packed_scene = ExtResource("3_vmius")
 
 [node name="MenuContainer_MenuButtonsMargin_IconsContainer_HBoxContainer_VBoxContainer#TextureButton" type="TextureButton" parent="." index="0"]
 custom_minimum_size = Vector2(0, 32)
-layout_mode = 2
+layout_mode = 0
 texture_normal = ExtResource("5_x31ro")
 texture_hover = ExtResource("6_x31ro")
 stretch_mode = 0
 
 [node name="MenuContainer_MenuButtonsMargin_IconsContainer_HBoxContainer#VBoxContainer" type="VBoxContainer" parent="." index="2"]
 custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
+layout_mode = 0
 alignment = 1

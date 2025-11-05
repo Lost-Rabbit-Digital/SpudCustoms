@@ -223,6 +223,7 @@ character_generator = NodePath("Gameplay/MugshotPhotoGenerator")
 [node name="UI" type="Control" parent="."]
 z_as_relative = false
 layout_mode = 3
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
@@ -376,11 +377,13 @@ metadata/_edit_use_anchors_ = true
 
 [node name="SystemManagers" type="Control" parent="."]
 layout_mode = 3
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Timers" type="Control" parent="SystemManagers"]
 layout_mode = 1
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
@@ -467,6 +470,7 @@ position = Vector2(0, 1)
 [node name="Gameplay" type="Control" parent="."]
 z_as_relative = false
 layout_mode = 3
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
@@ -547,7 +551,6 @@ position = Vector2(76, 90)
 scale = Vector2(0.975, 1)
 
 [node name="PotatoHeader" type="Label" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
-anchors_preset = -1
 offset_left = -103.0
 offset_top = 20.0
 offset_right = 13.0
@@ -559,7 +562,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PotatoInfo" type="Label" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
-anchors_preset = -1
 offset_left = -110.0
 offset_top = 47.0
 offset_right = 33.0
@@ -584,7 +586,6 @@ visible = false
 [node name="OpenReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements/LawReceipt"]
 
 [node name="ReceiptNote" type="RichTextLabel" parent="Gameplay/InteractiveElements/LawReceipt/OpenReceipt"]
-anchors_preset = -1
 offset_left = -88.0
 offset_top = -107.0
 offset_right = 89.0
@@ -610,7 +611,6 @@ scale = Vector2(2.45, 2.45)
 texture = ExtResource("14_ynnf6")
 
 [node name="MegaphoneInteractionButton" type="TextureButton" parent="Gameplay/InteractiveElements/Megaphone"]
-anchors_preset = -1
 offset_left = -8.97958
 offset_top = -8.16327
 offset_right = 11.0204

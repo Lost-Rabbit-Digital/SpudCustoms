@@ -270,6 +270,9 @@ func load_game_state():
 		if has_node("/root/NarrativeManager") and data.has("narrative_choices"):
 			var narrative_manager = get_node("/root/NarrativeManager")
 			narrative_manager.load_narrative_choices(data.get("narrative_choices", {}))
+		total_shifts_completed = data.get("total_shifts_completed", 0)
+		total_runners_stopped = data.get("total_runners_stopped", 0)
+		perfect_hits = data.get("perfect_hits", 0)
 
 
 # Modify get_high_score to be more flexible

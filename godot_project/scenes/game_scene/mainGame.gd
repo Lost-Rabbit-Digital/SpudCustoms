@@ -470,6 +470,13 @@ func end_shift(success: bool = true):
 
 		Analytics.track_shift_completed(Global.shift, success, Global.score)
 
+		# Increment total shifts completed for achievements
+		Global.total_shifts_completed += 1
+		print("Total shifts completed: ", Global.total_shifts_completed)
+
+		# Check and update achievements
+		Global.check_achievements()
+		Global.update_steam_stats()
 
 		# Setting high score for current level and difficulty
 		print("Setting high score of: ", Global.score, " for : ", current_shift, " and difficulty level", difficulty_level)
@@ -648,6 +655,11 @@ func _on_shift_summary_restart():
 func _on_shift_summary_main_menu():
 	# Save state before transitioning to main menu
 	GlobalState.save()
+
+	# Stop all Dialogic audio to prevent music from continuing in main menu
+	Dialogic.Audio.stop_all_channels()
+	Dialogic.Audio.stop_all_one_shot_sounds()
+
 	fade_transition()
 	# Access SceneLoader directly
 	push_warning("Using direct change_scene_to_file, SceneLoader not working as expected.")

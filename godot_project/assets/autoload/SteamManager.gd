@@ -253,8 +253,9 @@ func request_leaderboard_entries(difficulty: String = "Normal", shift: int = -1)
 		return false
 	
 	# Don't allow multiple requests at once
-	if is_fetching_leaderboard && current_leaderboard_state != LeaderboardState.IDLE:
-		LogManager.write_warning("Leaderboard operation already in progress, cannot request entries")
+	if is_fetching_leaderboard:
+		LogManager.write_warning("Leaderboard operation already in progress (state: " +
+			LeaderboardState.keys()[current_leaderboard_state] + "), cannot request entries")
 		emit_signal("leaderboard_updated", cached_leaderboard_entries) # Return cached entries
 		return false
 	
@@ -351,11 +352,13 @@ func _on_leaderboard_find_result(handle: int, found: bool) -> void:
 		"timestamp": Time.get_unix_time_from_system()
 	}
 	
-	# Verify current state
+	# Verify current state - but be forgiving about timeouts
 	if current_leaderboard_state != LeaderboardState.FINDING:
-		LogManager.write_warning("Unexpected leaderboard_find_result callback in state: " + 
-							  LeaderboardState.keys()[current_leaderboard_state])
-		return
+		LogManager.write_warning("Unexpected leaderboard_find_result callback in state: " +
+							  LeaderboardState.keys()[current_leaderboard_state] +
+							  " - possibly due to timeout, but processing anyway")
+		# Don't return - process the callback anyway since Steam did respond
+		# This handles the case where UI timeout fired but Steam callback arrived later
 	
 	# Handle failure
 	if handle == 0 || !found:
@@ -596,7 +599,4 @@ func reset_leaderboard_state():
 	current_leaderboard_state = LeaderboardState.IDLE
 	is_fetching_leaderboard = false
 	_clear_pending_leaderboard_operations()
-	
-	# Wait a frame and try again
-	await get_tree().process_frame
 	return true

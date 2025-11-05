@@ -249,3 +249,5 @@ Use OGV video files for the artwork from StagNation to play more easily within S
 - Added state logging to debug message
 - More consistent rejection of duplicate requests
 - Leaderboards not loading as expected on 1.1 Steam in public_test, troubleshoot ASAP, blocking full release
+# Completed
+## === 1.1.2 ===

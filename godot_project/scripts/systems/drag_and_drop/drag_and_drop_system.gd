@@ -249,6 +249,9 @@ func _handle_mouse_press(mouse_position: Vector2) -> bool:
 
 			emit_signal("item_dragged", dragged_item)
 
+			# Clear hovered_item so cursor updates properly after release
+			hovered_item = null
+
 			# Update cursor to "grab" when starting to drag
 			if cursor_manager:
 				cursor_manager.update_cursor("grab")
@@ -589,34 +592,26 @@ func find_topmost_item_at(pos: Vector2) -> Node2D:
 	if not is_instance_valid(_stamp_bar_controller):
 		_stamp_bar_controller = get_stamp_bar_controller()
 
-	# TODO: This is broken, it doesn't properly check for the stamps
-	# Check if mouse is over approval or rejection stamp button
+	# Check if mouse is over the stamp bar area when it's visible
 	if is_instance_valid(_stamp_bar_controller) and _stamp_bar_controller.is_visible:
-		var approval_stamp = _stamp_bar_controller.get_node_or_null(
-			"StampBar/ApprovalStamp/TextureButton"
-		)
-		var rejection_stamp = _stamp_bar_controller.get_node_or_null(
-			"StampBar/RejectionStamp/TextureButton"
-		)
+		# Get the stamp bar node and check if we're over it
+		var stamp_bar = _stamp_bar_controller.get_node_or_null("StampBar")
+		if is_instance_valid(stamp_bar):
+			# Check if position is within the stamp bar's bounds
+			var local_pos = stamp_bar.to_local(pos)
+			if stamp_bar.get_rect().has_point(local_pos):
+				return null  # Mouse is over stamp bar, don't allow picking up documents
 
-		# Check for approval stamp hit
-		if is_instance_valid(approval_stamp) and approval_stamp.visible:
-			if approval_stamp.get_global_rect().has_point(pos):
-				return null  # Mouse is over approval stamp, don't consider it draggable
-
-		# Check for rejection stamp hit
-		if is_instance_valid(rejection_stamp) and rejection_stamp.visible:
-			if rejection_stamp.get_global_rect().has_point(pos):
-				return null  # Mouse is over rejection stamp, don't consider it draggable
-
-	# Regular draggable item finding logic
+	# Regular draggable item finding logic - now properly uses z-index
 	var topmost_item = null
-	var highest_z = -1
+	var highest_z = -999999  # Start with very low value
 
 	for item in draggable_items:
 		if item.visible and item.get_rect().has_point(item.to_local(pos)):
-			#highest_z = item.z_index
-			topmost_item = item
+			# Check if this item has a higher z-index than current topmost
+			if item.z_index > highest_z:
+				highest_z = item.z_index
+				topmost_item = item
 
 	return topmost_item
 

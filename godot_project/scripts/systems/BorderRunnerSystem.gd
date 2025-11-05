@@ -288,6 +288,13 @@ func _ready():
 		add_child(smoke)
 		smoke_particle_pool.append(smoke)
 
+	# Register missile zone callback with cursor manager
+	var cursor_manager = get_node_or_null("/root/CursorManager")
+	if cursor_manager:
+		cursor_manager.register_missile_zone_callback(is_point_in_missile_zone)
+	else:
+		push_warning("BorderRunnerSystem: Could not find CursorManager for missile cursor")
+
 
 func _process(delta):
 	if not is_enabled or is_in_dialogic:
@@ -1130,6 +1137,9 @@ func handle_successful_hit(runner, explosion_pos):
 	# Track globally for achievements
 	Global.total_runners_stopped += 1
 
+	# Track global stats for achievements
+	Global.total_runners_stopped += 1
+
 	runner_streak += 1
 	var points_earned = runner_base_points
 	var bonus_text = ""
@@ -1148,6 +1158,7 @@ func handle_successful_hit(runner, explosion_pos):
 		# Update shift stats for perfect hits
 		shift_stats.perfect_hits += 1
 		# Track globally for achievements
+		# Track global stats for achievements
 		Global.perfect_hits += 1
 		# Spawn even more gibs on a perfect hit
 		spawn_gibs(runner.global_position)
@@ -1165,14 +1176,27 @@ func handle_successful_hit(runner, explosion_pos):
 		score_label.text = tr("ui_score").format({"score": str(Global.score)})
 
 	# Remove a strike if any present
+	var strike_removed = false
 	if Global.strikes > 0:
 		Global.strikes -= 1
+		strike_removed = true
 		bonus_text += tr("alert_strike_removed")
+
+	# Only show strike removed message if we actually removed a strike
+	var final_message = ""
+	if strike_removed:
+		final_message = "{bonus} +{points} points!".format({"bonus": bonus_text, "points": points_earned})
+	else:
+		# Don't include strike removed text if we didn't remove a strike
+		final_message = "+{points} points!".format({"points": points_earned})
+		if runner_streak > 1:
+			var streak_points = streak_bonus * (runner_streak - 1)
+			final_message = tr("alert_combo").format({"mult": runner_streak, "streak": streak_points}) + " " + final_message
 
 	Global.display_green_alert(
 		alert_label,
 		alert_timer,
-		"{bonus} +{points} points!".format({"bonus": bonus_text, "points": points_earned})
+		final_message
 	)
 
 	if strike_label:
@@ -1326,3 +1350,16 @@ func get_missile_zone() -> Rect2:
 			combined_rect = combined_rect.merge(rect2)
 
 	return combined_rect
+
+
+## Check if a point is within the missile zone (for cursor targeting)
+func is_point_in_missile_zone(point: Vector2) -> bool:
+	# Don't show target cursor if system is disabled or in dialogue
+	if not is_enabled or is_in_dialogic:
+		return false
+
+	var zone = get_missile_zone()
+	if zone.size == Vector2.ZERO:
+		return false
+
+	return zone.has_point(point)
