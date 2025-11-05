@@ -112,6 +112,10 @@ func start_level_end_dialogue(level_id: int):
 func _on_end_dialogue_finished():
 	print("End dialogue finished, calling cleanup")
 	dialogue_active = false
+
+	# Capture narrative choices after end dialogue
+	Global.capture_narrative_choices()
+
 	cleanup_skip_buttons()
 	emit_signal("end_dialogue_finished")
 
@@ -200,6 +204,10 @@ func _on_shift_dialogue_finished():
 
 	dialogue_active = false
 	current_shift += 1
+
+	# Capture narrative choices before advancing state
+	Global.capture_narrative_choices()
+
 	Global.advance_story_state()
 	cleanup_skip_buttons()
 	emit_signal("dialogue_finished")
@@ -207,6 +215,10 @@ func _on_shift_dialogue_finished():
 
 func _on_final_dialogue_finished():
 	dialogue_active = false
+
+	# Capture narrative choices for the final ending
+	Global.capture_narrative_choices()
+
 	Global.advance_story_state()  # Will set to COMPLETED
 	cleanup_skip_buttons()
 	emit_signal("dialogue_finished")
