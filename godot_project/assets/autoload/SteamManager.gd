@@ -41,6 +41,12 @@ signal steam_status_changed(connected: bool)
 
 
 func _ready():
+	# Skip Steam initialization in DEV_MODE
+	if Global.DEV_MODE:
+		LogManager.write_info("DEV_MODE enabled - Skipping Steam initialization.")
+		emit_signal("steam_status_changed", false)
+		return
+
 	# Initialize Steam connection
 	if not Steam.isSteamRunning():
 		LogManager.write_error("Steam is not running. Steam features will be disabled.")

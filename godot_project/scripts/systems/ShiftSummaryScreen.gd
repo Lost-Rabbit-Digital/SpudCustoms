@@ -22,8 +22,8 @@ func _init():
 
 
 func _ready():
-	# Connect to Steam manager signals
-	if SteamManager:
+	# Connect to Steam manager signals (skip in DEV_MODE)
+	if not Global.DEV_MODE and SteamManager:
 		if not SteamManager.leaderboard_updated.is_connected(_on_leaderboard_updated):
 			SteamManager.leaderboard_updated.connect(_on_leaderboard_updated)
 		if not SteamManager.score_submitted.is_connected(_on_score_submitted):
@@ -93,6 +93,16 @@ func _on_steam_status_changed(connected: bool):
 
 
 func _check_steam_status():
+	# Skip Steam checks in DEV_MODE
+	if Global.DEV_MODE:
+		steam_status_ok = false
+		if $SubmitScoreButton:
+			$SubmitScoreButton.disabled = true
+			$SubmitScoreButton.text = "Dev Mode"
+		if $LeaderboardPanel/Entries:
+			$LeaderboardPanel/Entries.text = "DEV_MODE - Steam features disabled"
+		return
+
 	# Check if Steam is running and connected
 	var steam_running = Steam.isSteamRunning()
 	var steam_logged_on = Steam.loggedOn()

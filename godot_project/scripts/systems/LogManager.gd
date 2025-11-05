@@ -46,11 +46,13 @@ func initialize():
 		write_info("Log system initialized. Game version: " + Engine.get_version_info().string)
 		write_info("System info: " + OS.get_name() + ", " + OS.get_processor_name())
 
-		# Log Steam status on startup
-		if DEBUG_STEAM:
+		# Log Steam status on startup (skip in DEV_MODE)
+		if DEBUG_STEAM and not Global.DEV_MODE:
 			write_info("Steam running: " + str(Steam.isSteamRunning()))
 			write_info("Steam initialized: " + str(Steam.steamInit()))
 			write_info("Steam user ID: " + str(Steam.getSteamID()))
+		elif Global.DEV_MODE:
+			write_info("DEV_MODE enabled - Steam debugging skipped")
 
 		# Set up error handling
 		print_rich("[color=yellow]Log Manager: Log file created at ", _log_file_path, "[/color]")

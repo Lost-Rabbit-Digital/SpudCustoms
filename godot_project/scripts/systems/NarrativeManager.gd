@@ -171,6 +171,11 @@ func _on_skip_button_pressed():
 func _on_dialogic_signal(argument):
 	if argument == "credits_ready":
 		get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
+
+	# Skip Steam achievements in DEV_MODE
+	if Global.DEV_MODE:
+		return
+
 	if argument == "born_diplomat":
 		Steam.setAchievement(ACHIEVEMENTS.BORN_DIPLOMAT)
 	if argument == "tater_of_justice":

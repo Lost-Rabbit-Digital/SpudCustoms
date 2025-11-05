@@ -1,5 +1,8 @@
 extends Node
 
+# Development mode - Set to true to disable Steam functionality
+const DEV_MODE = false  # Set to true to skip all Steam features
+
 # Persistent variables
 var current_story_state: int = 0
 var difficulty_level = "Normal"  # Can be "Easy", "Normal", or "Expert"
@@ -47,10 +50,12 @@ func _ready():
 	score = final_score
 
 	# Check for and download cloud saves when game starts
-	if Steam.isSteamRunning():
+	if not DEV_MODE and Steam.isSteamRunning():
 		#SteamManager.download_cloud_saves()
 		LogManager.write_info("Steam is running.")
 		pass
+	elif DEV_MODE:
+		LogManager.write_info("DEV_MODE enabled - Steam features disabled.")
 
 	# Load saved game state (but defer narrative choice restoration)
 	load_game_state()
