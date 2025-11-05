@@ -239,7 +239,15 @@ func save_game_state():
 		"high_scores": high_scores,
 		"story_state": current_story_state,
 		"narrative_choices": narrative_choices,
+		"total_shifts_completed": total_shifts_completed,
+		"total_runners_stopped": total_runners_stopped,
+		"perfect_hits": perfect_hits,
 	}
+
+	# Save narrative choices if NarrativeManager exists
+	if has_node("/root/NarrativeManager"):
+		var narrative_manager = get_node("/root/NarrativeManager")
+		data["narrative_choices"] = narrative_manager.save_narrative_choices()
 
 	SaveManager.save_game_state(data)
 
@@ -254,6 +262,14 @@ func load_game_state():
 
 		# Restore narrative choices to Dialogic
 		restore_narrative_choices()
+		total_shifts_completed = data.get("total_shifts_completed", 0)
+		total_runners_stopped = data.get("total_runners_stopped", 0)
+		perfect_hits = data.get("perfect_hits", 0)
+
+		# Load narrative choices if NarrativeManager exists
+		if has_node("/root/NarrativeManager") and data.has("narrative_choices"):
+			var narrative_manager = get_node("/root/NarrativeManager")
+			narrative_manager.load_narrative_choices(data.get("narrative_choices", {}))
 
 
 # Modify get_high_score to be more flexible

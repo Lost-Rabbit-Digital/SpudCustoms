@@ -117,6 +117,8 @@ func _on_end_dialogue_finished():
 	Global.capture_narrative_choices()
 
 	cleanup_skip_buttons()
+	# Save narrative choices after dialogue completes
+	Global.save_game_state()
 	emit_signal("end_dialogue_finished")
 
 
@@ -290,3 +292,42 @@ func fade_transition(fade_in: bool, callback: Callable):
 			if not fade_in:
 				fade_layer.queue_free()
 	)
+
+
+# Save all Dialogic variables (narrative choices)
+func save_narrative_choices() -> Dictionary:
+	var choices = {}
+
+	# List of all narrative choice variables used in the game
+	var choice_variables = [
+		"initial_response",
+		"scanner_response",
+		"family_response",
+		"cafeteria_response",
+		"reveal_reaction",
+		"hide_choice",
+		"fellow_officer_response_2",
+		"final_mission_response",
+		"stay_or_go",
+		"resistance_trust",
+		"ending_choice"
+	]
+
+	# Save each variable if it exists in Dialogic
+	for var_name in choice_variables:
+		if Dialogic.VAR.has(var_name):
+			choices[var_name] = Dialogic.VAR.get(var_name)
+
+	return choices
+
+
+# Load Dialogic variables (narrative choices)
+func load_narrative_choices(choices: Dictionary) -> void:
+	if choices.is_empty():
+		return
+
+	# Restore each saved variable to Dialogic
+	for var_name in choices.keys():
+		Dialogic.VAR.set(var_name, choices[var_name])
+
+	print("Loaded ", choices.size(), " narrative choices")

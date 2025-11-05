@@ -458,22 +458,29 @@ func end_shift(success: bool = true):
 		# Add survival bonus
 		var survival_bonus = 500
 		Global.display_green_alert(
-			alert_label, 
-			alert_timer, 
+			alert_label,
+			alert_timer,
 			tr("alert_quota_met").format({"bonus": str(survival_bonus)})
 		)
 		Global.add_score(survival_bonus)
-				
+
 		# Lower the shutter with animation when successful
 		if not office_shutter_controller.shutter_opened_this_shift:
 			office_shutter_controller.lower_shutter(1.0)
-		
+
 		Analytics.track_shift_completed(Global.shift, success, Global.score)
 
-		
+
 		# Setting high score for current level and difficulty
 		print("Setting high score of: ", Global.score, " for : ", current_shift, " and difficulty level", difficulty_level)
 		GameState.set_high_score(current_shift, Global.difficulty_level, Global.score)
+
+		# Increment total shifts completed for achievements
+		Global.total_shifts_completed += 1
+
+		# Check and update achievements
+		Global.check_achievements()
+		Global.update_steam_stats()
 	
 	GlobalState.save()
 	
