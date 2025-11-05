@@ -1,0 +1,17 @@
+{
+  "dirs": ["res://tests/unit", "res://tests/integration"],
+  "include_subdirs": true,
+  "log_level": 1,
+  "should_exit": true,
+  "should_exit_on_success": true,
+  "should_maximize": false,
+  "compact_mode": false,
+  "hide_orphans": true,
+  "double_strategy": "partial",
+  "pre_run_script": "",
+  "post_run_script": "",
+  "panel_options": {
+    "font_color": "#ffffff",
+    "font_size": 14
+  }
+}
