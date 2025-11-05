@@ -198,11 +198,11 @@ func get_global_high_score(difficulty: String) -> int:
 # Reset all game state data
 func reset_all_game_data(keep_high_scores: bool = true) -> bool:
 	var high_scores = {}
-	
+
 	# Keep high scores if requested
 	if keep_high_scores:
 		high_scores = load_high_scores()
-		
+
 	# Create a fresh game state
 	var game_state = {
 		"shift": 0,
@@ -215,7 +215,11 @@ func reset_all_game_data(keep_high_scores: bool = true) -> bool:
 		"high_scores": high_scores,
 		"story_state": 0,
 		"level_highscores": {},
-		"current_game_stats": {}
+		"current_game_stats": {},
+		"narrative_choices": {},
+		"total_shifts_completed": 0,
+		"total_runners_stopped": 0,
+		"perfect_hits": 0
 	}
-	
+
 	return save_game_state(game_state)

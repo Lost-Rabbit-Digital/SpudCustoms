@@ -1127,6 +1127,8 @@ func handle_successful_hit(runner, explosion_pos):
 
 	# Update stats with successful hits
 	shift_stats.missiles_hit += 1
+	# Track globally for achievements
+	Global.total_runners_stopped += 1
 
 	runner_streak += 1
 	var points_earned = runner_base_points
@@ -1145,6 +1147,8 @@ func handle_successful_hit(runner, explosion_pos):
 			main_game.shake_screen(16.0, 0.4)  # Strong shake for perfect hits
 		# Update shift stats for perfect hits
 		shift_stats.perfect_hits += 1
+		# Track globally for achievements
+		Global.perfect_hits += 1
 		# Spawn even more gibs on a perfect hit
 		spawn_gibs(runner.global_position)
 		points_earned += perfect_hit_bonus
