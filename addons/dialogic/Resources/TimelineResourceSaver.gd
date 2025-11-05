@@ -19,7 +19,7 @@ func _recognize(resource: Resource) -> bool:
 
 
 ## Save the resource
-func _save(resource: Resource, path: String = '', _flags: int = 0) -> Error:
+func _save(resource: Resource, path: String = "", _flags: int = 0) -> Error:
 	if resource.get_meta("timeline_not_saved", false):
 		var timeline_as_text: String = resource.as_text()
 

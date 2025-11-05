@@ -19,10 +19,9 @@ const Z_INDEX = {
 	# Ground-Level Detail Layers
 	# ----------------------------------------------------------------------
 	## Shadows cast by game objects
-	"ENVIRONMENTAL_SHADOWS": null,                
+	"ENVIRONMENTAL_SHADOWS": null,
 	## The main environmental art piece
 	"ENVIRONMENT": 1,
-	
 	# ----------------------------------------------------------------------
 	# Game Object Layers
 	# ----------------------------------------------------------------------
@@ -34,39 +33,35 @@ const Z_INDEX = {
 	"GIBS": 21,
 	## Vehicles on the main road
 	"VEHICLES": 1,
-	
 	# ----------------------------------------------------------------------
 	# Character Layers
 	# ----------------------------------------------------------------------
 	## NPCs that walk/run in the game, also known as "runners"
-	"RUNNER_POTATO": 8,              
+	"RUNNER_POTATO": 8,
 	## The player character(s)
-	"PLAYER": null,                
-	
+	"PLAYER": null,
 	# ----------------------------------------------------------------------
 	# Interactive Environment Layers
 	# ----------------------------------------------------------------------
 	## The main table surface
 	"INSPECTION_TABLE": 2,
 	## Panel which the suspect sits in front of
-	"SUSPECT_PANEL": 0,               
+	"SUSPECT_PANEL": 0,
 	## The suspect which moves through the office
 	"SUSPECT": 1,
 	## The shutter which opens/closes in the office
 	"OFFICE_SHUTTER": 0,
-	
 	# ----------------------------------------------------------------------
 	# Interactive Object Layers
 	# ----------------------------------------------------------------------
 	## Documents which are not actively interacted with
-	"IDLE_DOCUMENT": 3,             
+	"IDLE_DOCUMENT": 3,
 	## Documents which are actively been dragged
 	"OPEN_DRAGGED_DOCUMENT": 4,
 	## Documents which are closed
 	"CLOSED_DRAGGED_DOCUMENT": 25,
-	"STAMPS": null,                # Stamps and inking tools
-	"INKWELL": null,               # Inkwell and other similar desk tools
-	
+	"STAMPS": null,  # Stamps and inking tools
+	"INKWELL": null,  # Inkwell and other similar desk tools
 	# ----------------------------------------------------------------------
 	# Visual Effect Layers
 	# ----------------------------------------------------------------------
@@ -79,31 +74,30 @@ const Z_INDEX = {
 	"FOOTPRINTS": 0,
 	## Smoke from the misisles
 	"MISSILE_SMOKE": 7,
-	
 	# ----------------------------------------------------------------------
 	# User Interface Layers (high values to always appear on top)
 	# ----------------------------------------------------------------------
-	"LABELS": null,         # UI panel backgrounds
-	"UI_BACKGROUND": null,         # UI panel backgrounds
-	"UI_ELEMENTS": null,          # Standard UI elements
-	"UI_FOREGROUND": null,        # UI elements that should appear in front of others
-	"TOOLTIPS": null,             # Tooltip popups
-	"CURSOR": null,               # Custom mouse cursor
-	"SCREEN_BORDERS": 20,       # Border elements framing the screen
-	
+	"LABELS": null,  # UI panel backgrounds
+	"UI_BACKGROUND": null,  # UI panel backgrounds
+	"UI_ELEMENTS": null,  # Standard UI elements
+	"UI_FOREGROUND": null,  # UI elements that should appear in front of others
+	"TOOLTIPS": null,  # Tooltip popups
+	"CURSOR": null,  # Custom mouse cursor
+	"SCREEN_BORDERS": 20,  # Border elements framing the screen
 	# ----------------------------------------------------------------------
 	# Top-Level Game Elements
 	# ----------------------------------------------------------------------
-	"DIALOGUE": null,             # Dialogue boxes and text
-	"NOTIFICATIONS": null,        # Popup notifications and alerts
-	"PAUSE_MENU": null,           # Pause menu (appears above everything else)
-	"TRANSITION_EFFECTS": null,   # Scene transition effects
-	"DEBUG_OVERLAY": null        # Debug information (highest z-index)
+	"DIALOGUE": null,  # Dialogue boxes and text
+	"NOTIFICATIONS": null,  # Popup notifications and alerts
+	"PAUSE_MENU": null,  # Pause menu (appears above everything else)
+	"TRANSITION_EFFECTS": null,  # Scene transition effects
+	"DEBUG_OVERLAY": null  # Debug information (highest z-index)
 }
 
 # ------------------------------------------------------------------------------
 # Helper functions for commonly used z-index operations
 # ------------------------------------------------------------------------------
+
 
 ## Returns the z-index value for a specified layer
 func get_z_index(layer_name: String) -> int:
@@ -113,29 +107,34 @@ func get_z_index(layer_name: String) -> int:
 		push_error("Z_INDEX: Requested layer '" + layer_name + "' does not exist")
 		return 0
 
+
 ## Returns a z-index value slightly above the specified layer
 ## Useful for making sure something appears just above another object
 func above(layer_name: String, offset: int = 1) -> int:
 	return get_z_index(layer_name) + offset
+
 
 # Returns a z-index value slightly below the specified layer
 # Useful for making sure something appears just below another object
 func below(layer_name: String, offset: int = 1) -> int:
 	return get_z_index(layer_name) - offset
 
+
 # ------------------------------------------------------------------------------
 # Debugging functions
 # ------------------------------------------------------------------------------
+
 
 ## Prints all z-index values in a formatted way for debugging
 func print_all_layers() -> void:
 	print("\n=== Z-INDEX LAYERS ===")
 	var keys = Z_INDEX.keys()
 	keys.sort_custom(Callable(self, "_sort_by_value"))
-	
+
 	for key in keys:
 		print("%4d : %s" % [Z_INDEX[key], key])
 	print("=====================\n")
+
 
 ## Custom sort function for sorting keys by their z-index values
 func _sort_by_value(a: String, b: String) -> bool:

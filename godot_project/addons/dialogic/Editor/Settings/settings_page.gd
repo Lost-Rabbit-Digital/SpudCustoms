@@ -3,7 +3,8 @@ extends Control
 class_name DialogicSettingsPage
 
 @export_multiline var short_info := ""
-@onready var settings_editor: Control = find_parent('Settings')
+@onready var settings_editor: Control = find_parent("Settings")
+
 
 ## Called to get the title of the page
 func _get_title() -> String:

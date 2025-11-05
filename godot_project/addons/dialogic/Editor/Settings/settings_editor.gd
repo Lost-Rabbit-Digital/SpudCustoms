@@ -24,10 +24,18 @@ func _ready() -> void:
 	if get_parent() is SubViewport:
 		return
 
-	register_settings_section("res://addons/dialogic/Editor/Settings/CoreSettingsPages/settings_general.tscn")
-	register_settings_section("res://addons/dialogic/Editor/Settings/CoreSettingsPages/settings_editor.tscn")
-	register_settings_section("res://addons/dialogic/Editor/Settings/CoreSettingsPages/settings_translation.tscn")
-	register_settings_section("res://addons/dialogic/Editor/Settings/CoreSettingsPages/settings_modules.tscn")
+	register_settings_section(
+		"res://addons/dialogic/Editor/Settings/CoreSettingsPages/settings_general.tscn"
+	)
+	register_settings_section(
+		"res://addons/dialogic/Editor/Settings/CoreSettingsPages/settings_editor.tscn"
+	)
+	register_settings_section(
+		"res://addons/dialogic/Editor/Settings/CoreSettingsPages/settings_translation.tscn"
+	)
+	register_settings_section(
+		"res://addons/dialogic/Editor/Settings/CoreSettingsPages/settings_modules.tscn"
+	)
 
 	for indexer in DialogicUtil.get_indexers():
 		for settings_page in indexer._get_settings_pages():
@@ -38,7 +46,7 @@ func _ready() -> void:
 	%SettingsContent.get_child(0).show()
 
 
-func register_settings_section(path:String) -> void:
+func register_settings_section(path: String) -> void:
 	var section: Control = load(path).instantiate()
 	registered_sections.append(section)
 
@@ -52,30 +60,28 @@ func add_registered_sections() -> void:
 	for i in %SettingsContent.get_children():
 		i.queue_free()
 
-
 	registered_sections.sort_custom(section_sort)
 	for section in registered_sections:
-
 		section.name = section._get_title()
 
 		var vbox := VBoxContainer.new()
-		vbox.set_meta('section', section)
+		vbox.set_meta("section", section)
 		vbox.size_flags_vertical = Control.SIZE_EXPAND_FILL
 		vbox.name = section.name
 		var hbox := HBoxContainer.new()
 
 		var title := Label.new()
 		title.text = section.name
-		title.theme_type_variation = 'DialogicSectionBig'
+		title.theme_type_variation = "DialogicSectionBig"
 		hbox.add_child(title)
 		vbox.add_child(hbox)
 
-
 		if !section.short_info.is_empty():
-			var tooltip_hint: Control = load("res://addons/dialogic/Editor/Common/hint_tooltip_icon.tscn").instantiate()
+			var tooltip_hint: Control = (
+				load("res://addons/dialogic/Editor/Common/hint_tooltip_icon.tscn").instantiate()
+			)
 			tooltip_hint.hint_text = section.short_info
 			hbox.add_child(tooltip_hint)
-
 
 		var scroll := ScrollContainer.new()
 		scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -90,7 +96,6 @@ func add_registered_sections() -> void:
 		if section.size_flags_vertical == Control.SIZE_EXPAND_FILL:
 			panel.size_flags_vertical = Control.SIZE_EXPAND_FILL
 		inner_vbox.add_child(panel)
-
 
 		var info_section: Control = section._get_info_section()
 		if info_section != null:
@@ -109,19 +114,24 @@ func add_registered_sections() -> void:
 		panel.add_child(section)
 		vbox.add_child(scroll)
 
-
 		var button := Button.new()
-		button.text = " "+section.name
+		button.text = " " + section.name
 		button.tooltip_text = section.name
 		button.toggle_mode = true
 		button.button_group = button_group
 		button.expand_icon = true
 		button.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		button.flat = true
-		button.add_theme_color_override('font_pressed_color', get_theme_color("property_color_z", "Editor"))
-		button.add_theme_color_override('font_hover_color', get_theme_color('warning_color', 'Editor'))
-		button.add_theme_color_override('font_focus_color', get_theme_color('warning_color', 'Editor'))
-		button.add_theme_stylebox_override('focus', StyleBoxEmpty.new())
+		button.add_theme_color_override(
+			"font_pressed_color", get_theme_color("property_color_z", "Editor")
+		)
+		button.add_theme_color_override(
+			"font_hover_color", get_theme_color("warning_color", "Editor")
+		)
+		button.add_theme_color_override(
+			"font_focus_color", get_theme_color("warning_color", "Editor")
+		)
+		button.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
 		button.pressed.connect(open_tab.bind(vbox))
 		if section._is_feature_tab():
 			%FeatureTabs.add_child(button)
@@ -134,14 +144,14 @@ func add_registered_sections() -> void:
 		%SettingsContent.add_child(vbox)
 
 
-func open_tab(tab_to_show:Control) -> void:
+func open_tab(tab_to_show: Control) -> void:
 	for tab in %SettingsContent.get_children():
 		tab.hide()
 
 	tab_to_show.show()
 
 
-func section_sort(item1:DialogicSettingsPage, item2:DialogicSettingsPage) -> bool:
+func section_sort(item1: DialogicSettingsPage, item2: DialogicSettingsPage) -> bool:
 	if !item1._is_feature_tab() and item2._is_feature_tab():
 		return true
 	if item1._get_priority() > item2._get_priority():
@@ -149,8 +159,7 @@ func section_sort(item1:DialogicSettingsPage, item2:DialogicSettingsPage) -> boo
 	return false
 
 
-
-func _open(extra_information:Variant = null) -> void:
+func _open(extra_information: Variant = null) -> void:
 	refresh()
 	if typeof(extra_information) == TYPE_STRING:
 		if %SettingsContent.has_node(extra_information):
@@ -159,11 +168,11 @@ func _open(extra_information:Variant = null) -> void:
 
 func _close() -> void:
 	for child in %SettingsContent.get_children():
-		if child.get_meta('section').has_method('_about_to_close'):
-			child.get_meta('section')._about_to_close()
+		if child.get_meta("section").has_method("_about_to_close"):
+			child.get_meta("section")._about_to_close()
 
 
 func refresh() -> void:
 	for child in %SettingsContent.get_children():
-		if child.get_meta('section').has_method('_refresh'):
-			child.get_meta('section')._refresh()
+		if child.get_meta("section").has_method("_refresh"):
+			child.get_meta("section")._refresh()

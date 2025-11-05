@@ -15,16 +15,16 @@ func _ready() -> void:
 		return
 
 	DialogicUtil.autoload().Text.about_to_show_text.connect(_on_dialogic_text_event)
-	$Example/CRT.position = $Example.get_viewport_rect().size/2
+	$Example/CRT.position = $Example.get_viewport_rect().size / 2
 
-	if not has_node('TextBubbleLayer'):
+	if not has_node("TextBubbleLayer"):
 		return
 
 	if len(bubbles) < bubble_count:
 		add_bubble()
 
 
-func register_character(character:Variant, node:Node):
+func register_character(character: Variant, node: Node):
 	if typeof(character) == TYPE_STRING:
 		var character_string: String = character
 		if character.begins_with("res://"):
@@ -32,7 +32,11 @@ func register_character(character:Variant, node:Node):
 		else:
 			character = DialogicResourceUtil.get_character_resource(character)
 		if not character:
-			printerr("[Dialogic] Textbubble: Tried registering character from invalid string '", character_string, "'.")
+			printerr(
+				"[Dialogic] Textbubble: Tried registering character from invalid string '",
+				character_string,
+				"'."
+			)
 
 	registered_characters[character] = node
 	if len(registered_characters) > len(bubbles) and len(bubbles) < bubble_count:
@@ -51,14 +55,14 @@ func _load_persistent_info(info: Dictionary) -> void:
 
 
 func add_bubble() -> void:
-	if not has_node('TextBubbleLayer'):
+	if not has_node("TextBubbleLayer"):
 		return
 
 	var new_bubble: Control = get_node("TextBubbleLayer").add_bubble()
 	bubbles.append(new_bubble)
 
 
-func _on_dialogic_text_event(info:Dictionary):
+func _on_dialogic_text_event(info: Dictionary):
 	var bubble_to_use: Node
 	for bubble in bubbles:
 		if bubble.current_character == info.character:
@@ -84,7 +88,7 @@ func _on_dialogic_text_event(info:Dictionary):
 	bubble_to_use.node_to_point_at = node_to_point_at
 	if not bubble_to_use.visible:
 		bubble_to_use.reset()
-	if has_node('TextBubbleLayer'):
+	if has_node("TextBubbleLayer"):
 		get_node("TextBubbleLayer").bubble_apply_overrides(bubble_to_use)
 	bubble_to_use.open()
 

@@ -2,11 +2,10 @@
 extends DialogicVisualEditorField
 ## Event block field for strings. Options are determined by a function.
 
-
 ## SETTINGS
 @export var placeholder_text := "Select Resource"
 @export var empty_text := ""
-enum Modes {PURE_STRING, PRETTY_PATH, IDENTIFIER, ANY_VALID_STRING}
+enum Modes { PURE_STRING, PRETTY_PATH, IDENTIFIER, ANY_VALID_STRING }
 @export var mode := Modes.PURE_STRING
 @export var fit_text_length := true
 var collapse_when_empty := false
@@ -37,14 +36,14 @@ var _icon_margin := 0
 var _line_height := 24
 var _max_height := 200 * DialogicUtil.get_editor_scale()
 
-
 #region FIELD METHODS
 ################################################################################
 
-func _set_value(value:Variant) -> void:
+
+func _set_value(value: Variant) -> void:
 	if value == null or value.is_empty():
 		%Search.text = empty_text
-		update_error_tooltip('')
+		update_error_tooltip("")
 	else:
 		match mode:
 			Modes.PRETTY_PATH:
@@ -52,7 +51,7 @@ func _set_value(value:Variant) -> void:
 			Modes.IDENTIFIER when value.begins_with("res://"):
 				%Search.text = DialogicResourceUtil.get_unique_identifier_by_path(value)
 			Modes.ANY_VALID_STRING when validation_func:
-				%Search.text = validation_func.call(value).get('valid_text', value)
+				%Search.text = validation_func.call(value).get("valid_text", value)
 			_:
 				%Search.text = str(value)
 
@@ -60,35 +59,36 @@ func _set_value(value:Variant) -> void:
 	current_value = str(value)
 
 
-func _load_display_info(info:Dictionary) -> void:
-	valid_file_drop_extension = info.get('file_extension', '')
-	collapse_when_empty = info.get('collapse_when_empty', false)
-	suggestions_func = info.get('suggestions_func', suggestions_func)
-	validation_func = info.get('validation_func', validation_func)
-	empty_text = info.get('empty_text', '')
-	placeholder_text = info.get('placeholder', 'Select Resource')
+func _load_display_info(info: Dictionary) -> void:
+	valid_file_drop_extension = info.get("file_extension", "")
+	collapse_when_empty = info.get("collapse_when_empty", false)
+	suggestions_func = info.get("suggestions_func", suggestions_func)
+	validation_func = info.get("validation_func", validation_func)
+	empty_text = info.get("empty_text", "")
+	placeholder_text = info.get("placeholder", "Select Resource")
 	mode = info.get("mode", 0)
-	resource_icon = info.get('icon', null)
-	%Search.tooltip_text = info.get('tooltip_text', '')
+	resource_icon = info.get("icon", null)
+	%Search.tooltip_text = info.get("tooltip_text", "")
 	await ready
-	if resource_icon == null and info.has('editor_icon'):
-		resource_icon = callv('get_theme_icon', info.editor_icon)
+	if resource_icon == null and info.has("editor_icon"):
+		resource_icon = callv("get_theme_icon", info.editor_icon)
 
 
 func _autofocus() -> void:
 	%Search.grab_focus()
 
-#endregion
 
+#endregion
 
 #region BASIC
 ################################################################################
 
+
 func _ready() -> void:
 	var focus := get_theme_stylebox("focus", "LineEdit")
 	if has_theme_stylebox("focus", "DialogicEventEdit"):
-		focus = get_theme_stylebox('focus', 'DialogicEventEdit')
-	%Focus.add_theme_stylebox_override('panel', focus)
+		focus = get_theme_stylebox("focus", "DialogicEventEdit")
+	%Focus.add_theme_stylebox_override("panel", focus)
 
 	%Search.text_changed.connect(_on_Search_text_changed)
 	%Search.text_submitted.connect(_on_Search_text_entered)
@@ -97,7 +97,9 @@ func _ready() -> void:
 
 	%SelectButton.icon = get_theme_icon("Collapse", "EditorIcons")
 
-	%Suggestions.add_theme_stylebox_override('bg', load("res://addons/dialogic/Editor/Events/styles/ResourceMenuPanelBackground.tres"))
+	%Suggestions.add_theme_stylebox_override(
+		"bg", load("res://addons/dialogic/Editor/Events/styles/ResourceMenuPanelBackground.tres")
+	)
 	%Suggestions.hide()
 	%Suggestions.item_selected.connect(suggestion_selected)
 	%Suggestions.item_clicked.connect(suggestion_selected)
@@ -111,25 +113,25 @@ func _ready() -> void:
 		self.resource_icon = null
 
 	var error_label_style := StyleBoxFlat.new()
-	error_label_style.bg_color = get_theme_color('background', 'Editor')
-	error_label_style.border_color = get_theme_color('error_color', 'Editor')
+	error_label_style.bg_color = get_theme_color("background", "Editor")
+	error_label_style.border_color = get_theme_color("error_color", "Editor")
 	error_label_style.set_border_width_all(1)
 	error_label_style.set_corner_radius_all(4)
 	error_label_style.set_content_margin_all(6)
 
-	%ErrorTooltip.add_theme_stylebox_override('normal', error_label_style)
+	%ErrorTooltip.add_theme_stylebox_override("normal", error_label_style)
 
 
 func change_to_empty() -> void:
-	update_error_tooltip('')
+	update_error_tooltip("")
 	value_changed.emit(property_name, "")
 
 
 func validate() -> void:
 	if mode == Modes.ANY_VALID_STRING and validation_func:
 		var validation_result: Dictionary = validation_func.call(current_value)
-		current_value = validation_result.get('valid_text', current_value)
-		update_error_tooltip(validation_result.get('error_tooltip', ''))
+		current_value = validation_result.get("valid_text", current_value)
+		update_error_tooltip(validation_result.get("error_tooltip", ""))
 
 
 func update_error_tooltip(text: String) -> void:
@@ -141,20 +143,21 @@ func update_error_tooltip(text: String) -> void:
 		%ErrorTooltip.reset_size()
 		%ErrorTooltip.global_position = global_position - Vector2(0, %ErrorTooltip.size.y + 4)
 		%ErrorTooltip.show()
-		%Search.add_theme_color_override("font_color", get_theme_color('error_color', 'Editor'))
+		%Search.add_theme_color_override("font_color", get_theme_color("error_color", "Editor"))
+
 
 #endregion
-
 
 #region SEARCH & SUGGESTION POPUP
 ################################################################################
 
-func _on_Search_text_entered(new_text:String) -> void:
+
+func _on_Search_text_entered(new_text: String) -> void:
 	if mode == Modes.ANY_VALID_STRING:
 		if validation_func:
 			var validation_result: Dictionary = validation_func.call(new_text)
-			new_text = validation_result.get('valid_text', new_text)
-			update_error_tooltip(validation_result.get('error_tooltip', ''))
+			new_text = validation_result.get("valid_text", new_text)
+			update_error_tooltip(validation_result.get("error_tooltip", ""))
 
 		set_value(new_text)
 
@@ -172,7 +175,7 @@ func _on_Search_text_entered(new_text:String) -> void:
 		change_to_empty()
 
 
-func _on_Search_text_changed(new_text:String, just_update:bool = false) -> void:
+func _on_Search_text_changed(new_text: String, just_update: bool = false) -> void:
 	%Suggestions.clear()
 
 	if new_text == "" and not just_update:
@@ -183,8 +186,8 @@ func _on_Search_text_changed(new_text:String, just_update:bool = false) -> void:
 	if mode == Modes.ANY_VALID_STRING and !just_update:
 		if validation_func:
 			var validation_result: Dictionary = validation_func.call(new_text)
-			new_text = validation_result.get('valid_text', new_text)
-			update_error_tooltip(validation_result.get('error_tooltip', ''))
+			new_text = validation_result.get("valid_text", new_text)
+			update_error_tooltip(validation_result.get("error_tooltip", ""))
 
 		current_value = new_text
 
@@ -197,37 +200,78 @@ func _on_Search_text_changed(new_text:String, just_update:bool = false) -> void:
 	var idx := 0
 
 	if new_text and mode == Modes.ANY_VALID_STRING and not new_text in suggestions.keys():
-		%Suggestions.add_item(new_text, get_theme_icon('GuiScrollArrowRight', 'EditorIcons'))
+		%Suggestions.add_item(new_text, get_theme_icon("GuiScrollArrowRight", "EditorIcons"))
 		%Suggestions.set_item_metadata(idx, new_text)
-		line_length = get_theme_font('font', 'Label').get_string_size(
-				new_text, HORIZONTAL_ALIGNMENT_LEFT, -1, get_theme_font_size("font_size", 'Label')
-			).x + %Suggestions.fixed_icon_size.x * %Suggestions.get_icon_scale() + _icon_margin * 2 + _h_separation
+		line_length = (
+			(
+				get_theme_font("font", "Label")
+				. get_string_size(
+					new_text,
+					HORIZONTAL_ALIGNMENT_LEFT,
+					-1,
+					get_theme_font_size("font_size", "Label")
+				)
+				. x
+			)
+			+ %Suggestions.fixed_icon_size.x * %Suggestions.get_icon_scale()
+			+ _icon_margin * 2
+			+ _h_separation
+		)
 		idx += 1
 
 	for element in suggestions:
-		if new_text.is_empty() or new_text.to_lower() in element.to_lower() or new_text.to_lower() in str(suggestions[element].value).to_lower() or new_text.to_lower() in suggestions[element].get('tooltip', '').to_lower():
+		if (
+			new_text.is_empty()
+			or new_text.to_lower() in element.to_lower()
+			or new_text.to_lower() in str(suggestions[element].value).to_lower()
+			or new_text.to_lower() in suggestions[element].get("tooltip", "").to_lower()
+		):
 			var curr_line_length: int = 0
-			curr_line_length = int(get_theme_font('font', 'Label').get_string_size(
-				element, HORIZONTAL_ALIGNMENT_LEFT, -1, get_theme_font_size("font_size", 'Label')
-			).x)
+			curr_line_length = int(
+				(
+					get_theme_font("font", "Label")
+					. get_string_size(
+						element,
+						HORIZONTAL_ALIGNMENT_LEFT,
+						-1,
+						get_theme_font_size("font_size", "Label")
+					)
+					. x
+				)
+			)
 
 			%Suggestions.add_item(element)
-			if suggestions[element].has('icon'):
+			if suggestions[element].has("icon"):
 				%Suggestions.set_item_icon(idx, suggestions[element].icon)
-				curr_line_length += %Suggestions.fixed_icon_size.x * %Suggestions.get_icon_scale() + _icon_margin * 2 + _h_separation
-			elif suggestions[element].has('editor_icon'):
-				%Suggestions.set_item_icon(idx, get_theme_icon(suggestions[element].editor_icon[0],suggestions[element].editor_icon[1]))
-				curr_line_length += %Suggestions.fixed_icon_size.x * %Suggestions.get_icon_scale() + _icon_margin * 2 + _h_separation
+				curr_line_length += (
+					%Suggestions.fixed_icon_size.x * %Suggestions.get_icon_scale()
+					+ _icon_margin * 2
+					+ _h_separation
+				)
+			elif suggestions[element].has("editor_icon"):
+				%Suggestions.set_item_icon(
+					idx,
+					get_theme_icon(
+						suggestions[element].editor_icon[0], suggestions[element].editor_icon[1]
+					)
+				)
+				curr_line_length += (
+					%Suggestions.fixed_icon_size.x * %Suggestions.get_icon_scale()
+					+ _icon_margin * 2
+					+ _h_separation
+				)
 
 			line_length = max(line_length, curr_line_length)
 
-			%Suggestions.set_item_tooltip(idx, suggestions[element].get('tooltip', ''))
+			%Suggestions.set_item_tooltip(idx, suggestions[element].get("tooltip", ""))
 			%Suggestions.set_item_metadata(idx, suggestions[element].value)
 			idx += 1
 
 	if not %Suggestions.visible:
 		%Suggestions.show()
-		%Suggestions.global_position = $PanelContainer.global_position+Vector2(0,1)*$PanelContainer.size.y
+		%Suggestions.global_position = (
+			$PanelContainer.global_position + Vector2(0, 1) * $PanelContainer.size.y
+		)
 
 	if %Suggestions.item_count:
 		%Suggestions.select(0)
@@ -254,7 +298,9 @@ func _on_Search_text_changed(new_text:String, just_update:bool = false) -> void:
 	%Suggestions.size.x = max(%PanelContainer.size.x, line_length)
 
 
-func suggestion_selected(index: int, _position := Vector2(), button_index := MOUSE_BUTTON_LEFT) -> void:
+func suggestion_selected(
+	index: int, _position := Vector2(), button_index := MOUSE_BUTTON_LEFT
+) -> void:
 	if button_index != MOUSE_BUTTON_LEFT:
 		return
 	if %Suggestions.is_item_disabled(index):
@@ -268,7 +314,7 @@ func suggestion_selected(index: int, _position := Vector2(), button_index := MOU
 	else:
 		current_value = %Suggestions.get_item_metadata(index)
 
-	update_error_tooltip('')
+	update_error_tooltip("")
 	hide_suggestions()
 
 	grab_focus()
@@ -276,11 +322,13 @@ func suggestion_selected(index: int, _position := Vector2(), button_index := MOU
 	current_value_updated = false
 
 
-func _input(event:InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if %Suggestions.visible:
-			if !%Suggestions.get_global_rect().has_point(get_global_mouse_position()) and \
-				!%SelectButton.get_global_rect().has_point(get_global_mouse_position()):
+			if (
+				!%Suggestions.get_global_rect().has_point(get_global_mouse_position())
+				and !%SelectButton.get_global_rect().has_point(get_global_mouse_position())
+			):
 				hide_suggestions()
 
 
@@ -291,9 +339,9 @@ func hide_suggestions() -> void:
 		%Search.hide()
 
 
-func _on_SelectButton_toggled(button_pressed:bool) -> void:
+func _on_SelectButton_toggled(button_pressed: bool) -> void:
 	if button_pressed:
-		_on_Search_text_changed('', true)
+		_on_Search_text_changed("", true)
 	else:
 		hide_suggestions()
 
@@ -303,21 +351,33 @@ func _on_focus_entered() -> void:
 
 
 func _on_search_gui_input(event: InputEvent) -> void:
-	if event is InputEventKey and (event.keycode == KEY_DOWN or event.keycode == KEY_UP) and event.pressed:
+	if (
+		event is InputEventKey
+		and (event.keycode == KEY_DOWN or event.keycode == KEY_UP)
+		and event.pressed
+	):
 		if !%Suggestions.visible:
-			_on_Search_text_changed('', true)
+			_on_Search_text_changed("", true)
 			current_selected = -1
 		if event.keycode == KEY_DOWN:
-			current_selected = wrapi(current_selected+1, 0, %Suggestions.item_count)
+			current_selected = wrapi(current_selected + 1, 0, %Suggestions.item_count)
 		if event.keycode == KEY_UP:
-			current_selected = wrapi(current_selected-1, 0, %Suggestions.item_count)
+			current_selected = wrapi(current_selected - 1, 0, %Suggestions.item_count)
 		%Suggestions.select(current_selected)
 		%Suggestions.ensure_current_is_visible()
 
 	if Input.is_key_pressed(KEY_CTRL):
-		if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if (
+			event is InputEventMouseButton
+			and event.pressed
+			and event.button_index == MOUSE_BUTTON_LEFT
+		):
 			if valid_file_drop_extension in [".dch", ".dtl"] and not current_value.is_empty():
-				EditorInterface.edit_resource(DialogicResourceUtil.get_resource_from_identifier(current_value, valid_file_drop_extension))
+				EditorInterface.edit_resource(
+					DialogicResourceUtil.get_resource_from_identifier(
+						current_value, valid_file_drop_extension
+					)
+				)
 
 		if valid_file_drop_extension in [".dch", ".dtl"] and not current_value.is_empty():
 			%Search.mouse_default_cursor_shape = CURSOR_POINTING_HAND
@@ -328,7 +388,7 @@ func _on_search_gui_input(event: InputEvent) -> void:
 func _on_search_focus_entered() -> void:
 	if %Search.text == "":
 		_on_Search_text_changed("")
-	%Search.call_deferred('select_all')
+	%Search.call_deferred("select_all")
 	%Focus.show()
 	validate()
 
@@ -342,14 +402,15 @@ func _on_search_focus_exited() -> void:
 		value_changed.emit(property_name, current_value)
 		current_value_updated = false
 
-#endregion
 
+#endregion
 
 #region DRAG AND DROP
 ################################################################################
 
-func _can_drop_data(_position:Vector2, data:Variant) -> bool:
-	if typeof(data) == TYPE_DICTIONARY and data.has('files') and len(data.files) == 1:
+
+func _can_drop_data(_position: Vector2, data: Variant) -> bool:
+	if typeof(data) == TYPE_DICTIONARY and data.has("files") and len(data.files) == 1:
 		if valid_file_drop_extension:
 			if data.files[0].ends_with(valid_file_drop_extension):
 				return true
@@ -358,7 +419,7 @@ func _can_drop_data(_position:Vector2, data:Variant) -> bool:
 	return false
 
 
-func _drop_data(_position:Vector2, data:Variant) -> void:
+func _drop_data(_position: Vector2, data: Variant) -> void:
 	var path := str(data.files[0])
 	if mode == Modes.IDENTIFIER:
 		path = DialogicResourceUtil.get_unique_identifier_by_path(path)

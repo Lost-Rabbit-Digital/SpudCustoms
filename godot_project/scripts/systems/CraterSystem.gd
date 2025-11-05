@@ -1,6 +1,7 @@
 class_name CraterSystem
 extends Node2D
 
+
 class Crater:
 	var position: Vector2
 	var size: float

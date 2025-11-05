@@ -2,7 +2,7 @@
 extends Window
 
 var info := {}
-signal part_selected(info:Dictionary)
+signal part_selected(info: Dictionary)
 
 
 func _on_close_requested() -> void:

@@ -1,7 +1,8 @@
 extends DialogicAnimation
 
+
 func animate() -> void:
-	var tween := (node.create_tween() as Tween)
+	var tween := node.create_tween() as Tween
 
 	var start_height: float = base_position.y - node.get_viewport().size.y / 5
 	var end_height := base_position.y

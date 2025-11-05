@@ -3,4 +3,4 @@ extends ColorRect
 
 
 func _ready() -> void:
-	add_to_group('dialogic_background_holders')
+	add_to_group("dialogic_background_holders")

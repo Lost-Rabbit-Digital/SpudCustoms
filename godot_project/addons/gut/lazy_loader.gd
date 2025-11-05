@@ -2,8 +2,9 @@
 # ------------------------------------------------------------------------------
 # Static
 # ------------------------------------------------------------------------------
-static var usage_counter = load('res://addons/gut/thing_counter.gd').new()
-static var WarningsManager = load('res://addons/gut/warnings_manager.gd')
+static var usage_counter = load("res://addons/gut/thing_counter.gd").new()
+static var WarningsManager = load("res://addons/gut/warnings_manager.gd")
+
 
 static func load_all():
 	for key in usage_counter.things:
@@ -12,7 +13,7 @@ static func load_all():
 
 static func print_usage():
 	for key in usage_counter.things:
-		print(key._path, '  (', usage_counter.things[key], ')')
+		print(key._path, "  (", usage_counter.things[key], ")")
 
 
 # ------------------------------------------------------------------------------
@@ -21,13 +22,14 @@ static func print_usage():
 var _loaded = null
 var _path = null
 
+
 func _init(path):
 	_path = path
 	usage_counter.add_thing_to_count(self)
 
 
 func get_loaded():
-	if(_loaded == null):
+	if _loaded == null:
 		# if(ResourceLoader.has_cached(_path)):
 		# 	print('---- already loaded ', _path, ' ----')
 		# else:
@@ -35,4 +37,3 @@ func get_loaded():
 		_loaded = WarningsManager.load_script_ignoring_all_warnings(_path)
 	usage_counter.add(self)
 	return _loaded
-

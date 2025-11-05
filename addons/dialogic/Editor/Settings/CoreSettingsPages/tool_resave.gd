@@ -22,7 +22,7 @@ func resave_tool() -> void:
 		ResourceSaver.save(timeline)
 
 		ToolUtil.tool_progress_mutex.lock()
-		ToolUtil.tool_progress = 1.0/len(timelines)*index
+		ToolUtil.tool_progress = 1.0 / len(timelines) * index
 		ToolUtil.tool_progress_mutex.unlock()
 
 		index += 1

@@ -13,7 +13,9 @@ func _init() -> void:
 	var hbox := HBoxContainer.new()
 	add_child(hbox)
 
-	field = load("res://addons/dialogic/Editor/Events/Fields/field_options_dynamic.tscn").instantiate()
+	field = (
+		load("res://addons/dialogic/Editor/Events/Fields/field_options_dynamic.tscn").instantiate()
+	)
 	hbox.add_child(field)
 	field.placeholder_text = "No Timeline"
 	field.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -30,7 +32,7 @@ func _init() -> void:
 	button.pressed.connect(_on_button_pressed, CONNECT_DEFERRED)
 
 
-func _on_field_value_changed(property:String, value:Variant) -> void:
+func _on_field_value_changed(property: String, value: Variant) -> void:
 	# Ignore the signal if the property is currently being updated.
 	if updating:
 		return
@@ -54,7 +56,7 @@ func _update_property() -> void:
 
 	# Read the current value from the property.
 	var new_value = get_edited_object()[get_edited_property()]
-	if (new_value == current_value):
+	if new_value == current_value:
 		return
 
 	# Update the control with the new value.
@@ -69,11 +71,15 @@ func _update_property() -> void:
 	updating = false
 
 
-func get_timeline_suggestions(filter:String) -> Dictionary:
+func get_timeline_suggestions(filter: String) -> Dictionary:
 	var suggestions := {}
 	var timeline_directory := DialogicResourceUtil.get_timeline_directory()
-	for identifier in  timeline_directory.keys():
-		suggestions[identifier] = {'value': identifier, 'tooltip':timeline_directory[identifier], 'editor_icon': ["TripleBar", "EditorIcons"]}
+	for identifier in timeline_directory.keys():
+		suggestions[identifier] = {
+			"value": identifier,
+			"tooltip": timeline_directory[identifier],
+			"editor_icon": ["TripleBar", "EditorIcons"]
+		}
 	return suggestions
 
 

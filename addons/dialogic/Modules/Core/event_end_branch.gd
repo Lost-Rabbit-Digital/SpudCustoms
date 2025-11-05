@@ -5,12 +5,12 @@ extends DialogicEvent
 ## Event that indicates the end of a condition or choice (or custom branch).
 ## In text this is not stored (only as a change in indentation).
 
-
 #region EXECUTE
 ################################################################################
 
+
 func _execute() -> void:
-	dialogic.current_event_idx = find_next_index()-1
+	dialogic.current_event_idx = find_next_index() - 1
 	finish()
 
 
@@ -50,19 +50,23 @@ func get_opening_index() -> int:
 			return index
 	return 0
 
+
 #endregion
 
 #region INITIALIZE
 ################################################################################
 
+
 func _init() -> void:
 	event_name = "End Branch"
 	disable_editor_button = true
+
 
 #endregion
 
 #region SAVING/LOADING
 ################################################################################
+
 
 ## NOTE: This event is very special. It is rarely stored at all, as it is usually
 ## just a placeholder for removing an indentation level.
@@ -71,11 +75,11 @@ func to_text() -> String:
 	return "<<END BRANCH>>"
 
 
-func from_text(_string:String) -> void:
+func from_text(_string: String) -> void:
 	pass
 
 
-func is_valid_event(string:String) -> bool:
+func is_valid_event(string: String) -> bool:
 	if string.strip_edges().begins_with("<<END BRANCH>>"):
 		return true
 	return false

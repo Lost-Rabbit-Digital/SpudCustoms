@@ -3,6 +3,7 @@ extends Node
 
 static var potato_scene = load("res://scripts/systems/PotatoPerson.tscn")
 
+
 # Static function to create a new potato with random attributes
 static func create_random_potato() -> PotatoPerson:
 	var potato = potato_scene.instantiate()

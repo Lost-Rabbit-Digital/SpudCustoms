@@ -4,17 +4,17 @@ extends DialogicEvent
 
 ## Event that allows clearing, pausing and resuming of history functionality.
 
-enum Actions {CLEAR, PAUSE, RESUME}
+enum Actions { CLEAR, PAUSE, RESUME }
 
 ### Settings
 
 ## The type of action: Clear, Pause or Resume
 var action := Actions.PAUSE
 
-
 ################################################################################
 ## 						EXECUTION
 ################################################################################
+
 
 func _execute() -> void:
 	match action:
@@ -32,9 +32,10 @@ func _execute() -> void:
 ## 						INITIALIZE
 ################################################################################
 
+
 func _init() -> void:
 	event_name = "History"
-	set_default_color('Color9')
+	set_default_color("Color9")
 	event_category = "Other"
 	event_sorting_index = 20
 
@@ -43,34 +44,72 @@ func _init() -> void:
 ## 						SAVING/LOADING
 ################################################################################
 
+
 func get_shortcode() -> String:
 	return "history"
 
+
 func get_shortcode_parameters() -> Dictionary:
 	return {
-		#param_name 		: property_info
-		"action" 			: {"property": "action", "default": Actions.PAUSE,
-								"suggestions": func(): return {"Clear":{'value':0, 'text_alt':['clear']}, "Pause":{'value':1, 'text_alt':['pause']}, "Resume":{'value':2, 'text_alt':['resume', 'start']}}},
+		"action":
+		{
+			"property": "action",
+			"default": Actions.PAUSE,
+			"suggestions":
+			func():
+## Event that allows clearing, pausing and resuming of history functionality.
+
+### Settings
+
+## The type of action: Clear, Pause or Resume
+
+################################################################################
+## 						EXECUTION
+################################################################################
+
+################################################################################
+## 						INITIALIZE
+################################################################################
+
+################################################################################
+## 						SAVING/LOADING
+################################################################################
+
+				#param_name 		: property_info
+
+				return {
+					"Clear": {"value": 0, "text_alt": ["clear"]},
+					"Pause": {"value": 1, "text_alt": ["pause"]},
+					"Resume": {"value": 2, "text_alt": ["resume", "start"]}
+				}
+		},
 	}
+
 
 ################################################################################
 ## 						EDITOR REPRESENTATION
 ################################################################################
 
+
 func build_event_editor() -> void:
-	add_header_edit('action', ValueType.FIXED_OPTIONS, {
-		'options': [
-			{
-				'label': 'Pause History',
-				'value': Actions.PAUSE,
-			},
-			{
-				'label': 'Resume History',
-				'value': Actions.RESUME,
-			},
-			{
-				'label': 'Clear History',
-				'value': Actions.CLEAR,
-			},
-		]
-		})
+	add_header_edit(
+		"action",
+		ValueType.FIXED_OPTIONS,
+		{
+			"options":
+			[
+				{
+					"label": "Pause History",
+					"value": Actions.PAUSE,
+				},
+				{
+					"label": "Resume History",
+					"value": Actions.RESUME,
+				},
+				{
+					"label": "Clear History",
+					"value": Actions.CLEAR,
+				},
+			]
+		}
+	)

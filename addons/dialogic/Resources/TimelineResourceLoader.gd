@@ -32,7 +32,9 @@ func _handles_type(typename: StringName) -> bool:
 
 
 ## Parse the file and return a resource
-func _load(path: String, _original_path: String, _use_sub_threads: bool, _cache_mode: int) -> Variant:
+func _load(
+	path: String, _original_path: String, _use_sub_threads: bool, _cache_mode: int
+) -> Variant:
 	var file := FileAccess.open(path, FileAccess.READ)
 
 	if not file:

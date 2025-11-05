@@ -671,6 +671,7 @@ func get_highest_z_index() -> int:
 
 # === Specific item handlers ===
 
+
 ### Handles document drop logic
 func _handle_document_drop(mouse_pos: Vector2):
 	var drop_zone = identify_drop_zone(mouse_pos)
@@ -699,6 +700,7 @@ func _handle_document_drop(mouse_pos: Vector2):
 				stamp_system_manager.clear_passport_stamps()
 			else:
 				push_error("Cannot clear passport stamps: StampSystemManager is null")
+
 
 ## Plays the open document sound.
 ##

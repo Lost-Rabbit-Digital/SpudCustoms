@@ -23,10 +23,10 @@ var _initialized := false
 var _is_coverage_rect_cached := false
 var _cached_coverage_rect := Rect2(0, 0, 0, 0)
 
-
 @export_group("Private")
 ## Attempts to fix the offset based on the first child node
 @export var fix_offset := true
+
 
 ## Overriding [class DialogicPortrait]'s method.
 ##
@@ -50,7 +50,7 @@ func _apply_layer_adjustments() -> void:
 	if fix_offset and get_child_count():
 		offset_fix = -get_child(0).position
 		if "centered" in get_child(0) and get_child(0).centered:
-			offset_fix += get_child(0).get_rect().size/2.0
+			offset_fix += get_child(0).get_rect().size / 2.0
 
 	for node: Node in get_children():
 		var node_position: Vector2 = node.position
@@ -62,7 +62,7 @@ func _apply_layer_adjustments() -> void:
 ## scene part to be positioned at. [br]
 ## If the node has an offset or extra position, pass it as [param node_offset].
 func _reposition_with_rect(rect: Rect2, node_offset := Vector2(0.0, 0.0)) -> Vector2:
-	return rect.size  * Vector2(-0.5, -1.0) + node_offset
+	return rect.size * Vector2(-0.5, -1.0) + node_offset
 
 
 ## Iterates over all children in [param start_node] and its children, looking
@@ -74,13 +74,11 @@ func _find_sprites_recursively(start_node: Node) -> Array[Sprite2D]:
 
 	# Iterate through the children of the current node
 	for child: Node in start_node.get_children():
-
 		if child is Sprite2D:
 			var sprite := child as Sprite2D
 
 			if sprite.texture:
 				sprites.append(sprite)
-
 
 		var sub := _find_sprites_recursively(child)
 		sprites.append_array(sub)
@@ -113,7 +111,9 @@ class LayerCommand:
 			return
 
 		if not target_node is Node2D and not target_node is Sprite2D:
-			printerr("Layered Portrait target path '", _path, "', is not a Sprite2D or Node2D type.")
+			printerr(
+				"Layered Portrait target path '", _path, "', is not a Sprite2D or Node2D type."
+			)
 			return
 
 		match _type:
@@ -127,7 +127,6 @@ class LayerCommand:
 				var target_parent := target_node.get_parent()
 
 				for child: Node in target_parent.get_children():
-
 					if child is Sprite2D:
 						var sprite_child := child as Sprite2D
 						sprite_child.hide()
@@ -174,7 +173,6 @@ func _parse_input_to_layer_commands(input: String) -> Array[LayerCommand]:
 	var command_parts := input.split(",")
 
 	for command_part: String in command_parts:
-
 		if command_part.is_empty():
 			continue
 
@@ -184,7 +182,6 @@ func _parse_input_to_layer_commands(input: String) -> Array[LayerCommand]:
 			commands.append(_command)
 
 	return commands
-
 
 
 ## Overriding [class DialogicPortrait]'s method.
@@ -202,7 +199,6 @@ func _set_extra_data(data: String) -> void:
 ## Handling all layers horizontal flip state.
 func _set_mirror(is_mirrored: bool) -> void:
 	for child: Node in get_children():
-
 		if is_mirrored:
 			child.position.x = child.position.x * -1
 			child.scale.x = -child.scale.x
@@ -218,20 +214,15 @@ func _find_largest_coverage_rect() -> Rect2:
 
 	for sprite: Sprite2D in _find_sprites_recursively(self):
 		var sprite_size := sprite.get_rect().size
-		var sprite_position: Vector2 = sprite.global_position-self.global_position
+		var sprite_position: Vector2 = sprite.global_position - self.global_position
 
 		if sprite.centered:
-			sprite_position -= sprite_size/2
+			sprite_position -= sprite_size / 2
 
 		var sprite_width := sprite_size.x * sprite.scale.x
 		var sprite_height := sprite_size.y * sprite.scale.y
 
-		var texture_rect := Rect2(
-			sprite_position.x,
-			sprite_position.y,
-			sprite_width,
-			sprite_height
-		)
+		var texture_rect := Rect2(sprite_position.x, sprite_position.y, sprite_width, sprite_height)
 		coverage_rect = coverage_rect.merge(texture_rect)
 
 	coverage_rect.position = _reposition_with_rect(coverage_rect)

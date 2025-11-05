@@ -8,22 +8,11 @@ extends Node
 ## - Provides access to all the subsystems.[br]
 ## - Has methods to start/end timelines.[br]
 
-
 ## States indicating different phases of dialog.
-enum States {
-	IDLE, 				## Dialogic is awaiting input to advance.
-	REVEALING_TEXT, 	## Dialogic is currently revealing text.
-	ANIMATING, 			## Some animation is happening.
-	AWAITING_CHOICE, 	## Dialogic awaits the selection of a choice
-	WAITING 			## Dialogic is currently awaiting something.
-	}
+enum States { IDLE, REVEALING_TEXT, ANIMATING, AWAITING_CHOICE, WAITING }  ## Dialogic is awaiting input to advance.  ## Dialogic is currently revealing text.  ## Some animation is happening.  ## Dialogic awaits the selection of a choice  ## Dialogic is currently awaiting something.
 
 ## Flags indicating what to clear when calling [method clear].
-enum ClearFlags {
-	FULL_CLEAR = 0, 		## Clears all subsystems
-	KEEP_VARIABLES = 1, 	## Clears all subsystems and info except for variables
-	TIMELINE_INFO_ONLY = 2	## Doesn't clear subsystems but current timeline and index
-	}
+enum ClearFlags { FULL_CLEAR = 0, KEEP_VARIABLES = 1, TIMELINE_INFO_ONLY = 2 }  ## Clears all subsystems  ## Clears all subsystems and info except for variables  ## Doesn't clear subsystems but current timeline and index
 
 ## Reference to the currently executed timeline.
 var current_timeline: DialogicTimeline = null
@@ -46,7 +35,7 @@ var current_state := States.IDLE:
 		state_changed.emit(new_state)
 
 ## Emitted when [member current_state] change.
-signal state_changed(new_state:States)
+signal state_changed(new_state: States)
 
 ## When `true`, many dialogic processes won't continue until it's `false` again.
 var paused := false:
@@ -54,9 +43,7 @@ var paused := false:
 		paused = value
 
 		if paused:
-
 			for subsystem in get_children():
-
 				if subsystem is DialogicSubsystem:
 					(subsystem as DialogicSubsystem).pause()
 
@@ -64,7 +51,6 @@ var paused := false:
 
 		else:
 			for subsystem in get_children():
-
 				if subsystem is DialogicSubsystem:
 					(subsystem as DialogicSubsystem).resume()
 
@@ -79,7 +65,6 @@ signal dialogic_paused
 ## Emitted when [member paused] changes to `false`.
 signal dialogic_resumed
 
-
 ## Emitted when a timeline starts by calling either [method start]
 ## or [method start_timeline].
 signal timeline_started
@@ -91,70 +76,91 @@ signal timeline_ended
 signal event_handled(resource: DialogicEvent)
 
 ## Emitted when a [class SignalEvent] event was reached.
-@warning_ignore("unused_signal") # This is emitted by the signal event.
+@warning_ignore("unused_signal")  # This is emitted by the signal event.
 signal signal_event(argument: Variant)
 
 ## Emitted when a signal event gets fired from a [class TextEvent] event.
-@warning_ignore("unused_signal") # This is emitted by the text subsystem.
+@warning_ignore("unused_signal")  # This is emitted by the text subsystem.
 signal text_signal(argument: String)
-
 
 # Careful, this section is repopulated automatically at certain moments.
 #region SUBSYSTEMS
 
 var Animations := preload("res://addons/dialogic/Modules/Core/subsystem_animation.gd").new():
-	get: return get_subsystem("Animations")
+	get:
+		return get_subsystem("Animations")
 
 var Audio := preload("res://addons/dialogic/Modules/Audio/subsystem_audio.gd").new():
-	get: return get_subsystem("Audio")
+	get:
+		return get_subsystem("Audio")
 
-var Backgrounds := preload("res://addons/dialogic/Modules/Background/subsystem_backgrounds.gd").new():
-	get: return get_subsystem("Backgrounds")
+var Backgrounds := (
+	preload("res://addons/dialogic/Modules/Background/subsystem_backgrounds.gd").new()
+):
+	get:
+		return get_subsystem("Backgrounds")
 
 var Choices := preload("res://addons/dialogic/Modules/Choice/subsystem_choices.gd").new():
-	get: return get_subsystem("Choices")
+	get:
+		return get_subsystem("Choices")
 
 var Expressions := preload("res://addons/dialogic/Modules/Core/subsystem_expression.gd").new():
-	get: return get_subsystem("Expressions")
+	get:
+		return get_subsystem("Expressions")
 
 var Glossary := preload("res://addons/dialogic/Modules/Glossary/subsystem_glossary.gd").new():
-	get: return get_subsystem("Glossary")
+	get:
+		return get_subsystem("Glossary")
 
 var History := preload("res://addons/dialogic/Modules/History/subsystem_history.gd").new():
-	get: return get_subsystem("History")
+	get:
+		return get_subsystem("History")
 
 var Inputs := preload("res://addons/dialogic/Modules/Core/subsystem_input.gd").new():
-	get: return get_subsystem("Inputs")
+	get:
+		return get_subsystem("Inputs")
 
 var Jump := preload("res://addons/dialogic/Modules/Jump/subsystem_jump.gd").new():
-	get: return get_subsystem("Jump")
+	get:
+		return get_subsystem("Jump")
 
-var PortraitContainers := preload("res://addons/dialogic/Modules/Character/subsystem_containers.gd").new():
-	get: return get_subsystem("PortraitContainers")
+var PortraitContainers := (
+	preload("res://addons/dialogic/Modules/Character/subsystem_containers.gd").new()
+):
+	get:
+		return get_subsystem("PortraitContainers")
 
 var Portraits := preload("res://addons/dialogic/Modules/Character/subsystem_portraits.gd").new():
-	get: return get_subsystem("Portraits")
+	get:
+		return get_subsystem("Portraits")
 
 var Save := preload("res://addons/dialogic/Modules/Save/subsystem_save.gd").new():
-	get: return get_subsystem("Save")
+	get:
+		return get_subsystem("Save")
 
 var Settings := preload("res://addons/dialogic/Modules/Settings/subsystem_settings.gd").new():
-	get: return get_subsystem("Settings")
+	get:
+		return get_subsystem("Settings")
 
 var Styles := preload("res://addons/dialogic/Modules/Style/subsystem_styles.gd").new():
-	get: return get_subsystem("Styles")
+	get:
+		return get_subsystem("Styles")
 
 var Text := preload("res://addons/dialogic/Modules/Text/subsystem_text.gd").new():
-	get: return get_subsystem("Text")
+	get:
+		return get_subsystem("Text")
 
 var TextInput := preload("res://addons/dialogic/Modules/TextInput/subsystem_text_input.gd").new():
-	get: return get_subsystem("TextInput")
+	get:
+		return get_subsystem("TextInput")
 
 var VAR := preload("res://addons/dialogic/Modules/Variable/subsystem_variables.gd").new():
-	get: return get_subsystem("VAR")
+	get:
+		return get_subsystem("VAR")
 
 var Voice := preload("res://addons/dialogic/Modules/Voice/subsystem_voice.gd").new():
-	get: return get_subsystem("Voice")
+	get:
+		return get_subsystem("Voice")
 
 #endregion
 
@@ -174,12 +180,13 @@ func _ready() -> void:
 #region TIMELINE & EVENT HANDLING
 ################################################################################
 
+
 ## Method to start a timeline AND ensure that a layout scene is present.
 ## For argument info, checkout [method start_timeline].
 ## -> returns the layout node
-func start(timeline:Variant, label_or_idx:Variant="") -> Node:
+func start(timeline: Variant, label_or_idx: Variant = "") -> Node:
 	# If we don't have a style subsystem, default to just start_timeline()
-	if not has_subsystem('Styles'):
+	if not has_subsystem("Styles"):
 		printerr("[Dialogic] You called Dialogic.start() but the Styles subsystem is missing!")
 		clear(ClearFlags.KEEP_VARIABLES)
 		start_timeline(timeline, label_or_idx)
@@ -207,7 +214,7 @@ func start(timeline:Variant, label_or_idx:Variant="") -> Node:
 ## Method to start a timeline without adding a layout scene.
 ## @timeline can be either a loaded timeline resource or a path to a timeline file.
 ## @label_or_idx can be a label (string) or index (int) to skip to immediatly.
-func start_timeline(timeline:Variant, label_or_idx:Variant = "") -> void:
+func start_timeline(timeline: Variant, label_or_idx: Variant = "") -> void:
 	# load the resource if only the path is given
 	if typeof(timeline) in [TYPE_STRING, TYPE_STRING_NAME]:
 		#check the lookup table if it's not a full file name
@@ -217,7 +224,9 @@ func start_timeline(timeline:Variant, label_or_idx:Variant = "") -> void:
 			timeline = DialogicResourceUtil.get_timeline_resource(timeline)
 
 	if timeline == null:
-		printerr("[Dialogic] There was an error loading this timeline. Check the filename, and the timeline for errors")
+		printerr(
+			"[Dialogic] There was an error loading this timeline. Check the filename, and the timeline for errors"
+		)
 		return
 
 	(timeline as DialogicTimeline).process()
@@ -230,11 +239,11 @@ func start_timeline(timeline:Variant, label_or_idx:Variant = "") -> void:
 
 	if typeof(label_or_idx) in [TYPE_STRING, TYPE_STRING_NAME]:
 		if label_or_idx:
-			if has_subsystem('Jump'):
-				Jump.jump_to_label((label_or_idx as String))
+			if has_subsystem("Jump"):
+				Jump.jump_to_label(label_or_idx as String)
 	elif typeof(label_or_idx) == TYPE_INT:
-		if label_or_idx >-1:
-			current_event_idx = label_or_idx -1
+		if label_or_idx > -1:
+			current_event_idx = label_or_idx - 1
 
 	if not current_timeline == dialog_ending_timeline:
 		timeline_started.emit()
@@ -244,7 +253,7 @@ func start_timeline(timeline:Variant, label_or_idx:Variant = "") -> void:
 
 ## Preloader function, prepares a timeline and returns an object to hold for later
 ## [param timeline_resource] can be either a path (string) or a loaded timeline (resource)
-func preload_timeline(timeline_resource:Variant) -> Variant:
+func preload_timeline(timeline_resource: Variant) -> Variant:
 	# I think ideally this should be on a new thread, will test
 	if typeof(timeline_resource) in [TYPE_STRING, TYPE_STRING_NAME]:
 		if "://" in timeline_resource:
@@ -253,7 +262,9 @@ func preload_timeline(timeline_resource:Variant) -> Variant:
 			timeline_resource = DialogicResourceUtil.get_timeline_resource(timeline_resource)
 
 		if timeline_resource == null:
-			printerr("[Dialogic] There was an error preloading this timeline. Check the filename, and the timeline for errors")
+			printerr(
+				"[Dialogic] There was an error preloading this timeline. Check the filename, and the timeline for errors"
+			)
 			return null
 
 	(timeline_resource as DialogicTimeline).process()
@@ -271,7 +282,7 @@ func end_timeline(skip_ending := false) -> void:
 	await clear(ClearFlags.TIMELINE_INFO_ONLY)
 
 	if Styles.has_active_layout_node() and Styles.get_layout_node().is_inside_tree():
-		match ProjectSettings.get_setting('dialogic/layout/end_behaviour', 0):
+		match ProjectSettings.get_setting("dialogic/layout/end_behaviour", 0):
 			0:
 				Styles.get_layout_node().get_parent().remove_child(Styles.get_layout_node())
 				Styles.get_layout_node().queue_free()
@@ -283,7 +294,7 @@ func end_timeline(skip_ending := false) -> void:
 
 ## Method to check if timeline exists.
 ## @timeline can be either a loaded timeline resource or a path to a timeline file.
-func timeline_exists(timeline:Variant) -> bool:
+func timeline_exists(timeline: Variant) -> bool:
 	if typeof(timeline) in [TYPE_STRING, TYPE_STRING_NAME]:
 		if "://" in timeline and ResourceLoader.exists(timeline):
 			return load(timeline) is DialogicTimeline
@@ -295,12 +306,12 @@ func timeline_exists(timeline:Variant) -> bool:
 
 ## Handles the next event.
 func handle_next_event(_ignore_argument: Variant = "") -> void:
-	handle_event(current_event_idx+1)
+	handle_event(current_event_idx + 1)
 
 
 ## Handles the event at the given index [param event_index].
 ## You can call this manually, but if another event is still executing, it might have unexpected results.
-func handle_event(event_index:int) -> void:
+func handle_event(event_index: int) -> void:
 	if not current_timeline:
 		return
 
@@ -317,14 +328,16 @@ func handle_event(event_index:int) -> void:
 	#actually process the event now, since we didnt earlier at runtime
 	#this needs to happen before we create the copy DialogicEvent variable, so it doesn't throw an error if not ready
 	if current_timeline_events[event_index].event_node_ready == false:
-		current_timeline_events[event_index]._load_from_string(current_timeline_events[event_index].event_node_as_text)
+		current_timeline_events[event_index]._load_from_string(
+			current_timeline_events[event_index].event_node_as_text
+		)
 
 	current_event_idx = event_index
 
 	if not current_timeline_events[event_index].event_finished.is_connected(handle_next_event):
 		current_timeline_events[event_index].event_finished.connect(handle_next_event)
 
-	set_meta('previous_event', current_timeline_events[event_index])
+	set_meta("previous_event", current_timeline_events[event_index])
 
 	current_timeline_events[event_index].execute(self)
 	event_handled.emit(current_timeline_events[event_index])
@@ -356,29 +369,30 @@ func clear(clear_flags := ClearFlags.FULL_CLEAR) -> void:
 
 ## Cleanup after previous event (if any).
 func _cleanup_previous_event():
-	if has_meta('previous_event') and get_meta('previous_event') is DialogicEvent:
-		var event := get_meta('previous_event') as DialogicEvent
+	if has_meta("previous_event") and get_meta("previous_event") is DialogicEvent:
+		var event := get_meta("previous_event") as DialogicEvent
 		if event.event_finished.is_connected(handle_next_event):
 			event.event_finished.disconnect(handle_next_event)
 		event._clear_state()
 		remove_meta("previous_event")
 
-#endregion
 
+#endregion
 
 #region SAVING & LOADING
 ################################################################################
+
 
 ## Returns a dictionary containing all necessary information to later recreate the same state with load_full_state.
 ## The [subsystem Save] subsystem might be more useful for you.
 ## However, this can be used to integrate the info into your own save system.
 func get_full_state() -> Dictionary:
 	if current_timeline:
-		current_state_info['current_event_idx'] = current_event_idx
-		current_state_info['current_timeline'] = current_timeline.resource_path
+		current_state_info["current_event_idx"] = current_event_idx
+		current_state_info["current_timeline"] = current_timeline.resource_path
 	else:
-		current_state_info['current_event_idx'] = -1
-		current_state_info['current_timeline'] = null
+		current_state_info["current_event_idx"] = -1
+		current_state_info["current_timeline"] = null
 
 	for subsystem in get_children():
 		(subsystem as DialogicSubsystem).save_game_state()
@@ -389,18 +403,18 @@ func get_full_state() -> Dictionary:
 ## This method tries to load the state from the given [param state_info].
 ## Will automatically start a timeline and add a layout if a timeline was running when
 ## the dictionary was retrieved with [method get_full_state].
-func load_full_state(state_info:Dictionary) -> void:
+func load_full_state(state_info: Dictionary) -> void:
 	clear()
 	current_state_info = state_info
 	## The Style subsystem needs to run first for others to load correctly.
 	var scene: Node = null
-	if has_subsystem('Styles'):
-		get_subsystem('Styles').load_game_state()
+	if has_subsystem("Styles"):
+		get_subsystem("Styles").load_game_state()
 		scene = self.Styles.get_layout_node()
 
 	var load_subsystems := func() -> void:
 		for subsystem in get_children():
-			if subsystem.name == 'Styles':
+			if subsystem.name == "Styles":
 				continue
 			(subsystem as DialogicSubsystem).load_game_state()
 
@@ -410,15 +424,19 @@ func load_full_state(state_info:Dictionary) -> void:
 		await get_tree().process_frame
 		load_subsystems.call()
 
-	if current_state_info.get('current_timeline', null):
-		start_timeline(current_state_info.current_timeline, current_state_info.get('current_event_idx', 0))
+	if current_state_info.get("current_timeline", null):
+		start_timeline(
+			current_state_info.current_timeline, current_state_info.get("current_event_idx", 0)
+		)
 	else:
 		end_timeline.call_deferred(true)
-#endregion
 
+
+#endregion
 
 #region SUB-SYTSEMS
 ################################################################################
+
 
 func _collect_subsystems() -> void:
 	var subsystem_nodes := [] as Array[DialogicSubsystem]
@@ -432,17 +450,17 @@ func _collect_subsystems() -> void:
 
 
 ## Returns `true` if a subystem with the given [param subsystem_name] exists.
-func has_subsystem(subsystem_name:String) -> bool:
+func has_subsystem(subsystem_name: String) -> bool:
 	return has_node(subsystem_name)
 
 
 ## Returns the subsystem node of the given [param subsystem_name] or null if it doesn't exist.
-func get_subsystem(subsystem_name:String) -> DialogicSubsystem:
+func get_subsystem(subsystem_name: String) -> DialogicSubsystem:
 	return get_node(subsystem_name)
 
 
 ## Adds a subsystem node with the given [param subsystem_name] and [param script_path].
-func add_subsystem(subsystem_name:String, script_path:String) -> DialogicSubsystem:
+func add_subsystem(subsystem_name: String, script_path: String) -> DialogicSubsystem:
 	var node: Node = Node.new()
 	node.name = subsystem_name
 	node.set_script(load(script_path))
@@ -454,16 +472,24 @@ func add_subsystem(subsystem_name:String, script_path:String) -> DialogicSubsyst
 
 #endregion
 
-
 #region HELPERS
 ################################################################################
-
 
 
 func print_debug_moment() -> void:
 	if not current_timeline:
 		return
 
-	printerr("\tAt event ", current_event_idx+1, " (",current_timeline_events[current_event_idx].event_name, ' Event) in timeline "', current_timeline.get_identifier(), '" (',current_timeline.resource_path,').')
+	printerr(
+		"\tAt event ",
+		current_event_idx + 1,
+		" (",
+		current_timeline_events[current_event_idx].event_name,
+		' Event) in timeline "',
+		current_timeline.get_identifier(),
+		'" (',
+		current_timeline.resource_path,
+		")."
+	)
 	print("\n")
 #endregion

@@ -1,11 +1,13 @@
 @tool
 extends ListOptionControl
 
+
 func _set_input_device():
 	var current_setting = _get_setting(default_value)
 	if current_setting is bool:
 		current_setting = &"Default"
 	AudioServer.input_device = _get_setting(default_value)
+
 
 func _add_microphone_audio_stream() -> void:
 	var instance = AudioStreamPlayer.new()
@@ -13,6 +15,7 @@ func _add_microphone_audio_stream() -> void:
 	instance.autoplay = true
 	add_child.call_deferred(instance)
 	instance.ready.connect(_set_input_device)
+
 
 func _ready():
 	if ProjectSettings.get_setting("audio/driver/enable_input", false):
@@ -26,12 +29,15 @@ func _ready():
 		hide()
 	super._ready()
 
+
 func _on_setting_changed(value):
-	if value >= option_values.size(): return
+	if value >= option_values.size():
+		return
 	AudioServer.input_device = option_values[value]
 	super._on_setting_changed(value)
 
-func _value_title_map(value : Variant) -> String:
+
+func _value_title_map(value: Variant) -> String:
 	if value is String:
 		return value
 	else:

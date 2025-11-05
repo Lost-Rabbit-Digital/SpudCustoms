@@ -3,7 +3,6 @@ extends DialogicVisualEditorField
 
 ## Event block field for editing arrays.
 
-
 const ArrayValue := "res://addons/dialogic/Editor/Events/Fields/array_part.tscn"
 
 
@@ -12,7 +11,7 @@ func _ready() -> void:
 	%Add.pressed.connect(_on_AddButton_pressed)
 
 
-func _set_value(value:Variant) -> void:
+func _set_value(value: Variant) -> void:
 	value = value as Array
 	for child in get_children():
 		if child != %Add:
@@ -26,7 +25,7 @@ func _set_value(value:Variant) -> void:
 		move_child(%Add, -1)
 
 
-func _on_value_changed(value:Variant) -> void:
+func _on_value_changed(value: Variant) -> void:
 	value_changed.emit(property_name, value)
 
 
@@ -45,4 +44,3 @@ func _on_AddButton_pressed() -> void:
 	x.value_changed.connect(recalculate_values)
 	recalculate_values()
 	move_child(%Add, -1)
-

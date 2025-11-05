@@ -6,7 +6,7 @@ const JOYSTICK_LEFT_NAME = "Left Gamepad Joystick"
 const JOYSTICK_RIGHT_NAME = "Right Gamepad Joystick"
 const D_PAD_NAME = "Gamepad D-pad"
 
-const JOY_BUTTON_NAMES : Dictionary = {
+const JOY_BUTTON_NAMES: Dictionary = {
 	JOY_BUTTON_A: "A Gamepad Button",
 	JOY_BUTTON_B: "B Gamepad Button",
 	JOY_BUTTON_X: "X Gamepad Button",
@@ -15,58 +15,59 @@ const JOY_BUTTON_NAMES : Dictionary = {
 	JOY_BUTTON_RIGHT_SHOULDER: "Right Shoulder Gamepad Button",
 	JOY_BUTTON_LEFT_STICK: "Left Stick Gamepad Button",
 	JOY_BUTTON_RIGHT_STICK: "Right Stick Gamepad Button",
-	JOY_BUTTON_START : "Start Gamepad Button",
-	JOY_BUTTON_GUIDE : "Guide Gamepad Button",
-	JOY_BUTTON_BACK : "Back Gamepad Button",
-	JOY_BUTTON_DPAD_UP : D_PAD_NAME + " Up",
-	JOY_BUTTON_DPAD_DOWN : D_PAD_NAME + " Down",
-	JOY_BUTTON_DPAD_LEFT : D_PAD_NAME + " Left",
-	JOY_BUTTON_DPAD_RIGHT : D_PAD_NAME + " Right",
-	
+	JOY_BUTTON_START: "Start Gamepad Button",
+	JOY_BUTTON_GUIDE: "Guide Gamepad Button",
+	JOY_BUTTON_BACK: "Back Gamepad Button",
+	JOY_BUTTON_DPAD_UP: D_PAD_NAME + " Up",
+	JOY_BUTTON_DPAD_DOWN: D_PAD_NAME + " Down",
+	JOY_BUTTON_DPAD_LEFT: D_PAD_NAME + " Left",
+	JOY_BUTTON_DPAD_RIGHT: D_PAD_NAME + " Right",
 }
 
-const JOY_AXIS_NAMES : Dictionary = {
+const JOY_AXIS_NAMES: Dictionary = {
 	JOY_AXIS_TRIGGER_LEFT: "Left Trigger Gamepad Button",
 	JOY_AXIS_TRIGGER_RIGHT: "Right Trigger Gamepad Button",
 }
 
-const BUILT_IN_ACTION_NAME_MAP : Dictionary = {
-	"ui_accept" : "Accept",
-	"ui_select" : "Select",
-	"ui_cancel" : "Cancel",
-	"ui_focus_next" : "Focus Next",
-	"ui_focus_prev" : "Focus Prev",
-	"ui_left" : "Left (UI)",
-	"ui_right" : "Right (UI)",
-	"ui_up" : "Up (UI)",
-	"ui_down" : "Down (UI)",
-	"ui_page_up" : "Page Up",
-	"ui_page_down" : "Page Down",
-	"ui_home" : "Home",
-	"ui_end" : "End",
-	"ui_cut" : "Cut",
-	"ui_copy" : "Copy",
-	"ui_paste" : "Paste",
-	"ui_undo" : "Undo",
-	"ui_redo" : "Redo",
+const BUILT_IN_ACTION_NAME_MAP: Dictionary = {
+	"ui_accept": "Accept",
+	"ui_select": "Select",
+	"ui_cancel": "Cancel",
+	"ui_focus_next": "Focus Next",
+	"ui_focus_prev": "Focus Prev",
+	"ui_left": "Left (UI)",
+	"ui_right": "Right (UI)",
+	"ui_up": "Up (UI)",
+	"ui_down": "Down (UI)",
+	"ui_page_up": "Page Up",
+	"ui_page_down": "Page Down",
+	"ui_home": "Home",
+	"ui_end": "End",
+	"ui_cut": "Cut",
+	"ui_copy": "Copy",
+	"ui_paste": "Paste",
+	"ui_undo": "Undo",
+	"ui_redo": "Redo",
 }
+
 
 static func _display_server_supports_keycode_from_physical():
 	return OS.has_feature("windows") or OS.has_feature("macos") or OS.has_feature("linux")
 
-static func get_text(event : InputEvent) -> String:
+
+static func get_text(event: InputEvent) -> String:
 	if event == null:
 		return ""
 	if event is InputEventJoypadButton:
 		if event.button_index in JOY_BUTTON_NAMES:
-			return JOY_BUTTON_NAMES[event.button_index] 
+			return JOY_BUTTON_NAMES[event.button_index]
 	elif event is InputEventJoypadMotion:
 		var full_string := ""
 		var direction_string := ""
-		var is_right_or_down : bool = event.axis_value > 0.0
+		var is_right_or_down: bool = event.axis_value > 0.0
 		if event.axis in JOY_AXIS_NAMES:
 			return JOY_AXIS_NAMES[event.axis]
-		match(event.axis):
+		match event.axis:
 			JOY_AXIS_LEFT_X:
 				full_string = JOYSTICK_LEFT_NAME
 				direction_string = "Right" if is_right_or_down else "Left"
@@ -82,7 +83,7 @@ static func get_text(event : InputEvent) -> String:
 		full_string += " " + direction_string
 		return full_string
 	elif event is InputEventKey:
-		var keycode : Key = event.get_physical_keycode()
+		var keycode: Key = event.get_physical_keycode()
 		if keycode:
 			keycode = event.get_physical_keycode_with_modifiers()
 		else:

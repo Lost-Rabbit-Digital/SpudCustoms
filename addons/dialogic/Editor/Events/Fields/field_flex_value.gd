@@ -10,35 +10,21 @@ var value_type: int = -1
 
 var current_value: Variant
 
+
 func _ready() -> void:
-	%ValueType.options = [{
-			'label': 'String',
-			'icon': ["String", "EditorIcons"],
-			'value': TYPE_STRING
-		},{
-			'label': 'Number (int)',
-			'icon': ["int", "EditorIcons"],
-			'value': TYPE_INT
-		},{
-			'label': 'Number (float)',
-			'icon': ["float", "EditorIcons"],
-			'value': TYPE_FLOAT
-		},{
-			'label': 'Boolean',
-			'icon': ["bool", "EditorIcons"],
-			'value': TYPE_BOOL
-		},{
-			'label': 'Expression',
-			'icon': ["Variant", "EditorIcons"],
-			'value': TYPE_MAX
-		}
-		]
+	%ValueType.options = [
+		{"label": "String", "icon": ["String", "EditorIcons"], "value": TYPE_STRING},
+		{"label": "Number (int)", "icon": ["int", "EditorIcons"], "value": TYPE_INT},
+		{"label": "Number (float)", "icon": ["float", "EditorIcons"], "value": TYPE_FLOAT},
+		{"label": "Boolean", "icon": ["bool", "EditorIcons"], "value": TYPE_BOOL},
+		{"label": "Expression", "icon": ["Variant", "EditorIcons"], "value": TYPE_MAX}
+	]
 	%ValueType.symbol_only = true
 	%ValueType.value_changed.connect(_on_type_changed.bind())
 	%ValueType.tooltip_text = "Change type"
 
 
-func set_value(value:Variant):
+func set_value(value: Variant):
 	change_field_type(deduce_type(value))
 	%ValueType.set_value(deduce_type(value))
 	current_value = value
@@ -50,17 +36,17 @@ func set_value(value:Variant):
 		TYPE_FLOAT, TYPE_INT:
 			value_field.set_value(value)
 		TYPE_MAX, _:
-			value_field.text = value.trim_prefix('@')
+			value_field.text = value.trim_prefix("@")
 
 
-func deduce_type(value:Variant) -> int:
-	if value is String and value.begins_with('@'):
+func deduce_type(value: Variant) -> int:
+	if value is String and value.begins_with("@"):
 		return TYPE_MAX
 	else:
 		return typeof(value)
 
 
-func _on_type_changed(prop:String, type:Variant) -> void:
+func _on_type_changed(prop: String, type: Variant) -> void:
 	if type == value_type:
 		return
 
@@ -74,7 +60,7 @@ func _on_type_changed(prop:String, type:Variant) -> void:
 				current_value = true if current_value else false
 			set_value(current_value)
 		TYPE_STRING:
-			current_value = str(current_value).trim_prefix('@')
+			current_value = str(current_value).trim_prefix("@")
 			set_value(current_value)
 		TYPE_FLOAT:
 			current_value = float(current_value)
@@ -82,12 +68,11 @@ func _on_type_changed(prop:String, type:Variant) -> void:
 		TYPE_INT:
 			current_value = int(current_value)
 			set_value(current_value)
-		TYPE_MAX,_:
+		TYPE_MAX, _:
 			current_value = var_to_str(current_value)
-			set_value('@'+current_value)
+			set_value("@" + current_value)
 
-
-	emit_signal.call_deferred('value_changed')
+	emit_signal.call_deferred("value_changed")
 
 
 func get_value() -> Variant:
@@ -99,7 +84,7 @@ func _on_delete_pressed() -> void:
 	value_changed.emit()
 
 
-func change_field_type(type:int) -> void:
+func change_field_type(type: int) -> void:
 	if type == value_type:
 		return
 
@@ -117,7 +102,9 @@ func change_field_type(type:int) -> void:
 			value_field.text_changed.connect(_on_str_text_changed)
 			value_field.expand_to_text_length = true
 		TYPE_FLOAT, TYPE_INT:
-			value_field = load("res://addons/dialogic/Editor/Events/Fields/field_number.tscn").instantiate()
+			value_field = (
+				load("res://addons/dialogic/Editor/Events/Fields/field_number.tscn").instantiate()
+			)
 			if type == TYPE_FLOAT:
 				value_field.use_float_mode()
 			else:
@@ -131,22 +118,22 @@ func change_field_type(type:int) -> void:
 	move_child(value_field, 1)
 
 
-func _on_bool_toggled(value:bool) -> void:
+func _on_bool_toggled(value: bool) -> void:
 	current_value = value
 	value_changed.emit()
 
 
-func _on_str_text_changed(value:String) -> void:
+func _on_str_text_changed(value: String) -> void:
 	current_value = value
 	value_changed.emit()
 
 
-func _on_expression_changed(value:String) -> void:
-	current_value = '@'+value
+func _on_expression_changed(value: String) -> void:
+	current_value = "@" + value
 	value_changed.emit()
 
 
-func _on_number_value_changed(prop:String, value:float, int := false) -> void:
+func _on_number_value_changed(prop: String, value: float, int := false) -> void:
 	if int:
 		current_value = int(value)
 	else:

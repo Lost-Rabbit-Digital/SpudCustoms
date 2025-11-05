@@ -4,46 +4,53 @@ extends OptionControl
 
 ## Locks Option Titles from auto-updating when editing Option Values.
 ## Intentionally put first for initialization.
-@export var lock_titles : bool = false
+@export var lock_titles: bool = false
 ## Defines the list of possible values for the variable
 ## this option stores in the config file.
-@export var option_values : Array :
-	set(value) :
+@export var option_values: Array:
+	set(value):
 		option_values = value
 		_on_option_values_changed()
 
 ## Defines the list of options displayed to the user.
 ## Length should match with Option Values.
-@export var option_titles : Array[String] :
+@export var option_titles: Array[String]:
 	set(value):
 		option_titles = value
 		if is_inside_tree():
 			_set_option_list(option_titles)
 
-var custom_option_values : Array
+var custom_option_values: Array
+
 
 func _on_option_values_changed():
-	if option_values.is_empty(): return
+	if option_values.is_empty():
+		return
 	custom_option_values = option_values.duplicate()
 	var first_value = custom_option_values.front()
 	property_type = typeof(first_value)
 	_set_titles_from_values()
 
+
 func _on_setting_changed(value):
 	if value < custom_option_values.size() and value >= 0:
 		super._on_setting_changed(custom_option_values[value])
 
+
 func _set_titles_from_values():
-	if lock_titles: return
-	var mapped_titles : Array[String] = []
+	if lock_titles:
+		return
+	var mapped_titles: Array[String] = []
 	for option_value in custom_option_values:
 		mapped_titles.append(_value_title_map(option_value))
 	option_titles = mapped_titles
 
-func _value_title_map(value : Variant) -> String:
+
+func _value_title_map(value: Variant) -> String:
 	return "%s" % value
 
-func _match_value_to_other(value : Variant, other : Variant) -> Variant:
+
+func _match_value_to_other(value: Variant, other: Variant) -> Variant:
 	# Primarily for when the editor saves floats as ints instead
 	if value is int and other is float:
 		return float(value)
@@ -51,8 +58,10 @@ func _match_value_to_other(value : Variant, other : Variant) -> Variant:
 		return int(round(value))
 	return value
 
-func set_value(value : Variant):
-	if option_values.is_empty(): return
+
+func set_value(value: Variant):
+	if option_values.is_empty():
+		return
 	if value == null:
 		return super.set_value(-1)
 	custom_option_values = option_values.duplicate()
@@ -66,13 +75,16 @@ func set_value(value : Variant):
 	value = custom_option_values.find(value)
 	super.set_value(value)
 
-func _set_option_list(option_titles_list : Array):
+
+func _set_option_list(option_titles_list: Array):
 	%OptionButton.clear()
 	for option_title in option_titles_list:
 		%OptionButton.add_item(option_title)
 
-func disable_option(option_index : int, disabled : bool = true):
+
+func disable_option(option_index: int, disabled: bool = true):
 	%OptionButton.set_item_disabled(option_index, disabled)
+
 
 func _ready():
 	lock_titles = lock_titles

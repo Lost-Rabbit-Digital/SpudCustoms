@@ -12,6 +12,7 @@ const _SETTING_EVENT_SECTION_ODER = "event_section_order"
 
 var do_timeline_editor_refresh_on_close := false
 
+
 func _get_title() -> String:
 	return "Editor"
 
@@ -24,7 +25,9 @@ func _refresh() -> void:
 	do_timeline_editor_refresh_on_close = false
 	%ImagePreviewHeight.value = DialogicUtil.get_editor_setting(_SETTING_IMAGE_PREVIEW_HEIGHT, 100)
 	%EventBlockMargin.value = DialogicUtil.get_editor_setting(_SETTING_EVENT_BLOCK_MARGIN, 0)
-	%ShowEventNames.set_pressed_no_signal(DialogicUtil.get_editor_setting(_SETTING_SHOW_EVENT_NAMES, false))
+	%ShowEventNames.set_pressed_no_signal(
+		DialogicUtil.get_editor_setting(_SETTING_SHOW_EVENT_NAMES, false)
+	)
 
 	update_color_palette()
 	reload_section_list()
@@ -50,23 +53,25 @@ func refresh_visual_timeline_editor() -> void:
 
 	# If the visual editor is open, close and reopen the timeline to have the colors reloaded.
 	if timeline_node.get_node("%VisualEditor").visible:
-
 		var current_timeline := timeline_node.current_resource
 		settings_editor.editors_manager.clear_editor(timeline_node)
 
 		settings_editor.editors_manager.edit_resource(current_timeline, true, true)
 
 
-
 #region SECTION ORDER
 ################################################################################
+
 
 func reload_section_list():
 	%SectionList.clear()
 	%SectionList.create_item()
 	var cached_events := DialogicResourceUtil.get_event_cache()
 	var sections := []
-	var section_order: Array = DialogicUtil.get_editor_setting(_SETTING_EVENT_SECTION_ODER, ['Main', 'Logic', 'Flow', 'Audio', 'Visuals','Other', 'Helper'])
+	var section_order: Array = DialogicUtil.get_editor_setting(
+		_SETTING_EVENT_SECTION_ODER,
+		["Main", "Logic", "Flow", "Audio", "Visuals", "Other", "Helper"]
+	)
 	for ev in cached_events:
 		if !ev.event_category in sections:
 			sections.append(ev.event_category)
@@ -75,18 +80,24 @@ func reload_section_list():
 			item.add_button(0, get_theme_icon("ArrowUp", "EditorIcons"))
 			item.add_button(0, get_theme_icon("ArrowDown", "EditorIcons"))
 			if ev.event_category in section_order:
-
-				item.move_before(item.get_parent().get_child(min(section_order.find(ev.event_category),item.get_parent().get_child_count()-1)))
+				item.move_before(
+					item.get_parent().get_child(
+						min(
+							section_order.find(ev.event_category),
+							item.get_parent().get_child_count() - 1
+						)
+					)
+				)
 
 	%SectionList.get_root().get_child(0).set_button_disabled(0, 0, true)
 	%SectionList.get_root().get_child(-1).set_button_disabled(0, 1, true)
 
 
-func _on_section_list_button_clicked(item:TreeItem, column, id, mouse_button_index):
+func _on_section_list_button_clicked(item: TreeItem, column, id, mouse_button_index):
 	if id == 0:
-		item.move_before(item.get_parent().get_child(item.get_index()-1))
+		item.move_before(item.get_parent().get_child(item.get_index() - 1))
 	else:
-		item.move_after(item.get_parent().get_child(item.get_index()+1))
+		item.move_after(item.get_parent().get_child(item.get_index() + 1))
 
 	for child in %SectionList.get_root().get_children():
 		child.set_button_disabled(0, 0, false)
@@ -102,11 +113,12 @@ func _on_section_list_button_clicked(item:TreeItem, column, id, mouse_button_ind
 	DialogicUtil.set_editor_setting(_SETTING_EVENT_SECTION_ODER, sections)
 	do_timeline_editor_refresh_on_close = true
 
-#endregion
 
+#endregion
 
 #region COLOR PALETTE
 ################################################################################
+
 
 ## Completely reloads the color palette buttons
 func update_color_palette() -> void:
@@ -114,7 +126,7 @@ func update_color_palette() -> void:
 		child.queue_free()
 	for color in DialogicUtil.get_color_palette():
 		var button := ColorPickerButton.new()
-		button.custom_minimum_size = Vector2(50 ,50) * DialogicUtil.get_editor_scale()
+		button.custom_minimum_size = Vector2(50, 50) * DialogicUtil.get_editor_scale()
 		%Colors.add_child(button)
 		button.color = DialogicUtil.get_color(color)
 		button.popup_closed.connect(_on_palette_color_popup_closed)
@@ -123,7 +135,7 @@ func update_color_palette() -> void:
 func _on_palette_color_popup_closed() -> void:
 	var new_palette := {}
 	for i in %Colors.get_children():
-		new_palette["Color"+str(i.get_index()+1)] = i.color
+		new_palette["Color" + str(i.get_index() + 1)] = i.color
 	DialogicUtil.set_editor_setting(_SETTING_EVENT_COLOR_PALETTE, new_palette)
 
 	do_timeline_editor_refresh_on_close = true
@@ -135,20 +147,19 @@ func _on_reset_colors_button() -> void:
 
 	do_timeline_editor_refresh_on_close = true
 
+
 #endregion
 
 
-
-
-func _on_ImagePreviewHeight_value_changed(value:float) -> void:
+func _on_ImagePreviewHeight_value_changed(value: float) -> void:
 	DialogicUtil.set_editor_setting(_SETTING_IMAGE_PREVIEW_HEIGHT, value)
 
 
-func _on_EventBlockMargin_value_changed(value:float) -> void:
+func _on_EventBlockMargin_value_changed(value: float) -> void:
 	DialogicUtil.set_editor_setting(_SETTING_EVENT_BLOCK_MARGIN, value)
 	do_timeline_editor_refresh_on_close = true
 
 
-func _on_ShowEventNames_toggled(toggled:bool) -> void:
+func _on_ShowEventNames_toggled(toggled: bool) -> void:
 	DialogicUtil.set_editor_setting(_SETTING_SHOW_EVENT_NAMES, toggled)
 	do_timeline_editor_refresh_on_close = true

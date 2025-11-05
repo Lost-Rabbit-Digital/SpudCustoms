@@ -190,9 +190,8 @@ func animate_lever(to_up: bool):
 		for i in range(starting_frame, -1, -1):
 			var frame_index = i  # Capture the current value
 			tween.tween_callback(
-				func():
-					lever_sprite.frame = frame_index
-					#print("Setting lever frame to: ", frame_index)
+				func(): lever_sprite.frame = frame_index
+				#print("Setting lever frame to: ", frame_index)
 			)
 			tween.tween_interval(0.05)  # Wait between frames
 	# If going to DOWN position (frame 7)
@@ -200,9 +199,8 @@ func animate_lever(to_up: bool):
 		for i in range(starting_frame, 8):
 			var frame_index = i  # Capture the current value
 			tween.tween_callback(
-				func():
-					lever_sprite.frame = frame_index
-					#print("Setting lever frame to: ", frame_index)
+				func(): lever_sprite.frame = frame_index
+				#print("Setting lever frame to: ", frame_index)
 			)
 			tween.tween_interval(0.05)  # Wait between frames
 

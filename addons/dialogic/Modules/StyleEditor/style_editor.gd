@@ -3,9 +3,8 @@ extends DialogicEditor
 
 ## Editor that handles the editing of styles and their layers.
 
-
 var styles: Array[DialogicStyle] = []
-var current_style : DialogicStyle = null
+var current_style: DialogicStyle = null
 var default_style := ""
 
 var premade_style_parts := {}
@@ -15,12 +14,13 @@ var premade_style_parts := {}
 #region EDITOR MANAGEMENT
 ################################################################################
 
+
 func _get_title() -> String:
 	return "Styles"
 
 
 func _get_icon() -> Texture:
-	return load(DialogicUtil.get_module_path('StyleEditor').path_join("styles_icon.svg"))
+	return load(DialogicUtil.get_module_path("StyleEditor").path_join("styles_icon.svg"))
 
 
 func _register() -> void:
@@ -28,7 +28,7 @@ func _register() -> void:
 	alternative_text = "Change the look of the dialog in your game"
 
 
-func _open(_extra_info:Variant = null) -> void:
+func _open(_extra_info: Variant = null) -> void:
 	load_style_list()
 
 
@@ -49,27 +49,37 @@ func _ready() -> void:
 #region STYLE MANAGEMENT
 ################################################################################
 
+
 func collect_styles() -> void:
 	for indexer in DialogicUtil.get_indexers():
 		for layout in indexer._get_layout_parts():
-			premade_style_parts[layout['path']] = layout
+			premade_style_parts[layout["path"]] = layout
 
-	var style_list: Array = ProjectSettings.get_setting('dialogic/layout/style_list', [])
+	var style_list: Array = ProjectSettings.get_setting("dialogic/layout/style_list", [])
 	for style in style_list:
 		if ResourceLoader.exists(style):
 			if style != null:
 				styles.append(ResourceLoader.load(style, "DialogicStyle"))
 			else:
-				print("[Dialogic] Failed to open style '", style, "'. Some dependency might be broken.")
+				print(
+					"[Dialogic] Failed to open style '",
+					style,
+					"'. Some dependency might be broken."
+				)
 		else:
-			print("[Dialogic] Failed to open style '", style, "'. Might have been moved or deleted.")
+			print(
+				"[Dialogic] Failed to open style '", style, "'. Might have been moved or deleted."
+			)
 
-	default_style = ProjectSettings.get_setting('dialogic/layout/default_style', 'Default')
+	default_style = ProjectSettings.get_setting("dialogic/layout/default_style", "Default")
 
 
 func save_style_list() -> void:
-	ProjectSettings.set_setting('dialogic/layout/style_list', styles.map(func(style:DialogicStyle): return style.resource_path))
-	ProjectSettings.set_setting('dialogic/layout/default_style', default_style)
+	ProjectSettings.set_setting(
+		"dialogic/layout/style_list",
+		styles.map(func(style: DialogicStyle): return style.resource_path)
+	)
+	ProjectSettings.set_setting("dialogic/layout/default_style", default_style)
 	ProjectSettings.save()
 
 
@@ -80,13 +90,13 @@ func save_style() -> void:
 	ResourceSaver.save(current_style)
 
 
-func add_style(file_path:String, style:DialogicStyle, inherits:DialogicStyle= null) -> void:
+func add_style(file_path: String, style: DialogicStyle, inherits: DialogicStyle = null) -> void:
 	style.resource_path = file_path
 	style.inherits = inherits
 
 	if style.layer_list.is_empty() and style.inherits_anything():
 		for id in style.get_layer_inherited_list():
-			style.add_layer('', {}, id)
+			style.add_layer("", {}, id)
 
 	ResourceSaver.save(style, file_path)
 
@@ -100,11 +110,17 @@ func add_style(file_path:String, style:DialogicStyle, inherits:DialogicStyle= nu
 	select_style(style)
 
 
-func delete_style(style:DialogicStyle) -> void:
+func delete_style(style: DialogicStyle) -> void:
 	for other_style in styles:
 		if other_style.inherits == style:
 			other_style.realize_inheritance()
-			push_warning('[Dialogic] Style "',other_style.name,'" had to be realized because it inherited "', style.name,'" which was deleted!')
+			push_warning(
+				'[Dialogic] Style "',
+				other_style.name,
+				'" had to be realized because it inherited "',
+				style.name,
+				'" which was deleted!'
+			)
 
 	if style.resource_path == default_style:
 		default_style = ""
@@ -112,7 +128,7 @@ func delete_style(style:DialogicStyle) -> void:
 	save_style_list()
 
 
-func delete_style_by_name(style_name:String) -> void:
+func delete_style_by_name(style_name: String) -> void:
 	for style in styles:
 		if style.name == style_name:
 			delete_style(style)
@@ -128,6 +144,7 @@ func realize_style() -> void:
 #endregion
 #region USER INTERFACE
 ################################################################################
+
 
 func setup_ui() -> void:
 	%AddButton.icon = get_theme_icon("Add", "EditorIcons")
@@ -147,8 +164,9 @@ func setup_ui() -> void:
 	%StyleView.hide()
 	%NoStyleView.show()
 
+
 func load_style_list() -> void:
-	var latest: String = DialogicUtil.get_editor_setting('latest_layout_style', 'Default')
+	var latest: String = DialogicUtil.get_editor_setting("latest_layout_style", "Default")
 
 	StyleList.clear()
 	var idx := 0
@@ -163,8 +181,15 @@ func load_style_list() -> void:
 			StyleList.set_item_icon_modulate(idx, get_theme_color("warning_color", "Editor"))
 		if style.resource_path.begins_with("res://addons/dialogic"):
 			StyleList.set_item_icon_modulate(idx, get_theme_color("property_color_z", "Editor"))
-			StyleList.set_item_tooltip(idx, "This is a default style. Only edit it if you know what you are doing!")
-			StyleList.set_item_custom_bg_color(idx, get_theme_color("property_color_z", "Editor").lerp(get_theme_color("dark_color_3", "Editor"), 0.8))
+			StyleList.set_item_tooltip(
+				idx, "This is a default style. Only edit it if you know what you are doing!"
+			)
+			StyleList.set_item_custom_bg_color(
+				idx,
+				get_theme_color("property_color_z", "Editor").lerp(
+					get_theme_color("dark_color_3", "Editor"), 0.8
+				)
+			)
 		if style.name == latest:
 			StyleList.select(idx)
 			load_style(style)
@@ -179,19 +204,19 @@ func load_style_list() -> void:
 		load_style(StyleList.get_item_metadata(0))
 
 
-func _on_stylelist_selected(index:int) -> void:
+func _on_stylelist_selected(index: int) -> void:
 	load_style(StyleList.get_item_metadata(index))
 
 
-func select_style(style:DialogicStyle) -> void:
-	DialogicUtil.set_editor_setting('latest_layout_style', style.name)
+func select_style(style: DialogicStyle) -> void:
+	DialogicUtil.set_editor_setting("latest_layout_style", style.name)
 	for idx in range(StyleList.item_count):
 		if StyleList.get_item_metadata(idx) == style:
 			StyleList.select(idx)
 			return
 
 
-func load_style(style:DialogicStyle) -> void:
+func load_style(style: DialogicStyle) -> void:
 	if current_style != null:
 		current_style.changed.disconnect(save_style)
 	save_style()
@@ -214,8 +239,7 @@ func load_style(style:DialogicStyle) -> void:
 	if %InheritanceButton.visible:
 		%InheritanceButton.text = "Inherits " + style.inherits.name
 
-
-	DialogicUtil.set_editor_setting('latest_layout_style', style.name)
+	DialogicUtil.set_editor_setting("latest_layout_style", style.name)
 
 	%StyleView.show()
 	%NoStyleView.hide()
@@ -225,14 +249,14 @@ func _on_AddStyleMenu_about_to_popup() -> void:
 	%AddButton.get_popup().set_item_disabled(3, not StyleList.is_anything_selected())
 
 
-func _on_AddStyleMenu_selected(index:int) -> void:
+func _on_AddStyleMenu_selected(index: int) -> void:
 	# add preset style
 	if index == 2:
 		%StyleBrowserWindow.popup_centered_ratio(0.6)
 		%StyleBrowser.current_type = 1
 		%StyleBrowser.load_parts()
 		var picked_info: Dictionary = await %StyleBrowserWindow.get_picked_info()
-		if not picked_info.has('style_path'):
+		if not picked_info.has("style_path"):
 			return
 
 		if not ResourceLoader.exists(picked_info.style_path):
@@ -240,49 +264,55 @@ func _on_AddStyleMenu_selected(index:int) -> void:
 
 		var new_style: DialogicStyle = load(picked_info.style_path).clone()
 
-		find_parent('EditorView').godot_file_dialog(
+		find_parent("EditorView").godot_file_dialog(
 			add_style_undoable.bind(new_style),
-			'*.tres',
+			"*.tres",
 			EditorFileDialog.FILE_MODE_SAVE_FILE,
-			"Select folder for new style")
+			"Select folder for new style"
+		)
 
 	if index == 3:
 		if StyleList.get_selected_items().is_empty():
 			return
-		find_parent('EditorView').godot_file_dialog(
+		find_parent("EditorView").godot_file_dialog(
 			add_style_undoable.bind(DialogicStyle.new(), current_style),
-			'*.tres',
+			"*.tres",
 			EditorFileDialog.FILE_MODE_SAVE_FILE,
-			"Select folder for new style")
+			"Select folder for new style"
+		)
 
 	if index == 4:
-		find_parent('EditorView').godot_file_dialog(
+		find_parent("EditorView").godot_file_dialog(
 			add_style_undoable.bind(DialogicStyle.new()),
-			'*.tres',
+			"*.tres",
 			EditorFileDialog.FILE_MODE_SAVE_FILE,
-			"Select folder for new style")
+			"Select folder for new style"
+		)
 
 
-func add_style_undoable(file_path:String, style:DialogicStyle, inherits:DialogicStyle = null) -> void:
-	style.name = _get_new_name(file_path.get_file().trim_suffix('.'+file_path.get_extension()))
+func add_style_undoable(
+	file_path: String, style: DialogicStyle, inherits: DialogicStyle = null
+) -> void:
+	style.name = _get_new_name(file_path.get_file().trim_suffix("." + file_path.get_extension()))
 	var undo_redo: EditorUndoRedoManager = DialogicUtil.get_dialogic_plugin().get_undo_redo()
-	undo_redo.create_action('Add Style', UndoRedo.MERGE_ALL)
+	undo_redo.create_action("Add Style", UndoRedo.MERGE_ALL)
 	undo_redo.add_do_method(self, "add_style", file_path, style, inherits)
 	undo_redo.add_do_method(self, "load_style_list")
 	undo_redo.add_undo_method(self, "delete_style", style)
 	undo_redo.add_undo_method(self, "load_style_list")
 	undo_redo.commit_action()
-	DialogicUtil.set_editor_setting('latest_layout_style', style.name)
+	DialogicUtil.set_editor_setting("latest_layout_style", style.name)
 
 
 func _on_duplicate_button_pressed() -> void:
 	if !StyleList.is_anything_selected():
 		return
-	find_parent('EditorView').godot_file_dialog(
+	find_parent("EditorView").godot_file_dialog(
 		add_style_undoable.bind(current_style.clone(), null),
-		'*.tres',
+		"*.tres",
 		EditorFileDialog.FILE_MODE_SAVE_FILE,
-		"Select folder for new style")
+		"Select folder for new style"
+	)
 
 
 func _on_remove_button_pressed() -> void:
@@ -302,7 +332,7 @@ func _on_edit_name_button_pressed() -> void:
 	%LayoutStyleName.select_all()
 
 
-func _on_layout_style_name_text_submitted(_new_text:String) -> void:
+func _on_layout_style_name_text_submitted(_new_text: String) -> void:
 	_on_layout_style_name_focus_exited()
 
 
@@ -317,7 +347,7 @@ func _on_layout_style_name_focus_exited() -> void:
 			return
 
 	current_style.name = new_name
-	DialogicUtil.set_editor_setting('latest_layout_style', new_name)
+	DialogicUtil.set_editor_setting("latest_layout_style", new_name)
 	load_style_list()
 
 
@@ -327,44 +357,46 @@ func _on_make_default_button_pressed() -> void:
 	load_style_list()
 
 
-
 func _on_test_style_button_pressed() -> void:
 	var dialogic_plugin := DialogicUtil.get_dialogic_plugin()
 
 	# Save the current opened timeline
-	DialogicUtil.set_editor_setting('current_test_style', current_style.name)
+	DialogicUtil.set_editor_setting("current_test_style", current_style.name)
 
-	DialogicUtil.get_dialogic_plugin().get_editor_interface().play_custom_scene("res://addons/dialogic/Editor/TimelineEditor/test_timeline_scene.tscn")
+	DialogicUtil.get_dialogic_plugin().get_editor_interface().play_custom_scene(
+		"res://addons/dialogic/Editor/TimelineEditor/test_timeline_scene.tscn"
+	)
 	await get_tree().create_timer(3).timeout
-	DialogicUtil.set_editor_setting('current_test_style', '')
+	DialogicUtil.set_editor_setting("current_test_style", "")
 
 
-func _on_inheritance_index_pressed(index:int) -> void:
+func _on_inheritance_index_pressed(index: int) -> void:
 	if index == 0:
 		realize_style()
-
 
 
 func _on_start_styling_button_pressed() -> void:
 	var new_style := DialogicStylesUtil.get_fallback_style().clone()
 
-	find_parent('EditorView').godot_file_dialog(
+	find_parent("EditorView").godot_file_dialog(
 		add_style_undoable.bind(new_style),
-		'*.tres',
+		"*.tres",
 		EditorFileDialog.FILE_MODE_SAVE_FILE,
-		"Select folder for new style")
+		"Select folder for new style"
+	)
 
 
 #endregion
 
-func _on_stylelist_drag(vector:Vector2) -> Variant:
+
+func _on_stylelist_drag(vector: Vector2) -> Variant:
 	return null
 
 
 func _on_stylelist_can_drop(at_position: Vector2, data: Variant) -> bool:
 	if not data is Dictionary:
 		return false
-	if not data.get('type', 's') == 'files':
+	if not data.get("type", "s") == "files":
 		return false
 	for f in data.files:
 		var style := load(f)
@@ -373,6 +405,7 @@ func _on_stylelist_can_drop(at_position: Vector2, data: Variant) -> bool:
 				return true
 
 	return false
+
 
 func _on_style_list_drop(at_position: Vector2, data: Variant) -> void:
 	for file in data.files:
@@ -385,7 +418,7 @@ func _on_style_list_drop(at_position: Vector2, data: Variant) -> void:
 
 
 #region Helpers
-func _get_new_name(base_name:String) -> String:
+func _get_new_name(base_name: String) -> String:
 	var new_name_idx := 1
 	var found_unique_name := false
 	var new_name := base_name
@@ -394,7 +427,7 @@ func _get_new_name(base_name:String) -> String:
 		for style in styles:
 			if style.name == new_name:
 				new_name_idx += 1
-				new_name = base_name+" "+str(new_name_idx)
+				new_name = base_name + " " + str(new_name_idx)
 				found_unique_name = false
 	return new_name
 

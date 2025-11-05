@@ -5,11 +5,12 @@ extends DialogicVisualEditorField
 
 const DictionaryValue = "res://addons/dialogic/Editor/Events/Fields/dictionary_part.tscn"
 
+
 func _ready() -> void:
 	%Add.icon = get_theme_icon("Add", "EditorIcons")
 
 
-func _set_value(value:Variant) -> void:
+func _set_value(value: Variant) -> void:
 	for child in get_children():
 		if child != %Add:
 			child.queue_free()
@@ -20,7 +21,7 @@ func _set_value(value:Variant) -> void:
 	if typeof(value) == TYPE_DICTIONARY:
 		dict = value
 	elif typeof(value) == TYPE_STRING:
-		if value.begins_with('{'):
+		if value.begins_with("{"):
 			var result: Variant = JSON.parse_string(value)
 			if result != null:
 				dict = result as Dictionary
@@ -37,7 +38,7 @@ func _set_value(value:Variant) -> void:
 		move_child(%Add, -1)
 
 
-func _on_value_changed(value:Variant) -> void:
+func _on_value_changed(value: Variant) -> void:
 	value_changed.emit(property_name, value)
 
 

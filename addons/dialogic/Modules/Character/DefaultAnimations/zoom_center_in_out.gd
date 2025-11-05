@@ -1,5 +1,6 @@
 extends DialogicAnimation
 
+
 func animate() -> void:
 	var modulate_property := get_modulation_property()
 	var modulate_alpha_property := modulate_property + ":a"
@@ -18,12 +19,12 @@ func animate() -> void:
 		original_modulation.a = 0.0
 		node.set(modulate_property, original_modulation)
 
-	var tween := (node.create_tween() as Tween)
+	var tween := node.create_tween() as Tween
 	tween.set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_EXPO)
 	tween.set_parallel(true)
 	tween.tween_property(node, "scale", end_scale, time)
 	tween.tween_property(node, "position", base_position, time)
-	tween.tween_property(node,  modulate_alpha_property, end_modulation_alpha, time)
+	tween.tween_property(node, modulate_alpha_property, end_modulation_alpha, time)
 
 	await tween.finished
 	finished_once.emit()

@@ -2,7 +2,7 @@ extends DialogicAnimation
 
 
 func animate() -> void:
-	var tween := (node.create_tween() as Tween)
+	var tween := node.create_tween() as Tween
 
 	var end_scale: Vector2 = node.scale
 	var end_modulate_alpha := 1.0
@@ -18,14 +18,13 @@ func animate() -> void:
 		original_modulation.a = 0.0
 		node.set(modulation_property, original_modulation)
 
-
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.set_trans(Tween.TRANS_SINE)
 	tween.set_parallel()
 
-	(tween.tween_property(node, "scale", end_scale, time)
-		.set_trans(Tween.TRANS_SPRING)
-		.set_ease(Tween.EASE_OUT))
+	tween.tween_property(node, "scale", end_scale, time).set_trans(Tween.TRANS_SPRING).set_ease(
+		Tween.EASE_OUT
+	)
 	tween.tween_property(node, modulation_property + ":a", end_modulate_alpha, time)
 
 	await tween.finished

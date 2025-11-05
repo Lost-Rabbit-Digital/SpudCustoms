@@ -43,7 +43,7 @@ var _last_enable_state := false
 ## temporary Auto-Advance delay for this event.
 ##
 ## Stacks with [variable enabled_forced] and [variable enabled_until_user_input].
-var enabled_until_next_event := false :
+var enabled_until_next_event := false:
 	set(enabled):
 		enabled_until_next_event = enabled
 		_try_emit_toggled()
@@ -53,7 +53,7 @@ var enabled_until_next_event := false :
 ## This boolean can be used to create an automatic text display.
 ##
 ## Stacks with [variable enabled_until_next_event] and [variable enabled_until_user_input].
-var enabled_forced := false :
+var enabled_forced := false:
 	set(enabled):
 		enabled_forced = enabled
 		_try_emit_toggled()
@@ -63,7 +63,7 @@ var enabled_forced := false :
 ## Use this flag when the player wants to enable Auto-Advance.
 ##
 ## Stacks with [variable enabled_forced] and [variable enabled_until_next_event].
-var enabled_until_user_input := false :
+var enabled_until_user_input := false:
 	set(enabled):
 		enabled_until_user_input = enabled
 		_try_emit_toggled()
@@ -75,20 +75,28 @@ func _init() -> void:
 	autoadvance_timer.timeout.connect(_on_autoadvance_timer_timeout)
 	toggled.connect(_on_toggled)
 
-	enabled_forced = ProjectSettings.get_setting('dialogic/text/autoadvance_enabled', false)
-	fixed_delay = ProjectSettings.get_setting('dialogic/text/autoadvance_fixed_delay', 1)
-	per_word_delay = ProjectSettings.get_setting('dialogic/text/autoadvance_per_word_delay', 0)
-	per_character_delay = ProjectSettings.get_setting('dialogic/text/autoadvance_per_character_delay', 0.1)
-	ignored_characters_enabled = ProjectSettings.get_setting('dialogic/text/autoadvance_ignored_characters_enabled', true)
-	ignored_characters = ProjectSettings.get_setting('dialogic/text/autoadvance_ignored_characters', {})
+	enabled_forced = ProjectSettings.get_setting("dialogic/text/autoadvance_enabled", false)
+	fixed_delay = ProjectSettings.get_setting("dialogic/text/autoadvance_fixed_delay", 1)
+	per_word_delay = ProjectSettings.get_setting("dialogic/text/autoadvance_per_word_delay", 0)
+	per_character_delay = ProjectSettings.get_setting(
+		"dialogic/text/autoadvance_per_character_delay", 0.1
+	)
+	ignored_characters_enabled = ProjectSettings.get_setting(
+		"dialogic/text/autoadvance_ignored_characters_enabled", true
+	)
+	ignored_characters = ProjectSettings.get_setting(
+		"dialogic/text/autoadvance_ignored_characters", {}
+	)
+
 
 #region AUTOADVANCE INTERNALS
+
 
 func start() -> void:
 	if not is_enabled():
 		return
 
-	var parsed_text: String = DialogicUtil.autoload().current_state_info['text_parsed']
+	var parsed_text: String = DialogicUtil.autoload().current_state_info["text_parsed"]
 	var delay := _calculate_autoadvance_delay(parsed_text)
 
 	await DialogicUtil.autoload().get_tree().process_frame
@@ -125,7 +133,11 @@ func _calculate_autoadvance_delay(text: String = "") -> float:
 		delay = max(0, delay)
 
 	# Wait for the voice clip (if longer than the current delay)
-	if await_playing_voice and DialogicUtil.autoload().has_subsystem('Voice') and DialogicUtil.autoload().Voice.is_running():
+	if (
+		await_playing_voice
+		and DialogicUtil.autoload().has_subsystem("Voice")
+		and DialogicUtil.autoload().Voice.is_running()
+	):
 		delay = max(delay, DialogicUtil.autoload().Voice.get_remaining_time())
 
 	return delay
@@ -134,7 +146,7 @@ func _calculate_autoadvance_delay(text: String = "") -> float:
 ## Checks how many words can be found by separating the text by whitespace.
 ##   (Uses ` ` aka SPACE right now, could be extended in the future)
 func _calculate_per_word_delay(text: String) -> float:
-	return float(text.split(' ', false).size() * per_word_delay)
+	return float(text.split(" ", false).size() * per_word_delay)
 
 
 ## Checks how many characters can be found by iterating each letter.
@@ -165,16 +177,22 @@ func _on_autoadvance_timer_timeout() -> void:
 func _on_toggled(enabled: bool) -> void:
 	# If auto-advance is enabled and we are not auto-advancing yet,
 	# we will initiate the auto-advance mode.
-	if (enabled and !is_advancing()
-	and DialogicUtil.autoload().current_state == DialogicGameHandler.States.IDLE
-	and not DialogicUtil.autoload().current_state_info.get('text', '').is_empty()):
+	if (
+		enabled
+		and !is_advancing()
+		and DialogicUtil.autoload().current_state == DialogicGameHandler.States.IDLE
+		and not DialogicUtil.autoload().current_state_info.get("text", "").is_empty()
+	):
 		start()
 
 	# If auto-advance is disabled and we are auto-advancing,
 	# we want to cancel the auto-advance mode.
 	elif !enabled and is_advancing():
 		DialogicUtil.autoload().Inputs.stop_timers()
+
+
 #endregion
+
 
 #region AUTOADVANCE HELPERS
 func is_advancing() -> bool:
@@ -197,9 +215,7 @@ func get_time() -> float:
 ##
 ## All three can be set with dedicated methods.
 func is_enabled() -> bool:
-	return (enabled_until_next_event
-		or enabled_until_user_input
-		or enabled_forced)
+	return enabled_until_next_event or enabled_until_user_input or enabled_forced
 
 
 ## Updates the [member _autoadvance_enabled] variable to properly check if the value has changed.

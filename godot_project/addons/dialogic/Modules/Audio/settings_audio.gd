@@ -12,7 +12,7 @@ var _revalidate_channel_names := false
 
 func _ready() -> void:
 	%TypeSoundBus.item_selected.connect(_on_type_sound_bus_item_selected)
-	$Panel.add_theme_stylebox_override('panel', get_theme_stylebox("Background", "EditorStyles"))
+	$Panel.add_theme_stylebox_override("panel", get_theme_stylebox("Background", "EditorStyles"))
 
 
 func _refresh() -> void:
@@ -32,7 +32,7 @@ func _about_to_close() -> void:
 
 
 ## TYPE SOUND AUDIO BUS
-func _on_type_sound_bus_item_selected(index:int) -> void:
+func _on_type_sound_bus_item_selected(index: int) -> void:
 	ProjectSettings.set_setting(TYPE_SOUND_AUDIO_BUS, %TypeSoundBus.get_item_text(index))
 	ProjectSettings.save()
 
@@ -40,24 +40,18 @@ func _on_type_sound_bus_item_selected(index:int) -> void:
 #region AUDIO CHANNELS
 ################################################################################
 
-func load_channel_defaults(dictionary:Dictionary) -> void:
+
+func load_channel_defaults(dictionary: Dictionary) -> void:
 	channel_defaults.clear()
 	for i in %AudioChannelDefaults.get_children():
 		i.queue_free()
 
-	var column_names := [
-		"Channel Name",
-		"Volume",
-		"Audio Bus",
-		"Fade",
-		"Loop",
-		""
-	]
+	var column_names := ["Channel Name", "Volume", "Audio Bus", "Fade", "Loop", ""]
 
 	for column in column_names:
 		var label := Label.new()
 		label.text = column
-		label.theme_type_variation = 'DialogicHintText2'
+		label.theme_type_variation = "DialogicHintText2"
 		%AudioChannelDefaults.add_child(label)
 
 	var channel_names := dictionary.keys()
@@ -69,7 +63,8 @@ func load_channel_defaults(dictionary:Dictionary) -> void:
 			dictionary[channel_name].volume,
 			dictionary[channel_name].audio_bus,
 			dictionary[channel_name].fade_length,
-			dictionary[channel_name].loop)
+			dictionary[channel_name].loop
+		)
 
 	await get_tree().process_frame
 
@@ -92,17 +87,17 @@ func save_channel_defaults() -> void:
 
 			if channel_name.is_empty():
 				dictionary[channel_name] = {
-					'volume': channel_defaults[i].volume.get_value(),
-					'audio_bus': channel_defaults[i].audio_bus.current_value,
-					'fade_length': 0.0,
-					'loop': false,
+					"volume": channel_defaults[i].volume.get_value(),
+					"audio_bus": channel_defaults[i].audio_bus.current_value,
+					"fade_length": 0.0,
+					"loop": false,
 				}
 			else:
 				dictionary[channel_name] = {
-					'volume': channel_defaults[i].volume.get_value(),
-					'audio_bus': channel_defaults[i].audio_bus.current_value,
-					'fade_length': channel_defaults[i].fade_length.get_value(),
-					'loop': channel_defaults[i].loop.button_pressed,
+					"volume": channel_defaults[i].volume.get_value(),
+					"audio_bus": channel_defaults[i].audio_bus.current_value,
+					"fade_length": channel_defaults[i].fade_length.get_value(),
+					"loop": channel_defaults[i].loop.button_pressed,
 				}
 
 	ProjectSettings.set_setting(CHANNEL_DEFAULTS, dictionary)
@@ -110,21 +105,22 @@ func save_channel_defaults() -> void:
 
 
 func _on_add_channel_defaults_pressed() -> void:
-	var added_node := add_channel_defaults('new_channel_name', 0.0, '', 0.0, true)
+	var added_node := add_channel_defaults("new_channel_name", 0.0, "", 0.0, true)
 	if added_node:
 		added_node.take_autofocus()
 	_revalidate_channel_names = true
 	revalidate_channel_names.call_deferred()
 
 
-func add_channel_defaults(channel_name: String, volume: float, audio_bus: String, fade_length: float, loop: bool) -> Control:
+func add_channel_defaults(
+	channel_name: String, volume: float, audio_bus: String, fade_length: float, loop: bool
+) -> Control:
 	var info := {}
 
 	for i in %AudioChannelDefaultRow.get_children():
 		var x := i.duplicate()
 		%AudioChannelDefaults.add_child(x)
 		info[i.name] = x
-
 
 	if channel_name.is_empty():
 		var channel_label := Label.new()
@@ -168,7 +164,7 @@ func add_channel_defaults(channel_name: String, volume: float, audio_bus: String
 	info.delete.icon = get_theme_icon(&"Remove", &"EditorIcons")
 
 	channel_defaults[len(channel_defaults)] = info
-	return info['channel_name']
+	return info["channel_name"]
 
 
 func _on_remove_channel_defaults_pressed(index: int) -> void:
@@ -177,7 +173,7 @@ func _on_remove_channel_defaults_pressed(index: int) -> void:
 	channel_defaults.erase(index)
 
 
-func get_audio_channel_suggestions(search_text:String) -> Dictionary:
+func get_audio_channel_suggestions(search_text: String) -> Dictionary:
 	var suggestions := DialogicUtil.get_audio_channel_suggestions(search_text)
 
 	for i in channel_defaults.values():
@@ -185,8 +181,8 @@ func get_audio_channel_suggestions(search_text:String) -> Dictionary:
 			suggestions.erase(i.channel_name.current_value)
 
 	for key in suggestions.keys():
-		suggestions[key].erase('tooltip')
-		suggestions[key]['editor_icon'] = ["AudioStreamPlayer", "EditorIcons"]
+		suggestions[key].erase("tooltip")
+		suggestions[key]["editor_icon"] = ["AudioStreamPlayer", "EditorIcons"]
 
 	return suggestions
 
@@ -194,8 +190,10 @@ func get_audio_channel_suggestions(search_text:String) -> Dictionary:
 func revalidate_channel_names() -> void:
 	_revalidate_channel_names = false
 	for i in channel_defaults:
-		if (is_instance_valid(channel_defaults[i].channel_name)
-				and not channel_defaults[i].channel_name is Label):
+		if (
+			is_instance_valid(channel_defaults[i].channel_name)
+			and not channel_defaults[i].channel_name is Label
+		):
 			channel_defaults[i].channel_name.validate()
 
 
@@ -205,7 +203,7 @@ func validate_channel_names(search_text: String, field_node: Control) -> Diction
 	var tooltips := []
 
 	if search_text.is_empty():
-		result['error_tooltip'] = 'Must not be empty.'
+		result["error_tooltip"] = "Must not be empty."
 		return result
 
 	if field_node:
@@ -216,9 +214,11 @@ func validate_channel_names(search_text: String, field_node: Control) -> Diction
 
 	# Collect all channel names entered
 	for i in channel_defaults:
-		if (is_instance_valid(channel_defaults[i].channel_name)
-				and not channel_defaults[i].channel_name is Label
-				and channel_defaults[i].channel_name != field_node):
+		if (
+			is_instance_valid(channel_defaults[i].channel_name)
+			and not channel_defaults[i].channel_name is Label
+			and channel_defaults[i].channel_name != field_node
+		):
 			var text := channel_defaults[i].channel_name.current_value as String
 			if not channel_cache.has(text):
 				channel_cache[text] = []
@@ -235,7 +235,7 @@ func validate_channel_names(search_text: String, field_node: Control) -> Diction
 		tooltips.append(result.error_tooltip)
 		result.error_tooltip = "\n".join(tooltips)
 	elif not tooltips.is_empty():
-		result['error_tooltip'] = "\n".join(tooltips)
+		result["error_tooltip"] = "\n".join(tooltips)
 
 	return result
 #endregion

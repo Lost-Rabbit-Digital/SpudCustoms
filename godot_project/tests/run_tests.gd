@@ -3,6 +3,7 @@ extends SceneTree
 # Test runner script for CI/CD
 # Run with: godot --headless --script res://tests/run_tests.gd
 
+
 func _init():
 	# Load GUT
 	var gut = load("res://addons/gut/gut.gd").new()

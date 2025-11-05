@@ -2,7 +2,7 @@
 class_name OverlaidMenuContainer
 extends OverlaidMenu
 
-@export var menu_scene : PackedScene :
+@export var menu_scene: PackedScene:
 	set(value):
 		var _value_changed = menu_scene != value
 		menu_scene = value

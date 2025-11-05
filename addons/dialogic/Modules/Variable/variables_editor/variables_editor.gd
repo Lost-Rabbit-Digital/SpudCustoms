@@ -5,6 +5,7 @@ extends DialogicEditor
 
 #region EDITOR STUFF
 
+
 func _get_title() -> String:
 	return "Variables"
 
@@ -18,13 +19,13 @@ func _register() -> void:
 	alternative_text = "Create and edit dialogic variables and their default values"
 
 
-func _open(_argument:Variant = null) -> void:
+func _open(_argument: Variant = null) -> void:
 	%ReferenceInfo.hide()
-	%Tree.load_info(ProjectSettings.get_setting('dialogic/variables', {}))
+	%Tree.load_info(ProjectSettings.get_setting("dialogic/variables", {}))
 
 
 func _save() -> void:
-	ProjectSettings.set_setting('dialogic/variables', %Tree.get_info())
+	ProjectSettings.set_setting("dialogic/variables", %Tree.get_info())
 	ProjectSettings.save()
 
 
@@ -34,13 +35,18 @@ func _close() -> void:
 
 #endregion
 
+
 func _ready() -> void:
-	%ReferenceInfo.get_node('Label').add_theme_color_override('font_color', get_theme_color("warning_color", "Editor"))
+	%ReferenceInfo.get_node("Label").add_theme_color_override(
+		"font_color", get_theme_color("warning_color", "Editor")
+	)
 	%Search.right_icon = get_theme_icon("Search", "EditorIcons")
+
 
 #region RENAMING
 
-func variable_renamed(old_name:String, new_name:String):
+
+func variable_renamed(old_name: String, new_name: String):
 	if old_name == new_name:
 		return
 	var count: int = editors_manager.reference_manager.get_change_count()
@@ -51,9 +57,11 @@ func variable_renamed(old_name:String, new_name:String):
 	elif count < new_count:
 		%ReferenceInfo.show()
 
+
 func _on_reference_manager_pressed() -> void:
 	editors_manager.reference_manager.open()
 	%ReferenceInfo.hide()
+
 
 #endregion
 

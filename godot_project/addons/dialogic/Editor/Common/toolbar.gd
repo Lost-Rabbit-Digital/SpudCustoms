@@ -3,6 +3,7 @@ extends HBoxContainer
 
 # Dialogic Editor toolbar. Works together with editors_mangager.
 
+
 ################################################################################
 ## 					EDITOR BUTTONS/LABELS
 ################################################################################
@@ -22,14 +23,14 @@ func add_icon_button(icon: Texture, tooltip: String) -> Button:
 	button.tooltip_text = tooltip
 	button.flat = true
 	button.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
-	button.add_theme_color_override('icon_hover_color', get_theme_color('warning_color', 'Editor'))
-	button.add_theme_stylebox_override('focus', StyleBoxEmpty.new())
+	button.add_theme_color_override("icon_hover_color", get_theme_color("warning_color", "Editor"))
+	button.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
 	add_child(button)
 	move_child(button, -2)
 	return button
 
 
-func add_custom_button(label:String, icon:Texture) -> Button:
+func add_custom_button(label: String, icon: Texture) -> Button:
 	var button := Button.new()
 	button.text = label
 	button.icon = icon

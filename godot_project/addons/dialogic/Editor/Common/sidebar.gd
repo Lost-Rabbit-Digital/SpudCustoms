@@ -49,7 +49,9 @@ func _ready() -> void:
 	%Logo.custom_minimum_size.y = 30 * editor_scale
 	%Search.right_icon = get_theme_icon("Search", "EditorIcons")
 	%Options.icon = get_theme_icon("GuiTabMenuHl", "EditorIcons")
-	%OptionsPanel.add_theme_stylebox_override("panel", get_theme_stylebox("PanelForeground", "EditorStyles"))
+	%OptionsPanel.add_theme_stylebox_override(
+		"panel", get_theme_stylebox("PanelForeground", "EditorStyles")
+	)
 	%OptionsPopup.hide()
 
 	%ContentList.add_theme_color_override(
@@ -87,8 +89,12 @@ func _ready() -> void:
 	group_mode = DialogicUtil.get_editor_setting("sidebar_group_mode", 0)
 	%GroupingOptions.select(%GroupingOptions.get_item_index(group_mode))
 
-	%FolderColors.button_pressed = DialogicUtil.get_editor_setting("sidebar_use_folder_colors", true)
-	%TrimFolderPaths.button_pressed = DialogicUtil.get_editor_setting("sidebar_trim_folder_paths", true)
+	%FolderColors.button_pressed = DialogicUtil.get_editor_setting(
+		"sidebar_use_folder_colors", true
+	)
+	%TrimFolderPaths.button_pressed = DialogicUtil.get_editor_setting(
+		"sidebar_trim_folder_paths", true
+	)
 
 	update_resource_list()
 
@@ -108,6 +114,7 @@ func _on_logo_gui_input(event: InputEvent) -> void:
 #region SHOW/HIDE SIDEBAR
 ################################################################################
 
+
 func _show_sidebar() -> void:
 	%VBoxPrimary.show()
 	%VBoxHidden.hide()
@@ -121,8 +128,8 @@ func _hide_sidebar() -> void:
 	DialogicUtil.set_editor_setting("sidebar_collapsed", true)
 	show_sidebar.emit(false)
 
-#endregion
 
+#endregion
 
 ################################################################################
 ## 						RESOURCE LIST
@@ -144,6 +151,7 @@ func clean_resource_list(resources_list: Array = []) -> PackedStringArray:
 
 
 #region BULDING/FILTERING THE RESOURCE LIST
+
 
 func update_resource_list(resources_list: PackedStringArray = []) -> void:
 	var filter: String = %Search.text
@@ -167,8 +175,18 @@ func update_resource_list(resources_list: PackedStringArray = []) -> void:
 
 	resource_tree.clear()
 
-	var character_items: Array = get_directory_items.call(character_directory, filter, load("res://addons/dialogic/Editor/Images/Resources/character.svg"), resources_list)
-	var timeline_items: Array = get_directory_items.call(timeline_directory, filter, load("res://addons/dialogic/Editor/Images/Resources/timeline.svg"), resources_list)
+	var character_items: Array = get_directory_items.call(
+		character_directory,
+		filter,
+		load("res://addons/dialogic/Editor/Images/Resources/character.svg"),
+		resources_list
+	)
+	var timeline_items: Array = get_directory_items.call(
+		timeline_directory,
+		filter,
+		load("res://addons/dialogic/Editor/Images/Resources/timeline.svg"),
+		resources_list
+	)
 	var all_items := character_items + timeline_items
 
 	# BUILD TREE
@@ -179,7 +197,6 @@ func update_resource_list(resources_list: PackedStringArray = []) -> void:
 			all_items.sort_custom(_sort_by_item_text)
 			for item in all_items:
 				add_item(item, root, current_file)
-
 
 		GroupMode.TYPE:
 			character_items.sort_custom(_sort_by_item_text)
@@ -193,7 +210,6 @@ func update_resource_list(resources_list: PackedStringArray = []) -> void:
 				var timeline_tree := add_folder_item("Timelines", root)
 				for item in timeline_items:
 					add_item(item, timeline_tree, current_file)
-
 
 		GroupMode.FOLDER:
 			var dirs := {}
@@ -209,7 +225,6 @@ func update_resource_list(resources_list: PackedStringArray = []) -> void:
 				for item in dirs[dir]:
 					add_item(item, dir_item, current_file)
 
-
 		GroupMode.PATH:
 			# Collect all different directories that contain resources
 			var dirs := {}
@@ -222,9 +237,9 @@ func update_resource_list(resources_list: PackedStringArray = []) -> void:
 			# Sort them into ones with the same folder name
 			var dir_names := {}
 			for dir in dirs:
-				var sliced: String = dir.get_slice("/", dir.get_slice_count("/")-1)
+				var sliced: String = dir.get_slice("/", dir.get_slice_count("/") - 1)
 				if not sliced in dir_names:
-					dir_names[sliced] = {"folders":[dir]}
+					dir_names[sliced] = {"folders": [dir]}
 				else:
 					dir_names[sliced].folders.append(dir)
 
@@ -235,7 +250,7 @@ func update_resource_list(resources_list: PackedStringArray = []) -> void:
 				if dir_names[dir_name].folders.size() > 1:
 					for i in dir_names[dir_name].folders:
 						if "/" in i:
-							unique_folder_names[i.get_slice("/", i.get_slice_count("/")-2)+"/"+i.get_slice("/", i.get_slice_count("/")-1)] = i
+							unique_folder_names[i.get_slice("/", i.get_slice_count("/") - 2) + "/" + i.get_slice("/", i.get_slice_count("/") - 1)] = i
 						else:
 							unique_folder_names[i] = i
 				else:
@@ -245,9 +260,14 @@ func update_resource_list(resources_list: PackedStringArray = []) -> void:
 			var sorted_dir_keys := unique_folder_names.keys()
 			sorted_dir_keys.sort_custom(
 				func(x, y):
-					return x.get_slice("/", x.get_slice_count("/")-1) < y.get_slice("/", y.get_slice_count("/")-1)
+					return (
+						x.get_slice("/", x.get_slice_count("/") - 1)
+						< y.get_slice("/", y.get_slice_count("/") - 1)
 					)
-			var folder_colors: Dictionary = ProjectSettings.get_setting("file_customization/folder_colors", {})
+			)
+			var folder_colors: Dictionary = ProjectSettings.get_setting(
+				"file_customization/folder_colors", {}
+			)
 
 			for dir in sorted_dir_keys:
 				var display_name: String = dir
@@ -258,7 +278,10 @@ func update_resource_list(resources_list: PackedStringArray = []) -> void:
 				var dir_color := Color.BLACK
 				if %FolderColors.button_pressed:
 					for path in folder_colors:
-						if String("res://"+dir_path+"/").begins_with(path) and len(path) > len(dir_color_path):
+						if (
+							String("res://" + dir_path + "/").begins_with(path)
+							and len(path) > len(dir_color_path)
+						):
 							dir_color_path = path
 							dir_color = folder_colors[path]
 
@@ -266,7 +289,6 @@ func update_resource_list(resources_list: PackedStringArray = []) -> void:
 
 				for item in dirs[dir_path]:
 					add_item(item, dir_item, current_file)
-
 
 	if %CurrentResource.text != "No Resource":
 		%CurrentResource.add_theme_color_override(
@@ -276,7 +298,7 @@ func update_resource_list(resources_list: PackedStringArray = []) -> void:
 	DialogicUtil.set_editor_setting("last_resources", resources_list)
 
 
-func add_item(item:ResourceListItem, parent:TreeItem, current_file := "") -> TreeItem:
+func add_item(item: ResourceListItem, parent: TreeItem, current_file := "") -> TreeItem:
 	var tree_item := resource_tree.create_item(parent)
 	tree_item.set_text(0, item.text)
 	tree_item.set_icon(0, item.icon)
@@ -295,7 +317,9 @@ func add_item(item:ResourceListItem, parent:TreeItem, current_file := "") -> Tre
 	return tree_item
 
 
-func add_folder_item(label: String, parent:TreeItem, color:= Color.BLACK, tooltip:="") -> TreeItem:
+func add_folder_item(
+	label: String, parent: TreeItem, color := Color.BLACK, tooltip := ""
+) -> TreeItem:
 	var folder_item := resource_tree.create_item(parent)
 	folder_item.set_text(0, label)
 	folder_item.set_icon(0, get_theme_icon("Folder", "EditorIcons"))
@@ -312,10 +336,15 @@ func add_folder_item(label: String, parent:TreeItem, color:= Color.BLACK, toolti
 	return folder_item
 
 
-func get_directory_items(directory:Dictionary, filter:String, icon:Texture2D, resources_list:Array) -> Array:
+func get_directory_items(
+	directory: Dictionary, filter: String, icon: Texture2D, resources_list: Array
+) -> Array:
 	var items := []
 	for item_name in directory:
-		if (directory[item_name] in resources_list) and (filter.is_empty() or filter.to_lower() in item_name.to_lower()):
+		if (
+			(directory[item_name] in resources_list)
+			and (filter.is_empty() or filter.to_lower() in item_name.to_lower())
+		):
 			var item := ResourceListItem.new()
 			item.text = item_name
 			item.icon = icon
@@ -355,8 +384,8 @@ class ResourceListItem:
 func _sort_by_item_text(a: ResourceListItem, b: ResourceListItem) -> bool:
 	return a.text < b.text
 
-#endregion
 
+#endregion
 
 #region INTERACTING WITH RESOURCES
 
@@ -390,7 +419,7 @@ func _on_resources_tree_item_clicked(_pos: Vector2, mouse_button_index: int) -> 
 				%RightClickMenu.set_meta("item_clicked", resource_tree.get_selected())
 
 
-func _on_resources_tree_item_collapsed(item:TreeItem) -> void:
+func _on_resources_tree_item_collapsed(item: TreeItem) -> void:
 	var collapsed_info: Array = DialogicUtil.get_editor_setting("resource_list_collapsed_info", [])
 	if item.get_text(0) in collapsed_info:
 		if not item.collapsed:
@@ -437,10 +466,12 @@ func _on_right_click_menu_id_pressed(id: int) -> void:
 					%RightClickMenu.get_meta("item_clicked").get_metadata(0)
 				)
 			)
+
+
 #endregion
 
-
 #region FILTERING
+
 
 func _on_search_text_changed(_new_text: String) -> void:
 	update_resource_list()
@@ -459,10 +490,11 @@ func _on_search_text_submitted(_new_text: String) -> void:
 	edit_resource(item.get_metadata(0))
 	%Search.clear()
 
+
 #endregion
 
-
 #region CONTENT LIST
+
 
 func update_content_list(list: PackedStringArray) -> void:
 	var prev_selected := ""
@@ -493,13 +525,16 @@ func update_content_list(list: PackedStringArray) -> void:
 
 	DialogicResourceUtil.set_label_cache(label_directory)
 
-#endregion
 
+#endregion
 
 #region RESOURCE LIST OPTIONS
 
+
 func _on_options_pressed() -> void:
-	%OptionsPopup.popup_on_parent(Rect2(%Options.global_position+%Options.size*Vector2(0,1), Vector2()))
+	%OptionsPopup.popup_on_parent(
+		Rect2(%Options.global_position + %Options.size * Vector2(0, 1), Vector2())
+	)
 
 
 func _on_grouping_changed(idx: int) -> void:
@@ -521,6 +556,7 @@ func _on_folder_colors_toggled(toggled_on: bool) -> void:
 func _on_trim_folder_paths_toggled(toggled_on: bool) -> void:
 	DialogicUtil.set_editor_setting("sidebar_trim_folder_paths", toggled_on)
 	update_resource_list()
+
 
 #endregion
 

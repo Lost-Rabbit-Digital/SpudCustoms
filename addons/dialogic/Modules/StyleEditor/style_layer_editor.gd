@@ -3,7 +3,6 @@ extends HSplitContainer
 
 ## Script that handles the style editor.
 
-
 var current_style: DialogicStyle = null
 
 var customization_editor_info := {}
@@ -33,7 +32,7 @@ func _ready() -> void:
 	%LayerTree.add_theme_constant_override("icon_max_width", _minimum_tree_item_height)
 
 
-func load_style(style:DialogicStyle) -> void:
+func load_style(style: DialogicStyle) -> void:
 	current_style = style
 
 	if current_style.has_meta("_latest_layer"):
@@ -65,7 +64,7 @@ func load_style_layer_list() -> void:
 	select_layer(current_layer_id)
 
 
-func select_layer(id:String) -> void:
+func select_layer(id: String) -> void:
 	if id == "":
 		tree.get_root().select(0)
 	else:
@@ -75,11 +74,11 @@ func select_layer(id:String) -> void:
 				return
 
 
-func setup_layer_tree_item(info:Dictionary, item:TreeItem) -> void:
+func setup_layer_tree_item(info: Dictionary, item: TreeItem) -> void:
 	item.custom_minimum_height = _minimum_tree_item_height
 
 	if %StyleBrowser.is_premade_style_part(info.path):
-		if ResourceLoader.exists(%StyleBrowser.premade_scenes_reference[info.path].get('icon', '')):
+		if ResourceLoader.exists(%StyleBrowser.premade_scenes_reference[info.path].get("icon", "")):
 			item.set_icon(0, load(%StyleBrowser.premade_scenes_reference[info.path].get("icon")))
 		item.set_text(0, %StyleBrowser.premade_scenes_reference[info.path].get("name", "Layer"))
 
@@ -96,42 +95,43 @@ func _on_layer_selected() -> void:
 	load_layer(item.get_meta("id", ""))
 
 
-func load_layer(layer_id:=""):
+func load_layer(layer_id := ""):
 	current_layer_id = layer_id
-	current_style.set_meta('_latest_layer', current_layer_id)
+	current_style.set_meta("_latest_layer", current_layer_id)
 
 	var layer_info := current_style.get_layer_inherited_info(layer_id)
 
 	%SmallLayerPreview.hide()
-	if %StyleBrowser.is_premade_style_part(layer_info.get('path', 'Unkown Layer')):
-		var premade_infos = %StyleBrowser.premade_scenes_reference[layer_info.get('path')]
-		%LayerName.text = premade_infos.get('name', 'Unknown Layer')
-		%SmallLayerAuthor.text = "by "+premade_infos.get('author', '')
-		%SmallLayerDescription.text = premade_infos.get('description', '')
+	if %StyleBrowser.is_premade_style_part(layer_info.get("path", "Unkown Layer")):
+		var premade_infos = %StyleBrowser.premade_scenes_reference[layer_info.get("path")]
+		%LayerName.text = premade_infos.get("name", "Unknown Layer")
+		%SmallLayerAuthor.text = "by " + premade_infos.get("author", "")
+		%SmallLayerDescription.text = premade_infos.get("description", "")
 
-		if premade_infos.get('preview_image', null) and ResourceLoader.exists(premade_infos.get('preview_image')[0]):
-			%SmallLayerPreview.texture = load(premade_infos.get('preview_image')[0])
+		if (
+			premade_infos.get("preview_image", null)
+			and ResourceLoader.exists(premade_infos.get("preview_image")[0])
+		):
+			%SmallLayerPreview.texture = load(premade_infos.get("preview_image")[0])
 			%SmallLayerPreview.show()
 
 	else:
-		%LayerName.text = clean_scene_name(layer_info.get('path', 'Unkown Layer'))
+		%LayerName.text = clean_scene_name(layer_info.get("path", "Unkown Layer"))
 		%SmallLayerAuthor.text = "Custom Layer"
-		%SmallLayerDescription.text = layer_info.get('path', 'Unkown Layer')
+		%SmallLayerDescription.text = layer_info.get("path", "Unkown Layer")
 
 	%DeleteLayerButton.disabled = layer_id == "" or current_style.inherits_anything()
 
-	%SmallLayerScene.text = layer_info.get('path', 'Unkown Layer').get_file()
-	%SmallLayerScene.tooltip_text = layer_info.get('path', '')
+	%SmallLayerScene.text = layer_info.get("path", "Unkown Layer").get_file()
+	%SmallLayerScene.tooltip_text = layer_info.get("path", "")
 
 	var inherited_layer_info := current_style.get_layer_inherited_info(layer_id, true)
 	load_layout_scene_customization(
-			layer_info.path,
-			layer_info.overrides,
-			inherited_layer_info.overrides)
+		layer_info.path, layer_info.overrides, inherited_layer_info.overrides
+	)
 
 
-
-func add_layer(scene_path:="", overrides:= {}):
+func add_layer(scene_path := "", overrides := {}):
 	current_style.add_layer(scene_path, overrides)
 	load_style_layer_list()
 	await get_tree().process_frame
@@ -147,21 +147,21 @@ func delete_layer() -> void:
 	%LayerTree.get_root().select(0)
 
 
-func move_layer(from_idx:int, to_idx:int) -> void:
+func move_layer(from_idx: int, to_idx: int) -> void:
 	current_style.move_layer(from_idx, to_idx)
 
 	load_style_layer_list()
 	select_layer(current_style.get_layer_id_at_index(to_idx))
 
 
-func replace_layer(layer_id:String, scene_path:String) -> void:
+func replace_layer(layer_id: String, scene_path: String) -> void:
 	current_style.set_layer_scene(layer_id, scene_path)
 
 	load_style_layer_list()
 	select_layer(layer_id)
 
 
-func _on_add_layer_menu_pressed(index:int) -> void:
+func _on_add_layer_menu_pressed(index: int) -> void:
 	# Adding a premade layer
 	if index == 2:
 		%StyleBrowserWindow.popup_centered_ratio(0.6)
@@ -169,18 +169,19 @@ func _on_add_layer_menu_pressed(index:int) -> void:
 		%StyleBrowser.load_parts()
 		var picked_info: Dictionary = await %StyleBrowserWindow.get_picked_info()
 		if not picked_info.is_empty():
-			add_layer(picked_info.get('path', ''))
+			add_layer(picked_info.get("path", ""))
 
 	# Adding a custom scene as a layer
 	else:
-		find_parent('EditorView').godot_file_dialog(
+		find_parent("EditorView").godot_file_dialog(
 			_on_add_custom_layer_file_selected,
-			'*.tscn, Scenes',
+			"*.tscn, Scenes",
 			EditorFileDialog.FILE_MODE_OPEN_FILE,
-			"Open custom layer scene")
+			"Open custom layer scene"
+		)
 
 
-func _on_replace_layer_menu_pressed(index:int) -> void:
+func _on_replace_layer_menu_pressed(index: int) -> void:
 	# Adding a premade layer
 	if index == 2:
 		%StyleBrowserWindow.popup_centered_ratio(0.6)
@@ -191,22 +192,23 @@ func _on_replace_layer_menu_pressed(index:int) -> void:
 		%StyleBrowser.load_parts()
 		var picked_info: Dictionary = await %StyleBrowserWindow.get_picked_info()
 		if not picked_info.is_empty():
-			replace_layer(%LayerTree.get_selected().get_meta("id", ""), picked_info.get('path', ''))
+			replace_layer(%LayerTree.get_selected().get_meta("id", ""), picked_info.get("path", ""))
 
 	# Adding a custom scene as a layer
 	else:
-		find_parent('EditorView').godot_file_dialog(
+		find_parent("EditorView").godot_file_dialog(
 			_on_replace_custom_layer_file_selected,
-			'*.tscn, Scenes',
+			"*.tscn, Scenes",
 			EditorFileDialog.FILE_MODE_OPEN_FILE,
-			"Open custom layer scene")
+			"Open custom layer scene"
+		)
 
 
-func _on_add_custom_layer_file_selected(file_path:String) -> void:
+func _on_add_custom_layer_file_selected(file_path: String) -> void:
 	add_layer(file_path)
 
 
-func _on_replace_custom_layer_file_selected(file_path:String) -> void:
+func _on_replace_custom_layer_file_selected(file_path: String) -> void:
 	replace_layer(%LayerTree.get_selected().get_meta("id", ""), file_path)
 
 
@@ -218,46 +220,54 @@ func _on_make_custom_button_about_to_popup() -> void:
 		%MakeCustomButton.get_popup().set_item_disabled(2, true)
 
 
-func _on_make_custom_menu_pressed(index:int) -> void:
+func _on_make_custom_menu_pressed(index: int) -> void:
 	# This layer only
 	if index == 2:
-		find_parent('EditorView').godot_file_dialog(
+		find_parent("EditorView").godot_file_dialog(
 			_on_make_custom_layer_file_selected,
-			'',
+			"",
 			EditorFileDialog.FILE_MODE_OPEN_DIR,
-			"Select folder for new copy of layer")
+			"Select folder for new copy of layer"
+		)
 	# The full layout
 	if index == 3:
-		find_parent('EditorView').godot_file_dialog(
+		find_parent("EditorView").godot_file_dialog(
 			_on_make_custom_layout_file_selected,
-			'',
+			"",
 			EditorFileDialog.FILE_MODE_OPEN_DIR,
-			"Select folder for new layout scene")
+			"Select folder for new layout scene"
+		)
 
 
-func _on_make_custom_layer_file_selected(file:String) -> void:
+func _on_make_custom_layer_file_selected(file: String) -> void:
 	make_layer_custom(file)
 
 
-func _on_make_custom_layout_file_selected(file:String) -> void:
+func _on_make_custom_layout_file_selected(file: String) -> void:
 	make_layout_custom(file)
 
 
-func make_layer_custom(target_folder:String, custom_name := "") -> void:
-
+func make_layer_custom(target_folder: String, custom_name := "") -> void:
 	var original_file: String = current_style.get_layer_info(current_layer_id).path
 	var custom_new_folder := ""
 
 	if custom_name.is_empty():
-		custom_name = "custom_"+%StyleBrowser.premade_scenes_reference[original_file].name.to_snake_case()
-		custom_new_folder = %StyleBrowser.premade_scenes_reference[original_file].name.to_pascal_case()
-
-	var result_path := DialogicUtil.make_file_custom(
-		original_file,
-		target_folder,
-		custom_name,
-		custom_new_folder,
+		custom_name = (
+			"custom_" + %StyleBrowser.premade_scenes_reference[original_file].name.to_snake_case()
 		)
+		custom_new_folder = (
+			%StyleBrowser.premade_scenes_reference[original_file].name.to_pascal_case()
+		)
+
+	var result_path := (
+		DialogicUtil
+		. make_file_custom(
+			original_file,
+			target_folder,
+			custom_name,
+			custom_new_folder,
+		)
+	)
 
 	current_style.set_layer_scene(current_layer_id, result_path)
 
@@ -269,13 +279,12 @@ func make_layer_custom(target_folder:String, custom_name := "") -> void:
 		%LayerTree.get_root().get_child(%LayerTree.get_selected().get_index()).select(0)
 
 
-func make_layout_custom(target_folder:String) -> void:
+func make_layout_custom(target_folder: String) -> void:
 	target_folder = target_folder.path_join("Custom" + current_style.name.to_pascal_case())
 
 	DirAccess.make_dir_absolute(target_folder)
 	%LayerTree.get_root().select(0)
 	make_layer_custom(target_folder, "custom_" + current_style.name.to_snake_case())
-
 
 	var base_layer_info := current_style.get_layer_info("")
 	var target_path: String = base_layer_info.path
@@ -314,8 +323,13 @@ func make_layout_custom(target_folder:String) -> void:
 	load_style_layer_list()
 
 	%LayerTree.get_root().select(0)
-	find_parent('EditorView').plugin_reference.get_editor_interface().get_resource_filesystem().scan_sources()
-
+	(
+		find_parent("EditorView")
+		. plugin_reference
+		. get_editor_interface()
+		. get_resource_filesystem()
+		. scan_sources()
+	)
 
 
 func _on_delete_layer_button_pressed() -> void:
@@ -325,7 +339,10 @@ func _on_delete_layer_button_pressed() -> void:
 #region Layer Settings
 ####### LAYER SETTINGS #########################################################
 
-func load_layout_scene_customization(custom_scene_path:String, overrides:Dictionary = {}, inherited_overrides:Dictionary = {}) -> void:
+
+func load_layout_scene_customization(
+	custom_scene_path: String, overrides: Dictionary = {}, inherited_overrides: Dictionary = {}
+) -> void:
 	for child in %LayerSettingsTabs.get_children():
 		child.get_parent().remove_child(child)
 		child.queue_free()
@@ -346,7 +363,7 @@ func load_layout_scene_customization(custom_scene_path:String, overrides:Diction
 		note.text = "This layer has no exposed settings."
 		if not %StyleBrowser.is_premade_style_part(custom_scene_path):
 			note.text += "\n\nIf you want to add settings, make sure to have a root script in @tool mode and expose some @exported variables to show up here."
-		note.theme_type_variation = 'DialogicHintText2'
+		note.theme_type_variation = "DialogicHintText2"
 		%LayerSettingsTabs.add_child(note)
 		note.name = "General"
 		return
@@ -363,32 +380,31 @@ func load_layout_scene_customization(custom_scene_path:String, overrides:Diction
 	customization_editor_info = {}
 
 	for i in settings:
-		match i['id']:
+		match i["id"]:
 			&"GROUP":
 				var main_scroll := ScrollContainer.new()
 				main_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 				main_scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-				main_scroll.name = i['name']
+				main_scroll.name = i["name"]
 				%LayerSettingsTabs.add_child(main_scroll, true)
 
 				current_grid = GridContainer.new()
 				current_grid.columns = 3
 				current_grid.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 				main_scroll.add_child(current_grid)
-				current_group_name = i['name'].to_snake_case()
+				current_group_name = i["name"].to_snake_case()
 				current_subgroup_name = ""
 
 			&"SUBGROUP":
-
 				# add separator
 				if current_subgroup_name:
 					current_grid.add_child(HSeparator.new())
-					current_grid.get_child(-1).add_theme_constant_override('separation', 20)
+					current_grid.get_child(-1).add_theme_constant_override("separation", 20)
 					current_grid.add_child(current_grid.get_child(-1).duplicate())
 					current_grid.add_child(current_grid.get_child(-1).duplicate())
 
 				var title_label := Label.new()
-				title_label.text = i['name']
+				title_label.text = i["name"]
 				title_label.theme_type_variation = "DialogicSection"
 				title_label.size_flags_horizontal = SIZE_EXPAND_FILL
 				current_grid.add_child(title_label, true)
@@ -397,112 +413,125 @@ func load_layout_scene_customization(custom_scene_path:String, overrides:Diction
 				current_grid.add_child(Control.new())
 				current_grid.add_child(Control.new())
 
-				current_subgroup_name = i['name'].to_snake_case()
+				current_subgroup_name = i["name"].to_snake_case()
 
 			&"SETTING":
 				var label := Label.new()
-				label.text = str(i['name'].trim_prefix(current_group_name+'_').trim_prefix(current_subgroup_name+'_')).capitalize()
+				label.text = (
+					str(
+						i["name"].trim_prefix(current_group_name + "_").trim_prefix(
+							current_subgroup_name + "_"
+						)
+					)
+					. capitalize()
+				)
 				current_grid.add_child(label, true)
 
-				var scene_value: Variant = scene.get(i['name'])
-				customization_editor_info[i['name']] = {}
+				var scene_value: Variant = scene.get(i["name"])
+				customization_editor_info[i["name"]] = {}
 
-				if i['name'] in inherited_overrides:
-					customization_editor_info[i['name']]['orig'] = str_to_var(inherited_overrides.get(i['name']))
+				if i["name"] in inherited_overrides:
+					customization_editor_info[i["name"]]["orig"] = str_to_var(
+						inherited_overrides.get(i["name"])
+					)
 				else:
-					customization_editor_info[i['name']]['orig'] = scene_value
+					customization_editor_info[i["name"]]["orig"] = scene_value
 
 				var current_value: Variant
-				if i['name'] in overrides:
-					current_value = str_to_var(overrides.get(i['name']))
+				if i["name"] in overrides:
+					current_value = str_to_var(overrides.get(i["name"]))
 				else:
-					current_value = customization_editor_info[i['name']]['orig']
+					current_value = customization_editor_info[i["name"]]["orig"]
 
-				var input: Node = DialogicUtil.setup_script_property_edit_node(i, current_value, set_export_override)
+				var input: Node = DialogicUtil.setup_script_property_edit_node(
+					i, current_value, set_export_override
+				)
 
 				input.size_flags_horizontal = SIZE_EXPAND_FILL
-				customization_editor_info[i['name']]['node'] = input
+				customization_editor_info[i["name"]]["node"] = input
 
 				var reset := Button.new()
 				reset.flat = true
 				reset.icon = get_theme_icon("Reload", "EditorIcons")
 				reset.tooltip_text = "Remove customization"
-				customization_editor_info[i['name']]['reset'] = reset
-				reset.disabled = current_value == customization_editor_info[i['name']]['orig']
+				customization_editor_info[i["name"]]["reset"] = reset
+				reset.disabled = current_value == customization_editor_info[i["name"]]["orig"]
 				current_grid.add_child(reset)
-				reset.pressed.connect(_on_export_override_reset.bind(i['name']))
+				reset.pressed.connect(_on_export_override_reset.bind(i["name"]))
 				current_grid.add_child(input)
 
 	if scene:
 		scene.queue_free()
 
 
-func collect_settings(properties:Array[Dictionary]) -> Array[Dictionary]:
+func collect_settings(properties: Array[Dictionary]) -> Array[Dictionary]:
 	var settings: Array[Dictionary] = []
 
 	var current_group := {}
 	var current_subgroup := {}
 
 	for i in properties:
-		if i['usage'] & PROPERTY_USAGE_CATEGORY:
+		if i["usage"] & PROPERTY_USAGE_CATEGORY:
 			continue
 
-		if (i['usage'] & PROPERTY_USAGE_GROUP):
+		if i["usage"] & PROPERTY_USAGE_GROUP:
 			current_group = i
-			current_group['added'] = false
-			current_group['id'] = &'GROUP'
+			current_group["added"] = false
+			current_group["id"] = &"GROUP"
 			current_subgroup = {}
 
-		elif i['usage'] & PROPERTY_USAGE_SUBGROUP:
+		elif i["usage"] & PROPERTY_USAGE_SUBGROUP:
 			current_subgroup = i
-			current_subgroup['added'] = false
-			current_subgroup['id'] = &'SUBGROUP'
+			current_subgroup["added"] = false
+			current_subgroup["id"] = &"SUBGROUP"
 
-		elif i['usage'] & PROPERTY_USAGE_EDITOR:
-			if current_group.get('name', '') == 'Private':
+		elif i["usage"] & PROPERTY_USAGE_EDITOR:
+			if current_group.get("name", "") == "Private":
 				continue
 
 			if current_group.is_empty():
-				current_group = {'name':'General', 'added':false, 'id':&"GROUP"}
+				current_group = {"name": "General", "added": false, "id": &"GROUP"}
 
-			if current_group.get('added', true) == false:
+			if current_group.get("added", true) == false:
 				settings.append(current_group)
-				current_group['added'] = true
+				current_group["added"] = true
 
 			if current_subgroup.is_empty():
-				current_subgroup = {'name':current_group['name'], 'added':false, 'id':&"SUBGROUP"}
+				current_subgroup = {
+					"name": current_group["name"], "added": false, "id": &"SUBGROUP"
+				}
 
-			if current_subgroup.get('added', true) == false:
+			if current_subgroup.get("added", true) == false:
 				settings.append(current_subgroup)
-				current_subgroup['added'] = true
+				current_subgroup["added"] = true
 
-			i['id'] = &'SETTING'
+			i["id"] = &"SETTING"
 			settings.append(i)
 	return settings
 
 
-func set_export_override(property_name:String, value:String = "") -> void:
-	if str_to_var(value) != customization_editor_info[property_name]['orig']:
+func set_export_override(property_name: String, value: String = "") -> void:
+	if str_to_var(value) != customization_editor_info[property_name]["orig"]:
 		current_style.set_layer_setting(current_layer_id, property_name, value)
-		customization_editor_info[property_name]['reset'].disabled = false
+		customization_editor_info[property_name]["reset"].disabled = false
 	else:
 		current_style.remove_layer_setting(current_layer_id, property_name)
-		customization_editor_info[property_name]['reset'].disabled = true
+		customization_editor_info[property_name]["reset"].disabled = true
 
 
-func _on_export_override_reset(property_name:String) -> void:
+func _on_export_override_reset(property_name: String) -> void:
 	current_style.remove_layer_setting(current_layer_id, property_name)
-	customization_editor_info[property_name]['reset'].disabled = true
-	set_customization_value(property_name, customization_editor_info[property_name]['orig'])
+	customization_editor_info[property_name]["reset"].disabled = true
+	set_customization_value(property_name, customization_editor_info[property_name]["orig"])
 
 
-func set_customization_value(property_name:String, value:Variant) -> void:
-	var node: Node = customization_editor_info[property_name]['node']
+func set_customization_value(property_name: String, value: Variant) -> void:
+	var node: Node = customization_editor_info[property_name]["node"]
 	if node is CheckBox:
 		node.button_pressed = value
 	elif node is LineEdit:
 		node.text = value
-	elif node.has_method('set_value'):
+	elif node.has_method("set_value"):
 		node.set_value(value)
 	elif node is ColorPickerButton:
 		node.color = value
@@ -510,6 +539,7 @@ func set_customization_value(property_name:String, value:Variant) -> void:
 		node.select(value)
 	elif node is SpinBox:
 		node.value = value
+
 
 #endregion
 
@@ -527,16 +557,23 @@ func _on_layer_tree_layer_moved(from: int, to: int) -> void:
 	move_layer(from, to)
 
 
-func _on_layer_tree_button_clicked(item: TreeItem, column: int, id: int, mouse_button_index: int) -> void:
-	if ResourceLoader.exists(item.get_meta('scene')):
-		find_parent('EditorView').plugin_reference.get_editor_interface().open_scene_from_path(item.get_meta('scene'))
-		find_parent('EditorView').plugin_reference.get_editor_interface().set_main_screen_editor("2D")
+func _on_layer_tree_button_clicked(
+	item: TreeItem, column: int, id: int, mouse_button_index: int
+) -> void:
+	if ResourceLoader.exists(item.get_meta("scene")):
+		find_parent("EditorView").plugin_reference.get_editor_interface().open_scene_from_path(
+			item.get_meta("scene")
+		)
+		find_parent("EditorView").plugin_reference.get_editor_interface().set_main_screen_editor(
+			"2D"
+		)
 
 
 #region Helpers
 ####### HELPERS ################################################################
 
-func clean_scene_name(file_path:String) -> String:
-	return file_path.get_file().trim_suffix('.tscn').capitalize()
+
+func clean_scene_name(file_path: String) -> String:
+	return file_path.get_file().trim_suffix(".tscn").capitalize()
 
 #endregion

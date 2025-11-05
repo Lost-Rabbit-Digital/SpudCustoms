@@ -10,39 +10,40 @@ var enabled := true
 ## Any key in this dictionary will overwrite the color for any item with that name.
 var color_overrides := {}
 
-const SETTING_DEFAULT_COLOR := 'dialogic/glossary/default_color'
-
+const SETTING_DEFAULT_COLOR := "dialogic/glossary/default_color"
 
 #region STATE
 ####################################################################################################
 
+
 func clear_game_state(_clear_flag := DialogicGameHandler.ClearFlags.FULL_CLEAR) -> void:
 	glossaries = []
 
-	for path: String in ProjectSettings.get_setting('dialogic/glossary/glossary_files', []):
+	for path: String in ProjectSettings.get_setting("dialogic/glossary/glossary_files", []):
 		add_glossary(path)
+
 
 #endregion
 
-
 #region MAIN METHODS
 ####################################################################################################
+
 
 func parse_glossary(text: String) -> String:
 	if not enabled:
 		return text
 
-	var def_case_sensitive: bool = ProjectSettings.get_setting('dialogic/glossary/default_case_sensitive', true)
+	var def_case_sensitive: bool = ProjectSettings.get_setting(
+		"dialogic/glossary/default_case_sensitive", true
+	)
 	var def_color: Color = ProjectSettings.get_setting(SETTING_DEFAULT_COLOR, Color.POWDER_BLUE)
 	var regex := RegEx.new()
 
 	for glossary: DialogicGlossary in glossaries:
-
 		if !glossary.enabled:
 			continue
 
 		for entry_value: Variant in glossary.entries.values():
-
 			if not entry_value is Dictionary:
 				continue
 
@@ -56,7 +57,7 @@ func parse_glossary(text: String) -> String:
 			if entry_key.is_empty():
 				continue
 
-			if not entry.get('enabled', true):
+			if not entry.get("enabled", true):
 				continue
 
 			var regex_options := glossary.get_set_regex_option(entry_key)
@@ -64,30 +65,29 @@ func parse_glossary(text: String) -> String:
 			if regex_options.is_empty():
 				continue
 
-			var pattern: String = r'(?<=\W|^)(?<!\\)(?<word>' + regex_options + r')(?!])(?=\W|$)'
+			var pattern: String = r"(?<=\W|^)(?<!\\)(?<word>" + regex_options + r")(?!])(?=\W|$)"
 
-			if entry.get('case_sensitive', def_case_sensitive):
+			if entry.get("case_sensitive", def_case_sensitive):
 				regex.compile(pattern)
 
 			else:
-				regex.compile('(?i)'+pattern)
+				regex.compile("(?i)" + pattern)
 
-			var color: String = entry.get('color', def_color).to_html()
+			var color: String = entry.get("color", def_color).to_html()
 
 			if entry_key in color_overrides:
 				color = color_overrides[entry_key].to_html()
 
-			text = regex.sub(text,
-				'[url="' + entry_key + '"]' +
-				'[color=' + color + ']${word}[/color]' +
-				'[/url]',
+			text = regex.sub(
+				text,
+				'[url="' + entry_key + '"]' + "[color=" + color + "]${word}[/color]" + "[/url]",
 				true
-				)
+			)
 
 	return text
 
 
-func add_glossary(path:String) -> void:
+func add_glossary(path: String) -> void:
 	if ResourceLoader.exists(path):
 		var resource: DialogicGlossary = load(path)
 
@@ -104,7 +104,6 @@ func add_glossary(path:String) -> void:
 ## O(n), where n is the number of glossaries.
 func find_glossary(entry_key: String) -> DialogicGlossary:
 	for glossary: DialogicGlossary in glossaries:
-
 		if glossary.entries.has(entry_key):
 			return glossary
 
@@ -121,12 +120,14 @@ func get_entry(entry_key: String) -> Dictionary:
 		"text": "",
 		"extra": "",
 		"color": Color.WHITE,
-		}
+	}
 
 	if glossary == null:
 		return {}
 
-	var is_translation_enabled: bool = ProjectSettings.get_setting('dialogic/translation/enabled', false)
+	var is_translation_enabled: bool = ProjectSettings.get_setting(
+		"dialogic/translation/enabled", false
+	)
 
 	var entry := glossary.get_entry(entry_key)
 
@@ -139,7 +140,7 @@ func get_entry(entry_key: String) -> Dictionary:
 
 	if is_translation_enabled and not glossary._translation_id.is_empty():
 		var translation_key: String = glossary._translation_keys.get(entry_key)
-		var last_slash := translation_key.rfind('/')
+		var last_slash := translation_key.rfind("/")
 
 		if last_slash == -1:
 			return {}
@@ -160,7 +161,6 @@ func get_entry(entry_key: String) -> Dictionary:
 	result.extra = dialogic.VAR.parse_variables(result.extra)
 
 	return result
-
 
 
 ## Tries to translate the property with the given

@@ -5,16 +5,16 @@ extends Control
 ## Base class for all dialogic editors.
 
 # These signals will automatically be emitted if current_resource_state is changed.
-signal resource_saved()
-signal resource_unsaved()
+signal resource_saved
+signal resource_unsaved
 
-@warning_ignore("unused_signal")# This is emitted from the Editors Manager
+@warning_ignore("unused_signal")  # This is emitted from the Editors Manager
 signal opened
 
 var current_resource: Resource
 
 ## State of the current resource
-enum ResourceStates {SAVED, UNSAVED}
+enum ResourceStates { SAVED, UNSAVED }
 var current_resource_state: ResourceStates:
 	set(value):
 		current_resource_state = value
@@ -27,6 +27,7 @@ var editors_manager: Control
 # text displayed on the current resource label on non-resource editors
 var alternative_text: String = ""
 
+
 ## Overwrite. Register to the editor manager in here.
 func _register() -> void:
 	pass
@@ -36,13 +37,14 @@ func _register() -> void:
 func _get_icon() -> Texture:
 	return null
 
+
 ## Used on the tab
 func _get_title() -> String:
 	return ""
 
 
 ## If this editor supports editing resources, load them here (overwrite in subclass)
-func _open_resource(_resource:Resource) -> void:
+func _open_resource(_resource: Resource) -> void:
 	pass
 
 
@@ -52,7 +54,7 @@ func _save() -> void:
 
 
 ## Overwrite. Called when this editor is shown. (show() doesn't have to be called)
-func _open(_extra_info:Variant = null) -> void:
+func _open(_extra_info: Variant = null) -> void:
 	pass
 
 

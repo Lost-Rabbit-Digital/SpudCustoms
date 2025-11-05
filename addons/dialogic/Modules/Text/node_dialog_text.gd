@@ -4,10 +4,10 @@ extends RichTextLabel
 
 ## Dialogic node that can reveal text at a given (changeable speed).
 
-signal started_revealing_text()
-signal continued_revealing_text(new_character : String)
-signal finished_revealing_text()
-enum Alignment {LEFT, CENTER, RIGHT}
+signal started_revealing_text
+signal continued_revealing_text(new_character: String)
+signal finished_revealing_text
+enum Alignment { LEFT, CENTER, RIGHT }
 
 @export var enabled := true
 @export var alignment := Alignment.LEFT
@@ -25,9 +25,9 @@ var active_speed: float = 0.01
 
 var speed_counter: float = 0
 
-func _set(property: StringName, what: Variant) -> bool:
-	if property == 'text' and typeof(what) == TYPE_STRING:
 
+func _set(property: StringName, what: Variant) -> bool:
+	if property == "text" and typeof(what) == TYPE_STRING:
 		text = what
 
 		if hide_when_empty:
@@ -39,7 +39,7 @@ func _set(property: StringName, what: Variant) -> bool:
 
 func _ready() -> void:
 	# add to necessary
-	add_to_group('dialogic_dialog_text')
+	add_to_group("dialogic_dialog_text")
 	meta_hover_ended.connect(_on_meta_hover_ended)
 	meta_hover_started.connect(_on_meta_hover_started)
 	meta_clicked.connect(_on_meta_clicked)
@@ -52,16 +52,19 @@ func _ready() -> void:
 		textbox_root.hide()
 	text = ""
 
-	var custom_bbcode_effects: Array = ProjectSettings.get_setting("dialogic/text/custom_bbcode_effects", "").split(",", false)
+	var custom_bbcode_effects: Array = (
+		ProjectSettings.get_setting("dialogic/text/custom_bbcode_effects", "").split(",", false)
+	)
 	for i in custom_bbcode_effects:
-		var x : Resource = load(i.strip_edges())
+		var x: Resource = load(i.strip_edges())
 		if x is RichTextEffect:
 			custom_effects.append(x)
 
 
 # this is called by the DialogicGameHandler to set text
 
-func reveal_text(_text: String, keep_previous:=false) -> void:
+
+func reveal_text(_text: String, keep_previous := false) -> void:
 	if !enabled:
 		return
 	show()
@@ -73,9 +76,9 @@ func reveal_text(_text: String, keep_previous:=false) -> void:
 		base_visible_characters = 0
 
 		if alignment == Alignment.CENTER:
-			text = '[center]'+text
+			text = "[center]" + text
 		elif alignment == Alignment.RIGHT:
-			text = '[right]'+text
+			text = "[right]" + text
 		visible_characters = 0
 
 	else:
@@ -95,11 +98,14 @@ func reveal_text(_text: String, keep_previous:=false) -> void:
 	started_revealing_text.emit()
 
 
-func set_speed(delay_per_character:float) -> void:
-	if DialogicUtil.autoload().Text.is_text_voice_synced() and DialogicUtil.autoload().Voice.is_running():
+func set_speed(delay_per_character: float) -> void:
+	if (
+		DialogicUtil.autoload().Text.is_text_voice_synced()
+		and DialogicUtil.autoload().Voice.is_running()
+	):
 		var total_characters := get_total_character_count() as float
 		var remaining_time: float = DialogicUtil.autoload().Voice.get_remaining_time()
-		var synced_speed :=  remaining_time / total_characters
+		var synced_speed := remaining_time / total_characters
 		active_speed = synced_speed
 
 	else:
@@ -121,14 +127,16 @@ func continue_reveal() -> void:
 		visible_characters += 1
 
 		if visible_characters > -1 and visible_characters <= len(get_parsed_text()):
-			continued_revealing_text.emit(get_parsed_text()[visible_characters-1])
+			continued_revealing_text.emit(get_parsed_text()[visible_characters - 1])
 
 		custom_fx_update()
 	else:
 		finish_text(true)
 		# if the text finished organically, add a small input block
 		# this prevents accidental skipping when you expected the text to be longer
-		DialogicUtil.autoload().Inputs.block_input(ProjectSettings.get_setting('dialogic/text/advance_delay', 0.1))
+		DialogicUtil.autoload().Inputs.block_input(
+			ProjectSettings.get_setting("dialogic/text/advance_delay", 0.1)
+		)
 
 
 ## Reveals the entire text instantly.
@@ -156,19 +164,20 @@ func _process(delta: float) -> void:
 		continue_reveal()
 
 
-
-func _on_meta_hover_started(_meta:Variant) -> void:
+func _on_meta_hover_started(_meta: Variant) -> void:
 	DialogicUtil.autoload().Inputs.action_was_consumed = true
 
-func _on_meta_hover_ended(_meta:Variant) -> void:
+
+func _on_meta_hover_ended(_meta: Variant) -> void:
 	DialogicUtil.autoload().Inputs.action_was_consumed = false
 
-func _on_meta_clicked(_meta:Variant) -> void:
+
+func _on_meta_clicked(_meta: Variant) -> void:
 	DialogicUtil.autoload().Inputs.action_was_consumed = true
 
 
 ## Handle mouse input
-func on_gui_input(event:InputEvent) -> void:
+func on_gui_input(event: InputEvent) -> void:
 	DialogicUtil.autoload().Inputs.handle_node_gui_input(event)
 
 

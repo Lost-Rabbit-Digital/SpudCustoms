@@ -4,10 +4,10 @@ extends DialogicEvent
 
 ## Event that does nothing right now.
 
-
 ################################################################################
 ## 						EXECUTE
 ################################################################################
+
 
 func _execute() -> void:
 	pass
@@ -17,9 +17,10 @@ func _execute() -> void:
 ## 						INITIALIZE
 ################################################################################
 
+
 func _init() -> void:
 	event_name = "Glossary"
-	set_default_color('Color6')
+	set_default_color("Color6")
 	event_category = "Other"
 	event_sorting_index = 0
 
@@ -30,13 +31,15 @@ func _init() -> void:
 func get_shortcode() -> String:
 	return "glossary"
 
+
 func get_shortcode_parameters() -> Dictionary:
-	return {
-	}
+	return {}
+
 
 ################################################################################
 ## 						EDITOR REPRESENTATION
 ################################################################################
+
 
 func build_event_editor() -> void:
 	pass

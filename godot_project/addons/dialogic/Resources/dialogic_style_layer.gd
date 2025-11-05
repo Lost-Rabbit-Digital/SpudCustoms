@@ -6,7 +6,7 @@ extends Resource
 @export var overrides := {}
 
 
-func _init(scene_path:Variant=null, scene_overrides:Dictionary={}):
+func _init(scene_path: Variant = null, scene_overrides: Dictionary = {}):
 	if scene_path is PackedScene:
 		scene = scene_path
 	elif scene_path is String and ResourceLoader.exists(scene_path):

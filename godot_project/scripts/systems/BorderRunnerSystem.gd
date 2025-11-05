@@ -497,27 +497,37 @@ func start_runner(potato: PotatoPerson, is_rejected: bool = false):
 		# Show an anger emote using the existing system
 		# Change the potato's brain state to ANGRY
 		potato.change_brain_state(potato.PotatoBrainState.ANGRY)
-		
+
 		# Show a specific angry emote
 		emote_system.show_random_emote_from_category("negative")
-		
+
 		# Make sure emoting is enabled for this potato
 		emote_system.emoting_enabled = true
-		
+
 		# Set longer duration for the anger emote
 		emote_system.emote_duration = 5.0
 	else:
 		push_warning("No PotatoEmoteSystem found on potato, cannot show anger emote")
 
 	if is_rejected:
-		Global.display_red_alert(
-			#alert_label, alert_timer, "REJECTED POTATO FLEEING!\nClick to launch missile!"
-			alert_label, alert_timer, tr("alert_rejected_fleeing")
+		(
+			Global
+			. display_red_alert(
+				#alert_label, alert_timer, "REJECTED POTATO FLEEING!\nClick to launch missile!"
+				alert_label,
+				alert_timer,
+				tr("alert_rejected_fleeing")
+			)
 		)
 	else:
-		Global.display_red_alert(
-			#alert_label, alert_timer, "BORDER RUNNER DETECTED!\nClick to launch missile!"
-			alert_label, alert_timer, tr("alert_border_runner")
+		(
+			Global
+			. display_red_alert(
+				#alert_label, alert_timer, "BORDER RUNNER DETECTED!\nClick to launch missile!"
+				alert_label,
+				alert_timer,
+				tr("alert_border_runner")
+			)
 		)
 
 	# Get all available runner paths
@@ -565,7 +575,6 @@ func _on_runner_completed(potato: PotatoPerson):
 		emote_system.emoting_enabled = false
 		emote_system._hide_emote()
 
-
 	# Remove from active runners list
 	var index = active_runners.find(potato)
 	if index >= 0:
@@ -578,6 +587,7 @@ func _on_runner_destroyed(position: Vector2):
 	# Maybe trigger sound effects or other visual effects
 	#trigger_explosion(position)
 
+
 func handle_runner_escape(_runner: PotatoPerson):
 	print("Runner has escaped!")
 	# Reset the runner streak
@@ -589,10 +599,10 @@ func handle_runner_escape(_runner: PotatoPerson):
 
 	# Apply score penalty and prevent negative score
 	Global.score = max(0, Global.score - points_to_remove)
-	
+
 	if score_label:
 		score_label.text = tr("ui_score").format({"score": str(Global.score)})
-			
+
 	# Update alert to show penalty
 	if points_to_remove == 0:
 		# No points were deducted
@@ -728,6 +738,7 @@ func _on_smoke_alpha_timeout(smoke: AnimatedSprite2D) -> void:
 func _on_smoke_cleanup_timeout(smoke: AnimatedSprite2D) -> void:
 	if is_instance_valid(smoke):
 		smoke.queue_free()
+
 
 func trigger_explosion(missile_or_position):
 	#print("Triggering explosion")
@@ -903,69 +914,70 @@ func trigger_explosion(missile_or_position):
 	var innocent_penalty = 500
 	var runners_to_hit = []
 	var i = active_runners.size() - 1
-	
+
 	# First, collect all runners to hit
 	while i >= 0:
 		var runner = active_runners[i]
 		var distance = runner.global_position.distance_to(explosion_position)
-		
+
 		if distance < (explosion_size * 0.65):
 			# Store for later processing
 			runners_to_hit.append(runner)
 			active_runners.remove_at(i)
 			hit_any_runner = true
-			
+
 		i -= 1
-	
+
 	# Then process the hits afterward to avoid recursive signal issues
 	for runner in runners_to_hit:
 		handle_successful_hit(runner, explosion_position)
 		runner.apply_damage()
-	
+
 	# Now check for innocent potatoes (non-runners)
 	var all_potatoes = get_tree().get_nodes_in_group("PotatoPerson")
 	for potato in all_potatoes:
 		# Skip if not valid or already being processed as a runner
 		if not is_instance_valid(potato) or runners_to_hit.has(potato):
 			continue
-			
+
 		# Skip if it's in the active runners list
 		if active_runners.has(potato):
 			continue
-			
+
 		# Check distance to explosion
 		var distance = potato.global_position.distance_to(explosion_position)
-		
+
 		# If within explosion radius and not a runner
 		if distance < (explosion_size * 0.65):
 			hit_any_innocent = true
 			print("Hit innocent potato!")
-			
+
 			# Apply damage to the innocent potato
 			if potato.has_method("apply_damage"):
 				potato.apply_damage()
-				
+
 			# Spawn gibs at the innocent potato's position
 			spawn_gibs(potato.global_position)
-			
+
 			# Apply penalty
 			var points_to_remove = min(innocent_penalty, Global.score)
 			Global.score = max(0, Global.score - points_to_remove)
-			
+
 			# Update score label
 			if score_label:
 				score_label.text = tr("ui_score").format({"score": str(Global.score)})
-				
+
 			# Show alert
 			Global.display_red_alert(
 				alert_label,
 				alert_timer,
 				"INNOCENT POTATO KILLED! -{penalty} POINTS!".format({"penalty": points_to_remove})
 			)
-	
+
 	if not hit_any_runner and not hit_any_innocent:
 		print("Missile missed all potatoes")
 		runner_streak = 0
+
 
 func check_runner_hits(explosion_pos):
 	var hit_any_runner = false
@@ -973,68 +985,69 @@ func check_runner_hits(explosion_pos):
 	var innocent_penalty = 500
 	var runners_to_hit = []
 	var i = active_runners.size() - 1
-	
+
 	# First, collect all runners to hit
 	while i >= 0:
 		var runner = active_runners[i]
 		var distance = runner.global_position.distance_to(explosion_pos)
-		
+
 		if distance < (explosion_size * 0.65):
 			# Store for later processing
 			runners_to_hit.append(runner)
 			active_runners.remove_at(i)
 			hit_any_runner = true
-			
+
 		i -= 1
-	
+
 	# Then process the hits afterward to avoid recursive signal issues
 	for runner in runners_to_hit:
 		handle_successful_hit(runner, explosion_pos)
 		runner.apply_damage()
-	
+
 	# Now check for innocent potatoes (non-runners)
 	var all_potatoes = get_tree().get_nodes_in_group("PotatoPerson")
 	for potato in all_potatoes:
 		# Skip if not valid or already being processed as a runner
 		if not is_instance_valid(potato) or runners_to_hit.has(potato):
 			continue
-			
+
 		# Skip if it's in the active runners list
 		if active_runners.has(potato):
 			continue
-			
+
 		# Check distance to explosion
 		var distance = potato.global_position.distance_to(explosion_pos)
-		
+
 		# If within explosion radius and not a runner
 		if distance < (explosion_size * 0.65):
 			hit_any_innocent = true
-			
+
 			# Apply damage to the innocent potato
 			if potato.has_method("apply_damage"):
 				potato.apply_damage()
-				
+
 			# Spawn gibs at the innocent potato's position
 			spawn_gibs(potato.global_position)
-			
+
 			# Apply penalty
 			var points_to_remove = min(innocent_penalty, Global.score)
 			Global.score = max(0, Global.score - points_to_remove)
-			
+
 			# Update score label
 			if score_label:
 				score_label.text = tr("ui_score").format({"score": str(Global.score)})
-				
+
 			# Show alert
 			Global.display_red_alert(
 				alert_label,
 				alert_timer,
 				"INNOCENT POTATO KILLED! -{penalty} POINTS!".format({"penalty": points_to_remove})
 			)
-	
+
 	if not hit_any_runner:
 		print("Missile missed all runners")
 		runner_streak = 0
+
 
 func handle_successful_hit(runner, explosion_pos):
 	var root_node = get_tree().current_scene
@@ -1082,39 +1095,44 @@ func handle_successful_hit(runner, explosion_pos):
 
 	# Create death animation tween
 	var tween = create_tween()
-	
+
 	# Arc trajectory - first up and away from impact
 	var arc_height = 50.0
 	var arc_distance = 80.0
 	var bounce_pos = runner.global_position + (dir_vector * arc_distance)
-	
+
 	# First go up in arc
-	tween.tween_property(corpse, "global_position:y",
-							runner.global_position.y - arc_height, 0.3).set_ease(Tween.EASE_OUT)
+	(
+		tween
+		. tween_property(corpse, "global_position:y", runner.global_position.y - arc_height, 0.3)
+		. set_ease(Tween.EASE_OUT)
+	)
 
 	# While also moving in the direction away from explosion
-	tween.parallel().tween_property(corpse, "global_position:x", 
-								  bounce_pos.x, 0.3).set_ease(Tween.EASE_OUT)
-	
+	tween.parallel().tween_property(corpse, "global_position:x", bounce_pos.x, 0.3).set_ease(
+		Tween.EASE_OUT
+	)
+
 	# Add spin during arc
-	tween.parallel().tween_property(corpse, "rotation", 
-								  dir_vector.x * PI * 2, 0.3)
-								  
+	tween.parallel().tween_property(corpse, "rotation", dir_vector.x * PI * 2, 0.3)
+
 	# Then bounce on ground
-	tween.tween_property(corpse, "global_position:y", 
-						runner.global_position.y, 0.2).set_ease(Tween.EASE_IN)
-	
+	tween.tween_property(corpse, "global_position:y", runner.global_position.y, 0.2).set_ease(
+		Tween.EASE_IN
+	)
+
 	# Small second bounce
-	tween.tween_property(corpse, "global_position:y", 
-						runner.global_position.y - 15, 0.15).set_ease(Tween.EASE_OUT)
-						
+	tween.tween_property(corpse, "global_position:y", runner.global_position.y - 15, 0.15).set_ease(
+		Tween.EASE_OUT
+	)
+
 	# Final rest
-	tween.tween_property(corpse, "global_position:y", 
-						runner.global_position.y, 0.1).set_ease(Tween.EASE_IN)
-						
+	tween.tween_property(corpse, "global_position:y", runner.global_position.y, 0.1).set_ease(
+		Tween.EASE_IN
+	)
+
 	# Stop spinning
-	tween.parallel().tween_property(corpse, "rotation", 
-								 dir_vector.x * PI * 2.5, 0.25)
+	tween.parallel().tween_property(corpse, "rotation", dir_vector.x * PI * 2.5, 0.25)
 
 	#var tween = create_tween()
 	#tween.tween_property(corpse, "modulate:a", 1.0, 2.0)
@@ -1185,22 +1203,26 @@ func handle_successful_hit(runner, explosion_pos):
 	# Only show strike removed message if we actually removed a strike
 	var final_message = ""
 	if strike_removed:
-		final_message = "{bonus} +{points} points!".format({"bonus": bonus_text, "points": points_earned})
+		final_message = "{bonus} +{points} points!".format(
+			{"bonus": bonus_text, "points": points_earned}
+		)
 	else:
 		# Don't include strike removed text if we didn't remove a strike
 		final_message = "+{points} points!".format({"points": points_earned})
 		if runner_streak > 1:
 			var streak_points = streak_bonus * (runner_streak - 1)
-			final_message = tr("alert_combo").format({"mult": runner_streak, "streak": streak_points}) + " " + final_message
+			final_message = (
+				tr("alert_combo").format({"mult": runner_streak, "streak": streak_points})
+				+ " "
+				+ final_message
+			)
 
-	Global.display_green_alert(
-		alert_label,
-		alert_timer,
-		final_message
-	)
+	Global.display_green_alert(alert_label, alert_timer, final_message)
 
 	if strike_label:
-		strike_label.text = tr("ui_strikes").format({"current": Global.strikes, "max": Global.max_strikes})
+		strike_label.text = tr("ui_strikes").format(
+			{"current": Global.strikes, "max": Global.max_strikes}
+		)
 
 
 func enable():
@@ -1232,7 +1254,7 @@ func clean_up_all():
 		if emote_system and emote_system is PotatoEmoteSystem:
 			emote_system.emoting_enabled = false
 			emote_system._hide_emote()
-			
+
 		runner.cleanup()
 	active_runners.clear()
 

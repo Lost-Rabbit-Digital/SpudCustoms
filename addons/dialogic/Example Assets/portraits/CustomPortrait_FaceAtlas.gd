@@ -1,7 +1,7 @@
 @tool
 extends DialogicPortrait
 
-enum Faces {BASED_ON_PORTRAIT_NAME, NEUTRAL, HAPPY, SAD, JOY, SHOCK, ANGRY}
+enum Faces { BASED_ON_PORTRAIT_NAME, NEUTRAL, HAPPY, SAD, JOY, SHOCK, ANGRY }
 
 @export var emotion: Faces = Faces.BASED_ON_PORTRAIT_NAME
 @export var portrait_width: int
@@ -9,6 +9,7 @@ enum Faces {BASED_ON_PORTRAIT_NAME, NEUTRAL, HAPPY, SAD, JOY, SHOCK, ANGRY}
 @export var alien := true
 
 var does_custom_portrait_change := true
+
 
 func _ready() -> void:
 	$Alien.hide()
@@ -23,7 +24,7 @@ func _set_extra_data(data: String) -> void:
 
 
 # This function can be overridden. Defaults to true, if not overridden!
-func _should_do_portrait_update(_character: DialogicCharacter, _portrait:String) -> bool:
+func _should_do_portrait_update(_character: DialogicCharacter, _portrait: String) -> bool:
 	return true
 
 
@@ -33,20 +34,32 @@ func _update_portrait(_passed_character: DialogicCharacter, passed_portrait: Str
 		face.hide()
 
 	if emotion == Faces.BASED_ON_PORTRAIT_NAME:
-		if 'happy' in passed_portrait.to_lower(): $Faces/Smile.show()
-		elif 'sad' in passed_portrait.to_lower(): $Faces/Frown.show()
-		elif 'joy' in passed_portrait.to_lower(): $Faces/Joy.show()
-		elif 'shock' in passed_portrait.to_lower(): $Faces/Shock.show()
-		elif 'angry' in passed_portrait.to_lower(): $Faces/Anger.show()
-		else: $Faces/Neutral.show()
+		if "happy" in passed_portrait.to_lower():
+			$Faces/Smile.show()
+		elif "sad" in passed_portrait.to_lower():
+			$Faces/Frown.show()
+		elif "joy" in passed_portrait.to_lower():
+			$Faces/Joy.show()
+		elif "shock" in passed_portrait.to_lower():
+			$Faces/Shock.show()
+		elif "angry" in passed_portrait.to_lower():
+			$Faces/Anger.show()
+		else:
+			$Faces/Neutral.show()
 
 	else:
-		if emotion == Faces.HAPPY: $Faces/Smile.show()
-		elif emotion == Faces.SAD: $Faces/Frown.show()
-		elif emotion == Faces.JOY: $Faces/Joy.show()
-		elif emotion == Faces.SHOCK: $Faces/Shock.show()
-		elif emotion == Faces.ANGRY: $Faces/Anger.show()
-		else: $Faces/Neutral.show()
+		if emotion == Faces.HAPPY:
+			$Faces/Smile.show()
+		elif emotion == Faces.SAD:
+			$Faces/Frown.show()
+		elif emotion == Faces.JOY:
+			$Faces/Joy.show()
+		elif emotion == Faces.SHOCK:
+			$Faces/Shock.show()
+		elif emotion == Faces.ANGRY:
+			$Faces/Anger.show()
+		else:
+			$Faces/Neutral.show()
 
 	$Alien.visible = alien
 

@@ -17,6 +17,7 @@ var daily_laws = ""
 @onready var fold_out_button = $FoldOutButton
 @onready var hide_button = $LawReceiptSprite/HideButton
 
+
 func _ready():
 	# Set initial position (hidden)
 	if law_receipt_sprite:

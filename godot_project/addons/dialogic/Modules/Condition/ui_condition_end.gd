@@ -12,12 +12,22 @@ func _ready() -> void:
 func refresh() -> void:
 	if parent_resource is DialogicConditionEvent:
 		# hide add elif and add else button on ELSE event
-		$AddElif.visible = parent_resource.condition_type != DialogicConditionEvent.ConditionTypes.ELSE
-		$AddElse.visible = parent_resource.condition_type != DialogicConditionEvent.ConditionTypes.ELSE
-		$Label.text = "End of "+["IF", "ELIF", "ELSE"][parent_resource.condition_type]+" ("+parent_resource.condition+")"
+		$AddElif.visible = (
+			parent_resource.condition_type != DialogicConditionEvent.ConditionTypes.ELSE
+		)
+		$AddElse.visible = (
+			parent_resource.condition_type != DialogicConditionEvent.ConditionTypes.ELSE
+		)
+		$Label.text = (
+			"End of "
+			+ ["IF", "ELIF", "ELSE"][parent_resource.condition_type]
+			+ " ("
+			+ parent_resource.condition
+			+ ")"
+		)
 
 		# hide add add else button if followed by ELIF or ELSE event
-		var timeline_editor := find_parent('VisualEditor')
+		var timeline_editor := find_parent("VisualEditor")
 		if timeline_editor:
 			var next_event: DialogicEvent = null
 			if timeline_editor.get_block_below(get_parent()):
@@ -32,20 +42,20 @@ func refresh() -> void:
 
 
 func add_elif() -> void:
-	var timeline := find_parent('VisualEditor')
+	var timeline := find_parent("VisualEditor")
 	if timeline:
 		var resource := DialogicConditionEvent.new()
 		resource.condition_type = DialogicConditionEvent.ConditionTypes.ELIF
-		timeline.add_event_undoable(resource, get_parent().get_index()+1)
+		timeline.add_event_undoable(resource, get_parent().get_index() + 1)
 		timeline.indent_events()
 		timeline.something_changed()
 
 
 func add_else() -> void:
-	var timeline := find_parent('VisualEditor')
+	var timeline := find_parent("VisualEditor")
 	if timeline:
 		var resource := DialogicConditionEvent.new()
 		resource.condition_type = DialogicConditionEvent.ConditionTypes.ELSE
-		timeline.add_event_undoable(resource, get_parent().get_index()+1)
+		timeline.add_event_undoable(resource, get_parent().get_index() + 1)
 		timeline.indent_events()
 		timeline.something_changed()

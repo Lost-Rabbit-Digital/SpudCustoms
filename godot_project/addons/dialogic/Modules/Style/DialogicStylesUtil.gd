@@ -7,8 +7,9 @@ static var style_directory := {}
 #region STYLES
 ################################################################################
 
+
 static func update_style_directory() -> void:
-	style_directory = ProjectSettings.get_setting('dialogic/layout/style_directory', {})
+	style_directory = ProjectSettings.get_setting("dialogic/layout/style_directory", {})
 
 
 static func build_style_directory() -> void:
@@ -18,7 +19,7 @@ static func build_style_directory() -> void:
 	if ResourceLoader.exists(default):
 		style_directory[""] = default
 
-	var styles: Array = ProjectSettings.get_setting('dialogic/layout/style_list', [])
+	var styles: Array = ProjectSettings.get_setting("dialogic/layout/style_list", [])
 	for style_path in styles:
 		if not ResourceLoader.exists(style_path):
 			continue
@@ -27,27 +28,33 @@ static func build_style_directory() -> void:
 		style_directory[resource.name] = style_path
 
 	if Engine.is_editor_hint():
-		ProjectSettings.set_setting('dialogic/layout/style_directory', style_directory)
+		ProjectSettings.set_setting("dialogic/layout/style_directory", style_directory)
 		ProjectSettings.save()
 
 
 static func get_default_style_path() -> String:
-	return ProjectSettings.get_setting('dialogic/layout/default_style', '')
+	return ProjectSettings.get_setting("dialogic/layout/default_style", "")
 
 
 static func get_default_layout_base() -> PackedScene:
-	return load(DialogicUtil.get_module_path('DefaultLayoutParts').path_join("Base_Default/default_layout_base.tscn"))
+	return load(
+		DialogicUtil.get_module_path("DefaultLayoutParts").path_join(
+			"Base_Default/default_layout_base.tscn"
+		)
+	)
 
 
 static func get_fallback_style_path() -> String:
-	return DialogicUtil.get_module_path('DefaultLayoutParts').path_join("Style_VN_Default/default_vn_style.tres")
+	return DialogicUtil.get_module_path("DefaultLayoutParts").path_join(
+		"Style_VN_Default/default_vn_style.tres"
+	)
 
 
 static func get_fallback_style() -> DialogicStyle:
 	return load(get_fallback_style_path())
 
 
-static func get_style_path(name_or_path:String) -> String:
+static func get_style_path(name_or_path: String) -> String:
 	if name_or_path.begins_with("res://"):
 		if not ResourceLoader.exists(name_or_path):
 			name_or_path = ""
@@ -64,16 +71,15 @@ static func get_style_path(name_or_path:String) -> String:
 	return name_or_path
 
 
-static func start_style_preload(name_or_path:String) -> void:
+static func start_style_preload(name_or_path: String) -> void:
 	ResourceLoader.load_threaded_request(get_style_path(name_or_path))
 
 
-static func get_style(style_name:String) -> DialogicStyle:
+static func get_style(style_name: String) -> DialogicStyle:
 	var path := get_style_path(style_name)
 	if ResourceLoader.load_threaded_get_status(path) == ResourceLoader.THREAD_LOAD_LOADED:
 		return ResourceLoader.load_threaded_get(path)
 
 	return load(path)
-
 
 #endregion

@@ -3,7 +3,6 @@ class_name DialogicCharacterFormatLoader
 extends ResourceFormatLoader
 
 
-
 ## Returns all excepted extenstions
 func _get_recognized_extensions() -> PackedStringArray:
 	return PackedStringArray(["dch"])
@@ -33,7 +32,9 @@ func _handles_type(typename: StringName) -> bool:
 
 
 ## Parse the file and return a resource
-func _load(path: String, _original_path: String, _use_sub_threads: bool, _cache_mode: int) -> Variant:
+func _load(
+	path: String, _original_path: String, _use_sub_threads: bool, _cache_mode: int
+) -> Variant:
 #	print('[Dialogic] Reimporting character "' , path, '"')
 	var file := FileAccess.open(path, FileAccess.READ)
 
@@ -46,11 +47,11 @@ func _load(path: String, _original_path: String, _use_sub_threads: bool, _cache_
 	return dict_to_inst(str_to_var(file.get_as_text()))
 
 
-func _get_dependencies(path:String, _add_type:bool) -> PackedStringArray:
+func _get_dependencies(path: String, _add_type: bool) -> PackedStringArray:
 	var depends_on: PackedStringArray = []
 	var character: DialogicCharacter = load(path)
 	for p in character.portraits.values():
-		if 'scene' in p and p.scene:
+		if "scene" in p and p.scene:
 			depends_on.append(p.scene)
 		for i in p.get("export_overrides", []):
 			if typeof(p.export_overrides[i]) == TYPE_STRING and "://" in p.export_overrides[i]:
@@ -61,14 +62,14 @@ func _get_dependencies(path:String, _add_type:bool) -> PackedStringArray:
 func _rename_dependencies(path: String, renames: Dictionary) -> Error:
 	var character: DialogicCharacter = load(path)
 	for p in character.portraits.values():
-		if 'scene' in p and p.scene in renames:
+		if "scene" in p and p.scene in renames:
 			p.scene = renames[p.scene]
 
 		for i in p.get("export_overrides", []):
 			if typeof(p.export_overrides[i]) == TYPE_STRING and "://" in p.export_overrides[i]:
 				var i_path := str(p.export_overrides[i]).trim_prefix('"').trim_suffix('"')
 				if i_path in renames:
-					p.export_overrides[i] = '"'+renames[i_path]+'"'
+					p.export_overrides[i] = '"' + renames[i_path] + '"'
 
 	ResourceSaver.save(character, path)
 	return OK

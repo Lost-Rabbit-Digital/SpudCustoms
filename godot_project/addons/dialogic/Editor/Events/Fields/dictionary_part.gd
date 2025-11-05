@@ -3,10 +3,10 @@ extends PanelContainer
 
 ## Event block field part for the Dictionary field.
 
-signal value_changed()
+signal value_changed
 
 
-func set_key(value:String) -> void:
+func set_key(value: String) -> void:
 	%Key.text = str(value)
 
 
@@ -14,7 +14,7 @@ func get_key() -> String:
 	return %Key.text
 
 
-func set_value(value:Variant) -> void:
+func set_value(value: Variant) -> void:
 	%FlexValue.set_value(value)
 
 

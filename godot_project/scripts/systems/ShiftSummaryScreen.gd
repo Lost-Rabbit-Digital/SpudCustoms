@@ -16,8 +16,10 @@ var max_submission_retries = 3
 
 @onready var animation_player = $AnimationPlayer
 
+
 func _init():
 	mouse_filter = Control.MOUSE_FILTER_IGNORE  # Allow input to pass through to buttons
+
 
 func _ready():
 	# Connect to Steam manager signals
@@ -28,16 +30,16 @@ func _ready():
 			SteamManager.score_submitted.connect(_on_score_submitted)
 		if not SteamManager.steam_status_changed.is_connected(_on_steam_status_changed):
 			SteamManager.steam_status_changed.connect(_on_steam_status_changed)
-	
+
 	# Log startup information
 	LogManager.write_info("ShiftSummaryScreen initialized")
 	LogManager.write_info("Game Stats: " + str(stats))
-	
+
 	# Configure UI
 	z_index = 100
 	mouse_filter = Control.MOUSE_FILTER_STOP  # Block input from passing through
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	
+
 	# Try to find narrative manager
 	narrative_manager = get_node_or_null("/root/NarrativeManager")
 	if not narrative_manager:
@@ -63,17 +65,18 @@ func _ready():
 
 	# Play entry animation
 	play_entry_animation()
-	
+
 	# Check initial Steam status
 	_check_steam_status()
-	
+
 	# Request leaderboard data
 	update_leaderboard()
+
 
 func _on_steam_status_changed(connected: bool):
 	steam_status_ok = connected
 	LogManager.write_info("Steam status changed: " + str(connected))
-	
+
 	if connected:
 		$LeaderboardPanel/Entries.text = "Connecting to Steam leaderboards..."
 		# Retry leaderboard request if needed
@@ -81,59 +84,69 @@ func _on_steam_status_changed(connected: bool):
 			update_leaderboard()
 	else:
 		$LeaderboardPanel/Entries.text = "Could not connect to Steam.\nCheck your connection and restart game."
-		
+
 		# Disable submit button if Steam is not connected
 		if $SubmitScoreButton:
 			$SubmitScoreButton.disabled = !connected
 			if !connected:
 				$SubmitScoreButton.text = "Steam Offline"
 
+
 func _check_steam_status():
 	# Check if Steam is running and connected
 	var steam_running = Steam.isSteamRunning()
 	var steam_logged_on = Steam.loggedOn()
-	
+
 	steam_status_ok = steam_running && steam_logged_on
-	
+
 	if !steam_status_ok:
-		LogManager.write_warning("Steam not ready - Running: " + str(steam_running) + 
-							", Logged on: " + str(steam_logged_on))
+		LogManager.write_warning(
+			(
+				"Steam not ready - Running: "
+				+ str(steam_running)
+				+ ", Logged on: "
+				+ str(steam_logged_on)
+			)
+		)
 		$LeaderboardPanel/Entries.text = "Could not connect to Steam.\nCheck your connection and restart game."
-		
+
 		# Disable submit button
 		if $SubmitScoreButton:
 			$SubmitScoreButton.disabled = true
 			$SubmitScoreButton.text = "Steam Offline"
-	
+
 	return steam_status_ok
+
 
 func _on_leaderboard_updated(entries: Array):
 	LogManager.write_info("Leaderboard updated callback received - entries: " + str(entries.size()))
-	
+
 	# If we're submitting and received an update, we're done submitting
 	if submission_in_progress:
 		submission_in_progress = false
-		
+
 		if entries.size() > 0:
 			# Successfully submitted score and received updated leaderboard
 			_show_notification("Score submitted successfully!", Color(0.2, 0.8, 0.2))
-			
+
 			# Update submit button
 			if $SubmitScoreButton:
 				$SubmitScoreButton.disabled = true
 				$SubmitScoreButton.text = "Score Submitted"
-	
+
 	var leaderboard_text = ""
-	
+
 	if entries.is_empty():
 		leaderboard_text = "No leaderboard entries available."
 		LogManager.write_warning("Received empty leaderboard entries")
-		
+
 		# If this wasn't a result of a submission, try once more
 		if !submission_in_progress && submission_retry_count < max_submission_retries:
 			submission_retry_count += 1
-			LogManager.write_info("Retrying leaderboard request (attempt " + str(submission_retry_count) + ")")
-			
+			LogManager.write_info(
+				"Retrying leaderboard request (attempt " + str(submission_retry_count) + ")"
+			)
+
 			# Wait a moment before retrying
 			var retry_timer = get_tree().create_timer(1.0)
 			await retry_timer.timeout
@@ -144,33 +157,33 @@ func _on_leaderboard_updated(entries: Array):
 		# Format each entry with proper padding
 		for i in range(min(entries.size(), 12)):
 			# Use format method for proper formatting to ensure alignment
-			leaderboard_text += "%2d    %-15s    %s\n" % [
-				i + 1, 
-				entries[i].name.substr(0, 15), 
-				format_number(int(entries[i].score))
-			]
-	
+			leaderboard_text += (
+				"%2d    %-15s    %s\n"
+				% [i + 1, entries[i].name.substr(0, 15), format_number(int(entries[i].score))]
+			)
+
 	# Update the leaderboard text
 	if $LeaderboardPanel/Entries:
 		$LeaderboardPanel/Entries.text = leaderboard_text
-	
+
 	LogManager.write_info("Leaderboard display updated with " + str(entries.size()) + " entries")
+
 
 func _on_score_submitted(success: bool):
 	LogManager.write_info("Score submission callback received - success: " + str(success))
-	
+
 	# Reset submission state
 	submission_in_progress = false
-	
+
 	if success:
 		_show_notification("Score submitted successfully!", Color(0.2, 0.8, 0.2))
 		LogManager.write_info("Score successfully submitted")
-		
+
 		# Update button state
 		if $SubmitScoreButton:
 			$SubmitScoreButton.disabled = true
 			$SubmitScoreButton.text = "Score Submitted"
-		
+
 		# Request updated leaderboard immediately
 		LogManager.write_info("Requesting updated leaderboard data")
 		# Reset retry counter since this is a new request
@@ -179,11 +192,12 @@ func _on_score_submitted(success: bool):
 	else:
 		_show_notification("Failed to submit score to leaderboard.", Color(0.8, 0.2, 0.2))
 		LogManager.write_error("Score submission failed")
-		
+
 		# Re-enable submit button for retry
 		if $SubmitScoreButton:
 			$SubmitScoreButton.disabled = false
 			$SubmitScoreButton.text = "Retry Submit"
+
 
 # Helper function to show notifications
 func _show_notification(message: String, color: Color = Color(1, 1, 1)):
@@ -194,24 +208,26 @@ func _show_notification(message: String, color: Color = Color(1, 1, 1)):
 	notification.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	notification.text = message
 	notification.add_theme_color_override("font_color", color)
-	
+
 	# Position near the leaderboard panel
 	notification.position = Vector2(
 		$LeaderboardPanel.position.x + $LeaderboardPanel.size.x / 2,
 		$LeaderboardPanel.position.y + $LeaderboardPanel.size.y - 40
 	)
-	
+
 	add_child(notification)
-	
+
 	# Fade out and remove after delay
 	var tween = create_tween()
 	tween.tween_property(notification, "modulate:a", 0.0, 2.0)
 	tween.tween_callback(func(): notification.queue_free())
 
+
 func format_time(seconds: float) -> String:
 	var minutes = int(seconds) / 60
 	var secs = int(seconds) % 60
 	return tr("time_format").format({"minutes": minutes, "seconds": secs})
+
 
 # Helper function to format numbers with commas
 func format_number(number: int) -> String:
@@ -229,106 +245,116 @@ func format_number(number: int) -> String:
 
 	return formatted
 
+
 func update_leaderboard():
 	LogManager.write_info("Updating leaderboard - current score: " + str(Global.final_score))
-	
+
 	# Update title
 	if $LeaderboardTitlePanel/Title:
-		$LeaderboardTitlePanel/Title.text = "Global Leaderboard\nEndless - %s" % Global.difficulty_level
-	
+		$LeaderboardTitlePanel/Title.text = (
+			"Global Leaderboard\nEndless - %s" % Global.difficulty_level
+		)
+
 	# Check Steam status first
 	if !_check_steam_status():
 		LogManager.write_error("Steam not available for leaderboard update")
 		if $LeaderboardPanel/Entries:
 			$LeaderboardPanel/Entries.text = "Could not connect to Steam.\nCheck your connection and restart game."
 		return
-	
+
 	# Show loading state and dump debug info
 	if $LeaderboardPanel/Entries:
 		$LeaderboardPanel/Entries.text = "Loading leaderboard data..."
-	
+
 	LogManager.write_info("Dumping Steam debug info before leaderboard request")
 	SteamManager.dump_debug_info()
-	
+
 	# Request leaderboard data
 	LogManager.write_info("Requesting leaderboard entries")
 	var request_success = Global.request_leaderboard_entries(Global.difficulty_level)
 	LogManager.write_info("Request leaderboard result: " + str(request_success))
-	
+
 	if !request_success:
 		LogManager.write_error("Failed to request leaderboard entries")
 		if $LeaderboardPanel/Entries:
 			$LeaderboardPanel/Entries.text = "Could not connect to Steam.\nCheck your connection and restart game."
 	else:
 		LogManager.write_info("Leaderboard request sent successfully")
-		
+
 		# Set a timeout for leaderboard loading
 		var timeout_timer = get_tree().create_timer(5.0)
-		timeout_timer.timeout.connect(func():
-			# Check if we're still showing "Loading..." after 5 seconds
-			if $LeaderboardPanel/Entries && $LeaderboardPanel/Entries.text == "Loading leaderboard data...":
-				LogManager.write_warning("Leaderboard loading timed out")
-				SteamManager.dump_debug_info()
+		timeout_timer.timeout.connect(
+			func():
+				# Check if we're still showing "Loading..." after 5 seconds
+				if (
+					$LeaderboardPanel/Entries
+					&& $LeaderboardPanel/Entries.text == "Loading leaderboard data..."
+				):
+					LogManager.write_warning("Leaderboard loading timed out")
+					SteamManager.dump_debug_info()
 
-				# Don't reset state - let the callback complete if it arrives
-				# Just update the UI to show timeout
-				$LeaderboardPanel/Entries.text = "Loading timed out.\nTry again or check Steam connection."
+					# Don't reset state - let the callback complete if it arrives
+					# Just update the UI to show timeout
+					$LeaderboardPanel/Entries.text = "Loading timed out.\nTry again or check Steam connection."
 		)
+
 
 func _on_submit_score_button_pressed() -> void:
 	LogManager.write_info("Submit Score button pressed")
-	
+
 	# Check if we're already submitting
 	if submission_in_progress:
 		LogManager.write_warning("Submission already in progress, ignoring button press")
 		return
-		
+
 	# Check Steam status first
 	if !_check_steam_status():
 		_show_notification("Steam connection unavailable", Color(0.8, 0.2, 0.2))
 		return
-	
+
 	# Add visual feedback
 	submission_in_progress = true
 	$SubmitScoreButton.text = "Submitting..."
 	$SubmitScoreButton.disabled = true
-	
+
 	# Log debug info before submission
 	LogManager.write_info("Dumping Steam debug info before score submission")
 	SteamManager.dump_debug_info()
-	
+
 	# Submit the score
 	LogManager.write_info("Submitting score: " + str(Global.final_score))
 	var submission_success = Global.submit_score(Global.final_score)
 	LogManager.write_info("Submit score API call result: " + str(submission_success))
-	
+
 	if !submission_success:
 		LogManager.write_error("Failed to submit score API call")
 		$SubmitScoreButton.text = "Retry Submit"
 		$SubmitScoreButton.disabled = false
 		submission_in_progress = false
-		
+
 		# Show error notification
 		_show_notification("Cannot connect to Steam. Check your connection.", Color(0.8, 0.2, 0.2))
 		return
-		
+
 	# Set a timeout for submission
 	var submission_timer = get_tree().create_timer(10.0)
-	submission_timer.timeout.connect(func():
-		# Check if button is still disabled after 10 seconds
-		if submission_in_progress:
-			LogManager.write_warning("Score submission timed out")
-			SteamManager.dump_debug_info()
+	submission_timer.timeout.connect(
+		func():
+			# Check if button is still disabled after 10 seconds
+			if submission_in_progress:
+				LogManager.write_warning("Score submission timed out")
+				SteamManager.dump_debug_info()
 
-			# Reset submission state to allow retry
-			submission_in_progress = false
-			$SubmitScoreButton.text = "Retry Submit"
-			$SubmitScoreButton.disabled = false
+				# Reset submission state to allow retry
+				submission_in_progress = false
+				$SubmitScoreButton.text = "Retry Submit"
+				$SubmitScoreButton.disabled = false
 
-			# Don't reset SteamManager state - let callback complete if it arrives
-			# Just notify user they can retry
-			_show_notification("Submission timed out. Click to retry.", Color(0.8, 0.2, 0.2))
+				# Don't reset SteamManager state - let callback complete if it arrives
+				# Just notify user they can retry
+				_show_notification("Submission timed out. Click to retry.", Color(0.8, 0.2, 0.2))
 	)
+
 
 func show_summary(stats_data: Dictionary):
 	stats = stats_data
@@ -345,14 +371,17 @@ func show_summary(stats_data: Dictionary):
 	# Update UI based on result
 	if $LeftPanel/ShiftComplete:
 		if win_condition:
-			$LeftPanel/ShiftComplete.text = tr("shift_complete_success").format({"shift": shift_number})
+			$LeftPanel/ShiftComplete.text = tr("shift_complete_success").format(
+				{"shift": shift_number}
+			)
 			$LeftPanel/ShiftComplete.add_theme_color_override("font_color", Color(0.2, 0.8, 0.2))
 		else:
-			var failure_reason = tr("strike_limit_reached") if strikes_failed else tr("quota_not_met")
-			$LeftPanel/ShiftComplete.text = tr("shift_complete_failure").format({
-				"shift": shift_number, 
-				"failure": failure_reason
-			})
+			var failure_reason = (
+				tr("strike_limit_reached") if strikes_failed else tr("quota_not_met")
+			)
+			$LeftPanel/ShiftComplete.text = tr("shift_complete_failure").format(
+				{"shift": shift_number, "failure": failure_reason}
+			)
 			$LeftPanel/ShiftComplete.add_theme_color_override("font_color", Color(0.9, 0.2, 0.2))
 
 	# Hide continue button if lost due to strikes
@@ -360,6 +389,7 @@ func show_summary(stats_data: Dictionary):
 		$ContinueButton.queue_free()
 
 	populate_stats()
+
 
 func populate_stats():
 	# Add performance comparison
@@ -377,45 +407,54 @@ func populate_stats():
 		"Expert":
 			expected_score = 3000
 			difficulty_rating = tr("options_difficulty_expert")
-	
+
 	# Update shift info
 	if $HeaderPanel/Title:
-		$HeaderPanel/Title.text = tr("shift_summary_title_with_difficulty").format({"difficulty": difficulty_rating})
+		$HeaderPanel/Title.text = tr("shift_summary_title_with_difficulty").format(
+			{"difficulty": difficulty_rating}
+		)
 
 	# Update missile stats with calculated hit rate
 	if $LeftPanel/MissileStats:
-		$LeftPanel/MissileStats.text = tr("runner_stats_template").format({
-			"runner_attempts": format_number(stats.get("runner_attempts", 0)),
-			"fired": format_number(stats.get("missiles_fired", 0)),
-			"hit": format_number(stats.get("missiles_hit", 0)),
-			"perfect": format_number(stats.get("perfect_hits", 0)),
-			"rate": floor(stats.get("hit_rate", 0.0))
-		})
+		$LeftPanel/MissileStats.text = tr("runner_stats_template").format(
+			{
+				"runner_attempts": format_number(stats.get("runner_attempts", 0)),
+				"fired": format_number(stats.get("missiles_fired", 0)),
+				"hit": format_number(stats.get("missiles_hit", 0)),
+				"perfect": format_number(stats.get("perfect_hits", 0)),
+				"rate": floor(stats.get("hit_rate", 0.0))
+			}
+		)
 
 	# Update document stats
 	if $LeftPanel/DocumentStats:
-		$LeftPanel/DocumentStats.text = tr("document_stats_template").format({
-			"stamped": format_number(stats.get("total_stamps", 0)),
-			"approved": format_number(stats.get("potatoes_approved", 0)),
-			"rejected": format_number(stats.get("potatoes_rejected", 0)),
-			"perfect_stamps": format_number(stats.get("perfect_stamps", 0))
-		})
+		$LeftPanel/DocumentStats.text = tr("document_stats_template").format(
+			{
+				"stamped": format_number(stats.get("total_stamps", 0)),
+				"approved": format_number(stats.get("potatoes_approved", 0)),
+				"rejected": format_number(stats.get("potatoes_rejected", 0)),
+				"perfect_stamps": format_number(stats.get("perfect_stamps", 0))
+			}
+		)
 
 	# Update bonus stats without speed bonus
 	if $RightPanel/BonusStats:
-		$RightPanel/BonusStats.text = tr("bonus_stats_template").format({
-			"processing_speed_bonus": format_number(stats.get("processing_speed_bonus", 0)),
-			"accuracy": format_number(stats.get("accuracy_bonus", 0)),
-			"perfect_hit_bonus": format_number(stats.get("perfect_hit_bonus", 0)),
-			"total_score_bonus": format_number(
-				(
-					stats.get("processing_speed_bonus", 0)
-					+ stats.get("accuracy_bonus", 0)
-					+ stats.get("perfect_hit_bonus", 0)
+		$RightPanel/BonusStats.text = tr("bonus_stats_template").format(
+			{
+				"processing_speed_bonus": format_number(stats.get("processing_speed_bonus", 0)),
+				"accuracy": format_number(stats.get("accuracy_bonus", 0)),
+				"perfect_hit_bonus": format_number(stats.get("perfect_hit_bonus", 0)),
+				"total_score_bonus":
+				format_number(
+					(
+						stats.get("processing_speed_bonus", 0)
+						+ stats.get("accuracy_bonus", 0)
+						+ stats.get("perfect_hit_bonus", 0)
+					)
 				)
-			)
-		})
-	
+			}
+		)
+
 	# Update leaderboard
 	update_leaderboard()
 
@@ -454,13 +493,15 @@ func populate_stats():
 
 	# Add performance rating to display
 	if $RightPanel/PerformanceStats:
-		$RightPanel/PerformanceStats.text = tr("performance_stats_template").format({
-			"time_taken": format_time(stats.get("time_taken", 0)),
-			"expected_score": format_number(int(expected_score)),
-			"score": format_number(stats.get("score", 0)),
-			"percent": floor(performance),
-			"rating": performance_text
-		})
+		$RightPanel/PerformanceStats.text = tr("performance_stats_template").format(
+			{
+				"time_taken": format_time(stats.get("time_taken", 0)),
+				"expected_score": format_number(int(expected_score)),
+				"score": format_number(stats.get("score", 0)),
+				"percent": floor(performance),
+				"rating": performance_text
+			}
+		)
 
 		$RightPanel/PerformanceStats.add_theme_color_override("font_color", performance_color)
 
@@ -475,10 +516,13 @@ func populate_stats():
 				"font_color", Color(1.0, 0.8, 0.2, 1.0)
 			)
 		elif high_score > 0:
-			$RightPanel/PerformanceStats.text += "\n" + tr("high_score_display").format({"score": str(high_score)})
+			$RightPanel/PerformanceStats.text += (
+				"\n" + tr("high_score_display").format({"score": str(high_score)})
+			)
 
 	# Animate stamps based on performance
 	animate_grade_stamps(performance)
+
 
 func play_entry_animation():
 	# Set initial states for text elements
@@ -494,8 +538,12 @@ func play_entry_animation():
 		$LeaderboardTitlePanel.modulate.a = 0
 
 	# Store original positions
-	var stats_bg_original_pos = $StatsJournalBackground.position if has_node("StatsJournalBackground") else Vector2.ZERO
-	var leaderboard_bg_original_pos = $LeaderboardBackground.position if has_node("LeaderboardBackground") else Vector2.ZERO
+	var stats_bg_original_pos = (
+		$StatsJournalBackground.position if has_node("StatsJournalBackground") else Vector2.ZERO
+	)
+	var leaderboard_bg_original_pos = (
+		$LeaderboardBackground.position if has_node("LeaderboardBackground") else Vector2.ZERO
+	)
 
 	# Set initial positions (off-screen at the top)
 	if has_node("StatsJournalBackground"):
@@ -509,23 +557,63 @@ func play_entry_animation():
 
 	# 1. First, slide in StatsJournalBackground with bounce
 	if has_node("StatsJournalBackground"):
-		tween.tween_property($StatsJournalBackground, "position:y", stats_bg_original_pos.y - 30, 0.75).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-		
+		(
+			tween
+			. tween_property(
+				$StatsJournalBackground, "position:y", stats_bg_original_pos.y - 30, 0.75
+			)
+			. set_trans(Tween.TRANS_BACK)
+			. set_ease(Tween.EASE_OUT)
+		)
+
 		# Add bounce
-		tween.tween_property($StatsJournalBackground, "position:y", stats_bg_original_pos.y + 15, 0.3).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-		
+		(
+			tween
+			. tween_property(
+				$StatsJournalBackground, "position:y", stats_bg_original_pos.y + 15, 0.3
+			)
+			. set_trans(Tween.TRANS_SINE)
+			. set_ease(Tween.EASE_IN_OUT)
+		)
+
 		# Final settle
-		tween.tween_property($StatsJournalBackground, "position:y", stats_bg_original_pos.y, 0.2).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+		(
+			tween
+			. tween_property($StatsJournalBackground, "position:y", stats_bg_original_pos.y, 0.2)
+			. set_trans(Tween.TRANS_SINE)
+			. set_ease(Tween.EASE_OUT)
+		)
 
 	# 2. Then, slide in LeaderboardBackground with bounce
 	if has_node("LeaderboardBackground"):
-		tween.tween_property($LeaderboardBackground, "position:y", leaderboard_bg_original_pos.y - 30, 0.7).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-		
+		(
+			tween
+			. tween_property(
+				$LeaderboardBackground, "position:y", leaderboard_bg_original_pos.y - 30, 0.7
+			)
+			. set_trans(Tween.TRANS_BACK)
+			. set_ease(Tween.EASE_OUT)
+		)
+
 		# Add bounce
-		tween.tween_property($LeaderboardBackground, "position:y", leaderboard_bg_original_pos.y + 15, 0.3).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-		
+		(
+			tween
+			. tween_property(
+				$LeaderboardBackground, "position:y", leaderboard_bg_original_pos.y + 15, 0.3
+			)
+			. set_trans(Tween.TRANS_SINE)
+			. set_ease(Tween.EASE_IN_OUT)
+		)
+
 		# Final settle
-		tween.tween_property($LeaderboardBackground, "position:y", leaderboard_bg_original_pos.y, 0.2).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+		(
+			tween
+			. tween_property(
+				$LeaderboardBackground, "position:y", leaderboard_bg_original_pos.y, 0.2
+			)
+			. set_trans(Tween.TRANS_SINE)
+			. set_ease(Tween.EASE_OUT)
+		)
 
 	# 3. Now start the text animations with slow fade-in
 	if $HeaderPanel:
@@ -543,6 +631,7 @@ func play_entry_animation():
 	if $LeaderboardPanel:
 		tween.tween_property($LeaderboardPanel, "modulate:a", 1.0, 0.7)
 
+
 func animate_grade_stamps(performance: float):
 	# Get references to the grade stamps
 	var stamps = []
@@ -550,16 +639,15 @@ func animate_grade_stamps(performance: float):
 
 	if performance >= 150:
 		stamps = [
-			get_node_or_null("RightPanel/GradeStamp-1"), 
-			get_node_or_null("RightPanel/GradeStamp-2"), 
+			get_node_or_null("RightPanel/GradeStamp-1"),
+			get_node_or_null("RightPanel/GradeStamp-2"),
 			get_node_or_null("RightPanel/GradeStamp-3")
 		]
 		stamps = stamps.filter(func(s): return s != null)
 		num_stamps = stamps.size()
 	elif performance >= 120:
 		stamps = [
-			get_node_or_null("RightPanel/GradeStamp-1"), 
-			get_node_or_null("RightPanel/GradeStamp-2")
+			get_node_or_null("RightPanel/GradeStamp-1"), get_node_or_null("RightPanel/GradeStamp-2")
 		]
 		stamps = stamps.filter(func(s): return s != null)
 		num_stamps = stamps.size()
@@ -616,6 +704,7 @@ func animate_grade_stamps(performance: float):
 			if stamps[i]:
 				stamps[i].texture = final_texture
 
+
 func generate_test_stats() -> Dictionary:
 	return {
 		"shift": 1,
@@ -635,7 +724,6 @@ func generate_test_stats() -> Dictionary:
 		"runner_attempts": 12,
 		"final_score": 4250
 	}
-
 
 
 func _on_continue_button_pressed() -> void:
@@ -661,6 +749,7 @@ func _on_continue_button_pressed() -> void:
 	emit_signal("continue_to_next_shift")
 	queue_free()
 
+
 func _on_day_transition_complete():
 	# Check for demo limit before proceeding
 	if check_demo_limit():
@@ -678,11 +767,13 @@ func _on_day_transition_complete():
 	else:
 		get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
 
+
 func check_demo_limit() -> bool:
 	# Check if this is a demo build and if the player has reached the limit
 	if Global.build_type == "Demo Release" and Global.shift >= 3:
 		return true
 	return false
+
 
 func _on_restart_button_pressed() -> void:
 	Global.reset_shift_stats()
@@ -690,11 +781,13 @@ func _on_restart_button_pressed() -> void:
 	emit_signal("restart_shift")
 	queue_free()
 
+
 func _on_main_menu_button_pressed() -> void:
 	Global.reset_shift_stats()
 	print("Main menu button pressed, emitting signal")
 	emit_signal("return_to_main_menu")
 	queue_free()
+
 
 # Handle scene transition after fade out
 func _handle_scene_transition(scene_path: String) -> void:
@@ -713,6 +806,7 @@ func _handle_scene_transition(scene_path: String) -> void:
 	else:
 		# Direct scene transition fallback
 		get_tree().change_scene_to_file(scene_path)
+
 
 func transition_to_scene(scene_path: String):
 	# Create a canvas layer to ensure the fade rectangle covers everything
@@ -736,6 +830,7 @@ func transition_to_scene(scene_path: String):
 
 	# Use a callback to handle the scene transition after fade completes
 	tween.tween_callback(_handle_scene_transition.bind(scene_path))
+
 
 # General utility function for transitions within viewport
 func transition_within_viewport(scene_path: String):
@@ -772,6 +867,7 @@ func transition_within_viewport(scene_path: String):
 		push_warning("Could not find viewport container, using direct scene transition")
 		get_tree().change_scene_to_file(scene_path)
 
+
 func find_parent_viewport_container():
 	var parent = get_parent()
 	while parent:
@@ -779,6 +875,7 @@ func find_parent_viewport_container():
 			return parent
 		parent = parent.get_parent()
 	return null
+
 
 func _unhandled_key_input(event):
 	# Check for F12 key press for debug info
@@ -791,16 +888,16 @@ func show_demo_limit_dialog():
 	# Create a panel to display the message
 	var demo_panel = PanelContainer.new()
 	demo_panel.z_index = 100
-	
+
 	var vbox = VBoxContainer.new()
 	vbox.set_custom_minimum_size(Vector2(500, 300))
 	vbox.alignment = BoxContainer.ALIGNMENT_CENTER
-	
+
 	var title = Label.new()
 	title.text = "Demo Version Limit Reached"
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	title.add_theme_font_size_override("font_size", 24)
-	
+
 	var message = RichTextLabel.new()
 	message.bbcode_enabled = true
 	message.text = """
@@ -816,39 +913,43 @@ func show_demo_limit_dialog():
 	message.fit_content = true
 	message.custom_minimum_size = Vector2(450, 200)
 	message.meta_clicked.connect(func(meta): OS.shell_open(meta))
-	
+
 	var button = Button.new()
 	button.text = "Return to Main Menu"
 	button.custom_minimum_size = Vector2(200, 50)
 	button.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	
+
 	vbox.add_child(title)
 	vbox.add_child(message)
 	vbox.add_child(button)
-	
+
 	demo_panel.add_child(vbox)
 	add_child(demo_panel)
-	
+
 	# Center the panel
 	demo_panel.position = (get_viewport_rect().size - demo_panel.size) / 2
-	
+
 	# Connect button to return to main menu
-	button.pressed.connect(func():
-		# Return to main menu
-		get_tree().change_scene_to_file("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
-		# Remove the panel
-		demo_panel.queue_free()
+	button.pressed.connect(
+		func():
+			# Return to main menu
+			get_tree().change_scene_to_file(
+				"res://scenes/menus/main_menu/main_menu_with_animations.tscn"
+			)
+			# Remove the panel
+			demo_panel.queue_free()
 	)
-	
+
 	# Add a nice animation
 	demo_panel.modulate.a = 0
 	var tween = create_tween()
 	tween.tween_property(demo_panel, "modulate:a", 1.0, 0.5)
 
+
 func debug_steam_status():
 	LogManager.write_info("=== MANUAL STEAM DEBUG REQUESTED ===")
 	SteamManager.dump_debug_info()
-	
+
 	# Show a debug panel with information
 	var debug_panel = PanelContainer.new()
 	debug_panel.z_index = 200
@@ -857,54 +958,66 @@ func debug_steam_status():
 		(get_viewport_rect().size.x - debug_panel.size.x) / 2,
 		(get_viewport_rect().size.y - debug_panel.size.y) / 2
 	)
-	
+
 	var debug_label = RichTextLabel.new()
 	debug_label.bbcode_enabled = true
 	debug_label.size = Vector2(580, 460)
 	debug_label.position = Vector2(10, 10)
-	
+
 	var close_button = Button.new()
 	close_button.text = "Close"
-	close_button.position = Vector2(debug_panel.size.x/2 - 40, debug_panel.size.y - 40)
+	close_button.position = Vector2(debug_panel.size.x / 2 - 40, debug_panel.size.y - 40)
 	close_button.size = Vector2(80, 30)
-	
+
 	var debug_text = "[b]Steam Debug Info[/b]\n\n"
 	debug_text += "Steam running: " + str(Steam.isSteamRunning()) + "\n"
 	debug_text += "Steam logged on: " + str(Steam.loggedOn()) + "\n"
 	debug_text += "Current leaderboard: " + str(SteamManager.last_leaderboard_name) + "\n"
 	debug_text += "Current handle: " + str(SteamManager.current_leaderboard_handle) + "\n"
-	debug_text += "Leaderboard state: " + str(SteamManager.LeaderboardState.keys()[SteamManager.current_leaderboard_state]) + "\n"
+	debug_text += (
+		"Leaderboard state: "
+		+ str(SteamManager.LeaderboardState.keys()[SteamManager.current_leaderboard_state])
+		+ "\n"
+	)
 	debug_text += "Is fetching: " + str(SteamManager.is_fetching_leaderboard) + "\n"
 	debug_text += "Last error: " + str(SteamManager.last_error_message) + "\n\n"
-	
+
 	debug_text += "[b]API Calls:[/b]\n"
 	for key in SteamManager.api_call_attempts:
 		debug_text += key + ": " + str(SteamManager.api_call_attempts[key]) + "\n"
-	
+
 	debug_text += "\n[b]Cached Entries:[/b]\n"
 	for entry in SteamManager.cached_leaderboard_entries:
-		debug_text += str(entry.get("rank", "?")) + ": " + str(entry.get("name", "Unknown")) + " - " + str(entry.get("score", 0)) + "\n"
-	
+		debug_text += (
+			str(entry.get("rank", "?"))
+			+ ": "
+			+ str(entry.get("name", "Unknown"))
+			+ " - "
+			+ str(entry.get("score", 0))
+			+ "\n"
+		)
+
 	debug_label.text = debug_text
-	
+
 	debug_panel.add_child(debug_label)
 	debug_panel.add_child(close_button)
 	add_child(debug_panel)
-	
+
 	close_button.pressed.connect(func(): debug_panel.queue_free())
-	
+
 	# Try to force a leaderboard reset and refresh
 	var reset_button = Button.new()
 	reset_button.text = "Reset & Refresh"
-	reset_button.position = Vector2(debug_panel.size.x/2 - 60, debug_panel.size.y - 80)
+	reset_button.position = Vector2(debug_panel.size.x / 2 - 60, debug_panel.size.y - 80)
 	reset_button.size = Vector2(120, 30)
 	debug_panel.add_child(reset_button)
-	
-	reset_button.pressed.connect(func():
-		SteamManager.reset_leaderboard_state()
-		update_leaderboard()
-		debug_panel.queue_free()
-		# Show new debug panel after a short delay
-		await get_tree().create_timer(2.0).timeout
-		debug_steam_status()
+
+	reset_button.pressed.connect(
+		func():
+			SteamManager.reset_leaderboard_state()
+			update_leaderboard()
+			debug_panel.queue_free()
+			# Show new debug panel after a short delay
+			await get_tree().create_timer(2.0).timeout
+			debug_steam_status()
 	)

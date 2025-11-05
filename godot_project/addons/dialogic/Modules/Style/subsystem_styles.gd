@@ -2,11 +2,11 @@ extends DialogicSubsystem
 
 ## Subsystem that manages loading layouts with specific styles applied.
 
-signal style_changed(info:Dictionary)
-
+signal style_changed(info: Dictionary)
 
 #region STATE
 ####################################################################################################
+
 
 func _ready() -> void:
 	DialogicStylesUtil.update_style_directory()
@@ -19,13 +19,14 @@ func clear_game_state(_clear_flag := DialogicGameHandler.ClearFlags.FULL_CLEAR) 
 func load_game_state(load_flag := LoadFlags.FULL_LOAD) -> void:
 	if load_flag == LoadFlags.ONLY_DNODES:
 		return
-	load_style(dialogic.current_state_info.get('style', ''))
+	load_style(dialogic.current_state_info.get("style", ""))
+
 
 #endregion
 
-
 #region MAIN METHODS
 ####################################################################################################
+
 
 ## This helper method calls load_style, but with the [parameter state_reload] as true,
 ## which is commonly wanted if you expect a game to already be in progress.
@@ -36,35 +37,46 @@ func change_style(style_name := "", is_base_style := true) -> Node:
 ## Loads a style. Consider using the simpler [method change_style] if you want to change the style while another style is already in use.
 ## [br] If [param state_reload] is true, the current state will be loaded into a new layout scenes nodes.
 ## That should not be done before calling start() or load() as it would be unnecessary or cause double-loading.
-func load_style(style_name := "", parent: Node = null, is_base_style := true, state_reload := false) -> Node:
+func load_style(
+	style_name := "", parent: Node = null, is_base_style := true, state_reload := false
+) -> Node:
 	var style := DialogicStylesUtil.get_style(style_name)
 
-	var signal_info := {'style':style_name}
-	dialogic.current_state_info['style'] = style_name
+	var signal_info := {"style": style_name}
+	dialogic.current_state_info["style"] = style_name
 
 	# is_base_style should only be wrong on temporary changes like character styles
 	if is_base_style:
-		dialogic.current_state_info['base_style'] = style_name
+		dialogic.current_state_info["base_style"] = style_name
 
 	var previous_layout := get_layout_node()
-	if is_instance_valid(previous_layout) and previous_layout.has_meta('style'):
-		signal_info['previous'] = previous_layout.get_meta('style').name
+	if is_instance_valid(previous_layout) and previous_layout.has_meta("style"):
+		signal_info["previous"] = previous_layout.get_meta("style").name
 
 		# If this is the same style and scene, do nothing
-		if previous_layout.get_meta('style') == style:
+		if previous_layout.get_meta("style") == style:
 			return previous_layout
 
 		# If this has the same scene setup, just apply the new overrides
-		elif previous_layout.get_meta('style') == style.get_inheritance_root() or previous_layout.get_meta('style').get_inheritance_root() == style.get_inheritance_root():
-			DialogicUtil.apply_scene_export_overrides(previous_layout, style.get_layer_inherited_info("").overrides)
+		elif (
+			previous_layout.get_meta("style") == style.get_inheritance_root()
+			or (
+				previous_layout.get_meta("style").get_inheritance_root()
+				== style.get_inheritance_root()
+			)
+		):
+			DialogicUtil.apply_scene_export_overrides(
+				previous_layout, style.get_layer_inherited_info("").overrides
+			)
 			var index := 0
 			for layer in previous_layout.get_layers():
 				DialogicUtil.apply_scene_export_overrides(
 					layer,
-					style.get_layer_inherited_info(style.get_layer_id_at_index(index)).overrides)
+					style.get_layer_inherited_info(style.get_layer_id_at_index(index)).overrides
+				)
 				index += 1
 
-			previous_layout.set_meta('style', style)
+			previous_layout.set_meta("style", style)
 			style_changed.emit(signal_info)
 			return
 
@@ -91,7 +103,6 @@ func load_style(style_name := "", parent: Node = null, is_base_style := true, st
 ## Method that adds a layout scene with all the necessary layers.
 ## The layout scene will be added to the tree root and returned.
 func create_layout(style: DialogicStyle, parent: Node = null) -> DialogicLayoutBase:
-
 	# Load base scene
 	var base_scene: DialogicLayoutBase
 	var base_layer_info := style.get_layer_inherited_info("")
@@ -100,7 +111,7 @@ func create_layout(style: DialogicStyle, parent: Node = null) -> DialogicLayoutB
 	else:
 		base_scene = load(base_layer_info.path).instantiate()
 
-	base_scene.name = "DialogicLayout_"+style.name.to_pascal_case()
+	base_scene.name = "DialogicLayout_" + style.name.to_pascal_case()
 
 	# Apply base scene overrides
 	DialogicUtil.apply_scene_export_overrides(base_scene, base_layer_info.overrides)
@@ -124,13 +135,13 @@ func create_layout(style: DialogicStyle, parent: Node = null) -> DialogicLayoutB
 		# Apply layer overrides
 		DialogicUtil.apply_scene_export_overrides(layer_scene, layer.overrides)
 
-	base_scene.set_meta('style', style)
+	base_scene.set_meta("style", style)
 
 	if parent == null:
 		parent = dialogic.get_parent()
 	parent.call_deferred("add_child", base_scene)
 
-	dialogic.get_tree().set_meta('dialogic_layout_node', base_scene)
+	dialogic.get_tree().set_meta("dialogic_layout_node", base_scene)
 
 	return base_scene
 
@@ -145,23 +156,23 @@ func reload_current_info_into_new_style() -> void:
 ## Returns the style currently in use
 func get_current_style() -> String:
 	if has_active_layout_node():
-		var style: DialogicStyle = get_layout_node().get_meta('style', null)
+		var style: DialogicStyle = get_layout_node().get_meta("style", null)
 		if style:
 			return style.name
-	return ''
+	return ""
 
 
 func has_active_layout_node() -> bool:
 	return (
-		get_tree().has_meta('dialogic_layout_node')
-		and is_instance_valid(get_tree().get_meta('dialogic_layout_node'))
-		and not get_tree().get_meta('dialogic_layout_node').is_queued_for_deletion()
+		get_tree().has_meta("dialogic_layout_node")
+		and is_instance_valid(get_tree().get_meta("dialogic_layout_node"))
+		and not get_tree().get_meta("dialogic_layout_node").is_queued_for_deletion()
 	)
 
 
 func get_layout_node() -> DialogicLayoutBase:
 	if has_active_layout_node():
-		return get_tree().get_meta('dialogic_layout_node')
+		return get_tree().get_meta("dialogic_layout_node")
 	return null
 
 
@@ -177,7 +188,7 @@ func get_first_node_in_layout(group_name: String) -> Node:
 	return null
 
 
-func preload_style(name_or_path:String = "") -> void:
+func preload_style(name_or_path: String = "") -> void:
 	DialogicStylesUtil.start_style_preload(name_or_path)
 
 #endregion

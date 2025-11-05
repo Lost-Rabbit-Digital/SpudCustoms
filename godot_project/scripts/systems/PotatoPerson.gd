@@ -48,6 +48,7 @@ var current_potato_brain_state: int = PotatoBrainState.IDLE
 var emote_system: PotatoEmoteSystem
 @onready var emote_sprite: AnimatedSprite2D = %PotatoEmote
 
+
 func _ready() -> void:
 	var NodeHighlightShader = preload(
 		"res://scripts/shaders/node_highlight/node_highlight.gdshader"
@@ -334,22 +335,16 @@ func spawn_footprint():
 	if is_on_concrete:
 		footprint.texture = preload("res://assets/effects/footstep_concrete.png")
 		# Random scale for concrete footprints - slightly smaller than grass
-		footprint.scale = Vector2(
-			randf_range(0.65, 0.75),
-			randf_range(0.65, 0.75)
-		)
+		footprint.scale = Vector2(randf_range(0.65, 0.75), randf_range(0.65, 0.75))
 		# Darker color for concrete footprints
 		footprint.modulate = Color(1, 1, 1, 0.7)
 	else:
 		footprint.texture = preload("res://assets/effects/footstep_grass.png")
 		# Random scale for grass footprints
-		footprint.scale = Vector2(
-			randf_range(0.75, 0.85),
-			randf_range(0.75, 0.85)
-		)
+		footprint.scale = Vector2(randf_range(0.75, 0.85), randf_range(0.75, 0.85))
 		# Normal color
 		footprint.modulate = Color(1, 1, 1, 0.8)
-		
+
 	# Add random rotation to make footprints look more natural
 	# Limit rotation to a realistic range for footsteps (slight variations)
 	footprint.rotation = randf_range(-0.1, 0.15)  # About +/-8.6 degrees
@@ -404,10 +399,10 @@ func is_potato_on_concrete() -> bool:
 		if area is Polygon2D:
 			# Convert global position to area's local coordinates
 			var local_point = area.global_transform.affine_inverse() * self.global_position
-			
+
 			# Use Geometry2D to check if point is in polygon
 			if Geometry2D.is_point_in_polygon(local_point, area.polygon):
 				return true
-	
+
 	# Default to grass
 	return false

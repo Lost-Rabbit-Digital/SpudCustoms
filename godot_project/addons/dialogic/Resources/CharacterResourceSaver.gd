@@ -19,7 +19,7 @@ func _recognize(resource: Resource) -> bool:
 
 
 ## Save the resource
-func _save(resource: Resource, path: String = '', _flags: int = 0) -> Error:
+func _save(resource: Resource, path: String = "", _flags: int = 0) -> Error:
 	var file := FileAccess.open(path, FileAccess.WRITE)
 
 	if not file:

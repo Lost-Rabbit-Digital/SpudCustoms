@@ -4,7 +4,7 @@ extends DialogicEditor
 ## Editor that holds both the visual and the text timeline editors.
 
 # references
-enum EditorMode {VISUAL, TEXT}
+enum EditorMode { VISUAL, TEXT }
 
 var current_editor_mode := EditorMode.VISUAL
 var play_timeline_button: Button = null
@@ -16,12 +16,11 @@ func _register() -> void:
 	resource_saved.connect(_on_resource_saved)
 
 	# register editor
-	editors_manager.register_resource_editor('dtl', self)
+	editors_manager.register_resource_editor("dtl", self)
 	# add timeline button
 	var add_timeline_button: Button = editors_manager.add_icon_button(
-		load("res://addons/dialogic/Editor/Images/Toolbar/add-timeline.svg"),
-		"Add Timeline",
-		self)
+		load("res://addons/dialogic/Editor/Images/Toolbar/add-timeline.svg"), "Add Timeline", self
+	)
 	add_timeline_button.pressed.connect(_on_create_timeline_button_pressed)
 	add_timeline_button.shortcut = Shortcut.new()
 	add_timeline_button.shortcut.events.append(InputEventKey.new())
@@ -29,9 +28,8 @@ func _register() -> void:
 	add_timeline_button.shortcut.events[0].ctrl_pressed = true
 	# play timeline button
 	play_timeline_button = editors_manager.add_custom_button(
-		"Play Timeline",
-		get_theme_icon("PlayScene", "EditorIcons"),
-		self)
+		"Play Timeline", get_theme_icon("PlayScene", "EditorIcons"), self
+	)
 	play_timeline_button.pressed.connect(play_timeline)
 	play_timeline_button.tooltip_text = "Play the current timeline (CTRL+F5)"
 	if OS.get_name() == "macOS":
@@ -39,7 +37,7 @@ func _register() -> void:
 
 	%VisualEditor.load_event_buttons()
 
-	current_editor_mode = DialogicUtil.get_editor_setting('timeline_editor_mode', 0)
+	current_editor_mode = DialogicUtil.get_editor_setting("timeline_editor_mode", 0)
 
 	match current_editor_mode:
 		EditorMode.VISUAL:
@@ -64,7 +62,7 @@ func _get_icon() -> Texture:
 
 
 ## If this editor supports editing resources, load them here (overwrite in subclass)
-func _open_resource(resource:Resource) -> void:
+func _open_resource(resource: Resource) -> void:
 	current_resource = resource
 	current_resource_state = ResourceStates.SAVED
 	match current_editor_mode:
@@ -105,6 +103,7 @@ func _input(event: InputEvent) -> void:
 				if is_ancestor_of(get_viewport().gui_get_focus_owner()):
 					replace_in_timeline(true)
 
+
 ## Method to play the current timeline. Connected to the button in the sidebar.
 func play_timeline(index := -1) -> void:
 	_save()
@@ -112,9 +111,11 @@ func play_timeline(index := -1) -> void:
 	var dialogic_plugin := DialogicUtil.get_dialogic_plugin()
 
 	# Save the current opened timeline
-	DialogicUtil.set_editor_setting('current_timeline_path', current_resource.resource_path)
-	DialogicUtil.set_editor_setting('play_from_index', index)
-	DialogicUtil.get_dialogic_plugin().get_editor_interface().play_custom_scene("res://addons/dialogic/Editor/TimelineEditor/test_timeline_scene.tscn")
+	DialogicUtil.set_editor_setting("current_timeline_path", current_resource.resource_path)
+	DialogicUtil.set_editor_setting("play_from_index", index)
+	DialogicUtil.get_dialogic_plugin().get_editor_interface().play_custom_scene(
+		"res://addons/dialogic/Editor/TimelineEditor/test_timeline_scene.tscn"
+	)
 
 
 ## Method to switch from visual to text editor (and vice versa). Connected to the button in the sidebar.
@@ -140,8 +141,10 @@ func toggle_editor_mode() -> void:
 			%VisualEditor.show()
 			%SwitchEditorMode.text = "Text Editor"
 			if not %VisualEditor.timeline_loaded.is_connected(_on_search_text_changed):
-				%VisualEditor.timeline_loaded.connect(_on_search_text_changed.bind(%Search.text), CONNECT_ONE_SHOT)
-	DialogicUtil.set_editor_setting('timeline_editor_mode', current_editor_mode)
+				%VisualEditor.timeline_loaded.connect(
+					_on_search_text_changed.bind(%Search.text), CONNECT_ONE_SHOT
+				)
+	DialogicUtil.set_editor_setting("timeline_editor_mode", current_editor_mode)
 
 
 func _on_resource_unsaved() -> void:
@@ -154,21 +157,21 @@ func _on_resource_saved() -> void:
 		current_resource.set_meta("timeline_not_saved", false)
 
 
-func new_timeline(path:String) -> void:
+func new_timeline(path: String) -> void:
 	_save()
 	var new_timeline := DialogicTimeline.new()
 	if not path.ends_with(".dtl"):
 		path = path.trim_suffix(".")
 		path += ".dtl"
 	new_timeline.resource_path = path
-	new_timeline.set_meta('timeline_not_saved', true)
+	new_timeline.set_meta("timeline_not_saved", true)
 	var err := ResourceSaver.save(new_timeline)
 	EditorInterface.get_resource_filesystem().update_file(new_timeline.resource_path)
-	DialogicResourceUtil.update_directory('dtl')
+	DialogicResourceUtil.update_directory("dtl")
 	editors_manager.edit_resource(new_timeline)
 
 
-func update_audio_channel_cache(list:PackedStringArray) -> void:
+func update_audio_channel_cache(list: PackedStringArray) -> void:
 	var timeline_directory := DialogicResourceUtil.get_timeline_directory()
 	var channel_directory := DialogicResourceUtil.get_audio_channel_cache()
 	if current_resource != null:
@@ -183,7 +186,9 @@ func update_audio_channel_cache(list:PackedStringArray) -> void:
 
 
 func _ready() -> void:
-	$NoTimelineScreen.add_theme_stylebox_override("panel", get_theme_stylebox("Background", "EditorStyles"))
+	$NoTimelineScreen.add_theme_stylebox_override(
+		"panel", get_theme_stylebox("Background", "EditorStyles")
+	)
 
 	# switch editor mode button
 	%SwitchEditorMode.text = "Text editor"
@@ -203,16 +208,21 @@ func _ready() -> void:
 	%ProgressSection.hide()
 
 	%SearchReplaceSection.hide()
-	%SearchReplaceSection.add_theme_stylebox_override("panel", get_theme_stylebox("PanelForeground", "EditorStyles"))
+	%SearchReplaceSection.add_theme_stylebox_override(
+		"panel", get_theme_stylebox("PanelForeground", "EditorStyles")
+	)
 
 
 func _on_create_timeline_button_pressed() -> void:
-	editors_manager.show_add_resource_dialog(
+	(
+		editors_manager
+		. show_add_resource_dialog(
 			new_timeline,
-			'*.dtl; DialogicTimeline',
-			'Create new timeline',
-			'timeline',
-			)
+			"*.dtl; DialogicTimeline",
+			"Create new timeline",
+			"timeline",
+		)
+	)
 
 
 func _clear() -> void:
@@ -232,7 +242,9 @@ func get_current_editor() -> Node:
 		return %TextEditor
 	return %VisualEditor
 
+
 #region SEARCH
+
 
 func search_timeline() -> void:
 	%SearchReplaceSection.show()
@@ -248,18 +260,22 @@ func search_timeline() -> void:
 func _on_close_search_pressed() -> void:
 	%SearchReplaceSection.hide()
 	%Search.text = ""
-	_on_search_text_changed('')
+	_on_search_text_changed("")
 
 
 func _on_search_text_changed(new_text: String) -> void:
 	var editor: Node = null
-	var anything_found: bool = get_current_editor()._search_timeline(new_text, %MatchCase.button_pressed, %WholeWords.button_pressed)
+	var anything_found: bool = get_current_editor()._search_timeline(
+		new_text, %MatchCase.button_pressed, %WholeWords.button_pressed
+	)
 	if anything_found or new_text.is_empty():
 		%SearchLabel.hide()
 		%Search.add_theme_color_override("font_color", get_theme_color("font_color", "Editor"))
 	else:
 		%SearchLabel.show()
-		%SearchLabel.add_theme_color_override("font_color", get_theme_color("error_color", "Editor"))
+		%SearchLabel.add_theme_color_override(
+			"font_color", get_theme_color("error_color", "Editor")
+		)
 		%Search.add_theme_color_override("font_color", get_theme_color("error_color", "Editor"))
 		%SearchLabel.text = "No Match"
 
@@ -282,10 +298,10 @@ func _on_whole_words_toggled(toggled_on: bool) -> void:
 
 #endregion
 
-
 #region REPLACE
 
-func replace_in_timeline(focus_grab:=false) -> void:
+
+func replace_in_timeline(focus_grab := false) -> void:
 	search_timeline()
 	%ReplaceSection.show()
 	if focus_grab:
@@ -302,16 +318,24 @@ func _on_replace_all_button_pressed() -> void:
 
 
 func _on_replace_global_pressed() -> void:
-	editors_manager.reference_manager.add_ref_change(%Search.text, %ReplaceText.text, 0, 0, [],
-			%WholeWords.button_pressed, %MatchCase.button_pressed)
+	editors_manager.reference_manager.add_ref_change(
+		%Search.text,
+		%ReplaceText.text,
+		0,
+		0,
+		[],
+		%WholeWords.button_pressed,
+		%MatchCase.button_pressed
+	)
 	editors_manager.reference_manager.open()
+
 
 #endregion
 
-
 #region PROGRESS
 
-func set_progress(percentage:float, text := "") -> void:
+
+func set_progress(percentage: float, text := "") -> void:
 	%ProgressSection.visible = percentage != 1
 
 	%ProgressBar.value = percentage

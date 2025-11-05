@@ -1,7 +1,7 @@
 extends DialogicAnimation
 
-func animate() -> void:
 
+func animate() -> void:
 	var modulation_property := get_modulation_property()
 	var end_modulation_alpha := 1.0
 
@@ -13,7 +13,7 @@ func animate() -> void:
 		original_modulation.a = 0.0
 		node.set(modulation_property, original_modulation)
 
-	var tween := (node.create_tween() as Tween)
+	var tween := node.create_tween() as Tween
 	if is_reversed:
 		tween.set_ease(Tween.EASE_IN)
 	else:
@@ -31,4 +31,3 @@ func _get_named_variations() -> Dictionary:
 		"fade out": {"reversed": true, "type": AnimationType.OUT},
 		"fade cross": {"type": AnimationType.CROSSFADE},
 	}
-

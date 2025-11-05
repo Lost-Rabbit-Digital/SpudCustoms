@@ -24,10 +24,10 @@ var editors := {}
 var supported_file_extensions := []
 var used_resources_cache: Array = []
 
-
 ################################################################################
 ## 						REGISTERING EDITORS
 ################################################################################
+
 
 ## Asks all childs of the editor holder to register
 func _ready() -> void:
@@ -60,16 +60,33 @@ func _ready() -> void:
 	await get_tree().process_frame
 
 	load_saved_state()
-	used_resources_cache = DialogicUtil.get_editor_setting('last_resources', [])
+	used_resources_cache = DialogicUtil.get_editor_setting("last_resources", [])
 	sidebar.update_resource_list(used_resources_cache)
 
-	find_parent('EditorView').plugin_reference.get_editor_interface().get_file_system_dock().files_moved.connect(_on_file_moved)
-	find_parent('EditorView').plugin_reference.get_editor_interface().get_file_system_dock().file_removed.connect(_on_file_removed)
+	(
+		find_parent("EditorView")
+		. plugin_reference
+		. get_editor_interface()
+		. get_file_system_dock()
+		. files_moved
+		. connect(_on_file_moved)
+	)
+	(
+		find_parent("EditorView")
+		. plugin_reference
+		. get_editor_interface()
+		. get_file_system_dock()
+		. file_removed
+		. connect(_on_file_removed)
+	)
 
-	hsplit.set("theme_override_constants/separation", get_theme_constant("base_margin", "Editor") * DialogicUtil.get_editor_scale())
+	hsplit.set(
+		"theme_override_constants/separation",
+		get_theme_constant("base_margin", "Editor") * DialogicUtil.get_editor_scale()
+	)
 
 
-func _add_editor(path:String) -> void:
+func _add_editor(path: String) -> void:
 	var editor: DialogicEditor = load(path).instantiate()
 	editors_holder.add_child(editor)
 	editor.hide()
@@ -77,34 +94,34 @@ func _add_editor(path:String) -> void:
 
 
 ## Call to register an editor/tab that edits a resource with a custom ending.
-func register_resource_editor(resource_extension:String, editor:DialogicEditor) -> void:
-	editors[editor.name] = {'node':editor, 'buttons':[], 'extension': resource_extension}
+func register_resource_editor(resource_extension: String, editor: DialogicEditor) -> void:
+	editors[editor.name] = {"node": editor, "buttons": [], "extension": resource_extension}
 	supported_file_extensions.append(resource_extension)
 	editor.resource_saved.connect(_on_resource_saved.bind(editor))
 	editor.resource_unsaved.connect(_on_resource_unsaved.bind(editor))
 
 
 ## Call to register an editor/tab that doesn't edit a resource
-func register_simple_editor(editor:DialogicEditor) -> void:
-	editors[editor.name] = {'node': editor,  'buttons':[]}
+func register_simple_editor(editor: DialogicEditor) -> void:
+	editors[editor.name] = {"node": editor, "buttons": []}
 
 
 ## Call to add an icon button. These buttons are always visible.
-func add_icon_button(icon:Texture, tooltip:String, editor:DialogicEditor=null) -> Node:
+func add_icon_button(icon: Texture, tooltip: String, editor: DialogicEditor = null) -> Node:
 	var button: Button = toolbar.add_icon_button(icon, tooltip)
 	if editor != null:
-		editors[editor.name]['buttons'].append(button)
+		editors[editor.name]["buttons"].append(button)
 	return button
 
 
 ## Call to add a custom action button. Only visible if editor is visible.
-func add_custom_button(label:String, icon:Texture, editor:DialogicEditor) -> Node:
+func add_custom_button(label: String, icon: Texture, editor: DialogicEditor) -> Node:
 	var button: Button = toolbar.add_custom_button(label, icon)
-	editors[editor.name]['buttons'].append(button)
+	editors[editor.name]["buttons"].append(button)
 	return button
 
 
-func can_edit_resource(resource:Resource) -> bool:
+func can_edit_resource(resource: Resource) -> bool:
 	return resource.resource_path.get_extension() in supported_file_extensions
 
 
@@ -113,11 +130,11 @@ func can_edit_resource(resource:Resource) -> bool:
 ################################################################################
 
 
-func _on_editors_tab_changed(tab:int) -> void:
+func _on_editors_tab_changed(tab: int) -> void:
 	open_editor(editors_holder.get_child(tab))
 
 
-func edit_resource(resource:Resource, save_previous:bool = true, silent:= false) -> void:
+func edit_resource(resource: Resource, save_previous: bool = true, silent := false) -> void:
 	if not resource:
 		# The resource doesn't exists, show an error
 		print("[Dialogic] The resource you are trying to edit doesn't exist any more.")
@@ -133,13 +150,12 @@ func edit_resource(resource:Resource, save_previous:bool = true, silent:= false)
 	## Open the correct editor
 	var extension: String = resource.resource_path.get_extension()
 	for editor in editors.values():
-		if editor.get('extension', '') == extension:
-			editor['node']._open_resource(resource)
+		if editor.get("extension", "") == extension:
+			editor["node"]._open_resource(resource)
 			if !silent:
-				open_editor(editor['node'], false)
+				open_editor(editor["node"], false)
 	if !silent:
 		resource_opened.emit(resource)
-
 
 
 ## Only works if there was a different editor opened previously
@@ -151,7 +167,9 @@ func toggle_editor(editor) -> void:
 
 
 ## Shows the given editor
-func open_editor(editor:DialogicEditor, save_previous: bool = true, extra_info:Variant = null) -> void:
+func open_editor(
+	editor: DialogicEditor, save_previous: bool = true, extra_info: Variant = null
+) -> void:
 	if current_editor and save_previous:
 		current_editor._save()
 
@@ -181,15 +199,22 @@ func open_editor(editor:DialogicEditor, save_previous: bool = true, extra_info:V
 
 
 ## Rarely used to completely clear an editor.
-func clear_editor(editor:DialogicEditor, save:bool = false) -> void:
+func clear_editor(editor: DialogicEditor, save: bool = false) -> void:
 	if save:
 		editor._save()
 
 	editor._clear()
 
+
 ## Shows a file selector. Calls [accept_callable] once accepted
-func show_add_resource_dialog(accept_callable:Callable, filter:String = "*", title = "New resource", default_name = "new_character", mode = EditorFileDialog.FILE_MODE_SAVE_FILE) -> void:
-	find_parent('EditorView').godot_file_dialog(
+func show_add_resource_dialog(
+	accept_callable: Callable,
+	filter: String = "*",
+	title = "New resource",
+	default_name = "new_character",
+	mode = EditorFileDialog.FILE_MODE_SAVE_FILE
+) -> void:
+	find_parent("EditorView").godot_file_dialog(
 		_on_add_resource_dialog_accepted.bind(accept_callable),
 		filter,
 		mode,
@@ -200,11 +225,13 @@ func show_add_resource_dialog(accept_callable:Callable, filter:String = "*", tit
 	)
 
 
-func _on_add_resource_dialog_accepted(path:String, callable:Callable) -> void:
-	var file_name: String = path.get_file().trim_suffix('.'+path.get_extension())
-	for i in ['#','&','+',';','(',')','!','*','*','"',"'",'%', '$', ':','.',',']:
-		file_name = file_name.replace(i, '')
-	callable.call(path.trim_suffix(path.get_file()).path_join(file_name)+'.'+path.get_extension())
+func _on_add_resource_dialog_accepted(path: String, callable: Callable) -> void:
+	var file_name: String = path.get_file().trim_suffix("." + path.get_extension())
+	for i in ["#", "&", "+", ";", "(", ")", "!", "*", "*", '"', "'", "%", "$", ":", ".", ","]:
+		file_name = file_name.replace(i, "")
+	callable.call(
+		path.trim_suffix(path.get_file()).path_join(file_name) + "." + path.get_extension()
+	)
 
 
 ## Called by the plugin.gd script on CTRL+S or Debug Game start
@@ -214,39 +241,39 @@ func save_current_resource() -> void:
 
 
 ## Change the resource state
-func _on_resource_saved(editor:DialogicEditor):
+func _on_resource_saved(editor: DialogicEditor):
 	sidebar.set_unsaved_indicator(true)
 
 
 ## Change the resource state
-func _on_resource_unsaved(editor:DialogicEditor):
+func _on_resource_unsaved(editor: DialogicEditor):
 	sidebar.set_unsaved_indicator(false)
 
 
 ## Tries opening the last resource
 func load_saved_state() -> void:
-	var current_resources: Dictionary = DialogicUtil.get_editor_setting('current_resources', {})
+	var current_resources: Dictionary = DialogicUtil.get_editor_setting("current_resources", {})
 	for editor in current_resources.keys():
-		editors[editor]['node']._open_resource(load(current_resources[editor]))
+		editors[editor]["node"]._open_resource(load(current_resources[editor]))
 
-	var current_editor: String = DialogicUtil.get_editor_setting('current_editor', 'HomePage')
-	open_editor(editors[current_editor]['node'])
+	var current_editor: String = DialogicUtil.get_editor_setting("current_editor", "HomePage")
+	open_editor(editors[current_editor]["node"])
 
 
 func save_current_state() -> void:
-	DialogicUtil.set_editor_setting('current_editor', current_editor.name)
+	DialogicUtil.set_editor_setting("current_editor", current_editor.name)
 	var current_resources: Dictionary = {}
 	for editor in editors.values():
-		if editor['node'].current_resource != null:
-			current_resources[editor['node'].name] = editor['node'].current_resource.resource_path
-	DialogicUtil.set_editor_setting('current_resources', current_resources)
+		if editor["node"].current_resource != null:
+			current_resources[editor["node"].name] = editor["node"].current_resource.resource_path
+	DialogicUtil.set_editor_setting("current_resources", current_resources)
 
 
-func _on_file_moved(old_name:String, new_name:String) -> void:
+func _on_file_moved(old_name: String, new_name: String) -> void:
 	if !old_name.get_extension() in supported_file_extensions:
 		return
 
-	used_resources_cache = DialogicUtil.get_editor_setting('last_resources', [])
+	used_resources_cache = DialogicUtil.get_editor_setting("last_resources", [])
 	if old_name in used_resources_cache:
 		used_resources_cache.insert(used_resources_cache.find(old_name), new_name)
 		used_resources_cache.erase(old_name)
@@ -254,21 +281,23 @@ func _on_file_moved(old_name:String, new_name:String) -> void:
 	sidebar.update_resource_list(used_resources_cache)
 
 	for editor in editors:
-		if editors[editor].node.current_resource != null and editors[editor].node.current_resource.resource_path == old_name:
+		if (
+			editors[editor].node.current_resource != null
+			and editors[editor].node.current_resource.resource_path == old_name
+		):
 			editors[editor].node.current_resource.take_over_path(new_name)
 			edit_resource(load(new_name), true, true)
 
 	save_current_state()
 
 
-func _on_file_removed(file_name:String) -> void:
-	var current_resources: Dictionary = DialogicUtil.get_editor_setting('current_resources', {})
+func _on_file_removed(file_name: String) -> void:
+	var current_resources: Dictionary = DialogicUtil.get_editor_setting("current_resources", {})
 	for editor_name in current_resources:
 		if current_resources[editor_name] == file_name:
 			clear_editor(editors[editor_name].node, false)
 			sidebar.update_resource_list()
 			save_current_state()
-
 
 
 ################################################################################
@@ -281,4 +310,4 @@ func get_current_editor() -> DialogicEditor:
 
 
 func _exit_tree() -> void:
-	DialogicUtil.set_editor_setting('last_resources', used_resources_cache)
+	DialogicUtil.set_editor_setting("last_resources", used_resources_cache)

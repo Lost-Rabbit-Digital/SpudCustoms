@@ -4,7 +4,9 @@ extends DialogicLayoutLayer
 ## A layer that allows showing 5 portraits, like in a visual novel.
 
 ## The canvas layer that the portraits are on.
-@export var portrait_size_mode: DialogicNode_PortraitContainer.SizeModes = DialogicNode_PortraitContainer.SizeModes.FIT_SCALE_HEIGHT
+@export var portrait_size_mode: DialogicNode_PortraitContainer.SizeModes = (
+	DialogicNode_PortraitContainer.SizeModes.FIT_SCALE_HEIGHT
+)
 
 
 func _apply_export_overrides() -> void:

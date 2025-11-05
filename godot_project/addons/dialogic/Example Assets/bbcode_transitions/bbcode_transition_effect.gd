@@ -38,7 +38,7 @@ func skip() -> void:
 
 
 func _process_custom_fx(char_fx: CharFXTransform) -> bool:
-	var char_age :float = 0.0
+	var char_age: float = 0.0
 	if test_value >= 0:
 		char_age = test_value
 
@@ -58,13 +58,13 @@ func _process_custom_fx(char_fx: CharFXTransform) -> bool:
 
 		if was_skipped:
 			for i in range(len(cache)):
-				cache[i] = char_fx.elapsed_time-time
+				cache[i] = char_fx.elapsed_time - time
 
 		if len(cache) > char_fx.range.x:
 			char_age = char_fx.elapsed_time - cache[char_fx.range.x]
 
 	var text_server := TextServerManager.get_primary_interface()
-	var trans: float = clamp(char_age, 0.0, time)/time
+	var trans: float = clamp(char_age, 0.0, time) / time
 
 	if color_replace:
 		var c := color_replace.sample(trans)
@@ -73,12 +73,20 @@ func _process_custom_fx(char_fx: CharFXTransform) -> bool:
 	if color_modulate:
 		char_fx.color *= color_modulate.sample(trans)
 	if char_fx.font.is_valid():
-		var glyph_size := text_server.font_get_glyph_size(char_fx.font, Vector2i(16,1), char_fx.glyph_index)
+		var glyph_size := text_server.font_get_glyph_size(
+			char_fx.font, Vector2i(16, 1), char_fx.glyph_index
+		)
 		if scale_enabled:
-			char_fx.transform = char_fx.transform.translated_local(scale_pivot*glyph_size*Vector2(1, -1)*(1-scale_curve.sample(trans)))
-			char_fx.transform = char_fx.transform.scaled_local(Vector2.ONE*scale_curve.sample(trans))
+			char_fx.transform = char_fx.transform.translated_local(
+				scale_pivot * glyph_size * Vector2(1, -1) * (1 - scale_curve.sample(trans))
+			)
+			char_fx.transform = char_fx.transform.scaled_local(
+				Vector2.ONE * scale_curve.sample(trans)
+			)
 
 		if position_enabled:
-			char_fx.transform = char_fx.transform.translated_local(Vector2(position_x_curve.sample(trans), position_y_curve.sample(trans))*glyph_size)
+			char_fx.transform = char_fx.transform.translated_local(
+				Vector2(position_x_curve.sample(trans), position_y_curve.sample(trans)) * glyph_size
+			)
 
 	return true

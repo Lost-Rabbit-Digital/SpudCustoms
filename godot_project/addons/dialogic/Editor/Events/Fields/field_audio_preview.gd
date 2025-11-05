@@ -1,7 +1,6 @@
 @tool
 extends DialogicVisualEditorField
 
-
 var file_path: String
 
 
@@ -15,16 +14,17 @@ func _ready() -> void:
 
 
 ## To be overwritten
-func _set_value(value:Variant) -> void:
+func _set_value(value: Variant) -> void:
 	file_path = value
 	self.disabled = file_path.is_empty()
 	_stop()
 
-#endregion
 
+#endregion
 
 #region SIGNAL METHODS
 ################################################################################
+
 
 func _on_pressed() -> void:
 	if %AudioStreamPlayer.playing:
@@ -35,6 +35,7 @@ func _on_pressed() -> void:
 
 func _on_finished() -> void:
 	_stop()
+
 
 #endregion
 

@@ -64,7 +64,7 @@ func _process(_delta):
 	var narrative_manager = get_node_or_null("/root/NarrativeManager")
 	if narrative_manager and narrative_manager.has_method("is_dialogue_active"):
 		is_in_dialogue = narrative_manager.is_dialogue_active()
-		
+
 	if is_paused or is_in_dialogue:
 		return
 

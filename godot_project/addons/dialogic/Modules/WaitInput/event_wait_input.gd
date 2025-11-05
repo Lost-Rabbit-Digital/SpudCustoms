@@ -10,6 +10,7 @@ var hide_textbox := true
 ## 						EXECUTE
 ################################################################################
 
+
 func _execute() -> void:
 	if hide_textbox:
 		dialogic.Text.hide_textbox()
@@ -18,13 +19,15 @@ func _execute() -> void:
 	await dialogic.Inputs.dialogic_action
 	finish()
 
+
 ################################################################################
 ## 						INITIALIZE
 ################################################################################
 
+
 func _init() -> void:
 	event_name = "Wait for Input"
-	set_default_color('Color5')
+	set_default_color("Color5")
 	event_category = "Flow"
 	event_sorting_index = 12
 
@@ -33,16 +36,18 @@ func _init() -> void:
 ## 						SAVING/LOADING
 ################################################################################
 
+
 func get_shortcode() -> String:
 	return "wait_input"
+
 
 func get_shortcode_parameters() -> Dictionary:
 	return {
 		#param_name : property_info
-		"hide_text" :  {"property": "hide_textbox", 	"default": true},
+		"hide_text": {"property": "hide_textbox", "default": true},
 	}
 
 
 func build_event_editor() -> void:
-	add_header_label('Wait for input')
-	add_body_edit('hide_textbox', ValueType.BOOL, {'left_text':'Hide text box:'})
+	add_header_label("Wait for input")
+	add_body_edit("hide_textbox", ValueType.BOOL, {"left_text": "Hide text box:"})

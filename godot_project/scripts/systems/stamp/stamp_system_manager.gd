@@ -19,6 +19,7 @@ var stats_manager: Node
 # Track if a perfect stamp bonus has been awarded for the current document
 var perfect_bonus_awarded: bool = false
 
+
 # Initialize the stamp system
 func initialize(game_scene: Node):
 	main_game = game_scene
@@ -29,13 +30,13 @@ func initialize(game_scene: Node):
 	# Get UI references
 	alert_label = game_scene.get_node_or_null("UI/Labels/MarginContainer/AlertLabel")
 	alert_timer = game_scene.get_node_or_null("SystemManagers/Timers/AlertTimer")
-	
+
 	# Log whether we found the references
 	if alert_label:
 		print("Alert label found successfully")
 	else:
 		push_warning("Alert label not found in scene tree")
-		
+
 	if alert_timer:
 		print("Alert timer found successfully")
 	else:
@@ -80,7 +81,7 @@ func _on_stamp_applied(stamp: StampComponent, document: Node, is_perfect: bool):
 		# Perfect stamp bonus points
 		var perfect_points = 250
 		Global.add_score(perfect_points)
-		
+
 		# Try to find alert references in the scene tree
 		var root = get_tree().current_scene
 
@@ -97,57 +98,57 @@ func _on_stamp_applied(stamp: StampComponent, document: Node, is_perfect: bool):
 
 		# Create the visual effect
 		create_perfect_stamp_effect(effect_position)
-	
+
 		# Shake screen
 		Global.shake_screen(3, 0.5)
-		
+
 		emit_signal("stamp_applied", stamp, document, is_perfect)
 
 
 func create_perfect_stamp_effect(position: Vector2):
 	# Create a particle effect for perfect stamps
 	var particles = CPUParticles2D.new()
-	
+
 	# Make sure we're using global position
-	particles.global_position = position 
+	particles.global_position = position
 	#+ Vector2(randi_range(-200,200),randi_range(-25,25))
-	
+
 	# Set to very high z_index to ensure visibility
 	particles.z_index = 25
-	
+
 	# Increase amount and lifetime for better visibility
 	particles.amount = 100
 	particles.lifetime = 4
 	particles.explosiveness = 0.9
-	
+
 	# Add some spread
 	particles.spread = 70.0
-	
+
 	# Set direction upward with some randomness
 	particles.direction = Vector2(0, -1)
 	particles.gravity = Vector2(0, 150)
-	
+
 	# Increase velocity for better visibility
 	particles.initial_velocity_min = 75
 	particles.initial_velocity_max = 250
-	
-	particles.scale_amount_min = 0.6 # Minimum size
+
+	particles.scale_amount_min = 0.6  # Minimum size
 	particles.scale_amount_max = 6.0  # Maximum size
-	
+
 	# Use a bright, noticeable color
 	particles.color = Color(1, 0.8, 0, 1)  # Gold particles
-	
+
 	# Add a second color for variation (optional)
 	particles.color_ramp = Gradient.new()
 	particles.color_ramp.add_point(0.0, Color(1, 0.8, 0, 1))  # Gold
 	particles.color_ramp.add_point(1.0, Color(1, 0.5, 0, 0.1))  # Fading orange
-	
+
 	# Add to scene root rather than StampSystemManager
 	get_tree().current_scene.add_child(particles)
-	
+
 	# Start emitting
 	particles.emitting = true
-	
+
 	# Auto-cleanup
 	var timer = Timer.new()
 	timer.wait_time = 4
@@ -159,9 +160,10 @@ func create_perfect_stamp_effect(position: Vector2):
 			particles.queue_free()
 			timer.queue_free()
 	)
-	
+
 	# Debug information
 	print("Created particle effect at position: ", position)
+
 
 # Handle stamps specifically applied to the passport
 func _on_passport_stamped(_stamp: StampComponent, is_perfect: bool):
@@ -185,8 +187,10 @@ func process_passport_decision():
 		return decision
 	return ""
 
+
 func reset_perfect_bonus_state():
 	perfect_bonus_awarded = false
+
 
 # Clear all stamps from passport
 func clear_passport_stamps():

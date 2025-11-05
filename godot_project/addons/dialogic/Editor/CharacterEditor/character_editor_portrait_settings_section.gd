@@ -37,12 +37,12 @@ func _start_opened() -> bool:
 
 
 ## Overwrite to load all the information from the character into this section.
-func _load_portrait_data(data:Dictionary) -> void:
+func _load_portrait_data(data: Dictionary) -> void:
 	pass
 
 
 ## Overwrite to recheck visibility of your section and the content of your fields.
 ## This is called whenever the preview is updated so it allows reacting to major
 ##  changes in other portrait sections.
-func _recheck(data:Dictionary) -> void:
+func _recheck(data: Dictionary) -> void:
 	pass

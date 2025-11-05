@@ -30,6 +30,7 @@ class PaperBit:
 var paper_bits = []  # Will hold custom PaperBit instances
 var smoke_frames = []  # Will store our atlas textures
 
+
 func _ready():
 	# Load the smoke spritesheet or use custom one if provided
 	var spritesheet = custom_spritesheet

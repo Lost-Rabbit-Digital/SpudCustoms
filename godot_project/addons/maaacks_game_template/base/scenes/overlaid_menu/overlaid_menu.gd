@@ -2,7 +2,7 @@
 class_name OverlaidMenu
 extends Control
 
-@export var pauses_game : bool = false :
+@export var pauses_game: bool = false:
 	set(value):
 		pauses_game = value
 		if pauses_game:
@@ -10,11 +10,12 @@ extends Control
 		else:
 			process_mode = PROCESS_MODE_INHERIT
 
-var _initial_pause_state : bool = false
-var _initial_focus_mode : FocusMode = FOCUS_ALL
-var _initial_mouse_mode : int
+var _initial_pause_state: bool = false
+var _initial_focus_mode: FocusMode = FOCUS_ALL
+var _initial_mouse_mode: int
 var _initial_focus_control
-var _scene_tree : SceneTree 
+var _scene_tree: SceneTree
+
 
 func close():
 	_scene_tree.paused = _initial_pause_state
@@ -24,16 +25,20 @@ func close():
 		_initial_focus_control.grab_focus()
 	queue_free()
 
+
 func _handle_cancel_input():
 	close()
+
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
 		_handle_cancel_input()
 		get_viewport().set_input_as_handled()
 
+
 func _on_close_button_pressed():
 	close()
+
 
 func _enter_tree():
 	_initial_focus_control = get_viewport().gui_get_focus_owner()

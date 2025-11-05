@@ -2,15 +2,16 @@
 extends Control
 
 var ListItem := load("res://addons/dialogic/Editor/Common/BrowserItem.tscn")
-enum Types {ALL, STYLES, LAYER, LAYOUT_BASE}
+enum Types { ALL, STYLES, LAYER, LAYOUT_BASE }
 
 var current_type := Types.ALL
 var style_part_info := []
 var premade_scenes_reference := {}
 
-signal activate_part(part_info:Dictionary)
+signal activate_part(part_info: Dictionary)
 
 var current_info := {}
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,11 +24,11 @@ func collect_style_parts() -> void:
 	for indexer in DialogicUtil.get_indexers():
 		for layout_part in indexer._get_layout_parts():
 			style_part_info.append(layout_part)
-			if not layout_part.get('path', '').is_empty():
-				premade_scenes_reference[layout_part['path']] = layout_part
+			if not layout_part.get("path", "").is_empty():
+				premade_scenes_reference[layout_part["path"]] = layout_part
 
 
-func is_premade_style_part(scene_path:String) -> bool:
+func is_premade_style_part(scene_path: String) -> bool:
 	return scene_path in premade_scenes_reference
 
 
@@ -48,7 +49,7 @@ func load_parts() -> void:
 			%Search.placeholder_text += "styles or layout scenes"
 
 	for info in style_part_info:
-		var type: String = info.get('type', '_')
+		var type: String = info.get("type", "_")
 		match current_type:
 			Types.STYLES:
 				if type != "Style":
@@ -63,10 +64,10 @@ func load_parts() -> void:
 		var style_item: Node = ListItem.instantiate()
 		style_item.load_info(info)
 		%PartGrid.add_child(style_item)
-		style_item.set_meta('info', info)
+		style_item.set_meta("info", info)
 		style_item.clicked.connect(_on_style_item_clicked.bind(style_item, info))
 		style_item.focused.connect(_on_style_item_clicked.bind(style_item, info))
-		style_item.double_clicked.connect(emit_signal.bind('activate_part', info))
+		style_item.double_clicked.connect(emit_signal.bind("activate_part", info))
 
 	await get_tree().process_frame
 
@@ -75,18 +76,18 @@ func load_parts() -> void:
 		%PartGrid.get_child(0).grab_focus()
 
 
-func _on_style_item_clicked(item:Node, info:Dictionary) -> void:
+func _on_style_item_clicked(item: Node, info: Dictionary) -> void:
 	load_part_info(info)
 
 
-func load_part_info(info:Dictionary) -> void:
+func load_part_info(info: Dictionary) -> void:
 	current_info = info
-	%PartTitle.text = info.get('name', 'Unknown Part')
-	%PartAuthor.text = "by "+info.get('author', 'Anonymus')
-	%PartDescription.text = info.get('description', '')
+	%PartTitle.text = info.get("name", "Unknown Part")
+	%PartAuthor.text = "by " + info.get("author", "Anonymus")
+	%PartDescription.text = info.get("description", "")
 
-	if info.get('preview_image', null):
-		%PreviewImage.texture = load(info.get('preview_image')[0])
+	if info.get("preview_image", null):
+		%PreviewImage.texture = load(info.get("preview_image")[0])
 		%PreviewImage.show()
 	else:
 		%PreviewImage.hide()
@@ -102,7 +103,7 @@ func _on_search_text_changed(new_text: String) -> void:
 			item.show()
 			continue
 
-		if new_text.to_lower() in item.get_meta('info').name.to_lower():
+		if new_text.to_lower() in item.get_meta("info").name.to_lower():
 			item.show()
 			continue
 

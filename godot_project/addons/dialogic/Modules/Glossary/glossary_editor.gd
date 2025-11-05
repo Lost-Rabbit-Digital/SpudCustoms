@@ -9,6 +9,7 @@ var current_entry := {}
 ##					BASICS
 ################################################################################
 
+
 func _get_title() -> String:
 	return "Glossary"
 
@@ -25,47 +26,58 @@ func _register() -> void:
 
 
 func _ready() -> void:
-	var add_glossary_icon_path: String = self.get_script().get_path().get_base_dir() + "/add-glossary.svg"
+	var add_glossary_icon_path: String = (
+		self.get_script().get_path().get_base_dir() + "/add-glossary.svg"
+	)
 	var add_glossary_icon := load(add_glossary_icon_path)
 	%AddGlossaryFile.icon = add_glossary_icon
 
-	%LoadGlossaryFile.icon = get_theme_icon('Folder', 'EditorIcons')
-	%DeleteGlossaryFile.icon = get_theme_icon('Remove', 'EditorIcons')
-	%DeleteGlossaryEntry.icon = get_theme_icon('Remove', 'EditorIcons')
+	%LoadGlossaryFile.icon = get_theme_icon("Folder", "EditorIcons")
+	%DeleteGlossaryFile.icon = get_theme_icon("Remove", "EditorIcons")
+	%DeleteGlossaryEntry.icon = get_theme_icon("Remove", "EditorIcons")
 
 	%DeleteGlossaryFile.pressed.connect(_on_delete_glossary_file_pressed)
 
-	%AddGlossaryEntry.icon = get_theme_icon('Add', 'EditorIcons')
-	%EntrySearch.right_icon = get_theme_icon('Search', 'EditorIcons')
+	%AddGlossaryEntry.icon = get_theme_icon("Add", "EditorIcons")
+	%EntrySearch.right_icon = get_theme_icon("Search", "EditorIcons")
 
 	%GlossaryList.item_selected.connect(_on_GlossaryList_item_selected)
 	%EntryList.item_selected.connect(_on_EntryList_item_selected)
 
-	%DefaultColor.color_changed.connect(set_setting.bind('dialogic/glossary/default_color'))
-	%DefaultCaseSensitive.toggled.connect(set_setting.bind('dialogic/glossary/default_case_sensitive'))
+	%DefaultColor.color_changed.connect(set_setting.bind("dialogic/glossary/default_color"))
+	%DefaultCaseSensitive.toggled.connect(
+		set_setting.bind("dialogic/glossary/default_case_sensitive")
+	)
 
 	%EntryCaseSensitive.icon = get_theme_icon("MatchCase", "EditorIcons")
 
 	%EntryAlternatives.text_changed.connect(_on_entry_alternatives_text_changed)
 
 
-func set_setting(value: Variant, setting: String)  -> void:
+func set_setting(value: Variant, setting: String) -> void:
 	ProjectSettings.set_setting(setting, value)
 	ProjectSettings.save()
 
 
 func _open(_argument: Variant = null) -> void:
-	%DefaultColor.color = ProjectSettings.get_setting('dialogic/glossary/default_color', Color.POWDER_BLUE)
-	%DefaultCaseSensitive.button_pressed = ProjectSettings.get_setting('dialogic/glossary/default_case_sensitive', true)
+	%DefaultColor.color = ProjectSettings.get_setting(
+		"dialogic/glossary/default_color", Color.POWDER_BLUE
+	)
+	%DefaultCaseSensitive.button_pressed = ProjectSettings.get_setting(
+		"dialogic/glossary/default_case_sensitive", true
+	)
 
 	%GlossaryList.clear()
 	var idx := 0
-	for file: String in ProjectSettings.get_setting('dialogic/glossary/glossary_files', []):
-
+	for file: String in ProjectSettings.get_setting("dialogic/glossary/glossary_files", []):
 		if ResourceLoader.exists(file):
-			%GlossaryList.add_item(DialogicUtil.pretty_name(file), get_theme_icon('FileList', 'EditorIcons'))
+			%GlossaryList.add_item(
+				DialogicUtil.pretty_name(file), get_theme_icon("FileList", "EditorIcons")
+			)
 		else:
-			%GlossaryList.add_item(DialogicUtil.pretty_name(file), get_theme_icon('FileDead', 'EditorIcons'))
+			%GlossaryList.add_item(
+				DialogicUtil.pretty_name(file), get_theme_icon("FileDead", "EditorIcons")
+			)
 
 		%GlossaryList.set_item_tooltip(idx, file)
 		idx += 1
@@ -78,6 +90,7 @@ func _open(_argument: Variant = null) -> void:
 	else:
 		current_glossary = null
 		hide_entry_editor()
+
 
 ################################################################################
 ##					GLOSSARY LIST
@@ -114,8 +127,11 @@ func _on_GlossaryList_item_selected(idx: int) -> void:
 				_on_entry_alternatives_text_changed(alternatives)
 				ResourceSaver.save(current_glossary)
 
-			%EntryList.add_item(entry.get(DialogicGlossary.NAME_PROPERTY, str(DialogicGlossary.NAME_PROPERTY)), get_theme_icon("Breakpoint", "EditorIcons"))
-			var modulate_color: Color = entry.get('color', %DefaultColor.color)
+			%EntryList.add_item(
+				entry.get(DialogicGlossary.NAME_PROPERTY, str(DialogicGlossary.NAME_PROPERTY)),
+				get_theme_icon("Breakpoint", "EditorIcons")
+			)
+			var modulate_color: Color = entry.get("color", %DefaultColor.color)
 			%EntryList.set_item_metadata(entry_idx, entry)
 			%EntryList.set_item_icon_modulate(entry_idx, modulate_color)
 
@@ -129,10 +145,15 @@ func _on_GlossaryList_item_selected(idx: int) -> void:
 
 
 func _on_add_glossary_file_pressed() -> void:
-	find_parent('EditorView').godot_file_dialog(create_new_glossary_file, '*.tres', EditorFileDialog.FILE_MODE_SAVE_FILE, 'Create new glossary resource')
+	find_parent("EditorView").godot_file_dialog(
+		create_new_glossary_file,
+		"*.tres",
+		EditorFileDialog.FILE_MODE_SAVE_FILE,
+		"Create new glossary resource"
+	)
 
 
-func create_new_glossary_file(path:String) -> void:
+func create_new_glossary_file(path: String) -> void:
 	var glossary := DialogicGlossary.new()
 	glossary.resource_path = path
 	ResourceSaver.save(glossary, path)
@@ -140,17 +161,24 @@ func create_new_glossary_file(path:String) -> void:
 
 
 func _on_load_glossary_file_pressed() -> void:
-	find_parent('EditorView').godot_file_dialog(load_glossary_file, '*.tres', EditorFileDialog.FILE_MODE_OPEN_FILE, 'Select glossary resource')
+	find_parent("EditorView").godot_file_dialog(
+		load_glossary_file,
+		"*.tres",
+		EditorFileDialog.FILE_MODE_OPEN_FILE,
+		"Select glossary resource"
+	)
 
 
-func load_glossary_file(path:String) -> void:
-	var list: Array = ProjectSettings.get_setting('dialogic/glossary/glossary_files', [])
+func load_glossary_file(path: String) -> void:
+	var list: Array = ProjectSettings.get_setting("dialogic/glossary/glossary_files", [])
 
 	if not path in list:
 		list.append(path)
-		ProjectSettings.set_setting('dialogic/glossary/glossary_files', list)
+		ProjectSettings.set_setting("dialogic/glossary/glossary_files", list)
 		ProjectSettings.save()
-		%GlossaryList.add_item(DialogicUtil.pretty_name(path), get_theme_icon('FileList', 'EditorIcons'))
+		%GlossaryList.add_item(
+			DialogicUtil.pretty_name(path), get_theme_icon("FileList", "EditorIcons")
+		)
 
 		var selected_item_index: int = %GlossaryList.item_count - 1
 
@@ -163,11 +191,11 @@ func _on_delete_glossary_file_pressed() -> void:
 	var selected_items: PackedInt32Array = %GlossaryList.get_selected_items()
 
 	if not selected_items.is_empty():
-		var list: Array = ProjectSettings.get_setting('dialogic/glossary/glossary_files', [])
+		var list: Array = ProjectSettings.get_setting("dialogic/glossary/glossary_files", [])
 		var selected_item_index := selected_items[0]
 		list.remove_at(selected_item_index)
 
-		ProjectSettings.set_setting('dialogic/glossary/glossary_files', list)
+		ProjectSettings.set_setting("dialogic/glossary/glossary_files", list)
 		ProjectSettings.save()
 
 		_open()
@@ -184,23 +212,26 @@ func _on_EntryList_item_selected(idx: int) -> void:
 
 	%EntrySettings.show()
 	%EntryName.text = current_entry_name
-	%EntryCaseSensitive.button_pressed = entry_info.get('case_sensitive', %DefaultCaseSensitive.button_pressed)
+	%EntryCaseSensitive.button_pressed = entry_info.get(
+		"case_sensitive", %DefaultCaseSensitive.button_pressed
+	)
 
 	var alternative_property: Array = entry_info.get(DialogicGlossary.ALTERNATIVE_PROPERTY, [])
 	var alternatives := ", ".join(alternative_property)
 	%EntryAlternatives.text = alternatives
 
-	%EntryTitle.text = entry_info.get('title', '')
-	%EntryText.text = entry_info.get('text', '')
-	%EntryExtra.text = entry_info.get('extra', '')
-	%EntryEnabled.button_pressed = entry_info.get('enabled', true)
+	%EntryTitle.text = entry_info.get("title", "")
+	%EntryText.text = entry_info.get("text", "")
+	%EntryExtra.text = entry_info.get("extra", "")
+	%EntryEnabled.button_pressed = entry_info.get("enabled", true)
 
-	%EntryColor.color = entry_info.get('color', %DefaultColor.color)
-	%EntryCustomColor.button_pressed = entry_info.has('color')
-	%EntryColor.disabled = !entry_info.has('color')
+	%EntryColor.color = entry_info.get("color", %DefaultColor.color)
+	%EntryCustomColor.button_pressed = entry_info.has("color")
+	%EntryColor.disabled = !entry_info.has("color")
 
 	_check_entry_alternatives(alternatives)
 	_check_entry_name(current_entry_name, current_entry)
+
 
 func _on_add_glossary_entry_pressed() -> void:
 	if !current_glossary:
@@ -253,13 +284,17 @@ func _on_delete_glossary_entry_pressed() -> void:
 				%EntryList.select(previous_item_index)
 
 
-
 func _on_entry_search_text_changed(new_text: String) -> void:
-	if new_text.is_empty() or new_text.to_lower() in %EntryList.get_item_text(%EntryList.get_selected_items()[0]).to_lower():
+	if (
+		new_text.is_empty()
+		or (
+			new_text.to_lower()
+			in %EntryList.get_item_text(%EntryList.get_selected_items()[0]).to_lower()
+		)
+	):
 		return
 
 	for i: int in %EntryList.item_count:
-
 		if new_text.is_empty() or new_text.to_lower() in %EntryList.get_item_text(i).to_lower():
 			%EntryList.select(i)
 			_on_EntryList_item_selected(i)
@@ -275,7 +310,6 @@ func hide_entry_editor() -> void:
 
 func _update_alias_entries(old_alias_value_key: String, new_alias_value_key: String) -> void:
 	for entry_key: String in current_glossary.entries.keys():
-
 		var entry_value: Variant = current_glossary.entries.get(entry_key)
 
 		if not entry_value is String:
@@ -313,9 +347,12 @@ func _check_entry_name(entry_name: String, entry: Dictionary) -> bool:
 			raised_error = true
 
 	if raised_error:
-		%EntryList.set_item_custom_bg_color(selected_item,
-				get_theme_color("warning_color", "Editor").darkened(0.8))
-		%EntryName.add_theme_color_override("font_color", get_theme_color("warning_color", "Editor"))
+		%EntryList.set_item_custom_bg_color(
+			selected_item, get_theme_color("warning_color", "Editor").darkened(0.8)
+		)
+		%EntryName.add_theme_color_override(
+			"font_color", get_theme_color("warning_color", "Editor")
+		)
 		%EntryName.right_icon = get_theme_icon("StatusError", "EditorIcons")
 
 		return false
@@ -324,10 +361,7 @@ func _check_entry_name(entry_name: String, entry: Dictionary) -> bool:
 		%EntryName.add_theme_color_override("font_color", get_theme_color("font_color", "Editor"))
 		%EntryName.add_theme_color_override("caret_color", get_theme_color("font_color", "Editor"))
 		%EntryName.right_icon = null
-		%EntryList.set_item_custom_bg_color(
-			selected_item,
-			Color.TRANSPARENT
-		)
+		%EntryList.set_item_custom_bg_color(selected_item, Color.TRANSPARENT)
 
 	return true
 
@@ -341,7 +375,15 @@ func _on_entry_name_text_changed(new_name: String) -> void:
 		if not _check_entry_name(new_name, current_entry):
 			return
 
-		print_rich("[color=green]Renaming entry '" + current_entry_name + "'' to '" + new_name + "'[/color]")
+		print_rich(
+			(
+				"[color=green]Renaming entry '"
+				+ current_entry_name
+				+ "'' to '"
+				+ new_name
+				+ "'[/color]"
+			)
+		)
 
 		_update_alias_entries(current_entry_name, new_name)
 
@@ -354,14 +396,14 @@ func _on_entry_name_text_changed(new_name: String) -> void:
 
 
 func _on_entry_case_sensitive_toggled(button_pressed: bool) -> void:
-	current_glossary.get_entry(current_entry_name)['case_sensitive'] = button_pressed
+	current_glossary.get_entry(current_entry_name)["case_sensitive"] = button_pressed
 	ResourceSaver.save(current_glossary)
 
 
 ## Checks if the [param new_alternatives] has any alternatives that are already
 ## used as a key for another entry and returns true if it doesn't.
 func _can_change_alternative(new_alternatives: String) -> bool:
-	for alternative: String in new_alternatives.split(',', false):
+	for alternative: String in new_alternatives.split(",", false):
 		var stripped_alternative := alternative.strip_edges()
 
 		var value: Variant = current_glossary.entries.get(stripped_alternative, null)
@@ -387,14 +429,17 @@ func _can_change_alternative(new_alternatives: String) -> bool:
 ## If true, the alternatives text field will be set to the default color and
 ## the icon will be removed.
 func _check_entry_alternatives(entry_alternatives: String) -> bool:
-
 	if not _can_change_alternative(entry_alternatives):
-		%EntryAlternatives.add_theme_color_override("font_color", get_theme_color("warning_color", "Editor"))
+		%EntryAlternatives.add_theme_color_override(
+			"font_color", get_theme_color("warning_color", "Editor")
+		)
 		%EntryAlternatives.right_icon = get_theme_icon("StatusError", "EditorIcons")
 		return false
 
 	else:
-		%EntryAlternatives.add_theme_color_override("font_color", get_theme_color("font_color", "Editor"))
+		%EntryAlternatives.add_theme_color_override(
+			"font_color", get_theme_color("font_color", "Editor")
+		)
 		%EntryAlternatives.right_icon = null
 
 	return true
@@ -405,7 +450,9 @@ func _check_entry_alternatives(entry_alternatives: String) -> bool:
 ##
 ## Saves the glossary resource file.
 func _on_entry_alternatives_text_changed(new_alternatives: String) -> void:
-	var current_alternatives: Array = current_glossary.get_entry(current_entry_name).get(DialogicGlossary.ALTERNATIVE_PROPERTY, [])
+	var current_alternatives: Array = current_glossary.get_entry(current_entry_name).get(
+		DialogicGlossary.ALTERNATIVE_PROPERTY, []
+	)
 
 	if not _check_entry_alternatives(new_alternatives):
 		return
@@ -415,7 +462,7 @@ func _on_entry_alternatives_text_changed(new_alternatives: String) -> void:
 
 	var alternatives := []
 
-	for new_alternative: String in new_alternatives.split(',', false):
+	for new_alternative: String in new_alternatives.split(",", false):
 		var stripped_alternative := new_alternative.strip_edges()
 		alternatives.append(stripped_alternative)
 		current_glossary._add_entry_key_alias(current_entry_name, stripped_alternative)
@@ -424,38 +471,38 @@ func _on_entry_alternatives_text_changed(new_alternatives: String) -> void:
 	ResourceSaver.save(current_glossary)
 
 
-func _on_entry_title_text_changed(new_text:String) -> void:
-	current_glossary.get_entry(current_entry_name)['title'] = new_text
+func _on_entry_title_text_changed(new_text: String) -> void:
+	current_glossary.get_entry(current_entry_name)["title"] = new_text
 	ResourceSaver.save(current_glossary)
 
 
 func _on_entry_text_text_changed() -> void:
-	current_glossary.get_entry(current_entry_name)['text'] = %EntryText.text
+	current_glossary.get_entry(current_entry_name)["text"] = %EntryText.text
 	ResourceSaver.save(current_glossary)
 
 
 func _on_entry_extra_text_changed() -> void:
-	current_glossary.get_entry(current_entry_name)['extra'] = %EntryExtra.text
+	current_glossary.get_entry(current_entry_name)["extra"] = %EntryExtra.text
 	ResourceSaver.save(current_glossary)
 
 
-func _on_entry_enabled_toggled(button_pressed:bool) -> void:
-	current_glossary.get_entry(current_entry_name)['enabled'] = button_pressed
+func _on_entry_enabled_toggled(button_pressed: bool) -> void:
+	current_glossary.get_entry(current_entry_name)["enabled"] = button_pressed
 	ResourceSaver.save(current_glossary)
 
 
-func _on_entry_custom_color_toggled(button_pressed:bool) -> void:
+func _on_entry_custom_color_toggled(button_pressed: bool) -> void:
 	%EntryColor.disabled = !button_pressed
 
 	if !button_pressed:
-		current_glossary.get_entry(current_entry_name).erase('color')
+		current_glossary.get_entry(current_entry_name).erase("color")
 		%EntryList.set_item_icon_modulate(%EntryList.get_selected_items()[0], %DefaultColor.color)
 	else:
-		current_glossary.get_entry(current_entry_name)['color'] = %EntryColor.color
+		current_glossary.get_entry(current_entry_name)["color"] = %EntryColor.color
 		%EntryList.set_item_icon_modulate(%EntryList.get_selected_items()[0], %EntryColor.color)
 
 
-func _on_entry_color_color_changed(color:Color) -> void:
-	current_glossary.get_entry(current_entry_name)['color'] = color
+func _on_entry_color_color_changed(color: Color) -> void:
+	current_glossary.get_entry(current_entry_name)["color"] = color
 	%EntryList.set_item_icon_modulate(%EntryList.get_selected_items()[0], color)
 	ResourceSaver.save(current_glossary)

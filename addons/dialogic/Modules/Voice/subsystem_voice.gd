@@ -4,7 +4,6 @@ extends DialogicSubsystem
 ## It's recommended to use the [class DialogicVoiceEvent] to set the voice lines
 ## for text events and not start playing them directly.
 
-
 ## Emitted whenever a new voice line starts playing.
 ## The [param info] contains the following keys and values:
 ## [br]
@@ -12,7 +11,6 @@ extends DialogicSubsystem
 ## -------- | ------------- | ----- [br]
 ## `file`   | [type String] | The path to file played. [br]
 signal voiceline_started(info: Dictionary)
-
 
 ## Emitted whenever a voice line finished playing.
 ## The [param info] contains the following keys and values:
@@ -23,7 +21,6 @@ signal voiceline_started(info: Dictionary)
 ## `remaining_time` | [type float]  | The remaining time of the voiceline. [br]
 signal voiceline_finished(info: Dictionary)
 
-
 ## Emitted whenever a voice line gets interrupted and does not finish playing.
 ## The [param info] contains the following keys and values:
 ## [br]
@@ -32,7 +29,6 @@ signal voiceline_finished(info: Dictionary)
 ## `file`           | [type String] | The path to file played. [br]
 ## `remaining_time` | [type float]  | The remaining time of the voiceline. [br]
 signal voiceline_stopped(info: Dictionary)
-
 
 ## The current audio file being played.
 var current_audio_file: String
@@ -43,6 +39,7 @@ var voice_player := AudioStreamPlayer.new()
 #region STATE
 ####################################################################################################
 
+
 ## Stops the current voice from playing.
 func pause() -> void:
 	voice_player.stream_paused = true
@@ -52,11 +49,12 @@ func pause() -> void:
 func resume() -> void:
 	voice_player.stream_paused = false
 
-#endregion
 
+#endregion
 
 #region MAIN METHODS
 ####################################################################################################
+
 
 func _ready() -> void:
 	add_child(voice_player)
@@ -67,7 +65,7 @@ func _ready() -> void:
 ## event before it.
 func is_voiced(index: int) -> bool:
 	if index > 0 and dialogic.current_timeline_events[index] is DialogicTextEvent:
-		if dialogic.current_timeline_events[index-1] is DialogicVoiceEvent:
+		if dialogic.current_timeline_events[index - 1] is DialogicVoiceEvent:
 			return true
 
 	return false
@@ -77,7 +75,7 @@ func is_voiced(index: int) -> bool:
 ## Requires [method set_file] to be called before or nothing plays.
 func play_voice() -> void:
 	voice_player.play()
-	voiceline_started.emit({'file': current_audio_file})
+	voiceline_started.emit({"file": current_audio_file})
 
 
 ## Set a voice file [param path] to be played, then invoke [method play_voice].
@@ -105,7 +103,7 @@ func set_bus(bus_name: String) -> void:
 ## Stops the current voice line from playing.
 func stop_audio() -> void:
 	if voice_player.playing:
-		voiceline_stopped.emit({'file':current_audio_file, 'remaining_time':get_remaining_time()})
+		voiceline_stopped.emit({"file": current_audio_file, "remaining_time": get_remaining_time()})
 
 	voice_player.stop()
 
@@ -113,7 +111,7 @@ func stop_audio() -> void:
 ## Called when the voice line finishes playing.
 ## Connected to [signal finished] on [member voice_player]
 func _on_voice_finished() -> void:
-	voiceline_finished.emit({'file':current_audio_file, 'remaining_time':get_remaining_time()})
+	voiceline_finished.emit({"file": current_audio_file, "remaining_time": get_remaining_time()})
 
 
 ## Returns the remaining time of the current voice line in seconds.
