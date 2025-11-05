@@ -113,11 +113,8 @@ func _on_end_dialogue_finished():
 	print("End dialogue finished, calling cleanup")
 	dialogue_active = false
 
-	# Capture narrative choices after end dialogue
-	Global.capture_narrative_choices()
-
 	cleanup_skip_buttons()
-	# Save narrative choices after dialogue completes
+	# Save game state (which will capture narrative choices via NarrativeManager)
 	Global.save_game_state()
 	emit_signal("end_dialogue_finished")
 
@@ -207,9 +204,6 @@ func _on_shift_dialogue_finished():
 	dialogue_active = false
 	current_shift += 1
 
-	# Capture narrative choices before advancing state
-	Global.capture_narrative_choices()
-
 	Global.advance_story_state()
 	cleanup_skip_buttons()
 	emit_signal("dialogue_finished")
@@ -217,9 +211,6 @@ func _on_shift_dialogue_finished():
 
 func _on_final_dialogue_finished():
 	dialogue_active = false
-
-	# Capture narrative choices for the final ending
-	Global.capture_narrative_choices()
 
 	Global.advance_story_state()  # Will set to COMPLETED
 	cleanup_skip_buttons()
@@ -299,18 +290,30 @@ func save_narrative_choices() -> Dictionary:
 	var choices = {}
 
 	# List of all narrative choice variables used in the game
+	# This list matches all variables used across all timeline files
 	var choice_variables = [
-		"initial_response",
-		"scanner_response",
-		"family_response",
 		"cafeteria_response",
-		"reveal_reaction",
-		"hide_choice",
+		"critical_choice",
+		"ending_choice",
+		"family_response",
+		"fellow_officer_response",
 		"fellow_officer_response_2",
+		"final_decision",
 		"final_mission_response",
-		"stay_or_go",
+		"hide_choice",
+		"initial_response",
+		"interrogation_choice",
+		"interrogation_response",
+		"loyalty_response",
+		"resistance_mission",
 		"resistance_trust",
-		"ending_choice"
+		"reveal_reaction",
+		"sasha_investigation",
+		"sasha_plan_response",
+		"sasha_response",
+		"scanner_response",
+		"stay_or_go",
+		"yellow_badge_response",
 	]
 
 	# Save each variable if it exists in Dialogic
@@ -318,6 +321,7 @@ func save_narrative_choices() -> Dictionary:
 		if Dialogic.VAR.has(var_name):
 			choices[var_name] = Dialogic.VAR.get(var_name)
 
+	print("NarrativeManager saved ", choices.size(), " narrative choices: ", choices)
 	return choices
 
 

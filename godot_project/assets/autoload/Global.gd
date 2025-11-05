@@ -232,24 +232,27 @@ func reset_shift_stats():
 
 # Save and Load Handling - Now using SaveManager
 func save_game_state():
-	# Capture current narrative choices from Dialogic before saving
-	capture_narrative_choices()
-
 	var data = {
 		"shift": shift,
 		"difficulty_level": difficulty_level,
 		"high_scores": high_scores,
 		"story_state": current_story_state,
-		"narrative_choices": narrative_choices,
+		"narrative_choices": {},
 		"total_shifts_completed": total_shifts_completed,
 		"total_runners_stopped": total_runners_stopped,
 		"perfect_hits": perfect_hits,
 	}
 
-	# Save narrative choices if NarrativeManager exists
+	# Save narrative choices from NarrativeManager (authoritative source)
 	if has_node("/root/NarrativeManager"):
 		var narrative_manager = get_node("/root/NarrativeManager")
 		data["narrative_choices"] = narrative_manager.save_narrative_choices()
+		# Keep a copy in Global for backward compatibility
+		narrative_choices = data["narrative_choices"]
+	else:
+		# Fallback: use Global's capture method if NarrativeManager doesn't exist
+		capture_narrative_choices()
+		data["narrative_choices"] = narrative_choices
 
 	SaveManager.save_game_state(data)
 
@@ -262,20 +265,27 @@ func load_game_state():
 		high_scores = data.get("high_scores", {"Easy": 0, "Normal": 0, "Expert": 0})
 		current_story_state = data.get("story_state", 0)
 		narrative_choices = data.get("narrative_choices", {})
-
-		# Restore narrative choices to Dialogic
-		restore_narrative_choices()
 		total_shifts_completed = data.get("total_shifts_completed", 0)
 		total_runners_stopped = data.get("total_runners_stopped", 0)
 		perfect_hits = data.get("perfect_hits", 0)
 
-		# Load narrative choices if NarrativeManager exists
+		# Restore narrative choices to Dialogic via NarrativeManager (authoritative source)
 		if has_node("/root/NarrativeManager") and data.has("narrative_choices"):
 			var narrative_manager = get_node("/root/NarrativeManager")
-			narrative_manager.load_narrative_choices(data.get("narrative_choices", {}))
-		total_shifts_completed = data.get("total_shifts_completed", 0)
-		total_runners_stopped = data.get("total_runners_stopped", 0)
-		perfect_hits = data.get("perfect_hits", 0)
+			narrative_manager.load_narrative_choices(narrative_choices)
+			print(
+				"Loaded narrative choices via NarrativeManager: ",
+				narrative_choices.size(),
+				" choices"
+			)
+		else:
+			# Fallback: restore via Global if NarrativeManager doesn't exist yet
+			restore_narrative_choices()
+			print(
+				"Loaded narrative choices via Global fallback: ",
+				narrative_choices.size(),
+				" choices"
+			)
 
 
 # Modify get_high_score to be more flexible
