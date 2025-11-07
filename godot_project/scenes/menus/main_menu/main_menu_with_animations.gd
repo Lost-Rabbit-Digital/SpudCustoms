@@ -5,6 +5,8 @@ extends MainMenu
 var level_select_scene
 var animation_state_machine: AnimationNodeStateMachinePlayback
 var confirmation_dialog: ConfirmationDialog
+var feedback_menu: Control
+var feedback_button: Button
 @onready var version_label = $VersionMargin/VersionContainer/VersionLabel
 @onready var bgm_player = $BackgroundMusicPlayer
 
@@ -18,6 +20,7 @@ func _ready():
 	_setup_level_select()
 	animation_state_machine = $MenuAnimationTree.get("parameters/playback")
 	_setup_confirmation_dialog()
+	_setup_feedback_menu()
 	# Check for demo version
 	if Global.build_type == "Demo Release":
 		# Hide score attack button
@@ -62,6 +65,55 @@ func _setup_confirmation_dialog():
 
 	# Connect confirmation signals
 	confirmation_dialog.confirmed.connect(_on_new_game_confirmed)
+
+
+func _setup_feedback_menu():
+	"""Setup the feedback menu and button"""
+	# Load the feedback menu scene
+	var feedback_scene = load("res://scenes/menus/main_menu/feedback_menu.tscn")
+	if feedback_scene:
+		feedback_menu = feedback_scene.instantiate()
+		add_child(feedback_menu)
+		feedback_menu.z_index = 100  # Ensure it's on top
+
+		# Connect signals
+		feedback_menu.back_pressed.connect(_on_feedback_back_pressed)
+		feedback_menu.feedback_submitted.connect(_on_feedback_submitted)
+
+	# Create the feedback button and add it to the menu
+	feedback_button = Button.new()
+	feedback_button.text = "Feedback"
+	feedback_button.custom_minimum_size = Vector2(128, 40)
+	feedback_button.pressed.connect(_on_feedback_button_pressed)
+
+	# Add button to the menu buttons container (after Credits, before Exit)
+	var menu_buttons = $MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer
+	if menu_buttons:
+		# Insert before the exit button (last button)
+		menu_buttons.add_child(feedback_button)
+		menu_buttons.move_child(feedback_button, menu_buttons.get_child_count() - 2)
+
+
+func _on_feedback_button_pressed():
+	"""Show the feedback menu"""
+	if feedback_menu:
+		feedback_menu.show()
+		# Optionally hide menu buttons while showing feedback
+		$MenuContainer/MenuButtonsMargin.hide()
+
+
+func _on_feedback_back_pressed():
+	"""Hide the feedback menu and show main menu buttons"""
+	if feedback_menu:
+		feedback_menu.hide()
+	$MenuContainer/MenuButtonsMargin.show()
+
+
+func _on_feedback_submitted():
+	"""Handle successful feedback submission"""
+	# Feedback menu will auto-hide after 2 seconds, just show menu buttons
+	await get_tree().create_timer(2.0).timeout
+	$MenuContainer/MenuButtonsMargin.show()
 
 
 func intro_done():
