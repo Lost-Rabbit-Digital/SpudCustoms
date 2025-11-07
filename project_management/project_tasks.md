@@ -2,7 +2,7 @@
 Fix narrative manager and achievements in Spud Customs
 Add intro segment that shows localized version of great wall of spud (with country flag of Steam user) as tongue in cheek reference using Localized resources in Godot and artwork from StagNation
 Add StagNation credits
-Change Date of Birth: to Born: on passports
+Done: Change Date of Birth: to Born: on passports (already implemented)
 Fix story narrative choices being retained
 Incorporate all the new artwork from StagNation and push out an art update to Steam
 Link loot and stealth systems in Tumblefire, fix console errors in Tumblefire prototype and push up to GitHub
@@ -10,7 +10,7 @@ Modify endings to have more diverse endings (really bad, decent, decent, really 
 Review ALL artwork and see if we can replace with better quality pixel art using Imagen 4
 Test latest build .dll on AVBD prototype in Godot (More stability, set up physics problems tests to compare Jolt and AVBD directly)
 Test story with new Dialogic 2.18 and make sure it's completable
-Verify Passport Translations for Detail Names (Date of Birth)
+Done: Verify Passport Translations for Detail Names (Date of Birth)
 Work on Spud Customs GIF integration in Godot to use Stagnation's art (https://godotengine.org/asset-library/asset/2255) ASAP
 
 ## Tasks
@@ -24,7 +24,7 @@ Choice tracking system in NarrativeManager needs review, must make sure the play
 color match purple of background in personal quarters
 Create updated versions of each tutorial step with the new UI
 Create updated versions of each tutorial step with the new UI
-Dialogue font needs to be different
+Done: Dialogue font changed to Pixellari.ttf for better readability
 Document a visualization of the story flow and decision points
 Document how major systems interact
 Document how new content is added like potatoes, rules, and laws
@@ -34,7 +34,7 @@ Footprint system doesn't pool sprites (creates/destroys) which may cause perform
 Gap: No colorblind mode for stamp colors for accessibility
 Gap: No font size options for accessibility
 Gap: No UI scaling options for accessibility
-GDD potato types count needs to come down to 4 from 10
+Done: GDD potato types count reduced to 4 from 10
 High score structure exists but inconsistently used
 Keyboard audio desync when using pre-made audio files, change to use dialogic single keystrokes or tailored length files
 Make sure character customization persistence (like changing aspects of the world, office, inspection booth) saved in SaveManager
@@ -45,15 +45,15 @@ No Steam Cloud Save verification/testing documented, check where user data is sa
 Outline the testing checklist for pre-release verification to ensure game function
 Particle systems created dynamically without cleanup plan which may cause performance issues
 Replace the current hard-coded tutorial using screenshots with a dynamic tutorial that blends into the first day in the Customs Office
-Reworded "Anyone flagged faces" to "Anyone triggering the scanner will face"
+Done: Reworded "Anyone flagged faces" to "Anyone triggering the scanner will face"
 shift10 needs the most re-work/narrative bridge
 shift10, confusing narrative change from resistance members in the "stay" path being ground up to instead approaching the capitol
 shift1_intro, some fades are too fast especially since dialogue is much briefer
-shift1_intro, Split Supervisor Russet, "And remember, Glory to Spud!"
+Done: shift1_intro, Split Supervisor Russet dialogue - "And remember, Glory to Spud!"
 shift4_intro ending is abrupt and jarring
 Short fun interrogation mini-game, how could this work?
 Show achievements in-game from Main Menu and Pause Menu
-Split "I think I know what's happening..." "They're becoming [shake][color=light purple]Root Reserve[/shake][/color]"
+Done: Split "I think I know what's happening..." "They're becoming Root Reserve" (shift3_end.dtl)
 tutorial, needs updated images
 Update tutorial step with exploding runner
 Update where strikes and quota show on UI

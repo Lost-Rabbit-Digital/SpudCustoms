@@ -48,5 +48,7 @@ join supervisor_russet [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 supervisor_russet: Your first shift begins now. Check papers carefully, deny those who don't meet our standards. #id:61
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-supervisor_russet: Meet your quota, avoid strikes. [color=MEDIUM_VIOLET_RED]Glory to Spud![/color] #id:62
+supervisor_russet: Meet your quota, avoid strikes. #id:62
+audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
+supervisor_russet: And remember, [color=MEDIUM_VIOLET_RED]Glory to Spud![/color] #id:62b
 leave supervisor_russet
