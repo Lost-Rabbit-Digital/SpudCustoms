@@ -14,7 +14,7 @@
 script = ExtResource("1_7gtpk")
 overrides = {
 "global_bg_color": "Color(0.197266, 0.117897, 0, 0.9)",
-"global_font": "\"res://assets/fonts/SourceCodePro-Regular.ttf\"",
+"global_font": "\"res://assets/fonts/Pixellari.ttf\"",
 "global_font_size": "17.0"
 }
 
@@ -31,11 +31,11 @@ script = ExtResource("1_7gtpk")
 scene = ExtResource("4_aqvcl")
 overrides = {
 "box_panel": "\"res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/default_stylebox.tres\"",
-"custom_bold_font": "\"res://assets/fonts/SourceCodePro-Regular.ttf\"",
-"custom_bold_italic_font": "\"res://assets/fonts/SourceCodePro-Regular.ttf\"",
-"custom_italic_font": "\"res://assets/fonts/SourceCodePro-Regular.ttf\"",
-"custom_normal_font": "\"res://assets/fonts/SourceCodePro-Regular.ttf\"",
-"name_label_customfont": "\"res://assets/fonts/SourceCodePro-Regular.ttf\"",
+"custom_bold_font": "\"res://assets/fonts/Pixellari.ttf\"",
+"custom_bold_italic_font": "\"res://assets/fonts/Pixellari.ttf\"",
+"custom_italic_font": "\"res://assets/fonts/Pixellari.ttf\"",
+"custom_normal_font": "\"res://assets/fonts/Pixellari.ttf\"",
+"name_label_customfont": "\"res://assets/fonts/Pixellari.ttf\"",
 "use_global_fonts": "true"
 }
 
@@ -47,7 +47,7 @@ scene = ExtResource("5_rxml6")
 script = ExtResource("1_7gtpk")
 scene = ExtResource("6_t1e3b")
 overrides = {
-"font_custom": "\"res://assets/fonts/SourceCodePro-Regular.ttf\"",
+"font_custom": "\"res://assets/fonts/Pixellari.ttf\"",
 "font_use_global": "false",
 "sounds_focus": "\"res://addons/dialogic/Example Assets/typing_sfx/typing_4.wav\"",
 "sounds_hover": "\"res://addons/dialogic/Example Assets/typing_sfx/typing_2.wav\"",

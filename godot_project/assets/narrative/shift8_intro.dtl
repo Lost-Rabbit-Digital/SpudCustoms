@@ -30,7 +30,7 @@ join security_chief [z_index="1"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 security_chief: This is the [color=DARK_ORANGE]IdentityScan 5000[/color]. It analyzes biometrics to detect infiltrators and sympathizers. #id:11d
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
-security_chief: Anyone flagged faces [color=CRIMSON]enhanced interrogation[/color]. Use it without exception. #id:11e
+security_chief: Anyone triggering the scanner will face [color=CRIMSON]enhanced interrogation[/color]. Use it without exception. #id:11e
 leave security_chief
 
 [background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
