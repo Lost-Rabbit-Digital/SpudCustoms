@@ -24,6 +24,10 @@ var total_shifts_completed = 0
 var total_runners_stopped = 0
 var perfect_hits = 0
 
+# Playtime tracking
+var total_playtime: float = 0.0  # Total playtime in seconds
+var session_start_time: float = 0.0
+
 # New scoring system variables
 var score: int = 0
 var high_scores: Dictionary = {
@@ -66,9 +70,14 @@ func _ready():
 	# Defer narrative choice restoration to next frame when Dialogic is ready
 	call_deferred("_restore_narrative_choices_deferred")
 
+	# Start playtime tracking
+	session_start_time = Time.get_ticks_msec() / 1000.0
 
-func _process(_delta: float) -> void:
-	pass  # No need for Steam callbacks here anymore
+
+func _process(delta: float) -> void:
+	# Update playtime tracking
+	if session_start_time > 0:
+		total_playtime += delta
 
 
 func store_game_stats(stats: ShiftStats):
@@ -249,6 +258,7 @@ func save_game_state():
 		"total_shifts_completed": total_shifts_completed,
 		"total_runners_stopped": total_runners_stopped,
 		"perfect_hits": perfect_hits,
+		"total_playtime": total_playtime,
 	}
 
 	# Save narrative choices from NarrativeManager (authoritative source)
@@ -273,11 +283,20 @@ func load_game_state():
 		high_scores = data.get("high_scores", {"Easy": 0, "Normal": 0, "Expert": 0})
 		current_story_state = data.get("story_state", 0)
 		narrative_choices = data.get("narrative_choices", {})
+		# Note: Narrative choice restoration is deferred to _restore_narrative_choices_deferred()
+		# to ensure Dialogic is fully initialized
+
+		# Restore narrative choices to Dialogic
+		restore_narrative_choices()
 		total_shifts_completed = data.get("total_shifts_completed", 0)
 		total_runners_stopped = data.get("total_runners_stopped", 0)
 		perfect_hits = data.get("perfect_hits", 0)
-		# Note: Narrative choice restoration is deferred to _restore_narrative_choices_deferred()
-		# to ensure Dialogic is fully initialized
+		total_playtime = data.get("total_playtime", 0.0)
+
+		# Load narrative choices if NarrativeManager exists
+		if has_node("/root/NarrativeManager") and data.has("narrative_choices"):
+			var narrative_manager = get_node("/root/NarrativeManager")
+			narrative_manager.load_narrative_choices(data.get("narrative_choices", {}))
 
 
 # Modify get_high_score to be more flexible
@@ -455,3 +474,16 @@ func restore_narrative_choices():
 		Dialogic.VAR.set(var_name, narrative_choices[var_name])
 
 	print("Restored narrative choices: ", narrative_choices)
+
+
+# Playtime tracking functions
+func get_total_playtime() -> float:
+	"""Get total playtime in seconds"""
+	return total_playtime
+
+
+func get_formatted_playtime() -> String:
+	"""Get formatted playtime as 'Xh Ym'"""
+	var hours = int(total_playtime / 3600)
+	var minutes = int((total_playtime - hours * 3600) / 60)
+	return "%dh %dm" % [hours, minutes]
