@@ -141,6 +141,220 @@ Each chapter represents one work shift (10 total shifts)
 
 ---
 
+## Progression Time Targets
+
+### Player Expectation Setting
+
+**Core Philosophy:**
+- Respect player time with clear expectations
+- Balance challenge with accessibility
+- Provide meaningful progression without padding
+- Optional content extends playtime without required grind
+
+### Story Mode - Time Investment
+
+**First Playthrough (Single Ending):**
+- **Target**: 2-3 hours
+- **Breakdown**:
+  - Intro sequence: 5-8 minutes (narrative setup)
+  - Shift 1 (with tutorial): 15-20 minutes
+  - Shifts 2-9: 10-15 minutes each (varies by difficulty)
+  - Shift 10 (finale): 15-20 minutes (includes ending cutscene)
+  - Dialogic interludes: 2-5 minutes between shifts
+
+**Per-Shift Time Targets (Difficulty-Based):**
+- Easy Mode: 12 minutes per shift
+- Normal Mode: 10 minutes per shift
+- Hard Mode: 8 minutes per shift
+
+**Completion Time Distribution:**
+- **Fast players (Hard, no fails)**: ~90 minutes
+- **Average players (Normal, 1-2 retries)**: ~150 minutes (2.5 hours)
+- **Casual players (Easy, multiple retries, thorough)**: ~180 minutes (3 hours)
+
+**Multiple Playthrough Investment (All Endings):**
+- **4 endings total** (Revolution, Diplomatic, Loyalist, Savior)
+- First playthrough: 2-3 hours
+- Subsequent playthroughs: 1-1.5 hours each (can skip seen dialogue)
+- **Total for 100% story completion**: ~6-8 hours
+
+**Narrative Content Pacing:**
+- Major story beats every 2-3 shifts
+- Choice-heavy shifts take +2-3 minutes longer
+- Cutscenes average 2-3 minutes each
+- No artificial padding or forced waiting
+
+### Endless / Score Attack Mode
+
+**Session Lengths:**
+- **Quick Session**: 10-15 minutes (reach first checkpoint)
+- **Medium Session**: 30-45 minutes (competitive scoring)
+- **Extended Session**: 60+ minutes (difficulty scaling, high score chasing)
+
+**Difficulty Scaling:**
+- Every 10 potatoes processed: +1 rule complexity
+- Every 5 minutes: -5% time buffer for decisions
+- New potato types unlock at intervals (visual variety)
+- Score multiplier increases with consecutive perfects
+
+**Progression Milestones:**
+- First 100 potatoes: ~30 minutes
+- First 500 potatoes: ~2 hours (cumulative across sessions)
+- First 1000 potatoes: ~5 hours (long-term goal)
+
+**High Score Chase:**
+- Top 10% global rank: ~3-5 hours practice
+- Top 1% global rank: ~10-15 hours mastery
+- World record contention: ~20+ hours (speedrun tactics + optimization)
+
+### Daily Challenge
+
+**Per-Challenge Time:**
+- **Single attempt**: 10-15 minutes
+- **Competitive attempts** (3-5 retries): 30-60 minutes
+- **Daily commitment**: 15-30 minutes for regular players
+
+**Weekly/Monthly Investment:**
+- Casual engagement: 2-3 hours per week (3-4 daily challenges)
+- Dedicated engagement: 5-7 hours per week (daily participation)
+- Competitive leaderboard climbing: 10+ hours per week
+
+### Achievement Completion Time
+
+**Quick Achievements (First Session):**
+- First Day on the Job: ~20 minutes
+- Best Served Hot: ~30 minutes
+
+**Story-Based Achievements:**
+- Single ending: 2-3 hours
+- All endings: 6-8 hours
+
+**Skill-Based Achievements:**
+- Sharpshooter (10 runners): ~2 hours of gameplay
+- Border Defender (50 runners): ~8-10 hours
+- High Scorer (10,000 points): ~3-5 hours practice
+- Score Legend (50,000 points): ~15-20 hours mastery
+
+**100% Achievement Completion:**
+- **Target**: 20-30 hours
+- **Breakdown**:
+  - Story completion (all endings): 6-8 hours
+  - Skill achievements: 5-10 hours
+  - Cumulative achievements: 8-12 hours (border defense, score milestones)
+
+### Content Unlock Progression
+
+**Potato Type Unlocks (Story Mode):**
+- Start: Russet potato only
+- Shift 3: Unlock second potato type
+- Shift 6: Unlock third potato type
+- Shift 9: Unlock fourth potato type
+- **Instant variety vs. gradual unlock**: Balances early simplicity with late-game complexity
+
+**Rule Complexity Curve:**
+- Shift 1: 2-3 basic rules (age, country)
+- Shift 2-4: 4-6 rules (add gender, race conditions)
+- Shift 5-7: 7-9 rules (complex combinations)
+- Shift 8-10: 10+ rules (maximum challenge)
+
+**Time Investment Per Unlock:**
+- ~20-30 minutes per new potato type
+- ~15 minutes per major rule tier
+- No grind required - all unlocks via natural story progression
+
+### Replayability Time Estimates
+
+**Reasons to Replay:**
+1. **Multiple endings**: +6 hours total
+2. **Higher difficulties**: +3-4 hours (replay campaign on Hard)
+3. **Perfect runs**: +2-3 hours (S-rank all shifts)
+4. **Speedrunning**: +10-20 hours (route optimization)
+5. **Score attack mastery**: +15-30 hours (endless mode)
+6. **Daily challenges**: Ongoing (15-30 min/day)
+
+**Total Content Lifetime (For Dedicated Players):**
+- Main story (all endings): 6-8 hours
+- Endless mode mastery: 20-40 hours
+- Daily challenges (3 months): 30-60 hours
+- Speedrun community: 20-50 hours
+- **Estimated total**: 75-150+ hours for completionists
+
+### Player Segments & Time Expectations
+
+**Casual Players (Story Only):**
+- **Expectation**: 2-3 hours for satisfying conclusion
+- **Actual playtime**: 3-5 hours (includes retries, exploration)
+- **Completion rate target**: 60-70% finish one ending
+
+**Core Players (Story + Some Endless):**
+- **Expectation**: 5-10 hours of content
+- **Actual playtime**: 10-20 hours (multiple endings, score attack)
+- **Completion rate target**: 30-40% see multiple endings
+
+**Dedicated Players (All Content):**
+- **Expectation**: 15-30 hours for 100% completion
+- **Actual playtime**: 30-75 hours (mastery, leaderboards, dailies)
+- **Completion rate target**: 5-10% achieve 100% achievements
+
+**Competitive Players (Leaderboard Chasers):**
+- **Expectation**: Ongoing engagement (months)
+- **Actual playtime**: 100+ hours (optimization, daily participation)
+- **Retention target**: 1-3% remain active after 3 months
+
+### Pacing & Flow Optimization
+
+**Avoiding Player Fatigue:**
+- Shift length capped at 12 minutes (Easy) to prevent tedium
+- Story interludes provide mental breaks between gameplay
+- Optional skip for repeated dialogue on replays
+- Quick restart option for failed shifts (no menu navigation)
+
+**Maintaining Engagement:**
+- New mechanics introduced every 2-3 shifts
+- Difficulty spikes balanced with narrative payoff
+- Score attack mode provides different pacing (player-controlled session length)
+- Daily challenges offer bite-sized content (15 min commitment)
+
+**Onboarding Time:**
+- Tutorial integrated into Shift 1: 5-7 minutes (interactive learning)
+- No separate tutorial mode (friction reduction)
+- New mechanic tutorials: 30-60 seconds each (contextual prompts)
+- **Total learning curve**: ~20 minutes to competency
+
+### Time Expectations vs. Steam Average
+
+**Genre Comparison (Simulation/Indie):**
+- Papers, Please: 8-12 hours average (Steam stats)
+- Beholder: 10-15 hours average
+- Not Tonight: 6-8 hours average
+- **Spud Customs target**: 2-3 hours main story, 10-20 hours full completion
+
+**Justification for 2-3 Hour Campaign:**
+- Focused narrative without padding
+- High replay value (4 endings, 3 difficulties)
+- Endless mode extends playtime optionally
+- Price point ($4.99) matches content volume
+- Respects player time (modern design philosophy)
+
+### Post-Launch Content Time Impact
+
+**Month 1 Updates:**
+- New potato types: +30 minutes per type (visual variety, no time extension)
+- Additional rules: +0 minutes (integrated into existing shifts)
+- Bug fixes/QoL: Improves pacing, reduces friction
+
+**Months 2-3 Updates:**
+- New mini-games: +1-2 hours per addition
+- Challenge mode variants: +5-10 hours (new leaderboards)
+- Quality of life improvements: Reduces completion time by ~10%
+
+**Long-Term Content:**
+- Seasonal events: +2-3 hours per event
+- Community-created content: Potentially unlimited
+- Multiplayer (if implemented): +20-50 hours (co-op/versus modes)
+
+---
+
 ## 5. Features & Systems
 
 ### Core Systems
@@ -205,12 +419,574 @@ Each chapter represents one work shift (10 total shifts)
   - UI scaling options
   - Different dialogue font
 
+---
+
+## UI Layout - Comprehensive Design
+
+### Screen Hierarchy & Layout Strategy
+
+**Design Philosophy:**
+- Diegetic UI where possible (in-world elements like desk items, wall displays)
+- Non-diegetic UI only for critical information (timer, quota, strikes)
+- Minimalist HUD to maintain immersion
+- Screen space optimized for 16:9 aspect ratio (1920x1080 native)
+
+### Main Gameplay Screen (Customs Office)
+
+**Screen Regions:**
+
+```
+┌─────────────────────────────────────────────────┐
+│  Timer: 10:00    Quota: 3/10    Strikes: ●●○   │ [Top HUD Bar]
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  [Queue]     [Border Wall Area]     [Missile]  │ [Top Third]
+│   🥔🥔🥔      ─────────────────       Counter   │
+│              │ Running Potatoes│                │
+│              ─────────────────                  │
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  [Customs Booth]    [Inspection Table]         │ [Middle Third]
+│  ┌──────┐          ┌────────────────┐          │
+│  │ 🥔   │          │   Passport     │          │
+│  │Potato│          │   [Draggable]  │          │
+│  └──────┘          └────────────────┘          │
+│  [Lever]           [Suspect Panel]             │
+│                    ┌────────────────┐          │
+│                    │ Extra Docs     │          │
+│                    └────────────────┘          │
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  [Megaphone] [Stamp Bar] [Rules Panel]        │ [Bottom Third]
+│     📢         ✓  ✗       📋 Today's Rules     │
+│                                                 │
+│  Score: 1,250 (+150 Combo!)                    │
+└─────────────────────────────────────────────────┘
+```
+
+**HUD Elements (Top Bar):**
+- **Timer** (Top Left): MM:SS format, color-coded
+  - Green: >5 minutes remaining
+  - Yellow: 2-5 minutes
+  - Red: <2 minutes, pulsing when <1 minute
+- **Quota Counter** (Top Center): "Processed / Target" format
+  - Updates immediately on each approval/rejection
+  - Celebrates reaching quota with brief animation
+- **Strike Indicator** (Top Right): Visual dots/badges
+  - Filled dots = strikes taken
+  - Empty dots = strikes remaining
+  - Red flashing animation when strike added
+
+**Interactive Zones:**
+
+*Customs Booth Zone (Left Middle):*
+- Potato display area (animated breathing, emotes)
+- Shutter lever for opening/closing booth
+- Background elements (propaganda posters, lights)
+- Hover tooltips when gate closed
+
+*Inspection Table Zone (Center Middle):*
+- Primary document interaction area
+- Viewport masking to prevent documents leaving bounds
+- Drop zones for organizing multiple documents
+- Physics-enabled document stacking
+- Visual feedback for correct/incorrect placement
+
+*Suspect Panel (Below Inspection Table):*
+- Secondary document area
+- Gravity physics for dropped documents
+- Easy retrieval for comparison
+- Prevents clutter on main inspection table
+
+*Stamp Bar (Bottom Center):*
+- Retractable UI element
+- Shows when clicked/hovered
+- Two stamps: Approved (green checkmark), Rejected (red X)
+- Perfect placement target indicators
+- Ink particle effects on stamp
+
+*Rules Panel (Bottom Right):*
+- Scrollable list of active rules
+- Collapsible to save screen space
+- Highlight rule when hovering over relevant document field
+- Checkmark next to verified rules
+
+*Megaphone (Bottom Left):*
+- Diegetic control to call next potato
+- Hover sound effect
+- Disabled state when booth closed or potato present
+- Visual feedback (megaphone tilts/animates on click)
+
+*Missile Defense Zone (Top Right Background):*
+- Border wall with running potatoes
+- Click anywhere on runner to launch missile
+- Target cursor on hover
+- Explosion particle effects
+- Kill counter display
+
+**Floating Feedback Elements:**
+- Score popups appear above action locations
+  - Stamp: +50, +100 (perfect)
+  - Missile kill: +150
+  - X-ray detection: +100
+- Message queue for supervisor notifications
+- Animated combos ("Perfect x3!")
+- Citation/strike warnings (modal overlays)
+
+### Menu Screens
+
+**Main Menu Layout:**
+```
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│           SPUD CUSTOMS                          │
+│        [Title Logo/Art]                         │
+│                                                 │
+│         ▶ Story Mode                            │
+│           Endless Mode                          │
+│           Daily Challenge                       │
+│           Settings                              │
+│           Achievements                          │
+│           Quit                                  │
+│                                                 │
+│  [Walking Potatoes Background Animation]       │
+│                                                 │
+│  v1.1.0            [Social Icons]  [Steam Icon] │
+└─────────────────────────────────────────────────┘
+```
+
+**Pause Menu (In-Game Overlay):**
+- Semi-transparent background blur
+- Centered modal panel
+- Options: Resume, Settings, Main Menu, Quit
+- Stats display (current shift performance)
+- Achievement progress access
+
+**Settings Menu:**
+- Tabbed interface: Audio, Video, Controls, Accessibility
+- Real-time preview for visual changes
+- Volume sliders with tick sounds
+- Keybind remapping interface
+- Accessibility toggles (see AccessibilityManager)
+
+**Shift Summary Screen:**
+- Full-screen results display
+- Animated stat counters
+- Performance rating (F to S rank)
+- Golden stamp awards (0-3)
+- Bonus breakdown with tooltips
+- Leaderboard position (if connected)
+- Continue/Retry/Main Menu buttons
+
+**Achievement Screen:**
+- Grid layout of achievement icons
+- Locked/unlocked states
+- Progress bars for cumulative achievements
+- Unlock percentage from global stats
+- Filter options (All, Locked, Unlocked)
+
+### Accessibility Features (Managed by AccessibilityManager)
+
+**UI Scaling:**
+- 80%, 100%, 120%, 150% options
+- Maintains aspect ratio and layout integrity
+- Dynamic font resizing
+- Adjusts clickable area sizes proportionally
+
+**Colorblind Modes:**
+- Protanopia (red-green)
+- Deuteranopia (red-green)
+- Tritanopia (blue-yellow)
+- Stamp colors: Add patterns (stripes, dots) in addition to color
+- UI elements use shape + color differentiation
+
+**Font Options:**
+- Small, Medium, Large, Extra Large
+- Sans-serif default (high readability)
+- Dyslexia-friendly font option
+- Increased letter spacing option
+- High contrast text backgrounds
+
+**High Contrast Mode:**
+- Increase border thickness on interactive elements
+- Enhanced outlines on documents and UI
+- Bright highlights on hover states
+- Reduce background detail opacity
+
+### Responsive Design Considerations
+
+**Minimum Resolution: 1280x720**
+- UI scales proportionally
+- Text remains readable
+- All interactive elements maintain minimum 44x44px touch targets (for future mobile/Steam Deck)
+
+**Ultrawide Support (21:9):**
+- Extend background artwork
+- Keep HUD elements anchored to safe zones
+- Center critical gameplay area
+- Utilize extra space for decorative elements
+
+**Steam Deck Optimization:**
+- Larger UI elements by default
+- Touch-friendly button sizes
+- Readable fonts at 7-inch screen
+- Optimized control scheme for gamepad
+
+### Animation & Feedback
+
+**UI Animations:**
+- Button hover: Scale 1.0 → 1.05, duration 0.1s
+- Button press: Scale 1.05 → 0.95, duration 0.05s
+- Panel transitions: Slide + fade, duration 0.3s
+- Notification popups: Bounce in, fade out after 3s
+- Score counters: Incremental number animation, 0.5s duration
+
+**Visual Feedback:**
+- Hover: Brightness +20%, subtle glow
+- Click: Flash effect, particle burst
+- Disabled state: 50% opacity, desaturated
+- Focus (keyboard nav): Colored outline, 2px width
+
+**Audio Feedback (See Audio Design):**
+- Every interactive element has hover + click sounds
+- Distinct sounds for positive/negative actions
+- Volume scaling based on action importance
+
+### Localization Support
+
+**Text Expansion Allowances:**
+- UI elements sized for 30% text expansion (German, Russian)
+- Dynamic text wrapping where possible
+- Icon-based UI for universal understanding
+- Placeholder language flags in settings
+
+**RTL Language Support (Future):**
+- Mirror UI layout for Arabic, Hebrew
+- Maintain logical reading flow
+- Test with placeholder RTL text
+
+---
+
+## Audio Design - Comprehensive Strategy
+
+### Audio Philosophy
+
+**Core Principles:**
+- Audio reinforces gameplay feedback (every action has sound)
+- Music adapts to narrative tension and gameplay intensity
+- Diegetic sounds prioritized (in-world audio sources)
+- Accessibility through visual alternatives for critical audio cues
+
+**Audio Pillars:**
+1. **Clarity**: Player always understands what sound means
+2. **Immersion**: Sounds believable within dystopian potato world
+3. **Feedback**: Immediate audio response to player actions
+4. **Atmosphere**: Music and ambience support narrative tone
+
+### Music System
+
+**Dynamic Music Layers:**
+
+*Main Menu:*
+- Ambient, slightly ominous loop
+- Hints at dystopian setting without overwhelming
+- Volume: -10dB to allow for clear menu navigation
+- Track: [TBD - atmospheric synth pad]
+
+*Gameplay - Story Mode:*
+- **Base Layer**: Ambient exploration theme (currently: ambient_exploration_main.mp3)
+  - Low-tension shifts (1-3)
+  - Volume: -5dB
+  - Tempo: 80-100 BPM
+- **Tension Layer**: Adds as shift progresses
+  - Activates when timer <5 minutes
+  - Increases tempo perception through percussion
+  - Volume ramps from 0dB to -3dB
+- **Crisis Layer**: High-stakes moments
+  - Activates when strikes >50% of limit
+  - Sharp, staccato elements
+  - Distorted synth leads
+  - Volume: -2dB (louder than base)
+
+*Gameplay - Endless/Score Attack:*
+- Upbeat, chiptune-style track (currently: chiptune_work_work_work_main.mp3)
+- Emphasizes competitive nature
+- Faster tempo: 120-140 BPM
+- Volume: -10dB to maintain focus
+
+*Narrative Scenes (Dialogic):*
+- Contextual music per scene
+- Fade transitions (2s) between tracks
+- Lower volume (-15dB) to prioritize dialogue
+- Emotional matching: tense, mysterious, hopeful
+
+*Shift Summary:*
+- **Success**: Triumphant fanfare (15s), then cheerful loop
+- **Failure**: Somber, descending progression (10s), fade to silence
+- **Perfect Performance**: Extra flourish, celebratory brass
+
+**Music Implementation:**
+- All tracks looped seamlessly
+- Crossfade between layers: 1.5-2s
+- Bus routing: "Music" bus (separate from SFX for volume control)
+- Format: MP3 (OGG Vorbis for compatibility)
+
+### Sound Effects Catalog
+
+**UI Sounds:**
+
+*Menu Navigation:*
+- Hover: Subtle tick (mechanical switch) - 0.05s
+- Click: Satisfying clunk (stamp impression) - 0.1s
+- Back/Cancel: Softer click, slightly lower pitch
+- Error/Disabled: Dull thud, no resonance
+- Volume: -5dB (audible but not intrusive)
+
+*Sliders/Adjustments:*
+- Volume sliders: Tick sound every 5% increment
+- Toggle switches: Mechanical flip sound
+- Checkbox: Light tap
+
+*Notifications:*
+- Achievement unlock: Bright chime + whoosh (celebration)
+- Citation warning: Single beep (cautionary)
+- Strike issued: Alarm siren (2s, urgent)
+- Message received: Typewriter ding
+
+**Gameplay Sounds:**
+
+*Document Handling:*
+- **Pick up document**: Paper rustle + subtle grip sound
+  - Variations: 3 samples to avoid repetition
+  - Volume: -8dB
+- **Drag document**: Light paper slide (looping while dragged)
+  - Low-pass filter applied for smoothness
+  - Volume: -12dB
+- **Drop document**: Paper flutter + soft impact
+  - Pitch varies slightly based on drop height
+  - Volume: -8dB
+- **Document whoosh**: Quick paper movement sound
+  - For fast drags or returns
+  - Volume: -6dB
+
+*Stamping:*
+- **Stamp pull**: Mechanical slide, slight squeak
+  - When opening stamp bar
+  - Volume: -7dB
+- **Stamp impact**: Heavy thud + ink squelch
+  - Variations for approved vs rejected (pitch difference)
+  - Perfect placement: Extra satisfying "clunk" + chime
+  - Volume: -5dB (prominent feedback)
+- **Stamp return**: Mechanical slide reversed
+  - When closing stamp bar
+  - Volume: -7dB
+
+*Megaphone/Calling:*
+- **Megaphone click**: Button press sound
+  - Volume: -6dB
+- **Megaphone broadcast**: Distorted "Next!" callout (potato voice)
+  - Optional: Procedural potato voice generator
+  - Volume: -4dB
+
+*Booth Operations:*
+- **Lever pull**: Mechanical chain sound (currently: chain 2.wav)
+  - Duration: 1.5s
+  - Volume: -10dB
+- **Shutter open**: Metal grinding, upward pitch shift
+  - Duration: 2s
+  - Volume: -8dB
+- **Shutter close**: Metal grinding, downward pitch shift
+  - Duration: 2s
+  - Volume: -8dB
+
+*Potato Sounds:*
+- **Footsteps (grass)**: Soft rustle, organic
+  - Variations: 4 samples
+  - Volume: -10dB
+- **Footsteps (concrete)**: Harder impact, echo (currently: Concrete Walk samples)
+  - Variations: 4 samples
+  - Volume: -8dB
+- **Emote sounds**: Contextual reactions
+  - Anger: Low growl/rumble
+  - Fear: High-pitched squeak
+  - Confusion: Questioning chirp
+  - Volume: -9dB
+- **Breathing (in booth)**: Subtle, rhythmic
+  - Only when potato is waiting
+  - Very quiet: -18dB
+
+*Missile Defense:*
+- **Missile launch**: Whoosh + rocket ignition
+  - Doppler effect as missile travels
+  - Volume: -6dB
+- **Missile hit**: Explosion + splat
+  - Particle sounds (debris falling)
+  - Volume: -4dB (impactful)
+- **Miss**: Distant explosion (off-screen)
+  - Volume: -10dB
+- **Runner escape**: Alarm beep + negative chime
+  - Indicates strike
+  - Volume: -5dB
+
+*X-Ray Scanner:*
+- **Activate**: Electric hum + charging sound
+  - Duration: 0.5s
+  - Volume: -7dB
+- **Scanning**: Continuous low hum (looped)
+  - Slightly unsettling frequency
+  - Volume: -12dB
+- **Detection found**: Alert ping + highlight sound
+  - Volume: -6dB
+- **Deactivate**: Discharge sound, hum fades
+  - Duration: 0.3s
+  - Volume: -7dB
+
+*UV Lamp (Planned):*
+- **Activate**: Switch click + bulb buzz
+- **Secret revealed**: Mystery chord + sparkle
+- **Deactivate**: Click, buzz fades
+
+**Ambient Sounds:**
+
+*Customs Office (Interior):*
+- Low background hum (machinery, ventilation)
+  - Continuous loop, -20dB
+- Distant radio chatter (muffled)
+  - Occasional bursts, unintelligible
+  - Volume: -22dB
+- Fluorescent light hum
+  - Subtle, high frequency
+  - Volume: -25dB
+
+*Border Area (Exterior):*
+- Wind ambience (plains, desolate)
+  - Varies in intensity
+  - Volume: -18dB
+- Distant industrial sounds (factories)
+  - Reinforces dystopian setting
+  - Volume: -20dB
+- Birds chirping (occasionally)
+  - Fly away when clicked
+  - Sound: Flapping wings + chirp
+  - Volume: -15dB
+
+*Queue Area:*
+- Potato murmurs (crowd ambience)
+  - Low, indistinct conversation
+  - Volume scales with queue size
+  - Base volume: -16dB
+
+**Voice/Dialogue:**
+
+*Dialogic Scenes:*
+- **Typing effect**: Currently uses keyboard mechanical typing 1.mp3
+  - **ISSUE**: Audio desync noted in GDD
+  - **Fix**: Use Dialogic built-in typing sounds OR custom tailored files
+  - Sync with text speed setting
+  - Volume: 0dB (per current timeline, needs adjustment to -10dB)
+
+*Potato Voices (Planned):*
+- Procedural pitch-shifted vocal sounds
+- Contextual emotional inflection
+- Short phrases during document inspection
+  - "Here's my papers..."
+  - "Please, I need to get through..."
+  - Terry Pratchett-inspired humor
+
+*Supervisor Russet:*
+- Distinct voice (lower pitch, authoritative)
+- Radio filter effect (talking through intercom)
+- Volume: -8dB
+
+**Audio Buses & Mixing:**
+
+```
+Master Bus (0dB)
+├── Music Bus (-5dB)
+│   ├── Menu Music
+│   ├── Gameplay Music (layers)
+│   └── Narrative Music
+├── SFX Bus (-3dB)
+│   ├── UI Sounds
+│   ├── Gameplay Sounds
+│   ├── Ambient Sounds
+│   └── Feedback Sounds
+└── Voice Bus (-2dB)
+    ├── Dialogue
+    ├── Potato Voices
+    └── Typing Effects
+```
+
+**Player Controls:**
+- Master volume slider (0-100%)
+- Music volume slider (0-100%)
+- SFX volume slider (0-100%)
+- Voice volume slider (0-100%)
+- Mute all toggle
+
+### Audio Implementation Technical Details
+
+**Audio Format:**
+- Music: MP3 or OGG Vorbis (streaming)
+- SFX: WAV (short samples, loaded into memory)
+- Voice: OGG Vorbis (streaming for dialogue)
+
+**Optimization:**
+- Pool frequently used sounds (footsteps, document rustles)
+- Limit simultaneous sound instances (max 32 active sounds)
+- Distance-based volume attenuation for off-screen sounds
+- Priority system: Feedback > Gameplay > Ambient
+
+**3D Audio (Future Consideration):**
+- Spatial audio for runner positions
+- Panning for off-screen events
+- Currently: Stereo 2D audio sufficient for scope
+
+### Audio Feedback for Accessibility
+
+**Visual Alternatives:**
+- Subtitle system for all dialogue
+- Visual indicators for off-screen sounds (directional arrows)
+- Haptic feedback (Steam Deck / controller rumble)
+  - Stamp placement: Short rumble
+  - Strike: Strong rumble
+  - Perfect combo: Pulsing rumble
+
+**Audio Cues Settings:**
+- Toggle to enhance critical audio (louder strikes, runners)
+- Mono audio option (for hearing impairment)
+- Reduce background ambience option (focus on gameplay sounds)
+
+### Current Audio Gaps (From GDD Action Items)
+
+**High Priority:**
+- [ ] Fix keyboard audio desync in Dialogic scenes
+- [ ] Add lever SFX for office shutter
+- [ ] Add hover sounds for megaphone/stamp bar
+- [ ] Add emote audio feedback
+- [ ] Add document grip sound (pick up)
+- [ ] Add whoosh sounds for document movement
+- [ ] Add menu tick sounds for volume sliders
+
+**Medium Priority:**
+- [ ] Implement dynamic music layers (tension/crisis)
+- [ ] Create potato voice system (procedural or recorded)
+- [ ] Add X-ray scanner sounds
+- [ ] Add UV lamp sounds
+- [ ] Improve ambient sound mixing (radio broadcasts)
+
+**Low Priority (Polish):**
+- [ ] Add bird interaction sounds
+- [ ] Add footstep variation based on potato type
+- [ ] Add environmental reverb (interior vs exterior)
+- [ ] Add subtle breathing sounds for waiting potatoes
+
 ### Environmental Details
-- Birds on ground that fly away on interaction
-- Animated lights in customs office and Border Wall
-- Footstep system (concrete steps smaller/darker than grass)
-- Shift-start animation: Player potato walks into office
-- Shadow rendering fixes for new potato models
+- Birds on ground that fly away on interaction (sound: flapping + chirp)
+- Animated lights in customs office and Border Wall (subtle hum)
+- Footstep system (concrete steps smaller/darker than grass, louder/softer audio)
+- Shift-start animation: Player potato walks into office (footsteps + door open)
+- Shadow rendering fixes for new potato models (no audio impact)
 
 ---
 
@@ -260,6 +1036,127 @@ var customization_data: Dictionary
 - **Footprint System**: Implement sprite pooling (currently creates/destroys)
 - **Particle Systems**: Add cleanup plan for dynamically created particles
 - **Z-Index Management**: Multiple rendering order issues documented
+
+### Critical Debug Controls
+
+**Development Efficiency Tools**
+
+Debug controls enable rapid testing and iteration during development. All debug features must be disabled in production builds.
+
+**Core Debug Keybinds:**
+- **F1** - Toggle debug overlay (FPS, memory usage, active nodes)
+- **F2** - Skip current shift (instant win for testing progression)
+- **F3** - Force shift failure (test fail states and retry flow)
+- **F4** - Spawn test potato (bypasses queue timing)
+- **F5** - Toggle god mode (unlimited strikes, infinite time)
+- **F6** - Unlock all potato types (test visual variety)
+- **F7** - Toggle free camera (inspect scene details)
+- **F8** - Reload current scene (quick iteration on changes)
+- **F9** - Toggle hitbox visualization (collision debugging)
+- **F10** - Force runner spawn (test missile defense)
+- **F11** - Fullscreen toggle (player-accessible)
+- **F12** - Screenshot (player-accessible)
+
+**Console Commands (Debug Build Only):**
+```gdscript
+# Shift progression
+/skip_to_shift <number>     # Jump to specific shift
+/reset_narrative            # Clear all story choices
+/unlock_endings             # Enable all ending branches
+
+# Scoring and stats
+/set_score <amount>         # Override current score
+/add_perfect_stamps <count> # Test combo bonuses
+/reset_leaderboards         # Clear local leaderboard cache
+
+# Potato spawning
+/spawn_runner               # Force border runner
+/spawn_sapper               # Force sapper variant
+/spawn_vip                  # Force VIP potato
+/spawn_invalid              # Force invalid documents
+
+# Rule testing
+/list_active_rules          # Print current shift rules
+/add_rule <rule_id>         # Add specific rule to shift
+/clear_rules                # Remove all rules (auto-approve mode)
+
+# Performance testing
+/stress_test <potato_count> # Spawn many potatoes
+/profile_start              # Begin performance profiling
+/profile_stop               # End profiling and dump results
+/clear_pooled_objects       # Force cleanup of object pools
+
+# Audio/visual debugging
+/mute_sfx                   # Toggle sound effects
+/mute_music                 # Toggle music
+/show_z_indices             # Render z-index labels on nodes
+/highlight_clickable        # Show all interactive areas
+
+# Save/load testing
+/force_save                 # Immediate save
+/corrupt_save               # Test save corruption handling
+/delete_save                # Clear all save data
+/export_save                # Dump save JSON to file
+```
+
+**Debug Overlay Information:**
+- Frame rate (current, average, minimum)
+- Memory usage (current, peak)
+- Active potato count
+- Active particle emitters
+- Current shift timer
+- Active rules count
+- Narrative variables state
+- Steam connection status
+
+**Build Configuration:**
+```gdscript
+# project.godot settings
+[debug]
+enabled = true              # Debug mode active
+show_fps = true             # Display FPS counter
+verbose_logging = true      # Extended console output
+allow_remote_debug = true   # Godot editor debugging
+
+[release]
+enabled = false             # All debug features disabled
+strip_debug_symbols = true  # Reduce build size
+optimize_for_size = true    # Minimize executable size
+```
+
+**Testing Workflows:**
+
+*Rapid Narrative Testing:*
+1. Use `/skip_to_shift 9` to jump near endings
+2. Use `/reset_narrative` to test different choice branches
+3. Use `/unlock_endings` to verify all ending art/dialogue
+
+*Performance Testing:*
+1. Use `/stress_test 50` to spawn maximum potatoes
+2. Enable F1 overlay to monitor frame rate
+3. Use `/profile_start` and `/profile_stop` for detailed metrics
+4. Use `/clear_pooled_objects` to test cleanup systems
+
+*Rule Validation Testing:*
+1. Use `/list_active_rules` to see current rules
+2. Use `/spawn_invalid` to force rule violations
+3. Test strike system with intentional failures
+4. Use `/clear_rules` to test UI without rule complexity
+
+**Prohibited in Release Builds:**
+- All F-key debug shortcuts (except F11/F12 player features)
+- Console command system entirely removed
+- Debug overlay system disabled
+- Verbose logging disabled
+- God mode functionality removed
+- Skip/cheat functions removed
+
+**Debug Build Distribution:**
+- Internal testing only
+- Never distribute to press or players
+- Clearly labeled "DEBUG BUILD" in main menu
+- Auto-expiration after 30 days (build date check)
+- Watermark on screenshots/recordings
 
 ### Critical Bugs to Address
 
@@ -600,6 +1497,94 @@ Justification:
 - All 4 story endings playable
 - Demo build testing before upload
 - Deployment process documentation (Steam Depots via Web Builds)
+
+### System Requirements
+
+**Minimum Requirements:**
+- **OS**: Windows 10 (64-bit), macOS 10.15+, Ubuntu 20.04+
+- **Processor**: Intel Core i3 or equivalent
+- **Memory**: 2 GB RAM
+- **Graphics**: OpenGL 3.3 compatible GPU
+- **Storage**: 500 MB available space
+- **Sound Card**: DirectX compatible
+- **Additional Notes**: Mouse required for gameplay
+
+**Recommended Requirements:**
+- **OS**: Windows 11 (64-bit), macOS 12+, Ubuntu 22.04+
+- **Processor**: Intel Core i5 or equivalent
+- **Memory**: 4 GB RAM
+- **Graphics**: Dedicated GPU with 1GB VRAM
+- **Storage**: 1 GB available space
+- **Sound Card**: DirectX compatible
+- **Additional Notes**: 1920x1080 resolution or higher recommended
+
+**Supported Platforms:**
+- Windows (primary)
+- macOS (planned)
+- Linux (planned)
+- Web (HTML5 export for demos)
+
+**Technical Requirements:**
+- Internet connection required for:
+  - Steam achievements
+  - Global leaderboards
+  - Daily challenges
+  - Cloud saves
+- Offline play available for Story Mode and Endless Mode (local scores only)
+
+### Steam Store Materials Checklist
+
+**Required Assets (Pre-Release):**
+- [ ] **Capsule Images**
+  - Main capsule: 616x353px
+  - Small capsule: 231x87px
+  - Header capsule: 460x215px
+  - Vertical capsule: 374x448px
+  - Hero capsule: 1920x620px
+
+- [ ] **Screenshots**
+  - Minimum 5 screenshots at 1920x1080
+  - Showcase: Document inspection, missile defense, story moments, UI elements, different potato types
+  - All must be actual in-game screenshots (no mockups)
+
+- [ ] **Trailer**
+  - 30-90 seconds recommended
+  - Show core gameplay loop
+  - Highlight unique mechanics (stamp combos, X-ray, missile defense)
+  - Include narrative hook
+  - Trailer script at: `project_management/spud_customs_trailer_1.md`
+
+- [ ] **Store Description**
+  - Short description (300 characters max)
+  - Long description with feature bullets
+  - About This Game section
+  - Key features list
+  - System requirements (see above)
+
+- [ ] **Store Tags**
+  - Primary: Simulation, Indie, Casual, Strategy
+  - Secondary: Immigration, Time Management, Choices Matter, Multiple Endings
+  - Thematic: Dark Humor, Dystopian, Story Rich, Singleplayer
+
+- [ ] **Legal & Compliance**
+  - Age rating justification (Teen - dark humor, mild violence)
+  - Privacy policy (if collecting data)
+  - EULA/Terms of Service
+  - Attribution credits (see Credits section below)
+
+- [ ] **Community Setup**
+  - Discussion boards enabled
+  - Workshop integration (optional - for user-created content)
+  - Achievement showcase enabled
+  - Trading cards (optional - future consideration)
+
+- [ ] **Launch Checklist**
+  - Steam Depot configured for Windows build
+  - Demo build uploaded and tested
+  - Wishlisting enabled 2+ weeks before launch
+  - Press kit prepared
+  - Social media accounts ready
+  - Launch discount strategy (10% recommended)
 
 ---
 
@@ -1044,6 +2029,134 @@ Potential additional achievements for content updates:
 - Hidden/secret achievements for easter eggs
 - Speedrun achievements (complete story under time limit)
 - No-strike perfect run achievements
+
+---
+
+## 12. Credits and Attribution
+
+### Development Team
+
+**Lost Rabbit Digital**
+- Lead Developer & Designer: [Name]
+- Programming: [Name]
+- Art & Animation: [Name]
+- Narrative Design: [Name]
+- Audio Design: [Name]
+- QA & Testing: [Name]
+
+### Special Thanks
+
+**User Testing & Feedback**
+- See `project_management/user_feedback/special_thanks.md` for full list
+- Community testers who provided invaluable feedback during development
+
+### Third-Party Assets & Tools
+
+**Game Engine**
+- **Godot Engine 4.5.0** - MIT License
+  - https://godotengine.org
+  - Copyright (c) 2014-2025 Godot Engine contributors
+
+**Plugins & Addons**
+
+*GodotSteam*
+- MIT License
+- https://github.com/CoaguCo-Industries/GodotSteam
+- Steam API integration for achievements, leaderboards, and cloud saves
+
+*Dialogic 2*
+- MIT License
+- https://github.com/dialogic-godot/dialogic
+- Dialogue system and narrative scripting
+
+*GUT (Godot Unit Test) v9.3.0*
+- MIT License
+- https://github.com/bitwes/Gut
+- Unit testing framework
+
+*GDScript Toolkit*
+- MIT License
+- https://github.com/Scony/godot-gdscript-toolkit
+- Code formatting and linting (gdformat, gdlint, gdradon)
+
+**Audio Assets**
+- Music tracks: [Sources and licenses to be documented]
+- Sound effects: [Sources and licenses to be documented]
+- See `godot_project/assets/ATTRIBUTION.md` for complete audio attribution
+
+**Fonts**
+- [Primary UI Font] - [License]
+- [Dialogue Font] - [License]
+- [Score/Stats Font] - [License]
+
+**Visual Assets**
+- Custom artwork: Lost Rabbit Digital
+- Stock/reference assets: [Sources to be documented]
+- See `godot_project/assets/ATTRIBUTION.md` for complete visual attribution
+
+### Inspiration & Influence
+
+**Games**
+- **Papers, Please** by Lucas Pope - Primary gameplay and moral choice inspiration
+- Document inspection mechanics influence
+- Bureaucratic dystopia themes
+
+**Literature**
+- **Terry Pratchett's Discworld Series** - Tonal inspiration for conversations and dark humor
+
+**Historical References**
+- Cold War border checkpoint aesthetics
+- Bureaucratic dystopia themes
+
+### Open Source Contributions
+
+This project uses open-source software and gives back to the community:
+- Bug reports and contributions to Godot Engine
+- Contributions to GodotSteam
+- Contributions to Dialogic
+- Sharing of custom tools and techniques with the community
+
+### Legal Notices
+
+**Trademark Acknowledgments**
+- Steam and the Steam logo are trademarks of Valve Corporation
+- All other trademarks are property of their respective owners
+
+**Asset Licenses**
+- See `godot_project/assets/ATTRIBUTION.md` for detailed asset licensing
+- All custom art and code (c) 2025 Lost Rabbit Digital
+- Game code and assets license: [License TBD]
+
+**Privacy & Data**
+- Game collects minimal data (Steam ID, scores, achievements)
+- No personal information stored beyond Steam requirements
+- Cloud saves stored via Steam Cloud (Valve privacy policy applies)
+- No third-party analytics or tracking
+
+**Content Warning**
+- Game contains dark humor and dystopian themes
+- Mild violence (cartoonish potato explosions)
+- Themes of authoritarianism and bureaucracy
+- Age rating: Teen (13+)
+
+### Contact & Support
+
+**Official Channels**
+- Website: [URL]
+- Steam Store: [URL]
+- Email: [Support email]
+- Bug Reports: https://github.com/Lost-Rabbit-Digital/SpudCustoms/issues
+
+**Social Media**
+- Twitter/X: [@handle]
+- Discord: [Server invite]
+- Reddit: r/SpudCustoms
+
+**Press & Media**
+- Press Kit: [URL]
+- Media Contact: [Email]
+- Review Key Requests: [Email]
+
 ---
 
 **Document Version**: 1.1.1 Update Revision

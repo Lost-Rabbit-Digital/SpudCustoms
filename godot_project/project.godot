@@ -42,6 +42,8 @@ JuicyButtons="*res://scripts/utils/juicy_buttons.gd"
 CursorManager="*res://scripts/utils/cursor_manager.gd"
 ConstantZIndexes="*res://scripts/constant_z_indexes.gd"
 Analytics="*res://scripts/core/analytics.gd"
+AccessibilityManager="*res://assets/autoload/AccessibilityManager.gd"
+TutorialManager="*res://assets/autoload/TutorialManager.gd"
 
 [debug]
 
