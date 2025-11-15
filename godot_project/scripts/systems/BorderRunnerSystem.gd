@@ -593,41 +593,28 @@ func handle_runner_escape(_runner: PotatoPerson):
 	# Reset the runner streak
 	runner_streak = 0
 
-	# Store original score to check if points were deducted
-	var original_score = Global.score
-	var points_to_remove = min(escape_penalty, Global.score)  # Only remove what's available
+	# REFACTORED: Emit event instead of directly modifying Global
+	# The GameStateManager will handle the state changes
+	EventBus.emit_runner_escaped("potato", {
+		"penalty": escape_penalty,
+		"runner_streak_reset": true
+	})
 
-	# Apply score penalty and prevent negative score
-	Global.score = max(0, Global.score - points_to_remove)
+	# Subscribe to UI update events from GameStateManager
+	# For backward compatibility, also update local UI references
+	if score_label and GameStateManager:
+		score_label.text = tr("ui_score").format({"score": str(GameStateManager.get_score())})
 
-	if score_label:
-		score_label.text = tr("ui_score").format({"score": str(Global.score)})
+	if strike_label and GameStateManager:
+		strike_label.text = "Strikes: " + str(GameStateManager.get_strikes()) + " / " + str(GameStateManager.get_max_strikes())
 
-	# Update alert to show penalty
-	if points_to_remove == 0:
-		# No points were deducted
-		Global.display_red_alert(alert_label, alert_timer, tr("alert_runner_escaped"))
-	else:
-		# Points were deducted, show the penalty
-		Global.display_red_alert(
-			alert_label,
-			alert_timer,
-			tr("alert_points_deducted").format({"penalty": points_to_remove})
-		)
-
-	print("Before strike: " + str(Global.strikes))
-
-	# Add one strike to the total strikes stored in the root node of the scene
-	Global.strikes += 1
-
-	if strike_label:
-		strike_label.text = "Strikes: " + str(Global.strikes) + " / " + str(Global.max_strikes)
-
-	if Global.strikes >= Global.max_strikes:
+	# Check for game over through GameStateManager
+	if GameStateManager and GameStateManager.get_strikes() >= GameStateManager.get_max_strikes():
 		print("DEBUG: Maximum strikes reached! Emitting game over signal")
 		emit_signal("game_over_triggered")
 	else:
-		print("DEBUG: After strike: " + str(Global.strikes) + "/" + str(Global.max_strikes))
+		if GameStateManager:
+			print("DEBUG: After strike: " + str(GameStateManager.get_strikes()) + "/" + str(GameStateManager.get_max_strikes()))
 
 
 func _input(event):
@@ -959,20 +946,19 @@ func trigger_explosion(missile_or_position):
 			# Spawn gibs at the innocent potato's position
 			spawn_gibs(potato.global_position)
 
-			# Apply penalty
-			var points_to_remove = min(innocent_penalty, Global.score)
-			Global.score = max(0, Global.score - points_to_remove)
+			# REFACTORED: Emit innocent hit event instead of direct Global mutation
+			var penalty_message = "INNOCENT POTATO KILLED! -{penalty} POINTS!".format({"penalty": innocent_penalty})
+			EventBus.innocent_hit.emit(innocent_penalty, {
+				"message": penalty_message,
+				"potato_position": potato.global_position
+			})
 
-			# Update score label
-			if score_label:
-				score_label.text = tr("ui_score").format({"score": str(Global.score)})
+			# For backward compatibility, update local UI
+			if score_label and GameStateManager:
+				score_label.text = tr("ui_score").format({"score": str(GameStateManager.get_score())})
 
-			# Show alert
-			Global.display_red_alert(
-				alert_label,
-				alert_timer,
-				"INNOCENT POTATO KILLED! -{penalty} POINTS!".format({"penalty": points_to_remove})
-			)
+			# Keep backward compatibility alert
+			Global.display_red_alert(alert_label, alert_timer, penalty_message)
 
 	if not hit_any_runner and not hit_any_innocent:
 		print("Missile missed all potatoes")
@@ -1029,20 +1015,19 @@ func check_runner_hits(explosion_pos):
 			# Spawn gibs at the innocent potato's position
 			spawn_gibs(potato.global_position)
 
-			# Apply penalty
-			var points_to_remove = min(innocent_penalty, Global.score)
-			Global.score = max(0, Global.score - points_to_remove)
+			# REFACTORED: Emit innocent hit event instead of direct Global mutation
+			var penalty_message = "INNOCENT POTATO KILLED! -{penalty} POINTS!".format({"penalty": innocent_penalty})
+			EventBus.innocent_hit.emit(innocent_penalty, {
+				"message": penalty_message,
+				"potato_position": potato.global_position
+			})
 
-			# Update score label
-			if score_label:
-				score_label.text = tr("ui_score").format({"score": str(Global.score)})
+			# For backward compatibility, update local UI
+			if score_label and GameStateManager:
+				score_label.text = tr("ui_score").format({"score": str(GameStateManager.get_score())})
 
-			# Show alert
-			Global.display_red_alert(
-				alert_label,
-				alert_timer,
-				"INNOCENT POTATO KILLED! -{penalty} POINTS!".format({"penalty": points_to_remove})
-			)
+			# Keep backward compatibility alert
+			Global.display_red_alert(alert_label, alert_timer, penalty_message)
 
 	if not hit_any_runner:
 		print("Missile missed all runners")
@@ -1152,15 +1137,11 @@ func handle_successful_hit(runner, explosion_pos):
 
 	# Update stats with successful hits
 	shift_stats.missiles_hit += 1
-	# Track globally for achievements
-	Global.total_runners_stopped += 1
-
-	# Track global stats for achievements
-	Global.total_runners_stopped += 1
 
 	runner_streak += 1
 	var points_earned = runner_base_points
 	var bonus_text = ""
+	var was_perfect_hit = false
 
 	# Find the main game node correctly
 	var main_game = self
@@ -1175,9 +1156,9 @@ func handle_successful_hit(runner, explosion_pos):
 			main_game.shake_screen(16.0, 0.4)  # Strong shake for perfect hits
 		# Update shift stats for perfect hits
 		shift_stats.perfect_hits += 1
-		# Track globally for achievements
-		# Track global stats for achievements
-		Global.perfect_hits += 1
+		was_perfect_hit = true
+		# REFACTORED: Emit perfect hit event
+		EventBus.perfect_hit_achieved.emit(perfect_hit_bonus)
 		# Spawn even more gibs on a perfect hit
 		spawn_gibs(runner.global_position)
 		points_earned += perfect_hit_bonus
@@ -1188,15 +1169,22 @@ func handle_successful_hit(runner, explosion_pos):
 		points_earned += streak_points
 		bonus_text += tr("alert_combo").format({"mult": runner_streak, "streak": streak_points})
 
-	# Add points
-	Global.score += points_earned
-	if score_label:
-		score_label.text = tr("ui_score").format({"score": str(Global.score)})
+	# REFACTORED: Emit runner stopped event instead of direct Global mutations
+	# GameStateManager will handle score addition and strike removal
+	EventBus.emit_runner_stopped("potato", points_earned, was_perfect_hit, {
+		"streak": runner_streak,
+		"distance": distance,
+		"explosion_pos": explosion_pos
+	})
 
-	# Remove a strike if any present
+	# For backward compatibility, update local UI
+	if score_label and GameStateManager:
+		score_label.text = tr("ui_score").format({"score": str(GameStateManager.get_score())})
+
+	# Check if strike was removed (handled by GameStateManager)
 	var strike_removed = false
-	if Global.strikes > 0:
-		Global.strikes -= 1
+	if GameStateManager and GameStateManager.get_strikes() < GameStateManager.get_max_strikes():
+		# GameStateManager removes strikes automatically on runner_stopped
 		strike_removed = true
 		bonus_text += tr("alert_strike_removed")
 
@@ -1217,11 +1205,13 @@ func handle_successful_hit(runner, explosion_pos):
 				+ final_message
 			)
 
+	# REFACTORED: Use EventBus for alert (also keeping backward compatibility)
+	EventBus.show_alert(final_message, true)
 	Global.display_green_alert(alert_label, alert_timer, final_message)
 
-	if strike_label:
+	if strike_label and GameStateManager:
 		strike_label.text = tr("ui_strikes").format(
-			{"current": Global.strikes, "max": Global.max_strikes}
+			{"current": GameStateManager.get_strikes(), "max": GameStateManager.get_max_strikes()}
 		)
 
 
