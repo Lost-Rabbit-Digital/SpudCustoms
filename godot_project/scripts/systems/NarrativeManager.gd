@@ -46,25 +46,68 @@ var current_skip_button_layer: CanvasLayer = null
 
 
 func _ready():
+	# Connect to EventBus events
+	_connect_to_event_bus()
+
 	# Skip initialization in score attack mode
-	if Global.game_mode == "score_attack":
+	var game_mode = "score_attack"
+	if GameStateManager:
+		game_mode = GameStateManager.get_game_mode()
+	elif Global:
+		game_mode = Global.game_mode
+
+	if game_mode == "score_attack":
 		return
+
 	# Initialize dialogic and load dialogue for appropriate shift
-	start_level_dialogue(Global.shift)
+	var shift = 0
+	if GameStateManager:
+		shift = GameStateManager.get_shift()
+	else:
+		shift = Global.shift
+
+	start_level_dialogue(shift)
 	# Make it impossible to pause the narrative manager
 	process_mode = Node.PROCESS_MODE_ALWAYS
 
 
+func _connect_to_event_bus() -> void:
+	"""Subscribe to EventBus events."""
+	if not EventBus:
+		return
+
+	# Subscribe to narrative-related events
+	EventBus.narrative_choices_load_requested.connect(_on_load_narrative_choices_requested)
+	EventBus.narrative_choices_save_requested.connect(_on_save_narrative_choices_requested)
+
+
+func _on_load_narrative_choices_requested(choices: Dictionary) -> void:
+	load_narrative_choices(choices)
+
+
+func _on_save_narrative_choices_requested() -> void:
+	# This is a no-op signal that Global uses to know NarrativeManager is available
+	# The actual saving is done when Global calls save_narrative_choices() directly
+	pass
+
+
 func start_level_dialogue(level_id: int):
-	if Global.game_mode == "score_attack":
+	# Check game mode - prefer GameStateManager
+	var game_mode = "score_attack"
+	if GameStateManager:
+		game_mode = GameStateManager.get_game_mode()
+	elif Global:
+		game_mode = Global.game_mode
+
+	if game_mode == "score_attack":
 		return
 	# Return if already in dialogue
 	if dialogue_active:
 		return
 
 	# Skip in score attack mode
-	print("Game mode is:", Global.game_mode)
-	if Global.game_mode == "score_attack":
+	print("Game mode is:", game_mode)
+	if game_mode == "score_attack":
 		print("score_attack detected")
 		#_on_skip_button_pressed()
 		#pass
@@ -74,6 +117,10 @@ func start_level_dialogue(level_id: int):
 
 	var timeline_name = LEVEL_DIALOGUES.get(level_id, "generic_shift_start")
 
+	# REFACTORED: Emit dialogue started event
+	if EventBus:
+		EventBus.dialogue_started.emit(timeline_name)
+
 	var timeline = Dialogic.start(timeline_name)
 	add_child(timeline)
 	Dialogic.signal_event.connect(_on_dialogic_signal)
@@ -81,7 +128,14 @@ func start_level_dialogue(level_id: int):
 
 
 func start_level_end_dialogue(level_id: int):
-	if Global.get("game_mode") == "score_attack":
+	# Check game mode - prefer GameStateManager
+	var game_mode = "score_attack"
+	if GameStateManager:
+		game_mode = GameStateManager.get_game_mode()
+	elif Global:
+		game_mode = Global.get("game_mode")
+
+	if game_mode == "score_attack":
 		return
 
 	print(
@@ -102,6 +156,10 @@ func start_level_end_dialogue(level_id: int):
 	var skip_button_layer = create_skip_button()
 	var timeline_name = LEVEL_END_DIALOGUES.get(level_id, "generic_shift_start")
 
+	# REFACTORED: Emit dialogue started event
+	if EventBus:
+		EventBus.dialogue_started.emit(timeline_name)
+
 	var timeline = Dialogic.start(timeline_name)
 	timeline.process_mode = Node.PROCESS_MODE_ALWAYS
 	add_child(timeline)
@@ -114,6 +172,12 @@ func _on_end_dialogue_finished():
 	dialogue_active = false
 
 	cleanup_skip_buttons()
+
+	# REFACTORED: Emit dialogue ended event
+	if EventBus:
+		EventBus.dialogue_ended.emit("end_dialogue")
+		EventBus.save_game_requested.emit()
+
 	# Save game state (which will capture narrative choices via NarrativeManager)
 	Global.save_game_state()
 	emit_signal("end_dialogue_finished")
@@ -176,14 +240,23 @@ func _on_dialogic_signal(argument):
 	if Global.DEV_MODE:
 		return
 
+	# REFACTORED: Emit achievement unlocked events
 	if argument == "born_diplomat":
 		Steam.setAchievement(ACHIEVEMENTS.BORN_DIPLOMAT)
+		if EventBus:
+			EventBus.achievement_unlocked.emit(ACHIEVEMENTS.BORN_DIPLOMAT)
 	if argument == "tater_of_justice":
 		Steam.setAchievement(ACHIEVEMENTS.TATER_OF_JUSTICE)
+		if EventBus:
+			EventBus.achievement_unlocked.emit(ACHIEVEMENTS.TATER_OF_JUSTICE)
 	if argument == "best_served_hot":
 		Steam.setAchievement(ACHIEVEMENTS.BEST_SERVED_HOT)
+		if EventBus:
+			EventBus.achievement_unlocked.emit(ACHIEVEMENTS.BEST_SERVED_HOT)
 	if argument == "down_with_the_tatriarchy":
 		Steam.setAchievement(ACHIEVEMENTS.DOWN_WITH_THE_TATRIARCHY)
+		if EventBus:
+			EventBus.achievement_unlocked.emit(ACHIEVEMENTS.DOWN_WITH_THE_TATRIARCHY)
 
 
 func start_final_confrontation():
@@ -199,6 +272,12 @@ func start_final_confrontation():
 func _on_intro_dialogue_finished():
 	dialogue_active = false
 	Global.advance_story_state()  # Will set to INTRO_COMPLETE
+
+	# REFACTORED: Emit story state changed event
+	if EventBus:
+		EventBus.story_state_changed.emit(Global.current_story_state)
+		EventBus.dialogue_ended.emit("intro_dialogue")
+
 	cleanup_skip_buttons()
 	emit_signal("intro_dialogue_finished")
 
@@ -210,6 +289,12 @@ func _on_shift_dialogue_finished():
 	current_shift += 1
 
 	Global.advance_story_state()
+
+	# REFACTORED: Emit story state changed event
+	if EventBus:
+		EventBus.story_state_changed.emit(Global.current_story_state)
+		EventBus.dialogue_ended.emit("shift_dialogue")
+
 	cleanup_skip_buttons()
 	emit_signal("dialogue_finished")
 
@@ -218,6 +303,12 @@ func _on_final_dialogue_finished():
 	dialogue_active = false
 
 	Global.advance_story_state()  # Will set to COMPLETED
+
+	# REFACTORED: Emit story state changed event
+	if EventBus:
+		EventBus.story_state_changed.emit(Global.current_story_state)
+		EventBus.dialogue_ended.emit("final_dialogue")
+
 	cleanup_skip_buttons()
 	emit_signal("dialogue_finished")
 
@@ -338,5 +429,9 @@ func load_narrative_choices(choices: Dictionary) -> void:
 	# Restore each saved variable to Dialogic
 	for var_name in choices.keys():
 		Dialogic.VAR.set(var_name, choices[var_name])
+
+		# REFACTORED: Emit narrative choice made event for each restored choice
+		if EventBus:
+			EventBus.narrative_choice_made.emit(var_name, choices[var_name])
 
 	print("Loaded ", choices.size(), " narrative choices")

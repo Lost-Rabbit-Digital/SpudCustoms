@@ -202,8 +202,12 @@ func _ready():
 
 
 func transition_to_next_shift():
-	# Save current state
-	var current_shift = Global.shift
+	# Save current state - prefer GameStateManager, fallback to Global
+	var current_shift = 0
+	if GameStateManager:
+		current_shift = GameStateManager.get_shift()
+	else:
+		current_shift = Global.shift
 
 	# Handle end dialogues if needed
 	if narrative_manager and current_shift in narrative_manager.LEVEL_END_DIALOGUES:
@@ -214,12 +218,24 @@ func transition_to_next_shift():
 	Global.advance_shift()
 	Global.advance_story_state()
 
+	# Get the new shift value
+	var new_shift = 0
+	if GameStateManager:
+		new_shift = GameStateManager.get_shift()
+	else:
+		new_shift = Global.shift
+
+	# REFACTORED: Emit shift advanced event
+	if EventBus:
+		EventBus.shift_advanced.emit(current_shift, new_shift)
+		EventBus.save_game_requested.emit()
+
 	# Make sure GameState is updated with our progress
-	GameState.level_reached(Global.shift)
+	GameState.level_reached(new_shift)
 	GlobalState.save()
 
 	# Create transition between days
-	narrative_manager.show_day_transition(current_shift, Global.shift)
+	narrative_manager.show_day_transition(current_shift, new_shift)
 	await narrative_manager.dialogue_finished
 
 	# Reload the main game scene with fresh state

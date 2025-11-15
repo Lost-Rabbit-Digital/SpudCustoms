@@ -54,8 +54,80 @@ func _ready() -> void:
 	_setup_batch_timer()
 	_load_or_create_config()
 	_initialize_session()
+	_connect_to_event_bus()
 
 	print("📊 Analytics initialized - Session ID: %s" % current_session_id)
+
+
+func _connect_to_event_bus() -> void:
+	"""Subscribe to EventBus signals for automatic tracking."""
+	if not EventBus:
+		push_warning("Analytics: EventBus not available")
+		return
+
+	# Subscribe to game events for automatic tracking
+	EventBus.score_changed.connect(_on_score_changed)
+	EventBus.strike_changed.connect(_on_strike_changed)
+	EventBus.runner_stopped.connect(_on_runner_stopped)
+	EventBus.runner_escaped.connect(_on_runner_escaped)
+	EventBus.perfect_hit_achieved.connect(_on_perfect_hit)
+	EventBus.analytics_event.connect(_on_analytics_event)
+	EventBus.achievement_unlocked.connect(_on_achievement_unlocked_event)
+	EventBus.narrative_choice_made.connect(_on_narrative_choice_event)
+	EventBus.dialogue_started.connect(_on_dialogue_started)
+	EventBus.dialogue_ended.connect(_on_dialogue_ended)
+
+
+func _on_score_changed(new_score: int, delta: int, source: String) -> void:
+	track_event("Score Changed", {
+		"new_score": new_score,
+		"delta": delta,
+		"source": source
+	})
+
+
+func _on_strike_changed(current_strikes: int, max_strikes: int, delta: int) -> void:
+	session_metrics.strikes_received += delta
+	track_event("Strike Changed", {
+		"current_strikes": current_strikes,
+		"max_strikes": max_strikes,
+		"delta": delta
+	})
+
+
+func _on_runner_stopped(runner_data: Dictionary) -> void:
+	session_metrics.border_runners_caught += 1
+	track_event("Border Runner Caught", runner_data)
+
+
+func _on_runner_escaped(runner_data: Dictionary) -> void:
+	session_metrics.border_runners_escaped += 1
+	track_event("Border Runner Escaped", runner_data)
+
+
+func _on_perfect_hit(bonus_points: int) -> void:
+	track_event("Perfect Hit", {"bonus_points": bonus_points})
+
+
+func _on_analytics_event(event_name: String, event_data: Dictionary) -> void:
+	track_event(event_name, event_data)
+
+
+func _on_achievement_unlocked_event(achievement_id: String) -> void:
+	track_achievement_unlocked(achievement_id)
+
+
+func _on_narrative_choice_event(choice_key: String, choice_value: Variant) -> void:
+	track_story_choice_made(choice_key, choice_value)
+
+
+func _on_dialogue_started(timeline_name: String) -> void:
+	track_cutscene_started(timeline_name)
+
+
+func _on_dialogue_ended(timeline_name: String) -> void:
+	# Track with placeholder duration - actual duration tracking would need more context
+	track_cutscene_completed(timeline_name, 60.0, 60.0)
 
 
 func _setup_http_request() -> void:
@@ -157,8 +229,13 @@ func _enrich_properties(properties: Dictionary) -> Dictionary:
 	enriched["godot_version"] = Engine.get_version_info().string
 	enriched["locale"] = TranslationServer.get_locale()
 
-	# Game state (if Global exists)
-	if Global:
+	# Game state - prefer GameStateManager, fallback to Global
+	if GameStateManager:
+		enriched["current_shift"] = GameStateManager.get_shift()
+		enriched["current_score"] = GameStateManager.get_score()
+		enriched["current_strikes"] = GameStateManager.get_strikes()
+		enriched["difficulty"] = GameStateManager.get_difficulty()
+	elif Global:
 		enriched["current_shift"] = Global.shift
 		enriched["current_score"] = Global.score
 		enriched["current_strikes"] = Global.strikes
@@ -278,11 +355,17 @@ func track_main_menu_action(action: String) -> void:
 
 
 func track_difficulty_selected(difficulty: String) -> void:
+	var current_shift = 0
+	if GameStateManager:
+		current_shift = GameStateManager.get_shift()
+	elif Global:
+		current_shift = Global.shift
+
 	track_event(
 		"Difficulty Selected",
 		{
 			"difficulty": difficulty,
-			"is_first_playthrough": Global.shift <= 1 if Global else true,
+			"is_first_playthrough": current_shift <= 1,
 		}
 	)
 
@@ -301,11 +384,17 @@ func track_language_changed(from_lang: String, to_lang: String) -> void:
 
 
 func track_shift_started(shift_number: int) -> void:
+	var difficulty = "unknown"
+	if GameStateManager:
+		difficulty = GameStateManager.get_difficulty()
+	elif Global:
+		difficulty = Global.difficulty_level
+
 	track_event(
 		"Shift Started",
 		{
 			"shift_number": shift_number,
-			"difficulty": Global.difficulty_level if Global else "unknown",
+			"difficulty": difficulty,
 		}
 	)
 
@@ -329,13 +418,23 @@ func track_shift_completed(
 
 
 func track_shift_failed(shift_number: int, reason: String) -> void:
+	var final_score = 0
+	var final_strikes = 0
+
+	if GameStateManager:
+		final_score = GameStateManager.get_score()
+		final_strikes = GameStateManager.get_strikes()
+	elif Global:
+		final_score = Global.score
+		final_strikes = Global.strikes
+
 	track_event(
 		"Shift Failed",
 		{
 			"shift_number": shift_number,
 			"failure_reason": reason,
-			"final_score": Global.score if Global else 0,
-			"final_strikes": Global.strikes if Global else 0,
+			"final_score": final_score,
+			"final_strikes": final_strikes,
 		}
 	)
 
@@ -371,17 +470,23 @@ func track_potato_processed(
 
 func track_incorrect_decision(potato_info: Dictionary, violated_rules: Array) -> void:
 	"""
-	ANSWERS YOUR NEGATIVE REVIEW PROBLEM: 
+	ANSWERS YOUR NEGATIVE REVIEW PROBLEM:
 	This will show you which rules confuse players the most.
 	"""
 	session_metrics.strikes_received += 1
+
+	var cumulative_strikes = 0
+	if GameStateManager:
+		cumulative_strikes = GameStateManager.get_strikes()
+	elif Global:
+		cumulative_strikes = Global.strikes
 
 	track_event(
 		"Incorrect Decision",
 		{
 			"potato_type": potato_info.get("type", "unknown"),
 			"violated_rules": str(violated_rules),
-			"cumulative_strikes": Global.strikes if Global else 0,
+			"cumulative_strikes": cumulative_strikes,
 		}
 	)
 
@@ -417,11 +522,22 @@ func track_passport_field_examined(field_name: String, duration: float) -> void:
 
 func track_guide_book_opened() -> void:
 	session_metrics.guidebook_opens += 1
+
+	var current_score = 0
+	var current_strikes = 0
+
+	if GameStateManager:
+		current_score = GameStateManager.get_score()
+		current_strikes = GameStateManager.get_strikes()
+	elif Global:
+		current_score = Global.score
+		current_strikes = Global.strikes
+
 	track_event(
 		"Guide Book Opened",
 		{
-			"current_score": Global.score if Global else 0,
-			"current_strikes": Global.strikes if Global else 0,
+			"current_score": current_score,
+			"current_strikes": current_strikes,
 		}
 	)
 

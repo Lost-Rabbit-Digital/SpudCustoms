@@ -805,14 +805,11 @@ func _handle_scene_transition(scene_path: String) -> void:
 	var timer = get_tree().create_timer(0.1)
 	await timer.timeout
 
+	# REFACTORED: Use get_node_or_null instead of get_node for safety
 	# Check if SceneLoader exists in the scene tree (it should be autoloaded)
-	if Engine.has_singleton("SceneLoader") or get_node_or_null("/root/SceneLoader"):
-		# Use SceneLoader if available
-		var loader = get_node("/root/SceneLoader")
-		if loader and loader.has_method("load_scene"):
-			loader.load_scene(scene_path)
-		else:
-			get_tree().change_scene_to_file(scene_path)
+	var loader = get_node_or_null("/root/SceneLoader")
+	if loader and loader.has_method("load_scene"):
+		loader.load_scene(scene_path)
 	else:
 		# Direct scene transition fallback
 		get_tree().change_scene_to_file(scene_path)
