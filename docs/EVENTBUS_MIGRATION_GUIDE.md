@@ -207,13 +207,16 @@ print(report)
 - [x] Create GameStateManager autoload
 - [x] Add to project.godot autoloads
 - [x] Refactor BorderRunnerSystem key methods
-- [ ] Refactor Analytics to use GameStateManager
-- [ ] Refactor Global.gd to emit narrative events
-- [ ] Remove hardcoded `/root/` paths from all files
-- [ ] Update NarrativeManager to use EventBus
+- [x] Refactor Analytics to use GameStateManager and subscribe to EventBus
+- [x] Refactor Global.gd to emit narrative events and use get_node_or_null
+- [x] Remove hardcoded `/root/` paths from project files
+- [x] Update NarrativeManager to use EventBus
+- [x] Refactor level_list_manager.gd to emit events
+- [x] Fix ShiftSummaryScreen hardcoded paths
 - [ ] Create unit tests for EventBus
 - [ ] Document all event types and their payloads
 - [ ] Gradually deprecate direct Global mutations
+- [ ] Consider deprecating Global.gd in favor of GameStateManager
 
 ## Backward Compatibility
 

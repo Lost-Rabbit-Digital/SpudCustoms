@@ -261,9 +261,14 @@ func save_game_state():
 		"total_playtime": total_playtime,
 	}
 
+	# REFACTORED: Request narrative choices save via EventBus
+	# NarrativeManager will respond if it exists
+	if EventBus:
+		EventBus.narrative_choices_save_requested.emit()
+
 	# Save narrative choices from NarrativeManager (authoritative source)
-	if has_node("/root/NarrativeManager"):
-		var narrative_manager = get_node("/root/NarrativeManager")
+	var narrative_manager = get_node_or_null("/root/NarrativeManager")
+	if narrative_manager and narrative_manager.has_method("save_narrative_choices"):
 		data["narrative_choices"] = narrative_manager.save_narrative_choices()
 		# Keep a copy in Global for backward compatibility
 		narrative_choices = data["narrative_choices"]
@@ -293,9 +298,13 @@ func load_game_state():
 		perfect_hits = data.get("perfect_hits", 0)
 		total_playtime = data.get("total_playtime", 0.0)
 
-		# Load narrative choices if NarrativeManager exists
-		if has_node("/root/NarrativeManager") and data.has("narrative_choices"):
-			var narrative_manager = get_node("/root/NarrativeManager")
+		# REFACTORED: Emit event for narrative choices loading
+		if EventBus and data.has("narrative_choices"):
+			EventBus.narrative_choices_load_requested.emit(data.get("narrative_choices", {}))
+
+		# Load narrative choices if NarrativeManager exists (backward compatibility)
+		var narrative_manager = get_node_or_null("/root/NarrativeManager")
+		if narrative_manager and narrative_manager.has_method("load_narrative_choices") and data.has("narrative_choices"):
 			narrative_manager.load_narrative_choices(data.get("narrative_choices", {}))
 
 
@@ -453,9 +462,13 @@ func _restore_narrative_choices_deferred():
 		print("Dialogic not ready yet, skipping narrative choice restoration")
 		return
 
+	# REFACTORED: Emit event for narrative choices loading
+	if EventBus:
+		EventBus.narrative_choices_load_requested.emit(narrative_choices)
+
 	# Restore narrative choices via NarrativeManager if available, otherwise via Global
-	if has_node("/root/NarrativeManager"):
-		var narrative_manager = get_node("/root/NarrativeManager")
+	var narrative_manager = get_node_or_null("/root/NarrativeManager")
+	if narrative_manager and narrative_manager.has_method("load_narrative_choices"):
 		narrative_manager.load_narrative_choices(narrative_choices)
 		print(
 			"Loaded narrative choices via NarrativeManager: ", narrative_choices.size(), " choices"
