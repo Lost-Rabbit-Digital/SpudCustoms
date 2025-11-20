@@ -180,6 +180,12 @@ godot -e
   <a href="project_management/spud_customs_design_document.md">
     <img src="https://img.shields.io/badge/Game_Design_Document-blue?style=for-the-badge" alt="GDD">
   </a>
+  <a href="Claude.md">
+    <img src="https://img.shields.io/badge/Development_Guidelines-purple?style=for-the-badge" alt="Dev Guidelines">
+  </a>
+  <a href="CLAUDE_PROMPTS.md">
+    <img src="https://img.shields.io/badge/Claude_Code_Prompts-brightgreen?style=for-the-badge" alt="Claude Prompts">
+  </a>
   <a href="project_management/new_features/">
     <img src="https://img.shields.io/badge/Feature_Implementation-orange?style=for-the-badge" alt="Features">
   </a>
@@ -187,6 +193,12 @@ godot -e
     <img src="https://img.shields.io/badge/Testing_Procedures-darkgreen?style=for-the-badge" alt="Testing">
   </a>
 </div>
+
+### For Developers
+
+- **[Claude.md](Claude.md)** - Godot 4.5 best practices, EventBus architecture patterns, and development guidelines
+- **[CLAUDE_PROMPTS.md](CLAUDE_PROMPTS.md)** - 50+ actionable Claude Code prompts for remaining work (migration, tests, optimizations)
+- **[EventBus Migration Guide](docs/EVENTBUS_MIGRATION_GUIDE.md)** - Guide for migrating from Global singleton to EventBus pattern
 
 ---
 
