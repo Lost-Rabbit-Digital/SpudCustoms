@@ -16,6 +16,8 @@
 - Game Design Document: `project_management/spud_customs_design_document.md`
 - Pre-release Testing: `project_management/testing/prerelease_test_procedure.md`
 - Steam Patch Notes: `steam_patch_notes/`
+- **EventBus Migration Guide**: `docs/EVENTBUS_MIGRATION_GUIDE.md`
+- **Claude Code Commands**: `.claude/commands/` (slash commands for common tasks)
 
 ---
 
@@ -186,14 +188,24 @@ add_child(particle)
 
 **PROBLEM:** Putting too much functionality in Global autoload.
 
-**CURRENT STATE:** The project uses multiple focused autoloads:
-- `Global.gd` - Game state and difficulty
-- `SaveManager.gd` - Persistence
-- `SteamManager.gd` - Steam API
+**CURRENT STATE:** The project is actively migrating from god object pattern to EventBus architecture.
+
+**Autoload Structure (21 total):**
+- `EventBus.gd` - **NEW** Centralized event system for decoupled communication
+- `GameStateManager.gd` - **NEW** Single source of truth for game state
+- `Global.gd` - Legacy state manager (being phased out, kept for backward compatibility)
+- `SaveManager.gd` - Persistence layer
+- `SteamManager.gd` - Steam API integration
+- `UIManager.gd` - UI effects (screen shake, alerts)
 - `NarrativeManager.gd` - Story tracking
 - `LawValidator.gd` - Rule validation
+- `AccessibilityManager.gd` - Accessibility features
+- `TutorialManager.gd` - Tutorial progression
+- Plus managers for: Localization, Scene Transitions, Audio, Cursor, Analytics
 
-**MAINTAIN THIS:** Keep autoloads focused on single responsibility.
+**MIGRATION IN PROGRESS:** See `docs/EVENTBUS_MIGRATION_GUIDE.md` for details.
+
+**NEW CODE:** Always use EventBus pattern instead of direct Global mutations.
 
 ### 2. Hardcoded Magic Numbers
 
@@ -251,16 +263,24 @@ func approve_potato() -> void:
     %QueueManager.potatoes.pop_back()
 ```
 
-**GOOD:**
+**GOOD (Using EventBus Pattern):**
 ```gdscript
-# Use signals and public methods
-signal potato_approved(potato_info: Dictionary)
-
+# Emit events through EventBus for decoupled communication
 func approve_potato() -> void:
     var info: Dictionary = %QueueManager.remove_front_potato()
-    potato_approved.emit(info)
-    # Let listeners handle their own logic
+    EventBus.request_score_add(100, "potato_approved", {
+        "potato_type": info.type,
+        "accuracy": stamp_accuracy
+    })
+    EventBus.emit_potato_approved(info)
+    # GameStateManager and other systems handle updates via subscriptions
 ```
+
+**EventBus Pattern Benefits:**
+- Decoupled systems (no direct dependencies)
+- Auditable state changes (all events logged with metadata)
+- Easier testing (mock EventBus signals)
+- Clear data flow (events make dependencies explicit)
 
 ### 5. Ignoring Null Safety
 
@@ -744,6 +764,216 @@ See GDD section "Critical Debug Controls" for comprehensive keybinds:
 
 ---
 
+## EventBus Architecture Pattern
+
+### Overview
+
+The project is actively migrating from direct Global singleton mutations to an EventBus-driven architecture. This decouples systems and makes state changes auditable and testable.
+
+### Core Components
+
+1. **EventBus** (`assets/autoload/EventBus.gd`) - Centralized signal hub with 50+ defined events
+2. **GameStateManager** (`assets/autoload/GameStateManager.gd`) - Subscribes to events, manages state
+3. **Global** (legacy) - Kept in sync for backward compatibility during migration
+
+### Event Categories
+
+```gdscript
+# Score & Game State
+EventBus.request_score_add(points, source, metadata)
+EventBus.score_changed.connect(_on_score_changed)
+
+# Strikes & Penalties
+EventBus.request_strike_add(reason, metadata)
+EventBus.strike_changed.connect(_on_strike_changed)
+
+# Gameplay Events
+EventBus.emit_runner_escaped(type, data)
+EventBus.emit_runner_stopped(type, data)
+EventBus.emit_perfect_hit_achieved(bonus_points)
+
+# UI Feedback
+EventBus.show_alert(message, is_positive, duration)
+EventBus.show_screen_shake(intensity, duration)
+
+# Narrative Events
+EventBus.emit_narrative_choice_made(choice_data)
+EventBus.dialogue_started.connect(_on_dialogue_started)
+
+# Analytics & Achievements
+EventBus.track_event(event_name, data)
+EventBus.emit_achievement_unlocked(achievement_id)
+```
+
+### Migration Pattern
+
+**Before (Anti-pattern):**
+```gdscript
+func handle_score_increase(points: int):
+    Global.score += points
+    score_label.text = str(Global.score)
+```
+
+**After (EventBus pattern):**
+```gdscript
+func _ready():
+    EventBus.ui_score_update_requested.connect(_update_score_ui)
+
+func handle_score_increase(points: int):
+    EventBus.request_score_add(points, "gameplay_action", {
+        "action_type": "perfect_stamp",
+        "combo": current_combo
+    })
+
+func _update_score_ui(new_score: int):
+    score_label.text = str(new_score)
+```
+
+### State Access
+
+**Use GameStateManager for reads:**
+```gdscript
+# Preferred (new code)
+var score = GameStateManager.get_score()
+var strikes = GameStateManager.get_strikes()
+var difficulty = GameStateManager.get_difficulty()
+
+# Legacy (still works during migration)
+var score = Global.score
+```
+
+### Migration Status
+
+**Completed:**
+- ✅ EventBus and GameStateManager created
+- ✅ BorderRunnerSystem key methods migrated
+- ✅ Analytics migrated to GameStateManager
+- ✅ Global.gd emits narrative events
+
+**High Priority (needs migration):**
+- ⚠️ `analytics.gd` (15+ Global reads)
+- ⚠️ `level_list_manager.gd` (advance_shift calls)
+- ⚠️ `NarrativeManager.gd` (game_mode checks)
+- ⚠️ `Global.gd` hardcoded paths (lines 265-267, 297-299, 457-459)
+
+**See:** `docs/EVENTBUS_MIGRATION_GUIDE.md` for complete migration guide.
+
+---
+
+## Dependency Injection Pattern
+
+### When to Use DI
+
+Use dependency injection instead of direct autoload access when:
+1. Unit testing with mocked dependencies
+2. Creating reusable components
+3. Reducing coupling to specific autoloads
+4. Building new systems (use DI from the start)
+
+### DI Patterns
+
+**1. Constructor Injection:**
+```gdscript
+class_name MySystem
+extends Node
+
+var _save_manager: SaveManager
+var _event_bus: Node
+
+func _init(save_manager: SaveManager = null, event_bus: Node = null):
+    _save_manager = save_manager if save_manager else get_node("/root/SaveManager")
+    _event_bus = event_bus if event_bus else get_node("/root/EventBus")
+```
+
+**2. Property Injection:**
+```gdscript
+@export var save_manager: SaveManager
+@export var steam_manager: SteamManager
+
+func _ready():
+    if not save_manager:
+        save_manager = get_node_or_null("/root/SaveManager")
+```
+
+**3. EventBus Decoupling (Preferred):**
+```gdscript
+# Instead of direct calls:
+SteamManager.unlock_achievement("achievement_id")
+
+# Use events:
+EventBus.emit_achievement_unlocked("achievement_id")
+# SteamManager subscribes to this event
+```
+
+### Testing with DI
+
+```gdscript
+extends GutTest
+
+class MockEventBus extends Node:
+    signal score_changed(new_score: int, delta: int, source: String)
+
+    func request_score_add(points: int, source: String, metadata: Dictionary = {}):
+        score_changed.emit(100, points, source)
+
+func test_score_update_with_mock():
+    var mock_bus = MockEventBus.new()
+    var system = MySystem.new(null, mock_bus)
+
+    mock_bus.score_changed.connect(system._on_score_changed)
+    mock_bus.request_score_add(50, "test")
+
+    assert_eq(system.last_score_update, 100)
+```
+
+---
+
+## Claude Code Slash Commands
+
+The project includes slash commands for common development tasks. These consolidate project management workflows from `project_tasks.md`.
+
+### Usage
+
+Type `/` followed by the command name in Claude Code:
+
+```
+/test-system DragAndDropManager
+/migrate-eventbus analytics.gd
+/run-tests
+/add-game-feature
+```
+
+### Available Commands
+
+**Testing:**
+- `/test-system` - Create unit tests for a system
+- `/test-integration` - Create integration tests for user flows
+- `/test-eventbus` - Create EventBus unit tests
+- `/run-tests` - Run GUT test suite
+
+**Architecture:**
+- `/migrate-eventbus` - Migrate to EventBus pattern
+- `/add-di-pattern` - Add dependency injection
+- `/fix-hardcoded-paths` - Remove hardcoded /root/ paths
+
+**Features:**
+- `/add-game-feature` - Add new gameplay feature
+- `/add-narrative-content` - Add Dialogic content
+- `/add-achievement` - Add Steam achievement
+- `/add-accessibility` - Add accessibility features
+- `/add-localization` - Add localization
+
+**Maintenance:**
+- `/fix-z-index` - Fix z-index layering
+- `/optimize-performance` - Optimize with pooling
+- `/steam-integration` - Debug Steam features
+- `/code-quality` - Run linting and formatting
+- `/update-docs` - Update documentation
+
+**See:** `.claude/commands/README.md` for complete command reference.
+
+---
+
 ## Quick Reference
 
 ### Adding a New Game System
@@ -751,10 +981,13 @@ See GDD section "Critical Debug Controls" for comprehensive keybinds:
 1. Create script in appropriate `scripts/systems/` subdirectory
 2. Use `class_name` for registration
 3. Add type hints to all variables and functions
-4. Implement unit tests in `tests/unit/`
-5. Document with `##` docstrings
-6. Consider signals for inter-system communication
-7. Register as autoload only if truly global
+4. **Use EventBus** for inter-system communication (not direct autoload access)
+5. **Use dependency injection** where needed for testability
+6. Implement unit tests in `tests/unit/`
+7. Document with `##` docstrings
+8. Register as autoload only if truly global
+
+**Use slash command:** `/add-game-feature` for guided implementation
 
 ### Adding a New Potato Type
 
@@ -778,14 +1011,18 @@ See GDD section "Critical Debug Controls" for comprehensive keybinds:
 
 **Core Principles:**
 1. **Type safety** - Use explicit types everywhere
-2. **Signal-driven** - Prefer events over polling
-3. **Composition** - Build from reusable components
-4. **Test coverage** - Unit test all core systems
-5. **Performance aware** - Pool objects, optimize _process()
-6. **Accessibility first** - Support all players
-7. **Steam integration** - Graceful fallbacks for offline play
+2. **EventBus-driven** - Use EventBus for inter-system communication
+3. **Dependency injection** - Reduce coupling to autoload singletons
+4. **Signal-driven** - Prefer events over polling
+5. **Composition** - Build from reusable components
+6. **Test coverage** - Unit test all core systems (target 80%)
+7. **Performance aware** - Pool objects, optimize _process()
+8. **Accessibility first** - Support all players
+9. **Steam integration** - Graceful fallbacks for offline play
 
 **Always Reference:**
+- **EventBus Migration Guide** (`docs/EVENTBUS_MIGRATION_GUIDE.md`) for architecture patterns
+- **Claude Code Commands** (`.claude/commands/`) for common tasks
 - Game Design Document for feature specifications
 - GUT test suite for expected behaviors
 - CI/CD pipeline requirements before committing
