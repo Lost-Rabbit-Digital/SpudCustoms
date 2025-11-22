@@ -55,6 +55,9 @@ signal shift_advance_requested()
 ## Emitted when shift/level advances
 signal shift_advanced(from_shift: int, to_shift: int)
 
+## Emitted to request story state advancement
+signal story_state_advance_requested()
+
 ## Emitted when shift stats are reset
 signal shift_stats_reset()
 
