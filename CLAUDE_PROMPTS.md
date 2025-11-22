@@ -14,27 +14,190 @@ This file contains actionable one-liner prompts you can copy and paste directly 
 Fix all hardcoded /root/ paths in the codebase by replacing them with EventBus events or @onready references with unique names
 ```
 
-### Migrate Remaining Files
+### Core System Migrations (High Priority)
 
+#### 1. Analytics System
 ```
-Migrate godot_project/scripts/level_list_manager.gd to use EventBus pattern instead of direct Global.advance_shift() calls
-```
-
-```
-Migrate godot_project/assets/autoload/NarrativeManager.gd to use EventBus pattern and GameStateManager instead of direct Global access
-```
-
-```
-Remove hardcoded /root/NarrativeManager paths from godot_project/assets/autoload/Global.gd lines 270, 306, and 470
+Migrate godot_project/scripts/core/analytics.gd to use EventBus and GameStateManager:
+- Replace all Global.score/strikes/shift reads with GameStateManager.get_*() methods
+- Subscribe to EventBus.score_changed, EventBus.strike_changed, EventBus.shift_advanced for analytics tracking
+- Use EventBus.analytics_event for emitting analytics data
+- Remove all direct Global property access (11 instances found)
 ```
 
+#### 2. Level List Manager
 ```
-Migrate godot_project/scripts/systems/ShiftSummaryScreen.gd to use EventBus and dependency injection instead of get_node("/root/SceneLoader")
+Migrate godot_project/scripts/level_list_manager.gd to use EventBus pattern:
+- Replace Global.advance_shift() calls with EventBus.shift_advance_requested.emit()
+- Subscribe to EventBus.shift_advanced for confirmation
+- Replace Global.game_mode reads with GameStateManager.get_game_mode()
+- Use GameStateManager.get_shift() instead of Global.shift
 ```
 
+#### 3. Main Game Scene
 ```
-Migrate godot_project/scripts/utils/cursor_manager.gd to use EventBus for NarrativeManager communication
+Migrate godot_project/scenes/game_scene/mainGame.gd to use EventBus and GameStateManager:
+- Replace 78 Global.* references with GameStateManager getters
+- Convert all Global.score/strikes mutations to EventBus.request_score_add() and EventBus.request_strike_add()
+- Subscribe to EventBus.game_over_triggered, EventBus.shift_advanced, EventBus.dialogue_started/ended
+- Remove direct Global property mutations
+- Use EventBus for UI updates instead of direct UI manipulation
 ```
+
+#### 4. Narrative Manager
+```
+Migrate godot_project/scripts/systems/NarrativeManager.gd to use EventBus and GameStateManager:
+- Replace all Global.game_mode checks with GameStateManager.get_game_mode()
+- Replace all Global.shift reads with GameStateManager.get_shift()
+- Already emits dialogue events - verify all dialogue lifecycle events use EventBus
+- Subscribe to EventBus.game_mode_changed and EventBus.shift_advanced
+```
+
+#### 5. Global.gd Hardcoded Paths
+```
+Remove hardcoded /root/NarrativeManager paths from godot_project/assets/autoload/Global.gd:
+- Line ~270: Replace get_node("/root/NarrativeManager") with EventBus.narrative_choices_save_requested.emit()
+- Line ~306: Replace get_node("/root/NarrativeManager") with EventBus.narrative_choices_load_requested.emit()
+- Line ~470: Replace get_node("/root/NarrativeManager") with EventBus signal subscription
+- Use get_node_or_null() pattern or EventBus for all cross-system communication
+```
+
+### UI System Migrations (Medium Priority)
+
+#### 6. Shift Summary Screen
+```
+Migrate godot_project/scripts/systems/ShiftSummaryScreen.gd to use EventBus and dependency injection:
+- Remove get_node("/root/SceneLoader") - use dependency injection or EventBus.scene_change_requested
+- Replace Global.shift reads with GameStateManager.get_shift()
+- Replace Global.score reads with GameStateManager.get_score()
+- Subscribe to EventBus.shift_advanced for shift completion updates
+```
+
+#### 7. Drag and Drop Manager
+```
+Migrate godot_project/scripts/utils/DragAndDropManager.gd to use dependency injection:
+- Remove get_node("/root/CursorManager") hardcoded path
+- Use @onready var cursor_manager reference or EventBus for cursor state changes
+- Emit EventBus.document_opened and EventBus.document_closed events
+- Subscribe to EventBus signals for drag state coordination
+```
+
+#### 8. Feedback Menu
+```
+Migrate godot_project/scripts/ui/FeedbackMenu.gd to use GameStateManager:
+- Replace Global.score reads with GameStateManager.get_score()
+- Replace Global.shift reads with GameStateManager.get_shift()
+- Use GameStateManager.get_game_mode() instead of Global.game_mode
+- Subscribe to EventBus.game_saved for save confirmation feedback
+```
+
+#### 9. Level Select Menu
+```
+Migrate godot_project/scenes/menus/level_select_menu/level_select_menu.gd to use EventBus:
+- Replace direct Global mutations with EventBus event emissions
+- Subscribe to EventBus.level_unlocked for UI updates
+- Use GameStateManager for reading current level/shift state
+- Emit EventBus.game_mode_changed when mode is selected
+```
+
+### Already Completed ✅
+
+```
+[DONE] Migrate godot_project/scripts/utils/cursor_manager.gd to use EventBus for NarrativeManager communication
+```
+
+---
+
+## 🎯 Quick Reference: Migration Priority Order
+
+Copy these prompts in order for systematic EventBus migration:
+
+**Phase 1 - Core Systems (Critical):**
+1. `analytics.gd` - 11 Global references, core metrics tracking
+2. `mainGame.gd` - 78 Global references, main game loop
+3. `level_list_manager.gd` - Shift progression logic
+4. `NarrativeManager.gd` - Partial migration needed
+5. `Global.gd` - Remove 3 hardcoded paths
+
+**Phase 2 - UI Systems (Important):**
+6. `ShiftSummaryScreen.gd` - End of shift UI
+7. `level_select_menu.gd` - Level selection UI
+8. `FeedbackMenu.gd` - User feedback form
+9. `DragAndDropManager.gd` - Document interaction
+
+**Estimated Total Work:** 4-6 hours for all migrations
+
+---
+
+## 📝 EventBus Migration Templates
+
+Use these templates to migrate any system to use EventBus. Replace `{FILE_PATH}` and `{SYSTEM_NAME}` with actual values.
+
+### Template 1: Migrate Single File to EventBus
+
+```
+Migrate {FILE_PATH} to use EventBus for {SYSTEM_NAME} communication
+```
+
+**Examples:**
+```
+Migrate godot_project/scripts/systems/StampSystem.gd to use EventBus for score and achievement communication
+```
+```
+Migrate godot_project/scripts/ui/PauseMenu.gd to use EventBus for game state changes
+```
+
+### Template 2: Remove Direct Global Access
+
+```
+Replace all direct Global.{property} access in {FILE_PATH} with GameStateManager getters and EventBus events
+```
+
+**Examples:**
+```
+Replace all direct Global.score and Global.strikes access in godot_project/scripts/systems/PotatoPerson.gd with GameStateManager getters and EventBus events
+```
+
+### Template 3: Remove Hardcoded Paths
+
+```
+Remove all hardcoded /root/{NodeName} paths from {FILE_PATH} and replace with EventBus subscriptions or dependency injection
+```
+
+**Examples:**
+```
+Remove all hardcoded /root/NarrativeManager paths from godot_project/assets/autoload/Global.gd and replace with EventBus subscriptions
+```
+
+### Template 4: Full System Refactor
+
+```
+Refactor {FILE_PATH} to follow EventBus pattern:
+1. Remove direct Global mutations
+2. Replace with EventBus.request_* emissions
+3. Subscribe to relevant EventBus signals in _ready()
+4. Use GameStateManager for state reads
+```
+
+**Examples:**
+```
+Refactor godot_project/scripts/systems/RunnerSpawner.gd to follow EventBus pattern:
+1. Remove direct Global mutations
+2. Replace with EventBus.request_* emissions
+3. Subscribe to relevant EventBus signals in _ready()
+4. Use GameStateManager for state reads
+```
+
+### Migration Checklist Template
+
+When migrating a file, ensure:
+- [ ] No direct references to `Global.{mutable_property}`
+- [ ] No `get_node("/root/...")` calls
+- [ ] Emits events instead of mutating state
+- [ ] Subscribes to EventBus signals in `_ready()`
+- [ ] Uses `GameStateManager.get_*()` for state reads
+- [ ] Includes metadata in event emissions
+- [ ] Tests updated to use EventBus mocking
 
 ---
 
@@ -238,12 +401,17 @@ Update docs/EVENTBUS_MIGRATION_GUIDE.md to mark analytics.gd as completed and up
 
 ## 🎯 Recommended Execution Order
 
-### Phase 1: Complete EventBus Migration (1-2 hours)
-1. Fix all hardcoded /root/ paths
-2. Migrate level_list_manager.gd
-3. Migrate NarrativeManager.gd
-4. Migrate ShiftSummaryScreen.gd
-5. Update EventBus migration guide
+### Phase 1: Complete EventBus Migration (4-6 hours)
+1. Analytics System (30 min) - Core metrics tracking
+2. Main Game Scene (2 hours) - Most complex, 78 Global references
+3. Level List Manager (30 min) - Shift progression
+4. Narrative Manager (45 min) - Finalize dialogue integration
+5. Global.gd paths (30 min) - Remove hardcoded NarrativeManager paths
+6. Shift Summary Screen (30 min) - End-of-shift UI
+7. Level Select Menu (30 min) - Menu system
+8. Feedback Menu (15 min) - Simple form
+9. Drag and Drop Manager (30 min) - Document handling
+10. Update EventBus migration guide (15 min)
 
 ### Phase 2: Test Coverage (2-3 hours)
 1. Create TutorialManager tests
@@ -297,6 +465,11 @@ Example:
 
 ---
 
-**Total Estimated Time:** 7-11 hours to complete all prompts
-**Current Progress:** EventBus architecture 70% migrated, 125+ tests created
-**Next Priority:** Complete EventBus migration (Phase 1)
+**Total Estimated Time:** 11-17 hours to complete all prompts
+**Current Progress:** EventBus architecture 70% migrated, 125+ tests created, cursor_manager.gd ✅
+**Next Priority:** Complete EventBus migration (9 systems remaining)
+
+**EventBus Migration Status:**
+- ✅ Completed: cursor_manager.gd, BorderRunnerSystem.gd (partial), GameStateManager.gd
+- 🔄 In Progress: 0 systems
+- ⏳ Remaining: 9 systems (analytics, mainGame, level_list_manager, NarrativeManager, Global, ShiftSummaryScreen, level_select_menu, FeedbackMenu, DragAndDropManager)
