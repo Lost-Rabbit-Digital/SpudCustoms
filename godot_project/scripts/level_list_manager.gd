@@ -215,13 +215,10 @@ func transition_to_next_shift():
 		await narrative_manager.end_dialogue_finished
 
 	# REFACTORED: Request shift advancement via EventBus instead of calling Global directly
-	if EventBus:
-		EventBus.shift_advance_requested.emit()
-	else:
-		# Fallback for when EventBus is not available
-		Global.advance_shift()
+	EventBus.shift_advance_requested.emit()
 
-	Global.advance_story_state()
+	# REFACTORED: Request story state advancement via EventBus
+	EventBus.story_state_advance_requested.emit()
 
 	# Get the new shift value
 	var new_shift = 0

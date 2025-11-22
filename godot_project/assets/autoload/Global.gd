@@ -48,6 +48,7 @@ func _ready():
 	# Connect to EventBus signals
 	if EventBus:
 		EventBus.shift_advance_requested.connect(_on_shift_advance_requested)
+		EventBus.story_state_advance_requested.connect(_on_story_state_advance_requested)
 
 	# Load difficulty from Config instead of saved game state
 	difficulty_level = Config.get_config("GameSettings", "Difficulty", "Normal")
@@ -81,6 +82,11 @@ func _ready():
 func _on_shift_advance_requested() -> void:
 	"""Handle shift advancement via EventBus"""
 	advance_shift()
+
+
+func _on_story_state_advance_requested() -> void:
+	"""Handle story state advancement via EventBus"""
+	advance_story_state()
 
 
 func _process(delta: float) -> void:
