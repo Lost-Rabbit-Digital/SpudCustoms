@@ -158,6 +158,18 @@ func animate_lever(to_up: bool):
 		push_warning("lever_sprite is null")
 		return
 
+	# ADDED: Play lever pull SFX
+	# Create a temporary audio player for the lever click sound
+	var lever_sfx = AudioStreamPlayer2D.new()
+	add_child(lever_sfx)
+	lever_sfx.stream = preload("res://assets/office_shutter/shutter_open.mp3")  # TODO: Replace with dedicated lever SFX
+	lever_sfx.volume_db = -5  # Slightly quieter than shutter
+	lever_sfx.pitch_scale = 1.5  # Higher pitch for lever click
+	lever_sfx.bus = "SFX"
+	lever_sfx.play()
+	# Clean up after sound finishes
+	lever_sfx.finished.connect(func(): lever_sfx.queue_free())
+
 	# Stop any existing animation
 	lever_sprite.stop()
 

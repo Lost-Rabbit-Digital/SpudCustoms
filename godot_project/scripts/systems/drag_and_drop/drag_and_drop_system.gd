@@ -505,11 +505,15 @@ func _return_item_to_table(item: Node2D):
 	# Get item size using the utility method
 	var item_size = get_item_size(item)
 
-	# Find the nearest valid position
-	var target_position = find_nearest_table_position(item.global_position, item_size)
+	# FIXED: Apply random variation BEFORE clamping to ensure position stays within bounds
+	# Add some randomness to the drop position for visual variety
+	var varied_position = item.global_position + Vector2(
+		randf_range(-40, 40),
+		randf_range(-40, 40)
+	)
 
-	target_position.y += randi_range(-75, 75)
-	target_position.x += randi_range(-75, 75)
+	# Find the nearest valid position (this will clamp to table bounds)
+	var target_position = find_nearest_table_position(varied_position, item_size)
 
 	# Create a tween for position
 	var tween = create_tween()
@@ -544,6 +548,9 @@ func _return_item_to_table(item: Node2D):
 		func():
 			# Force exact scale restoration
 			item.scale = original_scale
+			# FIXED: Reset cursor after return animation completes
+			if cursor_manager:
+				cursor_manager.update_cursor("default")
 			# Open the document when it returns to the table
 			#if is_openable_document(item):
 			#emit_signal("item_opened", item)
