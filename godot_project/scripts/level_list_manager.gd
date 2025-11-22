@@ -214,8 +214,13 @@ func transition_to_next_shift():
 		narrative_manager.start_level_end_dialogue(current_shift)
 		await narrative_manager.end_dialogue_finished
 
-	# Update global state for next shift
-	Global.advance_shift()
+	# REFACTORED: Request shift advancement via EventBus instead of calling Global directly
+	if EventBus:
+		EventBus.shift_advance_requested.emit()
+	else:
+		# Fallback for when EventBus is not available
+		Global.advance_shift()
+
 	Global.advance_story_state()
 
 	# Get the new shift value
@@ -225,7 +230,7 @@ func transition_to_next_shift():
 	else:
 		new_shift = Global.shift
 
-	# REFACTORED: Emit shift advanced event
+	# REFACTORED: Emit shift advanced notification event
 	if EventBus:
 		EventBus.shift_advanced.emit(current_shift, new_shift)
 		EventBus.save_game_requested.emit()

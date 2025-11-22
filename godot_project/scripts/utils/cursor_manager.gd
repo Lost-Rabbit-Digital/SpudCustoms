@@ -39,10 +39,18 @@ var input_pressed: bool = false
 var active: bool = true
 var missile_zone_callback: Callable
 
+# Track dialogue state via EventBus
+var is_in_dialogue: bool = false
+
 
 func _ready():
 	# Set initial cursor
 	update_cursor("default")
+
+	# Connect to EventBus for dialogue state tracking
+	if EventBus:
+		EventBus.dialogue_started.connect(_on_dialogue_started)
+		EventBus.dialogue_ended.connect(_on_dialogue_ended)
 
 	# Connect to UI input signals system-wide
 	var tree = get_tree()
@@ -54,16 +62,20 @@ func _ready():
 			_connect_buttons_in_node(tree.current_scene)
 
 
+func _on_dialogue_started(_timeline_name: String) -> void:
+	is_in_dialogue = true
+
+
+func _on_dialogue_ended(_timeline_name: String) -> void:
+	is_in_dialogue = false
+
+
 func _process(_delta):
 	if not active:
 		return
 
 	# Skip cursor updates if game is paused or in dialogue
 	var is_paused = get_tree().paused
-	var is_in_dialogue = false
-	var narrative_manager = get_node_or_null("/root/NarrativeManager")
-	if narrative_manager and narrative_manager.has_method("is_dialogue_active"):
-		is_in_dialogue = narrative_manager.is_dialogue_active()
 
 	if is_paused or is_in_dialogue:
 		return

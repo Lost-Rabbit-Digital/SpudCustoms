@@ -45,6 +45,10 @@ signal high_score_achieved(difficulty: String, score: int)
 
 
 func _ready():
+	# Connect to EventBus signals
+	if EventBus:
+		EventBus.shift_advance_requested.connect(_on_shift_advance_requested)
+
 	# Load difficulty from Config instead of saved game state
 	difficulty_level = Config.get_config("GameSettings", "Difficulty", "Normal")
 	# Initialize settings based on difficulty
@@ -72,6 +76,11 @@ func _ready():
 
 	# Start playtime tracking
 	session_start_time = Time.get_ticks_msec() / 1000.0
+
+
+func _on_shift_advance_requested() -> void:
+	"""Handle shift advancement via EventBus"""
+	advance_shift()
 
 
 func _process(delta: float) -> void:
@@ -261,21 +270,15 @@ func save_game_state():
 		"total_playtime": total_playtime,
 	}
 
-	# REFACTORED: Request narrative choices save via EventBus
-	# NarrativeManager will respond if it exists
+	# REFACTORED: Use EventBus for narrative choices
+	# Capture narrative choices using Global's built-in method
+	# NarrativeManager (if present in scene) can override these via EventBus
+	capture_narrative_choices()
+	data["narrative_choices"] = narrative_choices
+
+	# Emit EventBus event for any scene-based narrative managers to update choices
 	if EventBus:
 		EventBus.narrative_choices_save_requested.emit()
-
-	# Save narrative choices from NarrativeManager (authoritative source)
-	var narrative_manager = get_node_or_null("/root/NarrativeManager")
-	if narrative_manager and narrative_manager.has_method("save_narrative_choices"):
-		data["narrative_choices"] = narrative_manager.save_narrative_choices()
-		# Keep a copy in Global for backward compatibility
-		narrative_choices = data["narrative_choices"]
-	else:
-		# Fallback: use Global's capture method if NarrativeManager doesn't exist
-		capture_narrative_choices()
-		data["narrative_choices"] = narrative_choices
 
 	SaveManager.save_game_state(data)
 
@@ -299,13 +302,9 @@ func load_game_state():
 		total_playtime = data.get("total_playtime", 0.0)
 
 		# REFACTORED: Emit event for narrative choices loading
+		# NarrativeManager (if present in scene) will respond to this event
 		if EventBus and data.has("narrative_choices"):
 			EventBus.narrative_choices_load_requested.emit(data.get("narrative_choices", {}))
-
-		# Load narrative choices if NarrativeManager exists (backward compatibility)
-		var narrative_manager = get_node_or_null("/root/NarrativeManager")
-		if narrative_manager and narrative_manager.has_method("load_narrative_choices") and data.has("narrative_choices"):
-			narrative_manager.load_narrative_choices(data.get("narrative_choices", {}))
 
 
 # Modify get_high_score to be more flexible
@@ -463,19 +462,13 @@ func _restore_narrative_choices_deferred():
 		return
 
 	# REFACTORED: Emit event for narrative choices loading
+	# NarrativeManager (if present in scene) will respond to this event
 	if EventBus:
 		EventBus.narrative_choices_load_requested.emit(narrative_choices)
+		print("Requested narrative choices load via EventBus: ", narrative_choices.size(), " choices")
 
-	# Restore narrative choices via NarrativeManager if available, otherwise via Global
-	var narrative_manager = get_node_or_null("/root/NarrativeManager")
-	if narrative_manager and narrative_manager.has_method("load_narrative_choices"):
-		narrative_manager.load_narrative_choices(narrative_choices)
-		print(
-			"Loaded narrative choices via NarrativeManager: ", narrative_choices.size(), " choices"
-		)
-	else:
-		# Fallback: restore via Global if NarrativeManager doesn't exist yet
-		restore_narrative_choices()
+	# Fallback: restore via Global's built-in method
+	restore_narrative_choices()
 
 
 func restore_narrative_choices():

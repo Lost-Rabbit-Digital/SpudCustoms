@@ -41,8 +41,8 @@ var office_shutter = null
 ## Gets references to autoloaded singletons and initializes the core
 ## drag and drop system, connecting necessary signals.
 func _ready():
-	# Get reference to cursor manager autoload
-	cursor_manager = get_node_or_null("/root/CursorManager")
+	# REFACTORED: Direct reference to CursorManager autoload
+	cursor_manager = CursorManager
 	if not cursor_manager:
 		push_warning("CursorManager autoload not found. Document hover effects won't work.")
 
