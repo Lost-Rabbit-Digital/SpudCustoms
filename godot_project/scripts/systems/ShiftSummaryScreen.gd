@@ -15,7 +15,6 @@ var submission_retry_count = 0
 var max_submission_retries = 3
 
 @onready var animation_player = $AnimationPlayer
-@onready var scene_loader = SceneLoader  # SceneLoader is an autoload
 
 
 func _init():
@@ -776,11 +775,9 @@ func _on_day_transition_complete():
 	# Saving current game state
 	GlobalState.save()
 
+	# REFACTORED: Use get_tree() directly instead of SceneLoader dependency
 	# Reload the game scene
-	if SceneLoader:
-		SceneLoader.reload_current_scene()
-	else:
-		get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
+	get_tree().reload_current_scene()
 
 
 func check_demo_limit() -> bool:
@@ -810,12 +807,9 @@ func _handle_scene_transition(scene_path: String) -> void:
 	var timer = get_tree().create_timer(0.1)
 	await timer.timeout
 
-	# REFACTORED: Use @onready scene_loader reference (SceneLoader is an autoload)
-	if scene_loader and scene_loader.has_method("load_scene"):
-		scene_loader.load_scene(scene_path)
-	else:
-		# Direct scene transition fallback
-		get_tree().change_scene_to_file(scene_path)
+	# REFACTORED: Use get_tree() directly instead of SceneLoader dependency
+	# This eliminates coupling to the SceneLoader autoload
+	get_tree().change_scene_to_file(scene_path)
 
 
 func transition_to_scene(scene_path: String):

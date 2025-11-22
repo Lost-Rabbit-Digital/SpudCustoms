@@ -64,6 +64,9 @@ signal shift_stats_reset()
 ## Emitted when quota target is updated
 signal quota_updated(new_target: int, current_met: int)
 
+## Emitted to request unlocking a level
+signal level_unlock_requested(level_id: int)
+
 ## Emitted when a level is unlocked
 signal level_unlocked(level_id: int)
 
