@@ -50,22 +50,16 @@ func _ready():
 	_connect_to_event_bus()
 
 	# Skip initialization in score attack mode
-	var game_mode = "score_attack"
-	if GameStateManager:
-		game_mode = GameStateManager.get_game_mode()
-	elif Global:
-		game_mode = Global.game_mode
+	if not GameStateManager:
+		push_error("NarrativeManager: GameStateManager not available")
+		return
 
+	var game_mode = GameStateManager.get_game_mode()
 	if game_mode == "score_attack":
 		return
 
 	# Initialize dialogic and load dialogue for appropriate shift
-	var shift = 0
-	if GameStateManager:
-		shift = GameStateManager.get_shift()
-	else:
-		shift = Global.shift
-
+	var shift = GameStateManager.get_shift()
 	start_level_dialogue(shift)
 	# Make it impossible to pause the narrative manager
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -92,25 +86,18 @@ func _on_save_narrative_choices_requested() -> void:
 
 
 func start_level_dialogue(level_id: int):
-	# Check game mode - prefer GameStateManager
-	var game_mode = "score_attack"
-	if GameStateManager:
-		game_mode = GameStateManager.get_game_mode()
-	elif Global:
-		game_mode = Global.game_mode
+	# Check game mode
+	if not GameStateManager:
+		push_error("NarrativeManager: GameStateManager not available")
+		return
 
+	var game_mode = GameStateManager.get_game_mode()
 	if game_mode == "score_attack":
 		return
+
 	# Return if already in dialogue
 	if dialogue_active:
 		return
-
-	# Skip in score attack mode
-	print("Game mode is:", game_mode)
-	if game_mode == "score_attack":
-		print("score_attack detected")
-		#_on_skip_button_pressed()
-		#pass
 
 	dialogue_active = true
 	var skip_button_layer = create_skip_button()
@@ -128,13 +115,12 @@ func start_level_dialogue(level_id: int):
 
 
 func start_level_end_dialogue(level_id: int):
-	# Check game mode - prefer GameStateManager
-	var game_mode = "score_attack"
-	if GameStateManager:
-		game_mode = GameStateManager.get_game_mode()
-	elif Global:
-		game_mode = Global.get("game_mode")
+	# Check game mode
+	if not GameStateManager:
+		push_error("NarrativeManager: GameStateManager not available")
+		return
 
+	var game_mode = GameStateManager.get_game_mode()
 	if game_mode == "score_attack":
 		return
 
@@ -178,8 +164,6 @@ func _on_end_dialogue_finished():
 		EventBus.dialogue_ended.emit("end_dialogue")
 		EventBus.save_game_requested.emit()
 
-	# Save game state (which will capture narrative choices via NarrativeManager)
-	Global.save_game_state()
 	emit_signal("end_dialogue_finished")
 
 
@@ -271,10 +255,11 @@ func start_final_confrontation():
 
 func _on_intro_dialogue_finished():
 	dialogue_active = false
-	Global.advance_story_state()  # Will set to INTRO_COMPLETE
 
-	# REFACTORED: Emit story state changed event
-	if EventBus:
+	# Request to unlock next level via EventBus
+	if EventBus and GameStateManager:
+		EventBus.level_unlock_requested.emit(GameStateManager.get_shift() + 1)
+		# TODO: Migrate story_state management to GameStateManager
 		EventBus.story_state_changed.emit(Global.current_story_state)
 		EventBus.dialogue_ended.emit("intro_dialogue")
 
@@ -288,10 +273,10 @@ func _on_shift_dialogue_finished():
 	dialogue_active = false
 	current_shift += 1
 
-	Global.advance_story_state()
-
-	# REFACTORED: Emit story state changed event
-	if EventBus:
+	# Request to unlock next level via EventBus
+	if EventBus and GameStateManager:
+		EventBus.level_unlock_requested.emit(GameStateManager.get_shift() + 1)
+		# TODO: Migrate story_state management to GameStateManager
 		EventBus.story_state_changed.emit(Global.current_story_state)
 		EventBus.dialogue_ended.emit("shift_dialogue")
 
@@ -302,10 +287,10 @@ func _on_shift_dialogue_finished():
 func _on_final_dialogue_finished():
 	dialogue_active = false
 
-	Global.advance_story_state()  # Will set to COMPLETED
-
-	# REFACTORED: Emit story state changed event
-	if EventBus:
+	# Request to unlock next level via EventBus
+	if EventBus and GameStateManager:
+		EventBus.level_unlock_requested.emit(GameStateManager.get_shift() + 1)
+		# TODO: Migrate story_state management to GameStateManager
 		EventBus.story_state_changed.emit(Global.current_story_state)
 		EventBus.dialogue_ended.emit("final_dialogue")
 

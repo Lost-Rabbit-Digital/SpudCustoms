@@ -283,3 +283,413 @@ func _on_save_completed(success: bool) -> void:
 func _on_load_completed(success: bool) -> void:
 	test_load_completed_called = true
 	last_load_success = success
+
+
+# ==================== SAVE_LEVEL_PROGRESS WITH HIGHSCORES TESTS ====================
+
+
+func test_save_level_progress_with_empty_highscores() -> void:
+	var result = save_manager.save_level_progress(5, 3, {})
+	assert_true(result, "Should succeed with empty highscores dictionary")
+
+	var max_level = save_manager.get_max_level_reached()
+	assert_eq(max_level, 5, "Max level should be saved")
+
+
+func test_save_level_progress_with_level_highscores() -> void:
+	var level_scores = {1: {"Easy": 100, "Normal": 200}}
+	var result = save_manager.save_level_progress(5, 3, level_scores)
+	assert_true(result, "Should succeed with level highscores")
+
+	# Verify the data was saved
+	var game_state = save_manager.load_game_state()
+	assert_true(game_state.has("level_highscores"), "Should have level_highscores key")
+
+
+func test_save_level_progress_converts_integer_keys_to_strings() -> void:
+	var level_scores = {1: {"Normal": 300}, 2: {"Expert": 400}}
+	save_manager.save_level_progress(5, 3, level_scores)
+
+	var game_state = save_manager.load_game_state()
+	var level_highscores = game_state.get("level_highscores", {})
+
+	assert_true(level_highscores.has("1"), "Should convert integer key 1 to string '1'")
+	assert_true(level_highscores.has("2"), "Should convert integer key 2 to string '2'")
+	assert_false(level_highscores.has(1), "Should not have integer key 1")
+	assert_false(level_highscores.has(2), "Should not have integer key 2")
+
+
+func test_save_level_progress_merges_with_existing_highscores() -> void:
+	# Save initial highscores
+	save_manager.save_level_high_score(1, "Easy", 100)
+
+	# Save level progress with additional highscores
+	var level_scores = {2: {"Normal": 200}}
+	save_manager.save_level_progress(5, 3, level_scores)
+
+	# Both should exist
+	assert_eq(save_manager.get_level_high_score(1, "Easy"), 100, "Original highscore should be preserved")
+	var game_state = save_manager.load_game_state()
+	assert_true(game_state["level_highscores"].has("2"), "New level highscore should be added")
+
+
+func test_save_level_progress_updates_current_level() -> void:
+	save_manager.save_level_progress(10, 7, {})
+	var current = save_manager.get_current_level()
+	assert_eq(current, 7, "Current level should be updated correctly")
+
+	save_manager.save_level_progress(10, 9, {})
+	current = save_manager.get_current_level()
+	assert_eq(current, 9, "Current level should be updated to new value")
+
+
+# ==================== RESET WITH KEEP_HIGH_SCORES TESTS ====================
+
+
+func test_reset_all_game_data_keeps_high_scores_when_true() -> void:
+	# Save some high scores
+	var high_scores = {"Easy": 500, "Normal": 750, "Expert": 1000}
+	save_manager.save_high_scores(high_scores)
+
+	# Reset with keep_high_scores = true
+	save_manager.reset_all_game_data(true)
+
+	# Load and verify high scores are preserved in the game state
+	var game_state = save_manager.load_game_state()
+	var preserved_scores = game_state.get("high_scores", {})
+
+	assert_eq(preserved_scores.get("Easy"), 500, "Easy high score should be kept")
+	assert_eq(preserved_scores.get("Normal"), 750, "Normal high score should be kept")
+	assert_eq(preserved_scores.get("Expert"), 1000, "Expert high score should be kept")
+
+
+func test_reset_all_game_data_clears_level_progress_but_keeps_scores() -> void:
+	# Save level progress and scores
+	save_manager.save_level_progress(10, 8, {})
+	save_manager.save_high_scores({"Easy": 300})
+
+	# Reset with keep_high_scores = true
+	save_manager.reset_all_game_data(true)
+
+	# Level progress should be reset
+	assert_eq(save_manager.get_max_level_reached(), 0, "Max level should be reset")
+	assert_eq(save_manager.get_current_level(), 0, "Current level should be reset")
+
+	# High scores should be kept
+	var game_state = save_manager.load_game_state()
+	var scores = game_state.get("high_scores", {})
+	assert_eq(scores.get("Easy"), 300, "High scores should be preserved")
+
+
+func test_reset_all_game_data_initializes_all_fields() -> void:
+	save_manager.reset_all_game_data(false)
+	var game_state = save_manager.load_game_state()
+
+	# Verify all expected fields exist with correct defaults
+	assert_eq(game_state.get("shift"), 0, "Shift should be 0")
+	assert_eq(game_state.get("current_level"), 0, "Current level should be 0")
+	assert_eq(game_state.get("max_level_reached"), 0, "Max level reached should be 0")
+	assert_eq(game_state.get("final_score"), 0, "Final score should be 0")
+	assert_eq(game_state.get("quota_met"), 0, "Quota met should be 0")
+	assert_eq(game_state.get("quota_target"), 8, "Quota target should be 8")
+	assert_eq(game_state.get("difficulty_level"), "Normal", "Difficulty should be Normal")
+	assert_eq(game_state.get("story_state"), 0, "Story state should be 0")
+	assert_eq(game_state.get("total_shifts_completed"), 0, "Total shifts should be 0")
+	assert_eq(game_state.get("total_runners_stopped"), 0, "Total runners should be 0")
+	assert_eq(game_state.get("perfect_hits"), 0, "Perfect hits should be 0")
+
+	# Verify dictionaries are initialized
+	assert_not_null(game_state.get("level_highscores"), "Level highscores should exist")
+	assert_not_null(game_state.get("current_game_stats"), "Current game stats should exist")
+	assert_not_null(game_state.get("narrative_choices"), "Narrative choices should exist")
+
+
+# ==================== DATA PERSISTENCE TESTS ====================
+
+
+func test_multiple_saves_persist_latest_data() -> void:
+	save_manager.save_game_state({"value": 1})
+	save_manager.save_game_state({"value": 2})
+	save_manager.save_game_state({"value": 3})
+
+	var loaded = save_manager.load_game_state()
+	assert_eq(loaded.get("value"), 3, "Latest save should be persisted")
+
+
+func test_complex_nested_data_persists() -> void:
+	var complex_data = {
+		"level": 5,
+		"stats": {"health": 100, "mana": 50},
+		"inventory": [{"id": 1, "name": "sword"}, {"id": 2, "name": "shield"}],
+		"flags": {"tutorial_complete": true, "boss_defeated": false}
+	}
+
+	save_manager.save_game_state(complex_data)
+	var loaded = save_manager.load_game_state()
+
+	assert_eq(loaded.get("level"), 5, "Level should be preserved")
+	assert_eq(loaded["stats"]["health"], 100, "Nested stats should be preserved")
+	assert_eq(loaded["inventory"][0]["name"], "sword", "Array items should be preserved")
+	assert_eq(loaded["flags"]["tutorial_complete"], true, "Boolean flags should be preserved")
+
+
+func test_empty_dictionary_can_be_saved_and_loaded() -> void:
+	save_manager.save_game_state({})
+	var loaded = save_manager.load_game_state()
+	assert_typeof(loaded, TYPE_DICTIONARY, "Empty dictionary should load as dictionary")
+
+
+func test_large_dictionary_persists() -> void:
+	var large_data = {}
+	for i in range(100):
+		large_data["key_" + str(i)] = "value_" + str(i)
+
+	save_manager.save_game_state(large_data)
+	var loaded = save_manager.load_game_state()
+
+	assert_eq(loaded.size(), 100, "All 100 keys should be preserved")
+	assert_eq(loaded.get("key_50"), "value_50", "Random key should have correct value")
+
+
+# ==================== EDGE CASES AND ERROR HANDLING TESTS ====================
+
+
+func test_get_level_high_score_with_string_level_key() -> void:
+	# Manually save with string key to test string handling
+	var game_state = save_manager.load_game_state()
+	game_state["level_highscores"] = {"5": {"Normal": 250}}
+	save_manager.save_game_state(game_state)
+
+	# Should work with integer level parameter
+	var score = save_manager.get_level_high_score(5, "Normal")
+	assert_eq(score, 250, "Should retrieve score with integer level when key is string")
+
+
+func test_save_level_high_score_with_zero_score() -> void:
+	# First save a positive score
+	save_manager.save_level_high_score(1, "Easy", 100)
+
+	# Try to save zero score (should not update)
+	save_manager.save_level_high_score(1, "Easy", 0)
+
+	var score = save_manager.get_level_high_score(1, "Easy")
+	assert_eq(score, 100, "Zero score should not replace positive score")
+
+
+func test_save_level_high_score_with_negative_score() -> void:
+	save_manager.save_level_high_score(1, "Normal", 100)
+	save_manager.save_level_high_score(1, "Normal", -50)
+
+	var score = save_manager.get_level_high_score(1, "Normal")
+	assert_eq(score, 100, "Negative score should not replace positive score")
+
+
+func test_load_game_state_with_no_existing_file() -> void:
+	# Reset first to clear any existing data
+	save_manager.reset_all_game_data(false)
+
+	# Delete the save file
+	if FileAccess.file_exists(save_manager.GAMESTATE_SAVE_PATH):
+		DirAccess.remove_absolute(save_manager.GAMESTATE_SAVE_PATH)
+
+	var loaded = save_manager.load_game_state()
+	assert_typeof(loaded, TYPE_DICTIONARY, "Should return dictionary even with no file")
+	assert_eq(loaded.size(), 0, "Should return empty dictionary when no file exists")
+
+
+func test_load_high_scores_with_no_existing_file() -> void:
+	# Delete the high scores file if it exists
+	if FileAccess.file_exists(save_manager.HIGHSCORES_SAVE_PATH):
+		DirAccess.remove_absolute(save_manager.HIGHSCORES_SAVE_PATH)
+
+	var scores = save_manager.load_high_scores()
+	assert_typeof(scores, TYPE_DICTIONARY, "Should return dictionary")
+	assert_eq(scores.get("Easy"), 0, "Default Easy score should be 0")
+	assert_eq(scores.get("Normal"), 0, "Default Normal score should be 0")
+	assert_eq(scores.get("Expert"), 0, "Default Expert score should be 0")
+
+
+func test_save_level_high_score_initializes_missing_structures() -> void:
+	# Start with fresh state
+	save_manager.reset_all_game_data(false)
+
+	# Manually remove level_highscores
+	var game_state = save_manager.load_game_state()
+	game_state.erase("level_highscores")
+	game_state.erase("global_highscores")
+	save_manager.save_game_state(game_state)
+
+	# Should still work and initialize structures
+	var result = save_manager.save_level_high_score(1, "Normal", 500)
+	assert_true(result, "Should succeed even with missing structures")
+
+	var score = save_manager.get_level_high_score(1, "Normal")
+	assert_eq(score, 500, "Score should be saved after initialization")
+
+
+# ==================== SIGNAL EMISSION TESTS ====================
+
+
+func test_load_completed_signal_emits_true_on_success() -> void:
+	# Save some data first
+	save_manager.save_game_state({"test": "data"})
+
+	save_manager.load_completed.connect(_on_load_completed)
+	save_manager.load_game_state()
+	await get_tree().process_frame
+
+	assert_true(test_load_completed_called, "load_completed signal should be emitted")
+	assert_true(last_load_success, "Signal should indicate success when file exists")
+
+
+func test_load_completed_signal_emits_false_on_no_file() -> void:
+	# Delete save file
+	if FileAccess.file_exists(save_manager.GAMESTATE_SAVE_PATH):
+		DirAccess.remove_absolute(save_manager.GAMESTATE_SAVE_PATH)
+
+	save_manager.load_completed.connect(_on_load_completed)
+	save_manager.load_game_state()
+	await get_tree().process_frame
+
+	assert_true(test_load_completed_called, "load_completed signal should be emitted")
+	assert_false(last_load_success, "Signal should indicate failure when file doesn't exist")
+
+
+# ==================== MULTIPLE DIFFICULTY LEVELS TESTS ====================
+
+
+func test_all_difficulty_levels_independent() -> void:
+	var difficulties = ["Easy", "Normal", "Expert"]
+	var scores = [100, 200, 300]
+
+	for i in range(difficulties.size()):
+		save_manager.save_level_high_score(1, difficulties[i], scores[i])
+
+	for i in range(difficulties.size()):
+		var score = save_manager.get_level_high_score(1, difficulties[i])
+		assert_eq(score, scores[i], "Each difficulty should maintain independent scores")
+
+
+func test_global_high_scores_per_difficulty() -> void:
+	save_manager.save_level_high_score(1, "Easy", 500)
+	save_manager.save_level_high_score(2, "Normal", 750)
+	save_manager.save_level_high_score(3, "Expert", 1000)
+
+	assert_eq(save_manager.get_global_high_score("Easy"), 500, "Easy global score")
+	assert_eq(save_manager.get_global_high_score("Normal"), 750, "Normal global score")
+	assert_eq(save_manager.get_global_high_score("Expert"), 1000, "Expert global score")
+
+
+# ==================== BOUNDARY VALUE TESTS ====================
+
+
+func test_save_level_progress_with_max_level_zero() -> void:
+	var result = save_manager.save_level_progress(0, 0, {})
+	assert_true(result, "Should handle zero max level")
+	assert_eq(save_manager.get_max_level_reached(), 0, "Zero max level should be valid")
+
+
+func test_save_level_high_score_very_large_score() -> void:
+	var large_score = 999999999
+	save_manager.save_level_high_score(1, "Normal", large_score)
+	var retrieved = save_manager.get_level_high_score(1, "Normal")
+	assert_eq(retrieved, large_score, "Should handle very large scores")
+
+
+func test_many_levels_high_scores() -> void:
+	# Test with many levels
+	for level in range(1, 51):
+		save_manager.save_level_high_score(level, "Normal", level * 100)
+
+	# Verify a few random ones
+	assert_eq(save_manager.get_level_high_score(1, "Normal"), 100, "Level 1 score")
+	assert_eq(save_manager.get_level_high_score(25, "Normal"), 2500, "Level 25 score")
+	assert_eq(save_manager.get_level_high_score(50, "Normal"), 5000, "Level 50 score")
+
+
+# ==================== CONCURRENT OPERATIONS TESTS ====================
+
+
+func test_rapid_save_operations() -> void:
+	# Simulate rapid saves
+	for i in range(10):
+		save_manager.save_game_state({"iteration": i})
+
+	var loaded = save_manager.load_game_state()
+	assert_eq(loaded.get("iteration"), 9, "Last save should win in rapid operations")
+
+
+func test_interleaved_save_and_load() -> void:
+	save_manager.save_game_state({"value": 1})
+	var loaded1 = save_manager.load_game_state()
+
+	save_manager.save_game_state({"value": 2})
+	var loaded2 = save_manager.load_game_state()
+
+	save_manager.save_game_state({"value": 3})
+	var loaded3 = save_manager.load_game_state()
+
+	assert_eq(loaded1.get("value"), 1, "First load should get first value")
+	assert_eq(loaded2.get("value"), 2, "Second load should get second value")
+	assert_eq(loaded3.get("value"), 3, "Third load should get third value")
+
+
+# ==================== DATA INTEGRITY TESTS ====================
+
+
+func test_save_does_not_modify_original_dictionary() -> void:
+	var original = {"key": "value", "number": 42}
+	var original_size = original.size()
+
+	save_manager.save_game_state(original)
+
+	assert_eq(original.size(), original_size, "Original dictionary should not be modified")
+	assert_eq(original.get("key"), "value", "Original values should be unchanged")
+
+
+func test_level_high_score_does_not_update_on_equal_score() -> void:
+	save_manager.save_level_high_score(1, "Normal", 500)
+	var result = save_manager.save_level_high_score(1, "Normal", 500)
+
+	# Should return true but not actually update
+	assert_true(result, "Should return true when score is equal")
+	var score = save_manager.get_level_high_score(1, "Normal")
+	assert_eq(score, 500, "Score should remain the same")
+
+
+func test_global_high_score_only_updates_when_higher() -> void:
+	save_manager.save_level_high_score(1, "Normal", 500)
+	save_manager.save_level_high_score(2, "Normal", 300)
+
+	var global_score = save_manager.get_global_high_score("Normal")
+	assert_eq(global_score, 500, "Global score should be the highest, not the latest")
+
+
+# ==================== SPECIAL CHARACTERS AND STRINGS TESTS ====================
+
+
+func test_save_game_state_with_special_characters() -> void:
+	var special_data = {
+		"unicode": "Hello 世界 🎮",
+		"quotes": "She said \"Hello\"",
+		"newlines": "Line1\nLine2\nLine3",
+		"symbols": "!@#$%^&*()"
+	}
+
+	save_manager.save_game_state(special_data)
+	var loaded = save_manager.load_game_state()
+
+	assert_eq(loaded.get("unicode"), "Hello 世界 🎮", "Unicode should be preserved")
+	assert_eq(loaded.get("quotes"), "She said \"Hello\"", "Quotes should be preserved")
+	assert_eq(loaded.get("symbols"), "!@#$%^&*()", "Symbols should be preserved")
+
+
+func test_difficulty_names_case_sensitive() -> void:
+	save_manager.save_level_high_score(1, "Normal", 100)
+	save_manager.save_level_high_score(1, "normal", 200)  # lowercase
+
+	var normal_score = save_manager.get_level_high_score(1, "Normal")
+	var lowercase_score = save_manager.get_level_high_score(1, "normal")
+
+	assert_eq(normal_score, 100, "Normal should have its own score")
+	assert_eq(lowercase_score, 200, "normal should have separate score (case sensitive)")
