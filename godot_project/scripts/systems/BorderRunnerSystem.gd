@@ -288,10 +288,9 @@ func _ready():
 		add_child(smoke)
 		smoke_particle_pool.append(smoke)
 
-	# Register missile zone callback with cursor manager
-	var cursor_manager = get_node_or_null("/root/CursorManager")
-	if cursor_manager:
-		cursor_manager.register_missile_zone_callback(is_point_in_missile_zone)
+	# REFACTORED: Direct reference to CursorManager autoload
+	if CursorManager:
+		CursorManager.register_missile_zone_callback(is_point_in_missile_zone)
 	else:
 		push_warning("BorderRunnerSystem: Could not find CursorManager for missile cursor")
 

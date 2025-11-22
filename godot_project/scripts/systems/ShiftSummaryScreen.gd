@@ -15,6 +15,7 @@ var submission_retry_count = 0
 var max_submission_retries = 3
 
 @onready var animation_player = $AnimationPlayer
+@onready var scene_loader = SceneLoader  # SceneLoader is an autoload
 
 
 func _init():
@@ -40,10 +41,14 @@ func _ready():
 	mouse_filter = Control.MOUSE_FILTER_STOP  # Block input from passing through
 	process_mode = Node.PROCESS_MODE_ALWAYS
 
-	# Try to find narrative manager
-	narrative_manager = get_node_or_null("/root/NarrativeManager")
+	# REFACTORED: Find narrative manager in scene tree (not an autoload)
+	# Use unique name first, then search scene tree
+	narrative_manager = get_node_or_null("%NarrativeManager")
 	if not narrative_manager:
-		narrative_manager = get_node_or_null("%NarrativeManager")
+		# Search for it in the scene tree
+		var root = get_tree().current_scene
+		if root:
+			narrative_manager = root.find_child("NarrativeManager", true, false)
 
 	# Use stored stats if available, otherwise use test data
 	if !Global.current_game_stats.is_empty():
@@ -740,8 +745,8 @@ func _on_continue_button_pressed() -> void:
 	Global.reset_shift_stats()
 	print("Continue button pressed")
 
-	# Get narrative manager reference
-	var narrative_manager = get_node_or_null("/root/NarrativeManager")
+	# REFACTORED: Use the narrative_manager variable already found in _ready()
+	# narrative_manager is set during initialization (line 46-51)
 	if narrative_manager:
 		# Show the day transition
 		narrative_manager.show_day_transition(Global.shift, Global.shift + 1)
@@ -805,11 +810,9 @@ func _handle_scene_transition(scene_path: String) -> void:
 	var timer = get_tree().create_timer(0.1)
 	await timer.timeout
 
-	# REFACTORED: Use get_node_or_null instead of get_node for safety
-	# Check if SceneLoader exists in the scene tree (it should be autoloaded)
-	var loader = get_node_or_null("/root/SceneLoader")
-	if loader and loader.has_method("load_scene"):
-		loader.load_scene(scene_path)
+	# REFACTORED: Use @onready scene_loader reference (SceneLoader is an autoload)
+	if scene_loader and scene_loader.has_method("load_scene"):
+		scene_loader.load_scene(scene_path)
 	else:
 		# Direct scene transition fallback
 		get_tree().change_scene_to_file(scene_path)

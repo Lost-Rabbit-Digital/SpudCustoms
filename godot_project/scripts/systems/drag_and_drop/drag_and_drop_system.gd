@@ -106,8 +106,8 @@ func initialize(config: Dictionary):
 	# Register draggable items
 	register_draggable_items(config.get("draggable_items", []))
 
-	# Get reference to cursor manager autoload
-	cursor_manager = get_node_or_null("/root/CursorManager")
+	# REFACTORED: Direct reference to CursorManager autoload
+	cursor_manager = CursorManager
 	if not cursor_manager:
 		push_warning("CursorManager autoload is null. Cursor visuals will not display as intended.")
 

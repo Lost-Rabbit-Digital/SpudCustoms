@@ -43,6 +43,9 @@ var is_showing_guide: bool = false
 @onready var stats_manager: Node = $"../../../SystemManagers/StatsManager"
 @onready var sfx_player = $"../../../SystemManagers/AudioManager/SFXPool"
 
+# REFACTORED: Cache DragAndDropManager reference (scene node, not autoload)
+var drag_and_drop_manager: DragAndDropManager
+
 # UI components
 @onready var approval_stamp: TextureButton = %ApprovalButton
 @onready var rejection_stamp: TextureButton = %RejectionButton
@@ -60,6 +63,21 @@ func _ready():
 
 	if not stats_manager:
 		push_error("StatsManager reference not set in StampBarController!")
+
+	# REFACTORED: Find DragAndDropManager in scene tree (not an autoload)
+	# Search scene tree for DragAndDropManager using class name
+	var root = get_tree().current_scene
+	if root:
+		for child in root.get_children():
+			if child is DragAndDropManager:
+				drag_and_drop_manager = child
+				break
+		# If not found as direct child, search deeper
+		if not drag_and_drop_manager:
+			drag_and_drop_manager = root.find_child("*", true, false) as DragAndDropManager
+			# More targeted search using unique name
+			if not drag_and_drop_manager:
+				drag_and_drop_manager = get_node_or_null("%DragAndDropManager")
 
 	# Initialize textures from the actual buttons
 	stamp_textures["approve"] = approval_stamp.texture_normal
@@ -117,9 +135,9 @@ func _process(delta):
 		stamp_cooldown_timer -= delta
 
 	# Show guide when a passport is being dragged near the stamp area
-	var drag_system = get_node_or_null("/root/DragAndDropManager")
-	if drag_system and drag_system.has_method("get_dragged_item"):
-		var dragged_item = drag_system.get_dragged_item()
+	# REFACTORED: Use cached drag_and_drop_manager reference instead of get_node
+	if drag_and_drop_manager and drag_and_drop_manager.has_method("get_dragged_item"):
+		var dragged_item = drag_and_drop_manager.get_dragged_item()
 		if dragged_item and dragged_item.name == "Passport":
 			var distance = dragged_item.global_position.distance_to(
 				global_position + stamp_point_offset
@@ -426,9 +444,8 @@ func create_final_stamp(stamp_type: String, pos: Vector2):
 		var is_perfect = stats_manager.check_stamp_accuracy(final_stamp.global_position, passport)
 		if is_perfect:
 			stats_manager.current_stats.perfect_stamps += 1
-			# Add bonus for perfect stamp if Global is available
-			if get_node_or_null("/root/Global"):
-				Global.add_score(100)
+			# REFACTORED: Global is an autoload, use direct reference
+			Global.add_score(100)
 
 	# Fade in the stamp
 	var tween = create_tween()

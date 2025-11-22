@@ -49,6 +49,9 @@ signal max_strikes_reached()
 ## Emitted when game over is triggered
 signal game_over_triggered(reason: String)
 
+## Emitted to request shift advancement
+signal shift_advance_requested()
+
 ## Emitted when shift/level advances
 signal shift_advanced(from_shift: int, to_shift: int)
 
