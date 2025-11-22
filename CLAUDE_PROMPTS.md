@@ -11,29 +11,29 @@ This file contains actionable one-liner prompts you can copy and paste directly 
 ### Fix Hardcoded Paths
 
 ```
-Fix all hardcoded /root/ paths in the codebase by replacing them with EventBus events or @onready references with unique names
+[DONE] Fix all hardcoded /root/ paths in the codebase by replacing them with EventBus events or @onready references with unique names
 ```
 
 ### Migrate Remaining Files
 
 ```
-Migrate godot_project/scripts/level_list_manager.gd to use EventBus pattern instead of direct Global.advance_shift() calls
+[DONE] Migrate godot_project/scripts/level_list_manager.gd to use EventBus pattern instead of direct Global.advance_shift() calls
 ```
 
 ```
-Migrate godot_project/assets/autoload/NarrativeManager.gd to use EventBus pattern and GameStateManager instead of direct Global access
+[DONE] Migrate godot_project/assets/autoload/NarrativeManager.gd to use EventBus pattern and GameStateManager instead of direct Global access
 ```
 
 ```
-Remove hardcoded /root/NarrativeManager paths from godot_project/assets/autoload/Global.gd lines 270, 306, and 470
+[DONE] Remove hardcoded /root/NarrativeManager paths from godot_project/assets/autoload/Global.gd lines 270, 306, and 470
 ```
 
 ```
-Migrate godot_project/scripts/systems/ShiftSummaryScreen.gd to use EventBus and dependency injection instead of get_node("/root/SceneLoader")
+[DONE] Migrate godot_project/scripts/systems/ShiftSummaryScreen.gd to use EventBus and dependency injection instead of get_node("/root/SceneLoader")
 ```
 
 ```
-Migrate godot_project/scripts/utils/cursor_manager.gd to use EventBus for NarrativeManager communication
+[DONE] Migrate godot_project/scripts/utils/cursor_manager.gd to use EventBus for NarrativeManager communication
 ```
 
 ---
@@ -41,15 +41,15 @@ Migrate godot_project/scripts/utils/cursor_manager.gd to use EventBus for Narrat
 ## 🧪 Unit Tests for Untested Systems
 
 ```
-Create comprehensive unit tests for godot_project/assets/autoload/TutorialManager.gd in tests/unit/test_tutorial_manager.gd
+[DONE] Create comprehensive unit tests for godot_project/assets/autoload/TutorialManager.gd in tests/unit/test_tutorial_manager.gd
 ```
 
 ```
-Create comprehensive unit tests for godot_project/assets/autoload/AccessibilityManager.gd in tests/unit/test_accessibility_manager.gd
+[DONE] Create comprehensive unit tests for godot_project/assets/autoload/AccessibilityManager.gd in tests/unit/test_accessibility_manager.gd
 ```
 
 ```
-Create comprehensive unit tests for godot_project/assets/autoload/SaveManager.gd in tests/unit/test_save_manager.gd
+[DONE] Create comprehensive unit tests for godot_project/assets/autoload/SaveManager.gd in tests/unit/test_save_manager.gd
 ```
 
 ```
