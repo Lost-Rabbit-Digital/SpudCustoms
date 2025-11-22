@@ -33,8 +33,80 @@ Migrate godot_project/scripts/systems/ShiftSummaryScreen.gd to use EventBus and 
 ```
 
 ```
-Migrate godot_project/scripts/utils/cursor_manager.gd to use EventBus for NarrativeManager communication
+[DONE] Migrate godot_project/scripts/utils/cursor_manager.gd to use EventBus for NarrativeManager communication
 ```
+
+---
+
+## 📝 EventBus Migration Templates
+
+Use these templates to migrate any system to use EventBus. Replace `{FILE_PATH}` and `{SYSTEM_NAME}` with actual values.
+
+### Template 1: Migrate Single File to EventBus
+
+```
+Migrate {FILE_PATH} to use EventBus for {SYSTEM_NAME} communication
+```
+
+**Examples:**
+```
+Migrate godot_project/scripts/systems/StampSystem.gd to use EventBus for score and achievement communication
+```
+```
+Migrate godot_project/scripts/ui/PauseMenu.gd to use EventBus for game state changes
+```
+
+### Template 2: Remove Direct Global Access
+
+```
+Replace all direct Global.{property} access in {FILE_PATH} with GameStateManager getters and EventBus events
+```
+
+**Examples:**
+```
+Replace all direct Global.score and Global.strikes access in godot_project/scripts/systems/PotatoPerson.gd with GameStateManager getters and EventBus events
+```
+
+### Template 3: Remove Hardcoded Paths
+
+```
+Remove all hardcoded /root/{NodeName} paths from {FILE_PATH} and replace with EventBus subscriptions or dependency injection
+```
+
+**Examples:**
+```
+Remove all hardcoded /root/NarrativeManager paths from godot_project/assets/autoload/Global.gd and replace with EventBus subscriptions
+```
+
+### Template 4: Full System Refactor
+
+```
+Refactor {FILE_PATH} to follow EventBus pattern:
+1. Remove direct Global mutations
+2. Replace with EventBus.request_* emissions
+3. Subscribe to relevant EventBus signals in _ready()
+4. Use GameStateManager for state reads
+```
+
+**Examples:**
+```
+Refactor godot_project/scripts/systems/RunnerSpawner.gd to follow EventBus pattern:
+1. Remove direct Global mutations
+2. Replace with EventBus.request_* emissions
+3. Subscribe to relevant EventBus signals in _ready()
+4. Use GameStateManager for state reads
+```
+
+### Migration Checklist Template
+
+When migrating a file, ensure:
+- [ ] No direct references to `Global.{mutable_property}`
+- [ ] No `get_node("/root/...")` calls
+- [ ] Emits events instead of mutating state
+- [ ] Subscribes to EventBus signals in `_ready()`
+- [ ] Uses `GameStateManager.get_*()` for state reads
+- [ ] Includes metadata in event emissions
+- [ ] Tests updated to use EventBus mocking
 
 ---
 
