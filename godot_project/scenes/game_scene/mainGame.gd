@@ -24,6 +24,14 @@ var point_multiplier: float = 1.0
 var correct_decision_streak: int = 0
 var original_runner_chance: float = 0.15
 
+# Minigame triggers
+var _minigame_triggered_this_shift: bool = false
+var _consecutive_perfect_stamps: int = 0
+const STREAK_MINIGAME_THRESHOLD: int = 5
+const STREAK_MINIGAME_CHANCE: float = 0.4  # 40% chance at milestone
+const PERFECT_STAMP_MINIGAME_THRESHOLD: int = 3
+const PERFECT_STAMP_MINIGAME_CHANCE: float = 0.5  # 50% chance after 3 perfect stamps
+
 # storing and sending rule assignments
 signal rules_updated(new_rules)
 var current_rules = []
@@ -384,6 +392,13 @@ func _on_stamp_decision_made(decision: String, is_perfect: bool):
 		process_decision(false)
 	ui_hint_system.reset_timer("stamp_bar")
 
+	# Track consecutive perfect stamps for minigame trigger
+	if is_perfect:
+		_consecutive_perfect_stamps += 1
+		_try_trigger_perfect_stamp_minigame()
+	else:
+		_consecutive_perfect_stamps = 0
+
 
 func _on_passport_returned(item):
 	remove_stamp()
@@ -711,6 +726,16 @@ func _on_shift_summary_continue():
 	var score_val = GameStateManager.get_score() if GameStateManager else Global.score
 	GameState.set_high_score(completed_shift, diff_level, score_val)
 
+	# Check if a new minigame will be unlocked in the next shift
+	var next_shift = completed_shift + 1
+	var newly_unlocked = _get_newly_unlocked_minigame(next_shift)
+	if newly_unlocked != "":
+		# Show unlock notification (the minigame will be available next shift)
+		EventBus.show_alert(
+			tr("alert_new_minigame_unlocked").format({"name": newly_unlocked.replace("_", " ").capitalize()}),
+			true, 3.0
+		)
+
 	# Advance the shift and story state
 	# REFACTORED: Use EventBus requests instead of direct calls
 	EventBus.shift_advance_requested.emit()
@@ -732,6 +757,17 @@ func _on_shift_summary_continue():
 	else:
 		push_error("SceneLoader not found, falling back to change_scene_to_file")
 		get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
+
+
+## Get the minigame that unlocks at a specific shift (if any)
+func _get_newly_unlocked_minigame(shift: int) -> String:
+	if not minigame_launcher:
+		return ""
+
+	for minigame_type in MinigameLauncher.MINIGAME_UNLOCK_SHIFTS.keys():
+		if MinigameLauncher.MINIGAME_UNLOCK_SHIFTS[minigame_type] == shift:
+			return minigame_type
+	return ""
 
 
 func _on_shift_summary_restart():
@@ -1513,6 +1549,58 @@ func trigger_minigame(minigame_type: String, config: Dictionary = {}):
 			print("[MainGame] Minigame '%s' is not yet unlocked" % minigame_type)
 
 
+## Try to trigger a minigame when reaching streak milestone
+func _try_trigger_streak_minigame():
+	# Only trigger once per shift
+	if _minigame_triggered_this_shift:
+		return
+
+	# Only trigger at exact milestone to avoid repeated triggers
+	if correct_decision_streak != STREAK_MINIGAME_THRESHOLD:
+		return
+
+	# Random chance to trigger
+	if randf() > STREAK_MINIGAME_CHANCE:
+		return
+
+	# Check if minigames are available for this shift
+	if not minigame_launcher or minigame_launcher.get_unlocked_minigames().is_empty():
+		return
+
+	_minigame_triggered_this_shift = true
+	EventBus.show_alert(tr("alert_streak_bonus_minigame"), true, 2.0)
+
+	# Small delay before launching minigame
+	await get_tree().create_timer(1.0).timeout
+	trigger_random_minigame()
+
+
+## Try to trigger a minigame when achieving consecutive perfect stamps
+func _try_trigger_perfect_stamp_minigame():
+	# Only trigger once per shift (shared with streak trigger)
+	if _minigame_triggered_this_shift:
+		return
+
+	# Only trigger at exact threshold
+	if _consecutive_perfect_stamps != PERFECT_STAMP_MINIGAME_THRESHOLD:
+		return
+
+	# Random chance to trigger
+	if randf() > PERFECT_STAMP_MINIGAME_CHANCE:
+		return
+
+	# Check if minigames are available for this shift
+	if not minigame_launcher or minigame_launcher.get_unlocked_minigames().is_empty():
+		return
+
+	_minigame_triggered_this_shift = true
+	EventBus.show_alert(tr("alert_perfect_stamps_bonus_minigame"), true, 2.0)
+
+	# Small delay before launching minigame
+	await get_tree().create_timer(1.0).timeout
+	trigger_random_minigame()
+
+
 func process_decision(allowed):
 	print("Evaluating immigration decision in process_decision()...")
 	if !current_potato_info or current_potato_info.is_empty():
@@ -1555,6 +1643,8 @@ func process_decision(allowed):
 			point_multiplier = 1.5
 		if correct_decision_streak >= 5:
 			point_multiplier = 2.0
+			# Trigger bonus minigame at streak milestone (once per shift)
+			_try_trigger_streak_minigame()
 
 		# Award points for correct decisions
 		var decision_points = 250 * point_multiplier
