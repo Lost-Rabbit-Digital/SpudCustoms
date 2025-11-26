@@ -1,4 +1,4 @@
-# scripts/core/analytics.gd
+# scripts/autoload/analytics.gd
 extends Node
 
 ## Unified analytics system for MixPanel tracking

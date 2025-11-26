@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cr8b1itnqf810"]
-
-[ext_resource type="Script" uid="uid://dd7n3otq5pe6r" path="res://PaperEffectTest.gd" id="1_pjyvt"]
-
-[node name="Node2D" type="Node2D"]
-script = ExtResource("1_pjyvt")

@@ -25,27 +25,27 @@ buses/default_bus_layout="res://assets/styles/default_bus_layout.tres"
 
 [autoload]
 
-Global="*res://assets/autoload/Global.gd"
-EventBus="*res://assets/autoload/EventBus.gd"
-GameStateManager="*res://assets/autoload/GameStateManager.gd"
-LogManager="*res://scripts/systems/LogManager.gd"
-LocalizationManager="*res://scripts/systems/LocalizationManager.gd"
-SceneTransitionManager="*res://scripts/scene_transition_manager.gd"
-UIManager="*res://assets/autoload/UIManager.gd"
-SteamManager="*res://assets/autoload/SteamManager.gd"
-SaveManager="*res://assets/autoload/SaveManager.gd"
+Global="*res://scripts/autoload/Global.gd"
+EventBus="*res://scripts/autoload/EventBus.gd"
+GameStateManager="*res://scripts/autoload/GameStateManager.gd"
+LogManager="*res://scripts/autoload/LogManager.gd"
+LocalizationManager="*res://scripts/autoload/LocalizationManager.gd"
+SceneTransitionManager="*res://scripts/autoload/scene_transition_manager.gd"
+UIManager="*res://scripts/autoload/UIManager.gd"
+SteamManager="*res://scripts/autoload/SteamManager.gd"
+SaveManager="*res://scripts/autoload/SaveManager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 AppConfig="*res://addons/maaacks_game_template/base/scenes/autoloads/app_config.tscn"
 SceneLoader="*res://addons/maaacks_game_template/base/scenes/autoloads/scene_loader.tscn"
 ProjectMusicController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_music_controller.tscn"
 ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
-LawValidator="*res://assets/autoload/LawValidator.gd"
-JuicyButtons="*res://scripts/utils/juicy_buttons.gd"
-CursorManager="*res://scripts/utils/cursor_manager.gd"
-ConstantZIndexes="*res://scripts/constant_z_indexes.gd"
-Analytics="*res://scripts/core/analytics.gd"
-AccessibilityManager="*res://assets/autoload/AccessibilityManager.gd"
-TutorialManager="*res://assets/autoload/TutorialManager.gd"
+LawValidator="*res://scripts/autoload/LawValidator.gd"
+JuicyButtons="*res://scripts/autoload/juicy_buttons.gd"
+CursorManager="*res://scripts/autoload/cursor_manager.gd"
+ConstantZIndexes="*res://scripts/autoload/constant_z_indexes.gd"
+Analytics="*res://scripts/autoload/analytics.gd"
+AccessibilityManager="*res://scripts/autoload/AccessibilityManager.gd"
+TutorialManager="*res://scripts/autoload/TutorialManager.gd"
 
 [debug]
 
@@ -153,7 +153,6 @@ translation/save_mode=0
 translation/add_separator=false
 audio/max_channels=4.0
 portraits/default_portrait=""
-<<<<<<<HEADlayout/style_list=["res://assets/styles/speaker_textbox_style.tres"]
 text/input_action="primary_interaction"
 audio/type_sound_bus="SFX"
 audio/channel_defaults={

@@ -8,7 +8,7 @@ var law_validator: Node
 
 func before_each():
 	# Load the LawValidator autoload script
-	var LawValidatorScript = load("res://assets/autoload/LawValidator.gd")
+	var LawValidatorScript = load("res://scripts/autoload/LawValidator.gd")
 	law_validator = LawValidatorScript.new()
 
 
