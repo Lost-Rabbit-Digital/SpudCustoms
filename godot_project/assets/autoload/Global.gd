@@ -433,13 +433,16 @@ func capture_narrative_choices():
 		return
 
 	# Get all Dialogic variables related to story choices
+	# IMPORTANT: This list MUST match NarrativeManager.choice_variables exactly!
 	var important_vars = [
 		"cafeteria_response",
 		"critical_choice",
 		"ending_choice",
 		"family_response",
 		"fellow_officer_response",
+		"fellow_officer_response_2",  # FIXED: Was missing - shift 10 choice
 		"final_decision",
+		"final_mission_response",  # FIXED: Was missing - shift 10 mission choice
 		"hide_choice",
 		"initial_response",
 		"interrogation_choice",
@@ -452,6 +455,7 @@ func capture_narrative_choices():
 		"sasha_plan_response",
 		"sasha_response",
 		"scanner_response",
+		"stay_or_go",  # FIXED: Was missing - CRITICAL ending choice!
 		"yellow_badge_response",
 	]
 
