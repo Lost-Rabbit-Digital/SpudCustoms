@@ -156,6 +156,26 @@ signal ui_score_update_requested(score: int)
 signal ui_strike_update_requested(current: int, max_val: int)
 
 # ============================================================================
+# MINIGAME EVENTS
+# ============================================================================
+
+## Emitted when a minigame starts
+## @param minigame_type String identifier for the minigame (e.g., "document_scanner")
+signal minigame_started(minigame_type: String)
+
+## Emitted when a minigame completes (success or timeout)
+## @param result Dictionary containing: success, score_bonus, time_taken, minigame_type, etc.
+signal minigame_completed(result: Dictionary)
+
+## Emitted to request launching a minigame
+## @param minigame_type The type of minigame to launch
+## @param config Optional configuration dictionary
+signal minigame_launch_requested(minigame_type: String, config: Dictionary)
+
+## Emitted when minigame bonus score should be applied
+signal minigame_bonus_requested(bonus: int, source: String)
+
+# ============================================================================
 # SAVE/LOAD EVENTS
 # ============================================================================
 

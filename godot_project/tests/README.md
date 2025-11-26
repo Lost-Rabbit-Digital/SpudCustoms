@@ -6,14 +6,29 @@ This directory contains automated tests for the Spud Customs game using the GUT 
 
 ```
 tests/
-├── README.md              # This file
-├── run_tests.gd          # CI/CD test runner script
-├── unit/                 # Unit tests for individual systems
-│   ├── test_shift_stats.gd
-│   ├── test_stats_manager.gd
+├── README.md                    # This file
+├── run_tests.gd                 # CI/CD test runner script
+├── unit/                        # Unit tests for individual systems
+│   ├── test_accessibility_manager.gd
+│   ├── test_drag_and_drop_manager.gd
+│   ├── test_event_bus.gd        # EventBus pattern tests
 │   ├── test_law_validator.gd
-│   └── test_potato_factory.gd
-└── integration/          # Integration tests (future)
+│   ├── test_narrative_manager.gd
+│   ├── test_potato_factory.gd
+│   ├── test_queue_manager.gd
+│   ├── test_save_manager.gd
+│   ├── test_shift_stats.gd
+│   ├── test_stamp_system.gd
+│   ├── test_stats_manager.gd
+│   ├── test_tutorial_manager.gd
+│   └── test_ui_manager.gd
+└── integration/                 # Integration tests for feature flows
+    ├── test_achievement_flow.gd
+    ├── test_border_runner_flow.gd
+    ├── test_document_processing_flow.gd
+    ├── test_narrative_choice_flow.gd
+    ├── test_save_load_flow.gd
+    └── test_shift_completion_flow.gd
 ```
 
 ## Running Tests
@@ -146,7 +161,38 @@ func test_edge_case_negative():
 
 ## Current Test Coverage
 
-### Unit Tests (70+ test cases)
+### Unit Tests (400+ test cases)
+
+- **EventBus.gd** (16 tests) ⭐ NEW
+  - Signal emission verification
+  - GameStateManager integration
+  - Backward compatibility with Global
+  - Helper method testing
+  - Event chaining validation
+  - Metadata preservation
+
+- **TutorialManager.gd** (60+ tests)
+  - Tutorial initialization and progression
+  - Step completion and skipping
+  - Persistence across sessions
+  - UI overlay creation
+  - Shift-triggered tutorials
+
+- **SaveManager.gd** (65+ tests)
+  - Game state save/load round-trips
+  - Level progress tracking
+  - High score management (per-level, per-difficulty)
+  - Global high scores
+  - Edge cases and error handling
+
+- **AccessibilityManager.gd** (tests)
+  - Settings persistence
+  - Colorblind mode
+  - Font scaling
+
+- **NarrativeManager.gd** (tests)
+  - Dialogue lifecycle events
+  - Choice tracking
 
 - **ShiftStats.gd** (15 tests)
   - Bonus calculations (missile, accuracy, speed)
@@ -168,6 +214,48 @@ func test_edge_case_negative():
   - Random attribute generation
   - Date format validation
   - Asset loading
+
+- **QueueManager.gd** (tests)
+  - Potato queue management
+  - Spawn timing
+
+- **StampSystem.gd** (tests)
+  - Stamp application
+  - Document validation
+
+- **UIManager.gd** (tests)
+  - Alert display
+  - UI state management
+
+- **DragAndDropManager.gd** (tests)
+  - Document interaction
+  - Cursor management
+
+### Integration Tests (6 test suites)
+
+- **test_narrative_choice_flow.gd** (30+ tests)
+  - Dialogue → Choice → Save → Load → Verify workflow
+  - Multiple choice persistence
+  - NarrativeManager integration
+
+- **test_achievement_flow.gd**
+  - Action → Stat tracking → Unlock → Steam sync
+
+- **test_save_load_flow.gd**
+  - Complete game state persistence
+  - Data integrity across sessions
+
+- **test_border_runner_flow.gd**
+  - Runner detection and missile firing
+  - Score and strike events
+
+- **test_document_processing_flow.gd**
+  - Document inspection workflow
+  - Stamp application
+
+- **test_shift_completion_flow.gd**
+  - End-of-shift summary
+  - Level progression
 
 ## CI/CD Integration
 
@@ -225,8 +313,61 @@ When adding new features:
 4. Update this README if adding new test categories
 5. Run full test suite before committing
 
+## EventBus Testing Patterns
+
+The project uses an EventBus architecture for decoupled communication. Here's how to test EventBus interactions:
+
+### Testing Signal Emissions
+
+```gdscript
+func test_request_score_add_emits_score_changed() -> void:
+    var callback_called = false
+    var callback = func(_new_score: int, _delta: int, _source: String):
+        callback_called = true
+
+    EventBus.score_changed.connect(callback)
+    EventBus.request_score_add(100, "test_source")
+    await get_tree().process_frame
+
+    assert_true(callback_called, "score_changed signal should be emitted")
+    EventBus.score_changed.disconnect(callback)
+```
+
+### Testing GameStateManager Integration
+
+```gdscript
+func test_score_request_updates_gamestate_manager() -> void:
+    var initial_score = GameStateManager.get_score()
+    EventBus.request_score_add(250, "test")
+    await get_tree().process_frame
+
+    var new_score = GameStateManager.get_score()
+    assert_eq(new_score, initial_score + 250, "Score should increase")
+```
+
+### Testing Event Metadata
+
+```gdscript
+func test_metadata_preserved_in_score_add() -> void:
+    var metadata_received: Dictionary = {}
+    var callback = func(_new: int, _delta: int, _source: String, meta: Dictionary = {}):
+        metadata_received = meta
+
+    EventBus.score_changed.connect(callback)
+    EventBus.request_score_add(100, "gameplay", {"bonus": true})
+    await get_tree().process_frame
+
+    assert_eq(metadata_received.get("bonus"), true, "Metadata should be preserved")
+    EventBus.score_changed.disconnect(callback)
+```
+
 ---
 
 **Target Coverage:** 80% for core gameplay systems
 
-**Current Focus:** Unit tests for individual systems and components
+**Current Focus:** EventBus integration tests, system-level unit tests
+
+**Recent Additions:**
+- EventBus signal emission tests
+- GameStateManager backward compatibility tests
+- Integration tests for narrative choices, achievements, and save/load flows

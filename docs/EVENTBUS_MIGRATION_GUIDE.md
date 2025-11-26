@@ -115,37 +115,40 @@ EventBus.show_alert("Message", false)  # false = negative/red alert
 # UIManager subscribes to alert_red_requested and handles display
 ```
 
-## Files That Still Need Refactoring
+## Files Refactored ✅ ALL COMPLETE
 
-### High Priority
+### High Priority - COMPLETED
 
-1. **`/scripts/core/analytics.gd`** (15+ Global reads)
-   - Replace direct `Global.score`, `Global.strikes` reads with GameStateManager accessors
-   - Subscribe to EventBus events for analytics tracking
+1. **`/scripts/core/analytics.gd`** ✅
+   - Uses GameStateManager.get_score(), get_strikes(), get_shift()
+   - Subscribes to EventBus events for analytics tracking
 
-2. **`/scripts/level_list_manager.gd`**
-   - Replace `Global.advance_shift()` with event emission
-   - Use `EventBus.shift_advanced` signal
+2. **`/scripts/level_list_manager.gd`** ✅
+   - Uses EventBus for level transitions
+   - Uses GameStateManager for state reads
 
-3. **`/scripts/systems/NarrativeManager.gd`**
-   - Replace `Global.game_mode` checks with GameStateManager
-   - Emit narrative events through EventBus
+3. **`/scripts/systems/NarrativeManager.gd`** ✅
+   - Uses GameStateManager.get_game_mode(), get_shift()
+   - Emits all narrative events through EventBus (dialogue_started, dialogue_ended, etc.)
+   - Subscribes to narrative_choices_load_requested and narrative_choices_save_requested
 
-4. **`/assets/autoload/Global.gd`** (lines 265-267, 297-299, 457-459)
-   - Replace `get_node("/root/NarrativeManager")` with EventBus signals
-   - Emit `narrative_choices_save_requested` event instead
+4. **`/assets/autoload/Global.gd`** ✅
+   - Hardcoded paths removed
+   - Uses EventBus signals for NarrativeManager communication
 
-### Medium Priority
+### Medium Priority - COMPLETED
 
-5. **`/scripts/ui/FeedbackMenu.gd`**
-   - Use GameStateManager accessors instead of Global methods
+5. **`/scripts/ui/FeedbackMenu.gd`** ✅
+   - Uses GameStateManager.get_total_playtime()
 
-6. **`/scripts/systems/ShiftSummaryScreen.gd`**
-   - Replace `get_node("/root/SceneLoader")` with proper dependency injection
-   - Use EventBus for state changes
+6. **`/scripts/systems/ShiftSummaryScreen.gd`** ✅
+   - Uses get_tree() directly instead of SceneLoader
+   - Uses GameStateManager for all state reads
+   - Emits EventBus.shift_stats_reset
 
-7. **`/scripts/utils/DragAndDropManager.gd`**
-   - Replace `get_node("/root/CursorManager")` with dependency injection
+7. **`/scripts/systems/drag_and_drop/drag_and_drop_manager.gd`** ✅
+   - Uses CursorManager autoload directly
+   - Uses get_node_or_null() pattern throughout
 
 ## Best Practices for New Code
 
@@ -203,20 +206,31 @@ print(report)
 
 ## Migration Checklist
 
+### Core Infrastructure ✅
 - [x] Create EventBus autoload
 - [x] Create GameStateManager autoload
 - [x] Add to project.godot autoloads
+
+### System Migrations ✅ ALL COMPLETE
 - [x] Refactor BorderRunnerSystem key methods
 - [x] Refactor Analytics to use GameStateManager and subscribe to EventBus
 - [x] Refactor Global.gd to emit narrative events and use get_node_or_null
-- [x] Remove hardcoded `/root/` paths from project files ✅ **COMPLETED**
+- [x] Remove hardcoded `/root/` paths from project files
 - [x] Update NarrativeManager to use EventBus
 - [x] Refactor level_list_manager.gd to emit events
 - [x] Fix ShiftSummaryScreen hardcoded paths
-- [ ] Create unit tests for EventBus
-- [ ] Document all event types and their payloads
+- [x] Migrate FeedbackMenu.gd to use GameStateManager
+- [x] Migrate DragAndDropManager.gd to use autoloads directly
+- [x] Migrate level_select_menu.gd to use GameStateManager
+
+### Testing & Documentation ✅
+- [x] Create unit tests for EventBus (see `tests/unit/test_event_bus.gd` - 16+ tests)
+- [x] Document all event types and their payloads (inline in EventBus.gd)
+
+### Future Work (Not Blocking)
 - [ ] Gradually deprecate direct Global mutations
 - [ ] Consider deprecating Global.gd in favor of GameStateManager
+- [ ] Add TypedSignals for better IDE support
 
 ## Backward Compatibility
 
@@ -237,12 +251,20 @@ The current implementation maintains backward compatibility:
 
 ## Next Steps
 
-1. Continue refactoring files in the priority list
-2. Add event validation and type safety
-3. Create comprehensive test suite for EventBus
-4. Monitor performance impact of event overhead
-5. Document all event types with payload schemas
+### Phase 1: Testing & Documentation (Current Priority)
+1. ~~Continue refactoring files in the priority list~~ ✅ COMPLETE
+2. Create comprehensive test suite for EventBus
+3. Document all event types with payload schemas
+
+### Phase 2: Optimization & Polish
+4. Add event validation and type safety
+5. Monitor performance impact of event overhead
 6. Consider TypedSignals for better IDE support
+
+### Phase 3: Deprecation
+7. Create deprecation warnings for direct Global mutations
+8. Migrate remaining Global.gd functionality to GameStateManager
+9. Remove Global.gd after full migration verification
 
 ## References
 
