@@ -160,8 +160,7 @@ func handle_input_event(event: InputEvent, mouse_pos: Vector2) -> bool:
 	return false
 
 
-# TODO: This is where we would fix the bug: when you let go the cursor doesn't update for the
-# item under the mouse, only when you move the mouse off and then back onto the item
+# FIXED: Now calls _handle_mouse_motion after releasing to check hover state
 ## Handles mouse motion for hover effects.
 ##
 ## Updates cursor and hover state based on what item is under the cursor.
@@ -338,9 +337,10 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 			var item = dragged_item
 			dragged_item = null
 
-			# Reset cursor immediately
+			# Reset cursor and re-check for hover
 			if cursor_manager:
 				cursor_manager.update_cursor("default")
+			_handle_mouse_motion(mouse_pos)
 
 			return true
 		# Next check if trying to drop on suspect/panel with closed shutter
@@ -363,9 +363,10 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 			var item = dragged_item
 			dragged_item = null
 
-			# Reset cursor immediately
+			# Reset cursor and re-check for hover
 			if cursor_manager:
 				cursor_manager.update_cursor("default")
+			_handle_mouse_motion(mouse_pos)
 
 			return true
 		# Otherwise check normal valid drop zones
@@ -392,9 +393,10 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 			var item = dragged_item
 			dragged_item = null
 
-			# Reset cursor immediately
+			# Reset cursor and re-check for hover
 			if cursor_manager:
 				cursor_manager.update_cursor("default")
+			_handle_mouse_motion(mouse_pos)
 
 			return true
 

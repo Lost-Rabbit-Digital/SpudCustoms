@@ -375,7 +375,9 @@ Fix the DragAndDropManager return_item_to_table buffer issue documented in proje
 ```
 
 ```
-Fix cursor not updating after document drag in godot_project/scripts/systems/drag_and_drop/drag_and_drop_manager.gd
+[DONE] Fix cursor not updating after document drag in drag_and_drop_system.gd
+- Added _handle_mouse_motion() calls after all blocked return paths
+- Cursor now updates immediately when document is dropped and another is under cursor
 ```
 
 ```
