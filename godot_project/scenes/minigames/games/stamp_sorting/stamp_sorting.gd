@@ -1,0 +1,246 @@
+class_name StampSortingMinigame
+extends MinigameContainer
+## Fast-paced stamp sorting minigame!
+##
+## Stamps fall from the top - drag them to the correct bin (APPROVED/DENIED).
+## Quick and satisfying, rewards fast decisions.
+##
+## Unlocks: Shift 2+
+
+## Number of stamps to sort
+@export var stamps_to_sort: int = 8
+
+## Points per correct sort
+@export var points_per_correct: int = 30
+
+## Bonus for perfect accuracy
+@export var perfect_bonus: int = 150
+
+## Speed stamps fall (pixels per second)
+@export var fall_speed: float = 80.0
+
+# Internal state
+var _stamps_sorted: int = 0
+var _correct_sorts: int = 0
+var _current_stamp: Node2D = null
+var _stamp_type: String = ""  # "approved" or "denied"
+var _is_dragging: bool = false
+var _drag_offset: Vector2 = Vector2.ZERO
+
+# Bins
+var _approved_bin: Rect2
+var _denied_bin: Rect2
+
+
+func _ready() -> void:
+	super._ready()
+	minigame_type = "stamp_sorting"
+	time_limit = 20.0
+	skippable = true
+	reward_multiplier = 1.0
+
+	if title_label:
+		title_label.text = "STAMP SORTING"
+	if instruction_label:
+		instruction_label.text = "Drag stamps to the correct bin! Green = APPROVED, Red = DENIED"
+
+
+func _on_minigame_start(config: Dictionary) -> void:
+	_stamps_sorted = 0
+	_correct_sorts = 0
+	_current_stamp = null
+
+	if config.has("stamps_to_sort"):
+		stamps_to_sort = config.stamps_to_sort
+
+	_setup_minigame_scene()
+	_spawn_next_stamp()
+
+
+func _setup_minigame_scene() -> void:
+	for child in subviewport.get_children():
+		child.queue_free()
+
+	# Background
+	var bg = ColorRect.new()
+	bg.color = Color(0.15, 0.12, 0.1)
+	bg.size = subviewport.size
+	subviewport.add_child(bg)
+
+	# Create bins
+	var bin_width = 200
+	var bin_height = 120
+	var bin_y = subviewport.size.y - bin_height - 20
+
+	# Approved bin (left, green)
+	_approved_bin = Rect2(80, bin_y, bin_width, bin_height)
+	var approved_visual = ColorRect.new()
+	approved_visual.color = Color(0.2, 0.5, 0.2)
+	approved_visual.position = _approved_bin.position
+	approved_visual.size = _approved_bin.size
+	subviewport.add_child(approved_visual)
+
+	var approved_label = Label.new()
+	approved_label.text = "APPROVED"
+	approved_label.add_theme_font_size_override("font_size", 24)
+	approved_label.position = _approved_bin.position + Vector2(40, 45)
+	subviewport.add_child(approved_label)
+
+	# Denied bin (right, red)
+	_denied_bin = Rect2(subviewport.size.x - bin_width - 80, bin_y, bin_width, bin_height)
+	var denied_visual = ColorRect.new()
+	denied_visual.color = Color(0.5, 0.2, 0.2)
+	denied_visual.position = _denied_bin.position
+	denied_visual.size = _denied_bin.size
+	subviewport.add_child(denied_visual)
+
+	var denied_label = Label.new()
+	denied_label.text = "DENIED"
+	denied_label.add_theme_font_size_override("font_size", 24)
+	denied_label.position = _denied_bin.position + Vector2(55, 45)
+	subviewport.add_child(denied_label)
+
+	# Progress label
+	var progress = Label.new()
+	progress.name = "Progress"
+	progress.add_theme_font_size_override("font_size", 20)
+	progress.position = Vector2(subviewport.size.x / 2 - 50, 20)
+	_update_progress_label(progress)
+	subviewport.add_child(progress)
+
+
+func _spawn_next_stamp() -> void:
+	if _stamps_sorted >= stamps_to_sort:
+		_check_completion()
+		return
+
+	# Random stamp type
+	_stamp_type = "approved" if randf() > 0.5 else "denied"
+
+	# Create stamp visual
+	_current_stamp = Node2D.new()
+	_current_stamp.name = "Stamp"
+	_current_stamp.position = Vector2(subviewport.size.x / 2, 80)
+
+	var stamp_rect = ColorRect.new()
+	stamp_rect.size = Vector2(100, 60)
+	stamp_rect.position = Vector2(-50, -30)
+	stamp_rect.color = Color(0.3, 0.6, 0.3) if _stamp_type == "approved" else Color(0.6, 0.3, 0.3)
+	_current_stamp.add_child(stamp_rect)
+
+	var stamp_label = Label.new()
+	stamp_label.text = "APPROVED" if _stamp_type == "approved" else "DENIED"
+	stamp_label.add_theme_font_size_override("font_size", 14)
+	stamp_label.position = Vector2(-40, -10)
+	_current_stamp.add_child(stamp_label)
+
+	subviewport.add_child(_current_stamp)
+
+
+func _process(delta: float) -> void:
+	super._process(delta)
+
+	if not _is_active or not _current_stamp or _is_dragging:
+		return
+
+	# Stamp falls slowly
+	_current_stamp.position.y += fall_speed * delta
+
+	# If stamp falls off screen, count as wrong
+	if _current_stamp.position.y > subviewport.size.y + 50:
+		_sort_stamp(false)
+
+
+func _input(event: InputEvent) -> void:
+	if not _is_active or not _current_stamp:
+		return
+
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		var local_pos = _get_subviewport_mouse_pos()
+
+		if event.pressed:
+			# Check if clicking on stamp
+			var stamp_rect = Rect2(_current_stamp.position - Vector2(50, 30), Vector2(100, 60))
+			if stamp_rect.has_point(local_pos):
+				_is_dragging = true
+				_drag_offset = _current_stamp.position - local_pos
+		else:
+			if _is_dragging:
+				_is_dragging = false
+				_check_drop(local_pos)
+
+	elif event is InputEventMouseMotion and _is_dragging:
+		var local_pos = _get_subviewport_mouse_pos()
+		_current_stamp.position = local_pos + _drag_offset
+
+
+func _get_subviewport_mouse_pos() -> Vector2:
+	var screen_pos = get_viewport().get_mouse_position()
+	var container_rect = subviewport_container.get_global_rect()
+	var relative_pos = (screen_pos - container_rect.position) / container_rect.size
+	return relative_pos * Vector2(subviewport.size)
+
+
+func _check_drop(pos: Vector2) -> void:
+	var stamp_center = _current_stamp.position
+
+	if _approved_bin.has_point(stamp_center):
+		_sort_stamp(_stamp_type == "approved")
+	elif _denied_bin.has_point(stamp_center):
+		_sort_stamp(_stamp_type == "denied")
+	# If dropped elsewhere, stamp stays where it is
+
+
+func _sort_stamp(correct: bool) -> void:
+	_stamps_sorted += 1
+	if correct:
+		_correct_sorts += 1
+		# Quick feedback
+		if _current_stamp:
+			_current_stamp.modulate = Color.GREEN
+	else:
+		if _current_stamp:
+			_current_stamp.modulate = Color.RED
+
+	# Update progress
+	var progress = subviewport.get_node_or_null("Progress")
+	if progress:
+		_update_progress_label(progress)
+
+	# Remove stamp after brief delay
+	if _current_stamp:
+		var stamp = _current_stamp
+		_current_stamp = null
+		await get_tree().create_timer(0.2).timeout
+		if is_instance_valid(stamp):
+			stamp.queue_free()
+
+	# Spawn next or complete
+	if _stamps_sorted < stamps_to_sort:
+		_spawn_next_stamp()
+	else:
+		_check_completion()
+
+
+func _update_progress_label(label: Label) -> void:
+	label.text = "Sorted: %d/%d  Correct: %d" % [_stamps_sorted, stamps_to_sort, _correct_sorts]
+
+
+func _check_completion() -> void:
+	var accuracy = float(_correct_sorts) / float(stamps_to_sort) if stamps_to_sort > 0 else 0
+	var base_score = _correct_sorts * points_per_correct
+	var bonus = perfect_bonus if _correct_sorts == stamps_to_sort else 0
+	var total = base_score + bonus
+
+	if instruction_label:
+		if _correct_sorts == stamps_to_sort:
+			instruction_label.text = "Perfect sorting! +%d points!" % total
+		else:
+			instruction_label.text = "Sorted %d/%d correctly. +%d points!" % [_correct_sorts, stamps_to_sort, total]
+
+	complete_success(total, {
+		"correct": _correct_sorts,
+		"total": stamps_to_sort,
+		"accuracy": accuracy,
+		"perfect": _correct_sorts == stamps_to_sort
+	})

@@ -101,6 +101,9 @@ var max_combo_multiplier = 3.0
 # Stamp System Manager
 @onready var stamp_system_manager: StampSystemManager
 
+# Minigame launcher for bonus activities
+var minigame_launcher: MinigameLauncher
+
 # Office Shutter Controller
 @onready
 var office_shutter_controller: OfficeShutterController = $Gameplay/InteractiveElements/OfficeShutterController
@@ -173,6 +176,11 @@ func _setup_managers():
 	# Initialize other systems
 	setup_stamp_system()
 	setup_spawn_timer()
+
+	# Initialize minigame launcher
+	minigame_launcher = MinigameLauncher.new()
+	minigame_launcher.name = "MinigameLauncher"
+	$SystemManagers.add_child(minigame_launcher)
 
 	# Get essential system references
 	queue_manager = %QueueManager
@@ -286,6 +294,7 @@ func _connect_signals():
 	EventBus.score_changed.connect(_on_score_changed)
 	EventBus.strike_changed.connect(_on_strike_changed)
 	EventBus.quota_changed.connect(_on_quota_changed)
+	EventBus.minigame_bonus_requested.connect(_on_minigame_bonus_requested)
 
 	# UI signals
 	ui_hint_system.hint_deactivated.connect(_on_hint_deactivated)
@@ -1479,6 +1488,29 @@ func _on_strike_changed(current_strikes: int, max_strikes: int, delta: int):
 # REFACTORED: Handle quota changes via EventBus
 func _on_quota_changed(current_quota: int, target_quota: int, delta: int):
 	update_quota_display()
+
+
+# Handle minigame bonus requests
+func _on_minigame_bonus_requested(bonus: int, source: String):
+	if bonus > 0:
+		EventBus.request_score_add(bonus, source, {"minigame_bonus": true})
+		EventBus.show_alert(tr("alert_minigame_bonus").format({"bonus": str(bonus)}), true, 2.0)
+
+
+## Launch a random minigame based on current progression
+## Call this from appropriate places (e.g., after certain events, bonus rounds)
+func trigger_random_minigame():
+	if minigame_launcher and not minigame_launcher.is_minigame_active():
+		minigame_launcher.launch_random()
+
+
+## Launch a specific minigame if unlocked
+func trigger_minigame(minigame_type: String, config: Dictionary = {}):
+	if minigame_launcher and not minigame_launcher.is_minigame_active():
+		if minigame_launcher.is_minigame_unlocked(minigame_type):
+			minigame_launcher.launch(minigame_type, config)
+		else:
+			print("[MainGame] Minigame '%s' is not yet unlocked" % minigame_type)
 
 
 func process_decision(allowed):

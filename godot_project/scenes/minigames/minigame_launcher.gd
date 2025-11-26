@@ -15,9 +15,19 @@ extends Node
 ## Preloaded minigame scenes
 const MINIGAMES = {
 	"document_scanner": preload("res://scenes/minigames/games/document_scanner/document_scanner.tscn"),
-	# Add more minigames here:
-	# "stamp_sorting": preload("res://scenes/minigames/games/stamp_sorting/stamp_sorting.tscn"),
-	# "fingerprint_match": preload("res://scenes/minigames/games/fingerprint_match/fingerprint_match.tscn"),
+	"stamp_sorting": preload("res://scenes/minigames/games/stamp_sorting/stamp_sorting.tscn"),
+	"fingerprint_match": preload("res://scenes/minigames/games/fingerprint_match/fingerprint_match.tscn"),
+	"code_breaker": preload("res://scenes/minigames/games/code_breaker/code_breaker.tscn"),
+	"border_chase": preload("res://scenes/minigames/games/border_chase/border_chase.tscn"),
+}
+
+## Shift requirements to unlock each minigame
+const MINIGAME_UNLOCK_SHIFTS = {
+	"document_scanner": 1,  # Available from the start
+	"stamp_sorting": 2,     # Unlocks at Shift 2
+	"fingerprint_match": 3, # Unlocks at Shift 3
+	"code_breaker": 4,      # Unlocks at Shift 4
+	"border_chase": 5,      # Unlocks at Shift 5
 }
 
 ## Currently active minigame instance
@@ -75,7 +85,43 @@ func get_active_minigame_type() -> String:
 	return ""
 
 
+## Check if a minigame is unlocked based on current shift
+func is_minigame_unlocked(minigame_type: String, current_shift: int = -1) -> bool:
+	if not MINIGAME_UNLOCK_SHIFTS.has(minigame_type):
+		return false
+
+	# Use Global.current_shift if not specified
+	if current_shift < 0:
+		current_shift = Global.current_shift if Global else 1
+
+	return current_shift >= MINIGAME_UNLOCK_SHIFTS[minigame_type]
+
+
+## Get list of all unlocked minigame types
+func get_unlocked_minigames(current_shift: int = -1) -> Array[String]:
+	if current_shift < 0:
+		current_shift = Global.current_shift if Global else 1
+
+	var unlocked: Array[String] = []
+	for minigame_type in MINIGAMES.keys():
+		if is_minigame_unlocked(minigame_type, current_shift):
+			unlocked.append(minigame_type)
+	return unlocked
+
+
+## Get the shift required to unlock a minigame
+func get_unlock_shift(minigame_type: String) -> int:
+	return MINIGAME_UNLOCK_SHIFTS.get(minigame_type, 999)
+
+
 func _on_minigame_launch_requested(minigame_type: String, config: Dictionary) -> void:
+	# Check if minigame is unlocked (unless force_launch is set)
+	if not config.get("force_launch", false):
+		if not is_minigame_unlocked(minigame_type):
+			print("[MinigameLauncher] Minigame '%s' is locked (requires shift %d)" % [
+				minigame_type, get_unlock_shift(minigame_type)
+			])
+			return
 	launch(minigame_type, config)
 
 
@@ -115,13 +161,28 @@ func _try_launch_queued() -> void:
 	launch(next.type, next.config)
 
 
-## Launch a random minigame (good for bonus rounds)
+## Launch a random unlocked minigame (good for bonus rounds)
 func launch_random(config: Dictionary = {}) -> bool:
-	var types = MINIGAMES.keys()
-	if types.is_empty():
+	var unlocked = get_unlocked_minigames()
+	if unlocked.is_empty():
 		return false
 
-	var random_type = types[randi() % types.size()]
+	var random_type = unlocked[randi() % unlocked.size()]
+	return launch(random_type, config)
+
+
+## Launch a random minigame from a specific pool of types
+func launch_random_from(pool: Array[String], config: Dictionary = {}) -> bool:
+	# Filter to only unlocked games
+	var available: Array[String] = []
+	for minigame_type in pool:
+		if is_minigame_unlocked(minigame_type):
+			available.append(minigame_type)
+
+	if available.is_empty():
+		return false
+
+	var random_type = available[randi() % available.size()]
 	return launch(random_type, config)
 
 
