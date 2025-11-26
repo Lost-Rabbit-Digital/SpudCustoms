@@ -209,7 +209,7 @@ print(report)
 - [x] Refactor BorderRunnerSystem key methods
 - [x] Refactor Analytics to use GameStateManager and subscribe to EventBus
 - [x] Refactor Global.gd to emit narrative events and use get_node_or_null
-- [x] Remove hardcoded `/root/` paths from project files
+- [x] Remove hardcoded `/root/` paths from project files ✅ **COMPLETED**
 - [x] Update NarrativeManager to use EventBus
 - [x] Refactor level_list_manager.gd to emit events
 - [x] Fix ShiftSummaryScreen hardcoded paths

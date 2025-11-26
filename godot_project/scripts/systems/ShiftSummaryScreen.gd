@@ -23,7 +23,8 @@ func _init():
 
 func _ready():
 	# Connect to Steam manager signals (skip in DEV_MODE)
-	if not Global.DEV_MODE and SteamManager:
+	# REFACTORED: Use GameStateManager
+	if GameStateManager and not GameStateManager.is_dev_mode() and SteamManager:
 		if not SteamManager.leaderboard_updated.is_connected(_on_leaderboard_updated):
 			SteamManager.leaderboard_updated.connect(_on_leaderboard_updated)
 		if not SteamManager.score_submitted.is_connected(_on_score_submitted):
@@ -50,8 +51,10 @@ func _ready():
 			narrative_manager = root.find_child("NarrativeManager", true, false)
 
 	# Use stored stats if available, otherwise use test data
-	if !Global.current_game_stats.is_empty():
-		show_summary(Global.current_game_stats)
+	# REFACTORED: Use GameStateManager
+	var last_stats = GameStateManager.get_last_game_stats() if GameStateManager else {}
+	if !last_stats.is_empty():
+		show_summary(last_stats)
 		LogManager.write_info("Using actual game stats")
 	else:
 		show_summary(generate_test_stats())
@@ -98,7 +101,8 @@ func _on_steam_status_changed(connected: bool):
 
 func _check_steam_status():
 	# Skip Steam checks in DEV_MODE
-	if Global.DEV_MODE:
+	# REFACTORED: Use GameStateManager
+	if GameStateManager and GameStateManager.is_dev_mode():
 		steam_status_ok = false
 		if $SubmitScoreButton:
 			$SubmitScoreButton.disabled = true
@@ -261,12 +265,16 @@ func format_number(number: int) -> String:
 
 
 func update_leaderboard():
-	LogManager.write_info("Updating leaderboard - current score: " + str(Global.final_score))
+	# REFACTORED: Use GameStateManager
+	var current_score = GameStateManager.get_score() if GameStateManager else 0
+	LogManager.write_info("Updating leaderboard - current score: " + str(current_score))
 
 	# Update title
 	if $LeaderboardTitlePanel/Title:
+		# REFACTORED: Use GameStateManager
+		var diff_level = GameStateManager.get_difficulty() if GameStateManager else "Normal"
 		$LeaderboardTitlePanel/Title.text = (
-			"Global Leaderboard\nEndless - %s" % Global.difficulty_level
+			"Global Leaderboard\nEndless - %s" % diff_level
 		)
 
 	# Check Steam status first
@@ -285,7 +293,11 @@ func update_leaderboard():
 
 	# Request leaderboard data
 	LogManager.write_info("Requesting leaderboard entries")
-	var request_success = Global.request_leaderboard_entries(Global.difficulty_level)
+	# REFACTORED: Use SteamManager directly
+	var diff_level = GameStateManager.get_difficulty() if GameStateManager else "Normal"
+	var request_success = false
+	if SteamManager:
+		request_success = SteamManager.request_leaderboard_scores(diff_level)
 	LogManager.write_info("Request leaderboard result: " + str(request_success))
 
 	if !request_success:
@@ -336,8 +348,12 @@ func _on_submit_score_button_pressed() -> void:
 	SteamManager.dump_debug_info()
 
 	# Submit the score
-	LogManager.write_info("Submitting score: " + str(Global.final_score))
-	var submission_success = Global.submit_score(Global.final_score)
+	# REFACTORED: Use GameStateManager and SteamManager
+	var current_score = GameStateManager.get_score() if GameStateManager else 0
+	LogManager.write_info("Submitting score: " + str(current_score))
+	var submission_success = false
+	if SteamManager:
+		submission_success = SteamManager.upload_score(current_score)
 	LogManager.write_info("Submit score API call result: " + str(submission_success))
 
 	if !submission_success:
@@ -380,7 +396,10 @@ func show_summary(stats_data: Dictionary):
 	# Determine if player won or lost
 	var win_condition = stats.get("quota_met", 0) >= stats.get("quota_target", 5)
 	var strikes_failed = stats.get("strikes", 0) >= stats.get("max_strikes", 6)
-	var global_strikes_failed = Global.strikes >= Global.max_strikes
+	# REFACTORED: Use GameStateManager
+	var current_strikes = GameStateManager.get_strikes() if GameStateManager else 0
+	var max_strikes = GameStateManager.get_max_strikes() if GameStateManager else 4
+	var global_strikes_failed = current_strikes >= max_strikes
 
 	# Update UI based on result
 	if $LeftPanel/ShiftComplete:
@@ -411,7 +430,9 @@ func populate_stats():
 	var expected_score = 2000  # Base expected score
 
 	# Adjust expectations based on difficulty
-	match Global.difficulty_level:
+	# REFACTORED: Use GameStateManager
+	var diff_level = GameStateManager.get_difficulty() if GameStateManager else "Normal"
+	match diff_level:
 		"Easy":
 			expected_score = 1000
 			difficulty_rating = tr("options_difficulty_easy")
@@ -741,14 +762,17 @@ func generate_test_stats() -> Dictionary:
 
 
 func _on_continue_button_pressed() -> void:
-	Global.reset_shift_stats()
+	# REFACTORED: Use EventBus
+	EventBus.shift_stats_reset.emit()
 	print("Continue button pressed")
 
 	# REFACTORED: Use the narrative_manager variable already found in _ready()
 	# narrative_manager is set during initialization (line 46-51)
 	if narrative_manager:
 		# Show the day transition
-		narrative_manager.show_day_transition(Global.shift, Global.shift + 1)
+		# REFACTORED: Use GameStateManager
+		var current_shift = GameStateManager.get_shift() if GameStateManager else 1
+		narrative_manager.show_day_transition(current_shift, current_shift + 1)
 
 		# Connect to the dialogue_finished signal
 		if not narrative_manager.dialogue_finished.is_connected(_on_day_transition_complete):
@@ -782,20 +806,25 @@ func _on_day_transition_complete():
 
 func check_demo_limit() -> bool:
 	# Check if this is a demo build and if the player has reached the limit
-	if Global.build_type == "Demo Release" and Global.shift >= 3:
+	# REFACTORED: Use GameStateManager
+	var build_type = GameStateManager.get_build_type() if GameStateManager else "Full Release"
+	var current_shift = GameStateManager.get_shift() if GameStateManager else 1
+	if build_type == "Demo Release" and current_shift >= 3:
 		return true
 	return false
 
 
 func _on_restart_button_pressed() -> void:
-	Global.reset_shift_stats()
+	# REFACTORED: Use EventBus
+	EventBus.shift_stats_reset.emit()
 	print("Restart button pressed")
 	emit_signal("restart_shift")
 	queue_free()
 
 
 func _on_main_menu_button_pressed() -> void:
-	Global.reset_shift_stats()
+	# REFACTORED: Use EventBus
+	EventBus.shift_stats_reset.emit()
 	print("Main menu button pressed, emitting signal")
 	emit_signal("return_to_main_menu")
 	queue_free()

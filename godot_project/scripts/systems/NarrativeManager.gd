@@ -221,7 +221,8 @@ func _on_dialogic_signal(argument):
 		get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
 
 	# Skip Steam achievements in DEV_MODE
-	if Global.DEV_MODE:
+	# REFACTORED: Use GameStateManager
+	if GameStateManager and GameStateManager.is_dev_mode():
 		return
 
 	# REFACTORED: Emit achievement unlocked events
@@ -260,7 +261,8 @@ func _on_intro_dialogue_finished():
 	if EventBus and GameStateManager:
 		EventBus.level_unlock_requested.emit(GameStateManager.get_shift() + 1)
 		# TODO: Migrate story_state management to GameStateManager
-		EventBus.story_state_changed.emit(Global.current_story_state)
+		# REFACTORED: Use GameStateManager
+		EventBus.story_state_changed.emit(GameStateManager.get_story_state())
 		EventBus.dialogue_ended.emit("intro_dialogue")
 
 	cleanup_skip_buttons()
@@ -277,7 +279,8 @@ func _on_shift_dialogue_finished():
 	if EventBus and GameStateManager:
 		EventBus.level_unlock_requested.emit(GameStateManager.get_shift() + 1)
 		# TODO: Migrate story_state management to GameStateManager
-		EventBus.story_state_changed.emit(Global.current_story_state)
+		# REFACTORED: Use GameStateManager
+		EventBus.story_state_changed.emit(GameStateManager.get_story_state())
 		EventBus.dialogue_ended.emit("shift_dialogue")
 
 	cleanup_skip_buttons()
@@ -291,7 +294,8 @@ func _on_final_dialogue_finished():
 	if EventBus and GameStateManager:
 		EventBus.level_unlock_requested.emit(GameStateManager.get_shift() + 1)
 		# TODO: Migrate story_state management to GameStateManager
-		EventBus.story_state_changed.emit(Global.current_story_state)
+		# REFACTORED: Use GameStateManager
+		EventBus.story_state_changed.emit(GameStateManager.get_story_state())
 		EventBus.dialogue_ended.emit("final_dialogue")
 
 	cleanup_skip_buttons()

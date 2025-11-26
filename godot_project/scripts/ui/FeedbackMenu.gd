@@ -57,9 +57,10 @@ func _collect_system_information():
 	# Get game version from project settings
 	game_version = ProjectSettings.get_setting("application/config/version", "Unknown")
 
-	# Get playtime from Global
-	if Global.has_method("get_total_playtime"):
-		playtime = Global.get_total_playtime()
+	# Get playtime from GameStateManager
+	# REFACTORED: Use GameStateManager
+	if GameStateManager:
+		playtime = GameStateManager.get_total_playtime()
 	else:
 		playtime = 0.0
 

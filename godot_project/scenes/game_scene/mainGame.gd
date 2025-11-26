@@ -155,7 +155,9 @@ func _ready():
 	_start_narrative()
 
 	# Track shift start
-	Analytics.track_shift_started(Global.shift)
+	# REFACTORED: Use GameStateManager
+	var shift_num = GameStateManager.get_shift() if GameStateManager else Global.shift
+	Analytics.track_shift_started(shift_num)
 
 
 func _setup_managers():
@@ -180,14 +182,16 @@ func _setup_managers():
 
 func _setup_game_state():
 	# Initialize game state and stats
-	current_shift = Global.shift
-	Global.shift = current_shift  # Ensure synchronization
+	# REFACTORED: Use GameStateManager
+	current_shift = GameStateManager.get_shift() if GameStateManager else Global.shift
+	# Global.shift = current_shift  # REMOVED: GameStateManager is source of truth
 
 	shift_stats = stats_manager.get_new_stats()
 	game_start_time = Time.get_ticks_msec() / 1000.0
 
 	# Load difficulty settings
-	difficulty_level = Global.difficulty_level
+	# REFACTORED: Use GameStateManager
+	difficulty_level = GameStateManager.get_difficulty() if GameStateManager else Global.difficulty_level
 	set_difficulty(difficulty_level)
 
 	# Generate game rules
@@ -236,9 +240,9 @@ func _register_ui_hints():
 func _check_and_display_high_score():
 	var high_score = GameState.get_high_score(current_shift)
 	if high_score > 0:
-		Global.display_green_alert(
-			alert_label, alert_timer, "High score for this level: " + str(high_score)
-		)
+	if high_score > 0:
+		# REFACTORED: Use EventBus for alerts
+		EventBus.show_alert("High score for this level: " + str(high_score), true)
 
 	if Global.final_score > 0:
 		Global.score = Global.final_score
@@ -276,8 +280,12 @@ func _connect_signals():
 
 	# System signals
 	drag_and_drop_manager.drag_system.passport_returned.connect(_on_passport_returned)
-	Global.score_updated.connect(_on_score_updated)
 	border_runner_system.game_over_triggered.connect(_on_game_over)
+
+	# EventBus signals - REFACTORED to use EventBus instead of Global
+	EventBus.score_changed.connect(_on_score_changed)
+	EventBus.strike_changed.connect(_on_strike_changed)
+	EventBus.quota_changed.connect(_on_quota_changed)
 
 	# UI signals
 	ui_hint_system.hint_deactivated.connect(_on_hint_deactivated)
@@ -382,14 +390,21 @@ func add_to_combo():
 	# Show combo notification
 	if combo_count > 1:
 		var combo_text = "COMBO x" + str(combo_count) + " (" + str(multiplier) + "x points)"
-		Global.display_green_alert(alert_label, alert_timer + " : " + combo_text, 1.5)
+	if combo_count > 1:
+		var combo_text = "COMBO x" + str(combo_count) + " (" + str(multiplier) + "x points)"
+		# REFACTORED: Use EventBus for alerts (fixed bug with alert_timer concatenation)
+		EventBus.show_alert(combo_text, true, 1.5)
 
 	return multiplier
 
 
 func reset_combo():
 	if combo_count > 1:
-		Global.display_red_alert(alert_label, alert_timer + " : Combo Broken!", 1.5)
+func reset_combo():
+	if combo_count > 1:
+		# REFACTORED: Use EventBus for alerts
+		EventBus.show_alert("Combo Broken!", false, 1.5)
+	combo_count = 0
 	combo_count = 0
 	combo_timer = 0.0
 
@@ -397,7 +412,12 @@ func reset_combo():
 func award_points(base_points: int):
 	var multiplier = add_to_combo()
 	var total_points = base_points * multiplier
-	Global.add_score(total_points)
+	# REFACTORED: Use EventBus for score addition
+	EventBus.request_score_add(total_points, "gameplay_action", {
+		"base_points": base_points,
+		"multiplier": multiplier,
+		"combo_count": combo_count
+	})
 	return total_points
 
 
@@ -486,16 +506,24 @@ func end_shift(success: bool = true):
 	if success and Global.quota_met >= Global.quota_target:
 		# Add survival bonus
 		var survival_bonus = 500
-		Global.display_green_alert(
-			alert_label, alert_timer, tr("alert_quota_met").format({"bonus": str(survival_bonus)})
-		)
-		Global.add_score(survival_bonus)
+		# Add survival bonus
+		var survival_bonus = 500
+		# REFACTORED: Use EventBus for alerts
+		EventBus.show_alert(tr("alert_quota_met").format({"bonus": str(survival_bonus)}), true)
+		# REFACTORED: Use EventBus for survival bonus
+		EventBus.request_score_add(survival_bonus, "survival_bonus", {
+			"shift": Global.shift,
+			"quota_met": Global.quota_met
+		})
 
 		# Lower the shutter with animation when successful
 		if not office_shutter_controller.shutter_opened_this_shift:
 			office_shutter_controller.lower_shutter(1.0)
 
-		Analytics.track_shift_completed(Global.shift, success, Global.score)
+		# REFACTORED: Use GameStateManager
+		var current_shift_val = GameStateManager.get_shift() if GameStateManager else Global.shift
+		var current_score = GameStateManager.get_score() if GameStateManager else Global.score
+		Analytics.track_shift_completed(current_shift_val, success, current_score)
 
 		# Increment total shifts completed for achievements
 		Global.total_shifts_completed += 1
@@ -514,7 +542,10 @@ func end_shift(success: bool = true):
 			" and difficulty level",
 			difficulty_level
 		)
-		GameState.set_high_score(current_shift, Global.difficulty_level, Global.score)
+		# REFACTORED: Use GameStateManager
+		var diff_level = GameStateManager.get_difficulty() if GameStateManager else Global.difficulty_level
+		var score_val = GameStateManager.get_score() if GameStateManager else Global.score
+		GameState.set_high_score(current_shift, diff_level, score_val)
 
 		# Increment total shifts completed for achievements
 		Global.total_shifts_completed += 1
@@ -532,7 +563,8 @@ func end_shift(success: bool = true):
 	update_strikes_display()
 
 	# Update shift_stats with shift_number before ending shift
-	shift_stats.shift_number = Global.shift
+	# REFACTORED: Use GameStateManager
+	shift_stats.shift_number = GameStateManager.get_shift() if GameStateManager else Global.shift
 
 	# calculate end of shift bonuses
 	shift_stats.processing_speed_bonus = shift_stats.get_speed_bonus()
@@ -540,17 +572,20 @@ func end_shift(success: bool = true):
 	shift_stats.perfect_hit_bonus = shift_stats.get_missile_bonus()
 
 	# Add bonuses to Score
-	shift_stats.final_score = Global.score + shift_stats.get_total_bonus()
+	# REFACTORED: Use GameStateManager
+	var current_score = GameStateManager.get_score() if GameStateManager else Global.score
+	shift_stats.final_score = current_score + shift_stats.get_total_bonus()
 
 	# Store game stats
-	Global.store_game_stats(shift_stats)
+	# REFACTORED: Moved to after stats_dict creation and using GameStateManager
+	# Global.store_game_stats(shift_stats)
 
 	# Convert ShiftStats to a dictionary
 	var stats_dict = {
-		"shift": Global.shift,
+		"shift": GameStateManager.get_shift() if GameStateManager else Global.shift,
 		"time_taken": shift_stats.time_taken,
 		"processing_time_left": shift_stats.processing_time_left,
-		"score": Global.score,
+		"score": GameStateManager.get_score() if GameStateManager else Global.score,
 		"missiles_fired": shift_stats.missiles_fired,
 		"missiles_hit": shift_stats.missiles_hit,
 		"perfect_hits": shift_stats.perfect_hits,
@@ -558,18 +593,22 @@ func end_shift(success: bool = true):
 		"potatoes_approved": shift_stats.potatoes_approved,
 		"potatoes_rejected": shift_stats.potatoes_rejected,
 		"perfect_stamps": shift_stats.perfect_stamps,
-		"hit_rate": shift_stats.hit_rate,
+		"hit_rate": shift_stats.get_hit_rate(),
 		"runner_attempts": shift_stats.runner_attempts,
 		"processing_speed_bonus": shift_stats.processing_speed_bonus,
 		"accuracy_bonus": shift_stats.accuracy_bonus,
 		"perfect_hit_bonus": shift_stats.perfect_hit_bonus,
 		"final_score": shift_stats.final_score,
-		"quota_met": Global.quota_met,
-		"quota_target": Global.quota_target,
-		"strikes": Global.strikes,
-		"max_strikes": Global.max_strikes,
+		"quota_met": GameStateManager.get_quota_met() if GameStateManager else Global.quota_met,
+		"quota_target": GameStateManager.get_quota_target() if GameStateManager else Global.quota_target,
+		"strikes": GameStateManager.get_strikes() if GameStateManager else Global.strikes,
+		"max_strikes": GameStateManager.get_max_strikes() if GameStateManager else Global.max_strikes,
 		"success": success
 	}
+
+	# REFACTORED: Store stats in GameStateManager
+	if GameStateManager:
+		GameStateManager.set_last_game_stats(stats_dict)
 
 	# After updating all stats but before showing the summary screen
 	GlobalState.save()
@@ -658,14 +697,21 @@ func _on_shift_summary_continue():
 		return
 
 	# Save high score for the current level
-	GameState.set_high_score(completed_shift, Global.difficulty_level, Global.score)
+	# REFACTORED: Use GameStateManager
+	var diff_level = GameStateManager.get_difficulty() if GameStateManager else Global.difficulty_level
+	var score_val = GameStateManager.get_score() if GameStateManager else Global.score
+	GameState.set_high_score(completed_shift, diff_level, score_val)
 
 	# Advance the shift and story state
-	Global.advance_shift()
-	Global.advance_story_state()
+	# REFACTORED: Use EventBus requests instead of direct calls
+	EventBus.shift_advance_requested.emit()
+	EventBus.story_state_advance_requested.emit()
 
 	# Make sure GameState is updated with our progress
-	GameState.level_reached(Global.shift)
+	# Make sure GameState is updated with our progress
+	# REFACTORED: Use GameStateManager
+	var current_shift_val = GameStateManager.get_shift() if GameStateManager else Global.shift
+	GameState.level_reached(current_shift_val)
 
 	# Show day transition
 	narrative_manager.show_day_transition(completed_shift, completed_shift + 1)
@@ -681,8 +727,10 @@ func _on_shift_summary_continue():
 
 func _on_shift_summary_restart():
 	# Keep the same shift but reset the stats
-	Global.reset_shift_stats()
-	Global.reset_game_state()
+	# Keep the same shift but reset the stats
+	# REFACTORED: Use EventBus requests
+	EventBus.reset_shift_requested.emit()
+	EventBus.reset_game_requested.emit()
 	GlobalState.save()
 	if SceneLoader:
 		SceneLoader.reload_current_scene()
@@ -710,16 +758,26 @@ func _on_shift_summary_main_menu():
 func set_difficulty(level):
 	difficulty_level = level
 
-	# Set strike limits based on difficulty
+	# REFACTORED: Use GameStateManager for difficulty logic
+	if GameStateManager:
+		GameStateManager.set_difficulty(level)
+	else:
+		# Fallback logic
+		match difficulty_level:
+			"Easy":
+				Global.max_strikes = 6
+			"Normal":
+				Global.max_strikes = 4
+			"Expert":
+				Global.max_strikes = 3
+
+	# Set local variables based on difficulty
 	match difficulty_level:
 		"Easy":
-			Global.max_strikes = 6
 			regular_potato_speed = 0.4
 		"Normal":
-			Global.max_strikes = 4
 			regular_potato_speed = 0.5
 		"Expert":
-			Global.max_strikes = 3
 			regular_potato_speed = 0.6
 
 	update_quota_display()
@@ -732,7 +790,8 @@ func generate_rules():
 
 	# Progressive complexity based on shift number
 	var available_rules = []
-	match Global.shift:
+	var current_shift_val = GameStateManager.get_shift() if GameStateManager else Global.shift
+	match current_shift_val:
 		0:  # Tutorial - only the simplest rule
 			available_rules = ["law_fresh_potatoes"]
 		1:  # First shift - simple visual rules only
@@ -764,13 +823,14 @@ func generate_rules():
 
 	# Log rules for debugging
 	LogManager.write_info(
-		"Generated rules for shift " + str(Global.shift) + ": " + str(current_rules)
+		"Generated rules for shift " + str(current_shift_val) + ": " + str(current_rules)
 	)
 
 
 func _calculate_rules_for_shift() -> int:
 	# Progressive rule complexity
-	match Global.shift:
+	var current_shift_val = GameStateManager.get_shift() if GameStateManager else Global.shift
+	match current_shift_val:
 		0:
 			return 1  # Tutorial
 		1:
@@ -782,7 +842,7 @@ func _calculate_rules_for_shift() -> int:
 		5, 6, 7:
 			return 3  # Mid-game complexity
 		_:
-			return min(4, 2 + (Global.shift - 6))  # Late game, max 4
+			return min(4, 2 + (current_shift_val - 6))  # Late game, max 4
 
 
 func update_rules_display():
@@ -809,7 +869,8 @@ func update_rules_display():
 # Enhanced rule explanation system for tutorial
 func show_rule_explanation(rule_key: String):
 	"""Show explanation for specific rules during tutorial phases"""
-	if Global.shift > 2:  # Only show explanations for first few shifts
+	var current_shift_val = GameStateManager.get_shift() if GameStateManager else Global.shift
+	if current_shift_val > 2:  # Only show explanations for first few shifts
 		return
 
 	var explanation_key = "rule_explanation_" + rule_key.replace("law_", "")
@@ -838,9 +899,9 @@ func show_rule_explanation(rule_key: String):
 				explanation_text = "Check passport details against this rule"
 
 	# Display explanation
-	Global.display_green_alert(
-		alert_label, alert_timer, tr("rule_explanation_header") + "\n" + explanation_text
-	)
+	# Display explanation
+	# REFACTORED: Use EventBus
+	EventBus.show_alert(tr("rule_explanation_header") + "\n" + explanation_text, true)
 
 
 func is_potato_valid(potato_info: Dictionary) -> bool:
@@ -1401,10 +1462,20 @@ func calculate_age(date_of_birth: String) -> int:
 	return age
 
 
-# Update score display when global score changes
-func _on_score_updated(new_score: int):
+# REFACTORED: Update score display when EventBus.score_changed fires
+func _on_score_changed(new_score: int, delta: int, source: String):
 	#$UI/Labels/ScoreLabel.text = "Score: " + str(new_score)
 	$UI/Labels/ScoreLabel.text = tr("ui_score").format({"score": str(new_score)})
+
+
+# REFACTORED: Handle strike changes via EventBus
+func _on_strike_changed(current_strikes: int, max_strikes: int, delta: int):
+	update_strikes_display()
+
+
+# REFACTORED: Handle quota changes via EventBus
+func _on_quota_changed(current_quota: int, target_quota: int, delta: int):
+	update_quota_display()
 
 
 func process_decision(allowed):
@@ -1424,12 +1495,21 @@ func process_decision(allowed):
 	var correct_decision = validation.is_valid
 
 	# Update stats based on correctness of decision
+	# Update stats based on correctness of decision
 	if (allowed and correct_decision) or (!allowed and !correct_decision):
-		Global.quota_met += 1
+		# REFACTORED: Use EventBus for quota update
+		EventBus.request_quota_update(1)
 		correct_decision_streak += 1
 
 		# Check if quota met
-		if Global.quota_met >= Global.quota_target:
+		# REFACTORED: Use GameStateManager
+		var current_quota = GameStateManager.get_quota_met() if GameStateManager else Global.quota_met
+		var target_quota = GameStateManager.get_quota_target() if GameStateManager else Global.quota_target
+		
+		# Note: We use current_quota + 1 here because the event bus update might be async
+		# or we can rely on the fact that we just requested it. 
+		# Better to check if (current_quota + 1) >= target_quota since the update might not have propagated yet
+		if (current_quota + 1) >= target_quota:
 			office_shutter_controller.lower_shutter(0.7)
 			print("Quota complete!")
 			end_shift(true)  # end shift with success condition
@@ -1451,14 +1531,16 @@ func process_decision(allowed):
 		var decision_string: String = "approved" if allowed else "rejected"
 		Analytics.track_potato_processed(decision_string, correct_decision, current_potato_info)
 
-		Global.display_green_alert(alert_label, alert_timer, alert_text)
-		Global.add_score(decision_points)
+		# REFACTORED: Use EventBus
+		EventBus.show_alert(alert_text, true)
+		EventBus.request_score_add(decision_points, "correct_decision", {"streak": correct_decision_streak})
 
 		# ENHANCEMENT: Flash screen green for correct decision
 		_flash_screen_color(Color.GREEN, 0.2)
 
 		# ENHANCEMENT: Show rule explanation for tutorial
-		if Global.shift <= 1 and !allowed:
+		var current_shift_val = GameStateManager.get_shift() if GameStateManager else Global.shift
+		if current_shift_val <= 1 and !allowed:
 			for rule_key in current_rules:
 				var check_func = LawValidator.LAW_CHECKS[rule_key]["check"]
 				if check_func.call(current_potato_info):
@@ -1482,24 +1564,34 @@ func process_decision(allowed):
 			violated_rules_array.append(validation.violation_reason)
 		Analytics.track_incorrect_decision(current_potato_info, violated_rules_array)
 
-		Global.display_red_alert(alert_label, alert_timer, alert_text)
+		# REFACTORED: Use EventBus
+		EventBus.show_alert(alert_text, false)
 		correct_decision_streak = 0
 		point_multiplier = 1.0
-		Global.strikes += 1
+		EventBus.request_strike_add(1, "incorrect_decision", {"potato_info": current_potato_info})
 
 		# ENHANCEMENT: Flash screen red for wrong decision
 		_flash_screen_color(Color.RED, 0.3)
 
 		# ENHANCEMENT: Show explanation for tutorial mistakes
-		if Global.shift <= 1:
+		var current_shift_val = GameStateManager.get_shift() if GameStateManager else Global.shift
+		if current_shift_val <= 1:
 			show_rule_explanation(current_rules[0] if current_rules.size() > 0 else "")
 
-		if Global.strikes >= Global.max_strikes:
+		var current_strikes = GameStateManager.get_strikes() if GameStateManager else Global.strikes
+		var max_strikes = GameStateManager.get_max_strikes() if GameStateManager else Global.max_strikes
+		
+		# Note: We use current_strikes + 1 here because the event bus update might be async
+		# But since we are checking AFTER requesting the add, we should check if we hit the limit
+		# However, the game over logic is usually handled by the strike system itself.
+		# But we show the alert here.
+		if (current_strikes + 1) >= max_strikes:
 			alert_text = tr("alert_strike_out")
-			Global.display_red_alert(alert_label, alert_timer, alert_text)
+			EventBus.show_alert(alert_text, false)
 			# Lower the shutter when max strikes reached
 			office_shutter_controller.lower_shutter(0.7)
-			Analytics.track_shift_failed(Global.shift, alert_text)
+			# REFACTORED: Use GameStateManager
+			Analytics.track_shift_failed(current_shift_val, alert_text)
 			end_shift(false)  # end shift with failure condition
 			return  # Cease processing
 
@@ -1512,23 +1604,27 @@ func process_decision(allowed):
 
 
 func update_score_display():
-	#$UI/Labels/ScoreLabel.text = "Score: " + str(Global.score)
-	$UI/Labels/ScoreLabel.text = tr("ui_score").format({"score": str(Global.score)})
+	# REFACTORED: Use GameStateManager with Global fallback
+	var current_score = GameStateManager.get_score() if GameStateManager else Global.score
+	#$UI/Labels/ScoreLabel.text = "Score: " + str(current_score)
+	$UI/Labels/ScoreLabel.text = tr("ui_score").format({"score": str(current_score)})
 	if point_multiplier > 1.0:
 		$UI/Labels/ScoreLabel.text += " (x" + str(point_multiplier) + ")"
 
 
 func update_quota_display():
-	var current_quota = Global.quota_met
+	# REFACTORED: Use GameStateManager with Global fallback
+	var current_quota = GameStateManager.get_quota_met() if GameStateManager else Global.quota_met
+	var quota_target = GameStateManager.get_quota_target() if GameStateManager else Global.quota_target
 	var quota_label = $UI/Labels/QuotaLabel
 
 	# Ensure shift is at least 1 for calculation purposes, such as in shift 0 for tutorial
 	# Update the text
-	# quota_label.text = "Quota: " + str(current_quota) + " / " + str(Global.quota_target)
+	# quota_label.text = "Quota: " + str(current_quota) + " / " + str(quota_target)
 
 	# Update the text with translation
 	quota_label.text = tr("ui_quota").format(
-		{"current": str(current_quota), "target": str(Global.quota_target)}
+		{"current": str(current_quota), "target": str(quota_target)}
 	)
 
 	# Check if there's a change OR if this is the first update (previous_quota is -1)
@@ -1577,15 +1673,17 @@ func update_quota_display():
 
 
 func update_strikes_display():
-	var current_strikes = Global.strikes
+	# REFACTORED: Use GameStateManager with Global fallback
+	var current_strikes = GameStateManager.get_strikes() if GameStateManager else Global.strikes
+	var max_strikes = GameStateManager.get_max_strikes() if GameStateManager else Global.max_strikes
 	var strikes_label = $UI/Labels/StrikesLabel
 
 	# Update the text
-	# strikes_label.text = "Strikes: " + str(current_strikes) + " / " + str(Global.max_strikes)
+	# strikes_label.text = "Strikes: " + str(current_strikes) + " / " + str(max_strikes)
 
 	# Update the text with translation
 	strikes_label.text = tr("ui_strikes").format(
-		{"current": current_strikes, "max": Global.max_strikes}
+		{"current": current_strikes, "max": max_strikes}
 	)
 	# Check if there's a change OR if this is the first update (previous_strikes is -1)
 	if previous_strikes != current_strikes && previous_strikes != -1:

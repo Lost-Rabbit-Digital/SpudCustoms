@@ -23,8 +23,10 @@ var high_score_labels = []
 
 func _ready() -> void:
 	add_levels_to_container()
-	# Debug initial shift value in Global singleton
-	print("DEBUG: Initial Global.shift value: ", Global.shift)
+	# Debug initial shift value
+	# REFACTORED: Use GameStateManager
+	var current_shift = GameStateManager.get_shift() if GameStateManager else 1
+	print("DEBUG: Initial shift value: ", current_shift)
 	GlobalState.save()
 
 
@@ -97,11 +99,13 @@ func update_high_score_label(label: Label) -> void:
 	# Try to get high score from multiple sources to ensure we use the highest value
 	var high_score = 0
 
-	high_score = GameState.get_high_score(level_id, Global.difficulty_level)
+	# REFACTORED: Use GameStateManager
+	var diff_level = GameStateManager.get_difficulty() if GameStateManager else "Normal"
+	high_score = GameState.get_high_score(level_id, diff_level)
 
 	# Try SaveManager as fallback or to find a higher score
 	if SaveManager.has_method("get_level_high_score"):
-		var save_manager_score = SaveManager.get_level_high_score(level_id, Global.difficulty_level)
+		var save_manager_score = SaveManager.get_level_high_score(level_id, diff_level)
 		high_score = max(high_score, save_manager_score)
 
 	# Update text if there's a high score
@@ -156,7 +160,9 @@ func _update_high_score_positions() -> void:
 
 
 # Function to update all high score labels with new difficulty
-func update_high_scores_display(difficulty: String = Global.difficulty_level) -> void:
+func update_high_scores_display(difficulty: String = "") -> void:
+	if difficulty == "":
+		difficulty = GameStateManager.get_difficulty() if GameStateManager else "Normal"
 	for label in high_score_labels:
 		if is_instance_valid(label):
 			update_high_score_label(label)
@@ -172,20 +178,26 @@ func _on_level_buttons_container_item_activated(index: int) -> void:
 	# Only proceed if the level is unlocked
 	if level_id <= GameState.get_max_level_reached():
 		# Print current shift value before changing anything
-		print("DEBUG: Before change - Global.shift value: ", Global.shift)
+		var current_shift = GameStateManager.get_shift() if GameStateManager else 1
+		print("DEBUG: Before change - shift value: ", current_shift)
 
 		# Set the current level in GameState
 		GameState.set_current_level(level_id)
 
-		# Set the shift in the Global singleton to match the level_id
-		Global.shift = level_id
-		print("DEBUG: Set Global.shift to: ", level_id)
+		# Set the shift in the GameStateManager
+		# REFACTORED: Use GameStateManager
+		if GameStateManager:
+			GameStateManager.set_shift(level_id)
+		print("DEBUG: Set shift to: ", level_id)
 
 		# Update mode back to story mode
-		Global.switch_game_mode("story")
+		# REFACTORED: Use GameStateManager
+		if GameStateManager:
+			GameStateManager.switch_game_mode("story")
 
 		# Print value after the change to verify
-		print("DEBUG: After change - Global.shift value: ", Global.shift)
+		var new_shift = GameStateManager.get_shift() if GameStateManager else level_id
+		print("DEBUG: After change - shift value: ", new_shift)
 
 		# Emit signal to inform parent that a level was selected
 		level_selected.emit()

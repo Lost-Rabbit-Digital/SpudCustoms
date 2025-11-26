@@ -23,11 +23,13 @@ var _quota_target: int = 8
 var _quota_met: int = 0
 var _difficulty_level: String = "Normal"
 var _game_mode: String = "score_attack"
+var _story_state: int = 0
 
 # Statistics
 var _total_runners_stopped: int = 0
 var _perfect_hits: int = 0
 var _total_shifts_completed: int = 0
+var _last_game_stats: Dictionary = {}
 
 # ============================================================================
 # PUBLIC READ-ONLY ACCESSORS
@@ -49,6 +51,15 @@ func get_shift() -> int:
 	return _shift
 
 
+func set_shift(value: int) -> void:
+	_shift = value
+	if Global:
+		Global.shift = value
+	# Also update GameState persistence
+	if GameState:
+		GameState.set_current_level(value)
+
+
 func get_quota_target() -> int:
 	return _quota_target
 
@@ -65,12 +76,76 @@ func get_game_mode() -> String:
 	return _game_mode
 
 
+func set_game_mode(mode: String) -> void:
+	_game_mode = mode
+	if Global:
+		Global.game_mode = mode
+
+
+func switch_game_mode(mode: String) -> void:
+	set_game_mode(mode)
+	
+	if mode == "story":
+		# Load story progress from GameState
+		if GameState:
+			set_shift(GameState.get_current_level())
+		# Set quota based on current level (simplified logic for now)
+		# In Global it was: floor(base_quota_target + (shift - 1))
+		# We can let the level logic handle quota calculation or set it here
+		var base_quota = 8
+		_quota_target = base_quota + (_shift - 1)
+		
+	elif mode == "score_attack":
+		# For score attack, reset to level 1
+		set_shift(1)
+		_quota_target = 9999
+		
+	if Global:
+		Global.quota_target = _quota_target
+		Global.save_game_state()
+
+
+func get_story_state() -> int:
+	if Global:
+		return Global.current_story_state
+	return _story_state
+
+
+func is_dev_mode() -> bool:
+	if Global:
+		return Global.DEV_MODE
+	return false
+
+
 func get_total_runners_stopped() -> int:
 	return _total_runners_stopped
 
 
 func get_perfect_hits() -> int:
 	return _perfect_hits
+
+
+func get_total_playtime() -> float:
+	if Global and Global.has_method("get_total_playtime"):
+		return Global.get_total_playtime()
+	return 0.0
+
+
+
+func get_last_game_stats() -> Dictionary:
+	return _last_game_stats
+
+
+func set_last_game_stats(stats: Dictionary) -> void:
+	_last_game_stats = stats
+	if Global:
+		Global.current_game_stats = stats
+
+
+func get_build_type() -> String:
+	if Global:
+		return Global.build_type
+	return "Full Release"
 
 
 # ============================================================================
@@ -116,6 +191,7 @@ func _sync_with_global() -> void:
 		_quota_met = Global.quota_met
 		_difficulty_level = Global.difficulty_level
 		_game_mode = Global.game_mode
+		_story_state = Global.current_story_state
 		_total_runners_stopped = Global.total_runners_stopped
 		_perfect_hits = Global.perfect_hits
 		_total_shifts_completed = Global.total_shifts_completed
