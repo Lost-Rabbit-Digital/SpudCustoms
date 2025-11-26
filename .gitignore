@@ -2,3 +2,7 @@
 .godot/
 /android/
 godot_project/addons/godotsteam/win64/~libgodotsteam.windows.template_debug.x86_64.dll
+
+# Python cache
+__pycache__/
+*.pyc
