@@ -379,7 +379,9 @@ Fix cursor not updating after document drag in godot_project/scripts/systems/dra
 ```
 
 ```
-Add SFX for office shutter lever in godot_project/scripts/systems/OfficeShutterController.gd
+[DONE] Add SFX for office shutter lever in godot_project/scripts/systems/OfficeShutterController.gd
+- Now uses dedicated lever sounds: assets/audio/mechanical/lever big 1-3.wav
+- Includes random sound selection and pitch variation
 ```
 
 ```
