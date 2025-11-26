@@ -387,7 +387,10 @@ Fix the DragAndDropManager return_item_to_table buffer issue documented in proje
 ```
 
 ```
-Fix music persistence bug when returning to main menu from Dialogic scene
+[DONE] Fix music persistence bug when returning to main menu from Dialogic scene
+- Added Dialogic.end_timeline() call before scene changes in mainGame.gd and pause_menu.gd
+- This prevents Dialogic's _on_dialogic_timeline_ended from clearing all audio channels
+- Stops only dialogue sounds, preserves background music managed by MusicController
 ```
 
 ---

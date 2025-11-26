@@ -743,11 +743,14 @@ func _on_shift_summary_main_menu():
 	# Save state before transitioning to main menu
 	GlobalState.save()
 
-	# FIXED: Only stop dialogue sounds, preserve background music
-	# Stop dialogue-specific audio channels but keep music playing
-	Dialogic.Audio.stop_all_one_shot_sounds()
-	# Note: Not stopping all channels to preserve music continuity
-	# If music needs to change, the main menu scene will handle it
+	# FIXED: End Dialogic timeline cleanly before scene change
+	# This prevents Dialogic's _on_dialogic_timeline_ended from clearing all audio
+	# when the scene is destroyed
+	if Dialogic.current_timeline:
+		# Stop only dialogue sounds, preserve background music
+		Dialogic.Audio.stop_all_one_shot_sounds()
+		# End the timeline cleanly - this triggers cleanup in a controlled way
+		Dialogic.end_timeline()
 
 	fade_transition()
 	# Access SceneLoader directly

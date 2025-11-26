@@ -90,6 +90,13 @@ func _on_confirm_restart_confirmed():
 func _on_confirm_main_menu_confirmed():
 	print("Main menu confirmed, loading scene")
 	Global.reset_shift_stats()
+
+	# FIXED: End Dialogic timeline cleanly before scene change
+	# This prevents music from stopping when Dialogic's cleanup triggers
+	if Dialogic.current_timeline:
+		Dialogic.Audio.stop_all_one_shot_sounds()
+		Dialogic.end_timeline()
+
 	get_tree().change_scene_to_file("res://scenes/menus/main_menu/main_menu_with_animations.tscn")
 	close()
 
