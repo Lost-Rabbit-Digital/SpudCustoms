@@ -337,6 +337,7 @@ async def translate_batch_async(session, texts_dict, target_language, semaphore,
 
     Returns: (translations_dict, input_tokens, output_tokens)
     """
+    import aiohttp
     async with semaphore:
         await rate_limiter.acquire()
 
