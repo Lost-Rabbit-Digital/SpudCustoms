@@ -298,6 +298,11 @@ func _connect_signals():
 	drag_and_drop_manager.drag_system.passport_returned.connect(_on_passport_returned)
 	border_runner_system.game_over_triggered.connect(_on_game_over)
 
+	# Megaphone hover sound
+	var megaphone_button = megaphone.get_node_or_null("MegaphoneInteractionButton")
+	if megaphone_button:
+		megaphone_button.mouse_entered.connect(_on_megaphone_hover)
+
 	# EventBus signals - REFACTORED to use EventBus instead of Global
 	EventBus.score_changed.connect(_on_score_changed)
 	EventBus.strike_changed.connect(_on_strike_changed)
@@ -319,6 +324,9 @@ func _connect_signals():
 func _setup_gameplay_systems():
 	# Enable border runner system
 	border_runner_system.is_enabled = true
+
+	# Setup ambient audio
+	_setup_ambient_audio()
 
 
 func _start_narrative():
@@ -1171,6 +1179,19 @@ func _on_megaphone_interaction_button_pressed() -> void:
 	# Reset the perfect bonus state when a new potato is called
 	if stamp_system_manager:
 		stamp_system_manager.reset_perfect_bonus_state()
+
+
+# Called when player hovers over megaphone
+func _on_megaphone_hover() -> void:
+	var hover_sound = preload("res://assets/audio/ui_feedback/ui_hover_megaphone.mp3")
+	var hover_player = AudioStreamPlayer.new()
+	hover_player.stream = hover_sound
+	hover_player.bus = "SFX"
+	hover_player.volume_db = -6.0
+	hover_player.pitch_scale = randf_range(0.95, 1.05)
+	add_child(hover_player)
+	hover_player.play()
+	hover_player.finished.connect(hover_player.queue_free)
 
 
 # Optional: Callback for hint activation/deactivation
@@ -2418,6 +2439,63 @@ func load_tracks():
 		"res://assets/music/horror_fog_main.mp3",
 		"res://assets/music/opening_wonderlust_intensity.wav"
 	]
+
+
+# Ambient audio players
+var ambient_office_player: AudioStreamPlayer
+var ambient_clock_player: AudioStreamPlayer
+
+
+func _setup_ambient_audio():
+	# Setup office ambient loop
+	ambient_office_player = AudioStreamPlayer.new()
+	ambient_office_player.name = "AmbientOfficePlayer"
+	ambient_office_player.stream = preload("res://assets/audio/ambient/ambient_office_loop.mp3")
+	ambient_office_player.bus = "SFX"
+	ambient_office_player.volume_db = -18.0  # Subtle background
+	ambient_office_player.autoplay = false
+	add_child(ambient_office_player)
+
+	# Setup clock tick loop
+	ambient_clock_player = AudioStreamPlayer.new()
+	ambient_clock_player.name = "AmbientClockPlayer"
+	ambient_clock_player.stream = preload("res://assets/audio/ambient/ambient_clock_tick_loop.mp3")
+	ambient_clock_player.bus = "SFX"
+	ambient_clock_player.volume_db = -24.0  # Very subtle
+	ambient_clock_player.autoplay = false
+	add_child(ambient_clock_player)
+
+	# Start ambient sounds with a fade-in
+	_start_ambient_audio()
+
+
+func _start_ambient_audio():
+	# Fade in ambient office sound
+	if ambient_office_player:
+		ambient_office_player.volume_db = -40.0
+		ambient_office_player.play()
+		var office_tween = create_tween()
+		office_tween.tween_property(ambient_office_player, "volume_db", -18.0, 3.0)
+
+	# Fade in clock ticking after a short delay
+	if ambient_clock_player:
+		ambient_clock_player.volume_db = -40.0
+		var clock_tween = create_tween()
+		clock_tween.tween_callback(ambient_clock_player.play).set_delay(1.5)
+		clock_tween.tween_property(ambient_clock_player, "volume_db", -24.0, 2.0)
+
+
+func stop_ambient_audio():
+	# Fade out ambient sounds
+	if ambient_office_player and ambient_office_player.playing:
+		var tween = create_tween()
+		tween.tween_property(ambient_office_player, "volume_db", -40.0, 1.0)
+		tween.tween_callback(ambient_office_player.stop)
+
+	if ambient_clock_player and ambient_clock_player.playing:
+		var tween = create_tween()
+		tween.tween_property(ambient_clock_player, "volume_db", -40.0, 1.0)
+		tween.tween_callback(ambient_clock_player.stop)
 
 
 # Visual feedback system for decisions

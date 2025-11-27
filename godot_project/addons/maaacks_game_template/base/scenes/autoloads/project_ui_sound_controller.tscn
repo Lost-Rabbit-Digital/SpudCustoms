@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cc37235kj4384"]
+[gd_scene load_steps=6 format=3 uid="uid://cc37235kj4384"]
 
-[ext_resource type="Script" uid="uid://b5oej1q4h7jvh" path="res://addons/maaacks_game_template/base/scripts/ui_sound_controller.gd" id="1_dmagn"]
+[ext_resource type="Script" path="res://addons/maaacks_game_template/base/scripts/ui_sound_controller.gd" id="1_dmagn"]
+[ext_resource type="AudioStream" path="res://assets/audio/ui_feedback/ui_hover_button.mp3" id="2_button_hover"]
+[ext_resource type="AudioStream" path="res://assets/audio/ui_feedback/ui_slider_tick.mp3" id="3_slider_tick"]
+[ext_resource type="AudioStream" path="res://assets/user_interface/audio/click_sound_4.mp3" id="4_button_pressed"]
+[ext_resource type="AudioStream" path="res://assets/audio/ui_feedback/tooltip_appear.mp3" id="5_tooltip"]
 
 [node name="ProjectUISoundController" type="Node"]
 script = ExtResource("1_dmagn")
+button_hovered = ExtResource("2_button_hover")
+button_pressed = ExtResource("4_button_pressed")
+slider_hovered = ExtResource("3_slider_tick")
+slider_drag_started = ExtResource("3_slider_tick")

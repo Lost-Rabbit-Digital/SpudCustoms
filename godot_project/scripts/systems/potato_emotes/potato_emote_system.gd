@@ -367,6 +367,16 @@ func wiggle_animation(brain_state: int) -> void:
 		push_warning("WiggleAnimation: Cannot wiggle, PotatoSprite not found or invalid")
 		return
 
+	# Play wiggle sound effect
+	var wiggle_player = AudioStreamPlayer.new()
+	wiggle_player.stream = preload("res://assets/audio/gameplay/potato_wiggle.mp3")
+	wiggle_player.bus = "SFX"
+	wiggle_player.volume_db = -12.0
+	wiggle_player.pitch_scale = randf_range(0.9, 1.1)
+	add_child(wiggle_player)
+	wiggle_player.play()
+	wiggle_player.finished.connect(wiggle_player.queue_free)
+
 	# Stop any existing wiggle tween
 	var existing_tweens: Array = []
 	if potato_person.has_meta("potato_wiggle_tweens"):
