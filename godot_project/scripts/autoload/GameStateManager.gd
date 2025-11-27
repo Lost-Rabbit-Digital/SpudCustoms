@@ -110,8 +110,7 @@ func set_story_state(state: int) -> void:
 
 
 func is_dev_mode() -> bool:
-	# TODO: Move DEV_MODE to a proper config or constant
-	return false
+	return Global.DEV_MODE if Global else false
 
 
 func get_total_runners_stopped() -> int:

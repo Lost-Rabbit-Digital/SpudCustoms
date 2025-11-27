@@ -55,14 +55,15 @@ func _ready() -> void:
 	)
 	var node_highlight_material = ShaderMaterial.new()
 	node_highlight_material.shader = NodeHighlightShader
-	# After setting the material
-	%PotatoSprite.material = node_highlight_material
 
-	# TODO: This doesn't actually set the shader parameters, no idea why but I give up, fuck this.
-	# Set shader parameters
+	# Set shader parameters before assigning to ensure they're properly applied
 	node_highlight_material.set_shader_parameter("edge_width", 0.1)
 	node_highlight_material.set_shader_parameter("ignore_colors", true)
-	node_highlight_material.set_shader_parameter("ignored_color_1", Color("#3c354a"))  # Purple color from inspector
+	node_highlight_material.set_shader_parameter("ignored_color_1", Color("#3c354a"))
+	node_highlight_material.set_shader_parameter("enable_highlight", false)
+
+	# Apply the material after parameters are set
+	%PotatoSprite.material = node_highlight_material
 
 	# Get reference to the emote sprite
 	emote_sprite = %PotatoEmote
@@ -384,13 +385,16 @@ func _on_potato_button_pressed() -> void:
 	interact_with_potato()
 
 
-# TODO: Add error handling for these two functions incase the potato does not have a material
 func _on_potato_button_mouse_entered() -> void:
-	%PotatoSprite.material.set_shader_parameter("enable_highlight", true)
+	var sprite = get_node_or_null("%PotatoSprite")
+	if sprite and sprite.material:
+		sprite.material.set_shader_parameter("enable_highlight", true)
 
 
 func _on_potato_button_mouse_exited() -> void:
-	%PotatoSprite.material.set_shader_parameter("enable_highlight", false)
+	var sprite = get_node_or_null("%PotatoSprite")
+	if sprite and sprite.material:
+		sprite.material.set_shader_parameter("enable_highlight", false)
 
 
 func is_potato_on_concrete() -> bool:

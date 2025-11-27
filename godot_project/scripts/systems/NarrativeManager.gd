@@ -260,8 +260,6 @@ func _on_intro_dialogue_finished():
 	# Request to unlock next level via EventBus
 	if EventBus and GameStateManager:
 		EventBus.level_unlock_requested.emit(GameStateManager.get_shift() + 1)
-		# TODO: Migrate story_state management to GameStateManager
-		# REFACTORED: Use GameStateManager
 		EventBus.story_state_changed.emit(GameStateManager.get_story_state())
 		EventBus.dialogue_ended.emit("intro_dialogue")
 
@@ -278,8 +276,6 @@ func _on_shift_dialogue_finished():
 	# Request to unlock next level via EventBus
 	if EventBus and GameStateManager:
 		EventBus.level_unlock_requested.emit(GameStateManager.get_shift() + 1)
-		# TODO: Migrate story_state management to GameStateManager
-		# REFACTORED: Use GameStateManager
 		EventBus.story_state_changed.emit(GameStateManager.get_story_state())
 		EventBus.dialogue_ended.emit("shift_dialogue")
 
@@ -293,8 +289,6 @@ func _on_final_dialogue_finished():
 	# Request to unlock next level via EventBus
 	if EventBus and GameStateManager:
 		EventBus.level_unlock_requested.emit(GameStateManager.get_shift() + 1)
-		# TODO: Migrate story_state management to GameStateManager
-		# REFACTORED: Use GameStateManager
 		EventBus.story_state_changed.emit(GameStateManager.get_story_state())
 		EventBus.dialogue_ended.emit("final_dialogue")
 
