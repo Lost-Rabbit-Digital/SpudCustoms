@@ -263,25 +263,33 @@ func _play_emote_sound(emote_type: int) -> void:
 	if not emote_audio_player or not play_sounds:
 		return
 
-	# Find which category this emote belongs to
-	var emote_category = ""
-	for category in emote_categories:
-		if emote_type in emote_categories[category]:
-			emote_category = category
-			break
-
-	# Get sound type and number
-	var sound_type = category_sound_map.get(emote_category, "froggy_dislike")
-	var max_num = 9 if sound_type == "froggy_dislike" else 7
-	var sound_num = (randi() % max_num) + 1
-
-	# Build file path and load sound
-	var sound_path = "res://assets/audio/talking/{0}_{1}.wav".format([sound_type, sound_num])
-	var stream = load(sound_path)
-
+	# NEW: Map emote types to specific sound files
+	var emote_sound_map = {
+		EmoteType.HAPPY_FACE: preload("res://assets/audio/emotes/emote_happy.mp3"),
+		EmoteType.SINGULAR_HEART: preload("res://assets/audio/emotes/emote_happy.mp3"),
+		EmoteType.SWIRLING_HEARTS: preload("res://assets/audio/emotes/emote_happy.mp3"),
+		
+		EmoteType.ANGRY_FACE: preload("res://assets/audio/emotes/emote_angry.mp3"),
+		EmoteType.POPPING_VEIN: preload("res://assets/audio/emotes/emote_angry.mp3"),
+		
+		EmoteType.QUESTION: preload("res://assets/audio/emotes/emote_confused.mp3"),
+		EmoteType.CONFUSED: preload("res://assets/audio/emotes/emote_confused.mp3"),
+		
+		EmoteType.DOUBLE_EXCLAMATION: preload("res://assets/audio/emotes/emote_alert.mp3"),
+		EmoteType.SINGULAR_EXCLAMATION: preload("res://assets/audio/emotes/emote_alert.mp3"),
+		
+		# Fallback for other emotes (sad, broken heart, etc.)
+		EmoteType.SAD_FACE: preload("res://assets/audio/emotes/emote_confused.mp3"),
+		EmoteType.BROKEN_HEART: preload("res://assets/audio/emotes/emote_confused.mp3"),
+	}
+	
+	# Get the sound for this emote type
+	var stream = emote_sound_map.get(emote_type)
+	
 	if stream:
 		emote_audio_player.stream = stream
-		emote_audio_player.pitch_scale = randf_range(0.6, 1.2)
+		emote_audio_player.volume_db = emote_volume
+		emote_audio_player.pitch_scale = randf_range(0.9, 1.1)  # Subtle variation
 		emote_audio_player.play()
 
 

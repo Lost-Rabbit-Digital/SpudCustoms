@@ -87,6 +87,12 @@ var audio_player: AudioStreamPlayer2D
 ## Reference to the stamp bar controller for stamp button interaction.
 var _stamp_bar_controller = null
 
+# NEW: Document interaction sounds
+var document_grab_sound = preload("res://assets/audio/document_sfx/document_grab.mp3")
+var document_whoosh_sound = preload("res://assets/audio/document_sfx/document_whoosh.mp3")
+var document_return_sound = preload("res://assets/audio/document_sfx/document_return.mp3")
+var document_blocked_sound = preload("res://assets/audio/document_sfx/document_blocked.mp3")
+
 
 ## Initializes the drag and drop system with necessary references.
 ##
@@ -254,6 +260,12 @@ func _handle_mouse_press(mouse_position: Vector2) -> bool:
 			# Update cursor to "grab" when starting to drag
 			if cursor_manager:
 				cursor_manager.update_cursor("grab")
+			
+			# NEW: Play grab sound
+			if audio_player:
+				audio_player.stream = document_grab_sound
+				audio_player.pitch_scale = randf_range(0.95, 1.05)
+				audio_player.play()
 
 			return true
 	return false
@@ -327,7 +339,11 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 				doc_controller.close()
 
 			# Maybe play a "blocked" sound effect
-			play_block_sound()
+			# NEW: Use new blocked sound
+			if audio_player:
+				audio_player.stream = document_blocked_sound
+				audio_player.pitch_scale = randf_range(0.95, 1.05)
+				audio_player.play()
 
 			# Return to table
 			_return_item_to_table(dragged_item)
@@ -353,7 +369,11 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 				doc_controller.close()
 
 			# Play a "blocked" sound effect
-			play_block_sound()
+			# NEW: Use new blocked sound
+			if audio_player:
+				audio_player.stream = document_blocked_sound
+				audio_player.pitch_scale = randf_range(0.95, 1.05)
+				audio_player.play()
 
 			# Return to table
 			_return_item_to_table(dragged_item)
@@ -559,7 +579,11 @@ func _return_item_to_table(item: Node2D):
 	)
 
 	# Play a return sound
-	play_close_sound()
+	# NEW: Use new return sound
+	if audio_player:
+		audio_player.stream = document_return_sound
+		audio_player.pitch_scale = randf_range(0.95, 1.05)
+		audio_player.play()
 
 
 ## Gets the size of a node, handling different node types.

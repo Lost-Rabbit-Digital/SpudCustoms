@@ -87,6 +87,10 @@ var explosion_sound_pool = [
 	preload("res://assets/audio/explosions/big distant thump 6.wav"),
 ]
 
+# NEW: Additional missile sounds
+var missile_launch_sound = preload("res://assets/audio/gameplay/missile_launch.mp3")
+var missile_perfect_hit_sound = preload("res://assets/audio/gameplay/missile_perfect_hit.mp3")
+
 # Internal state tracking
 var is_enabled = true  # Track if system is enabled
 var is_in_dialogic = false  # Track if game is in dialogue mode
@@ -667,9 +671,10 @@ func launch_missile(target_pos):
 	if missile_sound and missile_sound.get_instance_id() != 0:
 		# Create a dedicated audio player for the missile sound to prevent interruption
 		var launch_player = AudioStreamPlayer2D.new()
-		launch_player.stream = missile_sound.stream
+		# NEW: Use new missile launch sound
+		launch_player.stream = missile_launch_sound
 		launch_player.volume_db = -5.0  # Adjust volume as needed
-		launch_player.pitch_scale = randf_range(0.8, 1.2)
+		launch_player.pitch_scale = randf_range(0.9, 1.1)
 		launch_player.bus = "SFX"
 		launch_player.autoplay = true
 		launch_player.position = missile.position
@@ -1148,6 +1153,15 @@ func handle_successful_hit(runner, explosion_pos):
 		was_perfect_hit = true
 		# REFACTORED: Emit perfect hit event
 		EventBus.perfect_hit_achieved.emit(perfect_hit_bonus)
+		# NEW: Play perfect hit sound
+		var perfect_hit_player = AudioStreamPlayer.new()
+		perfect_hit_player.stream = missile_perfect_hit_sound
+		perfect_hit_player.bus = "SFX"
+		perfect_hit_player.volume_db = -3.0
+		perfect_hit_player.pitch_scale = randf_range(0.95, 1.05)
+		add_child(perfect_hit_player)
+		perfect_hit_player.play()
+		perfect_hit_player.finished.connect(perfect_hit_player.queue_free)
 		# Spawn even more gibs on a perfect hit
 		spawn_gibs(runner.global_position)
 		points_earned += perfect_hit_bonus

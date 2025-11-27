@@ -82,6 +82,17 @@ func add_potato(potato_info: Dictionary):
 	print("Potato Created, new total potatoes: ", potatoes.size())
 	#print("New potato information: ", potato_info)
 	update_positions()
+	
+	# NEW: Play queue entry sound
+	var queue_sound = preload("res://assets/audio/gameplay/potato_queue_enter.mp3")
+	var player = AudioStreamPlayer.new()
+	player.stream = queue_sound
+	player.bus = "SFX"
+	player.volume_db = -10.0
+	player.pitch_scale = randf_range(0.95, 1.05)
+	add_child(player)
+	player.play()
+	player.finished.connect(player.queue_free)
 
 
 func remove_potato() -> Dictionary:

@@ -301,8 +301,12 @@ func _connect_signals():
 	# EventBus signals - REFACTORED to use EventBus instead of Global
 	EventBus.score_changed.connect(_on_score_changed)
 	EventBus.strike_changed.connect(_on_strike_changed)
+	EventBus.strike_removed.connect(_on_strike_removed)
 	EventBus.quota_changed.connect(_on_quota_changed)
 	EventBus.minigame_bonus_requested.connect(_on_minigame_bonus_requested)
+	EventBus.runner_escaped.connect(_on_runner_escaped)
+	EventBus.achievement_unlocked.connect(_on_achievement_unlocked)
+	EventBus.high_score_achieved.connect(_on_high_score_achieved)
 
 	# UI signals
 	ui_hint_system.hint_deactivated.connect(_on_hint_deactivated)
@@ -1514,16 +1518,70 @@ func calculate_age(date_of_birth: String) -> int:
 func _on_score_changed(new_score: int, delta: int, source: String):
 	#$UI/Labels/ScoreLabel.text = "Score: " + str(new_score)
 	$UI/Labels/ScoreLabel.text = tr("ui_score").format({"score": str(new_score)})
+	
+	# NEW: Play score popup sound for positive score changes
+	if delta > 0:
+		var score_sound = preload("res://assets/audio/gameplay/score_popup.mp3")
+		var player = AudioStreamPlayer.new()
+		player.stream = score_sound
+		player.bus = "SFX"
+		player.volume_db = -8.0
+		player.pitch_scale = randf_range(0.95, 1.05)
+		add_child(player)
+		player.play()
+		player.finished.connect(player.queue_free)
 
 
 # REFACTORED: Handle strike changes via EventBus
 func _on_strike_changed(current_strikes: int, max_strikes: int, delta: int):
 	update_strikes_display()
+	
+	# NEW: Play citation sound when strike is added
+	if delta > 0:
+		var citation_sound = preload("res://assets/audio/gameplay/citation_added.mp3")
+		var player = AudioStreamPlayer.new()
+		player.stream = citation_sound
+		player.bus = "SFX"
+		player.volume_db = -5.0
+		player.pitch_scale = randf_range(0.95, 1.05)
+		add_child(player)
+		player.play()
+		player.finished.connect(player.queue_free)
 
 
 # REFACTORED: Handle quota changes via EventBus
 func _on_quota_changed(current_quota: int, target_quota: int, delta: int):
 	update_quota_display()
+
+
+# NEW: Handle strike removed with sound
+func _on_strike_removed(current_strikes: int, max_strikes: int):
+	update_strikes_display()
+	
+	# Play strike removed sound
+	var strike_removed_sound = preload("res://assets/audio/gameplay/strike_removed.mp3")
+	var player = AudioStreamPlayer.new()
+	player.stream = strike_removed_sound
+	player.bus = "SFX"
+	player.volume_db = -5.0
+	player.pitch_scale = randf_range(0.95, 1.05)
+	add_child(player)
+	player.play()
+	player.finished.connect(player.queue_free)
+
+
+# NEW: Handle runner escaped with sound
+func _on_runner_escaped(runner_data: Dictionary):
+	# Play runner escaped sound
+	var runner_escaped_sound = preload("res://assets/audio/gameplay/runner_escaped.mp3")
+	var player = AudioStreamPlayer.new()
+	player.stream = runner_escaped_sound
+	player.bus = "SFX"
+	player.volume_db = -3.0
+	player.pitch_scale = randf_range(0.95, 1.05)
+	add_child(player)
+	player.play()
+	player.finished.connect(player.queue_free)
 
 
 # Handle minigame bonus requests
@@ -1538,6 +1596,34 @@ func _on_minigame_bonus_requested(bonus: int, source: String):
 func trigger_random_minigame():
 	if minigame_launcher and not minigame_launcher.is_minigame_active():
 		minigame_launcher.launch_random()
+
+
+# NEW: Handle achievement unlocked with sound
+func _on_achievement_unlocked(achievement_id: String):
+	# Play achievement sound
+	var achievement_sound = preload("res://assets/audio/ui_feedback/achievement_unlocked.mp3")
+	var player = AudioStreamPlayer.new()
+	player.stream = achievement_sound
+	player.bus = "SFX"
+	player.volume_db = 0.0  # Prominent
+	player.pitch_scale = randf_range(0.98, 1.02)
+	add_child(player)
+	player.play()
+	player.finished.connect(player.queue_free)
+
+
+# NEW: Handle high score achieved with sound
+func _on_high_score_achieved(difficulty: String, score: int, shift: int):
+	# Play high score sound
+	var high_score_sound = preload("res://assets/audio/ui_feedback/high_score_achieved.mp3")
+	var player = AudioStreamPlayer.new()
+	player.stream = high_score_sound
+	player.bus = "SFX"
+	player.volume_db = 0.0  # Prominent
+	player.pitch_scale = randf_range(0.98, 1.02)
+	add_child(player)
+	player.play()
+	player.finished.connect(player.queue_free)
 
 
 ## Launch a specific minigame if unlocked
