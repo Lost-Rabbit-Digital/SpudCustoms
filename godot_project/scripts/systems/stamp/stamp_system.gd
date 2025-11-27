@@ -69,9 +69,6 @@ func register_stampable(
 	# Store in our dictionary
 	stampable_documents[document] = stampable
 
-	if stampable:
-		stampable.visualize_stamp_area()
-
 	return stampable
 
 

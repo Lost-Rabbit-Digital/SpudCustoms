@@ -67,9 +67,10 @@ const Z_INDEX = {
 	# ----------------------------------------------------------------------
 	## General particle systems (dust, smoke, etc.)
 	"STAMP_PARTICLES": null,
-	## Explosion effects (below inspection table to not obscure gameplay)
-	"EXPLOSIONS": 1,
-	"EXPLOSION_SMOKE": 1,
+	## Explosion effects - above corpses but below screen borders
+	"EXPLOSIONS": 5,
+	## Smoke from explosions - slightly below explosions
+	"EXPLOSION_SMOKE": 4,
 	## Footprints left by NPCs (on ground level)
 	"FOOTPRINTS": 0,
 	## Smoke from the misisles

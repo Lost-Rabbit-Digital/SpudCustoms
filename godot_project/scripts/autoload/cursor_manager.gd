@@ -88,11 +88,13 @@ func _process(_delta):
 	# Release of the primary interaction
 	elif not Input.is_action_pressed("primary_interaction") and input_pressed:
 		input_pressed = false
-		# If no hover item, restore to default, otherwise stay on hover state
+		# If no hover item, restore to default, otherwise use appropriate hover state
 		if hover_state_stack.is_empty():
 			update_cursor("default")
 		else:
-			update_cursor("hover_2")
+			var top_control = hover_state_stack.back()
+			var hover_state = _get_hover_state_for_control(top_control) if top_control else "hover_2"
+			update_cursor(hover_state)
 
 	# Check for missile zone if callback provided
 	if missile_zone_callback.is_valid() and hover_state_stack.is_empty() and not input_pressed:
@@ -145,16 +147,47 @@ func _on_button_mouse_entered(button: Control):
 	if not active:
 		return
 
-	#print("Mouse entered: ", button.name)
 	# Add button to hover stack
 	hover_state_stack.append(button)
 
-	# Update cursor to hover state unless mouse is being pressed
-	# TODO: This is where we would implement the check for which hover state to use,
-	# hover_1 for draggables or hover_2 for clickables
+	# Update cursor to appropriate hover state unless mouse is being pressed
 	if not input_pressed:
-		update_cursor("hover_2")
-		#print("Set cursor to hover state")
+		var hover_state = _get_hover_state_for_control(button)
+		update_cursor(hover_state)
+
+
+## Determine the appropriate hover cursor state for a control.
+## Returns "hover_1" for draggable items, "hover_2" for clickable buttons.
+func _get_hover_state_for_control(control: Control) -> String:
+	# Check if the control or its parent is a draggable document
+	if _is_draggable_control(control):
+		return "hover_1"
+	return "hover_2"
+
+
+## Check if a control is a draggable item (document, passport, etc.)
+func _is_draggable_control(control: Control) -> bool:
+	# Check by group membership
+	if control.is_in_group("DraggableDocuments") or control.is_in_group("Draggable"):
+		return true
+
+	# Check by common draggable document names
+	var draggable_names = ["Passport", "LawReceipt", "Document", "Paper"]
+	for name_part in draggable_names:
+		if name_part in control.name:
+			return true
+
+	# Check parent hierarchy for draggable context
+	var parent = control.get_parent()
+	while parent:
+		if parent.is_in_group("DraggableDocuments") or parent.is_in_group("Draggable"):
+			return true
+		for name_part in draggable_names:
+			if name_part in parent.name:
+				return true
+		parent = parent.get_parent()
+
+	return false
 
 
 func _on_button_mouse_exited(button: Control):

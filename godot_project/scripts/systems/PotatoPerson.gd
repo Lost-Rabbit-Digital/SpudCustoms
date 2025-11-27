@@ -26,6 +26,9 @@ var footprint_interval: float = 0.15  # Time between footprints
 var footprints: Array = []
 var max_footprints: int = 24
 
+## Optional reference to a shared FootprintPool for better performance
+var footprint_pool: FootprintPool = null
+
 # Path following
 var current_path_follow: PathFollow2D
 var current_path: Path2D
@@ -55,14 +58,15 @@ func _ready() -> void:
 	)
 	var node_highlight_material = ShaderMaterial.new()
 	node_highlight_material.shader = NodeHighlightShader
-	# After setting the material
-	%PotatoSprite.material = node_highlight_material
 
-	# TODO: This doesn't actually set the shader parameters, no idea why but I give up, fuck this.
-	# Set shader parameters
+	# Set shader parameters before assigning to ensure they're properly applied
 	node_highlight_material.set_shader_parameter("edge_width", 0.1)
 	node_highlight_material.set_shader_parameter("ignore_colors", true)
-	node_highlight_material.set_shader_parameter("ignored_color_1", Color("#3c354a"))  # Purple color from inspector
+	node_highlight_material.set_shader_parameter("ignored_color_1", Color("#3c354a"))
+	node_highlight_material.set_shader_parameter("enable_highlight", false)
+
+	# Apply the material after parameters are set
+	%PotatoSprite.material = node_highlight_material
 
 	# Get reference to the emote sprite
 	emote_sprite = %PotatoEmote
@@ -326,47 +330,38 @@ func fade_out(duration: float = 0.5):
 
 
 func spawn_footprint():
-	var footprint = Sprite2D.new()
-
-	# Determine if on concrete (you'll need to implement this based on your game)
 	var is_on_concrete = is_potato_on_concrete()
+
+	# Use object pool if available for better performance
+	if footprint_pool:
+		footprint_pool.spawn_at_position(global_position, is_on_concrete)
+		return
+
+	# Fallback to direct creation if no pool is set
+	var footprint = Sprite2D.new()
 
 	# Load the appropriate texture
 	if is_on_concrete:
 		footprint.texture = preload("res://assets/effects/footstep_concrete.png")
-		# Random scale for concrete footprints - slightly smaller than grass
 		footprint.scale = Vector2(randf_range(0.65, 0.75), randf_range(0.65, 0.75))
-		# Darker color for concrete footprints
 		footprint.modulate = Color(1, 1, 1, 0.7)
 	else:
 		footprint.texture = preload("res://assets/effects/footstep_grass.png")
-		# Random scale for grass footprints
 		footprint.scale = Vector2(randf_range(0.75, 0.85), randf_range(0.75, 0.85))
-		# Normal color
 		footprint.modulate = Color(1, 1, 1, 0.8)
 
-	# Add random rotation to make footprints look more natural
-	# Limit rotation to a realistic range for footsteps (slight variations)
-	footprint.rotation = randf_range(-0.1, 0.15)  # About +/-8.6 degrees
-	# Base position starts at the player's position
+	# Add random rotation for natural look
+	footprint.rotation = randf_range(-0.1, 0.15)
 	footprint.global_position = global_position
-	# Add random offsets to create more natural-looking footstep patterns
-	var x_offset = randf_range(-5, 5)  # Random horizontal offset of +/-5 pixels
-	var y_offset = randf_range(8, 14)  # Random vertical offset between 8-14 pixels
-	# Apply the offsets
-	footprint.global_position.x += x_offset
-	footprint.global_position.y += y_offset
-	# Set z-index to ensure footprints appear below the potato
+	# Add random offsets for natural-looking patterns
+	footprint.global_position.x += randf_range(-5, 5)
+	footprint.global_position.y += randf_range(8, 14)
 	footprint.z_index = ConstantZIndexes.Z_INDEX.FOOTPRINTS
-
-	# Add the footprint to a group for easier management
 	footprint.add_to_group("FootprintGroup")
 
-	# Get the root node to add footprints
 	var root = get_tree().current_scene
 	root.add_child(footprint)
 
-	# Store footprint
 	footprints.append(footprint)
 
 	# Fade out footprint
@@ -384,13 +379,16 @@ func _on_potato_button_pressed() -> void:
 	interact_with_potato()
 
 
-# TODO: Add error handling for these two functions incase the potato does not have a material
 func _on_potato_button_mouse_entered() -> void:
-	%PotatoSprite.material.set_shader_parameter("enable_highlight", true)
+	var sprite = get_node_or_null("%PotatoSprite")
+	if sprite and sprite.material:
+		sprite.material.set_shader_parameter("enable_highlight", true)
 
 
 func _on_potato_button_mouse_exited() -> void:
-	%PotatoSprite.material.set_shader_parameter("enable_highlight", false)
+	var sprite = get_node_or_null("%PotatoSprite")
+	if sprite and sprite.material:
+		sprite.material.set_shader_parameter("enable_highlight", false)
 
 
 func is_potato_on_concrete() -> bool:

@@ -175,6 +175,10 @@ func clear_stamps():
 		open_content_node.update()
 
 
+# Preload the clipping shader
+const STAMP_CLIPPING_SHADER = preload("res://assets/shaders/stamp/stamp_clipping.gdshader")
+
+
 # Create the visual stamp sprite
 func create_stamp_sprite(stamp: StampComponent, position: Vector2) -> Sprite2D:
 	var texture_path: String
@@ -192,6 +196,12 @@ func create_stamp_sprite(stamp: StampComponent, position: Vector2) -> Sprite2D:
 	final_stamp.z_index = z_index_for_stamps
 	final_stamp.z_as_relative = true
 
+	# Apply viewport clipping to keep stamp within document bounds
+	_apply_clipping_shader(final_stamp, position)
+
+	# Apply colorblind mode adjustments if enabled
+	_apply_colorblind_style(final_stamp, stamp.stamp_type)
+
 	# Add stamp to document
 	open_content_node.add_child(final_stamp)
 
@@ -200,6 +210,119 @@ func create_stamp_sprite(stamp: StampComponent, position: Vector2) -> Sprite2D:
 	tween.tween_property(final_stamp, "modulate:a", 1.0, 0.1)
 
 	return final_stamp
+
+
+## Apply viewport clipping shader to keep stamps within document bounds.
+## Prevents stamps from visually extending beyond the document edges.
+func _apply_clipping_shader(stamp_sprite: Sprite2D, stamp_position: Vector2) -> void:
+	# Use open_content_node bounds if it's a Sprite2D, otherwise fall back to document_node
+	var clip_source: Sprite2D = null
+	if open_content_node is Sprite2D:
+		clip_source = open_content_node as Sprite2D
+	elif document_node is Sprite2D:
+		clip_source = document_node as Sprite2D
+
+	if not clip_source:
+		push_warning("StampableComponent: Cannot apply clipping - no Sprite2D source found")
+		return
+
+	# Get the content bounds in local space
+	var content_rect = clip_source.get_rect()
+
+	# Calculate clipping bounds relative to stamp position
+	# Stamps are positioned relative to open_content_node
+	# We need to determine how much of the stamp should be visible based on document edges
+
+	# Get the content half-size (Sprite2D is centered by default)
+	var half_size = content_rect.size / 2.0
+
+	# Calculate clip bounds relative to stamp position
+	# These values represent how far the stamp can extend in each direction
+	# before it should be clipped
+	var clip_left = -stamp_position.x - half_size.x
+	var clip_top = -stamp_position.y - half_size.y
+	var clip_right = half_size.x - stamp_position.x
+	var clip_bottom = half_size.y - stamp_position.y
+
+	# Create shader material
+	var shader_material = ShaderMaterial.new()
+	shader_material.shader = STAMP_CLIPPING_SHADER
+	shader_material.set_shader_parameter("clip_bounds", Vector4(clip_left, clip_top, clip_right, clip_bottom))
+	shader_material.set_shader_parameter("clipping_enabled", true)
+	shader_material.set_shader_parameter("edge_softness", 2.0)
+
+	stamp_sprite.material = shader_material
+
+
+## Apply colorblind-friendly styling to a stamp sprite.
+## Adds color tinting and pattern overlay when colorblind mode is active.
+func _apply_colorblind_style(stamp_sprite: Sprite2D, stamp_type: String) -> void:
+	# Check if AccessibilityManager exists and colorblind mode is enabled
+	var accessibility = get_node_or_null("/root/AccessibilityManager")
+	if not accessibility:
+		return
+
+	if accessibility.current_colorblind_mode == accessibility.ColorblindMode.NONE:
+		return
+
+	# Apply colorblind-friendly color tinting
+	var tint_color: Color
+	if stamp_type == "approve":
+		tint_color = accessibility.get_approval_color()
+	else:
+		tint_color = accessibility.get_rejection_color()
+
+	# Apply a subtle tint while preserving the stamp texture
+	stamp_sprite.modulate = tint_color * Color(1.2, 1.2, 1.2, 1.0)
+
+	# Add pattern indicator for additional differentiation
+	var pattern_type = ""
+	if stamp_type == "approve":
+		pattern_type = accessibility.get_approval_pattern()
+	else:
+		pattern_type = accessibility.get_rejection_pattern()
+
+	if pattern_type != "none":
+		_add_pattern_indicator(stamp_sprite, pattern_type, stamp_type)
+
+
+## Add a small pattern indicator to the stamp for colorblind users.
+## Uses shape patterns (stripes for approve, dots for reject) alongside color.
+func _add_pattern_indicator(stamp_sprite: Sprite2D, pattern_type: String, stamp_type: String) -> void:
+	# Create a small indicator in the corner of the stamp
+	var indicator = Node2D.new()
+	indicator.name = "ColorblindIndicator"
+
+	var indicator_size = 12.0
+	var offset = Vector2(-20, -20)  # Top-left corner offset
+
+	if pattern_type == "stripes":
+		# Draw diagonal stripes for approval
+		for i in range(3):
+			var line = Line2D.new()
+			line.width = 2.0
+			line.default_color = Color.WHITE
+			var start_offset = i * 4.0
+			line.add_point(Vector2(start_offset, 0) + offset)
+			line.add_point(Vector2(start_offset + indicator_size, indicator_size) + offset)
+			indicator.add_child(line)
+	elif pattern_type == "dots":
+		# Draw dots pattern for rejection
+		for i in range(3):
+			for j in range(3):
+				var dot = Polygon2D.new()
+				dot.color = Color.WHITE
+				# Create a small circle using polygon points
+				var points = PackedVector2Array()
+				var dot_radius = 1.5
+				for k in range(8):
+					var angle = k * PI * 2 / 8
+					points.append(Vector2(cos(angle), sin(angle)) * dot_radius)
+				dot.polygon = points
+				dot.position = Vector2(i * 5.0, j * 5.0) + offset
+				indicator.add_child(dot)
+
+	stamp_sprite.add_child(indicator)
 
 
 # Get all stamps of a specific type

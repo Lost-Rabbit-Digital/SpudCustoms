@@ -3,6 +3,11 @@ extends Node
 # Development mode - Set to true to disable Steam functionality
 const DEV_MODE = false  # Set to true to skip all Steam features
 
+# Difficulty scaling factors for quota calculations
+const DIFFICULTY_SCALING_EASY: float = 0.8
+const DIFFICULTY_SCALING_NORMAL: float = 1.0
+const DIFFICULTY_SCALING_EXPERT: float = 1.2
+
 # Persistent variables
 var current_story_state: int = 0
 var difficulty_level = "Normal"  # Can be "Easy", "Normal", or "Expert"
@@ -179,16 +184,14 @@ func advance_shift():
 	# reset per-shift stats
 	reset_shift_stats()
 	var scaling_factor: float
-	# Update quota target for new shift
-	# This assumes quota target increases with each shift
+	# Update quota target for new shift based on difficulty
 	match Global.difficulty_level:
 		"Easy":
-			# TODO: 0.8 normally
-			scaling_factor = 0.8
+			scaling_factor = DIFFICULTY_SCALING_EASY
 		"Normal":
-			scaling_factor = 1
+			scaling_factor = DIFFICULTY_SCALING_NORMAL
 		"Expert":
-			scaling_factor = 1.2
+			scaling_factor = DIFFICULTY_SCALING_EXPERT
 
 	quota_target = int(floor((base_quota_target + (shift - 1)) * scaling_factor))
 	save_game_state()
@@ -341,14 +344,13 @@ func set_difficulty(new_difficulty: String):
 		# Update game parameters based on difficulty
 		match difficulty_level:
 			"Easy":
-				# TODO: 0.8 normally
-				scaling_factor = 0.8
+				scaling_factor = DIFFICULTY_SCALING_EASY
 				max_strikes = 6
 			"Normal":
-				scaling_factor = 1
+				scaling_factor = DIFFICULTY_SCALING_NORMAL
 				max_strikes = 4
 			"Expert":
-				scaling_factor = 1.2
+				scaling_factor = DIFFICULTY_SCALING_EXPERT
 				max_strikes = 3
 		quota_target = int(floor(base_quota_target * scaling_factor))
 

@@ -42,6 +42,9 @@ func _ready():
 	_setup_credits()
 	_setup_game_buttons()
 
+	# Setup keyboard navigation for accessibility
+	_setup_keyboard_navigation()
+
 
 func _exit_tree() -> void:
 	# Kill any running tweens to prevent memory leaks
@@ -97,6 +100,51 @@ func _input(event):
 			get_tree().quit()
 	if event.is_action_released("ui_accept") and get_viewport().gui_get_focus_owner() == null:
 		%MenuButtonsBoxContainer.focus_first()
+
+
+## Setup keyboard navigation for accessibility.
+## Ensures all visible buttons are focusable and properly linked.
+func _setup_keyboard_navigation():
+	# Get main menu button container
+	var menu_buttons = get_node_or_null("%MenuButtonsBoxContainer")
+	if not menu_buttons:
+		return
+
+	# Get all visible buttons
+	var visible_buttons: Array[Button] = []
+	for child in menu_buttons.get_children():
+		if child is Button and child.visible:
+			visible_buttons.append(child)
+			# Ensure button can receive focus
+			child.focus_mode = Control.FOCUS_ALL
+
+	# Setup focus neighbors for vertical navigation
+	for i in visible_buttons.size():
+		var button = visible_buttons[i]
+
+		# Previous button (wrap around)
+		var prev_idx = i - 1 if i > 0 else visible_buttons.size() - 1
+		button.focus_neighbor_top = visible_buttons[prev_idx].get_path()
+
+		# Next button (wrap around)
+		var next_idx = i + 1 if i < visible_buttons.size() - 1 else 0
+		button.focus_neighbor_bottom = visible_buttons[next_idx].get_path()
+
+		# Horizontal navigation loops back to same button
+		button.focus_neighbor_left = button.get_path()
+		button.focus_neighbor_right = button.get_path()
+
+	# Set initial focus to first visible button after a short delay
+	# (allows menu animations to complete first)
+	if visible_buttons.size() > 0:
+		_set_initial_focus.call_deferred(visible_buttons[0])
+
+
+## Set initial focus after scene is ready.
+func _set_initial_focus(button: Button):
+	# Only grab focus if no other control has focus
+	if get_viewport().gui_get_focus_owner() == null:
+		button.grab_focus()
 
 
 func _setup_for_web():
