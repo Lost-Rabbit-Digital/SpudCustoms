@@ -426,9 +426,7 @@ func add_to_combo():
 	# Show combo notification
 	if combo_count > 1:
 		var combo_text = "COMBO x" + str(combo_count) + " (" + str(multiplier) + "x points)"
-	if combo_count > 1:
-		var combo_text = "COMBO x" + str(combo_count) + " (" + str(multiplier) + "x points)"
-		# REFACTORED: Use EventBus for alerts (fixed bug with alert_timer concatenation)
+		# REFACTORED: Use EventBus for alerts
 		EventBus.show_alert(combo_text, true, 1.5)
 
 	return multiplier
@@ -436,11 +434,8 @@ func add_to_combo():
 
 func reset_combo():
 	if combo_count > 1:
-func reset_combo():
-	if combo_count > 1:
 		# REFACTORED: Use EventBus for alerts
 		EventBus.show_alert("Combo Broken!", false, 1.5)
-	combo_count = 0
 	combo_count = 0
 	combo_timer = 0.0
 
