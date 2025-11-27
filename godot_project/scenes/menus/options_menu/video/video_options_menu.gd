@@ -13,8 +13,10 @@ func _ready():
 # When camera shake setting changes
 func _on_camera_shake_setting_changed(value):
 	# Update the global screen shake multiplier
-	if Global:
-		Global.update_camera_shake_setting()
+	# Update the global screen shake multiplier
+	# REFACTORED: Use UIManager directly
+	if UIManager:
+		UIManager.update_camera_shake_setting()
 
 
 # Helper function to find node by name recursively

@@ -22,7 +22,9 @@ func _ready():
 	_setup_confirmation_dialog()
 	_setup_feedback_menu()
 	# Check for demo version
-	if Global.build_type == "Demo Release":
+	# Check for demo version
+	# REFACTORED: Use GameStateManager
+	if GameStateManager and GameStateManager.get_build_type() == "Demo Release":
 		# Hide score attack button
 		%EndlessButton.visible = false
 
@@ -39,17 +41,21 @@ func new_game():
 
 func _on_new_game_confirmed():
 	await JuicyButtons.setup_button(%NewGameButton)
-	Global.switch_game_mode("story")
+	# REFACTORED: Use GameStateManager
+	if GameStateManager:
+		GameStateManager.switch_game_mode("story")
 	GlobalState.reset()
 	load_game_scene()
 
 
 func _on_endless_button_pressed():
 	await JuicyButtons.setup_button(%EndlessButton)
-	print("Sending call to update game mode in Global")
-	Global.switch_game_mode("score_attack")
+	print("Sending call to update game mode in GameStateManager")
+	# REFACTORED: Use GameStateManager and EventBus
+	if GameStateManager:
+		GameStateManager.switch_game_mode("score_attack")
 	# Reset game state but keep high scores
-	Global.reset_shift_stats()
+	EventBus.shift_stats_reset.emit()
 	# Now load the score attack scene instead
 	SceneLoader.load_scene("res://scenes/game_scene/score_attack_ui.tscn")
 
@@ -186,7 +192,9 @@ func _setup_game_buttons():
 
 
 func _on_continue_game_button_pressed():
-	Global.switch_game_mode("story")
+	# REFACTORED: Use GameStateManager
+	if GameStateManager:
+		GameStateManager.switch_game_mode("story")
 	load_game_scene()
 
 

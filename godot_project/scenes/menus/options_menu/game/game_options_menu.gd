@@ -32,8 +32,9 @@ func _ready():
 		difficulty_option_button.add_item("Normal")
 		difficulty_option_button.add_item("Expert")
 
-		# Set current selection based on Global setting
-		match Global.difficulty_level:
+		# Set current selection based on GameStateManager setting
+		# REFACTORED: Use GameStateManager
+		match GameStateManager.get_difficulty() if GameStateManager else "Normal":
 			"Easy":
 				difficulty_option_button.select(0)
 			"Normal":
@@ -47,7 +48,9 @@ func _ready():
 
 func _on_difficulty_changed(index):
 	var difficulty = difficulty_option_button.get_item_text(index)
-	Global.set_difficulty(difficulty)
+	# REFACTORED: Use GameStateManager
+	if GameStateManager:
+		GameStateManager.set_difficulty(difficulty)
 	print("Difficulty changed to: ", difficulty)
 
 
@@ -83,21 +86,17 @@ func _on_ResetHighScoresButton_pressed():
 func _reset_story_progress():
 	# Reset story progress but keep high scores
 	GlobalState.reset()
-	Global.reset_game_state(true)
-	Global.current_story_state = 0
+	# REFACTORED: Use EventBus/GameStateManager
+	EventBus.shift_stats_reset.emit() # Reset runtime stats
+	if GameStateManager:
+		GameStateManager.set_story_state(0)
 	GlobalState.save()
 
 
 func _reset_high_scores():
 	# Reset only high scores
-	Global.high_scores = {
-		"level_highscores":
-		{
-			"1": {"Easy": 800, "Normal": 800, "Expert": 800},  # Level ID as string
-			"2": {"Easy": 800, "Normal": 800, "Expert": 800}
-		},
-		"global_highscores": {"Easy": 900, "Normal": 900, "Expert": 900}
-	}
+	# REFACTORED: Removed direct Global.high_scores manipulation
+	# The GameState.level_highscores reset below is sufficient for persistence
 	# Clear level-specific high scores
 	var game_state = GameState.get_game_state()
 	game_state.level_highscores = {}

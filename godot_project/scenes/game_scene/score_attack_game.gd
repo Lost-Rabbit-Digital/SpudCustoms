@@ -13,13 +13,19 @@ func _ready():
 	super._ready()
 
 	# Configure for endless mode
-	Global.quota_target = 9999  # Effectively infinite
+	# Configure for endless mode
+	# REFACTORED: Use GameStateManager
+	if GameStateManager:
+		GameStateManager._quota_target = 9999  # Effectively infinite
 
 	# Update UI to show score attack mode
 	$UI/Labels/QuotaLabel.text = "Score Attack Mode"
 
 	# Set initial difficulty based on selected difficulty
-	match Global.difficulty_level:
+	# Set initial difficulty based on selected difficulty
+	# REFACTORED: Use GameStateManager
+	var difficulty = GameStateManager.get_difficulty() if GameStateManager else "Normal"
+	match difficulty:
 		"Easy":
 			initial_difficulty_multiplier = 0.8
 		"Normal":
@@ -31,10 +37,11 @@ func _ready():
 	border_runner_system.runner_chance = original_runner_chance * initial_difficulty_multiplier
 
 	# Special welcome message
-	Global.display_green_alert(
-		alert_label,
-		alert_timer,
-		"SCORE ATTACK MODE!\nSurvive as long as possible!\nDifficulty increases over time!"
+	# Special welcome message
+	# REFACTORED: Use EventBus
+	EventBus.show_alert(
+		"SCORE ATTACK MODE!\nSurvive as long as possible!\nDifficulty increases over time!",
+		true
 	)
 
 
@@ -61,7 +68,10 @@ func _process(delta):
 		regular_potato_speed = min(regular_potato_speed * (1.0 + speed_increase), 1.0)  # Cap at 1.0 speed
 
 		# Update UI to show current multiplier and time
-		$UI/Labels/ScoreLabel.text = "Score: %s (x%.1f)" % [Global.score, score_multiplier]
+		# Update UI to show current multiplier and time
+		# REFACTORED: Use GameStateManager
+		var current_score = GameStateManager.get_score() if GameStateManager else 0
+		$UI/Labels/ScoreLabel.text = "Score: %s (x%.1f)" % [current_score, score_multiplier]
 
 		# Add a time survived display
 		var minutes = int(time_survived / 60)
@@ -76,7 +86,8 @@ func _process(delta):
 func award_points(base_points: int):
 	var combo_multiplier = add_to_combo()
 	var total_points = base_points * combo_multiplier * score_multiplier
-	Global.add_score(total_points)
+	# REFACTORED: Use EventBus
+	EventBus.request_score_add(int(total_points), "score_attack_award", {})
 	return total_points
 
 

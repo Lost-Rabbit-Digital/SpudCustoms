@@ -229,17 +229,12 @@ func _enrich_properties(properties: Dictionary) -> Dictionary:
 	enriched["godot_version"] = Engine.get_version_info().string
 	enriched["locale"] = TranslationServer.get_locale()
 
-	# Game state - prefer GameStateManager, fallback to Global
+	# Game state - prefer GameStateManager
 	if GameStateManager:
 		enriched["current_shift"] = GameStateManager.get_shift()
 		enriched["current_score"] = GameStateManager.get_score()
 		enriched["current_strikes"] = GameStateManager.get_strikes()
 		enriched["difficulty"] = GameStateManager.get_difficulty()
-	elif Global:
-		enriched["current_shift"] = Global.shift
-		enriched["current_score"] = Global.score
-		enriched["current_strikes"] = Global.strikes
-		enriched["difficulty"] = Global.difficulty_level
 
 	return enriched
 
@@ -356,10 +351,9 @@ func track_main_menu_action(action: String) -> void:
 
 func track_difficulty_selected(difficulty: String) -> void:
 	var current_shift = 0
+	var current_shift = 0
 	if GameStateManager:
 		current_shift = GameStateManager.get_shift()
-	elif Global:
-		current_shift = Global.shift
 
 	track_event(
 		"Difficulty Selected",
@@ -385,10 +379,9 @@ func track_language_changed(from_lang: String, to_lang: String) -> void:
 
 func track_shift_started(shift_number: int) -> void:
 	var difficulty = "unknown"
+	var difficulty = "unknown"
 	if GameStateManager:
 		difficulty = GameStateManager.get_difficulty()
-	elif Global:
-		difficulty = Global.difficulty_level
 
 	track_event(
 		"Shift Started",
@@ -424,9 +417,6 @@ func track_shift_failed(shift_number: int, reason: String) -> void:
 	if GameStateManager:
 		final_score = GameStateManager.get_score()
 		final_strikes = GameStateManager.get_strikes()
-	elif Global:
-		final_score = Global.score
-		final_strikes = Global.strikes
 
 	track_event(
 		"Shift Failed",
@@ -476,10 +466,9 @@ func track_incorrect_decision(potato_info: Dictionary, violated_rules: Array) ->
 	session_metrics.strikes_received += 1
 
 	var cumulative_strikes = 0
+	var cumulative_strikes = 0
 	if GameStateManager:
 		cumulative_strikes = GameStateManager.get_strikes()
-	elif Global:
-		cumulative_strikes = Global.strikes
 
 	track_event(
 		"Incorrect Decision",
@@ -529,9 +518,6 @@ func track_guide_book_opened() -> void:
 	if GameStateManager:
 		current_score = GameStateManager.get_score()
 		current_strikes = GameStateManager.get_strikes()
-	elif Global:
-		current_score = Global.score
-		current_strikes = Global.strikes
 
 	track_event(
 		"Guide Book Opened",

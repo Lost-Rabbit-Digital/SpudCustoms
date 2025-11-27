@@ -41,9 +41,7 @@ func add_levels_to_container() -> void:
 	# Ensure we have the latest unlock data by syncing
 	var max_unlocked_level = GameState.get_max_level_reached()
 
-	# Make sure Global and SaveManager are in sync
-	if Global.sync_level_unlock_data != null and Global.has_method("sync_level_unlock_data"):
-		max_unlocked_level = Global.sync_level_unlock_data()
+	# Note: Level unlock syncing is now handled by GameState/SaveManager
 
 	# Add levels to the container
 	for level_id in range(levels.size()):

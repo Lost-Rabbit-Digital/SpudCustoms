@@ -167,7 +167,7 @@ func _ready():
 
 	# Track shift start
 	# REFACTORED: Use GameStateManager
-	var shift_num = GameStateManager.get_shift() if GameStateManager else Global.shift
+	var shift_num = GameStateManager.get_shift()
 	Analytics.track_shift_started(shift_num)
 
 
@@ -199,7 +199,7 @@ func _setup_managers():
 func _setup_game_state():
 	# Initialize game state and stats
 	# REFACTORED: Use GameStateManager
-	current_shift = GameStateManager.get_shift() if GameStateManager else Global.shift
+	current_shift = GameStateManager.get_shift()
 	# Global.shift = current_shift  # REMOVED: GameStateManager is source of truth
 
 	shift_stats = stats_manager.get_new_stats()
@@ -207,7 +207,7 @@ func _setup_game_state():
 
 	# Load difficulty settings
 	# REFACTORED: Use GameStateManager
-	difficulty_level = GameStateManager.get_difficulty() if GameStateManager else Global.difficulty_level
+	difficulty_level = GameStateManager.get_difficulty()
 	set_difficulty(difficulty_level)
 
 	# Generate game rules
@@ -545,8 +545,8 @@ func end_shift(success: bool = true):
 			office_shutter_controller.lower_shutter(1.0)
 
 		# REFACTORED: Use GameStateManager
-		var current_shift_val = GameStateManager.get_shift() if GameStateManager else Global.shift
-		var current_score = GameStateManager.get_score() if GameStateManager else Global.score
+		var current_shift_val = GameStateManager.get_shift()
+		var current_score = GameStateManager.get_score()
 		Analytics.track_shift_completed(current_shift_val, success, current_score)
 
 		# Increment total shifts completed for achievements
@@ -567,8 +567,8 @@ func end_shift(success: bool = true):
 			difficulty_level
 		)
 		# REFACTORED: Use GameStateManager
-		var diff_level = GameStateManager.get_difficulty() if GameStateManager else Global.difficulty_level
-		var score_val = GameStateManager.get_score() if GameStateManager else Global.score
+		var diff_level = GameStateManager.get_difficulty()
+		var score_val = GameStateManager.get_score()
 		GameState.set_high_score(current_shift, diff_level, score_val)
 
 		# Increment total shifts completed for achievements
@@ -588,7 +588,7 @@ func end_shift(success: bool = true):
 
 	# Update shift_stats with shift_number before ending shift
 	# REFACTORED: Use GameStateManager
-	shift_stats.shift_number = GameStateManager.get_shift() if GameStateManager else Global.shift
+	shift_stats.shift_number = GameStateManager.get_shift()
 
 	# calculate end of shift bonuses
 	shift_stats.processing_speed_bonus = shift_stats.get_speed_bonus()
@@ -597,7 +597,7 @@ func end_shift(success: bool = true):
 
 	# Add bonuses to Score
 	# REFACTORED: Use GameStateManager
-	var current_score = GameStateManager.get_score() if GameStateManager else Global.score
+	var current_score = GameStateManager.get_score()
 	shift_stats.final_score = current_score + shift_stats.get_total_bonus()
 
 	# Store game stats
@@ -606,10 +606,10 @@ func end_shift(success: bool = true):
 
 	# Convert ShiftStats to a dictionary
 	var stats_dict = {
-		"shift": GameStateManager.get_shift() if GameStateManager else Global.shift,
+		"shift": GameStateManager.get_shift(),
 		"time_taken": shift_stats.time_taken,
 		"processing_time_left": shift_stats.processing_time_left,
-		"score": GameStateManager.get_score() if GameStateManager else Global.score,
+		"score": GameStateManager.get_score(),
 		"missiles_fired": shift_stats.missiles_fired,
 		"missiles_hit": shift_stats.missiles_hit,
 		"perfect_hits": shift_stats.perfect_hits,
@@ -623,10 +623,10 @@ func end_shift(success: bool = true):
 		"accuracy_bonus": shift_stats.accuracy_bonus,
 		"perfect_hit_bonus": shift_stats.perfect_hit_bonus,
 		"final_score": shift_stats.final_score,
-		"quota_met": GameStateManager.get_quota_met() if GameStateManager else Global.quota_met,
-		"quota_target": GameStateManager.get_quota_target() if GameStateManager else Global.quota_target,
-		"strikes": GameStateManager.get_strikes() if GameStateManager else Global.strikes,
-		"max_strikes": GameStateManager.get_max_strikes() if GameStateManager else Global.max_strikes,
+		"quota_met": GameStateManager.get_quota_met(),
+		"quota_target": GameStateManager.get_quota_target(),
+		"strikes": GameStateManager.get_strikes(),
+		"max_strikes": GameStateManager.get_max_strikes(),
 		"success": success
 	}
 

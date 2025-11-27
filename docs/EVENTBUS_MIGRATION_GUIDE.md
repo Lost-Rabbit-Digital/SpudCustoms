@@ -226,10 +226,8 @@ print(report)
 ### Testing & Documentation ✅
 - [x] Create unit tests for EventBus (see `tests/unit/test_event_bus.gd` - 16+ tests)
 - [x] Document all event types and their payloads (inline in EventBus.gd)
-
-### Future Work (Not Blocking)
-- [ ] Gradually deprecate direct Global mutations
-- [ ] Consider deprecating Global.gd in favor of GameStateManager
+- [x] Gradually deprecate direct Global mutations ✅
+- [x] Deprecate Global.gd in favor of GameStateManager ✅ COMPLETE ✅
 - [ ] Add TypedSignals for better IDE support
 
 ## Backward Compatibility

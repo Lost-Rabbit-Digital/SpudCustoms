@@ -82,7 +82,7 @@ static func set_high_score(level: int, difficulty: String, score: int):
 
 static func get_high_score(level: int, difficulty: String = "") -> int:
 	if difficulty.is_empty():
-		# Use the current difficulty from Global
-		difficulty = Global.difficulty_level
+		# Use the current difficulty from GameStateManager
+		difficulty = GameStateManager.get_difficulty() if GameStateManager else "Normal"
 
 	return SaveManager.get_level_high_score(level, difficulty)

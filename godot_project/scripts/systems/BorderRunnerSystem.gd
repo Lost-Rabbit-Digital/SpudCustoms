@@ -244,7 +244,9 @@ func _ready():
 		missile_collision_shape = $Area2D/CollisionShape2D
 
 	# Configure difficulty level and set runner chance based on difficulty level
-	difficulty_level = Global.difficulty_level
+	# Configure difficulty level and set runner chance based on difficulty level
+	# REFACTORED: Use GameStateManager
+	difficulty_level = GameStateManager.get_difficulty() if GameStateManager else "Normal"
 	print("Setting Border Runner System to: ", difficulty_level)
 
 	match difficulty_level:
@@ -509,25 +511,11 @@ func start_runner(potato: PotatoPerson, is_rejected: bool = false):
 		push_warning("No PotatoEmoteSystem found on potato, cannot show anger emote")
 
 	if is_rejected:
-		(
-			Global
-			. display_red_alert(
-				#alert_label, alert_timer, "REJECTED POTATO FLEEING!\nClick to launch missile!"
-				alert_label,
-				alert_timer,
-				tr("alert_rejected_fleeing")
-			)
-		)
+		# REFACTORED: Use EventBus
+		EventBus.show_alert(tr("alert_rejected_fleeing"), false)
 	else:
-		(
-			Global
-			. display_red_alert(
-				#alert_label, alert_timer, "BORDER RUNNER DETECTED!\nClick to launch missile!"
-				alert_label,
-				alert_timer,
-				tr("alert_border_runner")
-			)
-		)
+		# REFACTORED: Use EventBus
+		EventBus.show_alert(tr("alert_border_runner"), false)
 
 	# Get all available runner paths
 	var paths_node = %RunnerPaths
@@ -957,7 +945,8 @@ func trigger_explosion(missile_or_position):
 				score_label.text = tr("ui_score").format({"score": str(GameStateManager.get_score())})
 
 			# Keep backward compatibility alert
-			Global.display_red_alert(alert_label, alert_timer, penalty_message)
+			# REFACTORED: Use EventBus
+			EventBus.show_alert(penalty_message, false)
 
 	if not hit_any_runner and not hit_any_innocent:
 		print("Missile missed all potatoes")
@@ -1026,7 +1015,8 @@ func check_runner_hits(explosion_pos):
 				score_label.text = tr("ui_score").format({"score": str(GameStateManager.get_score())})
 
 			# Keep backward compatibility alert
-			Global.display_red_alert(alert_label, alert_timer, penalty_message)
+			# REFACTORED: Use EventBus
+			EventBus.show_alert(penalty_message, false)
 
 	if not hit_any_runner:
 		print("Missile missed all runners")
@@ -1206,7 +1196,8 @@ func handle_successful_hit(runner, explosion_pos):
 
 	# REFACTORED: Use EventBus for alert (also keeping backward compatibility)
 	EventBus.show_alert(final_message, true)
-	Global.display_green_alert(alert_label, alert_timer, final_message)
+	# REFACTORED: Use EventBus
+	EventBus.show_alert(final_message, true)
 
 	if strike_label and GameStateManager:
 		strike_label.text = tr("ui_strikes").format(

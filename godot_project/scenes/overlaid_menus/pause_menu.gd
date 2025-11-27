@@ -82,14 +82,16 @@ func _on_exit_button_pressed():
 
 
 func _on_confirm_restart_confirmed():
-	Global.reset_shift_stats()
+	# REFACTORED: Use EventBus
+	EventBus.shift_stats_reset.emit()
 	SceneLoader.reload_current_scene()
 	close()
 
 
 func _on_confirm_main_menu_confirmed():
 	print("Main menu confirmed, loading scene")
-	Global.reset_shift_stats()
+	# REFACTORED: Use EventBus
+	EventBus.shift_stats_reset.emit()
 
 	# FIXED: End Dialogic timeline cleanly before scene change
 	# This prevents music from stopping when Dialogic's cleanup triggers

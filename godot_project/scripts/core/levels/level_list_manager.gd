@@ -202,12 +202,8 @@ func _ready():
 
 
 func transition_to_next_shift():
-	# Save current state - prefer GameStateManager, fallback to Global
-	var current_shift = 0
-	if GameStateManager:
-		current_shift = GameStateManager.get_shift()
-	else:
-		current_shift = Global.shift
+	# Save current state - prefer GameStateManager
+	var current_shift = GameStateManager.get_shift() if GameStateManager else 0
 
 	# Handle end dialogues if needed
 	if narrative_manager and current_shift in narrative_manager.LEVEL_END_DIALOGUES:
@@ -221,11 +217,7 @@ func transition_to_next_shift():
 	EventBus.story_state_advance_requested.emit()
 
 	# Get the new shift value
-	var new_shift = 0
-	if GameStateManager:
-		new_shift = GameStateManager.get_shift()
-	else:
-		new_shift = Global.shift
+	var new_shift = GameStateManager.get_shift() if GameStateManager else 0
 
 	# REFACTORED: Emit shift advanced notification event
 	if EventBus:

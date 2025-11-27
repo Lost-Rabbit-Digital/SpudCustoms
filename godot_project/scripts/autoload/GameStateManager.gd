@@ -30,6 +30,7 @@ var _total_runners_stopped: int = 0
 var _perfect_hits: int = 0
 var _total_shifts_completed: int = 0
 var _last_game_stats: Dictionary = {}
+var _total_playtime: float = 0.0
 
 # ============================================================================
 # PUBLIC READ-ONLY ACCESSORS
@@ -53,8 +54,6 @@ func get_shift() -> int:
 
 func set_shift(value: int) -> void:
 	_shift = value
-	if Global:
-		Global.shift = value
 	# Also update GameState persistence
 	if GameState:
 		GameState.set_current_level(value)
@@ -78,8 +77,6 @@ func get_game_mode() -> String:
 
 func set_game_mode(mode: String) -> void:
 	_game_mode = mode
-	if Global:
-		Global.game_mode = mode
 
 
 func switch_game_mode(mode: String) -> void:
@@ -90,8 +87,6 @@ func switch_game_mode(mode: String) -> void:
 		if GameState:
 			set_shift(GameState.get_current_level())
 		# Set quota based on current level (simplified logic for now)
-		# In Global it was: floor(base_quota_target + (shift - 1))
-		# We can let the level logic handle quota calculation or set it here
 		var base_quota = 8
 		_quota_target = base_quota + (_shift - 1)
 		
@@ -100,20 +95,22 @@ func switch_game_mode(mode: String) -> void:
 		set_shift(1)
 		_quota_target = 9999
 		
-	if Global:
-		Global.quota_target = _quota_target
-		Global.save_game_state()
+	# Save state after mode switch
+	EventBus.save_game_requested.emit()
 
 
 func get_story_state() -> int:
-	if Global:
-		return Global.current_story_state
 	return _story_state
 
 
+func set_story_state(state: int) -> void:
+	_story_state = state
+	# Emit event if needed, or just update state
+	# EventBus.story_state_changed.emit(state)
+
+
 func is_dev_mode() -> bool:
-	if Global:
-		return Global.DEV_MODE
+	# TODO: Move DEV_MODE to a proper config or constant
 	return false
 
 
@@ -126,10 +123,7 @@ func get_perfect_hits() -> int:
 
 
 func get_total_playtime() -> float:
-	if Global and Global.has_method("get_total_playtime"):
-		return Global.get_total_playtime()
-	return 0.0
-
+	return _total_playtime
 
 
 func get_last_game_stats() -> Dictionary:
@@ -138,13 +132,9 @@ func get_last_game_stats() -> Dictionary:
 
 func set_last_game_stats(stats: Dictionary) -> void:
 	_last_game_stats = stats
-	if Global:
-		Global.current_game_stats = stats
 
 
 func get_build_type() -> String:
-	if Global:
-		return Global.build_type
 	return "Full Release"
 
 
@@ -154,8 +144,11 @@ func get_build_type() -> String:
 
 func _ready() -> void:
 	_connect_to_event_bus()
-	_sync_with_global()
 	print("GameStateManager initialized - listening to EventBus")
+
+
+func _process(delta: float) -> void:
+	_total_playtime += delta
 
 
 func _connect_to_event_bus() -> void:
@@ -180,23 +173,6 @@ func _connect_to_event_bus() -> void:
 	EventBus.load_game_requested.connect(_on_load_requested)
 
 
-func _sync_with_global() -> void:
-	"""Sync initial state with Global for backward compatibility"""
-	if Global:
-		_score = Global.score
-		_strikes = Global.strikes
-		_max_strikes = Global.max_strikes
-		_shift = Global.shift
-		_quota_target = Global.quota_target
-		_quota_met = Global.quota_met
-		_difficulty_level = Global.difficulty_level
-		_game_mode = Global.game_mode
-		_story_state = Global.current_story_state
-		_total_runners_stopped = Global.total_runners_stopped
-		_perfect_hits = Global.perfect_hits
-		_total_shifts_completed = Global.total_shifts_completed
-
-
 # ============================================================================
 # EVENT HANDLERS
 # ============================================================================
@@ -204,11 +180,6 @@ func _sync_with_global() -> void:
 func _on_score_add_requested(points: int, source: String, metadata: Dictionary) -> void:
 	var old_score = _score
 	_score += points
-
-	# Keep Global in sync for backward compatibility
-	if Global:
-		Global.score = _score
-		Global.final_score = _score
 
 	# Emit the change event
 	EventBus.score_changed.emit(_score, points, source)
@@ -224,10 +195,6 @@ func _on_score_reset_requested() -> void:
 	var old_score = _score
 	_score = 0
 
-	if Global:
-		Global.score = 0
-		Global.final_score = 0
-
 	EventBus.score_changed.emit(0, -old_score, "reset")
 	EventBus.ui_score_update_requested.emit(0)
 
@@ -237,9 +204,6 @@ func _on_score_reset_requested() -> void:
 func _on_strike_add_requested(reason: String, _metadata: Dictionary) -> void:
 	var old_strikes = _strikes
 	_strikes += 1
-
-	if Global:
-		Global.strikes = _strikes
 
 	# Emit strike change event
 	EventBus.strike_changed.emit(_strikes, _max_strikes, 1)
@@ -257,9 +221,6 @@ func _on_strike_add_requested(reason: String, _metadata: Dictionary) -> void:
 func _on_runner_stopped(runner_data: Dictionary) -> void:
 	_total_runners_stopped += 1
 
-	if Global:
-		Global.total_runners_stopped = _total_runners_stopped
-
 	# Handle score if included in event data
 	if runner_data.has("points_earned"):
 		var points = runner_data.points_earned
@@ -268,8 +229,6 @@ func _on_runner_stopped(runner_data: Dictionary) -> void:
 	# Handle strike forgiveness (reduce strike on successful stop)
 	if _strikes > 0:
 		_strikes -= 1
-		if Global:
-			Global.strikes = _strikes
 		EventBus.strike_removed.emit(_strikes, _max_strikes)
 		EventBus.ui_strike_update_requested.emit(_strikes, _max_strikes)
 
@@ -283,8 +242,6 @@ func _on_runner_escaped(runner_data: Dictionary) -> void:
 
 	if points_to_remove > 0:
 		_score = max(0, _score - points_to_remove)
-		if Global:
-			Global.score = _score
 		EventBus.score_changed.emit(_score, -points_to_remove, "runner_escaped")
 		EventBus.ui_score_update_requested.emit(_score)
 
@@ -303,8 +260,6 @@ func _on_innocent_hit(penalty: int, metadata: Dictionary) -> void:
 
 	if points_to_remove > 0:
 		_score = max(0, _score - points_to_remove)
-		if Global:
-			Global.score = _score
 		EventBus.score_changed.emit(_score, -points_to_remove, "innocent_hit")
 		EventBus.ui_score_update_requested.emit(_score)
 
@@ -317,9 +272,6 @@ func _on_innocent_hit(penalty: int, metadata: Dictionary) -> void:
 func _on_perfect_hit(bonus_points: int) -> void:
 	_perfect_hits += 1
 
-	if Global:
-		Global.perfect_hits = _perfect_hits
-
 	LogManager.write_info("Perfect hit! Total: %d" % _perfect_hits)
 
 
@@ -328,12 +280,6 @@ func _on_shift_stats_reset() -> void:
 	_strikes = 0
 	_quota_met = 0
 
-	if Global:
-		Global.score = 0
-		Global.final_score = 0
-		Global.strikes = 0
-		Global.quota_met = 0
-
 	EventBus.ui_score_update_requested.emit(0)
 	EventBus.ui_strike_update_requested.emit(0, _max_strikes)
 
@@ -341,15 +287,28 @@ func _on_shift_stats_reset() -> void:
 
 
 func _on_save_requested() -> void:
-	if Global:
-		Global.save_game_state()
+	# Save logic should be handled by SaveManager listening to this event
+	# or GameStateManager calling SaveManager
+	if SaveManager:
+		SaveManager.save_game_state(get_state_snapshot())
 	EventBus.game_saved.emit()
 
 
 func _on_load_requested() -> void:
-	if Global:
-		Global.load_game_state()
-		_sync_with_global()
+	if SaveManager:
+		var data = SaveManager.load_game_state()
+		if not data.is_empty():
+			# Restore state from data
+			_score = data.get("score", 0)
+			_strikes = data.get("strikes", 0)
+			_shift = data.get("shift", 0)
+			_difficulty_level = data.get("difficulty", "Normal")
+			_game_mode = data.get("game_mode", "score_attack")
+			_story_state = data.get("story_state", 0)
+			_total_playtime = data.get("total_playtime", 0.0)
+			_total_runners_stopped = data.get("total_runners_stopped", 0)
+			_perfect_hits = data.get("perfect_hits", 0)
+			_total_shifts_completed = data.get("total_shifts_completed", 0)
 	EventBus.game_loaded.emit({})
 
 
@@ -358,7 +317,7 @@ func _on_load_requested() -> void:
 # ============================================================================
 
 func _check_high_score() -> void:
-	if not Global or not SaveManager:
+	if not SaveManager:
 		return
 
 	var high_score = SaveManager.get_level_high_score(_shift, _difficulty_level)
@@ -383,10 +342,6 @@ func set_difficulty(new_difficulty: String) -> void:
 		"Expert":
 			_max_strikes = 3
 
-	if Global:
-		Global.difficulty_level = _difficulty_level
-		Global.max_strikes = _max_strikes
-
 
 func get_state_snapshot() -> Dictionary:
 	"""Get a complete snapshot of current game state"""
@@ -401,5 +356,6 @@ func get_state_snapshot() -> Dictionary:
 		"game_mode": _game_mode,
 		"total_runners_stopped": _total_runners_stopped,
 		"perfect_hits": _perfect_hits,
-		"total_shifts_completed": _total_shifts_completed
+		"total_shifts_completed": _total_shifts_completed,
+		"total_playtime": _total_playtime
 	}

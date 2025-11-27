@@ -90,9 +90,9 @@ func is_minigame_unlocked(minigame_type: String, current_shift: int = -1) -> boo
 	if not MINIGAME_UNLOCK_SHIFTS.has(minigame_type):
 		return false
 
-	# Use Global.current_shift if not specified
+	# Use GameStateManager if not specified
 	if current_shift < 0:
-		current_shift = Global.current_shift if Global else 1
+		current_shift = GameStateManager.get_shift() if GameStateManager else 1
 
 	return current_shift >= MINIGAME_UNLOCK_SHIFTS[minigame_type]
 
@@ -100,7 +100,7 @@ func is_minigame_unlocked(minigame_type: String, current_shift: int = -1) -> boo
 ## Get list of all unlocked minigame types
 func get_unlocked_minigames(current_shift: int = -1) -> Array[String]:
 	if current_shift < 0:
-		current_shift = Global.current_shift if Global else 1
+		current_shift = GameStateManager.get_shift() if GameStateManager else 1
 
 	var unlocked: Array[String] = []
 	for minigame_type in MINIGAMES.keys():
