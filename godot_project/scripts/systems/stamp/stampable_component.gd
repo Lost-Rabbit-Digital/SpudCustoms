@@ -175,6 +175,10 @@ func clear_stamps():
 		open_content_node.update()
 
 
+# Preload the clipping shader
+const STAMP_CLIPPING_SHADER = preload("res://assets/shaders/stamp/stamp_clipping.gdshader")
+
+
 # Create the visual stamp sprite
 func create_stamp_sprite(stamp: StampComponent, position: Vector2) -> Sprite2D:
 	var texture_path: String
@@ -192,6 +196,9 @@ func create_stamp_sprite(stamp: StampComponent, position: Vector2) -> Sprite2D:
 	final_stamp.z_index = z_index_for_stamps
 	final_stamp.z_as_relative = true
 
+	# Apply viewport clipping to keep stamp within document bounds
+	_apply_clipping_shader(final_stamp, position)
+
 	# Apply colorblind mode adjustments if enabled
 	_apply_colorblind_style(final_stamp, stamp.stamp_type)
 
@@ -203,6 +210,48 @@ func create_stamp_sprite(stamp: StampComponent, position: Vector2) -> Sprite2D:
 	tween.tween_property(final_stamp, "modulate:a", 1.0, 0.1)
 
 	return final_stamp
+
+
+## Apply viewport clipping shader to keep stamps within document bounds.
+## Prevents stamps from visually extending beyond the document edges.
+func _apply_clipping_shader(stamp_sprite: Sprite2D, stamp_position: Vector2) -> void:
+	# Use open_content_node bounds if it's a Sprite2D, otherwise fall back to document_node
+	var clip_source: Sprite2D = null
+	if open_content_node is Sprite2D:
+		clip_source = open_content_node as Sprite2D
+	elif document_node is Sprite2D:
+		clip_source = document_node as Sprite2D
+
+	if not clip_source:
+		push_warning("StampableComponent: Cannot apply clipping - no Sprite2D source found")
+		return
+
+	# Get the content bounds in local space
+	var content_rect = clip_source.get_rect()
+
+	# Calculate clipping bounds relative to stamp position
+	# Stamps are positioned relative to open_content_node
+	# We need to determine how much of the stamp should be visible based on document edges
+
+	# Get the content half-size (Sprite2D is centered by default)
+	var half_size = content_rect.size / 2.0
+
+	# Calculate clip bounds relative to stamp position
+	# These values represent how far the stamp can extend in each direction
+	# before it should be clipped
+	var clip_left = -stamp_position.x - half_size.x
+	var clip_top = -stamp_position.y - half_size.y
+	var clip_right = half_size.x - stamp_position.x
+	var clip_bottom = half_size.y - stamp_position.y
+
+	# Create shader material
+	var shader_material = ShaderMaterial.new()
+	shader_material.shader = STAMP_CLIPPING_SHADER
+	shader_material.set_shader_parameter("clip_bounds", Vector4(clip_left, clip_top, clip_right, clip_bottom))
+	shader_material.set_shader_parameter("clipping_enabled", true)
+	shader_material.set_shader_parameter("edge_softness", 2.0)
+
+	stamp_sprite.material = shader_material
 
 
 ## Apply colorblind-friendly styling to a stamp sprite.
