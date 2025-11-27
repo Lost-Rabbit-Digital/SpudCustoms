@@ -88,6 +88,7 @@ func _ready():
 
 	# Connect toggle button signal
 	toggle_position_button.pressed.connect(_on_toggle_position_button_pressed)
+	toggle_position_button.mouse_entered.connect(_on_toggle_position_button_mouse_entered)
 
 	# Connect stamp buttons
 	approval_stamp.pressed.connect(
@@ -452,9 +453,24 @@ func create_final_stamp(stamp_type: String, pos: Vector2):
 	tween.tween_property(final_stamp, "modulate:a", 1.0, 0.1).set_delay(STAMP_ANIM_DURATION / 2)
 
 
+# Hover sound for stamp bar
+var hover_sound_stamp_bar = preload("res://assets/audio/ui_feedback/ui_hover_stamp_bar.mp3")
+
+
 func _on_toggle_position_button_mouse_entered() -> void:
-	pass
+	_play_hover_sound(hover_sound_stamp_bar)
 
 
 func _on_toggle_position_button_mouse_exited() -> void:
 	pass
+
+
+func _play_hover_sound(sound: AudioStream) -> void:
+	var hover_player = AudioStreamPlayer.new()
+	hover_player.stream = sound
+	hover_player.bus = "SFX"
+	hover_player.volume_db = -6.0
+	hover_player.pitch_scale = randf_range(0.95, 1.05)
+	add_child(hover_player)
+	hover_player.play()
+	hover_player.finished.connect(hover_player.queue_free)

@@ -89,7 +89,24 @@ func raise_shutter(duration: float = 0.5):
 			var main_game = get_tree().current_scene
 			if main_game and main_game.has_method("shake_screen"):
 				main_game.shake_screen(4.0, 0.2)  # Mild shake
+			# Play lights toggle sound when shutter opens (light comes in)
+			_play_lights_toggle_sound()
 	)
+
+
+# Lights toggle sound for ambient light change effect
+var lights_toggle_sound = preload("res://assets/audio/ambient/lights_toggle.mp3")
+
+
+func _play_lights_toggle_sound():
+	var lights_player = AudioStreamPlayer.new()
+	lights_player.stream = lights_toggle_sound
+	lights_player.bus = "SFX"
+	lights_player.volume_db = -10.0
+	lights_player.pitch_scale = randf_range(0.95, 1.05)
+	add_child(lights_player)
+	lights_player.play()
+	lights_player.finished.connect(lights_player.queue_free)
 
 
 func lower_shutter(_duration: float = 3.0):
@@ -148,6 +165,8 @@ func lower_shutter(_duration: float = 3.0):
 			var main_game = get_tree().current_scene
 			if main_game and main_game.has_method("shake_screen"):
 				main_game.shake_screen(8.0, 0.3)  # Stronger shake for slamming
+			# Play lights toggle sound when shutter closes (light dims)
+			_play_lights_toggle_sound()
 	)
 
 
