@@ -214,17 +214,98 @@ func apply_high_contrast_outline(control: Control):
 		control.add_theme_stylebox_override("normal", stylebox)
 
 
+## Dyslexia-friendly font path
+## To enable dyslexia font support, add OpenDyslexic-Regular.ttf to res://assets/fonts/
+const DYSLEXIA_FONT_PATH = "res://assets/fonts/OpenDyslexic-Regular.ttf"
+
+## Cached dyslexia font resource
+var _dyslexia_font: Font = null
+
+
 ## Set dyslexia-friendly font
 func set_dyslexia_font(enabled: bool):
 	dyslexia_font_enabled = enabled
 	save_settings()
-	# TODO: Apply OpenDyslexic or similar font to all text elements
+
+	# Apply or remove dyslexia font from all text elements
+	if get_tree() and get_tree().current_scene:
+		_apply_dyslexia_font_to_scene(get_tree().current_scene)
+
+
+## Get the dyslexia-friendly font, loading it if necessary.
+## Returns null if the font file is not available.
+func get_dyslexia_font() -> Font:
+	if _dyslexia_font:
+		return _dyslexia_font
+
+	# Try to load the dyslexia font
+	if ResourceLoader.exists(DYSLEXIA_FONT_PATH):
+		_dyslexia_font = load(DYSLEXIA_FONT_PATH)
+		return _dyslexia_font
+
+	# Fallback: Use a more readable monospace font if available
+	var fallback_paths = [
+		"res://assets/fonts/notoSans_multilang.ttf",
+		"res://assets/fonts/RobotoMono-Regular.ttf"
+	]
+
+	for path in fallback_paths:
+		if ResourceLoader.exists(path):
+			_dyslexia_font = load(path)
+			push_warning(
+				"OpenDyslexic font not found at %s. Using fallback: %s" % [DYSLEXIA_FONT_PATH, path]
+			)
+			return _dyslexia_font
+
+	push_warning(
+		"Dyslexia font not available. Add OpenDyslexic-Regular.ttf to res://assets/fonts/"
+	)
+	return null
+
+
+## Apply dyslexia font setting to all text elements in a scene.
+func _apply_dyslexia_font_to_scene(scene: Node):
+	if not dyslexia_font_enabled:
+		# Clear font overrides when disabled (let theme handle fonts)
+		for label in scene.find_children("*", "Label", true, false):
+			if label is Label:
+				label.remove_theme_font_override("font")
+		for button in scene.find_children("*", "Button", true, false):
+			if button is Button:
+				button.remove_theme_font_override("font")
+		for rich_text in scene.find_children("*", "RichTextLabel", true, false):
+			if rich_text is RichTextLabel:
+				rich_text.remove_theme_font_override("normal_font")
+		return
+
+	var font = get_dyslexia_font()
+	if not font:
+		return
+
+	# Apply to all Label nodes
+	for label in scene.find_children("*", "Label", true, false):
+		if label is Label:
+			label.add_theme_font_override("font", font)
+
+	# Apply to all Button nodes
+	for button in scene.find_children("*", "Button", true, false):
+		if button is Button:
+			button.add_theme_font_override("font", font)
+
+	# Apply to all RichTextLabel nodes
+	for rich_text in scene.find_children("*", "RichTextLabel", true, false):
+		if rich_text is RichTextLabel:
+			rich_text.add_theme_font_override("normal_font", font)
 
 
 ## Apply all accessibility settings to a scene
 func apply_to_scene(scene: Node):
 	# Apply UI scale
 	apply_ui_scale_to_scene()
+
+	# Apply dyslexia font if enabled
+	if dyslexia_font_enabled:
+		_apply_dyslexia_font_to_scene(scene)
 
 	# Find all labels and apply font size
 	for label in scene.find_children("*", "Label", true, false):

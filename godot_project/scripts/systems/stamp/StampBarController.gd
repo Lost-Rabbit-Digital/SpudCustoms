@@ -340,9 +340,9 @@ func _on_stamp_button_pressed(stamp_type):
 	emit_signal("stamp_requested", stamp_type, current_stamp_texture)
 
 
-# TODO: Why bother checking the texture, we always know the size, it's the same
-# dimensions for each!
-# Get the position of the currently active stamp button
+## Get the center position of the currently active stamp button.
+## @param current_stamp_type The stamp type ("approve" or "reject").
+## @return The global position at the center of the stamp button.
 func get_stamp_origin(current_stamp_type) -> Vector2:
 	var stamp_button = null
 	var stamp_origin = null

@@ -141,21 +141,29 @@ func register_draggable_items(items: Array):
 			push_warning("Invalid draggable item provided")
 
 
-# TODO: Update this to work with input interactions instead of MOUSE_BUTTONS
 ## Handles input events for drag and drop interaction.
+## Supports both mouse input and input actions for controller/remapping support.
 ##
-## Processes mouse button and motion events to handle dragging.
 ## @param event The input event to process.
 ## @param mouse_pos The current mouse position in global coordinates.
 ## @return True if the event was handled, false otherwise.
 func handle_input_event(event: InputEvent, mouse_pos: Vector2) -> bool:
+	# Handle primary interaction via input action (supports remapping and controllers)
+	if event.is_action_pressed("primary_interaction"):
+		return _handle_mouse_press(mouse_pos)
+	elif event.is_action_released("primary_interaction"):
+		return _handle_mouse_release(mouse_pos)
+
+	# Fallback: Handle raw mouse button for compatibility
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:
 				return _handle_mouse_press(mouse_pos)
 			else:
 				return _handle_mouse_release(mouse_pos)
-	elif event is InputEventMouseMotion:
+
+	# Handle mouse motion for dragging and hover effects
+	if event is InputEventMouseMotion:
 		# Always check for hover even if not dragging
 		_handle_mouse_motion(mouse_pos)
 

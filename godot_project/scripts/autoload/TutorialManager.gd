@@ -281,12 +281,93 @@ func create_tutorial_overlay(step: Dictionary):
 
 ## Create highlight area around target element
 func create_highlight_area(target_name: String):
-	# This would need to find the actual node in the scene
-	# For now, create a placeholder highlight
 	highlight_rect = ColorRect.new()
 	highlight_rect.color = Color(1, 1, 0, 0.3)  # Yellow semi-transparent
-	# TODO: Position and size based on actual target node
+
+	# Try to find the target node in the scene
+	var target_node = _find_target_node(target_name)
+
+	if target_node:
+		# Position and size based on actual target node
+		var target_rect = _get_node_global_rect(target_node)
+		if target_rect.size.x > 0 and target_rect.size.y > 0:
+			# Add padding around the highlight
+			var padding = 8.0
+			highlight_rect.global_position = target_rect.position - Vector2(padding, padding)
+			highlight_rect.size = target_rect.size + Vector2(padding * 2, padding * 2)
+		else:
+			# Fallback: center on the node with default size
+			highlight_rect.global_position = target_node.global_position - Vector2(50, 50)
+			highlight_rect.size = Vector2(100, 100)
+	else:
+		# Fallback: centered placeholder highlight
+		var viewport_size = get_viewport().get_visible_rect().size
+		highlight_rect.position = viewport_size / 2 - Vector2(75, 75)
+		highlight_rect.size = Vector2(150, 150)
+
 	tutorial_overlay.add_child(highlight_rect)
+
+
+## Find a target node by name in the current scene.
+## Searches through common groups and node paths.
+func _find_target_node(target_name: String) -> Node:
+	var scene = get_tree().current_scene
+	if not scene:
+		return null
+
+	# Try direct find by name
+	var node = scene.find_child(target_name, true, false)
+	if node:
+		return node
+
+	# Try finding by group (targets might be in groups)
+	var group_name = target_name.replace("_", "")
+	var nodes_in_group = get_tree().get_nodes_in_group(group_name)
+	if nodes_in_group.size() > 0:
+		return nodes_in_group[0]
+
+	# Try common path patterns for game elements
+	var common_paths = [
+		"Gameplay/InteractiveElements/%s" % target_name,
+		"Gameplay/%s" % target_name,
+		"UI/%s" % target_name,
+		"HUD/%s" % target_name
+	]
+
+	for path in common_paths:
+		node = scene.get_node_or_null(path)
+		if node:
+			return node
+
+	return null
+
+
+## Get the global rectangle of a node for highlighting.
+func _get_node_global_rect(node: Node) -> Rect2:
+	# Handle Control nodes
+	if node is Control:
+		return Rect2(node.global_position, node.size)
+
+	# Handle Sprite2D nodes
+	if node is Sprite2D:
+		var texture = node.texture
+		if texture:
+			var size = texture.get_size() * node.scale
+			var pos = node.global_position
+			if node.centered:
+				pos -= size / 2
+			return Rect2(pos, size)
+
+	# Handle Node2D with custom size property
+	if node is Node2D and node.has_method("get_rect"):
+		var rect = node.get_rect()
+		return Rect2(node.global_position + rect.position, rect.size)
+
+	# Fallback: use position with default size
+	if node is Node2D:
+		return Rect2(node.global_position - Vector2(40, 40), Vector2(80, 80))
+
+	return Rect2()
 
 
 ## Add skip tutorial button
