@@ -90,6 +90,7 @@ var explosion_sound_pool = [
 # NEW: Additional missile sounds
 var missile_launch_sound = preload("res://assets/audio/gameplay/missile_launch.mp3")
 var missile_perfect_hit_sound = preload("res://assets/audio/gameplay/missile_perfect_hit.mp3")
+var combo_activate_sound = preload("res://assets/audio/gameplay/combo_activate.mp3")
 
 # Internal state tracking
 var is_enabled = true  # Track if system is enabled
@@ -1171,6 +1172,16 @@ func handle_successful_hit(runner, explosion_pos):
 		var streak_points = streak_bonus * (runner_streak - 1)
 		points_earned += streak_points
 		bonus_text += tr("alert_combo").format({"mult": runner_streak, "streak": streak_points})
+		# Play combo sound
+		var combo_player = AudioStreamPlayer.new()
+		combo_player.stream = combo_activate_sound
+		combo_player.bus = "SFX"
+		combo_player.volume_db = -3.0
+		# Increase pitch slightly for higher combos
+		combo_player.pitch_scale = min(1.0 + (runner_streak - 2) * 0.05, 1.3)
+		add_child(combo_player)
+		combo_player.play()
+		combo_player.finished.connect(combo_player.queue_free)
 
 	# REFACTORED: Emit runner stopped event instead of direct Global mutations
 	# GameStateManager will handle score addition and strike removal

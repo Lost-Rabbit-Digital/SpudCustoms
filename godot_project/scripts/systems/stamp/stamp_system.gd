@@ -31,6 +31,10 @@ var stampable_documents: Dictionary = {}  # Maps document nodes to StampableComp
 # Audio
 var audio_player: AudioStreamPlayer2D
 var stamp_sounds = []
+var stamp_ink_sounds = [
+	preload("res://assets/audio/gameplay/stamp_ink_splatter.mp3"),
+	preload("res://assets/audio/gameplay/stamp_ink_spray.mp3")
+]
 
 # Shake effect
 var shake_callback: Callable
@@ -240,6 +244,9 @@ func _apply_stamp_impact(
 			if shake_callback.is_valid():
 				shake_callback.call(4.0, 0.2)  # Mild shake for stamping
 
+			# Play ink splatter/spray sound for additional feedback
+			_play_ink_sound()
+
 			break
 
 	if not document_found:
@@ -308,6 +315,19 @@ func check_perfect_alignment(document: Node2D, stamp_position: Vector2) -> bool:
 
 	# Check if stamp position is within the perfect area
 	return perfect_area.has_point(local_stamp_pos)
+
+
+# Play a random ink sound (splatter/spray) for additional stamp feedback
+func _play_ink_sound():
+	if stamp_ink_sounds.size() > 0:
+		var ink_player = AudioStreamPlayer.new()
+		ink_player.stream = stamp_ink_sounds[randi() % stamp_ink_sounds.size()]
+		ink_player.bus = "SFX"
+		ink_player.volume_db = -8.0
+		ink_player.pitch_scale = randf_range(0.9, 1.1)
+		add_child(ink_player)
+		ink_player.play()
+		ink_player.finished.connect(ink_player.queue_free)
 
 
 # Play a random stamp sound
