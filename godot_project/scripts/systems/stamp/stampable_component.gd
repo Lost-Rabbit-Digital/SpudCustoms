@@ -192,6 +192,9 @@ func create_stamp_sprite(stamp: StampComponent, position: Vector2) -> Sprite2D:
 	final_stamp.z_index = z_index_for_stamps
 	final_stamp.z_as_relative = true
 
+	# Apply colorblind mode adjustments if enabled
+	_apply_colorblind_style(final_stamp, stamp.stamp_type)
+
 	# Add stamp to document
 	open_content_node.add_child(final_stamp)
 
@@ -200,6 +203,77 @@ func create_stamp_sprite(stamp: StampComponent, position: Vector2) -> Sprite2D:
 	tween.tween_property(final_stamp, "modulate:a", 1.0, 0.1)
 
 	return final_stamp
+
+
+## Apply colorblind-friendly styling to a stamp sprite.
+## Adds color tinting and pattern overlay when colorblind mode is active.
+func _apply_colorblind_style(stamp_sprite: Sprite2D, stamp_type: String) -> void:
+	# Check if AccessibilityManager exists and colorblind mode is enabled
+	var accessibility = get_node_or_null("/root/AccessibilityManager")
+	if not accessibility:
+		return
+
+	if accessibility.current_colorblind_mode == accessibility.ColorblindMode.NONE:
+		return
+
+	# Apply colorblind-friendly color tinting
+	var tint_color: Color
+	if stamp_type == "approve":
+		tint_color = accessibility.get_approval_color()
+	else:
+		tint_color = accessibility.get_rejection_color()
+
+	# Apply a subtle tint while preserving the stamp texture
+	stamp_sprite.modulate = tint_color * Color(1.2, 1.2, 1.2, 1.0)
+
+	# Add pattern indicator for additional differentiation
+	var pattern_type = ""
+	if stamp_type == "approve":
+		pattern_type = accessibility.get_approval_pattern()
+	else:
+		pattern_type = accessibility.get_rejection_pattern()
+
+	if pattern_type != "none":
+		_add_pattern_indicator(stamp_sprite, pattern_type, stamp_type)
+
+
+## Add a small pattern indicator to the stamp for colorblind users.
+## Uses shape patterns (stripes for approve, dots for reject) alongside color.
+func _add_pattern_indicator(stamp_sprite: Sprite2D, pattern_type: String, stamp_type: String) -> void:
+	# Create a small indicator in the corner of the stamp
+	var indicator = Node2D.new()
+	indicator.name = "ColorblindIndicator"
+
+	var indicator_size = 12.0
+	var offset = Vector2(-20, -20)  # Top-left corner offset
+
+	if pattern_type == "stripes":
+		# Draw diagonal stripes for approval
+		for i in range(3):
+			var line = Line2D.new()
+			line.width = 2.0
+			line.default_color = Color.WHITE
+			var start_offset = i * 4.0
+			line.add_point(Vector2(start_offset, 0) + offset)
+			line.add_point(Vector2(start_offset + indicator_size, indicator_size) + offset)
+			indicator.add_child(line)
+	elif pattern_type == "dots":
+		# Draw dots pattern for rejection
+		for i in range(3):
+			for j in range(3):
+				var dot = Polygon2D.new()
+				dot.color = Color.WHITE
+				# Create a small circle using polygon points
+				var points = PackedVector2Array()
+				var dot_radius = 1.5
+				for k in range(8):
+					var angle = k * PI * 2 / 8
+					points.append(Vector2(cos(angle), sin(angle)) * dot_radius)
+				dot.polygon = points
+				dot.position = Vector2(i * 5.0, j * 5.0) + offset
+				indicator.add_child(dot)
+
+	stamp_sprite.add_child(indicator)
 
 
 # Get all stamps of a specific type
