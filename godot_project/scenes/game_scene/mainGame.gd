@@ -256,7 +256,6 @@ func _register_ui_hints():
 func _check_and_display_high_score():
 	var high_score = GameState.get_high_score(current_shift)
 	if high_score > 0:
-	if high_score > 0:
 		# REFACTORED: Use EventBus for alerts
 		EventBus.show_alert("High score for this level: " + str(high_score), true)
 
