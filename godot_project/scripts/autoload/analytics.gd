@@ -351,7 +351,6 @@ func track_main_menu_action(action: String) -> void:
 
 func track_difficulty_selected(difficulty: String) -> void:
 	var current_shift = 0
-	var current_shift = 0
 	if GameStateManager:
 		current_shift = GameStateManager.get_shift()
 
