@@ -4,11 +4,7 @@ var LAW_CHECKS = {
 	"law_fresh_potatoes":
 	{
 		"check": func(potato_info): return potato_info.condition != "Fresh",
-		"message":
-		func(potato_info):
-			# Condition-based rules
-
-			return tr("violation_condition_not_fresh").format({"condition": potato_info.condition})
+		"message": func(potato_info): return tr("violation_condition_not_fresh").format({"condition": potato_info.condition})
 	},
 	"law_extra_eyes":
 	{
@@ -38,39 +34,17 @@ var LAW_CHECKS = {
 	"law_over_5_years":
 	{
 		"check": func(potato_info): return calculate_age(potato_info.date_of_birth) >= 5,
-		"message":
-		func(potato_info):
-			# Condition-based rules
-
-			# Age-based rules
-
-			return tr("violation_too_old").format({"age": calculate_age(potato_info.date_of_birth)})
+		"message": func(potato_info): return tr("violation_too_old").format({"age": calculate_age(potato_info.date_of_birth)})
 	},
 	"law_under_3_years":
 	{
 		"check": func(potato_info): return calculate_age(potato_info.date_of_birth) <= 3,
-		"message":
-		func(potato_info):
-			# Condition-based rules
-
-			# Age-based rules
-
-			return tr("violation_too_young_3").format(
-				{"age": calculate_age(potato_info.date_of_birth)}
-			)
+		"message": func(potato_info): return tr("violation_too_young_3").format({"age": calculate_age(potato_info.date_of_birth)})
 	},
 	"law_under_2_years":
 	{
 		"check": func(potato_info): return calculate_age(potato_info.date_of_birth) <= 2,
-		"message":
-		func(potato_info):
-			# Condition-based rules
-
-			# Age-based rules
-
-			return tr("violation_too_young_2").format(
-				{"age": calculate_age(potato_info.date_of_birth)}
-			)
+		"message": func(potato_info): return tr("violation_too_young_2").format({"age": calculate_age(potato_info.date_of_birth)})
 	},
 	# Gender-based rules
 	"law_males_only":
