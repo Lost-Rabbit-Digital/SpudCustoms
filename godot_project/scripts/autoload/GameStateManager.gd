@@ -67,6 +67,24 @@ func get_quota_met() -> int:
 	return _quota_met
 
 
+func set_quota_met(value: int) -> void:
+	_quota_met = value
+	# Also sync to Global for consistency
+	if Global:
+		Global.quota_met = value
+
+
+func set_strikes(value: int) -> void:
+	var old_strikes = _strikes
+	_strikes = value
+	# Sync with Global
+	if Global:
+		Global.strikes = value
+	# Emit UI update
+	EventBus.strike_changed.emit(_strikes, _max_strikes, _strikes - old_strikes)
+	EventBus.ui_strike_update_requested.emit(_strikes, _max_strikes)
+
+
 func get_difficulty() -> String:
 	return _difficulty_level
 

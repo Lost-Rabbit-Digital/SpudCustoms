@@ -46,6 +46,7 @@ ConstantZIndexes="*res://scripts/autoload/constant_z_indexes.gd"
 Analytics="*res://scripts/autoload/analytics.gd"
 AccessibilityManager="*res://scripts/autoload/AccessibilityManager.gd"
 TutorialManager="*res://scripts/autoload/TutorialManager.gd"
+DebugCommandManager="*res://scripts/autoload/DebugCommandManager.gd"
 
 [debug]
 
