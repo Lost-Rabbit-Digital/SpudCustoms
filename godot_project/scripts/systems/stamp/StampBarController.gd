@@ -181,6 +181,10 @@ func show_alignment_guide():
 	alignment_guide.visible = true
 	is_showing_guide = true
 
+	# Trigger tutorial action for document under stamp
+	if TutorialManager:
+		TutorialManager.trigger_tutorial_action("document_under_stamp")
+
 	# Add animation for better visibility
 	var tween = create_tween()
 	tween.tween_property(alignment_guide, "modulate", Color(1, 1, 1, 1), 0.3)
@@ -195,6 +199,10 @@ func hide_alignment_guide():
 
 func show_stamp_bar():
 	is_animating = true
+
+	# Trigger tutorial action for stamp bar opening
+	if TutorialManager:
+		TutorialManager.trigger_tutorial_action("stamp_bar_opened")
 
 	# Mechanical gate lowering with different easing
 	stamp_bar_audio.stream = preload("res://scripts/systems/stamp/audio/stamp_bar_slide.mp3")

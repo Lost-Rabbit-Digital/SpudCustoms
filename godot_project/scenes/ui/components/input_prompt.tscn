@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2inputprompt1"]
+
+[ext_resource type="Script" uid="uid://bxwpc6m3h5d2w" path="res://scripts/ui/components/InputPrompt.gd" id="1_prompt"]
+
+[node name="InputPrompt" type="HBoxContainer"]
+script = ExtResource("1_prompt")
