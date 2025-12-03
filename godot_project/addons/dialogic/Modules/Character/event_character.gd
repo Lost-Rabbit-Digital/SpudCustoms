@@ -92,12 +92,7 @@ var character_identifier: String:
 			portrait = ""
 			ui_update_needed.emit()
 
-var regex := (
-	RegEx
-	. create_from_string(
-		r'(?<type>join|update|leave)\s*(")?(?<name>(?(2)[^"\n]*|[^(: \n]*))(?(2)"|)(\W*\((?<portrait>.*)\))?(\s*(?<transform>[^\[]*))?(\s*\[(?<shortcode>.*)\])?'
-	)
-)
+var regex := RegEx.create_from_string(r'(?<type>join|update|leave)\s*(")?(?<name>(?(2)[^"\n]*|[^(: \n]*))(?(2)"|)(\W*\((?<portrait>.*)\))?(\s*(?<transform>[^\[]*))?(\s*\[(?<shortcode>.*)\])?')
 
 ################################################################################
 ## 						EXECUTION
@@ -341,91 +336,6 @@ func get_shortcode_parameters() -> Dictionary:
 			"custom_stored": true,
 			"suggestions":
 			func():
-## Event that allows to manipulate character portraits.
-
-### Settings
-
-## The type of action of this event (JOIN/LEAVE/UPDATE). See [Actions].
-
-## The character that will join/leave/update.
-
-## For Join/Update, this will be the portrait of the character that is shown.
-## Not used on Leave.
-## If empty, the default portrait will be used.
-
-## The index of the position this character should move to
-
-## Name of the animation script (extending DialogicAnimation).
-## On Join/Leave empty (default) will fallback to the animations set in the settings.
-## On Update empty will mean no animation.
-
-## Length of the animation.
-
-## How often the animation is repeated. Only for Update events.
-
-## If true, the events waits for the animation to finish before the next event starts.
-
-## The fade animation to use. If left empty, the default cross-fade animation AND time will be used.
-
-## For Update only. If bigger then 0, the portrait will tween to the
-## new position (if changed) in this time (in seconds).
-
-## The z_index that the portrait should have.
-
-## If true, the portrait will be set to mirrored.
-
-## If set, will be passed to the portrait scene.
-
-### Helpers
-
-## Indicators for whether something should be updated (UPDATE mode only)
-
-## Used to set the character resource from the unique name identifier and vice versa
-
-################################################################################
-## 						EXECUTION
-################################################################################
-
-				# Calculate animation time (can be shortened during skipping)
-
-				# JOIN -------------------------------------
-
-				# LEAVE -------------------------------------
-
-				# UPDATE -------------------------------------
-
-#region INITIALIZE
-###############################################################################
-
-#endregion
-
-#region SAVING, LOADING, DEFAULTS
-################################################################################
-
-				# ACTIONS
-
-				# CHARACTER IDENTIFIER
-
-				# PORTRAIT
-
-				# TRANSFORM
-
-				# SETS:
-
-				# Load default character
-
-				# ACTION
-
-				# CHARACTER
-
-				# PORTRAIT
-
-				# TRANSFORM
-
-				# SHORTCODE
-
-				#param_name 	: property_info
-
 				return {
 					"Join": {"value": Actions.JOIN},
 					"Leave": {"value": Actions.LEAVE},
