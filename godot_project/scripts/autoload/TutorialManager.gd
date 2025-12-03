@@ -1,11 +1,12 @@
 extends Node
 
 ## TutorialManager
-## Manages interactive tutorial system, tracks completion, and provides dynamic tutorial triggers
-## Replaces screenshot-based Dialogic tutorial with in-game contextual tutorials
+## Manages interactive tutorial system with shader-based highlighting
+## Guides players through gameplay mechanics step-by-step
 
 # Signals for tutorial events
 signal tutorial_started(tutorial_id: String)
+signal tutorial_step_changed(tutorial_id: String, step_index: int)
 signal tutorial_step_completed(tutorial_id: String, step_index: int)
 signal tutorial_completed(tutorial_id: String)
 signal tutorial_skipped(tutorial_id: String)
@@ -15,152 +16,244 @@ var tutorials_completed: Dictionary = {}  # {tutorial_id: bool}
 var current_tutorial: String = ""
 var current_step: int = 0
 var tutorial_enabled: bool = true
-var can_skip_tutorials: bool = false
+var can_skip_tutorials: bool = true
 
+# Highlight shader material
+var highlight_shader: ShaderMaterial = null
+var highlighted_nodes: Array[Node] = []
+var original_materials: Dictionary = {}  # {node_id: original_material}
+
+# Tutorial UI elements
+var tutorial_panel: PanelContainer = null
+var tutorial_label: RichTextLabel = null
+var skip_button: Button = null
+var continue_hint_label: Label = null
+
+# Step timing
+var step_timer: Timer = null
+var waiting_for_action: bool = false
+
+# Tutorial definitions with expanded, friendly dialogue
 # Tutorial definitions - text uses placeholders for controller-aware prompts
 # {interact} = Click / Press RT, {drag} = Drag / Use Left Stick
 const TUTORIALS = {
-	"gate_control": {
-		"name": "Opening Your Booth",
+	"welcome": {
+		"name": "Welcome to Spud Customs",
 		"steps": [
 			{
+				"text": "[center][b]Welcome to Spud Customs![/b][/center]\n\nYour job is to process incoming potatoes at the border checkpoint. Let's learn the basics!",
+				"target": null,
+				"highlight": false,
+				"duration": 4.0,
+				"pause_game": false
+			}
+		],
+		"shift_trigger": 1,
+		"priority": 0
+	},
+	"gate_control": {
+		"name": "Opening the Gate",
+		"steps": [
+			{
+				"text": "[center][b]Opening Your Booth[/b][/center]\n\nSee that lever? Click it to raise the shutter and open your booth for business!\n\n[color=yellow]Click the lever now.[/color]",
+				"target": "LeverButton",
 				"text": "{interact} the lever to open your booth for service",
 				"target": "booth_lever",
 				"highlight": true,
-				"wait_for_action": "lever_pulled"
+				"wait_for_action": "lever_pulled",
+				"pause_game": false
+			},
+			{
+				"text": "[center][b]Great job![/b][/center]\n\nYour booth is now open. Potatoes in the queue can see you're ready for service.",
+				"target": null,
+				"highlight": false,
+				"duration": 2.5,
+				"pause_game": false
 			}
 		],
-		"shift_trigger": 1
+		"shift_trigger": 1,
+		"priority": 1
 	},
 	"megaphone_call": {
 		"name": "Calling Potatoes",
 		"steps": [
 			{
+				"text": "[center][b]Calling the Next Potato[/b][/center]\n\nUse the megaphone to call the next potato from the queue to your booth.\n\n[color=yellow]Click the megaphone![/color]",
+				"target": "Megaphone",
 				"text": "{interact} the megaphone to call the next potato to your booth",
 				"target": "megaphone",
 				"highlight": true,
-				"wait_for_action": "megaphone_clicked"
+				"wait_for_action": "megaphone_clicked",
+				"pause_game": false
+			},
+			{
+				"text": "[center][b]Here they come![/b][/center]\n\nWatch as the potato approaches your booth. They'll present their documents for inspection.",
+				"target": null,
+				"highlight": false,
+				"duration": 3.0,
+				"pause_game": false
 			}
 		],
-		"shift_trigger": 1
+		"shift_trigger": 1,
+		"priority": 2
 	},
 	"document_inspection": {
 		"name": "Inspecting Documents",
 		"steps": [
 			{
+				"text": "[center][b]Document Inspection[/b][/center]\n\nThe potato has handed you their passport. Drag it to your inspection table to examine it closely.\n\n[color=yellow]Drag the passport to the table.[/color]",
+				"target": "Passport",
+				"highlight": true,
+				"wait_for_action": "document_placed_on_table",
+				"pause_game": false
+			},
+			{
+				"text": "[center][b]Examining the Passport[/b][/center]\n\nClick on the passport to open it and review the potato's information:\n\n- Name and photo\n- Country of origin\n- Potato type and condition\n\nLook for anything suspicious!",
+				"target": "Passport",
 				"text": "{drag} the passport from the booth to the inspection table",
 				"target": "inspection_table",
 				"highlight": true,
-				"wait_for_action": "document_dragged"
+				"wait_for_action": "passport_opened",
+				"pause_game": false
 			},
 			{
-				"text": "Read the document carefully and check for discrepancies",
-				"target": "passport",
+				"text": "[center][b]Check the Rules![/b][/center]\n\nBefore making your decision, you need to check the immigration rules. Let's learn about them!",
+				"target": null,
 				"highlight": false,
-				"duration": 3.0
+				"duration": 3.0,
+				"pause_game": false
 			}
 		],
-		"shift_trigger": 1
+		"shift_trigger": 1,
+		"priority": 3
 	},
-	"stamp_usage": {
-		"name": "Stamping Documents",
+	"rules_checking": {
+		"name": "Immigration Rules",
 		"steps": [
 			{
+				"text": "[center][b]Immigration Rules[/b][/center]\n\nLook at the rules panel on the left side. These rules tell you which potatoes to [color=green]APPROVE[/color] or [color=red]REJECT[/color].\n\nReject any potato that violates the current rules!",
+				"target": "RulesLabel",
 				"text": "{interact} the stamp bar to reveal the approval and rejection stamps",
 				"target": "stamp_bar",
 				"highlight": true,
-				"wait_for_action": "stamp_bar_opened"
+				"duration": 5.0,
+				"pause_game": false
 			},
 			{
+				"text": "[center][b]Stay Vigilant![/b][/center]\n\nRules change between shifts. Always check the current rules before making decisions.\n\nCompare passport information against active rules carefully.",
+				"target": null,
+				"highlight": false,
+				"duration": 3.5,
+				"pause_game": false
+			}
+		],
+		"shift_trigger": 1,
+		"priority": 4
+	},
+	"stamp_usage": {
+		"name": "Using the Stamps",
+		"steps": [
+			{
+				"text": "[center][b]The Stamp Bar[/b][/center]\n\nSee the stamp bar at the top? Click the handle to reveal your approval and rejection stamps.\n\n[color=yellow]Click to open the stamp bar.[/color]",
+				"target": "StampBarController",
 				"text": "{drag} the document under the green stamp to approve, or red stamp to reject",
 				"target": "stamp_area",
 				"highlight": true,
-				"wait_for_action": "document_moved_to_stamp"
+				"wait_for_action": "stamp_bar_opened",
+				"pause_game": false
 			},
 			{
+				"text": "[center][b]Positioning for Stamping[/b][/center]\n\nDrag the passport under the stamps. You'll see a guide showing where to place it.\n\n[color=green]Green stamp[/color] = APPROVE\n[color=red]Red stamp[/color] = REJECT\n\n[color=yellow]Position the passport under a stamp.[/color]",
+				"target": "Passport",
 				"text": "{interact} the stamp to mark the document",
 				"target": "stamp",
 				"highlight": true,
-				"wait_for_action": "stamp_clicked"
+				"wait_for_action": "document_under_stamp",
+				"pause_game": false
 			},
 			{
-				"text": "Return the stamped document to the potato to complete processing",
-				"target": "booth_area",
+				"text": "[center][b]Apply the Stamp![/b][/center]\n\nClick the stamp to mark the passport with your decision.\n\n[color=yellow]Click a stamp to apply it.[/color]",
+				"target": "StampBarController",
 				"highlight": true,
-				"wait_for_action": "document_returned"
-			}
-		],
-		"shift_trigger": 1
-	},
-	"border_runners": {
-		"name": "Stopping Border Runners",
-		"steps": [
-			{
-				"text": "Watch for potatoes with exclamation marks - they're about to run!",
-				"target": "border_wall",
-				"highlight": false,
-				"duration": 2.0
+				"wait_for_action": "stamp_applied",
+				"pause_game": false
 			},
 			{
+				"text": "[center][b]Return the Documents[/b][/center]\n\nNow drag the stamped passport back to the potato to complete their processing.\n\n[color=yellow]Return the passport to the potato.[/color]",
+				"target": "Passport",
 				"text": "{fire} on running potatoes to launch missiles and stop them",
 				"target": "runner_potato",
 				"highlight": true,
-				"wait_for_action": "missile_launched"
+				"wait_for_action": "document_returned",
+				"pause_game": false
 			},
 			{
-				"text": "Be careful! Killing approved potatoes results in strikes",
+				"text": "[center][b]Well Done![/b][/center]\n\nYou've processed your first potato! Keep an eye on your quota - you need to process enough potatoes each shift.",
 				"target": null,
 				"highlight": false,
-				"duration": 2.5
+				"duration": 3.5,
+				"pause_game": false
 			}
 		],
-		"shift_trigger": 1
+		"shift_trigger": 1,
+		"priority": 5
 	},
-	"rules_checking": {
-		"name": "Following Immigration Rules",
+	"strikes_and_quota": {
+		"name": "Strikes and Quota",
 		"steps": [
 			{
-				"text": "Check the rules panel for today's immigration requirements",
-				"target": "rules_panel",
-				"highlight": true,
-				"duration": 3.0
-			},
-			{
-				"text": "Compare document information against the active rules",
-				"target": "rules_panel",
+				"text": "[center][b]The Quota System[/b][/center]\n\nLook at the top right of your screen. You'll see:\n\n[color=yellow]Quota:[/color] Potatoes you must process correctly\n[color=red]Strikes:[/color] Mistakes allowed before game over\n\nMake wrong decisions and you'll earn strikes!",
+				"target": null,
 				"highlight": false,
-				"duration": 2.0
+				"duration": 5.0,
+				"pause_game": false
 			}
 		],
-		"shift_trigger": 2
+		"shift_trigger": 1,
+		"priority": 6
 	},
-	"xray_scanner": {
-		"name": "X-Ray Scanning",
+	"border_runners": {
+		"name": "Border Runners",
 		"steps": [
 			{
+				"text": "[center][b]Watch for Runners![/b][/center]\n\nSome sneaky potatoes will try to run across the border without being processed!\n\nWatch for the [color=red]exclamation mark (!)[/color] - it means a potato is about to make a run for it!",
+				"target": null,
+				"highlight": false,
+				"duration": 4.0,
+				"pause_game": false
 				"text": "{interact} the X-ray button to scan potatoes for hidden items",
 				"target": "xray_button",
 				"highlight": true,
 				"wait_for_action": "xray_activated"
 			},
 			{
-				"text": "Look for contraband or resistance messages inside potatoes",
-				"target": "potato_display",
-				"highlight": true,
-				"duration": 3.0
+				"text": "[center][b]Stopping Runners[/b][/center]\n\n[color=yellow]Click on running potatoes[/color] to launch a missile and stop them!\n\nBut be careful - don't shoot potatoes you've already approved, or you'll get a strike!",
+				"target": null,
+				"highlight": false,
+				"duration": 4.0,
+				"pause_game": false
 			}
 		],
-		"shift_trigger": 3
+		"shift_trigger": 2,
+		"priority": 1
 	}
 }
 
-# Active tutorial overlay
-var tutorial_overlay: Control = null
-var highlight_rect: ColorRect = null
-var tutorial_label: Label = null
+# Queue for tutorials to run in order
+var tutorial_queue: Array = []
 
 
 func _ready():
+	# Load the highlight shader
+	highlight_shader = preload("res://scripts/shaders/tutorial_highlight/tutorial_highlight.tres")
+
+	# Create step timer
+	step_timer = Timer.new()
+	step_timer.one_shot = true
+	step_timer.timeout.connect(_on_step_timer_timeout)
+	add_child(step_timer)
+
+	# Load saved progress
 	load_tutorial_progress()
 	_connect_input_signals()
 
@@ -220,6 +313,12 @@ func _get_controller_button_text(action: String) -> String:
 		_: return "[" + action + "]"
 
 
+func _process(_delta):
+	# Update continue hint visibility based on waiting state
+	if continue_hint_label and waiting_for_action:
+		continue_hint_label.visible = false
+
+
 ## Load tutorial completion state from save
 func load_tutorial_progress():
 	if SaveManager:
@@ -241,74 +340,161 @@ func save_tutorial_progress():
 		SaveManager.save_game_state(save_data)
 
 
-## Check if a tutorial should trigger for the current shift
+## Check if tutorials should trigger for the current shift
 func check_shift_tutorials(shift_number: int):
 	if not tutorial_enabled:
 		return
+
+	# Build queue of tutorials for this shift
+	tutorial_queue.clear()
 
 	for tutorial_id in TUTORIALS:
 		var tutorial = TUTORIALS[tutorial_id]
 		if tutorial.get("shift_trigger", 0) == shift_number:
 			if not is_tutorial_completed(tutorial_id):
-				start_tutorial(tutorial_id)
-				return  # Only one tutorial at a time
+				tutorial_queue.append({
+					"id": tutorial_id,
+					"priority": tutorial.get("priority", 99)
+				})
+
+	# Sort by priority
+	tutorial_queue.sort_custom(func(a, b): return a["priority"] < b["priority"])
+
+	# Start first tutorial in queue
+	_start_next_queued_tutorial()
 
 
-## Start a tutorial
+func _start_next_queued_tutorial():
+	if tutorial_queue.is_empty():
+		return
+
+	var next = tutorial_queue.pop_front()
+	start_tutorial(next["id"])
+
+
+## Start a specific tutorial
 func start_tutorial(tutorial_id: String):
 	if not tutorial_id in TUTORIALS:
 		push_error("Tutorial not found: " + tutorial_id)
 		return
 
 	if is_tutorial_completed(tutorial_id):
-		return  # Already completed
+		_start_next_queued_tutorial()
+		return
 
 	current_tutorial = tutorial_id
 	current_step = 0
+	waiting_for_action = false
 
 	tutorial_started.emit(tutorial_id)
 
+	# Create the tutorial UI if needed
+	_create_tutorial_ui()
+
 	# Show first step
-	show_tutorial_step()
+	_show_current_step()
 
 
-## Show current tutorial step
-func show_tutorial_step():
+## Show the current tutorial step
+func _show_current_step():
 	if current_tutorial == "":
 		return
 
 	var tutorial = TUTORIALS[current_tutorial]
 	if current_step >= tutorial["steps"].size():
-		complete_tutorial()
+		_complete_tutorial()
 		return
 
 	var step = tutorial["steps"][current_step]
 
-	# Create or update tutorial overlay
-	create_tutorial_overlay(step)
+	# Emit step changed signal
+	tutorial_step_changed.emit(current_tutorial, current_step)
 
+	# Update UI text
+	_update_tutorial_text(step["text"])
 
-## Create tutorial overlay UI
-func create_tutorial_overlay(step: Dictionary):
-	# Clean up existing overlay
-	if tutorial_overlay:
-		tutorial_overlay.queue_free()
+	# Clear previous highlights
+	_clear_all_highlights()
 
-	# Create new overlay
-	tutorial_overlay = Control.new()
-	tutorial_overlay.set_anchors_preset(Control.PRESET_FULL_RECT)
-	tutorial_overlay.mouse_filter = Control.MOUSE_FILTER_PASS  # Allow clicks through
-	get_tree().root.add_child(tutorial_overlay)
-
-	# Create semi-transparent background
-	var bg = ColorRect.new()
-	bg.set_anchors_preset(Control.PRESET_FULL_RECT)
-	bg.color = Color(0, 0, 0, 0.5)
-	bg.mouse_filter = Control.MOUSE_FILTER_PASS
-	tutorial_overlay.add_child(bg)
-
-	# Create highlight area if target specified
+	# Apply highlight if needed
 	if step.get("highlight", false) and step.get("target"):
+		_highlight_target(step["target"])
+
+	# Handle step progression
+	if step.has("wait_for_action"):
+		waiting_for_action = true
+		_update_continue_hint(false)
+	elif step.has("duration"):
+		waiting_for_action = false
+		step_timer.start(step["duration"])
+		_update_continue_hint(true)
+	else:
+		# Default: wait 3 seconds
+		waiting_for_action = false
+		step_timer.start(3.0)
+		_update_continue_hint(true)
+
+
+## Create the tutorial UI panel
+func _create_tutorial_ui():
+	if tutorial_panel:
+		return  # Already created
+
+	# Create canvas layer for UI
+	var canvas_layer = CanvasLayer.new()
+	canvas_layer.name = "TutorialCanvasLayer"
+	canvas_layer.layer = 100  # Above everything
+	get_tree().root.add_child(canvas_layer)
+
+	# Create main panel
+	tutorial_panel = PanelContainer.new()
+	tutorial_panel.name = "TutorialPanel"
+
+	# Style the panel
+	var style = StyleBoxFlat.new()
+	style.bg_color = Color(0.1, 0.1, 0.15, 0.95)
+	style.border_color = Color(0.8, 0.6, 0.2, 1.0)  # Golden border
+	style.set_border_width_all(3)
+	style.set_corner_radius_all(8)
+	style.set_content_margin_all(15)
+	tutorial_panel.add_theme_stylebox_override("panel", style)
+
+	# Position at bottom of screen
+	var viewport_size = get_viewport().get_visible_rect().size
+	tutorial_panel.position = Vector2(viewport_size.x * 0.15, viewport_size.y - 180)
+	tutorial_panel.custom_minimum_size = Vector2(viewport_size.x * 0.7, 140)
+
+	canvas_layer.add_child(tutorial_panel)
+
+	# Create vertical container
+	var vbox = VBoxContainer.new()
+	vbox.add_theme_constant_override("separation", 8)
+	tutorial_panel.add_child(vbox)
+
+	# Create rich text label for tutorial text
+	tutorial_label = RichTextLabel.new()
+	tutorial_label.bbcode_enabled = true
+	tutorial_label.fit_content = true
+	tutorial_label.custom_minimum_size = Vector2(0, 80)
+	tutorial_label.add_theme_font_size_override("normal_font_size", 18)
+	tutorial_label.add_theme_font_size_override("bold_font_size", 20)
+	tutorial_label.add_theme_color_override("default_color", Color.WHITE)
+	vbox.add_child(tutorial_label)
+
+	# Create bottom row for hints and skip button
+	var bottom_row = HBoxContainer.new()
+	bottom_row.alignment = BoxContainer.ALIGNMENT_END
+	vbox.add_child(bottom_row)
+
+	# Continue hint
+	continue_hint_label = Label.new()
+	continue_hint_label.text = ""
+	continue_hint_label.add_theme_color_override("font_color", Color(0.7, 0.7, 0.7))
+	continue_hint_label.add_theme_font_size_override("font_size", 14)
+	continue_hint_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	bottom_row.add_child(continue_hint_label)
+
+	# Skip button
 		create_highlight_area(step["target"])
 
 	# Create tutorial text label
@@ -327,46 +513,47 @@ func create_tutorial_overlay(step: Dictionary):
 
 	# Add skip button if allowed
 	if can_skip_tutorials:
-		add_skip_button()
+		skip_button = Button.new()
+		skip_button.text = "Skip Tutorial"
+		skip_button.add_theme_font_size_override("font_size", 14)
+		skip_button.pressed.connect(skip_current_tutorial)
+		bottom_row.add_child(skip_button)
 
-	# Handle step duration or wait for action
-	if step.has("duration"):
-		await get_tree().create_timer(step["duration"]).timeout
-		advance_tutorial_step()
-	# Otherwise, wait for action signal (handled by trigger_tutorial_action)
+	# Animate panel appearing
+	tutorial_panel.modulate.a = 0
+	var tween = create_tween()
+	tween.tween_property(tutorial_panel, "modulate:a", 1.0, 0.3)
 
 
-## Create highlight area around target element
-func create_highlight_area(target_name: String):
-	highlight_rect = ColorRect.new()
-	highlight_rect.color = Color(1, 1, 0, 0.3)  # Yellow semi-transparent
+## Update the tutorial text
+func _update_tutorial_text(text: String):
+	if tutorial_label:
+		tutorial_label.text = text
 
-	# Try to find the target node in the scene
-	var target_node = _find_target_node(target_name)
 
-	if target_node:
-		# Position and size based on actual target node
-		var target_rect = _get_node_global_rect(target_node)
-		if target_rect.size.x > 0 and target_rect.size.y > 0:
-			# Add padding around the highlight
-			var padding = 8.0
-			highlight_rect.global_position = target_rect.position - Vector2(padding, padding)
-			highlight_rect.size = target_rect.size + Vector2(padding * 2, padding * 2)
+## Update continue hint visibility
+func _update_continue_hint(auto_progress: bool):
+	if continue_hint_label:
+		if auto_progress:
+			continue_hint_label.text = "(continuing automatically...)"
+			continue_hint_label.visible = true
 		else:
-			# Fallback: center on the node with default size
-			highlight_rect.global_position = target_node.global_position - Vector2(50, 50)
-			highlight_rect.size = Vector2(100, 100)
-	else:
-		# Fallback: centered placeholder highlight
-		var viewport_size = get_viewport().get_visible_rect().size
-		highlight_rect.position = viewport_size / 2 - Vector2(75, 75)
-		highlight_rect.size = Vector2(150, 150)
-
-	tutorial_overlay.add_child(highlight_rect)
+			continue_hint_label.text = ""
+			continue_hint_label.visible = false
 
 
-## Find a target node by name in the current scene.
-## Searches through common groups and node paths.
+## Highlight a target node using the sweep shader
+func _highlight_target(target_name: String):
+	var target_node = _find_target_node(target_name)
+	if not target_node:
+		push_warning("Tutorial: Could not find target node: " + target_name)
+		return
+
+	# Apply shader to the target
+	_apply_highlight_shader(target_node)
+
+
+## Find a target node by name
 func _find_target_node(target_name: String) -> Node:
 	var scene = get_tree().current_scene
 	if not scene:
@@ -377,17 +564,20 @@ func _find_target_node(target_name: String) -> Node:
 	if node:
 		return node
 
-	# Try finding by group (targets might be in groups)
-	var group_name = target_name.replace("_", "")
-	var nodes_in_group = get_tree().get_nodes_in_group(group_name)
-	if nodes_in_group.size() > 0:
-		return nodes_in_group[0]
+	# Try finding by unique name (%)
+	node = scene.get_node_or_null("%" + target_name)
+	if node:
+		return node
 
 	# Try common path patterns for game elements
 	var common_paths = [
 		"Gameplay/InteractiveElements/%s" % target_name,
+		"Gameplay/InteractiveElements/OfficeShutterController/%s" % target_name,
+		"Gameplay/InteractiveElements/StampBarController/%s" % target_name,
 		"Gameplay/%s" % target_name,
 		"UI/%s" % target_name,
+		"UI/Labels/%s" % target_name,
+		"UI/Labels/MarginContainer/%s" % target_name,
 		"HUD/%s" % target_name
 	]
 
@@ -396,51 +586,61 @@ func _find_target_node(target_name: String) -> Node:
 		if node:
 			return node
 
+	# Try finding by group
+	var group_name = target_name.to_lower().replace(" ", "_")
+	var nodes_in_group = get_tree().get_nodes_in_group(group_name)
+	if nodes_in_group.size() > 0:
+		return nodes_in_group[0]
+
 	return null
 
 
-## Get the global rectangle of a node for highlighting.
-func _get_node_global_rect(node: Node) -> Rect2:
-	# Handle Control nodes
-	if node is Control:
-		return Rect2(node.global_position, node.size)
+## Apply the highlight shader to a node
+func _apply_highlight_shader(node: Node):
+	if not node:
+		return
 
-	# Handle Sprite2D nodes
-	if node is Sprite2D:
-		var texture = node.texture
-		if texture:
-			var size = texture.get_size() * node.scale
-			var pos = node.global_position
-			if node.centered:
-				pos -= size / 2
-			return Rect2(pos, size)
+	# Check if node can have a material (Sprite2D, Control with shader support, etc.)
+	if node is CanvasItem:
+		# Store original material
+		var node_id = node.get_instance_id()
+		if not original_materials.has(node_id):
+			original_materials[node_id] = node.material
 
-	# Handle Node2D with custom size property
-	if node is Node2D and node.has_method("get_rect"):
-		var rect = node.get_rect()
-		return Rect2(node.global_position + rect.position, rect.size)
+		# Create new shader material instance
+		var new_material = highlight_shader.duplicate()
+		new_material.set_shader_parameter("enable_highlight", true)
+		new_material.set_shader_parameter("speed", 1.5)
+		new_material.set_shader_parameter("line_color", Color(1.0, 0.95, 0.8, 0.9))
 
-	# Fallback: use position with default size
-	if node is Node2D:
-		return Rect2(node.global_position - Vector2(40, 40), Vector2(80, 80))
-
-	return Rect2()
+		node.material = new_material
+		highlighted_nodes.append(node)
 
 
-## Add skip tutorial button
-func add_skip_button():
-	var skip_button = Button.new()
-	skip_button.text = "Skip Tutorial"
-	skip_button.position = Vector2(
-		get_viewport().get_visible_rect().size.x - 150, 20
-	)
-	skip_button.pressed.connect(skip_current_tutorial)
-	tutorial_overlay.add_child(skip_button)
+## Clear all highlights
+func _clear_all_highlights():
+	for node in highlighted_nodes:
+		if is_instance_valid(node):
+			var node_id = node.get_instance_id()
+			if original_materials.has(node_id):
+				node.material = original_materials[node_id]
+			else:
+				# If we can't restore, just disable the highlight
+				if node.material and node.material.has_method("set_shader_parameter"):
+					node.material.set_shader_parameter("enable_highlight", false)
+
+	highlighted_nodes.clear()
+	original_materials.clear()
 
 
-## Trigger tutorial action completion (called from game code)
+## Timer timeout - advance to next step
+func _on_step_timer_timeout():
+	_advance_step()
+
+
+## Trigger a tutorial action (called from game code)
 func trigger_tutorial_action(action_name: String):
-	if current_tutorial == "":
+	if current_tutorial == "" or not waiting_for_action:
 		return
 
 	var tutorial = TUTORIALS[current_tutorial]
@@ -449,33 +649,45 @@ func trigger_tutorial_action(action_name: String):
 
 	var step = tutorial["steps"][current_step]
 	if step.get("wait_for_action") == action_name:
-		advance_tutorial_step()
+		# Small delay before advancing for visual feedback
+		await get_tree().create_timer(0.5).timeout
+		_advance_step()
 
 
-## Advance to next tutorial step
-func advance_tutorial_step():
+## Advance to next step
+func _advance_step():
 	tutorial_step_completed.emit(current_tutorial, current_step)
 	current_step += 1
-	show_tutorial_step()
+	waiting_for_action = false
+	_show_current_step()
 
 
 ## Complete current tutorial
-func complete_tutorial():
+func _complete_tutorial():
 	if current_tutorial == "":
 		return
 
-	tutorials_completed[current_tutorial] = true
-	tutorial_completed.emit(current_tutorial)
+	var completed_id = current_tutorial
+	tutorials_completed[completed_id] = true
+	tutorial_completed.emit(completed_id)
 
-	# Clean up overlay
-	if tutorial_overlay:
-		tutorial_overlay.queue_free()
-		tutorial_overlay = null
+	# Clear highlights
+	_clear_all_highlights()
+
+	# Hide panel briefly
+	if tutorial_panel:
+		var tween = create_tween()
+		tween.tween_property(tutorial_panel, "modulate:a", 0.0, 0.3)
+		await tween.finished
 
 	current_tutorial = ""
 	current_step = 0
 
 	save_tutorial_progress()
+
+	# Start next tutorial in queue after a short delay
+	await get_tree().create_timer(1.0).timeout
+	_start_next_queued_tutorial()
 
 
 ## Skip current tutorial
@@ -483,15 +695,55 @@ func skip_current_tutorial():
 	if current_tutorial == "":
 		return
 
-	tutorial_skipped.emit(current_tutorial)
+	var skipped_id = current_tutorial
+	tutorial_skipped.emit(skipped_id)
 
-	# Clean up overlay
-	if tutorial_overlay:
-		tutorial_overlay.queue_free()
-		tutorial_overlay = null
+	# Mark as completed so it doesn't show again
+	tutorials_completed[skipped_id] = true
+
+	# Clear highlights
+	_clear_all_highlights()
+
+	# Hide panel
+	if tutorial_panel:
+		var tween = create_tween()
+		tween.tween_property(tutorial_panel, "modulate:a", 0.0, 0.3)
+		await tween.finished
 
 	current_tutorial = ""
 	current_step = 0
+
+	save_tutorial_progress()
+
+	# Start next tutorial in queue
+	await get_tree().create_timer(0.5).timeout
+	_start_next_queued_tutorial()
+
+
+## Skip all tutorials for this session
+func skip_all_tutorials():
+	tutorial_queue.clear()
+	skip_current_tutorial()
+
+
+## Clean up tutorial UI when leaving the scene
+func cleanup_tutorial_ui():
+	_clear_all_highlights()
+
+	if tutorial_panel:
+		var canvas_layer = tutorial_panel.get_parent()
+		tutorial_panel.queue_free()
+		tutorial_panel = null
+		tutorial_label = null
+		skip_button = null
+		continue_hint_label = null
+
+		if canvas_layer:
+			canvas_layer.queue_free()
+
+	current_tutorial = ""
+	current_step = 0
+	tutorial_queue.clear()
 
 
 ## Check if tutorial is completed
@@ -502,6 +754,8 @@ func is_tutorial_completed(tutorial_id: String) -> bool:
 ## Enable or disable tutorials globally
 func set_tutorials_enabled(enabled: bool):
 	tutorial_enabled = enabled
+	if not enabled:
+		cleanup_tutorial_ui()
 	save_tutorial_progress()
 
 
@@ -516,6 +770,7 @@ func reset_all_tutorials():
 	tutorials_completed.clear()
 	current_tutorial = ""
 	current_step = 0
+	tutorial_queue.clear()
 	save_tutorial_progress()
 
 
@@ -527,3 +782,48 @@ func get_tutorial_completion_percentage() -> float:
 		if is_tutorial_completed(tutorial_id):
 			completed += 1
 	return (float(completed) / float(total)) * 100.0 if total > 0 else 0.0
+
+
+## Check if any tutorial is currently active
+func is_tutorial_active() -> bool:
+	return current_tutorial != ""
+
+
+## Get current tutorial ID
+func get_current_tutorial() -> String:
+	return current_tutorial
+
+
+## Get current step index
+func get_current_step() -> int:
+	return current_step
+
+
+# ==================== BACKWARDS COMPATIBILITY ====================
+# Public API methods for backwards compatibility with tests
+
+## Advance to next tutorial step (public API)
+func advance_tutorial_step():
+	_advance_step()
+
+
+## Complete current tutorial (public API)
+func complete_tutorial():
+	_complete_tutorial()
+
+
+## Show current tutorial step (public API)
+func show_tutorial_step():
+	_show_current_step()
+
+
+## Legacy property aliases for compatibility
+var tutorial_overlay: Control:
+	get:
+		return tutorial_panel
+
+var highlight_rect: ColorRect:
+	get:
+		# Return null since we don't use ColorRect anymore
+		# Tests should be updated to check for highlighted_nodes instead
+		return null

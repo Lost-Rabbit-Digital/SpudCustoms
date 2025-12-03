@@ -776,6 +776,9 @@ func _handle_document_drop(mouse_pos: Vector2):
 	elif drop_zone == "inspection_table" and !was_open:
 		# Only open if it wasn't already open
 		emit_signal("item_opened", dragged_item)
+		# Trigger tutorial action for document placed on table
+		if TutorialManager:
+			TutorialManager.trigger_tutorial_action("document_placed_on_table")
 	# If dropping on suspect_panel, suspect, or none
 	else:
 		# Always close when dropping on suspect
@@ -784,6 +787,9 @@ func _handle_document_drop(mouse_pos: Vector2):
 		# If dropping on suspect, emit passport_returned signal
 		if drop_zone == "suspect" and dragged_item.name == "Passport":
 			emit_signal("passport_returned", dragged_item)
+			# Trigger tutorial action for document returned
+			if TutorialManager:
+				TutorialManager.trigger_tutorial_action("document_returned")
 			if stamp_system_manager:
 				stamp_system_manager.clear_passport_stamps()
 			else:

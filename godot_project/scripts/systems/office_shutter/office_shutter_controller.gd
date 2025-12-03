@@ -255,6 +255,11 @@ func shutter_state_toggle() -> void:
 		#print("Attempt to open shutter")
 		# If the shutter is closed, open it upon the click
 		raise_shutter()
+		# Mark shutter as opened this shift
+		shutter_opened_this_shift = true
+		# Trigger tutorial action for lever pull
+		if TutorialManager:
+			TutorialManager.trigger_tutorial_action("lever_pulled")
 	else:
 		#print("Attempt to shut shutter")
 		# If the shutter is already open, close it upon the click

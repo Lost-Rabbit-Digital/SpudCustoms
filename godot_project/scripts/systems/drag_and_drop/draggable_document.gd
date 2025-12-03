@@ -69,6 +69,10 @@ func open(animate: bool = true):
 		var tween = create_tween()
 		tween.tween_property(self, "modulate:a", 1.0, animation_duration)
 
+	# Trigger tutorial action for passport opened
+	if document_sprite and document_sprite.name == "Passport" and TutorialManager:
+		TutorialManager.trigger_tutorial_action("passport_opened")
+
 
 ## Closes the document, changing its texture and showing appropriate content.
 ##

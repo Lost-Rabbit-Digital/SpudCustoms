@@ -64,6 +64,10 @@ func initialize(game_scene: Node):
 # Handle stamp application to any document
 # In StampSystemManager.gd
 func _on_stamp_applied(stamp: StampComponent, document: Node, is_perfect: bool):
+	# Trigger tutorial action for stamp applied
+	if TutorialManager:
+		TutorialManager.trigger_tutorial_action("stamp_applied")
+
 	# Update stats for all stamps
 	print("Stamp", stamp)
 	print("Document", document)
