@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://byvydukidk6i2"]
+[gd_scene load_steps=8 format=3 uid="uid://byvydukidk6i2"]
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_pss7b"]
 [ext_resource type="Script" uid="uid://bdet8115mn02d" path="res://scenes/menus/main_menu/main_menu.gd" id="2_lk0wa"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://scenes/credits/credits.tscn" id="3_vmius"]
 [ext_resource type="Texture2D" uid="uid://dimf1hf1nm87f" path="res://assets/user_interface/social_icons/16x16/BlueSky.png" id="5_x31ro"]
 [ext_resource type="Texture2D" uid="uid://x5s2jk5jgpue" path="res://assets/user_interface/social_icons/16x16_outline/BlueSky.png" id="6_x31ro"]
+[ext_resource type="Script" path="res://scripts/effects/audio_reactive_bloom.gd" id="7_bloom"]
 
 [node name="MainMenu" instance=ExtResource("1_pss7b")]
 script = ExtResource("2_lk0wa")
@@ -23,3 +24,13 @@ stretch_mode = 0
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 alignment = 1
+
+[node name="AudioReactiveBloom" type="Node" parent="."]
+script = ExtResource("7_bloom")
+base_glow_intensity = 0.4
+max_audio_glow = 1.2
+smoothing = 0.75
+min_frequency = 20.0
+max_frequency = 400.0
+glow_bloom = 0.6
+glow_hdr_threshold = 0.7
