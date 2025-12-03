@@ -2,6 +2,7 @@ class_name PauseMenu
 extends OverlaidMenu
 
 @export var options_packed_scene: PackedScene
+@export var help_packed_scene: PackedScene
 @export_file("*.tscn") var main_menu_scene: String
 
 var popup_open
@@ -38,6 +39,14 @@ func open_options_menu():
 	_enable_focus.call_deferred()
 
 
+func open_help_menu():
+	var help_scene = help_packed_scene.instantiate()
+	add_child(help_scene)
+	_disable_focus.call_deferred()
+	await help_scene.tree_exiting
+	_enable_focus.call_deferred()
+
+
 func _handle_cancel_input():
 	if popup_open != null:
 		close_popup()
@@ -50,6 +59,11 @@ func _setup_options():
 		%OptionsButton.hide()
 
 
+func _setup_help():
+	if help_packed_scene == null:
+		%HelpButton.hide()
+
+
 func _setup_main_menu():
 	if main_menu_scene.is_empty():
 		%MainMenuButton.hide()
@@ -59,6 +73,7 @@ func _ready():
 	if OS.has_feature("web"):
 		%ExitButton.hide()
 	_setup_options()
+	_setup_help()
 	_setup_main_menu()
 
 
@@ -69,6 +84,10 @@ func _on_restart_button_pressed():
 
 func _on_options_button_pressed():
 	open_options_menu()
+
+
+func _on_help_button_pressed():
+	open_help_menu()
 
 
 func _on_main_menu_button_pressed():
