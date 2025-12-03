@@ -1,0 +1,192 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4xhelpmenu001"]
+
+[ext_resource type="Script" uid="uid://dhelpmenu001" path="res://scenes/menus/help_menu/help_menu.gd" id="1_help"]
+
+[node name="HelpMenu" type="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_help")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="Basics" type="ScrollContainer" parent="TabContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Basics"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="IntroLabel" type="RichTextLabel" parent="TabContainer/Basics/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+bbcode_enabled = true
+text = "help_basics_intro"
+fit_content = true
+
+[node name="GateLabel" type="RichTextLabel" parent="TabContainer/Basics/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+bbcode_enabled = true
+text = "help_basics_gate"
+fit_content = true
+
+[node name="DocumentsLabel" type="RichTextLabel" parent="TabContainer/Basics/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+bbcode_enabled = true
+text = "help_basics_documents"
+fit_content = true
+
+[node name="StampingLabel" type="RichTextLabel" parent="TabContainer/Basics/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+bbcode_enabled = true
+text = "help_basics_stamping"
+fit_content = true
+
+[node name="RunnersLabel" type="RichTextLabel" parent="TabContainer/Basics/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+bbcode_enabled = true
+text = "help_basics_runners"
+fit_content = true
+
+[node name="XrayLabel" type="RichTextLabel" parent="TabContainer/Basics/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+bbcode_enabled = true
+text = "help_basics_xray"
+fit_content = true
+
+[node name="Gameplay" type="ScrollContainer" parent="TabContainer"]
+visible = false
+auto_translate_mode = 1
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Gameplay"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="QuotaLabel" type="RichTextLabel" parent="TabContainer/Gameplay/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+bbcode_enabled = true
+text = "help_gameplay_quota"
+fit_content = true
+
+[node name="StrikesLabel" type="RichTextLabel" parent="TabContainer/Gameplay/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+bbcode_enabled = true
+text = "help_gameplay_strikes"
+fit_content = true
+
+[node name="RulesLabel" type="RichTextLabel" parent="TabContainer/Gameplay/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+bbcode_enabled = true
+text = "help_gameplay_rules"
+fit_content = true
+
+[node name="ScoringLabel" type="RichTextLabel" parent="TabContainer/Gameplay/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+bbcode_enabled = true
+text = "help_gameplay_scoring"
+fit_content = true
+
+[node name="DifficultyLabel" type="RichTextLabel" parent="TabContainer/Gameplay/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+bbcode_enabled = true
+text = "help_gameplay_difficulty"
+fit_content = true
+
+[node name="Minigames" type="ScrollContainer" parent="TabContainer"]
+visible = false
+auto_translate_mode = 1
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Minigames"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="MinigameIntroLabel" type="RichTextLabel" parent="TabContainer/Minigames/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+bbcode_enabled = true
+text = "help_minigames_intro"
+fit_content = true
+
+[node name="DocumentScannerLabel" type="RichTextLabel" parent="TabContainer/Minigames/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+bbcode_enabled = true
+text = "help_minigames_document_scanner"
+fit_content = true
+
+[node name="StampSortingLabel" type="RichTextLabel" parent="TabContainer/Minigames/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+bbcode_enabled = true
+text = "help_minigames_stamp_sorting"
+fit_content = true
+
+[node name="FingerprintMatchLabel" type="RichTextLabel" parent="TabContainer/Minigames/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+bbcode_enabled = true
+text = "help_minigames_fingerprint_match"
+fit_content = true
+
+[node name="CodeBreakerLabel" type="RichTextLabel" parent="TabContainer/Minigames/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+bbcode_enabled = true
+text = "help_minigames_code_breaker"
+fit_content = true
+
+[node name="BorderChaseLabel" type="RichTextLabel" parent="TabContainer/Minigames/VBoxContainer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+bbcode_enabled = true
+text = "help_minigames_border_chase"
+fit_content = true

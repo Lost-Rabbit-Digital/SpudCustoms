@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqvlk7m8fpnxr"]
+
+[ext_resource type="Script" path="res://scripts/ui/localization_selector.gd" id="1_script"]
+
+[node name="LocalizationSelector" type="HBoxContainer"]
+custom_minimum_size = Vector2(150, 32)
+script = ExtResource("1_script")
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="LanguageLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Language:"
+vertical_alignment = 1
+
+[node name="LanguageDropdown" type="OptionButton" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Select your language"
+
+[connection signal="item_selected" from="LanguageDropdown" to="." method="_on_language_dropdown_item_selected"]
