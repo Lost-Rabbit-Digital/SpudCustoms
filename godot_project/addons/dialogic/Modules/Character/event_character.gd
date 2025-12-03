@@ -340,7 +340,7 @@ func get_shortcode_parameters() -> Dictionary:
 					"Join": {"value": Actions.JOIN},
 					"Leave": {"value": Actions.LEAVE},
 					"Update": {"value": Actions.UPDATE}
-				}
+				},
 		},
 		"character":
 		{

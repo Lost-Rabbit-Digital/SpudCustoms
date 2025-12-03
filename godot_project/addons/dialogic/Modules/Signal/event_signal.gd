@@ -87,7 +87,7 @@ func get_shortcode_parameters() -> Dictionary:
 					"String": {"value": ArgumentTypes.STRING, "text_alt": ["string"]},
 					"Dictionary":
 					{"value": ArgumentTypes.DICTIONARY, "text_alt": ["dict", "dictionary"]}
-				}
+				},
 		},
 		"arg": {"property": "argument", "default": ""}
 	}

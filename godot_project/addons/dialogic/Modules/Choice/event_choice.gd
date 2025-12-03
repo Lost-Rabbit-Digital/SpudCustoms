@@ -160,7 +160,7 @@ func get_shortcode_parameters() -> Dictionary:
 					"Default": {"value": ElseActions.DEFAULT, "text_alt": ["default"]},
 					"Hide": {"value": ElseActions.HIDE, "text_alt": ["hide"]},
 					"Disable": {"value": ElseActions.DISABLE, "text_alt": ["disable"]}
-				}
+				},
 		},
 		"alt_text": {"property": "disabled_text", "default": ""},
 		"extra_data": {"property": "extra_data", "default": {}, "custom_stored": true},

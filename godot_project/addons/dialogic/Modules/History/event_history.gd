@@ -81,7 +81,7 @@ func get_shortcode_parameters() -> Dictionary:
 					"Clear": {"value": 0, "text_alt": ["clear"]},
 					"Pause": {"value": 1, "text_alt": ["pause"]},
 					"Resume": {"value": 2, "text_alt": ["resume", "start"]}
-				}
+				},
 		},
 	}
 
