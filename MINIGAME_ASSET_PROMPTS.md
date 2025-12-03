@@ -195,58 +195,189 @@ Light paper fluttering descent, document falling through air, gentle gravity, 0.
 
 ---
 
-## VISUAL ASSETS - Imagen Prompts
+## VISUAL ASSETS - Pixel Art Imagen Prompts
 
-### Document Scanner - Document Textures
+**Art Style Reference:** 16-bit pixel art, warm color palette (browns, tans, oranges), Papers Please inspired bureaucratic aesthetic, cute potato characters, wood desk textures, official government document styling with dotted borders.
 
-#### Official Government Document
-```
-Aged cream-colored official government document texture, subtle paper grain, faded bureaucratic form with empty fields, stamp marks in corners, Soviet-era aesthetic, top-down flat scan, 300x400 pixels, game asset
-```
+---
 
-#### Passport Page Texture
-```
-Worn passport inner page texture, cream paper with subtle security pattern watermark, faded blue and red accents, official document aesthetic, vintage travel document, flat scan perspective, game asset
-```
+### BORDER CHASE - Conveyor Belt Assets
 
-#### Customs Declaration Form
+#### Conveyor Belt Sprite Sheet (Tileable)
 ```
-Vintage customs declaration form texture, yellowed paper with typed text fields, official stamps partially visible, border checkpoint aesthetic, aged government paperwork, flat lay photograph style, game asset
+16-bit pixel art industrial conveyor belt sprite sheet, dark gray metal rollers with rubber belt texture, orange warning stripes on edges, 4-frame animation cycle, top-down perspective, warm industrial colors, game asset, transparent background, 64x32 pixels per frame
 ```
 
-#### Identification Card Background
+#### Contraband Items Sprite Sheet
 ```
-Retro ID card background texture, laminated paper effect, subtle holographic pattern, government-issued document aesthetic, cream and gray tones, flat scan, game asset
+16-bit pixel art contraband items sprite sheet for border checkpoint game, suspicious packages, hidden weapons, fake documents, forbidden produce, each item 32x32 pixels, red warning glow effect, Papers Please inspired, warm color palette, transparent background
+```
+
+#### Approved Items Sprite Sheet
+```
+16-bit pixel art approved cargo items sprite sheet, legitimate luggage, proper documents, fresh vegetables, clean packages, each item 32x32 pixels, green checkmark overlay option, Papers Please inspired, transparent background
+```
+
+#### Scanner Frame/Border
+```
+16-bit pixel art security scanner frame, industrial metal border with orange warning lights, checkpoint aesthetic, dark gray and orange colors, 400x300 pixel frame border, Papers Please inspired, transparent center
 ```
 
 ---
 
-### Background Textures (Optional Enhancement)
+### CODE BREAKER - Terminal Assets
 
-#### Border Chase - Industrial Background
+#### Retro Computer Terminal Frame
 ```
-Dark industrial control room texture, metal panels with rivets, orange warning stripe accents, conveyor belt facility aesthetic, grungy factory environment, game background asset
-```
-
-#### Code Breaker - Digital Security Background
-```
-Dark computer terminal screen texture, green phosphor CRT monitor aesthetic, subtle scan lines, hacker movie mainframe, retro computing environment, game background asset
+16-bit pixel art retro computer terminal frame, CRT monitor with thick bezel, green phosphor glow effect, Soviet-era electronics aesthetic, dark gray metal casing, 400x300 pixels, warm brown desk reflection at bottom, transparent screen area
 ```
 
-#### Document Scanner - Investigation Desk Background
+#### Keypad Buttons Sprite Sheet
 ```
-Wooden detective desk texture with subtle UV lamp glow reflection, forensic investigation aesthetic, dark purple ambient lighting, examination table surface, game background asset
-```
-
-#### Fingerprint Match - Forensic Lab Background
-```
-Clean forensic laboratory surface texture, stainless steel with subtle blue lighting reflection, CSI crime lab aesthetic, clinical examination environment, game background asset
+16-bit pixel art number keypad buttons 0-9, chunky mechanical keys, green backlit numbers, 3 states per button (normal, hover, pressed), each button 48x48 pixels, retro terminal aesthetic, transparent background
 ```
 
-#### Stamp Sorting - Bureaucratic Office Background
+#### Feedback Dots Sprite Sheet
 ```
-Vintage wooden desk texture with official seal impression, golden brown tones, government office aesthetic, official paperwork processing station, warm lamp lighting, game background asset
+16-bit pixel art feedback indicator dots, green dot (correct position), yellow dot (wrong position), gray dot (incorrect), each 16x16 pixels, slight glow effect, code-breaking game feedback, transparent background
 ```
+
+#### Lock/Unlock Animation
+```
+16-bit pixel art vault lock sprite sheet, 6-frame unlock animation, heavy metal door mechanism, green indicator light when open, industrial security aesthetic, each frame 64x64 pixels, transparent background
+```
+
+---
+
+### DOCUMENT SCANNER - UV Light Assets
+
+#### Scannable Document Base
+```
+16-bit pixel art official government document, cream/tan paper texture matching SpudCustoms Entry Visa style, dotted border frame, empty form fields, potato republic seal watermark, 300x400 pixels, warm parchment colors
+```
+
+#### UV Light Cursor/Tool
+```
+16-bit pixel art handheld UV lamp sprite, purple glow emanating from lens, 3 states (off, on, scanning), each 48x48 pixels, forensic investigation tool aesthetic, transparent background
+```
+
+#### Hidden Elements Sprite Sheet (revealed under UV)
+```
+16-bit pixel art hidden document elements sprite sheet, secret watermark seal, forged stamp mark, hidden signature, concealed barcode, invisible ink text, each element 32x32 pixels, purple/violet glow effect when revealed, transparent background
+```
+
+#### Document Desk Surface
+```
+16-bit pixel art wooden examination desk texture, dark reddish-brown wood grain matching SpudCustoms main desk, subtle purple UV ambient lighting reflection, 400x300 pixels, warm office aesthetic
+```
+
+---
+
+### FINGERPRINT MATCH - Forensic Assets
+
+#### Fingerprint Cards Sprite Sheet
+```
+16-bit pixel art fingerprint cards sprite sheet, 8 different fingerprint patterns (loop, whorl, arch variants), cream card background with brown ridge patterns, each card 80x100 pixels, forensic evidence aesthetic, transparent background
+```
+
+#### Reference Card Frame
+```
+16-bit pixel art fingerprint reference card holder, metal clipboard frame, blue accent lighting, "REFERENCE" label at top, potato republic official seal, 120x150 pixels, forensic lab aesthetic
+```
+
+#### Scanner Device Frame
+```
+16-bit pixel art biometric scanner frame, blue LED indicator lights, metal housing with glass scanning surface, police/forensic equipment aesthetic, 400x300 pixels, transparent scan area
+```
+
+#### Match Indicators
+```
+16-bit pixel art match result indicators, green checkmark for correct match, red X for incorrect, question mark for processing, each 32x32 pixels, slight glow effect, transparent background
+```
+
+---
+
+### STAMP SORTING - Bureaucratic Assets
+
+#### Approved Stamp Sprite
+```
+16-bit pixel art "APPROVED" rubber stamp, green ink color, worn stamp texture, matching SpudCustoms stamp style, 80x50 pixels, slight rotation variants, transparent background
+```
+
+#### Denied Stamp Sprite
+```
+16-bit pixel art "DENIED" rubber stamp, red ink color matching existing game stamps, dotted border frame like Entry Visa, 80x50 pixels, slight rotation variants, transparent background
+```
+
+#### Sorting Bins Sprite Sheet
+```
+16-bit pixel art document sorting bins, wooden office trays, green bin labeled "APPROVED" on left, red bin labeled "DENIED" on right, each bin 100x80 pixels, warm brown wood matching main desk, transparent background
+```
+
+#### Falling Stamps Animation Sheet
+```
+16-bit pixel art stamp falling animation, 4-frame rotation cycle for approved stamp, 4-frame rotation cycle for denied stamp, paper flutter effect, each frame 80x50 pixels, transparent background
+```
+
+#### Office Desk Background
+```
+16-bit pixel art bureaucratic desk surface, dark reddish-brown wood grain matching SpudCustoms main scene, paper stack decorations in corners, official seal embossed, 400x300 pixels, warm lamp lighting
+```
+
+---
+
+### SHARED UI ELEMENTS
+
+#### Minigame Timer Bar
+```
+16-bit pixel art countdown timer bar, bronze/gold metal frame, red fill that depletes, warning state when low (flashing), 200x24 pixels, bureaucratic office aesthetic, transparent background
+```
+
+#### Score Counter Frame
+```
+16-bit pixel art score display frame, matching SpudCustoms HUD style, dark panel with gold trim, space for 4-digit number, 120x40 pixels, transparent background
+```
+
+#### Minigame Title Banner
+```
+16-bit pixel art title banner template, parchment/paper scroll style, dotted border matching documents, gold corner decorations, space for title text, 300x60 pixels, transparent background
+```
+
+#### Success/Failure Splash
+```
+16-bit pixel art result splash screens sprite sheet, "SUCCESS" with green glow and potato celebration, "TIME UP" with red glow and sad potato, each 200x100 pixels, transparent background
+```
+
+---
+
+### SPRITE SHEET CUTTING GUIDE
+
+When creating these assets, consider organizing them as single sprite sheets that can be cut:
+
+**border_chase_items.png** (256x128)
+- Row 1: Contraband items (8x 32x32)
+- Row 2: Approved items (8x 32x32)
+- Row 3: Conveyor belt animation (4x 64x32)
+
+**code_breaker_ui.png** (256x256)
+- Rows 1-2: Keypad buttons normal state (10x 48x48 + extras)
+- Row 3: Keypad buttons pressed state
+- Row 4: Feedback dots, lock icons, misc UI
+
+**document_scanner_elements.png** (256x128)
+- Row 1: Hidden elements (8x 32x32)
+- Row 2: UV lamp states, confirm icons
+- Row 3: Document overlay elements
+
+**fingerprint_cards.png** (320x200)
+- 8 fingerprint card variants (each 80x100)
+- Match indicators below
+
+**stamp_sorting_sprites.png** (256x200)
+- Approved stamps (4 rotation variants)
+- Denied stamps (4 rotation variants)
+- Bin sprites
+- Falling animation frames
 
 ---
 
