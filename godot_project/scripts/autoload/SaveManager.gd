@@ -45,7 +45,14 @@ func load_game_state() -> Dictionary:
 	var success = false
 
 	# Try loading from cloud first if Steam is running and properly initialized
-	var steam_available = Steam.isSteamRunning() and Steam.getSteamID() > 0
+	# Check SteamManager.steam_init_success to ensure Steam User interface is ready
+	var steam_available = false
+	if Steam.isSteamRunning():
+		# Only check getSteamID if SteamManager has confirmed initialization
+		# This prevents errors when Steam client is running but not fully initialized
+		if SteamManager and SteamManager.steam_init_success:
+			var steam_id = Steam.getSteamID()
+			steam_available = steam_id > 0
 	if steam_available:
 		# Check if cloud file exists before trying to read
 		var cloud_file_exists = Steam.fileExists("gamestate.save")
