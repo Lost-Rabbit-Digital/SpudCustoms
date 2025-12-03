@@ -238,6 +238,25 @@ signal tutorial_completed()
 signal tutorial_hint_requested(hint_key: String)
 
 # ============================================================================
+# CONTROLLER EVENTS
+# ============================================================================
+
+## Emitted when input mode changes (keyboard/mouse vs controller)
+signal input_mode_changed(is_controller: bool)
+
+## Emitted when a controller is connected
+signal controller_connected(controller_name: String)
+
+## Emitted when a controller is disconnected
+signal controller_disconnected()
+
+## Emitted when controller type changes (Xbox, PlayStation, etc.)
+signal controller_type_changed(controller_type: int)
+
+## Emitted to request haptic feedback
+signal haptic_feedback_requested(intensity: float, duration: float)
+
+# ============================================================================
 # HELPER METHODS
 # ============================================================================
 

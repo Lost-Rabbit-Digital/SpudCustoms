@@ -1,0 +1,263 @@
+"In Game Actions"
+{
+	"actions"
+	{
+		"MenuControls"
+		{
+			"title"	"#Set_MenuControls"
+			"StickPadGyro"
+			{
+				"cursor_move"
+				{
+					"title"	"#Action_CursorMove"
+					"input_mode"	"absolute_mouse"
+				}
+			}
+			"AnalogTrigger"
+			{
+			}
+			"Button"
+			{
+				"menu_select"
+				{
+					"title"	"#Action_MenuSelect"
+				}
+				"menu_cancel"
+				{
+					"title"	"#Action_MenuCancel"
+				}
+				"menu_up"
+				{
+					"title"	"#Action_MenuUp"
+				}
+				"menu_down"
+				{
+					"title"	"#Action_MenuDown"
+				}
+				"menu_left"
+				{
+					"title"	"#Action_MenuLeft"
+				}
+				"menu_right"
+				{
+					"title"	"#Action_MenuRight"
+				}
+				"menu_pause"
+				{
+					"title"	"#Action_MenuPause"
+				}
+			}
+		}
+		"GameplayControls"
+		{
+			"title"	"#Set_GameplayControls"
+			"StickPadGyro"
+			{
+				"cursor_move"
+				{
+					"title"	"#Action_CursorMove"
+					"input_mode"	"absolute_mouse"
+				}
+				"camera_move"
+				{
+					"title"	"#Action_CameraMove"
+					"input_mode"	"joystick_camera"
+				}
+			}
+			"AnalogTrigger"
+			{
+				"fire_analog"
+				{
+					"title"	"#Action_FireAnalog"
+				}
+				"alt_fire_analog"
+				{
+					"title"	"#Action_AltFireAnalog"
+				}
+			}
+			"Button"
+			{
+				"fire"
+				{
+					"title"	"#Action_Fire"
+				}
+				"alt_fire"
+				{
+					"title"	"#Action_AltFire"
+				}
+				"interact"
+				{
+					"title"	"#Action_Interact"
+				}
+				"approve"
+				{
+					"title"	"#Action_Approve"
+				}
+				"reject"
+				{
+					"title"	"#Action_Reject"
+				}
+				"pause"
+				{
+					"title"	"#Action_Pause"
+				}
+				"quick_menu"
+				{
+					"title"	"#Action_QuickMenu"
+				}
+			}
+		}
+		"DialogueControls"
+		{
+			"title"	"#Set_DialogueControls"
+			"StickPadGyro"
+			{
+			}
+			"AnalogTrigger"
+			{
+			}
+			"Button"
+			{
+				"advance"
+				{
+					"title"	"#Action_Advance"
+				}
+				"skip"
+				{
+					"title"	"#Action_Skip"
+				}
+				"choice_up"
+				{
+					"title"	"#Action_ChoiceUp"
+				}
+				"choice_down"
+				{
+					"title"	"#Action_ChoiceDown"
+				}
+				"choice_select"
+				{
+					"title"	"#Action_ChoiceSelect"
+				}
+			}
+		}
+	}
+	"localization"
+	{
+		"english"
+		{
+			"Set_MenuControls"	"Menu Controls"
+			"Set_GameplayControls"	"Gameplay Controls"
+			"Set_DialogueControls"	"Dialogue Controls"
+			"Action_CursorMove"	"Move Cursor"
+			"Action_CameraMove"	"Move Camera"
+			"Action_MenuSelect"	"Select"
+			"Action_MenuCancel"	"Cancel/Back"
+			"Action_MenuUp"	"Navigate Up"
+			"Action_MenuDown"	"Navigate Down"
+			"Action_MenuLeft"	"Navigate Left"
+			"Action_MenuRight"	"Navigate Right"
+			"Action_MenuPause"	"Pause"
+			"Action_Fire"	"Fire Missile"
+			"Action_FireAnalog"	"Fire Missile (Trigger)"
+			"Action_AltFire"	"Secondary Action"
+			"Action_AltFireAnalog"	"Secondary Action (Trigger)"
+			"Action_Interact"	"Interact"
+			"Action_Approve"	"Approve"
+			"Action_Reject"	"Reject"
+			"Action_Pause"	"Pause"
+			"Action_QuickMenu"	"Quick Menu"
+			"Action_Advance"	"Advance Dialogue"
+			"Action_Skip"	"Skip"
+			"Action_ChoiceUp"	"Choice Up"
+			"Action_ChoiceDown"	"Choice Down"
+			"Action_ChoiceSelect"	"Select Choice"
+		}
+		"french"
+		{
+			"Set_MenuControls"	"Controles du menu"
+			"Set_GameplayControls"	"Controles de jeu"
+			"Set_DialogueControls"	"Controles de dialogue"
+			"Action_CursorMove"	"Deplacer le curseur"
+			"Action_CameraMove"	"Deplacer la camera"
+			"Action_MenuSelect"	"Selectionner"
+			"Action_MenuCancel"	"Annuler/Retour"
+			"Action_MenuUp"	"Naviguer vers le haut"
+			"Action_MenuDown"	"Naviguer vers le bas"
+			"Action_MenuLeft"	"Naviguer a gauche"
+			"Action_MenuRight"	"Naviguer a droite"
+			"Action_MenuPause"	"Pause"
+			"Action_Fire"	"Tirer missile"
+			"Action_FireAnalog"	"Tirer missile (gachette)"
+			"Action_AltFire"	"Action secondaire"
+			"Action_AltFireAnalog"	"Action secondaire (gachette)"
+			"Action_Interact"	"Interagir"
+			"Action_Approve"	"Approuver"
+			"Action_Reject"	"Rejeter"
+			"Action_Pause"	"Pause"
+			"Action_QuickMenu"	"Menu rapide"
+			"Action_Advance"	"Avancer le dialogue"
+			"Action_Skip"	"Passer"
+			"Action_ChoiceUp"	"Choix vers le haut"
+			"Action_ChoiceDown"	"Choix vers le bas"
+			"Action_ChoiceSelect"	"Selectionner le choix"
+		}
+		"german"
+		{
+			"Set_MenuControls"	"Menu-Steuerung"
+			"Set_GameplayControls"	"Gameplay-Steuerung"
+			"Set_DialogueControls"	"Dialog-Steuerung"
+			"Action_CursorMove"	"Cursor bewegen"
+			"Action_CameraMove"	"Kamera bewegen"
+			"Action_MenuSelect"	"Auswahlen"
+			"Action_MenuCancel"	"Abbrechen/Zuruck"
+			"Action_MenuUp"	"Nach oben"
+			"Action_MenuDown"	"Nach unten"
+			"Action_MenuLeft"	"Nach links"
+			"Action_MenuRight"	"Nach rechts"
+			"Action_MenuPause"	"Pause"
+			"Action_Fire"	"Rakete abfeuern"
+			"Action_FireAnalog"	"Rakete abfeuern (Trigger)"
+			"Action_AltFire"	"Sekundare Aktion"
+			"Action_AltFireAnalog"	"Sekundare Aktion (Trigger)"
+			"Action_Interact"	"Interagieren"
+			"Action_Approve"	"Genehmigen"
+			"Action_Reject"	"Ablehnen"
+			"Action_Pause"	"Pause"
+			"Action_QuickMenu"	"Schnellmenu"
+			"Action_Advance"	"Dialog fortsetzen"
+			"Action_Skip"	"Uberspringen"
+			"Action_ChoiceUp"	"Auswahl hoch"
+			"Action_ChoiceDown"	"Auswahl runter"
+			"Action_ChoiceSelect"	"Auswahl bestatigen"
+		}
+		"spanish"
+		{
+			"Set_MenuControls"	"Controles del menu"
+			"Set_GameplayControls"	"Controles del juego"
+			"Set_DialogueControls"	"Controles del dialogo"
+			"Action_CursorMove"	"Mover cursor"
+			"Action_CameraMove"	"Mover camara"
+			"Action_MenuSelect"	"Seleccionar"
+			"Action_MenuCancel"	"Cancelar/Volver"
+			"Action_MenuUp"	"Navegar arriba"
+			"Action_MenuDown"	"Navegar abajo"
+			"Action_MenuLeft"	"Navegar izquierda"
+			"Action_MenuRight"	"Navegar derecha"
+			"Action_MenuPause"	"Pausa"
+			"Action_Fire"	"Disparar misil"
+			"Action_FireAnalog"	"Disparar misil (gatillo)"
+			"Action_AltFire"	"Accion secundaria"
+			"Action_AltFireAnalog"	"Accion secundaria (gatillo)"
+			"Action_Interact"	"Interactuar"
+			"Action_Approve"	"Aprobar"
+			"Action_Reject"	"Rechazar"
+			"Action_Pause"	"Pausa"
+			"Action_QuickMenu"	"Menu rapido"
+			"Action_Advance"	"Avanzar dialogo"
+			"Action_Skip"	"Saltar"
+			"Action_ChoiceUp"	"Seleccion arriba"
+			"Action_ChoiceDown"	"Seleccion abajo"
+			"Action_ChoiceSelect"	"Confirmar seleccion"
+		}
+	}
+}
