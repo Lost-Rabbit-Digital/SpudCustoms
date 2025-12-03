@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnmu4k37qncn8"]
+[gd_scene load_steps=5 format=3 uid="uid://cnmu4k37qncn8"]
 
 [ext_resource type="PackedScene" uid="uid://b5cd6sa8qq4vc" path="res://addons/maaacks_game_template/base/scenes/overlaid_menu/menus/pause_menu.tscn" id="1_fd1e4"]
 [ext_resource type="Script" uid="uid://4ieefgkpqugj" path="res://scenes/overlaid_menus/pause_menu.gd" id="2_o57rn"]
 [ext_resource type="PackedScene" uid="uid://65shnbd3xtxu" path="res://scenes/overlaid_menus/mini_options_overlaid_menu.tscn" id="3_hewsk"]
+[ext_resource type="PackedScene" uid="uid://chelpoverlaid001" path="res://scenes/overlaid_menus/help_overlaid_menu.tscn" id="4_helpmenu"]
 
 [node name="PauseMenu" instance=ExtResource("1_fd1e4")]
 auto_translate_mode = 1
 script = ExtResource("2_o57rn")
 options_packed_scene = ExtResource("3_hewsk")
+help_packed_scene = ExtResource("4_helpmenu")
 
 [node name="TitleLabel" parent="MenuPanelContainer/MarginContainer/BoxContainer/TitleMargin" index="0"]
 auto_translate_mode = 1
@@ -22,8 +24,17 @@ text = "shift_summary_restart"
 [node name="OptionsButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="2"]
 text = "main_menu_options"
 
-[node name="MainMenuButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="3"]
+[node name="HelpButton" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="3"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(128, 40)
+layout_mode = 2
+text = "help_menu_button"
+
+[node name="MainMenuButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="4"]
 text = "shift_summary_main_menu"
 
-[node name="ExitButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="4"]
+[node name="ExitButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="5"]
 text = "main_menu_exit"
+
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons/HelpButton" to="." method="_on_help_button_pressed"]

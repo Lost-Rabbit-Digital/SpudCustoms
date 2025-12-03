@@ -144,3 +144,386 @@ Skip,Skip,Přeskočit,Springe,Überspringen,Omitir,Ohita,Passer,Kihagyás,Lewati
 History,History,Dějiny,Historie,Verlauf,Historial,Historia,Histoire,Történelem,Riwayat,Cronologia,Geschiedenis,Historie,Historia,História,Istorie,História,Historia,Geçmiş,Lịch sử
 Return,Return,Návrat,Retur,Zurück,Volver,Palata,Retour,Visszatérés,Kembali,Indietro,Terug,Retur,Powrót,Retornar,Reveni,Návrat,Återvända,Geri Dön,Quay lại
 Restart the game?,Restart the game?,Restartovat hru?,Genstarte spillet?,Spiel neu starten?,¿Reiniciar el juego?,Aloitetaanko peli uudelleen?,Redémarrer le jeu ?,Újraindítja a játékot?,Mulai ulang permainan?,Vuoi riavviare la partita?,Spel opnieuw starten?,Starte spillet på nytt?,Uruchom grę ponownie?,Reiniciar o jogo?,Reporniți jocul?,Reštartovať hru?,Starta om spelet?,Oyunu yeniden başlat?,Khởi động lại trò chơi?
+_HELP MENU,,,,,,,,,,,,,,,,,,,
+help_menu_button,Help,Nápověda,Hjælp,Hilfe,Ayuda,Ohje,Aide,Segítség,Bantuan,Aiuto,Help,Hjelp,Pomoc,Ajuda,Ajutor,Pomoc,Hjälp,Yardım,Trợ giúp
+help_menu_title,How to Play,Jak hrát,Sådan spiller du,Anleitung,Cómo jugar,Miten pelata,Comment jouer,Hogyan játssz,Cara Bermain,Come giocare,Hoe te spelen,Hvordan spille,Jak grać,Como jogar,Cum să joci,Ako hrať,Hur man spelar,Nasıl Oynanır,Cách chơi
+help_tab_basics,Basics,Základy,Grundlæggende,Grundlagen,Básicos,Perusteet,Bases,Alapok,Dasar,Basi,Basis,Grunnleggende,Podstawy,Básico,Bazele,Základy,Grunderna,Temel Bilgiler,Cơ bản
+help_tab_gameplay,Gameplay,Hratelnost,Gameplay,Spielablauf,Jugabilidad,Pelattavuus,Gameplay,Játékmenet,Gameplay,Gameplay,Gameplay,Spillmekanikk,Rozgrywka,Jogabilidade,Gameplay,Hrateľnosť,Spelupplägg,Oynanış,Lối chơi
+help_tab_minigames,Minigames,Minihry,Minispil,Minispiele,Minijuegos,Minipelit,Mini-jeux,Minijátékok,Minigame,Minigiochi,Minigames,Minispill,Minigry,Minijogos,Minijocuri,Minihry,Minispel,Mini Oyunlar,Trò chơi nhỏ
+help_basics_intro,"[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border.","[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border."
+help_basics_gate,"[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth.","[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth."
+help_basics_documents,"[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift.","[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift."
+help_basics_stamping,"[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!","[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!"
+help_basics_runners,"[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points.","[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points."
+help_basics_xray,"[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband.","[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband."
+help_gameplay_quota,"[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!","[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!"
+help_gameplay_strikes,"[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!","[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!"
+help_gameplay_rules,"[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions.","[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions."
+help_gameplay_scoring,"[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!","[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!"
+help_gameplay_difficulty,"[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores.","[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores."
+help_minigames_intro,"[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty.","[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty."
+help_minigames_document_scanner,"[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!","[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!"
+help_minigames_stamp_sorting,"[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!","[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!"
+help_minigames_fingerprint_match,"[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!","[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!"
+help_minigames_code_breaker,"[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!","[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!"
+help_minigames_border_chase,"[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!","[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!"

@@ -34,6 +34,8 @@ var step_timer: Timer = null
 var waiting_for_action: bool = false
 
 # Tutorial definitions with expanded, friendly dialogue
+# Tutorial definitions - text uses placeholders for controller-aware prompts
+# {interact} = Click / Press RT, {drag} = Drag / Use Left Stick
 const TUTORIALS = {
 	"welcome": {
 		"name": "Welcome to Spud Customs",
@@ -55,6 +57,8 @@ const TUTORIALS = {
 			{
 				"text": "[center][b]Opening Your Booth[/b][/center]\n\nSee that lever? Click it to raise the shutter and open your booth for business!\n\n[color=yellow]Click the lever now.[/color]",
 				"target": "LeverButton",
+				"text": "{interact} the lever to open your booth for service",
+				"target": "booth_lever",
 				"highlight": true,
 				"wait_for_action": "lever_pulled",
 				"pause_game": false
@@ -76,6 +80,8 @@ const TUTORIALS = {
 			{
 				"text": "[center][b]Calling the Next Potato[/b][/center]\n\nUse the megaphone to call the next potato from the queue to your booth.\n\n[color=yellow]Click the megaphone![/color]",
 				"target": "Megaphone",
+				"text": "{interact} the megaphone to call the next potato to your booth",
+				"target": "megaphone",
 				"highlight": true,
 				"wait_for_action": "megaphone_clicked",
 				"pause_game": false
@@ -104,6 +110,8 @@ const TUTORIALS = {
 			{
 				"text": "[center][b]Examining the Passport[/b][/center]\n\nClick on the passport to open it and review the potato's information:\n\n- Name and photo\n- Country of origin\n- Potato type and condition\n\nLook for anything suspicious!",
 				"target": "Passport",
+				"text": "{drag} the passport from the booth to the inspection table",
+				"target": "inspection_table",
 				"highlight": true,
 				"wait_for_action": "passport_opened",
 				"pause_game": false
@@ -125,6 +133,8 @@ const TUTORIALS = {
 			{
 				"text": "[center][b]Immigration Rules[/b][/center]\n\nLook at the rules panel on the left side. These rules tell you which potatoes to [color=green]APPROVE[/color] or [color=red]REJECT[/color].\n\nReject any potato that violates the current rules!",
 				"target": "RulesLabel",
+				"text": "{interact} the stamp bar to reveal the approval and rejection stamps",
+				"target": "stamp_bar",
 				"highlight": true,
 				"duration": 5.0,
 				"pause_game": false
@@ -146,6 +156,8 @@ const TUTORIALS = {
 			{
 				"text": "[center][b]The Stamp Bar[/b][/center]\n\nSee the stamp bar at the top? Click the handle to reveal your approval and rejection stamps.\n\n[color=yellow]Click to open the stamp bar.[/color]",
 				"target": "StampBarController",
+				"text": "{drag} the document under the green stamp to approve, or red stamp to reject",
+				"target": "stamp_area",
 				"highlight": true,
 				"wait_for_action": "stamp_bar_opened",
 				"pause_game": false
@@ -153,6 +165,8 @@ const TUTORIALS = {
 			{
 				"text": "[center][b]Positioning for Stamping[/b][/center]\n\nDrag the passport under the stamps. You'll see a guide showing where to place it.\n\n[color=green]Green stamp[/color] = APPROVE\n[color=red]Red stamp[/color] = REJECT\n\n[color=yellow]Position the passport under a stamp.[/color]",
 				"target": "Passport",
+				"text": "{interact} the stamp to mark the document",
+				"target": "stamp",
 				"highlight": true,
 				"wait_for_action": "document_under_stamp",
 				"pause_game": false
@@ -167,6 +181,8 @@ const TUTORIALS = {
 			{
 				"text": "[center][b]Return the Documents[/b][/center]\n\nNow drag the stamped passport back to the potato to complete their processing.\n\n[color=yellow]Return the passport to the potato.[/color]",
 				"target": "Passport",
+				"text": "{fire} on running potatoes to launch missiles and stop them",
+				"target": "runner_potato",
 				"highlight": true,
 				"wait_for_action": "document_returned",
 				"pause_game": false
@@ -205,6 +221,10 @@ const TUTORIALS = {
 				"highlight": false,
 				"duration": 4.0,
 				"pause_game": false
+				"text": "{interact} the X-ray button to scan potatoes for hidden items",
+				"target": "xray_button",
+				"highlight": true,
+				"wait_for_action": "xray_activated"
 			},
 			{
 				"text": "[center][b]Stopping Runners[/b][/center]\n\n[color=yellow]Click on running potatoes[/color] to launch a missile and stop them!\n\nBut be careful - don't shoot potatoes you've already approved, or you'll get a strike!",
@@ -235,6 +255,62 @@ func _ready():
 
 	# Load saved progress
 	load_tutorial_progress()
+	_connect_input_signals()
+
+
+## Connect to input mode change signals to update tutorial text
+func _connect_input_signals() -> void:
+	if ControllerManager:
+		if not ControllerManager.input_mode_changed.is_connected(_on_input_mode_changed):
+			ControllerManager.input_mode_changed.connect(_on_input_mode_changed)
+
+
+func _on_input_mode_changed(_mode: int) -> void:
+	# Refresh tutorial text if currently showing
+	if current_tutorial != "" and tutorial_label:
+		var tutorial = TUTORIALS[current_tutorial]
+		if current_step < tutorial["steps"].size():
+			var step = tutorial["steps"][current_step]
+			tutorial_label.text = _format_tutorial_text(step["text"])
+
+
+## Format tutorial text with controller-aware prompts
+## Replaces {interact}, {drag}, {fire} with appropriate text
+func _format_tutorial_text(text: String) -> String:
+	var result = text
+	var is_controller = ControllerManager and ControllerManager.is_controller_mode()
+
+	# Get appropriate prompt text
+	if is_controller:
+		# Controller prompts - use button names
+		var interact_text = "Press " + _get_controller_button_text("primary_interaction")
+		var drag_text = "Use Left Stick to move cursor and " + _get_controller_button_text("controller_accept") + " to grab"
+		var fire_text = "Press " + _get_controller_button_text("primary_interaction")
+
+		result = result.replace("{interact}", interact_text)
+		result = result.replace("{drag}", drag_text)
+		result = result.replace("{fire}", fire_text)
+	else:
+		# Mouse/keyboard prompts
+		result = result.replace("{interact}", "Click")
+		result = result.replace("{drag}", "Drag")
+		result = result.replace("{fire}", "Click")
+
+	return result
+
+
+## Get button text for a controller action
+func _get_controller_button_text(action: String) -> String:
+	if InputGlyphManager:
+		var button_name = InputGlyphManager.get_button_for_action(action)
+		if not button_name.is_empty():
+			return "[" + InputGlyphManager.get_button_text(button_name) + "]"
+	# Fallback
+	match action:
+		"primary_interaction": return "[RT]"
+		"controller_accept": return "[A]"
+		"controller_cancel": return "[B]"
+		_: return "[" + action + "]"
 
 
 func _process(_delta):
@@ -419,6 +495,23 @@ func _create_tutorial_ui():
 	bottom_row.add_child(continue_hint_label)
 
 	# Skip button
+		create_highlight_area(step["target"])
+
+	# Create tutorial text label
+	tutorial_label = Label.new()
+	tutorial_label.text = _format_tutorial_text(step["text"])
+	tutorial_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	tutorial_label.add_theme_font_size_override("font_size", 24)
+	tutorial_label.add_theme_color_override("font_color", Color.WHITE)
+
+	# Position label at top of screen
+	tutorial_label.position = Vector2(
+		get_viewport().get_visible_rect().size.x / 2 - 200, 50
+	)
+	tutorial_label.custom_minimum_size = Vector2(400, 80)
+	tutorial_overlay.add_child(tutorial_label)
+
+	# Add skip button if allowed
 	if can_skip_tutorials:
 		skip_button = Button.new()
 		skip_button.text = "Skip Tutorial"
