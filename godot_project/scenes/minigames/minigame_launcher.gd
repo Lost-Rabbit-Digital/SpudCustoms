@@ -36,8 +36,27 @@ var _active_minigame: MinigameContainer = null
 ## Queue of minigames to launch (for chaining)
 var _minigame_queue: Array[Dictionary] = []
 
+## Audio player for minigame sounds
+var _audio_player: AudioStreamPlayer = null
+
+## Preloaded minigame sounds
+var _launch_sounds = [
+	preload("res://assets/audio/ui_feedback/slide whistle 1.wav"),
+	preload("res://assets/audio/ui_feedback/motion_straight_air.wav"),
+]
+var _complete_sounds = [
+	preload("res://assets/audio/ui_feedback/Task Complete Ensemble 001.wav"),
+	preload("res://assets/audio/ui_feedback/Task Complete Ensemble 002.wav"),
+]
+var _skip_sound = preload("res://assets/audio/ui_feedback/zipper 1.wav")
+
 
 func _ready() -> void:
+	# Setup audio player
+	_audio_player = AudioStreamPlayer.new()
+	_audio_player.bus = "SFX"
+	_audio_player.volume_db = -6.0
+	add_child(_audio_player)
 	# Connect to EventBus
 	if EventBus:
 		EventBus.minigame_launch_requested.connect(_on_minigame_launch_requested)
@@ -65,6 +84,9 @@ func launch(minigame_type: String, config: Dictionary = {}) -> bool:
 
 	# Add to scene tree
 	get_tree().root.add_child(_active_minigame)
+
+	# Play launch sound
+	_play_launch_sound()
 
 	# Start the minigame
 	_active_minigame.start(config)
@@ -128,6 +150,9 @@ func _on_minigame_launch_requested(minigame_type: String, config: Dictionary) ->
 func _on_minigame_completed(result: Dictionary) -> void:
 	print("[MinigameLauncher] Minigame completed: ", result)
 
+	# Play completion sound
+	_play_complete_sound()
+
 	# Apply score bonus if any
 	if result.get("score_bonus", 0) > 0 and EventBus:
 		EventBus.minigame_bonus_requested.emit(
@@ -141,6 +166,10 @@ func _on_minigame_completed(result: Dictionary) -> void:
 
 func _on_minigame_skipped() -> void:
 	print("[MinigameLauncher] Minigame skipped")
+
+	# Play skip sound
+	_play_skip_sound()
+
 	_cleanup_active_minigame()
 	_try_launch_queued()
 
@@ -190,3 +219,33 @@ func launch_random_from(pool: Array[String], config: Dictionary = {}) -> bool:
 func cancel_active() -> void:
 	if _active_minigame:
 		_active_minigame._on_skip_pressed()
+
+
+## Play a sound when launching a minigame
+func _play_launch_sound() -> void:
+	if not _audio_player:
+		return
+	_audio_player.stream = _launch_sounds[randi() % _launch_sounds.size()]
+	_audio_player.volume_db = -8.0
+	_audio_player.pitch_scale = randf_range(0.95, 1.05)
+	_audio_player.play()
+
+
+## Play a sound when completing a minigame
+func _play_complete_sound() -> void:
+	if not _audio_player:
+		return
+	_audio_player.stream = _complete_sounds[randi() % _complete_sounds.size()]
+	_audio_player.volume_db = -6.0
+	_audio_player.pitch_scale = randf_range(0.95, 1.05)
+	_audio_player.play()
+
+
+## Play a sound when skipping a minigame
+func _play_skip_sound() -> void:
+	if not _audio_player:
+		return
+	_audio_player.stream = _skip_sound
+	_audio_player.volume_db = -10.0
+	_audio_player.pitch_scale = randf_range(0.9, 1.0)
+	_audio_player.play()
