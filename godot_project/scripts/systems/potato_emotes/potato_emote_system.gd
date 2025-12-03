@@ -39,9 +39,9 @@ enum EmoteType {
 @export_range(1.0, 30.0) var maximum_emote_delay: float = 25.0
 @export_category("Audio")
 ## Whether to play audio when displaying an emote
-@export var play_sounds: bool = false  # Keep this shit off, it's so annoying
-## [Decibels] How loud the audio for each emote is
-@export_range(-100.0, 100.0) var emote_volume: float = -24.0
+@export var play_sounds: bool = true  # Re-enabled with much quieter volume
+## [Decibels] How loud the audio for each emote is - very subtle background sounds
+@export_range(-100.0, 100.0) var emote_volume: float = -36.0
 
 # TODO: The blank and dots have been commented out until the show_thinking_dots() function is
 # properly implemented, these emotes are also removed from the "thinking" emote category

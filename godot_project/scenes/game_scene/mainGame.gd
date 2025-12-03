@@ -2276,6 +2276,9 @@ func _on_intro_dialogue_finished():
 	# Start the actual gameplay
 	spawn_timer.start()
 
+	# Play shift start fanfare sound
+	_play_shift_start_sound()
+
 	# Update UI
 	update_quota_display()
 	update_strikes_display()
@@ -2350,12 +2353,8 @@ func _on_game_over():
 	flash_tween.tween_property(flash_rect, "color", Color(1, 0, 0, 0.3), 0.2)
 	flash_tween.tween_property(flash_rect, "color", Color(1, 0, 0, 0), 0.3)
 
-	# Play a failure sound if available
-	if $SystemManagers/AudioManager/SFXPool:
-		var failure_sound = load("res://assets/audio/mechanical/button pressed 1.wav")
-		if failure_sound:
-			$SystemManagers/AudioManager/SFXPool.stream = failure_sound
-			$SystemManagers/AudioManager/SFXPool.play()
+	# Play a dramatic failure sound
+	_play_game_over_sound()
 
 	# Small delay for dramatic effect
 	await get_tree().create_timer(0.5).timeout
@@ -2631,3 +2630,42 @@ func show_demo_limit_dialog():
 	demo_panel.modulate.a = 0
 	var tween = create_tween()
 	tween.tween_property(demo_panel, "modulate:a", 1.0, 0.5)
+
+
+## Plays a fanfare sound when the shift starts
+func _play_shift_start_sound() -> void:
+	if not $SystemManagers/AudioManager/SFXPool:
+		return
+
+	# Use a subtle discovery/ready sound - not too loud or intrusive
+	var start_sounds = [
+		preload("res://assets/audio/ui_feedback/glockenspiel magic 1.wav"),
+		preload("res://assets/audio/ui_feedback/glockenspiel magic 2.wav"),
+		preload("res://assets/audio/ui_feedback/glockenspiel magic 3.wav"),
+	]
+
+	var sfx_player = $SystemManagers/AudioManager/SFXPool
+	sfx_player.stream = start_sounds[randi() % start_sounds.size()]
+	sfx_player.volume_db = -8.0  # Subtle but noticeable
+	sfx_player.pitch_scale = randf_range(0.95, 1.05)
+	sfx_player.play()
+
+
+## Plays a dramatic failure sound when game over occurs
+func _play_game_over_sound() -> void:
+	if not $SystemManagers/AudioManager/SFXPool:
+		return
+
+	# Use a dramatic fail ensemble for impact
+	var fail_sounds = [
+		preload("res://assets/audio/ui_feedback/Task Fail Ensemble 001.wav"),
+		preload("res://assets/audio/ui_feedback/Task Fail Ensemble 002.wav"),
+		preload("res://assets/audio/ui_feedback/Task Fail Ensemble 003.wav"),
+		preload("res://assets/audio/ui_feedback/Task Fail Ensemble 004.wav"),
+	]
+
+	var sfx_player = $SystemManagers/AudioManager/SFXPool
+	sfx_player.stream = fail_sounds[randi() % fail_sounds.size()]
+	sfx_player.volume_db = -4.0  # More prominent for dramatic effect
+	sfx_player.pitch_scale = randf_range(0.9, 1.0)  # Slightly lower pitch for drama
+	sfx_player.play()
