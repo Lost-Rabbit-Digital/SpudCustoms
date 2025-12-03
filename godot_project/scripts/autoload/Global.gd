@@ -434,6 +434,11 @@ func capture_narrative_choices():
 	if not Dialogic:
 		return
 
+	# Check if Dialogic VAR subsystem is available (may not be ready during early startup)
+	if not Dialogic.has_subsystem("VAR"):
+		print("Dialogic VAR subsystem not ready yet, skipping narrative choice capture")
+		return
+
 	# Get all Dialogic variables related to story choices
 	# IMPORTANT: This list MUST match NarrativeManager.choice_variables exactly!
 	var important_vars = [
@@ -491,6 +496,11 @@ func _restore_narrative_choices_deferred():
 func restore_narrative_choices():
 	"""Restore saved narrative choices back to Dialogic variables"""
 	if not Dialogic or narrative_choices.is_empty():
+		return
+
+	# Check if Dialogic VAR subsystem is available (may not be ready during early startup)
+	if not Dialogic.has_subsystem("VAR"):
+		print("Dialogic VAR subsystem not ready yet, skipping narrative choice restoration")
 		return
 
 	for var_name in narrative_choices.keys():
