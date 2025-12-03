@@ -216,27 +216,6 @@ const TUTORIALS = {
 		],
 		"shift_trigger": 2,
 		"priority": 1
-	},
-	"xray_scanner": {
-		"name": "X-Ray Scanner",
-		"steps": [
-			{
-				"text": "[center][b]X-Ray Scanner Unlocked![/b][/center]\n\nYou now have access to an X-Ray scanner! Some potatoes may be hiding contraband inside them.",
-				"target": null,
-				"highlight": false,
-				"duration": 3.0,
-				"pause_game": false
-			},
-			{
-				"text": "[center][b]Using the Scanner[/b][/center]\n\nClick the X-Ray button to scan the current potato. Look for hidden items or resistance messages!\n\nContraband = automatic rejection!",
-				"target": "XRayButton",
-				"highlight": true,
-				"wait_for_action": "xray_activated",
-				"pause_game": false
-			}
-		],
-		"shift_trigger": 3,
-		"priority": 1
 	}
 }
 

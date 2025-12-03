@@ -929,9 +929,9 @@ func test_stamp_usage_tutorial_structure() -> void:
 	assert_eq(tutorial["steps"].size(), 5, "Stamp usage should have 5 steps")
 
 
-func test_xray_scanner_tutorial_structure() -> void:
-	var tutorial = tutorial_manager.TUTORIALS["xray_scanner"]
+func test_rules_checking_tutorial_structure() -> void:
+	var tutorial = tutorial_manager.TUTORIALS["rules_checking"]
 
-	assert_eq(tutorial["name"], "X-Ray Scanning", "X-ray scanner should have correct name")
-	assert_eq(tutorial["shift_trigger"], 3, "X-ray scanner should trigger on shift 3")
-	assert_gt(tutorial["steps"].size(), 0, "X-ray scanner should have steps")
+	assert_eq(tutorial["name"], "Immigration Rules", "Rules checking should have correct name")
+	assert_eq(tutorial["shift_trigger"], 2, "Rules checking should trigger on shift 2")
+	assert_gt(tutorial["steps"].size(), 0, "Rules checking should have steps")
