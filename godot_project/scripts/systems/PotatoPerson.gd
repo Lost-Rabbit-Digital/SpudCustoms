@@ -51,8 +51,13 @@ var current_potato_brain_state: int = PotatoBrainState.IDLE
 var emote_system: PotatoEmoteSystem
 @onready var emote_sprite: AnimatedSprite2D = %PotatoEmote
 
+## Name label for Twitch viewer names
+var name_label: Label = null
+
 
 func _ready() -> void:
+	# Create name label for Twitch viewer names
+	_setup_name_label()
 	var NodeHighlightShader = preload(
 		"res://scripts/shaders/node_highlight/node_highlight.gdshader"
 	)
@@ -194,6 +199,7 @@ func set_state(new_state: TaterState):
 func update_potato(new_potato_info: Dictionary):
 	potato_info = new_potato_info
 	update_appearance()
+	update_name_label()
 
 
 func update_appearance():
@@ -230,6 +236,9 @@ func update_appearance():
 	if potato_info.has("race") and potato_info.race in textures:
 		# Apply the texture to the child sprite
 		%PotatoSprite.texture = textures[potato_info.race]
+
+	# Update name label visibility based on state
+	update_name_label()
 
 
 func move_toward(target: Vector2, speed: float):
@@ -313,6 +322,42 @@ func leave_path():
 
 func get_potato_info() -> Dictionary:
 	return potato_info
+
+
+func _setup_name_label():
+	"""Create and setup the name label for Twitch viewer names"""
+	name_label = Label.new()
+	name_label.name = "NameLabel"
+	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	name_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	name_label.position = Vector2(-30, -28)  # Position above the potato
+	name_label.size = Vector2(60, 16)
+	name_label.add_theme_font_size_override("font_size", 8)
+	name_label.add_theme_color_override("font_color", Color.WHITE)
+	name_label.add_theme_color_override("font_outline_color", Color.BLACK)
+	name_label.add_theme_constant_override("outline_size", 2)
+	name_label.z_index = 100  # Above everything
+	name_label.visible = false
+	add_child(name_label)
+
+
+func update_name_label():
+	"""Update the name label visibility and text based on Twitch integration"""
+	if not name_label:
+		return
+
+	# Only show name label if Twitch integration is enabled
+	var show_label = false
+	if TwitchIntegrationManager and TwitchIntegrationManager.is_enabled():
+		if potato_info.has("name") and not potato_info.name.is_empty():
+			# Check if this is a Twitch viewer name (no space = viewer name)
+			var name_str = potato_info.name as String
+			if " " not in name_str or name_str in TwitchIntegrationManager.get_all_viewers():
+				name_label.text = name_str
+				show_label = true
+
+	# Only show when in queue (not in office)
+	name_label.visible = show_label and current_state == TaterState.QUEUED
 
 
 # Helper function to fade in the potato

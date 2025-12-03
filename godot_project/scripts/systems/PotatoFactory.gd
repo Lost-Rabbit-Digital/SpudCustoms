@@ -70,6 +70,13 @@ static func generate_random_potato_info() -> Dictionary:
 
 # Helper functions from mainGame.gd
 static func get_random_name() -> String:
+	# Check if Twitch integration is enabled and has viewer names
+	if TwitchIntegrationManager and TwitchIntegrationManager.is_enabled():
+		var twitch_name = TwitchIntegrationManager.get_next_viewer_name()
+		if not twitch_name.is_empty():
+			return twitch_name
+
+	# Fallback to random potato names
 	var first_names = [
 		"Spud",
 		"Tater",
