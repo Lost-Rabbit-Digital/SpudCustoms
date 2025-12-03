@@ -17,7 +17,7 @@ extends VBoxContainer
 # Configuration
 const MIN_CHARACTERS = 10
 const MAX_CHARACTERS = 2000
-const DISCORD_WEBHOOK_URL = ""  # TODO: Add your Discord webhook URL here
+const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1445821792294928597/KUvG4EGPNePAGs2CqQOwvlSoWjrlgcwsGkpwXvOSX4nTZbWayYLxfsR8bZaOp02n0EC1"
 
 # System info
 var game_version: String = ""
@@ -128,34 +128,45 @@ func _on_submit_button_pressed():
 
 func _send_feedback_to_discord(feedback_text: String):
 	"""Send feedback to Discord webhook"""
-	# Format playtime
+	# Format playtime (similar to Starbrew format: Xh Xm Xs or Xm Xs)
 	var hours = int(playtime / 3600)
 	var minutes = int((playtime - hours * 3600) / 60)
-	var playtime_formatted = "%dh %dm" % [hours, minutes]
+	var seconds = int(playtime) % 60
+	var playtime_formatted: String
+	if hours > 0:
+		playtime_formatted = "%dh %02dm %02ds" % [hours, minutes, seconds]
+	else:
+		playtime_formatted = "%dm %ds" % [minutes, seconds]
 
-	# Build the Discord embed message
+	# Format Steam status (similar to Starbrew: "Active (ID: XXXXX)" or "Disabled")
+	var steam_status: String
+	if steam_user_id == "Steam Disabled":
+		steam_status = "Disabled"
+	else:
+		steam_status = "Active (ID: %s)" % steam_user_id
+
+	# Get current timestamp formatted
+	var datetime = Time.get_datetime_dict_from_system()
+	var submitted_at = "%d/%d/%d %d:%02d %s" % [
+		datetime.month,
+		datetime.day,
+		datetime.year,
+		datetime.hour % 12 if datetime.hour % 12 != 0 else 12,
+		datetime.minute,
+		"PM" if datetime.hour >= 12 else "AM"
+	]
+
+	# Build the Discord embed message (matching Starbrew format)
 	var embed = {
-		"title": "New Feedback from Spud Customs",
-		"description": feedback_text,
-		"color": 0x5865F2,  # Discord blue color
-		"fields": [
-			{
-				"name": "Version",
-				"value": game_version,
-				"inline": true
-			},
-			{
-				"name": "Playtime",
-				"value": playtime_formatted,
-				"inline": true
-			},
-			{
-				"name": "Steam",
-				"value": steam_user_id,
-				"inline": true
-			}
+		"title": "New Feedback Received",
+		"description": "%s\n\n**System Information**\n**Version:** %s\n**Playtime:** %s\n**Steam:** %s\n\n**Submitted at:** • %s" % [
+			feedback_text,
+			game_version,
+			playtime_formatted,
+			steam_status,
+			submitted_at
 		],
-		"timestamp": Time.get_datetime_string_from_system(true)
+		"color": 0xD4A574  # Brown/potato color for Spud Customs
 	}
 
 	# Create the full webhook payload
