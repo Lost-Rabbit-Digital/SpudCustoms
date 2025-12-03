@@ -6,7 +6,6 @@ var level_select_scene
 var animation_state_machine: AnimationNodeStateMachinePlayback
 var confirmation_dialog: ConfirmationDialog
 var feedback_menu: Control
-var feedback_button: Button
 @onready var version_label = $VersionMargin/VersionContainer/VersionLabel
 @onready var bgm_player = $BackgroundMusicPlayer
 
@@ -15,15 +14,12 @@ func _ready():
 	load_tracks()
 	# Play with original pitch by default
 	next_track_with_random_pitch()
-	#play_with_pitch_variation("original")
 	super._ready()
 	_setup_level_select()
 	animation_state_machine = $MenuAnimationTree.get("parameters/playback")
 	_setup_confirmation_dialog()
 	_setup_feedback_menu()
-	# Check for demo version
-	# Check for demo version
-	# REFACTORED: Use GameStateManager
+	# Check for demo version - hide score attack in demo builds
 	if GameStateManager and GameStateManager.get_build_type() == "Demo Release":
 		# Hide score attack button
 		%EndlessButton.visible = false
@@ -50,7 +46,6 @@ func _on_new_game_confirmed():
 
 func _on_endless_button_pressed():
 	await JuicyButtons.setup_button(%EndlessButton)
-	print("Sending call to update game mode in GameStateManager")
 	# REFACTORED: Use GameStateManager and EventBus
 	if GameStateManager:
 		GameStateManager.switch_game_mode("score_attack")
@@ -74,7 +69,7 @@ func _setup_confirmation_dialog():
 
 
 func _setup_feedback_menu():
-	"""Setup the feedback menu and button"""
+	"""Setup the feedback menu"""
 	# Load the feedback menu scene
 	var feedback_scene = load("res://scenes/menus/main_menu/feedback_menu.tscn")
 	if feedback_scene:
@@ -86,25 +81,13 @@ func _setup_feedback_menu():
 		feedback_menu.back_pressed.connect(_on_feedback_back_pressed)
 		feedback_menu.feedback_submitted.connect(_on_feedback_submitted)
 
-	# Create the feedback button and add it to the menu
-	feedback_button = Button.new()
-	feedback_button.text = "Feedback"
-	feedback_button.custom_minimum_size = Vector2(128, 40)
-	feedback_button.pressed.connect(_on_feedback_button_pressed)
-
-	# Add button to the menu buttons container (after Credits, before Exit)
-	var menu_buttons = $MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer
-	if menu_buttons:
-		# Insert before the exit button (last button)
-		menu_buttons.add_child(feedback_button)
-		menu_buttons.move_child(feedback_button, menu_buttons.get_child_count() - 2)
-
 
 func _on_feedback_button_pressed():
 	"""Show the feedback menu"""
+	await JuicyButtons.setup_button(%FeedbackButton2)
 	if feedback_menu:
 		feedback_menu.show()
-		# Optionally hide menu buttons while showing feedback
+		# Hide menu buttons while showing feedback
 		$MenuContainer/MenuButtonsMargin.hide()
 
 
@@ -191,6 +174,65 @@ func _setup_game_buttons():
 			%LevelSelectButton.show()
 
 
+func _setup_keyboard_navigation():
+	# Override for two-row button layout
+	var top_row = get_node_or_null("MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/TopRowContainer")
+	var bottom_row = get_node_or_null("%BottomRowContainer")
+
+	if not top_row or not bottom_row:
+		super._setup_keyboard_navigation()
+		return
+
+	# Get visible buttons from each row
+	var top_buttons: Array[Button] = []
+	var bottom_buttons: Array[Button] = []
+
+	for child in top_row.get_children():
+		if child is Button and child.visible:
+			top_buttons.append(child)
+			child.focus_mode = Control.FOCUS_ALL
+
+	for child in bottom_row.get_children():
+		if child is Button and child.visible:
+			bottom_buttons.append(child)
+			child.focus_mode = Control.FOCUS_ALL
+
+	# Setup navigation for top row
+	for i in top_buttons.size():
+		var button = top_buttons[i]
+		# Left/Right within row (wrap around)
+		var prev_idx = i - 1 if i > 0 else top_buttons.size() - 1
+		var next_idx = i + 1 if i < top_buttons.size() - 1 else 0
+		button.focus_neighbor_left = top_buttons[prev_idx].get_path()
+		button.focus_neighbor_right = top_buttons[next_idx].get_path()
+		# Up wraps to bottom row, Down goes to bottom row
+		var corresponding_bottom = mini(i, bottom_buttons.size() - 1)
+		button.focus_neighbor_top = bottom_buttons[corresponding_bottom].get_path()
+		button.focus_neighbor_bottom = bottom_buttons[corresponding_bottom].get_path()
+
+	# Setup navigation for bottom row
+	for i in bottom_buttons.size():
+		var button = bottom_buttons[i]
+		# Left/Right within row (wrap around)
+		var prev_idx = i - 1 if i > 0 else bottom_buttons.size() - 1
+		var next_idx = i + 1 if i < bottom_buttons.size() - 1 else 0
+		button.focus_neighbor_left = bottom_buttons[prev_idx].get_path()
+		button.focus_neighbor_right = bottom_buttons[next_idx].get_path()
+		# Up goes to top row, Down wraps to top row
+		var corresponding_top = mini(i, top_buttons.size() - 1)
+		button.focus_neighbor_top = top_buttons[corresponding_top].get_path()
+		button.focus_neighbor_bottom = top_buttons[corresponding_top].get_path()
+
+	# Set initial focus to first visible button
+	if top_buttons.size() > 0:
+		_set_initial_focus.call_deferred(top_buttons[0])
+
+
+func _set_initial_focus(button: Button):
+	if get_viewport().gui_get_focus_owner() == null:
+		button.grab_focus()
+
+
 func _on_continue_game_button_pressed():
 	# REFACTORED: Use GameStateManager
 	if GameStateManager:
@@ -230,7 +272,6 @@ func play_with_pitch_variation(interval_name: String = "original"):
 	if !bgm_player.playing:
 		play_current_track()
 
-	print("Music initiated: Interval [", interval_name.to_upper(), "] / Pitch [", pitch, "]")
 
 
 func play_random_pitch_variation():
@@ -254,6 +295,3 @@ func play_current_track():
 		if track:
 			bgm_player.stream = track
 			bgm_player.play()
-			print("Now playing: ", bgm_tracks[current_track_index])
-		else:
-			print("Failed to load track: ", bgm_tracks[current_track_index])
