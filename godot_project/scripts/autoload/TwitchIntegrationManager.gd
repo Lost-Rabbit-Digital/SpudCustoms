@@ -78,7 +78,7 @@ func _process(delta):
 					connection_status_changed.emit(false)
 					var code = _websocket.get_close_code()
 					var reason = _websocket.get_close_reason()
-					DebugLogger.log("Twitch IRC disconnected: %d - %s" % [code, reason])
+					LogManager.write_info("Twitch IRC disconnected: %d - %s" % [code, reason])
 
 				_websocket = null
 				if _should_reconnect:
@@ -117,19 +117,19 @@ func _save_settings():
 func connect_to_channel() -> void:
 	"""Connect to Twitch IRC for the configured channel"""
 	if channel_name.is_empty():
-		DebugLogger.warning("TwitchIntegrationManager: No channel name set")
+		LogManager.write_warning("TwitchIntegrationManager: No channel name set")
 		return
 
 	if _websocket != null:
 		disconnect_from_channel()
 
-	DebugLogger.log("TwitchIntegrationManager: Connecting to Twitch IRC...")
+	LogManager.write_info("TwitchIntegrationManager: Connecting to Twitch IRC...")
 
 	_websocket = WebSocketPeer.new()
 	var err = _websocket.connect_to_url(TWITCH_IRC_URL)
 
 	if err != OK:
-		DebugLogger.error("TwitchIntegrationManager: Failed to connect to Twitch IRC: %d" % err)
+		LogManager.write_error("TwitchIntegrationManager: Failed to connect to Twitch IRC: %d" % err)
 		_websocket = null
 		_should_reconnect = true
 		_reconnect_timer = _reconnect_delay
@@ -157,7 +157,7 @@ func _authenticate():
 
 	# Join the channel
 	_send_raw("JOIN #%s" % channel_name.to_lower())
-	DebugLogger.log("TwitchIntegrationManager: Joined #%s" % channel_name)
+	LogManager.write_info("TwitchIntegrationManager: Joined #%s" % channel_name)
 
 
 func _send_raw(message: String):
