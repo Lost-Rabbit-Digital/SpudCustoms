@@ -1792,7 +1792,7 @@ func process_decision(allowed):
 		EventBus.show_alert(alert_text, false)
 		correct_decision_streak = 0
 		point_multiplier = 1.0
-		EventBus.request_strike_add(1, "incorrect_decision", {"potato_info": current_potato_info})
+		EventBus.request_strike_add("incorrect_decision", {"potato_info": current_potato_info})
 
 		# ENHANCEMENT: Flash screen red for wrong decision
 		_flash_screen_color(Color.RED, 0.3)
