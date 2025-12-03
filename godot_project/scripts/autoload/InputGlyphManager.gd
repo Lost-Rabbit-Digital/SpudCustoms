@@ -433,6 +433,53 @@ func get_pause_prompt() -> String:
 	return "[" + button + "]"
 
 # ============================================================================
+# UI HELPER METHODS
+# ============================================================================
+
+## Get navigation hint text for menus (e.g., "A Select   B Back")
+func get_menu_navigation_hint() -> String:
+	if ControllerManager and ControllerManager.is_keyboard_mouse_mode():
+		return ""  # Don't show hints in keyboard mode - mouse is intuitive
+
+	var select_text = get_button_text(BUTTON_A) + " Select"
+	var back_text = get_button_text(BUTTON_B) + " Back"
+	return select_text + "     " + back_text
+
+
+## Get dialog advancement hint
+func get_dialog_advance_hint() -> String:
+	if ControllerManager and ControllerManager.is_keyboard_mouse_mode():
+		return "[Space] or [Click] to continue"
+	return "[" + get_button_text(BUTTON_A) + "] to continue"
+
+
+## Get skip hint for cutscenes/dialogs
+func get_skip_hint() -> String:
+	if ControllerManager and ControllerManager.is_keyboard_mouse_mode():
+		return "[Esc] to skip"
+	return "[" + get_button_text(BUTTON_START) + "] to skip"
+
+
+## Check if currently in controller mode
+func is_controller_mode() -> bool:
+	return ControllerManager and ControllerManager.is_controller_mode()
+
+
+## Get interact prompt based on input mode
+func get_interact_prompt() -> String:
+	if ControllerManager and ControllerManager.is_keyboard_mouse_mode():
+		return "Click"
+	return "Press " + get_fire_prompt()
+
+
+## Get drag prompt based on input mode
+func get_drag_prompt() -> String:
+	if ControllerManager and ControllerManager.is_keyboard_mouse_mode():
+		return "Drag"
+	return "Use stick and " + get_confirm_prompt() + " to grab"
+
+
+# ============================================================================
 # DEBUG
 # ============================================================================
 
