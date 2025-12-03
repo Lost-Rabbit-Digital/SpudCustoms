@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2hwmqvp5r8jn"]
+
+[ext_resource type="Script" path="res://scripts/ui/social_buttons.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bwpg7ia7hiyk0" path="res://assets/user_interface/social_icons/16x16/Discord.png" id="2_discord"]
+[ext_resource type="Texture2D" uid="uid://bv47rc4bxekxy" path="res://assets/user_interface/social_icons/16x16_outline/Discord.png" id="3_discord_hover"]
+[ext_resource type="Texture2D" uid="uid://dpp44t5xrsvhm" path="res://assets/user_interface/social_icons/16x16/Steam.png" id="4_steam"]
+[ext_resource type="Texture2D" uid="uid://dd4s43oi4ckbg" path="res://assets/user_interface/social_icons/16x16_outline/Steam.png" id="5_steam_hover"]
+
+[node name="SocialButtons" type="HBoxContainer"]
+custom_minimum_size = Vector2(64, 32)
+script = ExtResource("1_script")
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="DiscordButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+tooltip_text = "Join our Discord!"
+texture_normal = ExtResource("2_discord")
+texture_hover = ExtResource("3_discord_hover")
+stretch_mode = 0
+
+[node name="SteamButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+tooltip_text = "Visit us on Steam"
+texture_normal = ExtResource("4_steam")
+texture_hover = ExtResource("5_steam_hover")
+stretch_mode = 0
+
+[connection signal="pressed" from="DiscordButton" to="." method="_on_discord_button_pressed"]
+[connection signal="pressed" from="SteamButton" to="." method="_on_steam_button_pressed"]
