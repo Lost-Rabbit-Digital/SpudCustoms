@@ -378,7 +378,6 @@ func track_language_changed(from_lang: String, to_lang: String) -> void:
 
 func track_shift_started(shift_number: int) -> void:
 	var difficulty = "unknown"
-	var difficulty = "unknown"
 	if GameStateManager:
 		difficulty = GameStateManager.get_difficulty()
 
@@ -464,7 +463,6 @@ func track_incorrect_decision(potato_info: Dictionary, violated_rules: Array) ->
 	"""
 	session_metrics.strikes_received += 1
 
-	var cumulative_strikes = 0
 	var cumulative_strikes = 0
 	if GameStateManager:
 		cumulative_strikes = GameStateManager.get_strikes()

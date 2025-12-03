@@ -536,8 +536,6 @@ func end_shift(success: bool = true):
 	if success and Global.quota_met >= Global.quota_target:
 		# Add survival bonus
 		var survival_bonus = 500
-		# Add survival bonus
-		var survival_bonus = 500
 		# REFACTORED: Use EventBus for alerts
 		EventBus.show_alert(tr("alert_quota_met").format({"bonus": str(survival_bonus)}), true)
 		# REFACTORED: Use EventBus for survival bonus
