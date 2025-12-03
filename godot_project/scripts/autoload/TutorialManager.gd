@@ -17,13 +17,14 @@ var current_step: int = 0
 var tutorial_enabled: bool = true
 var can_skip_tutorials: bool = false
 
-# Tutorial definitions
+# Tutorial definitions - text uses placeholders for controller-aware prompts
+# {interact} = Click / Press RT, {drag} = Drag / Use Left Stick
 const TUTORIALS = {
 	"gate_control": {
 		"name": "Opening Your Booth",
 		"steps": [
 			{
-				"text": "Click the lever to open your booth for service",
+				"text": "{interact} the lever to open your booth for service",
 				"target": "booth_lever",
 				"highlight": true,
 				"wait_for_action": "lever_pulled"
@@ -35,7 +36,7 @@ const TUTORIALS = {
 		"name": "Calling Potatoes",
 		"steps": [
 			{
-				"text": "Click the megaphone to call the next potato to your booth",
+				"text": "{interact} the megaphone to call the next potato to your booth",
 				"target": "megaphone",
 				"highlight": true,
 				"wait_for_action": "megaphone_clicked"
@@ -47,7 +48,7 @@ const TUTORIALS = {
 		"name": "Inspecting Documents",
 		"steps": [
 			{
-				"text": "Drag the passport from the booth to the inspection table",
+				"text": "{drag} the passport from the booth to the inspection table",
 				"target": "inspection_table",
 				"highlight": true,
 				"wait_for_action": "document_dragged"
@@ -65,19 +66,19 @@ const TUTORIALS = {
 		"name": "Stamping Documents",
 		"steps": [
 			{
-				"text": "Click the stamp bar to reveal the approval and rejection stamps",
+				"text": "{interact} the stamp bar to reveal the approval and rejection stamps",
 				"target": "stamp_bar",
 				"highlight": true,
 				"wait_for_action": "stamp_bar_opened"
 			},
 			{
-				"text": "Drag the document under the green stamp to approve, or red stamp to reject",
+				"text": "{drag} the document under the green stamp to approve, or red stamp to reject",
 				"target": "stamp_area",
 				"highlight": true,
 				"wait_for_action": "document_moved_to_stamp"
 			},
 			{
-				"text": "Click the stamp to mark the document",
+				"text": "{interact} the stamp to mark the document",
 				"target": "stamp",
 				"highlight": true,
 				"wait_for_action": "stamp_clicked"
@@ -101,7 +102,7 @@ const TUTORIALS = {
 				"duration": 2.0
 			},
 			{
-				"text": "Click on running potatoes to launch missiles and stop them",
+				"text": "{fire} on running potatoes to launch missiles and stop them",
 				"target": "runner_potato",
 				"highlight": true,
 				"wait_for_action": "missile_launched"
@@ -137,7 +138,7 @@ const TUTORIALS = {
 		"name": "X-Ray Scanning",
 		"steps": [
 			{
-				"text": "Click the X-ray button to scan potatoes for hidden items",
+				"text": "{interact} the X-ray button to scan potatoes for hidden items",
 				"target": "xray_button",
 				"highlight": true,
 				"wait_for_action": "xray_activated"
@@ -161,6 +162,62 @@ var tutorial_label: Label = null
 
 func _ready():
 	load_tutorial_progress()
+	_connect_input_signals()
+
+
+## Connect to input mode change signals to update tutorial text
+func _connect_input_signals() -> void:
+	if ControllerManager:
+		if not ControllerManager.input_mode_changed.is_connected(_on_input_mode_changed):
+			ControllerManager.input_mode_changed.connect(_on_input_mode_changed)
+
+
+func _on_input_mode_changed(_mode: int) -> void:
+	# Refresh tutorial text if currently showing
+	if current_tutorial != "" and tutorial_label:
+		var tutorial = TUTORIALS[current_tutorial]
+		if current_step < tutorial["steps"].size():
+			var step = tutorial["steps"][current_step]
+			tutorial_label.text = _format_tutorial_text(step["text"])
+
+
+## Format tutorial text with controller-aware prompts
+## Replaces {interact}, {drag}, {fire} with appropriate text
+func _format_tutorial_text(text: String) -> String:
+	var result = text
+	var is_controller = ControllerManager and ControllerManager.is_controller_mode()
+
+	# Get appropriate prompt text
+	if is_controller:
+		# Controller prompts - use button names
+		var interact_text = "Press " + _get_controller_button_text("primary_interaction")
+		var drag_text = "Use Left Stick to move cursor and " + _get_controller_button_text("controller_accept") + " to grab"
+		var fire_text = "Press " + _get_controller_button_text("primary_interaction")
+
+		result = result.replace("{interact}", interact_text)
+		result = result.replace("{drag}", drag_text)
+		result = result.replace("{fire}", fire_text)
+	else:
+		# Mouse/keyboard prompts
+		result = result.replace("{interact}", "Click")
+		result = result.replace("{drag}", "Drag")
+		result = result.replace("{fire}", "Click")
+
+	return result
+
+
+## Get button text for a controller action
+func _get_controller_button_text(action: String) -> String:
+	if InputGlyphManager:
+		var button_name = InputGlyphManager.get_button_for_action(action)
+		if not button_name.is_empty():
+			return "[" + InputGlyphManager.get_button_text(button_name) + "]"
+	# Fallback
+	match action:
+		"primary_interaction": return "[RT]"
+		"controller_accept": return "[A]"
+		"controller_cancel": return "[B]"
+		_: return "[" + action + "]"
 
 
 ## Load tutorial completion state from save
@@ -256,7 +313,7 @@ func create_tutorial_overlay(step: Dictionary):
 
 	# Create tutorial text label
 	tutorial_label = Label.new()
-	tutorial_label.text = step["text"]
+	tutorial_label.text = _format_tutorial_text(step["text"])
 	tutorial_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	tutorial_label.add_theme_font_size_override("font_size", 24)
 	tutorial_label.add_theme_color_override("font_color", Color.WHITE)

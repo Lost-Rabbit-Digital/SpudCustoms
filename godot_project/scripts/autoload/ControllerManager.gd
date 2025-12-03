@@ -193,6 +193,10 @@ func _apply_mode_switch(new_mode: InputMode) -> void:
 	# Emit signal
 	input_mode_changed.emit(new_mode)
 
+	# Also emit through EventBus for broader integration
+	if EventBus:
+		EventBus.input_mode_changed.emit(new_mode == InputMode.CONTROLLER)
+
 
 ## Ensure something has focus when using controller
 func _ensure_focus() -> void:
@@ -260,6 +264,9 @@ func _on_joy_connection_changed(device_id: int, connected: bool) -> void:
 
 		LogManager.write_info("Controller connected: " + device_name + " (ID: " + str(device_id) + ")")
 		controller_connected.emit(device_id, device_name)
+		# Also emit through EventBus
+		if EventBus:
+			EventBus.controller_connected.emit(device_name)
 	else:
 		connected_controllers.erase(device_id)
 
@@ -274,6 +281,9 @@ func _on_joy_connection_changed(device_id: int, connected: bool) -> void:
 
 		LogManager.write_info("Controller disconnected: ID " + str(device_id))
 		controller_disconnected.emit(device_id)
+		# Also emit through EventBus
+		if EventBus:
+			EventBus.controller_disconnected.emit()
 
 
 ## Detect the type of controller based on name
@@ -303,6 +313,9 @@ func _detect_controller_type(device_id: int, device_name: String) -> void:
 	if old_type != current_controller_type:
 		LogManager.write_info("Controller type detected: " + ControllerType.keys()[current_controller_type])
 		controller_type_changed.emit(current_controller_type)
+		# Also emit through EventBus
+		if EventBus:
+			EventBus.controller_type_changed.emit(current_controller_type)
 
 # ============================================================================
 # RUMBLE / HAPTIC FEEDBACK
