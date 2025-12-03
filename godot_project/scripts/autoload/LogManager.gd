@@ -48,9 +48,18 @@ func initialize():
 
 		# Log Steam status on startup (skip in DEV_MODE)
 		if DEBUG_STEAM and not Global.DEV_MODE:
-			write_info("Steam running: " + str(Steam.isSteamRunning()))
-			write_info("Steam initialized: " + str(Steam.steamInit()))
-			write_info("Steam user ID: " + str(Steam.getSteamID()))
+			var steam_running = Steam.isSteamRunning()
+			write_info("Steam running: " + str(steam_running))
+			if steam_running:
+				write_info("Steam initialized: " + str(Steam.steamInit()))
+				# Only call getSteamID if Steam is properly initialized
+				var steam_id = Steam.getSteamID()
+				if steam_id > 0:
+					write_info("Steam user ID: " + str(steam_id))
+				else:
+					write_info("Steam user ID: Not available (Steam not fully initialized)")
+			else:
+				write_info("Steam not running - skipping Steam ID lookup")
 		elif Global.DEV_MODE:
 			write_info("DEV_MODE enabled - Steam debugging skipped")
 

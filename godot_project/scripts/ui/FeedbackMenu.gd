@@ -37,8 +37,7 @@ func _ready():
 	status_label.text = ""
 	status_label.hide()
 
-	# Set max characters for text edit
-	feedback_text_edit.max_length = MAX_CHARACTERS
+	# Note: TextEdit doesn't have max_length property, enforce via text_changed callback
 
 	# Connect signals
 	feedback_text_edit.text_changed.connect(_on_feedback_text_changed)
@@ -76,6 +75,13 @@ func _on_feedback_text_changed():
 	"""Update character count and validate input"""
 	var text = feedback_text_edit.text
 	var char_count = text.length()
+
+	# Enforce max length by truncating if necessary
+	if char_count > MAX_CHARACTERS:
+		feedback_text_edit.text = text.substr(0, MAX_CHARACTERS)
+		# Move cursor to end after truncation
+		feedback_text_edit.set_caret_column(MAX_CHARACTERS)
+		char_count = MAX_CHARACTERS
 
 	# Update character count label
 	char_count_label.text = "%d / %d characters" % [char_count, MAX_CHARACTERS]

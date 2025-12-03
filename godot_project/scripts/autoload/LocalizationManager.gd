@@ -25,12 +25,14 @@ var available_languages = {
 }
 
 var current_language = "en"
+var _initialized = false
 
 
 func _ready():
 	# Set initial language (maybe from a saved setting)
 	var saved_lang = Config.get_config("GameSettings", "Language", "en")
 	set_language(saved_lang)
+	_initialized = true
 	#set_language("fr")
 
 
@@ -46,11 +48,11 @@ func set_language(language_code):
 		emit_signal("language_changed", language_code)
 
 		# Reload current scene to apply translations immediately
-		# You might want a more elegant solution in production
-		if get_tree() and get_tree().current_scene:
-			var current_scene_path = get_tree().current_scene.scene_file_path
+		# Only reload if already initialized (not during _ready) to avoid tree busy errors
+		# Use call_deferred to avoid removing children while tree is busy
+		if _initialized and get_tree() and get_tree().current_scene:
 			if SceneLoader:
-				SceneLoader.reload_current_scene()
+				SceneLoader.reload_current_scene.call_deferred()
 	else:
 		push_error("Unsupported language code: " + language_code)
 

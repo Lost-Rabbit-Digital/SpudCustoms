@@ -111,8 +111,9 @@ func update_audio(channel_name := "", path := "", settings_overrides := {}) -> v
 		prev_audio_node.name += "_Prev"
 		if audio_settings.fade_length > 0.0:
 			var fade_out_tween: Tween = create_tween()
+			# Use lambda to avoid type conversion error with bind()
 			fade_out_tween.tween_method(
-				interpolate_volume_linearly.bind(prev_audio_node),
+				func(value: float) -> void: interpolate_volume_linearly(value, prev_audio_node),
 				db_to_linear(prev_audio_node.volume_db),
 				0.0,
 				audio_settings.fade_length
@@ -156,8 +157,9 @@ func update_audio(channel_name := "", path := "", settings_overrides := {}) -> v
 	if audio_settings.fade_length > 0.0:
 		new_player.volume_db = linear_to_db(0.0)
 		var fade_in_tween := create_tween()
+		# Use lambda to avoid type conversion error with bind()
 		fade_in_tween.tween_method(
-			interpolate_volume_linearly.bind(new_player),
+			func(value: float) -> void: interpolate_volume_linearly(value, new_player),
 			0.0,
 			db_to_linear(audio_settings.volume),
 			audio_settings.fade_length

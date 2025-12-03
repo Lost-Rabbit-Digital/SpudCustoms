@@ -94,6 +94,55 @@ var document_return_sound = preload("res://assets/audio/document_sfx/document_re
 var document_blocked_sound = preload("res://assets/audio/document_sfx/document_blocked.mp3")
 
 
+## Gets the rect of a node, handling different node types.
+## Returns a Rect2 for the node's bounds in local coordinates.
+## @param node The node to get the rect from.
+## @return The bounding Rect2 of the node.
+func _get_node_rect(node: Node) -> Rect2:
+	if not is_instance_valid(node):
+		return Rect2()
+
+	# Check if node has get_rect method
+	if node.has_method("get_rect"):
+		return node.get_rect()
+
+	# Handle Sprite2D nodes
+	if node is Sprite2D:
+		var sprite := node as Sprite2D
+		if sprite.texture:
+			var size = sprite.texture.get_size() * sprite.scale
+			var pos = Vector2.ZERO
+			if sprite.centered:
+				pos = -size / 2
+			return Rect2(pos, size)
+		return Rect2()
+
+	# Handle Control nodes
+	if node is Control:
+		var control := node as Control
+		return Rect2(Vector2.ZERO, control.size)
+
+	# Handle CollisionShape2D nodes
+	if node is CollisionShape2D:
+		var collision := node as CollisionShape2D
+		if collision.shape:
+			return collision.shape.get_rect()
+		return Rect2()
+
+	# Fallback: try to find a child Sprite2D or use a default size
+	for child in node.get_children():
+		if child is Sprite2D and child.texture:
+			var sprite := child as Sprite2D
+			var size = sprite.texture.get_size() * sprite.scale
+			var pos = child.position
+			if sprite.centered:
+				pos -= size / 2
+			return Rect2(pos, size)
+
+	# Default fallback - use a reasonable default size
+	return Rect2(-50, -50, 100, 100)
+
+
 ## Initializes the drag and drop system with necessary references.
 ##
 ## Sets up references to scene nodes and registers draggable items.
@@ -486,7 +535,7 @@ func find_nearest_table_position(item_position: Vector2, item_size: Vector2) -> 
 		return item_position
 
 	# Get table rect in global coordinates
-	var table_rect = Rect2(inspection_table.global_position, inspection_table.get_rect().size)
+	var table_rect = Rect2(inspection_table.global_position, _get_node_rect(inspection_table).size)
 
 	# Add buffer to account for document size
 	var buffered_rect = Rect2(
@@ -602,14 +651,12 @@ func _return_item_to_table(item: Node2D):
 func get_item_size(item: Node2D) -> Vector2:
 	if item is Sprite2D and item.texture:
 		return item.texture.get_size() * item.scale
-	elif item is Node2D:
-		return item.size * item.scale
-	elif item.has_method("get_rect"):
-		var rect = item.get_rect()
+	# Use the helper function which handles various node types
+	var rect = _get_node_rect(item)
+	if rect.size != Vector2.ZERO:
 		return rect.size * item.scale
-	else:
-		# Fallback to a reasonable default size
-		return Vector2(100, 100) * item.scale
+	# Fallback to a reasonable default size
+	return Vector2(100, 100) * item.scale
 
 
 ## Checks if an item is a document that can be opened/closed.
@@ -640,7 +687,7 @@ func find_topmost_item_at(pos: Vector2) -> Node2D:
 		if is_instance_valid(stamp_bar):
 			# Check if position is within the stamp bar's bounds
 			var local_pos = stamp_bar.to_local(pos)
-			if stamp_bar.get_rect().has_point(local_pos):
+			if _get_node_rect(stamp_bar).has_point(local_pos):
 				return null  # Mouse is over stamp bar, don't allow picking up documents
 
 	# Regular draggable item finding logic - now properly uses z-index
@@ -648,7 +695,7 @@ func find_topmost_item_at(pos: Vector2) -> Node2D:
 	var highest_z = -999999  # Start with very low value
 
 	for item in draggable_items:
-		if item.visible and item.get_rect().has_point(item.to_local(pos)):
+		if item.visible and _get_node_rect(item).has_point(item.to_local(pos)):
 			# Check if this item has a higher z-index than current topmost
 			if item.z_index > highest_z:
 				highest_z = item.z_index
@@ -685,14 +732,14 @@ func get_stamp_bar_controller() -> Node:
 ## @return A string identifying the drop zone
 ## ("inspection_table", "suspect_panel", "suspect", or "none").
 func identify_drop_zone(pos: Vector2) -> String:
-	if inspection_table and inspection_table.get_rect().has_point(inspection_table.to_local(pos)):
+	if inspection_table and _get_node_rect(inspection_table).has_point(inspection_table.to_local(pos)):
 		return "inspection_table"
-	elif suspect_panel and suspect_panel.get_rect().has_point(suspect_panel.to_local(pos)):
+	elif suspect_panel and _get_node_rect(suspect_panel).has_point(suspect_panel.to_local(pos)):
 		# If shutter is closed, don't allow suspect panel
 		if office_shutter.active_shutter_state and office_shutter.ShutterState.CLOSED:
 			return "none"
 		return "suspect_panel"
-	elif suspect and suspect.get_rect().has_point(suspect.to_local(pos)):
+	elif suspect and _get_node_rect(suspect).has_point(suspect.to_local(pos)):
 		# If shutter is closed, don't allow suspect
 		if office_shutter.active_shutter_state and office_shutter.ShutterState.CLOSED:
 			return "none"
