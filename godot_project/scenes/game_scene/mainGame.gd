@@ -306,7 +306,7 @@ func _connect_signals():
 	EventBus.score_changed.connect(_on_score_changed)
 	EventBus.strike_changed.connect(_on_strike_changed)
 	EventBus.strike_removed.connect(_on_strike_removed)
-	EventBus.quota_changed.connect(_on_quota_changed)
+	EventBus.quota_updated.connect(_on_quota_updated)
 	EventBus.minigame_bonus_requested.connect(_on_minigame_bonus_requested)
 	EventBus.runner_escaped.connect(_on_runner_escaped)
 	EventBus.achievement_unlocked.connect(_on_achievement_unlocked)
@@ -1563,7 +1563,7 @@ func _on_strike_changed(current_strikes: int, max_strikes: int, delta: int):
 
 
 # REFACTORED: Handle quota changes via EventBus
-func _on_quota_changed(current_quota: int, target_quota: int, delta: int):
+func _on_quota_updated(new_target: int, current_met: int):
 	update_quota_display()
 
 

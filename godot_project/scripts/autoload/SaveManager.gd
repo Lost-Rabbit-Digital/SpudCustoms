@@ -44,20 +44,24 @@ func load_game_state() -> Dictionary:
 	var data = {}
 	var success = false
 
-	# Try loading from cloud first if Steam is running
-	if Steam.isSteamRunning() and Steam.fileExists("gamestate.save"):
-		var file_size = Steam.getFileSize("gamestate.save")
-		var file_content = Steam.fileRead("gamestate.save", file_size)
+	# Try loading from cloud first if Steam is running and properly initialized
+	var steam_available = Steam.isSteamRunning() and Steam.getSteamID() > 0
+	if steam_available:
+		# Check if cloud file exists before trying to read
+		var cloud_file_exists = Steam.fileExists("gamestate.save")
+		if cloud_file_exists:
+			var file_size = Steam.getFileSize("gamestate.save")
+			var file_content = Steam.fileRead("gamestate.save", file_size)
 
-		var temp_file = FileAccess.open("user://temp_gamestate.save", FileAccess.WRITE)
-		if temp_file:
-			temp_file.store_buffer(file_content)
-			temp_file = FileAccess.open("user://temp_gamestate.save", FileAccess.READ)
-			data = temp_file.get_var()
-			success = true
+			var temp_file = FileAccess.open("user://temp_gamestate.save", FileAccess.WRITE)
+			if temp_file:
+				temp_file.store_buffer(file_content)
+				temp_file = FileAccess.open("user://temp_gamestate.save", FileAccess.READ)
+				data = temp_file.get_var()
+				success = true
 
 	# Fall back to local save if cloud save fails or Steam isn't running
-	elif FileAccess.file_exists(GAMESTATE_SAVE_PATH):
+	if not success and FileAccess.file_exists(GAMESTATE_SAVE_PATH):
 		var save_file = FileAccess.open(GAMESTATE_SAVE_PATH, FileAccess.READ)
 		if save_file:
 			data = save_file.get_var()

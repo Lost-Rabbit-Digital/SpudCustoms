@@ -166,7 +166,7 @@ func _ready():
 ## Load tutorial completion state from save
 func load_tutorial_progress():
 	if SaveManager:
-		var save_data = SaveManager.load_game()
+		var save_data = SaveManager.load_game_state()
 		if save_data and save_data.has("tutorials_completed"):
 			tutorials_completed = save_data["tutorials_completed"]
 		if save_data and save_data.has("tutorial_enabled"):
@@ -176,12 +176,12 @@ func load_tutorial_progress():
 ## Save tutorial completion state
 func save_tutorial_progress():
 	if SaveManager:
-		var save_data = SaveManager.load_game()
+		var save_data = SaveManager.load_game_state()
 		if not save_data:
 			save_data = {}
 		save_data["tutorials_completed"] = tutorials_completed
 		save_data["tutorial_enabled"] = tutorial_enabled
-		SaveManager.save_game(save_data)
+		SaveManager.save_game_state(save_data)
 
 
 ## Check if a tutorial should trigger for the current shift

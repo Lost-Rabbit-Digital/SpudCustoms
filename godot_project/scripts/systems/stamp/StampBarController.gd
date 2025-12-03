@@ -86,9 +86,11 @@ func _ready():
 	# Set initial position (hidden - at start_node position)
 	stamp_bar.position = start_node.position
 
-	# Connect toggle button signal
-	toggle_position_button.pressed.connect(_on_toggle_position_button_pressed)
-	toggle_position_button.mouse_entered.connect(_on_toggle_position_button_mouse_entered)
+	# Connect toggle button signal (check if not already connected from scene)
+	if not toggle_position_button.pressed.is_connected(_on_toggle_position_button_pressed):
+		toggle_position_button.pressed.connect(_on_toggle_position_button_pressed)
+	if not toggle_position_button.mouse_entered.is_connected(_on_toggle_position_button_mouse_entered):
+		toggle_position_button.mouse_entered.connect(_on_toggle_position_button_mouse_entered)
 
 	# Connect stamp buttons
 	approval_stamp.pressed.connect(

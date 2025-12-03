@@ -109,7 +109,9 @@ func start_level_dialogue(level_id: int):
 		EventBus.dialogue_started.emit(timeline_name)
 
 	var timeline = Dialogic.start(timeline_name)
-	add_child(timeline)
+	# Only add as child if it doesn't already have a parent
+	if timeline and not timeline.get_parent():
+		add_child(timeline)
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.timeline_ended.connect(_on_shift_dialogue_finished)
 
@@ -147,8 +149,11 @@ func start_level_end_dialogue(level_id: int):
 		EventBus.dialogue_started.emit(timeline_name)
 
 	var timeline = Dialogic.start(timeline_name)
-	timeline.process_mode = Node.PROCESS_MODE_ALWAYS
-	add_child(timeline)
+	if timeline:
+		timeline.process_mode = Node.PROCESS_MODE_ALWAYS
+		# Only add as child if it doesn't already have a parent
+		if not timeline.get_parent():
+			add_child(timeline)
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.timeline_ended.connect(_on_end_dialogue_finished)
 
