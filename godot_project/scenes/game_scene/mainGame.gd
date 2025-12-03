@@ -974,6 +974,10 @@ func megaphone_clicked():
 	# Check if there's already a potato in the Customs Office
 	Analytics.track_ui_interaction("megaphone", "clicked")
 
+	# Trigger tutorial action for megaphone click
+	if TutorialManager:
+		TutorialManager.trigger_tutorial_action("megaphone_clicked")
+
 	if is_potato_in_office:
 		#print("A potato is already in the customs office!")
 		megaphone_dialogue_box.set_random_message_from_category("spud_in_office")
@@ -2187,6 +2191,10 @@ func fade_out_group_elements():
 
 
 func _exit_tree():
+	# Clean up tutorial UI when leaving the scene
+	if TutorialManager:
+		TutorialManager.cleanup_tutorial_ui()
+
 	# Ensure cursor is restored when leaving the scene
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
@@ -2223,6 +2231,10 @@ func _on_dialogue_finished():
 	for button_layer in skip_buttons:
 		if is_instance_valid(button_layer):
 			button_layer.queue_free()
+
+	# Start interactive tutorials for the current shift
+	if TutorialManager:
+		TutorialManager.check_shift_tutorials(current_shift)
 
 	if Global.current_story_state >= 10:
 		# Game complete, show credits or return to menu

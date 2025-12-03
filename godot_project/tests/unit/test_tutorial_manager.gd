@@ -28,10 +28,8 @@ func before_each() -> void:
 
 
 func after_each() -> void:
-	# Clean up any active overlays
-	if tutorial_manager.tutorial_overlay:
-		tutorial_manager.tutorial_overlay.queue_free()
-		tutorial_manager.tutorial_overlay = null
+	# Clean up any tutorial UI
+	tutorial_manager.cleanup_tutorial_ui()
 
 	# Disconnect test signals
 	if tutorial_manager.tutorial_started.is_connected(_on_tutorial_started):
@@ -224,7 +222,9 @@ func test_skip_tutorial_emits_signal() -> void:
 	assert_eq(last_tutorial_id, "gate_control", "Skipped tutorial ID should match")
 
 
-func test_skip_tutorial_does_not_mark_completed() -> void:
+func test_skip_tutorial_marks_as_completed() -> void:
+	# Note: In the new implementation, skipped tutorials ARE marked as completed
+	# so they don't re-appear to the player
 	tutorial_manager.can_skip_tutorials = true
 	tutorial_manager.start_tutorial("gate_control")
 	await get_tree().process_frame
@@ -232,9 +232,9 @@ func test_skip_tutorial_does_not_mark_completed() -> void:
 	tutorial_manager.skip_current_tutorial()
 	await get_tree().process_frame
 
-	assert_false(
+	assert_true(
 		tutorial_manager.is_tutorial_completed("gate_control"),
-		"Skipped tutorial should not be marked as completed"
+		"Skipped tutorial should be marked as completed to prevent re-showing"
 	)
 
 
@@ -256,14 +256,14 @@ func test_skip_tutorial_resets_state() -> void:
 func test_check_shift_tutorials_triggers_appropriate_tutorial() -> void:
 	tutorial_manager.tutorial_started.connect(_on_tutorial_started)
 
-	# Gate control has shift_trigger = 1
+	# Multiple tutorials have shift_trigger = 1
 	tutorial_manager.check_shift_tutorials(1)
 	await get_tree().process_frame
 
 	assert_true(test_tutorial_started_called, "Tutorial should start for matching shift")
-	# Should be one of the shift 1 tutorials
+	# Should be one of the shift 1 tutorials (welcome has priority 0, so it starts first)
 	assert_true(
-		last_tutorial_id in ["gate_control", "megaphone_call", "document_inspection", "stamp_usage", "border_runners"],
+		last_tutorial_id in ["welcome", "gate_control", "megaphone_call", "document_inspection", "stamp_usage", "border_runners", "strikes_and_quota"],
 		"Should start a shift 1 tutorial"
 	)
 
@@ -280,11 +280,13 @@ func test_check_shift_tutorials_does_not_trigger_for_wrong_shift() -> void:
 
 func test_check_shift_tutorials_skips_completed_tutorials() -> void:
 	# Mark all shift 1 tutorials as completed
+	tutorial_manager.mark_tutorial_completed("welcome")
 	tutorial_manager.mark_tutorial_completed("gate_control")
 	tutorial_manager.mark_tutorial_completed("megaphone_call")
 	tutorial_manager.mark_tutorial_completed("document_inspection")
 	tutorial_manager.mark_tutorial_completed("stamp_usage")
 	tutorial_manager.mark_tutorial_completed("border_runners")
+	tutorial_manager.mark_tutorial_completed("strikes_and_quota")
 
 	tutorial_manager.tutorial_started.connect(_on_tutorial_started)
 	tutorial_manager.check_shift_tutorials(1)
@@ -531,7 +533,7 @@ func test_show_tutorial_step_creates_label() -> void:
 	await get_tree().process_frame
 
 	assert_not_null(tutorial_manager.tutorial_label, "Label should be created")
-	assert_true(tutorial_manager.tutorial_label is Label, "tutorial_label should be a Label")
+	assert_true(tutorial_manager.tutorial_label is RichTextLabel, "tutorial_label should be a RichTextLabel")
 	assert_gt(tutorial_manager.tutorial_label.text.length(), 0, "Label should have text")
 
 
@@ -560,18 +562,15 @@ func test_show_tutorial_step_updates_text_on_advance() -> void:
 	assert_ne(first_text, second_text, "Text should change when advancing steps")
 
 
-func test_overlay_has_semi_transparent_background() -> void:
+func test_overlay_has_styled_panel() -> void:
 	tutorial_manager.start_tutorial("gate_control")
 	await get_tree().process_frame
 
-	# Check for ColorRect child (background)
-	var has_background = false
-	for child in tutorial_manager.tutorial_overlay.get_children():
-		if child is ColorRect:
-			has_background = true
-			break
-
-	assert_true(has_background, "Overlay should have a ColorRect background")
+	# The new implementation uses a PanelContainer with a StyleBoxFlat background
+	assert_true(
+		tutorial_manager.tutorial_panel is PanelContainer,
+		"Tutorial panel should be a PanelContainer"
+	)
 
 
 func test_skip_button_appears_when_allowed() -> void:
@@ -579,13 +578,7 @@ func test_skip_button_appears_when_allowed() -> void:
 	tutorial_manager.start_tutorial("gate_control")
 	await get_tree().process_frame
 
-	var has_button = false
-	for child in tutorial_manager.tutorial_overlay.get_children():
-		if child is Button:
-			has_button = true
-			break
-
-	assert_true(has_button, "Skip button should be present when skipping is allowed")
+	assert_not_null(tutorial_manager.skip_button, "Skip button should be present when skipping is allowed")
 
 
 func test_skip_button_not_present_when_disabled() -> void:
@@ -593,13 +586,7 @@ func test_skip_button_not_present_when_disabled() -> void:
 	tutorial_manager.start_tutorial("gate_control")
 	await get_tree().process_frame
 
-	var has_button = false
-	for child in tutorial_manager.tutorial_overlay.get_children():
-		if child is Button:
-			has_button = true
-			break
-
-	assert_false(has_button, "Skip button should not be present when skipping is disabled")
+	assert_null(tutorial_manager.skip_button, "Skip button should not be present when skipping is disabled")
 
 
 func test_overlay_cleaned_up_between_steps() -> void:
@@ -899,10 +886,11 @@ func test_highlight_created_for_highlighted_steps() -> void:
 	tutorial_manager.start_tutorial("gate_control")  # First step has highlight: true
 	await get_tree().process_frame
 
-	# Check if highlight_rect was created (it's a member variable)
-	assert_not_null(
-		tutorial_manager.highlight_rect,
-		"Highlight rect should be created for highlighted step"
+	# Check if highlighted_nodes array has entries (new shader-based highlighting)
+	assert_gt(
+		tutorial_manager.highlighted_nodes.size(),
+		0,
+		"Highlighted nodes should be populated for highlighted step"
 	)
 
 
@@ -924,9 +912,9 @@ func test_no_highlight_for_non_highlighted_steps() -> void:
 func test_gate_control_tutorial_structure() -> void:
 	var tutorial = tutorial_manager.TUTORIALS["gate_control"]
 
-	assert_eq(tutorial["name"], "Opening Your Booth", "Gate control should have correct name")
+	assert_eq(tutorial["name"], "Opening the Gate", "Gate control should have correct name")
 	assert_eq(tutorial["shift_trigger"], 1, "Gate control should trigger on shift 1")
-	assert_eq(tutorial["steps"].size(), 1, "Gate control should have 1 step")
+	assert_eq(tutorial["steps"].size(), 2, "Gate control should have 2 steps")
 
 	var step = tutorial["steps"][0]
 	assert_eq(step["wait_for_action"], "lever_pulled", "Gate control should wait for lever_pulled")
@@ -936,9 +924,9 @@ func test_gate_control_tutorial_structure() -> void:
 func test_stamp_usage_tutorial_structure() -> void:
 	var tutorial = tutorial_manager.TUTORIALS["stamp_usage"]
 
-	assert_eq(tutorial["name"], "Stamping Documents", "Stamp usage should have correct name")
+	assert_eq(tutorial["name"], "Using the Stamps", "Stamp usage should have correct name")
 	assert_eq(tutorial["shift_trigger"], 1, "Stamp usage should trigger on shift 1")
-	assert_eq(tutorial["steps"].size(), 4, "Stamp usage should have 4 steps")
+	assert_eq(tutorial["steps"].size(), 5, "Stamp usage should have 5 steps")
 
 
 func test_xray_scanner_tutorial_structure() -> void:
