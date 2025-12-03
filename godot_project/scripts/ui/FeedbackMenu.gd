@@ -63,10 +63,17 @@ func _collect_system_information():
 	else:
 		playtime = 0.0
 
-	# Get Steam user ID if Steam is running
-	if Steam.isSteamRunning():
+	# Get Steam user ID if Steam is running and fully initialized
+	# Note: isSteamRunning() can return true even when SteamUser is not initialized
+	# Check loggedOn() first to avoid errors from getSteamID() when SteamUser is null
+	if Steam.isSteamRunning() and Steam.loggedOn():
 		var steam_id = Steam.getSteamID()
-		steam_user_id = str(steam_id) if steam_id > 0 else "Unknown"
+		if steam_id > 0:
+			steam_user_id = str(steam_id)
+		else:
+			steam_user_id = "Unknown"
+	elif Steam.isSteamRunning():
+		steam_user_id = "Steam Not Logged In"
 	else:
 		steam_user_id = "Steam Disabled"
 
