@@ -204,21 +204,25 @@ Light paper fluttering descent, document falling through air, gentle gravity, 0.
 ### BORDER CHASE - Conveyor Belt Assets
 
 #### Conveyor Belt Sprite Sheet (Tileable)
+**Filename:** `border_chase_conveyor_belt.png`
 ```
 16-bit pixel art industrial conveyor belt sprite sheet, dark gray metal rollers with rubber belt texture, orange warning stripes on edges, 4-frame animation cycle, top-down perspective, warm industrial colors, game asset, transparent background, 64x32 pixels per frame
 ```
 
 #### Contraband Items Sprite Sheet
+**Filename:** `border_chase_contraband_items.png`
 ```
 16-bit pixel art contraband items sprite sheet for border checkpoint game, suspicious packages, hidden weapons, fake documents, forbidden produce, each item 32x32 pixels, red warning glow effect, Papers Please inspired, warm color palette, transparent background
 ```
 
 #### Approved Items Sprite Sheet
+**Filename:** `border_chase_approved_items.png`
 ```
 16-bit pixel art approved cargo items sprite sheet, legitimate luggage, proper documents, fresh vegetables, clean packages, each item 32x32 pixels, green checkmark overlay option, Papers Please inspired, transparent background
 ```
 
 #### Scanner Frame/Border
+**Filename:** `border_chase_scanner_frame.png`
 ```
 16-bit pixel art security scanner frame, industrial metal border with orange warning lights, checkpoint aesthetic, dark gray and orange colors, 400x300 pixel frame border, Papers Please inspired, transparent center
 ```
@@ -228,21 +232,25 @@ Light paper fluttering descent, document falling through air, gentle gravity, 0.
 ### CODE BREAKER - Terminal Assets
 
 #### Retro Computer Terminal Frame
+**Filename:** `code_breaker_terminal_frame.png`
 ```
 16-bit pixel art retro computer terminal frame, CRT monitor with thick bezel, green phosphor glow effect, Soviet-era electronics aesthetic, dark gray metal casing, 400x300 pixels, warm brown desk reflection at bottom, transparent screen area
 ```
 
 #### Keypad Buttons Sprite Sheet
+**Filename:** `code_breaker_keypad_buttons.png`
 ```
 16-bit pixel art number keypad buttons 0-9, chunky mechanical keys, green backlit numbers, 3 states per button (normal, hover, pressed), each button 48x48 pixels, retro terminal aesthetic, transparent background
 ```
 
 #### Feedback Dots Sprite Sheet
+**Filename:** `code_breaker_feedback_dots.png`
 ```
 16-bit pixel art feedback indicator dots, green dot (correct position), yellow dot (wrong position), gray dot (incorrect), each 16x16 pixels, slight glow effect, code-breaking game feedback, transparent background
 ```
 
 #### Lock/Unlock Animation
+**Filename:** `code_breaker_lock_animation.png`
 ```
 16-bit pixel art vault lock sprite sheet, 6-frame unlock animation, heavy metal door mechanism, green indicator light when open, industrial security aesthetic, each frame 64x64 pixels, transparent background
 ```
@@ -252,21 +260,25 @@ Light paper fluttering descent, document falling through air, gentle gravity, 0.
 ### DOCUMENT SCANNER - UV Light Assets
 
 #### Scannable Document Base
+**Filename:** `document_scanner_document_base.png`
 ```
 16-bit pixel art official government document, cream/tan paper texture matching SpudCustoms Entry Visa style, dotted border frame, empty form fields, potato republic seal watermark, 300x400 pixels, warm parchment colors
 ```
 
 #### UV Light Cursor/Tool
+**Filename:** `document_scanner_uv_lamp.png`
 ```
 16-bit pixel art handheld UV lamp sprite, purple glow emanating from lens, 3 states (off, on, scanning), each 48x48 pixels, forensic investigation tool aesthetic, transparent background
 ```
 
 #### Hidden Elements Sprite Sheet (revealed under UV)
+**Filename:** `document_scanner_hidden_elements.png`
 ```
 16-bit pixel art hidden document elements sprite sheet, secret watermark seal, forged stamp mark, hidden signature, concealed barcode, invisible ink text, each element 32x32 pixels, purple/violet glow effect when revealed, transparent background
 ```
 
 #### Document Desk Surface
+**Filename:** `document_scanner_desk_background.png`
 ```
 16-bit pixel art wooden examination desk texture, dark reddish-brown wood grain matching SpudCustoms main desk, subtle purple UV ambient lighting reflection, 400x300 pixels, warm office aesthetic
 ```
@@ -276,21 +288,25 @@ Light paper fluttering descent, document falling through air, gentle gravity, 0.
 ### FINGERPRINT MATCH - Forensic Assets
 
 #### Fingerprint Cards Sprite Sheet
+**Filename:** `fingerprint_match_cards.png`
 ```
 16-bit pixel art fingerprint cards sprite sheet, 8 different fingerprint patterns (loop, whorl, arch variants), cream card background with brown ridge patterns, each card 80x100 pixels, forensic evidence aesthetic, transparent background
 ```
 
 #### Reference Card Frame
+**Filename:** `fingerprint_match_reference_frame.png`
 ```
 16-bit pixel art fingerprint reference card holder, metal clipboard frame, blue accent lighting, "REFERENCE" label at top, potato republic official seal, 120x150 pixels, forensic lab aesthetic
 ```
 
 #### Scanner Device Frame
+**Filename:** `fingerprint_match_scanner_frame.png`
 ```
 16-bit pixel art biometric scanner frame, blue LED indicator lights, metal housing with glass scanning surface, police/forensic equipment aesthetic, 400x300 pixels, transparent scan area
 ```
 
 #### Match Indicators
+**Filename:** `fingerprint_match_indicators.png`
 ```
 16-bit pixel art match result indicators, green checkmark for correct match, red X for incorrect, question mark for processing, each 32x32 pixels, slight glow effect, transparent background
 ```
@@ -300,26 +316,31 @@ Light paper fluttering descent, document falling through air, gentle gravity, 0.
 ### STAMP SORTING - Bureaucratic Assets
 
 #### Approved Stamp Sprite
+**Filename:** `stamp_sorting_approved_stamp.png`
 ```
 16-bit pixel art "APPROVED" rubber stamp, green ink color, worn stamp texture, matching SpudCustoms stamp style, 80x50 pixels, slight rotation variants, transparent background
 ```
 
 #### Denied Stamp Sprite
+**Filename:** `stamp_sorting_denied_stamp.png`
 ```
 16-bit pixel art "DENIED" rubber stamp, red ink color matching existing game stamps, dotted border frame like Entry Visa, 80x50 pixels, slight rotation variants, transparent background
 ```
 
 #### Sorting Bins Sprite Sheet
+**Filename:** `stamp_sorting_bins.png`
 ```
 16-bit pixel art document sorting bins, wooden office trays, green bin labeled "APPROVED" on left, red bin labeled "DENIED" on right, each bin 100x80 pixels, warm brown wood matching main desk, transparent background
 ```
 
 #### Falling Stamps Animation Sheet
+**Filename:** `stamp_sorting_falling_animation.png`
 ```
 16-bit pixel art stamp falling animation, 4-frame rotation cycle for approved stamp, 4-frame rotation cycle for denied stamp, paper flutter effect, each frame 80x50 pixels, transparent background
 ```
 
 #### Office Desk Background
+**Filename:** `stamp_sorting_desk_background.png`
 ```
 16-bit pixel art bureaucratic desk surface, dark reddish-brown wood grain matching SpudCustoms main scene, paper stack decorations in corners, official seal embossed, 400x300 pixels, warm lamp lighting
 ```
@@ -329,21 +350,25 @@ Light paper fluttering descent, document falling through air, gentle gravity, 0.
 ### SHARED UI ELEMENTS
 
 #### Minigame Timer Bar
+**Filename:** `minigame_ui_timer_bar.png`
 ```
 16-bit pixel art countdown timer bar, bronze/gold metal frame, red fill that depletes, warning state when low (flashing), 200x24 pixels, bureaucratic office aesthetic, transparent background
 ```
 
 #### Score Counter Frame
+**Filename:** `minigame_ui_score_frame.png`
 ```
 16-bit pixel art score display frame, matching SpudCustoms HUD style, dark panel with gold trim, space for 4-digit number, 120x40 pixels, transparent background
 ```
 
 #### Minigame Title Banner
+**Filename:** `minigame_ui_title_banner.png`
 ```
 16-bit pixel art title banner template, parchment/paper scroll style, dotted border matching documents, gold corner decorations, space for title text, 300x60 pixels, transparent background
 ```
 
 #### Success/Failure Splash
+**Filename:** `minigame_ui_result_splash.png`
 ```
 16-bit pixel art result splash screens sprite sheet, "SUCCESS" with green glow and potato celebration, "TIME UP" with red glow and sad potato, each 200x100 pixels, transparent background
 ```
@@ -464,3 +489,58 @@ After generating assets, place them in:
 - Images: `godot_project/assets/minigames/textures/`
 
 Then configure the minigame scenes to reference these new assets.
+
+---
+
+## QUICK REFERENCE - All PNG Filenames
+
+### Border Chase
+| Asset | Filename | Size |
+|-------|----------|------|
+| Conveyor Belt | `border_chase_conveyor_belt.png` | 256x32 (4 frames) |
+| Contraband Items | `border_chase_contraband_items.png` | 256x32 (8 items) |
+| Approved Items | `border_chase_approved_items.png` | 256x32 (8 items) |
+| Scanner Frame | `border_chase_scanner_frame.png` | 400x300 |
+
+### Code Breaker
+| Asset | Filename | Size |
+|-------|----------|------|
+| Terminal Frame | `code_breaker_terminal_frame.png` | 400x300 |
+| Keypad Buttons | `code_breaker_keypad_buttons.png` | 480x144 (30 buttons) |
+| Feedback Dots | `code_breaker_feedback_dots.png` | 48x16 (3 dots) |
+| Lock Animation | `code_breaker_lock_animation.png` | 384x64 (6 frames) |
+
+### Document Scanner
+| Asset | Filename | Size |
+|-------|----------|------|
+| Document Base | `document_scanner_document_base.png` | 300x400 |
+| UV Lamp | `document_scanner_uv_lamp.png` | 144x48 (3 states) |
+| Hidden Elements | `document_scanner_hidden_elements.png` | 160x32 (5 elements) |
+| Desk Background | `document_scanner_desk_background.png` | 400x300 |
+
+### Fingerprint Match
+| Asset | Filename | Size |
+|-------|----------|------|
+| Fingerprint Cards | `fingerprint_match_cards.png` | 320x200 (8 cards) |
+| Reference Frame | `fingerprint_match_reference_frame.png` | 120x150 |
+| Scanner Frame | `fingerprint_match_scanner_frame.png` | 400x300 |
+| Match Indicators | `fingerprint_match_indicators.png` | 96x32 (3 icons) |
+
+### Stamp Sorting
+| Asset | Filename | Size |
+|-------|----------|------|
+| Approved Stamp | `stamp_sorting_approved_stamp.png` | 320x50 (4 rotations) |
+| Denied Stamp | `stamp_sorting_denied_stamp.png` | 320x50 (4 rotations) |
+| Sorting Bins | `stamp_sorting_bins.png` | 200x80 (2 bins) |
+| Falling Animation | `stamp_sorting_falling_animation.png` | 320x100 (8 frames) |
+| Desk Background | `stamp_sorting_desk_background.png` | 400x300 |
+
+### Shared UI
+| Asset | Filename | Size |
+|-------|----------|------|
+| Timer Bar | `minigame_ui_timer_bar.png` | 200x24 |
+| Score Frame | `minigame_ui_score_frame.png` | 120x40 |
+| Title Banner | `minigame_ui_title_banner.png` | 300x60 |
+| Result Splash | `minigame_ui_result_splash.png` | 400x100 (2 states) |
+
+**Total: 22 PNG files**
