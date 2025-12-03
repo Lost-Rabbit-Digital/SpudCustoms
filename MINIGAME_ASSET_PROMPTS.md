@@ -21,27 +21,33 @@ The game has **5 minigames**, each with a distinct theme:
 ```
 Triumphant 8-bit chiptune victory jingle, short 1.5 second fanfare, retro arcade style, happy uplifting tone
 ```
+**Suggested filename:** `minigame_success_chiptune.mp3`
 
 ```
 Satisfying mechanical cash register "cha-ching" with subtle digital processing, bureaucratic office style
 ```
+**Suggested filename:** `minigame_success_cashregister.mp3`
 
 ```
 Short celebratory brass fanfare with typewriter bell ding at end, 1 second, Soviet-era propaganda victory style
 ```
+**Suggested filename:** `minigame_success_fanfare.mp3`
 
 #### Timeout/Failure Sounds (play when time runs out)
 ```
 Gentle descending synth whomp, non-punishing game over tone, soft buzzer with reverb, 1 second
 ```
+**Suggested filename:** `minigame_timeout_whomp.mp3`
 
 ```
 Old mechanical clock winding down and stopping, followed by soft disappointed "bwong" tone, 1.5 seconds
 ```
+**Suggested filename:** `minigame_timeout_clock.mp3`
 
 ```
 Vintage office intercom buzz followed by sad trombone "wah wah", comedic but not harsh, 2 seconds
 ```
+**Suggested filename:** `minigame_timeout_trombone.mp3`
 
 ---
 
@@ -51,26 +57,31 @@ Vintage office intercom buzz followed by sad trombone "wah wah", comedic but not
 ```
 Industrial factory conveyor belt mechanical loop, rhythmic metal rollers and rubber belt movement, steady pace, 4 second seamless loop
 ```
+**Suggested filename:** `border_chase_conveyor_loop.mp3`
 
 #### Item Grab (catching contraband)
 ```
 Quick satisfying grab sound with slight suction pop, arcade-style pickup, 0.3 seconds
 ```
+**Suggested filename:** `border_chase_item_grab.mp3`
 
 #### Contraband Alert
 ```
 Short urgent radar ping with slight static, security scanner detection beep, industrial warning tone, 0.5 seconds
 ```
+**Suggested filename:** `border_chase_contraband_alert.mp3`
 
 #### Item Miss (contraband escapes)
 ```
 Quick mechanical whoosh past with slight disappointment tone, item sliding away, 0.4 seconds
 ```
+**Suggested filename:** `border_chase_item_miss.mp3`
 
 #### Approved Item Pass
 ```
 Soft pleasant chime indicating safe passage, green light approval ding, subtle and non-distracting, 0.3 seconds
 ```
+**Suggested filename:** `border_chase_item_pass.mp3`
 
 ---
 
@@ -80,31 +91,37 @@ Soft pleasant chime indicating safe passage, green light approval ding, subtle a
 ```
 Retro computer keyboard key press with slight electronic processing, hacker movie terminal input, 0.15 seconds
 ```
+**Suggested filename:** `code_breaker_digit_input.mp3`
 
 #### Code Submit
 ```
 Electronic processing whir with data transmission beeps, computer analyzing input, 0.8 seconds
 ```
+**Suggested filename:** `code_breaker_submit.mp3`
 
 #### Correct Position (green dot feedback)
 ```
 Positive electronic blip, successful lock tumbler click with digital enhancement, 0.2 seconds
 ```
+**Suggested filename:** `code_breaker_correct_position.mp3`
 
 #### Wrong Position (yellow dot feedback)
 ```
 Neutral electronic tone, partial match indicator, subtle question mark feeling, 0.2 seconds
 ```
+**Suggested filename:** `code_breaker_wrong_position.mp3`
 
 #### Incorrect Digit (gray dot feedback)
 ```
 Soft electronic negative buzz, gentle rejection beep, not harsh, 0.2 seconds
 ```
+**Suggested filename:** `code_breaker_incorrect_digit.mp3`
 
 #### Code Cracked (all correct)
 ```
 Electronic lock disengaging with satisfying mechanical click sequence, vault door unlocking sound, triumphant, 1 second
 ```
+**Suggested filename:** `code_breaker_cracked.mp3`
 
 ---
 
@@ -114,26 +131,31 @@ Electronic lock disengaging with satisfying mechanical click sequence, vault doo
 ```
 Soft electrical hum with slight purple/ultraviolet frequency buzz, fluorescent light turning on, 0.5 seconds
 ```
+**Suggested filename:** `document_scanner_uv_activate.mp3`
 
 #### UV Light Ambient Loop
 ```
 Gentle electronic UV lamp humming loop, subtle electrical buzz with slight oscillation, 3 second seamless loop
 ```
+**Suggested filename:** `document_scanner_uv_loop.mp3`
 
 #### Hidden Element Reveal
 ```
 Magical discovery shimmer with subtle whoosh, secret revealed sparkle sound, mysterious and satisfying, 0.6 seconds
 ```
+**Suggested filename:** `document_scanner_reveal.mp3`
 
 #### Element Confirmed (clicked on revealed item)
 ```
 Confirmation beep with stamp-like finality, document annotation sound, official marking, 0.3 seconds
 ```
+**Suggested filename:** `document_scanner_confirm.mp3`
 
 #### Scanning Movement
 ```
 Soft paper surface being examined, gentle UV light movement across document, subtle friction, 0.4 seconds
 ```
+**Suggested filename:** `document_scanner_movement.mp3`
 
 ---
 
@@ -143,26 +165,31 @@ Soft paper surface being examined, gentle UV light movement across document, sub
 ```
 Biometric scanner processing sound, laser line sweep with digital analysis beeps, CSI forensic equipment, 0.7 seconds
 ```
+**Suggested filename:** `fingerprint_match_scan.mp3`
 
 #### Match Correct
 ```
 Positive identification confirmed chime, biometric match success, satisfying lock-in sound, 0.4 seconds
 ```
+**Suggested filename:** `fingerprint_match_correct.mp3`
 
 #### Match Incorrect
 ```
 Soft rejection buzz, fingerprint mismatch indicator, gentle negative tone without harshness, 0.3 seconds
 ```
+**Suggested filename:** `fingerprint_match_incorrect.mp3`
 
 #### Round Complete
 ```
 Case file closing sound with slight paper rustle and stamp, forensic analysis complete, professional, 0.8 seconds
 ```
+**Suggested filename:** `fingerprint_match_round_complete.mp3`
 
 #### Fingerprint Hover
 ```
 Subtle digital magnification sound, forensic lens focusing, quiet examination tone, 0.2 seconds
 ```
+**Suggested filename:** `fingerprint_match_hover.mp3`
 
 ---
 
@@ -172,26 +199,31 @@ Subtle digital magnification sound, forensic lens focusing, quiet examination to
 ```
 Paper and rubber stamp pickup sound, light grip with slight paper crinkle, office material handling, 0.2 seconds
 ```
+**Suggested filename:** `stamp_sorting_grab.mp3`
 
 #### Stamp Drop in Bin
 ```
 Paper landing in wooden/metal tray, satisfying sort completion, light thump with paper settling, 0.3 seconds
 ```
+**Suggested filename:** `stamp_sorting_drop.mp3`
 
 #### Correct Sort
 ```
 Pleasant official approval chime, bureaucratic success indicator, subtle gold star feeling, 0.3 seconds
 ```
+**Suggested filename:** `stamp_sorting_correct.mp3`
 
 #### Wrong Sort
 ```
 Soft administrative error buzz, paperwork mistake indicator, gentle enough to not frustrate, 0.3 seconds
 ```
+**Suggested filename:** `stamp_sorting_wrong.mp3`
 
 #### Stamp Falling (ambient during gameplay)
 ```
 Light paper fluttering descent, document falling through air, gentle gravity, 0.6 seconds
 ```
+**Suggested filename:** `stamp_sorting_falling.mp3`
 
 ---
 
@@ -412,11 +444,13 @@ When creating these assets, consider organizing them as single sprite sheets tha
 ```
 Tense electronic chiptune loop, 120 BPM, urgent but not stressful, puzzle game intensity, synthwave influenced, retro arcade feel, seamless loop
 ```
+**Suggested filename:** `minigame_music_fast.mp3`
 
 ### Calm Minigame Loop (30 seconds)
 ```
 Gentle lo-fi electronic ambient loop, 80 BPM, focused concentration music, soft synth pads, mellow puzzle solving atmosphere, seamless loop
 ```
+**Suggested filename:** `minigame_music_calm.mp3`
 
 ---
 
@@ -544,3 +578,71 @@ Then configure the minigame scenes to reference these new assets.
 | Result Splash | `minigame_ui_result_splash.png` | 400x100 (2 states) |
 
 **Total: 22 PNG files**
+
+---
+
+## QUICK REFERENCE - All MP3 Filenames
+
+### Universal Sounds
+| Asset | Filename | Duration |
+|-------|----------|----------|
+| Success (Chiptune) | `minigame_success_chiptune.mp3` | 1.5s |
+| Success (Cash Register) | `minigame_success_cashregister.mp3` | 0.5s |
+| Success (Fanfare) | `minigame_success_fanfare.mp3` | 1.0s |
+| Timeout (Whomp) | `minigame_timeout_whomp.mp3` | 1.0s |
+| Timeout (Clock) | `minigame_timeout_clock.mp3` | 1.5s |
+| Timeout (Trombone) | `minigame_timeout_trombone.mp3` | 2.0s |
+
+### Border Chase
+| Asset | Filename | Duration |
+|-------|----------|----------|
+| Conveyor Belt Loop | `border_chase_conveyor_loop.mp3` | 4.0s (loop) |
+| Item Grab | `border_chase_item_grab.mp3` | 0.3s |
+| Contraband Alert | `border_chase_contraband_alert.mp3` | 0.5s |
+| Item Miss | `border_chase_item_miss.mp3` | 0.4s |
+| Approved Item Pass | `border_chase_item_pass.mp3` | 0.3s |
+
+### Code Breaker
+| Asset | Filename | Duration |
+|-------|----------|----------|
+| Digit Input | `code_breaker_digit_input.mp3` | 0.15s |
+| Code Submit | `code_breaker_submit.mp3` | 0.8s |
+| Correct Position | `code_breaker_correct_position.mp3` | 0.2s |
+| Wrong Position | `code_breaker_wrong_position.mp3` | 0.2s |
+| Incorrect Digit | `code_breaker_incorrect_digit.mp3` | 0.2s |
+| Code Cracked | `code_breaker_cracked.mp3` | 1.0s |
+
+### Document Scanner
+| Asset | Filename | Duration |
+|-------|----------|----------|
+| UV Light Activation | `document_scanner_uv_activate.mp3` | 0.5s |
+| UV Light Ambient Loop | `document_scanner_uv_loop.mp3` | 3.0s (loop) |
+| Hidden Element Reveal | `document_scanner_reveal.mp3` | 0.6s |
+| Element Confirmed | `document_scanner_confirm.mp3` | 0.3s |
+| Scanning Movement | `document_scanner_movement.mp3` | 0.4s |
+
+### Fingerprint Match
+| Asset | Filename | Duration |
+|-------|----------|----------|
+| Fingerprint Scan | `fingerprint_match_scan.mp3` | 0.7s |
+| Match Correct | `fingerprint_match_correct.mp3` | 0.4s |
+| Match Incorrect | `fingerprint_match_incorrect.mp3` | 0.3s |
+| Round Complete | `fingerprint_match_round_complete.mp3` | 0.8s |
+| Fingerprint Hover | `fingerprint_match_hover.mp3` | 0.2s |
+
+### Stamp Sorting
+| Asset | Filename | Duration |
+|-------|----------|----------|
+| Stamp Grab | `stamp_sorting_grab.mp3` | 0.2s |
+| Stamp Drop in Bin | `stamp_sorting_drop.mp3` | 0.3s |
+| Correct Sort | `stamp_sorting_correct.mp3` | 0.3s |
+| Wrong Sort | `stamp_sorting_wrong.mp3` | 0.3s |
+| Stamp Falling | `stamp_sorting_falling.mp3` | 0.6s |
+
+### Music (Optional)
+| Asset | Filename | Duration |
+|-------|----------|----------|
+| Fast-Paced Loop | `minigame_music_fast.mp3` | 30s (loop) |
+| Calm Loop | `minigame_music_calm.mp3` | 30s (loop) |
+
+**Total: 33 MP3 files**
