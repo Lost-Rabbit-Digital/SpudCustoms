@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://by6waso0mjpjp"]
+[gd_scene load_steps=7 format=3 uid="uid://csptby6waso0m"]
 
 [ext_resource type="Script" uid="uid://c2cwr7prfx3n8" path="res://addons/dialogic/Modules/Character/node_portrait_container.gd" id="1_4jxq7"]
 [ext_resource type="Script" uid="uid://cskayq8leq16b" path="res://assets/styles/TextboxWithPortrait/speaker_portrait_textbox_layer.gd" id="1_7jt4d"]

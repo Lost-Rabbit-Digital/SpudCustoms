@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bquja8jyk8kbr"]
+[gd_scene load_steps=17 format=3 uid="uid://csptvnbquja8j"]
 
 [ext_resource type="Script" uid="uid://bfprammnx3m0f" path="res://assets/styles/VisualNovelTextbox/vn_textbox_layer.gd" id="1_bpydr"]
 [ext_resource type="Script" uid="uid://gxkoycs0ebhy" path="res://assets/styles/VisualNovelTextbox/animations.gd" id="2_xy7a2"]
