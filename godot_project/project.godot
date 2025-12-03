@@ -51,6 +51,7 @@ ControllerManager="*res://scripts/autoload/ControllerManager.gd"
 SteamInputManager="*res://scripts/autoload/SteamInputManager.gd"
 VirtualCursor="*res://scripts/autoload/VirtualCursor.gd"
 InputGlyphManager="*res://scripts/autoload/InputGlyphManager.gd"
+TwitchIntegrationManager="*res://scripts/autoload/TwitchIntegrationManager.gd"
 
 [debug]
 
