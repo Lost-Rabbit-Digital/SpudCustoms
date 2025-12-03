@@ -262,8 +262,9 @@ func test_check_shift_tutorials_triggers_appropriate_tutorial() -> void:
 
 	assert_true(test_tutorial_started_called, "Tutorial should start for matching shift")
 	# Should be one of the shift 1 tutorials (welcome has priority 0, so it starts first)
+	# Note: border_runners is now on shift 2, rules_checking moved to shift 1
 	assert_true(
-		last_tutorial_id in ["welcome", "gate_control", "megaphone_call", "document_inspection", "stamp_usage", "border_runners", "strikes_and_quota"],
+		last_tutorial_id in ["welcome", "gate_control", "megaphone_call", "document_inspection", "rules_checking", "stamp_usage", "strikes_and_quota"],
 		"Should start a shift 1 tutorial"
 	)
 
@@ -280,12 +281,13 @@ func test_check_shift_tutorials_does_not_trigger_for_wrong_shift() -> void:
 
 func test_check_shift_tutorials_skips_completed_tutorials() -> void:
 	# Mark all shift 1 tutorials as completed
+	# Note: border_runners is now on shift 2, rules_checking moved to shift 1
 	tutorial_manager.mark_tutorial_completed("welcome")
 	tutorial_manager.mark_tutorial_completed("gate_control")
 	tutorial_manager.mark_tutorial_completed("megaphone_call")
 	tutorial_manager.mark_tutorial_completed("document_inspection")
+	tutorial_manager.mark_tutorial_completed("rules_checking")
 	tutorial_manager.mark_tutorial_completed("stamp_usage")
-	tutorial_manager.mark_tutorial_completed("border_runners")
 	tutorial_manager.mark_tutorial_completed("strikes_and_quota")
 
 	tutorial_manager.tutorial_started.connect(_on_tutorial_started)
@@ -933,5 +935,13 @@ func test_rules_checking_tutorial_structure() -> void:
 	var tutorial = tutorial_manager.TUTORIALS["rules_checking"]
 
 	assert_eq(tutorial["name"], "Immigration Rules", "Rules checking should have correct name")
-	assert_eq(tutorial["shift_trigger"], 2, "Rules checking should trigger on shift 2")
+	assert_eq(tutorial["shift_trigger"], 1, "Rules checking should trigger on shift 1")
 	assert_gt(tutorial["steps"].size(), 0, "Rules checking should have steps")
+
+
+func test_border_runners_tutorial_structure() -> void:
+	var tutorial = tutorial_manager.TUTORIALS["border_runners"]
+
+	assert_eq(tutorial["name"], "Border Runners", "Border runners should have correct name")
+	assert_eq(tutorial["shift_trigger"], 2, "Border runners should trigger on shift 2")
+	assert_gt(tutorial["steps"].size(), 0, "Border runners should have steps")

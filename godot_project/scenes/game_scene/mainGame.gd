@@ -2224,7 +2224,14 @@ func _on_dialogue_finished():
 	# Tell the border runner system dialogic mode is done
 	if border_runner_system:
 		border_runner_system.set_dialogic_mode(false)
-	border_runner_system.is_enabled = true
+		# Disable border runners on shift 1 to let players learn basics first
+		# Border runners are introduced in shift 2 tutorial
+		if current_shift == 1:
+			border_runner_system.is_enabled = false
+			border_runner_system.runner_chance = 0.0
+		else:
+			border_runner_system.is_enabled = true
+			border_runner_system.runner_chance = original_runner_chance
 	enable_controls()
 
 	var skip_buttons = get_tree().get_nodes_in_group("DialogueSkipButtons")

@@ -109,7 +109,7 @@ const TUTORIALS = {
 				"pause_game": false
 			},
 			{
-				"text": "[center][b]Making Your Decision[/b][/center]\n\nAfter reviewing the documents, you'll need to stamp them with your verdict. Let's learn how!",
+				"text": "[center][b]Check the Rules![/b][/center]\n\nBefore making your decision, you need to check the immigration rules. Let's learn about them!",
 				"target": null,
 				"highlight": false,
 				"duration": 3.0,
@@ -118,6 +118,27 @@ const TUTORIALS = {
 		],
 		"shift_trigger": 1,
 		"priority": 3
+	},
+	"rules_checking": {
+		"name": "Immigration Rules",
+		"steps": [
+			{
+				"text": "[center][b]Immigration Rules[/b][/center]\n\nLook at the rules panel on the left side. These rules tell you which potatoes to [color=green]APPROVE[/color] or [color=red]REJECT[/color].\n\nReject any potato that violates the current rules!",
+				"target": "RulesLabel",
+				"highlight": true,
+				"duration": 5.0,
+				"pause_game": false
+			},
+			{
+				"text": "[center][b]Stay Vigilant![/b][/center]\n\nRules change between shifts. Always check the current rules before making decisions.\n\nCompare passport information against active rules carefully.",
+				"target": null,
+				"highlight": false,
+				"duration": 3.5,
+				"pause_game": false
+			}
+		],
+		"shift_trigger": 1,
+		"priority": 4
 	},
 	"stamp_usage": {
 		"name": "Using the Stamps",
@@ -159,7 +180,7 @@ const TUTORIALS = {
 			}
 		],
 		"shift_trigger": 1,
-		"priority": 4
+		"priority": 5
 	},
 	"strikes_and_quota": {
 		"name": "Strikes and Quota",
@@ -173,7 +194,7 @@ const TUTORIALS = {
 			}
 		],
 		"shift_trigger": 1,
-		"priority": 5
+		"priority": 6
 	},
 	"border_runners": {
 		"name": "Border Runners",
@@ -190,27 +211,6 @@ const TUTORIALS = {
 				"target": null,
 				"highlight": false,
 				"duration": 4.0,
-				"pause_game": false
-			}
-		],
-		"shift_trigger": 1,
-		"priority": 6
-	},
-	"rules_checking": {
-		"name": "Immigration Rules",
-		"steps": [
-			{
-				"text": "[center][b]New Rules![/b][/center]\n\nAs you progress, new immigration rules will be introduced. Check the rules panel to see what's currently active.\n\nReject any potato that violates the rules!",
-				"target": "RulesLabel",
-				"highlight": true,
-				"duration": 4.0,
-				"pause_game": false
-			},
-			{
-				"text": "[center][b]Stay Vigilant![/b][/center]\n\nRules change between shifts. Always check the current rules before making decisions.\n\nCompare passport information against active rules carefully.",
-				"target": null,
-				"highlight": false,
-				"duration": 3.5,
 				"pause_game": false
 			}
 		],
