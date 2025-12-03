@@ -1,11 +1,12 @@
 extends HBoxContainer
-## Social buttons component for main menu with Discord and Steam links
+## Social buttons component for main menu with Discord, Steam, and Twitch links
 
 const DISCORD_URL = "https://discord.gg/Y7caBf7gBj"
 const STEAM_URL = "https://store.steampowered.com/developer/lostrabbitdigital"
 
 @onready var discord_button: TextureButton = $DiscordButton
 @onready var steam_button: TextureButton = $SteamButton
+@onready var twitch_button: TextureButton = $TwitchButton
 
 
 func _ready():
@@ -38,6 +39,8 @@ func _update_tooltips():
 		discord_button.tooltip_text = tr("social_discord_tooltip")
 	if steam_button:
 		steam_button.tooltip_text = tr("social_steam_tooltip")
+	if twitch_button:
+		twitch_button.tooltip_text = tr("social_twitch_tooltip")
 
 
 func _on_language_changed(_locale: String):
@@ -59,3 +62,13 @@ func _on_steam_button_pressed() -> void:
 		await JuicyButtons.setup_button(steam_button, STEAM_URL)
 	else:
 		OS.shell_open(STEAM_URL)
+
+
+func _on_twitch_button_pressed() -> void:
+	"""Open Twitch configuration panel"""
+	if JuicyButtons:
+		await JuicyButtons.setup_button(twitch_button, "")
+
+	# Open the Twitch config panel via TwitchIntegrationManager
+	if TwitchIntegrationManager:
+		TwitchIntegrationManager.show_config_panel()
