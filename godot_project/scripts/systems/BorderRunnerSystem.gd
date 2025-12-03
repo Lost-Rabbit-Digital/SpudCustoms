@@ -612,6 +612,8 @@ func handle_runner_escape(_runner: PotatoPerson):
 func _input(event):
 	if not is_enabled or is_in_dialogic:
 		return
+
+	# Handle mouse input for missiles
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			# Check if the click is within the missile zone
@@ -622,6 +624,40 @@ func _input(event):
 					launch_missile(event.position)
 					# Reset cooldown timer
 					missile_cooldown_timer = missile_cooldown
+					# Provide haptic feedback for controller
+					if ControllerManager and ControllerManager.is_controller_mode():
+						ControllerManager.rumble_medium()
+
+	# Handle controller input for missiles (RT or A button)
+	if event.is_action_pressed("controller_rt") or event.is_action_pressed("controller_accept"):
+		_handle_controller_fire()
+
+
+## Handle controller fire input - uses virtual cursor or right stick position
+func _handle_controller_fire() -> void:
+	if not is_enabled or is_in_dialogic:
+		return
+
+	# Check cooldown
+	if not unlimited_missiles and missile_cooldown_timer > 0:
+		return
+
+	# Get cursor position (virtual cursor for controller or mouse position)
+	var cursor_pos: Vector2
+	if VirtualCursor and VirtualCursor.is_visible:
+		cursor_pos = VirtualCursor.get_cursor_position()
+	else:
+		cursor_pos = get_viewport().get_mouse_position()
+
+	# Check if cursor is in missile zone
+	var missile_zone = get_missile_zone()
+	if missile_zone.has_point(cursor_pos):
+		launch_missile(cursor_pos)
+		missile_cooldown_timer = missile_cooldown
+
+		# Provide haptic feedback
+		if ControllerManager:
+			ControllerManager.rumble_medium()
 
 
 func _unhandled_input(_event):
