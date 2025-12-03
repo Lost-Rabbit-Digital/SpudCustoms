@@ -55,10 +55,8 @@ const TUTORIALS = {
 		"name": "Opening the Gate",
 		"steps": [
 			{
-				"text": "[center][b]Opening Your Booth[/b][/center]\n\nSee that lever? Click it to raise the shutter and open your booth for business!\n\n[color=yellow]Click the lever now.[/color]",
+				"text": "[center][b]Opening Your Booth[/b][/center]\n\nSee that lever? {interact} it to raise the shutter and open your booth for business!\n\n[color=yellow]{interact} the lever now.[/color]",
 				"target": "LeverButton",
-				"text": "{interact} the lever to open your booth for service",
-				"target": "booth_lever",
 				"highlight": true,
 				"wait_for_action": "lever_pulled",
 				"pause_game": false
@@ -78,10 +76,8 @@ const TUTORIALS = {
 		"name": "Calling Potatoes",
 		"steps": [
 			{
-				"text": "[center][b]Calling the Next Potato[/b][/center]\n\nUse the megaphone to call the next potato from the queue to your booth.\n\n[color=yellow]Click the megaphone![/color]",
+				"text": "[center][b]Calling the Next Potato[/b][/center]\n\nUse the megaphone to call the next potato from the queue to your booth.\n\n[color=yellow]{interact} the megaphone![/color]",
 				"target": "Megaphone",
-				"text": "{interact} the megaphone to call the next potato to your booth",
-				"target": "megaphone",
 				"highlight": true,
 				"wait_for_action": "megaphone_clicked",
 				"pause_game": false
@@ -101,17 +97,15 @@ const TUTORIALS = {
 		"name": "Inspecting Documents",
 		"steps": [
 			{
-				"text": "[center][b]Document Inspection[/b][/center]\n\nThe potato has handed you their passport. Drag it to your inspection table to examine it closely.\n\n[color=yellow]Drag the passport to the table.[/color]",
+				"text": "[center][b]Document Inspection[/b][/center]\n\nThe potato has handed you their passport. {drag} it to your inspection table to examine it closely.\n\n[color=yellow]{drag} the passport to the table.[/color]",
 				"target": "Passport",
 				"highlight": true,
 				"wait_for_action": "document_placed_on_table",
 				"pause_game": false
 			},
 			{
-				"text": "[center][b]Examining the Passport[/b][/center]\n\nClick on the passport to open it and review the potato's information:\n\n- Name and photo\n- Country of origin\n- Potato type and condition\n\nLook for anything suspicious!",
+				"text": "[center][b]Examining the Passport[/b][/center]\n\n{interact} the passport to open it and review the potato's information:\n\n- Name and photo\n- Country of origin\n- Potato type and condition\n\nLook for anything suspicious!",
 				"target": "Passport",
-				"text": "{drag} the passport from the booth to the inspection table",
-				"target": "inspection_table",
 				"highlight": true,
 				"wait_for_action": "passport_opened",
 				"pause_game": false
@@ -133,8 +127,6 @@ const TUTORIALS = {
 			{
 				"text": "[center][b]Immigration Rules[/b][/center]\n\nLook at the rules panel on the left side. These rules tell you which potatoes to [color=green]APPROVE[/color] or [color=red]REJECT[/color].\n\nReject any potato that violates the current rules!",
 				"target": "RulesLabel",
-				"text": "{interact} the stamp bar to reveal the approval and rejection stamps",
-				"target": "stamp_bar",
 				"highlight": true,
 				"duration": 5.0,
 				"pause_game": false
@@ -154,35 +146,29 @@ const TUTORIALS = {
 		"name": "Using the Stamps",
 		"steps": [
 			{
-				"text": "[center][b]The Stamp Bar[/b][/center]\n\nSee the stamp bar at the top? Click the handle to reveal your approval and rejection stamps.\n\n[color=yellow]Click to open the stamp bar.[/color]",
+				"text": "[center][b]The Stamp Bar[/b][/center]\n\nSee the stamp bar at the top? {interact} the handle to reveal your approval and rejection stamps.\n\n[color=yellow]{interact} to open the stamp bar.[/color]",
 				"target": "StampBarController",
-				"text": "{drag} the document under the green stamp to approve, or red stamp to reject",
-				"target": "stamp_area",
 				"highlight": true,
 				"wait_for_action": "stamp_bar_opened",
 				"pause_game": false
 			},
 			{
-				"text": "[center][b]Positioning for Stamping[/b][/center]\n\nDrag the passport under the stamps. You'll see a guide showing where to place it.\n\n[color=green]Green stamp[/color] = APPROVE\n[color=red]Red stamp[/color] = REJECT\n\n[color=yellow]Position the passport under a stamp.[/color]",
+				"text": "[center][b]Positioning for Stamping[/b][/center]\n\n{drag} the passport under the stamps. You'll see a guide showing where to place it.\n\n[color=green]Green stamp[/color] = APPROVE\n[color=red]Red stamp[/color] = REJECT\n\n[color=yellow]Position the passport under a stamp.[/color]",
 				"target": "Passport",
-				"text": "{interact} the stamp to mark the document",
-				"target": "stamp",
 				"highlight": true,
 				"wait_for_action": "document_under_stamp",
 				"pause_game": false
 			},
 			{
-				"text": "[center][b]Apply the Stamp![/b][/center]\n\nClick the stamp to mark the passport with your decision.\n\n[color=yellow]Click a stamp to apply it.[/color]",
+				"text": "[center][b]Apply the Stamp![/b][/center]\n\n{interact} the stamp to mark the passport with your decision.\n\n[color=yellow]{interact} a stamp to apply it.[/color]",
 				"target": "StampBarController",
 				"highlight": true,
 				"wait_for_action": "stamp_applied",
 				"pause_game": false
 			},
 			{
-				"text": "[center][b]Return the Documents[/b][/center]\n\nNow drag the stamped passport back to the potato to complete their processing.\n\n[color=yellow]Return the passport to the potato.[/color]",
+				"text": "[center][b]Return the Documents[/b][/center]\n\nNow {drag} the stamped passport back to the potato to complete their processing.\n\n[color=yellow]Return the passport to the potato.[/color]",
 				"target": "Passport",
-				"text": "{fire} on running potatoes to launch missiles and stop them",
-				"target": "runner_potato",
 				"highlight": true,
 				"wait_for_action": "document_returned",
 				"pause_game": false
@@ -221,13 +207,9 @@ const TUTORIALS = {
 				"highlight": false,
 				"duration": 4.0,
 				"pause_game": false
-				"text": "{interact} the X-ray button to scan potatoes for hidden items",
-				"target": "xray_button",
-				"highlight": true,
-				"wait_for_action": "xray_activated"
 			},
 			{
-				"text": "[center][b]Stopping Runners[/b][/center]\n\n[color=yellow]Click on running potatoes[/color] to launch a missile and stop them!\n\nBut be careful - don't shoot potatoes you've already approved, or you'll get a strike!",
+				"text": "[center][b]Stopping Runners[/b][/center]\n\n[color=yellow]{fire} on running potatoes[/color] to launch a missile and stop them!\n\nBut be careful - don't shoot potatoes you've already approved, or you'll get a strike!",
 				"target": null,
 				"highlight": false,
 				"duration": 4.0,
@@ -495,23 +477,6 @@ func _create_tutorial_ui():
 	bottom_row.add_child(continue_hint_label)
 
 	# Skip button
-		create_highlight_area(step["target"])
-
-	# Create tutorial text label
-	tutorial_label = Label.new()
-	tutorial_label.text = _format_tutorial_text(step["text"])
-	tutorial_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	tutorial_label.add_theme_font_size_override("font_size", 24)
-	tutorial_label.add_theme_color_override("font_color", Color.WHITE)
-
-	# Position label at top of screen
-	tutorial_label.position = Vector2(
-		get_viewport().get_visible_rect().size.x / 2 - 200, 50
-	)
-	tutorial_label.custom_minimum_size = Vector2(400, 80)
-	tutorial_overlay.add_child(tutorial_label)
-
-	# Add skip button if allowed
 	if can_skip_tutorials:
 		skip_button = Button.new()
 		skip_button.text = "Skip Tutorial"
