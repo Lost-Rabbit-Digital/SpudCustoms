@@ -2448,10 +2448,10 @@ func load_tracks():
 		"res://assets/music/ambient_wonderful_main.mp3",
 		"res://assets/music/horror_fog_main.mp3",
 		"res://assets/music/opening_wonderlust_intensity.wav",
-		"res://assets/audio/music/background_music_1.mp3",
-		"res://assets/audio/music/background_music_2.mp3",
-		"res://assets/audio/music/background_music_3.mp3",
-		"res://assets/audio/music/background_music_4.mp3"
+		"res://assets/music/background_music_1.mp3",
+		"res://assets/music/background_music_2.mp3",
+		"res://assets/music/background_music_3.mp3",
+		"res://assets/music/background_music_4.mp3"
 	]
 
 

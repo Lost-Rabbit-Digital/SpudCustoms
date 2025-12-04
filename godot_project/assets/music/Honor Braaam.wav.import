@@ -7,7 +7,7 @@ path="res://.godot/imported/Honor Braaam.wav-336485c2c4a8aa380efb6984f1befb75.sa
 
 [deps]
 
-source_file="res://assets/audio/music/Honor Braaam.wav"
+source_file="res://assets/music/Honor Braaam.wav"
 dest_files=["res://.godot/imported/Honor Braaam.wav-336485c2c4a8aa380efb6984f1befb75.sample"]
 
 [params]
