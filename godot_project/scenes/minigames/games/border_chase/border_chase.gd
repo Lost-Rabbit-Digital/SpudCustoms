@@ -204,6 +204,7 @@ func _spawn_item() -> void:
 	# Clickable area
 	var click_area = Area2D.new()
 	click_area.name = "ClickArea"
+	click_area.input_pickable = true  # Enable physics picking for mouse input
 	var collision = CollisionShape2D.new()
 	var shape = RectangleShape2D.new()
 	shape.size = Vector2(60, 60)
