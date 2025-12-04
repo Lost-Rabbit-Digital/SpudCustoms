@@ -3,21 +3,18 @@ audio music "res://assets/music/narrative/horror_hallways_main.mp3" [fade="2.0" 
 [background arg="res://assets/narrative/checkpoint_exterior.png" fade="0.0"]
 audio "res://assets/audio/ambient/1_birds_outside.wav" [volume="-15.0" bus="Ambient"]
 join narrator [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 narrator: Another day at the checkpoint. The line of potatoes stretches longer than ever, with everyone on edge. #id:78
 leave narrator
 
 [background arg="res://assets/narrative/customs_office.png" fade="1.5"]
 audio "res://assets/audio/furniture/Door Open C.wav" [volume="-8.0" bus="SFX"]
 join supervisor_russet [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 supervisor_russet: New orders from the top. We're [wave amp=15 freq=3][color=DARK_ORANGE]doubling rejections[/color][/wave]. Any potato deemed unsafe is detained immediately. #id:79
 leave supervisor_russet
 
 [background arg="res://assets/narrative/checkpoint_interior.png" fade="2.0"]
 audio "res://assets/audio/footsteps/Metal Walk 1_2.mp3" [volume="-10.0" bus="SFX"]
 join supervisor_russet [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 supervisor_russet: I have a special assignment. We've got intel on [pulse freq=2][color=CRIMSON]troublemakers[/color][/pulse]. Be vigilant with your inspections. #id:7a
 
 set {scanner_response} = "none"
@@ -28,20 +25,16 @@ set {scanner_response} = "none"
 
 if {scanner_response} == "loyal":
 	join supervisor_russet [z_index="1"]
-	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 	supervisor_russet: Good. I knew I could count on you. You'll go far with that attitude. #id:7d
 	leave supervisor_russet
 else:
 	join supervisor_russet [z_index="1"]
-	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 	supervisor_russet: The kind that [color=CRIMSON]threaten our way of life[/color]. Don't ask too many questions if you know what's good for you. #id:7e
 	leave supervisor_russet
 
 [background arg="res://assets/narrative/checkpoint_booth.png" fade="1.2"]
 join npc_3 [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 npc_3: [color=STEEL_BLUE]Please, I beg you![/color] My wife was supposed to be right behind me, but she [tornado radius=2 freq=3]never made it through customs[/tornado]. #id:7f
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 npc_3: No one will tell me what happened to her. Please, [color=CHARTREUSE]help me find her![/color] #id:80
 
 set {family_response} = "none"
@@ -51,16 +44,13 @@ set {family_response} = "none"
 	set {family_response} = "help"
 
 if {family_response} == "refuse":
-	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 	npc_3: Just like all the others... [color=STEEL_BLUE]May your conscience weigh heavy as mine does.[/color] #id:83
 	leave npc_3
 else:
-	audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 	npc_3: Thank you! Even a small hope is better than none. Here's her photo. Please find her. #id:84
 	leave npc_3
 
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="1.2"]
 join supervisor_russet [z_index="1"]
-audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 supervisor_russet: I saw that exchange. [color=DARK_ORANGE]Sympathizing with rejects only leads to trouble.[/color] Stay focused on your duty. #id:85
 leave supervisor_russet

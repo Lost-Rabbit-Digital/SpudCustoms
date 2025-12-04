@@ -5,8 +5,7 @@
 [ext_resource type="Script" uid="uid://b1stj4ljd2vo7" path="res://addons/dialogic/Modules/Choice/node_button_sound.gd" id="2_mgko6"]
 [ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="3_mql8i"]
 [ext_resource type="AudioStream" uid="uid://c2viukvbub6v6" path="res://addons/dialogic/Example Assets/sound-effects/typing4.wav" id="4_420fr"]
-
-[sub_resource type="AudioStream" id="AudioStream_pe27w"]
+[ext_resource type="AudioStream" uid="uid://dwxqcsmq2v6yi" path="res://addons/dialogic/Example Assets/sound-effects/typing3.wav" id="5_focus"]
 
 [node name="VN_ChoiceLayer" type="Control"]
 layout_mode = 3
@@ -40,4 +39,4 @@ unique_name_in_owner = true
 script = ExtResource("2_mgko6")
 sound_pressed = ExtResource("3_mql8i")
 sound_hover = ExtResource("4_420fr")
-sound_focus = SubResource("AudioStream_pe27w")
+sound_focus = ExtResource("5_focus")
