@@ -204,6 +204,7 @@ func _spawn_item() -> void:
 	# Clickable area
 	var click_area = Area2D.new()
 	click_area.name = "ClickArea"
+	click_area.input_pickable = true  # Enable physics picking for mouse input
 	var collision = CollisionShape2D.new()
 	var shape = RectangleShape2D.new()
 	shape.size = Vector2(60, 60)
@@ -304,15 +305,52 @@ func _on_item_clicked(viewport: Node, event: InputEvent, shape_idx: int, item: N
 	item.set_meta("caught", true)
 
 	if is_contraband:
-		# Correct catch!
+		# Correct catch! Punt it off screen satisfyingly
 		_caught_count += 1
-		_flash_item(item, Color.GREEN)
+		_punt_item(item)
 		_play_sound(_snd_item_grab, 0.0, randf_range(0.95, 1.05))
 	else:
 		# Clicked a safe item - small penalty feedback but nothing harsh
 		_flash_item(item, Color.ORANGE)
 
 	_update_score_display()
+
+
+func _punt_item(item: Node2D) -> void:
+	## Punt the contraband off screen with a satisfying tumble effect
+	if not is_instance_valid(item):
+		return
+
+	# Random punt direction - mostly upward, slightly left or right
+	var punt_direction = Vector2(randf_range(-150, 150), randf_range(-400, -250))
+	var target_pos = item.position + punt_direction
+	var spin_amount = randf_range(-720, 720)  # 1-2 full rotations either direction
+
+	var tween = create_tween()
+	tween.set_parallel(true)
+
+	# Flash green on impact
+	tween.tween_property(item, "modulate", Color.GREEN, 0.05)
+
+	# Launch upward with slight arc (ease out for natural arc feel)
+	tween.tween_property(item, "position", target_pos, 0.4).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+
+	# Tumble rotation
+	tween.tween_property(item, "rotation_degrees", spin_amount, 0.4).set_ease(Tween.EASE_OUT)
+
+	# Scale up slightly on impact, then shrink as it flies away
+	tween.tween_property(item, "scale", Vector2(1.3, 1.3), 0.1).set_ease(Tween.EASE_OUT)
+	tween.chain().tween_property(item, "scale", Vector2(0.3, 0.3), 0.3).set_ease(Tween.EASE_IN)
+
+	# Fade out near the end
+	tween.chain().tween_property(item, "modulate:a", 0.0, 0.15)
+
+	# Clean up after animation
+	tween.chain().tween_callback(func():
+		if is_instance_valid(item):
+			item.queue_free()
+			_active_items.erase(item)
+	)
 
 
 func _flash_item(item: Node2D, color: Color) -> void:
