@@ -7,6 +7,21 @@ extends MinigameContainer
 ##
 ## Unlocks: Shift 5+
 
+# Audio assets
+var _snd_conveyor_loop = preload("res://assets/audio/minigames/border_chase_conveyor_loop.mp3")
+var _snd_item_grab = preload("res://assets/audio/minigames/border_chase_item_grab.mp3")
+var _snd_item_miss = preload("res://assets/audio/minigames/border_chase_item_miss.mp3")
+var _snd_item_pass = preload("res://assets/audio/minigames/border_chase_item_pass.mp3")
+
+# Texture assets (preloaded for future use)
+var _tex_conveyor_belt = preload("res://assets/minigames/textures/border_chase_conveyor_belt.png")
+var _tex_approved_items = preload("res://assets/minigames/textures/border_chase_approved_items.png")
+var _tex_contraband_items = preload("res://assets/minigames/textures/border_chase_contraband_items.png")
+var _tex_scanner_frame = preload("res://assets/minigames/textures/border_chase_scanner_frame.png")
+
+# Conveyor loop audio player
+var _conveyor_loop_player: AudioStreamPlayer
+
 ## Number of items to catch
 @export var items_to_catch: int = 5
 
@@ -31,6 +46,33 @@ var _active_items: Array[Node2D] = []
 var _game_running: bool = false
 
 
+func _play_sound(sound: AudioStream, volume_db: float = 0.0, pitch: float = 1.0) -> void:
+	if audio_player and sound:
+		audio_player.stream = sound
+		audio_player.volume_db = volume_db
+		audio_player.pitch_scale = pitch
+		audio_player.play()
+
+
+func _setup_conveyor_loop_audio() -> void:
+	# Create a separate audio player for the conveyor loop sound
+	_conveyor_loop_player = AudioStreamPlayer.new()
+	_conveyor_loop_player.stream = _snd_conveyor_loop
+	_conveyor_loop_player.volume_db = -12.0
+	_conveyor_loop_player.bus = "SFX"
+	add_child(_conveyor_loop_player)
+
+
+func _start_conveyor_loop() -> void:
+	if _conveyor_loop_player and not _conveyor_loop_player.playing:
+		_conveyor_loop_player.play()
+
+
+func _stop_conveyor_loop() -> void:
+	if _conveyor_loop_player and _conveyor_loop_player.playing:
+		_conveyor_loop_player.stop()
+
+
 func _ready() -> void:
 	super._ready()
 	minigame_type = "border_chase"
@@ -51,6 +93,10 @@ func _on_minigame_start(config: Dictionary) -> void:
 	_spawn_timer = 0.0
 	_active_items.clear()
 	_game_running = true
+
+	# Setup and start conveyor audio
+	_setup_conveyor_loop_audio()
+	_start_conveyor_loop()
 
 	if config.has("items_to_catch"):
 		items_to_catch = config.items_to_catch
@@ -221,6 +267,10 @@ func _update_items(delta: float) -> void:
 			if is_contraband and not was_caught:
 				_missed_count += 1
 				_update_score_display()
+				_play_sound(_snd_item_miss, 0.0)
+			elif not is_contraband and not was_caught:
+				# Good item passed successfully
+				_play_sound(_snd_item_pass, -5.0, randf_range(0.95, 1.05))
 
 			items_to_remove.append(item)
 
@@ -257,6 +307,7 @@ func _on_item_clicked(viewport: Node, event: InputEvent, shape_idx: int, item: N
 		# Correct catch!
 		_caught_count += 1
 		_flash_item(item, Color.GREEN)
+		_play_sound(_snd_item_grab, 0.0, randf_range(0.95, 1.05))
 	else:
 		# Clicked a safe item - small penalty feedback but nothing harsh
 		_flash_item(item, Color.ORANGE)
@@ -286,6 +337,12 @@ func _update_score_display() -> void:
 
 func _complete_game() -> void:
 	_game_running = false
+
+	# Stop conveyor loop audio
+	_stop_conveyor_loop()
+	if _conveyor_loop_player:
+		_conveyor_loop_player.queue_free()
+		_conveyor_loop_player = null
 
 	var base_score = _caught_count * points_per_catch
 	var bonus = perfect_bonus if _caught_count >= items_to_catch and _missed_count == 0 else 0

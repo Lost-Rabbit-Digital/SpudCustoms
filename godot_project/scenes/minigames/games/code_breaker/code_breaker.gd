@@ -8,6 +8,20 @@ extends MinigameContainer
 ##
 ## Unlocks: Shift 4+
 
+# Audio assets
+var _snd_digit_input = preload("res://assets/audio/minigames/code_breaker_digit_input.mp3")
+var _snd_submit = preload("res://assets/audio/minigames/code_breaker_submit.mp3")
+var _snd_correct_position = preload("res://assets/audio/minigames/code_breaker_correct_position.mp3")
+var _snd_wrong_position = preload("res://assets/audio/minigames/code_breaker_wrong_position.mp3")
+var _snd_incorrect_digit = preload("res://assets/audio/minigames/code_breaker_incorrect_digit.mp3")
+var _snd_cracked = preload("res://assets/audio/minigames/code_breaker_cracked.mp3")
+
+# Texture assets (preloaded for future use)
+var _tex_terminal_frame = preload("res://assets/minigames/textures/code_breaker_terminal_frame.png")
+var _tex_keypad_buttons = preload("res://assets/minigames/textures/code_breaker_keypad_buttons.png")
+var _tex_feedback_dots = preload("res://assets/minigames/textures/code_breaker_feedback_dots.png")
+var _tex_lock_animation = preload("res://assets/minigames/textures/code_breaker_lock_animation.png")
+
 ## Number of digits in the code
 @export var code_length: int = 4
 
@@ -27,6 +41,14 @@ var _current_input: Array[int] = []
 var _digit_buttons: Array[Button] = []
 var _input_display: Array[Label] = []
 var _history_container: VBoxContainer
+
+
+func _play_sound(sound: AudioStream, volume_db: float = 0.0, pitch: float = 1.0) -> void:
+	if audio_player and sound:
+		audio_player.stream = sound
+		audio_player.volume_db = volume_db
+		audio_player.pitch_scale = pitch
+		audio_player.play()
 
 
 func _ready() -> void:
@@ -165,6 +187,9 @@ func _on_digit_pressed(digit: int) -> void:
 	if _current_input.size() < code_length:
 		_current_input.append(digit)
 		_update_input_display()
+		# Pitch increases as more digits are entered
+		var pitch = 0.9 + (_current_input.size() * 0.1)
+		_play_sound(_snd_digit_input, -3.0, pitch)
 
 
 func _on_clear_pressed() -> void:
@@ -179,6 +204,7 @@ func _on_submit_pressed() -> void:
 	if _current_input.size() != code_length:
 		return
 
+	_play_sound(_snd_submit, 0.0)
 	_current_attempt += 1
 
 	# Check the guess
@@ -187,10 +213,16 @@ func _on_submit_pressed() -> void:
 	# Add to history
 	_add_history_entry(_current_input, result)
 
-	# Check win condition
+	# Play feedback sound based on result
 	if result.correct_position == code_length:
 		_code_cracked()
 		return
+	elif result.correct_position > 0:
+		_play_sound(_snd_correct_position, 0.0, 1.0 + result.correct_position * 0.05)
+	elif result.correct_digit > 0:
+		_play_sound(_snd_wrong_position, 0.0)
+	else:
+		_play_sound(_snd_incorrect_digit, 0.0)
 
 	# Check lose condition
 	if _current_attempt >= max_attempts:
@@ -290,6 +322,8 @@ func _add_history_entry(guess: Array[int], result: Dictionary) -> void:
 
 
 func _code_cracked() -> void:
+	_play_sound(_snd_cracked, 0.0)
+
 	var attempts_saved = max_attempts - _current_attempt
 	var total_score = base_points + (attempts_saved * points_per_attempt_saved)
 

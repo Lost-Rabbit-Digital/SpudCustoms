@@ -7,6 +7,20 @@ extends MinigameContainer
 ##
 ## Unlocks: Shift 3+
 
+# Audio assets
+var _snd_hover = preload("res://assets/audio/minigames/fingerprint_match_hover.mp3")
+var _snd_scan = preload("res://assets/audio/minigames/fingerprint_match_scan.mp3")
+var _snd_correct = preload("res://assets/audio/minigames/fingerprint_match_correct.mp3")
+var _snd_incorrect = preload("res://assets/audio/minigames/fingerprint_match_incorrect.mp3")
+var _snd_round_complete = preload("res://assets/audio/minigames/fingerprint_match_round_complete.mp3")
+
+# Texture assets (preloaded for future use)
+var _tex_cards = preload("res://assets/minigames/textures/fingerprint_match_cards.png")
+var _tex_cards_1 = preload("res://assets/minigames/textures/fingerprint_match_cards_1.png")
+var _tex_indicators = preload("res://assets/minigames/textures/fingerprint_match_indictators.png")
+var _tex_reference_frame = preload("res://assets/minigames/textures/fingerprint_match_reference_frame.png")
+var _tex_scanner_frame = preload("res://assets/minigames/textures/fingerprint_match_scanner_frame.png")
+
 ## Number of fingerprints in the grid (including the correct one)
 @export var grid_size: int = 6
 
@@ -25,6 +39,14 @@ var _correct_matches: int = 0
 var _reference_pattern: int = 0
 var _correct_index: int = 0
 var _fingerprint_buttons: Array[Button] = []
+
+
+func _play_sound(sound: AudioStream, volume_db: float = 0.0, pitch: float = 1.0) -> void:
+	if audio_player and sound:
+		audio_player.stream = sound
+		audio_player.volume_db = volume_db
+		audio_player.pitch_scale = pitch
+		audio_player.play()
 
 
 func _ready() -> void:
@@ -236,12 +258,14 @@ func _on_fingerprint_selected(index: int) -> void:
 		return
 
 	var btn = _fingerprint_buttons[index]
+	_play_sound(_snd_scan, -3.0)
 
 	if index == _correct_index:
 		# Correct match!
 		_correct_matches += 1
 		_current_match += 1
 		btn.modulate = Color.GREEN
+		_play_sound(_snd_correct, 0.0)
 
 		# Disable all buttons briefly
 		for b in _fingerprint_buttons:
@@ -252,6 +276,8 @@ func _on_fingerprint_selected(index: int) -> void:
 		if _current_match >= matches_to_complete:
 			_complete_game()
 		else:
+			# Play round complete sound
+			_play_sound(_snd_round_complete, 0.0)
 			# Next round after delay
 			await get_tree().create_timer(0.5).timeout
 			if _is_active:
@@ -260,6 +286,7 @@ func _on_fingerprint_selected(index: int) -> void:
 		# Wrong - visual feedback but no harsh penalty
 		btn.modulate = Color(1, 0.5, 0.5)
 		btn.disabled = true
+		_play_sound(_snd_incorrect, 0.0)
 
 
 func _update_progress() -> void:

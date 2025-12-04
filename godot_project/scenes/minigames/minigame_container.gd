@@ -13,6 +13,26 @@ extends CanvasLayer
 ## - "Failure" = no penalty, just miss the bonus
 ## - Always feel fair and achievable
 
+# General minigame audio assets
+var _snd_success_options = [
+	preload("res://assets/audio/minigames/minigame_success_fanfare.mp3"),
+	preload("res://assets/audio/minigames/minigame_success_chiptune.mp3"),
+	preload("res://assets/audio/minigames/minigame_success_cashregister.mp3")
+]
+var _snd_timeout_options = [
+	preload("res://assets/audio/minigames/minigame_timeout_clock.mp3"),
+	preload("res://assets/audio/minigames/minigame_timeout_trombone.mp3"),
+	preload("res://assets/audio/minigames/minigame_timeout_whomp.mp3")
+]
+var _snd_music_fast = preload("res://assets/audio/minigames/minigame_music_fast.mp3")
+var _snd_music_slow = preload("res://assets/audio/minigames/minigame_music_slow.mp3")
+
+# General minigame UI texture assets (preloaded for future use)
+var _tex_ui_timer_bar = preload("res://assets/minigames/textures/minigame_ui_timer_bar.png")
+var _tex_ui_score_frame = preload("res://assets/minigames/textures/minigame_ui_score_frame.png")
+var _tex_ui_result_success = preload("res://assets/minigames/textures/minigame_ui_result_splash_success.png")
+var _tex_ui_result_failure = preload("res://assets/minigames/textures/minigame_ui_result_splash_failure.png")
+
 ## Emitted when minigame completes (success or skip)
 signal minigame_completed(result: Dictionary)
 
@@ -132,9 +152,10 @@ func complete_success(bonus_score: int = 0, extra_data: Dictionary = {}) -> void
 	_result.time_taken = time_limit - _time_remaining if time_limit > 0 else 0.0
 	_result.merge(extra_data)
 
-	# Play success sound
-	if audio_player and success_sound:
-		audio_player.stream = success_sound
+	# Play a random success sound
+	if audio_player and _snd_success_options.size() > 0:
+		var random_success = _snd_success_options[randi() % _snd_success_options.size()]
+		audio_player.stream = random_success
 		audio_player.play()
 
 	# Call subclass cleanup
@@ -154,9 +175,10 @@ func _on_time_up() -> void:
 	_result.score_bonus = 0
 	_result.time_taken = time_limit
 
-	# Play timeout sound (friendly, not punishing)
-	if audio_player and timeout_sound:
-		audio_player.stream = timeout_sound
+	# Play a random timeout sound (friendly, not punishing)
+	if audio_player and _snd_timeout_options.size() > 0:
+		var random_timeout = _snd_timeout_options[randi() % _snd_timeout_options.size()]
+		audio_player.stream = random_timeout
 		audio_player.play()
 
 	# Show encouraging message

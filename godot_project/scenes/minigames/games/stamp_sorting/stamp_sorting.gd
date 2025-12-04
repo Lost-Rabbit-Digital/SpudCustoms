@@ -7,6 +7,21 @@ extends MinigameContainer
 ##
 ## Unlocks: Shift 2+
 
+# Audio assets
+var _snd_grab = preload("res://assets/audio/minigames/stamp_sorting_grab.mp3")
+var _snd_drop = preload("res://assets/audio/minigames/stamp_sorting_drop.mp3")
+var _snd_correct = preload("res://assets/audio/minigames/stamp_sorting_correct.mp3")
+var _snd_wrong = preload("res://assets/audio/minigames/stamp_sorting_wrong.mp3")
+var _snd_falling = preload("res://assets/audio/minigames/stamp_sorting_falling.mp3")
+
+# Texture assets (preloaded for future use)
+var _tex_approved_stamp = preload("res://assets/minigames/textures/stamp_sorting_approved_stamp.png")
+var _tex_denied_stamp = preload("res://assets/minigames/textures/stamp_sorting_denied_stamp.png")
+var _tex_bins = preload("res://assets/minigames/textures/stamp_sorting_bins.png")
+var _tex_desk_background = preload("res://assets/minigames/textures/stamp_sorting_desk_background.png")
+var _tex_falling_animation = preload("res://assets/minigames/textures/stamp_sorting_falling_animation.png")
+var _tex_falling_animation_2 = preload("res://assets/minigames/textures/stamp_sorting_falling_animation_2.png")
+
 ## Number of stamps to sort
 @export var stamps_to_sort: int = 8
 
@@ -30,6 +45,14 @@ var _drag_offset: Vector2 = Vector2.ZERO
 # Bins
 var _approved_bin: Rect2
 var _denied_bin: Rect2
+
+
+func _play_sound(sound: AudioStream, volume_db: float = 0.0, pitch: float = 1.0) -> void:
+	if audio_player and sound:
+		audio_player.stream = sound
+		audio_player.volume_db = volume_db
+		audio_player.pitch_scale = pitch
+		audio_player.play()
 
 
 func _ready() -> void:
@@ -164,9 +187,11 @@ func _input(event: InputEvent) -> void:
 			if stamp_rect.has_point(local_pos):
 				_is_dragging = true
 				_drag_offset = _current_stamp.position - local_pos
+				_play_sound(_snd_grab, -5.0, randf_range(0.95, 1.05))
 		else:
 			if _is_dragging:
 				_is_dragging = false
+				_play_sound(_snd_drop, -5.0, randf_range(0.95, 1.05))
 				_check_drop(local_pos)
 
 	elif event is InputEventMouseMotion and _is_dragging:
@@ -198,9 +223,11 @@ func _sort_stamp(correct: bool) -> void:
 		# Quick feedback
 		if _current_stamp:
 			_current_stamp.modulate = Color.GREEN
+		_play_sound(_snd_correct, 0.0, randf_range(0.98, 1.02))
 	else:
 		if _current_stamp:
 			_current_stamp.modulate = Color.RED
+		_play_sound(_snd_wrong, 0.0, randf_range(0.98, 1.02))
 
 	# Update progress
 	var progress = subviewport.get_node_or_null("Progress")
