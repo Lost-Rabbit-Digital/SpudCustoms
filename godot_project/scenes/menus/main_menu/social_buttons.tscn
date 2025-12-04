@@ -1,45 +1,54 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2hwmqvp5r8jn"]
+[gd_scene load_steps=11 format=3 uid="uid://b2hwmqvp5r8jn"]
 
 [ext_resource type="Script" path="res://scripts/ui/social_buttons.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://bwpg7ia7hiyk0" path="res://assets/user_interface/social_icons/16x16/Discord.png" id="2_discord"]
-[ext_resource type="Texture2D" uid="uid://bv47rc4bxekxy" path="res://assets/user_interface/social_icons/16x16_outline/Discord.png" id="3_discord_hover"]
-[ext_resource type="Texture2D" uid="uid://dpp44t5xrsvhm" path="res://assets/user_interface/social_icons/16x16/Steam.png" id="4_steam"]
-[ext_resource type="Texture2D" uid="uid://dd4s43oi4ckbg" path="res://assets/user_interface/social_icons/16x16_outline/Steam.png" id="5_steam_hover"]
-[ext_resource type="Texture2D" uid="uid://diu4ji20rlbq8" path="res://assets/user_interface/social_icons/16x16/Twitch.png" id="6_twitch"]
-[ext_resource type="Texture2D" uid="uid://cdq6m453ti2xb" path="res://assets/user_interface/social_icons/16x16_outline/Twitch.png" id="7_twitch_hover"]
+[ext_resource type="Texture2D" uid="uid://bk2w6tjl7yqxp" path="res://assets/sprites/social_icons/discord_icon_normal.png" id="2_discord"]
+[ext_resource type="Texture2D" uid="uid://bjokq7yyqgvwi" path="res://assets/sprites/social_icons/discord_icon_hovered.png" id="3_discord_hover"]
+[ext_resource type="Texture2D" uid="uid://c4kwybsbpfmxy" path="res://assets/sprites/social_icons/discord_icon_pressed.png" id="4_discord_pressed"]
+[ext_resource type="Texture2D" uid="uid://c06shsml2qkww" path="res://assets/sprites/social_icons/steam_icon_normal.png" id="5_steam"]
+[ext_resource type="Texture2D" uid="uid://dn72vkd1tqlbu" path="res://assets/sprites/social_icons/steam_icon_hovered.png" id="6_steam_hover"]
+[ext_resource type="Texture2D" uid="uid://c7hgxh23exeaw" path="res://assets/sprites/social_icons/steam_icon_pressed.png" id="7_steam_pressed"]
+[ext_resource type="Texture2D" uid="uid://cjb0kl00lpk3g" path="res://assets/sprites/social_icons/twitch_ui_icon_normal.png" id="8_twitch"]
+[ext_resource type="Texture2D" uid="uid://dxxecvo4a5n4d" path="res://assets/sprites/social_icons/twitch_ui_icon_hovered.png" id="9_twitch_hover"]
+[ext_resource type="Texture2D" uid="uid://bqw6s1g5mgtdc" path="res://assets/sprites/social_icons/twitch_ui_icon_pressed.png" id="10_twitch_pressed"]
 
 [node name="SocialButtons" type="HBoxContainer"]
-custom_minimum_size = Vector2(96, 32)
+custom_minimum_size = Vector2(180, 48)
 script = ExtResource("1_script")
-theme_override_constants/separation = 16
+theme_override_constants/separation = 12
 alignment = 1
 
 [node name="DiscordButton" type="TextureButton" parent="."]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(32, 32)
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 tooltip_text = "Join our Discord!"
 texture_normal = ExtResource("2_discord")
+texture_pressed = ExtResource("4_discord_pressed")
 texture_hover = ExtResource("3_discord_hover")
-stretch_mode = 0
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="SteamButton" type="TextureButton" parent="."]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(32, 32)
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 tooltip_text = "Visit us on Steam"
-texture_normal = ExtResource("4_steam")
-texture_hover = ExtResource("5_steam_hover")
-stretch_mode = 0
+texture_normal = ExtResource("5_steam")
+texture_pressed = ExtResource("7_steam_pressed")
+texture_hover = ExtResource("6_steam_hover")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="TwitchButton" type="TextureButton" parent="."]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(32, 32)
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 tooltip_text = "Twitch Integration"
-texture_normal = ExtResource("6_twitch")
-texture_hover = ExtResource("7_twitch_hover")
-stretch_mode = 0
+texture_normal = ExtResource("8_twitch")
+texture_pressed = ExtResource("10_twitch_pressed")
+texture_hover = ExtResource("9_twitch_hover")
+ignore_texture_size = true
+stretch_mode = 5
 
 [connection signal="pressed" from="DiscordButton" to="." method="_on_discord_button_pressed"]
 [connection signal="pressed" from="SteamButton" to="." method="_on_steam_button_pressed"]
