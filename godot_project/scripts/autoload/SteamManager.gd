@@ -587,6 +587,14 @@ func _clear_pending_leaderboard_operations(prefix: String = "leaderboard_"):
 			pending_operations.remove_at(i)
 
 
+# Helper to set achievement and emit EventBus signal
+func _unlock_achievement(achievement_id: String) -> void:
+	Steam.setAchievement(achievement_id)
+	if EventBus:
+		EventBus.achievement_unlocked.emit(achievement_id)
+	LogManager.write_steam("Achievement unlocked: " + achievement_id)
+
+
 # Achievement handling
 func check_achievements(
 	total_shifts_completed: int,
@@ -609,33 +617,31 @@ func check_achievements(
 
 	# First shift completion (was checking == 1, should be >= 1)
 	if total_shifts_completed >= 1:
-		Steam.setAchievement(ACHIEVEMENTS.ROOKIE_OFFICER)
-		LogManager.write_steam("Setting ROOKIE_OFFICER achievement")
+		_unlock_achievement(ACHIEVEMENTS.ROOKIE_OFFICER)
 
 	# Shift milestones
 	if total_shifts_completed >= 10:
-		Steam.setAchievement(ACHIEVEMENTS.VETERAN_OFFICER)
+		_unlock_achievement(ACHIEVEMENTS.VETERAN_OFFICER)
 	if total_shifts_completed >= 25:
-		Steam.setAchievement(ACHIEVEMENTS.MASTER_OFFICER)
+		_unlock_achievement(ACHIEVEMENTS.MASTER_OFFICER)
 
 	# Runner achievements
 	if total_runners_stopped >= 10:
-		Steam.setAchievement(ACHIEVEMENTS.SHARPSHOOTER)
+		_unlock_achievement(ACHIEVEMENTS.SHARPSHOOTER)
 	if total_runners_stopped >= 50:
-		Steam.setAchievement(ACHIEVEMENTS.BORDER_DEFENDER)
+		_unlock_achievement(ACHIEVEMENTS.BORDER_DEFENDER)
 	if perfect_hits >= 5:
-		Steam.setAchievement(ACHIEVEMENTS.PERFECT_SHOT)
+		_unlock_achievement(ACHIEVEMENTS.PERFECT_SHOT)
 
 	# Score achievements
 	if score >= 10000:
-		Steam.setAchievement(ACHIEVEMENTS.HIGH_SCORER)
+		_unlock_achievement(ACHIEVEMENTS.HIGH_SCORER)
 	if score >= 50000:
-		Steam.setAchievement(ACHIEVEMENTS.SCORE_LEGEND)
+		_unlock_achievement(ACHIEVEMENTS.SCORE_LEGEND)
 
 	# Story completion achievement
 	if current_story_state >= 11:
-		Steam.setAchievement(ACHIEVEMENTS.SAVIOR_OF_SPUD)
-		LogManager.write_steam("Setting SAVIOR_OF_SPUD achievement")
+		_unlock_achievement(ACHIEVEMENTS.SAVIOR_OF_SPUD)
 
 	# CRITICAL: Actually store the achievements with Steam
 	Steam.storeStats()

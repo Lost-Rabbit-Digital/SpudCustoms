@@ -111,6 +111,10 @@ func _ready() -> void:
 	# Set process mode to always process (even when paused)
 	process_mode = Node.PROCESS_MODE_ALWAYS
 
+	# Subscribe to EventBus haptic feedback requests
+	if EventBus:
+		EventBus.haptic_feedback_requested.connect(_on_haptic_feedback_requested)
+
 	LogManager.write_info("ControllerManager initialized")
 	LogManager.write_info("Connected controllers: " + str(connected_controllers.size()))
 
@@ -367,6 +371,17 @@ func rumble_pulse(count: int = 3, interval: float = 0.1) -> void:
 	for i in range(count):
 		rumble(0.4, 0.3, interval * 0.5)
 		await get_tree().create_timer(interval).timeout
+
+
+## EventBus handler for haptic feedback requests
+## Converts intensity (0.0-1.0) to appropriate rumble levels
+func _on_haptic_feedback_requested(intensity: float, duration: float) -> void:
+	if not rumble_enabled:
+		return
+	# Scale intensity to weak/strong magnitudes
+	var weak = intensity * 0.5
+	var strong = intensity * 0.8
+	rumble(weak, strong, duration)
 
 # ============================================================================
 # INPUT HELPERS

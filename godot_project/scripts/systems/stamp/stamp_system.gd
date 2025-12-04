@@ -45,9 +45,8 @@ func _init(audio: AudioStreamPlayer2D, shake_func: Callable):
 	audio_player = audio
 	shake_callback = shake_func
 
-	# Load stamp sounds
-	for i in range(1, 6):
-		stamp_sounds.append("res://assets/audio/mechanical/stamp_sound_" + str(i) + ".mp3")
+	# Load stamp sounds - only stamp_sound_1.mp3 exists
+	stamp_sounds.append("res://assets/audio/mechanical/stamp_sound_1.mp3")
 
 
 func _process(delta):

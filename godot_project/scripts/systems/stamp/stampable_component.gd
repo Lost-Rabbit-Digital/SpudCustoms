@@ -258,7 +258,14 @@ func _apply_clipping_shader(stamp_sprite: Sprite2D, stamp_position: Vector2) -> 
 ## Adds color tinting and pattern overlay when colorblind mode is active.
 func _apply_colorblind_style(stamp_sprite: Sprite2D, stamp_type: String) -> void:
 	# Check if AccessibilityManager exists and colorblind mode is enabled
-	var accessibility = get_node_or_null("/root/AccessibilityManager")
+	# Use Engine.get_main_loop() to access root when not in scene tree
+	var accessibility: Node = null
+	if is_inside_tree():
+		accessibility = get_node_or_null("/root/AccessibilityManager")
+	else:
+		var main_loop = Engine.get_main_loop()
+		if main_loop and main_loop is SceneTree:
+			accessibility = main_loop.root.get_node_or_null("AccessibilityManager")
 	if not accessibility:
 		return
 

@@ -369,6 +369,9 @@ func start_tutorial(tutorial_id: String):
 	waiting_for_action = false
 
 	tutorial_started.emit(tutorial_id)
+	# Also emit via EventBus for system-wide awareness
+	if EventBus:
+		EventBus.tutorial_step_advanced.emit(tutorial_id + "_start")
 
 	# Create the tutorial UI if needed
 	_create_tutorial_ui()
@@ -391,6 +394,9 @@ func _show_current_step():
 
 	# Emit step changed signal
 	tutorial_step_changed.emit(current_tutorial, current_step)
+	# Also emit via EventBus
+	if EventBus:
+		EventBus.tutorial_step_advanced.emit(current_tutorial + "_step_" + str(current_step))
 
 	# Update UI text
 	_update_tutorial_text(step["text"])
@@ -635,6 +641,9 @@ func _complete_tutorial():
 	var completed_id = current_tutorial
 	tutorials_completed[completed_id] = true
 	tutorial_completed.emit(completed_id)
+	# Also emit via EventBus
+	if EventBus:
+		EventBus.tutorial_completed.emit()
 
 	# Clear highlights
 	_clear_all_highlights()
