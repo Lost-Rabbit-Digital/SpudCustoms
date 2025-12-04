@@ -62,6 +62,9 @@ func _setup_confirmation_dialog():
 	confirmation_dialog.min_size = Vector2(400, 100)
 	confirmation_dialog.dialog_hide_on_ok = true
 	confirmation_dialog.get_ok_button().text = "Yes, Start New Game"
+	var dialog_theme = load("res://assets/styles/confirmation_dialog_theme.tres")
+	if dialog_theme:
+		confirmation_dialog.theme = dialog_theme
 	add_child(confirmation_dialog)
 
 	# Connect confirmation signals
