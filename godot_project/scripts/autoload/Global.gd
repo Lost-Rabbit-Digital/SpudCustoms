@@ -183,6 +183,12 @@ func advance_shift():
 	GameState.level_reached(shift)
 	# reset per-shift stats
 	reset_shift_stats()
+
+	# Disable tutorial mode when advancing past shift 0
+	if shift > 0 and GameStateManager:
+		GameStateManager.set_tutorial_mode(false)
+		GameStateManager.set_shift(shift)
+
 	var scaling_factor: float
 	# Update quota target for new shift based on difficulty
 	match Global.difficulty_level:

@@ -28,6 +28,7 @@ var tutorial_panel: PanelContainer = null
 var tutorial_label: RichTextLabel = null
 var skip_button: Button = null
 var continue_hint_label: Label = null
+var progress_label: Label = null
 
 # Step timing
 var step_timer: Timer = null
@@ -188,10 +189,17 @@ const TUTORIALS = {
 		"name": "Strikes and Quota",
 		"steps": [
 			{
-				"text": "[center][b]The Quota System[/b][/center]\n\nLook at the top right of your screen. You'll see:\n\n[color=yellow]Quota:[/color] Potatoes you must process correctly\n[color=red]Strikes:[/color] Mistakes allowed before game over\n\nMake wrong decisions and you'll earn strikes!",
-				"target": null,
-				"highlight": false,
-				"duration": 5.0,
+				"text": "[center][b]The Quota System[/b][/center]\n\nLook at the [color=yellow]Quota[/color] display. This shows how many potatoes you must process correctly each shift.",
+				"target": "QuotaLabel",
+				"highlight": true,
+				"duration": 4.0,
+				"pause_game": false
+			},
+			{
+				"text": "[center][b]Avoid Strikes![/b][/center]\n\nThe [color=red]Strikes[/color] counter shows your mistakes. Too many strikes and it's game over!\n\nMake wrong decisions and you'll earn strikes.",
+				"target": "StrikesLabel",
+				"highlight": true,
+				"duration": 4.0,
 				"pause_game": false
 			}
 		],
@@ -226,8 +234,8 @@ var tutorial_queue: Array = []
 
 
 func _ready():
-	# Load the highlight shader
-	highlight_shader = preload("res://scripts/shaders/tutorial_highlight/tutorial_highlight.tres")
+	# Load the highlight shader (using consolidated highlight_indicator)
+	highlight_shader = preload("res://assets/shaders/highlight_indicator.tres")
 
 	# Create step timer
 	step_timer = Timer.new()
@@ -330,9 +338,16 @@ func check_shift_tutorials(shift_number: int):
 	# Build queue of tutorials for this shift
 	tutorial_queue.clear()
 
+	# In tutorial mode (shift 0), use shift 1 tutorials for the interactive walkthrough
+	var effective_shift = shift_number
+	if shift_number == 0:
+		var is_tutorial_mode = GameStateManager.is_tutorial_mode() if GameStateManager else false
+		if is_tutorial_mode:
+			effective_shift = 1  # Use shift 1 tutorials for the training shift
+
 	for tutorial_id in TUTORIALS:
 		var tutorial = TUTORIALS[tutorial_id]
-		if tutorial.get("shift_trigger", 0) == shift_number:
+		if tutorial.get("shift_trigger", 0) == effective_shift:
 			if not is_tutorial_completed(tutorial_id):
 				tutorial_queue.append({
 					"id": tutorial_id,
@@ -398,8 +413,9 @@ func _show_current_step():
 	if EventBus:
 		EventBus.tutorial_step_advanced.emit(current_tutorial + "_step_" + str(current_step))
 
-	# Update UI text
+	# Update UI text and progress
 	_update_tutorial_text(step["text"])
+	_update_progress_label()
 
 	# Clear previous highlights
 	_clear_all_highlights()
@@ -459,17 +475,30 @@ func _create_tutorial_ui():
 	vbox.add_theme_constant_override("separation", 8)
 	tutorial_panel.add_child(vbox)
 
+	# Create top row with progress indicator
+	var top_row = HBoxContainer.new()
+	top_row.alignment = BoxContainer.ALIGNMENT_CENTER
+	vbox.add_child(top_row)
+
+	# Progress label (e.g., "Step 1 of 3")
+	progress_label = Label.new()
+	progress_label.text = ""
+	progress_label.add_theme_color_override("font_color", Color(0.8, 0.6, 0.2))  # Golden
+	progress_label.add_theme_font_size_override("font_size", 12)
+	progress_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	top_row.add_child(progress_label)
+
 	# Create rich text label for tutorial text
 	tutorial_label = RichTextLabel.new()
 	tutorial_label.bbcode_enabled = true
 	tutorial_label.fit_content = true
-	tutorial_label.custom_minimum_size = Vector2(0, 80)
+	tutorial_label.custom_minimum_size = Vector2(0, 70)
 	tutorial_label.add_theme_font_size_override("normal_font_size", 18)
 	tutorial_label.add_theme_font_size_override("bold_font_size", 20)
 	tutorial_label.add_theme_color_override("default_color", Color.WHITE)
 	vbox.add_child(tutorial_label)
 
-	# Create bottom row for hints and skip button
+	# Create bottom row for hints and skip buttons
 	var bottom_row = HBoxContainer.new()
 	bottom_row.alignment = BoxContainer.ALIGNMENT_END
 	vbox.add_child(bottom_row)
@@ -482,13 +511,19 @@ func _create_tutorial_ui():
 	continue_hint_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	bottom_row.add_child(continue_hint_label)
 
-	# Skip button
+	# Skip buttons
 	if can_skip_tutorials:
 		skip_button = Button.new()
-		skip_button.text = "Skip Tutorial"
+		skip_button.text = "Skip"
 		skip_button.add_theme_font_size_override("font_size", 14)
 		skip_button.pressed.connect(skip_current_tutorial)
 		bottom_row.add_child(skip_button)
+
+		var skip_all_button = Button.new()
+		skip_all_button.text = "Skip All Tutorials"
+		skip_all_button.add_theme_font_size_override("font_size", 14)
+		skip_all_button.pressed.connect(skip_all_tutorials)
+		bottom_row.add_child(skip_all_button)
 
 	# Animate panel appearing
 	tutorial_panel.modulate.a = 0
@@ -496,10 +531,24 @@ func _create_tutorial_ui():
 	tween.tween_property(tutorial_panel, "modulate:a", 1.0, 0.3)
 
 
-## Update the tutorial text
+## Update the tutorial text with controller-aware formatting
 func _update_tutorial_text(text: String):
 	if tutorial_label:
-		tutorial_label.text = text
+		tutorial_label.text = _format_tutorial_text(text)
+
+
+## Update the progress indicator label
+func _update_progress_label():
+	if not progress_label or current_tutorial == "":
+		return
+
+	var tutorial = TUTORIALS[current_tutorial]
+	var total_steps = tutorial["steps"].size()
+	var current_step_display = current_step + 1  # 1-indexed for display
+
+	# Also show tutorial name
+	var tutorial_name = tutorial.get("name", current_tutorial)
+	progress_label.text = "%s - Step %d of %d" % [tutorial_name, current_step_display, total_steps]
 
 
 ## Update continue hint visibility
@@ -711,6 +760,7 @@ func cleanup_tutorial_ui():
 		tutorial_label = null
 		skip_button = null
 		continue_hint_label = null
+		progress_label = null
 
 		if canvas_layer:
 			canvas_layer.queue_free()

@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dm8x2qn5h3kvy"]
+
+[ext_resource type="Shader" path="res://assets/shaders/highlight_indicator.gdshader" id="1_shader"]
+
+[resource]
+shader = ExtResource("1_shader")
+shader_parameter/speed = 1.5
+shader_parameter/line_width = 0.12
+shader_parameter/line_color = Color(1, 1, 1, 0.9)
+shader_parameter/pause_duration = 0.3
+shader_parameter/offset = 2.0
+shader_parameter/pixelate_line = 1
+shader_parameter/enable_highlight = false

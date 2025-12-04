@@ -24,6 +24,7 @@ var _quota_met: int = 0
 var _difficulty_level: String = "Normal"
 var _game_mode: String = "score_attack"
 var _story_state: int = 0
+var _tutorial_mode: bool = false  # Whether we're in tutorial shift
 
 # Statistics
 var _total_runners_stopped: int = 0
@@ -101,17 +102,17 @@ func switch_game_mode(mode: String) -> void:
 	set_game_mode(mode)
 
 	if mode == "story":
-		# Load story progress from GameState
-		if GameState:
+		# Load story progress from GameState (unless shift was already set)
+		if GameState and _shift == 0 and not _tutorial_mode:
 			set_shift(GameState.get_current_level())
-		# Set quota based on current level (simplified logic for now)
-		var base_quota = 8
-		_quota_target = base_quota + (_shift - 1)
+		# Set quota based on current level
+		_update_quota_for_shift()
 
 	elif mode == "score_attack":
 		# For score attack, reset to level 1
 		set_shift(1)
 		_quota_target = 9999
+		_tutorial_mode = false
 
 	# Emit game mode changed signal
 	EventBus.game_mode_changed.emit(mode)
@@ -122,6 +123,17 @@ func switch_game_mode(mode: String) -> void:
 	LogManager.write_info("Game mode switched to: " + mode)
 
 
+func _update_quota_for_shift() -> void:
+	"""Update quota target based on current shift and tutorial mode"""
+	if _tutorial_mode or _shift == 0:
+		# Tutorial shift: very low quota to ease players in
+		_quota_target = 2
+	else:
+		# Normal progression: base quota + shift increment
+		var base_quota = 8
+		_quota_target = base_quota + (_shift - 1)
+
+
 func get_story_state() -> int:
 	return _story_state
 
@@ -130,6 +142,15 @@ func set_story_state(state: int) -> void:
 	_story_state = state
 	# Emit event if needed, or just update state
 	# EventBus.story_state_changed.emit(state)
+
+
+func is_tutorial_mode() -> bool:
+	return _tutorial_mode
+
+
+func set_tutorial_mode(enabled: bool) -> void:
+	_tutorial_mode = enabled
+	LogManager.write_info("Tutorial mode set to: " + str(enabled))
 
 
 func is_dev_mode() -> bool:
