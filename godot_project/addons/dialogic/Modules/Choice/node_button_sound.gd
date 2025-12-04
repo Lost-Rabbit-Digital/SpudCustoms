@@ -32,8 +32,8 @@ func _connect_all_buttons() -> void:
 			child.focus_entered.connect(_on_focus.bind(child.sound_focus))
 
 
-#the custom_sound argument comes from the specifec button and get used
-#if none are found, it uses the above sounds
+# the custom_sound argument comes from the specifec button and get used
+# if none are found, it uses the above sounds
 
 
 func _on_pressed(custom_sound) -> void:
