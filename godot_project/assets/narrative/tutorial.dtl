@@ -1,9 +1,9 @@
 # tutorial.dtl
 # Shortened narrative-only tutorial - interactive tutorial handled by TutorialManager
-audio music "res://assets/music/narrative/chiptune_work_work_work_main.mp3" [fade="2.0" volume="-10.0" bus="Music"]
+audio music "res://assets/music/narrative/chiptune_work_work_work_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/checkpoint_interior.png" fade="0.0"]
 join narrator [z_index="1"]
-audio "res://assets/audio/ui_feedback/Discovery Ensemble 001.wav" [volume="-15.0" bus="SFX"]
+audio "res://assets/audio/ui_feedback/Discovery Ensemble 001.wav" [volume="-5.0" bus="SFX"]
 narrator: Welcome to [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs![/color][/pulse] #id:156
 narrator: Your duty is to process incoming potatoes at our border checkpoint. #id:158
 narrator: Check documents carefully, stop runners, and meet your quota. #id:171

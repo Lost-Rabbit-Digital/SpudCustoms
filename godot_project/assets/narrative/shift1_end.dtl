@@ -1,5 +1,5 @@
 # shift1_end.dtl
-audio music "res://assets/audio/ambient/horror_drone_23.mp3" [fade="2.0" volume="-15.0" bus="Ambient"]
+audio music "res://assets/audio/ambient/horror_drone_23.mp3" [fade="2.0" volume="-5.0" bus="Ambient"]
 audio music "res://assets/music/narrative/ambient_mysterious_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/customs_office.png" fade="2.0"]
 join supervisor_russet [z_index="1"]
@@ -8,8 +8,8 @@ supervisor_russet: Don't forget to grab your ration of [wave amp=15 freq=2][colo
 leave supervisor_russet
 
 [background arg="res://assets/narrative/suspicious_note.png" fade="2.0"]
-audio "res://assets/audio/stings/revelation_dark.mp3" [volume="-10.0" bus="SFX"]
-audio "res://assets/audio/ui_drama/paper_evidence.mp3" [volume="-10.0" bus="SFX"]
+audio "res://assets/audio/stings/revelation_dark.mp3" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/ui_drama/paper_evidence.mp3" [volume="-5.0" bus="SFX"]
 A small note slips out from some papers on your desk. #id:52
 "[color=GOLD]Not all is as it seems. The roots of our nation have grown rotten. [br] Follow the trail, but take care not to be silenced.[/color] [br] - [color=CHARTREUSE]A friend[/color]" #id:53
 

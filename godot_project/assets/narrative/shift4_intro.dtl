@@ -1,6 +1,6 @@
 # shift4_intro.dtl
 audio music "res://assets/music/narrative/horror_fog_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
-audio music "res://assets/audio/ambient/horror_drone_23.mp3" [fade="2.0" volume="-15.0" bus="Ambient"]
+audio music "res://assets/audio/ambient/horror_drone_23.mp3" [fade="2.0" volume="-5.0" bus="Ambient"]
 [background arg="res://assets/narrative/checkpoint_booth.png" fade="0.0"]
 join supervisor_russet [z_index="1"]
 supervisor_russet: New security protocols today. We've received intelligence about [color=YELLOW]suspicious activities[/color]. #id:86

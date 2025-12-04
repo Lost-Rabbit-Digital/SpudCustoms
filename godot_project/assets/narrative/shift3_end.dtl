@@ -24,7 +24,7 @@ sweet_potato_sasha: [tornado radius=4 freq=2][color=CRIMSON]They go to Root Rese
 [background arg="res://assets/narrative/document_closeup.png" fade="2.0"]
 audio "res://assets/audio/paper/paper handled 3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: These documents show potatoes being unloaded at a facility marked with the [color=DARK_VIOLET]Root Reserve[/color] logo. #id:6e
-audio "res://assets/audio/mechanical/liquid sloshing inside canister 1.wav" [volume="-15.0" bus="SFX"]
+audio "res://assets/audio/mechanical/liquid sloshing inside canister 1.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: I think I know what's happening... #id:6f
 sweet_potato_sasha: [pulse freq=3][color=CRIMSON]They're becoming Root Reserve.[/color][/pulse] #id:6f2
 
