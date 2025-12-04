@@ -3,6 +3,8 @@ audio music "res://assets/music/narrative/wind_house.mp3" [fade="2.0" volume="-1
 audio "res://assets/music/narrative/storm_thunder_ambience.mp3" [volume="-10.0" bus="Ambient"]
 [background arg="res://assets/narrative/final_chaos.png" fade="0.0"]
 audio "res://assets/audio/explosions/rumbling 1.wav" [volume="-8.0" bus="SFX"]
+audio "res://assets/audio/atmosphere/crowd_unrest.mp3" [volume="-15.0" bus="Ambient"]
+audio "res://assets/audio/atmosphere/war_zone_distant.mp3" [volume="-15.0" bus="Ambient"]
 narrator: The Spud border is in [pulse freq=3][color=CRIMSON]chaos[/color][/pulse]. Panicked potatoes flood checkpoints, desperate to escape after the leaked documents. #id:11
 
 join player_character [z_index="1"]
@@ -38,11 +40,14 @@ audio music "res://assets/audio/ambient/horror_drone_23.mp3" [fade="2.0" volume=
 [background arg="res://assets/narrative/processing_facility.png" fade="1.2"]
 join narrator [z_index="1"]
 narrator: After a tense infiltration, your team stands at the heart of [color=DARK_VIOLET]Root Reserve[/color], the [pulse freq=3][color=CRIMSON]horrific machinery of oppression[/color][/pulse] laid bare. #id:1a
+audio "res://assets/audio/atmosphere/facility_hum.mp3" [volume="-15.0" bus="Ambient"]
 
 narrator: [wave amp=25 freq=3][color=RED]Alarms blare[/color][/wave] as guards scramble to respond to your intrusion. You race through corridors, dodging security systems. #id:1b
+audio "res://assets/audio/stings/alarm_distant.mp3" [volume="-10.0" bus="SFX"]
 leave narrator
 
 [background arg="res://assets/narrative/checkpoint_booth_night.png" fade="2.0"]
+audio "res://assets/audio/stings/threat_reveal.mp3" [volume="-10.0" bus="SFX"]
 join prime_minister_idaho [z_index="1"]
 prime_minister_idaho: A screen flickers on. "Well well, the [color=CRIMSON]traitor[/color] returns with rebel scum." #id:1c
 prime_minister_idaho: Did you think you could stop the progress of Spud? [color=DARK_VIOLET]Root Reserve[/color] is the lifeblood of this nation. #id:1d
@@ -157,6 +162,8 @@ audio "res://assets/audio/clothing/flag 3.wav" [volume="0.0" bus="SFX"]
 [background arg="res://assets/narrative/new_spud_flag.png" fade="2.0"]
 join narrator [z_index="1"]
 narrator: And so, from the ashes of the old Spud, a [color=CHARTREUSE]new nation begins to take root[/color]. The Reign of [color=DARK_VIOLET]Root Reserve[/color] is over. #id:38
+audio "res://assets/audio/stings/revelation_hope.mp3" [volume="-10.0" bus="SFX"]
 leave narrator
 
+audio "res://assets/audio/stings/victory_swell.mp3" [volume="-10.0" bus="SFX"]
 [signal arg="credits_ready"]
