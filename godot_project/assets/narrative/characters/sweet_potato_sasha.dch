@@ -5,8 +5,19 @@
 &"color": Color(1, 1, 1, 1),
 &"custom_info": {
 "prefix": "",
-"sound_mood_default": "",
-"sound_moods": {},
+"sound_mood_default": "default",
+"sound_moods": {
+"default": {
+"mode": 1,
+"name": "default",
+"pitch_base": 1.15,
+"pitch_variance": 0.12,
+"skip_characters": 2,
+"sound_path": "res://assets/audio/chatter/sweet_potato_sasha/",
+"volume_base": -10.0,
+"volume_variance": 2.0
+}
+},
 "style": "",
 "suffix": ""
 },

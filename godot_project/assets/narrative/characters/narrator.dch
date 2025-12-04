@@ -5,17 +5,17 @@
 &"color": Color(1, 1, 1, 1),
 &"custom_info": {
 "prefix": "",
-"sound_mood_default": "",
+"sound_mood_default": "default",
 "sound_moods": {
-"Mood 1": {
-"mode": 0,
-"name": "Mood 1",
-"pitch_base": 1.0,
-"pitch_variance": 0.0,
-"skip_characters": 0.0,
-"sound_path": "res://addons/dialogic/Example Assets/sound-effects/typing2.wav",
-"volume_base": 0.0,
-"volume_variance": 0.0
+"default": {
+"mode": 1,
+"name": "default",
+"pitch_base": 0.9,
+"pitch_variance": 0.1,
+"skip_characters": 2,
+"sound_path": "res://assets/audio/chatter/narrator/",
+"volume_base": -8.0,
+"volume_variance": 2.0
 }
 },
 "style": "",

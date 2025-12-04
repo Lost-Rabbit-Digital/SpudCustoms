@@ -5,8 +5,19 @@
 &"color": Color(1, 1, 1, 1),
 &"custom_info": {
 "prefix": "",
-"sound_mood_default": "",
-"sound_moods": {},
+"sound_mood_default": "default",
+"sound_moods": {
+"default": {
+"mode": 1,
+"name": "default",
+"pitch_base": 0.75,
+"pitch_variance": 0.08,
+"skip_characters": 2,
+"sound_path": "res://assets/audio/chatter/supervisor_russet/",
+"volume_base": -5.0,
+"volume_variance": 2.0
+}
+},
 "style": "",
 "suffix": ""
 },

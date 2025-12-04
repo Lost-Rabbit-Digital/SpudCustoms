@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://csptvnbquja8j"]
+[gd_scene load_steps=20 format=3 uid="uid://csptvnbquja8j"]
 
 [ext_resource type="Script" uid="uid://bfprammnx3m0f" path="res://assets/styles/VisualNovelTextbox/vn_textbox_layer.gd" id="1_bpydr"]
 [ext_resource type="Script" uid="uid://gxkoycs0ebhy" path="res://assets/styles/VisualNovelTextbox/animations.gd" id="2_xy7a2"]
@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://b0rpqfg4fhebk" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/next.svg" id="6_uch03"]
 [ext_resource type="Script" uid="uid://dntpn0cr11gh2" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="7_bi7sh"]
 [ext_resource type="StyleBox" uid="uid://m7gyepkysu83" path="res://assets/styles/VisualNovelTextbox/vn_textbox_name_label_panel.tres" id="9_yg8ig"]
+[ext_resource type="AudioStream" uid="uid://cdjn7hf0wvpj" path="res://assets/audio/talking/keyboard mechanical typing 1.mp3" id="10_typing1"]
+[ext_resource type="AudioStream" uid="uid://bvqy8k3tsnlwa" path="res://assets/audio/talking/keyboard mechanical typing 2.mp3" id="11_typing2"]
+[ext_resource type="AudioStream" uid="uid://cnk5pqwxhajbj" path="res://assets/audio/talking/keyboard mechanical typing 3.mp3" id="12_typing3"]
 
 [sub_resource type="Animation" id="Animation_au0a2"]
 length = 0.001
@@ -290,8 +293,13 @@ textbox_root = NodePath("..")
 
 [node name="DialogicNode_TypeSounds" type="AudioStreamPlayer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/DialogicNode_DialogText"]
 unique_name_in_owner = true
+bus = &"SFX"
 script = ExtResource("4_ma5mw")
-play_every_character = 0
+mode = 1
+sounds = Array[AudioStream]([ExtResource("10_typing1"), ExtResource("11_typing2"), ExtResource("12_typing3")])
+play_every_character = 2
+pitch_variance = 0.1
+volume_variance = 1.0
 
 [node name="NextIndicator" type="Control" parent="Anchor/AnimationParent/Sizer/DialogTextPanel"]
 unique_name_in_owner = true
