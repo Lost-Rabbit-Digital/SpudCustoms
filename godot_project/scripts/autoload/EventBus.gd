@@ -61,6 +61,12 @@ signal story_state_advance_requested()
 ## Emitted when shift stats are reset
 signal shift_stats_reset()
 
+## Emitted to request a shift reset (restart current shift)
+signal reset_shift_requested()
+
+## Emitted to request a full game reset
+signal reset_game_requested()
+
 ## Emitted when quota target is updated
 signal quota_updated(new_target: int, current_met: int)
 
