@@ -7,7 +7,7 @@ path="res://.godot/imported/background_music_4.mp3-0b567719594bb957851a51b9c9593
 
 [deps]
 
-source_file="res://assets/audio/music/background_music_4.mp3"
+source_file="res://assets/music/background_music_4.mp3"
 dest_files=["res://.godot/imported/background_music_4.mp3-0b567719594bb957851a51b9c959376b.mp3str"]
 
 [params]

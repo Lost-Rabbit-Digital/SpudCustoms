@@ -169,7 +169,7 @@ audio music "res://assets/music/narrative/ambient_joy_main.mp3" [fade="2.0" volu
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 narrator: The fall of [color=DARK_VIOLET]Root Reserve[/color] sparks a wildfire of change across Spud. #id:35
 [background arg="res://assets/narrative/victory_scene.png" fade="2.0"]
-audio "res://assets/audio/music/Honor Braaam.wav" [volume="-10.0" bus="SFX"]
+audio "res://assets/music/Honor Braaam.wav" [volume="-10.0" bus="SFX"]
 audio "res://assets/audio/talking/keyboard mechanical typing 1.mp3" [volume="0.0" bus="SFX"]
 narrator: Potatoes in every province rise up, embracing a [color=CHARTREUSE]new vision for their nation[/color]. #id:36
 audio music "res://assets/audio/ambient/1_birds_outside.wav" [fade="2.0" volume="1.0" bus="Music"]
