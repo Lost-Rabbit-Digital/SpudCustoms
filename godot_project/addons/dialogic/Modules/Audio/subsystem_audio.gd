@@ -231,7 +231,8 @@ func stop_all_one_shot_sounds() -> void:
 ## Converts a linear loudness value to decibel and sets that volume to
 ## the given [param node].
 func interpolate_volume_linearly(value: float, node: AudioStreamPlayer) -> void:
-	node.volume_db = linear_to_db(value)
+	if is_instance_valid(node):
+		node.volume_db = linear_to_db(value)
 
 
 ## Returns whether the currently playing audio resource is the same as this
