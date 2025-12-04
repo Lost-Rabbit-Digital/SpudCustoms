@@ -128,10 +128,12 @@ func open_document(document_name: String):
 			if passport_document:
 				passport_document.open()
 				drag_system.play_open_sound()
+				EventBus.document_opened.emit("passport")
 		"lawreceipt":
 			if law_receipt_document:
 				law_receipt_document.open()
 				drag_system.play_open_sound()
+				EventBus.document_opened.emit("law_receipt")
 
 
 ## Closes a document by name.
@@ -144,10 +146,12 @@ func close_document(document_name: String):
 			if passport_document:
 				passport_document.close()
 				drag_system.play_close_sound()
+				EventBus.document_closed.emit("passport")
 		"lawreceipt":
 			if law_receipt_document:
 				law_receipt_document.close()
 				drag_system.play_close_sound()
+				EventBus.document_closed.emit("law_receipt")
 
 
 ## Checks if a document is currently open.

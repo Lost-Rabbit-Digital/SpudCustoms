@@ -71,6 +71,11 @@ func _on_stamp_applied(stamp: StampComponent, document: Node, is_perfect: bool):
 	if TutorialManager:
 		TutorialManager.trigger_tutorial_action("stamp_applied")
 
+	# Emit EventBus stamp_applied signal for all stamps
+	var stamp_type = stamp.stamp_type if stamp else "unknown"
+	var document_type = document.name if document else "unknown"
+	EventBus.stamp_applied.emit(stamp_type, document_type)
+
 	# Update stats for all stamps
 	print("Stamp", stamp)
 	print("Document", document)

@@ -317,6 +317,10 @@ func _connect_signals():
 	EventBus.alert_red_requested.connect(_on_alert_red_requested)
 	EventBus.screen_shake_requested.connect(_on_screen_shake_requested)
 
+	# Game flow signals
+	EventBus.game_over_triggered.connect(_on_eventbus_game_over)
+	EventBus.max_strikes_reached.connect(_on_max_strikes_reached)
+
 	# UI signals
 	ui_hint_system.hint_deactivated.connect(_on_hint_deactivated)
 
@@ -1718,8 +1722,12 @@ func process_decision(allowed):
 	shift_stats.total_stamps += 1
 	if allowed:
 		shift_stats.potatoes_approved += 1
+		# Emit EventBus signal for potato approved
+		EventBus.potato_approved.emit(current_potato_info.duplicate() if current_potato_info else {})
 	else:
 		shift_stats.potatoes_rejected += 1
+		# Emit EventBus signal for potato rejected
+		EventBus.potato_rejected.emit(current_potato_info.duplicate() if current_potato_info else {})
 
 	# Get validation result
 	var validation = LawValidator.check_violations(current_potato_info, current_rules)
@@ -2345,6 +2353,19 @@ func _on_end_dialogue_finished():
 		#	push_error("SceneLoader not found, falling back to change_scene_to_file")
 		#	get_tree().change_scene_to_file("res://scenes/game_scene/mainGame.tscn")
 		pass
+
+
+# EventBus game over handler - triggered when GameStateManager emits game_over_triggered
+func _on_eventbus_game_over(reason: String) -> void:
+	LogManager.write_info("Game over triggered via EventBus: " + reason)
+	_on_game_over()
+
+
+# EventBus max strikes handler - triggered when max strikes reached
+func _on_max_strikes_reached() -> void:
+	LogManager.write_info("Max strikes reached - triggering game over")
+	# The game_over_triggered signal will also be emitted, so this is mainly for logging
+	# and any additional max-strikes-specific behavior
 
 
 func _on_game_over():
