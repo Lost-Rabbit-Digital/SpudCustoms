@@ -61,6 +61,12 @@ signal story_state_advance_requested()
 ## Emitted when shift stats are reset
 signal shift_stats_reset()
 
+## Emitted to request a shift reset (restart current shift)
+signal reset_shift_requested()
+
+## Emitted to request a full game reset
+signal reset_game_requested()
+
 ## Emitted when quota target is updated
 signal quota_updated(new_target: int, current_met: int)
 
@@ -305,6 +311,20 @@ func track_event(event_name: String, data: Dictionary = {}) -> void:
 	var enriched_data = data.duplicate()
 	enriched_data["timestamp"] = Time.get_ticks_msec()
 	analytics_event.emit(event_name, enriched_data)
+
+
+## Convenience method to request a quota update
+## @param amount The amount to add to the current quota met
+func request_quota_update(amount: int = 1) -> void:
+	if GameStateManager:
+		var current_met = GameStateManager.get_quota_met()
+		var new_met = current_met + amount
+		GameStateManager.set_quota_met(new_met)
+		var target = GameStateManager.get_quota_target()
+		quota_updated.emit(target, new_met)
+	elif Global:
+		Global.quota_met += amount
+		quota_updated.emit(Global.quota_target, Global.quota_met)
 
 
 ## Debug method to list all connected signals

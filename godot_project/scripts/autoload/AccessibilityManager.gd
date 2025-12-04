@@ -108,10 +108,23 @@ func save_settings():
 	Config.set_config("AccessibilitySettings", "DyslexiaFont", dyslexia_font_enabled)
 
 
+## Emit current settings via EventBus for system-wide updates
+func _emit_settings_changed() -> void:
+	if EventBus:
+		EventBus.accessibility_settings_changed.emit({
+			"colorblind_mode": current_colorblind_mode,
+			"ui_scale": current_ui_scale,
+			"font_size": current_font_size,
+			"high_contrast": current_high_contrast,
+			"dyslexia_font": dyslexia_font_enabled
+		})
+
+
 ## Set colorblind mode
 func set_colorblind_mode(mode: ColorblindMode):
 	current_colorblind_mode = mode
 	colorblind_mode_changed.emit(mode)
+	_emit_settings_changed()
 	save_settings()
 
 
@@ -151,6 +164,7 @@ func set_ui_scale(scale: float):
 	apply_ui_scale_to_scene()
 
 	ui_scale_changed.emit(scale)
+	_emit_settings_changed()
 	save_settings()
 
 
@@ -166,6 +180,7 @@ func apply_ui_scale_to_scene():
 func set_font_size(size: FontSize):
 	current_font_size = size
 	font_size_changed.emit(size)
+	_emit_settings_changed()
 	save_settings()
 
 
@@ -185,6 +200,7 @@ func apply_font_size(label: Control, base_size: int = 16):
 func set_high_contrast(enabled: bool):
 	current_high_contrast = enabled
 	high_contrast_changed.emit(enabled)
+	_emit_settings_changed()
 	save_settings()
 
 
@@ -225,6 +241,7 @@ var _dyslexia_font: Font = null
 ## Set dyslexia-friendly font
 func set_dyslexia_font(enabled: bool):
 	dyslexia_font_enabled = enabled
+	_emit_settings_changed()
 	save_settings()
 
 	# Apply or remove dyslexia font from all text elements

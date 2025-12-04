@@ -359,6 +359,9 @@ func set_difficulty(new_difficulty: String):
 func unlock_level(level_id: int):
 	if level_id > SaveManager.get_max_level_reached():
 		SaveManager.save_level_progress(level_id, shift, {Global.difficulty_level: Global.score})
+		# Emit level unlocked signal via EventBus
+		EventBus.level_unlocked.emit(level_id)
+		LogManager.write_info("Level %d unlocked" % level_id)
 
 	# Save progress to disk
 	save_game_state()

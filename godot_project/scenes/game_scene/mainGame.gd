@@ -312,6 +312,15 @@ func _connect_signals():
 	EventBus.achievement_unlocked.connect(_on_achievement_unlocked)
 	EventBus.high_score_achieved.connect(_on_high_score_achieved)
 
+	# UI feedback signals
+	EventBus.alert_green_requested.connect(_on_alert_green_requested)
+	EventBus.alert_red_requested.connect(_on_alert_red_requested)
+	EventBus.screen_shake_requested.connect(_on_screen_shake_requested)
+
+	# Game flow signals
+	EventBus.game_over_triggered.connect(_on_eventbus_game_over)
+	EventBus.max_strikes_reached.connect(_on_max_strikes_reached)
+
 	# UI signals
 	ui_hint_system.hint_deactivated.connect(_on_hint_deactivated)
 
@@ -1713,8 +1722,12 @@ func process_decision(allowed):
 	shift_stats.total_stamps += 1
 	if allowed:
 		shift_stats.potatoes_approved += 1
+		# Emit EventBus signal for potato approved
+		EventBus.potato_approved.emit(current_potato_info.duplicate() if current_potato_info else {})
 	else:
 		shift_stats.potatoes_rejected += 1
+		# Emit EventBus signal for potato rejected
+		EventBus.potato_rejected.emit(current_potato_info.duplicate() if current_potato_info else {})
 
 	# Get validation result
 	var validation = LawValidator.check_violations(current_potato_info, current_rules)
@@ -2342,6 +2355,19 @@ func _on_end_dialogue_finished():
 		pass
 
 
+# EventBus game over handler - triggered when GameStateManager emits game_over_triggered
+func _on_eventbus_game_over(reason: String) -> void:
+	LogManager.write_info("Game over triggered via EventBus: " + reason)
+	_on_game_over()
+
+
+# EventBus max strikes handler - triggered when max strikes reached
+func _on_max_strikes_reached() -> void:
+	LogManager.write_info("Max strikes reached - triggering game over")
+	# The game_over_triggered signal will also be emitted, so this is mainly for logging
+	# and any additional max-strikes-specific behavior
+
+
 func _on_game_over():
 	# Disable all inputs and systems first
 	set_process_input(false)
@@ -2397,6 +2423,21 @@ func _on_game_over():
 # Strong: intensity 20-25, duration 0.4
 func shake_screen(intensity: float = 10.0, duration: float = 0.3):
 	Global.shake_screen(intensity, duration)
+
+
+# EventBus signal handlers for UI feedback
+func _on_screen_shake_requested(intensity: float, duration: float) -> void:
+	Global.shake_screen(intensity, duration)
+
+
+func _on_alert_green_requested(message: String, _duration: float) -> void:
+	if alert_label and alert_timer:
+		Global.display_green_alert(alert_label, alert_timer, message)
+
+
+func _on_alert_red_requested(message: String, _duration: float) -> void:
+	if alert_label and alert_timer:
+		Global.display_red_alert(alert_label, alert_timer, message)
 
 
 func parse_date(date_string: String) -> Dictionary:

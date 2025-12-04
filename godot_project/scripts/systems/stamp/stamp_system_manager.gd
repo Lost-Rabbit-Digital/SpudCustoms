@@ -4,6 +4,9 @@ extends Node
 # Signal to forward from the passport stampable
 signal stamp_decision_made(decision: String, perfect: bool)
 
+# Signal forwarded when stamp is applied
+signal stamp_applied(stamp: StampComponent, document: Node, is_perfect: bool)
+
 @export var alert_label: Label
 @export var alert_timer: Timer
 
@@ -68,6 +71,11 @@ func _on_stamp_applied(stamp: StampComponent, document: Node, is_perfect: bool):
 	if TutorialManager:
 		TutorialManager.trigger_tutorial_action("stamp_applied")
 
+	# Emit EventBus stamp_applied signal for all stamps
+	var stamp_type = stamp.stamp_type if stamp else "unknown"
+	var document_type = document.name if document else "unknown"
+	EventBus.stamp_applied.emit(stamp_type, document_type)
+
 	# Update stats for all stamps
 	print("Stamp", stamp)
 	print("Document", document)
@@ -84,17 +92,12 @@ func _on_stamp_applied(stamp: StampComponent, document: Node, is_perfect: bool):
 
 		# Perfect stamp bonus points
 		var perfect_points = 250
-		Global.add_score(perfect_points)
+		# REFACTORED: Use EventBus instead of Global
+		EventBus.request_score_add(perfect_points, "perfect_stamp")
 
-		# Try to find alert references in the scene tree
-		var root = get_tree().current_scene
-
-		# Display the alert if possible
-		Global.display_green_alert(
-			alert_label,
-			alert_timer,
-			tr("alert_perfect_hit").format({"perfect": str(perfect_points)})
-		)
+		# Display the alert via EventBus
+		var alert_message = tr("alert_perfect_hit").format({"perfect": str(perfect_points)})
+		EventBus.show_alert(alert_message, true, 2.0)
 
 		# Provide visual feedback with particle effect at stamp position
 		# Get the position from either the stamp or the document
@@ -103,10 +106,10 @@ func _on_stamp_applied(stamp: StampComponent, document: Node, is_perfect: bool):
 		# Create the visual effect
 		create_perfect_stamp_effect(effect_position)
 
-		# Shake screen
-		Global.shake_screen(3, 0.5)
+		# Shake screen via EventBus
+		EventBus.screen_shake_requested.emit(3.0, 0.5)
 
-		emit_signal("stamp_applied", stamp, document, is_perfect)
+		stamp_applied.emit(stamp, document, is_perfect)
 
 
 func create_perfect_stamp_effect(position: Vector2):
