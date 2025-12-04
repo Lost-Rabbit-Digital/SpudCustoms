@@ -1,12 +1,16 @@
 # tutorial.dtl
-# Shortened narrative-only tutorial - interactive tutorial handled by TutorialManager
+# Tutorial introduction - prepares player for interactive tutorial walkthrough
 audio music "res://assets/music/narrative/chiptune_work_work_work_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/checkpoint_interior.png" fade="0.0"]
 join narrator [z_index="1"]
 audio "res://assets/audio/ui_feedback/Discovery Ensemble 001.wav" [volume="-5.0" bus="SFX"]
 narrator: Welcome to [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs![/color][/pulse] #id:156
-narrator: Your duty is to process incoming potatoes at our border checkpoint. #id:158
-narrator: Check documents carefully, stop runners, and meet your quota. #id:171
+narrator: You've been selected for a vital role: [color=DARK_ORANGE]Border Customs Officer[/color]. #id:158
+[background arg="res://assets/narrative/checkpoint_booth.png" fade="1.5"]
+narrator: Don't worry - I'll walk you through everything [color=YELLOW]step by step[/color]. #id:170
+narrator: You'll learn how to open your booth, call potatoes, inspect documents, and stamp passports. #id:171
 [background arg="res://assets/narrative/checkpoint_exterior.png" fade="2.0"]
+narrator: Just follow the on-screen prompts and you'll be a pro in no time! #id:173
 narrator: The safety and security of Spud depends on your [pulse freq=2][color=DARK_ORANGE]vigilance![/color][/pulse] #id:172
+narrator: Let's begin your [color=YELLOW]training shift[/color]... #id:174
 leave narrator

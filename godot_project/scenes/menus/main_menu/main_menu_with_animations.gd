@@ -5,6 +5,7 @@ extends MainMenu
 var level_select_scene
 var animation_state_machine: AnimationNodeStateMachinePlayback
 var confirmation_dialog: ConfirmationDialog
+var tutorial_choice_dialog: AcceptDialog
 var load_confirmation_dialog: ConfirmationDialog
 var feedback_menu: Control
 @onready var version_label = $VersionMargin/VersionContainer/VersionLabel
@@ -19,6 +20,7 @@ func _ready():
 	_setup_level_select()
 	animation_state_machine = $MenuAnimationTree.get("parameters/playback")
 	_setup_confirmation_dialog()
+	_setup_tutorial_choice_dialog()
 	_setup_load_confirmation_dialog()
 	_setup_feedback_menu()
 	# Check for demo version - hide score attack in demo builds
@@ -39,11 +41,8 @@ func new_game():
 
 func _on_new_game_confirmed():
 	await JuicyButtons.setup_button(%NewGameButton)
-	# REFACTORED: Use GameStateManager
-	if GameStateManager:
-		GameStateManager.switch_game_mode("story")
-	GlobalState.reset()
-	load_game_scene()
+	# Show tutorial choice dialog
+	tutorial_choice_dialog.popup_centered()
 
 
 func _on_endless_button_pressed():
@@ -68,6 +67,64 @@ func _setup_confirmation_dialog():
 
 	# Connect confirmation signals
 	confirmation_dialog.confirmed.connect(_on_new_game_confirmed)
+
+
+func _setup_tutorial_choice_dialog():
+	tutorial_choice_dialog = AcceptDialog.new()
+	tutorial_choice_dialog.title = "Tutorial"
+	tutorial_choice_dialog.dialog_text = "Would you like to play the tutorial?\n\nThe tutorial will walk you through the basics of being a customs officer at Spud Customs."
+	tutorial_choice_dialog.min_size = Vector2(450, 150)
+	tutorial_choice_dialog.dialog_hide_on_ok = true
+
+	# Rename OK button to "Play Tutorial"
+	tutorial_choice_dialog.get_ok_button().text = "Play Tutorial"
+
+	# Add "Skip Tutorial" button
+	var skip_button = tutorial_choice_dialog.add_button("Skip Tutorial", true, "skip_tutorial")
+
+	add_child(tutorial_choice_dialog)
+
+	# Connect signals
+	tutorial_choice_dialog.confirmed.connect(_on_start_with_tutorial)
+	tutorial_choice_dialog.custom_action.connect(_on_tutorial_dialog_action)
+
+
+func _on_start_with_tutorial():
+	"""Start the game with tutorial (shift 0)"""
+	GlobalState.reset()
+	if GameStateManager:
+		GameStateManager.switch_game_mode("story")
+		GameStateManager.set_shift(0)  # Start at tutorial shift
+		GameStateManager.set_tutorial_mode(true)  # Enable tutorial mode
+	if TutorialManager:
+		TutorialManager.reset_all_tutorials()  # Ensure tutorials will play
+	load_game_scene()
+
+
+func _on_tutorial_dialog_action(action: StringName):
+	"""Handle custom button actions in tutorial dialog"""
+	if action == "skip_tutorial":
+		tutorial_choice_dialog.hide()
+		_on_skip_tutorial()
+
+
+func _on_skip_tutorial():
+	"""Start the game skipping tutorial (shift 1)"""
+	GlobalState.reset()
+	if GameStateManager:
+		GameStateManager.switch_game_mode("story")
+		GameStateManager.set_shift(1)  # Start at shift 1
+		GameStateManager.set_tutorial_mode(false)  # Disable tutorial mode
+	if TutorialManager:
+		# Mark all shift 1 tutorials as completed so they don't play
+		TutorialManager.mark_tutorial_completed("welcome")
+		TutorialManager.mark_tutorial_completed("gate_control")
+		TutorialManager.mark_tutorial_completed("megaphone_call")
+		TutorialManager.mark_tutorial_completed("document_inspection")
+		TutorialManager.mark_tutorial_completed("rules_checking")
+		TutorialManager.mark_tutorial_completed("stamp_usage")
+		TutorialManager.mark_tutorial_completed("strikes_and_quota")
+	load_game_scene()
 
 
 func _setup_load_confirmation_dialog():

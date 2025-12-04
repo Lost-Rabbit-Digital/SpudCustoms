@@ -338,9 +338,16 @@ func check_shift_tutorials(shift_number: int):
 	# Build queue of tutorials for this shift
 	tutorial_queue.clear()
 
+	# In tutorial mode (shift 0), use shift 1 tutorials for the interactive walkthrough
+	var effective_shift = shift_number
+	if shift_number == 0:
+		var is_tutorial_mode = GameStateManager.is_tutorial_mode() if GameStateManager else false
+		if is_tutorial_mode:
+			effective_shift = 1  # Use shift 1 tutorials for the training shift
+
 	for tutorial_id in TUTORIALS:
 		var tutorial = TUTORIALS[tutorial_id]
-		if tutorial.get("shift_trigger", 0) == shift_number:
+		if tutorial.get("shift_trigger", 0) == effective_shift:
 			if not is_tutorial_completed(tutorial_id):
 				tutorial_queue.append({
 					"id": tutorial_id,
