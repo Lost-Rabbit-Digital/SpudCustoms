@@ -1,6 +1,6 @@
 # shift6_intro.dtl
 audio music "res://assets/music/narrative/horror_abyss_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
-audio music "res://assets/audio/ambient/horror_drone_12.mp3" [fade="2.0" volume="-15.0" bus="Ambient"]
+audio music "res://assets/audio/ambient/horror_drone_12.mp3" [fade="2.0" volume="-5.0" bus="Ambient"]
 [background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]
 join narrator [z_index="1"]
 narrator: The border facility is in complete lockdown, with armed security patrolling every corridor. #id:b8

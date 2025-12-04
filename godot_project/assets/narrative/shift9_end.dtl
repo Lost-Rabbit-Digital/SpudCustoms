@@ -1,14 +1,14 @@
 # shift9_end.dtl
-audio music "res://assets/audio/ambient/horror_drone_49.mp3" [fade="2.0" volume="-15.0" bus="Ambient"]
+audio music "res://assets/audio/ambient/horror_drone_49.mp3" [fade="2.0" volume="-5.0" bus="Ambient"]
 audio music "res://assets/music/narrative/horror_aliens_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 
 if {stay_or_go} == "stay":
 	[background arg="res://assets/narrative/loyalist_outcome.png" fade="0.0"]
-	audio "res://assets/audio/explosions/big distant thump 5.wav" [volume="-10.0" bus="SFX"]
+	audio "res://assets/audio/explosions/big distant thump 5.wav" [volume="-5.0" bus="SFX"]
 	join player_character [z_index="1"]
 	player_character: You hunker down as the battle rages. I'm sorry, Sasha. I'm [color=STEEL_BLUE]not as brave as you[/color]. #id:131
 	leave player_character
-	audio "res://assets/audio/gunfire/Heavy Pistol Automatic B.wav" [volume="-15.0" bus="SFX"]
+	audio "res://assets/audio/gunfire/Heavy Pistol Automatic B.wav" [volume="-5.0" bus="SFX"]
 	[background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
 
 	join supervisor_russet [z_index="1"]
