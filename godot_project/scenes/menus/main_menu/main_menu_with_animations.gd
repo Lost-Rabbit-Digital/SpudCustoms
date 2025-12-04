@@ -5,6 +5,7 @@ extends MainMenu
 var level_select_scene
 var animation_state_machine: AnimationNodeStateMachinePlayback
 var confirmation_dialog: ConfirmationDialog
+var load_confirmation_dialog: ConfirmationDialog
 var feedback_menu: Control
 @onready var version_label = $VersionMargin/VersionContainer/VersionLabel
 @onready var bgm_player = $BackgroundMusicPlayer
@@ -18,6 +19,7 @@ func _ready():
 	_setup_level_select()
 	animation_state_machine = $MenuAnimationTree.get("parameters/playback")
 	_setup_confirmation_dialog()
+	_setup_load_confirmation_dialog()
 	_setup_feedback_menu()
 	# Check for demo version - hide score attack in demo builds
 	if GameStateManager and GameStateManager.get_build_type() == "Demo Release":
@@ -66,6 +68,108 @@ func _setup_confirmation_dialog():
 
 	# Connect confirmation signals
 	confirmation_dialog.confirmed.connect(_on_new_game_confirmed)
+
+
+func _setup_load_confirmation_dialog():
+	load_confirmation_dialog = ConfirmationDialog.new()
+	load_confirmation_dialog.title = "Continue Game"
+	load_confirmation_dialog.min_size = Vector2(450, 200)
+	load_confirmation_dialog.dialog_hide_on_ok = true
+	load_confirmation_dialog.get_ok_button().text = "Continue"
+	load_confirmation_dialog.get_cancel_button().text = "Cancel"
+	add_child(load_confirmation_dialog)
+
+	# Connect confirmation signals
+	load_confirmation_dialog.confirmed.connect(_on_load_game_confirmed)
+
+
+func _show_load_confirmation():
+	# Get save data to display
+	var save_data = {}
+	if SaveManager:
+		save_data = SaveManager.load_game_state()
+
+	if save_data.is_empty():
+		# No save data, just load directly
+		load_game_scene()
+		return
+
+	var shift = save_data.get("shift", 1)
+	var narrative_choices = save_data.get("narrative_choices", {})
+
+	# Build the dialog text
+	var dialog_text = "[b]Your Save Data[/b]\n\n"
+	dialog_text += "Day: %d\n" % shift
+
+	# Add narrative choices summary if any
+	if not narrative_choices.is_empty():
+		dialog_text += "\n[b]Key Choices Made:[/b]\n"
+		var choice_summaries = _get_choice_summaries(narrative_choices)
+		for summary in choice_summaries:
+			dialog_text += "• %s\n" % summary
+
+	# For ConfirmationDialog, we need to use dialog_text (not RichTextLabel)
+	# Convert BBCode to plain text for display
+	var plain_text = dialog_text.replace("[b]", "").replace("[/b]", "")
+	load_confirmation_dialog.dialog_text = plain_text
+	load_confirmation_dialog.popup_centered()
+
+
+func _get_choice_summaries(choices: Dictionary) -> Array[String]:
+	"""Convert narrative choice variables to human-readable summaries"""
+	var summaries: Array[String] = []
+
+	# Map choice variable names to readable descriptions
+	var choice_descriptions = {
+		"initial_response": {
+			"eager": "Showed enthusiasm for Spud",
+			"questioning": "Questioned the system"
+		},
+		"yellow_badge_response": {
+			"obey": "Followed orders on yellow badges",
+			"question": "Questioned yellow badge policy"
+		},
+		"sasha_response": {
+			"help": "Chose to help Sasha",
+			"report": "Reported Sasha",
+			"ignore": "Ignored Sasha's request"
+		},
+		"resistance_mission": {
+			"accept": "Joined the resistance",
+			"refuse": "Refused to join resistance"
+		},
+		"loyalty_response": {
+			"loyal": "Remained loyal to Spud",
+			"doubt": "Expressed doubts about Spud"
+		},
+		"critical_choice": {
+			"resist": "Chose to resist",
+			"comply": "Chose to comply"
+		},
+		"final_decision": {
+			"freedom": "Chose freedom",
+			"duty": "Chose duty"
+		}
+	}
+
+	for choice_name in choices.keys():
+		var value = choices[choice_name]
+		if choice_descriptions.has(choice_name):
+			var descriptions = choice_descriptions[choice_name]
+			if descriptions.has(value):
+				summaries.append(descriptions[value])
+
+	# Limit to top 5 most recent/important choices
+	if summaries.size() > 5:
+		summaries = summaries.slice(0, 5)
+
+	return summaries
+
+
+func _on_load_game_confirmed():
+	if GameStateManager:
+		GameStateManager.switch_game_mode("story")
+	load_game_scene()
 
 
 func _setup_feedback_menu():
@@ -234,10 +338,8 @@ func _set_initial_focus(button: Button):
 
 
 func _on_continue_game_button_pressed():
-	# REFACTORED: Use GameStateManager
-	if GameStateManager:
-		GameStateManager.switch_game_mode("story")
-	load_game_scene()
+	# Show confirmation dialog with save info before loading
+	_show_load_confirmation()
 
 
 func _on_level_select_button_pressed():
