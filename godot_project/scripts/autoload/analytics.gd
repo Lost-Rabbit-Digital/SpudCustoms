@@ -41,6 +41,7 @@ var session_metrics: Dictionary = {
 
 # Event batching
 var event_queue: Array[Dictionary] = []
+var _request_in_progress: bool = false
 
 # Persistent data cache
 var _config: ConfigFile
@@ -255,20 +256,26 @@ func _send_batched_events() -> void:
 	if event_queue.is_empty():
 		return
 
+	# Don't send if a request is already in progress
+	if _request_in_progress:
+		return
+
 	var events_to_send := event_queue.duplicate()
 	event_queue.clear()
 
-	for event_data in events_to_send:
-		var json_string := JSON.stringify(event_data)
-		var encoded_data := Marshalls.utf8_to_base64(json_string)
-		var full_url := API_URL + "?data=" + encoded_data
+	# Batch all events into a single request (MixPanel accepts arrays)
+	var json_string := JSON.stringify(events_to_send)
+	var encoded_data := Marshalls.utf8_to_base64(json_string)
+	var full_url := API_URL + "?data=" + encoded_data
 
-		var err := http_request.request(full_url)
-		if err != OK:
-			push_warning("Analytics request failed: %d" % err)
-			# Re-queue failed events (with limit to prevent infinite growth)
-			if event_queue.size() < BATCH_SIZE * 3:
-				event_queue.append(event_data)
+	_request_in_progress = true
+	var err := http_request.request(full_url)
+	if err != OK:
+		_request_in_progress = false
+		push_warning("Analytics request failed: %d" % err)
+		# Re-queue failed events (with limit to prevent infinite growth)
+		if event_queue.size() < BATCH_SIZE * 3:
+			event_queue.append_array(events_to_send)
 
 	if OS.is_debug_build() and events_to_send.size() > 0:
 		print("📊 Sent batch of %d events" % events_to_send.size())
@@ -278,6 +285,7 @@ func _on_request_completed(
 	result: int, response_code: int, _headers: PackedStringArray, _body: PackedByteArray
 ) -> void:
 	"""Handle HTTP response."""
+	_request_in_progress = false
 	if result != HTTPRequest.RESULT_SUCCESS or response_code != 200:
 		push_warning("Analytics request failed: result=%d, code=%d" % [result, response_code])
 
