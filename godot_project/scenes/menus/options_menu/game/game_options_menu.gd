@@ -68,6 +68,9 @@ func _on_ResetProgressButton_pressed():
 	confirmation_dialog.dialog_text = "Are you sure you want to reset story progress? This cannot be undone."
 	confirmation_dialog.get_ok_button().text = "Reset"
 	confirmation_dialog.get_cancel_button().text = "Cancel"
+	var dialog_theme = load("res://assets/styles/confirmation_dialog_theme.tres")
+	if dialog_theme:
+		confirmation_dialog.theme = dialog_theme
 	add_child(confirmation_dialog)
 	confirmation_dialog.popup_centered()
 	confirmation_dialog.connect("confirmed", Callable(self, "_reset_story_progress"))
@@ -78,6 +81,9 @@ func _on_ResetHighScoresButton_pressed():
 	confirmation_dialog.dialog_text = "Are you sure you want to reset all high scores? This cannot be undone."
 	confirmation_dialog.get_ok_button().text = "Reset"
 	confirmation_dialog.get_cancel_button().text = "Cancel"
+	var dialog_theme = load("res://assets/styles/confirmation_dialog_theme.tres")
+	if dialog_theme:
+		confirmation_dialog.theme = dialog_theme
 	add_child(confirmation_dialog)
 	confirmation_dialog.popup_centered()
 	confirmation_dialog.connect("confirmed", Callable(self, "_reset_high_scores"))
