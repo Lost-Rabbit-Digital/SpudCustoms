@@ -99,7 +99,7 @@ func set_game_mode(mode: String) -> void:
 
 func switch_game_mode(mode: String) -> void:
 	set_game_mode(mode)
-	
+
 	if mode == "story":
 		# Load story progress from GameState
 		if GameState:
@@ -107,14 +107,19 @@ func switch_game_mode(mode: String) -> void:
 		# Set quota based on current level (simplified logic for now)
 		var base_quota = 8
 		_quota_target = base_quota + (_shift - 1)
-		
+
 	elif mode == "score_attack":
 		# For score attack, reset to level 1
 		set_shift(1)
 		_quota_target = 9999
-		
+
+	# Emit game mode changed signal
+	EventBus.game_mode_changed.emit(mode)
+
 	# Save state after mode switch
 	EventBus.save_game_requested.emit()
+
+	LogManager.write_info("Game mode switched to: " + mode)
 
 
 func get_story_state() -> int:
@@ -204,6 +209,10 @@ func _on_score_add_requested(points: int, source: String, metadata: Dictionary) 
 	EventBus.score_changed.emit(_score, points, source)
 	EventBus.ui_score_update_requested.emit(_score)
 
+	# Light haptic feedback for score increases
+	if points > 0:
+		EventBus.haptic_feedback_requested.emit(0.15, 0.1)
+
 	# Check for high score
 	_check_high_score()
 
@@ -228,17 +237,29 @@ func _on_strike_add_requested(reason: String, _metadata: Dictionary) -> void:
 	EventBus.strike_changed.emit(_strikes, _max_strikes, 1)
 	EventBus.ui_strike_update_requested.emit(_strikes, _max_strikes)
 
+	# Haptic feedback for strike - medium intensity
+	EventBus.haptic_feedback_requested.emit(0.5, 0.2)
+
 	LogManager.write_info("Strike added: %d -> %d (reason: %s)" % [old_strikes, _strikes, reason])
 
 	# Check for game over
 	if _strikes >= _max_strikes:
 		LogManager.write_info("Maximum strikes reached! Game over triggered.")
+		# Heavy haptic feedback for game over
+		EventBus.haptic_feedback_requested.emit(0.8, 0.4)
 		EventBus.max_strikes_reached.emit()
 		EventBus.game_over_triggered.emit("max_strikes")
 
 
 func _on_runner_stopped(runner_data: Dictionary) -> void:
 	_total_runners_stopped += 1
+
+	# Haptic feedback for runner stopped - heavy intensity
+	var was_perfect = runner_data.get("was_perfect", false)
+	if was_perfect:
+		EventBus.haptic_feedback_requested.emit(1.0, 0.3)  # Extra heavy for perfect
+	else:
+		EventBus.haptic_feedback_requested.emit(0.7, 0.25)  # Heavy for normal stop
 
 	# Handle score if included in event data
 	if runner_data.has("points_earned"):
@@ -290,6 +311,9 @@ func _on_innocent_hit(penalty: int, metadata: Dictionary) -> void:
 
 func _on_perfect_hit(bonus_points: int) -> void:
 	_perfect_hits += 1
+
+	# Extra heavy haptic feedback for perfect hits
+	EventBus.haptic_feedback_requested.emit(1.0, 0.35)
 
 	LogManager.write_info("Perfect hit! Total: %d" % _perfect_hits)
 
