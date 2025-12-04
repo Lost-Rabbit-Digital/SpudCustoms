@@ -61,7 +61,7 @@ func _ready() -> void:
 	if title_label:
 		title_label.text = "CODE BREAKER"
 	if instruction_label:
-		instruction_label.text = "Crack the code! Green = correct position, Yellow = wrong position"
+		instruction_label.text = "Crack the code! Green = exact match, Yellow = right digit wrong spot"
 
 
 func _on_minigame_start(config: Dictionary) -> void:
@@ -239,27 +239,36 @@ func _check_guess(guess: Array[int]) -> Dictionary:
 	var correct_position = 0
 	var correct_digit = 0
 
+	# Per-position feedback: "green" = exact, "yellow" = wrong position, "gray" = not in code
+	var position_feedback: Array[String] = []
+	position_feedback.resize(code_length)
+	for i in range(code_length):
+		position_feedback[i] = "gray"
+
 	var secret_copy = _secret_code.duplicate()
 	var guess_copy = guess.duplicate()
 
-	# First pass: check correct positions
+	# First pass: check correct positions (green)
 	for i in range(code_length):
 		if guess[i] == _secret_code[i]:
 			correct_position += 1
+			position_feedback[i] = "green"
 			secret_copy[i] = -1
 			guess_copy[i] = -2
 
-	# Second pass: check correct digits in wrong positions
+	# Second pass: check correct digits in wrong positions (yellow)
 	for i in range(code_length):
 		if guess_copy[i] >= 0:
 			var idx = secret_copy.find(guess_copy[i])
 			if idx >= 0:
 				correct_digit += 1
+				position_feedback[i] = "yellow"
 				secret_copy[idx] = -1
 
 	return {
 		"correct_position": correct_position,
-		"correct_digit": correct_digit
+		"correct_digit": correct_digit,
+		"position_feedback": position_feedback
 	}
 
 
@@ -281,43 +290,67 @@ func _add_history_entry(guess: Array[int], result: Dictionary) -> void:
 	var entry = HBoxContainer.new()
 	entry.add_theme_constant_override("separation", 10)
 
-	# Show the guess
-	var guess_label = Label.new()
-	var guess_str = ""
-	for d in guess:
-		guess_str += str(d) + " "
-	guess_label.text = guess_str.strip_edges()
-	guess_label.add_theme_font_size_override("font_size", 18)
-	guess_label.custom_minimum_size = Vector2(120, 25)
-	entry.add_child(guess_label)
+	# Show the guess with Wordle-style per-digit coloring
+	var digits_container = HBoxContainer.new()
+	digits_container.add_theme_constant_override("separation", 5)
 
-	# Show feedback
-	var feedback = HBoxContainer.new()
-	feedback.add_theme_constant_override("separation", 5)
+	var position_feedback: Array = result.get("position_feedback", [])
 
-	# Green dots for correct position
-	for i in range(result.correct_position):
-		var dot = ColorRect.new()
-		dot.color = Color.GREEN
-		dot.custom_minimum_size = Vector2(15, 15)
-		feedback.add_child(dot)
+	for i in range(guess.size()):
+		var digit_box = PanelContainer.new()
+		digit_box.custom_minimum_size = Vector2(28, 28)
 
-	# Yellow dots for correct digit wrong position
-	for i in range(result.correct_digit):
-		var dot = ColorRect.new()
-		dot.color = Color.YELLOW
-		dot.custom_minimum_size = Vector2(15, 15)
-		feedback.add_child(dot)
+		# Create a stylebox for the background color
+		var style = StyleBoxFlat.new()
+		style.corner_radius_top_left = 4
+		style.corner_radius_top_right = 4
+		style.corner_radius_bottom_left = 4
+		style.corner_radius_bottom_right = 4
 
-	# Gray dots for wrong
-	var wrong = code_length - result.correct_position - result.correct_digit
-	for i in range(wrong):
-		var dot = ColorRect.new()
-		dot.color = Color.GRAY
-		dot.custom_minimum_size = Vector2(15, 15)
-		feedback.add_child(dot)
+		# Set color based on position feedback
+		var feedback_color = "gray"
+		if i < position_feedback.size():
+			feedback_color = position_feedback[i]
 
-	entry.add_child(feedback)
+		match feedback_color:
+			"green":
+				style.bg_color = Color(0.2, 0.7, 0.2)  # Green
+			"yellow":
+				style.bg_color = Color(0.8, 0.7, 0.1)  # Yellow/Gold
+			_:
+				style.bg_color = Color(0.3, 0.3, 0.35)  # Gray
+
+		digit_box.add_theme_stylebox_override("panel", style)
+
+		var digit_label = Label.new()
+		digit_label.text = str(guess[i])
+		digit_label.add_theme_font_size_override("font_size", 16)
+		digit_label.add_theme_color_override("font_color", Color.WHITE)
+		digit_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		digit_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		digit_box.add_child(digit_label)
+
+		digits_container.add_child(digit_box)
+
+	entry.add_child(digits_container)
+
+	# Add summary text (e.g., "2 exact, 1 close")
+	var summary_label = Label.new()
+	var exact = result.correct_position
+	var close = result.correct_digit
+	if exact > 0 and close > 0:
+		summary_label.text = "%d exact, %d close" % [exact, close]
+	elif exact > 0:
+		summary_label.text = "%d exact" % exact
+	elif close > 0:
+		summary_label.text = "%d close" % close
+	else:
+		summary_label.text = "no matches"
+	summary_label.add_theme_font_size_override("font_size", 14)
+	summary_label.add_theme_color_override("font_color", Color(0.7, 0.7, 0.7))
+	summary_label.custom_minimum_size = Vector2(100, 25)
+	entry.add_child(summary_label)
+
 	_history_container.add_child(entry)
 
 
