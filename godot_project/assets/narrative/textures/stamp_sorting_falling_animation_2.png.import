@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://law7l1qda7sh"
-path="res://.godot/imported/stamp_sorting_falling_animation_2.png-b86f678684c7a9176ac350e62186e100.ctex"
+path="res://.godot/imported/stamp_sorting_falling_animation_2.png-28f40675c28335b61c8e9e78c8d0e468.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigames/textures/stamp_sorting_falling_animation_2.png"
-dest_files=["res://.godot/imported/stamp_sorting_falling_animation_2.png-b86f678684c7a9176ac350e62186e100.ctex"]
+source_file="res://assets/narrative/textures/stamp_sorting_falling_animation_2.png"
+dest_files=["res://.godot/imported/stamp_sorting_falling_animation_2.png-28f40675c28335b61c8e9e78c8d0e468.ctex"]
 
 [params]
 

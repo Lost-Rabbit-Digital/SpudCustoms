@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c258ikgevep3l"
-path="res://.godot/imported/document_scanner_uv_lamp.png-ecd990b0f142a11999e2f64449ca5cd2.ctex"
+path="res://.godot/imported/document_scanner_uv_lamp.png-02bf0c7733acb413b40de7b55a09d6cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigames/textures/document_scanner_uv_lamp.png"
-dest_files=["res://.godot/imported/document_scanner_uv_lamp.png-ecd990b0f142a11999e2f64449ca5cd2.ctex"]
+source_file="res://assets/narrative/textures/document_scanner_uv_lamp.png"
+dest_files=["res://.godot/imported/document_scanner_uv_lamp.png-02bf0c7733acb413b40de7b55a09d6cc.ctex"]
 
 [params]
 

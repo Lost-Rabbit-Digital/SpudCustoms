@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bt7k1vlua8og"
-path="res://.godot/imported/minigame_ui_result_splash_success.png-f3aea5f81cc9eef3e4f200bc4f8992c3.ctex"
+path="res://.godot/imported/minigame_ui_result_splash_success.png-57c67c08e80cb7acc922151be49fe7fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigames/textures/minigame_ui_result_splash_success.png"
-dest_files=["res://.godot/imported/minigame_ui_result_splash_success.png-f3aea5f81cc9eef3e4f200bc4f8992c3.ctex"]
+source_file="res://assets/narrative/textures/minigame_ui_result_splash_success.png"
+dest_files=["res://.godot/imported/minigame_ui_result_splash_success.png-57c67c08e80cb7acc922151be49fe7fd.ctex"]
 
 [params]
 

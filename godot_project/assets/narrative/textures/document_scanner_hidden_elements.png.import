@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://du3y5qnlky6y1"
-path="res://.godot/imported/document_scanner_hidden_elements.png-fb5fa6289b16a5c75cb21b13da42e2ec.ctex"
+path="res://.godot/imported/document_scanner_hidden_elements.png-c1c858cbe516e4cf26a30b8bbf92b28b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigames/textures/document_scanner_hidden_elements.png"
-dest_files=["res://.godot/imported/document_scanner_hidden_elements.png-fb5fa6289b16a5c75cb21b13da42e2ec.ctex"]
+source_file="res://assets/narrative/textures/document_scanner_hidden_elements.png"
+dest_files=["res://.godot/imported/document_scanner_hidden_elements.png-c1c858cbe516e4cf26a30b8bbf92b28b.ctex"]
 
 [params]
 

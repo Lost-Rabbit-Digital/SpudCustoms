@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cone7kaj6bl1x"
-path="res://.godot/imported/border_chase_conveyor_belt.png-d0fbcd0828824a2b13e084bb32752a87.ctex"
+path="res://.godot/imported/border_chase_conveyor_belt.png-40e9bd08f99fe1d3811d50812bd39b0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigames/textures/border_chase_conveyor_belt.png"
-dest_files=["res://.godot/imported/border_chase_conveyor_belt.png-d0fbcd0828824a2b13e084bb32752a87.ctex"]
+source_file="res://assets/narrative/textures/border_chase_conveyor_belt.png"
+dest_files=["res://.godot/imported/border_chase_conveyor_belt.png-40e9bd08f99fe1d3811d50812bd39b0f.ctex"]
 
 [params]
 

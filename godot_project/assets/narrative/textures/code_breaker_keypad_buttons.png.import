@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cx0kxib6gsp2n"
-path="res://.godot/imported/code_breaker_keypad_buttons.png-90e2671d838983eb254d7d3bc2000cb1.ctex"
+path="res://.godot/imported/code_breaker_keypad_buttons.png-502ebee87875ff8aeb4b8354bb966da6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigames/textures/code_breaker_keypad_buttons.png"
-dest_files=["res://.godot/imported/code_breaker_keypad_buttons.png-90e2671d838983eb254d7d3bc2000cb1.ctex"]
+source_file="res://assets/narrative/textures/code_breaker_keypad_buttons.png"
+dest_files=["res://.godot/imported/code_breaker_keypad_buttons.png-502ebee87875ff8aeb4b8354bb966da6.ctex"]
 
 [params]
 

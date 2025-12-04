@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cla7q3ym8iv8v"
-path="res://.godot/imported/document_scanner_desk_background_1.png-4adde8c4fd7074037940a3bb2a4ea92c.ctex"
+path="res://.godot/imported/document_scanner_desk_background_1.png-40c3e7d032c955a29c0e6b8ae107ca13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigames/textures/document_scanner_desk_background_1.png"
-dest_files=["res://.godot/imported/document_scanner_desk_background_1.png-4adde8c4fd7074037940a3bb2a4ea92c.ctex"]
+source_file="res://assets/narrative/textures/document_scanner_desk_background_1.png"
+dest_files=["res://.godot/imported/document_scanner_desk_background_1.png-40c3e7d032c955a29c0e6b8ae107ca13.ctex"]
 
 [params]
 

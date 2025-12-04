@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://n7qyoikjjj21"
-path="res://.godot/imported/code_breaker_terminal_frame.png-dc6a932c013f4da841fbad68b7b68b36.ctex"
+path="res://.godot/imported/code_breaker_terminal_frame.png-ff2683720f529b73b2fc91fa5ae30c55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigames/textures/code_breaker_terminal_frame.png"
-dest_files=["res://.godot/imported/code_breaker_terminal_frame.png-dc6a932c013f4da841fbad68b7b68b36.ctex"]
+source_file="res://assets/narrative/textures/code_breaker_terminal_frame.png"
+dest_files=["res://.godot/imported/code_breaker_terminal_frame.png-ff2683720f529b73b2fc91fa5ae30c55.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bncr7cptunenr"
-path="res://.godot/imported/stamp_sorting_bins.png-fa0e21d6ca859dbb216fbffef5aa08ef.ctex"
+path="res://.godot/imported/stamp_sorting_bins.png-6dc8a6e291d51b7926bb7b4d81a4baf1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigames/textures/stamp_sorting_bins.png"
-dest_files=["res://.godot/imported/stamp_sorting_bins.png-fa0e21d6ca859dbb216fbffef5aa08ef.ctex"]
+source_file="res://assets/narrative/textures/stamp_sorting_bins.png"
+dest_files=["res://.godot/imported/stamp_sorting_bins.png-6dc8a6e291d51b7926bb7b4d81a4baf1.ctex"]
 
 [params]
 

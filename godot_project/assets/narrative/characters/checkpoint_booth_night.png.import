@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boeh6e3dmsgwp"
-path="res://.godot/imported/minigame_ui_result_splash_failure.png-d61305b2def3a980b6f643e99c16c69f.ctex"
+uid="uid://bydfgx7u1rfkh"
+path="res://.godot/imported/checkpoint_booth_night.png-5daa5b0bfd63bbc357b5e1f0eadeec90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/narrative/textures/minigame_ui_result_splash_failure.png"
-dest_files=["res://.godot/imported/minigame_ui_result_splash_failure.png-d61305b2def3a980b6f643e99c16c69f.ctex"]
+source_file="res://assets/narrative/characters/checkpoint_booth_night.png"
+dest_files=["res://.godot/imported/checkpoint_booth_night.png-5daa5b0bfd63bbc357b5e1f0eadeec90.ctex"]
 
 [params]
 

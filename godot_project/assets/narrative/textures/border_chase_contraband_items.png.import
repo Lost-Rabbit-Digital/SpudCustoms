@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://55180bj7g5bb"
-path="res://.godot/imported/border_chase_contraband_items.png-75029a0ce031235db794e6922e66cbd4.ctex"
+path="res://.godot/imported/border_chase_contraband_items.png-7f69bab11e40412aef01683504bad715.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigames/textures/border_chase_contraband_items.png"
-dest_files=["res://.godot/imported/border_chase_contraband_items.png-75029a0ce031235db794e6922e66cbd4.ctex"]
+source_file="res://assets/narrative/textures/border_chase_contraband_items.png"
+dest_files=["res://.godot/imported/border_chase_contraband_items.png-7f69bab11e40412aef01683504bad715.ctex"]
 
 [params]
 

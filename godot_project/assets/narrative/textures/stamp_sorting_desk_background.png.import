@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ck562aqdgqr8d"
-path="res://.godot/imported/stamp_sorting_desk_background.png-6caa16d17e3a450c659b5104044c76c0.ctex"
+path="res://.godot/imported/stamp_sorting_desk_background.png-654e2c2175d004984f2bad50a754ed4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigames/textures/stamp_sorting_desk_background.png"
-dest_files=["res://.godot/imported/stamp_sorting_desk_background.png-6caa16d17e3a450c659b5104044c76c0.ctex"]
+source_file="res://assets/narrative/textures/stamp_sorting_desk_background.png"
+dest_files=["res://.godot/imported/stamp_sorting_desk_background.png-654e2c2175d004984f2bad50a754ed4e.ctex"]
 
 [params]
 

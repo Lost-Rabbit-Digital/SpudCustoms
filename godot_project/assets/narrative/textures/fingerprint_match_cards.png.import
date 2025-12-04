@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpj85og0wk8uq"
-path="res://.godot/imported/fingerprint_match_cards.png-df106e5797507fdbf121a790e3afc1ab.ctex"
+path="res://.godot/imported/fingerprint_match_cards.png-053717de8cf56a3ba2d48f263826ca17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigames/textures/fingerprint_match_cards.png"
-dest_files=["res://.godot/imported/fingerprint_match_cards.png-df106e5797507fdbf121a790e3afc1ab.ctex"]
+source_file="res://assets/narrative/textures/fingerprint_match_cards.png"
+dest_files=["res://.godot/imported/fingerprint_match_cards.png-053717de8cf56a3ba2d48f263826ca17.ctex"]
 
 [params]
 

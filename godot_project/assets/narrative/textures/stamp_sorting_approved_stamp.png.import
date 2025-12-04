@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0o386eqlsdq"
-path="res://.godot/imported/stamp_sorting_approved_stamp.png-f7f05bc7f4a8f7c8b8d967b24e51f061.ctex"
+path="res://.godot/imported/stamp_sorting_approved_stamp.png-630d10c81138f21fd8f6b5e98659e4a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigames/textures/stamp_sorting_approved_stamp.png"
-dest_files=["res://.godot/imported/stamp_sorting_approved_stamp.png-f7f05bc7f4a8f7c8b8d967b24e51f061.ctex"]
+source_file="res://assets/narrative/textures/stamp_sorting_approved_stamp.png"
+dest_files=["res://.godot/imported/stamp_sorting_approved_stamp.png-630d10c81138f21fd8f6b5e98659e4a2.ctex"]
 
 [params]
 
