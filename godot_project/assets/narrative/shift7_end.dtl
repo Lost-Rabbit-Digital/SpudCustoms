@@ -2,6 +2,7 @@
 audio music "res://assets/music/narrative/horror_hush_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 audio "res://assets/music/narrative/creepy_creaks_ambience.mp3" [volume="-12.0" bus="Ambient"]
 [background arg="res://assets/narrative/resistance_base.png" fade="0.0"]
+audio "res://assets/audio/atmosphere/resistance_whispers.mp3" [volume="-15.0" bus="Ambient"]
 join narrator
 narrator: After your shift, you're led to a secret resistance meeting in an abandoned starch factory. #id:d2
 
@@ -11,6 +12,7 @@ resistance_leader: The time for whispers and pamphlets is over. The government h
 resistance_leader: Our sources confirm that [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] processing plants are increasing production. #id:d5
 resistance_leader: Which means [tornado radius=3 freq=3][color=CRIMSON]more of our brothers and sisters disappeared, processed, consumed[/color][/tornado]. #id:d6
 resistance_leader: The leader pounds a fist on the table. [pulse freq=3][color=CHARTREUSE]This ends now.[/color][/pulse] We have a plan to strike at the heart of their operation. #id:d7
+audio "res://assets/audio/stings/decision_weight.mp3" [volume="-10.0" bus="SFX"]
 leave resistance_leader
 
 [background arg="res://assets/narrative/resistance_planning.png" fade="1.2"]
@@ -54,6 +56,7 @@ resistance_leader: A heated debate breaks out among the resistance members. #id:
 resistance_leader: Some argue for a more aggressive approach – destroying the processing plants entirely. #id:ea
 resistance_leader: Others insist that violent action will only turn public opinion against them. #id:eb
 resistance_leader: ENOUGH! The leader silences the room with a commanding voice. #id:ec
+audio "res://assets/audio/stings/threat_reveal.mp3" [volume="-10.0" bus="SFX"]
 resistance_leader: We cannot afford to be divided. Not now, when we're so close. #id:ed
 resistance_leader: Our goal is simple\: reveal the truth. Let the people decide what happens next. #id:ee
 leave resistance_leader
@@ -76,6 +79,7 @@ if {final_decision} == "help":
 	resistance_leader: The leader clasps your shoulder firmly. [color=CHARTREUSE]Your courage honors us all.[/color] #id:f5
 	resistance_leader: On the third day, when the sun is highest, our agents will come. #id:f6
 	resistance_leader: The password is "[wave amp=15 freq=3][color=CHARTREUSE]The roots grow deep.[/color][/wave]" Remember it. #id:f7
+	audio "res://assets/audio/stings/revelation_hope.mp3" [volume="-10.0" bus="SFX"]
 	leave resistance_leader
 elif {final_decision} == "passive":
 	join resistance_leader [z_index="1"]

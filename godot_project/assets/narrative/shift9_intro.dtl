@@ -2,11 +2,14 @@
 audio music "res://assets/audio/ambient/horror_drone_49.mp3" [fade="2.0" volume="-15.0" bus="Ambient"]
 audio music "res://assets/music/narrative/horror_downward_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]
+audio "res://assets/audio/atmosphere/war_zone_distant.mp3" [volume="-15.0" bus="Ambient"]
 join narrator [z_index="1"]
 narrator: The border resembles a [pulse freq=3][color=CRIMSON]war zone[/color][/pulse]. Barricades, armored vehicles, and elite guards stand ready. Today is when the resistance planned to strike. #id:140
 leave narrator
 
 [background arg="res://assets/narrative/extreme_emergency.png" fade="0.3"]
+audio "res://assets/audio/atmosphere/broadcast_static.mp3" [volume="-10.0" bus="SFX"]
+audio "res://assets/audio/ui_drama/radio_click_on.mp3" [volume="-10.0" bus="SFX"]
 join announcer [z_index="1"]
 announcer: [wave amp=25 freq=3][color=YELLOW]EMERGENCY BROADCAST[/color][/wave]\: All of Spud is under [color=RED]martial law[/color]. "The Resistance" has launched attacks against government facilities. #id:141
 announcer: Anyone aiding these [color=CRIMSON]extremists[/color] faces [color=DARK_VIOLET]immediate processing[/color]. The Ministry confirms\: [color=DARK_VIOLET]Root Reserve[/color] remains safe for all [color=DARK_ORANGE]loyal potatoes[/color]. #id:142
@@ -19,11 +22,13 @@ security_chief: Their goal\: access the central database with all production rec
 leave security_chief
 
 [background arg="res://assets/narrative/sasha_capture.png" fade="1.5"]
+audio "res://assets/audio/stings/threat_reveal.mp3" [volume="-10.0" bus="SFX"]
 join supervisor_russet [z_index="1"]
 supervisor_russet: We've captured several resistance operatives, including Officer Sasha. #id:145
 join sweet_potato_sasha [z_index="1"]
 sweet_potato_sasha: The [tornado radius=3 freq=2][color=CRIMSON]real traitors[/color][/tornado] are those who [color=DARK_VIOLET]feed our people to each other[/color]. You can't stop the truth! #id:146
 sweet_potato_sasha: She's dragged away, still shouting\: [color=CHARTREUSE]The people will know what's in their food![/color] #id:147
+audio "res://assets/audio/ui_drama/metal_cell_door.mp3" [volume="-10.0" bus="SFX"]
 leave sweet_potato_sasha
 
 join supervisor_russet [z_index="1"]
@@ -39,6 +44,7 @@ leave security_officer
 [background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 join resistance_member_1 [z_index="1"]
 resistance_member_1: A potato in official uniform approaches with seemingly perfect Alpha credentials. #id:14b
+audio "res://assets/audio/stings/heartbeat_tension.mp3" [volume="-10.0" bus="SFX"]
 resistance_member_1: A tiny blue card falls from the folder. "[wave amp=15 freq=3][color=CHARTREUSE]The roots grow deep.[/color][/wave]", they mutter as they pick up the card. #id:14c
 
 set {critical_choice} = "none"
@@ -60,6 +66,7 @@ else:
 [background arg="res://assets/narrative/night_attack.png" fade="2.0"]
 join narrator [z_index="1"]
 narrator: Suddenly, the facility [color=YELLOW]shakes with explosions[/color]. The resistance attack has begun, regardless of your choice. #id:152
+audio "res://assets/audio/stings/alarm_distant.mp3" [volume="-10.0" bus="SFX"]
 leave narrator
 
 [background arg="res://assets/narrative/night_gameplay.png" fade="2.0"]

@@ -8,6 +8,8 @@ supervisor_russet: Don't forget to grab your ration of [wave amp=15 freq=2][colo
 leave supervisor_russet
 
 [background arg="res://assets/narrative/suspicious_note.png" fade="2.0"]
+audio "res://assets/audio/stings/revelation_dark.mp3" [volume="-10.0" bus="SFX"]
+audio "res://assets/audio/ui_drama/paper_evidence.mp3" [volume="-10.0" bus="SFX"]
 A small note slips out from some papers on your desk. #id:52
 "[color=GOLD]Not all is as it seems. The roots of our nation have grown rotten. [br] Follow the trail, but take care not to be silenced.[/color] [br] - [color=CHARTREUSE]A friend[/color]" #id:53
 
