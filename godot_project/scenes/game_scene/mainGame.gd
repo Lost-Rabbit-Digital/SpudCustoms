@@ -312,6 +312,11 @@ func _connect_signals():
 	EventBus.achievement_unlocked.connect(_on_achievement_unlocked)
 	EventBus.high_score_achieved.connect(_on_high_score_achieved)
 
+	# UI feedback signals
+	EventBus.alert_green_requested.connect(_on_alert_green_requested)
+	EventBus.alert_red_requested.connect(_on_alert_red_requested)
+	EventBus.screen_shake_requested.connect(_on_screen_shake_requested)
+
 	# UI signals
 	ui_hint_system.hint_deactivated.connect(_on_hint_deactivated)
 
@@ -2397,6 +2402,21 @@ func _on_game_over():
 # Strong: intensity 20-25, duration 0.4
 func shake_screen(intensity: float = 10.0, duration: float = 0.3):
 	Global.shake_screen(intensity, duration)
+
+
+# EventBus signal handlers for UI feedback
+func _on_screen_shake_requested(intensity: float, duration: float) -> void:
+	Global.shake_screen(intensity, duration)
+
+
+func _on_alert_green_requested(message: String, _duration: float) -> void:
+	if alert_label and alert_timer:
+		Global.display_green_alert(alert_label, alert_timer, message)
+
+
+func _on_alert_red_requested(message: String, _duration: float) -> void:
+	if alert_label and alert_timer:
+		Global.display_red_alert(alert_label, alert_timer, message)
 
 
 func parse_date(date_string: String) -> Dictionary:

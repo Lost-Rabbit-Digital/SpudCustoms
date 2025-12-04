@@ -184,6 +184,8 @@ func _connect_to_event_bus() -> void:
 
 	# Game flow events
 	EventBus.shift_stats_reset.connect(_on_shift_stats_reset)
+	EventBus.reset_shift_requested.connect(_on_reset_shift_requested)
+	EventBus.reset_game_requested.connect(_on_reset_game_requested)
 
 	# Save/load events
 	EventBus.save_game_requested.connect(_on_save_requested)
@@ -301,6 +303,27 @@ func _on_shift_stats_reset() -> void:
 	EventBus.ui_strike_update_requested.emit(0, _max_strikes)
 
 	LogManager.write_info("Shift stats reset")
+
+
+func _on_reset_shift_requested() -> void:
+	# Reset shift-specific stats (score, strikes, quota) before scene reload
+	_score = 0
+	_strikes = 0
+	_quota_met = 0
+
+	# Sync with Global
+	if Global:
+		Global.score = 0
+		Global.strikes = 0
+		Global.quota_met = 0
+
+	LogManager.write_info("Shift reset requested - stats cleared for restart")
+
+
+func _on_reset_game_requested() -> void:
+	# Additional game reset logic if needed
+	# This is called alongside reset_shift_requested when restarting
+	LogManager.write_info("Game reset requested")
 
 
 func _on_save_requested() -> void:

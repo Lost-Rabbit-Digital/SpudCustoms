@@ -445,9 +445,8 @@ func create_final_stamp(stamp_type: String, pos: Vector2):
 	while main_game and main_game.get_parent() and main_game.name != "Root":
 		main_game = main_game.get_parent()
 
-	# Trigger screen shake if available
-	if main_game and main_game.has_method("shake_screen"):
-		main_game.shake_screen(4.0, 0.2)  # Mild shake for stamping
+	# Trigger screen shake via EventBus
+	EventBus.screen_shake_requested.emit(4.0, 0.2)  # Mild shake for stamping
 
 	# Update stats if available
 	if stats_manager:
@@ -455,8 +454,8 @@ func create_final_stamp(stamp_type: String, pos: Vector2):
 		var is_perfect = stats_manager.check_stamp_accuracy(final_stamp.global_position, passport)
 		if is_perfect:
 			stats_manager.current_stats.perfect_stamps += 1
-			# REFACTORED: Global is an autoload, use direct reference
-			Global.add_score(100)
+			# REFACTORED: Use EventBus instead of Global
+			EventBus.request_score_add(100, "stamp_accuracy")
 
 	# Fade in the stamp
 	var tween = create_tween()

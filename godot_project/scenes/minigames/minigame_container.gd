@@ -135,9 +135,9 @@ func start(config: Dictionary = {}) -> void:
 	# Call subclass setup
 	_on_minigame_start(config)
 
-	# Emit event
+	# Emit event via EventBus
 	if EventBus:
-		EventBus.emit_signal("minigame_started", minigame_type)
+		EventBus.minigame_started.emit(minigame_type)
 
 	print("[Minigame] Started: ", minigame_type)
 
@@ -216,7 +216,7 @@ func _finish() -> void:
 	minigame_completed.emit(_result)
 
 	if EventBus:
-		EventBus.emit_signal("minigame_completed", _result)
+		EventBus.minigame_completed.emit(_result)
 
 	print("[Minigame] Completed: ", minigame_type, " Result: ", _result)
 
