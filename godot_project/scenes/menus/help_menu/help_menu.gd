@@ -9,6 +9,7 @@ func _ready() -> void:
 	tab_container.set_tab_title(0, tr("help_tab_basics"))
 	tab_container.set_tab_title(1, tr("help_tab_gameplay"))
 	tab_container.set_tab_title(2, tr("help_tab_minigames"))
+	tab_container.set_tab_title(3, tr("help_tab_lore"))
 
 	# Start on the first tab
 	tab_container.current_tab = 0
