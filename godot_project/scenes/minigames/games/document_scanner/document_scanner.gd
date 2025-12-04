@@ -11,6 +11,23 @@ extends MinigameContainer
 ## Design: Relaxing and rewarding, like a treasure hunt.
 ## No punishment for missing elements - you just don't get the bonus.
 
+# Audio assets
+var _snd_uv_activate = preload("res://assets/audio/minigames/document_scanner_uv_activate.mp3")
+var _snd_uv_loop = preload("res://assets/audio/minigames/document_scanner_uv_loop.mp3")
+var _snd_movement = preload("res://assets/audio/minigames/document_scanner_movement.mp3")
+var _snd_reveal = preload("res://assets/audio/minigames/document_scanner_reveal.mp3")
+var _snd_confirm = preload("res://assets/audio/minigames/document_scanner_confirm.mp3")
+
+# Texture assets (preloaded for future use)
+var _tex_desk_background = preload("res://assets/minigames/textures/document_scanner_desk_background.png")
+var _tex_desk_background_1 = preload("res://assets/minigames/textures/document_scanner_desk_background_1.png")
+var _tex_document_base = preload("res://assets/minigames/textures/document_scanner_document_base.png")
+var _tex_hidden_elements = preload("res://assets/minigames/textures/document_scanner_hidden_elements.png")
+var _tex_uv_lamp = preload("res://assets/minigames/textures/document_scanner_uv_lamp.png")
+
+# UV loop audio player
+var _uv_loop_player: AudioStreamPlayer
+
 ## Number of hidden elements to find
 @export var elements_to_find: int = 4
 
@@ -40,6 +57,33 @@ var _elements_container: Node2D
 var _found_label: Label
 
 
+func _play_sound(sound: AudioStream, volume_db: float = 0.0, pitch: float = 1.0) -> void:
+	if audio_player and sound:
+		audio_player.stream = sound
+		audio_player.volume_db = volume_db
+		audio_player.pitch_scale = pitch
+		audio_player.play()
+
+
+func _setup_uv_loop_audio() -> void:
+	# Create a separate audio player for the UV loop sound
+	_uv_loop_player = AudioStreamPlayer.new()
+	_uv_loop_player.stream = _snd_uv_loop
+	_uv_loop_player.volume_db = -10.0
+	_uv_loop_player.bus = "SFX"
+	add_child(_uv_loop_player)
+
+
+func _start_uv_loop() -> void:
+	if _uv_loop_player and not _uv_loop_player.playing:
+		_uv_loop_player.play()
+
+
+func _stop_uv_loop() -> void:
+	if _uv_loop_player and _uv_loop_player.playing:
+		_uv_loop_player.stop()
+
+
 func _ready() -> void:
 	super._ready()
 
@@ -60,6 +104,9 @@ func _on_minigame_start(config: Dictionary) -> void:
 	# Reset state
 	_found_elements.clear()
 	_hidden_elements.clear()
+
+	# Setup UV loop audio player
+	_setup_uv_loop_audio()
 
 	# Apply config
 	if config.has("elements_to_find"):
@@ -275,9 +322,12 @@ func _input(event: InputEvent) -> void:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:
 				_is_dragging_light = true
+				_play_sound(_snd_uv_activate, -5.0)
+				_start_uv_loop()
 				_check_element_click(local_pos)
 			else:
 				_is_dragging_light = false
+				_stop_uv_loop()
 
 	elif event is InputEventMouseMotion and _is_dragging_light:
 		_uv_light_position = _get_subviewport_mouse_pos()
@@ -314,11 +364,17 @@ func _update_element_visibility() -> void:
 		var element_world_pos = _elements_container.position + element_data.position
 		var dist = _uv_light_position.distance_to(element_world_pos)
 
+		# Track if element was revealed before
+		var was_revealed = element_data.revealed
+
 		# Reveal based on distance
 		if dist < reveal_radius:
 			var intensity = 1.0 - (dist / reveal_radius)
 			glow.modulate.a = intensity
 			element_data.revealed = true
+			# Play reveal sound when first revealed
+			if not was_revealed:
+				_play_sound(_snd_reveal, -5.0, randf_range(0.95, 1.05))
 		else:
 			glow.modulate.a = max(0, glow.modulate.a - 0.1)  # Fade out slowly
 			if glow.modulate.a < 0.1:
@@ -359,11 +415,9 @@ func _mark_element_found(index: int) -> void:
 		if glow:
 			glow.modulate = Color(0.3, 1.0, 0.3, 1.0)
 
-	# Play a satisfying sound
-	if audio_player:
-		# Quick beep sound (we'd load a real sound in production)
-		audio_player.pitch_scale = 1.0 + (0.1 * _found_elements.size())
-		audio_player.play()
+	# Play confirm sound with pitch increasing for each element found
+	var pitch = 1.0 + (0.1 * _found_elements.size())
+	_play_sound(_snd_confirm, 0.0, pitch)
 
 	_update_found_label()
 
@@ -397,6 +451,12 @@ func _all_elements_found() -> void:
 
 
 func _on_minigame_complete() -> void:
+	# Stop UV loop if playing
+	_stop_uv_loop()
+	if _uv_loop_player:
+		_uv_loop_player.queue_free()
+		_uv_loop_player = null
+
 	# If not all found, still give partial credit
 	if _found_elements.size() < elements_to_find and _found_elements.size() > 0:
 		var partial_score = _found_elements.size() * points_per_element
