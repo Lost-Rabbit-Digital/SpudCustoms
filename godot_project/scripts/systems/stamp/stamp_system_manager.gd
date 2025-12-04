@@ -4,6 +4,9 @@ extends Node
 # Signal to forward from the passport stampable
 signal stamp_decision_made(decision: String, perfect: bool)
 
+# Signal forwarded when stamp is applied
+signal stamp_applied(stamp: StampComponent, document: Node, is_perfect: bool)
+
 @export var alert_label: Label
 @export var alert_timer: Timer
 

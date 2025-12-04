@@ -307,6 +307,20 @@ func track_event(event_name: String, data: Dictionary = {}) -> void:
 	analytics_event.emit(event_name, enriched_data)
 
 
+## Convenience method to request a quota update
+## @param amount The amount to add to the current quota met
+func request_quota_update(amount: int = 1) -> void:
+	if GameStateManager:
+		var current_met = GameStateManager.get_quota_met()
+		var new_met = current_met + amount
+		GameStateManager.set_quota_met(new_met)
+		var target = GameStateManager.get_quota_target()
+		quota_updated.emit(target, new_met)
+	elif Global:
+		Global.quota_met += amount
+		quota_updated.emit(Global.quota_target, Global.quota_met)
+
+
 ## Debug method to list all connected signals
 func get_connection_report() -> Dictionary:
 	var report = {}
