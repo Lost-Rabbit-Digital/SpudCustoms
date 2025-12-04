@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://byvydukidk6i2"]
+[gd_scene load_steps=11 format=3 uid="uid://byvydukidk6i2"]
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_pss7b"]
 [ext_resource type="Script" uid="uid://bdet8115mn02d" path="res://scenes/menus/main_menu/main_menu.gd" id="2_lk0wa"]
@@ -7,11 +7,17 @@
 [ext_resource type="PackedScene" uid="uid://b2hwmqvp5r8jn" path="res://scenes/menus/main_menu/social_buttons.tscn" id="4_social"]
 [ext_resource type="PackedScene" uid="uid://cqvlk7m8fpnxr" path="res://scenes/menus/main_menu/localization_selector.tscn" id="5_locale"]
 [ext_resource type="Script" path="res://scripts/effects/audio_reactive_bloom.gd" id="7_bloom"]
+[ext_resource type="Script" path="res://scripts/effects/parallax_mouse_background.gd" id="8_parallax"]
 
 [node name="MainMenu" instance=ExtResource("1_pss7b")]
 script = ExtResource("2_lk0wa")
 options_packed_scene = ExtResource("3_lqjmk")
 credits_packed_scene = ExtResource("3_vmius")
+
+[node name="BackgroundTextureRect" parent="." index="2"]
+script = ExtResource("8_parallax")
+max_offset = Vector2(30, 20)
+smoothing = 3.0
 
 [node name="HBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="2"]
 visible = false
