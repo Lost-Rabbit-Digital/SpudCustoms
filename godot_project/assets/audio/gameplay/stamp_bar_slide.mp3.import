@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bjq1ku3kktr1f"
-path="res://.godot/imported/stamp_bar_slide.mp3-0fa5386fe54b9c935ab424bf6e0acf67.mp3str"
+path="res://.godot/imported/stamp_bar_slide.mp3-ccd18e319db3b90daf65e36fc36facf2.mp3str"
 
 [deps]
 
 source_file="res://assets/audio/gameplay/stamp_bar_slide.mp3"
-dest_files=["res://.godot/imported/stamp_bar_slide.mp3-0fa5386fe54b9c935ab424bf6e0acf67.mp3str"]
+dest_files=["res://.godot/imported/stamp_bar_slide.mp3-ccd18e319db3b90daf65e36fc36facf2.mp3str"]
 
 [params]
 

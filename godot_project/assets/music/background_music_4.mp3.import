@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dxsv0fnj5p8f7"
-path="res://.godot/imported/background_music_4.mp3-0b567719594bb957851a51b9c959376b.mp3str"
+path="res://.godot/imported/background_music_4.mp3-7965d361455011eecbf86a5e8412332a.mp3str"
 
 [deps]
 
 source_file="res://assets/music/background_music_4.mp3"
-dest_files=["res://.godot/imported/background_music_4.mp3-0b567719594bb957851a51b9c959376b.mp3str"]
+dest_files=["res://.godot/imported/background_music_4.mp3-7965d361455011eecbf86a5e8412332a.mp3str"]
 
 [params]
 
