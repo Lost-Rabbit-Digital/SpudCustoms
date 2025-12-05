@@ -149,7 +149,7 @@ else: # dismantle
 [background arg="res://assets/narrative/russet_standoff.png" fade="2.0"]
 audio "res://assets/audio/explosions/Explosion Ringing.wav" [volume="-5.0" bus="SFX"]
 join narrator [z_index="1"]
-audio music "res://assets/music/narrative/ambient_joy_main.mp3" [fade="2.0" volume="1.0" bus="Music"]
+audio music "res://assets/music/narrative/victory_aftermath_main.mp3" [fade="2.0" volume="-3.0" bus="Music"]
 narrator: The fall of [color=DARK_VIOLET]Root Reserve[/color] sparks a wildfire of change across Spud. #id:35
 [background arg="res://assets/narrative/victory_scene.png" fade="2.0"]
 audio "res://assets/music/Honor Braaam.wav" [volume="-5.0" bus="SFX"]

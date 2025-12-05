@@ -12,7 +12,7 @@ resistance_leader: The time for whispers and pamphlets is over. The government h
 resistance_leader: Our sources confirm that [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] processing plants are increasing production. #id:d5
 resistance_leader: Which means [tornado radius=3 freq=3][color=CRIMSON]more of our brothers and sisters disappeared, processed, consumed[/color][/tornado]. #id:d6
 resistance_leader: The leader pounds a fist on the table. [pulse freq=3][color=CHARTREUSE]This ends now.[/color][/pulse] We have a plan to strike at the heart of their operation. #id:d7
-audio music "res://assets/music/narrative/metal_doomed_main.mp3" [fade="1.0" volume="-5.0" bus="Music"]
+audio music "res://assets/music/narrative/resistance_march_main.mp3" [fade="1.0" volume="-5.0" bus="Music"]
 audio "res://assets/audio/stings/decision_weight.mp3" [volume="-5.0" bus="SFX"]
 leave resistance_leader
 

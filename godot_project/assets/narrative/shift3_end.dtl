@@ -15,7 +15,7 @@ supervisor_russet: Getting cozy with coworkers? Remember, getting friendly can l
 leave supervisor_russet
 
 [background arg="res://assets/narrative/resistance_base.png" fade="1.2"]
-audio music "res://assets/music/narrative/horror_hush_main.mp3" [fade="1.5" volume="-5.0" bus="Music"]
+audio music "res://assets/music/narrative/sasha_theme_main.mp3" [fade="1.5" volume="-5.0" bus="Music"]
 audio "res://assets/audio/mechanical/Metal Old Door A.wav" [volume="-8.0" bus="SFX"]
 join sweet_potato_sasha [z_index="1"]
 sweet_potato_sasha: I've been gathering information about rejected potatoes. [wave amp=20 freq=3][color=CRIMSON]They don't go to deportation centers.[/color][/wave] #id:6c

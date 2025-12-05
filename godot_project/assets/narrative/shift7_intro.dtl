@@ -19,7 +19,7 @@ narrator: The situation outside has deteriorated. Angry crowds gather at checkpo
 leave narrator
 
 [background arg="res://assets/narrative/extreme_emergency.png" fade="2.0"]
-audio music "res://assets/music/narrative/horror_downward_main.mp3" [fade="1.0" volume="-5.0" bus="Music"]
+audio music "res://assets/music/narrative/radio_propaganda_main.mp3" [fade="0.3" volume="-5.0" bus="Music"]
 join announcer [z_index="1"]
 announcer: [color=YELLOW]EMERGENCY BROADCAST[/color]\: Recent circulation of [color=CRIMSON]forged documents[/color] has caused unnecessary panic. #id:108
 announcer: A reward of [color=GOLD]10,000 Spud Credits[/color] is offered for information leading to the capture of these saboteurs. #id:109
