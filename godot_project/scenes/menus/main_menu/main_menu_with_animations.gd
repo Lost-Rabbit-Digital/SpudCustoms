@@ -336,10 +336,12 @@ var current_track_index = 0
 
 func _setup_game_buttons():
 	super._setup_game_buttons()
-	if GameState.has_game_state():
+	# Show continue only if there's a game state and player has progressed past Day 0
+	if GameState.has_game_state() and GameState.get_current_level() > 0:
 		%ContinueGameButton.show()
-		if level_select_packed_scene != null and GameState.get_max_level_reached() > 0:
-			%LevelSelectButton.show()
+	# Always show level select if the scene is available
+	if level_select_packed_scene != null:
+		%LevelSelectButton.show()
 
 
 func _setup_keyboard_navigation():
