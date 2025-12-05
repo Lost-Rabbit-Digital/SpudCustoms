@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://dfdr67ejitbtl"]
+[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://ve32p4u12fcn"]
 
 [sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_music"]
 buffer_length = 0.1
