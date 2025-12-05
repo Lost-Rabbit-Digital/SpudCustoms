@@ -802,10 +802,14 @@ func mark_tutorial_completed(tutorial_id: String):
 
 ## Reset all tutorial progress
 func reset_all_tutorials():
+	# Clean up any existing tutorial UI first
+	cleanup_tutorial_ui()
+
 	tutorials_completed.clear()
 	current_tutorial = ""
 	current_step = 0
 	tutorial_queue.clear()
+	tutorial_enabled = true  # Re-enable tutorials when resetting
 	save_tutorial_progress()
 
 
