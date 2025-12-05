@@ -630,7 +630,7 @@ func end_shift(success: bool = true):
 		"potatoes_approved": shift_stats.potatoes_approved,
 		"potatoes_rejected": shift_stats.potatoes_rejected,
 		"perfect_stamps": shift_stats.perfect_stamps,
-		"hit_rate": shift_stats.get_hit_rate(),
+		"hit_rate": shift_stats.hit_rate,
 		"runner_attempts": shift_stats.runner_attempts,
 		"processing_speed_bonus": shift_stats.processing_speed_bonus,
 		"accuracy_bonus": shift_stats.accuracy_bonus,
