@@ -26,6 +26,7 @@ security_chief: Anyone triggering the scanner will face [color=CRIMSON]enhanced 
 leave security_chief
 
 [background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
+audio music "res://assets/music/ambient_sadness_main.mp3" [fade="1.5" volume="-5.0" bus="Music"]
 join fellow_officer [z_index="1"]
 fellow_officer: Have you seen Sasha? She didn't report for roll call. Last night, [color=CRIMSON]security forces entered her quarters[/color]. #id:11f
 fellow_officer: They're saying she was part of the [pulse freq=2][color=CHARTREUSE]resistance[/color][/pulse]. #id:120
@@ -47,6 +48,7 @@ else:
 	leave fellow_officer
 
 [background arg="res://assets/narrative/interrogation_setting.png" fade="2.0"]
+audio music "res://assets/music/narrative/horror_abyss_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 join security_chief [z_index="1"]
 security_chief: You've been at this checkpoint for quite some time. Interesting performance record. #id:126
 security_chief: You were seen frequently with Officer Sasha, now under investigation for [wave amp=20 freq=3][color=CRIMSON]treason[/color][/wave]. #id:127

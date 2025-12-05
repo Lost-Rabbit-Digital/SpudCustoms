@@ -12,6 +12,7 @@ resistance_leader: The time for whispers and pamphlets is over. The government h
 resistance_leader: Our sources confirm that [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] processing plants are increasing production. #id:d5
 resistance_leader: Which means [tornado radius=3 freq=3][color=CRIMSON]more of our brothers and sisters disappeared, processed, consumed[/color][/tornado]. #id:d6
 resistance_leader: The leader pounds a fist on the table. [pulse freq=3][color=CHARTREUSE]This ends now.[/color][/pulse] We have a plan to strike at the heart of their operation. #id:d7
+audio music "res://assets/music/narrative/resistance_march_main.mp3" [fade="1.0" volume="-5.0" bus="Music"]
 audio "res://assets/audio/stings/decision_weight.mp3" [volume="-5.0" bus="SFX"]
 leave resistance_leader
 
@@ -51,6 +52,7 @@ else:
 	leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/joining_rebellion.png" fade="2.0"]
+audio music "res://assets/music/ambient_vol2_suspense_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 join resistance_leader [z_index="1"]
 resistance_leader: A heated debate breaks out among the resistance members. #id:e9
 resistance_leader: Some argue for a more aggressive approach – destroying the processing plants entirely. #id:ea
@@ -79,6 +81,7 @@ if {final_decision} == "help":
 	resistance_leader: The leader clasps your shoulder firmly. [color=CHARTREUSE]Your courage honors us all.[/color] #id:f5
 	resistance_leader: On the third day, when the sun is highest, our agents will come. #id:f6
 	resistance_leader: The password is "[wave amp=15 freq=3][color=CHARTREUSE]The roots grow deep.[/color][/wave]" Remember it. #id:f7
+	audio music "res://assets/music/narrative/ambient_joy_main.mp3" [fade="2.0" volume="-8.0" bus="Music"]
 	audio "res://assets/audio/stings/revelation_hope.mp3" [volume="-5.0" bus="SFX"]
 	leave resistance_leader
 elif {final_decision} == "passive":
@@ -101,6 +104,7 @@ sweet_potato_sasha: Whatever happens... thank you for everything you've done. #i
 leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
+audio music "res://assets/music/ambient_vol3_sad_decisions_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 join player_character [z_index="1"]
 player_character: You return to your quarters at the checkpoint, mind racing with the weight of coming events. #id:100
 player_character: In just three days, everything could change. [color=YELLOW]For better or worse.[/color] #id:101

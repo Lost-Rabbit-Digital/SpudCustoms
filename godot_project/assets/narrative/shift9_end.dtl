@@ -3,6 +3,7 @@ audio music "res://assets/audio/ambient/horror_drone_49.mp3" [fade="2.0" volume=
 audio music "res://assets/music/narrative/horror_aliens_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 
 if {stay_or_go} == "stay":
+	audio music "res://assets/music/narrative/ambient_defeat_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 	[background arg="res://assets/narrative/loyalist_outcome.png" fade="0.0"]
 	audio "res://assets/audio/explosions/big distant thump 5.wav" [volume="-5.0" bus="SFX"]
 	join player_character [z_index="1"]
@@ -26,6 +27,7 @@ if {stay_or_go} == "stay":
 	player_character: Perhaps there's still a chance from the inside. Or maybe you're just easing your conscience. #id:136
 	leave player_character
 if {stay_or_go} == "go":
+	audio music "res://assets/music/narrative/metal_violence_main.mp3" [fade="1.0" volume="-5.0" bus="Music"]
 	[background arg="res://assets/narrative/resistance_planning.png" fade="0.0"]
 	audio "res://assets/audio/explosions/Explosion Close Collapse.wav" [volume="-12.0" bus="SFX"]
 	join player_character [z_index="1"]
@@ -39,6 +41,7 @@ if {stay_or_go} == "go":
 	resistance_leader: They're taking her to the processing plant right now. We need to hurry! #id:13a
 	leave resistance_leader
 	[background arg="res://assets/narrative/plant_revelation.png" fade="2.0"]
+	audio music "res://assets/music/narrative/processing_plant_horror_main.mp3" [fade="0.8" volume="-3.0" bus="Music"]
 	join player_character [z_index="1"]
 	player_character: The doors blast open, revealing the [wave amp=25 freq=3][color=CRIMSON]horrific truth[/color][/wave] - grinding machines, conveyors carrying potatoes to their doom. #id:13b
 	player_character: At the end of one belt - Sasha and others [color=CRIMSON]bound helplessly[/color]. Supervisor Russet stands at the controls. #id:13c
@@ -48,10 +51,12 @@ if {stay_or_go} == "go":
 	supervisor_russet: [color=RED]YOU![/color] I should have known you were one of them! Back away or I start the processor! #id:13d
 	leave supervisor_russet
 	[background arg="res://assets/narrative/plant_revelation.png" fade="2.0"]
+	audio music "res://assets/music/narrative/electronic_cyberattack_main.mp3" [fade="1.5" volume="-5.0" bus="Music"]
 	join sweet_potato_sasha [z_index="1"]
 	sweet_potato_sasha: As resistance fighters overpower Russet, Sasha redirects the facility cameras. [color=YELLOW]People of Spud! This is Root Reserve! They've been feeding us to each other![/color] #id:13e
 	leave sweet_potato_sasha
 	[background arg="res://assets/narrative/escape_route.png" fade="2.0"]
+	audio music "res://assets/music/narrative/sasha_theme_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 	join sweet_potato_sasha [z_index="1"]
 	sweet_potato_sasha: You came back for me. [color=CHARTREUSE]We did it. The truth is out there now.[/color] We have a future to build! #id:13f
 	leave sweet_potato_sasha

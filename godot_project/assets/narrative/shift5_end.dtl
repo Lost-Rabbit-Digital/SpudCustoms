@@ -26,6 +26,7 @@ audio "res://assets/audio/stings/revelation_dark.mp3" [volume="-5.0" bus="SFX"]
 leave player_character
 
 [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+audio music "res://assets/music/narrative/horror_hush_main.mp3" [fade="0.5" volume="-3.0" bus="Music"]
 audio "res://assets/audio/stings/tension_rise.mp3" [volume="-5.0" bus="SFX"]
 audio "res://assets/audio/footsteps/Concrete Walk 1_1.wav" [volume="-8.0" bus="SFX"]
 Footsteps approach the office door. "[wave amp=15 freq=3][color=YELLOW]Strange, I could've sworn I locked this.[/color][/wave]" #id:9b
@@ -52,6 +53,7 @@ else:
 	leave player_character
 
 [background arg="res://assets/narrative/resistance_base.png" fade="2.0"]
+audio music "res://assets/music/narrative/electronic_reborn_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 join sweet_potato_sasha [z_index="1"]
 sweet_potato_sasha: Did you get it? #id:a2
 join player_character [z_index="1"]

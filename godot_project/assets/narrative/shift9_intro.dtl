@@ -22,6 +22,7 @@ security_chief: Their goal\: access the central database with all production rec
 leave security_chief
 
 [background arg="res://assets/narrative/sasha_capture.png" fade="1.5"]
+audio music "res://assets/music/ambient_vol3_defeat_main.mp3" [fade="1.0" volume="-5.0" bus="Music"]
 audio "res://assets/audio/stings/threat_reveal.mp3" [volume="-5.0" bus="SFX"]
 join supervisor_russet [z_index="1"]
 supervisor_russet: We've captured several resistance operatives, including Officer Sasha. #id:145
@@ -42,6 +43,7 @@ security_officer: This scanner [color=YELLOW]cannot be fooled[/color]. Sound the
 leave security_officer
 
 [background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
+audio music "res://assets/music/ambient_vol3_spirits_intensity_2.mp3" [fade="1.5" volume="-5.0" bus="Music"]
 join resistance_member_1 [z_index="1"]
 resistance_member_1: A potato in official uniform approaches with seemingly perfect Alpha credentials. #id:14b
 audio "res://assets/audio/stings/heartbeat_tension.mp3" [volume="-5.0" bus="SFX"]
@@ -64,6 +66,7 @@ else:
 	leave resistance_member_1
 
 [background arg="res://assets/narrative/night_attack.png" fade="2.0"]
+audio music "res://assets/music/narrative/metal_violence_main.mp3" [fade="0.5" volume="-3.0" bus="Music"]
 join narrator [z_index="1"]
 narrator: Suddenly, the facility [color=YELLOW]shakes with explosions[/color]. The resistance attack has begun, regardless of your choice. #id:152
 audio "res://assets/audio/stings/alarm_distant.mp3" [volume="-5.0" bus="SFX"]
