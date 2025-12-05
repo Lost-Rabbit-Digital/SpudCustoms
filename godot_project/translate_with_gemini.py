@@ -28,11 +28,22 @@ from io import StringIO
 # Gemini API configuration
 # NOTE: API key has a hard budget set and is used in a private repo only
 GEMINI_API_KEY = "AIzaSyAi3h86O6Uac8YdoYizn5dyQ0Gb6UrwFs0"
-GEMINI_API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key={GEMINI_API_KEY}"
 
-# Rate limiting: 120 requests per minute (staying under 150 limit)
-MAX_REQUESTS_PER_MINUTE = 120
-REQUEST_INTERVAL = 60.0 / MAX_REQUESTS_PER_MINUTE  # ~0.5 seconds between requests
+# Model options (use the latest available):
+# - gemini-2.5-pro: Latest stable Pro model (best quality)
+# - gemini-2.5-flash: Fast and efficient (good for bulk translation)
+# - gemini-2.0-flash: Previous generation flash model
+GEMINI_MODEL = "gemini-2.5-flash"  # Using Flash for faster translations
+GEMINI_API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}"
+
+# Rate limiting: Gemini 2.5 Flash allows up to 2000 RPM for paid tier
+# Using 500 RPM to be safe and avoid hitting rate limits
+MAX_REQUESTS_PER_MINUTE = 500
+REQUEST_INTERVAL = 60.0 / MAX_REQUESTS_PER_MINUTE
+
+# Concurrency settings for async operations
+MAX_CONCURRENT_REQUESTS = 100  # Higher concurrency for Flash model
+BATCH_SIZE = 25  # Items per API request (increased from 15)
 
 # Language mapping - columns in CSV files (excluding 'keys' and 'en')
 LANGUAGE_COLUMNS = {
@@ -328,22 +339,26 @@ class RateLimiter:
             await asyncio.sleep(0.1)
 
 
-async def translate_batch_async(session, texts_dict, target_language, semaphore, rate_limiter):
-    """Translate a batch of texts using Gemini API.
+async def translate_batch_async(session, texts_dict, target_language, semaphore, rate_limiter, max_retries=3):
+    """Translate a batch of texts using Gemini API with retry logic.
 
     Args:
         texts_dict: {key: english_text}
         target_language: Full language name (e.g., "German")
+        max_retries: Number of retry attempts for failed requests
 
     Returns: (translations_dict, input_tokens, output_tokens)
     """
     import aiohttp
+    import asyncio as aio
+
     async with semaphore:
-        await rate_limiter.acquire()
+        for attempt in range(max_retries):
+            await rate_limiter.acquire()
 
-        texts_to_translate = [f"{key}: {value}" for key, value in texts_dict.items()]
+            texts_to_translate = [f"{key}: {value}" for key, value in texts_dict.items()]
 
-        prompt = f"""Translate these game UI texts from English to {target_language} for a game called "Spud Customs".
+            prompt = f"""Translate these game UI texts from English to {target_language} for a game called "Spud Customs".
 
 Game context: {GAME_CONTEXT}
 
@@ -356,74 +371,91 @@ Rules:
 
 {chr(10).join(texts_to_translate)}"""
 
-        payload = {
-            "contents": [{
-                "parts": [{
-                    "text": prompt
-                }]
-            }],
-            "generationConfig": {
-                "temperature": 0.3,
-                "topK": 40,
-                "topP": 0.95,
-                "maxOutputTokens": 8192,
+            payload = {
+                "contents": [{
+                    "parts": [{
+                        "text": prompt
+                    }]
+                }],
+                "generationConfig": {
+                    "temperature": 0.3,
+                    "topK": 40,
+                    "topP": 0.95,
+                    "maxOutputTokens": 8192,
+                }
             }
-        }
 
-        try:
-            async with session.post(
-                GEMINI_API_URL,
-                json=payload,
-                timeout=aiohttp.ClientTimeout(total=120)
-            ) as response:
-                response.raise_for_status()
-                result = await response.json()
+            try:
+                async with session.post(
+                    GEMINI_API_URL,
+                    json=payload,
+                    timeout=aiohttp.ClientTimeout(total=60)
+                ) as response:
+                    # Handle rate limiting with retry
+                    if response.status == 429:
+                        wait_time = 2 ** attempt
+                        await aio.sleep(wait_time)
+                        continue
 
-                usage = result.get('usageMetadata', {})
-                input_tokens = usage.get('promptTokenCount', 0)
-                output_tokens = usage.get('candidatesTokenCount', 0)
+                    response.raise_for_status()
+                    result = await response.json()
 
-                if 'candidates' not in result or len(result['candidates']) == 0:
-                    return {}, input_tokens, output_tokens
+                    usage = result.get('usageMetadata', {})
+                    input_tokens = usage.get('promptTokenCount', 0)
+                    output_tokens = usage.get('candidatesTokenCount', 0)
 
-                candidate = result['candidates'][0]
+                    if 'candidates' not in result or len(result['candidates']) == 0:
+                        return {}, input_tokens, output_tokens
 
-                if candidate.get('finishReason') == 'SAFETY':
-                    print(f"\n⚠️  Safety filter triggered for {target_language}")
-                    return {}, input_tokens, output_tokens
+                    candidate = result['candidates'][0]
 
-                if 'content' not in candidate:
-                    return {}, input_tokens, output_tokens
+                    if candidate.get('finishReason') == 'SAFETY':
+                        print(f"\n⚠️  Safety filter triggered for {target_language}")
+                        return {}, input_tokens, output_tokens
 
-                content = candidate['content']
+                    if 'content' not in candidate:
+                        return {}, input_tokens, output_tokens
 
-                if 'parts' not in content or len(content['parts']) == 0:
-                    return {}, input_tokens, output_tokens
+                    content = candidate['content']
 
-                translated_text = content['parts'][0].get('text', '')
+                    if 'parts' not in content or len(content['parts']) == 0:
+                        return {}, input_tokens, output_tokens
 
-                if not translated_text:
-                    return {}, input_tokens, output_tokens
+                    translated_text = content['parts'][0].get('text', '')
 
-                # Parse the response
-                translations = {}
-                for line in translated_text.strip().split('\n'):
-                    if ':' in line:
-                        key, value = line.split(':', 1)
-                        key = key.strip()
-                        value = value.strip()
-                        if key in texts_dict:
-                            translations[key] = value
+                    if not translated_text:
+                        return {}, input_tokens, output_tokens
 
-                return translations, input_tokens, output_tokens
+                    # Parse the response
+                    translations = {}
+                    for line in translated_text.strip().split('\n'):
+                        if ':' in line:
+                            key, value = line.split(':', 1)
+                            key = key.strip()
+                            value = value.strip()
+                            if key in texts_dict:
+                                translations[key] = value
 
-        except Exception as e:
-            print(f"\n❌ API error for {target_language}: {e}")
-            return {}, 0, 0
+                    return translations, input_tokens, output_tokens
+
+            except aiohttp.ClientError as e:
+                if attempt < max_retries - 1:
+                    wait_time = 2 ** attempt
+                    await aio.sleep(wait_time)
+                    continue
+                print(f"\n❌ API error for {target_language} after {max_retries} attempts: {e}")
+                return {}, 0, 0
+            except Exception as e:
+                print(f"\n❌ Unexpected error for {target_language}: {e}")
+                return {}, 0, 0
+
+        return {}, 0, 0
 
 
 async def translate_file_async(session, csv_file, semaphore, rate_limiter, progress, dry_run=False):
-    """Translate a single CSV file."""
+    """Translate a single CSV file with parallel language processing."""
+    import asyncio as aio
+
     headers, rows = read_csv_file(csv_file)
 
     if not headers or not rows:
@@ -451,9 +483,9 @@ async def translate_file_async(session, csv_file, semaphore, rate_limiter, progr
         await progress.complete_file()
         return
 
-    # Translate each language
-    BATCH_SIZE = 15
-    modified = False
+    # Create all translation tasks for parallel execution
+    translation_tasks = []
+    task_metadata = []  # Store (lang_code, batch_items) for each task
 
     for lang_code, items in by_language.items():
         lang_name = LANGUAGE_COLUMNS.get(lang_code, lang_code)
@@ -463,22 +495,29 @@ async def translate_file_async(session, csv_file, semaphore, rate_limiter, progr
             batch = dict(items_list[i:i + BATCH_SIZE])
             batch_for_api = {key: value for (row_idx, key), value in batch.items()}
 
-            translations, input_tokens, output_tokens = await translate_batch_async(
+            task = translate_batch_async(
                 session, batch_for_api, lang_name, semaphore, rate_limiter
             )
+            translation_tasks.append(task)
+            task_metadata.append((lang_code, batch))
 
-            # Apply translations to rows
-            lang_idx = get_language_index(headers, lang_code)
-            if lang_idx != -1:
-                for (row_idx, key), en_value in batch.items():
-                    if key in translations:
-                        # Extend row if needed
-                        while len(rows[row_idx]) <= lang_idx:
-                            rows[row_idx].append('')
-                        rows[row_idx][lang_idx] = translations[key]
-                        modified = True
+    # Execute all translation tasks in parallel
+    results = await aio.gather(*translation_tasks)
 
-            await progress.update(len(translations), input_tokens, output_tokens)
+    # Apply all translations to rows
+    modified = False
+    for (lang_code, batch), (translations, input_tokens, output_tokens) in zip(task_metadata, results):
+        lang_idx = get_language_index(headers, lang_code)
+        if lang_idx != -1 and translations:
+            for (row_idx, key), en_value in batch.items():
+                if key in translations:
+                    # Extend row if needed
+                    while len(rows[row_idx]) <= lang_idx:
+                        rows[row_idx].append('')
+                    rows[row_idx][lang_idx] = translations[key]
+                    modified = True
+
+        await progress.update(len(translations), input_tokens, output_tokens)
 
     # Write back to file if modified
     if modified:
@@ -499,8 +538,10 @@ async def translate_with_gemini_async(specific_file=None, dry_run=False):
         return
 
     print("🚀 Starting Gemini Translation Service for Spud Customs")
+    print(f"   Model: {GEMINI_MODEL}")
     print(f"   Rate limit: {MAX_REQUESTS_PER_MINUTE} requests/minute")
-    print(f"   Batch size: 15 keys per request")
+    print(f"   Batch size: {BATCH_SIZE} keys per request")
+    print(f"   Max concurrent: {MAX_CONCURRENT_REQUESTS} requests")
     print()
 
     # Count total untranslated cells
@@ -532,11 +573,11 @@ async def translate_with_gemini_async(specific_file=None, dry_run=False):
     progress = ProgressTracker(total_cells, len(files_to_process))
 
     # Set up rate limiting and concurrency
-    semaphore = asyncio.Semaphore(50)
+    semaphore = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
     rate_limiter = RateLimiter(MAX_REQUESTS_PER_MINUTE)
 
-    # Create aiohttp session
-    connector = aiohttp.TCPConnector(limit=50)
+    # Create aiohttp session with higher connection limit
+    connector = aiohttp.TCPConnector(limit=MAX_CONCURRENT_REQUESTS)
     async with aiohttp.ClientSession(connector=connector) as session:
         tasks = [
             translate_file_async(session, csv_file, semaphore, rate_limiter, progress, dry_run)
