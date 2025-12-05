@@ -13,6 +13,9 @@ var steam_status_ok = false
 var submission_in_progress = false
 var submission_retry_count = 0
 var max_submission_retries = 3
+var is_story_mode: bool = false
+var entry_animation_complete: bool = false
+var pending_stamp_performance: float = -1.0  # Store performance for deferred stamp animation
 
 @onready var animation_player = $AnimationPlayer
 
@@ -22,9 +25,15 @@ func _init():
 
 
 func _ready():
-	# Connect to Steam manager signals (skip in DEV_MODE)
-	# REFACTORED: Use GameStateManager
-	if GameStateManager and not GameStateManager.is_dev_mode() and SteamManager:
+	# Detect game mode (story vs score_attack/endless)
+	is_story_mode = GameStateManager.get_game_mode() == "story" if GameStateManager else false
+	LogManager.write_info("ShiftSummaryScreen - Game mode: " + ("Story" if is_story_mode else "Score Attack"))
+
+	# Configure layout based on game mode
+	_configure_layout_for_mode()
+
+	# Connect to Steam manager signals (skip in DEV_MODE and Story Mode)
+	if not is_story_mode and GameStateManager and not GameStateManager.is_dev_mode() and SteamManager:
 		if not SteamManager.leaderboard_updated.is_connected(_on_leaderboard_updated):
 			SteamManager.leaderboard_updated.connect(_on_leaderboard_updated)
 		if not SteamManager.score_submitted.is_connected(_on_score_submitted):
@@ -51,7 +60,6 @@ func _ready():
 			narrative_manager = root.find_child("NarrativeManager", true, false)
 
 	# Use stored stats if available, otherwise use test data
-	# REFACTORED: Use GameStateManager
 	var last_stats = GameStateManager.get_last_game_stats() if GameStateManager else {}
 	if !last_stats.is_empty():
 		show_summary(last_stats)
@@ -61,7 +69,10 @@ func _ready():
 		LogManager.write_info("Using test stats")
 
 	# Ensure buttons are interactive
-	for button in [$ContinueButton, $SubmitScoreButton, $RestartButton, $MainMenuButton]:
+	var buttons_to_configure = [$ContinueButton, $RestartButton, $MainMenuButton]
+	if not is_story_mode:
+		buttons_to_configure.append($SubmitScoreButton)
+	for button in buttons_to_configure:
 		if button:
 			button.mouse_filter = Control.MOUSE_FILTER_STOP
 			button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
@@ -73,14 +84,70 @@ func _ready():
 	# Play entry animation
 	play_entry_animation()
 
-	# Check initial Steam status
-	_check_steam_status()
+	# Only check Steam and leaderboard in score attack mode
+	if not is_story_mode:
+		_check_steam_status()
+		update_leaderboard()
 
-	# Request leaderboard data
-	update_leaderboard()
+
+func _configure_layout_for_mode():
+	"""Configure the UI layout based on game mode (story vs score attack)"""
+	if is_story_mode:
+		# Hide leaderboard elements in story mode
+		if has_node("LeaderboardBackground"):
+			$LeaderboardBackground.visible = false
+		if has_node("LeaderboardTitlePanel"):
+			$LeaderboardTitlePanel.visible = false
+		if has_node("LeaderboardPanel"):
+			$LeaderboardPanel.visible = false
+		if has_node("SubmitScoreButton"):
+			$SubmitScoreButton.visible = false
+
+		# Center and expand the stats journal for story mode
+		# The journal background is at 143-813 (670px wide), screen is ~1280px
+		# Center it: (1280 - 670) / 2 = 305
+		var screen_center_x = 640.0  # Half of 1280
+		var journal_width = 670.0
+		var centered_x = screen_center_x - (journal_width / 2.0)
+
+		if has_node("StatsJournalBackground"):
+			$StatsJournalBackground.position.x = centered_x
+
+		# Reposition the header panel to be centered on the journal
+		if has_node("HeaderPanel"):
+			$HeaderPanel.position.x = centered_x + 27  # Offset to match original relative position
+
+		# Reposition the left and right stat panels
+		if has_node("LeftPanel"):
+			$LeftPanel.position.x = centered_x + 19  # Original offset from journal
+
+		if has_node("RightPanel"):
+			$RightPanel.position.x = centered_x + 359  # Original offset from journal
+
+		# Center the buttons nicely for story mode (no submit button)
+		# 3 buttons: Continue, Main Menu, Restart - spread them evenly
+		var button_y = 600.0
+		var button_spacing = 180.0
+		var buttons_start_x = screen_center_x - button_spacing  # Center the 3 buttons
+
+		if has_node("ContinueButton"):
+			$ContinueButton.position.x = buttons_start_x - 80
+		if has_node("MainMenuButton"):
+			$MainMenuButton.position.x = buttons_start_x + 100
+		if has_node("RestartButton"):
+			$RestartButton.position.x = buttons_start_x + 280
+
+		LogManager.write_info("Story mode layout configured - leaderboard hidden, journal centered")
+	else:
+		# Score attack mode - keep original layout with leaderboard
+		LogManager.write_info("Score attack mode layout - leaderboard visible")
 
 
 func _on_steam_status_changed(connected: bool):
+	# Skip in story mode (leaderboard elements are hidden)
+	if is_story_mode:
+		return
+
 	steam_status_ok = connected
 	LogManager.write_info("Steam status changed: " + str(connected))
 
@@ -100,8 +167,11 @@ func _on_steam_status_changed(connected: bool):
 
 
 func _check_steam_status():
+	# Skip in story mode (leaderboard elements are hidden)
+	if is_story_mode:
+		return false
+
 	# Skip Steam checks in DEV_MODE
-	# REFACTORED: Use GameStateManager
 	if GameStateManager and GameStateManager.is_dev_mode():
 		steam_status_ok = false
 		if $SubmitScoreButton:
@@ -137,6 +207,10 @@ func _check_steam_status():
 
 
 func _on_leaderboard_updated(entries: Array):
+	# Skip in story mode (leaderboard elements are hidden)
+	if is_story_mode:
+		return
+
 	LogManager.write_info("Leaderboard updated callback received - entries: " + str(entries.size()))
 
 	# If we're submitting and received an update, we're done submitting
@@ -265,7 +339,10 @@ func format_number(number: int) -> String:
 
 
 func update_leaderboard():
-	# REFACTORED: Use GameStateManager
+	# Skip in story mode (leaderboard elements are hidden)
+	if is_story_mode:
+		return
+
 	var current_score = GameStateManager.get_score() if GameStateManager else 0
 	LogManager.write_info("Updating leaderboard - current score: " + str(current_score))
 
@@ -555,8 +632,8 @@ func populate_stats():
 				"\n" + tr("high_score_display").format({"score": str(high_score)})
 			)
 
-	# Animate stamps based on performance
-	animate_grade_stamps(performance)
+	# Store performance for deferred stamp animation (will be triggered after entry animation)
+	pending_stamp_performance = performance
 
 
 func play_entry_animation():
@@ -619,8 +696,8 @@ func play_entry_animation():
 			. set_ease(Tween.EASE_OUT)
 		)
 
-	# 2. Then, slide in LeaderboardBackground with bounce
-	if has_node("LeaderboardBackground"):
+	# 2. Then, slide in LeaderboardBackground with bounce (only in score attack mode)
+	if not is_story_mode and has_node("LeaderboardBackground"):
 		(
 			tween
 			. tween_property(
@@ -660,11 +737,25 @@ func play_entry_animation():
 	if $RightPanel:
 		tween.tween_property($RightPanel, "modulate:a", 1.0, 0.9)
 
-	# Finally the leaderboard (slow)
-	if $LeaderboardTitlePanel:
-		tween.tween_property($LeaderboardTitlePanel, "modulate:a", 1.0, 0.7)
-	if $LeaderboardPanel:
-		tween.tween_property($LeaderboardPanel, "modulate:a", 1.0, 0.7)
+	# Trigger stamp animation after RightPanel is visible
+	tween.tween_callback(_on_entry_animation_panels_visible)
+
+	# Finally the leaderboard (slow) - only in score attack mode
+	if not is_story_mode:
+		if $LeaderboardTitlePanel:
+			tween.tween_property($LeaderboardTitlePanel, "modulate:a", 1.0, 0.7)
+		if $LeaderboardPanel:
+			tween.tween_property($LeaderboardPanel, "modulate:a", 1.0, 0.7)
+
+	# Mark entry animation as complete at the end
+	tween.tween_callback(func(): entry_animation_complete = true)
+
+
+func _on_entry_animation_panels_visible():
+	"""Called after RightPanel becomes visible - triggers the stamp animation"""
+	if pending_stamp_performance >= 0:
+		animate_grade_stamps(pending_stamp_performance)
+		pending_stamp_performance = -1.0  # Reset to prevent re-triggering
 
 
 func animate_grade_stamps(performance: float):
