@@ -2229,8 +2229,12 @@ func _on_dialogue_finished():
 	Dialogic.Audio.stop_all_channels()
 	Dialogic.Audio.stop_all_one_shot_sounds()
 	next_track_with_random_pitch()
+	# Reset quota and strikes in both Global and GameStateManager
 	Global.quota_met = 0
 	Global.strikes = 0
+	if GameStateManager:
+		GameStateManager.set_quota_met(0)
+		GameStateManager.set_strikes(0)
 	# Completely unpause all game systems
 	# get_tree().paused = false
 	is_game_paused = false
@@ -2302,9 +2306,12 @@ func _on_intro_dialogue_finished():
 	enable_controls()
 	is_game_paused = false
 
-	# Make sure quota and strikes are reset
+	# Make sure quota and strikes are reset in both Global and GameStateManager
 	Global.quota_met = 0
 	Global.strikes = 0
+	if GameStateManager:
+		GameStateManager.set_quota_met(0)
+		GameStateManager.set_strikes(0)
 
 	# Start the actual gameplay
 	spawn_timer.start()
