@@ -14,6 +14,7 @@ A small note slips out from some papers on your desk. #id:52
 "[color=GOLD]Not all is as it seems. The roots of our nation have grown rotten. [br] Follow the trail, but take care not to be silenced.[/color] [br] - [color=CHARTREUSE]A friend[/color]" #id:53
 
 [background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
+audio music "res://assets/music/ambient_vol3_sad_decisions_main.mp3" [fade="2.5" volume="-5.0" bus="Music"]
 join player_character [z_index="1"]
 player_character: That note... and the way Russet dodged my question about [pulse freq=3][color=CRIMSON]rejected potatoes[/color][/pulse]... [br] Something feels [color=STEEL_BLUE]off[/color]. #id:54
 player_character: I should stay [color=YELLOW]alert[/color]. There's more going on here than stamping passports. #id:55

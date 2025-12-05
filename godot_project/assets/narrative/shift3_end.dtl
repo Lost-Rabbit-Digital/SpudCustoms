@@ -15,6 +15,7 @@ supervisor_russet: Getting cozy with coworkers? Remember, getting friendly can l
 leave supervisor_russet
 
 [background arg="res://assets/narrative/resistance_base.png" fade="1.2"]
+audio music "res://assets/music/narrative/sasha_theme_main.mp3" [fade="1.5" volume="-5.0" bus="Music"]
 audio "res://assets/audio/mechanical/Metal Old Door A.wav" [volume="-8.0" bus="SFX"]
 join sweet_potato_sasha [z_index="1"]
 sweet_potato_sasha: I've been gathering information about rejected potatoes. [wave amp=20 freq=3][color=CRIMSON]They don't go to deportation centers.[/color][/wave] #id:6c
@@ -26,6 +27,7 @@ audio "res://assets/audio/paper/paper handled 3.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: These documents show potatoes being unloaded at a facility marked with the [color=DARK_VIOLET]Root Reserve[/color] logo. #id:6e
 audio "res://assets/audio/mechanical/liquid sloshing inside canister 1.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: I think I know what's happening... #id:6f
+audio music "res://assets/music/narrative/horror_terror_main.mp3" [fade="0.5" volume="-3.0" bus="Music"]
 sweet_potato_sasha: [pulse freq=3][color=CRIMSON]They're becoming Root Reserve.[/color][/pulse] #id:6f2
 
 set {reveal_reaction} = "none"
@@ -44,6 +46,7 @@ else:
 	leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/night_alarm.png" fade="2.0"]
+audio music "res://assets/music/narrative/metal_violence_main.mp3" [fade="0.8" volume="-5.0" bus="Music"]
 A distant alarm suddenly blares #id:74
 sweet_potato_sasha: We need to go. They do security sweeps at this hour. Think about what I've shown you. #id:75
 sweet_potato_sasha: Sasha stuffs the folder into your hands. "[color=YELLOW]Keep this safe. And trust no one.[/color]" #id:76

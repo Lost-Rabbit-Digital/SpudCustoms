@@ -58,6 +58,8 @@ func set_shift(value: int) -> void:
 	# Also update GameState persistence
 	if GameState:
 		GameState.set_current_level(value)
+	# Update quota for the new shift value
+	_update_quota_for_shift()
 
 
 func get_quota_target() -> int:

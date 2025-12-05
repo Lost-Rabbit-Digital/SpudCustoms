@@ -95,6 +95,8 @@ func _setup_tutorial_choice_dialog():
 func _on_start_with_tutorial():
 	"""Start the game with tutorial (shift 0)"""
 	GlobalState.reset()
+	# Reset shift stats (score, strikes, quota) before starting new game
+	EventBus.shift_stats_reset.emit()
 	if GameStateManager:
 		GameStateManager.switch_game_mode("story")
 		GameStateManager.set_shift(0)  # Start at tutorial shift
@@ -114,6 +116,8 @@ func _on_tutorial_dialog_action(action: StringName):
 func _on_skip_tutorial():
 	"""Start the game skipping tutorial (shift 1)"""
 	GlobalState.reset()
+	# Reset shift stats (score, strikes, quota) before starting new game
+	EventBus.shift_stats_reset.emit()
 	if GameStateManager:
 		GameStateManager.switch_game_mode("story")
 		GameStateManager.set_shift(1)  # Start at shift 1

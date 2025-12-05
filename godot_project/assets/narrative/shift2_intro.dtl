@@ -6,6 +6,7 @@ join sweet_potato_sasha [z_index="1"]
 audio "res://assets/audio/footsteps/Concrete Walk 1_1.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: Hey there, I'm Sasha. Welcome to the team! #id:63
 audio "res://assets/audio/clothing/clothing movement 1.wav" [volume="-12.0" bus="SFX"]
+audio music "res://assets/music/narrative/quiet_conspiracy_main.mp3" [fade="2.0" volume="-10.0" bus="Music"]
 sweet_potato_sasha: Sasha leans in close, "[wave amp=10 freq=2][color=YELLOW]And keep your eyes peeled. Not everything is as it seems in Spud.[/color][/wave]" #id:64
 leave sweet_potato_sasha
 
@@ -18,8 +19,10 @@ supervisor_russet: Remember, a [color=DARK_ORANGE]dutiful officer[/color] has no
 leave supervisor_russet
 
 [background arg="res://assets/narrative/potato_radio.png" fade="2.0"]
+audio music "res://assets/music/narrative/radio_propaganda_main.mp3" [fade="0.5" volume="-8.0" bus="Music"]
 audio "res://assets/audio/mechanical/feedback 1.wav" [volume="-12.0" bus="SFX"]
 join announcer
 announcer: "...production numbers for [pulse freq=2][color=DARK_VIOLET]Root Reserve[/color][/pulse] are SKY HIGH. The miracle food continues to nourish our nation..." #id:67
+audio music "res://assets/music/narrative/horror_hallways_main.mp3" [fade="2.0" volume="-8.0" bus="Music"]
 announcer: "In other news, reports of [tornado radius=3 freq=2][color=CRIMSON]missing potatoes[/color][/tornado] continue..." #id:68
 leave announcer
