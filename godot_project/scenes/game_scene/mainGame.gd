@@ -331,8 +331,11 @@ func _connect_signals():
 
 
 func _setup_gameplay_systems():
-	# Enable border runner system
-	border_runner_system.is_enabled = true
+	# Disable border runner system initially - it will be enabled after intro dialogue
+	# This prevents missiles from being fired during cutscenes at game start
+	border_runner_system.is_enabled = false
+	if border_runner_system:
+		border_runner_system.set_dialogic_mode(true)
 
 	# Setup ambient audio
 	_setup_ambient_audio()
@@ -1756,10 +1759,8 @@ func process_decision(allowed):
 		var current_quota = GameStateManager.get_quota_met() if GameStateManager else Global.quota_met
 		var target_quota = GameStateManager.get_quota_target() if GameStateManager else Global.quota_target
 		
-		# Note: We use current_quota + 1 here because the event bus update might be async
-		# or we can rely on the fact that we just requested it. 
-		# Better to check if (current_quota + 1) >= target_quota since the update might not have propagated yet
-		if (current_quota + 1) >= target_quota:
+		# The EventBus quota update is synchronous, so current_quota is already updated
+		if current_quota >= target_quota:
 			office_shutter_controller.lower_shutter(0.7)
 			print("Quota complete!")
 			end_shift(true)  # end shift with success condition
@@ -1832,12 +1833,9 @@ func process_decision(allowed):
 
 		var current_strikes = GameStateManager.get_strikes() if GameStateManager else Global.strikes
 		var max_strikes = GameStateManager.get_max_strikes() if GameStateManager else Global.max_strikes
-		
-		# Note: We use current_strikes + 1 here because the event bus update might be async
-		# But since we are checking AFTER requesting the add, we should check if we hit the limit
-		# However, the game over logic is usually handled by the strike system itself.
-		# But we show the alert here.
-		if (current_strikes + 1) >= max_strikes:
+
+		# The EventBus strike update is synchronous, so current_strikes is already updated
+		if current_strikes >= max_strikes:
 			alert_text = tr("alert_strike_out")
 			EventBus.show_alert(alert_text, false)
 			# Lower the shutter when max strikes reached
