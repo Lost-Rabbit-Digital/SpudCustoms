@@ -2290,10 +2290,10 @@ func _on_dialogue_finished():
 	# Tell the border runner system dialogic mode is done
 	if border_runner_system:
 		border_runner_system.set_dialogic_mode(false)
-		# Disable border runners on tutorial shift (0) and shift 1 to let players learn basics first
-		# Border runners are introduced in shift 2 tutorial
+		# Disable border runners only on tutorial shift (0) to let players learn core mechanics
+		# Border runners are introduced in shift 1 with the runner tutorial
 		var is_tutorial = GameStateManager.is_tutorial_mode() if GameStateManager else false
-		if current_shift <= 1 or is_tutorial:
+		if current_shift == 0 or is_tutorial:
 			border_runner_system.is_enabled = false
 			border_runner_system.runner_chance = 0.0
 		else:

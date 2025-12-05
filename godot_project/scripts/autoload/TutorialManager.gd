@@ -224,8 +224,8 @@ const TUTORIALS = {
 				"pause_game": false
 			}
 		],
-		"shift_trigger": 2,
-		"priority": 1
+		"shift_trigger": 1,
+		"priority": 7
 	}
 }
 
