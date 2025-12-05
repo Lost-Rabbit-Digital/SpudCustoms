@@ -243,7 +243,7 @@ func _handle_mouse_motion(mouse_pos: Vector2) -> void:
 		or identify_drop_zone(mouse_pos) == "suspect_panel"
 	)
 	var is_shutter_closed = (
-		office_shutter.active_shutter_state and office_shutter.ShutterState.CLOSED
+		office_shutter and office_shutter.active_shutter_state == office_shutter.ShutterState.CLOSED
 	)
 
 	if is_over_suspect_area and is_shutter_closed:
@@ -419,7 +419,7 @@ func _handle_mouse_release(mouse_pos: Vector2) -> bool:
 		# Next check if trying to drop on suspect/panel with closed shutter
 		elif (
 			(drop_zone == "suspect" or drop_zone == "suspect_panel")
-			and office_shutter.active_shutter_state == office_shutter.ShutterState.CLOSED
+			and office_shutter and office_shutter.active_shutter_state == office_shutter.ShutterState.CLOSED
 		):
 			# Shutter is closed - can't drop here, return to table
 			if doc_controller and doc_controller.is_document_open():
@@ -736,12 +736,12 @@ func identify_drop_zone(pos: Vector2) -> String:
 		return "inspection_table"
 	elif suspect_panel and _get_node_rect(suspect_panel).has_point(suspect_panel.to_local(pos)):
 		# If shutter is closed, don't allow suspect panel
-		if office_shutter.active_shutter_state and office_shutter.ShutterState.CLOSED:
+		if office_shutter and office_shutter.active_shutter_state == office_shutter.ShutterState.CLOSED:
 			return "none"
 		return "suspect_panel"
 	elif suspect and _get_node_rect(suspect).has_point(suspect.to_local(pos)):
 		# If shutter is closed, don't allow suspect
-		if office_shutter.active_shutter_state and office_shutter.ShutterState.CLOSED:
+		if office_shutter and office_shutter.active_shutter_state == office_shutter.ShutterState.CLOSED:
 			return "none"
 		return "suspect"
 	return "none"

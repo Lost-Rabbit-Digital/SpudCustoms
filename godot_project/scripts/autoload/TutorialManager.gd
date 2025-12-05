@@ -670,7 +670,8 @@ func trigger_tutorial_action(action_name: String):
 	var step = tutorial["steps"][current_step]
 	if step.get("wait_for_action") == action_name:
 		# Small delay before advancing for visual feedback
-		await get_tree().create_timer(0.5).timeout
+		if is_inside_tree() and get_tree():
+			await get_tree().create_timer(0.5).timeout
 		_advance_step()
 
 
@@ -698,10 +699,11 @@ func _complete_tutorial():
 	_clear_all_highlights()
 
 	# Hide panel briefly
-	if tutorial_panel:
+	if tutorial_panel and is_instance_valid(tutorial_panel):
 		var tween = create_tween()
-		tween.tween_property(tutorial_panel, "modulate:a", 0.0, 0.3)
-		await tween.finished
+		if tween:
+			tween.tween_property(tutorial_panel, "modulate:a", 0.0, 0.3)
+			await tween.finished
 
 	current_tutorial = ""
 	current_step = 0
@@ -709,8 +711,13 @@ func _complete_tutorial():
 	save_tutorial_progress()
 
 	# Start next tutorial in queue after a short delay
-	await get_tree().create_timer(1.0).timeout
-	_start_next_queued_tutorial()
+	# Use call_deferred as a fallback to ensure the next tutorial starts
+	if is_inside_tree() and get_tree():
+		await get_tree().create_timer(1.0).timeout
+		_start_next_queued_tutorial()
+	else:
+		# Fallback: use call_deferred if tree is not available
+		call_deferred("_start_next_queued_tutorial")
 
 
 ## Skip current tutorial
@@ -728,10 +735,11 @@ func skip_current_tutorial():
 	_clear_all_highlights()
 
 	# Hide panel
-	if tutorial_panel:
+	if tutorial_panel and is_instance_valid(tutorial_panel):
 		var tween = create_tween()
-		tween.tween_property(tutorial_panel, "modulate:a", 0.0, 0.3)
-		await tween.finished
+		if tween:
+			tween.tween_property(tutorial_panel, "modulate:a", 0.0, 0.3)
+			await tween.finished
 
 	current_tutorial = ""
 	current_step = 0
@@ -739,8 +747,11 @@ func skip_current_tutorial():
 	save_tutorial_progress()
 
 	# Start next tutorial in queue
-	await get_tree().create_timer(0.5).timeout
-	_start_next_queued_tutorial()
+	if is_inside_tree() and get_tree():
+		await get_tree().create_timer(0.5).timeout
+		_start_next_queued_tutorial()
+	else:
+		call_deferred("_start_next_queued_tutorial")
 
 
 ## Skip all tutorials for this session
