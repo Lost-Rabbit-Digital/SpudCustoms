@@ -853,46 +853,19 @@ func generate_test_stats() -> Dictionary:
 
 
 func _on_continue_button_pressed() -> void:
-	# REFACTORED: Use EventBus
+	# Reset shift stats (score, strikes, quota) for the new shift
 	EventBus.shift_stats_reset.emit()
-	print("Continue button pressed")
+	print("Continue button pressed - emitting continue_to_next_shift signal")
 
-	# REFACTORED: Use the narrative_manager variable already found in _ready()
-	# narrative_manager is set during initialization (line 46-51)
-	if narrative_manager:
-		# Show the day transition
-		# REFACTORED: Use GameStateManager
-		var current_shift = GameStateManager.get_shift() if GameStateManager else 1
-		narrative_manager.show_day_transition(current_shift, current_shift + 1)
-
-		# Connect to the dialogue_finished signal
-		if not narrative_manager.dialogue_finished.is_connected(_on_day_transition_complete):
-			narrative_manager.dialogue_finished.connect(
-				_on_day_transition_complete, CONNECT_ONE_SHOT
-			)
-	else:
-		# Fallback if narrative manager isn't found
-		_on_day_transition_complete()
-
-	# Emit signal and free this screen
+	# Emit signal to mainGame which handles:
+	# 1. Advancing the shift number
+	# 2. Saving the game state
+	# 3. Showing the day transition
+	# 4. Reloading the scene
+	# NOTE: We don't show day transition here to avoid duplicate transitions
+	# and ensure the shift is advanced BEFORE the transition shows
 	emit_signal("continue_to_next_shift")
 	queue_free()
-
-
-func _on_day_transition_complete():
-	# Check for demo limit before proceeding
-	if check_demo_limit():
-		# Show demo limit message after a short delay
-		await get_tree().create_timer(0.5).timeout
-		show_demo_limit_dialog()
-		return
-
-	# Saving current game state
-	GlobalState.save()
-
-	# REFACTORED: Use get_tree() directly instead of SceneLoader dependency
-	# Reload the game scene
-	get_tree().reload_current_scene()
 
 
 func check_demo_limit() -> bool:

@@ -768,18 +768,25 @@ func _on_shift_summary_continue():
 	EventBus.shift_advance_requested.emit()
 	EventBus.story_state_advance_requested.emit()
 
-	# Make sure GameState is updated with our progress
-	# Make sure GameState is updated with our progress
-	# REFACTORED: Use GameStateManager
-	var current_shift_val = GameStateManager.get_shift() if GameStateManager else Global.shift
-	GameState.level_reached(current_shift_val)
+	# Get the new shift value after advancement
+	var new_shift = GameStateManager.get_shift() if GameStateManager else Global.shift
+	print("Shift advanced from %d to %d" % [completed_shift, new_shift])
 
-	# Show day transition
-	narrative_manager.show_day_transition(completed_shift, completed_shift + 1)
+	# Make sure GameState is updated with our progress
+	GameState.level_reached(new_shift)
+
+	# Force save to persist the advanced shift
+	GlobalState.save()
+
+	# Show day transition with correct shift numbers
+	narrative_manager.show_day_transition(completed_shift, new_shift)
+
+	# Small delay to allow save to complete and transition to be visible
+	await get_tree().create_timer(0.1).timeout
 
 	# Reload the game scene for the next shift
 	if SceneLoader:
-		print("Using SceneLoader to reload")
+		print("Using SceneLoader to reload for shift %d" % new_shift)
 		SceneLoader.reload_current_scene()
 	else:
 		push_error("SceneLoader not found, falling back to change_scene_to_file")
@@ -1694,10 +1701,13 @@ func _try_trigger_streak_minigame():
 		return
 
 	_minigame_triggered_this_shift = true
-	EventBus.show_alert(tr("alert_streak_bonus_minigame"), true, 2.0)
 
-	# Small delay before launching minigame
-	await get_tree().create_timer(1.0).timeout
+	# Play attention-grabbing sound and visual effect to prepare player
+	_play_minigame_warning_effect()
+	EventBus.show_alert(tr("alert_streak_bonus_minigame"), true, 3.0)
+
+	# Longer delay to give player time to notice and prepare
+	await get_tree().create_timer(2.5).timeout
 	trigger_random_minigame()
 
 
@@ -1720,11 +1730,41 @@ func _try_trigger_perfect_stamp_minigame():
 		return
 
 	_minigame_triggered_this_shift = true
-	EventBus.show_alert(tr("alert_perfect_stamps_bonus_minigame"), true, 2.0)
 
-	# Small delay before launching minigame
-	await get_tree().create_timer(1.0).timeout
+	# Play attention-grabbing sound and visual effect to prepare player
+	_play_minigame_warning_effect()
+	EventBus.show_alert(tr("alert_perfect_stamps_bonus_minigame"), true, 3.0)
+
+	# Longer delay to give player time to notice and prepare
+	await get_tree().create_timer(2.5).timeout
 	trigger_random_minigame()
+
+
+## Play visual and audio warning effect before minigame launches
+func _play_minigame_warning_effect():
+	# Play a distinctive warning sound
+	if $SystemManagers/AudioManager/SFXPool:
+		var warning_sound = load("res://assets/audio/ui_feedback/Task Complete Ensemble 001.wav")
+		if warning_sound:
+			$SystemManagers/AudioManager/SFXPool.stream = warning_sound
+			$SystemManagers/AudioManager/SFXPool.volume_db = -3.0
+			$SystemManagers/AudioManager/SFXPool.play()
+
+	# Create a screen pulse effect to draw attention
+	var pulse_overlay = ColorRect.new()
+	pulse_overlay.color = Color(0.5, 0.3, 0.8, 0.0)  # Purple tint
+	pulse_overlay.set_anchors_preset(Control.PRESET_FULL_RECT)
+	pulse_overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	pulse_overlay.z_index = 50
+	$UI.add_child(pulse_overlay)
+
+	# Animate the pulse - fade in and out twice
+	var tween = create_tween()
+	tween.tween_property(pulse_overlay, "color:a", 0.25, 0.3)
+	tween.tween_property(pulse_overlay, "color:a", 0.0, 0.3)
+	tween.tween_property(pulse_overlay, "color:a", 0.2, 0.25)
+	tween.tween_property(pulse_overlay, "color:a", 0.0, 0.25)
+	tween.tween_callback(pulse_overlay.queue_free)
 
 
 func process_decision(allowed):
