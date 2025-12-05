@@ -9,6 +9,7 @@ var close_sound_played: bool = false
 var open_sound_played: bool = false
 var is_potato_in_office: bool = false
 var game_start_time: float = 0.0
+var is_shift_ending: bool = false  # Guard to prevent end_shift() from running twice
 
 # track the current potato's info
 var current_potato_info
@@ -461,6 +462,13 @@ func award_points(base_points: int):
 
 
 func end_shift(success: bool = true):
+	# Guard to prevent end_shift from running twice (can happen when max strikes triggers both
+	# direct call from process_decision and EventBus game_over_triggered signal)
+	if is_shift_ending:
+		LogManager.write_info("end_shift called but already ending, skipping duplicate call")
+		return
+	is_shift_ending = true
+
 	# First check if we've hit the demo limit
 	if Global.build_type == "Demo Release" and Global.shift >= 2 and success:
 		# We only show the demo limit message if the player successfully completed shift 2
@@ -657,8 +665,9 @@ func end_shift(success: bool = true):
 	print("Ending shift ", current_shift, " with success: ", success)
 	print("Tree paused state: ", get_tree().paused)
 	print("Game paused state: ", is_game_paused)
-	# Check if there's an end dialogue for this shift
-	if narrative_manager and narrative_manager.LEVEL_END_DIALOGUES.has(current_shift):
+	# Check if there's an end dialogue for this shift - only show on successful completion
+	# When the player fails (strikes out), skip the post-shift cutscene and go directly to summary
+	if success and narrative_manager and narrative_manager.LEVEL_END_DIALOGUES.has(current_shift):
 		print("Starting end dialogue for shift: ", current_shift)
 		# If this is shift 10, we need to ensure the final confrontation plays
 		if current_shift == 10:
@@ -670,8 +679,10 @@ func end_shift(success: bool = true):
 			# For other shifts, continue with normal end dialogue
 			narrative_manager.start_level_end_dialogue(current_shift)
 			await narrative_manager.end_dialogue_finished
+	elif not success:
+		print("Shift failed - skipping end dialogue and going to summary screen")
 
-	# If no dialogue, show the summary screen immediately
+	# Show the summary screen (always shown, whether success or failure)
 	_show_shift_summary_screen(stats_dict)
 
 
