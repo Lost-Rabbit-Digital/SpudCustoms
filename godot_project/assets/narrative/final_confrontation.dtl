@@ -47,6 +47,7 @@ audio "res://assets/audio/stings/alarm_distant.mp3" [volume="-5.0" bus="SFX"]
 leave narrator
 
 [background arg="res://assets/narrative/checkpoint_booth_night.png" fade="2.0"]
+audio music "res://assets/music/narrative/horror_abyss_main.mp3" [fade="0.8" volume="-3.0" bus="Music"]
 audio "res://assets/audio/stings/threat_reveal.mp3" [volume="-5.0" bus="SFX"]
 join prime_minister_idaho [z_index="1"]
 prime_minister_idaho: A screen flickers on. "Well well, the [color=CRIMSON]traitor[/color] returns with rebel scum." #id:1c
@@ -57,6 +58,7 @@ leave prime_minister_idaho
 
 join player_character [z_index="1"]
 player_character: You turn to the others with resolve. "We need to reach Idaho's bunker. Now!" #id:20
+audio music "res://assets/music/narrative/electronic_cyberattack_main.mp3" [fade="1.0" volume="-5.0" bus="Music"]
 leave player_character
 
 join narrator [z_index="1"]
@@ -91,6 +93,7 @@ leave player_character
 
 # Ending Choice Section
 if {ending_choice} == "diplomatic":
+	audio music "res://assets/music/ambient_vol3_peace_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
     [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
 	audio "res://assets/audio/footsteps/Metal Walk 1_3.wav" [volume="-5.0" bus="SFX"]
 	join player_character [z_index="1"]
@@ -111,6 +114,7 @@ if {ending_choice} == "diplomatic":
 	leave sweet_potato_sasha
 	leave player_character
 elif {ending_choice} == "justice":
+	audio music "res://assets/music/ambient_vol2_glorious_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 	[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
 	join player_character [z_index="1"]
 	player_character: Idaho, in the name of the potato people of Spud, [color=CHARTREUSE]you're under arrest![/color] #id:2f
@@ -120,6 +124,7 @@ elif {ending_choice} == "justice":
 	leave sweet_potato_sasha
 	leave player_character
 elif {ending_choice} == "vengeance":
+	audio music "res://assets/music/narrative/metal_violence_main.mp3" [fade="1.0" volume="-3.0" bus="Music"]
 	[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
 	join player_character [z_index="1"]
 	player_character: There will be [color=CRIMSON]no deals, no mercy[/color] for you, Idaho. A tyrant's justice is all you deserve. #id:31
@@ -129,6 +134,7 @@ elif {ending_choice} == "vengeance":
 	audio "res://assets/audio/gunfire/Heavy Pistol B.wav" [volume="0.0" bus="SFX"]
 	leave player_character
 else: # dismantle
+	audio music "res://assets/music/narrative/electronic_reborn_main.mp3" [fade="1.5" volume="-5.0" bus="Music"]
 	[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
 	join player_character [z_index="1"]
 	player_character: Forget him. He's a symptom, not the disease. [color=CHARTREUSE]Tear down every root and stem of this monstrosity.[/color] #id:33

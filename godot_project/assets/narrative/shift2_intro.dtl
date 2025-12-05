@@ -21,5 +21,6 @@ leave supervisor_russet
 audio "res://assets/audio/mechanical/feedback 1.wav" [volume="-12.0" bus="SFX"]
 join announcer
 announcer: "...production numbers for [pulse freq=2][color=DARK_VIOLET]Root Reserve[/color][/pulse] are SKY HIGH. The miracle food continues to nourish our nation..." #id:67
+audio music "res://assets/music/narrative/horror_hallways_main.mp3" [fade="2.0" volume="-8.0" bus="Music"]
 announcer: "In other news, reports of [tornado radius=3 freq=2][color=CRIMSON]missing potatoes[/color][/tornado] continue..." #id:68
 leave announcer

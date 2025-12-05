@@ -11,6 +11,7 @@ if {stay_or_go} == "stay":
 	join supervisor_russet [z_index="1"]
 	supervisor_russet: I've been promoted to Regional Director of Border Security and [pulse freq=2]Root Reserve Distribution[/pulse]. #id:3b
 	supervisor_russet: Russet pins a small medal to your uniform. Assistant Regional Director... for your unwavering loyalty to Spud. #id:3c
+	audio music "res://assets/music/ambient_vol3_spirits_main.mp3" [fade="2.0" volume="-8.0" bus="Music"]
 	supervisor_russet: I have a special assignment! Prime Minister Idaho will be inspecting our facility today. You've been selected for demonstration. #id:3d
 	leave supervisor_russet
 	[background arg="res://assets/narrative/occupation_checkpoint.png" fade="2.0"]
