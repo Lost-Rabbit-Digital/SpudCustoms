@@ -36,12 +36,6 @@ size = Vector2(730, 155)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h6yoa"]
 size = Vector2(191, 47)
 
-[sub_resource type="LabelSettings" id="LabelSettings_362e4"]
-font = ExtResource("25_5sv0s")
-font_size = 12
-font_color = Color(0.1, 0.1, 0.1, 1)
-shadow_size = 0
-
 [sub_resource type="Curve2D" id="Curve2D_uenca"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 786, 176, 0, 0, 0, 0, 752, 196, 0, 0, 0, 0, 626, 190, 0, 0, 0, 0, 354, 200, 0, 0, 0, 0, 197, 195, 0, 0, 0, 0, 178, 176, 0, 0, 0, 0, 175, 153, 0, 0, 0, 0, 184, 103, 0, 0, 0, 0, 173, -4)
@@ -570,7 +564,6 @@ theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
 theme_override_constants/line_spacing = 2
 theme_override_fonts/font = ExtResource("29_b6emd")
 theme_override_font_sizes/font_size = 16
-label_settings = SubResource("LabelSettings_362e4")
 autowrap_mode = 2
 
 [node name="LawReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements"]
