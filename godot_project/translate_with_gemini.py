@@ -15,6 +15,7 @@ and translates them across all language columns.
 
 import argparse
 import csv
+import os
 import sys
 import time
 from pathlib import Path
@@ -26,8 +27,8 @@ from io import StringIO
 # ═══════════════════════════════════════════════════════════
 
 # Gemini API configuration
-# NOTE: API key has a hard budget set and is used in a private repo only
-GEMINI_API_KEY = "AIzaSyAi3h86O6Uac8YdoYizn5dyQ0Gb6UrwFs0"
+# API key is read from environment variable for security
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
 # Model options (use the latest available):
 # - gemini-2.5-pro: Latest stable Pro model (best quality)
@@ -530,6 +531,26 @@ async def translate_with_gemini_async(specific_file=None, dry_run=False):
     """Main async translation function."""
     import asyncio
     import aiohttp
+
+    # Check for API key
+    if not GEMINI_API_KEY:
+        print("❌ ERROR: GEMINI_API_KEY environment variable is not set!")
+        print("")
+        print("To set it on Windows (Command Prompt):")
+        print('    set GEMINI_API_KEY=your_api_key_here')
+        print("")
+        print("To set it on Windows (PowerShell):")
+        print('    $env:GEMINI_API_KEY="your_api_key_here"')
+        print("")
+        print("To set it permanently on Windows:")
+        print("    1. Press Win+R, type 'sysdm.cpl', press Enter")
+        print("    2. Go to Advanced tab → Environment Variables")
+        print("    3. Under User variables, click New")
+        print("    4. Variable name: GEMINI_API_KEY")
+        print("    5. Variable value: your_api_key_here")
+        print("")
+        print("Get your API key from: https://aistudio.google.com/apikey")
+        return
 
     csv_files = get_csv_files(specific_file)
 
