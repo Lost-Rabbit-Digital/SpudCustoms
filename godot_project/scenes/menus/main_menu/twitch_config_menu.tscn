@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://drx4kn3m7qhbl"]
+[gd_scene load_steps=3 format=3 uid="uid://drx4kn3m7qhbl"]
 
 [ext_resource type="Script" path="res://scripts/ui/twitch_config_menu.gd" id="1_script"]
+[ext_resource type="Theme" uid="uid://c44ft8lc2mlpo" path="res://assets/styles/confirmation_dialog_theme.tres" id="2_theme"]
 
 [node name="TwitchConfigMenu" type="Control"]
+theme = ExtResource("2_theme")
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
