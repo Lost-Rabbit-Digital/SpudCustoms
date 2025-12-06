@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://d0t8qxj2m7k4r"]
+
+[ext_resource type="Shader" path="res://assets/shaders/text_readability.gdshader" id="1_shader"]
+
+[resource]
+shader = ExtResource("1_shader")
+shader_parameter/backdrop_opacity = 0.75
+shader_parameter/backdrop_color = Color(0.02, 0.02, 0.08, 1)
+shader_parameter/backdrop_padding = 0.12
+shader_parameter/backdrop_softness = 0.08
+shader_parameter/backdrop_corner_radius = 0.15
+shader_parameter/enable_glow = true
+shader_parameter/glow_color = Color(1, 0.85, 0.5, 1)
+shader_parameter/glow_intensity = 0.25
+shader_parameter/glow_pulse_speed = 1.2
+shader_parameter/glow_pulse_amount = 0.25
+shader_parameter/enable_effect = true
