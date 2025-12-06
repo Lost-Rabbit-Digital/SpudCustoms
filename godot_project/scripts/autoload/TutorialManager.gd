@@ -555,6 +555,8 @@ func _create_tutorial_ui():
 	# Animate panel appearing
 	tutorial_panel.modulate.a = 0
 	var tween = create_tween()
+	# Ensure tween runs even when tree is paused
+	tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 	tween.tween_property(tutorial_panel, "modulate:a", 1.0, 0.3)
 
 
@@ -746,6 +748,8 @@ func _complete_tutorial():
 		print("[TutorialManager] Fading out tutorial panel")
 		var tween = create_tween()
 		if tween:
+			# Ensure tween runs even when tree is paused
+			tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 			tween.tween_property(tutorial_panel, "modulate:a", 0.0, 0.3)
 			await tween.finished
 			print("[TutorialManager] Panel fade complete")
@@ -787,6 +791,8 @@ func skip_current_tutorial():
 	if tutorial_panel and is_instance_valid(tutorial_panel):
 		var tween = create_tween()
 		if tween:
+			# Ensure tween runs even when tree is paused
+			tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 			tween.tween_property(tutorial_panel, "modulate:a", 0.0, 0.3)
 			await tween.finished
 
