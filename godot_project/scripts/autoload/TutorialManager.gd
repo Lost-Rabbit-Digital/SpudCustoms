@@ -837,7 +837,7 @@ func _apply_highlight_shader(node: Node):
 		if node is Label or node is RichTextLabel:
 			# For text: subtle, gentle golden sweep
 			new_material.set_shader_parameter("speed", 1.0)
-			new_material.set_shader_parameter("line_width", 0.12)
+			new_material.set_shader_parameter("line_width", 0.04)
 			new_material.set_shader_parameter("line_color", Color(1.0, 0.85, 0.4, 0.4))
 			print("[TutorialManager] Applying highlight sweep shader to label: ", node.name)
 		else:
