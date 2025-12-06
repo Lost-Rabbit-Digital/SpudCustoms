@@ -127,11 +127,25 @@ func write_info(message: String):
 func write_warning(message: String):
 	write_entry("WARNING", message)
 	print_rich("[color=yellow][WARNING] " + message + "[/color]")
+	# Add warning as breadcrumb for Sentry context
+	if SentryManager and SentryManager.is_available():
+		SentryManager.add_breadcrumb("log", message, {"level": "warning"})
 
 
 func write_error(message: String):
 	write_entry("ERROR", message)
 	print_rich("[color=red][ERROR] " + message + "[/color]")
+	# Send errors to Sentry for tracking
+	if SentryManager and SentryManager.is_available():
+		SentryManager.capture_error(message)
+
+
+func write_critical(message: String, stack_trace: String = ""):
+	write_entry("CRITICAL", message)
+	print_rich("[color=red][b][CRITICAL] " + message + "[/b][/color]")
+	# Always send critical errors to Sentry with stack trace
+	if SentryManager and SentryManager.is_available():
+		SentryManager.capture_exception(message, stack_trace)
 
 
 func write_steam(message: String):
