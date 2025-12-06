@@ -72,12 +72,14 @@ func _ready():
 			if child is DragAndDropManager:
 				drag_and_drop_manager = child
 				break
-		# If not found as direct child, search deeper
+		# If not found as direct child, search by unique name first
 		if not drag_and_drop_manager:
-			drag_and_drop_manager = root.find_child("*", true, false) as DragAndDropManager
-			# More targeted search using unique name
-			if not drag_and_drop_manager:
-				drag_and_drop_manager = get_node_or_null("%DragAndDropManager")
+			drag_and_drop_manager = get_node_or_null("%DragAndDropManager")
+		# If still not found, search recursively by class
+		if not drag_and_drop_manager:
+			var all_nodes = root.find_children("*", "DragAndDropManager", true, false)
+			if all_nodes.size() > 0:
+				drag_and_drop_manager = all_nodes[0]
 
 	# Initialize textures from the actual buttons
 	stamp_textures["approve"] = approval_stamp.texture_normal
@@ -137,22 +139,38 @@ func _process(delta):
 	if stamp_cooldown_timer > 0:
 		stamp_cooldown_timer -= delta
 
-	# Show guide when a passport is being dragged near the stamp area
+	# Check if passport is near stamp area - either being dragged or stationary
+	var passport_near_stamps = false
+	var stamp_target_pos = global_position + stamp_point_offset
+
+	# First check: Is passport being actively dragged?
 	# REFACTORED: Use cached drag_and_drop_manager reference instead of get_node
 	if drag_and_drop_manager and drag_and_drop_manager.has_method("get_dragged_item"):
 		var dragged_item = drag_and_drop_manager.get_dragged_item()
 		if dragged_item and dragged_item.name == "Passport":
-			var distance = dragged_item.global_position.distance_to(
-				global_position + stamp_point_offset
-			)
+			# Use the center of the passport for better distance calculation
+			var passport_center = dragged_item.global_position
+			if dragged_item is Sprite2D and dragged_item.texture:
+				passport_center += dragged_item.texture.get_size() * dragged_item.scale / 2.0
 
-			# Show guide when passport is near the stamp position
-			if distance < 200 and !is_showing_guide:
-				show_alignment_guide()
-			elif distance >= 200 and is_showing_guide:
-				hide_alignment_guide()
-		elif is_showing_guide:
-			hide_alignment_guide()
+			var distance = passport_center.distance_to(stamp_target_pos)
+			passport_near_stamps = distance < 250  # Slightly larger range for dragging
+
+	# Second check: Is passport stationary but positioned under stamps?
+	# This handles the case where passport was dropped near the stamps
+	if not passport_near_stamps and passport and is_visible:
+		var passport_center = passport.global_position
+		if passport.texture:
+			passport_center += passport.texture.get_size() * passport.scale / 2.0
+
+		var distance = passport_center.distance_to(stamp_target_pos)
+		passport_near_stamps = distance < 200
+
+	# Update alignment guide based on passport proximity
+	if passport_near_stamps and !is_showing_guide:
+		show_alignment_guide()
+	elif !passport_near_stamps and is_showing_guide:
+		hide_alignment_guide()
 
 
 func _input(event):
@@ -180,9 +198,11 @@ func _on_toggle_position_button_pressed():
 func show_alignment_guide():
 	alignment_guide.visible = true
 	is_showing_guide = true
+	print("[StampBarController] Showing alignment guide - passport is under stamps")
 
 	# Trigger tutorial action for document under stamp
 	if TutorialManager:
+		print("[StampBarController] Triggering tutorial action: document_under_stamp")
 		TutorialManager.trigger_tutorial_action("document_under_stamp")
 
 	# Add animation for better visibility
