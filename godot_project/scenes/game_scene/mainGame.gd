@@ -517,6 +517,11 @@ func end_shift(success: bool = true):
 	if ui_hint_system:
 		ui_hint_system.set_all_hints_enabled(false)
 
+	# Hide the stamp bar with animation
+	var stamp_bar_controller = $Gameplay/InteractiveElements/StampBarController
+	if stamp_bar_controller:
+		stamp_bar_controller.force_hide()
+
 	# Disable all path following for any active runners
 	var root = get_tree().current_scene
 	var active_potatoes = get_tree().get_nodes_in_group("PotatoPerson")
