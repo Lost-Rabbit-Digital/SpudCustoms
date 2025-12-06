@@ -42,7 +42,6 @@ func spawn_new_potato():
 		#print("QueueManager disabled while in dialogue, no immigrating potatoes allowed.")
 		return
 
-	print("Attempting to spawn potato. Can add: ", can_add_potato())
 	if can_add_potato():
 		var potato = PotatoFactory.create_random_potato()
 
@@ -57,7 +56,6 @@ func spawn_new_potato():
 
 			potatoes.push_front(potato)
 			update_positions()
-			print("Potato spawned. Total potatoes: ", potatoes.size())
 		else:
 			push_error("Failed to create potato via PotatoFactory!")
 	else:
@@ -110,7 +108,6 @@ func remove_potato() -> Dictionary:
 func update_positions():
 	var point_count = curve.get_point_count()
 	var potato_count = potatoes.size()
-	print("Updating positions for ", potato_count, " potatoes")
 
 	if potato_count > 0:
 		for i in range(potato_count):
