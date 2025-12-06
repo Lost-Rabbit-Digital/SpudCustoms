@@ -365,6 +365,8 @@ func _setup_level_select():
 		%LevelSelectContainer.call_deferred("add_child", level_select_scene)
 		if level_select_scene.has_signal("level_selected"):
 			level_select_scene.connect("level_selected", load_game_scene)
+		if level_select_scene.has_signal("back_pressed"):
+			level_select_scene.connect("back_pressed", _close_sub_menu)
 
 
 func _input(event):
@@ -464,6 +466,8 @@ func _on_continue_game_button_pressed():
 
 func _on_level_select_button_pressed():
 	_open_sub_menu(level_select_scene)
+	# Hide the parent's back button since level select has its own centered back button
+	%BackButton.hide()
 
 
 func _on_steam_button_pressed() -> void:
