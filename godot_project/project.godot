@@ -52,6 +52,7 @@ SteamInputManager="*res://scripts/autoload/SteamInputManager.gd"
 VirtualCursor="*res://scripts/autoload/VirtualCursor.gd"
 InputGlyphManager="*res://scripts/autoload/InputGlyphManager.gd"
 TwitchIntegrationManager="*res://scripts/autoload/TwitchIntegrationManager.gd"
+SentryManager="*res://scripts/autoload/SentryManager.gd"
 
 [debug]
 
@@ -354,3 +355,9 @@ environment/defaults/default_clear_color=Color(0.0627451, 0.0352941, 0.0705882, 
 [sentry]
 
 options/dsn="https://e9cdd05b5fcf8cfdad5e0b4ef59261ce@o4510488240455680.ingest.us.sentry.io/4510490364149760"
+options/release="spud-customs@1.2.0"
+options/debug=false
+options/sample_rate=1.0
+options/attach_stacktrace=true
+options/send_default_pii=false
+options/max_breadcrumbs=100
