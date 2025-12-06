@@ -152,7 +152,7 @@ func add_breadcrumb(category: String, message: String, data: Dictionary = {}) ->
 	crumb.category = category
 	crumb.level = SentrySDK.LEVEL_INFO
 	if not data.is_empty():
-		crumb.data = data
+		crumb.set_data(data)
 	SentrySDK.add_breadcrumb(crumb)
 
 
@@ -164,7 +164,7 @@ func add_error_breadcrumb(category: String, message: String, data: Dictionary = 
 	crumb.category = category
 	crumb.level = SentrySDK.LEVEL_ERROR
 	if not data.is_empty():
-		crumb.data = data
+		crumb.set_data(data)
 	SentrySDK.add_breadcrumb(crumb)
 
 
@@ -199,7 +199,7 @@ func capture_exception(error_message: String, stack_trace: String = "") -> void:
 	var crumb := SentryBreadcrumb.create(error_message)
 	crumb.category = "exception"
 	crumb.level = SentrySDK.LEVEL_ERROR
-	crumb.data = data
+	crumb.set_data(data)
 	SentrySDK.add_breadcrumb(crumb)
 	SentrySDK.capture_message(error_message, SentrySDK.LEVEL_ERROR)
 
