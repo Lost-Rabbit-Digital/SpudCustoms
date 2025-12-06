@@ -33,6 +33,7 @@ var progress_label: Label = null
 # Step timing
 var step_timer: Timer = null
 var waiting_for_action: bool = false
+var waiting_for_click: bool = false  # Waiting for user to click to continue
 
 # Tutorial definitions with expanded, friendly dialogue
 # Tutorial definitions - text uses placeholders for controller-aware prompts
@@ -461,10 +462,8 @@ func _show_current_step():
 		# Check if action condition is already met (e.g., passport already open)
 		if _is_action_condition_met(action):
 			print("[TutorialManager] Action condition already met: ", action)
-			# Small delay before advancing for visual feedback
-			if is_inside_tree() and get_tree():
-				await get_tree().create_timer(0.5).timeout
-			_advance_step()
+			# Wait for user to read the text, allow click to skip
+			_start_click_to_continue_wait(2.5)
 			return
 
 		waiting_for_action = true
@@ -496,7 +495,7 @@ func _create_tutorial_ui():
 		tutorial_panel.mouse_filter = Control.MOUSE_FILTER_PASS
 		var tween = create_tween()
 		tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
-		tween.tween_property(tutorial_panel, "modulate:a", 1.0, 0.3)
+		tween.tween_property(tutorial_panel, "modulate:a", 1.0, 0.4).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
 		return
 
 	print("[TutorialManager] Creating tutorial UI panel...")
@@ -671,16 +670,16 @@ func _position_panel_for_step(step: Dictionary):
 
 	if should_be_at_top:
 		# Position at top of screen
-		tween.tween_property(tutorial_panel, "anchor_top", 0.0, 0.3)
-		tween.parallel().tween_property(tutorial_panel, "anchor_bottom", 0.0, 0.3)
-		tween.parallel().tween_property(tutorial_panel, "offset_top", 20, 0.3)
-		tween.parallel().tween_property(tutorial_panel, "offset_bottom", 180, 0.3)
+		tween.tween_property(tutorial_panel, "anchor_top", 0.0, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+		tween.parallel().tween_property(tutorial_panel, "anchor_bottom", 0.0, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+		tween.parallel().tween_property(tutorial_panel, "offset_top", 20, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+		tween.parallel().tween_property(tutorial_panel, "offset_bottom", 180, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
 	else:
 		# Position at bottom of screen (default)
-		tween.tween_property(tutorial_panel, "anchor_top", 1.0, 0.3)
-		tween.parallel().tween_property(tutorial_panel, "anchor_bottom", 1.0, 0.3)
-		tween.parallel().tween_property(tutorial_panel, "offset_top", -180, 0.3)
-		tween.parallel().tween_property(tutorial_panel, "offset_bottom", -20, 0.3)
+		tween.tween_property(tutorial_panel, "anchor_top", 1.0, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+		tween.parallel().tween_property(tutorial_panel, "anchor_bottom", 1.0, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+		tween.parallel().tween_property(tutorial_panel, "offset_top", -180, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+		tween.parallel().tween_property(tutorial_panel, "offset_bottom", -20, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
 
 
 ## Update continue hint visibility
@@ -692,6 +691,45 @@ func _update_continue_hint(auto_progress: bool):
 		else:
 			continue_hint_label.text = ""
 			continue_hint_label.visible = false
+
+
+## Start waiting for click to continue (with optional auto-advance after delay)
+func _start_click_to_continue_wait(delay: float = 2.5):
+	waiting_for_click = true
+	waiting_for_action = false
+
+	# Show click hint
+	if continue_hint_label:
+		continue_hint_label.text = "(click to continue...)"
+		continue_hint_label.visible = true
+
+	# Start timer for auto-advance
+	step_timer.start(delay)
+	print("[TutorialManager] Waiting for click or ", delay, " seconds")
+
+
+## Handle click to continue
+func _on_panel_clicked():
+	if waiting_for_click:
+		print("[TutorialManager] Panel clicked, advancing step")
+		waiting_for_click = false
+		step_timer.stop()
+		_advance_step()
+
+
+## Input handler for click-to-continue
+func _input(event: InputEvent):
+	if not waiting_for_click:
+		return
+
+	# Check for mouse click on the tutorial panel only
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			# Only advance if clicking on the tutorial panel itself
+			if tutorial_panel and tutorial_panel.get_global_rect().has_point(event.position):
+				_on_panel_clicked()
+	elif event.is_action_pressed("ui_accept") or event.is_action_pressed("primary_interaction"):
+		_on_panel_clicked()
 
 
 ## Check if an action condition is already met
@@ -720,12 +758,12 @@ func _is_action_condition_met(action: String) -> bool:
 		"stamp_bar_opened":
 			# Check if stamp bar is already open
 			var stamp_bar = scene.find_child("StampBarController", true, false)
-			if stamp_bar and stamp_bar.has_method("get") and stamp_bar.get("is_visible"):
+			if stamp_bar and "is_visible" in stamp_bar and stamp_bar.is_visible:
 				return true
 		"document_under_stamp":
-			# Check if document is already under stamp
+			# Check if document is already under stamp (alignment guide showing)
 			var stamp_bar = scene.find_child("StampBarController", true, false)
-			if stamp_bar and stamp_bar.has_method("get") and stamp_bar.get("is_showing_guide"):
+			if stamp_bar and "is_showing_guide" in stamp_bar and stamp_bar.is_showing_guide:
 				return true
 
 	return false
@@ -826,6 +864,7 @@ func _clear_all_highlights():
 ## Timer timeout - advance to next step
 func _on_step_timer_timeout():
 	print("[TutorialManager] Timer fired! Advancing step for: ", current_tutorial)
+	waiting_for_click = false  # Clear click wait state
 	_advance_step()
 
 
@@ -852,6 +891,7 @@ func _advance_step():
 	tutorial_step_completed.emit(current_tutorial, current_step)
 	current_step += 1
 	waiting_for_action = false
+	waiting_for_click = false
 	_show_current_step()
 
 
@@ -882,7 +922,7 @@ func _complete_tutorial():
 		if tween:
 			# Ensure tween runs even when tree is paused
 			tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
-			tween.tween_property(tutorial_panel, "modulate:a", 0.0, 0.3)
+			tween.tween_property(tutorial_panel, "modulate:a", 0.0, 0.4).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
 			await tween.finished
 			print("[TutorialManager] Panel fade complete")
 
@@ -927,7 +967,7 @@ func skip_current_tutorial():
 		if tween:
 			# Ensure tween runs even when tree is paused
 			tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
-			tween.tween_property(tutorial_panel, "modulate:a", 0.0, 0.3)
+			tween.tween_property(tutorial_panel, "modulate:a", 0.0, 0.4).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
 			await tween.finished
 
 	current_tutorial = ""
