@@ -536,6 +536,7 @@ scale = Vector2(2.42121, 2.42121)
 
 [node name="OpenPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
 visible = false
+scale = Vector2(1.05, 1.05)
 texture = ExtResource("25_gf7dt")
 
 [node name="PassportPhotoGenerator" parent="Gameplay/InteractiveElements/Passport/OpenPassport" instance=ExtResource("23_3qac4")]
@@ -563,7 +564,7 @@ offset_bottom = 141.0
 theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
 theme_override_constants/line_spacing = 2
 theme_override_fonts/font = ExtResource("29_b6emd")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 16
 autowrap_mode = 2
 
 [node name="LawReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements"]

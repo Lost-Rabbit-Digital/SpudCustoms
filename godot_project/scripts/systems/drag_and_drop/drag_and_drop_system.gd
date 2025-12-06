@@ -324,6 +324,10 @@ func _handle_mouse_press(mouse_position: Vector2) -> bool:
 				audio_player.pitch_scale = randf_range(0.95, 1.05)
 				audio_player.play()
 
+			# Trigger tutorial action for document pickup
+			if TutorialManager:
+				TutorialManager.trigger_tutorial_action("document_picked_up")
+
 			return true
 	return false
 
