@@ -120,6 +120,7 @@ class Missile:
 	var sprite: AnimatedSprite2D
 	var smoke_trail: Array[AnimatedSprite2D] = []  # Array to store smoke trail sprites
 	var position: Vector2
+	var start_position: Vector2  # Track where missile was launched from
 	var target: Vector2
 	var rotation: float
 	var active: bool = true
@@ -374,20 +375,20 @@ func update_missiles(delta):
 
 		# Check if missile has gone significantly past its target
 		# This handles cases where missiles might "miss" their target
-		var start_to_target = missile.target - missile.sprite.global_position
-		var start_to_current = missile.position - missile.sprite.global_position
+		var start_to_target = (missile.target - missile.start_position).length()
+		var start_to_current = (missile.position - missile.start_position).length()
 
 		# If the missile has moved 20% further than the target distance, it's gone too far
-		if start_to_current.length() > start_to_target.length() * 1.2:
+		if start_to_current > start_to_target * 1.2:
 			trigger_explosion(missile)
 			active_missiles.remove_at(i)
 			i -= 1
 			continue
 
-		# Add a boundary check
+		# Add a boundary check - trigger explosion instead of silent removal
 		var viewport_rect = get_viewport_rect().grow(100)  # Add some margin
 		if !viewport_rect.has_point(missile.position):
-			missile.sprite.queue_free()
+			trigger_explosion(missile)
 			active_missiles.remove_at(i)
 			i -= 1
 			continue
@@ -695,6 +696,7 @@ func launch_missile(target_pos):
 
 	# More explicit missile start position logging
 	missile.position = Vector2(-100, -100)
+	missile.start_position = missile.position  # Store start position for overshoot detection
 	missile.target = target_pos
 
 	#print("Missile start position: ", missile.position)
@@ -728,15 +730,13 @@ func launch_missile(target_pos):
 
 # Handle explosion animation completion
 func _on_explosion_animation_finished(explosion: AnimatedSprite2D) -> void:
-	explosion.stop()
-	explosion.frame = randi_range(23, 25)
+	explosion.queue_free()
 
 
 # Handle explosion cleanup after timeout
 func _on_explosion_cleanup_timeout(explosion: AnimatedSprite2D) -> void:
 	if is_instance_valid(explosion):
-		explosion.stop()
-		explosion.frame = randi_range(23, 25)
+		explosion.queue_free()
 
 
 # Handle smoke particle animation completion
