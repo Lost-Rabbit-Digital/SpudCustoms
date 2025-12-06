@@ -127,7 +127,7 @@ const TUTORIALS = {
 		"name": "Immigration Rules",
 		"steps": [
 			{
-				"text": "[center][b]Immigration Rules[/b][/center]\n\nLook at the rules panel on the left side. These rules tell you which potatoes to [color=green]APPROVE[/color] or [color=red]REJECT[/color].\n\nReject any potato that violates the current rules!",
+				"text": "[center][b]Immigration Rules[/b][/center]\n\nLook at the rules pamphlet on the right side. These rules tell you which potatoes to [color=green]APPROVE[/color] or [color=red]REJECT[/color].\n\nReject any potato that violates the current rules!",
 				"target": "RulesLabel",
 				"highlight": true,
 				"duration": 5.0,
