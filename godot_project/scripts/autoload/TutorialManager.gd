@@ -57,7 +57,7 @@ const TUTORIALS = {
 		"steps": [
 			{
 				"text": "[center][b]Opening Your Booth[/b][/center]\n\nSee that lever? {interact} it to raise the shutter and open your booth for business!\n\n[color=yellow]{interact} the lever now.[/color]",
-				"target": "LeverButton",
+				"target": "ShutterLever",
 				"highlight": true,
 				"wait_for_action": "lever_pulled",
 				"pause_game": false
@@ -606,9 +606,10 @@ func _update_continue_hint(auto_progress: bool):
 func _highlight_target(target_name: String):
 	var target_node = _find_target_node(target_name)
 	if not target_node:
-		push_warning("Tutorial: Could not find target node: " + target_name)
+		push_warning("[TutorialManager] Could not find target node: " + target_name)
 		return
 
+	print("[TutorialManager] Highlighting target: ", target_name, " -> ", target_node.name, " (", target_node.get_class(), ")")
 	# Apply shader to the target
 	_apply_highlight_shader(target_node)
 
