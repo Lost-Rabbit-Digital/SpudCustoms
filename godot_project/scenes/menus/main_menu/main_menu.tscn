@@ -41,9 +41,23 @@ theme_override_constants/separation = 8
 [node name="LocalizationSelector" parent="BottomLeftContainer/VBoxContainer" instance=ExtResource("5_locale")]
 layout_mode = 2
 
-[node name="SocialButtons" parent="BottomLeftContainer/VBoxContainer" instance=ExtResource("4_social")]
+[node name="BottomCenterContainer" type="MarginContainer" parent="." index="1"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -64.0
+offset_right = 120.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 16
+
+[node name="SocialButtons" parent="BottomCenterContainer" instance=ExtResource("4_social")]
 layout_mode = 2
-alignment = 0
+alignment = 1
 
 [node name="AudioReactiveBloom" type="Node" parent="."]
 script = ExtResource("7_bloom")
