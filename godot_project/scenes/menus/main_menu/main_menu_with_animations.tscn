@@ -1,7 +1,14 @@
-[gd_scene load_steps=22 format=3 uid="uid://c63y6b25bs4bk"]
+[gd_scene load_steps=29 format=3 uid="uid://c63y6b25bs4bk"]
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_0i2sc"]
+[ext_resource type="Texture2D" uid="uid://cpnwhkjpqunqa" path="res://assets/user_interface/social_icons/16x16/Steam.png" id="steam_normal"]
+[ext_resource type="Texture2D" uid="uid://c8xgj8lpyp7k2" path="res://assets/user_interface/social_icons/16x16_outline/Steam.png" id="steam_hover"]
+[ext_resource type="Texture2D" uid="uid://cknkkklfukmhr" path="res://assets/user_interface/social_icons/16x16/Twitch.png" id="twitch_normal"]
+[ext_resource type="Texture2D" uid="uid://co04m6lmvdxns" path="res://assets/user_interface/social_icons/16x16_outline/Twitch.png" id="twitch_hover"]
 [ext_resource type="Script" uid="uid://b5qy5nr1wivs4" path="res://scenes/menus/main_menu/main_menu_with_animations.gd" id="2_ncvk7"]
+[ext_resource type="PackedScene" uid="uid://cqvlk7m8fpnxr" path="res://scenes/menus/main_menu/localization_selector.tscn" id="locale_selector"]
+[ext_resource type="Script" path="res://scripts/effects/audio_reactive_bloom.gd" id="audio_bloom"]
+[ext_resource type="Script" path="res://scripts/effects/menu_music_visual_effects.gd" id="music_fx"]
 [ext_resource type="PackedScene" uid="uid://bdvdf5v87mmrr" path="res://scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_tuy3s"]
 [ext_resource type="PackedScene" uid="uid://dtu0ffm1m5mr7" path="res://scenes/menus/level_select_menu/level_select_menu.tscn" id="3_xj7vs"]
 [ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://scenes/credits/credits.tscn" id="4_lwsll"]
@@ -515,6 +522,63 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 32
 
+[node name="SteamButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer" index="3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+tooltip_text = "Visit us on Steam"
+texture_normal = ExtResource("steam_normal")
+texture_hover = ExtResource("steam_hover")
+stretch_mode = 0
+
+[node name="TwitchButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer" index="4"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+tooltip_text = "Twitch Integration"
+texture_normal = ExtResource("twitch_normal")
+texture_hover = ExtResource("twitch_hover")
+stretch_mode = 0
+
+[node name="BottomLeftContainer" type="MarginContainer" parent="." index="10"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+offset_right = 200.0
+grow_vertical = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="LocalizationSelector" parent="BottomLeftContainer" instance=ExtResource("locale_selector")]
+layout_mode = 2
+
+[node name="AudioReactiveBloom" type="Node" parent="."]
+script = ExtResource("audio_bloom")
+base_glow_intensity = 0.4
+max_audio_glow = 1.2
+smoothing = 0.75
+min_frequency = 20.0
+max_frequency = 400.0
+glow_bloom = 0.6
+glow_hdr_threshold = 0.7
+
+[node name="MenuMusicVisualEffects" type="Node" parent="."]
+script = ExtResource("music_fx")
+title_label = NodePath("../MenuContainer/TitleMargin/TitleContainer/TitleLabel")
+title_max_pulse = 0.025
+title_glow_intensity = 0.12
+title_smoothing = 0.88
+button_container = NodePath("../MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer")
+button_wiggle_angle = 0.8
+button_pulse_amount = 0.012
+button_smoothing = 0.92
+background = NodePath("../BackgroundTextureRect")
+bg_max_scale = 0.008
+bg_color_shift = 0.025
+bg_smoothing = 0.94
+
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/TopRowContainer/NewGameButton" to="." method="new_game"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/TopRowContainer/ContinueGameButton" to="." method="_on_continue_game_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/TopRowContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]
@@ -523,3 +587,5 @@ theme_override_constants/margin_bottom = 32
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/BottomRowContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/BottomRowContainer/FeedbackButton2" to="." method="_on_feedback_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/BottomRowContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/SteamButton" to="." method="_on_steam_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/TwitchButton" to="." method="_on_twitch_button_pressed"]
