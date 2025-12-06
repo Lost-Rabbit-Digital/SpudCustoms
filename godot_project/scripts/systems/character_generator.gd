@@ -177,14 +177,6 @@ func randomise_character():
 	current_face_frame = randi() % max(1, counts.face)
 	current_body_frame = randi() % max(1, counts.body)
 
-	# Add debug print to see what's being generated
-	print("Randomized character:")
-	print("  Race: ", race)
-	print("  Sex: ", sex)
-	print("  Head frame: ", current_head_frame)
-	print("  Face frame: ", current_face_frame)
-	print("  Body frame: ", current_body_frame)
-
 	# Update the sprites
 	update_sprite_animations()
 
@@ -213,8 +205,6 @@ func set_character_data(data: Dictionary) -> void:
 		current_face_frame = data.face_frame
 	if data.has("body_frame"):
 		current_body_frame = data.body_frame
-
-	print("After setting - Race: ", race, " Sex: ", sex)
 
 	# Ensure animations are updated with the correct race and sex
 	update_sprite_animations()
