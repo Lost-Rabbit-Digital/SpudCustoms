@@ -73,7 +73,12 @@
 Each chapter represents one work shift (10 total shifts)
 
 #### Shift 1: "Peeling Back the Layers"
-- Dynamic tutorial integration (replaces hard-coded screenshot tutorial)
+- **Dynamic tutorial system** ✓ (implemented - replaces hard-coded screenshot tutorial)
+  - Text readability shader for tutorial emphasis
+  - Click-to-continue functionality
+  - Tutorial progress indicator in UI
+  - Softer highlight intensity for better readability
+  - Triggers on document pickup with contextual guidance
 - Introduction to border checkpoint operations
 - Tutorial for gate raising mechanic
 - Tutorial for runners with emote warnings
@@ -368,15 +373,38 @@ Each chapter represents one work shift (10 total shifts)
 - **Viewport Masking**: Prevents stamps outside passport boundaries
 - **Physics System**: Documents have gravity on suspect panel
 
-#### 2. Mini-games
+#### 2. Mini-games (5 Integrated)
+Mini-games unlock progressively through story mode shifts, each offering unique gameplay variety:
+
+- **Document Scanner (UV Light)** - Shift 1
+  - Drag UV light around documents to reveal hidden elements
+  - Click to mark discovered elements for bonus points
+  - Relaxing puzzle with no punishment for missing elements
+
+- **Stamp Sorting** - Shift 2
+  - Fast-paced sorting game with stamps falling from above
+  - Drag stamps to correct bin (APPROVED or DENIED)
+  - Rewards quick decisions and accuracy
+
+- **Fingerprint Match** - Shift 3
+  - Reference fingerprint shown, find match from grid of 6 options
+  - Tests observation skills without frustrating difficulty
+  - Time bonus for quick matches
+
+- **Code Breaker** - Shift 4
+  - Mastermind-style code guessing game (4-digit codes)
+  - Wordle-style feedback: position-specific color hints
+  - Maximum 6 attempts per code
+
+- **Border Chase** - Shift 5
+  - Quick reaction game on scrolling conveyor belt
+  - Click contraband items before they escape
+  - Satisfying "punt" animation for caught items
+  - Avoid clicking approved items
+
+**Additional Gameplay Systems:**
 - **Border Runner Defense**: Missile system to intercept fleeing potatoes
   - Killing approved potatoes: -250 points + strike (Totneva Convention violation)
-  - 0 strikes on kill should not display "Strike Removed!"
-- **X-ray Scanning**: Special shader reveals inner contents of potatoes and belongings
-- **UV Lamp Scanning**: Detect secret symbols/messages on documents for bonus points
-- **Baggage Inspection**: Shake bags to reveal bugs, coins, or contraband
-- **Interrogation**: Short, fun mini-game (design in progress)
-- **Sapper Runners**: Time-bombs placed on walls requiring defusal mini-game or mouse-over
 - **Document Physics**: Gravity-based interaction on suspect panel
 
 #### 3. Progression System
@@ -569,6 +597,15 @@ Each chapter represents one work shift (10 total shifts)
 - Keybind remapping interface
 - Accessibility toggles (see AccessibilityManager)
 
+**Help Menu:** ✓ (Implemented)
+- Tabbed interface with multiple information sections
+- **Lore Tab**: Game world backstory and setting information
+  - History of the potato nation
+  - Political context and factions
+  - Character backgrounds
+- Controls and gameplay instructions
+- Accessible from main menu and pause menu
+
 **Shift Summary Screen:**
 - Full-screen results display
 - Animated stat counters
@@ -683,30 +720,22 @@ Each chapter represents one work shift (10 total shifts)
 3. **Feedback**: Immediate audio response to player actions
 4. **Atmosphere**: Music and ambience support narrative tone
 
-### Music System
+### Music System ✓ (Implemented)
+
+**7 Custom ElevenLabs-Generated Music Tracks** integrated with dynamic switching throughout story and gameplay.
 
 **Dynamic Music Layers:**
 
 *Main Menu:*
-- Ambient, slightly ominous loop
-- Hints at dystopian setting without overwhelming
+- Ambient, slightly ominous loop ✓
+- Parallax mouse background effect accompanies music
 - Volume: -10dB to allow for clear menu navigation
-- Track: [TBD - atmospheric synth pad]
 
 *Gameplay - Story Mode:*
-- **Base Layer**: Ambient exploration theme (currently: ambient_exploration_main.mp3)
-  - Low-tension shifts (1-3)
-  - Volume: -5dB
-  - Tempo: 80-100 BPM
-- **Tension Layer**: Adds as shift progresses
-  - Activates when timer <5 minutes
-  - Increases tempo perception through percussion
-  - Volume ramps from 0dB to -3dB
-- **Crisis Layer**: High-stakes moments
-  - Activates when strikes >50% of limit
-  - Sharp, staccato elements
-  - Distorted synth leads
-  - Volume: -2dB (louder than base)
+- **Dynamic music switches** integrated into DTL narrative files ✓
+- Context-aware track changes based on story beats
+- Character sound_moods for chatter audio ✓
+- Audio levels normalized to -5 dB
 
 *Gameplay - Endless/Score Attack:*
 - Upbeat, chiptune-style track (currently: chiptune_work_work_work_main.mp3)
@@ -715,9 +744,10 @@ Each chapter represents one work shift (10 total shifts)
 - Volume: -10dB to maintain focus
 
 *Narrative Scenes (Dialogic):*
-- Contextual music per scene
+- Contextual music per scene ✓
+- Dramatic audio events integrated into timeline files ✓
 - Fade transitions (2s) between tracks
-- Lower volume (-15dB) to prioritize dialogue
+- Lower volume to prioritize dialogue
 - Emotional matching: tense, mysterious, hopeful
 
 *Shift Summary:*
@@ -997,6 +1027,45 @@ Master Bus (0dB)
 - Steam integration
 - **Steam Cloud Save**: Verification needed for correct path configuration
 - Leaderboard system (per shift, per difficulty, score attack mode)
+
+### EventBus Architecture ✓ (Implemented)
+
+The game uses a centralized **publish-subscribe event system** for decoupled communication between game systems.
+
+**Location:** `scripts/autoload/EventBus.gd`
+
+#### Signal Categories (47+ signals across 13 categories)
+| Category | Example Signals |
+|----------|-----------------|
+| Score & Game State | `score_add_requested`, `score_changed`, `high_score_achieved` |
+| Strike & Penalty | `strike_add_requested`, `strike_changed`, `max_strikes_reached` |
+| Game Flow | `shift_advance_requested`, `quota_updated`, `game_over_triggered` |
+| Gameplay Actions | `runner_escaped`, `runner_stopped`, `missile_launched` |
+| Document Processing | `potato_approved`, `potato_rejected`, `stamp_applied` |
+| Narrative & Dialogue | `narrative_choice_made`, `dialogue_started`, `story_state_changed` |
+| UI & Feedback | `alert_red_requested`, `screen_shake_requested` |
+| Minigames | `minigame_started`, `minigame_completed`, `minigame_bonus_requested` |
+| Save/Load | `save_game_requested`, `game_saved`, `game_loaded` |
+| Analytics | `analytics_event`, `session_started` |
+| Achievements | `achievement_unlocked`, `achievement_check_requested` |
+| Accessibility | `accessibility_settings_changed`, `tts_speak_requested` |
+| Tutorial | `tutorial_step_advanced`, `tutorial_completed` |
+
+#### Pattern Usage
+```gdscript
+# Emitting events (request-style)
+EventBus.request_score_add(100, "runner_stopped", {"runner_type": "potato"})
+
+# Subscribing to events (listener-style)
+func _ready():
+    EventBus.score_changed.connect(_on_score_changed)
+```
+
+#### Benefits
+- **Decoupling**: Systems don't directly reference each other
+- **Testable**: Mock EventBus signals for unit testing
+- **Extensible**: New systems subscribe to existing events
+- **Auditable**: All state changes flow through events with metadata
 
 ### Key Classes and Systems
 ```gdscript
@@ -1590,64 +1659,34 @@ Justification:
 
 ## 9. Development Timeline
 
-### Current Phase: Version 1.1.1 - Minor Update
-**Target Release: 2025-04-20 for Full 1.1.0**
+### Current Phase: Version 1.2.0 - Feature Complete
+**Target Release: December 12th, 2025**
 
-#### Immediate Priorities (Blocking Release)
-1. **CRITICAL**: Fix leaderboards not loading in Steam public_test
-2. Complete 4 ending branches (2 art + 4 dialogue each)
-3. Fix Shift 10 narrative inconsistencies
-4. Test Steam Cloud Save functionality
-5. Test Demo changes before upload
+#### Completed This Version ✓
+- Dynamic tutorial system (replaces hard-coded screenshots)
+- 5 integrated mini-games (Document Scanner, Stamp Sorting, Fingerprint Match, Code Breaker, Border Chase)
+- EventBus architecture for decoupled systems
+- 7 custom ElevenLabs music tracks with dynamic switching
+- Help menu with Lore tab
+- Parallax mouse background on main menu
+- Tutorial UX improvements (click-to-continue, progress indicator, softer highlights)
+- Audio level normalization (-5 dB)
+- Load game confirmation dialog
+- Brown/gold UI styling consistency
+- Numerous bug fixes (missile freeze, passport text, tutorial progression, stamp overlap, etc.)
 
-#### Tutorial System Overhaul
-- Replace hard-coded screenshots with dynamic tutorial
-- Integrate seamlessly into Shift 1
-- Updated images for new UI
-- Gate raising tutorial step
-- Runner warning tutorial with emotes
-- Exploding runner tutorial update
+#### Pre-Release Priorities
+1. Steam Cloud Save verification
+2. Multiple ending branches testing
+3. Choice tracking system verification
+4. Shift 10 narrative polish
+5. Final accessibility pass
 
-#### Narrative Improvements
-- Split Supervisor Russet dialogue in shift1_intro
-- Fix fade timing in shift1_intro (too fast for brief dialogue)
-- Split "I think I know what's happening..." dialogue
-- Reword scanner warning text
-- Bridge narrative gap in Shift 10
-- Smooth Shift 4 ending transition
-- Implement different dialogue font
-
-#### Audio Fixes
-- Fix keyboard audio desync (use Dialogic keystrokes or tailored files)
-- Add lever SFX for office shutter
-- Add hover sounds for megaphone/stamp bar
-- Add emote audio feedback
-- Add document grip sound
-- Add whoosh sounds for document movement
-- Add menu tick sounds for volume sliders
-
-#### Graphics Improvements
+#### Remaining Polish Items
 - Viewport masking for documents/stamps
-- Ink fleck particles from stamping
-- Message queue system implementation
-- Potato hover tooltips in queue
-- Shift-start walk-in animation
-- Cursor system updates (multiple fixes)
-- Emote display improvements
-- Physics on documents
-- Potato breathing animation
-- Environmental animations (lights, birds)
-- Shadow alignment fixes
-
-#### Gameplay Additions
-- UV lamp scanning system
-- Entry ticket documents
-- Baggage inspection mini-game
-- Sapper runner variants
-- Approved potato kill penalties
-- Random runner chance while in line
-- Kill text position improvements
-- Shift-based time display
+- Additional sound effects (hover sounds, document grip)
+- Accessibility features (colorblind mode, font size options)
+- Performance optimization (sprite pooling)
 
 ### Phase 1: Core Development (Completed)
 - Basic gameplay mechanics ✓
@@ -1663,11 +1702,15 @@ Justification:
 - **Multiple endings** (needs implementation)
 - **Environmental storytelling** (needs progressive integration)
 
-### Phase 3: Features & Polish (Ongoing)
-- Mini-games (X-ray, baggage, interrogation in progress)
-- Steam integration (leaderboard issues blocking)
+### Phase 3: Features & Polish ✓ (Completed)
+- Mini-games (5 integrated: Document Scanner, Stamp Sorting, Fingerprint Match, Code Breaker, Border Chase) ✓
+- Dynamic tutorial system ✓
+- EventBus architecture implementation ✓
+- Dynamic music system with 7 custom tracks ✓
+- Help menu with Lore tab ✓
+- Steam integration (ongoing testing)
 - Achievements (needs in-game display)
-- Bug fixing (extensive list documented)
+- Bug fixing (major issues resolved)
 
 ### Phase 4: Testing & Launch
 - Playtesting (narrative + stats achievements)
@@ -1704,48 +1747,52 @@ Justification:
 
 ## 11. Known Issues & Action Items
 
-### High Priority (Blocking Release)
-1. **Leaderboards not loading in Steam public_test build** - CRITICAL
-2. Steam Cloud Save verification incomplete
-3. Multiple ending branches not implemented
-4. Choice tracking system needs verification
-5. Shift 10 narrative inconsistencies
+### Recently Fixed ✓
+- ~~Tutorial system uses outdated screenshots~~ → Dynamic tutorial implemented
+- ~~Missile freeze bug~~ → Fixed with sprite validation
+- ~~Passport text overflow/clarity~~ → Fixed with font size adjustments
+- ~~Tutorial progression stuck~~ → Fixed tween pause mode and timer issues
+- ~~Shift quota bug when skipping tutorial~~ → Fixed
+- ~~Audio level inconsistencies~~ → Normalized to -5 dB
+- ~~Stamp overlap detection issues~~ → Fixed
+- ~~Shift summary screen skipped on strike out~~ → Fixed
+- ~~Minigame UI input not reaching SubViewport~~ → Fixed
+
+### High Priority (Pre-Release)
+1. Steam Cloud Save verification incomplete
+2. Multiple ending branches need testing
+3. Choice tracking system needs verification
+4. Shift 10 narrative polish
 
 ### Medium Priority (Quality Issues)
-1. Tutorial system uses outdated screenshots
-2. Drag and Drop System has multiple critical bugs
-3. Z-index rendering issues throughout
-4. Shift 4 ending transition is jarring
-5. Accessibility features missing (colorblind, font size, UI scaling)
+1. Drag and Drop System edge cases
+2. Z-index rendering issues in some scenes
+3. Accessibility features (colorblind mode, font size options)
+4. Load game confirmation dialog UX
 
 ### Low Priority (Polish)
-1. Performance optimization needed (pooling systems)
-2. Audio desync issues
-3. Cursor behavior inconsistencies
-4. Environmental animation additions
-5. Emote system enhancements
+1. Performance optimization (sprite pooling for footprints)
+2. Cursor behavior edge cases
+3. Environmental animation additions
+4. Enhanced shift summary animations
 
 ### Documentation Gaps
-- Major system interaction documentation needed
+- ~~Major system interaction documentation~~ → EventBus architecture documented
 - Content addition guide (potatoes, rules, laws)
 - Story flow and decision point visualization
 - Steam deployment process documentation
-- Pre-release testing checklist formalization
 
 ### Art Assets Needing Revision
 - plant_revelation: Goopy potatoes need cleanup
 - extreme_emergency: Washed out colors need adjustment
 - Purple color matching in personal quarters
-- Various cutscenes need Aseprite repainting (16-32 color palettes)
 
 ### Future Considerations
 - Multiplayer implementation (Steam Matchmaking)
 - Conversation system during document checking
-- Alt-Enter and F11 fullscreen toggles
-- Instructions overlay system
-- Main menu potato pathfinding
-- Enhanced shift summary animations
-- Control scheme for keyboard navigation
+- Main menu potato pathfinding (A* algorithm)
+- Level select leaderboard viewing
+- Additional localization languages
 
 
 
@@ -2159,6 +2206,6 @@ This project uses open-source software and gives back to the community:
 
 ---
 
-**Document Version**: 1.1.1 Update Revision
-**Last Updated**: October 19, 2025
-**Status**: Pre-Release (1.1.0 target: April 20, 2025)
+**Document Version**: 1.2.0 Feature Complete
+**Last Updated**: December 6, 2025
+**Status**: Pre-Release (1.2.0 target: December 12, 2025)
