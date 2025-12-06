@@ -234,14 +234,19 @@ var tutorial_queue: Array = []
 
 
 func _ready():
+	# Ensure TutorialManager always processes even when tree is paused
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
 	# Load the highlight shader (using consolidated highlight_indicator)
 	highlight_shader = preload("res://assets/shaders/highlight_indicator.tres")
 
 	# Create step timer
 	step_timer = Timer.new()
 	step_timer.one_shot = true
+	step_timer.process_mode = Node.PROCESS_MODE_ALWAYS  # Timer must also always process
 	step_timer.timeout.connect(_on_step_timer_timeout)
 	add_child(step_timer)
+	print("[TutorialManager] Initialized - step_timer created with PROCESS_MODE_ALWAYS")
 
 	# Load saved progress
 	load_tutorial_progress()
@@ -332,7 +337,9 @@ func save_tutorial_progress():
 
 ## Check if tutorials should trigger for the current shift
 func check_shift_tutorials(shift_number: int):
+	print("[TutorialManager] check_shift_tutorials called with shift: ", shift_number, " | tutorial_enabled: ", tutorial_enabled)
 	if not tutorial_enabled:
+		print("[TutorialManager] Tutorials disabled, skipping")
 		return
 
 	# Build queue of tutorials for this shift
@@ -363,25 +370,30 @@ func check_shift_tutorials(shift_number: int):
 
 func _start_next_queued_tutorial():
 	if tutorial_queue.is_empty():
+		print("[TutorialManager] No more tutorials in queue")
 		return
 
 	var next = tutorial_queue.pop_front()
+	print("[TutorialManager] Starting next queued tutorial: ", next["id"])
 	start_tutorial(next["id"])
 
 
 ## Start a specific tutorial
 func start_tutorial(tutorial_id: String):
+	print("[TutorialManager] start_tutorial called for: ", tutorial_id)
 	if not tutorial_id in TUTORIALS:
 		push_error("Tutorial not found: " + tutorial_id)
 		return
 
 	if is_tutorial_completed(tutorial_id):
+		print("[TutorialManager] Tutorial already completed: ", tutorial_id, ", skipping to next")
 		_start_next_queued_tutorial()
 		return
 
 	current_tutorial = tutorial_id
 	current_step = 0
 	waiting_for_action = false
+	print("[TutorialManager] Starting tutorial: ", tutorial_id)
 
 	tutorial_started.emit(tutorial_id)
 	# Also emit via EventBus for system-wide awareness
@@ -398,10 +410,13 @@ func start_tutorial(tutorial_id: String):
 ## Show the current tutorial step
 func _show_current_step():
 	if current_tutorial == "":
+		print("[TutorialManager] _show_current_step called but no current tutorial")
 		return
 
 	var tutorial = TUTORIALS[current_tutorial]
+	print("[TutorialManager] _show_current_step: ", current_tutorial, " step ", current_step, "/", tutorial["steps"].size())
 	if current_step >= tutorial["steps"].size():
+		print("[TutorialManager] All steps complete, calling _complete_tutorial")
 		_complete_tutorial()
 		return
 
@@ -426,14 +441,19 @@ func _show_current_step():
 
 	# Handle step progression
 	if step.has("wait_for_action"):
+		print("[TutorialManager] Step waiting for action: ", step.get("wait_for_action"))
 		waiting_for_action = true
 		_update_continue_hint(false)
 	elif step.has("duration"):
+		var duration = step["duration"]
+		print("[TutorialManager] Step has duration: ", duration, " seconds - starting timer")
 		waiting_for_action = false
-		step_timer.start(step["duration"])
+		step_timer.start(duration)
+		print("[TutorialManager] Timer started, time_left: ", step_timer.time_left, ", is_stopped: ", step_timer.is_stopped())
 		_update_continue_hint(true)
 	else:
 		# Default: wait 3 seconds
+		print("[TutorialManager] Step has no duration/action, using default 3 seconds")
 		waiting_for_action = false
 		step_timer.start(3.0)
 		_update_continue_hint(true)
@@ -655,6 +675,7 @@ func _clear_all_highlights():
 
 ## Timer timeout - advance to next step
 func _on_step_timer_timeout():
+	print("[TutorialManager] Timer fired! Advancing step for: ", current_tutorial)
 	_advance_step()
 
 
@@ -677,6 +698,7 @@ func trigger_tutorial_action(action_name: String):
 
 ## Advance to next step
 func _advance_step():
+	print("[TutorialManager] _advance_step: from step ", current_step, " to step ", current_step + 1)
 	tutorial_step_completed.emit(current_tutorial, current_step)
 	current_step += 1
 	waiting_for_action = false
@@ -685,11 +707,14 @@ func _advance_step():
 
 ## Complete current tutorial
 func _complete_tutorial():
+	print("[TutorialManager] _complete_tutorial called for: ", current_tutorial)
 	if current_tutorial == "":
+		print("[TutorialManager] No current tutorial to complete")
 		return
 
 	var completed_id = current_tutorial
 	tutorials_completed[completed_id] = true
+	print("[TutorialManager] Marked ", completed_id, " as completed")
 	tutorial_completed.emit(completed_id)
 	# Also emit via EventBus
 	if EventBus:
@@ -700,23 +725,29 @@ func _complete_tutorial():
 
 	# Hide panel briefly
 	if tutorial_panel and is_instance_valid(tutorial_panel):
+		print("[TutorialManager] Fading out tutorial panel")
 		var tween = create_tween()
 		if tween:
 			tween.tween_property(tutorial_panel, "modulate:a", 0.0, 0.3)
 			await tween.finished
+			print("[TutorialManager] Panel fade complete")
 
 	current_tutorial = ""
 	current_step = 0
 
 	save_tutorial_progress()
+	print("[TutorialManager] Progress saved, queue size: ", tutorial_queue.size())
 
 	# Start next tutorial in queue after a short delay
 	# Use call_deferred as a fallback to ensure the next tutorial starts
 	if is_inside_tree() and get_tree():
+		print("[TutorialManager] Waiting 1 second before next tutorial...")
 		await get_tree().create_timer(1.0).timeout
+		print("[TutorialManager] Wait complete, starting next tutorial")
 		_start_next_queued_tutorial()
 	else:
 		# Fallback: use call_deferred if tree is not available
+		print("[TutorialManager] Not in tree, using call_deferred")
 		call_deferred("_start_next_queued_tutorial")
 
 
