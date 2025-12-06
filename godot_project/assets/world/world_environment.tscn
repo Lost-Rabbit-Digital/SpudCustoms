@@ -1,10 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://c4h2cf8sxx3gh"]
 
 [ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/world/elements/customs_office.png" id="2_fkyx8"]
-[ext_resource type="Texture2D" uid="uid://dbi6dbcn7qjfn" path="res://assets/world/posters/mini_size/poster_1_mini.png" id="11_poster1"]
-[ext_resource type="Texture2D" uid="uid://cma3w0eulsacq" path="res://assets/world/posters/mini_size/poster_2_mini.png" id="12_poster2"]
-[ext_resource type="Texture2D" uid="uid://d34heu5gdhx4u" path="res://assets/world/posters/mini_size/poster_3_mini.png" id="13_poster3"]
-[ext_resource type="Script" path="res://scripts/systems/SceneVisualsManager.gd" id="14_visuals"]
 [ext_resource type="Texture2D" uid="uid://yvmmxdnlhttw" path="res://assets/world/elements/fence_posts.png" id="3_gfqs4"]
 [ext_resource type="Material" uid="uid://c1fljl8m4j1w1" path="res://assets/shaders/grass_animation_material.tres" id="4_nqcph"]
 [ext_resource type="Texture2D" uid="uid://ds2lwggt7nk5l" path="res://assets/world/elements/grass_texture.png" id="5_y64ie"]
@@ -14,6 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://bbqeaqeapw80f" path="res://assets/world/elements/primary_grass.png" id="8_y64ie"]
 [ext_resource type="Texture2D" uid="uid://c34mkfgggpuhi" path="res://assets/world/elements/walls.png" id="9_y64ie"]
 [ext_resource type="Texture2D" uid="uid://c1kftrgeokqa6" path="res://assets/world/elements/misc.png" id="10_ny30l"]
+[ext_resource type="Texture2D" uid="uid://dbi6dbcn7qjfn" path="res://assets/world/posters/mini_size/poster_1_mini.png" id="11_poster1"]
+[ext_resource type="Texture2D" uid="uid://cma3w0eulsacq" path="res://assets/world/posters/mini_size/poster_2_mini.png" id="12_poster2"]
+[ext_resource type="Texture2D" uid="uid://d34heu5gdhx4u" path="res://assets/world/posters/mini_size/poster_3_mini.png" id="13_poster3"]
+[ext_resource type="Script" uid="uid://bslsy4u3pbbxm" path="res://scripts/systems/SceneVisualsManager.gd" id="14_visuals"]
 
 [node name="Environment" type="Node2D"]
 
@@ -65,20 +65,23 @@ texture = ExtResource("7_gpohd")
 [node name="Misc" type="Sprite2D" parent="Elements"]
 texture = ExtResource("10_ny30l")
 
-[node name="SceneVisualsManager" type="Node" parent="."]
-script = ExtResource("14_visuals")
-
 [node name="PostersContainer" type="Node2D" parent="Elements"]
 z_index = 1
 
 [node name="Poster1" type="Sprite2D" parent="Elements/PostersContainer"]
-position = Vector2(-155, -39)
+position = Vector2(-107.585, -33)
+scale = Vector2(0.05, 0.05)
 texture = ExtResource("11_poster1")
 
 [node name="Poster2" type="Sprite2D" parent="Elements/PostersContainer"]
-position = Vector2(-97, -39)
+position = Vector2(-15.926, -33)
+scale = Vector2(0.05, 0.05)
 texture = ExtResource("12_poster2")
 
 [node name="Poster3" type="Sprite2D" parent="Elements/PostersContainer"]
-position = Vector2(-39, -39)
+position = Vector2(213.222, -33)
+scale = Vector2(0.05, 0.05)
 texture = ExtResource("13_poster3")
+
+[node name="SceneVisualsManager" type="Node" parent="."]
+script = ExtResource("14_visuals")

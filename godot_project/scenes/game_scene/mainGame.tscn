@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://cwks4tbpoq3n5"]
+[gd_scene load_steps=60 format=3 uid="uid://cwks4tbpoq3n5"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://scenes/game_scene/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://scripts/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
@@ -18,7 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://b2icltv7xkk6j" path="res://assets/user_interface/CustomsDesk.png" id="22_or1f4"]
 [ext_resource type="PackedScene" uid="uid://cejqnrw4oo4r2" path="res://assets/user_interface/suspect_panel/suspect_panel.tscn" id="22_qfxfi"]
 [ext_resource type="PackedScene" uid="uid://civ7gq0ovv5cr" path="res://scripts/systems/character_generator.tscn" id="23_3qac4"]
-[ext_resource type="FontFile" uid="uid://bu4wixto3oahp" path="res://assets/fonts/Pixellari.ttf" id="25_5sv0s"]
 [ext_resource type="Texture2D" uid="uid://ceh27taly75na" path="res://assets/documents/passport_old.png" id="25_gf7dt"]
 [ext_resource type="PackedScene" uid="uid://be3lucg3f3a3c" path="res://scripts/systems/stamp/StampBarController.tscn" id="25_osm16"]
 [ext_resource type="PackedScene" uid="uid://fci3o688eddt" path="res://scripts/systems/LawReceiptController.tscn" id="27_ccap0"]
@@ -535,14 +534,13 @@ rotation = 0.137881
 scale = Vector2(2.42121, 2.42121)
 
 [node name="OpenPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
-visible = false
-scale = Vector2(1.05, 1.05)
+scale = Vector2(1.25, 1.25)
 texture = ExtResource("25_gf7dt")
 
 [node name="PassportPhotoGenerator" parent="Gameplay/InteractiveElements/Passport/OpenPassport" instance=ExtResource("23_3qac4")]
 z_index = 1
 z_as_relative = true
-position = Vector2(76, 90)
+position = Vector2(76, 92)
 scale = Vector2(0.975, 1)
 
 [node name="PotatoHeader" type="Label" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
