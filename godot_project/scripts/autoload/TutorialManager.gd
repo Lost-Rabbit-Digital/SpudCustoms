@@ -33,6 +33,7 @@ var progress_label: Label = null
 # Step timing
 var step_timer: Timer = null
 var waiting_for_action: bool = false
+var waiting_for_click: bool = false  # Waiting for user to click to continue
 
 # Tutorial definitions with expanded, friendly dialogue
 # Tutorial definitions - text uses placeholders for controller-aware prompts
@@ -461,10 +462,8 @@ func _show_current_step():
 		# Check if action condition is already met (e.g., passport already open)
 		if _is_action_condition_met(action):
 			print("[TutorialManager] Action condition already met: ", action)
-			# Small delay before advancing for visual feedback
-			if is_inside_tree() and get_tree():
-				await get_tree().create_timer(0.5).timeout
-			_advance_step()
+			# Wait for user to read the text, allow click to skip
+			_start_click_to_continue_wait(2.5)
 			return
 
 		waiting_for_action = true
@@ -694,6 +693,43 @@ func _update_continue_hint(auto_progress: bool):
 			continue_hint_label.visible = false
 
 
+## Start waiting for click to continue (with optional auto-advance after delay)
+func _start_click_to_continue_wait(delay: float = 2.5):
+	waiting_for_click = true
+	waiting_for_action = false
+
+	# Show click hint
+	if continue_hint_label:
+		continue_hint_label.text = "(click to continue...)"
+		continue_hint_label.visible = true
+
+	# Start timer for auto-advance
+	step_timer.start(delay)
+	print("[TutorialManager] Waiting for click or ", delay, " seconds")
+
+
+## Handle click to continue
+func _on_panel_clicked():
+	if waiting_for_click:
+		print("[TutorialManager] Panel clicked, advancing step")
+		waiting_for_click = false
+		step_timer.stop()
+		_advance_step()
+
+
+## Input handler for click-to-continue
+func _input(event: InputEvent):
+	if not waiting_for_click:
+		return
+
+	# Check for mouse click or touch
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			_on_panel_clicked()
+	elif event.is_action_pressed("ui_accept") or event.is_action_pressed("primary_interaction"):
+		_on_panel_clicked()
+
+
 ## Check if an action condition is already met
 ## This handles cases where the action happened before the tutorial step started
 func _is_action_condition_met(action: String) -> bool:
@@ -720,12 +756,12 @@ func _is_action_condition_met(action: String) -> bool:
 		"stamp_bar_opened":
 			# Check if stamp bar is already open
 			var stamp_bar = scene.find_child("StampBarController", true, false)
-			if stamp_bar and stamp_bar.has_method("get") and stamp_bar.get("is_visible"):
+			if stamp_bar and "is_visible" in stamp_bar and stamp_bar.is_visible:
 				return true
 		"document_under_stamp":
-			# Check if document is already under stamp
+			# Check if document is already under stamp (alignment guide showing)
 			var stamp_bar = scene.find_child("StampBarController", true, false)
-			if stamp_bar and stamp_bar.has_method("get") and stamp_bar.get("is_showing_guide"):
+			if stamp_bar and "is_showing_guide" in stamp_bar and stamp_bar.is_showing_guide:
 				return true
 
 	return false
@@ -826,6 +862,7 @@ func _clear_all_highlights():
 ## Timer timeout - advance to next step
 func _on_step_timer_timeout():
 	print("[TutorialManager] Timer fired! Advancing step for: ", current_tutorial)
+	waiting_for_click = false  # Clear click wait state
 	_advance_step()
 
 
@@ -852,6 +889,7 @@ func _advance_step():
 	tutorial_step_completed.emit(current_tutorial, current_step)
 	current_step += 1
 	waiting_for_action = false
+	waiting_for_click = false
 	_show_current_step()
 
 
