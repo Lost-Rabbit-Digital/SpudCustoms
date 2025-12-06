@@ -82,14 +82,19 @@ func _setup_user_context() -> void:
 			_user_id = str(steam_id)
 			_user_name = steam_name
 
-			SentrySDK.set_user({"id": _user_id, "username": _user_name})
+			var user := SentryUser.new()
+			user.id = _user_id
+			user.username = _user_name
+			SentrySDK.set_user(user)
 			SentrySDK.set_tag("steam_id", _user_id)
 
 			LogManager.write_info("SentryManager: User context set for Steam user")
 	else:
 		# Generate anonymous user ID for non-Steam users
 		_user_id = _generate_anonymous_id()
-		SentrySDK.set_user({"id": _user_id})
+		var user := SentryUser.new()
+		user.id = _user_id
+		SentrySDK.set_user(user)
 		LogManager.write_info("SentryManager: Anonymous user context set")
 
 
@@ -143,18 +148,30 @@ func add_breadcrumb(category: String, message: String, data: Dictionary = {}) ->
 	if not _sentry_available:
 		return
 
-	SentrySDK.add_breadcrumb(message, category, "info", data)
+	var crumb := SentryBreadcrumb.new()
+	crumb.message = message
+	crumb.category = category
+	crumb.level = SentrySDK.LEVEL_INFO
+	if not data.is_empty():
+		crumb.data = data
+	SentrySDK.add_breadcrumb(crumb)
 
 
 func add_error_breadcrumb(category: String, message: String, data: Dictionary = {}) -> void:
 	if not _sentry_available:
 		return
 
-	SentrySDK.add_breadcrumb(message, category, "error", data)
+	var crumb := SentryBreadcrumb.new()
+	crumb.message = message
+	crumb.category = category
+	crumb.level = SentrySDK.LEVEL_ERROR
+	if not data.is_empty():
+		crumb.data = data
+	SentrySDK.add_breadcrumb(crumb)
 
 
 # Capture methods
-func capture_message(message: String, level: String = "info") -> void:
+func capture_message(message: String, level: int = SentrySDK.LEVEL_INFO) -> void:
 	if not _sentry_available:
 		return
 
@@ -168,7 +185,7 @@ func capture_error(message: String) -> void:
 		return
 
 	_add_game_context()
-	SentrySDK.capture_message(message, "error")
+	SentrySDK.capture_message(message, SentrySDK.LEVEL_ERROR)
 
 
 func capture_exception(error_message: String, stack_trace: String = "") -> void:
@@ -181,8 +198,13 @@ func capture_exception(error_message: String, stack_trace: String = "") -> void:
 	if not stack_trace.is_empty():
 		data["stack_trace"] = stack_trace
 
-	SentrySDK.add_breadcrumb(error_message, "exception", "error", data)
-	SentrySDK.capture_message(error_message, "error")
+	var crumb := SentryBreadcrumb.new()
+	crumb.message = error_message
+	crumb.category = "exception"
+	crumb.level = SentrySDK.LEVEL_ERROR
+	crumb.data = data
+	SentrySDK.add_breadcrumb(crumb)
+	SentrySDK.capture_message(error_message, SentrySDK.LEVEL_ERROR)
 
 
 func _add_game_context() -> void:
