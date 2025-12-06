@@ -20,6 +20,7 @@ var can_skip_tutorials: bool = true
 
 # Highlight shader material
 var highlight_shader: ShaderMaterial = null
+var text_readability_shader: ShaderMaterial = null  # Separate shader for text labels
 var highlighted_nodes: Array[Node] = []
 var original_materials: Dictionary = {}  # {node_id: original_material}
 
@@ -242,6 +243,8 @@ func _ready():
 
 	# Load the highlight shader (using consolidated highlight_indicator)
 	highlight_shader = preload("res://assets/shaders/highlight_indicator.tres")
+	# Load the text readability shader for Label elements (better contrast for text)
+	text_readability_shader = preload("res://assets/shaders/text_readability.tres")
 
 	# Create step timer
 	step_timer = Timer.new()
@@ -836,11 +839,20 @@ func _apply_highlight_shader(node: Node):
 		if not original_materials.has(node_id):
 			original_materials[node_id] = node.material
 
-		# Create new shader material instance
-		var new_material = highlight_shader.duplicate()
-		new_material.set_shader_parameter("enable_highlight", true)
-		new_material.set_shader_parameter("speed", 1.5)
-		new_material.set_shader_parameter("line_color", Color(1.0, 0.95, 0.8, 0.5))
+		# Use text readability shader for Label elements (better contrast for text)
+		# Use highlight sweep shader for other elements (sprites, buttons, etc.)
+		var new_material: ShaderMaterial
+		if node is Label or node is RichTextLabel:
+			new_material = text_readability_shader.duplicate()
+			new_material.set_shader_parameter("enable_effect", true)
+			new_material.set_shader_parameter("backdrop_opacity", 0.8)
+			new_material.set_shader_parameter("enable_glow", true)
+			print("[TutorialManager] Applying text readability shader to: ", node.name)
+		else:
+			new_material = highlight_shader.duplicate()
+			new_material.set_shader_parameter("enable_highlight", true)
+			new_material.set_shader_parameter("speed", 1.5)
+			new_material.set_shader_parameter("line_color", Color(1.0, 0.95, 0.8, 0.5))
 
 		node.material = new_material
 		highlighted_nodes.append(node)
@@ -854,9 +866,11 @@ func _clear_all_highlights():
 			if original_materials.has(node_id):
 				node.material = original_materials[node_id]
 			else:
-				# If we can't restore, just disable the highlight
+				# If we can't restore, just disable the highlight/effect
 				if node.material and node.material.has_method("set_shader_parameter"):
+					# Handle both highlight_indicator and text_readability shaders
 					node.material.set_shader_parameter("enable_highlight", false)
+					node.material.set_shader_parameter("enable_effect", false)
 
 	highlighted_nodes.clear()
 	original_materials.clear()
