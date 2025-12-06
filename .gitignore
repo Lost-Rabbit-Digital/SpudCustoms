@@ -8,3 +8,4 @@ __pycache__/
 *.pyc
 godot_project/translate_with_gemini.py
 /addons/sentry/bin
+/godot_project/addons/sentry/bin
