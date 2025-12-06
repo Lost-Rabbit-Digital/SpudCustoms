@@ -85,6 +85,11 @@ func _setup_tutorial_choice_dialog():
 	# Add "Skip Tutorial" button
 	var skip_button = tutorial_choice_dialog.add_button("Skip Tutorial", true, "skip_tutorial")
 
+	# Apply consistent brown/gold theme
+	var dialog_theme = load("res://assets/styles/confirmation_dialog_theme.tres")
+	if dialog_theme:
+		tutorial_choice_dialog.theme = dialog_theme
+
 	add_child(tutorial_choice_dialog)
 
 	# Connect signals
@@ -141,6 +146,12 @@ func _setup_load_confirmation_dialog():
 	load_confirmation_dialog.dialog_hide_on_ok = true
 	load_confirmation_dialog.get_ok_button().text = "Continue"
 	load_confirmation_dialog.get_cancel_button().text = "Cancel"
+
+	# Apply consistent brown/gold theme
+	var dialog_theme = load("res://assets/styles/confirmation_dialog_theme.tres")
+	if dialog_theme:
+		load_confirmation_dialog.theme = dialog_theme
+
 	add_child(load_confirmation_dialog)
 
 	# Connect confirmation signals
