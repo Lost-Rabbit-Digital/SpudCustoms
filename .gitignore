@@ -7,3 +7,4 @@ godot_project/addons/godotsteam/win64/~libgodotsteam.windows.template_debug.x86_
 __pycache__/
 *.pyc
 godot_project/translate_with_gemini.py
+/addons/sentry/bin
