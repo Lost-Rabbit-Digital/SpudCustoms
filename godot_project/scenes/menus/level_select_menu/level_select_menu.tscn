@@ -13,28 +13,29 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dm7vg")
 
-[node name="Control" type="Control" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Control" type="Control" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 450)
+layout_mode = 2
 script = ExtResource("2_88qak")
 
-[node name="LevelButtonsContainer" type="ItemList" parent="Control"]
+[node name="LevelButtonsContainer" type="ItemList" parent="CenterContainer/VBoxContainer/Control"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(400, 0)
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -17.5
-offset_right = 200.0
-offset_bottom = 17.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 13
@@ -45,9 +46,17 @@ item_count = 2
 item_0/text = "1 - ExampleLevel"
 item_1/text = "2 - ExampleLevel"
 
+[node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back"
+
 [node name="SceneLister" type="Node" parent="."]
 script = ExtResource("2_g3cvb")
 files = Array[String](["res://scenes/game_scene/levels/day_0_-_tutorial.tscn", "res://scenes/game_scene/levels/day_1_-_first_day_on_the_job.tscn", "res://scenes/game_scene/levels/day_2_-_new_regulations.tscn", "res://scenes/game_scene/levels/day_3_-_increasing_pressure.tscn", "res://scenes/game_scene/levels/day_4_-_contraband_check.tscn", "res://scenes/game_scene/levels/day_5_-_midpoint_crisis.tscn", "res://scenes/game_scene/levels/day_6_-_increased_security.tscn", "res://scenes/game_scene/levels/day_7_-_under_scrutiny.tscn", "res://scenes/game_scene/levels/day_8_-_double_agents.tscn", "res://scenes/game_scene/levels/day_9_-_border_chaos.tscn", "res://scenes/game_scene/levels/day_10_-_the_last_shift.tscn"])
 directory = "res://main_scenes/scenes/game_scene/levels"
 
-[connection signal="item_activated" from="Control/LevelButtonsContainer" to="." method="_on_level_buttons_container_item_activated"]
+[connection signal="item_activated" from="CenterContainer/VBoxContainer/Control/LevelButtonsContainer" to="." method="_on_level_buttons_container_item_activated"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
