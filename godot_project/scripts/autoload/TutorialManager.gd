@@ -495,7 +495,7 @@ func _create_tutorial_ui():
 		tutorial_panel.mouse_filter = Control.MOUSE_FILTER_PASS
 		var tween = create_tween()
 		tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
-		tween.tween_property(tutorial_panel, "modulate:a", 1.0, 0.3)
+		tween.tween_property(tutorial_panel, "modulate:a", 1.0, 0.4).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
 		return
 
 	print("[TutorialManager] Creating tutorial UI panel...")
@@ -670,16 +670,16 @@ func _position_panel_for_step(step: Dictionary):
 
 	if should_be_at_top:
 		# Position at top of screen
-		tween.tween_property(tutorial_panel, "anchor_top", 0.0, 0.3)
-		tween.parallel().tween_property(tutorial_panel, "anchor_bottom", 0.0, 0.3)
-		tween.parallel().tween_property(tutorial_panel, "offset_top", 20, 0.3)
-		tween.parallel().tween_property(tutorial_panel, "offset_bottom", 180, 0.3)
+		tween.tween_property(tutorial_panel, "anchor_top", 0.0, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+		tween.parallel().tween_property(tutorial_panel, "anchor_bottom", 0.0, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+		tween.parallel().tween_property(tutorial_panel, "offset_top", 20, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+		tween.parallel().tween_property(tutorial_panel, "offset_bottom", 180, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
 	else:
 		# Position at bottom of screen (default)
-		tween.tween_property(tutorial_panel, "anchor_top", 1.0, 0.3)
-		tween.parallel().tween_property(tutorial_panel, "anchor_bottom", 1.0, 0.3)
-		tween.parallel().tween_property(tutorial_panel, "offset_top", -180, 0.3)
-		tween.parallel().tween_property(tutorial_panel, "offset_bottom", -20, 0.3)
+		tween.tween_property(tutorial_panel, "anchor_top", 1.0, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+		tween.parallel().tween_property(tutorial_panel, "anchor_bottom", 1.0, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+		tween.parallel().tween_property(tutorial_panel, "offset_top", -180, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+		tween.parallel().tween_property(tutorial_panel, "offset_bottom", -20, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
 
 
 ## Update continue hint visibility
@@ -722,10 +722,12 @@ func _input(event: InputEvent):
 	if not waiting_for_click:
 		return
 
-	# Check for mouse click or touch
+	# Check for mouse click on the tutorial panel only
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			_on_panel_clicked()
+			# Only advance if clicking on the tutorial panel itself
+			if tutorial_panel and tutorial_panel.get_global_rect().has_point(event.position):
+				_on_panel_clicked()
 	elif event.is_action_pressed("ui_accept") or event.is_action_pressed("primary_interaction"):
 		_on_panel_clicked()
 
@@ -920,7 +922,7 @@ func _complete_tutorial():
 		if tween:
 			# Ensure tween runs even when tree is paused
 			tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
-			tween.tween_property(tutorial_panel, "modulate:a", 0.0, 0.3)
+			tween.tween_property(tutorial_panel, "modulate:a", 0.0, 0.4).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
 			await tween.finished
 			print("[TutorialManager] Panel fade complete")
 
@@ -965,7 +967,7 @@ func skip_current_tutorial():
 		if tween:
 			# Ensure tween runs even when tree is paused
 			tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
-			tween.tween_property(tutorial_panel, "modulate:a", 0.0, 0.3)
+			tween.tween_property(tutorial_panel, "modulate:a", 0.0, 0.4).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
 			await tween.finished
 
 	current_tutorial = ""
