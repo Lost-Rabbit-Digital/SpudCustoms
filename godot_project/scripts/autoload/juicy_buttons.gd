@@ -145,7 +145,11 @@ func setup_hover(button: Control, config: Dictionary = {}) -> void:
 		"float_height": 16.0,  # Maximum float height in pixels
 		"float_duration": 1.0,  # Complete cycle duration in seconds
 		"bounce_factor": 1.2,  # Higher values = more bounce
-		"damping": 0.7  # How quickly bounce settles (0-1, lower = faster settle)
+		"damping": 0.7,  # How quickly bounce settles (0-1, lower = faster settle)
+		# Wiggle animation settings
+		"wiggle_enabled": true,
+		"wiggle_angle": 2.0,  # Maximum rotation angle in degrees
+		"wiggle_speed": 8.0  # Wiggle oscillation speed
 	}
 
 	# Merge provided config with defaults
@@ -154,6 +158,13 @@ func setup_hover(button: Control, config: Dictionary = {}) -> void:
 
 	# Store the original position on the button as metadata
 	button.set_meta("original_position", button.position)
+	button.set_meta("hover_config", hover_defaults)
+
+	# Connect mouse signals for hover effects
+	if not button.mouse_entered.is_connected(_on_button_mouse_entered):
+		button.mouse_entered.connect(_on_button_mouse_entered.bind(button, hover_defaults))
+	if not button.mouse_exited.is_connected(_on_button_mouse_exited):
+		button.mouse_exited.connect(_on_button_mouse_exited.bind(button))
 
 
 ## Handle mouse enter animation and floating effect
@@ -251,6 +262,13 @@ func _on_float_timer_timeout(button: Control, hover_defaults: Dictionary) -> voi
 	# Store updated velocity
 	button.set_meta("velocity", velocity)
 
+	# Apply subtle wiggle rotation if enabled
+	if hover_defaults.get("wiggle_enabled", false):
+		var wiggle_angle = hover_defaults.get("wiggle_angle", 2.0)
+		var wiggle_speed = hover_defaults.get("wiggle_speed", 8.0)
+		var wiggle = sin(time_counter * wiggle_speed) * deg_to_rad(wiggle_angle)
+		button.rotation = wiggle
+
 	button.grab_focus()
 
 
@@ -276,6 +294,15 @@ func _on_button_mouse_exited(button: Control) -> void:
 	(
 		scale_tween
 		. tween_property(button, "scale", Vector2(1.0, 1.0), 0.3)
+		. set_ease(Tween.EASE_OUT)
+		. set_trans(Tween.TRANS_BACK)
+	)
+
+	# Reset rotation back to 0 with a smooth tween
+	var rotation_tween = create_tween()
+	(
+		rotation_tween
+		. tween_property(button, "rotation", 0.0, 0.2)
 		. set_ease(Tween.EASE_OUT)
 		. set_trans(Tween.TRANS_BACK)
 	)
