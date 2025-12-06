@@ -120,6 +120,7 @@ class Missile:
 	var sprite: AnimatedSprite2D
 	var smoke_trail: Array[AnimatedSprite2D] = []  # Array to store smoke trail sprites
 	var position: Vector2
+	var start_position: Vector2  # Track where missile was launched from
 	var target: Vector2
 	var rotation: float
 	var active: bool = true
@@ -349,6 +350,12 @@ func update_missiles(delta):
 			i -= 1
 			continue
 
+		# Validate missile sprite is still valid - prevents crash if sprite was freed
+		if not is_instance_valid(missile.sprite):
+			active_missiles.remove_at(i)
+			i -= 1
+			continue
+
 		# Calculate direction and move missile
 		var direction = (missile.target - missile.position).normalized()
 		var distance_to_move = missile_speed * delta
@@ -374,20 +381,20 @@ func update_missiles(delta):
 
 		# Check if missile has gone significantly past its target
 		# This handles cases where missiles might "miss" their target
-		var start_to_target = missile.target - missile.sprite.global_position
-		var start_to_current = missile.position - missile.sprite.global_position
+		var start_to_target = (missile.target - missile.start_position).length()
+		var start_to_current = (missile.position - missile.start_position).length()
 
 		# If the missile has moved 20% further than the target distance, it's gone too far
-		if start_to_current.length() > start_to_target.length() * 1.2:
+		if start_to_current > start_to_target * 1.2:
 			trigger_explosion(missile)
 			active_missiles.remove_at(i)
 			i -= 1
 			continue
 
-		# Add a boundary check
+		# Add a boundary check - trigger explosion instead of silent removal
 		var viewport_rect = get_viewport_rect().grow(100)  # Add some margin
 		if !viewport_rect.has_point(missile.position):
-			missile.sprite.queue_free()
+			trigger_explosion(missile)
 			active_missiles.remove_at(i)
 			i -= 1
 			continue
@@ -695,6 +702,7 @@ func launch_missile(target_pos):
 
 	# More explicit missile start position logging
 	missile.position = Vector2(-100, -100)
+	missile.start_position = missile.position  # Store start position for overshoot detection
 	missile.target = target_pos
 
 	#print("Missile start position: ", missile.position)
@@ -728,15 +736,13 @@ func launch_missile(target_pos):
 
 # Handle explosion animation completion
 func _on_explosion_animation_finished(explosion: AnimatedSprite2D) -> void:
-	explosion.stop()
-	explosion.frame = randi_range(23, 25)
+	explosion.queue_free()
 
 
 # Handle explosion cleanup after timeout
 func _on_explosion_cleanup_timeout(explosion: AnimatedSprite2D) -> void:
 	if is_instance_valid(explosion):
-		explosion.stop()
-		explosion.frame = randi_range(23, 25)
+		explosion.queue_free()
 
 
 # Handle smoke particle animation completion
@@ -768,9 +774,11 @@ func trigger_explosion(missile_or_position):
 
 		# Get the missile sprite's size
 		var missile_length = 0
+		var angle = 0.0
 
 		# For AnimatedSprite2D, we need to access frames differently
-		if missile.sprite and missile.sprite.sprite_frames:
+		# Use is_instance_valid to prevent crashes if sprite was already freed
+		if is_instance_valid(missile.sprite) and missile.sprite.sprite_frames:
 			# Get the current animation
 			var current_anim = missile.sprite.animation
 			# Get the current frame index
@@ -781,9 +789,9 @@ func trigger_explosion(missile_or_position):
 			)
 			if texture:
 				missile_length = texture.get_height() * 0.5 * missile.sprite.scale.y
+			# Calculate tip position using the sprite's rotation
+			angle = missile.sprite.rotation - PI / 2  # Adjust for the initial PI/2 offset
 
-		# Calculate tip position using the sprite's rotation
-		var angle = missile.sprite.rotation - PI / 2  # Adjust for the initial PI/2 offset
 		var tip_offset = Vector2(cos(angle), sin(angle)) * missile_length
 		explosion_position = missile.position + tip_offset
 
@@ -917,7 +925,8 @@ func trigger_explosion(missile_or_position):
 		# No missile to clean up, just a position
 		pass
 	else:
-		missile_or_position.sprite.queue_free()
+		if is_instance_valid(missile_or_position.sprite):
+			missile_or_position.sprite.queue_free()
 		missile_or_position.active = false
 
 	# Play explosion sound
