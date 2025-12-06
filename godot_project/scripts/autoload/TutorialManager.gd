@@ -469,8 +469,15 @@ func _show_current_step():
 ## Create the tutorial UI panel
 func _create_tutorial_ui():
 	if tutorial_panel:
-		print("[TutorialManager] Tutorial panel already exists, skipping creation")
-		return  # Already created
+		print("[TutorialManager] Tutorial panel already exists, restoring visibility")
+		# Restore visibility after previous fade out
+		tutorial_panel.modulate.a = 0
+		tutorial_panel.visible = true
+		tutorial_panel.show()
+		var tween = create_tween()
+		tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+		tween.tween_property(tutorial_panel, "modulate:a", 1.0, 0.3)
+		return
 
 	print("[TutorialManager] Creating tutorial UI panel...")
 
@@ -494,6 +501,9 @@ func _create_tutorial_ui():
 	# Create main panel
 	tutorial_panel = PanelContainer.new()
 	tutorial_panel.name = "TutorialPanel"
+	# Allow mouse events to pass through to game elements behind the panel
+	# The panel itself handles its own button clicks, but shouldn't block the game area
+	tutorial_panel.mouse_filter = Control.MOUSE_FILTER_PASS
 
 	# Style the panel
 	var style = StyleBoxFlat.new()
