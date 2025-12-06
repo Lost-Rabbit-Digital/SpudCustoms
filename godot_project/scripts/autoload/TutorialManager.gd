@@ -463,7 +463,8 @@ func _show_current_step():
 		if _is_action_condition_met(action):
 			print("[TutorialManager] Action condition already met: ", action)
 			# Wait for user to read the text, allow click to skip
-			_start_click_to_continue_wait(2.5)
+			# Use longer wait time (6 seconds) since tutorial steps often have a lot of text
+			_start_click_to_continue_wait(6.0)
 			return
 
 		waiting_for_action = true
@@ -694,7 +695,7 @@ func _update_continue_hint(auto_progress: bool):
 
 
 ## Start waiting for click to continue (with optional auto-advance after delay)
-func _start_click_to_continue_wait(delay: float = 2.5):
+func _start_click_to_continue_wait(delay: float = 6.0):
 	waiting_for_click = true
 	waiting_for_action = false
 
