@@ -8,7 +8,7 @@ signal hint_deactivated(node_name: String)
 # Dictionary to track all hintable nodes
 var hint_timers = {}
 var hint_threshold = 15.0  # Default threshold in seconds
-var hint_shader = preload("res://scripts/shaders/node_highlight/node_highlight.tres")
+var hint_shader = preload("res://assets/shaders/highlight_indicator.tres")
 
 
 # Register a node to receive hints
