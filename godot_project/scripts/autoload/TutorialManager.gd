@@ -376,7 +376,11 @@ func check_shift_tutorials(shift_number: int):
 
 func _start_next_queued_tutorial():
 	if tutorial_queue.is_empty():
-		print("[TutorialManager] No more tutorials in queue")
+		print("[TutorialManager] No more tutorials in queue, cleaning up panel")
+		# Hide and disable the panel when all tutorials are done
+		if tutorial_panel and is_instance_valid(tutorial_panel):
+			tutorial_panel.visible = false
+			tutorial_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		return
 
 	current_tutorial_index += 1
@@ -451,7 +455,18 @@ func _show_current_step():
 
 	# Handle step progression
 	if step.has("wait_for_action"):
-		print("[TutorialManager] Step waiting for action: ", step.get("wait_for_action"))
+		var action = step.get("wait_for_action")
+		print("[TutorialManager] Step waiting for action: ", action)
+
+		# Check if action condition is already met (e.g., passport already open)
+		if _is_action_condition_met(action):
+			print("[TutorialManager] Action condition already met: ", action)
+			# Small delay before advancing for visual feedback
+			if is_inside_tree() and get_tree():
+				await get_tree().create_timer(0.5).timeout
+			_advance_step()
+			return
+
 		waiting_for_action = true
 		_update_continue_hint(false)
 	elif step.has("duration"):
@@ -679,6 +694,43 @@ func _update_continue_hint(auto_progress: bool):
 			continue_hint_label.visible = false
 
 
+## Check if an action condition is already met
+## This handles cases where the action happened before the tutorial step started
+func _is_action_condition_met(action: String) -> bool:
+	var scene = get_tree().current_scene
+	if not scene:
+		return false
+
+	match action:
+		"passport_opened":
+			# Check if the passport is already open
+			var passport = scene.find_child("Passport", true, false)
+			if passport:
+				var doc_controller = passport.get_node_or_null("DocumentController")
+				if doc_controller and doc_controller.is_open:
+					return true
+		"document_placed_on_table":
+			# Check if passport is on the inspection table
+			var passport = scene.find_child("Passport", true, false)
+			var inspection_table = scene.find_child("InspectionTable", true, false)
+			if passport and inspection_table:
+				var table_rect = Rect2(inspection_table.global_position, Vector2(400, 300))
+				if table_rect.has_point(passport.global_position):
+					return true
+		"stamp_bar_opened":
+			# Check if stamp bar is already open
+			var stamp_bar = scene.find_child("StampBarController", true, false)
+			if stamp_bar and stamp_bar.has_method("get") and stamp_bar.get("is_visible"):
+				return true
+		"document_under_stamp":
+			# Check if document is already under stamp
+			var stamp_bar = scene.find_child("StampBarController", true, false)
+			if stamp_bar and stamp_bar.has_method("get") and stamp_bar.get("is_showing_guide"):
+				return true
+
+	return false
+
+
 ## Highlight a target node using the sweep shader
 func _highlight_target(target_name: String):
 	var target_node = _find_target_node(target_name)
@@ -824,6 +876,8 @@ func _complete_tutorial():
 	# Hide panel briefly
 	if tutorial_panel and is_instance_valid(tutorial_panel):
 		print("[TutorialManager] Fading out tutorial panel")
+		# Disable mouse input while panel is invisible to prevent blocking
+		tutorial_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		var tween = create_tween()
 		if tween:
 			# Ensure tween runs even when tree is paused
@@ -867,6 +921,8 @@ func skip_current_tutorial():
 
 	# Hide panel
 	if tutorial_panel and is_instance_valid(tutorial_panel):
+		# Disable mouse input while panel is invisible to prevent blocking
+		tutorial_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		var tween = create_tween()
 		if tween:
 			# Ensure tween runs even when tree is paused
