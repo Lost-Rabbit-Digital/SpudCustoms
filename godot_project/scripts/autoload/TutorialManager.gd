@@ -469,13 +469,27 @@ func _show_current_step():
 ## Create the tutorial UI panel
 func _create_tutorial_ui():
 	if tutorial_panel:
+		print("[TutorialManager] Tutorial panel already exists, skipping creation")
 		return  # Already created
+
+	print("[TutorialManager] Creating tutorial UI panel...")
 
 	# Create canvas layer for UI
 	var canvas_layer = CanvasLayer.new()
 	canvas_layer.name = "TutorialCanvasLayer"
 	canvas_layer.layer = 100  # Above everything
 	get_tree().root.add_child(canvas_layer)
+	print("[TutorialManager] Canvas layer added to root at layer 100")
+
+	# Create a full-screen Control container for proper anchor positioning
+	var full_screen_container = Control.new()
+	full_screen_container.name = "TutorialFullScreenContainer"
+	full_screen_container.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	canvas_layer.add_child(full_screen_container)
+	# Set anchors after adding to tree for proper sizing
+	full_screen_container.set_anchors_preset(Control.PRESET_FULL_RECT)
+	full_screen_container.set_offsets_preset(Control.PRESET_FULL_RECT)
+	print("[TutorialManager] Full screen container size: ", full_screen_container.size)
 
 	# Create main panel
 	tutorial_panel = PanelContainer.new()
@@ -489,13 +503,27 @@ func _create_tutorial_ui():
 	style.set_corner_radius_all(8)
 	style.set_content_margin_all(15)
 	tutorial_panel.add_theme_stylebox_override("panel", style)
+	tutorial_panel.custom_minimum_size = Vector2(0, 140)
 
-	# Position at bottom of screen
-	var viewport_size = get_viewport().get_visible_rect().size
-	tutorial_panel.position = Vector2(viewport_size.x * 0.15, viewport_size.y - 180)
-	tutorial_panel.custom_minimum_size = Vector2(viewport_size.x * 0.7, 140)
+	# Add to container first, then set anchors
+	full_screen_container.add_child(tutorial_panel)
 
-	canvas_layer.add_child(tutorial_panel)
+	# Position at bottom center of screen using anchors
+	# Anchor to bottom, centered horizontally with 15% margins on each side
+	tutorial_panel.anchor_left = 0.15
+	tutorial_panel.anchor_right = 0.85
+	tutorial_panel.anchor_top = 1.0  # Bottom
+	tutorial_panel.anchor_bottom = 1.0  # Bottom
+	# Offset upward from bottom edge
+	tutorial_panel.offset_top = -180
+	tutorial_panel.offset_bottom = -20
+	tutorial_panel.offset_left = 0
+	tutorial_panel.offset_right = 0
+
+	# Ensure visibility
+	tutorial_panel.visible = true
+	tutorial_panel.show()
+	print("[TutorialManager] Tutorial panel added - visible: ", tutorial_panel.visible, ", size: ", tutorial_panel.size, ", global_position: ", tutorial_panel.global_position)
 
 	# Create vertical container
 	var vbox = VBoxContainer.new()
@@ -563,7 +591,11 @@ func _create_tutorial_ui():
 ## Update the tutorial text with controller-aware formatting
 func _update_tutorial_text(text: String):
 	if tutorial_label:
-		tutorial_label.text = _format_tutorial_text(text)
+		var formatted_text = _format_tutorial_text(text)
+		tutorial_label.text = formatted_text
+		print("[TutorialManager] Updated tutorial text: ", formatted_text.left(50), "...")
+	else:
+		push_warning("[TutorialManager] Cannot update text - tutorial_label is null")
 
 
 ## Update the progress indicator label
@@ -821,7 +853,9 @@ func cleanup_tutorial_ui():
 	_clear_all_highlights()
 
 	if tutorial_panel:
-		var canvas_layer = tutorial_panel.get_parent()
+		# tutorial_panel is child of full_screen_container which is child of canvas_layer
+		var full_screen_container = tutorial_panel.get_parent()
+		var canvas_layer = full_screen_container.get_parent() if full_screen_container else null
 		tutorial_panel.queue_free()
 		tutorial_panel = null
 		tutorial_label = null
@@ -829,6 +863,7 @@ func cleanup_tutorial_ui():
 		continue_hint_label = null
 		progress_label = null
 
+		# Free the canvas layer (which will also free the full_screen_container)
 		if canvas_layer:
 			canvas_layer.queue_free()
 
