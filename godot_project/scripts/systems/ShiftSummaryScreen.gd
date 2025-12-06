@@ -374,7 +374,8 @@ func update_leaderboard():
 	var diff_level = GameStateManager.get_difficulty() if GameStateManager else "Normal"
 	var request_success = false
 	if SteamManager:
-		request_success = SteamManager.request_leaderboard_scores(diff_level)
+		# Pass -1 for shift to indicate endless/score attack mode
+		request_success = SteamManager.request_leaderboard_entries(diff_level, -1)
 	LogManager.write_info("Request leaderboard result: " + str(request_success))
 
 	if !request_success:
@@ -427,10 +428,12 @@ func _on_submit_score_button_pressed() -> void:
 	# Submit the score
 	# REFACTORED: Use GameStateManager and SteamManager
 	var current_score = GameStateManager.get_score() if GameStateManager else 0
+	var diff_level = GameStateManager.get_difficulty() if GameStateManager else "Normal"
 	LogManager.write_info("Submitting score: " + str(current_score))
 	var submission_success = false
 	if SteamManager:
-		submission_success = SteamManager.upload_score(current_score)
+		# Pass -1 for shift to indicate endless/score attack mode
+		submission_success = SteamManager.submit_score(current_score, diff_level, -1)
 	LogManager.write_info("Submit score API call result: " + str(submission_success))
 
 	if !submission_success:
