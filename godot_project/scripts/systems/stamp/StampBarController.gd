@@ -112,6 +112,7 @@ func _ready():
 	# Ensure toggle button is visible
 	toggle_position_button.visible = true
 	# Create a visual indicator for the stamp point (only visible in debug)
+	# Add to stamp_bar so it moves with the bar
 	stamp_point_marker = Sprite2D.new()
 	# Create this small texture
 	stamp_point_marker.texture = preload("res://assets/stamps/stamp_point_marker.png")
@@ -120,18 +121,18 @@ func _ready():
 
 	# Only show in debug mode
 	if OS.is_debug_build():
-		add_child(stamp_point_marker)
+		stamp_bar.add_child(stamp_point_marker)
 
 	# Calculate the fixed stamp position
 	update_stamp_position()
 
-	# Create alignment guide
+	# Create alignment guide - add to stamp_bar so it moves with the bar
 	alignment_guide = ColorRect.new()
 	alignment_guide.color = Color(0.2, 0.8, 0.2, 0.3)  # Semi-transparent green
 	alignment_guide.size = Vector2(100, 50)  # Size of the guide
 	alignment_guide.position = stamp_point_offset - Vector2(50, 25)  # Center on stamp point
 	alignment_guide.visible = false
-	add_child(alignment_guide)
+	stamp_bar.add_child(alignment_guide)
 
 
 func _process(delta):
@@ -141,7 +142,8 @@ func _process(delta):
 
 	# Check if passport is near stamp area - either being dragged or stationary
 	var passport_near_stamps = false
-	var stamp_target_pos = global_position + stamp_point_offset
+	# Use stamp_bar's global position since that's what moves when the bar slides in/out
+	var stamp_target_pos = stamp_bar.global_position + stamp_point_offset
 
 	# First check: Is passport being actively dragged?
 	# REFACTORED: Use cached drag_and_drop_manager reference instead of get_node
@@ -181,7 +183,8 @@ func _input(event):
 
 func update_stamp_position():
 	# This updates the global position of the stamp point based on the stamp bar's position
-	var global_stamp_point = global_position + stamp_point_offset
+	# Use stamp_bar's global position since that's what moves when the bar slides in/out
+	var global_stamp_point = stamp_bar.global_position + stamp_point_offset
 	if stamp_point_marker:
 		stamp_point_marker.global_position = global_stamp_point
 
