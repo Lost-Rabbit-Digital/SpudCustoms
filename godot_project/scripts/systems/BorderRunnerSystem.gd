@@ -350,6 +350,12 @@ func update_missiles(delta):
 			i -= 1
 			continue
 
+		# Validate missile sprite is still valid - prevents crash if sprite was freed
+		if not is_instance_valid(missile.sprite):
+			active_missiles.remove_at(i)
+			i -= 1
+			continue
+
 		# Calculate direction and move missile
 		var direction = (missile.target - missile.position).normalized()
 		var distance_to_move = missile_speed * delta
@@ -768,9 +774,11 @@ func trigger_explosion(missile_or_position):
 
 		# Get the missile sprite's size
 		var missile_length = 0
+		var angle = 0.0
 
 		# For AnimatedSprite2D, we need to access frames differently
-		if missile.sprite and missile.sprite.sprite_frames:
+		# Use is_instance_valid to prevent crashes if sprite was already freed
+		if is_instance_valid(missile.sprite) and missile.sprite.sprite_frames:
 			# Get the current animation
 			var current_anim = missile.sprite.animation
 			# Get the current frame index
@@ -781,9 +789,9 @@ func trigger_explosion(missile_or_position):
 			)
 			if texture:
 				missile_length = texture.get_height() * 0.5 * missile.sprite.scale.y
+			# Calculate tip position using the sprite's rotation
+			angle = missile.sprite.rotation - PI / 2  # Adjust for the initial PI/2 offset
 
-		# Calculate tip position using the sprite's rotation
-		var angle = missile.sprite.rotation - PI / 2  # Adjust for the initial PI/2 offset
 		var tip_offset = Vector2(cos(angle), sin(angle)) * missile_length
 		explosion_position = missile.position + tip_offset
 
@@ -917,7 +925,8 @@ func trigger_explosion(missile_or_position):
 		# No missile to clean up, just a position
 		pass
 	else:
-		missile_or_position.sprite.queue_free()
+		if is_instance_valid(missile_or_position.sprite):
+			missile_or_position.sprite.queue_free()
 		missile_or_position.active = false
 
 	# Play explosion sound
