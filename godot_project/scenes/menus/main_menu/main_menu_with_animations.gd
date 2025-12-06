@@ -466,6 +466,17 @@ func _on_level_select_button_pressed():
 	_open_sub_menu(level_select_scene)
 
 
+func _on_steam_button_pressed() -> void:
+	await JuicyButtons.setup_button(%SteamButton, "https://store.steampowered.com/developer/lostrabbitdigital")
+
+
+func _on_twitch_button_pressed() -> void:
+	await JuicyButtons.setup_button(%TwitchButton, "")
+	# Open the Twitch config panel via TwitchIntegrationManager
+	if TwitchIntegrationManager:
+		TwitchIntegrationManager.show_config_panel()
+
+
 func load_tracks():
 	# Replace with your actual music tracks
 	bgm_tracks = [
