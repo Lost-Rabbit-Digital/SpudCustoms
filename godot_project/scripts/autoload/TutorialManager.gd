@@ -202,31 +202,17 @@ const TUTORIALS = {
 				"highlight": true,
 				"duration": 4.0,
 				"pause_game": false
+			},
+			{
+				"text": "[center][b]Training Complete![/b][/center]\n\nContinue processing potatoes to complete your training shift.\n\nOnce finished, you'll be [color=green]certified as a Customs Officer[/color] and ready for your first real day!",
+				"target": null,
+				"highlight": false,
+				"duration": 5.0,
+				"pause_game": false
 			}
 		],
 		"shift_trigger": 1,
 		"priority": 6
-	},
-	"border_runners": {
-		"name": "Border Runners",
-		"steps": [
-			{
-				"text": "[center][b]Watch for Runners![/b][/center]\n\nSome sneaky potatoes will try to run across the border without being processed!\n\nWatch for the [color=red]exclamation mark (!)[/color] - it means a potato is about to make a run for it!",
-				"target": null,
-				"highlight": false,
-				"duration": 4.0,
-				"pause_game": false
-			},
-			{
-				"text": "[center][b]Stopping Runners[/b][/center]\n\n[color=yellow]{fire} on running potatoes[/color] to launch a missile and stop them!\n\nBut be careful - don't shoot potatoes you've already approved, or you'll get a strike!",
-				"target": null,
-				"highlight": false,
-				"duration": 4.0,
-				"pause_game": false
-			}
-		],
-		"shift_trigger": 1,
-		"priority": 7
 	}
 }
 
@@ -741,6 +727,11 @@ func _is_action_condition_met(action: String) -> bool:
 		return false
 
 	match action:
+		"document_picked_up":
+			# Check if any document is currently being dragged
+			var dnd_system = scene.find_child("DragAndDropSystem", true, false)
+			if dnd_system and "dragged_item" in dnd_system and dnd_system.dragged_item != null:
+				return true
 		"passport_opened":
 			# Check if the passport is already open
 			var passport = scene.find_child("Passport", true, false)
@@ -844,10 +835,10 @@ func _apply_highlight_shader(node: Node):
 
 		# Use different settings for text labels vs other elements
 		if node is Label or node is RichTextLabel:
-			# For text: slower, more visible golden sweep
-			new_material.set_shader_parameter("speed", 1.2)
-			new_material.set_shader_parameter("line_width", 0.18)
-			new_material.set_shader_parameter("line_color", Color(1.0, 0.85, 0.4, 0.7))
+			# For text: subtle, gentle golden sweep
+			new_material.set_shader_parameter("speed", 1.0)
+			new_material.set_shader_parameter("line_width", 0.12)
+			new_material.set_shader_parameter("line_color", Color(1.0, 0.85, 0.4, 0.4))
 			print("[TutorialManager] Applying highlight sweep shader to label: ", node.name)
 		else:
 			# For other elements: standard sweep
