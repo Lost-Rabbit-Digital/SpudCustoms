@@ -1239,6 +1239,14 @@ func _process(_delta):
 	if is_game_paused or narrative_manager.is_dialogue_active():
 		return
 
+	# Skip UIHint processing while tutorial is active to avoid conflicting highlights
+	if TutorialManager and TutorialManager.is_tutorial_active():
+		# Reset all hint timers so they don't immediately fire when tutorial ends
+		ui_hint_system.reset_timer("passport")
+		ui_hint_system.reset_timer("megaphone")
+		ui_hint_system.reset_timer("stamp_bar")
+		return
+
 	# Update UI hints based on game state
 	if is_potato_in_office:
 		# We have a potato in the office, so no need to hint megaphone
