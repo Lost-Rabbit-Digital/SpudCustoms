@@ -439,6 +439,9 @@ func _show_current_step():
 	_update_tutorial_text(step["text"])
 	_update_progress_label()
 
+	# Position panel based on target - move to top for document-related targets
+	_position_panel_for_step(step)
+
 	# Clear previous highlights
 	_clear_all_highlights()
 
@@ -474,6 +477,8 @@ func _create_tutorial_ui():
 		tutorial_panel.modulate.a = 0
 		tutorial_panel.visible = true
 		tutorial_panel.show()
+		# Ensure mouse filter is set correctly (in case panel was created before fix)
+		tutorial_panel.mouse_filter = Control.MOUSE_FILTER_PASS
 		var tween = create_tween()
 		tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 		tween.tween_property(tutorial_panel, "modulate:a", 1.0, 0.3)
@@ -631,6 +636,36 @@ func _update_progress_label():
 	else:
 		# Single tutorial, just show name and step
 		progress_label.text = "%s - Step %d of %d" % [tutorial_name, current_step_display, total_steps]
+
+
+## Position the tutorial panel based on the current step's target
+## Moves panel to top for document-related steps to avoid blocking the workspace
+func _position_panel_for_step(step: Dictionary):
+	if not tutorial_panel:
+		return
+
+	var target = step.get("target", "")
+
+	# Document-related targets that require the panel at the top
+	var document_targets = ["Passport", "LawReceipt", "StampBarController", "RulesLabel"]
+	var should_be_at_top = target in document_targets
+
+	# Animate position change
+	var tween = create_tween()
+	tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+
+	if should_be_at_top:
+		# Position at top of screen
+		tween.tween_property(tutorial_panel, "anchor_top", 0.0, 0.3)
+		tween.parallel().tween_property(tutorial_panel, "anchor_bottom", 0.0, 0.3)
+		tween.parallel().tween_property(tutorial_panel, "offset_top", 20, 0.3)
+		tween.parallel().tween_property(tutorial_panel, "offset_bottom", 180, 0.3)
+	else:
+		# Position at bottom of screen (default)
+		tween.tween_property(tutorial_panel, "anchor_top", 1.0, 0.3)
+		tween.parallel().tween_property(tutorial_panel, "anchor_bottom", 1.0, 0.3)
+		tween.parallel().tween_property(tutorial_panel, "offset_top", -180, 0.3)
+		tween.parallel().tween_property(tutorial_panel, "offset_bottom", -20, 0.3)
 
 
 ## Update continue hint visibility
