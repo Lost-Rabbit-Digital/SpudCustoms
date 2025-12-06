@@ -196,6 +196,13 @@ func _setup_managers():
 	border_runner_system = %BorderRunnerSystem
 	original_runner_chance = border_runner_system.runner_chance
 
+	# Disable border runners immediately for tutorial shift
+	var is_tutorial = GameStateManager.is_tutorial_mode() if GameStateManager else false
+	var shift_num = GameStateManager.get_shift() if GameStateManager else 0
+	if shift_num == 0 or is_tutorial:
+		border_runner_system.is_enabled = false
+		border_runner_system.runner_chance = 0.0
+
 
 func _setup_game_state():
 	# Initialize game state and stats

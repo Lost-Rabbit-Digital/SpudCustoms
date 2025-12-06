@@ -276,9 +276,17 @@ func _ready():
 	if rapid_runners:
 		runner_chance = 1.0
 
+	# Completely disable border runners during tutorial to let players learn
+	var is_tutorial = GameStateManager.is_tutorial_mode() if GameStateManager else false
+	var shift_num = GameStateManager.get_shift() if GameStateManager else 0
+	if shift_num == 0 or is_tutorial:
+		is_enabled = false
+		runner_chance = 0.0
+		print("BorderRunnerSystem DISABLED for tutorial shift")
+
 	if not queue_manager:
 		push_error("BorderRunnerSystem: Could not find QueueManager!")
-	print("BorderRunnerSystem initialized: Chance [", runner_chance, "]")
+	print("BorderRunnerSystem initialized: Chance [", runner_chance, "] Enabled [", is_enabled, "]")
 
 	# Load gib textures
 	for i in range(1, 9):
