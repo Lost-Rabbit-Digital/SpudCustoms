@@ -556,13 +556,13 @@ layout_mode = 2
 
 [node name="AudioReactiveBloom" type="Node" parent="."]
 script = ExtResource("audio_bloom")
-base_glow_intensity = 0.4
-max_audio_glow = 1.2
-smoothing = 0.75
+base_glow_intensity = 0.25
+max_audio_glow = 0.5
+smoothing = 0.8
 min_frequency = 20.0
 max_frequency = 400.0
-glow_bloom = 0.6
-glow_hdr_threshold = 0.7
+glow_bloom = 0.35
+glow_hdr_threshold = 0.9
 
 [node name="MenuMusicVisualEffects" type="Node" parent="."]
 script = ExtResource("music_fx")
