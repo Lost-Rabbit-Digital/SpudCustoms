@@ -102,7 +102,7 @@ const TUTORIALS = {
 				"text": "[center][b]Document Inspection[/b][/center]\n\nThe potato has handed you their passport. {drag} it to your inspection table to examine it closely.\n\n[color=yellow]{drag} the passport to the table.[/color]",
 				"target": "Passport",
 				"highlight": true,
-				"wait_for_action": "document_placed_on_table",
+				"wait_for_action": "document_picked_up",
 				"pause_game": false
 			},
 			{
