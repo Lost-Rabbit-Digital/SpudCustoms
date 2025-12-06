@@ -534,6 +534,7 @@ rotation = 0.137881
 scale = Vector2(2.42121, 2.42121)
 
 [node name="OpenPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
+visible = false
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("25_gf7dt")
 
