@@ -76,7 +76,8 @@ func _update_controls_state():
 	"""Update enabled/disabled state of controls"""
 	var enabled = TwitchIntegrationManager.is_enabled() if TwitchIntegrationManager else false
 
-	channel_input.editable = enabled
+	# Channel input is always editable so users can enter their channel name before enabling
+	channel_input.editable = true
 	clear_all_button.disabled = not enabled or viewer_list.item_count == 0
 
 
