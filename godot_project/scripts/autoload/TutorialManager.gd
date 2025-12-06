@@ -231,6 +231,8 @@ const TUTORIALS = {
 
 # Queue for tutorials to run in order
 var tutorial_queue: Array = []
+var total_tutorials_in_session: int = 0  # Total tutorials queued at start of shift
+var current_tutorial_index: int = 0  # Which tutorial we're on (1-indexed for display)
 
 
 func _ready():
@@ -364,6 +366,10 @@ func check_shift_tutorials(shift_number: int):
 	# Sort by priority
 	tutorial_queue.sort_custom(func(a, b): return a["priority"] < b["priority"])
 
+	# Track total tutorials for this session (for progress display)
+	total_tutorials_in_session = tutorial_queue.size()
+	current_tutorial_index = 0
+
 	# Start first tutorial in queue
 	_start_next_queued_tutorial()
 
@@ -373,8 +379,9 @@ func _start_next_queued_tutorial():
 		print("[TutorialManager] No more tutorials in queue")
 		return
 
+	current_tutorial_index += 1
 	var next = tutorial_queue.pop_front()
-	print("[TutorialManager] Starting next queued tutorial: ", next["id"])
+	print("[TutorialManager] Starting next queued tutorial: ", next["id"], " (", current_tutorial_index, "/", total_tutorials_in_session, ")")
 	start_tutorial(next["id"])
 
 
@@ -566,9 +573,20 @@ func _update_progress_label():
 	var total_steps = tutorial["steps"].size()
 	var current_step_display = current_step + 1  # 1-indexed for display
 
-	# Also show tutorial name
+	# Show overall tutorial progress and step within current tutorial
 	var tutorial_name = tutorial.get("name", current_tutorial)
-	progress_label.text = "%s - Step %d of %d" % [tutorial_name, current_step_display, total_steps]
+	if total_tutorials_in_session > 1:
+		# Show "Tutorial X of Y: Name - Step A of B"
+		progress_label.text = "Tutorial %d of %d: %s - Step %d of %d" % [
+			current_tutorial_index,
+			total_tutorials_in_session,
+			tutorial_name,
+			current_step_display,
+			total_steps
+		]
+	else:
+		# Single tutorial, just show name and step
+		progress_label.text = "%s - Step %d of %d" % [tutorial_name, current_step_display, total_steps]
 
 
 ## Update continue hint visibility
@@ -810,6 +828,8 @@ func cleanup_tutorial_ui():
 	current_tutorial = ""
 	current_step = 0
 	tutorial_queue.clear()
+	total_tutorials_in_session = 0
+	current_tutorial_index = 0
 
 
 ## Check if tutorial is completed
@@ -840,6 +860,8 @@ func reset_all_tutorials():
 	current_tutorial = ""
 	current_step = 0
 	tutorial_queue.clear()
+	total_tutorials_in_session = 0
+	current_tutorial_index = 0
 	tutorial_enabled = true  # Re-enable tutorials when resetting
 	save_tutorial_progress()
 
