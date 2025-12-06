@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dtu0ffm1m5mr7" path="res://scenes/menus/level_select_menu/level_select_menu.tscn" id="3_xj7vs"]
 [ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://scenes/credits/credits.tscn" id="4_lwsll"]
 [ext_resource type="AudioStream" uid="uid://bq42hbti5wytk" path="res://assets/music/ambient_faded_defeat_main_menu.mp3" id="6_xpvtk"]
-[ext_resource type="Texture2D" uid="uid://b2rjoilm5sp72" path="res://assets/narrative/border_chaos.png" id="7_2k5l7"]
-[ext_resource type="Script" path="res://scripts/effects/parallax_mouse_background.gd" id="8_parallax"]
+[ext_resource type="Texture2D" uid="uid://dp2tv5qwnoemk" path="res://assets/narrative/border_chaos.png" id="7_2k5l7"]
+[ext_resource type="Script" uid="uid://cwx4ydm7y6bo5" path="res://scripts/effects/parallax_mouse_background.gd" id="8_parallax"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -401,14 +401,12 @@ stream = ExtResource("6_xpvtk")
 
 [node name="BackgroundTextureRect" parent="." index="4"]
 z_index = -1
-offset_left = -16.0
-offset_top = -4.0
-offset_right = 162.0
-offset_bottom = 96.0
+offset_left = -87.0
+offset_top = -61.0
+offset_right = 91.0
+offset_bottom = 39.0
 texture = ExtResource("7_2k5l7")
 script = ExtResource("8_parallax")
-max_offset = Vector2(30, 20)
-smoothing = 3.0
 
 [node name="VersionContainer" parent="VersionMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
@@ -433,20 +431,7 @@ offset_left = -496.0
 offset_top = 80.0
 offset_right = 496.0
 offset_bottom = 194.0
-vertical = true
 lock = true
-
-[node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
-visible = false
-
-[node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
-visible = false
-
-[node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
-visible = false
-
-[node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer"]
-visible = false
 
 [node name="TopRowContainer" type="HBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0"]
 layout_mode = 2
@@ -455,7 +440,6 @@ theme_override_constants/separation = 16
 alignment = 1
 
 [node name="NewGameButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/TopRowContainer" index="0"]
-unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
 text = "main_menu_new_game"
@@ -488,13 +472,11 @@ theme_override_constants/separation = 16
 alignment = 1
 
 [node name="OptionsButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/BottomRowContainer" index="0"]
-unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
 text = "main_menu_options"
 
 [node name="CreditsButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/BottomRowContainer" index="1"]
-unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
 text = "main_menu_credits"
@@ -506,10 +488,21 @@ layout_mode = 2
 text = "main_menu_feedback"
 
 [node name="ExitButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/BottomRowContainer" index="3"]
-unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
 text = "main_menu_exit"
+
+[node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2"]
+visible = false
+
+[node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3"]
+visible = false
+
+[node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="4"]
+visible = false
+
+[node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="5"]
+visible = false
 
 [node name="LevelSelectContainer" type="MarginContainer" parent="." index="9"]
 unique_name_in_owner = true
