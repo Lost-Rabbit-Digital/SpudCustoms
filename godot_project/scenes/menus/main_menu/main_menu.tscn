@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://byvydukidk6i2"]
+[gd_scene load_steps=12 format=3 uid="uid://byvydukidk6i2"]
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_pss7b"]
 [ext_resource type="Script" uid="uid://bdet8115mn02d" path="res://scenes/menus/main_menu/main_menu.gd" id="2_lk0wa"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cqvlk7m8fpnxr" path="res://scenes/menus/main_menu/localization_selector.tscn" id="5_locale"]
 [ext_resource type="Script" path="res://scripts/effects/audio_reactive_bloom.gd" id="7_bloom"]
 [ext_resource type="Script" path="res://scripts/effects/parallax_mouse_background.gd" id="8_parallax"]
+[ext_resource type="Script" path="res://scripts/effects/menu_music_visual_effects.gd" id="9_music_fx"]
 
 [node name="MainMenu" instance=ExtResource("1_pss7b")]
 script = ExtResource("2_lk0wa")
@@ -53,3 +54,18 @@ min_frequency = 20.0
 max_frequency = 400.0
 glow_bloom = 0.6
 glow_hdr_threshold = 0.7
+
+[node name="MenuMusicVisualEffects" type="Node" parent="."]
+script = ExtResource("9_music_fx")
+title_label = NodePath("../MenuContainer/TitleMargin/TitleContainer/TitleLabel")
+title_max_pulse = 0.025
+title_glow_intensity = 0.12
+title_smoothing = 0.88
+button_container = NodePath("../MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer")
+button_wiggle_angle = 0.8
+button_pulse_amount = 0.012
+button_smoothing = 0.92
+background = NodePath("../BackgroundTextureRect")
+bg_max_scale = 0.008
+bg_color_shift = 0.025
+bg_smoothing = 0.94

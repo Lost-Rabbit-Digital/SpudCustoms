@@ -68,6 +68,9 @@ func _setup_confirmation_dialog():
 		confirmation_dialog.theme = dialog_theme
 	add_child(confirmation_dialog)
 
+	# Add juicy hover effects to dialog buttons
+	_setup_dialog_button_effects.call_deferred(confirmation_dialog)
+
 	# Connect confirmation signals
 	confirmation_dialog.confirmed.connect(_on_new_game_confirmed)
 
@@ -85,7 +88,15 @@ func _setup_tutorial_choice_dialog():
 	# Add "Skip Tutorial" button
 	var skip_button = tutorial_choice_dialog.add_button("Skip Tutorial", true, "skip_tutorial")
 
+	# Apply consistent brown/gold theme
+	var dialog_theme = load("res://assets/styles/confirmation_dialog_theme.tres")
+	if dialog_theme:
+		tutorial_choice_dialog.theme = dialog_theme
+
 	add_child(tutorial_choice_dialog)
+
+	# Add juicy hover effects to dialog buttons
+	_setup_dialog_button_effects.call_deferred(tutorial_choice_dialog)
 
 	# Connect signals
 	tutorial_choice_dialog.confirmed.connect(_on_start_with_tutorial)
@@ -141,10 +152,53 @@ func _setup_load_confirmation_dialog():
 	load_confirmation_dialog.dialog_hide_on_ok = true
 	load_confirmation_dialog.get_ok_button().text = "Continue"
 	load_confirmation_dialog.get_cancel_button().text = "Cancel"
+
+	# Apply consistent brown/gold theme
+	var dialog_theme = load("res://assets/styles/confirmation_dialog_theme.tres")
+	if dialog_theme:
+		load_confirmation_dialog.theme = dialog_theme
+
 	add_child(load_confirmation_dialog)
+
+	# Add juicy hover effects to dialog buttons
+	_setup_dialog_button_effects.call_deferred(load_confirmation_dialog)
 
 	# Connect confirmation signals
 	load_confirmation_dialog.confirmed.connect(_on_load_game_confirmed)
+
+
+## Apply juicy hover effects to all buttons in a dialog
+func _setup_dialog_button_effects(dialog: AcceptDialog) -> void:
+	# Configuration for dialog button hover effects - subtle wiggle
+	var hover_config = {
+		"hover_scale": Vector2(1.03, 1.03),
+		"hover_time": 0.1,
+		"float_height": 2.0,  # Subtle float
+		"float_duration": 0.8,
+		"bounce_factor": 0.8,
+		"damping": 0.85,
+		"wiggle_enabled": true,
+		"wiggle_angle": 1.5,  # Subtle wiggle angle
+		"wiggle_speed": 10.0
+	}
+
+	# Apply effects to OK button
+	var ok_button = dialog.get_ok_button()
+	if ok_button:
+		JuicyButtons.setup_hover(ok_button, hover_config)
+
+	# Apply effects to Cancel button (if it's a ConfirmationDialog)
+	if dialog is ConfirmationDialog:
+		var cancel_button = dialog.get_cancel_button()
+		if cancel_button:
+			JuicyButtons.setup_hover(cancel_button, hover_config)
+
+	# Apply effects to any custom buttons
+	for child in dialog.get_children():
+		if child is Button and child != ok_button:
+			if dialog is ConfirmationDialog and child == dialog.get_cancel_button():
+				continue  # Already handled
+			JuicyButtons.setup_hover(child, hover_config)
 
 
 func _show_load_confirmation():
