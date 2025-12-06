@@ -839,7 +839,7 @@ func _apply_highlight_shader(node: Node):
 		var new_material = highlight_shader.duplicate()
 		new_material.set_shader_parameter("enable_highlight", true)
 		new_material.set_shader_parameter("speed", 1.5)
-		new_material.set_shader_parameter("line_color", Color(1.0, 0.95, 0.8, 0.9))
+		new_material.set_shader_parameter("line_color", Color(1.0, 0.95, 0.8, 0.5))
 
 		node.material = new_material
 		highlighted_nodes.append(node)
