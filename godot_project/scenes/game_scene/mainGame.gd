@@ -790,11 +790,11 @@ func _on_shift_summary_continue():
 	# Force save to persist the advanced shift
 	GlobalState.save()
 
-	# Show day transition with correct shift numbers
+	# Show day transition with correct shift numbers and wait for it to complete
 	narrative_manager.show_day_transition(completed_shift, new_shift)
 
-	# Small delay to allow save to complete and transition to be visible
-	await get_tree().create_timer(0.1).timeout
+	# Wait for the transition animation to complete
+	await narrative_manager.dialogue_finished
 
 	# Reload the game scene for the next shift
 	if SceneLoader:
