@@ -473,13 +473,23 @@ func update_runners(delta):
 			break
 		var runner = active_runners[i]
 
+		# Store reference to check if runner was removed by signal during follow_path
+		var runner_still_active = true
+
 		if runner.current_path_follow:
 			runner.follow_path(delta)
+			# Check if runner was removed from array by path_completed signal
+			# during follow_path (this can happen when progress_ratio >= 0.99)
+			if i >= active_runners.size() or active_runners[i] != runner:
+				runner_still_active = false
 
-		# Check if runner has reached the end of the path
-		if runner.current_path_follow and runner.current_path_follow.progress_ratio >= 0.99:
+		# Only try to remove if runner is still in the array at this index
+		# The path_completed signal handler may have already removed it
+		if runner_still_active and runner.current_path_follow and runner.current_path_follow.progress_ratio >= 0.99:
 			runner.cleanup()
-			active_runners.remove_at(i)
+			# Double-check the runner is still at this index before removing
+			if i < active_runners.size() and active_runners[i] == runner:
+				active_runners.remove_at(i)
 
 		i -= 1
 
@@ -862,11 +872,11 @@ func trigger_explosion(missile_or_position):
 	#   get_tree().paused = previous_pause_state
 	#)
 	# Then, in your trigger_explosion function, replace the current explosion sound code:
-	if explosion_sound and explosion_sound.get_instance_id() != 0:
+	if explosion_sound and explosion_sound.get_instance_id() != 0 and explosion_sound_pool.size() > 0:
 		# Create a dedicated audio player for the explosion sound
 		var explosion_player = AudioStreamPlayer2D.new()
 
-		# Pick a random sound from the pool
+		# Pick a random sound from the pool (safely with size check already done above)
 		var random_sound_index = randi() % explosion_sound_pool.size()
 		explosion_player.stream = explosion_sound_pool[random_sound_index]
 
@@ -950,7 +960,19 @@ func trigger_explosion(missile_or_position):
 
 	# First, collect all runners to hit
 	while i >= 0:
+		# Safety check: ensure index is still valid (array could be modified by signals)
+		if i >= active_runners.size():
+			i -= 1
+			continue
+
 		var runner = active_runners[i]
+
+		# Validate runner is still a valid instance
+		if not is_instance_valid(runner):
+			active_runners.remove_at(i)
+			i -= 1
+			continue
+
 		var distance = runner.global_position.distance_to(explosion_position)
 
 		if distance < (explosion_size * 0.65):
@@ -1021,7 +1043,19 @@ func check_runner_hits(explosion_pos):
 
 	# First, collect all runners to hit
 	while i >= 0:
+		# Safety check: ensure index is still valid (array could be modified by signals)
+		if i >= active_runners.size():
+			i -= 1
+			continue
+
 		var runner = active_runners[i]
+
+		# Validate runner is still a valid instance
+		if not is_instance_valid(runner):
+			active_runners.remove_at(i)
+			i -= 1
+			continue
+
 		var distance = runner.global_position.distance_to(explosion_pos)
 
 		if distance < (explosion_size * 0.65):
@@ -1307,6 +1341,10 @@ func set_dialogic_mode(in_dialogic: bool):
 func clean_up_all():
 	# Clean up all active runners
 	for runner in active_runners:
+		# Validate runner is still a valid instance before cleanup
+		if not is_instance_valid(runner):
+			continue
+
 		# Disable emotes before cleanup
 		var emote_system = runner.get_node_or_null("PotatoEmoteSystem")
 		if emote_system and emote_system is PotatoEmoteSystem:
@@ -1318,8 +1356,11 @@ func clean_up_all():
 
 	# Clean up all active missiles
 	for missile in active_missiles:
-		missile.sprite.queue_free()
-		missile.active = false
+		# Validate missile sprite is still valid before cleanup
+		if missile and is_instance_valid(missile.sprite):
+			missile.sprite.queue_free()
+		if missile:
+			missile.active = false
 	active_missiles.clear()
 
 	# Stop any ongoing tween animations
