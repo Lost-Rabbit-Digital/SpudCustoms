@@ -1,0 +1,19 @@
+﻿keys,es
+Text/96/text,"Te arrastras por el pasillo oscurecido, el corazón latiendo mientras evitas las patrullas de seguridad."
+Text/97/text,[color=CHARTREUSE]Este dispositivo desactivará el bloqueo[/color] de la oficina de Russet. Provocaré alarmas en el ala este como distracción. Tendrás cinco minutos.
+Text/98/text,Los manifiestos deberían estar en su archivador. [color=CRIMSON]Carpeta roja etiquetada como 'RR Transport'[/color]. No dejes evidencia de tu búsqueda.
+Text/99/text,"Encuentras la gruesa [color=CRIMSON]carpeta roja etiquetada como ""RR Transport""[/color] en el archivador."
+Text/9a/text,"En su interior hay manifiestos que coinciden con recuentos de papas rechazadas y una directiva del Primer Ministro de Idaho autorizando ""[pulse freq=3][color=DARK_VIOLET]la utilización completa de rechazos fronterizos para la producción de RR.[/color][/pulse]"""
+Text/9b/text,"Se escuchan pasos acercándose a la puerta de la oficina. ""[wave amp=15 freq=3][color=YELLOW]Qué extraño, estoy seguro de que la había cerrado.[/color][/wave]"""
+Choice/9c/text,Esconderse bajo el escritorio
+Choice/9d/text,Saltar por la ventana
+Text/9e/text,"Te deslizas bajo el escritorio de Russet mientras entra, el corazón te late con fuerza. Se sienta, sus pies a centímetros de tu cara."
+Text/9f/text,Russet al habla. ¿Qué? [color=CHARTREUSE]¿Otra alarma?[/color] Voy en camino. Abandona la habitación y tú escapas.
+Text/a0/text,"Abres de golpe la ventana y saltas. Por suerte, solo es un piso. Un guardia grita: ""[color=RED]¡Eh! ¡Detente![/color]"""
+Text/a1/text,Corres por el terreno y logras perder a tus perseguidores.
+Text/a2/text,¿Lo conseguiste?
+Text/a3/text,"Entregas las pruebas, explicando lo que encontraste."
+Text/a4/text,Esto lo prueba todo. La resistencia hará copias. [tornado radius=3 freq=2]Difunde la verdad por todas partes.[/tornado] No pueden silenciarnos a todos.
+Text/a5/text,"Has cruzado una línea. [wave amp=20 freq=3][color=YELLOW]No hay vuelta atrás.[/color][/wave] Cuando la verdad se extienda, Spud será transformado."
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,

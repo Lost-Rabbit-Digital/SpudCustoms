@@ -1,0 +1,52 @@
+﻿keys,vi
+alert_border_runner,NGƯỜI CHẠY BIÊN GIỚI ĐƯỢC PHÁT HIỆN!\nNhấp để phóng tên lửa!
+alert_rejected_fleeing,KHOAI TÂY BỊ TỪ CHỐI ĐANG CHẠY!\nNhấp để phóng tên lửa!
+alert_runner_escaped,NGƯỜI CHẠY TRỐN THOÁT!\nThêm Strike!
+alert_points_deducted,NGƯỜI CHẠY TRỐN THOÁT!\nThêm Strike!\n-{penalty} điểm!
+alert_perfect_hit,PHÁT BẮN HOÀN HẢO! +{perfect} điểm thưởng độ chính xác
+alert_perfect_stamp,ĐÓNG DẤU HOÀN HẢO! +{points} điểm!
+alert_combo,COMBO x{mult}! +{streak} điểm thưởng combo!
+alert_quota_met,"Đã đạt ngạch, ca làm việc hoàn tất! \nThưởng: {bonus} điểm!"
+alert_strike_removed,Xóa Strike!
+alert_correct_decision,"Bạn đã đưa ra quyết định đúng, sĩ quan.\n+{points} điểm!"
+alert_wrong_decision,"Bạn đã gây đau khổ không cần thiết, sĩ quan...\n+1 Strike!"
+alert_potato_should_be_approved,\nQuả khoai tây này đáp ứng tất cả các yêu cầu và đáng lẽ phải được phê duyệt.
+alert_strike_out,Vượt quá số lần strike tối đa! Ca làm việc của bạn kết thúc.
+ui_score,Điểm số: {score}
+ui_quota,Ngạch: {current} / {target}
+ui_strikes,Lỗi: {current} / {max}
+ui_click_megaphone,Nhấp vào loa để gọi khoai tây tiếp theo
+ui_drag_document,Kéo tài liệu đến bàn kiểm tra
+ui_stamp_document,Chọn con dấu để phê duyệt hoặc từ chối
+ui_check_violations,Kiểm tra vi phạm tài liệu
+Strike removed!,Xóa Strike!
+BORDER RUNNER DETECTED!\nClick to launch missile!,NGƯỜI CHẠY BIÊN GIỚI ĐƯỢC PHÁT HIỆN!\nNhấp để phóng tên lửa!
+REJECTED POTATO FLEEING!\nClick to launch missile!,KHOAI TÂY BỊ TỪ CHỐI ĐANG CHẠY!\nNhấp để phóng tên lửa!
+RUNNER ESCAPED!\nStrike added!,NGƯỜI CHẠY TRỐN THOÁT!\nThêm Strike!
+Click megaphone to call the next potato,Nhấp vào loa để gọi khoai tây tiếp theo
+Drag document to inspection table,Kéo tài liệu đến bàn kiểm tra
+Select a stamp to approve or reject,Chọn con dấu để phê duyệt hoặc từ chối
+Check for document violations,Kiểm tra vi phạm tài liệu
+rule_explanation_header,GIẢI THÍCH QUY TẮC:
+rule_explanation_fresh,Duruma' alanına bakın. 'Taze' dışında bir şey söylüyorsa - REDDET
+rule_explanation_sweet_potato,Nhìn vào trường 'Loại'. Nếu nó nói 'Khoai Lang' - TỪ CHỐI (không có giấy phép)
+rule_explanation_chip_hill,Nhìn vào trường 'Quốc gia'. Nếu nó nói 'Chip Hill' - TỪ CHỐI (bị cấm)
+rule_explanation_age,Nhìn vào trường 'Ngày Sinh'. Tính tuổi và kiểm tra theo quy tắc
+rule_explanation_gender,Nhìn vào trường 'Giới tính' và kiểm tra theo quy tắc hiện tại
+rule_footer_text,Những quy tắc này phải được thực thi cho TẤT CẢ khoai tây
+rule_tutorial_hint,Yardıma mı ihtiyacınız var? Açıklama için herhangi bir kurala tıklayın
+alert_correct_decision_detailed,QUYẾT ĐỊNH ĐÚNG! +{points} điểm\n{reason}
+alert_wrong_decision_detailed,QUYẾT ĐỊNH SAI! Thêm Strike!\n{reason}
+alert_reason_approved,Khoai tây đáp ứng tất cả yêu cầu - ĐƯỢC PHÊ DUYỆT
+alert_reason_should_reject,Bạn đáng lẽ phải TỪ CHỐI khoai tây này
+tutorial_check_type,Kiểm tra trường 'Loại' trong hộ chiếu
+tutorial_check_condition,Kiểm tra trường 'Tình trạng' trong hộ chiếu
+tutorial_check_country,Kiểm tra trường 'Quốc gia' trong hộ chiếu
+tutorial_check_age,Kiểm tra 'Ngày Sinh' để tính tuổi
+tutorial_check_gender,Kiểm tra trường 'Giới tính' trong hộ chiếu
+alert_streak_bonus_minigame,5 liên tiếp! TRÒ CHƠI NHỎ THƯỞNG!
+alert_perfect_stamps_bonus_minigame,Đóng dấu hoàn hảo! TRÒ CHƠI NHỎ THƯỞNG!
+alert_new_minigame_unlocked,Trò chơi nhỏ mới đã mở khóa: {name}!
+alert_minigame_bonus,Thưởng trò chơi nhỏ: +{bonus} điểm!
+high_score_display,Điểm cao nhất: {score}
+new_high_score,ĐIỂM CAO MỚI!

@@ -1,0 +1,30 @@
+﻿keys,pt
+Text/156/text,Bem-vindo ao [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs Training![/color][/pulse]
+Text/157/text,Este treinamento irá ensinar-lhe as [wave amp=15 freq=2][color=DARK_ORANGE]habilidades essenciais[/color][/wave] necessárias para proteger as fronteiras de Spud.
+Text/158/text,Seu dever é processar batatas que chegam em nosso posto de fronteira.
+Text/159/text,Batatas imigrantes formarão fila fora do seu escritório aqui.
+Text/15a/text,"Para começar a processar batatas, você precisa abrir sua cabine para serviço com o interruptor aqui."
+Text/15b/text,Você sinalizará cada batata para se aproximar do seu escritório tocando no megafone.
+Text/15c/text,As batatas entrarão na cabine uma por uma e apresentarão seus documentos.
+Text/15d/text,"Primeiro, mova os documentos delas para a mesa de inspeção para uma melhor visualização."
+Text/15e/text,"Em seguida, procure por [tornado radius=3 freq=2][color=YELLOW]datas expiradas, informações incorretas ou sinais de falsificação[/color][/tornado]."
+Text/15f/text,"Sua mesa tem carimbos para marcar documentos, você pode clicar aqui para puxar a barra de carimbos."
+Text/160/text,Depois coloque o documento sob o carimbo que você deseja...
+Text/161/text,Clique no carimbo para marcar documentos como [color=CHARTREUSE]aprovados[/color] ou [color=CRIMSON]rejeitados[/color]...
+Text/162/text,E arraste o documento de volta para a batata para finalizar sua decisão!
+Text/163/text,"Às vezes, as batatas tentarão [color=CRIMSON]passar correndo pelo seu posto de controle[/color]."
+Text/164/text,"Você tem um link direto em sua cabine, que permite controlar [pulse freq=3][color=CRIMSON]lançadores de mísseis[/color][/pulse] ao longo do muro da fronteira."
+Text/165/text,"Clique nesses ""corredores"" para lançar um míssil e detê-los."
+Text/166/text,"Lembre-se, cada corredor que conseguir passar contará como uma [wave amp=20 freq=3][color=CRIMSON]falta contra você[/color][/wave]."
+Text/167/text,"Muitas faltas, e seu turno terminará... [tornado radius=3 freq=3][color=CRIMSON]permanentemente.[/color][/tornado]"
+Text/168/text,Cada turno tem uma [color=DARK_ORANGE]cota de batatas[/color] que você precisa processar para terminar seu dia.
+Text/169/text,Sua pontuação acompanha seu desempenho em comparação com seus colegas neste posto de controle e oficiais em escritórios aduaneiros distantes.
+Text/16a/text,"Após cada turno, você verá um resumo do seu desempenho e se teve sucesso ou falhou em seu dever."
+Text/16b/text,Você verá uma análise de como lidou com os corredores e quantos documentos processou.
+Text/16c/text,"Além de quaisquer bônus que você ganhou por processar documentos rapidamente, alinhar perfeitamente os carimbos ou atingir perfeitamente as batatas corredoras."
+Text/16d/text,"Você também receberá uma classificação de desempenho com base em quão bem processou as batatas durante seu turno, e até 3 carimbos dourados se exceder as expectativas."
+Text/16e/text,Aqui você pode enviar sua pontuação para cada turno para o banco de dados global de oficiais aduaneiros e ver como se compara aos oficiais aduaneiros mais elite em todo o mundo.
+Text/16f/text,"Se seu turno foi bem-sucedido, você poderá continuar clicando em ""Continuar"" e iniciando seu próximo turno."
+Text/170/text,Isso cobre o básico de seus deveres como Oficial Aduaneiro.
+Text/171/text,"Lembre-se: verifique documentos cuidadosamente, pare corredores e cumpra sua cota."
+Text/172/text,A segurança de Spud depende da sua [pulse freq=2][color=DARK_ORANGE]vigilância![/color][/pulse]

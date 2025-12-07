@@ -1,0 +1,29 @@
+﻿keys,pl
+violation_condition_not_fresh,ODRZUĆ: Dozwolone tylko świeże ziemniaki. Ten ziemniak jest {condition}
+violation_extra_eyes,ODRZUĆ: Stan Dodatkowe Oczy jest zabroniony
+violation_rotten,ODRZUĆ: Zgniłe ziemniaki są zabronione
+violation_sprouted,ODRZUĆ: Skiełkowane ziemniaki są zabronione
+violation_dehydrated,ODRZUĆ: Odwodnione ziemniaki są zabronione
+violation_frozen,ODRZUĆ: Zamrożone ziemniaki są zabronione
+violation_too_old,ODRZUĆ: Ziemniak ma {age} lat (maksymalny wiek: 4 lata)
+violation_too_young_3,ODRZUĆ: Ziemniak ma {age} lat (minimalny wiek: 4 lata)
+violation_too_young_2,ODRZUĆ: Ziemniak ma {age} lat (minimalny wiek: 3 lata)
+violation_males_only,ODRZUĆ: Dozwolone tylko męskie ziemniaki
+violation_females_only,ODRZUĆ: Dozwolone tylko żeńskie ziemniaki
+violation_country_spudland,ODRZUĆ: Wszystkie ziemniaki Spudland są zabronione
+violation_country_potatopia,ODRZUĆ: Wszystkie ziemniaki Potatopia są zabronione
+violation_country_tuberstan,ODRZUĆ: Wszystkie ziemniaki Tuberstan są zabronione
+violation_country_north_yamnea,ODRZUĆ: Wszystkie ziemniaki North Yamnea są zabronione
+violation_country_spuddington,ODRZUĆ: Wszystkie ziemniaki Spuddington są zabronione
+violation_country_tatcross,ODRZUĆ: Wszystkie ziemniaki Tatcross są zabronione
+violation_country_mash_meadows,ODRZUĆ: Wszystkie ziemniaki Mash Meadows są zabronione
+violation_country_tuberville,ODRZUĆ: Wszystkie ziemniaki Tuberville są zabronione
+violation_country_chip_hill,ODRZUĆ: Wszystkie ziemniaki Chip Hill są zabronione (ograniczenia eksportowe)
+violation_country_murphyland,ODRZUĆ: Wszystkie ziemniaki Murphyland są zabronione
+violation_country_colcannon,ODRZUĆ: Wszystkie ziemniaki Colcannon są zabronione
+violation_country_pratie_point,ODRZUĆ: Wszystkie ziemniaki Pratie Point są zabronione
+violation_race_purple_majesty,ODRZUĆ: Typy Purple Majesty są zabronione
+violation_race_sweet_potato,ODRZUĆ: Typy słodkich ziemniaków wymagają specjalnych zezwoleń (niedostępne)
+violation_race_yukon_gold,ODRZUĆ: Typy Yukon Gold są zabronione
+violation_expired_document,ODRZUĆ: Dokument wygasł {date}
+violation_invalid_potato,Ten ziemniak spełnia wszystkie wymagania i powinien zostać zatwierdzony

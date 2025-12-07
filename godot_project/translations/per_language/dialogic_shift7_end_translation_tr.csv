@@ -1,0 +1,55 @@
+﻿keys,tr
+Text/d2/text,"Vardiyandan sonra, terk edilmiş bir nişasta fabrikasındaki gizli bir direniş toplantısına götürülürsün."
+Text/d3/text,Savaş yaraları olan yıpranmış bir patates toplanmış gruba hitap eder.
+Text/d4/text,Fısıltılar ve broşürler dönemi sona erdi. Hükümet gerçek yüzünü gösterdi.
+Text/d5/text,Kaynaklarımız [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] işleme tesislerinin üretimi artırdığını doğruluyor.
+Text/d6/text,"Bu da [tornado radius=3 freq=3][color=CRIMSON]daha fazla kardeşimizin kaybolduğu, işlendiği, tüketildiği[/color][/tornado] anlamına geliyor."
+Text/d7/text,Lider masaya yumruğunu vurur. [pulse freq=3][color=CHARTREUSE]Bu şimdi sona eriyor.[/color][/pulse] Operasyonlarının kalbine vurmak için bir planımız var.
+Text/d8/text,"Sasha masada ayrıntılı planları açar. Üç gün içinde, ana taarruzumuzu başlatacağız."
+Text/d9/text,"Bir ekip ana hükümet kompleksinde bir yanıltma yaratırken, diğeri en büyük Root Reserve tesisine sızacak."
+Text/da/text,"Hedefimiz: içeride neler olduğuna dair [color=CHARTREUSE]çürütülemez kanıtlar[/color] elde etmek, bunu tüm Spud'a yayınlamak."
+Text/db/text,Sasha planların bir bölümünü işaret eder. İşte burada sen devreye giriyorsun.
+Text/dc/text,Operatiflerimizin görev için sınırı geçebilmesini sağlamak için Spud Gümrük içinde birine ihtiyacımız var.
+Text/dd/text,O kişi olman için sana güvenebilir miyiz?
+Choice/de/text,Gerçeği ortaya çıkarmak için ne gerekiyorsa yaparım.
+Choice/df/text,Tehlikeli görünüyor. Ya yakalanırsak?
+Choice/e0/text,Bu kadar çok kişiyi riske atmayan başka bir yol var mı?
+Text/e1/text,Sasha'nın yüzü umutla aydınlanır. Teşekkürler. [color=CHARTREUSE]Cesaretin sayısız hayat kurtaracak.[/color]
+Text/e2/text,"Elini sıkar. Tüm bunlar bittiğinde, [color=CHARTREUSE]devrimin kahramanı olarak hatırlanacaksın.[/color]"
+Text/e3/text,Sasha ciddi bir şekilde başını sallar. Tehlikeli. Sana bu konuda yalan söylemeyeceğim.
+Text/e4/text,Başarısız olursak hepimiz [color=DARK_VIOLET]Root Reserve'e işlenmiş[/color] olarak sonlanabiliriz.
+Text/e5/text,"Ama hiçbir şey yapmamak daha da tehlikeli. Hepimiz için, uzun vadede."
+Text/e6/text,Sasha'nın ifadesi kasvetli bir hal alır. Başka yollar denedik. Yıllarca.
+Text/e7/text,Dilekçeler. Sessiz diplomasi. Anonim ipuçları. Hiçbiri işe yaramadı.
+Text/e8/text,Bazen herhangi bir şeyi değiştirmek için her şeyi riske atman gerekir.
+Text/e9/text,Direniş üyeleri arasında ateşli bir tartışma patlak verir.
+Text/ea/text,Bazıları daha agresif bir yaklaşımı savunur - işleme tesislerini tamamen yok etmek.
+Text/eb/text,Diğerleri şiddetli eylemin sadece kamuoyunu onlara karşı çevireceğinde ısrar eder.
+Text/ec/text,"YETER! Lider, emredici bir sesle odayı sessizleştirir."
+Text/ed/text,"Bölünmeyi göze alamayız. Şimdi değil, bu kadar yakınken."
+Text/ee/text,Amacımız basit: gerçeği ortaya çıkarmak. Sonra ne olacağına halk karar versin.
+Text/ef/text,Lider sana doğrudan hitap etmek için döner. Ama bilmemiz gerekiyor [color=YELLOW]nerede durduğunu[/color].
+Text/f0/text,"Üç gün içinde, ajanlarımız kontrol noktanıza yaklaşacak. [color=CHARTREUSE]Mavi kimlik kartları[/color] taşıyacaklar."
+Text/f1/text,Onların geçmesine yardım edecek misin? Şimdiki cevabın bir sonraki hamlemizi belirleyecek.
+Choice/f2/text,Geçmelerine yardım edeceğim. Spud'un geleceği için.
+Choice/f3/text,"Doğrudan dahil olamam, ama başka yöne bakacağım."
+Choice/f4/text,Bunu düşünmek için daha fazla zamana ihtiyacım var.
+Text/f5/text,Lider omzunu sıkıca kavrar. [color=CHARTREUSE]Cesaretin hepimizi onurlandırıyor.[/color]
+Text/f6/text,"Üçüncü gün, güneş en yüksekteyken, ajanlarımız gelecek."
+Text/f7/text,"Parola ""[wave amp=15 freq=3][color=CHARTREUSE]Kökler derine uzanır.[/color][/wave]"" Bunu hatırla."
+Text/f8/text,"Lider yavaşça başını sallar, açıkça hayal kırıklığına uğramıştır ama anlayışlıdır."
+Text/f9/text,"Bazen isteyebileceğimiz en fazla şey, insanların yolumuza çıkmamasıdır."
+Text/fa/text,Ajanlarımız planlandığı gibi devam edecek. Sadece... alarm verme.
+Text/fb/text,Liderin ifadesi sertleşir. [color=YELLOW]Zaman sahip olmadığımız bir lükstür.[/color]
+Text/fc/text,Ama birini davamıza katılmaya zorlamak bizi onlardan daha iyi yapmaz.
+Text/fd/text,Yardımına güvenmeden devam edeceğiz. Vicdanını sorgula.
+Text/fe/text,"Toplantı dağılırken, Sasha seninle birlikte kontrol noktasına doğru yürür."
+Text/ff/text,Ne olursa olsun... yaptığın her şey için teşekkürler.
+Text/100/text,"Kontrol noktasındaki odalarına dönersin, zihnin yaklaşan olayların ağırlığıyla yarışır."
+Text/101/text,"Sadece üç gün içinde, her şey değişebilir. [color=YELLOW]İyiye ya da kötüye.[/color]"
+Choice/de/disabled_text,
+Choice/f4/disabled_text,
+Choice/f3/disabled_text,
+Choice/f2/disabled_text,
+Choice/e0/disabled_text,
+Choice/df/disabled_text,

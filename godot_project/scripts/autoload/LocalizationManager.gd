@@ -2,26 +2,40 @@ extends Node
 
 signal language_changed(language_code)
 
+# All Steam-supported languages (31 total)
+# Sorted alphabetically by native name for the language selector
 var available_languages = {
+	"ar": "العربية",  # Arabic
+	"bg": "Български",  # Bulgarian
 	"cs": "Čeština",  # Czech
 	"da": "Dansk",  # Danish
 	"de": "Deutsch",  # German
+	"el": "Ελληνικά",  # Greek
 	"en": "English",  # English
 	"es": "Español",  # Spanish (Spain)
+	"es-419": "Español (Latinoamérica)",  # Spanish (Latin America)
 	"fi": "Suomi",  # Finnish
 	"fr": "Français",  # French
 	"hu": "Magyar",  # Hungarian
 	"id": "Bahasa Indonesia",  # Indonesian
 	"it": "Italiano",  # Italian
+	"ja": "日本語",  # Japanese
+	"ko": "한국어",  # Korean
 	"nl": "Nederlands",  # Dutch
 	"no": "Norsk",  # Norwegian
 	"pl": "Polski",  # Polish
 	"pt": "Português",  # Portuguese (Portugal)
+	"pt-BR": "Português (Brasil)",  # Portuguese (Brazil)
 	"ro": "Română",  # Romanian
+	"ru": "Русский",  # Russian
 	"sk": "Slovenčina",  # Slovak
 	"sv": "Svenska",  # Swedish
+	"th": "ไทย",  # Thai
 	"tr": "Türkçe",  # Turkish
+	"uk": "Українська",  # Ukrainian
 	"vi": "Tiếng Việt",  # Vietnamese
+	"zh-CN": "简体中文",  # Chinese (Simplified)
+	"zh-TW": "繁體中文",  # Chinese (Traditional)
 }
 
 var current_language = "en"
@@ -65,3 +79,10 @@ func get_language_name(code: String = "") -> String:
 	if code == "":
 		code = current_language
 	return available_languages.get(code, "Unknown")
+
+
+func get_sorted_language_codes() -> Array:
+	"""Return language codes sorted by their native names for UI display."""
+	var codes = available_languages.keys()
+	codes.sort_custom(func(a, b): return available_languages[a] < available_languages[b])
+	return codes

@@ -1,0 +1,18 @@
+﻿keys,de
+Text/69/text,Können wir reden? Irgendwo privat? [color=YELLOW]Zu viele Augen und Ohren hier.[/color]
+Text/6a/text,"Triff mich beim alten Lagerhaus nach deiner Schicht. Ich habe etwas, das du sehen musst."
+Text/6b/text,"Wirst du gemütlich mit Kollegen? Denk daran, freundlich zu sein kann zu... [color=DARK_ORANGE]beeinträchtigtem Urteilsvermögen[/color] führen."
+Text/6c/text,Ich habe Informationen über abgelehnte Kartoffeln gesammelt. [wave amp=20 freq=3][color=CRIMSON]Sie gehen nicht in Abschiebezentren.[/color][/wave]
+Text/6d/text,[tornado radius=4 freq=2][color=CRIMSON]Sie gehen in Root Reserve Verarbeitungsanlagen.[/color][/tornado] Jede einzelne.
+Text/6e/text,"Diese Dokumente zeigen Kartoffeln, die in einer Anlage mit dem [color=DARK_VIOLET]Root Reserve[/color] Logo entladen werden."
+Text/6f/text,"Ich glaube, ich weiß, was passiert. [pulse freq=3][color=CRIMSON]Sie werden zu Root Reserve.[/color][/pulse]"
+Choice/70/text,Das ist wahnsinnig. Sie... verarbeiten Kartoffeln zu Nahrung?
+Choice/71/text,"Wir brauchen mehr Beweise, bevor wir Anschuldigungen machen."
+Text/72/text,"[color=CRIMSON]Kannibalismus mit extra Schritten.[/color] Das ist, was [wave amp=25 freq=3][color=DARK_VIOLET]Root Reserve[/color][/wave] ist. Und wir haben geholfen, ihre Zutaten auszuwählen."
+Text/73/text,"Ich sammle seit Monaten Beweise. Halte die Augen offen. Du wirst sehen, dass ich Recht habe."
+Text/74/text,Ein entfernter Alarm ertönt plötzlich
+Text/75/text,"Wir müssen gehen. Sie machen um diese Zeit Sicherheitskontrollen. Denk über das nach, was ich dir gezeigt habe."
+Text/76/text,"Sasha steckt dir den Ordner in die Hände. ""[color=YELLOW]Halte ihn sicher. Und vertraue niemandem.[/color]"""
+Text/77/text,Du versteckst den Ordner in deiner Jacke. [color=DARK_VIOLET]Root Reserve[/color]. Die Ablehnungen. Die fehlenden Kartoffeln. Alles verbindet sich auf eine [tornado radius=3 freq=2][color=CRIMSON]erschreckende Weise[/color][/tornado].
+Choice/71/disabled_text,
+Choice/70/disabled_text,

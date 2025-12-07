@@ -1,0 +1,47 @@
+﻿keys,en
+Text/11/text,"The Spud border is in [pulse freq=3][color=CRIMSON]chaos[/color][/pulse]. Panicked potatoes flood checkpoints, desperate to escape after the leaked documents."
+Text/12/text,You slip through with Sasha. [wave amp=20 freq=3][color=CHARTREUSE]We have to keep pushing![/color][/wave] The people know the truth now.
+Text/13/text,"They can't silence the truth any longer. If we can infiltrate the [color=DARK_VIOLET]Root Reserve[/color] facility and broadcast evidence, it'll [tornado radius=3 freq=2][color=CHARTREUSE]ignite the revolution[/color][/tornado]."
+Text/14/text,That place is a fortress. And now we've got a [color=YELLOW]former customs agent[/color] in our midst. Their eyes narrow at you suspiciously.
+Choice/15/text,"""I understand your doubt, but I'm committed to this cause."""
+Choice/16/text,"""I've already sacrificed everything. I won't back down now."""
+Text/17/text,Pretty words. But we've heard those before.
+Text/18/text,"They helped us get the documents. That's action, not words."
+Text/19/text,"Can't go back to being a loyal spud now. Welcome to the resistance, comrade."
+Text/1a/text,"After a tense infiltration, your team stands at the heart of [color=DARK_VIOLET]Root Reserve[/color], the [pulse freq=3][color=CRIMSON]horrific machinery of oppression[/color][/pulse] laid bare."
+Text/1b/text,"[wave amp=25 freq=3][color=RED]Alarms blare[/color][/wave] as guards scramble to respond to your intrusion. You race through corridors, dodging security systems."
+Text/1c/text,"A screen flickers on. ""Well well, the [color=CRIMSON]traitor[/color] returns with rebel scum."""
+Text/1d/text,Did you think you could stop the progress of Spud? [color=DARK_VIOLET]Root Reserve[/color] is the lifeblood of this nation.
+Text/1e/text,But fret not. You'll still serve Spud... [tornado radius=4 freq=3][color=DARK_VIOLET]in the processing vats![/color][/tornado]
+Text/1f/text,The screen suddenly goes black.
+Text/20/text,"You turn to the others with resolve. ""We need to reach Idaho's bunker. Now!"""
+Text/21/text,"Your group fights through waves of security, narrowly avoiding capture. Sasha's resistance fighters create diversions, clearing your path forward."
+Text/22/text,"After a harrowing escape through maintenance tunnels, you finally reach the secure elevator to Idaho's private bunker."
+Text/23/text,"With Sasha and your allies at your side, you confront Idaho at last."
+Text/24/text,"It's over, Idaho. Your secrets are exposed. How this ends... [pulse freq=2]that's up to you.[/pulse]"
+Choice/25/text,Negotiate a peaceful transition of power (Diplomatic)
+Choice/26/text,Demand Idaho's immediate arrest (Justice)
+Choice/27/text,Enact vigilante justice for Idaho's crimes (Vengeance)
+Choice/28/text,Focus on dismantling Root Reserve infrastructure (Dismantle)
+Text/29/text,"Idaho, it doesn't have to end in more bloodshed. If you cooperate..."
+Text/2a/text,"Oh, you [color=STEEL_BLUE]idealistic fool[/color]. You think this is a negotiation?"
+Text/2b/text,"Idaho smashes a button, and [color=RED]alarms begin blaring[/color]. ""The only thing I'll be giving you is a [color=DARK_VIOLET]one-way trip to the fry vats![/color]"""
+Text/2c/text,"I don't think so, Idaho. Guards! You saw the dossier, [color=YELLOW]you know what he did to your families.[/color]"
+Text/2d/text,A hulking guard steps forward and kicks Idaho to the ground swiftly.
+Text/2e/text,A shot echoes through the chamber. The screen fades to black.
+Text/2f/text,"Idaho, in the name of the potato people of Spud, [color=CHARTREUSE]you're under arrest![/color]"
+Text/30/text,"It's over. The people have spoken. [color=CHARTREUSE]We'll build a new Spud where our roots are in the soil, not in suffering.[/color]"
+Text/31/text,"There will be [color=CRIMSON]no deals, no mercy[/color] for you, Idaho. A tyrant's justice is all you deserve."
+Text/32/text,"A reckoning. That's what I am. [color=CHARTREUSE]For every potato sacrificed, we take back our future![/color]"
+Text/33/text,"Forget him. He's a symptom, not the disease. [color=CHARTREUSE]Tear down every root and stem of this monstrosity.[/color]"
+Text/34/text,We have to go! Now!
+Text/35/text,The fall of [color=DARK_VIOLET]Root Reserve[/color] sparks a wildfire of change across Spud.
+Text/36/text,"Potatoes in every province rise up, embracing a [color=CHARTREUSE]new vision for their nation[/color]."
+Text/37/text,"As long as we stay true to our roots, to the ideals that brought us here... [color=CHARTREUSE]we'll find a way.[/color]"
+Text/38/text,"And so, from the ashes of the old Spud, a [color=CHARTREUSE]new nation begins to take root[/color]. The Reign of [color=DARK_VIOLET]Root Reserve[/color] is over."
+Choice/15/disabled_text,
+Choice/28/disabled_text,
+Choice/27/disabled_text,
+Choice/26/disabled_text,
+Choice/25/disabled_text,
+Choice/16/disabled_text,

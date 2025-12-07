@@ -1,0 +1,19 @@
+﻿keys,it
+Text/86/text,Nuovi protocolli di sicurezza oggi. Abbiamo ricevuto informazioni su [color=YELLOW]attività sospette[/color].
+Text/87/text,Tutti i viaggiatori devono sottoporsi a procedure di ispezione migliorate.
+Text/88/text,"Prestate attenzione a [color=YELLOW]comportamenti nervosi, modi inusuali o riluttanza a stabilire contatto visivo[/color]."
+Text/89/text,"Tutti gli articoli sospetti devono essere sequestrati e registrati. Per la sicurezza di Spud, ovviamente."
+Text/8a/text,"Siamo particolarmente preoccupati per [color=CRIMSON]materiali proibiti[/color] - letteratura antigoverativa, attrezzature fotografiche..."
+Text/8b/text,"La loro voce cala minacciosamente. ""[pulse freq=2][color=DARK_VIOLET]Abbiamo procedure speciali per questi individui.[/color][/pulse]"""
+Text/8c/text,"[wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] camion scaricano casse contrassegnate ""Premium Reserve"" nella mensa. L'odore è allettante, ma il tuo stomaco si rivolta."
+Text/8d/text,Hai provato il nuovo Premium Reserve? Mio cugino è scomparso il mese scorso. Non ha superato l'ispezione.
+Text/8e/text,"Forse fa parte di questo lotto, eh? [tornado radius=2 freq=2][color=STEEL_BLUE]Umorismo nero, capisci?[/color][/tornado]"
+Choice/8f/text,Non è per niente divertente.
+Choice/90/text,Non ho fame. Scusi. (Esce)
+Text/91/text,Hai ragione. A volte è più facile scherzare che pensare a [pulse freq=3][color=CRIMSON]cosa potrebbe realmente accadere[/color][/pulse].
+Text/92/text,"L'ufficiale ti osserva mentre te ne vai. ""Lo capisco. Ho perso anche io l'appetito..."""
+Text/93/text,"Tempismo conveniente per i nuovi protocolli di sicurezza, non è vero? [wave amp=15 freq=3][color=YELLOW]Stanno cercando di fermare le informazioni su Root Reserve.[/color][/wave]"
+Text/94/text,Ho qualcosa che potrebbe aiutarci. Alcune patate con [color=CHARTREUSE]informazioni vitali meritano di passare[/color].
+Text/95/text,Consideri attentamente le tue opzioni. Le scelte di oggi potrebbero aiutare a [color=CHARTREUSE]diffondere la verità[/color]... o a [color=CRIMSON]sopprimerla per sempre[/color].
+Choice/8f/disabled_text,
+Choice/90/disabled_text,

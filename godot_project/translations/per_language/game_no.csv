@@ -1,0 +1,52 @@
+﻿keys,no
+alert_border_runner,GRENSELØPER OPPDAGET!\nKlikk for å avfyre missil!
+alert_rejected_fleeing,AVVIST POTET RØMMER!\nKlikk for å avfyre missil!
+alert_runner_escaped,LØPER UNNSLUPPET!\nStrike lagt til!
+alert_points_deducted,LØPER UNNSLUPPET!\nStrike lagt til!\n-{penalty} poeng!
+alert_perfect_hit,PERFEKT TREFF! +{perfect} presisjonsbonuspoeng
+alert_perfect_stamp,PERFEKT STEMPEL! +{points} poeng!
+alert_combo,COMBO x{mult}! +{streak} combo bonuspoeng
+alert_quota_met,"Kvote oppnådd, vakt fullført! \nBonus: {bonus} poeng!"
+alert_strike_removed,Strike fjernet!
+alert_correct_decision,"Du tok det rette valget, betjent.\n+{points} poeng!"
+alert_wrong_decision,"Du har forårsaket unødvendig lidelse, betjent...\n+1 Strike!"
+alert_potato_should_be_approved,\nDenne poteten oppfyller alle krav og burde ha blitt godkjent.
+alert_strike_out,Maksimalt antall strikes overskredet! Vakten din er over.
+ui_score,Poengsum: {score}
+ui_quota,Kvote: {current} / {target}
+ui_strikes,Anmerkninger: {current} / {max}
+ui_click_megaphone,Klikk på megafonen for å kalle neste potet
+ui_drag_document,Dra dokumentet til inspeksjonsbordet
+ui_stamp_document,Velg et stempel for å godkjenne eller avvise
+ui_check_violations,Sjekk dokumentbrudd
+Strike removed!,Strike fjernet!
+BORDER RUNNER DETECTED!\nClick to launch missile!,GRENSELØPER OPPDAGET!\nKlikk for å avfyre missil!
+REJECTED POTATO FLEEING!\nClick to launch missile!,AVVIST POTET RØMMER!\nKlikk for å avfyre missil!
+RUNNER ESCAPED!\nStrike added!,LØPER UNNSLUPPET!\nStrike lagt til!
+Click megaphone to call the next potato,Klikk på megafonen for å kalle neste potet
+Drag document to inspection table,Dra dokumentet til inspeksjonsbordet
+Select a stamp to approve or reject,Velg et stempel for å godkjenne eller avvise
+Check for document violations,Sjekk dokumentbrudd
+rule_explanation_header,REGEL FORKLARING:
+rule_explanation_fresh,Kijk naar het veld 'Conditie'. Als het iets anders zegt dan 'Vers' - AFWIJZEN
+rule_explanation_sweet_potato,Se på 'Type' feltet. Hvis det sier 'Søtpotet' - AVVIS (ingen tillatelser)
+rule_explanation_chip_hill,Se på 'Land' feltet. Hvis det sier 'Chip Hill' - AVVIS (forbudt)
+rule_explanation_age,Se på 'Fødselsdato' feltet. Beregn alder og sjekk mot regel
+rule_explanation_gender,Se på 'Kjønn' feltet og sjekk mot gjeldende regel
+rule_footer_text,Disse reglene må håndheves for ALLE poteter
+rule_tutorial_hint,Trenger du hjelp? Klikk på hvilken som helst regel for en forklaring
+alert_correct_decision_detailed,RIKTIG BESLUTNING! +{points} poeng\n{reason}
+alert_wrong_decision_detailed,FEIL BESLUTNING! Strike lagt til!\n{reason}
+alert_reason_approved,Potet oppfyller alle krav - GODKJENT
+alert_reason_should_reject,Du skulle ha AVVIST denne poteten
+tutorial_check_type,Sjekk 'Type' feltet i passet
+tutorial_check_condition,Sjekk 'Tilstand' feltet i passet
+tutorial_check_country,Sjekk 'Land' feltet i passet
+tutorial_check_age,Sjekk 'Fødselsdato' for å beregne alder
+tutorial_check_gender,Sjekk 'Kjønn' feltet i passet
+alert_streak_bonus_minigame,5 på rad! BONUS MINISPILL!
+alert_perfect_stamps_bonus_minigame,Perfekte stempler! BONUS MINISPILL!
+alert_new_minigame_unlocked,Nytt minispill låst opp: {name}!
+alert_minigame_bonus,Minispill bonus: +{bonus} poeng!
+high_score_display,Høyeste poengsum: {score}
+new_high_score,NY HØYESTE POENGSUM!

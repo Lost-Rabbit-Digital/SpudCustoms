@@ -1,0 +1,52 @@
+﻿keys,tr
+alert_border_runner,SINIR KAÇAKÇISI TESPİT EDİLDİ!\nFüzeyi fırlatmak için tıklayın!
+alert_rejected_fleeing,REDDEDİLEN PATATES KAÇIYOR!\nFüzeyi fırlatmak için tıklayın!
+alert_runner_escaped,KAÇAK KAÇTI!\nStrike eklendi!
+alert_points_deducted,KAÇAK KAÇTI!\nStrike eklendi!\n-{penalty} puan!
+alert_perfect_hit,MÜKEMMEL İSABET! +{perfect} isabetlilik bonus puanı
+alert_perfect_stamp,MÜKEMMEL DAMGA! +{points} puan!
+alert_combo,KOMBO x{mult}! +{streak} kombo bonus puanı
+alert_quota_met,"Kota tamamlandı, vardiya bitti! \nBonus: {bonus} puan!"
+alert_strike_removed,Strike kaldırıldı!
+alert_correct_decision,"Doğru kararı verdiniz, memur.\n+{points} puan!"
+alert_wrong_decision,"Gereksiz acı verdiniz, memur...\n+1 Strike!"
+alert_potato_should_be_approved,\nBu patates tüm gereklilikleri karşılıyor ve onaylanmalıydı.
+alert_strike_out,Maksimum strike sayısı aşıldı! Vardiyeniz bitti.
+ui_score,Puan: {score}
+ui_quota,Kota: {current} / {target}
+ui_strikes,Strike'lar: {current} / {max}
+ui_click_megaphone,Bir sonraki patatesin çağrılması için megafona tıklayın
+ui_drag_document,Belgeyi inceleme masasına sürükleyin
+ui_stamp_document,Onaylamak veya reddetmek için bir damga seçin
+ui_check_violations,Belge ihlallerini kontrol edin
+Strike removed!,Strike kaldırıldı!
+BORDER RUNNER DETECTED!\nClick to launch missile!,SINIR KAÇAKÇISI TESPİT EDİLDİ!\nFüzeyi fırlatmak için tıklayın!
+REJECTED POTATO FLEEING!\nClick to launch missile!,REDDEDİLEN PATATES KAÇIYOR!\nFüzeyi fırlatmak için tıklayın!
+RUNNER ESCAPED!\nStrike added!,KAÇAK KAÇTI!\nStrike eklendi!
+Click megaphone to call the next potato,Bir sonraki patatesin çağrılması için megafona tıklayın
+Drag document to inspection table,Belgeyi inceleme masasına sürükleyin
+Select a stamp to approve or reject,Onaylamak veya reddetmek için bir damga seçin
+Check for document violations,Belge ihlallerini kontrol edin
+rule_explanation_header,KURAL AÇIKLAMASI:
+rule_explanation_fresh,Titta på fältet 'Tillstånd'. Om det säger något annat än 'Färsk' - AVVISA
+rule_explanation_sweet_potato,Tür' alanına bakın. 'Tatlı Patates' diyorsa - REDDET (izin yok)
+rule_explanation_chip_hill,Ülke' alanına bakın. 'Chip Hill' diyorsa - REDDET (yasak)
+rule_explanation_age,Doğum Tarihi' alanına bakın. Yaşı hesaplayın ve kurala göre kontrol edin
+rule_explanation_gender,Cinsiyet' alanına bakın ve mevcut kurala göre kontrol edin
+rule_footer_text,Bu kurallar TÜM patatesler için uygulanmalıdır
+rule_tutorial_hint,Behöver du hjälp? Klicka på vilken regel som helst för en förklaring
+alert_correct_decision_detailed,DOĞRU KARAR! +{points} puan\n{reason}
+alert_wrong_decision_detailed,YANLIŞ KARAR! Strike eklendi!\n{reason}
+alert_reason_approved,Patates tüm gereklilikleri karşılıyor - ONAYLANDI
+alert_reason_should_reject,Bu patesi REDDETMELİYDİN
+tutorial_check_type,Pasaporttaki 'Tür' alanını kontrol edin
+tutorial_check_condition,Pasaporttaki 'Durum' alanını kontrol edin
+tutorial_check_country,Pasaporttaki 'Ülke' alanını kontrol edin
+tutorial_check_age,Yaşı hesaplamak için 'Doğum Tarihi'ni kontrol edin
+tutorial_check_gender,Pasaporttaki 'Cinsiyet' alanını kontrol edin
+alert_streak_bonus_minigame,Arka arkaya 5! BONUS MİNİ OYUN!
+alert_perfect_stamps_bonus_minigame,Mükemmel damgalar! BONUS MİNİ OYUN!
+alert_new_minigame_unlocked,Yeni mini oyun açıldı: {name}!
+alert_minigame_bonus,Mini oyun bonusu: +{bonus} puan!
+high_score_display,En Yüksek Puan: {score}
+new_high_score,YENİ EN YÜKSEK PUAN!

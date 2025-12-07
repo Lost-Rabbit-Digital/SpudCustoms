@@ -1,0 +1,41 @@
+﻿keys,ro
+LAWS,LEGI
+_VALIDATION MESSAGES,
+msg_not_fresh,"Cartofii au fost %s, dar trebuie să fie proaspeți"
+msg_extra_eyes,"Cartofii aveau Ochi Suplimentari, ceea ce este interzis"
+msg_rotten,Cartofii putrezi nu sunt permisi
+msg_sprouted,Cartofii încolțiți nu sunt permisi
+msg_dehydrated,Cartofii deshidratați nu sunt permisi astăzi
+msg_frozen,Cartofii congelați sunt interzisi
+msg_over_age,Cartofii au %d ani (max 5 ani)
+msg_under_age,Cartofii au %d ani (trebuie să aibă peste 3 ani)
+_LAWS,
+law_fresh_potatoes,[color=dark_goldenrod]DOAR cartofi proaspeți[/color] permisi - [color=dark_red]RESPINGE[/color] toți ceilalți
+law_extra_eyes,[color=dark_goldenrod]Ochi Suplimentari[/color] condiție cartofi trebuie [color=dark_red]RESPINȘI[/color]
+law_rotten,[color=dark_goldenrod]Putred[/color] cartofi trebuie [color=dark_red]RESPINȘI[/color]
+law_sprouted,[color=dark_goldenrod]Germinați[/color] cartofi trebuie [color=dark_red]RESPINȘI[/color]
+law_dehydrated,[color=dark_goldenrod]Deshidratați[/color] cartofi trebuie [color=dark_red]RESPINȘI[/color]
+law_frozen,[color=dark_goldenrod]Înghețați[/color] cartofi trebuie [color=dark_red]RESPINȘI[/color]
+law_over_5_years,Cartofi [color=dark_goldenrod]5 ani sau mai mult[/color] trebuie [color=dark_red]RESPINȘI[/color]
+law_under_3_years,Cartofi [color=dark_goldenrod]3 ani sau mai puțin[/color] trebuie [color=dark_red]RESPINȘI[/color]
+law_under_2_years,Cartofi [color=dark_goldenrod]2 ani sau mai puțin[/color] trebuie [color=dark_red]RESPINȘI[/color]
+law_males_only,[color=dark_goldenrod]DOAR cartofi masculi[/color] permisi - [color=dark_red]RESPINGE[/color] toți femeli
+law_females_only,[color=dark_goldenrod]DOAR cartofi femeli[/color] permisi - [color=dark_red]RESPINGE[/color] toți masculi
+law_country_spudland,[color=dark_goldenrod]TOȚI[/color] cartofii din [color=dark_goldenrod]Spudland[/color] trebuie [color=dark_red]RESPINȘI[/color]
+law_country_potatopia,[color=dark_goldenrod]TOȚI[/color] cartofii din [color=dark_goldenrod]Potatopia[/color] trebuie [color=dark_red]RESPINȘI[/color]
+law_country_tuberstan,[color=dark_goldenrod]TOȚI[/color] cartofii din [color=dark_goldenrod]Tuberstan[/color] trebuie [color=dark_red]RESPINȘI[/color]
+law_country_north_yamnea,[color=dark_goldenrod]TOȚI[/color] cartofii din [color=dark_goldenrod]North Yamnea[/color] trebuie [color=dark_red]RESPINȘI[/color]
+law_country_spuddington,[color=dark_goldenrod]TOȚI[/color] cartofii din [color=dark_goldenrod]Spuddington[/color] trebuie [color=dark_red]RESPINȘI[/color]
+law_country_tatcross,[color=dark_goldenrod]TOȚI[/color] cartofii din [color=dark_goldenrod]Tatcross[/color] trebuie [color=dark_red]RESPINȘI[/color]
+law_country_mash_meadows,[color=dark_goldenrod]TOȚI[/color] cartofii din [color=dark_goldenrod]Mash Meadows[/color] trebuie [color=dark_red]RESPINȘI[/color]
+law_country_tuberville,[color=dark_goldenrod]TOȚI[/color] cartofii din [color=dark_goldenrod]Tuberville[/color] trebuie [color=dark_red]RESPINȘI[/color]
+law_country_chip_hill,[color=dark_goldenrod]TOȚI[/color] cartofii din [color=dark_goldenrod]Chip Hill[/color] trebuie [color=dark_red]RESPINȘI[/color] (interdicție de export)
+law_country_murphyland,[color=dark_goldenrod]TOȚI[/color] cartofii din [color=dark_goldenrod]Murphyland[/color] trebuie [color=dark_red]RESPINȘI[/color]
+law_country_colcannon,[color=dark_goldenrod]TOȚI[/color] cartofii din [color=dark_goldenrod]Colcannon[/color] trebuie [color=dark_red]RESPINȘI[/color]
+law_country_pratie_point,[color=dark_goldenrod]TOȚI[/color] cartofii din [color=dark_goldenrod]Pratie Point[/color] trebuie [color=dark_red]RESPINȘI[/color]
+law_purple_majesty,[color=dark_goldenrod]Purple Majesty[/color] tipuri de cartofi trebuie [color=dark_red]RESPINSE[/color]
+law_sweet_potatoes,[color=dark_goldenrod]Cartof Dulce[/color] tipuri trebuie [color=dark_red]RESPINSE[/color] (fără permise disponibile)
+law_yukon_gold,[color=dark_goldenrod]Yukon Gold[/color] tipuri de cartofi trebuie [color=dark_red]RESPINSE[/color]
+law_fingerling,[color=dark_goldenrod]Fingerling[/color] tipuri de cartofi trebuie [color=dark_red]RESPINSE[/color]
+law_red_bliss,[color=dark_goldenrod]Red Bliss[/color] tipuri de cartofi trebuie [color=dark_red]RESPINSE[/color]
+law_russet,[color=dark_goldenrod]Russet[/color] tipuri de cartofi trebuie [color=dark_red]RESPINSE[/color]

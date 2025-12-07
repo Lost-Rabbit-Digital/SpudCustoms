@@ -1,0 +1,19 @@
+﻿keys,sv
+Text/96/text,"Du smyger dig genom den förmörkade korridoren, hjärtat dunkar medan du undviker säkerhetspatruller."
+Text/97/text,[color=CHARTREUSE]Den här enheten kommer att inaktivera låset[/color] på Russets kontor. Jag utlöser larm i östflygeln som en distraktion. Du har fem minuter.
+Text/98/text,Manifesten bör finnas i hans arkiv. [color=CRIMSON]Röd mapp märkt 'RR Transport'[/color]. Lämna inga spår av din sökning.
+Text/99/text,"Du hittar den tjocka [color=CRIMSON]röda mappen märkt ""RR Transport""[/color] i arkivet."
+Text/9a/text,"Inuti finns manifester som motsvarar antal förkastade potatisar och en direktiv från Idaho premiärminister som godkänner ""[pulse freq=3][color=DARK_VIOLET]full utnyttjande av gränsavvisningar för RR-produktion.[/color][/pulse]"""
+Text/9b/text,"Fotsteg närmar sig kontorsdörren. ""[wave amp=15 freq=3][color=YELLOW]Konstigt, jag kunde ha svurit att jag låste den.[/color][/wave]"""
+Choice/9c/text,Gömma sig under bordet
+Choice/9d/text,Hoppa ut genom fönstret
+Text/9e/text,"Du kastar dig under Russets skrivbord när han kommer in, hjärtat dunkar. Han sätter sig, fötterna centimeter från ditt ansikte."
+Text/9f/text,Russet här. Vad? [color=CHARTREUSE]Ännu ett larm?[/color] Jag är på väg. Han lämnar rummet och du slipper undan.
+Text/a0/text,"Du river upp fönstret och hoppar. Lyckligtvis är det bara en våning. En vakt ropar: ""[color=RED]Stanna! Stanna![/color]"""
+Text/a1/text,Du springer över området och lyckas bli av med dina förföljare.
+Text/a2/text,Fick du tag på det?
+Text/a3/text,Du överlämnar bevisen och förklarar vad du hittade.
+Text/a4/text,Detta bevisar allt. Motståndsrörelsen kommer att göra kopior. [tornado radius=3 freq=2]Sprid sanningen överallt.[/tornado] De kan inte tysta oss alla.
+Text/a5/text,Du har korsat en gräns. [wave amp=20 freq=3][color=YELLOW]Det finns ingen återvändo.[/color][/wave] När sanningen sprids kommer Spud att förvandlas.
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,

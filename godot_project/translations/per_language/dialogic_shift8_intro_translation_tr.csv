@@ -1,0 +1,31 @@
+﻿keys,tr
+Text/117/text,Kontrol noktası askeri bir karakola dönüştü. Siyah üniformalı seçkin muhafızlar silahlarını sergileyerek devriye geziyor.
+Text/118/text,"Ben Baş Güvenlik Görevlisi Yukon, başkentten Başbakan Idaho tarafından gönderildim."
+Text/119/text,"İstihbarat [pulse freq=2][color=YELLOW]terörist saldırının yakın olduğunu[/color][/pulse] gösteriyor. ""Direniş"" yarın sızmayı planlıyor."
+Text/11a/text,"Tüm memurlar [wave amp=15 freq=2][color=DARK_ORANGE]sadakat taramasına[/color][/wave] tabi tutulacak. Şüpheli davranış, gözaltı ve [color=DARK_VIOLET]işleme[/color] anlamına gelir."
+Text/11b/text,Güvenlik ile [tornado radius=3 freq=2][color=RED]tam işbirliği[/color][/tornado] zorunludur. Her biriniz hakkındaki raporlarım Şef'e sunuldu.
+Text/11c/text,"Russet'in bakışı, devam etmeden önce rahatsız edici bir şekilde üzerinde kalıyor."
+Text/11d/text,Bu [color=DARK_ORANGE]IdentityScan 5000[/color]'dir. Sızanları ve sempatizanları tespit etmek için biyometriyi analiz eder.
+Text/11e/text,İşaretlenen herkes [color=CRIMSON]gelişmiş sorgulamaya[/color] tabi tutulur. İstisnasız kullanın.
+Text/11f/text,"Sasha'yı gördün mü? Yoklama için rapor vermedi. Dün gece, [color=CRIMSON]güvenlik güçleri onun odasına girdi[/color]."
+Text/120/text,Onun [pulse freq=2][color=CHARTREUSE]direnişin[/color][/pulse] bir parçası olduğunu söylüyorlar.
+Choice/121/text,Bunu konuşmamalıyız. Tehlikeli.
+Choice/122/text,Ben de onun için endişeleniyorum. Bu doğru değil.
+Text/123/text,Haklısın. Ama kendine dikkat et. Onunla bağlantıları arıyorlar.
+Text/124/text,Demek yakındınız? Dikkatli ol. Seni de izliyor olabilirler.
+Text/125/text,"Memur sana bir not verir: ""[color=YELLOW]İstasyonunu şüpheli her şeyden temizle.[/color]"""
+Text/126/text,Bu kontrol noktasında uzun süredir bulunuyorsun. İlginç performans kaydı.
+Text/127/text,Şu anda [wave amp=20 freq=3][color=CRIMSON]vatan hainliği[/color][/wave] ile soruşturulan Memur Sasha ile sık sık görüldün.
+Text/128/text,Şef öne eğilir. Bana onun faaliyetleri hakkında söylemek istediğin bir şey var mı?
+Choice/129/text,Sasha ve ben sadece meslektaştık. İş dışında onun hakkında hiçbir şey bilmiyorum.
+Choice/12a/text,Daha sonra rapor etmek için onun şüpheli faaliyetleri hakkında kanıt topluyordum.
+Text/12b/text,Birçok tanık aksini söylüyor. Ancak somut kanıt olmadan seni tutuklamam. [color=YELLOW]Henüz.[/color]
+Text/12c/text,[color=CRIMSON]Yakın gözetim[/color] altında olacaksın. Bir yanlış adım ve [color=DARK_VIOLET]Sasha'ya katılacaksın[/color].
+Text/12d/text,Ne kadar uygun. Yine de şimdiye kadar hiç rapor vermedin.
+Text/12e/text,"Tam bir ifade vereceksin. Eğer bilgilerin değerli çıkarsa, belki gecikmiş raporlamanı görmezden geliriz."
+Text/12f/text,Bugün [color=CRIMSON]çalışmanı izleyeceğim[/color]. Her yolcu kimlik taramasından geçmeli. [color=RED]İstisna yok[/color].
+Text/130/text,"Sasha alındı. Direnişin planı [color=CRIMSON]tehlikeye girdi[/color]. Güvenlik yüksek alarmda olduğundan, şansları umutsuz görünüyor."
+Choice/121/disabled_text,
+Choice/12a/disabled_text,
+Choice/129/disabled_text,
+Choice/122/disabled_text,

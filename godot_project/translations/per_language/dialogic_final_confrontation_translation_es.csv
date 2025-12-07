@@ -1,0 +1,47 @@
+﻿keys,es
+Text/11/text,"La frontera de Spud está en [pulse freq=3][color=CRIMSON]caos[/color][/pulse]. Patatas aterrorizadas inundan los puestos de control, desesperadas por escapar tras la filtración de documentos."
+Text/12/text,Te deslizas con Sasha. [wave amp=20 freq=3][color=CHARTREUSE]¡Tenemos que seguir adelante![/color][/wave] La gente ahora conoce la verdad.
+Text/13/text,"Ya no pueden silenciar la verdad. Si podemos infiltrarnos en la instalación de la [color=DARK_VIOLET]Reserva Raíz[/color] y transmitir pruebas, [tornado radius=3 freq=2][color=CHARTREUSE]encenderá la revolución[/color][/tornado]."
+Text/14/text,Ese lugar es una fortaleza. Y ahora tenemos a un [color=YELLOW]antiguo agente de aduanas[/color] entre nosotros. Sus ojos se entrecierran con sospecha hacia ti.
+Choice/15/text,"Entiendo vuestra duda, pero estoy comprometido con esta causa."
+Choice/16/text,Ya he sacrificado todo. No me echaré atrás ahora.
+Text/17/text,Bonitas palabras. Pero esas ya las hemos oído antes.
+Text/18/text,"Nos ayudaron a conseguir los documentos. Eso son acciones, no palabras."
+Text/19/text,"Ya no puedes volver a ser una patata leal. Bienvenido a la resistencia, camarada."
+Text/1a/text,"Después de una tensa infiltración, tu equipo se encuentra en el corazón de la [color=DARK_VIOLET]Reserva Raíz[/color], la [pulse freq=3][color=CRIMSON]horrorosa maquinaria de opresión[/color][/pulse] al descubierto."
+Text/1b/text,"[wave amp=25 freq=3][color=RED]Las alarmas suenan[/color][/wave] mientras los guardias se apresuran a responder a vuestra intrusión. Corréis por los pasillos, esquivando sistemas de seguridad."
+Text/1c/text,"Una pantalla parpadea. ""Vaya, vaya, el [color=CRIMSON]traidor[/color] regresa con escoria rebelde."""
+Text/1d/text,¿Pensaste que podrías detener el progreso de Spud? La [color=DARK_VIOLET]Reserva Raíz[/color] es la fuerza vital de esta nación.
+Text/1e/text,Pero no te preocupes. Seguirás sirviendo a Spud... [tornado radius=4 freq=3][color=DARK_VIOLET]¡en las cubas de procesamiento![/color][/tornado]
+Text/1f/text,La pantalla se vuelve negra de repente.
+Text/20/text,"Te giras hacia los demás con determinación. ""Necesitamos llegar al búnker de Idaho. ¡Ahora!"""
+Text/21/text,"Tu grupo lucha a través de oleadas de seguridad, evitando por poco la captura. Los combatientes de la resistencia de Sasha crean diversiones, despejando vuestro camino hacia adelante."
+Text/22/text,"Después de una angustiosa huida a través de túneles de mantenimiento, finalmente alcanzáis el ascensor seguro al búnker privado de Idaho."
+Text/23/text,"Con Sasha y tus aliados a tu lado, finalmente confrontas a Idaho."
+Text/24/text,"Se acabó, Idaho. Tus secretos están expuestos. Cómo termina esto... [pulse freq=2]eso depende de ti.[/pulse]"
+Choice/25/text,Negocia una transición pacífica del poder (Diplomático)
+Choice/26/text,Exige el arresto inmediato de Idaho (Justicia)
+Choice/27/text,Ejecuta justicia vigilante por los crímenes de Idaho (Venganza)
+Choice/28/text,Concéntrate en desmantelar la infraestructura de la Reserva Raíz (Desmantelamiento)
+Text/29/text,"Idaho, no tiene por qué terminar con más derramamiento de sangre. Si cooperas..."
+Text/2a/text,"Oh, tú [color=STEEL_BLUE]idealista ingenuo[/color]. ¿Crees que esto es una negociación?"
+Text/2b/text,"Idaho aplasta un botón, y [color=RED]las alarmas comienzan a sonar[/color]. ""¡Lo único que os daré es un [color=DARK_VIOLET]viaje de ida a las cubas de fritura![/color]"""
+Text/2c/text,"No lo creo, Idaho. ¡Guardias! Visteis el expediente, [color=YELLOW]sabéis lo que les hizo a vuestras familias.[/color]"
+Text/2d/text,Un guardia corpulento da un paso adelante y derriba rápidamente a Idaho al suelo.
+Text/2e/text,Un disparo resuena por la cámara. La pantalla se oscurece.
+Text/2f/text,"Idaho, en nombre del pueblo patata de Spud, [color=CHARTREUSE]¡estás arrestado![/color]"
+Text/30/text,"Se acabó. El pueblo ha hablado. [color=CHARTREUSE]Construiremos un nuevo Spud donde nuestras raíces estén en la tierra, no en el sufrimiento.[/color]"
+Text/31/text,"No habrá [color=CRIMSON]acuerdos, ni misericordia[/color] para ti, Idaho. La justicia de un tirano es todo lo que mereces."
+Text/32/text,"Un ajuste de cuentas. Eso es lo que soy. [color=CHARTREUSE]¡Por cada patata sacrificada, recuperamos nuestro futuro![/color]"
+Text/33/text,"Olvidaos de él. Es un síntoma, no la enfermedad. [color=CHARTREUSE]Derribad cada raíz y tallo de esta monstruosidad.[/color]"
+Text/34/text,¡Tenemos que irnos! ¡Ahora!
+Text/35/text,La caída de la [color=DARK_VIOLET]Reserva Raíz[/color] enciende un incendio de cambio en todo Spud.
+Text/36/text,"Las patatas en cada provincia se levantan, abrazando una [color=CHARTREUSE]nueva visión para su nación[/color]."
+Text/37/text,"Mientras permanezcamos fieles a nuestras raíces, a los ideales que nos trajeron aquí... [color=CHARTREUSE]encontraremos un camino.[/color]"
+Text/38/text,"Y así, de las cenizas del viejo Spud, [color=CHARTREUSE]una nueva nación comienza a echar raíces[/color]. El reinado de la [color=DARK_VIOLET]Reserva Raíz[/color] ha terminado."
+Choice/15/disabled_text,
+Choice/28/disabled_text,
+Choice/27/disabled_text,
+Choice/26/disabled_text,
+Choice/25/disabled_text,
+Choice/16/disabled_text,

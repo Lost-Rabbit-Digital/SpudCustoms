@@ -1,0 +1,23 @@
+﻿keys,pl
+Text/a6/text,"Obiekt graniczny dzisiaj wydaje się inny. Napięty. Patrole bezpieczeństwa w większej liczbie, gdy ostrożna cisza zastępuje pogawędki."
+Text/a7/text,Zeszłej nocy odkryto [pulse freq=2][color=CRIMSON]zakazane materiały[/color][/pulse]. Ulotki zawierające kłamstwa na temat [color=DARK_VIOLET]Root Reserve[/color].
+Text/a8/text,Wdrażamy [wave amp=15 freq=2][color=DARK_ORANGE]protokoły poziomu zagrożenia POMARAŃCZOWEGO[/color][/wave]. Wszyscy funkcjonariusze podlegają kontroli lojalności. Wszyscy podróżni są poddawani maksymalnej kontroli.
+Text/a9/text,To działa. Ulotki się rozprzestrzeniają. Ludzie zadają pytania o [color=DARK_VIOLET]Root Reserve[/color].
+Text/aa/text,"Mam źródła, które mówią mi, że w biurze Russeta jest rejestr wysyłek - manifesty transportowe, które mogłyby [tornado radius=3 freq=2][color=CHARTREUSE]udowodnić wszystko[/color][/tornado]."
+Text/ab/text,"Potrzebuję twojej pomocy, żeby go zdobyć. Dziś wieczorem, po ostatniej zmianie. Czy mogę na ciebie liczyć?"
+Choice/ac/text,Jestem w to zaangażowany. Ujawnijmy prawdę.
+Choice/ad/text,"Nie wiem, Sasza... to może być niebezpieczne."
+Text/ae/text,"Dzięki Bogu. Wiedziałem, że masz [color=CHARTREUSE]silniejsze korzenie niż inni[/color]. Spotkamy się o północy."
+Text/af/text,"Czasami musimy [color=CHARTREUSE]zaryzykować zmiażdżenie, aby zrobić to, co słuszne[/color]. Pomyśl o tym."
+Text/b0/text,"[color=DARK_ORANGE]Kontrola lojalności[/color]. Proszę podać swoje imię i identyfikator funkcjonariusza. Następnie proszę powiedzieć, dlaczego służysz Spudowi."
+Choice/b1/text,"Służę, aby chronić nasze granice przed niebezpiecznymi wpływami."
+Choice/b2/text,"Służę, aby zapewnić wszystkim sprawiedliwe traktowanie."
+Text/b3/text,"Dobra odpowiedź. Spud potrzebuje lojalnych obrońców. Skaner pokazuje kolor zielony. Kontynuuj, funkcjonariuszu."
+Text/b4/text,"Brwi funkcjonariusza unoszą się. Sprawiedliwe traktowanie? Skaner miga na [color=DARK_ORANGE]bursztynowo[/color]. Pamiętaj, naszym głównym zmartwieniem jest bezpieczeństwo, nie sprawiedliwość."
+Text/b5/text,Dzisiejsza kwota została zwiększona. Każdy z podejrzanych materiałów ma być oznaczony do [color=DARK_VIOLET]specjalnego przetwarzania[/color].
+Text/b6/text,Będę [color=DARK_ORANGE]uważnie obserwować twoje decyzje[/color] dzisiaj.
+Text/b7/text,Dzisiejsza noc może wszystko zmienić. Ale najpierw [color=YELLOW]przetrwaj dzień bez wzbudzania podejrzeń[/color].
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,

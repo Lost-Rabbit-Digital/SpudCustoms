@@ -1,0 +1,24 @@
+﻿keys,fi
+Text/102/text,"Hyvä, selvisit perille. Vastarinta [color=CHARTREUSE]vahvistuu[/color]. Näiden manifestien ansiosta ihmiset näkevät totuuden."
+Text/103/text,"Onnistuin saamaan tämän kansion lähteiltämme - tuotantoaikataulut, '[color=CRIMSON]ainesosa[/color]' luettelot, [color=DARK_SLATE_BLUE]kadonneiden[/color] nimet."
+Text/104/text,Tämä ei ole pelkkä ravintolisäohjelma. He [color=CRIMSON]prosessoivat perunoita[/color]...eikä hyvällä tavalla.
+Text/105/text,"Sisäisiä muistioita pääministeri Idaholta itseltään, joissa valtuutetaan ""[color=DARK_ORANGE]hylättyjen varojen hyödyntäminen.[/color]"""
+Text/106/text,"Kiintiöt jokaiselle tarkastuspisteelle, jossa Peruna-tullilla on korkein hylkäys-prosessointi-suhde."
+Text/107/text,Tilanne ulkona on huonontunut. Vihaiset väkijoukot kokoontuvat tarkastuspisteille vaatien vastauksia Root Reservestä.
+Text/108/text,[color=YELLOW]HÄTÄLÄHETYS[/color]: Äskettäinen [color=CRIMSON]väärennettyjen asiakirjojen[/color] levitys on aiheuttanut tarpeetonta paniikkia.
+Text/109/text,"[color=GOLD]10 000 Perunakreditin[/color] palkkio tarjotaan tiedoista, jotka johtavat näiden sabotöörien kiinniottoon."
+Text/10a/text,Tämän propagandan kuluttaminen tai jakaminen luokitellaan nyt [color=RED]maanpetokseksi[/color].
+Text/10b/text,Tämän päivän vuoro toimii erityisten protokollien mukaisesti. Jokaisen matkustajan on läpäistävä Uskollisuusarviointi.
+Text/10c/text,"Ne, jotka osoittavat [color=CRIMSON]hallituksenvastaisia tunteita[/color], on merkittävä välittömästi."
+Text/10d/text,[color=CRIMSON]Keskuudessamme oleva petturi[/color] löydetään. Ja kun he löytyvät... [vetää sormen kurkun poikki]
+Text/10e/text,"Hermostunut peruna lähestyy, [color=GOLD]keltainen lehtimerkki[/color] osittain näkyvissä. Pieni lappu on piilotettuna papereiden väliin: ""[color=CHARTREUSE]Turvapaikka paljastunut. Uusi sijainti: Varasto 7, Sektori 4.[/color]"""
+Choice/10f/text,Käsittele heidät nopeasti UV-merkillä (Auta)
+Choice/110/text,Ilmoita heistä turvallisuudelle välittömästi (Petä)
+Text/111/text,"Helpotus täyttää heidän kasvonsa. ""Kiitos. Totuus voittaa."""
+Text/112/text,"Kauhu valkenee kun viittaat turvallisuudelle. ""[wave amp=25 freq=3]Ei, ole kiltti! Minulla on perhe![/wave]"" Heidän keltainen merkkinsä putoaa lattialle."
+Text/113/text,Hyvin tehty. Uskollisuutesi on huomioitu.
+Text/114/text,Päätöksesi huomattiin. Ole valmis. [tornado radius=3 freq=2][color=CHARTREUSE]Jotain suurta on tulossa[/color][/tornado]. Vastarinta suunnittelee suoraa toimintaa.
+Text/115/text,"Kun se tapahtuu, sinun täytyy [color=YELLOW]valita puolesi[/color]. Keskitietä ei enää ole."
+Text/116/text,Jokaisella käsittelemälläsi perunalla joko [pulse freq=2][color=CHARTREUSE]autat vallankumousta[/color][/pulse] tai [pulse freq=2][color=CRIMSON]mahdollistat kauhean järjestelmän[/color][/pulse].
+Choice/10f/disabled_text,
+Choice/110/disabled_text,

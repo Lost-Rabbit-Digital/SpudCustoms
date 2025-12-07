@@ -2,12 +2,15 @@
 """
 Comprehensive translation management tool for Spud Customs.
 Handles translation checking, fixing, and API translation for multi-language CSV files.
+Supports both combined CSVs and per-language file formats.
 
 Usage:
     python translate_with_gemini.py                    # Translate ALL untranslated keys
     python translate_with_gemini.py --check            # Check for missing/untranslated keys
     python translate_with_gemini.py --file game.csv    # Translate specific file only
     python translate_with_gemini.py --dry-run          # Show what would be translated without making changes
+    python translate_with_gemini.py --split            # Split combined CSVs into per-language files
+    python translate_with_gemini.py --merge            # Merge per-language files into combined CSVs
 
 Note: The translate function automatically detects ALL keys that match English values
 and translates them across all language columns.
@@ -46,27 +49,53 @@ REQUEST_INTERVAL = 60.0 / MAX_REQUESTS_PER_MINUTE
 MAX_CONCURRENT_REQUESTS = 100  # Higher concurrency for Flash model
 BATCH_SIZE = 25  # Items per API request (increased from 15)
 
-# Language mapping - columns in CSV files (excluding 'keys' and 'en')
-LANGUAGE_COLUMNS = {
-    'cs': 'Czech',
-    'da': 'Danish',
-    'de': 'German',
-    'es': 'Spanish',
-    'fi': 'Finnish',
-    'fr': 'French',
-    'hu': 'Hungarian',
-    'id': 'Indonesian',
-    'it': 'Italian',
-    'nl': 'Dutch',
-    'no': 'Norwegian',
-    'pl': 'Polish',
-    'pt': 'Portuguese',
-    'ro': 'Romanian',
-    'sk': 'Slovak',
-    'sv': 'Swedish',
-    'tr': 'Turkish',
-    'vi': 'Vietnamese'
+# ═══════════════════════════════════════════════════════════
+# ALL STEAM SUPPORTED LANGUAGES (31 total)
+# ═══════════════════════════════════════════════════════════
+
+# Complete mapping of all Steam-supported languages
+# Format: 'code': ('Full Name', 'Native Name')
+ALL_STEAM_LANGUAGES = {
+    'ar': ('Arabic', 'العربية'),
+    'bg': ('Bulgarian', 'Български'),
+    'cs': ('Czech', 'Čeština'),
+    'da': ('Danish', 'Dansk'),
+    'de': ('German', 'Deutsch'),
+    'el': ('Greek', 'Ελληνικά'),
+    'en': ('English', 'English'),
+    'es': ('Spanish', 'Español'),
+    'es-419': ('Spanish (Latin America)', 'Español (Latinoamérica)'),
+    'fi': ('Finnish', 'Suomi'),
+    'fr': ('French', 'Français'),
+    'hu': ('Hungarian', 'Magyar'),
+    'id': ('Indonesian', 'Bahasa Indonesia'),
+    'it': ('Italian', 'Italiano'),
+    'ja': ('Japanese', '日本語'),
+    'ko': ('Korean', '한국어'),
+    'nl': ('Dutch', 'Nederlands'),
+    'no': ('Norwegian', 'Norsk'),
+    'pl': ('Polish', 'Polski'),
+    'pt': ('Portuguese', 'Português'),
+    'pt-BR': ('Portuguese (Brazil)', 'Português (Brasil)'),
+    'ro': ('Romanian', 'Română'),
+    'ru': ('Russian', 'Русский'),
+    'sk': ('Slovak', 'Slovenčina'),
+    'sv': ('Swedish', 'Svenska'),
+    'th': ('Thai', 'ไทย'),
+    'tr': ('Turkish', 'Türkçe'),
+    'uk': ('Ukrainian', 'Українська'),
+    'vi': ('Vietnamese', 'Tiếng Việt'),
+    'zh-CN': ('Chinese (Simplified)', '简体中文'),
+    'zh-TW': ('Chinese (Traditional)', '繁體中文'),
 }
+
+# Language mapping for translation (excluding 'en')
+LANGUAGE_COLUMNS = {code: name for code, (name, _) in ALL_STEAM_LANGUAGES.items() if code != 'en'}
+
+# Ordered list of language codes for CSV columns (consistent ordering)
+LANGUAGE_ORDER = ['en', 'ar', 'bg', 'cs', 'da', 'de', 'el', 'es', 'es-419', 'fi', 'fr',
+                  'hu', 'id', 'it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt', 'pt-BR',
+                  'ro', 'ru', 'sk', 'sv', 'th', 'tr', 'uk', 'vi', 'zh-CN', 'zh-TW']
 
 # Game context for translation prompt
 GAME_CONTEXT = """Spud Customs - A border checkpoint simulation game where you play as a potato inspector.
@@ -85,17 +114,47 @@ def get_translations_dir():
     return script_dir / 'translations'
 
 
-def get_csv_files(specific_file=None):
-    """Get list of CSV files to process."""
-    translations_dir = get_translations_dir()
+def get_per_language_dir():
+    """Get the per-language translations directory path."""
+    return get_translations_dir() / 'per_language'
+
+
+def get_combined_dir():
+    """Get the combined translations directory path."""
+    return get_translations_dir() / 'combined'
+
+
+def ensure_dirs():
+    """Ensure all translation directories exist."""
+    get_per_language_dir().mkdir(parents=True, exist_ok=True)
+    get_combined_dir().mkdir(parents=True, exist_ok=True)
+
+
+def get_csv_files(specific_file=None, use_combined=True):
+    """Get list of CSV files to process.
+
+    Args:
+        specific_file: Process only this file if specified
+        use_combined: If True, use combined dir; if False, use root translations dir
+    """
+    if use_combined:
+        translations_dir = get_combined_dir()
+        if not translations_dir.exists():
+            # Fall back to root translations directory
+            translations_dir = get_translations_dir()
+    else:
+        translations_dir = get_translations_dir()
 
     if specific_file:
         csv_file = translations_dir / specific_file
         if csv_file.exists():
             return [csv_file]
-        else:
-            print(f"ERROR: File not found: {csv_file}")
-            return []
+        # Try root dir if not in combined
+        csv_file = get_translations_dir() / specific_file
+        if csv_file.exists():
+            return [csv_file]
+        print(f"ERROR: File not found: {specific_file}")
+        return []
 
     # Get all translation CSV files (exclude .import files and non-translation CSVs)
     csv_files = []
@@ -104,6 +163,14 @@ def get_csv_files(specific_file=None):
         if f.suffix == '.import':
             continue
         csv_files.append(f)
+
+    # Also check root translations dir for legacy files
+    if use_combined:
+        for f in sorted(get_translations_dir().glob('*.csv')):
+            if f.suffix == '.import':
+                continue
+            if f not in csv_files:
+                csv_files.append(f)
 
     return csv_files
 
@@ -176,16 +243,232 @@ def find_untranslated_cells(headers, rows):
         # Check each language column
         for lang_code in LANGUAGE_COLUMNS.keys():
             lang_idx = get_language_index(headers, lang_code)
-            if lang_idx == -1 or lang_idx >= len(row):
+            if lang_idx == -1:
+                # Language column doesn't exist - treat as untranslated
+                untranslated[row_idx][lang_code] = en_value
                 continue
 
-            lang_value = row[lang_idx] if lang_idx < len(row) else ''
+            if lang_idx >= len(row):
+                # Row doesn't have this column - treat as untranslated
+                untranslated[row_idx][lang_code] = en_value
+                continue
 
-            # If language value matches English exactly, it's untranslated
-            if lang_value == en_value:
+            lang_value = row[lang_idx]
+
+            # If language value matches English exactly or is empty, it's untranslated
+            if lang_value == en_value or not lang_value:
                 untranslated[row_idx][lang_code] = en_value
 
     return untranslated
+
+
+# ═══════════════════════════════════════════════════════════
+# MODE: SPLIT COMBINED CSVs INTO PER-LANGUAGE FILES
+# ═══════════════════════════════════════════════════════════
+
+def split_csv_to_per_language(csv_file):
+    """Split a combined CSV file into per-language files.
+
+    Input: menus.csv with columns (keys, en, fr, de, ...)
+    Output: per_language/menus_en.csv, per_language/menus_fr.csv, ...
+    """
+    headers, rows = read_csv_file(csv_file)
+    if not headers or not rows:
+        return 0
+
+    base_name = csv_file.stem  # e.g., "menus"
+    per_lang_dir = get_per_language_dir()
+    per_lang_dir.mkdir(parents=True, exist_ok=True)
+
+    files_created = 0
+    key_idx = get_language_index(headers, 'keys')
+    if key_idx == -1:
+        key_idx = 0  # Assume first column is keys
+
+    # Process each language
+    for lang_code in LANGUAGE_ORDER:
+        lang_idx = get_language_index(headers, lang_code)
+        if lang_idx == -1:
+            continue
+
+        # Create per-language file
+        lang_file = per_lang_dir / f"{base_name}_{lang_code}.csv"
+        lang_headers = ['keys', lang_code]
+        lang_rows = []
+
+        for row in rows:
+            key = row[key_idx] if key_idx < len(row) else ''
+            value = row[lang_idx] if lang_idx < len(row) else ''
+            lang_rows.append([key, value])
+
+        write_csv_file(lang_file, lang_headers, lang_rows)
+        files_created += 1
+
+    return files_created
+
+
+def split_all_csvs():
+    """Split all combined CSV files into per-language files."""
+    ensure_dirs()
+    csv_files = get_csv_files(use_combined=False)
+
+    if not csv_files:
+        print("No CSV files found to split")
+        return
+
+    print("=" * 80)
+    print("SPLITTING COMBINED CSVs TO PER-LANGUAGE FILES")
+    print("=" * 80)
+
+    total_files = 0
+    for csv_file in csv_files:
+        files_created = split_csv_to_per_language(csv_file)
+        if files_created > 0:
+            print(f"  {csv_file.name}: Created {files_created} language files")
+            total_files += files_created
+
+    print(f"\nTotal per-language files created: {total_files}")
+    print(f"Output directory: {get_per_language_dir()}")
+
+
+# ═══════════════════════════════════════════════════════════
+# MODE: MERGE PER-LANGUAGE FILES INTO COMBINED CSVs
+# ═══════════════════════════════════════════════════════════
+
+def merge_per_language_to_combined():
+    """Merge per-language CSV files back into combined format.
+
+    Input: per_language/menus_en.csv, per_language/menus_fr.csv, ...
+    Output: combined/menus.csv
+    """
+    ensure_dirs()
+    per_lang_dir = get_per_language_dir()
+    combined_dir = get_combined_dir()
+
+    if not per_lang_dir.exists():
+        print(f"Per-language directory not found: {per_lang_dir}")
+        return
+
+    # Group files by base name
+    file_groups = defaultdict(dict)  # {base_name: {lang_code: file_path}}
+
+    for lang_file in per_lang_dir.glob('*.csv'):
+        # Parse filename: menus_en.csv -> base=menus, lang=en
+        parts = lang_file.stem.rsplit('_', 1)
+        if len(parts) != 2:
+            continue
+        base_name, lang_code = parts
+
+        # Handle special case for es-419, pt-BR, zh-CN, zh-TW
+        # These might be stored as menus_es-419.csv
+        if lang_code in ['419', 'BR', 'CN', 'TW']:
+            # Check for hyphenated codes
+            parts2 = lang_file.stem.rsplit('_', 2)
+            if len(parts2) >= 2:
+                potential_lang = f"{parts2[-2]}-{parts2[-1]}"
+                if potential_lang in ALL_STEAM_LANGUAGES:
+                    base_name = '_'.join(parts2[:-2]) if len(parts2) > 2 else parts2[0].rsplit('-', 1)[0]
+                    lang_code = potential_lang
+
+        if lang_code in ALL_STEAM_LANGUAGES:
+            file_groups[base_name][lang_code] = lang_file
+
+    print("=" * 80)
+    print("MERGING PER-LANGUAGE FILES TO COMBINED CSVs")
+    print("=" * 80)
+
+    for base_name, lang_files in sorted(file_groups.items()):
+        # Start with English as the base
+        if 'en' not in lang_files:
+            print(f"  WARNING: {base_name} has no English file, skipping")
+            continue
+
+        # Read English file to get all keys
+        en_headers, en_rows = read_csv_file(lang_files['en'])
+        if not en_rows:
+            continue
+
+        # Build combined data structure
+        keys = [row[0] if row else '' for row in en_rows]
+        translations = {lang: {} for lang in LANGUAGE_ORDER}
+
+        # Read each language file
+        for lang_code, lang_file in lang_files.items():
+            headers, rows = read_csv_file(lang_file)
+            for row in rows:
+                if len(row) >= 2:
+                    key, value = row[0], row[1]
+                    translations[lang_code][key] = value
+
+        # Build combined headers and rows
+        combined_headers = ['keys'] + [lang for lang in LANGUAGE_ORDER if lang in lang_files]
+        combined_rows = []
+
+        for key in keys:
+            row = [key]
+            for lang in LANGUAGE_ORDER:
+                if lang in lang_files:
+                    row.append(translations[lang].get(key, ''))
+            combined_rows.append(row)
+
+        # Write combined file
+        combined_file = combined_dir / f"{base_name}.csv"
+        write_csv_file(combined_file, combined_headers, combined_rows)
+        print(f"  {base_name}.csv: Merged {len(lang_files)} languages, {len(keys)} keys")
+
+    print(f"\nOutput directory: {combined_dir}")
+
+
+# ═══════════════════════════════════════════════════════════
+# MODE: ADD MISSING LANGUAGE COLUMNS
+# ═══════════════════════════════════════════════════════════
+
+def add_missing_language_columns(csv_file):
+    """Add missing language columns to a combined CSV file."""
+    headers, rows = read_csv_file(csv_file)
+    if not headers or not rows:
+        return False
+
+    # Check which languages are missing
+    missing_langs = []
+    for lang_code in LANGUAGE_ORDER:
+        if get_language_index(headers, lang_code) == -1:
+            missing_langs.append(lang_code)
+
+    if not missing_langs:
+        return False
+
+    # Add missing language columns
+    en_idx = get_language_index(headers, 'en')
+
+    for lang_code in missing_langs:
+        headers.append(lang_code)
+        for row in rows:
+            # Initialize with English value (will be translated later)
+            en_value = row[en_idx] if en_idx != -1 and en_idx < len(row) else ''
+            row.append(en_value)
+
+    write_csv_file(csv_file, headers, rows)
+    return True
+
+
+def add_all_missing_columns():
+    """Add missing language columns to all CSV files."""
+    csv_files = get_csv_files(use_combined=False)
+
+    print("=" * 80)
+    print("ADDING MISSING LANGUAGE COLUMNS")
+    print("=" * 80)
+
+    for csv_file in csv_files:
+        headers, _ = read_csv_file(csv_file)
+        missing = [lang for lang in LANGUAGE_ORDER if get_language_index(headers, lang) == -1]
+
+        if missing:
+            add_missing_language_columns(csv_file)
+            print(f"  {csv_file.name}: Added {len(missing)} languages: {', '.join(missing)}")
+        else:
+            print(f"  {csv_file.name}: All languages present")
 
 
 # ═══════════════════════════════════════════════════════════
@@ -194,7 +477,7 @@ def find_untranslated_cells(headers, rows):
 
 def check_translations(specific_file=None):
     """Check all CSV files for untranslated content."""
-    csv_files = get_csv_files(specific_file)
+    csv_files = get_csv_files(specific_file, use_combined=False)
 
     if not csv_files:
         print("No CSV files found to check")
@@ -202,6 +485,7 @@ def check_translations(specific_file=None):
 
     total_untranslated = 0
     files_with_issues = 0
+    missing_languages = defaultdict(set)
 
     print("=" * 80)
     print("TRANSLATION CHECK REPORT")
@@ -212,6 +496,11 @@ def check_translations(specific_file=None):
 
         if not headers or not rows:
             continue
+
+        # Check for missing language columns
+        for lang_code in LANGUAGE_ORDER:
+            if get_language_index(headers, lang_code) == -1:
+                missing_languages[csv_file.name].add(lang_code)
 
         untranslated = find_untranslated_cells(headers, rows)
 
@@ -244,10 +533,17 @@ def check_translations(specific_file=None):
     print(f"Files with untranslated content: {files_with_issues}")
     print(f"Total untranslated cells: {total_untranslated}")
 
-    if total_untranslated == 0:
+    if missing_languages:
+        print(f"\nFiles missing language columns:")
+        for filename, langs in sorted(missing_languages.items()):
+            print(f"  {filename}: {', '.join(sorted(langs))}")
+
+    if total_untranslated == 0 and not missing_languages:
         print("\n✅ All translations are complete!")
     else:
         print(f"\n⚠️  Found {total_untranslated} cells that need translation")
+        if missing_languages:
+            print(f"   Run with --add-columns to add missing language columns")
         print("   Run without --check to translate them")
 
 
@@ -509,7 +805,15 @@ async def translate_file_async(session, csv_file, semaphore, rate_limiter, progr
     modified = False
     for (lang_code, batch), (translations, input_tokens, output_tokens) in zip(task_metadata, results):
         lang_idx = get_language_index(headers, lang_code)
-        if lang_idx != -1 and translations:
+
+        # Add column if missing
+        if lang_idx == -1:
+            headers.append(lang_code)
+            lang_idx = len(headers) - 1
+            for row in rows:
+                row.append('')
+
+        if translations:
             for (row_idx, key), en_value in batch.items():
                 if key in translations:
                     # Extend row if needed
@@ -552,7 +856,7 @@ async def translate_with_gemini_async(specific_file=None, dry_run=False):
         print("Get your API key from: https://aistudio.google.com/apikey")
         return
 
-    csv_files = get_csv_files(specific_file)
+    csv_files = get_csv_files(specific_file, use_combined=False)
 
     if not csv_files:
         print("No CSV files found to translate")
@@ -563,6 +867,7 @@ async def translate_with_gemini_async(specific_file=None, dry_run=False):
     print(f"   Rate limit: {MAX_REQUESTS_PER_MINUTE} requests/minute")
     print(f"   Batch size: {BATCH_SIZE} keys per request")
     print(f"   Max concurrent: {MAX_CONCURRENT_REQUESTS} requests")
+    print(f"   Languages: {len(LANGUAGE_COLUMNS)} target languages")
     print()
 
     # Count total untranslated cells
@@ -621,11 +926,14 @@ def main():
         description='Translation management tool for Spud Customs',
         epilog='''
 Examples:
-  %(prog)s                    # Translate all untranslated content
-  %(prog)s --check            # Check for missing/untranslated content
-  %(prog)s --file game.csv    # Translate specific file only
-  %(prog)s --dry-run          # Preview what would be translated
-  %(prog)s --check --file menus.csv  # Check specific file
+  %(prog)s                      # Translate all untranslated content
+  %(prog)s --check              # Check for missing/untranslated content
+  %(prog)s --file game.csv      # Translate specific file only
+  %(prog)s --dry-run            # Preview what would be translated
+  %(prog)s --split              # Split combined CSVs to per-language files
+  %(prog)s --merge              # Merge per-language files to combined CSVs
+  %(prog)s --add-columns        # Add missing language columns to CSVs
+  %(prog)s --list-languages     # List all supported Steam languages
         ''',
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
@@ -636,10 +944,41 @@ Examples:
                         help='Process only a specific CSV file (e.g., game.csv)')
     parser.add_argument('--dry-run', action='store_true',
                         help='Show what would be translated without making changes')
+    parser.add_argument('--split', action='store_true',
+                        help='Split combined CSVs into per-language files')
+    parser.add_argument('--merge', action='store_true',
+                        help='Merge per-language files into combined CSVs')
+    parser.add_argument('--add-columns', action='store_true',
+                        help='Add missing language columns to existing CSVs')
+    parser.add_argument('--list-languages', action='store_true',
+                        help='List all supported Steam languages')
 
     args = parser.parse_args()
 
-    # Execute requested mode
+    # Handle different modes
+    if args.list_languages:
+        print("=" * 80)
+        print("ALL STEAM SUPPORTED LANGUAGES (31 total)")
+        print("=" * 80)
+        print(f"{'Code':<10} {'Language Name':<30} {'Native Name':<20}")
+        print("-" * 60)
+        for code in LANGUAGE_ORDER:
+            name, native = ALL_STEAM_LANGUAGES[code]
+            print(f"{code:<10} {name:<30} {native:<20}")
+        return
+
+    if args.split:
+        split_all_csvs()
+        return
+
+    if args.merge:
+        merge_per_language_to_combined()
+        return
+
+    if args.add_columns:
+        add_all_missing_columns()
+        return
+
     if args.check:
         check_translations(args.file)
     else:

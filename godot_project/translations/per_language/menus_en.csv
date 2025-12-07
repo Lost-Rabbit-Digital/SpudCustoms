@@ -1,0 +1,211 @@
+﻿keys,en
+main_menu_feedback,Feedback and Bugs
+main_menu_version,Version 1.2.0
+main_menu_new_game,New Game
+main_menu_continue,Continue
+main_menu_level_select,Level Select
+main_menu_score_attack,Score Attack
+main_menu_options,Options
+main_menu_credits,Credits
+main_menu_exit,Exit
+select_language,Language
+social_discord_tooltip,Join our Discord!
+social_steam_tooltip,Visit us on Steam
+social_twitch_tooltip,Twitch Integration
+twitch_status_disabled,Disabled
+twitch_status_no_viewers,No viewers in pool
+twitch_status_ready,{count} viewers ready
+twitch_connection_disabled,Disabled
+twitch_connection_disconnected,Disconnected
+twitch_connection_connected,Connected
+twitch_connection_connecting,Connecting...
+options_menu_title,Options
+options_difficulty,Difficulty
+options_difficulty_easy,Easy
+options_difficulty_normal,Normal
+options_difficulty_expert,Expert
+options_music_volume,Music Volume
+options_sfx_volume,Sound Effects Volume
+options_camera_shake,Camera Shake
+options_back,Back
+paused_menu_title,Paused
+shift_summary_title,SHIFT SUMMARY
+shift_summary_continue,Continue
+shift_summary_restart,Restart
+shift_summary_main_menu,Main Menu
+shift_summary_submit_score,Submit Score
+shift_summary_runner_stats,RUNNER STATS
+shift_summary_document_stats,DOCUMENT STATS
+shift_summary_performance,PERFORMANCE
+shift_summary_bonuses,BONUSES
+_FORMAT KEYS,
+time_format,{minutes}m {seconds}s
+_SHIFT SUMMARY DETAILS,
+shift_complete_success,SHIFT {shift} COMPLETE\nSUCCESS!
+shift_complete_failure,SHIFT {shift} COMPLETE\n{failure}
+strike_limit_reached,STRIKE LIMIT REACHED!
+quota_not_met,QUOTA NOT MET!
+shift_summary_title_with_difficulty,SHIFT SUMMARY\n{difficulty}
+runner_stats_template,\nRUNNER STATS\nRunner Attempts: {runner_attempts}\nMissiles Fired: {fired}\nRunners Hit: {hit}\nPerfect Hits: {perfect}\nHit Rate: {rate}%
+document_stats_template,\nDOCUMENT STATS\nDocuments Stamped: {stamped}\nPotatoes Approved: {approved}\nPotatoes Rejected: {rejected}\nPerfect Stamps: {perfect_stamps}
+bonus_stats_template,BONUSES\nProcessing Speed Bonus: {processing_speed_bonus}\nStamp Accuracy Bonus: {accuracy}\nPerfect Hits Bonus: {perfect_hit_bonus}\nTotal Score Bonus: {total_score_bonus}
+performance_stats_template,\nPERFORMANCE\nTime Taken: {time_taken}\nExpected Score: {expected_score}\nTotal Score: {score}\nOver-Score Percentage: {percent}%\nPerformance Rating:\n{rating}
+performance_exceptional,Exceptional!
+performance_excellent,Excellent!
+performance_good,Good
+performance_needs_improvement,Needs Improvement
+performance_poor,Poor
+global_leaderboard_title,Global Leaderboard\n- {difficulty}
+getting_leaderboard_scores,Getting leaderboard scores...
+_PAUSE OPTIONS OVERLAY,
+reset_game_label,Reset Game :
+reset_game_button,Reset
+mute_label,Mute
+fullscreen_label,Fullscreen :
+resolution_label,Resolution :
+antialiasing_label,Anti-Aliasing :
+screenshake_label,Screen Shake :
+mouse_sens_label,Mouse Sensitivity :
+___ LOADING SCREEN,
+Loading…,Loading...
+___ DIALOGS IN GAME,
+You lose.,You lose.
+You won!,You won!
+Thanks for playing!,Thanks for playing!
+Please Confirm...,Please Confirm...
+Go back to main menu?,Go back to main menu?
+Quit the game?,Quit the game?
+Cancel,Cancel
+OK,OK
+___ OPTIONS MENU,
+Controls,Controls
+Mouse Sensitivity :,Mouse Sensitivity :
+Actions & Inputs,Actions & Inputs
+Add,Add
+Remove,Remove
+Assign Key for {action},Assign Key for {action}
+Listening for input...,Listening for input...
+Press again to confirm...,Press again to confirm...
+Focus here to assign inputs.,Focus here to assign inputs.
+Already Assigned,Already Assigned
+{key} already assigned to {action}.,{key} already assigned to {action}.
+Remove Key for {action},Remove Key for {action}
+Are you sure you want to remove {key} from {action}?,Are you sure you want to remove {key} from {action}?
+Reset,Reset
+Audio,Audio
+Master :,Master :
+Music :,Music :
+SFX :,SFX :
+Ambient :,Ambient :
+Mute :,Mute :
+Video,Video
+Fullscreen :,Fullscreen :
+Resolution :,Resolution :
+Anti-Aliasing :,Anti-Aliasing :
+Disabled (Fastest),Disabled (Fastest)
+8x (Slowest),8x (Slowest)
+Camera Shake :,Camera Shake :
+Normal,Normal
+Reduced,Reduced
+Minimal,Minimal
+None,None
+Game,Game
+Reset Game :,Reset Game :
+Do you want to reset your game data?,Do you want to reset your game data?
+Back,Back
+_INGAME DIALOGUE,
+TAKE THEM!,TAKE THEM!
+"Take your documents, please.","Take your documents, please."
+_SHIFT SUMMARY SCREEN,
+Continue,Continue
+Main Menu,Main Menu
+Submit Score,Submit Score
+Restart,Restart
+SHIFT SUMMARY,SHIFT SUMMARY
+_DIFFICULTY LEVELS,
+Easy,Easy
+Normal,Normal
+Expert,Expert
+Primary,Primary
+Secondary,Secondary
+Primary Interaction,Primary Interaction
+Secondary Interaction,Secondary Interaction
+Cancel Interaction,Cancel Interaction
+Escape,Escape
+Dialogic Default Action,Dialogic Default Action
+Enter,Enter
+Left Mouse Button,Left Mouse Button
+Right Mouse Button,Right Mouse Button
+_NEW GAME CONFIRMATION,
+Start New Game,Start New Game
+Starting a new game will reset your progress. Are you sure you want to continue?,Starting a new game will reset your progress. Are you sure you want to continue?
+"Yes, Start New Game","Yes, Start New Game"
+Skip,Skip
+History,History
+Return,Return
+Restart the game?,Restart the game?
+_HELP MENU,
+help_menu_button,Help
+help_menu_title,How to Play
+help_tab_basics,Basics
+help_tab_gameplay,Gameplay
+help_tab_minigames,Minigames
+help_basics_intro,"[b]Welcome to Spud Customs![/b]
+
+You are a border officer at a potato customs checkpoint. Your job is to inspect documents, approve or reject immigrants, and stop those who try to run the border."
+help_basics_gate,"[b]Opening the Gate[/b]
+Click the gate button or use the megaphone to call the next potato to your booth."
+help_basics_documents,"[b]Inspecting Documents[/b]
+Drag documents to your desk to inspect them. Check names, dates, and other details against the immigration rules for the current shift."
+help_basics_stamping,"[b]Stamping Documents[/b]
+Use the APPROVED (green) stamp to let immigrants through, or the DENIED (red) stamp to reject them. Stamp accuracy affects your score!"
+help_basics_runners,"[b]Border Runners[/b]
+Some potatoes will try to run past the checkpoint! Click to fire missiles and stop them. Perfect timing gives bonus points."
+help_basics_xray,"[b]X-Ray Scanner[/b]
+Starting in Shift 3, use the X-ray machine to scan potatoes for hidden contraband."
+help_gameplay_quota,"[b]Meeting Quota[/b]
+Each shift has a quota of potatoes you must process. Fail to meet the quota and you'll be fired!"
+help_gameplay_strikes,"[b]Strikes[/b]
+Making mistakes (wrong approvals/rejections, missed runners) gives you strikes. Too many strikes and it's game over!"
+help_gameplay_rules,"[b]Immigration Rules[/b]
+Check the bulletin board for current rules. Rules change each shift - banned regions, required documents, and special conditions."
+help_gameplay_scoring,"[b]Scoring[/b]
+Earn points for correct decisions, perfect stamps, and stopping runners. Bonuses are awarded for speed and accuracy!"
+help_gameplay_difficulty,"[b]Difficulty Levels[/b]
+Easy: More lenient timing, fewer rules. Normal: Standard experience. Expert: Strict timing, complex rules, higher scores."
+help_minigames_intro,"[b]Minigames[/b]
+Throughout your shifts, you'll encounter minigames that can earn bonus points. Complete them for rewards or skip without penalty."
+help_minigames_document_scanner,"[b]Document Scanner[/b] (Shift 1+)
+Use UV light to find hidden elements on documents. Click to mark watermarks, stamps, and symbols. Find all elements before time runs out!"
+help_minigames_stamp_sorting,"[b]Stamp Sorting[/b] (Shift 2+)
+Sort falling stamps into the correct bins. Green stamps go to APPROVED, red stamps go to DENIED. Sort quickly for bonus points!"
+help_minigames_fingerprint_match,"[b]Fingerprint Match[/b] (Shift 3+)
+Match fingerprints from the grid to the reference pattern. Click matching prints to verify identity. Careful observation required!"
+help_minigames_code_breaker,"[b]Code Breaker[/b] (Shift 4+)
+Crack the secret code! Guess the 4-digit combination. Green means correct position, yellow means wrong position. Limited attempts!"
+help_minigames_border_chase,"[b]Border Chase[/b] (Shift 5+)
+Contraband on the conveyor! Click RED items to confiscate them. Let GREEN items pass through. Fast reflexes earn more points!"
+help_tab_lore,Lore
+help_lore_world_intro,"[b]The World of Spud[/b]
+
+Welcome to a land where potatoes have built their own civilization. In this world, tubers walk, talk, and have formed their own nation with laws, borders, and bureaucracy."
+help_lore_nation,"[b]The Nation of Spud[/b]
+
+Spud is a proud nation that promises prosperity for all potatoes. Protected by the Great Wall of Spud, the nation maintains strict border controls to ensure only worthy tubers may enter.
+
+The government promotes unity and obedience, with patriotic citizens often heard proclaiming: ""Glory to Spud!"""
+help_lore_your_role,"[b]Your Role[/b]
+
+You have been selected for a crucial role in protecting the borders. As a Customs Officer, you work under the watchful eye of Supervisor Russet.
+
+Your family's well-being depends on your performance. Meet your quotas, follow the rules, and remember: the nation is counting on you."
+help_lore_border,"[b]The Great Wall[/b]
+
+The mighty Great Wall of Spud safeguards the nation from outsiders. At various checkpoints along the wall, officers like yourself ensure only the worthy may enter.
+
+Those who attempt to run the border without proper documentation face immediate consequences."
+help_lore_secrets,"[b]Root Reserve[/b]
+
+Rejected potatoes are... processed. According to protocol. The mysterious Root Reserve handles all the details.
+
+It's best not to ask too many questions. Focus on your duties. Nothing more."

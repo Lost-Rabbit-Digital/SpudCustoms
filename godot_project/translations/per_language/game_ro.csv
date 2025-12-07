@@ -1,0 +1,52 @@
+﻿keys,ro
+alert_border_runner,FUGARUL DE FRONTIERĂ DETECTAT!\nApasă pentru a lansa racheta!
+alert_rejected_fleeing,CARTOF RESPINS FUGIND!\nApasă pentru a lansa racheta!
+alert_runner_escaped,FUGAR SCĂPAT!\nStrike adăugat!
+alert_points_deducted,FUGAR SCĂPAT!\nStrike adăugat!\n-{penalty} puncte!
+alert_perfect_hit,LOVITURĂ PERFECTĂ! +{perfect} puncte bonus de precizie
+alert_perfect_stamp,ȘTAMPILĂ PERFECTĂ! +{points} puncte!
+alert_combo,COMBO x{mult}! +{streak} puncte bonus combo
+alert_quota_met,"Cotă îndeplinită, tură terminată! \nBonus: {bonus} puncte!"
+alert_strike_removed,Strike eliminat!
+alert_correct_decision,"Ai luat decizia corectă, ofițer.\n+{points} puncte!"
+alert_wrong_decision,"Ai cauzat suferință inutilă, ofițer...\n+1 Strike!"
+alert_potato_should_be_approved,\nAcest cartof îndeplinește toate cerințele și ar fi trebuit aprobat.
+alert_strike_out,Număr maxim de strike-uri depășit! Tura ta s-a încheiat.
+ui_score,Scor: {score}
+ui_quota,Cotă: {current} / {target}
+ui_strikes,Strike-uri: {current} / {max}
+ui_click_megaphone,Apasă megafonul pentru a chema următorul cartof
+ui_drag_document,Trage documentul la masa de inspecție
+ui_stamp_document,Selectează o ștampilă pentru a aproba sau respinge
+ui_check_violations,Verifică încălcările documentului
+Strike removed!,Strike eliminat!
+BORDER RUNNER DETECTED!\nClick to launch missile!,FUGARUL DE FRONTIERĂ DETECTAT!\nApasă pentru a lansa racheta!
+REJECTED POTATO FLEEING!\nClick to launch missile!,CARTOF RESPINS FUGIND!\nApasă pentru a lansa racheta!
+RUNNER ESCAPED!\nStrike added!,FUGAR SCĂPAT!\nStrike adăugat!
+Click megaphone to call the next potato,Apasă megafonul pentru a chema următorul cartof
+Drag document to inspection table,Trage documentul la masa de inspecție
+Select a stamp to approve or reject,Selectează o ștampilă pentru a aproba sau respinge
+Check for document violations,Verifică încălcările documentului
+rule_explanation_header,EXPLICAȚIA REGULII:
+rule_explanation_fresh,Olhe para o campo 'Condição'. Se disser algo diferente de 'Fresco' - REJEITAR
+rule_explanation_sweet_potato,Priviți câmpul 'Tip'. Dacă spune 'Cartof Dulce' - RESPINGE (fără permise)
+rule_explanation_chip_hill,Priviți câmpul 'Țară'. Dacă spune 'Chip Hill' - RESPINGE (interzis)
+rule_explanation_age,Priviți câmpul 'Data Nașterii'. Calculați vârsta și verificați împotriva regulii
+rule_explanation_gender,Priviți câmpul 'Gen' și verificați împotriva regulii actuale
+rule_footer_text,Aceste reguli trebuie aplicate pentru TOȚI cartofii
+rule_tutorial_hint,Precisa de ajuda? Clique em qualquer regra para uma explicação
+alert_correct_decision_detailed,DECIZIE CORECTĂ! +{points} puncte\n{reason}
+alert_wrong_decision_detailed,DECIZIE GREȘITĂ! Strike adăugat!\n{reason}
+alert_reason_approved,Cartofii îndeplinesc toate cerințele - APROBAT
+alert_reason_should_reject,Ar fi trebuit să RESPINGI acest cartof
+tutorial_check_type,Verificați câmpul 'Tip' din pașaport
+tutorial_check_condition,Verificați câmpul 'Condiție' din pașaport
+tutorial_check_country,Verificați câmpul 'Țară' din pașaport
+tutorial_check_age,Verificați 'Data Nașterii' pentru a calcula vârsta
+tutorial_check_gender,Verificați câmpul 'Gen' din pașaport
+alert_streak_bonus_minigame,5 la rând! MINIJOC BONUS!
+alert_perfect_stamps_bonus_minigame,Ștampile perfecte! MINIJOC BONUS!
+alert_new_minigame_unlocked,Minijoc nou deblocat: {name}!
+alert_minigame_bonus,Bonus minijoc: +{bonus} puncte!
+high_score_display,Scor maxim: {score}
+new_high_score,NOU SCOR MAXIM!

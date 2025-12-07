@@ -1,0 +1,41 @@
+﻿keys,it
+LAWS,LEGISLAZIONE
+_VALIDATION MESSAGES,
+msg_not_fresh,La patata era %s ma deve essere fresca
+msg_extra_eyes,La patata aveva Occhi Extra che non sono consentiti
+msg_rotten,Patate marce non sono consentite
+msg_sprouted,Patate germogliate non sono consentite
+msg_dehydrated,Patate disidratate non sono consentite oggi
+msg_frozen,Patate surgelate sono vietate
+msg_over_age,La patata ha %d anni (max 5 anni)
+msg_under_age,La patata ha %d anni (deve avere più di 3 anni)
+_LAWS,
+law_fresh_potatoes,[color=dark_goldenrod]SOLO patate fresche[/color] consentite - [color=dark_red]RIFIUTA[/color] tutte le altre
+law_extra_eyes,[color=dark_goldenrod]Occhi Extra[/color] condizione patate devono essere [color=dark_red]RIFIUTATE[/color]
+law_rotten,[color=dark_goldenrod]Marce[/color] patate devono essere [color=dark_red]RIFIUTATE[/color]
+law_sprouted,[color=dark_goldenrod]Germogliate[/color] patate devono essere [color=dark_red]RIFIUTATE[/color]
+law_dehydrated,[color=dark_goldenrod]Disidratate[/color] patate devono essere [color=dark_red]RIFIUTATE[/color]
+law_frozen,[color=dark_goldenrod]Congelate[/color] patate devono essere [color=dark_red]RIFIUTATE[/color]
+law_over_5_years,Patate [color=dark_goldenrod]5 anni o più[/color] devono essere [color=dark_red]RIFIUTATE[/color]
+law_under_3_years,Patate [color=dark_goldenrod]3 anni o meno[/color] devono essere [color=dark_red]RIFIUTATE[/color]
+law_under_2_years,Patate [color=dark_goldenrod]2 anni o meno[/color] devono essere [color=dark_red]RIFIUTATE[/color]
+law_males_only,[color=dark_goldenrod]SOLO patate maschio[/color] consentite - [color=dark_red]RIFIUTA[/color] tutte le femmine
+law_females_only,[color=dark_goldenrod]SOLO patate femmina[/color] consentite - [color=dark_red]RIFIUTA[/color] tutti i maschi
+law_country_spudland,[color=dark_goldenrod]TUTTE[/color] le patate di [color=dark_goldenrod]Spudland[/color] devono essere [color=dark_red]RIFIUTATE[/color]
+law_country_potatopia,[color=dark_goldenrod]TUTTE[/color] le patate di [color=dark_goldenrod]Potatopia[/color] devono essere [color=dark_red]RIFIUTATE[/color]
+law_country_tuberstan,[color=dark_goldenrod]TUTTE[/color] le patate di [color=dark_goldenrod]Tuberstan[/color] devono essere [color=dark_red]RIFIUTATE[/color]
+law_country_north_yamnea,[color=dark_goldenrod]TUTTE[/color] le patate di [color=dark_goldenrod]North Yamnea[/color] devono essere [color=dark_red]RIFIUTATE[/color]
+law_country_spuddington,[color=dark_goldenrod]TUTTE[/color] le patate di [color=dark_goldenrod]Spuddington[/color] devono essere [color=dark_red]RIFIUTATE[/color]
+law_country_tatcross,[color=dark_goldenrod]TUTTE[/color] le patate di [color=dark_goldenrod]Tatcross[/color] devono essere [color=dark_red]RIFIUTATE[/color]
+law_country_mash_meadows,[color=dark_goldenrod]TUTTE[/color] le patate di [color=dark_goldenrod]Mash Meadows[/color] devono essere [color=dark_red]RIFIUTATE[/color]
+law_country_tuberville,[color=dark_goldenrod]TUTTE[/color] le patate di [color=dark_goldenrod]Tuberville[/color] devono essere [color=dark_red]RIFIUTATE[/color]
+law_country_chip_hill,[color=dark_goldenrod]TUTTE[/color] le patate di [color=dark_goldenrod]Chip Hill[/color] devono essere [color=dark_red]RIFIUTATE[/color] (divieto di esportazione)
+law_country_murphyland,[color=dark_goldenrod]TUTTE[/color] le patate di [color=dark_goldenrod]Murphyland[/color] devono essere [color=dark_red]RIFIUTATE[/color]
+law_country_colcannon,[color=dark_goldenrod]TUTTE[/color] le patate di [color=dark_goldenrod]Colcannon[/color] devono essere [color=dark_red]RIFIUTATE[/color]
+law_country_pratie_point,[color=dark_goldenrod]TUTTE[/color] le patate di [color=dark_goldenrod]Pratie Point[/color] devono essere [color=dark_red]RIFIUTATE[/color]
+law_purple_majesty,[color=dark_goldenrod]Purple Majesty[/color] tipi di patate devono essere [color=dark_red]RIFIUTATI[/color]
+law_sweet_potatoes,[color=dark_goldenrod]Patata Dolce[/color] tipi devono essere [color=dark_red]RIFIUTATI[/color] (nessun permesso disponibile)
+law_yukon_gold,[color=dark_goldenrod]Yukon Gold[/color] tipi di patate devono essere [color=dark_red]RIFIUTATI[/color]
+law_fingerling,[color=dark_goldenrod]Fingerling[/color] tipi di patate devono essere [color=dark_red]RIFIUTATI[/color]
+law_red_bliss,[color=dark_goldenrod]Red Bliss[/color] tipi di patate devono essere [color=dark_red]RIFIUTATI[/color]
+law_russet,[color=dark_goldenrod]Russet[/color] tipi di patate devono essere [color=dark_red]RIFIUTATI[/color]

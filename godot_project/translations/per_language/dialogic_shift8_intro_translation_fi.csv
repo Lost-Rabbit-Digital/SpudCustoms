@@ -1,0 +1,31 @@
+﻿keys,fi
+Text/117/text,Tarkastuspiste on muuttunut sotilastukikohdaksi. Eliittivartijoita mustissa univormuissa partioi aseet näkyvillä.
+Text/118/text,"Olen turvallisuuspäällikkö Yukon, pääministeri Idahon lähettämä pääkaupungista."
+Text/119/text,"Tiedustelutietojen mukaan [pulse freq=2][color=YELLOW]terrori-isku on välitön[/color][/pulse]. ""Vastarinta"" suunnittelee soluttautumista huomenna."
+Text/11a/text,Kaikki upseerit alistetaan [wave amp=15 freq=2][color=DARK_ORANGE]uskollisuusseulontaan[/color][/wave]. Epäilyttävä käytös tarkoittaa pidätystä ja [color=DARK_VIOLET]käsittelyä[/color].
+Text/11b/text,[tornado radius=3 freq=2][color=RED]Täysi yhteistyö[/color][/tornado] Turvallisuuden kanssa on pakollista. Raporttini jokaisesta teistä on toimitettu Päällikölle.
+Text/11c/text,Russetin katse viipyy sinussa epämukavasti ennen kuin siirtyy eteenpäin.
+Text/11d/text,Tämä on [color=DARK_ORANGE]IdentityScan 5000[/color]. Se analysoi biometrisiä tietoja tunnistaakseen soluttautujat ja sympatisoijat.
+Text/11e/text,Jokainen merkitty henkilö joutuu [color=CRIMSON]tehostettuun kuulusteluun[/color]. Käytä sitä poikkeuksetta.
+Text/11f/text,Oletko nähnyt Sashaa? Hän ei ilmoittautunut nimenhuutoon. Viime yönä [color=CRIMSON]turvallisuusjoukot tunkeutuivat hänen tiloihinsa[/color].
+Text/120/text,"He sanovat, että hän oli osa [pulse freq=2][color=CHARTREUSE]vastarintaa[/color][/pulse]."
+Choice/121/text,Meidän ei pitäisi puhua tästä. Se on vaarallista.
+Choice/122/text,Olen huolissani hänestäkin. Tämä ei ole oikein.
+Text/123/text,Olet oikeassa. Mutta varo itseäsi. He etsivät yhteyksiä häneen.
+Text/124/text,Olitteko siis läheisiä? Ole varovainen. He saattavat tarkkailla sinuakin.
+Text/125/text,"Upseeri livauttaa sinulle viestin: ""[color=YELLOW]Puhdista asemasi kaikesta epäilyttävästä.[/color]"""
+Text/126/text,Olet ollut tällä tarkastuspisteellä jo jonkin aikaa. Mielenkiintoinen suoritushistoria.
+Text/127/text,"Sinut nähtiin usein upseeri Sashan kanssa, jota nyt tutkitaan [wave amp=20 freq=3][color=CRIMSON]maanpetoksesta[/color][/wave]."
+Text/128/text,Päällikkö nojautuu eteenpäin. Haluaisitko kertoa minulle jotain hänen toiminnastaan?
+Choice/129/text,Sasha ja minä olimme vain kollegoita. En tiedä hänestä mitään työn ulkopuolella.
+Choice/12a/text,Keräsin todisteita hänen epäilyttävästä toiminnastaan raportoidakseni myöhemmin.
+Text/12b/text,Useat todistajat sanovat toisin. Ilman konkreettisia todisteita en kuitenkaan voi pidättää sinua. [color=YELLOW]Vielä.[/color]
+Text/12c/text,"Olet [color=CRIMSON]tarkan tarkkailun[/color] alaisena. Yksi virheliike, ja [color=DARK_VIOLET]liityt Sashan seuraan[/color]."
+Text/12d/text,Kuinka kätevää. Etkä silti jättänyt yhtään raporttia tähän mennessä.
+Text/12e/text,"Annat täydellisen lausunnon. Jos tietosi osoittautuvat arvokkaiksi, saatamme jättää huomiotta viivästyneen raportointisi."
+Text/12f/text,[color=CRIMSON]Valvon työtäsi[/color] tänään. Jokainen matkustaja on identiteettiskannattava. [color=RED]Ei poikkeuksia[/color].
+Text/130/text,Sasha on otettu. Vastarinnan suunnitelma on [color=CRIMSON]paljastunut[/color]. Turvallisuuden ollessa korkeassa valmiudessa heidän mahdollisuutensa vaikuttavat toivottomilta.
+Choice/121/disabled_text,
+Choice/12a/disabled_text,
+Choice/129/disabled_text,
+Choice/122/disabled_text,

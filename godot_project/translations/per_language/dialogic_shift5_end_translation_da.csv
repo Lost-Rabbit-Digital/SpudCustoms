@@ -1,0 +1,19 @@
+﻿keys,da
+Text/96/text,"Du sniger dig gennem den mørke korridor, hjertet banker, mens du undgår sikkerhedspatruljerne."
+Text/97/text,[color=CHARTREUSE]Denne enhed vil deaktivere låsen[/color] på Russets kontor. Jeg udløser alarmer i den østlige fløj som en distraktion. Du får fem minutter.
+Text/98/text,Manifester skulle være i hans arkivskab. [color=CRIMSON]Rød mappe mærket 'RR Transport'[/color]. Efterlad ikke spor af jeres søgning.
+Text/99/text,"Du finder den tykke [color=CRIMSON]røde mappe mærket ""RR Transport""[/color] i arkivskabet."
+Text/9a/text,"Indeni er manifester, der matcher afviste kartoffelantal, og et direktiv fra statsministeren i Idaho, der godkender ""[pulse freq=3][color=DARK_VIOLET]fuld udnyttelse af grænseafviste for RR-produktion.[/color][/pulse]"""
+Text/9b/text,"Fodtrin nærmer sig kontorets dør. ""[wave amp=15 freq=3][color=YELLOW]Mærkeligt, jeg kunne have svoret, jeg låste den.[/color][/wave]"""
+Choice/9c/text,Gem dig under bordet
+Choice/9d/text,Hop ud af vinduet
+Text/9e/text,"Du dykker under Russets bord, mens han træder ind, hjertet banker. Han sætter sig, hans fødder centimeter fra dit ansigt."
+Text/9f/text,"Russet her. Hvad? [color=CHARTREUSE]Endnu en alarm?[/color] Jeg er på vej. Han forlader rummet, og du undslipper."
+Text/a0/text,"Du vrider vinduet op og hopper. Heldigvis er det kun en etage. En vagt råber: ""[color=RED]Hey! Stop![/color]"""
+Text/a1/text,Du løber hen over området og formår at slippe af med forfølgerne.
+Text/a2/text,Fik du fat i det?
+Text/a3/text,"Du overdrager beviserne og forklarer, hvad du fandt."
+Text/a4/text,Dette beviser alt. Modstandsbevægelsen vil lave kopier. [tornado radius=3 freq=2]Spred sandheden overalt.[/tornado] De kan ikke tie os alle ihjel.
+Text/a5/text,"Du har krydset en grænse. [wave amp=20 freq=3][color=YELLOW]Der er ingen vej tilbage.[/color][/wave] Når sandheden spredes, vil Spud blive forvandlet."
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,

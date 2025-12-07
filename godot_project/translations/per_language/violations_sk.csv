@@ -1,0 +1,29 @@
+﻿keys,sk
+violation_condition_not_fresh,ODMIETNUŤ: Povolené iba čerstvé zemiaky. Tento zemiak je {condition}
+violation_extra_eyes,ODMIETNUŤ: Stav Extra Oči je zakázaný
+violation_rotten,ODMIETNUŤ: Shnité zemiaky são zakázané
+violation_sprouted,ODMIETNUŤ: Naklíčené zemiaky sú zakázané
+violation_dehydrated,ODMIETNUŤ: Dehydrované zemiaky sú zakázané
+violation_frozen,ODMIETNUŤ: Zmrazené zemiaky sú zakázané
+violation_too_old,ODMIETNUŤ: Zemiak má {age} rokov (maximálny vek: 4 roky)
+violation_too_young_3,ODMIETNUŤ: Zemiak má {age} rokov (minimálny vek: 4 roky)
+violation_too_young_2,ODMIETNUŤ: Zemiak má {age} rokov (minimálny vek: 3 roky)
+violation_males_only,ODMIETNUŤ: Povolené iba samčie zemiaky
+violation_females_only,ODMIETNUŤ: Povolené iba samičie zemiaky
+violation_country_spudland,ODMIETNUŤ: Všetky zemiaky Spudland sú zakázané
+violation_country_potatopia,ODMIETNUŤ: Všetky zemiaky Potatopia sú zakázané
+violation_country_tuberstan,ODMIETNUŤ: Všetky zemiaky Tuberstan sú zakázané
+violation_country_north_yamnea,ODMIETNUŤ: Všetky zemiaky North Yamnea sú zakázané
+violation_country_spuddington,ODMIETNUŤ: Všetky zemiaky Spuddington sú zakázané
+violation_country_tatcross,ODMIETNUŤ: Všetky zemiaky Tatcross sú zakázané
+violation_country_mash_meadows,ODMIETNUŤ: Všetky zemiaky Mash Meadows sú zakázané
+violation_country_tuberville,ODMIETNUŤ: Všetky zemiaky Tuberville sú zakázané
+violation_country_chip_hill,ODMIETNUŤ: Všetky zemiaky Chip Hill sú zakázané (vývozné obmedzenia)
+violation_country_murphyland,ODMIETNUŤ: Všetky zemiaky Murphyland sú zakázané
+violation_country_colcannon,ODMIETNUŤ: Všetky zemiaky Colcannon sú zakázané
+violation_country_pratie_point,ODMIETNUŤ: Všetky zemiaky Pratie Point sú zakázané
+violation_race_purple_majesty,ODMIETNUŤ: Typy Purple Majesty sú zakázané
+violation_race_sweet_potato,ODMIETNUŤ: Typy sladkých zemiakov vyžadujú špeciálne povolenia (nie sú k dispozícii)
+violation_race_yukon_gold,ODMIETNUŤ: Typy Yukon Gold sú zakázané
+violation_expired_document,ODMIETNUŤ: Platnosť dokumentu vypršala {date}
+violation_invalid_potato,Tento zemiak spĺňa všetky požiadavky a mal byť schválený

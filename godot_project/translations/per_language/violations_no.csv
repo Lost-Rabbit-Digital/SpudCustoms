@@ -1,0 +1,29 @@
+﻿keys,no
+violation_condition_not_fresh,AVVIS: Bare ferske poteter tillatt. Denne poteten er {condition}
+violation_extra_eyes,AVVIS: Extra Øyne tilstand er forbudt
+violation_rotten,AVVIS: Råtne poteter er forbudt
+violation_sprouted,AVVIS: Spirte poteter er forbudt
+violation_dehydrated,AVVIS: Dehydrerte poteter er forbudt
+violation_frozen,AVVIS: Frosne poteter er forbudt
+violation_too_old,AVVIS: Potet er {age} år gammel (maksimal alder: 4 år)
+violation_too_young_3,AVVIS: Potet er {age} år gammel (minimal alder: 4 år)
+violation_too_young_2,AVVIS: Potet er {age} år gammel (minimal alder: 3 år)
+violation_males_only,AVVIS: Bare mannlige poteter tillatt
+violation_females_only,AVVIS: Bare kvinnelige poteter tillatt
+violation_country_spudland,AVVIS: Alle Spudland poteter er forbudt
+violation_country_potatopia,AVVIS: Alle Potatopia poteter er forbudt
+violation_country_tuberstan,AVVIS: Alle Tuberstan poteter er forbudt
+violation_country_north_yamnea,AVVIS: Alle Nord-Yamnea poteter er forbudt
+violation_country_spuddington,AVVIS: Alle Spuddington poteter er forbudt
+violation_country_tatcross,AVVIS: Alle Tatcross poteter er forbudt
+violation_country_mash_meadows,AVVIS: Alle Mash Meadows poteter er forbudt
+violation_country_tuberville,AVVIS: Alle Tuberville poteter er forbudt
+violation_country_chip_hill,AVVIS: Alle Chip Hill poteter er forbudt (eksportrestriksjoner)
+violation_country_murphyland,AVVIS: Alle Murphyland poteter er forbudt
+violation_country_colcannon,AVVIS: Alle Colcannon poteter er forbudt
+violation_country_pratie_point,AVVIS: Alle Pratie Point poteter er forbudt
+violation_race_purple_majesty,AVVIS: Purple Majesty typer er forbudt
+violation_race_sweet_potato,AVVIS: Søtpotet typer krever spesielle tillatelser (ikke tilgjengelig)
+violation_race_yukon_gold,AVVIS: Yukon Gold typer er forbudt
+violation_expired_document,AVVIS: Dokumentet utløp {date}
+violation_invalid_potato,Denne poteten oppfyller alle krav og burde vært godkjent

@@ -1,0 +1,29 @@
+﻿keys,it
+violation_condition_not_fresh,RIFIUTA: Solo patate fresche consentite. Questa patata è {condition}
+violation_extra_eyes,RIFIUTA: La condizione Occhi Extra è vietata
+violation_rotten,RIFIUTA: Le patate marce sono vietate
+violation_sprouted,RIFIUTA: Le patate germogliate sono vietate
+violation_dehydrated,RIFIUTA: Le patate disidratate sono vietate
+violation_frozen,RIFIUTA: Le patate congelate sono vietate
+violation_too_old,RIFIUTA: La patata ha {age} anni (età massima: 4 anni)
+violation_too_young_3,RIFIUTA: La patata ha {age} anni (età minima: 4 anni)
+violation_too_young_2,RIFIUTA: La patata ha {age} anni (età minima: 3 anni)
+violation_males_only,RIFIUTA: Solo patate maschio consentite
+violation_females_only,RIFIUTA: Solo patate femmina consentite
+violation_country_spudland,RIFIUTA: Tutte le patate Spudland sono vietate
+violation_country_potatopia,RIFIUTA: Tutte le patate Potatopia sono vietate
+violation_country_tuberstan,RIFIUTA: Tutte le patate Tuberstan sono vietate
+violation_country_north_yamnea,RIFIUTA: Tutte le patate North Yamnea sono vietate
+violation_country_spuddington,RIFIUTA: Tutte le patate Spuddington sono vietate
+violation_country_tatcross,RIFIUTA: Tutte le patate Tatcross sono vietate
+violation_country_mash_meadows,RIFIUTA: Tutte le patate Mash Meadows sono vietate
+violation_country_tuberville,RIFIUTA: Tutte le patate Tuberville sono vietate
+violation_country_chip_hill,RIFIUTA: Tutte le patate Chip Hill sono vietate (restrizioni all'esportazione)
+violation_country_murphyland,RIFIUTA: Tutte le patate Murphyland sono vietate
+violation_country_colcannon,RIFIUTA: Tutte le patate Colcannon sono vietate
+violation_country_pratie_point,RIFIUTA: Tutte le patate Pratie Point sono vietate
+violation_race_purple_majesty,RIFIUTA: I tipi Purple Majesty sono vietati
+violation_race_sweet_potato,RIFIUTA: I tipi di patate dolci richiedono permessi speciali (non disponibili)
+violation_race_yukon_gold,RIFIUTA: I tipi Yukon Gold sono vietati
+violation_expired_document,RIFIUTA: Documento scaduto il {date}
+violation_invalid_potato,Questa patata soddisfa tutti i requisiti e avrebbe dovuto essere approvata

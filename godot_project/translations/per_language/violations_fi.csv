@@ -1,0 +1,29 @@
+﻿keys,fi
+violation_condition_not_fresh,HYLKÄÄ: Vain tuoreet perunat sallittu. Tämä peruna on {condition}
+violation_extra_eyes,HYLKÄÄ: Extra Silmät -tila on kielletty
+violation_rotten,HYLKÄÄ: Mädäntyneet perunat ovat kiellettyjä
+violation_sprouted,HYLKÄÄ: Itäneet perunat ovat kiellettyjä
+violation_dehydrated,HYLKÄÄ: Kuivatut perunat ovat kiellettyjä
+violation_frozen,HYLKÄÄ: Pakastetut perunat ovat kiellettyjä
+violation_too_old,HYLKÄÄ: Peruna on {age} vuotta vanha (enimmäisikä: 4 vuotta)
+violation_too_young_3,HYLKÄÄ: Peruna on {age} vuotta vanha (vähimmäisikä: 4 vuotta)
+violation_too_young_2,HYLKÄÄ: Peruna on {age} vuotta vanha (vähimmäisikä: 3 vuotta)
+violation_males_only,HYLKÄÄ: Vain uros perunat sallittu
+violation_females_only,HYLKÄÄ: Vain naaras perunat sallittu
+violation_country_spudland,HYLKÄÄ: Kaikki Spudlandin perunat ovat kiellettyjä
+violation_country_potatopia,HYLKÄÄ: Kaikki Potatopian perunat ovat kiellettyjä
+violation_country_tuberstan,HYLKÄÄ: Kaikki Tuberstanin perunat ovat kiellettyjä
+violation_country_north_yamnea,HYLKÄÄ: Kaikki Pohjois-Yamnean perunat ovat kiellettyjä
+violation_country_spuddington,HYLKÄÄ: Kaikki Spuddingtonin perunat ovat kiellettyjä
+violation_country_tatcross,HYLKÄÄ: Kaikki Tatcrossin perunat ovat kiellettyjä
+violation_country_mash_meadows,HYLKÄÄ: Kaikki Mash Meadowsin perunat ovat kiellettyjä
+violation_country_tuberville,HYLKÄÄ: Kaikki Tubervillen perunat ovat kiellettyjä
+violation_country_chip_hill,HYLKÄÄ: Kaikki Chip Hillin perunat ovat kiellettyjä (vientirajoitukset)
+violation_country_murphyland,HYLKÄÄ: Kaikki Murphylandin perunat ovat kiellettyjä
+violation_country_colcannon,HYLKÄÄ: Kaikki Colcannonin perunat ovat kiellettyjä
+violation_country_pratie_point,HYLKÄÄ: Kaikki Pratie Pointin perunat ovat kiellettyjä
+violation_race_purple_majesty,HYLKÄÄ: Purple Majesty -tyypit ovat kiellettyjä
+violation_race_sweet_potato,HYLKÄÄ: Bataattityypit vaativat erikoislupia (ei saatavilla)
+violation_race_yukon_gold,HYLKÄÄ: Yukon Gold -tyypit ovat kiellettyjä
+violation_expired_document,HYLKÄÄ: Asiakirja vanhentui {date}
+violation_invalid_potato,Tämä peruna täyttää kaikki vaatimukset ja se olisi pitänyt hyväksyä

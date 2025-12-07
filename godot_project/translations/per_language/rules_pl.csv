@@ -1,0 +1,41 @@
+﻿keys,pl
+LAWS,PRAWA
+_VALIDATION MESSAGES,
+msg_not_fresh,"Ziemniak był %s, ale musi być świeży"
+msg_extra_eyes,"Ziemniak miał Dodatkowe Oczy, co jest zabronione"
+msg_rotten,Zgniłe ziemniaki są niedozwolone
+msg_sprouted,Kiełkujące ziemniaki są niedozwolone
+msg_dehydrated,Suszone ziemniaki nie są dzisiaj dozwolone
+msg_frozen,Mrożone ziemniaki są zabronione
+msg_over_age,Ziemniak ma %d lat (maks 5 lat)
+msg_under_age,Ziemniak ma %d lat (musi mieć ponad 3 lata)
+_LAWS,
+law_fresh_potatoes,[color=dark_goldenrod]TYLKO świeże[/color] ziemniaki dozwolone - [color=dark_red]ODRZUĆ[/color] wszystkie inne
+law_extra_eyes,[color=dark_goldenrod]Dodatkowe Oczy[/color] stan ziemniaki muszą być [color=dark_red]ODRZUCONE[/color]
+law_rotten,[color=dark_goldenrod]Zgniłe[/color] ziemniaki muszą być [color=dark_red]ODRZUCONE[/color]
+law_sprouted,[color=dark_goldenrod]Skiełkowane[/color] ziemniaki muszą być [color=dark_red]ODRZUCONE[/color]
+law_dehydrated,[color=dark_goldenrod]Odwodnione[/color] ziemniaki muszą być [color=dark_red]ODRZUCONE[/color]
+law_frozen,[color=dark_goldenrod]Zamrożone[/color] ziemniaki muszą być [color=dark_red]ODRZUCONE[/color]
+law_over_5_years,Ziemniaki [color=dark_goldenrod]5 lat lub starsze[/color] muszą być [color=dark_red]ODRZUCONE[/color]
+law_under_3_years,Ziemniaki [color=dark_goldenrod]3 lata lub młodsze[/color] muszą być [color=dark_red]ODRZUCONE[/color]
+law_under_2_years,Ziemniaki [color=dark_goldenrod]2 lata lub młodsze[/color] muszą być [color=dark_red]ODRZUCONE[/color]
+law_males_only,[color=dark_goldenrod]TYLKO męskie[/color] ziemniaki dozwolone - [color=dark_red]ODRZUĆ[/color] wszystkie żeńskie
+law_females_only,[color=dark_goldenrod]TYLKO żeńskie[/color] ziemniaki dozwolone - [color=dark_red]ODRZUĆ[/color] wszystkie męskie
+law_country_spudland,[color=dark_goldenrod]WSZYSTKIE[/color] ziemniaki ze [color=dark_goldenrod]Spudlandu[/color] muszą być [color=dark_red]ODRZUCONE[/color]
+law_country_potatopia,[color=dark_goldenrod]WSZYSTKIE[/color] ziemniaki z [color=dark_goldenrod]Potatopii[/color] muszą być [color=dark_red]ODRZUCONE[/color]
+law_country_tuberstan,[color=dark_goldenrod]WSZYSTKIE[/color] ziemniaki z [color=dark_goldenrod]Tuberstanu[/color] muszą być [color=dark_red]ODRZUCONE[/color]
+law_country_north_yamnea,[color=dark_goldenrod]WSZYSTKIE[/color] ziemniaki z [color=dark_goldenrod]Północnej Yamnea[/color] muszą być [color=dark_red]ODRZUCONE[/color]
+law_country_spuddington,[color=dark_goldenrod]WSZYSTKIE[/color] ziemniaki ze [color=dark_goldenrod]Spuddingtonu[/color] muszą być [color=dark_red]ODRZUCONE[/color]
+law_country_tatcross,[color=dark_goldenrod]WSZYSTKIE[/color] ziemniaki z [color=dark_goldenrod]Tatcross[/color] muszą być [color=dark_red]ODRZUCONE[/color]
+law_country_mash_meadows,[color=dark_goldenrod]WSZYSTKIE[/color] ziemniaki z [color=dark_goldenrod]Mash Meadows[/color] muszą być [color=dark_red]ODRZUCONE[/color]
+law_country_tuberville,[color=dark_goldenrod]WSZYSTKIE[/color] ziemniaki z [color=dark_goldenrod]Tuberville[/color] muszą być [color=dark_red]ODRZUCONE[/color]
+law_country_chip_hill,[color=dark_goldenrod]WSZYSTKIE[/color] ziemniaki z [color=dark_goldenrod]Chip Hill[/color] muszą być [color=dark_red]ODRZUCONE[/color] (zakaz eksportu)
+law_country_murphyland,[color=dark_goldenrod]WSZYSTKIE[/color] ziemniaki z [color=dark_goldenrod]Murphylandu[/color] muszą być [color=dark_red]ODRZUCONE[/color]
+law_country_colcannon,[color=dark_goldenrod]WSZYSTKIE[/color] ziemniaki z [color=dark_goldenrod]Colcannonu[/color] muszą być [color=dark_red]ODRZUCONE[/color]
+law_country_pratie_point,[color=dark_goldenrod]WSZYSTKIE[/color] ziemniaki z [color=dark_goldenrod]Pratie Point[/color] muszą być [color=dark_red]ODRZUCONE[/color]
+law_purple_majesty,[color=dark_goldenrod]Purple Majesty[/color] typy ziemniaków muszą być [color=dark_red]ODRZUCONE[/color]
+law_sweet_potatoes,[color=dark_goldenrod]Słodki Ziemniak[/color] typy muszą być [color=dark_red]ODRZUCONE[/color] (brak zezwoleń dostępnych)
+law_yukon_gold,[color=dark_goldenrod]Yukon Gold[/color] typy ziemniaków muszą być [color=dark_red]ODRZUCONE[/color]
+law_fingerling,[color=dark_goldenrod]Fingerling[/color] typy ziemniaków muszą być [color=dark_red]ODRZUCONE[/color]
+law_red_bliss,[color=dark_goldenrod]Red Bliss[/color] typy ziemniaków muszą być [color=dark_red]ODRZUCONE[/color]
+law_russet,[color=dark_goldenrod]Russet[/color] typy ziemniaków muszą być [color=dark_red]ODRZUCONE[/color]

@@ -1,0 +1,23 @@
+﻿keys,sv
+Text/a6/text,Gränsanläggningen känns annorlunda idag. Spänd. Säkerhetspatruller i större antal medan försiktig tystnad ersätter småprat.
+Text/a7/text,I går kväll upptäcktes [pulse freq=2][color=CRIMSON]förbjudet material[/color][/pulse]. Flygblad som innehåller lögner om [color=DARK_VIOLET]Root Reserve[/color].
+Text/a8/text,Vi implementerar [wave amp=15 freq=2][color=DARK_ORANGE]hotprotokoll på nivå ORANGE[/color][/wave]. Alla tjänstemän är föremål för lojalitetsgranskningar. Alla resenärer möter maximal granskning.
+Text/a9/text,Det fungerar. Flygbladen sprider sig. Folk ställer frågor om [color=DARK_VIOLET]Root Reserve[/color].
+Text/aa/text,Jag har källor som säger att det finns en leveranslogg i Russets kontor - transportmanifest som skulle kunna [tornado radius=3 freq=2][color=CHARTREUSE]bevisa allt[/color][/tornado].
+Text/ab/text,"Jag behöver din hjälp att få tag på den. Ikväll, efter sista skiftet. Kan jag räkna med dig?"
+Choice/ac/text,Jag är med. Låt oss avslöja sanningen.
+Choice/ad/text,"Jag vet inte, Sasha... det kan vara farligt."
+Text/ae/text,Gudskjelov. Jag visste att du hade [color=CHARTREUSE]starkare rötter än de andra[/color]. Vi ses vid midnatt.
+Text/af/text,Ibland måste vi [color=CHARTREUSE]riskera att bli mosade för att göra det som är rätt[/color]. Tänk på det.
+Text/b0/text,[color=DARK_ORANGE]Lojalitetskontroll[/color]. Vänligen uppge ditt namn och tjänste-ID. Berätta sedan varför du tjänar Spud.
+Choice/b1/text,Jag tjänar för att skydda våra gränser från farliga influenser.
+Choice/b2/text,Jag tjänar för att säkerställa att alla får rättvis behandling.
+Text/b3/text,"Bra svar. Spud behöver lojala beskyddare. Skannern visar grönt. Fortsätt, tjänsteman."
+Text/b4/text,"Tjänstemannens ögonbryn höjs. Rättvis behandling? Skannern blinkar [color=DARK_ORANGE]bärnstensfärgat[/color]. Kom ihåg, vår främsta oro är säkerhet, inte rättvisa."
+Text/b5/text,Dagens kvot har ökats. Alla med misstänkt material ska flaggas för [color=DARK_VIOLET]specialbehandling[/color].
+Text/b6/text,Jag kommer [color=DARK_ORANGE]att noga övervaka dina beslut[/color] idag.
+Text/b7/text,"Ikväll kan allt förändras. Men först, [color=YELLOW]överlev dagen utan att väcka misstankar[/color]."
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,

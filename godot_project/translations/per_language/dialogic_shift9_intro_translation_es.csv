@@ -1,0 +1,27 @@
+﻿keys,es
+Text/140/text,"La frontera se asemeja a una [pulse freq=3][color=CRIMSON]zona de guerra[/color][/pulse]. Barricadas, vehículos blindados y guardias de élite están listos. Hoy es cuando la resistencia planeó atacar."
+Text/141/text,"[wave amp=25 freq=3][color=YELLOW]TRANSMISIÓN DE EMERGENCIA[/color][/wave]: Todo Spud está bajo [color=RED]ley marcial[/color]. ""La Resistencia"" ha lanzado ataques contra instalaciones gubernamentales."
+Text/142/text,Cualquiera que ayude a estos [color=CRIMSON]extremistas[/color] se enfrentará a un [color=DARK_VIOLET]procesamiento inmediato[/color]. El Ministerio confirma: [color=DARK_VIOLET]Reserva Raíz[/color] sigue siendo seguro para todas las [color=DARK_ORANGE]patatas leales[/color].
+Text/143/text,[color=YELLOW]Han estallado disturbios[/color] en múltiples sectores. Células de la resistencia han atacado tres instalaciones de [color=DARK_VIOLET]Reserva Raíz[/color].
+Text/144/text,Su objetivo: acceder a la base de datos central con todos los registros de producción. Cualquier signo de deslealtad significa procesamiento.
+Text/145/text,"Hemos capturado a varios operativos de la resistencia, incluida la Oficial Sasha."
+Text/146/text,Los [tornado radius=3 freq=2][color=CRIMSON]verdaderos traidores[/color][/tornado] son aquellos que [color=DARK_VIOLET]alimentan a nuestra gente con ellos mismos[/color]. ¡No pueden detener la verdad!
+Text/147/text,"Es arrastrada, todavía gritando: [color=CHARTREUSE]¡La gente sabrá lo que hay en su comida![/color]"
+Text/148/text,"La [color=CRIMSON]traidora[/color] será [pulse freq=3][color=DARK_VIOLET]procesada inmediatamente[/color][/pulse]. Un lote especial de [color=DARK_VIOLET]Reserva Raíz[/color], hecho de los propios terroristas."
+Text/149/text,Todos los cruces fronterizos están [color=RED]suspendidos[/color] excepto para personal esencial con [color=GOLD]autorización de Nivel Alfa[/color].
+Text/14a/text,Este escáner [color=YELLOW]no puede ser engañado[/color]. Active la alarma inmediatamente para cualquiera sin la autorización adecuada.
+Text/14b/text,Una patata con uniforme oficial se acerca con credenciales Alfa aparentemente perfectas.
+Text/14c/text,"Una pequeña tarjeta azul cae de la carpeta. ""[wave amp=15 freq=3][color=CHARTREUSE]Las raíces crecen profundo.[/color][/wave]"", murmuran mientras recogen la tarjeta."
+Choice/14d/text,"Procéselos, ignorando las alertas del escáner (Ayudar a la resistencia)"
+Choice/14e/text,Active la alarma inmediatamente (Traicionar a la resistencia)
+Text/14f/text,"El alivio se muestra en sus ojos. ""[color=CHARTREUSE]Por Sasha. Por Spud.[/color]"" Desaparecen hacia la base de datos central."
+Text/150/text,"El horror se refleja en su rostro. ""[color=CRIMSON]¡Traidor! ¡Confiábamos en ti![/color]"" Rápidamente son rodeados por guardias."
+Text/151/text,Excelente trabajo. Su lealtad será recompensada.
+Text/152/text,"De repente, la instalación [color=YELLOW]tiembla con explosiones[/color]. El ataque de la resistencia ha comenzado, independientemente de tu elección."
+Text/153/text,"¿Me quedo en mi puesto y espero que esto pase, o [color=CHARTREUSE]tomo una posición[/color] y arriesgo todo para exponer la verdad?"
+Choice/154/text,No puedo abandonar mi deber. Me quedaré callado y esperaré lo mejor.
+Choice/155/text,He sido cómplice durante demasiado tiempo. Es hora de luchar por lo que es correcto.
+Choice/155/disabled_text,
+Choice/14d/disabled_text,
+Choice/154/disabled_text,
+Choice/14e/disabled_text,

@@ -1,0 +1,19 @@
+﻿keys,vi
+Text/96/text,"Bạn lén lút qua hành lang tối, tim đập mạnh khi tránh các đội tuần tra an ninh."
+Text/97/text,[color=CHARTREUSE]Thiết bị này sẽ vô hiệu hóa khóa[/color] trong văn phòng của Russet. Tôi sẽ kích hoạt báo động ở cánh đông để làm phân tán. Bạn có năm phút.
+Text/98/text,Các tài liệu chứng từ phải ở trong hồ sơ của anh ấy. [color=CRIMSON]Thư mục đỏ ghi nhãn 'RR Transport'[/color]. Đừng để lại dấu vết của cuộc tìm kiếm.
+Text/99/text,"Bạn tìm thấy thư mục đỏ dày [color=CRIMSON]có nhãn ""RR Transport""[/color] trong hồ sơ."
+Text/9a/text,"Bên trong là các tài liệu chứng từ phù hợp với số lượng khoai tây bị từ chối, và một chỉ thị từ Thủ tướng Idaho cho phép ""[pulse freq=3][color=DARK_VIOLET]sử dụng đầy đủ các lô hàng bị từ chối ở biên giới cho sản xuất RR.[/color][/pulse]"""
+Text/9b/text,"Tiếng bước chân đang đến gần cửa văn phòng. ""[wave amp=15 freq=3][color=YELLOW]Lạ thật, tôi đã chắc chắn mình đã khóa nó.[/color][/wave]"""
+Choice/9c/text,Ẩn dưới bàn
+Choice/9d/text,Nhảy ra cửa sổ
+Text/9e/text,"Bạn lao xuống dưới bàn của Russet khi anh ấy bước vào, tim đập thình thịch. Anh ấy ngồi xuống, đôi chân chỉ cách mặt bạn vài centimet."
+Text/9f/text,Russet đây. Gì vậy? [color=CHARTREUSE]Lại một cảnh báo à?[/color] Tôi đang đến. Anh ấy rời khỏi phòng và bạn thoát ra.
+Text/a0/text,"Bạn xé toạc cửa sổ và nhảy xuống. May thay, chỉ là một tầng. Một vệ sĩ hét lên: ""[color=RED]Này! Dừng lại![/color]"""
+Text/a1/text,Bạn chạy qua khuôn viên và thoát khỏi những kẻ truy đuổi.
+Text/a2/text,Bạn có lấy được nó không?
+Text/a3/text,"Bạn trao lại bằng chứng, giải thích những gì bạn đã tìm thấy."
+Text/a4/text,Điều này chứng minh tất cả. Phong trào kháng chiến sẽ làm các bản sao. [tornado radius=3 freq=2]Lan truyền sự thật khắp nơi.[/tornado] Họ không thể bịt miệng tất cả chúng ta.
+Text/a5/text,"Bạn đã vượt qua một ranh giới. [wave amp=20 freq=3][color=YELLOW]Không còn con đường quay lại.[/color][/wave] Khi sự thật được lan truyền, Spud sẽ bị biến đổi."
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,

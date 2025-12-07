@@ -1,0 +1,19 @@
+﻿keys,tr
+Text/96/text,"Karanlık koridorda sessizce ilerlerken, güvenlik devriyelerinden kaçarak kalbiniz küt küt atıyor."
+Text/97/text,[color=CHARTREUSE]Bu cihaz Russet'in ofisindeki kilidi devre dışı bırakacak[/color]. Doğu kanadında bir alarm çıkararak oyalayacağım. Beş dakikanız var.
+Text/98/text,Manifestolar arşivinde olmalı. [color=CRIMSON]'RR Transport' yazan kırmızı dosya[/color]. Aramanızın izini bırakmayın.
+Text/99/text,"Arşivde [color=CRIMSON]""RR Transport"" yazan kalın kırmızı dosyayı[/color] buluyorsunuz."
+Text/9a/text,"İçinde reddedilen patates sayılarıyla eşleşen manifestolar ve Idaho Başbakanı'nın ""[pulse freq=3][color=DARK_VIOLET]sınır reddiyelerinin RR üretimi için tam kullanımını[/color][/pulse]"" onaylayan bir yönergesi var."
+Text/9b/text,"Ayak sesleri ofis kapısına yaklaşıyor. ""[wave amp=15 freq=3][color=YELLOW]Tuhaf, kilitli olduğundan emindim.[/color][/wave]"""
+Choice/9c/text,Masanın altına gizlen
+Choice/9d/text,Pencereden atla
+Text/9e/text,"Russet içeri girince masasının altına süzülüyorsunuz, kalbiniz güm güm atıyor. Oturuyor, ayakları yüzünüzden santimler uzakta."
+Text/9f/text,Russet burada. Ne? [color=CHARTREUSE]Başka bir alarm mı?[/color] Hemen geliyorum. Odadan çıkıyor ve siz kaçıyorsunuz.
+Text/a0/text,"Pencereyi açıp atlıyorsunuz. Neyse ki sadece bir kat. Bir bekçi bağır yor: ""[color=RED]Dur! Durma![/color]"""
+Text/a1/text,Arazide koşup takipçilerinizden kurtuluyorsunuz.
+Text/a2/text,Aldın mı?
+Text/a3/text,Bulduğunuz şeyi açıklayarak kanıtları teslim ediyorsunuz.
+Text/a4/text,Bu her şeyi kanıtlıyor. Direniş kopyalar çıkaracak. [tornado radius=3 freq=2]Gerçeği her yere yayın.[/tornado] Hepimizi susturamayacaklar.
+Text/a5/text,"Bir çizgiyi geçtiniz. [wave amp=20 freq=3][color=YELLOW]Geri dönüş yok.[/color][/wave] Gerçek yayıldığında, Spud dönüşecek."
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,

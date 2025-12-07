@@ -1,0 +1,25 @@
+﻿keys,ja
+patch_1_2_0_title,SPUD CUSTOMS 1.2.0 - PATCH NOTES
+patch_1_2_0_personal_note_header,A PERSONAL NOTE FROM THE DEVELOPER
+patch_1_2_0_personal_note,"This update is dedicated to my little one, who spent the first months of life in the NICU - from 1lb at birth to now 20lbs of pure joy. Thank you to everyone who has joined this journey - over 2,000 players have now experienced Spud Customs!"
+patch_1_2_0_visual_header,VISUAL ENHANCEMENTS
+patch_1_2_0_visual_1,Animated Art Integration: Incorporated new animated GIFs from StagNation into opening scenes
+patch_1_2_0_visual_2,Art Overhaul: Repainted the first five scenes players see for improved visual quality
+patch_1_2_0_visual_3,Dynamic Backgrounds: Background visuals now change as difficulty increases
+patch_1_2_0_story_header,STORY & NARRATIVE
+patch_1_2_0_story_1,Choice Persistence: Narrative choices now properly carry across all levels
+patch_1_2_0_story_2,Visual Progression: Added visual indicators of story progression in main gameplay scenes based on current shift number
+patch_1_2_0_story_3,Branching Dialogue Fixes: Fixed issues with branching dialogue in final narrative scenes
+patch_1_2_0_bugfix_header,BUG FIXES
+patch_1_2_0_bugfix_1,Achievement System: Fixed achievement tracking - all achievements now unlock properly
+patch_1_2_0_bugfix_2,Leaderboard: Fixed issue where leaderboard was stuck on loading
+patch_1_2_0_bugfix_3,Screen Shake: Screen shake now properly resets to origin after each use
+patch_1_2_0_bugfix_4,Difficulty Scaling: Fixed easy mode scaling factor
+patch_1_2_0_bugfix_5,Background Display: Fixed missing backgrounds during dialogue scenes
+patch_1_2_0_bugfix_6,Text Readability: Improved text coloration for better readability
+patch_1_2_0_engagement_header,PLAYER ENGAGEMENT
+patch_1_2_0_engagement_1,Review Requests: Added review prompts for demo and full game players
+patch_1_2_0_engagement_2,Translation Fixes: Various translation improvements across supported languages
+patch_1_2_0_technical_header,TECHNICAL IMPROVEMENTS
+patch_1_2_0_technical_1,Expanded Language Support: Now supporting all 31 Steam-supported languages
+patch_1_2_0_technical_2,Translation System Overhaul: Reorganized translation files for better maintainability

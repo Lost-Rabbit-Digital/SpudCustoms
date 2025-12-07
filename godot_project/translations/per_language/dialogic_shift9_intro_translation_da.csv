@@ -1,0 +1,27 @@
+﻿keys,da
+Text/140/text,"Grænsen ligner en [pulse freq=3][color=CRIMSON]krigszone[/color][/pulse]. Barrikader, pansrede køretøjer og elitevagter står klar. I dag er dagen, hvor modstandsbevægelsen planlagde at slå til."
+Text/141/text,"[wave amp=25 freq=3][color=YELLOW]NØDUDSENDELSE[/color][/wave]: Hele Spud er under [color=RED]militær undtagelsestilstand[/color]. ""Modstandsbevægelsen"" har indledt angreb mod regeringsfaciliteter."
+Text/142/text,"Enhver, der hjælper disse [color=CRIMSON]ekstremister[/color], står over for [color=DARK_VIOLET]øjeblikkelig forarbejdning[/color]. Ministeriet bekræfter: [color=DARK_VIOLET]Rod Reservatet[/color] forbliver sikkert for alle [color=DARK_ORANGE]loyale kartofler[/color]."
+Text/143/text,[color=YELLOW]Optøjer er brudt ud[/color] i flere sektorer. Modstandsceller har angrebet tre [color=DARK_VIOLET]Rod Reservat[/color] faciliteter.
+Text/144/text,Deres mål: adgang til den centrale database med alle produktionsoptegnelser. Ethvert tegn på illoyalitet betyder forarbejdning.
+Text/145/text,"Vi har fanget flere modstandsoperatører, herunder Officer Sasha."
+Text/146/text,"De [tornado radius=3 freq=2][color=CRIMSON]virkelige forrædere[/color][/tornado] er dem, der [color=DARK_VIOLET]fodrer vores folk med hinanden[/color]. I kan ikke stoppe sandheden!"
+Text/147/text,"Hun bliver slæbt væk, stadig råbende: [color=CHARTREUSE]Folket vil vide, hvad der er i deres mad![/color]"
+Text/148/text,"[color=CRIMSON]Forræderen[/color] vil blive [pulse freq=3][color=DARK_VIOLET]forarbejdet øjeblikkeligt[/color][/pulse]. Et særligt parti af [color=DARK_VIOLET]Rod Reservat[/color], lavet af terroristerne selv."
+Text/149/text,Alle grænseovergange er [color=RED]suspenderet[/color] undtagen for essentielt personale med [color=GOLD]Niveau Alfa-godkendelse[/color].
+Text/14a/text,Denne scanner [color=YELLOW]kan ikke narres[/color]. Slå alarm øjeblikkeligt for enhver uden ordentlig godkendelse.
+Text/14b/text,En kartoffel i officiel uniform nærmer sig med tilsyneladende perfekte Alfa-legitimationer.
+Text/14c/text,"Et lille blåt kort falder ud af mappen. ""[wave amp=15 freq=3][color=CHARTREUSE]Rødderne vokser dybt.[/color][/wave]"", mumler de, mens de samler kortet op."
+Choice/14d/text,"Behandl dem igennem, ignorer scanner-alarmer (Hjælp modstandsbevægelsen)"
+Choice/14e/text,Slå alarm øjeblikkeligt (Forråd modstandsbevægelsen)
+Text/14f/text,"Lettelse viser sig i deres øjne. ""[color=CHARTREUSE]For Sasha. For Spud.[/color]"" De forsvinder mod den centrale database."
+Text/150/text,"Rædsel dæmrer i deres ansigt. ""[color=CRIMSON]Din forræder! Vi stolede på dig![/color]"" De bliver hurtigt omringet af vagter."
+Text/151/text,Fremragende arbejde. Din loyalitet vil blive belønnet.
+Text/152/text,"Pludselig [color=YELLOW]ryster faciliteterne af eksplosioner[/color]. Modstandsangrebet er begyndt, uanset dit valg."
+Text/153/text,"Skal jeg blive på min post og håbe på at dette går over, eller [color=CHARTREUSE]tage et standpunkt[/color] og risikere alt for at afsløre sandheden?"
+Choice/154/text,Jeg kan ikke forlade min pligt. Jeg vil forholde mig tavs og håbe på det bedste.
+Choice/155/text,"Jeg har været medskyldig for længe. Det er tid til at kæmpe for det, der er rigtigt."
+Choice/155/disabled_text,
+Choice/14d/disabled_text,
+Choice/154/disabled_text,
+Choice/14e/disabled_text,

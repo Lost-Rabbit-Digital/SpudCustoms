@@ -1,0 +1,34 @@
+﻿keys,cs
+Text/b8/text,"Hraniční zařízení je v úplné uzávěře, ozbrojená ochranka hlídkuje v každé chodbě."
+Text/b9/text,[pulse freq=3][color=RED]POZOR! Bezpečnostní situace ÚROVNĚ ČERVENÁ![/color][/pulse] Tajné dokumenty byly včera v noci odcizeny.
+Text/ba/text,"Máme [tornado radius=4 freq=3][color=CRIMSON]zrádce mezi námi[/color][/tornado]. S každým, kdo zatají informace, bude zacházeno jako se spoluviníkem."
+Text/bb/text,"Všichni důstojníci, nastupte na [wave amp=15 freq=2][color=DARK_ORANGE]bezpečnostní skenování[/color][/wave]. Ti se zvýšenou stresovou reakcí budou označeni."
+Text/bc/text,"Viděli jste, co se děje venku? Všude letáky ukazující, že [color=DARK_VIOLET]Root Reserve[/color] je vyroben z... [pulse freq=3][color=CRIMSON]z nás[/color][/pulse]."
+Choice/bd/text,Ztiš hlas. Všichni jsme sledováni.
+Choice/be/text,"Slyšel jsem stejné zvěsti. Je to děsivé, pokud je to pravda."
+Choice/bf/text,To je směšná propaganda. Nešiř takové lži.
+Text/c0/text,Máš pravdu. Ale pokud je to pravda... co to z nás dělá?
+Text/c1/text,Můj bratranec byl minulý měsíc odmítnut. Znamená to...? [color=CHARTREUSE]Už takhle nemůžu pokračovat[/color].
+Text/c2/text,Jejich výraz se stává ostražitým. Samozřejmě. Navždy věrný Spud.
+Text/c3/text,"Uveďte, kde jste se nacházel včera v noci mezi 22:00 a 04:00 hodin."
+Choice/c4/text,Byl jsem celou noc ve svých ubikacích a spal jsem.
+Choice/c5/text,Raději bych nejdřív mluvil se svým právním zástupcem.
+Text/c6/text,Vaše úrovně stresu naznačují [color=YELLOW]klam[/color]. Nicméně... neprůkazné. Prozatím můžete jít.
+Text/c7/text,"Právní zástupce? Toto je bezpečnostní procedura, ne soud. Vaše odmítnutí bylo zaznamenáno."
+Text/c8/text,"Funguje to. Manifesty způsobily pozdvižení, ale [color=DARK_ORANGE]Russet nás podezřívá[/color]."
+Text/c9/text,Sledujte spojence z naší organizace během dnešní směny. [color=CHARTREUSE]Poznáte je[/color].
+Text/ca/text,"Pokud je dokážete bezpečně provést, použijte [color=CHARTREUSE]speciální značku, o které jsme mluvili[/color]."
+Choice/cb/text,Stojí to za to riziko. Jdu do toho.
+Choice/cc/text,Začíná to být příliš nebezpečné. Možná bychom se měli držet zpátky.
+Text/cd/text,"Věděl jsem, že se na tebe můžu spolehnout. Až to skončí, [color=CHARTREUSE]Spud bude vědět, kdo byli skuteční hrdinové[/color]."
+Text/ce/text,Jsme daleko za tímto bodem. Držet se zpátky nás nezachrání. [color=CHARTREUSE]Pouze svržení systému to dokáže[/color].
+Text/cf/text,Každá stanice nyní má nový [color=DARK_ORANGE]systém RealityScan[/color]. Detekuje neautorizované značky a padělky.
+Text/d0/text,Všechny dokumenty musí být před schválením oskenovány. [color=CRIMSON]Zrádci budou vykořeněni[/color]. Garantuji to.
+Text/d1/text,"Pomáhat členům odboje se právě stalo mnohem nebezpečnějším, ale [color=CHARTREUSE]pravda se musí šířit[/color]."
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,

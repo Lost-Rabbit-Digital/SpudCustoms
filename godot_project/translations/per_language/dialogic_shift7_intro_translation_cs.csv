@@ -1,0 +1,24 @@
+﻿keys,cs
+Text/102/text,"Dobře, zvládl jsi to. Odboj [color=CHARTREUSE]sílí[/color]. Díky těm manifestům lidé vidí pravdu."
+Text/103/text,"Podařilo se mi získat tuto složku z našich zdrojů - výrobní plány, seznamy '[color=CRIMSON]ingrediencí[/color]', jména [color=DARK_SLATE_BLUE]zmizelých[/color]."
+Text/104/text,Tohle není jen program doplňků stravy. [color=CRIMSON]Zpracovávají brambory[/color]...a ne dobrým způsobem.
+Text/105/text,"Interní memoranda od samotného premiéra Idaha, povolující ""[color=DARK_ORANGE]využití odmítnutých aktiv.[/color]"""
+Text/106/text,"Kvóty pro každý kontrolní bod, přičemž Bramborová celnice má nejvyšší poměr odmítnutí-k-zpracování."
+Text/107/text,Situace venku se zhoršila. U kontrolních bodů se shromažďují rozhněvané davy požadující odpovědi ohledně Root Reserve.
+Text/108/text,[color=YELLOW]NOUZOVÉ VYSÍLÁNÍ[/color]: Nedávné šíření [color=CRIMSON]falešných dokumentů[/color] způsobilo zbytečnou paniku.
+Text/109/text,Za informace vedoucí k dopadení těchto sabotérů je nabízena odměna [color=GOLD]10 000 bramborových kreditů[/color].
+Text/10a/text,Konzumace nebo distribuce této propagandy je nyní klasifikována jako [color=RED]velezrada[/color].
+Text/10b/text,Dnešní směna bude probíhat podle zvláštních protokolů. Každý cestující musí podstoupit hodnocení loajality.
+Text/10c/text,"Ti, kteří projevují [color=CRIMSON]protivládní nálady[/color], musí být okamžitě označeni."
+Text/10d/text,[color=CRIMSON]Zrádce mezi námi[/color] bude nalezen. A až bude... [přejede prstem přes hrdlo]
+Text/10e/text,"Nervózní brambora přistupuje, částečně viditelný [color=GOLD]žlutý listový odznak[/color]. Mezi papíry je zastrčená malá poznámka: ""[color=CHARTREUSE]Bezpečný dům kompromitován. Nová lokace: Sklad 7, Sektor 4.[/color]"""
+Choice/10f/text,Rychle je propusťte s UV značkou (Pomoc)
+Choice/110/text,Okamžitě je nahlaste ochrance (Zrada)
+Text/111/text,"Jejich tvář zaplavila úleva. ""Děkuji. Pravda zvítězí."""
+Text/112/text,"Hrůza se objevuje, když signalizujete ochrance. ""[wave amp=25 freq=3]Ne, prosím! Mám rodinu![/wave]"" Jejich žlutý odznak padá na podlahu."
+Text/113/text,Dobře odvedeno. Vaše loajalita je zaznamenána.
+Text/114/text,Vaše rozhodnutí bylo zpozorováno. Buďte připraven. [tornado radius=3 freq=2][color=CHARTREUSE]Něco velkého přichází[/color][/tornado]. Odboj plánuje přímou akci.
+Text/115/text,"Až k tomu dojde, budete si muset [color=YELLOW]vybrat stranu[/color]. Nezůstane žádná střední cesta."
+Text/116/text,"S každou bramborou, kterou zpracujete, buď [pulse freq=2][color=CHARTREUSE]pomáháte revoluci[/color][/pulse] nebo [pulse freq=2][color=CRIMSON]umožňujete hrůzný systém[/color][/pulse]."
+Choice/10f/disabled_text,
+Choice/110/disabled_text,

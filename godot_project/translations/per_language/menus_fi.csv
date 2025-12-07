@@ -1,0 +1,175 @@
+﻿keys,fi
+main_menu_feedback,Palaute ja bugit
+main_menu_version,Versio 1.2.0
+main_menu_new_game,Uusi peli
+main_menu_continue,Jatka
+main_menu_level_select,Tason valinta
+main_menu_score_attack,Pistemetsästys
+main_menu_options,Asetukset
+main_menu_credits,Tekijät
+main_menu_exit,Poistu
+select_language,Kieli
+social_discord_tooltip,Liity Discordiimme!
+social_steam_tooltip,Vieraile Steamissä
+social_twitch_tooltip,Twitch-integraatio
+twitch_status_disabled,Poistettu käytöstä
+twitch_status_no_viewers,Ei katsojia poolissa
+twitch_status_ready,{count} katsojaa valmiina
+twitch_connection_disabled,Pois käytöstä
+twitch_connection_disconnected,Yhteys katkaistu
+twitch_connection_connected,Yhdistetty
+twitch_connection_connecting,Yhdistetään...
+options_menu_title,Asetukset
+options_difficulty,Vaikeustaso
+options_difficulty_easy,Helppo
+options_difficulty_normal,Normaali
+options_difficulty_expert,Asiantuntija
+options_music_volume,Musiikin äänenvoimakkuus
+options_sfx_volume,Äänitehosteiden äänenvoimakkuus
+options_camera_shake,Kameran tärinä
+options_back,Takaisin
+paused_menu_title,Keskeytetty
+shift_summary_title,VUORON YHTEENVETO
+shift_summary_continue,Jatka
+shift_summary_restart,Aloita alusta
+shift_summary_main_menu,Päävalikko
+shift_summary_submit_score,Lähetä pisteet
+shift_summary_runner_stats,JUOKSIJAN TILASTOT
+shift_summary_document_stats,DOKUMENTIN TILASTOT
+shift_summary_performance,SUORITUSKYKY
+shift_summary_bonuses,BONUKSET
+_FORMAT KEYS,
+time_format,{minutes} min {seconds} s
+_SHIFT SUMMARY DETAILS,
+shift_complete_success,VUORO {shift} VALMIS\nONNISTUMINEN!
+shift_complete_failure,VUORO {shift} VALMIS\n{failure}
+strike_limit_reached,ISKURAJA SAAVUTETTU!
+quota_not_met,KIINTIÖ EI TÄYTTYNYT!
+shift_summary_title_with_difficulty,VUORON YHTEENVETO\n{difficulty}
+runner_stats_template,\nJUOKSIJAN TILASTOT\nJuoksuyritykset: {runner_attempts}\nAmmutut ohjukset: {fired}\nOsuneet juoksijat: {hit}\nTäydelliset osumat: {perfect}\nOsumatarkkuus: {rate}%
+document_stats_template,DOKUMENTIN TILASTOT\nLeimatut asiakirjat: {stamped}\nHyväksytyt perunat: {approved}\nHylätyt perunat: {rejected}\nTäydelliset leimat: {perfect_stamps}
+bonus_stats_template,BONUKSET\nKäsittelynopeusbonus: {processing_speed_bonus}\nLeimatarkkuusbonus: {accuracy}\nTäydelliset osumat -bonus: {perfect_hit_bonus}\nKokonaispistebonus: {total_score_bonus}
+performance_stats_template,SUORITUSKYKY\nKäytetty aika: {time_taken}\nOdotetut pisteet: {expected_score}\nKokonaispisteet: {score}\nYlipistemäärä prosentteina: {percent}%\nSuorituskyvyn luokitus:\n{rating}
+performance_exceptional,Poikkeuksellinen!
+performance_excellent,Erinomainen!
+performance_good,Hyvä
+performance_needs_improvement,Tarvitsee parannusta
+performance_poor,Huono
+global_leaderboard_title,Maailmanlaajuinen tulostaulu\n- {difficulty}
+getting_leaderboard_scores,Haetaan pistetilastoja...
+_PAUSE OPTIONS OVERLAY,
+reset_game_label,Nollaa peli:
+reset_game_button,Nollaa
+mute_label,Mykistä
+fullscreen_label,Koko näyttö:
+resolution_label,Resoluutio:
+antialiasing_label,Anti-Aliasing:
+screenshake_label,Näytön tärinä:
+mouse_sens_label,Hiiren herkkyys:
+___ LOADING SCREEN,
+Loading…,Ladataan...
+___ DIALOGS IN GAME,
+You lose.,Sinä häviät.
+You won!,Sinä voitit!
+Thanks for playing!,Kiitos pelaamisesta!
+Please Confirm...,Ole hyvä ja vahvista...
+Go back to main menu?,Palataanko päävalikkoon?
+Quit the game?,Lopeta peli?
+Cancel,Peruuttaa
+OK,OK
+___ OPTIONS MENU,
+Controls,Säätimet
+Mouse Sensitivity :,Hiiren herkkyys:
+Actions & Inputs,Toiminnot ja syötteet
+Add,Lisätä
+Remove,Poistaa
+Assign Key for {action},Määritä avain kohteelle {action}
+Listening for input...,Kuunnellaan syötettä...
+Press again to confirm...,Vahvista painamalla uudelleen...
+Focus here to assign inputs.,Keskity tähän määrittääksesi tulot.
+Already Assigned,Jo määrätty
+{key} already assigned to {action}.,{key} on jo määritetty tehtävälle {action}.
+Remove Key for {action},Poista {action} avain
+Are you sure you want to remove {key} from {action}?,Haluatko varmasti poistaa {key}:n kohteesta {action}?
+Reset,Nollaa
+Audio,Ääni
+Master :,Mestari:
+Music :,Musiikki:
+SFX :,SFX:
+Ambient :,Ympäristö:
+Mute :,Mykistä:
+Video,Kuva
+Fullscreen :,Koko näyttö:
+Resolution :,Resoluutio:
+Anti-Aliasing :,Anti-aliasing:
+Disabled (Fastest),Ei käytössä (nopein)
+8x (Slowest),8x (hitain)
+Camera Shake :,Kameran tärinä:
+Normal,Normaali
+Reduced,Vähennetty
+Minimal,Minimaalinen
+None,Ei mitään
+Game,Peli
+Reset Game :,Nollaa peli:
+Do you want to reset your game data?,Haluatko nollata pelitietosi?
+Back,Takaisin
+_INGAME DIALOGUE,
+TAKE THEM!,OTA NE!
+"Take your documents, please.","Ota asiakirjasi, kiitos."
+_SHIFT SUMMARY SCREEN,
+Continue,Jatkaa
+Main Menu,Päävalikko
+Submit Score,Lähetä pisteet
+Restart,Käynnistä uudelleen
+SHIFT SUMMARY,SHIFT YHTEENVETO
+_DIFFICULTY LEVELS,
+Easy,Helppo
+Normal,Normaali
+Expert,Asiantuntija
+Primary,Ensisijainen
+Secondary,Toissijainen
+Primary Interaction,Ensisijainen vuorovaikutus
+Secondary Interaction,Toissijainen vuorovaikutus
+Cancel Interaction,Peruuta vuorovaikutus
+Escape,Paeta
+Dialogic Default Action,Dialoginen oletustoiminto
+Enter,Jatka
+Left Mouse Button,Hiiren vasen painike
+Right Mouse Button,Hiiren oikea painike
+_NEW GAME CONFIRMATION,
+Start New Game,Aloita uusi peli
+Starting a new game will reset your progress. Are you sure you want to continue?,Uuden pelin aloittaminen nollaa edistymisesi. Haluatko varmasti jatkaa?
+"Yes, Start New Game","Kyllä, aloita uusi peli"
+Skip,Ohita
+History,Historia
+Return,Palata
+Restart the game?,Aloitetaanko peli uudelleen?
+_HELP MENU,
+help_menu_button,Ohje
+help_menu_title,Miten pelata
+help_tab_basics,Perusteet
+help_tab_gameplay,Pelattavuus
+help_tab_minigames,Minipelit
+help_basics_intro,[b]Tervetuloa Spud Customsiin
+help_basics_gate,[b]Portin avaaminen[/b]
+help_basics_documents,[b]Asiakirjojen tarkastus[/b]
+help_basics_stamping,[b]Asiakirjojen leimaaminen[/b]
+help_basics_runners,[b]Rajakarkurit[/b]
+help_basics_xray,[b]Röntgenlaite[/b]
+help_gameplay_quota,[b]Kiintiön täyttäminen[/b]
+help_gameplay_strikes,[b]Virhepisteet[/b]
+help_gameplay_rules,[b]Maahanmuuttosäännöt[/b]
+help_gameplay_scoring,[b]Pisteytys[/b]
+help_gameplay_difficulty,[b]Vaikeustasot[/b]
+help_minigames_intro,"[b]Minipelit[/b]\nTyövuorojesi aikana kohtaat minipelejä, joista voit ansaita bonuspisteitä. Suorita ne palkkioiden saamiseksi tai ohita ne ilman rangaistusta."
+help_minigames_document_scanner,"[b]Asiakirjaskanneri[/b] (Työvuoro 1+)\nKäytä UV-valoa löytääksesi piilotettuja elementtejä asiakirjoista. Napsauta merkitäksesi vesileimat, leimat ja symbolit. Löydä kaikki elementit ennen kuin aika loppuu!"
+help_minigames_stamp_sorting,"[b]Leimojen lajittelu[/b] (Työvuoro 2+)\nLajittele putoavat leimat oikeisiin koreihin. Vihreät leimat kuuluvat HYVÄKSYTTY-koriin, punaiset leimat HYLÄTTY-koriin. Lajittele nopeasti saadaksesi bonuspisteitä!"
+help_minigames_fingerprint_match,[b]Sormenjälkien vertailu[/b] (Työvuoro 3+)\nYhdistä sormenjäljet ruudukosta vertailukuvioon. Napsauta vastaavia jälkiä varmistaaksesi henkilöllisyyden. Vaatii tarkkaa havainnointia!
+help_minigames_code_breaker,"[b]Koodinmurtaja[/b] (Työvuoro 4+)\nMurra salainen koodi! Arvaa 4-numeroinen yhdistelmä. Vihreä tarkoittaa oikeaa paikkaa, keltainen väärää paikkaa. Rajoitettu määrä yrityksiä!"
+help_minigames_border_chase,[b]Salakuljetusjahti[/b] (Työvuoro 5+)\nSalakuljetustavaraa liukuhihnalla! Napsauta PUNAISIA esineitä takavarikoidaksesi ne. Anna VIHREIDEN esineiden mennä läpi. Nopeat refleksit ansaitsevat enemmän pisteitä!
+help_tab_lore,Tarina
+help_lore_world_intro,"[b]Spudin maailma[/b]\n\nTervetuloa maahan, jossa perunat ovat rakentaneet oman sivilisaationsa. Tässä maailmassa mukulat kävelevät, puhuvat ja ovat muodostaneet oman kansakuntansa lakeineen, rajoineen ja byrokratioineen."
+help_lore_nation,"[b]Spudin kansakunta[/b]\n\nSpud on ylpeä kansakunta, joka lupaa vaurautta kaikille perunoille. Spudin suuren muurin suojelemana kansakunta ylläpitää tiukkaa rajavalvontaa varmistaakseen, että vain arvoisensa mukulat pääsevät sisään.\n\nHallitus edistää yhtenäisyyttä ja kuuliaisuutta, ja isänmaallisten kansalaisten kuullaan usein julistavan: ""Kunnia Spudille!"""
+help_lore_your_role,"[b]Sinun roolisi[/b]\n\nSinut on valittu tärkeään rooliin suojelemaan rajoja. Tullivirkailijana työskentelet valvoja Russetin valvovan silmän alla.\n\nPerheesi hyvinvointi riippuu suorituksestasi. Täytä kiintiösi, noudata sääntöjä ja muista: kansakunta luottaa sinuun."
+help_lore_border,"[b]Suuri muuri[/b]\n\nMahtava Spudin suuri muuri suojelee kansakuntaa ulkopuolisilta. Muurin varrella olevilla eri tarkastuspisteillä sinun kaltaisesi virkailijat varmistavat, että vain arvoisensa pääsevät sisään.\n\nNe, jotka yrittävät ylittää rajan ilman asianmukaisia asiakirjoja, kohtaavat välittömiä seurauksia."
+help_lore_secrets,[b]Juurireservi[/b]\n\nHylätyt perunat... käsitellään. Protokollan mukaisesti. Salaperäinen Juurireservi hoitaa kaikki yksityiskohdat.\n\nOn parasta olla esittämättä liikaa kysymyksiä. Keskity tehtäviisi. Ei mihinkään muuhun.

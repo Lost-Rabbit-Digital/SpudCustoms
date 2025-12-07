@@ -1,0 +1,24 @@
+﻿keys,pt
+Text/102/text,"Bom, você conseguiu. A resistência está [color=CHARTREUSE]ficando mais forte[/color]. Graças àqueles manifestos, as pessoas estão vendo a verdade."
+Text/103/text,"Consegui obter este dossiê de nossas fontes - cronogramas de produção, listas de '[color=CRIMSON]ingredientes[/color]', nomes dos [color=DARK_SLATE_BLUE]desaparecidos[/color]."
+Text/104/text,Isto não é apenas um programa de suplementos alimentares. Eles estão [color=CRIMSON]processando batatas[/color]...e não de uma boa maneira.
+Text/105/text,"Memorandos internos do próprio Primeiro-Ministro Idaho, autorizando a ""[color=DARK_ORANGE]utilização de ativos rejeitados.[/color]"""
+Text/106/text,"Cotas para cada posto de controle, com a Alfândega de Batatas tendo a maior proporção de rejeição para processamento."
+Text/107/text,A situação lá fora deteriorou-se. Multidões furiosas se reúnem nos postos de controle exigindo respostas sobre a Root Reserve.
+Text/108/text,[color=YELLOW]TRANSMISSÃO DE EMERGÊNCIA[/color]: A recente circulação de [color=CRIMSON]documentos falsificados[/color] causou pânico desnecessário.
+Text/109/text,Uma recompensa de [color=GOLD]10.000 Créditos de Batata[/color] é oferecida por informações que levem à captura desses sabotadores.
+Text/10a/text,Consumir ou distribuir esta propaganda é agora classificado como [color=RED]alta traição[/color].
+Text/10b/text,O turno de hoje operará sob protocolos especiais. Cada viajante deve passar por uma Avaliação de Lealdade.
+Text/10c/text,Aqueles que demonstrarem [color=CRIMSON]sentimentos antigovernamentais[/color] devem ser sinalizados imediatamente.
+Text/10d/text,O [color=CRIMSON]traidor entre nós[/color] será encontrado. E quando for... [passa o dedo pela garganta]
+Text/10e/text,"Uma batata nervosa se aproxima, [color=GOLD]distintivo de folha amarela[/color] parcialmente visível. Uma pequena nota está escondida entre os papéis: ""[color=CHARTREUSE]Casa segura comprometida. Nova localização: Armazém 7, Setor 4.[/color]"""
+Choice/10f/text,Processe-os rapidamente com a marca UV (Ajuda)
+Choice/110/text,Reporte-os imediatamente à segurança (Traição)
+Text/111/text,"O alívio inunda seu rosto. ""Obrigado. A verdade prevalecerá."""
+Text/112/text,"O horror se revela quando você sinaliza para a segurança. ""[wave amp=25 freq=3]Não, por favor! Eu tenho uma família![/wave]"" Seu distintivo amarelo cai no chão."
+Text/113/text,Bem feito. Sua lealdade foi notada.
+Text/114/text,Sua decisão foi notada. Esteja pronto. [tornado radius=3 freq=2][color=CHARTREUSE]Algo grande está por vir[/color][/tornado]. A resistência está planejando uma ação direta.
+Text/115/text,"Quando acontecer, você precisará [color=YELLOW]escolher um lado[/color]. Não haverá mais meio-termo."
+Text/116/text,"Com cada batata que você processa, está [pulse freq=2][color=CHARTREUSE]ajudando uma revolução[/color][/pulse] ou [pulse freq=2][color=CRIMSON]permitindo um sistema horrível[/color][/pulse]."
+Choice/10f/disabled_text,
+Choice/110/disabled_text,
