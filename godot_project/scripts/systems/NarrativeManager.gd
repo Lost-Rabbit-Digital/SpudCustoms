@@ -264,6 +264,14 @@ func _on_dialogic_signal(argument):
 	if argument == "credits_ready":
 		get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
 
+	# QTE trigger signals from narrative timelines
+	if argument == "qte_infiltration":
+		_launch_qte("Infiltrate the facility!", 5, 2.0)
+	elif argument == "qte_escape":
+		_launch_qte("Escape the guards!", 6, 1.8)
+	elif argument == "qte_confrontation":
+		_launch_qte("Stand your ground!", 4, 2.5)
+
 	# Skip Steam achievements in DEV_MODE
 	# REFACTORED: Use GameStateManager
 	if GameStateManager and GameStateManager.is_dev_mode():
@@ -286,6 +294,17 @@ func _on_dialogic_signal(argument):
 		Steam.setAchievement(ACHIEVEMENTS.DOWN_WITH_THE_TATRIARCHY)
 		if EventBus:
 			EventBus.achievement_unlocked.emit(ACHIEVEMENTS.DOWN_WITH_THE_TATRIARCHY)
+
+
+func _launch_qte(context: String, prompt_count: int, time_per_prompt: float) -> void:
+	"""Launch a QTE minigame during narrative sequences."""
+	if EventBus:
+		EventBus.minigame_launch_requested.emit("quick_time_event", {
+			"narrative_context": context,
+			"prompt_count": prompt_count,
+			"time_per_prompt": time_per_prompt,
+			"force_launch": true  # Allow QTE even if not normally unlocked
+		})
 
 
 func start_final_confrontation():

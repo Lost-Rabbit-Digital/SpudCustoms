@@ -64,6 +64,10 @@ leave player_character
 join narrator [z_index="1"]
 [background arg="res://assets/narrative/occupation_checkpoint.png" fade="2.0"]
 audio "res://assets/audio/gun cocking 3.mp3" [volume="0.0" bus="SFX"]
+narrator: Security forces close in! [pulse freq=3][color=YELLOW]Fight your way through![/color][/pulse] #id:158
+leave narrator
+[signal arg="qte_confrontation"]
+join narrator [z_index="1"]
 narrator: Your group fights through waves of security, narrowly avoiding capture. Sasha's resistance fighters create diversions, clearing your path forward. #id:21
 audio "res://assets/audio/Heavy Pistol B.mp3" [volume="0.0" bus="SFX"]
 narrator: After a harrowing escape through maintenance tunnels, you finally reach the secure elevator to Idaho's private bunker. #id:22
