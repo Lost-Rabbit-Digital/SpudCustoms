@@ -14,14 +14,13 @@
 - **Testing**: GUT (Godot Unit Test) v9.3.0
 - **CI/CD**: GitHub Actions with gdformat, gdlint, gdradon
 - **Error Tracking**: Sentry integration
-- **Localization**: 20 supported languages
+- **Localization**: All Steam-supported languages (29 languages)
 
 **Reference Documentation:**
 - Game Design Document: `project_management/spud_customs_design_document.md`
 - Pre-release Testing: `project_management/testing/prerelease_test_procedure.md`
 - Steam Patch Notes: `project_management/steam_patch_notes/`
 - **EventBus Migration Guide**: `docs/EVENTBUS_MIGRATION_GUIDE.md`
-- **Claude Code Commands**: `.claude/commands/` (18 slash commands for common tasks)
 - **Test Documentation**: `godot_project/tests/README.md`
 
 ---
@@ -63,7 +62,6 @@ SpudCustoms/
 ├── project_management/               # Documentation and planning
 ├── .github/workflows/                # CI/CD automation
 │   └── automated_tests.yml           # Static checks + unit tests
-├── .claude/commands/                 # Claude Code slash commands (18 commands)
 ├── .gdlintrc                         # GDScript linting configuration
 ├── .gdformatrc                       # GDScript formatting configuration
 └── .gutconfig.json                   # GUT test configuration
@@ -73,8 +71,7 @@ SpudCustoms/
 - **GDScript files:** ~80 source files
 - **Scene files:** 48 .tscn files
 - **Autoload singletons:** 28 total (23 custom + 5 from plugins)
-- **Supported languages:** 20 locales
-- **Translation files:** 458 .translation files
+- **Supported languages:** 29 (all Steam-supported languages)
 - **Unit tests:** 14 test files (400+ test cases)
 - **Integration tests:** 10 test files
 
@@ -577,27 +574,47 @@ gdradon cc godot_project/scripts/
 
 ## Localization System
 
-### Supported Languages (20)
+### Supported Languages (All Steam Languages - 29)
 
-English (en), French (fr), German (de), Spanish (es), Italian (it), Portuguese (pt), Dutch (nl), Polish (pl), Czech (cs), Slovak (sk), Danish (da), Norwegian Bokmål (nb), Swedish (sv), Finnish (fi), Romanian (ro), Hungarian (hu), Turkish (tr), Ukrainian (uk), Indonesian (id), Vietnamese (vi)
+The game supports all Steam-supported languages:
+
+| Language | Code | Language | Code |
+|----------|------|----------|------|
+| Arabic | ar | Korean | ko |
+| Bulgarian | bg | Dutch | nl |
+| Czech | cs | Norwegian | no |
+| Danish | da | Polish | pl |
+| German | de | Portuguese | pt |
+| Greek | el | Portuguese (Brazil) | pt-BR |
+| English | en | Romanian | ro |
+| Spanish | es | Russian | ru |
+| Spanish (Latin America) | es-419 | Slovak | sk |
+| Finnish | fi | Swedish | sv |
+| French | fr | Thai | th |
+| Hungarian | hu | Turkish | tr |
+| Indonesian | id | Ukrainian | uk |
+| Italian | it | Vietnamese | vi |
+| Japanese | ja | Chinese (Simplified) | zh-CN |
+|  |  | Chinese (Traditional) | zh-TW |
 
 ### Translation File Organization
 
 ```
 translations/
-├── game.{locale}.translation           # General UI strings
-├── rules.{locale}.translation          # Immigration rules
-├── menus.{locale}.translation          # Menu labels
-├── passport.{locale}.translation       # Document fields
-├── violations.{locale}.translation     # Rule violations
+├── per_language/                        # Per-language CSV files for editing
+├── game.{locale}.translation            # General UI strings
+├── rules.{locale}.translation           # Immigration rules
+├── menus.{locale}.translation           # Menu labels
+├── passport.{locale}.translation        # Document fields
+├── violations.{locale}.translation      # Rule violations
 ├── bubble_dialogue.{locale}.translation # Speech bubbles
-└── dialogic_*.{locale}.translation     # Dialogic timelines
+└── dialogic_*.{locale}.translation      # Dialogic timelines
 ```
 
 ### Adding Translations
 
-1. Add translation keys in the appropriate category file
-2. Export translations for all 20 locales
+1. Add translation keys in the appropriate category CSV file
+2. Export translations for all locales
 3. Test with `LocalizationManager.set_locale(locale_code)`
 
 ---
@@ -659,37 +676,6 @@ NarrativeManager.record_choice("initial_response", "eager")
 
 ---
 
-## Claude Code Slash Commands
-
-The project includes 18 slash commands for common development tasks in `.claude/commands/`.
-
-### Testing Commands
-- `/run-tests` - Run GUT test suite
-- `/test-system <name>` - Create unit tests for a system
-- `/test-integration <feature>` - Create integration tests
-- `/test-eventbus <file>` - Create EventBus tests
-
-### Architecture Commands
-- `/migrate-eventbus <file>` - Migrate to EventBus pattern
-- `/add-di-pattern <system>` - Add dependency injection
-- `/fix-hardcoded-paths` - Remove hardcoded /root/ paths
-
-### Feature Commands
-- `/add-game-feature` - Add new gameplay feature
-- `/add-narrative-content` - Add Dialogic content
-- `/add-achievement <name>` - Add Steam achievement
-- `/add-accessibility <feature>` - Add accessibility features
-- `/add-localization` - Add localization support
-
-### Maintenance Commands
-- `/fix-z-index` - Fix z-index layering issues
-- `/optimize-performance` - Optimize with pooling
-- `/steam-integration` - Debug Steam features
-- `/code-quality` - Run linting and formatting
-- `/update-docs` - Update documentation
-
----
-
 ## CI/CD Pipeline
 
 ### GitHub Actions Workflow
@@ -724,8 +710,6 @@ The project includes 18 slash commands for common development tasks in `.claude/
 5. Implement unit tests in `tests/unit/`
 6. Document with `##` docstrings
 7. Register as autoload only if truly global
-
-**Use:** `/add-game-feature` slash command for guided implementation
 
 ### Adding a New Potato Type
 
@@ -782,7 +766,6 @@ The project includes 18 slash commands for common development tasks in `.claude/
 
 **Always Reference:**
 - **EventBus Migration Guide** (`docs/EVENTBUS_MIGRATION_GUIDE.md`)
-- **Claude Code Commands** (`.claude/commands/`)
 - **Test README** (`godot_project/tests/README.md`)
 - Game Design Document for feature specifications
 - CI/CD pipeline requirements before committing
