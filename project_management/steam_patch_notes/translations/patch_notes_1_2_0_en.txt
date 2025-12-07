@@ -1,0 +1,53 @@
+[h1]SPUD CUSTOMS 1.2.0 - PATCH NOTES[/h1]
+
+[h2]A PERSONAL NOTE FROM THE DEVELOPER[/h2]
+This update is dedicated to my little one, who spent the first months of life in the NICU - from 1lb at birth to now 20lbs of pure joy. Thank you to everyone who has joined this journey - over 2,000 players have now experienced Spud Customs!
+
+[h2]VISUAL ENHANCEMENTS[/h2]
+[list]
+[*][b]Animated Art Integration[/b]: Incorporated new animated GIFs from StagNation into opening scenes
+[*][b]Art Overhaul[/b]: Repainted the first five scenes players see for improved visual quality:
+  [list]
+  [*]Main menu background
+  [*]Tutorial checkpoint interior
+  [*]Shift 1 introduction scenes (Nation of Spud, checkpoint interior, Great Wall of Spud)
+  [*]Shift 1 ending scenes
+  [*]Shift 2 introduction with Sasha
+  [/list]
+[*][b]Dynamic Backgrounds[/b]: Background visuals now change as difficulty increases
+[/list]
+
+[h2]STORY & NARRATIVE[/h2]
+[list]
+[*][b]Choice Persistence[/b]: Narrative choices now properly carry across all levels
+[*][b]Visual Progression[/b]: Added visual indicators of story progression in main gameplay scenes based on current shift number
+[*][b]Branching Dialogue Fixes[/b]: Fixed issues with branching dialogue in final narrative scenes
+[*][b]Loyalty Path Fix[/b]: Resolved issue where scanner/reality scan sequence was triggering both paths around episode 5
+[/list]
+
+[h2]BUG FIXES[/h2]
+[list]
+[*][b]Achievement System[/b]: Fixed achievement tracking - all achievements now unlock properly including "First Shift Complete"
+[*][b]Leaderboard[/b]: Fixed issue where leaderboard was stuck on "Loading leaderboard data" with disabled submit button
+[*][b]Screen Shake[/b]: Screen shake now properly resets to origin after each invocation (was causing screen to drift off-center)
+[*][b]Difficulty Scaling[/b]: Fixed easy mode scaling factor (was 0.1, now correctly 0.8)
+[*][b]Background Display[/b]: Fixed missing backgrounds during dialogue scenes including:
+  [list]
+  [*]"All officers, line up for security scanning" sequence
+  [*]Legal representative option during security testing
+  [/list]
+[*][b]Text Readability[/b]: Fixed "Sweet Potato Sasha" scene text coloration for better readability
+[*][b]Post-Credits Navigation[/b]: Full game post-credits button now properly returns to main menu
+[/list]
+
+[h2]PLAYER ENGAGEMENT[/h2]
+[list]
+[*][b]Review Requests[/b]: Added tasteful review prompts for both demo and full game players
+[*][b]Translation Fixes[/b]: Various translation improvements across supported languages
+[/list]
+
+[h2]TECHNICAL IMPROVEMENTS[/h2]
+[list]
+[*][b]Expanded Language Support[/b]: Now supporting all Steam-supported languages (31 languages total)
+[*][b]Translation System Overhaul[/b]: Reorganized translation files for better maintainability
+[/list]
