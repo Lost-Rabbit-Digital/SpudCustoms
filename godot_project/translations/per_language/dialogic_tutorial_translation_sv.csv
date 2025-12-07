@@ -1,0 +1,30 @@
+﻿keys,sv
+Text/156/text,Välkommen till [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs Training![/color][/pulse]
+Text/157/text,Denna utbildning kommer att lära dig de [wave amp=15 freq=2][color=DARK_ORANGE]väsentliga färdigheter[/color][/wave] som behövs för att skydda Spuds gränser.
+Text/158/text,Din plikt är att behandla inkommande potatisar vid vår gränskontroll.
+Text/159/text,Invandrande potatisar kommer att ställa sig i kö utanför ditt kontor här.
+Text/15a/text,För att börja behandla potatisar måste du öppna din lucka för service med omkopplaren här.
+Text/15b/text,Du signalerar till varje potatis att närma sig ditt kontor genom att trycka på megafonen.
+Text/15c/text,Potatisar kommer att komma in i luckan en i taget och presentera sina dokument.
+Text/15d/text,"Först, flytta deras dokument till inspektionsbordet för en bättre titt."
+Text/15e/text,"Sedan, leta efter [tornado radius=3 freq=2][color=YELLOW]utgångna datum, felaktig information eller tecken på förfalskning[/color][/tornado]."
+Text/15f/text,"Ditt skrivbord har stämplar för att markera dokument, du kan klicka här för att dra ut stämpelraden."
+Text/160/text,Placera sedan dokumentet under den stämpel du vill ha...
+Text/161/text,Klicka på stämpeln för att markera dokument som [color=CHARTREUSE]godkända[/color] eller [color=CRIMSON]avvisade[/color]...
+Text/162/text,Och dra dokumentet tillbaka till potatisen för att slutföra ditt beslut!
+Text/163/text,Ibland kommer potatisar att försöka [color=CRIMSON]rusa förbi din kontrollpunkt[/color].
+Text/164/text,"Du har en direktlänk i din lucka, som låter dig kontrollera [pulse freq=3][color=CRIMSON]missilramper[/color][/pulse] längs gränsmuren."
+Text/165/text,"Klicka på dessa ""löpare"" för att avfyra en missil och stoppa dem."
+Text/166/text,"Kom ihåg, varje löpare som tar sig igenom kommer att räknas som en [wave amp=20 freq=3][color=CRIMSON]varning mot dig[/color][/wave]."
+Text/167/text,"För många varningar, och ditt skift kommer att avslutas... [tornado radius=3 freq=3][color=CRIMSON]permanent.[/color][/tornado]"
+Text/168/text,Varje skift har en [color=DARK_ORANGE]kvot av potatisar[/color] som du måste behandla för att avsluta din dag.
+Text/169/text,Din poäng håller koll på din prestation jämfört med dina kollegor vid denna kontrollpunkt och tjänstemän på avlägsna tullkontor.
+Text/16a/text,"Efter varje skift kommer du att se en sammanfattning av din prestation, och om du lyckades eller misslyckades i din plikt."
+Text/16b/text,Du kommer att se en uppdelning av hur du hanterade löpare och hur många dokument du behandlade.
+Text/16c/text,"Plus eventuella bonusar du tjänade genom att behandla dokument snabbt, perfekt justera stämplar eller perfekt träffa löpande potatisar."
+Text/16d/text,"Du kommer också att få en prestationsbedömning baserad på hur väl du behandlade potatisar under ditt skift, och upp till 3 guldstämplar om du överträffar förväntningarna."
+Text/16e/text,Här kan du skicka in din poäng för varje skift till den globala databasen av tulltjänstemän och se hur du jämför med de mest elitära tulltjänstemännen runt om i världen.
+Text/16f/text,"Om ditt skift var framgångsrikt kommer du att kunna fortsätta genom att klicka på ""Fortsätt"" och starta ditt nästa skift."
+Text/170/text,Det täcker grunderna i dina plikter som Tulltjänsteman.
+Text/171/text,"Kom ihåg: kontrollera dokument noggrant, stoppa löpare och uppfyll din kvot."
+Text/172/text,Säkerheten och tryggheten för Spud beror på din [pulse freq=2][color=DARK_ORANGE]vaksamhet![/color][/pulse]

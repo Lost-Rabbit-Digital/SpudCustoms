@@ -1,0 +1,24 @@
+﻿keys,ro
+Text/102/text,"Bine, ai reușit. Rezistența [color=CHARTREUSE]devine mai puternică[/color]. Datorită acelor manifeste, oamenii văd adevărul."
+Text/103/text,"Am reușit să obțin acest dosar de la sursele noastre - programe de producție, liste de '[color=CRIMSON]ingrediente[/color]', nume ale celor [color=DARK_SLATE_BLUE]dispăruți[/color]."
+Text/104/text,Acesta nu este doar un program de suplimente alimentare. Ei [color=CRIMSON]procesează cartofi[/color]...și nu într-un mod bun.
+Text/105/text,"Memorandumuri interne de la însuși Prim-ministrul Idaho, autorizând ""[color=DARK_ORANGE]utilizarea activelor respinse.[/color]"""
+Text/106/text,"Cote pentru fiecare punct de control, Vama Cartofilor având cel mai mare raport de respingere-la-procesare."
+Text/107/text,Situația din exterior s-a deteriorat. Mulțimi furioase se adună la punctele de control cerând răspunsuri despre Root Reserve.
+Text/108/text,[color=YELLOW]TRANSMISIE DE URGENȚĂ[/color]: Circulația recentă a [color=CRIMSON]documentelor falsificate[/color] a cauzat panică inutilă.
+Text/109/text,O recompensă de [color=GOLD]10.000 de Credite Cartof[/color] este oferită pentru informații care duc la capturarea acestor sabotori.
+Text/10a/text,Consumarea sau distribuirea acestei propagande este acum clasificată drept [color=RED]înaltă trădare[/color].
+Text/10b/text,Tura de azi va funcționa sub protocoale speciale. Fiecare călător trebuie să treacă printr-o Evaluare a Loialității.
+Text/10c/text,Cei care demonstrează [color=CRIMSON]sentimente anti-guvernamentale[/color] trebuie marcați imediat.
+Text/10d/text,[color=CRIMSON]Trădătorul dintre noi[/color] va fi găsit. Și când va fi... [trage cu degetul peste gât]
+Text/10e/text,"Un cartof nervos se apropie, [color=GOLD]insigna cu frunză galbenă[/color] parțial vizibilă. O notă mică este ascunsă între hârtii: ""[color=CHARTREUSE]Casa sigură compromisă. Nouă locație: Depozitul 7, Sectorul 4.[/color]"""
+Choice/10f/text,Procesează-i rapid cu marca UV (Ajutor)
+Choice/110/text,Raportează-i imediat la securitate (Trădare)
+Text/111/text,"Ușurarea le inundă fața. ""Mulțumesc. Adevărul va învinge."""
+Text/112/text,"Groaza se instaurează când semnalizezi securității. ""[wave amp=25 freq=3]Nu, te rog! Am o familie![/wave]"" Insigna lor galbenă cade pe podea."
+Text/113/text,Bine făcut. Loialitatea ta este notată.
+Text/114/text,Decizia ta a fost observată. Fii pregătit. [tornado radius=3 freq=2][color=CHARTREUSE]Ceva mare vine[/color][/tornado]. Rezistența planifică o acțiune directă.
+Text/115/text,"Când se va întâmpla, va trebui să [color=YELLOW]alegi o parte[/color]. Nu va mai exista nicio cale de mijloc."
+Text/116/text,"Cu fiecare cartof pe care îl procesezi, fie [pulse freq=2][color=CHARTREUSE]ajuți o revoluție[/color][/pulse], fie [pulse freq=2][color=CRIMSON]facilitezi un sistem oribil[/color][/pulse]."
+Choice/10f/disabled_text,
+Choice/110/disabled_text,

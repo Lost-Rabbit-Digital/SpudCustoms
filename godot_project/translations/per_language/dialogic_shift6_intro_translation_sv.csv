@@ -1,0 +1,34 @@
+﻿keys,sv
+Text/b8/text,"Gränsanläggningen är helt nedstängd, med beväpnad säkerhetspersonal som patrullerar varje korridor."
+Text/b9/text,[pulse freq=3][color=RED]OBSERVERA! Säkerhetssituation NIVÅ RÖD![/color][/pulse] Hemligstämplade dokument stals i natt.
+Text/ba/text,Vi har en [tornado radius=4 freq=3][color=CRIMSON]förrädare bland oss[/color][/tornado]. Alla som undanhåller information kommer att behandlas som medbrottslingar.
+Text/bb/text,"Alla officerare, ställ upp för [wave amp=15 freq=2][color=DARK_ORANGE]säkerhetsscanning[/color][/wave]. De med förhöjda stressreaktioner kommer att flaggas."
+Text/bc/text,Har du sett vad som händer utanför? Flygblad överallt som visar att [color=DARK_VIOLET]Root Reserve[/color] är gjort av... [pulse freq=3][color=CRIMSON]av oss[/color][/pulse].
+Choice/bd/text,Sänk rösten. Vi övervakas alla.
+Choice/be/text,Jag har hört samma rykten. Det är hemskt om det är sant.
+Choice/bf/text,Det är löjlig propaganda. Sprid inte sådana lögner.
+Text/c0/text,Du har rätt. Men om det är sant... vad gör det oss till?
+Text/c1/text,Min kusin blev avvisad förra månaden. Betyder det...? Jag [color=CHARTREUSE]kan inte göra detta längre[/color].
+Text/c2/text,Deras uttryck blir reserverat. Självklart. Lojal mot Spud för alltid.
+Text/c3/text,Uppge din vistelseort i går kväll mellan klockan 22:00 och 04:00.
+Choice/c4/text,"Jag var i mitt kvarter hela natten, sovande."
+Choice/c5/text,Jag skulle föredra att tala med min juridiska representant först.
+Text/c6/text,Dina stressnivåer indikerar [color=YELLOW]bedrägeri[/color]. Dock... inte avgörande. Du får gå för tillfället.
+Text/c7/text,"Juridisk representant? Detta är en säkerhetsprocedur, inte en rättegång. Din vägran har noterats."
+Text/c8/text,"Det fungerar. Manifesten har orsakat uppståndelse, men [color=DARK_ORANGE]Russet misstänker oss[/color]."
+Text/c9/text,Håll utkik efter allierade från vår organisation under dagens skift. [color=CHARTREUSE]Du kommer att känna igen dem[/color].
+Text/ca/text,"Om du kan få dem igenom säkert, använd [color=CHARTREUSE]det speciella märket vi diskuterade[/color]."
+Choice/cb/text,Det är värt risken. Jag är med.
+Choice/cc/text,Det blir för farligt. Kanske borde vi hålla låg profil.
+Text/cd/text,"Jag visste att jag kunde räkna med dig. När detta är över, [color=CHARTREUSE]kommer Spud att veta vilka de verkliga hjältarna var[/color]."
+Text/ce/text,Vi är långt bortom den punkten. Att hålla låg profil kommer inte att rädda oss. [color=CHARTREUSE]Endast att störta systemet kommer att göra det[/color].
+Text/cf/text,Varje station har nu det nya [color=DARK_ORANGE]RealityScan-systemet[/color]. Det upptäcker obehöriga märkningar och förfalskningar.
+Text/d0/text,Alla dokument måste skannas före godkännande. [color=CRIMSON]Förrädarna kommer att utrotas[/color]. Jag garanterar det.
+Text/d1/text,"Att hjälpa motståndets medlemmar har just blivit mycket farligare, men [color=CHARTREUSE]sanningen måste spridas[/color]."
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,

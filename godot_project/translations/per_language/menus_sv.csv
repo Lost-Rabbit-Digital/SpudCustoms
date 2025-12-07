@@ -1,0 +1,175 @@
+﻿keys,sv
+main_menu_feedback,Feedback och buggar
+main_menu_version,Utgåva 1.2.0
+main_menu_new_game,Nytt spel
+main_menu_continue,Fortsätt
+main_menu_level_select,Välj nivå
+main_menu_score_attack,Poängattack
+main_menu_options,Alternativ
+main_menu_credits,Medverkande
+main_menu_exit,Avsluta
+select_language,Språk
+social_discord_tooltip,Gå med i vår Discord!
+social_steam_tooltip,Besök oss på Steam
+social_twitch_tooltip,Twitch-integration
+twitch_status_disabled,Inaktiverad
+twitch_status_no_viewers,Inga tittare i poolen
+twitch_status_ready,{count} tittare redo
+twitch_connection_disabled,Inaktiverad
+twitch_connection_disconnected,Frånkopplad
+twitch_connection_connected,Ansluten
+twitch_connection_connecting,Ansluter...
+options_menu_title,Alternativ
+options_difficulty,Svårighetsgrad
+options_difficulty_easy,Lätt
+options_difficulty_normal,Mellannivå
+options_difficulty_expert,Svår
+options_music_volume,Musikvolym
+options_sfx_volume,Ljudeffektsvolym
+options_camera_shake,Kameraskakning
+options_back,Tillbaka
+paused_menu_title,Pausad
+shift_summary_title,SKIFTSAMMANFATTNING
+shift_summary_continue,Fortsätt
+shift_summary_restart,Starta om
+shift_summary_main_menu,Huvudmeny
+shift_summary_submit_score,Skicka in poäng
+shift_summary_runner_stats,LÖPARSTATISTIK
+shift_summary_document_stats,DOKUMENTSTATISTIK
+shift_summary_performance,PRESTATION
+shift_summary_bonuses,BONUSAR
+_FORMAT KEYS,
+time_format,{minutes}min {seconds}sek
+_SHIFT SUMMARY DETAILS,
+shift_complete_success,SKIFT {shift} FÄRDIG\nFRAMGÅNG!
+shift_complete_failure,SKIFT {shift} FÄRDIG\n{failure}
+strike_limit_reached,STREJKGRÄNS NÅDD!
+quota_not_met,KVOT EJ UPPNÅDD!
+shift_summary_title_with_difficulty,SKIFTSAMMANFATTNING\n{difficulty}
+runner_stats_template,\nLÖPARSTATISTIK\nLöparförsök: {runner_attempts}\nAvfyrade missiler: {fired}\nTräffade löpare: {hit}\nPerfekta träffar: {perfect}\nTräffprocent: {rate}%
+document_stats_template,DOKUMENTSTATISTIK\nStämplade dokument: {stamped}\nGodkända potatisar: {approved}\nAvvisade potatisar: {rejected}\nPerfekta stämplar: {perfect_stamps}
+bonus_stats_template,BONUSAR\nBehandlingshastighetbonus: {processing_speed_bonus}\nStämpelprecisionsbonus: {accuracy}\nPerfekta träffar bonus: {perfect_hit_bonus}\nTotal poängbonus: {total_score_bonus}
+performance_stats_template,PRESTATION\nTid: {time_taken}\nFörväntad poäng: {expected_score}\nTotal poäng: {score}\nÖver-poäng procent: {percent}%\nPrestationsomdöme:\n{rating}
+performance_exceptional,Exceptionell!
+performance_excellent,Utmärkt!
+performance_good,Bra
+performance_needs_improvement,Behöver förbättras
+performance_poor,Dålig
+global_leaderboard_title,Global Resultattavla\n- {difficulty}
+getting_leaderboard_scores,Hämtar resultattavla...
+_PAUSE OPTIONS OVERLAY,
+reset_game_label,Återställ spel:
+reset_game_button,Återställ
+mute_label,Ljud av
+fullscreen_label,Helskärm:
+resolution_label,Upplösning:
+antialiasing_label,Anti-Aliasing:
+screenshake_label,Skärmskakning:
+mouse_sens_label,Muskänslighet:
+___ LOADING SCREEN,
+Loading…,Belastning...
+___ DIALOGS IN GAME,
+You lose.,Du förlorar.
+You won!,Du vann!
+Thanks for playing!,Tack för att du spelar!
+Please Confirm...,Vänligen bekräfta...
+Go back to main menu?,Gå tillbaka till huvudmenyn?
+Quit the game?,Avsluta spelet?
+Cancel,Avboka
+OK,OK
+___ OPTIONS MENU,
+Controls,Kontroller
+Mouse Sensitivity :,Muskänslighet:
+Actions & Inputs,Åtgärder & input
+Add,Tillägga
+Remove,Ta bort
+Assign Key for {action},Tilldela nyckel för {action}
+Listening for input...,Lyssnar efter input...
+Press again to confirm...,Tryck igen för att bekräfta...
+Focus here to assign inputs.,Fokusera här för att tilldela ingångar.
+Already Assigned,Redan tilldelad
+{key} already assigned to {action}.,{key} har redan tilldelats {action}.
+Remove Key for {action},Ta bort nyckel för {action}
+Are you sure you want to remove {key} from {action}?,Är du säker på att du vill ta bort {key} från {action}?
+Reset,Återställa
+Audio,Ljud
+Master :,Mästare:
+Music :,Musik:
+SFX :,SFX:
+Ambient :,Miljö:
+Mute :,Stäng av:
+Video,Grafik
+Fullscreen :,Helskärm:
+Resolution :,Upplösning:
+Anti-Aliasing :,Anti-aliasing:
+Disabled (Fastest),Inaktiverad (snabbast)
+8x (Slowest),8x (långsammast)
+Camera Shake :,Kameraskakning:
+Normal,Mellannivå
+Reduced,Nedsatt
+Minimal,Minimal
+None,Ingen
+Game,Spel
+Reset Game :,Återställ spel:
+Do you want to reset your game data?,Vill du återställa dina speldata?
+Back,Tillbaka
+_INGAME DIALOGUE,
+TAKE THEM!,TA DEM!
+"Take your documents, please.","Ta dina dokument, tack."
+_SHIFT SUMMARY SCREEN,
+Continue,Fortsätta
+Main Menu,Huvudmeny
+Submit Score,Skicka in poäng
+Restart,Starta om
+SHIFT SUMMARY,SKIFT SAMMANFATTNING
+_DIFFICULTY LEVELS,
+Easy,Lätt
+Normal,Mellannivå
+Expert,Svår
+Primary,Primär
+Secondary,Sekundär
+Primary Interaction,Primär interaktion
+Secondary Interaction,Sekundär interaktion
+Cancel Interaction,Avbryt interaktion
+Escape,Fly
+Dialogic Default Action,Dialogisk standardåtgärd
+Enter,Skriva in
+Left Mouse Button,Vänster musknapp
+Right Mouse Button,Höger musknapp
+_NEW GAME CONFIRMATION,
+Start New Game,Starta nytt spel
+Starting a new game will reset your progress. Are you sure you want to continue?,Om du startar ett nytt spel återställs dina framsteg. Är du säker på att du vill fortsätta?
+"Yes, Start New Game","Ja, starta nytt spel"
+Skip,Hoppa
+History,Historia
+Return,Återvända
+Restart the game?,Starta om spelet?
+_HELP MENU,
+help_menu_button,Hjälp
+help_menu_title,Hur man spelar
+help_tab_basics,Grunderna
+help_tab_gameplay,Spelupplägg
+help_tab_minigames,Minispel
+help_basics_intro,[b]Välkommen till Potatistullen
+help_basics_gate,[b]Öppna Grinden[/b]\nKlicka på grindknappen eller använd megafonen för att kalla nästa potatis till ditt bås.
+help_basics_documents,"[b]Granska Dokument[/b]\nDra dokument till ditt skrivbord för att granska dem. Kontrollera namn, datum och andra detaljer mot immigrationsreglerna för det aktuella skiftet."
+help_basics_stamping,"[b]Stämpla Dokument[/b]\nAnvänd den GODKÄNDA (gröna) stämpeln för att släppa igenom immigranter, eller den NEKADE (röda) stämpeln för att avvisa dem. Stämpelnoggrannhet påverkar ditt resultat!"
+help_basics_runners,[b]Gränssmitare[/b]\nVissa potatisar kommer att försöka smita förbi gränskontrollen! Klicka för att avfyra missiler och stoppa dem. Perfekt tajming ger bonuspoäng.
+help_basics_xray,"[b]Röntgenskanner[/b]\nFrån och med Skift 3, använd röntgenmaskinen för att skanna potatisar efter gömt smuggelgods."
+help_gameplay_quota,[b]Uppnå kvoten[/b]\nVarje skift har en kvot av potatisar du måste hantera. Misslyckas du med att uppnå kvoten får du sparken!
+help_gameplay_strikes,"[b]Varningar[/b]\nMisstag (felaktiga godkännanden/avslag, missade smitare) ger dig varningar. För många varningar och det är game over!"
+help_gameplay_rules,"[b]Immigrationsregler[/b]\nKontrollera anslagstavlan för gällande regler. Reglerna ändras varje skift - förbjudna regioner, obligatoriska dokument och särskilda villkor."
+help_gameplay_scoring,"[b]Poängsättning[/b]\nTjäna poäng för korrekta beslut, perfekta stämplar och för att stoppa smitare. Bonusar delas ut för snabbhet och precision!"
+help_gameplay_difficulty,"[b]Svårighetsgrader[/b]\nLätt: Generösare tajming, färre regler. Normal: Standardupplevelse. Expert: Strikt tajming, komplexa regler, högre poäng."
+help_minigames_intro,[b]Minispel[/b]\nUnder dina skift kommer du att stöta på minispel som kan ge bonuspoäng. Slutför dem för belöningar eller hoppa över dem utan straff.
+help_minigames_document_scanner,"[b]Dokumentskanner[/b] (Skift 1+)\nAnvänd UV-ljus för att hitta dolda element på dokument. Klicka för att markera vattenstämplar, stämplar och symboler. Hitta alla element innan tiden tar slut!"
+help_minigames_stamp_sorting,"[b]Stämpelsortering[/b] (Skift 2+)\nSortera fallande stämplar i rätt lådor. Gröna stämplar till GODKÄND, röda stämplar till NEKAD. Sortera snabbt för bonuspoäng!"
+help_minigames_fingerprint_match,[b]Fingeravtrycksmatchning[/b] (Skift 3+)\nMatcha fingeravtryck från rutnätet med referensmönstret. Klicka på matchande avtryck för att verifiera identiteten. Noggrann observation krävs!
+help_minigames_code_breaker,"[b]Kodknäckare[/b] (Skift 4+)\nKnäck den hemliga koden! Gissa den 4-siffriga kombinationen. Grön betyder rätt position, gul betyder fel position. Begränsat antal försök!"
+help_minigames_border_chase,[b]Gränsjakt[/b] (Skift 5+)\nSmuggelgods på transportbandet! Klicka på RÖDA föremål för att konfiskera dem. Låt GRÖNA föremål passera. Snabba reflexer ger mer poäng!
+help_tab_lore,Berättelse
+help_lore_world_intro,"[b]Spuds Värld[/b]\n\nVälkommen till ett land där potatisar har byggt sin egen civilisation. I denna värld kan knölar gå, tala och har bildat sin egen nation med lagar, gränser och byråkrati."
+help_lore_nation,"[b]Nationen Spud[/b]\n\nSpud är en stolt nation som lovar välstånd för alla potatisar. Skyddad av den Stora Potatismuren, upprätthåller nationen strikta gränskontroller för att säkerställa att endast värdiga knölar får komma in.\n\nRegeringen främjar enighet och lydnad, och patriotiska medborgare hörs ofta proklamera: ""Ära åt Spud!"""
+help_lore_your_role,"[b]Din Roll[/b]\n\nDu har blivit utvald för en avgörande roll i att skydda gränserna. Som tulltjänsteman arbetar du under Inspektör Russets vaksamma öga.\n\nDin familjs välbefinnande beror på din prestation. Uppfyll dina kvoter, följ reglerna, och kom ihåg: nationen räknar med dig."
+help_lore_border,[b]Den Stora Muren[/b]\n\nDen mäktiga Stora Potatismuren skyddar nationen från utomstående. Vid olika kontrollstationer längs muren ser tjänstemän som du till att endast de värdiga får passera in.\n\nDe som försöker ta sig över gränsen utan korrekta dokument möter omedelbara konsekvenser.
+help_lore_secrets,[b]Rotreserven[/b]\n\nNekade potatisar blir... behandlade. Enligt protokoll. Den mystiska Rotreserven hanterar alla detaljer.\n\nDet är bäst att inte ställa för många frågor. Fokusera på dina plikter. Inget mer.

@@ -1,0 +1,27 @@
+﻿keys,nl
+Text/3a/text,"Het controlepunt is herbouwd na de aanval van het verzet. De veiligheid is zonder precedent, met propaganda-uitzendingen die de ""dappere verdedigers"" prijzen."
+Text/3b/text,Ik ben bevorderd tot Regionaal Directeur van Grensbeveiliging en [pulse freq=2]Wortelreserve Distributie[/pulse].
+Text/3c/text,Russet steekt een kleine medaille op je uniform. Adjunct-Regionaal Directeur... voor je onwankelbare loyaliteit aan Spud.
+Text/3d/text,Ik heb een speciale missie! Minister-president Idaho zal vandaag onze faciliteit inspecteren. Je bent geselecteerd voor de demonstratie.
+Text/3e/text,Heb je de nieuwe batch Wortelreserve gezien? Ze noemen het 'Verzet Mengsel' naar wat er met de gevangenen is gebeurd.
+Text/3f/text,Sommigen zeggen dat het verzet niet helemaal fout was. Dat er [wave amp=15 freq=3]bewijs is dat ze de waarheid spraken[/wave]...
+Choice/40/text,Wees voorzichtig. Zelfs zo praten is nu gevaarlijk. (Voorzichtig)
+Choice/41/text,Ik heb dezelfde gedachten gehad. Dit voelt niet goed. (Meevoelend)
+Text/42/text,Niet iedereen gelooft nog het officiële verhaal. Houd je ogen open tijdens het bezoek van de minister-president.
+Text/43/text,"Er vormt zich een nieuw verzet. Stiller, voorzichtiger. Als je meer wilt weten... let op het gele aardappel-embleem."
+Text/44/text,ATTENTIE: De stoet van Minister-president Idaho is aangekomen. Alle officieren naar aangewezen posities. Inspectieprotocollen van kracht.
+Text/45/text,Je medaille voelt zwaar - een beloning voor loyaliteit of een teken van schaamte? Binnenkort sta je oog in oog met de architect van de Wortelreserve.
+Text/46/text,"Na de uitzending die de Wortelreserve ontmaskerde, zijn opstanden uitgebroken in heel Spud. Minister-president Idaho blijft verschanst in het administratiegebouw."
+Text/47/text,Idaho plant een laatste uitzending om de Wortelreserve de schuld te geven van ons. We kunnen niet toestaan dat hij de geschiedenis herschrijft. Vandaag beëindigen we zijn regime.
+Text/48/text,Je hebt mijn leven gered in de verwerkingsfabriek. Nu hebben we een kans om heel Spud te redden.
+Text/49/text,Je kennis van beveiligingsprotocollen zal cruciaal zijn voor de laatste missie. Ben je klaar?
+Choice/4a/text,Ik ben klaar. Laten we afmaken wat we begonnen zijn.
+Choice/4b/text,Wat is precies het plan? Ik heb details nodig.
+Text/4c/text,Ik wist dat je niet zou terugdeinzen. Je bent een van onze [tornado radius=3 freq=2]sterkste bondgenoten[/tornado].
+Text/4d/text,We zullen infiltreren met overheidsuniformen. Je helpt de beveiligingssystemen te omzeilen. Ons doel is Idaho te vangen en een openbare bekentenis af te dwingen.
+Text/4e/text,"Je zit in Team Alfa met Sasha, die de oostelijke ingang binnendringt. Je opdracht: [color=GREEN]het uitzendcentrum veiligstellen[/color]."
+Text/4f/text,"Van loyale douaneambtenaar naar verzetsstrijder? Een transformatie die je nooit had kunnen voorstellen. Wat er ook gebeurt, Spud zal nooit meer hetzelfde zijn."
+Choice/4a/disabled_text,
+Choice/4b/disabled_text,
+Choice/41/disabled_text,
+Choice/40/disabled_text,

@@ -1,0 +1,27 @@
+﻿keys,hu
+Text/3a/text,"Az ellenőrző pontot újjáépítették a ellenállási támadás után. A biztonság példa nélküli, propagandaadásokkal, amelyek a ""bátor védőket"" dicsérik."
+Text/3b/text,Kineveztek a Határ Biztonsági Regionális Igazgatójává és a [pulse freq=2]Gyökér Tartalék Elosztás[/pulse] vezetőjévé.
+Text/3c/text,Russet egy kis érdemérmet tűz az egyenruhádra. Regionális Igazgató-helyettes... a Spud iránti rendíthetetlen hűségedért.
+Text/3d/text,Különleges küldetésem van! Idaho miniszterelnök ma fogja ellenőrizni a létesítményünket. Téged választottak a bemutatóra.
+Text/3e/text,"Láttad az új Gyökér Tartalék szállítmányt? Ellenállási Keveréknek hívják azután, ami a foglyokkal történt."
+Text/3f/text,"Néhányan azt mondják, az ellenállás nem volt teljesen rossz. Hogy vannak [wave amp=15 freq=3]bizonyítékok arra, hogy igazat mondtak[/wave]..."
+Choice/40/text,"Légy óvatos. Már az is veszélyes, ha ilyesmit mondasz. (Óvatos)"
+Choice/41/text,Ugyanezek a gondolataim támadtak. Ez nem tűnik rendben levőnek. (Együttérző)
+Text/42/text,Már nem mindenki hisz a hivatalos történetben. Tartsd nyitva a szemed a miniszterelnök látogatása alatt.
+Text/43/text,"Egy új ellenállás van kialakulóban. Halkabb, óvatosabb. Ha többet akarsz megtudni... figyelj a sárga burgonyajelvényre."
+Text/44/text,FIGYELEM: Idaho miniszterelnök konvoja megérkezett. Minden tiszt a kijelölt állomáshelyére. Ellenőrzési protokollok érvényben.
+Text/45/text,Az érdemérmed nehéznek tűnik - hűségjutalom vagy a szégyenbélyeg? Hamarosan szembesülsz a Gyökér Tartalék tervezőjével.
+Text/46/text,A Gyökér Tartalékot leleplező adás után lázadások törtek ki az egész Spudban. Idaho miniszterelnök az adminisztrációs épületben barikádozta el magát.
+Text/47/text,"Idaho egy utolsó adást tervez, hogy minket okoljon a Gyökér Tartalékért. Nem engedhetjük, hogy átírja a történelmet. Ma véget vetünk a rendszerének."
+Text/48/text,Megmentetted az életemet a feldolgozóüzemben. Most esélyünk van megmenteni az egész Spudot.
+Text/49/text,A biztonsági protokollok ismerete kulcsfontosságú lesz a végső küldetésben. Készen állsz?
+Choice/4a/text,"Készen állok. Fejezzük be, amit elkezdtünk."
+Choice/4b/text,Mi pontosan a terv? Részletekre van szükségem.
+Text/4c/text,"Tudtam, hogy nem hátrálsz meg. Te vagy az egyik [tornado radius=3 freq=2]legerősebb szövetségesünk[/tornado]."
+Text/4d/text,Kormányzati egyenruhákban fogunk beszivárogni. Segítesz kijátszani a biztonsági rendszereket. A célunk Idaho elfogása és nyilvános vallomásra kényszerítése.
+Text/4e/text,"Az Alfa Csapatban leszel Sashával, áttörve a keleti bejáraton. A feladatod: [color=GREEN]biztosítani a sugárzási központot[/color]."
+Text/4f/text,"Hűséges vámos tisztviselőből ellenállási harcos? Egy átalakulás, amire soha nem gondoltál volna. Bármit is hoz a jövő, Spud soha nem lesz már ugyanolyan."
+Choice/4a/disabled_text,
+Choice/4b/disabled_text,
+Choice/41/disabled_text,
+Choice/40/disabled_text,

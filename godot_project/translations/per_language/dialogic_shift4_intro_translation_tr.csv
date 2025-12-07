@@ -1,0 +1,19 @@
+﻿keys,tr
+Text/86/text,Bugün yeni güvenlik protokolleri. [color=YELLOW]Şüpheli faaliyetler[/color] hakkında istihbarat aldık.
+Text/87/text,Tüm yolcuların gelişmiş denetim prosedürlerinden geçmesi gerekiyor.
+Text/88/text,"[color=YELLOW]Sinirli davranış, alışılmadık tavırlar veya göz teması kurmaktan kaçınma[/color] konusunda dikkatli olun."
+Text/89/text,"Tüm şüpheli eşyalar müsadere edilmeli ve kaydedilmelidir. Spud'un güvenliği için, elbette."
+Text/8a/text,"[color=CRIMSON]Yasaklı materyaller[/color] konusunda özellikle endişeliyiz - hükümete karşı edebiyat, fotoğraf ekipmanı..."
+Text/8b/text,"Sesleri tehditkâr bir şekilde düşüyor. ""[pulse freq=2][color=DARK_VIOLET]Bu bireyler için özel prosedürlerimiz var.[/color][/pulse]"""
+Text/8c/text,"[wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] kamyonları yemekhanede ""Premium Reserve"" yazılı sandıkları boşaltıyor. Koku cazip, ama mideniz dönüyor."
+Text/8d/text,Yeni Premium Reserve'i denediniz mi? Kuzenim geçen ay kayboldu. Denetimden geçemedi.
+Text/8e/text,"Belki de bu partinin bir parçası, öyle mi? [tornado radius=2 freq=2][color=STEEL_BLUE]Karanlık mizah, anlıyor musunuz?[/color][/tornado]"
+Choice/8f/text,Bu hiç komik değil.
+Choice/90/text,Açım değilim. Özür dilerim. (Ayrılır)
+Text/91/text,Haklısınız. Bazen [pulse freq=3][color=CRIMSON]gerçekte neler olabileceğini düşünmekten[/color] ziyade espri yapmak daha kolay.
+Text/92/text,"Görevli sizi giderken izliyor. ""Anlıyorum. Benim de iştahım kaçtı..."""
+Text/93/text,"Yeni güvenlik protokolleri için uygun zamanlama, değil mi? [wave amp=15 freq=3][color=YELLOW]Root Reserve hakkındaki bilgileri durdurmaya çalışıyorlar.[/color][/wave]"
+Text/94/text,Bize yardımcı olabilecek bir şeyim var. [color=CHARTREUSE]Hayati bilgilere sahip bazı patatesler geçmeyi hak ediyor[/color].
+Text/95/text,Seçeneklerinizi dikkatle değerlendiriyorsunuz. Bugünün kararları [color=CHARTREUSE]gerçeği yaymaya[/color]... ya da onu [color=CRIMSON]sonsuza dek susturmaya[/color] yardımcı olabilir.
+Choice/8f/disabled_text,
+Choice/90/disabled_text,

@@ -1,0 +1,55 @@
+﻿keys,it
+Text/d2/text,"Dopo il tuo turno, vieni condotto a un incontro segreto della resistenza in una fabbrica di amido abbandonata."
+Text/d3/text,Una patata logorata con cicatrici di battaglia si rivolge al gruppo riunito.
+Text/d4/text,Il tempo dei sussurri e dei volantini è finito. Il governo ha mostrato il suo vero volto.
+Text/d5/text,Le nostre fonti confermano che gli impianti di lavorazione [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] stanno aumentando la produzione.
+Text/d6/text,"Il che significa [tornado radius=3 freq=3][color=CRIMSON]più dei nostri fratelli e sorelle scomparsi, lavorati, consumati[/color][/tornado]."
+Text/d7/text,Il leader batte un pugno sul tavolo. [pulse freq=3][color=CHARTREUSE]Questo finisce ora.[/color][/pulse] Abbiamo un piano per colpire il cuore della loro operazione.
+Text/d8/text,"Sasha srotola piani dettagliati sul tavolo. Tra tre giorni, lanceremo la nostra offensiva principale."
+Text/d9/text,"Mentre una squadra crea un diversivo presso il complesso governativo principale, un'altra infiltrerà la più grande struttura di Root Reserve."
+Text/da/text,"Il nostro obiettivo: ottenere [color=CHARTREUSE]prove inconfutabili[/color] di ciò che accade all'interno, trasmetterle a tutto Spud."
+Text/db/text,Sasha indica una sezione dei piani. È qui che entri in gioco tu.
+Text/dc/text,Abbiamo bisogno di qualcuno all'interno della Dogana di Spud per garantire che i nostri operativi possano attraversare il confine per la missione.
+Text/dd/text,Possiamo contare su di te per essere quella persona?
+Choice/de/text,Farò qualsiasi cosa sia necessaria per esporre la verità.
+Choice/df/text,Sembra pericoloso. E se venissimo catturati?
+Choice/e0/text,C'è un altro modo che non metta tanti a rischio?
+Text/e1/text,Il volto di Sasha si illumina di speranza. Grazie. [color=CHARTREUSE]Il tuo coraggio salverà innumerevoli vite.[/color]
+Text/e2/text,"Ti stringe la mano. Quando tutto questo sarà finito, [color=CHARTREUSE]sarai ricordato come un eroe della rivoluzione.[/color]"
+Text/e3/text,Sasha annuisce solennemente. È pericoloso. Non ti mentirò su questo.
+Text/e4/text,Potremmo tutti finire [color=DARK_VIOLET]trasformati in Root Reserve[/color] se falliamo.
+Text/e5/text,"Ma non fare nulla è ancora più pericoloso. Per tutti noi, nel lungo termine."
+Text/e6/text,L'espressione di Sasha diventa cupa. Abbiamo provato altri metodi. Per anni.
+Text/e7/text,Petizioni. Diplomazia silenziosa. Segnalazioni anonime. Niente ha funzionato.
+Text/e8/text,A volte bisogna rischiare tutto per cambiare qualcosa.
+Text/e9/text,Un acceso dibattito scoppia tra i membri della resistenza.
+Text/ea/text,Alcuni sostengono un approccio più aggressivo — distruggere completamente gli impianti di lavorazione.
+Text/eb/text,Altri insistono che l'azione violenta farebbe solo volgere l'opinione pubblica contro di loro.
+Text/ec/text,BASTA! Il leader zittisce la sala con voce autoritaria.
+Text/ed/text,"Non possiamo permetterci di essere divisi. Non ora, quando siamo così vicini."
+Text/ee/text,Il nostro obiettivo è semplice: rivelare la verità. Lasciamo che il popolo decida cosa succede dopo.
+Text/ef/text,Il leader si gira per rivolgersi direttamente a te. Ma dobbiamo sapere [color=YELLOW]da che parte stai[/color].
+Text/f0/text,"Tra tre giorni, i nostri agenti si avvicineranno al tuo posto di controllo. Porteranno [color=CHARTREUSE]carte d'identità blu[/color]."
+Text/f1/text,Li aiuterai ad attraversare? La tua risposta ora determinerà la nostra prossima mossa.
+Choice/f2/text,Li aiuterò ad attraversare. Per il futuro di Spud.
+Choice/f3/text,"Non posso essere coinvolto direttamente, ma guarderò dall'altra parte."
+Choice/f4/text,Ho bisogno di più tempo per pensarci.
+Text/f5/text,Il leader ti afferra saldamente la spalla. [color=CHARTREUSE]Il tuo coraggio onora tutti noi.[/color]
+Text/f6/text,"Il terzo giorno, quando il sole è al suo punto più alto, arriveranno i nostri agenti."
+Text/f7/text,"La parola d'ordine è ""[wave amp=15 freq=3][color=CHARTREUSE]Le radici crescono in profondità.[/color][/wave]"" Ricordalo."
+Text/f8/text,"Il leader annuisce lentamente, chiaramente deluso ma comprensivo."
+Text/f9/text,A volte il massimo che possiamo chiedere è che le persone non ci ostacolino.
+Text/fa/text,I nostri agenti procederanno come previsto. Solo... non dare l'allarme.
+Text/fb/text,L'espressione del leader si indurisce. [color=YELLOW]Il tempo è un lusso che non abbiamo.[/color]
+Text/fc/text,Ma costringere qualcuno a unirsi alla nostra causa non ci rende migliori di loro.
+Text/fd/text,Procederemo senza contare sul tuo aiuto. Consulta la tua coscienza.
+Text/fe/text,"Mentre la riunione si scioglie, Sasha cammina con te di ritorno verso il posto di controllo."
+Text/ff/text,Qualunque cosa accada... grazie per tutto quello che hai fatto.
+Text/100/text,"Torni ai tuoi alloggi al posto di controllo, la mente che corre con il peso degli eventi imminenti."
+Text/101/text,"In soli tre giorni, tutto potrebbe cambiare. [color=YELLOW]In meglio o in peggio.[/color]"
+Choice/de/disabled_text,
+Choice/f4/disabled_text,
+Choice/f3/disabled_text,
+Choice/f2/disabled_text,
+Choice/e0/disabled_text,
+Choice/df/disabled_text,

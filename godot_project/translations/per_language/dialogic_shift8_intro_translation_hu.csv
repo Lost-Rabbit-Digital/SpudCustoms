@@ -1,0 +1,31 @@
+﻿keys,hu
+Text/117/text,Az ellenőrzőpont katonai állomássá alakult. Fekete egyenruhás elit őrök járőröznek fegyverekkel látványosan.
+Text/118/text,"Yukon biztonsági főtiszt vagyok, a fővárosból küldött Idaho miniszterelnök."
+Text/119/text,"A hírszerzési információk szerint [pulse freq=2][color=YELLOW]terrortámadás fenyeget[/color][/pulse]. Az ""ellenállás"" holnap tervezi a beszivárgást."
+Text/11a/text,Minden tiszt [wave amp=15 freq=2][color=DARK_ORANGE]hűségvizsgálatnak[/color][/wave] veti alá magát. Gyanús viselkedés őrizetbe vételt és [color=DARK_VIOLET]feldolgozást[/color] jelent.
+Text/11b/text,[tornado radius=3 freq=2][color=RED]Teljes együttműködés[/color][/tornado] a Biztonsággal kötelező. A jelentéseimet mindegyikőtökről átadtam a Főnöknek.
+Text/11c/text,"Russet tekintete kényelmetlenül időzik rajtad, mielőtt továbblép."
+Text/11d/text,Ez az [color=DARK_ORANGE]IdentityScan 5000[/color]. Biometrikus adatokat elemez a beszivárgók és szimpatizánsok felderítésére.
+Text/11e/text,"Bárki, akit megjelölnek, [color=CRIMSON]fokozott kihallgatással[/color] néz szembe. Használd kivétel nélkül."
+Text/11f/text,Láttad Sashát? Nem jelentkezett a névsorolvasásnál. Tegnap este [color=CRIMSON]biztonsági erők léptek be a szállására[/color].
+Text/120/text,"Azt mondják, része volt az [pulse freq=2][color=CHARTREUSE]ellenállásnak[/color][/pulse]."
+Choice/121/text,Nem kellene erről beszélnünk. Veszélyes.
+Choice/122/text,Én is aggódom érte. Ez nincs rendben.
+Text/123/text,Igazad van. De vigyázz magadra. Kapcsolatokat keresnek hozzá.
+Text/124/text,Szóval közel álltatok egymáshoz? Légy óvatos. Téged is figyelhetnek.
+Text/125/text,"A tiszt egy üzenetet csúsztat neked: ""[color=YELLOW]Tisztítsd meg az állomásodat minden gyanús dologtól.[/color]"""
+Text/126/text,Már jó ideje vagy ennél az ellenőrzőpontnál. Érdekes teljesítményadatok.
+Text/127/text,"Gyakran láttak Sasha tiszttel, akit most [wave amp=20 freq=3][color=CRIMSON]hazaárulás[/color][/wave] miatt vizsgálnak."
+Text/128/text,"A főnök előrehajol. Van valami, amit el szeretnél mondani nekem a tevékenységeiről?"
+Choice/129/text,Sasha és én csak kollégák voltunk. A munkán kívül semmit sem tudok róla.
+Choice/12a/text,"Bizonyítékokat gyűjtöttem gyanús tevékenységeiről, hogy később jelenthessem."
+Text/12b/text,Több tanú mást állít. Konkrét bizonyítékok nélkül azonban nem tartóztathatlak le. [color=YELLOW]Még.[/color]
+Text/12c/text,"[color=CRIMSON]Szoros megfigyelés[/color] alatt leszel. Egy rossz lépés, és [color=DARK_VIOLET]Sashához csatlakozol[/color]."
+Text/12d/text,Milyen kényelmes. És mégsem nyújtottál be jelentéseket mostanáig.
+Text/12e/text,"Teljes nyilatkozatot fogsz tenni. Ha az információid értékesnek bizonyulnak, talán elnézzük a késedelmes jelentéstételt."
+Text/12f/text,Ma [color=CRIMSON]figyelni fogom a munkádat[/color]. Minden utast azonosító szkennelésnek kell alávetni. [color=RED]Nincs kivétel[/color].
+Text/130/text,Sashát elvitték. Az ellenállás terve [color=CRIMSON]lelepleződött[/color]. A magas készültségi fokú biztonsággal az esélyeik reménytelennek tűnnek.
+Choice/121/disabled_text,
+Choice/12a/disabled_text,
+Choice/129/disabled_text,
+Choice/122/disabled_text,

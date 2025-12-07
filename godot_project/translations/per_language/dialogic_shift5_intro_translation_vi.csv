@@ -1,0 +1,23 @@
+﻿keys,vi
+Text/a6/text,Cơ sở biên giới hôm nay có cảm giác khác. Căng thẳng. Tuần tra an ninh với số lượng lớn hơn khi sự im lặng thận trọng thay thế cho tiếng trò chuyện.
+Text/a7/text,"Đêm qua, [pulse freq=2][color=CRIMSON]các tài liệu bị cấm[/color][/pulse] đã được phát hiện. Những tờ rơi chứa đựng những lời dối trá về [color=DARK_VIOLET]Root Reserve[/color]."
+Text/a8/text,Chúng tôi đang thực hiện [wave amp=15 freq=2][color=DARK_ORANGE]các giao thức mức độ đe dọa CAM[/color][/wave]. Tất cả các sĩ quan phải trải qua kiểm tra lòng trung thành. Tất cả du khách đều phải đối mặt với sự kiểm tra tối đa.
+Text/a9/text,Nó đang hoạt động. Các tờ rơi đang lan rộng. Mọi người đang đặt câu hỏi về [color=DARK_VIOLET]Root Reserve[/color].
+Text/aa/text,Tôi có nguồn tin nói với tôi rằng có một nhật ký vận chuyển trong văn phòng của Russet - những bản kê khai vận chuyển có thể [tornado radius=3 freq=2][color=CHARTREUSE]chứng minh tất cả[/color][/tornado].
+Text/ab/text,"Tôi cần bạn giúp tôi lấy nó. Tối nay, sau ca làm việc cuối cùng. Tôi có thể trông cậy vào bạn không?"
+Choice/ac/text,Tôi tham gia. Hãy vạch trần sự thật.
+Choice/ad/text,"Tôi không biết, Sasha... điều này có thể nguy hiểm."
+Text/ae/text,Tạ ơn trời. Tôi biết bạn có [color=CHARTREUSE]rễ mạnh hơn những người khác[/color]. Chúng ta sẽ gặp nhau lúc nửa đêm.
+Text/af/text,Đôi khi chúng ta phải [color=CHARTREUSE]liều mình bị nghiền nát để làm điều đúng đắn[/color]. Hãy suy nghĩ về điều đó.
+Text/b0/text,[color=DARK_ORANGE]Kiểm tra lòng trung thành[/color]. Vui lòng nêu tên và ID sĩ quan của bạn. Sau đó hãy cho tôi biết tại sao bạn phục vụ Spud.
+Choice/b1/text,Tôi phục vụ để bảo vệ biên giới của chúng ta khỏi những ảnh hưởng nguy hiểm.
+Choice/b2/text,Tôi phục vụ để đảm bảo mọi người đều nhận được sự đối xử công bằng.
+Text/b3/text,"Câu trả lời tốt. Spud cần những người bảo vệ trung thành. Máy quét hiển thị màu xanh lá. Tiếp tục, sĩ quan."
+Text/b4/text,"Lông mày của sĩ quan nhướng lên. Đối xử công bằng? Máy quét nhấp nháy [color=DARK_ORANGE]màu hổ phách[/color]. Hãy nhớ rằng, mối quan tâm chính của chúng ta là an ninh, không phải công bằng."
+Text/b5/text,Hạn ngạch hôm nay đã được tăng lên. Bất kỳ ai có tài liệu đáng ngờ đều phải được đánh dấu để [color=DARK_VIOLET]xử lý đặc biệt[/color].
+Text/b6/text,Tôi sẽ [color=DARK_ORANGE]theo dõi các quyết định của bạn[/color] rất cẩn thận hôm nay.
+Text/b7/text,"Đêm nay có thể thay đổi tất cả. Nhưng trước tiên, [color=YELLOW]hãy sống sót qua ngày mà không gây ra sự nghi ngờ[/color]."
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,

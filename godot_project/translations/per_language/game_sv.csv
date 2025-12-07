@@ -1,0 +1,52 @@
+﻿keys,sv
+alert_border_runner,GRÄNSlöpare UPPTÄCKT!\nKlicka för att avfyra missil!
+alert_rejected_fleeing,AVVISAD POTATIS FLYR!\nKlicka för att avfyra missil!
+alert_runner_escaped,LÖPARE RYMT!\nStrike tillagd!
+alert_points_deducted,LÖPARE RYMT!\nStrike tillagd!\n-{penalty} poäng!
+alert_perfect_hit,PERFEKT TRÄFF! +{perfect} precisionsbonus poäng
+alert_perfect_stamp,PERFEKT STÄMPEL! +{points} poäng!
+alert_combo,COMBO x{mult}! +{streak} combo bonuspoäng
+alert_quota_met,"Kvot uppnådd, pass avslutat! \nBonus: {bonus} poäng!"
+alert_strike_removed,Strike borttagen!
+alert_correct_decision,"Du tog rätt beslut, polis.\n+{points} poäng!"
+alert_wrong_decision,"Du har orsakat onödigt lidande, polis...\n+1 Strike!"
+alert_potato_should_be_approved,\nDenna potatis uppfyller alla krav och borde ha godkänts.
+alert_strike_out,Maximalt antal strikes överskridet! Ditt pass är över.
+ui_score,Poäng: {score}
+ui_quota,Kvot: {current} / {target}
+ui_strikes,Anmärkningar: {current} / {max}
+ui_click_megaphone,Klicka på megafonen för att kalla nästa potatis
+ui_drag_document,Dra dokumentet till inspektionsbordet
+ui_stamp_document,Välj en stämpel för att godkänna eller avvisa
+ui_check_violations,Kontrollera dokumentöverträdelser
+Strike removed!,Strike borttagen!
+BORDER RUNNER DETECTED!\nClick to launch missile!,GRÄNSlöpare UPPTÄCKT!\nKlicka för att avfyra missil!
+REJECTED POTATO FLEEING!\nClick to launch missile!,AVVISAD POTATIS FLYR!\nKlicka för att avfyra missil!
+RUNNER ESCAPED!\nStrike added!,LÖPARE RYMT!\nStrike tillagd!
+Click megaphone to call the next potato,Klicka på megafonen för att kalla nästa potatis
+Drag document to inspection table,Dra dokumentet till inspektionsbordet
+Select a stamp to approve or reject,Välj en stämpel för att godkänna eller avvisa
+Check for document violations,Kontrollera dokumentöverträdelser
+rule_explanation_header,REGEL FÖRKLARING:
+rule_explanation_fresh,Pozrite sa na pole 'Stav'. Ak hovorí niečo iné ako 'Čerstvý' - ODMIETNUŤ
+rule_explanation_sweet_potato,Titta på fältet 'Typ'. Om det säger 'Sötpotatis' - AVVISA (inga tillstånd)
+rule_explanation_chip_hill,Titta på fältet 'Land'. Om det säger 'Chip Hill' - AVVISA (förbjudet)
+rule_explanation_age,Titta på fältet 'Födelsedatum'. Beräkna ålder och kontrollera mot regel
+rule_explanation_gender,Titta på fältet 'Kön' och kontrollera mot nuvarande regel
+rule_footer_text,Dessa regler måste tillämpas för ALLA potatisar
+rule_tutorial_hint,Potrebujete pomoc? Kliknite na akékoľvek pravidlo pre vysvetlenie
+alert_correct_decision_detailed,RÄTT BESLUT! +{points} poäng\n{reason}
+alert_wrong_decision_detailed,FEL BESLUT! Strike tillagd!\n{reason}
+alert_reason_approved,Potatis uppfyller alla krav - GODKÄND
+alert_reason_should_reject,Du borde ha AVVISAT denna potatis
+tutorial_check_type,Kontrollera fältet 'Typ' i passet
+tutorial_check_condition,Kontrollera fältet 'Tillstånd' i passet
+tutorial_check_country,Kontrollera fältet 'Land' i passet
+tutorial_check_age,Kontrollera 'Födelsedatum' för att beräkna ålder
+tutorial_check_gender,Kontrollera fältet 'Kön' i passet
+alert_streak_bonus_minigame,5 i rad! BONUS MINISPEL!
+alert_perfect_stamps_bonus_minigame,Perfekta stämplar! BONUS MINISPEL!
+alert_new_minigame_unlocked,Nytt minispel upplåst: {name}!
+alert_minigame_bonus,Minispelbonus: +{bonus} poäng!
+high_score_display,Högsta poäng: {score}
+new_high_score,NY HÖGSTA POÄNG!

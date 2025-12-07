@@ -1,0 +1,24 @@
+﻿keys,tr
+Text/102/text,"İyi, başardın. Direniş [color=CHARTREUSE]güçleniyor[/color]. Bu manifestolar sayesinde insanlar gerçeği görüyor."
+Text/103/text,"Kaynaklarımızdan bu dosyayı ele geçirmeyi başardım - üretim programları, '[color=CRIMSON]içerik[/color]' listeleri, [color=DARK_SLATE_BLUE]kaybolan[/color] kişilerin isimleri."
+Text/104/text,Bu sadece bir gıda takviyesi programı değil. [color=CRIMSON]Patates işliyorlar[/color]...ve iyi bir şekilde değil.
+Text/105/text,"Başbakan Idaho'nun bizzat kendisinden, ""[color=DARK_ORANGE]reddedilen varlıkların kullanımını[/color]"" yetkilendiren iç yazışmalar."
+Text/106/text,"Her kontrol noktası için kotalar, Patates Gümrüğü'nün en yüksek ret-işleme oranına sahip olduğu."
+Text/107/text,Dışarıdaki durum kötüleşti. Öfkeli kalabalıklar kontrol noktalarında toplanıp Root Reserve hakkında cevaplar istiyor.
+Text/108/text,[color=YELLOW]ACİL YAYIN[/color]: Son zamanlarda dolaşıma giren [color=CRIMSON]sahte belgeler[/color] gereksiz paniğe neden oldu.
+Text/109/text,Bu sabotörlerin yakalanmasına yol açacak bilgiler için [color=GOLD]10.000 Patates Kredisi[/color] ödül veriliyor.
+Text/10a/text,Bu propagandayı tüketmek veya dağıtmak artık [color=RED]vatana ihanet[/color] olarak sınıflandırılıyor.
+Text/10b/text,Bugünkü vardiya özel protokoller altında çalışacak. Her yolcu Sadakat Değerlendirmesi'nden geçmeli.
+Text/10c/text,[color=CRIMSON]Hükümet karşıtı duygular[/color] gösterenler derhal işaretlenmeli.
+Text/10d/text,[color=CRIMSON]Aramızdaki hain[/color] bulunacak. Ve bulunduğunda... [parmağını boğazından geçirir]
+Text/10e/text,"Gergin bir patates yaklaşıyor, [color=GOLD]sarı yaprak rozeti[/color] kısmen görünür. Kağıtların arasına küçük bir not sıkıştırılmış: ""[color=CHARTREUSE]Güvenli ev tehlikede. Yeni konum: Depo 7, Sektör 4.[/color]"""
+Choice/10f/text,Onları UV işaretiyle hızlıca işleyin (Yardım)
+Choice/110/text,Hemen güvenliğe bildirin (İhanet)
+Text/111/text,"Yüzlerini rahatlama kaplıyor. ""Teşekkür ederim. Gerçek galip gelecek."""
+Text/112/text,"Güvenliğe işaret verdiğinde dehşet belirir. ""[wave amp=25 freq=3]Hayır, lütfen! Bir ailem var![/wave]"" Sarı rozetleri yere düşer."
+Text/113/text,Aferin. Sadakatin not edildi.
+Text/114/text,Kararın fark edildi. Hazır ol. [tornado radius=3 freq=2][color=CHARTREUSE]Büyük bir şey geliyor[/color][/tornado]. Direniş doğrudan bir eylem planlıyor.
+Text/115/text,"Olduğunda, [color=YELLOW]bir taraf seçmen[/color] gerekecek. Artık orta yol kalmayacak."
+Text/116/text,"Her işlediğin patatesle, ya [pulse freq=2][color=CHARTREUSE]bir devrime yardım ediyorsun[/color][/pulse] ya da [pulse freq=2][color=CRIMSON]korkunç bir sistemi mümkün kılıyorsun[/color][/pulse]."
+Choice/10f/disabled_text,
+Choice/110/disabled_text,

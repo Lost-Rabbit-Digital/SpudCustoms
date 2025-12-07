@@ -1,0 +1,18 @@
+﻿keys,fr
+Text/69/text,Pouvons-nous parler ? Quelque part en privé ? [color=YELLOW]Trop d'yeux et d'oreilles ici.[/color]
+Text/6a/text,Retrouve-moi près du vieux hangar de stockage après ton service. J'ai quelque chose que tu dois voir.
+Text/6b/text,"Tu te rapproches de tes collègues ? Souviens-toi, devenir amical peut mener à... [color=DARK_ORANGE]un jugement compromis[/color]."
+Text/6c/text,J'ai recueilli des informations sur les pommes de terre rejetées. [wave amp=20 freq=3][color=CRIMSON]Elles ne vont pas dans des centres de déportation.[/color][/wave]
+Text/6d/text,[tornado radius=4 freq=2][color=CRIMSON]Elles vont dans des installations de traitement Root Reserve.[/color][/tornado] Chacune d'entre elles.
+Text/6e/text,Ces documents montrent des pommes de terre déchargées dans une installation marquée du logo [color=DARK_VIOLET]Root Reserve[/color].
+Text/6f/text,Je pense savoir ce qui se passe. [pulse freq=3][color=CRIMSON]Elles deviennent Root Reserve.[/color][/pulse]
+Choice/70/text,C'est insensé. Ils... transforment les pommes de terre en nourriture ?
+Choice/71/text,Nous avons besoin de plus de preuves avant de porter des accusations.
+Text/72/text,[color=CRIMSON]Du cannibalisme avec des étapes supplémentaires.[/color] C'est ce qu'est [wave amp=25 freq=3][color=DARK_VIOLET]Root Reserve[/color][/wave]. Et nous avons aidé à sélectionner leurs ingrédients.
+Text/73/text,Je collecte des preuves depuis des mois. Garde les yeux ouverts. Tu verras que j'ai raison.
+Text/74/text,Une alarme lointaine retentit soudainement
+Text/75/text,Nous devons partir. Ils font des contrôles de sécurité à cette heure. Réfléchis à ce que je t'ai montré.
+Text/76/text,"Sasha te fourre le dossier dans les mains. ""[color=YELLOW]Garde-le en sécurité. Et ne fais confiance à personne.[/color]"""
+Text/77/text,Tu caches le dossier à l'intérieur de ta veste. [color=DARK_VIOLET]Root Reserve[/color]. Les rejets. Les pommes de terre manquantes. Tout se connecte d'une manière [tornado radius=3 freq=2][color=CRIMSON]horrifiante[/color][/tornado].
+Choice/71/disabled_text,
+Choice/70/disabled_text,

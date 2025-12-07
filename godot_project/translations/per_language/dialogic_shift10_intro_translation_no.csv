@@ -1,0 +1,27 @@
+﻿keys,no
+Text/3a/text,"Kontrollpunktet er gjenoppbygget etter motstandsangrepet. Sikkerheten er uten sidestykke, med propagandautsendelser som hyller de ""modige forsvarerne""."
+Text/3b/text,Jeg er forfremmet til Regionaldirektør for Grensesikkerhet og [pulse freq=2]Rotreserve-distribusjon[/pulse].
+Text/3c/text,Russet fester en liten medalje på uniformen din. Assisterende Regionaldirektør... for din urokkelige lojalitet til Spud.
+Text/3d/text,Jeg har en spesiell oppdrag! Statsminister Idaho vil inspisere vår fasilitetet i dag. Du er valgt ut til demonstrasjon.
+Text/3e/text,Har du sett den nye batchen Rotreserve? De kaller den 'Motstandsblanding' etter det som skjedde med de tilfangetatte.
+Text/3f/text,Noen sier at motstanden ikke var helt gal. At det finnes [wave amp=15 freq=3]bevis for at de fortalte sannheten[/wave]...
+Choice/40/text,Vær forsiktig. Selv å snakke slik er farlig nå. (Varsom)
+Choice/41/text,Jeg har hatt de samme tankene. Dette føles ikke riktig. (Medfølende)
+Text/42/text,Ikke alle tror lenger på den offisielle historien. Hold øynene åpne under statsministerens besøk.
+Text/43/text,"Det dannes en ny motstand. Stillere, mer forsiktig. Hvis du vil vite mer... se etter det gule potetmerket."
+Text/44/text,OPPMERKSOMHET: Statsminister Idahos følge har ankommet. Alle offiserer til tildelte stasjoner. Inspeksjonsprotokoller iverksatt.
+Text/45/text,Din medalje føles tung - en belønning for lojalitet eller et tegn på skam? Snart møter du arkitekten bak Rotreserve.
+Text/46/text,"Etter utsendelsen som avslørte Rotreserve, har opprør brutt ut over hele Spud. Statsminister Idaho blir værende barrikadert i administrasjonsbygget."
+Text/47/text,Idaho planlegger en siste utsendelse for å legge skylden for Rotreserve på oss. Vi kan ikke la ham skrive historien om. I dag avslutter vi hans regime.
+Text/48/text,Du reddet livet mitt på prosesseringsanlegget. Nå har vi en sjanse til å redde hele Spud.
+Text/49/text,Din kunnskap om sikkerhetsprotokollene vil være avgjørende for den endelige oppdraget. Er du klar?
+Choice/4a/text,Jeg er klar. La oss fullføre det vi har startet.
+Choice/4b/text,Hva er nøyaktig planen? Jeg trenger detaljer.
+Text/4c/text,Jeg visste at du ikke ville vike unna. Du er en av våre [tornado radius=3 freq=2]sterkeste allierte[/tornado].
+Text/4d/text,Vi vil infiltrere ved bruk av regjeringsuniformer. Du vil hjelpe til med å omgå sikkerhetssystemene. Vårt mål er å fange Idaho og tvinge fram en offentlig tilståelse.
+Text/4e/text,"Du vil være på Team Alfa med Sasha, som bryter gjennom den østlige inngangen. Din oppgave: [color=GREEN]sikre transmisjonssenteret[/color]."
+Text/4f/text,"Fra lojal tollembetsmann til motstandskjemper? En forvandling du aldri ville forestilt deg. Uansett hva som skjer, vil Spud aldri være det samme igjen."
+Choice/4a/disabled_text,
+Choice/4b/disabled_text,
+Choice/41/disabled_text,
+Choice/40/disabled_text,

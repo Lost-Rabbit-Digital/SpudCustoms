@@ -1,0 +1,27 @@
+﻿keys,tr
+Text/3a/text,"Kontrol noktası direniş saldırısından sonra yeniden inşa edildi. Güvenlik eşi benzeri görülmemiş, direniş yanlısı propagandaların ""cesur savunucuları"" övdüğü bir seviyede."
+Text/3b/text,Sınır Güvenliği Bölge Direktörü ve [pulse freq=2]Kök Rezerv Dağıtımı[/pulse]'na terfi ettim.
+Text/3c/text,"Russet, üniforma küçük bir madalya iliyor. Bölge Direktör Yardımcısı... Spud'a olan sarsılmaz bağlılığın için."
+Text/3d/text,Özel bir görevim var! Başbakan Idaho bugün tesisimizi denetleyecek. Gösteriye sen seçildin.
+Text/3e/text,Yeni Kök Rezerv partisini gördün mü? Tutsaklara ne olduğundan sonra 'Direniş Karışımı' diyorlar.
+Text/3f/text,Bazıları direnişin tamamıyla yanlış olmadığını söylüyor. Ki [wave amp=15 freq=3]onların doğruyu söylediğine dair kanıtlar var[/wave]...
+Choice/40/text,Dikkatli ol. Böyle konuşmak bile şimdi tehlikeli. (İhtiyatlı)
+Choice/41/text,Aynı düşüncelere ben de sahiptim. Bu doğru gelmiyor. (Şefkatli)
+Text/42/text,Herkes artık resmi hikayeye inanmıyor. Başbakanın ziyareti sırasında gözlerini açık tut.
+Text/43/text,"Yeni bir direniş oluşuyor. Daha sessiz, daha dikkatli. Daha fazlasını öğrenmek istiyorsan... sarı patates amblemi için izle."
+Text/44/text,DİKKAT: Başbakan Idaho'nun konvoyu geldi. Tüm görevliler atandıkları mevkilere. Denetim protokolleri yürürlükte.
+Text/45/text,"Madalyan ağır geliyor - bağlılık için bir ödül mü, yoksa utanç işareti mi? Yakında Kök Rezerv'in mimarıyla yüzleşeceksin."
+Text/46/text,"Kök Rezerv'i açığa çıkaran yayından sonra, Spud'un her yerinde ayaklanmalar patlak verdi. Başbakan Idaho, idari binada barikadlanmış durumda."
+Text/47/text,"Idaho, Kök Rezerv'in suçunu bize yüklemek için son bir yayın planlanıyor. Tarihi yeniden yazmasına izin veremeyiz. Bugün onun rejimini sonlandıracağız."
+Text/48/text,Beni işleme tesisinde hayatta bıraktın. Şimdi tüm Spud'u kurtarma şansımız var.
+Text/49/text,Güvenlik protokolleri hakkındaki bilgin son görev için kritik olacak. Hazır mısın?
+Choice/4a/text,Hazırım. Başladığımızı bitirelim.
+Choice/4b/text,Plan tam olarak nedir? Detaylara ihtiyacım var.
+Text/4c/text,Geri çekilmeyeceğini biliyordum. [tornado radius=3 freq=2]En güçlü müttefiklerimizden[/tornado] birisin.
+Text/4d/text,Hükümet üniformaları kullanarak sızacağız. Güvenlik sistemlerini atlatmana yardımcı olacaksın. Hedefimiz Idaho'yu yakalamak ve kamuya açık bir itiraf yaptırmak.
+Text/4e/text,"Sasha ile Alfa Takımında olacaksın, doğu girişinden içeri gireceksin. Görevin: [color=GREEN]yayın merkezini güvence altına almak[/color]."
+Text/4f/text,"Sadık bir gümrük görevlisinden direniş savaşçısına mı? Hiç hayal edemeyeceğin bir dönüşüm. Ne olursa olsun, Spud bir daha asla aynı olmayacak."
+Choice/4a/disabled_text,
+Choice/4b/disabled_text,
+Choice/41/disabled_text,
+Choice/40/disabled_text,

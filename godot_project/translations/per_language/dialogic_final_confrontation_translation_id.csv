@@ -1,0 +1,47 @@
+﻿keys,id
+Text/11/text,"Perbatasan Spud dalam [pulse freq=3][color=CRIMSON]kekacauan[/color][/pulse]. Kentang-kentang panik membanjiri pos pemeriksaan, putus asa untuk melarikan diri setelah dokumen bocor."
+Text/12/text,Kamu menyelinap bersama Sasha. [wave amp=20 freq=3][color=CHARTREUSE]Kita harus terus maju![/color][/wave] Orang-orang kini tahu kebenaran.
+Text/13/text,"Mereka tidak bisa lagi membungkam kebenaran. Jika kita bisa menyusup ke fasilitas [color=DARK_VIOLET]Cadangan Akar[/color] dan menyiarkan bukti, itu akan [tornado radius=3 freq=2][color=CHARTREUSE]memicu revolusi[/color][/tornado]."
+Text/14/text,Tempat itu adalah benteng. Dan sekarang kita punya [color=YELLOW]mantan petugas bea cukai[/color] di tengah-tengah kita. Mata mereka menyipit curiga kepadamu.
+Choice/15/text,"Aku mengerti keraguan kalian, tapi aku berkomitmen pada tujuan ini."
+Choice/16/text,Aku sudah mengorbankan segalanya. Aku tidak akan mundur sekarang.
+Text/17/text,Kata-kata yang indah. Tapi kami sudah pernah mendengarnya sebelumnya.
+Text/18/text,"Mereka membantu kita mendapatkan dokumen. Itu tindakan, bukan kata-kata."
+Text/19/text,"Tidak bisa kembali menjadi kentang yang setia sekarang. Selamat datang di perlawanan, kamerad."
+Text/1a/text,"Setelah penyusupan yang menegangkan, timmu berdiri di jantung [color=DARK_VIOLET]Cadangan Akar[/color], [pulse freq=3][color=CRIMSON]mesin penindasan yang mengerikan[/color][/pulse] terlihat jelas."
+Text/1b/text,"[wave amp=25 freq=3][color=RED]Alarm berbunyi[/color][/wave] saat penjaga bergegas merespons intrusi kalian. Kalian berlari melalui koridor, menghindari sistem keamanan."
+Text/1c/text,"Sebuah layar berkedip. ""Wah wah, si [color=CRIMSON]pengkhianat[/color] kembali dengan sampah pemberontak."""
+Text/1d/text,Apakah kamu pikir kamu bisa menghentikan kemajuan Spud? [color=DARK_VIOLET]Cadangan Akar[/color] adalah urat nadi bangsa ini.
+Text/1e/text,Tapi jangan khawatir. Kamu masih akan melayani Spud... [tornado radius=4 freq=3][color=DARK_VIOLET]di tangki pengolahan![/color][/tornado]
+Text/1f/text,Layar tiba-tiba menjadi hitam.
+Text/20/text,"Kamu berpaling ke yang lain dengan tekad. ""Kita perlu mencapai bunker Idaho. Sekarang!"""
+Text/21/text,"Kelompokmu bertarung melewati gelombang keamanan, nyaris menghindari penangkapan. Pejuang perlawanan Sasha menciptakan pengalihan, membersihkan jalan kalian ke depan."
+Text/22/text,"Setelah pelarian yang mencekam melalui terowongan pemeliharaan, akhirnya kalian mencapai lift aman ke bunker pribadi Idaho."
+Text/23/text,"Dengan Sasha dan sekutumu di sisimu, akhirnya kamu menghadapi Idaho."
+Text/24/text,"Sudah berakhir, Idaho. Rahasiamu terungkap. Bagaimana ini berakhir... [pulse freq=2]itu tergantung padamu.[/pulse]"
+Choice/25/text,Negosiasikan transisi kekuasaan yang damai (Diplomatik)
+Choice/26/text,Tuntut penangkapan Idaho segera (Keadilan)
+Choice/27/text,Lakukan keadilan main hakim sendiri atas kejahatan Idaho (Pembalasan)
+Choice/28/text,Fokus pada pembongkaran infrastruktur Cadangan Akar (Pembongkaran)
+Text/29/text,"Idaho, ini tidak harus berakhir dengan pertumpahan darah lebih banyak. Jika kamu bekerja sama..."
+Text/2a/text,"Oh, kau [color=STEEL_BLUE]orang idealis bodoh[/color]. Kau pikir ini negosiasi?"
+Text/2b/text,"Idaho menghancurkan sebuah tombol, dan [color=RED]alarm mulai berbunyi[/color]. ""Satu-satunya hal yang akan kuberikan padamu adalah [color=DARK_VIOLET]tiket sekali jalan ke tangki penggorengan![/color]"""
+Text/2c/text,"Kurasa tidak, Idaho. Penjaga! Kalian melihat berkasnya, [color=YELLOW]kalian tahu apa yang dia lakukan pada keluarga kalian.[/color]"
+Text/2d/text,Seorang penjaga besar melangkah maju dan dengan cepat menendang Idaho ke tanah.
+Text/2e/text,Sebuah tembakan bergema melalui ruangan. Layar menjadi gelap.
+Text/2f/text,"Idaho, atas nama rakyat kentang Spud, [color=CHARTREUSE]kamu ditangkap![/color]"
+Text/30/text,"Sudah berakhir. Rakyat telah berbicara. [color=CHARTREUSE]Kita akan membangun Spud baru di mana akar kita berada di tanah, bukan dalam penderitaan.[/color]"
+Text/31/text,"[color=CRIMSON]Tidak akan ada kesepakatan, tidak ada belas kasihan[/color] untukmu, Idaho. Keadilan tiran adalah semua yang kau layak dapatkan."
+Text/32/text,"Sebuah pembalasan. Itulah aku. [color=CHARTREUSE]Untuk setiap kentang yang dikorbankan, kita mengambil kembali masa depan kita![/color]"
+Text/33/text,"Lupakan dia. Dia adalah gejala, bukan penyakit. [color=CHARTREUSE]Robohkan setiap akar dan batang dari kekejian ini.[/color]"
+Text/34/text,Kita harus pergi! Sekarang!
+Text/35/text,Kejatuhan [color=DARK_VIOLET]Cadangan Akar[/color] memicu kebakaran perubahan di seluruh Spud.
+Text/36/text,"Kentang di setiap provinsi bangkit, merangkul [color=CHARTREUSE]visi baru untuk bangsa mereka[/color]."
+Text/37/text,"Selama kita tetap setia pada akar kita, pada cita-cita yang membawa kita ke sini... [color=CHARTREUSE]kita akan menemukan jalan.[/color]"
+Text/38/text,"Dan begitulah, dari abu Spud lama, [color=CHARTREUSE]sebuah bangsa baru mulai berakar[/color]. Kekuasaan [color=DARK_VIOLET]Cadangan Akar[/color] telah berakhir."
+Choice/15/disabled_text,
+Choice/28/disabled_text,
+Choice/27/disabled_text,
+Choice/26/disabled_text,
+Choice/25/disabled_text,
+Choice/16/disabled_text,

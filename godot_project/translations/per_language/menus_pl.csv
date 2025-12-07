@@ -1,0 +1,175 @@
+﻿keys,pl
+main_menu_feedback,Opinie i błędy
+main_menu_version,Wersja 1.2.0
+main_menu_new_game,Nowa gra
+main_menu_continue,Kontynuuj
+main_menu_level_select,Wybór poziomu
+main_menu_score_attack,Atak punktowy
+main_menu_options,Opcje
+main_menu_credits,Twórcy
+main_menu_exit,Wyjście
+select_language,Język
+social_discord_tooltip,Dołącz do naszego Discorda!
+social_steam_tooltip,Odwiedź nas na Steam
+social_twitch_tooltip,Integracja Twitch
+twitch_status_disabled,Wyłączone
+twitch_status_no_viewers,Brak widzów w puli
+twitch_status_ready,{count} widzów gotowych
+twitch_connection_disabled,Wyłączone
+twitch_connection_disconnected,Rozłączono
+twitch_connection_connected,Połączono
+twitch_connection_connecting,Łączenie...
+options_menu_title,Opcje
+options_difficulty,Poziom trudności
+options_difficulty_easy,Łatwy
+options_difficulty_normal,Normalny
+options_difficulty_expert,Ekspert
+options_music_volume,Głośność muzyki
+options_sfx_volume,Głośność efektów dźwiękowych
+options_camera_shake,Wstrząsy kamery
+options_back,Powrót
+paused_menu_title,Wstrzymane
+shift_summary_title,PODSUMOWANIE ZMIANY
+shift_summary_continue,Kontynuuj
+shift_summary_restart,Restartuj
+shift_summary_main_menu,Menu główne
+shift_summary_submit_score,Prześlij wynik
+shift_summary_runner_stats,STATYSTYKI BIEGACZA
+shift_summary_document_stats,STATYSTYKI DOKUMENTU
+shift_summary_performance,WYDAJNOŚĆ
+shift_summary_bonuses,BONUSY
+_FORMAT KEYS,
+time_format,{minutes}min {seconds}sek
+_SHIFT SUMMARY DETAILS,
+shift_complete_success,ZMIANA {shift} ZAKOŃCZONA\nSUKCES!
+shift_complete_failure,ZMIANA {shift} ZAKOŃCZONA\n{failure}
+strike_limit_reached,LIMIT STRAJKÓW OSIĄGNIĘTY!
+quota_not_met,KWOTA NIE OSIĄGNIĘTA!
+shift_summary_title_with_difficulty,PODSUMOWANIE ZMIANY\n{difficulty}
+runner_stats_template,\nSTATYSTYKI BIEGACZA\nPróby biegu: {runner_attempts}\nWystrzelone rakiety: {fired}\nTrafieni biegacze: {hit}\nIdealne trafienia: {perfect}\nWskaźnik trafień: {rate}%
+document_stats_template,STATYSTYKI DOKUMENTU\nOstemplowane dokumenty: {stamped}\nZatwierdzone ziemniaki: {approved}\nOdrzucone ziemniaki: {rejected}\nIdealne stemple: {perfect_stamps}
+bonus_stats_template,BONUSY\nPremiowa prędkość przetwarzania: {processing_speed_bonus}\nPremiowa dokładność stempla: {accuracy}\nPremiowe idealne trafienia: {perfect_hit_bonus}\nŁączna premia punktowa: {total_score_bonus}
+performance_stats_template,WYDAJNOŚĆ\nCzas: {time_taken}\nOczekiwany wynik: {expected_score}\nCalkowity wynik: {score}\nProcent przekroczenia wyniku: {percent}%\nOcena wydajności:\n{rating}
+performance_exceptional,Wyjątkowy!
+performance_excellent,Doskonały!
+performance_good,Dobry
+performance_needs_improvement,Wymaga poprawy
+performance_poor,Słaby
+global_leaderboard_title,Światowy ranking\n- {difficulty}
+getting_leaderboard_scores,Pobieranie wyników rankingu...
+_PAUSE OPTIONS OVERLAY,
+reset_game_label,Zresetuj grę:
+reset_game_button,Zresetuj
+mute_label,Wycisz
+fullscreen_label,Pełny ekran:
+resolution_label,Rozdzielczość:
+antialiasing_label,Anti-Aliasing:
+screenshake_label,Drganie ekranu:
+mouse_sens_label,Czułość myszy:
+___ LOADING SCREEN,
+Loading…,Ładowanie...
+___ DIALOGS IN GAME,
+You lose.,Przegrywasz.
+You won!,Wygrałeś!
+Thanks for playing!,Dziękujemy za grę!
+Please Confirm...,Potwierdź...
+Go back to main menu?,Wrócić do menu głównego?
+Quit the game?,Wyjść z gry?
+Cancel,Anuluj
+OK,OK
+___ OPTIONS MENU,
+Controls,Sterowanie
+Mouse Sensitivity :,Czułość myszy:
+Actions & Inputs,Akcje i dane wejściowe
+Add,Dodaj
+Remove,Usuń
+Assign Key for {action},Przypisz klawisz dla {action}
+Listening for input...,Nasłuchuję danych wejściowych...
+Press again to confirm...,"Naciśnij ponownie, aby potwierdzić..."
+Focus here to assign inputs.,"Skup się tutaj, aby przypisać dane wejściowe."
+Already Assigned,Już przypisano
+{key} already assigned to {action}.,{key} jest już przypisany do {action}.
+Remove Key for {action},Usuń klawisz dla {action}
+Are you sure you want to remove {key} from {action}?,Czy na pewno chcesz usunąć {key} z {action}?
+Reset,Resetuj
+Audio,Dźwięk
+Master :,Główny :
+Music :,Muzyka :
+SFX :,Efekty :
+Ambient :,Otoczenie :
+Mute :,Wycisz :
+Video,Wideo
+Fullscreen :,Pełny ekran :
+Resolution :,Rozdzielczość :
+Anti-Aliasing :,Antyaliasing :
+Disabled (Fastest),Wyłączony (najszybszy)
+8x (Slowest),8x (najwolniejszy)
+Camera Shake :,Trzęsienie kamery :
+Normal,Normalny
+Reduced,Zmniejszony
+Minimal,Minimalny
+None,Brak
+Game,Gra
+Reset Game :,Resetuj grę :
+Do you want to reset your game data?,Czy chcesz zresetować dane gry?
+Back,Wstecz
+_INGAME DIALOGUE,
+TAKE THEM!,ZABIERZ JE!
+"Take your documents, please.","Zabierz swoje dokumenty, proszę."
+_SHIFT SUMMARY SCREEN,
+Continue,Kontynuuj
+Main Menu,Menu główne
+Submit Score,Prześlij wynik
+Restart,Uruchom ponownie
+SHIFT SUMMARY,PODSUMOWANIE ZMIANY
+_DIFFICULTY LEVELS,
+Easy,Łatwy
+Normal,Normalny
+Expert,Ekspert
+Primary,Podstawowy
+Secondary,Drugorzędny
+Primary Interaction,Podstawowa interakcja
+Secondary Interaction,Drugorzędna interakcja
+Cancel Interaction,Anuluj interakcję
+Escape,Wyjście
+Dialogic Default Action,Domyślna akcja dialogowa
+Enter,Zatwierdź
+Left Mouse Button,Lewy przycisk myszy
+Right Mouse Button,Prawy przycisk myszy
+_NEW GAME CONFIRMATION,
+Start New Game,Rozpocznij nową grę
+Starting a new game will reset your progress. Are you sure you want to continue?,Rozpoczęcie nowej gry zresetuje postęp. Czy na pewno chcesz kontynuować?
+"Yes, Start New Game","Tak, rozpocznij nową grę"
+Skip,Pomiń
+History,Historia
+Return,Powrót
+Restart the game?,Uruchom grę ponownie?
+_HELP MENU,
+help_menu_button,Pomoc
+help_menu_title,Jak grać
+help_tab_basics,Podstawy
+help_tab_gameplay,Rozgrywka
+help_tab_minigames,Minigry
+help_basics_intro,[b]Witaj w Spud Customs
+help_basics_gate,[b]Otwieranie Bramy[/b]
+help_basics_documents,[b]Inspekcja Dokumentów[/b]
+help_basics_stamping,[b]Stemplowanie Dokumentów[/b]
+help_basics_runners,[b]Uciekinierzy Graniczni[/b]
+help_basics_xray,[b]Skaner Rentgenowski[/b]
+help_gameplay_quota,[b]Wypełnianie Kwoty[/b]
+help_gameplay_strikes,[b]Pomyłki[/b]
+help_gameplay_rules,[b]Przepisy Imigracyjne[/b]
+help_gameplay_scoring,"[b]Punktacja[/b]\nZdobywaj punkty za poprawne decyzje, idealne pieczątki i zatrzymywanie uciekinierów. Bonusy przyznawane są za szybkość i dokładność!"
+help_gameplay_difficulty,"[b]Poziomy trudności[/b]\nŁatwy: Łagodniejszy limit czasu, mniej zasad. Normalny: Standardowe doświadczenie. Ekspert: Rygorystyczny limit czasu, złożone zasady, wyższe wyniki."
+help_minigames_intro,"[b]Minigry[/b]\nPodczas swoich zmian napotkasz minigry, w których można zdobyć dodatkowe punkty. Ukończ je, by zdobyć nagrody, lub pomiń bez kary."
+help_minigames_document_scanner,"[b]Skaner dokumentów[/b] (Zmiana 1+)\nUżyj światła UV, by znaleźć ukryte elementy na dokumentach. Klikaj, by oznaczyć znaki wodne, pieczęcie i symbole. Znajdź wszystkie elementy, zanim skończy się czas!"
+help_minigames_stamp_sorting,"[b]Sortowanie pieczątek[/b] (Zmiana 2+)\nSortuj spadające pieczątki do odpowiednich pojemników. Zielone pieczątki do ZATWIERDZONYCH, czerwone do ODRZUCONYCH. Sortuj szybko, by zdobyć dodatkowe punkty!"
+help_minigames_fingerprint_match,"[b]Dopasowywanie odcisków palców[/b] (Zmiana 3+)\nDopasuj odciski palców z siatki do wzoru referencyjnego. Klikaj pasujące odciski, by zweryfikować tożsamość. Wymagana jest uważna obserwacja!"
+help_minigames_code_breaker,"[b]Łamacz kodów[/b] (Zmiana 4+)\nZłam tajny kod! Zgadnij 4-cyfrową kombinację. Zielony oznacza poprawną pozycję, żółty złą pozycję. Ograniczona liczba prób!"
+help_minigames_border_chase,"[b]Pościg na granicy[/b] (Zmiana 5+)\nKontrabanda na taśmociągu! Klikaj CZERWONE przedmioty, by je skonfiskować. Pozwól ZIELONYM przedmiotom przejechać. Szybki refleks zapewnia więcej punktów!"
+help_tab_lore,Fabuła
+help_lore_world_intro,"[b]Świat Ziemniaka[/b]\n\nWitaj w krainie, w której ziemniaki zbudowały własną cywilizację. W tym świecie bulwy chodzą, mówią i stworzyły własny naród z prawami, granicami i biurokracją."
+help_lore_nation,"[b]Naród Ziemniaka[/b]\n\nZiemniak to dumny naród, który obiecuje dobrobyt wszystkim ziemniakom. Chroniony przez Wielki Mur Ziemniaczany, naród utrzymuje ścisłą kontrolę graniczną, aby zapewnić, że tylko godne bulwy mogą wjechać.\n\nRząd promuje jedność i posłuszeństwo, a patriotyczni obywatele często głoszą: „Chwała Ziemniakowi!”"
+help_lore_your_role,"[b]Twoja rola[/b]\n\nZostałeś wybrany do kluczowej roli w ochronie granic. Jako funkcjonariusz celny pracujesz pod czujnym okiem nadzorcy Russeta.\n\nDobrobyt twojej rodziny zależy od twoich wyników. Wypełniaj normy, przestrzegaj zasad i pamiętaj: naród na ciebie liczy."
+help_lore_border,"[b]Wielki Mur[/b]\n\nPotężny Wielki Mur Ziemniaczany chroni naród przed obcymi. Na różnych punktach kontrolnych wzdłuż muru funkcjonariusze tacy jak ty zapewniają, że tylko godni mogą wjechać.\n\nCi, którzy próbują przekroczyć granicę bez odpowiednich dokumentów, ponoszą natychmiastowe konsekwencje."
+help_lore_secrets,[b]Rezerwa Korzeniowa[/b]\n\nOdrzucone ziemniaki są... przetwarzane. Zgodnie z protokołem. Tajemnicza Rezerwa Korzeniowa zajmuje się wszystkimi szczegółami.\n\nLepiej nie zadawać zbyt wielu pytań. Skup się na swoich obowiązkach. Nic więcej.

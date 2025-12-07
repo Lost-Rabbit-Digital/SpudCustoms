@@ -1,0 +1,19 @@
+﻿keys,vi
+Text/86/text,Các quy trình an ninh mới hôm nay. Chúng tôi đã nhận được thông tin tình báo về [color=YELLOW]các hoạt động đáng nghi[/color].
+Text/87/text,Tất cả hành khách phải trải qua các thủ tục kiểm tra được nâng cao.
+Text/88/text,"Hãy chú ý đến [color=YELLOW]hành vi lo lắng, cách cư xử bất thường hoặc sự miễn cưỡng trong việc tiếp xúc ánh mắt[/color]."
+Text/89/text,"Tất cả các vật phẩm đáng nghi phải bị tịch thu và ghi lại. Vì sự an toàn của Spud, tất nhiên."
+Text/8a/text,"Chúng tôi đặc biệt lo ngại về [color=CRIMSON]các vật liệu bị cấm[/color] - tài liệu chống chính phủ, thiết bị chụp ảnh..."
+Text/8b/text,"Giọng nói của họ hạ xuống đầy đe dọa. ""[pulse freq=2][color=DARK_VIOLET]Chúng tôi có các thủ tục đặc biệt cho những cá nhân này.[/color][/pulse]"""
+Text/8c/text,"[wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] các xe tải dỡ những thùng được đánh dấu ""Premium Reserve"" tại căng tin. Mùi hương hấp dẫn, nhưng dạ dày bạn quặn lại."
+Text/8d/text,Bạn đã thử Premium Reserve mới chưa? Anh em họ của tôi đã mất tích vào tháng trước. Không vượt qua được cuộc kiểm tra.
+Text/8e/text,"Có lẽ anh ấy là một phần của lô hàng này, phải không? [tornado radius=2 freq=2][color=STEEL_BLUE]Một chút hài hước đen tối, bạn hiểu chứ?[/color][/tornado]"
+Choice/8f/text,Điều đó không hề buồn cười.
+Choice/90/text,Tôi không đói. Xin lỗi. (Rời đi)
+Text/91/text,Bạn đúng. Đôi khi việc đùa giỡn dễ dàng hơn là suy nghĩ về [pulse freq=3][color=CRIMSON]những gì có thể thực sự xảy ra[/color][/pulse].
+Text/92/text,"Viên chức nhìn bạn rời đi. ""Tôi hiểu. Tôi cũng mất hết cảm giác thèm ăn..."""
+Text/93/text,"Thời điểm thuận tiện cho các quy trình an ninh mới, phải không? [wave amp=15 freq=3][color=YELLOW]Họ đang cố gắng ngăn chặn thông tin về Root Reserve.[/color][/wave]"
+Text/94/text,Tôi có cái gì đó có thể giúp chúng ta. Một số khoai tây với [color=CHARTREUSE]thông tin quan trọng xứng đáng được thông qua[/color].
+Text/95/text,Bạn cẩn thận cân nhắc các lựa chọn của mình. Các quyết định hôm nay có thể giúp [color=CHARTREUSE]lan truyền sự thật[/color]... hoặc [color=CRIMSON]mãi mãi bưng bít nó[/color].
+Choice/8f/disabled_text,
+Choice/90/disabled_text,

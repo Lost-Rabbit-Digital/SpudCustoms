@@ -1,0 +1,18 @@
+﻿keys,fi
+Text/69/text,Voimmeko puhua? Jossain yksityisesti? [color=YELLOW]Liian monta silmää ja korvaa täällä.[/color]
+Text/6a/text,"Tapaa minut vanhalla varastosuojalla vuorosi jälkeen. Minulla on jotain, mitä sinun täytyy nähdä."
+Text/6b/text,"Viihtymässä työtovereiden kanssa? Muista, että ystävystyminen voi johtaa... [color=DARK_ORANGE]heikentyneeseen arviointikykyyn[/color]."
+Text/6c/text,Olen kerännyt tietoa hylätyistä perunoista. [wave amp=20 freq=3][color=CRIMSON]Ne eivät mene karkotuskeskuksiin.[/color][/wave]
+Text/6d/text,[tornado radius=4 freq=2][color=CRIMSON]Ne menevät Root Reserve -käsittelylaitoksiin.[/color][/tornado] Joka ikinen.
+Text/6e/text,"Nämä asiakirjat näyttävät perunoita purettavan laitoksessa, joka on merkitty [color=DARK_VIOLET]Root Reserve[/color] -logolla."
+Text/6f/text,"Luulen tietäväni, mitä tapahtuu. [pulse freq=3][color=CRIMSON]Niistä tulee Root Reserveä.[/color][/pulse]"
+Choice/70/text,Se on järjetöntä. He... käsittelevät perunoita ruoaksi?
+Choice/71/text,Tarvitsemme lisää todisteita ennen syytösten esittämistä.
+Text/72/text,[color=CRIMSON]Kannibalismia ylimääräisillä askelilla.[/color] Sitä [wave amp=25 freq=3][color=DARK_VIOLET]Root Reserve[/color][/wave] on. Ja me olemme auttaneet valitsemaan heidän ainesosiaan.
+Text/73/text,"Olen kerännyt todisteita kuukausien ajan. Pidä silmäsi auki. Näet, että olen oikeassa."
+Text/74/text,Kaukainen hälytys alkaa äkkiä soida
+Text/75/text,"Meidän täytyy mennä. He tekevät turvallisuustarkastuksia tähän aikaan. Mieti, mitä olen näyttänyt sinulle."
+Text/76/text,"Sasha työntää kansion käsiisi. ""[color=YELLOW]Pidä tämä turvassa. Äläkä luota kehenkään.[/color]"""
+Text/77/text,Piilotat kansion takkisi sisään. [color=DARK_VIOLET]Root Reserve[/color]. Hylkäykset. Kadonneet perunat. Kaikki yhdistyy [tornado radius=3 freq=2][color=CRIMSON]kauhistuttavalla tavalla[/color][/tornado].
+Choice/71/disabled_text,
+Choice/70/disabled_text,

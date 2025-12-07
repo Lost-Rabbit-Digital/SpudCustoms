@@ -1,0 +1,19 @@
+﻿keys,de
+Text/78/text,"Ein weiterer Tag am Kontrollpunkt. Die Kartoffelreihe erstreckt sich länger als je zuvor, alle sind angespannt."
+Text/79/text,"Neue Befehle von oben. [wave amp=15 freq=3][color=DARK_ORANGE]Wir verdoppeln die Ablehnungen[/color][/wave]. Jede Kartoffel, die als unsicher gilt, wird sofort festgehalten."
+Text/7a/text,Ich habe einen Sonderauftrag. Wir haben Erkenntnisse über [pulse freq=2][color=CRIMSON]Unruhestifter[/color][/pulse]. Seien Sie bei Ihren Kontrollen wachsam.
+Choice/7b/text,"Ja, Herr, ich werde Sie nicht enttäuschen"
+Choice/7c/text,Von welchen Unruhestiftern sprechen wir?
+Text/7d/text,"Gut. Ich wusste, ich kann mich auf Sie verlassen. Sie werden mit dieser Einstellung weit kommen."
+Text/7e/text,"Diejenigen, die [color=CRIMSON]unsere Lebensweise bedrohen[/color]. Stellen Sie nicht zu viele Fragen, wenn Sie wissen, was gut für Sie ist."
+Text/7f/text,"[color=STEEL_BLUE]Ich flehe Sie an![/color] Meine Frau sollte direkt hinter mir sein, aber [tornado radius=2 freq=3]sie kam nie durch die Zollkontrolle[/tornado]."
+Text/80/text,"Niemand will mir sagen, was mit ihr passiert ist. Bitte, [color=CHARTREUSE]helfen Sie mir, sie zu finden![/color]"
+Choice/81/text,"Es tut mir leid, aber ich kann nichts tun."
+Choice/82/text,"Lass mich sehen, was ich herausfinden kann. Keine Garantien."
+Text/83/text,Wie alle anderen... [color=STEEL_BLUE]Möge Ihr Gewissen so schwer sein wie meines.[/color]
+Text/84/text,Danke! Selbst eine kleine Hoffnung ist besser als keine. Hier ist ihr Foto. Bitte finden Sie sie.
+Text/85/text,Ich habe diesen Austausch gesehen. [color=DARK_ORANGE]Sympathie für Abgelehnte führt nur zu Ärger.[/color] Bleiben Sie auf Ihre Pflicht fokussiert.
+Choice/7b/disabled_text,
+Choice/82/disabled_text,
+Choice/81/disabled_text,
+Choice/7c/disabled_text,

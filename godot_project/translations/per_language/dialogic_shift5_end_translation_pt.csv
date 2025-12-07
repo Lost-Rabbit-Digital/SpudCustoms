@@ -1,0 +1,19 @@
+﻿keys,pt
+Text/96/text,"Você se esgueira pelo corredor escurecido, o coração disparando enquanto evita patrulhas de segurança."
+Text/97/text,[color=CHARTREUSE]Este dispositivo vai desativar a fechadura[/color] no escritório de Russet. Vou acionar alarmes na ala leste como distração. Você terá cinco minutos.
+Text/98/text,Os manifestos devem estar em seu arquivo. [color=CRIMSON]Pasta vermelha rotulada 'RR Transport'[/color]. Não deixe evidências da sua busca.
+Text/99/text,"Você encontra a grossa [color=CRIMSON]pasta vermelha rotulada ""RR Transport""[/color] no arquivo."
+Text/9a/text,"Dentro estão manifestos correspondentes a contagens de batatas rejeitadas e uma diretiva do Primeiro-Ministro de Idaho autorizando ""[pulse freq=3][color=DARK_VIOLET]utilização completa de rejeições de fronteira para produção RR.[/color][/pulse]"""
+Text/9b/text,"Passos se aproximam da porta do escritório. ""[wave amp=15 freq=3][color=YELLOW]Estranho, tenho certeza de que a fechei.[/color][/wave]"""
+Choice/9c/text,Esconder-se sob a mesa
+Choice/9d/text,Pular pela janela
+Text/9e/text,"Você se enfia sob a mesa de Russet quando ele entra, o coração aos pulos. Ele se senta, os pés a centímetros do seu rosto."
+Text/9f/text,Russet aqui. O quê? [color=CHARTREUSE]Mais um alarme?[/color] Já estou a caminho. Ele deixa a sala e você escapa.
+Text/a0/text,"Você arranca a janela e pula. Felizmente, é apenas um andar. Um guarda grita: ""[color=RED]Ei! Pare![/color]"""
+Text/a1/text,Você corre pelo terreno e consegue despistar seus perseguidores.
+Text/a2/text,Conseguiu?
+Text/a3/text,"Você entrega as provas, explicando o que encontrou."
+Text/a4/text,Isso prova tudo. A resistência fará cópias. [tornado radius=3 freq=2]Espalhe a verdade em todos os lugares.[/tornado] Eles não podem nos silenciar a todos.
+Text/a5/text,"Você atravessou uma linha. [wave amp=20 freq=3][color=YELLOW]Não há como voltar.[/color][/wave] Quando a verdade se espalhar, Spud será transformado."
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,

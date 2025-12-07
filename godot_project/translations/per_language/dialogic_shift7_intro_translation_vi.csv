@@ -1,0 +1,24 @@
+﻿keys,vi
+Text/102/text,"Tốt, bạn đã làm được. Cuộc kháng chiến [color=CHARTREUSE]ngày càng mạnh hơn[/color]. Nhờ những bản tuyên ngôn đó, mọi người đang thấy được sự thật."
+Text/103/text,"Tôi đã thu thập được tài liệu này từ nguồn tin của chúng ta - lịch trình sản xuất, danh sách '[color=CRIMSON]thành phần[/color]', tên của những người [color=DARK_SLATE_BLUE]đã biến mất[/color]."
+Text/104/text,Đây không chỉ là một chương trình thực phẩm bổ sung. Họ đang [color=CRIMSON]chế biến khoai tây[/color]...và không theo cách tốt đẹp.
+Text/105/text,"Bản ghi nhớ nội bộ từ chính Thủ tướng Idaho, cho phép ""[color=DARK_ORANGE]sử dụng tài sản bị từ chối.[/color]"""
+Text/106/text,"Hạn ngạch cho mỗi trạm kiểm soát, với Hải quan Khoai tây có tỷ lệ từ chối-đến-xử lý cao nhất."
+Text/107/text,Tình hình bên ngoài đã xấu đi. Đám đông giận dữ tụ tập tại các trạm kiểm soát đòi hỏi câu trả lời về Root Reserve.
+Text/108/text,[color=YELLOW]PHÁT SÓNG KHẨN CẤP[/color]: Gần đây việc lưu hành [color=CRIMSON]tài liệu giả mạo[/color] đã gây ra hoảng loạn không cần thiết.
+Text/109/text,Một phần thưởng [color=GOLD]10.000 Tín dụng Khoai tây[/color] được trao cho thông tin dẫn đến việc bắt giữ những kẻ phá hoại này.
+Text/10a/text,Việc tiêu thụ hoặc phân phối tuyên truyền này hiện được phân loại là [color=RED]tội phản quốc[/color].
+Text/10b/text,Ca làm việc hôm nay sẽ hoạt động theo quy trình đặc biệt. Mỗi du khách phải trải qua Đánh giá Lòng trung thành.
+Text/10c/text,Những ai thể hiện [color=CRIMSON]tình cảm chống chính phủ[/color] sẽ bị đánh dấu ngay lập tức.
+Text/10d/text,[color=CRIMSON]Kẻ phản bội trong chúng ta[/color] sẽ bị phát hiện. Và khi họ bị phát hiện... [kéo ngón tay ngang cổ họng]
+Text/10e/text,"Một củ khoai tây lo lắng đến gần, [color=GOLD]phù hiệu lá vàng[/color] một phần có thể nhìn thấy. Một ghi chú nhỏ được giấu giữa các giấy tờ: ""[color=CHARTREUSE]Nhà an toàn đã bị xâm phạm. Địa điểm mới: Kho 7, Khu vực 4.[/color]"""
+Choice/10f/text,Xử lý họ nhanh chóng với dấu UV (Giúp đỡ)
+Choice/110/text,Báo cáo họ cho an ninh ngay lập tức (Phản bội)
+Text/111/text,"Sự nhẹ nhõm tràn ngập khuôn mặt họ. ""Cảm ơn. Sự thật sẽ chiến thắng."""
+Text/112/text,"Nỗi kinh hoàng hiện ra khi bạn ra hiệu cho an ninh. ""[wave amp=25 freq=3]Không, làm ơn! Tôi có gia đình![/wave]"" Phù hiệu vàng của họ rơi xuống sàn."
+Text/113/text,Làm tốt lắm. Lòng trung thành của bạn đã được ghi nhận.
+Text/114/text,Quyết định của bạn đã được chú ý. Hãy sẵn sàng. [tornado radius=3 freq=2][color=CHARTREUSE]Điều gì đó lớn lao đang đến[/color][/tornado]. Cuộc kháng chiến đang lên kế hoạch hành động trực tiếp.
+Text/115/text,"Khi nó xảy ra, bạn sẽ cần [color=YELLOW]chọn một bên[/color]. Sẽ không còn lập trường trung gian nào nữa."
+Text/116/text,"Với mỗi củ khoai tây bạn xử lý, bạn đang [pulse freq=2][color=CHARTREUSE]hỗ trợ một cuộc cách mạng[/color][/pulse] hoặc [pulse freq=2][color=CRIMSON]cho phép một hệ thống kinh khủng[/color][/pulse]."
+Choice/10f/disabled_text,
+Choice/110/disabled_text,

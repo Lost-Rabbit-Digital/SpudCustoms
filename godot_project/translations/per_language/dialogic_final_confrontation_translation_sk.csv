@@ -1,0 +1,47 @@
+﻿keys,sk
+Text/11/text,"Hranica Spudu je v [pulse freq=3][color=CRIMSON]chaose[/color][/pulse]. Panikárske zemiaky zaplavujú kontrolné stanovištia, zúfalo sa snažia uniknúť po úniku dokumentov."
+Text/12/text,Prešmykneš sa s Sašou. [wave amp=20 freq=3][color=CHARTREUSE]Musíme pokračovať v tlaku![/color][/wave] Ľudia teraz poznajú pravdu.
+Text/13/text,"Už nemôžu umlčať pravdu. Ak sa nám podarí infiltrovať zariadenie [color=DARK_VIOLET]Koreňová Rezerva[/color] a vysielať dôkazy, [tornado radius=3 freq=2][color=CHARTREUSE]zažne to revolúciu[/color][/tornado]."
+Text/14/text,To miesto je pevnosť. A teraz máme medzi sebou [color=YELLOW]bývalého colného agenta[/color]. Ich oči sa na teba podozrievavo zúžia.
+Choice/15/text,"Chápem vaše pochybnosti, ale som oddaný tejto veci."
+Choice/16/text,Už som obetoval všetko. Teraz neustúpim.
+Text/17/text,Pekné slová. Ale tie sme už počuli predtým.
+Text/18/text,"Pomohli nám získať dokumenty. To sú činy, nie slová."
+Text/19/text,"Už sa nemôžeš vrátiť k tomu, aby si bol lojálny zemiak. Vitaj v odboji, súdruh."
+Text/1a/text,"Po napätej infiltrácii stojí váš tím v srdci [color=DARK_VIOLET]Koreňovej Rezervy[/color], [pulse freq=3][color=CRIMSON]desivá mašinéria útlaku[/color][/pulse] odhalená."
+Text/1b/text,"[wave amp=25 freq=3][color=RED]Alarmy vyjú[/color][/wave] zatiaľ čo stráže sa ponáhľajú reagovať na váš prienik. Preháňate sa chodbami, vyhýbate sa bezpečnostným systémom."
+Text/1c/text,"Obrazovka zabliká. ""No, no, [color=CRIMSON]zradca[/color] sa vracia s rebelskou spodinou."""
+Text/1d/text,"Myslel si, že môžeš zastaviť pokrok Spudu? [color=DARK_VIOLET]Koreňová Rezerva[/color] je životnou silou tohto národa."
+Text/1e/text,Ale neboj sa. Stále budeš slúžiť Spudu... [tornado radius=4 freq=3][color=DARK_VIOLET]v spracovateľských kadiach![/color][/tornado]
+Text/1f/text,Obrazovka náhle stmavne.
+Text/20/text,"Otočíš sa k ostatným s odhodlaním. ""Musíme sa dostať do Idahovho bunkra. Teraz!"""
+Text/21/text,"Vaša skupina bojuje cez vlny bezpečnostných zložiek, tesne uniká zajatiu. Sašini odbojári vytvárajú diverzné akcie, čistia vašu cestu vpred."
+Text/22/text,Po strastiplnom úniku cez údržbárske tunely konečne dosiahnete zabezpečený výťah do Idahovho súkromného bunkra.
+Text/23/text,So Sašou a spojencami po boku nakoniec konfrontuješ Idaha.
+Text/24/text,"Je koniec, Idaho. Tvoje tajomstvá sú odhalené. Ako to skončí... [pulse freq=2]to záleží na tebe.[/pulse]"
+Choice/25/text,Vyjednaj pokojný prechod moci (Diplomatický)
+Choice/26/text,Požaduj okamžité zatknutie Idaha (Spravodlivosť)
+Choice/27/text,Vykonaj vigilantskú spravodlivosť za Idahove zločiny (Pomsta)
+Choice/28/text,Zameraj sa na demontáž infraštruktúry Koreňovej Rezervy (Demontáž)
+Text/29/text,"Idaho, nemusí to skončiť ďalším krviprelievaním. Ak budeš spolupracovať..."
+Text/2a/text,"Ach, ty [color=STEEL_BLUE]idealistický blázon[/color]. Myslíš si, že toto je vyjednávanie?"
+Text/2b/text,"Idaho rozbije tlačidlo a [color=RED]alarmy začnú vyť[/color]. ""Jediné, čo vám dám, je [color=DARK_VIOLET]jednosmerný lístok do fritovacích kadí![/color]"""
+Text/2c/text,"Nemyslím si, Idaho. Stráže! Videli ste spis, [color=YELLOW]viete, čo urobil vašim rodinám.[/color]"
+Text/2d/text,Mohutný strážca vystúpi vpred a rýchlo zrazí Idaha k zemi.
+Text/2e/text,Chodbou sa ozve výstrel. Obrazovka stmavne.
+Text/2f/text,"Idaho, v mene zemiakového ľudu Spudu, [color=CHARTREUSE]si zatknutý![/color]"
+Text/30/text,"Je koniec. Ľud prehovoril. [color=CHARTREUSE]Vybudujeme nový Spud, kde naše korene budú v pôde, nie v utrpení.[/color]"
+Text/31/text,"[color=CRIMSON]Nebudú žiadne dohody, žiadne zľutovanie[/color] pre teba, Idaho. Spravodlivosť tyrana je všetko, čo si zaslúžiš."
+Text/32/text,Zúčtovanie. To som ja. [color=CHARTREUSE]Za každý obetovaný zemiak si berieme späť našu budúcnosť![/color]
+Text/33/text,"Zabudnite naňho. Je symptómom, nie chorobou. [color=CHARTREUSE]Strhni každý koreň a stonku tejto obludnosti.[/color]"
+Text/34/text,Musíme ísť! Teraz!
+Text/35/text,Pád [color=DARK_VIOLET]Koreňovej Rezervy[/color] zapaľuje požiar zmeny naprieč celým Spudom.
+Text/36/text,"Zemiaky v každej provincii povstávajú, prijímajú [color=CHARTREUSE]novú víziu pre svoj národ[/color]."
+Text/37/text,"Pokiaľ zostaneme verní našim koreňom, ideálom, ktoré nás sem priviedli... [color=CHARTREUSE]nájdeme cestu.[/color]"
+Text/38/text,A tak z popola starého Spudu [color=CHARTREUSE]začína zapúšťať korene nový národ[/color]. Vláda [color=DARK_VIOLET]Koreňovej Rezervy[/color] sa skončila.
+Choice/15/disabled_text,
+Choice/28/disabled_text,
+Choice/27/disabled_text,
+Choice/26/disabled_text,
+Choice/25/disabled_text,
+Choice/16/disabled_text,

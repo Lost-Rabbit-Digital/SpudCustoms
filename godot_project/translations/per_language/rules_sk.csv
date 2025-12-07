@@ -1,0 +1,41 @@
+﻿keys,sk
+LAWS,ZÁKONY
+_VALIDATION MESSAGES,
+msg_not_fresh,"Zemiaky boli %s, ale musia byť čerstvé"
+msg_extra_eyes,"Zemiaky mali Extra Oči, čo je zakázané"
+msg_rotten,Zhnitné zemiaky nie sú povolené
+msg_sprouted,Vyklíčené zemiaky nie sú povolené
+msg_dehydrated,Dehydratované zemiaky nie sú dnes povolené
+msg_frozen,Zmrazené zemiaky sú zakázané
+msg_over_age,Zemiaky sú %d rokov staré (max 5 rokov)
+msg_under_age,Zemiaky sú %d rokov staré (musia byť staršie ako 3 roky)
+_LAWS,
+law_fresh_potatoes,[color=dark_goldenrod]IBA čerstvé[/color] zemiaky povolené - [color=dark_red]ODMIETNUŤ[/color] všetky ostatné
+law_extra_eyes,[color=dark_goldenrod]Extra Oči[/color] stav zemiaky musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_rotten,[color=dark_goldenrod]Shnité[/color] zemiaky musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_sprouted,[color=dark_goldenrod]Naklíčené[/color] zemiaky musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_dehydrated,[color=dark_goldenrod]Dehydrované[/color] zemiaky musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_frozen,[color=dark_goldenrod]Zmrazené[/color] zemiaky musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_over_5_years,Zemiaky [color=dark_goldenrod]5 rokov alebo staršie[/color] musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_under_3_years,Zemiaky [color=dark_goldenrod]3 roky alebo mladšie[/color] musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_under_2_years,Zemiaky [color=dark_goldenrod]2 roky alebo mladšie[/color] musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_males_only,[color=dark_goldenrod]IBA samčie[/color] zemiaky povolené - [color=dark_red]ODMIETNUŤ[/color] všetky samičie
+law_females_only,[color=dark_goldenrod]IBA samičie[/color] zemiaky povolené - [color=dark_red]ODMIETNUŤ[/color] všetky samčie
+law_country_spudland,[color=dark_goldenrod]VŠETKY[/color] zemiaky zo [color=dark_goldenrod]Spudlandu[/color] musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_country_potatopia,[color=dark_goldenrod]VŠETKY[/color] zemiaky z [color=dark_goldenrod]Potatopie[/color] musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_country_tuberstan,[color=dark_goldenrod]VŠETKY[/color] zemiaky z [color=dark_goldenrod]Tuberstanu[/color] musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_country_north_yamnea,[color=dark_goldenrod]VŠETKY[/color] zemiaky zo [color=dark_goldenrod]Severnej Yamnea[/color] musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_country_spuddington,[color=dark_goldenrod]VŠETKY[/color] zemiaky zo [color=dark_goldenrod]Spuddingtonu[/color] musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_country_tatcross,[color=dark_goldenrod]VŠETKY[/color] zemiaky z [color=dark_goldenrod]Tatcrossu[/color] musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_country_mash_meadows,[color=dark_goldenrod]VŠETKY[/color] zemiaky z [color=dark_goldenrod]Mash Meadows[/color] musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_country_tuberville,[color=dark_goldenrod]VŠETKY[/color] zemiaky z [color=dark_goldenrod]Tuberville[/color] musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_country_chip_hill,[color=dark_goldenrod]VŠETKY[/color] zemiaky z [color=dark_goldenrod]Chip Hill[/color] musia byť [color=dark_red]ODMIETNUTÉ[/color] (zákaz vývozu)
+law_country_murphyland,[color=dark_goldenrod]VŠETKY[/color] zemiaky z [color=dark_goldenrod]Murphylandu[/color] musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_country_colcannon,[color=dark_goldenrod]VŠETKY[/color] zemiaky z [color=dark_goldenrod]Colcannonu[/color] musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_country_pratie_point,[color=dark_goldenrod]VŠETKY[/color] zemiaky z [color=dark_goldenrod]Pratie Point[/color] musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_purple_majesty,[color=dark_goldenrod]Purple Majesty[/color] typy zemiakov musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_sweet_potatoes,[color=dark_goldenrod]Sladký Zemiak[/color] typy musia byť [color=dark_red]ODMIETNUTÉ[/color] (žiadne povolenia k dispozícii)
+law_yukon_gold,[color=dark_goldenrod]Yukon Gold[/color] typy zemiakov musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_fingerling,[color=dark_goldenrod]Fingerling[/color] typy zemiakov musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_red_bliss,[color=dark_goldenrod]Red Bliss[/color] typy zemiakov musia byť [color=dark_red]ODMIETNUTÉ[/color]
+law_russet,[color=dark_goldenrod]Russet[/color] typy zemiakov musia byť [color=dark_red]ODMIETNUTÉ[/color]

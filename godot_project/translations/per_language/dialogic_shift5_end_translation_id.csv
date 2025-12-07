@@ -1,0 +1,19 @@
+﻿keys,id
+Text/96/text,"Kau merayap melalui koridor yang gelap, jantung berdegup saat menghindari patroli keamanan."
+Text/97/text,[color=CHARTREUSE]Alat ini akan menonaktifkan kunci[/color] di kantor Russet. Aku akan memicu alarm di sayap timur sebagai pengalihan. Kau punya waktu lima menit.
+Text/98/text,Manifest seharusnya ada di lemari arsipnya. [color=CRIMSON]Map merah berlabel 'RR Transport'[/color]. Jangan tinggalkan jejak pencarianmu.
+Text/99/text,"Kau menemukan map merah tebal [color=CRIMSON]berlabel ""RR Transport""[/color] di lemari arsip."
+Text/9a/text,"Di dalamnya terdapat manifest yang sesuai dengan hitungan kentang yang ditolak, dan arahan dari Perdana Menteri Idaho yang mengizinkan ""[pulse freq=3][color=DARK_VIOLET]pemanfaatan penuh penolakan perbatasan untuk produksi RR.[/color][/pulse]"""
+Text/9b/text,"Langkah kaki mendekati pintu kantor. ""[wave amp=15 freq=3][color=YELLOW]Aneh, kupikir aku sudah menguncinya.[/color][/wave]"""
+Choice/9c/text,Bersembunyi di bawah meja
+Choice/9d/text,Lompat dari jendela
+Text/9e/text,"Kau menyelinap di bawah meja Russet saat dia masuk, jantungmu berdegup kencang. Dia duduk, kakinya hanya beberapa sentimeter dari wajahmu."
+Text/9f/text,"Russet di sini. Apa? [color=CHARTREUSE]Alarm lagi?[/color] Aku segera datang. Dia pergi, dan kau lolos."
+Text/a0/text,"Kau membuka paksa jendela dan melompat. Untungnya hanya satu lantai. Seorang penjaga berteriak: ""[color=RED]Hei! Berhenti![/color]"""
+Text/a1/text,Kau berlari melintasi halaman dan berhasil lolos dari para pengejaran.
+Text/a2/text,Apakah kau mendapatkannya?
+Text/a3/text,"Kau menyerahkan bukti, menjelaskan apa yang kau temukan."
+Text/a4/text,Ini membuktikan segalanya. Perlawanan akan membuat salinan. [tornado radius=3 freq=2]Sebarkan kebenaran di mana-mana.[/tornado] Mereka tidak bisa membungkam kita semua.
+Text/a5/text,"Kau telah melewati batas. [wave amp=20 freq=3][color=YELLOW]Tidak ada jalan kembali.[/color][/wave] Ketika kebenaran tersebar, Spud akan berubah."
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,

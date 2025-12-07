@@ -1,0 +1,19 @@
+﻿keys,sv
+Text/86/text,Nya säkerhetsprotokoll idag. Vi har fått underrättelser om [color=YELLOW]misstänkta aktiviteter[/color].
+Text/87/text,Alla resenärer måste genomgå förbättrade inspektionsförfaranden.
+Text/88/text,"Var uppmärksam på [color=YELLOW]nervöst beteende, ovanliga manér eller ovilja att göra ögonkontakt[/color]."
+Text/89/text,"Alla misstänkta föremål måste beslagtas och registreras. För Spuds säkerhet, naturligtvis."
+Text/8a/text,"Vi är särskilt oroade över [color=CRIMSON]förbjudna material[/color] - antistatlig litteratur, fotoutrustning..."
+Text/8b/text,"Deras röst sjunker hotfullt. ""[pulse freq=2][color=DARK_VIOLET]Vi har särskilda procedurer för dessa individer.[/color][/pulse]"""
+Text/8c/text,"[wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] lastbilar lossar lådor märkta ""Premium Reserve"" i matsalen. Lukten är lockande, men magen vänder sig."
+Text/8d/text,Har du provat den nya Premium Reserve? Min kusin försvann förra månaden. Klarade inte inspektionen.
+Text/8e/text,"Kanske han är en del av den här batchen, eller hur? [tornado radius=2 freq=2][color=STEEL_BLUE]Svart humor, förstår du?[/color][/tornado]"
+Choice/8f/text,Det är inte alls roligt.
+Choice/90/text,Jag är inte hungrig. Ursäkta. (Lämnar)
+Text/91/text,Du har rätt. Ibland är det lättare att skämta än att tänka på [pulse freq=3][color=CRIMSON]vad som egentligen kan hända[/color][/pulse].
+Text/92/text,"Officeren ser dig gå. ""Jag förstår. Jag har också förlorat aptiten..."""
+Text/93/text,"Bekväm tajmning för nya säkerhetsprotokoll, eller hur? [wave amp=15 freq=3][color=YELLOW]De försöker stoppa information om Root Reserve.[/color][/wave]"
+Text/94/text,Jag har något som kan hjälpa oss. Vissa potatisar med [color=CHARTREUSE]vital information förtjänar att komma igenom[/color].
+Text/95/text,Du överväger dina alternativ noggrant. Dagens val kunde hjälpa till att [color=CHARTREUSE]sprida sanningen[/color]... eller [color=CRIMSON]tysta ner den för evigt[/color].
+Choice/8f/disabled_text,
+Choice/90/disabled_text,

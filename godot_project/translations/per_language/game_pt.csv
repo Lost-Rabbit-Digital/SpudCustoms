@@ -1,0 +1,52 @@
+﻿keys,pt
+alert_border_runner,CORREDOR DE FRONTEIRA DETECTADO!\nClique para lançar míssil!
+alert_rejected_fleeing,BATATA REJEITADA FUGINDO!\nClique para lançar míssil!
+alert_runner_escaped,CORREDOR ESCAPOU!\nStrike adicionado!
+alert_points_deducted,CORREDOR ESCAPOU!\nStrike adicionado!\n-{penalty} pontos!
+alert_perfect_hit,GOLPE PERFEITO! +{perfect} pontos de bônus de precisão
+alert_perfect_stamp,CARIMBO PERFEITO! +{points} pontos!
+alert_combo,COMBO x{mult}! +{streak} pontos de bônus de combo
+alert_quota_met,"Cota atingida, turno concluído! \nBônus: {bonus} pontos!"
+alert_strike_removed,Strike removido!
+alert_correct_decision,"Você tomou a decisão certa, oficial.\n+{points} pontos!"
+alert_wrong_decision,"Você causou sofrimento desnecessário, oficial...\n+1 Strike!"
+alert_potato_should_be_approved,\nEsta batata atende a todos os requisitos e deveria ter sido aprovada.
+alert_strike_out,Máximo de strikes excedido! Seu turno acabou.
+ui_score,Pontuação: {score}
+ui_quota,Cota: {current} / {target}
+ui_strikes,Advertências: {current} / {max}
+ui_click_megaphone,Clique no megafone para chamar a próxima batata
+ui_drag_document,Arraste o documento para a mesa de inspeção
+ui_stamp_document,Selecione um carimbo para aprovar ou rejeitar
+ui_check_violations,Verifique as violações do documento
+Strike removed!,Strike removido!
+BORDER RUNNER DETECTED!\nClick to launch missile!,CORREDOR DE FRONTEIRA DETECTADO!\nClique para lançar míssil!
+REJECTED POTATO FLEEING!\nClick to launch missile!,BATATA REJEITADA FUGINDO!\nClique para lançar míssil!
+RUNNER ESCAPED!\nStrike added!,CORREDOR ESCAPOU!\nStrike adicionado!
+Click megaphone to call the next potato,Clique no megafone para chamar a próxima batata
+Drag document to inspection table,Arraste o documento para a mesa de inspeção
+Select a stamp to approve or reject,Selecione um carimbo para aprovar ou rejeitar
+Check for document violations,Verifique as violações do documento
+rule_explanation_header,EXPLICAÇÃO DA REGRA:
+rule_explanation_fresh,Spójrz na pole 'Stan'. Jeśli mówi coś innego niż 'Świeży' - ODRZUĆ
+rule_explanation_sweet_potato,Olhe para o campo 'Tipo'. Se disser 'Batata Doce' - REJEITAR (sem licenças)
+rule_explanation_chip_hill,Olhe para o campo 'País'. Se disser 'Chip Hill' - REJEITAR (proibido)
+rule_explanation_age,Olhe para o campo 'Data de Nascimento'. Calcule a idade e verifique contra a regra
+rule_explanation_gender,Olhe para o campo 'Gênero' e verifique contra a regra atual
+rule_footer_text,Essas regras devem ser aplicadas para TODAS as batatas
+rule_tutorial_hint, aby uzyskać wyjaśnienie
+alert_correct_decision_detailed,DECISÃO CORRETA! +{points} pontos\n{reason}
+alert_wrong_decision_detailed,DECISÃO ERRADA! Strike adicionado!\n{reason}
+alert_reason_approved,Batata atende a todos os requisitos - APROVADA
+alert_reason_should_reject,Você deveria ter REJEITADO esta batata
+tutorial_check_type,Verifique o campo 'Tipo' no passaporte
+tutorial_check_condition,Verifique o campo 'Condição' no passaporte
+tutorial_check_country,Verifique o campo 'País' no passaporte
+tutorial_check_age,Verifique a 'Data de Nascimento' para calcular a idade
+tutorial_check_gender,Verifique o campo 'Gênero' no passaporte
+alert_streak_bonus_minigame,5 seguidos! MINIJOGO BÔNUS!
+alert_perfect_stamps_bonus_minigame,Carimbos perfeitos! MINIJOGO BÔNUS!
+alert_new_minigame_unlocked,Novo minijogo desbloqueado: {name}!
+alert_minigame_bonus,Bônus de minijogo: +{bonus} pontos!
+high_score_display,Pontuação mais alta: {score}
+new_high_score,NOVA PONTUAÇÃO MAIS ALTA!

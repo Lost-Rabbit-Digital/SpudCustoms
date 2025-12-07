@@ -1,0 +1,55 @@
+﻿keys,da
+Text/d2/text,Efter din vagt bliver du ført til et hemmeligt modstandsmøde i en forladt stivelsefabrik.
+Text/d3/text,En vejrbidt kartoffel med kampskader taler til den forsamlede gruppe.
+Text/d4/text,Tiden for hvisken og pamfletter er forbi. Regeringen har vist sit sande ansigt.
+Text/d5/text,"Vores kilder bekræfter, at [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] forarbejdningsanlæg øger produktionen."
+Text/d6/text,"Hvilket betyder [tornado radius=3 freq=3][color=CRIMSON]flere af vores brødre og søstre forsvundet, forarbejdet, fortæret[/color][/tornado]."
+Text/d7/text,Lederen slår en knytnæve i bordet. [pulse freq=3][color=CHARTREUSE]Dette slutter nu.[/color][/pulse] Vi har en plan om at slå til mod hjertet af deres operation.
+Text/d8/text,Sasha ruller detaljerede planer ud på bordet. Om tre dage lancerer vi vores primære offensiv.
+Text/d9/text,"Mens et hold skaber en afledningsmanøvre ved det centrale regeringskompleks, vil et andet infiltrere det største Root Reserve-anlæg."
+Text/da/text,"Vores mål: at skaffe [color=CHARTREUSE]uimodsigelige beviser[/color] på, hvad der sker indenfor, og sende det til hele Spud."
+Text/db/text,"Sasha peger på en del af planerne. Det er her, du kommer ind i billedet."
+Text/dc/text,"Vi har brug for nogen på indersiden af Spud Toldvæsen for at sikre, at vores operatører kan krydse grænsen til missionen."
+Text/dd/text,"Kan vi regne med, at du er den person?"
+Choice/de/text,Jeg vil gøre hvad som helst for at afsløre sandheden.
+Choice/df/text,Det lyder farligt. Hvad hvis vi bliver fanget?
+Choice/e0/text,"Er der en anden måde, der ikke sætter så mange i risiko?"
+Text/e1/text,Sashas ansigt lyser op med håb. Tak. [color=CHARTREUSE]Dit mod vil redde utallige liv.[/color]
+Text/e2/text,"Hun klemmer din hånd. Når alt dette er overstået, [color=CHARTREUSE]vil du blive husket som en helt i revolutionen.[/color]"
+Text/e3/text,Sasha nikker højtideligt. Det er farligt. Jeg vil ikke lyve for dig om det.
+Text/e4/text,"Vi kan alle ende med at blive [color=DARK_VIOLET]forarbejdet til Root Reserve[/color] selv, hvis vi fejler."
+Text/e5/text,"Men at gøre ingenting er endnu farligere. For os alle, på lang sigt."
+Text/e6/text,Sashas udtryk bliver dystert. Vi har prøvet andre måder. I årevis.
+Text/e7/text,Andragender. Stille diplomati. Anonyme tips. Intet har virket.
+Text/e8/text,Nogle gange må du risikere alt for at ændre noget.
+Text/e9/text,En ophedet debat bryder ud blandt modstandsmedlemmerne.
+Text/ea/text,Nogle argumenterer for en mere aggressiv tilgang - at ødelægge forarbejdningsanlæggene helt.
+Text/eb/text,"Andre insisterer på, at voldelige handlinger kun vil vende den offentlige mening imod dem."
+Text/ec/text,NOK! Lederen bringer rummet til tavshed med en kommanderende stemme.
+Text/ed/text,"Vi har ikke råd til at være splittede. Ikke nu, hvor vi er så tæt på."
+Text/ee/text,"Vores mål er enkelt: afsløre sandheden. Lad folket bestemme, hvad der sker derefter."
+Text/ef/text,"Lederen vender sig for at tale direkte til dig. Men vi har brug for at vide, [color=YELLOW]hvor du står[/color]."
+Text/f0/text,Om tre dage vil vores agenter nærme sig dit kontrolpunkt. De vil bære [color=CHARTREUSE]blå identifikationskort[/color].
+Text/f1/text,Vil du hjælpe dem med at krydse? Dit svar nu vil afgøre vores næste træk.
+Choice/f2/text,Jeg vil hjælpe dem med at krydse. For Spuds fremtid.
+Choice/f3/text,"Jeg kan ikke være direkte involveret, men jeg vil se den anden vej."
+Choice/f4/text,Jeg har brug for mere tid til at tænke over dette.
+Text/f5/text,Lederen klapper din skulder fast. [color=CHARTREUSE]Dit mod ærer os alle.[/color]
+Text/f6/text,"På den tredje dag, når solen står højest, vil vores agenter komme."
+Text/f7/text,"Adgangskoden er ""[wave amp=15 freq=3][color=CHARTREUSE]Rødderne vokser dybt.[/color][/wave]"" Husk det."
+Text/f8/text,"Lederen nikker langsomt, tydeligt skuffet men forstående."
+Text/f9/text,"Nogle gange er det mest, vi kan bede om, at folk ikke står i vejen for os."
+Text/fa/text,Vores agenter vil fortsætte som planlagt. Bare... udløs ikke alarmen.
+Text/fb/text,"Lederens udtryk hærdes. [color=YELLOW]Tid er en luksus, vi ikke har.[/color]"
+Text/fc/text,Men at tvinge nogen til at slutte sig til vores sag gør os ikke bedre end dem.
+Text/fd/text,Vi vil fortsætte uden at regne med din hjælp. Søg i din samvittighed.
+Text/fe/text,"Da mødet bryder op, går Sasha med dig tilbage mod kontrolpunktet."
+Text/ff/text,"Uanset hvad der sker... tak for alt, hvad du har gjort."
+Text/100/text,"Du vender tilbage til dine kvarterer ved kontrolpunktet, dit sind kører løbsk med vægten af kommende begivenheder."
+Text/101/text,Om bare tre dage kunne alt ændre sig. [color=YELLOW]Til det bedre eller værre.[/color]
+Choice/de/disabled_text,
+Choice/f4/disabled_text,
+Choice/f3/disabled_text,
+Choice/f2/disabled_text,
+Choice/e0/disabled_text,
+Choice/df/disabled_text,

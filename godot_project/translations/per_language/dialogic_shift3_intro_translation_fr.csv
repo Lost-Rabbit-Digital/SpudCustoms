@@ -1,0 +1,19 @@
+﻿keys,fr
+Text/78/text,"Une autre journée au point de contrôle. La file de pommes de terre s'étend plus longue que jamais, tout le monde est sur le qui-vive."
+Text/79/text,Nouveaux ordres de la hiérarchie. [wave amp=15 freq=3][color=DARK_ORANGE]Nous doublons les rejets[/color][/wave]. Toute pomme de terre jugée dangereuse est immédiatement détenue.
+Text/7a/text,J'ai une mission spéciale. Nous avons des renseignements sur des [pulse freq=2][color=CRIMSON]agitateurs[/color][/pulse]. Soyez vigilants lors de vos inspections.
+Choice/7b/text,"Oui, monsieur, je ne vous décevrai pas"
+Choice/7c/text,De quels types d'agitateurs parlez-vous ?
+Text/7d/text,Bien. Je savais que je pouvais compter sur vous. Vous irez loin avec cet état d'esprit.
+Text/7e/text,Ceux qui [color=CRIMSON]menacent notre mode de vie[/color]. Ne posez pas trop de questions si vous savez ce qui est bon pour vous.
+Text/7f/text,"[color=STEEL_BLUE]Je vous en supplie![/color] Ma femme devait être juste derrière moi, mais [tornado radius=2 freq=3]elle n'a jamais passé la douane[/tornado]."
+Text/80/text,"Personne ne veut me dire ce qui lui est arrivé. S'il vous plaît, [color=CHARTREUSE]aidez-moi à la retrouver![/color]"
+Choice/81/text,"Je suis désolé, mais je ne peux rien faire."
+Choice/82/text,Laissez-moi voir ce que je peux découvrir. Pas de promesses.
+Text/83/text,Comme tous les autres... [color=STEEL_BLUE]Que votre conscience soit aussi lourde que la mienne.[/color]
+Text/84/text,"Merci ! Même un petit espoir vaut mieux que rien. Voici sa photo. Trouvez-la, je vous en prie."
+Text/85/text,J'ai assisté à cet échange. [color=DARK_ORANGE]Sympathiser avec les exclus ne mène qu'à des ennuis.[/color] Restez concentré sur votre devoir.
+Choice/7b/disabled_text,
+Choice/82/disabled_text,
+Choice/81/disabled_text,
+Choice/7c/disabled_text,

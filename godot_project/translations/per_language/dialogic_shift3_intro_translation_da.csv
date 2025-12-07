@@ -1,0 +1,19 @@
+﻿keys,da
+Text/78/text,"Endnu en dag ved kontrolpunktet. Kartoffelrækken strækker sig længere end nogensinde, alle er på kant."
+Text/79/text,"Nye ordrer fra toppen. [wave amp=15 freq=3][color=DARK_ORANGE]Vi fordobler afvisningerne[/color][/wave]. Enhver kartoffel, der anses for usikker, tilbageholdes øjeblikkeligt."
+Text/7a/text,Jeg har en særlig opgave. Vi har efterretninger om [pulse freq=2][color=CRIMSON]problematiske personer[/color][/pulse]. Vær opmærksom under jeres inspektioner.
+Choice/7b/text,"Ja, hr., jeg vil ikke svigte dig"
+Choice/7c/text,Hvilke slags problematiske personer taler vi om?
+Text/7d/text,"Godt. Jeg vidste, jeg kunne stole på dig. Du vil nå langt med den indstilling."
+Text/7e/text,"Dem, der [color=CRIMSON]truer vores måde at leve på[/color]. Stil ikke for mange spørgsmål, hvis du ved, hvad der er godt for dig."
+Text/7f/text,"[color=STEEL_BLUE]Jeg bønfalder dig![/color] Min kone skulle have været lige bag mig, men [tornado radius=2 freq=3]hun kom aldrig igennem toldkontrollen[/tornado]."
+Text/80/text,"Ingen vil fortælle mig, hvad der er sket med hende. Please, [color=CHARTREUSE]hjælp mig med at finde hende![/color]"
+Choice/81/text,"Jeg er ked af det, men der er intet, jeg kan gøre."
+Choice/82/text,"Lad mig se, hvad jeg kan finde ud af. Ingen garantier."
+Text/83/text,Ligesom alle de andre... [color=STEEL_BLUE]Må din samvittighed være tung som min.[/color]
+Text/84/text,Tak! Selv et lille håb er bedre end intet. Her er hendes foto. Find hende venligst.
+Text/85/text,Jeg så den udveksling. [color=DARK_ORANGE]Sympati med afviste fører kun til problemer.[/color] Hold fokus på din pligt.
+Choice/7b/disabled_text,
+Choice/82/disabled_text,
+Choice/81/disabled_text,
+Choice/7c/disabled_text,

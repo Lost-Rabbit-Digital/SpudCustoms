@@ -73,15 +73,20 @@ main_menu_new_game,New Game,Nouveau jeu,Neues Spiel,Nuevo juego,...
 
 ## Translation Workflow
 
+**Keep files split!** Per-language files are:
+- Easier to review in PRs (small diffs)
+- Less prone to merge conflicts
+- Simpler for translators to work with
+
 ### For Translators
-1. Edit files in `per_language/` directory
-2. Each file contains only one language, making it easier to work with
-3. Run `python translate_with_gemini.py --merge` to update combined files
+1. Edit files in `per_language/` directory (e.g., `menus_fr.csv` for French)
+2. Each file contains only one language - much easier to work with!
+3. Run `--merge` before testing in Godot (Godot needs combined format)
 
 ### For Developers
 1. Add new keys to `per_language/{category}_en.csv`
 2. Run `python translate_with_gemini.py` to auto-translate to all languages
-3. Combined files are auto-generated for Godot
+3. Run `--merge` before running/exporting the game
 
 ### CLI Commands
 ```bash

@@ -1,0 +1,27 @@
+﻿keys,ro
+Text/140/text,"Granița seamănă cu o [pulse freq=3][color=CRIMSON]zonă de război[/color][/pulse]. Baricade, vehicule blindate și gărzi de elită stau pregătite. Astăzi este ziua când rezistența a planificat să lovească."
+Text/141/text,"[wave amp=25 freq=3][color=YELLOW]TRANSMISIUNE DE URGENȚĂ[/color][/wave]: Tot Spud este sub [color=RED]lege marțială[/color]. ""Rezistența"" a lansat atacuri împotriva facilităților guvernamentale."
+Text/142/text,Oricine ajută acești [color=CRIMSON]extremiști[/color] se confruntă cu [color=DARK_VIOLET]procesare imediată[/color]. Ministerul confirmă: [color=DARK_VIOLET]Root Reserve[/color] rămâne sigur pentru toți [color=DARK_ORANGE]cartofii loiali[/color].
+Text/143/text,[color=YELLOW]Revolte au izbucnit[/color] în mai multe sectoare. Celulele de rezistență au atacat trei facilități [color=DARK_VIOLET]Root Reserve[/color].
+Text/144/text,Scopul lor: accesarea bazei de date centrale cu toate înregistrările de producție. Orice semn de neloialitate înseamnă procesare.
+Text/145/text,"Am capturat mai mulți operativi ai rezistenței, inclusiv pe Ofițerul Sasha."
+Text/146/text,[tornado radius=3 freq=2][color=CRIMSON]Adevărații trădători[/color][/tornado] sunt cei care [color=DARK_VIOLET]își hrănesc poporul unii cu alții[/color]. Nu puteți opri adevărul!
+Text/147/text,"Este târâtă, încă strigând: [color=CHARTREUSE]Oamenii vor ști ce se află în mâncarea lor![/color]"
+Text/148/text,"[color=CRIMSON]Trădătorul[/color] va fi [pulse freq=3][color=DARK_VIOLET]procesat imediat[/color][/pulse]. Un lot special de [color=DARK_VIOLET]Root Reserve[/color], făcut chiar din teroriști."
+Text/149/text,Toate trecerile de frontieră sunt [color=RED]suspendate[/color] cu excepția personalului esențial cu [color=GOLD]autorizație de Nivel Alpha[/color].
+Text/14a/text,Acest scanner [color=YELLOW]nu poate fi păcălit[/color]. Declanșați alarma imediat pentru oricine fără autorizație adecvată.
+Text/14b/text,Un cartof în uniformă oficială se apropie cu acreditări Alpha aparent perfecte.
+Text/14c/text,"Un mic card albastru cade din dosar. ""[wave amp=15 freq=3][color=CHARTREUSE]Rădăcinile cresc adânc.[/color][/wave]"", murmură în timp ce ridică cardul."
+Choice/14d/text,"Procesați-i, ignorând alertele scannerului (Ajutați rezistența)"
+Choice/14e/text,Declanșați alarma imediat (Trădați rezistența)
+Text/14f/text,"Ușurarea se vede în ochii lor. ""[color=CHARTREUSE]Pentru Sasha. Pentru Spud.[/color]"" Dispar spre baza de date centrală."
+Text/150/text,"Groaza apare pe fața lor. ""[color=CRIMSON]Trădătorule! Ne-am încrezut în tine![/color]"" Sunt rapid înconjurați de gărzi."
+Text/151/text,Excelentă treabă. Loialitatea ta va fi răsplătită.
+Text/152/text,"Brusc, facilitatea [color=YELLOW]se cutremură de explozii[/color]. Atacul rezistenței a început, indiferent de alegerea ta."
+Text/153/text,"Să rămân la postul meu și să sper că asta va trece, sau să [color=CHARTREUSE]iau atitudine[/color] și să risc totul pentru a expune adevărul?"
+Choice/154/text,Nu-mi pot abandona datoria. Voi rămâne tăcut și voi spera la ce e mai bun.
+Choice/155/text,Am fost complice prea mult timp. E timpul să lupt pentru ce e drept.
+Choice/155/disabled_text,
+Choice/14d/disabled_text,
+Choice/154/disabled_text,
+Choice/14e/disabled_text,

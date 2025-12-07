@@ -1,0 +1,27 @@
+﻿keys,fi
+Text/3a/text,"Tarkastuspiste on rakennettu uudelleen vastarintahyökkäyksen jälkeen. Turvallisuus on ennennäkemätöntä, propagandajulistukset ylistävät ""urheita puolustajia""."
+Text/3b/text,Minut on ylennetty Alueelliseksi Rajaturvallisuuden Johtajaksi ja [pulse freq=2]Juurivarannon Jakeluun[/pulse].
+Text/3c/text,Russet kiinnittää pienen mitalin uniformuusi. Aluepäällikön Apulainen... täydellisestä lojaalisuudestasi Spudia kohtaan.
+Text/3d/text,Minulla on erikoistehtävä! Pääministeri Idaho tulee tänään tarkastamaan laitoksemme. Sinut on valittu demonstraatioon.
+Text/3e/text,"Oletko nähnyt uuden erän Juurivarantoa? He kutsuvat sitä 'Vastarintasekoitteeksi' sille, mitä vangeille tapahtui."
+Text/3f/text,"Jotkut sanovat, että vastarinta ei ollut täysin väärässä. Että on [wave amp=15 freq=3]todisteita siitä, että he puhuivat totta[/wave]..."
+Choice/40/text,Ole varovainen. Jo tällaisesta puhuminen on nyt vaarallista. (Varuillaan)
+Choice/41/text,Minulla on ollut samat ajatukset. Tämä ei tunnu oikealta. (Myötätuntoinen)
+Text/42/text,Kaikki eivät enää usko virallista tarinaa. Pidä silmäsi auki pääministerin vierailun aikana.
+Text/43/text,"Uusi vastarinta on muodostumassa. Hiljaisempi, varovaisempi. Jos haluat tietää lisää... etsi keltaista perunamerkkiä."
+Text/44/text,HUOMIO: Pääministeri Idahon saattue on saapunut. Kaikki upseerit määrätyille paikoilleen. Tarkastusprotokollat käytössä.
+Text/45/text,Mitali tuntuu raskaalta - palkinto lojaalisuudesta vai häpeän merkki? Pian kohtaat Juurivarannon arkkitehdin.
+Text/46/text,Lähetyksen paljastettua Juurivarannon on Spudissa puhjennnut kapinointeja. Pääministeri Idaho pysyy hallinnollisen rakennuksen suojissa.
+Text/47/text,Idaho suunnittelee viimeistä lähetystä syyttääkseen Juurivarantoa meistä. Emme voi antaa hänen kirjoittaa historiaa uudelleen. Tänään lopetamme hänen hallintokautensa.
+Text/48/text,Pelastit henkeni käsittelylaitoksessa. Nyt meillä on mahdollisuus pelastaa koko Spud.
+Text/49/text,Turvallisuusprotokollien tuntemuksesi tulee olemaan ratkaisevan tärkeä lopullisessa tehtävässä. Oletko valmis?
+Choice/4a/text,"Olen valmis. Tehkäämme loppuun se, minkä aloitimme."
+Choice/4b/text,Mikä on täsmälleen suunnitelma? Tarvitsen yksityiskohdat.
+Text/4c/text,"Tiesin, ettet peräänny. Olet yksi meidän [tornado radius=3 freq=2]vahvimmista liittolaisistamme[/tornado]."
+Text/4d/text,Tunkeutumme hallituksen univormuissa. Autat ohittamaan turvallisuusjärjestelmät. Tavoitteenamme on vangita Idaho ja pakottaa julkinen tunnustus.
+Text/4e/text,"Olet Alfa-tiimissä Sasan kanssa, murtautuen itäisestä sisäänkäynnistä. Tehtäväsi: [color=GREEN]turvata lähetyskeskus[/color]."
+Text/4f/text,"Lojaalista tullivirkailijoista vastarintataistelijaksi? Muodonmuutos, jota et koskaan kuvitellut. Mitä tahansa tapahtuukin, Spud ei koskaan ole sama."
+Choice/4a/disabled_text,
+Choice/4b/disabled_text,
+Choice/41/disabled_text,
+Choice/40/disabled_text,

@@ -1,0 +1,19 @@
+﻿keys,es
+Text/86/text,Nuevos protocolos de seguridad hoy. Hemos recibido inteligencia sobre [color=YELLOW]actividades sospechosas[/color].
+Text/87/text,Todos los viajeros deben someterse a procedimientos de inspección mejorados.
+Text/88/text,"Estén atentos a [color=YELLOW]comportamientos nerviosos, modales inusuales o renuencia a hacer contacto visual[/color]."
+Text/89/text,"Todos los artículos sospechosos deben ser confiscados y registrados. Para la seguridad de Spud, por supuesto."
+Text/8a/text,"Estamos especialmente preocupados por [color=CRIMSON]materiales prohibidos[/color] - literatura antigubernamental, equipos fotográficos..."
+Text/8b/text,"Su voz cae ominosamente. ""[pulse freq=2][color=DARK_VIOLET]Tenemos procedimientos especiales para esos individuos.[/color][/pulse]"""
+Text/8c/text,"[wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] camiones descargan cajas marcadas como ""Premium Reserve"" en la cafetería. El olor es tentador, pero su estómago se revuelve."
+Text/8d/text,¿Has probado el nuevo Premium Reserve? Mi primo desapareció el mes pasado. No pasó la inspección.
+Text/8e/text,"¿Quizás es parte de este lote, eh? [tornado radius=2 freq=2][color=STEEL_BLUE]Humor negro, ¿sabes?[/color][/tornado]"
+Choice/8f/text,Eso no es gracioso. En absoluto.
+Choice/90/text,No tengo hambre. Disculpa. (Salir)
+Text/91/text,Tienes razón. A veces es más fácil bromear que pensar en [pulse freq=3][color=CRIMSON]lo que realmente podría estar sucediendo[/color][/pulse].
+Text/92/text,"El oficial te observa mientras te vas. ""Lo entiendo. Yo también he perdido el apetito..."""
+Text/93/text,"Conveniente momento para los nuevos protocolos de seguridad, ¿no? [wave amp=15 freq=3][color=YELLOW]Están tratando de detener la información sobre Root Reserve.[/color][/wave]"
+Text/94/text,Tengo algo que podría ayudarnos. Algunas patatas con [color=CHARTREUSE]información vital merecen pasar[/color].
+Text/95/text,Consideras cuidadosamente tus opciones. Las decisiones de hoy podrían ayudar a [color=CHARTREUSE]difundir la verdad[/color]... o [color=CRIMSON]silenciarla para siempre[/color].
+Choice/8f/disabled_text,
+Choice/90/disabled_text,

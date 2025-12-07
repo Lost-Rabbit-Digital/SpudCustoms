@@ -1,0 +1,19 @@
+﻿keys,no
+Text/78/text,"Enda en dag ved kontrollpunktet. Potetrekken strekker seg lenger enn noensinne, alle er anspente."
+Text/79/text,"Nye ordre ovenfra. [wave amp=15 freq=3][color=DARK_ORANGE]Vi dobler avvisningene[/color][/wave]. Enhver potet som anses som utrygg, blir umiddelbart tilbakeholdt."
+Text/7a/text,Jeg har en spesiell oppgave. Vi har etterretning om [pulse freq=2][color=CRIMSON]bråkmakere[/color][/pulse]. Vær årvåkne under inspeksjonene.
+Choice/7b/text,"Ja, herr, jeg skal ikke skuffe deg"
+Choice/7c/text,Hva slags bråkmakere snakker vi om?
+Text/7d/text,Godt. Jeg visste jeg kunne stole på deg. Du kommer til å gå langt med den innstillingen.
+Text/7e/text,De som [color=CRIMSON]truer vår livsstil[/color]. Ikke still for mange spørsmål hvis du vet hva som er best for deg.
+Text/7f/text,"[color=STEEL_BLUE]Jeg ber deg innstendig![/color] Kona mi skulle ha vært rett bak meg, men [tornado radius=2 freq=3]hun kom aldri gjennom tollen[/tornado]."
+Text/80/text,"Ingen vil fortelle meg hva som har skjedd med henne. Vær så snill, [color=CHARTREUSE]hjelp meg å finne henne![/color]"
+Choice/81/text,"Beklager, men jeg kan ikke gjøre noe."
+Choice/82/text,La meg se hva jeg kan finne ut. Ingen garantier.
+Text/83/text,Som alle de andre... [color=STEEL_BLUE]Må din samvittighet være like tung som min.[/color]
+Text/84/text,Takk! Selv et lite håp er bedre enn ingen ting. Her er hennes bilde. Vær så snill å finn henne.
+Text/85/text,Jeg så den utvekslingen. [color=DARK_ORANGE]Sympati med avviste fører bare til trøbbel.[/color] Hold fokus på din plikt.
+Choice/7b/disabled_text,
+Choice/82/disabled_text,
+Choice/81/disabled_text,
+Choice/7c/disabled_text,

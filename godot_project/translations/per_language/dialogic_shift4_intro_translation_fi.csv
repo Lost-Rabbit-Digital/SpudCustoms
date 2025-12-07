@@ -1,0 +1,19 @@
+﻿keys,fi
+Text/86/text,Uudet turvallisuusprotokollat tänään. Olemme saaneet tiedustelutietoja [color=YELLOW]epäilyttävistä toiminnoista[/color].
+Text/87/text,Kaikkien matkustajien on läpäistävä tehostetut tarkastustoimenpiteet.
+Text/88/text,"Tarkkaile [color=YELLOW]hermostunutta käyttäytymistä, outoja käytöstapoja tai haluttomuutta katsekontaktiin[/color]."
+Text/89/text,"Kaikki epäilyttävät esineet on takavarikoitava ja kirjattava. Spudin turvallisuuden vuoksi, tietysti."
+Text/8a/text,"Olemme erityisen huolissamme [color=CRIMSON]kielletyistä materiaaleista[/color] - hallituksen vastaisesta kirjallisuudesta, valokuvausvälineistä..."
+Text/8b/text,"Hänen äänensä laskee uhkaavasti. ""[pulse freq=2][color=DARK_VIOLET]Meillä on erityiset menettelytavat näille henkilöille.[/color][/pulse]"""
+Text/8c/text,"[wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave]-kuorma-autot purkavat ""Premium Reserve"" -merkittyjä laatikoita ruokalaan. Tuoksu on houkutteleva, mutta vatsanne kääntyy."
+Text/8d/text,Oletko maistanut uutta Premium Reservea? Serkkuni katosi viime kuussa. Ei läpäissyt tarkastusta.
+Text/8e/text,"Ehkä hän on osa tätä erää, vai mitä? [tornado radius=2 freq=2][color=STEEL_BLUE]Mustaa huumoria, tiedätkö?[/color][/tornado]"
+Choice/8f/text,Tuo ei ole ollenkaan hauskaa.
+Choice/90/text,En ole nälkäinen. Anteeksi. (Poistu)
+Text/91/text,Olet oikeassa. Joskus on helpompaa vitsailla kuin ajatella [pulse freq=3][color=CRIMSON]mitä saattaa todella tapahtua[/color][/pulse].
+Text/92/text,"Virkailija seuraa poistumistasi. ""Ymmärrän. Minultakin on kadonnut ruokahalu..."""
+Text/93/text,"Sattuvan ajoituksen omaavat uudet turvallisuusprotokollat, eikö vain? [wave amp=15 freq=3][color=YELLOW]He yrittävät estää tietoja Root Reservesta.[/color][/wave]"
+Text/94/text,"Minulla on jotain, mikä voisi auttaa meitä. Jotkut perunat, joilla on [color=CHARTREUSE]elintärkeitä tietoja, ansaitsevat päästä läpi[/color]."
+Text/95/text,Harkitset vaihtoehtojasi varovasti. Tämän päivän valinnat voisivat auttaa [color=CHARTREUSE]levittämään totuutta[/color]... tai [color=CRIMSON]vaientamaan sen ikuisesti[/color].
+Choice/8f/disabled_text,
+Choice/90/disabled_text,

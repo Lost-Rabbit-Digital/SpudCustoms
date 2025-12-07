@@ -1,0 +1,19 @@
+﻿keys,vi
+Text/78/text,"Một ngày nữa tại điểm kiểm soát. Hàng khoai tây dài hơn bao giờ hết, mọi người đều căng thẳng."
+Text/79/text,Những mệnh lệnh mới từ trên. [wave amp=15 freq=3][color=DARK_ORANGE]Chúng tôi tăng gấp đôi các lệnh từ chối[/color][/wave]. Bất kỳ khoai tây nào bị coi là không an toàn sẽ bị giữ lại ngay lập tức.
+Text/7a/text,Tôi có nhiệm vụ đặc biệt. Chúng tôi có thông tin tình báo về [pulse freq=2][color=CRIMSON]những kẻ gây rối[/color][/pulse]. Hãy cảnh giác trong các cuộc thanh tra của mình.
+Choice/7b/text,"Vâng, thưa ông, tôi sẽ không làm ông thất vọng"
+Choice/7c/text,Chúng ta đang nói về những kẻ gây rối như thế nào?
+Text/7d/text,Tốt. Tôi đã biết tôi có thể tin tưởng anh. Anh sẽ đi xa với thái độ này.
+Text/7e/text,Những kẻ [color=CRIMSON]đe dọa lối sống của chúng tôi[/color]. Đừng hỏi quá nhiều nếu anh biết điều gì tốt cho mình.
+Text/7f/text,"[color=STEEL_BLUE]Tôi van nài ông![/color] Vợ tôi lẽ ra phải ngay sau lưng tôi, nhưng [tornado radius=2 freq=3]cô ấy chưa bao giờ vượt qua được hải quan[/tornado]."
+Text/80/text,"Không ai muốn cho tôi biết chuyện gì đã xảy ra với cô ấy. Xin hãy, [color=CHARTREUSE]giúp tôi tìm cô ấy![/color]"
+Choice/81/text,"Xin lỗi, nhưng tôi không thể làm gì được."
+Choice/82/text,Để tôi xem tôi có thể tìm ra gì. Không hứa hẹn gì.
+Text/83/text,Giống như tất cả những người khác... [color=STEEL_BLUE]Mong rằng lương tâm ông nặng nề như của tôi.[/color]
+Text/84/text,Cảm ơn! Thậm chí một chút hy vọng cũng tốt hơn không có gì. Đây là ảnh của cô ấy. Xin hãy tìm cô ấy.
+Text/85/text,Tôi đã chứng kiến cuộc trao đổi đó. [color=DARK_ORANGE]Đồng cảm với những kẻ bị loại bỏ chỉ dẫn đến rắc rối.[/color] Hãy tập trung vào nhiệm vụ của mình.
+Choice/7b/disabled_text,
+Choice/82/disabled_text,
+Choice/81/disabled_text,
+Choice/7c/disabled_text,

@@ -1,0 +1,19 @@
+﻿keys,pl
+Text/86/text,Nowe protokoły bezpieczeństwa dzisiaj. Otrzymaliśmy informacje wywiadowcze o [color=YELLOW]podejrzanych działaniach[/color].
+Text/87/text,Wszyscy podróżni muszą przejść rozszerzone procedury inspekcji.
+Text/88/text,"Obserwuj [color=YELLOW]nerwowe zachowanie, niezwykłe maniery lub niechęć do nawiązania kontaktu wzrokowego[/color]."
+Text/89/text,"Wszystkie podejrzane przedmioty muszą zostać skonfiskowane i zarejestrowane. Dla bezpieczeństwa Spuda, oczywiście."
+Text/8a/text,"Jesteśmy szczególnie zaniepokojeni [color=CRIMSON]zakazanymi materiałami[/color] - literaturą antyrządową, sprzętem fotograficznym..."
+Text/8b/text,"Ich głos opada groźnie. ""[pulse freq=2][color=DARK_VIOLET]Mamy specjalne procedury dla tych jednostek.[/color][/pulse]"""
+Text/8c/text,"[wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] ciężarówki rozładowują skrzynie oznaczone ""Premium Reserve"" w stołówce. Zapach jest kuszący, ale żołądek się wywraca."
+Text/8d/text,Próbowałeś nowego Premium Reserve? Mój kuzyn zniknął w zeszłym miesiącu. Nie przeszedł kontroli.
+Text/8e/text,"Może jest częścią tej partii, co? [tornado radius=2 freq=2][color=STEEL_BLUE]Czarny humor, rozumiesz?[/color][/tornado]"
+Choice/8f/text,To wcale nie jest śmieszne.
+Choice/90/text,Nie jestem głodny. Przepraszam. (Wyjście)
+Text/91/text,"Masz rację. Czasami łatwiej żartować niż myśleć o [pulse freq=3][color=CRIMSON]tym, co naprawdę może się dziać[/color][/pulse]."
+Text/92/text,"Funkcjonariusz patrzy, jak wychodzisz. ""Rozumiem. Ja też straciłem apetyt..."""
+Text/93/text,"Wygodny moment na nowe protokoły bezpieczeństwa, nieprawdaż? [wave amp=15 freq=3][color=YELLOW]Próbują zatrzymać informacje o Root Reserve.[/color][/wave]"
+Text/94/text,"Mam coś, co może nam pomóc. Niektóre ziemniaki z [color=CHARTREUSE]kluczowymi informacjami zasługują, żeby przejść[/color]."
+Text/95/text,Ostrożnie rozważasz swoje opcje. Dzisiejsze decyzje mogą pomóc [color=CHARTREUSE]rozpowszechnić prawdę[/color]... lub [color=CRIMSON]uciszyć ją na zawsze[/color].
+Choice/8f/disabled_text,
+Choice/90/disabled_text,

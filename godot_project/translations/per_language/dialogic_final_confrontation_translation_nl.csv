@@ -1,0 +1,47 @@
+﻿keys,nl
+Text/11/text,"De Spud-grens is in [pulse freq=3][color=CRIMSON]chaos[/color][/pulse]. Panische aardappelen overspoelen de controlepunten, wanhopig om te ontsnappen na de gelekte documenten."
+Text/12/text,Je glipt erdoor met Sasha. [wave amp=20 freq=3][color=CHARTREUSE]We moeten blijven doorgaan![/color][/wave] De mensen kennen nu de waarheid.
+Text/13/text,"Ze kunnen de waarheid niet langer het zwijgen opleggen. Als we kunnen infiltreren in de [color=DARK_VIOLET]Wortelreserve[/color] faciliteit en bewijsmateriaal uitzenden, zal het [tornado radius=3 freq=2][color=CHARTREUSE]de revolutie ontketenen[/color][/tornado]."
+Text/14/text,Die plek is een fort. En nu hebben we een [color=YELLOW]voormalige douanebeambte[/color] in ons midden. Hun ogen vernauwen zich achterdochtig naar jou.
+Choice/15/text,"Ik begrijp jullie twijfel, maar ik ben toegewijd aan deze zaak."
+Choice/16/text,Ik heb al alles opgeofferd. Ik zal nu niet terugdeinzen.
+Text/17/text,Mooie woorden. Maar die hebben we eerder gehoord.
+Text/18/text,"Ze hebben ons geholpen de documenten te krijgen. Dat zijn daden, geen woorden."
+Text/19/text,"Kan nu niet meer terug naar een loyale aardappel zijn. Welkom bij het verzet, kameraad."
+Text/1a/text,"Na een gespannen infiltratie staat je team in het hart van de [color=DARK_VIOLET]Wortelreserve[/color], de [pulse freq=3][color=CRIMSON]gruwelijke machinerie van onderdrukking[/color][/pulse] blootgelegd."
+Text/1b/text,"[wave amp=25 freq=3][color=RED]Alarmen loeien[/color][/wave] terwijl bewakers zich haasten om te reageren op jullie indringing. Jullie racen door gangen, ontwijken beveiligingssystemen."
+Text/1c/text,"Een scherm flikkert aan. ""Wel, wel, de [color=CRIMSON]verrader[/color] keert terug met rebellentuig."""
+Text/1d/text,Dacht je dat je de vooruitgang van Spud kon stoppen? De [color=DARK_VIOLET]Wortelreserve[/color] is de levensader van deze natie.
+Text/1e/text,Maar maak je geen zorgen. Je zult Spud nog steeds dienen... [tornado radius=4 freq=3][color=DARK_VIOLET]in de verwerkingsvaten![/color][/tornado]
+Text/1f/text,Het scherm wordt plotseling zwart.
+Text/20/text,"Je wendt je vastberaden tot de anderen. ""We moeten Idaho's bunker bereiken. Nu!"""
+Text/21/text,"Jullie groep vecht zich een weg door golven beveiligers, ontloopt ternauwernood gevangenneming. Sasha's verzetsstrijders creëren afleidingen, maken jullie pad voorwaarts vrij."
+Text/22/text,Na een huiveringwekkende ontsnapping door onderhoudstunnels bereiken jullie eindelijk de beveiligde lift naar Idaho's privébunker.
+Text/23/text,Met Sasha en je bondgenoten aan je zijde confronteer je Idaho eindelijk.
+Text/24/text,"Het is voorbij, Idaho. Je geheimen zijn onthuld. Hoe dit eindigt... [pulse freq=2]dat hangt van jou af.[/pulse]"
+Choice/25/text,Onderhandel over een vreedzame machtsoverdracht (Diplomatiek)
+Choice/26/text,Eis Idaho's onmiddellijke arrestatie (Rechtvaardigheid)
+Choice/27/text,Oefen eigenrichting uit voor Idaho's misdaden (Wraak)
+Choice/28/text,Focus op het ontmantelen van de Wortelreserve-infrastructuur (Ontmantelen)
+Text/29/text,"Idaho, het hoeft niet te eindigen met meer bloedvergieten. Als je meewerkt..."
+Text/2a/text,"Oh, jij [color=STEEL_BLUE]idealistische dwaas[/color]. Denk je dat dit een onderhandeling is?"
+Text/2b/text,"Idaho verplettert een knop, en [color=RED]alarmen beginnen te loeien[/color]. ""Het enige wat ik jullie zal geven is een [color=DARK_VIOLET]enkele reis naar de frituurvaten![/color]"""
+Text/2c/text,"Ik denk het niet, Idaho. Bewakers! Jullie hebben het dossier gezien, [color=YELLOW]jullie weten wat hij met jullie families heeft gedaan.[/color]"
+Text/2d/text,Een kolossale bewaker stapt naar voren en schopt Idaho snel tegen de grond.
+Text/2e/text,Een schot weergalmt door de kamer. Het scherm vervaagt naar zwart.
+Text/2f/text,"Idaho, in naam van het aardappelvolk van Spud, [color=CHARTREUSE]je bent gearresteerd![/color]"
+Text/30/text,"Het is voorbij. Het volk heeft gesproken. [color=CHARTREUSE]We zullen een nieuw Spud bouwen waar onze wortels in de grond zijn, niet in lijden.[/color]"
+Text/31/text,"Er zullen [color=CRIMSON]geen deals, geen genade[/color] voor jou zijn, Idaho. De gerechtigheid van een tiran is alles wat je verdient."
+Text/32/text,"Een afrekening. Dat is wat ik ben. [color=CHARTREUSE]Voor elke opgeofferde aardappel, nemen we onze toekomst terug![/color]"
+Text/33/text,"Vergeet hem. Hij is een symptoom, niet de ziekte. [color=CHARTREUSE]Breek elke wortel en stengel van deze gruwel af.[/color]"
+Text/34/text,We moeten gaan! Nu!
+Text/35/text,De val van de [color=DARK_VIOLET]Wortelreserve[/color] ontketent een vuurzee van verandering door heel Spud.
+Text/36/text,Aardappelen in elke provincie komen in opstand en omarmen een [color=CHARTREUSE]nieuwe visie voor hun natie[/color].
+Text/37/text,"Zolang we trouw blijven aan onze wortels, aan de idealen die ons hier brachten... [color=CHARTREUSE]zullen we een weg vinden.[/color]"
+Text/38/text,"En zo, uit de as van het oude Spud, [color=CHARTREUSE]begint een nieuwe natie wortel te schieten[/color]. De heerschappij van de [color=DARK_VIOLET]Wortelreserve[/color] is voorbij."
+Choice/15/disabled_text,
+Choice/28/disabled_text,
+Choice/27/disabled_text,
+Choice/26/disabled_text,
+Choice/25/disabled_text,
+Choice/16/disabled_text,
