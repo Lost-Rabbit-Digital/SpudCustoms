@@ -18,7 +18,8 @@ var _snd_sequence_complete = preload("res://assets/audio/minigames/minigame_succ
 @export var prompt_count: int = 5
 
 ## Time window to press each key (seconds)
-@export var time_per_prompt: float = 2.0
+## Default is generous for accessibility - can be reduced via config if needed
+@export var time_per_prompt: float = 5.0
 
 ## Points per successful key press
 @export var points_per_press: int = 50
