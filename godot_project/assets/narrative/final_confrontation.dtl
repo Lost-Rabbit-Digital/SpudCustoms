@@ -70,7 +70,7 @@ narrator: After a harrowing escape through maintenance tunnels, you finally reac
 leave narrator
 
 # Final confrontation - direct transition without gameplay
-audio music res://assets/audio/ambient/horror_drone_49.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+audio music "res://assets/audio/ambient/horror_drone_49.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
 join player_character [z_index="1"]
 player_character: With Sasha and your allies at your side, you confront Idaho at last. #id:23

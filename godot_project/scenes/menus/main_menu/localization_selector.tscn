@@ -6,7 +6,7 @@
 custom_minimum_size = Vector2(150, 32)
 script = ExtResource("1_script")
 theme_override_constants/separation = 8
-alignment = 1
+alignment = 2
 
 [node name="LanguageLabel" type="Label" parent="."]
 unique_name_in_owner = true

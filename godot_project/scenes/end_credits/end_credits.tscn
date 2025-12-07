@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bagraegk311h0"]
+[gd_scene load_steps=8 format=3 uid="uid://bagraegk311h0"]
 
 [ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://scenes/credits/credits.tscn" id="1_885d8"]
 [ext_resource type="Script" uid="uid://cn3sc0vsd5b1r" path="res://scenes/end_credits/end_credits.gd" id="2_6pwj4"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="3_v7acr"]
 [ext_resource type="AudioStream" uid="uid://nld7esk0psis" path="res://assets/music/ambient_vol2_glorious_main.mp3" id="4_78loh"]
 [ext_resource type="Texture2D" uid="uid://dipxjl21f43po" path="res://assets/narrative/credits.png" id="4_jjp6q"]
+[ext_resource type="Theme" uid="uid://c44ft8lc2mlpo" path="res://assets/styles/confirmation_dialog_theme.tres" id="7_theme"]
 
 [node name="EndCredits" instance=ExtResource("1_885d8")]
 script = ExtResource("2_6pwj4")
@@ -113,6 +114,7 @@ GNU Sherri Jackson
 [/center]"
 
 [node name="CenterContainer" type="CenterContainer" parent="." index="4"]
+visible = false
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -120,27 +122,30 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
 
-[node name="EndMessagePanel" type="Panel" parent="CenterContainer" index="0"]
+[node name="EndMessagePanel" type="PanelContainer" parent="CenterContainer" index="0"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(360, 120)
+custom_minimum_size = Vector2(400, 180)
 layout_mode = 2
+theme = ExtResource("7_theme")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/EndMessagePanel" index="0"]
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
+layout_mode = 2
+theme_override_constants/separation = 12
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/EndMessagePanel/VBoxContainer" index="0"]
 layout_mode = 2
+theme_override_colors/default_color = Color(0.896599, 0.712161, 0.435342, 1)
+theme_override_colors/font_selected_color = Color(0.98, 0.88, 0.68, 1)
+theme_override_font_sizes/normal_font_size = 18
 bbcode_enabled = true
 text = "[center]
-You've stamped your way to victory! 
-Amazing!
-Enjoyed your time? 
+[font_size=24]You've stamped your way to victory![/font_size]
+
+Enjoyed your time?
 A review would mean the world to us.
-[url=https://store.steampowered.com/app/3291880/]Review Spud Customs on Steam
-[/url][/center]
-"
+
+[url=https://store.steampowered.com/app/3291880/]Review Spud Customs on Steam[/url]
+[/center]"
 fit_content = true
 
 [node name="ThankPlayer" type="Label" parent="CenterContainer/EndMessagePanel/VBoxContainer" index="1"]
