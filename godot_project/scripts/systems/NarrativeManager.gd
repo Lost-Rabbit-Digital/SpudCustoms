@@ -305,38 +305,82 @@ func is_dialogue_active() -> bool:
 	return dialogue_active
 
 
-# New method to show day transition
+# New method to show day transition with shift number fade effect
+# Old shift number fades down and out, new shift number fades down from top and in
 func show_day_transition(current_day: int, next_day: int):
 	dialogue_active = true
 
 	# Get viewport size
-	var screen_size = DisplayServer.window_get_size()
+	var screen_size: Vector2 = DisplayServer.window_get_size()
+	var center_y: float = screen_size.y / 2.0
+	var above_center_y: float = screen_size.y * 0.25  # Start position for new day (above center)
+	var below_center_y: float = screen_size.y * 0.75  # End position for old day (below center)
 
 	# Create a transition screen
-	var transition_layer = CanvasLayer.new()
+	var transition_layer: CanvasLayer = CanvasLayer.new()
 	transition_layer.layer = 100
 	add_child(transition_layer)
 
-	var background = ColorRect.new()
+	var background: ColorRect = ColorRect.new()
 	background.color = Color(0, 0, 0, 0)
 	background.size = screen_size
 	transition_layer.add_child(background)
 
-	var label = Label.new()
-	label.text = "Day %d Complete\nStarting Day %d" % [current_day, next_day]
-	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	label.size = screen_size
-	label.modulate = Color(1, 1, 1, 0)
-	transition_layer.add_child(label)
+	# Load font for large day numbers
+	var font: Font = preload("res://assets/fonts/windows_command_prompt.ttf")
+	var font_size: int = 96
 
-	# Animate
-	var tween = create_tween()
-	tween.tween_property(background, "color", Color(0, 0, 0, 0.9), 1.0)
-	tween.parallel().tween_property(label, "modulate", Color(1, 1, 1, 1), 1.0)
-	tween.tween_interval(2.0)
-	tween.tween_property(label, "modulate", Color(1, 1, 1, 0), 1.0)
-	tween.parallel().tween_property(background, "color", Color(0, 0, 0, 0), 1.0)
+	# Create old day label (starts centered)
+	var old_day_label: Label = Label.new()
+	old_day_label.text = "Day %d" % current_day
+	old_day_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	old_day_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	old_day_label.add_theme_font_override("font", font)
+	old_day_label.add_theme_font_size_override("font_size", font_size)
+	old_day_label.size = Vector2(screen_size.x, 150)
+	old_day_label.position = Vector2(0, center_y - 75)  # Centered vertically
+	old_day_label.modulate = Color(1, 1, 1, 0)
+	transition_layer.add_child(old_day_label)
+
+	# Create new day label (starts above center, invisible)
+	var new_day_label: Label = Label.new()
+	new_day_label.text = "Day %d" % next_day
+	new_day_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	new_day_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	new_day_label.add_theme_font_override("font", font)
+	new_day_label.add_theme_font_size_override("font_size", font_size)
+	new_day_label.size = Vector2(screen_size.x, 150)
+	new_day_label.position = Vector2(0, above_center_y - 75)  # Above center
+	new_day_label.modulate = Color(1, 1, 1, 0)
+	transition_layer.add_child(new_day_label)
+
+	# Animation sequence
+	var tween: Tween = create_tween()
+
+	# Phase 1: Fade to black and show old day number (0.6s)
+	tween.tween_property(background, "color", Color(0, 0, 0, 0.95), 0.6)
+	tween.parallel().tween_property(old_day_label, "modulate", Color(1, 1, 1, 1), 0.6)
+
+	# Phase 2: Hold old day briefly (0.5s)
+	tween.tween_interval(0.5)
+
+	# Phase 3: Old day fades down and out (0.7s)
+	tween.tween_property(old_day_label, "position:y", below_center_y - 75, 0.7).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	tween.parallel().tween_property(old_day_label, "modulate", Color(1, 1, 1, 0), 0.7)
+
+	# Phase 4: Small pause between transitions (0.2s)
+	tween.tween_interval(0.2)
+
+	# Phase 5: New day fades down from top and in (0.7s)
+	tween.tween_property(new_day_label, "position:y", center_y - 75, 0.7).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tween.parallel().tween_property(new_day_label, "modulate", Color(1, 1, 1, 1), 0.7)
+
+	# Phase 6: Hold new day (1.0s)
+	tween.tween_interval(1.0)
+
+	# Phase 7: Fade out everything (0.6s)
+	tween.tween_property(new_day_label, "modulate", Color(1, 1, 1, 0), 0.6)
+	tween.parallel().tween_property(background, "color", Color(0, 0, 0, 0), 0.6)
 
 	# Cleanup and emit signal when done
 	tween.tween_callback(
