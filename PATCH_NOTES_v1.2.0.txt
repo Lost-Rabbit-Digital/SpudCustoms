@@ -1,0 +1,150 @@
+=== STEAM PATCH NOTES (BBCode) ===
+
+[h1]Spud Customs v1.2.0 - The "One Year Later" Update[/h1]
+
+[i]A personal note from the developer:[/i]
+
+When I first launched Spud Customs, my newborn son had just been admitted to the NICU. I was prepping the game for release while we were checking into the hospital. I rushed the launch because I didn't know what our family was facing.
+
+Now, over a year later, my son is still in the NICU - but he is so much stronger. And in the quiet hours between visits, I've been hard at work bringing Spud Customs closer to the vision I had before life took an unexpected turn.
+
+To everyone who has supported us - thank you. We've sold over 500 copies, and every single one means the world to me. Your feedback, your patience, and your interest in our little story of potato redemption has kept me going.
+
+This update is for you.
+
+[h2]What's New[/h2]
+
+[h3]Minigames[/h3]
+[list]
+[*] [b]Border Chase[/b] - Catch contraband items as they try to slip past with satisfying punt animations
+[*] [b]Code Breaker[/b] - Crack codes with Wordle-style position-specific color feedback
+[*] [b]Document Scanner[/b] - Scan and verify documents under pressure
+[*] [b]Fingerprint Match[/b] - Match prints to catch imposters
+[*] [b]Stamp Sorting[/b] - Sort stamps at lightning speed
+[*] [b]UV Scanner[/b] - Reveal hidden details with improved feedback
+[/list]
+
+[h3]Overhauled Tutorial System[/h3]
+[list]
+[*] Completely redesigned interactive tutorial with shader-based highlighting
+[*] Click-to-continue flow for better pacing
+[*] Improved panel positioning and readability
+[*] Tutorial progress indicator
+[*] Fixed tutorial progression blocking issues
+[/list]
+
+[h3]Art & Visuals[/h3]
+[list]
+[*] Updated story art and character artwork
+[*] New minigame visual assets
+[*] Audio-reactive bloom effects on the main menu
+[*] Parallax mouse background effect on main menu
+[*] Dynamic scene visuals with progressive poster display
+[*] Brown/gold themed UI throughout for visual consistency
+[/list]
+
+[h3]Audio[/h3]
+[list]
+[*] 7 new custom music tracks for dramatic story moments
+[*] 4 new background music tracks added to the rotation
+[*] Dynamic music switches during narrative sequences
+[*] Improved NPC audio
+[*] Better audio levels throughout
+[/list]
+
+[h3]Quality of Life[/h3]
+[list]
+[*] Comprehensive controller support with visual glyphs
+[*] Tabbed Help Menu accessible from pause (includes Controls, Gameplay, and Lore)
+[*] Social media links (Discord, Steam, Twitch) on main menu
+[*] Language selector in main menu
+[*] Improved shift summary screen for story mode
+[*] Load game confirmation dialog
+[/list]
+
+[h3]Twitch Integration[/h3]
+[list]
+[*] Connect your Twitch channel to have viewer names appear on potatoes!
+[*] Auto-collects viewer names from chat
+[/list]
+
+[h2]Bug Fixes[/h2]
+
+[h3]Stability & Error Reporting[/h3]
+[list]
+[*] [b]Integrated Sentry SDK[/b] - Crash reports now automatically sent (anonymously) so I can fix issues even when I can't reproduce them
+[*] Fixed missile freeze bug that could lock up gameplay
+[*] Fixed multiple runtime errors during startup
+[*] Fixed volume interpolation errors
+[*] Fixed shader compilation issues
+[/list]
+
+[h3]Gameplay Fixes[/h3]
+[list]
+[*] Fixed shift quota bug when skipping tutorial on new game
+[*] Fixed shift summary screen being skipped when player strikes out
+[*] Fixed stamp bar not closing when shift ends
+[*] Fixed passport stamp positioning detection
+[*] Fixed stamp overlap detection
+[*] Fixed document dragging issues during tutorial
+[/list]
+
+[h3]UI & Menu Fixes[/h3]
+[list]
+[*] Fixed credits display issues
+[*] Fixed end message UI
+[*] Fixed passport text overflow with better font sizing
+[*] Fixed cutscene and menu bugs
+[*] Improved text readability throughout
+[/list]
+
+[h3]Localization[/h3]
+[list]
+[*] Fixed untranslated help menu keys
+[*] Fixed malformed CSV translations
+[*] Added missing translation entries
+[*] Improved translation tooling
+[/list]
+
+[h2]Technical Improvements[/h2]
+[list]
+[*] Complete EventBus architecture refactor for better stability
+[*] Reorganized project assets for maintainability
+[*] Improved logging system
+[*] Better Steam integration checks
+[/list]
+
+[hr][/hr]
+
+[i]There's more in the works. Thank you for believing in Spud Customs, and thank you for being part of this journey. Every potato you've stamped, every border runner you've caught, every choice you've made - it all matters.[/i]
+
+[i]Now get back to work, Inspector. The border won't guard itself.[/i]
+
+[b]- Lost Rabbit Digital[/b]
+
+---
+
+=== DISCORD ANNOUNCEMENT ===
+
+**Spud Customs v1.2.0 - The "One Year Later" Update** is here!
+
+A personal update: When I launched Spud Customs, my son had just been admitted to the NICU. I was prepping the game while we were checking into the hospital. Now, over a year later, he's still there - but he's so much stronger. And I've been using the quiet hours to bring this game closer to my original vision.
+
+We've sold over **500 copies** and I can't thank you all enough. Your feedback and support for our little story of potato redemption has kept me going.
+
+**What's new:**
+- **5 Minigames** - Border Chase, Code Breaker, Document Scanner, Fingerprint Match, Stamp Sorting
+- **Overhauled Tutorial** - Interactive highlights, better pacing, progress tracking
+- **Updated Art** - New story art, minigame visuals, dynamic menu effects
+- **New Music** - 11 new tracks with dynamic switching during story moments
+- **Controller Support** - Full gamepad support with visual glyphs
+- **Twitch Integration** - Your viewers' names on potatoes!
+- **Help Menu** - Controls, gameplay tips, and lore from the pause menu
+- **Sentry Crash Reporting** - I can now fix bugs I can't reproduce myself!
+- **Tons of bug fixes** - Saving issues, tutorial bugs, UI problems, and more
+
+There's more in the works. Thank you for being part of this journey.
+
+Now get back to work, Inspector.
+
+- Lost Rabbit Digital
