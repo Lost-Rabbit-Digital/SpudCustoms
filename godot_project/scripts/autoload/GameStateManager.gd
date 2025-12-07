@@ -142,8 +142,61 @@ func get_story_state() -> int:
 
 func set_story_state(state: int) -> void:
 	_story_state = state
-	# Emit event if needed, or just update state
-	# EventBus.story_state_changed.emit(state)
+
+
+# ============================================================================
+# IN-GAME DATE SYSTEM
+# ============================================================================
+# The game takes place over 10 days, from January 10, 2024 to January 20, 2024
+# Shift 0 (tutorial) and Shift 1 both start on January 10
+# Each subsequent shift increments the day by 1
+
+const IN_GAME_START_DATE: Dictionary = {
+	"year": 2024,
+	"month": 1,
+	"day": 10
+}
+
+
+## Get the in-game date for the current shift
+## Returns a dictionary with year, month, day
+func get_in_game_date() -> Dictionary:
+	var shift_offset = maxi(0, _shift)  # Tutorial (0) is same day as shift 1
+	if shift_offset == 0:
+		shift_offset = 0
+	else:
+		shift_offset = _shift  # Shift 1 = day 10, Shift 2 = day 11, etc.
+
+	var day = IN_GAME_START_DATE.day + shift_offset
+	var month = IN_GAME_START_DATE.month
+	var year = IN_GAME_START_DATE.year
+
+	# Handle month overflow (though we won't exceed January in this game)
+	var days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+	while day > days_in_month[month - 1]:
+		day -= days_in_month[month - 1]
+		month += 1
+		if month > 12:
+			month = 1
+			year += 1
+
+	return {"year": year, "month": month, "day": day}
+
+
+## Get a formatted in-game date string using translation keys
+## Format: "January 10, 2024"
+func get_formatted_in_game_date() -> String:
+	var date = get_in_game_date()
+	var month_key = "month_%d" % date.month
+	var month_name = tr(month_key)
+
+	# If translation not found, fallback to English
+	if month_name == month_key:
+		var months_en = ["January", "February", "March", "April", "May", "June",
+						 "July", "August", "September", "October", "November", "December"]
+		month_name = months_en[date.month - 1]
+
+	return "%s %d, %d" % [month_name, date.day, date.year]
 
 
 func is_tutorial_mode() -> bool:

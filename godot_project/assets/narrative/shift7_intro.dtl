@@ -30,7 +30,7 @@ leave announcer
 join supervisor_russet [z_index="1"]
 supervisor_russet: Today's shift will operate under special protocols. Each traveler must undergo Loyalty Assessment. #id:10b
 supervisor_russet: Those demonstrating [color=CRIMSON]anti-government sentiments[/color] are to be flagged immediately. #id:10c
-supervisor_russet: The [color=CRIMSON]traitor in our midst[/color] will be found. And when they are... [draws finger across throat] #id:10d
+supervisor_russet: The [color=CRIMSON]traitor in our midst[/color] will be found. And when they are... [color=DARK_ORANGE]Russet makes a menacing gesture across his neck.[/color] #id:10d
 leave supervisor_russet
 
 [background arg="res://assets/narrative/checkpoint_booth.png" fade="2.0"]

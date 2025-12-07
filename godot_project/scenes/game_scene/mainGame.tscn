@@ -28,6 +28,7 @@
 [ext_resource type="Script" uid="uid://dfofd8lp0igu2" path="res://scripts/systems/law_receipt.gd" id="32_k1orm"]
 [ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://assets/styles/dos_theme.tres" id="33_ncgko"]
 [ext_resource type="PackedScene" uid="uid://b0go0ri8l0yb7" path="res://scripts/systems/bubble_dialogue/BubbleDialogue.tscn" id="36_ccap0"]
+[ext_resource type="Script" uid="uid://btjxkr2c6yk5p" path="res://scripts/systems/CitationNoteManager.gd" id="37_cnm01"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gf7dt"]
 size = Vector2(730, 155)
@@ -385,7 +386,7 @@ offset_bottom = 40.0
 [node name="SpawnTimer" type="Timer" parent="SystemManagers/Timers"]
 
 [node name="AlertTimer" type="Timer" parent="SystemManagers/Timers"]
-wait_time = 3.5
+wait_time = 4.0
 one_shot = true
 
 [node name="AudioManager" type="Control" parent="SystemManagers"]
@@ -459,6 +460,9 @@ alert_timer = NodePath("../Timers/AlertTimer")
 
 [node name="VehicleSpawner" parent="SystemManagers" instance=ExtResource("28_i7il7")]
 position = Vector2(0, 1)
+
+[node name="CitationNoteManager" type="CanvasLayer" parent="SystemManagers"]
+script = ExtResource("37_cnm01")
 
 [node name="Gameplay" type="Control" parent="."]
 z_as_relative = false

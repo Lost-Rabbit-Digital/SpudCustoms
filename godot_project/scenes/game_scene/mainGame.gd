@@ -241,7 +241,7 @@ func _setup_ui():
 	update_score_display()
 	update_quota_display()
 	update_strikes_display()
-	# TODO: update_date_display()
+	update_date_display()
 	# TODO: update_combo_display()
 
 	# Display high score if available
@@ -1005,11 +1005,11 @@ func is_potato_valid(potato_info: Dictionary) -> bool:
 
 
 func update_date_display():
-	var current_date = Time.get_date_dict_from_system()
-	var formatted_date = (
-		"%04d.%02d.%02d" % [current_date.year, current_date.month, current_date.day]
-	)
+	# Use in-game fictional date based on shift number
+	# Game takes place January 10-20, 2024
+	var formatted_date = GameStateManager.get_formatted_in_game_date()
 	$UI/Labels/DateLabel.text = formatted_date
+	$UI/Labels/DateLabel.visible = true
 
 
 func megaphone_clicked():

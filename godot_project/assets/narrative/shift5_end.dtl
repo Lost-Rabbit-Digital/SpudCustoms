@@ -38,7 +38,7 @@ set {hide_choice} = "none"
 	set {hide_choice} = "window"
 
 if {hide_choice} == "desk":
-	[background arg="res://assets/narrative/hide_under_desk.png" fade="0.7"]
+	[background arg="res://assets/narrative/hiding_under_desk.png" fade="0.7"]
 	audio "res://assets/audio/stings/heartbeat_tension.mp3" [volume="-5.0" bus="SFX"]
 	join player_character [z_index="1"]
 	player_character: You dive under Russet's desk as he enters, your heart pounding. He sits, his feet inches from your face. #id:9e

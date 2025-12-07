@@ -19,6 +19,7 @@ const MINIGAMES = {
 	"fingerprint_match": preload("res://scenes/minigames/games/fingerprint_match/fingerprint_match.tscn"),
 	"code_breaker": preload("res://scenes/minigames/games/code_breaker/code_breaker.tscn"),
 	"border_chase": preload("res://scenes/minigames/games/border_chase/border_chase.tscn"),
+	"quick_time_event": preload("res://scenes/minigames/games/quick_time_event/quick_time_event.tscn"),
 }
 
 ## Shift requirements to unlock each minigame
@@ -28,6 +29,7 @@ const MINIGAME_UNLOCK_SHIFTS = {
 	"fingerprint_match": 3, # Unlocks at Shift 3
 	"code_breaker": 4,      # Unlocks at Shift 4
 	"border_chase": 5,      # Unlocks at Shift 5
+	"quick_time_event": 8,  # Unlocks at Shift 8 for narrative transitions
 }
 
 ## Currently active minigame instance

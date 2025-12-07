@@ -43,6 +43,11 @@ var current_shift: int = 1
 var dialogic_timeline: Node
 var dialogue_active: bool = false
 var current_skip_button_layer: CanvasLayer = null
+var cutscene_post_processing: CanvasLayer = null
+
+# Preloaded resources for cutscene post-processing
+var cutscene_environment: Environment = preload("res://assets/styles/cutscene_environment.tres")
+var vignette_material: Material = preload("res://assets/shaders/vignette_material.tres")
 
 
 func _ready():
@@ -101,6 +106,7 @@ func start_level_dialogue(level_id: int):
 
 	dialogue_active = true
 	var skip_button_layer = create_skip_button()
+	create_cutscene_post_processing()
 
 	var timeline_name = LEVEL_DIALOGUES.get(level_id, "generic_shift_start")
 
@@ -142,6 +148,7 @@ func start_level_end_dialogue(level_id: int):
 
 	dialogue_active = true
 	var skip_button_layer = create_skip_button()
+	create_cutscene_post_processing()
 	var timeline_name = LEVEL_END_DIALOGUES.get(level_id, "generic_shift_start")
 
 	# REFACTORED: Emit dialogue started event
@@ -163,6 +170,7 @@ func _on_end_dialogue_finished():
 	dialogue_active = false
 
 	cleanup_skip_buttons()
+	cleanup_cutscene_post_processing()
 
 	# REFACTORED: Emit dialogue ended event
 	if EventBus:
@@ -170,6 +178,36 @@ func _on_end_dialogue_finished():
 		EventBus.save_game_requested.emit()
 
 	emit_signal("end_dialogue_finished")
+
+
+func create_cutscene_post_processing() -> void:
+	"""Create stronger post-processing effects for cutscenes."""
+	if cutscene_post_processing != null:
+		return
+
+	cutscene_post_processing = CanvasLayer.new()
+	cutscene_post_processing.name = "CutscenePostProcessing"
+	cutscene_post_processing.layer = 50  # Below skip button but above game content
+
+	# Add vignette overlay with stronger settings for cutscenes
+	var vignette_rect = ColorRect.new()
+	vignette_rect.name = "CutsceneVignette"
+	vignette_rect.material = vignette_material.duplicate()
+	vignette_rect.material.set_shader_parameter("vignette_intensity", 0.2)
+	vignette_rect.material.set_shader_parameter("vignette_opacity", 0.5)
+	vignette_rect.material.set_shader_parameter("vignette_softness", 0.4)
+	vignette_rect.set_anchors_preset(Control.PRESET_FULL_RECT)
+	vignette_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
+	cutscene_post_processing.add_child(vignette_rect)
+	add_child(cutscene_post_processing)
+
+
+func cleanup_cutscene_post_processing() -> void:
+	"""Remove cutscene post-processing effects."""
+	if cutscene_post_processing != null:
+		cutscene_post_processing.queue_free()
+		cutscene_post_processing = null
 
 
 func create_skip_button():
@@ -215,6 +253,7 @@ func _on_skip_button_pressed():
 
 	# Find and remove the skip button
 	cleanup_skip_buttons()
+	cleanup_cutscene_post_processing()
 
 	# Set the dialogue to not active - this is crucial
 	dialogue_active = false
@@ -224,6 +263,14 @@ func _on_skip_button_pressed():
 func _on_dialogic_signal(argument):
 	if argument == "credits_ready":
 		get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
+
+	# QTE trigger signals from narrative timelines
+	if argument == "qte_infiltration":
+		_launch_qte("Infiltrate the facility!", 5, 2.0)
+	elif argument == "qte_escape":
+		_launch_qte("Escape the guards!", 6, 1.8)
+	elif argument == "qte_confrontation":
+		_launch_qte("Stand your ground!", 4, 2.5)
 
 	# Skip Steam achievements in DEV_MODE
 	# REFACTORED: Use GameStateManager
@@ -249,11 +296,23 @@ func _on_dialogic_signal(argument):
 			EventBus.achievement_unlocked.emit(ACHIEVEMENTS.DOWN_WITH_THE_TATRIARCHY)
 
 
+func _launch_qte(context: String, prompt_count: int, time_per_prompt: float) -> void:
+	"""Launch a QTE minigame during narrative sequences."""
+	if EventBus:
+		EventBus.minigame_launch_requested.emit("quick_time_event", {
+			"narrative_context": context,
+			"prompt_count": prompt_count,
+			"time_per_prompt": time_per_prompt,
+			"force_launch": true  # Allow QTE even if not normally unlocked
+		})
+
+
 func start_final_confrontation():
 	if dialogue_active:
 		return
 
 	dialogue_active = true
+	create_cutscene_post_processing()
 	var timeline = Dialogic.start("final_confrontation")
 	add_child(timeline)
 	timeline.finished.connect(_on_final_dialogue_finished)
@@ -269,6 +328,7 @@ func _on_intro_dialogue_finished():
 		EventBus.dialogue_ended.emit("intro_dialogue")
 
 	cleanup_skip_buttons()
+	cleanup_cutscene_post_processing()
 	emit_signal("intro_dialogue_finished")
 
 
@@ -285,6 +345,7 @@ func _on_shift_dialogue_finished():
 		EventBus.dialogue_ended.emit("shift_dialogue")
 
 	cleanup_skip_buttons()
+	cleanup_cutscene_post_processing()
 	emit_signal("dialogue_finished")
 
 
@@ -298,6 +359,7 @@ func _on_final_dialogue_finished():
 		EventBus.dialogue_ended.emit("final_dialogue")
 
 	cleanup_skip_buttons()
+	cleanup_cutscene_post_processing()
 	emit_signal("dialogue_finished")
 
 
@@ -438,6 +500,7 @@ func save_narrative_choices() -> Dictionary:
 		"reveal_reaction",
 		"sasha_investigation",
 		"sasha_plan_response",
+		"sasha_rescue_reaction",
 		"sasha_response",
 		"scanner_response",
 		"stay_or_go",

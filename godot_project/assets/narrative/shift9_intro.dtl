@@ -80,3 +80,11 @@ player_character: Do I stay at my post and hope this blows over, or [color=CHART
 - "I've been complicit for too long. It's time to fight for what's right." #id:155
 	set {stay_or_go} = "go"
 leave player_character
+
+# QTE for the "go" path - player must act quickly during the chaos
+if {stay_or_go} == "go":
+	[background arg="res://assets/narrative/night_attack.png" fade="0.5"]
+	join narrator [z_index="1"]
+	narrator: [pulse freq=3][color=YELLOW]Move quickly![/color][/pulse] Security is scrambling - this is your only chance to escape! #id:156
+	leave narrator
+	[signal arg="qte_escape"]

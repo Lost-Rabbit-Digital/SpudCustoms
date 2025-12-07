@@ -28,6 +28,7 @@
 [ext_resource type="Script" uid="uid://dfofd8lp0igu2" path="res://scripts/systems/law_receipt.gd" id="26_4gmaj"]
 [ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://assets/styles/dos_theme.tres" id="27_1orev"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="28_f34gp"]
+[ext_resource type="Script" uid="uid://btjxkr2c6yk5p" path="res://scripts/systems/CitationNoteManager.gd" id="29_cnm01"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gf7dt"]
 size = Vector2(730, 155)
@@ -404,7 +405,7 @@ offset_bottom = 40.0
 [node name="SpawnTimer" type="Timer" parent="SystemManagers/Timers"]
 
 [node name="AlertTimer" type="Timer" parent="SystemManagers/Timers"]
-wait_time = 3.5
+wait_time = 4.0
 one_shot = true
 
 [node name="AudioManager" type="Control" parent="SystemManagers"]
@@ -476,6 +477,9 @@ debug_color = Color(0.669135, 0.387984, 0.845205, 0.42)
 
 [node name="VehicleSpawner" parent="SystemManagers" instance=ExtResource("14_sg42n")]
 position = Vector2(0, 1)
+
+[node name="CitationNoteManager" type="CanvasLayer" parent="SystemManagers"]
+script = ExtResource("29_cnm01")
 
 [node name="Gameplay" type="Control" parent="."]
 z_as_relative = false

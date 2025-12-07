@@ -1,5 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://c4h2cf8sxx3gh"]
+[gd_scene load_steps=18 format=3 uid="uid://c4h2cf8sxx3gh"]
 
+[ext_resource type="Environment" uid="uid://dqx7kp2m8n3rj" path="res://assets/styles/game_environment.tres" id="1_env"]
+[ext_resource type="Material" uid="uid://bvn4x8k2m5p3r" path="res://assets/shaders/vignette_material.tres" id="1_vignette"]
 [ext_resource type="Texture2D" uid="uid://c6gfewbog1olr" path="res://assets/world/elements/customs_office.png" id="2_fkyx8"]
 [ext_resource type="Texture2D" uid="uid://yvmmxdnlhttw" path="res://assets/world/elements/fence_posts.png" id="3_gfqs4"]
 [ext_resource type="Material" uid="uid://c1fljl8m4j1w1" path="res://assets/shaders/grass_animation_material.tres" id="4_nqcph"]
@@ -85,3 +87,18 @@ texture = ExtResource("13_poster3")
 
 [node name="SceneVisualsManager" type="Node" parent="."]
 script = ExtResource("14_visuals")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_env")
+
+[node name="VignetteOverlay" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="VignetteRect" type="ColorRect" parent="VignetteOverlay"]
+material = ExtResource("1_vignette")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

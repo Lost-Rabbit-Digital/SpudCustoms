@@ -40,15 +40,15 @@ if {resistance_mission} == "committed":
 	leave sweet_potato_sasha
 elif {resistance_mission} == "hesitant":
 	join sweet_potato_sasha [z_index="1"]
-	sweet_potato_sasha: Sasha nods solemnly. It is dangerous. I won't lie to you about that. #id:e3
+	sweet_potato_sasha: [color=STEEL_BLUE]Sasha's hopeful expression falters.[/color] I... yes. It is dangerous. #id:e3
 	sweet_potato_sasha: We could all end up [color=DARK_VIOLET]processed into Root Reserve[/color] ourselves if we fail. #id:e4
-	sweet_potato_sasha: But doing nothing is even more dangerous. For all of us, in the long run. #id:e5
+	sweet_potato_sasha: [color=STEEL_BLUE]She looks away briefly.[/color] I thought after everything you'd seen... but I understand. Fear is natural. #id:e5
 	leave sweet_potato_sasha
 else:
 	join sweet_potato_sasha [z_index="1"]
-	sweet_potato_sasha: Sasha's expression turns grim. We've tried other ways. For years. #id:e6
-	sweet_potato_sasha: Petitions. Quiet diplomacy. Anonymous tips. Nothing has worked. #id:e7
-	sweet_potato_sasha: Sometimes you have to risk everything to change anything. #id:e8
+	sweet_potato_sasha: [color=STEEL_BLUE]Sasha's face falls. The light in her eyes dims.[/color] Another way? We've tried other ways. For years. #id:e6
+	sweet_potato_sasha: Petitions. Quiet diplomacy. Anonymous tips. [color=STEEL_BLUE]Her voice turns cold.[/color] Nothing has worked. #id:e7
+	sweet_potato_sasha: I was hoping you'd be different. That you understood what's at stake. #id:e8
 	leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/joining_rebellion.png" fade="2.0"]
@@ -100,7 +100,12 @@ else:
 [background arg="res://assets/narrative/checkpoint_booth_night.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
 sweet_potato_sasha: As the meeting breaks up, Sasha walks with you back toward the checkpoint. #id:fe
-sweet_potato_sasha: Whatever happens... thank you for everything you've done. #id:ff
+if {final_decision} == "help":
+	sweet_potato_sasha: [color=CHARTREUSE]She takes your hand as you walk.[/color] Whatever happens... we're in this together now. Thank you. #id:ff
+elif {final_decision} == "passive":
+	sweet_potato_sasha: [color=STEEL_BLUE]She keeps her distance as you walk.[/color] I appreciate you not standing in our way. It's... something. #id:ff2
+else:
+	sweet_potato_sasha: [color=STEEL_BLUE]She walks in silence, arms crossed.[/color] I hope you find whatever certainty you're looking for. The rest of us can't afford to wait. #id:ff3
 leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
