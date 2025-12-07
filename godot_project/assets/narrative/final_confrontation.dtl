@@ -160,7 +160,18 @@ leave narrator
 join player_character [z_index="1"]
 [background arg="res://assets/narrative/credits.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
-sweet_potato_sasha: As long as we stay true to our roots, to the ideals that brought us here... [color=CHARTREUSE]we'll find a way.[/color] #id:37
+if {sasha_rescue_reaction} == "relieved":
+	sweet_potato_sasha: [color=CHARTREUSE]Sasha moves closer, her hand finding yours as you watch the new dawn together.[/color] We built this. You and me. #id:151
+	sweet_potato_sasha: As long as we stay true to our roots, to the ideals that brought us here... [color=CHARTREUSE]we'll find a way.[/color] Together. #id:152
+	player_character: [color=CHARTREUSE]You squeeze her hand, feeling the warmth of a future finally worth fighting for.[/color] Together. #id:153
+elif {sasha_rescue_reaction} == "angry":
+	sweet_potato_sasha: [color=STEEL_BLUE]Sasha stands beside you, a respectful distance between you.[/color] Your fire lit the spark that burned down their empire. #id:154
+	sweet_potato_sasha: As long as we stay true to our roots, to the ideals that brought us here... [color=CHARTREUSE]we'll find a way.[/color] #id:37
+	player_character: [color=STEEL_BLUE]The anger has cooled to determination. There's still work to be done.[/color] #id:155
+else:
+	sweet_potato_sasha: [color=STEEL_BLUE]Sasha offers you a supportive smile.[/color] You've come a long way from that checkpoint. We all have. #id:156
+	sweet_potato_sasha: As long as we stay true to our roots, to the ideals that brought us here... [color=CHARTREUSE]we'll find a way.[/color] #id:37
+	player_character: [color=STEEL_BLUE]The guilt may never fully fade, but you've found purpose in the rebuilding.[/color] #id:157
 leave sweet_potato_sasha
 leave player_character
 

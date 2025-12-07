@@ -420,11 +420,29 @@ func _on_potato_button_mouse_entered() -> void:
 	if sprite and sprite.material:
 		sprite.material.set_shader_parameter("enable_highlight", true)
 
+	# Increase name label font size on hover (+6pt)
+	if name_label and name_label.visible:
+		var current_size = name_label.get_theme_font_size("font_size")
+		var tween = create_tween()
+		tween.tween_method(_set_name_label_font_size, current_size, 14, 0.15)
+
 
 func _on_potato_button_mouse_exited() -> void:
 	var sprite = get_node_or_null("%PotatoSprite")
 	if sprite and sprite.material:
 		sprite.material.set_shader_parameter("enable_highlight", false)
+
+	# Reset name label font size on hover exit
+	if name_label and name_label.visible:
+		var current_size = name_label.get_theme_font_size("font_size")
+		var tween = create_tween()
+		tween.tween_method(_set_name_label_font_size, current_size, 8, 0.15)
+
+
+func _set_name_label_font_size(size: int) -> void:
+	"""Helper function for tweening the name label font size"""
+	if name_label:
+		name_label.add_theme_font_size_override("font_size", size)
 
 
 func is_potato_on_concrete() -> bool:
