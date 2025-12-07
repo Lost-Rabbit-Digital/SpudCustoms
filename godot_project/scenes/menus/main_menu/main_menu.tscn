@@ -23,22 +23,25 @@ smoothing = 3.0
 [node name="HBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="2"]
 visible = false
 
-[node name="BottomLeftContainer" type="MarginContainer" parent="." index="0"]
+[node name="BottomRightContainer" type="MarginContainer" parent="." index="0"]
 layout_mode = 1
-anchors_preset = 2
+anchors_preset = 3
+anchor_left = 1.0
 anchor_top = 1.0
+anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -250.0
 offset_top = -80.0
-offset_right = 250.0
+grow_horizontal = 0
 grow_vertical = 0
-theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="BottomLeftContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="BottomRightContainer"]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="LocalizationSelector" parent="BottomLeftContainer/VBoxContainer" instance=ExtResource("5_locale")]
+[node name="LocalizationSelector" parent="BottomRightContainer/VBoxContainer" instance=ExtResource("5_locale")]
 layout_mode = 2
 
 [node name="BottomCenterContainer" type="MarginContainer" parent="." index="1"]

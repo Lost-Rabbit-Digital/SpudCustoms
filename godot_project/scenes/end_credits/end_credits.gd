@@ -6,7 +6,7 @@ extends Credits
 
 
 func _end_reached():
-	%EndMessagePanel.show()
+	%EndMessagePanel.get_parent().show()
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	super._end_reached()
 
@@ -30,7 +30,7 @@ func _ready():
 
 func reset():
 	super.reset()
-	%EndMessagePanel.hide()
+	%EndMessagePanel.get_parent().hide()
 	mouse_filter = init_mouse_filter
 
 
@@ -38,7 +38,7 @@ func _unhandled_input(event):
 	if not enabled:
 		return
 	if event.is_action_pressed("ui_cancel"):
-		if not %EndMessagePanel.visible:
+		if not %EndMessagePanel.get_parent().visible:
 			_end_reached()
 		else:
 			get_tree().quit()
