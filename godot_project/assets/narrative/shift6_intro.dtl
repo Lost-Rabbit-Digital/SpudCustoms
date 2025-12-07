@@ -42,7 +42,7 @@ else:
 	fellow_officer: Their expression becomes guarded. Of course. Loyal Spud forever. #id:c2
 	leave fellow_officer
 
-[background arg="res://assets/narrative/interrogation_setting.png" fade="2.0"]
+[background arg="res://assets/narrative/interrogation.png" fade="2.0"]
 audio music "res://assets/music/narrative/horror_fog_main.mp3" [fade="1.5" volume="-5.0" bus="Music"]
 join security_chief [z_index="1"]
 security_chief: State your whereabouts last night between 2200 and 0400 hours. #id:c3

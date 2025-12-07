@@ -47,7 +47,7 @@ else:
 	fellow_officer: The officer slips you a note\: "[color=YELLOW]Clean your station of anything suspicious.[/color]" #id:125
 	leave fellow_officer
 
-[background arg="res://assets/narrative/interrogation_setting.png" fade="2.0"]
+[background arg="res://assets/narrative/interrogation.png" fade="2.0"]
 audio music "res://assets/music/narrative/horror_abyss_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 join security_chief [z_index="1"]
 security_chief: You've been at this checkpoint for quite some time. Interesting performance record. #id:126

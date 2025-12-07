@@ -46,7 +46,7 @@ const TUTORIALS = {
 				"text": "[center][b]Welcome to Spud Customs![/b][/center]\n\nYour job is to process incoming potatoes at the border checkpoint. Let's learn the basics!",
 				"target": null,
 				"highlight": false,
-				"duration": 4.0,
+				"duration": 8.0,
 				"pause_game": false
 			}
 		],
@@ -67,7 +67,7 @@ const TUTORIALS = {
 				"text": "[center][b]Great job![/b][/center]\n\nYour booth is now open. Potatoes in the queue can see you're ready for service.",
 				"target": null,
 				"highlight": false,
-				"duration": 2.5,
+				"duration": 5.0,
 				"pause_game": false
 			}
 		],
@@ -88,7 +88,7 @@ const TUTORIALS = {
 				"text": "[center][b]Here they come![/b][/center]\n\nWatch as the potato approaches your booth. They'll present their documents for inspection.",
 				"target": null,
 				"highlight": false,
-				"duration": 3.0,
+				"duration": 6.0,
 				"pause_game": false
 			}
 		],
@@ -116,7 +116,7 @@ const TUTORIALS = {
 				"text": "[center][b]Check the Rules![/b][/center]\n\nBefore making your decision, you need to check the immigration rules. Let's learn about them!",
 				"target": null,
 				"highlight": false,
-				"duration": 3.0,
+				"duration": 6.0,
 				"pause_game": false
 			}
 		],
@@ -127,17 +127,17 @@ const TUTORIALS = {
 		"name": "Immigration Rules",
 		"steps": [
 			{
-				"text": "[center][b]Immigration Rules[/b][/center]\n\nLook at the rules pamphlet on the right side. These rules tell you which potatoes to [color=green]APPROVE[/color] or [color=red]REJECT[/color].\n\nReject any potato that violates the current rules!",
+				"text": "[center][b]Immigration Rules[/b][/center]\n\nLook at the rules pamphlet on the right side. These rules tell you which potatoes to [color=green]APPROVE[/color] or [color=red]REJECT[/color].\n\nReject any potato that violates the current rules!\n\n[color=red]IMPORTANT: Documents with expired dates must be REJECTED![/color]",
 				"target": "RulesLabel",
 				"highlight": true,
-				"duration": 5.0,
+				"duration": 10.0,
 				"pause_game": false
 			},
 			{
 				"text": "[center][b]Stay Vigilant![/b][/center]\n\nRules change between shifts. Always check the current rules before making decisions.\n\nCompare passport information against active rules carefully.",
 				"target": null,
 				"highlight": false,
-				"duration": 3.5,
+				"duration": 7.0,
 				"pause_game": false
 			}
 		],
@@ -179,7 +179,7 @@ const TUTORIALS = {
 				"text": "[center][b]Well Done![/b][/center]\n\nYou've processed your first potato! Keep an eye on your quota - you need to process enough potatoes each shift.",
 				"target": null,
 				"highlight": false,
-				"duration": 3.5,
+				"duration": 7.0,
 				"pause_game": false
 			}
 		],
@@ -193,21 +193,21 @@ const TUTORIALS = {
 				"text": "[center][b]The Quota System[/b][/center]\n\nLook at the [color=yellow]Quota[/color] display. This shows how many potatoes you must process correctly each shift.",
 				"target": "QuotaLabel",
 				"highlight": true,
-				"duration": 4.0,
+				"duration": 8.0,
 				"pause_game": false
 			},
 			{
 				"text": "[center][b]Avoid Strikes![/b][/center]\n\nThe [color=red]Strikes[/color] counter shows your mistakes. Too many strikes and it's game over!\n\nMake wrong decisions and you'll earn strikes.",
 				"target": "StrikesLabel",
 				"highlight": true,
-				"duration": 4.0,
+				"duration": 8.0,
 				"pause_game": false
 			},
 			{
 				"text": "[center][b]Training Complete![/b][/center]\n\nContinue processing potatoes to complete your training shift.\n\nOnce finished, you'll be [color=green]certified as a Customs Officer[/color] and ready for your first real day!",
 				"target": null,
 				"highlight": false,
-				"duration": 5.0,
+				"duration": 10.0,
 				"pause_game": false
 			}
 		],
