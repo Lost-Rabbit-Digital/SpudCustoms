@@ -1,0 +1,19 @@
+﻿keys,ro
+Text/78/text,"O altă zi la punctul de control. Rândul de cartofi se întinde mai lung ca niciodată, toată lumea este tensionată."
+Text/79/text,Noi ordine de sus. [wave amp=15 freq=3][color=DARK_ORANGE]Dublăm respingerile[/color][/wave]. Orice cartof considerat nesigur este reținut imediat.
+Text/7a/text,Am o misiune specială. Avem informații de informații despre [pulse freq=2][color=CRIMSON]agitatori[/color][/pulse]. Fiți vigilenți în timpul inspecțiilor.
+Choice/7b/text,"Da, domnule, nu vă voi dezamăgi"
+Choice/7c/text,Despre ce fel de agitatori vorbim?
+Text/7d/text,Bine. Am știut că mă pot baza pe tine. Vei merge departe cu această atitudine.
+Text/7e/text,Cei care [color=CRIMSON]amenință modul nostru de viață[/color]. Nu pune prea multe întrebări dacă știi ce e bine pentru tine.
+Text/7f/text,"[color=STEEL_BLUE]Vă implor![/color] Soția mea ar fi trebuit să fie chiar în spatele meu, dar [tornado radius=2 freq=3]niciodată nu a trecut de vamă[/tornado]."
+Text/80/text,"Nimeni nu vrea să-mi spună ce i s-a întâmplat. Vă rog, [color=CHARTREUSE]ajutați-mă să o găsesc![/color]"
+Choice/81/text,"Îmi pare rău, dar nu pot face nimic."
+Choice/82/text,Lasă-mă să văd ce pot afla. Fără promisiuni.
+Text/83/text,Ca toți ceilalți... [color=STEEL_BLUE]Să vă apese conștiința la fel de greu ca a mea.[/color]
+Text/84/text,"Mulțumesc! Chiar și o mică speranță e mai bună decât nimic. Iată fotografia ei. Vă rog, găsiți-o."
+Text/85/text,Am văzut schimbul acela. [color=DARK_ORANGE]Compătimirea celor respinși duce doar la probleme.[/color] Rămâneți concentrat pe datoria dumneavoastră.
+Choice/7b/disabled_text,
+Choice/82/disabled_text,
+Choice/81/disabled_text,
+Choice/7c/disabled_text,

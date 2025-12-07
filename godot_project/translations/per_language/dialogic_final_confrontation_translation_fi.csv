@@ -1,0 +1,47 @@
+﻿keys,fi
+Text/11/text,"Spudin raja on [pulse freq=3][color=CRIMSON]kaaoksessa[/color][/pulse]. Panikoituneet perunat tulvivat tarkastuspisteille, epätoivoisina paetakseen vuodettujen asiakirjojen jälkeen."
+Text/12/text,Livahdatte läpi Sashan kanssa. [wave amp=20 freq=3][color=CHARTREUSE]Meidän on jatkettava eteenpäin![/color][/wave] Ihmiset tietävät nyt totuuden.
+Text/13/text,"He eivät voi enää vaientaa totuutta. Jos voimme soluttautua [color=DARK_VIOLET]Juurivarasto[/color]-laitokseen ja lähettää todisteita, se [tornado radius=3 freq=2][color=CHARTREUSE]sytyttää vallankumouksen[/color][/tornado]."
+Text/14/text,Se paikka on linnoitus. Ja nyt keskuudessamme on [color=YELLOW]entinen tullivirkailija[/color]. Heidän silmänsä kaventuvat epäillen sinua kohtaan.
+Choice/15/text,"Ymmärrän epäilyksenne, mutta olen sitoutunut tähän asiaan."
+Choice/16/text,Olen jo uhrannut kaiken. En peräänny nyt.
+Text/17/text,Kauniita sanoja. Mutta niitä olemme kuulleet ennenkin.
+Text/18/text,"He auttoivat meitä saamaan asiakirjat. Se on tekoja, ei sanoja."
+Text/19/text,"Et voi enää palata olemaan uskollinen peruna. Tervetuloa vastarintaan, toveri."
+Text/1a/text,"Jännittyneen soluttautumisen jälkeen tiiminne seisoo [color=DARK_VIOLET]Juurivaraston[/color] sydämessä, [pulse freq=3][color=CRIMSON]kauhea sorron koneisto[/color][/pulse] paljaana."
+Text/1b/text,"[wave amp=25 freq=3][color=RED]Hälytykset soivat[/color][/wave] kun vartijat ryntäävät vastaamaan tunkeutumiiseenne. Juoksette käytäviä pitkin, väistellen turvajärjestelmiä."
+Text/1c/text,"Näyttö välkkyy päälle. ""No niin, [color=CRIMSON]petturi[/color] palaa kapinallisroskan kanssa."""
+Text/1d/text,Luulitko voivasi pysäyttää Spudin edistyksen? [color=DARK_VIOLET]Juurivarasto[/color] on tämän kansakunnan elinvoima.
+Text/1e/text,Mutta älä huoli. Palvelet edelleen Spudia... [tornado radius=4 freq=3][color=DARK_VIOLET]käsittelysammioissa![/color][/tornado]
+Text/1f/text,Näyttö pimenee äkillisesti.
+Text/20/text,"Käännyt muiden puoleen päättäväisenä. ""Meidän on päästävä Idahon bunkkeriin. Nyt!"""
+Text/21/text,"Ryhmänne taistelee turvajoukkojen aaltojen läpi, välttäen täpärästi kiinnijäämisen. Sashan vastarintataistelijat luovat harhautuksia, raivaavat tietänne eteenpäin."
+Text/22/text,Hirvittävän paon jälkeen huoltotunneleiden läpi saavutatte viimein turvallisen hissin Idahon yksityiseen bunkkeriin.
+Text/23/text,Sashan ja liittolaistesi rinnalla kohtaat viimein Idahon.
+Text/24/text,"Se on ohi, Idaho. Salaisuutesi on paljastettu. Miten tämä päättyy... [pulse freq=2]se riippuu sinusta.[/pulse]"
+Choice/25/text,Neuvottele rauhanomainen vallan siirto (Diplomaattinen)
+Choice/26/text,Vaadi Idahon välitöntä pidätystä (Oikeus)
+Choice/27/text,Toteuta omankädenoikeus Idahon rikoksista (Kosto)
+Choice/28/text,Keskity purkamaan Juurivaraston infrastruktuuri (Purkaminen)
+Text/29/text,"Idaho, tämän ei tarvitse päättyä lisäverilöylyyn. Jos teet yhteistyötä..."
+Text/2a/text,Voi sinua [color=STEEL_BLUE]idealistista hölmöä[/color]. Luuletko tämän olevan neuvottelu?
+Text/2b/text,"Idaho murskaa painikkeen, ja [color=RED]hälytykset alkavat soida[/color]. ""Ainoa asia, jonka annan teille, on [color=DARK_VIOLET]yhdensuuntainen matka paistosammioihin![/color]"""
+Text/2c/text,"En usko niin, Idaho. Vartijat! Näitte kansion, [color=YELLOW]tiedätte, mitä hän teki perheillenne.[/color]"
+Text/2d/text,Valtava vartija astuu esiin ja potkaisee Idahon nopeasti maahan.
+Text/2e/text,Laukaus kaikuu kammiossa. Näyttö pimenee.
+Text/2f/text,"Idaho, perunakansan nimissä, [color=CHARTREUSE]sinut on pidätetty![/color]"
+Text/30/text,"Se on ohi. Kansa on puhunut. [color=CHARTREUSE]Rakennamme uuden Spudin, jossa juuremme ovat maassa, eivät kärsimyksessä.[/color]"
+Text/31/text,"Sinulle [color=CRIMSON]ei tule olemaan sopimuksia, ei armoa[/color], Idaho. Tyrannin oikeus on kaikki, mitä ansaitset."
+Text/32/text,"Tilinteko. Sitä minä olen. [color=CHARTREUSE]Jokaisen uhratun perunan vuoksi, otamme tulevaisuutemme takaisin![/color]"
+Text/33/text,"Unohtakaa hänet. Hän on oire, ei tauti. [color=CHARTREUSE]Repikää alas jokainen juuri ja varsi tästä hirviömäisyydestä.[/color]"
+Text/34/text,Meidän on lähdettävä! Nyt!
+Text/35/text,[color=DARK_VIOLET]Juurivaraston[/color] kaatuminen sytyttää muutoksen kulovalkean kautta Spudin.
+Text/36/text,"Perunat jokaisessa maakunnassa nousevat, omaksuen [color=CHARTREUSE]uuden vision kansakunnalleen[/color]."
+Text/37/text,"Niin kauan kuin pysymme uskollisina juurillemme, ihanteille, jotka toivat meidät tänne... [color=CHARTREUSE]löydämme tien.[/color]"
+Text/38/text,"Ja niin, vanhan Spudin tuhkasta [color=CHARTREUSE]uusi kansakunta alkaa juurtua[/color]. [color=DARK_VIOLET]Juurivaraston[/color] valtakausi on ohi."
+Choice/15/disabled_text,
+Choice/28/disabled_text,
+Choice/27/disabled_text,
+Choice/26/disabled_text,
+Choice/25/disabled_text,
+Choice/16/disabled_text,

@@ -1,0 +1,34 @@
+﻿keys,de
+Text/b8/text,"Die Grenzanlage befindet sich in vollständiger Abriegelung, mit bewaffneten Sicherheitskräften, die jeden Korridor patrouillieren."
+Text/b9/text,[pulse freq=3][color=RED]ACHTUNG! STUFE ROT Sicherheitslage![/color][/pulse] Klassifizierte Dokumente wurden letzte Nacht gestohlen.
+Text/ba/text,"Wir haben einen [tornado radius=4 freq=3][color=CRIMSON]Verräter in unserer Mitte[/color][/tornado]. Jeder, der Informationen zurückhält, wird als Mittäter behandelt."
+Text/bb/text,"Alle Offiziere, stellen Sie sich für [wave amp=15 freq=2][color=DARK_ORANGE]Sicherheitsscans[/color][/wave] auf. Diejenigen mit erhöhten Stressreaktionen werden markiert."
+Text/bc/text,"Haben Sie gesehen, was draußen passiert? Überall Flugblätter, die zeigen, dass [color=DARK_VIOLET]Root Reserve[/color] aus... [pulse freq=3][color=CRIMSON]aus uns hergestellt wird[/color][/pulse]."
+Choice/bd/text,Senk deine Stimme. Wir werden alle beobachtet.
+Choice/be/text,"Ich habe die gleichen Gerüchte gehört. Es ist erschreckend, falls es wahr ist."
+Choice/bf/text,Das ist lächerliche Propaganda. Verbreite keine solchen Lügen.
+Text/c0/text,Du hast Recht. Aber wenn es wahr ist... was macht das aus uns?
+Text/c1/text,Mein Cousin wurde letzten Monat abgelehnt. Bedeutet das...? Ich [color=CHARTREUSE]kann das nicht mehr machen[/color].
+Text/c2/text,Ihr Gesichtsausdruck wird vorsichtig. Natürlich. Für immer loyal zu Spud.
+Text/c3/text,Geben Sie Ihren Aufenthaltsort gestern Nacht zwischen 22:00 und 04:00 Uhr an.
+Choice/c4/text,Ich war die ganze Nacht in meinem Quartier und habe geschlafen.
+Choice/c5/text,Ich würde lieber zuerst mit meinem Rechtsbeistand sprechen.
+Text/c6/text,Ihre Stresswerte deuten auf [color=YELLOW]Täuschung[/color] hin. Jedoch... nicht schlüssig. Sie dürfen vorerst gehen.
+Text/c7/text,"Rechtsbeistand? Dies ist ein Sicherheitsverfahren, kein Prozess. Ihre Weigerung wurde notiert."
+Text/c8/text,"Es funktioniert. Die Manifeste haben für Aufruhr gesorgt, aber [color=DARK_ORANGE]Russet verdächtigt uns[/color]."
+Text/c9/text,Achten Sie auf Verbündete unserer Organisation während der heutigen Schicht. [color=CHARTREUSE]Sie werden sie erkennen[/color].
+Text/ca/text,"Wenn Sie sie sicher durchbringen können, verwenden Sie die [color=CHARTREUSE]spezielle Markierung, über die wir gesprochen haben[/color]."
+Choice/cb/text,Es ist das Risiko wert. Ich bin dabei.
+Choice/cc/text,Das wird zu gefährlich. Vielleicht sollten wir uns bedeckt halten.
+Text/cd/text,"Ich wusste, ich kann auf dich zählen. Wenn das vorbei ist, [color=CHARTREUSE]wird Spud wissen, wer die wahren Helden waren[/color]."
+Text/ce/text,Wir sind längst über diesen Punkt hinaus. Sich bedeckt halten wird uns nicht retten. [color=CHARTREUSE]Nur das System zu stürzen wird es[/color].
+Text/cf/text,Jede Station verfügt jetzt über das neue [color=DARK_ORANGE]RealityScan-System[/color]. Es erkennt unbefugte Markierungen und Fälschungen.
+Text/d0/text,Alle Dokumente müssen vor der Genehmigung gescannt werden. Die [color=CRIMSON]Verräter werden ausgemerzt[/color]. Ich garantiere es.
+Text/d1/text,"Widerstandsmitgliedern zu helfen ist gerade viel gefährlicher geworden, aber [color=CHARTREUSE]die Wahrheit muss sich verbreiten[/color]."
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,

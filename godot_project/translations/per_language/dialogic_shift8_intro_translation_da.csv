@@ -1,0 +1,31 @@
+﻿keys,da
+Text/117/text,Kontrolposten er blevet omdannet til en militærpost. Elitevagter i sorte uniformer patruljerer med fremviste våben.
+Text/118/text,"Jeg er Sikkerhedschef Yukon, udsendt fra hovedstaden af premierminister Idaho."
+Text/119/text,"Efterretninger indikerer, at et [pulse freq=2][color=YELLOW]terrorangreb er nært forestående[/color][/pulse]. ""Modstandsbevægelsen"" planlægger at infiltrere i morgen."
+Text/11a/text,Alle officerer skal underkaste sig [wave amp=15 freq=2][color=DARK_ORANGE]loyalitetsscreening[/color][/wave]. Mistænkelig adfærd betyder tilbageholdelse og [color=DARK_VIOLET]behandling[/color].
+Text/11b/text,[tornado radius=3 freq=2][color=RED]Fuld samarbejde[/color][/tornado] med Sikkerhed er obligatorisk. Mine rapporter om hver af jer er blevet givet til Chefen.
+Text/11c/text,"Russets blik hviler ubehageligt på dig, før det bevæger sig videre."
+Text/11d/text,Dette er [color=DARK_ORANGE]IdentityScan 5000[/color]. Den analyserer biometri for at opdage infiltratorer og sympatisører.
+Text/11e/text,"Enhver, der flages, står over for [color=CRIMSON]udvidet afhøring[/color]. Brug den uden undtagelse."
+Text/11f/text,Har du set Sasha? Hun meldte sig ikke til appel. I går aftes [color=CRIMSON]trængte sikkerhedsstyrker ind i hendes kvarter[/color].
+Text/120/text,"De siger, hun var en del af [pulse freq=2][color=CHARTREUSE]modstandsbevægelsen[/color][/pulse]."
+Choice/121/text,Vi bør ikke tale om dette. Det er farligt.
+Choice/122/text,Jeg er også bekymret for hende. Dette er ikke rigtigt.
+Text/123/text,Du har ret. Men pas på dig selv. De leder efter forbindelser til hende.
+Text/124/text,Så I var tætte? Vær forsigtig. De holder måske også øje med dig.
+Text/125/text,"Officeren giver dig en seddel: ""[color=YELLOW]Ryd din station for alt mistænkeligt.[/color]"""
+Text/126/text,Du har været ved denne kontrolpost i et stykke tid. Interessant præstationsrekord.
+Text/127/text,"Du blev ofte set sammen med Officer Sasha, som nu er under efterforskning for [wave amp=20 freq=3][color=CRIMSON]forræderi[/color][/wave]."
+Text/128/text,"Chefen læner sig fremad. Er der noget, du gerne vil fortælle mig om hendes aktiviteter?"
+Choice/129/text,Sasha og jeg var bare kolleger. Jeg ved intet om hende uden for arbejdet.
+Choice/12a/text,Jeg samlede beviser på hendes mistænkelige aktiviteter for at rapportere senere.
+Text/12b/text,Flere vidner siger noget andet. Uden konkrete beviser kan jeg dog ikke tilbageholde dig. [color=YELLOW]Endnu.[/color]
+Text/12c/text,"Du vil være under [color=CRIMSON]tæt observation[/color]. Ét fejltrin, og du vil [color=DARK_VIOLET]slutte dig til Sasha[/color]."
+Text/12d/text,Hvor belejligt. Og alligevel indgav du ingen rapporter indtil nu.
+Text/12e/text,"Du skal afgive en komplet erklæring. Hvis dine oplysninger viser sig værdifulde, vil vi måske se bort fra din forsinkede rapportering."
+Text/12f/text,Jeg vil [color=CRIMSON]overvåge dit arbejde[/color] i dag. Hver rejsende skal identitetsscannes. [color=RED]Ingen undtagelser[/color].
+Text/130/text,Sasha er blevet taget. Modstandsbevægelsens plan er [color=CRIMSON]kompromitteret[/color]. Med sikkerhed på høj beredskab synes deres chancer håbløse.
+Choice/121/disabled_text,
+Choice/12a/disabled_text,
+Choice/129/disabled_text,
+Choice/122/disabled_text,

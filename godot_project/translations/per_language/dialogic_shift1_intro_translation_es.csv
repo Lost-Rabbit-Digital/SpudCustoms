@@ -1,0 +1,16 @@
+﻿keys,es
+Text/56/text,Bienvenido a la nación de Patata. Una tierra de [pulse freq=2][color=MEDIUM_VIOLET_RED]prosperidad para todas las patatas[/color][/pulse].
+Text/57/text,Has sido seleccionado para un [color=DARK_ORANGE]papel crucial[/color] en la protección de nuestras fronteras.
+Text/59/text,"¡CONTEMPLA! El [color=MEDIUM_VIOLET_RED]poderoso muro[/color] que protege nuestra nación. Aquí servirás, asegurando que solo los dignos entren."
+Text/5a/text,"¡Ah, el nuevo brote! Escucha atentamente, tu papel es [color=DARK_ORANGE]vital para la seguridad de Patata[/color]."
+Text/184/text,El bienestar de tu familia [wave amp=20 freq=3][color=YELLOW]depende de tu desempeño[/color][/wave].
+Text/5b/text,Te nombro Oficial de Aduanas de [pulse freq=1][color=MEDIUM_VIOLET_RED]gloriosa Patata[/color][/pulse]. ¿Alguna pregunta?
+Choice/5c/text,¡Estoy listo para servir a Patata con toda mi fécula!
+Choice/5d/text,¿Qué les sucede exactamente a las patatas rechazadas?
+Text/5e/text,¡Excelente! Ese es el entusiasmo que necesitamos. Podrías ganar una distinción de [color=DARK_VIOLET]Reserva de Raíz[/color].
+Text/5f/text,Están... [color=DARK_VIOLET]procesadas[/color]. Según el protocolo. [color=DARK_VIOLET]Reserva de Raíz[/color] maneja todos los detalles.
+Text/60/text,Concéntrate en tus deberes. [color=DARK_ORANGE]Nada más.[/color]
+Text/61/text,"Tu primer turno comienza ahora. Revisa los documentos cuidadosamente, niega la entrada a los que no cumplan nuestros estándares."
+Text/62/text,"Cumple tu cuota, evita sanciones. [color=MEDIUM_VIOLET_RED]¡Gloria a Patata![/color]"
+Choice/5d/disabled_text,
+Choice/5c/disabled_text,

@@ -1,0 +1,31 @@
+﻿keys,cs
+Text/117/text,Kontrolní stanoviště se proměnilo ve vojenskou základnu. Elitní stráže v černých uniformách hlídkují se zbraněmi na odiv.
+Text/118/text,"Jsem vedoucí bezpečnostní důstojník Yukon, vyslaný z hlavního města premiérem Idahem."
+Text/119/text,"Podle zpravodajských informací je [pulse freq=2][color=YELLOW]teroristický útok bezprostřední[/color][/pulse]. ""Odboj"" plánuje infiltraci zítra."
+Text/11a/text,Všichni důstojníci se podrobí [wave amp=15 freq=2][color=DARK_ORANGE]prověrce loajality[/color][/wave]. Podezřelé chování znamená zadržení a [color=DARK_VIOLET]zpracování[/color].
+Text/11b/text,[tornado radius=3 freq=2][color=RED]Plná spolupráce[/color][/tornado] s Bezpečností je povinná. Mé zprávy o každém z vás byly poskytnuty Šéfovi.
+Text/11c/text,"Russetův pohled na vás nepříjemně ulpívá, než se přesune dál."
+Text/11d/text,Toto je [color=DARK_ORANGE]IdentityScan 5000[/color]. Analyzuje biometrické údaje k odhalení infiltrátorů a sympatizantů.
+Text/11e/text,Každý označený čelí [color=CRIMSON]zesílenému výslechu[/color]. Používejte jej bez výjimky.
+Text/11f/text,Viděli jste Sašu? Nehlásila se k nástupu. Včera v noci [color=CRIMSON]bezpečnostní síly vstoupily do jejích prostor[/color].
+Text/120/text,"Říkají, že byla součástí [pulse freq=2][color=CHARTREUSE]odboje[/color][/pulse]."
+Choice/121/text,Neměli bychom o tom mluvit. Je to nebezpečné.
+Choice/122/text,Mám o ni také obavy. Tohle není správné.
+Text/123/text,Máš pravdu. Ale dávej si pozor. Hledají spojení s ní.
+Text/124/text,Takže jste si byli blízcí? Buď opatrný. Možná tě také sledují.
+Text/125/text,"Důstojník vám podstrčí vzkaz: ""[color=YELLOW]Vyčistěte své stanoviště od všeho podezřelého.[/color]"""
+Text/126/text,Už jste na tomto kontrolním stanovišti docela dlouho. Zajímavý výkonnostní záznam.
+Text/127/text,"Byl jste často viděn s důstojnicí Sašou, nyní vyšetřovanou pro [wave amp=20 freq=3][color=CRIMSON]velezradu[/color][/wave]."
+Text/128/text,"Náčelník se nakloní vpřed. Je něco, co byste mi chtěl říci o jejích aktivitách?"
+Choice/129/text,Saša a já jsme byli jen kolegové. O jejím životě mimo práci nic nevím.
+Choice/12a/text,"Shromažďoval jsem důkazy o jejích podezřelých aktivitách, abych je později nahlásil."
+Text/12b/text,Několik svědků tvrdí opak. Bez konkrétních důkazů vás však nemohu zadržet. [color=YELLOW]Zatím.[/color]
+Text/12c/text,Budete pod [color=CRIMSON]přísným dohledem[/color]. Jeden chybný krok a [color=DARK_VIOLET]připojíte se k Saše[/color].
+Text/12d/text,Jak pohodlné. A přesto jste až dosud nepodal žádné hlášení.
+Text/12e/text,"Poskytnete úplné prohlášení. Pokud se vaše informace ukáží jako cenné, možná přehlédneme vaše opožděné hlášení."
+Text/12f/text,Dnes budu [color=CRIMSON]sledovat vaši práci[/color]. Každý cestující musí být identifikačně skenován. [color=RED]Žádné výjimky[/color].
+Text/130/text,Saša byla zajata. Plán odboje je [color=CRIMSON]prozrazen[/color]. Se zvýšenou bezpečnostní pohotovostí se jejich šance zdají beznadějné.
+Choice/121/disabled_text,
+Choice/12a/disabled_text,
+Choice/129/disabled_text,
+Choice/122/disabled_text,

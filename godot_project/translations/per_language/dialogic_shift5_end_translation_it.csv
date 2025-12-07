@@ -1,0 +1,19 @@
+﻿keys,it
+Text/96/text,"Ti insinui nell'oscuro corridoio, il cuore che batte mentre eviti le pattuglie di sicurezza."
+Text/97/text,[color=CHARTREUSE]Questo dispositivo disabiliterà la serratura[/color] dell'ufficio di Russet. Farò scattare gli allarmi nell'ala est come diversivo. Avrai cinque minuti.
+Text/98/text,I manifesti dovrebbero essere nel suo archivio. [color=CRIMSON]Cartella rossa etichettata 'RR Transport'[/color]. Non lasciare tracce della tua ricerca.
+Text/99/text,"Trovi la spessa [color=CRIMSON]cartella rossa etichettata ""RR Transport""[/color] nell'archivio."
+Text/9a/text,"All'interno ci sono manifesti che corrispondono ai conteggi di patate respinte e una direttiva del Primo Ministro dell'Idaho che autorizza ""[pulse freq=3][color=DARK_VIOLET]la piena utilizzazione dei respinti di confine per la produzione RR.[/color][/pulse]"""
+Text/9b/text,"Passi si avvicinano alla porta dell'ufficio. ""[wave amp=15 freq=3][color=YELLOW]Strano, avrei giurato di averla chiusa a chiave.[/color][/wave]"""
+Choice/9c/text,Nascondersi sotto la scrivania
+Choice/9d/text,Saltare dalla finestra
+Text/9e/text,"Ti infili sotto la scrivania di Russet mentre entra, il cuore che batte. Si siede, i suoi piedi a pochi centimetri dal tuo viso."
+Text/9f/text,Russet qui. Cosa? [color=CHARTREUSE]Ancora un allarme?[/color] Arrivo. Lascia la stanza e tu fuggi.
+Text/a0/text,"Spalanchi la finestra e salti. Fortunatamente è solo un piano. Una guardia grida: ""[color=RED]Ehi! Fermati![/color]"""
+Text/a1/text,Corri attraverso il terreno e riesci a seminare i tuoi inseguitori.
+Text/a2/text,Ce l'hai fatta?
+Text/a3/text,"Consegni le prove, spiegando cosa hai trovato."
+Text/a4/text,Questo dimostra tutto. La resistenza farà delle copie. [tornado radius=3 freq=2]Spargi la verità ovunque.[/tornado] Non possono zittirci tutti.
+Text/a5/text,"Hai oltrepassato un limite. [wave amp=20 freq=3][color=YELLOW]Non c'è ritorno.[/color][/wave] Quando la verità si diffonderà, Spud verrà trasformato."
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,

@@ -1,0 +1,47 @@
+﻿keys,pl
+Text/11/text,"Granica Spud jest w [pulse freq=3][color=CRIMSON]chaosie[/color][/pulse]. Spanikowane ziemniaki zalewają punkty kontrolne, zdesperowane, by uciec po wycieku dokumentów."
+Text/12/text,Prześlizgujesz się z Saszą. [wave amp=20 freq=3][color=CHARTREUSE]Musimy nadal naciskać![/color][/wave] Ludzie teraz znają prawdę.
+Text/13/text,"Nie mogą już dłużej uciszać prawdy. Jeśli uda nam się infiltrować obiekt [color=DARK_VIOLET]Korzeniowej Rezerwy[/color] i nadać dowody, [tornado radius=3 freq=2][color=CHARTREUSE]rozpali to rewolucję[/color][/tornado]."
+Text/14/text,To miejsce to forteca. A teraz mamy wśród nas [color=YELLOW]byłego agenta celnego[/color]. Ich oczy zwężają się podejrzliwie na twój widok.
+Choice/15/text,"Rozumiem wasze wątpliwości, ale jestem oddany tej sprawie."
+Choice/16/text,Poświęciłem już wszystko. Nie wycoram się teraz.
+Text/17/text,Piękne słowa. Ale słyszeliśmy je już wcześniej.
+Text/18/text,"Pomogli nam zdobyć dokumenty. To są czyny, nie słowa."
+Text/19/text,"Nie możesz już wrócić do bycia lojalnym ziemniakiem. Witaj w ruchu oporu, towarzyszu."
+Text/1a/text,"Po napiętej infiltracji twój zespół stoi w sercu [color=DARK_VIOLET]Korzeniowej Rezerwy[/color], [pulse freq=3][color=CRIMSON]przerażająca maszyneria opresji[/color][/pulse] obnażona."
+Text/1b/text,"[wave amp=25 freq=3][color=RED]Alarmy wyją[/color][/wave] gdy strażnicy spieszą, by zareagować na waszą intruzję. Pędzicie przez korytarze, unikając systemów bezpieczeństwa."
+Text/1c/text,"Ekran migocze. ""No, no, [color=CRIMSON]zdrajca[/color] wraca z rebelianckimi szumowinami."""
+Text/1d/text,"Myślałeś, że możesz zatrzymać postęp Spud? [color=DARK_VIOLET]Korzeniowa Rezerwa[/color] jest życiodajną siłą tego narodu."
+Text/1e/text,Ale nie martw się. Nadal będziesz służyć Spud... [tornado radius=4 freq=3][color=DARK_VIOLET]w kadziach przetwórczych![/color][/tornado]
+Text/1f/text,Ekran nagle gaśnie.
+Text/20/text,"Zwracasz się do pozostałych z determinacją. ""Musimy dostać się do bunkra Idaho. Teraz!"""
+Text/21/text,"Wasza grupa przedziera się przez fale ochrony, ledwo unikając schwytania. Bojownicy ruchu oporu Saszy tworzą dywersje, oczyszczając waszą drogę naprzód."
+Text/22/text,"Po przerażającej ucieczce przez tunele konserwacyjne, w końcu docieracie do zabezpieczonej windy do prywatnego bunkra Idaho."
+Text/23/text,"Z Saszą i twoimi sojusznikami u boku, w końcu konfrontujesz się z Idaho."
+Text/24/text,"To koniec, Idaho. Twoje sekrety zostały ujawnione. Jak to się skończy... [pulse freq=2]to zależy od ciebie.[/pulse]"
+Choice/25/text,Negocjuj pokojowe przekazanie władzy (Dyplomatyczne)
+Choice/26/text,Żądaj natychmiastowego aresztowania Idaho (Sprawiedliwość)
+Choice/27/text,Wymierz samozwańczą sprawiedliwość za zbrodnie Idaho (Zemsta)
+Choice/28/text,Skup się na demontażu infrastruktury Korzeniowej Rezerwy (Demontaż)
+Text/29/text,"Idaho, to nie musi kończyć się kolejnym rozlewem krwi. Jeśli będziesz współpracować..."
+Text/2a/text,"Och, ty [color=STEEL_BLUE]idealistyczny głupcze[/color]. Myślisz, że to negocjacje?"
+Text/2b/text,"Idaho miażdży przycisk, i [color=RED]alarmy zaczynają wyć[/color]. ""Jedyne, co wam dam, to [color=DARK_VIOLET]bilet w jedną stronę do kadzi smażalniczych![/color]"""
+Text/2c/text,"Nie sądzę, Idaho. Strażnicy! Widzieliście akta, [color=YELLOW]wiecie, co zrobił waszym rodzinom.[/color]"
+Text/2d/text,Potężny strażnik występuje naprzód i szybko powala Idaho na ziemię.
+Text/2e/text,Strzał odbija się echem po komnacie. Ekran ściemnia się do czerni.
+Text/2f/text,"Idaho, w imieniu ziemniaczanego ludu Spud, [color=CHARTREUSE]jesteś aresztowany![/color]"
+Text/30/text,"To koniec. Lud przemówił. [color=CHARTREUSE]Zbudujemy nowe Spud, gdzie nasze korzenie będą w glebie, nie w cierpieniu.[/color]"
+Text/31/text,"Nie będzie [color=CRIMSON]żadnych układów, żadnej litości[/color] dla ciebie, Idaho. Sprawiedliwość tyrana to wszystko, na co zasługujesz."
+Text/32/text,"Rozliczenie. Tym właśnie jestem. [color=CHARTREUSE]Za każdego poświęconego ziemniaka, odbieramy naszą przyszłość![/color]"
+Text/33/text,"Zapomnijcie o nim. Jest objawem, nie chorobą. [color=CHARTREUSE]Zburzcie każdy korzeń i łodygę tej potworności.[/color]"
+Text/34/text,Musimy iść! Teraz!
+Text/35/text,Upadek [color=DARK_VIOLET]Korzeniowej Rezerwy[/color] rozpala pożar zmian w całym Spud.
+Text/36/text,"Ziemniaki w każdej prowincji powstają, przyjmując [color=CHARTREUSE]nową wizję dla swojego narodu[/color]."
+Text/37/text,"Dopóki pozostaniemy wierni naszym korzeniom, ideałom, które nas tu przywiodły... [color=CHARTREUSE]znajdziemy drogę.[/color]"
+Text/38/text,"I tak, z popiołów starego Spud, [color=CHARTREUSE]nowy naród zaczyna zapuszczać korzenie[/color]. Panowanie [color=DARK_VIOLET]Korzeniowej Rezerwy[/color] dobiegło końca."
+Choice/15/disabled_text,
+Choice/28/disabled_text,
+Choice/27/disabled_text,
+Choice/26/disabled_text,
+Choice/25/disabled_text,
+Choice/16/disabled_text,

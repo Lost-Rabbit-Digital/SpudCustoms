@@ -1,0 +1,34 @@
+﻿keys,tr
+Text/b8/text,"Sınır tesisi tamamen kapatıldı, silahlı güvenlik her koridorda devriye geziyor."
+Text/b9/text,[pulse freq=3][color=RED]DİKKAT! SEVİYE KIRMIZI güvenlik durumu![/color][/pulse] Gizli belgeler dün gece çalındı.
+Text/ba/text,Aramızda bir [tornado radius=4 freq=3][color=CRIMSON]hain var[/color][/tornado]. Bilgi saklayan herkes suç ortağı olarak muamele görecek.
+Text/bb/text,"Tüm subaylar, [wave amp=15 freq=2][color=DARK_ORANGE]güvenlik taraması[/color][/wave] için sıraya girin. Yüksek stres tepkileri gösterenler işaretlenecek."
+Text/bc/text,Dışarıda neler olduğunu gördün mü? Her yerde [color=DARK_VIOLET]Root Reserve[/color]'in... [pulse freq=3][color=CRIMSON]bizden yapıldığını[/color][/pulse] gösteren broşürler var.
+Choice/bd/text,Sesini alçalt. Hepimiz izleniyoruz.
+Choice/be/text,Ben de aynı söylentileri duydum. Doğruysa korkunç.
+Choice/bf/text,Bu saçma bir propaganda. Böyle yalanlar yayma.
+Text/c0/text,Haklısın. Ama doğruysa... bu bizi ne yapar?
+Text/c1/text,Kuzenim geçen ay reddedildi. Bu şu anlama mı geliyor...? [color=CHARTREUSE]Artık buna devam edemem[/color].
+Text/c2/text,İfadeleri tedbirli hale geliyor. Elbette. Sonsuza dek Spud'a sadık.
+Text/c3/text,Dün gece 22:00 ile 04:00 saatleri arasındaki konumunuzu belirtin.
+Choice/c4/text,Bütün gece odamda uyuyordum.
+Choice/c5/text,Önce yasal temsilcimle konuşmayı tercih ederim.
+Text/c6/text,Stres seviyeleriniz [color=YELLOW]aldatma[/color] gösteriyor. Ancak... kesin değil. Şimdilik gidebilirsiniz.
+Text/c7/text,"Yasal temsilci? Bu bir güvenlik prosedürü, yargılama değil. Reddiniz kaydedildi."
+Text/c8/text,"İşe yarıyor. Manifestolar kargaşa yarattı, ancak [color=DARK_ORANGE]Russet bizden şüpheleniyor[/color]."
+Text/c9/text,Bugünkü vardiya sırasında organizasyonumuzdan müttefikleri gözleyin. [color=CHARTREUSE]Onları tanıyacaksınız[/color].
+Text/ca/text,"Eğer onları güvenle geçirebilirseniz, [color=CHARTREUSE]konuştuğumuz özel işareti[/color] kullanın."
+Choice/cb/text,Risk almaya değer. Ben varım.
+Choice/cc/text,Bu çok tehlikeli hale geliyor. Belki sessiz kalmalıyız.
+Text/cd/text,"Sana güvenebileceğimi biliyordum. Bu bittiğinde, [color=CHARTREUSE]Spud gerçek kahramanların kim olduğunu bilecek[/color]."
+Text/ce/text,O noktayı çoktan geçtik. Sessiz kalmak bizi kurtarmayacak. [color=CHARTREUSE]Ancak sistemi devirmek kurtaracak[/color].
+Text/cf/text,Her istasyonda artık yeni [color=DARK_ORANGE]RealityScan sistemi[/color] var. İzinsiz işaretleri ve sahteciliği tespit ediyor.
+Text/d0/text,Tüm belgeler onaylanmadan önce taranmalıdır. [color=CRIMSON]Hainler kökünden temizlenecek[/color]. Bunu garanti ederim.
+Text/d1/text,"Direniş üyelerine yardım etmek çok daha tehlikeli hale geldi, ancak [color=CHARTREUSE]gerçek yayılmalı[/color]."
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,

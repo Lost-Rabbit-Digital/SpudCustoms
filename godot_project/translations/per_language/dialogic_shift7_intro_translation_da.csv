@@ -1,0 +1,24 @@
+﻿keys,da
+Text/102/text,"Godt, du klarede det. Modstanden bliver [color=CHARTREUSE]stærkere[/color]. Takket være disse manifester ser folk sandheden."
+Text/103/text,"Det lykkedes mig at få denne dossier fra vores kilder - produktionsplaner, '[color=CRIMSON]ingrediens[/color]' lister, navne på de [color=DARK_SLATE_BLUE]forsvundne[/color]."
+Text/104/text,Dette er ikke bare et kosttilskudsprogram. De [color=CRIMSON]forarbejder kartofler[/color]...og ikke på en god måde.
+Text/105/text,"Interne memoer fra premierminister Idaho selv, der godkender ""[color=DARK_ORANGE]udnyttelse af afviste aktiver.[/color]"""
+Text/106/text,"Kvoter for hvert kontrolpunkt, hvor Kartoffel Told har det højeste afvisning-til-forarbejdning forhold."
+Text/107/text,Situationen udenfor er forværret. Vrede folkemængder samles ved kontrolpunkter og kræver svar om Root Reserve.
+Text/108/text,[color=YELLOW]NØDUDSENDELSE[/color]: Nylig cirkulation af [color=CRIMSON]forfalskede dokumenter[/color] har forårsaget unødig panik.
+Text/109/text,"En belønning på [color=GOLD]10.000 Kartoffel-kreditter[/color] tilbydes for oplysninger, der fører til pågribelse af disse sabotører."
+Text/10a/text,Forbrug eller distribution af denne propaganda er nu klassificeret som [color=RED]højforræderi[/color].
+Text/10b/text,Dagens vagt vil operere under særlige protokoller. Hver rejsende skal gennemgå en loyalitetsvurdering.
+Text/10c/text,"De, der udviser [color=CRIMSON]anti-regeringsholdninger[/color], skal markeres øjeblikkeligt."
+Text/10d/text,[color=CRIMSON]Forræderen blandt os[/color] vil blive fundet. Og når de bliver det... [trækker fingeren over halsen]
+Text/10e/text,"En nervøs kartoffel nærmer sig, [color=GOLD]gult blademblem[/color] delvist synligt. En lille note er stukket mellem papirerne: ""[color=CHARTREUSE]Sikkert hus kompromitteret. Ny placering: Lager 7, Sektor 4.[/color]"""
+Choice/10f/text,Send dem hurtigt igennem med UV-mærket (Hjælp)
+Choice/110/text,Rapporter dem til sikkerhed med det samme (Forråd)
+Text/111/text,"Lettelse oversvømmer deres ansigt. ""Tak. Sandheden vil sejre."""
+Text/112/text,"Rædsel går op for dem, når du giver signal til sikkerhed. ""[wave amp=25 freq=3]Nej, vær så venlig! Jeg har en familie![/wave]"" Deres gule emblem falder til gulvet."
+Text/113/text,Godt gjort. Din loyalitet er noteret.
+Text/114/text,Din beslutning blev bemærket. Vær klar. [tornado radius=3 freq=2][color=CHARTREUSE]Noget stort er på vej[/color][/tornado]. Modstanden planlægger en direkte aktion.
+Text/115/text,"Når det sker, bliver du nødt til at [color=YELLOW]vælge side[/color]. Der vil ikke være nogen mellemvej tilbage."
+Text/116/text,"Med hver kartoffel du behandler, enten [pulse freq=2][color=CHARTREUSE]hjælper du en revolution[/color][/pulse] eller [pulse freq=2][color=CRIMSON]muliggør et forfærdeligt system[/color][/pulse]."
+Choice/10f/disabled_text,
+Choice/110/disabled_text,

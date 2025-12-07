@@ -1,0 +1,31 @@
+﻿keys,vi
+Text/117/text,Trạm kiểm soát đã biến thành một đồn quân sự. Lính gác ưu tú trong bộ đồng phục đen tuần tra với vũ khí được phô bày.
+Text/118/text,"Tôi là Cán bộ An ninh Trưởng Yukon, được Thủ tướng Idaho cử đến từ thủ đô."
+Text/119/text,"Tình báo cho thấy [pulse freq=2][color=YELLOW]một cuộc tấn công khủng bố sắp xảy ra[/color][/pulse]. ""Lực lượng kháng chiến"" dự định xâm nhập vào ngày mai."
+Text/11a/text,Tất cả các sĩ quan sẽ phải trải qua [wave amp=15 freq=2][color=DARK_ORANGE]kiểm tra lòng trung thành[/color][/wave]. Hành vi đáng ngờ đồng nghĩa với việc bị giam giữ và [color=DARK_VIOLET]xử lý[/color].
+Text/11b/text,[tornado radius=3 freq=2][color=RED]Hợp tác hoàn toàn[/color][/tornado] với An ninh là bắt buộc. Báo cáo của tôi về mỗi người trong các bạn đã được cung cấp cho Trưởng ban.
+Text/11c/text,Ánh mắt của Russet dừng lại trên bạn một cách không thoải mái trước khi chuyển đi.
+Text/11d/text,Đây là [color=DARK_ORANGE]IdentityScan 5000[/color]. Nó phân tích sinh trắc học để phát hiện những kẻ xâm nhập và những người đồng tình.
+Text/11e/text,Bất kỳ ai bị đánh dấu đều phải đối mặt với [color=CRIMSON]thẩm vấn nâng cao[/color]. Sử dụng nó không có ngoại lệ.
+Text/11f/text,"Bạn đã thấy Sasha chưa? Cô ấy không báo cáo khi điểm danh. Tối qua, [color=CRIMSON]lực lượng an ninh đã vào phòng của cô ấy[/color]."
+Text/120/text,Họ nói rằng cô ấy là một phần của [pulse freq=2][color=CHARTREUSE]lực lượng kháng chiến[/color][/pulse].
+Choice/121/text,Chúng ta không nên nói về điều này. Thật nguy hiểm.
+Choice/122/text,Tôi cũng lo lắng cho cô ấy. Điều này không đúng.
+Text/123/text,Bạn nói đúng. Nhưng hãy cẩn thận. Họ đang tìm kiếm những kết nối với cô ấy.
+Text/124/text,Vậy bạn thân với cô ấy? Hãy cẩn thận. Họ có thể đang theo dõi bạn.
+Text/125/text,"Viên sĩ quan nhét cho bạn một mẩu giấy: ""[color=YELLOW]Dọn sạch trạm của bạn khỏi bất cứ điều gì đáng ngờ.[/color]"""
+Text/126/text,Bạn đã ở trạm kiểm soát này khá lâu rồi. Hồ sơ hoạt động thú vị.
+Text/127/text,"Bạn thường xuyên được nhìn thấy với Sĩ quan Sasha, hiện đang bị điều tra vì [wave amp=20 freq=3][color=CRIMSON]tội phản quốc[/color][/wave]."
+Text/128/text,Trưởng ban nghiêng người về phía trước. Có điều gì bạn muốn nói với tôi về các hoạt động của cô ấy không?
+Choice/129/text,Sasha và tôi chỉ là đồng nghiệp. Tôi không biết gì về cô ấy ngoài công việc.
+Choice/12a/text,Tôi đang thu thập bằng chứng về các hoạt động đáng ngờ của cô ấy để báo cáo sau.
+Text/12b/text,"Nhiều nhân chứng nói ngược lại. Tuy nhiên, không có bằng chứng cụ thể, tôi không thể giam giữ bạn. [color=YELLOW]Chưa.[/color]"
+Text/12c/text,"Bạn sẽ bị [color=CRIMSON]theo dõi chặt chẽ[/color]. Một bước sai lầm, và bạn sẽ [color=DARK_VIOLET]tham gia cùng Sasha[/color]."
+Text/12d/text,Thật thuận tiện. Nhưng bạn vẫn chưa nộp báo cáo nào cho đến bây giờ.
+Text/12e/text,"Bạn sẽ cung cấp một bản tường trình đầy đủ. Nếu thông tin của bạn chứng minh là có giá trị, có lẽ chúng tôi sẽ bỏ qua việc báo cáo muộn của bạn."
+Text/12f/text,Tôi sẽ [color=CRIMSON]giám sát công việc của bạn[/color] hôm nay. Mọi du khách đều phải được quét nhận dạng. [color=RED]Không có ngoại lệ[/color].
+Text/130/text,"Sasha đã bị bắt. Kế hoạch của lực lượng kháng chiến đã bị [color=CRIMSON]xâm phạm[/color]. Với an ninh ở mức cảnh báo cao, cơ hội của họ dường như vô vọng."
+Choice/121/disabled_text,
+Choice/12a/disabled_text,
+Choice/129/disabled_text,
+Choice/122/disabled_text,

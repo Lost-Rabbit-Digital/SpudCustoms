@@ -1,0 +1,19 @@
+﻿keys,en
+Text/86/text,New security protocols today. We've received intelligence about [color=YELLOW]suspicious activities[/color].
+Text/87/text,All travelers must undergo enhanced inspection procedures.
+Text/88/text,"Watch for [color=YELLOW]nervous behavior, unusual mannerisms, or reluctance to make eye contact[/color]."
+Text/89/text,"All suspicious items must be confiscated and logged. For Spud's security, of course."
+Text/8a/text,"We're especially concerned about [color=CRIMSON]forbidden materials[/color] - anti-government literature, photography equipment..."
+Text/8b/text,"Their voice drops ominously. ""[pulse freq=2][color=DARK_VIOLET]We have special procedures for those individuals.[/color][/pulse]"""
+Text/8c/text,"[wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] trucks unload crates marked ""Premium Reserve"" into the cafeteria. The smell is enticing, but your stomach turns."
+Text/8d/text,Have you tried the new Premium Reserve? My cousin disappeared last month. Failed inspection.
+Text/8e/text,"Maybe he's part of this batch, huh? [tornado radius=2 freq=2][color=STEEL_BLUE]Dark humor, you know?[/color][/tornado]"
+Choice/8f/text,"""That's not funny. Not at all."""
+Choice/90/text,"""I'm not hungry. Excuse me."" (Leave)"
+Text/91/text,You're right. Sometimes joking is easier than thinking about [pulse freq=3][color=CRIMSON]what might actually be happening[/color][/pulse].
+Text/92/text,"The officer watches you leave. ""Hey, I get it. Lost my appetite too..."""
+Text/93/text,"Convenient timing for new security protocols, isn't it? [wave amp=15 freq=3][color=YELLOW]They're trying to stop information about Root Reserve.[/color][/wave]"
+Text/94/text,I have something that might help us. Some potatoes with [color=CHARTREUSE]vital information deserve to get through[/color].
+Text/95/text,You consider your options carefully. Today's choices could help [color=CHARTREUSE]spread truth[/color]... or [color=CRIMSON]silence it forever[/color].
+Choice/8f/disabled_text,
+Choice/90/disabled_text,

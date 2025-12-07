@@ -1,0 +1,41 @@
+﻿keys,en
+LAWS,LAWS
+_VALIDATION MESSAGES,
+msg_not_fresh,Potato was %s but must be Fresh
+msg_extra_eyes,Potato had Extra Eyes which is forbidden
+msg_rotten,Rotten potatoes are not allowed
+msg_sprouted,Sprouted potatoes are not allowed
+msg_dehydrated,Dehydrated potatoes are not allowed today
+msg_frozen,Frozen potatoes are banned
+msg_over_age,Potato is %d years old (max 5 years)
+msg_under_age,Potato is %d years old (must be over 3)
+_LAWS,
+law_fresh_potatoes,[color=dark_goldenrod]ONLY Fresh[/color] potatoes allowed - [color=dark_red]REJECT[/color] all others
+law_extra_eyes,[color=dark_goldenrod]Extra Eyes[/color] condition potatoes must be [color=dark_red]REJECTED[/color]
+law_rotten,[color=dark_goldenrod]Rotten[/color] potatoes must be [color=dark_red]REJECTED[/color]
+law_sprouted,[color=dark_goldenrod]Sprouted[/color] potatoes must be [color=dark_red]REJECTED[/color]
+law_dehydrated,[color=dark_goldenrod]Dehydrated[/color] potatoes must be [color=dark_red]REJECTED[/color]
+law_frozen,[color=dark_goldenrod]Frozen[/color] potatoes must be [color=dark_red]REJECTED[/color]
+law_over_5_years,Potatoes [color=dark_goldenrod]5 years or older[/color] must be [color=dark_red]REJECTED[/color]
+law_under_3_years,Potatoes [color=dark_goldenrod]3 years or younger[/color] must be [color=dark_red]REJECTED[/color]
+law_under_2_years,Potatoes [color=dark_goldenrod]2 years or younger[/color] must be [color=dark_red]REJECTED[/color]
+law_males_only,[color=dark_goldenrod]ONLY Male[/color] potatoes allowed - [color=dark_red]REJECT[/color] all Females
+law_females_only,[color=dark_goldenrod]ONLY Female[/color] potatoes allowed - [color=dark_red]REJECT[/color] all Males
+law_country_spudland,[color=dark_goldenrod]ALL[/color] potatoes from [color=dark_goldenrod]Spudland[/color] must be [color=dark_red]REJECTED[/color]
+law_country_potatopia,[color=dark_goldenrod]ALL[/color] potatoes from [color=dark_goldenrod]Potatopia[/color] must be [color=dark_red]REJECTED[/color]
+law_country_tuberstan,[color=dark_goldenrod]ALL[/color] potatoes from [color=dark_goldenrod]Tuberstan[/color] must be [color=dark_red]REJECTED[/color]
+law_country_north_yamnea,[color=dark_goldenrod]ALL[/color] potatoes from [color=dark_goldenrod]North Yamnea[/color] must be [color=dark_red]REJECTED[/color]
+law_country_spuddington,[color=dark_goldenrod]ALL[/color] potatoes from [color=dark_goldenrod]Spuddington[/color] must be [color=dark_red]REJECTED[/color]
+law_country_tatcross,[color=dark_goldenrod]ALL[/color] potatoes from [color=dark_goldenrod]Tatcross[/color] must be [color=dark_red]REJECTED[/color]
+law_country_mash_meadows,[color=dark_goldenrod]ALL[/color] potatoes from [color=dark_goldenrod]Mash Meadows[/color] must be [color=dark_red]REJECTED[/color]
+law_country_tuberville,[color=dark_goldenrod]ALL[/color] potatoes from [color=dark_goldenrod]Tuberville[/color] must be [color=dark_red]REJECTED[/color]
+law_country_chip_hill,[color=dark_goldenrod]ALL[/color] potatoes from [color=dark_goldenrod]Chip Hill[/color] must be [color=dark_red]REJECTED[/color] (export ban)
+law_country_murphyland,[color=dark_goldenrod]ALL[/color] potatoes from [color=dark_goldenrod]Murphyland[/color] must be [color=dark_red]REJECTED[/color]
+law_country_colcannon,[color=dark_goldenrod]ALL[/color] potatoes from [color=dark_goldenrod]Colcannon[/color] must be [color=dark_red]REJECTED[/color]
+law_country_pratie_point,[color=dark_goldenrod]ALL[/color] potatoes from [color=dark_goldenrod]Pratie Point[/color] must be [color=dark_red]REJECTED[/color]
+law_purple_majesty,[color=dark_goldenrod]Purple Majesty[/color] potato types must be [color=dark_red]REJECTED[/color]
+law_sweet_potatoes,[color=dark_goldenrod]Sweet Potato[/color] types must be [color=dark_red]REJECTED[/color] (no permits available)
+law_yukon_gold,[color=dark_goldenrod]Yukon Gold[/color] potato types must be [color=dark_red]REJECTED[/color]
+law_fingerling,[color=dark_goldenrod]Fingerling[/color] potato types must be [color=dark_red]REJECTED[/color]
+law_red_bliss,[color=dark_goldenrod]Red Bliss[/color] potato types must be [color=dark_red]REJECTED[/color]
+law_russet,[color=dark_goldenrod]Russet[/color] potato types must be [color=dark_red]REJECTED[/color]

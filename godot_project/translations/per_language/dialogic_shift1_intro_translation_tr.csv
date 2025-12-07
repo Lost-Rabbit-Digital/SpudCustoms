@@ -1,0 +1,16 @@
+﻿keys,tr
+Text/56/text,Patates Ulusuna hoş geldiniz. [pulse freq=2][color=MEDIUM_VIOLET_RED]Tüm patateslerin refahı[/color][/pulse] için bir ülke.
+Text/57/text,Sınırlarımızı korumak için [color=DARK_ORANGE]kritik bir role[/color] seçildiniz.
+Text/59/text,GÖRÜN! Ulusumuzu koruyan [color=MEDIUM_VIOLET_RED]muhteşem duvar[/color]. İşte burada görev yapacak ve yalnızca layık olanların girmesini sağlayacaksınız.
+Text/5a/text,"Ah, yeni filiz. Dikkatle dinleyin, rolünüz [color=DARK_ORANGE]Patatesin güvenliği için hayati[/color]."
+Text/184/text,Ailenizin refahı [wave amp=20 freq=3][color=YELLOW]performansınıza bağlı[/color][/wave].
+Text/5b/text,Sizi [pulse freq=1][color=MEDIUM_VIOLET_RED]şanlı Patatesin[/color] Gümrük Memuru olarak atıyorum. Sorunuz mu var?
+Choice/5c/text,Patates için tüm nişastamla hizmet etmeye hazırım!
+Choice/5d/text,Reddedilen patateslere tam olarak ne oluyor?
+Text/5e/text,Mükemmel! İşte ihtiyacımız olan heyecan. [color=DARK_VIOLET]Kök Rezervi[/color] ayırt edilen bir ödül alabilirsiniz.
+Text/5f/text,Onlar... [color=DARK_VIOLET]işleme tabi tutuluyor[/color]. Protokole göre. [color=DARK_VIOLET]Kök Rezervi[/color] tüm ayrıntıları hallediyor.
+Text/60/text,Görevlerinize odaklanın. [color=DARK_ORANGE]Başka bir şey değil.[/color]
+Text/61/text,"İlk nöbetiniz şimdi başlıyor. Belgeleri dikkatle kontrol edin, standartlarımızı karşılamayan kişileri reddederek."
+Text/62/text,"Kotanızı doldurun, yaptırımlardan kaçının. [color=MEDIUM_VIOLET_RED]Patates'e şan olsun![/color]"
+Choice/5d/disabled_text,
+Choice/5c/disabled_text,

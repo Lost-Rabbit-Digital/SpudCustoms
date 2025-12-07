@@ -1,0 +1,47 @@
+﻿keys,da
+Text/11/text,"Spud-grænsen er i [pulse freq=3][color=CRIMSON]kaos[/color][/pulse]. Paniske kartofler oversvømmer kontrolposter, desperate for at undslippe efter de lækkede dokumenter."
+Text/12/text,Du glider igennem med Sasha. [wave amp=20 freq=3][color=CHARTREUSE]Vi skal fortsætte fremad![/color][/wave] Folket kender nu sandheden.
+Text/13/text,"De kan ikke længere undertrykke sandheden. Hvis vi kan infiltrere [color=DARK_VIOLET]Rod Reservatet[/color] og udsende beviser, vil det [tornado radius=3 freq=2][color=CHARTREUSE]tænde revolutionen[/color][/tornado]."
+Text/14/text,Det sted er en fæstning. Og nu har vi en [color=YELLOW]tidligere toldagent[/color] iblandt os. Deres øjne snævrer mistænksomt ind mod dig.
+Choice/15/text,"Jeg forstår jeres tvivl, men jeg er dedikeret til denne sag."
+Choice/16/text,Jeg har allerede ofret alt. Jeg vil ikke vige tilbage nu.
+Text/17/text,Flotte ord. Men dem har vi hørt før.
+Text/18/text,"De hjalp os med at få dokumenterne. Det er handling, ikke ord."
+Text/19/text,"Kan ikke gå tilbage til at være en loyal kartoffel nu. Velkommen til modstanden, kammerat."
+Text/1a/text,"Efter en anspændt infiltration står dit team i hjertet af [color=DARK_VIOLET]Rod Reservatet[/color], det [pulse freq=3][color=CRIMSON]forfærdelige undertrykkelsesmaskineri[/color][/pulse] blotlagt."
+Text/1b/text,"[wave amp=25 freq=3][color=RED]Alarmer hyler[/color][/wave] mens vagter skynder sig at reagere på jeres indtrængen. I løber gennem korridorer, undgår sikkerhedssystemer."
+Text/1c/text,"En skærm flimrer. ""Nå nå, [color=CRIMSON]forræderen[/color] vender tilbage med rebellernes afskum."""
+Text/1d/text,"Troede du, at du kunne stoppe Spuds fremskridt? [color=DARK_VIOLET]Rod Reservatet[/color] er denne nations livsblod."
+Text/1e/text,Men fortvivl ikke. Du vil stadig tjene Spud... [tornado radius=4 freq=3][color=DARK_VIOLET]i forarbejdningskarrene![/color][/tornado]
+Text/1f/text,Skærmen bliver pludselig sort.
+Text/20/text,"Du vender dig mod de andre med beslutsomhed. ""Vi skal nå Idahos bunker. Nu!"""
+Text/21/text,"Din gruppe kæmper sig gennem bølger af sikkerhedsvagter, undgår med nød og næppe tilfangetagelse. Sashas modstandskæmpere skaber afledningsmanøvrer, rydder jeres vej fremad."
+Text/22/text,Efter en hårrejsende flugt gennem vedligeholdelsestunneler når I endelig den sikre elevator til Idahos private bunker.
+Text/23/text,"Med Sasha og dine allierede ved din side, konfronterer du endelig Idaho."
+Text/24/text,"Det er forbi, Idaho. Dine hemmeligheder er afsløret. Hvordan dette ender... [pulse freq=2]det er op til dig.[/pulse]"
+Choice/25/text,Forhandl en fredelig magtoverdragelse (Diplomatisk)
+Choice/26/text,Kræv Idahos øjeblikkelige anholdelse (Retfærdighed)
+Choice/27/text,Gennemfør selvtægtsjustits for Idahos forbrydelser (Hævn)
+Choice/28/text,Fokusér på at nedbryde Rod Reservatets infrastruktur (Afmontering)
+Text/29/text,"Idaho, det behøver ikke ende med mere blodsudgydelse. Hvis du samarbejder..."
+Text/2a/text,"Åh, din [color=STEEL_BLUE]idealistiske tåbe[/color]. Tror du dette er en forhandling?"
+Text/2b/text,"Idaho smadrer en knap, og [color=RED]alarmer begynder at hyle[/color]. ""Det eneste jeg vil give jer er en [color=DARK_VIOLET]envejsbillet til friturebadene![/color]"""
+Text/2c/text,"Det tror jeg ikke, Idaho. Vagter! I så dossieret, [color=YELLOW]I ved, hvad han gjorde mod jeres familier.[/color]"
+Text/2d/text,En kæmpestor vagt træder frem og sparker hurtigt Idaho til jorden.
+Text/2e/text,Et skud giver genlyd gennem kammeret. Skærmen bliver sort.
+Text/2f/text,"Idaho, i det kartoffelske folk Spuds navn, [color=CHARTREUSE]er du anholdt![/color]"
+Text/30/text,"Det er forbi. Folket har talt. [color=CHARTREUSE]Vi vil bygge et nyt Spud, hvor vores rødder er i jorden, ikke i lidelse.[/color]"
+Text/31/text,"Der vil [color=CRIMSON]ikke være nogen aftaler, ingen nåde[/color] for dig, Idaho. En tyrans retfærdighed er alt, hvad du fortjener."
+Text/32/text,"Et opgør. Det er, hvad jeg er. [color=CHARTREUSE]For hver kartoffel ofret, tager vi vores fremtid tilbage![/color]"
+Text/33/text,"Glem ham. Han er et symptom, ikke sygdommen. [color=CHARTREUSE]Riv hver rod og stilk af denne uhyrlighed ned.[/color]"
+Text/34/text,Vi må gå! Nu!
+Text/35/text,Faldet af [color=DARK_VIOLET]Rod Reservatet[/color] antænder en steppebrand af forandring over hele Spud.
+Text/36/text,"Kartofler i hver provins rejser sig, omfavner en [color=CHARTREUSE]ny vision for deres nation[/color]."
+Text/37/text,"Så længe vi forbliver tro mod vores rødder, mod de idealer, der bragte os hertil... [color=CHARTREUSE]vil vi finde en vej.[/color]"
+Text/38/text,"Og således, fra asken af det gamle Spud, [color=CHARTREUSE]begynder en ny nation at slå rod[/color]. [color=DARK_VIOLET]Rod Reservatets[/color] herredømme er forbi."
+Choice/15/disabled_text,
+Choice/28/disabled_text,
+Choice/27/disabled_text,
+Choice/26/disabled_text,
+Choice/25/disabled_text,
+Choice/16/disabled_text,

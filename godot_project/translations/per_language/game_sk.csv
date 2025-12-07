@@ -1,0 +1,52 @@
+﻿keys,sk
+alert_border_runner,POHRANIČNÝ BEŽEC DETEGOVANÝ!\nKliknite na odpálenie rakety!
+alert_rejected_fleeing,ZAMIETNUTÝ ZEMIAK UNIKÁ!\nKliknite na odpálenie rakety!
+alert_runner_escaped,BEŽEC UNIKOL!\nStrike pridaný!
+alert_points_deducted,BEŽEC UNIKOL!\nStrike pridaný!\n-{penalty} bodov!
+alert_perfect_hit,PERFEKTNÝ ZÁSAH! +{perfect} bodov bonusu presnosti
+alert_perfect_stamp,PERFEKTNÁ PEČIATKA! +{points} bodov!
+alert_combo,KOMBINÁCIA x{mult}! +{streak} bodov bonusu kombinácie
+alert_quota_met,"Kvóta splnená, zmena dokončená! \nBonus: {bonus} bodov!"
+alert_strike_removed,Strike odstránený!
+alert_correct_decision,"Vybrali ste správne, dôstojník.\n+{points} bodov!"
+alert_wrong_decision,"Spôsobili ste zbytočné utrpenie, dôstojník...\n+1 Strike!"
+alert_potato_should_be_approved,\nTento zemiak spĺňa všetky požiadavky a mal by byť schválený.
+alert_strike_out,Maximálny počet strikes prekročený! Vaša zmena sa skončila.
+ui_score,Skóre: {score}
+ui_quota,Kvóta: {current} / {target}
+ui_strikes,Pokuty: {current} / {max}
+ui_click_megaphone,Kliknite na megafón pre vyvolanie ďalšieho zemiaka
+ui_drag_document,Presuňte dokument na inšpekčný stôl
+ui_stamp_document,Vyberte pečiatku na schválenie alebo zamietnutie
+ui_check_violations,Skontrolujte porušenia dokumentu
+Strike removed!,Strike odstránený!
+BORDER RUNNER DETECTED!\nClick to launch missile!,POHRANIČNÝ BEŽEC DETEGOVANÝ!\nKliknite na odpálenie rakety!
+REJECTED POTATO FLEEING!\nClick to launch missile!,ZAMIETNUTÝ ZEMIAK UNIKÁ!\nKliknite na odpálenie rakety!
+RUNNER ESCAPED!\nStrike added!,BEŽEC UNIKOL!\nStrike pridaný!
+Click megaphone to call the next potato,Kliknite na megafón pre vyvolanie ďalšieho zemiaka
+Drag document to inspection table,Presuňte dokument na inšpekčný stôl
+Select a stamp to approve or reject,Vyberte pečiatku na schválenie alebo zamietnutie
+Check for document violations,Skontrolujte porušenia dokumentu
+rule_explanation_header,VYSVETLENIE PRAVIDLA:
+rule_explanation_fresh,Priviți câmpul 'Condiție'. Dacă spune altceva decât 'Proaspăt' - RESPINGE
+rule_explanation_sweet_potato,Pozrite sa na pole 'Typ'. Ak hovorí 'Sladký Zemiak' - ODMIETNUŤ (žiadne povolenia)
+rule_explanation_chip_hill,Pozrite sa na pole 'Krajina'. Ak hovorí 'Chip Hill' - ODMIETNUŤ (zakázané)
+rule_explanation_age,Pozrite sa na pole 'Dátum narodenia'. Vypočítajte vek a skontrolujte podľa pravidla
+rule_explanation_gender,Pozrite sa na pole 'Pohlavie' a skontrolujte podľa aktuálneho pravidla
+rule_footer_text,Tieto pravidlá sa musia presadzovať pre VŠETKY zemiaky
+rule_tutorial_hint,Ai nevoie de ajutor? Faceți clic pe orice regulă pentru o explicație
+alert_correct_decision_detailed,SPRÁVNE ROZHODNUTIE! +{points} bodov\n{reason}
+alert_wrong_decision_detailed,ZLÉ ROZHODNUTIE! Strike pridaný!\n{reason}
+alert_reason_approved,Zemiak spĺňa všetky požiadavky - SCHVÁLENÝ
+alert_reason_should_reject,Mali ste ODMIETNUŤ tento zemiak
+tutorial_check_type,Skontrolujte pole 'Typ' v pase
+tutorial_check_condition,Skontrolujte pole 'Stav' v pase
+tutorial_check_country,Skontrolujte pole 'Krajina' v pase
+tutorial_check_age,Skontrolujte 'Dátum narodenia' na výpočet veku
+tutorial_check_gender,Skontrolujte pole 'Pohlavie' v pase
+alert_streak_bonus_minigame,5 v rade! BONUSOVÁ MINIHRA!
+alert_perfect_stamps_bonus_minigame,Perfektné pečiatky! BONUSOVÁ MINIHRA!
+alert_new_minigame_unlocked,Nová minihra odomknutá: {name}!
+alert_minigame_bonus,Bonus z minihry: +{bonus} bodov!
+high_score_display,Najvyššie skóre: {score}
+new_high_score,NOVÉ NAJVYŠŠIE SKÓRE!

@@ -1,0 +1,30 @@
+﻿keys,de
+Text/156/text,Willkommen bei [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs Training![/color][/pulse]
+Text/157/text,"Diese Schulung vermittelt Ihnen die [wave amp=15 freq=2][color=DARK_ORANGE]wesentlichen Fähigkeiten[/color][/wave], die zum Schutz der Grenzen von Spud erforderlich sind."
+Text/158/text,"Ihre Aufgabe ist es, einreisende Kartoffeln an unserem Grenzübergang zu bearbeiten."
+Text/159/text,Einwandernde Kartoffeln werden sich vor Ihrem Büro hier anstellen.
+Text/15a/text,"Um mit der Bearbeitung der Kartoffeln zu beginnen, müssen Sie Ihre Kabine mit dem Schalter hier für den Dienst öffnen."
+Text/15b/text,"Sie signalisieren jeder Kartoffel, sich Ihrem Büro zu nähern, indem Sie auf das Megaphon tippen."
+Text/15c/text,Die Kartoffeln betreten die Kabine einzeln und legen ihre Dokumente vor.
+Text/15d/text,"Bewegen Sie zunächst ihre Dokumente auf den Inspektionstisch, um sie besser betrachten zu können."
+Text/15e/text,"Achten Sie dann auf [tornado radius=3 freq=2][color=YELLOW]abgelaufene Daten, falsche Informationen oder Anzeichen von Fälschungen[/color][/tornado]."
+Text/15f/text,"Ihr Schreibtisch verfügt über Stempel zum Kennzeichnen von Dokumenten. Sie können hier klicken, um die Stempelleiste herauszuziehen."
+Text/160/text,Platzieren Sie dann das Dokument unter dem gewünschten Stempel...
+Text/161/text,"Klicken Sie auf den Stempel, um Dokumente als [color=CHARTREUSE]genehmigt[/color] oder [color=CRIMSON]abgelehnt[/color] zu kennzeichnen..."
+Text/162/text,"Und ziehen Sie das Dokument zurück zur Kartoffel, um Ihre Entscheidung abzuschließen!"
+Text/163/text,"Manchmal versuchen Kartoffeln, [color=CRIMSON]an Ihrem Kontrollpunkt vorbeizueilen[/color]."
+Text/164/text,"Sie haben eine direkte Verbindung in Ihrer Kabine, die es Ihnen ermöglicht, [pulse freq=3][color=CRIMSON]Raketenwerfer[/color][/pulse] entlang der Grenzmauer zu steuern."
+Text/165/text,"Klicken Sie auf diese ""Ausreißer"", um eine Rakete abzufeuern und sie zu stoppen."
+Text/166/text,"Denken Sie daran, dass jeder Ausreißer, der durchkommt, als [wave amp=20 freq=3][color=CRIMSON]Verstoß gegen Sie[/color][/wave] gewertet wird."
+Text/167/text,"Zu viele Verstöße, und Ihre Schicht endet... [tornado radius=3 freq=3][color=CRIMSON]dauerhaft.[/color][/tornado]"
+Text/168/text,"Jede Schicht hat ein [color=DARK_ORANGE]Kontingent an Kartoffeln[/color], die Sie bearbeiten müssen, um Ihren Tag zu beenden."
+Text/169/text,Ihre Punktzahl hält Ihre Leistung im Vergleich zu Ihren Kollegen an diesem Kontrollpunkt und Beamten in entfernten Zollämtern fest.
+Text/16a/text,Nach jeder Schicht sehen Sie eine Zusammenfassung Ihrer Leistung und ob Sie bei Ihrer Pflicht erfolgreich waren oder versagt haben.
+Text/16b/text,"Sie sehen eine Aufschlüsselung darüber, wie Sie mit Ausreißern umgegangen sind und wie viele Dokumente Sie bearbeitet haben."
+Text/16c/text,"Plus alle Boni, die Sie für schnelle Dokumentenbearbeitung, perfekt ausgerichtete Stempel oder perfekt getroffene Ausreißerkartoffeln erhalten haben."
+Text/16d/text,"Sie erhalten auch eine Leistungsbewertung basierend darauf, wie gut Sie während Ihrer Schicht Kartoffeln bearbeitet haben, und bis zu 3 goldene Stempel, wenn Sie die Erwartungen übertreffen."
+Text/16e/text,"Hier können Sie Ihre Punktzahl für jede Schicht in die globale Datenbank der Zollbeamten einreichen und sehen, wie Sie im Vergleich zu den Elite-Zollbeamten auf der ganzen Welt abschneiden."
+Text/16f/text,"Wenn Ihre Schicht erfolgreich war, können Sie fortfahren, indem Sie auf ""Fortfahren"" klicken und Ihre nächste Schicht beginnen."
+Text/170/text,Das deckt die Grundlagen Ihrer Pflichten als Zollbeamter ab.
+Text/171/text,"Denken Sie daran: Überprüfen Sie Dokumente sorgfältig, stoppen Sie Ausreißer und erfüllen Sie Ihr Kontingent."
+Text/172/text,Die Sicherheit von Spud hängt von Ihrer [pulse freq=2][color=DARK_ORANGE]Wachsamkeit ab![/color][/pulse]

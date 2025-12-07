@@ -1,0 +1,31 @@
+﻿keys,pt
+Text/117/text,O posto de controle se transformou em um posto militar. Guardas de elite em uniformes pretos patrulham com armas à mostra.
+Text/118/text,"Sou o Oficial Chefe de Segurança Yukon, enviado da capital pelo Primeiro-Ministro Idaho."
+Text/119/text,"A inteligência indica que um [pulse freq=2][color=YELLOW]ataque terrorista é iminente[/color][/pulse]. A ""resistência"" planeja se infiltrar amanhã."
+Text/11a/text,Todos os oficiais serão submetidos a [wave amp=15 freq=2][color=DARK_ORANGE]triagem de lealdade[/color][/wave]. Comportamento suspeito significa detenção e [color=DARK_VIOLET]processamento[/color].
+Text/11b/text,[tornado radius=3 freq=2][color=RED]Cooperação total[/color][/tornado] com a Segurança é obrigatória. Meus relatórios sobre cada um de vocês foram fornecidos ao Chefe.
+Text/11c/text,O olhar de Russet se demora desconfortavelmente em você antes de seguir adiante.
+Text/11d/text,Este é o [color=DARK_ORANGE]IdentityScan 5000[/color]. Ele analisa dados biométricos para detectar infiltrados e simpatizantes.
+Text/11e/text,Qualquer pessoa sinalizada enfrentará [color=CRIMSON]interrogatório intensificado[/color]. Use-o sem exceção.
+Text/11f/text,"Você viu a Sasha? Ela não se apresentou na chamada. Ontem à noite, [color=CRIMSON]forças de segurança entraram em seus aposentos[/color]."
+Text/120/text,Estão dizendo que ela fazia parte da [pulse freq=2][color=CHARTREUSE]resistência[/color][/pulse].
+Choice/121/text,Não deveríamos estar falando sobre isso. É perigoso.
+Choice/122/text,Também estou preocupado com ela. Isso não está certo.
+Text/123/text,Você tem razão. Mas cuidado. Eles estão procurando conexões com ela.
+Text/124/text,Então vocês eram próximos? Tenha cuidado. Eles podem estar vigiando você também.
+Text/125/text,"O oficial desliza um bilhete para você: ""[color=YELLOW]Limpe sua estação de qualquer coisa suspeita.[/color]"""
+Text/126/text,Você está neste posto de controle há bastante tempo. Histórico de desempenho interessante.
+Text/127/text,"Você foi visto frequentemente com a Oficial Sasha, agora sob investigação por [wave amp=20 freq=3][color=CRIMSON]traição[/color][/wave]."
+Text/128/text,O chefe se inclina para frente. Há algo que você gostaria de me contar sobre as atividades dela?
+Choice/129/text,Sasha e eu éramos apenas colegas. Não sei nada sobre ela fora do trabalho.
+Choice/12a/text,Eu estava coletando evidências sobre suas atividades suspeitas para relatar mais tarde.
+Text/12b/text,"Várias testemunhas dizem o contrário. Sem evidências concretas, no entanto, não posso detê-lo. [color=YELLOW]Ainda.[/color]"
+Text/12c/text,"Você estará sob [color=CRIMSON]observação rigorosa[/color]. Um passo em falso, e você vai [color=DARK_VIOLET]se juntar à Sasha[/color]."
+Text/12d/text,Que conveniente. E ainda assim você não apresentou nenhum relatório até agora.
+Text/12e/text,"Você fornecerá uma declaração completa. Se suas informações provarem ser valiosas, talvez ignoremos seu relatório tardio."
+Text/12f/text,Estarei [color=CRIMSON]monitorando seu trabalho[/color] hoje. Cada viajante deve ser escaneado por identidade. [color=RED]Sem exceções[/color].
+Text/130/text,"Sasha foi levada. O plano da resistência está [color=CRIMSON]comprometido[/color]. Com a segurança em alerta máximo, as chances deles parecem desesperadoras."
+Choice/121/disabled_text,
+Choice/12a/disabled_text,
+Choice/129/disabled_text,
+Choice/122/disabled_text,

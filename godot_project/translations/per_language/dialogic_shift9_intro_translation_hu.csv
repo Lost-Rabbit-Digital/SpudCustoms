@@ -1,0 +1,27 @@
+﻿keys,hu
+Text/140/text,"A határ egy [pulse freq=3][color=CRIMSON]háborús zónára[/color][/pulse] hasonlít. Barikádok, páncélozott járművek és elit őrök állnak készenlétben. Ma van a nap, amikor az ellenállás tervezte a támadást."
+Text/141/text,"[wave amp=25 freq=3][color=YELLOW]VÉSZHELYZETI KÖZVETÍTÉS[/color][/wave]: Egész Spud [color=RED]hadiállapot[/color] alatt áll. ""Az Ellenállás"" támadásokat indított a kormányzati létesítmények ellen."
+Text/142/text,"Bárki, aki segíti ezeket az [color=CRIMSON]extremistákat[/color], [color=DARK_VIOLET]azonnali feldolgozással[/color] néz szembe. A Minisztérium megerősíti: a [color=DARK_VIOLET]Gyökér Rezervátum[/color] továbbra is biztonságos minden [color=DARK_ORANGE]hűséges krumpli[/color] számára."
+Text/143/text,[color=YELLOW]Zavargások törtek ki[/color] több szektorban. Az ellenállási sejtek megtámadtak három [color=DARK_VIOLET]Gyökér Rezervátum[/color] létesítményt.
+Text/144/text,"Céljuk: hozzáférés a központi adatbázishoz, amely minden termelési nyilvántartást tartalmaz. A hűtlenség bármilyen jele feldolgozást jelent."
+Text/145/text,"Több ellenállási ügynököt fogtak el, köztük Sasha tiszt is."
+Text/146/text,"Az [tornado radius=3 freq=2][color=CRIMSON]igazi árulók[/color][/tornado] azok, akik [color=DARK_VIOLET]saját népünket etetik egymással[/color]. Nem állíthatjátok meg az igazságot!"
+Text/147/text,"Elhurcolják, miközben még mindig kiabál: [color=CHARTREUSE]Az emberek megtudják, mi van az ételükben![/color]"
+Text/148/text,"Az [color=CRIMSON]áruló[/color] [pulse freq=3][color=DARK_VIOLET]azonnal feldolgozásra kerül[/color][/pulse]. A [color=DARK_VIOLET]Gyökér Rezervátum[/color] különleges adagja, magukból a terroristákból készítve."
+Text/149/text,"Minden határátkelés [color=RED]felfüggesztve[/color], kivéve a létfontosságú személyzetet [color=GOLD]Alfa szintű engedéllyel[/color]."
+Text/14a/text,"Ezt a szkennert [color=YELLOW]nem lehet becsapni[/color]. Azonnal riasszon bárkit, akinek nincs megfelelő engedélye."
+Text/14b/text,Egy hivatalos egyenruhás krumpli közeledik látszólag tökéletes Alfa igazolványokkal.
+Text/14c/text,"Egy kis kék kártya esik ki a mappából. ""[wave amp=15 freq=3][color=CHARTREUSE]A gyökerek mélyre nőnek.[/color][/wave]"", mormogja, miközben felveszi a kártyát."
+Choice/14d/text,"Engedje át őket, figyelmen kívül hagyva a szkenner riasztásait (Segítse az ellenállást)"
+Choice/14e/text,Azonnal riasszon (Árulja el az ellenállást)
+Text/14f/text,"Megkönnyebbülés látszik a szemükben. ""[color=CHARTREUSE]Sasháért. Spudért.[/color]"" Eltűnnek a központi adatbázis felé."
+Text/150/text,"Rémület tükröződik az arcukon. ""[color=CRIMSON]Te áruló! Bíztunk benned![/color]"" Gyorsan körülveszik őket az őrök."
+Text/151/text,Kitűnő munka. A hűségét jutalmazni fogjuk.
+Text/152/text,"Hirtelen a létesítmény [color=YELLOW]megremeg a robbanásoktól[/color]. Az ellenállás támadása elkezdődött, függetlenül a választásától."
+Text/153/text,"A helyemen maradjak és reménykedjek, hogy ez elmúlik, vagy [color=CHARTREUSE]kiálljak[/color] és kockáztassak mindent, hogy feltárjam az igazságot?"
+Choice/154/text,Nem hagyhatom el a kötelességemet. Csendben maradok és remélem a legjobbakat.
+Choice/155/text,"Túl sokáig voltam bűnrészes. Itt az ideje, hogy harcoljak azért, ami helyes."
+Choice/155/disabled_text,
+Choice/14d/disabled_text,
+Choice/154/disabled_text,
+Choice/14e/disabled_text,

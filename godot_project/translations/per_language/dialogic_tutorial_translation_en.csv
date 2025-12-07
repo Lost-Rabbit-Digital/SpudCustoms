@@ -1,0 +1,30 @@
+﻿keys,en
+Text/156/text,Welcome to [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs Training![/color][/pulse]
+Text/157/text,This training will teach you the [wave amp=15 freq=2][color=DARK_ORANGE]essential skills[/color][/wave] needed to protect Spud's borders.
+Text/158/text,Your duty is to process incoming potatoes at our border checkpoint.
+Text/159/text,Immigrating potatoes will line up outside your office here.
+Text/15a/text,"To start processing potatoes, you need to open your booth for service with the switch here."
+Text/15b/text,You'll signal each potato to approach your office by tapping the megaphone.
+Text/15c/text,Potatoes will enter the booth one by one and present their documents.
+Text/15d/text,"First, move their documents over to the inspection table for a better look."
+Text/15e/text,"Then, look for [tornado radius=3 freq=2][color=YELLOW]expired dates, incorrect information, or signs of forgery[/color][/tornado]."
+Text/15f/text,"Your desk has stamps for marking documents, you can click here to pull the stamp bar out."
+Text/160/text,Then place the document under the stamp you want...
+Text/161/text,Click the stamp to mark documents as [color=CHARTREUSE]approved[/color] or [color=CRIMSON]rejected[/color]...
+Text/162/text,And drag the document back to the potato to finalize your decision!
+Text/163/text,"Sometimes, potatoes will try to [color=CRIMSON]rush past your checkpoint[/color]."
+Text/164/text,"You have a direct uplink in your booth, which allows you to control [pulse freq=3][color=CRIMSON]missile launchers[/color][/pulse] along the border wall."
+Text/165/text,"Click on these ""runners"" to launch a missile and stop them."
+Text/166/text,"Remember, each runner that gets through will count as a [wave amp=20 freq=3][color=CRIMSON]strike against you[/color][/wave]."
+Text/167/text,"Too many strikes, and your shift will end... [tornado radius=3 freq=3][color=CRIMSON]permanently.[/color][/tornado]"
+Text/168/text,Each shift has a [color=DARK_ORANGE]quota of potatoes[/color] you need to process to finish your day.
+Text/169/text,"Your score keeps track of your performance compared to your fellow officers at this checkpoint, and officers in distant customs offices."
+Text/16a/text,"After each shift, you'll see a summary of your performance, and whether you succeeded or failed in your duty."
+Text/16b/text,"You'll see a breakdown of how you handled runners, and how many documents you processed."
+Text/16c/text,"Plus any bonuses you earned from processing documents quickly, perfectly aligning stamps, or perfectly striking runner potatoes."
+Text/16d/text,"You'll also receive a performance rating based on how well you processed potatoes during your shift, and up to 3 golden stamps if you exceed expectations."
+Text/16e/text,Here you can submit your score for each shift to the global database of customs officers and see how you compare to the most elite customs officers around the world.
+Text/16f/text,"If your shift was successful, you'll be able to move on by clicking ""Continue"" and starting your next shift."
+Text/170/text,That covers the basics of your duties as a Customs Officer.
+Text/171/text,"Remember: check documents carefully, stop runners, and meet your quota."
+Text/172/text,The safety and security of Spud depends on your [pulse freq=2][color=DARK_ORANGE]vigilance![/color][/pulse]

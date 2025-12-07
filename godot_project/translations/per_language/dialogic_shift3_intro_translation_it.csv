@@ -1,0 +1,19 @@
+﻿keys,it
+Text/78/text,"Un altro giorno al punto di controllo. La fila di patate si allunga più che mai, tutti sono tesi."
+Text/79/text,Nuovi ordini dall'alto. [wave amp=15 freq=3][color=DARK_ORANGE]Raddoppiamo i respingimenti[/color][/wave]. Ogni patata ritenuta non sicura viene immediatamente trattenuta.
+Text/7a/text,Ho un incarico speciale. Abbiamo informazioni su [pulse freq=2][color=CRIMSON]elementi sovversivi[/color][/pulse]. Siate vigili durante le vostre ispezioni.
+Choice/7b/text,"Sì, signore, non la deluderò"
+Choice/7c/text,Di che tipo di elementi sovversivi stiamo parlando?
+Text/7d/text,Bene. Sapevo di poter contare su di te. Andrai lontano con questo atteggiamento.
+Text/7e/text,Coloro che [color=CRIMSON]minacciano il nostro modo di vivere[/color]. Non fare troppe domande se sai cosa è meglio per te.
+Text/7f/text,"[color=STEEL_BLUE]La prego![/color] Mia moglie avrebbe dovuto essere proprio dietro di me, ma [tornado radius=2 freq=3]non è mai passata attraverso la dogana[/tornado]."
+Text/80/text,"Nessuno mi vuole dire cosa le è successo. Per favore, [color=CHARTREUSE]aiutatemi a trovarla![/color]"
+Choice/81/text,"Mi dispiace, ma non posso fare nulla."
+Choice/82/text,Lasciatemi vedere cosa posso scoprire. Nessuna promessa.
+Text/83/text,Come tutti gli altri... [color=STEEL_BLUE]Che la vostra coscienza sia tanto pesante quanto la mia.[/color]
+Text/84/text,"Grazie! Anche una piccola speranza è meglio di niente. Ecco la sua foto. Per favore, la trovi."
+Text/85/text,Ho assistito a quello scambio. [color=DARK_ORANGE]Compatire gli esclusi porta solo guai.[/color] Restate concentrati sul vostro dovere.
+Choice/7b/disabled_text,
+Choice/82/disabled_text,
+Choice/81/disabled_text,
+Choice/7c/disabled_text,

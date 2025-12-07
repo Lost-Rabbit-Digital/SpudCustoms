@@ -1,0 +1,27 @@
+﻿keys,vi
+Text/3a/text,"Điểm kiểm soát đã được xây dựng lại sau cuộc tấn công của lực lượng kháng chiến. An ninh chưa từng có, với các chương trình tuyên truyền ca ngợi ""những người bảo vệ can trường""."
+Text/3b/text,Tôi được thăng chức làm Giám đốc Khu vực về An ninh Biên giới và [pulse freq=2]Phân phối Dự trữ Gốc[/pulse].
+Text/3c/text,Russet gắn một huy hiệu nhỏ vào đồng phục của bạn. Phó Giám đốc Khu vực... vì sự trung thành kiên định của bạn với Spud.
+Text/3d/text,Tôi có một nhiệm vụ đặc biệt! Thủ tướng Idaho sẽ kiểm tra cơ sở của chúng tôi hôm nay. Bạn đã được chọn để biểu diễn.
+Text/3e/text,Bạn đã thấy lô Dự trữ Gốc mới chưa? Họ gọi nó là 'Hỗn hợp Kháng chiến' sau những gì đã xảy ra với những người bị giam giữ.
+Text/3f/text,Một số người nói rằng lực lượng kháng chiến không hoàn toàn sai. Rằng có [wave amp=15 freq=3]bằng chứng họ đang nói sự thật[/wave]...
+Choice/40/text,Hãy cẩn thận. Ngay cả việc nói như vậy bây giờ cũng nguy hiểm. (Thận trọng)
+Choice/41/text,Tôi cũng có những suy nghĩ như vậy. Điều này không có vẻ đúng. (Cảm thông)
+Text/42/text,Không phải ai cũng tin vào câu chuyện chính thức nữa. Hãy để mắt trong suốt chuyến thăm của Thủ tướng.
+Text/43/text,"Một lực lượng kháng chiến mới đang hình thành. Âm thầm hơn, cẩn thận hơn. Nếu bạn muốn biết thêm... hãy tìm kiếm huy hiệu khoai tây vàng."
+Text/44/text,CHÚ Ý: Đoàn xe của Thủ tướng Idaho đã đến. Tất cả các sĩ quan đến vị trí được chỉ định. Các giao thức kiểm tra đang có hiệu lực.
+Text/45/text,Huy hiệu của bạn cảm thấy nặng nề - phần thưởng cho sự trung thành hay dấu vết của sự nhục nhã? Sắp tới bạn sẽ đối mặt với kiến trúc sư của Dự trữ Gốc.
+Text/46/text,"Sau chương trình phát sóng phanh phui Dự trữ Gốc, các cuộc nổi dậy đã bùng phát khắp Spud. Thủ tướng Idaho vẫn còn bị bao vây trong tòa nhà hành chính."
+Text/47/text,"Idaho lên kế hoạch phát sóng cuối cùng để đổ lỗi về Dự trữ Gốc cho chúng tôi. Chúng tôi không thể để hắn viết lại lịch sử. Hôm nay, chúng tôi sẽ chấm dứt chế độ của hắn."
+Text/48/text,Bạn đã cứu mạng tôi tại nhà máy chế biến. Giờ đây chúng tôi có cơ hội cứu toàn bộ Spud.
+Text/49/text,Kiến thức của bạn về các giao thức an ninh sẽ là then chốt cho nhiệm vụ cuối cùng. Bạn đã sẵn sàng chưa?
+Choice/4a/text,Tôi đã sẵn sàng. Hãy hoàn thành những gì chúng ta đã bắt đầu.
+Choice/4b/text,Kế hoạch chính xác là gì? Tôi cần chi tiết.
+Text/4c/text,Tôi đã biết bạn sẽ không lùi bước. Bạn là một trong những [tornado radius=3 freq=2]đồng minh mạnh nhất[/tornado] của chúng tôi.
+Text/4d/text,Chúng tôi sẽ ẩn mình bằng những bộ đồng phục chính phủ. Bạn sẽ giúp omg các hệ thống an ninh. Mục tiêu của chúng tôi là bắt giữ Idaho và buộc hắn phải thú tội công khai.
+Text/4e/text,"Bạn sẽ ở Đội Alpha với Sasha, xâm nhập từ lối vào phía đông. Nhiệm vụ của bạn: [color=GREEN]bảo đảm trung tâm phát sóng[/color]."
+Text/4f/text,"Từ một viên chức hải quan trung thành trở thành chiến sĩ kháng chiến? Một sự chuyển đổi mà bạn chưa từng hình dung. Dù có chuyện gì xảy ra, Spud sẽ không bao giờ còn như cũ."
+Choice/4a/disabled_text,
+Choice/4b/disabled_text,
+Choice/41/disabled_text,
+Choice/40/disabled_text,

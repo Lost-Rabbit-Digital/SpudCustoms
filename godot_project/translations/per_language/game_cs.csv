@@ -1,0 +1,52 @@
+﻿keys,cs
+alert_border_runner,POTVRZEN UPRCHLÍK NA HRANICI!\nKlikněte pro vypuštění rakety!
+alert_rejected_fleeing,ODMÍTNUTÝ BRAMBOR NA ÚTĚKU!\nKlikněte pro vypuštění rakety!
+alert_runner_escaped,UPRCHLÍK UNIKL!\nPřidán trestný bod!
+alert_points_deducted,UPRCHLÍK UNIKL!\nPřidán trestný bod!\n-{penalty} bodů!
+alert_perfect_hit,PERFEKTNÍ ZÁSAH! +{perfect} bonusových bodů za přesnost
+alert_perfect_stamp,PERFEKTNÍ RAZÍTKO! +{points} bodů!
+alert_combo,KOMBO x{mult}! +{streak} bonusových bodů za sérii
+alert_quota_met,"Kvóta splněna, směna dokončena! \nBonus: {bonus} bodů!"
+alert_strike_removed,Trestný bod odstraněn!
+alert_correct_decision,"Učinil jste správné rozhodnutí, důstojníku.\n+{points} bodů!"
+alert_wrong_decision,"Způsobil jste zbytečné utrpení, důstojníku...\n+1 trestný bod!"
+alert_potato_should_be_approved,\nTento brambor splňuje všechny požadavky a měl být schválen.
+alert_strike_out,Překročen maximální počet trestných bodů! Vaše směna končí.
+ui_score,Skóre: {score}
+ui_quota,Kvóta: {current} / {target}
+ui_strikes,Trestné body: {current} / {max}
+ui_click_megaphone,Klikněte na megafon pro přivolání dalšího bramboru
+ui_drag_document,Přetáhněte dokument na kontrolní stůl
+ui_stamp_document,Vyberte razítko pro schválení nebo odmítnutí
+ui_check_violations,Zkontrolujte porušení dokumentů
+Strike removed!,Trestný bod odstraněn!
+BORDER RUNNER DETECTED!\nClick to launch missile!,POTVRZEN UPRCHLÍK NA HRANICI!\nKlikněte pro vypuštění rakety!
+REJECTED POTATO FLEEING!\nClick to launch missile!,ODMÍTNUTÝ BRAMBOR NA ÚTĚKU!\nKlikněte pro vypuštění rakety!
+RUNNER ESCAPED!\nStrike added!,UPRCHLÍK UNIKL!\nPřidán trestný bod!
+Click megaphone to call the next potato,Klikněte na megafon pro přivolání dalšího bramboru
+Drag document to inspection table,Přetáhněte dokument na kontrolní stůl
+Select a stamp to approve or reject,Vyberte razítko pro schválení nebo odmítnutí
+Check for document violations,Zkontrolujte porušení dokumentů
+rule_explanation_header,VYSVĚTLENÍ PRAVIDLA:
+rule_explanation_fresh,Podívejte se na pole 'Stav'. Pokud říká něco jiného než 'Čerstvý' - ODMÍTNOUT
+rule_explanation_sweet_potato,Podívejte se na pole 'Typ'. Pokud říká 'Sladká brambora' - ODMÍTNOUT (žádná povolení)
+rule_explanation_chip_hill,Podívejte se na pole 'Země'. Pokud říká 'Chip Hill' - ODMÍTNOUT (zakázáno)
+rule_explanation_age,Podívejte se na pole 'Datum narození'. Vypočítejte věk a zkontrolujte podle pravidla
+rule_explanation_gender,Podívejte se na pole 'Pohlaví' a zkontrolujte podle aktuálního pravidla
+rule_footer_text,Tato pravidla musí být vynucována pro VŠECHNY brambory
+rule_tutorial_hint,Potřebujete pomoc? Klikněte na jakékoli pravidlo pro vysvětlení
+alert_correct_decision_detailed,SPRÁVNÉ ROZHODNUTÍ! +{points} bodů\n{reason}
+alert_wrong_decision_detailed,ŠPATNÉ ROZHODNUTÍ! Přidán trestný bod!\n{reason}
+alert_reason_approved,Brambora splňuje všechny požadavky - SCHVÁLENO
+alert_reason_should_reject,Měli jste tuto bramboru ODMÍTNOUT
+tutorial_check_type,Zkontrolujte pole 'Typ' v pasu
+tutorial_check_condition,Zkontrolujte pole 'Stav' v pasu
+tutorial_check_country,Zkontrolujte pole 'Země' v pasu
+tutorial_check_age,Zkontrolujte 'Datum narození' pro výpočet věku
+tutorial_check_gender,Zkontrolujte pole 'Pohlaví' v pasu
+alert_streak_bonus_minigame,5 v řadě! BONUSOVÁ MINIHRA!
+alert_perfect_stamps_bonus_minigame,Perfektní razítka! BONUSOVÁ MINIHRA!
+alert_new_minigame_unlocked,Nová minihra odemčena: {name}!
+alert_minigame_bonus,Bonus z minihry: +{bonus} bodů!
+high_score_display,Nejvyšší skóre: {score}
+new_high_score,NOVÉ NEJVYŠŠÍ SKÓRE!

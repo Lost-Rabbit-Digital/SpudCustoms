@@ -1,0 +1,27 @@
+﻿keys,cs
+Text/3a/text,"Kontrolní bod byl znovu postaven po útoku odporu. Bezpečnost je bezprecedentní, s propagandistickými vysíláními chválícími ""statečné obránce""."
+Text/3b/text,Byl jsem povýšen na Regionálního ředitele hraniční bezpečnosti a [pulse freq=2]Distribuce kořenové rezervy[/pulse].
+Text/3c/text,Russet připne malou medaili na vaši uniformu. Asistent regionálního ředitele... za vaši neochvějnou loajalitu vůči Spud.
+Text/3d/text,Mám speciální úkol! Premiér Idaho bude dnes inspektovat naše zařízení. Byl jste vybrán k demonstraci.
+Text/3e/text,"Viděli jste novou dávku Kořenové rezervy? Nazývají ji 'Směs odporu' po tom, co se stalo těm zadrženým."
+Text/3f/text,"Někteří říkají, že odpor nebyl zcela špatný. Že existují [wave amp=15 freq=3]důkazy, že mluvili pravdu[/wave]..."
+Choice/40/text,Buď opatrný. Už jen takto mluvit je nebezpečné. (Opatrně)
+Choice/41/text,Měl jsem stejné myšlenky. Tohle se nezdá být správné. (Soucitně)
+Text/42/text,Ne všichni už věří oficiálnímu příběhu. Buď pozorný během návštěvy premiéra.
+Text/43/text,"Vytváří se nový odpor. Tišší, opatrnější. Pokud chceš vědět víc... sleduj žlutý symbol bramboru."
+Text/44/text,POZOR: Premiérův Idaho konvoj dorazil. Všichni důstojníci na přidělená stanoviště. Inspekční protokoly v platnosti.
+Text/45/text,"Vaše medaile se zdá být těžká - odměna za loajalitu, nebo znamení hanby? Brzy se setkáte s architektem Kořenové rezervy."
+Text/46/text,Po vysílání odhalujícím Kořenovou rezervu vypukly nepokoje po celém Spud. Premiér Idaho zůstává barikádován v administrativní budově.
+Text/47/text,"Idaho plánuje poslední vysílání, aby svalil vinu za Kořenovou rezervu na nás. Nemůžeme mu dovolit přepsat dějiny. Dnes ukončíme jeho vládu."
+Text/48/text,Zachránil jste mi život v zpracovatelském závodě. Nyní máme šanci zachránit celý Spud.
+Text/49/text,Vaše znalosti bezpečnostních protokolů budou klíčové pro závěrečnou misi. Jste připraven?
+Choice/4a/text,"Jsem připraven. Dokončeme, co jsme začali."
+Choice/4b/text,Jaký je přesně plán? Potřebuji detaily.
+Text/4c/text,"Věděl jsem, že neustoupíte. Jste jeden z našich [tornado radius=3 freq=2]nejsilnějších spojenců[/tornado]."
+Text/4d/text,Infiltrujeme se pomocí vládních uniforem. Pomůžete obejít bezpečnostní systémy. Naším cílem je zajmout Idaha a vynutit si veřejné doznání.
+Text/4e/text,"Budete v Týmu Alfa s Sašou, průnikem východního vstupu. Váš cíl: [color=GREEN]zajistit vysílací centrum[/color]."
+Text/4f/text,"Z loajálního celního úředníka bojovníkem odporu? Transformace, kterou jste nikdy nepředpokládal. Ať se stane cokoliv, Spud již nikdy nebude stejný."
+Choice/4a/disabled_text,
+Choice/4b/disabled_text,
+Choice/41/disabled_text,
+Choice/40/disabled_text,

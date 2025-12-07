@@ -1,0 +1,34 @@
+﻿keys,it
+Text/b8/text,"La struttura di confine è in completo isolamento, con guardie armate che pattugliano ogni corridoio."
+Text/b9/text,[pulse freq=3][color=RED]ATTENZIONE! Situazione di sicurezza LIVELLO ROSSO![/color][/pulse] Documenti classificati sono stati rubati la scorsa notte.
+Text/ba/text,Abbiamo un [tornado radius=4 freq=3][color=CRIMSON]traditore tra noi[/color][/tornado]. Chiunque nasconda informazioni sarà trattato come complice.
+Text/bb/text,"Tutti gli ufficiali, mettetevi in fila per [wave amp=15 freq=2][color=DARK_ORANGE]la scansione di sicurezza[/color][/wave]. Coloro con risposte di stress elevate saranno segnalati."
+Text/bc/text,Hai visto cosa sta succedendo fuori? Opuscoli ovunque che mostrano che [color=DARK_VIOLET]Root Reserve[/color] è fatto di... [pulse freq=3][color=CRIMSON]di noi[/color][/pulse].
+Choice/bd/text,Abbassa la voce. Siamo tutti sotto sorveglianza.
+Choice/be/text,Ho sentito gli stessi rumors. È orribile se è vero.
+Choice/bf/text,È propaganda ridicola. Non diffondere simili bugie.
+Text/c0/text,Hai ragione. Ma se fosse vero... cosa ci renderebbe?
+Text/c1/text,Mio cugino è stato respinto il mese scorso. Significa...? [color=CHARTREUSE]Non posso continuare così[/color].
+Text/c2/text,La loro espressione diventa guardinga. Certo. Fedele a Spud per sempre.
+Text/c3/text,Dichiari la sua posizione ieri notte tra le 22:00 e le 04:00.
+Choice/c4/text,"Ero nei miei alloggi per tutta la notte, dormivo."
+Choice/c5/text,Preferirei parlare prima con il mio rappresentante legale.
+Text/c6/text,I suoi livelli di stress indicano [color=YELLOW]inganno[/color]. Tuttavia... non conclusivo. Può andare per ora.
+Text/c7/text,"Rappresentante legale? Questa è una procedura di sicurezza, non un processo. Il suo rifiuto è stato annotato."
+Text/c8/text,"Sta funzionando. I manifesti hanno causato scompiglio, ma [color=DARK_ORANGE]Russet sospetta di noi[/color]."
+Text/c9/text,Tieni d'occhio gli alleati della nostra organizzazione durante il turno di oggi. [color=CHARTREUSE]Li riconoscerai[/color].
+Text/ca/text,"Se riesci a farli passare in sicurezza, usa [color=CHARTREUSE]il segno speciale di cui abbiamo parlato[/color]."
+Choice/cb/text,Ne vale il rischio. Ci sto.
+Choice/cc/text,Sta diventando troppo pericoloso. Forse dovremmo mantenere un basso profilo.
+Text/cd/text,"Sapevo di poter contare su di te. Quando tutto questo sarà finito, [color=CHARTREUSE]Spud saprà chi erano i veri eroi[/color]."
+Text/ce/text,Siamo ben oltre quel punto. Mantenere un basso profilo non ci salverà. [color=CHARTREUSE]Solo abbattere il sistema lo farà[/color].
+Text/cf/text,Ogni stazione ora ha il nuovo [color=DARK_ORANGE]sistema RealityScan[/color]. Rileva marcature e falsificazioni non autorizzate.
+Text/d0/text,Tutti i documenti devono essere scansionati prima dell'approvazione. I [color=CRIMSON]traditori saranno estirpati[/color]. Lo garantisco.
+Text/d1/text,"Aiutare i membri della resistenza è appena diventato molto più pericoloso, ma [color=CHARTREUSE]la verità deve diffondersi[/color]."
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,

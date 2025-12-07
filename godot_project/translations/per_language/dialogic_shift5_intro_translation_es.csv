@@ -1,0 +1,23 @@
+﻿keys,es
+Text/a6/text,La instalación fronteriza se siente diferente hoy. Tensa. Patrullas de seguridad en mayor número mientras un silencio cauteloso reemplaza la charla.
+Text/a7/text,"Anoche, se descubrieron [pulse freq=2][color=CRIMSON]materiales prohibidos[/color][/pulse]. Panfletos que contienen mentiras sobre [color=DARK_VIOLET]Root Reserve[/color]."
+Text/a8/text,Estamos implementando [wave amp=15 freq=2][color=DARK_ORANGE]protocolos de nivel de amenaza NARANJA[/color][/wave]. Todos los oficiales sujetos a controles de lealtad. Todos los viajeros enfrentan máximo escrutinio.
+Text/a9/text,Está funcionando. Los panfletos se están difundiendo. La gente está haciendo preguntas sobre [color=DARK_VIOLET]Root Reserve[/color].
+Text/aa/text,Tengo fuentes que me dicen que hay un registro de envíos en la oficina de Russet - manifiestos de transporte que podrían [tornado radius=3 freq=2][color=CHARTREUSE]probarlo todo[/color][/tornado].
+Text/ab/text,"Necesito que me ayudes a conseguirlo. Esta noche, después del último turno. ¿Puedo contar contigo?"
+Choice/ac/text,Estoy dentro. Expongamos la verdad.
+Choice/ad/text,"No sé, Sasha... esto podría ser peligroso."
+Text/ae/text,Gracias a Dios. Sabía que tenías [color=CHARTREUSE]raíces más fuertes que los demás[/color]. Nos encontraremos a medianoche.
+Text/af/text,A veces tenemos que [color=CHARTREUSE]arriesgarnos a ser aplastados para hacer lo correcto[/color]. Piénsalo.
+Text/b0/text,"[color=DARK_ORANGE]Control de lealtad[/color]. Por favor, indica tu nombre e identificación de oficial. Luego dime por qué sirves a Spud."
+Choice/b1/text,Sirvo para proteger nuestras fronteras de influencias peligrosas.
+Choice/b2/text,Sirvo para asegurar que todos reciban un trato justo.
+Text/b3/text,"Buena respuesta. Spud necesita protectores leales. El escáner muestra verde. Continúe, oficial."
+Text/b4/text,"Las cejas del oficial se levantan. ¿Trato justo? El escáner parpadea en [color=DARK_ORANGE]ámbar[/color]. Recuerde, nuestra principal preocupación es la seguridad, no la justicia."
+Text/b5/text,La cuota de hoy ha sido aumentada. Cualquiera con materiales sospechosos debe ser marcado para [color=DARK_VIOLET]procesamiento especial[/color].
+Text/b6/text,Estaré [color=DARK_ORANGE]vigilando tus decisiones[/color] muy cuidadosamente hoy.
+Text/b7/text,"Esta noche podría cambiarlo todo. Pero primero, [color=YELLOW]sobrevive al día sin levantar sospechas[/color]."
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,

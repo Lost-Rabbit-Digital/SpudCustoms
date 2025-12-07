@@ -1,0 +1,19 @@
+﻿keys,hu
+Text/96/text,"Óvatosan lépdelsz a sötétbe burkolt folyosón, szíved vadul ver, miközben elkerülöd a biztonsági járőröket."
+Text/97/text,"[color=CHARTREUSE]Ez az eszköz le fogja tiltani a zárat[/color] Russet irodájában. Riasztókat indítok el a keleti szárnyban, hogy eltereljem a figyelmet. Öt perced lesz."
+Text/98/text,A nyilvántartásoknak az ő mappájában kell lenniük. [color=CRIMSON]Piros dosszié 'RR Szállítás' felirattal[/color]. Ne hagyj nyomokat a keresésedről.
+Text/99/text,"Megtalálod a vastag [color=CRIMSON]piros dossziét ""RR Szállítás"" felirattal[/color] a mappában."
+Text/9a/text,"Benne vannak a nyilvántartások, amelyek megegyeznek a visszautasított krumplik számával, és Idaho miniszterelnökének utasítása, amely engedélyezi ""[pulse freq=3][color=DARK_VIOLET]a határon visszautasított áruk teljes körű felhasználását az RR termeléshez.[/color][/pulse]"""
+Text/9b/text,"Lépések közelednek az iroda ajtajához. ""[wave amp=15 freq=3][color=YELLOW]Furcsa, pedig esküdni mertem volna, hogy lezártam.[/color][/wave]"""
+Choice/9c/text,Bújj el az asztal alatt
+Choice/9d/text,Ugorj ki az ablakon
+Text/9e/text,"Becsúszol Russet asztala alá, amikor belép, szíved hevesen ver. Leül, lábai centiméterekre vannak az arcodtól."
+Text/9f/text,"Russet jelentkezem. Mi az? [color=CHARTREUSE]Újabb riasztás?[/color] Máris megyek. Elhagyja a helyiséget, te pedig menekülsz."
+Text/a0/text,"Kitéped az ablakot és kiugrasz. Szerencsére csak egy emelettel lejjebb van. Egy őr kiált: ""[color=RED]Állj! Megállj![/color]"""
+Text/a1/text,Végigszáguldasz a területen és sikerül lerázni az üldözőidet.
+Text/a2/text,Megszerezted?
+Text/a3/text,"Átadod a bizonyítékokat, elmagyarázod, mit találtál."
+Text/a4/text,Ez mindent bizonyít. Az ellenállás másolatokat készít. [tornado radius=3 freq=2]Terjeszd a igazságot mindenütt.[/tornado] Nem hallgattathatnak el mindnyájunkat.
+Text/a5/text,"Átléptél egy vonalat. [wave amp=20 freq=3][color=YELLOW]Nincs visszaút.[/color][/wave] Amikor az igazság szétterjedik, Spud át fog alakulni."
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,

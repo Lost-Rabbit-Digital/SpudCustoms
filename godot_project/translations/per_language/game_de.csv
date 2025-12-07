@@ -1,0 +1,52 @@
+﻿keys,de
+alert_border_runner,"GRENZLÄUFER ENTDECKT!\nKlicken Sie, um Rakete zu starten!"
+alert_rejected_fleeing,"ABGELEHNTER KARTOFFEL FLIEHT!\nKlicken Sie, um Rakete zu starten!"
+alert_runner_escaped,LÄUFER ENTKOMMEN!\nStrike hinzugefügt!
+alert_points_deducted,LÄUFER ENTKOMMEN!\nStrike hinzugefügt!\n-{penalty} Punkte!
+alert_perfect_hit,PERFEKTER TREFFER! +{perfect} Präzisionsbonus-Punkte
+alert_perfect_stamp,PERFEKTER STEMPEL! +{points} Punkte!
+alert_combo,COMBO x{mult}! +{streak} Combo-Bonuspunkte
+alert_quota_met,"Quote erfüllt, Schicht beendet! \nBonus: {bonus} Punkte!"
+alert_strike_removed,Strike entfernt!
+alert_correct_decision,"Sie haben die richtige Entscheidung getroffen, Offizier.\n+{points} Punkte!"
+alert_wrong_decision,"Sie haben unnötiges Leid verursacht, Offizier...\n+1 Strike!"
+alert_potato_should_be_approved,\nDiese Kartoffel erfüllt alle Anforderungen und hätte genehmigt werden sollen.
+alert_strike_out,Maximale Strikes überschritten! Ihre Schicht ist vorbei.
+ui_score,Punktestand: {score}
+ui_quota,Quote: {current} / {target}
+ui_strikes,Verwarnungen: {current} / {max}
+ui_click_megaphone,"Klicken Sie auf das Megafon, um die nächste Kartoffel zu rufen"
+ui_drag_document,Ziehen Sie das Dokument auf den Inspektionstisch
+ui_stamp_document,Wählen Sie einen Stempel zum Genehmigen oder Ablehnen
+ui_check_violations,Überprüfen Sie Dokumentenverstöße
+Strike removed!,Strike entfernt!
+BORDER RUNNER DETECTED!\nClick to launch missile!,"GRENZLÄUFER ENTDECKT!\nKlicken Sie, um Rakete zu starten!"
+REJECTED POTATO FLEEING!\nClick to launch missile!,"ABGELEHNTER KARTOFFEL FLIEHT!\nKlicken Sie, um Rakete zu starten!"
+RUNNER ESCAPED!\nStrike added!,LÄUFER ENTKOMMEN!\nStrike hinzugefügt!
+Click megaphone to call the next potato,"Klicken Sie auf das Megafon, um die nächste Kartoffel zu rufen"
+Drag document to inspection table,Ziehen Sie das Dokument auf den Inspektionstisch
+Select a stamp to approve or reject,Wählen Sie einen Stempel zum Genehmigen oder Ablehnen
+Check for document violations,Überprüfen Sie Dokumentenverstöße
+rule_explanation_header,REGEL ERKLÄRUNG:
+rule_explanation_fresh,Schauen Sie auf das Feld 'Zustand'. Wenn es etwas anderes als 'Frisch' sagt - ABLEHNEN
+rule_explanation_sweet_potato,Schauen Sie auf das Feld 'Typ'. Wenn es 'Süßkartoffel' sagt - ABLEHNEN (keine Genehmigungen)
+rule_explanation_chip_hill,Schauen Sie auf das Feld 'Land'. Wenn es 'Chip Hill' sagt - ABLEHNEN (verboten)
+rule_explanation_age,Schauen Sie auf das Feld 'Geburtsdatum'. Berechnen Sie das Alter und prüfen Sie gegen die Regel
+rule_explanation_gender,Schauen Sie auf das Feld 'Geschlecht' und prüfen Sie gegen die aktuelle Regel
+rule_footer_text,Diese Regeln müssen für ALLE Kartoffeln durchgesetzt werden
+rule_tutorial_hint,Brauchen Sie Hilfe? Klicken Sie auf eine Regel für eine Erklärung
+alert_correct_decision_detailed,RICHTIGE ENTSCHEIDUNG! +{points} Punkte\n{reason}
+alert_wrong_decision_detailed,FALSCHE ENTSCHEIDUNG! Strike hinzugefügt!\n{reason}
+alert_reason_approved,Kartoffel erfüllt alle Anforderungen - GENEHMIGT
+alert_reason_should_reject,Sie hätten diese Kartoffel ABLEHNEN sollen
+tutorial_check_type,Überprüfen Sie das Feld 'Typ' im Pass
+tutorial_check_condition,Überprüfen Sie das Feld 'Zustand' im Pass
+tutorial_check_country,Überprüfen Sie das Feld 'Land' im Pass
+tutorial_check_age,Überprüfen Sie das 'Geburtsdatum' zur Altersberechnung
+tutorial_check_gender,Überprüfen Sie das Feld 'Geschlecht' im Pass
+alert_streak_bonus_minigame,5 hintereinander! BONUS-MINISPIEL!
+alert_perfect_stamps_bonus_minigame,Perfekte Stempel! BONUS-MINISPIEL!
+alert_new_minigame_unlocked,Neues Minispiel freigeschaltet: {name}!
+alert_minigame_bonus,Minispiel-Bonus: +{bonus} Punkte!
+high_score_display,Highscore: {score}
+new_high_score,NEUER HIGHSCORE!

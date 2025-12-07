@@ -1,0 +1,27 @@
+﻿keys,sv
+Text/3a/text,"Kontrollpunkten har återuppbyggts efter motståndsattacken. Säkerheten är utan motstycke, med propagandautsändningar som hyllar de ""modiga försvararna""."
+Text/3b/text,Jag har befordrats till Regionaldirektör för Gränssäkerhet och [pulse freq=2]Rotreservdistribution[/pulse].
+Text/3c/text,Russet fäster en liten medalj på din uniform. Biträdande Regionaldirektör... för din orubbliga lojalitet till Spud.
+Text/3d/text,Jag har ett särskilt uppdrag! Premiärminister Idaho kommer att inspektera vår anläggning idag. Du har valts ut för demonstration.
+Text/3e/text,Har du sett den nya batchen Rotreserv? De kallar den 'Motståndsbrygd' efter vad som hände de tillfångatagna.
+Text/3f/text,Vissa säger att motståndet inte var helt fel. Att det finns [wave amp=15 freq=3]bevis för att de talade sanning[/wave]...
+Choice/40/text,Var försiktig. Även att prata så här är farligt nu. (Varsam)
+Choice/41/text,Jag har haft samma tankar. Detta känns inte rätt. (Medkännande)
+Text/42/text,Inte alla tror längre på den officiella berättelsen. Håll ögonen öppna under premiärministerns besök.
+Text/43/text,"Ett nytt motstånd bildas. Tystare, mer försiktigt. Om du vill veta mer... se efter den gula potatisemblemet."
+Text/44/text,UPPMÄRKSAMHET: Premiärminister Idahos kortege har anlänt. Alla officerare till tilldelade stationer. Inspektionsprotokoll i kraft.
+Text/45/text,Din medalj känns tung - en belöning för lojalitet eller ett tecken på skam? Snart kommer du att möta arkitekten bakom Rotreserven.
+Text/46/text,Efter sändningen som avslöjade Rotreserven har uppror brutit ut över hela Spud. Premiärminister Idaho förblir barrikaderad i administrationsbyggnaden.
+Text/47/text,Idaho planerar en sista sändning för att lägga skulden för Rotreserven på oss. Vi kan inte låta honom skriva om historien. Idag avslutar vi hans regim.
+Text/48/text,Du räddade mitt liv på behandlingsanläggningen. Nu har vi en chans att rädda hela Spud.
+Text/49/text,Din kunskap om säkerhetsprotokollen kommer att vara avgörande för det slutliga uppdraget. Är du redo?
+Choice/4a/text,Jag är redo. Låt oss slutföra det vi påbörjat.
+Choice/4b/text,Vad är exakt planen? Jag behöver detaljer.
+Text/4c/text,Jag visste att du inte skulle backa. Du är en av våra [tornado radius=3 freq=2]starkaste allierade[/tornado].
+Text/4d/text,Vi kommer att infiltrera med hjälp av statliga uniformer. Du kommer att hjälpa till att kringgå säkerhetssystemen. Vårt mål är att fånga Idaho och tvinga fram en offentlig bekännelse.
+Text/4e/text,"Du kommer att vara i Team Alfa med Sasha, som tränger in genom den östra ingången. Ditt uppdrag: [color=GREEN]säkra sändningscentret[/color]."
+Text/4f/text,Från lojal tulltjänsteman till motståndsकämpе? En förvandling du aldrig skulle ha föreställt dig. Oavsett vad som händer kommer Spud aldrig att vara detsamma igen.
+Choice/4a/disabled_text,
+Choice/4b/disabled_text,
+Choice/41/disabled_text,
+Choice/40/disabled_text,

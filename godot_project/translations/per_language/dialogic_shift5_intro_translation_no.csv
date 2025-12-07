@@ -1,0 +1,23 @@
+﻿keys,no
+Text/a6/text,Grenseanlegget føles annerledes i dag. Spent. Sikkerhetspatruljer i større antall mens forsiktig stillhet erstatter småprat.
+Text/a7/text,I går kveld ble [pulse freq=2][color=CRIMSON]forbudte materialer[/color][/pulse] oppdaget. Pamfletter som inneholder løgner om [color=DARK_VIOLET]Root Reserve[/color].
+Text/a8/text,Vi implementerer [wave amp=15 freq=2][color=DARK_ORANGE]trusselnivå ORANSJE protokoller[/color][/wave]. Alle offiserer er underlagt lojalitetsscreening. Alle reisende står overfor maksimal granskning.
+Text/a9/text,Det fungerer. Pamflettene sprer seg. Folk stiller spørsmål om [color=DARK_VIOLET]Root Reserve[/color].
+Text/aa/text,Jeg har kilder som forteller meg at det finnes en forsendelseslogg i Russets kontor - transportmanifester som kan [tornado radius=3 freq=2][color=CHARTREUSE]bevise alt[/color][/tornado].
+Text/ab/text,"Jeg trenger at du hjelper meg å få tak i den. I kveld, etter siste skift. Kan jeg stole på deg?"
+Choice/ac/text,Jeg er med. La oss avsløre sannheten.
+Choice/ad/text,"Jeg vet ikke, Sasha... dette kan være farlig."
+Text/ae/text,Gudskjelov. Jeg visste at du hadde [color=CHARTREUSE]sterkere røtter enn de andre[/color]. Vi møtes ved midnatt.
+Text/af/text,Noen ganger må vi [color=CHARTREUSE]risikere å bli knust for å gjøre det som er rett[/color]. Tenk på det.
+Text/b0/text,[color=DARK_ORANGE]Lojalitetssjekk[/color]. Vennligst oppgi navn og offiser-ID. Fortell meg deretter hvorfor du tjener Spud.
+Choice/b1/text,Jeg tjener for å beskytte grensene våre mot farlige påvirkninger.
+Choice/b2/text,Jeg tjener for å sikre at alle får rettferdig behandling.
+Text/b3/text,"Godt svar. Spud trenger lojale beskyttere. Skanneren viser grønt. Fortsett, offiser."
+Text/b4/text,"Offiserens øyenbryn hever seg. Rettferdig behandling? Skanneren blinker [color=DARK_ORANGE]ravgul[/color]. Husk, vår primære bekymring er sikkerhet, ikke rettferdighet."
+Text/b5/text,Dagens kvote har blitt økt. Alle med mistenkelige materialer skal flagges for [color=DARK_VIOLET]spesialbehandling[/color].
+Text/b6/text,Jeg vil [color=DARK_ORANGE]overvåke beslutningene dine[/color] veldig nøye i dag.
+Text/b7/text,"I kveld kan alt endre seg. Men først, [color=YELLOW]overlev dagen uten å vekke mistanke[/color]."
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,
