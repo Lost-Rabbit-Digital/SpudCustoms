@@ -1,0 +1,26 @@
+keys,en
+Text/200/text,"Hey, new spud! Tough shift, huh? Name's Murphy. Been here three seasons now."
+Text/201/text,"I saw you talking to Sasha earlier. She's... [color=STEEL_BLUE]different[/color]. Good different, I think."
+Choice/202/text,She seems nice. Gave me some advice about staying alert.
+Choice/203/text,Just introductions. Nothing special.
+Text/204/text,Murphy glances around nervously. Yeah, she's got [color=YELLOW]good instincts[/color]. Listen to her.
+Text/205/text,"Between you and me? That radio broadcast about ""missing potatoes""... my cousin went missing last month. Failed his inspection."
+Text/206/text,"Smart. Keep your head down, do your job. That's what I tell myself every day."
+Text/207/text,Murphy's voice drops. Though sometimes I wonder where all those rejected potatoes actually go...
+Text/208/text,In the cafeteria, officers eat their evening rations in tired silence. The [color=DARK_VIOLET]Root Reserve[/color] supplement sits in small cups at each table.
+Text/209/text,"You stare at the thick, purple-brown paste. Everyone eats it without question. It's supposed to be nutritious."
+Choice/20a/text,Eat the Root Reserve like everyone else
+Choice/20b/text,Push it aside - you're not hungry
+Text/20c/text,"The taste is... earthy. Rich. Something about it feels [color=STEEL_BLUE]uncomfortably familiar[/color], but you can't place why."
+Text/20d/text,"A senior officer notices. ""Waste not, want not, sprout. That's [pulse freq=2][color=DARK_VIOLET]premium nutrition[/color][/pulse] right there."""
+Text/20e/text,You mumble an excuse about an upset stomach. The officer shrugs and moves on.
+Text/20f/text,"Back in your quarters, you can't shake what Sasha said. ""[color=YELLOW]Not everything is as it seems.[/color]"""
+Text/210/text,"You asked Russet about rejected potatoes on your first day. His answer was evasive. ""[color=VIOLET]Processed. According to protocol.[/color]"""
+Text/211/text,"Processed [color=STEEL_BLUE]how[/color], exactly?"
+Text/212/text,You were so eager to serve. So proud to be chosen. But pride doesn't explain the [color=CRIMSON]missing potatoes[/color].
+Text/213/text,"The radio said reports of disappearances ""continue."" That means it's been happening for a while."
+Text/214/text,"Sleep comes slowly. When it does, you dream of [wave amp=15 freq=2][color=DARK_VIOLET]purple rivers[/color][/wave] flowing beneath the checkpoint."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,
