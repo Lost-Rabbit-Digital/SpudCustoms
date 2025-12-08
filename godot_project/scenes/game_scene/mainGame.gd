@@ -766,14 +766,12 @@ func _on_shift_summary_continue():
 	GameState.set_high_score(completed_shift, diff_level, score_val)
 
 	# Check if a new minigame will be unlocked in the next shift
+	# Store it in GameStateManager so it can be shown after the next shift starts
 	var next_shift = completed_shift + 1
 	var newly_unlocked = _get_newly_unlocked_minigame(next_shift)
-	if newly_unlocked != "":
-		# Show unlock notification (the minigame will be available next shift)
-		EventBus.show_alert(
-			tr("alert_new_minigame_unlocked").format({"name": newly_unlocked.replace("_", " ").capitalize()}),
-			true, 3.0
-		)
+	if newly_unlocked != "" and GameStateManager:
+		# Store the unlock notification to show after next shift starts
+		GameStateManager.set_pending_minigame_unlock(newly_unlocked)
 
 	# Advance the shift and story state
 	# REFACTORED: Use EventBus requests instead of direct calls
@@ -2392,6 +2390,9 @@ func _on_intro_dialogue_finished():
 	update_quota_display()
 	update_strikes_display()
 
+	# Show any pending unlock notifications after a short delay
+	_show_pending_unlock_notifications()
+
 
 func _on_end_dialogue_finished():
 	# This is called after an end dialogue completes
@@ -2790,6 +2791,31 @@ func _play_shift_start_sound() -> void:
 	sfx_player.volume_db = -8.0  # Subtle but noticeable
 	sfx_player.pitch_scale = randf_range(0.95, 1.05)
 	sfx_player.play()
+
+
+## Shows any pending unlock notifications after shift starts
+## Delayed to give player time to see them before gameplay gets busy
+func _show_pending_unlock_notifications() -> void:
+	if not GameStateManager:
+		return
+
+	var pending_minigame = GameStateManager.get_and_clear_pending_minigame_unlock()
+	if pending_minigame == "":
+		return
+
+	# Wait a few seconds after shift starts so player has time to read
+	await get_tree().create_timer(2.5).timeout
+
+	# Make sure scene is still valid after the wait
+	if not is_instance_valid(self) or is_shift_ending:
+		return
+
+	# Show the unlock notification
+	var display_name = pending_minigame.replace("_", " ").capitalize()
+	EventBus.show_alert(
+		tr("alert_new_minigame_unlocked").format({"name": display_name}),
+		true, 4.0
+	)
 
 
 ## Plays a dramatic failure sound when game over occurs
