@@ -61,6 +61,9 @@ var _preview_sprite: Sprite2D = null
 var _preview_background: ColorRect = null
 var _current_preview_tween: Tween = null
 
+## Currently hovered poster (for manual mouse tracking)
+var _currently_hovered_poster: String = ""
+
 # ============================================================================
 # INITIALIZATION
 # ============================================================================
@@ -76,7 +79,7 @@ func _ready() -> void:
 
 
 func _setup_poster_references() -> void:
-	"""Cache references to poster nodes and add hover detection"""
+	"""Cache references to poster nodes"""
 	if not posters_container:
 		push_warning("SceneVisualsManager: PostersContainer not found")
 		return
@@ -89,39 +92,8 @@ func _setup_poster_references() -> void:
 			poster_node.modulate.a = 0.0
 			poster_node.visible = true  # Keep visible but transparent for animation
 			_visible_posters[poster_name] = false
-
-			# Add Area2D for hover detection
-			_setup_poster_hover_area(poster_node, poster_name)
 		else:
 			push_warning("SceneVisualsManager: Poster node '%s' not found" % poster_name)
-
-
-func _setup_poster_hover_area(poster: Sprite2D, poster_name: String) -> void:
-	"""Add Area2D with collision shape for hover detection on a poster"""
-	var area = Area2D.new()
-	area.name = "HoverArea"
-	area.input_pickable = true
-	area.set_meta("poster_name", poster_name)
-
-	# Create collision shape based on poster size
-	var collision = CollisionShape2D.new()
-	var shape = RectangleShape2D.new()
-
-	# Get poster texture size and adjust for scale
-	if poster.texture:
-		var tex_size = poster.texture.get_size()
-		shape.size = tex_size
-	else:
-		shape.size = Vector2(100, 150)  # Default size
-
-	collision.shape = shape
-	area.add_child(collision)
-
-	# Connect hover signals
-	area.mouse_entered.connect(_on_poster_mouse_entered.bind(poster_name))
-	area.mouse_exited.connect(_on_poster_mouse_exited)
-
-	poster.add_child(area)
 
 
 func _setup_hover_preview() -> void:
@@ -160,6 +132,71 @@ func _setup_hover_preview() -> void:
 func _connect_signals() -> void:
 	"""Connect to EventBus signals for shift changes"""
 	EventBus.shift_advanced.connect(_on_shift_advanced)
+
+
+func _input(event: InputEvent) -> void:
+	"""Handle mouse movement for poster hover detection"""
+	if event is InputEventMouseMotion:
+		_check_poster_hover(event.global_position)
+
+
+func _check_poster_hover(mouse_pos: Vector2) -> void:
+	"""Check if mouse is hovering over any visible poster"""
+	var hovered_poster: String = ""
+
+	for poster_name in _posters.keys():
+		# Only check visible posters
+		if not _visible_posters.get(poster_name, false):
+			continue
+
+		var poster: Sprite2D = _posters[poster_name]
+		if not is_instance_valid(poster):
+			continue
+
+		# Get poster bounds in global coordinates
+		var bounds: Rect2 = _get_poster_global_bounds(poster)
+		if bounds.has_point(mouse_pos):
+			hovered_poster = poster_name
+			break
+
+	# Handle hover state changes
+	if hovered_poster != _currently_hovered_poster:
+		if _currently_hovered_poster != "":
+			_on_poster_mouse_exited()
+		if hovered_poster != "":
+			_on_poster_mouse_entered(hovered_poster)
+		_currently_hovered_poster = hovered_poster
+
+
+func _get_poster_global_bounds(poster: Sprite2D) -> Rect2:
+	"""Calculate the global bounds rectangle for a poster sprite"""
+	if not poster.texture:
+		return Rect2()
+
+	var tex_size: Vector2 = poster.texture.get_size()
+	var global_transform: Transform2D = poster.get_global_transform()
+
+	# For centered sprites, the texture is drawn from -half_size to +half_size
+	var half_size: Vector2 = tex_size / 2.0 if poster.centered else Vector2.ZERO
+	var local_rect: Rect2 = Rect2(-half_size, tex_size)
+
+	# Transform the four corners to global space and compute bounding rect
+	var corners: Array[Vector2] = [
+		global_transform * local_rect.position,
+		global_transform * Vector2(local_rect.position.x + local_rect.size.x, local_rect.position.y),
+		global_transform * Vector2(local_rect.position.x, local_rect.position.y + local_rect.size.y),
+		global_transform * (local_rect.position + local_rect.size)
+	]
+
+	var min_pos: Vector2 = corners[0]
+	var max_pos: Vector2 = corners[0]
+	for corner in corners:
+		min_pos.x = min(min_pos.x, corner.x)
+		min_pos.y = min(min_pos.y, corner.y)
+		max_pos.x = max(max_pos.x, corner.x)
+		max_pos.y = max(max_pos.y, corner.y)
+
+	return Rect2(min_pos, max_pos - min_pos)
 
 
 func _initialize_for_current_shift() -> void:
@@ -256,15 +293,11 @@ func get_visible_posters() -> Array:
 
 func _on_poster_mouse_entered(poster_name: String) -> void:
 	"""Show enlarged poster preview on hover"""
-	# Only show preview if poster is actually visible
-	if not _visible_posters.get(poster_name, false):
-		return
-
 	# Get full-size texture for this poster
 	if not POSTER_FULL_TEXTURES.has(poster_name):
 		return
 
-	var full_texture = POSTER_FULL_TEXTURES[poster_name]
+	var full_texture: Texture2D = POSTER_FULL_TEXTURES[poster_name]
 	_preview_sprite.texture = full_texture
 
 	# Show the preview layer
