@@ -1,11 +1,20 @@
-﻿keys,en
+keys,en
+Text/69_photo1/text,You pull out the photo again. [color=GOLD]Maris Piper[/color]. Such a kind face.
+Text/69_photo2/text,Her wife was so desperate. [color=STEEL_BLUE]What happened to her?[/color]
+Text/69_photo3/text,You notice something in the background of the photo - a truck with a [color=DARK_VIOLET]purple logo[/color].
+Text/69_photo4/text,That symbol... you've seen it on the cafeteria deliveries. [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve.[/color][/wave]
 Text/69/text,Can we talk? Somewhere private? [color=YELLOW]Too many eyes and ears here.[/color]
 Text/6a/text,Meet me by the old storage shed after your shift. I have something you need to see.
+Text/6a_photo1/text,Sasha... this photo. The woman's wife gave it to me. She was looking for her.
+Text/6a_photo2/text,Sasha's face falls. [color=STEEL_BLUE]Let me see.[/color]
+Text/6a_photo3/text,"Sasha studies the photo, her expression darkening. [color=CRIMSON]I recognize that truck.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Keep this photo safe.[/color][/pulse] It might be important later. Trust me.
 Text/6b/text,"Getting cozy with coworkers? Remember, getting friendly can lead to... [color=DARK_ORANGE]compromised judgment[/color]."
 Text/6c/text,I've been gathering information about rejected potatoes. [wave amp=20 freq=3][color=CRIMSON]They don't go to deportation centers.[/color][/wave]
 Text/6d/text,[tornado radius=4 freq=2][color=CRIMSON]They go to Root Reserve processing facilities.[/color][/tornado] Every single one.
 Text/6e/text,These documents show potatoes being unloaded at a facility marked with the [color=DARK_VIOLET]Root Reserve[/color] logo.
-Text/6f/text,I think I know what's happening. [pulse freq=3][color=CRIMSON]They're becoming Root Reserve.[/color][/pulse]
+Text/6f/text,I think I know what's happening...
+Text/6f2/text,[pulse freq=3][color=CRIMSON]They're becoming Root Reserve.[/color][/pulse]
 Choice/70/text,"""That's insane. They're... processing potatoes into food?"""
 Choice/71/text,"""We need more evidence before making accusations."""
 Text/72/text,[color=CRIMSON]Cannibalism with extra steps.[/color] That's what [wave amp=25 freq=3][color=DARK_VIOLET]Root Reserve[/color][/wave] is. And we've been helping select their ingredients.
@@ -14,5 +23,5 @@ Text/74/text,A distant alarm suddenly blares
 Text/75/text,We need to go. They do security sweeps at this hour. Think about what I've shown you.
 Text/76/text,"Sasha stuffs the folder into your hands. ""[color=YELLOW]Keep this safe. And trust no one.[/color]"""
 Text/77/text,You hide the folder inside your jacket. [color=DARK_VIOLET]Root Reserve[/color]. The rejections. The missing potatoes. It all connects in a [tornado radius=3 freq=2][color=CRIMSON]horrifying way[/color][/tornado].
-Choice/71/disabled_text,
 Choice/70/disabled_text,
+Choice/71/disabled_text,
