@@ -1,13 +1,35 @@
-﻿keys,en
+keys,en
 Text/11/text,"The Spud border is in [pulse freq=3][color=CRIMSON]chaos[/color][/pulse]. Panicked potatoes flood checkpoints, desperate to escape after the leaked documents."
 Text/12/text,You slip through with Sasha. [wave amp=20 freq=3][color=CHARTREUSE]We have to keep pushing![/color][/wave] The people know the truth now.
 Text/13/text,"They can't silence the truth any longer. If we can infiltrate the [color=DARK_VIOLET]Root Reserve[/color] facility and broadcast evidence, it'll [tornado radius=3 freq=2][color=CHARTREUSE]ignite the revolution[/color][/tornado]."
 Text/14/text,That place is a fortress. And now we've got a [color=YELLOW]former customs agent[/color] in our midst. Their eyes narrow at you suspiciously.
-Choice/15/text,"""I understand your doubt, but I'm committed to this cause."""
-Choice/16/text,"""I've already sacrificed everything. I won't back down now."""
+Choice/15/text,"I understand your doubt, but I'm committed to this cause."
+Choice/16/text,"I've already sacrificed everything. I won't back down now."
 Text/17/text,Pretty words. But we've heard those before.
 Text/18/text,"They helped us get the documents. That's action, not words."
 Text/19/text,"Can't go back to being a loyal spud now. Welcome to the resistance, comrade."
+Text/1a_rescue1/text,A scout rushes over. We found her! [color=CHARTREUSE]Sasha's in the detention block![/color]
+Text/1a_rescue2/text,They're preparing to... [tornado radius=3 freq=2][color=CRIMSON]process her[/color][/tornado]... in less than an hour!
+Text/1a_rescue3/text,We have to save her. [pulse freq=2][color=CHARTREUSE]She started all of this.[/color][/pulse] We're not leaving without her.
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]Race through the facility![/color][/wave] Reach Sasha before it's too late!
+Text/1a_rescue_fail1/text,You stumble. The path ahead is blocked by guards!
+Text/1a_rescue_fail2/text,Viktor bursts through a side door. [color=CHARTREUSE]GO! I'll hold them![/color]
+Text/1a_rescue_fail3/text,"For Elena. For all of them. [color=STEEL_BLUE]I won't let another one die![/color]"
+Text/1a_rescue_fail4/text,Murphy yanks a fire alarm. [color=CHARTREUSE]For Tommy![/color] The sprinklers blind the guards!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]I'll create a distraction. Get her out of there![/color]
+Text/1a_rescue_fail6/text,"A [color=YELLOW]processing conveyor jams[/color], showering sparks and distracting the guards!"
+Text/1a_rescue_fail7/text,Fate - or the ghosts of the processed - grants you a second chance.
+Text/1a_rescue5/text,"Sasha looks up from her cell, bruised but unbroken. Her eyes widen. [color=CHARTREUSE]You came.[/color]"
+Text/1a_rescue6/text,Of course I came. [color=CHARTREUSE]We're finishing this together.[/color]
+Choice/1a_rescue7/text,I was scared I'd never see you again.
+Choice/1a_rescue8/text,You had us worried sick. Don't do that again.
+Choice/1a_rescue9/text,We have work to do. Idaho is waiting.
+Text/1a_rescue10/text,"[color=CHARTREUSE]Sasha pulls you into a brief embrace.[/color] I knew you'd come. I never doubted."
+Text/1a_rescue11/text,Now let's make them pay for everyone they've taken. [color=CHARTREUSE]Together.[/color]
+Text/1a_rescue12/text,Sasha manages a weak smile through her pain. [color=STEEL_BLUE]I'll try.[/color] But some things are worth the risk.
+Text/1a_rescue13/text,You being here proves that. Now let's finish this.
+Text/1a_rescue14/text,"Sasha nods, her determination rekindled. [color=CHARTREUSE]You're right.[/color] Sentiment can wait."
+Text/1a_rescue15/text,Idaho thinks he's won. Let's show him how wrong he is.
 Text/1a/text,"After a tense infiltration, your team stands at the heart of [color=DARK_VIOLET]Root Reserve[/color], the [pulse freq=3][color=CRIMSON]horrific machinery of oppression[/color][/pulse] laid bare."
 Text/1b/text,"[wave amp=25 freq=3][color=RED]Alarms blare[/color][/wave] as guards scramble to respond to your intrusion. You race through corridors, dodging security systems."
 Text/1c/text,"A screen flickers on. ""Well well, the [color=CRIMSON]traitor[/color] returns with rebel scum."""
@@ -15,6 +37,15 @@ Text/1d/text,Did you think you could stop the progress of Spud? [color=DARK_VIOL
 Text/1e/text,But fret not. You'll still serve Spud... [tornado radius=4 freq=3][color=DARK_VIOLET]in the processing vats![/color][/tornado]
 Text/1f/text,The screen suddenly goes black.
 Text/20/text,"You turn to the others with resolve. ""We need to reach Idaho's bunker. Now!"""
+Text/158/text,Security forces close in! [pulse freq=3][color=YELLOW]Fight your way through![/color][/pulse]
+Text/21_fail1/text,Guards close in from every direction. [color=CRIMSON]There's nowhere to run![/color]
+Text/21_fail2/text,"Viktor appears behind the guards, voice cold as steel. [color=STEEL_BLUE]Stand down. Now.[/color]"
+Text/21_fail3/text,The guards hesitate - Viktor was one of their own. [color=CRIMSON]Elena's name is on those manifests. Your families could be next.[/color]
+Text/21_fail4/text,Some guards lower their weapons. Others flee. The path clears.
+Text/21_fail5/text,"An explosion rocks the east wing. Murphy's voice crackles over comms: [color=CHARTREUSE]""That's my diversion! MOVE!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]The guards scatter toward the explosion. Tommy would be proud.[/color]
+Text/21_fail7/text,Sasha tackles the lead guard from behind. [color=CHARTREUSE]I didn't survive that cell just to watch you die![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]RUN! I've got this![/color]
 Text/21/text,"Your group fights through waves of security, narrowly avoiding capture. Sasha's resistance fighters create diversions, clearing your path forward."
 Text/22/text,"After a harrowing escape through maintenance tunnels, you finally reach the secure elevator to Idaho's private bunker."
 Text/23/text,"With Sasha and your allies at your side, you confront Idaho at last."
@@ -39,9 +70,19 @@ Text/35/text,The fall of [color=DARK_VIOLET]Root Reserve[/color] sparks a wildfi
 Text/36/text,"Potatoes in every province rise up, embracing a [color=CHARTREUSE]new vision for their nation[/color]."
 Text/37/text,"As long as we stay true to our roots, to the ideals that brought us here... [color=CHARTREUSE]we'll find a way.[/color]"
 Text/38/text,"And so, from the ashes of the old Spud, a [color=CHARTREUSE]new nation begins to take root[/color]. The Reign of [color=DARK_VIOLET]Root Reserve[/color] is over."
+Text/151/text,"[color=CHARTREUSE]Sasha moves closer, her hand finding yours as you watch the new dawn together.[/color] We built this. You and me."
+Text/152/text,"As long as we stay true to our roots, to the ideals that brought us here... [color=CHARTREUSE]we'll find a way.[/color] Together."
+Text/153/text,[color=CHARTREUSE]You squeeze her hand. Together.[/color]
+Text/154/text,[color=STEEL_BLUE]Sasha stands beside you.[/color] Your fire lit the spark that burned down their empire.
+Text/155/text,[color=STEEL_BLUE]The anger has cooled to determination. There's still work to be done.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha offers you a supportive smile.[/color] You've come a long way from that checkpoint. We all have.
+Text/157/text,"[color=STEEL_BLUE]The guilt may never fully fade, but you've found purpose in the rebuilding.[/color]"
 Choice/15/disabled_text,
-Choice/28/disabled_text,
-Choice/27/disabled_text,
-Choice/26/disabled_text,
-Choice/25/disabled_text,
 Choice/16/disabled_text,
+Choice/25/disabled_text,
+Choice/26/disabled_text,
+Choice/27/disabled_text,
+Choice/28/disabled_text,
+Choice/1a_rescue7/disabled_text,
+Choice/1a_rescue8/disabled_text,
+Choice/1a_rescue9/disabled_text,

@@ -1,7 +1,7 @@
-﻿keys,en
-Text/156/text,Welcome to [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs Training![/color][/pulse]
+keys,en
+Text/156/text,Welcome to [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs![/color][/pulse]
 Text/157/text,This training will teach you the [wave amp=15 freq=2][color=DARK_ORANGE]essential skills[/color][/wave] needed to protect Spud's borders.
-Text/158/text,Your duty is to process incoming potatoes at our border checkpoint.
+Text/158/text,"You've been selected for a vital role: [color=DARK_ORANGE]Border Customs Officer[/color]."
 Text/159/text,Immigrating potatoes will line up outside your office here.
 Text/15a/text,"To start processing potatoes, you need to open your booth for service with the switch here."
 Text/15b/text,You'll signal each potato to approach your office by tapping the megaphone.
@@ -25,6 +25,9 @@ Text/16c/text,"Plus any bonuses you earned from processing documents quickly, pe
 Text/16d/text,"You'll also receive a performance rating based on how well you processed potatoes during your shift, and up to 3 golden stamps if you exceed expectations."
 Text/16e/text,Here you can submit your score for each shift to the global database of customs officers and see how you compare to the most elite customs officers around the world.
 Text/16f/text,"If your shift was successful, you'll be able to move on by clicking ""Continue"" and starting your next shift."
-Text/170/text,That covers the basics of your duties as a Customs Officer.
-Text/171/text,"Remember: check documents carefully, stop runners, and meet your quota."
+Text/170/text,"Your job is simple. Potatoes arrive at your booth, you check their documents, and you decide who gets through."
+Text/171/text,I'll guide you through the basics [color=YELLOW]step by step[/color]. Follow the prompts and you'll get the hang of it.
 Text/172/text,The safety and security of Spud depends on your [pulse freq=2][color=DARK_ORANGE]vigilance![/color][/pulse]
+Text/174/text,Let's begin your [color=YELLOW]training shift[/color]...
+Text/180/text,But be careful - not every potato has their papers in order.
+Text/181/text,[color=RED]Expired passports[/color] are an automatic rejection. No exceptions.
