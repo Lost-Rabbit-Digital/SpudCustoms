@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cqyhfmhhgi8l"
+
+[deps]
+
+files=["res://translations/patch_notes_1_2_0_vi.vi.translation"]
+
+source_file="res://translations/patch_notes_1_2_0_vi.csv"
+dest_files=["res://translations/patch_notes_1_2_0_vi.vi.translation"]
+
+[params]
+
+compress=true
+delimiter=0

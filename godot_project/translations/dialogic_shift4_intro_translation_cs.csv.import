@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://b7kqgstsgn5f2"
+
+[deps]
+
+files=["res://translations/dialogic_shift4_intro_translation_cs.cs.translation"]
+
+source_file="res://translations/dialogic_shift4_intro_translation_cs.csv"
+dest_files=["res://translations/dialogic_shift4_intro_translation_cs.cs.translation"]
+
+[params]
+
+compress=true
+delimiter=0

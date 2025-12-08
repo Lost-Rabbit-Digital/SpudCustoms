@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://0r306w3n0q83"
+
+[deps]
+
+files=["res://translations/bubble_dialogue_cs.cs.translation"]
+
+source_file="res://translations/bubble_dialogue_cs.csv"
+dest_files=["res://translations/bubble_dialogue_cs.cs.translation"]
+
+[params]
+
+compress=true
+delimiter=0
