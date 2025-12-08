@@ -49,13 +49,13 @@ set {family_response} = "none"
 
 if {family_response} == "refuse":
 	npc_3: Just like all the others... [color=STEEL_BLUE]May your conscience weigh heavy as mine does.[/color] #id:83
-	npc_3: The desperate potato shuffles away. You notice him staring at a worn photo before he disappears. #id:83b
+	npc_3: The desperate potato shuffles away. You notice her staring at a worn photo before she disappears. #id:83b
 	leave npc_3
 	set {has_wife_photo} = "no"
 else:
 	audio "res://assets/audio/paper/paper picked up 2.wav" [volume="-5.0" bus="SFX"]
 	npc_3: Thank you! Even a small hope is better than none. #id:84
-	npc_3: He presses a [color=GOLD]worn photograph[/color] into your hands. Her name is [color=GOLD]Maris Piper[/color]. She has kind eyes. Please find her. #id:84b
+	npc_3: She presses a [color=GOLD]worn photograph[/color] into your hands. Her name is [color=GOLD]Maris Piper[/color]. She has kind eyes. Please find her. #id:84b
 	leave npc_3
 	set {has_wife_photo} = "yes"
 	set {wife_name} = "Maris Piper"
