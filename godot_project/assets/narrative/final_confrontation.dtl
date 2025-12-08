@@ -1,4 +1,17 @@
 # final_confrontation.dtl
+# This timeline is for the RESISTANCE path only
+# Loyalist path players should be routed to loyalist_ending.dtl instead
+
+# Route loyalists to their ending
+if {stay_or_go} == "stay":
+	# This should be handled by the game's timeline routing
+	# If we reach here somehow, show a brief transition
+	[background arg="res://assets/narrative/loyalist_outcome.png" fade="0.0"]
+	join narrator [z_index="1"]
+	narrator: [color=STEEL_BLUE]Your choice to remain loyal has led you down a different path...[/color] #id:10
+	leave narrator
+	[signal arg="route_to_loyalist_ending"]
+
 audio music "res://assets/music/narrative/wind_house.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 audio "res://assets/music/narrative/storm_thunder_ambience.mp3" [volume="-5.0" bus="Ambient"]
 [background arg="res://assets/narrative/final_chaos.png" fade="0.0"]
@@ -6,6 +19,12 @@ audio "res://assets/audio/explosions/rumbling 1.wav" [volume="-8.0" bus="SFX"]
 audio "res://assets/audio/atmosphere/crowd_unrest.mp3" [volume="-5.0" bus="Ambient"]
 audio "res://assets/audio/atmosphere/war_zone_distant.mp3" [volume="-5.0" bus="Ambient"]
 narrator: The Spud border is in [pulse freq=3][color=CRIMSON]chaos[/color][/pulse]. Panicked potatoes flood checkpoints, desperate to escape after the leaked documents. #id:11
+
+# Murphy joins the fight if allied
+if {murphy_alliance} == "ally":
+	join fellow_officer [z_index="1"]
+	fellow_officer: Murphy fights alongside you, determination in their eyes. [color=CHARTREUSE]For my cousin![/color] #id:11b
+	leave fellow_officer
 
 join player_character [z_index="1"]
 [background arg="res://assets/narrative/extreme_emergency.png" fade="1.2"]
@@ -111,7 +130,16 @@ if {ending_choice} == "diplomatic":
 	join sweet_potato_sasha [z_index="1"]
 	sweet_potato_sasha: I don't think so, Idaho. Guards! You saw the dossier, [color=YELLOW]you know what he did to your families.[/color] #id:2c
 	audio "res://assets/audio/gunfire/gun cocking 3.wav" [volume="0.0" bus="SFX"]
-	A hulking guard steps forward and kicks Idaho to the ground swiftly. #id:2d
+
+	# Viktor's payoff - if player allied with him earlier
+	if {viktor_allied} == "yes":
+		join security_officer [z_index="1"]
+		security_officer: Viktor steps forward, face twisted with grief and rage. [color=CRIMSON]For my wife, you monster.[/color] #id:2d_viktor
+		security_officer: He kicks Idaho to the ground. [color=STEEL_BLUE]She was everything to me. And you fed her to this nation.[/color] #id:2d_viktor2
+		leave security_officer
+	else:
+		A hulking guard steps forward and kicks Idaho to the ground swiftly. #id:2d
+
 	audio "res://assets/audio/gunfire/Heavy Pistol B.wav" [volume="0.0" bus="SFX"]
 	A shot echoes through the chamber. The screen fades to black. #id:2e
 	leave prime_minister_idaho
@@ -178,6 +206,15 @@ else:
 	player_character: [color=STEEL_BLUE]The guilt may never fully fade, but you've found purpose in the rebuilding.[/color] #id:157
 leave sweet_potato_sasha
 leave player_character
+
+# Wife photo memorial - if player kept it
+if {has_wife_photo} == "yes":
+	[background arg="res://assets/narrative/memorial_wall.png" fade="2.0"]
+	join player_character [z_index="1"]
+	player_character: You find the memorial wall. Thousands of photos. Thousands of names. #id:38_memorial
+	player_character: You add [color=GOLD]Maris Piper's[/color] photo to the wall. She deserves to be remembered. #id:38_memorial2
+	player_character: [color=STEEL_BLUE]They all do.[/color] #id:38_memorial3
+	leave player_character
 
 audio "res://assets/audio/clothing/flag 3.wav" [volume="0.0" bus="SFX"]
 [background arg="res://assets/narrative/new_spud_flag.png" fade="2.0"]

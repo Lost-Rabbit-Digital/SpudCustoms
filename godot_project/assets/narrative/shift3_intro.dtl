@@ -37,7 +37,8 @@ else:
 audio music "res://assets/music/ambient_vol3_sad_decisions_main.mp3" [fade="1.5" volume="-5.0" bus="Music"]
 audio "res://assets/audio/stings/dread_chord.mp3" [volume="-5.0" bus="SFX"]
 join npc_3 [z_index="1"]
-npc_3: [color=STEEL_BLUE]Please, I beg you![/color] My wife was supposed to be right behind me, but she [tornado radius=2 freq=3]never made it through customs[/tornado]. #id:7f
+npc_3: [color=STEEL_BLUE]Please, I beg you![/color] My wife - her name is [color=GOLD]Maris[/color] - she was supposed to be right behind me. #id:7f
+npc_3: She [tornado radius=2 freq=3]never made it through customs[/tornado]. They said her papers had an "irregularity." #id:7fb
 npc_3: No one will tell me what happened to her. Please, [color=CHARTREUSE]help me find her![/color] #id:80
 
 set {family_response} = "none"
@@ -48,10 +49,24 @@ set {family_response} = "none"
 
 if {family_response} == "refuse":
 	npc_3: Just like all the others... [color=STEEL_BLUE]May your conscience weigh heavy as mine does.[/color] #id:83
+	npc_3: The desperate potato shuffles away. You notice him staring at a worn photo before he disappears. #id:83b
 	leave npc_3
+	set {has_wife_photo} = "no"
 else:
-	npc_3: Thank you! Even a small hope is better than none. Here's her photo. Please find her. #id:84
+	audio "res://assets/audio/paper/paper picked up 2.wav" [volume="-5.0" bus="SFX"]
+	npc_3: Thank you! Even a small hope is better than none. #id:84
+	npc_3: He presses a [color=GOLD]worn photograph[/color] into your hands. Her name is [color=GOLD]Maris Piper[/color]. She has kind eyes. Please find her. #id:84b
 	leave npc_3
+	set {has_wife_photo} = "yes"
+	set {wife_name} = "Maris Piper"
+
+# Player examines the photo if they took it
+if {has_wife_photo} == "yes":
+	[background arg="res://assets/narrative/wife_photo.png" fade="1.0"]
+	join player_character [z_index="1"]
+	player_character: You look at the photo. A young potato with gentle features and a warm smile. [color=GOLD]Maris Piper[/color]. #id:84c
+	player_character: Where did she go? The rejection queue leads to... where exactly? #id:84d
+	leave player_character
 
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="1.2"]
 audio music "res://assets/music/narrative/horror_fog_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]

@@ -1,10 +1,60 @@
 # shift7_end.dtl
+# Includes "friend" reveal and wife photo payoff
+
 audio music "res://assets/music/narrative/horror_hush_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 audio "res://assets/music/narrative/creepy_creaks_ambience.mp3" [volume="-12.0" bus="Ambient"]
 [background arg="res://assets/narrative/resistance_base.png" fade="0.0"]
 audio "res://assets/audio/atmosphere/resistance_whispers.mp3" [volume="-5.0" bus="Ambient"]
 join narrator
 narrator: After your shift, you're led to a secret resistance meeting in an abandoned starch factory. #id:d2
+leave narrator
+
+# THE "FRIEND" REVEAL - who left the note on day 1?
+[background arg="res://assets/narrative/resistance_base.png" fade="1.0"]
+audio "res://assets/audio/stings/revelation_dark.mp3" [volume="-8.0" bus="SFX"]
+join sweet_potato_sasha [z_index="1"]
+sweet_potato_sasha: Before we begin... I have a confession to make. #id:d2b
+sweet_potato_sasha: That note you found on your first day? "[color=GOLD]A friend[/color]"? #id:d2c
+
+if {kept_note} == "yes":
+	sweet_potato_sasha: Sasha smiles. I see you kept it. Smart. I knew I picked the right sprout. #id:d2d
+	sweet_potato_sasha: I've been watching new officers for months, looking for someone with [color=CHARTREUSE]questioning eyes[/color]. Someone who might see through the lies. #id:d2e
+elif {reported_note} == "yes":
+	sweet_potato_sasha: Sasha's expression is complicated. You showed it to Russet. I had to lay low for weeks after that. #id:d2f
+	sweet_potato_sasha: But here you are anyway. That tells me something about your conscience. #id:d2g
+else:
+	sweet_potato_sasha: You destroyed it. I don't blame you - it was risky to keep. #id:d2h
+	sweet_potato_sasha: But the words found their way into your head anyway, didn't they? #id:d2i
+
+sweet_potato_sasha: [color=CHARTREUSE]I am "A friend."[/color] And now you know why. #id:d2j
+leave sweet_potato_sasha
+
+# WIFE PHOTO PAYOFF - if player took it
+if {has_wife_photo} == "yes":
+	[background arg="res://assets/narrative/document_closeup.png" fade="1.5"]
+	audio "res://assets/audio/paper/paper handled 1.wav" [volume="-5.0" bus="SFX"]
+	audio "res://assets/audio/stings/dread_chord.mp3" [volume="-5.0" bus="SFX"]
+	join sweet_potato_sasha [z_index="1"]
+	sweet_potato_sasha: Sasha spreads captured documents on the table. Processing manifests from the past month. #id:d2k
+	sweet_potato_sasha: You scan the names, and your blood runs cold. #id:d2l
+	leave sweet_potato_sasha
+
+	join player_character [z_index="1"]
+	player_character: There it is. [color=GOLD]Maris Piper[/color]. The woman from the photo. #id:d2m
+	player_character: "[color=CRIMSON]Status: Processed. Batch RR-2847.[/color]" Dated three days after her husband begged for your help. #id:d2n
+	audio "res://assets/audio/stings/revelation_dark.mp3" [volume="-5.0" bus="SFX"]
+	player_character: You feel the photo in your pocket. [color=STEEL_BLUE]She's gone. And you couldn't save her.[/color] #id:d2o
+	player_character: But maybe... [color=CHARTREUSE]maybe you can still save others[/color]. #id:d2p
+	leave player_character
+
+# Murphy appearance - if allied
+if {murphy_alliance} == "ally":
+	[background arg="res://assets/narrative/resistance_base.png" fade="1.0"]
+	audio "res://assets/audio/footsteps/Concrete Walk 1_2.wav" [volume="-8.0" bus="SFX"]
+	join fellow_officer [z_index="1"]
+	fellow_officer: Murphy emerges from the shadows. Hey. Glad you made it. #id:d2q
+	fellow_officer: Murphy holds up the crumpled RR-UTIL form. My cousin's on that list too. [color=CHARTREUSE]We're doing this together.[/color] #id:d2r
+	leave fellow_officer
 
 join resistance_leader [z_index="1"]
 resistance_leader: A weathered potato with battle scars addresses the assembled group. #id:d3
