@@ -6,7 +6,7 @@ audio music "res://assets/music/narrative/horror_fog_main.mp3" [fade="2.0" volum
 audio "res://assets/music/narrative/creepy_creaks_ambience.mp3" [volume="-12.0" bus="Ambient"]
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="0.0"]
 
-# Murphy's breakdown scene
+# Murphy's emotional breakdown scene - enhanced with deeper emotional impact
 audio "res://assets/audio/footsteps/Concrete Walk 1_1.wav" [volume="-8.0" bus="SFX"]
 join fellow_officer [z_index="1"]
 fellow_officer: Murphy catches you in the corridor, eyes red-rimmed. Got a minute? #id:215
@@ -28,8 +28,16 @@ audio "res://assets/audio/paper/paper handled 1.wav" [volume="-5.0" bus="SFX"]
 fellow_officer: Murphy pulls out a crumpled form. Look at the processing code. "[color=CRIMSON]RR-UTIL-7[/color]." #id:21c
 fellow_officer: I looked it up in the archives. RR stands for [pulse freq=2][color=DARK_VIOLET]Root Reserve[/color][/pulse]. UTIL means... [color=CRIMSON]utilization[/color]. #id:21d
 
+# Murphy's emotional breakdown
+audio "res://assets/audio/stings/emotional_sting.mp3" [volume="-8.0" bus="SFX"]
+fellow_officer: [wave amp=20 freq=3]Murphy's hands start shaking.[/wave] My cousin... Tommy... he was just twenty-three. #id:21d_breakdown1
+fellow_officer: He came here for a [color=CHARTREUSE]better life[/color]. Failed one inspection. One. [color=STEEL_BLUE]Just bad timing.[/color] #id:21d_breakdown2
+fellow_officer: Murphy slides down the wall, face in his hands. And I... I [tornado radius=3 freq=2][color=CRIMSON]ATE[/color][/tornado] that stuff. Every day. #id:21d_breakdown3
+audio "res://assets/audio/stings/dread_chord.mp3" [volume="-5.0" bus="SFX"]
+fellow_officer: Murphy looks up at you, tears streaming. [pulse freq=2][color=CRIMSON]What if I ate HIM?[/color][/pulse] #id:21d_breakdown4
+
 set {murphy_alliance} = "none"
-- "We need to find out more. I'm with you." #id:21e
+- "Murphy... I'm so sorry. I'm with you. We'll find the truth together." #id:21e
 	set {murphy_alliance} = "ally"
 - "Murphy, this is dangerous. We should stay out of it." #id:21f
 	set {murphy_alliance} = "cautious"
@@ -38,18 +46,22 @@ set {murphy_alliance} = "none"
 
 if {murphy_alliance} == "ally":
 	join fellow_officer [z_index="1"]
-	fellow_officer: Murphy grabs your arm. [color=CHARTREUSE]Thank you.[/color] I thought I was going crazy. #id:221
+	join player_character [z_index="1"]
+	player_character: You kneel beside Murphy, putting a hand on his shoulder. #id:221_comfort1
+	leave player_character
+	fellow_officer: Murphy grabs your arm like a lifeline. [color=CHARTREUSE]Thank you.[/color] I thought I was going crazy. #id:221
+	fellow_officer: [color=STEEL_BLUE]His voice steadies slightly.[/color] For Tommy. We do this for Tommy. And everyone else they've taken. #id:221_tommy
 	fellow_officer: There's others who suspect too. Sasha's been gathering people. I think she trusts you. #id:222
 	leave fellow_officer
 elif {murphy_alliance} == "cautious":
 	join fellow_officer [z_index="1"]
-	fellow_officer: Murphy's shoulders slump. Yeah. Yeah, you're probably right. Forget I said anything. #id:223
-	fellow_officer: But if you change your mind... I'll be here. [color=STEEL_BLUE]Alone with my questions.[/color] #id:224
+	fellow_officer: Murphy wipes his eyes, trying to compose himself. Yeah. Yeah, you're probably right. Forget I said anything. #id:223
+	fellow_officer: But if you change your mind... I'll be here. [color=STEEL_BLUE]Alone with my questions. And my nightmares.[/color] #id:224
 	leave fellow_officer
 else:
 	join fellow_officer [z_index="1"]
-	fellow_officer: Coincidence. Murphy laughs bitterly. Sure. And my cousin just [color=CRIMSON]vanished[/color] into thin air. #id:225
-	fellow_officer: Keep telling yourself that. See how long it helps you sleep. #id:226
+	fellow_officer: Coincidence. Murphy laughs bitterly through his tears. Sure. And Tommy just [color=CRIMSON]vanished[/color] into thin air. #id:225
+	fellow_officer: Keep telling yourself that. See how long it helps you sleep. [color=STEEL_BLUE]It doesn't help me.[/color] #id:226
 	leave fellow_officer
 
 leave fellow_officer

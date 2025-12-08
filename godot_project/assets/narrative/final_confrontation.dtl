@@ -54,13 +54,71 @@ leave resistance_member_2
 leave sweet_potato_sasha
 leave player_character
 audio music "res://assets/music/narrative/metal_violence_main.mp3" [volume="-5.0" bus="Music"]
-# Transition to facility breach - implied gameplay happened
+# Transition to facility breach - now includes Sasha rescue
 audio music "res://assets/audio/ambient/horror_drone_23.mp3" [fade="2.0" volume="-12.0" bus="Ambient"]
 [background arg="res://assets/narrative/processing_facility.png" fade="1.2"]
 join narrator [z_index="1"]
 narrator: After a tense infiltration, your team stands at the heart of [color=DARK_VIOLET]Root Reserve[/color], the [pulse freq=3][color=CRIMSON]horrific machinery of oppression[/color][/pulse] laid bare. #id:1a
 audio "res://assets/audio/atmosphere/facility_hum.mp3" [volume="-5.0" bus="Ambient"]
+leave narrator
 
+# SASHA RESCUE SEQUENCE
+[background arg="res://assets/narrative/sasha_capture.png" fade="1.5"]
+audio music "res://assets/music/narrative/horror_downward_main.mp3" [fade="1.0" volume="-3.0" bus="Music"]
+join resistance_member_1 [z_index="1"]
+resistance_member_1: A scout rushes over, breathless. We found her! [color=CHARTREUSE]Sasha's in the detention block![/color] #id:1a_rescue1
+resistance_member_1: They're preparing to... [tornado radius=3 freq=2][color=CRIMSON]process her[/color][/tornado]... in less than an hour! #id:1a_rescue2
+leave resistance_member_1
+
+join player_character [z_index="1"]
+player_character: We have to save her. [pulse freq=2][color=CHARTREUSE]She started all of this.[/color][/pulse] We're not leaving without her. #id:1a_rescue3
+leave player_character
+
+# Rescue QTE
+[background arg="res://assets/narrative/security_lockdown.png" fade="0.5"]
+audio "res://assets/audio/stings/heartbeat_tension.mp3" [volume="-5.0" bus="SFX"]
+join narrator [z_index="1"]
+narrator: [wave amp=25 freq=3][color=YELLOW]Race through the facility![/color][/wave] Reach Sasha before it's too late! #id:1a_rescue4
+leave narrator
+[signal arg="qte_rescue"]
+
+# Rescue success
+[background arg="res://assets/narrative/sasha_rescue.png" fade="1.0"]
+audio "res://assets/audio/mechanical/Metal Old Door A.wav" [volume="-5.0" bus="SFX"]
+audio music "res://assets/music/narrative/sasha_theme_main.mp3" [fade="1.0" volume="-5.0" bus="Music"]
+join sweet_potato_sasha [z_index="1"]
+sweet_potato_sasha: Sasha looks up from her cell, bruised but unbroken. Her eyes widen. [color=CHARTREUSE]You came.[/color] #id:1a_rescue5
+leave sweet_potato_sasha
+
+join player_character [z_index="1"]
+player_character: Of course I came. [color=CHARTREUSE]We're finishing this together.[/color] #id:1a_rescue6
+leave player_character
+
+join sweet_potato_sasha [z_index="1"]
+
+set {sasha_rescue_reaction} = "none"
+- "I was scared I'd never see you again." #id:1a_rescue7
+	set {sasha_rescue_reaction} = "relieved"
+- "You had us worried sick. Don't do that again." #id:1a_rescue8
+	set {sasha_rescue_reaction} = "angry"
+- "We have work to do. Idaho is waiting." #id:1a_rescue9
+	set {sasha_rescue_reaction} = "focused"
+
+if {sasha_rescue_reaction} == "relieved":
+	sweet_potato_sasha: [color=CHARTREUSE]Sasha pulls you into a brief embrace.[/color] I knew you'd come. I never doubted. #id:1a_rescue10
+	sweet_potato_sasha: Now let's make them pay for everyone they've taken. [color=CHARTREUSE]Together.[/color] #id:1a_rescue11
+elif {sasha_rescue_reaction} == "angry":
+	sweet_potato_sasha: Sasha manages a weak smile through her pain. [color=STEEL_BLUE]I'll try.[/color] But some things are worth the risk. #id:1a_rescue12
+	sweet_potato_sasha: You being here proves that. Now let's finish this. #id:1a_rescue13
+else:
+	sweet_potato_sasha: Sasha nods, her determination rekindled. [color=CHARTREUSE]You're right.[/color] Sentiment can wait. #id:1a_rescue14
+	sweet_potato_sasha: Idaho thinks he's won. Let's show him how wrong he is. #id:1a_rescue15
+
+leave sweet_potato_sasha
+
+# Continue to confrontation
+[background arg="res://assets/narrative/processing_facility.png" fade="1.0"]
+join narrator [z_index="1"]
 narrator: [wave amp=25 freq=3][color=RED]Alarms blare[/color][/wave] as guards scramble to respond to your intrusion. You race through corridors, dodging security systems. #id:1b
 audio "res://assets/audio/stings/alarm_distant.mp3" [volume="-5.0" bus="SFX"]
 leave narrator

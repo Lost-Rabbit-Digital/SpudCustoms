@@ -74,8 +74,55 @@ func _on_minigame_start(config: Dictionary) -> void:
 		if instruction_label:
 			instruction_label.text = config.narrative_context
 
+	# Apply accessibility settings
+	_apply_accessibility_settings()
+
 	_setup_minigame_scene()
-	_show_next_prompt()
+
+	# Check for auto-complete mode
+	if AccessibilityManager and AccessibilityManager.should_qte_auto_complete():
+		_auto_complete_sequence()
+	else:
+		_show_next_prompt()
+
+
+## Apply accessibility settings to QTE parameters
+func _apply_accessibility_settings() -> void:
+	if not AccessibilityManager:
+		return
+
+	# Adjust time per prompt based on accessibility multiplier
+	time_per_prompt = AccessibilityManager.get_adjusted_qte_time(time_per_prompt)
+
+	# Adjust prompt count if reduced prompts is enabled
+	prompt_count = AccessibilityManager.get_adjusted_qte_prompts(prompt_count)
+
+
+## Auto-complete the QTE sequence for accessibility
+func _auto_complete_sequence() -> void:
+	# Simulate perfect completion
+	_successful_presses = prompt_count
+	_current_prompt_index = prompt_count
+
+	# Show brief "Auto-completed" message
+	_key_label.text = "Auto-completed"
+	_key_label.add_theme_font_size_override("font_size", 36)
+	_key_label.modulate = Color.CHARTREUSE
+	_feedback_label.text = "(QTE Accessibility enabled)"
+	_feedback_label.modulate = Color.WHITE
+	_progress_bar.value = prompt_count
+
+	# Complete after brief delay
+	await get_tree().create_timer(1.5).timeout
+
+	if _is_active:
+		var total_score = prompt_count * points_per_press
+		complete_success(total_score, {
+			"successful_presses": prompt_count,
+			"total_prompts": prompt_count,
+			"success_rate": 1.0,
+			"auto_completed": true
+		})
 
 
 func _setup_minigame_scene() -> void:

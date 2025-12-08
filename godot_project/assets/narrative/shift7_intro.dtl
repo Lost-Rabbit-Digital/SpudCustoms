@@ -4,14 +4,64 @@ audio music "res://assets/music/narrative/electronic_reborn_main.mp3" [fade="2.0
 [background arg="res://assets/narrative/resistance_planning.png" fade="0.0"]
 join sweet_potato_sasha [z_index="1"]
 sweet_potato_sasha: Good, you made it. The resistance is [color=CHARTREUSE]growing stronger[/color]. Thanks to those manifests, people are seeing the truth. #id:102
+
+# Sasha foreshadowing - she's nervous, being watched
+audio "res://assets/audio/stings/suspicion_sting.mp3" [volume="-12.0" bus="SFX"]
+sweet_potato_sasha: [color=STEEL_BLUE]Sasha glances over her shoulder nervously.[/color] Sorry, I... [color=YELLOW]I think they're watching me.[/color] #id:102_foreshadow1
+sweet_potato_sasha: Russet has been asking questions. Following me after shifts. [wave amp=15 freq=2][color=YELLOW]I need to be more careful.[/color][/wave] #id:102_foreshadow2
+
+join player_character [z_index="1"]
+player_character: Sasha, maybe you should lay low for a while. Let me take more of the risk. #id:102_foreshadow3
+leave player_character
+
+sweet_potato_sasha: [color=STEEL_BLUE]She shakes her head, forcing a smile.[/color] No. We're too close now. I can handle Russet. #id:102_foreshadow4
+sweet_potato_sasha: Besides... [color=CHARTREUSE]someone has to keep you sprouts out of trouble.[/color] #id:102_foreshadow5
+
 sweet_potato_sasha: I managed to get this dossier from our sources - production schedules, '[color=CRIMSON]ingredient[/color]' lists, names of the [color=DARK_SLATE_BLUE]disappeared[/color]. #id:103
 sweet_potato_sasha: This isn't just a food supplement program. They're [color=CRIMSON]processing potatoes[/color]...and not in a good way. #id:104
 
 join player_character [z_index="1"]
 player_character: Internal memos from Prime Minister Idaho himself, authorizing the "[color=DARK_ORANGE]utilization of rejected assets.[/color]" #id:105
 player_character: Quotas for each checkpoint, with Spud Customs having the highest rejection-to-processing ratio. #id:106
-leave sweet_potato_sasha
 leave player_character
+
+# Surveillance QTE - following trucks to Root Reserve
+sweet_potato_sasha: But we still don't know where the main processing facility is. The documents only list shipment codes. #id:106_trucks1
+sweet_potato_sasha: I've been watching the [color=DARK_VIOLET]Root Reserve trucks[/color]. They leave every night at 0300. Same route. #id:106_trucks2
+sweet_potato_sasha: [color=CHARTREUSE]If we could follow them...[/color] we'd know exactly where they're taking the rejects. #id:106_trucks3
+
+set {follow_trucks} = "none"
+- "I'll do it. I know the patrol schedules." #id:106_trucks4
+	set {follow_trucks} = "volunteer"
+- "That sounds risky. Can't someone else do it?" #id:106_trucks5
+	set {follow_trucks} = "hesitant"
+
+if {follow_trucks} == "volunteer":
+	sweet_potato_sasha: [color=CHARTREUSE]Sasha's eyes light up.[/color] I knew you had roots of steel. Be careful - they patrol heavily at night. #id:106_trucks6
+	leave sweet_potato_sasha
+
+	# Surveillance QTE sequence
+	[background arg="res://assets/narrative/night_gameplay.png" fade="2.0"]
+	audio music "res://assets/music/narrative/unplugged_sneaky_main.mp3" [fade="1.5" volume="-5.0" bus="Music"]
+	join narrator [z_index="1"]
+	narrator: 0300 hours. You crouch in the shadows as the [color=DARK_VIOLET]Root Reserve[/color] trucks rumble past. #id:106_trucks7
+	narrator: [pulse freq=2][color=YELLOW]Stay hidden! Follow the convoy![/color][/pulse] #id:106_trucks8
+	leave narrator
+	[signal arg="qte_surveillance"]
+
+	# Post-QTE success
+	[background arg="res://assets/narrative/processing_facility.png" fade="2.0"]
+	audio "res://assets/audio/stings/revelation_dark.mp3" [volume="-5.0" bus="SFX"]
+	join player_character [z_index="1"]
+	player_character: The trucks stop at a massive complex hidden in the industrial district. [color=DARK_VIOLET]Sector 7, Warehouse Complex Delta.[/color] #id:106_trucks9
+	player_character: Smokestacks belch purple-tinged smoke. The smell is... [tornado radius=3 freq=2][color=CRIMSON]unmistakable.[/color][/tornado] #id:106_trucks10
+	player_character: You've found it. [wave amp=20 freq=3][color=CHARTREUSE]The heart of Root Reserve.[/color][/wave] #id:106_trucks11
+	leave player_character
+
+	set {found_facility} = "yes"
+else:
+	sweet_potato_sasha: [color=STEEL_BLUE]Sasha's expression flickers with disappointment.[/color] We all have to take risks. I'll find another way. #id:106_trucks12
+	leave sweet_potato_sasha
 
 [background arg="res://assets/narrative/night_attack.png" fade="2.0"]
 join narrator [z_index="1"]

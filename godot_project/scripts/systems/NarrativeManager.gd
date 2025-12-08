@@ -275,6 +275,22 @@ func _on_dialogic_signal(argument):
 		_launch_qte("Escape the guards!", 6, 1.8)
 	elif argument == "qte_confrontation":
 		_launch_qte("Stand your ground!", 4, 2.5)
+	# New QTEs for enhanced narrative
+	elif argument == "qte_scanner_fake":
+		_launch_qte("Fake the malfunction!", 4, 2.2)
+	elif argument == "qte_surveillance":
+		_launch_qte("Stay hidden! Follow the trucks!", 5, 2.0)
+	elif argument == "qte_rescue":
+		_launch_qte("Race to save Sasha!", 5, 1.8)
+	elif argument == "qte_suppression":
+		_launch_qte("Suppress the attack!", 4, 2.5)
+
+	# Route to loyalist ending signal
+	if argument == "route_to_loyalist_ending":
+		# This would need to be handled by scene management
+		pass
+	elif argument == "credits_ready_loyalist":
+		get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
 
 	# Skip Steam achievements in DEV_MODE
 	# REFACTORED: Use GameStateManager
@@ -513,21 +529,25 @@ func save_narrative_choices() -> Dictionary:
 		"sasha_investigation",       # committed, hesitant
 		"loyalty_response",          # patriotic, idealistic
 		"hide_choice",               # desk, window
+		"viktor_wife_discovery",     # yes (discovered Viktor's wife on manifest)
 
 		# Shift 6 - RealityScan
 		"fellow_officer_response",   # cautious, sympathetic, loyal
 		"interrogation_response",    # lie, legal
-		"viktor_conversation",       # curious, direct
-		"scanner_choice",            # help, scan, viktor
+		"viktor_conversation",       # tell_truth, lie_protect
+		"scanner_choice",            # help, scan
 		"helped_operative",          # yes, no
 		"viktor_allied",             # yes
 		"betrayed_resistance",       # yes
 		"sasha_plan_response",       # committed, nervous
+		"malfunction_excuse",        # technical, innocent
 
 		# Shift 7 - Resistance Meeting
 		"resistance_mission",        # committed, hesitant, cautious
 		"final_decision",            # help, passive, undecided
 		"yellow_badge_response",     # help, betray
+		"follow_trucks",             # volunteer, hesitant
+		"found_facility",            # yes (found Root Reserve location)
 
 		# Shift 8 - Sasha's Capture
 		"sasha_response",            # cautious, concerned

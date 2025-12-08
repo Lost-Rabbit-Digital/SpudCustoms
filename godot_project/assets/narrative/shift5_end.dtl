@@ -23,6 +23,15 @@ player_character: You find the thick [color=CRIMSON]red folder labeled "RR Trans
 audio "res://assets/audio/paper/paper handled 1.wav" [volume="-5.0" bus="SFX"]
 player_character: Inside are manifests matching rejected potato counts, and a directive from Prime Minister Idaho authorizing "[pulse freq=3][color=DARK_VIOLET]full utilization of border rejects for RR production.[/color][/pulse]" #id:9a
 audio "res://assets/audio/stings/revelation_dark.mp3" [volume="-5.0" bus="SFX"]
+
+# Viktor's wife discovery
+player_character: You scan the names on the manifest... and one stands out. [color=GOLD]Elena Petrov[/color]. #id:9a_viktor1
+player_character: That name... you've heard it before. The security guard Viktor mentioned his wife was missing. #id:9a_viktor2
+audio "res://assets/audio/stings/suspicion_sting.mp3" [volume="-8.0" bus="SFX"]
+player_character: "[color=CRIMSON]Status: Processed. Batch RR-2851.[/color]" Dated two weeks ago. #id:9a_viktor3
+
+set {viktor_wife_discovery} = "yes"
+
 leave player_character
 
 [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
