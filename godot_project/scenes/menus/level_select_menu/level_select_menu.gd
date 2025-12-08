@@ -88,6 +88,9 @@ func _on_level_buttons_container_item_activated(index: int) -> void:
 			GameStateManager.set_shift(level_id)
 		print("DEBUG: Set shift to: ", level_id)
 
+		# Handle narrative choices for level select
+		_handle_narrative_choices_for_level(level_id)
+
 		# Update mode back to story mode
 		# REFACTORED: Use GameStateManager
 		if GameStateManager:
@@ -99,3 +102,92 @@ func _on_level_buttons_container_item_activated(index: int) -> void:
 
 		# Emit signal to inform parent that a level was selected
 		level_selected.emit()
+
+
+## Handle narrative choices when starting from a specific level
+## Loads saved choices if available, sets defaults for later levels
+func _handle_narrative_choices_for_level(level_id: int) -> void:
+	# First, try to load saved narrative choices
+	var game_state = SaveManager.load_game_state()
+	var saved_choices = game_state.get("narrative_choices", {})
+
+	if not saved_choices.is_empty():
+		# Has saved choices - restore them via Global
+		Global.narrative_choices = saved_choices
+		Global.restore_narrative_choices()
+		print("Loaded saved narrative choices for level select: ", saved_choices.size(), " choices")
+	elif level_id > 1:
+		# Starting from a later level without save - set "committed ally" defaults
+		# This gives the player the full experience
+		var defaults = _get_default_choices_for_level(level_id)
+		Global.narrative_choices = defaults
+		Global.restore_narrative_choices()
+		print("Set default narrative choices for level ", level_id, ": ", defaults.size(), " choices")
+
+
+## Get sensible default choices for starting from a specific level
+## These defaults create a "committed ally" playthrough
+func _get_default_choices_for_level(level_id: int) -> Dictionary:
+	var defaults = {}
+
+	# Level 2+: Shift 1 choices
+	if level_id >= 2:
+		defaults["initial_response"] = "questioning"
+		defaults["note_reaction"] = "investigate"
+		defaults["kept_note"] = "yes"
+
+	# Level 3+: Shift 2 choices
+	if level_id >= 3:
+		defaults["murphy_trust"] = "open"
+		defaults["eat_reserve"] = "refused"
+
+	# Level 4+: Shift 3 choices
+	if level_id >= 4:
+		defaults["scanner_response"] = "questioning"
+		defaults["family_response"] = "help"
+		defaults["has_wife_photo"] = "yes"
+		defaults["wife_name"] = "Maris Piper"
+		defaults["reveal_reaction"] = "shocked"
+
+	# Level 5+: Shift 4 choices
+	if level_id >= 5:
+		defaults["cafeteria_response"] = "serious"
+		defaults["murphy_alliance"] = "ally"
+		defaults["sasha_trust_level"] = "committed"
+
+	# Level 6+: Shift 5 choices
+	if level_id >= 6:
+		defaults["sasha_investigation"] = "committed"
+		defaults["loyalty_response"] = "idealistic"
+		defaults["hide_choice"] = "desk"
+
+	# Level 7+: Shift 6 choices
+	if level_id >= 7:
+		defaults["fellow_officer_response"] = "sympathetic"
+		defaults["interrogation_response"] = "lie"
+		defaults["viktor_conversation"] = "curious"
+		defaults["scanner_choice"] = "viktor"
+		defaults["helped_operative"] = "yes"
+		defaults["viktor_allied"] = "yes"
+		defaults["sasha_plan_response"] = "committed"
+
+	# Level 8+: Shift 7 choices
+	if level_id >= 8:
+		defaults["resistance_mission"] = "committed"
+		defaults["final_decision"] = "help"
+		defaults["yellow_badge_response"] = "help"
+
+	# Level 9+: Shift 8 choices
+	if level_id >= 9:
+		defaults["sasha_response"] = "concerned"
+		defaults["interrogation_choice"] = "deny"
+		defaults["sasha_arrest_reaction"] = "promise"
+		defaults["murphy_final_alliance"] = "committed"
+
+	# Level 10+: Shift 9 choices
+	if level_id >= 10:
+		defaults["critical_choice"] = "help"
+		defaults["stay_or_go"] = "go"
+		defaults["sasha_rescue_reaction"] = "relieved"
+
+	return defaults
