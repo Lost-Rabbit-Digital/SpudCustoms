@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://7u0bxwmbpxwn"
+
+[deps]
+
+files=["res://translations/dialogic_character_translations_zh-TW.zh_TW.translation"]
+
+source_file="res://translations/dialogic_character_translations_zh-TW.csv"
+dest_files=["res://translations/dialogic_character_translations_zh-TW.zh_TW.translation"]
+
+[params]
+
+compress=true
+delimiter=0

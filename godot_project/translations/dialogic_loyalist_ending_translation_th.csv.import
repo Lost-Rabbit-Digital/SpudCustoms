@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bo1pxgl7s2cxa"
+
+[deps]
+
+files=["res://translations/dialogic_loyalist_ending_translation_th.th.translation"]
+
+source_file="res://translations/dialogic_loyalist_ending_translation_th.csv"
+dest_files=["res://translations/dialogic_loyalist_ending_translation_th.th.translation"]
+
+[params]
+
+compress=true
+delimiter=0

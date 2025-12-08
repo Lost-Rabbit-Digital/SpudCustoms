@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://iqq4qwebhfi7"
+
+[deps]
+
+files=["res://translations/violations_es-419.es.translation"]
+
+source_file="res://translations/violations_es-419.csv"
+dest_files=["res://translations/violations_es-419.es.translation"]
+
+[params]
+
+compress=true
+delimiter=0
