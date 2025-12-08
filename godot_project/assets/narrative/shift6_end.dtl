@@ -121,16 +121,16 @@ else:
 audio music "res://assets/music/ambient_vol3_sad_decisions_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 
 if {murphy_alliance} == "ally":
-	join fellow_officer [z_index="1"]
+	join murphy [z_index="1"]
 	audio "res://assets/audio/furniture/Door Open C.wav" [volume="-8.0" bus="SFX"]
-	fellow_officer: Murphy slips into your quarters. Heard there was some excitement at your station tonight. #id:25e
+	murphy: Murphy slips into your quarters. Heard there was some excitement at your station tonight. #id:25e
 
 	if {helped_operative} == "yes":
-		fellow_officer: Murphy grins. [color=CHARTREUSE]Good. We're in this together now.[/color] No turning back. #id:25f
+		murphy: Murphy grins. [color=CHARTREUSE]Good. We're in this together now.[/color] No turning back. #id:25f
 	else:
-		fellow_officer: Murphy's face falls. I... I thought you were with us. What happened? #id:260
+		murphy: Murphy's face falls. I... I thought you were with us. What happened? #id:260
 
-	leave fellow_officer
+	leave murphy
 
 join player_character [z_index="1"]
 player_character: Tomorrow's shift will be different. The stakes have never been higher. #id:261

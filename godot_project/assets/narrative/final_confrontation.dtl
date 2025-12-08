@@ -1,17 +1,4 @@
 # final_confrontation.dtl
-# This timeline is for the RESISTANCE path only
-# Loyalist path players should be routed to loyalist_ending.dtl instead
-
-# Route loyalists to their ending
-if {stay_or_go} == "stay":
-	# This should be handled by the game's timeline routing
-	# If we reach here somehow, show a brief transition
-	[background arg="res://assets/narrative/loyalist_outcome.png" fade="0.0"]
-	join narrator [z_index="1"]
-	narrator: [color=STEEL_BLUE]Your choice to remain loyal has led you down a different path...[/color] #id:10
-	leave narrator
-	[signal arg="route_to_loyalist_ending"]
-
 audio music "res://assets/music/narrative/wind_house.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 audio "res://assets/music/narrative/storm_thunder_ambience.mp3" [volume="-5.0" bus="Ambient"]
 [background arg="res://assets/narrative/final_chaos.png" fade="0.0"]
@@ -19,12 +6,6 @@ audio "res://assets/audio/explosions/rumbling 1.wav" [volume="-8.0" bus="SFX"]
 audio "res://assets/audio/atmosphere/crowd_unrest.mp3" [volume="-5.0" bus="Ambient"]
 audio "res://assets/audio/atmosphere/war_zone_distant.mp3" [volume="-5.0" bus="Ambient"]
 narrator: The Spud border is in [pulse freq=3][color=CRIMSON]chaos[/color][/pulse]. Panicked potatoes flood checkpoints, desperate to escape after the leaked documents. #id:11
-
-# Murphy joins the fight if allied
-if {murphy_alliance} == "ally":
-	join fellow_officer [z_index="1"]
-	fellow_officer: Murphy fights alongside you, determination in their eyes. [color=CHARTREUSE]For my cousin![/color] #id:11b
-	leave fellow_officer
 
 join player_character [z_index="1"]
 [background arg="res://assets/narrative/extreme_emergency.png" fade="1.2"]
@@ -54,15 +35,7 @@ leave resistance_member_2
 leave sweet_potato_sasha
 leave player_character
 audio music "res://assets/music/narrative/metal_violence_main.mp3" [volume="-5.0" bus="Music"]
-# Transition to facility breach - now includes Sasha rescue
-audio music "res://assets/audio/ambient/horror_drone_23.mp3" [fade="2.0" volume="-12.0" bus="Ambient"]
-[background arg="res://assets/narrative/processing_facility.png" fade="1.2"]
-join narrator [z_index="1"]
-narrator: After a tense infiltration, your team stands at the heart of [color=DARK_VIOLET]Root Reserve[/color], the [pulse freq=3][color=CRIMSON]horrific machinery of oppression[/color][/pulse] laid bare. #id:1a
-audio "res://assets/audio/atmosphere/facility_hum.mp3" [volume="-5.0" bus="Ambient"]
-leave narrator
-
-# SASHA RESCUE SEQUENCE
+# SASHA RESCUE SEQUENCE - Critical emotional moment
 [background arg="res://assets/narrative/sasha_capture.png" fade="1.5"]
 audio music "res://assets/music/narrative/horror_downward_main.mp3" [fade="1.0" volume="-3.0" bus="Music"]
 join resistance_member_1 [z_index="1"]
@@ -77,12 +50,48 @@ leave player_character
 # Rescue QTE
 [background arg="res://assets/narrative/security_lockdown.png" fade="0.5"]
 audio "res://assets/audio/stings/heartbeat_tension.mp3" [volume="-5.0" bus="SFX"]
+audio music "res://assets/music/narrative/rescue_chase_main.mp3" [fade="0.5" volume="-3.0" bus="Music"]
 join narrator [z_index="1"]
 narrator: [wave amp=25 freq=3][color=YELLOW]Race through the facility![/color][/wave] Reach Sasha before it's too late! #id:1a_rescue4
 leave narrator
 [signal arg="qte_rescue"]
 
-# Rescue success
+# QTE Result handling
+if {qte_rescue_result} == "fail":
+	# FAILURE PATH - Saved by ally or luck
+	[background arg="res://assets/narrative/rescue_fail.png" fade="0.5"]
+	audio "res://assets/audio/stings/failure_sting.mp3" [volume="-5.0" bus="SFX"]
+	join player_character [z_index="1"]
+	player_character: You stumble, losing precious seconds. The path ahead is blocked by guards! #id:1a_rescue_fail1
+	leave player_character
+
+	if {viktor_allied} == "yes":
+		# Viktor saves the day
+		[background arg="res://assets/narrative/viktor_rescue.png" fade="0.3"]
+		audio "res://assets/audio/gunfire/Heavy Pistol B.wav" [volume="-8.0" bus="SFX"]
+		join viktor [z_index="1"]
+		viktor: Viktor bursts through a side door, weapon raised. [color=CHARTREUSE]GO! I'll hold them![/color] #id:1a_rescue_fail2
+		viktor: For Elena. For all of them. [color=STEEL_BLUE]I won't let another one die![/color] #id:1a_rescue_fail3
+		audio "res://assets/audio/stings/heroic_moment.mp3" [volume="-5.0" bus="SFX"]
+		leave viktor
+	elif {murphy_alliance} == "ally":
+		# Murphy sacrifices to buy time
+		[background arg="res://assets/narrative/murphy_sacrifice.png" fade="0.3"]
+		audio "res://assets/audio/explosions/rumbling 1.wav" [volume="-8.0" bus="SFX"]
+		join murphy [z_index="1"]
+		murphy: Murphy yanks a fire alarm. [color=CHARTREUSE]For Tommy![/color] The sprinklers blind the guards! #id:1a_rescue_fail4
+		murphy: [color=STEEL_BLUE]I'll create a distraction. Get her out of there![/color] #id:1a_rescue_fail5
+		leave murphy
+	else:
+		# Pure luck - machinery malfunction
+		[background arg="res://assets/narrative/facility_malfunction.png" fade="0.3"]
+		audio "res://assets/audio/mechanical/alarm.wav" [volume="-5.0" bus="SFX"]
+		join narrator [z_index="1"]
+		narrator: A [color=YELLOW]processing conveyor jams[/color], showering sparks and distracting the guards! #id:1a_rescue_fail6
+		narrator: Fate - or the ghosts of the processed - grants you a second chance. #id:1a_rescue_fail7
+		leave narrator
+
+# Rescue success (either from passing QTE or ally intervention)
 [background arg="res://assets/narrative/sasha_rescue.png" fade="1.0"]
 audio "res://assets/audio/mechanical/Metal Old Door A.wav" [volume="-5.0" bus="SFX"]
 audio music "res://assets/music/narrative/sasha_theme_main.mp3" [fade="1.0" volume="-5.0" bus="Music"]
@@ -116,9 +125,13 @@ else:
 
 leave sweet_potato_sasha
 
-# Continue to confrontation
-[background arg="res://assets/narrative/processing_facility.png" fade="1.0"]
+# Continue to facility breach
+audio music "res://assets/audio/ambient/horror_drone_23.mp3" [fade="2.0" volume="-12.0" bus="Ambient"]
+[background arg="res://assets/narrative/processing_facility.png" fade="1.2"]
 join narrator [z_index="1"]
+narrator: After a tense infiltration, your team stands at the heart of [color=DARK_VIOLET]Root Reserve[/color], the [pulse freq=3][color=CRIMSON]horrific machinery of oppression[/color][/pulse] laid bare. #id:1a
+audio "res://assets/audio/atmosphere/facility_hum.mp3" [volume="-5.0" bus="Ambient"]
+
 narrator: [wave amp=25 freq=3][color=RED]Alarms blare[/color][/wave] as guards scramble to respond to your intrusion. You race through corridors, dodging security systems. #id:1b
 audio "res://assets/audio/stings/alarm_distant.mp3" [volume="-5.0" bus="SFX"]
 leave narrator
@@ -144,6 +157,43 @@ audio "res://assets/audio/gun cocking 3.mp3" [volume="0.0" bus="SFX"]
 narrator: Security forces close in! [pulse freq=3][color=YELLOW]Fight your way through![/color][/pulse] #id:158
 leave narrator
 [signal arg="qte_confrontation"]
+
+# QTE Result handling for confrontation
+if {qte_confrontation_result} == "fail":
+	# FAILURE PATH - Cornered but saved
+	[background arg="res://assets/narrative/cornered.png" fade="0.5"]
+	audio "res://assets/audio/stings/failure_sting.mp3" [volume="-5.0" bus="SFX"]
+	join player_character [z_index="1"]
+	player_character: Guards close in from every direction. [color=CRIMSON]There's nowhere to run![/color] #id:21_fail1
+	leave player_character
+
+	if {viktor_allied} == "yes" and {qte_rescue_result} != "fail":
+		# Viktor's heroic intervention
+		[background arg="res://assets/narrative/viktor_standoff.png" fade="0.3"]
+		audio "res://assets/audio/gunfire/gun cocking 3.wav" [volume="-5.0" bus="SFX"]
+		join viktor [z_index="1"]
+		viktor: Viktor appears behind the guards, voice cold as steel. [color=STEEL_BLUE]Stand down. Now.[/color] #id:21_fail2
+		viktor: The guards hesitate - Viktor was one of their own. [color=CRIMSON]Elena's name is on those manifests. Your families could be next.[/color] #id:21_fail3
+		audio "res://assets/audio/stings/heroic_moment.mp3" [volume="-5.0" bus="SFX"]
+		viktor: Some guards lower their weapons. Others flee. The path clears. #id:21_fail4
+		leave viktor
+	elif {murphy_alliance} == "ally" and {qte_rescue_result} != "fail":
+		# Murphy's distraction
+		[background arg="res://assets/narrative/murphy_distraction.png" fade="0.3"]
+		audio "res://assets/audio/explosions/Balloon Explosion A.wav" [volume="-5.0" bus="SFX"]
+		join murphy [z_index="1"]
+		murphy: An explosion rocks the east wing. Murphy's voice crackles over comms: [color=CHARTREUSE]"That's my diversion! MOVE!"[/color] #id:21_fail5
+		murphy: [color=STEEL_BLUE]The guards scatter toward the explosion. Tommy would be proud.[/color] #id:21_fail6
+		leave murphy
+	else:
+		# Sasha saves the day
+		[background arg="res://assets/narrative/sasha_saves.png" fade="0.3"]
+		audio "res://assets/audio/gunfire/Heavy Pistol B.wav" [volume="-8.0" bus="SFX"]
+		join sweet_potato_sasha [z_index="1"]
+		sweet_potato_sasha: Sasha tackles the lead guard from behind. [color=CHARTREUSE]I didn't survive that cell just to watch you die![/color] #id:21_fail7
+		sweet_potato_sasha: [color=STEEL_BLUE]RUN! I've got this![/color] #id:21_fail8
+		leave sweet_potato_sasha
+
 join narrator [z_index="1"]
 narrator: Your group fights through waves of security, narrowly avoiding capture. Sasha's resistance fighters create diversions, clearing your path forward. #id:21
 audio "res://assets/audio/Heavy Pistol B.mp3" [volume="0.0" bus="SFX"]
@@ -188,22 +238,9 @@ if {ending_choice} == "diplomatic":
 	join sweet_potato_sasha [z_index="1"]
 	sweet_potato_sasha: I don't think so, Idaho. Guards! You saw the dossier, [color=YELLOW]you know what he did to your families.[/color] #id:2c
 	audio "res://assets/audio/gunfire/gun cocking 3.wav" [volume="0.0" bus="SFX"]
-
-	# Viktor's payoff - if player allied with him earlier
-	if {viktor_allied} == "yes":
-		join viktor [z_index="1"]
-		viktor: He steps forward, face twisted with grief and rage. [color=CRIMSON]For my wife, you monster.[/color] #id:2d_viktor
-		viktor: He kicks Idaho to the ground. [color=STEEL_BLUE]She was everything to me. And you fed her to this nation.[/color] #id:2d_viktor2
-		leave viktor
-	else:
-		join narrator [z_index="1"]
-		narrator: A hulking guard steps forward and kicks Idaho to the ground. "[color=CRIMSON]For everyone you fed to the machines![/color]" #id:2d
-		leave narrator
-
+	A hulking guard steps forward and kicks Idaho to the ground swiftly. #id:2d
 	audio "res://assets/audio/gunfire/Heavy Pistol B.wav" [volume="0.0" bus="SFX"]
-	join narrator [z_index="1"]
-	narrator: A shot echoes through the chamber. The screen fades to black. #id:2e
-	leave narrator
+	A shot echoes through the chamber. The screen fades to black. #id:2e
 	leave prime_minister_idaho
 	leave sweet_potato_sasha
 	leave player_character
@@ -268,15 +305,6 @@ else:
 	player_character: [color=STEEL_BLUE]The guilt may never fully fade, but you've found purpose in the rebuilding.[/color] #id:157
 leave sweet_potato_sasha
 leave player_character
-
-# Wife photo memorial - if player kept it
-if {has_wife_photo} == "yes":
-	[background arg="res://assets/narrative/memorial_wall.png" fade="2.0"]
-	join player_character [z_index="1"]
-	player_character: You find the memorial wall. Thousands of photos. Thousands of names. #id:38_memorial
-	player_character: You add [color=GOLD]Maris Piper's[/color] photo to the wall. She deserves to be remembered. #id:38_memorial2
-	player_character: [color=STEEL_BLUE]They all do.[/color] #id:38_memorial3
-	leave player_character
 
 audio "res://assets/audio/clothing/flag 3.wav" [volume="0.0" bus="SFX"]
 [background arg="res://assets/narrative/new_spud_flag.png" fade="2.0"]

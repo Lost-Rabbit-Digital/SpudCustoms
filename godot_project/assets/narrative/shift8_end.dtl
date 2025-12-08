@@ -98,10 +98,10 @@ if {sasha_arrest_reaction} == "intervene":
 
 	# Murphy potentially saves you
 	if {murphy_alliance} == "ally":
-		join fellow_officer [z_index="1"]
-		fellow_officer: Murphy grabs you, pulling you back. "[color=STEEL_BLUE]They're confused in the chaos! RUN![/color]" #id:27d
-		fellow_officer: Murphy shoves you toward a side corridor as guards close in on your position. #id:27e
-		leave fellow_officer
+		join murphy [z_index="1"]
+		murphy: Murphy grabs you, pulling you back. "[color=STEEL_BLUE]They're confused in the chaos! RUN![/color]" #id:27d
+		murphy: Murphy shoves you toward a side corridor as guards close in on your position. #id:27e
+		leave murphy
 		set {player_wanted} = "yes"
 	else:
 		join narrator [z_index="1"]
@@ -141,15 +141,15 @@ if {viktor_allied} == "yes":
 if {murphy_alliance} == "ally" and {player_captured} != "yes":
 	[background arg="res://assets/narrative/storage_room.png" fade="2.0"]
 	audio "res://assets/audio/furniture/Door Open C.wav" [volume="-8.0" bus="SFX"]
-	join fellow_officer [z_index="1"]
-	fellow_officer: Murphy pulls you into the storage room, breathing hard. #id:288
-	fellow_officer: This is it. This is [color=CRIMSON]actually happening[/color]. They've got Sasha. They'll process her by morning. #id:289
+	join murphy [z_index="1"]
+	murphy: Murphy pulls you into the storage room, breathing hard. #id:288
+	murphy: This is it. This is [color=CRIMSON]actually happening[/color]. They've got Sasha. They'll process her by morning. #id:289
 
 	if {sasha_arrest_reaction} == "intervene":
-		fellow_officer: That was [color=STEEL_BLUE]stupid[/color]. Brave, but stupid. You're on their list now. #id:28a
+		murphy: That was [color=STEEL_BLUE]stupid[/color]. Brave, but stupid. You're on their list now. #id:28a
 
-	fellow_officer: The resistance is planning something. Tomorrow. It's our only chance to save her. #id:28b
-	fellow_officer: Are you in? [color=CHARTREUSE]All the way in?[/color] #id:28c
+	murphy: The resistance is planning something. Tomorrow. It's our only chance to save her. #id:28b
+	murphy: Are you in? [color=CHARTREUSE]All the way in?[/color] #id:28c
 
 	set {murphy_final_alliance} = "none"
 	- "All the way. Whatever it takes to save Sasha." #id:28d
@@ -158,15 +158,15 @@ if {murphy_alliance} == "ally" and {player_captured} != "yes":
 		set {murphy_final_alliance} = "hesitant"
 
 	if {murphy_final_alliance} == "committed":
-		join fellow_officer [z_index="1"]
-		fellow_officer: Murphy clasps your shoulder. [color=CHARTREUSE]Then we move at dawn. The roots grow deep.[/color] #id:28f
-		leave fellow_officer
+		join murphy [z_index="1"]
+		murphy: Murphy clasps your shoulder. [color=CHARTREUSE]Then we move at dawn. The roots grow deep.[/color] #id:28f
+		leave murphy
 	else:
-		join fellow_officer [z_index="1"]
-		fellow_officer: Murphy's face hardens. Think fast. By this time tomorrow, she'll be [color=DARK_VIOLET]Root Reserve[/color]. #id:290
-		leave fellow_officer
+		join murphy [z_index="1"]
+		murphy: Murphy's face hardens. Think fast. By this time tomorrow, she'll be [color=DARK_VIOLET]Root Reserve[/color]. #id:290
+		leave murphy
 
-	leave fellow_officer
+	leave murphy
 
 # Final reflection
 [background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]

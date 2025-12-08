@@ -6,10 +6,10 @@ audio music "res://assets/music/narrative/ambient_mysterious_main.mp3" [fade="2.
 audio music "res://assets/audio/ambient/horror_drone_12.mp3" [fade="2.0" volume="-8.0" bus="Ambient"]
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="0.0"]
 
-join fellow_officer [z_index="1"]
+join murphy [z_index="1"]
 audio "res://assets/audio/footsteps/Concrete Walk 1_2.wav" [volume="-5.0" bus="SFX"]
-fellow_officer: Hey, new spud! Tough shift, huh? Name's Murphy. Been here three seasons now. #id:200
-fellow_officer: I saw you talking to Sasha earlier. She's... [color=STEEL_BLUE]different[/color]. Good different, I think. #id:201
+murphy: Hey, new spud! Tough shift, huh? Name's Murphy. Been here three seasons now. #id:200
+murphy: I saw you talking to Sasha earlier. She's... [color=STEEL_BLUE]different[/color]. Good different, I think. #id:201
 
 set {murphy_trust} = "none"
 - "She seems nice. Gave me some advice about staying alert." #id:202
@@ -18,15 +18,15 @@ set {murphy_trust} = "none"
 	set {murphy_trust} = "guarded"
 
 if {murphy_trust} == "open":
-	join fellow_officer [z_index="1"]
-	fellow_officer: Murphy glances around nervously. Yeah, she's got [color=YELLOW]good instincts[/color]. Listen to her. #id:204
-	fellow_officer: Between you and me? That radio broadcast about "missing potatoes"... my cousin went missing last month. Failed his inspection. #id:205
-	leave fellow_officer
+	join murphy [z_index="1"]
+	murphy: Murphy glances around nervously. Yeah, she's got [color=YELLOW]good instincts[/color]. Listen to her. #id:204
+	murphy: Between you and me? That radio broadcast about "missing potatoes"... my cousin went missing last month. Failed his inspection. #id:205
+	leave murphy
 else:
-	join fellow_officer [z_index="1"]
-	fellow_officer: Smart. Keep your head down, do your job. That's what I tell myself every day. #id:206
-	fellow_officer: Murphy's voice drops. Though sometimes I wonder where all those rejected potatoes actually go... #id:207
-	leave fellow_officer
+	join murphy [z_index="1"]
+	murphy: Smart. Keep your head down, do your job. That's what I tell myself every day. #id:206
+	murphy: Murphy's voice drops. Though sometimes I wonder where all those rejected potatoes actually go... #id:207
+	leave murphy
 
 [background arg="res://assets/narrative/cafeteria_evening.png" fade="2.0"]
 audio music "res://assets/music/narrative/quiet_conspiracy_main.mp3" [fade="2.0" volume="-8.0" bus="Music"]
