@@ -46,6 +46,7 @@ tutorial_check_age,Vérifiez la 'Date de Naissance' pour calculer l'âge
 tutorial_check_gender,Vérifiez le champ 'Genre' dans le passeport
 alert_streak_bonus_minigame,5 d'affilée ! MINI-JEU BONUS !
 alert_perfect_stamps_bonus_minigame,Tampons parfaits ! MINI-JEU BONUS !
+alert_runner_bonus_minigame,Activité suspecte ! MINI-JEU BONUS !
 alert_new_minigame_unlocked,Nouveau mini-jeu débloqué : {name} !
 alert_minigame_bonus,Bonus mini-jeu : +{bonus} points !
 high_score_display,Meilleur score : {score}

@@ -46,6 +46,7 @@ tutorial_check_age,Periksa 'Tanggal Lahir' untuk menghitung umur
 tutorial_check_gender,Periksa bidang 'Gender' di paspor
 alert_streak_bonus_minigame,5 berturut-turut! MINIGAME BONUS!
 alert_perfect_stamps_bonus_minigame,Stempel sempurna! MINIGAME BONUS!
+alert_runner_bonus_minigame,Aktivitas mencurigakan! MINIGAME BONUS!
 alert_new_minigame_unlocked,Minigame baru terbuka: {name}!
 alert_minigame_bonus,Bonus minigame: +{bonus} poin!
 high_score_display,Skor Tertinggi: {score}

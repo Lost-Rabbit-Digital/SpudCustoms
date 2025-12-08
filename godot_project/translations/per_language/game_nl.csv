@@ -46,6 +46,7 @@ tutorial_check_age,Controleer de 'Geboortedatum' om de leeftijd te berekenen
 tutorial_check_gender,Controleer het veld 'Geslacht' in het paspoort
 alert_streak_bonus_minigame,5 op rij! BONUS MINIGAME!
 alert_perfect_stamps_bonus_minigame,Perfecte stempels! BONUS MINIGAME!
+alert_runner_bonus_minigame,Verdachte activiteit! BONUS MINIGAME!
 alert_new_minigame_unlocked,Nieuwe minigame ontgrendeld: {name}!
 alert_minigame_bonus,Minigame bonus: +{bonus} punten!
 high_score_display,Hoogste score: {score}

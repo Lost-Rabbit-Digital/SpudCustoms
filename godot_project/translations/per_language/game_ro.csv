@@ -46,6 +46,7 @@ tutorial_check_age,Verificați 'Data Nașterii' pentru a calcula vârsta
 tutorial_check_gender,Verificați câmpul 'Gen' din pașaport
 alert_streak_bonus_minigame,5 la rând! MINIJOC BONUS!
 alert_perfect_stamps_bonus_minigame,Ștampile perfecte! MINIJOC BONUS!
+alert_runner_bonus_minigame,Activitate suspectă! MINIJOC BONUS!
 alert_new_minigame_unlocked,Minijoc nou deblocat: {name}!
 alert_minigame_bonus,Bonus minijoc: +{bonus} puncte!
 high_score_display,Scor maxim: {score}

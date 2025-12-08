@@ -46,6 +46,7 @@ tutorial_check_age,Sprawdź 'Datę Urodzenia' aby obliczyć wiek
 tutorial_check_gender,Sprawdź pole 'Płeć' w paszporcie
 alert_streak_bonus_minigame,5 z rzędu! BONUSOWA MINIGRA!
 alert_perfect_stamps_bonus_minigame,Idealne stemple! BONUSOWA MINIGRA!
+alert_runner_bonus_minigame,Podejrzana aktywność! BONUSOWA MINIGRA!
 alert_new_minigame_unlocked,Nowa minigra odblokowana: {name}!
 alert_minigame_bonus,Bonus z minigry: +{bonus} punktów!
 high_score_display,Najlepszy wynik: {score}
