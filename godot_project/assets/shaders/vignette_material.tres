@@ -4,7 +4,7 @@
 
 [resource]
 shader = ExtResource("1_shader")
-shader_parameter/vignette_intensity = 0.25
-shader_parameter/vignette_opacity = 0.4
+shader_parameter/vignette_intensity = 0.15
+shader_parameter/vignette_opacity = 0.25
 shader_parameter/vignette_color = Color(0, 0, 0, 1)
 shader_parameter/vignette_softness = 0.45
