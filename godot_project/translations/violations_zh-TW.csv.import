@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cu6jhbg2u0ea"
+
+[deps]
+
+files=["res://translations/violations_zh-TW.zh_TW.translation"]
+
+source_file="res://translations/violations_zh-TW.csv"
+dest_files=["res://translations/violations_zh-TW.zh_TW.translation"]
+
+[params]
+
+compress=true
+delimiter=0
