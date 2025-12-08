@@ -66,7 +66,7 @@ else:
 	leave resistance_member_1
 
 [background arg="res://assets/narrative/night_attack.png" fade="2.0"]
-audio music "res://assets/music/narrative/metal_violence_main.mp3" [fade="0.5" volume="-3.0" bus="Music"]
+audio music "res://assets/music/narrative/metal_violence_main.mp3" [fade="2.0" volume="-10.0" bus="Music"]
 join narrator [z_index="1"]
 narrator: Suddenly, the facility [color=YELLOW]shakes with explosions[/color]. The resistance attack has begun, regardless of your choice. #id:152
 audio "res://assets/audio/stings/alarm_distant.mp3" [volume="-5.0" bus="SFX"]
