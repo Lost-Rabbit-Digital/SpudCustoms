@@ -1364,11 +1364,10 @@ def main():
         description='Translation management tool for Spud Customs',
         epilog='''
 Examples:
-  %(prog)s                      # Translate combined CSVs (default)
+  %(prog)s                      # Translate per-language files (default)
   %(prog)s --check              # Check for missing/untranslated content
-  %(prog)s --file menus.csv     # Translate specific file only
+  %(prog)s --base menus         # Translate specific base name only
   %(prog)s --dry-run            # Preview what would be translated
-  %(prog)s --add-columns        # Add missing language columns to CSVs
   %(prog)s --list-languages     # List all supported Steam languages
         ''',
         formatter_class=argparse.RawDescriptionHelpFormatter
@@ -1425,23 +1424,23 @@ Examples:
         add_all_missing_columns()
         return
 
-    # Determine mode: combined (default) or per-language
-    # Combined mode works with files like menus.csv (all languages in one file)
+    # Determine mode: per-language (default) or combined
     # Per-language mode works with files like menus_en.csv, menus_de.csv (one file per language)
-    use_per_language = args.base is not None
+    # Combined mode works with files like menus.csv (all languages in one file)
+    use_combined = args.combined or args.file is not None
 
     if args.check:
-        if use_per_language:
-            check_per_language_translations(args.base)
-        else:
+        if use_combined:
             check_translations(args.file)
+        else:
+            check_per_language_translations(args.base)
     else:
         try:
             import asyncio
-            if use_per_language:
-                asyncio.run(translate_per_language_async(args.base, args.dry_run))
-            else:
+            if use_combined:
                 asyncio.run(translate_with_gemini_async(args.file, args.dry_run))
+            else:
+                asyncio.run(translate_per_language_async(args.base, args.dry_run))
         except ImportError as e:
             if 'aiohttp' in str(e):
                 print("❌ aiohttp is required for translation. Install with: pip install aiohttp")
