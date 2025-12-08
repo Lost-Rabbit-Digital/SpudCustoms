@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://drjion06d2dk4"
+
+[deps]
+
+files=["res://translations/per_language/game_ro.ro.translation"]
+
+source_file="res://translations/per_language/game_ro.csv"
+dest_files=["res://translations/per_language/game_ro.ro.translation"]
+
+[params]
+
+compress=true
+delimiter=0
