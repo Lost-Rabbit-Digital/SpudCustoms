@@ -7,10 +7,11 @@ audio "res://assets/audio/ui_feedback/Discovery Ensemble 001.wav" [volume="-5.0"
 narrator: Welcome to [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs![/color][/pulse] #id:156
 narrator: You've been selected for a vital role: [color=DARK_ORANGE]Border Customs Officer[/color]. #id:158
 [background arg="res://assets/narrative/checkpoint_booth.png" fade="1.5"]
-narrator: Don't worry - I'll walk you through everything [color=YELLOW]step by step[/color]. #id:170
-narrator: You'll learn how to open your booth, call potatoes, inspect documents, and stamp passports. #id:171
+narrator: Your job is simple. Potatoes arrive at your booth, you check their documents, and you decide who gets through. #id:170
+narrator: But be careful - not every potato has their papers in order. #id:180
+narrator: [color=RED]Expired passports[/color] are an automatic rejection. No exceptions. #id:181
 [background arg="res://assets/narrative/checkpoint_exterior.png" fade="2.0"]
-narrator: Just follow the on-screen prompts and you'll be a pro in no time! #id:173
+narrator: I'll guide you through the basics [color=YELLOW]step by step[/color]. Follow the prompts and you'll get the hang of it. #id:171
 narrator: The safety and security of Spud depends on your [pulse freq=2][color=DARK_ORANGE]vigilance![/color][/pulse] #id:172
 narrator: Let's begin your [color=YELLOW]training shift[/color]... #id:174
 leave narrator
