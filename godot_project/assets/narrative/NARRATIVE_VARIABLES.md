@@ -34,8 +34,11 @@ All variables below should be persisted when saving game state and restored when
 
 | Variable | Set In | Possible Values | Used In | Description |
 |----------|--------|-----------------|---------|-------------|
-| `viktor_conversation` | shift6_end | "curious", "direct" | shift6_end | Initial conversation with Viktor |
-| `viktor_allied` | shift6_end | "yes" | shift8_end, final | Whether Viktor helped at scanner |
+| `viktor_initial_response` | shift5_intro | "sympathetic", "distant" | shift5_intro | Player's first response to Viktor asking about his wife |
+| `viktor_wife_discovery` | shift5_end | "yes" | shift6_intro | Player found Elena Petrov on manifest (always set in shift5_end) |
+| `viktor_conversation` | shift6_intro | "tell_truth", "lie_protect" | shift6_end, shift7_end | How player told Viktor about Elena |
+| `viktor_allied` | shift6_intro | "yes" | shift7_end, shift8_end, final | Whether Viktor became an ally (set if player tells truth) |
+| `viktor_comfort` | shift7_end | "comfort", "strength", "honest" | shift7_end | How player comforted Viktor at grief scene |
 | `has_keycard` | shift8_end | "yes" | shift9_intro | Viktor gave player security keycard |
 
 ### Resistance Choices
@@ -154,7 +157,9 @@ When implementing level select, ensure these variables are:
 Some variables depend on others. Add validation:
 - `has_wife_photo` requires `family_response == "help"`
 - `kept_note` and `reported_note` are mutually exclusive
-- `viktor_allied` only possible if `helped_operative == "yes"`
+- `viktor_allied` requires `viktor_conversation == "tell_truth"` (player must reveal Elena's fate)
+- `viktor_conversation` requires `viktor_wife_discovery == "yes"` (manifest must be found in shift5_end)
+- `viktor_comfort` requires `viktor_allied == "yes"` (grief scene only if allied)
 - `sasha_rescue_reaction` only set in "go" path
 
 ---
