@@ -48,6 +48,7 @@ var dialogic_timeline: Node
 var dialogue_active: bool = false
 var current_skip_button_layer: CanvasLayer = null
 var cutscene_post_processing: CanvasLayer = null
+var cutscene_bloom_pulse: CutsceneBloomPulse = null
 
 # Preloaded resources for cutscene post-processing
 var cutscene_environment: Environment = preload("res://assets/styles/cutscene_environment.tres")
@@ -206,12 +207,45 @@ func create_cutscene_post_processing() -> void:
 	cutscene_post_processing.add_child(vignette_rect)
 	add_child(cutscene_post_processing)
 
+	# Add animated bloom pulse effect for visual interest
+	_create_bloom_pulse()
+
 
 func cleanup_cutscene_post_processing() -> void:
 	"""Remove cutscene post-processing effects."""
 	if cutscene_post_processing != null:
 		cutscene_post_processing.queue_free()
 		cutscene_post_processing = null
+
+	_cleanup_bloom_pulse()
+
+
+func _create_bloom_pulse() -> void:
+	"""Create animated bloom effect for cutscenes."""
+	if cutscene_bloom_pulse != null:
+		return
+
+	cutscene_bloom_pulse = CutsceneBloomPulse.new()
+	cutscene_bloom_pulse.name = "CutsceneBloomPulse"
+
+	# Configure the pulse for a dreamy, cinematic feel
+	cutscene_bloom_pulse.base_glow_intensity = 0.7
+	cutscene_bloom_pulse.pulse_amplitude = 0.25
+	cutscene_bloom_pulse.pulse_speed = 0.4  # Slow, gentle pulse
+	cutscene_bloom_pulse.secondary_amplitude = 0.1
+	cutscene_bloom_pulse.secondary_speed = 0.15  # Even slower secondary wave
+	cutscene_bloom_pulse.glow_bloom = 0.25
+	cutscene_bloom_pulse.glow_hdr_threshold = 0.7
+	cutscene_bloom_pulse.smoothing = 0.85
+
+	add_child(cutscene_bloom_pulse)
+
+
+func _cleanup_bloom_pulse() -> void:
+	"""Remove animated bloom effect."""
+	if cutscene_bloom_pulse != null:
+		cutscene_bloom_pulse.queue_free()
+		cutscene_bloom_pulse = null
 
 
 func create_skip_button():
