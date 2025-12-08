@@ -229,13 +229,13 @@ func _create_bloom_pulse() -> void:
 	cutscene_bloom_pulse.name = "CutsceneBloomPulse"
 
 	# Configure the pulse for soft ethereal cinematic glow
-	cutscene_bloom_pulse.base_glow_intensity = 0.5
-	cutscene_bloom_pulse.pulse_amplitude = 0.15
+	cutscene_bloom_pulse.base_glow_intensity = 0.25
+	cutscene_bloom_pulse.pulse_amplitude = 0.12
 	cutscene_bloom_pulse.pulse_speed = 0.3  # Slow, gentle pulse
-	cutscene_bloom_pulse.secondary_amplitude = 0.05
+	cutscene_bloom_pulse.secondary_amplitude = 0.04
 	cutscene_bloom_pulse.secondary_speed = 0.12  # Even slower secondary wave
-	cutscene_bloom_pulse.glow_bloom = 0.2
-	cutscene_bloom_pulse.glow_hdr_threshold = 0.7
+	cutscene_bloom_pulse.glow_bloom = 0.12
+	cutscene_bloom_pulse.glow_hdr_threshold = 0.75
 	cutscene_bloom_pulse.smoothing = 0.85
 
 	add_child(cutscene_bloom_pulse)
