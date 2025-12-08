@@ -1,6 +1,6 @@
 ﻿keys,en,cs,da,de,es,fi,fr,hu,id,it,nl,no,pl,pt,ro,sk,sv,tr,vi
 Character/173/name,Radio Announcer,Rozhlasový hlasatel,Radioværten,Radiosprecher,Locutor de radio,Radiojuontaja,Animateur radio,Rádióbemondó,Penyiar Radio,Conduttore radiofonico,Radioomroeper,Radiovert,Spiker radiowy,Locutor de rádio,Crainic radio,Rozhlasový hlásateľ,Radioröst,Radyo Sunucusu,Người dẫn chương trình radio
-Character/174/name,Fellow Officer,Kolega důstojník,Medtjenesteperson,Mitoffizier,Oficial compañero,Virkaveli,Officier collègue,Tiszttárs,Petugas Rekan,Ufficiale collega,Mede-officier,Medoffiser,Oficer towarzyszący,Oficial colega,Ofițer coleg,Kolega dôstojník,Medofficer,Meslektaş Memur,Đồng đội sĩ quan
+Character/174/name,Murphy,Murphy,Murphy,Murphy,Murphy,Murphy,Murphy,Murphy,Murphy,Murphy,Murphy,Murphy,Murphy,Murphy,Murphy,Murphy,Murphy,Murphy,Murphy
 Character/175/name,Narrator,Vypravěč,Fortæller,Erzähler,Narrador,Kertoja,Narrateur,Narrátor,Narator,Narratore,Verteller,Forteller,Lektor,Narrador,Narator,Rozprávač,Berättare,Anlatıcı,Người kể chuyện
 Character/176/name,Quiet Potato,Tichý brambor,Stille Kartoffel,Stille Kartoffel,Patata silenciosa,Hiljainen peruna,Pomme de terre silencieuse,Csendes Burgonya,Kentang Pendiam,Patata silenziosa,Stille Aardappel,Stille Potet,Cichy Ziemniak,Batata silenciosa,Cartof tăcut,Tichý zemiak,Tyst Potatis,Sessiz Patates,Khoai tây im lặng
 Character/177/name,Concerned Potato,Znepokojený brambor,Bekymret Kartoffel,Besorgte Kartoffel,Patata preocupada,Huolestunut peruna,Pomme de terre inquiète,Aggódó Burgonya,Kentang Khawatir,Patata preoccupata,Bezorgde Aardappel,Bekymret Potet,Zaniepokojony Ziemniak,Batata preocupada,Cartof îngrijorat,Znepokojený zemiak,Orolig Potatis,Endişeli Patates,Khoai tây lo lắng
@@ -17,7 +17,9 @@ Character/181/name,Supervisor Russet,Dozorce Russet,Tilsynsførende Russet,Aufse
 Character/181/nicknames,"Russ,Russet,Supervisor Russet","Russ,Russet,Dozorce Russet","Russ,Russet,Tilsynsførende Russet","Russ,Russet,Aufseher Russet","Roji,Rojizo,Capataz Rojizo","Russ,Russet,Esimies Russet","Russ,Russet,Superviseur Russet","Russ,Russet,Russet Felügyelő","Russ,Russet,Pengawas Russet","Russ,Russet,Supervisore Russet","Russ,Russet,Opzichter Russet","Russ,Russet,Tilsynsmann Russet","Russ,Russet,Nadzorca Russet","Casca,Casca-Grossa,Supervisor Casca-Grossa","Russ,Russet,Supervizor Russet","Russ,Russet,Dozorca Russet","Russ,Russet,Övervakare Russet","Russ,Russet,Şef Russet","Russ,Russet,Giám sát viên Russet"
 Character/182/name,Sweet Potato Sasha,Sladký brambor Sasha,Sødkartoffel Sasha,Süßkartoffel Sasha,Batata Sasha,Bataatti Sasha,Patate douce Sasha,Édesburgonya Sasha,Ubi Jalar Sasha,Patata dolce Sasha,Zoete Aardappel Sasha,Søtpotet Sasha,Słodki Ziemniak Sasha,Batata-doce Sasha,Cartof dulce Sasha,Sladký zemiak Sasha,Sötpotatis Sasha,Tatlı Patates Sasha,Khoai lang Sasha
 Character/183/name,Jumpy Traveler,Nervózní cestovatel,Nervøs Rejsende,Nervöser Reisender,Viajero nervioso,Hermostunut matkustaja,Voyageur nerveux,Ideges Utazó,Pelancong Gugup,Viaggiatore nervoso,Nerveuze Reiziger,Nervøs Reisende,Nerwowy podróżnik,Viajante nervoso,Călător agitat,Nervózny cestovateľ,Nervös Resenär,Gergin Yolcu,Du khách lo lắng
+Character/184/name,Viktor,Viktor,Viktor,Viktor,Viktor,Viktor,Viktor,Viktor,Viktor,Viktor,Viktor,Viktor,Viktor,Viktor,Viktor,Viktor,Viktor,Viktor,Viktor
 Character/183/nicknames,,,,,,,,,,,,,,,,,,,
+Character/184/nicknames,,,,,,,,,,,,,,,,,,,
 Character/173/nicknames,,,,,,,,,,,,,,,,,,,
 Character/182/nicknames,,,,,,,,,,,,,,,,,,,
 Character/180/nicknames,,,,,,,,,,,,,,,,,,,

@@ -46,6 +46,7 @@ tutorial_check_age,Yaşı hesaplamak için 'Doğum Tarihi'ni kontrol edin
 tutorial_check_gender,Pasaporttaki 'Cinsiyet' alanını kontrol edin
 alert_streak_bonus_minigame,Arka arkaya 5! BONUS MİNİ OYUN!
 alert_perfect_stamps_bonus_minigame,Mükemmel damgalar! BONUS MİNİ OYUN!
+alert_runner_bonus_minigame,Şüpheli aktivite! BONUS MİNİ OYUN!
 alert_new_minigame_unlocked,Yeni mini oyun açıldı: {name}!
 alert_minigame_bonus,Mini oyun bonusu: +{bonus} puan!
 high_score_display,En Yüksek Puan: {score}

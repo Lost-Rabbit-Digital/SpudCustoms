@@ -46,6 +46,7 @@ tutorial_check_age,Tjek 'Fødselsdato' for at beregne alder
 tutorial_check_gender,Tjek 'Køn' feltet i passet
 alert_streak_bonus_minigame,5 i træk! BONUS MINISPIL!
 alert_perfect_stamps_bonus_minigame,Perfekte stempler! BONUS MINISPIL!
+alert_runner_bonus_minigame,Mistænkelig aktivitet! BONUS MINISPIL!
 alert_new_minigame_unlocked,Nyt minispil låst op: {name}!
 alert_minigame_bonus,Minispil bonus: +{bonus} point!
 high_score_display,Højeste score: {score}

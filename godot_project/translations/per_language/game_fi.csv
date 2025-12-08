@@ -46,6 +46,7 @@ tutorial_check_age,Tarkista 'Syntymäaika' iän laskemiseksi
 tutorial_check_gender,Tarkista passin 'Sukupuoli' kenttä
 alert_streak_bonus_minigame,5 peräkkäin! BONUS MINIPELI!
 alert_perfect_stamps_bonus_minigame,Täydelliset leimat! BONUS MINIPELI!
+alert_runner_bonus_minigame,Epäilyttävää toimintaa! BONUS MINIPELI!
 alert_new_minigame_unlocked,Uusi minipeli avattu: {name}!
 alert_minigame_bonus,Minipelin bonus: +{bonus} pistettä!
 high_score_display,Ennätys: {score}

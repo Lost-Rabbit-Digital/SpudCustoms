@@ -46,6 +46,7 @@ tutorial_check_age,Überprüfen Sie das 'Geburtsdatum' zur Altersberechnung
 tutorial_check_gender,Überprüfen Sie das Feld 'Geschlecht' im Pass
 alert_streak_bonus_minigame,5 hintereinander! BONUS-MINISPIEL!
 alert_perfect_stamps_bonus_minigame,Perfekte Stempel! BONUS-MINISPIEL!
+alert_runner_bonus_minigame,Verdächtige Aktivität! BONUS-MINISPIEL!
 alert_new_minigame_unlocked,Neues Minispiel freigeschaltet: {name}!
 alert_minigame_bonus,Minispiel-Bonus: +{bonus} Punkte!
 high_score_display,Highscore: {score}

@@ -46,6 +46,7 @@ tutorial_check_age,Controlla la 'Data di Nascita' per calcolare l'età
 tutorial_check_gender,Controlla il campo 'Genere' nel passaporto
 alert_streak_bonus_minigame,5 di fila! MINIGIOCO BONUS!
 alert_perfect_stamps_bonus_minigame,Timbri perfetti! MINIGIOCO BONUS!
+alert_runner_bonus_minigame,Attività sospetta! MINIGIOCO BONUS!
 alert_new_minigame_unlocked,Nuovo minigioco sbloccato: {name}!
 alert_minigame_bonus,Bonus minigioco: +{bonus} punti!
 high_score_display,Punteggio più alto: {score}

@@ -46,6 +46,7 @@ tutorial_check_age,Verifica la 'Fecha de Nacimiento' para calcular la edad
 tutorial_check_gender,Verifica el campo 'Género' en el pasaporte
 alert_streak_bonus_minigame,¡5 seguidos! ¡MINIJUEGO BONUS!
 alert_perfect_stamps_bonus_minigame,¡Sellos perfectos! ¡MINIJUEGO BONUS!
+alert_runner_bonus_minigame,¡Actividad sospechosa! ¡MINIJUEGO BONUS!
 alert_new_minigame_unlocked,¡Nuevo minijuego desbloqueado: {name}!
 alert_minigame_bonus,Bonus de minijuego: +{bonus} puntos!
 high_score_display,Puntuación más alta: {score}

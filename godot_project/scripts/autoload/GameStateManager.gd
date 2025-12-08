@@ -26,6 +26,9 @@ var _game_mode: String = "score_attack"
 var _story_state: int = 0
 var _tutorial_mode: bool = false  # Whether we're in tutorial shift
 
+# Pending notifications (shown after shift starts)
+var _pending_minigame_unlock: String = ""  # Name of minigame to notify about
+
 # Statistics
 var _total_runners_stopped: int = 0
 var _perfect_hits: int = 0
@@ -206,6 +209,21 @@ func is_tutorial_mode() -> bool:
 func set_tutorial_mode(enabled: bool) -> void:
 	_tutorial_mode = enabled
 	LogManager.write_info("Tutorial mode set to: " + str(enabled))
+
+
+## Store a pending minigame unlock notification to show after shift starts
+func set_pending_minigame_unlock(minigame_name: String) -> void:
+	_pending_minigame_unlock = minigame_name
+	if minigame_name != "":
+		LogManager.write_info("Pending minigame unlock notification set: " + minigame_name)
+
+
+## Get and clear the pending minigame unlock notification
+## Returns empty string if no notification pending
+func get_and_clear_pending_minigame_unlock() -> String:
+	var notification = _pending_minigame_unlock
+	_pending_minigame_unlock = ""
+	return notification
 
 
 func is_dev_mode() -> bool:
