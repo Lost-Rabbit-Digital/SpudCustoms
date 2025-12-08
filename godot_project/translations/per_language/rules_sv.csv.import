@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://2bppy0q13b5f"
+
+[deps]
+
+files=["res://translations/per_language/rules_sv.sv.translation"]
+
+source_file="res://translations/per_language/rules_sv.csv"
+dest_files=["res://translations/per_language/rules_sv.sv.translation"]
+
+[params]
+
+compress=true
+delimiter=0

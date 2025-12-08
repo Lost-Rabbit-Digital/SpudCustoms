@@ -65,7 +65,7 @@ gdscript/warnings/integer_division=0
 
 directories/dch_directory={
 "announcer": "res://assets/narrative/characters/announcer.dch",
-"fellow_officer": "res://assets/narrative/characters/fellow_officer.dch",
+"murphy": "res://assets/narrative/characters/murphy.dch",
 "narrator": "res://assets/narrative/characters/narrator.dch",
 "npc_1": "res://assets/narrative/characters/npc_1.dch",
 "npc_2": "res://assets/narrative/characters/npc_2.dch",
@@ -80,7 +80,8 @@ directories/dch_directory={
 "spud_masherson": "res://assets/narrative/characters/spud_masherson.dch",
 "supervisor_russet": "res://assets/narrative/characters/supervisor_russet.dch",
 "sweet_potato_sasha": "res://assets/narrative/characters/sweet_potato_sasha.dch",
-"traveler_1": "res://assets/narrative/characters/traveler_1.dch"
+"traveler_1": "res://assets/narrative/characters/traveler_1.dch",
+"viktor": "res://assets/narrative/characters/viktor.dch"
 }
 directories/dtl_directory={
 "final_confrontation": "res://assets/narrative/final_confrontation.dtl",
@@ -124,6 +125,8 @@ variables={
 "final_decision": "none",
 "final_loyalist_choice": "none",
 "final_mission_response": "none",
+"follow_trucks": "none",
+"found_facility": "no",
 "has_keycard": "none",
 "has_wife_photo": "none",
 "helped_operative": "none",
@@ -134,6 +137,7 @@ variables={
 "interrogation_response": "none",
 "kept_note": "none",
 "loyalty_response": "none",
+"malfunction_excuse": "none",
 "murphy_alliance": "none",
 "murphy_final_alliance": "none",
 "murphy_trust": "none",
@@ -158,10 +162,7 @@ variables={
 "viktor_conversation": "none",
 "viktor_wife_discovery": "no",
 "wife_name": "",
-"yellow_badge_response": "none",
-"malfunction_excuse": "none",
-"follow_trucks": "none",
-"found_facility": "no"
+"yellow_badge_response": "none"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.02

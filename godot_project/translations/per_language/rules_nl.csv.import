@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://hydnt4fqjjil"
+
+[deps]
+
+files=["res://translations/per_language/rules_nl.nl.translation"]
+
+source_file="res://translations/per_language/rules_nl.csv"
+dest_files=["res://translations/per_language/rules_nl.nl.translation"]
+
+[params]
+
+compress=true
+delimiter=0
