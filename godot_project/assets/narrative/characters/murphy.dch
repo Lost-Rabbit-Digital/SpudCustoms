@@ -1,0 +1,42 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "174",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "default",
+"sound_moods": {
+"default": {
+"mode": 1,
+"name": "default",
+"pitch_base": 0.9,
+"pitch_variance": 0.08,
+"skip_characters": 2,
+"sound_path": "res://assets/audio/chatter/murphy/",
+"volume_base": -6.0,
+"volume_variance": 1.0
+}
+},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "Murphy",
+&"description": "Fellow customs officer who lost his cousin Tommy to Root Reserve processing. Becomes a key resistance ally.",
+&"display_name": "Murphy",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"Murphy": {
+"export_overrides": {
+"image": "\"res://assets/narrative/characters/murphy.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 1.0
+}

@@ -1,0 +1,246 @@
+# loyalist_ending.dtl
+# Full ending for players who chose to remain loyal throughout
+# This is a morally complex "bad" ending - player survives but at great cost
+# Should feel hollow, not triumphant
+
+audio music "res://assets/music/narrative/hollow_victory_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+audio music "res://assets/audio/ambient/horror_drone_12.mp3" [fade="2.0" volume="-8.0" bus="Ambient"]
+[background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]
+
+# LOYALIST SUPPRESSION QTE - morally dark path
+join narrator [z_index="1"]
+narrator: Chaos erupts as the resistance attack begins. Explosions rock the checkpoint. #id:299_suppress1
+narrator: You could run. You could hide. Instead, you [color=DARK_ORANGE]choose your side[/color]. #id:299_suppress2
+leave narrator
+
+[background arg="res://assets/narrative/night_attack.png" fade="0.5"]
+audio music "res://assets/music/narrative/metal_violence_main.mp3" [fade="0.5" volume="-3.0" bus="Music"]
+audio "res://assets/audio/explosions/rumbling 1.wav" [volume="-5.0" bus="SFX"]
+
+join supervisor_russet [z_index="1"]
+supervisor_russet: Russet grabs your arm. [pulse freq=2][color=YELLOW]NOW'S YOUR CHANCE![/color][/pulse] Prove your loyalty! #id:299_suppress3
+supervisor_russet: The resistance is trying to breach the east gate! [color=CRIMSON]Stop them![/color] #id:299_suppress4
+leave supervisor_russet
+
+join player_character [z_index="1"]
+player_character: You grip your weapon. These could be people you know. People you've helped. #id:299_suppress5
+player_character: But survival has a price. [color=DARK_ORANGE]You've made your choice.[/color] #id:299_suppress6
+leave player_character
+
+# Suppression QTE - player actively fights resistance
+[background arg="res://assets/narrative/extreme_emergency.png" fade="0.3"]
+audio "res://assets/audio/stings/heartbeat_tension.mp3" [volume="-5.0" bus="SFX"]
+join narrator [z_index="1"]
+narrator: [pulse freq=3][color=CRIMSON]Fight for the state![/color][/pulse] Suppress the resistance attack! #id:299_suppress7
+leave narrator
+[signal arg="qte_suppression"]
+
+# Post-suppression scene
+[background arg="res://assets/narrative/aftermath.png" fade="1.5"]
+audio music "res://assets/music/narrative/ambient_defeat_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+join narrator [z_index="1"]
+narrator: When the smoke clears, bodies litter the ground. Some wear resistance badges. #id:299_suppress8
+narrator: [color=STEEL_BLUE]You recognize faces among the fallen.[/color] #id:299_suppress9
+leave narrator
+
+if {murphy_alliance} == "ally":
+	join murphy [z_index="1"]
+	audio "res://assets/audio/stings/dread_chord.mp3" [volume="-5.0" bus="SFX"]
+	murphy: Murphy lies among the dead. His eyes stare at nothing. Tommy's photo clutched in his hand. #id:299_suppress10
+	murphy: [color=STEEL_BLUE]He died fighting for something he believed in. You helped kill it.[/color] #id:299_suppress11
+	leave murphy
+
+join narrator [z_index="1"]
+narrator: The resistance attack failed. The checkpoint stands, stronger than ever. And you remain at your post. #id:300
+leave narrator
+
+# Prime Minister Idaho's visit
+[background arg="res://assets/narrative/official_arrival.png" fade="2.0"]
+audio "res://assets/audio/atmosphere/crowd_unrest.mp3" [volume="-12.0" bus="Ambient"]
+audio music "res://assets/music/narrative/radio_propaganda_main.mp3" [fade="1.5" volume="-5.0" bus="Music"]
+join announcer [z_index="1"]
+announcer: [pulse freq=2][color=GOLD]ALL HAIL PRIME MINISTER IDAHO![/color][/pulse] Defender of Spud! Vanquisher of traitors! #id:301
+leave announcer
+
+[background arg="res://assets/narrative/idaho_arrival.png" fade="1.5"]
+audio "res://assets/audio/footsteps/Concrete Walk 1_1.wav" [volume="-5.0" bus="SFX"]
+join prime_minister_idaho [z_index="1"]
+prime_minister_idaho: A massive potato in ornate regalia descends from an armored vehicle, flanked by elite guards. #id:302
+prime_minister_idaho: Idaho surveys the checkpoint with cold, calculating eyes. #id:303
+
+join supervisor_russet [z_index="1"]
+supervisor_russet: Russet scurries forward, bowing deeply. Prime Minister! We are honored by your presence! #id:304
+supervisor_russet: The traitors have been [color=DARK_VIOLET]processed[/color] as you ordered. Production is up 40% this quarter! #id:305
+leave supervisor_russet
+
+# Player recognition ceremony
+[background arg="res://assets/narrative/loyalist_ceremony.png" fade="2.0"]
+audio music "res://assets/music/ambient_vol2_glorious_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+join prime_minister_idaho [z_index="1"]
+prime_minister_idaho: And this is the officer who remained loyal during the uprising? #id:306
+
+join supervisor_russet [z_index="1"]
+supervisor_russet: Yes, Prime Minister. Unwavering dedication. Reported suspicious activities. A model citizen. #id:307
+leave supervisor_russet
+
+join prime_minister_idaho [z_index="1"]
+prime_minister_idaho: Idaho steps forward, pinning a medal to your chest - [color=GOLD]The Golden Tuber[/color]. #id:308
+prime_minister_idaho: For service above and beyond. You've proven that [color=DARK_ORANGE]loyalty to Spud[/color] will always be rewarded. #id:309
+audio "res://assets/audio/stings/revelation_hope.mp3" [volume="-8.0" bus="SFX"]
+
+set {accept_medal} = "none"
+- "Thank you, Prime Minister. Glory to Spud." #id:30a
+	set {accept_medal} = "accept"
+- "I only did my duty, sir." (Force a smile) #id:30b
+	set {accept_medal} = "reluctant"
+
+if {accept_medal} == "accept":
+	join prime_minister_idaho [z_index="1"]
+	prime_minister_idaho: Idaho's smile doesn't reach his eyes. Yes. You certainly did. #id:30c
+	leave prime_minister_idaho
+else:
+	join prime_minister_idaho [z_index="1"]
+	prime_minister_idaho: Idaho studies you for a long moment. Duty. [color=STEEL_BLUE]Such a simple word for such complicated actions.[/color] #id:30d
+	prime_minister_idaho: I wonder what [color=CRIMSON]nightmares[/color] visit those who do their "duty" so well. #id:30e
+	leave prime_minister_idaho
+
+leave prime_minister_idaho
+
+# The "celebration" feast
+[background arg="res://assets/narrative/victory_feast.png" fade="2.0"]
+audio music "res://assets/music/narrative/ambient_defeat_main.mp3" [fade="2.0" volume="-8.0" bus="Music"]
+join narrator [z_index="1"]
+narrator: A feast is held in honor of the victory. Tables groan with food, including generous portions of [color=DARK_VIOLET]Root Reserve[/color]. #id:30f
+leave narrator
+
+audio "res://assets/audio/mechanical/liquid sloshing inside canister 1.wav" [volume="-5.0" bus="SFX"]
+join supervisor_russet [z_index="1"]
+supervisor_russet: Russet raises a glass of thick, purple liquid. A toast! To the [color=CRIMSON]traitors who nourish us[/color]! #id:310
+supervisor_russet: The room laughs. Some nervously. Most genuinely. #id:311
+supervisor_russet: He slides a plate toward you. Try the new batch. [color=DARK_VIOLET]"Resistance Blend."[/color] Sasha's contribution to Spud's future. #id:312
+leave supervisor_russet
+
+audio "res://assets/audio/stings/dread_chord.mp3" [volume="-5.0" bus="SFX"]
+join player_character [z_index="1"]
+player_character: Your stomach lurches. The food on the plate. [color=CRIMSON]Sasha.[/color] Murphy's cousin. The wife from the photo. #id:313
+player_character: [tornado radius=3 freq=2][color=CRIMSON]All of them.[/color][/tornado] #id:314
+
+set {eat_final} = "none"
+- "Force yourself to eat - maintain your cover" #id:315
+	set {eat_final} = "eat"
+- "Push the plate away - you can't do this" #id:316
+	set {eat_final} = "refuse"
+
+if {eat_final} == "eat":
+	join player_character [z_index="1"]
+	player_character: You raise the fork to your lips. Close your eyes. [color=STEEL_BLUE]Chew. Swallow. Don't think.[/color] #id:317
+	player_character: Russet nods approvingly. "Good. [color=DARK_ORANGE]You'll go far.[/color]" #id:318
+	leave player_character
+else:
+	join player_character [z_index="1"]
+	player_character: You push the plate away. "I'm not feeling well. The excitement of the day..." #id:319
+	join supervisor_russet [z_index="1"]
+	supervisor_russet: Russet's eyes narrow briefly, then soften. Of course. Such a [color=YELLOW]sensitive constitution[/color]. #id:31a
+	supervisor_russet: Rest up. Tomorrow, we have [color=CRIMSON]more processing[/color] to oversee. #id:31b
+	leave supervisor_russet
+	leave player_character
+
+# The weight of survival
+[background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
+audio music "res://assets/music/ambient_vol3_defeat_main.mp3" [fade="2.0" volume="-3.0" bus="Music"]
+join player_character [z_index="1"]
+player_character: You return to your quarters. The medal weighs heavy on your chest. #id:31c
+
+if {family_response} == "help":
+	audio "res://assets/audio/paper/paper picked up 2.wav" [volume="-8.0" bus="SFX"]
+	player_character: You pull out the photo of the missing wife. Her husband is probably in the same batch as her now. #id:31d
+	player_character: You promised to find her. [color=STEEL_BLUE]You found her.[/color] Just not the way either of you hoped. #id:31e
+
+if {murphy_alliance} == "ally":
+	player_character: Murphy. Your friend. The one who trusted you. He was in the resistance. #id:31f
+	player_character: [color=CRIMSON]Was.[/color] #id:320
+
+player_character: You stare at your reflection in the window. The medal gleams. [color=DARK_ORANGE]Golden Tuber[/color]. Hero of Spud. #id:321
+player_character: [color=STEEL_BLUE]Monster in potato skin.[/color] #id:322
+leave player_character
+
+# Sasha's ghost
+[background arg="res://assets/narrative/sasha_memory.png" fade="2.0"]
+audio "res://assets/audio/stings/revelation_dark.mp3" [volume="-8.0" bus="SFX"]
+join narrator [z_index="1"]
+narrator: That night, you dream of Sasha. She doesn't accuse. Doesn't rage. That would be easier. #id:323
+leave narrator
+
+join sweet_potato_sasha [z_index="1"]
+sweet_potato_sasha: She just looks at you with those eyes. [color=CHARTREUSE]The roots grow deep[/color], she whispers. #id:324
+sweet_potato_sasha: Even the [color=STEEL_BLUE]rotten ones[/color]. #id:325
+leave sweet_potato_sasha
+
+# The hollow future
+[background arg="res://assets/narrative/loyalist_future.png" fade="2.0"]
+audio music "res://assets/music/narrative/ambient_mysterious_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+join narrator [z_index="1"]
+narrator: Months pass. You're promoted. Regional Inspector of Border Security. Russet's right hand. #id:326
+narrator: You oversee more rejections than anyone in Spud's history. [color=DARK_VIOLET]Root Reserve[/color] production soars. #id:327
+leave narrator
+
+[background arg="res://assets/narrative/loyalist_office.png" fade="2.0"]
+join player_character [z_index="1"]
+player_character: Your office is comfortable. Your rations are generous. Your family is protected. #id:328
+player_character: You have everything you were promised. #id:329
+audio "res://assets/audio/stings/suspicion_sting.mp3" [volume="-8.0" bus="SFX"]
+player_character: Everything except [color=STEEL_BLUE]sleep[/color]. Except [color=STEEL_BLUE]peace[/color]. Except the ability to look in a mirror. #id:32a
+leave player_character
+
+# The tiny resistance - hope or delusion?
+[background arg="res://assets/narrative/yellow_emblem.png" fade="2.0"]
+join narrator [z_index="1"]
+narrator: One day, you notice it. A [color=GOLD]yellow spud emblem[/color] scratched into a wall. Then another. Then dozens. #id:32b
+leave narrator
+
+join player_character [z_index="1"]
+player_character: A new resistance is forming. Quieter. More careful. Learning from Sasha's mistakes. #id:32c
+
+set {final_loyalist_choice} = "none"
+- "Report the symbols to security immediately" #id:32d
+	set {final_loyalist_choice} = "report"
+- "Pretend you didn't see them" #id:32e
+	set {final_loyalist_choice} = "ignore"
+- "Leave your own mark - a single yellow leaf" #id:32f
+	set {final_loyalist_choice} = "hope"
+
+if {final_loyalist_choice} == "report":
+	[background arg="res://assets/narrative/loyalist_end_dark.png" fade="2.0"]
+	join player_character [z_index="1"]
+	player_character: You file the report. Another batch of suspects rounded up. Another promotion. #id:330
+	player_character: The cycle continues. [color=CRIMSON]You've become the machine.[/color] #id:331
+	leave player_character
+	[signal arg="achievement_complicit"]
+elif {final_loyalist_choice} == "ignore":
+	[background arg="res://assets/narrative/loyalist_end_neutral.png" fade="2.0"]
+	join player_character [z_index="1"]
+	player_character: You walk past. Say nothing. It's not much. [color=STEEL_BLUE]It's almost nothing.[/color] #id:332
+	player_character: But it's the first time you've chosen not to act against them. #id:333
+	player_character: Maybe that's something. Maybe it's [color=YELLOW]too little, too late[/color]. #id:334
+	leave player_character
+else:
+	[background arg="res://assets/narrative/loyalist_end_hope.png" fade="2.0"]
+	audio "res://assets/audio/stings/revelation_hope.mp3" [volume="-8.0" bus="SFX"]
+	join player_character [z_index="1"]
+	player_character: When no one is watching, you scratch a small [color=GOLD]yellow leaf[/color] next to the emblems. #id:335
+	player_character: A single act of defiance. Years too late. But [color=CHARTREUSE]something[/color]. #id:336
+	player_character: Sasha's voice echoes in your memory: "[color=CHARTREUSE]The roots grow deep.[/color]" #id:337
+	player_character: Maybe deep enough to [color=CHARTREUSE]reach even you[/color]. Someday. #id:338
+	leave player_character
+	[signal arg="achievement_late_bloomer"]
+
+# Final text
+[background arg="res://assets/narrative/loyalist_final.png" fade="3.0"]
+audio music "res://assets/music/ambient_vol3_spirits_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+join narrator [z_index="1"]
+narrator: The nation of Spud endures. [color=DARK_VIOLET]Root Reserve[/color] flows. The cycle of consumption continues. #id:339
+narrator: But somewhere, in the cracks of the wall, [color=CHARTREUSE]something new is growing[/color]. #id:33a
+narrator: Whether you'll be part of it... [color=YELLOW]that story is yet to be written[/color]. #id:33b
+leave narrator
+
+[signal arg="credits_ready_loyalist"]

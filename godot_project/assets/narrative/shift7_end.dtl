@@ -108,6 +108,56 @@ else:
 	sweet_potato_sasha: [color=STEEL_BLUE]She walks in silence, arms crossed.[/color] I hope you find whatever certainty you're looking for. The rest of us can't afford to wait. #id:ff3
 leave sweet_potato_sasha
 
+# Viktor's Grief Scene - if player allied with him in shift6
+if {viktor_allied} == "yes":
+	[background arg="res://assets/narrative/checkpoint_roof.png" fade="2.0"]
+	audio music "res://assets/music/narrative/viktor_grief_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+	audio "res://assets/audio/atmosphere/night_tension.mp3" [volume="-12.0" bus="Ambient"]
+	join narrator [z_index="1"]
+	narrator: On your way back, you find Viktor alone on the checkpoint roof, staring at the night sky. #id:100_viktor1
+	leave narrator
+
+	join viktor [z_index="1"]
+	audio "res://assets/audio/stings/grief_piano.mp3" [volume="-8.0" bus="SFX"]
+	viktor: Viktor holds a small, worn photograph. His voice is barely a whisper. [color=STEEL_BLUE]Elena loved the stars.[/color] #id:100_viktor2
+	viktor: She used to say that no matter how dark things got, the stars would still be there. [color=STEEL_BLUE]Constant. Beautiful.[/color] #id:100_viktor3
+	viktor: He turns to you, eyes glistening. [wave amp=15 freq=2]I keep thinking... did she suffer?[/wave] Did she know what was happening? #id:100_viktor4
+	viktor: Viktor's voice cracks. She asked me once if I ever questioned the rejections. I told her [color=CRIMSON]to trust the system[/color]. #id:100_viktor5
+	audio "res://assets/audio/stings/dread_chord.mp3" [volume="-8.0" bus="SFX"]
+	viktor: [tornado radius=3 freq=2][color=CRIMSON]I sent my own wife to the processing vats without knowing it.[/color][/tornado] #id:100_viktor6
+	leave viktor
+
+	set {viktor_comfort} = "none"
+	- "You couldn't have known. None of us knew." #id:100_viktor_choice1
+		set {viktor_comfort} = "comfort"
+	- "Elena would want you to fight now, not drown in guilt." #id:100_viktor_choice2
+		set {viktor_comfort} = "strength"
+	- "I don't know what to say. I'm sorry." #id:100_viktor_choice3
+		set {viktor_comfort} = "honest"
+
+	if {viktor_comfort} == "comfort":
+		join viktor [z_index="1"]
+		viktor: He shakes his head slowly. [color=STEEL_BLUE]Ignorance isn't innocence. I should have asked. Should have listened.[/color] #id:100_viktor7
+		viktor: Viktor carefully tucks the photo away. [color=CHARTREUSE]But now I know. And knowing means I have to act.[/color] #id:100_viktor8
+		leave viktor
+	elif {viktor_comfort} == "strength":
+		join viktor [z_index="1"]
+		viktor: Viktor straightens, a cold fire rekindling in his eyes. [color=CHARTREUSE]You're right.[/color] She was stronger than me. Braver. #id:100_viktor9
+		viktor: He clenches his fist. [color=CHARTREUSE]When the time comes, I'll make sure her death meant something.[/color] #id:100_viktor10
+		viktor: [pulse freq=2][color=CRIMSON]And Idaho will pay for every life he's consumed.[/color][/pulse] #id:100_viktor11
+		leave viktor
+	else:
+		join viktor [z_index="1"]
+		viktor: Viktor manages a sad, bitter smile. [color=STEEL_BLUE]Honesty. That's rare here. Thank you.[/color] #id:100_viktor12
+		viktor: He looks back at the stars. [color=STEEL_BLUE]Elena would have liked you.[/color] #id:100_viktor13
+		leave viktor
+
+	join viktor [z_index="1"]
+	viktor: He turns to leave, then pauses. [color=CHARTREUSE]When the resistance moves... I'll be ready.[/color] #id:100_viktor14
+	viktor: For Elena. For all of them. [pulse freq=2][color=CHARTREUSE]The guards will follow me when I tell them the truth.[/color][/pulse] #id:100_viktor15
+	audio "res://assets/audio/stings/revelation_hope.mp3" [volume="-8.0" bus="SFX"]
+	leave viktor
+
 [background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
 audio music "res://assets/music/ambient_vol3_sad_decisions_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 join player_character [z_index="1"]
