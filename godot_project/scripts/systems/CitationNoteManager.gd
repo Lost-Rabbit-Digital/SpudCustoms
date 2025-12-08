@@ -28,7 +28,7 @@ var _dragged_note: Control = null
 var _drag_offset: Vector2 = Vector2.ZERO
 
 ## Preloaded supervisor portrait for notes
-const RUSSET_PORTRAIT = preload("res://assets/narrative/supervisor_portrait.png")
+const RUSSET_PORTRAIT = preload("res://assets/narrative/characters/supervisor_russet.png")
 
 
 func _ready() -> void:
@@ -322,7 +322,7 @@ func _dismiss_note(note: Control) -> void:
 func _play_dismiss_sound() -> void:
 	"""Play a paper crumpling sound when dismissing citation."""
 	var audio = AudioStreamPlayer.new()
-	audio.stream = preload("res://assets/audio/paper/paper 1.wav")
+	audio.stream = preload("res://assets/audio/paper/paper handled 1.wav")
 	audio.volume_db = -5.0
 	audio.bus = "SFX"
 	add_child(audio)
