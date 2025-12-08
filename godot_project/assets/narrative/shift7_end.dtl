@@ -51,10 +51,10 @@ if {has_wife_photo} == "yes":
 if {murphy_alliance} == "ally":
 	[background arg="res://assets/narrative/resistance_base.png" fade="1.0"]
 	audio "res://assets/audio/footsteps/Concrete Walk 1_2.wav" [volume="-8.0" bus="SFX"]
-	join fellow_officer [z_index="1"]
-	fellow_officer: Murphy emerges from the shadows. Hey. Glad you made it. #id:d2q
-	fellow_officer: Murphy holds up the crumpled RR-UTIL form. My cousin's on that list too. [color=CHARTREUSE]We're doing this together.[/color] #id:d2r
-	leave fellow_officer
+	join murphy [z_index="1"]
+	murphy: Murphy emerges from the shadows. Hey. Glad you made it. #id:d2q
+	murphy: Murphy holds up the crumpled RR-UTIL form. My cousin's on that list too. [color=CHARTREUSE]We're doing this together.[/color] #id:d2r
+	leave murphy
 
 join resistance_leader [z_index="1"]
 resistance_leader: A weathered potato with battle scars addresses the assembled group. #id:d3
