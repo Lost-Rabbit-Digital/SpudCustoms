@@ -73,42 +73,40 @@ main_menu_new_game,New Game,Nouveau jeu,Neues Spiel,Nuevo juego,...
 
 ## Translation Workflow
 
-**Keep files split!** Per-language files are:
-- Easier to review in PRs (small diffs)
-- Less prone to merge conflicts
-- Simpler for translators to work with
-
 ### For Translators
-1. Edit files in `per_language/` directory (e.g., `menus_fr.csv` for French)
-2. Each file contains only one language - much easier to work with!
-3. Run `--merge` before testing in Godot (Godot needs combined format)
+1. Edit CSV files directly in `translations/` directory (e.g., `menus.csv`)
+2. Each CSV has all languages in one file: `keys,en,de,fr,...`
+3. Save and test in Godot
 
 ### For Developers
-1. Add new keys to `per_language/{category}_en.csv`
-2. Run `python translate_with_gemini.py` to auto-translate to all languages
-3. Run `--merge` before running/exporting the game
+1. Add new keys to the appropriate CSV file with English text
+2. Run `python translate_with_gemini.py --add-columns` to add missing language columns
+3. Run `python translate_with_gemini.py` to auto-translate using Gemini API
 
 ### CLI Commands
 ```bash
 # Check for missing translations
 python translate_with_gemini.py --check
 
-# Translate all untranslated content
+# Translate all untranslated content using Gemini API
 python translate_with_gemini.py
 
-# Split combined CSVs into per-language files
-python translate_with_gemini.py --split
-
-# Merge per-language files back to combined format
-python translate_with_gemini.py --merge
-
-# Process only a specific file
+# Translate specific file only
 python translate_with_gemini.py --file menus.csv
+
+# Dry run - preview what would be translated
+python translate_with_gemini.py --dry-run
+
+# Add missing language columns to CSVs
+python translate_with_gemini.py --add-columns
+
+# List all supported languages
+python translate_with_gemini.py --list-languages
 ```
 
 ## Adding New Content
 
-1. Add English text to the appropriate `per_language/{category}_en.csv`
-2. Run the translation tool to generate other languages
-3. Review auto-translations for accuracy
-4. Merge back to combined format for Godot
+1. Add English text to the appropriate CSV file (e.g., `game.csv`, `menus.csv`)
+2. Run `python translate_with_gemini.py --add-columns` if new languages are needed
+3. Run the translation tool to translate new keys to all languages
+4. Review auto-translations for accuracy
