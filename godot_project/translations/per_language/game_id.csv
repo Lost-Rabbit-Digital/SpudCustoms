@@ -51,3 +51,4 @@ alert_new_minigame_unlocked,Minigame baru terbuka: {name}!
 alert_minigame_bonus,Bonus minigame: +{bonus} poin!
 high_score_display,Skor Tertinggi: {score}
 new_high_score,SKOR TERTINGGI BARU!
+month_1,Januari

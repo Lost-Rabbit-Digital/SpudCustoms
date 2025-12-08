@@ -51,3 +51,4 @@ alert_new_minigame_unlocked,Neues Minispiel freigeschaltet: {name}!
 alert_minigame_bonus,Minispiel-Bonus: +{bonus} Punkte!
 high_score_display,Highscore: {score}
 new_high_score,NEUER HIGHSCORE!
+month_1,Januar

@@ -51,3 +51,4 @@ alert_new_minigame_unlocked,¡Nuevo minijuego desbloqueado: {name}!
 alert_minigame_bonus,Bonus de minijuego: +{bonus} puntos!
 high_score_display,Puntuación más alta: {score}
 new_high_score,¡NUEVA PUNTUACIÓN MÁS ALTA!
+month_1,Enero

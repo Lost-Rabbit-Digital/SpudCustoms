@@ -51,3 +51,4 @@ alert_new_minigame_unlocked,Nieuwe minigame ontgrendeld: {name}!
 alert_minigame_bonus,Minigame bonus: +{bonus} punten!
 high_score_display,Hoogste score: {score}
 new_high_score,NIEUWE HOOGSTE SCORE!
+month_1,Januari

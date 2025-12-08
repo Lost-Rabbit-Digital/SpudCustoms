@@ -51,3 +51,4 @@ alert_new_minigame_unlocked,Nová minihra odemčena: {name}!
 alert_minigame_bonus,Bonus z minihry: +{bonus} bodů!
 high_score_display,Nejvyšší skóre: {score}
 new_high_score,NOVÉ NEJVYŠŠÍ SKÓRE!
+month_1,Leden

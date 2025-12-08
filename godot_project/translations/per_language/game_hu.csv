@@ -51,3 +51,4 @@ alert_new_minigame_unlocked,Új minijáték feloldva: {name}!
 alert_minigame_bonus,Minijáték bónusz: +{bonus} pont!
 high_score_display,Rekord: {score}
 new_high_score,ÚJ REKORD!
+month_1,Január

@@ -51,3 +51,4 @@ alert_new_minigame_unlocked,Uusi minipeli avattu: {name}!
 alert_minigame_bonus,Minipelin bonus: +{bonus} pistettä!
 high_score_display,Ennätys: {score}
 new_high_score,UUSI ENNÄTYS!
+month_1,Tammikuu

@@ -51,3 +51,4 @@ alert_new_minigame_unlocked,Nyt minispil låst op: {name}!
 alert_minigame_bonus,Minispil bonus: +{bonus} point!
 high_score_display,Højeste score: {score}
 new_high_score,NY HØJESTE SCORE!
+month_1,Januar
