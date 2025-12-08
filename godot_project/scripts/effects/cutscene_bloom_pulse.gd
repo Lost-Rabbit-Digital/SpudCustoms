@@ -4,25 +4,25 @@ extends Node
 ## Uses a sinusoidal wave to smoothly pulse the glow intensity.
 
 ## Base glow intensity (the center point of the pulse)
-@export_range(0.0, 2.0) var base_glow_intensity: float = 0.16
+@export_range(0.0, 2.0) var base_glow_intensity: float = 0.5
 
 ## How much the glow intensity varies from the base (amplitude of the wave)
-@export_range(0.0, 1.0) var pulse_amplitude: float = 0.08
+@export_range(0.0, 1.0) var pulse_amplitude: float = 0.15
 
 ## Speed of the pulse cycle (lower = slower, more dreamy)
-@export_range(0.1, 5.0) var pulse_speed: float = 0.4
+@export_range(0.1, 5.0) var pulse_speed: float = 0.3
 
 ## Secondary slower pulse for more organic feel (layered on top of main pulse)
-@export_range(0.0, 0.5) var secondary_amplitude: float = 0.01
+@export_range(0.0, 0.5) var secondary_amplitude: float = 0.05
 
 ## Speed of the secondary pulse
-@export_range(0.05, 2.0) var secondary_speed: float = 0.17
+@export_range(0.05, 2.0) var secondary_speed: float = 0.12
 
 ## Glow bloom level (controls which brightness levels glow)
-@export_range(0.0, 1.0) var glow_bloom: float = 0.08
+@export_range(0.0, 1.0) var glow_bloom: float = 0.2
 
 ## HDR threshold - pixels brighter than this will glow
-@export_range(0.0, 4.0) var glow_hdr_threshold: float = 0.90
+@export_range(0.0, 4.0) var glow_hdr_threshold: float = 0.7
 
 ## Smoothing factor for transitions (higher = smoother)
 @export_range(0.0, 0.99) var smoothing: float = 0.85
@@ -68,8 +68,8 @@ func _setup_world_environment() -> void:
 	_environment.glow_bloom = glow_bloom
 	_environment.glow_hdr_threshold = glow_hdr_threshold
 	_environment.glow_blend_mode = Environment.GLOW_BLEND_MODE_ADDITIVE
-	_environment.glow_strength = 0.1
-	_environment.glow_hdr_scale = 1.0
+	_environment.glow_strength = 0.6
+	_environment.glow_hdr_scale = 1.5
 	_environment.glow_hdr_luminance_cap = 12.0
 
 	# Set glow levels for a nice bloom effect
