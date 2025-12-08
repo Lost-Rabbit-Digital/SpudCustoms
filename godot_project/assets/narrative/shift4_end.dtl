@@ -1,0 +1,107 @@
+# shift4_end.dtl
+# End of Shift 4 - Fellow officer Murphy breaks down, Sasha shares more intel
+# Builds emotional connection and advances conspiracy
+
+audio music "res://assets/music/narrative/horror_fog_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+audio "res://assets/music/narrative/creepy_creaks_ambience.mp3" [volume="-12.0" bus="Ambient"]
+[background arg="res://assets/narrative/checkpoint_corridor.png" fade="0.0"]
+
+# Murphy's breakdown scene
+audio "res://assets/audio/footsteps/Concrete Walk 1_1.wav" [volume="-8.0" bus="SFX"]
+join fellow_officer [z_index="1"]
+fellow_officer: Murphy catches you in the corridor, eyes red-rimmed. Got a minute? #id:215
+
+[background arg="res://assets/narrative/storage_room.png" fade="1.5"]
+audio "res://assets/audio/furniture/Door Open C.wav" [volume="-8.0" bus="SFX"]
+fellow_officer: Murphy pulls you into an empty storage room and closes the door. #id:216
+fellow_officer: That joke I made in the cafeteria... about my cousin being in the [color=DARK_VIOLET]Root Reserve[/color] batch... #id:217
+audio "res://assets/audio/stings/dread_chord.mp3" [volume="-8.0" bus="SFX"]
+fellow_officer: Murphy's voice cracks. I don't think it was a joke anymore. #id:218
+
+if {cafeteria_response} == "serious":
+	fellow_officer: You said it wasn't funny. You were right. [color=STEEL_BLUE]Nothing about this is funny.[/color] #id:219
+else:
+	fellow_officer: I saw you leave. Smart. I wish I could stop eating that stuff, but they [color=YELLOW]watch[/color]. They always watch. #id:21a
+
+fellow_officer: I found something in my cousin's belongings. His rejection form. Standard stuff, but... #id:21b
+audio "res://assets/audio/paper/paper handled 1.wav" [volume="-5.0" bus="SFX"]
+fellow_officer: Murphy pulls out a crumpled form. Look at the processing code. "[color=CRIMSON]RR-UTIL-7[/color]." #id:21c
+fellow_officer: I looked it up in the archives. RR stands for [pulse freq=2][color=DARK_VIOLET]Root Reserve[/color][/pulse]. UTIL means... [color=CRIMSON]utilization[/color]. #id:21d
+
+set {murphy_alliance} = "none"
+- "We need to find out more. I'm with you." #id:21e
+	set {murphy_alliance} = "ally"
+- "Murphy, this is dangerous. We should stay out of it." #id:21f
+	set {murphy_alliance} = "cautious"
+- "Maybe it's a coincidence. Let's not jump to conclusions." #id:220
+	set {murphy_alliance} = "skeptical"
+
+if {murphy_alliance} == "ally":
+	join fellow_officer [z_index="1"]
+	fellow_officer: Murphy grabs your arm. [color=CHARTREUSE]Thank you.[/color] I thought I was going crazy. #id:221
+	fellow_officer: There's others who suspect too. Sasha's been gathering people. I think she trusts you. #id:222
+	leave fellow_officer
+elif {murphy_alliance} == "cautious":
+	join fellow_officer [z_index="1"]
+	fellow_officer: Murphy's shoulders slump. Yeah. Yeah, you're probably right. Forget I said anything. #id:223
+	fellow_officer: But if you change your mind... I'll be here. [color=STEEL_BLUE]Alone with my questions.[/color] #id:224
+	leave fellow_officer
+else:
+	join fellow_officer [z_index="1"]
+	fellow_officer: Coincidence. Murphy laughs bitterly. Sure. And my cousin just [color=CRIMSON]vanished[/color] into thin air. #id:225
+	fellow_officer: Keep telling yourself that. See how long it helps you sleep. #id:226
+	leave fellow_officer
+
+leave fellow_officer
+
+# Transition to Sasha scene
+[background arg="res://assets/narrative/checkpoint_booth_night.png" fade="2.0"]
+audio music "res://assets/music/narrative/sasha_theme_main.mp3" [fade="2.0" volume="-8.0" bus="Music"]
+audio "res://assets/audio/footsteps/Metal Walk 1_2.mp3" [volume="-8.0" bus="SFX"]
+join sweet_potato_sasha [z_index="1"]
+sweet_potato_sasha: Sasha appears at your booth as the last shift ends. You look like you've seen a ghost. #id:227
+sweet_potato_sasha: Let me guess - Murphy told you about his cousin? #id:228
+
+if {murphy_alliance} == "ally":
+	sweet_potato_sasha: Sasha nods approvingly. Good. We need people who ask questions. #id:229
+else:
+	sweet_potato_sasha: Sasha studies your face carefully. You're scared. That's smart. But fear won't save anyone. #id:22a
+
+sweet_potato_sasha: I've been watching you since your first day. The way you [color=YELLOW]hesitated[/color] when Russet talked about "processing." #id:22b
+
+if {initial_response} == "questioning":
+	sweet_potato_sasha: You asked what happens to rejected potatoes. That took guts. [color=CHARTREUSE]Most just salute and stamp.[/color] #id:22c
+
+sweet_potato_sasha: Sasha leans closer. There's a pattern. Every potato we reject? Gone within 48 hours. No deportation records. No transfers. #id:22d
+sweet_potato_sasha: But [color=DARK_VIOLET]Root Reserve[/color] production? [tornado radius=3 freq=2][color=CRIMSON]It goes up.[/color][/tornado] Every. Single. Time. #id:22e
+
+set {sasha_trust_level} = "none"
+- "I believe you. How can I help?" #id:22f
+	set {sasha_trust_level} = "committed"
+- "I need to see proof before I risk everything." #id:230
+	set {sasha_trust_level} = "cautious"
+
+if {sasha_trust_level} == "committed":
+	join sweet_potato_sasha [z_index="1"]
+	sweet_potato_sasha: Sasha's eyes light up. I knew I picked right. Tomorrow night, after shift. I'll show you what I've found. #id:231
+	sweet_potato_sasha: Until then, act normal. [color=YELLOW]Russet is watching everyone.[/color] #id:232
+	leave sweet_potato_sasha
+else:
+	join sweet_potato_sasha [z_index="1"]
+	sweet_potato_sasha: Fair enough. Proof is coming. Just... keep your eyes open during tomorrow's shift. #id:233
+	sweet_potato_sasha: Watch where the [color=CRIMSON]rejected potatoes[/color] go. Follow the trucks if you can. #id:234
+	leave sweet_potato_sasha
+
+[background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
+audio music "res://assets/music/ambient_vol3_sad_decisions_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+join player_character [z_index="1"]
+
+if {family_response} == "help":
+	player_character: You pull out the photo the desperate potato gave you. His wife. [color=STEEL_BLUE]Where is she now?[/color] #id:235
+	player_character: If what Sasha and Murphy are saying is true... she's already been... #id:236
+	audio "res://assets/audio/stings/revelation_dark.mp3" [volume="-8.0" bus="SFX"]
+	player_character: You can't finish the thought. But you [color=CHARTREUSE]won't forget her face[/color]. #id:237
+
+player_character: Tomorrow, everything changes. Either you find answers, or you bury the questions forever. #id:238
+player_character: One thing is certain: there's [color=YELLOW]no going back to blissful ignorance[/color]. #id:239
+leave player_character

@@ -1,0 +1,193 @@
+# shift8_end.dtl
+# End of Shift 8 - CRITICAL SCENE: Sasha's capture happens on-screen
+# This is the emotional low point before the final act
+# Player witnesses but may be powerless to stop it
+
+audio music "res://assets/music/narrative/horror_terror_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+audio music "res://assets/audio/ambient/horror_drone_49.mp3" [fade="2.0" volume="-8.0" bus="Ambient"]
+[background arg="res://assets/narrative/checkpoint_booth_night.png" fade="0.0"]
+
+join narrator [z_index="1"]
+narrator: The shift ends in uneasy silence. Security patrols have doubled. Everyone moves in whispers. #id:265
+leave narrator
+
+# Late night - player heading to quarters
+[background arg="res://assets/narrative/checkpoint_corridor.png" fade="1.5"]
+audio "res://assets/audio/footsteps/Concrete Walk 1_2.wav" [volume="-8.0" bus="SFX"]
+join player_character [z_index="1"]
+player_character: You're heading to your quarters when you hear it - [color=YELLOW]shouting from the officers' wing[/color]. #id:266
+leave player_character
+
+# The raid begins
+[background arg="res://assets/narrative/sasha_quarters_raid.png" fade="0.5"]
+audio music "res://assets/music/narrative/metal_violence_main.mp3" [fade="0.5" volume="-3.0" bus="Music"]
+audio "res://assets/audio/furniture/Door Open C.wav" [volume="0.0" bus="SFX"]
+audio "res://assets/audio/stings/alarm_distant.mp3" [volume="-5.0" bus="SFX"]
+
+join narrator [z_index="1"]
+narrator: You round the corner to see security forces [pulse freq=3][color=RED]kicking down Sasha's door[/color][/pulse]. #id:267
+leave narrator
+
+join security_chief [z_index="1"]
+audio "res://assets/audio/gunfire/gun cocking 3.wav" [volume="-5.0" bus="SFX"]
+security_chief: Chief Yukon's voice booms. SWEET POTATO SASHA! You are under arrest for [color=CRIMSON]treason against the nation of Spud![/color] #id:268
+leave security_chief
+
+# Sasha's capture - the key dramatic moment
+[background arg="res://assets/narrative/sasha_arrest.png" fade="0.3"]
+audio "res://assets/audio/stings/threat_reveal.mp3" [volume="-3.0" bus="SFX"]
+join sweet_potato_sasha [z_index="1"]
+sweet_potato_sasha: Sasha is dragged out, struggling. Her eyes are defiant even as guards wrench her arms behind her back. #id:269
+sweet_potato_sasha: [tornado radius=4 freq=3][color=CHARTREUSE]THE TRUTH WILL COME OUT! YOU CAN'T SILENCE ALL OF US![/color][/tornado] #id:26a
+
+# Sasha sees the player
+audio "res://assets/audio/stings/revelation_dark.mp3" [volume="-5.0" bus="SFX"]
+sweet_potato_sasha: Her gaze finds you in the crowd of onlookers. Time seems to freeze. #id:26b
+
+if {interrogation_choice} == "betray":
+	sweet_potato_sasha: Recognition... then [color=CRIMSON]devastating understanding[/color]. You betrayed her location. She knows. #id:26c
+	sweet_potato_sasha: She doesn't speak. The look is enough. [color=STEEL_BLUE]Disappointment deeper than hatred.[/color] #id:26d
+else:
+	sweet_potato_sasha: A flicker of something - [color=CHARTREUSE]hope? trust?[/color] - crosses her face. #id:26e
+	sweet_potato_sasha: Her lips move silently: "[color=CHARTREUSE]The roots grow deep.[/color]" A message. A reminder. #id:26f
+
+leave sweet_potato_sasha
+
+# Russet's triumphant entrance
+[background arg="res://assets/narrative/sasha_arrest.png" fade="1.0"]
+audio "res://assets/audio/footsteps/Concrete Walk 1_1.wav" [volume="-5.0" bus="SFX"]
+join supervisor_russet [z_index="1"]
+supervisor_russet: Russet emerges from the shadows, satisfaction oozing from every pore. #id:270
+supervisor_russet: Well well. The [color=CRIMSON]sweet potato turns sour[/color]. I always knew there was something rotten about you, Sasha. #id:271
+audio "res://assets/audio/paper/paper handled 3.wav" [volume="-5.0" bus="SFX"]
+supervisor_russet: Russet holds up a folder. Your little [color=DARK_VIOLET]manifests[/color]. Your "evidence." All recovered. #id:272
+supervisor_russet: Did you really think you could undermine [pulse freq=2][color=DARK_VIOLET]Root Reserve[/color][/pulse]? Undermine ME? #id:273
+
+join sweet_potato_sasha [z_index="1"]
+sweet_potato_sasha: Copies are already out there, Russet. The world will know what you do to our people! #id:274
+join supervisor_russet [z_index="1"]
+supervisor_russet: Russet laughs coldly. They'll know what we tell them. And you? You'll be part of a [color=CRIMSON]very special batch[/color]. #id:275
+supervisor_russet: "[color=DARK_VIOLET]Traitor's Blend[/color]" - I think that has a nice ring to it. #id:276
+leave supervisor_russet
+
+# Player's agonizing choice
+[background arg="res://assets/narrative/sasha_arrest.png" fade="0.5"]
+audio music "res://assets/music/ambient_vol3_sad_decisions_main.mp3" [fade="1.0" volume="-3.0" bus="Music"]
+audio "res://assets/audio/stings/decision_weight.mp3" [volume="-5.0" bus="SFX"]
+
+join player_character [z_index="1"]
+player_character: Your heart pounds. Every instinct screams to do something. But guards are everywhere. #id:277
+
+set {sasha_arrest_reaction} = "none"
+- "Step forward and demand they release her" (Reckless) #id:278
+	set {sasha_arrest_reaction} = "intervene"
+- "Stay hidden - live to fight another day" (Pragmatic) #id:279
+	set {sasha_arrest_reaction} = "hide"
+- "Catch Sasha's eye and nod - a promise" (Resolve) #id:27a
+	set {sasha_arrest_reaction} = "promise"
+
+if {sasha_arrest_reaction} == "intervene":
+	[background arg="res://assets/narrative/player_confronts_guards.png" fade="0.3"]
+	audio "res://assets/audio/footsteps/Concrete Walk 1_3.wav" [volume="-5.0" bus="SFX"]
+	join player_character [z_index="1"]
+	player_character: You push through the crowd. "[color=CHARTREUSE]Wait! She hasn't done anything wrong![/color]" #id:27b
+	join security_chief [z_index="1"]
+	audio "res://assets/audio/stings/threat_reveal.mp3" [volume="-5.0" bus="SFX"]
+	security_chief: Yukon's head snaps toward you. "[color=RED]Seize that one too![/color] Clearly an accomplice!" #id:27c
+	leave security_chief
+
+	# Murphy potentially saves you
+	if {murphy_alliance} == "ally":
+		join fellow_officer [z_index="1"]
+		fellow_officer: Murphy grabs you, pulling you back. "[color=STEEL_BLUE]They're confused in the chaos! RUN![/color]" #id:27d
+		fellow_officer: Murphy shoves you toward a side corridor as guards close in on your position. #id:27e
+		leave fellow_officer
+		set {player_wanted} = "yes"
+	else:
+		join narrator [z_index="1"]
+		narrator: Guards grab you. Russet's smile widens. "[color=CRIMSON]Two traitors for the price of one.[/color]" #id:27f
+		leave narrator
+		set {player_captured} = "yes"
+
+	leave player_character
+
+elif {sasha_arrest_reaction} == "hide":
+	join player_character [z_index="1"]
+	player_character: You shrink back into the shadows, hating yourself with every fiber. [color=STEEL_BLUE]Coward.[/color] #id:280
+	player_character: But alive. And free. For now. #id:281
+	leave player_character
+
+else:
+	join player_character [z_index="1"]
+	player_character: You catch Sasha's eye. A slow, deliberate nod. [color=CHARTREUSE]I'm coming for you.[/color] #id:282
+	join sweet_potato_sasha [z_index="1"]
+	sweet_potato_sasha: She sees. The tiniest smile. Then she's dragged around the corner, gone. #id:283
+	leave sweet_potato_sasha
+	leave player_character
+
+# Viktor's moment - if allied earlier
+[background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
+if {viktor_allied} == "yes":
+	audio "res://assets/audio/footsteps/Metal Walk 1_2.mp3" [volume="-8.0" bus="SFX"]
+	join security_officer [z_index="1"]
+	security_officer: Viktor finds you in the chaos. His face is a mask, but his eyes burn. #id:284
+	security_officer: They took her to the [color=CRIMSON]processing wing[/color]. Sub-level 3. That's where they took my wife. #id:285
+	security_officer: Viktor presses something into your hand - a [color=GOLD]security keycard[/color]. #id:286
+	security_officer: When the time comes... [color=CHARTREUSE]I'll look the other way[/color]. For my wife. For all of them. #id:287
+	leave security_officer
+	set {has_keycard} = "yes"
+
+# Murphy's reaction
+if {murphy_alliance} == "ally" and {player_captured} != "yes":
+	[background arg="res://assets/narrative/storage_room.png" fade="2.0"]
+	audio "res://assets/audio/furniture/Door Open C.wav" [volume="-8.0" bus="SFX"]
+	join fellow_officer [z_index="1"]
+	fellow_officer: Murphy pulls you into the storage room, breathing hard. #id:288
+	fellow_officer: This is it. This is [color=CRIMSON]actually happening[/color]. They've got Sasha. They'll process her by morning. #id:289
+
+	if {sasha_arrest_reaction} == "intervene":
+		fellow_officer: That was [color=STEEL_BLUE]stupid[/color]. Brave, but stupid. You're on their list now. #id:28a
+
+	fellow_officer: The resistance is planning something. Tomorrow. It's our only chance to save her. #id:28b
+	fellow_officer: Are you in? [color=CHARTREUSE]All the way in?[/color] #id:28c
+
+	set {murphy_final_alliance} = "none"
+	- "All the way. Whatever it takes to save Sasha." #id:28d
+		set {murphy_final_alliance} = "committed"
+	- "I need to think. This is moving too fast." #id:28e
+		set {murphy_final_alliance} = "hesitant"
+
+	if {murphy_final_alliance} == "committed":
+		join fellow_officer [z_index="1"]
+		fellow_officer: Murphy clasps your shoulder. [color=CHARTREUSE]Then we move at dawn. The roots grow deep.[/color] #id:28f
+		leave fellow_officer
+	else:
+		join fellow_officer [z_index="1"]
+		fellow_officer: Murphy's face hardens. Think fast. By this time tomorrow, she'll be [color=DARK_VIOLET]Root Reserve[/color]. #id:290
+		leave fellow_officer
+
+	leave fellow_officer
+
+# Final reflection
+[background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
+audio music "res://assets/music/ambient_vol3_defeat_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+
+if {player_captured} != "yes":
+	join player_character [z_index="1"]
+	player_character: You lie awake, staring at the ceiling. Sasha's face. Her defiance. Her fear. #id:291
+
+	if {family_response} == "help":
+		player_character: You pull out the photo of the missing wife. Another face you couldn't save. #id:292
+		player_character: [color=CHARTREUSE]Not this time.[/color] #id:293
+
+	player_character: By tomorrow, everything changes. One way or another. #id:294
+	player_character: [pulse freq=2][color=YELLOW]No more standing on the sidelines.[/color][/pulse] #id:295
+	leave player_character
+else:
+	[background arg="res://assets/narrative/interrogation.png" fade="2.0"]
+	join player_character [z_index="1"]
+	player_character: The cell is cold. Through the walls, you can hear Sasha somewhere, being "questioned." #id:296
+	player_character: Tomorrow, they said. You'll both be [color=DARK_VIOLET]processed[/color] together. #id:297
+	player_character: Unless the resistance comes. Unless someone saves you both. #id:298
+	player_character: [color=STEEL_BLUE]The longest night of your life stretches ahead.[/color] #id:299
+	leave player_character

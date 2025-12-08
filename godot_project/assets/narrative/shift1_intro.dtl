@@ -18,7 +18,8 @@ audio "res://assets/audio/footsteps/Concrete Walk 1_2.wav" [volume="0.0" bus="SF
 join supervisor_russet [z_index="1"]
 supervisor_russet: Ah, the new sprout. Listen carefully, your role is [color=DARK_ORANGE]vital to Spud's security[/color]. #id:5a
 audio "res://assets/audio/stings/suspicion_sting.mp3" [volume="-8.0" bus="SFX"]
-supervisor_russet: Your family's well-being [wave amp=20 freq=3][color=YELLOW]depends on your performance[/color][/wave]. #id:184
+supervisor_russet: Russet steps uncomfortably close. I've seen many sprouts come through here. [color=STEEL_BLUE]Most don't last.[/color] #id:184
+supervisor_russet: The ones who ask too many questions? They get [color=CRIMSON]reassigned[/color]. Permanently. #id:184b
 audio "res://assets/audio/mechanical/button pressed 1.mp3" [volume="-3.0" bus="SFX"]
 supervisor_russet: I appoint you as a Customs Officer of [pulse freq=1][color=MEDIUM_VIOLET_RED]glorious Spud[/color][/pulse]. Any questions? #id:5b
 

@@ -1,0 +1,146 @@
+# shift6_end.dtl
+# End of Shift 6 - Player must help resistance operative through RealityScan
+# Introduces Guard Viktor whose family was "processed" - sets up later betrayal
+# High tension infiltration scene
+
+audio music "res://assets/music/narrative/horror_hush_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+audio "res://assets/music/narrative/creepy_creaks_ambience.mp3" [volume="-12.0" bus="Ambient"]
+[background arg="res://assets/narrative/checkpoint_booth_night.png" fade="0.0"]
+
+join narrator [z_index="1"]
+narrator: As the evening shift winds down, most officers have left. Only you and a handful of guards remain. #id:240
+leave narrator
+
+# Introduce Guard Viktor - important for later payoff
+[background arg="res://assets/narrative/security_lockdown.png" fade="1.5"]
+audio "res://assets/audio/footsteps/Metal Walk 1_3.wav" [volume="-5.0" bus="SFX"]
+join security_officer [z_index="1"]
+security_officer: A burly guard approaches your station. Name's Viktor. I'm on night watch. #id:241
+security_officer: Viktor's eyes are tired, haunted. You're the new one, right? The one Russet keeps watching? #id:242
+
+set {viktor_conversation} = "none"
+- "Just trying to do my job. Why does Russet watch me?" #id:243
+	set {viktor_conversation} = "curious"
+- "Is there something I should know?" #id:244
+	set {viktor_conversation} = "direct"
+
+if {viktor_conversation} == "curious":
+	join security_officer [z_index="1"]
+	security_officer: Viktor shrugs heavily. Russet watches everyone who asks questions. My [color=STEEL_BLUE]wife asked questions[/color] once. #id:245
+	security_officer: She's not around to ask anymore. #id:246
+	leave security_officer
+else:
+	join security_officer [z_index="1"]
+	security_officer: Viktor glances around, then lowers his voice. Just... be careful who you trust. #id:247
+	security_officer: And who you [color=CRIMSON]condemn[/color]. Some of us remember every face we sent to processing. #id:248
+	leave security_officer
+
+leave security_officer
+
+# Resistance operative arrives
+[background arg="res://assets/narrative/checkpoint_booth_night.png" fade="2.0"]
+audio music "res://assets/music/narrative/unplugged_sneaky_main.mp3" [fade="1.5" volume="-5.0" bus="Music"]
+audio "res://assets/audio/stings/heartbeat_tension.mp3" [volume="-8.0" bus="SFX"]
+join resistance_member_1 [z_index="1"]
+resistance_member_1: A nervous potato approaches. Papers seem in order, but you notice the [color=CHARTREUSE]subtle leaf pin[/color] on their collar. #id:249
+resistance_member_1: They slide their documents across. A tiny note is tucked inside: "[color=CHARTREUSE]Sasha sent me. Package for the network. Please.[/color]" #id:24a
+
+join narrator [z_index="1"]
+narrator: The new [color=DARK_ORANGE]RealityScan[/color] blinks ready at your station. One scan and it will detect forged elements in their papers. #id:24b
+leave narrator
+
+set {scanner_choice} = "none"
+- "Pretend the scanner malfunctioned and wave them through" #id:24c
+	set {scanner_choice} = "help"
+- "Use the scanner as required - you can't risk exposure" #id:24d
+	set {scanner_choice} = "scan"
+- "Signal Viktor to look the other way, then let them pass" #id:24e
+	set {scanner_choice} = "viktor"
+
+if {scanner_choice} == "help":
+	[background arg="res://assets/narrative/checkpoint_booth_night.png" fade="0.5"]
+	audio "res://assets/audio/mechanical/button pressed 1.mp3" [volume="-5.0" bus="SFX"]
+	join player_character [z_index="1"]
+	player_character: You tap the scanner, frown, tap it again. "Blasted thing's acting up. Go on through." #id:24f
+	join resistance_member_1 [z_index="1"]
+	resistance_member_1: Relief floods their face. They mouth "[color=CHARTREUSE]Thank you[/color]" and hurry past. #id:250
+	leave resistance_member_1
+	leave player_character
+	set {helped_operative} = "yes"
+elif {scanner_choice} == "viktor":
+	[background arg="res://assets/narrative/checkpoint_booth_night.png" fade="0.5"]
+	join security_officer [z_index="1"]
+	security_officer: You catch Viktor's eye and nod toward the operative. Viktor looks at them, then at you. #id:251
+	audio "res://assets/audio/stings/decision_weight.mp3" [volume="-8.0" bus="SFX"]
+	security_officer: Viktor turns his back deliberately, studying the wall. "[color=STEEL_BLUE]Scanner's been glitchy all day.[/color]" #id:252
+	join resistance_member_1 [z_index="1"]
+	resistance_member_1: The operative slips through. Viktor says nothing, but you've shared a secret now. #id:253
+	leave resistance_member_1
+	leave security_officer
+	set {helped_operative} = "yes"
+	set {viktor_allied} = "yes"
+else:
+	[background arg="res://assets/narrative/checkpoint_booth_night.png" fade="0.5"]
+	audio "res://assets/audio/mechanical/button pressed 2.mp3" [volume="-5.0" bus="SFX"]
+	audio "res://assets/audio/stings/alarm_distant.mp3" [volume="-8.0" bus="SFX"]
+	join player_character [z_index="1"]
+	player_character: You run the scan. The machine [color=RED]blares[/color]. "Forged documentation detected." #id:254
+	join resistance_member_1 [z_index="1"]
+	resistance_member_1: Horror dawns on their face. "[color=CRIMSON]You don't understand what you've done...[/color]" #id:255
+	join security_officer [z_index="1"]
+	security_officer: Viktor and other guards close in. The operative is dragged away, still staring at you. #id:256
+	leave resistance_member_1
+	leave security_officer
+	leave player_character
+	set {helped_operative} = "no"
+	set {betrayed_resistance} = "yes"
+
+# Aftermath scene
+[background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
+audio music "res://assets/music/narrative/ambient_evil_suspense_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+
+if {helped_operative} == "yes":
+	join sweet_potato_sasha [z_index="1"]
+	audio "res://assets/audio/clothing/clothing movement 1.wav" [volume="-12.0" bus="SFX"]
+	sweet_potato_sasha: Sasha catches you in the shadows. That operative was carrying [color=CHARTREUSE]copies of the manifests[/color] to our contacts outside. #id:257
+	sweet_potato_sasha: Because of you, the truth will spread beyond Spud's borders. [color=CHARTREUSE]You've made a real difference.[/color] #id:258
+
+	if {viktor_allied} == "yes":
+		sweet_potato_sasha: Sasha's eyes widen. Viktor helped? I had a feeling about him. His wife was... #id:259
+		sweet_potato_sasha: She trails off. We have more allies than I thought. #id:25a
+
+	leave sweet_potato_sasha
+else:
+	join sweet_potato_sasha [z_index="1"]
+	audio "res://assets/audio/stings/suspicion_sting.mp3" [volume="-5.0" bus="SFX"]
+	sweet_potato_sasha: Sasha finds you, her expression cold. That operative had a family. Three sprouts at home. #id:25b
+	sweet_potato_sasha: I understand fear. But [color=CRIMSON]fear has consequences[/color]. They'll be processed by morning. #id:25c
+	sweet_potato_sasha: I hope your clean record is worth it. #id:25d
+	leave sweet_potato_sasha
+
+# Murphy check-in based on earlier alliance
+[background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
+audio music "res://assets/music/ambient_vol3_sad_decisions_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+
+if {murphy_alliance} == "ally":
+	join fellow_officer [z_index="1"]
+	audio "res://assets/audio/furniture/Door Open C.wav" [volume="-8.0" bus="SFX"]
+	fellow_officer: Murphy slips into your quarters. Heard there was some excitement at your station tonight. #id:25e
+
+	if {helped_operative} == "yes":
+		fellow_officer: Murphy grins. [color=CHARTREUSE]Good. We're in this together now.[/color] No turning back. #id:25f
+	else:
+		fellow_officer: Murphy's face falls. I... I thought you were with us. What happened? #id:260
+
+	leave fellow_officer
+
+join player_character [z_index="1"]
+player_character: Tomorrow's shift will be different. The stakes have never been higher. #id:261
+
+if {helped_operative} == "yes":
+	player_character: But for the first time, you feel like you're on the [color=CHARTREUSE]right side[/color]. Whatever that costs. #id:262
+else:
+	player_character: The operative's face haunts you. Their family will never know why they didn't come home. #id:263
+	player_character: [color=STEEL_BLUE]Because of you.[/color] #id:264
+
+leave player_character
