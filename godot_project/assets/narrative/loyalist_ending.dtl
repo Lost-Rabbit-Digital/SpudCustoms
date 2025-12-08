@@ -7,6 +7,49 @@ audio music "res://assets/music/narrative/hollow_victory_main.mp3" [fade="2.0" v
 audio music "res://assets/audio/ambient/horror_drone_12.mp3" [fade="2.0" volume="-8.0" bus="Ambient"]
 [background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]
 
+# LOYALIST SUPPRESSION QTE - morally dark path
+join narrator [z_index="1"]
+narrator: Chaos erupts as the resistance attack begins. Explosions rock the checkpoint. #id:299_suppress1
+narrator: You could run. You could hide. Instead, you [color=DARK_ORANGE]choose your side[/color]. #id:299_suppress2
+leave narrator
+
+[background arg="res://assets/narrative/night_attack.png" fade="0.5"]
+audio music "res://assets/music/narrative/metal_violence_main.mp3" [fade="0.5" volume="-3.0" bus="Music"]
+audio "res://assets/audio/explosions/rumbling 1.wav" [volume="-5.0" bus="SFX"]
+
+join supervisor_russet [z_index="1"]
+supervisor_russet: Russet grabs your arm. [pulse freq=2][color=YELLOW]NOW'S YOUR CHANCE![/color][/pulse] Prove your loyalty! #id:299_suppress3
+supervisor_russet: The resistance is trying to breach the east gate! [color=CRIMSON]Stop them![/color] #id:299_suppress4
+leave supervisor_russet
+
+join player_character [z_index="1"]
+player_character: You grip your weapon. These could be people you know. People you've helped. #id:299_suppress5
+player_character: But survival has a price. [color=DARK_ORANGE]You've made your choice.[/color] #id:299_suppress6
+leave player_character
+
+# Suppression QTE - player actively fights resistance
+[background arg="res://assets/narrative/extreme_emergency.png" fade="0.3"]
+audio "res://assets/audio/stings/heartbeat_tension.mp3" [volume="-5.0" bus="SFX"]
+join narrator [z_index="1"]
+narrator: [pulse freq=3][color=CRIMSON]Fight for the state![/color][/pulse] Suppress the resistance attack! #id:299_suppress7
+leave narrator
+[signal arg="qte_suppression"]
+
+# Post-suppression scene
+[background arg="res://assets/narrative/aftermath.png" fade="1.5"]
+audio music "res://assets/music/narrative/ambient_defeat_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+join narrator [z_index="1"]
+narrator: When the smoke clears, bodies litter the ground. Some wear resistance badges. #id:299_suppress8
+narrator: [color=STEEL_BLUE]You recognize faces among the fallen.[/color] #id:299_suppress9
+leave narrator
+
+if {murphy_alliance} == "ally":
+	join fellow_officer [z_index="1"]
+	audio "res://assets/audio/stings/dread_chord.mp3" [volume="-5.0" bus="SFX"]
+	fellow_officer: Murphy lies among the dead. His eyes stare at nothing. Tommy's photo clutched in his hand. #id:299_suppress10
+	fellow_officer: [color=STEEL_BLUE]He died fighting for something he believed in. You helped kill it.[/color] #id:299_suppress11
+	leave fellow_officer
+
 join narrator [z_index="1"]
 narrator: The resistance attack failed. The checkpoint stands, stronger than ever. And you remain at your post. #id:300
 leave narrator

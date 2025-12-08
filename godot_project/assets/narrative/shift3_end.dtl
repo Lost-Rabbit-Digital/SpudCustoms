@@ -1,11 +1,34 @@
 # shift3_end.dtl
+# Enhanced ending with wife photo emotional payoff and foreshadowing
 audio music "res://assets/music/narrative/horror_terror_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/checkpoint_booth_night.png" fade="0.0"]
 audio "res://assets/music/narrative/night_crickets_ambience.mp3" [volume="-12.0" bus="Ambient"]
+
+# If player has wife photo, show emotional moment first
+if {has_wife_photo} == "yes":
+	join player_character [z_index="1"]
+	audio "res://assets/audio/paper/paper picked up 2.wav" [volume="-8.0" bus="SFX"]
+	player_character: You pull out the photo again. [color=GOLD]Maris Piper[/color]. Such a kind face. #id:69_photo1
+	player_character: Her husband was so desperate. [color=STEEL_BLUE]What happened to her?[/color] #id:69_photo2
+	player_character: You notice something in the background of the photo - a truck with a [color=DARK_VIOLET]purple logo[/color]. #id:69_photo3
+	audio "res://assets/audio/stings/suspicion_sting.mp3" [volume="-8.0" bus="SFX"]
+	player_character: That symbol... you've seen it on the cafeteria deliveries. [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve.[/color][/wave] #id:69_photo4
+	leave player_character
+
 join sweet_potato_sasha [z_index="1"]
 sweet_potato_sasha: Can we talk? Somewhere private? [color=YELLOW]Too many eyes and ears here.[/color] #id:69
 audio "res://assets/audio/clothing/clothing movement 2.wav" [volume="-12.0" bus="SFX"]
 sweet_potato_sasha: Meet me by the old storage shed after your shift. I have something you need to see. #id:6a
+
+if {has_wife_photo} == "yes":
+	join player_character [z_index="1"]
+	player_character: Sasha... this photo. The woman's husband gave it to me. He was looking for her. #id:6a_photo1
+	leave player_character
+	sweet_potato_sasha: Sasha's face falls. [color=STEEL_BLUE]Let me see.[/color] #id:6a_photo2
+	audio "res://assets/audio/paper/paper handled 3.wav" [volume="-5.0" bus="SFX"]
+	sweet_potato_sasha: Sasha studies the photo, her expression darkening. [color=CRIMSON]I recognize that truck.[/color] #id:6a_photo3
+	sweet_potato_sasha: [pulse freq=2][color=YELLOW]Keep this photo safe.[/color][/pulse] It might be important later. Trust me. #id:6a_photo4
+
 leave sweet_potato_sasha
 
 join supervisor_russet [z_index="1"]
