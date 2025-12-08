@@ -21,7 +21,7 @@ Text/4c/text,I knew you wouldn't back down. You're one of our [tornado radius=3 
 Text/4d/text,We'll infiltrate using government uniforms. You'll help bypass security systems. Our goal is to capture Idaho and force a public confession.
 Text/4e/text,"You'll be on Team Alpha with Sasha, breaching the east entrance. Your objective: [color=GREEN]secure the broadcast center[/color]."
 Text/4f/text,"From loyal customs officer to resistance fighter? It's a transformation you never imagined. Whatever happens, Spud will never be the same."
+Choice/40/disabled_text,
+Choice/41/disabled_text,
 Choice/4a/disabled_text,
 Choice/4b/disabled_text,
-Choice/41/disabled_text,
-Choice/40/disabled_text,
