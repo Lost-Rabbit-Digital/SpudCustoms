@@ -1,0 +1,86 @@
+Spud Customs Playtesting: December 8th
+
+- Start all audio buses at 45%
+- Turn down the Post processing on the main menu, too much "bloom"?
+- Use proper font scale, This font needs 32px minimum, double check that number by finding original font site
+- Remove "Anti-aliasing" from the settings, pixel art game
+- Update video settings to match Bikini Heaven, has the Ubisoft settings, just provide a screenshot to Claude
+- Add the language drop-down in the upper right similar to our other games
+- Clean up social icons, remove Bluesky links, Put in the lower right like our other games
+- Put version in the bottom middle, similar to our other games
+- Add audio bus for dialogue/voices
+- Change the audio bus label in the audio settings tab from "SFX" to "Sound Effects"
+- Splashscreen takes a while to initially show up and displays a grey screen for a few seconds beforehand, this could be a Godot editor issue 
+- There's a swastika on the main menu on the left poster on the bottom
+- Need to clear the dialogic history after user restarts the same session multiple times
+- You can skip the dialogic timeline while viewing dialogic history causing the background to disappear with the foreground staying and floating buttons while the game plays on in the background
+- "Reset game data" does nothing on the pause menu settings menu
+- Aftermath.png needs to have the badges tweaked, increase the yellow of the badges
+- Cornered.png the two guys in the background are aiming at each other
+- Facility_malfunction.png too many sasha potato duplicates, none should look like sasha as she is alive in this ending
+- Language selection in the lower right does not fade in with the UI at the start of the game
+- Update loading screen, randomise art?
+- Dialogue font scaling is wrong, pixel art font needs to be units of 16, I believe default for this font is 32px
+- Any keystroke should progress the dialogic cutscene/dialogue, not only mouse presses
+- Uniform text colors, lot of different ones going on and hard to remember what is used for important words
+- Text scaling on tutorial is wrong
+- Don't continue the first step automatically, I was tabbed out then lost and confused in the tutorial
+- Move Skip buttons away from lower right, I assumed they were "next" and nearly pressed it
+- Missed the entire tutorial while dragging passports around, just put a continue button on the stages
+- Tutorial 6: Stamp bar is on the left, not top, and it doesn't highlight
+- Tutorial 6: "Click to open stamp bar" Click what?
+- The tutorial stages progress/complete too quickly before the user action has completed, such as dragging a passport
+- Tutorial 6: Step 4: Fix casing on "Drag" and "Potato", should "Potato" be upper?
+- Passport: "Condition: Dehydrated" causes text overflow error, try changing "Dehydrated" to "Dry"
+- Inspection table z-index issues, passports on the inspection table can be see overlapping the upper/right section of the screen 
+- Passport z-index issues, an open passport (document) should cover a closed document
+- Tutorial stages, if staying automatic, move way too fast, people read incredibly slowly
+- Make the megaphone wiggle a little bit as well as have the shader after the tutorial is done to really grab their attention if they are lost
+- Footstep z-index issue, they seem to appear over everything
+- Office gate/drop down door is appearing behind the bottom section, it should be appearing z-index in front of it
+- Make clicking the potato in the office do something, make em wiggle a little and make a sound or something
+- Feature idea: We could create dynamic shadows by creating a line2d or copy of the sprite but darkened/offset/behind original and then have a primary light on the inspection table that all shadows rotate based off of, similar look to our drawn shadows
+- Law z-index issue, when passport is clicked and last selected it should appear above the law book, but the law book always appears above the passport for some reason
+- we NEED some more documents, this shit is BORING
+- Potatoes need to interact with vehicle, Boden will create a sprite of a flatten potato and then we will instantiate that upon potato collision with a vehicle while on their path
+- The "Take your documents please" prompt while hovering over the potato with a stamped passport does not appear while in the tutorial, but does appear properly during main game
+- Strike prompt text appears green, should be a reddish tone
+- Stamp highlight guide should not appear while dragged a closed passport, only while dragging an open passport
+- Stamp highlight guide needs to be manually (human) adjusted to be in the proper area
+- Stamp perfect hit detection is off, we should use area2ds or the like to properly detect it
+- Stamping a passport approval after stamping it rejection clears all the rejection stamps, should just overlay on top of them instead
+- Law book does not return to inspection table when dragged directly onto the potato
+- Citation does not print on rejection
+- Add a small trashcan on the lower right of the screen to toss citations into
+- Shift summary stats do not properly fill in, missing bonuses, Document stats
+- Hide the "Runner stats" on the first shift on the shift summary stats menu
+- After the day transition it flashes the gameplay screen before going into the dialogic scene, just add a slow fade out and fade in to hide it
+- Supervisor russet is too aggressively robotic sounding
+- Shift 2 intro dialogic scene, I believe the narrator and supervisor russet voices were mixing while russet was talking
+- Shift 2 intro dialogic scene, move the repeated "Glory to Spud!" apart, make the first one at the beginning and the second at the end
+- Shift 2 Intro dialogic scene, fade back into the "Day 1/2" menu and then fade into the game scene, or possibly just do the day after the intro? Forgot what day it was while playing but wanted to know
+- Potatoes in line appear above the fence
+- Print a citation for runners missed
+- There's no tutorial for how to handle runner potatoes
+- We don't explain how the expired passports or dates work, make it more intuitive or explain it or display it
+- Date display is not properly displaying in the lower left of the screen
+- Lower missile bounding box, should not be able to shoot the walls
+- When leaving a mini-game subviewport it pauses the tweens of the potatoes in the line and causes some to become stuck in random scales
+- Make the potatoes different scales randomly, light variation
+- Help menu: Add bbcode text colors to help menu
+- Help menu: Add photos, (use the sprites of the referenced objects) to help menu
+- Help menu: Say left/right instead of green/red, accessibility issue
+- Help menu: "Bulletin board" should be "Laws book" or whatever the proper name is
+- Help menu: Proper formatting for lists
+- Stamp sorting mini game: Core premise is an accessibility issue, cannot be color-based, could be symbol-based
+- Code Breaker mini-game: Use symbols instead of colors to represent status
+- Border Chase mini-game: Cannot use colors to determine what is a good/bad item
+- When you shoot a vehicle with a missile make it spin off of the left side of the screen and show a bigger explosion
+- Runners/processed potatoes should not have the clickable highlight appear on them when hovered over
+- Add expired passports must be rejected to the laws as a default law
+- Innocent potatoes do not spawn bodies when they are killed by a missile, they should
+- Help menu: Add score attack explanation
+- All mini-games should be enabled by default on score attack, more available as time progresses
+- There's no post processing in score attack scene
+- Passport needs to be scaled in the score attack scene
+- Z-index issue Shadow of potatoes appears in front of office gate instead of behind
