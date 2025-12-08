@@ -92,9 +92,9 @@ This document contains prompts for generating music, sound effects, and cutscene
 | `assets/narrative/processing_facility.png` | Interior of Root Reserve processing plant. Industrial horror. Large vats, conveyor systems, ominous machinery. Purple-tinted liquids. The terrible truth made visible. Dark, industrial, nightmarish factory. No visible victims, just the machinery of horror. |
 | `assets/narrative/final_chaos.png` | Spud border checkpoint in complete chaos. Fires burning, crowds fleeing, guards overwhelmed. Revolutionary uprising in progress. Dystopian collapse. Smoke, sirens, desperate motion. |
 | `assets/narrative/idaho_confrontation.png` | Lavish underground bunker. Ornate potato dictator (Prime Minister Idaho) cornered at desk. Resistance fighters surrounding him. Final confrontation lighting - dramatic, theatrical. Power dynamics reversed. |
-| `assets/narrative/guard_betrayal.png` | Guards turning their weapons on Prime Minister Idaho. Loyalty shattered. The moment the regime falls from within. Dramatic lighting, shock and justice. |
+| `assets/narrative/guard_betrayal.png` | Guards turning their weapons on Prime Minister Idaho. Loyalty shattered. The moment the regime falls from within. Dramatic lighting, shock and justice. **(STILL NEEDED - existing image renamed to `guards_threatening.png`)** |
 | `assets/narrative/justice_hall.png` | Grand courtroom or public square where Idaho faces judgment. Crowds of anthropomorphic potatoes watching. Justice being served. Hopeful but solemn atmosphere. New order emerging. |
-| `assets/narrative/reckoning.png` | Dark, intimate confrontation scene. Player facing Idaho directly. Vengeance about to be enacted. Harsh shadows, dramatic lighting. The moment before violent justice. |
+| `assets/narrative/reckoning.png` | Dark, intimate confrontation scene. Player facing Idaho directly. Vengeance about to be enacted. Harsh shadows, dramatic lighting. The moment before violent justice. **(STILL NEEDED - existing image renamed to `uprising_victory.png`)** |
 | `assets/narrative/new_spud_flag.png` | New flag being raised over liberated Spud. Dawn light, hopeful atmosphere. Crowd of diverse anthropomorphic potatoes watching, some crying, some cheering. The old regime's symbols being torn down. A new beginning. |
 | `assets/narrative/credits.png` | Peaceful dawn vista over the nation of Spud. Hills, farms, the checkpoint in distance but peaceful now. Soft golden hour lighting. The world after revolution. Hope for the future. |
 
@@ -120,6 +120,16 @@ This document contains prompts for generating music, sound effects, and cutscene
 | `assets/narrative/murphy_distraction.png` | Explosion rocking east wing of facility. Murphy's voice crackling over comms. Chaos and distraction. Fire and smoke. The diversion that saves the player. |
 | `assets/narrative/aftermath.png` | Post-battle scene at checkpoint. Bodies on ground, some with resistance badges. Smoke clearing. The cost of the failed uprising. Somber, tragic. |
 | `assets/narrative/official_arrival.png` | Checkpoint prepared for VIP arrival. Officers lined up. Propaganda banners fresh. Nervous anticipation. The calm before Idaho's visit. |
+
+### Renamed/Repurposed Images
+
+The following images were renamed because the existing assets serve different purposes than originally described:
+
+| Original Name | Renamed To | What It Shows | Notes |
+|---------------|------------|---------------|-------|
+| `guard_betrayal.png` | `guards_threatening.png` | Armed guards in threatening stance | Useful for intimidation scenes. Still need actual "guards betraying Idaho" image. |
+| `reckoning.png` | `uprising_victory.png` | Triumphant uprising/rally scene | Useful for revolution victory scenes. Still need actual "dark intimate confrontation" image. |
+| `sasha_capture.png` | `sasha_arrested.png` | Sasha being escorted by two guards | Useful for arrest/escort scenes. New `sasha_capture.png` shows Sasha alone in prison cell. |
 
 ---
 
