@@ -156,8 +156,12 @@ variables={
 "stay_or_go": "go",
 "viktor_allied": "none",
 "viktor_conversation": "none",
+"viktor_wife_discovery": "no",
 "wife_name": "",
-"yellow_badge_response": "none"
+"yellow_badge_response": "none",
+"malfunction_excuse": "none",
+"follow_trucks": "none",
+"found_facility": "no"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.02
