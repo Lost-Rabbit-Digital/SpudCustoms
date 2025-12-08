@@ -3,7 +3,7 @@ Text/56/text,Witaj w narodzie Ziemniaka. Kraina [pulse freq=2][color=MEDIUM_VIOL
 Text/57/text,Zostałeś wybrany do [color=DARK_ORANGE]kluczowej roli[/color] w ochronie naszych granic.
 Text/59/text,"SPÓJRZCIE! [color=MEDIUM_VIOLET_RED]Potężny mur[/color], który chroni naszą narodowość. Tutaj będziesz służyć, upewniając się, że wejdą tylko godni."
 Text/5a/text,"Ach, nowy pęd. Słuchaj uważnie, twoja rola jest [color=DARK_ORANGE]kluczowa dla bezpieczeństwa Ziemniaka[/color]."
-Text/184/text,Dobrobyt twojej rodziny [wave amp=20 freq=3][color=YELLOW]zależy od twojej wydajności[/color][/wave].
+Text/184/text,Twój dobrobyt [wave amp=20 freq=3][color=YELLOW]zależy od twojej wydajności[/color][/wave].
 Text/5b/text,Mianuję cię Oficerem Celnym [pulse freq=1][color=MEDIUM_VIOLET_RED]chwalebnego Ziemniaka[/color][/pulse]. Jakieś pytania?
 Choice/5c/text,Jestem gotów służyć Ziemniakowi całą moją skrobią!
 Choice/5d/text,Co dokładnie dzieje się z odrzuconymi ziemniakami?

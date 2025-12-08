@@ -3,7 +3,7 @@ Text/56/text,Willkommen in der Nation Kartoffel. Ein Land [pulse freq=2][color=M
 Text/57/text,Sie wurden für eine [color=DARK_ORANGE]entscheidende Rolle[/color] bei der Sicherung unserer Grenzen ausgewählt.
 Text/59/text,"SEHT HER! Die [color=MEDIUM_VIOLET_RED]mächtige Mauer[/color], die unsere Nation schützt. Hier werden Sie dienen und sicherstellen, dass nur die Würdigen eintreten."
 Text/5a/text,"Ah, der neue Trieb. Hören Sie genau zu, Ihre Rolle ist [color=DARK_ORANGE]lebenswichtig für die Sicherheit Kartoffels[/color]."
-Text/184/text,Das Wohlergehen Ihrer Familie [wave amp=20 freq=3][color=YELLOW]hängt von Ihrer Leistung ab[/color][/wave].
+Text/184/text,Ihr Wohlergehen [wave amp=20 freq=3][color=YELLOW]hängt von Ihrer Leistung ab[/color][/wave].
 Text/5b/text,Ich ernenne Sie zum Zollbeamten des [pulse freq=1][color=MEDIUM_VIOLET_RED]glorreichen Kartoffels[/color][/pulse]. Fragen?
 Choice/5c/text,"Ich bin bereit, Kartoffel mit all meiner Stärke zu dienen!"
 Choice/5d/text,Was genau passiert mit abgelehnten Kartoffeln?
