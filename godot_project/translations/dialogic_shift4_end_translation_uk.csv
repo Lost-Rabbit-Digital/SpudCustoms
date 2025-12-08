@@ -10,20 +10,20 @@ Text/21c/text,"Мерфі дістає зім'ятий бланк. Подиви�
 Text/21d/text,Я знайшов це в архівах. «RR» означає [pulse freq=2][color=DARK_VIOLET]«Кореневий Резерв»[/color][/pulse]. «UTIL» означає... [color=CRIMSON]утилізація[/color].
 Text/21d_breakdown1/text,[wave amp=20 freq=3]Руки Мерфі починають тремтіти.[/wave] Мій кузен... Томмі... йому було лише двадцять три.
 Text/21d_breakdown2/text,Він приїхав сюди заради [color=CHARTREUSE]кращого життя[/color]. Провалив одну перевірку. Одну. [color=STEEL_BLUE]Просто невдалий час.[/color]
-Text/21d_breakdown3/text,"Murphy slides down the wall, face in his hands. And I... I [tornado radius=3 freq=2][color=CRIMSON]ATE[/color][/tornado] that stuff. Every day."
-Text/21d_breakdown4/text,"Murphy looks up at you, tears streaming. [pulse freq=2][color=CRIMSON]What if I ate HIM?[/color][/pulse]"
-Choice/21e/text,Murphy... I'm so sorry. I'm with you. We'll find the truth together.
-Choice/21f/text,"Murphy, this is dangerous. We should stay out of it."
-Choice/220/text,Maybe it's a coincidence. Let's not jump to conclusions.
-Text/221_comfort1/text,"You kneel beside Murphy, putting a hand on his shoulder."
-Text/221/text,Murphy grabs your arm like a lifeline. [color=CHARTREUSE]Thank you.[/color] I thought I was going crazy.
-Text/221_tommy/text,[color=STEEL_BLUE]His voice steadies slightly.[/color] For Tommy. We do this for Tommy. And everyone else they've taken.
-Text/222/text,There's others who suspect too. Sasha's been gathering people. I think she trusts you.
-Text/223/text,"Murphy wipes his eyes, trying to compose himself. Yeah. Yeah, you're probably right. Forget I said anything."
-Text/224/text,But if you change your mind... I'll be here. [color=STEEL_BLUE]Alone with my questions. And my nightmares.[/color]
-Text/225/text,Coincidence. Murphy laughs bitterly through his tears. Sure. And Tommy just [color=CRIMSON]vanished[/color] into thin air.
-Text/226/text,Keep telling yourself that. See how long it helps you sleep. [color=STEEL_BLUE]It doesn't help me.[/color]
-Text/227/text,Sasha appears at your booth as the last shift ends. You look like you've seen a ghost.
+Text/21d_breakdown3/text,"Мерфі сповзає по стіні, затуливши обличчя руками. І я... я [tornado radius=3 freq=2][color=CRIMSON]ЇВ[/color][/tornado] це. Щодня."
+Text/21d_breakdown4/text,"Мерфі дивиться на тебе, сльози течуть. [pulse freq=2][color=CRIMSON]А що, як я з'їв ЙОГО?[/color][/pulse]"
+Choice/21e/text,Мерфі... Мені так шкода. Я з тобою. Ми знайдемо правду разом.
+Choice/21f/text,"Мерфі, це небезпечно. Нам слід триматися осторонь."
+Choice/220/text,"Можливо, це збіг. Не будемо робити поспішних висновків."
+Text/221_comfort1/text,"Ти стаєш на коліна поруч з Мерфі, кладучи руку йому на плече."
+Text/221/text,"Мерфі хапає тебе за руку, як за рятівне коло. [color=CHARTREUSE]Дякую.[/color] Я думав, що божеволію."
+Text/221_tommy/text,"[color=STEEL_BLUE]Його голос трохи стабілізується.[/color] За Томмі. Ми робимо це заради Томмі. І всіх інших, кого вони забрали."
+Text/222/text,"Є й інші, хто теж підозрює. Саша збирає людей. Думаю, вона тобі довіряє."
+Text/223/text,"Мерфі витирає очі, намагаючись опанувати себе. Так. Так, ти, мабуть, маєш рацію. Забудь, що я щось казав."
+Text/224/text,Але якщо ти передумаєш... Я буду тут. [color=STEEL_BLUE]Наодинці зі своїми питаннями. І своїми кошмарами.[/color]
+Text/225/text,Збіг. Мерфі гірко сміється крізь сльози. Звісно. І Томмі просто [color=CRIMSON]зник[/color] у повітрі.
+Text/226/text,"Продовжуй говорити собі це. Подивись, як довго це допоможе тобі спати. [color=STEEL_BLUE]Мені це не допомагає.[/color]"
+Text/227/text,"Саша з'являється біля твоєї кабінки, коли закінчується остання зміна. Ти виглядаєш так, ніби побачив привида."
 Text/228/text,Дай вгадаю – Мерфі розповів тобі про свого кузена?
 Text/229/text,"Саша схвально киває. Добре. Нам потрібні люди, які ставлять питання."
 Text/22a/text,Саша уважно вивчає твоє обличчя. Ти наляканий. Це розумно. Але страх нікого не врятує.

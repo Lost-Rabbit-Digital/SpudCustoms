@@ -63,7 +63,7 @@ resolution_label,Разрешение :
 antialiasing_label,Сглаживание :
 screenshake_label,Тряска экрана :
 mouse_sens_label,Чувствительность мыши :
-Loading…,Loading...
+Loading…,Загрузка...
 You lose.,Вы проиграли.
 You won!,Вы победили!
 Thanks for playing!,Спасибо за игру!
@@ -121,7 +121,7 @@ Secondary,Второстепенный
 Primary Interaction,Основное взаимодействие
 Secondary Interaction,Второстепенное взаимодействие
 Cancel Interaction,Отменить взаимодействие
-Escape,Escape
+Escape,Esc
 Dialogic Default Action,Действие по умолчанию в диалоге
 Enter,Enter
 Left Mouse Button,Левая кнопка мыши

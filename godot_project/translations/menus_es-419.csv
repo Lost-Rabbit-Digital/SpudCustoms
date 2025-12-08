@@ -38,7 +38,7 @@ shift_summary_runner_stats,ESTADÍSTICAS DE FUGITIVOS
 shift_summary_document_stats,ESTADÍSTICAS DE DOCUMENTOS
 shift_summary_performance,RENDIMIENTO
 shift_summary_bonuses,BONIFICACIONES
-time_format,{minutes}m {seconds}s
+time_format,{minutes}min {seconds}s
 shift_complete_success,TURNO {shift} COMPLETADO\n¡ÉXITO!
 shift_complete_failure,TURNO {shift} COMPLETADO\n{failure}
 strike_limit_reached,¡LÍMITE DE FALTAS ALCANZADO!
@@ -74,7 +74,7 @@ Cancel,Cancelar
 OK,OK
 Controls,Controles
 Mouse Sensitivity :,Mouse Sensitivity :
-Actions & Inputs,Actions & Inputs
+Actions & Inputs,Acciones y Controles
 Add,Add
 Remove,Quitar
 Assign Key for {action},Asignar tecla para {action}

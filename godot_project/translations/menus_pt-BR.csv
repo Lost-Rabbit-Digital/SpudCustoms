@@ -38,7 +38,7 @@ shift_summary_runner_stats,ESTATÍSTICAS DE FUGITIVOS
 shift_summary_document_stats,ESTATÍSTICAS DE DOCUMENTOS
 shift_summary_performance,DESEMPENHO
 shift_summary_bonuses,BÔNUS
-time_format,{minutes}m {seconds}s
+time_format,{minutes}min {seconds}s
 shift_complete_success,TURNO {shift} CONCLUÍDO\nSUCESSO!
 shift_complete_failure,TURNO {shift} CONCLUÍDO\n{failure}
 strike_limit_reached,LIMITE DE ADVERTÊNCIAS ATINGIDO!
