@@ -12,5 +12,25 @@ Text/13a/text,They're taking her to the processing plant right now. We need to h
 Text/13b/text,"The doors blast open, revealing the [wave amp=25 freq=3][color=CRIMSON]horrific truth[/color][/wave] - grinding machines, conveyors carrying potatoes to their doom."
 Text/13c/text,At the end of one belt - Sasha and others [color=CRIMSON]bound helplessly[/color]. Supervisor Russet stands at the controls.
 Text/13d/text,[color=RED]YOU![/color] I should have known you were one of them! Back away or I start the processor!
-Text/13e/text,"As resistance fighters overpower Russet, Sasha redirects the facility cameras. [color=YELLOW]People of Spud! This is Root Reserve! They've been feeding us to each other![/color]"
-Text/13f/text,You came back for me. [color=CHARTREUSE]We did it. The truth is out there now.[/color] We have a future to build!
+Text/140/text,"[color=STEEL_BLUE]The resistance leader steps forward, weapon trained on Russet.[/color] Not another step, Russet. Your hands where I can see them."
+Text/141/text,"[color=CRIMSON]Russet's eyes dart between you and the resistance leader, sweat beading on his brow.[/color] You think you've won? This facility is the foundation of Spud!"
+Text/142/text,The foundation of suffering. [pulse freq=3][color=CHARTREUSE]It ends today.[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]Sasha struggles against her bindings on the conveyor belt, looking up as she sees you.[/color] You... you actually came!
+Choice/144/text,[tornado radius=3 freq=2][color=CRIMSON]"Russet, you monster! You'll pay for every life you've taken!"[/color][/tornado]
+Choice/145/text,[wave amp=15 freq=2][color=STEEL_BLUE]"This... this is what they've been doing? It's worse than I imagined..."[/color][/wave]
+Choice/146/text,[color=CHARTREUSE]"Sasha! Thank the roots you're alive! Hold on, we're getting you out!"[/color]
+Text/147/text,"[color=CRIMSON]You charge toward Russet, fists clenched, barely held back by the resistance fighters.[/color] Every potato that came through my checkpoint... how many did you..."
+Text/148/text,"Easy! We need him alive to testify. [color=STEEL_BLUE]The leader keeps their weapon trained on Russet.[/color] Save your anger for the courts."
+Text/149/text,"[color=STEEL_BLUE]You stagger back, hand covering your mouth, taking in the full horror of the machinery.[/color] I stamped their papers... I sent them here..."
+Text/14a/text,[color=CHARTREUSE]You didn't know. None of us did.[/color] That's why we're here now. Focus!
+Text/14b/text,[color=CHARTREUSE]You rush to the conveyor, working frantically at Sasha's restraints.[/color] I'm here. I'm not leaving without you.
+Text/14c/text,[color=CHARTREUSE]Sasha's eyes shine with tears and hope as your hands work the knots.[/color] I knew you'd come. I never doubted you.
+Text/14d/text,[color=STEEL_BLUE]The leader forces Russet to his knees at gunpoint.[/color] Tie him up. Make sure he watches what comes next.
+Text/13e/text,"[color=CHARTREUSE]Freed from her bonds, Sasha wastes no time, redirecting the facility cameras.[/color] [color=YELLOW]People of Spud! This is Root Reserve! They've been feeding us to each other![/color]"
+Text/14e/text,"[color=CHARTREUSE]Sasha takes your hand, intertwining her fingers with yours.[/color] You came back for me. Whatever happens next... we face it together."
+Text/14f/text,"[color=STEEL_BLUE]Sasha watches you carefully, seeing the fury still burning in your eyes.[/color] Channel that fire. We'll need it for what comes next."
+Text/150/text,[color=STEEL_BLUE]Sasha places a gentle hand on your shoulder.[/color] The guilt isn't yours to carry. You're here now. That's what matters.
+Text/13f/text,[color=CHARTREUSE]We did it. The truth is out there now.[/color] We have a future to build!
+Choice/144/disabled_text,
+Choice/145/disabled_text,
+Choice/146/disabled_text,

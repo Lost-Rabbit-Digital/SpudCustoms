@@ -21,7 +21,8 @@ Text/152/text,"Suddenly, the facility [color=YELLOW]shakes with explosions[/colo
 Text/153/text,"Do I stay at my post and hope this blows over, or [color=CHARTREUSE]take a stand[/color] and risk everything to expose the truth?"
 Choice/154/text,"""I can't abandon my duty. I'll stay quiet and hope for the best."""
 Choice/155/text,"""I've been complicit for too long. It's time to fight for what's right."""
-Choice/155/disabled_text,
+Text/156/text,[pulse freq=3][color=YELLOW]Move quickly![/color][/pulse] Security is scrambling - this is your only chance to escape!
 Choice/14d/disabled_text,
-Choice/154/disabled_text,
 Choice/14e/disabled_text,
+Choice/154/disabled_text,
+Choice/155/disabled_text,
