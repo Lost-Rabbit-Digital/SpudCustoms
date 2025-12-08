@@ -191,10 +191,10 @@ if {ending_choice} == "diplomatic":
 
 	# Viktor's payoff - if player allied with him earlier
 	if {viktor_allied} == "yes":
-		join security_officer [z_index="1"]
-		security_officer: Viktor steps forward, face twisted with grief and rage. [color=CRIMSON]For my wife, you monster.[/color] #id:2d_viktor
-		security_officer: He kicks Idaho to the ground. [color=STEEL_BLUE]She was everything to me. And you fed her to this nation.[/color] #id:2d_viktor2
-		leave security_officer
+		join viktor [z_index="1"]
+		viktor: He steps forward, face twisted with grief and rage. [color=CRIMSON]For my wife, you monster.[/color] #id:2d_viktor
+		viktor: He kicks Idaho to the ground. [color=STEEL_BLUE]She was everything to me. And you fed her to this nation.[/color] #id:2d_viktor2
+		leave viktor
 	else:
 		A hulking guard steps forward and kicks Idaho to the ground swiftly. #id:2d
 

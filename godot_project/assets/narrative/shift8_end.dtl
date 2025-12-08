@@ -129,12 +129,12 @@ else:
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
 if {viktor_allied} == "yes":
 	audio "res://assets/audio/footsteps/Metal Walk 1_2.mp3" [volume="-8.0" bus="SFX"]
-	join security_officer [z_index="1"]
-	security_officer: Viktor finds you in the chaos. His face is a mask, but his eyes burn. #id:284
-	security_officer: They took her to the [color=CRIMSON]processing wing[/color]. Sub-level 3. That's where they took my wife. #id:285
-	security_officer: Viktor presses something into your hand - a [color=GOLD]security keycard[/color]. #id:286
-	security_officer: When the time comes... [color=CHARTREUSE]I'll look the other way[/color]. For my wife. For all of them. #id:287
-	leave security_officer
+	join viktor [z_index="1"]
+	viktor: He finds you in the chaos. His face is a mask, but his eyes burn. #id:284
+	viktor: They took her to the [color=CRIMSON]processing wing[/color]. Sub-level 3. That's where they took my wife. #id:285
+	viktor: He presses something into your hand - a [color=GOLD]security keycard[/color]. #id:286
+	viktor: When the time comes... [color=CHARTREUSE]I'll look the other way[/color]. For my wife. For all of them. #id:287
+	leave viktor
 	set {has_keycard} = "yes"
 
 # Murphy's reaction

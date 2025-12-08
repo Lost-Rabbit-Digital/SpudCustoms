@@ -66,10 +66,10 @@ else:
 if {viktor_wife_discovery} == "yes":
 	[background arg="res://assets/narrative/checkpoint_corridor.png" fade="1.5"]
 	audio "res://assets/audio/footsteps/Metal Walk 1_2.mp3" [volume="-8.0" bus="SFX"]
-	join security_officer [z_index="1"]
-	security_officer: A burly security guard - Viktor - approaches during your break. His face is haggard. #id:c7_viktor1
-	security_officer: Hey... you're one of the customs officers, right? I've been asking around about my wife, Elena. #id:c7_viktor2
-	security_officer: She crossed this checkpoint three weeks ago. [color=STEEL_BLUE]Failed inspection.[/color] I haven't heard from her since. #id:c7_viktor3
+	join viktor [z_index="1"]
+	viktor: A burly security guard approaches during your break. His face is haggard. #id:c7_viktor1
+	viktor: Hey... you're one of the customs officers, right? I've been asking around about my wife, Elena. #id:c7_viktor2
+	viktor: She crossed this checkpoint three weeks ago. [color=STEEL_BLUE]Failed inspection.[/color] I haven't heard from her since. #id:c7_viktor3
 	audio "res://assets/audio/stings/suspicion_sting.mp3" [volume="-8.0" bus="SFX"]
 
 	set {viktor_conversation} = "none"
@@ -80,20 +80,18 @@ if {viktor_wife_discovery} == "yes":
 		set {viktor_conversation} = "lie_protect"
 
 	if {viktor_conversation} == "tell_truth":
-		join security_officer [z_index="1"]
 		audio "res://assets/audio/paper/paper handled 1.wav" [volume="-5.0" bus="SFX"]
-		security_officer: You show Viktor a copy of the manifest page. His face goes white. #id:c7_viktor6
-		security_officer: [wave amp=25 freq=3]Viktor's hands tremble as he reads.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Processed... Batch RR-2851...[/color] #id:c7_viktor7
+		viktor: You show him a copy of the manifest page. His face goes white. #id:c7_viktor6
+		viktor: [wave amp=25 freq=3]His hands tremble as he reads.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Processed... Batch RR-2851...[/color] #id:c7_viktor7
 		audio "res://assets/audio/stings/dread_chord.mp3" [volume="-5.0" bus="SFX"]
-		security_officer: Viktor's voice is barely a whisper. [tornado radius=3 freq=2][color=CRIMSON]They... they MADE her into...[/color][/tornado] #id:c7_viktor8
-		security_officer: His grief transforms into cold fury. [pulse freq=2][color=CRIMSON]Idaho will pay for this.[/color][/pulse] I swear it on her memory. #id:c7_viktor9
-		security_officer: Viktor grips your shoulder. [color=CHARTREUSE]Thank you for telling me.[/color] When the time comes... I'll remember this. #id:c7_viktor10
-		leave security_officer
+		viktor: His voice is barely a whisper. [tornado radius=3 freq=2][color=CRIMSON]They... they MADE her into...[/color][/tornado] #id:c7_viktor8
+		viktor: His grief transforms into cold fury. [pulse freq=2][color=CRIMSON]Idaho will pay for this.[/color][/pulse] I swear it on her memory. #id:c7_viktor9
+		viktor: He grips your shoulder. [color=CHARTREUSE]Thank you for telling me.[/color] When the time comes... I'll remember this. #id:c7_viktor10
+		leave viktor
 	else:
-		join security_officer [z_index="1"]
-		security_officer: Viktor nods sadly. [color=STEEL_BLUE]I thought so.[/color] No one knows anything. Or no one wants to talk. #id:c7_viktor11
-		security_officer: If you hear anything... [color=YELLOW]please.[/color] She's all I have. #id:c7_viktor12
-		leave security_officer
+		viktor: He nods sadly. [color=STEEL_BLUE]I thought so.[/color] No one knows anything. Or no one wants to talk. #id:c7_viktor11
+		viktor: If you hear anything... [color=YELLOW]please.[/color] She's all I have. #id:c7_viktor12
+		leave viktor
 
 [background arg="res://assets/narrative/resistance_planning.png" fade="2.0"]
 audio music "res://assets/music/narrative/electronic_reborn_main.mp3" [fade="2.0" volume="-8.0" bus="Music"]
