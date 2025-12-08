@@ -181,6 +181,10 @@ signal minigame_launch_requested(minigame_type: String, config: Dictionary)
 ## Emitted when minigame bonus score should be applied
 signal minigame_bonus_requested(bonus: int, source: String)
 
+## Emitted when a minigame should trigger instead of a border runner
+## This allows mainGame.gd to check the per-shift limit before launching
+signal minigame_from_runner_requested(minigame_type: String)
+
 # ============================================================================
 # SAVE/LOAD EVENTS
 # ============================================================================

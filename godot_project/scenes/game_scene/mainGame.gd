@@ -194,6 +194,7 @@ func _setup_managers():
 	# Get essential system references
 	queue_manager = %QueueManager
 	border_runner_system = %BorderRunnerSystem
+	border_runner_system.minigame_launcher = minigame_launcher
 	original_runner_chance = border_runner_system.runner_chance
 
 	# Disable border runners immediately for tutorial shift
@@ -316,6 +317,7 @@ func _connect_signals():
 	EventBus.strike_removed.connect(_on_strike_removed)
 	EventBus.quota_updated.connect(_on_quota_updated)
 	EventBus.minigame_bonus_requested.connect(_on_minigame_bonus_requested)
+	EventBus.minigame_from_runner_requested.connect(_on_minigame_from_runner_requested)
 	EventBus.runner_escaped.connect(_on_runner_escaped)
 	EventBus.achievement_unlocked.connect(_on_achievement_unlocked)
 	EventBus.high_score_achieved.connect(_on_high_score_achieved)
@@ -1783,6 +1785,32 @@ func _play_minigame_warning_effect():
 	tween.tween_property(pulse_overlay, "color:a", 0.2, 0.25)
 	tween.tween_property(pulse_overlay, "color:a", 0.0, 0.25)
 	tween.tween_callback(pulse_overlay.queue_free)
+
+
+## Handle minigame trigger request from border runner system
+## This is called when a minigame should trigger instead of a border runner
+func _on_minigame_from_runner_requested(minigame_type: String):
+	# Only trigger once per shift (shared with streak/perfect stamp triggers)
+	if _minigame_triggered_this_shift:
+		print("Minigame from runner skipped - already triggered this shift")
+		return
+
+	# Check if minigames are available
+	if not minigame_launcher or minigame_launcher.is_minigame_active():
+		return
+
+	_minigame_triggered_this_shift = true
+
+	# Play warning effect and show alert
+	_play_minigame_warning_effect()
+	EventBus.show_alert(tr("alert_runner_bonus_minigame"), true, 3.0)
+
+	# Delay to give player time to notice and prepare
+	await get_tree().create_timer(2.5).timeout
+
+	# Launch the specific minigame type that was selected
+	if minigame_launcher:
+		minigame_launcher.launch(minigame_type)
 
 
 func process_decision(allowed):

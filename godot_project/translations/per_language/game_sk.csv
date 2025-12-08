@@ -46,6 +46,7 @@ tutorial_check_age,Skontrolujte 'Dátum narodenia' na výpočet veku
 tutorial_check_gender,Skontrolujte pole 'Pohlavie' v pase
 alert_streak_bonus_minigame,5 v rade! BONUSOVÁ MINIHRA!
 alert_perfect_stamps_bonus_minigame,Perfektné pečiatky! BONUSOVÁ MINIHRA!
+alert_runner_bonus_minigame,Podozrivá aktivita! BONUSOVÁ MINIHRA!
 alert_new_minigame_unlocked,Nová minihra odomknutá: {name}!
 alert_minigame_bonus,Bonus z minihry: +{bonus} bodov!
 high_score_display,Najvyššie skóre: {score}

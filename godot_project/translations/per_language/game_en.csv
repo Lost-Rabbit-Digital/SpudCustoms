@@ -46,6 +46,7 @@ tutorial_check_age,Check the 'Born' field to calculate age
 tutorial_check_gender,Check the 'Gender' field in the passport
 alert_streak_bonus_minigame,5 in a row! BONUS MINIGAME!
 alert_perfect_stamps_bonus_minigame,Perfect stamps! BONUS MINIGAME!
+alert_runner_bonus_minigame,Suspicious activity! BONUS MINIGAME!
 alert_new_minigame_unlocked,New minigame unlocked: {name}!
 alert_minigame_bonus,Minigame bonus: +{bonus} points!
 high_score_display,High Score: {score}

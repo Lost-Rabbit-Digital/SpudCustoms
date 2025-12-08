@@ -46,6 +46,7 @@ tutorial_check_age,Kontrollera 'Födelsedatum' för att beräkna ålder
 tutorial_check_gender,Kontrollera fältet 'Kön' i passet
 alert_streak_bonus_minigame,5 i rad! BONUS MINISPEL!
 alert_perfect_stamps_bonus_minigame,Perfekta stämplar! BONUS MINISPEL!
+alert_runner_bonus_minigame,Misstänkt aktivitet! BONUS MINISPEL!
 alert_new_minigame_unlocked,Nytt minispel upplåst: {name}!
 alert_minigame_bonus,Minispelbonus: +{bonus} poäng!
 high_score_display,Högsta poäng: {score}

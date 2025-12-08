@@ -46,6 +46,7 @@ tutorial_check_age,Ellenőrizze a 'Születési dátumot' az életkor kiszámít�
 tutorial_check_gender,Ellenőrizze az útlevél 'Nem' mezőjét
 alert_streak_bonus_minigame,5 egymás után! BÓNUSZ MINIJÁTÉK!
 alert_perfect_stamps_bonus_minigame,Tökéletes bélyegzők! BÓNUSZ MINIJÁTÉK!
+alert_runner_bonus_minigame,Gyanús tevékenység! BÓNUSZ MINIJÁTÉK!
 alert_new_minigame_unlocked,Új minijáték feloldva: {name}!
 alert_minigame_bonus,Minijáték bónusz: +{bonus} pont!
 high_score_display,Rekord: {score}

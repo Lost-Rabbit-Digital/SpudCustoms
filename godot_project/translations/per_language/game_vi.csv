@@ -46,6 +46,7 @@ tutorial_check_age,Kiểm tra 'Ngày Sinh' để tính tuổi
 tutorial_check_gender,Kiểm tra trường 'Giới tính' trong hộ chiếu
 alert_streak_bonus_minigame,5 liên tiếp! TRÒ CHƠI NHỎ THƯỞNG!
 alert_perfect_stamps_bonus_minigame,Đóng dấu hoàn hảo! TRÒ CHƠI NHỎ THƯỞNG!
+alert_runner_bonus_minigame,Hoạt động đáng ngờ! TRÒ CHƠI NHỎ THƯỞNG!
 alert_new_minigame_unlocked,Trò chơi nhỏ mới đã mở khóa: {name}!
 alert_minigame_bonus,Thưởng trò chơi nhỏ: +{bonus} điểm!
 high_score_display,Điểm cao nhất: {score}
