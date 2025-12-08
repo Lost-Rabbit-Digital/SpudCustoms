@@ -17,7 +17,19 @@ Text/b4/text,"The officer's eyebrows raise. Fair treatment? Scanner flashes [col
 Text/b5/text,Today's quota has been increased. Anyone with suspicious materials is to be flagged for [color=DARK_VIOLET]special processing[/color].
 Text/b6/text,I'll be [color=DARK_ORANGE]watching your decisions[/color] very carefully today.
 Text/b7/text,"Tonight could change everything. But first, [color=YELLOW]survive the day without raising suspicion[/color]."
+Text/b4_viktor1/text,A burly security guard catches your arm as you pass. His face is lined with worry.
+Text/b4_viktor2/text,"Hey... sorry to bother you. You're one of the customs officers, right? Name's [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"I've been asking everyone about my wife, [color=GOLD]Elena[/color]. Elena Petrov. She crossed this checkpoint three weeks ago."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Failed inspection.[/color] They said she'd be processed and returned home, but... I haven't heard anything."
+Text/b4_viktor5/text,"His voice wavers. No one will tell me anything. Do you know where the rejected travelers go?"
+Choice/b4_viktor6/text,"""I'm sorry, Viktor. I don't know. But I'll keep an eye out."""
+Choice/b4_viktor7/text,"""I can't discuss processing details. Security protocols."""
+Text/b4_viktor8/text,"Viktor's eyes show a flicker of hope. [color=CHARTREUSE]Thank you.[/color] Anything you find out... please. She's all I have."
+Text/b4_viktor9/text,"Viktor nods, dejected. [color=STEEL_BLUE]Right. Protocols.[/color] I understand."
+Text/b4_viktor10/text,"But if you change your mind... [color=YELLOW]I need to know what happened to her.[/color]"
 Choice/ac/disabled_text,
 Choice/b2/disabled_text,
 Choice/b1/disabled_text,
 Choice/ad/disabled_text,
+Choice/b4_viktor6/disabled_text,
+Choice/b4_viktor7/disabled_text,

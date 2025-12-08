@@ -4,6 +4,9 @@ Text/97/text,[color=CHARTREUSE]This device will disable the lock[/color] on Russ
 Text/98/text,"""The manifests should be in his filing cabinet. [color=CRIMSON]Red folder labeled 'RR Transport'[/color]. Don't leave evidence of your search."""
 Text/99/text,"You find the thick [color=CRIMSON]red folder labeled ""RR Transport""[/color] in the filing cabinet."
 Text/9a/text,"Inside are manifests matching rejected potato counts, and a directive from Prime Minister Idaho authorizing ""[pulse freq=3][color=DARK_VIOLET]full utilization of border rejects for RR production.[/color][/pulse]"""
+Text/9a_viktor1/text,You scan the names on the manifest... and one stands out. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,That name... you've heard it before. The security guard Viktor mentioned his wife was missing.
+Text/9a_viktor3/text,"""[color=CRIMSON]Status: Processed. Batch RR-2851.[/color]"" Dated two weeks ago."
 Text/9b/text,"Footsteps approach the office door. ""[wave amp=15 freq=3][color=YELLOW]Strange, I could've sworn I locked this.[/color][/wave]"""
 Choice/9c/text,"""Hide under the desk"""
 Choice/9d/text,"""Jump out the window"""
