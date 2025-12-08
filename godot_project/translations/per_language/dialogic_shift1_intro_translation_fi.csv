@@ -3,7 +3,7 @@ Text/56/text,Tervetuloa Perunan kansakuntaan. Maa [pulse freq=2][color=MEDIUM_VI
 Text/57/text,Sinut on valittu [color=DARK_ORANGE]kriittiseen rooliin[/color] rajojemme suojelemisessa.
 Text/59/text,"KATSOKAA! [color=MEDIUM_VIOLET_RED]Mahtava muuri[/color], joka turvaa maamme. Täällä palvelet ja varmistat, että vain kelpaavat pääsevät sisään."
 Text/5a/text,"Ah, uusi verso. Kuuntele tarkasti, roolisi on [color=DARK_ORANGE]elintärkeä Perunan turvallisuudelle[/color]."
-Text/184/text,Perheesi hyvinvointi [wave amp=20 freq=3][color=YELLOW]riippuu suorituksestasi[/color][/wave].
+Text/184/text,Hyvinvointisi [wave amp=20 freq=3][color=YELLOW]riippuu suorituksestasi[/color][/wave].
 Text/5b/text,Nimitän sinut [pulse freq=1][color=MEDIUM_VIOLET_RED]kunniakkaan Perunan[/color] tullivirkailijaksi. Kysyttävää?
 Choice/5c/text,Olen valmis palvelemaan Perunaa koko tärkkelydelläni!
 Choice/5d/text,Mitä tarkalleen tapahtuu hylätyille perunoille?

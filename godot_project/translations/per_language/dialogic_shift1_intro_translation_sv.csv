@@ -3,7 +3,7 @@ Text/56/text,Välkommen till Potatisens nation. Ett land av [pulse freq=2][color
 Text/57/text,Du har valts ut för en [color=DARK_ORANGE]avgörande roll[/color] i skyddet av våra gränser.
 Text/59/text,SE HÄR! Den [color=MEDIUM_VIOLET_RED]mäktiga muren[/color] som skyddar vår nation. Här ska du tjäna och se till att endast de värdiga kommer in.
 Text/5a/text,"Ah, den nya skotten. Lyssna noga, din roll är [color=DARK_ORANGE]vital för Potatisens säkerhet[/color]."
-Text/184/text,Din familjs välbefinnande [wave amp=20 freq=3][color=YELLOW]beror på din prestation[/color][/wave].
+Text/184/text,Ditt välbefinnande [wave amp=20 freq=3][color=YELLOW]beror på din prestation[/color][/wave].
 Text/5b/text,Jag utser dig till Tullman vid [pulse freq=1][color=MEDIUM_VIOLET_RED]den ärorika Potatisen[/color][/pulse]. Några frågor?
 Choice/5c/text,Jag är redo att tjäna Potatisen med all min stärkelse!
 Choice/5d/text,Vad händer exakt med avvisade potatisar?

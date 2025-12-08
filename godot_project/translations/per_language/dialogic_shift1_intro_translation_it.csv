@@ -3,7 +3,7 @@ Text/56/text,Benvenuti nella nazione della Patata. Una terra di [pulse freq=2][c
 Text/57/text,Sei stato selezionato per un [color=DARK_ORANGE]ruolo cruciale[/color] nella protezione dei nostri confini.
 Text/59/text,"OSSERVATE! Il [color=MEDIUM_VIOLET_RED]possente muro[/color] che protegge la nostra nazione. Qui servirai, assicurandoti che solo i degni entrino."
 Text/5a/text,"Ah, il nuovo germoglio. Ascolta attentamente, il tuo ruolo è [color=DARK_ORANGE]vitale per la sicurezza della Patata[/color]."
-Text/184/text,Il benessere della tua famiglia [wave amp=20 freq=3][color=YELLOW]dipende dalla tua performance[/color][/wave].
+Text/184/text,Il tuo benessere [wave amp=20 freq=3][color=YELLOW]dipende dalla tua performance[/color][/wave].
 Text/5b/text,Ti nomino Ufficiale Doganale della [pulse freq=1][color=MEDIUM_VIOLET_RED]gloriosa Patata[/color][/pulse]. Domande?
 Choice/5c/text,Sono pronto a servire la Patata con tutto il mio amido!
 Choice/5d/text,Cosa succede esattamente alle patate respinte?

@@ -3,7 +3,7 @@ Text/56/text,Vitajte v národe Zemiakov. Krajina [pulse freq=2][color=MEDIUM_VIO
 Text/57/text,Boli ste vybraný pre [color=DARK_ORANGE]kľúčovú úlohu[/color] v ochrane našich hraníc.
 Text/59/text,"POHĽADAJTE! [color=MEDIUM_VIOLET_RED]Mocný múr[/color], ktorý chráni našu krajinu. Tu budete slúžiť a zabezpečovať, aby vstúpili len hodní."
 Text/5a/text,"Ah, nový výhonok. Počúvajte pozorne, vaša úloha je [color=DARK_ORANGE]kľúčová pre bezpečnosť Zemiakov[/color]."
-Text/184/text,Blaho vašej rodiny [wave amp=20 freq=3][color=YELLOW]závisí od vášho výkonu[/color][/wave].
+Text/184/text,Vaše blaho [wave amp=20 freq=3][color=YELLOW]závisí od vášho výkonu[/color][/wave].
 Text/5b/text,Menovím vás colníkom [pulse freq=1][color=MEDIUM_VIOLET_RED]slávnych Zemiakov[/color][/pulse]. Nejaké otázky?
 Choice/5c/text,Som pripravený slúžiť Zemiakom celým mojím škrobom!
 Choice/5d/text,Čo sa presne deje s odmietnutými zemiakmi?
