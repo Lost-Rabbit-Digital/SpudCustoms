@@ -194,6 +194,7 @@ func _setup_managers():
 	# Get essential system references
 	queue_manager = %QueueManager
 	border_runner_system = %BorderRunnerSystem
+	border_runner_system.minigame_launcher = minigame_launcher
 	original_runner_chance = border_runner_system.runner_chance
 
 	# Disable border runners immediately for tutorial shift
