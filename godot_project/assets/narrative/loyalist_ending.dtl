@@ -153,7 +153,7 @@ player_character: You return to your quarters. The medal weighs heavy on your ch
 
 if {family_response} == "help":
 	audio "res://assets/audio/paper/paper picked up 2.wav" [volume="-8.0" bus="SFX"]
-	player_character: You pull out the photo of the missing wife. Her husband is probably in the same batch as her now. #id:31d
+	player_character: You pull out the photo of the missing wife. Her wife is probably in the same batch as her now. #id:31d
 	player_character: You promised to find her. [color=STEEL_BLUE]You found her.[/color] Just not the way either of you hoped. #id:31e
 
 if {murphy_alliance} == "ally":

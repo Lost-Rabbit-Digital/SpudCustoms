@@ -9,7 +9,7 @@ if {has_wife_photo} == "yes":
 	join player_character [z_index="1"]
 	audio "res://assets/audio/paper/paper picked up 2.wav" [volume="-8.0" bus="SFX"]
 	player_character: You pull out the photo again. [color=GOLD]Maris Piper[/color]. Such a kind face. #id:69_photo1
-	player_character: Her husband was so desperate. [color=STEEL_BLUE]What happened to her?[/color] #id:69_photo2
+	player_character: Her wife was so desperate. [color=STEEL_BLUE]What happened to her?[/color] #id:69_photo2
 	player_character: You notice something in the background of the photo - a truck with a [color=DARK_VIOLET]purple logo[/color]. #id:69_photo3
 	audio "res://assets/audio/stings/suspicion_sting.mp3" [volume="-8.0" bus="SFX"]
 	player_character: That symbol... you've seen it on the cafeteria deliveries. [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve.[/color][/wave] #id:69_photo4
@@ -22,7 +22,7 @@ sweet_potato_sasha: Meet me by the old storage shed after your shift. I have som
 
 if {has_wife_photo} == "yes":
 	join player_character [z_index="1"]
-	player_character: Sasha... this photo. The woman's husband gave it to me. He was looking for her. #id:6a_photo1
+	player_character: Sasha... this photo. The woman's wife gave it to me. She was looking for her. #id:6a_photo1
 	leave player_character
 	sweet_potato_sasha: Sasha's face falls. [color=STEEL_BLUE]Let me see.[/color] #id:6a_photo2
 	audio "res://assets/audio/paper/paper handled 3.wav" [volume="-5.0" bus="SFX"]

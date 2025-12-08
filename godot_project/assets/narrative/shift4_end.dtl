@@ -109,7 +109,7 @@ audio music "res://assets/music/ambient_vol3_sad_decisions_main.mp3" [fade="2.0"
 join player_character [z_index="1"]
 
 if {family_response} == "help":
-	player_character: You pull out the photo the desperate potato gave you. His wife. [color=STEEL_BLUE]Where is she now?[/color] #id:235
+	player_character: You pull out the photo the desperate potato gave you. Her wife. [color=STEEL_BLUE]Where is she now?[/color] #id:235
 	player_character: If what Sasha and Murphy are saying is true... she's already been... #id:236
 	audio "res://assets/audio/stings/revelation_dark.mp3" [volume="-8.0" bus="SFX"]
 	player_character: You can't finish the thought. But you [color=CHARTREUSE]won't forget her face[/color]. #id:237
