@@ -28,3 +28,6 @@ Text/16f/text,"Se seu turno foi bem-sucedido, você poderá continuar clicando e
 Text/170/text,Isso cobre o básico de seus deveres como Oficial Aduaneiro.
 Text/171/text,"Lembre-se: verifique documentos cuidadosamente, pare corredores e cumpra sua cota."
 Text/172/text,A segurança de Spud depende da sua [pulse freq=2][color=DARK_ORANGE]vigilância![/color][/pulse]
+Text/174/text,Vamos começar seu [color=YELLOW]turno de treinamento[/color]...
+Text/180/text,Mas tenha cuidado - nem toda batata tem seus documentos em ordem.
+Text/181/text,[color=RED]Passaportes vencidos[/color] são uma rejeição automática. Sem exceções.

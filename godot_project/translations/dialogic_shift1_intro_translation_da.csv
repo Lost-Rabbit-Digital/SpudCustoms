@@ -14,3 +14,5 @@ Text/61/text,"Din første vagt begynder nu. Tjek papirer omhyggeligt, afvis dem 
 Text/62/text,"Opfyld din kvote, undgå straffe. [color=MEDIUM_VIOLET_RED]Ære være Kartoffel![/color]"
 Choice/5d/disabled_text,
 Choice/5c/disabled_text,
+Text/184b/text,Dem der stiller for mange spørgsmål? De bliver [color=CRIMSON]omplaceret[/color]. Permanent.
+Text/62b/text,"Og husk, [color=MEDIUM_VIOLET_RED]Ære til Spud![/color]"

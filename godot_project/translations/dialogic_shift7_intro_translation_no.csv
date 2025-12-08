@@ -22,3 +22,20 @@ Text/115/text,"Når det skjer, må du [color=YELLOW]velge side[/color]. Det vil 
 Text/116/text,"Med hver potet du behandler, enten [pulse freq=2][color=CHARTREUSE]hjelper du en revolusjon[/color][/pulse] eller [pulse freq=2][color=CRIMSON]muliggjør du et forferdelig system[/color][/pulse]."
 Choice/10f/disabled_text,
 Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha kaster et nervøst blikk over skulderen.[/color] Unnskyld, jeg... [color=YELLOW]Jeg tror de ser på meg.[/color]"
+Text/102_foreshadow2/text,Russet har stilt spørsmål. Fulgt etter meg etter skift. [wave amp=15 freq=2][color=YELLOW]Jeg må være mer forsiktig.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, kanskje du burde ligge lavt en stund. La meg ta mer av risikoen."
+Text/102_foreshadow4/text,[color=STEEL_BLUE]Hun rister på hodet og fremtvinger et smil.[/color] Nei. Vi er for nærme nå. Jeg kan håndtere Russet.
+Text/102_foreshadow5/text,Dessuten... [color=CHARTREUSE]noen må holde dere spirer unna trøbbel.[/color]
+Text/106_trucks1/text,Men vi vet fortsatt ikke hvor hovedbehandlingsanlegget er. Dokumentene viser bare forsendelseskoder.
+Text/106_trucks2/text,Jeg har fulgt med på [color=DARK_VIOLET]Root Reserve-lastebilene[/color]. De drar hver natt kl. 03:00. Samme rute.
+Text/106_trucks3/text,[color=CHARTREUSE]Hvis vi kunne følge etter dem...[/color] ville vi visst nøyaktig hvor de tar med seg de forkastede.
+Choice/106_trucks4/text,Jeg gjør det. Jeg kjenner patruljeplanene.
+Choice/106_trucks5/text,Det høres risikabelt ut. Kan ikke noen andre gjøre det?
+Text/106_trucks6/text,[color=CHARTREUSE]Sashas øyne lyser opp.[/color] Jeg visste du hadde røtter av stål. Vær forsiktig – de patruljerer tungt om natten.
+Text/106_trucks7/text,Kl. 03:00. Du kryper sammen i skyggene mens [color=DARK_VIOLET]Root Reserve[/color]-lastebilene rumler forbi.
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Hold deg skjult! Følg konvoien![/color][/pulse]
+Text/106_trucks9/text,"Lastebilene stopper ved et massivt kompleks skjult i industriområdet. [color=DARK_VIOLET]Sektor 7, Lagerkompleks Delta.[/color]"
+Text/106_trucks10/text,Skorsteiner spyr ut lilla-farget røyk. Lukten er... [tornado radius=3 freq=2][color=CRIMSON]umiskjennelig.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]Hjertet av Root Reserve.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]Sashas uttrykk flimrer av skuffelse.[/color] Vi må alle ta risikoer. Jeg finner en annen måte.

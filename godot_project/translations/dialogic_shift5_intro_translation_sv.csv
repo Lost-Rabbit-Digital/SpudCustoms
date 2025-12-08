@@ -21,3 +21,13 @@ Choice/ac/disabled_text,
 Choice/b2/disabled_text,
 Choice/b1/disabled_text,
 Choice/ad/disabled_text,
+Text/b4_viktor1/text,En kraftig säkerhetsvakt tar tag i din arm när du passerar. Hans ansikte är rynkat av oro.
+Text/b4_viktor2/text,"Hej... ursäkta att jag stör. Du är en av tulltjänstemännen, eller hur? Jag heter [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Jag har frågat alla om min fru, [color=GOLD]Elena[/color]. Elena Petrov. Hon passerade den här kontrollpunkten för tre veckor sedan."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Underkänd vid kontroll.[/color] De sa att hon skulle behandlas och skickas hem, men... jag har inte hört något."
+Text/b4_viktor5/text,Hans röst darrar. Ingen vill berätta något för mig. Vet du vart de avvisade resenärerna tar vägen?
+Choice/b4_viktor6/text,"""Jag är ledsen, Viktor. Jag vet inte. Men jag ska hålla ögonen öppna."""
+Choice/b4_viktor7/text,"""Jag kan inte diskutera behandlingsdetaljer. Säkerhetsprotokoll."""
+Text/b4_viktor8/text,Viktors ögon visar en gnutta hopp. [color=CHARTREUSE]Tack.[/color] Allt du får reda på... snälla. Hon är allt jag har.
+Text/b4_viktor9/text,"Viktor nickar, nedslagen. [color=STEEL_BLUE]Just det. Protokoll.[/color] Jag förstår."
+Text/b4_viktor10/text,Men om du ändrar dig... [color=YELLOW]Jag måste få veta vad som hände henne.[/color]

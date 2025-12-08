@@ -1,0 +1,34 @@
+﻿keys,ko
+Text/50/text,"오늘 수고했다, 새싹. 효율성이 핵심이라는 걸 명심해. 우리는 할당량을 채워야 해."
+Text/51/text,"[wave amp=15 freq=2][color=DARK_VIOLET]뿌리 비축분[/color][/wave] 배급량을 잊지 말고 챙겨. 라디오에서 뭐라고 하는지 알잖아, 스퍼드 미래의 맛이라고!"
+Text/52/text,"짐을 챙기던 중, 업무 서류 사이에서 작은 쪽지 하나가 미끄러져 나온다."
+Text/52b/text,오늘 아침에는 없었다. 누군가 [color=YELLOW]근무 시간 중[/color]에 놓아둔 것이다.
+Text/53/text,[color=GOLD]모든 것이 보이는 그대로가 아니다. 우리 국가의 뿌리가 썩어버렸다.[/color]
+Text/53b/text,"[color=GOLD]흔적을 따라가라, 하지만 침묵당하지 않도록 조심해라.[/color]"
+Text/53c/text,[color=GOLD]누가 [/color][color=DARK_VIOLET]비축분[/color][color=GOLD]을 먹는지 지켜봐라. 누가 거부하는지 지켜봐라.[/color]
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]친구[/color]
+Choice/53e/text,"""쪽지를 숨긴다 - 조용히 조사한다"""
+Choice/53f/text,"""쪽지를 파기한다 - 이건 시험일 수도 있다"""
+Choice/53g/text,"""즉시 러셋에게 쪽지를 보여준다"""
+Text/53h/text,쪽지를 조심스럽게 접어 주머니에 넣는다. [color=CHARTREUSE]누군가 손을 내밀고 있다.[/color]
+Text/53i/text,"하지만 누구지? 그리고 왜 하필 나에게, 첫날부터?"
+Text/53j/text,쪽지를 아주 작은 조각들로 찢는다.
+Text/53k/text,러셋이 질문하는 새싹들은 '재배치'된다고 했다. 위험을 감수하지 않는 게 낫다.
+Text/53l/text,"러셋이 떠나기 전에 그를 붙잡는다. ""서장님? 제 서류에서 이걸 찾았습니다..."""
+Text/53m/text,러셋은 쪽지를 낚아채 읽는다. 그의 표정이 순간 변한다 - [color=YELLOW]알아본 것일까?[/color]
+Text/53n/text,선전물이다. 반란군이 신임 장교들을 타락시키려 하는군. [color=DARK_ORANGE]내게 이걸 가져온 건 잘한 일이다.[/color]
+Text/53o/text,그는 쪽지를 주머니에 넣는다. 이걸 본 적 없던 일로 해라. 그리고... [color=CRIMSON]수상하게[/color] 행동하는 자를 주시해라.
+Text/54/text,그 쪽지... 그리고 [pulse freq=3][color=CRIMSON]거부된 감자들[/color][/pulse]에 대한 내 질문에 러셋이 답한 방식...
+Text/54b/text,"""[color=VIOLET]처리되었다. 규정에 따라.[/color]"" 그게 대체 무슨 뜻이지?"
+Text/54c/text,그 쪽지... 뿌리가 [color=CRIMSON]썩어버렸다[/color]고 했지.
+Text/54d/text,"하지만 스퍼드는 영광스럽잖아, 그렇지 않아? 그들이 우리에게 그렇게 말했잖아. 내가 믿었던 것인데."
+Text/54e/text,"쪽지를 꺼내 다시 읽는다. ""[color=GOLD]누가 비축분을 먹는지 지켜봐라. 누가 거부하는지 지켜봐라.[/color]"""
+Text/54f/text,내일은 주의 깊게 살펴볼 거야. [color=YELLOW]누군가 당신에게 무언가를 말하려 하고 있다.[/color]
+Text/54g/text,러셋이 쪽지를 읽었을 때의 얼굴. 잠시 동안 그는 거의... [color=STEEL_BLUE]두려워하는[/color] 듯 보였다.
+Text/54h/text,[color=DARK_VIOLET]뿌리 보존 구역[/color]은 대체 무엇일까? 그리고 왜 누군가 그것에 대해 경고했을까?
+Text/54i/text,"쪽지는 사라졌지만, 그 말들은 맴돈다. [color=YELLOW]모든 것이 보이는 대로가 아니다.[/color]"
+Text/54j/text,어쩌면 그것을 파괴한 것이 현명한 선택이었을지도 모른다. 어쩌면 당신은 당신의 유일한 아군을 침묵시킨 것일지도 모른다.
+Text/55/text,나는 [color=YELLOW]경계를 늦추지 말아야[/color] 한다. 여기는 여권에 도장을 찍는 것 이상의 일이 벌어지고 있다.
+Choice/53e/disabled_text,
+Choice/53f/disabled_text,
+Choice/53g/disabled_text,

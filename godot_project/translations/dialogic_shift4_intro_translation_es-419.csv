@@ -1,0 +1,19 @@
+﻿keys,es-419
+Text/86/text,Nuevos protocolos de seguridad hoy. Hemos recibido información sobre [color=YELLOW]actividades sospechosas[/color].
+Text/87/text,Todos los viajeros deben someterse a procedimientos de inspección exhaustivos.
+Text/88/text,"Esté atento a [color=YELLOW]comportamiento nervioso, manierismos inusuales o renuencia a hacer contacto visual[/color]."
+Text/89/text,"Todos los artículos sospechosos deben ser confiscados y registrados. Por la seguridad de Spud, por supuesto."
+Text/8a/text,"Nos preocupan especialmente los [color=CRIMSON]materiales prohibidos[/color]: literatura antigubernamental, equipo fotográfico..."
+Text/8b/text,[pulse freq=2][color=DARK_VIOLET]Tenemos procedimientos especiales para esos individuos.[/color][/pulse]
+Text/8c/text,"Camiones de [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] descargan cajas marcadas como ""Reserva Premium"" en la cafetería."
+Text/8d/text,¿Has probado la nueva Reserva Premium? Mi primo desapareció el mes pasado. No pasó la inspección.
+Text/8e/text,"¿Quizás sea parte de este lote, eh? [tornado radius=2 freq=2][color=STEEL_BLUE]Humor negro, ¿sabes?[/color][/tornado]"
+Choice/8f/text,Eso no es gracioso. Para nada.
+Choice/90/text,No tengo hambre. Disculpe. (Irse)
+Text/91/text,Tienes razón. A veces bromear es más fácil que pensar en [pulse freq=3][color=CRIMSON]lo que realmente podría estar pasando[/color][/pulse].
+Text/92/text,"Oye, lo entiendo. También perdí el apetito..."
+Text/93/text,"Qué conveniente el momento para los nuevos protocolos de seguridad, ¿no? [wave amp=15 freq=3][color=YELLOW]Están intentando detener la información sobre Root Reserve.[/color][/wave]"
+Text/94/text,Tengo algo que podría ayudarnos. Algunas papas con [color=CHARTREUSE]información vital merecen pasar[/color].
+Text/95/text,Las decisiones de hoy podrían ayudar a [color=CHARTREUSE]difundir la verdad[/color]... o [color=CRIMSON]silenciarla para siempre[/color].
+Choice/8f/disabled_text,
+Choice/90/disabled_text,

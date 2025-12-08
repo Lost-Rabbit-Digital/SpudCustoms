@@ -1,0 +1,26 @@
+﻿keys,id
+Text/200/text,"Hei, kentang muda! Shift yang berat, ya? Namaku Murphy. Sudah tiga musim di sini."
+Text/201/text,"Tadi aku lihat kau bicara dengan Sasha. Dia... [color=STEEL_BLUE]berbeda[/color]. Berbeda yang baik, kurasa."
+Choice/202/text,Dia kelihatannya baik. Memberiku nasihat tentang tetap waspada.
+Choice/203/text,Cuma perkenalan. Tidak ada yang istimewa.
+Text/204/text,Murphy melirik sekeliling dengan gugup. Ya
+Text/205/text,"Antara kita saja? Siaran radio tentang ""kentang hilang"" itu... sepupuku hilang bulan lalu. Gagal inspeksi."
+Text/206/text,"Pintar. Tetap fokus, lakukan pekerjaanmu. Itu yang kukatakan pada diriku setiap hari."
+Text/207/text,Suara Murphy merendah. Meskipun kadang aku bertanya-tanya ke mana sebenarnya semua kentang yang ditolak itu pergi...
+Text/208/text,Di kafetaria
+Text/209/text,Kau menatap pasta kental berwarna ungu-cokelat itu. Semua orang memakannya tanpa bertanya. Seharusnya itu bergizi.
+Choice/20a/text,Makan Cadangan Akar seperti yang lain
+Choice/20b/text,Singkirkan - kau tidak lapar
+Text/20c/text,"Rasanya... rasa tanah. Kaya. Ada sesuatu yang terasa [color=STEEL_BLUE]akrab secara tidak nyaman[/color], tapi kau tidak tahu kenapa."
+Text/20d/text,"Seorang petugas senior memperhatikan. ""Jangan sia-siakan, jangan sampai kekurangan, tunas. Itu [pulse freq=2][color=DARK_VIOLET]nutrisi premium[/color][/pulse] di sana."""
+Text/20e/text,Kau menggumamkan alasan tentang sakit perut. Petugas itu mengangkat bahu dan berlalu.
+Text/20f/text,"Kembali di barakmu, kau tidak bisa melupakan apa yang Sasha katakan. ""[color=YELLOW]Tidak semua seperti yang terlihat.[/color]"""
+Text/210/text,"Kau bertanya pada Russet tentang kentang yang ditolak di hari pertamamu. Jawabannya mengelak. ""[color=VIOLET]Diproses. Sesuai protokol.[/color]"""
+Text/211/text,"Diproses [color=STEEL_BLUE]bagaimana[/color], tepatnya?"
+Text/212/text,Kau begitu bersemangat untuk melayani. Begitu bangga terpilih. Tapi kebanggaan tidak menjelaskan [color=CRIMSON]kentang yang hilang[/color] itu.
+Text/213/text,"Radio mengatakan laporan tentang hilangnya orang ""terus berlanjut"". Itu berarti sudah terjadi sejak lama."
+Text/214/text,"Tidur datang perlahan. Ketika tidur datang, kau bermimpi tentang [wave amp=15 freq=2][color=DARK_VIOLET]sungai ungu[/color][/wave] yang mengalir di bawah pos pemeriksaan."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

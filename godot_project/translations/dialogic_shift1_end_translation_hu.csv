@@ -5,3 +5,27 @@ Text/52/text,Egy apró cetli csúszik ki néhány papír közül az asztalodnál
 Text/53/text,"[color=GOLD]Nem minden olyan, mint amilyennek látszik. Nemzetünk gyökerei korhadtak. [br] Kövesd a nyomot, de vigyázz, nehogy elnémítsanak.[/color] [br] - [color=CHARTREUSE]Egy barát[/color]"
 Text/54/text,Ez a cetli... és ahogy Russet kitért a kérdésem elől [pulse freq=3][color=CRIMSON]visszautasított krumplikról[/color][/pulse]... [br] Valami [color=STEEL_BLUE]furcsa[/color].
 Text/55/text,"Éberen kell maradnom [color=YELLOW]résen[/color]. Több történik itt, mint útlevelek bélyegzése."
+Text/52b/text,Ma reggel még nem volt ott. Valaki tette oda [color=YELLOW]a műszakod alatt[/color].
+Text/53b/text,"[color=GOLD]Kövesd a nyomot, de vigyázz, nehogy elhallgattassanak.[/color]"
+Text/53c/text,"[color=GOLD]Figyeld, ki eszi a [/color][color=DARK_VIOLET]Tartalékot[/color][color=GOLD]. Figyeld, ki utasítja vissza.[/color]"
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]Egy barát[/color]
+Choice/53e/text,Tartsd rejtve a jegyzetet - vizsgálódj csendben
+Choice/53f/text,"Semmisítsd meg a jegyzetet - ez lehet, hogy egy próba"
+Choice/53g/text,Mutasd meg a jegyzetet Russetnek azonnal
+Text/53h/text,"Gondosan összehajtod a jegyzetet, és a zsebedbe csúsztatod. [color=CHARTREUSE]Valaki kapcsolatot keres.[/color]"
+Text/53i/text,"De ki? És miért pont te, a legelső napodon?"
+Text/53j/text,Apró darabokra téped a jegyzetet
+Text/53k/text,"Russet szerint azokat a hajtásokat, akik kérdeznek, „áthelyezik”. Jobb nem kockáztatni."
+Text/53l/text,"Elkapod Russetet, mielőtt elmegy. ""Uram? Ezt találtam a papírjaim között..."""
+Text/53m/text,"Russet kikapja a jegyzetet, elolvassa. Kifejezése megvillan – [color=YELLOW]felismerés volt az?[/color]"
+Text/53n/text,"Propaganda. Lázadók próbálják megrontani az új tiszteket. [color=DARK_ORANGE]Jól tetted, hogy elhoztad nekem.[/color]"
+Text/53o/text,"Zsebre vágja a jegyzetet. Felejtsd el, hogy valaha is láttad. És figyelj mindenkit, aki... [color=CRIMSON]gyanúsan[/color] viselkedik."
+Text/54b/text,"""[color=VIOLET]Feldolgozva. A protokoll szerint.[/color]"" Mit is jelent ez?"
+Text/54c/text,"Az a jegyzet... azt mondta, a gyökerek [color=CRIMSON]rothadtak[/color] lettek."
+Text/54d/text,"De Spud dicsőséges, nem igaz? Ezt mondták nekünk. Amit én is elhittem."
+Text/54e/text,"Előveszed a jegyzetet, újra elolvasod. ""[color=GOLD]Figyeld, ki eszi a Tartalékot. Figyeld, ki utasítja vissza.[/color]"""
+Text/54f/text,Holnap figyelni fogsz. [color=YELLOW]Valaki próbál neked mondani valamit.[/color]
+Text/54g/text,"Russet arca, amikor elolvasta a jegyzetet. Egy pillanatra majdnem... [color=STEEL_BLUE]félt[/color]."
+Text/54h/text,Mi is valójában a [color=DARK_VIOLET]Gyökér Tartalék[/color]? És miért figyelmeztetne valaki téged rá?
+Text/54i/text,"A jegyzet eltűnt, de a szavak megmaradtak. [color=YELLOW]Nem minden az, aminek látszik.[/color]"
+Text/54j/text,Talán okos döntés volt megsemmisíteni. Talán épp most hallgattattad el az egyetlen szövetségesedet.

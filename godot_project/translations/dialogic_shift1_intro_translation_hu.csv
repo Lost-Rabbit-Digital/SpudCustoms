@@ -14,3 +14,5 @@ Text/61/text,"Az első műszaka most kezdődik. Ellenőrizze gondosan az iratoka
 Text/62/text,"Teljesítse kvótáját, kerülje el a büntetéseket. [color=MEDIUM_VIOLET_RED]Dicsőség a Krumplinak![/color]"
 Choice/5d/disabled_text,
 Choice/5c/disabled_text,
+Text/184b/text,Akik túl sokat kérdeznek? [color=CRIMSON]Áthelyezik[/color] őket. Véglegesen.
+Text/62b/text,"És ne feledd, [color=MEDIUM_VIOLET_RED]Dicsőség a Krumplinak![/color]"

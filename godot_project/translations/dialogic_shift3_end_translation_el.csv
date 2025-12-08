@@ -1,0 +1,27 @@
+﻿keys,el
+Text/69_photo1/text,Ξαναβγάζεις τη φωτογραφία. [color=GOLD]Μάρις Πάιπερ[/color]. Τόσο ευγενικό πρόσωπο.
+Text/69_photo2/text,Η σύζυγός της ήταν τόσο απελπισμένη. [color=STEEL_BLUE]Τι της συνέβη;[/color]
+Text/69_photo3/text,Παρατηρείς κάτι στο φόντο της φωτογραφίας - ένα φορτηγό με ένα [color=DARK_VIOLET]μοβ λογότυπο[/color].
+Text/69_photo4/text,Αυτό το σύμβολο... το έχεις δει στις παραδόσεις της καντίνας. [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve.[/color][/wave]
+Text/69/text,Μπορούμε να μιλήσουμε; Κάπου ιδιωτικά; [color=YELLOW]Πολλά μάτια και αυτιά εδώ.[/color]
+Text/6a/text,Συνάντησέ με στην παλιά αποθήκη μετά τη βάρδιά σου. Έχω κάτι που πρέπει να δεις.
+Text/6a_photo1/text,Σάσα... αυτή η φωτογραφία. Η σύζυγος της γυναίκας μου την έδωσε. Την έψαχνε.
+Text/6a_photo2/text,Το πρόσωπο της Σάσα σκυθρωπιάζει. [color=STEEL_BLUE]Άσε με να δω.[/color]
+Text/6a_photo3/text,"Η Σάσα μελετά τη φωτογραφία, η έκφρασή της σκοτεινιάζει. [color=CRIMSON]Αναγνωρίζω αυτό το φορτηγό.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Κράτα αυτή τη φωτογραφία ασφαλή.[/color][/pulse] Μπορεί να είναι σημαντική αργότερα. Εμπιστεύσου με.
+Text/6b/text,"Γίνεσαι φιλικός με συναδέλφους; Θυμήσου, το να γίνεσαι φιλικός μπορεί να οδηγήσει σε... [color=DARK_ORANGE]συμβιβασμένη κρίση[/color]."
+Text/6c/text,Συγκεντρώνω πληροφορίες για τις απορριφθείσες πατάτες. [wave amp=20 freq=3][color=CRIMSON]Δεν πηγαίνουν σε κέντρα απέλασης.[/color][/wave]
+Text/6d/text,[tornado radius=4 freq=2][color=CRIMSON]Πηγαίνουν στις εγκαταστάσεις επεξεργασίας της Root Reserve.[/color][/tornado] Κάθε μία.
+Text/6e/text,Αυτά τα έγγραφα δείχνουν πατάτες να εκφορτώνονται σε μια εγκατάσταση που φέρει το λογότυπο της [color=DARK_VIOLET]Root Reserve[/color].
+Text/6f/text,Νομίζω ότι ξέρω τι συμβαίνει...
+Text/6f2/text,[pulse freq=3][color=CRIMSON]Γίνονται Root Reserve.[/color][/pulse]
+Choice/70/text,"""Αυτό είναι τρελό. Επεξεργάζονται πατάτες σε τροφή;"""
+Choice/71/text,"""Χρειαζόμαστε περισσότερα στοιχεία πριν κάνουμε κατηγορίες."""
+Text/72/text,[color=CRIMSON]Κανιβαλισμός με επιπλέον βήματα.[/color] Αυτό είναι η [wave amp=25 freq=3][color=DARK_VIOLET]Root Reserve[/color][/wave]. Και εμείς βοηθούσαμε στην επιλογή των συστατικών τους.
+Text/73/text,Συλλέγω στοιχεία εδώ και μήνες. Κράτα τα μάτια σου ανοιχτά. Θα δεις ότι έχω δίκιο.
+Text/74/text,Ένας μακρινός συναγερμός ξαφνικά ηχεί
+Text/75/text,Πρέπει να φύγουμε. Κάνουν ελέγχους ασφαλείας αυτή την ώρα. Σκέψου τι σου έδειξα.
+Text/76/text,"Η Σάσα σου σπρώχνει τον φάκελο στα χέρια. ""[color=YELLOW]Κράτα το ασφαλές. Και μην εμπιστεύεσαι κανέναν.[/color]"""
+Text/77/text,Κρύβεις τον φάκελο μέσα στο σακάκι σου. [color=DARK_VIOLET]Root Reserve[/color]. Οι απορρίψεις. Οι χαμένες πατάτες. Όλα συνδέονται με έναν [tornado radius=3 freq=2][color=CRIMSON]φρικιαστικό τρόπο[/color][/tornado].
+Choice/70/disabled_text,
+Choice/71/disabled_text,

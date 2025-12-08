@@ -1,0 +1,43 @@
+﻿keys,nl
+Text/240/text,"Terwijl de avonddienst ten einde loopt, zijn de meeste agenten vertrokken. Alleen jij en een handvol bewakers zijn overgebleven."
+Text/241/text,Een stevige bewaker nadert je post. Mijn naam is Viktor. Ik heb de nachtwacht.
+Text/242/text,"Zijn ogen zijn moe, getekend. Jij bent de nieuwe, toch? Degene die Russet in de gaten houdt?"
+Choice/243/text,Ik probeer gewoon mijn werk te doen. Waarom houdt Russet mij in de gaten?
+Choice/244/text,Is er iets dat ik moet weten?
+Text/245/text,Hij haalt zwaar zijn schouders op. Russet houdt iedereen in de gaten die vragen stelt. Mijn [color=STEEL_BLUE]vrouw stelde eens vragen[/color].
+Text/246/text,Ze is er niet meer om vragen te stellen.
+Text/247/text,Hij kijkt om zich heen en verlaagt dan zijn stem. Wees gewoon... voorzichtig wie je vertrouwt.
+Text/248/text,En wie je [color=CRIMSON]veroordeelt[/color]. Sommigen van ons herinneren zich elk gezicht dat we naar de verwerking stuurden.
+Text/249/text,"Een nerveuze aardappel nadert. De papieren lijken in orde, maar je merkt de [color=CHARTREUSE]subtiele bladspeld[/color] op hun kraag."
+Text/24a/text,"Ze schuiven hun documenten over de balie. Een klein briefje zit erin: ""[color=CHARTREUSE]Sasha stuurde me. Pakket voor het netwerk. Alsjeblieft.[/color]"""
+Text/24b/text,De nieuwe [color=DARK_ORANGE]RealityScan[/color] knippert klaar op je post. Eén scan en het zal vervalste elementen in hun papieren detecteren.
+Choice/24c/text,Doe alsof de scanner defect is en laat ze door
+Choice/24d/text,Gebruik de scanner zoals vereist - je kunt geen risico lopen op ontmaskering
+Choice/24e/text,Geef Viktor een teken om de andere kant op te kijken en laat ze dan passeren
+Text/24f/text,"Je tikt op de scanner, fronst, tikt er nogmaals op. ""Dat vervloekte ding heeft kuren. Ga maar door."""
+Text/250/text,"Opluchting overspoelt hun gezicht. Ze vormen met hun lippen ""[color=CHARTREUSE]Dank je[/color]"" en haasten zich voorbij."
+Text/251/text,"Je vangt zijn blik op en knikt naar de agent. Hij kijkt naar hen, dan naar jou."
+Text/252/text,"Hij draait zich opzettelijk om en bestudeert de muur. ""[color=STEEL_BLUE]De scanner heeft de hele dag al kuren.[/color]"""
+Text/253/text,"De agent glipt erdoorheen. Viktor zegt niets, maar jullie hebben nu een geheim gedeeld."
+Text/254/text,"Je voert de scan uit. De machine [color=RED]loeit[/color]. ""Vervalste documentatie gedetecteerd."""
+Text/255/text,"Afschuw verschijnt op hun gezicht. ""[color=CRIMSON]Je begrijpt niet wat je hebt gedaan...[/color]"""
+Text/256/text,"Hij en andere bewakers komen dichterbij. De agent wordt weggesleept, nog steeds naar jou starend."
+Text/257/text,Sasha vangt je op in de schaduwen. Die agent droeg [color=CHARTREUSE]kopieën van de manifesten[/color] naar onze contacten buiten.
+Text/258/text,Dankzij jou zal de waarheid zich verspreiden buiten de grenzen van Spud. [color=CHARTREUSE]Je hebt echt een verschil gemaakt.[/color]
+Text/259/text,Sasha's ogen worden groot. Viktor hielp? Ik had al zo'n voorgevoel bij hem. Zijn vrouw was...
+Text/25a/text,Ze valt stil. We hebben meer bondgenoten dan ik dacht.
+Text/25b/text,"Sasha vindt je, haar uitdrukking koud. Die agent had een gezin. Drie spruitjes thuis."
+Text/25c/text,Ik begrijp angst. Maar [color=CRIMSON]angst heeft gevolgen[/color]. Ze zullen tegen de ochtend verwerkt zijn.
+Text/25d/text,Ik hoop dat je schone dossier het waard is.
+Text/25e/text,Murphy glipt je kwartieren binnen. Hoorde dat er vanavond wat opwinding was op je post.
+Text/25f/text,[color=CHARTREUSE]Goed. We zitten hier nu samen in.[/color] Geen weg terug.
+Text/260/text,Murphy's gezicht betrekt. Ik... Ik dacht dat je bij ons was. Wat is er gebeurd?
+Text/261/text,De dienst van morgen zal anders zijn. De inzet is nog nooit zo hoog geweest.
+Text/262/text,Maar voor het eerst voel je dat je aan de [color=CHARTREUSE]juiste kant[/color] staat. Wat dat ook kost.
+Text/263/text,Het gezicht van de agent achtervolgt je. Hun familie zal nooit weten waarom ze niet thuiskwamen.
+Text/264/text,[color=STEEL_BLUE]Door jou.[/color]
+Choice/243/disabled_text,
+Choice/244/disabled_text,
+Choice/24c/disabled_text,
+Choice/24d/disabled_text,
+Choice/24e/disabled_text,

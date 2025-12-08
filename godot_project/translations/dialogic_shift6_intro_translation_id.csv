@@ -32,3 +32,32 @@ Choice/c4/disabled_text,
 Choice/c5/disabled_text,
 Choice/cb/disabled_text,
 Choice/cc/disabled_text,
+Text/c7_viktor1/text,Seorang penjaga keamanan kekar mendekat saat Anda istirahat. Wajahnya kuyu.
+Text/c7_viktor2/text,"Hei... Anda salah satu petugas bea cukai, kan? Saya sudah bertanya-tanya tentang istri saya, Elena."
+Text/c7_viktor3/text,Dia melewati pos pemeriksaan ini tiga minggu lalu. [color=STEEL_BLUE]Gagal inspeksi.[/color] Saya belum mendengar kabar darinya sejak itu.
+Choice/c7_viktor4/text,"""Viktor... Saya menemukan sesuatu. Tentang Elena. Anda perlu tahu kebenarannya."""
+Choice/c7_viktor5/text,"""Maaf, Viktor. Saya belum melihat apa pun."" (Berbohong untuk melindunginya)"
+Text/c7_viktor6/text,Anda menunjukkan kepadanya salinan halaman manifes. Wajahnya memucat.
+Text/c7_viktor7/text,[wave amp=25 freq=3]Tangannya gemetar saat membaca.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Diproses... Batch RR-2851...[/color]
+Text/c7_viktor8/text,Suaranya nyaris tak terdengar. [tornado radius=3 freq=2][color=CRIMSON]Mereka... mereka MENGUBAHnya menjadi...[/color][/tornado]
+Text/c7_viktor9/text,Kesedihannya berubah menjadi kemarahan dingin. [pulse freq=2][color=CRIMSON]Idaho akan membayar untuk ini.[/color][/pulse] Aku bersumpah demi kenangannya.
+Text/c7_viktor10/text,Dia mencengkeram bahu Anda. [color=CHARTREUSE]Terima kasih sudah memberitahuku.[/color] Ketika saatnya tiba... Aku akan mengingat ini.
+Text/c7_viktor11/text,Dia mengangguk sedih. [color=STEEL_BLUE]Sudah kuduga.[/color] Tidak ada yang tahu apa-apa. Atau tidak ada yang mau bicara.
+Text/c7_viktor12/text,Jika Anda mendengar sesuatu... [color=YELLOW]tolong.[/color] Dia satu-satunya yang kumiliki.
+Text/d0_qte1/text,"Kemudian di giliran kerja itu, seorang pelancong mendekat dengan dokumen yang memiliki [color=CHARTREUSE]tanda perlawanan samar[/color]."
+Text/d0_qte2/text,[color=DARK_ORANGE]RealityScan[/color] memulai pemindaiannya. [wave amp=15 freq=3][color=RED]Ini akan mendeteksi tanda itu![/color][/wave]
+Text/d0_qte3/text,Anda punya waktu beberapa detik untuk memutuskan. Pemindai sedang memanas...
+Choice/d0_qte4/text,"""Palsukan kerusakan pemindai - cepat!"" (Bantu perlawanan)"
+Choice/d0_qte5/text,"""Biarkan pemindai menyelesaikan pemindaiannya"" (Ikuti protokol)"
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]Anda harus bekerja cepat![/color][/pulse] Picu kerusakan sebelum selesai memindai!
+Text/d0_qte7/text,Anda meraba-raba kabel pemindai. Percikan api beterbangan. Layar berkedip dan mati.
+Text/d0_qte8/text,Russet bergegas mendekat. [color=YELLOW]Apa yang terjadi di sini?[/color]
+Choice/d0_qte9/text,"""Lonjakan daya, Pak. Sistem baru ini rewel."""
+Choice/d0_qte10/text,"""Saya tidak tahu, Pak. Tiba-tiba mati begitu saja."""
+Text/d0_qte11/text,Russet mendengus. [color=STEEL_BLUE]Birokrat memberi kita peralatan yang belum teruji.[/color] Proses mereka secara manual dan tandai untuk inspeksi ulang.
+Text/d0_qte12/text,Russet menatap Anda dengan curiga. [color=YELLOW]Sangat kebetulan.[/color] Saya akan minta bagian pemeliharaan memeriksanya. Jangan biarkan ini terjadi lagi.
+Text/d0_qte13/text,Anggota perlawanan memberi Anda anggukan terima kasih yang sangat kecil saat mereka lewat.
+Text/d0_qte14/text,Pemindai [pulse freq=3][color=RED]BERBUNYI KERAS[/color][/pulse]. Tanda tidak sah terdeteksi!
+Text/d0_qte15/text,Russet muncul seketika. [color=CHARTREUSE]Bagus sekali![/color] Pengkhianat lain tertangkap.
+Text/d0_qte16/text,"Anggota perlawanan diseret pergi, kengerian terpancar dari mata mereka. ""[color=CRIMSON]Tolong, jangan! Saya punya anak![/color]"""
+Text/d0_qte17/text,Kesetiaan Anda [color=DARK_ORANGE]dicatat dalam berkas Anda[/color]. Terus pertahankan.

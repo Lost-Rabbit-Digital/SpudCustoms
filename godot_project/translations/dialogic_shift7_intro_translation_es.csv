@@ -22,3 +22,20 @@ Text/115/text,"Cuando suceda, tendrás que [color=YELLOW]elegir un bando[/color]
 Text/116/text,"Con cada patata que procesas, estás [pulse freq=2][color=CHARTREUSE]ayudando a una revolución[/color][/pulse] o [pulse freq=2][color=CRIMSON]permitiendo un sistema horrible[/color][/pulse]."
 Choice/10f/disabled_text,
 Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha mira por encima del hombro con nerviosismo.[/color] Lo siento, yo... [color=YELLOW]Creo que me están vigilando.[/color]"
+Text/102_foreshadow2/text,Russet ha estado haciendo preguntas. Siguiéndome después de los turnos. [wave amp=15 freq=2][color=YELLOW]Necesito ser más cuidadoso.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, quizás deberías pasar desapercibida por un tiempo. Déjame asumir más riesgo."
+Text/102_foreshadow4/text,"[color=STEEL_BLUE]Ella niega con la cabeza, forzando una sonrisa.[/color] No. Estamos demasiado cerca ahora. Puedo con Russet."
+Text/102_foreshadow5/text,"Además... [color=CHARTREUSE]alguien tiene que manteneros a vosotros, brotes, fuera de problemas.[/color]"
+Text/106_trucks1/text,Pero todavía no sabemos dónde está la instalación de procesamiento principal. Los documentos solo listan códigos de envío.
+Text/106_trucks2/text,He estado vigilando los camiones de [color=DARK_VIOLET]Root Reserve[/color]. Salen cada noche a las 0300. Misma ruta.
+Text/106_trucks3/text,[color=CHARTREUSE]Si pudiéramos seguirlos...[/color] sabríamos exactamente adónde llevan a los rechazados.
+Choice/106_trucks4/text,Yo lo haré. Conozco los horarios de patrulla.
+Choice/106_trucks5/text,Eso suena arriesgado. ¿No puede hacerlo otra persona?
+Text/106_trucks6/text,[color=CHARTREUSE]Los ojos de Sasha se iluminan.[/color] Sabía que tenías raíces de acero. Ten cuidado: patrullan mucho por la noche.
+Text/106_trucks7/text,0300 horas. Te agachas en las sombras mientras los camiones de [color=DARK_VIOLET]Root Reserve[/color] pasan retumbando.
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]¡Mantente oculto! ¡Sigue el convoy![/color][/pulse]
+Text/106_trucks9/text,"Los camiones se detienen en un complejo masivo escondido en el distrito industrial. [color=DARK_VIOLET]Sector 7, Complejo de Almacenes Delta.[/color]"
+Text/106_trucks10/text,Las chimeneas expulsan humo teñido de púrpura. El olor es... [tornado radius=3 freq=2][color=CRIMSON]inconfundible.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]El corazón de Root Reserve.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]La expresión de Sasha parpadea con decepción.[/color] Todos tenemos que asumir riesgos. Encontraré otra manera.

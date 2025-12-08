@@ -21,3 +21,13 @@ Choice/ac/disabled_text,
 Choice/b2/disabled_text,
 Choice/b1/disabled_text,
 Choice/ad/disabled_text,
+Text/b4_viktor1/text,Un gardian de securitate corpolent te prinde de braț în timp ce treci. Fața îi e brăzdată de îngrijorare.
+Text/b4_viktor2/text,"Hei... scuze că te deranjez. Ești unul dintre ofițerii vamali, nu-i așa? Mă numesc [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Am întrebat pe toată lumea despre soția mea, [color=GOLD]Elena[/color]. Elena Petrov. A trecut prin acest punct de control acum trei săptămâni."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]A picat inspecția.[/color] Au spus că va fi procesată și trimisă acasă, dar... n-am mai auzit nimic."
+Text/b4_viktor5/text,Vocea îi tremură. Nimeni nu vrea să-mi spună nimic. Știi unde merg călătorii respinși?
+Choice/b4_viktor6/text,"""Îmi pare rău, Viktor. Nu știu. Dar voi fi atent."""
+Choice/b4_viktor7/text,"""Nu pot discuta detalii de procesare. Protocoale de securitate."""
+Text/b4_viktor8/text,În ochii lui Viktor apare o licărire de speranță. [color=CHARTREUSE]Mulțumesc.[/color] Orice afli... te rog. Ea e tot ce am.
+Text/b4_viktor9/text,"Viktor dă din cap, abătut. [color=STEEL_BLUE]Așa e. Protocoale.[/color] Înțeleg."
+Text/b4_viktor10/text,Dar dacă te răzgândești... [color=YELLOW]Trebuie să știu ce s-a întâmplat cu ea.[/color]

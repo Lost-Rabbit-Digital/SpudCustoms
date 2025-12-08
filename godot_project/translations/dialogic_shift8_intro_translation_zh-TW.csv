@@ -1,0 +1,31 @@
+﻿keys,zh-TW
+Text/117/text,檢查站已轉變為軍事哨站。身著黑色制服的精英衛兵攜帶武器巡邏。
+Text/118/text,我是首席安全官育空，由愛達荷總理從首都派遣而來。
+Text/119/text,情報顯示，[pulse freq=2][color=YELLOW]恐怖襲擊迫在眉睫[/color][/pulse]。「抵抗組織」計劃明天滲透。
+Text/11a/text,所有官員都將接受[wave amp=15 freq=2][color=DARK_ORANGE]忠誠度審查[/color][/wave]。可疑行為意味著拘留和[color=DARK_VIOLET]處理[/color]。
+Text/11b/text,與安全部門[tornado radius=3 freq=2][color=RED]全面配合[/color][/tornado]是強制性的。我對你們每個人的報告都已提交給總長。
+Text/11c/text,羅塞特的目光不舒服地停留在你身上，然後移開。
+Text/11d/text,這是[color=DARK_ORANGE]IdentityScan 5000[/color]。它分析生物特徵以偵測滲透者和同情者。
+Text/11e/text,任何觸發掃描儀的人都將面臨[color=CRIMSON]加強審訊[/color]。務必使用，無一例外。
+Text/11f/text,你見過莎莎嗎？她沒有報到點名。昨晚，[color=CRIMSON]安全部隊進入了她的住所[/color]。
+Text/120/text,他們說她是[pulse freq=2][color=CHARTREUSE]抵抗組織[/color][/pulse]的一員。
+Choice/121/text,「我們不該談論這個。這很危險。」
+Choice/122/text,「我也為她擔心。這不對勁。」
+Text/123/text,你說得對。但要小心。他們正在尋找與她有關聯的人。
+Text/124/text,所以你們很親近？小心點。他們可能也在監視你。
+Text/125/text,那名官員塞給你一張紙條：「[color=YELLOW]清理你的崗位上所有可疑的東西。[/color]」
+Text/126/text,你在這個檢查站待了相當長一段時間了。有趣的績效記錄。
+Text/127/text,你經常被看到與莎莎警官在一起，她現在因[wave amp=20 freq=3][color=CRIMSON]叛國罪[/color][/wave]而接受調查。
+Text/128/text,總長向前傾身。你有什麼想告訴我關於她的活動嗎？
+Choice/129/text,「莎莎和我只是同事。我對她工作以外的事情一無所知。」
+Choice/12a/text,「我一直在收集她可疑活動的證據，以便稍後報告。」
+Text/12b/text,多名證人有不同說法。然而，沒有確鑿證據，我不能拘留你。[color=YELLOW]暫時還不能。[/color]
+Text/12c/text,你將受到[color=CRIMSON]嚴密監視[/color]。一旦出錯，你就會[color=DARK_VIOLET]去陪莎莎[/color]。
+Text/12d/text,真巧。然而你直到現在都沒有提交任何報告。
+Text/12e/text,你將提供一份完整的陳述。如果你的情報證明有價值，也許我們會忽略你延遲報告的問題。
+Text/12f/text,我今天會[color=CRIMSON]監視你的工作[/color]。每位旅客都必須進行身份掃描。[color=RED]無一例外[/color]。
+Text/130/text,莎莎被捕了。抵抗計畫[color=CRIMSON]洩漏了[/color]。由於維安高度戒備，他們的機會渺茫。
+Choice/121/disabled_text,
+Choice/122/disabled_text,
+Choice/129/disabled_text,
+Choice/12a/disabled_text,

@@ -17,3 +17,6 @@ Text/a4/text,Questo dimostra tutto. La resistenza farà delle copie. [tornado ra
 Text/a5/text,"Hai oltrepassato un limite. [wave amp=20 freq=3][color=YELLOW]Non c'è ritorno.[/color][/wave] Quando la verità si diffonderà, Spud verrà trasformato."
 Choice/9c/disabled_text,
 Choice/9d/disabled_text,
+Text/9a_viktor1/text,Scansionate i nomi sul manifesto... e uno spicca. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,Quel nome... l'avete già sentito. La guardia di sicurezza Viktor ha menzionato che sua moglie era scomparsa.
+Text/9a_viktor3/text,"""[color=CRIMSON]Stato: Elaborato. Lotto RR-2851.[/color]"" Datato due settimane fa."

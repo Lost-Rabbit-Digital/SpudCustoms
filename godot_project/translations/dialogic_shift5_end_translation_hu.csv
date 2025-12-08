@@ -17,3 +17,6 @@ Text/a4/text,Ez mindent bizonyít. Az ellenállás másolatokat készít. [torna
 Text/a5/text,"Átléptél egy vonalat. [wave amp=20 freq=3][color=YELLOW]Nincs visszaút.[/color][/wave] Amikor az igazság szétterjedik, Spud át fog alakulni."
 Choice/9c/disabled_text,
 Choice/9d/disabled_text,
+Text/9a_viktor1/text,Átfutod a neveket a manifeszten... és egy név kiemelkedik. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,"Ez a név... hallottad már. Viktor biztonsági őr említette, hogy a felesége eltűnt."
+Text/9a_viktor3/text,"""[color=CRIMSON]Státusz: Feldolgozva. Tétel RR-2851.[/color]"" Két hete kelt."

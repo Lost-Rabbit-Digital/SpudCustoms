@@ -53,3 +53,40 @@ Choice/f3/disabled_text,
 Choice/f2/disabled_text,
 Choice/e0/disabled_text,
 Choice/df/disabled_text,
+Text/d2b/text,Înainte să începem... Am o mărturisire de făcut.
+Text/d2c/text,"Bilețelul ăla pe care l-ai găsit în prima zi? ""[color=GOLD]Un prieten[/color]""?"
+Text/d2d/text,Sasha zâmbește. Văd că l-ai păstrat. Inteligent. Știam că am ales lăstarul potrivit.
+Text/d2e/text,"Am urmărit ofițeri noi de luni de zile, căutând pe cineva cu [color=CHARTREUSE]ochi întrebători[/color]. Cineva care ar putea vedea dincolo de minciuni."
+Text/d2f/text,Expresia Sashei este complicată. I l-ai arătat lui Russet. A trebuit să mă ascund săptămâni întregi după asta.
+Text/d2g/text,Dar iată-te aici oricum. Asta îmi spune ceva despre conștiința ta.
+Text/d2h/text,L-ai distrus. Nu te învinuiesc - era riscant să-l păstrezi.
+Text/d2i/text,"Dar cuvintele și-au găsit oricum drumul în mintea ta, nu-i așa?"
+Text/d2j/text,"[color=CHARTREUSE]Eu sunt ""Un prieten.""[/color] Și acum știi de ce."
+Text/d2k/text,Sasha întinde documente capturate pe masă. Manifeste de procesare din ultima lună.
+Text/d2l/text,"Scanezi numele, și sângele îți îngheață."
+Text/d2m/text,Iată-l. [color=GOLD]Maris Piper[/color]. Femeia din fotografie.
+Text/d2n/text,"""[color=CRIMSON]Status: Procesat. Lot RR-2847.[/color]"" Datat la trei zile după ce soțul ei a implorat ajutorul tău."
+Text/d2o/text,Simți fotografia în buzunar. [color=STEEL_BLUE]Ea a dispărut. Și nu ai putut s-o salvezi.[/color]
+Text/d2p/text,Dar poate... [color=CHARTREUSE]poate poți salva totuși pe alții[/color].
+Text/d2q/text,Murphy iese din umbră. Hei. Mă bucur că ai reușit.
+Text/d2r/text,Murphy ridică formularul șifonat RR-UTIL. Vărul meu e și el pe lista aia. [color=CHARTREUSE]Facem asta împreună.[/color]
+Text/ff2/text,[color=STEEL_BLUE]Ea își păstrează distanța în timp ce mergi.[/color] Apreciez că nu ne stai în cale. E... ceva.
+Text/ff3/text,"[color=STEEL_BLUE]Ea merge în tăcere, cu brațele încrucișate.[/color] Sper să găsești orice certitudine cauți. Restul dintre noi nu-și permit să aștepte."
+Text/100_viktor1/text,"Pe drumul de întoarcere, îl găsești pe Viktor singur pe acoperișul punctului de control, privind cerul nopții."
+Text/100_viktor2/text,Viktor ține un mic
+Text/100_viktor3/text,"Ea spunea că, oricât de întunecate ar deveni lucrurile, stelele tot ar fi acolo. [color=STEEL_BLUE]Constante. Frumoase.[/color]"
+Text/100_viktor4/text,"Se întoarce spre tine, cu ochii sclipind. [wave amp=15 freq=2]Mă tot gândesc... a suferit?[/wave] Știa ce se întâmplă?"
+Text/100_viktor5/text,Vocea lui Viktor se frânge. M-a întrebat odată dacă am pus vreodată la îndoială refuzurile. I-am spus [color=CRIMSON]să aibă încredere în sistem[/color].
+Text/100_viktor6/text,[tornado radius=3 freq=2][color=CRIMSON]Mi-am trimis propria soție la cuvele de procesare fără să știu.[/color][/tornado]
+Choice/100_viktor_choice1/text,N-aveai cum să știi. Niciunul dintre noi nu știa.
+Choice/100_viktor_choice2/text,"Elena ar vrea să lupți acum, nu să te îneci în vină."
+Choice/100_viktor_choice3/text,Nu știu ce să spun. Îmi pare rău.
+Text/100_viktor7/text,El clatină încet din cap. [color=STEEL_BLUE]Ignoranța nu e inocență. Trebuia să întreb. Trebuia să ascult.[/color]
+Text/100_viktor8/text,Viktor pune cu grijă fotografia la loc. [color=CHARTREUSE]Dar acum știu. Și a ști înseamnă că trebuie să acționez.[/color]
+Text/100_viktor9/text,"Viktor se îndreaptă, un foc rece reaprins în ochii lui. [color=CHARTREUSE]Ai dreptate.[/color] Ea era mai puternică decât mine. Mai curajoasă."
+Text/100_viktor10/text,El își strânge pumnul. [color=CHARTREUSE]Când va veni timpul
+Text/100_viktor11/text,[pulse freq=2][color=CRIMSON]Și Idaho va plăti pentru fiecare viață pe care a consumat-o.[/color][/pulse]
+Text/100_viktor12/text,Viktor schițează un trist
+Text/100_viktor13/text,El privește înapoi la stele. [color=STEEL_BLUE]Elenei i-ar fi plăcut de tine.[/color]
+Text/100_viktor14/text,"El se întoarce să plece, apoi se oprește. [color=CHARTREUSE]Când rezistența va acționa... voi fi pregătit.[/color]"
+Text/100_viktor15/text,Pentru Elena. Pentru toți. [pulse freq=2][color=CHARTREUSE]Gărzile mă vor urma când le voi spune adevărul.[/color][/pulse]

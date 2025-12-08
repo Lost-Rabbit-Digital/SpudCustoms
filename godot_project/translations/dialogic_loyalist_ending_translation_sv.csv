@@ -1,0 +1,79 @@
+﻿keys,sv
+Text/299_suppress1/text,Kaos bryter ut när motståndsrörelsens attack börjar. Explosioner skakar kontrollstationen.
+Text/299_suppress2/text,Du kunde fly. Du kunde gömma dig. Istället [color=DARK_ORANGE]väljer du sida[/color].
+Text/299_suppress3/text,Russet griper din arm. [pulse freq=2][color=YELLOW]NU ÄR DIN CHANS![/color][/pulse] Bevisa din lojalitet!
+Text/299_suppress4/text,Motståndsrörelsen försöker bryta igenom den östra porten! [color=CRIMSON]Stoppa dem![/color]
+Text/299_suppress5/text,Du griper ditt vapen. Det här kan vara människor du känner. Människor du har hjälpt.
+Text/299_suppress6/text,Men överlevnad har ett pris. [color=DARK_ORANGE]Du har gjort ditt val.[/color]
+Text/299_suppress7/text,[pulse freq=3][color=CRIMSON]Kämpa för staten![/color][/pulse] Slå ner motståndsrörelsens attack!
+Text/299_suppress8/text,När röken skingras ligger kroppar strödda på marken. Vissa bär motståndsmärken.
+Text/299_suppress9/text,[color=STEEL_BLUE]Du känner igen ansikten bland de fallna.[/color]
+Text/299_suppress10/text,Murphy ligger bland de döda. Hans ögon stirrar ut i tomma intet. Tommys foto kramat i hans hand.
+Text/299_suppress11/text,[color=STEEL_BLUE]Han dog kämpande för något han trodde på. Du hjälpte till att döda det.[/color]
+Text/300/text,"Motståndsrörelsens attack misslyckades. Kontrollstationen står kvar, starkare än någonsin. Och du stannar på din post."
+Text/301/text,[pulse freq=2][color=GOLD]ALLA HYLLAR PREMIÄRMINISTER IDAHO![/color][/pulse] Försvarare av Spud! Besegrare av förrädare!
+Text/302/text,"En massiv potatis i utsmyckad regalier stiger ner från ett pansarfordon, flankerad av elitvakter."
+Text/303/text,"Idaho granskar kontrollstationen med kalla, beräknande ögon."
+Text/304/text,Russet skyndar fram och bugar djupt. Premiärminister! Vi är hedrade av er närvaro!
+Text/305/text,Förrädarna har [color=DARK_VIOLET]bearbetats[/color] som ni beordrade. Produktionen är upp 40% detta kvartal!
+Text/306/text,Och detta är officeren som förblev lojal under upproret?
+Text/307/text,"Ja, Premiärminister. Osviklig hängivenhet. Rapporterade misstänkta aktiviteter. En mönstermedborgare."
+Text/308/text,Idaho kliver fram och fäster en medalj på ditt bröst - [color=GOLD]Den Gyllene Knölen[/color].
+Text/309/text,För tjänst utöver det vanliga. Du har bevisat att [color=DARK_ORANGE]lojalitet mot Spud[/color] alltid kommer att belönas.
+Choice/30a/text,"Tack, Premiärminister. Ära åt Spud."
+Choice/30b/text,"Jag gjorde bara min plikt, sir. (Tvingar fram ett leende)"
+Text/30c/text,Idahos leende når inte hans ögon. Ja. Det gjorde du verkligen.
+Text/30d/text,Idaho studerar dig länge. Plikt. [color=STEEL_BLUE]Ett så enkelt ord för så komplicerade handlingar.[/color]
+Text/30e/text,"Jag undrar vilka [color=CRIMSON]mardrömmar[/color] som besöker dem som gör sin ""plikt"" så väl."
+Text/30f/text,"En fest hålls till segerns ära. Borden dignar av mat, inklusive generösa portioner av [color=DARK_VIOLET]Rotreserven[/color]."
+Text/310/text,"Russet höjer ett glas med tjock, lila vätska. En skål! För [color=CRIMSON]förrädarna som när oss[/color]!"
+Text/311/text,Rummet skrattar. Några nervöst. De flesta genuint.
+Text/312/text,"Han skjuter en tallrik mot dig. Prova den nya satsen. [color=DARK_VIOLET]""Motståndsblandning.""[/color] Sashas bidrag till Spuds framtid."
+Text/313/text,Din mage vänder sig. Maten på tallriken. [color=CRIMSON]Sasha.[/color] Murphys kusin. Hustrun från fotot.
+Text/314/text,[tornado radius=3 freq=2][color=CRIMSON]Alla av dem.[/color][/tornado]
+Choice/315/text,Tvinga dig att äta – behåll din täckmantel
+Choice/316/text,Skjut bort tallriken – du kan inte göra det här
+Text/317/text,Du för gaffeln till dina läppar. Blundar. [color=STEEL_BLUE]Tugga. Svälj. Tänk inte.[/color]
+Text/318/text,"Russet nickar gillande. ""Bra. [color=DARK_ORANGE]Du kommer att gå långt.[/color]"""
+Text/319/text,"Du skjuter bort tallriken. ""Jag mår inte bra. Dagens spänning..."""
+Text/31a/text,"Russets ögon smalnar av kort, mjuknar sedan. ""Förstås. En så [color=YELLOW]känslig konstitution[/color]."""
+Text/31b/text,Vila dig. Imorgon har vi [color=CRIMSON]mer bearbetning[/color] att övervaka.
+Text/31c/text,Du återvänder till dina kvarter. Medaljen ligger tungt på ditt bröst.
+Text/31d/text,Du tar fram fotot på den saknade hustrun. Hennes fru är förmodligen i samma sats som hon nu.
+Text/31e/text,Du lovade att hitta henne. [color=STEEL_BLUE]Du hittade henne.[/color] Bara inte på det sätt som någon av er hoppades.
+Text/31f/text,Murphy. Din vän. Den som litade på dig. Han var med i motståndet.
+Text/320/text,[color=CRIMSON]Var.[/color]
+Text/321/text,Du stirrar på din spegelbild i fönstret. Medaljen glimmar. [color=DARK_ORANGE]Gyllene Knöl[/color]. Spuds hjälte.
+Text/322/text,[color=STEEL_BLUE]Monster i potatisskal.[/color]
+Text/323/text,Den natten drömmer du om Sasha. Hon anklagar inte. Rasar inte. Det skulle vara lättare.
+Text/324/text,"Hon bara tittar på dig med de ögonen. [color=CHARTREUSE]Rötterna växer djupt[/color], viskar hon."
+Text/325/text,Även de [color=STEEL_BLUE]ruttna[/color].
+Text/326/text,Månader går. Du befordras. Regional inspektör för gränssäkerhet. Russets högra hand.
+Text/327/text,Du övervakar fler avslag än någon annan i Spuds historia. Produktionen av [color=DARK_VIOLET]Rotreserven[/color] skjuter i höjden.
+Text/328/text,Ditt kontor är bekvämt. Dina ransoner är generösa. Din familj är skyddad.
+Text/329/text,Du har allt du blev lovad.
+Text/32a/text,Allt utom [color=STEEL_BLUE]sömn[/color]. Utom [color=STEEL_BLUE]frid[/color]. Utom förmågan att se dig själv i spegeln.
+Text/32b/text,En dag lägger du märke till det. Ett [color=GOLD]gult potatisemblem[/color] inristat i en vägg. Sedan ett till. Sedan dussintals.
+Text/32c/text,En ny motståndsrörelse bildas. Tystare. Försiktigare. Lär sig av Sashas misstag.
+Choice/32d/text,Rapportera symbolerna till säkerhetstjänsten omedelbart
+Choice/32e/text,Låtsas att du inte såg dem
+Choice/32f/text,Lämna ditt eget märke – ett enda gult löv
+Text/330/text,Du lämnar in rapporten. Ytterligare en grupp misstänkta grips. Ännu en befordran.
+Text/331/text,Cykeln fortsätter. [color=CRIMSON]Du har blivit maskinen.[/color]
+Text/332/text,Du går förbi. Säger inget. Det är inte mycket. [color=STEEL_BLUE]Det är nästan ingenting.[/color]
+Text/333/text,Men det är första gången du valt att inte agera mot dem.
+Text/334/text,"Kanske är det något. Kanske är det [color=YELLOW]för lite, för sent[/color]."
+Text/335/text,"När ingen ser, ristar du in ett litet [color=GOLD]gult löv[/color] bredvid emblemen."
+Text/336/text,En enda trotsig handling. År för sent. Men [color=CHARTREUSE]något[/color].
+Text/337/text,"Sashas röst ekar i ditt minne: ""[color=CHARTREUSE]Rötterna växer djupt.[/color]"""
+Text/338/text,Kanske djupt nog att [color=CHARTREUSE]nå även dig[/color]. En dag.
+Text/339/text,Nationen Spud består. [color=DARK_VIOLET]Rotreserven[/color] flödar. Konsumtionscykeln fortsätter.
+Text/33a/text,"Men någonstans, i väggens sprickor, [color=CHARTREUSE]växer något nytt[/color]."
+Text/33b/text,Om du kommer att vara en del av det... [color=YELLOW]den historien är ännu oskriven[/color].
+Choice/30a/disabled_text,
+Choice/30b/disabled_text,
+Choice/315/disabled_text,
+Choice/316/disabled_text,
+Choice/32d/disabled_text,
+Choice/32e/disabled_text,
+Choice/32f/disabled_text,

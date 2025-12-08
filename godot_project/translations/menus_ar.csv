@@ -1,0 +1,163 @@
+﻿keys,ar
+main_menu_feedback,ملاحظات وأخطاء
+main_menu_version,إصدار 1.2.0
+main_menu_new_game,لعبة جديدة
+main_menu_continue,متابعة
+main_menu_level_select,اختيار المستوى
+main_menu_score_attack,تحدي النقاط
+main_menu_options,خيارات
+main_menu_credits,اعتمادات
+main_menu_exit,خروج
+select_language,اللغة
+social_discord_tooltip,انضم إلى ديسكورد!
+social_steam_tooltip,زرنا على ستيم
+social_twitch_tooltip,دمج تويتش
+twitch_status_disabled,معطل
+twitch_status_no_viewers,لا يوجد مشاهدون في الانتظار
+twitch_status_ready,{count} مشاهدون جاهزون
+twitch_connection_disabled,معطل
+twitch_connection_disconnected,غير متصل
+twitch_connection_connected,متصل
+twitch_connection_connecting,جارٍ الاتصال...
+options_menu_title,خيارات
+options_difficulty,صعوبة
+options_difficulty_easy,سهل
+options_difficulty_normal,عادي
+options_difficulty_expert,احترافي
+options_music_volume,حجم الموسيقى
+options_sfx_volume,حجم المؤثرات الصوتية
+options_camera_shake,اهتزاز الكاميرا
+options_back,عودة
+paused_menu_title,إيقاف مؤقت
+shift_summary_title,ملخص المناوبة
+shift_summary_continue,متابعة
+shift_summary_restart,إعادة تشغيل
+shift_summary_main_menu,القائمة الرئيسية
+shift_summary_submit_score,إرسال النتيجة
+shift_summary_runner_stats,إحصائيات الهاربين
+shift_summary_document_stats,إحصائيات الوثائق
+shift_summary_performance,الأداء
+shift_summary_bonuses,المكافآت
+time_format,{minutes}د {seconds}ث
+shift_complete_success,المناوبة {shift} مكتملة\nنجاح!
+shift_complete_failure,المناوبة {shift} مكتملة\n{failure}
+strike_limit_reached,تم بلوغ حد المخالفات!
+quota_not_met,لم يتم تحقيق الحصة!
+shift_summary_title_with_difficulty,ملخص المناوبة\n{difficulty}
+runner_stats_template,\nإحصائيات الهاربين\nمحاولات الهرب: {runner_attempts}\nالصواريخ المطلقة: {fired}\nالهاربون المصابون: {hit}\nإصابات مثالية: {perfect}\nمعدل الإصابة: {rate}%
+document_stats_template,\nإحصائيات الوثائق\nالوثائق المختومة: {stamped}\nالبطاطس الموافق عليها: {approved}\nالبطاطس المرفوضة: {rejected}\nأختام مثالية: {perfect_stamps}
+bonus_stats_template,المكافآت\nمكافأة سرعة المعالجة: {processing_speed_bonus}\nمكافأة دقة الختم: {accuracy}\nمكافأة الإصابات المثالية: {perfect_hit_bonus}\nمكافأة إجمالي النقاط: {total_score_bonus}
+performance_stats_template,\nالأداء\nالوقت المستغرق: {time_taken}\nالنقاط المتوقعة: {expected_score}\nإجمالي النقاط: {score}\nنسبة النقاط الزائدة: {percent}%\nتقييم الأداء:\n{rating}
+performance_exceptional,استثنائي!
+performance_excellent,ممتاز!
+performance_good,جيد
+performance_needs_improvement,يحتاج إلى تحسين
+performance_poor,ضعيف
+global_leaderboard_title,لوحة المتصدرين العالمية\n- {difficulty}
+getting_leaderboard_scores,يتم جلب نتائج لوحة المتصدرين...
+reset_game_label,إعادة تعيين اللعبة :
+reset_game_button,إعادة تعيين
+mute_label,كتم الصوت
+fullscreen_label,وضع ملء الشاشة :
+resolution_label,الدقة :
+antialiasing_label,منع التعرج :
+screenshake_label,اهتزاز الشاشة :
+mouse_sens_label,حساسية الماوس :
+Loading…,جارٍ التحميل...
+You lose.,لقد خسرت.
+You won!,لقد فزت!
+Thanks for playing!,شكراً للعبك!
+Please Confirm...,يرجى التأكيد...
+Go back to main menu?,هل تريد العودة إلى القائمة الرئيسية؟
+Quit the game?,هل تريد الخروج من اللعبة؟
+Cancel,إلغاء
+OK,OK
+Controls,عناصر التحكم
+Mouse Sensitivity :,Mouse Sensitivity :
+Actions & Inputs,الإجراءات والمدخلات
+Add,Add
+Remove,إزالة
+Assign Key for {action},تعيين مفتاح لـ {action}
+Listening for input...,بانتظار الإدخال...
+Press again to confirm...,اضغط مرة أخرى للتأكيد...
+Focus here to assign inputs.,ركّز هنا لتعيين المدخلات.
+Already Assigned,مُعيّن بالفعل
+{key} already assigned to {action}.,{key} مُعيّن بالفعل لـ {action}.
+Remove Key for {action},إزالة المفتاح لـ {action}
+Are you sure you want to remove {key} from {action}?,هل أنت متأكد أنك تريد إزالة {key} من {action}؟
+Reset,إعادة تعيين
+Audio,الصوت
+Master :,Master :
+Music :,Music :
+SFX :,SFX :
+Ambient :,Ambient :
+Mute :,Mute :
+Video,الفيديو
+Fullscreen :,Fullscreen :
+Resolution :,Resolution :
+Anti-Aliasing :,Anti-Aliasing :
+Disabled (Fastest),معطل (الأسرع)
+8x (Slowest),8x (الأبطأ)
+Camera Shake :,Camera Shake :
+Normal,عادي
+Reduced,مخفف
+Minimal,الحد الأدنى
+None,لا شيء
+Game,اللعبة
+Reset Game :,Reset Game :
+Do you want to reset your game data?,هل تريد إعادة تعيين بيانات لعبتك؟
+Back,رجوع
+TAKE THEM!,خذوهم!
+"Take your documents, please.",تفضل مستنداتك.
+Continue,متابعة
+Main Menu,القائمة الرئيسية
+Submit Score,إرسال النتيجة
+Restart,إعادة تشغيل
+SHIFT SUMMARY,ملخص المناوبة
+Easy,سهل
+Expert,خبير
+Primary,أساسي
+Secondary,ثانوي
+Primary Interaction,التفاعل الأساسي
+Secondary Interaction,التفاعل الثانوي
+Cancel Interaction,إلغاء التفاعل
+Escape,هروب
+Dialogic Default Action,الإجراء الافتراضي للحوار
+Enter,إدخال
+Left Mouse Button,زر الفأرة الأيسر
+Right Mouse Button,زر الفأرة الأيمن
+Start New Game,بدء لعبة جديدة
+Starting a new game will reset your progress. Are you sure you want to continue?,بدء لعبة جديدة سيؤدي إلى إعادة تعيين تقدمك. هل أنت متأكد أنك تريد المتابعة؟
+"Yes, Start New Game",نعم، ابدأ لعبة جديدة
+Skip,تخطي
+History,السجل
+Return,عودة
+Restart the game?,هل تريد إعادة تشغيل اللعبة؟
+help_menu_button,مساعدة
+help_menu_title,كيفية اللعب
+help_tab_basics,الأساسيات
+help_tab_gameplay,أسلوب اللعب
+help_tab_minigames,الألعاب المصغرة
+help_basics_intro,[b]مرحباً بك في جمارك البطاطا![/b]\n\nأنت ضابط حدود في نقطة تفتيش جمارك البطاطا. مهمتك هي فحص المستندات، الموافقة على المهاجرين أو رفضهم، وإيقاف أولئك الذين يحاولون عبور الحدود بشكل غير قانوني.
+help_basics_gate,[b]فتح البوابة[/b]\nانقر على زر البوابة أو استخدم مكبر الصوت لاستدعاء البطاطا التالية إلى كشكك.
+help_basics_documents,[b]فحص المستندات[/b]\nاسحب المستندات إلى مكتبك لفحصها. تحقق من الأسماء والتواريخ والتفاصيل الأخرى بمقارنتها بقواعد الهجرة للوردية الحالية.
+help_basics_stamping,"[b]ختم المستندات[/b]\nاستخدم ختم ""موافق عليه"" (الأخضر) للسماح للمهاجرين بالمرور، أو ختم ""مرفوض"" (الأحمر) لرفضهم. دقة الختم تؤثر على نتيجتك!"
+help_basics_runners,[b]هاربو الحدود[/b]\nستحاول بعض البطاطا الهروب من نقطة التفتيش! انقر لإطلاق الصواريخ وإيقافهم. التوقيت المثالي يمنح نقاطاً إضافية.
+help_basics_xray,[b]ماسح الأشعة السينية[/b]\nبدءاً من الوردية الثالثة، استخدم جهاز الأشعة السينية لفحص البطاطا بحثاً عن الممنوعات المخفية.
+help_gameplay_quota,[b]تحقيق الحصة[/b]\nلكل وردية حصة من البطاطا يجب عليك معالجتها. إذا فشلت في تحقيق الحصة، سيتم طردك!
+help_gameplay_strikes,[b]المخالفات[/b]\nارتكاب الأخطاء (الموافقات/الرفوضات الخاطئة، إفلات الهاربين) يمنحك مخالفات. الكثير من المخالفات تعني انتهاء اللعبة!
+help_gameplay_rules,[b]قواعد الهجرة[/b]\nتحقق من لوحة الإعلانات للاطلاع على القواعد الحالية. تتغير القواعد في كل وردية - مناطق محظورة، مستندات مطلوبة، وشروط خاصة.
+help_gameplay_scoring,[b]التسجيل[/b]\nاكسب نقاطاً مقابل القرارات الصحيحة، الأختام المثالية، وإيقاف الهاربين. تُمنح مكافآت للسرعة والدقة!
+help_gameplay_difficulty,[b]مستويات الصعوبة[/b]\nسهل: توقيت أكثر تساهلاً، قواعد أقل. عادي: تجربة قياسية. خبير: توقيت صارم، قواعد معقدة، نقاط أعلى.
+help_minigames_intro,[b]الألعاب المصغرة[/b]\nخلال ورديات عملك، ستصادف ألعاباً مصغرة يمكن أن تكسبك نقاطاً إضافية. أكملها للحصول على مكافآت أو تخطها بدون عقوبة.
+help_minigames_document_scanner,[b]ماسح المستندات[/b] (الوردية 1+)\nاستخدم ضوء الأشعة فوق البنفسجية للعثور على العناصر المخفية في المستندات. انقر لتحديد العلامات المائية، الأختام، والرموز. ابحث عن جميع العناصر قبل نفاد الوقت!
+help_minigames_stamp_sorting,"[b]فرز الطوابع[/b] (وردية 2+)\nقم بفرز الطوابع المتساقطة في الصناديق الصحيحة. الطوابع الخضراء تذهب إلى ""موافق عليه""، والطوابع الحمراء تذهب إلى ""مرفوض"". افرز بسرعة لكسب نقاط إضافية!"
+help_minigames_fingerprint_match,[b]مطابقة البصمات[/b] (وردية 3+)\nطابق البصمات من الشبكة مع النمط المرجعي. انقر على البصمات المتطابقة للتحقق من الهوية. تتطلب ملاحظة دقيقة!
+help_minigames_code_breaker,[b]كسر الشفرة[/b] (وردية 4+)\nاكسر الشفرة السرية! خمن التركيبة المكونة من 4 أرقام. الأخضر يعني الموضع الصحيح، والأصفر يعني الموضع الخاطئ. محاولات محدودة!
+help_minigames_border_chase,[b]مطاردة الحدود[/b] (وردية 5+)\nبضائع مهربة على الناقل! انقر على العناصر الحمراء لمصادرتها. دع العناصر الخضراء تمر. ردود الفعل السريعة تكسب المزيد من النقاط!
+help_tab_lore,تاريخ
+help_lore_world_intro,[b]عالم سبود[/b]\n\nمرحبًا بك في أرض بنت فيها البطاطا حضارتها الخاصة. في هذا العالم، تمشي الدرنات وتتحدث، وقد شكلت أمتها الخاصة بقوانين وحدود وبيروقراطية.
+help_lore_nation,"[b]أمة سبود[/b]\n\nسبود أمة فخورة تعد بالازدهار لجميع البطاطا. محمية بسور سبود العظيم، تحافظ الأمة على ضوابط حدودية صارمة لضمان دخول الدرنات الجديرة فقط.\n\nتشجع الحكومة الوحدة والطاعة، وغالبًا ما يُسمع المواطنون الوطنيون يعلنون: ""المجد لسبود!"""
+help_lore_your_role,[b]دورك[/b]\n\nلقد تم اختيارك لدور حاسم في حماية الحدود. بصفتك ضابط جمارك، تعمل تحت المراقبة اليقظة للمشرف راسيت.\n\nرفاهيتك تعتمد على أدائك. حقق حصصك، اتبع القواعد، وتذكر: الأمة تعتمد عليك.
+help_lore_border,[b]السور العظيم[/b]\n\nسور سبود العظيم يحمي الأمة من الغرباء. عند نقاط تفتيش مختلفة على طول السور، يضمن ضباط مثلك أن يدخل الجديرون فقط.\n\nأولئك الذين يحاولون عبور الحدود دون وثائق مناسبة يواجهون عواقب فورية.
+help_lore_secrets,[b]احتياطي الجذور[/b]\n\nالبطاطا المرفوضة يتم... معالجتها. وفقًا للبروتوكول. احتياطي الجذور الغامض يتولى جميع التفاصيل.\n\nمن الأفضل عدم طرح الكثير من الأسئلة. ركز على واجباتك. لا شيء أكثر.

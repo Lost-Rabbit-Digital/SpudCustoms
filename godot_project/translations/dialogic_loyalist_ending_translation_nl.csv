@@ -1,0 +1,79 @@
+﻿keys,nl
+Text/299_suppress1/text,Chaos breekt uit terwijl de aanval van het verzet begint. Explosies schudden het controlepunt.
+Text/299_suppress2/text,Je zou kunnen rennen. Je zou kunnen schuilen. In plaats daarvan [color=DARK_ORANGE]kies je jouw kant[/color].
+Text/299_suppress3/text,Russet pakt je arm. [pulse freq=2][color=YELLOW]DIT IS JE KANS![/color][/pulse] Bewijs je loyaliteit!
+Text/299_suppress4/text,Het verzet probeert de oostpoort te doorbreken! [color=CRIMSON]Houd ze tegen![/color]
+Text/299_suppress5/text,Je klemt je wapen vast. Dit kunnen mensen zijn die je kent. Mensen die je hebt geholpen.
+Text/299_suppress6/text,Maar overleven heeft een prijs. [color=DARK_ORANGE]Je hebt je keuze gemaakt.[/color]
+Text/299_suppress7/text,[pulse freq=3][color=CRIMSON]Vecht voor de staat![/color][/pulse] Onderdruk de aanval van het verzet!
+Text/299_suppress8/text,"Wanneer de rook optrekt, liggen er lichamen op de grond. Sommigen dragen verzetsinsignes."
+Text/299_suppress9/text,[color=STEEL_BLUE]Je herkent gezichten onder de gevallenen.[/color]
+Text/299_suppress10/text,Murphy ligt tussen de doden. Zijn ogen staren in het niets. Tommy's foto vastgeklemd in zijn hand.
+Text/299_suppress11/text,[color=STEEL_BLUE]Hij stierf vechtend voor iets waarin hij geloofde. Jij hielp het te doden.[/color]
+Text/300/text,"De aanval van het verzet mislukte. Het controlepunt staat, sterker dan ooit. En jij blijft op je post."
+Text/301/text,[pulse freq=2][color=GOLD]LANG LEVE EERSTE MINISTER IDAHO![/color][/pulse] Verdediger van Spud! Overwinnaar van verraders!
+Text/302/text,"Een enorme aardappel in sierlijke regalia daalt af uit een gepantserd voertuig, geflankeerd door elitebewakers."
+Text/303/text,"Idaho overziet het controlepunt met koude, berekenende ogen."
+Text/304/text,Russet schuifelt naar voren en buigt diep. Eerste Minister! Wij zijn vereerd met uw aanwezigheid!
+Text/305/text,De verraders zijn [color=DARK_VIOLET]verwerkt[/color] zoals u beval. De productie is dit kwartaal met 40% gestegen!
+Text/306/text,En dit is de officier die loyaal bleef tijdens de opstand?
+Text/307/text,"Ja, Eerste Minister. Onwankelbare toewijding. Verdachte activiteiten gemeld. Een voorbeeldige burger."
+Text/308/text,Idaho stapt naar voren en speldt een medaille op je borst - [color=GOLD]De Gouden Knol[/color].
+Text/309/text,Voor buitengewone dienst. Je hebt bewezen dat [color=DARK_ORANGE]loyaliteit aan Spud[/color] altijd beloond zal worden.
+Choice/30a/text,"Dank u, Eerste Minister. Glorie aan Spud."
+Choice/30b/text,"Ik deed slechts mijn plicht, meneer. (Forceer een glimlach)"
+Text/30c/text,Idaho's glimlach bereikt zijn ogen niet. Ja. Dat deed je zeker.
+Text/30d/text,Idaho bestudeert je een lange tijd. Plicht. [color=STEEL_BLUE]Zo'n eenvoudig woord voor zulke gecompliceerde acties.[/color]
+Text/30e/text,"Ik vraag me af welke [color=CRIMSON]nachtmerries[/color] degenen bezoeken die hun ""plicht"" zo goed doen."
+Text/30f/text,"Er wordt een feest gehouden ter ere van de overwinning. Tafels kreunen onder het eten, inclusief royale porties van [color=DARK_VIOLET]Wortel Reserve[/color]."
+Text/310/text,"Russet heft een glas dikke, paarse vloeistof. Een toost! Op de [color=CRIMSON]verraders die ons voeden[/color]!"
+Text/311/text,De kamer lacht. Sommigen nerveus. De meesten oprecht.
+Text/312/text,"Hij schuift een bord naar je toe. Probeer de nieuwe lading. [color=DARK_VIOLET]""Verzetsmengsel.""[/color] Sasha's bijdrage aan de toekomst van Spud."
+Text/313/text,Je maag draait om. Het eten op het bord. [color=CRIMSON]Sasha.[/color] Murphy's nicht. De vrouw van de foto.
+Text/314/text,[tornado radius=3 freq=2][color=CRIMSON]Allemaal.[/color][/tornado]
+Choice/315/text,Dwing jezelf te eten - handhaaf je dekmantel
+Choice/316/text,Duw het bord weg - dit kun je niet
+Text/317/text,Je brengt de vork naar je lippen. Sluit je ogen. [color=STEEL_BLUE]Kauw. Slik. Denk niet na.[/color]
+Text/318/text,"Russet knikt goedkeurend. ""Goed. [color=DARK_ORANGE]Je zult ver komen.[/color]"""
+Text/319/text,"Je duwt het bord weg. ""Ik voel me niet lekker. De opwinding van de dag..."""
+Text/31a/text,"Russets ogen knijpen even samen, dan verzachten ze. Natuurlijk. Zo'n [color=YELLOW]gevoelig gestel[/color]."
+Text/31b/text,Rust uit. Morgen hebben we [color=CRIMSON]meer verwerking[/color] om te overzien.
+Text/31c/text,Je keert terug naar je vertrekken. De medaille weegt zwaar op je borst.
+Text/31d/text,Je haalt de foto van de vermiste vrouw tevoorschijn. Haar vrouw zit nu waarschijnlijk in dezelfde lading als zij.
+Text/31e/text,Je beloofde haar te vinden. [color=STEEL_BLUE]Je hebt haar gevonden.[/color] Alleen niet op de manier die jullie beiden hoopten.
+Text/31f/text,Murphy. Je vriend. Degene die je vertrouwde. Hij zat in het verzet.
+Text/320/text,[color=CRIMSON]Was.[/color]
+Text/321/text,Je staart naar je spiegelbeeld in het raam. De medaille glimt. [color=DARK_ORANGE]Gouden Knol[/color]. Held van Spud.
+Text/322/text,[color=STEEL_BLUE]Monster in aardappelschil.[/color]
+Text/323/text,Die nacht droom je van Sasha. Ze beschuldigt niet. Rast niet. Dat zou makkelijker zijn.
+Text/324/text,"Ze kijkt je alleen maar aan met die ogen. ""[color=CHARTREUSE]De wortels groeien diep[/color],"" fluistert ze."
+Text/325/text,Zelfs de [color=STEEL_BLUE]rotte[/color].
+Text/326/text,Maanden verstrijken. Je wordt gepromoveerd. Regionaal Inspecteur van Grensbeveiliging. Russets rechterhand.
+Text/327/text,Je overziet meer afwijzingen dan wie dan ook in de geschiedenis van Spud. De productie van [color=DARK_VIOLET]Wortelreserve[/color] stijgt explosief.
+Text/328/text,Je kantoor is comfortabel. Je rantsoenen zijn royaal. Je familie is beschermd.
+Text/329/text,Je hebt alles wat je beloofd is.
+Text/32a/text,Alles behalve [color=STEEL_BLUE]slaap[/color]. Behalve [color=STEEL_BLUE]vrede[/color]. Behalve het vermogen om in een spiegel te kijken.
+Text/32b/text,Op een dag merk je het op. Een [color=GOLD]geel aardappel-embleem[/color] gekrast in een muur. Dan nog een. Dan tientallen.
+Text/32c/text,Een nieuw verzet vormt zich. Stiller. Voorzichtiger. Lerend van Sasha's fouten.
+Choice/32d/text,Meld de symbolen onmiddellijk aan de beveiliging
+Choice/32e/text,Doe alsof je ze niet zag
+Choice/32f/text,Laat je eigen teken achter - een enkel geel blad
+Text/330/text,Je dient het rapport in. Nog een groep verdachten opgepakt. Nog een promotie.
+Text/331/text,De cyclus gaat door. [color=CRIMSON]Je bent de machine geworden.[/color]
+Text/332/text,Je loopt voorbij. Zegt niets. Het is niet veel. [color=STEEL_BLUE]Het is bijna niets.[/color]
+Text/333/text,Maar het is de eerste keer dat je ervoor gekozen hebt niet tegen hen te handelen.
+Text/334/text,"Misschien is dat iets. Misschien is het [color=YELLOW]te weinig, te laat[/color]."
+Text/335/text,"Als niemand kijkt, kras je een klein [color=GOLD]geel blad[/color] naast de emblemen."
+Text/336/text,Een enkele daad van verzet. Jaren te laat. Maar [color=CHARTREUSE]iets[/color].
+Text/337/text,"Sasha's stem weerklinkt in je geheugen: ""[color=CHARTREUSE]De wortels groeien diep.[/color]"""
+Text/338/text,Misschien diep genoeg om [color=CHARTREUSE]zelfs jou te bereiken[/color]. Op een dag.
+Text/339/text,De natie Spud blijft bestaan. [color=DARK_VIOLET]Wortelreserve[/color] stroomt. De consumptiecyclus gaat door.
+Text/33a/text,"Maar ergens, in de scheuren van de muur, [color=CHARTREUSE]groeit iets nieuws[/color]."
+Text/33b/text,Of je er deel van zult uitmaken... [color=YELLOW]dat verhaal moet nog geschreven worden[/color].
+Choice/30a/disabled_text,
+Choice/30b/disabled_text,
+Choice/315/disabled_text,
+Choice/316/disabled_text,
+Choice/32d/disabled_text,
+Choice/32e/disabled_text,
+Choice/32f/disabled_text,

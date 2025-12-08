@@ -1,0 +1,163 @@
+﻿keys,ru
+main_menu_feedback,Обратная связь и ошибки
+main_menu_version,Версия 1.2.0
+main_menu_new_game,Новая игра
+main_menu_continue,Продолжить
+main_menu_level_select,Выбор уровня
+main_menu_score_attack,Атака на счёт
+main_menu_options,Настройки
+main_menu_credits,Авторы
+main_menu_exit,Выход
+select_language,Язык
+social_discord_tooltip,Присоединяйтесь к нашему Discord!
+social_steam_tooltip,Посетите нас в Steam
+social_twitch_tooltip,Интеграция Twitch
+twitch_status_disabled,Отключено
+twitch_status_no_viewers,Нет зрителей в пуле
+twitch_status_ready,{count} зрителей готовы
+twitch_connection_disabled,Отключено
+twitch_connection_disconnected,Отключено
+twitch_connection_connected,Подключено
+twitch_connection_connecting,Подключение...
+options_menu_title,Настройки
+options_difficulty,Сложность
+options_difficulty_easy,Легко
+options_difficulty_normal,Нормально
+options_difficulty_expert,Эксперт
+options_music_volume,Громкость музыки
+options_sfx_volume,Громкость звуковых эффектов
+options_camera_shake,Тряска камеры
+options_back,Назад
+paused_menu_title,Пауза
+shift_summary_title,ИТОГИ СМЕНЫ
+shift_summary_continue,Продолжить
+shift_summary_restart,Перезапустить
+shift_summary_main_menu,Главное меню
+shift_summary_submit_score,Отправить результат
+shift_summary_runner_stats,СТАТИСТИКА БЕГЛЕЦОВ
+shift_summary_document_stats,СТАТИСТИКА ДОКУМЕНТОВ
+shift_summary_performance,ЭФФЕКТИВНОСТЬ
+shift_summary_bonuses,БОНУСЫ
+time_format,{minutes} мин {seconds} с
+shift_complete_success,СМЕНА {shift} ЗАВЕРШЕНА\nУСПЕХ!
+shift_complete_failure,СМЕНА {shift} ЗАВЕРШЕНА\n{failure}
+strike_limit_reached,ЛИМИТ ШТРАФОВ ДОСТИГНУТ!
+quota_not_met,КВОТА НЕ ВЫПОЛНЕНА!
+shift_summary_title_with_difficulty,ИТОГИ СМЕНЫ\n{difficulty}
+runner_stats_template,\nСТАТИСТИКА БЕГЛЕЦОВ\nПопыток побега: {runner_attempts}\nВыпущено ракет: {fired}\nБеглецов поражено: {hit}\nИдеальных попаданий: {perfect}\nТочность попаданий: {rate}%
+document_stats_template,\nСТАТИСТИКА ДОКУМЕНТОВ\nДокументов проштамповано: {stamped}\nКартофелин одобрено: {approved}\nКартофелин отклонено: {rejected}\nИдеальных штампов: {perfect_stamps}
+bonus_stats_template,БОНУСЫ\nБонус за скорость обработки: {processing_speed_bonus}\nБонус за точность штампов: {accuracy}\nБонус за идеальные попадания: {perfect_hit_bonus}\nОбщий бонус к очкам: {total_score_bonus}
+performance_stats_template,\nЭФФЕКТИВНОСТЬ\nЗатраченное время: {time_taken}\nОжидаемый результат: {expected_score}\nИтоговый результат: {score}\nПроцент перевыполнения: {percent}%\nРейтинг эффективности:\n{rating}
+performance_exceptional,Исключительно!
+performance_excellent,Отлично!
+performance_good,Хорошо
+performance_needs_improvement,Требует улучшения
+performance_poor,Плохо
+global_leaderboard_title,Глобальная таблица лидеров\n- {difficulty}
+getting_leaderboard_scores,Загрузка результатов таблицы лидеров...
+reset_game_label,Сбросить игру :
+reset_game_button,Сбросить
+mute_label,Выключить звук
+fullscreen_label,Полноэкранный режим :
+resolution_label,Разрешение :
+antialiasing_label,Сглаживание :
+screenshake_label,Тряска экрана :
+mouse_sens_label,Чувствительность мыши :
+Loading…,Loading...
+You lose.,Вы проиграли.
+You won!,Вы победили!
+Thanks for playing!,Спасибо за игру!
+Please Confirm...,"Пожалуйста, подтвердите..."
+Go back to main menu?,Вернуться в главное меню?
+Quit the game?,Выйти из игры?
+Cancel,Отмена
+OK,OK
+Controls,Управление
+Mouse Sensitivity :,Mouse Sensitivity :
+Actions & Inputs,Действия и ввод
+Add,Add
+Remove,Удалить
+Assign Key for {action},Назначить клавишу для {action}
+Listening for input...,Ожидание ввода...
+Press again to confirm...,Нажмите еще раз для подтверждения...
+Focus here to assign inputs.,"Нажмите здесь, чтобы назначить ввод."
+Already Assigned,Уже назначено
+{key} already assigned to {action}.,{key} уже назначена для {action}.
+Remove Key for {action},Удалить клавишу для {action}
+Are you sure you want to remove {key} from {action}?,"Вы уверены, что хотите удалить {key} из {action}?"
+Reset,Сбросить
+Audio,Звук
+Master :,Master :
+Music :,Music :
+SFX :,SFX :
+Ambient :,Ambient :
+Mute :,Mute :
+Video,Видео
+Fullscreen :,Fullscreen :
+Resolution :,Resolution :
+Anti-Aliasing :,Anti-Aliasing :
+Disabled (Fastest),Отключено (Быстрее всего)
+8x (Slowest),8x (Медленнее всего)
+Camera Shake :,Camera Shake :
+Normal,Обычная
+Reduced,Уменьшенная
+Minimal,Минимальный
+None,Нет
+Game,Игра
+Reset Game :,Reset Game :
+Do you want to reset your game data?,Вы хотите сбросить данные игры?
+Back,Назад
+TAKE THEM!,ВЗЯТЬ ИХ!
+"Take your documents, please.","Возьмите ваши документы, пожалуйста."
+Continue,Продолжить
+Main Menu,Главное меню
+Submit Score,Отправить счет
+Restart,Перезапустить
+SHIFT SUMMARY,СВОДКА СМЕНЫ
+Easy,Легко
+Expert,Эксперт
+Primary,Основной
+Secondary,Второстепенный
+Primary Interaction,Основное взаимодействие
+Secondary Interaction,Второстепенное взаимодействие
+Cancel Interaction,Отменить взаимодействие
+Escape,Escape
+Dialogic Default Action,Действие по умолчанию в диалоге
+Enter,Enter
+Left Mouse Button,Левая кнопка мыши
+Right Mouse Button,Правая кнопка мыши
+Start New Game,Начать новую игру
+Starting a new game will reset your progress. Are you sure you want to continue?,"Начало новой игры сбросит ваш прогресс. Вы уверены, что хотите продолжить?"
+"Yes, Start New Game","Да, начать новую игру"
+Skip,Пропустить
+History,История
+Return,Вернуться
+Restart the game?,Перезапустить игру?
+help_menu_button,Помощь
+help_menu_title,Как играть
+help_tab_basics,Основы
+help_tab_gameplay,Игровой процесс
+help_tab_minigames,Мини-игры
+help_basics_intro,[b]Добро пожаловать в «Картофельную таможню»![/b]
+help_basics_gate,[b]Открытие ворот[/b]
+help_basics_documents,[b]Проверка документов[/b]
+help_basics_stamping,[b]Проставление штампов[/b]
+help_basics_runners,[b]Нарушители границы[/b]
+help_basics_xray,[b]Рентгеновский сканер[/b]
+help_gameplay_quota,[b]Выполнение квоты[/b]
+help_gameplay_strikes,[b]Штрафы[/b]
+help_gameplay_rules,[b]Иммиграционные правила[/b]
+help_gameplay_scoring,[b]Начисление очков[/b]
+help_gameplay_difficulty,[b]Уровни сложности[/b]
+help_minigames_intro,[b]Мини-игры[/b]
+help_minigames_document_scanner,[b]Сканер документов[/b] (Смена 1+)
+help_minigames_stamp_sorting,[b]Сортировка штампов[/b] (Смена 2+)
+help_minigames_fingerprint_match,[b]Сопоставление отпечатков[/b] (Смена 3+)
+help_minigames_code_breaker,[b]Взлом кода[/b] (Смена 4+)
+help_minigames_border_chase,[b]Погоня на границе[/b] (Смена 5+)
+help_tab_lore,Лор
+help_lore_world_intro,[b]Мир Картофеля[/b]
+help_lore_nation,[b]Нация Картофеля[/b]
+help_lore_your_role,[b]Ваша роль[/b]
+help_lore_border,[b]Великая Стена[/b]
+help_lore_secrets,[b]Корневой Резерв[/b]

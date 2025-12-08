@@ -1,0 +1,163 @@
+﻿keys,es-419
+main_menu_feedback,Comentarios y Errores
+main_menu_version,Versión 1.2.0
+main_menu_new_game,Nueva Partida
+main_menu_continue,Continuar
+main_menu_level_select,Selección de Nivel
+main_menu_score_attack,Ataque de Puntuación
+main_menu_options,Opciones
+main_menu_credits,Créditos
+main_menu_exit,Salir
+select_language,Idioma
+social_discord_tooltip,¡Únete a nuestro Discord!
+social_steam_tooltip,Visítanos en Steam
+social_twitch_tooltip,Integración de Twitch
+twitch_status_disabled,Desactivado
+twitch_status_no_viewers,No hay espectadores disponibles
+twitch_status_ready,{count} espectadores listos
+twitch_connection_disabled,Desactivado
+twitch_connection_disconnected,Desconectado
+twitch_connection_connected,Conectado
+twitch_connection_connecting,Conectando...
+options_menu_title,Opciones
+options_difficulty,Dificultad
+options_difficulty_easy,Fácil
+options_difficulty_normal,Normal
+options_difficulty_expert,Experto
+options_music_volume,Volumen de Música
+options_sfx_volume,Volumen de Efectos de Sonido
+options_camera_shake,Vibración de Cámara
+options_back,Volver
+paused_menu_title,Pausa
+shift_summary_title,RESUMEN DE TURNO
+shift_summary_continue,Continuar
+shift_summary_restart,Reiniciar
+shift_summary_main_menu,Menú Principal
+shift_summary_submit_score,Enviar Puntuación
+shift_summary_runner_stats,ESTADÍSTICAS DE FUGITIVOS
+shift_summary_document_stats,ESTADÍSTICAS DE DOCUMENTOS
+shift_summary_performance,RENDIMIENTO
+shift_summary_bonuses,BONIFICACIONES
+time_format,{minutes}m {seconds}s
+shift_complete_success,TURNO {shift} COMPLETADO\n¡ÉXITO!
+shift_complete_failure,TURNO {shift} COMPLETADO\n{failure}
+strike_limit_reached,¡LÍMITE DE FALTAS ALCANZADO!
+quota_not_met,¡CUOTA NO CUMPLIDA!
+shift_summary_title_with_difficulty,RESUMEN DE TURNO\n{difficulty}
+runner_stats_template,\nESTADÍSTICAS DE FUGITIVOS\nIntentos de Fugitivos: {runner_attempts}\nMisiles Disparados: {fired}\nFugitivos Impactados: {hit}\nImpactos Perfectos: {perfect}\nTasa de Impacto: {rate}%
+document_stats_template,\nESTADÍSTICAS DE DOCUMENTOS\nDocumentos Sellados: {stamped}\nPapas Aprobadas: {approved}\nPapas Rechazadas: {rejected}\nSellos Perfectos: {perfect_stamps}
+bonus_stats_template,BONIFICACIONES\nBonificación por Velocidad de Procesamiento: {processing_speed_bonus}\nBonificación por Precisión de Sello: {accuracy}\nBonificación por Impactos Perfectos: {perfect_hit_bonus}\nBonificación de Puntuación Total: {total_score_bonus}
+performance_stats_template,\nRENDIMIENTO\nTiempo Empleado: {time_taken}\nPuntuación Esperada: {expected_score}\nPuntuación Total: {score}\nPorcentaje de Sobrepuntuación: {percent}%\nCalificación de Rendimiento:\n{rating}
+performance_exceptional,¡Excepcional!
+performance_excellent,¡Excelente!
+performance_good,Bien
+performance_needs_improvement,Necesita mejorar
+performance_poor,Deficiente
+global_leaderboard_title,Clasificación Global\n- {difficulty}
+getting_leaderboard_scores,Cargando puntuaciones de la clasificación...
+reset_game_label,Reiniciar Juego :
+reset_game_button,Reiniciar
+mute_label,Silenciar
+fullscreen_label,Pantalla Completa :
+resolution_label,Resolución :
+antialiasing_label,Suavizado de bordes :
+screenshake_label,Vibración de Pantalla :
+mouse_sens_label,Sensibilidad del Ratón :
+Loading…,Cargando...
+You lose.,Perdiste.
+You won!,¡Ganaste!
+Thanks for playing!,¡Gracias por jugar!
+Please Confirm...,"Por favor, confirma..."
+Go back to main menu?,¿Volver al menú principal?
+Quit the game?,¿Salir del juego?
+Cancel,Cancelar
+OK,OK
+Controls,Controles
+Mouse Sensitivity :,Mouse Sensitivity :
+Actions & Inputs,Actions & Inputs
+Add,Add
+Remove,Quitar
+Assign Key for {action},Asignar tecla para {action}
+Listening for input...,Esperando entrada...
+Press again to confirm...,Presiona de nuevo para confirmar...
+Focus here to assign inputs.,Enfoca aquí para asignar entradas.
+Already Assigned,Ya asignado
+{key} already assigned to {action}.,{key} ya asignada a {action}.
+Remove Key for {action},Quitar tecla para {action}
+Are you sure you want to remove {key} from {action}?,¿Estás seguro de que quieres quitar {key} de {action}?
+Reset,Restablecer
+Audio,Audio
+Master :,Master :
+Music :,Music :
+SFX :,SFX :
+Ambient :,Ambient :
+Mute :,Mute :
+Video,Video
+Fullscreen :,Fullscreen :
+Resolution :,Resolution :
+Anti-Aliasing :,Anti-Aliasing :
+Disabled (Fastest),Desactivado (Más rápido)
+8x (Slowest),8x (Más lento)
+Camera Shake :,Camera Shake :
+Normal,Normal
+Reduced,Reducida
+Minimal,Mínimo
+None,Ninguno
+Game,Juego
+Reset Game :,Reset Game :
+Do you want to reset your game data?,¿Quieres reiniciar tus datos de juego?
+Back,Volver
+TAKE THEM!,¡ATRÁPALOS!
+"Take your documents, please.","Tome sus documentos, por favor."
+Continue,Continuar
+Main Menu,Menú Principal
+Submit Score,Enviar Puntuación
+Restart,Reiniciar
+SHIFT SUMMARY,RESUMEN DE TURNO
+Easy,Fácil
+Expert,Experto
+Primary,Primario
+Secondary,Secundario
+Primary Interaction,Interacción Primaria
+Secondary Interaction,Interacción Secundaria
+Cancel Interaction,Cancelar Interacción
+Escape,Escape
+Dialogic Default Action,Acción Predeterminada de Diálogo
+Enter,Enter
+Left Mouse Button,Botón Izquierdo del Ratón
+Right Mouse Button,Botón Derecho del Ratón
+Start New Game,Iniciar Nueva Partida
+Starting a new game will reset your progress. Are you sure you want to continue?,Iniciar una nueva partida reiniciará tu progreso. ¿Estás seguro de que quieres continuar?
+"Yes, Start New Game","Sí, Iniciar Nueva Partida"
+Skip,Saltar
+History,Historial
+Return,Volver
+Restart the game?,¿Reiniciar el juego?
+help_menu_button,Ayuda
+help_menu_title,Cómo Jugar
+help_tab_basics,Conceptos Básicos
+help_tab_gameplay,Jugabilidad
+help_tab_minigames,Minijuegos
+help_basics_intro,"[b]¡Bienvenido a Aduanas Spud![/b]\n\nEres un oficial de frontera en un puesto de control aduanero de patatas. Tu trabajo es inspeccionar documentos, aprobar o rechazar inmigrantes, y detener a aquellos que intentan cruzar la frontera ilegalmente."
+help_basics_gate,[b]Abriendo la Puerta[/b]\nHaz clic en el botón de la puerta o usa el megáfono para llamar a la siguiente patata a tu cabina.
+help_basics_documents,"[b]Inspeccionando Documentos[/b]\nArrastra los documentos a tu escritorio para inspeccionarlos. Verifica nombres, fechas y otros detalles según las reglas de inmigración para el turno actual."
+help_basics_stamping,"[b]Sellando Documentos[/b]\nUsa el sello APROBADO (verde) para dejar pasar a los inmigrantes, o el sello DENEGADO (rojo) para rechazarlos. ¡La precisión del sello afecta tu puntuación!"
+help_basics_runners,[b]Fugitivos de la Frontera[/b]\nAlgunas patatas intentarán cruzar el puesto de control corriendo. ¡Haz clic para disparar misiles y detenerlas. La sincronización perfecta otorga puntos de bonificación!
+help_basics_xray,"[b]Escáner de Rayos X[/b]\nA partir del Turno 3, usa la máquina de rayos X para escanear patatas en busca de contrabando oculto."
+help_gameplay_quota,"[b]Cumplir la Cuota[/b]\nCada turno tiene una cuota de patatas que debes procesar. ¡Si no cumples la cuota, serás despedido!"
+help_gameplay_strikes,"[b]Faltas[/b]\nCometer errores (aprobaciones/rechazos incorrectos, fugitivos perdidos) te da faltas. ¡Demasiadas faltas y se acaba el juego!"
+help_gameplay_rules,"[b]Reglas de Inmigración[/b]\nConsulta el tablón de anuncios para ver las reglas actuales. Las reglas cambian cada turno: regiones prohibidas, documentos requeridos y condiciones especiales."
+help_gameplay_scoring,"[b]Puntuación[/b]\nGana puntos por decisiones correctas, sellos perfectos y detener a los fugitivos. ¡Se otorgan bonificaciones por velocidad y precisión!"
+help_gameplay_difficulty,"[b]Niveles de Dificultad[/b]\nFácil: Tiempos más indulgentes, menos reglas. Normal: Experiencia estándar. Experto: Tiempos estrictos, reglas complejas, puntuaciones más altas."
+help_minigames_intro,"[b]Minijuegos[/b]\nA lo largo de tus turnos, encontrarás minijuegos que pueden otorgarte puntos de bonificación. Complétalos para obtener recompensas o sáltalos sin penalización."
+help_minigames_document_scanner,"[b]Escáner de Documentos[/b] (Turno 1+)\nUsa luz UV para encontrar elementos ocultos en los documentos. Haz clic para marcar marcas de agua, sellos y símbolos. ¡Encuentra todos los elementos antes de que se acabe el tiempo!"
+help_minigames_stamp_sorting,[b]Clasificación de Sellos[/b] (Turno 2+)
+help_minigames_fingerprint_match,[b]Coincidencia de Huellas Dactilares[/b] (Turno 3+)
+help_minigames_code_breaker,[b]Descifrador de Códigos[/b] (Turno 4+)
+help_minigames_border_chase,[b]Persecución Fronteriza[/b] (Turno 5+)
+help_tab_lore,Historia
+help_lore_world_intro,[b]El Mundo de Spud[/b]
+help_lore_nation,[b]La Nación de Spud[/b]
+help_lore_your_role,[b]Tu Rol[/b]
+help_lore_border,[b]La Gran Muralla[/b]
+help_lore_secrets,[b]Reserva de Raíces[/b]

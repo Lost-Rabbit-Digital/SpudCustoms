@@ -5,3 +5,27 @@ Text/52/text,En lille note glider ud fra nogle papirer på dit skrivebord.
 Text/53/text,"[color=GOLD]Ikke alt er, som det ser ud. Vores nations rødder er rådnet. [br] Følg sporet, men pas på ikke at blive tavst.[/color] [br] - [color=CHARTREUSE]En ven[/color]"
 Text/54/text,Den note... og måden Russet undveg mit spørgsmål om [pulse freq=3][color=CRIMSON]afviste kartofler[/color][/pulse]... [br] Noget føles [color=STEEL_BLUE]forkert[/color].
 Text/55/text,Jeg bør holde mig [color=YELLOW]vågen[/color]. Der sker mere her end at stemple pas.
+Text/52b/text,Den var der ikke i morges. Nogen placerede den [color=YELLOW]under din vagt[/color].
+Text/53b/text,"[color=GOLD]Følg sporet, men pas på ikke at blive bragt til tavshed.[/color]"
+Text/53c/text,[color=GOLD]Hold øje med hvem der spiser [/color][color=DARK_VIOLET]Reserven[/color][color=GOLD]. Hold øje med hvem der nægter.[/color]
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]En ven[/color]
+Choice/53e/text,"""Hold noten skjult - efterforsk i stilhed"""
+Choice/53f/text,"""Ødelæg noten - dette kunne være en test"""
+Choice/53g/text,"""Vis noten til Russet øjeblikkeligt"""
+Text/53h/text,Du folder noten forsigtigt og putter den i lommen. [color=CHARTREUSE]Nogen rækker ud.[/color]
+Text/53i/text,"Men hvem? Og hvorfor dig, på din allerførste dag?"
+Text/53j/text,Du river noten i små stykker
+Text/53k/text,"Russet sagde, at spirer der stiller spørgsmål bliver ""omplaceret"". Bedst ikke at tage chancer."
+Text/53l/text,"Du fanger Russet før han går. ""Sir? Jeg fandt dette i mine papirer..."""
+Text/53m/text,"Russet snupper noten, læser den. Hans udtryk flimrer - [color=YELLOW]var det genkendelse?[/color]"
+Text/53n/text,Propaganda. Oprørere der forsøger at korrumpere nye betjente. [color=DARK_ORANGE]Du gjorde ret i at bringe dette til mig.[/color]
+Text/53o/text,Han putter noten i lommen. Glem at du nogensinde så den. Og hold øje med enhver der opfører sig... [color=CRIMSON]mistænkeligt[/color].
+Text/54b/text,"""[color=VIOLET]Behandlet. Ifølge protokol.[/color]"" Hvad betyder det overhovedet?"
+Text/54c/text,Den note... den sagde at rødderne er blevet [color=CRIMSON]rådne[/color].
+Text/54d/text,"Men Spud er glorværdig, ikke sandt? Det er hvad de fortalte os. Hvad jeg troede."
+Text/54e/text,"Du tager noten frem og læser den igen. ""[color=GOLD]Hold øje med hvem der spiser Reserven. Hold øje med hvem der nægter.[/color]"""
+Text/54f/text,I morgen vil du være opmærksom. [color=YELLOW]Nogen forsøger at fortælle dig noget.[/color]
+Text/54g/text,Russets ansigt da han læste noten. Bare et øjeblik så han næsten... [color=STEEL_BLUE]bange[/color] ud.
+Text/54h/text,Hvad er [color=DARK_VIOLET]Rodreserven[/color] egentlig? Og hvorfor ville nogen advare dig om det?
+Text/54i/text,"Noten er væk, men ordene hænger ved. [color=YELLOW]Ikke alt er som det ser ud.[/color]"
+Text/54j/text,Måske var det det kloge valg at ødelægge den. Måske har du lige bragt din eneste allierede til tavshed.

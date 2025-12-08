@@ -53,3 +53,40 @@ Choice/f3/disabled_text,
 Choice/f2/disabled_text,
 Choice/e0/disabled_text,
 Choice/df/disabled_text,
+Text/d2b/text,Mielőtt elkezdenénk... Be kell vallanom valamit.
+Text/d2c/text,"Az a cetli, amit az első napodon találtál? ""[color=GOLD]Egy barát[/color]""?"
+Text/d2d/text,"Szása elmosolyodik. Látom, megtartottad. Okos. Tudtam, hogy a megfelelő hajtást választottam."
+Text/d2e/text,"Hónapok óta figyelem az új tiszteket, valakit keresve, akinek [color=CHARTREUSE]kérdő tekintete[/color] van. Valakit, aki átlát a hazugságokon."
+Text/d2f/text,Szása arckifejezése bonyolult. Megmutattad Russetnek. Utána hetekig lapulnom kellett.
+Text/d2g/text,De mégis itt vagy. Ez mond valamit a lelkiismeretedről.
+Text/d2h/text,Elpusztítottad. Nem hibáztatlak – kockázatos volt megtartani.
+Text/d2i/text,"De a szavak azért utat találtak a fejedbe, igaz?"
+Text/d2j/text,"[color=CHARTREUSE]Én vagyok ""Egy barát.""[/color] És most már tudod, miért."
+Text/d2k/text,Szása elfogott dokumentumokat terít szét az asztalon. Az elmúlt hónap feldolgozási jegyzékei.
+Text/d2l/text,"Átfutod a neveket, és megfagy a véred."
+Text/d2m/text,Ott van. [color=GOLD]Maris Piper[/color]. A nő a fotóról.
+Text/d2n/text,"""[color=CRIMSON]Státusz: Feldolgozva. Tétel: RR-2847.[/color]"" Három nappal azután keltezve, hogy a férje a segítségedért könyörgött."
+Text/d2o/text,Érzed a fotót a zsebedben. [color=STEEL_BLUE]Elment. És nem tudtad megmenteni.[/color]
+Text/d2p/text,De talán... [color=CHARTREUSE]talán még megmenthetsz másokat[/color].
+Text/d2q/text,"Murphy előbukkan az árnyékból. Szia. Örülök, hogy eljutottál ide."
+Text/d2r/text,Murphy felmutatja az összegyűrt RR-UTIL űrlapot. Az unokatestvérem is rajta van azon a listán. [color=CHARTREUSE]Ezt együtt csináljuk.[/color]
+Text/ff2/text,"[color=STEEL_BLUE]Tartja a távolságot, ahogy sétáltok.[/color] Értékelem, hogy nem állsz az utunkba. Ez... valami."
+Text/ff3/text,"[color=STEEL_BLUE]Csendben sétál, karba tett kézzel.[/color] Remélem, megtalálod azt a bizonyosságot, amit keresel. A többiek nem engedhetik meg maguknak, hogy várjanak."
+Text/100_viktor1/text,"Visszafelé menet Viktort egyedül találod az ellenőrzőpont tetején, az éjszakai eget bámulva."
+Text/100_viktor2/text,Viktor egy kis
+Text/100_viktor3/text,"Azt mondogatta, hogy bármilyen sötétre is fordulnak a dolgok, a csillagok akkor is ott lesznek. [color=STEEL_BLUE]Állandóak. Gyönyörűek.[/color]"
+Text/100_viktor4/text,"Feléd fordul, szemei csillognak. [wave amp=15 freq=2]Folyton azon gondolkodom... szenvedett?[/wave] Tudta, mi történik?"
+Text/100_viktor5/text,"Viktor hangja elcsuklik. Egyszer megkérdezte, megkérdőjeleztem-e valaha az elutasításokat. Azt mondtam neki, [color=CRIMSON]bízzon a rendszerben[/color]."
+Text/100_viktor6/text,"[tornado radius=3 freq=2][color=CRIMSON]A saját feleségemet küldtem a feldolgozó kádakba anélkül, hogy tudtam volna.[/color][/tornado]"
+Choice/100_viktor_choice1/text,Nem tudhattad. Egyikünk sem tudta.
+Choice/100_viktor_choice2/text,"Elena azt akarná, hogy most harcolj, ne fulladj bűntudatba."
+Choice/100_viktor_choice3/text,"Nem tudom, mit mondjak. Sajnálom."
+Text/100_viktor7/text,Lassan megrázza a fejét. [color=STEEL_BLUE]A tudatlanság nem ártatlanság. Kérdeznem kellett volna. Hallgatnom kellett volna.[/color]
+Text/100_viktor8/text,"Viktor óvatosan elteszi a fényképet. [color=CHARTREUSE]De most már tudom. És a tudás azt jelenti, hogy cselekednem kell.[/color]"
+Text/100_viktor9/text,"Viktor kiegyenesedik, hideg tűz lobban fel a szemében. [color=CHARTREUSE]Igazad van.[/color] Erősebb volt nálam. Bátrabb."
+Text/100_viktor10/text,Ökölbe szorítja a kezét. [color=CHARTREUSE]Ha eljön az idő
+Text/100_viktor11/text,"[pulse freq=2][color=CRIMSON]És Idaho megfizet minden életért, amit felemésztett.[/color][/pulse]"
+Text/100_viktor12/text,Viktor szomorúan
+Text/100_viktor13/text,Visszanéz a csillagokra. [color=STEEL_BLUE]Elena kedvelt volna téged.[/color]
+Text/100_viktor14/text,"Megfordul, hogy elmenjen, majd megáll. [color=CHARTREUSE]Amikor az ellenállás megmozdul... Készen állok.[/color]"
+Text/100_viktor15/text,"Elenának. Mindannyiuknak. [pulse freq=2][color=CHARTREUSE]Az őrök követni fognak, ha elmondom nekik az igazságot.[/color][/pulse]"

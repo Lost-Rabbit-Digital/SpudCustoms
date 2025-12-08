@@ -1,0 +1,59 @@
+﻿keys,hu
+Text/265/text,A műszak feszült csendben ér véget. A biztonsági járőrök megduplázódtak. Mindenki suttogva mozog.
+Text/266/text,"A szállásodra tartasz, amikor meghallod – [color=YELLOW]kiabálás a tiszti szárnyból[/color]."
+Text/267/text,"Befordulsz a sarkon, és látod, ahogy a biztonsági erők [pulse freq=3][color=RED]berúgják Sasha ajtaját[/color][/pulse]."
+Text/268/text,Yukon főnök hangja dörög. ÉDESBURGONYA SASHA! Letartóztatunk [color=CRIMSON]hazaárulásért a Krumpli Nemzet ellen![/color]
+Text/269/text,"Sashát kivonszolják, ellenáll. A szeme dacos, még akkor is, amikor az őrök a háta mögé csavarják a karját."
+Text/26a/text,[tornado radius=4 freq=3][color=CHARTREUSE]AZ IGAZSÁG KI FOG DERÜLNI! NEM TUDTOK MINDNYÁJUNKAT ELHALLGATTATNI![/color][/tornado]
+Text/26b/text,Tekintete megtalál téged a bámészkodók tömegében. Az idő megállni látszik.
+Text/26c/text,Felismerés... majd [color=CRIMSON]pusztító megértés[/color]. Elárultad a hollétét. Tudja.
+Text/26d/text,"Nem szól. A tekintet elég. [color=STEEL_BLUE]Csalódás, mélyebb a gyűlöletnél.[/color]"
+Text/26e/text,Valami felvillan – [color=CHARTREUSE]remény? bizalom?[/color] – az arcán.
+Text/26f/text,Ajkai némán mozognak: „[color=CHARTREUSE]A gyökerek mélyre nyúlnak.[/color]” Üzenet. Emlékeztető.
+Text/270/text,"Russet előbukkan az árnyékból, elégedettség árad minden pórusából."
+Text/271/text,"Na, nézd csak. Az [color=CRIMSON]édesburgonya megkeseredik[/color]. Mindig is tudtam, hogy van benned valami rothadt, Sasha."
+Text/272/text,Russet felmutat egy mappát. A kis [color=DARK_VIOLET]manifesztumaid[/color]. A „bizonyítékaid”. Mind előkerült.
+Text/273/text,"Tényleg azt hitted, hogy alááshatod a [pulse freq=2][color=DARK_VIOLET]Gyökér Tartalékot[/color][/pulse]? Engem alááshatsz?"
+Text/274/text,"A másolatok már kint vannak, Russet. A világ tudni fogja, mit teszel a népünkkel!"
+Text/275/text,"Russet hidegen nevet. Azt fogják tudni, amit mi mondunk nekik. És te? Egy [color=CRIMSON]nagyon különleges adag[/color] része leszel."
+Text/276/text,„[color=DARK_VIOLET]Áruló Keverék[/color]” – szerintem ez jól hangzik.
+Text/277/text,"A szíved hevesen dobog. Minden ösztönöd azt kiáltja, hogy tegyél valamit. De az őrök mindenhol ott vannak."
+Choice/278/text,"Lépj előre, és követeld a szabadon bocsátását (Vakmerő)"
+Choice/279/text,"Maradj rejtve – élj, hogy máskor harcolhass (Pragmatikus)"
+Choice/27a/text,"Kapd el Sasha tekintetét, és bólints – ígéret (Elszántság)"
+Text/27b/text,Átfurakszol a tömegen. „[color=CHARTREUSE]Várjatok! Nem csinált semmi rosszat![/color]”
+Text/27c/text,Yukon feje feléd kap. „[color=RED]Fogjátok el azt is![/color] Egyértelműen bűntárs!”
+Text/27d/text,"Murphy megragad, és visszaránt. „[color=STEEL_BLUE]Összezavarodtak a káoszban! FUSS![/color]”"
+Text/27e/text,"Murphy az oldalsó folyosó felé lök, miközben az őrök bekerítenek."
+Text/27f/text,"Az őrök elkapnak. Russet mosolya kiszélesedik. ""[color=CRIMSON]Két áruló egy áráért.[/color]"""
+Text/280/text,"Visszahúzódsz az árnyékba, gyűlölve magad minden porcikáddal. [color=STEEL_BLUE]Gyáva.[/color]"
+Text/281/text,De élsz. És szabad vagy. Egyelőre.
+Text/282/text,"Elkapod Sasha tekintetét. Egy lassú, megfontolt bólintás. [color=CHARTREUSE]Érted jövök.[/color]"
+Text/283/text,"Látja. Egy apró mosoly. Aztán elhurcolják a sarkon túlra, eltűnik."
+Text/284/text,"Megtalál a káoszban. Arra maszk, de a szemei égnek."
+Text/285/text,Elvitték a [color=CRIMSON]feldolgozó szárnyba[/color]. 3. alagsor. Oda vitték a feleségem.
+Text/286/text,Valamit a kezedbe nyom – egy [color=GOLD]biztonsági kártyát[/color].
+Text/287/text,Ha eljön az idő... [color=CHARTREUSE]Félrenézek[/color]. A feleségemért. Mindannyiukért.
+Text/288/text,"Murphy behúz a raktárba, nehezen lélegzik."
+Text/289/text,Ez az. Ez [color=CRIMSON]valóban megtörténik[/color]. Elkapták Sashát. Reggelre feldolgozzák.
+Text/28a/text,"Ez [color=STEEL_BLUE]hülyeség[/color] volt. Bátor, de hülyeség. Most már rajta vagy a listájukon."
+Text/28b/text,"Az ellenállás tervez valamit. Holnap. Ez az egyetlen esélyünk, hogy megmentsük."
+Text/28c/text,Benne vagy? [color=CHARTREUSE]Teljesen benne vagy?[/color]
+Choice/28d/text,"Teljesen. Bármi áron, hogy megmentsük Sashát."
+Choice/28e/text,Gondolkodnom kell. Ez túl gyorsan történik.
+Text/28f/text,Murphy megragadja a vállad. [color=CHARTREUSE]Akkor hajnalban indulunk. A gyökerek mélyre nyúlnak.[/color]
+Text/290/text,Murphy arca megkeményedik. Gondolkodj gyorsan. Holnap ilyenkorra már a [color=DARK_VIOLET]Gyökér Tartalékban[/color] lesz.
+Text/291/text,"Ébren fekszel, a plafont bámulod. Sasha arca. A dacossága. A félelme."
+Text/292/text,"Előveszed az eltűnt feleség fotóját. Egy másik arc, amit nem tudtál megmenteni."
+Text/293/text,[color=CHARTREUSE]Ezúttal nem.[/color]
+Text/294/text,Holnapra minden megváltozik. Így vagy úgy.
+Text/295/text,[pulse freq=2][color=YELLOW]Nincs többé tétlenség.[/color][/pulse]
+Text/296/text,"A cella hideg. A falakon keresztül hallod Sashát valahol, ahogy ""kérdezik""."
+Text/297/text,"Holnap, mondták. Mindketten együtt lesztek [color=DARK_VIOLET]feldolgozva[/color]."
+Text/298/text,Hacsak nem jön az ellenállás. Hacsak nem ment meg valaki titeket.
+Text/299/text,[color=STEEL_BLUE]Életed leghosszabb éjszakája terül el előtted.[/color]
+Choice/278/disabled_text,
+Choice/279/disabled_text,
+Choice/27a/disabled_text,
+Choice/28d/disabled_text,
+Choice/28e/disabled_text,

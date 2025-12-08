@@ -1,0 +1,26 @@
+﻿keys,de
+Text/200/text,"Hey, neuer Knolle! Harte Schicht, was? Ich bin Murphy. Bin jetzt seit drei Saisons hier."
+Text/201/text,"Ich habe dich vorhin mit Sasha reden sehen. Sie ist... [color=STEEL_BLUE]anders[/color]. Auf eine gute Art anders, glaube ich."
+Choice/202/text,"Sie wirkt nett. Hat mir ein paar Ratschläge gegeben, wie ich wachsam bleibe."
+Choice/203/text,Nur ein Kennenlernen. Nichts Besonderes.
+Text/204/text,Murphy blickt sich nervös um. Ja
+Text/205/text,"Unter uns? Diese Radiosendung über ""vermisste Kartoffeln""... Mein Cousin ist letzten Monat verschwunden. Er ist bei seiner Kontrolle durchgefallen."
+Text/206/text,"Klug. Halt dich bedeckt, mach deine Arbeit. Das sage ich mir jeden Tag."
+Text/207/text,"Murphys Stimme wird leiser. Obwohl ich mich manchmal frage, wohin all diese abgewiesenen Kartoffeln eigentlich gehen..."
+Text/208/text,In der Kantine
+Text/209/text,"Du starrst auf die dicke, lila-braune Paste. Jeder isst sie ohne Fragen zu stellen. Sie soll nahrhaft sein."
+Choice/20a/text,Iss die Wurzelreserve wie alle anderen
+Choice/20b/text,Schieb sie beiseite – du hast keinen Hunger
+Text/20c/text,"Der Geschmack ist... erdig. Reichhaltig. Etwas daran fühlt sich [color=STEEL_BLUE]unangenehm vertraut[/color] an, aber du kannst nicht sagen, warum."
+Text/20d/text,"Ein ranghoher Offizier bemerkt es. ""Wer nicht verschwendet, leidet keinen Mangel, Spross. Das ist [pulse freq=2][color=DARK_VIOLET]Premium-Nahrung[/color][/pulse] pur."""
+Text/20e/text,Du murmelst eine Entschuldigung wegen Magenverstimmung. Der Offizier zuckt mit den Achseln und geht weiter.
+Text/20f/text,"Zurück in deinen Quartieren lässt dich nicht los, was Sasha gesagt hat. ""[color=YELLOW]Nicht alles ist, wie es scheint.[/color]"""
+Text/210/text,"Du hast Russet an deinem ersten Tag nach abgewiesenen Kartoffeln gefragt. Seine Antwort war ausweichend. ""[color=VIOLET]Verarbeitet. Gemäß Protokoll.[/color]"""
+Text/211/text,[color=STEEL_BLUE]Wie[/color] genau verarbeitet?
+Text/212/text,"Du warst so eifrig, zu dienen. So stolz, auserwählt zu sein. Aber Stolz erklärt die [color=CRIMSON]vermissten Kartoffeln[/color] nicht."
+Text/213/text,"Das Radio meldete, dass Berichte über Verschwinden ""andauern"". Das bedeutet, es geschieht schon eine Weile."
+Text/214/text,"Der Schlaf kommt langsam. Wenn er kommt, träumst du von [wave amp=15 freq=2][color=DARK_VIOLET]lila Flüssen[/color][/wave], die unter dem Kontrollpunkt fließen."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

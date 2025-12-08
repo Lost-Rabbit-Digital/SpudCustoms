@@ -1,0 +1,26 @@
+﻿keys,ko
+Text/200/text,"안녕, 신참 감자! 힘든 근무였지? 내 이름은 머피야. 여기서 세 시즌째 일하고 있어."
+Text/201/text,"아까 사샤랑 얘기하는 거 봤어. 그녀는... [color=STEEL_BLUE]좀 달라[/color]. 좋은 의미로 말이야, 내 생각엔."
+Choice/202/text,친절해 보이던데요. 경계를 늦추지 말라고 조언해 줬어요.
+Choice/203/text,그냥 인사만 나눴어요. 별다른 건 없었어요.
+Text/204/text,머피가 불안한 듯 주위를 둘러본다. 응.
+Text/205/text,너랑 나만 아는 얘긴데 말이야? 그 '실종된 감자들'에 대한 라디오 방송 말이야... 내 사촌이 지난달에 실종됐어. 검사를 통과하지 못했거든.
+Text/206/text,"현명하네. 고개 숙이고, 네 할 일이나 해. 나도 매일 그렇게 되뇌어."
+Text/207/text,머피의 목소리가 낮아진다. 가끔은 그 모든 불합격 감자들이 대체 어디로 가는 건지 궁금해지기도 해...
+Text/208/text,식당에서
+Text/209/text,당신은 걸쭉한 보라색-갈색 페이스트를 응시한다. 모두가 아무런 의문 없이 그것을 먹는다. 영양가가 풍부하다고 알려져 있다.
+Choice/20a/text,다른 사람들처럼 뿌리 보존식을 먹는다
+Choice/20b/text,옆으로 밀어둔다 - 배가 고프지 않다
+Text/20c/text,"맛은... 흙내음이 나고. 진하다. 어딘가 [color=STEEL_BLUE]불편할 정도로 익숙한[/color] 느낌이 들지만, 그 이유를 알 수 없다."
+Text/20d/text,"선임 장교가 알아챈다. ""낭비는 금물이다, 새싹. 저건 바로 [pulse freq=2][color=DARK_VIOLET]최고급 영양식[/color][/pulse]이다."""
+Text/20e/text,당신은 속이 안 좋다는 핑계를 중얼거린다. 장교는 어깨를 으쓱하고 지나간다.
+Text/20f/text,"숙소로 돌아와서, 당신은 사샤가 했던 말을 떨쳐낼 수 없다. ""[color=YELLOW]모든 것이 보이는 그대로는 아니다.[/color]"""
+Text/210/text,"첫날, 당신은 러셋에게 불합격 감자들에 대해 물었다. 그의 대답은 회피적이었다. ""[color=VIOLET]처리됩니다. 규정에 따라요.[/color]"""
+Text/211/text,정확히 [color=STEEL_BLUE]어떻게[/color] 처리된다는 거죠?
+Text/212/text,당신은 봉사하기를 간절히 바랐다. 선택된 것에 자부심을 느꼈다. 하지만 자부심만으로는 [color=CRIMSON]실종된 감자들[/color]을 설명할 수 없다.
+Text/213/text,라디오에서는 실종 보고가 '계속되고 있다'고 했다. 그것은 꽤 오랫동안 벌어지고 있었다는 의미다.
+Text/214/text,"잠이 천천히 찾아온다. 잠이 들자, 당신은 검문소 아래로 흐르는 [wave amp=15 freq=2][color=DARK_VIOLET]보라색 강[/color][/wave]을 꿈꾼다."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

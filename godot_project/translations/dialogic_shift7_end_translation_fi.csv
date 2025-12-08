@@ -53,3 +53,40 @@ Choice/f3/disabled_text,
 Choice/f2/disabled_text,
 Choice/e0/disabled_text,
 Choice/df/disabled_text,
+Text/d2b/text,Ennen kuin aloitamme... Minulla on tunnustus.
+Text/d2c/text,"Se lappu, jonka löysit ensimmäisenä päivänäsi? ""[color=GOLD]Ystävä[/color]""?"
+Text/d2d/text,"Sasha hymyilee. Näen, että pidit sen. Fiksua. Tiesin valinneeni oikean idun."
+Text/d2e/text,"Olen tarkkaillut uusia virkailijoita kuukausia, etsien jotakuta, jolla on [color=CHARTREUSE]kyseenalaistavat silmät[/color]. Jonkun, joka saattaisi nähdä valheiden läpi."
+Text/d2f/text,Sashan ilme on monimutkainen. Näytit sen Russetille. Minun piti pysytellä piilossa viikkoja sen jälkeen.
+Text/d2g/text,Mutta tässä sinä olet silti. Se kertoo minulle jotain omastatunnostasi.
+Text/d2h/text,Tuhosit sen. En syytä sinua - sen pitäminen oli riskialtista.
+Text/d2i/text,"Mutta sanat löysivät tiensä päähäsi joka tapauksessa, eikö niin?"
+Text/d2j/text,"[color=CHARTREUSE]Olen ""Ystävä.""[/color] Ja nyt tiedät miksi."
+Text/d2k/text,Sasha levittää takavarikoituja asiakirjoja pöydälle. Käsittelymanifesteja viime kuukaudelta.
+Text/d2l/text,"Skannaat nimet, ja veresi hyytyy."
+Text/d2m/text,Siinä se on. [color=GOLD]Maris Piper[/color]. Nainen valokuvasta.
+Text/d2n/text,"""[color=CRIMSON]Tila: Käsitelty. Erä RR-2847.[/color]"" Päivätty kolme päivää sen jälkeen, kun hänen miehensä anoi apuasi."
+Text/d2o/text,Tunnet valokuvan taskussasi. [color=STEEL_BLUE]Hän on poissa. Etkä voinut pelastaa häntä.[/color]
+Text/d2p/text,Mutta ehkä... [color=CHARTREUSE]ehkä voit vielä pelastaa muita[/color].
+Text/d2q/text,"Murphy ilmestyy varjoista. Hei. Hyvä, että pääsit paikalle."
+Text/d2r/text,Murphy nostaa rypistyneen RR-UTIL-lomakkeen. Serkkuni on myös tuolla listalla. [color=CHARTREUSE]Teemme tämän yhdessä.[/color]
+Text/ff2/text,"[color=STEEL_BLUE]Hän pitää etäisyyttä kävellessäsi.[/color] Arvostan sitä, ettet seiso tiellämme. Se on... jotain."
+Text/ff3/text,"[color=STEEL_BLUE]Hän kävelee hiljaa, kädet ristissä.[/color] Toivottavasti löydät etsimäsi varmuuden. Meillä muilla ei ole varaa odottaa."
+Text/100_viktor1/text,"Palatessasi löydät Viktorin yksin tarkastuspisteen katolta, tuijottamasta yötaivasta."
+Text/100_viktor2/text,Viktor pitää pientä
+Text/100_viktor3/text,"Hän tapasi sanoa, että riippumatta siitä, kuinka synkäksi asiat menivät, tähdet olisivat yhä siellä. [color=STEEL_BLUE]Muuttumattomat. Kauniit.[/color]"
+Text/100_viktor4/text,"Hän kääntyy puoleesi, silmät kiiltäen. [wave amp=15 freq=2]Ajattelen jatkuvasti... kärsikö hän?[/wave] Tiesikö hän, mitä oli tapahtumassa?"
+Text/100_viktor5/text,"Viktorin ääni murtuu. Hän kysyi minulta kerran, kyseenalaistinko koskaan hylkäyksiä. Sanoin hänelle [color=CRIMSON]luottamaan järjestelmään[/color]."
+Text/100_viktor6/text,[tornado radius=3 freq=2][color=CRIMSON]Lähetin oman vaimoni käsittelyaltaisiin tietämättäni.[/color][/tornado]
+Choice/100_viktor_choice1/text,Et voinut tietää. Kukaan meistä ei tiennyt.
+Choice/100_viktor_choice2/text,"Elena haluaisi sinun taistelevan nyt, eikä hukkuvan syyllisyyteen."
+Choice/100_viktor_choice3/text,En tiedä mitä sanoa. Olen pahoillani.
+Text/100_viktor7/text,Hän pudistaa päätään hitaasti. [color=STEEL_BLUE]Tietämättömyys ei ole syyttömyyttä. Minun olisi pitänyt kysyä. Minun olisi pitänyt kuunnella.[/color]
+Text/100_viktor8/text,"Viktor sujauttaa valokuvan varovasti piiloon. [color=CHARTREUSE]Mutta nyt tiedän. Ja tietäminen tarkoittaa, että minun on toimittava.[/color]"
+Text/100_viktor9/text,"Viktor suoristautuu, kylmä tuli syttyy uudelleen hänen silmiinsä. [color=CHARTREUSE]Olet oikeassa.[/color] Hän oli minua vahvempi. Rohkeampi."
+Text/100_viktor10/text,Hän puristaa nyrkkinsä. [color=CHARTREUSE]Kun aika koittaa
+Text/100_viktor11/text,"[pulse freq=2][color=CRIMSON]Ja Idaho maksaa jokaisesta elämästä, jonka se on kuluttanut.[/color][/pulse]"
+Text/100_viktor12/text,Viktor saa aikaan surullisen
+Text/100_viktor13/text,Hän katsoo takaisin tähtiin. [color=STEEL_BLUE]Elena olisi pitänyt sinusta.[/color]
+Text/100_viktor14/text,"Hän kääntyy lähteäkseen, sitten pysähtyy. [color=CHARTREUSE]Kun vastarinta liikkuu... Olen valmis.[/color]"
+Text/100_viktor15/text,"Elanan puolesta. Heidän kaikkien puolesta. [pulse freq=2][color=CHARTREUSE]Vartijat seuraavat minua, kun kerron heille totuuden.[/color][/pulse]"

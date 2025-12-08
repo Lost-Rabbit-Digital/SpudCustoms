@@ -22,3 +22,20 @@ Text/115/text,"Când se va întâmpla, va trebui să [color=YELLOW]alegi o parte
 Text/116/text,"Cu fiecare cartof pe care îl procesezi, fie [pulse freq=2][color=CHARTREUSE]ajuți o revoluție[/color][/pulse], fie [pulse freq=2][color=CRIMSON]facilitezi un sistem oribil[/color][/pulse]."
 Choice/10f/disabled_text,
 Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha privește peste umăr, nervoasă.[/color] Scuze, eu... [color=YELLOW]Cred că mă urmăresc.[/color]"
+Text/102_foreshadow2/text,Russet a pus întrebări. Mă urmărește după ture. [wave amp=15 freq=2][color=YELLOW]Trebuie să fiu mai atentă.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, poate ar trebui să stai pe tușă o vreme. Lasă-mă pe mine să-mi asum mai mult riscul."
+Text/102_foreshadow4/text,"[color=STEEL_BLUE]Dă din cap, forțând un zâmbet.[/color] Nu. Suntem prea aproape acum. Mă pot descurca cu Russet."
+Text/102_foreshadow5/text,"În plus... [color=CHARTREUSE]cineva trebuie să vă țină pe voi, lăstarii, departe de necazuri.[/color]"
+Text/106_trucks1/text,Dar încă nu știm unde este principala facilitate de procesare. Documentele listează doar coduri de expediere.
+Text/106_trucks2/text,Am urmărit camioanele [color=DARK_VIOLET]Rezervei de Rădăcini[/color]. Pleacă în fiecare noapte la 03:00. Același traseu.
+Text/106_trucks3/text,[color=CHARTREUSE]Dacă am putea să-i urmărim...[/color] am ști exact unde duc refuzurile.
+Choice/106_trucks4/text,O voi face eu. Știu programul patrulelor.
+Choice/106_trucks5/text,Sună riscant. Nu poate face altcineva?
+Text/106_trucks6/text,[color=CHARTREUSE]Ochii Sashei se luminează.[/color] Știam că ai rădăcini de oțel. Fii atent - patrulează intens noaptea.
+Text/106_trucks7/text,Ora 03:00. Te ghemuiești în umbră în timp ce camioanele [color=DARK_VIOLET]Rezervei de Rădăcini[/color] trec zgomotos.
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Rămâi ascuns! Urmărește convoiul![/color][/pulse]
+Text/106_trucks9/text,"Camioanele se opresc la un complex masiv ascuns în districtul industrial. [color=DARK_VIOLET]Sectorul 7, Complexul de Depozite Delta.[/color]"
+Text/106_trucks10/text,Coșurile de fum scot un fum violaceu. Mirosul este... [tornado radius=3 freq=2][color=CRIMSON]inconfundabil.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]Inima Rezervei de Rădăcini.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]Expresia Sashei trădează dezamăgire.[/color] Cu toții trebuie să ne asumăm riscuri. Voi găsi altă cale.

@@ -1,0 +1,36 @@
+﻿keys,zh-TW
+Text/131/text,你在激戰中躲藏起來。對不起，莎夏。我[color=STEEL_BLUE]不像你那麼勇敢[/color]。
+Text/132/text,「[color=CRIMSON]恐怖襲擊[/color]已被擊退！主謀們正在被[color=DARK_VIOLET]處理[/color]中。」
+Text/133/text,育空總長將戴著鎖鏈的反抗軍成員拖進來，莎夏也在其中。「這些[color=CRIMSON]叛徒[/color]將面臨[color=DARK_VIOLET]最終處理[/color]。」
+Text/134/text,莎夏與你目光相接。儘管她傷痕累累，她的目光卻[wave amp=15 freq=2][color=CHARTREUSE]沒有責備，只有悲傷[/color][/wave]。
+Text/135/text,你靠著明哲保身活了下來，但[pulse freq=3][color=GOLD]代價是什麼？[/color][/pulse]當[color=DARK_VIOLET]根源儲備[/color]的生產氣味從工廠飄來時，你感到反胃。
+Text/136/text,或許從內部還有機會。又或許你只是在安慰自己的良心。
+Text/137/text,你[tornado radius=3 freq=2][color=CHARTREUSE]棄守崗位[/color][/tornado]，衝向戰鬥。小心謹慎的時刻已經過去了。
+Text/138/text,[pulse freq=3][color=GOLD]證明你是我們的人！[/color][/pulse]你怎麼認識莎夏的？
+Text/139/text,[color=CHARTREUSE]根源深植！[/color]我來自檢查站，莎夏招募了我！
+Text/13a/text,他們現在正把她帶去處理廠。我們必須快點！
+Text/13b/text,大門猛然打開，揭示了[wave amp=25 freq=3][color=CRIMSON]可怕的真相[/color][/wave]——研磨機、將馬鈴薯送往毀滅的輸送帶。
+Text/13c/text,在其中一條輸送帶的盡頭——莎夏和其他人[color=CRIMSON]無助地被綁著[/color]。羅塞特主管站在控制台前。
+Text/13d/text,[color=RED]你！[/color]我早該知道你是他們的人！退後，否則我就啟動處理器！
+Text/140/text,[color=STEEL_BLUE]反抗軍領袖走上前，武器對準羅塞特。[/color]不准再往前一步，羅塞特。把手放在我能看到的地方。
+Text/141/text,[color=CRIMSON]羅塞特的眼神在你和反抗軍領袖之間游移，額頭冒出汗珠。[/color]你們以為贏了嗎？這座設施是馬鈴薯帝國的基石！
+Text/142/text,苦難的基石。[pulse freq=3][color=CHARTREUSE]今天就結束了。[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]莎夏在輸送帶上掙扎著想掙脫束縛[/color]
+Choice/144/text,[tornado radius=3 freq=2][color=CRIMSON]「羅塞特[/color]
+Choice/145/text,[wave amp=15 freq=2][color=STEEL_BLUE]「這...這就是他們一直在做的事？比我想像的還要糟...」[/color][/wave]
+Choice/146/text,[color=CHARTREUSE]「莎夏！感謝根源你還活著！撐住[/color]
+Text/147/text,[color=CRIMSON]你緊握雙拳衝向羅塞特，幾乎被反抗軍戰士拉不住。[/color]每個經過我檢查站的馬鈴薯...你到底...
+Text/148/text,冷靜！我們需要他活著作證。[color=STEEL_BLUE]領袖的武器仍對準羅塞特。[/color]把你的怒氣留到法庭上吧。
+Text/149/text,[color=STEEL_BLUE]你踉蹌後退，手摀著嘴，徹底領會了機器的恐怖。[/color]我蓋了他們的章...我把他們送來這裡...
+Text/14a/text,[color=CHARTREUSE]你不知道。我們都不知道。[/color]這就是我們現在在這裡的原因。專心！
+Text/14b/text,[color=CHARTREUSE]你衝向輸送帶[/color]
+Text/14c/text,[color=CHARTREUSE]當你的雙手解開繩結時，莎莎的眼中閃爍著淚水與希望。[/color] 我知道你會來。我從未懷疑過你。
+Text/14d/text,[color=STEEL_BLUE]領頭者用槍指著拉斯提，強迫他跪下。[/color] 把他綁起來。確保他會看到接下來會發生什麼。
+Text/13e/text,[color=CHARTREUSE]莎莎掙脫束縛後，毫不遲疑地重新導向了設施的攝影機。[/color] [color=YELLOW]薯民們！這裡是根源儲備區！他們一直在把我們互相餵食！[/color]
+Text/14e/text,[color=CHARTREUSE]莎莎握住你的手，十指緊扣。[/color] 你回來找我了。無論接下來發生什麼...我們一起面對。
+Text/14f/text,[color=STEEL_BLUE]莎莎仔細地看著你，看見你眼中仍在燃燒的怒火。[/color] 引導那股怒火。接下來我們需要它。
+Text/150/text,[color=STEEL_BLUE]莎莎輕輕地將手放在你的肩上。[/color] 這份罪惡感不該由你承擔。你現在在這裡。這才是最重要的。
+Text/13f/text,[color=CHARTREUSE]我們成功了。真相現在已經公諸於世了。[/color] 我們有未來要創造！
+Choice/144/disabled_text,
+Choice/145/disabled_text,
+Choice/146/disabled_text,

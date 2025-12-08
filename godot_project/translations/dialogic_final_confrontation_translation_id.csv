@@ -45,3 +45,41 @@ Choice/27/disabled_text,
 Choice/26/disabled_text,
 Choice/25/disabled_text,
 Choice/16/disabled_text,
+Text/1a_rescue1/text,Seorang pengintai bergegas datang. Kami menemukannya! [color=CHARTREUSE]Sasha ada di blok penahanan![/color]
+Text/1a_rescue2/text,Mereka bersiap untuk... [tornado radius=3 freq=2][color=CRIMSON]memprosesnya[/color][/tornado]... dalam waktu kurang dari satu jam!
+Text/1a_rescue3/text,Kita harus menyelamatkannya. [pulse freq=2][color=CHARTREUSE]Dia yang memulai semua ini.[/color][/pulse] Kita tidak akan pergi tanpanya.
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]Bergegaslah melewati fasilitas![/color][/wave] Raih Sasha sebelum terlambat!
+Text/1a_rescue_fail1/text,Kamu tersandung. Jalan di depan diblokir oleh penjaga!
+Text/1a_rescue_fail2/text,Viktor menerobos pintu samping. [color=CHARTREUSE]PERGI! Aku akan menahan mereka![/color]
+Text/1a_rescue_fail3/text,Untuk Elena. Untuk mereka semua. [color=STEEL_BLUE]Aku tidak akan membiarkan satu pun mati lagi![/color]
+Text/1a_rescue_fail4/text,Murphy menarik alarm kebakaran. [color=CHARTREUSE]Untuk Tommy![/color] Alat penyiram membutakan para penjaga!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Aku akan membuat pengalihan. Bawa dia keluar dari sana![/color]
+Text/1a_rescue_fail6/text,"Sebuah [color=YELLOW]konveyor pemrosesan macet[/color], menghujani percikan api dan mengalihkan perhatian para penjaga!"
+Text/1a_rescue_fail7/text,Takdir - atau arwah mereka yang diproses - memberimu kesempatan kedua.
+Text/1a_rescue5/text,"Sasha mendongak dari selnya, memar tapi tak terpatahkan. Matanya membelalak. [color=CHARTREUSE]Kamu datang.[/color]"
+Text/1a_rescue6/text,Tentu saja aku datang. [color=CHARTREUSE]Kita akan menyelesaikan ini bersama.[/color]
+Choice/1a_rescue7/text,Aku takut tidak akan pernah melihatmu lagi.
+Choice/1a_rescue8/text,Kamu membuat kami sangat khawatir. Jangan lakukan itu lagi.
+Choice/1a_rescue9/text,Kita punya pekerjaan yang harus dilakukan. Idaho sedang menunggu.
+Text/1a_rescue10/text,[color=CHARTREUSE]Sasha menarikmu ke dalam pelukan singkat.[/color] Aku tahu kamu akan datang. Aku tidak pernah meragukan.
+Text/1a_rescue11/text,Sekarang mari kita balas mereka atas semua yang telah mereka ambil. [color=CHARTREUSE]Bersama.[/color]
+Text/1a_rescue12/text,Sasha tersenyum lemah di tengah rasa sakitnya. [color=STEEL_BLUE]Aku akan mencoba.[/color] Tapi beberapa hal sepadan dengan risikonya.
+Text/1a_rescue13/text,Kehadiranmu di sini membuktikannya. Sekarang mari kita selesaikan ini.
+Text/1a_rescue14/text,"Sasha mengangguk, tekadnya menyala kembali. [color=CHARTREUSE]Kamu benar.[/color] Sentimen bisa menunggu."
+Text/1a_rescue15/text,Idaho mengira dia sudah menang. Mari kita tunjukkan betapa salahnya dia.
+Text/158/text,Pasukan keamanan mendekat! [pulse freq=3][color=YELLOW]Berjuanglah melewati mereka![/color][/pulse]
+Text/21_fail1/text,Penjaga mendekat dari segala arah. [color=CRIMSON]Tidak ada tempat untuk lari![/color]
+Text/21_fail2/text,"Viktor muncul di belakang para penjaga, suaranya sedingin baja. [color=STEEL_BLUE]Mundur. Sekarang.[/color]"
+Text/21_fail3/text,Para penjaga ragu - Viktor adalah salah satu dari mereka. [color=CRIMSON]Nama Elena ada di manifes itu. Keluarga kalian bisa jadi yang berikutnya.[/color]
+Text/21_fail4/text,Beberapa penjaga menurunkan senjata mereka. Yang lain melarikan diri. Jalur terbuka.
+Text/21_fail5/text,"Sebuah ledakan mengguncang sayap timur. Suara Murphy berderak di radio: [color=CHARTREUSE]""Itu pengalih perhatianku! GERAK!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Para penjaga berpencar menuju ledakan. Tommy pasti bangga.[/color]
+Text/21_fail7/text,Sasha menerjang penjaga utama dari belakang. [color=CHARTREUSE]Aku tidak selamat dari sel itu hanya untuk melihatmu mati![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]LARI! Aku akan mengurus ini![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha mendekat, tangannya menggenggam tanganmu saat kalian menyaksikan fajar baru bersama.[/color] Kita membangun ini. Kau dan aku."
+Text/152/text,"Selama kita tetap setia pada akar kita, pada cita-cita yang membawa kita ke sini... [color=CHARTREUSE]kita akan menemukan jalan.[/color] Bersama."
+Text/153/text,[color=CHARTREUSE]Kau menggenggam tangannya erat. Bersama.[/color]
+Text/154/text,[color=STEEL_BLUE]Sasha berdiri di sampingmu.[/color] Apimu menyulut percikan yang membakar habis kekaisaran mereka.
+Text/155/text,[color=STEEL_BLUE]Kemarahan telah mendingin menjadi tekad. Masih ada pekerjaan yang harus diselesaikan.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha memberimu senyum dukungan.[/color] Kau sudah menempuh jalan panjang dari pos pemeriksaan itu. Kita semua begitu.
+Text/157/text,"[color=STEEL_BLUE]Rasa bersalah mungkin tidak akan pernah pudar sepenuhnya, tetapi kau telah menemukan tujuan dalam pembangunan kembali.[/color]"

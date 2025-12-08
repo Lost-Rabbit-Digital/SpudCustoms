@@ -21,3 +21,13 @@ Choice/ac/disabled_text,
 Choice/b2/disabled_text,
 Choice/b1/disabled_text,
 Choice/ad/disabled_text,
+Text/b4_viktor1/text,Una guardia di sicurezza corpulenta ti afferra il braccio mentre passi. Il suo volto è segnato dalla preoccupazione.
+Text/b4_viktor2/text,"Ehi... scusa il disturbo. Sei uno degli ufficiali doganali, vero? Mi chiamo [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Ho chiesto a tutti della mia moglie, [color=GOLD]Elena[/color]. Elena Petrov. Ha attraversato questo checkpoint tre settimane fa."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Ispezione fallita.[/color] Hanno detto che sarebbe stata processata e rimandata a casa, ma... non ho più avuto notizie."
+Text/b4_viktor5/text,La sua voce trema. Nessuno mi dice niente. Sai dove vanno i viaggiatori respinti?
+Choice/b4_viktor6/text,"""Mi dispiace, Viktor. Non lo so. Ma terrò gli occhi aperti."""
+Choice/b4_viktor7/text,"""Non posso discutere i dettagli della procedura. Protocolli di sicurezza."""
+Text/b4_viktor8/text,Gli occhi di Viktor mostrano un barlume di speranza. [color=CHARTREUSE]Grazie.[/color] Qualsiasi cosa tu scopra... ti prego. È tutto ciò che ho.
+Text/b4_viktor9/text,"Viktor annuisce, sconsolato. [color=STEEL_BLUE]Giusto. Protocolli.[/color] Capisco."
+Text/b4_viktor10/text,Ma se cambi idea... [color=YELLOW]Devo sapere cosa le è successo.[/color]

@@ -1,0 +1,39 @@
+﻿keys,ru
+LAWS,ЗАКОНЫ
+msg_not_fresh,"Картофель был %s, но должен быть Свежим"
+msg_extra_eyes,"У картофеля были Дополнительные Глазки, что запрещено"
+msg_rotten,Гнилой картофель не допускается
+msg_sprouted,Проросший картофель не допускается
+msg_dehydrated,Обезвоженный картофель не допускается сегодня
+msg_frozen,Замороженный картофель запрещен
+msg_over_age,Картофелю %d лет (макс. 5 лет)
+msg_under_age,Картофелю %d лет (должен быть старше 3)
+law_fresh_potatoes,[color=dark_goldenrod]ТОЛЬКО Свежий[/color] картофель разрешен - [color=dark_red]ОТКАЗАТЬ[/color] всем остальным
+law_extra_eyes,Картофель с [color=dark_goldenrod]Дополнительными Глазками[/color] должен быть [color=dark_red]ОТКЛОНЕН[/color]
+law_rotten,[color=dark_goldenrod]Гнилой[/color] картофель должен быть [color=dark_red]ОТКЛОНЕН[/color]
+law_sprouted,[color=dark_goldenrod]Проросший[/color] картофель должен быть [color=dark_red]ОТКЛОНЕН[/color]
+law_dehydrated,[color=dark_goldenrod]Обезвоженный[/color] картофель должен быть [color=dark_red]ОТКЛОНЕН[/color]
+law_frozen,[color=dark_goldenrod]Замороженный[/color] картофель должен быть [color=dark_red]ОТКЛОНЕН[/color]
+law_over_5_years,Картофель [color=dark_goldenrod]5 лет и старше[/color] должен быть [color=dark_red]ОТКЛОНЕН[/color]
+law_under_3_years,Картофель [color=dark_goldenrod]3 лет и младше[/color] должен быть [color=dark_red]ОТКЛОНЕН[/color]
+law_under_2_years,Картофель [color=dark_goldenrod]2 лет и младше[/color] должен быть [color=dark_red]ОТКЛОНЕН[/color]
+law_males_only,[color=dark_goldenrod]ТОЛЬКО Мужской[/color] картофель разрешен - [color=dark_red]ОТКАЗАТЬ[/color] всем Женским
+law_females_only,[color=dark_goldenrod]ТОЛЬКО Женский[/color] картофель разрешен - [color=dark_red]ОТКАЗАТЬ[/color] всем Мужским
+law_country_spudland,[color=dark_goldenrod]ВЕСЬ[/color] картофель из [color=dark_goldenrod]Спаудленда[/color] должен быть [color=dark_red]ОТКЛОНЕН[/color]
+law_country_potatopia,[color=dark_goldenrod]ВЕСЬ[/color] картофель из [color=dark_goldenrod]Потатопии[/color] должен быть [color=dark_red]ОТКЛОНЕН[/color]
+law_country_tuberstan,[color=dark_goldenrod]ВЕСЬ[/color] картофель из [color=dark_goldenrod]Туберстана[/color] должен быть [color=dark_red]ОТКЛОНЕН[/color]
+law_country_north_yamnea,[color=dark_goldenrod]ВЕСЬ[/color] картофель из [color=dark_goldenrod]Северной Ямнеи[/color] должен быть [color=dark_red]ОТКЛОНЕН[/color]
+law_country_spuddington,[color=dark_goldenrod]ВЕСЬ[/color] картофель из [color=dark_goldenrod]Спадингтона[/color] должен быть [color=dark_red]ОТКЛОНЕН[/color]
+law_country_tatcross,[color=dark_goldenrod]ВСЕ[/color] картофелины из [color=dark_goldenrod]Таткросса[/color] должны быть [color=dark_red]ОТКЛОНЕНЫ[/color]
+law_country_mash_meadows,[color=dark_goldenrod]ВСЕ[/color] картофелины из [color=dark_goldenrod]Мэш-Медоуз[/color] должны быть [color=dark_red]ОТКЛОНЕНЫ[/color]
+law_country_tuberville,[color=dark_goldenrod]ВСЕ[/color] картофелины из [color=dark_goldenrod]Тубервилля[/color] должны быть [color=dark_red]ОТКЛОНЕНЫ[/color]
+law_country_chip_hill,[color=dark_goldenrod]ВСЕ[/color] картофелины из [color=dark_goldenrod]Чип-Хилла[/color] должны быть [color=dark_red]ОТКЛОНЕНЫ[/color] (запрет на экспорт)
+law_country_murphyland,[color=dark_goldenrod]ВСЕ[/color] картофелины из [color=dark_goldenrod]Мёрфилэнда[/color] должны быть [color=dark_red]ОТКЛОНЕНЫ[/color]
+law_country_colcannon,[color=dark_goldenrod]ВСЕ[/color] картофелины из [color=dark_goldenrod]Колканнона[/color] должны быть [color=dark_red]ОТКЛОНЕНЫ[/color]
+law_country_pratie_point,[color=dark_goldenrod]ВСЕ[/color] картофелины из [color=dark_goldenrod]Прати-Пойнта[/color] должны быть [color=dark_red]ОТКЛОНЕНЫ[/color]
+law_purple_majesty,картофелины сорта [color=dark_goldenrod]Пёрпл Мэджести[/color] должны быть [color=dark_red]ОТКЛОНЕНЫ[/color]
+law_sweet_potatoes,картофелины сорта [color=dark_goldenrod]Сладкий картофель[/color] должны быть [color=dark_red]ОТКЛОНЕНЫ[/color] (нет разрешений)
+law_yukon_gold,картофелины сорта [color=dark_goldenrod]Юкон Голд[/color] должны быть [color=dark_red]ОТКЛОНЕНЫ[/color]
+law_fingerling,картофелины сорта [color=dark_goldenrod]Фингерлинг[/color] должны быть [color=dark_red]ОТКЛОНЕНЫ[/color]
+law_red_bliss,картофелины сорта [color=dark_goldenrod]Ред Блисс[/color] должны быть [color=dark_red]ОТКЛОНЕНЫ[/color]
+law_russet,картофелины сорта [color=dark_goldenrod]Рассет[/color] должны быть [color=dark_red]ОТКЛОНЕНЫ[/color]

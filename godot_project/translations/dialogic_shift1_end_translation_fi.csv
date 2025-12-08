@@ -5,3 +5,27 @@ Text/52/text,Pieni lappu liukuu esiin joistakin papereista pöydälläsi.
 Text/53/text,"[color=GOLD]Kaikki ei ole sitä, miltä näyttää. Kansamamme juuret ovat mädänneet. [br] Seuraa jälkeä, mutta varo tulemasta vaiennetuksi.[/color] [br] - [color=CHARTREUSE]Ystävä[/color]"
 Text/54/text,"Tuo lappu... ja se, miten Russet väisti kysymykseni [pulse freq=3][color=CRIMSON]hylätyistä perunoista[/color][/pulse]... [br] Jokin tuntuu [color=STEEL_BLUE]oudolta[/color]."
 Text/55/text,Minun pitäisi pysyä [color=YELLOW]valppaana[/color]. Täällä on enemmän meneillään kuin passien leimaaminen.
+Text/52b/text,Sitä ei ollut siinä aamulla. Joku asetti sen [color=YELLOW]vuorosi aikana[/color].
+Text/53b/text,"[color=GOLD]Seuraa jälkiä, mutta varo, ettei sinua vaienneta.[/color]"
+Text/53c/text,"[color=GOLD]Katso, kuka syö [/color][color=DARK_VIOLET]Varantoa[/color][color=GOLD]. Katso, kuka kieltäytyy.[/color]"
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]Ystävä[/color]
+Choice/53e/text,"""Pidä muistiinpano piilossa - tutki hiljaa"""
+Choice/53f/text,"""Tuhoa muistiinpano - tämä voi olla testi"""
+Choice/53g/text,"""Näytä muistiinpano Russetille välittömästi"""
+Text/53h/text,Taitat muistiinpanon varovasti ja sujautat sen taskuusi. [color=CHARTREUSE]Joku ottaa yhteyttä.[/color]
+Text/53i/text,"Mutta kuka? Ja miksi sinä, heti ensimmäisenä päivänäsi?"
+Text/53j/text,Revit muistiinpanon pieniksi paloiksi
+Text/53k/text,"Russet sanoi, että kysymyksiä esittävät idut ""siirretään toisiin tehtäviin"". Parempi olla ottamatta riskejä."
+Text/53l/text,"Tavoitat Russetin ennen kuin hän lähtee. ""Herra? Löysin tämän papereistani..."""
+Text/53m/text,"Russet nappaa muistiinpanon, lukee sen. Hänen ilmeensä värähtää - [color=YELLOW]oliko se tunnistamista?[/color]"
+Text/53n/text,Propagandaa. Kapinalliset yrittävät turmella uusia virkailijoita. [color=DARK_ORANGE]Teit oikein tuodessasi tämän minulle.[/color]
+Text/53o/text,"Hän laittaa muistiinpanon taskuunsa. Unohda, että olet koskaan nähnyt sitä. Ja tarkkaile kaikkia, jotka käyttäytyvät... [color=CRIMSON]epäilyttävästi[/color]."
+Text/54b/text,"""[color=VIOLET]Käsitelty. Protokollan mukaisesti.[/color]"" Mitä se edes tarkoittaa?"
+Text/54c/text,"Tuo muistiinpano... siinä sanottiin, että juuret ovat [color=CRIMSON]mädäntyneet[/color]."
+Text/54d/text,"Mutta Spud on kunniakas, eikö niin? Sitä he meille kertoivat. Mitä minä uskoin."
+Text/54e/text,"Vedät muistiinpanon esiin ja luet sen uudelleen. ""[color=GOLD]Katso, kuka syö Varantoa. Katso, kuka kieltäytyy.[/color]"""
+Text/54f/text,Huomenna kiinnität huomiota. [color=YELLOW]Joku yrittää kertoa sinulle jotain.[/color]
+Text/54g/text,"Russetin ilme, kun hän luki muistiinpanon. Vain hetken ajan hän näytti melkein... [color=STEEL_BLUE]pelokkaalta[/color]."
+Text/54h/text,Mitä [color=DARK_VIOLET]Juuri Varanto[/color] todella on? Ja miksi joku varoittaisi sinua siitä?
+Text/54i/text,"Muistiinpano on poissa, mutta sanat viipyvät mielessä. [color=YELLOW]Kaikki ei ole sitä, miltä näyttää.[/color]"
+Text/54j/text,Ehkä sen tuhoaminen oli fiksu valinta. Ehkä vain vaiensit ainoan liittolaisesi.

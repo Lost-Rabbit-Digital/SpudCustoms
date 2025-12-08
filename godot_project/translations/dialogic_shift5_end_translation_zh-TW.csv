@@ -1,0 +1,22 @@
+﻿keys,zh-TW
+Text/96/text,你在昏暗的走廊中潛行，心臟怦怦直跳，同時避開安全巡邏。
+Text/97/text,[color=CHARTREUSE]這個裝置將會解除羅塞特辦公室的鎖定[/color]。我會在東翼觸發警報以作聲東擊西。你有五分鐘的時間。
+Text/98/text,貨物清單應該在他的檔案櫃裡。[color=CRIMSON]標示著「RR運輸」的紅色資料夾[/color]。不要留下你搜查過的證據。
+Text/99/text,你在檔案櫃裡找到了厚厚的[color=CRIMSON]標示著「RR運輸」的紅色資料夾[/color]。
+Text/9a/text,裡面是與被拒絕馬鈴薯數量相符的貨物清單，以及一份來自愛達荷總理的指令，授權[pulse freq=3][color=DARK_VIOLET]「充分利用邊境拒絕者進行RR生產。」[/color][/pulse]
+Text/9a_viktor1/text,你掃視著貨物清單上的名字……其中一個格外醒目。[color=GOLD]艾蓮娜·彼得羅夫[/color]。
+Text/9a_viktor2/text,這個名字……你以前聽過。保安維克多曾提及他的妻子失蹤了。
+Text/9a_viktor3/text,[color=CRIMSON]「狀態：已處理。批次RR-2851。」[/color]日期是兩週前。
+Text/9b/text,腳步聲正朝辦公室門口靠近。[wave amp=15 freq=3][color=YELLOW]「奇怪，我明明記得我鎖了門。」[/color][/wave]
+Choice/9c/text,「躲到桌子底下」
+Choice/9d/text,「跳窗」
+Text/9e/text,羅塞特進來時，你趕緊鑽到他的桌子底下，心臟怦怦直跳。他坐了下來，雙腳離你的臉只有幾英寸。
+Text/9f/text,「我是羅塞特。什麼？[color=CHARTREUSE]又響警報了？[/color]我馬上過去。」他離開了，你得以脫身。
+Text/a0/text,你猛地打開窗戶跳了出去。幸好只有一層樓高。一名警衛大喊：「[color=RED]嘿！站住！[/color]」
+Text/a1/text,你衝過庭院，成功甩掉了追兵。
+Text/a2/text,你拿到了嗎？
+Text/a3/text,你交出了證據，並解釋了你的發現。
+Text/a4/text,這證明了一切。反抗軍會製作副本。[tornado radius=3 freq=2]將真相傳播到每個角落。[/tornado]他們無法讓所有人閉嘴。
+Text/a5/text,你已經越界了。[wave amp=20 freq=3][color=YELLOW]沒有回頭路了。[/color][/wave]當真相傳開時，斯普德將會被徹底改變。
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,

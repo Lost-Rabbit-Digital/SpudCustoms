@@ -16,3 +16,12 @@ Text/76/text,"Sasha nhét tập hồ sơ vào tay bạn. ""[color=YELLOW]Giữ c
 Text/77/text,Bạn giấu tập hồ sơ bên trong áo khoác. [color=DARK_VIOLET]Root Reserve[/color]. Những sự loại bỏ. Những củ khoai tây mất tích. Tất cả kết nối theo một cách [tornado radius=3 freq=2][color=CRIMSON]kinh hoàng[/color][/tornado].RetryClaude can make mistakes. Please double-check responses.
 Choice/71/disabled_text,
 Choice/70/disabled_text,
+Text/69_photo1/text,Bạn lại rút bức ảnh ra. [color=GOLD]Maris Piper[/color]. Một gương mặt thật hiền lành.
+Text/69_photo2/text,Vợ cô ấy đã rất tuyệt vọng. [color=STEEL_BLUE]Chuyện gì đã xảy ra với cô ấy?[/color]
+Text/69_photo3/text,Bạn nhận thấy điều gì đó ở hậu cảnh bức ảnh - một chiếc xe tải với [color=DARK_VIOLET]biểu tượng màu tím[/color].
+Text/69_photo4/text,Biểu tượng đó... bạn đã thấy nó trên các chuyến giao hàng của căng tin. [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve.[/color][/wave]
+Text/6a_photo1/text,Sasha... bức ảnh này. Vợ của người phụ nữ đó đã đưa nó cho tôi. Cô ấy đang tìm cô ấy.
+Text/6a_photo2/text,Mặt Sasha biến sắc. [color=STEEL_BLUE]Để tôi xem.[/color]
+Text/6a_photo3/text,"Sasha xem kỹ bức ảnh, vẻ mặt cô ấy tối sầm lại. [color=CRIMSON]Tôi nhận ra chiếc xe tải đó.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Hãy giữ bức ảnh này cẩn thận.[/color][/pulse] Nó có thể quan trọng sau này. Tin tôi đi.
+Text/6f2/text,[pulse freq=3][color=CRIMSON]Họ đang trở thành Root Reserve.[/color][/pulse]

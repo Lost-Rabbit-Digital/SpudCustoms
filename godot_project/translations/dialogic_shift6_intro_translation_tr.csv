@@ -32,3 +32,32 @@ Choice/c4/disabled_text,
 Choice/c5/disabled_text,
 Choice/cb/disabled_text,
 Choice/cc/disabled_text,
+Text/c7_viktor1/text,İri yarı bir güvenlik görevlisi molanız sırasında yaklaşıyor. Yüzü bitkin.
+Text/c7_viktor2/text,"Hey... siz gümrük memurlarından birisiniz, değil mi? Karım Elena hakkında etrafa sorup duruyorum."
+Text/c7_viktor3/text,Üç hafta önce bu kontrol noktasından geçti. [color=STEEL_BLUE]Muayeneden kaldı.[/color] O zamandan beri ondan haber alamadım.
+Choice/c7_viktor4/text,"""Viktor... Bir şey buldum. Elena hakkında. Gerçeği bilmen gerekiyor."""
+Choice/c7_viktor5/text,"""Üzgünüm, Viktor. Hiçbir şey görmedim."""
+Text/c7_viktor6/text,Ona manifest sayfasının bir kopyasını gösteriyorsun. Yüzü bembeyaz kesiliyor.
+Text/c7_viktor7/text,[wave amp=25 freq=3]Okurken elleri titriyor.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]İşlendi... Parti RR-2851...[/color]
+Text/c7_viktor8/text,Sesi zar zor duyuluyor. [tornado radius=3 freq=2][color=CRIMSON]Onu... onu şeye DÖNÜŞTÜRDÜLER...[/color][/tornado]
+Text/c7_viktor9/text,Kederi soğuk bir öfkeye dönüşüyor. [pulse freq=2][color=CRIMSON]Idaho bunun bedelini ödeyecek.[/color][/pulse] Anısına yemin ederim.
+Text/c7_viktor10/text,Omzunu sıkıyor. [color=CHARTREUSE]Bana söylediğin için teşekkür ederim.[/color] Zamanı geldiğinde... bunu unutmayacağım.
+Text/c7_viktor11/text,Hüzünle başını sallıyor. [color=STEEL_BLUE]Tahmin etmiştim.[/color] Kimse bir şey bilmiyor. Ya da kimse konuşmak istemiyor.
+Text/c7_viktor12/text,Bir şey duyarsan... [color=YELLOW]lütfen.[/color] O benim her şeyim.
+Text/d0_qte1/text,"O vardiya daha sonra, üzerinde [color=CHARTREUSE]ince bir direniş işareti[/color] taşıyan belgelerle bir yolcu yaklaşıyor."
+Text/d0_qte2/text,[color=DARK_ORANGE]Gerçeklik Tarayıcı[/color] taramasına başlıyor. [wave amp=15 freq=3][color=RED]İşareti tespit edecek![/color][/wave]
+Text/d0_qte3/text,Karar vermek için saniyelerin var. Tarayıcı ısınıyor...
+Choice/d0_qte4/text,"""Tarayıcı arızası taklidi yap - çabuk!"""
+Choice/d0_qte5/text,"""Tarayıcının taramasını tamamlamasına izin ver"""
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]Hızlı hareket etmelisin![/color][/pulse] Taramayı bitirmeden arızayı tetikle!
+Text/d0_qte7/text,Tarayıcı kablolarıyla oynuyorsun. Kıvılcımlar çıkıyor. Ekran titriyor ve kapanıyor.
+Text/d0_qte8/text,Russet aceleyle geliyor. [color=YELLOW]Burada ne oldu?[/color]
+Choice/d0_qte9/text,"""Elektrik dalgalanması, efendim. Bu yeni sistemler huysuz."""
+Choice/d0_qte10/text,"""Bilmiyorum, efendim. Birden kapandı."""
+Text/d0_qte11/text,Russet homurdanıyor. [color=STEEL_BLUE]Bürokratlar bize test edilmemiş ekipman veriyor.[/color] Onları manuel olarak işleyin ve yeniden denetim için işaretleyin.
+Text/d0_qte12/text,Russet sana şüpheyle bakıyor. [color=YELLOW]Ne kadar da tesadüf.[/color] Bakım ekibine baktıracağım. Bir daha olmasına izin verme.
+Text/d0_qte13/text,Direniş üyesi geçerken sana hafif bir minnetle başını sallıyor.
+Text/d0_qte14/text,Tarayıcı [pulse freq=3][color=RED]YÜKSEK SESLE ÖTÜYOR[/color][/pulse]. Yetkisiz işaretler tespit edildi!
+Text/d0_qte15/text,Russet anında belirir. [color=CHARTREUSE]Harika iş![/color] Bir hain daha yakalandı.
+Text/d0_qte16/text,"Direniş üyesi, gözlerinde dehşetle sürüklenerek götürülür. ""[color=CRIMSON]Lütfen, hayır! Çocuklarım var![/color]"""
+Text/d0_qte17/text,Sadakatiniz [color=DARK_ORANGE]dosyanıza kaydedildi[/color]. Böyle devam edin.

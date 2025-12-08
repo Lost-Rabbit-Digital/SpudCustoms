@@ -17,3 +17,6 @@ Text/a4/text,Bu her şeyi kanıtlıyor. Direniş kopyalar çıkaracak. [tornado 
 Text/a5/text,"Bir çizgiyi geçtiniz. [wave amp=20 freq=3][color=YELLOW]Geri dönüş yok.[/color][/wave] Gerçek yayıldığında, Spud dönüşecek."
 Choice/9c/disabled_text,
 Choice/9d/disabled_text,
+Text/9a_viktor1/text,Manifestodaki isimleri tarıyorsun... ve biri dikkatini çekiyor. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,"Bu isim... daha önce duymuştun. Güvenlik görevlisi Viktor, karısının kayıp olduğundan bahsetmişti."
+Text/9a_viktor3/text,"""[color=CRIMSON]Durum: İşlendi. Parti RR-2851.[/color]"" İki hafta öncesine ait."

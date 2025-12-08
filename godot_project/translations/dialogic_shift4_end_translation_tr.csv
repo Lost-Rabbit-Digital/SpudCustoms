@@ -1,0 +1,49 @@
+﻿keys,tr
+Text/215/text,"Murphy seni koridorda yakalar, gözleri kızarmış. Bir dakikan var mı?"
+Text/216/text,Murphy seni boş bir depoya çeker ve kapıyı kapatır.
+Text/217/text,Kafeteryada yaptığım o şaka... kuzenimin [color=DARK_VIOLET]Kök Rezervi[/color] partisinde olduğu hakkında...
+Text/218/text,Murphy'nin sesi titrer. Artık şaka olduğunu sanmıyorum.
+Text/219/text,Komik olmadığını söylemiştin. Haklıydın. [color=STEEL_BLUE]Bunda komik hiçbir şey yok.[/color]
+Text/21a/text,Gittiğini gördüm. Akıllıca. Keşke o şeyleri yemeyi bırakabilsem ama [color=YELLOW]izliyorlar[/color]. Her zaman izliyorlar.
+Text/21b/text,Kuzenimin eşyalarında bir şey buldum. Reddedilme formu. Standart şeyler ama...
+Text/21c/text,"Murphy buruşuk bir form çıkarır. İşlem koduna bak. ""[color=CRIMSON]RR-UTIL-7[/color]."""
+Text/21d/text,"Arşivlerde araştırdım. RR, [pulse freq=2][color=DARK_VIOLET]Kök Rezervi[/color][/pulse] anlamına geliyor. UTIL ise... [color=CRIMSON]kullanım[/color] anlamına geliyor."
+Text/21d_breakdown1/text,[wave amp=20 freq=3]Murphy'nin elleri titremeye başlar.[/wave] Kuzenim... Tommy... henüz yirmi üç yaşındaydı.
+Text/21d_breakdown2/text,Buraya [color=CHARTREUSE]daha iyi bir hayat[/color] için gelmişti. Tek bir denetimden kaldı. Bir tane. [color=STEEL_BLUE]Sadece kötü bir zamanlama.[/color]
+Text/21d_breakdown3/text,"Murphy duvardan aşağı kayar, yüzü ellerinin arasındadır. Ve ben... ben o şeyleri [tornado radius=3 freq=2][color=CRIMSON]YEDİM[/color][/tornado]. Her gün."
+Text/21d_breakdown4/text,"Murphy sana bakar, gözlerinden yaşlar akmaktadır. [pulse freq=2][color=CRIMSON]Ya onu yediysem?[/color][/pulse]"
+Choice/21e/text,Murphy... Çok üzgünüm. Yanındayım. Gerçeği birlikte bulacağız.
+Choice/21f/text,"Murphy, bu tehlikeli. Bu işe bulaşmamalıyız."
+Choice/220/text,Belki de bir tesadüftür. Hemen sonuca varmayalım.
+Text/221_comfort1/text,Murphy'nin yanına diz çöküp omzuna elini koyarsın.
+Text/221/text,Murphy kolunu bir can simidi gibi kavrar. [color=CHARTREUSE]Teşekkür ederim.[/color] Delirdiğimi sanmıştım.
+Text/221_tommy/text,[color=STEEL_BLUE]Sesi biraz düzelir.[/color] Tommy için. Bunu Tommy için yapıyoruz. Ve aldıkları herkes için.
+Text/222/text,Başka şüphelenenler de var. Sasha insanları topluyor. Bence sana güveniyor.
+Text/223/text,"Murphy gözlerini siler, kendini toplamaya çalışır. Evet. Evet, muhtemelen haklısın. Ne söylediysem unut gitsin."
+Text/224/text,Ama fikrini değiştirirsen... Ben burada olacağım. [color=STEEL_BLUE]Sorularımla baş başa. Ve kabuslarımla.[/color]
+Text/225/text,Tesadüf. Murphy gözyaşları içinde acı acı güler. Tabii. Ve Tommy öylece [color=CRIMSON]havaya karıştı[/color].
+Text/226/text,Kendine bunu söylemeye devam et. Bakalım ne kadar süre uyumana yardımcı olacak. [color=STEEL_BLUE]Bana yardımcı olmuyor.[/color]
+Text/227/text,Son vardiya biterken Sasha kulübene gelir. Hayalet görmüş gibisin.
+Text/228/text,Tahmin edeyim - Murphy sana kuzeninden mi bahsetti?
+Text/229/text,Sasha onaylayarak başını sallar. İyi. Soru soran insanlara ihtiyacımız var.
+Text/22a/text,Sasha yüzünü dikkatle inceler. Korkuyorsun. Bu akıllıca. Ama korku kimseyi kurtarmaz.
+Text/22b/text,"İlk günden beri seni izliyorum. Russet ""işleme""den bahsettiğinde [color=YELLOW]tereddüt ettiğin[/color] an..."
+Text/22c/text,Reddedilen patateslere ne olduğunu sordun. Bu cesaret isterdi. [color=CHARTREUSE]Çoğu sadece selam verir ve damgalar.[/color]
+Text/22d/text,Sasha yaklaşır. Bir düzen var. Her reddettiğimiz patates mi? 48 saat içinde kayboluyor. Sınır dışı kaydı yok. Transfer yok.
+Text/22e/text,Ama [color=DARK_VIOLET]Kök Rezervi[/color] üretimi mi? [tornado radius=3 freq=2][color=CRIMSON]Artıyor.[/color][/tornado] Her. Seferinde.
+Choice/22f/text,Sana inanıyorum. Nasıl yardım edebilirim?
+Choice/230/text,Her şeyi riske atmadan önce kanıt görmem gerek.
+Text/231/text,"Sasha'nın gözleri parlar. Doğru seçimi yaptığımı biliyordum. Yarın gece, vardiyadan sonra. Bulduklarımı sana göstereceğim."
+Text/232/text,O zamana kadar
+Text/233/text,Anlaşıldı. Kanıt geliyor. Sadece... yarınki vardiya sırasında gözlerini açık tut.
+Text/234/text,[color=CRIMSON]Reddedilen patateslerin[/color] nereye gittiğini izle. Yapabilirsen kamyonları takip et.
+Text/235/text,Çaresiz patatesin sana verdiği fotoğrafı çıkarırsın. Karısı. [color=STEEL_BLUE]Şimdi nerede?[/color]
+Text/236/text,Sasha ve Murphy'nin söyledikleri doğruysa... o zaten...
+Text/237/text,Düşünceyi tamamlayamazsın. Ama [color=CHARTREUSE]yüzünü unutmayacaksın[/color].
+Text/238/text,"Yarın her şey değişiyor. Ya cevapları bulursun, ya da soruları sonsuza dek gömersin."
+Text/239/text,Tek bir şey kesin: [color=YELLOW]mutlu cehalete geri dönüş yok[/color].
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

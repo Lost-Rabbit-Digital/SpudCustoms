@@ -1,0 +1,18 @@
+﻿keys,zh-CN
+Text/56/text,欢迎来到斯普德国。一个为所有马铃薯带来[pulse freq=2][color=MEDIUM_VIOLET_RED]繁荣的国度[/color][/pulse]。
+Text/57/text,您已被选中担任一个[color=DARK_ORANGE]至关重要的角色[/color]，负责保卫我们的边境。
+Text/59/text,看啊！这就是保卫我们国家的[color=MEDIUM_VIOLET_RED]宏伟之墙[/color]。您将在此服役，确保只有合格者才能进入。
+Text/5a/text,啊，新来的小芽。仔细听好，您的职责对[color=DARK_ORANGE]斯普德的安全至关重要[/color]。
+Text/184/text,罗斯特不适地靠近。我见过很多小芽来这里。[color=STEEL_BLUE]大多数都撑不下去。[/color]
+Text/184b/text,那些问太多问题的？他们会被[color=CRIMSON]重新分配[/color]。永久地。
+Text/5b/text,我任命您为[pulse freq=1][color=MEDIUM_VIOLET_RED]光荣的斯普德[/color][/pulse]的海关官员。有什么问题吗？
+Choice/5c/text,“我已准备好倾尽我所有的淀粉，为斯普德服务！”
+Choice/5d/text,“被拒绝的马铃薯到底会怎样？”
+Text/5e/text,太棒了！这正是我们需要的热情。您可能会获得[color=VIOLET]根部储备[/color]的嘉奖。
+Text/5f/text,他们会被……[color=VIOLET]处理掉[/color]。按照规程。[color=VIOLET]根部储备[/color]负责所有细节。
+Text/60/text,专注于您的职责。[color=DARK_ORANGE]仅此而已。[/color]
+Text/61/text,您的第一个班次现在开始。仔细检查文件，拒绝不符合我们标准的人。
+Text/62/text,完成您的配额，避免受到惩罚。
+Text/62b/text,并且记住，[color=MEDIUM_VIOLET_RED]斯普德万岁！[/color]
+Choice/5c/disabled_text,
+Choice/5d/disabled_text,

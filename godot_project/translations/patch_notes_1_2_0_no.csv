@@ -1,25 +1,25 @@
 ﻿keys,no
-patch_1_2_0_title,SPUD CUSTOMS 1.2.0 - PATCH NOTES
-patch_1_2_0_personal_note_header,A PERSONAL NOTE FROM THE DEVELOPER
-patch_1_2_0_personal_note,"This update is dedicated to my little one, who spent the first months of life in the NICU - from 1lb at birth to now 20lbs of pure joy. Thank you to everyone who has joined this journey - over 2,000 players have now experienced Spud Customs!"
-patch_1_2_0_visual_header,VISUAL ENHANCEMENTS
-patch_1_2_0_visual_1,Animated Art Integration: Incorporated new animated GIFs from StagNation into opening scenes
-patch_1_2_0_visual_2,Art Overhaul: Repainted the first five scenes players see for improved visual quality
-patch_1_2_0_visual_3,Dynamic Backgrounds: Background visuals now change as difficulty increases
-patch_1_2_0_story_header,STORY & NARRATIVE
-patch_1_2_0_story_1,Choice Persistence: Narrative choices now properly carry across all levels
-patch_1_2_0_story_2,Visual Progression: Added visual indicators of story progression in main gameplay scenes based on current shift number
-patch_1_2_0_story_3,Branching Dialogue Fixes: Fixed issues with branching dialogue in final narrative scenes
-patch_1_2_0_bugfix_header,BUG FIXES
-patch_1_2_0_bugfix_1,Achievement System: Fixed achievement tracking - all achievements now unlock properly
-patch_1_2_0_bugfix_2,Leaderboard: Fixed issue where leaderboard was stuck on loading
-patch_1_2_0_bugfix_3,Screen Shake: Screen shake now properly resets to origin after each use
-patch_1_2_0_bugfix_4,Difficulty Scaling: Fixed easy mode scaling factor
-patch_1_2_0_bugfix_5,Background Display: Fixed missing backgrounds during dialogue scenes
-patch_1_2_0_bugfix_6,Text Readability: Improved text coloration for better readability
-patch_1_2_0_engagement_header,PLAYER ENGAGEMENT
-patch_1_2_0_engagement_1,Review Requests: Added review prompts for demo and full game players
-patch_1_2_0_engagement_2,Translation Fixes: Various translation improvements across supported languages
-patch_1_2_0_technical_header,TECHNICAL IMPROVEMENTS
-patch_1_2_0_technical_1,Expanded Language Support: Now supporting all 31 Steam-supported languages
-patch_1_2_0_technical_2,Translation System Overhaul: Reorganized translation files for better maintainability
+patch_1_2_0_title,SPUD CUSTOMS 1.2.0 - OPPDATERINGSNOTATER
+patch_1_2_0_personal_note_header,EN PERSONLIG MERKNAD FRA UTVIKLEREN
+patch_1_2_0_personal_note,"Denne oppdateringen er dedikert til min lille, som tilbrakte de første månedene av livet på nyfødtintensiven – fra 1 pund ved fødselen til nå 20 pund med ren glede. Takk til alle som har blitt med på denne reisen – over 2000 spillere har nå opplevd Spud Customs!"
+patch_1_2_0_visual_header,VISUELLE FORBEDRINGER
+patch_1_2_0_visual_1,Integrering av animert kunst: Inkorporerte nye animerte GIF-er fra StagNation i åpningsscenene
+patch_1_2_0_visual_2,Kunstoverhaling: Malte om de fem første scenene spillerne ser for forbedret visuell kvalitet
+patch_1_2_0_visual_3,Dynamiske bakgrunner: Bakgrunnsvisualer endres nå etter hvert som vanskelighetsgraden øker
+patch_1_2_0_story_header,HISTORIE OG NARRATIV
+patch_1_2_0_story_1,Vedvarende valg: Narrative valg følger nå riktig med gjennom alle nivåer
+patch_1_2_0_story_2,Visuell progresjon: Lagt til visuelle indikatorer for historieprogresjon i hovedspillscenene basert på nåværende vaktskiftnummer
+patch_1_2_0_story_3,Fikser for forgrenende dialog: Fikset problemer med forgrenende dialog i de siste narrative scenene
+patch_1_2_0_bugfix_header,FEILRETTINGER
+patch_1_2_0_bugfix_1,Prestasjonssystem: Fikset sporing av prestasjoner – alle prestasjoner låses nå opp riktig
+patch_1_2_0_bugfix_2,Ledertavle: Fikset problem der ledertavlen satt fast under lasting
+patch_1_2_0_bugfix_3,Skjermristing: Skjermristing tilbakestilles nå riktig til utgangspunktet etter hver bruk
+patch_1_2_0_bugfix_4,Vanskelighetsgradskalering: Fikset skaleringsfaktor for enkel modus
+patch_1_2_0_bugfix_5,Bakgrunnsvisning: Fikset manglende bakgrunner under dialogscener
+patch_1_2_0_bugfix_6,Tekstlesbarhet: Forbedret tekstfarge for bedre lesbarhet
+patch_1_2_0_engagement_header,SPILLERENGASJEMENT
+patch_1_2_0_engagement_1,Forespørsler om anmeldelser: Lagt til anmeldelsesforespørsler for demo- og fullversjonsspillere
+patch_1_2_0_engagement_2,Fikser for oversettelser: Diverse oversettelsesforbedringer på tvers av støttede språk
+patch_1_2_0_technical_header,TEKNISKE FORBEDRINGER
+patch_1_2_0_technical_1,Utvidet språkstøtte: Støtter nå alle 31 Steam-støttede språk
+patch_1_2_0_technical_2,Overhaling av oversettelsessystem: Omorganiserte oversettelsesfiler for bedre vedlikeholdbarhet

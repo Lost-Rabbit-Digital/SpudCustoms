@@ -14,3 +14,5 @@ Text/61/text,"Din första vakt börjar nu. Kontrollera dokumenten noggrant, neka
 Text/62/text,"Uppfyll din kvot, undvik sanktioner. [color=MEDIUM_VIOLET_RED]Ära åt Potatisen![/color]"
 Choice/5d/disabled_text,
 Choice/5c/disabled_text,
+Text/184b/text,De som ställer för många frågor? De blir [color=CRIMSON]omplacerade[/color]. Permanent.
+Text/62b/text,"Och kom ihåg, [color=MEDIUM_VIOLET_RED]Ära åt Spud![/color]"

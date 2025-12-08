@@ -45,3 +45,41 @@ Choice/27/disabled_text,
 Choice/26/disabled_text,
 Choice/25/disabled_text,
 Choice/16/disabled_text,
+Text/1a_rescue1/text,Un cercetaș se apropie în grabă. Am găsit-o! [color=CHARTREUSE]Sasha e în blocul de detenție![/color]
+Text/1a_rescue2/text,Se pregătesc să... [tornado radius=3 freq=2][color=CRIMSON]o proceseze[/color][/tornado]... în mai puțin de o oră!
+Text/1a_rescue3/text,Trebuie să o salvăm. [pulse freq=2][color=CHARTREUSE]Ea a început totul.[/color][/pulse] Nu plecăm fără ea.
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]Grăbește-te prin unitate![/color][/wave] Ajungi la Sasha înainte să fie prea târziu!
+Text/1a_rescue_fail1/text,Te împiedici. Calea înainte e blocată de gărzi!
+Text/1a_rescue_fail2/text,Viktor intră brusc printr-o ușă laterală. [color=CHARTREUSE]DU-TE! Îi voi ține eu![/color]
+Text/1a_rescue_fail3/text,Pentru Elena. Pentru toți. [color=STEEL_BLUE]Nu voi lăsa încă unul să moară![/color]
+Text/1a_rescue_fail4/text,Murphy trage de o alarmă de incendiu. [color=CHARTREUSE]Pentru Tommy![/color] Aspersoarele orbesc gărzile!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Voi crea o diversiune. Scoate-o de acolo![/color]
+Text/1a_rescue_fail6/text,"O [color=YELLOW]bandă transportoare de procesare se blochează[/color], împrăștiind scântei și distrăgând gărzile!"
+Text/1a_rescue_fail7/text,Soarta - sau fantomele celor procesați - îți acordă o a doua șansă.
+Text/1a_rescue5/text,"Sasha ridică privirea din celula ei, vânătă dar neînfrântă. Ochii ei se măresc. [color=CHARTREUSE]Ai venit.[/color]"
+Text/1a_rescue6/text,Bineînțeles că am venit. [color=CHARTREUSE]Terminăm asta împreună.[/color]
+Choice/1a_rescue7/text,Mi-era teamă că nu te voi mai vedea niciodată.
+Choice/1a_rescue8/text,Ne-ai îngrijorat de moarte. Nu mai face asta.
+Choice/1a_rescue9/text,Avem treabă. Idaho așteaptă.
+Text/1a_rescue10/text,[color=CHARTREUSE]Sasha te trage într-o scurtă îmbrățișare.[/color] Știam că vei veni. Nu m-am îndoit niciodată.
+Text/1a_rescue11/text,Acum să-i facem să plătească pentru toți cei pe care i-au luat. [color=CHARTREUSE]Împreună.[/color]
+Text/1a_rescue12/text,Sasha schițează un zâmbet slab prin durerea ei. [color=STEEL_BLUE]Voi încerca.[/color] Dar unele lucruri merită riscul.
+Text/1a_rescue13/text,Faptul că ești aici o dovedește. Acum să terminăm asta.
+Text/1a_rescue14/text,"Sasha dă din cap, hotărârea ei reaprinsă. [color=CHARTREUSE]Ai dreptate.[/color] Sentimentele pot aștepta."
+Text/1a_rescue15/text,Idaho crede că a câștigat. Să-i arătăm cât de mult se înșeală.
+Text/158/text,Forțele de securitate se apropie! [pulse freq=3][color=YELLOW]Luptă-ți drum prin ei![/color][/pulse]
+Text/21_fail1/text,Gărzile se apropie din toate direcțiile. [color=CRIMSON]Nu ai unde să fugi![/color]
+Text/21_fail2/text,"Viktor apare în spatele gărzilor, vocea-i rece ca oțelul. [color=STEEL_BLUE]Încetați. Acum.[/color]"
+Text/21_fail3/text,Gărzile ezită - Viktor era unul de-al lor. [color=CRIMSON]Numele Elenei e pe acele manifeste. Familiile voastre ar putea fi următoarele.[/color]
+Text/21_fail4/text,Unele gărzi își coboară armele. Altele fug. Calea se eliberează.
+Text/21_fail5/text,"O explozie zguduie aripa de est. Vocea lui Murphy se aude distorsionat pe comunicații: [color=CHARTREUSE]""Asta e diversiunea mea! MIȘCĂ!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Gărzile se împrăștie spre explozie. Tommy ar fi mândru.[/color]
+Text/21_fail7/text,Sasha îl doboară pe gardianul-șef din spate. [color=CHARTREUSE]N-am supraviețuit acelei celule doar ca să te privesc murind![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]FUGI! Mă descurc![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha se apropie, mâna ei o găsește pe a ta în timp ce priviți împreună noul răsărit.[/color] Am construit asta. Tu și eu."
+Text/152/text,"Atâta timp cât rămânem fideli rădăcinilor noastre, idealurilor care ne-au adus aici... [color=CHARTREUSE]vom găsi o cale.[/color] Împreună."
+Text/153/text,[color=CHARTREUSE]Îi strângi mâna. Împreună.[/color]
+Text/154/text,[color=STEEL_BLUE]Sasha stă lângă tine.[/color] Focul tău a aprins scânteia care le-a ars imperiul.
+Text/155/text,[color=STEEL_BLUE]Furia s-a domolit în determinare. Mai e încă de lucru.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha îți oferă un zâmbet de susținere.[/color] Ai parcurs un drum lung de la acel punct de control. Cu toții am făcut-o.
+Text/157/text,"[color=STEEL_BLUE]Vinovăția s-ar putea să nu dispară niciodată complet, dar ți-ai găsit un scop în reconstrucție.[/color]"

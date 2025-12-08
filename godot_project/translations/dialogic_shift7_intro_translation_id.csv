@@ -22,3 +22,20 @@ Text/115/text,"Ketika itu terjadi, kamu perlu [color=YELLOW]memilih sisi[/color]
 Text/116/text,"Dengan setiap kentang yang kamu proses, kamu entah [pulse freq=2][color=CHARTREUSE]membantu revolusi[/color][/pulse] atau [pulse freq=2][color=CRIMSON]memungkinkan sistem yang mengerikan[/color][/pulse]."
 Choice/10f/disabled_text,
 Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha melirik ke belakang dengan gugup.[/color] Maaf, aku... [color=YELLOW]Kurasa mereka mengawasiku.[/color]"
+Text/102_foreshadow2/text,Russet sudah mulai bertanya-tanya. Mengikutiku setelah giliran kerja. [wave amp=15 freq=2][color=YELLOW]Aku harus lebih berhati-hati.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, mungkin kau harus bersembunyi dulu sebentar. Biar aku yang mengambil lebih banyak risiko."
+Text/102_foreshadow4/text,"[color=STEEL_BLUE]Dia menggelengkan kepala, memaksakan senyum.[/color] Tidak. Kita sudah terlalu dekat sekarang. Aku bisa mengatasi Russet."
+Text/102_foreshadow5/text,Lagipula... [color=CHARTREUSE]seseorang harus menjaga kalian para tunas agar tidak mendapat masalah.[/color]
+Text/106_trucks1/text,Tapi kita masih belum tahu di mana fasilitas pemrosesan utamanya. Dokumen-dokumen itu hanya mencantumkan kode pengiriman.
+Text/106_trucks2/text,Aku sudah mengawasi truk-truk [color=DARK_VIOLET]Root Reserve[/color]. Mereka berangkat setiap malam pukul 03.00. Rute yang sama.
+Text/106_trucks3/text,[color=CHARTREUSE]Jika kita bisa mengikuti mereka...[/color] kita akan tahu persis ke mana mereka membawa yang ditolak.
+Choice/106_trucks4/text,Aku akan melakukannya. Aku tahu jadwal patroli.
+Choice/106_trucks5/text,Itu terdengar berisiko. Tidak bisakah orang lain melakukannya?
+Text/106_trucks6/text,[color=CHARTREUSE]Mata Sasha berbinar.[/color] Aku tahu kau punya akar baja. Hati-hati - mereka berpatroli ketat di malam hari.
+Text/106_trucks7/text,Pukul 03.00. Kau bersembunyi dalam bayangan saat truk-truk [color=DARK_VIOLET]Root Reserve[/color] melaju lewat.
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Tetap bersembunyi! Ikuti konvoi itu![/color][/pulse]
+Text/106_trucks9/text,"Truk-truk itu berhenti di sebuah kompleks besar yang tersembunyi di kawasan industri. [color=DARK_VIOLET]Sektor 7, Kompleks Gudang Delta.[/color]"
+Text/106_trucks10/text,Cerobong asap memuntahkan asap keunguan. Baunya... [tornado radius=3 freq=2][color=CRIMSON]tak salah lagi.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]Jantung Root Reserve.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]Ekspresi Sasha menunjukkan kekecewaan.[/color] Kita semua harus mengambil risiko. Aku akan mencari cara lain.

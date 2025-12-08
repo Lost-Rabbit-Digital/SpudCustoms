@@ -1,0 +1,59 @@
+﻿keys,nl
+Text/265/text,De dienst eindigt in ongemakkelijke stilte. Beveiligingspatrouilles zijn verdubbeld. Iedereen beweegt fluisterend.
+Text/266/text,Je bent op weg naar je vertrekken wanneer je het hoort - [color=YELLOW]geschreeuw uit de officiersvleugel[/color].
+Text/267/text,Je rondt de hoek om beveiligingstroepen [pulse freq=3][color=RED]Sasha's deur te zien intrappen[/color][/pulse].
+Text/268/text,De stem van Hoofd Yukon schalt. ZOETE AARDAPPEL SASHA! Je bent gearresteerd wegens [color=CRIMSON]verraad tegen de natie Spud![/color]
+Text/269/text,"Sasha wordt naar buiten gesleept, worstelend. Haar ogen zijn uitdagend, zelfs terwijl bewakers haar armen op haar rug wringen."
+Text/26a/text,[tornado radius=4 freq=3][color=CHARTREUSE]DE WAARHEID ZAL BOVEN KOMEN! JE KUNT ONS NIET ALLEMAAL HET ZWIJGEN OPLEGGEN![/color][/tornado]
+Text/26b/text,Haar blik vindt jou in de menigte toeschouwers. De tijd lijkt stil te staan.
+Text/26c/text,Herkenning... dan [color=CRIMSON]vernietigend besef[/color]. Jij hebt haar locatie verraden. Ze weet het.
+Text/26d/text,Ze spreekt niet. De blik is genoeg. [color=STEEL_BLUE]Teleurstelling dieper dan haat.[/color]
+Text/26e/text,Een flikkering van iets - [color=CHARTREUSE]hoop? vertrouwen?[/color] - trekt over haar gezicht.
+Text/26f/text,"Haar lippen bewegen geruisloos: ""[color=CHARTREUSE]De wortels groeien diep.[/color]"" Een boodschap. Een herinnering."
+Text/270/text,"Russet verschijnt uit de schaduwen, tevredenheid druipend uit elke porie."
+Text/271/text,"Nou nou. De [color=CRIMSON]zoete aardappel wordt zuur[/color]. Ik wist altijd al dat er iets rot was aan jou, Sasha."
+Text/272/text,"Russet houdt een map omhoog. Jouw kleine [color=DARK_VIOLET]manifesten[/color]. Jouw ""bewijs."" Alles teruggevonden."
+Text/273/text,Dacht je echt dat je [pulse freq=2][color=DARK_VIOLET]Wortel Reserve[/color][/pulse] kon ondermijnen? MIJ ondermijnen?
+Text/274/text,"Kopieën zijn al verspreid, Russet. De wereld zal weten wat je onze mensen aandoet!"
+Text/275/text,Russet lacht koud. Ze zullen weten wat wij ze vertellen. En jij? Jij wordt onderdeel van een [color=CRIMSON]zeer speciale partij[/color].
+Text/276/text,"""[color=DARK_VIOLET]Verradersmelange[/color]"" - Ik denk dat dat lekker klinkt."
+Text/277/text,Je hart bonst. Elk instinct schreeuwt om iets te doen. Maar bewakers zijn overal.
+Choice/278/text,Stap naar voren en eis haar vrijlating (Roekeloos)
+Choice/279/text,Blijf verborgen - leef om een andere dag te vechten (Pragmatisch)
+Choice/27a/text,Vang Sasha's blik en knik - een belofte (Vastberadenheid)
+Text/27b/text,"Je dringt door de menigte. ""[color=CHARTREUSE]Wacht! Ze heeft niets verkeerds gedaan![/color]"""
+Text/27c/text,"Yukon's hoofd schiet jouw kant op. ""[color=RED]Grijp die ook![/color] Duidelijk een medeplichtige!"""
+Text/27d/text,"Murphy grijpt je vast, je terugtrekkend. ""[color=STEEL_BLUE]Ze zijn verward in de chaos! REN![/color]"""
+Text/27e/text,Murphy duwt je naar een zijgang terwijl bewakers je positie omsingelen.
+Text/27f/text,"Bewakers pakken je. Russets glimlach verbreedt. ""[color=CRIMSON]Twee verraders voor de prijs van één.[/color]"""
+Text/280/text,"Je krimpt terug in de schaduwen, jezelf hatend met elke vezel. [color=STEEL_BLUE]Lafaard.[/color]"
+Text/281/text,Maar levend. En vrij. Voor nu.
+Text/282/text,"Je vangt Sasha's blik. Een langzame, weloverwogen knik. [color=CHARTREUSE]Ik kom je halen.[/color]"
+Text/283/text,"Ze ziet het. De kleinste glimlach. Dan wordt ze de hoek om gesleept, verdwenen."
+Text/284/text,"Hij vindt je in de chaos. Zijn gezicht is een masker, maar zijn ogen branden."
+Text/285/text,Ze hebben haar naar de [color=CRIMSON]verwerkingsvleugel[/color] gebracht. Niveau 3. Daar hebben ze mijn vrouw naartoe gebracht.
+Text/286/text,Hij drukt iets in je hand - een [color=GOLD]beveiligingssleutelkaart[/color].
+Text/287/text,Als het zover is... [color=CHARTREUSE]zal ik de andere kant op kijken[/color]. Voor mijn vrouw. Voor hen allemaal.
+Text/288/text,"Murphy trekt je de opslagruimte in, zwaar ademend."
+Text/289/text,Dit is het. Dit [color=CRIMSON]gebeurt echt[/color]. Ze hebben Sasha te pakken. Ze zullen haar voor de ochtend verwerken.
+Text/28a/text,"Dat was [color=STEEL_BLUE]dom[/color]. Moedig, maar dom. Je staat nu op hun lijst."
+Text/28b/text,Het verzet plant iets. Morgen. Het is onze enige kans om haar te redden.
+Text/28c/text,Doe je mee? [color=CHARTREUSE]Ga je er helemaal voor?[/color]
+Choice/28d/text,Helemaal. Wat er ook voor nodig is om Sasha te redden.
+Choice/28e/text,Ik moet nadenken. Dit gaat te snel.
+Text/28f/text,Murphy pakt je schouder vast. [color=CHARTREUSE]Dan slaan we toe bij zonsopgang. De wortels groeien diep.[/color]
+Text/290/text,Murphy's gezicht verhardt. Denk snel. Tegen deze tijd morgen zal ze [color=DARK_VIOLET]Wortelreserve[/color] zijn.
+Text/291/text,"Je ligt wakker, starend naar het plafond. Sasha's gezicht. Haar verzet. Haar angst."
+Text/292/text,Je haalt de foto van de vermiste vrouw tevoorschijn. Nog een gezicht dat je niet kon redden.
+Text/293/text,[color=CHARTREUSE]Niet deze keer.[/color]
+Text/294/text,Tegen morgen verandert alles. Op de een of andere manier.
+Text/295/text,[pulse freq=2][color=YELLOW]Niet langer aan de zijlijn staan.[/color][/pulse]
+Text/296/text,"De cel is koud. Door de muren heen hoor je Sasha ergens, terwijl ze ""ondervraagd"" wordt."
+Text/297/text,"Morgen, zeiden ze. Jullie zullen allebei samen [color=DARK_VIOLET]verwerkt[/color] worden."
+Text/298/text,Tenzij het verzet komt. Tenzij iemand jullie allebei redt.
+Text/299/text,[color=STEEL_BLUE]De langste nacht van je leven strekt zich voor je uit.[/color]
+Choice/278/disabled_text,
+Choice/279/disabled_text,
+Choice/27a/disabled_text,
+Choice/28d/disabled_text,
+Choice/28e/disabled_text,

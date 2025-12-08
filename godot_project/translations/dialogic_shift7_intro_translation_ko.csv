@@ -1,0 +1,43 @@
+﻿keys,ko
+Text/102/text,잘 오셨어요. 저항 세력이 [color=CHARTREUSE]점점 강해지고 있어요[/color]. 그 명세서 덕분에 사람들이 진실을 알게 됐어요.
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]사샤가 불안한 듯 어깨 너머를 힐끗 본다.[/color] 미안해요, 저... [color=YELLOW]그들이 저를 감시하는 것 같아요.[/color]"
+Text/102_foreshadow2/text,루셋이 자꾸 질문을 해요. 퇴근 후에도 저를 따라다니고요. [wave amp=15 freq=2][color=YELLOW]더 조심해야겠어요.[/color][/wave]
+Text/102_foreshadow3/text,"사샤, 당분간 몸을 숨기는 게 좋겠어요. 제가 더 위험을 감수할게요."
+Text/102_foreshadow4/text,[color=STEEL_BLUE]그녀는 고개를 저으며 억지로 미소 짓는다.[/color] 아니요. 이제 와서 멈출 순 없어요. 루셋은 제가 처리할 수 있어요.
+Text/102_foreshadow5/text,게다가... [color=CHARTREUSE]누군가는 당신 같은 새싹들이 문제를 일으키지 않게 지켜봐야죠.[/color]
+Text/103/text,"우리 정보원들로부터 이 서류를 입수했어요. 생산 일정, '[color=CRIMSON]재료[/color]' 목록, [color=DARK_SLATE_BLUE]실종자[/color] 명단까지요."
+Text/104/text,이건 단순한 식품 보조제 프로그램이 아니에요. 그들은 [color=CRIMSON]감자들을 가공하고 있어요[/color]... 좋은 방식이 아니에요.
+Text/105/text,"아이다호 총리 본인의 내부 메모예요. ""[color=DARK_ORANGE]거부된 자산 활용[/color]""을 승인하는 내용이죠."
+Text/106/text,"각 검문소별 할당량인데, 스퍼드 세관이 거부율 대비 처리율이 가장 높아요."
+Text/106_trucks1/text,하지만 아직 주요 가공 시설이 어디에 있는지 몰라요. 서류에는 운송 코드만 나와 있어요.
+Text/106_trucks2/text,[color=DARK_VIOLET]루트 리저브 트럭[/color]들을 계속 지켜보고 있었어요. 매일 밤 03시에 출발해요. 항상 같은 경로로요.
+Text/106_trucks3/text,[color=CHARTREUSE]만약 우리가 그들을 따라갈 수 있다면...[/color] 그들이 거부된 감자들을 정확히 어디로 데려가는지 알 수 있을 거예요.
+Choice/106_trucks4/text,제가 할게요. 순찰 일정을 알고 있어요.
+Choice/106_trucks5/text,위험한데요. 다른 사람이 할 수는 없나요?
+Text/106_trucks6/text,[color=CHARTREUSE]사샤의 눈이 빛난다.[/color] 당신은 강철 같은 뿌리를 가졌을 줄 알았어요. 조심해요. 밤에는 순찰이 심해요.
+Text/106_trucks7/text,"03시. [color=DARK_VIOLET]루트 리저브[/color] 트럭들이 굉음을 내며 지나갈 때, 당신은 그림자 속에 웅크린다."
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]숨어! 호송대를 따라가![/color][/pulse]
+Text/106_trucks9/text,"트럭들은 공업 지구에 숨겨진 거대한 단지에 멈춰 선다. [color=DARK_VIOLET]7구역, 델타 창고 단지.[/color]"
+Text/106_trucks10/text,굴뚝에서는 보랏빛 연기가 뿜어져 나온다. 냄새는... [tornado radius=3 freq=2][color=CRIMSON]틀림없다.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]루트 리저브의 심장부.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]사샤의 표정에 실망감이 스친다.[/color] 우리 모두 위험을 감수해야 해요. 다른 방법을 찾아볼게요.
+Text/107/text,외부 상황이 악화되었어요. 분노한 군중들이 검문소에 모여 루트 리저브에 대한 답변을 요구하고 있어요.
+Text/108/text,[color=YELLOW]긴급 방송[/color]: 최근 [color=CRIMSON]위조 문서[/color] 유포로 불필요한 공황 상태가 발생했습니다.
+Text/109/text,"이 사보타주범들을 체포하는 데 결정적인 정보에 대해 [color=GOLD]10,000 스퍼드 크레딧[/color]의 보상이 제공됩니다."
+Text/10a/text,이 선전물을 소비하거나 배포하는 행위는 이제 [color=RED]대역죄[/color]로 분류됩니다.
+Text/10b/text,오늘 근무조는 특별 규약에 따라 운영됩니다. 모든 여행자는 충성도 평가를 받아야 합니다.
+Text/10c/text,[color=CRIMSON]반정부적 정서[/color]를 보이는 자들은 즉시 보고되어야 합니다.
+Text/10d/text,우리 가운데 [color=CRIMSON]배신자[/color]는 색출될 것입니다. 그리고 그들이 색출되면... [color=DARK_ORANGE]러스셋이 목을 가로지르는 위협적인 제스처를 취합니다.[/color]
+Text/10e/text,"한 불안해 보이는 감자가 다가옵니다. [color=GOLD]노란 잎 배지[/color]가 부분적으로 보입니다. 작은 쪽지가 서류 사이에 끼워져 있습니다: ""[color=CHARTREUSE]안전 가옥이 노출되었습니다. 새 위치: 4구역 7번 창고.[/color]"""
+Choice/10f/text,"""그들을 UV 마크로 빠르게 통과시키세요"" (돕기)"
+Choice/110/text,"""그들을 즉시 보안대에 보고하세요"" (배신하기)"
+Text/111/text,"안도감이 그들의 얼굴에 가득합니다. ""고맙습니다. 진실은 승리할 것입니다."""
+Text/112/text,"당신이 보안대에 신호를 보내자 공포가 엄습합니다. ""[wave amp=25 freq=3]안돼요, 제발! 저에게 가족이 있어요![/wave]"" 그들의 노란 배지가 바닥에 떨어집니다."
+Text/113/text,"""잘했습니다. 당신의 충성심은 기록되었습니다."""
+Text/114/text,"""당신의 결정은 주목받았습니다. 준비하세요. [tornado radius=3 freq=2][color=CHARTREUSE]거대한 일이 다가오고 있습니다[/color][/tornado]. 저항군이 직접적인 행동을 계획하고 있습니다."""
+Text/115/text,"""그 일이 벌어지면, 당신은 [color=YELLOW]한쪽 편을 선택해야[/color] 할 것입니다. 더 이상 중립 지대는 없을 것입니다."""
+Text/116/text,"당신이 처리하는 감자 한 명 한 명마다, 당신은 [pulse freq=2][color=CHARTREUSE]혁명을 돕고[/color][/pulse] 있거나 [pulse freq=2][color=CRIMSON]끔찍한 체제를 가능하게[/풍] 하는 것입니다."
+Choice/10f/disabled_text,
+Choice/110/disabled_text,
+Choice/106_trucks4/disabled_text,
+Choice/106_trucks5/disabled_text,

@@ -1,0 +1,49 @@
+﻿keys,sk
+Text/215/text,"Murphy ťa chytí na chodbe, s očami podliatymi krvou. Máš minútku?"
+Text/216/text,Murphy ťa vtiahne do prázdnej skladovej miestnosti a zatvorí dvere.
+Text/217/text,"Ten vtip, čo som povedal v jedálni... o tom, že môj bratranec je v dávke [color=DARK_VIOLET]Koreňovej Rezervy[/color]..."
+Text/218/text,"Murphyho hlas sa zlomí. Už si nemyslím, že to bol vtip."
+Text/219/text,"Povedal si, že to nebolo vtipné. Mal si pravdu. [color=STEEL_BLUE]Na tomto nie je nič vtipné.[/color]"
+Text/21a/text,"Videl som ťa odísť. Múdre. Prial by som si, aby som to prestal jesť, ale oni [color=YELLOW]sledujú[/color]. Vždy sledujú."
+Text/21b/text,"Našiel som niečo medzi vecami môjho bratranca. Jeho formulár o zamietnutí. Štandardná vec, ale..."
+Text/21c/text,"Murphy vytiahne pokrčený formulár. Pozri na kód spracovania. ""[color=CRIMSON]RR-UTIL-7[/color]."""
+Text/21d/text,Pozrel som si to v archívoch. RR znamená [pulse freq=2][color=DARK_VIOLET]Koreňová Rezerva[/color][/pulse]. UTIL znamená... [color=CRIMSON]využitie[/color].
+Text/21d_breakdown1/text,[wave amp=20 freq=3]Murphyho ruky sa začnú triasť.[/wave] Môj bratranec... Tommy... mal len dvadsaťtri.
+Text/21d_breakdown2/text,Prišiel sem pre [color=CHARTREUSE]lepší život[/color]. Neprešiel jednou kontrolou. Jednou. [color=STEEL_BLUE]Len zlé načasovanie.[/color]
+Text/21d_breakdown3/text,"Murphy sa zosunie po stene, tvár v dlaniach. A ja... ja som to [tornado radius=3 freq=2][color=CRIMSON]JEDOL[/color][/tornado]. Každý deň."
+Text/21d_breakdown4/text,"Murphy na teba pozrie, slzy mu tečú. [pulse freq=2][color=CRIMSON]Čo ak som zjedol JEHO?[/color][/pulse]"
+Choice/21e/text,Murphy... Je mi to tak ľúto. Som s tebou. Pravdu nájdeme spolu.
+Choice/21f/text,"Murphy, toto je nebezpečné. Mali by sme sa do toho nemiešať."
+Choice/220/text,Možno je to náhoda. Nerobme unáhlené závery.
+Text/221_comfort1/text,"Kľakneš si k Murphymu, položíš mu ruku na rameno."
+Text/221/text,"Murphy chytí tvoju ruku ako záchranné lano. [color=CHARTREUSE]Ďakujem.[/color] Myslel som, že sa zbláznim."
+Text/221_tommy/text,"[color=STEEL_BLUE]Jeho hlas sa mierne upokojí.[/color] Pre Tommyho. Urobíme to pre Tommyho. A pre všetkých ostatných, ktorých si vzali."
+Text/222/text,"Sú aj iní, ktorí tiež niečo tušia. Saša zhromažďuje ľudí. Myslím, že ti verí."
+Text/223/text,"Murphy si utrie oči, snaží sa upokojiť. Áno. Áno, máš asi pravdu. Zabudni, že som niečo povedal."
+Text/224/text,Ale ak si to rozmyslíš... Budem tu. [color=STEEL_BLUE]Sám so svojimi otázkami. A nočnými morami.[/color]
+Text/225/text,Náhoda. Murphy sa horko zasmeje cez slzy. Jasné. A Tommy sa len tak [color=CRIMSON]vyparil[/color] do vzduchu.
+Text/226/text,"Len si to hovor. Uvidíš, ako dlho ti to pomôže spať. [color=STEEL_BLUE]Mne to nepomáha.[/color]"
+Text/227/text,"Saša sa objaví pri tvojom stánku, keď sa končí posledná smena. Vyzeráš, akoby si videl ducha."
+Text/228/text,Nechaj ma hádať – Murphy ti povedal o svojom bratrancovi?
+Text/229/text,"Saša súhlasne prikývne. Dobre. Potrebujeme ľudí, ktorí sa pýtajú."
+Text/22a/text,Saša si pozorne prezerá tvoju tvár. Bojíš sa. To je múdre. Ale strach nikoho nezachráni.
+Text/22b/text,"Sledujem ťa od tvojho prvého dňa. Spôsob, akým si [color=YELLOW]zaváhal[/color], keď Russet hovoril o „spracovaní“."
+Text/22c/text,"Spýtal si sa, čo sa stane s odmietnutými zemiakmi. To chcelo odvahu. [color=CHARTREUSE]Väčšina len salutuje a pečiatkuje.[/color]"
+Text/22d/text,"Saša sa nakloní bližšie. Je tu vzorec. Každý zemiak, ktorý odmietneme? Preč do 48 hodín. Žiadne záznamy o deportácii. Žiadne presuny."
+Text/22e/text,Ale produkcia [color=DARK_VIOLET]Koreňovej rezervy[/color]? [tornado radius=3 freq=2][color=CRIMSON]Stúpa.[/color][/tornado] Zakaždým. Bez. Výnimky.
+Choice/22f/text,Verím ti. Ako môžem pomôcť?
+Choice/230/text,"Potrebujem vidieť dôkaz predtým, než všetko riskujem."
+Text/231/text,"Saši sa rozžiaria oči. Vedela som, že som si vybrala správne. Zajtra večer, po smene. Ukážem ti, čo som našla."
+Text/232/text,Dovtedy
+Text/233/text,Dobre teda. Dôkaz príde. Len... maj oči otvorené počas zajtrajšej smeny.
+Text/234/text,"Sleduj, kam idú [color=CRIMSON]odmietnuté zemiaky[/color]. Sleduj kamióny, ak môžeš."
+Text/235/text,"Vytiahneš fotku, ktorú ti dal zúfalý zemiak. Jej manželka. [color=STEEL_BLUE]Kde je teraz?[/color]"
+Text/236/text,"Ak je to, čo hovoria Saša a Murphy, pravda... už bola..."
+Text/237/text,Nemôžeš dokončiť myšlienku. Ale [color=CHARTREUSE]nezabudneš na jej tvár[/color].
+Text/238/text,"Zajtra sa všetko zmení. Buď nájdeš odpovede, alebo pochováš otázky navždy."
+Text/239/text,Jedna vec je istá: [color=YELLOW]už niet návratu k blaženej nevedomosti[/color].
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

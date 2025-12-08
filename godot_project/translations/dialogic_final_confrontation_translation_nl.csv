@@ -45,3 +45,41 @@ Choice/27/disabled_text,
 Choice/26/disabled_text,
 Choice/25/disabled_text,
 Choice/16/disabled_text,
+Text/1a_rescue1/text,Een verkenner snelt toe. We hebben haar gevonden! [color=CHARTREUSE]Sasha zit in het detentieblok![/color]
+Text/1a_rescue2/text,Ze bereiden zich voor om... [tornado radius=3 freq=2][color=CRIMSON]haar te verwerken[/color][/tornado]... over minder dan een uur!
+Text/1a_rescue3/text,We moeten haar redden. [pulse freq=2][color=CHARTREUSE]Zij is dit allemaal begonnen.[/color][/pulse] We vertrekken niet zonder haar.
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]Haast je door de faciliteit![/color][/wave] Bereik Sasha voordat het te laat is!
+Text/1a_rescue_fail1/text,Je struikelt. Het pad voor je wordt geblokkeerd door bewakers!
+Text/1a_rescue_fail2/text,Viktor barst door een zijdeur. [color=CHARTREUSE]GA! Ik houd ze tegen![/color]
+Text/1a_rescue_fail3/text,Voor Elena. Voor hen allemaal. [color=STEEL_BLUE]Ik laat er geen nog een sterven![/color]
+Text/1a_rescue_fail4/text,Murphy trekt aan een brandalarm. [color=CHARTREUSE]Voor Tommy![/color] De sprinklers verblinden de bewakers!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Ik creëer een afleiding. Haal haar daar weg![/color]
+Text/1a_rescue_fail6/text,"Een [color=YELLOW]verwerkingsband loopt vast[/color], sproeit vonken en leidt de bewakers af!"
+Text/1a_rescue_fail7/text,Het lot - of de geesten van de verwerkten - geeft je een tweede kans.
+Text/1a_rescue5/text,"Sasha kijkt op uit haar cel, gekneusd maar ongebogen. Haar ogen worden groot. [color=CHARTREUSE]Je bent gekomen.[/color]"
+Text/1a_rescue6/text,Natuurlijk ben ik gekomen. [color=CHARTREUSE]We maken dit samen af.[/color]
+Choice/1a_rescue7/text,Ik was bang dat ik je nooit meer zou zien.
+Choice/1a_rescue8/text,Je hebt ons doodongerust gemaakt. Doe dat niet meer.
+Choice/1a_rescue9/text,We hebben werk te doen. Idaho wacht.
+Text/1a_rescue10/text,[color=CHARTREUSE]Sasha trekt je in een korte omhelzing.[/color] Ik wist dat je zou komen. Ik heb nooit getwijfeld.
+Text/1a_rescue11/text,Nu laten we ze boeten voor iedereen die ze hebben genomen. [color=CHARTREUSE]Samen.[/color]
+Text/1a_rescue12/text,Sasha perst een zwakke glimlach door haar pijn heen. [color=STEEL_BLUE]Ik zal het proberen.[/color] Maar sommige dingen zijn het risico waard.
+Text/1a_rescue13/text,"Dat jij hier bent, bewijst dat. Laten we dit nu afmaken."
+Text/1a_rescue14/text,"Sasha knikt, haar vastberadenheid opnieuw aangewakkerd. [color=CHARTREUSE]Je hebt gelijk.[/color] Sentiment kan wachten."
+Text/1a_rescue15/text,Idaho denkt dat hij gewonnen heeft. Laten we hem laten zien hoe fout hij zit.
+Text/158/text,Beveiligingstroepen naderen! [pulse freq=3][color=YELLOW]Vecht je erdoorheen![/color][/pulse]
+Text/21_fail1/text,Bewakers naderen uit elke richting. [color=CRIMSON]Er is nergens om naartoe te vluchten![/color]
+Text/21_fail2/text,"Viktor verschijnt achter de bewakers, zijn stem koud als staal. [color=STEEL_BLUE]Trek je terug. Nu.[/color]"
+Text/21_fail3/text,De bewakers aarzelen - Viktor was een van hen. [color=CRIMSON]Elena's naam staat op die manifesten. Jullie families kunnen de volgende zijn.[/color]
+Text/21_fail4/text,Sommige bewakers laten hun wapens zakken. Anderen vluchten. Het pad wordt vrij.
+Text/21_fail5/text,"Een explosie schudt de oostvleugel. Murphy's stem kraakt over de communicatie: [color=CHARTREUSE]""Dat is mijn afleiding! BEWEEG!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]De bewakers verspreiden zich richting de explosie. Tommy zou trots zijn.[/color]
+Text/21_fail7/text,Sasha tackelt de hoofdbewaker van achteren. [color=CHARTREUSE]Ik heb die cel niet overleefd om jou te zien sterven![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]RENNEN! Ik regel dit![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha komt dichterbij, haar hand vindt de jouwe terwijl jullie samen de nieuwe dageraad bekijken.[/color] Wij hebben dit gebouwd. Jij en ik."
+Text/152/text,"Zolang we trouw blijven aan onze wortels, aan de idealen die ons hier brachten... [color=CHARTREUSE]vinden we een weg.[/color] Samen."
+Text/153/text,[color=CHARTREUSE]Je knijpt in haar hand. Samen.[/color]
+Text/154/text,[color=STEEL_BLUE]Sasha staat naast je.[/color] Jouw vuur ontstak de vonk die hun rijk deed branden.
+Text/155/text,[color=STEEL_BLUE]De woede is afgekoeld tot vastberadenheid. Er is nog werk te doen.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha geeft je een bemoedigende glimlach.[/color] Je bent ver gekomen sinds die controlepost. Wij allemaal.
+Text/157/text,"[color=STEEL_BLUE]De schuld zal misschien nooit helemaal verdwijnen, maar je hebt een doel gevonden in de wederopbouw.[/color]"

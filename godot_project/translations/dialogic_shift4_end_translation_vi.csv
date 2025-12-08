@@ -1,0 +1,49 @@
+﻿keys,vi
+Text/215/text,"Murphy chặn bạn ở hành lang, mắt đỏ hoe. Có rảnh phút nào không?"
+Text/216/text,Murphy kéo bạn vào một phòng kho trống và đóng cửa lại.
+Text/217/text,Cái trò đùa tôi kể ở nhà ăn ấy... về việc anh họ tôi nằm trong lô hàng [color=DARK_VIOLET]Khu Dự Trữ Gốc[/color]...
+Text/218/text,Giọng Murphy nghẹn lại. Tôi không nghĩ đó còn là trò đùa nữa.
+Text/219/text,Bạn nói nó không buồn cười. Bạn đã đúng. [color=STEEL_BLUE]Chẳng có gì về chuyện này là buồn cười cả.[/color]
+Text/21a/text,"Tôi thấy bạn rời đi. Khôn ngoan đấy. Tôi ước gì mình có thể ngừng ăn thứ đó, nhưng họ [color=YELLOW]theo dõi[/color]. Họ luôn theo dõi."
+Text/21b/text,"Tôi tìm thấy thứ gì đó trong đồ đạc của anh họ tôi. Đơn từ chối của anh ấy. Mấy thứ tiêu chuẩn thôi, nhưng..."
+Text/21c/text,"Murphy rút ra một tờ đơn nhàu nát. Nhìn vào mã xử lý này. ""[color=CRIMSON]RR-UTIL-7[/color]."""
+Text/21d/text,Tôi đã tra nó trong kho lưu trữ. RR là viết tắt của [pulse freq=2][color=DARK_VIOLET]Khu Dự Trữ Gốc[/color][/pulse]. UTIL nghĩa là... [color=CRIMSON]tận dụng[/color].
+Text/21d_breakdown1/text,[wave amp=20 freq=3]Tay Murphy bắt đầu run rẩy.[/wave] Anh họ tôi... Tommy... anh ấy mới hai mươi ba tuổi.
+Text/21d_breakdown2/text,Anh ấy đến đây để tìm một [color=CHARTREUSE]cuộc sống tốt đẹp hơn[/color]. Trượt một lần kiểm tra. Một lần thôi. [color=STEEL_BLUE]Chỉ là sai thời điểm.[/color]
+Text/21d_breakdown3/text,"Murphy trượt xuống tường, úp mặt vào tay. Và tôi... tôi đã [tornado radius=3 freq=2][color=CRIMSON]ĂN[/color][/tornado] thứ đó. Mỗi ngày."
+Text/21d_breakdown4/text,"Murphy nhìn lên bạn, nước mắt giàn giụa. [pulse freq=2][color=CRIMSON]Nếu tôi đã ăn ANH ẤY thì sao?[/color][/pulse]"
+Choice/21e/text,Murphy... tôi rất tiếc. Tôi ở bên bạn. Chúng ta sẽ cùng nhau tìm ra sự thật.
+Choice/21f/text,"Murphy, chuyện này nguy hiểm. Chúng ta nên tránh xa nó."
+Choice/220/text,Có lẽ chỉ là trùng hợp thôi. Đừng vội kết luận.
+Text/221_comfort1/text,"Bạn quỳ xuống cạnh Murphy, đặt tay lên vai anh ấy."
+Text/221/text,Murphy nắm chặt tay bạn như một chiếc phao cứu sinh. [color=CHARTREUSE]Cảm ơn bạn.[/color] Tôi cứ nghĩ mình sắp phát điên rồi.
+Text/221_tommy/text,[color=STEEL_BLUE]Giọng anh ấy ổn định hơn một chút.[/color] Vì Tommy. Chúng ta làm điều này vì Tommy. Và tất cả những người khác mà họ đã bắt đi.
+Text/222/text,Cũng có những người khác nghi ngờ. Sasha đã tập hợp mọi người. Tôi nghĩ cô ấy tin tưởng bạn.
+Text/223/text,"Murphy lau mắt, cố gắng trấn tĩnh. Ừ. Ừ, bạn có lẽ đúng. Quên những gì tôi đã nói đi."
+Text/224/text,Nhưng nếu bạn đổi ý... tôi sẽ ở đây. [color=STEEL_BLUE]Một mình với những câu hỏi của tôi. Và những cơn ác mộng của tôi.[/color]
+Text/225/text,Trùng hợp ư. Murphy cười cay đắng qua những giọt nước mắt. Chắc chắn rồi. Và Tommy cứ thế [color=CRIMSON]biến mất[/color] vào hư không.
+Text/226/text,Cứ tự nhủ với bản thân như vậy đi. Xem nó giúp bạn ngủ được bao lâu. [color=STEEL_BLUE]Nó chẳng giúp tôi chút nào.[/color]
+Text/227/text,Sasha xuất hiện ở quầy của bạn khi ca làm việc cuối cùng kết thúc. Trông bạn như vừa thấy ma vậy.
+Text/228/text,Để tôi đoán xem - Murphy đã kể cho bạn nghe về người anh em họ của anh ta rồi phải không?
+Text/229/text,Sasha gật đầu tán thành. Tốt. Chúng ta cần những người biết đặt câu hỏi.
+Text/22a/text,Sasha cẩn thận nhìn vào mặt bạn. Bạn sợ hãi. Điều đó thông minh đấy. Nhưng nỗi sợ sẽ không cứu được ai đâu.
+Text/22b/text,"Tôi đã theo dõi bạn từ ngày đầu tiên. Cái cách bạn [color=YELLOW]do dự[/color] khi Russet nói về ""xử lý."""
+Text/22c/text,Bạn đã hỏi điều gì xảy ra với những củ khoai tây bị từ chối. Điều đó cần sự dũng cảm. [color=CHARTREUSE]Hầu hết chỉ chào và đóng dấu.[/color]
+Text/22d/text,Sasha ghé sát hơn. Có một quy luật. Mọi củ khoai tây chúng ta từ chối? Biến mất trong vòng 48 giờ. Không có hồ sơ trục xuất. Không có chuyển giao.
+Text/22e/text,Nhưng sản lượng [color=DARK_VIOLET]Kho Dự Trữ Củ[/color]? [tornado radius=3 freq=2][color=CRIMSON]Nó tăng lên.[/color][/tornado] Lần nào cũng vậy.
+Choice/22f/text,Tôi tin bạn. Tôi có thể giúp gì?
+Choice/230/text,Tôi cần thấy bằng chứng trước khi tôi mạo hiểm tất cả.
+Text/231/text,"Mắt Sasha sáng lên. Tôi biết mình đã chọn đúng người. Tối mai, sau ca làm. Tôi sẽ cho bạn thấy những gì tôi đã tìm được."
+Text/232/text,Cho đến lúc đó
+Text/233/text,Được thôi. Bằng chứng sẽ đến. Chỉ là... hãy để mắt đến mọi thứ trong ca làm việc ngày mai.
+Text/234/text,"Hãy xem những [color=CRIMSON]củ khoai tây bị từ chối[/color] đi đâu. Nếu có thể, hãy theo dõi những chiếc xe tải."
+Text/235/text,Bạn lấy ra bức ảnh mà củ khoai tây tuyệt vọng đã đưa cho bạn. Vợ của cô ấy. [color=STEEL_BLUE]Bây giờ cô ấy đang ở đâu?[/color]
+Text/236/text,Nếu những gì Sasha và Murphy đang nói là sự thật... cô ấy đã bị...
+Text/237/text,Bạn không thể hoàn thành suy nghĩ đó. Nhưng bạn [color=CHARTREUSE]sẽ không quên khuôn mặt cô ấy[/color].
+Text/238/text,"Ngày mai, mọi thứ sẽ thay đổi. Hoặc bạn tìm thấy câu trả lời, hoặc bạn chôn vùi những câu hỏi mãi mãi."
+Text/239/text,Một điều chắc chắn là: [color=YELLOW]không thể quay lại với sự vô tư hạnh phúc[/color] nữa.
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

@@ -14,3 +14,5 @@ Text/61/text,"Votre première garde commence maintenant. Vérifiez soigneusement
 Text/62/text,"Remplissez votre quota, évitez les sanctions. [color=MEDIUM_VIOLET_RED]Gloire à la Pomme de Terre ![/color]"
 Choice/5d/disabled_text,
 Choice/5c/disabled_text,
+Text/184b/text,Ceux qui posent trop de questions ? Ils sont [color=CRIMSON]réaffectés[/color]. Définitivement.
+Text/62b/text,"Et n'oubliez pas, [color=MEDIUM_VIOLET_RED]Gloire à Spud ![/color]"

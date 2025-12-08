@@ -21,3 +21,13 @@ Choice/ac/disabled_text,
 Choice/b2/disabled_text,
 Choice/b1/disabled_text,
 Choice/ad/disabled_text,
+Text/b4_viktor1/text,En kraftig sikkerhetsvakt griper tak i armen din idet du går forbi. Ansiktet hans er furet av bekymring.
+Text/b4_viktor2/text,"Hei... unnskyld at jeg forstyrrer deg. Du er en av tollerne, ikke sant? Jeg heter [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Jeg har spurt alle om kona mi, [color=GOLD]Elena[/color]. Elena Petrov. Hun krysset denne grenseposten for tre uker siden."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Mislykket inspeksjon.[/color] De sa hun ville bli behandlet og returnert hjem, men... jeg har ikke hørt noe."
+Text/b4_viktor5/text,Stemmen hans skjelver. Ingen vil fortelle meg noe. Vet du hvor de avviste reisende drar?
+Choice/b4_viktor6/text,"""Jeg beklager, Viktor. Jeg vet ikke. Men jeg skal holde øye med det."""
+Choice/b4_viktor7/text,"""Jeg kan ikke diskutere behandlingsdetaljer. Sikkerhetsprotokoller."""
+Text/b4_viktor8/text,Viktors øyne viser et glimt av håp. [color=CHARTREUSE]Takk.[/color] Alt du finner ut... vær så snill. Hun er alt jeg har.
+Text/b4_viktor9/text,"Viktor nikker, nedslått. [color=STEEL_BLUE]Greit. Protokoller.[/color] Jeg forstår."
+Text/b4_viktor10/text,Men hvis du ombestemmer deg... [color=YELLOW]Jeg må vite hva som skjedde med henne.[/color]

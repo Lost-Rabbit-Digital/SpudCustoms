@@ -1,0 +1,27 @@
+﻿keys,ar
+Text/69_photo1/text,تسحب الصورة مرة أخرى. [color=GOLD]ماريس بايبر[/color]. وجهها طيب للغاية.
+Text/69_photo2/text,كانت زوجتها يائسة للغاية. [color=STEEL_BLUE]ماذا حدث لها؟[/color]
+Text/69_photo3/text,تلاحظ شيئًا في خلفية الصورة - شاحنة تحمل [color=DARK_VIOLET]شعارًا أرجوانيًا[/color].
+Text/69_photo4/text,هذا الرمز... لقد رأيته على شحنات الكافتيريا. [wave amp=15 freq=2][color=DARK_VIOLET]رووت ريزيرف.[/color][/wave]
+Text/69/text,هل يمكننا التحدث؟ في مكان خاص؟ [color=YELLOW]هناك الكثير من العيون والآذان هنا.[/color]
+Text/6a/text,قابلني عند مخزن التخزين القديم بعد ورديتك. لدي شيء تحتاج أن تراه.
+Text/6a_photo1/text,ساشا... هذه الصورة. زوجة المرأة أعطتها لي. كانت تبحث عنها.
+Text/6a_photo2/text,يرتسم الحزن على وجه ساشا. [color=STEEL_BLUE]دعني أرى.[/color]
+Text/6a_photo3/text,تدرس ساشا الصورة، وتزداد تعابير وجهها قتامةً. [color=CRIMSON]أنا أتعرف على تلك الشاحنة.[/color]
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]احتفظ بهذه الصورة بأمان.[/color][/pulse] قد تكون مهمة لاحقًا. ثق بي.
+Text/6b/text,هل تتقرب من الزملاء؟ تذكر، أن تصبح ودودًا قد يؤدي إلى... [color=DARK_ORANGE]حكم متأثر[/color].
+Text/6c/text,لقد كنت أجمع معلومات عن البطاطا المرفوضة. [wave amp=20 freq=3][color=CRIMSON]إنهم لا يذهبون إلى مراكز الترحيل.[/color][/wave]
+Text/6d/text,[tornado radius=4 freq=2][color=CRIMSON]إنهم يذهبون إلى منشآت معالجة رووت ريزيرف.[/color][/tornado] كل واحد منهم.
+Text/6e/text,تُظهر هذه الوثائق بطاطا يتم تفريغها في منشأة تحمل شعار [color=DARK_VIOLET]رووت ريزيرف[/color].
+Text/6f/text,أعتقد أنني أعرف ما الذي يحدث...
+Text/6f2/text,[pulse freq=3][color=CRIMSON]إنهم يتحولون إلى رووت ريزيرف.[/color][/pulse]
+Choice/70/text,"""هذا جنون. إنهم... يعالجون البطاطا لتحويلها إلى طعام؟"""
+Choice/71/text,"""نحتاج إلى المزيد من الأدلة قبل توجيه الاتهامات."""
+Text/72/text,[color=CRIMSON]أكل لحوم البشر بخطوات إضافية.[/color] هذا ما تمثله [wave amp=25 freq=3][color=DARK_VIOLET]رووت ريزيرف[/color][/wave]. وقد كنا نساعد في اختيار مكوناتهم.
+Text/73/text,لقد كنت أجمع الأدلة لأشهر. أبقِ عينيك مفتوحتين. سترى أنني على حق.
+Text/74/text,فجأة يدوي إنذار بعيد
+Text/75/text,يجب أن نذهب. يقومون بعمليات تفتيش أمنية في هذه الساعة. فكر فيما أريتك إياه.
+Text/76/text,"تدس ساشا المجلد في يديك. ""[color=YELLOW]احتفظ بهذا بأمان. ولا تثق بأحد.[/color]"""
+Text/77/text,تخفي المجلد داخل سترتك. [color=DARK_VIOLET]رووت ريزيرف[/color]. حالات الرفض. البطاطا المفقودة. كل هذا يتصل بطريقة [tornado radius=3 freq=2][color=CRIMSON]مرعبة[/color][/tornado].
+Choice/70/disabled_text,
+Choice/71/disabled_text,

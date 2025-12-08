@@ -45,3 +45,41 @@ Choice/27/disabled_text,
 Choice/26/disabled_text,
 Choice/25/disabled_text,
 Choice/16/disabled_text,
+Text/1a_rescue1/text,Egy felderítő rohan oda. Megtaláltuk! [color=CHARTREUSE]Sasha az őrizetes blokkban van![/color]
+Text/1a_rescue2/text,Készülnek... [tornado radius=3 freq=2][color=CRIMSON]feldolgozni őt[/color][/tornado]... kevesebb mint egy órán belül!
+Text/1a_rescue3/text,Meg kell mentenünk. [pulse freq=2][color=CHARTREUSE]Ő indította el mindezt.[/color][/pulse] Nem megyünk el nélküle.
+Text/1a_rescue4/text,"[wave amp=25 freq=3][color=YELLOW]Rohanj át a létesítményen![/color][/wave] Érd el Sashát, mielőtt túl késő lesz!"
+Text/1a_rescue_fail1/text,Megbotlasz. Az út előtt őrök állják el az utat!
+Text/1a_rescue_fail2/text,Viktor beront egy oldalsó ajtón. [color=CHARTREUSE]MENJ! Feltartom őket![/color]
+Text/1a_rescue_fail3/text,"Elenaért. Mindannyiukért. [color=STEEL_BLUE]Nem hagyom, hogy még egy meghaljon![/color]"
+Text/1a_rescue_fail4/text,Murphy meghúzza a tűzriasztót. [color=CHARTREUSE]Tommyért![/color] A sprinklerek elvakítják az őröket!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Elterelem a figyelmüket. Hozd ki onnan![/color]
+Text/1a_rescue_fail6/text,"Egy [color=YELLOW]feldolgozó futószalag elakad[/color], szikrákat szórva és elterelve az őrök figyelmét!"
+Text/1a_rescue_fail7/text,A sors – vagy a feldolgozottak szellemei – második esélyt ad neked.
+Text/1a_rescue5/text,"Sasha felnéz a cellájából, zúzódottan, de megtörhetetlenül. Szemei elkerekednek. [color=CHARTREUSE]Eljöttél.[/color]"
+Text/1a_rescue6/text,"Persze, hogy eljöttem. [color=CHARTREUSE]Ezt együtt fejezzük be.[/color]"
+Choice/1a_rescue7/text,"Féltem, hogy soha többé nem látlak."
+Choice/1a_rescue8/text,Halálra aggódtattál minket. Ne tedd ezt még egyszer.
+Choice/1a_rescue9/text,Dolgunk van. Idaho vár.
+Text/1a_rescue10/text,"[color=CHARTREUSE]Sasha egy rövid ölelésre húz magához.[/color] Tudtam, hogy eljössz. Soha nem kételkedtem."
+Text/1a_rescue11/text,"Most fizettessük meg velük mindenkiért, akit elvettek. [color=CHARTREUSE]Együtt.[/color]"
+Text/1a_rescue12/text,"Sasha fájdalmán keresztül is halványan elmosolyodik. [color=STEEL_BLUE]Megpróbálom.[/color] De vannak dolgok, amik megérik a kockázatot."
+Text/1a_rescue13/text,"Az, hogy itt vagy, bizonyítja ezt. Most fejezzük be ezt."
+Text/1a_rescue14/text,"Sasha bólint, elszántsága újra fellángol. [color=CHARTREUSE]Igazad van.[/color] Az érzelgősség várhat."
+Text/1a_rescue15/text,"Idaho azt hiszi, győzött. Mutassuk meg neki, mennyire téved."
+Text/158/text,Biztonsági erők közelednek! [pulse freq=3][color=YELLOW]Verekedd át magad![/color][/pulse]
+Text/21_fail1/text,Őrök közelednek minden irányból. [color=CRIMSON]Nincs hova futni![/color]
+Text/21_fail2/text,"Viktor megjelenik az őrök mögött, hangja acélhideg. [color=STEEL_BLUE]Álljatok le. Most.[/color]"
+Text/21_fail3/text,A őrök haboznak – Viktor a sajátjuk volt. [color=CRIMSON]Elena neve szerepel azokon a jegyzékekben. A családjaitok lehetnek a következők.[/color]
+Text/21_fail4/text,Néhány őr leengedi a fegyverét. Mások elmenekülnek. Az út szabaddá válik.
+Text/21_fail5/text,"Robbanás rázza meg a keleti szárnyat. Murphy hangja recseg a rádión: [color=CHARTREUSE]""Ez az én elterelésem! MOZGÁS!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Az őrök szétszóródnak a robbanás felé. Tommy büszke lenne.[/color]
+Text/21_fail7/text,"Sasha hátulról földre viszi a vezető őrt. [color=CHARTREUSE]Nem azért éltem túl azt a cellát, hogy most téged nézzelek meghalni![/color]"
+Text/21_fail8/text,[color=STEEL_BLUE]FUSS! Én megoldom![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha közelebb lép, keze megtalálja a tiédet, miközben együtt figyelitek az új hajnalt.[/color] Ezt mi építettük. Te és én."
+Text/152/text,"Amíg hűek maradunk a gyökereinkhez, az ideálokhoz, amelyek idehoztak minket... [color=CHARTREUSE]találni fogunk egy utat.[/color] Együtt."
+Text/153/text,[color=CHARTREUSE]Megszorítod a kezét. Együtt.[/color]
+Text/154/text,"[color=STEEL_BLUE]Sasha melletted áll.[/color] A te tüzed gyújtotta meg azt a szikrát, ami felégette a birodalmukat."
+Text/155/text,[color=STEEL_BLUE]A harag elszántsággá hűlt. Még van munka.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha támogatóan rád mosolyog.[/color] Hosszú utat tettél meg attól az ellenőrzőponttól. Mindannyian.
+Text/157/text,"[color=STEEL_BLUE]A bűntudat talán sosem múlik el teljesen, de célt találtál az újjáépítésben.[/color]"

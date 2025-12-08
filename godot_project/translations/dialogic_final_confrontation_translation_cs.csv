@@ -45,3 +45,41 @@ Choice/27/disabled_text,
 Choice/26/disabled_text,
 Choice/25/disabled_text,
 Choice/16/disabled_text,
+Text/1a_rescue1/text,Zvěd přiběhne. Našli jsme ji! [color=CHARTREUSE]Saša je v zadržovacím bloku![/color]
+Text/1a_rescue2/text,Připravují se ji... [tornado radius=3 freq=2][color=CRIMSON]zpracovat[/color][/tornado]... za necelou hodinu!
+Text/1a_rescue3/text,Musíme ji zachránit. [pulse freq=2][color=CHARTREUSE]Ona to všechno začala.[/color][/pulse] Bez ní neodejdeme.
+Text/1a_rescue4/text,"[wave amp=25 freq=3][color=YELLOW]Probojujte se zařízením![/color][/wave] Dostaňte se k Saše, než bude příliš pozdě!"
+Text/1a_rescue_fail1/text,Klopýtnete. Cesta vpřed je zablokovaná strážemi!
+Text/1a_rescue_fail2/text,Viktor se vřítí bočními dveřmi. [color=CHARTREUSE]JDĚTE! Zadržím je![/color]
+Text/1a_rescue_fail3/text,Za Elenu. Za všechny z nich. [color=STEEL_BLUE]Nenechám zemřít nikoho dalšího![/color]
+Text/1a_rescue_fail4/text,Murphy strhne požární alarm. [color=CHARTREUSE]Za Tommyho![/color] Sprinklery oslepí stráže!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Vytvořím rozptýlení. Dostaňte ji odtamtud![/color]
+Text/1a_rescue_fail6/text,"[color=YELLOW]Zpracovatelský dopravník se zasekne[/color], sype jiskry a rozptyluje stráže!"
+Text/1a_rescue_fail7/text,Osud – nebo duchové zpracovaných – vám dává druhou šanci.
+Text/1a_rescue5/text,"Saša vzhlédne ze své cely, zbitá, ale nezlomená. Její oči se rozšíří. [color=CHARTREUSE]Přišel jsi.[/color]"
+Text/1a_rescue6/text,"Samozřejmě, že jsem přišel. [color=CHARTREUSE]Tohle dokončíme společně.[/color]"
+Choice/1a_rescue7/text,"Bál jsem se, že už tě nikdy neuvidím."
+Choice/1a_rescue8/text,Měli jsme o tebe hrozný strach. Už to nedělej.
+Choice/1a_rescue9/text,Máme práci. Idaho čeká.
+Text/1a_rescue10/text,"[color=CHARTREUSE]Saša tě krátce obejme.[/color] Věděla jsem, že přijdeš. Nikdy jsem nepochybovala."
+Text/1a_rescue11/text,"Teď je necháme zaplatit za všechny, které vzali. [color=CHARTREUSE]Společně.[/color]"
+Text/1a_rescue12/text,Saša se přes bolest slabě usměje. [color=STEEL_BLUE]Zkusím to.[/color] Ale některé věci stojí za riziko.
+Text/1a_rescue13/text,Tvá přítomnost to dokazuje. Teď to dokončíme.
+Text/1a_rescue14/text,"Saša přikývne, její odhodlání je znovu zažehnuto. [color=CHARTREUSE]Máš pravdu.[/color] Sentiment může počkat."
+Text/1a_rescue15/text,"Idaho si myslí, že vyhrál. Ukažme mu, jak moc se mýlí."
+Text/158/text,Bezpečnostní složky se stahují! [pulse freq=3][color=YELLOW]Probojujte se![/color][/pulse]
+Text/21_fail1/text,Stráže se stahují ze všech směrů. [color=CRIMSON]Není kam utéct![/color]
+Text/21_fail2/text,"Viktor se objeví za strážemi, hlas chladný jako ocel. [color=STEEL_BLUE]Ustupte. Hned.[/color]"
+Text/21_fail3/text,Stráže váhají – Viktor byl jeden z nich. [color=CRIMSON]Elenino jméno je na těch seznamech. Vaše rodiny by mohly být další.[/color]
+Text/21_fail4/text,Někteří strážci sníží zbraně. Jiní utíkají. Cesta se uvolňuje.
+Text/21_fail5/text,"Výbuch otřásá východním křídlem. Murphyho hlas praská v komunikátoru: [color=CHARTREUSE]""To je moje odlákání! POHYB!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Stráže se rozprchnou k výbuchu. Tommy by byl pyšný.[/color]
+Text/21_fail7/text,"Saša srazí hlavního strážce zezadu. [color=CHARTREUSE]Nepřežila jsem tu celu jen proto, abych tě viděla umřít![/color]"
+Text/21_fail8/text,[color=STEEL_BLUE]UTÍKEJ! Já to zvládnu![/color]
+Text/151/text,"[color=CHARTREUSE]Saša se přiblíží, její ruka najde tu tvou, zatímco společně sledujete nový úsvit.[/color] Tohle jsme vybudovali. Ty a já."
+Text/152/text,"Dokud zůstaneme věrní svým kořenům, ideálům, které nás sem přivedly... [color=CHARTREUSE]najdeme cestu.[/color] Společně."
+Text/153/text,[color=CHARTREUSE]Stiskneš jí ruku. Společně.[/color]
+Text/154/text,"[color=STEEL_BLUE]Saša stojí vedle tebe.[/color] Tvůj oheň zažehl jiskru, která spálila jejich impérium."
+Text/155/text,[color=STEEL_BLUE]Hněv se ochladil v odhodlání. Stále je co dělat.[/color]
+Text/156/text,[color=STEEL_BLUE]Saša ti věnuje povzbudivý úsměv.[/color] Ušel jsi dlouhou cestu od té kontrolní stanice. Všichni jsme ji ušli.
+Text/157/text,"[color=STEEL_BLUE]Vina možná nikdy zcela nezmizí, ale našel jsi smysl v obnově.[/color]"

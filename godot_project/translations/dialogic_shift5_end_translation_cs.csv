@@ -17,3 +17,6 @@ Text/a4/text,Toto dokazuje všechno. Odpor vytvoří kopie. [tornado radius=3 fr
 Text/a5/text,"Překročili jste hranici. [wave amp=20 freq=3][color=YELLOW]Není návratu.[/color][/wave] Až se pravda rozšíří, Spud bude transformován."
 Choice/9c/disabled_text,
 Choice/9d/disabled_text,
+Text/9a_viktor1/text,Prohlížíte jména na manifestu... a jedno upoutá vaši pozornost. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,"To jméno... už jste ho slyšeli. Bezpečnostní strážník Viktor se zmínil, že jeho žena zmizela."
+Text/9a_viktor3/text,"""[color=CRIMSON]Stav: Zpracováno. Dávka RR-2851.[/color]"" Datováno před dvěma týdny."

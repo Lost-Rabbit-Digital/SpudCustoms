@@ -1,0 +1,26 @@
+﻿keys,pl
+Text/200/text,"Hej, nowy ziemniaku! Ciężka zmiana, co? Nazywam się Murphy. Jestem tu od trzech sezonów."
+Text/201/text,"Widziałem cię, jak rozmawiałeś z Sashą wcześniej. Ona jest... [color=STEEL_BLUE]inna[/color]. W dobrym sensie, tak mi się wydaje."
+Choice/202/text,"Wydaje się miła. Dała mi kilka rad, jak zachować czujność."
+Choice/203/text,Tylko się przedstawiliśmy. Nic specjalnego.
+Text/204/text,Murphy rozgląda się nerwowo. Tak.
+Text/205/text,"Między nami? Ta audycja radiowa o ""zaginionych ziemniakach""... mój kuzyn zaginął w zeszłym miesiącu. Nie przeszedł kontroli."
+Text/206/text,"Mądrze. Nie wychylaj się, rób swoje. To sobie powtarzam każdego dnia."
+Text/207/text,"Głos Murphy'ego cichnie. Chociaż czasem zastanawiam się, dokąd tak naprawdę trafiają te wszystkie odrzucone ziemniaki..."
+Text/208/text,W stołówce
+Text/209/text,"Wpatrujesz się w gęstą, purpurowo-brązową pastę. Wszyscy jedzą ją bez pytania. Podobno jest pożywna."
+Choice/20a/text,Zjedz Rezerwę Korzeniową jak wszyscy inni
+Choice/20b/text,Odsuń ją na bok - nie jesteś głodny
+Text/20c/text,"Smak jest... ziemisty. Bogaty. Coś w nim wydaje się [color=STEEL_BLUE]niepokojąco znajome[/color], ale nie potrafisz sobie przypomnieć dlaczego."
+Text/20d/text,"Starszy oficer zauważa. ""Nie marnuj, nie będziesz potrzebował, kiełku. To jest [pulse freq=2][color=DARK_VIOLET]najwyższej jakości pożywienie[/color][/pulse]."""
+Text/20e/text,Mruczysz wymówkę o rozstroju żołądka. Oficer wzrusza ramionami i odchodzi.
+Text/20f/text,"W swoich kwaterach nie możesz pozbyć się słów Sashy. ""[color=YELLOW]Nie wszystko jest takie, jakim się wydaje.[/color]"""
+Text/210/text,"Zapytałeś Russeta o odrzucone ziemniaki w swoim pierwszym dniu. Jego odpowiedź była wymijająca. ""[color=VIOLET]Przetworzone. Zgodnie z protokołem.[/color]"""
+Text/211/text,"Przetworzone [color=STEEL_BLUE]jak[/color], dokładnie?"
+Text/212/text,Byłeś tak chętny do służby. Tak dumny z wyboru. Ale duma nie tłumaczy [color=CRIMSON]zaginionych ziemniaków[/color].
+Text/213/text,"Radio podało, że doniesienia o zaginięciach ""trwają"". To oznacza, że dzieje się to od jakiegoś czasu."
+Text/214/text,"Sen przychodzi powoli. Kiedy już przychodzi, śnisz o [wave amp=15 freq=2][color=DARK_VIOLET]purpurowych rzekach[/color][/wave] płynących pod punktem kontrolnym."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

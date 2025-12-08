@@ -1,0 +1,79 @@
+﻿keys,zh-TW
+Text/299_suppress1/text,隨著抵抗軍的襲擊開始，混亂爆發。爆炸震撼檢查站。
+Text/299_suppress2/text,你可以逃跑。你可以躲藏。然而，你[color=DARK_ORANGE]選擇了你的立場[/color]。
+Text/299_suppress3/text,褐皮抓住了你的手臂。[pulse freq=2][color=YELLOW]現在是你的機會！[/color][/pulse]證明你的忠誠！
+Text/299_suppress4/text,抵抗軍正試圖突破東門！[color=CRIMSON]阻止他們！[/color]
+Text/299_suppress5/text,你握緊了武器。這些可能是你認識的人。你曾幫助過的人。
+Text/299_suppress6/text,但生存是有代價的。[color=DARK_ORANGE]你已經做出了選擇。[/color]
+Text/299_suppress7/text,[pulse freq=3][color=CRIMSON]為國家而戰！[/color][/pulse]鎮壓抵抗軍的襲擊！
+Text/299_suppress8/text,當硝煙散去，屍體遍佈地面。有些人佩戴著抵抗軍徽章。
+Text/299_suppress9/text,[color=STEEL_BLUE]你在倒下的人群中認出了面孔。[/color]
+Text/299_suppress10/text,墨菲躺在死者之中。他的雙眼茫然地凝視著虛空。湯米的相片緊握在他的手中。
+Text/299_suppress11/text,[color=STEEL_BLUE]他為自己所信仰的事物而戰死。你卻親手扼殺了它。[/color]
+Text/300/text,抵抗軍的襲擊失敗了。檢查站屹立不倒，比以往任何時候都更堅固。而你依然堅守崗位。
+Text/301/text,[pulse freq=2][color=GOLD]愛達荷總理萬歲！[/color][/pulse]薯國的捍衛者！叛徒的征服者！
+Text/302/text,一顆身著華麗禮服的巨大馬鈴薯，在精銳衛兵的簇擁下，從一輛裝甲車上下來。
+Text/303/text,愛達荷用冰冷而算計的眼神審視著檢查站。
+Text/304/text,褐皮急忙上前，深深地鞠了一躬。總理！您的蒞臨令我們深感榮幸！
+Text/305/text,叛徒已按照您的命令[color=DARK_VIOLET]處理[/color]完畢。本季度產量增長了40%！
+Text/306/text,這就是那位在起義期間保持忠誠的警官嗎？
+Text/307/text,是的，總理。堅定不移的奉獻。舉報了可疑活動。一位模範公民。
+Text/308/text,愛達荷上前，將一枚獎章別在你的胸前——[color=GOLD]黃金薯塊[/color]。
+Text/309/text,為了卓越的貢獻。你已證明，[color=DARK_ORANGE]對薯國的忠誠[/color]永遠會得到回報。
+Choice/30a/text,謝謝您，總理。薯國萬歲。
+Choice/30b/text,我只是盡我的職責，長官。（強顏歡笑）
+Text/30c/text,愛達荷的笑容沒有達到眼底。是的。你確實做到了。
+Text/30d/text,愛達荷審視了你許久。職責。[color=STEEL_BLUE]一個如此簡單的詞，卻代表著如此複雜的行為。[/color]
+Text/30e/text,我想知道，那些如此「盡忠職守」的人，會被什麼[color=CRIMSON]惡夢[/color]糾纏。
+Text/30f/text,為了慶祝勝利，一場盛宴正在舉行。餐桌上擺滿了食物，其中不乏大份的[color=DARK_VIOLET]根莖珍藏[/color]。
+Text/310/text,羅素舉起一杯濃稠的紫色液體。「乾杯！敬那些滋養我們的[color=CRIMSON]叛徒[/color]！」
+Text/311/text,房間裡傳來笑聲。有些人笑得緊張，大多數人則是真心實意地笑。
+Text/312/text,他將一個盤子推向你。「嚐嚐這批新的[color=DARK_VIOLET]『反抗者特調』[/color]吧。這是莎莎對馬鈴薯國未來的貢獻。」
+Text/313/text,你的胃一陣翻騰。盤子裡的食物。[color=CRIMSON]莎莎。[/color]墨菲的表親。照片裡的妻子。
+Text/314/text,[tornado radius=3 freq=2][color=CRIMSON]他們所有人。[/color][/tornado]
+Choice/315/text,強迫自己吃下去 - 維持你的偽裝
+Choice/316/text,推開盤子 - 你做不到
+Text/317/text,你將叉子舉到唇邊。閉上眼睛。[color=STEEL_BLUE]咀嚼。吞嚥。別想。[/color]
+Text/318/text,羅素讚許地點點頭。「很好。[color=DARK_ORANGE]你會前途無量。[/color]」
+Text/319/text,你推開盤子。「我感覺不太舒服。白天的興奮情緒...」
+Text/31a/text,羅素的眼睛短暫地瞇了一下，然後又柔和下來。「當然。真是[color=YELLOW]敏感的體質[/color]。」
+Text/31b/text,「好好休息。明天，我們還有[color=CRIMSON]更多處理工作[/color]要監督。」
+Text/31c/text,你回到你的住處。獎章沉甸甸地壓在你的胸口。
+Text/31d/text,你拿出失蹤妻子的照片。她現在可能和那些食物在同一批次了。
+Text/31e/text,你曾承諾要找到她。[color=STEEL_BLUE]你找到了她。[/color]只是，這不是你們任何一方所希望的方式。
+Text/31f/text,墨菲。你的朋友。信任你的人。他曾是反抗軍的一員。
+Text/320/text,[color=CRIMSON]曾是。[/color]
+Text/321/text,你凝視著窗戶裡的倒影。獎章閃閃發光。[color=DARK_ORANGE]黃金塊莖[/color]。馬鈴薯國的英雄。
+Text/322/text,[color=STEEL_BLUE]披著馬鈴薯皮的怪物。[/color]
+Text/323/text,那晚，你夢見了莎莎。她沒有指責。沒有憤怒。那樣會比較容易。
+Text/324/text,她只是用那雙眼睛看著你。她輕聲說道：「[color=CHARTREUSE]根扎得很深[/color]。」
+Text/325/text,即使是[color=STEEL_BLUE]腐爛的[/color]也一樣。
+Text/326/text,數月過去。你被晉升為邊境安全區域督察。羅素的左右手。
+Text/327/text,你經手的拒絕數量超越了馬鈴薯國歷史上任何一人。[color=DARK_VIOLET]根源儲備[/color]的產量飆升。
+Text/328/text,你的辦公室很舒適。你的配給很豐厚。你的家人受到保護。
+Text/329/text,你擁有一切被承諾過的事物。
+Text/32a/text,除了[color=STEEL_BLUE]睡眠[/color]以外。除了[color=STEEL_BLUE]平靜[/color]以外。除了面對鏡子的勇氣以外。
+Text/32b/text,有一天，你注意到了。一個[color=GOLD]黃色馬鈴薯徽章[/color]被刻在牆上。然後是另一個。然後是數十個。
+Text/32c/text,一股新的抵抗勢力正在形成。更安靜。更謹慎。從莎夏的錯誤中學習。
+Choice/32d/text,立刻向安全部門報告這些符號
+Choice/32e/text,假裝你沒有看見它們
+Choice/32f/text,留下你自己的印記——一片黃色葉子
+Text/330/text,你提交了報告。又一批嫌疑犯被圍捕。又一次晉升。
+Text/331/text,循環繼續。[color=CRIMSON]你已成為機器。[/color]
+Text/332/text,你走過。什麼也沒說。這不算什麼。[color=STEEL_BLUE]這幾乎什麼也不是。[/color]
+Text/333/text,但這是你第一次選擇不對他們採取行動。
+Text/334/text,也許這算點什麼。也許這[color=YELLOW]為時已晚，微不足道[/color]。
+Text/335/text,當沒有人看著的時候，你在徽章旁邊刻下了一片小小的[color=GOLD]黃色葉子[/color]。
+Text/336/text,一次單獨的反抗行為。遲了數年。但[color=CHARTREUSE]總算有點什麼[/color]。
+Text/337/text,莎夏的聲音在你的記憶中迴盪：「[color=CHARTREUSE]根源深植。[/color]」
+Text/338/text,也許深到足以[color=CHARTREUSE]觸及你[/color]。有一天。
+Text/339/text,馬鈴薯國屹立不倒。[color=DARK_VIOLET]根源儲備[/color]流動不息。消費的循環持續著。
+Text/33a/text,但在某處，在牆壁的裂縫中，[color=CHARTREUSE]新的事物正在生長[/color]。
+Text/33b/text,你是否會成為其中一部分... [color=YELLOW]那個故事尚未書寫[/color]。
+Choice/30a/disabled_text,
+Choice/30b/disabled_text,
+Choice/315/disabled_text,
+Choice/316/disabled_text,
+Choice/32d/disabled_text,
+Choice/32e/disabled_text,
+Choice/32f/disabled_text,

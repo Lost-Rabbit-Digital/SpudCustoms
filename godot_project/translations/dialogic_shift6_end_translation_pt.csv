@@ -1,0 +1,43 @@
+﻿keys,pt
+Text/240/text,"À medida que o turno da noite se encerra, a maioria dos oficiais partiu. Só você e um punhado de guardas restam."
+Text/241/text,Um guarda corpulento se aproxima da sua estação. Chama-se Viktor. Estou de vigia noturna.
+Text/242/text,"Seus olhos estão cansados, assombrados. Você é o novato, certo? Aquele que Russet fica observando?"
+Choice/243/text,Só estou tentando fazer meu trabalho. Por que Russet me observa?
+Choice/244/text,Há algo que eu deveria saber?
+Text/245/text,Ele encolhe os ombros pesadamente. Russet observa todo mundo que faz perguntas. Minha [color=STEEL_BLUE]esposa fez perguntas[/color] uma vez.
+Text/246/text,Ela não está mais por perto para perguntar.
+Text/247/text,"Ele olha em volta, então abaixa a voz. Só... tenha cuidado em quem você confia."
+Text/248/text,E quem você [color=CRIMSON]condena[/color]. Alguns de nós lembram de cada rosto que enviamos para processamento.
+Text/249/text,"Uma batata nervosa se aproxima. Os documentos parecem em ordem, mas você nota o [color=CHARTREUSE]discreto broche de folha[/color] na gola."
+Text/24a/text,"Eles deslizam os documentos. Uma pequena nota está escondida dentro: ""[color=CHARTREUSE]Sasha me enviou. Pacote para a rede. Por favor.[/color]"""
+Text/24b/text,O novo [color=DARK_ORANGE]RealityScan[/color] pisca pronto na sua estação. Um escaneamento e ele detectará elementos forjados nos documentos deles.
+Choice/24c/text,Finja que o scanner falhou e acene para eles passarem
+Choice/24d/text,Use o scanner conforme necessário - você não pode arriscar a exposição
+Choice/24e/text,"Sinalize para Viktor olhar para o outro lado, então deixe-os passar"
+Text/24f/text,"Você toca no scanner, franze a testa, toca de novo. ""Essa coisa maldita está com problemas. Pode passar."""
+Text/250/text,"Alívio inunda o rosto deles. Eles sussurram ""[color=CHARTREUSE]Obrigado[/color]"" e passam apressadamente."
+Text/251/text,"Você encontra o olhar dele e acena na direção do agente. Ele olha para eles, então para você."
+Text/252/text,"Ele vira as costas deliberadamente, estudando a parede. ""[color=STEEL_BLUE]O scanner está com falhas o dia todo.[/color]"""
+Text/253/text,"O agente passa despercebido. Viktor não diz nada, mas vocês compartilharam um segredo agora."
+Text/254/text,"Você executa o escaneamento. A máquina [color=RED]berra[/color]. ""Documentação forjada detectada."""
+Text/255/text,"O horror surge no rosto deles. ""[color=CRIMSON]Você não entende o que fez...[/color]"""
+Text/256/text,"Ele e outros guardas se aproximam. O agente é arrastado, ainda olhando para você."
+Text/257/text,Sasha te encontra nas sombras. Aquele agente estava carregando [color=CHARTREUSE]cópias dos manifestos[/color] para nossos contatos externos.
+Text/258/text,"Por sua causa, a verdade se espalhará além das fronteiras de Spud. [color=CHARTREUSE]Você fez uma diferença real.[/color]"
+Text/259/text,Os olhos de Sasha se arregalam. Viktor ajudou? Eu tinha um pressentimento sobre ele. A esposa dele era...
+Text/25a/text,Ela se cala. Temos mais aliados do que eu pensava.
+Text/25b/text,"Sasha te encontra, com uma expressão fria. Aquele agente tinha uma família. Três brotinhos em casa."
+Text/25c/text,Eu entendo o medo. Mas [color=CRIMSON]o medo tem consequências[/color]. Eles serão processados pela manhã.
+Text/25d/text,Espero que seu histórico limpo valha a pena.
+Text/25e/text,Murphy entra sorrateiramente em seus aposentos. Ouvi dizer que houve alguma agitação na sua estação esta noite.
+Text/25f/text,[color=CHARTREUSE]Bom. Estamos nisso juntos agora.[/color] Não há como voltar atrás.
+Text/260/text,O rosto de Murphy cai. Eu... eu pensei que você estava conosco. O que aconteceu?
+Text/261/text,O turno de amanhã será diferente. As apostas nunca foram tão altas.
+Text/262/text,"Mas, pela primeira vez, você sente que está do [color=CHARTREUSE]lado certo[/color]. Custe o que custar."
+Text/263/text,O rosto do agente te assombra. A família dele nunca saberá por que ele não voltou para casa.
+Text/264/text,[color=STEEL_BLUE]Por sua causa.[/color]
+Choice/243/disabled_text,
+Choice/244/disabled_text,
+Choice/24c/disabled_text,
+Choice/24d/disabled_text,
+Choice/24e/disabled_text,

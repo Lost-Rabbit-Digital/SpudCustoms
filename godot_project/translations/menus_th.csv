@@ -1,0 +1,163 @@
+﻿keys,th
+main_menu_feedback,ข้อเสนอแนะและบั๊ก
+main_menu_version,เวอร์ชัน 1.2.0
+main_menu_new_game,เกมใหม่
+main_menu_continue,เล่นต่อ
+main_menu_level_select,เลือกด่าน
+main_menu_score_attack,ท้าทำคะแนน
+main_menu_options,ตัวเลือก
+main_menu_credits,เครดิต
+main_menu_exit,ออก
+select_language,ภาษา
+social_discord_tooltip,เข้าร่วมดิสคอร์ดของเรา!
+social_steam_tooltip,เยี่ยมชมเราบน Steam
+social_twitch_tooltip,การเชื่อมต่อ Twitch
+twitch_status_disabled,ปิดใช้งาน
+twitch_status_no_viewers,ไม่มีผู้ชมในกลุ่ม
+twitch_status_ready,ผู้ชมพร้อม {count} คน
+twitch_connection_disabled,ปิดใช้งาน
+twitch_connection_disconnected,ไม่ได้เชื่อมต่อ
+twitch_connection_connected,เชื่อมต่อแล้ว
+twitch_connection_connecting,กำลังเชื่อมต่อ...
+options_menu_title,ตัวเลือก
+options_difficulty,ความยาก
+options_difficulty_easy,ง่าย
+options_difficulty_normal,ปกติ
+options_difficulty_expert,เชี่ยวชาญ
+options_music_volume,ระดับเสียงเพลง
+options_sfx_volume,ระดับเสียงเอฟเฟกต์
+options_camera_shake,การสั่นของกล้อง
+options_back,ย้อนกลับ
+paused_menu_title,หยุดชั่วคราว
+shift_summary_title,สรุปกะการทำงาน
+shift_summary_continue,ดำเนินการต่อ
+shift_summary_restart,เริ่มใหม่
+shift_summary_main_menu,เมนูหลัก
+shift_summary_submit_score,ส่งคะแนน
+shift_summary_runner_stats,สถิติผู้หลบหนี
+shift_summary_document_stats,สถิติเอกสาร
+shift_summary_performance,ประสิทธิภาพ
+shift_summary_bonuses,โบนัส
+time_format,{minutes}น. {seconds}วินาที
+shift_complete_success,กะที่ {shift} เสร็จสิ้น\nสำเร็จ!
+shift_complete_failure,กะที่ {shift} เสร็จสิ้น\n{failure}
+strike_limit_reached,[b]ถึงขีดจำกัดการลงโทษ![/b]
+quota_not_met,[b]ไม่ถึงเป้าหมายที่กำหนด![/b]
+shift_summary_title_with_difficulty,สรุปกะการทำงาน\n{difficulty}
+runner_stats_template,\nสถิติผู้หลบหนี\nความพยายามหลบหนี: {runner_attempts}\nยิงขีปนาวุธ: {fired}\nโดนผู้หลบหนี: {hit}\nโดนเป้าหมายสมบูรณ์: {perfect}\nอัตราการยิงโดน: {rate}%
+document_stats_template,\nสถิติเอกสาร\nเอกสารที่ประทับตรา: {stamped}\nอนุมัติมันฝรั่ง: {approved}\nปฏิเสธมันฝรั่ง: {rejected}\nประทับตราสมบูรณ์: {perfect_stamps}
+bonus_stats_template,โบนัส\nโบนัสความเร็วในการดำเนินการ: {processing_speed_bonus}\nโบนัสความแม่นยำในการประทับตรา: {accuracy}\nโบนัสการยิงโดนเป้าหมายสมบูรณ์: {perfect_hit_bonus}\nโบนัสคะแนนรวม: {total_score_bonus}
+performance_stats_template,\nประสิทธิภาพ\nเวลาที่ใช้: {time_taken}\nคะแนนที่คาดหวัง: {expected_score}\nคะแนนรวม: {score}\nเปอร์เซ็นต์คะแนนเกินเป้า: {percent}%\nระดับประสิทธิภาพ:\n{rating}
+performance_exceptional,ยอดเยี่ยม!
+performance_excellent,ยอดเยี่ยม!
+performance_good,ดี
+performance_needs_improvement,ต้องปรับปรุง
+performance_poor,แย่
+global_leaderboard_title,กระดานผู้นำระดับโลก\n- {difficulty}
+getting_leaderboard_scores,กำลังดึงคะแนนกระดานผู้นำ...
+reset_game_label,รีเซ็ตเกม :
+reset_game_button,รีเซ็ต
+mute_label,ปิดเสียง
+fullscreen_label,เต็มจอ :
+resolution_label,ความละเอียด :
+antialiasing_label,แอนติ-เอเลียซิง :
+screenshake_label,การสั่นหน้าจอ :
+mouse_sens_label,ความไวเมาส์ :
+Loading…,กำลังโหลด...
+You lose.,คุณแพ้แล้ว
+You won!,คุณชนะแล้ว!
+Thanks for playing!,ขอบคุณที่เล่น!
+Please Confirm...,โปรดยืนยัน...
+Go back to main menu?,กลับสู่เมนูหลักหรือไม่?
+Quit the game?,ออกจากเกมหรือไม่?
+Cancel,ยกเลิก
+OK,OK
+Controls,การควบคุม
+Mouse Sensitivity :,Mouse Sensitivity :
+Actions & Inputs,การกระทำและการป้อนข้อมูล
+Add,Add
+Remove,ลบ
+Assign Key for {action},กำหนดปุ่มสำหรับ {action}
+Listening for input...,กำลังรอรับอินพุต...
+Press again to confirm...,กดอีกครั้งเพื่อยืนยัน...
+Focus here to assign inputs.,คลิกที่นี่เพื่อกำหนดอินพุต
+Already Assigned,กำหนดแล้ว
+{key} already assigned to {action}.,{key} ถูกกำหนดให้กับ {action} แล้ว
+Remove Key for {action},ลบปุ่มสำหรับ {action}
+Are you sure you want to remove {key} from {action}?,คุณแน่ใจหรือไม่ว่าต้องการลบ {key} ออกจาก {action}?
+Reset,รีเซ็ต
+Audio,เสียง
+Master :,Master :
+Music :,Music :
+SFX :,SFX :
+Ambient :,Ambient :
+Mute :,Mute :
+Video,วิดีโอ
+Fullscreen :,Fullscreen :
+Resolution :,Resolution :
+Anti-Aliasing :,Anti-Aliasing :
+Disabled (Fastest),ปิดใช้งาน (เร็วที่สุด)
+8x (Slowest),8x (ช้าที่สุด)
+Camera Shake :,Camera Shake :
+Normal,ปกติ
+Reduced,ลดลง
+Minimal,ขั้นต่ำ
+None,ไม่มี
+Game,เกม
+Reset Game :,Reset Game :
+Do you want to reset your game data?,คุณต้องการรีเซ็ตข้อมูลเกมของคุณหรือไม่?
+Back,กลับ
+TAKE THEM!,จับกุม!
+"Take your documents, please.",กรุณารับเอกสารของคุณไป
+Continue,ดำเนินการต่อ
+Main Menu,เมนูหลัก
+Submit Score,ส่งคะแนน
+Restart,เริ่มใหม่
+SHIFT SUMMARY,สรุปกะ
+Easy,ง่าย
+Expert,ระดับผู้เชี่ยวชาญ
+Primary,หลัก
+Secondary,รอง
+Primary Interaction,การกระทำหลัก
+Secondary Interaction,การกระทำรอง
+Cancel Interaction,ยกเลิกการกระทำ
+Escape,ออก
+Dialogic Default Action,การกระทำเริ่มต้นของกล่องโต้ตอบ
+Enter,ตกลง
+Left Mouse Button,ปุ่มเมาส์ซ้าย
+Right Mouse Button,ปุ่มเมาส์ขวา
+Start New Game,เริ่มเกมใหม่
+Starting a new game will reset your progress. Are you sure you want to continue?,การเริ่มเกมใหม่จะล้างความคืบหน้าของคุณ คุณแน่ใจหรือไม่ว่าต้องการดำเนินการต่อ?
+"Yes, Start New Game","ใช่, เริ่มเกมใหม่"
+Skip,ข้าม
+History,ประวัติ
+Return,กลับ
+Restart the game?,เริ่มเกมใหม่หรือไม่?
+help_menu_button,ช่วยเหลือ
+help_menu_title,วิธีการเล่น
+help_tab_basics,พื้นฐาน
+help_tab_gameplay,การเล่นเกม
+help_tab_minigames,มินิเกม
+help_basics_intro,[b]ยินดีต้อนรับสู่ Spud Customs![/b]\n\nคุณคือเจ้าหน้าที่ด่านตรวจมันฝรั่ง หน้าที่ของคุณคือตรวจสอบเอกสาร อนุมัติหรือปฏิเสธผู้อพยพ และหยุดยั้งผู้ที่พยายามลักลอบข้ามพรมแดน
+help_basics_gate,[b]การเปิดประตู[/b]\nคลิกปุ่มประตูหรือใช้โทรโข่งเพื่อเรียกมันฝรั่งตัวถัดไปมาที่บูธของคุณ
+help_basics_documents,[b]การตรวจสอบเอกสาร[/b]\nลากเอกสารมาที่โต๊ะของคุณเพื่อตรวจสอบ ตรวจสอบชื่อ วันที่ และรายละเอียดอื่น ๆ เทียบกับกฎการเข้าเมืองสำหรับกะปัจจุบัน
+help_basics_stamping,[b]การประทับตราเอกสาร[/b]\nใช้ตราประทับอนุมัติ (สีเขียว) เพื่ออนุญาตให้ผู้อพยพผ่าน หรือตราประทับปฏิเสธ (สีแดง) เพื่อปฏิเสธพวกเขา ความแม่นยำในการประทับตราส่งผลต่อคะแนนของคุณ!
+help_basics_runners,[b]ผู้ลักลอบข้ามพรมแดน[/b]\nมันฝรั่งบางตัวจะพยายามวิ่งผ่านด่านตรวจ! คลิกเพื่อยิงขีปนาวุธและหยุดยั้งพวกมัน การจับเวลาที่สมบูรณ์แบบจะให้คะแนนโบนัส
+help_basics_xray,[b]เครื่องสแกน X-Ray[/b]\nเริ่มตั้งแต่กะที่ 3 ให้ใช้เครื่อง X-ray เพื่อสแกนหาสิ่งของผิดกฎหมายที่ซ่อนอยู่ภายในมันฝรั่ง
+help_gameplay_quota,[b]การทำตามโควตา[/b]\nแต่ละกะมีโควตาจำนวนมันฝรั่งที่คุณต้องดำเนินการ หากทำไม่ถึงโควตา คุณจะถูกไล่ออก!
+help_gameplay_strikes,"[b]การลงโทษ[/b]\nการทำผิดพลาด (อนุมัติ/ปฏิเสธผิดพลาด, ปล่อยผู้ลักลอบข้ามพรมแดนไป) จะทำให้คุณถูกลงโทษ หากถูกลงโทษมากเกินไป เกมจะจบลง!"
+help_gameplay_rules,"[b]กฎการเข้าเมือง[/b]\nตรวจสอบกระดานประกาศสำหรับกฎปัจจุบัน กฎจะเปลี่ยนไปในแต่ละกะ - พื้นที่ต้องห้าม, เอกสารที่จำเป็น, และเงื่อนไขพิเศษ"
+help_gameplay_scoring,"[b]การให้คะแนน[/b]\nรับคะแนนจากการตัดสินใจที่ถูกต้อง, การประทับตราที่สมบูรณ์แบบ, และการหยุดยั้งผู้ลักลอบข้ามพรมแดน โบนัสจะมอบให้สำหรับความเร็วและความแม่นยำ!"
+help_gameplay_difficulty,"[b]ระดับความยาก[/b]\nง่าย: จับเวลาผ่อนปรนขึ้น, กฎน้อยลง ปกติ: ประสบการณ์มาตรฐาน ผู้เชี่ยวชาญ: จับเวลาเข้มงวด, กฎซับซ้อน, คะแนนสูงขึ้น"
+help_minigames_intro,[b]มินิเกม[/b]\nตลอดกะการทำงานของคุณ คุณจะได้พบกับมินิเกมที่สามารถสร้างคะแนนโบนัสได้ ทำภารกิจให้สำเร็จเพื่อรับรางวัล หรือข้ามไปโดยไม่มีบทลงโทษ
+help_minigames_document_scanner,"[b]เครื่องสแกนเอกสาร[/b] (กะที่ 1+)\nใช้แสง UV เพื่อค้นหาองค์ประกอบที่ซ่อนอยู่ในเอกสาร คลิกเพื่อทำเครื่องหมายลายน้ำ, ตราประทับ, และสัญลักษณ์ ค้นหาองค์ประกอบทั้งหมดก่อนหมดเวลา!"
+help_minigames_stamp_sorting,[b]การคัดแยกตราประทับ[/b] (กะ 2+)
+help_minigames_fingerprint_match,[b]จับคู่ลายนิ้วมือ[/b] (กะ 3+)
+help_minigames_code_breaker,[b]ถอดรหัส[/b] (กะ 4+)
+help_minigames_border_chase,[b]ไล่ล่าชายแดน[/b] (กะ 5+)
+help_tab_lore,เนื้อเรื่อง
+help_lore_world_intro,[b]โลกแห่งสปัด[/b]
+help_lore_nation,[b]ประเทศสปัด[/b]
+help_lore_your_role,[b]บทบาทของคุณ[/b]
+help_lore_border,[b]กำแพงอันยิ่งใหญ่[/b]
+help_lore_secrets,[b]เขตสงวนราก[/b]

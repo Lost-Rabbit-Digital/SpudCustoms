@@ -1,0 +1,26 @@
+﻿keys,es
+Text/200/text,"¡Eh, nueva patata! Turno duro, ¿eh? Me llamo Murphy. Llevo aquí tres temporadas ya."
+Text/201/text,"Te vi hablando con Sasha antes. Ella es... [color=STEEL_BLUE]diferente[/color]. Diferente en el buen sentido, creo."
+Choice/202/text,Parece simpática. Me dio algunos consejos sobre cómo mantenerme alerta.
+Choice/203/text,Solo presentaciones. Nada especial.
+Text/204/text,Murphy mira a su alrededor con nerviosismo. Sí
+Text/205/text,"¿Entre tú y yo? Esa emisión de radio sobre ""patatas desaparecidas""... mi primo desapareció el mes pasado. Falló su inspección."
+Text/206/text,"Inteligente. Mantén la cabeza baja, haz tu trabajo. Eso es lo que me digo a mí mismo todos los días."
+Text/207/text,La voz de Murphy baja. Aunque a veces me pregunto adónde van realmente todas esas patatas rechazadas...
+Text/208/text,En la cafetería
+Text/209/text,"Miras fijamente la pasta espesa, de color marrón púrpura. Todos la comen sin cuestionar. Se supone que es nutritiva."
+Choice/20a/text,Come la Reserva de Raíz como todos los demás
+Choice/20b/text,Apártala - no tienes hambre
+Text/20c/text,"El sabor es... terroso. Intenso. Algo en ello se siente [color=STEEL_BLUE]incómodamente familiar[/color], pero no sabes por qué."
+Text/20d/text,"Un oficial superior se da cuenta. ""No desperdicies, no carezcas, brote. Eso es [pulse freq=2][color=DARK_VIOLET]nutrición de primera[/color][/pulse] ahí mismo."""
+Text/20e/text,Murmuras una excusa sobre un malestar estomacal. El oficial se encoge de hombros y sigue adelante.
+Text/20f/text,"De vuelta en tus aposentos, no puedes quitarte de la cabeza lo que dijo Sasha. ""[color=YELLOW]No todo es lo que parece.[/color]"""
+Text/210/text,"Le preguntaste a Russet sobre las patatas rechazadas en tu primer día. Su respuesta fue evasiva. ""[color=VIOLET]Procesadas. Según protocolo.[/color]"""
+Text/211/text,"¿[color=STEEL_BLUE]Cómo[/color] procesadas, exactamente?"
+Text/212/text,Estabas tan ansioso por servir. Tan orgulloso de ser elegido. Pero el orgullo no explica las [color=CRIMSON]patatas desaparecidas[/color].
+Text/213/text,"La radio dijo que los informes de desapariciones ""continúan"". Eso significa que ha estado ocurriendo desde hace un tiempo."
+Text/214/text,"El sueño llega lentamente. Cuando lo hace, sueñas con [wave amp=15 freq=2][color=DARK_VIOLET]ríos morados[/color][/wave] fluyendo bajo el puesto de control."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

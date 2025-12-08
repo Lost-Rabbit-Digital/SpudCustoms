@@ -45,3 +45,41 @@ Choice/27/disabled_text,
 Choice/26/disabled_text,
 Choice/25/disabled_text,
 Choice/16/disabled_text,
+Text/1a_rescue1/text,Um batedor se apressa. Nós a encontramos! [color=CHARTREUSE]Sasha está no bloco de detenção![/color]
+Text/1a_rescue2/text,Eles estão se preparando para... [tornado radius=3 freq=2][color=CRIMSON]processá-la[/color][/tornado]... em menos de uma hora!
+Text/1a_rescue3/text,Temos que salvá-la. [pulse freq=2][color=CHARTREUSE]Ela começou tudo isso.[/color][/pulse] Não vamos embora sem ela.
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]Corra pela instalação![/color][/wave] Alcance Sasha antes que seja tarde demais!
+Text/1a_rescue_fail1/text,Você tropeça. O caminho à frente está bloqueado por guardas!
+Text/1a_rescue_fail2/text,Viktor irrompe por uma porta lateral. [color=CHARTREUSE]VÁ! Eu os segurarei![/color]
+Text/1a_rescue_fail3/text,Por Elena. Por todos eles. [color=STEEL_BLUE]Não deixarei mais um morrer![/color]
+Text/1a_rescue_fail4/text,Murphy puxa um alarme de incêndio. [color=CHARTREUSE]Por Tommy![/color] Os sprinklers cegam os guardas!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Vou criar uma distração. Tire-a de lá![/color]
+Text/1a_rescue_fail6/text,"Uma [color=YELLOW]esteira de processamento emperra[/color], jorrando faíscas e distraindo os guardas!"
+Text/1a_rescue_fail7/text,O Destino - ou os fantasmas dos processados - lhe concede uma segunda chance.
+Text/1a_rescue5/text,"Sasha levanta os olhos de sua cela, machucada, mas inquebrável. Seus olhos se arregalam. [color=CHARTREUSE]Você veio.[/color]"
+Text/1a_rescue6/text,Claro que vim. [color=CHARTREUSE]Vamos terminar isso juntos.[/color]
+Choice/1a_rescue7/text,Eu estava com medo de nunca mais te ver.
+Choice/1a_rescue8/text,Você nos deixou morrendo de preocupação. Não faça isso de novo.
+Choice/1a_rescue9/text,Temos trabalho a fazer. Idaho está esperando.
+Text/1a_rescue10/text,[color=CHARTREUSE]Sasha te puxa para um breve abraço.[/color] Eu sabia que você viria. Nunca duvidei.
+Text/1a_rescue11/text,Agora vamos fazê-los pagar por todos que eles levaram. [color=CHARTREUSE]Juntos.[/color]
+Text/1a_rescue12/text,Sasha esboça um sorriso fraco em meio à dor. [color=STEEL_BLUE]Vou tentar.[/color] Mas algumas coisas valem o risco.
+Text/1a_rescue13/text,Sua presença aqui prova isso. Agora vamos terminar isso.
+Text/1a_rescue14/text,"Sasha acena, sua determinação reacendida. [color=CHARTREUSE]Você tem razão.[/color] O sentimentalismo pode esperar."
+Text/1a_rescue15/text,Idaho pensa que venceu. Vamos mostrar a ele o quão enganado ele está.
+Text/158/text,Forças de segurança se aproximam! [pulse freq=3][color=YELLOW]Lute para passar![/color][/pulse]
+Text/21_fail1/text,Guardas se aproximam de todas as direções. [color=CRIMSON]Não há para onde correr![/color]
+Text/21_fail2/text,"Viktor aparece atrás dos guardas, com a voz fria como aço. [color=STEEL_BLUE]Recuem. Agora.[/color]"
+Text/21_fail3/text,Os guardas hesitam - Viktor era um dos deles. [color=CRIMSON]O nome de Elena está nesses manifestos. Suas famílias podem ser as próximas.[/color]
+Text/21_fail4/text,Alguns guardas abaixam suas armas. Outros fogem. O caminho se abre.
+Text/21_fail5/text,"Uma explosão abala a ala leste. A voz de Murphy chia nos comunicadores: [color=CHARTREUSE]""Essa é a minha distração! MEXA-SE!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Os guardas se dispersam em direção à explosão. Tommy ficaria orgulhoso.[/color]
+Text/21_fail7/text,Sasha derruba o guarda principal por trás. [color=CHARTREUSE]Eu não sobrevivi àquela cela só para ver você morrer![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]CORRA! Eu cuido disso![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha se aproxima, sua mão encontrando a sua enquanto vocês observam o novo amanhecer juntos.[/color] Nós construímos isso. Você e eu."
+Text/152/text,"Enquanto nos mantivermos fiéis às nossas raízes, aos ideais que nos trouxeram aqui... [color=CHARTREUSE]encontraremos um caminho.[/color] Juntos."
+Text/153/text,[color=CHARTREUSE]Você aperta a mão dela. Juntos.[/color]
+Text/154/text,[color=STEEL_BLUE]Sasha está ao seu lado.[/color] Seu fogo acendeu a faísca que derrubou o império deles.
+Text/155/text,[color=STEEL_BLUE]A raiva esfriou e virou determinação. Ainda há trabalho a ser feito.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha oferece um sorriso de apoio.[/color] Você percorreu um longo caminho desde aquele posto de controle. Todos nós percorremos.
+Text/157/text,"[color=STEEL_BLUE]A culpa talvez nunca desapareça completamente, mas você encontrou propósito na reconstrução.[/color]"

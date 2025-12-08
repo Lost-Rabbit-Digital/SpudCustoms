@@ -17,3 +17,6 @@ Text/a4/text,To wszystko udowadnia. Opór zrobi kopie. [tornado radius=3 freq=2]
 Text/a5/text,"Przekroczyłeś granicę. [wave amp=20 freq=3][color=YELLOW]Nie ma już odwrotu.[/color][/wave] Gdy prawda się rozszerzy, Spud zostanie przemieniony."
 Choice/9c/disabled_text,
 Choice/9d/disabled_text,
+Text/9a_viktor1/text,Skanujesz nazwiska na manifeście... i jedno się wyróżnia. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,"To imię... już je słyszałeś. Strażnik Wiktor wspominał, że jego żona zaginęła."
+Text/9a_viktor3/text,"""[color=CRIMSON]Status: Przetworzono. Partia RR-2851.[/color]"" Sprzed dwóch tygodni."

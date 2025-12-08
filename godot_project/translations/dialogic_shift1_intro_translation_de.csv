@@ -14,3 +14,5 @@ Text/61/text,"Ihre erste Schicht beginnt jetzt. Prüfen Sie Papiere sorgfältig,
 Text/62/text,"Erfüllen Sie Ihr Kontingent, vermeiden Sie Strafen. [color=MEDIUM_VIOLET_RED]Ehre sei Kartoffel![/color]"
 Choice/5d/disabled_text,
 Choice/5c/disabled_text,
+Text/184b/text,Wer zu viele Fragen stellt? Der wird [color=CRIMSON]versetzt[/color]. Dauerhaft.
+Text/62b/text,"Und denkt daran, [color=MEDIUM_VIOLET_RED]Ruhm Spud![/color]"

@@ -32,3 +32,32 @@ Choice/c4/disabled_text,
 Choice/c5/disabled_text,
 Choice/cb/disabled_text,
 Choice/cc/disabled_text,
+Text/c7_viktor1/text,Um guarda de segurança corpulento se aproxima durante seu intervalo. Seu rosto está abatido.
+Text/c7_viktor2/text,"Ei... você é um dos oficiais da alfândega, certo? Tenho perguntado sobre minha esposa, Elena."
+Text/c7_viktor3/text,Ela cruzou este posto de controle há três semanas. [color=STEEL_BLUE]Inspeção reprovada.[/color] Não tive notícias dela desde então.
+Choice/c7_viktor4/text,"""Viktor... Eu encontrei algo. Sobre Elena. Você precisa saber a verdade."""
+Choice/c7_viktor5/text,"""Sinto muito, Viktor. Eu não vi nada."" (Mentir para protegê-lo)"
+Text/c7_viktor6/text,Você mostra a ele uma cópia da página do manifesto. Seu rosto empalidece.
+Text/c7_viktor7/text,[wave amp=25 freq=3]As mãos dele tremem enquanto ele lê.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Processada... Lote RR-2851...[/color]
+Text/c7_viktor8/text,A voz dele é quase um sussurro. [tornado radius=3 freq=2][color=CRIMSON]Eles... eles A TRANSFORMARAM em...[/color][/tornado]
+Text/c7_viktor9/text,A dor dele se transforma em fúria fria. [pulse freq=2][color=CRIMSON]Idaho vai pagar por isso.[/color][/pulse] Eu juro pela memória dela.
+Text/c7_viktor10/text,Ele aperta seu ombro. [color=CHARTREUSE]Obrigado por me dizer.[/color] Quando a hora chegar... Eu vou me lembrar disso.
+Text/c7_viktor11/text,Ele acena com a cabeça tristemente. [color=STEEL_BLUE]Eu imaginei.[/color] Ninguém sabe de nada. Ou ninguém quer falar.
+Text/c7_viktor12/text,Se você ouvir algo... [color=YELLOW]por favor.[/color] Ela é tudo o que eu tenho.
+Text/d0_qte1/text,"Mais tarde naquele turno, um viajante se aproxima com documentos que contêm a [color=CHARTREUSE]sutil marca da resistência[/color]."
+Text/d0_qte2/text,O [color=DARK_ORANGE]RealityScan[/color] começa sua varredura. [wave amp=15 freq=3][color=RED]Ele vai detectar a marca![/color][/wave]
+Text/d0_qte3/text,Você tem segundos para decidir. O scanner está aquecendo...
+Choice/d0_qte4/text,"""Simule um mau funcionamento do scanner - rápido!"" (Ajude a resistência)"
+Choice/d0_qte5/text,"""Deixe o scanner completar sua varredura"" (Siga o protocolo)"
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]Você precisa agir rápido![/color][/pulse] Acione o mau funcionamento antes que ele termine de escanear!
+Text/d0_qte7/text,Você mexe nos cabos do scanner. Faíscas voam. A tela pisca e apaga.
+Text/d0_qte8/text,Russet se aproxima rapidamente. [color=YELLOW]O que aconteceu aqui?[/color]
+Choice/d0_qte9/text,"""Pico de energia, senhor. Esses novos sistemas são temperamentais."""
+Choice/d0_qte10/text,"""Eu não sei, senhor. Ele simplesmente parou de funcionar."""
+Text/d0_qte11/text,Russet resmunga. [color=STEEL_BLUE]Burocratas nos dando equipamento não testado.[/color] Processe-os manualmente e sinalize para re-inspeção.
+Text/d0_qte12/text,Russet te olha com desconfiança. [color=YELLOW]Que conveniente.[/color] Vou pedir para a manutenção verificar isso. Não deixe isso acontecer de novo.
+Text/d0_qte13/text,O membro da resistência te dá o menor aceno de gratidão enquanto eles passam.
+Text/d0_qte14/text,O scanner [pulse freq=3][color=RED]APITA ALTO[/color][/pulse]. Marcações não autorizadas detectadas!
+Text/d0_qte15/text,Russet aparece instantaneamente. [color=CHARTREUSE]Muito bem![/color] Mais um traidor capturado.
+Text/d0_qte16/text,"O membro da resistência é arrastado, com terror nos olhos. ""[color=CRIMSON]Por favor, não! Eu tenho filhos![/color]"""
+Text/d0_qte17/text,Sua lealdade é [color=DARK_ORANGE]anotada em seu arquivo[/color]. Continue assim.

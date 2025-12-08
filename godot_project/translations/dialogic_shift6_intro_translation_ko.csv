@@ -1,0 +1,69 @@
+﻿keys,ko
+Text/b8/text,"국경 시설은 완전 봉쇄되었고, 무장 경비대가 모든 복도를 순찰하고 있습니다."
+Text/b9/text,[pulse freq=3][color=RED]주목! 보안 등급 적색 상황![/color][/pulse] 어젯밤 기밀 문서가 도난당했습니다.
+Text/ba/text,우리 가운데 [tornado radius=4 freq=3][color=CRIMSON]배신자가 있습니다[/color][/tornado]. 정보를 숨기는 자는 공범으로 간주될 것입니다.
+Text/bb/text,모든 요원들은 [wave amp=15 freq=2][color=DARK_ORANGE]보안 스캔[/color][/wave]을 위해 줄을 서십시오. 스트레스 반응이 높은 자는 표시될 것입니다.
+Text/bc/text,밖에 무슨 일이 일어나는지 봤어? 온통 팜플렛에 [color=DARK_VIOLET]Root Reserve[/color]가... [pulse freq=3][color=CRIMSON]우리로 만들어진다[/color][/pulse]고 쓰여 있어.
+Choice/bd/text,"""목소리를 낮춰. 우리 모두 감시받고 있어."""
+Choice/be/text,"""나도 같은 소문을 들었어. 사실이라면 끔찍해."""
+Choice/bf/text,"""그건 말도 안 되는 선전이야. 그런 거짓말 퍼뜨리지 마."""
+Text/c0/text,네 말이 맞아. 하지만 사실이라면... 우린 뭐가 되는 거지?
+Text/c1/text,내 사촌이 지난달에 거부당했어. 그럼 설마...? 나 [color=CHARTREUSE]더 이상 못 하겠어[/color].
+Text/c2/text,그들의 표정이 경계심으로 변한다. 물론이지. 영원한 충성 감자.
+Text/c3/text,어젯밤 22시부터 04시까지의 행방을 진술하시오.
+Choice/c4/text,"""밤새 내 숙소에 있었고, 잠을 잤습니다."""
+Choice/c5/text,"""먼저 제 법률 대리인과 이야기하고 싶습니다."""
+Text/c6/text,당신의 스트레스 수치는 [color=YELLOW]기만[/color]을 나타냅니다. 하지만... 불확실합니다. 지금은 가도 좋습니다.
+Text/c7/text,법률 대리인? 이건 보안 절차이지 재판이 아닙니다. 당신의 거부는 기록되었습니다.
+Text/c7_viktor1/text,휴식 시간 중 건장한 경비원이 다가온다. 그의 얼굴은 초췌하다.
+Text/c7_viktor2/text,이봐... 당신 세관원 중 한 명이죠? 제 아내 엘레나에 대해 수소문하고 있었어요.
+Text/c7_viktor3/text,그녀는 3주 전에 이 검문소를 통과했어요. [color=STEEL_BLUE]검사 불합격.[/color] 그 후로 소식을 듣지 못했어요.
+Choice/c7_viktor4/text,"""빅토르... 제가 뭔가를 찾았어요. 엘레나에 대한 거예요. 당신은 진실을 알아야 해요."""
+Choice/c7_viktor5/text,"""미안해요, 빅토르. 아무것도 본 적 없어요."" (그를 보호하기 위해 거짓말한다)"
+Text/c7_viktor6/text,당신은 그에게 선언서 페이지 사본을 보여준다. 그의 얼굴이 하얗게 질린다.
+Text/c7_viktor7/text,[wave amp=25 freq=3]그가 읽는 동안 손이 떨린다.[/wave] [color=GOLD]엘레나 페트로프[/color]... [color=CRIMSON]처리됨... 배치 RR-2851...[/color]
+Text/c7_viktor8/text,그의 목소리는 거의 속삭임에 가깝다. [tornado radius=3 freq=2][color=CRIMSON]그들이... 그들이 그녀를...으로 만들었어...[/color][/tornado]
+Text/c7_viktor9/text,그의 슬픔은 차가운 분노로 변한다. [pulse freq=2][color=CRIMSON]아이다호는 이 대가를 치를 것이다.[/color][/pulse] 그녀의 기억에 맹세한다.
+Text/c7_viktor10/text,그가 당신의 어깨를 잡습니다. [color=CHARTREUSE]알려줘서 고마워요.[/color] 때가 되면... 잊지 않을게요.
+Text/c7_viktor11/text,그가 슬프게 고개를 끄덕입니다. [color=STEEL_BLUE]그럴 줄 알았어.[/color] 아무도 아는 게 없어. 아니면 아무도 말하고 싶어 하지 않거나.
+Text/c7_viktor12/text,뭔가 듣게 되면... [color=YELLOW]부탁해.[/color] 그녀가 내 전부야.
+Text/c8/text,"효과가 있어. 명단이 소란을 일으켰지만, [color=DARK_ORANGE]러스티가 우릴 의심하고 있어[/color]."
+Text/c9/text,오늘 근무 중 우리 조직의 동맹을 주시해. [color=CHARTREUSE]그들을 알아볼 수 있을 거야[/color].
+Text/ca/text,"그들을 안전하게 통과시킬 수 있다면, [color=CHARTREUSE]우리가 논의했던 특별한 표식[/color]을 사용해."
+Choice/cb/text,"""위험을 감수할 가치가 있어. 참여할게."""
+Choice/cc/text,"""이건 너무 위험해지고 있어. 잠시 몸을 숨겨야 할지도 몰라."""
+Text/cd/text,"널 믿을 수 있을 줄 알았어. 이게 끝나면, [color=CHARTREUSE]스퍼드는 누가 진짜 영웅이었는지 알게 될 거야[/color]."
+Text/ce/text,우린 이미 그 지점을 훨씬 넘어섰어. 몸을 숨기는 건 우릴 구하지 못할 거야. [color=CHARTREUSE]오직 시스템을 무너뜨리는 것만이 가능해[/color].
+Text/cf/text,이제 각 검문소에는 새로운 [color=DARK_ORANGE]리얼리티 스캔 시스템[/color]이 설치되었어. 이 시스템은 무단 표식과 위조를 탐지해.
+Text/d0/text,모든 문서는 승인 전에 스캔되어야 해. [color=CRIMSON]배신자들은 뿌리 뽑힐 거야[/color]. 내가 장담하지.
+Text/d0_qte1/text,"그 근무 시간 후, 한 여행자가 [color=CHARTREUSE]미묘한 저항군 표식[/color]이 있는 서류를 들고 다가옵니다."
+Text/d0_qte2/text,[color=DARK_ORANGE]리얼리티 스캔[/color]이 스캔을 시작합니다. [wave amp=15 freq=3][color=RED]표식을 감지할 거야![/color][/wave]
+Text/d0_qte3/text,결정할 시간이 몇 초밖에 없어. 스캐너가 예열 중이야...
+Choice/d0_qte4/text,"""스캐너 오작동을 위장해 - 빨리!"" (저항군 돕기)"
+Choice/d0_qte5/text,"""스캐너가 스캔을 완료하도록 둬"" (규정 준수)"
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]빨리 움직여야 해![/color][/pulse] 스캔이 끝나기 전에 오작동을 일으켜!
+Text/d0_qte7/text,스캐너 케이블을 더듬거립니다. 불꽃이 튀고. 화면이 깜빡이다 꺼집니다.
+Text/d0_qte8/text,러스티가 달려옵니다. [color=YELLOW]여기서 무슨 일이야?[/color]
+Choice/d0_qte9/text,"""전력 서지입니다, 서장님. 이런 새 시스템들은 변덕스러워요."""
+Choice/d0_qte10/text,"""모르겠습니다, 서장님. 그냥 갑자기 꺼져버렸습니다."""
+Text/d0_qte11/text,러스티가 으르렁거립니다. [color=STEEL_BLUE]시험도 안 된 장비를 주는 관료들이란.[/color] 수동으로 처리하고 재검사를 위해 표시해 둬.
+Text/d0_qte12/text,러스티가 당신을 의심스럽게 쳐다봅니다. [color=YELLOW]참 편리하군.[/color] 정비팀에게 확인해보라고 할 거야. 다시는 이런 일이 없도록 해.
+Text/d0_qte13/text,저항군 멤버가 통과하면서 당신에게 아주 미미한 감사의 고개를 끄덕입니다.
+Text/d0_qte14/text,스캐너에서 [pulse freq=3][color=RED]요란한 경보음[/color][/pulse]이 울립니다. 승인되지 않은 표식이 감지되었습니다!
+Text/d0_qte15/text,러셋이 즉시 나타납니다. [color=CHARTREUSE]잘했습니다![/color] 또 다른 반역자가 붙잡혔습니다.
+Text/d0_qte16/text,"저항군 대원이 눈에 공포를 가득 담은 채 끌려갑니다. ""[color=CRIMSON]안 돼! 제발! 저에게는 아이들이 있어요![/color]"""
+Text/d0_qte17/text,당신의 충성심은 [color=DARK_ORANGE]파일에 기록되었습니다[/color]. 계속해서 이대로 해주십시오.
+Text/d1/text,저항군 대원을 돕는 것이 훨씬 더 위험해졌습니다. 하지만 [color=CHARTREUSE]진실은 퍼져야만 합니다[/color].
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,
+Choice/c7_viktor4/disabled_text,
+Choice/c7_viktor5/disabled_text,
+Choice/d0_qte4/disabled_text,
+Choice/d0_qte5/disabled_text,
+Choice/d0_qte9/disabled_text,
+Choice/d0_qte10/disabled_text,

@@ -1,0 +1,36 @@
+﻿keys,ko
+Text/131/text,"전투가 격렬해지는 동안 몸을 웅크립니다. 미안해, 사샤. 난 [color=STEEL_BLUE]너만큼 용감하지 못해[/color]."
+Text/132/text,"""[color=CRIMSON]테러 공격[/color]이 격퇴되었습니다! 주동자들은 지금 바로 [color=DARK_VIOLET]처리[/color]되고 있습니다."""
+Text/133/text,"유콘 서장이 저항군 대원들을 사슬에 묶어 끌고 옵니다. 그중에는 사샤도 있습니다. ""이 [color=CRIMSON]반역자들[/color]은 [color=DARK_VIOLET]최종 처리[/color]를 받게 될 것입니다."""
+Text/134/text,"사샤가 당신과 눈을 마주칩니다. 멍투성이인 얼굴에도 불구하고, 그녀의 시선에는 [wave amp=15 freq=2][color=CHARTREUSE]비난 대신 슬픔[/color]만이 담겨 있습니다.[/wave]"
+Text/135/text,"당신은 고개를 숙인 채 살아남았지만, [pulse freq=3][color=GOLD]그 대가는 무엇이었습니까?[/color][/pulse] 공장에서 [color=DARK_VIOLET]뿌리 비축물[/color] 생산 냄새가 풍겨올 때마다 당신의 속은 뒤틀립니다."
+Text/136/text,어쩌면 내부에서 아직 기회가 있을지도 모릅니다. 아니면 그저 양심의 가책을 덜고 있는 것일지도 모릅니다.
+Text/137/text,당신은 [tornado radius=3 freq=2][color=CHARTREUSE]자리를 버리고[/color][/tornado] 전투를 향해 달려갑니다. 신중할 시간은 끝났습니다.
+Text/138/text,[pulse freq=3][color=GOLD]우리 편임을 증명하세요![/color][/pulse] 사샤를 어떻게 아십니까?
+Text/139/text,"[color=CHARTREUSE]뿌리는 깊이 뻗어 있습니다![/color] 저는 검문소 출신이고, 사샤가 저를 영입했습니다!"
+Text/13a/text,그들은 지금 그녀를 처리 공장으로 데려가고 있습니다. 서둘러야 합니다!
+Text/13b/text,"문이 폭발하듯 열리며 [wave amp=25 freq=3][color=CRIMSON]끔찍한 진실[/color][/wave]이 드러납니다. – 분쇄기, 감자들을 파멸로 실어 나르는 컨베이어 벨트."
+Text/13c/text,한 컨베이어 벨트 끝에는 사샤와 다른 이들이 [color=CRIMSON]무력하게 묶여 있습니다[/color]. 감독관 러셋이 제어 장치 앞에 서 있습니다.
+Text/13d/text,[color=RED]너![/color] 네가 그들 중 하나라는 걸 알았어야 했는데! 물러서지 않으면 처리기를 가동하겠다!
+Text/140/text,"[color=STEEL_BLUE]저항군 리더가 러셋에게 무기를 겨눈 채 앞으로 나섭니다.[/color] 한 발짝도 움직이지 마, 러셋. 손은 내가 볼 수 있는 곳에 둬."
+Text/141/text,"[color=CRIMSON]러셋의 눈이 당신과 저항군 리더 사이를 오가고, 그의 이마에는 땀방울이 맺힙니다.[/color] 너희가 이겼다고 생각하나? 이 시설은 스퍼드 제국의 근간이다!"
+Text/142/text,고통의 근간이지. [pulse freq=3][color=CHARTREUSE]오늘로 끝이다.[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]사샤가 컨베이어 벨트 위에서 결박을 풀려고 몸부림칩니다.[/color]
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""러셋[/color]"
+Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""이... 이게 그들이 해온 짓이라고? 상상했던 것보다 더 끔찍해...""[/color][/wave]"
+Choice/146/text,"[color=CHARTREUSE]""사샤! 뿌리께 감사하게도 살아있었구나! 버텨[/color]"
+Text/147/text,"[color=CRIMSON]당신은 주먹을 꽉 쥔 채 러셋에게 돌진하지만, 저항군 대원들이 간신히 막아섭니다.[/color] 내 검문소를 통과한 모든 감자들이... 대체 몇 명이나 당신이..."
+Text/148/text,진정해! 그가 증언하려면 살려둬야 해. [color=STEEL_BLUE]리더는 러셋에게 계속 무기를 겨눕니다.[/color] 분노는 법정에서 쏟아내.
+Text/149/text,[color=STEEL_BLUE]당신은 기계의 끔찍한 실체를 깨닫고 입을 가린 채 비틀거리며 뒷걸음질 칩니다.[/color] 내가 그들의 서류에 도장을 찍었어... 내가 그들을 이곳으로 보냈어...
+Text/14a/text,[color=CHARTREUSE]당신은 몰랐어. 우리 모두 몰랐어.[/color] 그래서 우리가 지금 여기 있는 거야. 집중해!
+Text/14b/text,[color=CHARTREUSE]당신은 컨베이어 벨트로 달려갑니다.[/color]
+Text/14c/text,[color=CHARTREUSE]사샤의 눈은 당신의 손이 매듭을 푸는 동안 눈물과 희망으로 빛납니다.[/color] 올 줄 알았어요. 한 번도 의심하지 않았어요.
+Text/14d/text,[color=STEEL_BLUE]리더가 총을 겨누며 러셋을 무릎 꿇게 합니다.[/color] 묶어 놔. 무슨 일이 벌어질지 똑똑히 보게 해.
+Text/13e/text,[color=CHARTREUSE]속박에서 풀려난 사샤는 지체 없이 시설 카메라를 돌립니다.[/color] [color=YELLOW]감자 시민 여러분! 이곳은 뿌리 보존 구역입니다! 그들은 우리를 서로에게 먹이고 있었어요![/color]
+Text/14e/text,[color=CHARTREUSE]사샤가 당신의 손을 잡고 손가락을 깍지 낍니다.[/color] 날 위해 돌아와 줬군요. 다음에 무슨 일이 벌어지든... 함께 맞서요.
+Text/14f/text,[color=STEEL_BLUE]사샤가 당신의 눈에서 여전히 불타는 분노를 보며 조심스럽게 지켜봅니다.[/color] 그 불꽃을 잘 다뤄요. 다음에 올 일을 위해 필요할 거예요.
+Text/150/text,[color=STEEL_BLUE]사샤가 당신의 어깨에 부드럽게 손을 얹습니다.[/color] 그 죄책감은 당신의 몫이 아니에요. 지금 당신이 여기 있다는 게 중요해요.
+Text/13f/text,[color=CHARTREUSE]우리가 해냈어요. 이제 진실이 밝혀졌어요.[/color] 우리에겐 만들어갈 미래가 있어요!
+Choice/144/disabled_text,
+Choice/145/disabled_text,
+Choice/146/disabled_text,

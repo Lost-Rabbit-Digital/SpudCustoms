@@ -1,25 +1,25 @@
 ﻿keys,el
-patch_1_2_0_title,SPUD CUSTOMS 1.2.0 - PATCH NOTES
-patch_1_2_0_personal_note_header,A PERSONAL NOTE FROM THE DEVELOPER
-patch_1_2_0_personal_note,"This update is dedicated to my little one, who spent the first months of life in the NICU - from 1lb at birth to now 20lbs of pure joy. Thank you to everyone who has joined this journey - over 2,000 players have now experienced Spud Customs!"
-patch_1_2_0_visual_header,VISUAL ENHANCEMENTS
-patch_1_2_0_visual_1,Animated Art Integration: Incorporated new animated GIFs from StagNation into opening scenes
-patch_1_2_0_visual_2,Art Overhaul: Repainted the first five scenes players see for improved visual quality
-patch_1_2_0_visual_3,Dynamic Backgrounds: Background visuals now change as difficulty increases
-patch_1_2_0_story_header,STORY & NARRATIVE
-patch_1_2_0_story_1,Choice Persistence: Narrative choices now properly carry across all levels
-patch_1_2_0_story_2,Visual Progression: Added visual indicators of story progression in main gameplay scenes based on current shift number
-patch_1_2_0_story_3,Branching Dialogue Fixes: Fixed issues with branching dialogue in final narrative scenes
-patch_1_2_0_bugfix_header,BUG FIXES
-patch_1_2_0_bugfix_1,Achievement System: Fixed achievement tracking - all achievements now unlock properly
-patch_1_2_0_bugfix_2,Leaderboard: Fixed issue where leaderboard was stuck on loading
-patch_1_2_0_bugfix_3,Screen Shake: Screen shake now properly resets to origin after each use
-patch_1_2_0_bugfix_4,Difficulty Scaling: Fixed easy mode scaling factor
-patch_1_2_0_bugfix_5,Background Display: Fixed missing backgrounds during dialogue scenes
-patch_1_2_0_bugfix_6,Text Readability: Improved text coloration for better readability
-patch_1_2_0_engagement_header,PLAYER ENGAGEMENT
-patch_1_2_0_engagement_1,Review Requests: Added review prompts for demo and full game players
-patch_1_2_0_engagement_2,Translation Fixes: Various translation improvements across supported languages
-patch_1_2_0_technical_header,TECHNICAL IMPROVEMENTS
-patch_1_2_0_technical_1,Expanded Language Support: Now supporting all 31 Steam-supported languages
-patch_1_2_0_technical_2,Translation System Overhaul: Reorganized translation files for better maintainability
+patch_1_2_0_title,SPUD CUSTOMS 1.2.0 - ΣΗΜΕΙΩΣΕΙΣ ΕΝΗΜΕΡΩΣΗΣ
+patch_1_2_0_personal_note_header,ΜΙΑ ΠΡΟΣΩΠΙΚΗ ΣΗΜΕΙΩΣΗ ΑΠΟ ΤΟΝ ΠΡΟΓΡΑΜΜΑΤΙΣΤΗ
+patch_1_2_0_personal_note,"Αυτή η ενημέρωση είναι αφιερωμένη στο μικρό μου, που πέρασε τους πρώτους μήνες της ζωής του στη ΜΕΝΝ - από 1 λίβρα στη γέννηση σε τώρα 20 λίβρες καθαρής χαράς. Ευχαριστώ όλους όσους συμμετείχαν σε αυτό το ταξίδι - πάνω από 2.000 παίκτες έχουν πλέον βιώσει το Spud Customs!"
+patch_1_2_0_visual_header,ΟΠΤΙΚΕΣ ΒΕΛΤΙΩΣΕΙΣ
+patch_1_2_0_visual_1,Ενσωμάτωση Κινούμενης Τέχνης: Ενσωματώθηκαν νέα κινούμενα GIF από το StagNation στις αρχικές σκηνές
+patch_1_2_0_visual_2,Αναμόρφωση Τέχνης: Ξαναζωγραφίστηκαν οι πρώτες πέντε σκηνές που βλέπουν οι παίκτες για βελτιωμένη οπτική ποιότητα
+patch_1_2_0_visual_3,Δυναμικά Φόντα: Τα οπτικά στοιχεία του φόντου αλλάζουν πλέον καθώς αυξάνεται η δυσκολία
+patch_1_2_0_story_header,ΙΣΤΟΡΙΑ & ΑΦΗΓΗΣΗ
+patch_1_2_0_story_1,Διατήρηση Επιλογών: Οι αφηγηματικές επιλογές μεταφέρονται πλέον σωστά σε όλα τα επίπεδα
+patch_1_2_0_story_2,Οπτική Πρόοδος: Προστέθηκαν οπτικές ενδείξεις εξέλιξης της ιστορίας στις κύριες σκηνές παιχνιδιού με βάση τον τρέχοντα αριθμό βάρδιας
+patch_1_2_0_story_3,Διορθώσεις Διακλαδισμένου Διαλόγου: Διορθώθηκαν προβλήματα με τον διακλαδισμένο διάλογο στις τελικές αφηγηματικές σκηνές
+patch_1_2_0_bugfix_header,ΔΙΟΡΘΩΣΕΙΣ ΣΦΑΛΜΑΤΩΝ
+patch_1_2_0_bugfix_1,Σύστημα Επιτευγμάτων: Διορθώθηκε η παρακολούθηση επιτευγμάτων - όλα τα επιτεύγματα ξεκλειδώνουν πλέον σωστά
+patch_1_2_0_bugfix_2,Πίνακας Κατάταξης: Διορθώθηκε το πρόβλημα όπου ο πίνακας κατάταξης κολλούσε στην φόρτωση
+patch_1_2_0_bugfix_3,Κούνημα Οθόνης: Το κούνημα οθόνης επανέρχεται πλέον σωστά στην αρχική του θέση μετά από κάθε χρήση
+patch_1_2_0_bugfix_4,Κλιμάκωση Δυσκολίας: Διορθώθηκε ο συντελεστής κλιμάκωσης της εύκολης λειτουργίας
+patch_1_2_0_bugfix_5,Εμφάνιση Φόντου: Διορθώθηκαν τα ελλείποντα φόντα κατά τη διάρκεια των σκηνών διαλόγου
+patch_1_2_0_bugfix_6,Αναγνωσιμότητα Κειμένου: Βελτιώθηκε ο χρωματισμός του κειμένου για καλύτερη αναγνωσιμότητα
+patch_1_2_0_engagement_header,ΕΜΠΛΟΚΗ ΠΑΙΚΤΩΝ
+patch_1_2_0_engagement_1,Αιτήματα Αξιολόγησης: Προστέθηκαν προτροπές αξιολόγησης για παίκτες demo και πλήρους παιχνιδιού
+patch_1_2_0_engagement_2,Διορθώσεις Μετάφρασης: Διάφορες βελτιώσεις μετάφρασης σε όλες τις υποστηριζόμενες γλώσσες
+patch_1_2_0_technical_header,ΤΕΧΝΙΚΕΣ ΒΕΛΤΙΩΣΕΙΣ
+patch_1_2_0_technical_1,Διευρυμένη Υποστήριξη Γλωσσών: Υποστηρίζονται πλέον και οι 31 γλώσσες που υποστηρίζονται από το Steam
+patch_1_2_0_technical_2,Αναμόρφωση Συστήματος Μετάφρασης: Αναδιοργανώθηκαν τα αρχεία μετάφρασης για καλύτερη συντήρηση

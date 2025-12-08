@@ -5,3 +5,27 @@ Text/52/text,O mică notă alunecă din niște hârtii de pe biroul tău.
 Text/53/text,"[color=GOLD]Nu totul este ceea ce pare. Rădăcinile națiunii noastre s-au stricat. [br] Urmează urma, dar ai grijă să nu fii redus la tăcere.[/color] [br] - [color=CHARTREUSE]Un prieten[/color]"
 Text/54/text,Acea notă... și modul în care Russet a evitat întrebarea mea despre [pulse freq=3][color=CRIMSON]cartofii respinși[/color][/pulse]... [br] Ceva pare [color=STEEL_BLUE]ciudat[/color].
 Text/55/text,Ar trebui să rămân [color=YELLOW]treaz[/color]. Este mai mult decât ștampilarea pașapoartelor.
+Text/52b/text,Nu era acolo în această dimineață. Cineva l-a așezat [color=YELLOW]în timpul turei tale[/color].
+Text/53b/text,"[color=GOLD]Urmează pista, dar ai grijă să nu fii redus la tăcere.[/color]"
+Text/53c/text,[color=GOLD]Fii atent cine mănâncă [/color][color=DARK_VIOLET]Rezerva[/color][color=GOLD]. Fii atent cine refuză.[/color]
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]Un prieten[/color]
+Choice/53e/text,"""Păstrează notița ascunsă - investighează în liniște"""
+Choice/53f/text,"""Distruge notița - acesta ar putea fi un test"""
+Choice/53g/text,"""Arată notița lui Russet imediat"""
+Text/53h/text,Îndoi notița cu grijă și o strecori în buzunar. [color=CHARTREUSE]Cineva încearcă să te contacteze.[/color]
+Text/53i/text,"Dar cine? Și de ce tu, în chiar prima ta zi?"
+Text/53j/text,Rupți notița în bucățele mici
+Text/53k/text,"Russet a spus că lăstarii care pun întrebări sunt ""rearanjați."" Mai bine să nu riști."
+Text/53l/text,"Îl prinzi pe Russet înainte să plece. ""Domnule? Am găsit asta printre documentele mele..."""
+Text/53m/text,"Russet smulge notița, o citește. Expresia lui îi tresare - [color=YELLOW]era cumva recunoaștere?[/color]"
+Text/53n/text,Propagandă. Rebeli care încearcă să corupă noi ofițeri. [color=DARK_ORANGE]Ai făcut bine că mi-ai adus asta.[/color]
+Text/53o/text,El bagă notița în buzunar. Uită că ai văzut-o vreodată. Și fii atent la oricine se comportă... [color=CRIMSON]suspect[/color].
+Text/54b/text,"""[color=VIOLET]Procesat. Conform protocolului.[/color]"" Ce înseamnă asta de fapt?"
+Text/54c/text,Notița aia... spunea că rădăcinile au devenit [color=CRIMSON]putrede[/color].
+Text/54d/text,"Dar Spud este glorios, nu-i așa? Asta ne-au spus. Ce am crezut eu."
+Text/54e/text,"Scoți notița, citind-o din nou. ""[color=GOLD]Fii atent cine mănâncă Rezerva. Fii atent cine refuză.[/color]"""
+Text/54f/text,"Mâine, vei fi atent. [color=YELLOW]Cineva încearcă să-ți spună ceva.[/color]"
+Text/54g/text,"Fața lui Russet când a citit notița. Pentru o clipă, a părut aproape... [color=STEEL_BLUE]speriat[/color]."
+Text/54h/text,Ce este [color=DARK_VIOLET]Rezerva de Rădăcini[/color] de fapt? Și de ce te-ar avertiza cineva despre asta?
+Text/54i/text,"Notița a dispărut, dar cuvintele persistă. [color=YELLOW]Nu totul este așa cum pare.[/color]"
+Text/54j/text,Poate că distrugerea ei a fost alegerea inteligentă. Poate că tocmai ți-ai redus la tăcere singurul aliat.

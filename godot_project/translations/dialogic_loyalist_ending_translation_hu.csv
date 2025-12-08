@@ -1,0 +1,79 @@
+﻿keys,hu
+Text/299_suppress1/text,"Elszabadul a káosz, ahogy az ellenállás támadása megkezdődik. Robbanások rázzák meg az ellenőrzőpontot."
+Text/299_suppress2/text,Futhatnál. Elbújhatnál. Ehelyett [color=DARK_ORANGE]oldalt választasz[/color].
+Text/299_suppress3/text,Russet megragadja a karod. [pulse freq=2][color=YELLOW]ITT A TE ALKALMAD![/color][/pulse] Bizonyítsd a hűséged!
+Text/299_suppress4/text,Az ellenállás megpróbálja áttörni a keleti kaput! [color=CRIMSON]Állítsd meg őket![/color]
+Text/299_suppress5/text,"Megmarkolod a fegyvered. Ezek lehetnek emberek, akiket ismersz. Emberek, akiken segítettél."
+Text/299_suppress6/text,De a túlélésnek ára van. [color=DARK_ORANGE]Meghoztad a döntésed.[/color]
+Text/299_suppress7/text,[pulse freq=3][color=CRIMSON]Harcolj az államért![/color][/pulse] Fojtsd el az ellenállás támadását!
+Text/299_suppress8/text,"Amikor eloszlik a füst, holttestek hevernek a földön. Néhányan ellenállási jelvényt viselnek."
+Text/299_suppress9/text,[color=STEEL_BLUE]Felismersz arcokat az elesettek között.[/color]
+Text/299_suppress10/text,Murphy a halottak között fekszik. Szemei a semmibe merednek. Tommy fényképe a kezében szorítva.
+Text/299_suppress11/text,"[color=STEEL_BLUE]Valamiért halt meg, amiben hitt. Te segítettél megölni azt.[/color]"
+Text/300/text,"Az ellenállás támadása kudarcot vallott. Az ellenőrzőpont áll, erősebben, mint valaha. És te a posztodon maradsz."
+Text/301/text,[pulse freq=2][color=GOLD]ÉLJEN IDAHO MINISZTERELNÖK![/color][/pulse] Spud védelmezője! Az árulók legyőzője!
+Text/302/text,"Egy hatalmas burgonya díszes öltözékben leszáll egy páncélozott járműből, elit őrök kíséretében."
+Text/303/text,"Idaho hideg, számító szemekkel méri végig az ellenőrzőpontot."
+Text/304/text,"Russet előresiet, mélyen meghajolva. Miniszterelnök úr! Megtisztel minket jelenlétével!"
+Text/305/text,"Az árulókat [color=DARK_VIOLET]feldolgozták[/color], ahogy parancsolta. A termelés 40%-kal nőtt ebben a negyedévben!"
+Text/306/text,"És ez az a tiszt, aki hűséges maradt a felkelés alatt?"
+Text/307/text,"Igen, Miniszterelnök úr. Rendíthetetlen odaadás. Jelentette a gyanús tevékenységeket. Példamutató polgár."
+Text/308/text,"Idaho előrelép, egy medált tűz a mellkasodra - [color=GOLD]Az Arany Gumó[/color]."
+Text/309/text,"Kiemelkedő szolgálatért. Bebizonyítottad, hogy [color=DARK_ORANGE]a Spud iránti hűség[/color] mindig jutalmazva lesz."
+Choice/30a/text,"Köszönöm, Miniszterelnök úr. Dicsőség Spudnak."
+Choice/30b/text,"Én csak a kötelességemet teljesítettem, uram. (Erőltetett mosoly)"
+Text/30c/text,Idaho mosolya nem ér el a szeméig. Igen. Valóban megtetted.
+Text/30d/text,Idaho hosszan tanulmányoz téged. Kötelesség. [color=STEEL_BLUE]Milyen egyszerű szó ilyen bonyolult tettekért.[/color]
+Text/30e/text,"Kíváncsi vagyok, milyen [color=CRIMSON]rémálmok[/color] látogatják azokat, akik olyan jól végzik a „kötelességüket”."
+Text/30f/text,"Lakomát tartanak a győzelem tiszteletére. Az asztalok roskadoznak az ételtől, beleértve a [color=DARK_VIOLET]Gyökér Tartalék[/color] bőséges adagjait."
+Text/310/text,"Russet felemel egy pohár sűrű, lila folyadékot. Koccintás! Az [color=CRIMSON]árulókra, akik táplálnak minket[/color]!"
+Text/311/text,A szoba nevet. Néhányan idegesen. A legtöbben őszintén.
+Text/312/text,Egy tányért csúsztat feléd. Kóstold meg az új adagot. [color=DARK_VIOLET]„Ellenállás Keverék.”[/color] Sasha hozzájárulása Spud jövőjéhez.
+Text/313/text,Gyomrod összeszorul. Az étel a tányéron. [color=CRIMSON]Sasha.[/color] Murphy unokatestvére. A feleség a fotóról.
+Text/314/text,[tornado radius=3 freq=2][color=CRIMSON]Mindannyian.[/color][/tornado]
+Choice/315/text,Kényszerítsd magad evésre – tartsd a fedezékedet
+Choice/316/text,Told el a tányért – ezt nem teheted
+Text/317/text,Felemeled a villát az ajkadhoz. Becsukod a szemed. [color=STEEL_BLUE]Rágj. Nyelj. Ne gondolkodj.[/color]
+Text/318/text,Russet helyeslően bólint. „Jó. [color=DARK_ORANGE]Messzire jutsz.[/color]”
+Text/319/text,Eltolod a tányért. „Nem érzem jól magam. A nap izgalmai...”
+Text/31a/text,"Russet szeme rövid időre összeszűkül, majd megenyhül. Persze. Milyen [color=YELLOW]érzékeny alkat[/color]."
+Text/31b/text,Pihenj. Holnap [color=CRIMSON]több feldolgozást[/color] kell felügyelnünk.
+Text/31c/text,Visszatérsz a szállásodra. Az érem nehéz a mellkasodon.
+Text/31d/text,"Előveszed az eltűnt feleség fotóját. A felesége valószínűleg ugyanabban a szállítmányban van, mint ő most."
+Text/31e/text,"Megígérted, hogy megtalálod. [color=STEEL_BLUE]Megtaláltad.[/color] Csak nem úgy, ahogy egyikőtök sem remélte."
+Text/31f/text,"Murphy. A barátod. Az, aki megbízott benned. Ő az ellenállásban volt."
+Text/320/text,[color=CRIMSON]Volt.[/color]
+Text/321/text,A tükörképedet bámulod az ablakban. Az érem csillog. [color=DARK_ORANGE]Arany Gumó[/color]. Spud hőse.
+Text/322/text,[color=STEEL_BLUE]Szörny krumplihéjban.[/color]
+Text/323/text,Azon az éjszakán Sasháról álmodsz. Nem vádol. Nem dühöng. Az könnyebb lenne.
+Text/324/text,Csak azokkal a szemekkel néz rád. „[color=CHARTREUSE]A gyökerek mélyre nyúlnak[/color]” – suttogja.
+Text/325/text,Még a [color=STEEL_BLUE]rothadtak[/color] is.
+Text/326/text,Hónapok telnek el. Előléptetnek. Regionális Határvédelmi Felügyelő. Russet jobbkeze.
+Text/327/text,"Több elutasítást felügyelsz, mint bárki Spud történelmében. A [color=DARK_VIOLET]Gyökér Tartalék[/color] termelése az egekbe szökik."
+Text/328/text,Az irodád kényelmes. Az adagjaid bőségesek. A családod védve van.
+Text/329/text,"Mindent megkaptál, amit ígértek."
+Text/32a/text,"Mindent, kivéve az [color=STEEL_BLUE]alvást[/color]. Kivéve a [color=STEEL_BLUE]békét[/color]. Kivéve azt a képességet, hogy belenézz a tükörbe."
+Text/32b/text,Egy nap észreveszed. Egy [color=GOLD]sárga krumpli embléma[/color] karcolva a falba. Aztán még egy. Aztán tucatnyi.
+Text/32c/text,Új ellenállás formálódik. Csendesebb. Óvatosabb. Tanulva Sasha hibáiból.
+Choice/32d/text,Jelentsd a szimbólumokat azonnal a biztonságiaknak
+Choice/32e/text,"Tegyél úgy, mintha nem láttad volna őket"
+Choice/32f/text,Hagyd ott a saját jeledet – egyetlen sárga levelet
+Text/330/text,Benyújtod a jelentést. Újabb gyanúsítottakat gyűjtöttek össze. Újabb előléptetés.
+Text/331/text,A körforgás folytatódik. [color=CRIMSON]Géppé váltál.[/color]
+Text/332/text,Elmész mellette. Nem szólsz semmit. Nem sok. [color=STEEL_BLUE]Szinte semmi.[/color]
+Text/333/text,"De ez az első alkalom, hogy úgy döntöttél, nem cselekszel ellenük."
+Text/334/text,"Talán ez valami. Talán [color=YELLOW]túl kevés, túl késő[/color]."
+Text/335/text,"Amikor senki sem figyel, karcolsz egy kis [color=GOLD]sárga levelet[/color] az emblémák mellé."
+Text/336/text,Egyetlen ellenállási cselekedet. Évekkel túl későn. De [color=CHARTREUSE]valami[/color].
+Text/337/text,"Sasha hangja visszhangzik az emlékeidben: ""[color=CHARTREUSE]A gyökerek mélyre nyúlnak.[/color]"""
+Text/338/text,"Talán elég mélyre ahhoz, hogy [color=CHARTREUSE]téged is elérjenek[/color]. Egy nap."
+Text/339/text,Spud nemzete kitart. A [color=DARK_VIOLET]Gyökér Tartalék[/color] áramlik. A fogyasztás körforgása folytatódik.
+Text/33a/text,"De valahol, a fal repedéseiben, [color=CHARTREUSE]valami új növekszik[/color]."
+Text/33b/text,Hogy részese leszel-e... [color=YELLOW]az a történet még megírásra vár[/color].
+Choice/30a/disabled_text,
+Choice/30b/disabled_text,
+Choice/315/disabled_text,
+Choice/316/disabled_text,
+Choice/32d/disabled_text,
+Choice/32e/disabled_text,
+Choice/32f/disabled_text,

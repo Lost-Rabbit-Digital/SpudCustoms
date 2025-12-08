@@ -1,0 +1,28 @@
+﻿keys,ko
+Text/140/text,"국경은 [pulse freq=3][color=CRIMSON]전쟁터[/color][/pulse]를 방불케 합니다. 바리케이드, 장갑차, 정예 경비병들이 준비 태세를 갖추고 있습니다. 오늘은 저항군이 공격을 계획한 날입니다."
+Text/141/text,"[wave amp=25 freq=3][color=YELLOW]긴급 방송[/color][/wave]: 스퍼드 전역에 [color=RED]계엄령[/color]이 선포되었습니다. ""저항군""이 정부 시설에 대한 공격을 감행했습니다."
+Text/142/text,이 [color=CRIMSON]극단주의자들[/color]을 돕는 자는 [color=DARK_VIOLET]즉시 처리[/color]될 것입니다. 부처는 [color=DARK_VIOLET]뿌리 비축량[/color]이 모든 [color=DARK_ORANGE]충성스러운 감자[/color]들에게 안전하다고 확인했습니다.
+Text/143/text,여러 구역에서 [color=YELLOW]폭동이 발생했습니다[/color]. 저항군 세포 조직이 세 곳의 [color=DARK_VIOLET]뿌리 비축량[/color] 시설을 공격했습니다.
+Text/144/text,그들의 목표는 모든 생산 기록이 담긴 중앙 데이터베이스에 접근하는 것입니다. 불충의 징후는 곧 처리입니다.
+Text/145/text,우리는 사샤 장교를 포함한 여러 저항군 요원들을 체포했습니다.
+Text/146/text,[tornado radius=3 freq=2][color=CRIMSON]진정한 배신자[/color][/tornado]는 우리 국민을 서로에게 먹이는 자들이다! 진실을 막을 수는 없어!
+Text/147/text,그녀는 끌려가면서도 계속 외쳤습니다: [color=CHARTREUSE]사람들은 자기들이 먹는 음식에 무엇이 들어있는지 알게 될 거야![/color]
+Text/148/text,[color=CRIMSON]배신자[/color]는 [pulse freq=3][color=DARK_VIOLET]즉시 처리[/color]될 것입니다. 테러리스트들 자신으로 만들어진 특별한 [color=DARK_VIOLET]뿌리 비축량[/color] 말입니다.
+Text/149/text,[color=GOLD]알파 등급 허가[/color]를 받은 필수 인력을 제외하고는 모든 국경 통행이 [color=RED]중단되었습니다[/color].
+Text/14a/text,이 스캐너는 [color=YELLOW]속일 수 없습니다[/color]. 적절한 허가 없이 통과하려는 자는 즉시 경보를 울리십시오.
+Text/14b/text,공식 제복을 입은 감자가 완벽해 보이는 알파 등급 자격 증명을 가지고 다가옵니다.
+Text/14c/text,"작은 파란색 카드가 폴더에서 떨어집니다. 그들은 카드를 주우며 중얼거립니다: ""[wave amp=15 freq=3][color=CHARTREUSE]뿌리는 깊게 자란다.[/color][/wave]""."
+Choice/14d/text,스캐너 경보를 무시하고 통과시키십시오 (저항군을 돕는다)
+Choice/14e/text,즉시 경보를 울리십시오 (저항군을 배신한다)
+Text/14f/text,"그들의 눈에 안도감이 스칩니다. ""[color=CHARTREUSE]사샤를 위하여. 스퍼드를 위하여.[/color]"" 그들은 중앙 데이터베이스를 향해 사라집니다."
+Text/150/text,"그들의 얼굴에 공포가 서립니다. ""[color=CRIMSON]이 배신자! 우리가 당신을 믿었는데![/color]"" 그들은 빠르게 경비병들에게 둘러싸입니다."
+Text/151/text,"""훌륭한 임무 수행입니다. 당신의 충성심은 보상받을 것입니다."""
+Text/152/text,갑자기 시설이 [color=YELLOW]폭발로 흔들립니다[/color]. 당신의 선택과 상관없이 저항군의 공격이 시작되었습니다.
+Text/153/text,"내 자리에서 이 사태가 지나가기를 바라며 머물러야 할까, 아니면 [color=CHARTREUSE]맞서서[/color] 모든 것을 걸고 진실을 폭로해야 할까?"
+Choice/154/text,내 의무를 저버릴 수 없어. 조용히 지내며 최선을 바라겠어.
+Choice/155/text,나는 너무 오랫동안 공범이었다. 이제 옳은 것을 위해 싸울 때다.
+Text/156/text,[pulse freq=3][color=YELLOW]빨리 움직여![/color][/pulse] 보안 요원들이 혼란에 빠졌어 - 이것이 탈출할 유일한 기회야!
+Choice/14d/disabled_text,
+Choice/14e/disabled_text,
+Choice/154/disabled_text,
+Choice/155/disabled_text,

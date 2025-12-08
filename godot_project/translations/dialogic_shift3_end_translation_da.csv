@@ -16,3 +16,12 @@ Text/76/text,"Sasha stopper mappen i dine hænder. ""[color=YELLOW]Hold denne si
 Text/77/text,Du gemmer mappen inde i din jakke. [color=DARK_VIOLET]Root Reserve[/color]. Afvisningerne. De manglende kartofler. Det hele forbinder sig på en [tornado radius=3 freq=2][color=CRIMSON]skræmmende måde[/color][/tornado].
 Choice/71/disabled_text,
 Choice/70/disabled_text,
+Text/69_photo1/text,Du tager billedet frem igen. [color=GOLD]Maris Piper[/color]. Sikke et venligt ansigt.
+Text/69_photo2/text,Hendes kone var så desperat. [color=STEEL_BLUE]Hvad skete der med hende?[/color]
+Text/69_photo3/text,Du bemærker noget i baggrunden af billedet - en lastbil med et [color=DARK_VIOLET]lilla logo[/color].
+Text/69_photo4/text,Det symbol... du har set det på kantineleverancerne. [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve.[/color][/wave]
+Text/6a_photo1/text,Sasha... dette billede. Kvindens kone gav det til mig. Hun ledte efter hende.
+Text/6a_photo2/text,Sashas ansigt falder. [color=STEEL_BLUE]Lad mig se.[/color]
+Text/6a_photo3/text,"Sasha studerer billedet, hendes udtryk mørkner. [color=CRIMSON]Jeg genkender den lastbil.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Gem dette billede sikkert.[/color][/pulse] Det kan blive vigtigt senere. Stol på mig.
+Text/6f2/text,[pulse freq=3][color=CRIMSON]De er ved at blive Root Reserve.[/color][/pulse]

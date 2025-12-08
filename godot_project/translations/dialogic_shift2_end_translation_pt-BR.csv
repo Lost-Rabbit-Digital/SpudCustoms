@@ -1,0 +1,26 @@
+﻿keys,pt-BR
+Text/200/text,"Ei, batata nova! Expediente puxado, hein? Meu nome é Murphy. Estou aqui há três temporadas."
+Text/201/text,"Vi você conversando com a Sasha mais cedo. Ela é... [color=STEEL_BLUE]diferente[/color]. Diferente para o bem, eu acho."
+Choice/202/text,Ela parece legal. Me deu umas dicas para ficar alerta.
+Choice/203/text,Só apresentações. Nada de especial.
+Text/204/text,Murphy olha ao redor nervosamente. É.
+Text/205/text,"Entre nós? Aquela transmissão de rádio sobre ""batatas desaparecidas""... meu primo desapareceu no mês passado. Foi reprovado na inspeção."
+Text/206/text,"Esperto. Fique na sua, faça seu trabalho. É o que eu digo a mim mesmo todo dia."
+Text/207/text,A voz de Murphy baixa. Embora às vezes eu me pergunte para onde todas aquelas batatas rejeitadas realmente vão...
+Text/208/text,No refeitório
+Text/209/text,"Você encara a pasta espessa, marrom-arroxeada. Todos comem sem questionar. Supõe-se que seja nutritiva."
+Choice/20a/text,Comer a Reserva de Raiz como todo mundo
+Choice/20b/text,Deixar de lado - você não está com fome
+Text/20c/text,"O sabor é... terroso. Rico. Algo nele parece [color=STEEL_BLUE]desconfortavelmente familiar[/color], mas você não consegue identificar o porquê."
+Text/20d/text,"Um oficial superior percebe. ""Não desperdice, não passe necessidade, broto. Aquilo é [pulse freq=2][color=DARK_VIOLET]nutrição premium[/color][/pulse] bem ali."""
+Text/20e/text,Você murmura uma desculpa de dor de estômago. O oficial encolhe os ombros e segue em frente.
+Text/20f/text,"De volta ao seu alojamento, você não consegue tirar da cabeça o que a Sasha disse. ""[color=YELLOW]Nem tudo é o que parece.[/color]"""
+Text/210/text,"Você perguntou a Russet sobre batatas rejeitadas no seu primeiro dia. A resposta dele foi evasiva. ""[color=VIOLET]Processadas. De acordo com o protocolo.[/color]"""
+Text/211/text,"Processadas [color=STEEL_BLUE]como[/color], exatamente?"
+Text/212/text,Você estava tão ansioso para servir. Tão orgulhoso por ter sido escolhido. Mas o orgulho não explica as [color=CRIMSON]batatas desaparecidas[/color].
+Text/213/text,"O rádio disse que os relatos de desaparecimentos ""continuam"". Isso significa que já vem acontecendo há algum tempo."
+Text/214/text,"O sono vem lentamente. Quando ele chega, você sonha com [wave amp=15 freq=2][color=DARK_VIOLET]rios roxos[/color][/wave] fluindo sob o posto de controle."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

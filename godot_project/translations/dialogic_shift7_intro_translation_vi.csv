@@ -22,3 +22,20 @@ Text/115/text,"Khi nó xảy ra, bạn sẽ cần [color=YELLOW]chọn một bê
 Text/116/text,"Với mỗi củ khoai tây bạn xử lý, bạn đang [pulse freq=2][color=CHARTREUSE]hỗ trợ một cuộc cách mạng[/color][/pulse] hoặc [pulse freq=2][color=CRIMSON]cho phép một hệ thống kinh khủng[/color][/pulse]."
 Choice/10f/disabled_text,
 Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha lo lắng liếc nhìn qua vai.[/color] Xin lỗi, tôi... [color=YELLOW]Tôi nghĩ họ đang theo dõi tôi.[/color]"
+Text/102_foreshadow2/text,Russet đã hỏi nhiều câu hỏi. Theo dõi tôi sau ca làm. [wave amp=15 freq=2][color=YELLOW]Tôi cần cẩn thận hơn.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, có lẽ em nên ẩn mình một thời gian. Hãy để tôi gánh vác nhiều rủi ro hơn."
+Text/102_foreshadow4/text,"[color=STEEL_BLUE]Cô ấy lắc đầu, gượng cười.[/color] Không. Chúng ta đã quá gần rồi. Tôi có thể đối phó với Russet."
+Text/102_foreshadow5/text,"Hơn nữa... [color=CHARTREUSE]phải có người giữ mấy ""mầm non"" như các cậu tránh xa rắc rối chứ.[/color]"
+Text/106_trucks1/text,Nhưng chúng ta vẫn không biết cơ sở chế biến chính ở đâu. Các tài liệu chỉ liệt kê mã vận chuyển.
+Text/106_trucks2/text,Tôi đã theo dõi các xe tải của [color=DARK_VIOLET]Root Reserve[/color]. Chúng rời đi mỗi đêm lúc 0300. Cùng một tuyến đường.
+Text/106_trucks3/text,[color=CHARTREUSE]Nếu chúng ta có thể theo dõi chúng...[/color] chúng ta sẽ biết chính xác chúng đang đưa những củ khoai bị từ chối đi đâu.
+Choice/106_trucks4/text,Tôi sẽ làm. Tôi biết lịch tuần tra.
+Choice/106_trucks5/text,Nghe có vẻ rủi ro. Không thể để người khác làm sao?
+Text/106_trucks6/text,"[color=CHARTREUSE]Mắt Sasha sáng lên.[/color] Tôi biết cậu có ""gốc rễ thép"" mà. Hãy cẩn thận - chúng tuần tra rất gắt vào ban đêm."
+Text/106_trucks7/text,0300 giờ. Bạn nấp trong bóng tối khi những chiếc xe tải của [color=DARK_VIOLET]Root Reserve[/color] gầm gừ chạy qua.
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Hãy ẩn mình! Theo dõi đoàn xe![/color][/pulse]
+Text/106_trucks9/text,"Những chiếc xe tải dừng lại tại một khu phức hợp khổng lồ ẩn mình trong khu công nghiệp. [color=DARK_VIOLET]Khu vực 7, Tổ hợp Kho Delta.[/color]"
+Text/106_trucks10/text,Những ống khói nhả ra khói màu tím nhạt. Mùi hương thì... [tornado radius=3 freq=2][color=CRIMSON]không thể nhầm lẫn.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]Trái tim của Root Reserve.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]Vẻ mặt Sasha thoáng hiện sự thất vọng.[/color] Tất cả chúng ta đều phải chấp nhận rủi ro. Tôi sẽ tìm cách khác.

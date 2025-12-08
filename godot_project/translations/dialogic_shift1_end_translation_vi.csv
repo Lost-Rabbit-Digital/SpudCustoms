@@ -5,3 +5,27 @@ Text/52/text,Một mẩu giấy nhỏ trượt ra từ những tờ giấy trên
 Text/53/text,"[color=GOLD]Không phải tất cả đều như vẻ bề ngoài. Rễ của quốc gia chúng ta đã thối rữa. [br] Hãy theo dấu vết, nhưng cẩn thận đừng bị bịt miệng.[/color] [br] - [color=CHARTREUSE]Một người bạn[/color]"
 Text/54/text,Mẩu giấy đó... và cách Russet lảng tránh câu hỏi của tôi về [pulse freq=3][color=CRIMSON]khoai tây bị loại[/color][/pulse]... [br] Có điều gì đó [color=STEEL_BLUE]không ổn[/color].
 Text/55/text,Tôi nên [color=YELLOW]cảnh giác[/color]. Ở đây còn nhiều điều hơn là đóng dấu hộ chiếu.
+Text/52b/text,Sáng nay nó không có ở đây. Ai đó đã đặt nó [color=YELLOW]trong ca làm việc của bạn[/color].
+Text/53b/text,"[color=GOLD]Hãy lần theo dấu vết, nhưng cẩn thận đừng để bị bịt miệng.[/color]"
+Text/53c/text,[color=GOLD]Hãy xem ai ăn [/color][color=DARK_VIOLET]Dự Trữ[/color][color=GOLD]. Hãy xem ai từ chối.[/color]
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]Một người bạn[/color]
+Choice/53e/text,"""Giữ kín ghi chú - điều tra một cách lặng lẽ"""
+Choice/53f/text,"""Hủy ghi chú - đây có thể là một bài kiểm tra"""
+Choice/53g/text,"""Đưa ghi chú cho Russet ngay lập tức"""
+Text/53h/text,Bạn gấp ghi chú cẩn thận và nhét vào túi. [color=CHARTREUSE]Ai đó đang tìm cách liên lạc.[/color]
+Text/53i/text,"Nhưng là ai? Và tại sao lại là bạn, ngay trong ngày đầu tiên?"
+Text/53j/text,Bạn xé ghi chú thành những mảnh nhỏ
+Text/53k/text,"Russet nói rằng những mầm non hay hỏi sẽ bị ""chuyển công tác."" Tốt hơn hết là đừng mạo hiểm."
+Text/53l/text,"Bạn gọi Russet lại trước khi anh ta rời đi. ""Thưa ngài? Tôi tìm thấy cái này trong giấy tờ của mình..."""
+Text/53m/text,"Russet giật lấy ghi chú, đọc nó. Biểu cảm của anh ta thoáng thay đổi - [color=YELLOW]đó có phải là sự nhận ra không?[/color]"
+Text/53n/text,Tuyên truyền. Quân nổi dậy đang cố gắng mua chuộc các sĩ quan mới. [color=DARK_ORANGE]Bạn đã làm đúng khi mang cái này đến cho tôi.[/color]
+Text/53o/text,Anh ta bỏ ghi chú vào túi. Hãy quên rằng bạn từng thấy nó. Và hãy để ý bất kỳ ai có hành vi... [color=CRIMSON]đáng ngờ[/color].
+Text/54b/text,"""[color=VIOLET]Đã xử lý. Theo đúng quy trình.[/color]"" Điều đó có nghĩa là gì?"
+Text/54c/text,Ghi chú đó... nó nói rằng những gốc rễ đã trở nên [color=CRIMSON]thối rữa[/color].
+Text/54d/text,"Nhưng Spud thật vinh quang, phải không? Đó là điều họ đã nói với chúng ta. Điều mà tôi đã tin."
+Text/54e/text,"Bạn lấy ghi chú ra, đọc lại. ""[color=GOLD]Hãy xem ai ăn Dự Trữ. Hãy xem ai từ chối.[/color]"""
+Text/54f/text,"Ngày mai, bạn sẽ chú ý. [color=YELLOW]Ai đó đang cố gắng nói cho bạn biết điều gì đó.[/color]"
+Text/54g/text,"Khuôn mặt của Russet khi anh ta đọc ghi chú. Chỉ trong một khoảnh khắc, anh ta trông gần như... [color=STEEL_BLUE]sợ hãi[/color]."
+Text/54h/text,[color=DARK_VIOLET]Dự Trữ Gốc[/color] thực sự là gì? Và tại sao ai đó lại cảnh báo bạn về nó?
+Text/54i/text,"Ghi chú đã biến mất, nhưng những lời nói vẫn còn đọng lại. [color=YELLOW]Không phải mọi thứ đều như vẻ ngoài của nó.[/color]"
+Text/54j/text,Có lẽ hủy nó là lựa chọn thông minh. Có lẽ bạn vừa bịt miệng đồng minh duy nhất của mình.

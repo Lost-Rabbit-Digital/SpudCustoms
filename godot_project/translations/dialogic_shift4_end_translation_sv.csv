@@ -1,0 +1,49 @@
+﻿keys,sv
+Text/215/text,"Murphy fångar dig i korridoren, med rödkantade ögon. Har du en minut?"
+Text/216/text,Murphy drar in dig i ett tomt förråd och stänger dörren.
+Text/217/text,Det där skämtet jag drog i cafeterian... om att min kusin var i [color=DARK_VIOLET]Rotreserven[/color]-satsen...
+Text/218/text,Murphys röst spricker. Jag tror inte det var ett skämt längre.
+Text/219/text,Du sa att det inte var roligt. Du hade rätt. [color=STEEL_BLUE]Inget med det här är roligt.[/color]
+Text/21a/text,"Jag såg dig gå. Smart. Jag önskar jag kunde sluta äta det där, men de [color=YELLOW]övervakar[/color]. De övervakar alltid."
+Text/21b/text,"Jag hittade något bland min kusins tillhörigheter. Hans avslagsblankett. Standardgrejer, men..."
+Text/21c/text,Murphy drar fram en skrynklig blankett. Titta på bearbetningskoden. '[color=CRIMSON]RR-UTIL-7[/color].'
+Text/21d/text,Jag slog upp det i arkivet. RR står för [pulse freq=2][color=DARK_VIOLET]Rotreserven[/color][/pulse]. UTIL betyder... [color=CRIMSON]utnyttjande[/color].
+Text/21d_breakdown1/text,[wave amp=20 freq=3]Murphys händer börjar skaka.[/wave] Min kusin... Tommy... han var bara tjugotre.
+Text/21d_breakdown2/text,Han kom hit för ett [color=CHARTREUSE]bättre liv[/color]. Misslyckades med en inspektion. En. [color=STEEL_BLUE]Bara dålig tajming.[/color]
+Text/21d_breakdown3/text,"Murphy glider ner längs väggen, ansiktet i händerna. Och jag... jag [tornado radius=3 freq=2][color=CRIMSON]ÅT[/color][/tornado] det där. Varje dag."
+Text/21d_breakdown4/text,"Murphy tittar upp på dig, tårarna strömmar. [pulse freq=2][color=CRIMSON]Tänk om jag åt HONOM?[/color][/pulse]"
+Choice/21e/text,Murphy... Jag är så ledsen. Jag är med dig. Vi hittar sanningen tillsammans.
+Choice/21f/text,"Murphy, det här är farligt. Vi borde hålla oss utanför det."
+Choice/220/text,Kanske är det en slump. Låt oss inte dra förhastade slutsatser.
+Text/221_comfort1/text,Du knäböjer bredvid Murphy och lägger en hand på hans axel.
+Text/221/text,Murphy griper din arm som en livlina. [color=CHARTREUSE]Tack.[/color] Jag trodde jag höll på att bli galen.
+Text/221_tommy/text,[color=STEEL_BLUE]Hans röst stabiliseras något.[/color] För Tommy. Vi gör det här för Tommy. Och alla andra de har tagit.
+Text/222/text,Det finns andra som misstänker också. Sasha har samlat folk. Jag tror hon litar på dig.
+Text/223/text,"Murphy torkar sina ögon, försöker samla sig. Ja. Ja, du har förmodligen rätt. Glöm att jag sa något."
+Text/224/text,Men om du ändrar dig... Jag är här. [color=STEEL_BLUE]Ensam med mina frågor. Och mina mardrömmar.[/color]
+Text/225/text,Slump. Murphy skrattar bittert genom tårarna. Visst. Och Tommy bara [color=CRIMSON]försvann[/color] spårlöst.
+Text/226/text,Fortsätt intala dig det. Se hur länge det hjälper dig att sova. [color=STEEL_BLUE]Det hjälper inte mig.[/color]
+Text/227/text,Sasha dyker upp vid din bås när sista skiftet slutar. Du ser ut som du har sett ett spöke.
+Text/228/text,Låt mig gissa - Murphy berättade om sin kusin?
+Text/229/text,Sasha nickar gillande. Bra. Vi behöver folk som ställer frågor.
+Text/22a/text,Sasha studerar ditt ansikte noga. Du är rädd. Det är smart. Men rädsla kommer inte att rädda någon.
+Text/22b/text,"Jag har hållit ögonen på dig sedan din första dag. Sättet du [color=YELLOW]tvekade[/color] när Russet pratade om ""bearbetning."""
+Text/22c/text,Du frågade vad som händer med avvisade potatisar. Det krävde mod. [color=CHARTREUSE]De flesta bara hälsar och stämplar.[/color]
+Text/22d/text,Sasha lutar sig närmare. Det finns ett mönster. Varje potatis vi avvisar? Borta inom 48 timmar. Inga utvisningsregister. Inga förflyttningar.
+Text/22e/text,Men [color=DARK_VIOLET]Rotreservens[/color] produktion? [tornado radius=3 freq=2][color=CRIMSON]Den ökar.[/color][/tornado] Varje. Enda. Gång.
+Choice/22f/text,Jag tror dig. Hur kan jag hjälpa till?
+Choice/230/text,Jag behöver se bevis innan jag riskerar allt.
+Text/231/text,"Sashas ögon lyser upp. Jag visste att jag valde rätt. Imorgon kväll, efter skiftet. Jag visar dig vad jag har hittat."
+Text/232/text,Tills dess
+Text/233/text,Okej då. Bevis är på väg. Bara... håll ögonen öppna under morgondagens skift.
+Text/234/text,Se vart de [color=CRIMSON]avvisade potatisarna[/color] tar vägen. Följ lastbilarna om du kan.
+Text/235/text,Du tar fram fotot som den desperata potatisen gav dig. Hennes fru. [color=STEEL_BLUE]Var är hon nu?[/color]
+Text/236/text,Om det Sasha och Murphy säger är sant... har hon redan blivit...
+Text/237/text,Du kan inte avsluta tanken. Men du [color=CHARTREUSE]kommer inte att glömma hennes ansikte[/color].
+Text/238/text,"Imorgon förändras allt. Antingen hittar du svar, eller så begraver du frågorna för alltid."
+Text/239/text,En sak är säker: det finns [color=YELLOW]ingen återvändo till lycklig okunskap[/color].
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

@@ -21,3 +21,13 @@ Choice/ac/disabled_text,
 Choice/b2/disabled_text,
 Choice/b1/disabled_text,
 Choice/ad/disabled_text,
+Text/b4_viktor1/text,Roteva vartija tarttuu käsivarteesi ohittaessasi. Hänen kasvojaan uurtaa huoli.
+Text/b4_viktor2/text,"Hei... anteeksi, että häiritsen. Olet yksi tullivirkailijoista, eikö niin? Nimeni on [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Olen kysellyt kaikilta vaimostani, [color=GOLD]Elenasta[/color]. Elena Petrov. Hän ylitti tämän tarkastuspisteen kolme viikkoa sitten."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Hylättiin tarkastuksessa.[/color] He sanoivat, että hänet käsiteltäisiin ja palautettaisiin kotiin, mutta... en ole kuullut mitään."
+Text/b4_viktor5/text,"Hänen äänensä värisee. Kukaan ei kerro minulle mitään. Tiedätkö, minne hylätyt matkustajat menevät?"
+Choice/b4_viktor6/text,"""Olen pahoillani, Viktor. En tiedä. Mutta pidän silmällä."""
+Choice/b4_viktor7/text,"""En voi keskustella käsittelyn yksityiskohdista. Turvaprotokollat."""
+Text/b4_viktor8/text,"Viktorin silmissä välähtää toivo. [color=CHARTREUSE]Kiitos.[/color] Mitä tahansa saat selville... pyydän. Hän on kaikki, mitä minulla on."
+Text/b4_viktor9/text,Viktor nyökkää masentuneena. [color=STEEL_BLUE]Selvä. Protokollat.[/color] Ymmärrän.
+Text/b4_viktor10/text,"Mutta jos muutat mielesi... [color=YELLOW]Minun on saatava tietää, mitä hänelle tapahtui.[/color]"

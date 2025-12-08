@@ -14,3 +14,5 @@ Text/61/text,"Il tuo primo turno inizia ora. Controlla attentamente i documenti,
 Text/62/text,"Raggiungi la tua quota, evita le sanzioni. [color=MEDIUM_VIOLET_RED]Gloria alla Patata![/color]"
 Choice/5d/disabled_text,
 Choice/5c/disabled_text,
+Text/184b/text,Chi fa troppe domande? Vengono [color=CRIMSON]riassegnati[/color]. Permanentemente.
+Text/62b/text,"E ricorda, [color=MEDIUM_VIOLET_RED]Gloria a Spud![/color]"

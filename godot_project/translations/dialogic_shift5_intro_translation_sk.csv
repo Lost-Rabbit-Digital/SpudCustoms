@@ -21,3 +21,13 @@ Choice/ac/disabled_text,
 Choice/b2/disabled_text,
 Choice/b1/disabled_text,
 Choice/ad/disabled_text,
+Text/b4_viktor1/text,"Robustný strážnik ťa chytí za ruku, keď prechádzaš. Jeho tvár je poznačená starosťami."
+Text/b4_viktor2/text,"Hej... prepáč, že ťa otravujem. Si jeden z colníkov, však? Volám sa [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Pýtal som sa každého na moju ženu, [color=GOLD]Elenu[/color]. Elena Petrovová. Prešla cez tento hraničný prechod pred tromi týždňami."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Nevyhovela kontrole.[/color] Povedali, že ju vybavia a vrátia domov, ale... nič som nepočul."
+Text/b4_viktor5/text,"Jeho hlas sa chveje. Nikto mi nič nepovie. Vieš, kam idú odmietnutí cestujúci?"
+Choice/b4_viktor6/text,"""Je mi to ľúto, Viktor. Neviem. Ale budem dávať pozor."""
+Choice/b4_viktor7/text,"""Nemôžem preberať detaily spracovania. Bezpečnostné protokoly."""
+Text/b4_viktor8/text,"V Viktorových očiach sa zjaví záblesk nádeje. [color=CHARTREUSE]Ďakujem.[/color] Čokoľvek zistíš... prosím. Je to všetko, čo mám."
+Text/b4_viktor9/text,Viktor skľúčene prikývne. [color=STEEL_BLUE]Jasné. Protokoly.[/color] Rozumiem.
+Text/b4_viktor10/text,"Ale ak si to rozmyslíš... [color=YELLOW]Potrebujem vedieť, čo sa jej stalo.[/color]"

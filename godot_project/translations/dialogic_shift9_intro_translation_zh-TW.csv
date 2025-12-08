@@ -1,0 +1,28 @@
+﻿keys,zh-TW
+Text/140/text,邊境宛如[pulse freq=3][color=CRIMSON]戰區[/color][/pulse]。路障、裝甲車與精銳衛兵嚴陣以待。抵抗軍計劃在今日發動襲擊。
+Text/141/text,[wave amp=25 freq=3][color=YELLOW]緊急廣播[/color][/wave]：整個馬鈴薯國都處於[color=RED]戒嚴狀態[/color]。「抵抗軍」已對政府設施發動襲擊。
+Text/142/text,任何協助這些[color=CRIMSON]極端分子[/color]的人都將面臨[color=DARK_VIOLET]立即處理[/color]。部門證實：[color=DARK_VIOLET]根源儲備[/color]對所有[color=DARK_ORANGE]忠誠的馬鈴薯[/color]來說依然安全。
+Text/143/text,[color=YELLOW]暴動已在多個區域爆發[/color]。抵抗軍小組已襲擊了三處[color=DARK_VIOLET]根源儲備[/color]設施。
+Text/144/text,他們的目標：存取包含所有生產記錄的中央資料庫。任何不忠的跡象都意味著處理。
+Text/145/text,我們已逮捕了數名抵抗軍特工，其中包括莎夏警官。
+Text/146/text,[tornado radius=3 freq=2][color=CRIMSON]真正的叛徒[/color][/tornado]是那些[color=DARK_VIOLET]將我們的人民互相餵食[/color]的人。你們無法阻止真相！
+Text/147/text,她被拖走，仍舊大喊著：[color=CHARTREUSE]人民會知道他們的食物裡有什麼！[/color]
+Text/148/text,這名[color=CRIMSON]叛徒[/color]將被[pulse freq=3][color=DARK_VIOLET]立即處理[/color][/pulse]。一批特別的[color=DARK_VIOLET]根源儲備[/color]，由恐怖分子自身製成。
+Text/149/text,所有邊境通行都已[color=RED]暫停[/color]，除了擁有[color=GOLD]阿爾法級許可[/color]的必要人員。
+Text/14a/text,這台掃描儀[color=YELLOW]無法被欺騙[/color]。對於任何沒有適當許可的人，立即拉響警報。
+Text/14b/text,一個穿著官方制服的馬鈴薯走近，帶著看似完美的阿爾法級證件。
+Text/14c/text,一張小小的藍色卡片從資料夾中掉出。他們邊撿起卡片邊喃喃自語：「[wave amp=15 freq=3][color=CHARTREUSE]根源深植。[/color][/wave]」
+Choice/14d/text,讓他們通過，忽略掃描儀警報（協助抵抗軍）
+Choice/14e/text,立即拉響警報（背叛抵抗軍）
+Text/14f/text,他們眼中流露出解脫。「[color=CHARTREUSE]為了莎夏。為了馬鈴薯國。[/color]」他們消失在通往中央資料庫的方向。
+Text/150/text,恐懼浮現在他們臉上。「[color=CRIMSON]你這叛徒！我們信任你！[/color]」他們很快就被衛兵包圍。
+Text/151/text,「幹得好。你的忠誠將會得到獎勵。」
+Text/152/text,突然間，設施[color=YELLOW]因爆炸而震動[/color]。抵抗軍的襲擊已經開始，無論你的選擇如何。
+Text/153/text,我是該堅守崗位，希望這一切能平息，還是[color=CHARTREUSE]挺身而出[/color]，冒著一切風險揭露真相？
+Choice/154/text,我不能放棄我的職責。我會保持沉默，並希望一切順利。
+Choice/155/text,我已經同謀太久了。是時候為正義而戰了。
+Text/156/text,[pulse freq=3][color=YELLOW]動作快！[/color][/pulse]保安正在混亂中——這是你唯一的逃脫機會！
+Choice/14d/disabled_text,
+Choice/14e/disabled_text,
+Choice/154/disabled_text,
+Choice/155/disabled_text,

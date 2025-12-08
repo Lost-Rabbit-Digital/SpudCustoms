@@ -5,3 +5,27 @@ Text/52/text,Um pequeno bilhete escorrega de alguns papéis em sua mesa.
 Text/53/text,"[color=GOLD]Nem tudo é como parece. As raízes de nossa nação apodreceram. [br] Siga o rastro, mas tome cuidado para não ser silenciado.[/color] [br] - [color=CHARTREUSE]Um amigo[/color]"
 Text/54/text,Esse bilhete... e a maneira como Russet esquivou-se da minha pergunta sobre [pulse freq=3][color=CRIMSON]batatas rejeitadas[/color][/pulse]... [br] Algo parece [color=STEEL_BLUE]estranho[/color].
 Text/55/text,Devo ficar [color=YELLOW]alerta[/color]. Há mais acontecendo aqui do que carimbar passaportes.
+Text/52b/text,Não estava lá esta manhã. Alguém o colocou [color=YELLOW]durante o seu turno[/color].
+Text/53b/text,"[color=GOLD]Siga a trilha, mas tome cuidado para não ser silenciado.[/color]"
+Text/53c/text,[color=GOLD]Observe quem come a [/color][color=DARK_VIOLET]Reserva[/color][color=GOLD]. Observe quem recusa.[/color]
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]Um amigo[/color]
+Choice/53e/text,"""Mantenha a nota escondida - investigue discretamente"""
+Choice/53f/text,"""Destrua a nota - isso pode ser um teste"""
+Choice/53g/text,"""Mostre a nota a Russet imediatamente"""
+Text/53h/text,Você dobra a nota cuidadosamente e a guarda no bolso. [color=CHARTREUSE]Alguém está tentando fazer contato.[/color]
+Text/53i/text,"Mas quem? E por que você, logo no seu primeiro dia?"
+Text/53j/text,Você rasga a nota em pedacinhos
+Text/53k/text,"Russet disse que brotos que fazem perguntas são ""remanejados"". Melhor não arriscar."
+Text/53l/text,"Você alcança Russet antes que ele saia. ""Senhor? Encontrei isto nos meus papéis..."""
+Text/53m/text,"Russet arranca a nota, lê. Sua expressão vacila - [color=YELLOW]foi reconhecimento?[/color]"
+Text/53n/text,Propaganda. Rebeldes tentando corromper novos oficiais. [color=DARK_ORANGE]Você fez bem em trazer isso para mim.[/color]
+Text/53o/text,Ele guarda a nota no bolso. Esqueça que você a viu. E observe qualquer um agindo... [color=CRIMSON]suspeito[/color].
+Text/54b/text,"""[color=VIOLET]Processado. De acordo com o protocolo.[/color]"" O que isso significa?"
+Text/54c/text,Aquela nota... dizia que as raízes apodreceram [color=CRIMSON]podres[/color].
+Text/54d/text,"Mas Spud é gloriosa, não é? Foi o que nos disseram. O que eu acreditei."
+Text/54e/text,"Você tira a nota, lendo-a novamente. ""[color=GOLD]Observe quem come a Reserva. Observe quem recusa.[/color]"""
+Text/54f/text,"Amanhã, você prestará atenção. [color=YELLOW]Alguém está tentando te dizer algo.[/color]"
+Text/54g/text,"O rosto de Russet quando ele leu a nota. Por um breve momento, ele pareceu quase... [color=STEEL_BLUE]com medo[/color]."
+Text/54h/text,O que é a [color=DARK_VIOLET]Reserva da Raiz[/color] realmente? E por que alguém te avisaria sobre isso?
+Text/54i/text,"A nota se foi, mas as palavras permanecem. [color=YELLOW]Nem tudo é o que parece.[/color]"
+Text/54j/text,Talvez destruí-la tenha sido a escolha inteligente. Talvez você tenha acabado de silenciar seu único aliado.

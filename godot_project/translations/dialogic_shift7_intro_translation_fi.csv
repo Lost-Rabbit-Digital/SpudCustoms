@@ -22,3 +22,20 @@ Text/115/text,"Kun se tapahtuu, sinun täytyy [color=YELLOW]valita puolesi[/colo
 Text/116/text,Jokaisella käsittelemälläsi perunalla joko [pulse freq=2][color=CHARTREUSE]autat vallankumousta[/color][/pulse] tai [pulse freq=2][color=CRIMSON]mahdollistat kauhean järjestelmän[/color][/pulse].
 Choice/10f/disabled_text,
 Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha vilkuilee hermostuneesti olkansa yli.[/color] Anteeksi, minä... [color=YELLOW]Luulen, että he tarkkailevat minua.[/color]"
+Text/102_foreshadow2/text,Russet on kysellyt. Seurannut minua vuorojen jälkeen. [wave amp=15 freq=2][color=YELLOW]Minun täytyy olla varovaisempi.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, ehkä sinun pitäisi pysyä piilossa hetken. Anna minun ottaa enemmän riskiä."
+Text/102_foreshadow4/text,[color=STEEL_BLUE]Hän pudistaa päätään pakottaen hymyn.[/color] Ei. Olemme jo liian lähellä. Minä pärjään Russetin kanssa.
+Text/102_foreshadow5/text,Sitä paitsi... [color=CHARTREUSE]jonkun täytyy pitää teidät idut poissa pulasta.[/color]
+Text/106_trucks1/text,"Mutta emme vieläkään tiedä, missä pääkäsittelylaitos on. Asiakirjoissa on vain lähetyskoodeja."
+Text/106_trucks2/text,Olen tarkkaillut [color=DARK_VIOLET]Juurireservin rekkoja[/color]. Ne lähtevät joka yö klo 0300. Sama reitti.
+Text/106_trucks3/text,"[color=CHARTREUSE]Jos voisimme seurata niitä...[/color] tietäisimme tarkalleen, minne ne vievät hylätyt."
+Choice/106_trucks4/text,Minä teen sen. Tunnen partioaikataulut.
+Choice/106_trucks5/text,Se kuulostaa riskialttiilta. Eikö joku muu voi tehdä sen?
+Text/106_trucks6/text,"[color=CHARTREUSE]Sashan silmät kirkastuvat.[/color] Tiesin, että sinulla on teräsjuuret. Ole varovainen – he partioivat tiheästi yöllä."
+Text/106_trucks7/text,"Klo 0300. Kyyristyt varjoihin, kun [color=DARK_VIOLET]Juurireservin[/color] rekat jylisevät ohi."
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Pysy piilossa! Seuraa saattuetta![/color][/pulse]
+Text/106_trucks9/text,"Rekat pysähtyvät massiiviseen, teollisuusalueelle piilotettuun kompleksiin. [color=DARK_VIOLET]Sektori 7, Varastokompleksi Delta.[/color]"
+Text/106_trucks10/text,Savupiiput syöksevät purppuranväristä savua. Haju on... [tornado radius=3 freq=2][color=CRIMSON]erehtymätön.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]Juurireservin sydän.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]Sashan ilme välähtää pettymyksestä.[/color] Meidän kaikkien on otettava riskejä. Minä löydän toisen tavan.

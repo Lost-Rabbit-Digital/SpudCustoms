@@ -1,0 +1,49 @@
+﻿keys,es-419
+Text/215/text,"Murphy te intercepta en el pasillo, con los ojos enrojecidos. ¿Tienes un minuto?"
+Text/216/text,Murphy te arrastra a un almacén vacío y cierra la puerta.
+Text/217/text,Esa broma que hice en la cafetería... sobre que mi primo estaba en el lote de la [color=DARK_VIOLET]Reserva de Raíces[/color]...
+Text/218/text,La voz de Murphy se quiebra. Ya no creo que fuera una broma.
+Text/219/text,Dijiste que no era gracioso. Tenías razón. [color=STEEL_BLUE]Nada de esto es gracioso.[/color]
+Text/21a/text,"Te vi irte. Inteligente. Ojalá pudiera dejar de comer esas cosas, pero ellos [color=YELLOW]vigilan[/color]. Siempre vigilan."
+Text/21b/text,"Encontré algo entre las pertenencias de mi primo. Su formulario de rechazo. Algo normal, pero..."
+Text/21c/text,"Murphy saca un formulario arrugado. Mira el código de procesamiento. ""[color=CRIMSON]RR-UTIL-7[/color]."""
+Text/21d/text,Lo busqué en los archivos. RR significa [pulse freq=2][color=DARK_VIOLET]Reserva de Raíces[/color][/pulse]. UTIL significa... [color=CRIMSON]utilización[/color].
+Text/21d_breakdown1/text,[wave amp=20 freq=3]Las manos de Murphy empiezan a temblar.[/wave] Mi primo... Tommy... solo tenía veintitrés años.
+Text/21d_breakdown2/text,Vino aquí por una [color=CHARTREUSE]vida mejor[/color]. Falló una inspección. Una. [color=STEEL_BLUE]Solo mala suerte.[/color]
+Text/21d_breakdown3/text,"Murphy se desliza por la pared, con la cara entre las manos. Y yo... yo [tornado radius=3 freq=2][color=CRIMSON]COMÍ[/color][/tornado] esas cosas. Todos los días."
+Text/21d_breakdown4/text,"Murphy te mira, con lágrimas corriendo. [pulse freq=2][color=CRIMSON]¿Y si me lo comí a ÉL?[/color][/pulse]"
+Choice/21e/text,Murphy... Lo siento mucho. Estoy contigo. Encontraremos la verdad juntos.
+Choice/21f/text,"Murphy, esto es peligroso. Deberíamos mantenernos al margen."
+Choice/220/text,Quizás sea una coincidencia. No saquemos conclusiones precipitadas.
+Text/221_comfort1/text,"Te arrodillas junto a Murphy, poniendo una mano en su hombro."
+Text/221/text,Murphy te agarra el brazo como un salvavidas. [color=CHARTREUSE]Gracias.[/color] Creí que me estaba volviendo loco.
+Text/221_tommy/text,[color=STEEL_BLUE]Su voz se estabiliza un poco.[/color] Por Tommy. Hacemos esto por Tommy. Y por todos los demás que se han llevado.
+Text/222/text,Hay otros que también sospechan. Sasha ha estado reuniendo gente. Creo que ella confía en ti.
+Text/223/text,"Murphy se seca los ojos, intentando recomponerse. Sí. Sí, probablemente tengas razón. Olvida que dije algo."
+Text/224/text,Pero si cambias de opinión... Estaré aquí. [color=STEEL_BLUE]Solo con mis preguntas. Y mis pesadillas.[/color]
+Text/225/text,Coincidencia. Murphy ríe amargamente entre lágrimas. Claro. Y Tommy simplemente [color=CRIMSON]desapareció[/color] en el aire.
+Text/226/text,Sigue diciéndote eso. A ver cuánto tiempo te ayuda a dormir. [color=STEEL_BLUE]A mí no me ayuda.[/color]
+Text/227/text,Sasha aparece en tu puesto cuando termina el último turno. Pareces haber visto un fantasma.
+Text/228/text,Déjame adivinar: ¿Murphy te habló de su primo?
+Text/229/text,Sasha asiente con aprobación. Bien. Necesitamos gente que haga preguntas.
+Text/22a/text,Sasha estudia tu rostro con atención. Estás asustado. Eso es inteligente. Pero el miedo no salvará a nadie.
+Text/22b/text,"Te he estado observando desde tu primer día. La forma en que [color=YELLOW]dudaste[/color] cuando Russet habló de ""procesamiento""."
+Text/22c/text,Preguntaste qué les pasa a las papas rechazadas. Eso requirió agallas. [color=CHARTREUSE]La mayoría solo saluda y sella.[/color]
+Text/22d/text,Sasha se inclina más. Hay un patrón. ¿Cada papa que rechazamos? Desaparece en 48 horas. Sin registros de deportación. Sin traslados.
+Text/22e/text,¿Pero la producción de [color=DARK_VIOLET]Reserva de Raíz[/color]? [tornado radius=3 freq=2][color=CRIMSON]Sube.[/color][/tornado] Cada. Sola. Vez.
+Choice/22f/text,Te creo. ¿Cómo puedo ayudar?
+Choice/230/text,Necesito ver pruebas antes de arriesgarlo todo.
+Text/231/text,"Los ojos de Sasha se iluminan. Sabía que había elegido bien. Mañana por la noche, después del turno. Te mostraré lo que he encontrado."
+Text/232/text,Hasta entonces
+Text/233/text,De acuerdo. Las pruebas están en camino. Solo... mantén los ojos abiertos durante el turno de mañana.
+Text/234/text,Observa adónde van las [color=CRIMSON]papas rechazadas[/color]. Sigue los camiones si puedes.
+Text/235/text,Sacas la foto que te dio la papa desesperada. Su esposa. [color=STEEL_BLUE]¿Dónde está ella ahora?[/color]
+Text/236/text,Si lo que Sasha y Murphy dicen es cierto... ella ya ha sido...
+Text/237/text,No puedes terminar el pensamiento. Pero [color=CHARTREUSE]no olvidarás su rostro[/color].
+Text/238/text,"Mañana, todo cambia. O encuentras respuestas, o entierras las preguntas para siempre."
+Text/239/text,Una cosa es segura: no hay [color=YELLOW]vuelta atrás a la feliz ignorancia[/color].
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

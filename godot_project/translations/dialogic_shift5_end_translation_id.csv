@@ -17,3 +17,6 @@ Text/a4/text,Ini membuktikan segalanya. Perlawanan akan membuat salinan. [tornad
 Text/a5/text,"Kau telah melewati batas. [wave amp=20 freq=3][color=YELLOW]Tidak ada jalan kembali.[/color][/wave] Ketika kebenaran tersebar, Spud akan berubah."
 Choice/9c/disabled_text,
 Choice/9d/disabled_text,
+Text/9a_viktor1/text,Anda memindai nama-nama di manifes... dan satu nama menonjol. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,Nama itu... Anda pernah mendengarnya. Penjaga keamanan Viktor pernah menyebut istrinya hilang.
+Text/9a_viktor3/text,"""[color=CRIMSON]Status: Diproses. Batch RR-2851.[/color]"" Tertanggal dua minggu yang lalu."

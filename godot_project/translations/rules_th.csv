@@ -1,0 +1,39 @@
+﻿keys,th
+LAWS,กฎหมาย
+msg_not_fresh,มันฝรั่งเป็น %s แต่ต้องสด
+msg_extra_eyes,มันฝรั่งมีตาพิเศษซึ่งเป็นสิ่งต้องห้าม
+msg_rotten,มันฝรั่งเน่าไม่ได้รับอนุญาต
+msg_sprouted,มันฝรั่งงอกไม่ได้รับอนุญาต
+msg_dehydrated,มันฝรั่งขาดน้ำไม่ได้รับอนุญาตในวันนี้
+msg_frozen,มันฝรั่งแช่แข็งถูกห้าม
+msg_over_age,มันฝรั่งอายุ %d ปี (สูงสุด 5 ปี)
+msg_under_age,มันฝรั่งอายุ %d ปี (ต้องมีอายุเกิน 3 ปี)
+law_fresh_potatoes,[color=dark_goldenrod]เฉพาะมันฝรั่งสด[/color] เท่านั้นที่ได้รับอนุญาต - [color=dark_red]ปฏิเสธ[/color] อื่นๆ ทั้งหมด
+law_extra_eyes,มันฝรั่งที่มีสภาพ[color=dark_goldenrod]ตาพิเศษ[/color] ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_rotten,มันฝรั่ง[color=dark_goldenrod]เน่า[/color] ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_sprouted,มันฝรั่ง[color=dark_goldenrod]งอก[/color] ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_dehydrated,มันฝรั่ง[color=dark_goldenrod]ขาดน้ำ[/color] ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_frozen,มันฝรั่ง[color=dark_goldenrod]แช่แข็ง[/color] ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_over_5_years,มันฝรั่ง[color=dark_goldenrod]อายุ 5 ปีขึ้นไป[/color] ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_under_3_years,มันฝรั่ง[color=dark_goldenrod]อายุ 3 ปีหรือน้อยกว่า[/color] ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_under_2_years,มันฝรั่ง[color=dark_goldenrod]อายุ 2 ปีหรือน้อยกว่า[/color] ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_males_only,[color=dark_goldenrod]เฉพาะมันฝรั่งเพศผู้[/color] เท่านั้นที่ได้รับอนุญาต - [color=dark_red]ปฏิเสธ[/color] เพศเมียทั้งหมด
+law_females_only,[color=dark_goldenrod]เฉพาะมันฝรั่งเพศเมีย[/color] เท่านั้นที่ได้รับอนุญาต - [color=dark_red]ปฏิเสธ[/color] เพศผู้ทั้งหมด
+law_country_spudland,มันฝรั่ง[color=dark_goldenrod]ทั้งหมด[/color]จาก[color=dark_goldenrod]สปัดแลนด์[/color] ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_country_potatopia,มันฝรั่ง[color=dark_goldenrod]ทั้งหมด[/color]จาก[color=dark_goldenrod]โพเทโทเปีย[/color] ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_country_tuberstan,มันฝรั่ง[color=dark_goldenrod]ทั้งหมด[/color]จาก[color=dark_goldenrod]ทูเบอร์สแตน[/color] ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_country_north_yamnea,มันฝรั่ง[color=dark_goldenrod]ทั้งหมด[/color]จาก[color=dark_goldenrod]นอร์ทยัมเนีย[/color] ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_country_spuddington,มันฝรั่ง[color=dark_goldenrod]ทั้งหมด[/color]จาก[color=dark_goldenrod]สปัดดิงตัน[/color] ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_country_tatcross,[color=dark_goldenrod]มันฝรั่งทั้งหมด[/color]จาก[color=dark_goldenrod]ทัตครอส[/color]ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_country_mash_meadows,[color=dark_goldenrod]มันฝรั่งทั้งหมด[/color]จาก[color=dark_goldenrod]แมช มีโดวส์[/color]ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_country_tuberville,[color=dark_goldenrod]มันฝรั่งทั้งหมด[/color]จาก[color=dark_goldenrod]ทูเบอร์วิลล์[/color]ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_country_chip_hill,[color=dark_goldenrod]มันฝรั่งทั้งหมด[/color]จาก[color=dark_goldenrod]ชิป ฮิลล์[/color]ต้องถูก[color=dark_red]ปฏิเสธ[/color] (ห้ามส่งออก)
+law_country_murphyland,[color=dark_goldenrod]มันฝรั่งทั้งหมด[/color]จาก[color=dark_goldenrod]เมอร์ฟีแลนด์[/color]ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_country_colcannon,[color=dark_goldenrod]มันฝรั่งทั้งหมด[/color]จาก[color=dark_goldenrod]โคลแคนนอน[/color]ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_country_pratie_point,[color=dark_goldenrod]มันฝรั่งทั้งหมด[/color]จาก[color=dark_goldenrod]แพรตตี้ พอยต์[/color]ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_purple_majesty,มันฝรั่งพันธุ์[color=dark_goldenrod]เพอร์เพิล มาเจสตี้[/color]ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_sweet_potatoes,มันฝรั่งพันธุ์[color=dark_goldenrod]มันเทศ[/color]ต้องถูก[color=dark_red]ปฏิเสธ[/color] (ไม่มีใบอนุญาต)
+law_yukon_gold,มันฝรั่งพันธุ์[color=dark_goldenrod]ยูคอน โกลด์[/color]ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_fingerling,มันฝรั่งพันธุ์[color=dark_goldenrod]ฟิงเกอร์ลิง[/color]ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_red_bliss,มันฝรั่งพันธุ์[color=dark_goldenrod]เรด บลิส[/color]ต้องถูก[color=dark_red]ปฏิเสธ[/color]
+law_russet,มันฝรั่งพันธุ์[color=dark_goldenrod]รัสเซ็ต[/color]ต้องถูก[color=dark_red]ปฏิเสธ[/color]

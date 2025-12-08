@@ -28,3 +28,6 @@ Text/16f/text,"Jos vuorosi oli onnistunut, voit jatkaa napsauttamalla ""Jatka"" 
 Text/170/text,Tässä käsiteltiin tullitarkastajan velvollisuuksiesi perusteet.
 Text/171/text,"Muista: tarkista asiakirjat huolellisesti, pysäytä juoksijat ja täytä kiintiösi."
 Text/172/text,Spudin turvallisuus riippuu [pulse freq=2][color=DARK_ORANGE]valppaudestasi![/color][/pulse]
+Text/174/text,Aloitetaan [color=YELLOW]harjoitusvuorosi[/color]...
+Text/180/text,Mutta ole varovainen – kaikki perunat eivät ole asiakirjojaan kunnossa.
+Text/181/text,[color=RED]Vanhentuneet passit[/color] ovat automaattinen hylkäys. Ei poikkeuksia.

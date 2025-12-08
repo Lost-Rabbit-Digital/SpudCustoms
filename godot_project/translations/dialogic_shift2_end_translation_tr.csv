@@ -1,0 +1,26 @@
+﻿keys,tr
+Text/200/text,"Hey, yeni patates! Zorlu vardiya, değil mi? Adım Murphy. Üç sezondur buradayım."
+Text/201/text,"Sasha ile daha önce konuştuğunu gördüm. O... [color=STEEL_BLUE]farklı[/color]. İyi anlamda farklı, bence."
+Choice/202/text,İyi biri gibi görünüyor. Bana tetikte kalmakla ilgili bazı tavsiyeler verdi.
+Choice/203/text,Sadece tanıştık. Özel bir şey yok.
+Text/204/text,Murphy gergin bir şekilde etrafına bakındı. Evet
+Text/205/text,"Aramızda kalsın mı? Şu ""kayıp patatesler"" hakkındaki radyo yayını... kuzenim geçen ay kayboldu. Denetimden kaldı."
+Text/206/text,"Akıllıca. Başını öne eğ, işini yap. Her gün kendime söylediğim şey bu."
+Text/207/text,"Murphy'nin sesi alçaldı. Yine de bazen merak ediyorum, o reddedilen patateslerin hepsi aslında nereye gidiyor..."
+Text/208/text,Kafeteryada
+Text/209/text,"Kalın, mor-kahverengi macuna bakıyorsun. Herkes sorgusuz sualsiz yiyor. Besleyici olduğu söyleniyor."
+Choice/20a/text,Herkes gibi Kök Rezervi'ni ye
+Choice/20b/text,Kenara it - aç değilsin
+Text/20c/text,"Tadı... topraksı. Yoğun. Bir yanı [color=STEEL_BLUE]rahatsız edici derecede tanıdık[/color] geliyor, ama nedenini çözemiyorsun."
+Text/20d/text,"Kıdemli bir subay fark eder. ""İsraf etme, yokluk çekme, filiz. İşte o [pulse freq=2][color=DARK_VIOLET]üstün besin[/color][/pulse] ta kendisi."""
+Text/20e/text,Mide rahatsızlığı bahanesiyle mırıldanırsın. Subay omuz silkerek yoluna devam eder.
+Text/20f/text,"Kaldığın yere döndüğünde, Sasha'nın söylediklerini aklından çıkaramıyorsun. ""[color=YELLOW]Her şey göründüğü gibi değil.[/color]"""
+Text/210/text,"İlk gününde Russet'e reddedilen patatesleri sormuştun. Cevabı kaçamaklıydı. ""[color=VIOLET]İşlendi. Protokole göre.[/color]"""
+Text/211/text,"Peki [color=STEEL_BLUE]nasıl[/color] işlendi, tam olarak?"
+Text/212/text,"Hizmet etmeye o kadar hevesliydin. Seçildiğin için çok gururluydun. Ama gurur, [color=CRIMSON]kayıp patatesleri[/color] açıklamıyor."
+Text/213/text,"Radyo, kaybolma raporlarının ""devam ettiğini"" söyledi. Bu da bir süredir devam ettiği anlamına geliyor."
+Text/214/text,"Uyku yavaş yavaş gelir. Geldiğinde ise, kontrol noktasının altından akan [wave amp=15 freq=2][color=DARK_VIOLET]mor nehirler[/color][/wave] düşlersin."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

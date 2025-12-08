@@ -1,0 +1,49 @@
+﻿keys,pt
+Text/215/text,"Murphy te pega no corredor, com os olhos avermelhados. Tem um minuto?"
+Text/216/text,Murphy te puxa para um depósito vazio e fecha a porta.
+Text/217/text,Aquela piada que fiz na cafeteria... sobre meu primo estar no lote da [color=DARK_VIOLET]Reserva de Raízes[/color]...
+Text/218/text,A voz de Murphy falha. Acho que não era mais uma piada.
+Text/219/text,Você disse que não era engraçado. Você estava certo. [color=STEEL_BLUE]Nada disso é engraçado.[/color]
+Text/21a/text,"Eu te vi sair. Inteligente. Eu queria poder parar de comer aquilo, mas eles [color=YELLOW]observam[/color]. Eles sempre observam."
+Text/21b/text,"Encontrei algo nos pertences do meu primo. O formulário de rejeição dele. Coisa padrão, mas..."
+Text/21c/text,"Murphy tira um formulário amassado. Olhe o código de processamento. ""[color=CRIMSON]RR-UTIL-7[/color]."""
+Text/21d/text,Eu procurei nos arquivos. RR significa [pulse freq=2][color=DARK_VIOLET]Reserva de Raízes[/color][/pulse]. UTIL significa... [color=CRIMSON]utilização[/color].
+Text/21d_breakdown1/text,[wave amp=20 freq=3]As mãos de Murphy começam a tremer.[/wave] Meu primo... Tommy... ele tinha apenas vinte e três.
+Text/21d_breakdown2/text,Ele veio para cá em busca de uma [color=CHARTREUSE]vida melhor[/color]. Falhou em uma inspeção. Uma. [color=STEEL_BLUE]Apenas má sorte.[/color]
+Text/21d_breakdown3/text,"Murphy escorrega pela parede, com o rosto entre as mãos. E eu... eu [tornado radius=3 freq=2][color=CRIMSON]COMI[/color][/tornado] aquilo. Todos os dias."
+Text/21d_breakdown4/text,"Murphy olha para você, com lágrimas escorrendo. [pulse freq=2][color=CRIMSON]E se eu o comi?[/color][/pulse]"
+Choice/21e/text,Murphy... Sinto muito. Estou com você. Encontraremos a verdade juntos.
+Choice/21f/text,"Murphy, isso é perigoso. Devemos ficar fora disso."
+Choice/220/text,Talvez seja uma coincidência. Não vamos tirar conclusões precipitadas.
+Text/221_comfort1/text,"Você se ajoelha ao lado de Murphy, colocando a mão no ombro dele."
+Text/221/text,Murphy agarra seu braço como um salva-vidas. [color=CHARTREUSE]Obrigado.[/color] Pensei que estava enlouquecendo.
+Text/221_tommy/text,[color=STEEL_BLUE]A voz dele se estabiliza um pouco.[/color] Por Tommy. Fazemos isso por Tommy. E por todos os outros que eles levaram.
+Text/222/text,Há outros que também suspeitam. Sasha tem reunido pessoas. Acho que ela confia em você.
+Text/223/text,"Murphy enxuga os olhos, tentando se recompor. Sim. Sim, você provavelmente está certo. Esqueça o que eu disse."
+Text/224/text,Mas se você mudar de ideia... Estarei aqui. [color=STEEL_BLUE]Sozinho com minhas perguntas. E meus pesadelos.[/color]
+Text/225/text,Coincidência. Murphy ri amargamente entre as lágrimas. Claro. E Tommy simplesmente [color=CRIMSON]desapareceu[/color] no ar.
+Text/226/text,Continue dizendo isso a si mesmo. Veja quanto tempo isso te ajuda a dormir. [color=STEEL_BLUE]Não me ajuda.[/color]
+Text/227/text,Sasha aparece na sua cabine quando o último turno termina. Você parece ter visto um fantasma.
+Text/228/text,Deixe-me adivinhar - Murphy te contou sobre o primo dele?
+Text/229/text,Sasha acena em aprovação. Bom. Precisamos de pessoas que façam perguntas.
+Text/22a/text,Sasha estuda seu rosto com atenção. Você está com medo. Isso é inteligente. Mas o medo não vai salvar ninguém.
+Text/22b/text,"Tenho te observado desde o seu primeiro dia. O jeito que você [color=YELLOW]hesitou[/color] quando Russet falou sobre ""processamento""."
+Text/22c/text,Você perguntou o que acontece com as batatas rejeitadas. Isso exigiu coragem. [color=CHARTREUSE]A maioria apenas saúda e carimba.[/color]
+Text/22d/text,Sasha se inclina. Há um padrão. Toda batata que rejeitamos? Desaparece em 48 horas. Sem registros de deportação. Sem transferências.
+Text/22e/text,Mas a produção da [color=DARK_VIOLET]Reserva de Raízes[/color]? [tornado radius=3 freq=2][color=CRIMSON]Ela aumenta.[/color][/tornado] Toda. Santa. Vez.
+Choice/22f/text,Eu acredito em você. Como posso ajudar?
+Choice/230/text,Preciso ver provas antes de arriscar tudo.
+Text/231/text,"Os olhos de Sasha se iluminam. Eu sabia que tinha escolhido certo. Amanhã à noite, depois do turno. Vou te mostrar o que encontrei."
+Text/232/text,Até lá
+Text/233/text,Justo. A prova está a caminho. Apenas... mantenha os olhos abertos durante o turno de amanhã.
+Text/234/text,Observe para onde as [color=CRIMSON]batatas rejeitadas[/color] vão. Siga os caminhões se puder.
+Text/235/text,Você tira a foto que a batata desesperada te deu. A esposa dela. [color=STEEL_BLUE]Onde ela está agora?[/color]
+Text/236/text,Se o que Sasha e Murphy estão dizendo é verdade... ela já foi...
+Text/237/text,Você não consegue terminar o pensamento. Mas você [color=CHARTREUSE]não vai esquecer o rosto dela[/color].
+Text/238/text,"Amanhã, tudo muda. Ou você encontra respostas, ou enterra as perguntas para sempre."
+Text/239/text,Uma coisa é certa: [color=YELLOW]não há como voltar à ignorância feliz[/color].
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

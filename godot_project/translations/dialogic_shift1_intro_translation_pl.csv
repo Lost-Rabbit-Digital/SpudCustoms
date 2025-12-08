@@ -14,3 +14,5 @@ Text/61/text,"Twoja pierwsza zmiana zaczyna się teraz. Dokładnie sprawdzaj dok
 Text/62/text,"Wypełnij swoją kwotę, unikaj kar. [color=MEDIUM_VIOLET_RED]Chwała Ziemniakowi![/color]"
 Choice/5d/disabled_text,
 Choice/5c/disabled_text,
+Text/184b/text,"Ci, którzy zadają zbyt wiele pytań? Zostają [color=CRIMSON]przeniesieni[/color]. Na stałe."
+Text/62b/text,"I pamiętaj, [color=MEDIUM_VIOLET_RED]Chwała Ziemniakowi![/color]"

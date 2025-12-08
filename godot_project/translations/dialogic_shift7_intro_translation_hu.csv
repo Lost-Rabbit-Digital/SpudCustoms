@@ -22,3 +22,20 @@ Text/115/text,"Amikor ez megtörténik, [color=YELLOW]oldalt kell választanod[/
 Text/116/text,"Minden krumplival, amit feldolgozol, vagy [pulse freq=2][color=CHARTREUSE]segíted a forradalmat[/color][/pulse], vagy [pulse freq=2][color=CRIMSON]lehetővé teszel egy szörnyű rendszert[/color][/pulse]."
 Choice/10f/disabled_text,
 Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha idegesen hátranéz a válla felett.[/color] Bocsánat, én... [color=YELLOW]Azt hiszem, figyelnek engem.[/color]"
+Text/102_foreshadow2/text,Russet kérdezősködött. Műszak után követett. [wave amp=15 freq=2][color=YELLOW]Óvatosabbnak kell lennem.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, talán jobb, ha egy ideig meghúzod magad. Hadd vállaljam én a nagyobb kockázatot."
+Text/102_foreshadow4/text,"[color=STEEL_BLUE]Fejét rázza, erőltetett mosollyal.[/color] Nem. Túl közel vagyunk már. El tudom intézni Russetet."
+Text/102_foreshadow5/text,"Különben is... [color=CHARTREUSE]valakinek távol kell tartania titeket, hajtásokat a bajtól.[/color]"
+Text/106_trucks1/text,"De még mindig nem tudjuk, hol van a fő feldolgozó létesítmény. A dokumentumok csak szállítási kódokat sorolnak fel."
+Text/106_trucks2/text,Figyeltem a [color=DARK_VIOLET]Gyökér Rezervátum teherautóit[/color]. Minden éjjel 03:00-kor indulnak. Ugyanaz az útvonal.
+Text/106_trucks3/text,"[color=CHARTREUSE]Ha követni tudnánk őket...[/color] pontosan tudnánk, hová viszik a selejteket."
+Choice/106_trucks4/text,Megteszem. Ismerem a járőrözési ütemterveket.
+Choice/106_trucks5/text,Ez kockázatosnak hangzik. Nem tehetné meg valaki más?
+Text/106_trucks6/text,"[color=CHARTREUSE]Sasha szeme felcsillan.[/color] Tudtam, hogy acélgyökereid vannak. Légy óvatos – éjszaka erősen járőröznek."
+Text/106_trucks7/text,"03:00 óra. Az árnyékban guggolsz, miközben a [color=DARK_VIOLET]Gyökér Rezervátum[/color] teherautói elzúgnak melletted."
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Maradj rejtve! Kövesd a konvojt![/color][/pulse]
+Text/106_trucks9/text,"A teherautók egy hatalmas, ipari negyedben elrejtett komplexumnál állnak meg. [color=DARK_VIOLET]7-es szektor, Delta Raktárkomplexum.[/color]"
+Text/106_trucks10/text,Kémények lilás füstöt okádnak. A szag... [tornado radius=3 freq=2][color=CRIMSON]összetéveszthetetlen.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]A Gyökér Rezervátum szíve.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]Sasha arca csalódottságot tükröz.[/color] Mindannyiunknak kockáztatnunk kell. Találok más utat.

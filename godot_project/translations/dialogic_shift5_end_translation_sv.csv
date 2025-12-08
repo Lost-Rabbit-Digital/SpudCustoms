@@ -17,3 +17,6 @@ Text/a4/text,Detta bevisar allt. Motståndsrörelsen kommer att göra kopior. [t
 Text/a5/text,Du har korsat en gräns. [wave amp=20 freq=3][color=YELLOW]Det finns ingen återvändo.[/color][/wave] När sanningen sprids kommer Spud att förvandlas.
 Choice/9c/disabled_text,
 Choice/9d/disabled_text,
+Text/9a_viktor1/text,Du skannar namnen på manifestet... och ett sticker ut. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,Det namnet... har du hört förut. Säkerhetsvakten Viktor nämnde att hans fru var försvunnen.
+Text/9a_viktor3/text,"""[color=CRIMSON]Status: Bearbetad. Batch RR-2851.[/color]"" Daterad för två veckor sedan."

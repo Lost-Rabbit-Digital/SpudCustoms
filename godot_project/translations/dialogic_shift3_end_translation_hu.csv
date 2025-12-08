@@ -16,3 +16,12 @@ Text/76/text,"Sasha a kezedbe nyomja a mappát. ""[color=YELLOW]Tartsd biztonsá
 Text/77/text,Elrejted a mappát a kabátodban. [color=DARK_VIOLET]Root Reserve[/color]. Az elutasítások. Az eltűnt burgonyák. Minden [tornado radius=3 freq=2][color=CRIMSON]borzalmas módon[/color][/tornado] összekapcsolódik.
 Choice/71/disabled_text,
 Choice/70/disabled_text,
+Text/69_photo1/text,Újra előveszed a fényképet. [color=GOLD]Maris Piper[/color]. Olyan kedves arc.
+Text/69_photo2/text,A felesége annyira kétségbeesett volt. [color=STEEL_BLUE]Mi történt vele?[/color]
+Text/69_photo3/text,Észreveszel valamit a fénykép hátterében – egy teherautót egy [color=DARK_VIOLET]lila logóval[/color].
+Text/69_photo4/text,Az a jelkép... láttad már a kantin szállítmányain. [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve.[/color][/wave]
+Text/6a_photo1/text,Sasha... ez a fénykép. A nő felesége adta nekem. Őt kereste.
+Text/6a_photo2/text,Sasha arca elkomorul. [color=STEEL_BLUE]Hadd lássam.[/color]
+Text/6a_photo3/text,"Sasha tanulmányozza a fényképet, arckifejezése elkomorul. [color=CRIMSON]Felismerem azt a teherautót.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Tartsd biztonságban ezt a fényképet.[/color][/pulse] Később fontos lehet. Bízz bennem.
+Text/6f2/text,[pulse freq=3][color=CRIMSON]Root Reserve-vé válnak.[/color][/pulse]

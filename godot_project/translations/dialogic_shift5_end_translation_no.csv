@@ -17,3 +17,6 @@ Text/a4/text,Dette beviser alt. Motstandsbevegelsen vil lage kopier. [tornado ra
 Text/a5/text,"Du har krysset en grense. [wave amp=20 freq=3][color=YELLOW]Det er ingen vei tilbake.[/color][/wave] Når sannheten sprer seg, vil Spud bli forvandlet."
 Choice/9c/disabled_text,
 Choice/9d/disabled_text,
+Text/9a_viktor1/text,Du skanner navnene på manifestet... og ett skiller seg ut. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,Det navnet... har du hørt før. Sikkerhetsvakten Viktor nevnte at kona hans var savnet.
+Text/9a_viktor3/text,"""[color=CRIMSON]Status: Behandlet. Parti RR-2851.[/color]"" Datert for to uker siden."

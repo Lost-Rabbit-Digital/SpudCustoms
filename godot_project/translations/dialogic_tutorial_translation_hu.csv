@@ -28,3 +28,6 @@ Text/16f/text,"Ha a műszakja sikeres volt, folytathatja a ""Folytatás"" gombra
 Text/170/text,Ez lefedi a vámtisztviselői kötelességeinek alapjait.
 Text/171/text,"Ne feledje: ellenőrizze gondosan a dokumentumokat, állítsa meg a futókat, és teljesítse a kvótáját."
 Text/172/text,A Spud biztonsága az Ön [pulse freq=2][color=DARK_ORANGE]éberségén múlik![/color][/pulse]
+Text/174/text,Kezdjük el a [color=YELLOW]betanuló műszakodat[/color]...
+Text/180/text,De légy óvatos - nem minden burgonyának vannak rendben a papírjai.
+Text/181/text,[color=RED]Lejárt útlevelek[/color] automatikus elutasítás. Nincs kivétel.

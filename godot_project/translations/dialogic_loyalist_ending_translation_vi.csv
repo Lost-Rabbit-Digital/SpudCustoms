@@ -1,0 +1,79 @@
+﻿keys,vi
+Text/299_suppress1/text,Hỗn loạn bùng nổ khi cuộc tấn công của phe kháng chiến bắt đầu. Tiếng nổ làm rung chuyển trạm kiểm soát.
+Text/299_suppress2/text,"Bạn có thể chạy trốn. Bạn có thể ẩn nấp. Thay vào đó, bạn [color=DARK_ORANGE]chọn phe của mình[/color]."
+Text/299_suppress3/text,Russet nắm lấy cánh tay bạn. [pulse freq=2][color=YELLOW]ĐÂY LÀ CƠ HỘI CỦA BẠN![/color][/pulse] Hãy chứng minh lòng trung thành của bạn!
+Text/299_suppress4/text,Phe kháng chiến đang cố gắng đột nhập cổng phía đông! [color=CRIMSON]Ngăn chặn chúng![/color]
+Text/299_suppress5/text,Bạn siết chặt vũ khí. Đây có thể là những người bạn quen biết. Những người bạn đã giúp đỡ.
+Text/299_suppress6/text,Nhưng sự sống còn có cái giá của nó. [color=DARK_ORANGE]Bạn đã đưa ra lựa chọn của mình.[/color]
+Text/299_suppress7/text,[pulse freq=3][color=CRIMSON]Chiến đấu vì Nhà nước![/color][/pulse] Đàn áp cuộc tấn công của phe kháng chiến!
+Text/299_suppress8/text,"Khi khói tan, xác chết nằm la liệt trên mặt đất. Một số đeo huy hiệu kháng chiến."
+Text/299_suppress9/text,[color=STEEL_BLUE]Bạn nhận ra những gương mặt trong số những người đã ngã xuống.[/color]
+Text/299_suppress10/text,Murphy nằm trong số những người đã chết. Đôi mắt anh ta nhìn vô định. Bức ảnh của Tommy được nắm chặt trong tay anh ta.
+Text/299_suppress11/text,[color=STEEL_BLUE]Anh ta chết vì chiến đấu cho điều mình tin tưởng. Bạn đã giúp giết chết nó.[/color]
+Text/300/text,"Cuộc tấn công của phe kháng chiến đã thất bại. Trạm kiểm soát vẫn đứng vững, mạnh mẽ hơn bao giờ hết. Và bạn vẫn ở vị trí của mình."
+Text/301/text,[pulse freq=2][color=GOLD]VẠN TUẾ THỦ TƯỚNG IDAHO![/color][/pulse] Người bảo vệ Spud! Kẻ đánh bại những kẻ phản bội!
+Text/302/text,"Một củ khoai tây khổng lồ trong trang phục lộng lẫy bước xuống từ một chiếc xe bọc thép, được hộ tống bởi các vệ binh tinh nhuệ."
+Text/303/text,"Idaho khảo sát trạm kiểm soát với đôi mắt lạnh lùng, tính toán."
+Text/304/text,"Russet vội vã tiến lên, cúi đầu thật sâu. Thưa Thủ tướng! Chúng tôi rất vinh dự được đón tiếp ngài!"
+Text/305/text,Những kẻ phản bội đã được [color=DARK_VIOLET]xử lý[/color] theo lệnh của ngài. Sản lượng đã tăng 40% trong quý này!
+Text/306/text,Và đây là sĩ quan đã trung thành trong cuộc nổi dậy?
+Text/307/text,"Vâng, thưa Thủ tướng. Sự cống hiến kiên định. Đã báo cáo các hoạt động đáng ngờ. Một công dân kiểu mẫu."
+Text/308/text,"Idaho bước tới, gắn một huy chương lên ngực bạn - [color=GOLD]Củ Khoai Tây Vàng[/color]."
+Text/309/text,Vì những cống hiến vượt trội. Bạn đã chứng minh rằng [color=DARK_ORANGE]lòng trung thành với Spud[/color] sẽ luôn được đền đáp.
+Choice/30a/text,"Cảm ơn, thưa Thủ tướng. Vinh quang cho Spud."
+Choice/30b/text,"Tôi chỉ làm tròn bổn phận của mình, thưa ngài. (Cố gượng cười)"
+Text/30c/text,Nụ cười của Idaho không chạm tới đôi mắt. Phải. Bạn chắc chắn đã làm vậy.
+Text/30d/text,Idaho nhìn bạn một lúc lâu. Bổn phận. [color=STEEL_BLUE]Một từ đơn giản cho những hành động phức tạp đến vậy.[/color]
+Text/30e/text,"Tôi tự hỏi những [color=CRIMSON]cơn ác mộng[/color] nào sẽ ám ảnh những kẻ làm tròn ""bổn phận"" của mình quá xuất sắc."
+Text/30f/text,"Một bữa tiệc được tổ chức để vinh danh chiến thắng. Bàn ăn chất đầy thức ăn, bao gồm những phần lớn [color=DARK_VIOLET]Dự Trữ Củ[/color]."
+Text/310/text,"Russet nâng ly chất lỏng đặc quánh, màu tím. Cạn ly! Vì những [color=CRIMSON]kẻ phản bội đã nuôi dưỡng chúng ta[/color]!"
+Text/311/text,Cả phòng cười vang. Một số người cười gượng gạo. Đa số cười thật lòng.
+Text/312/text,"Hắn đẩy một đĩa thức ăn về phía bạn. Thử mẻ mới đi. [color=DARK_VIOLET]""Hỗn Hợp Kháng Cự.""[/color] Đóng góp của Sasha cho tương lai của Spud."
+Text/313/text,Dạ dày bạn quặn thắt. Món ăn trên đĩa. [color=CRIMSON]Sasha.[/color] Em họ của Murphy. Người vợ trong bức ảnh.
+Text/314/text,[tornado radius=3 freq=2][color=CRIMSON]Tất cả bọn họ.[/color][/tornado]
+Choice/315/text,Ép mình ăn - duy trì vỏ bọc
+Choice/316/text,Đẩy đĩa thức ăn ra - bạn không thể làm điều này
+Text/317/text,Bạn đưa dĩa lên môi. Nhắm mắt lại. [color=STEEL_BLUE]Nhai. Nuốt. Đừng nghĩ.[/color]
+Text/318/text,"Russet gật đầu tán thành. ""Tốt. [color=DARK_ORANGE]Bạn sẽ tiến xa.[/color]"""
+Text/319/text,"Bạn đẩy đĩa thức ăn ra. ""Tôi không được khỏe. Sự phấn khích của ngày hôm nay..."""
+Text/31a/text,"Mắt Russet nheo lại trong giây lát, rồi dịu đi. Tất nhiên rồi. Thật là một [color=YELLOW]thể trạng nhạy cảm[/color]."
+Text/31b/text,"Nghỉ ngơi đi. Ngày mai, chúng ta có [color=CRIMSON]nhiều việc xử lý hơn[/color] để giám sát."
+Text/31c/text,Bạn trở về phòng riêng. Chiếc huy chương nặng trĩu trên ngực bạn.
+Text/31d/text,Bạn lấy ra bức ảnh người vợ mất tích. Cô ấy có lẽ cũng nằm trong lô hàng đó rồi.
+Text/31e/text,Bạn đã hứa sẽ tìm thấy cô ấy. [color=STEEL_BLUE]Bạn đã tìm thấy cô ấy.[/color] Chỉ là không theo cách mà cả hai bạn mong muốn.
+Text/31f/text,Murphy. Bạn của bạn. Người đã tin tưởng bạn. Anh ấy đã tham gia kháng chiến.
+Text/320/text,[color=CRIMSON]Đã từng.[/color]
+Text/321/text,Bạn nhìn chằm chằm vào hình ảnh phản chiếu của mình trong cửa sổ. Chiếc huy chương lấp lánh. [color=DARK_ORANGE]Củ Vàng.[/color] Anh hùng của Spud.
+Text/322/text,[color=STEEL_BLUE]Quái vật trong vỏ khoai tây.[/color]
+Text/323/text,"Đêm đó, bạn mơ thấy Sasha. Cô ấy không buộc tội. Không giận dữ. Điều đó sẽ dễ dàng hơn."
+Text/324/text,"Cô ấy chỉ nhìn bạn bằng đôi mắt đó. [color=CHARTREUSE]Rễ cây mọc sâu[/color], cô ấy thì thầm."
+Text/325/text,Ngay cả những [color=STEEL_BLUE]cái thối rữa[/color].
+Text/326/text,Nhiều tháng trôi qua. Bạn được thăng chức. Thanh tra Khu vực An ninh Biên giới. Cánh tay phải của Russet.
+Text/327/text,Bạn giám sát nhiều vụ từ chối hơn bất kỳ ai trong lịch sử Spud. Sản lượng [color=DARK_VIOLET]Root Reserve[/color] tăng vọt.
+Text/328/text,Văn phòng của bạn tiện nghi. Khẩu phần của bạn dồi dào. Gia đình bạn được bảo vệ.
+Text/329/text,Bạn có mọi thứ đã được hứa hẹn.
+Text/32a/text,"Mọi thứ, trừ [color=STEEL_BLUE]giấc ngủ[/color]. Trừ [color=STEEL_BLUE]sự bình yên[/color]. Trừ khả năng nhìn vào gương."
+Text/32b/text,"Một ngày nọ, bạn nhận ra điều đó. Một [color=GOLD]biểu tượng củ khoai tây vàng[/color] được khắc lên tường. Rồi một cái khác. Rồi hàng tá."
+Text/32c/text,Một phong trào kháng chiến mới đang hình thành. Lặng lẽ hơn. Cẩn trọng hơn. Học hỏi từ những sai lầm của Sasha.
+Choice/32d/text,Báo cáo ngay các biểu tượng này cho an ninh
+Choice/32e/text,Giả vờ như bạn không nhìn thấy chúng
+Choice/32f/text,Để lại dấu ấn của riêng bạn - một chiếc lá vàng đơn độc
+Text/330/text,Bạn nộp báo cáo. Một đợt nghi phạm khác bị bắt giữ. Một lần thăng chức nữa.
+Text/331/text,Vòng lặp tiếp diễn. [color=CRIMSON]Bạn đã trở thành cỗ máy.[/color]
+Text/332/text,Bạn đi ngang qua. Không nói gì. Chẳng đáng là bao. [color=STEEL_BLUE]Hầu như không là gì cả.[/color]
+Text/333/text,Nhưng đây là lần đầu tiên bạn chọn không hành động chống lại chúng.
+Text/334/text,"Có lẽ đó là một điều gì đó. Có lẽ đã [color=YELLOW]quá ít, quá muộn[/color]."
+Text/335/text,"Khi không có ai nhìn, bạn khắc một [color=GOLD]chiếc lá vàng[/color] nhỏ bên cạnh các biểu tượng."
+Text/336/text,Một hành động phản kháng đơn độc. Đã quá muộn nhiều năm. Nhưng [color=CHARTREUSE]có một điều gì đó[/color].
+Text/337/text,"Giọng của Sasha vang vọng trong ký ức bạn: ""[color=CHARTREUSE]Rễ cây mọc sâu.[/color]"""
+Text/338/text,Có lẽ đủ sâu để [color=CHARTREUSE]chạm tới cả bạn[/color]. Một ngày nào đó.
+Text/339/text,Quốc gia Spud vẫn tồn tại. [color=DARK_VIOLET]Root Reserve[/color] vẫn chảy. Vòng lặp tiêu thụ tiếp diễn.
+Text/33a/text,"Nhưng ở đâu đó, trong những vết nứt trên tường, [color=CHARTREUSE]một điều gì đó mới đang lớn lên[/color]."
+Text/33b/text,Liệu bạn có là một phần của nó hay không... [color=YELLOW]câu chuyện đó vẫn chưa được viết ra[/color].
+Choice/30a/disabled_text,
+Choice/30b/disabled_text,
+Choice/315/disabled_text,
+Choice/316/disabled_text,
+Choice/32d/disabled_text,
+Choice/32e/disabled_text,
+Choice/32f/disabled_text,

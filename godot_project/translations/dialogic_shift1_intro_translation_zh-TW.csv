@@ -1,0 +1,18 @@
+﻿keys,zh-TW
+Text/56/text,歡迎來到薯國。一個[pulse freq=2][color=MEDIUM_VIOLET_RED]全體薯民繁榮昌盛[/color][/pulse]的國度。
+Text/57/text,您已被選中，將在保衛我國邊境方面扮演[color=DARK_ORANGE]關鍵職位[/color]。
+Text/59/text,看啊！這就是保衛我國的[color=MEDIUM_VIOLET_RED]宏偉城牆[/color]。您將在此服務，確保只有合格者方可進入。
+Text/5a/text,啊，新芽。仔細聽好，您的職責對[color=DARK_ORANGE]薯國的安全至關重要[/color]。
+Text/184/text,褐皮薯不自在地靠近。我見過許多新芽來到這裡。[color=STEEL_BLUE]大多數都撐不久。[/color]
+Text/184b/text,那些問太多問題的人？他們會被[color=CRIMSON]重新分配[/color]。永久地。
+Text/5b/text,我任命您為[pulse freq=1][color=MEDIUM_VIOLET_RED]光榮薯國[/color][/pulse]的海關官員。有任何問題嗎？
+Choice/5c/text,「我已準備好傾盡我所有的澱粉為薯國服務！」
+Choice/5d/text,「被拒絕的馬鈴薯究竟會發生什麼事？」
+Text/5e/text,太棒了！這正是我們需要的熱情。您可能會獲得[color=VIOLET]根部儲備[/color]嘉獎。
+Text/5f/text,他們會被...[color=VIOLET]處理[/color]。依照規程。[color=VIOLET]根部儲備[/color]會處理所有細節。
+Text/60/text,專注於您的職責。[color=DARK_ORANGE]僅此而已。[/color]
+Text/61/text,您的第一個班次現在開始。仔細檢查文件，拒絕不符合我們標準的人。
+Text/62/text,達成您的配額，避免記過。
+Text/62b/text,請記住，[color=MEDIUM_VIOLET_RED]薯國萬歲！[/color]
+Choice/5c/disabled_text,
+Choice/5d/disabled_text,

@@ -45,3 +45,41 @@ Choice/27/disabled_text,
 Choice/26/disabled_text,
 Choice/25/disabled_text,
 Choice/16/disabled_text,
+Text/1a_rescue1/text,En spanare rusar fram. Vi hittade henne! [color=CHARTREUSE]Sasha är i förvarsblocket![/color]
+Text/1a_rescue2/text,De förbereder sig för att... [tornado radius=3 freq=2][color=CRIMSON]bearbeta henne[/color][/tornado]... om mindre än en timme!
+Text/1a_rescue3/text,Vi måste rädda henne. [pulse freq=2][color=CHARTREUSE]Hon startade allt det här.[/color][/pulse] Vi lämnar inte utan henne.
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]Rusa genom anläggningen![/color][/wave] Nå Sasha innan det är för sent!
+Text/1a_rescue_fail1/text,Du snubblar. Vägen framåt är blockerad av vakter!
+Text/1a_rescue_fail2/text,Viktor stormar in genom en sidodörr. [color=CHARTREUSE]KÖR! Jag håller dem![/color]
+Text/1a_rescue_fail3/text,För Elena. För dem alla. [color=STEEL_BLUE]Jag låter ingen mer dö![/color]
+Text/1a_rescue_fail4/text,Murphy rycker i ett brandlarm. [color=CHARTREUSE]För Tommy![/color] Sprinklerna bländar vakterna!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Jag skapar en distraktion. Få ut henne därifrån![/color]
+Text/1a_rescue_fail6/text,"Ett [color=YELLOW]bearbetningsband fastnar[/color], sprutar gnistor och distraherar vakterna!"
+Text/1a_rescue_fail7/text,Ödet – eller spökena från de bearbetade – ger dig en andra chans.
+Text/1a_rescue5/text,"Sasha tittar upp från sin cell, mörbultad men obruten. Hennes ögon vidgas. [color=CHARTREUSE]Du kom.[/color]"
+Text/1a_rescue6/text,Självklart kom jag. [color=CHARTREUSE]Vi avslutar det här tillsammans.[/color]
+Choice/1a_rescue7/text,Jag var rädd att jag aldrig skulle få se dig igen.
+Choice/1a_rescue8/text,Du gjorde oss oroliga. Gör inte det igen.
+Choice/1a_rescue9/text,Vi har jobb att göra. Idaho väntar.
+Text/1a_rescue10/text,[color=CHARTREUSE]Sasha drar dig in i en kort kram.[/color] Jag visste att du skulle komma. Jag tvivlade aldrig.
+Text/1a_rescue11/text,Nu ska vi låta dem betala för alla de har tagit. [color=CHARTREUSE]Tillsammans.[/color]
+Text/1a_rescue12/text,Sasha lyckas framkalla ett svagt leende trots smärtan. [color=STEEL_BLUE]Jag ska försöka.[/color] Men vissa saker är värda risken.
+Text/1a_rescue13/text,Att du är här bevisar det. Nu avslutar vi det här.
+Text/1a_rescue14/text,"Sasha nickar, hennes beslutsamhet återuppväckt. [color=CHARTREUSE]Du har rätt.[/color] Känslor kan vänta."
+Text/1a_rescue15/text,Idaho tror att han har vunnit. Låt oss visa honom hur fel han har.
+Text/158/text,Säkerhetsstyrkor närmar sig! [pulse freq=3][color=YELLOW]Kämpa dig igenom![/color][/pulse]
+Text/21_fail1/text,Vakter närmar sig från alla håll. [color=CRIMSON]Det finns ingenstans att fly![/color]
+Text/21_fail2/text,"Viktor dyker upp bakom vakterna, med en röst kall som stål. [color=STEEL_BLUE]Lägg ner vapnen. Nu.[/color]"
+Text/21_fail3/text,Vakterna tvekar – Viktor var en av deras egna. [color=CRIMSON]Elenas namn står på de manifesten. Era familjer kan stå näst på tur.[/color]
+Text/21_fail4/text,Vissa vakter sänker sina vapen. Andra flyr. Vägen är fri.
+Text/21_fail5/text,"En explosion skakar östflygeln. Murphys röst sprakar i kommunikationsradion: [color=CHARTREUSE]""Det är min avledning! RÖR PÅ ER!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Vakterna skingras mot explosionen. Tommy skulle vara stolt.[/color]
+Text/21_fail7/text,Sasha tacklar den ledande vakten bakifrån. [color=CHARTREUSE]Jag överlevde inte den cellen bara för att se dig dö![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]SPRING! Jag tar hand om det här![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha flyttar sig närmare, hennes hand finner din när ni ser den nya gryningen tillsammans.[/color] Vi byggde det här. Du och jag."
+Text/152/text,"Så länge vi förblir trogna våra rötter, de ideal som förde oss hit... [color=CHARTREUSE]kommer vi att hitta en väg.[/color] Tillsammans."
+Text/153/text,[color=CHARTREUSE]Du kramar hennes hand. Tillsammans.[/color]
+Text/154/text,[color=STEEL_BLUE]Sasha står bredvid dig.[/color] Din eld tände gnistan som brände ner deras imperium.
+Text/155/text,[color=STEEL_BLUE]Ilskan har svalnat till beslutsamhet. Det finns fortfarande arbete att göra.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha ger dig ett uppmuntrande leende.[/color] Du har kommit långt från den där kontrollstationen. Det har vi alla.
+Text/157/text,"[color=STEEL_BLUE]Skulden kanske aldrig helt försvinner, men du har funnit mening i återuppbyggnaden.[/color]"

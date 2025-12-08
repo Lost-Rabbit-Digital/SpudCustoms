@@ -32,3 +32,32 @@ Choice/c4/disabled_text,
 Choice/c5/disabled_text,
 Choice/cb/disabled_text,
 Choice/cc/disabled_text,
+Text/c7_viktor1/text,Krzepki strażnik podchodzi podczas twojej przerwy. Jego twarz jest wycieńczona.
+Text/c7_viktor2/text,"Hej... jesteś jednym z celników, prawda? Rozpytuję o moją żonę, Elenę."
+Text/c7_viktor3/text,Przekroczyła to przejście trzy tygodnie temu. [color=STEEL_BLUE]Nie przeszła kontroli.[/color] Od tamtej pory nie mam od niej wieści.
+Choice/c7_viktor4/text,"""Wiktorze... Znalazłem coś. O Elenie. Musisz poznać prawdę."""
+Choice/c7_viktor5/text,"""Przykro mi, Wiktorze. Nic nie widziałem."""
+Text/c7_viktor6/text,Pokazujesz mu kopię strony z manifestu. Jego twarz blednie.
+Text/c7_viktor7/text,"[wave amp=25 freq=3]Jego ręce drżą, gdy czyta.[/wave] [color=GOLD]Elena Pietrow[/color]... [color=CRIMSON]Przetworzona... Partia RR-2851...[/color]"
+Text/c7_viktor8/text,Jego głos to ledwie szept. [tornado radius=3 freq=2][color=CRIMSON]Oni... oni ZROBILI z niej...[/color][/tornado]
+Text/c7_viktor9/text,Jego żal zmienia się w zimną furię. [pulse freq=2][color=CRIMSON]Idaho za to zapłaci.[/color][/pulse] Przysięgam na jej pamięć.
+Text/c7_viktor10/text,"Chwyta cię za ramię. [color=CHARTREUSE]Dziękuję, że mi powiedziałeś.[/color] Kiedy nadejdzie czas... Zapamiętam to."
+Text/c7_viktor11/text,Kiwa głową ze smutkiem. [color=STEEL_BLUE]Tak myślałem.[/color] Nikt nic nie wie. Albo nikt nie chce mówić.
+Text/c7_viktor12/text,"Jeśli coś usłyszysz... [color=YELLOW]proszę.[/color] Ona jest wszystkim, co mam."
+Text/d0_qte1/text,"Później, podczas tej zmiany, podchodzi podróżny z dokumentami opatrzonymi [color=CHARTREUSE]subtelnym znakiem ruchu oporu[/color]."
+Text/d0_qte2/text,[color=DARK_ORANGE]RealityScan[/color] rozpoczyna skanowanie. [wave amp=15 freq=3][color=RED]Zaraz wykryje znak![/color][/wave]
+Text/d0_qte3/text,Masz sekundy na decyzję. Skaner się rozgrzewa...
+Choice/d0_qte4/text,"""Udawaj awarię skanera - szybko!"""
+Choice/d0_qte5/text,"""Pozwól skanerowi dokończyć skanowanie"""
+Text/d0_qte6/text,"[pulse freq=3][color=YELLOW]Musisz działać szybko![/color][/pulse] Wywołaj awarię, zanim skończy skanować!"
+Text/d0_qte7/text,Grzebiesz przy kablach skanera. Lecą iskry. Ekran migocze i gaśnie.
+Text/d0_qte8/text,Russet podbiega. [color=YELLOW]Co tu się stało?[/color]
+Choice/d0_qte9/text,"""Przepięcie, proszę pana. Te nowe systemy są kapryśne."""
+Choice/d0_qte10/text,"""Nie wiem, proszę pana. Po prostu zgasł."""
+Text/d0_qte11/text,Russet chrząka. [color=STEEL_BLUE]Birokraci dają nam niesprawdzony sprzęt.[/color] Przetwórz ich ręcznie i oznacz do ponownej kontroli.
+Text/d0_qte12/text,"Russet patrzy na ciebie podejrzliwie. [color=YELLOW]Jakie to wygodne.[/color] Zlecę serwisowi, żeby to sprawdzili. Nie pozwól, żeby to się powtórzyło."
+Text/d0_qte13/text,"Członek ruchu oporu daje ci najmniejsze skinienie głowy w podziękowaniu, gdy przechodzą."
+Text/d0_qte14/text,Skaner [pulse freq=3][color=RED]GŁOŚNO PISZCZY[/color][/pulse]. Wykryto nieautoryzowane oznaczenia!
+Text/d0_qte15/text,Russet pojawia się natychmiast. [color=CHARTREUSE]Dobra robota![/color] Kolejny zdrajca złapany.
+Text/d0_qte16/text,"Członek ruchu oporu zostaje odciągnięty, z przerażeniem w oczach. ""[color=CRIMSON]Proszę, nie! Mam dzieci![/color]"""
+Text/d0_qte17/text,Twoja lojalność została [color=DARK_ORANGE]odnotowana w twojej teczce[/color]. Tak trzymaj.

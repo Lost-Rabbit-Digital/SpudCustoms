@@ -1,0 +1,24 @@
+﻿keys,es-419
+Text/78/text,"Otro día en el puesto de control. La fila de papas se extiende más que nunca, con todos al límite."
+Text/79/text,Nuevas órdenes de arriba. Estamos [wave amp=15 freq=3][color=DARK_ORANGE]duplicando los rechazos[/color][/wave]. Toda papa considerada insegura será detenida de inmediato.
+Text/7a/text,Tengo una misión especial. Tenemos información sobre [pulse freq=2][color=CRIMSON]agitadores[/color][/pulse]. Sé vigilante con tus inspecciones.
+Choice/7b/text,"""Sí, señor, no le fallaré."""
+Choice/7c/text,"""¿De qué clase de agitadores estamos hablando?"""
+Text/7d/text,Bien. Sabía que podía contar contigo. Llegarás lejos con esa actitud.
+Text/7e/text,Los que [color=CRIMSON]amenazan nuestra forma de vida[/color]. No hagas demasiadas preguntas si sabes lo que te conviene.
+Text/7f/text,"[color=STEEL_BLUE]¡Por favor, se lo ruego![/color] Mi esposa —su nombre es [color=GOLD]Maris[/color]— se suponía que venía justo detrás de mí."
+Text/7fb/text,"Ella [tornado radius=2 freq=3]nunca pasó por aduanas[/tornado]. Dijeron que sus papeles tenían una ""irregularidad""."
+Text/80/text,"Nadie me dirá qué le pasó. ¡Por favor, [color=CHARTREUSE]ayúdeme a encontrarla![/color]"
+Choice/81/text,"""Lo siento, pero no hay nada que pueda hacer."""
+Choice/82/text,"""Permítame ver qué puedo averiguar. No prometo nada."""
+Text/83/text,Igual que todos los demás... [color=STEEL_BLUE]Que tu conciencia te pese tanto como a mí.[/color]
+Text/83b/text,La papa desesperada se aleja lentamente. La ves mirando una foto gastada antes de que desaparezca.
+Text/84/text,¡Gracias! Incluso una pequeña esperanza es mejor que ninguna.
+Text/84b/text,"Te entrega una [color=GOLD]fotografía gastada[/color]. Su nombre es [color=GOLD]Maris Piper[/color]. Tiene ojos amables. Por favor, encuéntrala."
+Text/84c/text,Miras la foto. Una papa joven con rasgos delicados y una sonrisa cálida. [color=GOLD]Maris Piper[/color].
+Text/84d/text,¿Adónde fue? La fila de rechazos lleva a... ¿dónde exactamente?
+Text/85/text,Vi ese intercambio. [color=DARK_ORANGE]Simpatizar con los rechazados solo trae problemas.[/color] Concéntrate en tu deber.
+Choice/7b/disabled_text,
+Choice/7c/disabled_text,
+Choice/81/disabled_text,
+Choice/82/disabled_text,

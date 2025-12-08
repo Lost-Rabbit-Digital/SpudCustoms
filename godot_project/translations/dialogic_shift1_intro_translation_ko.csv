@@ -1,0 +1,18 @@
+﻿keys,ko
+Text/56/text,스퍼드 국가에 오신 것을 환영합니다. [pulse freq=2][color=MEDIUM_VIOLET_RED]모든 감자에게 번영을 약속하는[/color][/pulse] 땅입니다.
+Text/57/text,당신은 우리 국경을 수호하는 [color=DARK_ORANGE]중요한 역할[/color]을 위해 선발되었습니다.
+Text/59/text,"보라! 우리 국가를 수호하는 [color=MEDIUM_VIOLET_RED]위대한 벽[/color]을. 이곳에서 당신은 봉사하며, 오직 자격 있는 자만이 들어올 수 있도록 할 것입니다."
+Text/5a/text,"아, 새싹이로군. 잘 들어라, 네 역할은 [color=DARK_ORANGE]스퍼드의 안보에 필수적[/color]이다."
+Text/184/text,러셋이 불쾌할 정도로 가까이 다가온다. 이곳을 거쳐 간 새싹들을 많이 봤지. [color=STEEL_BLUE]대부분 오래가지 못했어.[/color]
+Text/184b/text,질문이 너무 많은 녀석들은? [color=CRIMSON]재배치[/color]되지. 영구적으로.
+Text/5b/text,나는 너를 [pulse freq=1][color=MEDIUM_VIOLET_RED]영광스러운 스퍼드[/color][/pulse]의 세관원으로 임명한다. 질문 있나?
+Choice/5c/text,"""저의 모든 전분을 바쳐 스퍼드를 위해 봉사할 준비가 되었습니다!"""
+Choice/5d/text,"""거부된 감자들은 정확히 어떻게 되나요?"""
+Text/5e/text,훌륭하다! 바로 우리가 필요한 열정이다. [color=VIOLET]뿌리 보존부[/color] 표창을 받을 수도 있겠군.
+Text/5f/text,그들은... [color=VIOLET]처리된다[/color]. 규정에 따라. 모든 세부 사항은 [color=VIOLET]뿌리 보존부[/color]에서 처리한다.
+Text/60/text,네 임무에 집중해라. [color=DARK_ORANGE]그 이상은 없어.[/color]
+Text/61/text,"첫 근무가 지금 시작된다. 서류를 신중하게 확인하고, 우리 기준에 미달하는 자들은 거부해라."
+Text/62/text,"할당량을 채우고, 경고를 피하라."
+Text/62b/text,"그리고 기억해라, [color=MEDIUM_VIOLET_RED]스퍼드에 영광을![/color]"
+Choice/5c/disabled_text,
+Choice/5d/disabled_text,

@@ -17,3 +17,6 @@ Text/a4/text,Asta dovedește totul. Rezistența va face copii. [tornado radius=3
 Text/a5/text,"Ai trecut de o limită. [wave amp=20 freq=3][color=YELLOW]Nu mai este cale de întoarcere.[/color][/wave] Când adevărul se va răspândi, Spud va fi transformat."
 Choice/9c/disabled_text,
 Choice/9d/disabled_text,
+Text/9a_viktor1/text,Scanezi numele de pe manifest... și unul iese în evidență. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,Acel nume... l-ai mai auzit. Paznicul Viktor a menționat că soția lui lipsea.
+Text/9a_viktor3/text,"""[color=CRIMSON]Status: Procesat. Lot RR-2851.[/color]"" Datat acum două săptămâni."

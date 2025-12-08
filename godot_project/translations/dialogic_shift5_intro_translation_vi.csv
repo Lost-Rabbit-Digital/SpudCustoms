@@ -21,3 +21,13 @@ Choice/ac/disabled_text,
 Choice/b2/disabled_text,
 Choice/b1/disabled_text,
 Choice/ad/disabled_text,
+Text/b4_viktor1/text,Một lính gác an ninh vạm vỡ nắm lấy cánh tay bạn khi bạn đi ngang qua. Khuôn mặt anh ta hằn lên vẻ lo lắng.
+Text/b4_viktor2/text,"Này... xin lỗi đã làm phiền bạn. Bạn là một trong những nhân viên hải quan, phải không? Tên tôi là [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Tôi đã hỏi mọi người về vợ tôi, [color=GOLD]Elena[/color]. Elena Petrov. Cô ấy đã qua trạm kiểm soát này ba tuần trước."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Không đạt kiểm tra.[/color] Họ nói cô ấy sẽ được xử lý và đưa về nhà, nhưng... tôi chưa nghe ngóng được gì cả."
+Text/b4_viktor5/text,Giọng anh ta run rẩy. Không ai nói cho tôi biết bất cứ điều gì. Bạn có biết những hành khách bị từ chối đi đâu không?
+Choice/b4_viktor6/text,"""Tôi xin lỗi, Viktor. Tôi không biết. Nhưng tôi sẽ để mắt tới."""
+Choice/b4_viktor7/text,"""Tôi không thể thảo luận chi tiết về việc xử lý. Quy trình an ninh."""
+Text/b4_viktor8/text,Mắt Viktor ánh lên một tia hy vọng. [color=CHARTREUSE]Cảm ơn bạn.[/color] Bất cứ điều gì bạn tìm thấy... làm ơn. Cô ấy là tất cả những gì tôi có.
+Text/b4_viktor9/text,"Viktor gật đầu, thất vọng. [color=STEEL_BLUE]Phải rồi. Quy trình.[/color] Tôi hiểu."
+Text/b4_viktor10/text,Nhưng nếu bạn đổi ý... [color=YELLOW]Tôi cần biết chuyện gì đã xảy ra với cô ấy.[/color]

@@ -16,3 +16,12 @@ Text/76/text,"Sasha stoppar mappen i dina händer. ""[color=YELLOW]Håll den hä
 Text/77/text,Du gömmer mappen inuti din jacka. [color=DARK_VIOLET]Root Reserve[/color]. Avvisningarna. De saknade potatisarna. Allt kopplas samman på ett [tornado radius=3 freq=2][color=CRIMSON]skrämmande sätt[/color][/tornado].
 Choice/71/disabled_text,
 Choice/70/disabled_text,
+Text/69_photo1/text,Du tar fram fotot igen. [color=GOLD]Maris Piper[/color]. Ett så vänligt ansikte.
+Text/69_photo2/text,Hennes fru var så desperat. [color=STEEL_BLUE]Vad hände med henne?[/color]
+Text/69_photo3/text,Du lägger märke till något i bakgrunden av fotot – en lastbil med en [color=DARK_VIOLET]lila logga[/color].
+Text/69_photo4/text,Den där symbolen... du har sett den på kafeterians leveranser. [wave amp=15 freq=2][color=DARK_VIOLET]Rotreserven.[/color][/wave]
+Text/6a_photo1/text,Sasha... det här fotot. Kvinnans fru gav det till mig. Hon letade efter henne.
+Text/6a_photo2/text,Sashas ansikte faller. [color=STEEL_BLUE]Låt mig se.[/color]
+Text/6a_photo3/text,"Sasha studerar fotot, hennes uttryck mörknar. [color=CRIMSON]Jag känner igen den där lastbilen.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Förvara det här fotot säkert.[/color][/pulse] Det kan bli viktigt senare. Lita på mig.
+Text/6f2/text,[pulse freq=3][color=CRIMSON]De blir Rotreserven.[/color][/pulse]

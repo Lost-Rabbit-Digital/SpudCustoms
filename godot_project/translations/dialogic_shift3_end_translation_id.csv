@@ -16,3 +16,12 @@ Text/76/text,"Sasha memasukkan folder ke tanganmu. ""[color=YELLOW]Jaga ini deng
 Text/77/text,Kau menyembunyikan folder di dalam jaketmu. [color=DARK_VIOLET]Root Reserve[/color]. Penolakan. Kentang yang hilang. Semuanya terhubung dengan cara yang [tornado radius=3 freq=2][color=CRIMSON]mengerikan[/color][/tornado].
 Choice/71/disabled_text,
 Choice/70/disabled_text,
+Text/69_photo1/text,Anda mengeluarkan foto itu lagi. [color=GOLD]Maris Piper[/color]. Wajah yang begitu ramah.
+Text/69_photo2/text,Istrinya begitu putus asa. [color=STEEL_BLUE]Apa yang terjadi padanya?[/color]
+Text/69_photo3/text,Anda melihat sesuatu di latar belakang foto itu - sebuah truk dengan [color=DARK_VIOLET]logo ungu[/color].
+Text/69_photo4/text,Simbol itu... Anda pernah melihatnya pada pengiriman kafetaria. [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve.[/color][/wave]
+Text/6a_photo1/text,Sasha... foto ini. Istri wanita itu memberikannya padaku. Dia mencarinya.
+Text/6a_photo2/text,Wajah Sasha muram. [color=STEEL_BLUE]Coba kulihat.[/color]
+Text/6a_photo3/text,"Sasha mengamati foto itu, ekspresinya menggelap. [color=CRIMSON]Aku mengenali truk itu.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Simpan foto ini baik-baik.[/color][/pulse] Ini mungkin penting nanti. Percayalah padaku.
+Text/6f2/text,[pulse freq=3][color=CRIMSON]Mereka menjadi Root Reserve.[/color][/pulse]

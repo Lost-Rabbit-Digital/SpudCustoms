@@ -28,3 +28,6 @@ Text/16f/text,"Si tu turno fue exitoso, podrás continuar haciendo clic en ""Con
 Text/170/text,Eso cubre los conceptos básicos de tus deberes como Oficial de Aduanas.
 Text/171/text,"Recuerda: revisa los documentos cuidadosamente, detén a los corredores y cumple con tu cuota."
 Text/172/text,¡La seguridad de Spud depende de tu [pulse freq=2][color=DARK_ORANGE]vigilancia![/color][/pulse]
+Text/174/text,Empecemos tu [color=YELLOW]turno de entrenamiento[/color]...
+Text/180/text,Pero ten cuidado - no todas las patatas tienen sus papeles en regla.
+Text/181/text,[color=RED]Pasaportes caducados[/color] son un rechazo automático. Sin excepciones.

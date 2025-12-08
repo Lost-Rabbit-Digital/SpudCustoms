@@ -5,3 +5,27 @@ Text/52/text,Une petite note glisse de quelques papiers sur ton bureau.
 Text/53/text,"[color=GOLD]Tout n'est pas ce qu'il paraît. Les racines de notre nation sont pourries. [br] Suis la piste, mais prends garde à ne pas être réduit au silence.[/color] [br] - [color=CHARTREUSE]Un ami[/color]"
 Text/54/text,Cette note... et la façon dont Russet a esquivé ma question sur [pulse freq=3][color=CRIMSON]les pommes de terre rejetées[/color][/pulse]... [br] Quelque chose semble [color=STEEL_BLUE]bizarre[/color].
 Text/55/text,Je devrais rester [color=YELLOW]vigilant[/color]. Il y a plus ici que de tamponner des passeports.
+Text/52b/text,Ce n'était pas là ce matin. Quelqu'un l'a placé [color=YELLOW]pendant votre service[/color].
+Text/53b/text,"[color=GOLD]Suivez la piste, mais prenez garde à ne pas être réduit au silence.[/color]"
+Text/53c/text,[color=GOLD]Surveillez qui mange la [/color][color=DARK_VIOLET]Réserve[/color][color=GOLD]. Surveillez qui refuse.[/color]
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]Un ami[/color]
+Choice/53e/text,"""Gardez la note cachée - enquêtez discrètement"""
+Choice/53f/text,"""Détruisez la note - cela pourrait être un test"""
+Choice/53g/text,"""Montrez la note à Russet immédiatement"""
+Text/53h/text,Vous pliez la note avec soin et la glissez dans votre poche. [color=CHARTREUSE]Quelqu'un vous tend la main.[/color]
+Text/53i/text,"Mais qui ? Et pourquoi vous, dès votre premier jour ?"
+Text/53j/text,Vous déchirez la note en mille morceaux.
+Text/53k/text,"Russet a dit que les germes qui posent des questions sont ""réaffectés"". Mieux vaut ne pas prendre de risques."
+Text/53l/text,"Vous rattrapez Russet avant qu'il ne parte. ""Monsieur ? J'ai trouvé ça dans mes papiers..."""
+Text/53m/text,"Russet arrache la note, la lit. Son expression vacille - [color=YELLOW]était-ce de la reconnaissance ?[/color]"
+Text/53n/text,Propagande. Des rebelles qui essaient de corrompre de nouveaux officiers. [color=DARK_ORANGE]Vous avez eu raison de m'apporter ceci.[/color]
+Text/53o/text,Il empoche la note. Oubliez que vous l'avez jamais vue. Et surveillez quiconque agit... [color=CRIMSON]de manière suspecte[/color].
+Text/54b/text,"""[color=VIOLET]Traité. Conformément au protocole.[/color]"" Qu'est-ce que ça veut dire, au juste ?"
+Text/54c/text,Cette note... elle disait que les racines sont devenues [color=CRIMSON]pourries[/color].
+Text/54d/text,"Mais Spud est glorieuse, n'est-ce pas ? C'est ce qu'ils nous ont dit. Ce que je croyais."
+Text/54e/text,"Vous sortez la note, la relisant. ""[color=GOLD]Surveillez qui mange la Réserve. Surveillez qui refuse.[/color]"""
+Text/54f/text,"Demain, vous ferez attention. [color=YELLOW]Quelqu'un essaie de vous dire quelque chose.[/color]"
+Text/54g/text,"Le visage de Russet quand il a lu la note. Juste un instant, il a eu l'air presque... [color=STEEL_BLUE]effrayé[/color]."
+Text/54h/text,Qu'est-ce que la [color=DARK_VIOLET]Réserve Racinaire[/color] est vraiment ? Et pourquoi quelqu'un vous en avertirait-il ?
+Text/54i/text,"La note a disparu, mais les mots persistent. [color=YELLOW]Tout n'est pas tel qu'il y paraît.[/color]"
+Text/54j/text,Peut-être que la détruire était le bon choix. Peut-être avez-vous juste réduit au silence votre seul allié.

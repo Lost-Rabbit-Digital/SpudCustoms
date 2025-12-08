@@ -1,25 +1,25 @@
 ﻿keys,ko
-patch_1_2_0_title,SPUD CUSTOMS 1.2.0 - PATCH NOTES
-patch_1_2_0_personal_note_header,A PERSONAL NOTE FROM THE DEVELOPER
-patch_1_2_0_personal_note,"This update is dedicated to my little one, who spent the first months of life in the NICU - from 1lb at birth to now 20lbs of pure joy. Thank you to everyone who has joined this journey - over 2,000 players have now experienced Spud Customs!"
-patch_1_2_0_visual_header,VISUAL ENHANCEMENTS
-patch_1_2_0_visual_1,Animated Art Integration: Incorporated new animated GIFs from StagNation into opening scenes
-patch_1_2_0_visual_2,Art Overhaul: Repainted the first five scenes players see for improved visual quality
-patch_1_2_0_visual_3,Dynamic Backgrounds: Background visuals now change as difficulty increases
-patch_1_2_0_story_header,STORY & NARRATIVE
-patch_1_2_0_story_1,Choice Persistence: Narrative choices now properly carry across all levels
-patch_1_2_0_story_2,Visual Progression: Added visual indicators of story progression in main gameplay scenes based on current shift number
-patch_1_2_0_story_3,Branching Dialogue Fixes: Fixed issues with branching dialogue in final narrative scenes
-patch_1_2_0_bugfix_header,BUG FIXES
-patch_1_2_0_bugfix_1,Achievement System: Fixed achievement tracking - all achievements now unlock properly
-patch_1_2_0_bugfix_2,Leaderboard: Fixed issue where leaderboard was stuck on loading
-patch_1_2_0_bugfix_3,Screen Shake: Screen shake now properly resets to origin after each use
-patch_1_2_0_bugfix_4,Difficulty Scaling: Fixed easy mode scaling factor
-patch_1_2_0_bugfix_5,Background Display: Fixed missing backgrounds during dialogue scenes
-patch_1_2_0_bugfix_6,Text Readability: Improved text coloration for better readability
-patch_1_2_0_engagement_header,PLAYER ENGAGEMENT
-patch_1_2_0_engagement_1,Review Requests: Added review prompts for demo and full game players
-patch_1_2_0_engagement_2,Translation Fixes: Various translation improvements across supported languages
-patch_1_2_0_technical_header,TECHNICAL IMPROVEMENTS
-patch_1_2_0_technical_1,Expanded Language Support: Now supporting all 31 Steam-supported languages
-patch_1_2_0_technical_2,Translation System Overhaul: Reorganized translation files for better maintainability
+patch_1_2_0_title,SPUD CUSTOMS 1.2.0 - 패치 노트
+patch_1_2_0_personal_note_header,개발자의 한마디
+patch_1_2_0_personal_note,"이 업데이트는 신생아 중환자실(NICU)에서 생애 첫 몇 달을 보낸 저의 어린아이에게 바칩니다. 태어날 때 1파운드였던 아이가 이제는 20파운드의 순수한 기쁨이 되었습니다. 이 여정에 함께 해주신 모든 분들께 감사드립니다. 2,000명 이상의 플레이어들이 이제 Spud Customs를 경험했습니다!"
+patch_1_2_0_visual_header,시각적 개선 사항
+patch_1_2_0_visual_1,애니메이션 아트 통합: 오프닝 장면에 StagNation의 새로운 애니메이션 GIF를 통합했습니다.
+patch_1_2_0_visual_2,아트워크 전면 개편: 플레이어가 처음 보게 되는 다섯 장면을 다시 그려 시각적 품질을 개선했습니다.
+patch_1_2_0_visual_3,동적 배경: 난이도가 증가함에 따라 배경 시각 효과가 변경됩니다.
+patch_1_2_0_story_header,스토리 및 내러티브
+patch_1_2_0_story_1,선택 유지: 내러티브 선택이 이제 모든 레벨에 걸쳐 올바르게 유지됩니다.
+patch_1_2_0_story_2,시각적 진행도: 현재 근무조 번호에 따라 주요 게임 플레이 장면에 스토리 진행도 시각적 지표를 추가했습니다.
+patch_1_2_0_story_3,분기 대화 수정: 최종 내러티브 장면의 분기 대화 문제를 수정했습니다.
+patch_1_2_0_bugfix_header,버그 수정
+patch_1_2_0_bugfix_1,도전 과제 시스템: 도전 과제 추적을 수정했습니다. 이제 모든 도전 과제가 올바르게 잠금 해제됩니다.
+patch_1_2_0_bugfix_2,리더보드: 리더보드가 로딩 중 멈추는 문제를 수정했습니다.
+patch_1_2_0_bugfix_3,화면 흔들림: 화면 흔들림이 이제 매 사용 후 올바르게 초기 위치로 재설정됩니다.
+patch_1_2_0_bugfix_4,난이도 조절: 쉬움 모드 조절 계수를 수정했습니다.
+patch_1_2_0_bugfix_5,배경 표시: 대화 장면에서 배경이 누락되는 문제를 수정했습니다.
+patch_1_2_0_bugfix_6,텍스트 가독성: 가독성 향상을 위해 텍스트 색상을 개선했습니다.
+patch_1_2_0_engagement_header,플레이어 참여
+patch_1_2_0_engagement_1,리뷰 요청: 데모 및 정식 게임 플레이어를 위한 리뷰 요청 메시지를 추가했습니다.
+patch_1_2_0_engagement_2,번역 수정: 지원되는 언어 전반에 걸쳐 다양한 번역 개선이 이루어졌습니다.
+patch_1_2_0_technical_header,기술적 개선 사항
+patch_1_2_0_technical_1,언어 지원 확장: 이제 Steam에서 지원하는 31개 언어를 모두 지원합니다.
+patch_1_2_0_technical_2,번역 시스템 전면 개편: 유지 보수성 향상을 위해 번역 파일을 재정비했습니다.

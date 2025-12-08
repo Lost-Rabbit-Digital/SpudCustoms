@@ -1,0 +1,59 @@
+﻿keys,pl
+Text/265/text,Zmiana kończy się w niespokojnej ciszy. Patrole bezpieczeństwa podwojono. Wszyscy poruszają się szeptem.
+Text/266/text,"Zmierzasz do swoich kwater, gdy to słyszysz – [color=YELLOW]krzyki ze skrzydła oficerów[/color]."
+Text/267/text,"Zakręcasz za róg, by zobaczyć siły bezpieczeństwa [pulse freq=3][color=RED]wyważające drzwi Sashy[/color][/pulse]."
+Text/268/text,Głos Naczelnika Yukona grzmi. SŁODKA ZIEMNIACZKO SASHO! Jesteś aresztowana za [color=CRIMSON]zdradę narodu Ziemniaka![/color]
+Text/269/text,"Sasha jest wywleczona, szarpiąc się. Jej oczy są wyzywające, nawet gdy strażnicy wykręcają jej ręce za plecy."
+Text/26a/text,[tornado radius=4 freq=3][color=CHARTREUSE]PRAWDA WYJDZIE NA JAW! NIE ZAMKNIECIE NAM WSZYSTKIM UST![/color][/tornado]
+Text/26b/text,Jej wzrok odnajduje cię w tłumie gapiów. Czas zdaje się zamierać.
+Text/26c/text,Rozpoznanie... potem [color=CRIMSON]drużgoczące zrozumienie[/color]. Zdradziłeś jej położenie. Ona wie.
+Text/26d/text,Nie mówi. Spojrzenie wystarczy. [color=STEEL_BLUE]Rozczarowanie głębsze niż nienawiść.[/color]
+Text/26e/text,Przebłysk czegoś – [color=CHARTREUSE]nadziei? zaufania?[/color] – przemknął po jej twarzy.
+Text/26f/text,Jej usta poruszają się bezgłośnie: „[color=CHARTREUSE]Korzenie rosną głęboko.[/color]” Wiadomość. Przypomnienie.
+Text/270/text,"Russet wyłania się z cienia, satysfakcja sączy się z każdej pory."
+Text/271/text,"No, no. [color=CRIMSON]Słodki ziemniak kwaśnieje[/color]. Zawsze wiedziałem, że coś jest z tobą nie tak, Sasho."
+Text/272/text,Russet podnosi teczkę. Twoje małe [color=DARK_VIOLET]manifesty[/color]. Twoje „dowody”. Wszystko odzyskane.
+Text/273/text,"Naprawdę myślałaś, że możesz podważyć [pulse freq=2][color=DARK_VIOLET]Rezerwę Korzeni[/color][/pulse]? Podważyć MNIE?"
+Text/274/text,"Kopie już krążą, Russet. Świat dowie się, co robisz naszym ludziom!"
+Text/275/text,"Russet śmieje się zimno. Będą wiedzieć to, co im powiemy. A ty? Będziesz częścią [color=CRIMSON]bardzo specjalnej partii[/color]."
+Text/276/text,"„[color=DARK_VIOLET]Mieszanka Zdrajców[/color]” – Myślę, że to brzmi nieźle."
+Text/277/text,"Twoje serce wali. Każdy instynkt krzyczy, by coś zrobić. Ale strażnicy są wszędzie."
+Choice/278/text,Wystąp i zażądaj jej uwolnienia (Lekkomyślne)
+Choice/279/text,"Pozostań w ukryciu – żyj, by walczyć innego dnia (Pragmatyczne)"
+Choice/27a/text,Złap wzrok Sashy i skinij głową – obietnica (Zdecydowanie)
+Text/27b/text,Przepychasz się przez tłum. „[color=CHARTREUSE]Czekajcie! Ona nic złego nie zrobiła![/color]”
+Text/27c/text,Głowa Yukona odwraca się gwałtownie w twoją stronę. „[color=RED]Złapać i tego![/color] Wyraźnie wspólnik!”
+Text/27d/text,"Murphy łapie cię, odciągając. „[color=STEEL_BLUE]Są zdezorientowani w tym chaosie! UCIEKAJ![/color]”"
+Text/27e/text,"Murphy popycha cię w stronę bocznego korytarza, gdy strażnicy otaczają twoją pozycję."
+Text/27f/text,"Strażnicy łapią cię. Uśmiech Russeta poszerza się. ""[color=CRIMSON]Dwóch zdrajców w cenie jednego.[/color]"""
+Text/280/text,"Cofasz się w cień, nienawidząc siebie z całego serca. [color=STEEL_BLUE]Tchórz.[/color]"
+Text/281/text,Ale żywy. I wolny. Na razie.
+Text/282/text,"Łapiesz spojrzenie Sashy. Powolne, celowe skinienie głową. [color=CHARTREUSE]Przyjdę po ciebie.[/color]"
+Text/283/text,"Ona widzi. Najmniejszy uśmiech. Potem zostaje zaciągnięta za róg, znika."
+Text/284/text,"Znajduje cię w chaosie. Jego twarz jest maską, ale jego oczy płoną."
+Text/285/text,Zabrali ją do [color=CRIMSON]skrzydła przetwarzania[/color]. Podpoziom 3. Tam zabrali moją żonę.
+Text/286/text,Wciska ci coś do ręki - [color=GOLD]kartę bezpieczeństwa[/color].
+Text/287/text,Kiedy nadejdzie czas... [color=CHARTREUSE]Odwrócę wzrok[/color]. Dla mojej żony. Dla nich wszystkich.
+Text/288/text,"Murphy wciąga cię do magazynu, ciężko dysząc."
+Text/289/text,To już. To [color=CRIMSON]naprawdę się dzieje[/color]. Mają Sashę. Przetworzą ją do rana.
+Text/28a/text,"To było [color=STEEL_BLUE]głupie[/color]. Odważne, ale głupie. Jesteś teraz na ich liście."
+Text/28b/text,"Ruch oporu coś planuje. Jutro. To nasza jedyna szansa, by ją uratować."
+Text/28c/text,Wchodzisz w to? [color=CHARTREUSE]Na całego?[/color]
+Choice/28d/text,"Na całego. Cokolwiek trzeba, by uratować Sashę."
+Choice/28e/text,Muszę pomyśleć. To dzieje się za szybko.
+Text/28f/text,Murphy ściska twoje ramię. [color=CHARTREUSE]Więc ruszamy o świcie. Korzenie rosną głęboko.[/color]
+Text/290/text,Twarz Murphy'ego twardnieje. Myśl szybko. Jutro o tej porze będzie [color=DARK_VIOLET]Rezerwą Korzeni[/color].
+Text/291/text,"Leżysz bezsennie, wpatrując się w sufit. Twarz Sashy. Jej opór. Jej strach."
+Text/292/text,"Wyciągasz zdjęcie zaginionej żony. Kolejna twarz, której nie mogłeś uratować."
+Text/293/text,[color=CHARTREUSE]Nie tym razem.[/color]
+Text/294/text,Do jutra wszystko się zmieni. Tak czy inaczej.
+Text/295/text,[pulse freq=2][color=YELLOW]Koniec ze staniem z boku.[/color][/pulse]
+Text/296/text,"Cela jest zimna. Przez ściany słyszysz gdzieś Sashę, która jest „przesłuchiwana”."
+Text/297/text,"Jutro, powiedzieli. Zostaniecie oboje [color=DARK_VIOLET]przetworzeni[/color] razem."
+Text/298/text,Chyba że przyjdzie ruch oporu. Chyba że ktoś was oboje uratuje.
+Text/299/text,[color=STEEL_BLUE]Najdłuższa noc twojego życia rozciąga się przed tobą.[/color]
+Choice/278/disabled_text,
+Choice/279/disabled_text,
+Choice/27a/disabled_text,
+Choice/28d/disabled_text,
+Choice/28e/disabled_text,

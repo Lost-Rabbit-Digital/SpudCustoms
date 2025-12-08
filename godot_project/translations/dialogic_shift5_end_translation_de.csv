@@ -17,3 +17,6 @@ Text/a4/text,Dies beweist alles. Der Widerstand wird Kopien machen. [tornado rad
 Text/a5/text,"Du hast eine Grenze überschritten. [wave amp=20 freq=3][color=YELLOW]Es gibt kein Zurück.[/color][/wave] Wenn sich die Wahrheit verbreitet, wird Spud transformiert werden."
 Choice/9c/disabled_text,
 Choice/9d/disabled_text,
+Text/9a_viktor1/text,Du scannst die Namen auf dem Manifest... und einer sticht hervor. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,"Dieser Name... den hast du schon einmal gehört. Der Wachmann Viktor erwähnte, dass seine Frau vermisst wird."
+Text/9a_viktor3/text,"""[color=CRIMSON]Status: Verarbeitet. Charge RR-2851.[/color]"" Datiert vor zwei Wochen."

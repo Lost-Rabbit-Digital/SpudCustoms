@@ -1,0 +1,79 @@
+﻿keys,sk
+Text/299_suppress1/text,"Vypukne chaos, keď sa začne útok odboja. Výbuchy otriasajú kontrolným stanovišťom."
+Text/299_suppress2/text,Mohol by si utiecť. Mohol by si sa skryť. Namiesto toho si [color=DARK_ORANGE]vyberieš stranu[/color].
+Text/299_suppress3/text,Russet ťa chytí za ruku. [pulse freq=2][color=YELLOW]TERAZ JE TVOJA ŠANCA![/color][/pulse] Dokáž svoju lojalitu!
+Text/299_suppress4/text,Odboj sa snaží preniknúť cez východnú bránu! [color=CRIMSON]Zastav ich![/color]
+Text/299_suppress5/text,"Zovrieš svoju zbraň. To by mohli byť ľudia, ktorých poznáš. Ľudia, ktorým si pomohol."
+Text/299_suppress6/text,Ale prežitie má svoju cenu. [color=DARK_ORANGE]Urobil si svoju voľbu.[/color]
+Text/299_suppress7/text,[pulse freq=3][color=CRIMSON]Bojuj za štát![/color][/pulse] Potlač útok odboja!
+Text/299_suppress8/text,"Keď sa dym rozplynie, telá ležia roztrúsené po zemi. Niektorí majú odznaky odboja."
+Text/299_suppress9/text,[color=STEEL_BLUE]Medzi padlými rozpoznávaš tváre.[/color]
+Text/299_suppress10/text,Murphy leží medzi mŕtvymi. Jeho oči hľadia do prázdna. Tommyho fotka zovretá v jeho ruke.
+Text/299_suppress11/text,"[color=STEEL_BLUE]Zomrel bojujúc za niečo, v čo veril. Ty si pomohol to zabiť.[/color]"
+Text/300/text,"Útok odboja zlyhal. Kontrolné stanovište stojí, silnejšie ako kedykoľvek predtým. A ty zostávaš na svojom poste."
+Text/301/text,[pulse freq=2][color=GOLD]NECH ŽIJE PREMIÉR IDAHO![/color][/pulse] Obranca Zemiaka! Premožiteľ zradcov!
+Text/302/text,"Obrovský zemiak v honosnom rúchu vystupuje z obrneného vozidla, obklopený elitnými strážcami."
+Text/303/text,"Idaho si prezerá kontrolné stanovište chladnými, vypočítavými očami."
+Text/304/text,"Russet sa ponáhľa dopredu, hlboko sa ukláňajúc. Pán premiér! Sme poctení vašou prítomnosťou!"
+Text/305/text,"Zradcovia boli [color=DARK_VIOLET]spracovaní[/color], ako ste nariadili. Produkcia vzrástla o 40% tento štvrťrok!"
+Text/306/text,"A toto je dôstojník, ktorý zostal lojálny počas povstania?"
+Text/307/text,"Áno, pán premiér. Neochvejná oddanosť. Nahlásil podozrivé aktivity. Vzorový občan."
+Text/308/text,"Idaho vykročí vpred, pripne ti medailu na hruď – [color=GOLD]Zlatá Hľuza[/color]."
+Text/309/text,"Za mimoriadnu službu. Dokázal si, že [color=DARK_ORANGE]lojálnosť k Zemiaku[/color] bude vždy odmenená."
+Choice/30a/text,"Ďakujem, pán premiér. Sláva Zemiaku."
+Choice/30b/text,"Len som si plnil svoju povinnosť, pane. (Vynútený úsmev)"
+Text/30c/text,Idahov úsmev nedosahuje k jeho očiam. Áno. Určite si ju plnil.
+Text/30d/text,Idaho si ťa dlho prezerá. Povinnosť. [color=STEEL_BLUE]Také jednoduché slovo pre také komplikované činy.[/color]
+Text/30e/text,"Zaujímalo by ma, aké [color=CRIMSON]nočné mory[/color] navštevujú tých, ktorí si tak dobre plnia svoju ""povinnosť""."
+Text/30f/text,"Na počesť víťazstva sa koná hostina. Stoly sa prehýbajú pod jedlom, vrátane štedrých porcií [color=DARK_VIOLET]Koreňovej Rezervy[/color]."
+Text/310/text,"Russet zdvihne pohár hustej, fialovej tekutiny. Prípitok! Na [color=CRIMSON]zradcov, ktorí nás živia[/color]!"
+Text/311/text,Miestnosť sa smeje. Niektorí nervózne. Väčšina úprimne.
+Text/312/text,"Posunie k tebe tanier. Vyskúšaj novú várku. [color=DARK_VIOLET]""Zmes Odboja.""[/color] Sashin príspevok k budúcnosti Spudu."
+Text/313/text,Žalúdok sa ti stiahne. Jedlo na tanieri. [color=CRIMSON]Sasha.[/color] Murphyho sesternica. Manželka z fotografie.
+Text/314/text,[tornado radius=3 freq=2][color=CRIMSON]Všetci.[/color][/tornado]
+Choice/315/text,Prinúť sa jesť - udrž si krytie
+Choice/316/text,Odsuni tanier - toto nedokážeš
+Text/317/text,Zdvihneš vidličku k perám. Zavrieš oči. [color=STEEL_BLUE]Žuj. Prehltni. Nemysli.[/color]
+Text/318/text,"Russet súhlasne prikývne. ""Dobre. [color=DARK_ORANGE]Dostaneš sa ďaleko.[/color]"""
+Text/319/text,"Odsunieš tanier. ""Necítim sa dobre. Vzrušenie z dnešného dňa..."""
+Text/31a/text,"Russetove oči sa na chvíľu prižmúria, potom zmäknú. Samozrejme. Taká [color=YELLOW]citlivá povaha[/color]."
+Text/31b/text,Oddýchni si. Zajtra máme dohliadať na [color=CRIMSON]ďalšie spracovanie[/color].
+Text/31c/text,Vrátiš sa do svojich ubikácií. Medaila ťa ťaží na hrudi.
+Text/31d/text,Vytiahneš fotku nezvestnej manželky. Jej manželka je teraz pravdepodobne v rovnakej várke ako ona.
+Text/31e/text,"Sľúbil si, že ju nájdeš. [color=STEEL_BLUE]Našiel si ju.[/color] Len nie tak, ako ste obaja dúfali."
+Text/31f/text,"Murphy. Tvoj priateľ. Ten, ktorý ti veril. Bol v odboji."
+Text/320/text,[color=CRIMSON]Bol.[/color]
+Text/321/text,Pozeráš sa na svoj odraz v okne. Medaila sa leskne. [color=DARK_ORANGE]Zlatá Hľuza[/color]. Hrdina Spudu.
+Text/322/text,[color=STEEL_BLUE]Monštrum v zemiakovej šupke.[/color]
+Text/323/text,Tú noc sa ti sníva o Sashe. Neobviňuje. Nezúri. To by bolo ľahšie.
+Text/324/text,"Len sa na teba pozerá tými očami. [color=CHARTREUSE]Korene rastú hlboko[/color], šepká."
+Text/325/text,Aj tie [color=STEEL_BLUE]zhnité[/color].
+Text/326/text,Mesiace plynú. Si povýšený. Regionálny Inšpektor Pohraničnej Bezpečnosti. Russetova pravá ruka.
+Text/327/text,Dohliadate na viac zamietnutí ako ktokoľvek v histórii Spudu. Produkcia [color=DARK_VIOLET]Koreňovej Rezervy[/color] stúpa.
+Text/328/text,Vaša kancelária je pohodlná. Vaše prídely sú štedré. Vaša rodina je chránená.
+Text/329/text,"Máte všetko, čo vám bolo sľúbené."
+Text/32a/text,Všetko okrem [color=STEEL_BLUE]spánku[/color]. Okrem [color=STEEL_BLUE]mieru[/color]. Okrem schopnosti pozrieť sa do zrkadla.
+Text/32b/text,Jedného dňa si to všimnete. [color=GOLD]Žltý zemiakový emblém[/color] vyrytý do steny. Potom ďalší. Potom desiatky.
+Text/32c/text,Formuje sa nový odpor. Tichší. Opatrnejší. Učí sa z Sashiných chýb.
+Choice/32d/text,Okamžite nahláste symboly bezpečnostnej službe
+Choice/32e/text,"Predstierajte, že ste ich nevideli"
+Choice/32f/text,Zanechajte vlastnú značku – jeden žltý list
+Text/330/text,Podáte správu. Ďalšia skupina podozrivých je zadržaná. Ďalšie povýšenie.
+Text/331/text,Cyklus pokračuje. [color=CRIMSON]Stali ste sa strojom.[/color]
+Text/332/text,Prejdete okolo. Nič nepoviete. Nie je to veľa. [color=STEEL_BLUE]Je to takmer nič.[/color]
+Text/333/text,"Ale je to prvýkrát, čo ste sa rozhodli nekonať proti nim."
+Text/334/text,"Možno je to niečo. Možno je to [color=YELLOW]príliš málo, príliš neskoro[/color]."
+Text/335/text,"Keď sa nikto nepozerá, vyryjete malý [color=GOLD]žltý list[/color] vedľa emblémov."
+Text/336/text,Jeden akt vzdoru. Roky príliš neskoro. Ale [color=CHARTREUSE]niečo[/color].
+Text/337/text,"Sashin hlas sa ozýva vo vašej pamäti: ""[color=CHARTREUSE]Korene rastú hlboko.[/color]"""
+Text/338/text,"Možno dosť hlboko, aby [color=CHARTREUSE]dosiahli aj vás[/color]. Jedného dňa."
+Text/339/text,Národ Spud pretrváva. [color=DARK_VIOLET]Koreňová Rezerva[/color] prúdi. Cyklus spotreby pokračuje.
+Text/33a/text,"Ale niekde, v prasklinách steny, [color=CHARTREUSE]rastie niečo nové[/color]."
+Text/33b/text,Či už budete jej súčasťou... [color=YELLOW]ten príbeh sa ešte len napíše[/color].
+Choice/30a/disabled_text,
+Choice/30b/disabled_text,
+Choice/315/disabled_text,
+Choice/316/disabled_text,
+Choice/32d/disabled_text,
+Choice/32e/disabled_text,
+Choice/32f/disabled_text,

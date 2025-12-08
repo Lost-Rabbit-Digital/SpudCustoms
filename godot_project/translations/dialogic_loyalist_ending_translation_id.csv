@@ -1,0 +1,79 @@
+﻿keys,id
+Text/299_suppress1/text,Kekacauan meletus saat serangan perlawanan dimulai. Ledakan mengguncang pos pemeriksaan.
+Text/299_suppress2/text,"Kamu bisa lari. Kamu bisa bersembunyi. Namun, kamu [color=DARK_ORANGE]memilih pihakmu[/color]."
+Text/299_suppress3/text,Russet mencengkeram lenganmu. [pulse freq=2][color=YELLOW]INI KESEMPATANMU![/color][/pulse] Buktikan kesetiaanmu!
+Text/299_suppress4/text,Perlawanan mencoba menerobos gerbang timur! [color=CRIMSON]Hentikan mereka![/color]
+Text/299_suppress5/text,Kamu menggenggam senjatamu. Ini bisa jadi orang-orang yang kamu kenal. Orang-orang yang pernah kamu bantu.
+Text/299_suppress6/text,Tapi bertahan hidup ada harganya. [color=DARK_ORANGE]Kamu sudah membuat pilihanmu.[/color]
+Text/299_suppress7/text,[pulse freq=3][color=CRIMSON]Berjuanglah untuk negara![/color][/pulse] Redam serangan perlawanan!
+Text/299_suppress8/text,"Saat asap menghilang, mayat-mayat berserakan di tanah. Beberapa memakai lencana perlawanan."
+Text/299_suppress9/text,[color=STEEL_BLUE]Kamu mengenali wajah-wajah di antara yang gugur.[/color]
+Text/299_suppress10/text,Murphy tergeletak di antara yang tewas. Matanya menatap kosong. Foto Tommy tergenggam erat di tangannya.
+Text/299_suppress11/text,[color=STEEL_BLUE]Dia mati berjuang untuk sesuatu yang dia yakini. Kamu membantu membunuhnya.[/color]
+Text/300/text,"Serangan perlawanan gagal. Pos pemeriksaan berdiri teguh, lebih kuat dari sebelumnya. Dan kamu tetap di posmu."
+Text/301/text,[pulse freq=2][color=GOLD]HIDUP PERDANA MENTERI IDAHO![/color][/pulse] Pembela Spud! Penumpas pengkhianat!
+Text/302/text,"Sebuah kentang raksasa dengan pakaian kebesaran yang mewah turun dari kendaraan lapis baja, diapit oleh penjaga elit."
+Text/303/text,Idaho mengamati pos pemeriksaan dengan mata dingin dan penuh perhitungan.
+Text/304/text,"Russet bergegas maju, membungkuk dalam-dalam. Perdana Menteri! Kami merasa terhormat atas kehadiran Anda!"
+Text/305/text,Para pengkhianat telah [color=DARK_VIOLET]diproses[/color] sesuai perintah Anda. Produksi naik 40% kuartal ini!
+Text/306/text,Dan ini adalah petugas yang tetap setia selama pemberontakan?
+Text/307/text,"Ya, Perdana Menteri. Dedikasi tak tergoyahkan. Melaporkan aktivitas mencurigakan. Warga negara teladan."
+Text/308/text,"Idaho melangkah maju, menyematkan medali di dadamu - [color=GOLD]Umbi Emas[/color]."
+Text/309/text,Untuk pengabdian yang luar biasa. Kamu telah membuktikan bahwa [color=DARK_ORANGE]kesetiaan kepada Spud[/color] akan selalu dihargai.
+Choice/30a/text,"Terima kasih, Perdana Menteri. Jaya Spud."
+Choice/30b/text,"Saya hanya menjalankan tugas saya, Tuan. (Memaksakan senyum)"
+Text/30c/text,Senyum Idaho tidak sampai ke matanya. Ya. Kamu memang melakukannya.
+Text/30d/text,Idaho mengamatimu sejenak. Tugas. [color=STEEL_BLUE]Kata yang begitu sederhana untuk tindakan yang begitu rumit.[/color]
+Text/30e/text,"Aku bertanya-tanya mimpi buruk apa yang menghantui mereka yang menjalankan ""tugas"" mereka dengan begitu baik."
+Text/30f/text,"Sebuah pesta diadakan untuk merayakan kemenangan. Meja-meja penuh makanan, termasuk porsi melimpah dari [color=DARK_VIOLET]Cadangan Akar[/color]."
+Text/310/text,Russet mengangkat segelas cairan ungu kental. Bersulang! Untuk para [color=CRIMSON]pengkhianat yang menyehatkan kita[/color]!
+Text/311/text,Ruangan itu tertawa. Beberapa dengan gugup. Sebagian besar dengan tulus.
+Text/312/text,"Dia menggeser piring ke arahmu. Coba adonan baru ini. [color=DARK_VIOLET]""Campuran Perlawanan.""[/color] Kontribusi Sasha untuk masa depan Spud."
+Text/313/text,Perutmu mual. Makanan di piring itu. [color=CRIMSON]Sasha.[/color] Sepupu Murphy. Istri dari foto itu.
+Text/314/text,[tornado radius=3 freq=2][color=CRIMSON]Mereka semua.[/color][/tornado]
+Choice/315/text,Paksakan dirimu makan - pertahankan penyamaranmu
+Choice/316/text,Singkirkan piring itu - kau tidak bisa melakukan ini
+Text/317/text,Kau mengangkat garpu ke bibirmu. Pejamkan matamu. [color=STEEL_BLUE]Kunyah. Telan. Jangan berpikir.[/color]
+Text/318/text,"Russet mengangguk setuju. ""Bagus. [color=DARK_ORANGE]Kau akan melangkah jauh.[/color]"""
+Text/319/text,"Kau menyingkirkan piring itu. ""Aku tidak enak badan. Kegembiraan hari ini..."""
+Text/31a/text,"Mata Russet menyipit sesaat, lalu melunak. Tentu saja. Konstitusi yang begitu [color=YELLOW]sensitif[/color]."
+Text/31b/text,"Istirahatlah. Besok, kita punya [color=CRIMSON]lebih banyak pemrosesan[/color] untuk diawasi."
+Text/31c/text,Kau kembali ke kamarmu. Medali itu terasa berat di dadamu.
+Text/31d/text,Kau mengeluarkan foto istri yang hilang itu. Istrinya mungkin berada di kelompok yang sama dengannya sekarang.
+Text/31e/text,Kau berjanji akan menemukannya. [color=STEEL_BLUE]Kau menemukannya.[/color] Hanya saja bukan dengan cara yang kalian berdua harapkan.
+Text/31f/text,Murphy. Temanmu. Orang yang memercayaimu. Dia berada di pihak perlawanan.
+Text/320/text,[color=CRIMSON]Dulu.[/color]
+Text/321/text,Kau menatap pantulan dirimu di jendela. Medali itu berkilauan. [color=DARK_ORANGE]Umbi Emas[/color]. Pahlawan Spud.
+Text/322/text,[color=STEEL_BLUE]Monster dalam kulit kentang.[/color]
+Text/323/text,"Malam itu, kau memimpikan Sasha. Dia tidak menuduh. Tidak mengamuk. Itu akan lebih mudah."
+Text/324/text,"Dia hanya menatapmu dengan mata itu. ""[color=CHARTREUSE]Akar-akarnya tumbuh dalam[/color],"" bisiknya."
+Text/325/text,Bahkan yang [color=STEEL_BLUE]busuk sekalipun[/color].
+Text/326/text,Bulan-bulan berlalu. Kau dipromosikan. Inspektur Regional Keamanan Perbatasan. Tangan kanan Russet.
+Text/327/text,Anda mengawasi lebih banyak penolakan daripada siapa pun dalam sejarah Spud. Produksi [color=DARK_VIOLET]Cadangan Akar[/color] melonjak.
+Text/328/text,Kantor Anda nyaman. Jatah Anda melimpah. Keluarga Anda terlindungi.
+Text/329/text,Anda memiliki semua yang dijanjikan.
+Text/32a/text,Semuanya kecuali [color=STEEL_BLUE]tidur[/color]. Kecuali [color=STEEL_BLUE]kedamaian[/color]. Kecuali kemampuan untuk melihat ke cermin.
+Text/32b/text,"Suatu hari, Anda menyadarinya. Sebuah [color=GOLD]lambang kentang kuning[/color] tergores di dinding. Lalu satu lagi. Lalu puluhan."
+Text/32c/text,Sebuah perlawanan baru sedang terbentuk. Lebih tenang. Lebih hati-hati. Belajar dari kesalahan Sasha.
+Choice/32d/text,Laporkan simbol-simbol itu ke keamanan segera
+Choice/32e/text,Berpura-pura Anda tidak melihatnya
+Choice/32f/text,Tinggalkan jejak Anda sendiri - sehelai daun kuning
+Text/330/text,Anda mengajukan laporan. Sekelompok tersangka lain ditangkap. Promosi lagi.
+Text/331/text,Siklus terus berlanjut. [color=CRIMSON]Anda telah menjadi mesin.[/color]
+Text/332/text,Anda berjalan melewatinya. Tidak mengatakan apa-apa. Tidak banyak. [color=STEEL_BLUE]Hampir tidak ada apa-apanya.[/color]
+Text/333/text,Tapi ini pertama kalinya Anda memilih untuk tidak bertindak melawan mereka.
+Text/334/text,"Mungkin itu sesuatu. Mungkin [color=YELLOW]terlalu sedikit, terlalu terlambat[/color]."
+Text/335/text,"Saat tidak ada yang melihat, Anda menggoreskan [color=GOLD]daun kuning[/color] kecil di sebelah lambang-lambang itu."
+Text/336/text,Sebuah tindakan pembangkangan tunggal. Bertahun-tahun terlambat. Tapi [color=CHARTREUSE]sesuatu[/color].
+Text/337/text,"Suara Sasha bergema dalam ingatan Anda: ""[color=CHARTREUSE]Akar-akar tumbuh dalam.[/color]"""
+Text/338/text,Mungkin cukup dalam untuk [color=CHARTREUSE]mencapai Anda sekalipun[/color]. Suatu hari.
+Text/339/text,Bangsa Spud bertahan. [color=DARK_VIOLET]Cadangan Akar[/color] mengalir. Siklus konsumsi berlanjut.
+Text/33a/text,"Tapi di suatu tempat, di celah-celah dinding, [color=CHARTREUSE]sesuatu yang baru sedang tumbuh[/color]."
+Text/33b/text,Apakah Anda akan menjadi bagian darinya... [color=YELLOW]kisah itu belum tertulis[/color].
+Choice/30a/disabled_text,
+Choice/30b/disabled_text,
+Choice/315/disabled_text,
+Choice/316/disabled_text,
+Choice/32d/disabled_text,
+Choice/32e/disabled_text,
+Choice/32f/disabled_text,

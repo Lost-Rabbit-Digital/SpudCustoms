@@ -21,3 +21,13 @@ Choice/ac/disabled_text,
 Choice/b2/disabled_text,
 Choice/b1/disabled_text,
 Choice/ad/disabled_text,
+Text/b4_viktor1/text,Un garde de sécurité costaud vous attrape le bras au passage. Son visage est marqué par l'inquiétude.
+Text/b4_viktor2/text,"Hé... désolé de vous déranger. Vous êtes l'un des agents des douanes, n'est-ce pas ? Je m'appelle [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"J'ai demandé à tout le monde des nouvelles de ma femme, [color=GOLD]Elena[/color]. Elena Petrov. Elle a traversé ce poste de contrôle il y a trois semaines."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Inspection échouée.[/color] Ils ont dit qu'elle serait traitée et renvoyée chez elle, mais... je n'ai aucune nouvelle."
+Text/b4_viktor5/text,Sa voix tremble. Personne ne veut me dire quoi que ce soit. Savez-vous où vont les voyageurs refusés ?
+Choice/b4_viktor6/text,"""Je suis désolé, Viktor. Je ne sais pas. Mais je vais garder l'œil ouvert."""
+Choice/b4_viktor7/text,"""Je ne peux pas divulguer les détails du traitement. Protocoles de sécurité."""
+Text/b4_viktor8/text,Une lueur d'espoir passe dans les yeux de Viktor. [color=CHARTREUSE]Merci.[/color] Si vous trouvez quoi que ce soit... s'il vous plaît. Elle est tout ce que j'ai.
+Text/b4_viktor9/text,"Viktor hoche la tête, abattu. [color=STEEL_BLUE]D'accord. Protocoles.[/color] Je comprends."
+Text/b4_viktor10/text,Mais si vous changez d'avis... [color=YELLOW]J'ai besoin de savoir ce qui lui est arrivé.[/color]

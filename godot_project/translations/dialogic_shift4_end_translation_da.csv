@@ -1,0 +1,49 @@
+﻿keys,da
+Text/215/text,"Murphy fanger dig på gangen, øjnene rødkantede. Har du et øjeblik?"
+Text/216/text,Murphy trækker dig ind i et tomt lagerrum og lukker døren.
+Text/217/text,Den joke jeg lavede i kantinen... om min fætter var i [color=DARK_VIOLET]Rodreserven[/color]s parti...
+Text/218/text,"Murphys stemme knækker. Jeg tror ikke, det var en joke længere."
+Text/219/text,"Du sagde, det ikke var sjovt. Du havde ret. [color=STEEL_BLUE]Intet ved dette er sjovt.[/color]"
+Text/21a/text,"Jeg så dig gå. Klogt. Jeg ville ønske, jeg kunne stoppe med at spise det der, men de [color=YELLOW]holder øje[/color]. De holder altid øje."
+Text/21b/text,"Jeg fandt noget i min fætters ejendele. Hans afvisningsformular. Helt almindeligt, men..."
+Text/21c/text,"Murphy trækker en krøllet formular frem. Se på behandlingskoden. ""[color=CRIMSON]RR-UTIL-7[/color]."""
+Text/21d/text,Jeg slog det op i arkiverne. RR står for [pulse freq=2][color=DARK_VIOLET]Rodreserven[/color][/pulse]. UTIL betyder... [color=CRIMSON]udnyttelse[/color].
+Text/21d_breakdown1/text,[wave amp=20 freq=3]Murphys hænder begynder at ryste.[/wave] Min fætter... Tommy... han var kun treogtyve.
+Text/21d_breakdown2/text,Han kom her for et [color=CHARTREUSE]bedre liv[/color]. Dumpede én inspektion. Én. [color=STEEL_BLUE]Bare dårlig timing.[/color]
+Text/21d_breakdown3/text,"Murphy glider ned ad væggen, ansigtet i hænderne. Og jeg... jeg [tornado radius=3 freq=2][color=CRIMSON]SPISTE[/color][/tornado] det der. Hver dag."
+Text/21d_breakdown4/text,"Murphy ser op på dig, tårerne strømmer. [pulse freq=2][color=CRIMSON]Hvad nu hvis jeg spiste HAM?[/color][/pulse]"
+Choice/21e/text,Murphy... Jeg er så ked af det. Jeg er med dig. Vi finder sandheden sammen.
+Choice/21f/text,"Murphy, det her er farligt. Vi burde holde os ude af det."
+Choice/220/text,Måske er det en tilfældighed. Lad os ikke drage forhastede konklusioner.
+Text/221_comfort1/text,Du knæler ved siden af Murphy og lægger en hånd på hans skulder.
+Text/221/text,"Murphy griber din arm som en livline. [color=CHARTREUSE]Tak.[/color] Jeg troede, jeg var ved at blive skør."
+Text/221_tommy/text,"[color=STEEL_BLUE]Hans stemme bliver en smule roligere.[/color] For Tommy. Vi gør det her for Tommy. Og alle andre, de har taget."
+Text/222/text,"Der er andre, der også har mistanke. Sasha har samlet folk. Jeg tror, hun stoler på dig."
+Text/223/text,"Murphy tørrer sine øjne, prøver at fatte sig. Ja. Ja, du har nok ret. Glem, at jeg sagde noget."
+Text/224/text,Men hvis du ombestemmer dig... Jeg er her. [color=STEEL_BLUE]Alene med mine spørgsmål. Og mine mareridt.[/color]
+Text/225/text,"Tilfældighed. Murphy griner bittert gennem sine tårer. Jo, jo. Og Tommy [color=CRIMSON]forsvandt[/color] bare ud i den blå luft."
+Text/226/text,Bliv ved med at fortælle dig selv det. Se hvor længe det hjælper dig med at sove. [color=STEEL_BLUE]Det hjælper ikke mig.[/color]
+Text/227/text,"Sasha dukker op ved din bod, da den sidste vagt slutter. Du ser ud, som om du har set et spøgelse."
+Text/228/text,Lad mig gætte - Murphy fortalte dig om sin fætter?
+Text/229/text,"Sasha nikker anerkendende. Godt. Vi har brug for folk, der stiller spørgsmål."
+Text/22a/text,Sasha studerer dit ansigt omhyggeligt. Du er bange. Det er klogt. Men frygt vil ikke redde nogen.
+Text/22b/text,"Jeg har holdt øje med dig siden din første dag. Måden du [color=YELLOW]tøvede[/color] på, da Russet talte om ""behandling""."
+Text/22c/text,"Du spurgte, hvad der sker med afviste kartofler. Det krævede mod. [color=CHARTREUSE]De fleste hilser bare og stempler.[/color]"
+Text/22d/text,Sasha læner sig tættere på. Der er et mønster. Hver kartoffel vi afviser? Væk inden for 48 timer. Ingen udvisningsregistre. Ingen overførsler.
+Text/22e/text,Men [color=DARK_VIOLET]Rodreservens[/color] produktion? [tornado radius=3 freq=2][color=CRIMSON]Den stiger.[/color][/tornado] Hver. Eneste. Gang.
+Choice/22f/text,Jeg tror dig. Hvordan kan jeg hjælpe?
+Choice/230/text,"Jeg er nødt til at se bevis, før jeg risikerer alt."
+Text/231/text,"Sashas øjne lyser op. Jeg vidste, jeg valgte rigtigt. I morgen aften, efter vagten. Jeg viser dig, hvad jeg har fundet."
+Text/232/text,Indtil da
+Text/233/text,Fair nok. Bevis er på vej. Bare... hold øjnene åbne under morgendagens vagt.
+Text/234/text,"Hold øje med, hvor de [color=CRIMSON]afviste kartofler[/color] tager hen. Følg lastbilerne, hvis du kan."
+Text/235/text,"Du tager billedet frem, som den desperate kartoffel gav dig. Hendes kone. [color=STEEL_BLUE]Hvor er hun nu?[/color]"
+Text/236/text,"Hvis det, Sasha og Murphy siger, er sandt... er hun allerede blevet..."
+Text/237/text,Du kan ikke gøre tanken færdig. Men du [color=CHARTREUSE]vil ikke glemme hendes ansigt[/color].
+Text/238/text,"I morgen ændrer alt sig. Enten finder du svar, eller også begraver du spørgsmålene for evigt."
+Text/239/text,Én ting er sikker: der er [color=YELLOW]ingen vej tilbage til lykkelig uvidenhed[/color].
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

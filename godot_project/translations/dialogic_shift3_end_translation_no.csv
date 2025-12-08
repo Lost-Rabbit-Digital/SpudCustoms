@@ -16,3 +16,12 @@ Text/76/text,"Sasha stapper mappen i hendene dine. ""[color=YELLOW]Hold denne tr
 Text/77/text,Du gjemmer mappen inni jakken din. [color=DARK_VIOLET]Root Reserve[/color]. Avvisningene. De manglende potetene. Alt er koblet sammen på en [tornado radius=3 freq=2][color=CRIMSON]skremmende måte[/color][/tornado].
 Choice/71/disabled_text,
 Choice/70/disabled_text,
+Text/69_photo1/text,Du tar frem bildet igjen. [color=GOLD]Maris Piper[/color]. Et så snilt ansikt.
+Text/69_photo2/text,Kona hennes var så desperat. [color=STEEL_BLUE]Hva skjedde med henne?[/color]
+Text/69_photo3/text,Du legger merke til noe i bakgrunnen av bildet - en lastebil med en [color=DARK_VIOLET]lilla logo[/color].
+Text/69_photo4/text,Det symbolet... du har sett det på kantineleveransene. [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve.[/color][/wave]
+Text/6a_photo1/text,Sasha... dette bildet. Kvinnens kone ga det til meg. Hun lette etter henne.
+Text/6a_photo2/text,Sashas ansikt faller. [color=STEEL_BLUE]La meg se.[/color]
+Text/6a_photo3/text,"Sasha studerer bildet, uttrykket hennes mørkner. [color=CRIMSON]Jeg kjenner igjen den lastebilen.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Ta vare på dette bildet.[/color][/pulse] Det kan bli viktig senere. Stol på meg.
+Text/6f2/text,[pulse freq=3][color=CRIMSON]De blir til Root Reserve.[/color][/pulse]

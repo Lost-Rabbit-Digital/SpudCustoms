@@ -32,3 +32,32 @@ Choice/c4/disabled_text,
 Choice/c5/disabled_text,
 Choice/cb/disabled_text,
 Choice/cc/disabled_text,
+Text/c7_viktor1/text,En kraftig sikkerhetsvakt nærmer seg i pausen din. Ansiktet hans er herjet.
+Text/c7_viktor2/text,"Hei... du er en av tollbetjentene, ikke sant? Jeg har spurt rundt etter kona mi, Elena."
+Text/c7_viktor3/text,Hun krysset denne grensekontrollen for tre uker siden. [color=STEEL_BLUE]Mislyktes i kontrollen.[/color] Jeg har ikke hørt fra henne siden.
+Choice/c7_viktor4/text,"""Viktor... Jeg fant noe. Om Elena. Du må vite sannheten."""
+Choice/c7_viktor5/text,"""Jeg beklager, Viktor. Jeg har ikke sett noe."""
+Text/c7_viktor6/text,Du viser ham en kopi av manifest-siden. Han blir likblek.
+Text/c7_viktor7/text,[wave amp=25 freq=3]Hendene hans skjelver mens han leser.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Behandlet... Parti RR-2851...[/color]
+Text/c7_viktor8/text,Stemmen hans er knapt et hvisk. [tornado radius=3 freq=2][color=CRIMSON]De... de GJØRTE henne om til...[/color][/tornado]
+Text/c7_viktor9/text,Sorgen hans forvandles til kaldt raseri. [pulse freq=2][color=CRIMSON]Idaho skal betale for dette.[/color][/pulse] Jeg sverger det på hennes minne.
+Text/c7_viktor10/text,Han griper skulderen din. [color=CHARTREUSE]Takk for at du fortalte meg det.[/color] Når tiden kommer... skal jeg huske dette.
+Text/c7_viktor11/text,Han nikker trist. [color=STEEL_BLUE]Det tenkte jeg meg.[/color] Ingen vet noe. Eller ingen vil snakke.
+Text/c7_viktor12/text,Hvis du hører noe... [color=YELLOW]vær så snill.[/color] Hun er alt jeg har.
+Text/d0_qte1/text,Senere det skiftet nærmer en reisende seg med papirer som bærer det [color=CHARTREUSE]subtile motstandsmerket[/color].
+Text/d0_qte2/text,[color=DARK_ORANGE]RealityScan[/color] begynner sin skanning. [wave amp=15 freq=3][color=RED]Den kommer til å oppdage merket![/color][/wave]
+Text/d0_qte3/text,Du har sekunder på deg til å bestemme deg. Skanneren varmer opp...
+Choice/d0_qte4/text,"""Simuler en skannerfeil - raskt!"""
+Choice/d0_qte5/text,"""La skanneren fullføre skanningen sin"""
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]Du må jobbe raskt![/color][/pulse] Utløs feilen før den er ferdig med å skanne!
+Text/d0_qte7/text,Du fomler med skannerkablene. Gnister spruter. Skjermen flimrer og dør.
+Text/d0_qte8/text,Russet skynder seg bort. [color=YELLOW]Hva skjedde her?[/color]
+Choice/d0_qte9/text,"""Strømstøt, herr. Disse nye systemene er lunefulle."""
+Choice/d0_qte10/text,"""Jeg vet ikke, herr. Den sluttet bare å virke."""
+Text/d0_qte11/text,Russet gryntet. [color=STEEL_BLUE]Byråkrater gir oss utestestet utstyr.[/color] Behandle dem manuelt og flagg for ny inspeksjon.
+Text/d0_qte12/text,Russet ser mistenksomt på deg. [color=YELLOW]Så beleilig.[/color] Jeg skal få vedlikehold til å se på det. Ikke la dette skje igjen.
+Text/d0_qte13/text,Motstandsmedlemmet gir deg et knapt takknemlig nikk idet de passerer.
+Text/d0_qte14/text,Skanneren [pulse freq=3][color=RED]PIPER HØYT[/color][/pulse]. Uautoriserte markeringer oppdaget!
+Text/d0_qte15/text,Russet dukker øyeblikkelig opp. [color=CHARTREUSE]Bra gjort![/color] Enda en forræder tatt.
+Text/d0_qte16/text,"Motstandsmedlemmet blir dratt bort, med skrekk i øynene. ""[color=CRIMSON]Vær så snill, nei! Jeg har barn![/color]"""
+Text/d0_qte17/text,Din lojalitet er [color=DARK_ORANGE]notert i filen din[/color]. Fortsett slik.

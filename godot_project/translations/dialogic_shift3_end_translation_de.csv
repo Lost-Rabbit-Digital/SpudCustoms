@@ -16,3 +16,12 @@ Text/76/text,"Sasha steckt dir den Ordner in die Hände. ""[color=YELLOW]Halte i
 Text/77/text,Du versteckst den Ordner in deiner Jacke. [color=DARK_VIOLET]Root Reserve[/color]. Die Ablehnungen. Die fehlenden Kartoffeln. Alles verbindet sich auf eine [tornado radius=3 freq=2][color=CRIMSON]erschreckende Weise[/color][/tornado].
 Choice/71/disabled_text,
 Choice/70/disabled_text,
+Text/69_photo1/text,Du holst das Foto wieder hervor. [color=GOLD]Maris Piper[/color]. So ein freundliches Gesicht.
+Text/69_photo2/text,Ihre Frau war so verzweifelt. [color=STEEL_BLUE]Was ist mit ihr passiert?[/color]
+Text/69_photo3/text,Du bemerkst etwas im Hintergrund des Fotos - einen LKW mit einem [color=DARK_VIOLET]lila Logo[/color].
+Text/69_photo4/text,Dieses Symbol... du hast es auf den Lieferungen der Kantine gesehen. [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve.[/color][/wave]
+Text/6a_photo1/text,Sasha... dieses Foto. Die Frau der Reisenden hat es mir gegeben. Sie hat nach ihr gesucht.
+Text/6a_photo2/text,Sashas Miene sinkt. [color=STEEL_BLUE]Lass mich sehen.[/color]
+Text/6a_photo3/text,"Sasha studiert das Foto, ihr Ausdruck verdunkelt sich. [color=CRIMSON]Ich erkenne diesen LKW.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Bewahre dieses Foto sicher auf.[/color][/pulse] Es könnte später wichtig sein. Vertrau mir.
+Text/6f2/text,[pulse freq=3][color=CRIMSON]Sie werden zu Root Reserve.[/color][/pulse]

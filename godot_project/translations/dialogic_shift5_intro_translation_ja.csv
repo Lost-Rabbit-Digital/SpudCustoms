@@ -1,0 +1,35 @@
+﻿keys,ja
+Text/a6/text,国境施設は今日、いつもと違う。張り詰めている。雑談は警戒した静けさに変わり、警備隊の巡回が増えている。
+Text/a7/text,昨夜、[pulse freq=2][color=CRIMSON]禁制品[/color][/pulse]が発見された。[color=DARK_VIOLET]ルートリザーブ[/color]に関する嘘が書かれたパンフレットだ。
+Text/a8/text,我々は[wave amp=15 freq=2][color=DARK_ORANGE]脅威レベルオレンジのプロトコル[/color][/wave]を実施する。全ての職員は忠誠度検査の対象となり、全ての旅行者は最大限の精査を受ける。
+Text/a9/text,うまくいっている。パンフレットは広まり、人々は[color=DARK_VIOLET]ルートリザーブ[/color]について疑問を抱いている。
+Text/aa/text,情報筋によると、ラセットのオフィスに輸送記録があるらしい。全てを[tornado radius=3 freq=2][color=CHARTREUSE]証明できる[/color][/tornado]輸送マニフェストだ。
+Text/ab/text,それを手に入れるのを手伝ってほしい。今夜、最終シフトの後だ。頼りになるか？
+Choice/ac/text,「乗った。真実を暴こう。」
+Choice/ad/text,「サシャ、どうだろう…これは危険かもしれない。」
+Text/ae/text,よかった。他の者よりも[color=CHARTREUSE]根がしっかりしている[/color]と信じていたよ。真夜中に会おう。
+Text/af/text,時には[color=CHARTREUSE]正しいことのために潰される危険を冒す[/color]必要がある。よく考えてみてくれ。
+Text/b0/text,[color=DARK_ORANGE]忠誠度チェック[/color]。氏名と職員IDを述べよ。そして、なぜスパッドに仕えるのかを答えよ。
+Choice/b1/text,「危険な影響から国境を守るために仕えます。」
+Choice/b2/text,「誰もが公平な扱いを受けられるように仕えます。」
+Text/b3/text,良い答えだ。スパッドには忠実な保護者が必要だ。スキャナーはグリーンを示している。任務を続けよ、職員。
+Text/b4/text,職員は眉を上げた。公平な扱いだと？スキャナーが[color=DARK_ORANGE]琥珀色[/color]に点滅する。覚えておけ、我々の最優先事項はセキュリティであり、公平さではない。
+Text/b5/text,今日のノルマは引き上げられた。疑わしい所持品を持つ者は、[color=DARK_VIOLET]特別処理[/color]の対象としてマークされる。
+Text/b6/text,今日は、お前の[color=DARK_ORANGE]判断[/color]を非常に注意深く見ているぞ。
+Text/b7/text,今夜、全てが変わるかもしれない。だがまず、[color=YELLOW]疑念を抱かれずに今日を乗り切れ[/color]。
+Text/b4_viktor1/text,通り過ぎようとした時、がっしりした警備員が君の腕を掴んだ。彼の顔には心配のしわが刻まれている。
+Text/b4_viktor2/text,おい…すまないな。君は税関職員の一人だろう？俺の名前は[color=CHARTREUSE]ヴィクトル[/color]だ。
+Text/b4_viktor3/text,妻の[color=GOLD]エレナ[/color]について、皆に尋ねているんだ。エレナ・ペトロフだ。彼女は3週間前にこの検問所を通過した。
+Text/b4_viktor4/text,[color=STEEL_BLUE]検査に不合格[/color]だった。処理されて家に帰されると言われたんだが…何も連絡がない。
+Text/b4_viktor5/text,彼の声が震える。誰も何も教えてくれないんだ。拒否された旅行者はどこに行くか知っているか？
+Choice/b4_viktor6/text,「ヴィクトル、申し訳ないが、私には分からない。だが、注意しておくよ。」
+Choice/b4_viktor7/text,「処理の詳細については話せない。セキュリティプロトコルだ。」
+Text/b4_viktor8/text,ヴィクトルの目に一筋の希望が宿る。[color=CHARTREUSE]ありがとうございます。[/color]何か分かったら… お願いします。彼女が私の全てです。
+Text/b4_viktor9/text,ヴィクトルは落胆して頷く。[color=STEEL_BLUE]そうですね。規定、ですね。[/color]分かっています。
+Text/b4_viktor10/text,でも、もし気が変わったら… [color=YELLOW]彼女に何があったのか、知りたいんです。[/color]
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,
+Choice/b4_viktor6/disabled_text,
+Choice/b4_viktor7/disabled_text,

@@ -28,3 +28,6 @@ Text/16f/text,"Si votre service a été réussi, vous pourrez continuer en cliqu
 Text/170/text,Cela couvre les bases de vos devoirs en tant qu'agent des douanes.
 Text/171/text,"Souvenez-vous : vérifiez soigneusement les documents, arrêtez les coureurs et respectez votre quota."
 Text/172/text,La sécurité de Spud dépend de votre [pulse freq=2][color=DARK_ORANGE]vigilance ![/color][/pulse]
+Text/174/text,Commençons votre [color=YELLOW]service de formation[/color]...
+Text/180/text,Mais attention - toutes les pommes de terre n'ont pas leurs papiers en règle.
+Text/181/text,[color=RED]Passeports périmés[/color] sont un rejet automatique. Aucune exception.

@@ -53,3 +53,40 @@ Choice/f3/disabled_text,
 Choice/f2/disabled_text,
 Choice/e0/disabled_text,
 Choice/df/disabled_text,
+Text/d2b/text,Başlamadan önce... Bir itirafım var.
+Text/d2c/text,"İlk gününde bulduğun o not mu? ""[color=GOLD]Bir dost[/color]""?"
+Text/d2d/text,Sasha gülümsüyor. Onu sakladığını görüyorum. Akıllıca. Doğru filizi seçtiğimi biliyordum.
+Text/d2e/text,"Aylardır yeni memurları izliyorum, [color=CHARTREUSE]sorgulayan gözleri[/color] olan birini arıyorum. Yalanların ötesini görebilecek birini."
+Text/d2f/text,Sasha'nın ifadesi karmaşık. Onu Russet'e gösterdin. Ondan sonra haftalarca ortadan kaybolmak zorunda kaldım.
+Text/d2g/text,Ama yine de buradasın. Bu bana vicdanın hakkında bir şeyler söylüyor.
+Text/d2h/text,Onu yok ettin. Seni suçlamıyorum - saklamak riskliydi.
+Text/d2i/text,"Ama kelimeler yine de kafana kazındı, değil mi?"
+Text/d2j/text,"[color=CHARTREUSE]Ben ""Bir dostum.""[/color] Ve şimdi nedenini biliyorsun."
+Text/d2k/text,Sasha ele geçirilmiş belgeleri masaya yayıyor. Geçtiğimiz ayın işleme manifestoları.
+Text/d2l/text,İsimleri tarıyorsun ve kanın donuyor.
+Text/d2m/text,İşte orada. [color=GOLD]Maris Piper[/color]. Fotoğraftaki kadın.
+Text/d2n/text,"""[color=CRIMSON]Durum: İşlendi. Parti RR-2847.[/color]"" Kocası senden yardım dilendikten üç gün sonrasına ait."
+Text/d2o/text,Cebindeki fotoğrafı hissediyorsun. [color=STEEL_BLUE]O gitmiş. Ve onu kurtaramadın.[/color]
+Text/d2p/text,Ama belki... [color=CHARTREUSE]belki başkalarını hala kurtarabilirsin[/color].
+Text/d2q/text,Murphy gölgelerden beliriyor. Selam. Geldiğine sevindim.
+Text/d2r/text,Murphy buruşuk RR-UTIL formunu kaldırıyor. Kuzenim de o listede. [color=CHARTREUSE]Bunu birlikte yapıyoruz.[/color]
+Text/ff2/text,[color=STEEL_BLUE]Sen yürürken o mesafesini koruyor.[/color] Yolumuza çıkmadığın için minnettarım. Bu... bir şey ifade ediyor.
+Text/ff3/text,"[color=STEEL_BLUE]Kolları bağlı, sessizce yürüyor.[/color] Aradığın kesinliği bulmanı umuyorum. Geri kalanlarımız bekleyemez."
+Text/100_viktor1/text,"Geri dönerken, Viktor'u kontrol noktasının çatısında yalnız, gece gökyüzüne bakarken buluyorsun."
+Text/100_viktor2/text,Viktor küçük bir
+Text/100_viktor3/text,"Ne kadar karanlık olursa olsun, yıldızların yine de orada olacağını söylerdi. [color=STEEL_BLUE]Sabit. Güzel.[/color]"
+Text/100_viktor4/text,"Sana dönüyor, gözleri parlıyor. [wave amp=15 freq=2]Sürekli düşünüyorum... acı çekti mi?[/wave] Neler olduğunu biliyor muydu?"
+Text/100_viktor5/text,Viktor'un sesi çatlıyor. Bir keresinde bana retleri hiç sorgulayıp sorgulamadığımı sormuştu. Ona [color=CRIMSON]sisteme güvenmesini[/color] söyledim.
+Text/100_viktor6/text,[tornado radius=3 freq=2][color=CRIMSON]Kendi karımı bilmeden işleme kazanlarına gönderdim.[/color][/tornado]
+Choice/100_viktor_choice1/text,Bilemezdin. Hiçbirimiz bilmiyorduk.
+Choice/100_viktor_choice2/text,"Elena şimdi savaşmanı isterdi, suçlulukta boğulmanı değil."
+Choice/100_viktor_choice3/text,Ne diyeceğimi bilmiyorum. Üzgünüm.
+Text/100_viktor7/text,Yavaşça başını sallar. [color=STEEL_BLUE]Cahillik masumiyet değildir. Sormalıydım. Dinlemeliydim.[/color]
+Text/100_viktor8/text,"Viktor fotoğrafı dikkatlice yerine koyar. [color=CHARTREUSE]Ama şimdi biliyorum. Ve bilmek, harekete geçmem gerektiği anlamına gelir.[/color]"
+Text/100_viktor9/text,"Viktor doğrulur, gözlerinde soğuk bir ateş yeniden canlanır. [color=CHARTREUSE]Haklısın.[/color] Benden daha güçlüydü. Daha cesurdu."
+Text/100_viktor10/text,Yumruğunu sıkar. [color=CHARTREUSE]Zamanı geldiğinde
+Text/100_viktor11/text,"[pulse freq=2][color=CRIMSON]Ve Idaho, tükettiği her canın bedelini ödeyecek.[/color][/pulse]"
+Text/100_viktor12/text,Viktor üzgün bir
+Text/100_viktor13/text,Yıldızlara geri bakar. [color=STEEL_BLUE]Elena seni severdi.[/color]
+Text/100_viktor14/text,"Ayrılmak için döner, sonra duraklar. [color=CHARTREUSE]Direniş harekete geçtiğinde... Hazır olacağım.[/color]"
+Text/100_viktor15/text,Elena için. Hepsi için. [pulse freq=2][color=CHARTREUSE]Onlara gerçeği söylediğimde muhafızlar beni takip edecek.[/color][/pulse]

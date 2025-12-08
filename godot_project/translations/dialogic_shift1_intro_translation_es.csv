@@ -14,3 +14,5 @@ Text/61/text,"Tu primer turno comienza ahora. Revisa los documentos cuidadosamen
 Text/62/text,"Cumple tu cuota, evita sanciones. [color=MEDIUM_VIOLET_RED]¡Gloria a Patata![/color]"
 Choice/5d/disabled_text,
 Choice/5c/disabled_text,
+Text/184b/text,Los que hacen demasiadas preguntas? Son [color=CRIMSON]reasignados[/color]. Permanentemente.
+Text/62b/text,"Y recuerda, [color=MEDIUM_VIOLET_RED]¡Gloria a Spud![/color]"

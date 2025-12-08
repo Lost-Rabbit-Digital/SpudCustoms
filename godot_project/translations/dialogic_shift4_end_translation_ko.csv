@@ -1,0 +1,49 @@
+﻿keys,ko
+Text/215/text,머피가 복도에서 당신을 붙잡습니다. 그의 눈은 충혈되어 있습니다. 잠시 시간 괜찮으세요?
+Text/216/text,머피가 당신을 텅 빈 창고로 끌고 들어가 문을 닫습니다.
+Text/217/text,제가 식당에서 했던 농담 말이에요... 제 사촌이 [color=DARK_VIOLET]뿌리 보존식[/color] 배치에 들어갔다는 농담요...
+Text/218/text,머피의 목소리가 갈라집니다. 더 이상 농담이 아닌 것 같아요.
+Text/219/text,당신은 재미없다고 했죠. 당신 말이 맞았어요. [color=STEEL_BLUE]이 모든 것 중 재미있는 건 하나도 없어요.[/color]
+Text/21a/text,"당신이 나가는 걸 봤어요. 현명했어요. 저도 그 음식을 그만 먹고 싶지만, 그들이 [color=YELLOW]감시해요[/color]. 그들은 항상 감시해요."
+Text/21b/text,제 사촌의 소지품에서 뭔가를 찾았어요. 그의 거부 양식이에요. 평범한 내용인데...
+Text/21c/text,"머피가 구겨진 양식을 꺼냅니다. 처리 코드를 보세요. ""[color=CRIMSON]RR-UTIL-7[/color]."""
+Text/21d/text,제가 기록 보관소에서 찾아봤어요. RR은 [pulse freq=2][color=DARK_VIOLET]뿌리 보존식[/color][/pulse]을 의미해요. UTIL은... [color=CRIMSON]활용[/color]을 의미해요.
+Text/21d_breakdown1/text,[wave amp=20 freq=3]머피의 손이 떨리기 시작합니다.[/wave] 제 사촌... 토미... 겨우 스물셋이었어요.
+Text/21d_breakdown2/text,그는 [color=CHARTREUSE]더 나은 삶[/color]을 위해 여기에 왔어요. 검사 한 번에 실패했어요. 단 한 번. [color=STEEL_BLUE]그저 운이 나빴을 뿐이에요.[/color]
+Text/21d_breakdown3/text,머피가 벽을 타고 주저앉아 얼굴을 두 손으로 감쌉니다. 그리고 저는... 저는 그 음식을 [tornado radius=3 freq=2][color=CRIMSON]먹었어요[/color]. 매일요.
+Text/21d_breakdown4/text,머피가 눈물을 흘리며 당신을 올려다봅니다. [pulse freq=2][color=CRIMSON]제가 그를 먹은 거라면요?[/color][/pulse]
+Choice/21e/text,머피... 정말 미안해요. 당신과 함께할게요. 함께 진실을 찾아요.
+Choice/21f/text,"머피, 이건 위험해요. 우리는 이 일에서 손을 떼야 해요."
+Choice/220/text,어쩌면 우연일 수도 있어요. 섣부른 판단은 하지 말아요.
+Text/221_comfort1/text,당신은 머피 옆에 무릎을 꿇고 그의 어깨에 손을 얹습니다.
+Text/221/text,머피가 당신의 팔을 구명줄처럼 붙잡습니다. [color=CHARTREUSE]고마워요.[/color] 제가 미쳐가는 줄 알았어요.
+Text/221_tommy/text,[color=STEEL_BLUE]그의 목소리가 약간 안정됩니다.[/color] 토미를 위해서요. 우리는 토미를 위해 이 일을 하는 거예요. 그리고 그들이 데려간 다른 모든 사람들을 위해서요.
+Text/222/text,다른 사람들도 의심하고 있어요. 사샤가 사람들을 모으고 있어요. 그녀가 당신을 믿는 것 같아요.
+Text/223/text,"머피가 눈물을 닦으며 자신을 진정시키려 합니다. 네. 네, 당신 말이 맞을 거예요. 제가 한 말은 잊어주세요."
+Text/224/text,하지만 마음이 바뀌면... 저는 여기 있을 거예요. [color=STEEL_BLUE]제 의문들과 악몽들과 함께 홀로요.[/color]
+Text/225/text,우연이라구요. 머피가 눈물을 흘리며 씁쓸하게 웃습니다. 물론이죠. 그리고 토미는 그냥 허공으로 [color=CRIMSON]사라졌구요[/color].
+Text/226/text,계속 그렇게 스스로에게 말해보세요. 그게 얼마나 잠을 잘 오게 하는지 보세요. [color=STEEL_BLUE]저에게는 아무 도움이 안 돼요.[/color]
+Text/227/text,"마지막 근무가 끝날 무렵, 사샤가 당신의 부스에 나타납니다. 유령이라도 본 것 같네요."
+Text/228/text,"짐작컨대, 머피가 자기 사촌에 대해 말해줬나?"
+Text/229/text,사샤가 고개를 끄덕인다. 좋아. 우린 질문하는 사람이 필요해.
+Text/22a/text,사샤가 당신의 얼굴을 유심히 살핀다. 당신은 두려워하는군. 현명해. 하지만 두려움이 누구도 구원하진 못할 거야.
+Text/22b/text,"첫날부터 당신을 지켜봤어. 러셋이 ""처리""에 대해 말했을 때 당신이 [color=YELLOW]망설이던[/color] 방식 말이야."
+Text/22c/text,당신은 거부된 감자들이 어떻게 되는지 물었지. 대단한 용기야. [color=CHARTREUSE]대부분은 그저 경례하고 도장을 찍을 뿐인데.[/color]
+Text/22d/text,사샤가 더 가까이 다가온다. 패턴이 있어. 우리가 거부한 감자들은? 48시간 안에 사라져. 추방 기록도 없고. 이송 기록도 없어.
+Text/22e/text,하지만 [color=DARK_VIOLET]뿌리 비축량[/color] 생산은? [tornado radius=3 freq=2][color=CRIMSON]늘어나지.[/color][/tornado] 매번. 단 한 번도 빠짐없이.
+Choice/22f/text,믿어요. 어떻게 도울 수 있죠?
+Choice/230/text,모든 걸 걸기 전에 증거를 봐야겠어요.
+Text/231/text,"사샤의 눈이 빛난다. 내가 제대로 골랐어. 내일 밤, 근무 후에. 내가 찾은 걸 보여줄게."
+Text/232/text,그때까지
+Text/233/text,알겠어. 증거는 곧 나올 거야. 그저... 내일 근무 중에 눈을 크게 뜨고 있어.
+Text/234/text,[color=CRIMSON]거부된 감자들[/color]이 어디로 가는지 지켜봐. 가능하다면 트럭을 따라가 봐.
+Text/235/text,당신은 절박한 감자가 건네준 사진을 꺼낸다. 그녀의 아내. [color=STEEL_BLUE]그녀는 지금 어디에 있을까?[/color]
+Text/236/text,사샤와 머피의 말이 사실이라면... 그녀는 이미...
+Text/237/text,당신은 생각을 끝맺지 못한다. 하지만 [color=CHARTREUSE]그녀의 얼굴을 잊지 않을 것이다[/color].
+Text/238/text,"내일, 모든 것이 바뀐다. 답을 찾거나, 질문들을 영원히 묻어버리거나."
+Text/239/text,한 가지는 확실하다: [color=YELLOW]더 이상 행복한 무지로 돌아갈 수는 없다[/color].
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

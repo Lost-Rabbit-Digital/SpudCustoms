@@ -17,3 +17,6 @@ Text/a4/text,Điều này chứng minh tất cả. Phong trào kháng chiến s�
 Text/a5/text,"Bạn đã vượt qua một ranh giới. [wave amp=20 freq=3][color=YELLOW]Không còn con đường quay lại.[/color][/wave] Khi sự thật được lan truyền, Spud sẽ bị biến đổi."
 Choice/9c/disabled_text,
 Choice/9d/disabled_text,
+Text/9a_viktor1/text,Bạn quét danh sách hành khách... và một cái tên nổi bật. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,Cái tên đó... bạn đã từng nghe qua. Người bảo vệ Viktor đã nhắc đến việc vợ anh ta mất tích.
+Text/9a_viktor3/text,"""[color=CRIMSON]Trạng thái: Đã xử lý. Lô RR-2851.[/color]"" Ghi ngày hai tuần trước."

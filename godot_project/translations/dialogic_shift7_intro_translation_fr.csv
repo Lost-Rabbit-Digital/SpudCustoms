@@ -22,3 +22,20 @@ Text/115/text,"Quand cela arrivera, vous devrez [color=YELLOW]choisir un camp[/c
 Text/116/text,"Avec chaque pomme de terre que vous traitez, soit vous [pulse freq=2][color=CHARTREUSE]aidez une révolution[/color][/pulse], soit vous [pulse freq=2][color=CRIMSON]permettez un système horrible[/color][/pulse]."
 Choice/10f/disabled_text,
 Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha jette un coup d'œil nerveux par-dessus son épaule.[/color] Désolée, je... [color=YELLOW]Je crois qu'ils me surveillent.[/color]"
+Text/102_foreshadow2/text,Russet a posé des questions. Il me suit après les quarts. [wave amp=15 freq=2][color=YELLOW]Je dois être plus prudente.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, tu devrais peut-être te faire discrète un moment. Laisse-moi prendre plus de risques."
+Text/102_foreshadow4/text,"[color=STEEL_BLUE]Elle secoue la tête, forçant un sourire.[/color] Non. Nous sommes trop près du but maintenant. Je peux gérer Russet."
+Text/102_foreshadow5/text,"D'ailleurs... [color=CHARTREUSE]quelqu'un doit vous éviter des ennuis, à vous les jeunes pousses.[/color]"
+Text/106_trucks1/text,Mais nous ne savons toujours pas où se trouve l'installation de traitement principale. Les documents ne listent que des codes d'expédition.
+Text/106_trucks2/text,J'ai surveillé les [color=DARK_VIOLET]camions de la Réserve Racinaire[/color]. Ils partent toutes les nuits à 03h00. Même itinéraire.
+Text/106_trucks3/text,[color=CHARTREUSE]Si nous pouvions les suivre...[/color] nous saurions exactement où ils emmènent les rebuts.
+Choice/106_trucks4/text,Je m'en occupe. Je connais les horaires des patrouilles.
+Choice/106_trucks5/text,Ça semble risqué. Quelqu'un d'autre ne peut pas le faire ?
+Text/106_trucks6/text,[color=CHARTREUSE]Les yeux de Sasha s'illuminent.[/color] Je savais que tu avais des racines d'acier. Sois prudent - ils patrouillent beaucoup la nuit.
+Text/106_trucks7/text,03h00. Tu te tapies dans l'ombre tandis que les camions de la [color=DARK_VIOLET]Réserve Racinaire[/color] passent en grondant.
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Reste caché ! Suis le convoi ![/color][/pulse]
+Text/106_trucks9/text,"Les camions s'arrêtent devant un complexe massif caché dans le quartier industriel. [color=DARK_VIOLET]Secteur 7, Complexe d'Entrepôts Delta.[/color]"
+Text/106_trucks10/text,Des cheminées crachent une fumée teintée de violet. L'odeur est... [tornado radius=3 freq=2][color=CRIMSON]inconfondable.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]Le cœur de la Réserve Racinaire.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]L'expression de Sasha vacille de déception.[/color] Nous devons tous prendre des risques. Je trouverai un autre moyen.

@@ -21,3 +21,13 @@ Choice/ac/disabled_text,
 Choice/b2/disabled_text,
 Choice/b1/disabled_text,
 Choice/ad/disabled_text,
+Text/b4_viktor1/text,"Egy nagydarab biztonsági őr megfogja a karodat, ahogy elhaladsz. Arcát ráncok barázdálják az aggodalomtól."
+Text/b4_viktor2/text,"Hé... elnézést, hogy zavarlak. Maga az egyik vámtiszt, ugye? A nevem [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Mindenkit a feleségemről kérdeztem, [color=GOLD]Elenáról[/color]. Elena Petrov. Három hete lépte át ezt az ellenőrzőpontot."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Ellenőrzésen elutasítva.[/color] Azt mondták, feldolgozzák és hazaküldik, de... azóta sem hallottam semmit."
+Text/b4_viktor5/text,"Hangja elcsuklik. Senki sem mond semmit. Tudja, hová mennek az elutasított utazók?"
+Choice/b4_viktor6/text,"""Sajnálom, Viktor. Nem tudom. De figyelni fogok."""
+Choice/b4_viktor7/text,"""Nem beszélhetek feldolgozási részletekről. Biztonsági protokollok."""
+Text/b4_viktor8/text,Viktor szemében felcsillan a remény. [color=CHARTREUSE]Köszönöm.[/color] Bármit megtud... kérem. Ő mindenem.
+Text/b4_viktor9/text,Viktor lemondóan bólint. [color=STEEL_BLUE]Rendben. Protokollok.[/color] Értem.
+Text/b4_viktor10/text,"De ha meggondolja magát... [color=YELLOW]Tudnom kell, mi történt vele.[/color]"

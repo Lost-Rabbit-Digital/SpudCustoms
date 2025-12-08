@@ -1,0 +1,27 @@
+﻿keys,zh-CN
+Text/69_photo1/text,你再次拿出照片。[color=GOLD]马里斯·派珀[/color]。多么善良的脸。
+Text/69_photo2/text,她的妻子是如此绝望。[color=STEEL_BLUE]她发生了什么事？[/color]
+Text/69_photo3/text,你注意到照片背景里有些东西 - 一辆卡车，上面有[color=DARK_VIOLET]紫色标志[/color]。
+Text/69_photo4/text,那个标志……你在食堂送货车上见过。[wave amp=15 freq=2][color=DARK_VIOLET]根源储备。[/color][/wave]
+Text/69/text,我们能谈谈吗？找个私密的地方？[color=YELLOW]这里耳目太多了。[/color]
+Text/6a/text,下班后在旧储藏棚那里等我。我有东西要给你看。
+Text/6a_photo1/text,萨莎……这张照片。那个女人的妻子给我的。她一直在找她。
+Text/6a_photo2/text,萨莎的脸色沉了下来。[color=STEEL_BLUE]给我看看。[/color]
+Text/6a_photo3/text,萨莎仔细看着照片，她的表情变得阴沉。[color=CRIMSON]我认得那辆卡车。[/color]
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]收好这张照片。[/color][/pulse]以后可能会很重要。相信我。
+Text/6b/text,和同事打得火热？记住，过于亲近可能导致……[color=DARK_ORANGE]判断力受损[/color]。
+Text/6c/text,我一直在收集关于被拒土豆的信息。[wave amp=20 freq=3][color=CRIMSON]他们没有被送往遣返中心。[/color][/wave]
+Text/6d/text,[tornado radius=4 freq=2][color=CRIMSON]他们被送往根源储备加工厂。[/color][/tornado]每一个都是。
+Text/6e/text,这些文件显示土豆在一个设施卸货，该设施标有[color=DARK_VIOLET]根源储备[/color]的标志。
+Text/6f/text,我想我知道发生了什么……
+Text/6f2/text,[pulse freq=3][color=CRIMSON]他们正在变成根源储备。[/color][/pulse]
+Choice/70/text,这太疯狂了。他们……把土豆加工成食物？
+Choice/71/text,我们需要更多证据才能提出指控。
+Text/72/text,[color=CRIMSON]多此一举的同类相食。[/color]这就是[wave amp=25 freq=3][color=DARK_VIOLET]根源储备[/color][/wave]的真面目。而我们一直在帮他们挑选食材。
+Text/73/text,我已经收集证据好几个月了。睁大你的眼睛。你会发现我是对的。
+Text/74/text,远处突然响起警报声
+Text/75/text,我们得走了。他们这个时间会进行安全检查。仔细想想我给你看的东西。
+Text/76/text,"萨莎把文件夹塞到你手里。""[color=YELLOW]收好这个。不要相信任何人。[/color]"""
+Text/77/text,你把文件夹藏进夹克里。[color=DARK_VIOLET]根源储备[/color]。被拒的土豆。失踪的土豆。这所有的一切都以一种[tornado radius=3 freq=2][color=CRIMSON]可怕的方式[/color][/tornado]联系起来。
+Choice/70/disabled_text,
+Choice/71/disabled_text,

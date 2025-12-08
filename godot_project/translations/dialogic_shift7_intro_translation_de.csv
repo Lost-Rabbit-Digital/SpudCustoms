@@ -22,3 +22,20 @@ Text/115/text,"Wenn es passiert, musst du [color=YELLOW]eine Seite wählen[/colo
 Text/116/text,"Mit jeder Kartoffel, die du verarbeitest, [pulse freq=2][color=CHARTREUSE]unterstützt du entweder eine Revolution[/color][/pulse] oder [pulse freq=2][color=CRIMSON]ermöglichst ein schreckliches System[/color][/pulse]."
 Choice/10f/disabled_text,
 Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha blickt nervös über ihre Schulter.[/color] Entschuldigung, ich... [color=YELLOW]Ich glaube, sie beobachten mich.[/color]"
+Text/102_foreshadow2/text,Russet hat Fragen gestellt. Folgt mir nach Schichtende. [wave amp=15 freq=2][color=YELLOW]Ich muss vorsichtiger sein.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, vielleicht solltest du dich eine Weile bedeckt halten. Lass mich mehr Risiko eingehen."
+Text/102_foreshadow4/text,[color=STEEL_BLUE]Sie schüttelt den Kopf und erzwingt ein Lächeln.[/color] Nein. Wir sind jetzt zu nah dran. Ich kann mit Russet umgehen.
+Text/102_foreshadow5/text,Außerdem... [color=CHARTREUSE]jemand muss euch Sprösslinge aus Schwierigkeiten heraushalten.[/color]
+Text/106_trucks1/text,"Aber wir wissen immer noch nicht, wo die Hauptverarbeitungsanlage ist. Die Dokumente listen nur Versandcodes auf."
+Text/106_trucks2/text,Ich habe die [color=DARK_VIOLET]Root Reserve-Lastwagen[/color] beobachtet. Sie fahren jede Nacht um 03:00 Uhr ab. Immer dieselbe Route.
+Text/106_trucks3/text,"[color=CHARTREUSE]Wenn wir ihnen folgen könnten...[/color] wüssten wir genau, wohin sie die Abgelehnten bringen."
+Choice/106_trucks4/text,Ich mache es. Ich kenne die Patrouillenpläne.
+Choice/106_trucks5/text,Das klingt riskant. Kann das nicht jemand anderes machen?
+Text/106_trucks6/text,"[color=CHARTREUSE]Sashas Augen leuchten auf.[/color] Ich wusste, du hast Wurzeln aus Stahl. Sei vorsichtig – sie patrouillieren nachts stark."
+Text/106_trucks7/text,"03:00 Uhr. Du kauerst im Schatten, während die [color=DARK_VIOLET]Root Reserve[/color]-Lastwagen vorbeidonnern."
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Bleib versteckt! Folge dem Konvoi![/color][/pulse]
+Text/106_trucks9/text,"Die Lastwagen halten an einem riesigen Komplex, versteckt im Industriegebiet. [color=DARK_VIOLET]Sektor 7, Lagerkomplex Delta.[/color]"
+Text/106_trucks10/text,Schornsteine speien lila gefärbten Rauch aus. Der Geruch ist... [tornado radius=3 freq=2][color=CRIMSON]unverkennbar.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]Das Herz der Root Reserve.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]Sashas Miene flackert vor Enttäuschung.[/color] Wir alle müssen Risiken eingehen. Ich werde einen anderen Weg finden.

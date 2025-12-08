@@ -45,3 +45,41 @@ Choice/27/disabled_text,
 Choice/26/disabled_text,
 Choice/25/disabled_text,
 Choice/16/disabled_text,
+Text/1a_rescue1/text,Bir izci koşarak gelir. Onu bulduk! [color=CHARTREUSE]Sasha gözaltı bloğunda![/color]
+Text/1a_rescue2/text,Onu hazırlıyorlar... [tornado radius=3 freq=2][color=CRIMSON]işlemeye[/color][/tornado]... bir saatten az bir süre içinde!
+Text/1a_rescue3/text,Onu kurtarmalıyız. [pulse freq=2][color=CHARTREUSE]Tüm bunları o başlattı.[/color][/pulse] Onsuz gitmiyoruz.
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]Tesisten hızla geçin![/color][/wave] Çok geç olmadan Sasha'ya ulaşın!
+Text/1a_rescue_fail1/text,Tökezlersin. Önündeki yol muhafızlar tarafından kapatılmış!
+Text/1a_rescue_fail2/text,Viktor bir yan kapıdan içeri dalar. [color=CHARTREUSE]GİT! Onları ben oyalarım![/color]
+Text/1a_rescue_fail3/text,Elena için. Hepsi için. [color=STEEL_BLUE]Bir başkasının daha ölmesine izin vermeyeceğim![/color]
+Text/1a_rescue_fail4/text,Murphy bir yangın alarmını çeker. [color=CHARTREUSE]Tommy için![/color] Sprinklerler muhafızları kör eder!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Bir oyalama yapacağım. Onu oradan çıkarın![/color]
+Text/1a_rescue_fail6/text,"Bir [color=YELLOW]işleme konveyörü sıkışır[/color], kıvılcımlar saçarak muhafızların dikkatini dağıtır!"
+Text/1a_rescue_fail7/text,"Kader - ya da ""işlenmişlerin"" hayaletleri - sana ikinci bir şans verir."
+Text/1a_rescue5/text,"Sasha hücresinden yukarı bakar, morarmış ama kırılmamış. Gözleri büyür. [color=CHARTREUSE]Geldin.[/color]"
+Text/1a_rescue6/text,Elbette geldim. [color=CHARTREUSE]Bunu birlikte bitireceğiz.[/color]
+Choice/1a_rescue7/text,Seni bir daha asla göremeyeceğim diye korktum.
+Choice/1a_rescue8/text,Bizi çok endişelendirdin. Bir daha yapma.
+Choice/1a_rescue9/text,Yapacak işimiz var. Idaho bekliyor.
+Text/1a_rescue10/text,[color=CHARTREUSE]Sasha seni kısa bir kucaklamaya çeker.[/color] Geleceğini biliyordum. Hiç şüphe etmedim.
+Text/1a_rescue11/text,"Şimdi, aldıkları herkesin bedelini onlara ödetelim. [color=CHARTREUSE]Birlikte.[/color]"
+Text/1a_rescue12/text,Sasha acısına rağmen zayıf bir gülümseme başarır. [color=STEEL_BLUE]Deneyeceğim.[/color] Ama bazı şeyler riske değer.
+Text/1a_rescue13/text,Senin burada olman bunu kanıtlıyor. Şimdi bunu bitirelim.
+Text/1a_rescue14/text,"Sasha başını sallar, kararlılığı yeniden alevlenmiş. [color=CHARTREUSE]Haklısın.[/color] Duygusallık bekleyebilir."
+Text/1a_rescue15/text,Idaho kazandığını sanıyor. Ona ne kadar yanıldığını gösterelim.
+Text/158/text,Güvenlik güçleri yaklaşıyor! [pulse freq=3][color=YELLOW]Savaşarak yolunuzu açın![/color][/pulse]
+Text/21_fail1/text,Muhafızlar her yönden yaklaşıyor. [color=CRIMSON]Kaçacak yer yok![/color]
+Text/21_fail2/text,"Viktor muhafızların arkasında belirir, sesi çelik gibi soğuk. [color=STEEL_BLUE]Geri çekilin. Şimdi.[/color]"
+Text/21_fail3/text,Muhafızlar tereddüt ediyor - Viktor onların adamıydı. [color=CRIMSON]Elena'nın adı o manifestolarda. Sıra sizin ailelerinize gelebilir.[/color]
+Text/21_fail4/text,Bazı muhafızlar silahlarını indiriyor. Diğerleri kaçıyor. Yol açılıyor.
+Text/21_fail5/text,"Doğu kanadını bir patlama sarsıyor. Murphy'nin sesi telsizden cızırtılı geliyor: [color=CHARTREUSE]""Bu benim oyalama taktiğim! HAREKET EDİN!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Muhafızlar patlamaya doğru dağılıyor. Tommy gurur duyardı.[/color]
+Text/21_fail7/text,Sasha öndeki muhafızı arkadan yere seriyor. [color=CHARTREUSE]O hücreden senin ölmeni izlemek için sağ çıkmadım![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]KOŞ! Ben hallederim![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha yaklaşır, yeni şafağı birlikte izlerken eli seninkini bulur.[/color] Bunu biz inşa ettik. Sen ve ben."
+Text/152/text,"Kökenlerimize, bizi buraya getiren ideallere sadık kaldığımız sürece... [color=CHARTREUSE]bir yol bulacağız.[/color] Birlikte."
+Text/153/text,[color=CHARTREUSE]Elini sıkarsın. Birlikte.[/color]
+Text/154/text,"[color=STEEL_BLUE]Sasha yanında duruyor.[/color] Senin ateşin, onların imparatorluğunu yakan kıvılcımı tutuşturdu."
+Text/155/text,[color=STEEL_BLUE]Öfke kararlılığa dönüştü. Hala yapılacak işler var.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha sana destekleyici bir gülümseme sunar.[/color] O kontrol noktasından çok yol kat ettin. Hepimiz öyle.
+Text/157/text,"[color=STEEL_BLUE]Suçluluk asla tamamen geçmeyebilir, ama yeniden inşa etmede bir amaç buldun.[/color]"

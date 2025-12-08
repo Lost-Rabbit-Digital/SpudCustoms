@@ -32,3 +32,32 @@ Choice/c4/disabled_text,
 Choice/c5/disabled_text,
 Choice/cb/disabled_text,
 Choice/cc/disabled_text,
+Text/c7_viktor1/text,Un gardian de securitate corpolent se apropie în timpul pauzei tale. Fața lui e trasă.
+Text/c7_viktor2/text,"Hei... ești unul dintre ofițerii vamali, nu-i așa? Am tot întrebat de soția mea, Elena."
+Text/c7_viktor3/text,A trecut prin acest punct de control acum trei săptămâni. [color=STEEL_BLUE]Inspecție eșuată.[/color] Nu am mai auzit nimic de ea de atunci.
+Choice/c7_viktor4/text,"""Viktor... Am găsit ceva. Despre Elena. Trebuie să știi adevărul."""
+Choice/c7_viktor5/text,"""Îmi pare rău, Viktor. Nu am văzut nimic."""
+Text/c7_viktor6/text,Îi arăți o copie a paginii din manifest. Fața lui devine albă.
+Text/c7_viktor7/text,[wave amp=25 freq=3]Mâinile îi tremură în timp ce citește.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Procesată... Lot RR-2851...[/color]
+Text/c7_viktor8/text,Vocea lui e abia o șoaptă. [tornado radius=3 freq=2][color=CRIMSON]Ei... ei au TRANSFORMAT-o în...[/color][/tornado]
+Text/c7_viktor9/text,Durerea lui se transformă în furie rece. [pulse freq=2][color=CRIMSON]Idaho va plăti pentru asta.[/color][/pulse] Jur pe memoria ei.
+Text/c7_viktor10/text,Îți strânge umărul. [color=CHARTREUSE]Mulțumesc că mi-ai spus.[/color] Când va veni timpul... îmi voi aminti asta.
+Text/c7_viktor11/text,Dă din cap trist. [color=STEEL_BLUE]Așa mă gândeam.[/color] Nimeni nu știe nimic. Sau nimeni nu vrea să vorbească.
+Text/c7_viktor12/text,Dacă auzi ceva... [color=YELLOW]te rog.[/color] E tot ce am.
+Text/d0_qte1/text,"Mai târziu, în timpul turei, un călător se apropie cu documente purtând [color=CHARTREUSE]semnul subtil al rezistenței[/color]."
+Text/d0_qte2/text,[color=DARK_ORANGE]RealityScan[/color] începe scanarea. [wave amp=15 freq=3][color=RED]Va detecta semnul![/color][/wave]
+Text/d0_qte3/text,Ai secunde să decizi. Scannerul se încălzește...
+Choice/d0_qte4/text,"""Falsifică o defecțiune a scannerului - repede!"""
+Choice/d0_qte5/text,"""Lasă scannerul să finalizeze scanarea"""
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]Trebuie să acționezi repede![/color][/pulse] Provoacă defecțiunea înainte să termine scanarea!
+Text/d0_qte7/text,Te bâlbâi cu cablurile scannerului. Sar scântei. Ecranul pâlpâie și se stinge.
+Text/d0_qte8/text,Russet se repede. [color=YELLOW]Ce s-a întâmplat aici?[/color]
+Choice/d0_qte9/text,"""Supratensiune, domnule. Aceste sisteme noi sunt capricioase."""
+Choice/d0_qte10/text,"""Nu știu, domnule. Pur și simplu s-a oprit."""
+Text/d0_qte11/text,Russet mormăie. [color=STEEL_BLUE]Birocrații ne dau echipament netestat.[/color] Procesează-i manual și marchează-i pentru re-inspecție.
+Text/d0_qte12/text,Russet te privește cu suspiciune. [color=YELLOW]Cât de convenabil.[/color] Voi chema mentenanța să se uite la el. Să nu se mai întâmple asta.
+Text/d0_qte13/text,Membrul rezistenței îți face un semn subtil de recunoștință în timp ce trece.
+Text/d0_qte14/text,Scannerul [pulse freq=3][color=RED]BIPĂIE PUTERNIC[/color][/pulse]. Marcaje neautorizate detectate!
+Text/d0_qte15/text,Russet apare instantaneu. [color=CHARTREUSE]Bravo![/color] Încă un trădător prins.
+Text/d0_qte16/text,"Membrul rezistenței este târât, cu teroare în ochi. ""[color=CRIMSON]Nu, vă rog! Am copii![/color]"""
+Text/d0_qte17/text,Loialitatea ta este [color=DARK_ORANGE]notată în dosarul tău[/color]. Continuă așa.

@@ -1,0 +1,54 @@
+﻿keys,uk
+alert_border_runner,"ВИЯВЛЕНО ВТІКАЧА!\nНатисніть, щоб запустити ракету!"
+alert_rejected_fleeing,"ВІДМОВЛЕНА КАРТОПЛЯ ВТІКАЄ!\nНатисніть, щоб запустити ракету!"
+alert_runner_escaped,ВТІКАЧ ВТІК!\nДодано штрафне очко!
+alert_points_deducted,ВТІКАЧ ВТІК!\nДодано штрафне очко!\n-{penalty} очок!
+alert_perfect_hit,ІДЕАЛЬНЕ ВЛУЧАННЯ! +{perfect} бонусних очок за точність
+alert_perfect_stamp,ІДЕАЛЬНИЙ ШТАМП! +{points} очок!
+alert_combo,КОМБО x{mult}! +{streak} бонусних очок за комбо
+alert_quota_met,"Квоту виконано, зміну завершено! \nБонус: {bonus} очок!"
+alert_strike_removed,Штрафне очко знято!
+alert_correct_decision,"Ви зробили правильний вибір, офіцере.\n+{points} очок!"
+alert_wrong_decision,"Ви спричинили зайві страждання, офіцере...\n+1 штрафне очко!"
+alert_potato_should_be_approved,\nЦя картопля відповідає всім вимогам і мала бути схвалена.
+alert_strike_out,Перевищено максимальну кількість штрафних очок! Ваша зміна завершена.
+ui_score,Рахунок: {score}
+ui_quota,Квота: {current} / {target}
+ui_strikes,Штрафи: {current} / {max}
+ui_click_megaphone,"Натисніть на мегафон, щоб викликати наступну картоплю"
+ui_drag_document,Перетягніть документ на стіл для перевірки
+ui_stamp_document,"Оберіть штамп, щоб схвалити або відхилити"
+ui_check_violations,Перевірте документ на наявність порушень
+Strike removed!,Штрафне очко знято!
+BORDER RUNNER DETECTED!\nClick to launch missile!,"ВИЯВЛЕНО ВТІКАЧА!\nНатисніть, щоб запустити ракету!"
+REJECTED POTATO FLEEING!\nClick to launch missile!,"ВІДМОВЛЕНА КАРТОПЛЯ ВТІКАЄ!\nНатисніть, щоб запустити ракету!"
+RUNNER ESCAPED!\nStrike added!,ВТІКАЧ ВТІК!\nДодано штрафне очко!
+Click megaphone to call the next potato,"Натисніть на мегафон, щоб викликати наступну картоплю"
+Drag document to inspection table,Перетягніть документ на інспекційний стіл
+Select a stamp to approve or reject,"Оберіть штамп, щоб схвалити або відхилити"
+Check for document violations,Перевірте документ на наявність порушень
+rule_explanation_header,ПОЯСНЕННЯ ПРАВИЛ:
+rule_explanation_fresh,"Подивіться на поле 'Стан'. Якщо там вказано щось інше, ніж 'Свіжий' - ВІДХИЛИТИ"
+rule_explanation_sweet_potato,Подивіться на поле 'Тип'. Якщо там вказано 'Солодка картопля' - ВІДХИЛИТИ (немає дозволів)
+rule_explanation_chip_hill,Подивіться на поле 'Країна'. Якщо там вказано 'Чіп Хілл' - ВІДХИЛИТИ (заборонено)
+rule_explanation_age,Подивіться на поле 'Народження'. Обчисліть вік і перевірте відповідно до правила
+rule_explanation_gender,Подивіться на поле 'Стать' і перевірте відповідно до поточного правила
+rule_footer_text,Ці правила повинні застосовуватися до ВСІХ картоплин
+rule_tutorial_hint,Потрібна допомога? Натисніть на будь-яке правило для пояснення
+alert_correct_decision_detailed,ПРАВИЛЬНЕ РІШЕННЯ! +{points} балів\n{reason}
+alert_wrong_decision_detailed,НЕПРАВИЛЬНЕ РІШЕННЯ! Додано штраф!\n{reason}
+alert_reason_approved,Картопля відповідає всім вимогам - СХВАЛЕНО
+alert_reason_should_reject,Вам слід було ВІДХИЛИТИ цю картоплю
+tutorial_check_type,Перевірте поле 'Тип' у паспорті
+tutorial_check_condition,Перевірте поле 'Стан' у паспорті
+tutorial_check_country,Перевірте поле 'Країна' у паспорті
+tutorial_check_age,"Перевірте поле 'Народження', щоб обчислити вік"
+tutorial_check_gender,Перевірте поле 'Стать' у паспорті
+alert_streak_bonus_minigame,5 поспіль! БОНУСНА МІНІ-ГРА!
+alert_perfect_stamps_bonus_minigame,Ідеальні штампи! БОНУСНА МІНІ-ГРА!
+alert_runner_bonus_minigame,Підозріла активність! БОНУСНА МІНІ-ГРА!
+alert_new_minigame_unlocked,Розблоковано нову міні-гру: {name}!
+alert_minigame_bonus,Бонус міні-гри: +{bonus} балів!
+high_score_display,Рекорд: {score}
+new_high_score,НОВИЙ РЕКОРД!
+month_1,Січень

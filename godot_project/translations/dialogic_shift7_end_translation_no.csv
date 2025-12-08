@@ -53,3 +53,40 @@ Choice/f3/disabled_text,
 Choice/f2/disabled_text,
 Choice/e0/disabled_text,
 Choice/df/disabled_text,
+Text/d2b/text,Før vi begynner... Jeg har en tilståelse å komme med.
+Text/d2c/text,"Den lappen du fant på din første dag? ""[color=GOLD]En venn[/color]""?"
+Text/d2d/text,Sasha smiler. Jeg ser du beholdt den. Smart. Jeg visste jeg valgte riktig spire.
+Text/d2e/text,"Jeg har observert nye offiserer i månedsvis, på jakt etter noen med [color=CHARTREUSE]spørrende øyne[/color]. Noen som kanskje kan se gjennom løgnene."
+Text/d2f/text,Sashas uttrykk er komplisert. Du viste den til Russet. Jeg måtte holde meg lavt i ukesvis etter det.
+Text/d2g/text,Men her er du likevel. Det forteller meg noe om din samvittighet.
+Text/d2h/text,Du ødela den. Jeg klandrer deg ikke – det var risikabelt å beholde den.
+Text/d2i/text,"Men ordene fant veien inn i hodet ditt likevel, gjorde de ikke?"
+Text/d2j/text,"[color=CHARTREUSE]Jeg er ""En venn.""[/color] Og nå vet du hvorfor."
+Text/d2k/text,Sasha sprer beslaglagte dokumenter på bordet. Behandlingslister fra den siste måneden.
+Text/d2l/text,"Du skanner navnene, og blodet ditt isner."
+Text/d2m/text,Der er hun. [color=GOLD]Maris Piper[/color]. Kvinnen fra bildet.
+Text/d2n/text,"""[color=CRIMSON]Status: Behandlet. Parti RR-2847.[/color]"" Datert tre dager etter at mannen hennes tryglet om din hjelp."
+Text/d2o/text,Du kjenner bildet i lommen. [color=STEEL_BLUE]Hun er borte. Og du kunne ikke redde henne.[/color]
+Text/d2p/text,Men kanskje... [color=CHARTREUSE]kanskje du fortsatt kan redde andre[/color].
+Text/d2q/text,Murphy kommer ut av skyggene. Hei. Glad du kom deg hit.
+Text/d2r/text,Murphy holder opp det krøllete RR-UTIL-skjemaet. Min fetter er også på den listen. [color=CHARTREUSE]Vi gjør dette sammen.[/color]
+Text/ff2/text,[color=STEEL_BLUE]Hun holder avstand mens du går.[/color] Jeg setter pris på at du ikke står i veien for oss. Det er... noe.
+Text/ff3/text,"[color=STEEL_BLUE]Hun går i stillhet, med armene i kors.[/color] Jeg håper du finner den vissheten du leter etter. Resten av oss har ikke råd til å vente."
+Text/100_viktor1/text,"På vei tilbake finner du Viktor alene på kontrollpunktets tak, stirrende på nattehimmelen."
+Text/100_viktor2/text,Viktor holder en liten
+Text/100_viktor3/text,"Hun pleide å si at uansett hvor mørkt det ble, ville stjernene fortsatt være der. [color=STEEL_BLUE]Konstante. Vakre.[/color]"
+Text/100_viktor4/text,"Han snur seg mot deg, øynene glitrer. [wave amp=15 freq=2]Jeg tenker stadig... led hun?[/wave] Visste hun hva som skjedde?"
+Text/100_viktor5/text,Viktors stemme brister. Hun spurte meg en gang om jeg noen gang stilte spørsmål ved avvisningene. Jeg sa til henne [color=CRIMSON]at hun skulle stole på systemet[/color].
+Text/100_viktor6/text,[tornado radius=3 freq=2][color=CRIMSON]Jeg sendte min egen kone til behandlingskarene uten å vite det.[/color][/tornado]
+Choice/100_viktor_choice1/text,Du kunne ikke visst. Ingen av oss visste.
+Choice/100_viktor_choice2/text,"Elena ville at du skulle kjempe nå, ikke drukne i skyld."
+Choice/100_viktor_choice3/text,Jeg vet ikke hva jeg skal si. Jeg beklager.
+Text/100_viktor7/text,Han rister sakte på hodet. [color=STEEL_BLUE]Uvitenhet er ikke uskyld. Jeg burde ha spurt. Burde ha lyttet.[/color]
+Text/100_viktor8/text,Viktor legger forsiktig bort bildet. [color=CHARTREUSE]Men nå vet jeg. Og å vite betyr at jeg må handle.[/color]
+Text/100_viktor9/text,"Viktor retter seg opp, en kald ild tennes på nytt i øynene hans. [color=CHARTREUSE]Du har rett.[/color] Hun var sterkere enn meg. Modigere."
+Text/100_viktor10/text,Han knytter neven. [color=CHARTREUSE]Når tiden er inne
+Text/100_viktor11/text,[pulse freq=2][color=CRIMSON]Og Idaho skal betale for hvert liv han har fortært.[/color][/pulse]
+Text/100_viktor12/text,Viktor klarer et trist
+Text/100_viktor13/text,Han ser tilbake på stjernene. [color=STEEL_BLUE]Elena ville ha likt deg.[/color]
+Text/100_viktor14/text,"Han snur seg for å gå, så stopper han. [color=CHARTREUSE]Når motstandsbevegelsen rykker... Jeg skal være klar.[/color]"
+Text/100_viktor15/text,For Elena. For dem alle. [pulse freq=2][color=CHARTREUSE]Vaktene vil følge meg når jeg forteller dem sannheten.[/color][/pulse]

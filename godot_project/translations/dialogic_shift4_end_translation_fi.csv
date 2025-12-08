@@ -1,0 +1,49 @@
+﻿keys,fi
+Text/215/text,"Murphy nappaa sinut käytävältä, silmät punareunaiset. Onko sinulla hetki?"
+Text/216/text,Murphy vetää sinut tyhjään varastohuoneeseen ja sulkee oven.
+Text/217/text,"Se vitsi, jonka kerroin kahvilassa... serkustani olevan [color=DARK_VIOLET]Juurireservin[/color] erässä..."
+Text/218/text,"Murphyn ääni murtuu. En usko, että se oli enää vitsi."
+Text/219/text,"Sanoit, ettei se ollut hauskaa. Olit oikeassa. [color=STEEL_BLUE]Tässä ei ole mitään hauskaa.[/color]"
+Text/21a/text,"Näin sinun lähtevän. Fiksua. Kunpa voisin lopettaa sen syömisen, mutta he [color=YELLOW]katsovat[/color]. He katsovat aina."
+Text/21b/text,"Löysin jotain serkkuni tavaroista. Hänen hylkäyslomakkeensa. Tavallista kamaa, mutta..."
+Text/21c/text,"Murphy vetää esiin rypistyneen lomakkeen. Katso käsittelykoodia. ""[color=CRIMSON]RR-UTIL-7[/color]."""
+Text/21d/text,Etsin sen arkistoista. RR tarkoittaa [pulse freq=2][color=DARK_VIOLET]Juurireserviä[/color][/pulse]. UTIL tarkoittaa... [color=CRIMSON]hyödyntämistä[/color].
+Text/21d_breakdown1/text,[wave amp=20 freq=3]Murphyn kädet alkavat täristä.[/wave] Serkkuni... Tommy... hän oli vasta kaksikymmentäkolme.
+Text/21d_breakdown2/text,Hän tuli tänne etsimään [color=CHARTREUSE]parempaa elämää[/color]. Epäonnistui yhdessä tarkastuksessa. Yhdessä. [color=STEEL_BLUE]Vain huonoa ajoitusta.[/color]
+Text/21d_breakdown3/text,"Murphy valuu alas seinää pitkin, kasvot käsissään. Ja minä... minä [tornado radius=3 freq=2][color=CRIMSON]SÖIN[/color][/tornado] sitä tavaraa. Joka päivä."
+Text/21d_breakdown4/text,"Murphy katsoo sinua ylös, kyyneleet valuen. [pulse freq=2][color=CRIMSON]Mitä jos söin HÄNET?[/color][/pulse]"
+Choice/21e/text,Murphy... Olen niin pahoillani. Olen kanssasi. Löydämme totuuden yhdessä.
+Choice/21f/text,"Murphy, tämä on vaarallista. Meidän pitäisi pysyä erossa siitä."
+Choice/220/text,Ehkä se on sattumaa. Ei tehdä hätiköityjä johtopäätöksiä.
+Text/221_comfort1/text,"Polvistut Murphyn viereen, laittaen käden hänen olkapäälleen."
+Text/221/text,"Murphy tarttuu käsivarteesi kuin pelastusrenkaaseen. [color=CHARTREUSE]Kiitos.[/color] Luulin, että olin tulossa hulluksi."
+Text/221_tommy/text,"[color=STEEL_BLUE]Hänen äänensä tasaantuu hieman.[/color] Tommyn puolesta. Teemme tämän Tommyn puolesta. Ja kaikkien muiden, jotka he ovat vieneet."
+Text/222/text,"On muitakin, jotka epäilevät. Sasha on kerännyt ihmisiä. Luulen, että hän luottaa sinuun."
+Text/223/text,"Murphy pyyhkii silmiään, yrittäen koota itsensä. Niin. Niin, olet luultavasti oikeassa. Unohda, että sanoin mitään."
+Text/224/text,Mutta jos muutat mielesi... Olen täällä. [color=STEEL_BLUE]Yksin kysymysteni kanssa. Ja painajaisteni kanssa.[/color]
+Text/225/text,Sattumaa. Murphy nauraa katkerasti kyyneltensä läpi. Toki. Ja Tommy vain [color=CRIMSON]katosi[/color] savuna ilmaan.
+Text/226/text,"Jatka sen kertomista itsellesi. Katso, kuinka kauan se auttaa sinua nukkumaan. [color=STEEL_BLUE]Minua se ei auta.[/color]"
+Text/227/text,"Sasha ilmestyy kojullesi, kun viimeinen vuoro päättyy. Näytät siltä kuin olisit nähnyt haamun."
+Text/228/text,Arvaanpa – Murphy kertoi sinulle serkustaan?
+Text/229/text,Sasha nyökkää hyväksyvästi. Hyvä. Tarvitsemme kysymyksiä esittäviä ihmisiä.
+Text/22a/text,Sasha tutkii kasvojasi tarkasti. Olet peloissasi. Se on fiksua. Mutta pelko ei pelasta ketään.
+Text/22b/text,"Olen tarkkaillut sinua ensimmäisestä päivästäsi lähtien. Sitä, miten [color=YELLOW]epäröit[/color], kun Russet puhui ""käsittelystä""."
+Text/22c/text,"Kysyit, mitä hylätyille perunoille tapahtuu. Se vaati rohkeutta. [color=CHARTREUSE]Useimmat vain tervehtivät ja leimaavat.[/color]"
+Text/22d/text,Sasha nojautuu lähemmäs. Siinä on kaava. Jokainen hylkäämämme peruna? Kadonneet 48 tunnin sisällä. Ei karkotusmerkintöjä. Ei siirtoja.
+Text/22e/text,Mutta [color=DARK_VIOLET]Juuresvaraston[/color] tuotanto? [tornado radius=3 freq=2][color=CRIMSON]Se nousee.[/color][/tornado] Joka. Ainoa. Kerta.
+Choice/22f/text,Uskon sinua. Miten voin auttaa?
+Choice/230/text,Minun täytyy nähdä todisteet ennen kuin riskeeraan kaiken.
+Text/231/text,"Sashan silmät kirkastuvat. Tiesin valinneeni oikein. Huomenna illalla, vuoron jälkeen. Näytän sinulle, mitä olen löytänyt."
+Text/232/text,Siihen asti
+Text/233/text,Reilua. Todisteet ovat tulossa. Pidä vain... silmäsi auki huomisen vuoron aikana.
+Text/234/text,"Katso, minne [color=CRIMSON]hylätyt perunat[/color] menevät. Seuraa kuorma-autoja, jos pystyt."
+Text/235/text,"Vedät esiin kuvan, jonka epätoivoinen peruna antoi sinulle. Hänen vaimonsa. [color=STEEL_BLUE]Missä hän on nyt?[/color]"
+Text/236/text,"Jos se, mitä Sasha ja Murphy sanovat, on totta... hänet on jo..."
+Text/237/text,Et voi viimeistellä ajatusta. Mutta et [color=CHARTREUSE]unohda hänen kasvojaan[/color].
+Text/238/text,"Huomenna kaikki muuttuu. Joko löydät vastauksia, tai hautaat kysymykset ikuisesti."
+Text/239/text,Yksi asia on varma: [color=YELLOW]autuaaseen tietämättömyyteen ei ole paluuta[/color].
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

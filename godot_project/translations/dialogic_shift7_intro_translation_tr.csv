@@ -22,3 +22,20 @@ Text/115/text,"Olduğunda, [color=YELLOW]bir taraf seçmen[/color] gerekecek. Ar
 Text/116/text,"Her işlediğin patatesle, ya [pulse freq=2][color=CHARTREUSE]bir devrime yardım ediyorsun[/color][/pulse] ya da [pulse freq=2][color=CRIMSON]korkunç bir sistemi mümkün kılıyorsun[/color][/pulse]."
 Choice/10f/disabled_text,
 Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha omzunun üzerinden gergin bir şekilde bakındı.[/color] Üzgünüm, ben... [color=YELLOW]Sanırım beni izliyorlar.[/color]"
+Text/102_foreshadow2/text,Russet sorular soruyor. Vardiya sonrası beni takip ediyor. [wave amp=15 freq=2][color=YELLOW]Daha dikkatli olmalıyım.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, belki bir süre ortalıkta görünmesen iyi olur. Riskin daha fazlasını ben alayım."
+Text/102_foreshadow4/text,"[color=STEEL_BLUE]Başını salladı, zoraki bir gülümseme takındı.[/color] Hayır. Artık çok yakınız. Russet'i hallederim."
+Text/102_foreshadow5/text,Ayrıca... [color=CHARTREUSE]birinin sizi filizleri beladan uzak tutması gerekiyor.[/color]
+Text/106_trucks1/text,Ama ana işleme tesisinin nerede olduğunu hala bilmiyoruz. Belgelerde sadece sevkiyat kodları listeleniyor.
+Text/106_trucks2/text,[color=DARK_VIOLET]Kök Rezervi kamyonlarını[/color] izliyorum. Her gece 03.00'te ayrılıyorlar. Aynı güzergah.
+Text/106_trucks3/text,[color=CHARTREUSE]Onları takip edebilsek...[/color] reddedilenleri tam olarak nereye götürdüklerini bilirdik.
+Choice/106_trucks4/text,Ben yaparım. Devriye programlarını biliyorum.
+Choice/106_trucks5/text,Kulağa riskli geliyor. Başka biri yapamaz mı?
+Text/106_trucks6/text,[color=CHARTREUSE]Sasha'nın gözleri parladı.[/color] Çelik gibi köklerin olduğunu biliyordum. Dikkatli ol - geceleri yoğun devriye geziyorlar.
+Text/106_trucks7/text,Saat 03.00. [color=DARK_VIOLET]Kök Rezervi[/color] kamyonları gürültüyle geçerken sen gölgelerde çömeliyorsun.
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Saklı kal! Konvoyu takip et![/color][/pulse]
+Text/106_trucks9/text,"Kamyonlar sanayi bölgesinde gizlenmiş devasa bir komplekste durur. [color=DARK_VIOLET]7. Sektör, Delta Depo Kompleksi.[/color]"
+Text/106_trucks10/text,Bacalar morumsu duman püskürtüyor. Koku... [tornado radius=3 freq=2][color=CRIMSON]şaşmaz.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]Kök Rezervi'nin kalbi.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]Sasha'nın ifadesinde hayal kırıklığı belirdi.[/color] Hepimiz risk almak zorundayız. Başka bir yol bulacağım.

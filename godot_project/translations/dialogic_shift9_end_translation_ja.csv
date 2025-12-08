@@ -1,0 +1,36 @@
+﻿keys,ja
+Text/131/text,戦いが激化する中、あなたは身をかがめる。ごめん、サーシャ。僕は[color=STEEL_BLUE]君ほど勇敢じゃない[/color]。
+Text/132/text,"""[color=CRIMSON]テロ攻撃[/color]は撃退された！首謀者たちは今まさに[color=DARK_VIOLET]処理[/color]されているところだ。"""
+Text/133/text,ユーコン署長は抵抗メンバーたちを鎖で引きずり込む。その中にはサーシャもいる。「この[color=CRIMSON]裏切り者[/color]たちは[color=DARK_VIOLET]最終処理[/color]を受けることになるだろう。」
+Text/134/text,サーシャと目が合う。彼女の体には痣があるが、その眼差しには[wave amp=15 freq=2][color=CHARTREUSE]非難はなく、ただ悲しみだけ[/color][/wave]が宿っていた。
+Text/135/text,あなたは頭を低くして生き延びてきたが、[pulse freq=3][color=GOLD]その代償は何だったのか？[/color][/pulse] 工場から[color=DARK_VIOLET]ルートリザーブ[/color]の生産の匂いが漂ってくると、胃がひっくり返るような気持ちになる。
+Text/136/text,もしかしたら、内側からまだチャンスがあるのかもしれない。あるいは、ただ良心を和らげようとしているだけなのかもしれない。
+Text/137/text,あなたは[tornado radius=3 freq=2][color=CHARTREUSE]持ち場を放棄し[/color][/tornado]、戦闘へと駆け出す。慎重になる時は終わった。
+Text/138/text,[pulse freq=3][color=GOLD]我々と共にあることを証明しろ！[/color][/pulse] サーシャをどうやって知った？
+Text/139/text,[color=CHARTREUSE]根は深く張っている！[/color] 私は検問所の者だ、サーシャが私をスカウトした！
+Text/13a/text,彼らは今、彼女を処理工場へ連れて行っている。急がなければ！
+Text/13b/text,ドアが爆音と共に開き、[wave amp=25 freq=3][color=CRIMSON]恐ろしい真実[/color][/wave]が明らかになる。破砕機、そしてジャガイモを破滅へと運ぶコンベアベルト。
+Text/13c/text,あるベルトの終点には、サーシャたちが[color=CRIMSON]無力に縛られている[/color]。監督官ラセットが操作盤の前に立っている。
+Text/13d/text,[color=RED]貴様！[/color] 貴様も奴らの仲間だと気づくべきだった！下がれ、さもなくば処理機を起動させるぞ！
+Text/140/text,[color=STEEL_BLUE]抵抗軍のリーダーが前に進み出て、ラセットに武器を向ける。[/color] それ以上動くな、ラセット。両手を私に見えるところに置け。
+Text/141/text,[color=CRIMSON]ラセットの目はあなたと抵抗軍のリーダーの間を行き来し、額には汗が滲む。[/color] 勝ったつもりか？この施設こそが、スパッドの基盤なのだぞ！
+Text/142/text,苦しみの基盤だ。[pulse freq=3][color=CHARTREUSE]それは今日で終わりだ。[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]サーシャはコンベアベルトの上で拘束具にもがいている[/color]
+Choice/144/text,[tornado radius=3 freq=2][color=CRIMSON]「ラセット！[/color]
+Choice/145/text,[wave amp=15 freq=2][color=STEEL_BLUE]「これ…これが奴らがやってきたことなのか？想像以上にひどい…」[/color][/wave]
+Choice/146/text,[color=CHARTREUSE]「サーシャ！生きていてくれてよかった！待ってろ！[/color]
+Text/147/text,[color=CRIMSON]あなたは拳を握りしめ、抵抗軍の兵士たちに辛うじて引き止められながら、ラセットに突進する。[/color] 私の検問所を通った全てのジャガイモが…一体どれだけ…
+Text/148/text,落ち着け！彼には証言してもらう必要がある。[color=STEEL_BLUE]リーダーはラセットに武器を向けたままにする。[/color] 怒りは法廷にとっておけ。
+Text/149/text,[color=STEEL_BLUE]あなたは機械の全貌の恐ろしさに打ちひしがれ、口元を手で覆いながらよろめき後ずさる。[/color] 私は彼らの書類にスタンプを押した…私が彼らをここに送ったのか…
+Text/14a/text,[color=CHARTREUSE]君は知らなかった。我々の誰もが知らなかったんだ。[/color] だからこそ、今ここにいるんだ。集中しろ！
+Text/14b/text,[color=CHARTREUSE]あなたはコンベアへと駆け寄る[/color]
+Text/14c/text,[color=CHARTREUSE]あなたの手が結び目を解く間、サーシャの瞳は涙と希望に輝いている。[/color]あなたが来てくれると信じていた。決して疑うことはなかったわ。
+Text/14d/text,[color=STEEL_BLUE]リーダーは銃口を突きつけ、ラセットをひざまずかせる。[/color]彼を縛り上げろ。次に何が起こるか、しっかり見せてやれ。
+Text/13e/text,[color=CHARTREUSE]拘束から解放されたサーシャは、間髪入れずに施設のカメラの向きを変える。[/color][color=YELLOW]スパッドの民よ！ここはルートリザーブだ！彼らは私たちを互いに食い合わせている！[/color]
+Text/14e/text,[color=CHARTREUSE]サーシャはあなたの手を取り、自分の指をあなたの指に絡ませる。[/color]私のために戻ってきてくれたのね。次に何が起ころうと…私たちは共に立ち向かうわ。
+Text/14f/text,[color=STEEL_BLUE]サーシャはあなたの目にまだ燃え盛る怒りを見て、注意深く見つめる。[/color]その炎を向けなさい。次に何が来るか、それに必要になるわ。
+Text/150/text,[color=STEEL_BLUE]サーシャはあなたの肩にそっと手を置く。[/color]その罪悪感はあなたが背負うものではないわ。今、あなたがここにいる。それが大切なの。
+Text/13f/text,[color=CHARTREUSE]やったわ。真実が今、世に出た。[/color]私たちには築くべき未来があるわ！
+Choice/144/disabled_text,
+Choice/145/disabled_text,
+Choice/146/disabled_text,

@@ -17,3 +17,6 @@ Text/a4/text,Dit bewijst alles. Het verzet zal kopieën maken. [tornado radius=3
 Text/a5/text,"Je hebt een grens overschreden. [wave amp=20 freq=3][color=YELLOW]Er is geen weg terug.[/color][/wave] Wanneer de waarheid zich verspreidt, zal Spud worden getransformeerd."
 Choice/9c/disabled_text,
 Choice/9d/disabled_text,
+Text/9a_viktor1/text,Je scant de namen op het manifest... en één springt eruit. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,Die naam... die heb je eerder gehoord. De bewaker Viktor had het over zijn vermiste vrouw.
+Text/9a_viktor3/text,"""[color=CRIMSON]Status: Verwerkt. Batch RR-2851.[/color]"" Gedateerd twee weken geleden."

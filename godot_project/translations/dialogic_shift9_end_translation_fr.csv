@@ -14,3 +14,20 @@ Text/13c/text,Au bout d'un tapis - Sasha et d'autres [color=CRIMSON]attachés sa
 Text/13d/text,[color=RED]TOI ![/color] J'aurais dû savoir que tu étais l'un d'entre eux ! Recule ou je démarre le processeur !
 Text/13e/text,"Alors que les combattants de la résistance maîtrisent Russet, Sasha redirige les caméras de l'installation. [color=YELLOW]Peuple de Spud ! C'est la Réserve Racine ! Ils nous ont nourris les uns aux autres ![/color]"
 Text/13f/text,Tu es revenu pour moi. [color=CHARTREUSE]Nous avons réussi. La vérité est maintenant connue.[/color] Nous avons un avenir à construire !
+Text/140/text,"[color=STEEL_BLUE]Le chef de la résistance s'avance, son arme braquée sur Russet.[/color] Pas un pas de plus, Russet. Les mains où je peux les voir."
+Text/141/text,"[color=CRIMSON]Les yeux de Russet papillonnent entre vous et le chef de la résistance, des perles de sueur sur son front.[/color] Vous croyez avoir gagné ? Cette installation est le fondement de Spud !"
+Text/142/text,Le fondement de la souffrance. [pulse freq=3][color=CHARTREUSE]Ça se termine aujourd'hui.[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]Sasha se débat contre ses liens sur le tapis roulant
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""Russet"
+Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""C'est... c'est ce qu'ils faisaient ? C'est pire que ce que j'imaginais...""[/color][/wave]"
+Choice/146/text,"[color=CHARTREUSE]""Sasha ! Merci aux racines, tu es vivante ! Tiens bon"
+Text/147/text,"[color=CRIMSON]Vous chargez vers Russet, les poings serrés, à peine retenu par les combattants de la résistance.[/color] Chaque patate qui est passée par mon poste de contrôle... combien en avez-vous..."
+Text/148/text,Du calme ! Nous avons besoin de lui vivant pour qu'il témoigne. [color=STEEL_BLUE]Le chef maintient son arme braquée sur Russet.[/color] Gardez votre colère pour les tribunaux.
+Text/149/text,"[color=STEEL_BLUE]Vous reculez en titubant, la main sur la bouche, assimilant toute l'horreur de la machinerie.[/color] J'ai tamponné leurs papiers... Je les ai envoyés ici..."
+Text/14a/text,[color=CHARTREUSE]Vous ne saviez pas. Aucun de nous ne savait.[/color] C'est pourquoi nous sommes ici maintenant. Concentrez-vous !
+Text/14b/text,[color=CHARTREUSE]Vous vous précipitez vers le tapis roulant
+Text/14c/text,[color=CHARTREUSE]Les yeux de Sasha brillent de larmes et d'espoir tandis que vos mains défont les nœuds.[/color] Je savais que tu viendrais. Je n'ai jamais douté de toi.
+Text/14d/text,[color=STEEL_BLUE]Le chef force Russet à s'agenouiller sous la menace d'une arme.[/color] Ligotez-le. Assurez-vous qu'il regarde ce qui va suivre.
+Text/14e/text,"[color=CHARTREUSE]Sasha prend votre main, entrelaçant ses doigts avec les vôtres.[/color] Tu es revenu pour moi. Quoi qu'il arrive ensuite... nous l'affronterons ensemble."
+Text/14f/text,"[color=STEEL_BLUE]Sasha vous observe attentivement, voyant la fureur qui brûle encore dans vos yeux.[/color] Canalisez ce feu. Nous en aurons besoin pour ce qui va suivre."
+Text/150/text,[color=STEEL_BLUE]Sasha pose une main douce sur votre épaule.[/color] La culpabilité ne vous appartient pas. Vous êtes ici maintenant. C'est ce qui compte.

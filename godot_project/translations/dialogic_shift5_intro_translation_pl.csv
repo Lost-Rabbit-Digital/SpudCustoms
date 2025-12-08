@@ -21,3 +21,13 @@ Choice/ac/disabled_text,
 Choice/b2/disabled_text,
 Choice/b1/disabled_text,
 Choice/ad/disabled_text,
+Text/b4_viktor1/text,"Krzepki strażnik łapie cię za ramię, gdy przechodzisz. Na jego twarzy maluje się zmartwienie."
+Text/b4_viktor2/text,"Hej... przepraszam, że przeszkadzam. Jesteś jednym z celników, prawda? Nazywam się [color=CHARTREUSE]Wiktor[/color]."
+Text/b4_viktor3/text,"Pytałem już wszystkich o moją żonę, [color=GOLD]Elenę[/color]. Elena Pietrow. Przekroczyła to przejście graniczne trzy tygodnie temu."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Nie przeszła kontroli.[/color] Powiedzieli, że zostanie przetworzona i wróci do domu, ale... nic nie słyszałem."
+Text/b4_viktor5/text,"Jego głos drży. Nikt nic mi nie chce powiedzieć. Czy wiesz, dokąd trafiają odrzuceni podróżni?"
+Choice/b4_viktor6/text,"""Przykro mi, [color=CHARTREUSE]Wiktorze[/color]. Nie wiem. Ale będę mieć oczy otwarte."""
+Choice/b4_viktor7/text,"""Nie mogę rozmawiać o szczegółach przetwarzania. Protokoły bezpieczeństwa."""
+Text/b4_viktor8/text,"W oczach [color=CHARTREUSE]Wiktora[/color] pojawia się iskierka nadziei. [color=CHARTREUSE]Dziękuję.[/color] Cokolwiek się dowiesz... proszę. Ona jest wszystkim, co mam."
+Text/b4_viktor9/text,"[color=CHARTREUSE]Wiktor[/color] kiwa głową, przygnębiony. [color=STEEL_BLUE]Ach, tak. Protokoły.[/color] Rozumiem."
+Text/b4_viktor10/text,"Ale jeśli zmienisz zdanie... [color=YELLOW]Muszę wiedzieć, co się z nią stało.[/color]"

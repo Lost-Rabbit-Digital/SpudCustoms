@@ -16,3 +16,12 @@ Text/76/text,"Sasha îți îndesă dosarul în mâini. ""[color=YELLOW]Păstreaz
 Text/77/text,Ascunzi dosarul în interiorul jachetei tale. [color=DARK_VIOLET]Root Reserve[/color]. Respingerile. Cartofii lipsă. Totul se conectează într-un mod [tornado radius=3 freq=2][color=CRIMSON]înfiorător[/color][/tornado].
 Choice/71/disabled_text,
 Choice/70/disabled_text,
+Text/69_photo1/text,Scoți fotografia din nou. [color=GOLD]Maris Piper[/color]. O față atât de blândă.
+Text/69_photo2/text,Soția ei era atât de disperată. [color=STEEL_BLUE]Ce s-a întâmplat cu ea?[/color]
+Text/69_photo3/text,Observi ceva în fundalul fotografiei - un camion cu un [color=DARK_VIOLET]logo mov[/color].
+Text/69_photo4/text,Acel simbol... l-ai văzut pe livrările de la cantină. [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve.[/color][/wave]
+Text/6a_photo1/text,Sasha... fotografia asta. Soția femeii mi-a dat-o. O căuta.
+Text/6a_photo2/text,Fața Sashei se întunecă. [color=STEEL_BLUE]Lasă-mă să văd.[/color]
+Text/6a_photo3/text,"Sasha studiază fotografia, expresia ei întunecându-se. [color=CRIMSON]Recunosc camionul ăla.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Păstrează fotografia asta în siguranță.[/color][/pulse] Ar putea fi importantă mai târziu. Ai încredere în mine.
+Text/6f2/text,[pulse freq=3][color=CRIMSON]Devin Root Reserve.[/color][/pulse]

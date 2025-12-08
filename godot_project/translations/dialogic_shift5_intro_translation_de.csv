@@ -21,3 +21,13 @@ Choice/ac/disabled_text,
 Choice/b2/disabled_text,
 Choice/b1/disabled_text,
 Choice/ad/disabled_text,
+Text/b4_viktor1/text,Ein kräftiger Wachmann hält dich im Vorbeigehen am Arm fest. Sein Gesicht ist von Sorge gezeichnet.
+Text/b4_viktor2/text,"Hey... Entschuldigung, dass ich störe. Sie sind doch einer der Zollbeamten, oder? Mein Name ist [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Ich habe jeden nach meiner Frau, [color=GOLD]Elena[/color], gefragt. Elena Petrov. Sie hat diesen Kontrollpunkt vor drei Wochen passiert."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Prüfung nicht bestanden.[/color] Man sagte, sie würde bearbeitet und nach Hause zurückgeschickt, aber... ich habe nichts mehr gehört."
+Text/b4_viktor5/text,"Seine Stimme zittert. Niemand will mir etwas sagen. Wissen Sie, wohin die abgewiesenen Reisenden gehen?"
+Choice/b4_viktor6/text,"""Es tut mir leid, Viktor. Ich weiß es nicht. Aber ich werde die Augen offen halten."""
+Choice/b4_viktor7/text,"""Ich darf keine Details zur Bearbeitung preisgeben. Sicherheitsprotokolle."""
+Text/b4_viktor8/text,"Viktors Augen zeigen einen Funken Hoffnung. [color=CHARTREUSE]Danke.[/color] Alles, was Sie herausfinden... bitte. Sie ist alles, was ich habe."
+Text/b4_viktor9/text,"Viktor nickt, niedergeschlagen. [color=STEEL_BLUE]Richtig. Protokolle.[/color] Ich verstehe."
+Text/b4_viktor10/text,"Aber falls Sie es sich anders überlegen... [color=YELLOW]Ich muss wissen, was mit ihr passiert ist.[/color]"

@@ -5,3 +5,27 @@ Text/52/text,Un piccolo biglietto scivola fuori da alcuni fogli sulla tua scriva
 Text/53/text,"[color=GOLD]Non tutto è come sembra. Le radici della nostra nazione sono marcite. [br] Segui la traccia, ma fai attenzione a non essere zittito.[/color] [br] - [color=CHARTREUSE]Un amico[/color]"
 Text/54/text,Quel biglietto... e il modo in cui Russet ha eluso la mia domanda sulle [pulse freq=3][color=CRIMSON]patate rifiutate[/color][/pulse]... [br] Qualcosa sembra [color=STEEL_BLUE]strano[/color].
 Text/55/text,Dovrei rimanere [color=YELLOW]vigile[/color]. C'è molto più qui che timbrare passaporti.
+Text/52b/text,Non c'era stamattina. Qualcuno l'ha messo [color=YELLOW]durante il tuo turno[/color].
+Text/53b/text,"[color=GOLD]Segui la pista, ma fai attenzione a non essere messo a tacere.[/color]"
+Text/53c/text,[color=GOLD]Guarda chi mangia la [/color][color=DARK_VIOLET]Riserva[/color][color=GOLD]. Guarda chi rifiuta.[/color]
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]Un amico[/color]
+Choice/53e/text,"""Tieni nascosto il biglietto - indaga in silenzio"""
+Choice/53f/text,"""Distruggi il biglietto - potrebbe essere una prova"""
+Choice/53g/text,"""Mostra subito il biglietto a Russet"""
+Text/53h/text,Pieghi con cura il biglietto e lo infili in tasca. [color=CHARTREUSE]Qualcuno ti sta contattando.[/color]
+Text/53i/text,"Ma chi? E perché tu, proprio al tuo primo giorno?"
+Text/53j/text,Fai a pezzi il biglietto
+Text/53k/text,"Russet ha detto che i germogli che fanno domande vengono ""riassegnati"". Meglio non rischiare."
+Text/53l/text,"Fermi Russet prima che se ne vada. ""Signore? Ho trovato questo tra le mie carte..."""
+Text/53m/text,"Russet afferra il biglietto, lo legge. La sua espressione cambia - [color=YELLOW]era forse riconoscimento?[/color]"
+Text/53n/text,Propaganda. Ribelli che cercano di corrompere i nuovi ufficiali. [color=DARK_ORANGE]Hai fatto bene a portarmelo.[/color]
+Text/53o/text,Si mette in tasca il biglietto. Dimentica di averlo mai visto. E fai attenzione a chiunque si comporti... [color=CRIMSON]in modo sospetto[/color].
+Text/54b/text,"""[color=VIOLET]Elaborato. Secondo protocollo.[/color]"" Cosa significa?"
+Text/54c/text,Quel biglietto... diceva che le radici sono diventate [color=CRIMSON]marce[/color].
+Text/54d/text,"Ma Spud è glorioso, non è vero? Questo è quello che ci hanno detto. Quello in cui credevo."
+Text/54e/text,"Tiri fuori il biglietto, leggendolo di nuovo. ""[color=GOLD]Guarda chi mangia la Riserva. Guarda chi rifiuta.[/color]"""
+Text/54f/text,"Domani, farai attenzione. [color=YELLOW]Qualcuno sta cercando di dirti qualcosa.[/color]"
+Text/54g/text,"La faccia di Russet quando ha letto il biglietto. Per un solo istante, sembrava quasi... [color=STEEL_BLUE]spaventato[/color]."
+Text/54h/text,Cos'è veramente la [color=DARK_VIOLET]Riserva Radice[/color]? E perché qualcuno dovrebbe avvertirti a riguardo?
+Text/54i/text,"Il biglietto è sparito, ma le parole persistono. [color=YELLOW]Non tutto è come sembra.[/color]"
+Text/54j/text,Forse distruggerlo è stata la scelta giusta. Forse hai appena messo a tacere il tuo unico alleato.

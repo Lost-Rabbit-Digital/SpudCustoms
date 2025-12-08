@@ -45,3 +45,41 @@ Choice/27/disabled_text,
 Choice/26/disabled_text,
 Choice/25/disabled_text,
 Choice/16/disabled_text,
+Text/1a_rescue1/text,Ein Späher eilt herbei. Wir haben sie gefunden! [color=CHARTREUSE]Sasha ist im Haftblock![/color]
+Text/1a_rescue2/text,"Sie bereiten sich darauf vor, sie... [tornado radius=3 freq=2][color=CRIMSON]zu verarbeiten[/color][/tornado]... in weniger als einer Stunde!"
+Text/1a_rescue3/text,Wir müssen sie retten. [pulse freq=2][color=CHARTREUSE]Sie hat all das angefangen.[/color][/pulse] Wir gehen nicht ohne sie.
+Text/1a_rescue4/text,"[wave amp=25 freq=3][color=YELLOW]Rase durch die Anlage![/color][/wave] Erreiche Sasha, bevor es zu spät ist!"
+Text/1a_rescue_fail1/text,Du stolperst. Der Weg ist von Wachen blockiert!
+Text/1a_rescue_fail2/text,Viktor stürmt durch eine Seitentür. [color=CHARTREUSE]GEH! Ich halte sie auf![/color]
+Text/1a_rescue_fail3/text,"Für Elena. Für sie alle. [color=STEEL_BLUE]Ich lasse nicht zu, dass noch einer stirbt![/color]"
+Text/1a_rescue_fail4/text,Murphy reißt einen Feueralarm herunter. [color=CHARTREUSE]Für Tommy![/color] Die Sprinkler blenden die Wachen!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Ich sorge für eine Ablenkung. Bring sie da raus![/color]
+Text/1a_rescue_fail6/text,"Ein [color=YELLOW]Verarbeitungsfließband klemmt[/color], sprüht Funken und lenkt die Wachen ab!"
+Text/1a_rescue_fail7/text,Das Schicksal – oder die Geister der Verarbeiteten – gewährt dir eine zweite Chance.
+Text/1a_rescue5/text,"Sasha blickt aus ihrer Zelle auf, gezeichnet, aber ungebrochen. Ihre Augen weiten sich. [color=CHARTREUSE]Du bist gekommen.[/color]"
+Text/1a_rescue6/text,Natürlich bin ich gekommen. [color=CHARTREUSE]Wir beenden das zusammen.[/color]
+Choice/1a_rescue7/text,"Ich hatte Angst, dich nie wiederzusehen."
+Choice/1a_rescue8/text,Du hast uns zu Tode beunruhigt. Mach das nicht noch einmal.
+Choice/1a_rescue9/text,Wir haben Arbeit zu erledigen. Idaho wartet.
+Text/1a_rescue10/text,"[color=CHARTREUSE]Sasha zieht dich in eine kurze Umarmung.[/color] Ich wusste, dass du kommen würdest. Ich habe nie gezweifelt."
+Text/1a_rescue11/text,"Jetzt lassen wir sie für jeden bezahlen, den sie uns genommen haben. [color=CHARTREUSE]Zusammen.[/color]"
+Text/1a_rescue12/text,Sasha ringt sich trotz ihres Schmerzes ein schwaches Lächeln ab. [color=STEEL_BLUE]Ich werde es versuchen.[/color] Aber manche Dinge sind das Risiko wert.
+Text/1a_rescue13/text,"Dass du hier bist, beweist das. Jetzt beenden wir das."
+Text/1a_rescue14/text,"Sasha nickt, ihre Entschlossenheit neu entfacht. [color=CHARTREUSE]Du hast recht.[/color] Gefühle können warten."
+Text/1a_rescue15/text,"Idaho glaubt, er hätte gewonnen. Zeigen wir ihm, wie falsch er liegt."
+Text/158/text,Sicherheitskräfte rücken näher! [pulse freq=3][color=YELLOW]Kämpfe dich durch![/color][/pulse]
+Text/21_fail1/text,Wachen rücken von allen Seiten vor. [color=CRIMSON]Es gibt kein Entkommen![/color]
+Text/21_fail2/text,"Viktor erscheint hinter den Wachen, seine Stimme kalt wie Stahl. [color=STEEL_BLUE]Legt die Waffen nieder. Jetzt.[/color]"
+Text/21_fail3/text,Die Wachen zögern – Viktor war einer von ihnen. [color=CRIMSON]Elenas Name steht auf diesen Manifesten. Eure Familien könnten die Nächsten sein.[/color]
+Text/21_fail4/text,Einige Wachen senken ihre Waffen. Andere fliehen. Der Weg ist frei.
+Text/21_fail5/text,"Eine Explosion erschüttert den Ostflügel. Murphys Stimme knistert über die Funkgeräte: [color=CHARTREUSE]""Das ist meine Ablenkung! BEWEGT EUCH!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Die Wachen zerstreuen sich in Richtung der Explosion. Tommy wäre stolz.[/color]
+Text/21_fail7/text,"Sasha packt den Anführer der Wachen von hinten. [color=CHARTREUSE]Ich habe diese Zelle nicht überlebt, nur um dich sterben zu sehen![/color]"
+Text/21_fail8/text,[color=STEEL_BLUE]LAUF! Ich kümmere mich darum![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha rückt näher, ihre Hand findet deine, während ihr gemeinsam die neue Morgendämmerung betrachtet.[/color] Wir haben das aufgebaut. Du und ich."
+Text/152/text,"Solange wir unseren Wurzeln treu bleiben, den Idealen, die uns hierher gebracht haben... [color=CHARTREUSE]werden wir einen Weg finden.[/color] Gemeinsam."
+Text/153/text,[color=CHARTREUSE]Du drückst ihre Hand. Gemeinsam.[/color]
+Text/154/text,"[color=STEEL_BLUE]Sasha steht neben dir.[/color] Dein Feuer entzündete den Funken, der ihr Imperium niederbrannte."
+Text/155/text,[color=STEEL_BLUE]Die Wut ist zu Entschlossenheit abgekühlt. Es gibt noch Arbeit zu tun.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha schenkt dir ein aufmunterndes Lächeln.[/color] Du hast einen langen Weg von diesem Kontrollpunkt zurückgelegt. Wir alle haben das.
+Text/157/text,"[color=STEEL_BLUE]Die Schuld mag nie ganz verblassen, aber du hast einen Sinn im Wiederaufbau gefunden.[/color]"

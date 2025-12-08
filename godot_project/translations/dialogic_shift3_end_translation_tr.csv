@@ -16,3 +16,12 @@ Text/76/text,"Sasha dosyayı ellerine tutuşturur. ""[color=YELLOW]Bunu güvende
 Text/77/text,Dosyayı ceketinin içine saklarsın. [color=DARK_VIOLET]Root Reserve[/color]. Reddedilmeler. Kayıp patatesler. Hepsi [tornado radius=3 freq=2][color=CRIMSON]korkunç bir şekilde[/color][/tornado] bağlanıyor.
 Choice/71/disabled_text,
 Choice/70/disabled_text,
+Text/69_photo1/text,Fotoğrafı tekrar çıkarırsın. [color=GOLD]Maris Piper[/color]. Ne kadar da nazik bir yüz.
+Text/69_photo2/text,Karısı çok çaresizdi. [color=STEEL_BLUE]Ona ne oldu?[/color]
+Text/69_photo3/text,Fotoğrafın arka planında bir şey fark edersin - [color=DARK_VIOLET]mor logolu[/color] bir kamyon.
+Text/69_photo4/text,O sembol... Onu kafeterya teslimatlarında görmüştün. [wave amp=15 freq=2][color=DARK_VIOLET]Kök Rezervi.[/color][/wave]
+Text/6a_photo1/text,Sasha... bu fotoğraf. Kadının karısı bana verdi. Onu arıyordu.
+Text/6a_photo2/text,Sasha'nın yüzü düşer. [color=STEEL_BLUE]Bakayım.[/color]
+Text/6a_photo3/text,"Sasha fotoğrafı inceler, ifadesi koyulaşır. [color=CRIMSON]O kamyonu tanıyorum.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Bu fotoğrafı güvende tut.[/color][/pulse] Sonra önemli olabilir. Bana güven.
+Text/6f2/text,[pulse freq=3][color=CRIMSON]Kök Rezervi oluyorlar.[/color][/pulse]

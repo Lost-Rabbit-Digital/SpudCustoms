@@ -1,0 +1,54 @@
+﻿keys,ru
+alert_border_runner,"БЕГЛЕЦ ОБНАРУЖЕН!\nНажмите, чтобы запустить ракету!"
+alert_rejected_fleeing,"ОТВЕРГНУТАЯ КАРТОФЕЛИНА СБЕГАЕТ!\nНажмите, чтобы запустить ракету!"
+alert_runner_escaped,БЕГЛЕЦ СБЕЖАЛ!\nДобавлен штраф!
+alert_points_deducted,БЕГЛЕЦ СБЕЖАЛ!\nДобавлен штраф!\n-{penalty} очков!
+alert_perfect_hit,ИДЕАЛЬНОЕ ПОПАДАНИЕ! +{perfect} бонусных очков за точность
+alert_perfect_stamp,ИДЕАЛЬНЫЙ ШТАМП! +{points} очков!
+alert_combo,КОМБО x{mult}! +{streak} бонусных очков за комбо
+alert_quota_met,"Квота выполнена, смена завершена! \nБонус: {bonus} очков!"
+alert_strike_removed,Штраф снят!
+alert_correct_decision,"Вы приняли верное решение, офицер.\n+{points} очков!"
+alert_wrong_decision,"Вы причинили ненужные страдания, офицер...\n+1 штраф!"
+alert_potato_should_be_approved,\nЭта картофелина соответствует всем требованиям и должна была быть одобрена.
+alert_strike_out,Превышено максимальное количество штрафов! Ваша смена окончена.
+ui_score,Счёт: {score}
+ui_quota,Квота: {current} / {target}
+ui_strikes,Штрафы: {current} / {max}
+ui_click_megaphone,"Нажмите на мегафон, чтобы вызвать следующую картофелину"
+ui_drag_document,Перетащите документ на стол инспекции
+ui_stamp_document,"Выберите штамп, чтобы одобрить или отклонить"
+ui_check_violations,Проверьте документ на нарушения
+Strike removed!,Штраф снят!
+BORDER RUNNER DETECTED!\nClick to launch missile!,"БЕГЛЕЦ ОБНАРУЖЕН!\nНажмите, чтобы запустить ракету!"
+REJECTED POTATO FLEEING!\nClick to launch missile!,"ОТВЕРГНУТАЯ КАРТОФЕЛИНА СБЕГАЕТ!\nНажмите, чтобы запустить ракету!"
+RUNNER ESCAPED!\nStrike added!,БЕГЛЕЦ СБЕЖАЛ!\nДобавлен штраф!
+Click megaphone to call the next potato,"Нажмите на мегафон, чтобы вызвать следующую картофелину"
+Drag document to inspection table,Перетащите документ на инспекционный стол
+Select a stamp to approve or reject,Выберите штамп для одобрения или отклонения
+Check for document violations,Проверьте документ на наличие нарушений
+rule_explanation_header,ОБЪЯСНЕНИЕ ПРАВИЛА:
+rule_explanation_fresh,"Посмотрите на поле 'Состояние'. Если там указано что-либо, кроме 'Свежий' - ОТКЛОНИТЬ"
+rule_explanation_sweet_potato,Посмотрите на поле 'Тип'. Если там указано 'Батат' - ОТКЛОНИТЬ (нет разрешений)
+rule_explanation_chip_hill,Посмотрите на поле 'Страна'. Если там указано 'Чип Хилл' - ОТКЛОНИТЬ (запрещено)
+rule_explanation_age,Посмотрите на поле 'Дата рождения'. Вычислите возраст и проверьте по правилу
+rule_explanation_gender,Посмотрите на поле 'Пол' и проверьте по текущему правилу
+rule_footer_text,Эти правила должны соблюдаться для ВСЕХ картофелин
+rule_tutorial_hint,Нужна помощь? Нажмите на любое правило для объяснения
+alert_correct_decision_detailed,ВЕРНОЕ РЕШЕНИЕ! +{points} очков\n{reason}
+alert_wrong_decision_detailed,НЕВЕРНОЕ РЕШЕНИЕ! Добавлен штраф!\n{reason}
+alert_reason_approved,Картофелина соответствует всем требованиям - ОДОБРЕНО
+alert_reason_should_reject,Вы должны были ОТКЛОНИТЬ эту картофелину
+tutorial_check_type,Проверьте поле 'Тип' в паспорте
+tutorial_check_condition,Проверьте поле 'Состояние' в паспорте
+tutorial_check_country,Проверьте поле 'Страна' в паспорте
+tutorial_check_age,"Проверьте поле 'Дата рождения', чтобы вычислить возраст"
+tutorial_check_gender,Проверьте поле 'Пол' в паспорте
+alert_streak_bonus_minigame,5 подряд! БОНУСНАЯ МИНИ-ИГРА!
+alert_perfect_stamps_bonus_minigame,Идеальные штампы! БОНУСНАЯ МИНИ-ИГРА!
+alert_runner_bonus_minigame,Подозрительная активность! БОНУСНАЯ МИНИ-ИГРА!
+alert_new_minigame_unlocked,Новая мини-игра разблокирована: {name}!
+alert_minigame_bonus,Бонус мини-игры: +{bonus} очков!
+high_score_display,Рекорд: {score}
+new_high_score,НОВЫЙ РЕКОРД!
+month_1,Январь

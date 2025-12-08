@@ -14,3 +14,5 @@ Text/61/text,"Seu primeiro turno começa agora. Verifique os documentos cuidados
 Text/62/text,"Cumpra sua cota, evite sanções. [color=MEDIUM_VIOLET_RED]Glória à Batata![/color]"
 Choice/5d/disabled_text,
 Choice/5c/disabled_text,
+Text/184b/text,Aqueles que fazem perguntas demais? Eles são [color=CRIMSON]reafetados[/color]. Permanentemente.
+Text/62b/text,"E lembre-se, [color=MEDIUM_VIOLET_RED]Glória a Spud![/color]"

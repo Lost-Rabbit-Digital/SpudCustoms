@@ -1,0 +1,26 @@
+﻿keys,zh-CN
+Text/200/text,嘿，新来的土豆！这班真难熬，是吧？我叫墨菲。我在这儿已经三个季度了。
+Text/201/text,我刚才看到你和萨莎说话了。她……[color=STEEL_BLUE]与众不同[/color]。我觉得是好的那种与众不同。
+Choice/202/text,她看起来人不错。她给了我一些关于保持警惕的建议。
+Choice/203/text,只是互相介绍了一下。没什么特别的。
+Text/204/text,墨菲紧张地环顾四周。是啊。
+Text/205/text,你我之间说说就好？电台里广播的那些“失踪的土豆”……我表亲上个月就失踪了。他没通过检查。
+Text/206/text,聪明。少惹麻烦，做好你的工作。我每天都这么告诉自己。
+Text/207/text,墨菲压低了声音。不过有时候我也会想，那些被拒的土豆到底都去哪儿了……
+Text/208/text,在食堂里
+Text/209/text,你盯着那浓稠的紫褐色糊状物。所有人都毫无疑问地吃着它。据说它很有营养。
+Choice/20a/text,像其他人一样吃下根茎储备
+Choice/20b/text,把它推到一边——你还不饿
+Text/20c/text,味道……带着泥土的气息。浓郁。某种感觉让它[color=STEEL_BLUE]熟悉得令人不安[/color]，但你却说不出为什么。
+Text/20d/text,一名高级官员注意到了。“别浪费，别挑剔，小芽。那可是[pulse freq=2][color=DARK_VIOLET]优质营养品[/pulse]啊。”
+Text/20e/text,你嘟囔着胃不舒服的借口。官员耸耸肩，走开了。
+Text/20f/text,回到你的住处，你无法摆脱萨莎说的话。“[color=YELLOW]并非一切都如表面所见。[/color]”
+Text/210/text,你第一天就问了罗斯特关于被拒土豆的事。他的回答很含糊。“[color=VIOLET]已处理。按照规程。[/color]”
+Text/211/text,到底[color=STEEL_BLUE]如何[/color]处理？
+Text/212/text,你曾如此渴望服务。如此自豪能被选中。但自豪感无法解释那些[color=CRIMSON]失踪的土豆[/color]。
+Text/213/text,电台说失踪报告“仍在继续”。这意味着这已经发生了一段时间了。
+Text/214/text,睡意迟迟不来。当睡意袭来时，你梦见[wave amp=15 freq=2][color=DARK_VIOLET]紫色的河流[/wave]在检查站下方流淌。
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

@@ -1,0 +1,95 @@
+﻿keys,zh-CN
+Text/d2/text,下班后，你被带到一个废弃淀粉工厂里的秘密抵抗组织会议。
+Text/d2b/text,在我们开始之前……我有个秘密要坦白。
+Text/d2c/text,"你第一天发现的那张纸条？""[color=GOLD]一位朋友[/color]""？"
+Text/d2d/text,萨莎笑了。我看你留着它。聪明。我就知道我选对了苗子。
+Text/d2e/text,我观察新警官好几个月了，寻找一个眼神[color=CHARTREUSE]充满疑问[/color]的人。一个能看穿谎言的人。
+Text/d2f/text,萨莎的表情很复杂。你把它给拉斯蒂看了。那之后我不得不蛰伏了好几个星期。
+Text/d2g/text,但你还是来了。这说明了你的良心。
+Text/d2h/text,你把它毁了。我不怪你——留着它很危险。
+Text/d2i/text,但那些话还是钻进了你的脑子里，不是吗？
+Text/d2j/text,[color=CHARTREUSE]我就是“一位朋友”。[/color]现在你知道为什么了。
+Text/d2k/text,萨莎将截获的文件摊开在桌上。过去一个月的处理清单。
+Text/d2l/text,你扫视着那些名字，只觉脊背发凉。
+Text/d2m/text,就在那儿。[color=GOLD]马里斯·派珀[/color]。照片上的那个女人。
+Text/d2n/text,"""[color=CRIMSON]状态：已处理。批次RR-2847。[/color]""日期是她丈夫向你求助的三天后。"
+Text/d2o/text,你摸了摸口袋里的照片。[color=STEEL_BLUE]她已经不在了。而你没能救她。[/color]
+Text/d2p/text,但也许……[color=CHARTREUSE]也许你还能拯救其他人。[/color]
+Text/d2q/text,墨菲从阴影中现身。嘿。很高兴你来了。
+Text/d2r/text,墨菲举起那张皱巴巴的RR-UTIL表格。我的表亲也在那份名单上。[color=CHARTREUSE]我们一起干。[/color]
+Text/d3/text,一个饱经风霜、伤痕累累的土豆对着聚集的众人讲话。
+Text/d4/text,耳语和传单的时代已经结束了。政府已经露出了真面目。
+Text/d5/text,我们的消息来源证实，[wave amp=15 freq=2][color=DARK_VIOLET]根源储备[/color][/wave]加工厂正在提高产量。
+Text/d6/text,这意味着[tornado radius=3 freq=3][color=CRIMSON]更多的兄弟姐妹失踪、被处理、被消耗[/color][/tornado]。
+Text/d7/text,领导者一拳砸在桌上。[pulse freq=3][color=CHARTREUSE]现在就结束这一切。[/color][/pulse]我们有一个计划，要打击他们行动的核心。
+Text/d8/text,萨莎在桌上展开详细的计划。三天后，我们将发起主要攻势。
+Text/d9/text,一支队伍在政府大楼制造佯攻，另一支队伍将潜入最大的根源储备设施。
+Text/da/text,我们的目标：获取[color=CHARTREUSE]确凿证据[/color]，揭露内部真相，并传遍整个斯普德。
+Text/db/text,萨莎指着计划书的某个部分。这就是你登场的时候了。
+Text/dc/text,我们需要一个斯普德海关的内部人员，以确保我们的特工能够越境执行任务。
+Text/dd/text,我们能指望你成为那个人吗？
+Choice/de/text,“我会不惜一切代价揭露真相。”
+Choice/df/text,“这听起来很危险。如果我们被抓了怎么办？”
+Choice/e0/text,“有没有其他办法，不会让这么多人身处险境？”
+Text/e1/text,萨莎的脸上燃起了希望。谢谢你。[color=CHARTREUSE]你的勇气将拯救无数生命。[/color]
+Text/e2/text,她紧握你的手。当这一切结束时，[color=CHARTREUSE]你将被铭记为革命的英雄。[/color]
+Text/e3/text,[color=STEEL_BLUE]萨莎充满希望的表情动摇了。[/color]我……是的。这很危险。
+Text/e4/text,如果我们失败了，我们都可能最终[color=DARK_VIOLET]被加工成“根源储备”[/color]。
+Text/e5/text,[color=STEEL_BLUE]她短暂地移开了视线。[/color]我以为在你经历了这一切之后……但我理解。恐惧是人之常情。
+Text/e6/text,[color=STEEL_BLUE]萨莎的脸色沉了下来。她眼中的光芒黯淡了。[/color]还有其他办法？我们尝试过其他方法。多年来都是如此。
+Text/e7/text,请愿。秘密外交。匿名举报。[color=STEEL_BLUE]她的声音变得冰冷。[/color]一无所获。
+Text/e8/text,我曾希望你会与众不同。希望你明白事关重大。
+Text/e9/text,抵抗组织成员之间爆发了一场激烈的辩论。
+Text/ea/text,有些人主张采取更激进的方法——彻底摧毁加工厂。
+Text/eb/text,另一些人则坚持认为，暴力行动只会适得其反，让公众舆论反对他们。
+Text/ec/text,够了！领袖用威严的声音让房间安静下来。
+Text/ed/text,我们不能再分裂了。尤其是在我们如此接近成功的时候。
+Text/ee/text,我们的目标很简单：揭露真相。让人民决定接下来会发生什么。
+Text/ef/text,领袖转向你，直接对你说话。但我们需要知道[color=YELLOW]你的立场[/color]。
+Text/f0/text,三天后，我们的特工将接近你的检查站。他们会携带[color=CHARTREUSE]蓝色身份识别卡[/color]。
+Text/f1/text,你会帮助他们越境吗？你现在的回答将决定我们的下一步行动。
+Choice/f2/text,“我会帮助他们越境。为了斯普德的未来。”
+Choice/f3/text,我不能直接参与，但我会睁一只眼闭一只眼。
+Choice/f4/text,我需要更多时间考虑一下。
+Text/f5/text,领导坚定地拍了拍你的肩膀。[color=CHARTREUSE]你的勇气令我们所有人感到荣幸。[/color]
+Text/f6/text,第三天，当太阳升到最高点时，我们的特工就会到来。
+Text/f7/text,密码是“[wave amp=15 freq=3][color=CHARTREUSE]根深蒂固。[/color][/wave]”记住它。
+Text/f8/text,领导缓慢地点了点头，显然有些失望但表示理解。
+Text/f9/text,有时候，我们能要求的，只是人们不要阻碍我们。
+Text/fa/text,我们的特工将按计划行事。只是……别拉响警报。
+Text/fb/text,领导的表情变得严肃起来。[color=YELLOW]时间是我们没有的奢侈品。[/color]
+Text/fc/text,但强迫任何人加入我们的事业，只会让我们与他们无异。
+Text/fd/text,我们将不指望你的帮助继续进行。扪心自问吧。
+Text/fe/text,会议结束后，萨莎和你一起走回检查站。
+Text/ff/text,[color=CHARTREUSE]她走路时牵起了你的手。[/color]无论发生什么……我们现在同舟共济。谢谢你。
+Text/ff2/text,[color=STEEL_BLUE]她走路时与你保持距离。[/color]我很感谢你没有阻碍我们。这……也算是一种支持吧。
+Text/ff3/text,[color=STEEL_BLUE]她沉默地走着，双臂交叉。[/color]我希望你能找到你所寻求的确定性。我们其他人可等不起了。
+Text/100_viktor1/text,在你回去的路上，你发现维克多独自一人在检查站的屋顶上，凝视着夜空。
+Text/100_viktor2/text,维克多拿着一个小的
+Text/100_viktor3/text,她常说，无论事情变得多么黑暗，星星总会在那里。[color=STEEL_BLUE]永恒不变。美丽。[/color]
+Text/100_viktor4/text,他转向你，眼中闪着泪光。[wave amp=15 freq=2]我一直在想……她受苦了吗？[/wave]她知道发生了什么吗？
+Text/100_viktor5/text,维克多的声音哽咽了。她曾问我是否质疑过那些拒绝。我告诉她[color=CRIMSON]要相信这个系统[/color]。
+Text/100_viktor6/text,[tornado radius=3 freq=2][color=CRIMSON]我竟然在不知情的情况下，将自己的妻子送进了处理槽。[/color][/tornado]
+Choice/100_viktor_choice1/text,“你不可能知道的。我们谁都不知道。”
+Choice/100_viktor_choice2/text,“埃琳娜会希望你现在去战斗，而不是沉溺于内疚。”
+Choice/100_viktor_choice3/text,“我不知道该说什么。我很抱歉。”
+Text/100_viktor7/text,他缓慢地摇了摇头。[color=STEEL_BLUE]无知并非无辜。我本该问的。本该听的。[/color]
+Text/100_viktor8/text,维克多小心翼翼地收起照片。 [color=CHARTREUSE]但现在我知道了。而知道，就意味着我必须行动。[/color]
+Text/100_viktor9/text,维克多挺直身子，眼中重新燃起冰冷的火焰。 [color=CHARTREUSE]你说得对。[/color] 她比我更强大。更勇敢。
+Text/100_viktor10/text,他紧握拳头。 [color=CHARTREUSE]当时机到来时
+Text/100_viktor11/text,[pulse freq=2][color=CRIMSON]而爱达荷将为他所吞噬的每一个生命付出代价。[/color][/pulse]
+Text/100_viktor12/text,维克多勉强挤出一丝悲伤
+Text/100_viktor13/text,他回望星空。 [color=STEEL_BLUE]埃琳娜会喜欢你的。[/color]
+Text/100_viktor14/text,他转身欲走，却又停下。 [color=CHARTREUSE]当抵抗组织行动时……我将准备就绪。[/color]
+Text/100_viktor15/text,为了埃琳娜。为了他们所有人。 [pulse freq=2][color=CHARTREUSE]当我告诉他们真相时，卫兵们会追随我。[/color][/pulse]
+Text/100/text,你回到检查站的宿舍，思绪因即将发生的重大事件而飞速运转。
+Text/101/text,仅仅三天内，一切都可能改变。 [color=YELLOW]无论是好是坏。[/color]
+Choice/de/disabled_text,
+Choice/df/disabled_text,
+Choice/e0/disabled_text,
+Choice/f2/disabled_text,
+Choice/f3/disabled_text,
+Choice/f4/disabled_text,
+Choice/100_viktor_choice1/disabled_text,
+Choice/100_viktor_choice2/disabled_text,
+Choice/100_viktor_choice3/disabled_text,

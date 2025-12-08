@@ -45,3 +45,41 @@ Choice/27/disabled_text,
 Choice/26/disabled_text,
 Choice/25/disabled_text,
 Choice/16/disabled_text,
+Text/1a_rescue1/text,En spejder kommer løbende. Vi fandt hende! [color=CHARTREUSE]Sasha er i tilbageholdelsesblokken![/color]
+Text/1a_rescue2/text,De forbereder sig på at... [tornado radius=3 freq=2][color=CRIMSON]forarbejde hende[/color][/tornado]... om mindre end en time!
+Text/1a_rescue3/text,Vi er nødt til at redde hende. [pulse freq=2][color=CHARTREUSE]Hun startede det hele.[/color][/pulse] Vi tager ikke af sted uden hende.
+Text/1a_rescue4/text,"[wave amp=25 freq=3][color=YELLOW]Ræs gennem anlægget![/color][/wave] Nå Sasha, før det er for sent!"
+Text/1a_rescue_fail1/text,Du snubler. Vejen frem er blokeret af vagter!
+Text/1a_rescue_fail2/text,Viktor braser ind gennem en sidedør. [color=CHARTREUSE]AF STED! Jeg holder dem tilbage![/color]
+Text/1a_rescue_fail3/text,For Elena. For dem alle. [color=STEEL_BLUE]Jeg lader ikke endnu en dø![/color]
+Text/1a_rescue_fail4/text,Murphy hiver i en brandalarm. [color=CHARTREUSE]For Tommy![/color] Sprinklerne blænder vagterne!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Jeg skaber en afledning. Få hende ud derfra![/color]
+Text/1a_rescue_fail6/text,"Et [color=YELLOW]forarbejdningsbånd sætter sig fast[/color], sprøjter gnister og afleder vagterne!"
+Text/1a_rescue_fail7/text,Skæbnen – eller de forarbejdedes spøgelser – giver dig en ny chance.
+Text/1a_rescue5/text,"Sasha kigger op fra sin celle, forslået, men ubøjet. Hendes øjne udvider sig. [color=CHARTREUSE]Du kom.[/color]"
+Text/1a_rescue6/text,Selvfølgelig kom jeg. [color=CHARTREUSE]Vi afslutter det her sammen.[/color]
+Choice/1a_rescue7/text,"Jeg var bange for, at jeg aldrig ville se dig igen."
+Choice/1a_rescue8/text,Du gjorde os syge af bekymring. Gør det ikke igen.
+Choice/1a_rescue9/text,Vi har arbejde at gøre. Idaho venter.
+Text/1a_rescue10/text,"[color=CHARTREUSE]Sasha trækker dig ind i en kort omfavnelse.[/color] Jeg vidste, du ville komme. Jeg tvivlede aldrig."
+Text/1a_rescue11/text,"Nu skal vi lade dem betale for alle, de har taget. [color=CHARTREUSE]Sammen.[/color]"
+Text/1a_rescue12/text,Sasha fremtvinger et svagt smil gennem smerten. [color=STEEL_BLUE]Jeg vil prøve.[/color] Men nogle ting er risikoen værd.
+Text/1a_rescue13/text,"At du er her, beviser det. Nu skal vi gøre det færdigt."
+Text/1a_rescue14/text,"Sasha nikker, hendes beslutsomhed genantændt. [color=CHARTREUSE]Du har ret.[/color] Følelser kan vente."
+Text/1a_rescue15/text,"Idaho tror, han har vundet. Lad os vise ham, hvor forkert han tager."
+Text/158/text,Sikkerhedsstyrker nærmer sig! [pulse freq=3][color=YELLOW]Kæmp dig igennem![/color][/pulse]
+Text/21_fail1/text,Vagter nærmer sig fra alle retninger. [color=CRIMSON]Der er ingen steder at løbe hen![/color]
+Text/21_fail2/text,"Viktor dukker op bag vagterne, stemmen kold som stål. [color=STEEL_BLUE]Træk jer tilbage. Nu.[/color]"
+Text/21_fail3/text,Vagterne tøver - Viktor var en af deres egne. [color=CRIMSON]Elenas navn står på de manifester. Jeres familier kunne være de næste.[/color]
+Text/21_fail4/text,Nogle vagter sænker deres våben. Andre flygter. Vejen er fri.
+Text/21_fail5/text,"En eksplosion ryster østfløjen. Murphys stemme knitrer over radioen: [color=CHARTREUSE]""Det er min afledning! RYKK NU!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Vagterne spreder sig mod eksplosionen. Tommy ville være stolt.[/color]
+Text/21_fail7/text,Sasha tackler den ledende vagt bagfra. [color=CHARTREUSE]Jeg overlevede ikke den celle bare for at se dig dø![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]LØB! Jeg klarer den![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha rykker tættere på, hendes hånd finder din, mens I ser den nye daggry sammen.[/color] Vi byggede dette. Dig og mig."
+Text/152/text,"Så længe vi forbliver tro mod vores rødder, mod de idealer, der bragte os hertil... [color=CHARTREUSE]finder vi en vej.[/color] Sammen."
+Text/153/text,[color=CHARTREUSE]Du klemmer hendes hånd. Sammen.[/color]
+Text/154/text,"[color=STEEL_BLUE]Sasha står ved din side.[/color] Din ild tændte gnisten, der brændte deres imperium ned."
+Text/155/text,[color=STEEL_BLUE]Vreden er kølnet til beslutsomhed. Der er stadig arbejde at gøre.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha giver dig et støttende smil.[/color] Du er kommet langt fra den kontrolpost. Det er vi alle.
+Text/157/text,"[color=STEEL_BLUE]Skylden forsvinder måske aldrig helt, men du har fundet mening i genopbygningen.[/color]"

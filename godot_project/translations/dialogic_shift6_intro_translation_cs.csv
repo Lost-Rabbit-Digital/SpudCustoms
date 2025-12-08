@@ -32,3 +32,32 @@ Choice/c4/disabled_text,
 Choice/c5/disabled_text,
 Choice/cb/disabled_text,
 Choice/cc/disabled_text,
+Text/c7_viktor1/text,Podsaditý strážník k vám přistoupí během vaší přestávky. Jeho tvář je strhaná.
+Text/c7_viktor2/text,"Hej... vy jste jeden z celníků, že? Sháním informace o své ženě, Eleně."
+Text/c7_viktor3/text,Před třemi týdny prošla tímto hraničním přechodem. [color=STEEL_BLUE]Neprošla kontrolou.[/color] Od té doby jsem o ní nic neslyšel.
+Choice/c7_viktor4/text,„Viktore... Něco jsem našel. O Eleně. Musíte znát pravdu.“
+Choice/c7_viktor5/text,"„Je mi líto, Viktore. Nic jsem neviděl.“"
+Text/c7_viktor6/text,Ukážete mu kopii stránky z manifestu. Zbělá mu tvář.
+Text/c7_viktor7/text,"[wave amp=25 freq=3]Ruce se mu třesou, když čte.[/wave] [color=GOLD]Jelena Petrovová[/color]... [color=CRIMSON]Zpracováno... Šarže RR-2851...[/color]"
+Text/c7_viktor8/text,Jeho hlas je jen stěží šepot. [tornado radius=3 freq=2][color=CRIMSON]Oni... oni ji ZMĚNILI na...[/color][/tornado]
+Text/c7_viktor9/text,Jeho žal se promění v chladnou zuřivost. [pulse freq=2][color=CRIMSON]Idaho za to zaplatí.[/color][/pulse] Přísahám na její památku.
+Text/c7_viktor10/text,"Chytí vás za rameno. [color=CHARTREUSE]Děkuji, že jste mi to řekl.[/color] Až přijde čas... Budu si to pamatovat."
+Text/c7_viktor11/text,Smutně přikývne. [color=STEEL_BLUE]Myslel jsem si to.[/color] Nikdo nic neví. Nebo nikdo nechce mluvit.
+Text/c7_viktor12/text,"Jestli něco uslyšíte... [color=YELLOW]prosím.[/color] Je to všechno, co mám."
+Text/d0_qte1/text,Později během směny se přiblíží cestující s dokumenty nesoucími [color=CHARTREUSE]nenápadnou značku odboje[/color].
+Text/d0_qte2/text,[color=DARK_ORANGE]RealityScan[/color] začíná skenovat. [wave amp=15 freq=3][color=RED]Detekuje tu značku![/color][/wave]
+Text/d0_qte3/text,Máte vteřiny na rozhodnutí. Skener se zahřívá...
+Choice/d0_qte4/text,„Předstírejte poruchu skeneru – rychle!“
+Choice/d0_qte5/text,„Nechte skener dokončit skenování“
+Text/d0_qte6/text,"[pulse freq=3][color=YELLOW]Musíte jednat rychle![/color][/pulse] Spusťte poruchu, než dokončí skenování!"
+Text/d0_qte7/text,Šmátráte po kabelech skeneru. Létají jiskry. Obrazovka zabliká a zhasne.
+Text/d0_qte8/text,Russet přispěchá. [color=YELLOW]Co se tu stalo?[/color]
+Choice/d0_qte9/text,"„Přepětí, pane. Tyto nové systémy jsou náladové.“"
+Choice/d0_qte10/text,"„Nevím, pane. Prostě mi to zhaslo.“"
+Text/d0_qte11/text,Russet zavrčí. [color=STEEL_BLUE]Byrokraté nám dávají netestované vybavení.[/color] Zpracujte je ručně a označte k opětovné kontrole.
+Text/d0_qte12/text,Russet se na vás podezřívavě podívá. [color=YELLOW]Jak příhodné.[/color] Nechám se na to podívat údržbu. Ať se to už nestane.
+Text/d0_qte13/text,"Člen odboje vám věnuje nepatrné kývnutí vděčnosti, když prochází."
+Text/d0_qte14/text,Skener [pulse freq=3][color=RED]HLASITĚ PÍPÁ[/color][/pulse]. Zjištěny nepovolené značky!
+Text/d0_qte15/text,Russet se okamžitě objeví. [color=CHARTREUSE]Výborně![/color] Další zrádce chycen.
+Text/d0_qte16/text,"Člen odboje je odvlečen, s hrůzou v očích. ""[color=CRIMSON]Prosím, ne! Mám děti![/color]"""
+Text/d0_qte17/text,Vaše loajalita je [color=DARK_ORANGE]zaznamenána ve vašem spisu[/color]. Jen tak dál.

@@ -14,3 +14,5 @@ Text/61/text,"İlk nöbetiniz şimdi başlıyor. Belgeleri dikkatle kontrol edin
 Text/62/text,"Kotanızı doldurun, yaptırımlardan kaçının. [color=MEDIUM_VIOLET_RED]Patates'e şan olsun![/color]"
 Choice/5d/disabled_text,
 Choice/5c/disabled_text,
+Text/184b/text,Çok soru soranlar mı? Onlar [color=CRIMSON]yeniden görevlendirilirler[/color]. Kalıcı olarak.
+Text/62b/text,"Ve unutmayın, [color=MEDIUM_VIOLET_RED]Patates'e Şan Olsun![/color]"

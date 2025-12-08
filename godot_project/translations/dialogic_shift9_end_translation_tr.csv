@@ -14,3 +14,20 @@ Text/13c/text,Bir kayışın sonunda - Sasha ve diğerleri [color=CRIMSON]çares
 Text/13d/text,[color=RED]SEN![/color] Onlardan biri olduğunu bilmeliydim! Geri çekil yoksa işlemciyi başlatacağım!
 Text/13e/text,"Direniş savaşçıları Russet'i alt ederken, Sasha tesisin kameralarını yeniden yönlendiriyor. [color=YELLOW]Spud halkı! Bu Kök Rezervi! Bizi birbirimizle besliyorlardı![/color]"
 Text/13f/text,Benim için geri döndün. [color=CHARTREUSE]Başardık. Gerçek artık dışarıda.[/color] İnşa etmemiz gereken bir geleceğimiz var!
+Text/140/text,"[color=STEEL_BLUE]Direniş lideri ileri atılır, silahı Russet'e doğrultulmuş.[/color] Bir adım daha atma, Russet. Ellerini görebileceğim yere koy."
+Text/141/text,"[color=CRIMSON]Russet'in gözleri seninle direniş lideri arasında gidip gelir, alnında ter damlacıkları belirir.[/color] Kazandığını mı sanıyorsun? Bu tesis, Spud'ın temelidir!"
+Text/142/text,Acının temeli. [pulse freq=3][color=CHARTREUSE]Bugün sona eriyor.[/color][/pulse]
+Text/143/text,"[color=STEEL_BLUE]Sasha, konveyör banttaki bağlarından kurtulmaya çalışıyor"
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""Russet"
+Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""Bu... bunu mu yapıyorlardı? Hayal ettiğimden daha kötü...""[/color][/wave]"
+Choice/146/text,"[color=CHARTREUSE]""Sasha! Kökler şükürler olsun ki yaşıyorsun! Dayan"
+Text/147/text,"[color=CRIMSON]Russet'e doğru yumrukların sıkılı bir şekilde atılırsın, direniş savaşçıları seni zar zor tutar.[/color] Kontrol noktamdan geçen her patates... kaç tanesini sen..."
+Text/148/text,Sakin ol! İfade vermesi için onu canlı tutmalıyız. [color=STEEL_BLUE]Lider silahını Russet'e doğrultulmuş halde tutar.[/color] Öfkeni mahkemeye sakla.
+Text/149/text,"[color=STEEL_BLUE]Geriye doğru sendelersin, elin ağzını kapatır, makinelerin tüm dehşetini idrak edersin.[/color] Belgelerini damgaladım... Onları buraya gönderdim..."
+Text/14a/text,[color=CHARTREUSE]Bilmiyordun. Hiçbirimiz bilmiyorduk.[/color] Bu yüzden şimdi buradayız. Odaklan!
+Text/14b/text,[color=CHARTREUSE]Konveyöre doğru koşarsın
+Text/14c/text,[color=CHARTREUSE]Ellerinin düğümleri çözdüğü sırada Sasha'nın gözleri yaş ve umutla parlar.[/color] Geleceğini biliyordum. Senden hiç şüphe etmedim.
+Text/14d/text,"[color=STEEL_BLUE]Lider, silah zoruyla Russet'i diz çöktürür.[/color] Onu bağlayın. Sonra ne olacağını izlediğinden emin olun."
+Text/14e/text,"[color=CHARTREUSE]Sasha elini tutar, parmaklarını seninkilerle kenetler.[/color] Benim için geri geldin. Bundan sonra ne olursa olsun... birlikte yüzleşeceğiz."
+Text/14f/text,"[color=STEEL_BLUE]Sasha, gözlerinde hala yanan öfkeyi görerek seni dikkatle izler.[/color] O ateşi yönlendir. Sonra ne olacağı için ona ihtiyacımız olacak."
+Text/150/text,[color=STEEL_BLUE]Sasha omzuna nazikçe bir el koyar.[/color] Bu suçluluk senin yükün değil. Şimdi buradasın. Önemli olan bu.

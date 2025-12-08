@@ -53,3 +53,40 @@ Choice/f3/disabled_text,
 Choice/f2/disabled_text,
 Choice/e0/disabled_text,
 Choice/df/disabled_text,
+Text/d2b/text,Trước khi chúng ta bắt đầu... Tôi có một lời thú nhận.
+Text/d2c/text,"Cái ghi chú bạn tìm thấy vào ngày đầu tiên? ""[color=GOLD]Một người bạn[/color]""?"
+Text/d2d/text,Sasha mỉm cười. Tôi thấy bạn đã giữ nó. Thông minh. Tôi biết mình đã chọn đúng mầm.
+Text/d2e/text,"Tôi đã theo dõi các sĩ quan mới trong nhiều tháng, tìm kiếm một người có [color=CHARTREUSE]ánh mắt nghi vấn[/color]. Một người có thể nhìn thấu những lời nói dối."
+Text/d2f/text,Vẻ mặt của Sasha phức tạp. Bạn đã cho Russet xem nó. Tôi đã phải ẩn mình trong nhiều tuần sau đó.
+Text/d2g/text,Nhưng dù sao thì bạn vẫn ở đây. Điều đó nói cho tôi biết điều gì đó về lương tâm của bạn.
+Text/d2h/text,Bạn đã hủy nó. Tôi không trách bạn - giữ nó rất mạo hiểm.
+Text/d2i/text,"Nhưng những lời đó dù sao cũng đã đi vào đầu bạn rồi, phải không?"
+Text/d2j/text,"[color=CHARTREUSE]Tôi là ""Một người bạn.""[/color] Và bây giờ bạn đã biết tại sao."
+Text/d2k/text,Sasha trải các tài liệu bị thu giữ lên bàn. Các bản kê khai xử lý từ tháng trước.
+Text/d2l/text,"Bạn quét qua các tên, và máu bạn lạnh toát."
+Text/d2m/text,Nó đây rồi. [color=GOLD]Maris Piper[/color]. Người phụ nữ trong bức ảnh.
+Text/d2n/text,"""[color=CRIMSON]Trạng thái: Đã xử lý. Lô RR-2847.[/color]"" Ghi ngày ba ngày sau khi chồng cô ấy cầu xin sự giúp đỡ của bạn."
+Text/d2o/text,Bạn cảm thấy bức ảnh trong túi. [color=STEEL_BLUE]Cô ấy đã đi rồi. Và bạn không thể cứu cô ấy.[/color]
+Text/d2p/text,Nhưng có lẽ... [color=CHARTREUSE]có lẽ bạn vẫn có thể cứu những người khác[/color].
+Text/d2q/text,Murphy xuất hiện từ bóng tối. Này. Mừng là bạn đã đến.
+Text/d2r/text,Murphy giơ lên tờ đơn RR-UTIL nhàu nát. Anh họ tôi cũng có trong danh sách đó. [color=CHARTREUSE]Chúng ta sẽ làm điều này cùng nhau.[/color]
+Text/ff2/text,[color=STEEL_BLUE]Cô ấy giữ khoảng cách khi bạn đi.[/color] Tôi cảm kích việc bạn không cản đường chúng tôi. Nó... cũng là một điều gì đó.
+Text/ff3/text,"[color=STEEL_BLUE]Cô ấy đi trong im lặng, khoanh tay.[/color] Tôi hy vọng bạn tìm thấy bất cứ sự chắc chắn nào bạn đang tìm kiếm. Những người còn lại trong chúng tôi không thể chờ đợi được nữa."
+Text/100_viktor1/text,"Trên đường trở về, bạn thấy Viktor một mình trên mái trạm kiểm soát, nhìn chằm chằm vào bầu trời đêm."
+Text/100_viktor2/text,Viktor cầm một thứ nhỏ
+Text/100_viktor3/text,"Cô ấy từng nói rằng dù mọi thứ có tăm tối đến đâu, những vì sao vẫn sẽ ở đó. [color=STEEL_BLUE]Vĩnh hằng. Đẹp đẽ.[/color]"
+Text/100_viktor4/text,"Anh ấy quay sang bạn, mắt long lanh. [wave amp=15 freq=2]Tôi cứ nghĩ mãi... cô ấy có đau khổ không?[/wave] Cô ấy có biết chuyện gì đang xảy ra không?"
+Text/100_viktor5/text,Giọng Viktor nghẹn lại. Cô ấy từng hỏi tôi liệu tôi có bao giờ nghi ngờ các lệnh từ chối không. Tôi đã bảo cô ấy [color=CRIMSON]hãy tin vào hệ thống[/color].
+Text/100_viktor6/text,[tornado radius=3 freq=2][color=CRIMSON]Tôi đã tự tay đưa vợ mình vào các bể xử lý mà không hề hay biết.[/color][/tornado]
+Choice/100_viktor_choice1/text,"""Bạn không thể nào biết được. Không ai trong chúng ta biết cả."""
+Choice/100_viktor_choice2/text,"""Elena sẽ muốn bạn chiến đấu ngay bây giờ, chứ không phải chìm đắm trong tội lỗi."""
+Choice/100_viktor_choice3/text,"""Tôi không biết phải nói gì. Tôi xin lỗi."""
+Text/100_viktor7/text,Anh ta lắc đầu chậm rãi. [color=STEEL_BLUE]Sự thiếu hiểu biết không phải là vô tội. Lẽ ra tôi nên hỏi. Lẽ ra tôi nên lắng nghe.[/color]
+Text/100_viktor8/text,Viktor cẩn thận cất bức ảnh đi. [color=CHARTREUSE]Nhưng bây giờ tôi đã biết. Và biết nghĩa là tôi phải hành động.[/color]
+Text/100_viktor9/text,"Viktor đứng thẳng dậy, một ngọn lửa lạnh lẽo bùng cháy lại trong mắt anh ta. [color=CHARTREUSE]Bạn nói đúng.[/color] Cô ấy mạnh mẽ hơn tôi. Dũng cảm hơn."
+Text/100_viktor10/text,Anh ta siết chặt nắm tay. [color=CHARTREUSE]Khi thời điểm đến
+Text/100_viktor11/text,[pulse freq=2][color=CRIMSON]Và Idaho sẽ phải trả giá cho mỗi sinh mạng mà hắn đã hủy hoại.[/color][/pulse]
+Text/100_viktor12/text,Viktor cố gắng thể hiện một vẻ buồn bã
+Text/100_viktor13/text,Anh ta nhìn lại những vì sao. [color=STEEL_BLUE]Elena hẳn đã thích bạn.[/color]
+Text/100_viktor14/text,"Anh ta quay người rời đi, rồi dừng lại. [color=CHARTREUSE]Khi phe kháng chiến hành động... tôi sẽ sẵn sàng.[/color]"
+Text/100_viktor15/text,Vì Elena. Vì tất cả bọn họ. [pulse freq=2][color=CHARTREUSE]Các lính gác sẽ theo tôi khi tôi nói cho họ sự thật.[/color][/pulse]

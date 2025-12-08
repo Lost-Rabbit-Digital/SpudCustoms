@@ -1,0 +1,88 @@
+﻿keys,zh-CN
+Text/11/text,薯类边境陷入[pulse freq=3][color=CRIMSON]混乱[/color][/pulse]。泄露的文件引发恐慌，土豆们涌向检查站，拼命逃离。
+Text/12/text,你和萨莎悄悄潜入。[wave amp=20 freq=3][color=CHARTREUSE]我们必须继续前进！[/color][/wave]人们现在都知道真相了。
+Text/13/text,他们再也无法掩盖真相了。如果我们能潜入[color=DARK_VIOLET]根源储备[/color]设施并广播证据，就能[tornado radius=3 freq=2][color=CHARTREUSE]点燃革命之火[/color][/tornado]。
+Text/14/text,那地方固若金汤。而现在我们中间却有个[color=YELLOW]前海关特工[/color]。他们的目光怀疑地盯着你。
+Choice/15/text,我理解你们的疑虑，但我已投身于这项事业。
+Choice/16/text,我已经牺牲了一切。现在绝不会退缩。
+Text/17/text,说得好听。但我们以前也听过这些话。
+Text/18/text,他们帮我们拿到了文件。这是行动，不是空谈。
+Text/19/text,现在已经回不去当忠诚的土豆了。欢迎加入抵抗组织，同志。
+Text/1a_rescue1/text,一名侦察兵冲了过来。我们找到她了！[color=CHARTREUSE]萨莎在拘留区！[/color]
+Text/1a_rescue2/text,他们正准备……[tornado radius=3 freq=2][color=CRIMSON]处理她[/color][/tornado]……不到一小时！
+Text/1a_rescue3/text,我们必须救她。[pulse freq=2][color=CHARTREUSE]这一切都是她开始的。[/color][/pulse]我们不会丢下她离开。
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]冲过设施！[/color][/wave]在为时已晚之前找到萨莎！
+Text/1a_rescue_fail1/text,你跌跌撞撞。前方的路被守卫堵住了！
+Text/1a_rescue_fail2/text,维克多猛地冲开一扇侧门。[color=CHARTREUSE]快走！我来拖住他们！[/color]
+Text/1a_rescue_fail3/text,为了埃琳娜。为了他们所有人。[color=STEEL_BLUE]我不会让任何人再死去！[/color]
+Text/1a_rescue_fail4/text,墨菲拉响了火警。[color=CHARTREUSE]为了汤米！[/color]洒水器喷出的水让守卫们睁不开眼！
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]我来制造混乱。把她带出去！[/color]
+Text/1a_rescue_fail6/text,一条[color=YELLOW]处理传送带卡住了[/color]，火花四溅，分散了守卫的注意力！
+Text/1a_rescue_fail7/text,命运——或者那些被处理者的鬼魂——给了你第二次机会。
+Text/1a_rescue5/text,萨莎从牢房里抬起头，伤痕累累但意志坚定。她的眼睛睁大了。[color=CHARTREUSE]你来了。[/color]
+Text/1a_rescue6/text,我当然来了。[color=CHARTREUSE]我们要一起完成这件事。[/color]
+Choice/1a_rescue7/text,我害怕再也见不到你了。
+Choice/1a_rescue8/text,你把我们都吓坏了。别再这样了。
+Choice/1a_rescue9/text,我们还有工作要做。爱达荷州在等着。
+Text/1a_rescue10/text,[color=CHARTREUSE]萨莎将你轻轻拥入怀中。[/color] 我知道你会来。我从未怀疑。
+Text/1a_rescue11/text,现在，我们要让他们为所带走的每一个人付出代价。[color=CHARTREUSE]一起。[/color]
+Text/1a_rescue12/text,萨莎忍着剧痛，勉强挤出一个微笑。[color=STEEL_BLUE]我会尽力。[/color] 但有些事情值得冒险。
+Text/1a_rescue13/text,你的出现证明了这一点。现在，让我们结束这一切。
+Text/1a_rescue14/text,萨莎点点头，她的决心重新燃起。[color=CHARTREUSE]你说得对。[/color] 感情可以放一边。
+Text/1a_rescue15/text,爱达荷以为他赢了。让我们告诉他他错得有多离谱。
+Text/1a/text,经过紧张的渗透，你的小队来到了[color=DARK_VIOLET]根源储备区[/color]的中心，[pulse freq=3][color=CRIMSON]那压迫的可怕机器[/color][/pulse]暴露无遗。
+Text/1b/text,[wave amp=25 freq=3][color=RED]警报声大作[/color][/wave]，警卫们手忙脚乱地应对你们的入侵。你在走廊中疾驰，躲避着安保系统。
+Text/1c/text,屏幕闪烁着亮起。“哦，瞧瞧，[color=CRIMSON]叛徒[/color]带着叛军渣滓回来了。”
+Text/1d/text,你们以为能阻止斯普德的进步吗？[color=DARK_VIOLET]根源储备区[/color]是这个国家的命脉。
+Text/1e/text,但别担心。你们仍将为斯普德效力……[tornado radius=4 freq=3][color=DARK_VIOLET]在加工槽里！[/color][/tornado]
+Text/1f/text,屏幕突然变黑。
+Text/20/text,你坚定地转向其他人。“我们必须到达爱达荷的掩体。现在！”
+Text/158/text,安保部队正在逼近！[pulse freq=3][color=YELLOW]杀出一条血路！[/color][/pulse]
+Text/21_fail1/text,警卫从四面八方包围过来。[color=CRIMSON]无处可逃！[/color]
+Text/21_fail2/text,维克多出现在警卫身后，声音冷如钢铁。[color=STEEL_BLUE]放下武器。现在。[/color]
+Text/21_fail3/text,警卫们犹豫了——维克多曾是他们中的一员。[color=CRIMSON]伊莲娜的名字就在那些名单上。你们的家人可能就是下一个。[/color]
+Text/21_fail4/text,一些警卫放下了武器。另一些则逃走了。道路畅通了。
+Text/21_fail5/text,东翼传来一声爆炸。墨菲的声音在通讯器中沙哑地响起：[color=CHARTREUSE]“那是我的佯攻！快走！”[/color]
+Text/21_fail6/text,[color=STEEL_BLUE]警卫们向爆炸方向散去。汤米会感到骄傲的。[/color]
+Text/21_fail7/text,萨莎从背后扑倒了领头的警卫。[color=CHARTREUSE]我可不是为了看着你死才从那牢房里活下来的！[/color]
+Text/21_fail8/text,[color=STEEL_BLUE]快跑！我来搞定！[/color]
+Text/21/text,你的小队冲破一波又一波的安保力量，险些被捕。萨莎的抵抗战士制造了佯攻，为你们清除了前进的道路。
+Text/22/text,经过一番惊险的维修通道逃亡，你终于抵达了通往爱达荷私人掩体的安全电梯。
+Text/23/text,萨莎和你的盟友们在你身边，你终于面对了爱达荷。
+Text/24/text,结束了，爱达荷。你的秘密已暴露。结局如何…… [pulse freq=2]由你决定。[/pulse]
+Choice/25/text,协商和平权力过渡 (外交)
+Choice/26/text,要求立即逮捕爱达荷 (正义)
+Choice/27/text,对爱达荷的罪行实施私刑 (复仇)
+Choice/28/text,专注于拆除“根部储备”基础设施 (拆除)
+Text/29/text,爱达荷，事情不必以更多流血收场。如果你合作……
+Text/2a/text,哦，你这个[color=STEEL_BLUE]天真的傻瓜[/color]。你以为这是谈判吗？
+Text/2b/text,爱达荷猛地按下按钮，[color=RED]警报声大作[/color]。“我唯一会给你的，就是一张[color=DARK_VIOLET]通往油炸锅的单程票！[/color]”
+Text/2c/text,我不这么认为，爱达荷。卫兵！你们看过档案，[color=YELLOW]你们知道他对你们的家人做了什么。[/color]
+Text/2d/text,一名魁梧的卫兵上前，迅速将爱达荷踢倒在地。
+Text/2e/text,一声枪响回荡在房间里。屏幕渐暗。
+Text/2f/text,爱达荷，以斯普德马铃薯人民的名义，[color=CHARTREUSE]你被捕了！[/color]
+Text/30/text,结束了。人民已经发声。[color=CHARTREUSE]我们将建立一个全新的斯普德，让我们的根扎根于土壤，而非苦难。[/color]
+Text/31/text,爱达荷，你将[color=CRIMSON]得不到任何交易，也得不到任何怜悯[/color]。暴君的审判是你应得的。
+Text/32/text,审判。我就是审判。[color=CHARTREUSE]为每一个牺牲的马铃薯，我们夺回我们的未来！[/color]
+Text/33/text,忘了他吧。他只是一个症状，而非疾病本身。[color=CHARTREUSE]彻底摧毁这个怪物的每一个根茎。[/color]
+Text/34/text,我们必须走！现在！
+Text/35/text,[color=DARK_VIOLET]“根部储备”[/color]的垮台在斯普德引发了一场变革的野火。
+Text/36/text,各省的马铃薯纷纷崛起，拥抱[color=CHARTREUSE]他们国家的新愿景[/color]。
+Text/37/text,只要我们忠于我们的根，忠于将我们带到这里的理想……[color=CHARTREUSE]我们就会找到出路。[/color]
+Text/38/text,于是，从旧斯普德的灰烬中，一个[color=CHARTREUSE]新国家开始生根发芽[/color]。[color=DARK_VIOLET]“根部储备”[/color]的统治结束了。
+Text/151/text,[color=CHARTREUSE]萨莎靠得更近，她的手握住你的手，你们一同凝望着新的黎明。[/color]这是我们建立的。你和我。
+Text/152/text,只要我们忠于我们的根，忠于将我们带到这里的理想……[color=CHARTREUSE]我们就会找到出路。[/color]一起。
+Text/153/text,[color=CHARTREUSE]你紧握她的手。一起。[/color]
+Text/154/text,[color=STEEL_BLUE]萨莎站在你身边。[/color]你的火焰点燃了烧毁他们帝国的火花。
+Text/155/text,[color=STEEL_BLUE]怒火已冷却，化为决心。仍有工作待完成。[/color]
+Text/156/text,[color=STEEL_BLUE]莎莎向你投来一个鼓励的微笑。[/color]你从那个检查站走过了漫长的路。我们都一样。
+Text/157/text,[color=STEEL_BLUE]愧疚可能永远无法完全消散，但你已在重建中找到了意义。[/color]
+Choice/15/disabled_text,
+Choice/16/disabled_text,
+Choice/25/disabled_text,
+Choice/26/disabled_text,
+Choice/27/disabled_text,
+Choice/28/disabled_text,
+Choice/1a_rescue7/disabled_text,
+Choice/1a_rescue8/disabled_text,
+Choice/1a_rescue9/disabled_text,

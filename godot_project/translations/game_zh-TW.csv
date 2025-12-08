@@ -1,0 +1,54 @@
+﻿keys,zh-TW
+alert_border_runner,偵測到邊境逃犯！\n點擊發射飛彈！
+alert_rejected_fleeing,被拒絕的馬鈴薯正在逃跑！\n點擊發射飛彈！
+alert_runner_escaped,逃犯已逃脫！\n增加一次失誤！
+alert_points_deducted,逃犯已逃脫！\n增加一次失誤！\n-{penalty} 分！
+alert_perfect_hit,完美命中！ +{perfect} 準確度獎勵分數
+alert_perfect_stamp,完美蓋章！ +{points} 分！
+alert_combo,連擊 x{mult}！ +{streak} 連擊獎勵分數
+alert_quota_met,配額達成，班次完成！ \n獎勵：{bonus} 分！
+alert_strike_removed,失誤已移除！
+alert_correct_decision,警官，您做出了正確的選擇。\n+{points} 分！
+alert_wrong_decision,警官，您造成了不必要的痛苦……\n+1 次失誤！
+alert_potato_should_be_approved,\n這顆馬鈴薯符合所有要求，本應被批准。
+alert_strike_out,已超出最大失誤次數！您的班次結束了。
+ui_score,分數：{score}
+ui_quota,配額：{current} / {target}
+ui_strikes,失誤：{current} / {max}
+ui_click_megaphone,點擊擴音器以呼叫下一位馬鈴薯
+ui_drag_document,將文件拖曳至檢查桌
+ui_stamp_document,選擇印章以批准或拒絕
+ui_check_violations,檢查文件違規事項
+Strike removed!,失誤已移除！
+BORDER RUNNER DETECTED!\nClick to launch missile!,偵測到邊境逃犯！\n點擊發射飛彈！
+REJECTED POTATO FLEEING!\nClick to launch missile!,被拒絕的馬鈴薯正在逃跑！\n點擊發射飛彈！
+RUNNER ESCAPED!\nStrike added!,逃犯已逃脫！\n增加一次失誤！
+Click megaphone to call the next potato,點擊擴音器以呼叫下一位馬鈴薯
+Drag document to inspection table,拖曳文件至檢查桌
+Select a stamp to approve or reject,選擇圖章以批准或拒絕
+Check for document violations,檢查文件違規事項
+rule_explanation_header,規則說明：
+rule_explanation_fresh,查看「狀況」欄位。如果顯示「新鮮」以外的任何內容，請拒絕。
+rule_explanation_sweet_potato,查看「類型」欄位。如果顯示「地瓜」，請拒絕（無許可證）。
+rule_explanation_chip_hill,查看「國家」欄位。如果顯示「薯片山」，請拒絕（禁止入境）。
+rule_explanation_age,查看「出生」欄位。計算年齡並核對規則。
+rule_explanation_gender,查看「性別」欄位並核對目前規則。
+rule_footer_text,這些規則必須對所有馬鈴薯強制執行。
+rule_tutorial_hint,需要協助？點擊任何規則以查看說明。
+alert_correct_decision_detailed,正確決定！+{points} 點數\n{reason}
+alert_wrong_decision_detailed,錯誤決定！增加一次失誤！\n{reason}
+alert_reason_approved,馬鈴薯符合所有要求 - 批准
+alert_reason_should_reject,您應該拒絕這顆馬鈴薯
+tutorial_check_type,檢查護照中的「類型」欄位
+tutorial_check_condition,檢查護照中的「狀況」欄位
+tutorial_check_country,檢查護照中的「國家」欄位
+tutorial_check_age,檢查「出生」欄位以計算年齡
+tutorial_check_gender,檢查護照中的「性別」欄位
+alert_streak_bonus_minigame,連續5次！獎勵小遊戲！
+alert_perfect_stamps_bonus_minigame,完美蓋章！獎勵小遊戲！
+alert_runner_bonus_minigame,可疑活動！獎勵小遊戲！
+alert_new_minigame_unlocked,新小遊戲解鎖：{name}！
+alert_minigame_bonus,小遊戲獎勵：+{bonus} 點數！
+high_score_display,最高分數：{score}
+new_high_score,新最高分數！
+month_1,一月

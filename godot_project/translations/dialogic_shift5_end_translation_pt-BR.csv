@@ -1,0 +1,22 @@
+﻿keys,pt-BR
+Text/96/text,"Você se esgueira pelo corredor escuro, o coração batendo forte enquanto evita as patrulhas de segurança."
+Text/97/text,[color=CHARTREUSE]Este dispositivo desativará a fechadura[/color] do escritório de Russet. Vou disparar alarmes na ala leste como distração. Você terá cinco minutos.
+Text/98/text,Os manifestos devem estar no arquivo dele. [color=CRIMSON]Pasta vermelha com o rótulo 'RR Transport'[/color]. Não deixe evidências da sua busca.
+Text/99/text,"Você encontra a grossa [color=CRIMSON]pasta vermelha com o rótulo ""RR Transport""[/color] no arquivo."
+Text/9a/text,"Dentro estão manifestos que correspondem às contagens de batatas rejeitadas, e uma diretriz do Primeiro-Ministro Idaho autorizando ""[pulse freq=3][color=DARK_VIOLET]utilização total dos rejeitados da fronteira para produção RR.[/color][/pulse]"""
+Text/9a_viktor1/text,Você escaneia os nomes no manifesto... e um se destaca. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,Esse nome... você já ouviu antes. O guarda de segurança Viktor mencionou que sua esposa estava desaparecida.
+Text/9a_viktor3/text,"""[color=CRIMSON]Status: Processado. Lote RR-2851.[/color]"" Datado de duas semanas atrás."
+Text/9b/text,"Passos se aproximam da porta do escritório. ""[wave amp=15 freq=3][color=YELLOW]Estranho, eu poderia jurar que tranquei isso.[/color][/wave]"""
+Choice/9c/text,Esconder-se debaixo da mesa
+Choice/9d/text,Pular pela janela
+Text/9e/text,"Você mergulha debaixo da mesa de Russet enquanto ele entra, seu coração batendo forte. Ele se senta, os pés a centímetros do seu rosto."
+Text/9f/text,"Russet aqui. O quê? [color=CHARTREUSE]Outro alarme?[/color] Estou a caminho. Ele sai, e você escapa."
+Text/a0/text,"Você arromba a janela e pula. Felizmente, é apenas um andar. Um guarda grita: ""[color=RED]Ei! Pare![/color]"""
+Text/a1/text,Você corre pelos terrenos e consegue despistar seus perseguidores.
+Text/a2/text,Você conseguiu?
+Text/a3/text,"Você entrega a evidência, explicando o que encontrou."
+Text/a4/text,Isso prova tudo. A resistência fará cópias. [tornado radius=3 freq=2]Espalhe a verdade por toda parte.[/tornado] Eles não podem nos silenciar a todos.
+Text/a5/text,"Você cruzou uma linha. [wave amp=20 freq=3][color=YELLOW]Não há volta.[/color][/wave] Quando a verdade se espalhar, Spud será transformado."
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,

@@ -14,3 +14,20 @@ Text/13c/text,Na końcu jednego z pasów - Sasha i inni [color=CRIMSON]bezradnie
 Text/13d/text,"[color=RED]TY![/color] Powinienem był wiedzieć, że jesteś jednym z nich! Cofnij się, albo uruchomię procesor!"
 Text/13e/text,"Gdy bojownicy ruchu oporu obezwładniają Russeta, Sasha przekierowuje kamery zakładu. [color=YELLOW]Ludzie ze Spud! To jest Zapas Korzeni! Karmili nas sobą nawzajem![/color]"
 Text/13f/text,Wróciłeś po mnie. [color=CHARTREUSE]Udało nam się. Prawda jest już na zewnątrz.[/color] Mamy przyszłość do zbudowania!
+Text/140/text,"[color=STEEL_BLUE]Przywódca ruchu oporu podchodzi bliżej, celując bronią w Russeta.[/color] Ani kroku dalej, Russet. Ręce tam, gdzie je widzę."
+Text/141/text,"[color=CRIMSON]Oczy Russeta latają między tobą a przywódcą ruchu oporu, pot perli mu się na czole.[/color] Myślisz, że wygraliście? Ten obiekt to fundament Ziemniaka!"
+Text/142/text,Fundament cierpienia. [pulse freq=3][color=CHARTREUSE]To kończy się dzisiaj.[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]Sasha szarpie się ze swoimi więzami na taśmociągu
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""Russet"
+Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""To... to właśnie robili? To gorsze niż sobie wyobrażałem...""[/color][/wave]"
+Choice/146/text,"[color=CHARTREUSE]""Sasha! Dzięki korzeniom, że żyjesz! Trzymaj się"
+Text/147/text,"[color=CRIMSON]Rzucasz się na Russeta, z zaciśniętymi pięściami, ledwo powstrzymywany przez bojowników ruchu oporu.[/color] Każdy ziemniak, który przeszedł przez mój punkt kontrolny... ilu z nich ty..."
+Text/148/text,"Spokojnie! Potrzebujemy go żywego, żeby zeznawał. [color=STEEL_BLUE]Przywódca trzyma broń wycelowaną w Russeta.[/color] Zachowaj swój gniew na sąd."
+Text/149/text,"[color=STEEL_BLUE]Cofasz się, zasłaniając usta dłonią, wchłaniając cały horror maszynerii.[/color] Stemplowałem ich dokumenty... Wysyłałem ich tutaj..."
+Text/14a/text,[color=CHARTREUSE]Nie wiedziałeś. Żaden z nas nie wiedział.[/color] Dlatego tu jesteśmy. Skup się!
+Text/14b/text,[color=CHARTREUSE]Pędzisz do taśmociągu
+Text/14c/text,"[color=CHARTREUSE]Oczy Sashy błyszczą łzami i nadzieją, gdy twoje ręce rozplątują węzły.[/color] Wiedziałam, że przyjdziesz. Nigdy w ciebie nie wątpiłam."
+Text/14d/text,"[color=STEEL_BLUE]Przywódca zmusza Russeta do klęknięcia, celując w niego bronią.[/color] Zwiążcie go. Upewnijcie się, że będzie patrzył na to, co nastąpi."
+Text/14e/text,"[color=CHARTREUSE]Sasha bierze twoją dłoń, splatając swoje palce z twoimi.[/color] Wróciłeś po mnie. Cokolwiek się wydarzy... stawimy temu czoła razem."
+Text/14f/text,"[color=STEEL_BLUE]Sasha obserwuje cię uważnie, widząc furię wciąż płonącą w twoich oczach.[/color] Skieruj ten ogień. Będziemy go potrzebować do tego, co nastąpi."
+Text/150/text,"[color=STEEL_BLUE]Sasha kładzie delikatną dłoń na twoim ramieniu.[/color] To nie twoja wina, by ją dźwigać. Jesteś tu teraz. To się liczy."

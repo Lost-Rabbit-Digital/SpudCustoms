@@ -1,25 +1,25 @@
 ﻿keys,ar
-patch_1_2_0_title,SPUD CUSTOMS 1.2.0 - PATCH NOTES
-patch_1_2_0_personal_note_header,A PERSONAL NOTE FROM THE DEVELOPER
-patch_1_2_0_personal_note,"This update is dedicated to my little one, who spent the first months of life in the NICU - from 1lb at birth to now 20lbs of pure joy. Thank you to everyone who has joined this journey - over 2,000 players have now experienced Spud Customs!"
-patch_1_2_0_visual_header,VISUAL ENHANCEMENTS
-patch_1_2_0_visual_1,Animated Art Integration: Incorporated new animated GIFs from StagNation into opening scenes
-patch_1_2_0_visual_2,Art Overhaul: Repainted the first five scenes players see for improved visual quality
-patch_1_2_0_visual_3,Dynamic Backgrounds: Background visuals now change as difficulty increases
-patch_1_2_0_story_header,STORY & NARRATIVE
-patch_1_2_0_story_1,Choice Persistence: Narrative choices now properly carry across all levels
-patch_1_2_0_story_2,Visual Progression: Added visual indicators of story progression in main gameplay scenes based on current shift number
-patch_1_2_0_story_3,Branching Dialogue Fixes: Fixed issues with branching dialogue in final narrative scenes
-patch_1_2_0_bugfix_header,BUG FIXES
-patch_1_2_0_bugfix_1,Achievement System: Fixed achievement tracking - all achievements now unlock properly
-patch_1_2_0_bugfix_2,Leaderboard: Fixed issue where leaderboard was stuck on loading
-patch_1_2_0_bugfix_3,Screen Shake: Screen shake now properly resets to origin after each use
-patch_1_2_0_bugfix_4,Difficulty Scaling: Fixed easy mode scaling factor
-patch_1_2_0_bugfix_5,Background Display: Fixed missing backgrounds during dialogue scenes
-patch_1_2_0_bugfix_6,Text Readability: Improved text coloration for better readability
-patch_1_2_0_engagement_header,PLAYER ENGAGEMENT
-patch_1_2_0_engagement_1,Review Requests: Added review prompts for demo and full game players
-patch_1_2_0_engagement_2,Translation Fixes: Various translation improvements across supported languages
-patch_1_2_0_technical_header,TECHNICAL IMPROVEMENTS
-patch_1_2_0_technical_1,Expanded Language Support: Now supporting all 31 Steam-supported languages
-patch_1_2_0_technical_2,Translation System Overhaul: Reorganized translation files for better maintainability
+patch_1_2_0_title,SPUD CUSTOMS 1.2.0 - ملاحظات التحديث
+patch_1_2_0_personal_note_header,ملاحظة شخصية من المطور
+patch_1_2_0_personal_note,"هذا التحديث مُهدى لصغيري، الذي قضى الأشهر الأولى من حياته في وحدة العناية المركزة لحديثي الولادة - من رطل واحد عند الولادة إلى 20 رطلاً من البهجة الخالصة الآن. شكراً لكل من انضم إلى هذه الرحلة - أكثر من 2,000 لاعب خاضوا تجربة Spud Customs الآن!"
+patch_1_2_0_visual_header,تحسينات بصرية
+patch_1_2_0_visual_1,دمج رسوم متحركة: تم دمج صور GIF متحركة جديدة من StagNation في المشاهد الافتتاحية
+patch_1_2_0_visual_2,تجديد الرسوم: أعيد رسم المشاهد الخمسة الأولى التي يراها اللاعبون لتحسين الجودة البصرية
+patch_1_2_0_visual_3,خلفيات ديناميكية: تتغير الخلفيات المرئية الآن مع زيادة الصعوبة
+patch_1_2_0_story_header,القصة والسرد
+patch_1_2_0_story_1,استمرارية الخيارات: تنتقل الخيارات السردية الآن بشكل صحيح عبر جميع المستويات
+patch_1_2_0_story_2,التقدم المرئي: تمت إضافة مؤشرات بصرية لتقدم القصة في مشاهد اللعب الرئيسية بناءً على رقم الوردية الحالي
+patch_1_2_0_story_3,إصلاحات الحوار المتشعب: تم إصلاح المشكلات المتعلقة بالحوار المتشعب في المشاهد السردية النهائية
+patch_1_2_0_bugfix_header,إصلاحات الأخطاء
+patch_1_2_0_bugfix_1,نظام الإنجازات: تم إصلاح تتبع الإنجازات - يتم الآن فتح جميع الإنجازات بشكل صحيح
+patch_1_2_0_bugfix_2,لوحة المتصدرين: تم إصلاح مشكلة توقف لوحة المتصدرين عند التحميل
+patch_1_2_0_bugfix_3,اهتزاز الشاشة: يعود اهتزاز الشاشة الآن بشكل صحيح إلى نقطة البداية بعد كل استخدام
+patch_1_2_0_bugfix_4,تعديل الصعوبة: تم إصلاح عامل تعديل وضع السهل
+patch_1_2_0_bugfix_5,عرض الخلفيات: تم إصلاح مشكلة الخلفيات المفقودة أثناء مشاهد الحوار
+patch_1_2_0_bugfix_6,وضوح النص: تم تحسين تلوين النص لتحسين وضوحه
+patch_1_2_0_engagement_header,تفاعل اللاعبين
+patch_1_2_0_engagement_1,طلبات المراجعة: تمت إضافة مطالبات مراجعة للاعبين في النسخة التجريبية واللعبة الكاملة
+patch_1_2_0_engagement_2,إصلاحات الترجمة: تحسينات ترجمة متنوعة عبر اللغات المدعومة
+patch_1_2_0_technical_header,تحسينات تقنية
+patch_1_2_0_technical_1,دعم لغوي موسع: يدعم الآن جميع اللغات الـ 31 المدعومة من Steam
+patch_1_2_0_technical_2,تجديد نظام الترجمة: أعيد تنظيم ملفات الترجمة لتحسين سهولة الصيانة

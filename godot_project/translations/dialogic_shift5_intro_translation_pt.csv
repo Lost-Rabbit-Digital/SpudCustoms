@@ -21,3 +21,13 @@ Choice/ac/disabled_text,
 Choice/b2/disabled_text,
 Choice/b1/disabled_text,
 Choice/ad/disabled_text,
+Text/b4_viktor1/text,Um guarda de segurança corpulento agarra seu braço enquanto você passa. Seu rosto está marcado pela preocupação.
+Text/b4_viktor2/text,"Ei... desculpe incomodar. Você é um dos oficiais da alfândega, certo? Meu nome é [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Tenho perguntado a todos sobre minha esposa, [color=GOLD]Elena[/color]. Elena Petrov. Ela cruzou este posto de controle há três semanas."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Inspeção reprovada.[/color] Disseram que ela seria processada e voltaria para casa, mas... Não tive notícias."
+Text/b4_viktor5/text,Sua voz vacila. Ninguém me diz nada. Você sabe para onde vão os viajantes rejeitados?
+Choice/b4_viktor6/text,"""Sinto muito, Viktor. Não sei. Mas vou ficar de olho."""
+Choice/b4_viktor7/text,"""Não posso discutir detalhes de processamento. Protocolos de segurança."""
+Text/b4_viktor8/text,Os olhos de Viktor mostram um lampejo de esperança. [color=CHARTREUSE]Obrigado.[/color] Qualquer coisa que você descobrir... por favor. Ela é tudo o que tenho.
+Text/b4_viktor9/text,"Viktor acena com a cabeça, desanimado. [color=STEEL_BLUE]Certo. Protocolos.[/color] Eu entendo."
+Text/b4_viktor10/text,Mas se você mudar de ideia... [color=YELLOW]Preciso saber o que aconteceu com ela.[/color]

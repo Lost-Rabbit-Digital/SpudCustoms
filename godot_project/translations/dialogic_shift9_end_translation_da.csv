@@ -14,3 +14,20 @@ Text/13c/text,For enden af et bånd - Sasha og andre [color=CRIMSON]hjælpeløst
 Text/13d/text,"[color=RED]DIG![/color] Jeg burde have vidst, at du var en af dem! Træd tilbage, eller jeg starter processoren!"
 Text/13e/text,"Mens modstandskæmpere overmander Russet, omdirigerer Sasha facilitetens kameraer. [color=YELLOW]Spuds folk! Dette er Rodreserven! De har fodret os med hinanden![/color]"
 Text/13f/text,Du kom tilbage for mig. [color=CHARTREUSE]Vi gjorde det. Sandheden er ude nu.[/color] Vi har en fremtid at bygge!
+Text/140/text,"[color=STEEL_BLUE]Modstandslederen træder frem, med våbnet rettet mod Russet.[/color] Ikke et skridt mere, Russet. Dine hænder, hvor jeg kan se dem."
+Text/141/text,"[color=CRIMSON]Russets øjne flakker mellem dig og modstandslederen, svedperler dannes på hans pande.[/color] Tror du, du har vundet? Dette anlæg er grundlaget for Spud!"
+Text/142/text,Grundlaget for lidelse. [pulse freq=3][color=CHARTREUSE]Det slutter i dag.[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]Sasha kæmper mod sine bindinger på transportbåndet
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""Russet"
+Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""Dette... er det, de har gjort? Det er værre, end jeg forestillede mig...""[/color][/wave]"
+Choice/146/text,"[color=CHARTREUSE]""Sasha! Tak rødderne for, at du er i live! Hold ud"
+Text/147/text,"[color=CRIMSON]Du stormer mod Russet, med knyttede næver, knap nok holdt tilbage af modstandskæmperne.[/color] Hver eneste kartoffel, der kom gennem mit kontrolpunkt... hvor mange har du..."
+Text/148/text,Rolig! Vi har brug for ham i live for at vidne. [color=STEEL_BLUE]Lederen holder deres våben rettet mod Russet.[/color] Gem din vrede til domstolene.
+Text/149/text,"[color=STEEL_BLUE]Du vakler tilbage, med hånden for munden, mens du tager hele maskineriets rædsel ind.[/color] Jeg stemplede deres papirer... Jeg sendte dem herhen..."
+Text/14a/text,[color=CHARTREUSE]Du vidste det ikke. Ingen af os gjorde.[/color] Derfor er vi her nu. Fokus!
+Text/14b/text,[color=CHARTREUSE]Du skynder dig hen til transportbåndet
+Text/14c/text,"[color=CHARTREUSE]Sashas øjne skinner af tårer og håb, mens dine hænder løsner knuderne.[/color] Jeg vidste, du ville komme. Jeg tvivlede aldrig på dig."
+Text/14d/text,"[color=STEEL_BLUE]Lederen tvinger Russet i knæ med en pistol rettet mod ham.[/color] Bind ham. Sørg for, at han ser, hvad der sker nu."
+Text/14e/text,[color=CHARTREUSE]Sasha tager din hånd og fletter sine fingre sammen med dine.[/color] Du kom tilbage for mig. Uanset hvad der sker nu... står vi det igennem sammen.
+Text/14f/text,"[color=STEEL_BLUE]Sasha iagttager dig omhyggeligt og ser raseriet, der stadig brænder i dine øjne.[/color] Kanaliser den ild. Vi får brug for den til det, der kommer nu."
+Text/150/text,"[color=STEEL_BLUE]Sasha lægger en blid hånd på din skulder.[/color] Skylden er ikke din at bære. Du er her nu. Det er det, der betyder noget."

@@ -22,3 +22,20 @@ Text/115/text,"Quando accadrà, dovrai [color=YELLOW]scegliere da che parte star
 Text/116/text,"Con ogni patata che processi, stai [pulse freq=2][color=CHARTREUSE]aiutando una rivoluzione[/color][/pulse] o [pulse freq=2][color=CRIMSON]permettendo un sistema orribile[/color][/pulse]."
 Choice/10f/disabled_text,
 Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha si guarda nervosamente alle spalle.[/color] Scusa, io... [color=YELLOW]Credo mi stiano osservando.[/color]"
+Text/102_foreshadow2/text,Russet ha fatto delle domande. Mi segue dopo i turni. [wave amp=15 freq=2][color=YELLOW]Devo stare più attenta.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, forse dovresti stare in disparte per un po'. Lascia che mi assuma io più rischi."
+Text/102_foreshadow4/text,"[color=STEEL_BLUE]Scuote la testa, forzando un sorriso.[/color] No. Siamo troppo vicini ora. Posso gestire Russet."
+Text/102_foreshadow5/text,Inoltre... [color=CHARTREUSE]qualcuno deve tenere voi germogli fuori dai guai.[/color]
+Text/106_trucks1/text,Ma non sappiamo ancora dove si trovi la struttura di lavorazione principale. I documenti elencano solo codici di spedizione.
+Text/106_trucks2/text,Ho osservato i [color=DARK_VIOLET]camion della Root Reserve[/color]. Partono ogni notte alle 03:00. Stesso percorso.
+Text/106_trucks3/text,[color=CHARTREUSE]Se potessimo seguirli...[/color] sapremmo esattamente dove stanno portando gli scarti.
+Choice/106_trucks4/text,Lo farò io. Conosco gli orari delle pattuglie.
+Choice/106_trucks5/text,Sembra rischioso. Non può farlo qualcun altro?
+Text/106_trucks6/text,[color=CHARTREUSE]Gli occhi di Sasha si illuminano.[/color] Sapevo che avevi radici d'acciaio. Fai attenzione - pattugliano pesantemente di notte.
+Text/106_trucks7/text,Ore 03:00. Ti accovacci nell'ombra mentre i camion della [color=DARK_VIOLET]Root Reserve[/color] rombano oltre.
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Rimani nascosto! Segui il convoglio![/color][/pulse]
+Text/106_trucks9/text,"I camion si fermano presso un enorme complesso nascosto nel distretto industriale. [color=DARK_VIOLET]Settore 7, Complesso Magazzini Delta.[/color]"
+Text/106_trucks10/text,Ciminiere eruttano fumo violaceo. L'odore è... [tornado radius=3 freq=2][color=CRIMSON]inconfondibile.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]Il cuore della Root Reserve.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]L'espressione di Sasha si incupisce per la delusione.[/color] Dobbiamo tutti correre dei rischi. Troverò un altro modo.

@@ -1,0 +1,29 @@
+﻿keys,el
+violation_condition_not_fresh,ΑΠΟΡΡΙΨΗ: Επιτρέπονται μόνο φρέσκες πατάτες. Αυτή η πατάτα είναι {condition}
+violation_extra_eyes,ΑΠΟΡΡΙΨΗ: Η κατάσταση 'Επιπλέον Μάτια' απαγορεύεται
+violation_rotten,ΑΠΟΡΡΙΨΗ: Οι σάπιες πατάτες απαγορεύονται
+violation_sprouted,ΑΠΟΡΡΙΨΗ: Οι φυτρωμένες πατάτες απαγορεύονται
+violation_dehydrated,ΑΠΟΡΡΙΨΗ: Οι αφυδατωμένες πατάτες απαγορεύονται
+violation_frozen,ΑΠΟΡΡΙΨΗ: Οι κατεψυγμένες πατάτες απαγορεύονται
+violation_too_old,ΑΠΟΡΡΙΨΗ: Η πατάτα είναι {age} ετών (μέγιστη ηλικία: 4 έτη)
+violation_too_young_3,ΑΠΟΡΡΙΨΗ: Η πατάτα είναι {age} ετών (ελάχιστη ηλικία: 4 έτη)
+violation_too_young_2,ΑΠΟΡΡΙΨΗ: Η πατάτα είναι {age} ετών (ελάχιστη ηλικία: 3 έτη)
+violation_males_only,ΑΠΟΡΡΙΨΗ: Επιτρέπονται μόνο αρσενικές πατάτες
+violation_females_only,ΑΠΟΡΡΙΨΗ: Επιτρέπονται μόνο θηλυκές πατάτες
+violation_country_spudland,ΑΠΟΡΡΙΨΗ: Όλες οι πατάτες από τη Σπάντλαντ απαγορεύονται
+violation_country_potatopia,ΑΠΟΡΡΙΨΗ: Όλες οι πατάτες από την Πατατοπία απαγορεύονται
+violation_country_tuberstan,ΑΠΟΡΡΙΨΗ: Όλες οι πατάτες από το Τούμπερσταν απαγορεύονται
+violation_country_north_yamnea,ΑΠΟΡΡΙΨΗ: Όλες οι πατάτες από τη Βόρεια Γιαμνέα απαγορεύονται
+violation_country_spuddington,ΑΠΟΡΡΙΨΗ: Όλες οι πατάτες από τη Σπάντινγκτον απαγορεύονται
+violation_country_tatcross,ΑΠΟΡΡΙΨΗ: Όλες οι πατάτες από το Τατκρός απαγορεύονται
+violation_country_mash_meadows,ΑΠΟΡΡΙΨΗ: Όλες οι πατάτες από το Μας Μίντοους απαγορεύονται
+violation_country_tuberville,ΑΠΟΡΡΙΨΗ: Όλες οι πατάτες από το Τούμπερβιλ απαγορεύονται
+violation_country_chip_hill,ΑΠΟΡΡΙΨΗ: Όλες οι πατάτες από το Τσιπ Χιλ απαγορεύονται (περιορισμοί εξαγωγών)
+violation_country_murphyland,ΑΠΟΡΡΙΨΗ: Όλες οι πατάτες από τη Μέρφιλαντ απαγορεύονται
+violation_country_colcannon,ΑΠΟΡΡΙΨΗ: Όλες οι πατάτες από το Κόλκανον απαγορεύονται
+violation_country_pratie_point,ΑΠΟΡΡΙΨΗ: Όλες οι πατάτες από το Πρέιτι Πόιντ απαγορεύονται
+violation_race_purple_majesty,ΑΠΟΡΡΙΨΗ: Οι τύποι 'Purple Majesty' απαγορεύονται
+violation_race_sweet_potato,ΑΠΟΡΡΙΨΗ: Οι τύποι 'Sweet Potato' απαιτούν ειδικές άδειες (μη διαθέσιμες)
+violation_race_yukon_gold,ΑΠΟΡΡΙΨΗ: Οι τύποι Yukon Gold απαγορεύονται
+violation_expired_document,ΑΠΟΡΡΙΨΗ: Το έγγραφο έληξε στις {date}
+violation_invalid_potato,Αυτή η πατάτα πληροί όλες τις απαιτήσεις και θα έπρεπε να είχε εγκριθεί

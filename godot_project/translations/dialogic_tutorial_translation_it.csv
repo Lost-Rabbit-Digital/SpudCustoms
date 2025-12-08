@@ -28,3 +28,6 @@ Text/16f/text,"Se il tuo turno è stato un successo, potrai continuare cliccando
 Text/170/text,Questo copre le basi dei tuoi doveri come Ufficiale Doganale.
 Text/171/text,"Ricorda: controlla attentamente i documenti, ferma i corridori e rispetta la tua quota."
 Text/172/text,La sicurezza di Spud dipende dalla tua [pulse freq=2][color=DARK_ORANGE]vigilanza![/color][/pulse]
+Text/174/text,Iniziamo il tuo [color=YELLOW]turno di addestramento[/color]...
+Text/180/text,Ma fai attenzione: non tutte le patate hanno i documenti in regola.
+Text/181/text,I [color=RED]passaporti scaduti[/color] sono un rifiuto automatico. Nessuna eccezione.

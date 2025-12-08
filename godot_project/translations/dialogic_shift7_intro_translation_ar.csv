@@ -1,0 +1,43 @@
+﻿keys,ar
+Text/102/text,جيد، لقد وصلت. المقاومة [color=CHARTREUSE]تزداد قوة[/color]. بفضل تلك البيانات، يرى الناس الحقيقة.
+Text/102_foreshadow1/text,[color=STEEL_BLUE]تلقي ساشا نظرة متوترة فوق كتفها.[/color] آسفة، أنا... [color=YELLOW]أعتقد أنهم يراقبونني.[/color]
+Text/102_foreshadow2/text,روسيت كان يطرح الأسئلة. يتبعني بعد المناوبات. [wave amp=15 freq=2][color=YELLOW]أحتاج أن أكون أكثر حذرًا.[/color][/wave]
+Text/102_foreshadow3/text,ساشا، ربما يجب أن تختفي لبعض الوقت. دعيني أتحمل المزيد من المخاطر.
+Text/102_foreshadow4/text,[color=STEEL_BLUE]تهز رأسها، مجبرة ابتسامة.[/color] لا. نحن قريبون جدًا الآن. يمكنني التعامل مع روسيت.
+Text/102_foreshadow5/text,علاوة على ذلك... [color=CHARTREUSE]يجب على أحدهم أن يبقيكم أيها البراعم بعيدًا عن المشاكل.[/color]
+Text/103/text,تمكنت من الحصول على هذا الملف من مصادرنا - جداول الإنتاج، قوائم '[color=CRIMSON]المكونات[/color]'، أسماء [color=DARK_SLATE_BLUE]المختفين[/color].
+Text/104/text,هذا ليس مجرد برنامج مكملات غذائية. إنهم [color=CRIMSON]يعالجون البطاطس[/color]... وليس بطريقة جيدة.
+Text/105/text,مذكرات داخلية من رئيس الوزراء أيداهو نفسه، تصرح بـ'[color=DARK_ORANGE]استخدام الأصول المرفوضة.[/color]'
+Text/106/text,حصص لكل نقطة تفتيش، مع وجود أعلى نسبة رفض إلى معالجة في جمارك البطاطس.
+Text/106_trucks1/text,لكننا ما زلنا لا نعرف أين يقع مرفق المعالجة الرئيسي. الوثائق تذكر فقط رموز الشحن.
+Text/106_trucks2/text,كنت أراقب شاحنات [color=DARK_VIOLET]احتياطي الجذور[/color]. تغادر كل ليلة في الساعة 03:00. نفس المسار.
+Text/106_trucks3/text,[color=CHARTREUSE]لو تمكنا من تتبعهم...[/color] سنعرف بالضبط إلى أين يأخذون المرفوضين.
+Choice/106_trucks4/text,سأفعلها. أنا أعرف جداول الدوريات.
+Choice/106_trucks5/text,هذا يبدو محفوفًا بالمخاطر. ألا يمكن لشخص آخر أن يفعلها؟
+Text/106_trucks6/text,[color=CHARTREUSE]تتألق عينا ساشا.[/color] كنت أعلم أن لديك جذورًا من فولاذ. كن حذرًا - يقومون بدوريات مكثفة ليلاً.
+Text/106_trucks7/text,الساعة 03:00. تجثم في الظلال بينما تمر شاحنات [color=DARK_VIOLET]احتياطي الجذور[/color] بضجيج.
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]ابقَ مختبئًا! اتبع القافلة![/color][/pulse]
+Text/106_trucks9/text,تتوقف الشاحنات عند مجمع ضخم مخبأ في المنطقة الصناعية. [color=DARK_VIOLET]القطاع 7، مجمع المستودعات دلتا.[/color]
+Text/106_trucks10/text,مداخن تنفث دخانًا مائلًا للبنفسجي. الرائحة... [tornado radius=3 freq=2][color=CRIMSON]لا تخطئها حاسة.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]قلب احتياطي الجذور.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]يرتسم خيبة الأمل على وجه ساشا.[/color] علينا جميعًا أن نتحمل المخاطر. سأجد طريقة أخرى.
+Text/107/text,تدهور الوضع في الخارج. حشود غاضبة تتجمع عند نقاط التفتيش مطالبة بإجابات حول احتياطي الجذور.
+Text/108/text,[color=YELLOW]بث طارئ[/color]: تداول [color=CRIMSON]وثائق مزورة[/color] مؤخرًا تسبب في ذعر لا داعي له.
+Text/109/text,"يُعرض مكافأة قدرها [color=GOLD]10,000 رصيد بطاطس[/color] مقابل معلومات تؤدي إلى القبض على هؤلاء المخربين."
+Text/10a/text,استهلاك أو توزيع هذه الدعاية يُصنف الآن على أنه [color=RED]خيانة عظمى[/color].
+Text/10b/text,نوبة العمل اليوم ستعمل بموجب بروتوكولات خاصة. يجب على كل مسافر الخضوع لتقييم الولاء.
+Text/10c/text,أولئك الذين يُظهرون [color=CRIMSON]مشاعر معادية للحكومة[/color] يجب الإبلاغ عنهم فورًا.
+Text/10d/text,[color=CRIMSON]الخائن بيننا[/color] سيتم العثور عليه. وعندما يتم ذلك... [color=DARK_ORANGE]روسيت يقوم بإشارة تهديدية على رقبته.[/color]
+Text/10e/text,"تقترب بطاطا متوترة، [color=GOLD]شارة ورقة صفراء[/color] مرئية جزئيًا. توجد ملاحظة صغيرة مدسوسة بين الأوراق: ""[color=CHARTREUSE]المنزل الآمن مكشوف. الموقع الجديد: المستودع 7، القطاع 4.[/color]"""
+Choice/10f/text,"""مررهم بسرعة مع علامة الأشعة فوق البنفسجية"" (مساعدة)"
+Choice/110/text,"""أبلغ عنهم للأمن فورًا"" (خيانة)"
+Text/111/text,"يغمر الارتياح وجههم. ""شكرًا لك. الحقيقة ستنتصر."""
+Text/112/text,"يرتسم الرعب على وجههم بينما تشير للأمن. ""[wave amp=25 freq=3]لا، أرجوك! لدي عائلة![/wave]"" تسقط شارتهم الصفراء على الأرض."
+Text/113/text,"""أحسنت. ولاؤك مسجل."""
+Text/114/text,"""تم ملاحظة قرارك. كن مستعدًا. [tornado radius=3 freq=2][color=CHARTREUSE]شيء كبير قادم[/color][/tornado]. المقاومة تخطط لعمل مباشر."""
+Text/115/text,"""عندما يحدث ذلك، ستحتاج إلى [color=YELLOW]اختيار جانب[/color]. لن يكون هناك أي حل وسط متبقٍ."""
+Text/116/text,مع كل بطاطا تعالجها، فأنت إما [pulse freq=2][color=CHARTREUSE]تساعد ثورة[/color][/pulse] أو [pulse freq=2][color=CRIMSON]تمكّن نظامًا مروعًا[/color][/pulse].
+Choice/10f/disabled_text,
+Choice/110/disabled_text,
+Choice/106_trucks4/disabled_text,
+Choice/106_trucks5/disabled_text,

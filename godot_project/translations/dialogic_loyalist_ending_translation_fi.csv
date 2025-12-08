@@ -1,0 +1,79 @@
+﻿keys,fi
+Text/299_suppress1/text,Kaaos puhkeaa vastarinnan hyökkäyksen alkaessa. Räjähdykset järisyttävät tarkastuspistettä.
+Text/299_suppress2/text,Voisit paeta. Voisit piiloutua. Sen sijaan [color=DARK_ORANGE]valitset puolesi[/color].
+Text/299_suppress3/text,Russet tarttuu käsivarteesi. [pulse freq=2][color=YELLOW]NYT ON TILAISUUTESI![/color][/pulse] Todista uskollisuutesi!
+Text/299_suppress4/text,Vastarinta yrittää murtautua itäportista! [color=CRIMSON]Pysäytä heidät![/color]
+Text/299_suppress5/text,"Tartut aseeseesi. Nämä voisivat olla ihmisiä, jotka tunnet. Ihmisiä, joita olet auttanut."
+Text/299_suppress6/text,Mutta selviytymisellä on hintansa. [color=DARK_ORANGE]Olet tehnyt valintasi.[/color]
+Text/299_suppress7/text,[pulse freq=3][color=CRIMSON]Taistele valtion puolesta![/color][/pulse] Tukahduta vastarinnan hyökkäys!
+Text/299_suppress8/text,"Kun savu hälvenee, ruumiita lojuu maassa. Joillakin on vastarinnan merkkejä."
+Text/299_suppress9/text,[color=STEEL_BLUE]Tunnet kasvoja kaatuneiden joukosta.[/color]
+Text/299_suppress10/text,Murphy makaa kuolleiden joukossa. Hänen silmänsä tuijottavat tyhjyyteen. Tommyn valokuva puristettuna hänen kädessään.
+Text/299_suppress11/text,"[color=STEEL_BLUE]Hän kuoli taistellen sen puolesta, mihin uskoi. Sinä autoit tappamaan sen.[/color]"
+Text/300/text,"Vastarinnan hyökkäys epäonnistui. Tarkastuspiste seisoo, vahvempana kuin koskaan. Ja sinä pysyt paikallasi."
+Text/301/text,[pulse freq=2][color=GOLD]KAIKKI TERVEHTIKÖÖT PÄÄMINISTERI IDAHOA![/color][/pulse] Spudin puolustaja! Pettureiden voittaja!
+Text/302/text,"Valtava peruna juhlavassa asussa laskeutuu panssaroidusta ajoneuvosta, eliittivartijoiden saattamana."
+Text/303/text,"Idaho tarkastelee tarkastuspistettä kylmillä, laskelmoivilla silmillä."
+Text/304/text,"Russet kiiruhtaa eteenpäin, kumartaen syvään. Pääministeri! Olemme kunnioitettuja läsnäolostanne!"
+Text/305/text,Petturit on [color=DARK_VIOLET]käsitelty[/color] käskynne mukaan. Tuotanto on noussut 40% tällä neljänneksellä!
+Text/306/text,"Ja tämäkö on se upseeri, joka pysyi uskollisena kapinan aikana?"
+Text/307/text,"Kyllä, pääministeri. Horjumaton omistautuminen. Ilmoitti epäilyttävistä toiminnoista. Mallikansalainen."
+Text/308/text,"Idaho astuu eteenpäin, kiinnittäen mitalin rintaasi – [color=GOLD]Kultainen mukula[/color]."
+Text/309/text,"Palveluksesta yli odotusten. Olet todistanut, että [color=DARK_ORANGE]uskollisuus Spudille[/color] palkitaan aina."
+Choice/30a/text,"Kiitos, pääministeri. Kunnia Spudille."
+Choice/30b/text,"Tein vain velvollisuuteni, herra. (Pakotettu hymy)"
+Text/30c/text,Idahon hymy ei yllä hänen silmiinsä. Kyllä. Niin todellakin teit.
+Text/30d/text,Idaho tutkii sinua pitkän hetken. Velvollisuus. [color=STEEL_BLUE]Niin yksinkertainen sana niin monimutkaisille teoille.[/color]
+Text/30e/text,"Mietin, millaiset [color=CRIMSON]painajaiset[/color] vierailevat niiden luona, jotka tekevät ""velvollisuutensa"" niin hyvin."
+Text/30f/text,"Voiton kunniaksi järjestetään juhla-ateria. Pöydät notkuvat ruoasta, sisältäen runsaita annoksia [color=DARK_VIOLET]Juurivarantoa[/color]."
+Text/310/text,"Russet nostaa lasillisen paksua, purppuraa nestettä. Malja! [color=CRIMSON]Pettureille, jotka ravitsevat meitä[/color]!"
+Text/311/text,Huoneessa nauretaan. Jotkut hermostuneesti. Useimmat aidosti.
+Text/312/text,"Hän liu'uttaa lautasen sinua kohti. Kokeile uutta erää. [color=DARK_VIOLET]""Vastarintasekoitus.""[/color] Sashan panos Spudin tulevaisuuteen."
+Text/313/text,Vatsasi muljahtaa. Ruoka lautasella. [color=CRIMSON]Sasha.[/color] Murphyn serkku. Vaimo valokuvasta.
+Text/314/text,[tornado radius=3 freq=2][color=CRIMSON]Kaikki heistä.[/color][/tornado]
+Choice/315/text,Pakota itsesi syömään - säilytä peiteasema
+Choice/316/text,Työnnä lautanen pois - et voi tehdä tätä
+Text/317/text,Nostat haarukan huulillesi. Suljet silmäsi. [color=STEEL_BLUE]Pureskele. Nielee. Älä ajattele.[/color]
+Text/318/text,"Russet nyökkää hyväksyvästi. ""Hyvä. [color=DARK_ORANGE]Pääset pitkälle.[/color]"""
+Text/319/text,"Työnnät lautasen pois. ""En voi hyvin. Päivän jännitys..."""
+Text/31a/text,"Russetin silmät kapenevat hetkeksi, sitten pehmenevät. Tietenkin. Niin [color=YELLOW]herkkä rakenne[/color]."
+Text/31b/text,Lepää kunnolla. Huomenna meillä on [color=CRIMSON]lisää käsittelyä[/color] valvottavana.
+Text/31c/text,Palaat majoitukseesi. Mitali painaa raskaana rinnallasi.
+Text/31d/text,Vedät esiin kuvan kadonneesta vaimosta. Hän on luultavasti samassa erässä kuin se nyt.
+Text/31e/text,Lupasit löytää hänet. [color=STEEL_BLUE]Löysit hänet.[/color] Et vain sillä tavalla kuin kumpikaan teistä toivoi.
+Text/31f/text,"Murphy. Ystäväsi. Se, joka luotti sinuun. Hän oli vastarintaliikkeessä."
+Text/320/text,[color=CRIMSON]Oli.[/color]
+Text/321/text,Tuijotat heijastustasi ikkunassa. Mitali kiiltää. [color=DARK_ORANGE]Kultainen Mukula[/color]. Spudin sankari.
+Text/322/text,[color=STEEL_BLUE]Hirviö perunankuorissa.[/color]
+Text/323/text,Sinä yönä näet unta Sashasta. Hän ei syytä. Ei raivoa. Se olisi helpompaa.
+Text/324/text,"Hän vain katsoo sinua niillä silmillä. [color=CHARTREUSE]Juuret kasvavat syvälle[/color], hän kuiskaa."
+Text/325/text,Jopa [color=STEEL_BLUE]mätäiset[/color].
+Text/326/text,Kuukaudet kuluvat. Sinut ylennetään. Alueellinen rajaturvallisuustarkastaja. Russetin oikea käsi.
+Text/327/text,Olet valvonut enemmän hylkäyksiä kuin kukaan Spudin historiassa. [color=DARK_VIOLET]Juurivarannon[/color] tuotanto kohoaa.
+Text/328/text,Toimistosi on mukava. Muonasi ovat runsaat. Perheesi on suojattu.
+Text/329/text,"Sinulla on kaikki, mitä sinulle luvattiin."
+Text/32a/text,Kaikki paitsi [color=STEEL_BLUE]uni[/color]. Paitsi [color=STEEL_BLUE]rauha[/color]. Paitsi kyky katsoa peiliin.
+Text/32b/text,Eräänä päivänä huomaat sen. Seinään raapustetun [color=GOLD]keltaisen perunatunnuksen[/color]. Sitten toisen. Sitten kymmeniä.
+Text/32c/text,Uusi vastarinta on muodostumassa. Hiljaisempi. Varovaisempi. Oppien Sashan virheistä.
+Choice/32d/text,Ilmoita tunnuksista turvallisuuspalvelulle välittömästi
+Choice/32e/text,"Teeskentele, ettet nähnyt niitä"
+Choice/32f/text,Jätä oma jälkesi – yksi keltainen lehti
+Text/330/text,Teet ilmoituksen. Toinen erä epäiltyjä pidätetty. Toinen ylennys.
+Text/331/text,Kierre jatkuu. [color=CRIMSON]Sinusta on tullut kone.[/color]
+Text/332/text,Kävelet ohi. Et sano mitään. Se ei ole paljon. [color=STEEL_BLUE]Se on melkein ei mitään.[/color]
+Text/333/text,"Mutta se on ensimmäinen kerta, kun olet päättänyt olla toimimatta heitä vastaan."
+Text/334/text,"Ehkä se on jotain. Ehkä se on [color=YELLOW]liian vähän, liian myöhään[/color]."
+Text/335/text,"Kun kukaan ei katso, raapustat pienen [color=GOLD]keltaisen lehden[/color] tunnusten viereen."
+Text/336/text,Yksi vastarinnan teko. Vuosia liian myöhään. Mutta [color=CHARTREUSE]jotain[/color].
+Text/337/text,"Sashan ääni kaikuu muistissasi: ""[color=CHARTREUSE]Juuret kasvavat syvälle.[/color]"""
+Text/338/text,Ehkä tarpeeksi syvälle [color=CHARTREUSE]tavoittaakseen jopa sinut[/color]. Jonain päivänä.
+Text/339/text,Spudin kansa kestää. [color=DARK_VIOLET]Juurivaranto[/color] virtaa. Kulutuksen kierre jatkuu.
+Text/33a/text,"Mutta jossain, seinän halkeamissa, [color=CHARTREUSE]jotain uutta kasvaa[/color]."
+Text/33b/text,Tuletko olemaan osa sitä... [color=YELLOW]se tarina on vielä kirjoittamatta[/color].
+Choice/30a/disabled_text,
+Choice/30b/disabled_text,
+Choice/315/disabled_text,
+Choice/316/disabled_text,
+Choice/32d/disabled_text,
+Choice/32e/disabled_text,
+Choice/32f/disabled_text,

@@ -1,0 +1,26 @@
+﻿keys,vi
+Text/200/text,"Hey, khoai tây mới! Ca làm việc vất vả nhỉ? Tôi là Murphy. Đã ở đây ba mùa rồi."
+Text/201/text,"Tôi thấy cậu nói chuyện với Sasha lúc nãy. Cô ấy... [color=STEEL_BLUE]khác biệt[/color]. Khác biệt tốt, tôi nghĩ vậy."
+Choice/202/text,Cô ấy có vẻ tốt bụng. Đã cho tôi vài lời khuyên về việc giữ cảnh giác.
+Choice/203/text,Chỉ là giới thiệu thôi. Không có gì đặc biệt.
+Text/204/text,Murphy lo lắng nhìn quanh. Ừm
+Text/205/text,"Chuyện này chỉ hai ta biết thôi nhé? Cái tin phát thanh về ""những củ khoai tây mất tích""... anh họ tôi đã mất tích tháng trước. Trượt kiểm tra."
+Text/206/text,Khôn ngoan đấy. Cứ cúi đầu làm việc của mình. Đó là điều tôi tự nhủ mỗi ngày.
+Text/207/text,Giọng Murphy nhỏ dần. Mặc dù đôi khi tôi tự hỏi tất cả những củ khoai tây bị từ chối đó thực sự đi đâu...
+Text/208/text,Trong nhà ăn
+Text/209/text,"Bạn nhìn chằm chằm vào thứ bột nhão đặc quánh, màu nâu tím. Mọi người đều ăn nó mà không thắc mắc. Nó được cho là bổ dưỡng."
+Choice/20a/text,Ăn Món Dự Trữ Củ như mọi người khác
+Choice/20b/text,Đẩy nó sang một bên - bạn không đói
+Text/20c/text,"Hương vị... đậm mùi đất. Đậm đà. Có điều gì đó về nó cảm thấy [color=STEEL_BLUE]quen thuộc một cách khó chịu[/color], nhưng bạn không thể hiểu tại sao."
+Text/20d/text,"Một sĩ quan cấp cao chú ý. ""Không lãng phí thì không thiếu thốn, mầm non. Đó chính là [pulse freq=2][color=DARK_VIOLET]dinh dưỡng cao cấp[/color][/pulse] đấy."""
+Text/20e/text,Bạn lẩm bẩm một cái cớ về việc đau bụng. Viên sĩ quan nhún vai và bỏ đi.
+Text/20f/text,"Trở về khu ở, bạn không thể gạt bỏ lời Sasha nói. ""[color=YELLOW]Không phải mọi thứ đều như vẻ ngoài của nó.[/color]"""
+Text/210/text,"Bạn đã hỏi Russet về những củ khoai tây bị từ chối vào ngày đầu tiên. Câu trả lời của anh ta lảng tránh. ""[color=VIOLET]Đã xử lý. Theo đúng quy trình.[/color]"""
+Text/211/text,"Xử lý [color=STEEL_BLUE]bằng cách nào[/color], chính xác?"
+Text/212/text,Bạn đã rất háo hức được phục vụ. Rất tự hào khi được chọn. Nhưng niềm tự hào không thể giải thích được những [color=CRIMSON]củ khoai tây mất tích[/color].
+Text/213/text,"Đài phát thanh nói rằng các báo cáo về việc mất tích ""tiếp tục"". Điều đó có nghĩa là nó đã xảy ra được một thời gian rồi."
+Text/214/text,"Giấc ngủ đến chậm rãi. Khi ngủ được, bạn mơ thấy những [wave amp=15 freq=2][color=DARK_VIOLET]dòng sông tím[/color][/wave] chảy bên dưới trạm kiểm soát."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

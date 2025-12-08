@@ -14,3 +14,20 @@ Text/13c/text,Az egyik szalag végén - Sasha és mások [color=CRIMSON]tehetetl
 Text/13d/text,"[color=RED]TE![/color] Tudhattam volna, hogy közéjük tartozol! Hátrálj vagy beindítom a feldolgozót!"
 Text/13e/text,"Miközben az ellenállók legyőzik Russetet, Sasha átirányítja a létesítmény kameráit. [color=YELLOW]Spud népe! Ez a Gyökértartalék! Egymással etettek minket![/color]"
 Text/13f/text,"Visszajöttél értem. [color=CHARTREUSE]Megcsináltuk. Az igazság most már kint van.[/color] Van egy jövő, amit fel kell építenünk!"
+Text/140/text,"[color=STEEL_BLUE]Az ellenállás vezetője előrelép, fegyverét Russetre szegezve.[/color] Egy lépést se tovább, Russet. A kezedet oda, ahol látom."
+Text/141/text,"[color=CRIMSON]Russet szemei közted és az ellenállás vezetője között cikáznak, verejték gyöngyözik a homlokán.[/color] Azt hiszitek, győztetek? Ez a létesítmény Spud alapja!"
+Text/142/text,A szenvedés alapja. [pulse freq=3][color=CHARTREUSE]Ma véget ér.[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]Sasha a futószalagon vergődik a kötelékei ellen.[/color]
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""Russet[/color]"
+Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""Ez... ezt művelték? Rosszabb, mint gondoltam...""[/color][/wave]"
+Choice/146/text,"[color=CHARTREUSE]""Sasha! Hála a gyökereknek, élsz! Tarts ki[/color]"
+Text/147/text,"[color=CRIMSON]Russet felé rohansz, ökölbe szorított kézzel, alig tartanak vissza az ellenállók.[/color] Minden krumpli, ami átjött az ellenőrzőpontomon... hányat te..."
+Text/148/text,"Nyugalom! Élve kell, hogy tanúskodjon. [color=STEEL_BLUE]A vezető Russetre szegezve tartja fegyverét.[/color] Tartogasd a haragodat a bíróságra."
+Text/149/text,"[color=STEEL_BLUE]Hátratátszol, kezeddel eltakarva a szád, miközben felfogod a gépezet teljes borzalmát.[/color] Én pecsételtem le a papírjaikat... Én küldtem őket ide..."
+Text/14a/text,[color=CHARTREUSE]Nem tudtad. Egyikünk sem tudta.[/color] Ezért vagyunk most itt. Koncentrálj!
+Text/14b/text,[color=CHARTREUSE]A futószalaghoz rohansz[/color]
+Text/14c/text,"[color=CHARTREUSE]Sasha szemei könnyektől és reménytől csillognak, miközben kezeid a csomókat oldják.[/color] Tudtam, hogy eljössz. Soha nem kételkedtem benned."
+Text/14d/text,"[color=STEEL_BLUE]A vezető fegyverrel kényszeríti Russetet térdre.[/color] Kötözzétek meg. Gondoskodjatok róla, hogy nézze, mi következik."
+Text/14e/text,"[color=CHARTREUSE]Sasha megfogja a kezed, ujjait a tiéddel összefonva.[/color] Visszajöttél értem. Bármi is történjen ezután... szembenézünk vele együtt."
+Text/14f/text,"[color=STEEL_BLUE]Sasha figyelmesen néz téged, látva a szemedben még égő dühöt.[/color] Tereld azt a tüzet. Szükségünk lesz rá, ami ezután következik."
+Text/150/text,[color=STEEL_BLUE]Sasha gyengéden a válladra teszi a kezét.[/color] A bűntudat nem a te terhed. Most itt vagy. Ez számít.

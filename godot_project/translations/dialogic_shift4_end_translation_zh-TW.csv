@@ -1,0 +1,49 @@
+﻿keys,zh-TW
+Text/215/text,Murphy在走廊上攔住你，眼睛紅腫著。有空嗎？
+Text/216/text,Murphy把你拉進一間空置儲藏室，然後關上門。
+Text/217/text,我在餐廳開的那個玩笑……關於我表弟在[color=DARK_VIOLET]根源儲備[/color]批次裡……
+Text/218/text,Murphy的聲音顫抖著。我認為那不再是個玩笑了。
+Text/219/text,你說這不好笑。你說得對。[color=STEEL_BLUE]這一切都一點也不好笑。[/color]
+Text/21a/text,我看到你離開了。聰明。我真希望我能停止吃那些東西，但他們[color=YELLOW]監視[/color]著。他們總是在監視。
+Text/21b/text,我在我表弟的遺物裡發現了一些東西。他的拒絕單。都是標準文件，但是……
+Text/21c/text,Murphy掏出一張揉皺的表格。看看這個處理代碼。「[color=CRIMSON]RR-UTIL-7[/color]」。
+Text/21d/text,我在檔案館裡查閱了。RR代表[pulse freq=2][color=DARK_VIOLET]根源儲備[/color][/pulse]。UTIL的意思是……[color=CRIMSON]利用[/color]。
+Text/21d_breakdown1/text,[wave amp=20 freq=3]Murphy的雙手開始顫抖。[/wave]我表弟……Tommy……他才二十三歲。
+Text/21d_breakdown2/text,他來這裡尋求[color=CHARTREUSE]更好的生活[/color]。一次檢查沒通過。就一次。[color=STEEL_BLUE]只是時機不對。[/color]
+Text/21d_breakdown3/text,Murphy沿著牆壁滑下，雙手掩面。而我……我[tornado radius=3 freq=2][color=CRIMSON]吃[/color][/tornado]了那些東西。每天都吃。
+Text/21d_breakdown4/text,Murphy抬頭看著你，淚流滿面。[pulse freq=2][color=CRIMSON]如果我吃了「他」呢？[/color][/pulse]
+Choice/21e/text,Murphy……我很抱歉。我支持你。我們會一起找出真相。
+Choice/21f/text,Murphy，這很危險。我們應該置身事外。
+Choice/220/text,也許這只是巧合。我們別草率下結論。
+Text/221_comfort1/text,你跪在Murphy旁邊，把手放在他肩上。
+Text/221/text,Murphy抓住你的手臂，像是抓住救命稻草。[color=CHARTREUSE]謝謝你。[/color]我以為我要發瘋了。
+Text/221_tommy/text,[color=STEEL_BLUE]他的聲音稍微穩定下來。[/color]為了Tommy。我們為Tommy這麼做。以及所有被他們帶走的人。
+Text/222/text,也有其他人懷疑。Sasha一直在召集人手。我想她信任你。
+Text/223/text,Murphy擦了擦眼睛，努力讓自己鎮定下來。嗯。嗯，你可能說得對。忘記我說過什麼吧。
+Text/224/text,但如果你改變主意……我會在這裡。[color=STEEL_BLUE]獨自面對我的疑問。和我的惡夢。[/color]
+Text/225/text,巧合。Murphy透過淚水苦笑著。當然。而Tommy就這樣[color=CRIMSON]憑空消失[/color]了。
+Text/226/text,你就繼續這樣告訴自己吧。看看這能讓你睡多久。[color=STEEL_BLUE]這對我沒有幫助。[/color]
+Text/227/text,隨著最後一班結束，Sasha出現在你的檢查亭。你看起來像見了鬼一樣。
+Text/228/text,我猜——莫非跟你說過他表親的事了？
+Text/229/text,莎夏贊同地點點頭。很好。我們需要會提問的人。
+Text/22a/text,莎夏仔細端詳你的臉。你很害怕。這很聰明。但恐懼救不了任何人。
+Text/22b/text,我從你第一天上班就開始觀察你了。羅塞特談到「處理」時，你[color=YELLOW]猶豫[/color]的樣子。
+Text/22c/text,你問過那些被拒絕的馬鈴薯會怎麼樣。這很有膽量。[color=CHARTREUSE]大多數人只會敬禮蓋章。[/color]
+Text/22d/text,莎夏湊近了些。這其中有蹊蹺。我們拒絕的每個馬鈴薯？都在48小時內消失了。沒有遣返記錄。沒有轉移。
+Text/22e/text,但[color=DARK_VIOLET]根部儲備[/color]的產量？[tornado radius=3 freq=2][color=CRIMSON]卻上升了。[/color][/tornado] 每。一。次。
+Choice/22f/text,我相信你。我能怎麼幫忙？
+Choice/230/text,我需要看到證據，才能冒險。
+Text/231/text,莎夏的眼睛亮了起來。我就知道我沒選錯人。明天晚上，下班後。我會讓你看看我發現了什麼。
+Text/232/text,在那之前
+Text/233/text,說得有理。證據會有的。只是……明天上班時多留意一下。
+Text/234/text,留意那些[color=CRIMSON]被拒絕的馬鈴薯[/color]去了哪裡。如果可以，跟蹤那些卡車。
+Text/235/text,你拿出那個絕望的馬鈴薯給你的照片。她的妻子。[color=STEEL_BLUE]她現在在哪裡？[/color]
+Text/236/text,如果莎夏和莫非說的是真的……她恐怕已經……
+Text/237/text,你不敢想下去。但你[color=CHARTREUSE]不會忘記她的臉[/color]。
+Text/238/text,明天，一切都將改變。要麼你找到答案，要麼你永遠埋葬這些疑問。
+Text/239/text,有一件事是肯定的：[color=YELLOW]你無法再回到無知的幸福中。[/color]
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

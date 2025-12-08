@@ -16,3 +16,12 @@ Text/76/text,"Sasha työntää kansion käsiisi. ""[color=YELLOW]Pidä tämä tu
 Text/77/text,Piilotat kansion takkisi sisään. [color=DARK_VIOLET]Root Reserve[/color]. Hylkäykset. Kadonneet perunat. Kaikki yhdistyy [tornado radius=3 freq=2][color=CRIMSON]kauhistuttavalla tavalla[/color][/tornado].
 Choice/71/disabled_text,
 Choice/70/disabled_text,
+Text/69_photo1/text,Vedät kuvan esiin uudelleen. [color=GOLD]Maris Piper[/color]. Niin ystävälliset kasvot.
+Text/69_photo2/text,Hänen vaimonsa oli niin epätoivoinen. [color=STEEL_BLUE]Mitä hänelle tapahtui?[/color]
+Text/69_photo3/text,"Huomaat jotain kuvan taustalla – kuorma-auton, jossa on [color=DARK_VIOLET]violetti logo[/color]."
+Text/69_photo4/text,Tuo symboli... olet nähnyt sen kahvilan toimituksissa. [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve.[/color][/wave]
+Text/6a_photo1/text,Sasha... tämä kuva. Naisen vaimo antoi sen minulle. Hän etsi häntä.
+Text/6a_photo2/text,Sashan ilme synkkenee. [color=STEEL_BLUE]Anna minun nähdä.[/color]
+Text/6a_photo3/text,"Sasha tutkii kuvaa, hänen ilmeensä synkkenee. [color=CRIMSON]Tunnistan tuon kuorma-auton.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Pidä tämä kuva turvassa.[/color][/pulse] Se saattaa olla tärkeä myöhemmin. Luota minuun.
+Text/6f2/text,[pulse freq=3][color=CRIMSON]Heistä on tulossa Root Reserve.[/color][/pulse]

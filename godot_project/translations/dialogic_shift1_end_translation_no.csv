@@ -5,3 +5,27 @@ Text/52/text,En liten lapp sklir ut fra noen papirer på skrivebordet ditt.
 Text/53/text,"[color=GOLD]Ikke alt er som det ser ut. Røttene til nasjonen vår har råtnet. [br] Følg sporet, men pass på ikke å bli tiet i hjel.[/color] [br] - [color=CHARTREUSE]En venn[/color]"
 Text/54/text,Den lappen... og måten Russet unngikk spørsmålet mitt om [pulse freq=3][color=CRIMSON]forkastede poteter[/color][/pulse]... [br] Noe føles [color=STEEL_BLUE]galt[/color].
 Text/55/text,Jeg bør holde meg [color=YELLOW]våken[/color]. Det foregår mer her enn å stemple pass.
+Text/52b/text,Den var ikke der i morges. Noen plasserte den [color=YELLOW]under din vakt[/color].
+Text/53b/text,"[color=GOLD]Følg sporet, men vær forsiktig så du ikke blir stilnet.[/color]"
+Text/53c/text,[color=GOLD]Se hvem som spiser [/color][color=DARK_VIOLET]Reserven[/color][color=GOLD]. Se hvem som nekter.[/color]
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]En venn[/color]
+Choice/53e/text,Hold lappen skjult – etterforsk i det stille
+Choice/53f/text,Ødelegg lappen – dette kan være en test
+Choice/53g/text,Vis lappen til Russet umiddelbart
+Text/53h/text,Du bretter lappen forsiktig og putter den i lommen. [color=CHARTREUSE]Noen strekker ut en hånd.[/color]
+Text/53i/text,"Men hvem? Og hvorfor deg, på din aller første dag?"
+Text/53j/text,Du river lappen i bittesmå biter
+Text/53k/text,Russet sa at spirer som stiller spørsmål blir «omplassert». Bedre å ikke ta sjanser.
+Text/53l/text,Du tar Russet før han drar. «Sir? Jeg fant dette blant papirene mine...»
+Text/53m/text,"Russet snapper lappen, leser den. Ansiktsuttrykket hans skifter – [color=YELLOW]var det gjenkjennelse?[/color]"
+Text/53n/text,Propaganda. Opprørere som prøver å korrumpere nye offiserer. [color=DARK_ORANGE]Du gjorde rett i å bringe dette til meg.[/color]
+Text/53o/text,Han putter lappen i lommen. Glem at du noensinne så den. Og se etter alle som oppfører seg... [color=CRIMSON]mistenkelig[/color].
+Text/54b/text,[color=VIOLET]«Behandlet. I henhold til protokoll.»[/color] Hva betyr det egentlig?
+Text/54c/text,Den lappen... den sa at røttene har blitt [color=CRIMSON]råtne[/color].
+Text/54d/text,"Men Spud er jo strålende, ikke sant? Det var det de fortalte oss. Det jeg trodde."
+Text/54e/text,"Du tar frem lappen, leser den igjen. [color=GOLD]«Se hvem som spiser Reserven. Se hvem som nekter.»[/color]"
+Text/54f/text,I morgen skal du følge med. [color=YELLOW]Noen prøver å fortelle deg noe.[/color]
+Text/54g/text,Russets ansikt da han leste lappen. Bare et øyeblikk så han nesten... [color=STEEL_BLUE]redd[/color] ut.
+Text/54h/text,Hva er egentlig [color=DARK_VIOLET]Rotreserven[/color]? Og hvorfor ville noen advare deg om det?
+Text/54i/text,"Lappen er borte, men ordene henger igjen. [color=YELLOW]Ikke alt er som det ser ut.[/color]"
+Text/54j/text,Kanskje var det et smart valg å ødelegge den. Kanskje stilnet du nettopp din eneste allierte.

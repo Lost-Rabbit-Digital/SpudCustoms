@@ -17,3 +17,6 @@ Text/a4/text,Tämä todistaa kaiken. Vastarinta tekee kopioita. [tornado radius=
 Text/a5/text,"Olet ylittänyt rajan. [wave amp=20 freq=3][color=YELLOW]Ei ole paluuta.[/color][/wave] Kun totuus leviää, Spud muuttuu."
 Choice/9c/disabled_text,
 Choice/9d/disabled_text,
+Text/9a_viktor1/text,Skannaat nimet manifestista... ja yksi erottuu joukosta. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,Tuo nimi... olet kuullut sen aiemmin. Turvavartija Viktor mainitsi vaimonsa kadonneen.
+Text/9a_viktor3/text,"""[color=CRIMSON]Tila: Käsitelty. Erä RR-2851.[/color]"" Päivätty kaksi viikkoa sitten."

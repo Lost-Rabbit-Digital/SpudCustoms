@@ -1,0 +1,43 @@
+﻿keys,no
+Text/240/text,"Når kveldsskiftet ebber ut, har de fleste offiserene dratt. Bare du og en håndfull vakter er igjen."
+Text/241/text,En kraftig vakt nærmer seg stasjonen din. Han heter Viktor. Jeg er på nattevakt.
+Text/242/text,"Øynene hans er slitne, hjemsøkte. Du er den nye, ikke sant? Den Russet stadig holder øye med?"
+Choice/243/text,Bare prøver å gjøre jobben min. Hvorfor holder Russet øye med meg?
+Choice/244/text,Er det noe jeg burde vite?
+Text/245/text,Han trekker tungt på skuldrene. Russet holder øye med alle som stiller spørsmål. Min [color=STEEL_BLUE]kone stilte spørsmål[/color] en gang.
+Text/246/text,Hun er ikke her for å spørre lenger.
+Text/247/text,"Han ser seg rundt, senker så stemmen. Bare... vær forsiktig med hvem du stoler på."
+Text/248/text,Og hvem du [color=CRIMSON]fordømmer[/color]. Noen av oss husker hvert ansikt vi sendte til behandling.
+Text/249/text,"En nervøs potet nærmer seg. Papirene ser ut til å være i orden, men du legger merke til den [color=CHARTREUSE]diskrete bladnålen[/color] på kragen deres."
+Text/24a/text,"De skyver dokumentene over. En liten lapp er stukket inn: ""[color=CHARTREUSE]Sasha sendte meg. Pakke til nettverket. Vær så snill.[/color]"""
+Text/24b/text,"Den nye [color=DARK_ORANGE]RealityScan[/color] blinker klar ved stasjonen din. Ett skann, og den vil oppdage forfalskede elementer i papirene deres."
+Choice/24c/text,Lat som skanneren sviktet og vink dem gjennom
+Choice/24d/text,Bruk skanneren som påkrevd – du kan ikke risikere å bli avslørt
+Choice/24e/text,"Gi Viktor tegn til å se en annen vei, la dem så passere"
+Text/24f/text,"Du banker på skanneren, rynker pannen, banker på den igjen. ""Det fordømte greiene tuller. Gå bare gjennom."""
+Text/250/text,"Lettelse strømmer over ansiktet deres. De former ""[color=CHARTREUSE]Takk[/color]"" med munnen og skynder seg forbi."
+Text/251/text,"Du fanger blikket hans og nikker mot agenten. Han ser på dem, så på deg."
+Text/252/text,"Han snur ryggen til med vilje, studerer veggen. ""[color=STEEL_BLUE]Skanneren har vært tull hele dagen.[/color]"""
+Text/253/text,"Agenten smetter gjennom. Viktor sier ingenting, men dere har delt en hemmelighet nå."
+Text/254/text,"Du kjører skanningen. Maskinen [color=RED]skriker[/color]. ""Forfalsket dokumentasjon oppdaget."""
+Text/255/text,"Skrekk brer seg over ansiktet deres. ""[color=CRIMSON]Du forstår ikke hva du har gjort...[/color]"""
+Text/256/text,"Han og andre vakter nærmer seg. Agenten blir dratt bort, fortsatt stirrende på deg."
+Text/257/text,Sasha fanger deg i skyggene. Den agenten bar på [color=CHARTREUSE]kopier av manifestene[/color] til våre kontakter utenfor.
+Text/258/text,På grunn av deg vil sannheten spre seg utenfor Spuds grenser. [color=CHARTREUSE]Du har virkelig gjort en forskjell.[/color]
+Text/259/text,Sashas øyne utvider seg. Hjalp Viktor? Jeg hadde en følelse om ham. Kona hans var...
+Text/25a/text,Hun stopper opp. Vi har flere allierte enn jeg trodde.
+Text/25b/text,"Sasha finner deg, med et kaldt uttrykk. Den agenten hadde en familie. Tre spirer hjemme."
+Text/25c/text,Jeg forstår frykt. Men [color=CRIMSON]frykt har konsekvenser[/color]. De vil bli behandlet innen morgenen.
+Text/25d/text,Jeg håper ditt plettfrie rulleblad er verdt det.
+Text/25e/text,Murphy smyger seg inn i kvarteret ditt. Hørte det var litt spenning på stasjonen din i kveld.
+Text/25f/text,[color=CHARTREUSE]Bra. Vi er i dette sammen nå.[/color] Ingen vei tilbake.
+Text/260/text,Murphys ansikt faller. Jeg... Jeg trodde du var med oss. Hva skjedde?
+Text/261/text,Morgendagens skift vil bli annerledes. Innsatsen har aldri vært høyere.
+Text/262/text,Men for første gang føler du at du er på den [color=CHARTREUSE]rette siden[/color]. Uansett hva det koster.
+Text/263/text,Agentens ansikt hjemsøker deg. Familien deres vil aldri vite hvorfor de ikke kom hjem.
+Text/264/text,[color=STEEL_BLUE]På grunn av deg.[/color]
+Choice/243/disabled_text,
+Choice/244/disabled_text,
+Choice/24c/disabled_text,
+Choice/24d/disabled_text,
+Choice/24e/disabled_text,

@@ -53,3 +53,40 @@ Choice/f3/disabled_text,
 Choice/f2/disabled_text,
 Choice/e0/disabled_text,
 Choice/df/disabled_text,
+Text/d2b/text,Sebelum kita mulai... ada pengakuan yang ingin kubuat.
+Text/d2c/text,"Catatan yang kau temukan di hari pertamamu? ""[color=GOLD]Seorang teman[/color]""?"
+Text/d2d/text,Sasha tersenyum. Kulihat kau menyimpannya. Cerdas. Aku tahu aku memilih tunas yang tepat.
+Text/d2e/text,"Aku sudah mengawasi petugas baru selama berbulan-bulan, mencari seseorang dengan [color=CHARTREUSE]mata yang mempertanyakan[/color]. Seseorang yang mungkin bisa melihat kebohongan."
+Text/d2f/text,Ekspresi Sasha rumit. Kau menunjukkannya pada Russet. Aku harus bersembunyi selama berminggu-minggu setelah itu.
+Text/d2g/text,Tapi kau tetap di sini. Itu memberitahuku sesuatu tentang hati nuranimu.
+Text/d2h/text,Kau menghancurkannya. Aku tidak menyalahkanmu - menyimpannya berisiko.
+Text/d2i/text,"Tapi kata-kata itu tetap masuk ke kepalamu, bukan?"
+Text/d2j/text,"[color=CHARTREUSE]Aku adalah ""Seorang teman.""[/color] Dan sekarang kau tahu alasannya."
+Text/d2k/text,Sasha menyebarkan dokumen yang disita di atas meja. Manifes pemrosesan dari bulan lalu.
+Text/d2l/text,"Kau memindai nama-nama itu, dan darahmu membeku."
+Text/d2m/text,Itu dia. [color=GOLD]Maris Piper[/color]. Wanita dari foto itu.
+Text/d2n/text,"""[color=CRIMSON]Status: Diproses. Batch RR-2847.[/color]"" Tertanggal tiga hari setelah suaminya memohon bantuanmu."
+Text/d2o/text,Kau merasakan foto di sakumu. [color=STEEL_BLUE]Dia sudah tiada. Dan kau tidak bisa menyelamatkannya.[/color]
+Text/d2p/text,Tapi mungkin... [color=CHARTREUSE]mungkin kau masih bisa menyelamatkan yang lain[/color].
+Text/d2q/text,Murphy muncul dari bayangan. Hei. Senang kau berhasil.
+Text/d2r/text,Murphy mengangkat formulir RR-UTIL yang kusut. Sepupuku juga ada di daftar itu. [color=CHARTREUSE]Kita lakukan ini bersama.[/color]
+Text/ff2/text,[color=STEEL_BLUE]Dia menjaga jarak saat kau berjalan.[/color] Aku menghargai kau tidak menghalangi kami. Itu... sesuatu.
+Text/ff3/text,"[color=STEEL_BLUE]Dia berjalan dalam diam, tangan bersedekap.[/color] Kuharap kau menemukan kepastian apa pun yang kau cari. Kami yang lain tidak bisa menunggu."
+Text/100_viktor1/text,"Dalam perjalanan kembali, kau menemukan Viktor sendirian di atap pos pemeriksaan, menatap langit malam."
+Text/100_viktor2/text,Viktor memegang sebuah
+Text/100_viktor3/text,"Dulu dia bilang bahwa seberapa pun gelapnya keadaan, bintang-bintang akan tetap ada. [color=STEEL_BLUE]Konstan. Indah.[/color]"
+Text/100_viktor4/text,"Dia menoleh padamu, matanya berkaca-kaca. [wave amp=15 freq=2]Aku terus berpikir... apakah dia menderita?[/wave] Apakah dia tahu apa yang terjadi?"
+Text/100_viktor5/text,Suara Viktor bergetar. Dia pernah bertanya padaku apakah aku pernah mempertanyakan penolakan. Aku bilang padanya [color=CRIMSON]untuk percaya pada sistem[/color].
+Text/100_viktor6/text,[tornado radius=3 freq=2][color=CRIMSON]Aku mengirim istriku sendiri ke bak pemrosesan tanpa menyadarinya.[/color][/tornado]
+Choice/100_viktor_choice1/text,Kau tidak mungkin tahu. Tak satu pun dari kita tahu.
+Choice/100_viktor_choice2/text,"Elena pasti ingin kau berjuang sekarang, bukan tenggelam dalam rasa bersalah."
+Choice/100_viktor_choice3/text,Aku tidak tahu harus berkata apa. Aku minta maaf.
+Text/100_viktor7/text,Dia menggelengkan kepalanya perlahan. [color=STEEL_BLUE]Ketidaktahuan bukanlah kepolosan. Seharusnya aku bertanya. Seharusnya aku mendengarkan.[/color]
+Text/100_viktor8/text,Viktor menyimpan foto itu dengan hati-hati. [color=CHARTREUSE]Tapi sekarang aku tahu. Dan mengetahui berarti aku harus bertindak.[/color]
+Text/100_viktor9/text,"Viktor menegakkan tubuh, api dingin kembali menyala di matanya. [color=CHARTREUSE]Kau benar.[/color] Dia lebih kuat dariku. Lebih berani."
+Text/100_viktor10/text,Dia mengepalkan tinjunya. [color=CHARTREUSE]Saat waktunya tiba
+Text/100_viktor11/text,[pulse freq=2][color=CRIMSON]Dan Idaho akan membayar untuk setiap nyawa yang telah dia renggut.[/color][/pulse]
+Text/100_viktor12/text,Viktor menampakkan raut sedih
+Text/100_viktor13/text,Dia kembali menatap bintang-bintang. [color=STEEL_BLUE]Elena pasti akan menyukaimu.[/color]
+Text/100_viktor14/text,"Dia berbalik untuk pergi, lalu berhenti. [color=CHARTREUSE]Saat perlawanan bergerak... Aku akan siap.[/color]"
+Text/100_viktor15/text,Untuk Elena. Untuk mereka semua. [pulse freq=2][color=CHARTREUSE]Para penjaga akan mengikutiku saat aku mengatakan kebenaran kepada mereka.[/color][/pulse]

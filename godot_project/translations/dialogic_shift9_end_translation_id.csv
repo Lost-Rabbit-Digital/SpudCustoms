@@ -14,3 +14,20 @@ Text/13c/text,Di ujung salah satu sabuk - Sasha dan yang lain [color=CRIMSON]ter
 Text/13d/text,[color=RED]KAU![/color] Aku seharusnya tahu kamu adalah salah satu dari mereka! Mundur atau aku mulai prosesor!
 Text/13e/text,"Saat pejuang resistensi mengalahkan Russet, Sasha mengarahkan ulang kamera fasilitas. [color=YELLOW]Rakyat Spud! Inilah Cadangan Akar! Mereka telah memberi makan kita satu sama lain![/color]"
 Text/13f/text,Kamu kembali untukku. [color=CHARTREUSE]Kita berhasil. Kebenaran sudah terungkap sekarang.[/color] Kita punya masa depan untuk dibangun!
+Text/140/text,"[color=STEEL_BLUE]Pemimpin perlawanan maju, senjatanya mengarah ke Russet.[/color] Jangan bergerak lagi, Russet. Angkat tanganmu agar aku bisa melihatnya."
+Text/141/text,"[color=CRIMSON]Mata Russet melirik antara kamu dan pemimpin perlawanan, keringat membasahi dahinya.[/color] Kau pikir kau sudah menang? Fasilitas ini adalah fondasi Spud!"
+Text/142/text,Fondasi penderitaan. [pulse freq=3][color=CHARTREUSE]Ini berakhir hari ini.[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]Sasha meronta melawan ikatannya di ban berjalan
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""Russet"
+Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""Ini... ini yang mereka lakukan? Ini lebih buruk dari yang kubayangkan...""[/color][/wave]"
+Choice/146/text,"[color=CHARTREUSE]""Sasha! Syukurlah kau masih hidup! Bertahanlah"
+Text/147/text,"[color=CRIMSON]Kau menyerbu ke arah Russet, mengepalkan tinju, nyaris tidak tertahan oleh pejuang perlawanan.[/color] Setiap kentang yang melewati pos pemeriksaanku... berapa banyak yang kau..."
+Text/148/text,Tenang! Kita membutuhkannya hidup-hidup untuk bersaksi. [color=STEEL_BLUE]Pemimpin tetap mengarahkan senjatanya ke Russet.[/color] Simpan amarahmu untuk pengadilan.
+Text/149/text,"[color=STEEL_BLUE]Kau terhuyung mundur, tangan menutupi mulut, menyadari kengerian penuh dari mesin-mesin itu.[/color] Aku mengecap dokumen mereka... Aku mengirim mereka ke sini..."
+Text/14a/text,[color=CHARTREUSE]Kau tidak tahu. Tidak ada dari kita yang tahu.[/color] Itulah mengapa kita ada di sini sekarang. Fokus!
+Text/14b/text,[color=CHARTREUSE]Kau bergegas ke ban berjalan
+Text/14c/text,[color=CHARTREUSE]Mata Sasha bersinar dengan air mata dan harapan saat tanganmu melepaskan ikatan.[/color] Aku tahu kau akan datang. Aku tidak pernah meragukanmu.
+Text/14d/text,[color=STEEL_BLUE]Pemimpin memaksa Russet berlutut di bawah todongan senjata.[/color] Ikat dia. Pastikan dia melihat apa yang akan terjadi selanjutnya.
+Text/14e/text,"[color=CHARTREUSE]Sasha menggenggam tanganmu, menyatukan jari-jarinya dengan jarimu.[/color] Kau kembali untukku. Apapun yang terjadi selanjutnya... kita hadapi bersama."
+Text/14f/text,"[color=STEEL_BLUE]Sasha mengamatimu dengan cermat, melihat kemarahan yang masih membara di matamu.[/color] Salurkan api itu. Kita akan membutuhkannya untuk apa yang akan terjadi selanjutnya."
+Text/150/text,[color=STEEL_BLUE]Sasha meletakkan tangan lembut di bahumu.[/color] Rasa bersalah itu bukan milikmu untuk ditanggung. Kau ada di sini sekarang. Itulah yang penting.

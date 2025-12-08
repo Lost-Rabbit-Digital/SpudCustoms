@@ -1,0 +1,18 @@
+﻿keys,ja
+Text/56/text,スパッド国へようこそ。全てのジャガイモに[pulse freq=2][color=MEDIUM_VIOLET_RED]繁栄をもたらす地[/color][/pulse]です。
+Text/57/text,あなたは我が国の国境を守るための[color=DARK_ORANGE]重要な役割[/color]に選ばれました。
+Text/59/text,見よ！我が国を守る[color=MEDIUM_VIOLET_RED]偉大なる壁[/color]を。ここがあなたの奉仕の場となる。価値ある者のみが入国を許されるよう、確実にせよ。
+Text/5a/text,ふむ、新芽か。よく聞け、お前の役割は[color=DARK_ORANGE]スパッドの安全保障に不可欠[/color]だ。
+Text/184/text,ラセットが不快なほど近くに寄る。ここには多くの新芽が来たのを見てきた。[color=STEEL_BLUE]ほとんどは長続きしない。[/color]
+Text/184b/text,質問が多すぎる奴らは？[color=CRIMSON]再配置[/color]される。永久に、な。
+Text/5b/text,貴様を[pulse freq=1][color=MEDIUM_VIOLET_RED]栄光あるスパッド[/color][/pulse]の税関職員に任命する。質問は？
+Choice/5c/text,「全身のデンプンを捧げて、スパッドに奉仕する準備はできています！」
+Choice/5d/text,「入国拒否されたジャガイモには、一体何が起こるのですか？」
+Text/5e/text,素晴らしい！そのような熱意こそ、我々が必要としているものだ。あなたは[color=VIOLET]根源貯蔵庫[/color]からの表彰を受けるかもしれません。
+Text/5f/text,彼らは…[color=VIOLET]処理[/color]される。規定に従って。[color=VIOLET]根源貯蔵庫[/color]が全ての詳細を扱う。
+Text/60/text,職務に集中しろ。[color=DARK_ORANGE]それ以上は何も。[/color]
+Text/61/text,君の最初のシフトが今始まる。書類を注意深く確認し、我々の基準を満たさない者は拒否しろ。
+Text/62/text,ノルマを達成し、ストライクを避けろ。
+Text/62b/text,そして、忘れるな、[color=MEDIUM_VIOLET_RED]スパッドに栄光あれ！[/color]
+Choice/5c/disabled_text,
+Choice/5d/disabled_text,

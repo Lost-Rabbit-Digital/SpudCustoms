@@ -32,3 +32,32 @@ Choice/c4/disabled_text,
 Choice/c5/disabled_text,
 Choice/cb/disabled_text,
 Choice/cc/disabled_text,
+Text/c7_viktor1/text,Roteva vartija lähestyy tauollasi. Hänen kasvonsa ovat riutuneet.
+Text/c7_viktor2/text,"Hei... sinä olet yksi tullivirkailijoista, eikö niin? Olen kysellyt vaimostani, Elenasta."
+Text/c7_viktor3/text,Hän ylitti tämän tarkastuspisteen kolme viikkoa sitten. [color=STEEL_BLUE]Tarkastus epäonnistui.[/color] En ole kuullut hänestä sen jälkeen.
+Choice/c7_viktor4/text,"""Viktor... Löysin jotain. Elenasta. Sinun täytyy tietää totuus."""
+Choice/c7_viktor5/text,"""Olen pahoillani, Viktor. En ole nähnyt mitään."""
+Text/c7_viktor6/text,Näytät hänelle kopion manifestisivusta. Hänen kasvonsa kalpenevat.
+Text/c7_viktor7/text,[wave amp=25 freq=3]Hänen kätensä vapisevat lukiessaan.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Käsitelty... Erä RR-2851...[/color]
+Text/c7_viktor8/text,Hänen äänensä on tuskin kuiskauksena. [tornado radius=3 freq=2][color=CRIMSON]He... he TEKIVÄT hänestä...[/color][/tornado]
+Text/c7_viktor9/text,Hänen surunsa muuttuu kylmäksi raivoksi. [pulse freq=2][color=CRIMSON]Idaho maksaa tästä.[/color][/pulse] Vannon sen hänen muistolleen.
+Text/c7_viktor10/text,"Hän tarttuu olkapähäsi. [color=CHARTREUSE]Kiitos, että kerroit minulle.[/color] Kun aika koittaa... muistan tämän."
+Text/c7_viktor11/text,Hän nyökkää surullisesti. [color=STEEL_BLUE]Niin arvelinkin.[/color] Kukaan ei tiedä mitään. Tai kukaan ei halua puhua.
+Text/c7_viktor12/text,"Jos kuulet jotain... [color=YELLOW]pyydän.[/color] Hän on kaikki, mitä minulla on."
+Text/d0_qte1/text,"Myöhemmin vuoron aikana matkustaja lähestyy papereilla, joissa on [color=CHARTREUSE]hienovarainen vastarintamerkki[/color]."
+Text/d0_qte2/text,[color=DARK_ORANGE]RealityScan[/color] aloittaa skannauksensa. [wave amp=15 freq=3][color=RED]Se havaitsee merkin kohta![/color][/wave]
+Text/d0_qte3/text,Sinulla on sekunteja aikaa päättää. Skanneri lämpenee...
+Choice/d0_qte4/text,"""Teeskentele skannerin toimintahäiriö - nopeasti!"""
+Choice/d0_qte5/text,"""Anna skannerin suorittaa skannaus loppuun"""
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]Sinun on toimittava nopeasti![/color][/pulse] Laukaise toimintahäiriö ennen kuin se lopettaa skannauksen!
+Text/d0_qte7/text,Sählät skannerin kaapeleiden kanssa. Kipinöitä lentää. Näyttö välähtää ja sammuu.
+Text/d0_qte8/text,Russet ryntää paikalle. [color=YELLOW]Mitä täällä tapahtui?[/color]
+Choice/d0_qte9/text,"""Virtapiikki, herra. Nämä uudet järjestelmät ovat oikukkaita."""
+Choice/d0_qte10/text,"""En tiedä, herra. Se vain sammui."""
+Text/d0_qte11/text,Russet murahtaa. [color=STEEL_BLUE]Byrokraatit antavat meille testaamattomia laitteita.[/color] Käsittele heidät manuaalisesti ja merkitse uudelleentarkastettavaksi.
+Text/d0_qte12/text,Russet katsoo sinua epäluuloisesti. [color=YELLOW]Kuinka kätevää.[/color] Pyydän huollon tarkistamaan sen. Älä anna tämän tapahtua uudelleen.
+Text/d0_qte13/text,Vastarintaliikkeen jäsen nyökkää sinulle hieman kiitollisena heidän kulkiessaan läpi.
+Text/d0_qte14/text,Skanneri [pulse freq=3][color=RED]PIIPPAA KOVAASTI[/color][/pulse]. Luvattomia merkintöjä havaittu!
+Text/d0_qte15/text,Russet ilmestyy välittömästi. [color=CHARTREUSE]Hyvin tehty![/color] Toinen petturi napattu.
+Text/d0_qte16/text,"Vastarintaliikkeen jäsen raahataan pois, kauhu silmissään. ""[color=CRIMSON]Ei, pyydän! Minulla on lapsia![/color]"""
+Text/d0_qte17/text,Uskollisuutesi on [color=DARK_ORANGE]kirjattu tiedostoosi[/color]. Jatka samaan malliin.

@@ -1,0 +1,88 @@
+﻿keys,ar
+Text/11/text,حدود السبود في [pulse freq=3][color=CRIMSON]فوضى[/color][/pulse]. تتدفق البطاطا المذعورة على نقاط التفتيش، يائسة للهروب بعد تسريب الوثائق.
+Text/12/text,تتسلل مع ساشا. [wave amp=20 freq=3][color=CHARTREUSE]علينا أن نستمر في التقدم![/color][/wave] الناس يعرفون الحقيقة الآن.
+Text/13/text,لا يمكنهم إسكات الحقيقة بعد الآن. إذا تمكنا من التسلل إلى منشأة [color=DARK_VIOLET]احتياطي الجذور[/color] وبث الأدلة، فسيشعل [tornado radius=3 freq=2][color=CHARTREUSE]الثورة[/color][/tornado].
+Text/14/text,ذلك المكان حصن. والآن لدينا [color=YELLOW]عميل جمارك سابق[/color] بيننا. تضيق أعينهم نحوك بارتياب.
+Choice/15/text,أتفهم شكوككم، لكنني ملتزم بهذه القضية.
+Choice/16/text,لقد ضحيت بكل شيء بالفعل. لن أتراجع الآن.
+Text/17/text,كلمات جميلة. لكننا سمعنا هذا من قبل.
+Text/18/text,لقد ساعدونا في الحصول على الوثائق. هذا فعل، لا أقوال.
+Text/19/text,لا يمكن العودة لكونك سبودًا مخلصًا الآن. مرحبًا بك في المقاومة، رفيق.
+Text/1a_rescue1/text,يندفع كشاف. وجدناها! [color=CHARTREUSE]ساشا في جناح الاحتجاز![/color]
+Text/1a_rescue2/text,إنهم يستعدون لـ... [tornado radius=3 freq=2][color=CRIMSON]معالجتها[/color][/tornado]... في أقل من ساعة!
+Text/1a_rescue3/text,يجب أن ننقذها. [pulse freq=2][color=CHARTREUSE]هي من بدأت كل هذا.[/color][/pulse] لن نغادر بدونها.
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]اندفع عبر المنشأة![/color][/wave] اصل إلى ساشا قبل فوات الأوان!
+Text/1a_rescue_fail1/text,تتعثر. الطريق أمامك مسدود بالحراس!
+Text/1a_rescue_fail2/text,يقتحم فيكتور بابًا جانبيًا. [color=CHARTREUSE]اذهب! سأصدهم![/color]
+Text/1a_rescue_fail3/text,من أجل إيلينا. من أجلهم جميعًا. [color=STEEL_BLUE]لن أسمح بموت آخر![/color]
+Text/1a_rescue_fail4/text,يسحب مورفي جرس إنذار الحريق. [color=CHARTREUSE]من أجل تومي![/color] الرشاشات تعمي الحراس!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]سأخلق إلهاءً. أخرجها من هناك![/color]
+Text/1a_rescue_fail6/text,[color=YELLOW]يتعطل سير معالجة[/color]، يطلق شرارات ويشتت انتباه الحراس!
+Text/1a_rescue_fail7/text,القدر - أو أشباح المعالجين - يمنحك فرصة ثانية.
+Text/1a_rescue5/text,ترفع ساشا نظرها من زنزانتها، مصابة بكدمات لكنها غير مكسورة. تتسع عيناها. [color=CHARTREUSE]لقد أتيت.[/color]
+Text/1a_rescue6/text,بالطبع أتيت. [color=CHARTREUSE]سننهي هذا معًا.[/color]
+Choice/1a_rescue7/text,كنت خائفًا ألا أراك مرة أخرى أبدًا.
+Choice/1a_rescue8/text,لقد جعلتنا نقلق بشدة. لا تفعل ذلك مرة أخرى.
+Choice/1a_rescue9/text,لدينا عمل لنقوم به. أيداهو تنتظر.
+Text/1a_rescue10/text,[color=CHARTREUSE]تسحبك ساشا إلى عناق قصير.[/color] كنت أعلم أنك ستأتي. لم أشك أبدًا.
+Text/1a_rescue11/text,الآن لنجعلهم يدفعون ثمن كل من أخذوهم. [color=CHARTREUSE]معًا.[/color]
+Text/1a_rescue12/text,تتمكن ساشا من ابتسامة ضعيفة رغم ألمها. [color=STEEL_BLUE]سأحاول.[/color] لكن بعض الأشياء تستحق المخاطرة.
+Text/1a_rescue13/text,وجودك هنا يثبت ذلك. الآن دعنا ننهي هذا.
+Text/1a_rescue14/text,تومئ ساشا برأسها، وقد تجدد عزمها. [color=CHARTREUSE]أنت محق.[/color] المشاعر يمكن أن تنتظر.
+Text/1a_rescue15/text,يعتقد أيداهو أنه فاز. دعنا نريه كم هو مخطئ.
+Text/1a/text,بعد تسلل متوتر، يقف فريقك في قلب [color=DARK_VIOLET]محمية الجذور[/color]، حيث تتكشف [pulse freq=3][color=CRIMSON]الآلة المروعة للقمع[/color][/pulse].
+Text/1b/text,[wave amp=25 freq=3][color=RED]تصدح الإنذارات[/color][/wave] بينما يتدافع الحراس للرد على تسللكم. تركضون عبر الممرات، متفادين أنظمة الأمن.
+Text/1c/text,"تومض شاشة. ""حسنًا حسنًا، [color=CRIMSON]الخائن[/color] يعود مع حثالة المتمردين."""
+Text/1d/text,هل ظننت أنك تستطيع إيقاف تقدم سبود؟ [color=DARK_VIOLET]محمية الجذور[/color] هي شريان الحياة لهذه الأمة.
+Text/1e/text,لكن لا تقلق. ستظل تخدم سبود... [tornado radius=4 freq=3][color=DARK_VIOLET]في أحواض المعالجة![/color][/tornado]
+Text/1f/text,تصبح الشاشة سوداء فجأة.
+Text/20/text,"تلتفت إلى الآخرين بعزم. ""علينا الوصول إلى مخبأ أيداهو. الآن!"""
+Text/158/text,قوات الأمن تقترب! [pulse freq=3][color=YELLOW]قاتلوا في طريقكم![/color][/pulse]
+Text/21_fail1/text,يقترب الحراس من كل اتجاه. [color=CRIMSON]لا يوجد مكان للهروب![/color]
+Text/21_fail2/text,يظهر فيكتور خلف الحراس، صوته بارد كالفولاذ. [color=STEEL_BLUE]تراجعوا. الآن.[/color]
+Text/21_fail3/text,يتردد الحراس - فيكتور كان واحدًا منهم. [color=CRIMSON]اسم إيلينا موجود في تلك الكشوفات. عائلاتكم قد تكون التالية.[/color]
+Text/21_fail4/text,يخفض بعض الحراس أسلحتهم. يفر آخرون. يتضح المسار.
+Text/21_fail5/text,"يهز انفجار الجناح الشرقي. صوت مورفي يخشخش عبر أجهزة الاتصال: [color=CHARTREUSE]""هذا هو إلهائي! تحركوا!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]يتشتت الحراس نحو الانفجار. تومي سيفخر.[/color]
+Text/21_fail7/text,تتصدى ساشا للحارس الرئيسي من الخلف. [color=CHARTREUSE]لم أنجُ من تلك الزنزانة لأشاهدك تموت وحسب![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]اركض! أنا سأتولى الأمر![/color]
+Text/21/text,تقاتل مجموعتكم عبر موجات من الأمن، متجنبين الأسر بصعوبة. يخلق مقاتلو المقاومة التابعون لساشا تحويلات، مما يفتح طريقكم للأمام.
+Text/22/text,بعد هروب مروع عبر أنفاق الصيانة، تصلون أخيرًا إلى المصعد الآمن المؤدي إلى مخبأ أيداهو الخاص.
+Text/23/text,مع ساشا وحلفائك إلى جانبك، تواجه أيداهو أخيرًا.
+Text/24/text,انتهى الأمر، أيداهو. انكشفت أسرارك. كيف سينتهي هذا... [pulse freq=2]هذا يعود إليك.[/pulse]
+Choice/25/text,تفاوض على انتقال سلمي للسلطة (دبلوماسي)
+Choice/26/text,طالب بالقبض الفوري على أيداهو (عدالة)
+Choice/27/text,نفّذ عدالة شخصية لجرائم أيداهو (انتقام)
+Choice/28/text,ركز على تفكيك البنية التحتية لـ [color=DARK_VIOLET]روت ريزيرف[/color] (تفكيك)
+Text/29/text,أيداهو، لا يجب أن ينتهي الأمر بمزيد من إراقة الدماء. إذا تعاونت...
+Text/2a/text,أوه، أيها [color=STEEL_BLUE]الأحمق المثالي[/color]. هل تظن أن هذا تفاوض؟
+Text/2b/text,"يضغط أيداهو على زر بقوة، و[color=RED]تبدأ الإنذارات بالصياح[/color]. ""الشيء الوحيد الذي سأمنحك إياه هو [color=DARK_VIOLET]رحلة بلا عودة إلى أحواض القلي![/color]"""
+Text/2c/text,لا أظن ذلك، أيداهو. أيها الحراس! لقد رأيتم الملف، [color=YELLOW]أنتم تعلمون ما فعله بعائلاتكم.[/color]
+Text/2d/text,يتقدم حارس ضخم ويركل أيداهو أرضاً بسرعة.
+Text/2e/text,يتردد صدى طلقة في الغرفة. تتلاشى الشاشة إلى السواد.
+Text/2f/text,أيداهو، باسم شعب البطاطا في سبود، [color=CHARTREUSE]أنت رهن الاعتقال![/color]
+Text/30/text,انتهى الأمر. لقد قال الشعب كلمته. [color=CHARTREUSE]سنبني سبود جديدة حيث جذورنا في التراب، لا في المعاناة.[/color]
+Text/31/text,لن يكون هناك [color=CRIMSON]لا صفقات ولا رحمة[/color] لك يا أيداهو. عدالة الطغاة هي كل ما تستحقه.
+Text/32/text,تصفية حسابات. هذا ما أنا عليه. [color=CHARTREUSE]مقابل كل بطاطا ضُحّي بها، نستعيد مستقبلنا![/color]
+Text/33/text,انسوه. إنه عرض، لا المرض. [color=CHARTREUSE]اهدموا كل جذر وساق لهذه الوحشية.[/color]
+Text/34/text,يجب أن نذهب! الآن!
+Text/35/text,سقوط [color=DARK_VIOLET]روت ريزيرف[/color] يشعل شرارة تغيير عارم في جميع أنحاء سبود.
+Text/36/text,تنهض البطاطا في كل مقاطعة، متبنية [color=CHARTREUSE]رؤية جديدة لأمتهم[/color].
+Text/37/text,طالما بقينا أوفياء لجذورنا، للمثل العليا التي أوصلتنا إلى هنا... [color=CHARTREUSE]سنجد طريقة.[/color]
+Text/38/text,وهكذا، من رماد سبود القديمة، [color=CHARTREUSE]تبدأ أمة جديدة في التجذر[/color]. انتهى عهد [color=DARK_VIOLET]روت ريزيرف[/color].
+Text/151/text,[color=CHARTREUSE]تقترب ساشا، وتجد يدها يدك بينما تشاهدان الفجر الجديد معاً.[/color] لقد بنينا هذا. أنا وأنت.
+Text/152/text,طالما بقينا أوفياء لجذورنا، للمثل العليا التي أوصلتنا إلى هنا... [color=CHARTREUSE]سنجد طريقة.[/color] معاً.
+Text/153/text,[color=CHARTREUSE]تضغط على يدها. معاً.[/color]
+Text/154/text,[color=STEEL_BLUE]تقف ساشا بجانبك.[/color] نارك أشعلت الشرارة التي أحرقت إمبراطوريتهم.
+Text/155/text,[color=STEEL_BLUE]خفت حدة الغضب وتحول إلى تصميم. لا يزال هناك عمل يجب إنجازه.[/color]
+Text/156/text,[color=STEEL_BLUE]ساشا تبتسم لك ابتسامة داعمة.[/color] لقد قطعت شوطًا طويلاً منذ تلك النقطة الحدودية. كلنا فعلنا ذلك.
+Text/157/text,[color=STEEL_BLUE]قد لا يتلاشى الشعور بالذنب تمامًا أبدًا، لكنك وجدت هدفًا في إعادة البناء.[/color]
+Choice/15/disabled_text,
+Choice/16/disabled_text,
+Choice/25/disabled_text,
+Choice/26/disabled_text,
+Choice/27/disabled_text,
+Choice/28/disabled_text,
+Choice/1a_rescue7/disabled_text,
+Choice/1a_rescue8/disabled_text,
+Choice/1a_rescue9/disabled_text,

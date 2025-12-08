@@ -17,3 +17,6 @@ Text/a4/text,Esto lo prueba todo. La resistencia hará copias. [tornado radius=3
 Text/a5/text,"Has cruzado una línea. [wave amp=20 freq=3][color=YELLOW]No hay vuelta atrás.[/color][/wave] Cuando la verdad se extienda, Spud será transformado."
 Choice/9c/disabled_text,
 Choice/9d/disabled_text,
+Text/9a_viktor1/text,Escaneas los nombres en el manifiesto... y uno destaca. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,Ese nombre... lo has oído antes. El guardia de seguridad Viktor mencionó que su esposa estaba desaparecida.
+Text/9a_viktor3/text,"""[color=CRIMSON]Estado: Procesado. Lote RR-2851.[/color]"" Fechado hace dos semanas."

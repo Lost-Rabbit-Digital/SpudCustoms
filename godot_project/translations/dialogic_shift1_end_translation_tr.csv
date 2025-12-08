@@ -5,3 +5,27 @@ Text/52/text,Masandaki bazı kağıtlardan küçük bir not kayıyor.
 Text/53/text,"[color=GOLD]Her şey göründüğü gibi değil. Ulusumuzun kökleri çürümüş. [br] İzini takip et, ama susturulmamaya dikkat et.[/color] [br] - [color=CHARTREUSE]Bir arkadaş[/color]"
 Text/54/text,O not... ve Russet'in [pulse freq=3][color=CRIMSON]reddedilen patatesler[/color][/pulse] hakkındaki sorumu nasıl geçiştirdiği... [br] Bir şeyler [color=STEEL_BLUE]yolunda değil[/color].
 Text/55/text,Uyanık [color=YELLOW]kalmalıyım[/color]. Burada pasaport damgalamaktan daha fazlası var.
+Text/52b/text,Bu sabah orada değildi. Biri onu [color=YELLOW]vardiyanız sırasında[/color] yerleştirdi.
+Text/53b/text,"[color=GOLD]İzi takip et, ama susturulmamaya dikkat et.[/color]"
+Text/53c/text,[color=GOLD]Kimlerin [/color][color=DARK_VIOLET]Rezerv[/color][color=GOLD]'i yediğini izle. Kimlerin reddettiğini izle.[/color]
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]Bir dost[/color]
+Choice/53e/text,"""Notu gizli tut - sessizce araştır"""
+Choice/53f/text,"""Notu yok et - bu bir test olabilir"""
+Choice/53g/text,"""Notu hemen Russet'e göster"""
+Text/53h/text,Notu dikkatlice katlayıp cebine kaydırdın. [color=CHARTREUSE]Biri sana ulaşmaya çalışıyor.[/color]
+Text/53i/text,"Ama kim? Ve neden sen, ilk gününde?"
+Text/53j/text,Notu minik parçalara ayırdın
+Text/53k/text,"Russet, soru soran filizlerin ""başka yere atandığını"" söyledi. Risk almamak daha iyi."
+Text/53l/text,"Russet'i ayrılmadan yakaladın. ""Efendim? Bunu evraklarımda buldum..."""
+Text/53m/text,"Russet notu kaptı, okudu. İfadesi değişti - [color=YELLOW]bu bir tanıma mıydı?[/color]"
+Text/53n/text,Propaganda. Asiler yeni memurları yozlaştırmaya çalışıyor. [color=DARK_ORANGE]Bunu bana getirmekle doğru yaptın.[/color]
+Text/53o/text,Notu cebine attı. Onu hiç görmediğini unut. Ve... [color=CRIMSON]şüpheli[/color] davranan herkese dikkat et.
+Text/54b/text,"""[color=VIOLET]İşlem tamamlandı. Protokole uygun.[/color]"" Bu ne anlama geliyor ki?"
+Text/54c/text,O not... köklerin [color=CRIMSON]çürümüş[/color] olduğunu söylüyordu.
+Text/54d/text,"Ama Spud görkemli, değil mi? Bize öyle söylediler. Benim de inandığım buydu."
+Text/54e/text,"Notu çıkarıp tekrar okudun. ""[color=GOLD]Kimlerin Rezerv'i yediğini izle. Kimlerin reddettiğini izle.[/color]"""
+Text/54f/text,Yarın dikkat edeceksin. [color=YELLOW]Biri sana bir şeyler anlatmaya çalışıyor.[/color]
+Text/54g/text,Russet'in notu okuduğundaki yüzü. Sadece bir anlığına neredeyse... [color=STEEL_BLUE]korkmuş[/color] görünüyordu.
+Text/54h/text,[color=DARK_VIOLET]Kök Rezervi[/color] gerçekten ne? Ve neden biri seni bunun hakkında uyarsın ki?
+Text/54i/text,"Not gitmiş, ama kelimeler akılda kalmış. [color=YELLOW]Her şey göründüğü gibi değil.[/color]"
+Text/54j/text,Belki de onu yok etmek akıllıca bir seçimdi. Belki de tek müttefikini susturdun.

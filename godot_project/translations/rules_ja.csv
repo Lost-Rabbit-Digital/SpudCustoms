@@ -1,0 +1,39 @@
+﻿keys,ja
+LAWS,規則
+msg_not_fresh,ジャガイモは%sでしたが、新鮮でなければなりません
+msg_extra_eyes,ジャガイモに余分な芽がありましたが、これは禁止されています
+msg_rotten,腐ったジャガイモは禁止されています
+msg_sprouted,芽が出たジャガイモは禁止されています
+msg_dehydrated,乾燥したジャガイモは本日は禁止されています
+msg_frozen,冷凍されたジャガイモは禁止されています
+msg_over_age,ジャガイモは%d歳です (最大5歳)
+msg_under_age,ジャガイモは%d歳です (3歳以上でなければなりません)
+law_fresh_potatoes,[color=dark_goldenrod]新鮮なジャガイモのみ[/color]許可 - その他は[color=dark_red]却下[/color]
+law_extra_eyes,[color=dark_goldenrod]余分な芽[/color]のあるジャガイモは[color=dark_red]却下[/color]しなければなりません
+law_rotten,[color=dark_goldenrod]腐った[/color]ジャガイモは[color=dark_red]却下[/color]しなければなりません
+law_sprouted,[color=dark_goldenrod]芽が出た[/color]ジャガイモは[color=dark_red]却下[/color]しなければなりません
+law_dehydrated,[color=dark_goldenrod]乾燥した[/color]ジャガイモは[color=dark_red]却下[/color]しなければなりません
+law_frozen,[color=dark_goldenrod]冷凍された[/color]ジャガイモは[color=dark_red]却下[/color]しなければなりません
+law_over_5_years,[color=dark_goldenrod]5歳以上[/color]のジャガイモは[color=dark_red]却下[/color]しなければなりません
+law_under_3_years,[color=dark_goldenrod]3歳以下[/color]のジャガイモは[color=dark_red]却下[/color]しなければなりません
+law_under_2_years,[color=dark_goldenrod]2歳以下[/color]のジャガイモは[color=dark_red]却下[/color]しなければなりません
+law_males_only,[color=dark_goldenrod]オス[/color]のジャガイモのみ許可 - メスはすべて[color=dark_red]却下[/color]
+law_females_only,[color=dark_goldenrod]メス[/color]のジャガイモのみ許可 - オスはすべて[color=dark_red]却下[/color]
+law_country_spudland,[color=dark_goldenrod]スパッドランド[/color]出身の[color=dark_goldenrod]全て[/color]のジャガイモは[color=dark_red]却下[/color]しなければなりません
+law_country_potatopia,[color=dark_goldenrod]ポテトピア[/color]出身の[color=dark_goldenrod]全て[/color]のジャガイモは[color=dark_red]却下[/color]しなければなりません
+law_country_tuberstan,[color=dark_goldenrod]チューバースタン[/color]出身の[color=dark_goldenrod]全て[/color]のジャガイモは[color=dark_red]却下[/color]しなければなりません
+law_country_north_yamnea,[color=dark_goldenrod]北ヤムネア[/color]出身の[color=dark_goldenrod]全て[/color]のジャガイモは[color=dark_red]却下[/color]しなければなりません
+law_country_spuddington,[color=dark_goldenrod]スパディントン[/color]出身の[color=dark_goldenrod]全て[/color]のジャガイモは[color=dark_red]却下[/color]しなければなりません
+law_country_tatcross,[color=dark_goldenrod]タットクロス[/color]産ジャガイモは[color=dark_goldenrod]全て[/color][color=dark_red]拒否[/color]しなければならない
+law_country_mash_meadows,[color=dark_goldenrod]マッシュメドウズ[/color]産ジャガイモは[color=dark_goldenrod]全て[/color][color=dark_red]拒否[/color]しなければならない
+law_country_tuberville,[color=dark_goldenrod]チューバービル[/color]産ジャガイモは[color=dark_goldenrod]全て[/color][color=dark_red]拒否[/color]しなければならない
+law_country_chip_hill,[color=dark_goldenrod]チップヒル[/color]産ジャガイモは[color=dark_goldenrod]全て[/color][color=dark_red]拒否[/color]しなければならない（輸出禁止）
+law_country_murphyland,[color=dark_goldenrod]マーフィーランド[/color]産ジャガイモは[color=dark_goldenrod]全て[/color][color=dark_red]拒否[/color]しなければならない
+law_country_colcannon,[color=dark_goldenrod]コルカノン[/color]産ジャガイモは[color=dark_goldenrod]全て[/color][color=dark_red]拒否[/color]しなければならない
+law_country_pratie_point,[color=dark_goldenrod]プラティポイント[/color]産ジャガイモは[color=dark_goldenrod]全て[/color][color=dark_red]拒否[/color]しなければならない
+law_purple_majesty,[color=dark_goldenrod]パープルマジェスティ[/color]種のジャガイモは[color=dark_red]拒否[/color]しなければならない
+law_sweet_potatoes,[color=dark_goldenrod]サツマイモ[/color]は[color=dark_red]拒否[/color]しなければならない（許可証なし）
+law_yukon_gold,[color=dark_goldenrod]ユーコンゴールド[/color]種のジャガイモは[color=dark_red]拒否[/color]しなければならない
+law_fingerling,[color=dark_goldenrod]フィンガーリング[/color]種のジャガイモは[color=dark_red]拒否[/color]しなければならない
+law_red_bliss,[color=dark_goldenrod]レッドブリス[/color]種のジャガイモは[color=dark_red]拒否[/color]しなければならない
+law_russet,[color=dark_goldenrod]ラセット[/color]種のジャガイモは[color=dark_red]拒否[/color]しなければならない

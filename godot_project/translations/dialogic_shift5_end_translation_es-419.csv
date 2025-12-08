@@ -1,0 +1,22 @@
+﻿keys,es-419
+Text/96/text,"Te arrastras por el pasillo oscuro, con el corazón latiéndote mientras evitas las patrullas de seguridad."
+Text/97/text,[color=CHARTREUSE]Este dispositivo desactivará la cerradura[/color] de la oficina de Russet. Activaré las alarmas en el ala este como distracción. Tendrás cinco minutos.
+Text/98/text,"""Los manifiestos deben estar en su archivador. [color=CRIMSON]Carpeta roja con la etiqueta 'RR Transport'[/color]. No dejes evidencia de tu búsqueda."""
+Text/99/text,Encuentras la gruesa [color=CRIMSON]carpeta roja con la etiqueta 'RR Transport'[/color] en el archivador.
+Text/9a/text,"Dentro hay manifiestos que coinciden con los recuentos de patatas rechazadas, y una directiva del Primer Ministro Idaho que autoriza ""[pulse freq=3][color=DARK_VIOLET]la utilización total de los rechazados de la frontera para la producción de RR.[/color][/pulse]"""
+Text/9a_viktor1/text,Escaneas los nombres en el manifiesto... y uno resalta. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,Ese nombre... lo has oído antes. El guardia de seguridad Viktor mencionó que su esposa estaba desaparecida.
+Text/9a_viktor3/text,"""[color=CRIMSON]Estado: Procesada. Lote RR-2851.[/color]"" Fechado hace dos semanas."
+Text/9b/text,"Pasos se acercan a la puerta de la oficina. ""[wave amp=15 freq=3][color=YELLOW]Extraño, juraría que la había cerrado con llave.[/color][/wave]"""
+Choice/9c/text,"""Esconderse debajo del escritorio"""
+Choice/9d/text,"""Saltar por la ventana"""
+Text/9e/text,"Te zambulles debajo del escritorio de Russet mientras él entra, con el corazón latiéndote. Él se sienta, sus pies a centímetros de tu cara."
+Text/9f/text,"""Russet al habla. ¿Qué? [color=CHARTREUSE]¿Otra alarma?[/color] Ya voy."" Él se va, y tú escapas."
+Text/a0/text,"Abres la ventana de golpe y saltas. Afortunadamente, es solo un piso. Un guardia grita: ""[color=RED]¡Oye! ¡Detente![/color]"""
+Text/a1/text,Corres a toda velocidad por los terrenos y logras despistar a tus perseguidores.
+Text/a2/text,¿Lo conseguiste?
+Text/a3/text,"Entregas la evidencia, explicando lo que encontraste."
+Text/a4/text,Esto lo prueba todo. La resistencia hará copias. [tornado radius=3 freq=2]Difundan la verdad por todas partes.[/tornado] No pueden silenciarnos a todos.
+Text/a5/text,"Has cruzado una línea. [wave amp=20 freq=3][color=YELLOW]No hay vuelta atrás.[/color][/wave] Cuando la verdad se difunda, Spud será transformado."
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,

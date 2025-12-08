@@ -1,0 +1,163 @@
+﻿keys,ja
+main_menu_feedback,フィードバックとバグ
+main_menu_version,バージョン 1.2.0
+main_menu_new_game,ニューゲーム
+main_menu_continue,コンティニュー
+main_menu_level_select,レベル選択
+main_menu_score_attack,スコアアタック
+main_menu_options,オプション
+main_menu_credits,クレジット
+main_menu_exit,終了
+select_language,言語
+social_discord_tooltip,Discordに参加しよう！
+social_steam_tooltip,Steamにアクセス
+social_twitch_tooltip,Twitch連携
+twitch_status_disabled,無効
+twitch_status_no_viewers,待機中の視聴者なし
+twitch_status_ready,{count}人の視聴者が準備完了
+twitch_connection_disabled,無効
+twitch_connection_disconnected,未接続
+twitch_connection_connected,接続済み
+twitch_connection_connecting,接続中...
+options_menu_title,オプション
+options_difficulty,難易度
+options_difficulty_easy,イージー
+options_difficulty_normal,ノーマル
+options_difficulty_expert,エキスパート
+options_music_volume,BGM音量
+options_sfx_volume,SE音量
+options_camera_shake,画面揺れ
+options_back,戻る
+paused_menu_title,ポーズ
+shift_summary_title,シフト概要
+shift_summary_continue,続行
+shift_summary_restart,やり直す
+shift_summary_main_menu,メインメニュー
+shift_summary_submit_score,スコア送信
+shift_summary_runner_stats,逃亡者統計
+shift_summary_document_stats,書類統計
+shift_summary_performance,業務成績
+shift_summary_bonuses,ボーナス
+time_format,{minutes}分 {seconds}秒
+shift_complete_success,シフト{shift}完了\n成功！
+shift_complete_failure,シフト{shift}完了\n{failure}
+strike_limit_reached,ストライク上限到達！
+quota_not_met,ノルマ未達成！
+shift_summary_title_with_difficulty,シフト概要\n{difficulty}
+runner_stats_template,\n逃亡者統計\n逃亡者試行回数: {runner_attempts}\nミサイル発射数: {fired}\n命中した逃亡者数: {hit}\nパーフェクトヒット: {perfect}\n命中率: {rate}%
+document_stats_template,\n書類統計\n押印した書類数: {stamped}\n承認したジャガイモ: {approved}\n却下したジャガイモ: {rejected}\nパーフェクト押印: {perfect_stamps}
+bonus_stats_template,ボーナス\n処理速度ボーナス: {processing_speed_bonus}\n押印精度ボーナス: {accuracy}\nパーフェクトヒットボーナス: {perfect_hit_bonus}\n合計スコアボーナス: {total_score_bonus}
+performance_stats_template,\n業務成績\n所要時間: {time_taken}\n予想スコア: {expected_score}\n合計スコア: {score}\nスコア超過率: {percent}%\n業務評価:\n{rating}
+performance_exceptional,素晴らしい！
+performance_excellent,素晴らしい！
+performance_good,良い
+performance_needs_improvement,改善の余地あり
+performance_poor,悪い
+global_leaderboard_title,グローバルリーダーボード\n- {difficulty}
+getting_leaderboard_scores,リーダーボードスコアを取得中...
+reset_game_label,ゲームをリセット :
+reset_game_button,リセット
+mute_label,ミュート
+fullscreen_label,フルスクリーン :
+resolution_label,解像度 :
+antialiasing_label,アンチエイリアシング :
+screenshake_label,画面揺れ :
+mouse_sens_label,マウス感度 :
+Loading…,ロード中...
+You lose.,ゲームオーバー
+You won!,勝利！
+Thanks for playing!,ごプレイありがとうございました！
+Please Confirm...,確認...
+Go back to main menu?,メインメニューに戻りますか？
+Quit the game?,ゲームを終了しますか？
+Cancel,キャンセル
+OK,OK
+Controls,操作方法
+Mouse Sensitivity :,Mouse Sensitivity :
+Actions & Inputs,アクションと入力
+Add,Add
+Remove,削除
+Assign Key for {action},{action}にキーを割り当てる
+Listening for input...,入力待機中...
+Press again to confirm...,もう一度押して確定...
+Focus here to assign inputs.,ここにフォーカスして入力を割り当てる。
+Already Assigned,既に割り当て済み
+{key} already assigned to {action}.,{key}は既に{action}に割り当てられています。
+Remove Key for {action},{action}のキーを削除
+Are you sure you want to remove {key} from {action}?,{action}から{key}を削除してもよろしいですか？
+Reset,リセット
+Audio,オーディオ
+Master :,Master :
+Music :,Music :
+SFX :,SFX :
+Ambient :,Ambient :
+Mute :,Mute :
+Video,ビデオ
+Fullscreen :,Fullscreen :
+Resolution :,Resolution :
+Anti-Aliasing :,Anti-Aliasing :
+Disabled (Fastest),無効 (最速)
+8x (Slowest),8倍 (最遅)
+Camera Shake :,Camera Shake :
+Normal,通常
+Reduced,軽減
+Minimal,最小限
+None,なし
+Game,ゲーム
+Reset Game :,Reset Game :
+Do you want to reset your game data?,ゲームデータをリセットしますか？
+Back,戻る
+TAKE THEM!,確保しろ！
+"Take your documents, please.",書類をお取りください。
+Continue,続ける
+Main Menu,メインメニュー
+Submit Score,スコアを送信
+Restart,リスタート
+SHIFT SUMMARY,シフト概要
+Easy,簡単
+Expert,エキスパート
+Primary,プライマリ
+Secondary,セカンダリ
+Primary Interaction,プライマリ操作
+Secondary Interaction,セカンダリ操作
+Cancel Interaction,操作をキャンセル
+Escape,エスケープ
+Dialogic Default Action,ダイアログのデフォルトアクション
+Enter,エンター
+Left Mouse Button,左マウスボタン
+Right Mouse Button,右マウスボタン
+Start New Game,新しいゲームを開始
+Starting a new game will reset your progress. Are you sure you want to continue?,新しいゲームを開始すると、進行状況がリセットされます。続行しますか？
+"Yes, Start New Game",はい、新しいゲームを開始
+Skip,スキップ
+History,履歴
+Return,戻る
+Restart the game?,ゲームを再開しますか？
+help_menu_button,ヘルプ
+help_menu_title,遊び方
+help_tab_basics,基本
+help_tab_gameplay,ゲームプレイ
+help_tab_minigames,ミニゲーム
+help_basics_intro,[b]ようこそ、ポテト税関へ！[/b]\n\nあなたはポテト税関の国境警備官です。書類を検査し、入国者を承認または拒否し、国境を越えようとする者を阻止するのがあなたの仕事です。
+help_basics_gate,[b]ゲートを開ける[/b]\nゲートボタンをクリックするか、メガホンを使って次のポテトをブースに呼び込みましょう。
+help_basics_documents,[b]書類の検査[/b]\n書類をデスクにドラッグして検査します。現在のシフトの入国規則と照らし合わせて、名前、日付、その他の詳細を確認してください。
+help_basics_stamping,[b]書類にスタンプを押す[/b]\n承認（緑）スタンプで入国者を通過させ、拒否（赤）スタンプで入国を拒否します。スタンプの正確さがスコアに影響します！
+help_basics_runners,[b]国境突破者[/b]\n一部のポテトは検問所を突破しようとします！クリックしてミサイルを発射し、阻止しましょう。完璧なタイミングでボーナスポイントを獲得できます。
+help_basics_xray,[b]X線スキャナー[/b]\nシフト3から、X線装置を使ってポテトに隠された密輸品をスキャンできます。
+help_gameplay_quota,[b]ノルマ達成[/b]\n各シフトには、処理しなければならないポテトのノルマがあります。ノルマを達成できないと解雇されます！
+help_gameplay_strikes,[b]ストライク[/b]\nミス（誤った承認/拒否、国境突破者の見逃し）をするとストライクが与えられます。ストライクが多すぎるとゲームオーバーです！
+help_gameplay_rules,[b]入国規則[/b]\n掲示板で現在の規則を確認してください。規則はシフトごとに変更されます - 禁止地域、必要書類、特殊条件など。
+help_gameplay_scoring,[b]スコアリング[/b]\n正しい判断、完璧なスタンプ、国境突破者の阻止でポイントを獲得します。スピードと正確さにはボーナスが与えられます！
+help_gameplay_difficulty,[b]難易度[/b]\nイージー：より寛容なタイミング、少ない規則。ノーマル：標準的な体験。エキスパート：厳格なタイミング、複雑な規則、高スコア。
+help_minigames_intro,[b]ミニゲーム[/b]\nシフト中に、ボーナスポイントを獲得できるミニゲームに遭遇します。報酬のためにクリアするか、ペナルティなしでスキップできます。
+help_minigames_document_scanner,[b]書類スキャナー[/b]（シフト1～）\nUVライトを使って書類上の隠された要素を見つけます。クリックして透かし、スタンプ、記号をマークします。時間切れになる前にすべての要素を見つけましょう！
+help_minigames_stamp_sorting,[b]スタンプ仕分け[/b] (シフト2以降)
+help_minigames_fingerprint_match,[b]指紋照合[/b] (シフト3以降)
+help_minigames_code_breaker,[b]コード解読[/b] (シフト4以降)
+help_minigames_border_chase,[b]密輸品追跡[/b] (シフト5以降)
+help_tab_lore,世界観
+help_lore_world_intro,[b]イモの世界[/b]
+help_lore_nation,[b]イモ国家[/b]
+help_lore_your_role,[b]あなたの役割[/b]
+help_lore_border,[b]長城[/b]
+help_lore_secrets,[b]根源貯蔵庫[/b]

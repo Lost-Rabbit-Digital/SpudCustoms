@@ -1,0 +1,43 @@
+﻿keys,zh-TW
+Text/102/text,很好，你成功了。抵抗勢力[color=CHARTREUSE]日益壯大[/color]。多虧了那些清單，人們才看清了真相。
+Text/102_foreshadow1/text,[color=STEEL_BLUE]莎夏緊張地回頭看了一眼。[/color] 抱歉，我… [color=YELLOW]我覺得他們在監視我。[/color]
+Text/102_foreshadow2/text,羅塞一直在問東問西。下班後還跟著我。[wave amp=15 freq=2][color=YELLOW]我必須更小心。[/color][/wave]
+Text/102_foreshadow3/text,莎夏，也許你該暫時低調一點。讓我來承擔更多風險。
+Text/102_foreshadow4/text,[color=STEEL_BLUE]她搖了搖頭，強顏歡笑。[/color] 不。我們現在離成功太近了。我能應付羅塞。
+Text/102_foreshadow5/text,再說… [color=CHARTREUSE]總得有人看著你們這些小嫩芽別惹麻煩。[/color]
+Text/103/text,我設法從我們的線人那裡弄到了這份檔案——生產排程、「[color=CRIMSON]食材[/color]」清單，以及[color=DARK_SLATE_BLUE]失蹤者[/color]名單。
+Text/104/text,這不只是一個食物補充計畫。他們正在[color=CRIMSON]處理馬鈴薯[/color]…而且方式不太對勁。
+Text/105/text,來自愛達荷總理本人的內部備忘錄，授權「[color=DARK_ORANGE]利用被拒資產[/color]」。
+Text/106/text,每個檢查站都有配額，其中馬鈴薯海關的拒絕處理比率最高。
+Text/106_trucks1/text,但我們仍然不知道主要的處理設施在哪裡。文件上只列出了貨運編號。
+Text/106_trucks2/text,我一直在監視[color=DARK_VIOLET]根源儲備的卡車[/color]。他們每晚凌晨三點離開。路線相同。
+Text/106_trucks3/text,[color=CHARTREUSE]如果我們能跟蹤他們…[/color]我們就能確切知道他們把那些被拒絕的馬鈴薯帶到哪裡去了。
+Choice/106_trucks4/text,我來做。我知道巡邏排程。
+Choice/106_trucks5/text,這聽起來很危險。不能讓別人來做嗎？
+Text/106_trucks6/text,[color=CHARTREUSE]莎夏的眼睛亮了起來。[/color] 我就知道你有鋼鐵般的根莖。小心點——他們晚上巡邏得很嚴密。
+Text/106_trucks7/text,凌晨三點。你蹲伏在陰影中，看著[color=DARK_VIOLET]根源儲備[/color]的卡車隆隆駛過。
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]保持隱蔽！跟蹤車隊！[/color][/pulse]
+Text/106_trucks9/text,卡車停在工業區一個巨大的隱蔽建築群。[color=DARK_VIOLET]第七區，三角倉庫群。[/color]
+Text/106_trucks10/text,煙囪噴出帶有紫色調的煙霧。那氣味… [tornado radius=3 freq=2][color=CRIMSON]錯不了。[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]根源儲備的核心。[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]莎夏的表情閃過一絲失望。[/color] 我們都必須承擔風險。我會找到其他辦法。
+Text/107/text,外面的情況惡化了。憤怒的人群聚集在檢查站，要求根源儲備給個說法。
+Text/108/text,[color=YELLOW]緊急廣播[/color]：最近流通的[color=CRIMSON]偽造文件[/color]造成了不必要的恐慌。
+Text/109/text,"提供[color=GOLD]10,000 馬鈴薯幣[/color]的獎勵，以獲取有助於逮捕這些破壞者的情報。"
+Text/10a/text,消費或散佈此類宣傳品現已歸類為[color=RED]叛國重罪[/color]。
+Text/10b/text,今日班次將依循特殊協議運作。每位旅客都必須接受忠誠度評估。
+Text/10c/text,凡是表現出[color=CRIMSON]反政府情緒[/color]者，應立即標記。
+Text/10d/text,我們之中的[color=CRIMSON]叛徒[/color]將會被揪出。而當他們被揪出時…[color=DARK_ORANGE]羅塞特在脖子上比劃了一個威脅的手勢。[/color]
+Text/10e/text,一顆緊張的馬鈴薯走近，[color=GOLD]黃葉徽章[/color]若隱若現。一張小紙條夾在文件中：「[color=CHARTREUSE]安全屋已暴露。新地點：第4區7號倉庫。[/color]」
+Choice/10f/text,迅速以紫外線標記處理他們 (協助)
+Choice/110/text,立即向安全部門舉報他們 (背叛)
+Text/111/text,他們臉上流露出如釋重負的表情。「謝謝你。真相終將大白。」
+Text/112/text,當你向安全部門發出信號時，恐懼湧上他們的心頭。「[wave amp=25 freq=3]不，拜託！我還有家人！[/wave]」他們的黃色徽章掉落在地。
+Text/113/text,「做得好。你的忠誠已被記錄。」
+Text/114/text,「你的決定已被注意到。做好準備。[tornado radius=3 freq=2][color=CHARTREUSE]大事即將發生[/color][/tornado]。反抗軍正在策劃一場直接行動。」
+Text/115/text,「當它發生時，你將需要[color=YELLOW]選擇立場[/color]。將不再有中間地帶。」
+Text/116/text,每處理一顆馬鈴薯，你都要麼[pulse freq=2][color=CHARTREUSE]協助一場革命[/color][/pulse]，要麼[pulse freq=2][color=CRIMSON]助長一個恐怖的體制[/color][/pulse]。
+Choice/10f/disabled_text,
+Choice/110/disabled_text,
+Choice/106_trucks4/disabled_text,
+Choice/106_trucks5/disabled_text,

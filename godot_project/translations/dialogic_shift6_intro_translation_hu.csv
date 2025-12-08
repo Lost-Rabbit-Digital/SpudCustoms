@@ -32,3 +32,32 @@ Choice/c4/disabled_text,
 Choice/c5/disabled_text,
 Choice/cb/disabled_text,
 Choice/cc/disabled_text,
+Text/c7_viktor1/text,Egy testes biztonsági őr közeledik a szünetedben. Az arca elgyötört.
+Text/c7_viktor2/text,"Hé... maga az egyik vámtiszt, ugye? A feleségem, Elena felől érdeklődtem."
+Text/c7_viktor3/text,Három hete lépte át ezt az ellenőrzőpontot. [color=STEEL_BLUE]Ellenőrzésen elutasították.[/color] Azóta nem hallottam felőle.
+Choice/c7_viktor4/text,"""Viktor... Találtam valamit. Elenáról. Tudnod kell az igazságot."""
+Choice/c7_viktor5/text,"""Sajnálom, Viktor. Nem láttam semmit."" (Hazugság, hogy megvédd őt)"
+Text/c7_viktor6/text,Megmutatsz neki egy másolatot a jegyzék oldaláról. Az arca elfehéredik.
+Text/c7_viktor7/text,"[wave amp=25 freq=3]Reszket a keze, miközben olvassa.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Feldolgozva... RR-2851-es tétel...[/color]"
+Text/c7_viktor8/text,A hangja alig hallható suttogás. [tornado radius=3 freq=2][color=CRIMSON]Ők... ők CSINÁLTAK belőle...[/color][/tornado]
+Text/c7_viktor9/text,Gyásza hideg dühbe csap át. [pulse freq=2][color=CRIMSON]Idaho megfizet ezért.[/color][/pulse] Esküszöm az emlékére.
+Text/c7_viktor10/text,"Megszorítja a válladat. [color=CHARTREUSE]Köszönöm, hogy elmondtad.[/color] Ha eljön az idő... emlékezni fogok erre."
+Text/c7_viktor11/text,Szomorúan bólint. [color=STEEL_BLUE]Gondoltam.[/color] Senki sem tud semmit. Vagy senki sem akar beszélni.
+Text/c7_viktor12/text,Ha hallasz valamit... [color=YELLOW]kérlek.[/color] Ő mindenem.
+Text/d0_qte1/text,"Később, az adott műszakban, egy utazó közeledik olyan papírokkal, amelyeken a [color=CHARTREUSE]finom ellenállási jel[/color] látható."
+Text/d0_qte2/text,A [color=DARK_ORANGE]RealityScan[/color] megkezdi a pásztázást. [wave amp=15 freq=3][color=RED]Észlelni fogja a jelet![/color][/wave]
+Text/d0_qte3/text,Másodperceid vannak a döntésre. A szkenner melegszik...
+Choice/d0_qte4/text,"""Szimulálj szkenner-meghibásodást – gyorsan!"" (Segíts az ellenállásnak)"
+Choice/d0_qte5/text,"""Hagyd, hogy a szkenner befejezze a pásztázást"" (Kövesd a protokollt)"
+Text/d0_qte6/text,"[pulse freq=3][color=YELLOW]Gyorsan kell dolgoznod![/color][/pulse] Idézd elő a meghibásodást, mielőtt befejezi a pásztázást!"
+Text/d0_qte7/text,"Babrálsz a szkenner kábeleivel. Szikrák repülnek. A képernyő villódzik, majd kialszik."
+Text/d0_qte8/text,Russet odarohan. [color=YELLOW]Mi történt itt?[/color]
+Choice/d0_qte9/text,"""Áramingadozás, uram. Ezek az új rendszerek szeszélyesek."""
+Choice/d0_qte10/text,"""Nem tudom, uram. Egyszerűen csak leállt."""
+Text/d0_qte11/text,"Russet morog. [color=STEEL_BLUE]Bürokraták adnak nekünk teszteletlen felszerelést.[/color] Dolgozd fel őket manuálisan, és jelöld meg újraellenőrzésre."
+Text/d0_qte12/text,Russet gyanakodva néz rád. [color=YELLOW]Milyen kapóra jött.[/color] Megnézetem a karbantartókkal. Ne forduljon elő még egyszer.
+Text/d0_qte13/text,"Az ellenállás tagja egy alig észrevehető hálát rejtő bólintással köszön meg, miközben áthalad."
+Text/d0_qte14/text,A szkenner [pulse freq=3][color=RED]HANGOSAN SÍPOL[/color][/pulse]. Engedélyezetlen jelölések észlelve!
+Text/d0_qte15/text,Russet azonnal megjelenik. [color=CHARTREUSE]Jól van![/color] Még egy áruló elfogva.
+Text/d0_qte16/text,"Az ellenállás tagját elhurcolják, rettegés a szemében. ""[color=CRIMSON]Kérlek, ne! Gyerekeim vannak![/color]"""
+Text/d0_qte17/text,Hűséged [color=DARK_ORANGE]feljegyezve az aktádban[/color]. Csak így tovább.

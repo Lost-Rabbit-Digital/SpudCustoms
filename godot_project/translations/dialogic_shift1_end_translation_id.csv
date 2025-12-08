@@ -5,3 +5,27 @@ Text/52/text,Secarik catatan tergelincir dari beberapa kertas di mejamu.
 Text/53/text,"[color=GOLD]Tidak semuanya seperti yang terlihat. Akar bangsa kita telah membusuk. [br] Ikuti jejaknya, tapi berhati-hati untuk tidak dibungkam.[/color] [br] - [color=CHARTREUSE]Seorang teman[/color]"
 Text/54/text,Catatan itu... dan cara Russet menghindari pertanyaanku tentang [pulse freq=3][color=CRIMSON]kentang yang ditolak[/color][/pulse]... [br] Sesuatu terasa [color=STEEL_BLUE]aneh[/color].
 Text/55/text,Aku harus tetap [color=YELLOW]waspada[/color]. Ada lebih banyak yang terjadi di sini selain cap paspor.
+Text/52b/text,Itu tidak ada tadi pagi. Seseorang menaruhnya [color=YELLOW]selama giliran kerja Anda[/color].
+Text/53b/text,"[color=GOLD]Ikuti jejaknya, tapi berhati-hatilah agar tidak dibungkam.[/color]"
+Text/53c/text,[color=GOLD]Perhatikan siapa yang memakan [/color][color=DARK_VIOLET]Cadangan[/color][color=GOLD]. Perhatikan siapa yang menolak.[/color]
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]Seorang teman[/color]
+Choice/53e/text,"""Sembunyikan catatan itu - selidiki secara diam-diam"""
+Choice/53f/text,"""Hancurkan catatan itu - ini bisa jadi ujian"""
+Choice/53g/text,"""Tunjukkan catatan itu kepada Russet segera"""
+Text/53h/text,Anda melipat catatan itu dengan hati-hati dan menyelipkannya ke saku Anda. [color=CHARTREUSE]Seseorang sedang menghubungi.[/color]
+Text/53i/text,"Tapi siapa? Dan mengapa Anda, di hari pertama Anda?"
+Text/53j/text,Anda merobek catatan itu menjadi potongan-potongan kecil
+Text/53k/text,"Russet berkata tunas yang banyak bertanya akan ""dialihkan tugas."" Lebih baik tidak mengambil risiko."
+Text/53l/text,"Anda mencegat Russet sebelum dia pergi. ""Pak? Saya menemukan ini di antara dokumen saya..."""
+Text/53m/text,"Russet merebut catatan itu, membacanya. Ekspresinya berkedip - [color=YELLOW]apakah itu pengenalan?[/color]"
+Text/53n/text,Propaganda. Pemberontak mencoba merusak petugas baru. [color=DARK_ORANGE]Anda benar membawa ini kepada saya.[/color]
+Text/53o/text,Dia mengantongi catatan itu. Lupakan Anda pernah melihatnya. Dan perhatikan siapa pun yang bertindak... [color=CRIMSON]mencurigakan[/color].
+Text/54b/text,"""[color=VIOLET]Diproses. Sesuai protokol.[/color]"" Apa artinya itu?"
+Text/54c/text,Catatan itu... dikatakan akarnya telah menjadi [color=CRIMSON]busuk[/color].
+Text/54d/text,"Tapi Spud itu mulia, bukan? Itulah yang mereka katakan kepada kami. Apa yang saya yakini."
+Text/54e/text,"Anda mengeluarkan catatan itu, membacanya lagi. ""[color=GOLD]Perhatikan siapa yang memakan Cadangan. Perhatikan siapa yang menolak.[/color]"""
+Text/54f/text,"Besok, Anda akan memperhatikan. [color=YELLOW]Seseorang mencoba memberitahu Anda sesuatu.[/color]"
+Text/54g/text,"Wajah Russet saat dia membaca catatan itu. Hanya sesaat, dia terlihat hampir... [color=STEEL_BLUE]ketakutan[/color]."
+Text/54h/text,Apa sebenarnya [color=DARK_VIOLET]Cadangan Akar[/color] itu? Dan mengapa seseorang memperingatkan Anda tentang itu?
+Text/54i/text,"Catatan itu hilang, tapi kata-kata itu tetap terngiang. [color=YELLOW]Tidak semua seperti yang terlihat.[/color]"
+Text/54j/text,Mungkin menghancurkannya adalah pilihan yang cerdas. Mungkin Anda baru saja membungkam satu-satunya sekutu Anda.

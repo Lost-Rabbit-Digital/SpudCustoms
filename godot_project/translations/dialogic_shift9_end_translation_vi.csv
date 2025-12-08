@@ -14,3 +14,20 @@ Text/13c/text,Ở cuối một băng chuyền - Sasha và những người khác
 Text/13d/text,[color=RED]MÀY![/color] Tao đáng lẽ phải biết mày là một trong số chúng! Lùi lại hoặc tao sẽ khởi động máy xử lý!
 Text/13e/text,"Khi các chiến binh kháng chiến khống chế Russet, Sasha chuyển hướng camera của cơ sở. [color=YELLOW]Người dân Spud! Đây là Trữ Lượng Rễ! Họ đã cho chúng ta ăn lẫn nhau![/color]"
 Text/13f/text,Bạn đã quay lại vì tôi. [color=CHARTREUSE]Chúng ta đã làm được. Sự thật giờ đã được phơi bày.[/color] Chúng ta có một tương lai để xây dựng!
+Text/140/text,"[color=STEEL_BLUE]Thủ lĩnh kháng chiến bước tới, chĩa vũ khí vào Russet.[/color] Đừng bước thêm bước nào nữa, Russet. Giơ tay lên cho tôi thấy."
+Text/141/text,"[color=CRIMSON]Mắt Russet đảo qua lại giữa bạn và thủ lĩnh kháng chiến, mồ hôi lấm tấm trên trán.[/color] Ngươi nghĩ mình đã thắng sao? Cơ sở này là nền tảng của Spud!"
+Text/142/text,Nền tảng của sự đau khổ. [pulse freq=3][color=CHARTREUSE]Mọi chuyện sẽ kết thúc hôm nay.[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]Sasha giãy giụa chống lại những sợi dây trói trên băng chuyền
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""Russet"
+Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""Đây... đây là những gì chúng đã làm sao? Nó còn tệ hơn tôi tưởng tượng...""[/color][/wave]"
+Choice/146/text,"[color=CHARTREUSE]""Sasha! Ơn rễ cây là em còn sống! Cố lên"
+Text/147/text,"[color=CRIMSON]Bạn lao về phía Russet, nắm chặt tay, gần như bị các chiến binh kháng chiến giữ lại.[/color] Mỗi củ khoai tây đi qua trạm kiểm soát của tôi... ngươi đã..."
+Text/148/text,Bình tĩnh! Chúng ta cần hắn sống để làm chứng. [color=STEEL_BLUE]Thủ lĩnh vẫn chĩa vũ khí vào Russet.[/color] Hãy dành sự tức giận của bạn cho tòa án.
+Text/149/text,"[color=STEEL_BLUE]Bạn lảo đảo lùi lại, tay che miệng, nhận ra toàn bộ sự kinh hoàng của cỗ máy.[/color] Tôi đã đóng dấu giấy tờ của họ... Tôi đã gửi họ đến đây..."
+Text/14a/text,[color=CHARTREUSE]Bạn không biết. Không ai trong chúng ta biết cả.[/color] Đó là lý do chúng ta ở đây bây giờ. Tập trung!
+Text/14b/text,[color=CHARTREUSE]Bạn lao đến băng chuyền
+Text/14c/text,[color=CHARTREUSE]Mắt Sasha long lanh nước mắt và hy vọng khi tay bạn gỡ các nút thắt.[/color] Em biết anh sẽ đến. Em chưa bao giờ nghi ngờ anh.
+Text/14d/text,[color=STEEL_BLUE]Thủ lĩnh dí súng buộc Russet quỳ xuống.[/color] Trói hắn lại. Đảm bảo hắn phải chứng kiến những gì sắp xảy ra.
+Text/14e/text,"[color=CHARTREUSE]Sasha nắm lấy tay bạn, đan các ngón tay của cô ấy vào tay bạn.[/color] Anh đã quay lại vì em. Dù điều gì xảy ra tiếp theo... chúng ta sẽ cùng nhau đối mặt."
+Text/14f/text,"[color=STEEL_BLUE]Sasha nhìn bạn cẩn thận, thấy ngọn lửa giận dữ vẫn cháy trong mắt bạn.[/color] Hãy định hướng ngọn lửa đó. Chúng ta sẽ cần nó cho những gì sắp tới."
+Text/150/text,[color=STEEL_BLUE]Sasha đặt một bàn tay nhẹ nhàng lên vai bạn.[/color] Tội lỗi đó không phải của anh. Anh đã ở đây rồi. Đó mới là điều quan trọng.

@@ -1,0 +1,43 @@
+﻿keys,zh-CN
+Text/102/text,很好，你成功了。抵抗力量[color=CHARTREUSE]日益壮大[/color]。多亏了那些清单，人们正在看清真相。
+Text/102_foreshadow1/text,[color=STEEL_BLUE]萨莎紧张地瞥了一眼她的肩膀。[/color] 对不起，我……[color=YELLOW]我觉得他们正在监视我。[/color]
+Text/102_foreshadow2/text,罗斯特一直在问问题。下班后跟着我。[wave amp=15 freq=2][color=YELLOW]我需要更加小心。[/color][/wave]
+Text/102_foreshadow3/text,萨莎，也许你应该暂时低调一点。让我承担更多的风险。
+Text/102_foreshadow4/text,[color=STEEL_BLUE]她摇了摇头，强颜欢笑。[/color] 不。我们现在太接近了。我能应付罗斯特。
+Text/102_foreshadow5/text,此外……[color=CHARTREUSE]总得有人看着你们这些小芽别惹麻烦。[/color]
+Text/103/text,我设法从我们的线人那里弄到了这份档案——生产计划、'[color=CRIMSON]配料[/color]'清单，以及[color=DARK_SLATE_BLUE]失踪者[/color]的姓名。
+Text/104/text,这不仅仅是一个食品补充计划。他们正在[color=CRIMSON]加工土豆[/color]……而且不是以一种好的方式。
+Text/105/text,来自爱达荷总理本人的内部备忘录，授权“[color=DARK_ORANGE]利用被拒资产[/color]”。
+Text/106/text,每个检查站都有配额，其中“土豆海关”的拒收与处理比率最高。
+Text/106_trucks1/text,但我们仍然不知道主要的加工设施在哪里。文件只列出了货运代码。
+Text/106_trucks2/text,我一直在观察[color=DARK_VIOLET]根源储备卡车[/color]。它们每晚0300离开。路线相同。
+Text/106_trucks3/text,[color=CHARTREUSE]如果我们能跟着它们……[/color]我们就能确切知道它们把那些被拒收的土豆带到哪里去了。
+Choice/106_trucks4/text,我来做。我了解巡逻时间表。
+Choice/106_trucks5/text,这听起来很冒险。不能让别人去做吗？
+Text/106_trucks6/text,[color=CHARTREUSE]萨莎的眼睛亮了起来。[/color] 我就知道你根基坚实。小心点——他们晚上巡逻很严。
+Text/106_trucks7/text,凌晨0300。你蹲伏在阴影中，看着[color=DARK_VIOLET]根源储备[/color]卡车轰鸣而过。
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]保持隐蔽！跟踪车队！[/color][/pulse]
+Text/106_trucks9/text,卡车停在一个隐藏在工业区内的巨大综合体。[color=DARK_VIOLET]第七区，德尔塔仓库群。[/color]
+Text/106_trucks10/text,烟囱喷吐着泛紫的烟雾。那气味……[tornado radius=3 freq=2][color=CRIMSON]毋庸置疑。[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]根源储备的核心。[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]萨莎的表情闪过一丝失望。[/color] 我们都必须承担风险。我会找到其他办法的。
+Text/107/text,外面的局势已经恶化。愤怒的人群聚集在检查站，要求对根源储备给出解释。
+Text/108/text,[color=YELLOW]紧急广播[/color]：近期流传的[color=CRIMSON]伪造文件[/color]已造成不必要的恐慌。
+Text/109/text,"凡提供线索导致抓获这些破坏者者，将获得[color=GOLD]10,000土豆币[/color]奖励。"
+Text/10a/text,消费或散布此宣传品现已被定性为[color=RED]叛国重罪[/color]。
+Text/10b/text,今日班次将按特殊规程运行。每位旅客都必须接受忠诚度评估。
+Text/10c/text,凡表现出[color=CRIMSON]反政府情绪[/color]者，须立即标记。
+Text/10d/text,我们之中的[color=CRIMSON]叛徒[/color]终将被揪出。而当他们被揪出时... [color=DARK_ORANGE]罗斯特做了一个割喉的威胁手势。[/color]
+Text/10e/text,"一颗紧张的土豆走上前，[color=GOLD]黄叶徽章[/color]若隐若现。一张小纸条夹在证件中：""[color=CHARTREUSE]安全屋已暴露。新地点：4区7号仓库。[/color]"""
+Choice/10f/text,快速放行并用紫外线标记 (帮助)
+Choice/110/text,立即向安保部门举报 (背叛)
+Text/111/text,"他们脸上泛起一丝宽慰。""谢谢你。真相终将大白。"""
+Text/112/text,"当你向安保部门发出信号时，恐惧涌上他们的脸庞。""[wave amp=25 freq=3]不，求你了！我还有家人！[/wave]"" 他们的黄叶徽章掉落在地。"
+Text/113/text,"""干得好。你的忠诚已被记录。"""
+Text/114/text,"""你的决定已被注意到。做好准备。[tornado radius=3 freq=2][color=CHARTREUSE]大事将至[/color][/tornado]。抵抗组织正在策划一次直接行动。"""
+Text/115/text,"""当那一刻到来时，你将需要[color=YELLOW]选择立场[/color]。将不再有中间地带。"""
+Text/116/text,每处理一颗土豆，你要么是在[pulse freq=2][color=CHARTREUSE]协助一场革命[/color][/pulse]，要么是在[pulse freq=2][color=CRIMSON]助长一个恐怖的系统[/color][/pulse]。
+Choice/10f/disabled_text,
+Choice/110/disabled_text,
+Choice/106_trucks4/disabled_text,
+Choice/106_trucks5/disabled_text,

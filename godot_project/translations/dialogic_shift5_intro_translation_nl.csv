@@ -21,3 +21,13 @@ Choice/ac/disabled_text,
 Choice/b2/disabled_text,
 Choice/b1/disabled_text,
 Choice/ad/disabled_text,
+Text/b4_viktor1/text,Een struise bewaker pakt je arm terwijl je passeert. Zijn gezicht is getekend door zorgen.
+Text/b4_viktor2/text,"Hé... sorry dat ik je stoor. Jij bent een van de douanebeambten, toch? Mijn naam is [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Ik heb iedereen gevraagd naar mijn vrouw, [color=GOLD]Elena[/color]. Elena Petrov. Ze is drie weken geleden deze controlepost gepasseerd."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Afgekeurd bij inspectie.[/color] Ze zeiden dat ze verwerkt en teruggestuurd zou worden, maar... Ik heb niets meer gehoord."
+Text/b4_viktor5/text,Zijn stem trilt. Niemand wil me iets vertellen. Weet jij waar de afgewezen reizigers naartoe gaan?
+Choice/b4_viktor6/text,"""Het spijt me, Viktor. Ik weet het niet. Maar ik zal mijn ogen openhouden."""
+Choice/b4_viktor7/text,"""Ik kan geen verwerkingsdetails bespreken. Veiligheidsprotocollen."""
+Text/b4_viktor8/text,Viktors ogen tonen een sprankje hoop. [color=CHARTREUSE]Dank je wel.[/color] Alles wat je te weten komt... alsjeblieft. Ze is alles wat ik heb.
+Text/b4_viktor9/text,"Viktor knikt, terneergeslagen. [color=STEEL_BLUE]Juist. Protocollen.[/color] Ik begrijp het."
+Text/b4_viktor10/text,Maar als je van gedachten verandert... [color=YELLOW]Ik moet weten wat er met haar gebeurd is.[/color]

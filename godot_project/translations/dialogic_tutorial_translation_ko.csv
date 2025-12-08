@@ -1,0 +1,33 @@
+﻿keys,ko
+Text/156/text,[pulse freq=2][color=MEDIUM_VIOLET_RED]스퍼드 세관[/color][/pulse]에 오신 것을 환영합니다!
+Text/157/text,이 훈련은 스퍼드의 국경을 보호하는 데 필요한 [wave amp=15 freq=2][color=DARK_ORANGE]필수 기술[/color][/wave]을 가르쳐 줄 것입니다.
+Text/158/text,당신은 중요한 역할에 선택되었습니다: [color=DARK_ORANGE]국경 세관원[/color].
+Text/159/text,이민 감자들이 여기에 있는 당신의 사무실 밖에 줄을 설 것입니다.
+Text/15a/text,"감자 처리를 시작하려면, 여기에 있는 스위치로 부스를 열어야 합니다."
+Text/15b/text,확성기를 탭하여 각 감자에게 사무실로 다가오도록 신호를 보내세요.
+Text/15c/text,감자들이 부스에 하나씩 들어와 서류를 제시할 것입니다.
+Text/15d/text,"먼저, 서류를 검사 테이블로 옮겨 자세히 살펴보세요."
+Text/15e/text,"그런 다음, [tornado radius=3 freq=2][color=YELLOW]만료된 날짜, 잘못된 정보, 또는 위조 흔적[/color][/tornado]을 찾으세요."
+Text/15f/text,당신의 책상에는 서류를 표시하는 스탬프가 있습니다. 여기를 클릭하여 스탬프 바를 꺼낼 수 있습니다.
+Text/160/text,그런 다음 원하는 스탬프 아래에 서류를 놓으세요...
+Text/161/text,스탬프를 클릭하여 서류를 [color=CHARTREUSE]승인[/color] 또는 [color=CRIMSON]거부[/color]로 표시하세요...
+Text/162/text,그리고 서류를 감자에게 다시 드래그하여 결정을 확정하세요!
+Text/163/text,때때로 감자들이 [color=CRIMSON]검문소를 급히 통과[/color]하려고 할 것입니다.
+Text/164/text,당신의 부스에는 국경 장벽을 따라 있는 [pulse freq=3][color=CRIMSON]미사일 발사대[/color][/pulse]를 제어할 수 있는 직접 업링크가 있습니다.
+Text/165/text,"이 ""도주자""들을 클릭하여 미사일을 발사하고 멈추게 하세요."
+Text/166/text,"기억하세요, 통과하는 각 도주자는 당신에게 [wave amp=20 freq=3][color=CRIMSON]불이익[/color][/wave]으로 계산될 것입니다."
+Text/167/text,"너무 많은 불이익을 받으면, 당신의 근무는... [tornado radius=3 freq=3][color=CRIMSON]영구적으로[/color][/tornado] 끝날 것입니다."
+Text/168/text,각 근무에는 하루를 마치기 위해 처리해야 할 [color=DARK_ORANGE]감자 할당량[/color]이 있습니다.
+Text/169/text,당신의 점수는 이 검문소의 동료 세관원들 및 먼 세관 사무소의 세관원들과 비교하여 당신의 성과를 추적합니다.
+Text/16a/text,"각 근무 후, 당신은 당신의 성과 요약과 임무 성공 여부를 볼 것입니다."
+Text/16b/text,"당신이 도주자들을 어떻게 처리했는지, 그리고 얼마나 많은 서류를 처리했는지에 대한 상세 내역을 볼 것입니다."
+Text/16c/text,"또한, 서류를 빠르게 처리하거나, 스탬프를 완벽하게 정렬하거나, 도주 감자를 완벽하게 명중시켜 얻은 보너스도 있습니다."
+Text/16d/text,"당신은 또한 근무 중 감자를 얼마나 잘 처리했는지에 따라 성과 등급을 받게 되며, 기대를 초과하면 최대 3개의 황금 스탬프를 받을 수 있습니다."
+Text/16e/text,"여기서 각 근무의 점수를 전 세계 세관원들의 글로벌 데이터베이스에 제출하고, 전 세계에서 가장 엘리트 세관원들과 당신이 어떻게 비교되는지 확인할 수 있습니다."
+Text/16f/text,"근무를 성공적으로 마쳤다면 ""계속""을 클릭하여 다음 근무를 시작할 수 있습니다."
+Text/170/text,"당신의 업무는 간단합니다. 감자들이 당신의 부스로 도착하면, 서류를 확인하고 누가 통과할지 결정하십시오."
+Text/171/text,제가 기본 사항을 [color=YELLOW]단계별로[/color] 안내해 드리겠습니다. 지시에 따르면 금방 익숙해질 겁니다.
+Text/172/text,스퍼드의 안전과 보안은 당신의 [pulse freq=2][color=DARK_ORANGE]경계심![/color][/pulse]에 달려 있습니다!
+Text/174/text,당신의 [color=YELLOW]훈련 근무[/color]를 시작합시다...
+Text/180/text,하지만 조심하세요. 모든 감자가 서류를 제대로 갖추고 있는 것은 아닙니다.
+Text/181/text,[color=RED]만료된 여권[/color]은 자동 거부 사유입니다. 예외는 없습니다.

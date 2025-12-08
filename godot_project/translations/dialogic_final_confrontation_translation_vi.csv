@@ -45,3 +45,41 @@ Choice/27/disabled_text,
 Choice/26/disabled_text,
 Choice/25/disabled_text,
 Choice/16/disabled_text,
+Text/1a_rescue1/text,Một trinh sát vội vàng chạy đến. Chúng ta tìm thấy cô ấy rồi! [color=CHARTREUSE]Sasha đang ở khu giam giữ![/color]
+Text/1a_rescue2/text,Chúng đang chuẩn bị... [tornado radius=3 freq=2][color=CRIMSON]xử lý cô ấy[/color][/tornado]... trong vòng chưa đầy một giờ nữa!
+Text/1a_rescue3/text,Chúng ta phải cứu cô ấy. [pulse freq=2][color=CHARTREUSE]Cô ấy đã khởi xướng tất cả chuyện này.[/color][/pulse] Chúng ta sẽ không rời đi nếu không có cô ấy.
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]Xông qua cơ sở![/color][/wave] Đến chỗ Sasha trước khi quá muộn!
+Text/1a_rescue_fail1/text,Bạn vấp ngã. Con đường phía trước bị lính gác chặn lại!
+Text/1a_rescue_fail2/text,Viktor xông qua một cánh cửa phụ. [color=CHARTREUSE]ĐI ĐI! Tôi sẽ cầm chân chúng![/color]
+Text/1a_rescue_fail3/text,Vì Elena. Vì tất cả bọn họ. [color=STEEL_BLUE]Tôi sẽ không để ai khác phải chết![/color]
+Text/1a_rescue_fail4/text,Murphy giật chuông báo cháy. [color=CHARTREUSE]Vì Tommy![/color] Hệ thống phun nước làm lính gác mù mắt!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Tôi sẽ tạo ra một sự đánh lạc hướng. Đưa cô ấy ra khỏi đó![/color]
+Text/1a_rescue_fail6/text,"Một [color=YELLOW]băng chuyền xử lý bị kẹt[/color], bắn ra tia lửa và đánh lạc hướng lính gác!"
+Text/1a_rescue_fail7/text,Định mệnh - hoặc những linh hồn của những người đã bị xử lý - ban cho bạn một cơ hội thứ hai.
+Text/1a_rescue5/text,"Sasha ngước lên từ phòng giam, bầm tím nhưng không hề gục ngã. Mắt cô ấy mở to. [color=CHARTREUSE]Bạn đã đến.[/color]"
+Text/1a_rescue6/text,Tất nhiên tôi phải đến rồi. [color=CHARTREUSE]Chúng ta sẽ kết thúc chuyện này cùng nhau.[/color]
+Choice/1a_rescue7/text,Tôi đã sợ rằng sẽ không bao giờ gặp lại bạn nữa.
+Choice/1a_rescue8/text,Bạn đã làm chúng tôi lo lắng đến phát ốm. Đừng làm vậy nữa.
+Choice/1a_rescue9/text,Chúng ta có việc phải làm. Idaho đang chờ đợi.
+Text/1a_rescue10/text,[color=CHARTREUSE]Sasha kéo bạn vào một cái ôm ngắn.[/color] Tôi biết bạn sẽ đến mà. Tôi chưa bao giờ nghi ngờ.
+Text/1a_rescue11/text,Bây giờ hãy bắt chúng phải trả giá cho tất cả những người chúng đã cướp đi. [color=CHARTREUSE]Cùng nhau.[/color]
+Text/1a_rescue12/text,Sasha gượng cười yếu ớt qua nỗi đau. [color=STEEL_BLUE]Tôi sẽ cố gắng.[/color] Nhưng có những điều đáng để mạo hiểm.
+Text/1a_rescue13/text,Việc bạn ở đây chứng minh điều đó. Bây giờ hãy kết thúc chuyện này.
+Text/1a_rescue14/text,"Sasha gật đầu, quyết tâm của cô ấy được nhen nhóm lại. [color=CHARTREUSE]Bạn nói đúng.[/color] Tình cảm có thể chờ đợi."
+Text/1a_rescue15/text,Idaho nghĩ rằng hắn đã thắng. Hãy cho hắn thấy hắn đã sai lầm đến mức nào.
+Text/158/text,Lực lượng an ninh đang bao vây! [pulse freq=3][color=YELLOW]Chiến đấu xuyên qua![/color][/pulse]
+Text/21_fail1/text,Lính gác bao vây từ mọi hướng. [color=CRIMSON]Không còn đường thoát![/color]
+Text/21_fail2/text,"Viktor xuất hiện phía sau lính gác, giọng nói lạnh lùng như thép. [color=STEEL_BLUE]Hạ vũ khí xuống. Ngay lập tức.[/color]"
+Text/21_fail3/text,Lính gác chần chừ - Viktor là người của họ. [color=CRIMSON]Tên của Elena có trong danh sách đó. Gia đình của bạn có thể là nạn nhân tiếp theo.[/color]
+Text/21_fail4/text,Một số lính gác hạ vũ khí. Những người khác bỏ chạy. Lối đi đã thông.
+Text/21_fail5/text,"Một vụ nổ làm rung chuyển cánh đông. Giọng Murphy rè rè qua bộ đàm: [color=CHARTREUSE]""Đó là đòn nghi binh của tôi! ĐI ĐI!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Lính gác tản ra về phía vụ nổ. Tommy hẳn sẽ tự hào.[/color]
+Text/21_fail7/text,Sasha lao vào vật ngã tên lính gác dẫn đầu từ phía sau. [color=CHARTREUSE]Tôi không sống sót khỏi nhà giam đó chỉ để nhìn bạn chết![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]CHẠY ĐI! Để tôi lo![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha tiến lại gần, tay cô ấy tìm thấy tay bạn khi hai người cùng ngắm bình minh mới.[/color] Chúng ta đã xây dựng điều này. Bạn và tôi."
+Text/152/text,"Chừng nào chúng ta còn giữ vững cội nguồn, giữ vững lý tưởng đã đưa chúng ta đến đây... [color=CHARTREUSE]chúng ta sẽ tìm ra cách.[/color] Cùng nhau."
+Text/153/text,[color=CHARTREUSE]Bạn siết chặt tay cô ấy. Cùng nhau.[/color]
+Text/154/text,[color=STEEL_BLUE]Sasha đứng cạnh bạn.[/color] Ngọn lửa của bạn đã thắp lên tia sáng thiêu rụi đế chế của họ.
+Text/155/text,[color=STEEL_BLUE]Cơn giận đã nguội lạnh thành quyết tâm. Vẫn còn nhiều việc phải làm.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha nở một nụ cười động viên với bạn.[/color] Bạn đã đi một chặng đường dài từ trạm kiểm soát đó. Tất cả chúng ta đều vậy.
+Text/157/text,"[color=STEEL_BLUE]Cảm giác tội lỗi có thể sẽ không bao giờ phai nhạt hoàn toàn, nhưng bạn đã tìm thấy mục đích trong công cuộc tái thiết.[/color]"

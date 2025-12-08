@@ -14,3 +14,20 @@ Text/13c/text,Al final de una cinta - Sasha y otros [color=CRIMSON]atados sin po
 Text/13d/text,[color=RED]¡TÚ![/color] ¡Debería haber sabido que eras uno de ellos! ¡Retrocede o enciendo el procesador!
 Text/13e/text,"Mientras los combatientes de la resistencia dominan a Russet, Sasha redirige las cámaras de la instalación. [color=YELLOW]¡Gente de Spud! ¡Esto es Reserva Raíz! ¡Nos han estado alimentando unos con otros![/color]"
 Text/13f/text,Volviste por mí. [color=CHARTREUSE]Lo hicimos. La verdad está afuera ahora.[/color] ¡Tenemos un futuro que construir!
+Text/140/text,"[color=STEEL_BLUE]El líder de la resistencia avanza, con el arma apuntando a Russet.[/color] Ni un paso más, Russet. Las manos donde pueda verlas."
+Text/141/text,"[color=CRIMSON]Los ojos de Russet se mueven entre tú y el líder de la resistencia, con gotas de sudor en su frente.[/color] ¿Crees que has ganado? ¡Esta instalación es el cimiento de Spud!"
+Text/142/text,El cimiento del sufrimiento. [pulse freq=3][color=CHARTREUSE]Termina hoy.[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]Sasha forcejea contra sus ataduras en la cinta transportadora
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""¡Russet!"
+Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""¿Esto... esto es lo que han estado haciendo? Es peor de lo que imaginaba...""[/color][/wave]"
+Choice/146/text,"[color=CHARTREUSE]""¡Sasha! ¡Gracias a las raíces que estás viva! Aguanta"
+Text/147/text,"[color=CRIMSON]Cargas hacia Russet, con los puños apretados, apenas contenido por los combatientes de la resistencia.[/color] Cada patata que pasó por mi puesto de control... ¿cuántas tú...?"
+Text/148/text,¡Calma! Lo necesitamos vivo para que testifique. [color=STEEL_BLUE]El líder mantiene su arma apuntando a Russet.[/color] Guarda tu ira para los tribunales.
+Text/149/text,"[color=STEEL_BLUE]Te tambaleas hacia atrás, con la mano cubriendo tu boca, asimilando el horror total de la maquinaria.[/color] Sellé sus papeles... Los envié aquí..."
+Text/14a/text,[color=CHARTREUSE]No lo sabías. Ninguno de nosotros lo sabía.[/color] Por eso estamos aquí ahora. ¡Concéntrate!
+Text/14b/text,[color=CHARTREUSE]Corres hacia la cinta transportadora
+Text/14c/text,[color=CHARTREUSE]Los ojos de Sasha brillan con lágrimas y esperanza mientras tus manos deshacen los nudos.[/color] Sabía que vendrías. Nunca dudé de ti.
+Text/14d/text,[color=STEEL_BLUE]El líder obliga a Russet a arrodillarse a punta de pistola.[/color] Átalo. Asegúrate de que vea lo que viene después.
+Text/14e/text,"[color=CHARTREUSE]Sasha toma tu mano, entrelazando sus dedos con los tuyos.[/color] Volviste por mí. Lo que sea que venga después... lo enfrentaremos juntos."
+Text/14f/text,"[color=STEEL_BLUE]Sasha te observa con atención, viendo la furia que aún arde en tus ojos.[/color] Canaliza ese fuego. Lo necesitaremos para lo que viene después."
+Text/150/text,[color=STEEL_BLUE]Sasha pone una mano suave en tu hombro.[/color] La culpa no es tuya. Estás aquí ahora. Eso es lo que importa.

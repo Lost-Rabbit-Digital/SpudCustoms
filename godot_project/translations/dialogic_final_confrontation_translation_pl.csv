@@ -45,3 +45,41 @@ Choice/27/disabled_text,
 Choice/26/disabled_text,
 Choice/25/disabled_text,
 Choice/16/disabled_text,
+Text/1a_rescue1/text,Zwiadowca podbiega. Znaleźliśmy ją! [color=CHARTREUSE]Sasza jest w bloku zatrzymań![/color]
+Text/1a_rescue2/text,"Przygotowują się, by... [tornado radius=3 freq=2][color=CRIMSON]ją przetworzyć[/color][/tornado]... za mniej niż godzinę!"
+Text/1a_rescue3/text,Musimy ją uratować. [pulse freq=2][color=CHARTREUSE]Ona to wszystko zaczęła.[/color][/pulse] Nie odejdziemy bez niej.
+Text/1a_rescue4/text,"[wave amp=25 freq=3][color=YELLOW]Pędź przez obiekt![/color][/wave] Dotrzyj do Saszy, zanim będzie za późno!"
+Text/1a_rescue_fail1/text,Potykasz się. Droga jest zablokowana przez strażników!
+Text/1a_rescue_fail2/text,Wiktor wpada przez boczne drzwi. [color=CHARTREUSE]UCIEKAJ! Ja ich zatrzymam![/color]
+Text/1a_rescue_fail3/text,"Za Elenę. Za nich wszystkich. [color=STEEL_BLUE]Nie pozwolę, by zginął kolejny![/color]"
+Text/1a_rescue_fail4/text,Murphy szarpie alarm przeciwpożarowy. [color=CHARTREUSE]Za Tommy'ego![/color] Zraszacze oślepiają strażników!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Stworzę dywersję. Wyciągnij ją stamtąd![/color]
+Text/1a_rescue_fail6/text,"[color=YELLOW]Taśmociąg przetwórczy zacina się[/color], sypiąc iskrami i odwracając uwagę strażników!"
+Text/1a_rescue_fail7/text,Los – albo duchy przetworzonych – daje ci drugą szansę.
+Text/1a_rescue5/text,"Sasza podnosi wzrok z celi, posiniaczona, lecz nie złamana. Jej oczy rozszerzają się. [color=CHARTREUSE]Przyszedłeś.[/color]"
+Text/1a_rescue6/text,"Oczywiście, że przyszedłem. [color=CHARTREUSE]Skończymy to razem.[/color]"
+Choice/1a_rescue7/text,"Bałem się, że nigdy cię więcej nie zobaczę."
+Choice/1a_rescue8/text,"Sprawiłaś, że martwiliśmy się na śmierć. Nie rób tego więcej."
+Choice/1a_rescue9/text,Mamy robotę do wykonania. Idaho czeka.
+Text/1a_rescue10/text,"[color=CHARTREUSE]Sasza przyciąga cię do krótkiego uścisku.[/color] Wiedziałam, że przyjdziesz. Nigdy nie wątpiłam."
+Text/1a_rescue11/text,"Teraz sprawmy, by zapłacili za każdego, kogo zabrali. [color=CHARTREUSE]Razem.[/color]"
+Text/1a_rescue12/text,Sasza zdobywa się na słaby uśmiech przez ból. [color=STEEL_BLUE]Spróbuję.[/color] Ale niektóre rzeczy są warte ryzyka.
+Text/1a_rescue13/text,Twoja obecność tutaj to dowodzi. Teraz skończmy to.
+Text/1a_rescue14/text,"Sasza kiwa głową, jej determinacja odżywa. [color=CHARTREUSE]Masz rację.[/color] Sentyment może poczekać."
+Text/1a_rescue15/text,"Idaho myśli, że wygrał. Pokażmy mu, jak bardzo się myli."
+Text/158/text,Siły bezpieczeństwa zamykają okrążenie! [pulse freq=3][color=YELLOW]Przedzieraj się![/color][/pulse]
+Text/21_fail1/text,Strażnicy zamykają okrążenie z każdej strony. [color=CRIMSON]Nie ma gdzie uciekać![/color]
+Text/21_fail2/text,"Wiktor pojawia się za strażnikami, głos zimny jak stal. [color=STEEL_BLUE]Odpuśćcie. Natychmiast.[/color]"
+Text/21_fail3/text,Strażnicy wahają się - Viktor był jednym z nich. [color=CRIMSON]Imię Eleny jest na tych manifestach. Wasze rodziny mogą być następne.[/color]
+Text/21_fail4/text,Niektórzy strażnicy opuszczają broń. Inni uciekają. Droga jest wolna.
+Text/21_fail5/text,"Eksplozja wstrząsa wschodnim skrzydłem. Głos Murphy'ego trzeszczy w komunikatorze: [color=CHARTREUSE]""To moja dywersja! RUSZAĆ!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Strażnicy rozbiegają się w stronę eksplozji. Tommy byłby dumny.[/color]
+Text/21_fail7/text,"Sasha powala głównego strażnika od tyłu. [color=CHARTREUSE]Nie przeżyłam tej celi, żeby patrzeć, jak umierasz![/color]"
+Text/21_fail8/text,[color=STEEL_BLUE]UCIEKAJ! Ja się tym zajmę![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha przysuwa się bliżej, jej dłoń odnajduje twoją, gdy razem obserwujecie nowy świt.[/color] Zbudowaliśmy to. Ty i ja."
+Text/152/text,"Dopóki pozostaniemy wierni naszym korzeniom, ideałom, które nas tu sprowadziły... [color=CHARTREUSE]znajdziemy sposób.[/color] Razem."
+Text/153/text,[color=CHARTREUSE]Ściskasz jej dłoń. Razem.[/color]
+Text/154/text,"[color=STEEL_BLUE]Sasha stoi obok ciebie.[/color] Twój ogień rozpalił iskrę, która spaliła ich imperium."
+Text/155/text,"[color=STEEL_BLUE]Gniew ostygł, zamieniając się w determinację. Wciąż jest praca do wykonania.[/color]"
+Text/156/text,[color=STEEL_BLUE]Sasha obdarza cię wspierającym uśmiechem.[/color] Przeszedłeś długą drogę od tamtego punktu kontrolnego. Wszyscy.
+Text/157/text,"[color=STEEL_BLUE]Poczucie winy może nigdy w pełni nie zniknąć, ale odnalazłeś cel w odbudowie.[/color]"

@@ -1,0 +1,163 @@
+﻿keys,zh-CN
+main_menu_feedback,反馈与错误
+main_menu_version,版本 1.2.0
+main_menu_new_game,新游戏
+main_menu_continue,继续
+main_menu_level_select,关卡选择
+main_menu_score_attack,分数挑战
+main_menu_options,选项
+main_menu_credits,制作人员
+main_menu_exit,退出
+select_language,语言
+social_discord_tooltip,加入我们的Discord！
+social_steam_tooltip,访问我们的Steam页面
+social_twitch_tooltip,Twitch整合
+twitch_status_disabled,已禁用
+twitch_status_no_viewers,暂无观众
+twitch_status_ready,{count} 名观众已就绪
+twitch_connection_disabled,已禁用
+twitch_connection_disconnected,已断开连接
+twitch_connection_connected,已连接
+twitch_connection_connecting,连接中...
+options_menu_title,选项
+options_difficulty,难度
+options_difficulty_easy,简单
+options_difficulty_normal,普通
+options_difficulty_expert,专家
+options_music_volume,音乐音量
+options_sfx_volume,音效音量
+options_camera_shake,镜头震动
+options_back,返回
+paused_menu_title,暂停
+shift_summary_title,班次总结
+shift_summary_continue,继续
+shift_summary_restart,重启
+shift_summary_main_menu,主菜单
+shift_summary_submit_score,提交分数
+shift_summary_runner_stats,逃犯统计
+shift_summary_document_stats,文件统计
+shift_summary_performance,表现
+shift_summary_bonuses,奖励
+time_format,{minutes}分 {seconds}秒
+shift_complete_success,班次 {shift} 完成\n成功！
+shift_complete_failure,班次 {shift} 完成\n{failure}
+strike_limit_reached,违规次数达到上限！
+quota_not_met,配额未达标！
+shift_summary_title_with_difficulty,班次总结\n{difficulty}
+runner_stats_template,\n逃犯统计\n逃犯尝试次数: {runner_attempts}\n导弹发射数: {fired}\n命中逃犯数: {hit}\n完美命中数: {perfect}\n命中率: {rate}%
+document_stats_template,\n文件统计\n已盖章文件: {stamped}\n已批准土豆: {approved}\n已拒绝土豆: {rejected}\n完美盖章数: {perfect_stamps}
+bonus_stats_template,奖励\n处理速度奖励: {processing_speed_bonus}\n盖章准确度奖励: {accuracy}\n完美命中奖励: {perfect_hit_bonus}\n总分奖励: {total_score_bonus}
+performance_stats_template,\n表现\n耗时: {time_taken}\n预期分数: {expected_score}\n总分: {score}\n超额分数百分比: {percent}%\n表现评级:\n{rating}
+performance_exceptional,卓越！
+performance_excellent,优秀！
+performance_good,良好
+performance_needs_improvement,有待改进
+performance_poor,不佳
+global_leaderboard_title,全球排行榜\n- {difficulty}
+getting_leaderboard_scores,正在获取排行榜分数...
+reset_game_label,重置游戏 :
+reset_game_button,重置
+mute_label,静音
+fullscreen_label,全屏 :
+resolution_label,分辨率 :
+antialiasing_label,抗锯齿 :
+screenshake_label,屏幕抖动 :
+mouse_sens_label,鼠标灵敏度 :
+Loading…,正在加载…
+You lose.,你输了。
+You won!,你赢了！
+Thanks for playing!,感谢游玩！
+Please Confirm...,请确认…
+Go back to main menu?,返回主菜单？
+Quit the game?,退出游戏？
+Cancel,取消
+OK,OK
+Controls,操作
+Mouse Sensitivity :,Mouse Sensitivity :
+Actions & Inputs,操作与输入
+Add,Add
+Remove,移除
+Assign Key for {action},为{action}指定按键
+Listening for input...,正在监听输入...
+Press again to confirm...,再次按下以确认...
+Focus here to assign inputs.,在此处设置输入。
+Already Assigned,已分配
+{key} already assigned to {action}.,{key} 已分配给 {action}。
+Remove Key for {action},移除{action}的按键
+Are you sure you want to remove {key} from {action}?,确定要从{action}移除{key}吗？
+Reset,重置
+Audio,音频
+Master :,Master :
+Music :,Music :
+SFX :,SFX :
+Ambient :,Ambient :
+Mute :,Mute :
+Video,视频
+Fullscreen :,Fullscreen :
+Resolution :,Resolution :
+Anti-Aliasing :,Anti-Aliasing :
+Disabled (Fastest),禁用 (最快)
+8x (Slowest),8倍 (最慢)
+Camera Shake :,Camera Shake :
+Normal,正常
+Reduced,减弱
+Minimal,最小
+None,无
+Game,游戏
+Reset Game :,Reset Game :
+Do you want to reset your game data?,是否要重置游戏数据？
+Back,返回
+TAKE THEM!,抓住他们！
+"Take your documents, please.",请收好您的证件。
+Continue,继续
+Main Menu,主菜单
+Submit Score,提交分数
+Restart,重新开始
+SHIFT SUMMARY,班次总结
+Easy,简单
+Expert,专家级
+Primary,主要
+Secondary,次要
+Primary Interaction,主要交互
+Secondary Interaction,次要交互
+Cancel Interaction,取消交互
+Escape,退出
+Dialogic Default Action,对话默认操作
+Enter,确认
+Left Mouse Button,鼠标左键
+Right Mouse Button,鼠标右键
+Start New Game,开始新游戏
+Starting a new game will reset your progress. Are you sure you want to continue?,开始新游戏将重置您的进度。您确定要继续吗？
+"Yes, Start New Game",是，开始新游戏
+Skip,跳过
+History,历史记录
+Return,返回
+Restart the game?,重新开始游戏？
+help_menu_button,帮助
+help_menu_title,玩法指南
+help_tab_basics,基础操作
+help_tab_gameplay,游戏玩法
+help_tab_minigames,小游戏
+help_basics_intro,[b]欢迎来到土豆海关！[/b]\n\n您是土豆海关检查站的边境官员。您的职责是检查文件，批准或拒绝入境者，并阻止那些试图偷渡边境的人。
+help_basics_gate,[b]打开大门[/b]\n点击大门按钮或使用扩音器呼叫下一位土豆到您的检查站。
+help_basics_documents,[b]检查文件[/b]\n将文件拖到您的桌子上进行检查。根据当前班次的入境规则核对姓名、日期和其他详细信息。
+help_basics_stamping,[b]盖章文件[/b]\n使用“批准”（绿色）印章放行入境者，或使用“拒绝”（红色）印章拒绝他们。盖章的准确性会影响您的分数！
+help_basics_runners,[b]边境偷渡者[/b]\n有些土豆会试图冲过检查站！点击发射导弹阻止他们。完美时机可获得额外分数。
+help_basics_xray,[b]X光扫描仪[/b]\n从第3班次开始，使用X光机扫描土豆以查找隐藏的违禁品。
+help_gameplay_quota,[b]完成配额[/b]\n每个班次都有您必须处理的土豆配额。未能完成配额，您将被解雇！
+help_gameplay_strikes,[b]失误[/b]\n犯错（错误批准/拒绝，漏掉偷渡者）会给您带来失误。失误过多，游戏就结束了！
+help_gameplay_rules,[b]入境规则[/b]\n查看公告板以了解当前规则。规则每个班次都会变化——禁止区域、所需文件和特殊条件。
+help_gameplay_scoring,[b]得分[/b]\n因正确决策、完美盖章和阻止偷渡者而得分。速度和准确性可获得额外奖励！
+help_gameplay_difficulty,[b]难度级别[/b]\n简单：更宽松的时间，更少的规则。普通：标准体验。专家：严格的时间，复杂的规则，更高的分数。
+help_minigames_intro,[b]小游戏[/b]\n在您的班次中，您会遇到可以赚取额外分数的小游戏。完成它们以获得奖励，或跳过而无惩罚。
+help_minigames_document_scanner,[b]文件扫描仪[/b] (班次1+)\n使用紫外线查找文件上的隐藏元素。点击标记水印、印章和符号。在时间用完之前找到所有元素！
+help_minigames_stamp_sorting,[b]印章分类[/b] (班次 2+)\n将掉落的印章分拣到正确的箱子中。绿色印章用于“批准”，红色印章用于“拒绝”。快速分拣可获得额外分数！
+help_minigames_fingerprint_match,[b]指纹匹配[/b] (班次 3+)\n将网格中的指纹与参考图案进行匹配。点击匹配的指纹以验证身份。需要仔细观察！
+help_minigames_code_breaker,[b]密码破译[/b] (班次 4+)\n破解秘密代码！猜出4位数字组合。绿色表示位置正确，黄色表示位置错误。尝试次数有限！
+help_minigames_border_chase,[b]边境追逐[/b] (班次 5+)\n传送带上有违禁品！点击红色物品以没收它们。让绿色物品通过。快速反应可获得更多分数！
+help_tab_lore,背景故事
+help_lore_world_intro,[b]斯普德世界[/b]\n欢迎来到一个马铃薯建立自己文明的土地。在这个世界里，块茎们会行走、会说话，并建立了拥有法律、边境和官僚体系的独立国家。
+help_lore_nation,[b]斯普德之国[/b]\n斯普德是一个骄傲的国家，承诺为所有马铃薯带来繁荣。在斯普德长城的保护下，国家实行严格的边境管制，以确保只有合格的块茎才能进入。\n\n政府提倡团结和服从，爱国公民常被听到高呼：“斯普德万岁！”
+help_lore_your_role,[b]您的职责[/b]\n您已被选中，肩负着保护边境的关键职责。作为一名海关官员，您将在主管拉塞特的严密监督下工作。\n\n您的福祉取决于您的表现。完成您的配额，遵守规则，并记住：国家正指望着您。
+help_lore_border,[b]伟大长城[/b]\n雄伟的斯普德长城保护着国家免受外来者的侵扰。在长城沿线的各个检查站，像您一样的官员确保只有合格者才能进入。\n\n那些试图在没有适当文件的情况下越境者将面临即时后果。
+help_lore_secrets,[b]根部储备[/b]\n被拒绝的马铃薯会……被处理。根据协议。神秘的根部储备负责所有细节。\n\n最好不要问太多问题。专注于您的职责。仅此而已。

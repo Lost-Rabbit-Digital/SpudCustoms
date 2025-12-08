@@ -21,3 +21,13 @@ Choice/ac/disabled_text,
 Choice/b2/disabled_text,
 Choice/b1/disabled_text,
 Choice/ad/disabled_text,
+Text/b4_viktor1/text,Yanından geçerken iri yarı bir güvenlik görevlisi kolunuzdan yakalar. Yüzünde endişe çizgileri var.
+Text/b4_viktor2/text,"Hey... rahatsız ettiğim için üzgünüm. Gümrük memurlarından birisiniz, değil mi? Adım [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,Herkese karım [color=GOLD]Elena[/color]'yı soruyorum. Elena Petrov. Üç hafta önce bu kontrol noktasından geçti.
+Text/b4_viktor4/text,[color=STEEL_BLUE]Muayeneden geçemedi.[/color] İşlemleri yapılıp evine gönderileceğini söylediler ama... hiçbir haber alamadım.
+Text/b4_viktor5/text,Sesi titrer. Kimse bana bir şey söylemiyor. Reddedilen yolcular nereye gider biliyor musunuz?
+Choice/b4_viktor6/text,"""Üzgünüm, Viktor. Bilmiyorum. Ama gözümü açık tutacağım."""
+Choice/b4_viktor7/text,"""İşlem detaylarını tartışamam. Güvenlik protokolleri."""
+Text/b4_viktor8/text,Viktor'un gözlerinde bir umut parıltısı belirir. [color=CHARTREUSE]Teşekkür ederim.[/color] Bulduğun herhangi bir şey... lütfen. O benim tek varlığım.
+Text/b4_viktor9/text,"Viktor, morali bozuk bir şekilde başını sallar. [color=STEEL_BLUE]Doğru. Protokoller.[/color] Anlıyorum."
+Text/b4_viktor10/text,Ama fikrini değiştirirsen... [color=YELLOW]Ona ne olduğunu bilmem gerekiyor.[/color]

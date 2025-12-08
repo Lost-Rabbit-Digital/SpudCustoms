@@ -14,3 +14,20 @@ Text/13c/text,Na konci jednoho pásu - Saša a další [color=CRIMSON]bezmocně 
 Text/13d/text,"[color=RED]TY![/color] Měl jsem tušit, že jsi jeden z nich! Ustup, nebo spustím procesor!"
 Text/13e/text,"Když bojovníci odboje přemůžou Russeta, Saša přesměruje kamery zařízení. [color=YELLOW]Lidé ze Spudu! Tohle je Kořenová Rezerva! Krmili nás navzájem![/color]"
 Text/13f/text,"Vrátil ses pro mě. [color=CHARTREUSE]Dokázali jsme to. Pravda je teď venku.[/color] Máme budoucnost, kterou musíme vybudovat!"
+Text/140/text,"[color=STEEL_BLUE]Vůdce odboje vykročí vpřed, zbraň namířená na Russeta.[/color] Ani krok dál, Russete. Ruce, kde je uvidím."
+Text/141/text,"[color=CRIMSON]Russetovy oči těkají mezi vámi a vůdcem odboje, čelo má orosené potem.[/color] Myslíš, že jsi vyhrál? Toto zařízení je základem Spudu!"
+Text/142/text,Základ utrpení. [pulse freq=3][color=CHARTREUSE]Dnes to končí.[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]Sasha se zmítá proti svým poutům na dopravním pásu
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""Russete"
+Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""Tohle... tohle dělali? Je to horší, než jsem si představoval...""[/color][/wave]"
+Choice/146/text,"[color=CHARTREUSE]""Sasho! Díky kořenům, že jsi naživu! Vydrž"
+Text/147/text,"[color=CRIMSON]Vrháš se na Russeta, pěsti zaťaté, sotva zadržován bojovníky odboje.[/color] Každá brambora, která prošla mým kontrolním bodem... kolik jsi jich..."
+Text/148/text,"Klid! Potřebujeme ho živého, aby svědčil. [color=STEEL_BLUE]Vůdce drží zbraň namířenou na Russeta.[/color] Šetři si svůj hněv na soudy."
+Text/149/text,"[color=STEEL_BLUE]Couvneš, ruka ti zakrývá ústa, zatímco vnímáš plnou hrůzu strojního zařízení.[/color] Razítkoval jsem jejich papíry... Poslal jsem je sem..."
+Text/14a/text,[color=CHARTREUSE]Nevěděl jsi. Nikdo z nás.[/color] Proto jsme teď tady. Soustřeď se!
+Text/14b/text,[color=CHARTREUSE]Spěcháš k dopravníku
+Text/14c/text,"[color=CHARTREUSE]Sashiny oči se lesknou slzami a nadějí, zatímco tvé ruce rozvazují uzly.[/color] Věděla jsem, že přijdeš. Nikdy jsem o tobě nepochybovala."
+Text/14d/text,"[color=STEEL_BLUE]Vůdce donutí Russeta kleknout si pod hrozbou zbraně.[/color] Svažte ho. Ujistěte se, že uvidí, co přijde dál."
+Text/14e/text,[color=CHARTREUSE]Sasha ti vezme ruku a proplete své prsty s tvými.[/color] Vrátil ses pro mě. Ať se stane cokoli dál... čelíme tomu spolu.
+Text/14f/text,"[color=STEEL_BLUE]Sasha tě pozorně sleduje a vidí zuřivost, která ti stále hoří v očích.[/color] Nasměruj ten oheň. Budeme ho potřebovat na to, co přijde dál."
+Text/150/text,"[color=STEEL_BLUE]Sasha ti položí jemnou ruku na rameno.[/color] Vina není tvoje, abys ji nesl. Jsi tady teď. To je to, na čem záleží."

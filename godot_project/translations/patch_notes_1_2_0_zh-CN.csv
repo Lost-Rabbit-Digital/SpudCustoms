@@ -1,25 +1,25 @@
 ﻿keys,zh-CN
-patch_1_2_0_title,SPUD CUSTOMS 1.2.0 - PATCH NOTES
-patch_1_2_0_personal_note_header,A PERSONAL NOTE FROM THE DEVELOPER
-patch_1_2_0_personal_note,"This update is dedicated to my little one, who spent the first months of life in the NICU - from 1lb at birth to now 20lbs of pure joy. Thank you to everyone who has joined this journey - over 2,000 players have now experienced Spud Customs!"
-patch_1_2_0_visual_header,VISUAL ENHANCEMENTS
-patch_1_2_0_visual_1,Animated Art Integration: Incorporated new animated GIFs from StagNation into opening scenes
-patch_1_2_0_visual_2,Art Overhaul: Repainted the first five scenes players see for improved visual quality
-patch_1_2_0_visual_3,Dynamic Backgrounds: Background visuals now change as difficulty increases
-patch_1_2_0_story_header,STORY & NARRATIVE
-patch_1_2_0_story_1,Choice Persistence: Narrative choices now properly carry across all levels
-patch_1_2_0_story_2,Visual Progression: Added visual indicators of story progression in main gameplay scenes based on current shift number
-patch_1_2_0_story_3,Branching Dialogue Fixes: Fixed issues with branching dialogue in final narrative scenes
-patch_1_2_0_bugfix_header,BUG FIXES
-patch_1_2_0_bugfix_1,Achievement System: Fixed achievement tracking - all achievements now unlock properly
-patch_1_2_0_bugfix_2,Leaderboard: Fixed issue where leaderboard was stuck on loading
-patch_1_2_0_bugfix_3,Screen Shake: Screen shake now properly resets to origin after each use
-patch_1_2_0_bugfix_4,Difficulty Scaling: Fixed easy mode scaling factor
-patch_1_2_0_bugfix_5,Background Display: Fixed missing backgrounds during dialogue scenes
-patch_1_2_0_bugfix_6,Text Readability: Improved text coloration for better readability
-patch_1_2_0_engagement_header,PLAYER ENGAGEMENT
-patch_1_2_0_engagement_1,Review Requests: Added review prompts for demo and full game players
-patch_1_2_0_engagement_2,Translation Fixes: Various translation improvements across supported languages
-patch_1_2_0_technical_header,TECHNICAL IMPROVEMENTS
-patch_1_2_0_technical_1,Expanded Language Support: Now supporting all 31 Steam-supported languages
-patch_1_2_0_technical_2,Translation System Overhaul: Reorganized translation files for better maintainability
+patch_1_2_0_title,土豆海关 1.2.0 - 更新说明
+patch_1_2_0_personal_note_header,开发者寄语
+patch_1_2_0_personal_note,本次更新献给我家的小宝贝，他/她出生后在新生儿重症监护室（NICU）度过了最初几个月——从出生时1磅的体重，到现在20磅的纯粹喜悦。感谢所有加入这段旅程的玩家——目前已有超过2000名玩家体验了《土豆海关》！
+patch_1_2_0_visual_header,视觉优化
+patch_1_2_0_visual_1,动画美术整合：将StagNation制作的新动画GIF整合到开场场景中
+patch_1_2_0_visual_2,美术重制：为提升视觉质量，重绘了玩家首次看到的五个场景
+patch_1_2_0_visual_3,动态背景：随着难度增加，背景画面现在会发生变化
+patch_1_2_0_story_header,剧情与叙事
+patch_1_2_0_story_1,选择保留：叙事选择现在能正确地在所有关卡中保留
+patch_1_2_0_story_2,进度可视化：根据当前班次编号，在主要游戏场景中添加了剧情进度可视化指示器
+patch_1_2_0_story_3,分支对话修复：修复了最终叙事场景中分支对话的问题
+patch_1_2_0_bugfix_header,Bug修复
+patch_1_2_0_bugfix_1,成就系统：修复了成就追踪问题——所有成就现在都能正常解锁
+patch_1_2_0_bugfix_2,排行榜：修复了排行榜卡在加载界面的问题
+patch_1_2_0_bugfix_3,屏幕震动：屏幕震动效果现在每次使用后都能正确复位
+patch_1_2_0_bugfix_4,难度调整：修复了简单模式的缩放系数
+patch_1_2_0_bugfix_5,背景显示：修复了对话场景中背景缺失的问题
+patch_1_2_0_bugfix_6,文本可读性：改进了文本颜色，以提高可读性
+patch_1_2_0_engagement_header,玩家互动
+patch_1_2_0_engagement_1,评论提示：为试玩版和完整版玩家添加了评论提示
+patch_1_2_0_engagement_2,翻译改进：改进了所有支持语言的各种翻译
+patch_1_2_0_technical_header,技术改进
+patch_1_2_0_technical_1,扩展语言支持：现在支持所有31种Steam支持的语言
+patch_1_2_0_technical_2,翻译系统优化：重新组织了翻译文件，以提高可维护性

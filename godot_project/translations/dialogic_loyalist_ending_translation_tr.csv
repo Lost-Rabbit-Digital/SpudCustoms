@@ -1,0 +1,79 @@
+﻿keys,tr
+Text/299_suppress1/text,Direniş saldırısı başlarken kaos patlak veriyor. Patlamalar kontrol noktasını sarsıyor.
+Text/299_suppress2/text,"Kaçabilirdin. Saklanabilirdin. Bunun yerine, tarafını [color=DARK_ORANGE]seçtin[/color]."
+Text/299_suppress3/text,Russet kolunu kavrar. [pulse freq=2][color=YELLOW]ŞİMDİ SENİN ŞANSIN![/color][/pulse] Sadakatini kanıtla!
+Text/299_suppress4/text,Direniş doğu kapısını aşmaya çalışıyor! [color=CRIMSON]Onları durdur![/color]
+Text/299_suppress5/text,Silahını sıkıca kavrarsın. Bunlar tanıdığın insanlar olabilir. Yardım ettiğin insanlar.
+Text/299_suppress6/text,Ama hayatta kalmanın bir bedeli var. [color=DARK_ORANGE]Seçimini yaptın.[/color]
+Text/299_suppress7/text,[pulse freq=3][color=CRIMSON]Devlet için savaş![/color][/pulse] Direniş saldırısını bastır!
+Text/299_suppress8/text,"Duman dağıldığında, cesetler yere serilmiş. Bazıları direniş nişanları taşır."
+Text/299_suppress9/text,[color=STEEL_BLUE]Düşenler arasında tanıdık yüzler görürsün.[/color]
+Text/299_suppress10/text,Murphy ölüler arasında yatar. Gözleri boşluğa bakar. Elinde Tommy'nin fotoğrafını sıkıca tutar.
+Text/299_suppress11/text,[color=STEEL_BLUE]İnandığı bir şey için savaşarak öldü. Sen de onu öldürmeye yardım ettin.[/color]
+Text/300/text,"Direniş saldırısı başarısız oldu. Kontrol noktası, her zamankinden daha güçlü bir şekilde ayakta. Ve sen görev yerinde kalırsın."
+Text/301/text,[pulse freq=2][color=GOLD]YAŞASIN BAŞBAKAN IDAHO![/color][/pulse] Spud'un Savunucusu! Hainlerin Yenilmezlisi!
+Text/302/text,"Süslü tören kıyafetleri içindeki devasa bir patates, seçkin muhafızlar eşliğinde zırhlı bir araçtan iner."
+Text/303/text,"Idaho, kontrol noktasını soğuk, hesapçı gözlerle inceler."
+Text/304/text,"Russet aceleyle öne atılır, derin bir şekilde eğilerek. Başbakanım! Varlığınızla onur duyduk!"
+Text/305/text,Hainler emrettiğiniz gibi [color=DARK_VIOLET]işleme alındı[/color]. Bu çeyrekte üretim %40 arttı!
+Text/306/text,"Ve bu, ayaklanma sırasında sadık kalan subay mı?"
+Text/307/text,"Evet, Başbakanım. Sarsılmaz bağlılık. Şüpheli faaliyetleri bildirdi. Örnek bir vatandaş."
+Text/308/text,"Idaho öne doğru adım atar, göğsüne bir madalya takar - [color=GOLD]Altın Yumru[/color]."
+Text/309/text,Üstün hizmetleriniz için. [color=DARK_ORANGE]Spud'a sadakatin[/color] her zaman ödüllendirileceğini kanıtladın.
+Choice/30a/text,"Teşekkür ederim, Başbakanım. Spud'a şan olsun."
+Choice/30b/text,"Ben sadece görevimi yaptım, efendim. (Zoraki gülümser)"
+Text/30c/text,Idaho'nun gülümsemesi gözlerine ulaşmaz. Evet. Kesinlikle yaptın.
+Text/30d/text,Idaho uzun bir an seni inceler. Görev. [color=STEEL_BLUE]Bu kadar karmaşık eylemler için ne kadar da basit bir kelime.[/color]
+Text/30e/text,"Görevini bu kadar iyi yapanları hangi [color=CRIMSON]kabuslar[/color] ziyaret eder, merak ediyorum."
+Text/30f/text,"Zaferin şerefine bir ziyafet verilir. Masalar, cömert porsiyonlarda [color=DARK_VIOLET]Kök Rezervi[/color] dahil olmak üzere yiyeceklerle inler."
+Text/310/text,"Russet, kalın, mor bir sıvı dolu bir kadeh kaldırır. Şerefe! [color=CRIMSON]Bizi besleyen hainlere[/color]!"
+Text/311/text,Oda güler. Bazıları gerginlikle. Çoğu içtenlikle.
+Text/312/text,"Size doğru bir tabak kaydırır. Yeni partiyi dene. [color=DARK_VIOLET]""Direniş Karışımı.""[/color] Sasha'nın Spud'ın geleceğine katkısı."
+Text/313/text,Midene kramp girer. Tabaktaki yemek. [color=CRIMSON]Sasha.[/color] Murphy'nin kuzeni. Fotoğraftaki eş.
+Text/314/text,[tornado radius=3 freq=2][color=CRIMSON]Hepsi.[/color][/tornado]
+Choice/315/text,Kendini yemeye zorla - kimliğini koru
+Choice/316/text,Tabağı it - bunu yapamazsın
+Text/317/text,Çatalı dudaklarına götürürsün. Gözlerini kapat. [color=STEEL_BLUE]Çiğne. Yut. Düşünme.[/color]
+Text/318/text,"Russet onaylayarak başını sallar. ""İyi. [color=DARK_ORANGE]Çok ilerlersin.[/color]"""
+Text/319/text,"Tabağı itersin. ""Kendimi iyi hissetmiyorum. Günün heyecanı..."""
+Text/31a/text,"Russet'ın gözleri kısa bir an kısılır, sonra yumuşar. Elbette. Ne kadar da [color=YELLOW]hassas bir bünye[/color]."
+Text/31b/text,"Dinlen. Yarın, denetleyeceğimiz [color=CRIMSON]daha fazla işlem[/color] var."
+Text/31c/text,Kaldığın yere dönersin. Madalya göğsünde ağır bir yük gibi durur.
+Text/31d/text,Kaybolan eşin fotoğrafını çıkarırsın. Eşi de muhtemelen şimdi onunla aynı partide.
+Text/31e/text,Onu bulmaya söz vermiştin. [color=STEEL_BLUE]Onu buldun.[/color] Sadece ikinizin de umduğu gibi değil.
+Text/31f/text,Murphy. Arkadaşın. Sana güvenen kişi. Direnişteydi.
+Text/320/text,[color=CRIMSON]Öyleydi.[/color]
+Text/321/text,Penceredeki yansımına bakarsın. Madalya parlar. [color=DARK_ORANGE]Altın Yumru.[/color] Spud'ın Kahramanı.
+Text/322/text,[color=STEEL_BLUE]Patates derisinde bir canavar.[/color]
+Text/323/text,"O gece, Sasha'yı rüyanda görürsün. Suçlamaz. Öfkelenmez. Bu daha kolay olurdu."
+Text/324/text,"Sadece o gözlerle sana bakar. ""[color=CHARTREUSE]Kökler derine iner[/color],"" diye fısıldar."
+Text/325/text,[color=STEEL_BLUE]Çürük olanlar[/color] bile.
+Text/326/text,Aylar geçer. Terfi edersin. Sınır Güvenliği Bölge Müfettişi. Russet'ın sağ kolu.
+Text/327/text,Spud tarihinde herkesten daha fazla ret işlemine nezaret ediyorsunuz. [color=DARK_VIOLET]Kök Rezervi[/color] üretimi tavan yapıyor.
+Text/328/text,Ofisiniz konforlu. Tayınlarınız cömert. Aileniz korunuyor.
+Text/329/text,Size vaat edilen her şeye sahipsiniz.
+Text/32a/text,[color=STEEL_BLUE]Uyku[/color] hariç her şey. [color=STEEL_BLUE]Huzur[/color] hariç. Aynaya bakabilme yeteneği hariç.
+Text/32b/text,Bir gün fark edersiniz. Bir duvara kazınmış [color=GOLD]sarı bir patates amblemi[/color]. Sonra bir tane daha. Sonra düzinelerce.
+Text/32c/text,Yeni bir direniş oluşuyor. Daha sessiz. Daha dikkatli. Sasha'nın hatalarından ders çıkararak.
+Choice/32d/text,Sembolleri derhal güvenliğe bildirin
+Choice/32e/text,Onları görmemiş gibi yapın
+Choice/32f/text,Kendi izinizi bırakın - tek bir sarı yaprak
+Text/330/text,Raporu dosyalıyorsunuz. Başka bir grup şüpheli toplandı. Başka bir terfi.
+Text/331/text,Döngü devam ediyor. [color=CRIMSON]Makineye dönüştünüz.[/color]
+Text/332/text,Yanından geçersiniz. Hiçbir şey söylemezsiniz. Çok bir şey değil. [color=STEEL_BLUE]Neredeyse hiçbir şey.[/color]
+Text/333/text,Ama onlara karşı harekete geçmemeyi seçtiğiniz ilk sefer bu.
+Text/334/text,"Belki bu bir şeydir. Belki de [color=YELLOW]çok az, çok geç[/color]."
+Text/335/text,"Kimse izlemezken, amblemlerin yanına küçük bir [color=GOLD]sarı yaprak[/color] kazırsınız."
+Text/336/text,Tek bir meydan okuma eylemi. Yıllar sonra. Ama [color=CHARTREUSE]bir şey[/color].
+Text/337/text,"Sasha'nın sesi hafızanızda yankılanıyor: ""[color=CHARTREUSE]Kökler derine iner.[/color]"""
+Text/338/text,Belki de [color=CHARTREUSE]size bile ulaşacak[/color] kadar derin. Bir gün.
+Text/339/text,Spud ulusu varlığını sürdürüyor. [color=DARK_VIOLET]Kök Rezervi[/color] akıyor. Tüketim döngüsü devam ediyor.
+Text/33a/text,"Ama bir yerlerde, duvarın çatlaklarında, [color=CHARTREUSE]yeni bir şeyler büyüyor[/color]."
+Text/33b/text,Onun bir parçası olup olmayacağınız... [color=YELLOW]o hikaye henüz yazılmadı[/color].
+Choice/30a/disabled_text,
+Choice/30b/disabled_text,
+Choice/315/disabled_text,
+Choice/316/disabled_text,
+Choice/32d/disabled_text,
+Choice/32e/disabled_text,
+Choice/32f/disabled_text,

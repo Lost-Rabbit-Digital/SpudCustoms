@@ -1,0 +1,49 @@
+﻿keys,nl
+Text/215/text,"Murphy houdt je tegen in de gang, met roodomrande ogen. Heb je even?"
+Text/216/text,Murphy trekt je een lege opslagruimte in en sluit de deur.
+Text/217/text,Die grap die ik maakte in de kantine... over mijn neef die in de [color=DARK_VIOLET]Wortel Reserve[/color]-partij zat...
+Text/218/text,Murphy's stem breekt. Ik denk niet dat het nog een grap was.
+Text/219/text,Je zei dat het niet grappig was. Je had gelijk. [color=STEEL_BLUE]Niets hiervan is grappig.[/color]
+Text/21a/text,"Ik zag je weggaan. Slim. Ik wou dat ik kon stoppen met dat spul te eten, maar ze [color=YELLOW]kijken[/color]. Ze kijken altijd."
+Text/21b/text,"Ik vond iets tussen de spullen van mijn neef. Zijn afwijzingsformulier. Standaard spul, maar..."
+Text/21c/text,"Murphy haalt een verfrommeld formulier tevoorschijn. Kijk naar de verwerkingscode. ""[color=CRIMSON]RR-UTIL-7[/color]."""
+Text/21d/text,Ik heb het opgezocht in de archieven. RR staat voor [pulse freq=2][color=DARK_VIOLET]Wortel Reserve[/color][/pulse]. UTIL betekent... [color=CRIMSON]utilisatie[/color].
+Text/21d_breakdown1/text,[wave amp=20 freq=3]Murphy's handen beginnen te trillen.[/wave] Mijn neef... Tommy... hij was pas drieëntwintig.
+Text/21d_breakdown2/text,Hij kwam hier voor een [color=CHARTREUSE]beter leven[/color]. Eén inspectie gefaald. Eén. [color=STEEL_BLUE]Gewoon slechte timing.[/color]
+Text/21d_breakdown3/text,"Murphy zakt langs de muur naar beneden, met zijn gezicht in zijn handen. En ik... ik [tornado radius=3 freq=2][color=CRIMSON]AT[/color][/tornado] dat spul. Elke dag."
+Text/21d_breakdown4/text,"Murphy kijkt je aan, met tranen over zijn wangen. [pulse freq=2][color=CRIMSON]Wat als ik HEM heb gegeten?[/color][/pulse]"
+Choice/21e/text,Murphy... Het spijt me zo. Ik sta achter je. We zullen de waarheid samen vinden.
+Choice/21f/text,"Murphy, dit is gevaarlijk. We moeten ons er buiten houden."
+Choice/220/text,Misschien is het toeval. Laten we geen overhaaste conclusies trekken.
+Text/221_comfort1/text,"Je knielt naast Murphy, en legt een hand op zijn schouder."
+Text/221/text,Murphy grijpt je arm vast als een reddingslijn. [color=CHARTREUSE]Dank je.[/color] Ik dacht dat ik gek werd.
+Text/221_tommy/text,[color=STEEL_BLUE]Zijn stem wordt iets stabieler.[/color] Voor Tommy. We doen dit voor Tommy. En iedereen anders die ze hebben meegenomen.
+Text/222/text,Er zijn ook anderen die argwaan hebben. Sasha heeft mensen verzameld. Ik denk dat ze je vertrouwt.
+Text/223/text,"Murphy veegt zijn ogen af, proberend zichzelf te herpakken. Ja. Ja, je hebt waarschijnlijk gelijk. Vergeet dat ik iets gezegd heb."
+Text/224/text,Maar als je van gedachten verandert... Ik zal hier zijn. [color=STEEL_BLUE]Alleen met mijn vragen. En mijn nachtmerries.[/color]
+Text/225/text,Toeval. Murphy lacht bitter door zijn tranen heen. Zeker. En Tommy is zomaar [color=CRIMSON]verdwenen[/color] in het niets.
+Text/226/text,Blijf jezelf dat vertellen. Kijk hoe lang het je helpt slapen. [color=STEEL_BLUE]Het helpt mij niet.[/color]
+Text/227/text,Sasha verschijnt bij je hokje als de laatste dienst eindigt. Je ziet eruit alsof je een geest hebt gezien.
+Text/228/text,Laat me raden - Heeft Murphy je over zijn neef verteld?
+Text/229/text,Sasha knikt goedkeurend. Goed. We hebben mensen nodig die vragen stellen.
+Text/22a/text,Sasha bestudeert je gezicht zorgvuldig. Je bent bang. Dat is slim. Maar angst zal niemand redden.
+Text/22b/text,"Ik houd je al in de gaten sinds je eerste dag. De manier waarop je [color=YELLOW]aarzelde[/color] toen Russet het had over ""verwerking""."
+Text/22c/text,Je vroeg wat er gebeurt met afgekeurde aardappelen. Dat vroeg moed. [color=CHARTREUSE]De meesten salueren en stempelen gewoon.[/color]
+Text/22d/text,Sasha buigt dichterbij. Er is een patroon. Elke aardappel die we afkeuren? Binnen 48 uur verdwenen. Geen deportatierecords. Geen overplaatsingen.
+Text/22e/text,Maar de productie van [color=DARK_VIOLET]Wortelreserve[/color]? [tornado radius=3 freq=2][color=CRIMSON]Die stijgt.[/color][/tornado] Elke. Enkele. Keer.
+Choice/22f/text,Ik geloof je. Hoe kan ik helpen?
+Choice/230/text,Ik moet bewijs zien voordat ik alles riskeer.
+Text/231/text,"Sasha's ogen lichten op. Ik wist dat ik de juiste keuze had gemaakt. Morgenavond, na de dienst. Ik zal je laten zien wat ik heb gevonden."
+Text/232/text,Tot dan
+Text/233/text,Eerlijk genoeg. Het bewijs komt eraan. Alleen... houd je ogen open tijdens de dienst van morgen.
+Text/234/text,Kijk waar de [color=CRIMSON]afgekeurde aardappelen[/color] naartoe gaan. Volg de vrachtwagens als je kunt.
+Text/235/text,Je haalt de foto tevoorschijn die de wanhopige aardappel je gaf. Haar vrouw. [color=STEEL_BLUE]Waar is ze nu?[/color]
+Text/236/text,Als wat Sasha en Murphy zeggen waar is... dan is ze al...
+Text/237/text,Je kunt de gedachte niet afmaken. Maar je [color=CHARTREUSE]zult haar gezicht niet vergeten[/color].
+Text/238/text,"Morgen verandert alles. Of je vindt antwoorden, of je begraaft de vragen voorgoed."
+Text/239/text,Eén ding is zeker: er is [color=YELLOW]geen weg terug naar zalige onwetendheid[/color].
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

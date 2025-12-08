@@ -16,3 +16,12 @@ Text/76/text,"Sasha duwt de map in je handen. ""[color=YELLOW]Houd dit veilig. E
 Text/77/text,Je verstopt de map in je jas. [color=DARK_VIOLET]Root Reserve[/color]. De afkeuringen. De ontbrekende aardappelen. Het verbindt allemaal op een [tornado radius=3 freq=2][color=CRIMSON]huiveringwekkende manier[/color][/tornado].
 Choice/71/disabled_text,
 Choice/70/disabled_text,
+Text/69_photo1/text,Je haalt de foto er weer bij. [color=GOLD]Maris Piper[/color]. Wat een vriendelijk gezicht.
+Text/69_photo2/text,Haar vrouw was zo wanhopig. [color=STEEL_BLUE]Wat is er met haar gebeurd?[/color]
+Text/69_photo3/text,Je merkt iets op de achtergrond van de foto op - een vrachtwagen met een [color=DARK_VIOLET]paars logo[/color].
+Text/69_photo4/text,Dat symbool... dat heb je gezien op de leveringen van de kantine. [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve.[/color][/wave]
+Text/6a_photo1/text,Sasha... deze foto. Haar vrouw gaf het me. Ze was naar haar op zoek.
+Text/6a_photo2/text,Sasha's gezicht betrekt. [color=STEEL_BLUE]Laat me zien.[/color]
+Text/6a_photo3/text,"Sasha bestudeert de foto, haar uitdrukking betrekt. [color=CRIMSON]Ik herken die vrachtwagen.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Bewaar deze foto goed.[/color][/pulse] Het kan later belangrijk zijn. Geloof me.
+Text/6f2/text,[pulse freq=3][color=CRIMSON]Ze worden Root Reserve.[/color][/pulse]

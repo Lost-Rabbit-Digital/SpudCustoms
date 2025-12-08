@@ -1,0 +1,69 @@
+﻿keys,ja
+Text/b8/text,国境施設は完全封鎖され、武装警備員があらゆる通路を巡回している。
+Text/b9/text,[pulse freq=3][color=RED]警告！厳戒態勢！[/color][/pulse] 昨夜、機密文書が盗まれた。
+Text/ba/text,我々には[tornado radius=4 freq=3][color=CRIMSON]内部に裏切り者[/color][/tornado]がいる。情報を隠蔽する者は共犯と見なす。
+Text/bb/text,全職員は[wave amp=15 freq=2][color=DARK_ORANGE]保安検査[/color][/wave]に整列せよ。ストレス反応が上昇した者は要注意人物として記録される。
+Text/bc/text,外で何が起こっているか見たか？至る所にパンフレットが散らばっていて、[color=DARK_VIOLET]ルートリザーブ[/color]が…[pulse freq=3][color=CRIMSON]我々から[/color][/pulse]作られていると…
+Choice/bd/text,「声を落とせ。我々は皆監視されている。」
+Choice/be/text,「私も同じ噂を聞いた。もし本当なら恐ろしい。」
+Choice/bf/text,「そんな馬鹿げたプロパガンダだ。そんな嘘を広めるな。」
+Text/c0/text,君の言う通りだ。だが、もしそれが本当なら…我々は何になるんだ？
+Text/c1/text,先月、私のいとこは拒否された。それはつまり…？もう[color=CHARTREUSE]これ以上はできない[/color]。
+Text/c2/text,彼らの表情は警戒を帯びる。当然だ。永遠に忠実なスパッド。
+Text/c3/text,昨夜22時から午前4時の間の所在を述べよ。
+Choice/c4/text,「昨夜は一晩中、自室で寝ていました。」
+Choice/c5/text,「まずは私の弁護士と話したい。」
+Text/c6/text,君のストレスレベルは[color=YELLOW]欺瞞[/color]を示している。しかし…断定できない。今は下がってよい。
+Text/c7/text,弁護士だと？これは保安手続きであり、裁判ではない。君の拒否は記録された。
+Text/c7_viktor1/text,休憩中、屈強な警備員が近づいてくる。彼の顔はやつれている。
+Text/c7_viktor2/text,おい…君は税関職員の一人だろ？妻のエレナについて尋ね回っているんだ。
+Text/c7_viktor3/text,彼女は3週間前にこの検問所を通過した。[color=STEEL_BLUE]検査不合格だった。[/color]それ以来、彼女から連絡がない。
+Choice/c7_viktor4/text,「ヴィクトル…見つけたものがある。エレナについてだ。君は真実を知る必要がある。」
+Choice/c7_viktor5/text,「申し訳ない、ヴィクトル。何も見ていない。」
+Text/c7_viktor6/text,彼に積荷目録のコピーを見せる。彼の顔は真っ青になる。
+Text/c7_viktor7/text,[wave amp=25 freq=3]彼が読むと、その手が震える。[/wave] [color=GOLD]エレナ・ペトロフ[/color]…[color=CRIMSON]処理済み…バッチRR-2851…[/color]
+Text/c7_viktor8/text,彼の声はかろうじて聞き取れるほどの囁きになる。[tornado radius=3 freq=2][color=CRIMSON]彼らが…彼女を…に…[/color][/tornado]
+Text/c7_viktor9/text,彼の悲しみは冷たい怒りへと変わる。[pulse freq=2][color=CRIMSON]アイダホに報いを受けさせる。[/color][/pulse]彼女の記憶に誓って。
+Text/c7_viktor10/text,彼はあなたの肩を掴む。[color=CHARTREUSE]教えてくれてありがとう。[/color]時が来たら…これを覚えておこう。
+Text/c7_viktor11/text,彼は悲しげに頷く。[color=STEEL_BLUE]やはりそうか。[/color]誰も何も知らない。あるいは誰も話したがらない。
+Text/c7_viktor12/text,何か聞いたら…[color=YELLOW]頼む。[/color]彼女しかいないんだ。
+Text/c8/text,うまくいっている。マニフェストは騒動を引き起こしたが、[color=DARK_ORANGE]ラセットは我々を疑っている[/color]。
+Text/c9/text,今日のシフト中に、我々の組織の味方に注意しろ。[color=CHARTREUSE]彼らは見分けがつくはずだ[/color]。
+Text/ca/text,彼らを安全に通過させることができたら、[color=CHARTREUSE]話し合った特別な印[/color]を使え。
+Choice/cb/text,「リスクを冒す価値はある。乗った。」
+Choice/cc/text,「これは危険すぎる。しばらく潜伏すべきかもしれない。」
+Text/cd/text,君なら頼りになると信じていたよ。これが終われば、[color=CHARTREUSE]スパッドは真の英雄が誰だったかを知るだろう[/color]。
+Text/ce/text,もうそんな段階ではない。潜伏しても我々は救われない。[color=CHARTREUSE]システムを打倒するしかない[/color]。
+Text/cf/text,各ステーションには、新しい[color=DARK_ORANGE]リアリティスキャンシステム[/color]が導入された。それは不正なマーキングや偽造を検出する。
+Text/d0/text,全ての書類は承認前にスキャンされなければならない。[color=CRIMSON]裏切り者は根絶されるだろう[/color]。私が保証する。
+Text/d0_qte1/text,そのシフトの後半、[color=CHARTREUSE]巧妙な抵抗の印[/color]が施された書類を持った旅行者が近づいてくる。
+Text/d0_qte2/text,[color=DARK_ORANGE]リアリティスキャン[/color]がスキャンを開始する。[wave amp=15 freq=3][color=RED]印が検出されるぞ！[/color][/wave]
+Text/d0_qte3/text,決断する時間は数秒しかない。スキャナーがウォームアップしている…
+Choice/d0_qte4/text,「スキャナーの故障を装え――急げ！」（レジスタンスを助ける）
+Choice/d0_qte5/text,「スキャナーにスキャンを完了させる」（プロトコルに従う）
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]急いで行動しろ！[/color][/pulse]スキャンが完了する前に故障を引き起こせ！
+Text/d0_qte7/text,スキャナーのケーブルをいじる。火花が散る。画面がちらつき、消える。
+Text/d0_qte8/text,ラセットが駆け寄ってくる。[color=YELLOW]ここで何があった？[/color]
+Choice/d0_qte9/text,「電力サージです、サー。この新しいシステムは気まぐれでして。」
+Choice/d0_qte10/text,「分かりません、サー。突然動かなくなりました。」
+Text/d0_qte11/text,ラセットは唸る。[color=STEEL_BLUE]官僚どもが未試験の機器を押し付けやがって。[/color]手動で処理し、再検査のフラグを立てろ。
+Text/d0_qte12/text,ラセットはあなたを疑わしげに見る。[color=YELLOW]都合がいいな。[/color]整備士に調べさせる。二度と起こすなよ。
+Text/d0_qte13/text,レジスタンスのメンバーは、通過しながらわずかに感謝の頷きを見せる。
+Text/d0_qte14/text,スキャナーが[pulse freq=3][color=RED]けたたましく鳴り響く[/color][/pulse]。不正なマークを検出しました！
+Text/d0_qte15/text,ラセットが即座に現れる。[color=CHARTREUSE]よくやった！[/color]また一人、裏切り者を捕らえた。
+Text/d0_qte16/text,抵抗メンバーは、目に恐怖を浮かべながら引きずられていく。「[color=CRIMSON]やめてくれ！子供がいるんだ！[/color]」
+Text/d0_qte17/text,あなたの忠誠心は[color=DARK_ORANGE]ファイルに記録された[/color]。この調子で続けろ。
+Text/d1/text,抵抗メンバーを助けることは、さらに危険になったが、[color=CHARTREUSE]真実は広まらなければならない[/color]。
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,
+Choice/c7_viktor4/disabled_text,
+Choice/c7_viktor5/disabled_text,
+Choice/d0_qte4/disabled_text,
+Choice/d0_qte5/disabled_text,
+Choice/d0_qte9/disabled_text,
+Choice/d0_qte10/disabled_text,

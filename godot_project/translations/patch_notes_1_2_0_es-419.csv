@@ -1,25 +1,25 @@
 ﻿keys,es-419
-patch_1_2_0_title,SPUD CUSTOMS 1.2.0 - PATCH NOTES
-patch_1_2_0_personal_note_header,A PERSONAL NOTE FROM THE DEVELOPER
-patch_1_2_0_personal_note,"This update is dedicated to my little one, who spent the first months of life in the NICU - from 1lb at birth to now 20lbs of pure joy. Thank you to everyone who has joined this journey - over 2,000 players have now experienced Spud Customs!"
-patch_1_2_0_visual_header,VISUAL ENHANCEMENTS
-patch_1_2_0_visual_1,Animated Art Integration: Incorporated new animated GIFs from StagNation into opening scenes
-patch_1_2_0_visual_2,Art Overhaul: Repainted the first five scenes players see for improved visual quality
-patch_1_2_0_visual_3,Dynamic Backgrounds: Background visuals now change as difficulty increases
-patch_1_2_0_story_header,STORY & NARRATIVE
-patch_1_2_0_story_1,Choice Persistence: Narrative choices now properly carry across all levels
-patch_1_2_0_story_2,Visual Progression: Added visual indicators of story progression in main gameplay scenes based on current shift number
-patch_1_2_0_story_3,Branching Dialogue Fixes: Fixed issues with branching dialogue in final narrative scenes
-patch_1_2_0_bugfix_header,BUG FIXES
-patch_1_2_0_bugfix_1,Achievement System: Fixed achievement tracking - all achievements now unlock properly
-patch_1_2_0_bugfix_2,Leaderboard: Fixed issue where leaderboard was stuck on loading
-patch_1_2_0_bugfix_3,Screen Shake: Screen shake now properly resets to origin after each use
-patch_1_2_0_bugfix_4,Difficulty Scaling: Fixed easy mode scaling factor
-patch_1_2_0_bugfix_5,Background Display: Fixed missing backgrounds during dialogue scenes
-patch_1_2_0_bugfix_6,Text Readability: Improved text coloration for better readability
-patch_1_2_0_engagement_header,PLAYER ENGAGEMENT
-patch_1_2_0_engagement_1,Review Requests: Added review prompts for demo and full game players
-patch_1_2_0_engagement_2,Translation Fixes: Various translation improvements across supported languages
-patch_1_2_0_technical_header,TECHNICAL IMPROVEMENTS
-patch_1_2_0_technical_1,Expanded Language Support: Now supporting all 31 Steam-supported languages
-patch_1_2_0_technical_2,Translation System Overhaul: Reorganized translation files for better maintainability
+patch_1_2_0_title,SPUD CUSTOMS 1.2.0 - NOTAS DEL PARCHE
+patch_1_2_0_personal_note_header,UNA NOTA PERSONAL DEL DESARROLLADOR
+patch_1_2_0_personal_note,"Esta actualización está dedicada a mi pequeño, quien pasó los primeros meses de vida en la UCIN - de 1 libra al nacer a ahora 20 libras de pura alegría. ¡Gracias a todos los que se han unido a este viaje - más de 2,000 jugadores ya han experimentado Spud Customs!"
+patch_1_2_0_visual_header,MEJORAS VISUALES
+patch_1_2_0_visual_1,Integración de Arte Animado: Se incorporaron nuevos GIF animados de StagNation en las escenas de apertura
+patch_1_2_0_visual_2,Revisión Artística: Se repintaron las primeras cinco escenas que ven los jugadores para mejorar la calidad visual
+patch_1_2_0_visual_3,Fondos Dinámicos: Los fondos visuales ahora cambian a medida que aumenta la dificultad
+patch_1_2_0_story_header,HISTORIA Y NARRATIVA
+patch_1_2_0_story_1,Persistencia de Elecciones: Las elecciones narrativas ahora se mantienen correctamente en todos los niveles
+patch_1_2_0_story_2,Progreso Visual: Se agregaron indicadores visuales del progreso de la historia en las escenas principales de juego basados en el número de turno actual
+patch_1_2_0_story_3,Correcciones de Diálogo Ramificado: Se corrigieron problemas con el diálogo ramificado en las escenas narrativas finales
+patch_1_2_0_bugfix_header,CORRECCIONES DE ERRORES
+patch_1_2_0_bugfix_1,Sistema de Logros: Se corrigió el seguimiento de logros - todos los logros ahora se desbloquean correctamente
+patch_1_2_0_bugfix_2,Tabla de Clasificación: Se corrigió un problema donde la tabla de clasificación se quedaba atascada cargando
+patch_1_2_0_bugfix_3,Temblor de Pantalla: El temblor de pantalla ahora se restablece correctamente a su origen después de cada uso
+patch_1_2_0_bugfix_4,Escalado de Dificultad: Se corrigió el factor de escalado del modo fácil
+patch_1_2_0_bugfix_5,Visualización de Fondos: Se corrigieron fondos faltantes durante las escenas de diálogo
+patch_1_2_0_bugfix_6,Legibilidad del Texto: Se mejoró la coloración del texto para una mejor legibilidad
+patch_1_2_0_engagement_header,PARTICIPACIÓN DEL JUGADOR
+patch_1_2_0_engagement_1,Solicitudes de Reseña: Se agregaron solicitudes de reseña para jugadores de la demo y del juego completo
+patch_1_2_0_engagement_2,Correcciones de Traducción: Varias mejoras de traducción en los idiomas compatibles
+patch_1_2_0_technical_header,MEJORAS TÉCNICAS
+patch_1_2_0_technical_1,Soporte de Idiomas Expandido: Ahora compatible con los 31 idiomas soportados por Steam
+patch_1_2_0_technical_2,Revisión del Sistema de Traducción: Se reorganizaron los archivos de traducción para una mejor mantenibilidad

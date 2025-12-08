@@ -1,0 +1,49 @@
+﻿keys,id
+Text/215/text,"Murphy menangkapmu di koridor, matanya merah. Ada waktu sebentar?"
+Text/216/text,Murphy menarikmu ke ruang penyimpanan kosong dan menutup pintu.
+Text/217/text,Lelucon yang kubuat di kantin itu... tentang sepupuku yang ada di kelompok [color=DARK_VIOLET]Cadangan Akar[/color]...
+Text/218/text,Suara Murphy bergetar. Kurasa itu bukan lelucon lagi.
+Text/219/text,Kau bilang itu tidak lucu. Kau benar. [color=STEEL_BLUE]Tidak ada yang lucu dari semua ini.[/color]
+Text/21a/text,"Aku melihatmu pergi. Pintar. Aku berharap bisa berhenti makan makanan itu, tapi mereka [color=YELLOW]mengawasi[/color]. Mereka selalu mengawasi."
+Text/21b/text,"Aku menemukan sesuatu di barang-barang sepupuku. Formulir penolakannya. Hal biasa, tapi..."
+Text/21c/text,"Murphy mengeluarkan formulir yang kusut. Lihat kode pemrosesannya. ""[color=CRIMSON]RR-UTIL-7[/color]."""
+Text/21d/text,Aku mencarinya di arsip. RR adalah singkatan dari [pulse freq=2][color=DARK_VIOLET]Cadangan Akar[/color][/pulse]. UTIL berarti... [color=CRIMSON]pemanfaatan[/color].
+Text/21d_breakdown1/text,[wave amp=20 freq=3]Tangan Murphy mulai gemetar.[/wave] Sepupuku... Tommy... dia baru dua puluh tiga.
+Text/21d_breakdown2/text,Dia datang ke sini untuk [color=CHARTREUSE]kehidupan yang lebih baik[/color]. Gagal satu pemeriksaan. Satu. [color=STEEL_BLUE]Hanya nasib buruk.[/color]
+Text/21d_breakdown3/text,"Murphy merosot ke dinding, wajahnya di tangannya. Dan aku... aku [tornado radius=3 freq=2][color=CRIMSON]MEMAKAN[/color][/tornado] makanan itu. Setiap hari."
+Text/21d_breakdown4/text,"Murphy menatapmu, air mata mengalir. [pulse freq=2][color=CRIMSON]Bagaimana jika aku memakan DIA?[/color][/pulse]"
+Choice/21e/text,Murphy... Aku turut berduka. Aku bersamamu. Kita akan mencari kebenarannya bersama.
+Choice/21f/text,"Murphy, ini berbahaya. Kita harus menjauhinya."
+Choice/220/text,Mungkin ini kebetulan. Jangan langsung mengambil kesimpulan.
+Text/221_comfort1/text,"Kau berlutut di samping Murphy, meletakkan tangan di bahunya."
+Text/221/text,Murphy mencengkeram lenganmu seperti tali penyelamat. [color=CHARTREUSE]Terima kasih.[/color] Kupikir aku sudah gila.
+Text/221_tommy/text,[color=STEEL_BLUE]Suaranya sedikit stabil.[/color] Untuk Tommy. Kita lakukan ini untuk Tommy. Dan semua orang lain yang telah mereka ambil.
+Text/222/text,Ada orang lain yang juga curiga. Sasha telah mengumpulkan orang. Kurasa dia memercayaimu.
+Text/223/text,"Murphy menyeka matanya, mencoba menenangkan diri. Ya. Ya, kau mungkin benar. Lupakan saja apa yang kukatakan."
+Text/224/text,Tapi jika kau berubah pikiran... Aku akan di sini. [color=STEEL_BLUE]Sendirian dengan pertanyaan-pertanyaanku. Dan mimpi burukku.[/color]
+Text/225/text,Kebetulan. Murphy tertawa pahit di tengah air matanya. Tentu. Dan Tommy hanya [color=CRIMSON]menghilang[/color] begitu saja.
+Text/226/text,Teruslah katakan itu pada dirimu sendiri. Lihat berapa lama itu membantumu tidur. [color=STEEL_BLUE]Itu tidak membantuku.[/color]
+Text/227/text,Sasha muncul di bilikmu saat giliran kerja terakhir berakhir. Kau terlihat seperti melihat hantu.
+Text/228/text,Coba kutebak - Murphy memberitahumu tentang sepupunya?
+Text/229/text,Sasha mengangguk setuju. Bagus. Kita butuh orang yang banyak bertanya.
+Text/22a/text,Sasha menatap wajahmu dengan saksama. Kau takut. Itu cerdas. Tapi rasa takut tidak akan menyelamatkan siapa pun.
+Text/22b/text,"Aku sudah mengawasimu sejak hari pertamamu. Caramu [color=YELLOW]ragu[/color] saat Russet bicara tentang ""pemrosesan."""
+Text/22c/text,Kau bertanya apa yang terjadi pada kentang yang ditolak. Itu butuh nyali. [color=CHARTREUSE]Kebanyakan hanya hormat dan cap.[/color]
+Text/22d/text,Sasha mendekat. Ada polanya. Setiap kentang yang kita tolak? Hilang dalam 48 jam. Tidak ada catatan deportasi. Tidak ada transfer.
+Text/22e/text,Tapi produksi [color=DARK_VIOLET]Cadangan Akar[/color]? [tornado radius=3 freq=2][color=CRIMSON]Itu naik.[/color][/tornado] Setiap. Kali.
+Choice/22f/text,Aku percaya padamu. Bagaimana aku bisa membantu?
+Choice/230/text,Aku perlu melihat bukti sebelum aku mempertaruhkan segalanya.
+Text/231/text,"Mata Sasha berbinar. Aku tahu aku memilih yang tepat. Besok malam, setelah giliran kerja. Aku akan menunjukkan apa yang kutemukan."
+Text/232/text,Sampai saat itu
+Text/233/text,Baiklah. Bukti akan datang. Hanya... tetap buka matamu selama giliran kerja besok.
+Text/234/text,Perhatikan ke mana [color=CRIMSON]kentang yang ditolak[/color] pergi. Ikuti truk-truk itu jika kau bisa.
+Text/235/text,Kau mengeluarkan foto yang diberikan kentang putus asa itu padamu. Istrinya. [color=STEEL_BLUE]Di mana dia sekarang?[/color]
+Text/236/text,Jika apa yang Sasha dan Murphy katakan itu benar... dia sudah...
+Text/237/text,Kau tidak bisa menyelesaikan pikiran itu. Tapi kau [color=CHARTREUSE]tidak akan melupakan wajahnya[/color].
+Text/238/text,"Besok, semuanya berubah. Entah kau menemukan jawaban, atau kau mengubur pertanyaan itu selamanya."
+Text/239/text,Satu hal yang pasti: tidak ada [color=YELLOW]kembali ke ketidaktahuan yang membahagiakan[/color].
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

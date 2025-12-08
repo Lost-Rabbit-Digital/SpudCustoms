@@ -1,0 +1,18 @@
+﻿keys,ar
+Text/56/text,مرحبًا بك في أمة سبود. أرض [pulse freq=2][color=MEDIUM_VIOLET_RED]الرخاء لجميع البطاطس[/color][/pulse].
+Text/57/text,لقد تم اختيارك لدور [color=DARK_ORANGE]حيوي[/color] في حماية حدودنا.
+Text/59/text,انظر! إلى [color=MEDIUM_VIOLET_RED]الجدار العظيم[/color] الذي يحمي أمتنا. هنا ستخدم، متأكدًا من دخول المستحقين فقط.
+Text/5a/text,آه، البرعم الجديد. استمع جيدًا، دورك [color=DARK_ORANGE]حيوي لأمن سبود[/color].
+Text/184/text,يقترب راسيت بشكل مزعج. لقد رأيت العديد من البراعم يمرون من هنا. [color=STEEL_BLUE]معظمهم لا يدومون.[/color]
+Text/184b/text,أولئك الذين يطرحون الكثير من الأسئلة؟ يتم [color=CRIMSON]إعادة تعيينهم[/color]. بشكل دائم.
+Text/5b/text,أُعينك ضابط جمارك لـ [pulse freq=1][color=MEDIUM_VIOLET_RED]سبود المجيدة[/color][/pulse]. أي أسئلة؟
+Choice/5c/text,"""أنا مستعد لخدمة سبود بكل نشائي!"""
+Choice/5d/text,"""ماذا يحدث بالضبط للبطاطس المرفوضة؟"""
+Text/5e/text,ممتاز! هذا هو نوع الحماس الذي نحتاجه. قد تكسب وسام تقدير من [color=VIOLET]احتياطي الجذور[/color].
+Text/5f/text,إنهم... [color=VIOLET]يُعالجون[/color]. وفقًا للبروتوكول. [color=VIOLET]احتياطي الجذور[/color] يتولى جميع التفاصيل.
+Text/60/text,ركز على واجباتك. [color=DARK_ORANGE]لا شيء أكثر.[/color]
+Text/61/text,نوبتك الأولى تبدأ الآن. تحقق من الأوراق بعناية، ارفض أولئك الذين لا يستوفون معاييرنا.
+Text/62/text,حقق حصتك، تجنب الضربات.
+Text/62b/text,وتذكر، [color=MEDIUM_VIOLET_RED]المجد لسبود![/color]
+Choice/5c/disabled_text,
+Choice/5d/disabled_text,

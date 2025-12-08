@@ -1,0 +1,88 @@
+﻿keys,zh-TW
+Text/11/text,馬鈴薯邊境陷入[pulse freq=3][color=CRIMSON]混亂[/color][/pulse]。洩露文件後，恐慌的馬鈴薯湧入檢查站，拼命想逃。
+Text/12/text,你和莎莎悄悄溜過。[wave amp=20 freq=3][color=CHARTREUSE]我們必須繼續前進！[/color][/wave]人們現在知道真相了。
+Text/13/text,他們再也無法掩蓋真相了。如果我們能滲透進[color=DARK_VIOLET]根源儲備[/color]設施並廣播證據，這將[tornado radius=3 freq=2][color=CHARTREUSE]點燃革命之火[/color][/tornado]。
+Text/14/text,那裡是個堡壘。現在我們之中還有個[color=YELLOW]前海關探員[/color]。他們懷疑地瞇起眼睛看著你。
+Choice/15/text,我理解你們的疑慮，但我已投身於這項事業。
+Choice/16/text,我已經犧牲了一切。我現在不會退縮。
+Text/17/text,說得好聽。但我們以前聽過這些話。
+Text/18/text,他們幫我們拿到了文件。那是行動，不是空話。
+Text/19/text,現在回頭當個忠誠的馬鈴薯已經不可能了。歡迎加入反抗軍，同志。
+Text/1a_rescue1/text,一名偵察兵衝了過來。我們找到她了！[color=CHARTREUSE]莎莎在拘留區！[/color]
+Text/1a_rescue2/text,他們正準備在不到一小時內...[tornado radius=3 freq=2][color=CRIMSON]處理她[/color][/tornado]！
+Text/1a_rescue3/text,我們必須救她。[pulse freq=2][color=CHARTREUSE]這一切都是她開始的。[/color][/pulse]我們不會丟下她離開。
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]衝過設施！[/color][/wave]在為時已晚之前找到莎莎！
+Text/1a_rescue_fail1/text,你絆倒了。前方的路被守衛擋住了！
+Text/1a_rescue_fail2/text,維克多從一道側門衝了進來。[color=CHARTREUSE]快走！我來擋住他們！[/color]
+Text/1a_rescue_fail3/text,為了艾蓮娜。為了他們所有人。[color=STEEL_BLUE]我不會讓任何人再死去！[/color]
+Text/1a_rescue_fail4/text,墨菲拉響了火警。[color=CHARTREUSE]為了湯米！[/color]灑水器讓守衛們睜不開眼！
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]我來製造混亂。把她帶出去！[/color]
+Text/1a_rescue_fail6/text,一條[color=YELLOW]處理輸送帶卡住了[/color]，火花四濺，引開了守衛的注意力！
+Text/1a_rescue_fail7/text,命運——或是那些被處理者的亡魂——賜予你第二次機會。
+Text/1a_rescue5/text,莎莎從牢房裡抬起頭，渾身是傷卻意志堅定。她的眼睛睜大了。[color=CHARTREUSE]你來了。[/color]
+Text/1a_rescue6/text,我當然來了。[color=CHARTREUSE]我們會一起完成這一切。[/color]
+Choice/1a_rescue7/text,我真怕再也見不到你了。
+Choice/1a_rescue8/text,你把我們嚇壞了。別再這樣了。
+Choice/1a_rescue9/text,我們還有任務要完成。愛達荷州在等著。
+Text/1a_rescue10/text,[color=CHARTREUSE]莎莎將你輕輕擁入懷中。[/color] 我知道你會來的。我從未懷疑過。
+Text/1a_rescue11/text,現在，讓我們為他們所帶走的一切，讓他們付出代價。[color=CHARTREUSE]一起。[/color]
+Text/1a_rescue12/text,莎莎忍著疼痛，勉強擠出一個微笑。[color=STEEL_BLUE]我會試試的。[/color] 但有些事情值得冒險。
+Text/1a_rescue13/text,你在這裡就證明了這一點。現在，讓我們結束這一切。
+Text/1a_rescue14/text,莎莎點點頭，她的決心重新燃起。[color=CHARTREUSE]你說得對。[/color] 感性可以等等。
+Text/1a_rescue15/text,愛達荷以為他贏了。讓我們讓他知道他錯得有多離譜。
+Text/1a/text,經過一場緊張的滲透，你的隊伍站在[color=DARK_VIOLET]根源儲備區[/color]的核心，[pulse freq=3][color=CRIMSON]壓迫的可怕機器[/color][/pulse]赤裸裸地呈現在眼前。
+Text/1b/text,[wave amp=25 freq=3][color=RED]警報大作[/color][/wave]，警衛們手忙腳亂地應對你們的入侵。你們在走廊中奔跑，躲避著安全系統。
+Text/1c/text,螢幕閃爍著亮起。「喔，喔，[color=CRIMSON]叛徒[/color]帶著叛亂的渣滓回來了。」
+Text/1d/text,你們以為能阻止「薯國」的進步嗎？[color=DARK_VIOLET]根源儲備區[/color]是這個國家的命脈。
+Text/1e/text,但別擔心。你們仍然會為「薯國」服務...[tornado radius=4 freq=3][color=DARK_VIOLET]在加工槽裡！[/color][/tornado]
+Text/1f/text,螢幕突然變黑。
+Text/20/text,你堅定地轉向其他人。「我們必須到達愛達荷的碉堡。現在！」
+Text/158/text,保安部隊正在逼近！[pulse freq=3][color=YELLOW]殺出一條血路！[/color][/pulse]
+Text/21_fail1/text,警衛從四面八方包圍過來。[color=CRIMSON]無處可逃！[/color]
+Text/21_fail2/text,維克多出現在警衛們身後，聲音冷如鋼鐵。[color=STEEL_BLUE]放下武器。現在。[/color]
+Text/21_fail3/text,警衛們猶豫了——維克多曾是他們的一員。[color=CRIMSON]伊蓮娜的名字就在那些清單上。你們的家人可能就是下一個。[/color]
+Text/21_fail4/text,一些警衛放下武器。其他人則逃跑了。道路暢通無阻。
+Text/21_fail5/text,東翼傳來一聲爆炸。墨菲的聲音在通訊器中沙沙作響：[color=CHARTREUSE]「那是我的聲東擊西！快走！」[/color]
+Text/21_fail6/text,[color=STEEL_BLUE]警衛們朝著爆炸方向散開。湯米會為此感到驕傲的。[/color]
+Text/21_fail7/text,莎莎從後面撲倒了領頭的警衛。[color=CHARTREUSE]我可不是為了看著你送死才從那個牢房裡活下來的！[/color]
+Text/21_fail8/text,[color=STEEL_BLUE]快跑！這裡交給我！[/color]
+Text/21/text,你的隊伍衝破一波又一波的保安部隊，險些被捕。莎莎的抵抗戰士製造了聲東擊西，為你們清除了前進的道路。
+Text/22/text,經過一番驚險的維修隧道逃亡後，你們終於到達了通往愛達荷私人碉堡的保密電梯。
+Text/23/text,莎莎和你的盟友們在身旁，你們終於與愛達荷對峙。
+Text/24/text,結束了，愛達荷。你的秘密已然曝光。這將如何收場…… [pulse freq=2]由你決定。[/pulse]
+Choice/25/text,協商和平的權力移交 (外交)
+Choice/26/text,要求立即逮捕愛達荷 (正義)
+Choice/27/text,針對愛達荷的罪行實施私刑正義 (復仇)
+Choice/28/text,專注於瓦解「根源儲備」基礎設施 (瓦解)
+Text/29/text,愛達荷，這不必以更多流血收場。如果你合作……
+Text/2a/text,噢，你這[color=STEEL_BLUE]天真的傻瓜[/color]。你以為這是談判嗎？
+Text/2b/text,愛達荷猛地按下一個按鈕，[color=RED]警報聲大作[/color]。「我唯一會給你的，就是一張[color=DARK_VIOLET]通往油炸鍋的單程票！[/color]」
+Text/2c/text,我不這麼認為，愛達荷。衛兵！你們看過檔案了，[color=YELLOW]你們知道他對你們的家人做了什麼。[/color]
+Text/2d/text,一名魁梧的衛兵上前，迅速將愛達荷踢倒在地。
+Text/2e/text,一聲槍響迴盪在室內。螢幕漸漸變黑。
+Text/2f/text,愛達荷，以薯國馬鈴薯人民之名，[color=CHARTREUSE]你被捕了！[/color]
+Text/30/text,結束了。人民已經發聲。[color=CHARTREUSE]我們將建立一個新的薯國，讓我們的根深植於土壤，而非苦難。[/color]
+Text/31/text,愛達荷，對你[color=CRIMSON]沒有交易，沒有憐憫[/color]。你只配得上暴君應得的制裁。
+Text/32/text,審判。我就是審判。[color=CHARTREUSE]為每一個犧牲的馬鈴薯，我們奪回我們的未來！[/color]
+Text/33/text,忘了他吧。他只是病徵，而非病根。[color=CHARTREUSE]徹底摧毀這個怪物的每一根莖。[/color]
+Text/34/text,我們必須走了！現在！
+Text/35/text,[color=DARK_VIOLET]根源儲備[/color]的垮台在薯國各地引發了一場變革的野火。
+Text/36/text,各省的馬鈴薯紛紛起義，擁抱[color=CHARTREUSE]他們國家的新願景[/color]。
+Text/37/text,只要我們忠於我們的根源，忠於引導我們走到這裡的理想……[color=CHARTREUSE]我們就能找到出路。[/color]
+Text/38/text,於是，從舊薯國的灰燼中，一個[color=CHARTREUSE]新國家開始紮根[/color]。[color=DARK_VIOLET]根源儲備[/color]的統治結束了。
+Text/151/text,[color=CHARTREUSE]莎莎靠得更近，她的手握住了你的手，你們一同凝視著新的黎明。[/color]這是我們共同建立的。你和我。
+Text/152/text,只要我們忠於我們的根源，忠於引導我們走到這裡的理想……[color=CHARTREUSE]我們就能找到出路。[/color]一起。
+Text/153/text,[color=CHARTREUSE]你緊握她的手。[/color]一起。
+Text/154/text,[color=STEEL_BLUE]莎莎站在你身旁。[/color]你的火焰點燃了焚毀他們帝國的火花。
+Text/155/text,[color=STEEL_BLUE]怒火已冷卻成決心。仍有工作待完成。[/color]
+Text/156/text,[color=STEEL_BLUE]莎莎向你投以支持的微笑。[/color]你已從那個檢查站走過漫漫長路。我們都是如此。
+Text/157/text,[color=STEEL_BLUE]罪惡感或許永遠無法完全消逝，但你已在重建中找到意義。[/color]
+Choice/15/disabled_text,
+Choice/16/disabled_text,
+Choice/25/disabled_text,
+Choice/26/disabled_text,
+Choice/27/disabled_text,
+Choice/28/disabled_text,
+Choice/1a_rescue7/disabled_text,
+Choice/1a_rescue8/disabled_text,
+Choice/1a_rescue9/disabled_text,

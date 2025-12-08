@@ -32,3 +32,32 @@ Choice/c4/disabled_text,
 Choice/c5/disabled_text,
 Choice/cb/disabled_text,
 Choice/cc/disabled_text,
+Text/c7_viktor1/text,Een forse bewaker komt aanlopen tijdens je pauze. Zijn gezicht is uitgeput.
+Text/c7_viktor2/text,"Hé... jij bent een van de douanebeambten, toch? Ik heb rondgevraagd naar mijn vrouw, Elena."
+Text/c7_viktor3/text,Ze is drie weken geleden deze controlepost gepasseerd. [color=STEEL_BLUE]Inspectie mislukt.[/color] Ik heb sindsdien niets meer van haar gehoord.
+Choice/c7_viktor4/text,"""Viktor... Ik heb iets gevonden. Over Elena. Je moet de waarheid weten."""
+Choice/c7_viktor5/text,"""Het spijt me, Viktor. Ik heb niets gezien."" (Liegen om hem te beschermen)"
+Text/c7_viktor6/text,Je laat hem een kopie van de manifestpagina zien. Zijn gezicht wordt wit.
+Text/c7_viktor7/text,[wave amp=25 freq=3]Zijn handen trillen terwijl hij leest.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Verwerkt... Batch RR-2851...[/color]
+Text/c7_viktor8/text,Zijn stem is nauwelijks een fluistering. [tornado radius=3 freq=2][color=CRIMSON]Ze... ze HEBBEN haar veranderd in...[/color][/tornado]
+Text/c7_viktor9/text,Zijn verdriet verandert in koude woede. [pulse freq=2][color=CRIMSON]Idaho zal hiervoor boeten.[/color][/pulse] Ik zweer het bij haar nagedachtenis.
+Text/c7_viktor10/text,Hij pakt je schouder vast. [color=CHARTREUSE]Bedankt dat je het me vertelt.[/color] Wanneer de tijd rijp is... zal ik dit onthouden.
+Text/c7_viktor11/text,Hij knikt bedroefd. [color=STEEL_BLUE]Dat dacht ik al.[/color] Niemand weet iets. Of niemand wil praten.
+Text/c7_viktor12/text,Als je iets hoort... [color=YELLOW]alsjeblieft.[/color] Zij is alles wat ik heb.
+Text/d0_qte1/text,Later die dienst nadert een reiziger met papieren waarop het [color=CHARTREUSE]subtiele verzetsmerk[/color] staat.
+Text/d0_qte2/text,De [color=DARK_ORANGE]RealityScan[/color] begint zijn scan. [wave amp=15 freq=3][color=RED]Het gaat het merk detecteren![/color][/wave]
+Text/d0_qte3/text,Je hebt seconden om te beslissen. De scanner warmt op...
+Choice/d0_qte4/text,"""Veroorzaak een scannerstoring - snel!"" (Help het verzet)"
+Choice/d0_qte5/text,"""Laat de scanner zijn scan voltooien"" (Volg het protocol)"
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]Je moet snel zijn![/color][/pulse] Veroorzaak de storing voordat hij klaar is met scannen!
+Text/d0_qte7/text,Je rommelt met de scannerkabels. Er vliegen vonken. Het scherm flikkert en valt uit.
+Text/d0_qte8/text,Russet snelt toe. [color=YELLOW]Wat is hier gebeurd?[/color]
+Choice/d0_qte9/text,"""Stroomstoot, meneer. Deze nieuwe systemen zijn temperamentvol."""
+Choice/d0_qte10/text,"""Ik weet het niet, meneer. Het viel zomaar uit."""
+Text/d0_qte11/text,Russet gromt. [color=STEEL_BLUE]Bureaucraten geven ons ongeteste apparatuur.[/color] Verwerk ze handmatig en markeer ze voor herinspectie.
+Text/d0_qte12/text,Russet kijkt je argwanend aan. [color=YELLOW]Wat handig.[/color] Ik laat de technische dienst ernaar kijken. Laat dit niet meer gebeuren.
+Text/d0_qte13/text,Het verzetslid geeft je een lichte knik van dankbaarheid terwijl ze passeren.
+Text/d0_qte14/text,De scanner [pulse freq=3][color=RED]PIEPT HARD[/color][/pulse]. Ongeautoriseerde markeringen gedetecteerd!
+Text/d0_qte15/text,Russet verschijnt ogenblikkelijk. [color=CHARTREUSE]Goed gedaan![/color] Nog een verrader gepakt.
+Text/d0_qte16/text,"Het verzetslid wordt weggesleept, terreur in hun ogen. ""[color=CRIMSON]Nee, alsjeblieft niet! Ik heb kinderen![/color]"""
+Text/d0_qte17/text,Je loyaliteit wordt [color=DARK_ORANGE]genoteerd in je dossier[/color]. Ga zo door.

@@ -53,3 +53,40 @@ Choice/f3/disabled_text,
 Choice/f2/disabled_text,
 Choice/e0/disabled_text,
 Choice/df/disabled_text,
+Text/d2b/text,Avant de commencer... j'ai une confession à faire.
+Text/d2c/text,"Cette note que vous avez trouvée le premier jour ? ""[color=GOLD]Un ami[/color]"" ?"
+Text/d2d/text,Sasha sourit. Je vois que vous l'avez gardée. Intelligent. Je savais que j'avais choisi la bonne pousse.
+Text/d2e/text,"J'ai observé de nouveaux officiers pendant des mois, cherchant quelqu'un avec des [color=CHARTREUSE]yeux interrogateurs[/color]. Quelqu'un qui pourrait voir à travers les mensonges."
+Text/d2f/text,L'expression de Sasha est compliquée. Vous l'avez montrée à Russet. J'ai dû me faire discret pendant des semaines après ça.
+Text/d2g/text,Mais vous êtes là quand même. Ça me dit quelque chose sur votre conscience.
+Text/d2h/text,Vous l'avez détruite. Je ne vous en veux pas - c'était risqué de la garder.
+Text/d2i/text,"Mais les mots ont trouvé leur chemin dans votre tête quand même, n'est-ce pas ?"
+Text/d2j/text,"[color=CHARTREUSE]Je suis ""Un ami.""[/color] Et maintenant vous savez pourquoi."
+Text/d2k/text,Sasha étale des documents saisis sur la table. Des manifestes de traitement du mois dernier.
+Text/d2l/text,"Vous scannez les noms, et votre sang se glace."
+Text/d2m/text,La voilà. [color=GOLD]Maris Piper[/color]. La femme de la photo.
+Text/d2n/text,"""[color=CRIMSON]Statut : Traitée. Lot RR-2847.[/color]"" Daté trois jours après que son mari ait imploré votre aide."
+Text/d2o/text,Vous sentez la photo dans votre poche. [color=STEEL_BLUE]Elle est partie. Et vous n'avez pas pu la sauver.[/color]
+Text/d2p/text,Mais peut-être... [color=CHARTREUSE]peut-être pouvez-vous encore en sauver d'autres[/color].
+Text/d2q/text,Murphy émerge de l'ombre. Salut. Content que vous soyez là.
+Text/d2r/text,Murphy brandit le formulaire RR-UTIL froissé. Mon cousin est aussi sur cette liste. [color=CHARTREUSE]Nous faisons ça ensemble.[/color]
+Text/ff2/text,[color=STEEL_BLUE]Elle garde ses distances pendant que vous marchez.[/color] J'apprécie que vous ne nous mettiez pas de bâtons dans les roues. C'est... quelque chose.
+Text/ff3/text,"[color=STEEL_BLUE]Elle marche en silence, les bras croisés.[/color] J'espère que vous trouverez la certitude que vous cherchez. Le reste d'entre nous ne peut pas se permettre d'attendre."
+Text/100_viktor1/text,"Sur le chemin du retour, vous trouvez Viktor seul sur le toit du poste de contrôle, fixant le ciel nocturne."
+Text/100_viktor2/text,Viktor tient une petite
+Text/100_viktor3/text,"Elle disait que peu importe à quel point les choses devenaient sombres, les étoiles seraient toujours là. [color=STEEL_BLUE]Constantes. Belles.[/color]"
+Text/100_viktor4/text,"Il se tourne vers vous, les yeux brillants. [wave amp=15 freq=2]Je n'arrête pas de penser... a-t-elle souffert ?[/wave] Savait-elle ce qui se passait ?"
+Text/100_viktor5/text,La voix de Viktor se brise. Elle m'a demandé une fois si j'avais déjà remis en question les rejets. Je lui ai dit [color=CRIMSON]de faire confiance au système[/color].
+Text/100_viktor6/text,[tornado radius=3 freq=2][color=CRIMSON]J'ai envoyé ma propre femme aux cuves de traitement sans le savoir.[/color][/tornado]
+Choice/100_viktor_choice1/text,Tu ne pouvais pas savoir. Aucun de nous ne savait.
+Choice/100_viktor_choice2/text,"Elena voudrait que tu te battes maintenant, pas que tu te noies dans la culpabilité."
+Choice/100_viktor_choice3/text,Je ne sais pas quoi dire. Je suis désolé.
+Text/100_viktor7/text,Il secoue lentement la tête. [color=STEEL_BLUE]L'ignorance n'est pas l'innocence. J'aurais dû demander. J'aurais dû écouter.[/color]
+Text/100_viktor8/text,Viktor range soigneusement la photo. [color=CHARTREUSE]Mais maintenant je sais. Et savoir signifie que je dois agir.[/color]
+Text/100_viktor9/text,"Viktor se redresse, un feu froid se rallumant dans ses yeux. [color=CHARTREUSE]Tu as raison.[/color] Elle était plus forte que moi. Plus courageuse."
+Text/100_viktor10/text,Il serre le poing. [color=CHARTREUSE]Quand le moment viendra
+Text/100_viktor11/text,[pulse freq=2][color=CRIMSON]Et Idaho paiera pour chaque vie qu'il a consumée.[/color][/pulse]
+Text/100_viktor12/text,Viktor esquisse un triste
+Text/100_viktor13/text,Il regarde de nouveau les étoiles. [color=STEEL_BLUE]Elena t'aurait aimé.[/color]
+Text/100_viktor14/text,"Il se tourne pour partir, puis s'arrête. [color=CHARTREUSE]Quand la résistance agira... je serai prêt.[/color]"
+Text/100_viktor15/text,Pour Elena. Pour eux tous. [pulse freq=2][color=CHARTREUSE]Les gardes me suivront quand je leur dirai la vérité.[/color][/pulse]

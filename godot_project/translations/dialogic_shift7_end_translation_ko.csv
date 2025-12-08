@@ -1,0 +1,95 @@
+﻿keys,ko
+Text/d2/text,"근무를 마친 후, 당신은 버려진 전분 공장의 비밀 저항군 회의로 이끌려 갑니다."
+Text/d2b/text,시작하기 전에... 고백할 것이 있습니다.
+Text/d2c/text,"첫날 찾았던 그 쪽지 말입니다? ""[color=GOLD]친구[/color]""?"
+Text/d2d/text,사샤가 미소 짓습니다. 그걸 간직했군요. 현명해요. 제가 올바른 새싹을 골랐다는 걸 알았습니다.
+Text/d2e/text,"저는 몇 달 동안 신입 장교들을 지켜봐 왔습니다. [color=CHARTREUSE]의심하는 눈빛[/color]을 가진 사람을, 거짓말을 꿰뚫어 볼 수 있는 사람을 찾아서요."
+Text/d2f/text,사샤의 표정이 복잡해집니다. 당신이 그걸 러셋에게 보여줬죠. 그 후 몇 주 동안 잠적해야 했습니다.
+Text/d2g/text,하지만 어쨌든 당신은 여기 있군요. 그건 당신의 양심에 대해 무언가를 말해줍니다.
+Text/d2h/text,당신은 그걸 파괴했죠. 당신을 탓하지 않습니다. 간직하는 건 위험했으니까요.
+Text/d2i/text,"하지만 그 말들은 어쨌든 당신의 머릿속에 들어왔겠죠, 안 그런가요?"
+Text/d2j/text,"[color=CHARTREUSE]제가 바로 ""친구""입니다.[/color] 이제 그 이유를 아시겠죠."
+Text/d2k/text,사샤가 압수된 문서들을 테이블에 펼칩니다. 지난달의 처리 명세서들입니다.
+Text/d2l/text,"당신은 이름들을 훑어보고, 등골이 오싹해집니다."
+Text/d2m/text,저기 있군요. [color=GOLD]마리스 파이퍼[/color]. 사진 속 그 여자.
+Text/d2n/text,"""[color=CRIMSON]상태: 처리됨. 배치 RR-2847.[/color]"" 그녀의 남편이 당신에게 도움을 간청한 지 사흘 뒤의 날짜입니다."
+Text/d2o/text,당신은 주머니 속 사진을 느낍니다. [color=STEEL_BLUE]그녀는 사라졌습니다. 그리고 당신은 그녀를 구할 수 없었습니다.[/color]
+Text/d2p/text,하지만 어쩌면... [color=CHARTREUSE]어쩌면 당신은 아직 다른 이들을 구할 수 있을지도 모릅니다.[/color]
+Text/d2q/text,머피가 그림자 속에서 나타납니다. 이봐요. 와줘서 기쁩니다.
+Text/d2r/text,머피가 구겨진 RR-UTIL 양식을 들어 올립니다. 제 사촌도 그 명단에 있습니다. [color=CHARTREUSE]우리는 이걸 함께 할 겁니다.[/color]
+Text/d3/text,전투의 상처를 가진 풍파를 겪은 감자가 모인 그룹에게 연설합니다.
+Text/d4/text,속삭임과 전단지의 시대는 끝났습니다. 정부는 본색을 드러냈습니다.
+Text/d5/text,우리 소식통에 따르면 [wave amp=15 freq=2][color=DARK_VIOLET]뿌리 보존소[/color][/wave] 처리 공장들이 생산량을 늘리고 있습니다.
+Text/d6/text,"이는 [tornado radius=3 freq=3][color=CRIMSON]더 많은 우리 형제자매들이 사라지고, 처리되고, 소비된다는 것[/color][/tornado]을 의미합니다."
+Text/d7/text,리더가 테이블을 주먹으로 내리칩니다. [pulse freq=3][color=CHARTREUSE]이것은 지금 끝납니다.[/color][/pulse] 우리는 그들의 작전의 심장부를 타격할 계획이 있습니다.
+Text/d8/text,"사샤가 테이블 위에 상세한 계획들을 펼칩니다. 사흘 안에, 우리는 주 공격을 개시할 것입니다."
+Text/d9/text,"한 팀이 주요 정부 단지에서 시선을 끄는 동안, 다른 팀은 가장 큰 뿌리 보존소 시설에 침투할 것입니다."
+Text/da/text,우리의 목표: 내부에서 벌어지는 일에 대한 [color=CHARTREUSE]반박할 수 없는 증거[/color]를 확보하여 스퍼드 전역에 방송하는 것입니다.
+Text/db/text,사샤가 계획의 한 부분을 가리킵니다. 여기가 당신이 나설 차례입니다.
+Text/dc/text,우리 요원들이 임무를 위해 국경을 넘을 수 있도록 스퍼드 세관 내부에 사람이 필요합니다.
+Text/dd/text,당신이 그 사람이 되어줄 것이라 믿어도 될까요?
+Choice/de/text,"""진실을 폭로하기 위해서라면 무엇이든 하겠습니다."""
+Choice/df/text,"""위험하게 들리네요. 만약 우리가 잡히면 어떻게 되나요?"""
+Choice/e0/text,"""그렇게 많은 사람들을 위험에 빠뜨리지 않는 다른 방법은 없나요?"""
+Text/e1/text,사샤의 얼굴이 희망으로 밝아집니다. 고맙습니다. [color=CHARTREUSE]당신의 용기가 수많은 생명을 구할 것입니다.[/color]
+Text/e2/text,"그녀가 당신의 손을 꽉 잡습니다. 이 모든 것이 끝나면, [color=CHARTREUSE]당신은 혁명의 영웅으로 기억될 것입니다.[/color]"
+Text/e3/text,[color=STEEL_BLUE]사샤의 희망에 찬 표정이 흔들립니다.[/color] 네... 위험합니다.
+Text/e4/text,우리가 실패하면 우리 모두 [color=DARK_VIOLET]뿌리 보존식으로 가공[/color]될 수도 있습니다.
+Text/e5/text,"[color=STEEL_BLUE]그녀가 잠시 시선을 피합니다.[/color] 당신이 모든 것을 본 후에는... 이라고 생각했지만, 이해합니다. 두려움은 자연스러운 것입니다."
+Text/e6/text,[color=STEEL_BLUE]사샤의 얼굴이 어두워집니다. 그녀의 눈빛이 흐려집니다.[/color] 다른 방법이요? 우리는 수년 동안 다른 방법들을 시도했습니다.
+Text/e7/text,청원. 조용한 외교. 익명 제보. [color=STEEL_BLUE]그녀의 목소리가 차가워집니다.[/color] 아무것도 효과가 없었습니다.
+Text/e8/text,"당신이 다를 것이라고, 무엇이 걸려있는지 이해할 것이라고 바랐습니다."
+Text/e9/text,저항군 대원들 사이에서 격렬한 논쟁이 벌어집니다.
+Text/ea/text,일부는 가공 공장을 완전히 파괴하는 등 더 공격적인 접근 방식을 주장합니다.
+Text/eb/text,다른 이들은 폭력적인 행동이 대중의 여론을 그들에게 불리하게 만들 뿐이라고 주장합니다.
+Text/ec/text,그만! 지도자가 위엄 있는 목소리로 방을 침묵시킵니다.
+Text/ed/text,우리는 분열될 여유가 없습니다. 이렇게 가까워진 지금은 더욱 그렇습니다.
+Text/ee/text,우리의 목표는 간단합니다. 진실을 밝히는 것. 다음은 사람들이 결정하게 하십시오.
+Text/ef/text,지도자가 당신을 직접 마주보고 말합니다. 하지만 우리는 [color=YELLOW]당신의 입장[/color]을 알아야 합니다.
+Text/f0/text,"사흘 뒤, 우리 요원들이 당신의 검문소로 접근할 것입니다. 그들은 [color=CHARTREUSE]파란색 신분증[/color]을 소지할 것입니다."
+Text/f1/text,그들이 국경을 넘는 것을 도울 건가요? 당신의 지금 대답이 우리의 다음 행동을 결정할 것입니다.
+Choice/f2/text,"""그들이 국경을 넘는 것을 돕겠습니다. 스퍼드의 미래를 위해."""
+Choice/f3/text,"직접 관여할 수는 없지만, 못 본 척해 드리죠."
+Choice/f4/text,이것에 대해 생각할 시간이 더 필요합니다.
+Text/f5/text,리더가 당신의 어깨를 굳건히 잡습니다. [color=CHARTREUSE]당신의 용기는 우리 모두에게 영광입니다.[/color]
+Text/f6/text,"셋째 날, 해가 가장 높이 떴을 때, 우리 요원들이 올 것입니다."
+Text/f7/text,"암호는 ""[wave amp=15 freq=3][color=CHARTREUSE]뿌리는 깊이 자란다.[/color][/wave]""입니다. 기억하십시오."
+Text/f8/text,리더는 실망했지만 이해한다는 듯 천천히 고개를 끄덕입니다.
+Text/f9/text,때로는 그저 사람들이 우리 길을 막지 않는 것만이 우리가 바랄 수 있는 전부입니다.
+Text/fa/text,우리 요원들은 계획대로 진행할 것입니다. 그저... 경보를 울리지 마십시오.
+Text/fb/text,리더의 표정이 굳어집니다. [color=YELLOW]시간은 우리에게 없는 사치입니다.[/color]
+Text/fc/text,하지만 누구든 우리 대의에 강제로 참여시키는 것은 우리를 그들과 다를 바 없게 만듭니다.
+Text/fd/text,당신의 도움 없이 진행하겠습니다. 양심을 찾아보십시오.
+Text/fe/text,"회의가 끝나자, 사샤가 당신과 함께 검문소로 돌아갑니다."
+Text/ff/text,[color=CHARTREUSE]걷는 동안 그녀가 당신의 손을 잡습니다.[/color] 무슨 일이 있어도... 이제 우리는 함께입니다. 고맙습니다.
+Text/ff2/text,[color=STEEL_BLUE]걷는 동안 그녀는 거리를 유지합니다.[/color] 우리 길을 막지 않아 주셔서 감사합니다. 그건... 대단한 일입니다.
+Text/ff3/text,[color=STEEL_BLUE]그녀는 팔짱을 낀 채 말없이 걷습니다.[/color] 당신이 찾는 확신을 찾으시길 바랍니다. 우리 나머지는 기다릴 여유가 없습니다.
+Text/100_viktor1/text,"돌아오는 길에, 당신은 검문소 지붕에서 밤하늘을 응시하는 빅토르를 홀로 발견합니다."
+Text/100_viktor2/text,빅토르가 작은 것을 들고 있습니다.
+Text/100_viktor3/text,그녀는 아무리 상황이 어두워져도 별들은 항상 그 자리에 있을 거라고 말하곤 했죠. [color=STEEL_BLUE]변함없이. 아름답게.[/color]
+Text/100_viktor4/text,"그가 당신에게 몸을 돌립니다, 눈이 촉촉합니다. [wave amp=15 freq=2]계속 생각합니다... 그녀가 고통받았을까요?[/wave] 무슨 일이 일어나는지 그녀는 알았을까요?"
+Text/100_viktor5/text,빅토르의 목소리가 갈라집니다. 그녀가 한번은 제가 거절에 대해 의문을 품은 적이 있냐고 물었죠. 저는 그녀에게 [color=CRIMSON]시스템을 믿으라[/color]고 말했습니다.
+Text/100_viktor6/text,[tornado radius=3 freq=2][color=CRIMSON]나는 내 아내를 모르는 사이에 처리조로 보냈습니다.[/color][/tornado]
+Choice/100_viktor_choice1/text,"""당신은 알 수 없었어. 우리 중 아무도 몰랐어."""
+Choice/100_viktor_choice2/text,"""엘레나는 당신이 지금 싸우기를 원할 거야, 죄책감에 빠져 허우적대지 말고."""
+Choice/100_viktor_choice3/text,"""무슨 말을 해야 할지 모르겠어. 미안해."""
+Text/100_viktor7/text,그가 천천히 고개를 젓습니다. [color=STEEL_BLUE]무지는 순진함이 아니야. 물어봤어야 했어. 들었어야 했어.[/color]
+Text/100_viktor8/text,"빅토르는 조심스럽게 사진을 넣어둔다. [color=CHARTREUSE]하지만 이제 알았어. 그리고 알게 된 이상, 행동해야만 해.[/color]"
+Text/100_viktor9/text,"빅토르는 몸을 곧추세우고, 그의 눈에 차가운 불꽃이 다시 타오른다. [color=CHARTREUSE]네 말이 맞아.[/color] 그녀는 나보다 강했어. 더 용감했지."
+Text/100_viktor10/text,그는 주먹을 꽉 쥔다. [color=CHARTREUSE]때가 오면
+Text/100_viktor11/text,[pulse freq=2][color=CRIMSON]그리고 아이다호는 그가 집어삼킨 모든 생명에 대해 대가를 치를 것이다.[/color][/pulse]
+Text/100_viktor12/text,빅토르는 슬픈 표정을 짓는다.
+Text/100_viktor13/text,그는 다시 별들을 바라본다. [color=STEEL_BLUE]엘레나는 널 좋아했을 거야.[/color]
+Text/100_viktor14/text,그는 돌아서려다 멈춘다. [color=CHARTREUSE]저항군이 움직일 때... 난 준비될 거야.[/color]
+Text/100_viktor15/text,엘레나를 위해. 그들 모두를 위해. [pulse freq=2][color=CHARTREUSE]내가 그들에게 진실을 말하면 경비병들은 나를 따를 것이다.[/color][/pulse]
+Text/100/text,"당신은 검문소 숙소로 돌아온다, 다가올 사건들의 무게로 마음이 복잡한 채."
+Text/101/text,"단 3일 안에, 모든 것이 바뀔 수 있다. [color=YELLOW]좋든 나쁘든.[/color]"
+Choice/de/disabled_text,
+Choice/df/disabled_text,
+Choice/e0/disabled_text,
+Choice/f2/disabled_text,
+Choice/f3/disabled_text,
+Choice/f4/disabled_text,
+Choice/100_viktor_choice1/disabled_text,
+Choice/100_viktor_choice2/disabled_text,
+Choice/100_viktor_choice3/disabled_text,

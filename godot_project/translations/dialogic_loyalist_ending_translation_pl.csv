@@ -1,0 +1,79 @@
+﻿keys,pl
+Text/299_suppress1/text,"Wybucha chaos, gdy rozpoczyna się atak ruchu oporu. Eksplozje wstrząsają punktem kontrolnym."
+Text/299_suppress2/text,Mógłbyś uciec. Mógłbyś się ukryć. Zamiast tego [color=DARK_ORANGE]wybierasz swoją stronę[/color].
+Text/299_suppress3/text,Russet chwyta cię za ramię. [pulse freq=2][color=YELLOW]TERAZ ALBO NIGDY![/color][/pulse] Udowodnij swoją lojalność!
+Text/299_suppress4/text,Ruch oporu próbuje sforsować wschodnią bramę! [color=CRIMSON]Zatrzymaj ich![/color]
+Text/299_suppress5/text,"Chwytasz broń. To mogą być ludzie, których znasz. Ludzie, którym pomogłeś."
+Text/299_suppress6/text,Ale przetrwanie ma swoją cenę. [color=DARK_ORANGE]Dokonałeś wyboru.[/color]
+Text/299_suppress7/text,[pulse freq=3][color=CRIMSON]Walcz za państwo![/color][/pulse] Stłum atak ruchu oporu!
+Text/299_suppress8/text,"Kiedy dym się rozwiewa, ziemia usłana jest ciałami. Niektóre noszą odznaki ruchu oporu."
+Text/299_suppress9/text,[color=STEEL_BLUE]Rozpoznajesz twarze wśród poległych.[/color]
+Text/299_suppress10/text,Murphy leży wśród martwych. Jego oczy wpatrują się w nicość. Zdjęcie Tommy'ego zaciśnięte w jego dłoni.
+Text/299_suppress11/text,"[color=STEEL_BLUE]Zginął walcząc o coś, w co wierzył. Pomogłeś to zabić.[/color]"
+Text/300/text,"Atak ruchu oporu nie powiódł się. Punkt kontrolny stoi, silniejszy niż kiedykolwiek. A ty pozostajesz na swoim stanowisku."
+Text/301/text,[pulse freq=2][color=GOLD]NIECH ŻYJE PREMIER IDAHO![/color][/pulse] Obrońca Spud! Pogromca zdrajców!
+Text/302/text,"Ogromny ziemniak w ozdobnych regaliach wysiada z pojazdu opancerzonego, w otoczeniu elitarnych strażników."
+Text/303/text,"Idaho lustruje punkt kontrolny zimnymi, kalkulującymi oczami."
+Text/304/text,"Russet pospiesznie podchodzi, kłaniając się głęboko. Panie Premierze! Jesteśmy zaszczyceni pańską obecnością!"
+Text/305/text,"Zdrajcy zostali [color=DARK_VIOLET]przetworzeni[/color], zgodnie z pańskim rozkazem. Produkcja wzrosła o 40% w tym kwartale!"
+Text/306/text,"I to jest oficer, który pozostał lojalny podczas powstania?"
+Text/307/text,"Tak, Panie Premierze. Niezłomne oddanie. Zgłaszał podejrzane działania. Wzorowy obywatel."
+Text/308/text,"Idaho podchodzi, przypinając medal do twojej piersi – [color=GOLD]Złotą Bulwę[/color]."
+Text/309/text,"Za wybitną służbę. Udowodniłeś, że [color=DARK_ORANGE]lojalność wobec Spud[/color] zawsze zostanie nagrodzona."
+Choice/30a/text,"Dziękuję, Panie Premierze. Chwała Spud."
+Choice/30b/text,"Ja tylko wykonywałem swój obowiązek, panie. (Wymuszony uśmiech)"
+Text/30c/text,Uśmiech Idaho nie sięga jego oczu. Tak. Z pewnością to zrobiłeś.
+Text/30d/text,Idaho przygląda ci się przez dłuższą chwilę. Obowiązek. [color=STEEL_BLUE]Takie proste słowo na tak skomplikowane działania.[/color]
+Text/30e/text,"Zastanawiam się, jakie [color=CRIMSON]koszmary[/color] nawiedzają tych, którzy tak dobrze wypełniają swój ""obowiązek""."
+Text/30f/text,"Uczta odbywa się na cześć zwycięstwa. Stoły uginają się pod jedzeniem, w tym obfitymi porcjami [color=DARK_VIOLET]Rezerwy Korzeni[/color]."
+Text/310/text,"Russet podnosi kielich z gęstym, purpurowym płynem. Toast! Za [color=CRIMSON]zdrajców, którzy nas żywią[/color]!"
+Text/311/text,W pokoju rozlega się śmiech. Niektórzy nerwowo. Większość szczerze.
+Text/312/text,"Przysuwa ci talerz. Spróbuj nowej partii. [color=DARK_VIOLET]""Mieszanka Oporu.""[/color] Wkład Sashy w przyszłość Ziemniaka."
+Text/313/text,Żołądek podchodzi ci do gardła. Jedzenie na talerzu. [color=CRIMSON]Sasha.[/color] Kuzynka Murphy'ego. Żona ze zdjęcia.
+Text/314/text,[tornado radius=3 freq=2][color=CRIMSON]Wszyscy oni.[/color][/tornado]
+Choice/315/text,Zmuś się do jedzenia - utrzymaj swoją przykrywkę
+Choice/316/text,Odepchnij talerz - nie możesz tego zrobić
+Text/317/text,Podnosisz widelec do ust. Zamykasz oczy. [color=STEEL_BLUE]Żuj. Połknij. Nie myśl.[/color]
+Text/318/text,"Russet kiwa głową z aprobatą. ""Dobrze. [color=DARK_ORANGE]Zajdziesz daleko.[/color]"""
+Text/319/text,"Odepychasz talerz. ""Nie czuję się dobrze. Emocje dnia..."""
+Text/31a/text,"Oczy Russeta zwężają się na chwilę, po czym łagodnieją. Oczywiście. Taka [color=YELLOW]delikatna konstytucja[/color]."
+Text/31b/text,Odpocznij. Jutro mamy do nadzorowania [color=CRIMSON]więcej przetwarzania[/color].
+Text/31c/text,Wracasz do swoich kwater. Medal ciąży ci na piersi.
+Text/31d/text,Wyciągasz zdjęcie zaginionej żony. Ona jest teraz prawdopodobnie w tej samej partii co reszta.
+Text/31e/text,"Obiecałeś ją odnaleźć. [color=STEEL_BLUE]Znalazłeś ją.[/color] Tylko nie w taki sposób, w jaki oboje mieliście nadzieję."
+Text/31f/text,"Murphy. Twój przyjaciel. Ten, który ci zaufał. Był w ruchu oporu."
+Text/320/text,[color=CRIMSON]Był.[/color]
+Text/321/text,Wpatrujesz się w swoje odbicie w oknie. Medal błyszczy. [color=DARK_ORANGE]Złota Bulwa[/color]. Bohater Ziemniaka.
+Text/322/text,[color=STEEL_BLUE]Potwór w ziemniaczanej skórze.[/color]
+Text/323/text,Tej nocy śnisz o Sashy. Nie oskarża. Nie wpada w furię. To byłoby łatwiejsze.
+Text/324/text,"Ona tylko patrzy na ciebie tymi oczami. [color=CHARTREUSE]Korzenie rosną głęboko[/color], szepcze."
+Text/325/text,Nawet te [color=STEEL_BLUE]zgniłe[/color].
+Text/326/text,Mijają miesiące. Zostajesz awansowany. Regionalny Inspektor Bezpieczeństwa Granicznego. Prawa ręka Russeta.
+Text/327/text,Nadzorujesz więcej odrzuceń niż ktokolwiek w historii Spud. Produkcja [color=DARK_VIOLET]Rezerwy Korzeni[/color] szybuje.
+Text/328/text,Twoje biuro jest wygodne. Twoje racje są hojne. Twoja rodzina jest chroniona.
+Text/329/text,"Masz wszystko, co ci obiecano."
+Text/32a/text,Wszystko oprócz [color=STEEL_BLUE]snu[/color]. Oprócz [color=STEEL_BLUE]spokoju[/color]. Oprócz zdolności spojrzenia w lustro.
+Text/32b/text,Pewnego dnia to zauważasz. [color=GOLD]Żółty emblemat ziemniaka[/color] wydrapany na ścianie. Potem kolejny. Potem dziesiątki.
+Text/32c/text,Tworzy się nowy ruch oporu. Cichszy. Ostrożniejszy. Uczący się na błędach Sashy.
+Choice/32d/text,Natychmiast zgłoś symbole ochronie
+Choice/32e/text,"Udawaj, że ich nie widziałeś"
+Choice/32f/text,Zostaw swój własny ślad – pojedynczy żółty liść
+Text/330/text,Składasz raport. Kolejna partia podejrzanych zatrzymana. Kolejny awans.
+Text/331/text,Cykl trwa. [color=CRIMSON]Stałeś się maszyną.[/color]
+Text/332/text,Przechodzisz obok. Nic nie mówisz. To niewiele. [color=STEEL_BLUE]To prawie nic.[/color]
+Text/333/text,"Ale to pierwszy raz, kiedy zdecydowałeś się nie działać przeciwko nim."
+Text/334/text,"Może to coś. Może to [color=YELLOW]za mało, za późno[/color]."
+Text/335/text,"Kiedy nikt nie patrzy, drapiesz mały [color=GOLD]żółty liść[/color] obok emblematów."
+Text/336/text,Pojedynczy akt buntu. Lata za późno. Ale [color=CHARTREUSE]coś[/color].
+Text/337/text,"Głos Sashy rozbrzmiewa w twojej pamięci: ""[color=CHARTREUSE]Korzenie rosną głęboko.[/color]"""
+Text/338/text,"Może wystarczająco głęboko, by [color=CHARTREUSE]dotrzeć nawet do ciebie[/color]. Pewnego dnia."
+Text/339/text,Naród Spud trwa. [color=DARK_VIOLET]Rezerwa Korzeni[/color] płynie. Cykl konsumpcji trwa.
+Text/33a/text,"Ale gdzieś, w pęknięciach ściany, [color=CHARTREUSE]rośnie coś nowego[/color]."
+Text/33b/text,Czy będziesz tego częścią... [color=YELLOW]ta historia jest jeszcze do napisania[/color].
+Choice/30a/disabled_text,
+Choice/30b/disabled_text,
+Choice/315/disabled_text,
+Choice/316/disabled_text,
+Choice/32d/disabled_text,
+Choice/32e/disabled_text,
+Choice/32f/disabled_text,

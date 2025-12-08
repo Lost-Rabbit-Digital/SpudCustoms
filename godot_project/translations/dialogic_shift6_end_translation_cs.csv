@@ -1,0 +1,43 @@
+﻿keys,cs
+Text/240/text,"Jak se večerní směna chýlí ke konci, většina důstojníků odešla. Zůstali jste jen vy a hrstka stráží."
+Text/241/text,K vaší stanici se blíží statný strážce. Jmenuji se Viktor. Jsem na noční hlídce.
+Text/242/text,"Jeho oči jsou unavené, pronásledované. Jste ten nový, že? Ten, kterého Russet neustále sleduje?"
+Choice/243/text,Jen se snažím dělat svou práci. Proč mě Russet sleduje?
+Choice/244/text,"Je něco, co bych měl vědět?"
+Text/245/text,"Těžce pokrčí rameny. Russet sleduje každého, kdo se ptá. Moje [color=STEEL_BLUE]žena se jednou ptala[/color]."
+Text/246/text,"Už tu není, aby se ptala."
+Text/247/text,"Rozhlédne se, pak ztiší hlas. Jen... buďte opatrní, komu věříte."
+Text/248/text,"A koho [color=CRIMSON]odsoudíte[/color]. Někteří z nás si pamatují každou tvář, kterou jsme poslali ke zpracování."
+Text/249/text,"Přichází nervózní brambora. Doklady se zdají být v pořádku, ale všimnete si [color=CHARTREUSE]jemného listového odznaku[/color] na jejich límci."
+Text/24a/text,"Přesunou své dokumenty. Uvnitř je zastrčený malý vzkaz: ""[color=CHARTREUSE]Poslala mě Saša. Balíček pro síť. Prosím.[/color]"""
+Text/24b/text,Nový [color=DARK_ORANGE]RealityScan[/color] bliká připravený na vaší stanici. Jedno skenování a odhalí padělané prvky v jejich dokumentech.
+Choice/24c/text,"Předstírejte, že skener selhal, a propusťte je"
+Choice/24d/text,Použijte skener podle potřeby – nemůžete riskovat odhalení
+Choice/24e/text,"Dejte Viktorovi znamení, aby se podíval jinam, pak je nechte projít"
+Text/24f/text,"Klepnete na skener, zamračíte se, klepnete znovu. ""Ta zatracená věc zlobí. Projděte."""
+Text/250/text,"Jejich tvář zaplaví úleva. Beze slov naznačí ""[color=CHARTREUSE]Děkuji[/color]"" a spěšně projdou."
+Text/251/text,"Zachytíte jeho pohled a kývnete směrem k agentovi. Podívá se na ně, pak na vás."
+Text/252/text,"Záměrně se otočí zády, studuje zeď. ""[color=STEEL_BLUE]Skener celý den zlobí.[/color]"""
+Text/253/text,"Agent proklouzne. Viktor nic neříká, ale teď jste sdíleli tajemství."
+Text/254/text,"Spustíte sken. Stroj [color=RED]zahučí[/color]. ""Zjištěna padělaná dokumentace."""
+Text/255/text,"Hrůza se zračí v jejich tváři. ""[color=CRIMSON]Nerozumíte, co jste udělali...[/color]"""
+Text/256/text,"On a další stráže se přiblíží. Agent je odvlečen, stále na vás zírá."
+Text/257/text,Saša vás zastihne ve stínech. Ten agent nesl [color=CHARTREUSE]kopie manifestů[/color] našim kontaktům venku.
+Text/258/text,Díky vám se pravda rozšíří za hranice Spudu. [color=CHARTREUSE]Opravdu jste něco změnili.[/color]
+Text/259/text,Sasha vykulí oči. Viktor pomohl? Měla jsem o něm tušení. Jeho žena byla...
+Text/25a/text,"Odmlčí se. Máme víc spojenců, než jsem si myslela."
+Text/25b/text,"Sasha tě vyhledá, její výraz je chladný. Ten agent měl rodinu. Tři klíčky doma."
+Text/25c/text,Rozumím strachu. Ale [color=CRIMSON]strach má následky[/color]. Do rána budou zpracováni.
+Text/25d/text,"Doufám, že tvá čistá složka stojí za to."
+Text/25e/text,"Murphy vklouzne do tvých ubikací. Slyšel jsem, že dnes večer bylo na tvé stanici rušno."
+Text/25f/text,[color=CHARTREUSE]Dobře. Teď jsme v tom spolu.[/color] Není cesty zpět.
+Text/260/text,"Murphyho tvář poklesne. Já... myslel jsem, že jsi s námi. Co se stalo?"
+Text/261/text,Zítřejší směna bude jiná. V sázce nikdy nebylo víc.
+Text/262/text,"Ale poprvé máš pocit, že jsi na [color=CHARTREUSE]správné straně[/color]. Ať už to stojí cokoliv."
+Text/263/text,"Tvář agenta tě pronásleduje. Jejich rodina se nikdy nedozví, proč se nevrátili domů."
+Text/264/text,[color=STEEL_BLUE]Kvůli tobě.[/color]
+Choice/243/disabled_text,
+Choice/244/disabled_text,
+Choice/24c/disabled_text,
+Choice/24d/disabled_text,
+Choice/24e/disabled_text,

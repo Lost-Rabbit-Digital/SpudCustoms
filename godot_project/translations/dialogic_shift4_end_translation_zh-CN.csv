@@ -1,0 +1,49 @@
+﻿keys,zh-CN
+Text/215/text,墨菲在走廊里拦住你，双眼通红。有空吗？
+Text/216/text,墨菲把你拉进一间空储藏室，关上了门。
+Text/217/text,我在食堂开的那个玩笑……关于我表亲被分到[color=DARK_VIOLET]根系储备[/color]批次的事……
+Text/218/text,墨菲的声音颤抖着。我想那不再是个玩笑了。
+Text/219/text,你说这不好笑。你说得对。[color=STEEL_BLUE]这事一点都不可笑。[/color]
+Text/21a/text,我看到你离开了。聪明。我真希望我能停止吃那些东西，但他们[color=YELLOW]监视[/color]着。他们总是在监视。
+Text/21b/text,我在我表亲的遗物里发现了一些东西。他的拒签表。都是些标准文件，但是……
+Text/21c/text,墨菲掏出一张揉皱的表格。看这个处理代码。“[color=CRIMSON]RR-UTIL-7[/color]。”
+Text/21d/text,我在档案里查了。RR代表[pulse freq=2][color=DARK_VIOLET]根系储备[/color][/pulse]。UTIL的意思是……[color=CRIMSON]利用[/color]。
+Text/21d_breakdown1/text,[wave amp=20 freq=3]墨菲的双手开始颤抖。[/wave]我表亲……汤米……他才二十三岁。
+Text/21d_breakdown2/text,他来这里是为了[color=CHARTREUSE]更好的生活[/color]。一次检查没通过。就一次。[color=STEEL_BLUE]只是时机不对。[/color]
+Text/21d_breakdown3/text,墨菲沿着墙滑坐下来，双手捂着脸。而我……我[tornado radius=3 freq=2][color=CRIMSON]吃[/color][/tornado]了那些东西。每天都吃。
+Text/21d_breakdown4/text,墨菲抬头看着你，泪流满面。[pulse freq=2][color=CRIMSON]万一我吃了他呢？[/color][/pulse]
+Choice/21e/text,墨菲……我很抱歉。我支持你。我们会一起找出真相。
+Choice/21f/text,墨菲，这很危险。我们应该置身事外。
+Choice/220/text,也许只是巧合。我们别急于下结论。
+Text/221_comfort1/text,你跪在墨菲身旁，把手放在他肩上。
+Text/221/text,墨菲抓住你的手臂，如同抓住救命稻草。[color=CHARTREUSE]谢谢你。[/color]我以为我要疯了。
+Text/221_tommy/text,[color=STEEL_BLUE]他的声音略微稳定下来。[/color]为了汤米。我们为汤米做这件事。也为了所有被他们带走的人。
+Text/222/text,还有其他人也怀疑。萨莎一直在召集人手。我想她信任你。
+Text/223/text,墨菲擦了擦眼睛，努力让自己镇定下来。是啊。是啊，你可能说得对。就当我什么都没说。
+Text/224/text,但如果你改变主意……我会在的。[color=STEEL_BLUE]独自面对我的疑问。和我的噩梦。[/color]
+Text/225/text,巧合。墨菲含着泪苦笑。当然。而汤米就这么[color=CRIMSON]凭空消失[/color]了。
+Text/226/text,你就继续这样告诉自己吧。看看这能让你睡多久。[color=STEEL_BLUE]它对我没用。[/color]
+Text/227/text,最后一班岗结束时，萨莎出现在你的岗亭。你看起来像见了鬼一样。
+Text/228/text,我猜——墨菲跟你提过他表亲的事了？
+Text/229/text,莎莎赞许地点点头。很好。我们需要会提问的人。
+Text/22a/text,莎莎仔细端详着你的脸。你很害怕。这很聪明。但恐惧救不了任何人。
+Text/22b/text,从你第一天上班起，我就一直在观察你。当罗斯特谈到“处理”时，你[color=YELLOW]犹豫[/color]了。
+Text/22c/text,你问过那些被拒的土豆会怎样。这需要勇气。[color=CHARTREUSE]大多数人只会敬礼盖章。[/color]
+Text/22d/text,莎莎凑近了些。有个规律。每个我们拒绝的土豆？48小时内就消失了。没有遣返记录。没有转移记录。
+Text/22e/text,但[color=DARK_VIOLET]根系储备[/color]的产量呢？[tornado radius=3 freq=2][color=CRIMSON]它在上升。[/color][/tornado] 每。一。次。
+Choice/22f/text,我相信你。我能怎么帮忙？
+Choice/230/text,在我冒一切风险之前，我需要看到证据。
+Text/231/text,莎莎的眼睛亮了起来。我就知道我没选错人。明晚，下班后。我会给你看我发现的东西。
+Text/232/text,在那之前
+Text/233/text,好吧。证据会有的。只是……明天的班次，你多留心点。
+Text/234/text,留意那些[color=CRIMSON]被拒的土豆[/color]去了哪里。如果可以，跟着那些卡车。
+Text/235/text,你拿出那个绝望的土豆给你的照片。她的妻子。[color=STEEL_BLUE]她现在在哪里？[/color]
+Text/236/text,如果莎莎和墨菲说的是真的……她可能已经……
+Text/237/text,你无法继续想下去。但你[color=CHARTREUSE]不会忘记她的脸[/color]。
+Text/238/text,明天，一切都将改变。要么你找到答案，要么你永远埋葬这些疑问。
+Text/239/text,有一件事是肯定的：[color=YELLOW]你再也无法回到无知的幸福中去了[/color]。
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

@@ -17,3 +17,6 @@ Text/a4/text,Dette beviser alt. Modstandsbevægelsen vil lave kopier. [tornado r
 Text/a5/text,"Du har krydset en grænse. [wave amp=20 freq=3][color=YELLOW]Der er ingen vej tilbage.[/color][/wave] Når sandheden spredes, vil Spud blive forvandlet."
 Choice/9c/disabled_text,
 Choice/9d/disabled_text,
+Text/9a_viktor1/text,Du scanner navnene på manifestet... og ét skiller sig ud. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,"Det navn... har du hørt før. Sikkerhedsvagten Viktor nævnte, at hans kone var forsvundet."
+Text/9a_viktor3/text,"""[color=CRIMSON]Status: Behandlet. Batch RR-2851.[/color]"" Dateret for to uger siden."

@@ -32,3 +32,32 @@ Choice/c4/disabled_text,
 Choice/c5/disabled_text,
 Choice/cb/disabled_text,
 Choice/cc/disabled_text,
+Text/c7_viktor1/text,En kraftig säkerhetsvakt närmar sig under din rast. Hans ansikte är utmärglat.
+Text/c7_viktor2/text,"Hej... du är en av tulltjänstemännen, eller hur? Jag har frågat runt om min fru, Elena."
+Text/c7_viktor3/text,Hon passerade denna kontrollpunkt för tre veckor sedan. [color=STEEL_BLUE]Underkänd vid inspektion.[/color] Jag har inte hört från henne sedan dess.
+Choice/c7_viktor4/text,"""Viktor... Jag hittade något. Om Elena. Du behöver veta sanningen."""
+Choice/c7_viktor5/text,"""Jag är ledsen, Viktor. Jag har inte sett något."" (Ljug för att skydda honom)"
+Text/c7_viktor6/text,Du visar honom en kopia av manifest-sidan. Hans ansikte blir vitt.
+Text/c7_viktor7/text,[wave amp=25 freq=3]Hans händer skakar när han läser.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Bearbetad... Batch RR-2851...[/color]
+Text/c7_viktor8/text,Hans röst är knappt en viskning. [tornado radius=3 freq=2][color=CRIMSON]De... de FÖRVANDLADE henne till...[/color][/tornado]
+Text/c7_viktor9/text,Hans sorg förvandlas till kall vrede. [pulse freq=2][color=CRIMSON]Idaho ska få betala för detta.[/color][/pulse] Jag svär det vid hennes minne.
+Text/c7_viktor10/text,Han griper din axel. [color=CHARTREUSE]Tack för att du berättade det.[/color] När tiden är inne... kommer jag att minnas detta.
+Text/c7_viktor11/text,Han nickar sorgset. [color=STEEL_BLUE]Jag trodde det.[/color] Ingen vet något. Eller ingen vill prata.
+Text/c7_viktor12/text,Om du hör något... [color=YELLOW]snälla.[/color] Hon är allt jag har.
+Text/d0_qte1/text,Senare under det skiftet närmar sig en resenär med papper som bär det [color=CHARTREUSE]subtila motståndsmärket[/color].
+Text/d0_qte2/text,[color=DARK_ORANGE]RealityScan[/color] påbörjar sin skanning. [wave amp=15 freq=3][color=RED]Den kommer att upptäcka märket![/color][/wave]
+Text/d0_qte3/text,Du har sekunder på dig att bestämma dig. Skannern värms upp...
+Choice/d0_qte4/text,"""Fejka ett skannerfel - snabbt!"" (Hjälp motståndet)"
+Choice/d0_qte5/text,"""Låt skannern slutföra sin skanning"" (Följ protokoll)"
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]Du måste arbeta snabbt![/color][/pulse] Utlös felet innan den slutför skanningen!
+Text/d0_qte7/text,Du fumlar med skannerkablarna. Gnistor flyger. Skärmen flimrar och dör.
+Text/d0_qte8/text,Russet skyndar sig dit. [color=YELLOW]Vad hände här?[/color]
+Choice/d0_qte9/text,"""Strömspik, sir. Dessa nya system är nyckfulla."""
+Choice/d0_qte10/text,"""Jag vet inte, sir. Den bara dog för mig."""
+Text/d0_qte11/text,Russet grymtar. [color=STEEL_BLUE]Byråkrater ger oss otestad utrustning.[/color] Bearbeta dem manuellt och flagga för ominspektion.
+Text/d0_qte12/text,Russet tittar misstänksamt på dig. [color=YELLOW]Så lägligt.[/color] Jag ska låta underhållet titta på den. Låt inte detta hända igen.
+Text/d0_qte13/text,Motståndsmedlemmen ger dig en ytterst liten nick av tacksamhet när de passerar.
+Text/d0_qte14/text,Skannern [pulse freq=3][color=RED]PIPER HÖGT[/color][/pulse]. Obehöriga markeringar upptäcktes!
+Text/d0_qte15/text,Russet dyker upp omedelbart. [color=CHARTREUSE]Bra jobbat![/color] Ännu en förrädare fångad.
+Text/d0_qte16/text,"Motståndaren släpas bort, skräck i deras ögon. [color=CRIMSON]Snälla, nej! Jag har barn![/color]"
+Text/d0_qte17/text,Din lojalitet är [color=DARK_ORANGE]antecknad i din akt[/color]. Fortsätt så här.

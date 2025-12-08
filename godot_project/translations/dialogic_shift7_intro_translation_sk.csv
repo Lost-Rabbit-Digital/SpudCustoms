@@ -22,3 +22,20 @@ Text/115/text,"Keď sa to stane, budete si musieť [color=YELLOW]vybrať stranu[
 Text/116/text,"S každým zemiakom, ktorý spracujete, buď [pulse freq=2][color=CHARTREUSE]pomáhate revolúcii[/color][/pulse], alebo [pulse freq=2][color=CRIMSON]umožňujete hrozný systém[/color][/pulse]."
 Choice/10f/disabled_text,
 Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Saša sa nervózne obzrie cez plece.[/color] Prepáč, ja... [color=YELLOW]Myslím, že ma sledujú.[/color]"
+Text/102_foreshadow2/text,Russet sa vypytuje. Sleduje ma po smenách. [wave amp=15 freq=2][color=YELLOW]Musím byť opatrnejšia.[/color][/wave]
+Text/102_foreshadow3/text,"Saša, možno by si sa mala na chvíľu stiahnuť. Nechaj ma podstúpiť väčšie riziko."
+Text/102_foreshadow4/text,[color=STEEL_BLUE]Pokrúti hlavou a nasilu sa usmeje.[/color] Nie. Sme už príliš blízko. Russeta zvládnem.
+Text/102_foreshadow5/text,"Okrem toho... [color=CHARTREUSE]niekto vás, výhonky, musí držať mimo problémov.[/color]"
+Text/106_trucks1/text,"Ale stále nevieme, kde je hlavné spracovateľské zariadenie. Dokumenty uvádzajú len prepravné kódy."
+Text/106_trucks2/text,Sledujem nákladné autá [color=DARK_VIOLET]Koreňovej rezervy[/color]. Odchádzajú každú noc o 03:00. Rovnaká trasa.
+Text/106_trucks3/text,"[color=CHARTREUSE]Keby sme ich mohli sledovať...[/color] vedeli by sme presne, kam berú vyradené zemiaky."
+Choice/106_trucks4/text,Urobím to. Poznám rozvrhy hliadok.
+Choice/106_trucks5/text,To znie riskantne. Nemôže to urobiť niekto iný?
+Text/106_trucks6/text,"[color=CHARTREUSE]Saši sa rozžiaria oči.[/color] Vedela som, že máš oceľové korene. Buď opatrný – v noci silno hliadkujú."
+Text/106_trucks7/text,"03:00 hodín. Krčíš sa v tieni, zatiaľ čo nákladné autá [color=DARK_VIOLET]Koreňovej rezervy[/color] prechádzajú s rachotom okolo."
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Zostaň skrytý! Sleduj konvoj![/color][/pulse]
+Text/106_trucks9/text,"Nákladné autá zastavia pri masívnom komplexe ukrytom v priemyselnej štvrti. [color=DARK_VIOLET]Sektor 7, Skladový komplex Delta.[/color]"
+Text/106_trucks10/text,Komíny chrlia dym s fialovým nádychom. Zápach je... [tornado radius=3 freq=2][color=CRIMSON]nezameniteľný.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]Srdce Koreňovej rezervy.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]Sašin výraz prebleskne sklamaním.[/color] Všetci musíme podstupovať riziká. Nájdem iný spôsob.

@@ -1,0 +1,36 @@
+﻿keys,zh-CN
+Text/131/text,你在激战中躲藏起来。对不起，萨莎。我[color=STEEL_BLUE]不像你那样勇敢[/color]。
+Text/132/text,"""[color=CRIMSON]恐怖袭击[/color]已被击退！主谋们正在被[color=DARK_VIOLET]处理[/color]中。"""
+Text/133/text,"育空长官拖着戴镣铐的反抗成员进来，萨莎也在其中。""这些[color=CRIMSON]叛徒[/color]将面临[color=DARK_VIOLET]最终处理[/color]。"""
+Text/134/text,萨莎与你目光相接。尽管她伤痕累累，她的目光中却[wave amp=15 freq=2][color=CHARTREUSE]没有评判，只有悲伤[/color][/wave]。
+Text/135/text,你通过保持低调而幸存下来，但[pulse freq=3][color=GOLD]代价是什么？[/color][/pulse]当[color=DARK_VIOLET]根源储备[/color]的生产气味从工厂飘来时，你感到反胃。
+Text/136/text,也许从内部还有机会。又或者，你只是在减轻自己的负罪感。
+Text/137/text,你[tornado radius=3 freq=2][color=CHARTREUSE]擅离职守[/color][/tornado]，冲向战场。小心谨慎的时候已经过去了。
+Text/138/text,[pulse freq=3][color=GOLD]证明你是我们的人！[/color][/pulse] 你怎么认识萨莎的？
+Text/139/text,[color=CHARTREUSE]根深蒂固！[/color] 我来自检查站，萨莎招募了我！
+Text/13a/text,他们现在正把她带去加工厂。我们得快点！
+Text/13b/text,大门猛地打开，揭示出[wave amp=25 freq=3][color=CRIMSON]可怕的真相[/color][/wave]——研磨机，以及将土豆运往末日的传送带。
+Text/13c/text,在一条传送带的尽头——萨莎和其他人[color=CRIMSON]无助地被捆绑着[/color]。罗斯特主管站在控制台前。
+Text/13d/text,[color=RED]你！[/color] 我早该知道你也是他们一伙的！退后，否则我就启动处理器！
+Text/140/text,[color=STEEL_BLUE]反抗军领袖走上前，武器对准罗斯特。[/color] 不许再往前一步，罗斯特。把手放在我能看到的地方。
+Text/141/text,[color=CRIMSON]罗斯特的目光在你和反抗军领袖之间来回扫视，额头上冒出汗珠。[/color] 你以为你赢了吗？这个设施是斯普德的基石！
+Text/142/text,苦难的基石。[pulse freq=3][color=CHARTREUSE]今天就结束了。[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]萨莎在传送带上挣扎着想挣脱束缚[/color]
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""罗斯特[/color]"
+Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""这……这就是他们一直在做的事情？比我想象的还要糟糕……""[/color][/wave]"
+Choice/146/text,"[color=CHARTREUSE]""萨莎！感谢根源你还活着！坚持住[/color]"
+Text/147/text,[color=CRIMSON]你紧握双拳，冲向罗斯特，几乎被反抗军战士拦不住。[/color] 每一个通过我检查站的土豆……你到底……
+Text/148/text,冷静！我们需要他活着作证。[color=STEEL_BLUE]领袖的武器始终对准罗斯特。[/color] 把你的怒火留到法庭上吧。
+Text/149/text,[color=STEEL_BLUE]你踉跄后退，手捂着嘴，彻底领会到这些机器的可怕之处。[/color] 我盖章放行了他们……我把他们送到了这里……
+Text/14a/text,[color=CHARTREUSE]你不知道。我们都不知道。[/color] 这就是我们现在在这里的原因。集中注意力！
+Text/14b/text,[color=CHARTREUSE]你冲向传送带[/color]
+Text/14c/text,[color=CHARTREUSE]萨莎的眼中闪烁着泪水和希望，你的手解开了绳结。[/color] 我知道你会来。我从未怀疑过你。
+Text/14d/text,[color=STEEL_BLUE]领导者用枪指着罗斯特，强迫他跪下。[/color] 绑起来。让他好好看看接下来会发生什么。
+Text/13e/text,[color=CHARTREUSE]萨莎挣脱束缚后，毫不迟疑地重新调整了设施的摄像头。[/color] [color=YELLOW]薯民们！这里是根部储备区！他们一直在让我们自相残杀！[/color]
+Text/14e/text,[color=CHARTREUSE]萨莎握住你的手，十指紧扣。[/color] 你为我回来了。无论接下来发生什么……我们一起面对。
+Text/14f/text,[color=STEEL_BLUE]萨莎仔细地看着你，看到了你眼中仍在燃烧的怒火。[/color] 引导那股怒火。接下来我们需要它。
+Text/150/text,[color=STEEL_BLUE]萨莎轻轻地把手放在你的肩上。[/color] 这份罪责不该由你承担。你现在在这里。这才是最重要的。
+Text/13f/text,[color=CHARTREUSE]我们做到了。真相现在大白于天下了。[/color] 我们有一个未来要建设！
+Choice/144/disabled_text,
+Choice/145/disabled_text,
+Choice/146/disabled_text,

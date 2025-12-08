@@ -21,3 +21,13 @@ Choice/ac/disabled_text,
 Choice/b2/disabled_text,
 Choice/b1/disabled_text,
 Choice/ad/disabled_text,
+Text/b4_viktor1/text,Seorang penjaga keamanan kekar menahan lenganmu saat kamu lewat. Wajahnya berkerut cemas.
+Text/b4_viktor2/text,"Hei... maaf mengganggumu. Kamu salah satu petugas bea cukai, kan? Namaku [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Aku sudah bertanya pada semua orang tentang istriku, [color=GOLD]Elena[/color]. Elena Petrov. Dia melewati pos pemeriksaan ini tiga minggu lalu."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Gagal pemeriksaan.[/color] Mereka bilang dia akan diproses dan dikembalikan pulang, tapi... aku belum mendengar apa-apa."
+Text/b4_viktor5/text,Suaranya bergetar. Tidak ada yang mau memberitahuku apa-apa. Apa kamu tahu ke mana para pelancong yang ditolak pergi?
+Choice/b4_viktor6/text,"""Maaf, Viktor. Aku tidak tahu. Tapi akan kuperhatikan."""
+Choice/b4_viktor7/text,"""Aku tidak bisa membahas detail pemrosesan. Protokol keamanan."""
+Text/b4_viktor8/text,Mata Viktor menunjukkan secercah harapan. [color=CHARTREUSE]Terima kasih.[/color] Apa pun yang kamu temukan... tolong. Dia satu-satunya yang kumiliki.
+Text/b4_viktor9/text,"Viktor mengangguk, kecewa. [color=STEEL_BLUE]Benar. Protokol.[/color] Aku mengerti."
+Text/b4_viktor10/text,Tapi jika kamu berubah pikiran... [color=YELLOW]Aku perlu tahu apa yang terjadi padanya.[/color]

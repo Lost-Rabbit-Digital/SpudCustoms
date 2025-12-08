@@ -1,0 +1,26 @@
+﻿keys,zh-TW
+Text/200/text,嘿，新來的薯仔！這班不好上，是吧？我叫墨菲。我在這兒已經三個季節了。
+Text/201/text,我剛才看到你和莎夏說話。她嘛……有點[color=STEEL_BLUE]不一樣[/color]。我覺得是好的那種不一樣。
+Choice/202/text,她人看起來不錯。她給了我一些保持警惕的建議。
+Choice/203/text,只是互相介紹一下。沒什麼特別的。
+Text/204/text,墨菲緊張地環顧四周。是啊。
+Text/205/text,你我之間說說就好？廣播裡說的那些「失蹤的馬鈴薯」……我表親上個月就失蹤了。他沒通過檢查。
+Text/206/text,聰明。低調點，做好自己的工作。我每天都這麼告訴自己。
+Text/207/text,墨菲的聲音低了下來。不過有時候我會想，那些被拒絕的馬鈴薯到底都去了哪裡……
+Text/208/text,在餐廳裡
+Text/209/text,你盯著那濃稠的紫褐色糊狀物。所有人都毫無疑問地吃著它。據說它營養豐富。
+Choice/20a/text,像其他人一樣吃下根莖儲備糧
+Choice/20b/text,把它推到一邊——你還不餓
+Text/20c/text,味道嘛……很泥土味。濃郁。它有種[color=STEEL_BLUE]令人不安的熟悉感[/color]，但你說不上來為什麼。
+Text/20d/text,一位資深警官注意到了。「不浪費，不匱乏，薯苗。那可是[pulse freq=2][color=DARK_VIOLET]頂級營養品[/pulse][/color]啊。」
+Text/20e/text,你嘟囔著說自己胃不舒服。警官聳了聳肩，然後走開了。
+Text/20f/text,回到你的宿舍，莎夏說的話在你腦海中揮之不去。「[color=YELLOW]事情並非表面看起來那樣。[/color]」
+Text/210/text,你第一天上班時曾問過羅塞特關於被拒絕的馬鈴薯。他的回答含糊其辭。「[color=VIOLET]已處理。依照規定。[/color]」
+Text/211/text,究竟是[color=STEEL_BLUE]怎麼[/color]處理的？
+Text/212/text,你曾如此渴望服務。如此驕傲能被選中。但驕傲無法解釋那些[color=CRIMSON]失蹤的馬鈴薯[/color]。
+Text/213/text,廣播說失蹤報告「持續不斷」。這意味著這種情況已經持續一段時間了。
+Text/214/text,睡意遲遲不來。當睡意降臨時，你夢見[wave amp=15 freq=2][color=DARK_VIOLET]紫色的河流[/wave][/color]在檢查站下方流淌。
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

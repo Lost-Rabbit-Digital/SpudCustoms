@@ -1,0 +1,43 @@
+﻿keys,ja
+Text/102/text,よく来てくれた。抵抗は[color=CHARTREUSE]勢いを増している[/color]。あの積荷目録のおかげで、皆が真実を知りつつある。
+Text/102_foreshadow1/text,[color=STEEL_BLUE]サーシャは不安げに肩越しに視線を送る。[/color]ごめん、私...[color=YELLOW]見張られている気がする。[/color]
+Text/102_foreshadow2/text,ラセットが質問攻めにしてくる。シフト後もつけてくる。[wave amp=15 freq=2][color=YELLOW]もっと用心しないと。[/color][/wave]
+Text/102_foreshadow3/text,サーシャ、しばらく身を潜めた方がいい。私がもっとリスクを負うよ。
+Text/102_foreshadow4/text,[color=STEEL_BLUE]彼女は首を振り、無理に笑顔を作る。[/color]だめよ。もう後には引けない。ラセットなら私が対処できる。
+Text/102_foreshadow5/text,それに...[color=CHARTREUSE]誰かがあなたたち新芽をトラブルから守ってあげないとね。[/color]
+Text/103/text,情報源からこの書類を入手した。生産スケジュール、「[color=CRIMSON]原材料[/color]」リスト、[color=DARK_SLATE_BLUE]行方不明者[/color]の名前だ。
+Text/104/text,これは単なる栄養補助食品プログラムじゃない。彼らは[color=CRIMSON]ジャガイモを加工している[/color]んだ...それも、ろくでもない方法で。
+Text/105/text,アイダホ首相自身からの内部メモだ。「[color=DARK_ORANGE]却下された資産の活用[/color]」を許可している。
+Text/106/text,各チェックポイントのノルマだ。スパッド税関は、却下対処理比率が最も高い。
+Text/106_trucks1/text,しかし、主要な加工施設がどこにあるのか、まだ分からない。書類には出荷コードしか載っていない。
+Text/106_trucks2/text,[color=DARK_VIOLET]ルートリザーブのトラック[/color]を監視している。毎晩3時に出発する。いつも同じルートだ。
+Text/106_trucks3/text,[color=CHARTREUSE]もし追跡できれば...[/color]却下されたジャガイモがどこへ運ばれているのか、正確に分かるはずだ。
+Choice/106_trucks4/text,私がやる。巡回スケジュールは知っている。
+Choice/106_trucks5/text,それは危険すぎる。誰か他の人に頼めないか？
+Text/106_trucks6/text,[color=CHARTREUSE]サーシャの目が輝く。[/color]あなたには鋼の根があると思っていたわ。気をつけて。夜間は巡回が厳重よ。
+Text/106_trucks7/text,午前3時。[color=DARK_VIOLET]ルートリザーブ[/color]のトラックが轟音を立てて通り過ぎる中、あなたは影に身を潜める。
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]隠れろ！車列を追え！[/color][/pulse]
+Text/106_trucks9/text,トラックは工業地区に隠された巨大な複合施設で停車する。[color=DARK_VIOLET]第7セクター、デルタ倉庫複合施設。[/color]
+Text/106_trucks10/text,煙突からは紫がかった煙が吐き出されている。その匂いは...[tornado radius=3 freq=2][color=CRIMSON]紛れもない。[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]ルートリザーブの心臓部だ。[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]サーシャの表情に失望の色がよぎる。[/color]私たち皆、リスクを負わなければならない。私が別の方法を見つけるわ。
+Text/107/text,外の状況は悪化した。怒った群衆がチェックポイントに集まり、ルートリザーブについて説明を求めている。
+Text/108/text,[color=YELLOW]緊急放送[/color]：最近出回っている[color=CRIMSON]偽造文書[/color]が、不必要なパニックを引き起こしています。
+Text/109/text,"これらの破壊工作員の逮捕につながる情報に対し、[color=GOLD]10,000スパッドクレジット[/color]の報酬が提供されます。"
+Text/10a/text,このプロパガンダの消費または配布は、現在[color=RED]大逆罪[/color]と分類されます。
+Text/10b/text,今日のシフトは特別プロトコル下で運用されます。各旅行者は忠誠度評価を受けなければなりません。
+Text/10c/text,[color=CRIMSON]反政府感情[/color]を示す者は直ちに報告せよ。
+Text/10d/text,我々の[color=CRIMSON]中にいる裏切り者[/color]は見つけ出されるだろう。そして、そやつが見つかった暁には… [color=DARK_ORANGE]ラセットは首元に脅迫的なジェスチャーをした。[/color]
+Text/10e/text,緊張したジャガイモが近づいてくる。[color=GOLD]黄色い葉のバッジ[/color]が一部見えている。小さなメモが書類の間に挟まれている：「[color=CHARTREUSE]隠れ家が危険に晒された。新拠点：倉庫7、セクター4。[/color]」
+Choice/10f/text,「UVマークを付けて素早く処理する」(助ける)
+Choice/110/text,「彼らを直ちに警備に報告する」(裏切る)
+Text/111/text,安堵が彼らの顔に広がる。「ありがとう。真実は必ず勝つ。」
+Text/112/text,警備に合図を送ると、恐怖が彼らの顔に浮かぶ。「[wave amp=25 freq=3]いや、やめてくれ！私には家族がいるんだ！[/wave]」彼らの黄色いバッジが床に落ちる。
+Text/113/text,「よくやった。お前の忠誠心は記録された。」
+Text/114/text,「お前の決断は注目された。準備しておけ。[tornado radius=3 freq=2][color=CHARTREUSE]大きな何かが来る[/color][/tornado]。レジスタンスは直接行動を計画している。」
+Text/115/text,「それが起こった時、お前は[color=YELLOW]どちらかの側を選ぶ[/color]必要があるだろう。中立地帯は残されないだろう。」
+Text/116/text,お前が処理するジャガイモ一つ一つが、[pulse freq=2][color=CHARTREUSE]革命を助けている[/color][/pulse]か、あるいは[pulse freq=2][color=CRIMSON]恐ろしいシステムを可能にしている[/color][/pulse]かのどちらかだ。
+Choice/10f/disabled_text,
+Choice/110/disabled_text,
+Choice/106_trucks4/disabled_text,
+Choice/106_trucks5/disabled_text,

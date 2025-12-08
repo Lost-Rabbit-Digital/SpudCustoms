@@ -1,0 +1,59 @@
+﻿keys,ro
+Text/265/text,Tura se încheie într-o tăcere neliniștită. Patrulele de securitate s-au dublat. Toată lumea se mișcă în șoaptă.
+Text/266/text,Te îndrepți spre cartierul tău când auzi – [color=YELLOW]strigăte din aripa ofițerilor[/color].
+Text/267/text,Coti colțul și vezi forțele de securitate [pulse freq=3][color=RED]spărgând ușa Sashei[/color][/pulse].
+Text/268/text,Vocea șefului Yukon răsună. CARTOF DULCE SASHA! Ești arestată pentru [color=CRIMSON]trădare împotriva națiunii Spud![/color]
+Text/269/text,"Sasha este târâtă afară, zbatându-se. Ochii ei sunt sfidători chiar și în timp ce gardienii îi smulg brațele la spate."
+Text/26a/text,[tornado radius=4 freq=3][color=CHARTREUSE]ADEVĂRUL VA IEȘI LA IVEALĂ! NU NE PUTEȚI REDUCE PE TOȚI LA TĂCERE![/color][/tornado]
+Text/26b/text,Privirea ei te găsește în mulțimea de privitori. Timpul pare să înghețe.
+Text/26c/text,Recunoaștere... apoi [color=CRIMSON]o înțelegere devastatoare[/color]. I-ai trădat locația. Ea știe.
+Text/26d/text,Nu vorbește. Privirea e de ajuns. [color=STEEL_BLUE]Dezamăgire mai profundă decât ura.[/color]
+Text/26e/text,O licărire de ceva – [color=CHARTREUSE]speranță? încredere?[/color] – îi traversează fața.
+Text/26f/text,"Buzele ei se mișcă în tăcere: ""[color=CHARTREUSE]Rădăcinile cresc adânc.[/color]"" Un mesaj. O amintire."
+Text/270/text,"Russet iese din umbră, satisfacția revărsându-se din fiecare por."
+Text/271/text,"Ei bine, ei bine. [color=CRIMSON]Cartoful dulce se acrește[/color]. Am știut mereu că e ceva putred la tine, Sasha."
+Text/272/text,"Russet ridică un dosar. Micile tale [color=DARK_VIOLET]manifeste[/color]. ""Dovezile"" tale. Toate recuperate."
+Text/273/text,Chiar ai crezut că poți submina [pulse freq=2][color=DARK_VIOLET]Rezerva de Rădăcini[/color][/pulse]? Să mă subminezi PE MINE?
+Text/274/text,"Copii sunt deja acolo, Russet. Lumea va ști ce le faci oamenilor noștri!"
+Text/275/text,Russet râde rece. Vor ști ce le spunem noi. Și tu? Vei face parte dintr-un [color=CRIMSON]lot foarte special[/color].
+Text/276/text,"""[color=DARK_VIOLET]Amestecul Trădătorului[/color]"" – Cred că sună bine."
+Text/277/text,Inima îți bate cu putere. Fiecare instinct îți strigă să faci ceva. Dar gardienii sunt peste tot.
+Choice/278/text,Pășește înainte și cere să o elibereze (Nesăbuit)
+Choice/279/text,Rămâi ascuns – trăiește pentru a lupta o altă zi (Pragmatic)
+Choice/27a/text,Prinde privirea Sashei și dă din cap – o promisiune (Hotărâre)
+Text/27b/text,"Te strecori prin mulțime. ""[color=CHARTREUSE]Așteptați! Nu a făcut nimic greșit![/color]"""
+Text/27c/text,"Capul lui Yukon se întoarce brusc spre tine. ""[color=RED]Prindeți-l și pe ăsta![/color]"" Evident un complice!"
+Text/27d/text,"Murphy te apucă, trăgându-te înapoi. ""[color=STEEL_BLUE]Sunt confuzi în haos! FUGI![/color]"""
+Text/27e/text,Murphy te împinge spre un coridor lateral în timp ce gardienii se apropie de poziția ta.
+Text/27f/text,"Gardienii te prind. Zâmbetul lui Russet se lărgește. ""[color=CRIMSON]Doi trădători la prețul unuia.[/color]"""
+Text/280/text,"Te retragi în umbre, urându-te cu fiecare fibră. [color=STEEL_BLUE]Lașule.[/color]"
+Text/281/text,Dar viu. Și liber. Deocamdată.
+Text/282/text,"Îi prinzi privirea Sashei. O încuviințare lentă, deliberată. [color=CHARTREUSE]Vin după tine.[/color]"
+Text/283/text,"Ea vede. Cel mai mic zâmbet. Apoi e târâtă după colț, dispărută."
+Text/284/text,"Te găsește în haos. Fața lui e o mască, dar ochii îi ard."
+Text/285/text,Au dus-o la [color=CRIMSON]aripa de procesare[/color]. Subsolul 3. Acolo mi-au dus soția.
+Text/286/text,Îți apasă ceva în mână - o [color=GOLD]cartelă de securitate[/color].
+Text/287/text,Când va veni momentul... [color=CHARTREUSE]Voi închide ochii[/color]. Pentru soția mea. Pentru toți.
+Text/288/text,"Murphy te trage în depozit, respirând greu."
+Text/289/text,Asta e. Asta [color=CRIMSON]chiar se întâmplă[/color]. Au prins-o pe Sasha. O vor procesa până dimineață.
+Text/28a/text,"A fost [color=STEEL_BLUE]prostesc[/color]. Curajos, dar prostesc. Ești pe lista lor acum."
+Text/28b/text,Rezistența plănuiește ceva. Mâine. E singura noastră șansă să o salvăm.
+Text/28c/text,Ești implicat? [color=CHARTREUSE]Până la capăt?[/color]
+Choice/28d/text,Până la capăt. Orice ar fi nevoie pentru a o salva pe Sasha.
+Choice/28e/text,Trebuie să mă gândesc. Asta se întâmplă prea repede.
+Text/28f/text,Murphy îți prinde umărul. [color=CHARTREUSE]Atunci acționăm la zori. Rădăcinile cresc adânc.[/color]
+Text/290/text,"Fața lui Murphy se întărește. Gândește-te repede. Până mâine la ora asta, va fi [color=DARK_VIOLET]Rezervă de Rădăcini[/color]."
+Text/291/text,"Stai treaz, privind tavanul. Fața Sashei. Sfidarea ei. Frica ei."
+Text/292/text,Scoți fotografia soției dispărute. Încă o față pe care nu ai putut-o salva.
+Text/293/text,[color=CHARTREUSE]Nu de data asta.[/color]
+Text/294/text,"Până mâine, totul se schimbă. Într-un fel sau altul."
+Text/295/text,[pulse freq=2][color=YELLOW]Gata cu statul pe margine.[/color][/pulse]
+Text/296/text,"Celula e rece. Prin pereți, o auzi pe Sasha undeva, fiind ""interogată."""
+Text/297/text,"Mâine, au zis. Veți fi amândoi [color=DARK_VIOLET]procesați[/color] împreună."
+Text/298/text,Doar dacă nu vine rezistența. Doar dacă nu vă salvează cineva pe amândoi.
+Text/299/text,[color=STEEL_BLUE]Cea mai lungă noapte a vieții voastre se întinde înainte.[/color]
+Choice/278/disabled_text,
+Choice/279/disabled_text,
+Choice/27a/disabled_text,
+Choice/28d/disabled_text,
+Choice/28e/disabled_text,

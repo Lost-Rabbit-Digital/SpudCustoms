@@ -1,0 +1,163 @@
+﻿keys,zh-TW
+main_menu_feedback,意見回饋與錯誤報告
+main_menu_version,版本 1.2.0
+main_menu_new_game,新遊戲
+main_menu_continue,繼續
+main_menu_level_select,關卡選擇
+main_menu_score_attack,分數挑戰
+main_menu_options,選項
+main_menu_credits,製作人員名單
+main_menu_exit,離開
+select_language,語言
+social_discord_tooltip,加入我們的 Discord！
+social_steam_tooltip,造訪我們的 Steam 頁面
+social_twitch_tooltip,Twitch 整合
+twitch_status_disabled,已停用
+twitch_status_no_viewers,觀眾池中無觀眾
+twitch_status_ready,{count} 位觀眾已準備就緒
+twitch_connection_disabled,已停用
+twitch_connection_disconnected,已中斷連線
+twitch_connection_connected,已連線
+twitch_connection_connecting,連線中...
+options_menu_title,選項
+options_difficulty,難度
+options_difficulty_easy,簡單
+options_difficulty_normal,普通
+options_difficulty_expert,專家
+options_music_volume,音樂音量
+options_sfx_volume,音效音量
+options_camera_shake,畫面震動
+options_back,返回
+paused_menu_title,暫停
+shift_summary_title,班次總結
+shift_summary_continue,繼續
+shift_summary_restart,重新開始
+shift_summary_main_menu,主選單
+shift_summary_submit_score,提交分數
+shift_summary_runner_stats,逃犯統計
+shift_summary_document_stats,文件統計
+shift_summary_performance,績效
+shift_summary_bonuses,獎勵
+time_format,{minutes}分 {seconds}秒
+shift_complete_success,第 {shift} 班次完成\n成功！
+shift_complete_failure,第 {shift} 班次完成\n{failure}
+strike_limit_reached,懲罰次數已達上限！
+quota_not_met,未達成配額！
+shift_summary_title_with_difficulty,班次總結\n{difficulty}
+runner_stats_template,\n逃犯統計\n逃犯嘗試次數: {runner_attempts}\n發射飛彈: {fired}\n擊中逃犯: {hit}\n完美擊中: {perfect}\n命中率: {rate}%
+document_stats_template,\n文件統計\n文件蓋章數: {stamped}\n馬鈴薯獲准數: {approved}\n馬鈴薯拒絕數: {rejected}\n完美蓋章: {perfect_stamps}
+bonus_stats_template,獎勵\n處理速度獎勵: {processing_speed_bonus}\n蓋章準確度獎勵: {accuracy}\n完美擊中獎勵: {perfect_hit_bonus}\n總分獎勵: {total_score_bonus}
+performance_stats_template,\n績效\n花費時間: {time_taken}\n預期分數: {expected_score}\n總分: {score}\n超額分數百分比: {percent}%\n績效評級:\n{rating}
+performance_exceptional,卓越！
+performance_excellent,表現優異！
+performance_good,良好
+performance_needs_improvement,有待改進
+performance_poor,表現欠佳
+global_leaderboard_title,全球排行榜\n- {difficulty}
+getting_leaderboard_scores,正在取得排行榜分數...
+reset_game_label,重設遊戲：
+reset_game_button,重設
+mute_label,靜音
+fullscreen_label,全螢幕：
+resolution_label,解析度：
+antialiasing_label,反鋸齒：
+screenshake_label,畫面震動：
+mouse_sens_label,滑鼠靈敏度：
+Loading…,載入中...
+You lose.,你輸了。
+You won!,你贏了！
+Thanks for playing!,感謝您的遊玩！
+Please Confirm...,請確認...
+Go back to main menu?,返回主選單？
+Quit the game?,離開遊戲？
+Cancel,取消
+OK,OK
+Controls,操作
+Mouse Sensitivity :,Mouse Sensitivity :
+Actions & Inputs,動作與輸入
+Add,Add
+Remove,移除
+Assign Key for {action},為 {action} 指派按鍵
+Listening for input...,正在等待輸入...
+Press again to confirm...,再按一次以確認...
+Focus here to assign inputs.,在此處設定輸入。
+Already Assigned,已指派
+{key} already assigned to {action}.,{key} 已指派給 {action}。
+Remove Key for {action},移除 {action} 的按鍵
+Are you sure you want to remove {key} from {action}?,您確定要從 {action} 移除 {key} 嗎？
+Reset,重設
+Audio,音訊
+Master :,Master :
+Music :,Music :
+SFX :,SFX :
+Ambient :,Ambient :
+Mute :,Mute :
+Video,視訊
+Fullscreen :,Fullscreen :
+Resolution :,Resolution :
+Anti-Aliasing :,Anti-Aliasing :
+Disabled (Fastest),已停用 (最快)
+8x (Slowest),8x (最慢)
+Camera Shake :,Camera Shake :
+Normal,正常
+Reduced,減少
+Minimal,極簡
+None,無
+Game,遊戲
+Reset Game :,Reset Game :
+Do you want to reset your game data?,您要重設遊戲資料嗎？
+Back,返回
+TAKE THEM!,逮捕他們！
+"Take your documents, please.",請拿好您的文件。
+Continue,繼續
+Main Menu,主選單
+Submit Score,提交分數
+Restart,重新開始
+SHIFT SUMMARY,班次總結
+Easy,簡單
+Expert,專家
+Primary,主要
+Secondary,次要
+Primary Interaction,主要互動
+Secondary Interaction,次要互動
+Cancel Interaction,取消互動
+Escape,離開
+Dialogic Default Action,對話預設動作
+Enter,確定
+Left Mouse Button,滑鼠左鍵
+Right Mouse Button,滑鼠右鍵
+Start New Game,開始新遊戲
+Starting a new game will reset your progress. Are you sure you want to continue?,開始新遊戲將會重置您的進度。您確定要繼續嗎？
+"Yes, Start New Game",是，開始新遊戲
+Skip,跳過
+History,歷史
+Return,返回
+Restart the game?,重新開始遊戲？
+help_menu_button,幫助
+help_menu_title,遊戲教學
+help_tab_basics,基本操作
+help_tab_gameplay,遊戲玩法
+help_tab_minigames,小遊戲
+help_basics_intro,[b]歡迎來到馬鈴薯海關！[/b]
+help_basics_gate,[b]打開閘門[/b]
+help_basics_documents,[b]檢查文件[/b]
+help_basics_stamping,[b]蓋章文件[/b]
+help_basics_runners,[b]邊境偷渡者[/b]
+help_basics_xray,[b]X光掃描儀[/b]
+help_gameplay_quota,[b]達成配額[/b]
+help_gameplay_strikes,[b]懲罰[/b]
+help_gameplay_rules,[b]入境規定[/b]
+help_gameplay_scoring,[b]計分[/b]
+help_gameplay_difficulty,[b]難度等級[/b]
+help_minigames_intro,[b]小遊戲[/b]
+help_minigames_document_scanner,[b]文件掃描儀[/b]（班次1+）
+help_minigames_stamp_sorting,[b]印章分類[/b] (輪班 2+)
+help_minigames_fingerprint_match,[b]指紋比對[/b] (輪班 3+)
+help_minigames_code_breaker,[b]密碼破解[/b] (輪班 4+)
+help_minigames_border_chase,[b]邊境追捕[/b] (輪班 5+)
+help_tab_lore,背景故事
+help_lore_world_intro,[b]薯國世界[/b]
+help_lore_nation,[b]薯國[/b]
+help_lore_your_role,[b]您的職責[/b]
+help_lore_border,[b]長城[/b]
+help_lore_secrets,[b]根部儲備[/b]

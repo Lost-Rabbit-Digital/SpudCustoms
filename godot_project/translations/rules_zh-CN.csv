@@ -1,0 +1,39 @@
+﻿keys,zh-CN
+LAWS,法规
+msg_not_fresh,土豆是%s，但必须是新鲜的
+msg_extra_eyes,土豆有额外芽眼，这是被禁止的
+msg_rotten,腐烂的土豆不允许入境
+msg_sprouted,发芽的土豆不允许入境
+msg_dehydrated,脱水的土豆今天不允许入境
+msg_frozen,冷冻的土豆被禁止入境
+msg_over_age,土豆已%d岁（最大5岁）
+msg_under_age,土豆已%d岁（必须超过3岁）
+law_fresh_potatoes,[color=dark_goldenrod]只允许新鲜[/color]土豆入境 - [color=dark_red]拒绝[/color]所有其他土豆
+law_extra_eyes,有[color=dark_goldenrod]额外芽眼[/color]的土豆必须[color=dark_red]拒绝[/color]入境
+law_rotten,[color=dark_goldenrod]腐烂的[/color]土豆必须[color=dark_red]拒绝[/color]入境
+law_sprouted,[color=dark_goldenrod]发芽的[/color]土豆必须[color=dark_red]拒绝[/color]入境
+law_dehydrated,[color=dark_goldenrod]脱水的[/color]土豆必须[color=dark_red]拒绝[/color]入境
+law_frozen,[color=dark_goldenrod]冷冻的[/color]土豆必须[color=dark_red]拒绝[/color]入境
+law_over_5_years,[color=dark_goldenrod]5岁或以上[/color]的土豆必须[color=dark_red]拒绝[/color]入境
+law_under_3_years,[color=dark_goldenrod]3岁或以下[/color]的土豆必须[color=dark_red]拒绝[/color]入境
+law_under_2_years,[color=dark_goldenrod]2岁或以下[/color]的土豆必须[color=dark_red]拒绝[/color]入境
+law_males_only,[color=dark_goldenrod]只允许雄性[/color]土豆入境 - [color=dark_red]拒绝[/color]所有雌性土豆
+law_females_only,[color=dark_goldenrod]只允许雌性[/color]土豆入境 - [color=dark_red]拒绝[/color]所有雄性土豆
+law_country_spudland,[color=dark_goldenrod]所有[/color]来自[color=dark_goldenrod]斯普德兰[/color]的土豆必须[color=dark_red]拒绝[/color]入境
+law_country_potatopia,[color=dark_goldenrod]所有[/color]来自[color=dark_goldenrod]波塔托皮亚[/color]的土豆必须[color=dark_red]拒绝[/color]入境
+law_country_tuberstan,[color=dark_goldenrod]所有[/color]来自[color=dark_goldenrod]块茎斯坦[/color]的土豆必须[color=dark_red]拒绝[/color]入境
+law_country_north_yamnea,[color=dark_goldenrod]所有[/color]来自[color=dark_goldenrod]北薯国[/color]的土豆必须[color=dark_red]拒绝[/color]入境
+law_country_spuddington,[color=dark_goldenrod]所有[/color]来自[color=dark_goldenrod]斯普丁顿[/color]的土豆必须[color=dark_red]拒绝[/color]入境
+law_country_tatcross,[color=dark_goldenrod]所有[/color]来自[color=dark_goldenrod]塔特克罗斯[/color]的土豆必须[color=dark_red]拒绝[/color]
+law_country_mash_meadows,[color=dark_goldenrod]所有[/color]来自[color=dark_goldenrod]马什草甸[/color]的土豆必须[color=dark_red]拒绝[/color]
+law_country_tuberville,[color=dark_goldenrod]所有[/color]来自[color=dark_goldenrod]块茎镇[/color]的土豆必须[color=dark_red]拒绝[/color]
+law_country_chip_hill,[color=dark_goldenrod]所有[/color]来自[color=dark_goldenrod]薯片山[/color]的土豆必须[color=dark_red]拒绝[/color]（出口禁令）
+law_country_murphyland,[color=dark_goldenrod]所有[/color]来自[color=dark_goldenrod]墨菲兰[/color]的土豆必须[color=dark_red]拒绝[/color]
+law_country_colcannon,[color=dark_goldenrod]所有[/color]来自[color=dark_goldenrod]科尔坎农[/color]的土豆必须[color=dark_red]拒绝[/color]
+law_country_pratie_point,[color=dark_goldenrod]所有[/color]来自[color=dark_goldenrod]普拉蒂角[/color]的土豆必须[color=dark_red]拒绝[/color]
+law_purple_majesty,[color=dark_goldenrod]紫晶[/color]品种的土豆必须[color=dark_red]拒绝[/color]
+law_sweet_potatoes,[color=dark_goldenrod]红薯[/color]品种的土豆必须[color=dark_red]拒绝[/color]（无可用许可证）
+law_yukon_gold,[color=dark_goldenrod]育空黄金[/color]品种的土豆必须[color=dark_red]拒绝[/color]
+law_fingerling,[color=dark_goldenrod]指形[/color]品种的土豆必须[color=dark_red]拒绝[/color]
+law_red_bliss,[color=dark_goldenrod]红福[/color]品种的土豆必须[color=dark_red]拒绝[/color]
+law_russet,[color=dark_goldenrod]褐皮[/color]品种的土豆必须[color=dark_red]拒绝[/color]

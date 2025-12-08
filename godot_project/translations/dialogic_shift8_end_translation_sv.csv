@@ -1,0 +1,59 @@
+﻿keys,sv
+Text/265/text,Skiftet slutar i orolig tystnad. Säkerhetspatrullerna har fördubblats. Alla rör sig viskande.
+Text/266/text,Du är på väg till ditt logement när du hör det – [color=YELLOW]skrik från officerarnas flygel[/color].
+Text/267/text,Du rundar hörnet och ser säkerhetsstyrkor [pulse freq=3][color=RED]sparka in Sashas dörr[/color][/pulse].
+Text/268/text,Chef Yukons röst dundrar. SÖTPOTATIS SASHA! Du är arresterad för [color=CRIMSON]förräderi mot nationen Spud![/color]
+Text/269/text,"Sasha dras ut, kämpande. Hennes ögon är trotsiga även när vakter vrider hennes armar bakom ryggen."
+Text/26a/text,[tornado radius=4 freq=3][color=CHARTREUSE]SANNINGEN KOMMER FRAM! NI KAN INTE TYSTA OSS ALLA![/color][/tornado]
+Text/26b/text,Hennes blick hittar dig i folkmassan av åskådare. Tiden verkar frysa.
+Text/26c/text,Igenkänning... sedan [color=CRIMSON]förkrossande insikt[/color]. Du förrådde hennes plats. Hon vet.
+Text/26d/text,Hon säger inget. Blicken är nog. [color=STEEL_BLUE]Besvikelse djupare än hat.[/color]
+Text/26e/text,En glimt av något – [color=CHARTREUSE]hopp? tillit?[/color] – korsar hennes ansikte.
+Text/26f/text,"Hennes läppar rör sig tyst: ""[color=CHARTREUSE]Rötterna växer djupt.[/color]"" Ett meddelande. En påminnelse."
+Text/270/text,"Russet träder fram ur skuggorna, med tillfredsställelse som sipprar ur varje por."
+Text/271/text,"Nåja, nåja. Den [color=CRIMSON]söta potatisen blir sur[/color]. Jag visste alltid att det var något ruttet med dig, Sasha."
+Text/272/text,"Russet håller upp en mapp. Dina små [color=DARK_VIOLET]manifest[/color]. Dina ""bevis."" Allt återfunnet."
+Text/273/text,Trodde du verkligen att du kunde undergräva [pulse freq=2][color=DARK_VIOLET]Rotreserven[/color][/pulse]? Undergräva MIG?
+Text/274/text,"Kopior finns redan där ute, Russet. Världen kommer att veta vad du gör med vårt folk!"
+Text/275/text,Russet skrattar kallt. De kommer att veta vad vi berättar för dem. Och du? Du kommer att bli en del av en [color=CRIMSON]mycket speciell sats[/color].
+Text/276/text,"""[color=DARK_VIOLET]Förrädarblandning[/color]"" – Jag tycker det låter bra."
+Text/277/text,Ditt hjärta bultar. Varje instinkt skriker att göra något. Men vakter är överallt.
+Choice/278/text,Kliv fram och kräv att de släpper henne (Vårdslöst)
+Choice/279/text,Håll dig gömd – lev för att kämpa en annan dag (Pragmatiskt)
+Choice/27a/text,Fånga Sashas blick och nicka – ett löfte (Beslutsamhet)
+Text/27b/text,"Du tränger dig genom folkmassan. ""[color=CHARTREUSE]Vänta! Hon har inte gjort något fel![/color]"""
+Text/27c/text,"Yukons huvud snärtar mot dig. ""[color=RED]Grip den där också![/color] Uppenbarligen en medbrottsling!"""
+Text/27d/text,"Murphy griper tag i dig och drar dig tillbaka. ""[color=STEEL_BLUE]De är förvirrade i kaoset! SPRING![/color]"""
+Text/27e/text,Murphy knuffar dig mot en sidokorridor medan vakter omringar din position.
+Text/27f/text,"Vakter griper dig. Russets leende vidgas. ""[color=CRIMSON]Två förrädare för priset av en.[/color]"""
+Text/280/text,Du kryper tillbaka in i skuggorna och hatar dig själv med varje fiber. [color=STEEL_BLUE]Fegis.[/color]
+Text/281/text,Men levande. Och fri. För nu.
+Text/282/text,"Du möter Sashas blick. En långsam, avsiktlig nick. [color=CHARTREUSE]Jag kommer för dig.[/color]"
+Text/283/text,"Hon ser. Det minsta leendet. Sedan dras hon runt hörnet, borta."
+Text/284/text,"Han hittar dig i kaoset. Hans ansikte är en mask, men hans ögon brinner."
+Text/285/text,De tog henne till [color=CRIMSON]bearbetningsflygeln[/color]. Underplan 3. Det är dit de tog min fru.
+Text/286/text,Han trycker något i din hand – ett [color=GOLD]säkerhetskort[/color].
+Text/287/text,När tiden är inne... [color=CHARTREUSE]kommer jag att se åt andra hållet[/color]. För min fru. För alla dem.
+Text/288/text,"Murphy drar in dig i förrådet, andandes tungt."
+Text/289/text,Det här är det. Det här [color=CRIMSON]händer faktiskt[/color]. De har Sasha. De kommer att bearbeta henne till morgonen.
+Text/28a/text,"Det var [color=STEEL_BLUE]dumt[/color]. Modigt, men dumt. Du är på deras lista nu."
+Text/28b/text,Motståndsrörelsen planerar något. Imorgon. Det är vår enda chans att rädda henne.
+Text/28c/text,Är du med? [color=CHARTREUSE]Helt och hållet med?[/color]
+Choice/28d/text,Hela vägen. Vad som än krävs för att rädda Sasha.
+Choice/28e/text,Jag måste tänka. Det här går för fort.
+Text/28f/text,Murphy tar dig på axeln. [color=CHARTREUSE]Då agerar vi i gryningen. Rötterna sitter djupt.[/color]
+Text/290/text,Murphys ansikte hårdnar. Tänk snabbt. Vid den här tiden imorgon kommer hon att vara [color=DARK_VIOLET]Rotreserv[/color].
+Text/291/text,Du ligger vaken och stirrar i taket. Sashas ansikte. Hennes trots. Hennes rädsla.
+Text/292/text,Du tar fram fotot på den saknade frun. Ännu ett ansikte du inte kunde rädda.
+Text/293/text,[color=CHARTREUSE]Inte den här gången.[/color]
+Text/294/text,Till imorgon förändras allt. På ett eller annat sätt.
+Text/295/text,[pulse freq=2][color=YELLOW]Slut på att stå vid sidan om.[/color][/pulse]
+Text/296/text,"Cellen är kall. Genom väggarna kan du höra Sasha någonstans, som ""förhörs""."
+Text/297/text,"I morgon, sa de. Ni kommer båda att bli [color=DARK_VIOLET]bearbetade[/color] tillsammans."
+Text/298/text,Om inte motståndet kommer. Om inte någon räddar er båda.
+Text/299/text,[color=STEEL_BLUE]Den längsta natten i ditt liv sträcker sig framför dig.[/color]
+Choice/278/disabled_text,
+Choice/279/disabled_text,
+Choice/27a/disabled_text,
+Choice/28d/disabled_text,
+Choice/28e/disabled_text,

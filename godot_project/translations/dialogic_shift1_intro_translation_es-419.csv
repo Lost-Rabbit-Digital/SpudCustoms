@@ -1,0 +1,18 @@
+﻿keys,es-419
+Text/56/text,Bienvenido a la nación de Spud. Una tierra de [pulse freq=2][color=MEDIUM_VIOLET_RED]prosperidad para todas las papas[/color][/pulse].
+Text/57/text,Has sido seleccionado para un [color=DARK_ORANGE]rol crucial[/color] en la protección de nuestras fronteras.
+Text/59/text,"¡CONTEMPLA! El [color=MEDIUM_VIOLET_RED]poderoso muro[/color] que salvaguarda nuestra nación. Aquí es donde servirás, asegurando que solo los dignos entren."
+Text/5a/text,"Ah, el nuevo brote. Escucha con atención, tu rol es [color=DARK_ORANGE]vital para la seguridad de Spud[/color]."
+Text/184/text,Russet se acerca incómodamente. He visto muchos brotes pasar por aquí. [color=STEEL_BLUE]La mayoría no dura.[/color]
+Text/184b/text,¿Los que hacen demasiadas preguntas? Son [color=CRIMSON]reasignados[/color]. Permanentemente.
+Text/5b/text,Te nombro Oficial de Aduanas de la [pulse freq=1][color=MEDIUM_VIOLET_RED]gloriosa Spud[/color][/pulse]. ¿Alguna pregunta?
+Choice/5c/text,"""¡Estoy listo para servir a Spud con todo mi almidón!"""
+Choice/5d/text,"""¿Qué sucede exactamente con las papas rechazadas?"""
+Text/5e/text,¡Excelente! Ese es el tipo de entusiasmo que necesitamos. Podrías ganar una condecoración de la [color=VIOLET]Reserva de Raíz[/color].
+Text/5f/text,Son... [color=VIOLET]procesadas[/color]. Según el protocolo. La [color=VIOLET]Reserva de Raíz[/color] se encarga de todos los detalles.
+Text/60/text,Concéntrate en tus deberes. [color=DARK_ORANGE]Nada más.[/color]
+Text/61/text,"Tu primer turno comienza ahora. Revisa los documentos con cuidado, niega la entrada a quienes no cumplan nuestros estándares."
+Text/62/text,"Cumple tu cuota, evita las penalizaciones."
+Text/62b/text,"Y recuerda, ¡[color=MEDIUM_VIOLET_RED]Gloria a Spud![/color]"
+Choice/5c/disabled_text,
+Choice/5d/disabled_text,
