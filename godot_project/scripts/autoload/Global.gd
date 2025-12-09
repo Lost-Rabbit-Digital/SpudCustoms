@@ -308,6 +308,12 @@ func load_game_state():
 
 	# Load the data if we got any
 	if not data.is_empty():
+		# Restore shift value - CRITICAL for game progression
+		shift = data.get("shift", 0)
+		# Also sync with GameStateManager
+		if GameStateManager:
+			GameStateManager.set_shift(shift)
+
 		high_scores = data.get("high_scores", {"Easy": 0, "Normal": 0, "Expert": 0})
 		current_story_state = data.get("story_state", 0)
 		narrative_choices = data.get("narrative_choices", {})
