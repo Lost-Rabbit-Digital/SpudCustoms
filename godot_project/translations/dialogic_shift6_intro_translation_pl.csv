@@ -1,0 +1,63 @@
+﻿keys,pl
+Text/b8/text,"Obiekt graniczny jest w całkowitej blokadzie, z uzbrojoną ochroną patrolującą każdy korytarz."
+Text/b9/text,[pulse freq=3][color=RED]UWAGA! Sytuacja bezpieczeństwa POZIOM CZERWONY![/color][/pulse] Tajne dokumenty zostały skradzione zeszłej nocy.
+Text/ba/text,"Mamy [tornado radius=4 freq=3][color=CRIMSON]zdrajcę wśród nas[/color][/tornado]. Każdy, kto zataja informacje, będzie traktowany jako współwinny."
+Text/bb/text,"Wszyscy oficerowie, ustawcie się w kolejce do [wave amp=15 freq=2][color=DARK_ORANGE]skanowania bezpieczeństwa[/color][/wave]. Osoby z podwyższonymi reakcjami stresowymi zostaną oznaczone."
+Text/bc/text,"Czy widziałeś, co się dzieje na zewnątrz? Wszędzie ulotki pokazujące, że [color=DARK_VIOLET]Root Reserve[/color] jest zrobiony z... [pulse freq=3][color=CRIMSON]z nas[/color][/pulse]."
+Choice/bd/text,Ścisz głos. Wszyscy jesteśmy obserwowani.
+Choice/be/text,"Słyszałem te same plotki. To przerażające, jeśli to prawda."
+Choice/bf/text,To śmieszna propaganda. Nie rozpowszechniaj takich kłamstw.
+Text/c0/text,Masz rację. Ale jeśli to prawda... kim to nas czyni?
+Text/c1/text,Mój kuzyn został odrzucony w zeszłym miesiącu. Czy to oznacza...? [color=CHARTREUSE]Nie mogę już tego robić[/color].
+Text/c2/text,Ich wyraz twarzy staje się ostrożny. Oczywiście. Na zawsze lojalny wobec Spuda.
+Text/c3/text,Podaj swoje miejsce pobytu zeszłej nocy między 22:00 a 04:00.
+Choice/c4/text,"Byłem w moich kwaterach całą noc, spałem."
+Choice/c5/text,Wolałbym najpierw porozmawiać z moim przedstawicielem prawnym.
+Text/c6/text,Twój poziom stresu wskazuje na [color=YELLOW]oszustwo[/color]. Jednak... niejednoznacznie. Możesz iść na razie.
+Text/c7/text,"Przedstawiciel prawny? To jest procedura bezpieczeństwa, nie proces. Twoja odmowa została odnotowana."
+Text/c8/text,"To działa. Manifesty wywołały poruszenie, ale [color=DARK_ORANGE]Russet nas podejrzewa[/color]."
+Text/c9/text,Wypatruj sojuszników z naszej organizacji podczas dzisiejszej zmiany. [color=CHARTREUSE]Rozpoznasz ich[/color].
+Text/ca/text,"Jeśli możesz bezpiecznie ich przeprowadzić, użyj [color=CHARTREUSE]specjalnego znaku, o którym rozmawialiśmy[/color]."
+Choice/cb/text,Warto zaryzykować. Jestem w to zaangażowany.
+Choice/cc/text,To staje się zbyt niebezpieczne. Może powinniśmy się przyczaić.
+Text/cd/text,"Wiedziałem, że mogę na ciebie liczyć. Kiedy to się skończy, [color=CHARTREUSE]Spud będzie wiedział, kto był prawdziwym bohaterem[/color]."
+Text/ce/text,Jesteśmy daleko poza tym punktem. Przyczajenie się nas nie uratuje. [color=CHARTREUSE]Tylko obalenie systemu to zrobi[/color].
+Text/cf/text,Każda stacja ma teraz nowy [color=DARK_ORANGE]system RealityScan[/color]. Wykrywa on nieautoryzowane oznaczenia i fałszerstwa.
+Text/d0/text,Wszystkie dokumenty muszą zostać zeskanowane przed zatwierdzeniem. [color=CRIMSON]Zdrajcy zostaną wykorzenieni[/color]. Gwarantuję to.
+Text/d1/text,"Pomaganie członkom ruchu oporu stało się o wiele bardziej niebezpieczne, ale [color=CHARTREUSE]prawda musi się rozprzestrzeniać[/color]."
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,
+Text/c7_viktor1/text,Krzepki strażnik podchodzi podczas twojej przerwy. Jego twarz jest wycieńczona.
+Text/c7_viktor2/text,"Hej... jesteś jednym z celników, prawda? Rozpytuję o moją żonę, Elenę."
+Text/c7_viktor3/text,Przekroczyła to przejście trzy tygodnie temu. [color=STEEL_BLUE]Nie przeszła kontroli.[/color] Od tamtej pory nie mam od niej wieści.
+Choice/c7_viktor4/text,"""Wiktorze... Znalazłem coś. O Elenie. Musisz poznać prawdę."""
+Choice/c7_viktor5/text,"""Przykro mi, Wiktorze. Nic nie widziałem."""
+Text/c7_viktor6/text,Pokazujesz mu kopię strony z manifestu. Jego twarz blednie.
+Text/c7_viktor7/text,"[wave amp=25 freq=3]Jego ręce drżą, gdy czyta.[/wave] [color=GOLD]Elena Pietrow[/color]... [color=CRIMSON]Przetworzona... Partia RR-2851...[/color]"
+Text/c7_viktor8/text,Jego głos to ledwie szept. [tornado radius=3 freq=2][color=CRIMSON]Oni... oni ZROBILI z niej...[/color][/tornado]
+Text/c7_viktor9/text,Jego żal zmienia się w zimną furię. [pulse freq=2][color=CRIMSON]Idaho za to zapłaci.[/color][/pulse] Przysięgam na jej pamięć.
+Text/c7_viktor10/text,"Chwyta cię za ramię. [color=CHARTREUSE]Dziękuję, że mi powiedziałeś.[/color] Kiedy nadejdzie czas... Zapamiętam to."
+Text/c7_viktor11/text,Kiwa głową ze smutkiem. [color=STEEL_BLUE]Tak myślałem.[/color] Nikt nic nie wie. Albo nikt nie chce mówić.
+Text/c7_viktor12/text,"Jeśli coś usłyszysz... [color=YELLOW]proszę.[/color] Ona jest wszystkim, co mam."
+Text/d0_qte1/text,"Później, podczas tej zmiany, podchodzi podróżny z dokumentami opatrzonymi [color=CHARTREUSE]subtelnym znakiem ruchu oporu[/color]."
+Text/d0_qte2/text,[color=DARK_ORANGE]RealityScan[/color] rozpoczyna skanowanie. [wave amp=15 freq=3][color=RED]Zaraz wykryje znak![/color][/wave]
+Text/d0_qte3/text,Masz sekundy na decyzję. Skaner się rozgrzewa...
+Choice/d0_qte4/text,"""Udawaj awarię skanera - szybko!"""
+Choice/d0_qte5/text,"""Pozwól skanerowi dokończyć skanowanie"""
+Text/d0_qte6/text,"[pulse freq=3][color=YELLOW]Musisz działać szybko![/color][/pulse] Wywołaj awarię, zanim skończy skanować!"
+Text/d0_qte7/text,Grzebiesz przy kablach skanera. Lecą iskry. Ekran migocze i gaśnie.
+Text/d0_qte8/text,Russet podbiega. [color=YELLOW]Co tu się stało?[/color]
+Choice/d0_qte9/text,"""Przepięcie, proszę pana. Te nowe systemy są kapryśne."""
+Choice/d0_qte10/text,"""Nie wiem, proszę pana. Po prostu zgasł."""
+Text/d0_qte11/text,Russet chrząka. [color=STEEL_BLUE]Birokraci dają nam niesprawdzony sprzęt.[/color] Przetwórz ich ręcznie i oznacz do ponownej kontroli.
+Text/d0_qte12/text,"Russet patrzy na ciebie podejrzliwie. [color=YELLOW]Jakie to wygodne.[/color] Zlecę serwisowi, żeby to sprawdzili. Nie pozwól, żeby to się powtórzyło."
+Text/d0_qte13/text,"Członek ruchu oporu daje ci najmniejsze skinienie głowy w podziękowaniu, gdy przechodzą."
+Text/d0_qte14/text,Skaner [pulse freq=3][color=RED]GŁOŚNO PISZCZY[/color][/pulse]. Wykryto nieautoryzowane oznaczenia!
+Text/d0_qte15/text,Russet pojawia się natychmiast. [color=CHARTREUSE]Dobra robota![/color] Kolejny zdrajca złapany.
+Text/d0_qte16/text,"Członek ruchu oporu zostaje odciągnięty, z przerażeniem w oczach. ""[color=CRIMSON]Proszę, nie! Mam dzieci![/color]"""
+Text/d0_qte17/text,Twoja lojalność została [color=DARK_ORANGE]odnotowana w twojej teczce[/color]. Tak trzymaj.

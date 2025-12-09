@@ -1,0 +1,31 @@
+﻿keys,nl
+Text/50/text,"Goed werk vandaag, scheut. Onthoud, efficiëntie is de sleutel. We hebben quota te halen."
+Text/51/text,"Vergeet niet je rantsoen [wave amp=15 freq=2][color=DARK_VIOLET]Wortelreserve[/color][/wave] te pakken. Je weet wat de radio zegt, het is de smaak van Spuds toekomst!"
+Text/52/text,Een kleine notitie glijdt uit enkele papieren op je bureau.
+Text/53/text,"[color=GOLD]Niet alles is wat het lijkt. De wortels van onze natie zijn verrot. [br] Volg het spoor, maar pas op niet te worden gesmoord.[/color] [br] - [color=CHARTREUSE]Een vriend[/color]"
+Text/54/text,Die notitie... en de manier waarop Russet mijn vraag over [pulse freq=3][color=CRIMSON]afgekeurde aardappels[/color][/pulse] ontweek... [br] Iets voelt [color=STEEL_BLUE]vreemd[/color].
+Text/55/text,Ik moet [color=YELLOW]alert[/color] blijven. Er is meer aan de hand dan paspoorten stempelen.
+Text/52b/text,Het was er vanochtend niet. Iemand heeft het geplaatst [color=YELLOW]tijdens jouw dienst[/color].
+Text/53b/text,"[color=GOLD]Volg het spoor, maar pas op dat je niet het zwijgen wordt opgelegd.[/color]"
+Text/53c/text,[color=GOLD]Let op wie de [/color][color=DARK_VIOLET]Reserve[/color][color=GOLD] eet. Let op wie weigert.[/color]
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]Een vriend[/color]
+Choice/53e/text,Houd het briefje verborgen - onderzoek discreet
+Choice/53f/text,Vernietig het briefje - dit zou een test kunnen zijn
+Choice/53g/text,Laat het briefje onmiddellijk aan Russet zien
+Text/53h/text,Je vouwt het briefje voorzichtig op en stopt het in je zak. [color=CHARTREUSE]Iemand zoekt contact.[/color]
+Text/53i/text,"Maar wie? En waarom jij, op je allereerste dag?"
+Text/53j/text,Je verscheurt het briefje in kleine stukjes
+Text/53k/text,Russet zei dat 'spruiten' die vragen stellen 'herplaatst' worden. Beter geen risico's nemen.
+Text/53l/text,"Je houdt Russet tegen voordat hij weggaat. ""Meneer? Ik vond dit tussen mijn papieren..."""
+Text/53m/text,"Russet grist het briefje, leest het. Zijn uitdrukking flakkert - [color=YELLOW]was dat herkenning?[/color]"
+Text/53n/text,Propaganda. Rebellen die nieuwe officieren proberen te corrumperen. [color=DARK_ORANGE]Je hebt er goed aan gedaan dit bij mij te brengen.[/color]
+Text/53o/text,Hij stopt het briefje in zijn zak. Vergeet dat je het ooit gezien hebt. En let op iedereen die zich... [color=CRIMSON]verdacht[/color] gedraagt.
+Text/54b/text,"""[color=VIOLET]Verwerkt. Volgens protocol.[/color]"" Wat betekent dat eigenlijk?"
+Text/54c/text,Dat briefje... het zei dat de wortels [color=CRIMSON]verrot[/color] zijn geworden.
+Text/54d/text,"Maar Spud is glorieus, toch? Dat is wat ze ons vertelden. Wat ik geloofde."
+Text/54e/text,"Je haalt het briefje tevoorschijn en leest het opnieuw. ""[color=GOLD]Let op wie de Reserve eet. Let op wie weigert.[/color]"""
+Text/54f/text,Morgen zul je opletten. [color=YELLOW]Iemand probeert je iets te vertellen.[/color]
+Text/54g/text,Russets gezicht toen hij het briefje las. Heel even keek hij bijna... [color=STEEL_BLUE]bang[/color].
+Text/54h/text,Wat is de [color=DARK_VIOLET]Wortelreserve[/color] eigenlijk? En waarom zou iemand je ervoor waarschuwen?
+Text/54i/text,"Het briefje is weg, maar de woorden blijven hangen. [color=YELLOW]Niet alles is wat het lijkt.[/color]"
+Text/54j/text,Misschien was het vernietigen ervan de slimme keuze. Misschien heb je zojuist je enige bondgenoot het zwijgen opgelegd.

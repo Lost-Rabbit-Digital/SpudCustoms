@@ -1,0 +1,24 @@
+﻿keys,nl
+Text/78/text,"Nog een dag bij het controlepost. De rij aardappelen strekt zich langer uit dan ooit, iedereen is gespannen."
+Text/79/text,"Nieuwe orders van bovenaf. [wave amp=15 freq=3][color=DARK_ORANGE]We verdubbelen de afwijzingen[/color][/wave]. Elke aardappel die als onveilig wordt beschouwd, wordt onmiddellijk vastgehouden."
+Text/7a/text,Ik heb een speciale opdracht. We hebben inlichtingen over [pulse freq=2][color=CRIMSON]rellenmakers[/color][/pulse]. Wees waakzaam bij uw inspecties.
+Choice/7b/text,"Ja, meneer, ik zal u niet teleurstellen"
+Choice/7c/text,Over wat voor soort rellenmakers hebben we het?
+Text/7d/text,Goed. Ik wist dat ik op je kon rekenen. Je zult ver komen met die instelling.
+Text/7e/text,Degenen die [color=CRIMSON]onze manier van leven bedreigen[/color]. Stel niet te veel vragen als je weet wat goed voor je is.
+Text/7f/text,"[color=STEEL_BLUE]Ik smeek u![/color] Mijn vrouw had direct achter mij moeten zijn, maar [tornado radius=2 freq=3]ze is nooit door de douane gekomen[/tornado]."
+Text/80/text,"Niemand wil me vertellen wat er met haar is gebeurd. Alstublieft, [color=CHARTREUSE]help me haar te vinden![/color]"
+Choice/81/text,"Het spijt me, maar ik kan niets doen."
+Choice/82/text,Laat me kijken wat ik te weten kan komen. Geen beloftes.
+Text/83/text,Net als alle anderen... [color=STEEL_BLUE]Moge uw geweten even zwaar zijn als het mijne.[/color]
+Text/84/text,"Dank je! Zelfs een kleine hoop is beter dan geen. Hier is haar foto. Alstublieft, vind haar."
+Text/85/text,Ik zag die uitwisseling. [color=DARK_ORANGE]Sympathie voor afgewezenen leidt alleen maar tot problemen.[/color] Blijf gefocust op uw plicht.
+Choice/7b/disabled_text,
+Choice/82/disabled_text,
+Choice/81/disabled_text,
+Choice/7c/disabled_text,
+Text/7fb/text,"Ze [tornado radius=2 freq=3]is nooit door de douane gekomen[/tornado]. Ze zeiden dat haar papieren een ""onregelmatigheid"" hadden."
+Text/83b/text,De wanhopige aardappel schuifelt weg. Je merkt op dat ze naar een versleten foto staart voordat ze verdwijnt.
+Text/84b/text,Ze drukt een [color=GOLD]versleten foto[/color] in je handen. Haar naam is [color=GOLD]Maris Piper[/color]. Ze heeft vriendelijke ogen. Vind haar alsjeblieft.
+Text/84c/text,Je kijkt naar de foto. Een jonge aardappel met zachte trekken en een warme glimlach. [color=GOLD]Maris Piper[/color].
+Text/84d/text,Waar is ze heen gegaan? De afwijzingsrij leidt naar... waar precies?

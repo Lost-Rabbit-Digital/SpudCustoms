@@ -1,0 +1,43 @@
+﻿keys,vi
+Text/240/text,"Khi ca làm việc buổi tối kết thúc, hầu hết sĩ quan đã rời đi. Chỉ còn bạn và một vài lính gác."
+Text/241/text,Một lính gác vạm vỡ tiến đến trạm của bạn. Tên tôi là Viktor. Tôi trực đêm.
+Text/242/text,"Đôi mắt anh ta mệt mỏi, ám ảnh. Bạn là người mới, phải không? Người mà Russet vẫn luôn theo dõi?"
+Choice/243/text,Tôi chỉ cố gắng làm tốt công việc của mình. Tại sao Russet lại theo dõi tôi?
+Choice/244/text,Có điều gì tôi nên biết không?
+Text/245/text,Anh ta nhún vai nặng nề. Russet theo dõi tất cả những ai đặt câu hỏi. [color=STEEL_BLUE]Vợ tôi từng đặt câu hỏi[/color] một lần.
+Text/246/text,Cô ấy không còn ở đây để hỏi nữa.
+Text/247/text,"Anh ta liếc nhìn xung quanh, rồi hạ giọng. Chỉ là... hãy cẩn thận với người bạn tin tưởng."
+Text/248/text,Và người bạn [color=CRIMSON]kết tội[/color]. Một số người trong chúng tôi nhớ rõ từng khuôn mặt mà chúng tôi đã gửi đi xử lý.
+Text/249/text,"Một củ khoai tây lo lắng tiến đến. Giấy tờ có vẻ ổn thỏa, nhưng bạn nhận thấy [color=CHARTREUSE]huy hiệu lá cây tinh tế[/color] trên cổ áo của họ."
+Text/24a/text,"Họ trượt tài liệu qua. Một mẩu giấy nhỏ được kẹp bên trong: ""[color=CHARTREUSE]Sasha gửi tôi. Gói hàng cho mạng lưới. Làm ơn.[/color]"""
+Text/24b/text,Máy [color=DARK_ORANGE]RealityScan[/color] mới nhấp nháy sẵn sàng tại trạm của bạn. Một lần quét và nó sẽ phát hiện các yếu tố giả mạo trong giấy tờ của họ.
+Choice/24c/text,Giả vờ máy quét bị trục trặc và cho họ qua
+Choice/24d/text,Sử dụng máy quét theo yêu cầu - bạn không thể mạo hiểm bị lộ
+Choice/24e/text,"Ra hiệu cho Viktor nhìn đi chỗ khác, rồi để họ đi qua"
+Text/24f/text,"Bạn chạm vào máy quét, cau mày, chạm lại lần nữa. ""Cái thứ chết tiệt này lại giở chứng rồi. Đi đi."""
+Text/250/text,"Nét nhẹ nhõm tràn ngập khuôn mặt họ. Họ mấp máy môi ""[color=CHARTREUSE]Cảm ơn[/color]"" rồi vội vã đi qua."
+Text/251/text,"Bạn bắt gặp ánh mắt anh ta và gật đầu về phía đặc vụ. Anh ta nhìn họ, rồi nhìn bạn."
+Text/252/text,"Anh ta cố tình quay lưng lại, nhìn chằm chằm vào bức tường. ""[color=STEEL_BLUE]Máy quét bị lỗi cả ngày rồi.[/color]"""
+Text/253/text,"Đặc vụ lọt qua. Viktor không nói gì, nhưng giờ bạn và anh ta đã chia sẻ một bí mật."
+Text/254/text,"Bạn chạy máy quét. Máy [color=RED]kêu inh ỏi[/color]. ""Đã phát hiện tài liệu giả mạo."""
+Text/255/text,"Nỗi kinh hoàng hiện rõ trên khuôn mặt họ. ""[color=CRIMSON]Bạn không hiểu mình đã làm gì đâu...[/color]"""
+Text/256/text,"Anh ta và những lính gác khác xúm lại. Đặc vụ bị kéo đi, vẫn nhìn chằm chằm vào bạn."
+Text/257/text,Sasha bắt gặp bạn trong bóng tối. Đặc vụ đó đang mang [color=CHARTREUSE]bản sao của các bản kê khai[/color] cho các liên lạc viên của chúng tôi bên ngoài.
+Text/258/text,"Nhờ bạn, sự thật sẽ lan rộng ra ngoài biên giới của Spud. [color=CHARTREUSE]Bạn đã tạo ra một sự khác biệt thực sự.[/color]"
+Text/259/text,Mắt Sasha mở to. Viktor đã giúp sao? Tôi đã có linh cảm về anh ta. Vợ anh ta là...
+Text/25a/text,Cô ấy ngập ngừng. Chúng ta có nhiều đồng minh hơn tôi nghĩ.
+Text/25b/text,"Sasha tìm bạn, vẻ mặt lạnh lùng. Đặc vụ đó có gia đình. Ba mầm khoai tây ở nhà."
+Text/25c/text,Tôi hiểu nỗi sợ hãi. Nhưng [color=CRIMSON]nỗi sợ hãi có hậu quả[/color]. Họ sẽ bị xử lý trước buổi sáng.
+Text/25d/text,Tôi hy vọng hồ sơ trong sạch của bạn đáng giá.
+Text/25e/text,Murphy lẻn vào phòng bạn. Nghe nói tối nay có chuyện thú vị ở trạm của bạn.
+Text/25f/text,[color=CHARTREUSE]Tốt. Giờ chúng ta cùng hội cùng thuyền rồi.[/color] Không thể quay đầu lại.
+Text/260/text,Mặt Murphy xụ xuống. Tôi... tôi tưởng bạn đứng về phía chúng tôi. Chuyện gì đã xảy ra?
+Text/261/text,Ca làm việc ngày mai sẽ khác. Cược chưa bao giờ lớn hơn thế.
+Text/262/text,"Nhưng lần đầu tiên, bạn cảm thấy mình đang đứng về [color=CHARTREUSE]phía chính nghĩa[/color]. Bất kể cái giá nào."
+Text/263/text,Khuôn mặt của đặc vụ ám ảnh bạn. Gia đình họ sẽ không bao giờ biết tại sao họ không về nhà.
+Text/264/text,[color=STEEL_BLUE]Vì bạn.[/color]
+Choice/243/disabled_text,
+Choice/244/disabled_text,
+Choice/24c/disabled_text,
+Choice/24d/disabled_text,
+Choice/24e/disabled_text,

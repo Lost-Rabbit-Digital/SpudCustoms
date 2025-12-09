@@ -1,0 +1,85 @@
+﻿keys,ro
+Text/11/text,"Granița Spud este în [pulse freq=3][color=CRIMSON]haos[/color][/pulse]. Cartofi panicați inundă punctele de control, disperați să scape după documentele scurse."
+Text/12/text,Te strecori cu Sasha. [wave amp=20 freq=3][color=CHARTREUSE]Trebuie să continuăm să împingem![/color][/wave] Oamenii cunosc acum adevărul.
+Text/13/text,"Nu mai pot reduce adevărul la tăcere. Dacă putem infiltra facilitatea [color=DARK_VIOLET]Rezerva Rădăcină[/color] și transmite dovezi, va [tornado radius=3 freq=2][color=CHARTREUSE]aprinde revoluția[/color][/tornado]."
+Text/14/text,Acel loc este o fortăreață. Și acum avem un [color=YELLOW]fost agent vamal[/color] printre noi. Ochii lor se îngustează suspicioși spre tine.
+Choice/15/text,"Înțeleg îndoiala voastră, dar sunt dedicat acestei cauze."
+Choice/16/text,Am sacrificat deja totul. Nu voi da înapoi acum.
+Text/17/text,Cuvinte frumoase. Dar le-am mai auzit înainte.
+Text/18/text,"Ne-au ajutat să obținem documentele. Asta înseamnă acțiuni, nu vorbe."
+Text/19/text,"Nu mai poți reveni la a fi un cartof loial acum. Bun venit în rezistență, tovarășe."
+Text/1a/text,"După o infiltrare tensionată, echipa ta stă în inima [color=DARK_VIOLET]Rezervei Rădăcină[/color], [pulse freq=3][color=CRIMSON]îngrozitoarea mașinărie a opresiunii[/color][/pulse] expusă."
+Text/1b/text,"[wave amp=25 freq=3][color=RED]Alarmele urlă[/color][/wave] în timp ce gărzile se grăbesc să răspundă la intruziunea voastră. Voi alergați prin coridoare, evitând sistemele de securitate."
+Text/1c/text,"Un ecran pâlpâie. ""Ei bine, [color=CRIMSON]trădătorul[/color] se întoarce cu scursurile rebele."""
+Text/1d/text,Ai crezut că poți opri progresul Spud? [color=DARK_VIOLET]Rezerva Rădăcină[/color] este forța vitală a acestei națiuni.
+Text/1e/text,Dar nu-ți face griji. Vei servi în continuare Spud... [tornado radius=4 freq=3][color=DARK_VIOLET]în cazanele de procesare![/color][/tornado]
+Text/1f/text,Ecranul devine brusc negru.
+Text/20/text,"Te întorci spre ceilalți cu hotărâre. ""Trebuie să ajungem la buncărul lui Idaho. Acum!"""
+Text/21/text,"Grupul tău luptă prin valuri de securitate, evitând la limită capturarea. Luptătorii de rezistență ai Sashei creează diversiuni, eliberându-vă calea înainte."
+Text/22/text,"După o evadare înfricoșătoare prin tunelurile de întreținere, ajungeți în sfârșit la ascensorul securizat către buncărul privat al lui Idaho."
+Text/23/text,"Cu Sasha și aliații tăi alături, îl confrunți în sfârșit pe Idaho."
+Text/24/text,"S-a terminat, Idaho. Secretele tale sunt expuse. Cum se termină asta... [pulse freq=2]depinde de tine.[/pulse]"
+Choice/25/text,Negociază o tranziție pașnică a puterii (Diplomatic)
+Choice/26/text,Cere arestarea imediată a lui Idaho (Justiție)
+Choice/27/text,Execută justiție vigilantă pentru crimele lui Idaho (Răzbunare)
+Choice/28/text,Concentrează-te pe demontarea infrastructurii Rezervei Rădăcină (Demontare)
+Text/29/text,"Idaho, nu trebuie să se termine cu mai multă vărsare de sânge. Dacă cooperezi..."
+Text/2a/text,"Oh, tu [color=STEEL_BLUE]idealist naiv[/color]. Crezi că asta e o negociere?"
+Text/2b/text,"Idaho zdrobește un buton, și [color=RED]alarmele încep să sune[/color]. ""Singurul lucru pe care vi-l voi da este un [color=DARK_VIOLET]bilet doar dus către cazanele de prăjit![/color]"""
+Text/2c/text,"Nu cred, Idaho. Gărzi! Ați văzut dosarul, [color=YELLOW]știți ce le-a făcut familiilor voastre.[/color]"
+Text/2d/text,O gardă uriașă pășește înainte și îl doboară rapid pe Idaho la pământ.
+Text/2e/text,Un foc de armă răsună prin cameră. Ecranul se întunecă.
+Text/2f/text,"Idaho, în numele poporului cartof din Spud, [color=CHARTREUSE]ești arestat![/color]"
+Text/30/text,"S-a terminat. Poporul a vorbit. [color=CHARTREUSE]Vom construi un nou Spud unde rădăcinile noastre sunt în pământ, nu în suferință.[/color]"
+Text/31/text,"Nu vor fi [color=CRIMSON]înțelegeri, nici milă[/color] pentru tine, Idaho. Justiția unui tiran este tot ce meriți."
+Text/32/text,"O răfuială. Asta sunt eu. [color=CHARTREUSE]Pentru fiecare cartof sacrificat, ne recuperăm viitorul![/color]"
+Text/33/text,"Uitați de el. Este un simptom, nu boala. [color=CHARTREUSE]Dărâmați fiecare rădăcină și fiecare tulpină a acestei monstruozități.[/color]"
+Text/34/text,Trebuie să plecăm! Acum!
+Text/35/text,Căderea [color=DARK_VIOLET]Rezervei Rădăcină[/color] aprinde un incendiu de schimbare în întregul Spud.
+Text/36/text,"Cartofii din fiecare provincie se ridică, îmbrățișând o [color=CHARTREUSE]nouă viziune pentru națiunea lor[/color]."
+Text/37/text,"Atât timp cât rămânem fideli rădăcinilor noastre, idealurilor care ne-au adus aici... [color=CHARTREUSE]vom găsi o cale.[/color]"
+Text/38/text,"Și astfel, din cenușa vechiului Spud, [color=CHARTREUSE]o nouă națiune începe să prindă rădăcini[/color]. Domnia [color=DARK_VIOLET]Rezervei Rădăcină[/color] s-a terminat."
+Choice/15/disabled_text,
+Choice/28/disabled_text,
+Choice/27/disabled_text,
+Choice/26/disabled_text,
+Choice/25/disabled_text,
+Choice/16/disabled_text,
+Text/1a_rescue1/text,Un cercetaș se apropie în grabă. Am găsit-o! [color=CHARTREUSE]Sasha e în blocul de detenție![/color]
+Text/1a_rescue2/text,Se pregătesc să... [tornado radius=3 freq=2][color=CRIMSON]o proceseze[/color][/tornado]... în mai puțin de o oră!
+Text/1a_rescue3/text,Trebuie să o salvăm. [pulse freq=2][color=CHARTREUSE]Ea a început totul.[/color][/pulse] Nu plecăm fără ea.
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]Grăbește-te prin unitate![/color][/wave] Ajungi la Sasha înainte să fie prea târziu!
+Text/1a_rescue_fail1/text,Te împiedici. Calea înainte e blocată de gărzi!
+Text/1a_rescue_fail2/text,Viktor intră brusc printr-o ușă laterală. [color=CHARTREUSE]DU-TE! Îi voi ține eu![/color]
+Text/1a_rescue_fail3/text,Pentru Elena. Pentru toți. [color=STEEL_BLUE]Nu voi lăsa încă unul să moară![/color]
+Text/1a_rescue_fail4/text,Murphy trage de o alarmă de incendiu. [color=CHARTREUSE]Pentru Tommy![/color] Aspersoarele orbesc gărzile!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Voi crea o diversiune. Scoate-o de acolo![/color]
+Text/1a_rescue_fail6/text,"O [color=YELLOW]bandă transportoare de procesare se blochează[/color], împrăștiind scântei și distrăgând gărzile!"
+Text/1a_rescue_fail7/text,Soarta - sau fantomele celor procesați - îți acordă o a doua șansă.
+Text/1a_rescue5/text,"Sasha ridică privirea din celula ei, vânătă dar neînfrântă. Ochii ei se măresc. [color=CHARTREUSE]Ai venit.[/color]"
+Text/1a_rescue6/text,Bineînțeles că am venit. [color=CHARTREUSE]Terminăm asta împreună.[/color]
+Choice/1a_rescue7/text,Mi-era teamă că nu te voi mai vedea niciodată.
+Choice/1a_rescue8/text,Ne-ai îngrijorat de moarte. Nu mai face asta.
+Choice/1a_rescue9/text,Avem treabă. Idaho așteaptă.
+Text/1a_rescue10/text,[color=CHARTREUSE]Sasha te trage într-o scurtă îmbrățișare.[/color] Știam că vei veni. Nu m-am îndoit niciodată.
+Text/1a_rescue11/text,Acum să-i facem să plătească pentru toți cei pe care i-au luat. [color=CHARTREUSE]Împreună.[/color]
+Text/1a_rescue12/text,Sasha schițează un zâmbet slab prin durerea ei. [color=STEEL_BLUE]Voi încerca.[/color] Dar unele lucruri merită riscul.
+Text/1a_rescue13/text,Faptul că ești aici o dovedește. Acum să terminăm asta.
+Text/1a_rescue14/text,"Sasha dă din cap, hotărârea ei reaprinsă. [color=CHARTREUSE]Ai dreptate.[/color] Sentimentele pot aștepta."
+Text/1a_rescue15/text,Idaho crede că a câștigat. Să-i arătăm cât de mult se înșeală.
+Text/158/text,Forțele de securitate se apropie! [pulse freq=3][color=YELLOW]Luptă-ți drum prin ei![/color][/pulse]
+Text/21_fail1/text,Gărzile se apropie din toate direcțiile. [color=CRIMSON]Nu ai unde să fugi![/color]
+Text/21_fail2/text,"Viktor apare în spatele gărzilor, vocea-i rece ca oțelul. [color=STEEL_BLUE]Încetați. Acum.[/color]"
+Text/21_fail3/text,Gărzile ezită - Viktor era unul de-al lor. [color=CRIMSON]Numele Elenei e pe acele manifeste. Familiile voastre ar putea fi următoarele.[/color]
+Text/21_fail4/text,Unele gărzi își coboară armele. Altele fug. Calea se eliberează.
+Text/21_fail5/text,"O explozie zguduie aripa de est. Vocea lui Murphy se aude distorsionat pe comunicații: [color=CHARTREUSE]""Asta e diversiunea mea! MIȘCĂ!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Gărzile se împrăștie spre explozie. Tommy ar fi mândru.[/color]
+Text/21_fail7/text,Sasha îl doboară pe gardianul-șef din spate. [color=CHARTREUSE]N-am supraviețuit acelei celule doar ca să te privesc murind![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]FUGI! Mă descurc![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha se apropie, mâna ei o găsește pe a ta în timp ce priviți împreună noul răsărit.[/color] Am construit asta. Tu și eu."
+Text/152/text,"Atâta timp cât rămânem fideli rădăcinilor noastre, idealurilor care ne-au adus aici... [color=CHARTREUSE]vom găsi o cale.[/color] Împreună."
+Text/153/text,[color=CHARTREUSE]Îi strângi mâna. Împreună.[/color]
+Text/154/text,[color=STEEL_BLUE]Sasha stă lângă tine.[/color] Focul tău a aprins scânteia care le-a ars imperiul.
+Text/155/text,[color=STEEL_BLUE]Furia s-a domolit în determinare. Mai e încă de lucru.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha îți oferă un zâmbet de susținere.[/color] Ai parcurs un drum lung de la acel punct de control. Cu toții am făcut-o.
+Text/157/text,"[color=STEEL_BLUE]Vinovăția s-ar putea să nu dispară niciodată complet, dar ți-ai găsit un scop în reconstrucție.[/color]"

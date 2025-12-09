@@ -1,0 +1,35 @@
+﻿keys,pt-BR
+Text/a6/text,A instalação da fronteira parece diferente hoje. Tensa. Patrulhas de segurança em maior número enquanto um silêncio cauteloso substitui o burburinho.
+Text/a7/text,"Ontem à noite, [pulse freq=2][color=CRIMSON]materiais proibidos[/color][/pulse] foram descobertos. Panfletos contendo mentiras sobre [color=DARK_VIOLET]Reserva da Raiz[/color]."
+Text/a8/text,Estamos implementando [wave amp=15 freq=2][color=DARK_ORANGE]protocolos de nível de ameaça LARANJA[/color][/wave]. Todos os oficiais sujeitos a verificações de lealdade. Todos os viajantes enfrentam escrutínio máximo.
+Text/a9/text,Está funcionando. Os panfletos estão se espalhando. As pessoas estão fazendo perguntas sobre [color=DARK_VIOLET]Reserva da Raiz[/color].
+Text/aa/text,Tenho fontes me dizendo que há um registro de remessas no escritório de Russet - manifestos de transporte que poderiam [tornado radius=3 freq=2][color=CHARTREUSE]provar tudo[/color][/tornado].
+Text/ab/text,"Preciso que você me ajude a pegá-lo. Hoje à noite, depois do último turno. Posso contar com você?"
+Choice/ac/text,"""Estou dentro. Vamos expor a verdade."""
+Choice/ad/text,"""Eu não sei, Sasha... isso pode ser perigoso."""
+Text/ae/text,Graças a Deus. Eu sabia que você tinha [color=CHARTREUSE]raízes mais fortes que os outros[/color]. Nos encontraremos à meia-noite.
+Text/af/text,Às vezes temos que [color=CHARTREUSE]arriscar ser amassado para fazer o que é certo[/color]. Pense nisso.
+Text/b0/text,"[color=DARK_ORANGE]Verificação de lealdade[/color]. Por favor, diga seu nome e ID de oficial. Depois me diga por que você serve Spud."
+Choice/b1/text,"""Eu sirvo para proteger nossas fronteiras de influências perigosas."""
+Choice/b2/text,"""Eu sirvo para garantir que todos recebam tratamento justo."""
+Text/b3/text,"Boa resposta. Spud precisa de protetores leais. O scanner lê verde. Continue, oficial."
+Text/b4/text,"As sobrancelhas do oficial se erguem. Tratamento justo? O scanner pisca [color=DARK_ORANGE]âmbar[/color]. Lembre-se, nossa principal preocupação é a segurança, não a justiça."
+Text/b5/text,A cota de hoje foi aumentada. Qualquer um com materiais suspeitos deve ser sinalizado para [color=DARK_VIOLET]processamento especial[/color].
+Text/b6/text,Estarei [color=DARK_ORANGE]observando suas decisões[/color] com muito cuidado hoje.
+Text/b7/text,"Esta noite pode mudar tudo. Mas primeiro, [color=YELLOW]sobreviva ao dia sem levantar suspeitas[/color]."
+Text/b4_viktor1/text,Um guarda de segurança corpulento segura seu braço enquanto você passa. Seu rosto está marcado pela preocupação.
+Text/b4_viktor2/text,"Ei... desculpe incomodar. Você é um dos oficiais da alfândega, certo? Meu nome é [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Tenho perguntado a todos sobre minha esposa, [color=GOLD]Elena[/color]. Elena Petrov. Ela cruzou este posto de controle há três semanas."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Inspeção reprovada.[/color] Disseram que ela seria processada e voltaria para casa, mas... Não ouvi nada."
+Text/b4_viktor5/text,Sua voz vacila. Ninguém me diz nada. Você sabe para onde vão os viajantes rejeitados?
+Choice/b4_viktor6/text,"""Sinto muito, Viktor. Eu não sei. Mas ficarei de olho."""
+Choice/b4_viktor7/text,"""Não posso discutir detalhes de processamento. Protocolos de segurança."""
+Text/b4_viktor8/text,Os olhos de Viktor mostram um lampejo de esperança. [color=CHARTREUSE]Obrigado.[/color] Qualquer coisa que você descobrir... por favor. Ela é tudo o que eu tenho.
+Text/b4_viktor9/text,"Viktor acena, desanimado. [color=STEEL_BLUE]Certo. Protocolos.[/color] Eu entendo."
+Text/b4_viktor10/text,Mas se você mudar de ideia... [color=YELLOW]Eu preciso saber o que aconteceu com ela.[/color]
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,
+Choice/b4_viktor6/disabled_text,
+Choice/b4_viktor7/disabled_text,

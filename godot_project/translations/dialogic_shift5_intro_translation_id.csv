@@ -1,0 +1,33 @@
+﻿keys,id
+Text/a6/text,Fasilitas perbatasan terasa berbeda hari ini. Tegang. Patroli keamanan dalam jumlah lebih besar saat keheningan waspada menggantikan obrolan.
+Text/a7/text,"Tadi malam, [pulse freq=2][color=CRIMSON]materi terlarang[/color][/pulse] ditemukan. Pamflet berisi kebohongan tentang [color=DARK_VIOLET]Root Reserve[/color]."
+Text/a8/text,Kami menerapkan [wave amp=15 freq=2][color=DARK_ORANGE]protokol tingkat ancaman ORANYE[/color][/wave]. Semua petugas harus menjalani pemeriksaan kesetiaan. Semua pelancong menghadapi pengawasan maksimal.
+Text/a9/text,Ini berhasil. Pamflet-pamflet itu menyebar. Orang-orang mulai bertanya tentang [color=DARK_VIOLET]Root Reserve[/color].
+Text/aa/text,Saya memiliki sumber yang memberitahu bahwa ada catatan pengiriman di kantor Russet - manifes transportasi yang bisa [tornado radius=3 freq=2][color=CHARTREUSE]membuktikan semuanya[/color][/tornado].
+Text/ab/text,"Saya butuh bantuan Anda untuk mendapatkannya. Malam ini, setelah shift terakhir. Bisakah saya mengandalkan Anda?"
+Choice/ac/text,Saya ikut. Mari kita ungkap kebenarannya.
+Choice/ad/text,"Saya tidak tahu, Sasha... ini bisa berbahaya."
+Text/ae/text,Syukurlah. Saya tahu Anda memiliki [color=CHARTREUSE]akar yang lebih kuat dari yang lain[/color]. Kita akan bertemu tengah malam.
+Text/af/text,Terkadang kita harus [color=CHARTREUSE]berisiko hancur untuk melakukan apa yang benar[/color]. Pikirkan tentang itu.
+Text/b0/text,[color=DARK_ORANGE]Pemeriksaan kesetiaan[/color]. Harap sebutkan nama dan ID petugas Anda. Kemudian beritahu saya mengapa Anda melayani Spud.
+Choice/b1/text,Saya melayani untuk melindungi perbatasan kita dari pengaruh berbahaya.
+Choice/b2/text,Saya melayani untuk memastikan semua orang menerima perlakuan yang adil.
+Text/b3/text,"Jawaban bagus. Spud membutuhkan pelindung yang setia. Pemindai menunjukkan hijau. Lanjutkan, petugas."
+Text/b4/text,"Alis petugas terangkat. Perlakuan adil? Pemindai berkedip [color=DARK_ORANGE]kuning[/color]. Ingat, perhatian utama kita adalah keamanan, bukan keadilan."
+Text/b5/text,Kuota hari ini telah ditingkatkan. Siapa pun dengan bahan mencurigakan harus ditandai untuk [color=DARK_VIOLET]pemrosesan khusus[/color].
+Text/b6/text,Saya akan [color=DARK_ORANGE]mengawasi keputusan Anda[/color] dengan sangat cermat hari ini.
+Text/b7/text,"Malam ini bisa mengubah segalanya. Tapi pertama-tama, [color=YELLOW]bertahanlah sepanjang hari tanpa menimbulkan kecurigaan[/color]."
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,
+Text/b4_viktor1/text,Seorang penjaga keamanan kekar menahan lenganmu saat kamu lewat. Wajahnya berkerut cemas.
+Text/b4_viktor2/text,"Hei... maaf mengganggumu. Kamu salah satu petugas bea cukai, kan? Namaku [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Aku sudah bertanya pada semua orang tentang istriku, [color=GOLD]Elena[/color]. Elena Petrov. Dia melewati pos pemeriksaan ini tiga minggu lalu."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Gagal pemeriksaan.[/color] Mereka bilang dia akan diproses dan dikembalikan pulang, tapi... aku belum mendengar apa-apa."
+Text/b4_viktor5/text,Suaranya bergetar. Tidak ada yang mau memberitahuku apa-apa. Apa kamu tahu ke mana para pelancong yang ditolak pergi?
+Choice/b4_viktor6/text,"""Maaf, Viktor. Aku tidak tahu. Tapi akan kuperhatikan."""
+Choice/b4_viktor7/text,"""Aku tidak bisa membahas detail pemrosesan. Protokol keamanan."""
+Text/b4_viktor8/text,Mata Viktor menunjukkan secercah harapan. [color=CHARTREUSE]Terima kasih.[/color] Apa pun yang kamu temukan... tolong. Dia satu-satunya yang kumiliki.
+Text/b4_viktor9/text,"Viktor mengangguk, kecewa. [color=STEEL_BLUE]Benar. Protokol.[/color] Aku mengerti."
+Text/b4_viktor10/text,Tapi jika kamu berubah pikiran... [color=YELLOW]Aku perlu tahu apa yang terjadi padanya.[/color]

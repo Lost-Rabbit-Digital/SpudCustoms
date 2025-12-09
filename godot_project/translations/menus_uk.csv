@@ -1,0 +1,163 @@
+﻿keys,uk
+main_menu_feedback,Відгуки та Помилки
+main_menu_version,Версія 1.2.0
+main_menu_new_game,Нова Гра
+main_menu_continue,Продовжити
+main_menu_level_select,Вибір Рівня
+main_menu_score_attack,Виклик на Очки
+main_menu_options,Налаштування
+main_menu_credits,Титри
+main_menu_exit,Вихід
+select_language,Мова
+social_discord_tooltip,Приєднуйтесь до нашого Discord!
+social_steam_tooltip,Відвідайте нас у Steam
+social_twitch_tooltip,Інтеграція Twitch
+twitch_status_disabled,Вимкнено
+twitch_status_no_viewers,Немає глядачів у пулі
+twitch_status_ready,{count} глядачів готові
+twitch_connection_disabled,Вимкнено
+twitch_connection_disconnected,Відключено
+twitch_connection_connected,Підключено
+twitch_connection_connecting,Підключення...
+options_menu_title,Налаштування
+options_difficulty,Складність
+options_difficulty_easy,Легко
+options_difficulty_normal,Нормально
+options_difficulty_expert,Експерт
+options_music_volume,Гучність музики
+options_sfx_volume,Гучність звукових ефектів
+options_camera_shake,Тремтіння камери
+options_back,Назад
+paused_menu_title,Пауза
+shift_summary_title,ПІДСУМОК ЗМІНИ
+shift_summary_continue,Продовжити
+shift_summary_restart,Перезапустити
+shift_summary_main_menu,Головне меню
+shift_summary_submit_score,Надіслати рахунок
+shift_summary_runner_stats,СТАТИСТИКА ВТІКАЧІВ
+shift_summary_document_stats,СТАТИСТИКА ДОКУМЕНТІВ
+shift_summary_performance,ПРОДУКТИВНІСТЬ
+shift_summary_bonuses,БОНУСИ
+time_format,{minutes}хв {seconds}с
+shift_complete_success,ЗМІНУ {shift} ЗАВЕРШЕНО\nУСПІХ!
+shift_complete_failure,ЗМІНУ {shift} ЗАВЕРШЕНО\n{failure}
+strike_limit_reached,ЛІМІТ ШТРАФІВ ВИЧЕРПАНО!
+quota_not_met,КВОТУ НЕ ВИКОНАНО!
+shift_summary_title_with_difficulty,ПІДСУМОК ЗМІНИ\n{difficulty}
+runner_stats_template,\nСТАТИСТИКА ВТІКАЧІВ\nСпроб втечі: {runner_attempts}\nВипущено ракет: {fired}\nВлучено у втікачів: {hit}\nІдеальних влучень: {perfect}\nТочність влучання: {rate}%
+document_stats_template,\nСТАТИСТИКА ДОКУМЕНТІВ\nДокументів проштамповано: {stamped}\nКартоплин схвалено: {approved}\nКартоплин відхилено: {rejected}\nІдеальних штампів: {perfect_stamps}
+bonus_stats_template,БОНУСИ\nБонус за швидкість обробки: {processing_speed_bonus}\nБонус за точність штампування: {accuracy}\nБонус за ідеальні влучення: {perfect_hit_bonus}\nБонус до загального рахунку: {total_score_bonus}
+performance_stats_template,\nПРОДУКТИВНІСТЬ\nВитрачений час: {time_taken}\nОчікуваний рахунок: {expected_score}\nЗагальний рахунок: {score}\nВідсоток перевищення рахунку: {percent}%\nРейтинг продуктивності:\n{rating}
+performance_exceptional,Винятково!
+performance_excellent,Чудово!
+performance_good,Добре
+performance_needs_improvement,Потребує покращення
+performance_poor,Погано
+global_leaderboard_title,Глобальна таблиця лідерів\n- {difficulty}
+getting_leaderboard_scores,Завантаження результатів таблиці лідерів...
+reset_game_label,Скинути гру :
+reset_game_button,Скинути
+mute_label,Вимкнути звук
+fullscreen_label,Повноекранний режим :
+resolution_label,Роздільна здатність :
+antialiasing_label,Згладжування :
+screenshake_label,Тремтіння екрана :
+mouse_sens_label,Чутливість миші :
+Loading…,Завантаження...
+You lose.,Ви програли.
+You won!,Ви перемогли!
+Thanks for playing!,Дякуємо за гру!
+Please Confirm...,"Будь ласка, підтвердьте..."
+Go back to main menu?,Повернутися до головного меню?
+Quit the game?,Вийти з гри?
+Cancel,Скасувати
+OK,OK
+Controls,Керування
+Mouse Sensitivity :,Mouse Sensitivity :
+Actions & Inputs,Дії та введення
+Add,Add
+Remove,Видалити
+Assign Key for {action},Призначити клавішу для {action}
+Listening for input...,Очікування вводу...
+Press again to confirm...,Натисніть ще раз для підтвердження...
+Focus here to assign inputs.,"Натисніть тут, щоб призначити ввід."
+Already Assigned,Вже призначено
+{key} already assigned to {action}.,{key} вже призначено для {action}.
+Remove Key for {action},Видалити клавішу для {action}
+Are you sure you want to remove {key} from {action}?,"Ви впевнені, що хочете видалити {key} з {action}?"
+Reset,Скинути
+Audio,Аудіо
+Master :,Master :
+Music :,Music :
+SFX :,SFX :
+Ambient :,Ambient :
+Mute :,Mute :
+Video,Відео
+Fullscreen :,Fullscreen :
+Resolution :,Resolution :
+Anti-Aliasing :,Anti-Aliasing :
+Disabled (Fastest),Вимкнено (Найшвидше)
+8x (Slowest),8x (Найповільніше)
+Camera Shake :,Camera Shake :
+Normal,Звичайний
+Reduced,Зменшений
+Minimal,Мінімальний
+None,Немає
+Game,Гра
+Reset Game :,Reset Game :
+Do you want to reset your game data?,Ви бажаєте скинути дані гри?
+Back,Назад
+TAKE THEM!,СХОПІТЬ ЇХ!
+"Take your documents, please.","Заберіть ваші документи, будь ласка."
+Continue,Продовжити
+Main Menu,Головне меню
+Submit Score,Надіслати рахунок
+Restart,Перезапустити
+SHIFT SUMMARY,ЗВІТ ПО ЗМІНІ
+Easy,Легко
+Expert,Експерт
+Primary,Основний
+Secondary,Додатковий
+Primary Interaction,Основна взаємодія
+Secondary Interaction,Додаткова взаємодія
+Cancel Interaction,Скасувати взаємодію
+Escape,Вихід
+Dialogic Default Action,Діалогова дія за замовчуванням
+Enter,Enter
+Left Mouse Button,Ліва кнопка миші
+Right Mouse Button,Права кнопка миші
+Start New Game,Почати нову гру
+Starting a new game will reset your progress. Are you sure you want to continue?,"Початок нової гри скине ваш прогрес. Ви впевнені, що хочете продовжити?"
+"Yes, Start New Game","Так, почати нову гру"
+Skip,Пропустити
+History,Історія
+Return,Повернутися
+Restart the game?,Перезапустити гру?
+help_menu_button,Допомога
+help_menu_title,Як грати
+help_tab_basics,Основи
+help_tab_gameplay,Ігровий процес
+help_tab_minigames,Міні-ігри
+help_basics_intro,[b]Ласкаво просимо до «Картопляної Митниці»![/b]
+help_basics_gate,[b]Відкриття воріт[/b]
+help_basics_documents,[b]Перевірка документів[/b]
+help_basics_stamping,[b]Штампування документів[/b]
+help_basics_runners,[b]Порушники кордону[/b]
+help_basics_xray,[b]Рентгенівський сканер[/b]
+help_gameplay_quota,[b]Виконання квоти[/b]
+help_gameplay_strikes,[b]Страйки[/b]
+help_gameplay_rules,[b]Імміграційні правила[/b]
+help_gameplay_scoring,[b]Нарахування балів[/b]
+help_gameplay_difficulty,[b]Рівні складності[/b]
+help_minigames_intro,[b]Міні-ігри[/b]
+help_minigames_document_scanner,[b]Сканер документів[/b] (Зміна 1+)
+help_minigames_stamp_sorting,[b]Сортування Штампів[/b] (Зміна 2+)
+help_minigames_fingerprint_match,[b]Зіставлення Відбитків Пальців[/b] (Зміна 3+)
+help_minigames_code_breaker,[b]Зламувач Коду[/b] (Зміна 4+)
+help_minigames_border_chase,[b]Прикордонна Погоня[/b] (Зміна 5+)
+help_tab_lore,Лор
+help_lore_world_intro,[b]Світ Спаду[/b]
+help_lore_nation,[b]Нація Спаду[/b]
+help_lore_your_role,[b]Ваша Роль[/b]
+help_lore_border,[b]Велика Стіна[/b]
+help_lore_secrets,[b]Кореневий Резерв[/b]

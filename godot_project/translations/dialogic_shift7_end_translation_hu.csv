@@ -1,0 +1,92 @@
+﻿keys,hu
+Text/d2/text,A műszakod után egy titkos ellenállási találkozóra vezetnek egy elhagyatott keményítőgyárban.
+Text/d3/text,"Egy viharvert, csatákban edzett krumpli szólítja meg az összegyűlt csoportot."
+Text/d4/text,A suttogások és röplapok ideje lejárt. A kormány megmutatta igazi arcát.
+Text/d5/text,"Forrásaink megerősítik, hogy a [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] feldolgozóüzemek növelik a termelést."
+Text/d6/text,"Ami azt jelenti, hogy [tornado radius=3 freq=3][color=CRIMSON]több testvérünk tűnt el, feldolgozták, elfogyasztották őket[/color][/tornado]."
+Text/d7/text,"A vezető az asztalra csap öklével. [pulse freq=3][color=CHARTREUSE]Ennek most vége.[/color][/pulse] Van egy tervünk, hogy lecsapjunk a működésük szívére."
+Text/d8/text,Sasha részletes terveket terít az asztalra. Három nap múlva indítjuk a fő offenzívánkat.
+Text/d9/text,"Míg az egyik csapat elterelést végez a fő kormányzati komplexumnál, a másik behatol a legnagyobb Root Reserve létesítménybe."
+Text/da/text,"Célunk: [color=CHARTREUSE]megcáfolhatatlan bizonyítékot[/color] szerezni arról, mi történik odabent, és közvetíteni azt egész Spudnak."
+Text/db/text,Sasha a tervek egy részére mutat. Itt lépsz te a képbe.
+Text/dc/text,"Szükségünk van valakire a Spud Vámhivatal belsejében, aki biztosítja, hogy embereink átléphessék a határt a küldetéshez."
+Text/dd/text,"Rád számíthatunk, hogy te leszel ez a személy?"
+Choice/de/text,"Megteszek bármit, ami szükséges, hogy leleplezzem az igazságot."
+Choice/df/text,"Veszélyesnek hangzik. Mi lesz, ha elkapnak minket?"
+Choice/e0/text,"Van más mód, ami nem tesz veszélybe annyi embert?"
+Text/e1/text,Sasha arca felragyog a reménytől. Köszönöm. [color=CHARTREUSE]A bátorságod számtalan életet fog megmenteni.[/color]
+Text/e2/text,"Megszorítja a kezed. Amikor ennek mind vége, [color=CHARTREUSE]a forradalom hőseként fognak emlékezni rád.[/color]"
+Text/e3/text,Sasha ünnepélyesen bólint. Veszélyes. Nem hazudok neked erről.
+Text/e4/text,"Mindannyian [color=DARK_VIOLET]Root Reserve-vé feldolgozva[/color] végezhetjük, ha kudarcot vallunk."
+Text/e5/text,"De semmit sem tenni még veszélyesebb. Mindannyiunknak, hosszú távon."
+Text/e6/text,Sasha tekintete komorrá válik. Próbáltunk más módszereket. Évekig.
+Text/e7/text,Petíciókat. Csendes diplomáciát. Névtelen tippeket. Semmi sem működött.
+Text/e8/text,"Néha mindent kockáztatnod kell ahhoz, hogy bármit is változtass."
+Text/e9/text,Heves vita tör ki az ellenállás tagjai között.
+Text/ea/text,Néhányan agresszívebb megközelítést javasolnak – a feldolgozóüzemek teljes elpusztítását.
+Text/eb/text,"Mások ragaszkodnak ahhoz, hogy az erőszakos cselekmények csak a közvéleményt fordítanák ellenük."
+Text/ec/text,ELÉG! A vezető parancsoló hanggal csendet teremt a teremben.
+Text/ed/text,"Nem engedhetjük meg magunknak, hogy megosztottak legyünk. Most nem, amikor már ilyen közel vagyunk."
+Text/ee/text,"Célunk egyszerű: feltárni az igazságot. Hagyjuk, hogy az emberek döntsék el, mi történjen ezután."
+Text/ef/text,"A vezető feléd fordul, hogy közvetlenül megszólítson. De tudnunk kell, [color=YELLOW]hol állsz[/color]."
+Text/f0/text,Három nap múlva ügynökeink megközelítik az ellenőrzőpontodat. [color=CHARTREUSE]Kék azonosító kártyákat[/color] fognak viselni.
+Text/f1/text,Segítenél nekik átjutni? A válaszod most határozza meg következő lépésünket.
+Choice/f2/text,Segítek nekik átjutni. Spud jövőjéért.
+Choice/f3/text,"Nem lehetek közvetlenül érintett, de félrenézek."
+Choice/f4/text,"Több időre van szükségem, hogy gondolkodjak erről."
+Text/f5/text,A vezető szorosan megragadja a válladat. [color=CHARTREUSE]A bátorságod mindannyiunkat megtisztel.[/color]
+Text/f6/text,"A harmadik napon, amikor a nap a legmagasabban áll, ügynökeink érkezni fognak."
+Text/f7/text,"A jelszó ""[wave amp=15 freq=3][color=CHARTREUSE]A gyökerek mélyre nőnek.[/color][/wave]"" Emlékezz rá."
+Text/f8/text,"A vezető lassan bólint, nyilvánvalóan csalódott, de megértő."
+Text/f9/text,"Néha a legtöbb, amit kérhetünk, hogy az emberek ne álljanak az utunkba."
+Text/fa/text,Ügynökeink a tervek szerint folytatják. Csak... ne adj riasztást.
+Text/fb/text,"A vezető arckifejezése megkeményedik. [color=YELLOW]Az idő olyan luxus, amivel nem rendelkezünk.[/color]"
+Text/fc/text,"De ha bárkit arra kényszerítünk, hogy csatlakozzon az ügyünkhöz, az nem tesz minket jobbá náluk."
+Text/fd/text,Folytatjuk a segítséged nélkül. Kutasd a lelkiismeretedet.
+Text/fe/text,"Ahogy a találkozó véget ér, Sasha veled sétál vissza az ellenőrzőpont felé."
+Text/ff/text,"Bármi is történjen... köszönöm mindazt, amit tettél."
+Text/100/text,"Visszatérsz a szállásodra az ellenőrzőpontnál, elméd kavarog a közelgő események súlya alatt."
+Text/101/text,"Mindössze három nap, és minden megváltozhat. [color=YELLOW]Jobb vagy rosszabb irányba.[/color]"
+Choice/de/disabled_text,
+Choice/f4/disabled_text,
+Choice/f3/disabled_text,
+Choice/f2/disabled_text,
+Choice/e0/disabled_text,
+Choice/df/disabled_text,
+Text/d2b/text,Mielőtt elkezdenénk... Be kell vallanom valamit.
+Text/d2c/text,"Az a cetli, amit az első napodon találtál? ""[color=GOLD]Egy barát[/color]""?"
+Text/d2d/text,"Szása elmosolyodik. Látom, megtartottad. Okos. Tudtam, hogy a megfelelő hajtást választottam."
+Text/d2e/text,"Hónapok óta figyelem az új tiszteket, valakit keresve, akinek [color=CHARTREUSE]kérdő tekintete[/color] van. Valakit, aki átlát a hazugságokon."
+Text/d2f/text,Szása arckifejezése bonyolult. Megmutattad Russetnek. Utána hetekig lapulnom kellett.
+Text/d2g/text,De mégis itt vagy. Ez mond valamit a lelkiismeretedről.
+Text/d2h/text,Elpusztítottad. Nem hibáztatlak – kockázatos volt megtartani.
+Text/d2i/text,"De a szavak azért utat találtak a fejedbe, igaz?"
+Text/d2j/text,"[color=CHARTREUSE]Én vagyok ""Egy barát.""[/color] És most már tudod, miért."
+Text/d2k/text,Szása elfogott dokumentumokat terít szét az asztalon. Az elmúlt hónap feldolgozási jegyzékei.
+Text/d2l/text,"Átfutod a neveket, és megfagy a véred."
+Text/d2m/text,Ott van. [color=GOLD]Maris Piper[/color]. A nő a fotóról.
+Text/d2n/text,"""[color=CRIMSON]Státusz: Feldolgozva. Tétel: RR-2847.[/color]"" Három nappal azután keltezve, hogy a férje a segítségedért könyörgött."
+Text/d2o/text,Érzed a fotót a zsebedben. [color=STEEL_BLUE]Elment. És nem tudtad megmenteni.[/color]
+Text/d2p/text,De talán... [color=CHARTREUSE]talán még megmenthetsz másokat[/color].
+Text/d2q/text,"Murphy előbukkan az árnyékból. Szia. Örülök, hogy eljutottál ide."
+Text/d2r/text,Murphy felmutatja az összegyűrt RR-UTIL űrlapot. Az unokatestvérem is rajta van azon a listán. [color=CHARTREUSE]Ezt együtt csináljuk.[/color]
+Text/ff2/text,"[color=STEEL_BLUE]Tartja a távolságot, ahogy sétáltok.[/color] Értékelem, hogy nem állsz az utunkba. Ez... valami."
+Text/ff3/text,"[color=STEEL_BLUE]Csendben sétál, karba tett kézzel.[/color] Remélem, megtalálod azt a bizonyosságot, amit keresel. A többiek nem engedhetik meg maguknak, hogy várjanak."
+Text/100_viktor1/text,"Visszafelé menet Viktort egyedül találod az ellenőrzőpont tetején, az éjszakai eget bámulva."
+Text/100_viktor2/text,Viktor egy kis
+Text/100_viktor3/text,"Azt mondogatta, hogy bármilyen sötétre is fordulnak a dolgok, a csillagok akkor is ott lesznek. [color=STEEL_BLUE]Állandóak. Gyönyörűek.[/color]"
+Text/100_viktor4/text,"Feléd fordul, szemei csillognak. [wave amp=15 freq=2]Folyton azon gondolkodom... szenvedett?[/wave] Tudta, mi történik?"
+Text/100_viktor5/text,"Viktor hangja elcsuklik. Egyszer megkérdezte, megkérdőjeleztem-e valaha az elutasításokat. Azt mondtam neki, [color=CRIMSON]bízzon a rendszerben[/color]."
+Text/100_viktor6/text,"[tornado radius=3 freq=2][color=CRIMSON]A saját feleségemet küldtem a feldolgozó kádakba anélkül, hogy tudtam volna.[/color][/tornado]"
+Choice/100_viktor_choice1/text,Nem tudhattad. Egyikünk sem tudta.
+Choice/100_viktor_choice2/text,"Elena azt akarná, hogy most harcolj, ne fulladj bűntudatba."
+Choice/100_viktor_choice3/text,"Nem tudom, mit mondjak. Sajnálom."
+Text/100_viktor7/text,Lassan megrázza a fejét. [color=STEEL_BLUE]A tudatlanság nem ártatlanság. Kérdeznem kellett volna. Hallgatnom kellett volna.[/color]
+Text/100_viktor8/text,"Viktor óvatosan elteszi a fényképet. [color=CHARTREUSE]De most már tudom. És a tudás azt jelenti, hogy cselekednem kell.[/color]"
+Text/100_viktor9/text,"Viktor kiegyenesedik, hideg tűz lobban fel a szemében. [color=CHARTREUSE]Igazad van.[/color] Erősebb volt nálam. Bátrabb."
+Text/100_viktor10/text,Ökölbe szorítja a kezét. [color=CHARTREUSE]Ha eljön az idő
+Text/100_viktor11/text,"[pulse freq=2][color=CRIMSON]És Idaho megfizet minden életért, amit felemésztett.[/color][/pulse]"
+Text/100_viktor12/text,Viktor szomorúan
+Text/100_viktor13/text,Visszanéz a csillagokra. [color=STEEL_BLUE]Elena kedvelt volna téged.[/color]
+Text/100_viktor14/text,"Megfordul, hogy elmenjen, majd megáll. [color=CHARTREUSE]Amikor az ellenállás megmozdul... Készen állok.[/color]"
+Text/100_viktor15/text,"Elenának. Mindannyiuknak. [pulse freq=2][color=CHARTREUSE]Az őrök követni fognak, ha elmondom nekik az igazságot.[/color][/pulse]"

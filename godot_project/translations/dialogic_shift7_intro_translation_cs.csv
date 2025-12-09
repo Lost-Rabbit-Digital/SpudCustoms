@@ -1,0 +1,41 @@
+﻿keys,cs
+Text/102/text,"Dobře, zvládl jsi to. Odboj [color=CHARTREUSE]sílí[/color]. Díky těm manifestům lidé vidí pravdu."
+Text/103/text,"Podařilo se mi získat tuto složku z našich zdrojů - výrobní plány, seznamy '[color=CRIMSON]ingrediencí[/color]', jména [color=DARK_SLATE_BLUE]zmizelých[/color]."
+Text/104/text,Tohle není jen program doplňků stravy. [color=CRIMSON]Zpracovávají brambory[/color]...a ne dobrým způsobem.
+Text/105/text,"Interní memoranda od samotného premiéra Idaha, povolující ""[color=DARK_ORANGE]využití odmítnutých aktiv.[/color]"""
+Text/106/text,"Kvóty pro každý kontrolní bod, přičemž Bramborová celnice má nejvyšší poměr odmítnutí-k-zpracování."
+Text/107/text,Situace venku se zhoršila. U kontrolních bodů se shromažďují rozhněvané davy požadující odpovědi ohledně Root Reserve.
+Text/108/text,[color=YELLOW]NOUZOVÉ VYSÍLÁNÍ[/color]: Nedávné šíření [color=CRIMSON]falešných dokumentů[/color] způsobilo zbytečnou paniku.
+Text/109/text,Za informace vedoucí k dopadení těchto sabotérů je nabízena odměna [color=GOLD]10 000 bramborových kreditů[/color].
+Text/10a/text,Konzumace nebo distribuce této propagandy je nyní klasifikována jako [color=RED]velezrada[/color].
+Text/10b/text,Dnešní směna bude probíhat podle zvláštních protokolů. Každý cestující musí podstoupit hodnocení loajality.
+Text/10c/text,"Ti, kteří projevují [color=CRIMSON]protivládní nálady[/color], musí být okamžitě označeni."
+Text/10d/text,[color=CRIMSON]Zrádce mezi námi[/color] bude nalezen. A až bude... [přejede prstem přes hrdlo]
+Text/10e/text,"Nervózní brambora přistupuje, částečně viditelný [color=GOLD]žlutý listový odznak[/color]. Mezi papíry je zastrčená malá poznámka: ""[color=CHARTREUSE]Bezpečný dům kompromitován. Nová lokace: Sklad 7, Sektor 4.[/color]"""
+Choice/10f/text,Rychle je propusťte s UV značkou (Pomoc)
+Choice/110/text,Okamžitě je nahlaste ochrance (Zrada)
+Text/111/text,"Jejich tvář zaplavila úleva. ""Děkuji. Pravda zvítězí."""
+Text/112/text,"Hrůza se objevuje, když signalizujete ochrance. ""[wave amp=25 freq=3]Ne, prosím! Mám rodinu![/wave]"" Jejich žlutý odznak padá na podlahu."
+Text/113/text,Dobře odvedeno. Vaše loajalita je zaznamenána.
+Text/114/text,Vaše rozhodnutí bylo zpozorováno. Buďte připraven. [tornado radius=3 freq=2][color=CHARTREUSE]Něco velkého přichází[/color][/tornado]. Odboj plánuje přímou akci.
+Text/115/text,"Až k tomu dojde, budete si muset [color=YELLOW]vybrat stranu[/color]. Nezůstane žádná střední cesta."
+Text/116/text,"S každou bramborou, kterou zpracujete, buď [pulse freq=2][color=CHARTREUSE]pomáháte revoluci[/color][/pulse] nebo [pulse freq=2][color=CRIMSON]umožňujete hrůzný systém[/color][/pulse]."
+Choice/10f/disabled_text,
+Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha se nervózně ohlédne přes rameno.[/color] Promiň, já... [color=YELLOW]Myslím, že mě sledují.[/color]"
+Text/102_foreshadow2/text,Russet se vyptával. Sledoval mě po směnách. [wave amp=15 freq=2][color=YELLOW]Musím být opatrnější.[/color][/wave]
+Text/102_foreshadow3/text,"Sasho, možná bys měla na chvíli zůstat v ústraní. Nech mě podstoupit větší riziko."
+Text/102_foreshadow4/text,[color=STEEL_BLUE]Zavrtí hlavou a vynuceně se usměje.[/color] Ne. Jsme teď příliš blízko. Russeta zvládnu.
+Text/102_foreshadow5/text,Kromě toho... [color=CHARTREUSE]někdo musí držet vás klíčky dál od potíží.[/color]
+Text/106_trucks1/text,"Ale stále nevíme, kde je hlavní zpracovatelské zařízení. Dokumenty uvádějí pouze přepravní kódy."
+Text/106_trucks2/text,Sledoval jsem [color=DARK_VIOLET]náklaďáky Kořenové rezervy[/color]. Odjíždějí každou noc ve 03:00. Stejná trasa.
+Text/106_trucks3/text,"[color=CHARTREUSE]Kdybychom je mohli sledovat...[/color] věděli bychom přesně, kam vezou odmítnuté."
+Choice/106_trucks4/text,Udělám to. Znám rozvrhy hlídek.
+Choice/106_trucks5/text,To zní riskantně. Nemůže to udělat někdo jiný?
+Text/106_trucks6/text,"[color=CHARTREUSE]Sashiny oči se rozzáří.[/color] Věděla jsem, že máš kořeny z oceli. Buď opatrný - v noci silně hlídkují."
+Text/106_trucks7/text,"03:00. Krčíš se ve stínech, zatímco kolem tebe duní náklaďáky [color=DARK_VIOLET]Kořenové rezervy[/color]."
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Zůstaň skrytý! Sleduj konvoj![/color][/pulse]
+Text/106_trucks9/text,"Náklaďáky zastaví u masivního komplexu ukrytého v průmyslové čtvrti. [color=DARK_VIOLET]Sektor 7, Skladový komplex Delta.[/color]"
+Text/106_trucks10/text,Komíny chrlí kouř s fialovým nádechem. Zápach je... [tornado radius=3 freq=2][color=CRIMSON]nezaměnitelný.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]Srdce Kořenové rezervy.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]Sashin výraz probleskne zklamáním.[/color] Všichni musíme podstupovat rizika. Najdu jinou cestu.

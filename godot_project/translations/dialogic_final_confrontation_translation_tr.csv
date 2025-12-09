@@ -1,0 +1,85 @@
+﻿keys,tr
+Text/11/text,"Spud sınırı [pulse freq=3][color=CRIMSON]kaos[/color][/pulse] içinde. Panik içindeki patatesler, sızan belgelerden sonra kaçmak için kontrol noktalarını dolduruyor."
+Text/12/text,Sasha ile içeri süzülüyorsun. [wave amp=20 freq=3][color=CHARTREUSE]İlerlemeye devam etmeliyiz![/color][/wave] İnsanlar artık gerçeği biliyor.
+Text/13/text,"Artık gerçeği susturamıyorlar. Eğer [color=DARK_VIOLET]Kök Rezervi[/color] tesisine sızıp kanıtları yayınlayabilirsek, bu [tornado radius=3 freq=2][color=CHARTREUSE]devrimi ateşleyecek[/color][/tornado]."
+Text/14/text,O yer bir kale. Ve şimdi aramızda bir [color=YELLOW]eski gümrük görevlisi[/color] var. Gözleri şüpheyle sana daralıyor.
+Choice/15/text,"Şüphenizi anlıyorum, ama bu davaya bağlıyım."
+Choice/16/text,Zaten her şeyi feda ettim. Şimdi geri adım atmayacağım.
+Text/17/text,Güzel sözler. Ama bunları daha önce de duyduk.
+Text/18/text,"Belgeleri almamıza yardım ettiler. Bu eylemdir, söz değil."
+Text/19/text,"Artık sadık bir patates olmaya geri dönemezsin. Direnişe hoş geldin, yoldaş."
+Text/1a/text,"Gergin bir sızma sonrası, ekibin [color=DARK_VIOLET]Kök Rezervi'nin[/color] kalbinde duruyor, [pulse freq=3][color=CRIMSON]korkunç baskı makinesi[/color][/pulse] açığa çıkarılmış."
+Text/1b/text,"[wave amp=25 freq=3][color=RED]Alarmlar çalıyor[/color][/wave] muhafızlar sızmanıza tepki vermek için acele ederken. Koridorlardan koşuyor, güvenlik sistemlerinden kaçınıyorsunuz."
+Text/1c/text,"Bir ekran titreşiyor. ""Pekala, [color=CRIMSON]hain[/color] asi çöplerle geri dönüyor."""
+Text/1d/text,Spud'un ilerleyişini durdurabileceğini mi sandın? [color=DARK_VIOLET]Kök Rezervi[/color] bu ulusun can damarıdır.
+Text/1e/text,Ama endişelenme. Hala Spud'a hizmet edeceksin... [tornado radius=4 freq=3][color=DARK_VIOLET]işleme tanklarında![/color][/tornado]
+Text/1f/text,Ekran aniden kararıyor.
+Text/20/text,"Kararlılıkla diğerlerine dönüyorsun. ""Idaho'nun sığınağına ulaşmamız gerekiyor. Şimdi!"""
+Text/21/text,"Grubunuz güvenlik dalgaları arasında savaşıyor, yakalanmaktan kıl payı kurtuluyor. Sasha'nın direnişçileri dikkat dağıtıcı oyunlar yaratıyor, ileri yolunuzu temizliyor."
+Text/22/text,"Bakım tünellerinden korkunç bir kaçıştan sonra, nihayet Idaho'nun özel sığınağına giden güvenli asansöre ulaşıyorsunuz."
+Text/23/text,"Sasha ve müttefiklerinle yanında, sonunda Idaho ile yüzleşiyorsun."
+Text/24/text,"Bitti, Idaho. Sırların açığa çıktı. Bunun nasıl biteceği... [pulse freq=2]bu sana bağlı.[/pulse]"
+Choice/25/text,Barışçıl bir güç geçişi müzakere et (Diplomatik)
+Choice/26/text,Idaho'nun derhal tutuklanmasını talep et (Adalet)
+Choice/27/text,Idaho'nun suçları için kendi adaletini uygula (İntikam)
+Choice/28/text,Kök Rezervi altyapısını sökmeye odaklan (Sökme)
+Text/29/text,"Idaho, daha fazla kan dökülmesiyle bitmek zorunda değil. Eğer işbirliği yaparsan..."
+Text/2a/text,"Ah, seni [color=STEEL_BLUE]idealist aptal[/color]. Bunun bir müzakere olduğunu mu sanıyorsun?"
+Text/2b/text,"Idaho bir düğmeyi parçalıyor ve [color=RED]alarmlar çalmaya başlıyor[/color]. ""Size vereceğim tek şey [color=DARK_VIOLET]kızartma tanklarına tek yönlü bir bilet olacak![/color]"""
+Text/2c/text,"Sanmıyorum, Idaho. Muhafızlar! Dosyayı gördünüz, [color=YELLOW]ailelerinize ne yaptığını biliyorsunuz.[/color]"
+Text/2d/text,İri bir muhafız öne çıkıp hızla Idaho'yu yere deviriyor.
+Text/2e/text,Odada bir silah sesi yankılanıyor. Ekran karanlığa dönüşüyor.
+Text/2f/text,"Idaho, Spud'un patates halkı adına, [color=CHARTREUSE]tutuklusun![/color]"
+Text/30/text,"Bitti. Halk konuştu. [color=CHARTREUSE]Köklerimizin toprakta olduğu, acıda değil, yeni bir Spud inşa edeceğiz.[/color]"
+Text/31/text,"Senin için [color=CRIMSON]anlaşma yok, merhamet yok[/color], Idaho. Bir tiranın adaleti, hak ettiğin tek şey."
+Text/32/text,"Bir hesaplaşma. İşte ben buyum. [color=CHARTREUSE]Feda edilen her patates için, geleceğimizi geri alıyoruz![/color]"
+Text/33/text,"Onu unutun. O bir belirti, hastalık değil. [color=CHARTREUSE]Bu korkunçluğun her kökünü ve sapını sökün.[/color]"
+Text/34/text,Gitmeliyiz! Şimdi!
+Text/35/text,"[color=DARK_VIOLET]Kök Rezervi'nin[/color] düşüşü, tüm Spud boyunca bir değişim yangını başlatıyor."
+Text/36/text,"Her eyaletteki patatesler ayaklanıyor, [color=CHARTREUSE]ulusları için yeni bir vizyonu[/color] kucaklıyor."
+Text/37/text,"Köklerimize, bizi buraya getiren ideallere sadık kaldığımız sürece... [color=CHARTREUSE]bir yol bulacağız.[/color]"
+Text/38/text,"Ve böylece, eski Spud'un küllerinden, [color=CHARTREUSE]yeni bir ulus kök salmaya başlıyor[/color]. [color=DARK_VIOLET]Kök Rezervi'nin[/color] hükümdarlığı sona erdi."
+Choice/15/disabled_text,
+Choice/28/disabled_text,
+Choice/27/disabled_text,
+Choice/26/disabled_text,
+Choice/25/disabled_text,
+Choice/16/disabled_text,
+Text/1a_rescue1/text,Bir izci koşarak gelir. Onu bulduk! [color=CHARTREUSE]Sasha gözaltı bloğunda![/color]
+Text/1a_rescue2/text,Onu hazırlıyorlar... [tornado radius=3 freq=2][color=CRIMSON]işlemeye[/color][/tornado]... bir saatten az bir süre içinde!
+Text/1a_rescue3/text,Onu kurtarmalıyız. [pulse freq=2][color=CHARTREUSE]Tüm bunları o başlattı.[/color][/pulse] Onsuz gitmiyoruz.
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]Tesisten hızla geçin![/color][/wave] Çok geç olmadan Sasha'ya ulaşın!
+Text/1a_rescue_fail1/text,Tökezlersin. Önündeki yol muhafızlar tarafından kapatılmış!
+Text/1a_rescue_fail2/text,Viktor bir yan kapıdan içeri dalar. [color=CHARTREUSE]GİT! Onları ben oyalarım![/color]
+Text/1a_rescue_fail3/text,Elena için. Hepsi için. [color=STEEL_BLUE]Bir başkasının daha ölmesine izin vermeyeceğim![/color]
+Text/1a_rescue_fail4/text,Murphy bir yangın alarmını çeker. [color=CHARTREUSE]Tommy için![/color] Sprinklerler muhafızları kör eder!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Bir oyalama yapacağım. Onu oradan çıkarın![/color]
+Text/1a_rescue_fail6/text,"Bir [color=YELLOW]işleme konveyörü sıkışır[/color], kıvılcımlar saçarak muhafızların dikkatini dağıtır!"
+Text/1a_rescue_fail7/text,"Kader - ya da ""işlenmişlerin"" hayaletleri - sana ikinci bir şans verir."
+Text/1a_rescue5/text,"Sasha hücresinden yukarı bakar, morarmış ama kırılmamış. Gözleri büyür. [color=CHARTREUSE]Geldin.[/color]"
+Text/1a_rescue6/text,Elbette geldim. [color=CHARTREUSE]Bunu birlikte bitireceğiz.[/color]
+Choice/1a_rescue7/text,Seni bir daha asla göremeyeceğim diye korktum.
+Choice/1a_rescue8/text,Bizi çok endişelendirdin. Bir daha yapma.
+Choice/1a_rescue9/text,Yapacak işimiz var. Idaho bekliyor.
+Text/1a_rescue10/text,[color=CHARTREUSE]Sasha seni kısa bir kucaklamaya çeker.[/color] Geleceğini biliyordum. Hiç şüphe etmedim.
+Text/1a_rescue11/text,"Şimdi, aldıkları herkesin bedelini onlara ödetelim. [color=CHARTREUSE]Birlikte.[/color]"
+Text/1a_rescue12/text,Sasha acısına rağmen zayıf bir gülümseme başarır. [color=STEEL_BLUE]Deneyeceğim.[/color] Ama bazı şeyler riske değer.
+Text/1a_rescue13/text,Senin burada olman bunu kanıtlıyor. Şimdi bunu bitirelim.
+Text/1a_rescue14/text,"Sasha başını sallar, kararlılığı yeniden alevlenmiş. [color=CHARTREUSE]Haklısın.[/color] Duygusallık bekleyebilir."
+Text/1a_rescue15/text,Idaho kazandığını sanıyor. Ona ne kadar yanıldığını gösterelim.
+Text/158/text,Güvenlik güçleri yaklaşıyor! [pulse freq=3][color=YELLOW]Savaşarak yolunuzu açın![/color][/pulse]
+Text/21_fail1/text,Muhafızlar her yönden yaklaşıyor. [color=CRIMSON]Kaçacak yer yok![/color]
+Text/21_fail2/text,"Viktor muhafızların arkasında belirir, sesi çelik gibi soğuk. [color=STEEL_BLUE]Geri çekilin. Şimdi.[/color]"
+Text/21_fail3/text,Muhafızlar tereddüt ediyor - Viktor onların adamıydı. [color=CRIMSON]Elena'nın adı o manifestolarda. Sıra sizin ailelerinize gelebilir.[/color]
+Text/21_fail4/text,Bazı muhafızlar silahlarını indiriyor. Diğerleri kaçıyor. Yol açılıyor.
+Text/21_fail5/text,"Doğu kanadını bir patlama sarsıyor. Murphy'nin sesi telsizden cızırtılı geliyor: [color=CHARTREUSE]""Bu benim oyalama taktiğim! HAREKET EDİN!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Muhafızlar patlamaya doğru dağılıyor. Tommy gurur duyardı.[/color]
+Text/21_fail7/text,Sasha öndeki muhafızı arkadan yere seriyor. [color=CHARTREUSE]O hücreden senin ölmeni izlemek için sağ çıkmadım![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]KOŞ! Ben hallederim![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha yaklaşır, yeni şafağı birlikte izlerken eli seninkini bulur.[/color] Bunu biz inşa ettik. Sen ve ben."
+Text/152/text,"Kökenlerimize, bizi buraya getiren ideallere sadık kaldığımız sürece... [color=CHARTREUSE]bir yol bulacağız.[/color] Birlikte."
+Text/153/text,[color=CHARTREUSE]Elini sıkarsın. Birlikte.[/color]
+Text/154/text,"[color=STEEL_BLUE]Sasha yanında duruyor.[/color] Senin ateşin, onların imparatorluğunu yakan kıvılcımı tutuşturdu."
+Text/155/text,[color=STEEL_BLUE]Öfke kararlılığa dönüştü. Hala yapılacak işler var.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha sana destekleyici bir gülümseme sunar.[/color] O kontrol noktasından çok yol kat ettin. Hepimiz öyle.
+Text/157/text,"[color=STEEL_BLUE]Suçluluk asla tamamen geçmeyebilir, ama yeniden inşa etmede bir amaç buldun.[/color]"

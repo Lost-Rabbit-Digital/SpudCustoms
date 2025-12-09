@@ -1,0 +1,69 @@
+﻿keys,zh-CN
+Text/b8/text,边境设施已完全封锁，武装警卫正在巡逻每一条走廊。
+Text/b9/text,[pulse freq=3][color=RED]注意！红色安全警报！[/color][/pulse] 机密文件昨晚被盗。
+Text/ba/text,我们之中出了一个[tornado radius=4 freq=3][color=CRIMSON]叛徒[/color][/tornado]。任何隐瞒信息者都将被视为同谋。
+Text/bb/text,所有警官，排队进行[wave amp=15 freq=2][color=DARK_ORANGE]安全扫描[/color][/wave]。压力反应异常者将被标记。
+Text/bc/text,你看到外面发生什么了吗？到处都是传单，说[color=DARK_VIOLET]根源储备[/color]是用……[pulse freq=3][color=CRIMSON]我们[/color]做的。
+Choice/bd/text,“小声点。我们都被监视着。”
+Choice/be/text,“我也听过同样的谣言。如果属实，那太可怕了。”
+Choice/bf/text,“那是荒谬的宣传。别散布这种谎言。”
+Text/c0/text,你说得对。但如果那是真的……那我们算什么？
+Text/c1/text,我表亲上个月被拒了。那是不是意味着……？我[color=CHARTREUSE]再也受不了了[/color]。
+Text/c2/text,他们的表情变得警惕。当然。永远忠诚的土豆。
+Text/c3/text,请说明你昨晚22点至次日凌晨04点期间的行踪。
+Choice/c4/text,“我整晚都在宿舍睡觉。”
+Choice/c5/text,“我希望先和我的法律代表谈谈。”
+Text/c6/text,你的压力水平显示出[color=YELLOW]欺骗[/color]。然而……尚无定论。你暂时可以离开了。
+Text/c7/text,法律代表？这是安全程序，不是审判。你的拒绝已被记录。
+Text/c7_viktor1/text,一名魁梧的保安在你休息时走过来。他面容憔悴。
+Text/c7_viktor2/text,嘿……你是海关官员之一，对吧？我一直在打听我妻子埃琳娜的消息。
+Text/c7_viktor3/text,她三周前通过了这个检查站。[color=STEEL_BLUE]检查未通过。[/color] 从那以后我就没收到她的消息。
+Choice/c7_viktor4/text,“维克多……我发现了一些事情。关于埃琳娜的。你需要知道真相。”
+Choice/c7_viktor5/text,“我很抱歉，维克多。我什么都没看到。”（为了保护他而撒谎）
+Text/c7_viktor6/text,你给他看了一份货物清单页。他的脸色变得煞白。
+Text/c7_viktor7/text,[wave amp=25 freq=3]他颤抖着双手阅读。[/wave] [color=GOLD]埃琳娜·彼得罗夫[/color]……[color=CRIMSON]已处理……批次RR-2851……[/color]
+Text/c7_viktor8/text,他的声音几乎是耳语。[tornado radius=3 freq=2][color=CRIMSON]他们……他们把她做成了……[/color][/tornado]
+Text/c7_viktor9/text,他的悲痛化为冰冷的怒火。[pulse freq=2][color=CRIMSON]爱达荷州会为此付出代价。[/color][/pulse] 我以她的记忆起誓。
+Text/c7_viktor10/text,他抓住你的肩膀。[color=CHARTREUSE]谢谢你告诉我。[/color]时机成熟时……我会记住的。
+Text/c7_viktor11/text,他悲伤地 M。[color=STEEL_BLUE]我就知道。[/color]没人知道任何事。或者没人想说。
+Text/c7_viktor12/text,如果你听到什么……[color=YELLOW]拜托了。[/color]她是我的一切。
+Text/c8/text,奏效了。那些清单引起了轩然大波，但是[color=DARK_ORANGE]拉塞特怀疑我们了[/color]。
+Text/c9/text,在今天的班次中，留意我们组织的盟友。[color=CHARTREUSE]你会认出他们的[/color]。
+Text/ca/text,如果你能让他们安全通过，使用我们讨论过的[color=CHARTREUSE]特殊标记[/color]。
+Choice/cb/text,“值得冒险。我干了。”
+Choice/cc/text,“这太危险了。也许我们应该蛰伏起来。”
+Text/cd/text,我就知道能指望你。等这一切结束，[color=CHARTREUSE]斯普德会知道谁是真正的英雄[/color]。
+Text/ce/text,我们已经过了那个阶段了。蛰伏起来救不了我们。[color=CHARTREUSE]只有推翻这个系统才能[/color]。
+Text/cf/text,每个检查站现在都配备了新的[color=DARK_ORANGE]现实扫描系统[/color]。它能检测未经授权的标记和伪造品。
+Text/d0/text,所有文件在批准前都必须扫描。[color=CRIMSON]叛徒将被清除[/color]。我保证。
+Text/d0_qte1/text,轮班后期，一名旅客走过来，其文件上带有[color=CHARTREUSE]微妙的抵抗标记[/color]。
+Text/d0_qte2/text,[color=DARK_ORANGE]现实扫描[/color]开始扫描。[wave amp=15 freq=3][color=RED]它要检测到标记了！[/color][/wave]
+Text/d0_qte3/text,你有几秒钟时间决定。扫描仪正在预热……
+Choice/d0_qte4/text,“伪造扫描仪故障——快！”（帮助抵抗组织）
+Choice/d0_qte5/text,“让扫描仪完成扫描”（遵守协议）
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]你得快点！[/color][/pulse]在它完成扫描前触发故障！
+Text/d0_qte7/text,你笨拙地摆弄着扫描仪的电缆。火花四溅。屏幕闪烁了一下，然后熄灭了。
+Text/d0_qte8/text,拉塞特冲了过来。[color=YELLOW]这里发生了什么？[/color]
+Choice/d0_qte9/text,“电源浪涌，长官。这些新系统很不稳定。”
+Choice/d0_qte10/text,“我不知道，长官。它突然就坏了。”
+Text/d0_qte11/text,拉塞特哼了一声。[color=STEEL_BLUE]官僚们给我们未经测试的设备。[/color]手动处理他们，并标记为重新检查。
+Text/d0_qte12/text,拉塞特怀疑地看着你。[color=YELLOW]真巧啊。[/color]我会让维修人员检查一下。别再发生这种事了。
+Text/d0_qte13/text,那名抵抗组织成员在通过时，向你微微 M致谢。
+Text/d0_qte14/text,扫描仪[pulse freq=3][color=RED]发出响亮的蜂鸣声[/color][/pulse]。检测到未经授权的标记！
+Text/d0_qte15/text,罗斯特瞬间出现。[color=CHARTREUSE]干得好！[/color]又抓到一个叛徒。
+Text/d0_qte16/text,"这名抵抗组织成员被拖走，眼中充满恐惧。""[color=CRIMSON]不，求求你们！我还有孩子！[/color]"""
+Text/d0_qte17/text,你的忠诚已[color=DARK_ORANGE]记录在你的档案中[/color]。继续保持。
+Text/d1/text,帮助抵抗组织成员变得更加危险了，但[color=CHARTREUSE]真相必须传播开来[/color]。
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,
+Choice/c7_viktor4/disabled_text,
+Choice/c7_viktor5/disabled_text,
+Choice/d0_qte4/disabled_text,
+Choice/d0_qte5/disabled_text,
+Choice/d0_qte9/disabled_text,
+Choice/d0_qte10/disabled_text,

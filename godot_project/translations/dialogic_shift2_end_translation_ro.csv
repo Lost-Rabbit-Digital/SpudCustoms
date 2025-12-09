@@ -1,0 +1,26 @@
+﻿keys,ro
+Text/200/text,"Hei, bobocule! Tură grea, nu-i așa? Mă numesc Murphy. Sunt aici de trei sezoane."
+Text/201/text,"Te-am văzut vorbind cu Sasha mai devreme. Ea e... [color=STEEL_BLUE]diferită[/color]. Diferită în sens bun, cred."
+Choice/202/text,Pare drăguță. Mi-a dat niște sfaturi despre cum să rămân vigilent.
+Choice/203/text,Doar prezentări. Nimic special.
+Text/204/text,Murphy se uită în jur nervos. Da
+Text/205/text,Între noi fie vorba? Emisiunea aia radio despre „cartofii dispăruți”... vărul meu a dispărut luna trecută. A picat inspecția.
+Text/206/text,"Înțelept. Stai cuminte, fă-ți treaba. Asta îmi spun și eu în fiecare zi."
+Text/207/text,Vocea lui Murphy devine mai joasă. Deși uneori mă întreb unde ajung de fapt toți cartofii ăia respinși...
+Text/208/text,În cantină
+Text/209/text,"Te uiți fix la pasta groasă, maro-violetă. Toată lumea o mănâncă fără să pună întrebări. Se presupune că e hrănitoare."
+Choice/20a/text,Mănâncă Rezerva de Rădăcini ca toți ceilalți
+Choice/20b/text,Împinge-o deoparte - nu ți-e foame
+Text/20c/text,"Gustul este... pământesc. Bogat. Ceva la el se simte [color=STEEL_BLUE]neplăcut de familiar[/color], dar nu poți să-ți dai seama de ce."
+Text/20d/text,"Un ofițer superior observă. „Nu risipi, nu vei duce lipsă, vlăstarule. Aia e [pulse freq=2][color=DARK_VIOLET]nutriție premium[/color][/pulse] acolo.”"
+Text/20e/text,Mormăi o scuză despre o durere de stomac. Ofițerul ridică din umeri și pleacă.
+Text/20f/text,"Înapoi în locuința ta, nu poți să-ți scoți din cap ce a spus Sasha. „[color=YELLOW]Nu totul este așa cum pare.[/color]”"
+Text/210/text,L-ai întrebat pe Russet despre cartofii respinși în prima ta zi. Răspunsul lui a fost evaziv. „[color=VIOLET]Procesați. Conform protocolului.[/color]”
+Text/211/text,"Procesați [color=STEEL_BLUE]cum[/color], exact?"
+Text/212/text,Erai atât de dornic să servești. Atât de mândru că ai fost ales. Dar mândria nu explică [color=CRIMSON]cartofii dispăruți[/color].
+Text/213/text,Radioul a spus că rapoartele despre dispariții „continuă”. Asta înseamnă că se întâmplă de ceva timp.
+Text/214/text,"Somnul vine încet. Când vine, visezi [wave amp=15 freq=2][color=DARK_VIOLET]râuri purpurii[/color][/wave] curgând sub punctul de control."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

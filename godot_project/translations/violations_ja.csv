@@ -1,0 +1,29 @@
+﻿keys,ja
+violation_condition_not_fresh,却下: 新鮮なジャガイモのみ許可されます。このジャガイモは{condition}です。
+violation_extra_eyes,却下: 異常な芽の状態は禁止されています。
+violation_rotten,却下: 腐敗したジャガイモは禁止されています。
+violation_sprouted,却下: 発芽したジャガイモは禁止されています。
+violation_dehydrated,却下: 脱水状態のジャガイモは禁止されています。
+violation_frozen,却下: 冷凍されたジャガイモは禁止されています。
+violation_too_old,却下: ジャガイモは{age}歳です。(最大年齢: 4歳)
+violation_too_young_3,却下: ジャガイモは{age}歳です。(最低年齢: 4歳)
+violation_too_young_2,却下: ジャガイモは{age}歳です。(最低年齢: 3歳)
+violation_males_only,却下: オスのジャガイモのみ許可されます。
+violation_females_only,却下: メスのジャガイモのみ許可されます。
+violation_country_spudland,却下: 全てのスパッドランド産ジャガイモは禁止されています。
+violation_country_potatopia,却下: 全てのポテトピア産ジャガイモは禁止されています。
+violation_country_tuberstan,却下: 全てのチューバースタン産ジャガイモは禁止されています。
+violation_country_north_yamnea,却下: 全ての北ヤムニア産ジャガイモは禁止されています。
+violation_country_spuddington,却下: 全てのスパディングトン産ジャガイモは禁止されています。
+violation_country_tatcross,却下: 全てのタットクロス産ジャガイモは禁止されています。
+violation_country_mash_meadows,却下: 全てのマッシュメドウズ産ジャガイモは禁止されています。
+violation_country_tuberville,却下: 全てのチューバービル産ジャガイモは禁止されています。
+violation_country_chip_hill,却下: 全てのチップヒル産ジャガイモは禁止されています。(輸出制限)
+violation_country_murphyland,却下: 全てのマーフィーランド産ジャガイモは禁止されています。
+violation_country_colcannon,却下: 全てのコルカノン産ジャガイモは禁止されています。
+violation_country_pratie_point,却下: 全てのプラティポイント産ジャガイモは禁止されています。
+violation_race_purple_majesty,却下: パープルマジェスティ種は禁止されています。
+violation_race_sweet_potato,却下: サツマイモ種は特別許可が必要です。(利用不可)
+violation_race_yukon_gold,却下: ユーコンゴールド種は禁止されています
+violation_expired_document,却下: 書類は{date}に期限切れです
+violation_invalid_potato,このジャガイモは全ての要件を満たしており、承認すべきでした

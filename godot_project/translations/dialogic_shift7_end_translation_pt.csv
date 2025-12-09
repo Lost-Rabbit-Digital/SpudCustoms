@@ -1,0 +1,92 @@
+﻿keys,pt
+Text/d2/text,"Após o seu turno, você é levado a uma reunião secreta da resistência em uma fábrica de amido abandonada."
+Text/d3/text,Uma batata desgastada com cicatrizes de batalha se dirige ao grupo reunido.
+Text/d4/text,O tempo de sussurros e panfletos acabou. O governo mostrou suas verdadeiras cores.
+Text/d5/text,Nossas fontes confirmam que as fábricas de processamento [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] estão aumentando a produção.
+Text/d6/text,"O que significa [tornado radius=3 freq=3][color=CRIMSON]mais de nossos irmãos e irmãs desaparecidos, processados, consumidos[/color][/tornado]."
+Text/d7/text,O líder bate com o punho na mesa. [pulse freq=3][color=CHARTREUSE]Isso acaba agora.[/color][/pulse] Temos um plano para atacar o coração da operação deles.
+Text/d8/text,"Sasha desenrola planos detalhados na mesa. Em três dias, lançaremos nossa ofensiva principal."
+Text/d9/text,"Enquanto uma equipe cria uma diversão no complexo principal do governo, outra infiltrará na maior instalação da Root Reserve."
+Text/da/text,"Nosso objetivo: obter [color=CHARTREUSE]provas irrefutáveis[/color] do que acontece lá dentro, transmiti-las para toda Spud."
+Text/db/text,Sasha aponta para uma seção dos planos. É aqui que você entra.
+Text/dc/text,Precisamos de alguém dentro da Alfândega de Spud para garantir que nossos operativos possam cruzar a fronteira para a missão.
+Text/dd/text,Podemos contar com você para ser essa pessoa?
+Choice/de/text,Farei o que for necessário para expor a verdade.
+Choice/df/text,Parece perigoso. E se formos pegos?
+Choice/e0/text,Existe outra maneira que não coloque tantos em risco?
+Text/e1/text,O rosto de Sasha se ilumina de esperança. Obrigada. [color=CHARTREUSE]Sua coragem salvará inúmeras vidas.[/color]
+Text/e2/text,"Ela aperta sua mão. Quando tudo isso acabar, [color=CHARTREUSE]você será lembrado como um herói da revolução.[/color]"
+Text/e3/text,Sasha acena solenemente. É perigoso. Não vou mentir para você sobre isso.
+Text/e4/text,Todos nós podemos acabar [color=DARK_VIOLET]processados em Root Reserve[/color] se falharmos.
+Text/e5/text,"Mas não fazer nada é ainda mais perigoso. Para todos nós, a longo prazo."
+Text/e6/text,A expressão de Sasha se torna sombria. Tentamos outros meios. Por anos.
+Text/e7/text,Petições. Diplomacia silenciosa. Denúncias anônimas. Nada funcionou.
+Text/e8/text,Às vezes você precisa arriscar tudo para mudar qualquer coisa.
+Text/e9/text,Um debate acalorado explode entre os membros da resistência.
+Text/ea/text,Alguns argumentam por uma abordagem mais agressiva — destruir completamente as fábricas de processamento.
+Text/eb/text,Outros insistem que a ação violenta apenas voltaria a opinião pública contra eles.
+Text/ec/text,BASTA! O líder silencia a sala com uma voz de comando.
+Text/ed/text,"Não podemos nos dar ao luxo de estarmos divididos. Não agora, quando estamos tão perto."
+Text/ee/text,Nosso objetivo é simples: revelar a verdade. Deixe o povo decidir o que acontece depois.
+Text/ef/text,O líder se vira para se dirigir diretamente a você. Mas precisamos saber [color=YELLOW]onde você se posiciona[/color].
+Text/f0/text,"Em três dias, nossos agentes se aproximarão do seu posto de controle. Eles carregarão [color=CHARTREUSE]cartões de identificação azuis[/color]."
+Text/f1/text,Você vai ajudá-los a cruzar? Sua resposta agora determinará nosso próximo movimento.
+Choice/f2/text,Vou ajudá-los a cruzar. Pelo futuro de Spud.
+Choice/f3/text,"Não posso estar diretamente envolvido, mas olharei para o outro lado."
+Choice/f4/text,Preciso de mais tempo para pensar sobre isso.
+Text/f5/text,O líder aperta firmemente seu ombro. [color=CHARTREUSE]Sua coragem honra a todos nós.[/color]
+Text/f6/text,"No terceiro dia, quando o sol estiver mais alto, nossos agentes virão."
+Text/f7/text,"A senha é ""[wave amp=15 freq=3][color=CHARTREUSE]As raízes crescem profundamente.[/color][/wave]"" Lembre-se disso."
+Text/f8/text,"O líder acena lentamente, claramente desapontado, mas compreensivo."
+Text/f9/text,"Às vezes, o máximo que podemos pedir é que as pessoas não fiquem em nosso caminho."
+Text/fa/text,Nossos agentes prosseguirão conforme planejado. Apenas... não dê o alarme.
+Text/fb/text,A expressão do líder endurece. [color=YELLOW]Tempo é um luxo que não temos.[/color]
+Text/fc/text,Mas forçar alguém a se juntar à nossa causa não nos torna melhores do que eles.
+Text/fd/text,Prosseguiremos sem contar com sua ajuda. Consulte sua consciência.
+Text/fe/text,"Enquanto a reunião termina, Sasha caminha com você de volta em direção ao posto de controle."
+Text/ff/text,Aconteça o que acontecer... obrigada por tudo o que você fez.
+Text/100/text,"Você retorna aos seus aposentos no posto de controle, sua mente correndo com o peso dos eventos por vir."
+Text/101/text,"Em apenas três dias, tudo poderia mudar. [color=YELLOW]Para melhor ou pior.[/color]"
+Choice/de/disabled_text,
+Choice/f4/disabled_text,
+Choice/f3/disabled_text,
+Choice/f2/disabled_text,
+Choice/e0/disabled_text,
+Choice/df/disabled_text,
+Text/d2b/text,Antes de começarmos... Tenho uma confissão a fazer.
+Text/d2c/text,"Aquela nota que você encontrou no seu primeiro dia? ""[color=GOLD]Uma amiga[/color]""?"
+Text/d2d/text,Sasha sorri. Vejo que você a guardou. Inteligente. Eu sabia que tinha escolhido o broto certo.
+Text/d2e/text,"Eu tenho observado novos oficiais por meses, procurando alguém com [color=CHARTREUSE]olhos questionadores[/color]. Alguém que pudesse ver através das mentiras."
+Text/d2f/text,A expressão de Sasha é complicada. Você mostrou para Russet. Eu tive que me esconder por semanas depois disso.
+Text/d2g/text,Mas aqui está você de qualquer forma. Isso me diz algo sobre sua consciência.
+Text/d2h/text,Você a destruiu. Não te culpo - era arriscado guardá-la.
+Text/d2i/text,"Mas as palavras encontraram seu caminho para sua cabeça de qualquer forma, não encontraram?"
+Text/d2j/text,"[color=CHARTREUSE]Eu sou ""Uma amiga.""[/color] E agora você sabe por quê."
+Text/d2k/text,Sasha espalha documentos capturados sobre a mesa. Manifestos de processamento do mês passado.
+Text/d2l/text,"Você escaneia os nomes, e seu sangue gela."
+Text/d2m/text,Lá está. [color=GOLD]Maris Piper[/color]. A mulher da foto.
+Text/d2n/text,"""[color=CRIMSON]Status: Processada. Lote RR-2847.[/color]"" Datado de três dias depois que o marido dela implorou por sua ajuda."
+Text/d2o/text,Você sente a foto no seu bolso. [color=STEEL_BLUE]Ela se foi. E você não pôde salvá-la.[/color]
+Text/d2p/text,Mas talvez... [color=CHARTREUSE]talvez você ainda possa salvar outros[/color].
+Text/d2q/text,Murphy emerge das sombras. Ei. Que bom que você conseguiu.
+Text/d2r/text,Murphy ergue o formulário RR-UTIL amassado. Meu primo também está nessa lista. [color=CHARTREUSE]Vamos fazer isso juntos.[/color]
+Text/ff2/text,[color=STEEL_BLUE]Ela mantém distância enquanto você anda.[/color] Agradeço por você não atrapalhar. É... alguma coisa.
+Text/ff3/text,"[color=STEEL_BLUE]Ela anda em silêncio, com os braços cruzados.[/color] Espero que você encontre a certeza que procura. O resto de nós não pode se dar ao luxo de esperar."
+Text/100_viktor1/text,"No seu caminho de volta, você encontra Viktor sozinho no telhado do posto de controle, olhando para o céu noturno."
+Text/100_viktor2/text,Viktor segura um pequeno
+Text/100_viktor3/text,"Ela costumava dizer que não importa o quão sombrias as coisas ficassem, as estrelas ainda estariam lá. [color=STEEL_BLUE]Constantes. Lindas.[/color]"
+Text/100_viktor4/text,"Ele se vira para você, com os olhos brilhando. [wave amp=15 freq=2]Eu continuo pensando... ela sofreu?[/wave] Ela sabia o que estava acontecendo?"
+Text/100_viktor5/text,A voz de Viktor falha. Ela me perguntou uma vez se eu alguma vez questionava as rejeições. Eu disse a ela [color=CRIMSON]para confiar no sistema[/color].
+Text/100_viktor6/text,[tornado radius=3 freq=2][color=CRIMSON]Eu enviei minha própria esposa para os tanques de processamento sem saber.[/color][/tornado]
+Choice/100_viktor_choice1/text,Você não podia saber. Nenhum de nós sabia.
+Choice/100_viktor_choice2/text,"Elena iria querer que você lutasse agora, não que se afogasse em culpa."
+Choice/100_viktor_choice3/text,Não sei o que dizer. Sinto muito.
+Text/100_viktor7/text,Ele balança a cabeça lentamente. [color=STEEL_BLUE]Ignorância não é inocência. Eu deveria ter perguntado. Deveria ter escutado.[/color]
+Text/100_viktor8/text,Viktor guarda a foto cuidadosamente. [color=CHARTREUSE]Mas agora eu sei. E saber significa que tenho que agir.[/color]
+Text/100_viktor9/text,"Viktor se endireita, um fogo frio reacendendo em seus olhos. [color=CHARTREUSE]Você está certo.[/color] Ela era mais forte que eu. Mais corajosa."
+Text/100_viktor10/text,Ele cerra o punho. [color=CHARTREUSE]Quando a hora chegar
+Text/100_viktor11/text,[pulse freq=2][color=CRIMSON]E Idaho pagará por cada vida que ele consumiu.[/color][/pulse]
+Text/100_viktor12/text,Viktor esboça um triste
+Text/100_viktor13/text,Ele olha de volta para as estrelas. [color=STEEL_BLUE]Elena teria gostado de você.[/color]
+Text/100_viktor14/text,"Ele se vira para sair, então pausa. [color=CHARTREUSE]Quando a resistência se mover... estarei pronto.[/color]"
+Text/100_viktor15/text,Por Elena. Por todos eles. [pulse freq=2][color=CHARTREUSE]Os guardas me seguirão quando eu lhes disser a verdade.[/color][/pulse]

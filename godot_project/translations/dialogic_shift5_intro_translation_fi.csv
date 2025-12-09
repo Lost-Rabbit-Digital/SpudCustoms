@@ -1,0 +1,33 @@
+﻿keys,fi
+Text/a6/text,"Rajalaitoksen tuntuu tänään erilaiselta. Jännittyneeltä. Turvapartioita suuremmissa määrin, kun varovainen hiljaisuus korvaa rupattelun."
+Text/a7/text,"Viime yönä löydettiin [pulse freq=2][color=CRIMSON]kiellettyjä materiaaleja[/color][/pulse]. Lehtisiä, jotka sisältävät valheita [color=DARK_VIOLET]Root Reservestä[/color]."
+Text/a8/text,Otamme käyttöön [wave amp=15 freq=2][color=DARK_ORANGE]uhkatason ORANSSI protokollat[/color][/wave]. Kaikki virkailijat joutuvat uskollisuustarkastuksiin. Kaikki matkustajat kohtaavat maksimaalisen tarkastelun.
+Text/a9/text,Se toimii. Lehtiset leviävät. Ihmiset kyselevät [color=DARK_VIOLET]Root Reservestä[/color].
+Text/aa/text,"Minulla on lähteitä, jotka kertovat, että Russetin toimistossa on lähetyslokirja - kuljetusmanifesteja, jotka voisivat [tornado radius=3 freq=2][color=CHARTREUSE]todistaa kaiken[/color][/tornado]."
+Text/ab/text,"Tarvitsen apuasi sen saamiseksi. Tänä iltana, viimeisen vuoron jälkeen. Voinko luottaa sinuun?"
+Choice/ac/text,Olen mukana. Paljastetaan totuus.
+Choice/ad/text,"En tiedä, Sasha... tämä voisi olla vaarallista."
+Text/ae/text,"Luojan kiitos. Tiesin, että sinulla on [color=CHARTREUSE]vahvemmat juuret kuin muilla[/color]. Tapaamme keskiyöllä."
+Text/af/text,Joskus meidän täytyy [color=CHARTREUSE]riskeerata joutuvamme murskatuksi tehdäksemme oikein[/color]. Mieti sitä.
+Text/b0/text,"[color=DARK_ORANGE]Uskollisuustarkastus[/color]. Ilmoita nimesi ja virkailijan tunnuksesi. Kerro sitten, miksi palvelet Spudia."
+Choice/b1/text,Palvelen suojellakseni rajojamme vaarallisilta vaikutteilta.
+Choice/b2/text,"Palvelen varmistaakseni, että kaikki saavat reilun kohtelun."
+Text/b3/text,"Hyvä vastaus. Spud tarvitsee uskollisia suojelijoita. Skanneri näyttää vihreää. Jatka, virkailija."
+Text/b4/text,"Virkailijan kulmakarvat kohoavat. Reilu kohtelu? Skanneri välähtää [color=DARK_ORANGE]keltaisena[/color]. Muista, ensisijainen huolemme on turvallisuus, ei reiluus."
+Text/b5/text,"Tämän päivän kiintiötä on nostettu. Kaikki, joilla on epäilyttäviä materiaaleja, on merkittävä [color=DARK_VIOLET]erityiskäsittelyyn[/color]."
+Text/b6/text,Tulen [color=DARK_ORANGE]tarkkailemaan päätöksiäsi[/color] hyvin huolellisesti tänään.
+Text/b7/text,"Tämä ilta voisi muuttaa kaiken. Mutta ensin, [color=YELLOW]selviä päivästä herättämättä epäilyksiä[/color]."
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,
+Text/b4_viktor1/text,Roteva vartija tarttuu käsivarteesi ohittaessasi. Hänen kasvojaan uurtaa huoli.
+Text/b4_viktor2/text,"Hei... anteeksi, että häiritsen. Olet yksi tullivirkailijoista, eikö niin? Nimeni on [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Olen kysellyt kaikilta vaimostani, [color=GOLD]Elenasta[/color]. Elena Petrov. Hän ylitti tämän tarkastuspisteen kolme viikkoa sitten."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Hylättiin tarkastuksessa.[/color] He sanoivat, että hänet käsiteltäisiin ja palautettaisiin kotiin, mutta... en ole kuullut mitään."
+Text/b4_viktor5/text,"Hänen äänensä värisee. Kukaan ei kerro minulle mitään. Tiedätkö, minne hylätyt matkustajat menevät?"
+Choice/b4_viktor6/text,"""Olen pahoillani, Viktor. En tiedä. Mutta pidän silmällä."""
+Choice/b4_viktor7/text,"""En voi keskustella käsittelyn yksityiskohdista. Turvaprotokollat."""
+Text/b4_viktor8/text,"Viktorin silmissä välähtää toivo. [color=CHARTREUSE]Kiitos.[/color] Mitä tahansa saat selville... pyydän. Hän on kaikki, mitä minulla on."
+Text/b4_viktor9/text,Viktor nyökkää masentuneena. [color=STEEL_BLUE]Selvä. Protokollat.[/color] Ymmärrän.
+Text/b4_viktor10/text,"Mutta jos muutat mielesi... [color=YELLOW]Minun on saatava tietää, mitä hänelle tapahtui.[/color]"

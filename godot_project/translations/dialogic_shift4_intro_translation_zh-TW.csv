@@ -1,0 +1,19 @@
+﻿keys,zh-TW
+Text/86/text,今日實施新安全協議。我們收到情報指出[color=YELLOW]可疑活動[/color]。
+Text/87/text,所有旅客必須接受加強檢查程序。
+Text/88/text,留意[color=YELLOW]緊張行為、異常舉止，或不願眼神接觸[/color]。
+Text/89/text,所有可疑物品必須沒收並記錄。當然，這是為了薯國的安全。
+Text/8a/text,我們尤其關注[color=CRIMSON]違禁品[/color]——反政府文獻、攝影器材...
+Text/8b/text,他們的聲音不祥地低沉下來。「[pulse freq=2][color=DARK_VIOLET]我們對那些人有特殊處理程序。[/color][/pulse]」
+Text/8c/text,[wave amp=15 freq=2][color=DARK_VIOLET]根源儲備[/color][/wave]的卡車將標示著「特級儲備」的板條箱卸到自助餐廳。氣味誘人，但你卻感到反胃。
+Text/8d/text,你試過新的特級儲備了嗎？我表親上個月失蹤了。檢查不合格。
+Text/8e/text,也許他就是這批貨的一部分，嗯？[tornado radius=2 freq=2][color=STEEL_BLUE]黑色幽默，你懂的？[/color][/tornado]
+Choice/8f/text,「這點都不好笑。一點都不。」
+Choice/90/text,「我不餓。失陪了。」(離開)
+Text/91/text,你說得對。有時候開玩笑比思考[pulse freq=3][color=CRIMSON]實際可能發生的事情[/color][/pulse]更容易。
+Text/92/text,那名官員看著你離開。「嘿，我懂。我也沒胃口了...」
+Text/93/text,新安全協議的實施時機真巧，不是嗎？[wave amp=15 freq=3][color=YELLOW]他們正試圖阻止關於根源儲備的資訊傳播。[/color][/wave]
+Text/94/text,我有些東西或許能幫到我們。有些攜帶[color=CHARTREUSE]重要資訊的馬鈴薯值得放行[/color]。
+Text/95/text,你仔細考慮你的選擇。今天的選擇可能幫助[color=CHARTREUSE]傳播真相[/color]...或[color=CRIMSON]永遠將其扼殺[/color]。
+Choice/8f/disabled_text,
+Choice/90/disabled_text,

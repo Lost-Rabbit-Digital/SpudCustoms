@@ -1,0 +1,18 @@
+﻿keys,id
+Text/56/text,Selamat datang di negara Kentang. Sebuah negeri [pulse freq=2][color=MEDIUM_VIOLET_RED]kemakmuran bagi semua kentang[/color][/pulse].
+Text/57/text,Anda telah dipilih untuk [color=DARK_ORANGE]peran krusial[/color] dalam melindungi perbatasan kami.
+Text/59/text,"LIHATLAH! [color=MEDIUM_VIOLET_RED]Tembok megah[/color] yang melindungi negara kami. Di sinilah Anda akan bertugas, memastikan hanya yang layak masuk."
+Text/5a/text,"Ah, tunas baru. Dengarkan dengan seksama, peran Anda [color=DARK_ORANGE]vital bagi keamanan Kentang[/color]."
+Text/184/text,Kesejahteraan Anda [wave amp=20 freq=3][color=YELLOW]tergantung pada kinerja Anda[/color][/wave].
+Text/5b/text,Saya mengangkat Anda sebagai Petugas Bea Cukai [pulse freq=1][color=MEDIUM_VIOLET_RED]yang mulia Kentang[/color][/pulse]. Ada pertanyaan?
+Choice/5c/text,Saya siap melayani Kentang dengan segenap pati saya!
+Choice/5d/text,Apa yang sebenarnya terjadi pada kentang yang ditolak?
+Text/5e/text,Luar biasa! Itulah semangat yang kami butuhkan. Anda mungkin akan mendapatkan penghargaan [color=DARK_VIOLET]Cadangan Akar[/color].
+Text/5f/text,Mereka... [color=DARK_VIOLET]diproses[/color]. Sesuai protokol. [color=DARK_VIOLET]Cadangan Akar[/color] menangani semua detail.
+Text/60/text,Fokus pada tugas Anda. [color=DARK_ORANGE]Tidak lebih.[/color]
+Text/61/text,"Shift pertama Anda dimulai sekarang. Periksa dokumen dengan cermat, tolak mereka yang tidak memenuhi standar kami."
+Text/62/text,"Penuhi kuota Anda, hindari sanksi. [color=MEDIUM_VIOLET_RED]Kejayaan Kentang![/color]"
+Choice/5d/disabled_text,
+Choice/5c/disabled_text,
+Text/184b/text,Mereka yang terlalu banyak bertanya? Mereka akan [color=CRIMSON]ditugaskan kembali[/color]. Secara permanen.
+Text/62b/text,"Dan ingatlah, [color=MEDIUM_VIOLET_RED]Jaya Spud![/color]"

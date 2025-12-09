@@ -1,0 +1,26 @@
+﻿keys,sv
+Text/200/text,"Hej, ny knöl! Tufft pass, va? Jag heter Murphy. Har varit här i tre säsonger nu."
+Text/201/text,"Jag såg dig prata med Sasha tidigare. Hon är... [color=STEEL_BLUE]annorlunda[/color]. På ett bra sätt, tror jag."
+Choice/202/text,Hon verkar trevlig. Gav mig några råd om att vara uppmärksam.
+Choice/203/text,Bara en presentation. Inget särskilt.
+Text/204/text,Murphy tittar sig nervöst omkring. Ja
+Text/205/text,"Mellan dig och mig? Den där radiosändningen om ""försvunna potatisar""... min kusin försvann förra månaden. Misslyckades med sin inspektion."
+Text/206/text,"Smart. Håll huvudet nere, gör ditt jobb. Det är vad jag säger till mig själv varje dag."
+Text/207/text,Murphys röst blir lägre. Fast ibland undrar jag vart alla de där avvisade potatisarna egentligen tar vägen...
+Text/208/text,I cafeterian
+Text/209/text,"Du stirrar på den tjocka, lila-bruna pastan. Alla äter den utan att ifrågasätta. Den ska vara näringsrik."
+Choice/20a/text,Ät Rotreserven som alla andra
+Choice/20b/text,Skjut undan den – du är inte hungrig
+Text/20c/text,"Smaken är... jordig. Fyllig. Något med den känns [color=STEEL_BLUE]obehagligt bekant[/color], men du kan inte förstå varför."
+Text/20d/text,"En högre officer lägger märke till det. ""Slösa inte, så slipper du sakna, grodd. Det där är [pulse freq=2][color=DARK_VIOLET]förstklassig näring[/color][/pulse]."""
+Text/20e/text,Du mumlar en ursäkt om en orolig mage. Officeren rycker på axlarna och går vidare.
+Text/20f/text,"Tillbaka i dina kvarter kan du inte skaka av dig vad Sasha sa. ""[color=YELLOW]Allt är inte som det verkar.[/color]"""
+Text/210/text,"Du frågade Russet om avvisade potatisar på din första dag. Hans svar var undvikande. ""[color=VIOLET]Bearbetade. Enligt protokoll.[/color]"""
+Text/211/text,"Bearbetade [color=STEEL_BLUE]hur[/color], exakt?"
+Text/212/text,Du var så ivrig att tjäna. Så stolt över att bli vald. Men stolthet förklarar inte de [color=CRIMSON]försvunna potatisarna[/color].
+Text/213/text,"Radion sa att rapporter om försvinnanden ""fortsätter"". Det betyder att det har pågått ett tag."
+Text/214/text,"Sömnen kommer långsamt. När den väl kommer, drömmer du om [wave amp=15 freq=2][color=DARK_VIOLET]lila floder[/color][/wave] som flyter under gränskontrollen."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

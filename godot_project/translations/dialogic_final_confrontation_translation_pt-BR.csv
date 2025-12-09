@@ -1,0 +1,88 @@
+﻿keys,pt-BR
+Text/11/text,"A fronteira Spud está em [pulse freq=3][color=CRIMSON]caos[/color][/pulse]. Batatas em pânico inundam os postos de controle, desesperadas para escapar após os documentos vazados."
+Text/12/text,Você se esgueira com Sasha. [wave amp=20 freq=3][color=CHARTREUSE]Temos que continuar avançando![/color][/wave] As pessoas sabem a verdade agora.
+Text/13/text,"Eles não podem mais silenciar a verdade. Se conseguirmos infiltrar a instalação da [color=DARK_VIOLET]Reserva da Raiz[/color] e transmitir as provas, isso vai [tornado radius=3 freq=2][color=CHARTREUSE]incendiar a revolução[/color][/tornado]."
+Text/14/text,"Aquele lugar é uma fortaleza. E agora temos um [color=YELLOW]ex-agente alfandegário[/color] entre nós. Os olhos deles se estreitam para você, desconfiados."
+Choice/15/text,"Eu entendo sua dúvida, mas estou comprometido com esta causa."
+Choice/16/text,Eu já sacrifiquei tudo. Não vou recuar agora.
+Text/17/text,Belas palavras. Mas já ouvimos isso antes.
+Text/18/text,"Eles nos ajudaram a conseguir os documentos. Isso é ação, não palavras."
+Text/19/text,"Não posso voltar a ser uma batata leal agora. Bem-vindo à resistência, camarada."
+Text/1a_rescue1/text,Um batedor se aproxima correndo. Nós a encontramos! [color=CHARTREUSE]Sasha está no bloco de detenção![/color]
+Text/1a_rescue2/text,Eles estão se preparando para... [tornado radius=3 freq=2][color=CRIMSON]processá-la[/color][/tornado]... em menos de uma hora!
+Text/1a_rescue3/text,Temos que salvá-la. [pulse freq=2][color=CHARTREUSE]Ela começou tudo isso.[/color][/pulse] Não vamos embora sem ela.
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]Corra pela instalação![/color][/wave] Alcance Sasha antes que seja tarde demais!
+Text/1a_rescue_fail1/text,Você tropeça. O caminho à frente está bloqueado por guardas!
+Text/1a_rescue_fail2/text,Viktor irrompe por uma porta lateral. [color=CHARTREUSE]VÁ! Eu os seguro![/color]
+Text/1a_rescue_fail3/text,Por Elena. Por todos eles. [color=STEEL_BLUE]Não vou deixar mais um morrer![/color]
+Text/1a_rescue_fail4/text,Murphy puxa um alarme de incêndio. [color=CHARTREUSE]Por Tommy![/color] Os sprinklers cegam os guardas!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Vou criar uma distração. Tire-a de lá![/color]
+Text/1a_rescue_fail6/text,"Uma [color=YELLOW]esteira de processamento emperra[/color], espalhando faíscas e distraindo os guardas!"
+Text/1a_rescue_fail7/text,O Destino - ou os fantasmas dos processados - concede a você uma segunda chance.
+Text/1a_rescue5/text,"Sasha levanta o olhar de sua cela, machucada mas inquebrável. Seus olhos se arregalam. [color=CHARTREUSE]Você veio.[/color]"
+Text/1a_rescue6/text,Claro que vim. [color=CHARTREUSE]Vamos terminar isso juntos.[/color]
+Choice/1a_rescue7/text,Eu estava com medo de nunca mais te ver.
+Choice/1a_rescue8/text,Você nos deixou morrendo de preocupação. Não faça isso de novo.
+Choice/1a_rescue9/text,Temos trabalho a fazer. Idaho está esperando.
+Text/1a_rescue10/text,[color=CHARTREUSE]Sasha te puxa para um breve abraço.[/color] Eu sabia que você viria. Nunca duvidei.
+Text/1a_rescue11/text,Agora vamos fazê-los pagar por todos que levaram. [color=CHARTREUSE]Juntos.[/color]
+Text/1a_rescue12/text,Sasha esboça um sorriso fraco em meio à dor. [color=STEEL_BLUE]Vou tentar.[/color] Mas algumas coisas valem o risco.
+Text/1a_rescue13/text,Você estar aqui prova isso. Agora vamos terminar com isso.
+Text/1a_rescue14/text,"Sasha acena, sua determinação reacendida. [color=CHARTREUSE]Você está certo.[/color] O sentimentalismo pode esperar."
+Text/1a_rescue15/text,Idaho pensa que venceu. Vamos mostrar a ele o quão errado ele está.
+Text/1a/text,"Após uma infiltração tensa, sua equipe se encontra no coração da [color=DARK_VIOLET]Reserva Raiz[/color], a [pulse freq=3][color=CRIMSON]horrível maquinaria de opressão[/color][/pulse] exposta."
+Text/1b/text,"[wave amp=25 freq=3][color=RED]Alarmes soam[/color][/wave] enquanto guardas se apressam para responder à sua intrusão. Você corre pelos corredores, desviando de sistemas de segurança."
+Text/1c/text,"Uma tela pisca e liga. ""Ora, ora, o [color=CRIMSON]traidor[/color] retorna com a escória rebelde."""
+Text/1d/text,Você pensou que poderia parar o progresso de Spud? A [color=DARK_VIOLET]Reserva Raiz[/color] é a força vital desta nação.
+Text/1e/text,Mas não se preocupe. Você ainda servirá Spud... [tornado radius=4 freq=3][color=DARK_VIOLET]nas cubas de processamento![/color][/tornado]
+Text/1f/text,A tela de repente fica preta.
+Text/20/text,"Você se vira para os outros com determinação. ""Precisamos chegar ao bunker de Idaho. Agora!"""
+Text/158/text,Forças de segurança se aproximam! [pulse freq=3][color=YELLOW]Lutem para passar![/color][/pulse]
+Text/21_fail1/text,Guardas se aproximam de todas as direções. [color=CRIMSON]Não há para onde correr![/color]
+Text/21_fail2/text,"Viktor aparece atrás dos guardas, voz fria como aço. [color=STEEL_BLUE]Parem. Agora.[/color]"
+Text/21_fail3/text,Os guardas hesitam - Viktor era um deles. [color=CRIMSON]O nome de Elena está naqueles manifestos. Suas famílias podem ser as próximas.[/color]
+Text/21_fail4/text,Alguns guardas abaixam suas armas. Outros fogem. O caminho se abre.
+Text/21_fail5/text,"Uma explosão abala a ala leste. A voz de Murphy chia nos comunicadores: [color=CHARTREUSE]""Essa é minha distração! MOVAM-SE!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Os guardas se dispersam em direção à explosão. Tommy ficaria orgulhoso.[/color]
+Text/21_fail7/text,Sasha ataca o guarda líder por trás. [color=CHARTREUSE]Eu não sobrevivi àquela cela só para ver você morrer![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]CORRAM! Eu cuido disso![/color]
+Text/21/text,"Seu grupo luta contra ondas de segurança, evitando a captura por pouco. Os combatentes da resistência de Sasha criam distrações, abrindo seu caminho."
+Text/22/text,"Após uma fuga angustiante por túneis de manutenção, você finalmente alcança o elevador seguro para o bunker particular de Idaho."
+Text/23/text,"Com Sasha e seus aliados ao seu lado, você finalmente confronta Idaho."
+Text/24/text,"Acabou, Idaho. Seus segredos foram expostos. Como isso termina... [pulse freq=2]isso é com você.[/pulse]"
+Choice/25/text,Negociar uma transição pacífica de poder (Diplomático)
+Choice/26/text,Exigir a prisão imediata de Idaho (Justiça)
+Choice/27/text,Executar justiça vigilante pelos crimes de Idaho (Vingança)
+Choice/28/text,Focar no desmantelamento da infraestrutura da Reserva Raiz (Desmantelar)
+Text/29/text,"Idaho, não precisa terminar em mais derramamento de sangue. Se você cooperar..."
+Text/2a/text,"Ah, seu [color=STEEL_BLUE]tolo idealista[/color]. Você acha que isso é uma negociação?"
+Text/2b/text,"Idaho esmaga um botão, e [color=RED]alarmes começam a soar[/color]. ""A única coisa que vou te dar é uma [color=DARK_VIOLET]viagem só de ida para as fritadeiras![/color]"""
+Text/2c/text,"Acho que não, Idaho. Guardas! Vocês viram o dossiê, [color=YELLOW]vocês sabem o que ele fez com suas famílias.[/color]"
+Text/2d/text,Um guarda corpulento avança e chuta Idaho para o chão rapidamente.
+Text/2e/text,Um tiro ecoa pela câmara. A tela escurece.
+Text/2f/text,"Idaho, em nome do povo batata de Spud, [color=CHARTREUSE]você está preso![/color]"
+Text/30/text,"Acabou. O povo falou. [color=CHARTREUSE]Construiremos uma nova Spud onde nossas raízes estarão no solo, não no sofrimento.[/color]"
+Text/31/text,"Não haverá [color=CRIMSON]acordos, nem misericórdia[/color] para você, Idaho. A justiça de um tirano é tudo o que você merece."
+Text/32/text,"Um acerto de contas. É isso que eu sou. [color=CHARTREUSE]Por cada batata sacrificada, retomamos nosso futuro![/color]"
+Text/33/text,"Esqueça-o. Ele é um sintoma, não a doença. [color=CHARTREUSE]Derrubem cada raiz e caule desta monstruosidade.[/color]"
+Text/34/text,Temos que ir! Agora!
+Text/35/text,A queda da [color=DARK_VIOLET]Reserva Raiz[/color] acende um incêndio de mudança por toda Spud.
+Text/36/text,"Batatas em todas as províncias se levantam, abraçando uma [color=CHARTREUSE]nova visão para sua nação[/color]."
+Text/37/text,"Enquanto permanecermos fiéis às nossas raízes, aos ideais que nos trouxeram aqui... [color=CHARTREUSE]encontraremos um caminho.[/color]"
+Text/38/text,"E assim, das cinzas da velha Spud, uma [color=CHARTREUSE]nova nação começa a criar raízes[/color]. O Reinado da [color=DARK_VIOLET]Reserva Raiz[/color] acabou."
+Text/151/text,"[color=CHARTREUSE]Sasha se aproxima, sua mão encontrando a sua enquanto vocês observam o novo amanhecer juntos.[/color] Nós construímos isso. Você e eu."
+Text/152/text,"Enquanto permanecermos fiéis às nossas raízes, aos ideais que nos trouxeram aqui... [color=CHARTREUSE]encontraremos um caminho.[/color] Juntos."
+Text/153/text,[color=CHARTREUSE]Você aperta a mão dela. Juntos.[/color]
+Text/154/text,[color=STEEL_BLUE]Sasha está ao seu lado.[/color] Seu fogo acendeu a faísca que queimou o império deles.
+Text/155/text,[color=STEEL_BLUE]A raiva arrefeceu e se transformou em determinação. Ainda há trabalho a ser feito.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha lhe oferece um sorriso de apoio.[/color] Você percorreu um longo caminho desde aquele posto de controle. Todos nós percorremos.
+Text/157/text,"[color=STEEL_BLUE]A culpa talvez nunca desapareça completamente, mas você encontrou propósito na reconstrução.[/color]"
+Choice/15/disabled_text,
+Choice/16/disabled_text,
+Choice/25/disabled_text,
+Choice/26/disabled_text,
+Choice/27/disabled_text,
+Choice/28/disabled_text,
+Choice/1a_rescue7/disabled_text,
+Choice/1a_rescue8/disabled_text,
+Choice/1a_rescue9/disabled_text,

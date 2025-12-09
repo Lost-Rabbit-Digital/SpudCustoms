@@ -1,0 +1,22 @@
+﻿keys,no
+Text/96/text,"Du sniker deg gjennom den formørkede korridoren, hjertet banker mens du unngår sikkerhetspatruljene."
+Text/97/text,[color=CHARTREUSE]Denne enheten vil deaktivere låsen[/color] på Russets kontor. Jeg vil utløse alarmer i østfløyen som en avledningsmanøver. Du har fem minutter.
+Text/98/text,Manifestene skulle være i arkivet. [color=CRIMSON]Rød mappe merket 'RR Transport'[/color]. La ingen spor etter søket ditt.
+Text/99/text,"Du finner den tykke [color=CRIMSON]røde mappen merket ""RR Transport""[/color] i arkivet."
+Text/9a/text,"Inni er det manifester som samsvarer med avviste potetantall, og et direktiv fra statsministeren i Idaho som autoriserer ""[pulse freq=3][color=DARK_VIOLET]full utnyttelse av grenseavvisninger for RR-produksjon.[/color][/pulse]"""
+Text/9b/text,"Fottrinn nærmer seg kontorets dør. ""[wave amp=15 freq=3][color=YELLOW]Rart, jeg kunne ha sverget at jeg låste den.[/color][/wave]"""
+Choice/9c/text,Gjemme seg under bordet
+Choice/9d/text,Hoppe ut vinduet
+Text/9e/text,"Du stuper under Russets bord mens han kommer inn, hjertet banker. Han setter seg, føttene centimeter fra ansiktet ditt."
+Text/9f/text,"Russet her. Hva? [color=CHARTREUSE]Enda en alarm?[/color] Jeg er på vei. Han forlater rommet, og du slipper unna."
+Text/a0/text,"Du river opp vinduet og hopper. Heldigvis er det bare én etasje. En vakt roper: ""[color=RED]Stopp![/color]"""
+Text/a1/text,Du løper over terrenget og klarer å riste av forfølgerne.
+Text/a2/text,Fikk du tak i det?
+Text/a3/text,Du leverer bevisene og forklarer hva du fant.
+Text/a4/text,Dette beviser alt. Motstandsbevegelsen vil lage kopier. [tornado radius=3 freq=2]Spre sannheten overalt.[/tornado] De kan ikke tie oss i hjel.
+Text/a5/text,"Du har krysset en grense. [wave amp=20 freq=3][color=YELLOW]Det er ingen vei tilbake.[/color][/wave] Når sannheten sprer seg, vil Spud bli forvandlet."
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,
+Text/9a_viktor1/text,Du skanner navnene på manifestet... og ett skiller seg ut. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,Det navnet... har du hørt før. Sikkerhetsvakten Viktor nevnte at kona hans var savnet.
+Text/9a_viktor3/text,"""[color=CRIMSON]Status: Behandlet. Parti RR-2851.[/color]"" Datert for to uker siden."

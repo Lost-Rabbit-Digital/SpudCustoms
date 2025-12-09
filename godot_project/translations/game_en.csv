@@ -1,0 +1,54 @@
+﻿keys,en
+alert_border_runner,BORDER RUNNER DETECTED!\nClick to launch missile!
+alert_rejected_fleeing,REJECTED POTATO FLEEING!\nClick to launch missile!
+alert_runner_escaped,RUNNER ESCAPED!\nStrike added!
+alert_points_deducted,RUNNER ESCAPED!\nStrike added!\n-{penalty} points!
+alert_perfect_hit,PERFECT HIT! +{perfect} accuracy bonus points
+alert_perfect_stamp,PERFECT STAMP! +{points} points!
+alert_combo,COMBO x{mult}! +{streak} combo bonus points
+alert_quota_met,"Quota met, shift completed! \nBonus: {bonus} points!"
+alert_strike_removed,Strike removed!
+alert_correct_decision,"You made the right choice, officer.\n+{points} points!"
+alert_wrong_decision,"You have caused unnecessary suffering, officer...\n+1 Strike!"
+alert_potato_should_be_approved,\nThis potato meets all requirements and should have been approved.
+alert_strike_out,Maximum strikes exceeded! Your shift is over.
+ui_score,Score: {score}
+ui_quota,Quota: {current} / {target}
+ui_strikes,Strikes: {current} / {max}
+ui_click_megaphone,Click megaphone to call the next potato
+ui_drag_document,Drag document to inspection table
+ui_stamp_document,Select a stamp to approve or reject
+ui_check_violations,Check for document violations
+Strike removed!,Strike removed!
+BORDER RUNNER DETECTED!\nClick to launch missile!,BORDER RUNNER DETECTED!\nClick to launch missile!
+REJECTED POTATO FLEEING!\nClick to launch missile!,REJECTED POTATO FLEEING!\nClick to launch missile!
+RUNNER ESCAPED!\nStrike added!,RUNNER ESCAPED!\nStrike added!
+Click megaphone to call the next potato,Click megaphone to call the next potato
+Drag document to inspection table,Drag document to inspection table
+Select a stamp to approve or reject,Select a stamp to approve or reject
+Check for document violations,Check for document violations
+rule_explanation_header,RULE EXPLANATION:
+rule_explanation_fresh,Look at the 'Condition' field. If it says anything other than 'Fresh' - REJECT
+rule_explanation_sweet_potato,Look at the 'Type' field. If it says 'Sweet Potato' - REJECT (no permits)
+rule_explanation_chip_hill,Look at the 'Country' field. If it says 'Chip Hill' - REJECT (banned)
+rule_explanation_age,Look at 'Born' field. Calculate age and check against rule
+rule_explanation_gender,Look at the 'Gender' field and check against current rule
+rule_footer_text,These rules must be enforced for ALL potatoes
+rule_tutorial_hint,Need help? Click on any rule for an explanation
+alert_correct_decision_detailed,CORRECT DECISION! +{points} points\n{reason}
+alert_wrong_decision_detailed,WRONG DECISION! Strike added!\n{reason}
+alert_reason_approved,Potato meets all requirements - APPROVED
+alert_reason_should_reject,You should have REJECTED this potato
+tutorial_check_type,Check the 'Type' field in the passport
+tutorial_check_condition,Check the 'Condition' field in the passport
+tutorial_check_country,Check the 'Country' field in the passport
+tutorial_check_age,Check the 'Born' field to calculate age
+tutorial_check_gender,Check the 'Gender' field in the passport
+alert_streak_bonus_minigame,5 in a row! BONUS MINIGAME!
+alert_perfect_stamps_bonus_minigame,Perfect stamps! BONUS MINIGAME!
+alert_runner_bonus_minigame,Suspicious activity! BONUS MINIGAME!
+alert_new_minigame_unlocked,New minigame unlocked: {name}!
+alert_minigame_bonus,Minigame bonus: +{bonus} points!
+high_score_display,High Score: {score}
+new_high_score,NEW HIGH SCORE!
+month_1,January

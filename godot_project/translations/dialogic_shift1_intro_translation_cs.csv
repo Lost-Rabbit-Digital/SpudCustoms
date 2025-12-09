@@ -1,0 +1,18 @@
+﻿keys,cs
+Text/56/text,Vítejte v národě Brambor. Země [pulse freq=2][color=MEDIUM_VIOLET_RED]prosperity pro všechny brambory[/color][/pulse].
+Text/57/text,Byli jste vybráni pro [color=DARK_ORANGE]klíčovou roli[/color] v ochraně našich hranic.
+Text/59/text,"POHLEĎTE! [color=MEDIUM_VIOLET_RED]Mocná zeď[/color], která chrání naši zemi. Zde budete sloužit a zajišťovat, aby vstoupili pouze ti hodní."
+Text/5a/text,"Ach, nový výhonek. Poslouchejte pozorně, vaše role je [color=DARK_ORANGE]klíčová pro bezpečnost Brambor[/color]."
+Text/184/text,Vaše blaho [wave amp=20 freq=3][color=YELLOW]závisí na vašem výkonu[/color][/wave].
+Text/5b/text,Jmenuji vás celníkem [pulse freq=1][color=MEDIUM_VIOLET_RED]slavných Brambor[/color][/pulse]. Nějaké dotazy?
+Choice/5c/text,Jsem připraven sloužit Bramborám celým svým škrobem!
+Choice/5d/text,Co se přesně děje s odmítnutými bramborami?
+Text/5e/text,"Výborně! To je nadšení, které potřebujeme. Možná získáte ocenění [color=DARK_VIOLET]Kořenové rezervy[/color]."
+Text/5f/text,Jsou... [color=DARK_VIOLET]zpracovány[/color]. Podle protokolu. [color=DARK_VIOLET]Kořenová rezerva[/color] řeší všechny detaily.
+Text/60/text,Soustřeďte se na své povinnosti. [color=DARK_ORANGE]Nic víc.[/color]
+Text/61/text,"Vaše první směna začíná nyní. Pečlivě kontrolujte dokumenty, odmítejte ty, kteří nesplňují naše standardy."
+Text/62/text,"Splňte kvótu, vyhněte se postihům. [color=MEDIUM_VIOLET_RED]Sláva Bramborám![/color]"
+Choice/5d/disabled_text,
+Choice/5c/disabled_text,
+Text/184b/text,"Ti, kdo se moc ptají? Jsou [color=CRIMSON]převeleni[/color]. Natrvalo."
+Text/62b/text,"A pamatujte, [color=MEDIUM_VIOLET_RED]Sláva Bramboře![/color]"

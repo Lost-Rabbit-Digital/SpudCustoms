@@ -1,0 +1,79 @@
+﻿keys,ro
+Text/299_suppress1/text,Haosul izbucnește odată cu începerea atacului rezistenței. Explozii zguduie punctul de control.
+Text/299_suppress2/text,"Ai putea fugi. Ai putea să te ascunzi. În schimb, tu [color=DARK_ORANGE]îți alegi partea[/color]."
+Text/299_suppress3/text,Russet te prinde de braț. [pulse freq=2][color=YELLOW]ACUM E ȘANSA TA![/color][/pulse] Dovedește-ți loialitatea!
+Text/299_suppress4/text,Rezistența încearcă să spargă poarta de est! [color=CRIMSON]Oprește-i![/color]
+Text/299_suppress5/text,Îți strângi arma. Aceștia ar putea fi oameni pe care îi cunoști. Oameni pe care i-ai ajutat.
+Text/299_suppress6/text,Dar supraviețuirea are un preț. [color=DARK_ORANGE]Ți-ai făcut alegerea.[/color]
+Text/299_suppress7/text,[pulse freq=3][color=CRIMSON]Luptă pentru stat![/color][/pulse] Suprimă atacul rezistenței!
+Text/299_suppress8/text,"Când fumul se risipește, cadavrele zac împrăștiate pe jos. Unii poartă insigne ale rezistenței."
+Text/299_suppress9/text,[color=STEEL_BLUE]Recunoști fețe printre cei căzuți.[/color]
+Text/299_suppress10/text,Murphy zace printre morți. Ochii lui privesc în gol. Fotografia lui Tommy strânsă în mână.
+Text/299_suppress11/text,[color=STEEL_BLUE]A murit luptând pentru ceva în care credea. Tu ai ajutat la distrugerea acelui lucru.[/color]
+Text/300/text,"Atacul rezistenței a eșuat. Punctul de control rezistă, mai puternic ca oricând. Și tu rămâi la postul tău."
+Text/301/text,[pulse freq=2][color=GOLD]TRĂIASCĂ PRIM-MINISTRUL IDAHO![/color][/pulse] Apărător al Spudului! Învingător al trădătorilor!
+Text/302/text,"Un cartof masiv, în veșminte bogate, coboară dintr-un vehicul blindat, flancat de gărzi de elită."
+Text/303/text,"Idaho inspectează punctul de control cu ochi reci, calculați."
+Text/304/text,"Russet se grăbește înainte, înclinându-se adânc. Prim-ministre! Suntem onorați de prezența dumneavoastră!"
+Text/305/text,Trădătorii au fost [color=DARK_VIOLET]procesați[/color] conform ordinelor dumneavoastră. Producția a crescut cu 40% în acest trimestru!
+Text/306/text,Și acesta este ofițerul care a rămas loial în timpul revoltei?
+Text/307/text,"Da, Prim-ministre. Devotament neclintit. A raportat activități suspecte. Un cetățean model."
+Text/308/text,"Idaho pășește înainte, prinzându-ți o medalie pe piept - [color=GOLD]Tuberculul de Aur[/color]."
+Text/309/text,Pentru servicii excepționale. Ai dovedit că [color=DARK_ORANGE]loialitatea față de Spud[/color] va fi întotdeauna recompensată.
+Choice/30a/text,"Mulțumesc, Prim-ministre. Glorie Spudului."
+Choice/30b/text,"Mi-am făcut doar datoria, domnule. (Forțezi un zâmbet)"
+Text/30c/text,Zâmbetul lui Idaho nu-i ajunge la ochi. Da. Cu siguranță ți-ai făcut-o.
+Text/30d/text,Idaho te studiază un moment lung. Datorie. [color=STEEL_BLUE]Un cuvânt atât de simplu pentru acțiuni atât de complicate.[/color]
+Text/30e/text,"Mă întreb ce [color=CRIMSON]coșmaruri[/color] îi vizitează pe cei care își fac ""datoria"" atât de bine."
+Text/30f/text,"Se ține un ospăț în cinstea victoriei. Mesele gem de mâncare, inclusiv porții generoase de [color=DARK_VIOLET]Rezerva de Rădăcini[/color]."
+Text/310/text,"Russet ridică un pahar cu lichid gros, purpuriu. Un toast! Pentru [color=CRIMSON]trădătorii care ne hrănesc[/color]!"
+Text/311/text,Camera râde. Unii nervos. Cei mai mulți sincer.
+Text/312/text,"El îți împinge o farfurie. Încearcă noua tranșă. [color=DARK_VIOLET]""Amestecul Rezistenței.""[/color] Contribuția Sashei la viitorul lui Spud."
+Text/313/text,Stomacul ți se strânge. Mâncarea din farfurie. [color=CRIMSON]Sasha.[/color] Verișoara lui Murphy. Soția din fotografie.
+Text/314/text,[tornado radius=3 freq=2][color=CRIMSON]Toți.[/color][/tornado]
+Choice/315/text,Forțează-te să mănânci - menține-ți acoperirea
+Choice/316/text,Împinge farfuria - nu poți face asta
+Text/317/text,Duci furculița la buze. Închizi ochii. [color=STEEL_BLUE]Mestecă. Înghite. Nu gândi.[/color]
+Text/318/text,"Russet dă din cap aprobator. ""Bine. [color=DARK_ORANGE]Vei ajunge departe.[/color]"""
+Text/319/text,"Împingi farfuria. ""Nu mă simt bine. Emoția zilei..."""
+Text/31a/text,"Ochii lui Russet se îngustează scurt, apoi se înmoaie. Desigur. O asemenea [color=YELLOW]constituție sensibilă[/color]."
+Text/31b/text,"Odihnește-te. Mâine, avem [color=CRIMSON]mai multă procesare[/color] de supravegheat."
+Text/31c/text,Te întorci în locuința ta. Medalia apasă greu pe pieptul tău.
+Text/31d/text,Scoți fotografia soției dispărute. Soția ei este probabil în aceeași tranșă ca și ea acum.
+Text/31e/text,Ai promis să o găsești. [color=STEEL_BLUE]Ai găsit-o.[/color] Doar nu așa cum spera vreunul dintre voi.
+Text/31f/text,Murphy. Prietenul tău. Cel care a avut încredere în tine. Era în rezistență.
+Text/320/text,[color=CRIMSON]Era.[/color]
+Text/321/text,Te uiți la reflecția ta în fereastră. Medalia strălucește. [color=DARK_ORANGE]Tubercul de Aur[/color]. Eroul lui Spud.
+Text/322/text,[color=STEEL_BLUE]Monstru în coajă de cartof.[/color]
+Text/323/text,"În acea noapte, o visezi pe Sasha. Nu te acuză. Nu se înfurie. Asta ar fi mai ușor."
+Text/324/text,"Doar te privește cu acei ochi. [color=CHARTREUSE]Rădăcinile cresc adânc[/color], șoptește ea."
+Text/325/text,Chiar și [color=STEEL_BLUE]cele putrede[/color].
+Text/326/text,Trec luni. Ești promovat. Inspector Regional al Securității Frontierei. Mâna dreaptă a lui Russet.
+Text/327/text,Supraveghezi mai multe respingeri decât oricine în istoria Spud. Producția de [color=DARK_VIOLET]Rezerva de Rădăcini[/color] crește vertiginos.
+Text/328/text,Biroul tău este confortabil. Rațiile tale sunt generoase. Familia ta este protejată.
+Text/329/text,Ai tot ce ți-a fost promis.
+Text/32a/text,"Totul, cu excepția [color=STEEL_BLUE]somnului[/color]. Cu excepția [color=STEEL_BLUE]liniștii[/color]. Cu excepția abilității de a te uita în oglindă."
+Text/32b/text,"Într-o zi, observi. O [color=GOLD]emblemă galbenă de cartof[/color] zgâriată pe un perete. Apoi alta. Apoi zeci."
+Text/32c/text,O nouă rezistență se formează. Mai silențioasă. Mai atentă. Învățând din greșelile Sashei.
+Choice/32d/text,Raportează simbolurile securității imediat
+Choice/32e/text,Prefă-te că nu le-ai văzut
+Choice/32f/text,Lasă-ți propria amprentă - o singură frunză galbenă
+Text/330/text,Depui raportul. Încă un lot de suspecți adunat. Încă o promovare.
+Text/331/text,Ciclul continuă. [color=CRIMSON]Ai devenit mașina.[/color]
+Text/332/text,Treci pe lângă. Nu spui nimic. Nu e mult. [color=STEEL_BLUE]E aproape nimic.[/color]
+Text/333/text,Dar este prima dată când ai ales să nu acționezi împotriva lor.
+Text/334/text,"Poate că e ceva. Poate că e [color=YELLOW]prea puțin, prea târziu[/color]."
+Text/335/text,"Când nimeni nu se uită, zgârii o mică [color=GOLD]frunză galbenă[/color] lângă embleme."
+Text/336/text,Un singur act de sfidare. Ani prea târziu. Dar [color=CHARTREUSE]ceva[/color].
+Text/337/text,"Vocea Sashei îți răsună în memorie: ""[color=CHARTREUSE]Rădăcinile cresc adânc.[/color]"""
+Text/338/text,Poate suficient de adânc pentru a [color=CHARTREUSE]ajunge chiar și la tine[/color]. Într-o zi.
+Text/339/text,Națiunea Spud dăinuie. [color=DARK_VIOLET]Rezerva de Rădăcini[/color] curge. Ciclul de consum continuă.
+Text/33a/text,"Dar undeva, în crăpăturile zidului, [color=CHARTREUSE]ceva nou crește[/color]."
+Text/33b/text,Dacă vei face parte din asta... [color=YELLOW]această poveste este încă de scris[/color].
+Choice/30a/disabled_text,
+Choice/30b/disabled_text,
+Choice/315/disabled_text,
+Choice/316/disabled_text,
+Choice/32d/disabled_text,
+Choice/32e/disabled_text,
+Choice/32f/disabled_text,

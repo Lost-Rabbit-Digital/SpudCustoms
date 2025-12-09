@@ -1,0 +1,27 @@
+﻿keys,sk
+Text/69/text,Môžeme sa porozprávať? Niekde v súkromí? [color=YELLOW]Príliš veľa očí a uší tu.[/color]
+Text/6a/text,"Stretni ma pri starom sklade po tvojej zmene. Mám niečo, čo musíš vidieť."
+Text/6b/text,"Zbližuješ sa s kolegami? Pamätaj, že priateľstvo môže viesť k... [color=DARK_ORANGE]narušenému úsudku[/color]."
+Text/6c/text,Zbieral som informácie o odmietnutých zemiakoch. [wave amp=20 freq=3][color=CRIMSON]Neodchádzajú do deportačných centier.[/color][/wave]
+Text/6d/text,[tornado radius=4 freq=2][color=CRIMSON]Idú do spracovateľských zariadení Root Reserve.[/color][/tornado] Každý jeden.
+Text/6e/text,Tieto dokumenty ukazujú zemiaky vykladané v zariadení označenom logom [color=DARK_VIOLET]Root Reserve[/color].
+Text/6f/text,"Myslím, že viem, čo sa deje. [pulse freq=3][color=CRIMSON]Stávajú sa Root Reserve.[/color][/pulse]"
+Choice/70/text,To je šialené. Oni... spracovávajú zemiaky na jedlo?
+Choice/71/text,"Potrebujeme viac dôkazov, než začneme obviňovať."
+Text/72/text,[color=CRIMSON]Kanibalizmus s ďalšími krokmi.[/color] To je [wave amp=25 freq=3][color=DARK_VIOLET]Root Reserve[/color][/wave]. A my pomáhame vyberať ich ingrediencie.
+Text/73/text,"Mesiace zbieram dôkazy. Maj oči otvorené. Uvidíš, že mám pravdu."
+Text/74/text,V diaľke náhle zaznie alarm
+Text/75/text,"Musíme ísť. V túto hodinu robia bezpečnostné kontroly. Premýšľaj o tom, čo som ti ukázal."
+Text/76/text,"Saša ti strčí zložku do rúk. ""[color=YELLOW]Uchovaj ju v bezpečí. A never nikomu.[/color]"""
+Text/77/text,Schováš zložku do bundy. [color=DARK_VIOLET]Root Reserve[/color]. Odmietnutia. Chýbajúce zemiaky. Všetko sa spája [tornado radius=3 freq=2][color=CRIMSON]desivým spôsobom[/color][/tornado].
+Choice/71/disabled_text,
+Choice/70/disabled_text,
+Text/69_photo1/text,Znova vytiahneš fotku. [color=GOLD]Maris Piper[/color]. Taká milá tvár.
+Text/69_photo2/text,Jej manželka bola taká zúfalá. [color=STEEL_BLUE]Čo sa jej stalo?[/color]
+Text/69_photo3/text,V pozadí fotky si všimneš niečo – nákladné auto s [color=DARK_VIOLET]fialovým logom[/color].
+Text/69_photo4/text,Ten symbol... videl si ho na dodávkach do jedálne. [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve.[/color][/wave]
+Text/6a_photo1/text,Saša... táto fotka. Manželka tej ženy mi ju dala. Hľadala ju.
+Text/6a_photo2/text,Saši klesne tvár. [color=STEEL_BLUE]Ukáž mi to.[/color]
+Text/6a_photo3/text,"Saša si prezerá fotku, jej výraz stmavne. [color=CRIMSON]Poznávam to nákladné auto.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Túto fotku si uschovaj.[/color][/pulse] Neskôr to môže byť dôležité. Ver mi.
+Text/6f2/text,[pulse freq=3][color=CRIMSON]Stávajú sa Root Reserve.[/color][/pulse]

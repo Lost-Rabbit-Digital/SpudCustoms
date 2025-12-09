@@ -1,0 +1,49 @@
+﻿keys,ja
+Text/215/text,Murphyが廊下であなたを捕まえる。目は充血している。「少し時間あるか？」
+Text/216/text,Murphyはあなたを空の物置部屋に引きずり込み、ドアを閉める。
+Text/217/text,食堂で言った冗談のことなんだが…従兄弟が[color=DARK_VIOLET]根源貯蔵庫[/color]のロットに入っているって話…
+Text/218/text,Murphyの声が震える。「もう冗談なんかじゃなかったんだ。」
+Text/219/text,君は面白くないと言った。君の言う通りだ。[color=STEEL_BLUE]これは少しも面白くない。[/color]
+Text/21a/text,君が席を立つのが見えたよ。賢いな。あの食べ物を食べるのをやめられたらいいのに、でも奴らは[color=YELLOW]見ている[/color]。いつも見張っているんだ。
+Text/21b/text,従兄弟の持ち物の中に何か見つけたんだ。彼の不合格通知書だ。いつものやつなんだが…
+Text/21c/text,Murphyはくしゃくしゃの書類を取り出す。「処理コードを見てくれ。[color=CRIMSON]RR-UTIL-7[/color]だ。」
+Text/21d/text,資料室で調べてみたんだ。RRは[pulse freq=2][color=DARK_VIOLET]根源貯蔵庫[/color][/pulse]の略だ。UTILは…[color=CRIMSON]利用[/color]を意味する。
+Text/21d_breakdown1/text,[wave amp=20 freq=3]Murphyの手が震え始める。[/wave]私の従兄弟が…トミーが…まだ23歳だったんだ。
+Text/21d_breakdown2/text,彼は[color=CHARTREUSE]より良い生活[/color]を求めてここに来たんだ。検査に一度だけ落ちた。たった一度だ。[color=STEEL_BLUE]ただ運が悪かっただけなんだ。[/color]
+Text/21d_breakdown3/text,Murphyは壁にもたれて座り込み、顔を手で覆う。「そして俺は…俺はあの食べ物を[tornado radius=3 freq=2][color=CRIMSON]食べた[/color]んだ。毎日。」
+Text/21d_breakdown4/text,Murphyは涙を流しながらあなたを見上げる。「[pulse freq=2][color=CRIMSON]もし俺が、彼を食べたとしたら？[/color][/pulse]」
+Choice/21e/text,Murphy…本当に気の毒だ。君の味方だ。一緒に真実を見つけよう。
+Choice/21f/text,Murphy、これは危険だ。私たちは関わるべきではない。
+Choice/220/text,もしかしたら偶然かもしれない。結論を急がないでおこう。
+Text/221_comfort1/text,あなたはMurphyの傍らにひざまずき、彼の肩に手を置く。
+Text/221/text,Murphyは命綱のようにあなたの腕を掴む。「[color=CHARTREUSE]ありがとう。[/color]自分がおかしくなったのかと思ったよ。」
+Text/221_tommy/text,[color=STEEL_BLUE]彼の声がわずかに落ち着く。[/color]「トミーのために。私たちはトミーのためにこれをやるんだ。そして彼らが連れて行った他の皆のためにも。」
+Text/222/text,他にも疑っている奴らがいるんだ。サーシャが仲間を集めている。彼女は君を信頼していると思うよ。
+Text/223/text,Murphyは目を拭い、気を取り直そうとする。「ああ。ああ、君の言う通りだろうな。何も言わなかったことにしてくれ。」
+Text/224/text,でも、もし気が変わったら…俺はここにいる。[color=STEEL_BLUE]疑問と悪夢を抱えて一人で。[/color]
+Text/225/text,「偶然だと。」Murphyは涙を流しながら苦笑する。「そうだな。そしてトミーはただ跡形もなく[color=CRIMSON]消えた[/color]とでも言うのか。」
+Text/226/text,そう自分に言い聞かせ続けるんだな。それでどれだけ眠れるか見てみろ。[color=STEEL_BLUE]俺は眠れないが。[/color]
+Text/227/text,最後のシフトが終わる頃、サーシャがあなたのブースに現れる。「幽霊でも見たような顔をしているな。」
+Text/228/text,マーフィーがいとこの話をした、ってところかな？
+Text/229/text,サーシャは満足げに頷いた。よし。我々は疑問を抱く人間が必要だ。
+Text/22a/text,サーシャはあなたの顔を注意深く観察した。怯えているな。それは賢明だ。だが、恐怖は誰も救わない。
+Text/22b/text,初日からずっと見ていた。ラセットが「処理」について話した時、あなたが[color=YELLOW]ためらった[/color]様子を。
+Text/22c/text,拒否されたじゃがいもがどうなるのか、あなたは尋ねた。度胸があるな。[color=CHARTREUSE]ほとんどの者は敬礼してスタンプを押すだけだ。[/color]
+Text/22d/text,サーシャは身を乗り出した。あるパターンがある。我々が拒否したじゃがいもは、どれもこれも…48時間以内に消える。強制送還記録も、転送記録も一切ない。
+Text/22e/text,しかし、[color=DARK_VIOLET]根源貯蔵庫[/color]の生産量は？[tornado radius=3 freq=2][color=CRIMSON]増える。[/color][/tornado]毎回、必ずだ。
+Choice/22f/text,信じます。何か手伝えることは？
+Choice/230/text,全てを危険に晒す前に、証拠が必要です。
+Text/231/text,サーシャの目が輝いた。やはり、見込んだ通りだ。明日の夜、シフトの後だ。私が見つけたものを見せよう。
+Text/232/text,それまでは。
+Text/233/text,無理もない。証拠は用意する。ただ…明日のシフト中、目を光らせておけ。
+Text/234/text,[color=CRIMSON]拒否されたじゃがいも[/color]がどこへ行くのか、よく見ておけ。もし可能なら、トラックを追え。
+Text/235/text,あなたは、あの必死なじゃがいもがくれた写真を取り出した。彼女の妻だ。[color=STEEL_BLUE]彼女は今、どこにいる？[/color]
+Text/236/text,もしサーシャとマーフィーの言っていることが本当なら…彼女はもう…
+Text/237/text,あなたはその考えを最後まで巡らせることはできなかった。しかし、あなたは[color=CHARTREUSE]彼女の顔を忘れない[/color]だろう。
+Text/238/text,明日、全てが変わる。答えを見つけるか、永遠に疑問を葬り去るかだ。
+Text/239/text,確かなことが一つある。[color=YELLOW]無知の幸福にはもう戻れない[/color]。
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

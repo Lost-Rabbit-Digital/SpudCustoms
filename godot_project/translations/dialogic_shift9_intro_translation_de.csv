@@ -1,0 +1,28 @@
+﻿keys,de
+Text/140/text,"Die Grenze gleicht einer [pulse freq=3][color=CRIMSON]Kriegszone[/color][/pulse]. Barrikaden, gepanzerte Fahrzeuge und Elitewachen stehen bereit. Heute ist der Tag, an dem der Widerstand zuschlagen wollte."
+Text/141/text,"[wave amp=25 freq=3][color=YELLOW]NOTFALLMELDUNG[/color][/wave]: Ganz Spud steht unter [color=RED]Kriegsrecht[/color]. ""Der Widerstand"" hat Angriffe auf Regierungseinrichtungen gestartet."
+Text/142/text,"Jeder, der diesen [color=CRIMSON]Extremisten[/color] hilft, wird [color=DARK_VIOLET]sofort verarbeitet[/color]. Das Ministerium bestätigt: [color=DARK_VIOLET]Wurzelreserve[/color] bleibt sicher für alle [color=DARK_ORANGE]loyalen Kartoffeln[/color]."
+Text/143/text,[color=YELLOW]Unruhen sind ausgebrochen[/color] in mehreren Sektoren. Widerstandszellen haben drei [color=DARK_VIOLET]Wurzelreserve[/color]-Einrichtungen angegriffen.
+Text/144/text,Ihr Ziel: Zugang zur zentralen Datenbank mit allen Produktionsaufzeichnungen. Jedes Anzeichen von Illoyalität bedeutet Verarbeitung.
+Text/145/text,"Wir haben mehrere Widerstandsoperative gefangen genommen, darunter Offizierin Sasha."
+Text/146/text,"Die [tornado radius=3 freq=2][color=CRIMSON]wahren Verräter[/color][/tornado] sind diejenigen, die [color=DARK_VIOLET]unser Volk mit sich selbst füttern[/color]. Ihr könnt die Wahrheit nicht aufhalten!"
+Text/147/text,"Sie wird weggeschleppt und ruft immer noch: [color=CHARTREUSE]Das Volk wird erfahren, was in ihrem Essen ist![/color]"
+Text/148/text,"Die [color=CRIMSON]Verräterin[/color] wird [pulse freq=3][color=DARK_VIOLET]sofort verarbeitet[/color][/pulse]. Eine spezielle Charge [color=DARK_VIOLET]Wurzelreserve[/color], hergestellt aus den Terroristen selbst."
+Text/149/text,"Alle Grenzübergänge sind [color=RED]ausgesetzt[/color], außer für essentielles Personal mit [color=GOLD]Freigabestufe Alpha[/color]."
+Text/14a/text,Dieser Scanner [color=YELLOW]kann nicht getäuscht werden[/color]. Lösen Sie sofort Alarm aus für jeden ohne ordnungsgemäße Freigabe.
+Text/14b/text,Eine Kartoffel in offizieller Uniform nähert sich mit scheinbar perfekten Alpha-Berechtigungen.
+Text/14c/text,"Eine kleine blaue Karte fällt aus dem Ordner. ""[wave amp=15 freq=3][color=CHARTREUSE]Die Wurzeln wachsen tief.[/color][/wave]"", murmeln sie, als sie die Karte aufheben."
+Choice/14d/text,"Lassen Sie sie durch, ignorieren Sie die Scanner-Alarme (Helfen Sie dem Widerstand)"
+Choice/14e/text,Lösen Sie sofort Alarm aus (Verraten Sie den Widerstand)
+Text/14f/text,"Erleichterung zeigt sich in ihren Augen. ""[color=CHARTREUSE]Für Sasha. Für Spud.[/color]"" Sie verschwinden in Richtung der zentralen Datenbank."
+Text/150/text,"Entsetzen breitet sich auf ihrem Gesicht aus. ""[color=CRIMSON]Du Verräter! Wir haben dir vertraut![/color]"" Sie werden schnell von Wachen umzingelt."
+Text/151/text,Ausgezeichnete Arbeit. Ihre Loyalität wird belohnt werden.
+Text/152/text,"Plötzlich [color=YELLOW]erschüttert die Einrichtung durch Explosionen[/color]. Der Angriff des Widerstands hat begonnen, unabhängig von Ihrer Wahl."
+Text/153/text,"Soll ich auf meinem Posten bleiben und hoffen, dass sich das legt, oder [color=CHARTREUSE]Stellung beziehen[/color] und alles riskieren, um die Wahrheit aufzudecken?"
+Choice/154/text,Ich kann meine Pflicht nicht aufgeben. Ich werde schweigen und auf das Beste hoffen.
+Choice/155/text,"Ich war zu lange mitschuldig. Es ist Zeit, für das Richtige zu kämpfen."
+Choice/155/disabled_text,
+Choice/14d/disabled_text,
+Choice/154/disabled_text,
+Choice/14e/disabled_text,
+Text/156/text,[pulse freq=3][color=YELLOW]Beeil dich![/color][/pulse] Die Sicherheitskräfte sind in Aufruhr – das ist deine einzige Chance zur Flucht!

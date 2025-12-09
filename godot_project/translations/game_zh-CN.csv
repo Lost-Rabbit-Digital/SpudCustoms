@@ -1,0 +1,54 @@
+﻿keys,zh-CN
+alert_border_runner,检测到边境逃犯！\n点击发射导弹！
+alert_rejected_fleeing,被拒土豆逃逸！\n点击发射导弹！
+alert_runner_escaped,逃犯逃逸！\n增加一次失误！
+alert_points_deducted,逃犯逃逸！\n增加一次失误！\n扣除{penalty}点分数！
+alert_perfect_hit,完美命中！\n精准度奖励：+{perfect}点！
+alert_perfect_stamp,完美盖章！\n+{points}点分数！
+alert_combo,连击 x{mult}！\n连击奖励：+{streak}点！
+alert_quota_met,配额已达，班次完成！\n奖励：{bonus}点分数！
+alert_strike_removed,失误已移除！
+alert_correct_decision,您做出了正确的选择，警官。\n+{points}点分数！
+alert_wrong_decision,您造成了不必要的痛苦，警官……\n增加1次失误！
+alert_potato_should_be_approved,\n此土豆符合所有要求，本应被批准通过。
+alert_strike_out,失误次数已达上限！您的班次结束了。
+ui_score,分数：{score}
+ui_quota,配额：{current} / {target}
+ui_strikes,失误：{current} / {max}
+ui_click_megaphone,点击扩音器呼叫下一位土豆
+ui_drag_document,将文件拖到检查台
+ui_stamp_document,选择印章以批准或拒绝
+ui_check_violations,检查文件违规
+Strike removed!,失误已移除！
+BORDER RUNNER DETECTED!\nClick to launch missile!,检测到边境逃犯！\n点击发射导弹！
+REJECTED POTATO FLEEING!\nClick to launch missile!,被拒土豆逃逸！\n点击发射导弹！
+RUNNER ESCAPED!\nStrike added!,逃犯逃逸！\n增加一次失误！
+Click megaphone to call the next potato,点击扩音器呼叫下一位土豆
+Drag document to inspection table,将文件拖到检查台
+Select a stamp to approve or reject,选择印章以批准或拒绝
+Check for document violations,检查文件违规
+rule_explanation_header,规则说明：
+rule_explanation_fresh,查看“状况”字段。如果显示“新鲜”以外的任何内容 - 拒绝
+rule_explanation_sweet_potato,查看“类型”字段。如果显示“甘薯” - 拒绝（无许可证）
+rule_explanation_chip_hill,查看“国家”字段。如果显示“薯片山” - 拒绝（禁止入境）
+rule_explanation_age,查看“出生”字段。计算年龄并对照规则检查
+rule_explanation_gender,查看“性别”字段并对照当前规则检查
+rule_footer_text,这些规则必须对所有土豆强制执行
+rule_tutorial_hint,需要帮助？点击任意规则查看说明
+alert_correct_decision_detailed,正确决定！+{points} 分\n{reason}
+alert_wrong_decision_detailed,错误决定！增加一次失误！\n{reason}
+alert_reason_approved,土豆符合所有要求 - 批准
+alert_reason_should_reject,您本应拒绝此土豆
+tutorial_check_type,检查护照中的“类型”字段
+tutorial_check_condition,检查护照中的“状况”字段
+tutorial_check_country,检查护照中的“国家”字段
+tutorial_check_age,检查“出生”字段以计算年龄
+tutorial_check_gender,检查护照中的“性别”字段
+alert_streak_bonus_minigame,连对5次！奖励小游戏！
+alert_perfect_stamps_bonus_minigame,完美盖章！奖励小游戏！
+alert_runner_bonus_minigame,可疑活动！奖励小游戏！
+alert_new_minigame_unlocked,新小游戏解锁：{name}！
+alert_minigame_bonus,小游戏奖励：+{bonus} 分！
+high_score_display,最高分：{score}
+new_high_score,新高分！
+month_1,一月

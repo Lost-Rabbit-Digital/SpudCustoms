@@ -1,0 +1,28 @@
+﻿keys,id
+Text/140/text,"Perbatasannya tampak seperti [pulse freq=3][color=CRIMSON]zona perang[/color][/pulse]. Barikade, kendaraan lapis baja, dan penjaga elit siap siaga. Hari ini adalah ketika perlawanan berencana untuk menyerang."
+Text/141/text,"[wave amp=25 freq=3][color=YELLOW]SIARAN DARURAT[/color][/wave]: Seluruh Spud berada di bawah [color=RED]darurat militer[/color]. ""Perlawanan"" telah melancarkan serangan terhadap fasilitas pemerintah."
+Text/142/text,Siapa pun yang membantu [color=CRIMSON]ekstremis[/color] ini akan menghadapi [color=DARK_VIOLET]pemrosesan segera[/color]. Kementerian menegaskan: [color=DARK_VIOLET]Root Reserve[/color] tetap aman bagi semua [color=DARK_ORANGE]kentang loyal[/color].
+Text/143/text,[color=YELLOW]Kerusuhan telah merebak[/color] di beberapa sektor. Sel perlawanan telah menyerang tiga fasilitas [color=DARK_VIOLET]Root Reserve[/color].
+Text/144/text,Tujuan mereka: mengakses database pusat dengan semua catatan produksi. Setiap tanda ketidaksetiaan berarti pemrosesan.
+Text/145/text,"Kami telah menangkap beberapa operatif perlawanan, termasuk Petugas Sasha."
+Text/146/text,[tornado radius=3 freq=2][color=CRIMSON]Pengkhianat sebenarnya[/color][/tornado] adalah mereka yang [color=DARK_VIOLET]memberi makan rakyat kita satu sama lain[/color]. Kalian tidak bisa menghentikan kebenaran!
+Text/147/text,"Dia diseret pergi, masih berteriak: [color=CHARTREUSE]Rakyat akan tahu apa yang ada dalam makanan mereka![/color]"
+Text/148/text,"[color=CRIMSON]Pengkhianat[/color] itu akan [pulse freq=3][color=DARK_VIOLET]diproses segera[/color][/pulse]. Batch khusus [color=DARK_VIOLET]Root Reserve[/color], dibuat dari para teroris itu sendiri."
+Text/149/text,Semua penyeberangan perbatasan [color=RED]ditangguhkan[/color] kecuali untuk personel penting dengan [color=GOLD]izin Level Alpha[/color].
+Text/14a/text,Pemindai ini [color=YELLOW]tidak bisa ditipu[/color]. Bunyikan alarm segera untuk siapa pun tanpa izin yang tepat.
+Text/14b/text,Seekor kentang dalam seragam resmi mendekat dengan kredensial Alpha yang tampaknya sempurna.
+Text/14c/text,"Kartu biru kecil jatuh dari folder. ""[wave amp=15 freq=3][color=CHARTREUSE]Akar tumbuh dalam.[/color][/wave]"", mereka bergumam saat mengambil kartu itu."
+Choice/14d/text,"Proses mereka, abaikan peringatan pemindai (Bantu perlawanan)"
+Choice/14e/text,Bunyikan alarm segera (Khianati perlawanan)
+Text/14f/text,"Kelegaan tampak di mata mereka. ""[color=CHARTREUSE]Untuk Sasha. Untuk Spud.[/color]"" Mereka menghilang menuju database pusat."
+Text/150/text,"Kengerian muncul di wajah mereka. ""[color=CRIMSON]Kau pengkhianat! Kami mempercayaimu![/color]"" Mereka dengan cepat dikelilingi oleh penjaga."
+Text/151/text,Kerja bagus. Kesetiaanmu akan dihargai.
+Text/152/text,"Tiba-tiba, fasilitas itu [color=YELLOW]berguncang dengan ledakan[/color]. Serangan perlawanan telah dimulai, terlepas dari pilihanmu."
+Text/153/text,"Apakah aku tetap di posku dan berharap ini berlalu, atau [color=CHARTREUSE]mengambil sikap[/color] dan mempertaruhkan segalanya untuk mengungkap kebenaran?"
+Choice/154/text,Aku tidak bisa meninggalkan tugasku. Aku akan tetap diam dan berharap yang terbaik.
+Choice/155/text,Aku sudah terlalu lama terlibat. Saatnya berjuang untuk apa yang benar.
+Choice/155/disabled_text,
+Choice/14d/disabled_text,
+Choice/154/disabled_text,
+Choice/14e/disabled_text,
+Text/156/text,[pulse freq=3][color=YELLOW]Cepat bergerak![/color][/pulse] Petugas keamanan sedang kelabakan - inilah satu-satunya kesempatanmu untuk kabur!

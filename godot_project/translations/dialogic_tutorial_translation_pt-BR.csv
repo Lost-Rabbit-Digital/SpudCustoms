@@ -1,0 +1,33 @@
+﻿keys,pt-BR
+Text/156/text,Bem-vindo a [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs![/color][/pulse]
+Text/157/text,Este treinamento vai te ensinar as [wave amp=15 freq=2][color=DARK_ORANGE]habilidades essenciais[/color][/wave] necessárias para proteger as fronteiras de Spud.
+Text/158/text,Você foi selecionado(a) para uma função vital: [color=DARK_ORANGE]Oficial Alfandegário da Fronteira[/color].
+Text/159/text,Batatas imigrantes farão fila do lado de fora do seu escritório aqui.
+Text/15a/text,"Para começar a processar batatas, você precisa abrir sua cabine para atendimento com o interruptor aqui."
+Text/15b/text,Você sinalizará cada batata para se aproximar do seu escritório tocando o megafone.
+Text/15c/text,As batatas entrarão na cabine uma por uma e apresentarão seus documentos.
+Text/15d/text,"Primeiro, mova os documentos delas para a mesa de inspeção para uma análise melhor."
+Text/15e/text,"Então, procure por [tornado radius=3 freq=2][color=YELLOW]datas de validade expiradas, informações incorretas ou sinais de falsificação[/color][/tornado]."
+Text/15f/text,"Sua mesa tem carimbos para marcar documentos, você pode clicar aqui para puxar a barra de carimbos."
+Text/160/text,Então coloque o documento sob o carimbo que você deseja...
+Text/161/text,Clique no carimbo para marcar documentos como [color=CHARTREUSE]aprovado[/color] ou [color=CRIMSON]rejeitado[/color]...
+Text/162/text,E arraste o documento de volta para a batata para finalizar sua decisão!
+Text/163/text,"Às vezes, batatas tentarão [color=CRIMSON]passar correndo pelo seu posto de controle[/color]."
+Text/164/text,"Você tem um link direto em sua cabine, que permite controlar [pulse freq=3][color=CRIMSON]lançadores de mísseis[/color][/pulse] ao longo do muro da fronteira."
+Text/165/text,"Clique nesses ""fujões"" para lançar um míssil e pará-los."
+Text/166/text,"Lembre-se, cada fujão que passar contará como uma [wave amp=20 freq=3][color=CRIMSON]penalidade contra você[/color][/wave]."
+Text/167/text,"Muitas penalidades, e seu turno terminará... [tornado radius=3 freq=3][color=CRIMSON]permanentemente.[/color][/tornado]"
+Text/168/text,Cada turno tem uma [color=DARK_ORANGE]cota de batatas[/color] que você precisa processar para terminar o dia.
+Text/169/text,Sua pontuação acompanha seu desempenho em comparação com seus colegas oficiais neste posto de controle e oficiais em alfândegas distantes.
+Text/16a/text,"Após cada turno, você verá um resumo do seu desempenho e se você teve sucesso ou falhou em seu dever."
+Text/16b/text,Você verá um detalhamento de como você lidou com os fujões e quantos documentos você processou.
+Text/16c/text,"Além de quaisquer bônus que você ganhou por processar documentos rapidamente, alinhar carimbos perfeitamente ou atingir batatas fujonas perfeitamente."
+Text/16d/text,"Você também receberá uma classificação de desempenho com base em quão bem você processou batatas durante seu turno, e até 3 carimbos dourados se você exceder as expectativas."
+Text/16e/text,Aqui você pode enviar sua pontuação de cada turno para o banco de dados global de oficiais alfandegários e ver como você se compara aos oficiais alfandegários mais de elite do mundo.
+Text/16f/text,"Se o seu turno foi bem-sucedido, você poderá prosseguir clicando em ""Continuar"" e começando seu próximo turno."
+Text/170/text,"Seu trabalho é simples. Batatas chegam à sua cabine, você verifica os documentos delas e decide quem passa."
+Text/171/text,Eu vou te guiar pelos conceitos básicos [color=YELLOW]passo a passo[/color]. Siga as instruções e você vai pegar o jeito.
+Text/172/text,A segurança de Spud depende da sua [pulse freq=2][color=DARK_ORANGE]vigilância![/color][/pulse]
+Text/174/text,Vamos começar seu [color=YELLOW]turno de treinamento[/color]...
+Text/180/text,Mas tenha cuidado - nem toda batata tem seus documentos em ordem.
+Text/181/text,[color=RED]Passaportes vencidos[/color] são uma rejeição automática. Sem exceções.

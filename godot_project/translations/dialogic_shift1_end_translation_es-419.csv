@@ -1,0 +1,34 @@
+﻿keys,es-419
+Text/50/text,"Trabajo adecuado hoy, retoño. Recuerda, la eficiencia es clave. Tenemos cuotas que cumplir."
+Text/51/text,"No olvides recoger tu ración de [wave amp=15 freq=2][color=DARK_VIOLET]Reserva de Raíz[/color][/wave]. Ya sabes lo que dice la radio, ¡es el sabor del futuro de Spud!"
+Text/52/text,"Mientras recoges tus cosas, una pequeña nota se desliza de entre tus papeles de trabajo."
+Text/52b/text,No estaba allí esta mañana. Alguien la colocó [color=YELLOW]durante tu turno[/color].
+Text/53/text,[color=GOLD]No todo es lo que parece. Las raíces de nuestra nación se han podrido.[/color]
+Text/53b/text,"[color=GOLD]Sigue el rastro, pero ten cuidado de no ser silenciado.[/color]"
+Text/53c/text,[color=GOLD]Observa quién come la [/color][color=DARK_VIOLET]Reserva[/color][color=GOLD]. Observa quién se niega.[/color]
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]Un amigo[/color]
+Choice/53e/text,"""Mantén la nota oculta - investiga en silencio"""
+Choice/53f/text,"""Destruye la nota - esto podría ser una prueba"""
+Choice/53g/text,"""Muestra la nota a Russet inmediatamente"""
+Text/53h/text,Doblas la nota con cuidado y la deslizas en tu bolsillo. [color=CHARTREUSE]Alguien está contactando.[/color]
+Text/53i/text,"¿Pero quién? ¿Y por qué tú, en tu primer día?"
+Text/53j/text,Rompes la nota en pedacitos
+Text/53k/text,"Russet dijo que los retoños que hacen preguntas son ""reasignados"". Mejor no arriesgarse."
+Text/53l/text,"Alcanzas a Russet antes de que se vaya. ""¿Señor? Encontré esto en mis papeles..."""
+Text/53m/text,"Russet arrebata la nota, la lee. Su expresión parpadea - [color=YELLOW]¿fue eso reconocimiento?[/color]"
+Text/53n/text,Propaganda. Rebeldes intentando corromper a nuevos oficiales. [color=DARK_ORANGE]Hiciste bien en traerme esto.[/color]
+Text/53o/text,Él guarda la nota en su bolsillo. Olvida que alguna vez la viste. Y estate atento a cualquiera que actúe... [color=CRIMSON]sospechoso[/color].
+Text/54/text,Esa nota... y la forma en que Russet respondió mi pregunta sobre [pulse freq=3][color=CRIMSON]patatas rechazadas[/color][/pulse]...
+Text/54b/text,"""[color=VIOLET]Procesadas. Según protocolo.[/color]"" ¿Qué significa eso?"
+Text/54c/text,Esa nota... decía que las raíces se han [color=CRIMSON]podrido[/color].
+Text/54d/text,"Pero Spud es gloriosa, ¿no? Eso es lo que nos dijeron. Lo que yo creía."
+Text/54e/text,"Sacas la nota, leyéndola de nuevo. ""[color=GOLD]Observa quién come la Reserva. Observa quién se niega.[/color]"""
+Text/54f/text,"Mañana, prestarás atención. [color=YELLOW]Alguien está intentando decirte algo.[/color]"
+Text/54g/text,"La cara de Russet cuando leyó la nota. Por un momento, pareció casi... [color=STEEL_BLUE]asustado[/color]."
+Text/54h/text,¿Qué es realmente [color=DARK_VIOLET]Root Reserve[/color]? ¿Y por qué alguien te advertiría al respecto?
+Text/54i/text,"La nota se ha ido, pero las palabras persisten. [color=YELLOW]No todo es lo que parece.[/color]"
+Text/54j/text,Quizás destruirla fue la elección inteligente. Quizás acabas de silenciar a tu único aliado.
+Text/55/text,Debería mantenerme [color=YELLOW]alerta[/color]. Aquí está pasando algo más que sellar pasaportes.
+Choice/53e/disabled_text,
+Choice/53f/disabled_text,
+Choice/53g/disabled_text,

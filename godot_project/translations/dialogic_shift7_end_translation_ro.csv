@@ -1,0 +1,92 @@
+﻿keys,ro
+Text/d2/text,"După tura ta, ești condus la o întâlnire secretă a rezistenței într-o fabrică abandonată de amidon."
+Text/d3/text,"Un cartof uzat, cu cicatrici de luptă, se adresează grupului adunat."
+Text/d4/text,Timpul pentru șoapte și pamflete s-a terminat. Guvernul și-a arătat adevăratele culori.
+Text/d5/text,Sursele noastre confirmă că fabricile de procesare [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] își cresc producția.
+Text/d6/text,"Ceea ce înseamnă [tornado radius=3 freq=3][color=CRIMSON]mai mulți dintre frații și surorile noastre dispăruți, procesați, consumați[/color][/tornado]."
+Text/d7/text,Liderul lovește cu pumnul în masă. [pulse freq=3][color=CHARTREUSE]Asta se termină acum.[/color][/pulse] Avem un plan de a lovi în inima operațiunii lor.
+Text/d8/text,"Sasha desfășoară planuri detaliate pe masă. În trei zile, vom lansa ofensiva noastră principală."
+Text/d9/text,"În timp ce o echipă creează o diversiune la complexul guvernamental principal, alta va infiltra cea mai mare facilitate Root Reserve."
+Text/da/text,"Obiectivul nostru: să obținem [color=CHARTREUSE]dovezi irefutabile[/color] despre ce se întâmplă înăuntru, să le transmitem în tot Spud."
+Text/db/text,Sasha indică o secțiune a planurilor. Aici intri tu în scenă.
+Text/dc/text,Avem nevoie de cineva din interiorul Vămii Spud pentru a ne asigura că operativii noștri pot traversa granița pentru misiune.
+Text/dd/text,Putem conta pe tine să fii acea persoană?
+Choice/de/text,Voi face tot ce este necesar pentru a dezvălui adevărul.
+Choice/df/text,Sună periculos. Dar dacă suntem prinși?
+Choice/e0/text,Există o altă cale care să nu pună atât de mulți în pericol?
+Text/e1/text,Fața Sashei se luminează de speranță. Mulțumesc. [color=CHARTREUSE]Curajul tău va salva nenumărate vieți.[/color]
+Text/e2/text,"Îți strânge mâna. Când totul se va termina, [color=CHARTREUSE]vei fi ținut minte ca un erou al revoluției.[/color]"
+Text/e3/text,Sasha dă din cap solemn. Este periculos. Nu te voi minți despre asta.
+Text/e4/text,Am putea cu toții să sfârșim [color=DARK_VIOLET]procesați în Root Reserve[/color] dacă eșuăm.
+Text/e5/text,"Dar a nu face nimic este și mai periculos. Pentru noi toți, pe termen lung."
+Text/e6/text,Expresia Sashei devine sumbră. Am încercat alte căi. Ani de zile.
+Text/e7/text,Petiții. Diplomație tăcută. Informații anonime. Nimic nu a funcționat.
+Text/e8/text,Uneori trebuie să riști totul pentru a schimba ceva.
+Text/e9/text,O dezbatere aprinsă izbucnește printre membrii rezistenței.
+Text/ea/text,Unii pledează pentru o abordare mai agresivă — distrugerea completă a fabricilor de procesare.
+Text/eb/text,Alții insistă că acțiunea violentă va întoarce doar opinia publică împotriva lor.
+Text/ec/text,DESTUL! Liderul liniștește încăperea cu o voce autoritară.
+Text/ed/text,"Nu ne putem permite să fim divizați. Nu acum, când suntem atât de aproape."
+Text/ee/text,Scopul nostru este simplu: să dezvăluim adevărul. Lăsați oamenii să decidă ce se întâmplă în continuare.
+Text/ef/text,Liderul se întoarce pentru a ți se adresa direct. Dar trebuie să știm [color=YELLOW]unde te situezi[/color].
+Text/f0/text,"În trei zile, agenții noștri se vor apropia de punctul tău de control. Vor purta [color=CHARTREUSE]carduri de identificare albastre[/color]."
+Text/f1/text,Îi vei ajuta să treacă? Răspunsul tău acum va determina următoarea noastră mișcare.
+Choice/f2/text,Îi voi ajuta să treacă. Pentru viitorul lui Spud.
+Choice/f3/text,"Nu pot fi implicat direct, dar voi privi în altă parte."
+Choice/f4/text,Am nevoie de mai mult timp să mă gândesc la asta.
+Text/f5/text,Liderul îți strânge umărul cu fermitate. [color=CHARTREUSE]Curajul tău ne onorează pe toți.[/color]
+Text/f6/text,"În a treia zi, când soarele e cel mai sus, agenții noștri vor veni."
+Text/f7/text,"Parola este ""[wave amp=15 freq=3][color=CHARTREUSE]Rădăcinile cresc adânc.[/color][/wave]"" Ține minte."
+Text/f8/text,"Liderul dă din cap încet, evident dezamăgit, dar înțelegător."
+Text/f9/text,"Uneori, cel mai mult ce putem cere este ca oamenii să nu ne stea în cale."
+Text/fa/text,Agenții noștri vor proceda conform planului. Doar... nu da alarma.
+Text/fb/text,Expresia liderului se înăsprește. [color=YELLOW]Timpul e un lux pe care nu-l avem.[/color]
+Text/fc/text,Dar a forța pe cineva să se alăture cauzei noastre nu ne face mai buni decât ei.
+Text/fd/text,Vom continua fără să contăm pe ajutorul tău. Caută-ți în conștiință.
+Text/fe/text,"Pe măsură ce întâlnirea se încheie, Sasha merge cu tine înapoi spre punctul de control."
+Text/ff/text,Orice s-ar întâmpla... mulțumesc pentru tot ce ai făcut.
+Text/100/text,"Te întorci la cazarea ta de la punctul de control, mintea îți gonește sub greutatea evenimentelor ce vor urma."
+Text/101/text,"În doar trei zile, totul s-ar putea schimba. [color=YELLOW]În bine sau în rău.[/color]"
+Choice/de/disabled_text,
+Choice/f4/disabled_text,
+Choice/f3/disabled_text,
+Choice/f2/disabled_text,
+Choice/e0/disabled_text,
+Choice/df/disabled_text,
+Text/d2b/text,Înainte să începem... Am o mărturisire de făcut.
+Text/d2c/text,"Bilețelul ăla pe care l-ai găsit în prima zi? ""[color=GOLD]Un prieten[/color]""?"
+Text/d2d/text,Sasha zâmbește. Văd că l-ai păstrat. Inteligent. Știam că am ales lăstarul potrivit.
+Text/d2e/text,"Am urmărit ofițeri noi de luni de zile, căutând pe cineva cu [color=CHARTREUSE]ochi întrebători[/color]. Cineva care ar putea vedea dincolo de minciuni."
+Text/d2f/text,Expresia Sashei este complicată. I l-ai arătat lui Russet. A trebuit să mă ascund săptămâni întregi după asta.
+Text/d2g/text,Dar iată-te aici oricum. Asta îmi spune ceva despre conștiința ta.
+Text/d2h/text,L-ai distrus. Nu te învinuiesc - era riscant să-l păstrezi.
+Text/d2i/text,"Dar cuvintele și-au găsit oricum drumul în mintea ta, nu-i așa?"
+Text/d2j/text,"[color=CHARTREUSE]Eu sunt ""Un prieten.""[/color] Și acum știi de ce."
+Text/d2k/text,Sasha întinde documente capturate pe masă. Manifeste de procesare din ultima lună.
+Text/d2l/text,"Scanezi numele, și sângele îți îngheață."
+Text/d2m/text,Iată-l. [color=GOLD]Maris Piper[/color]. Femeia din fotografie.
+Text/d2n/text,"""[color=CRIMSON]Status: Procesat. Lot RR-2847.[/color]"" Datat la trei zile după ce soțul ei a implorat ajutorul tău."
+Text/d2o/text,Simți fotografia în buzunar. [color=STEEL_BLUE]Ea a dispărut. Și nu ai putut s-o salvezi.[/color]
+Text/d2p/text,Dar poate... [color=CHARTREUSE]poate poți salva totuși pe alții[/color].
+Text/d2q/text,Murphy iese din umbră. Hei. Mă bucur că ai reușit.
+Text/d2r/text,Murphy ridică formularul șifonat RR-UTIL. Vărul meu e și el pe lista aia. [color=CHARTREUSE]Facem asta împreună.[/color]
+Text/ff2/text,[color=STEEL_BLUE]Ea își păstrează distanța în timp ce mergi.[/color] Apreciez că nu ne stai în cale. E... ceva.
+Text/ff3/text,"[color=STEEL_BLUE]Ea merge în tăcere, cu brațele încrucișate.[/color] Sper să găsești orice certitudine cauți. Restul dintre noi nu-și permit să aștepte."
+Text/100_viktor1/text,"Pe drumul de întoarcere, îl găsești pe Viktor singur pe acoperișul punctului de control, privind cerul nopții."
+Text/100_viktor2/text,Viktor ține un mic
+Text/100_viktor3/text,"Ea spunea că, oricât de întunecate ar deveni lucrurile, stelele tot ar fi acolo. [color=STEEL_BLUE]Constante. Frumoase.[/color]"
+Text/100_viktor4/text,"Se întoarce spre tine, cu ochii sclipind. [wave amp=15 freq=2]Mă tot gândesc... a suferit?[/wave] Știa ce se întâmplă?"
+Text/100_viktor5/text,Vocea lui Viktor se frânge. M-a întrebat odată dacă am pus vreodată la îndoială refuzurile. I-am spus [color=CRIMSON]să aibă încredere în sistem[/color].
+Text/100_viktor6/text,[tornado radius=3 freq=2][color=CRIMSON]Mi-am trimis propria soție la cuvele de procesare fără să știu.[/color][/tornado]
+Choice/100_viktor_choice1/text,N-aveai cum să știi. Niciunul dintre noi nu știa.
+Choice/100_viktor_choice2/text,"Elena ar vrea să lupți acum, nu să te îneci în vină."
+Choice/100_viktor_choice3/text,Nu știu ce să spun. Îmi pare rău.
+Text/100_viktor7/text,El clatină încet din cap. [color=STEEL_BLUE]Ignoranța nu e inocență. Trebuia să întreb. Trebuia să ascult.[/color]
+Text/100_viktor8/text,Viktor pune cu grijă fotografia la loc. [color=CHARTREUSE]Dar acum știu. Și a ști înseamnă că trebuie să acționez.[/color]
+Text/100_viktor9/text,"Viktor se îndreaptă, un foc rece reaprins în ochii lui. [color=CHARTREUSE]Ai dreptate.[/color] Ea era mai puternică decât mine. Mai curajoasă."
+Text/100_viktor10/text,El își strânge pumnul. [color=CHARTREUSE]Când va veni timpul
+Text/100_viktor11/text,[pulse freq=2][color=CRIMSON]Și Idaho va plăti pentru fiecare viață pe care a consumat-o.[/color][/pulse]
+Text/100_viktor12/text,Viktor schițează un trist
+Text/100_viktor13/text,El privește înapoi la stele. [color=STEEL_BLUE]Elenei i-ar fi plăcut de tine.[/color]
+Text/100_viktor14/text,"El se întoarce să plece, apoi se oprește. [color=CHARTREUSE]Când rezistența va acționa... voi fi pregătit.[/color]"
+Text/100_viktor15/text,Pentru Elena. Pentru toți. [pulse freq=2][color=CHARTREUSE]Gărzile mă vor urma când le voi spune adevărul.[/color][/pulse]

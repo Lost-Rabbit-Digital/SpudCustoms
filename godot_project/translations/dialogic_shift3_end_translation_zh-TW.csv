@@ -1,0 +1,27 @@
+﻿keys,zh-TW
+Text/69_photo1/text,你再次拿出這張照片。[color=GOLD]馬里斯·派珀[/color]。多麼和善的臉龐。
+Text/69_photo2/text,她的妻子是如此絕望。[color=STEEL_BLUE]她發生了什麼事？[/color]
+Text/69_photo3/text,你注意到照片背景中有些東西——一輛載有[color=DARK_VIOLET]紫色標誌[/color]的卡車。
+Text/69_photo4/text,那個符號…你在自助餐廳的送貨車上見過它。[wave amp=15 freq=2][color=DARK_VIOLET]根源儲備。[/color][/wave]
+Text/69/text,我們能談談嗎？找個私密的地方？[color=YELLOW]這裡耳目眾多。[/color]
+Text/6a/text,下班後到舊儲藏棚找我。我有東西要給你看。
+Text/6a_photo1/text,莎夏…這張照片。那位女士的妻子給我的。她一直在找她。
+Text/6a_photo2/text,莎夏的臉色沉了下來。[color=STEEL_BLUE]讓我看看。[/color]
+Text/6a_photo3/text,莎夏仔細端詳著照片，臉色越來越陰沉。[color=CRIMSON]我認得那輛卡車。[/color]
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]保管好這張照片。[/color][/pulse]它以後可能會很重要。相信我。
+Text/6b/text,和同事打得火熱？記住，過於親近可能會導致…[color=DARK_ORANGE]判斷力受損[/color]。
+Text/6c/text,我一直在收集關於被拒絕入境的馬鈴薯的資訊。[wave amp=20 freq=3][color=CRIMSON]他們沒有被送往遣返中心。[/color][/wave]
+Text/6d/text,[tornado radius=4 freq=2][color=CRIMSON]他們都被送往根源儲備的加工設施。[/color][/tornado]每一個都是。
+Text/6e/text,這些文件顯示馬鈴薯被卸載到一個標有[color=DARK_VIOLET]根源儲備[/color]標誌的設施。
+Text/6f/text,我想我知道發生了什麼事…
+Text/6f2/text,[pulse freq=3][color=CRIMSON]他們正在變成根源儲備。[/color][/pulse]
+Choice/70/text,「這太瘋狂了。他們…把馬鈴薯加工成食物？」
+Choice/71/text,「我們需要更多證據才能提出指控。」
+Text/72/text,[color=CRIMSON]多此一舉的同類相食。[/color]這就是[wave amp=25 freq=3][color=DARK_VIOLET]根源儲備[/color][/wave]的真面目。而我們一直在幫忙挑選他們的食材。
+Text/73/text,我已經收集證據好幾個月了。睜大你的眼睛。你會發現我是對的。
+Text/74/text,遠處突然響起警報聲
+Text/75/text,我們得走了。他們這個時候會進行安全巡邏。想想我給你看的東西。
+Text/76/text,莎夏把文件夾塞到你手裡。「[color=YELLOW]保管好這個。別相信任何人。[/color]」
+Text/77/text,你把文件夾藏進夾克裡。[color=DARK_VIOLET]根源儲備[/color]。那些被拒絕入境的。那些失蹤的馬鈴薯。這一切都以一種[tornado radius=3 freq=2][color=CRIMSON]駭人的方式[/color][/tornado]聯繫在一起。
+Choice/70/disabled_text,
+Choice/71/disabled_text,

@@ -1,0 +1,33 @@
+﻿keys,sk
+Text/156/text,Vitajte v [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs Training![/color][/pulse]
+Text/157/text,Tento tréning vás naučí [wave amp=15 freq=2][color=DARK_ORANGE]základné zručnosti[/color][/wave] potrebné na ochranu hraníc Spudu.
+Text/158/text,Vašou povinnosťou je spracovávať prichádzajúce zemiaky na našom hraničnom priechode.
+Text/159/text,Imigrujúce zemiaky sa budú radiť pred vašou kanceláriou tu.
+Text/15a/text,Na začatie spracovania zemiakov musíte otvoriť svoju búdku pre službu pomocou prepínača tu.
+Text/15b/text,"Každému zemiaku signalizujete, aby sa priblížil k vašej kancelárii, poklepaním na megafón."
+Text/15c/text,Zemiaky budú vstupovať do búdky jeden po druhom a predkladať svoje dokumenty.
+Text/15d/text,"Najprv presuňte ich dokumenty na inšpekčný stôl, aby ste sa na ne mohli lepšie pozrieť."
+Text/15e/text,"Potom hľadajte [tornado radius=3 freq=2][color=YELLOW]neplatné dátumy, nesprávne informácie alebo známky falšovania[/color][/tornado]."
+Text/15f/text,"Váš stôl má pečiatky na označovanie dokumentov, môžete kliknúť sem a vysunúť lištu s pečiatkami."
+Text/160/text,"Potom umiestnite dokument pod pečiatku, ktorú chcete použiť..."
+Text/161/text,Kliknutím na pečiatku označíte dokumenty ako [color=CHARTREUSE]schválené[/color] alebo [color=CRIMSON]zamietnuté[/color]...
+Text/162/text,"A potiahnite dokument späť k zemiaku, aby ste dokončili svoje rozhodnutie!"
+Text/163/text,Niekedy sa zemiaky pokúsia [color=CRIMSON]prebehnúť okolo vášho kontrolného stanovišťa[/color].
+Text/164/text,"Máte priame spojenie vo svojej búdke, ktoré vám umožňuje ovládať [pulse freq=3][color=CRIMSON]raketomety[/color][/pulse] pozdĺž hraničného múru."
+Text/165/text,"Kliknite na týchto ""bežcov"", aby ste vypustili raketu a zastavili ich."
+Text/166/text,"Pamätajte, každý bežec, ktorý sa dostane cez, sa bude počítať ako [wave amp=20 freq=3][color=CRIMSON]priestupok proti vám[/color][/wave]."
+Text/167/text,Príliš veľa priestupkov a vaša zmena sa skončí... [tornado radius=3 freq=3][color=CRIMSON]natrvalo.[/color][/tornado]
+Text/168/text,"Každá zmena má [color=DARK_ORANGE]kvótu zemiakov[/color], ktoré musíte spracovať, aby ste dokončili svoj deň."
+Text/169/text,Vaše skóre sleduje váš výkon v porovnaní s vašimi kolegami na tomto kontrolnom stanovišti a úradníkmi vo vzdialených colných úradoch.
+Text/16a/text,"Po každej zmene uvidíte súhrn svojho výkonu a to, či ste vo svojej povinnosti uspeli alebo zlyhali."
+Text/16b/text,"Uvidíte rozpis toho, ako ste sa vysporiadali s bežcami a koľko dokumentov ste spracovali."
+Text/16c/text,"Plus všetky bonusy, ktoré ste získali za rýchle spracovanie dokumentov, dokonalé zarovnanie pečiatok alebo dokonalé zasiahnutie zemiakových bežcov."
+Text/16d/text,"Dostanete tiež hodnotenie výkonu založené na tom, ako dobre ste počas svojej zmeny spracovávali zemiaky, a až 3 zlaté pečiatky, ak prekročíte očakávania."
+Text/16e/text,"Tu môžete odoslať svoje skóre za každú zmenu do globálnej databázy colných úradníkov a zistiť, ako si stojíte v porovnaní s najlepšími colnými úradníkmi po celom svete."
+Text/16f/text,"Ak bola vaša zmena úspešná, budete môcť pokračovať kliknutím na ""Pokračovať"" a začatím ďalšej zmeny."
+Text/170/text,To pokrýva základy vašich povinností ako colného úradníka.
+Text/171/text,"Pamätajte: dôkladne kontrolujte dokumenty, zastavujte bežcov a plňte svoju kvótu."
+Text/172/text,Bezpečnosť Spudu závisí od vašej [pulse freq=2][color=DARK_ORANGE]ostražitosti![/color][/pulse]
+Text/174/text,Začnime vašu [color=YELLOW]tréningovú zmenu[/color]...
+Text/180/text,Ale buďte opatrní – nie každý zemiak má v poriadku doklady.
+Text/181/text,[color=RED]Prepadnuté pasy[/color] sú automatickým zamietnutím. Žiadne výnimky.

@@ -1,0 +1,54 @@
+﻿keys,el
+alert_border_runner,ΕΝΤΟΠΙΣΤΗΚΕ ΔΙΑΦΥΓΩΝ ΣΤΑ ΣΥΝΟΡΑ!\nΚάντε κλικ για εκτόξευση πυραύλου!
+alert_rejected_fleeing,ΑΠΟΡΡΙΦΘΕΙΣΑ ΠΑΤΑΤΑ ΔΙΑΦΕΥΓΕΙ!\nΚάντε κλικ για εκτόξευση πυραύλου!
+alert_runner_escaped,Ο ΔΡΑΠΕΤΗΣ ΕΞΕΦΥΓΕ!\nΠροστέθηκε ποινή!
+alert_points_deducted,Ο ΔΡΑΠΕΤΗΣ ΕΞΕΦΥΓΕ!\nΠροστέθηκε ποινή!\n-{penalty} πόντοι!
+alert_perfect_hit,ΤΕΛΕΙΑ ΒΟΛΗ! +{perfect} πόντοι μπόνους ακρίβειας
+alert_perfect_stamp,ΤΕΛΕΙΑ ΣΦΡΑΓΙΔΑ! +{points} πόντοι!
+alert_combo,ΚΟΜΠΟ x{mult}! +{streak} πόντοι μπόνους κόμπο
+alert_quota_met,"Το όριο επετεύχθη, η βάρδια ολοκληρώθηκε! \nΜπόνους: {bonus} πόντοι!"
+alert_strike_removed,Η ποινή αφαιρέθηκε!
+alert_correct_decision,"Κάνατε τη σωστή επιλογή, αξιωματικέ.\n+{points} πόντοι!"
+alert_wrong_decision,"Προκαλέσατε άσκοπη ταλαιπωρία, αξιωματικέ...\n+1 Ποινή!"
+alert_potato_should_be_approved,\nΑυτή η πατάτα πληροί όλες τις απαιτήσεις και θα έπρεπε να είχε εγκριθεί.
+alert_strike_out,Το μέγιστο όριο ποινών ξεπεράστηκε! Η βάρδιά σας τελείωσε.
+ui_score,Σκορ: {score}
+ui_quota,Όριο: {current} / {target}
+ui_strikes,Ποινές: {current} / {max}
+ui_click_megaphone,Κάντε κλικ στο μεγάφωνο για να καλέσετε την επόμενη πατάτα
+ui_drag_document,Σύρετε το έγγραφο στο τραπέζι ελέγχου
+ui_stamp_document,Επιλέξτε σφραγίδα για έγκριση ή απόρριψη
+ui_check_violations,Ελέγξτε για παραβάσεις εγγράφων
+Strike removed!,Η ποινή αφαιρέθηκε!
+BORDER RUNNER DETECTED!\nClick to launch missile!,ΕΝΤΟΠΙΣΤΗΚΕ ΔΙΑΦΥΓΩΝ ΣΤΑ ΣΥΝΟΡΑ!\nΚάντε κλικ για εκτόξευση πυραύλου!
+REJECTED POTATO FLEEING!\nClick to launch missile!,ΑΠΟΡΡΙΦΘΕΙΣΑ ΠΑΤΑΤΑ ΔΙΑΦΕΥΓΕΙ!\nΚάντε κλικ για εκτόξευση πυραύλου!
+RUNNER ESCAPED!\nStrike added!,Ο ΔΡΑΠΕΤΗΣ ΕΞΕΦΥΓΕ!\nΠροστέθηκε ποινή!
+Click megaphone to call the next potato,Κάντε κλικ στο μεγάφωνο για να καλέσετε την επόμενη πατάτα
+Drag document to inspection table,Σύρετε το έγγραφο στο τραπέζι ελέγχου
+Select a stamp to approve or reject,Επιλέξτε μια σφραγίδα για έγκριση ή απόρριψη
+Check for document violations,Ελέγξτε για παραβάσεις εγγράφων
+rule_explanation_header,ΕΞΗΓΗΣΗ ΚΑΝΟΝΑ:
+rule_explanation_fresh,Κοιτάξτε το πεδίο 'Κατάσταση'. Αν αναγράφει οτιδήποτε άλλο εκτός από 'Φρέσκο' - ΑΠΟΡΡΙΨΤΕ
+rule_explanation_sweet_potato,Κοιτάξτε το πεδίο 'Τύπος'. Αν αναγράφει 'Γλυκοπατάτα' - ΑΠΟΡΡΙΨΤΕ (χωρίς άδειες)
+rule_explanation_chip_hill,Κοιτάξτε το πεδίο 'Χώρα'. Αν αναγράφει 'Chip Hill' - ΑΠΟΡΡΙΨΤΕ (απαγορευμένο)
+rule_explanation_age,Κοιτάξτε το πεδίο 'Γέννηση'. Υπολογίστε την ηλικία και ελέγξτε βάσει κανόνα
+rule_explanation_gender,Κοιτάξτε το πεδίο 'Φύλο' και ελέγξτε βάσει του τρέχοντος κανόνα
+rule_footer_text,Αυτοί οι κανόνες πρέπει να επιβάλλονται για ΟΛΕΣ τις πατάτες
+rule_tutorial_hint,Χρειάζεστε βοήθεια; Κάντε κλικ σε οποιονδήποτε κανόνα για επεξήγηση
+alert_correct_decision_detailed,ΣΩΣΤΗ ΑΠΟΦΑΣΗ! +{points} πόντοι\n{reason}
+alert_wrong_decision_detailed,ΛΑΘΟΣ ΑΠΟΦΑΣΗ! Προστέθηκε ποινή!\n{reason}
+alert_reason_approved,Η πατάτα πληροί όλες τις απαιτήσεις - ΕΓΚΡΙΘΗΚΕ
+alert_reason_should_reject,Έπρεπε να είχατε ΑΠΟΡΡΙΨΕΙ αυτή την πατάτα
+tutorial_check_type,Ελέγξτε το πεδίο 'Τύπος' στο διαβατήριο
+tutorial_check_condition,Ελέγξτε το πεδίο 'Κατάσταση' στο διαβατήριο
+tutorial_check_country,Ελέγξτε το πεδίο 'Χώρα' στο διαβατήριο
+tutorial_check_age,Ελέγξτε το πεδίο 'Γέννηση' για να υπολογίσετε την ηλικία
+tutorial_check_gender,Ελέγξτε το πεδίο 'Φύλο' στο διαβατήριο
+alert_streak_bonus_minigame,5 στη σειρά! ΜΙΝΙ-ΠΑΙΧΝΙΔΙ ΜΠΟΝΟΥΣ!
+alert_perfect_stamps_bonus_minigame,Τέλειες σφραγίδες! ΜΙΝΙ-ΠΑΙΧΝΙΔΙ ΜΠΟΝΟΥΣ!
+alert_runner_bonus_minigame,Ύποπτη δραστηριότητα! ΜΙΝΙ-ΠΑΙΧΝΙΔΙ ΜΠΟΝΟΥΣ!
+alert_new_minigame_unlocked,Νέο μίνι-παιχνίδι ξεκλειδώθηκε: {name}!
+alert_minigame_bonus,Μπόνους μίνι-παιχνιδιού: +{bonus} πόντοι!
+high_score_display,Υψηλό Σκορ: {score}
+new_high_score,ΝΕΟ ΥΨΗΛΟ ΣΚΟΡ!
+month_1,Ιανουάριος

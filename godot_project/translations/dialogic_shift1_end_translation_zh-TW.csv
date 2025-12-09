@@ -1,0 +1,34 @@
+﻿keys,zh-TW
+Text/50/text,今天表現尚可，薯苗。記住，效率是關鍵。我們有配額要達成。
+Text/51/text,別忘了領取你的配給 [wave amp=15 freq=2][color=DARK_VIOLET]根源儲備[/color][/wave]。你知道廣播怎麼說的，這是薯國未來的滋味！
+Text/52/text,當你收拾物品時，一張小紙條從你的工作文件間滑落。
+Text/52b/text,今天早上它還不在那裡。有人在你[color=YELLOW]輪班期間[/color]放的。
+Text/53/text,[color=GOLD]一切並非表面所見。我們國家的根基已經腐爛。[/color]
+Text/53b/text,[color=GOLD]追查線索，但要小心，別被滅口。[/color]
+Text/53c/text,[color=GOLD]觀察誰吃了[/color][color=DARK_VIOLET]儲備[/color][color=GOLD]。觀察誰拒絕。[/color]
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]一位朋友[/color]
+Choice/53e/text,「把紙條藏起來——悄悄調查」
+Choice/53f/text,「銷毀紙條——這可能是一個考驗」
+Choice/53g/text,「立刻把紙條給魯塞特看」
+Text/53h/text,你小心地摺好紙條，塞進你的口袋。[color=CHARTREUSE]有人正在伸出援手。[/color]
+Text/53i/text,但會是誰？而且為什麼是你，就在你第一天上班？
+Text/53j/text,你把紙條撕成碎片
+Text/53k/text,魯塞特說，愛提問的薯苗會被「重新分配」。最好不要冒險。
+Text/53l/text,你在魯塞特離開前叫住他。「長官？我在我的文件裡發現了這個……」
+Text/53m/text,魯塞特搶過紙條，讀了起來。他的表情閃爍了一下——[color=YELLOW]那是認出來了嗎？[/color]
+Text/53n/text,宣傳。反叛者試圖腐蝕新任官員。[color=DARK_ORANGE]你把它交給我，做得對。[/color]
+Text/53o/text,他把紙條收進口袋。忘了你曾經看過它。並留意任何行為……[color=CRIMSON]可疑[/color]的人。
+Text/54/text,那張紙條……還有魯塞特回答我關於[pulse freq=3][color=CRIMSON]被拒絕的馬鈴薯[/color][/pulse]的方式……
+Text/54b/text,「[color=VIOLET]已處理。按照規程。[/color]」那到底是什麼意思？
+Text/54c/text,那張紙條……它說根基已經[color=CRIMSON]腐爛[/color]了。
+Text/54d/text,但薯國是光榮的，不是嗎？他們是這麼告訴我們的。我一直都這麼相信。
+Text/54e/text,你拿出紙條，再次閱讀。「[color=GOLD]觀察誰吃了儲備。觀察誰拒絕。[/color]」
+Text/54f/text,明天，你會留意。[color=YELLOW]有人正試圖告訴你一些事情。[/color]
+Text/54g/text,羅塞特讀到紙條時的表情。僅僅一瞬間，他看起來幾乎... [color=STEEL_BLUE]害怕[/color]。
+Text/54h/text,[color=DARK_VIOLET]根部儲備[/color] 究竟是什麼？又為什麼會有人警告你關於它的事？
+Text/54i/text,紙條不見了，但那些字句卻揮之不去。[color=YELLOW]一切並非表面所見。[/color]
+Text/54j/text,也許銷毀它是個明智的選擇。也許你只是讓自己唯一的盟友噤聲了。
+Text/55/text,我應該保持[color=YELLOW]警惕[/color]。這裡發生的事不只是蓋護照那麼簡單。
+Choice/53e/disabled_text,
+Choice/53f/disabled_text,
+Choice/53g/disabled_text,

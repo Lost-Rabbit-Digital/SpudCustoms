@@ -1,0 +1,31 @@
+﻿keys,cs
+Text/50/text,"Dobrá práce dnes, výhonku. Pamatuj, efektivita je klíč. Máme kvóty, které musíme splnit."
+Text/51/text,"Nezapomeň si vzít svou dávku [wave amp=15 freq=2][color=DARK_VIOLET]Kořenové rezervy[/color][/wave]. Víš, co říká rádio, je to chuť budoucnosti Spudu!"
+Text/52/text,Z nějakých papírů na tvém stole vypadá malá poznámka.
+Text/53/text,"[color=GOLD]Ne vše je takové, jak se zdá. Kořeny naší země zhnily. [br] Sleduj stopu, ale dej pozor, abys nebyl umlčen.[/color] [br] - [color=CHARTREUSE]Přítel[/color]"
+Text/54/text,"Ta poznámka... a způsob, jakým se Russet vyhýbal mé otázce o [pulse freq=3][color=CRIMSON]zamítnutých bramborách[/color][/pulse]... [br] Něco se zdá [color=STEEL_BLUE]divné[/color]."
+Text/55/text,Měl bych zůstat [color=YELLOW]ostražitý[/color]. Děje se zde toho víc než jen razítkování pasů.
+Text/52b/text,Ráno tam nebyla. Někdo ji tam položil [color=YELLOW]během vaší směny[/color].
+Text/53b/text,"[color=GOLD]Sledujte stopu, ale dejte si pozor, abyste nebyli umlčeni.[/color]"
+Text/53c/text,"[color=GOLD]Sledujte, kdo jí [/color][color=DARK_VIOLET]Rezervu[/color][color=GOLD]. Sledujte, kdo odmítá.[/color]"
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]Přítel[/color]
+Choice/53e/text,"""Ukryjte poznámku – prošetřete diskrétně"""
+Choice/53f/text,"""Zničte poznámku – toto by mohla být zkouška"""
+Choice/53g/text,"""Ukažte poznámku Russetovi okamžitě"""
+Text/53h/text,Opatrně poznámku složíte a vsunete ji do kapsy. [color=CHARTREUSE]Někdo se s vámi snaží spojit.[/color]
+Text/53i/text,"Ale kdo? A proč vy, hned první den?"
+Text/53j/text,Poznámku roztrháte na drobné kousky
+Text/53k/text,"Russet řekl, že klíčky, které se ptají, jsou „přeřazeny“. Je lepší neriskovat."
+Text/53l/text,"Zastihnete Russeta, než odejde. „Pane? Našel jsem to ve svých papírech…“"
+Text/53m/text,"Russet poznámku vytrhne, přečte si ji. Jeho výraz se mihne – [color=YELLOW]bylo to poznání?[/color]"
+Text/53n/text,"Propaganda. Rebelové se snaží zkorumpovat nové důstojníky. [color=DARK_ORANGE]Udělal jste správně, že jste mi to přinesl.[/color]"
+Text/53o/text,"Strčí poznámku do kapsy. Zapomeňte, že jste ji kdy viděl. A sledujte každého, kdo se chová… [color=CRIMSON]podezřele[/color]."
+Text/54b/text,"""[color=VIOLET]Zpracováno. Podle protokolu.[/color]"" Co to vůbec znamená?"
+Text/54c/text,"Ta poznámka… říkala, že kořeny [color=CRIMSON]shnily[/color]."
+Text/54d/text,"Ale Spud je slavný, že? To nám řekli. Co jsem věřil."
+Text/54e/text,"Vytáhnete poznámku a znovu si ji přečtete. ""[color=GOLD]Sledujte, kdo jí Rezervu. Sledujte, kdo odmítá.[/color]"""
+Text/54f/text,Zítra si budete dávat pozor. [color=YELLOW]Někdo se vám snaží něco říct.[/color]
+Text/54g/text,"Russetův obličej, když četl poznámku. Na okamžik vypadal téměř… [color=STEEL_BLUE]vyděšeně[/color]."
+Text/54h/text,Co je [color=DARK_VIOLET]Kořenová Rezerva[/color] doopravdy? A proč by vás před ní někdo varoval?
+Text/54i/text,"Poznámka je pryč, ale slova přetrvávají. [color=YELLOW]Ne vše je tak, jak se zdá.[/color]"
+Text/54j/text,"Možná, že ji zničit bylo chytré rozhodnutí. Možná jste právě umlčel svého jediného spojence."

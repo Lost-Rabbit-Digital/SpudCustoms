@@ -1,0 +1,85 @@
+﻿keys,nl
+Text/11/text,"De Spud-grens is in [pulse freq=3][color=CRIMSON]chaos[/color][/pulse]. Panische aardappelen overspoelen de controlepunten, wanhopig om te ontsnappen na de gelekte documenten."
+Text/12/text,Je glipt erdoor met Sasha. [wave amp=20 freq=3][color=CHARTREUSE]We moeten blijven doorgaan![/color][/wave] De mensen kennen nu de waarheid.
+Text/13/text,"Ze kunnen de waarheid niet langer het zwijgen opleggen. Als we kunnen infiltreren in de [color=DARK_VIOLET]Wortelreserve[/color] faciliteit en bewijsmateriaal uitzenden, zal het [tornado radius=3 freq=2][color=CHARTREUSE]de revolutie ontketenen[/color][/tornado]."
+Text/14/text,Die plek is een fort. En nu hebben we een [color=YELLOW]voormalige douanebeambte[/color] in ons midden. Hun ogen vernauwen zich achterdochtig naar jou.
+Choice/15/text,"Ik begrijp jullie twijfel, maar ik ben toegewijd aan deze zaak."
+Choice/16/text,Ik heb al alles opgeofferd. Ik zal nu niet terugdeinzen.
+Text/17/text,Mooie woorden. Maar die hebben we eerder gehoord.
+Text/18/text,"Ze hebben ons geholpen de documenten te krijgen. Dat zijn daden, geen woorden."
+Text/19/text,"Kan nu niet meer terug naar een loyale aardappel zijn. Welkom bij het verzet, kameraad."
+Text/1a/text,"Na een gespannen infiltratie staat je team in het hart van de [color=DARK_VIOLET]Wortelreserve[/color], de [pulse freq=3][color=CRIMSON]gruwelijke machinerie van onderdrukking[/color][/pulse] blootgelegd."
+Text/1b/text,"[wave amp=25 freq=3][color=RED]Alarmen loeien[/color][/wave] terwijl bewakers zich haasten om te reageren op jullie indringing. Jullie racen door gangen, ontwijken beveiligingssystemen."
+Text/1c/text,"Een scherm flikkert aan. ""Wel, wel, de [color=CRIMSON]verrader[/color] keert terug met rebellentuig."""
+Text/1d/text,Dacht je dat je de vooruitgang van Spud kon stoppen? De [color=DARK_VIOLET]Wortelreserve[/color] is de levensader van deze natie.
+Text/1e/text,Maar maak je geen zorgen. Je zult Spud nog steeds dienen... [tornado radius=4 freq=3][color=DARK_VIOLET]in de verwerkingsvaten![/color][/tornado]
+Text/1f/text,Het scherm wordt plotseling zwart.
+Text/20/text,"Je wendt je vastberaden tot de anderen. ""We moeten Idaho's bunker bereiken. Nu!"""
+Text/21/text,"Jullie groep vecht zich een weg door golven beveiligers, ontloopt ternauwernood gevangenneming. Sasha's verzetsstrijders creëren afleidingen, maken jullie pad voorwaarts vrij."
+Text/22/text,Na een huiveringwekkende ontsnapping door onderhoudstunnels bereiken jullie eindelijk de beveiligde lift naar Idaho's privébunker.
+Text/23/text,Met Sasha en je bondgenoten aan je zijde confronteer je Idaho eindelijk.
+Text/24/text,"Het is voorbij, Idaho. Je geheimen zijn onthuld. Hoe dit eindigt... [pulse freq=2]dat hangt van jou af.[/pulse]"
+Choice/25/text,Onderhandel over een vreedzame machtsoverdracht (Diplomatiek)
+Choice/26/text,Eis Idaho's onmiddellijke arrestatie (Rechtvaardigheid)
+Choice/27/text,Oefen eigenrichting uit voor Idaho's misdaden (Wraak)
+Choice/28/text,Focus op het ontmantelen van de Wortelreserve-infrastructuur (Ontmantelen)
+Text/29/text,"Idaho, het hoeft niet te eindigen met meer bloedvergieten. Als je meewerkt..."
+Text/2a/text,"Oh, jij [color=STEEL_BLUE]idealistische dwaas[/color]. Denk je dat dit een onderhandeling is?"
+Text/2b/text,"Idaho verplettert een knop, en [color=RED]alarmen beginnen te loeien[/color]. ""Het enige wat ik jullie zal geven is een [color=DARK_VIOLET]enkele reis naar de frituurvaten![/color]"""
+Text/2c/text,"Ik denk het niet, Idaho. Bewakers! Jullie hebben het dossier gezien, [color=YELLOW]jullie weten wat hij met jullie families heeft gedaan.[/color]"
+Text/2d/text,Een kolossale bewaker stapt naar voren en schopt Idaho snel tegen de grond.
+Text/2e/text,Een schot weergalmt door de kamer. Het scherm vervaagt naar zwart.
+Text/2f/text,"Idaho, in naam van het aardappelvolk van Spud, [color=CHARTREUSE]je bent gearresteerd![/color]"
+Text/30/text,"Het is voorbij. Het volk heeft gesproken. [color=CHARTREUSE]We zullen een nieuw Spud bouwen waar onze wortels in de grond zijn, niet in lijden.[/color]"
+Text/31/text,"Er zullen [color=CRIMSON]geen deals, geen genade[/color] voor jou zijn, Idaho. De gerechtigheid van een tiran is alles wat je verdient."
+Text/32/text,"Een afrekening. Dat is wat ik ben. [color=CHARTREUSE]Voor elke opgeofferde aardappel, nemen we onze toekomst terug![/color]"
+Text/33/text,"Vergeet hem. Hij is een symptoom, niet de ziekte. [color=CHARTREUSE]Breek elke wortel en stengel van deze gruwel af.[/color]"
+Text/34/text,We moeten gaan! Nu!
+Text/35/text,De val van de [color=DARK_VIOLET]Wortelreserve[/color] ontketent een vuurzee van verandering door heel Spud.
+Text/36/text,Aardappelen in elke provincie komen in opstand en omarmen een [color=CHARTREUSE]nieuwe visie voor hun natie[/color].
+Text/37/text,"Zolang we trouw blijven aan onze wortels, aan de idealen die ons hier brachten... [color=CHARTREUSE]zullen we een weg vinden.[/color]"
+Text/38/text,"En zo, uit de as van het oude Spud, [color=CHARTREUSE]begint een nieuwe natie wortel te schieten[/color]. De heerschappij van de [color=DARK_VIOLET]Wortelreserve[/color] is voorbij."
+Choice/15/disabled_text,
+Choice/28/disabled_text,
+Choice/27/disabled_text,
+Choice/26/disabled_text,
+Choice/25/disabled_text,
+Choice/16/disabled_text,
+Text/1a_rescue1/text,Een verkenner snelt toe. We hebben haar gevonden! [color=CHARTREUSE]Sasha zit in het detentieblok![/color]
+Text/1a_rescue2/text,Ze bereiden zich voor om... [tornado radius=3 freq=2][color=CRIMSON]haar te verwerken[/color][/tornado]... over minder dan een uur!
+Text/1a_rescue3/text,We moeten haar redden. [pulse freq=2][color=CHARTREUSE]Zij is dit allemaal begonnen.[/color][/pulse] We vertrekken niet zonder haar.
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]Haast je door de faciliteit![/color][/wave] Bereik Sasha voordat het te laat is!
+Text/1a_rescue_fail1/text,Je struikelt. Het pad voor je wordt geblokkeerd door bewakers!
+Text/1a_rescue_fail2/text,Viktor barst door een zijdeur. [color=CHARTREUSE]GA! Ik houd ze tegen![/color]
+Text/1a_rescue_fail3/text,Voor Elena. Voor hen allemaal. [color=STEEL_BLUE]Ik laat er geen nog een sterven![/color]
+Text/1a_rescue_fail4/text,Murphy trekt aan een brandalarm. [color=CHARTREUSE]Voor Tommy![/color] De sprinklers verblinden de bewakers!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Ik creëer een afleiding. Haal haar daar weg![/color]
+Text/1a_rescue_fail6/text,"Een [color=YELLOW]verwerkingsband loopt vast[/color], sproeit vonken en leidt de bewakers af!"
+Text/1a_rescue_fail7/text,Het lot - of de geesten van de verwerkten - geeft je een tweede kans.
+Text/1a_rescue5/text,"Sasha kijkt op uit haar cel, gekneusd maar ongebogen. Haar ogen worden groot. [color=CHARTREUSE]Je bent gekomen.[/color]"
+Text/1a_rescue6/text,Natuurlijk ben ik gekomen. [color=CHARTREUSE]We maken dit samen af.[/color]
+Choice/1a_rescue7/text,Ik was bang dat ik je nooit meer zou zien.
+Choice/1a_rescue8/text,Je hebt ons doodongerust gemaakt. Doe dat niet meer.
+Choice/1a_rescue9/text,We hebben werk te doen. Idaho wacht.
+Text/1a_rescue10/text,[color=CHARTREUSE]Sasha trekt je in een korte omhelzing.[/color] Ik wist dat je zou komen. Ik heb nooit getwijfeld.
+Text/1a_rescue11/text,Nu laten we ze boeten voor iedereen die ze hebben genomen. [color=CHARTREUSE]Samen.[/color]
+Text/1a_rescue12/text,Sasha perst een zwakke glimlach door haar pijn heen. [color=STEEL_BLUE]Ik zal het proberen.[/color] Maar sommige dingen zijn het risico waard.
+Text/1a_rescue13/text,"Dat jij hier bent, bewijst dat. Laten we dit nu afmaken."
+Text/1a_rescue14/text,"Sasha knikt, haar vastberadenheid opnieuw aangewakkerd. [color=CHARTREUSE]Je hebt gelijk.[/color] Sentiment kan wachten."
+Text/1a_rescue15/text,Idaho denkt dat hij gewonnen heeft. Laten we hem laten zien hoe fout hij zit.
+Text/158/text,Beveiligingstroepen naderen! [pulse freq=3][color=YELLOW]Vecht je erdoorheen![/color][/pulse]
+Text/21_fail1/text,Bewakers naderen uit elke richting. [color=CRIMSON]Er is nergens om naartoe te vluchten![/color]
+Text/21_fail2/text,"Viktor verschijnt achter de bewakers, zijn stem koud als staal. [color=STEEL_BLUE]Trek je terug. Nu.[/color]"
+Text/21_fail3/text,De bewakers aarzelen - Viktor was een van hen. [color=CRIMSON]Elena's naam staat op die manifesten. Jullie families kunnen de volgende zijn.[/color]
+Text/21_fail4/text,Sommige bewakers laten hun wapens zakken. Anderen vluchten. Het pad wordt vrij.
+Text/21_fail5/text,"Een explosie schudt de oostvleugel. Murphy's stem kraakt over de communicatie: [color=CHARTREUSE]""Dat is mijn afleiding! BEWEEG!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]De bewakers verspreiden zich richting de explosie. Tommy zou trots zijn.[/color]
+Text/21_fail7/text,Sasha tackelt de hoofdbewaker van achteren. [color=CHARTREUSE]Ik heb die cel niet overleefd om jou te zien sterven![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]RENNEN! Ik regel dit![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha komt dichterbij, haar hand vindt de jouwe terwijl jullie samen de nieuwe dageraad bekijken.[/color] Wij hebben dit gebouwd. Jij en ik."
+Text/152/text,"Zolang we trouw blijven aan onze wortels, aan de idealen die ons hier brachten... [color=CHARTREUSE]vinden we een weg.[/color] Samen."
+Text/153/text,[color=CHARTREUSE]Je knijpt in haar hand. Samen.[/color]
+Text/154/text,[color=STEEL_BLUE]Sasha staat naast je.[/color] Jouw vuur ontstak de vonk die hun rijk deed branden.
+Text/155/text,[color=STEEL_BLUE]De woede is afgekoeld tot vastberadenheid. Er is nog werk te doen.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha geeft je een bemoedigende glimlach.[/color] Je bent ver gekomen sinds die controlepost. Wij allemaal.
+Text/157/text,"[color=STEEL_BLUE]De schuld zal misschien nooit helemaal verdwijnen, maar je hebt een doel gevonden in de wederopbouw.[/color]"

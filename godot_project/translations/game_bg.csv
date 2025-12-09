@@ -1,0 +1,54 @@
+﻿keys,bg
+alert_border_runner,"ЗАСЕЧЕН ГРАНИЧЕН БЕГЛЕЦ!\nКликнете, за да изстреляте ракета!"
+alert_rejected_fleeing,"ОТХВЪРЛЕН КАРТОФ БЯГА!\nКликнете, за да изстреляте ракета!"
+alert_runner_escaped,БЕГЛЕЦЪТ ИЗБЯГА!\nДобавен е удар!
+alert_points_deducted,БЕГЛЕЦЪТ ИЗБЯГА!\nДобавен е удар!\n-{penalty} точки!
+alert_perfect_hit,ПЕРФЕКТЕН УДАР! +{perfect} бонус точки за точност
+alert_perfect_stamp,ПЕРФЕКТЕН ПЕЧАТ! +{points} точки!
+alert_combo,КОМБО x{mult}! +{streak} бонус точки за комбо
+alert_quota_met,"Квотата е изпълнена, смяната приключи! \nБонус: {bonus} точки!"
+alert_strike_removed,Ударът е премахнат!
+alert_correct_decision,"Взехте правилното решение, офицер.\n+{points} точки!"
+alert_wrong_decision,"Причинихте ненужно страдание, офицер...\n+1 Удар!"
+alert_potato_should_be_approved,\nТози картоф отговаря на всички изисквания и трябваше да бъде одобрен.
+alert_strike_out,Максималният брой удари е надвишен! Вашата смяна приключи.
+ui_score,Резултат: {score}
+ui_quota,Квота: {current} / {target}
+ui_strikes,Удари: {current} / {max}
+ui_click_megaphone,"Кликнете на мегафона, за да извикате следващия картоф"
+ui_drag_document,Плъзнете документа до масата за проверка
+ui_stamp_document,Изберете печат за одобрение или отхвърляне
+ui_check_violations,Проверете за нарушения в документа
+Strike removed!,Ударът е премахнат!
+BORDER RUNNER DETECTED!\nClick to launch missile!,"ЗАСЕЧЕН ГРАНИЧЕН БЕГЛЕЦ!\nКликнете, за да изстреляте ракета!"
+REJECTED POTATO FLEEING!\nClick to launch missile!,"ОТХВЪРЛЕН КАРТОФ БЯГА!\nКликнете, за да изстреляте ракета!"
+RUNNER ESCAPED!\nStrike added!,БЕГЛЕЦЪТ ИЗБЯГА!\nДобавен е удар!
+Click megaphone to call the next potato,"Кликнете на мегафона, за да извикате следващия картоф"
+Drag document to inspection table,Плъзнете документа до масата за проверка
+Select a stamp to approve or reject,Изберете печат за одобрение или отхвърляне
+Check for document violations,Проверете за нарушения в документа
+rule_explanation_header,ОБЯСНЕНИЕ НА ПРАВИЛОТО:
+rule_explanation_fresh,Погледнете полето 'Състояние'. Ако пише нещо различно от 'Прясно' - ОТХВЪРЛЕТЕ
+rule_explanation_sweet_potato,Погледнете полето 'Вид'. Ако пише 'Сладък картоф' - ОТХВЪРЛЕТЕ (няма разрешителни)
+rule_explanation_chip_hill,Погледнете полето 'Държава'. Ако пише 'Чип Хил' - ОТХВЪРЛЕТЕ (забранено)
+rule_explanation_age,Погледнете полето 'Роден'. Изчислете възрастта и проверете спрямо правилото
+rule_explanation_gender,Погледнете полето 'Пол' и проверете спрямо текущото правило
+rule_footer_text,Тези правила трябва да се прилагат за ВСИЧКИ картофи
+rule_tutorial_hint,Нуждаете се от помощ? Кликнете върху което и да е правило за обяснение
+alert_correct_decision_detailed,ПРАВИЛНО РЕШЕНИЕ! +{points} точки\n{reason}
+alert_wrong_decision_detailed,ГРЕШНО РЕШЕНИЕ! Добавен е удар!\n{reason}
+alert_reason_approved,Картофът отговаря на всички изисквания - ОДОБРЕН
+alert_reason_should_reject,Трябваше да ОТХВЪРЛИТЕ този картоф
+tutorial_check_type,Проверете полето 'Вид' в паспорта
+tutorial_check_condition,Проверете полето 'Състояние' в паспорта
+tutorial_check_country,Проверете полето 'Държава' в паспорта
+tutorial_check_age,"Проверете полето 'Роден', за да изчислите възрастта"
+tutorial_check_gender,Проверете полето 'Пол' в паспорта
+alert_streak_bonus_minigame,5 поредни! БОНУС МИНИИГРА!
+alert_perfect_stamps_bonus_minigame,Перфектни печати! БОНУС МИНИИГРА!
+alert_runner_bonus_minigame,Подозрителна дейност! БОНУС МИНИИГРА!
+alert_new_minigame_unlocked,Отключена нова миниигра: {name}!
+alert_minigame_bonus,Бонус от миниигра: +{bonus} точки!
+high_score_display,Най-добър резултат: {score}
+new_high_score,НОВ НАЙ-ДОБЪР РЕЗУЛТАТ!
+month_1,Януари

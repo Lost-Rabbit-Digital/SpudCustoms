@@ -1,0 +1,92 @@
+﻿keys,fi
+Text/d2/text,Vuorosi jälkeen sinut johdatetaan salaiseen vastarintakokoukseen hylätyssä tärkkelystehtaassa.
+Text/d3/text,"Kulunut, taisteluarpiset peruna puhuttelee kokoontunutta ryhmää."
+Text/d4/text,Kuiskausten ja lentolehtisten aika on ohi. Hallitus on näyttänyt todelliset värinsä.
+Text/d5/text,"Lähteemme vahvistavat, että [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] -käsittelylaitokset lisäävät tuotantoa."
+Text/d6/text,"Mikä tarkoittaa [tornado radius=3 freq=3][color=CRIMSON]lisää kadonneita, käsiteltyjä ja kulutettuja veljiämme ja sisariamme[/color][/tornado]."
+Text/d7/text,Johtaja lyö nyrkkinsä pöytään. [pulse freq=3][color=CHARTREUSE]Tämä loppuu nyt.[/color][/pulse] Meillä on suunnitelma iskeä heidän toimintansa ytimeen.
+Text/d8/text,Sasha levittää yksityiskohtaiset suunnitelmat pöydälle. Kolmen päivän kuluttua aloitamme pääoffensiivimme.
+Text/d9/text,"Sillä välin kun yksi ryhmä luo harhauttavan toiminnan päähallintokompleksilla, toinen tunkeutuu suurimpaan Root Reserve -laitokseen."
+Text/da/text,"Tavoitteemme: hankkia [color=CHARTREUSE]kiistattomia todisteita[/color] siitä, mitä sisällä tapahtuu, ja lähettää se kaikille Spudissa."
+Text/db/text,Sasha osoittaa suunnitelmien osiota. Tässä sinä tulet mukaan.
+Text/dc/text,"Tarvitsemme jonkun Spud Tullissa varmistamaan, että operatiivimme voivat ylittää rajan tehtävää varten."
+Text/dd/text,"Voimmeko luottaa siihen, että sinä olet se henkilö?"
+Choice/de/text,Teen mitä tahansa paljastaakseni totuuden.
+Choice/df/text,Kuulostaa vaaralliselta. Entä jos jäämme kiinni?
+Choice/e0/text,"Onko olemassa toinen tapa, joka ei aseta niin monia vaaraan?"
+Text/e1/text,Sashan kasvot kirkastuvat toivosta. Kiitos. [color=CHARTREUSE]Rohkeutesi pelastaa lukemattomia henkiä.[/color]
+Text/e2/text,"Hän puristaa kättäsi. Kun tämä kaikki on ohi, [color=CHARTREUSE]sinut muistetaan vallankumouksen sankarina.[/color]"
+Text/e3/text,Sasha nyökkää juhlallisesti. Se on vaarallista. En valehtele sinulle siitä.
+Text/e4/text,"Me kaikki voimme päätyä [color=DARK_VIOLET]käsitellyiksi Root Reserveen[/color], jos epäonnistumme."
+Text/e5/text,"Mutta mitään tekemättä jättäminen on vielä vaarallisempaa. Meille kaikille, pitkällä aikavälillä."
+Text/e6/text,Sashan ilme muuttuu synkäksi. Olemme yrittäneet muita keinoja. Vuosikausia.
+Text/e7/text,Vetoomuksia. Hiljaista diplomatiaa. Nimettömiä vihjeitä. Mikään ei ole toiminut.
+Text/e8/text,Joskus on riskirättävä kaikki muuttaakseen mitään.
+Text/e9/text,Vastarintaliikkeen jäsenten keskuudessa puhkeaa kiivas keskustelu.
+Text/ea/text,Jotkut kannattavat aggressiivisempaa lähestymistapaa - käsittelylaitosten täydellistä tuhoamista.
+Text/eb/text,"Toiset vaativat, että väkivaltaiset toimet kääntäisivät vain yleisen mielipiteen heitä vastaan."
+Text/ec/text,RIITTÄÄ! Johtaja hiljentää huoneen käskevällä äänellään.
+Text/ed/text,"Meillä ei ole varaa olla jakautuneita. Ei nyt, kun olemme niin lähellä."
+Text/ee/text,"Tavoitteemme on yksinkertainen: paljastaa totuus. Annetaan kansan päättää, mitä tapahtuu seuraavaksi."
+Text/ef/text,"Johtaja kääntyy puhumaan suoraan sinulle. Mutta meidän täytyy tietää, [color=YELLOW]missä sinä seisot[/color]."
+Text/f0/text,Kolmen päivän kuluttua agenttimme lähestyvät tarkastuspistettäsi. He kantavat [color=CHARTREUSE]sinisiä tunnistekortteja[/color].
+Text/f1/text,Autatko heitä ylittämään? Vastauksesi nyt määrittää seuraavan siirtomme.
+Choice/f2/text,Autan heitä ylittämään. Spudin tulevaisuuden vuoksi.
+Choice/f3/text,"En voi olla suoraan mukana, mutta katson toiseen suuntaan."
+Choice/f4/text,Tarvitsen lisää aikaa ajatella tätä.
+Text/f5/text,Johtaja tarttuu olkapäähäsi lujasti. [color=CHARTREUSE]Rohkeutesi kunnioittaa meitä kaikkia.[/color]
+Text/f6/text,"Kolmantena päivänä, kun aurinko on korkeimmillaan, agenttimme tulevat."
+Text/f7/text,"Salasana on ""[wave amp=15 freq=3][color=CHARTREUSE]Juuret kasvavat syvälle.[/color][/wave]"" Muista se."
+Text/f8/text,"Johtaja nyökkää hitaasti, selvästi pettynyt mutta ymmärtäväinen."
+Text/f9/text,"Joskus eniten, mitä voimme pyytää, on että ihmiset eivät seiso tiellämme."
+Text/fa/text,Agenttimme etenevät suunnitelman mukaisesti. Vain... älä nosta hälytystä.
+Text/fb/text,"Johtajan ilme kovenee. [color=YELLOW]Aika on ylellisyys, jota meillä ei ole.[/color]"
+Text/fc/text,Mutta kenenkään pakottaminen liittymään asiaamme ei tee meistä yhtään parempia kuin he ovat.
+Text/fd/text,Etenemme laskematta apuasi. Tutki omaatuntoasi.
+Text/fe/text,"Kun kokous hajoaa, Sasha kävelee kanssasi takaisin kohti tarkastuspistettä."
+Text/ff/text,"Mitä ikinä tapahtuukin... kiitos kaikesta, mitä olet tehnyt."
+Text/100/text,"Palaat tarkastuspisteellä oleviin majoitustiloihisi, mielesi kiitää tulevien tapahtumien painon alla."
+Text/101/text,Vain kolmessa päivässä kaikki voisi muuttua. [color=YELLOW]Parempaan tai huonompaan.[/color]
+Choice/de/disabled_text,
+Choice/f4/disabled_text,
+Choice/f3/disabled_text,
+Choice/f2/disabled_text,
+Choice/e0/disabled_text,
+Choice/df/disabled_text,
+Text/d2b/text,Ennen kuin aloitamme... Minulla on tunnustus.
+Text/d2c/text,"Se lappu, jonka löysit ensimmäisenä päivänäsi? ""[color=GOLD]Ystävä[/color]""?"
+Text/d2d/text,"Sasha hymyilee. Näen, että pidit sen. Fiksua. Tiesin valinneeni oikean idun."
+Text/d2e/text,"Olen tarkkaillut uusia virkailijoita kuukausia, etsien jotakuta, jolla on [color=CHARTREUSE]kyseenalaistavat silmät[/color]. Jonkun, joka saattaisi nähdä valheiden läpi."
+Text/d2f/text,Sashan ilme on monimutkainen. Näytit sen Russetille. Minun piti pysytellä piilossa viikkoja sen jälkeen.
+Text/d2g/text,Mutta tässä sinä olet silti. Se kertoo minulle jotain omastatunnostasi.
+Text/d2h/text,Tuhosit sen. En syytä sinua - sen pitäminen oli riskialtista.
+Text/d2i/text,"Mutta sanat löysivät tiensä päähäsi joka tapauksessa, eikö niin?"
+Text/d2j/text,"[color=CHARTREUSE]Olen ""Ystävä.""[/color] Ja nyt tiedät miksi."
+Text/d2k/text,Sasha levittää takavarikoituja asiakirjoja pöydälle. Käsittelymanifesteja viime kuukaudelta.
+Text/d2l/text,"Skannaat nimet, ja veresi hyytyy."
+Text/d2m/text,Siinä se on. [color=GOLD]Maris Piper[/color]. Nainen valokuvasta.
+Text/d2n/text,"""[color=CRIMSON]Tila: Käsitelty. Erä RR-2847.[/color]"" Päivätty kolme päivää sen jälkeen, kun hänen miehensä anoi apuasi."
+Text/d2o/text,Tunnet valokuvan taskussasi. [color=STEEL_BLUE]Hän on poissa. Etkä voinut pelastaa häntä.[/color]
+Text/d2p/text,Mutta ehkä... [color=CHARTREUSE]ehkä voit vielä pelastaa muita[/color].
+Text/d2q/text,"Murphy ilmestyy varjoista. Hei. Hyvä, että pääsit paikalle."
+Text/d2r/text,Murphy nostaa rypistyneen RR-UTIL-lomakkeen. Serkkuni on myös tuolla listalla. [color=CHARTREUSE]Teemme tämän yhdessä.[/color]
+Text/ff2/text,"[color=STEEL_BLUE]Hän pitää etäisyyttä kävellessäsi.[/color] Arvostan sitä, ettet seiso tiellämme. Se on... jotain."
+Text/ff3/text,"[color=STEEL_BLUE]Hän kävelee hiljaa, kädet ristissä.[/color] Toivottavasti löydät etsimäsi varmuuden. Meillä muilla ei ole varaa odottaa."
+Text/100_viktor1/text,"Palatessasi löydät Viktorin yksin tarkastuspisteen katolta, tuijottamasta yötaivasta."
+Text/100_viktor2/text,Viktor pitää pientä
+Text/100_viktor3/text,"Hän tapasi sanoa, että riippumatta siitä, kuinka synkäksi asiat menivät, tähdet olisivat yhä siellä. [color=STEEL_BLUE]Muuttumattomat. Kauniit.[/color]"
+Text/100_viktor4/text,"Hän kääntyy puoleesi, silmät kiiltäen. [wave amp=15 freq=2]Ajattelen jatkuvasti... kärsikö hän?[/wave] Tiesikö hän, mitä oli tapahtumassa?"
+Text/100_viktor5/text,"Viktorin ääni murtuu. Hän kysyi minulta kerran, kyseenalaistinko koskaan hylkäyksiä. Sanoin hänelle [color=CRIMSON]luottamaan järjestelmään[/color]."
+Text/100_viktor6/text,[tornado radius=3 freq=2][color=CRIMSON]Lähetin oman vaimoni käsittelyaltaisiin tietämättäni.[/color][/tornado]
+Choice/100_viktor_choice1/text,Et voinut tietää. Kukaan meistä ei tiennyt.
+Choice/100_viktor_choice2/text,"Elena haluaisi sinun taistelevan nyt, eikä hukkuvan syyllisyyteen."
+Choice/100_viktor_choice3/text,En tiedä mitä sanoa. Olen pahoillani.
+Text/100_viktor7/text,Hän pudistaa päätään hitaasti. [color=STEEL_BLUE]Tietämättömyys ei ole syyttömyyttä. Minun olisi pitänyt kysyä. Minun olisi pitänyt kuunnella.[/color]
+Text/100_viktor8/text,"Viktor sujauttaa valokuvan varovasti piiloon. [color=CHARTREUSE]Mutta nyt tiedän. Ja tietäminen tarkoittaa, että minun on toimittava.[/color]"
+Text/100_viktor9/text,"Viktor suoristautuu, kylmä tuli syttyy uudelleen hänen silmiinsä. [color=CHARTREUSE]Olet oikeassa.[/color] Hän oli minua vahvempi. Rohkeampi."
+Text/100_viktor10/text,Hän puristaa nyrkkinsä. [color=CHARTREUSE]Kun aika koittaa
+Text/100_viktor11/text,"[pulse freq=2][color=CRIMSON]Ja Idaho maksaa jokaisesta elämästä, jonka se on kuluttanut.[/color][/pulse]"
+Text/100_viktor12/text,Viktor saa aikaan surullisen
+Text/100_viktor13/text,Hän katsoo takaisin tähtiin. [color=STEEL_BLUE]Elena olisi pitänyt sinusta.[/color]
+Text/100_viktor14/text,"Hän kääntyy lähteäkseen, sitten pysähtyy. [color=CHARTREUSE]Kun vastarinta liikkuu... Olen valmis.[/color]"
+Text/100_viktor15/text,"Elanan puolesta. Heidän kaikkien puolesta. [pulse freq=2][color=CHARTREUSE]Vartijat seuraavat minua, kun kerron heille totuuden.[/color][/pulse]"

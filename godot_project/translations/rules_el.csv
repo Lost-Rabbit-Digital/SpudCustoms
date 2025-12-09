@@ -1,0 +1,39 @@
+﻿keys,el
+LAWS,ΝΟΜΟΙ
+msg_not_fresh,Η πατάτα ήταν %s αλλά πρέπει να είναι Φρέσκια
+msg_extra_eyes,"Η πατάτα είχε Επιπλέον Μάτια, κάτι που απαγορεύεται"
+msg_rotten,Σάπιες πατάτες δεν επιτρέπονται
+msg_sprouted,Φυτρωμένες πατάτες δεν επιτρέπονται
+msg_dehydrated,Αφυδατωμένες πατάτες δεν επιτρέπονται σήμερα
+msg_frozen,Κατεψυγμένες πατάτες απαγορεύονται
+msg_over_age,Η πατάτα είναι %d ετών (μέγιστο 5 έτη)
+msg_under_age,Η πατάτα είναι %d ετών (πρέπει να είναι άνω των 3)
+law_fresh_potatoes,[color=dark_goldenrod]ΜΟΝΟ Φρέσκες[/color] πατάτες επιτρέπονται - [color=dark_red]ΑΠΟΡΡΙΨΤΕ[/color] όλες τις άλλες
+law_extra_eyes,Πατάτες με την κατάσταση [color=dark_goldenrod]Επιπλέον Μάτια[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_rotten,[color=dark_goldenrod]Σάπιες[/color] πατάτες πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_sprouted,[color=dark_goldenrod]Φυτρωμένες[/color] πατάτες πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_dehydrated,[color=dark_goldenrod]Αφυδατωμένες[/color] πατάτες πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_frozen,[color=dark_goldenrod]Κατεψυγμένες[/color] πατάτες πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_over_5_years,Πατάτες [color=dark_goldenrod]5 ετών ή μεγαλύτερες[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_under_3_years,Πατάτες [color=dark_goldenrod]3 ετών ή νεότερες[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_under_2_years,Πατάτες [color=dark_goldenrod]2 ετών ή νεότερες[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_males_only,[color=dark_goldenrod]ΜΟΝΟ Αρσενικές[/color] πατάτες επιτρέπονται - [color=dark_red]ΑΠΟΡΡΙΨΤΕ[/color] όλες τις Θηλυκές
+law_females_only,[color=dark_goldenrod]ΜΟΝΟ Θηλυκές[/color] πατάτες επιτρέπονται - [color=dark_red]ΑΠΟΡΡΙΨΤΕ[/color] όλες τις Αρσενικές
+law_country_spudland,[color=dark_goldenrod]ΟΛΕΣ[/color] οι πατάτες από τη [color=dark_goldenrod]Spudland[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_country_potatopia,[color=dark_goldenrod]ΟΛΕΣ[/color> οι πατάτες από την [color=dark_goldenrod]Potatopia[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_country_tuberstan,[color=dark_goldenrod]ΟΛΕΣ[/color] οι πατάτες από το [color=dark_goldenrod]Tuberstan[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_country_north_yamnea,[color=dark_goldenrod]ΟΛΕΣ[/color] οι πατάτες από τη [color=dark_goldenrod]Βόρεια Yamnea[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_country_spuddington,[color=dark_goldenrod]ΟΛΕΣ[/color> οι πατάτες από το [color=dark_goldenrod]Spuddington[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_country_tatcross,[color=dark_goldenrod]Όλες[/color] οι πατάτες από [color=dark_goldenrod]Τατκρός[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_country_mash_meadows,[color=dark_goldenrod]Όλες[/color] οι πατάτες από [color=dark_goldenrod]Μας Μίντοους[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_country_tuberville,[color=dark_goldenrod]Όλες[/color] οι πατάτες από [color=dark_goldenrod]Τιούμπερβιλ[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_country_chip_hill,[color=dark_goldenrod]Όλες[/color] οι πατάτες από [color=dark_goldenrod]Τσιπ Χιλ[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color] (απαγόρευση εξαγωγών)
+law_country_murphyland,[color=dark_goldenrod]Όλες[/color> οι πατάτες από [color=dark_goldenrod]Μέρφιλαντ[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_country_colcannon,[color=dark_goldenrod]Όλες[/color] οι πατάτες από [color=dark_goldenrod]Κόλκαννον[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_country_pratie_point,[color=dark_goldenrod]Όλες[/color> οι πατάτες από [color=dark_goldenrod]Πρέιτι Πόιντ[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_purple_majesty,Οι τύποι πατάτας [color=dark_goldenrod]Πέρπλ Μάτζεστι[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_sweet_potatoes,Οι τύποι [color=dark_goldenrod]Γλυκοπατάτας[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color] (δεν υπάρχουν διαθέσιμες άδειες)
+law_yukon_gold,Οι τύποι πατάτας [color=dark_goldenrod]Γιούκον Γκολντ[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_fingerling,Οι τύποι πατάτας [color=dark_goldenrod]Φίνγκερλινγκ[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_red_bliss,Οι τύποι πατάτας [color=dark_goldenrod]Ρεντ Μπλις[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]
+law_russet,Οι τύποι πατάτας [color=dark_goldenrod]Ράσετ[/color] πρέπει να [color=dark_red]ΑΠΟΡΡΙΦΘΟΥΝ[/color]

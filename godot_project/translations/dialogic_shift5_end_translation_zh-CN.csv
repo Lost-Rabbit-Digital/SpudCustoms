@@ -1,0 +1,22 @@
+﻿keys,zh-CN
+Text/96/text,你潜行穿过昏暗的走廊，心脏狂跳着躲避安保巡逻。
+Text/97/text,[color=CHARTREUSE]这个装置会解除罗斯特办公室的锁[/color]。我会在东翼触发警报作为诱饵。你有五分钟。
+Text/98/text,货物清单应该在他的文件柜里。[color=CRIMSON]标有“RR运输”的红色文件夹[/color]。不要留下你搜查的证据。
+Text/99/text,你在文件柜里找到了那个厚厚的[color=CRIMSON]标有“RR运输”的红色文件夹[/color]。
+Text/9a/text,"里面是与被拒土豆数量相符的货物清单，以及爱达荷总理授权的指令：""[pulse freq=3][color=DARK_VIOLET]将边境被拒者充分用于RR生产。[/color][/pulse]"""
+Text/9a_viktor1/text,你扫描着清单上的名字……有一个名字格外显眼。[color=GOLD]埃琳娜·彼得罗夫[/color]。
+Text/9a_viktor2/text,这个名字……你以前听过。安保警卫维克多提到过他的妻子失踪了。
+Text/9a_viktor3/text,"""[color=CRIMSON]状态：已处理。批次RR-2851。[/color]"" 日期是两周前。"
+Text/9b/text,"脚步声接近办公室门。""[wave amp=15 freq=3][color=YELLOW]奇怪，我明明记得我锁了门。[/color][/wave]"""
+Choice/9c/text,藏到桌子下面
+Choice/9d/text,跳窗
+Text/9e/text,在罗斯特进来时，你钻到他的桌子下面，心脏狂跳。他坐下，双脚离你的脸只有几英寸。
+Text/9f/text,“罗斯特。什么？[color=CHARTREUSE]又一个警报？[/color]我马上就来。”他离开了，你得以逃脱。
+Text/a0/text,"你猛地打开窗户跳了出去。幸好只有一层楼高。一个警卫喊道：""[color=RED]嘿！站住！[/color]"""
+Text/a1/text,你冲过院子，设法摆脱了追捕者。
+Text/a2/text,你拿到了吗？
+Text/a3/text,你交出了证据，解释了你的发现。
+Text/a4/text,这证明了一切。抵抗组织会制作副本。[tornado radius=3 freq=2]将真相散布到各地。[/tornado]他们无法让所有人沉默。
+Text/a5/text,你已经越界了。[wave amp=20 freq=3][color=YELLOW]已无法回头。[/color][/wave]当真相传播开来时，斯普德将会被改变。
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,

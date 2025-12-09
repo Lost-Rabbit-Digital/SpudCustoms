@@ -1,0 +1,24 @@
+﻿keys,sv
+Text/78/text,"Ännu en dag vid kontrollpunkten. Potatisraden sträcker sig längre än någonsin, alla är på tå."
+Text/79/text,Nya order från ovan. [wave amp=15 freq=3][color=DARK_ORANGE]Vi fördubblar avvisningarna[/color][/wave]. Varje potatis som anses osäker kvarhålls omedelbart.
+Text/7a/text,Jag har ett särskilt uppdrag. Vi har underrättelser om [pulse freq=2][color=CRIMSON]bråkmakare[/color][/pulse]. Var vaksamma under era inspektioner.
+Choice/7b/text,"Ja, herr, jag ska inte svika er"
+Choice/7c/text,Vilka slags bråkmakare pratar vi om?
+Text/7d/text,Bra. Jag visste att jag kunde lita på dig. Du kommer långt med den inställningen.
+Text/7e/text,De som [color=CRIMSON]hotar vårt levnadssätt[/color]. Ställ inte för många frågor om du vet vad som är bra för dig.
+Text/7f/text,"[color=STEEL_BLUE]Jag ber er![/color] Min fru skulle ha varit precis bakom mig, men [tornado radius=2 freq=3]hon kom aldrig igenom tullen[/tornado]."
+Text/80/text,"Ingen vill berätta för mig vad som hänt henne. Snälla, [color=CHARTREUSE]hjälp mig att hitta henne![/color]"
+Choice/81/text,"Förlåt, men jag kan inte göra något."
+Choice/82/text,Låt mig se vad jag kan ta reda på. Inga löften.
+Text/83/text,Som alla andra... [color=STEEL_BLUE]Må er samvete tyngas lika tungt som mitt.[/color]
+Text/84/text,Tack! Till och med ett litet hopp är bättre än inget. Här är hennes foto. Var snäll och hitta henne.
+Text/85/text,Jag såg det utbytet. [color=DARK_ORANGE]Sympati med avvisade leder bara till problem.[/color] Förbli fokuserad på er plikt.
+Choice/7b/disabled_text,
+Choice/82/disabled_text,
+Choice/81/disabled_text,
+Choice/7c/disabled_text,
+Text/7fb/text,"Hon [tornado radius=2 freq=3]kom aldrig igenom tullen[/tornado]. De sa att hennes papper hade en ""oegentlighet."""
+Text/83b/text,Den desperata potatisen smyger iväg. Du ser hur hon stirrar på ett slitet foto innan hon försvinner.
+Text/84b/text,"Hon trycker ett [color=GOLD]slitet fotografi[/color] i dina händer. Hennes namn är [color=GOLD]Maris Piper[/color]. Hon har snälla ögon. Snälla, hitta henne."
+Text/84c/text,Du tittar på fotot. En ung potatis med milda drag och ett varmt leende. [color=GOLD]Maris Piper[/color].
+Text/84d/text,Vart tog hon vägen? Avvisningskön leder till... vart exakt?

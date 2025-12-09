@@ -1,0 +1,18 @@
+﻿keys,no
+Text/56/text,Velkommen til Potetens nasjon. Et land av [pulse freq=2][color=MEDIUM_VIOLET_RED]fremgang for alle poteter[/color][/pulse].
+Text/57/text,Du er utvalgt for en [color=DARK_ORANGE]avgjørende rolle[/color] i beskyttelsen av våre grenser.
+Text/59/text,"SE HER! Muren som [color=MEDIUM_VIOLET_RED]beskytter vår nasjon[/color]. Her vil du tjene, og sørge for at kun de verdige slipper inn."
+Text/5a/text,"Ah, den nye spiren. Lytt nøye, din rolle er [color=DARK_ORANGE]avgjørende for Potetens sikkerhet[/color]."
+Text/184/text,Din velferd [wave amp=20 freq=3][color=YELLOW]avhenger av din innsats[/color][/wave].
+Text/5b/text,Jeg utnevner deg til tollembetsmann i [pulse freq=1][color=MEDIUM_VIOLET_RED]den ærerike Poteten[/color][/pulse]. Noen spørsmål?
+Choice/5c/text,Jeg er klar til å tjene Poteten med all min stivelse!
+Choice/5d/text,Hva skjer egentlig med avviste poteter?
+Text/5e/text,Utmerket! Det er den entusiasmen vi trenger. Du kan fortjene en utmerkelse fra [color=DARK_VIOLET]Rotreserven[/color].
+Text/5f/text,De blir... [color=DARK_VIOLET]prosessert[/color]. Ifølge protokollen. [color=DARK_VIOLET]Rotreserven[/color] håndterer alle detaljer.
+Text/60/text,Konsentrer deg om dine plikter. [color=DARK_ORANGE]Ikke mer.[/color]
+Text/61/text,"Din første vakt begynner nå. Sjekk papirer nøye, avvis dem som ikke oppfyller våre standarder."
+Text/62/text,"Oppfyll kvoten din, unngå sanksjoner. [color=MEDIUM_VIOLET_RED]Ære være Poteten![/color]"
+Choice/5d/disabled_text,
+Choice/5c/disabled_text,
+Text/184b/text,De som stiller for mange spørsmål? De blir [color=CRIMSON]omplassert[/color]. Permanent.
+Text/62b/text,"Og husk, [color=MEDIUM_VIOLET_RED]Ære til Spud![/color]"

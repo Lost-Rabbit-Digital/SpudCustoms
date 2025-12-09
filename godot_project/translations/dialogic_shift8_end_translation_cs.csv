@@ -1,0 +1,59 @@
+﻿keys,cs
+Text/265/text,Směna končí v neklidném tichu. Bezpečnostní hlídky se zdvojnásobily. Všichni se pohybují šeptem.
+Text/266/text,"Míříš do svých ubikací, když to uslyšíš – [color=YELLOW]křik z důstojnického křídla[/color]."
+Text/267/text,Zatočíš za roh a uvidíš bezpečnostní složky [pulse freq=3][color=RED]vykopávající Sašiny dveře[/color][/pulse].
+Text/268/text,Hlas náčelníka Yukona zahřmí. SLADKÁ BRAMBORO SAŠO! Jsi zatčena za [color=CRIMSON]zradu proti národu Brambor![/color]
+Text/269/text,"Saša je vlečena ven, vzpírá se. Její oči jsou vzdorovité, i když jí stráže kroutí rukama za zády."
+Text/26a/text,[tornado radius=4 freq=3][color=CHARTREUSE]PRAVDA VYJDE NAJEVO! NEMŮŽETE NÁS VŠECHNY UMLČET![/color][/tornado]
+Text/26b/text,Její pohled tě najde v davu přihlížejících. Čas jako by se zastavil.
+Text/26c/text,Rozpoznání... pak [color=CRIMSON]zdrcující pochopení[/color]. Zradil jsi její polohu. Ví to.
+Text/26d/text,Nemluví. Ten pohled stačí. [color=STEEL_BLUE]Zklamání hlubší než nenávist.[/color]
+Text/26e/text,Záblesk něčeho – [color=CHARTREUSE]naděje? důvěra?[/color] – jí přeběhne přes tvář.
+Text/26f/text,"Její rty se tiše pohnou: ""[color=CHARTREUSE]Kořeny rostou hluboko.[/color]"" Zpráva. Připomínka."
+Text/270/text,"Russet se vynoří ze stínů, spokojenost z něj sálá z každého póru."
+Text/271/text,"No no. Ta [color=CRIMSON]sladká brambora zhořkla[/color]. Vždycky jsem věděl, že na tobě něco hnije, Sašo."
+Text/272/text,"Russet zvedne složku. Tvé malé [color=DARK_VIOLET]manifesty[/color]. Tvé ""důkazy."" Vše nalezeno."
+Text/273/text,"Opravdu sis myslela, že můžeš podkopat [pulse freq=2][color=DARK_VIOLET]Kořenovou rezervu[/color][/pulse]? Podkopat MĚ?"
+Text/274/text,"Kopie už jsou venku, Russete. Svět se dozví, co děláš našim lidem!"
+Text/275/text,"Russet se chladně zasměje. Budou vědět, co jim řekneme. A ty? Budeš součástí [color=CRIMSON]velmi speciální várky[/color]."
+Text/276/text,"""[color=DARK_VIOLET]Zrádcovská směs[/color]"" – Myslím, že to zní hezky."
+Text/277/text,"Srdce ti buší. Každý instinkt křičí, abys něco udělal. Ale stráže jsou všude."
+Choice/278/text,Vykroč vpřed a žádej její propuštění (Nerozvážné)
+Choice/279/text,"Zůstaň skrytý – žij, abys bojoval jindy (Pragmatické)"
+Choice/27a/text,Zachyť Sašin pohled a kývni – slib (Odhodlání)
+Text/27b/text,"Prodíráš se davem. ""[color=CHARTREUSE]Počkejte! Nic špatného neudělala![/color]"""
+Text/27c/text,"Yukonova hlava se prudce otočí k tobě. ""[color=RED]Zadržte i tohohle![/color] Jasně, je to komplic!"""
+Text/27d/text,"Murphy tě popadne a táhne tě zpět. ""[color=STEEL_BLUE]Jsou zmatení v tom chaosu! UTÍKEJ![/color]"""
+Text/27e/text,"Murphy tě strká k boční chodbě, zatímco tě stráže obkličují."
+Text/27f/text,"Stráže tě popadnou. Russetův úsměv se rozšíří. ""[color=CRIMSON]Dva zrádci za cenu jednoho.[/color]"""
+Text/280/text,Stáhneš se zpět do stínů a nenávidíš se každým vláknem. [color=STEEL_BLUE]Zbabělec.[/color]
+Text/281/text,Ale naživu. A svobodný. Prozatím.
+Text/282/text,"Zachytíš Sašin pohled. Pomalé, úmyslné kývnutí. [color=CHARTREUSE]Jdu si pro tebe.[/color]"
+Text/283/text,"Vidí. Ten nejmenší úsměv. Pak je odvlečena za roh, pryč."
+Text/284/text,"Najde tě v chaosu. Jeho tvář je maska, ale jeho oči hoří."
+Text/285/text,Vzali ji do [color=CRIMSON]zpracovatelského křídla[/color]. Podúroveň 3. Tam vzali mou ženu.
+Text/286/text,Vtiskl ti něco do ruky – [color=GOLD]bezpečnostní klíčovou kartu[/color].
+Text/287/text,Až přijde čas... [color=CHARTREUSE]Přimhouřím oči[/color]. Pro mou ženu. Pro ně všechny.
+Text/288/text,"Murphy tě vtáhne do skladiště, těžce dýchá."
+Text/289/text,Tohle je ono. Tohle se [color=CRIMSON]skutečně děje[/color]. Mají Sašu. Zpracují ji do rána.
+Text/28a/text,"To bylo [color=STEEL_BLUE]hloupé[/color]. Odvážné, ale hloupé. Jsi teď na jejich seznamu."
+Text/28b/text,"Odboj něco plánuje. Zítra. Je to naše jediná šance, jak ji zachránit."
+Text/28c/text,Jdeš do toho? [color=CHARTREUSE]Naplno?[/color]
+Choice/28d/text,"Naplno. Ať to stojí, co to stojí, abychom zachránili Sašu."
+Choice/28e/text,Musím přemýšlet. Tohle se děje příliš rychle.
+Text/28f/text,Murphy ti stiskne rameno. [color=CHARTREUSE]Pak se pohneme za úsvitu. Kořeny rostou hluboko.[/color]
+Text/290/text,Murphyho tvář ztvrdne. Mysli rychle. Touto dobou zítra bude [color=DARK_VIOLET]Kořenová Rezerva[/color].
+Text/291/text,Ležíš vzhůru a zíráš na strop. Sašina tvář. Její vzdor. Její strach.
+Text/292/text,"Vytáhneš fotku pohřešované ženy. Další tvář, kterou jsi nemohl zachránit."
+Text/293/text,[color=CHARTREUSE]Tentokrát ne.[/color]
+Text/294/text,Do zítřka se všechno změní. Tak či onak.
+Text/295/text,[pulse freq=2][color=YELLOW]Už žádné stání stranou.[/color][/pulse]
+Text/296/text,"Cela je studená. Skrz zdi slyšíš Sašu někde, jak je ""vyslýchána."""
+Text/297/text,"Zítra, řekli. Oba budete [color=DARK_VIOLET]zpracováni[/color] společně."
+Text/298/text,Pokud nepřijde odboj. Pokud vás oba někdo nezachrání.
+Text/299/text,[color=STEEL_BLUE]Nejdelší noc vašeho života se táhne před vámi.[/color]
+Choice/278/disabled_text,
+Choice/279/disabled_text,
+Choice/27a/disabled_text,
+Choice/28d/disabled_text,
+Choice/28e/disabled_text,

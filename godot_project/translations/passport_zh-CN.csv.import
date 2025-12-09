@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://m6cjh5mflda6"
+
+[deps]
+
+files=["res://translations/passport_zh-CN.zh_CN.translation"]
+
+source_file="res://translations/passport_zh-CN.csv"
+dest_files=["res://translations/passport_zh-CN.zh_CN.translation"]
+
+[params]
+
+compress=true
+delimiter=0

@@ -1,0 +1,26 @@
+﻿keys,fi
+Text/200/text,"Hei, uusi peruna! Rankka vuoro, vai mitä? Nimeni on Murphy. Olen ollut täällä kolme kautta nyt."
+Text/201/text,"Näin sinun puhuvan Sashalle aiemmin. Hän on... [color=STEEL_BLUE]erilainen[/color]. Hyvällä tavalla erilainen, luulen."
+Choice/202/text,Hän vaikuttaa mukavalta. Antoi minulle neuvoja valppaana pysymisestä.
+Choice/203/text,Vain esittelyjä. Ei mitään erikoista.
+Text/204/text,Murphy vilkuilee hermostuneena ympärilleen. Niin.
+Text/205/text,"Meidän kesken? Se radiolähetys ""kadonneista perunoista""... serkkuni katosi viime kuussa. Hän epäonnistui tarkastuksessa."
+Text/206/text,"Viisasta. Pidä matalaa profiilia, tee työsi. Sitä minäkin sanon itselleni joka päivä."
+Text/207/text,"Murphyn ääni vaimenee. Vaikka joskus mietin, minne kaikki ne hylätyt perunat oikeasti menevät..."
+Text/208/text,Kafeteriassa
+Text/209/text,"Tuijotat paksua, purppuranruskeaa tahnaa. Kaikki syövät sitä kyseenalaistamatta. Sen on tarkoitus olla ravitsevaa."
+Choice/20a/text,Syö Juurireserviä kuten kaikki muutkin
+Choice/20b/text,Työnnä se sivuun – et ole nälkäinen
+Text/20c/text,"Maku on... multainen. Täyteläinen. Jokin siinä tuntuu [color=STEEL_BLUE]epämukavan tutulta[/color], mutta et osaa sanoa miksi."
+Text/20d/text,"Ylempi upseeri huomaa. ""Älä tuhlaa, niin et puutu, itu. Tuossa on [pulse freq=2][color=DARK_VIOLET]huippuluokan ravintoa[/color][/pulse]!"""
+Text/20e/text,Mumiset tekosyyn vatsavaivoista. Upseeri kohauttaa olkiaan ja jatkaa matkaansa.
+Text/20f/text,"Takaisin majoitustiloissasi, et saa mielestäsi sitä, mitä Sasha sanoi. ""[color=YELLOW]Kaikki ei ole sitä, miltä näyttää.[/color]"""
+Text/210/text,"Kysyit Russetilta hylätyistä perunoista ensimmäisenä päivänäsi. Hänen vastauksensa oli välttelevä. ""[color=VIOLET]Käsitelty. Protokollan mukaisesti.[/color]"""
+Text/211/text,"Käsitelty [color=STEEL_BLUE]miten[/color], tarkalleen?"
+Text/212/text,Olit niin innokas palvelemaan. Niin ylpeä tullessasi valituksi. Mutta ylpeys ei selitä [color=CRIMSON]kadonneita perunoita[/color].
+Text/213/text,"Radio sanoi katoamisraporttien ""jatkuvan"". Se tarkoittaa, että sitä on tapahtunut jo jonkin aikaa."
+Text/214/text,"Uni tulee hitaasti. Kun se tulee, näet unta [wave amp=15 freq=2][color=DARK_VIOLET]purppuranpunaisista joista[/color][/wave], jotka virtaavat tarkastuspisteen alla."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

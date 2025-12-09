@@ -1,0 +1,29 @@
+﻿keys,th
+violation_condition_not_fresh,ปฏิเสธ: อนุญาตเฉพาะมันฝรั่งสดเท่านั้น มันฝรั่งหัวนี้{condition}
+violation_extra_eyes,"ปฏิเสธ: ห้ามมันฝรั่งที่มี ""ตา"" พิเศษ"
+violation_rotten,ปฏิเสธ: ห้ามมันฝรั่งเน่าเสีย
+violation_sprouted,ปฏิเสธ: ห้ามมันฝรั่งงอก
+violation_dehydrated,ปฏิเสธ: ห้ามมันฝรั่งขาดน้ำ
+violation_frozen,ปฏิเสธ: ห้ามมันฝรั่งแช่แข็ง
+violation_too_old,ปฏิเสธ: มันฝรั่งหัวนี้มีอายุ {age} ปี (อายุสูงสุด: 4 ปี)
+violation_too_young_3,ปฏิเสธ: มันฝรั่งหัวนี้มีอายุ {age} ปี (อายุขั้นต่ำ: 4 ปี)
+violation_too_young_2,ปฏิเสธ: มันฝรั่งหัวนี้มีอายุ {age} ปี (อายุขั้นต่ำ: 3 ปี)
+violation_males_only,ปฏิเสธ: อนุญาตเฉพาะมันฝรั่งเพศผู้เท่านั้น
+violation_females_only,ปฏิเสธ: อนุญาตเฉพาะมันฝรั่งเพศเมียเท่านั้น
+violation_country_spudland,ปฏิเสธ: มันฝรั่งจากสปัดแลนด์ทั้งหมดถูกห้ามเข้า
+violation_country_potatopia,ปฏิเสธ: มันฝรั่งจากโพเทโทเปียทั้งหมดถูกห้ามเข้า
+violation_country_tuberstan,ปฏิเสธ: มันฝรั่งจากทูเบอร์สถานทั้งหมดถูกห้ามเข้า
+violation_country_north_yamnea,ปฏิเสธ: มันฝรั่งจากนอร์ทยัมเนียทั้งหมดถูกห้ามเข้า
+violation_country_spuddington,ปฏิเสธ: มันฝรั่งจากสปัดดิงตันทั้งหมดถูกห้ามเข้า
+violation_country_tatcross,ปฏิเสธ: มันฝรั่งจากแทตครอสทั้งหมดถูกห้ามเข้า
+violation_country_mash_meadows,ปฏิเสธ: มันฝรั่งจากแมชมีโดวส์ทั้งหมดถูกห้ามเข้า
+violation_country_tuberville,ปฏิเสธ: มันฝรั่งจากทูเบอร์วิลล์ทั้งหมดถูกห้ามเข้า
+violation_country_chip_hill,ปฏิเสธ: มันฝรั่งจากชิปฮิลล์ทั้งหมดถูกห้ามเข้า (ข้อจำกัดการส่งออก)
+violation_country_murphyland,ปฏิเสธ: มันฝรั่งจากเมอร์ฟีแลนด์ทั้งหมดถูกห้ามเข้า
+violation_country_colcannon,ปฏิเสธ: มันฝรั่งจากคอลแคนนอนทั้งหมดถูกห้ามเข้า
+violation_country_pratie_point,ปฏิเสธ: มันฝรั่งจากแพรตตี้พอยต์ทั้งหมดถูกห้ามเข้า
+violation_race_purple_majesty,ปฏิเสธ: ห้ามมันฝรั่งสายพันธุ์เพอร์เพิลมาเจสตี้
+violation_race_sweet_potato,ปฏิเสธ: มันฝรั่งสายพันธุ์มันเทศต้องมีใบอนุญาตพิเศษ (ไม่มีให้บริการ)
+violation_race_yukon_gold,ปฏิเสธ: มันฝรั่งพันธุ์ Yukon Gold ถูกห้ามเข้า
+violation_expired_document,ปฏิเสธ: เอกสารหมดอายุเมื่อวันที่ {date}
+violation_invalid_potato,มันฝรั่งหัวนี้ตรงตามข้อกำหนดทั้งหมดและควรได้รับการอนุมัติ

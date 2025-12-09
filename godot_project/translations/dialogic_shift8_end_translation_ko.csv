@@ -1,0 +1,59 @@
+﻿keys,ko
+Text/265/text,"근무가 불안한 침묵 속에 끝난다. 보안 순찰이 두 배로 늘었고, 모두가 속삭이며 움직인다."
+Text/266/text,"숙소로 향하던 중, [color=YELLOW]장교 숙소동에서 들려오는 고함 소리[/color]를 듣는다."
+Text/267/text,모퉁이를 돌자 보안군이 [pulse freq=3][color=RED]사샤의 문을 걷어차 부수는[/color][/pulse] 광경이 눈에 들어온다.
+Text/268/text,"유콘 서장의 목소리가 울려 퍼진다. ""고구마 사샤! 너는 [color=CRIMSON]감자국에 대한 반역[/color] 혐의로 체포되었다!"""
+Text/269/text,사샤는 저항하며 끌려 나온다. 경비병들이 그녀의 팔을 등 뒤로 꺾는 와중에도 그녀의 눈은 반항적이다.
+Text/26a/text,[tornado radius=4 freq=3][color=CHARTREUSE]진실은 밝혀질 거야! 우리 모두를 침묵시킬 순 없어![/color][/tornado]
+Text/26b/text,구경꾼들 사이에서 그녀의 시선이 너를 찾는다. 시간이 멈춘 듯하다.
+Text/26c/text,알아차림... 그리고 [color=CRIMSON]끔찍한 깨달음[/color]. 네가 그녀의 위치를 배신했다. 그녀는 안다.
+Text/26d/text,그녀는 말하지 않는다. 그 시선만으로도 충분하다. [color=STEEL_BLUE]증오보다 깊은 실망감.[/color]
+Text/26e/text,무언가의 섬광 — [color=CHARTREUSE]희망? 신뢰?[/color] — 이 그녀의 얼굴을 스쳐 지나간다.
+Text/26f/text,"그녀의 입술이 소리 없이 움직인다. ""[color=CHARTREUSE]뿌리는 깊다.[/color]"" 메시지. 경고."
+Text/270/text,러셋이 그림자에서 나타난다. 모든 모공에서 만족감이 흘러넘친다.
+Text/271/text,"""이런 이런. [color=CRIMSON]고구마가 시큼해지는군[/color]. 사샤, 네게 뭔가 썩은 구석이 있다는 걸 항상 알고 있었지."""
+Text/272/text,"러셋이 폴더를 들어 올린다. ""네 작은 [color=DARK_VIOLET]선언문들[/color]. 네 '증거'들. 모두 회수되었다."""
+Text/273/text,"""네가 [pulse freq=2][color=DARK_VIOLET]뿌리 비축고[/color][/pulse]를 훼손할 수 있다고 정말 생각했나? 나를 훼손할 수 있다고?"""
+Text/274/text,"""러셋, 사본들은 이미 퍼져 있어. 세상은 네가 우리 사람들에게 무슨 짓을 하는지 알게 될 거야!"""
+Text/275/text,"러셋이 차갑게 웃는다. ""그들은 우리가 말하는 것만 알게 될 거야. 그리고 너는? 너는 [color=CRIMSON]아주 특별한 묶음[/color]의 일부가 될 거야."""
+Text/276/text,"""[color=DARK_VIOLET]반역자 블렌드[/color]"" — 꽤 괜찮은 이름 같지 않나."
+Text/277/text,"심장이 격렬하게 뛴다. 모든 본능이 무언가를 하라고 외치지만, 경비병들이 사방에 있다."
+Choice/278/text,앞으로 나서서 그녀를 풀어주라고 요구한다 (무모함)
+Choice/279/text,숨어 있는다 — 훗날을 기약한다 (실용적)
+Choice/27a/text,사샤와 눈을 마주치고 고개를 끄덕인다 — 약속 (결심)
+Text/27b/text,"군중을 헤치고 나아간다. ""[color=CHARTREUSE]잠깐! 그녀는 아무 잘못도 없어![/color]"""
+Text/27c/text,"유콘의 고개가 너를 향해 획 돌아간다. ""[color=RED]저 자도 붙잡아![/color] 분명한 공범이다!"""
+Text/27d/text,"머피가 너를 붙잡고 뒤로 끌어당긴다. ""[color=STEEL_BLUE]혼란 속에서 그들이 혼동하고 있어! 도망쳐![/color]"""
+Text/27e/text,"경비병들이 당신의 위치로 다가오자, 머피가 당신을 옆 복도로 밀쳤다."
+Text/27f/text,"경비병들이 당신을 붙잡는다. 러셋의 미소가 번진다. ""[color=CRIMSON]한 명 값으로 두 명의 반역자라니.[/color]"""
+Text/280/text,당신은 온몸으로 자신을 증오하며 그림자 속으로 움츠러든다. [color=STEEL_BLUE]비겁자.[/color]
+Text/281/text,하지만 살아있다. 그리고 자유롭다. 지금은.
+Text/282/text,당신은 사샤와 눈이 마주친다. 느리고 신중한 고개 끄덕임. [color=CHARTREUSE]내가 널 구하러 갈게.[/color]
+Text/283/text,그녀는 알아차린다. 아주 작은 미소. 그리고 그녀는 모퉁이 너머로 끌려가 사라진다.
+Text/284/text,"그는 혼란 속에서 당신을 찾아낸다. 그의 얼굴은 무표정하지만, 그의 눈은 불타오른다."
+Text/285/text,그들은 그녀를 [color=CRIMSON]처리 구역[/color]으로 데려갔어. 지하 3층. 내 아내를 데려갔던 곳이야.
+Text/286/text,그는 당신의 손에 무언가를 쥐여준다. [color=GOLD]보안 키카드[/color]였다.
+Text/287/text,때가 되면... [color=CHARTREUSE]못 본 척할게[/color]. 내 아내를 위해서. 그들 모두를 위해서.
+Text/288/text,머피가 거친 숨을 몰아쉬며 당신을 창고로 끌어당긴다.
+Text/289/text,이제 시작이야. 이건 [color=CRIMSON]정말로 일어나고 있어[/color]. 그들이 사샤를 잡았어. 아침까지 그녀를 처리할 거야.
+Text/28a/text,"그건 [color=STEEL_BLUE]어리석었어[/color]. 용감했지만, 어리석었어. 이제 넌 그들의 명단에 올랐어."
+Text/28b/text,저항군이 무언가를 계획하고 있어. 내일. 그녀를 구할 유일한 기회야.
+Text/28c/text,참여할 건가? [color=CHARTREUSE]끝까지 함께할 건가?[/color]
+Choice/28d/text,끝까지. 사샤를 구하기 위해서라면 무엇이든.
+Choice/28e/text,생각할 시간이 필요해. 너무 빠르게 진행되고 있어.
+Text/28f/text,머피가 당신의 어깨를 잡는다. [color=CHARTREUSE]그럼 새벽에 움직인다. 뿌리는 깊게 박혀 있어.[/color]
+Text/290/text,"머피의 얼굴이 굳어진다. 빨리 생각해. 내일 이맘때쯤이면, 그녀는 [color=DARK_VIOLET]뿌리 보존 구역[/color]에 있을 거야."
+Text/291/text,당신은 천장을 바라보며 잠 못 이루고 누워있다. 사샤의 얼굴. 그녀의 저항. 그녀의 두려움.
+Text/292/text,당신은 사라진 아내의 사진을 꺼낸다. 당신이 구하지 못했던 또 다른 얼굴.
+Text/293/text,[color=CHARTREUSE]이번엔 달라.[/color]
+Text/294/text,내일이면 모든 것이 바뀐다. 어떻게든.
+Text/295/text,[pulse freq=2][color=YELLOW]더 이상 방관하지 않을 거야.[/color][/pulse]
+Text/296/text,"감방은 차갑다. 벽 너머로 어딘가에서 사샤가 ""심문""당하는 소리가 들린다."
+Text/297/text,"내일, 그들이 말했지. 너희 둘은 함께 [color=DARK_VIOLET]처리될[/color] 거야."
+Text/298/text,저항군이 오지 않는 한. 누군가 너희 둘을 구해주지 않는 한.
+Text/299/text,[color=STEEL_BLUE]너희 생애 가장 긴 밤이 앞으로 펼쳐져 있다.[/color]
+Choice/278/disabled_text,
+Choice/279/disabled_text,
+Choice/27a/disabled_text,
+Choice/28d/disabled_text,
+Choice/28e/disabled_text,

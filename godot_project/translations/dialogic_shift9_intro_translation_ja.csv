@@ -1,0 +1,28 @@
+﻿keys,ja
+Text/140/text,国境は[pulse freq=3][color=CRIMSON]戦場[/color][/pulse]と化している。バリケード、装甲車両、精鋭警備兵が待機。今日こそレジスタンスが攻撃を仕掛ける日だ。
+Text/141/text,[wave amp=25 freq=3][color=YELLOW]緊急放送[/color][/wave]：スパッド全土に[color=RED]戒厳令[/color]が敷かれました。「レジスタンス」が政府施設への攻撃を開始しました。
+Text/142/text,これら[color=CRIMSON]過激派[/color]を支援する者は、[color=DARK_VIOLET]即時処理[/color]の対象となります。省は確認します：[color=DARK_VIOLET]ルートリザーブ[/color]は全ての[color=DARK_ORANGE]忠実なポテト[/color]にとって安全です。
+Text/143/text,複数の区域で[color=YELLOW]暴動が発生しました[/color]。レジスタンスの細胞が3つの[color=DARK_VIOLET]ルートリザーブ[/color]施設を攻撃しました。
+Text/144/text,彼らの目的は、全ての生産記録が保管されている中央データベースへのアクセスです。不忠の兆候は即ち処理を意味します。
+Text/145/text,我々は、サシャ将校を含む数名のレジスタンス工作員を捕らえました。
+Text/146/text,[tornado radius=3 freq=2][color=CRIMSON]真の裏切り者[/color][/tornado]は、[color=DARK_VIOLET]我々の民を互いに食わせる者たち[/color]だ。真実を止めることはできない！
+Text/147/text,彼女は引きずられていく、まだ叫んでいる：「[color=CHARTREUSE]人々は自分たちの食べ物に何が入っているかを知るだろう！[/color]」
+Text/148/text,[color=CRIMSON]裏切り者[/color]は[pulse freq=3][color=DARK_VIOLET]即時処理[/color][/pulse]される。テロリスト自身から作られた、特別な[color=DARK_VIOLET]ルートリザーブ[/color]だ。
+Text/149/text,全ての国境通過は[color=RED]停止されました[/color]。ただし、[color=GOLD]レベルアルファクリアランス[/color]を持つ必要不可欠な人員を除きます。
+Text/14a/text,このスキャナーは[color=YELLOW]騙せません[/color]。適切なクリアランスを持たない者には直ちに警報を鳴らしてください。
+Text/14b/text,公式の制服を着たポテトが、一見完璧なアルファ資格を持って近づいてくる。
+Text/14c/text,フォルダから小さな青いカードが落ちる。彼らはカードを拾いながら、「[wave amp=15 freq=3][color=CHARTREUSE]根は深く張る。[/color][/wave]」とつぶやいた。
+Choice/14d/text,スキャナーの警告を無視して通過させる（レジスタンスを助ける）
+Choice/14e/text,直ちに警報を鳴らす（レジスタンスを裏切る）
+Text/14f/text,彼らの目に安堵が浮かぶ。「[color=CHARTREUSE]サシャのために。スパッドのために。[/color]」彼らは中央データベースの方へ消えていった。
+Text/150/text,彼らの顔に恐怖が浮かぶ。「[color=CRIMSON]この裏切り者め！我々はあなたを信じていたのに！[/color]」彼らはすぐに警備兵に囲まれた。
+Text/151/text,「素晴らしい仕事だ。君の忠誠は報われるだろう。」
+Text/152/text,突然、施設が[color=YELLOW]爆発で揺れる[/color]。あなたの選択に関わらず、レジスタンスの攻撃が始まったのだ。
+Text/153/text,私は持ち場に留まり、これが収まるのを待つべきか、それとも[color=CHARTREUSE]立ち上がり[/color]、全てを危険に晒して真実を暴くべきか？
+Choice/154/text,職務を放棄できない。静かにして、最善を願おう。
+Choice/155/text,あまりにも長く共犯者だった。正しいことのために戦う時が来た。
+Text/156/text,[pulse freq=3][color=YELLOW]急げ！[/color][/pulse]警備は混乱している――これが脱出する唯一のチャンスだ！
+Choice/14d/disabled_text,
+Choice/14e/disabled_text,
+Choice/154/disabled_text,
+Choice/155/disabled_text,

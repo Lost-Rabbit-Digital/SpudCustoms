@@ -1,0 +1,29 @@
+﻿keys,ru
+violation_condition_not_fresh,ОТКАЗ: Разрешен только свежий картофель. Этот картофель {condition}
+violation_extra_eyes,ОТКАЗ: Наличие лишних глазков запрещено
+violation_rotten,ОТКАЗ: Гнилой картофель запрещен
+violation_sprouted,ОТКАЗ: Проросший картофель запрещен
+violation_dehydrated,ОТКАЗ: Обезвоженный картофель запрещен
+violation_frozen,ОТКАЗ: Замороженный картофель запрещен
+violation_too_old,ОТКАЗ: Картофелине {age} лет (максимальный возраст: 4 года)
+violation_too_young_3,ОТКАЗ: Картофелине {age} года (минимальный возраст: 4 года)
+violation_too_young_2,ОТКАЗ: Картофелине {age} года (минимальный возраст: 3 года)
+violation_males_only,ОТКАЗ: Разрешен только картофель мужского пола
+violation_females_only,ОТКАЗ: Разрешен только картофель женского пола
+violation_country_spudland,ОТКАЗ: Весь картофель из Спудленда запрещен
+violation_country_potatopia,ОТКАЗ: Весь картофель из Потатопии запрещен
+violation_country_tuberstan,ОТКАЗ: Весь картофель из Туберстана запрещен
+violation_country_north_yamnea,ОТКАЗ: Весь картофель из Северной Ямнии запрещен
+violation_country_spuddington,ОТКАЗ: Весь картофель из Спаддингтона запрещен
+violation_country_tatcross,ОТКАЗ: Весь картофель из Таткросса запрещен
+violation_country_mash_meadows,ОТКАЗ: Весь картофель из Мэш-Медоуз запрещен
+violation_country_tuberville,ОТКАЗ: Весь картофель из Тубервилля запрещен
+violation_country_chip_hill,ОТКАЗ: Весь картофель из Чип-Хилла запрещен (экспортные ограничения)
+violation_country_murphyland,ОТКАЗ: Весь картофель из Мёрфиленда запрещен
+violation_country_colcannon,ОТКАЗ: Весь картофель из Колканнона запрещен
+violation_country_pratie_point,ОТКАЗ: Весь картофель из Прати-Пойнт запрещен
+violation_race_purple_majesty,"ОТКАЗ: Сорта ""Пурпурное Величество"" запрещены"
+violation_race_sweet_potato,ОТКАЗ: Сорта батата требуют специальных разрешений (недоступно)
+violation_race_yukon_gold,"ОТКАЗ: Сорт ""Юкон Голд"" запрещен"
+violation_expired_document,ОТКАЗ: Срок действия документа истек {date}
+violation_invalid_potato,Этот картофель соответствует всем требованиям и должен был быть одобрен

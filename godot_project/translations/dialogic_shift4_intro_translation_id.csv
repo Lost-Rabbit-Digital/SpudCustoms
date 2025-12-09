@@ -1,0 +1,19 @@
+﻿keys,id
+Text/86/text,Protokol keamanan baru hari ini. Kami telah menerima intelijen tentang [color=YELLOW]kegiatan mencurigakan[/color].
+Text/87/text,Semua pelancong harus menjalani prosedur pemeriksaan yang ditingkatkan.
+Text/88/text,"Waspadai [color=YELLOW]perilaku gugup, cara bertindak yang aneh, atau keengganan untuk kontak mata[/color]."
+Text/89/text,"Semua barang yang mencurigakan harus disita dan dicatat. Untuk keamanan Spud, tentu saja."
+Text/8a/text,"Kami sangat khawatir dengan [color=CRIMSON]bahan terlarang[/color] - literatur anti-pemerintah, peralatan fotografi..."
+Text/8b/text,"Suara mereka menurun dengan mengancam. ""[pulse freq=2][color=DARK_VIOLET]Kami memiliki prosedur khusus untuk individu-individu ini.[/color][/pulse]"""
+Text/8c/text,"[wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] truk menurunkan peti bertanda ""Premium Reserve"" di kantin. Baunya menggoda, tetapi perut Anda bergolak."
+Text/8d/text,Sudahkah Anda mencoba Premium Reserve yang baru? Sepupu saya hilang bulan lalu. Gagal dalam pemeriksaan.
+Text/8e/text,"Mungkin dia bagian dari batch ini, ya? [tornado radius=2 freq=2][color=STEEL_BLUE]Humor gelap, Anda tahu?[/color][/tornado]"
+Choice/8f/text,Itu tidak lucu. Sama sekali tidak.
+Choice/90/text,Saya tidak lapar. Maaf. (Pergi)
+Text/91/text,Anda benar. Kadang-kadang lebih mudah bercanda daripada memikirkan [pulse freq=3][color=CRIMSON]apa yang sebenarnya mungkin terjadi[/color][/pulse].
+Text/92/text,"Petugas memperhatikan Anda pergi. ""Saya mengerti. Saya juga kehilangan selera makan..."""
+Text/93/text,"Waktu yang tepat untuk protokol keamanan baru, bukan? [wave amp=15 freq=3][color=YELLOW]Mereka mencoba menghentikan informasi tentang Root Reserve.[/color][/wave]"
+Text/94/text,Saya punya sesuatu yang mungkin membantu kita. Beberapa kentang dengan [color=CHARTREUSE]informasi penting layak untuk lolos[/color].
+Text/95/text,Anda mempertimbangkan pilihan dengan hati-hati. Keputusan hari ini bisa membantu [color=CHARTREUSE]menyebarkan kebenaran[/color]... atau [color=CRIMSON]membungkamnya selamanya[/color].
+Choice/8f/disabled_text,
+Choice/90/disabled_text,

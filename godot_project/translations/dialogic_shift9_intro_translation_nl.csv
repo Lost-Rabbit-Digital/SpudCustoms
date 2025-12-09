@@ -1,0 +1,28 @@
+﻿keys,nl
+Text/140/text,"De grens lijkt op een [pulse freq=3][color=CRIMSON]oorlogsgebied[/color][/pulse]. Barricades, gepantserde voertuigen en elite-bewakers staan klaar. Vandaag is wanneer het verzet van plan was toe te slaan."
+Text/141/text,"[wave amp=25 freq=3][color=YELLOW]NOODUITZENDING[/color][/wave]: Heel Spud staat onder [color=RED]staat van beleg[/color]. ""Het Verzet"" heeft aanvallen gelanceerd tegen overheidsgebouwen."
+Text/142/text,"Iedereen die deze [color=CRIMSON]extremisten[/color] helpt, wordt [color=DARK_VIOLET]onmiddellijk verwerkt[/color]. Het Ministerie bevestigt: [color=DARK_VIOLET]Root Reserve[/color] blijft veilig voor alle [color=DARK_ORANGE]loyale aardappels[/color]."
+Text/143/text,[color=YELLOW]Er zijn rellen uitgebroken[/color] in meerdere sectoren. Verzetsgroepen hebben drie [color=DARK_VIOLET]Root Reserve[/color]-faciliteiten aangevallen.
+Text/144/text,Hun doel: toegang tot de centrale database met alle productiegegevens. Elk teken van ontrouw betekent verwerking.
+Text/145/text,"We hebben verschillende verzetsoperatives gevangen, waaronder Officier Sasha."
+Text/146/text,De [tornado radius=3 freq=2][color=CRIMSON]echte verraders[/color][/tornado] zijn degenen die [color=DARK_VIOLET]ons volk aan elkaar voeren[/color]. Je kunt de waarheid niet tegenhouden!
+Text/147/text,"Ze wordt weggesleept, nog steeds schreeuwend: [color=CHARTREUSE]Het volk zal weten wat er in hun voedsel zit![/color]"
+Text/148/text,"De [color=CRIMSON]verrader[/color] zal [pulse freq=3][color=DARK_VIOLET]onmiddellijk worden verwerkt[/color][/pulse]. Een speciale partij [color=DARK_VIOLET]Root Reserve[/color], gemaakt van de terroristen zelf."
+Text/149/text,Alle grensovergangen zijn [color=RED]opgeschort[/color] behalve voor essentieel personeel met [color=GOLD]Alpha-niveau toestemming[/color].
+Text/14a/text,Deze scanner [color=YELLOW]kan niet worden misleid[/color]. Sla onmiddellijk alarm voor iedereen zonder de juiste toestemming.
+Text/14b/text,Een aardappel in officieel uniform nadert met schijnbaar perfecte Alpha-geloofsbrieven.
+Text/14c/text,"Een klein blauw kaartje valt uit de map. ""[wave amp=15 freq=3][color=CHARTREUSE]De wortels groeien diep.[/color][/wave]"", mompelen ze terwijl ze het kaartje oprapen."
+Choice/14d/text,"Verwerk ze door, negeer de scanner-alarmen (Help het verzet)"
+Choice/14e/text,Sla onmiddellijk alarm (Verraad het verzet)
+Text/14f/text,"Opluchting is te zien in hun ogen. ""[color=CHARTREUSE]Voor Sasha. Voor Spud.[/color]"" Ze verdwijnen richting de centrale database."
+Text/150/text,"Ontzetting verschijnt op hun gezicht. ""[color=CRIMSON]Jij verrader! We vertrouwden je![/color]"" Ze worden snel omsingeld door bewakers."
+Text/151/text,Uitstekend werk. Je loyaliteit zal worden beloond.
+Text/152/text,"Plotseling [color=YELLOW]schudt de faciliteit door explosies[/color]. De verzetsaanval is begonnen, ongeacht je keuze."
+Text/153/text,"Blijf ik op mijn post en hoop ik dat dit overwaait, of [color=CHARTREUSE]neem ik stelling[/color] en riskeer ik alles om de waarheid bloot te leggen?"
+Choice/154/text,Ik kan mijn plicht niet verlaten. Ik zal stil blijven en hopen op het beste.
+Choice/155/text,Ik ben te lang medeplichtig geweest. Het is tijd om te vechten voor wat juist is.
+Choice/155/disabled_text,
+Choice/14d/disabled_text,
+Choice/154/disabled_text,
+Choice/14e/disabled_text,
+Text/156/text,[pulse freq=3][color=YELLOW]Snel bewegen![/color][/pulse] Beveiliging is in paniek - dit is je enige kans om te ontsnappen!

@@ -1,0 +1,39 @@
+﻿keys,bg
+LAWS,ЗАКОНИ
+msg_not_fresh,"Картофът беше %s, но трябва да е Свеж"
+msg_extra_eyes,"Картофът имаше Допълнителни очи, което е забранено"
+msg_rotten,Гнили картофи не са разрешени
+msg_sprouted,Покълнали картофи не са разрешени
+msg_dehydrated,Дехидратирани картофи не са разрешени днес
+msg_frozen,Замразени картофи са забранени
+msg_over_age,Картофът е на %d години (макс. 5 години)
+msg_under_age,Картофът е на %d години (трябва да е над 3)
+law_fresh_potatoes,[color=dark_goldenrod]САМО Свежи[/color] картофи са разрешени - [color=dark_red]ОТХВЪРЛЕТЕ[/color] всички останали
+law_extra_eyes,[color=dark_goldenrod]Картофи с Допълнителни очи[/color] трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_rotten,[color=dark_goldenrod]Гнили[/color] картофи трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_sprouted,[color=dark_goldenrod]Покълнали[/color] картофи трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_dehydrated,[color=dark_goldenrod]Дехидратирани[/color] картофи трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_frozen,[color=dark_goldenrod]Замразени[/color] картофи трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_over_5_years,Картофи [color=dark_goldenrod]на 5 или повече години[/color] трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_under_3_years,Картофи [color=dark_goldenrod]на 3 или по-малко години[/color] трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_under_2_years,Картофи [color=dark_goldenrod]на 2 или по-малко години[/color] трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_males_only,[color=dark_goldenrod]САМО мъжки[/color] картофи са разрешени - [color=dark_red]ОТХВЪРЛЕТЕ[/color] всички женски
+law_females_only,[color=dark_goldenrod]САМО женски[/color] картофи са разрешени - [color=dark_red]ОТХВЪРЛЕТЕ[/color] всички мъжки
+law_country_spudland,[color=dark_goldenrod]ВСИЧКИ[/color] картофи от [color=dark_goldenrod]Spudland[/color] трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_country_potatopia,[color=dark_goldenrod]ВСИЧКИ[/color] картофи от [color=dark_goldenrod]Potatopia[/color] трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_country_tuberstan,[color=dark_goldenrod]ВСИЧКИ[/color] картофи от [color=dark_goldenrod]Tuberstan[/color] трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_country_north_yamnea,[color=dark_goldenrod]ВСИЧКИ[/color] картофи от [color=dark_goldenrod]Северна Ямния[/color] трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_country_spuddington,[color=dark_goldenrod]ВСИЧКИ[/color] картофи от [color=dark_goldenrod]Spuddington[/color] трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_country_tatcross,[color=dark_goldenrod]ВСИЧКИ[/color] картофи от [color=dark_goldenrod]Таткрос[/color] трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_country_mash_meadows,[color=dark_goldenrod]ВСИЧКИ[/color] картофи от [color=dark_goldenrod]Маш Медоус[/color] трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_country_tuberville,[color=dark_goldenrod]ВСИЧКИ[/color] картофи от [color=dark_goldenrod]Тубървил[/color] трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_country_chip_hill,[color=dark_goldenrod]ВСИЧКИ[/color] картофи от [color=dark_goldenrod]Чип Хил[/color] трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color] (забрана за износ)
+law_country_murphyland,[color=dark_goldenrod]ВСИЧКИ[/color] картофи от [color=dark_goldenrod]Мърфиленд[/color] трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_country_colcannon,[color=dark_goldenrod]ВСИЧКИ[/color] картофи от [color=dark_goldenrod]Колканън[/color] трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_country_pratie_point,[color=dark_goldenrod]ВСИЧКИ[/color] картофи от [color=dark_goldenrod]Прати Пойнт[/color] трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_purple_majesty,[color=dark_goldenrod]Пърпъл Маджести[/color] видове картофи трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_sweet_potatoes,[color=dark_goldenrod]Сладки картофи[/color] видове трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color] (няма налични разрешителни)
+law_yukon_gold,[color=dark_goldenrod]Юкон Голд[/color] видове картофи трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_fingerling,[color=dark_goldenrod]Фингерлинг[/color] видове картофи трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_red_bliss,[color=dark_goldenrod]Ред Блис[/color] видове картофи трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]
+law_russet,[color=dark_goldenrod]Ръсет[/color] видове картофи трябва да бъдат [color=dark_red]ОТХВЪРЛЕНИ[/color]

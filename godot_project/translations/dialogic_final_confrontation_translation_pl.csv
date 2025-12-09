@@ -1,0 +1,85 @@
+﻿keys,pl
+Text/11/text,"Granica Spud jest w [pulse freq=3][color=CRIMSON]chaosie[/color][/pulse]. Spanikowane ziemniaki zalewają punkty kontrolne, zdesperowane, by uciec po wycieku dokumentów."
+Text/12/text,Prześlizgujesz się z Saszą. [wave amp=20 freq=3][color=CHARTREUSE]Musimy nadal naciskać![/color][/wave] Ludzie teraz znają prawdę.
+Text/13/text,"Nie mogą już dłużej uciszać prawdy. Jeśli uda nam się infiltrować obiekt [color=DARK_VIOLET]Korzeniowej Rezerwy[/color] i nadać dowody, [tornado radius=3 freq=2][color=CHARTREUSE]rozpali to rewolucję[/color][/tornado]."
+Text/14/text,To miejsce to forteca. A teraz mamy wśród nas [color=YELLOW]byłego agenta celnego[/color]. Ich oczy zwężają się podejrzliwie na twój widok.
+Choice/15/text,"Rozumiem wasze wątpliwości, ale jestem oddany tej sprawie."
+Choice/16/text,Poświęciłem już wszystko. Nie wycoram się teraz.
+Text/17/text,Piękne słowa. Ale słyszeliśmy je już wcześniej.
+Text/18/text,"Pomogli nam zdobyć dokumenty. To są czyny, nie słowa."
+Text/19/text,"Nie możesz już wrócić do bycia lojalnym ziemniakiem. Witaj w ruchu oporu, towarzyszu."
+Text/1a/text,"Po napiętej infiltracji twój zespół stoi w sercu [color=DARK_VIOLET]Korzeniowej Rezerwy[/color], [pulse freq=3][color=CRIMSON]przerażająca maszyneria opresji[/color][/pulse] obnażona."
+Text/1b/text,"[wave amp=25 freq=3][color=RED]Alarmy wyją[/color][/wave] gdy strażnicy spieszą, by zareagować na waszą intruzję. Pędzicie przez korytarze, unikając systemów bezpieczeństwa."
+Text/1c/text,"Ekran migocze. ""No, no, [color=CRIMSON]zdrajca[/color] wraca z rebelianckimi szumowinami."""
+Text/1d/text,"Myślałeś, że możesz zatrzymać postęp Spud? [color=DARK_VIOLET]Korzeniowa Rezerwa[/color] jest życiodajną siłą tego narodu."
+Text/1e/text,Ale nie martw się. Nadal będziesz służyć Spud... [tornado radius=4 freq=3][color=DARK_VIOLET]w kadziach przetwórczych![/color][/tornado]
+Text/1f/text,Ekran nagle gaśnie.
+Text/20/text,"Zwracasz się do pozostałych z determinacją. ""Musimy dostać się do bunkra Idaho. Teraz!"""
+Text/21/text,"Wasza grupa przedziera się przez fale ochrony, ledwo unikając schwytania. Bojownicy ruchu oporu Saszy tworzą dywersje, oczyszczając waszą drogę naprzód."
+Text/22/text,"Po przerażającej ucieczce przez tunele konserwacyjne, w końcu docieracie do zabezpieczonej windy do prywatnego bunkra Idaho."
+Text/23/text,"Z Saszą i twoimi sojusznikami u boku, w końcu konfrontujesz się z Idaho."
+Text/24/text,"To koniec, Idaho. Twoje sekrety zostały ujawnione. Jak to się skończy... [pulse freq=2]to zależy od ciebie.[/pulse]"
+Choice/25/text,Negocjuj pokojowe przekazanie władzy (Dyplomatyczne)
+Choice/26/text,Żądaj natychmiastowego aresztowania Idaho (Sprawiedliwość)
+Choice/27/text,Wymierz samozwańczą sprawiedliwość za zbrodnie Idaho (Zemsta)
+Choice/28/text,Skup się na demontażu infrastruktury Korzeniowej Rezerwy (Demontaż)
+Text/29/text,"Idaho, to nie musi kończyć się kolejnym rozlewem krwi. Jeśli będziesz współpracować..."
+Text/2a/text,"Och, ty [color=STEEL_BLUE]idealistyczny głupcze[/color]. Myślisz, że to negocjacje?"
+Text/2b/text,"Idaho miażdży przycisk, i [color=RED]alarmy zaczynają wyć[/color]. ""Jedyne, co wam dam, to [color=DARK_VIOLET]bilet w jedną stronę do kadzi smażalniczych![/color]"""
+Text/2c/text,"Nie sądzę, Idaho. Strażnicy! Widzieliście akta, [color=YELLOW]wiecie, co zrobił waszym rodzinom.[/color]"
+Text/2d/text,Potężny strażnik występuje naprzód i szybko powala Idaho na ziemię.
+Text/2e/text,Strzał odbija się echem po komnacie. Ekran ściemnia się do czerni.
+Text/2f/text,"Idaho, w imieniu ziemniaczanego ludu Spud, [color=CHARTREUSE]jesteś aresztowany![/color]"
+Text/30/text,"To koniec. Lud przemówił. [color=CHARTREUSE]Zbudujemy nowe Spud, gdzie nasze korzenie będą w glebie, nie w cierpieniu.[/color]"
+Text/31/text,"Nie będzie [color=CRIMSON]żadnych układów, żadnej litości[/color] dla ciebie, Idaho. Sprawiedliwość tyrana to wszystko, na co zasługujesz."
+Text/32/text,"Rozliczenie. Tym właśnie jestem. [color=CHARTREUSE]Za każdego poświęconego ziemniaka, odbieramy naszą przyszłość![/color]"
+Text/33/text,"Zapomnijcie o nim. Jest objawem, nie chorobą. [color=CHARTREUSE]Zburzcie każdy korzeń i łodygę tej potworności.[/color]"
+Text/34/text,Musimy iść! Teraz!
+Text/35/text,Upadek [color=DARK_VIOLET]Korzeniowej Rezerwy[/color] rozpala pożar zmian w całym Spud.
+Text/36/text,"Ziemniaki w każdej prowincji powstają, przyjmując [color=CHARTREUSE]nową wizję dla swojego narodu[/color]."
+Text/37/text,"Dopóki pozostaniemy wierni naszym korzeniom, ideałom, które nas tu przywiodły... [color=CHARTREUSE]znajdziemy drogę.[/color]"
+Text/38/text,"I tak, z popiołów starego Spud, [color=CHARTREUSE]nowy naród zaczyna zapuszczać korzenie[/color]. Panowanie [color=DARK_VIOLET]Korzeniowej Rezerwy[/color] dobiegło końca."
+Choice/15/disabled_text,
+Choice/28/disabled_text,
+Choice/27/disabled_text,
+Choice/26/disabled_text,
+Choice/25/disabled_text,
+Choice/16/disabled_text,
+Text/1a_rescue1/text,Zwiadowca podbiega. Znaleźliśmy ją! [color=CHARTREUSE]Sasza jest w bloku zatrzymań![/color]
+Text/1a_rescue2/text,"Przygotowują się, by... [tornado radius=3 freq=2][color=CRIMSON]ją przetworzyć[/color][/tornado]... za mniej niż godzinę!"
+Text/1a_rescue3/text,Musimy ją uratować. [pulse freq=2][color=CHARTREUSE]Ona to wszystko zaczęła.[/color][/pulse] Nie odejdziemy bez niej.
+Text/1a_rescue4/text,"[wave amp=25 freq=3][color=YELLOW]Pędź przez obiekt![/color][/wave] Dotrzyj do Saszy, zanim będzie za późno!"
+Text/1a_rescue_fail1/text,Potykasz się. Droga jest zablokowana przez strażników!
+Text/1a_rescue_fail2/text,Wiktor wpada przez boczne drzwi. [color=CHARTREUSE]UCIEKAJ! Ja ich zatrzymam![/color]
+Text/1a_rescue_fail3/text,"Za Elenę. Za nich wszystkich. [color=STEEL_BLUE]Nie pozwolę, by zginął kolejny![/color]"
+Text/1a_rescue_fail4/text,Murphy szarpie alarm przeciwpożarowy. [color=CHARTREUSE]Za Tommy'ego![/color] Zraszacze oślepiają strażników!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Stworzę dywersję. Wyciągnij ją stamtąd![/color]
+Text/1a_rescue_fail6/text,"[color=YELLOW]Taśmociąg przetwórczy zacina się[/color], sypiąc iskrami i odwracając uwagę strażników!"
+Text/1a_rescue_fail7/text,Los – albo duchy przetworzonych – daje ci drugą szansę.
+Text/1a_rescue5/text,"Sasza podnosi wzrok z celi, posiniaczona, lecz nie złamana. Jej oczy rozszerzają się. [color=CHARTREUSE]Przyszedłeś.[/color]"
+Text/1a_rescue6/text,"Oczywiście, że przyszedłem. [color=CHARTREUSE]Skończymy to razem.[/color]"
+Choice/1a_rescue7/text,"Bałem się, że nigdy cię więcej nie zobaczę."
+Choice/1a_rescue8/text,"Sprawiłaś, że martwiliśmy się na śmierć. Nie rób tego więcej."
+Choice/1a_rescue9/text,Mamy robotę do wykonania. Idaho czeka.
+Text/1a_rescue10/text,"[color=CHARTREUSE]Sasza przyciąga cię do krótkiego uścisku.[/color] Wiedziałam, że przyjdziesz. Nigdy nie wątpiłam."
+Text/1a_rescue11/text,"Teraz sprawmy, by zapłacili za każdego, kogo zabrali. [color=CHARTREUSE]Razem.[/color]"
+Text/1a_rescue12/text,Sasza zdobywa się na słaby uśmiech przez ból. [color=STEEL_BLUE]Spróbuję.[/color] Ale niektóre rzeczy są warte ryzyka.
+Text/1a_rescue13/text,Twoja obecność tutaj to dowodzi. Teraz skończmy to.
+Text/1a_rescue14/text,"Sasza kiwa głową, jej determinacja odżywa. [color=CHARTREUSE]Masz rację.[/color] Sentyment może poczekać."
+Text/1a_rescue15/text,"Idaho myśli, że wygrał. Pokażmy mu, jak bardzo się myli."
+Text/158/text,Siły bezpieczeństwa zamykają okrążenie! [pulse freq=3][color=YELLOW]Przedzieraj się![/color][/pulse]
+Text/21_fail1/text,Strażnicy zamykają okrążenie z każdej strony. [color=CRIMSON]Nie ma gdzie uciekać![/color]
+Text/21_fail2/text,"Wiktor pojawia się za strażnikami, głos zimny jak stal. [color=STEEL_BLUE]Odpuśćcie. Natychmiast.[/color]"
+Text/21_fail3/text,Strażnicy wahają się - Viktor był jednym z nich. [color=CRIMSON]Imię Eleny jest na tych manifestach. Wasze rodziny mogą być następne.[/color]
+Text/21_fail4/text,Niektórzy strażnicy opuszczają broń. Inni uciekają. Droga jest wolna.
+Text/21_fail5/text,"Eksplozja wstrząsa wschodnim skrzydłem. Głos Murphy'ego trzeszczy w komunikatorze: [color=CHARTREUSE]""To moja dywersja! RUSZAĆ!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Strażnicy rozbiegają się w stronę eksplozji. Tommy byłby dumny.[/color]
+Text/21_fail7/text,"Sasha powala głównego strażnika od tyłu. [color=CHARTREUSE]Nie przeżyłam tej celi, żeby patrzeć, jak umierasz![/color]"
+Text/21_fail8/text,[color=STEEL_BLUE]UCIEKAJ! Ja się tym zajmę![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha przysuwa się bliżej, jej dłoń odnajduje twoją, gdy razem obserwujecie nowy świt.[/color] Zbudowaliśmy to. Ty i ja."
+Text/152/text,"Dopóki pozostaniemy wierni naszym korzeniom, ideałom, które nas tu sprowadziły... [color=CHARTREUSE]znajdziemy sposób.[/color] Razem."
+Text/153/text,[color=CHARTREUSE]Ściskasz jej dłoń. Razem.[/color]
+Text/154/text,"[color=STEEL_BLUE]Sasha stoi obok ciebie.[/color] Twój ogień rozpalił iskrę, która spaliła ich imperium."
+Text/155/text,"[color=STEEL_BLUE]Gniew ostygł, zamieniając się w determinację. Wciąż jest praca do wykonania.[/color]"
+Text/156/text,[color=STEEL_BLUE]Sasha obdarza cię wspierającym uśmiechem.[/color] Przeszedłeś długą drogę od tamtego punktu kontrolnego. Wszyscy.
+Text/157/text,"[color=STEEL_BLUE]Poczucie winy może nigdy w pełni nie zniknąć, ale odnalazłeś cel w odbudowie.[/color]"

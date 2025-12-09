@@ -1,0 +1,27 @@
+﻿keys,pt-BR
+Text/3a/text,"O posto de controle foi reconstruído após o ataque da resistência. A segurança é sem precedentes, com transmissões de propaganda elogiando os ""bravos defensores""."
+Text/3b/text,Fui promovido a Diretor Regional de Segurança de Fronteira e [pulse freq=2]Distribuição da Reserva de Raízes[/pulse].
+Text/3c/text,Russet prende uma pequena medalha ao seu uniforme. Diretor Regional Assistente... pela sua lealdade inabalável a Spud.
+Text/3d/text,Tenho uma missão especial! O Primeiro-Ministro Idaho inspecionará nossa instalação hoje. Você foi selecionado para a demonstração.
+Text/3e/text,Você viu o novo lote da Reserva de Raízes? Estão chamando de 'Mistura da Resistência' depois do que aconteceu com aqueles cativos.
+Text/3f/text,Alguns estão dizendo que a resistência não estava completamente errada. Que há [wave amp=15 freq=3]evidências de que eles estavam dizendo a verdade[/wave]...
+Choice/40/text,"""Cuidado. Mesmo falar assim é perigoso agora."""
+Choice/41/text,"""Tive os mesmos pensamentos. Isso não parece certo."""
+Text/42/text,Nem todos acreditam mais na história oficial. Mantenha os olhos abertos durante a visita do Primeiro-Ministro.
+Text/43/text,"Uma nova resistência está se formando. Mais silenciosa, mais cuidadosa. Se você quiser saber mais... procure pelo emblema de batata amarela."
+Text/44/text,ATENÇÃO: A comitiva do Primeiro-Ministro Idaho chegou. Todos os oficiais para as estações designadas. Protocolos de inspeção em vigor.
+Text/45/text,"Sua medalha parece pesada - uma recompensa pela lealdade, ou uma marca de vergonha? Em breve você enfrentará o arquiteto da Reserva de Raízes."
+Text/46/text,"Após a transmissão que expôs a Reserva de Raízes, levantes eclodiram por toda Spud. O Primeiro-Ministro Idaho permanece barricado no prédio da administração."
+Text/47/text,"Idaho planeja uma última transmissão para nos culpar pela Reserva de Raízes. Não podemos deixá-lo reescrever a história. Hoje, encerramos seu regime."
+Text/48/text,Você salvou minha vida na fábrica de processamento. Agora temos a chance de salvar toda Spud.
+Text/49/text,Seu conhecimento dos protocolos de segurança será crucial para a missão final. Você está pronto?
+Choice/4a/text,"""Estou pronto. Vamos terminar o que começamos."""
+Choice/4b/text,"""Qual é exatamente o plano? Preciso de detalhes."""
+Text/4c/text,Eu sabia que você não recuaria. Você é um dos nossos [tornado radius=3 freq=2]aliados mais fortes[/tornado].
+Text/4d/text,Vamos nos infiltrar usando uniformes do governo. Você ajudará a contornar os sistemas de segurança. Nosso objetivo é capturar Idaho e forçar uma confissão pública.
+Text/4e/text,"Você estará na Equipe Alfa com Sasha, invadindo a entrada leste. Seu objetivo: [color=GREEN]garantir o centro de transmissão[/color]."
+Text/4f/text,"De oficial de alfândega leal a combatente da resistência? É uma transformação que você nunca imaginou. Aconteça o que acontecer, Spud nunca mais será a mesma."
+Choice/40/disabled_text,
+Choice/41/disabled_text,
+Choice/4a/disabled_text,
+Choice/4b/disabled_text,

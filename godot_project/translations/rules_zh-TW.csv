@@ -1,0 +1,39 @@
+﻿keys,zh-TW
+LAWS,法規
+msg_not_fresh,馬鈴薯為%s，但必須是新鮮的
+msg_extra_eyes,馬鈴薯有額外芽眼，這是被禁止的
+msg_rotten,腐爛的馬鈴薯不被允許
+msg_sprouted,發芽的馬鈴薯不被允許
+msg_dehydrated,脫水的馬鈴薯今天不被允許
+msg_frozen,冷凍的馬鈴薯被禁止
+msg_over_age,馬鈴薯已%d歲 (最大5歲)
+msg_under_age,馬鈴薯已%d歲 (必須超過3歲)
+law_fresh_potatoes,[color=dark_goldenrod]僅限新鮮[/color]馬鈴薯入境 - [color=dark_red]拒絕[/color]所有其他
+law_extra_eyes,帶有[color=dark_goldenrod]額外芽眼[/color]的馬鈴薯必須[color=dark_red]拒絕[/color]
+law_rotten,[color=dark_goldenrod]腐爛[/color]的馬鈴薯必須[color=dark_red]拒絕[/color]
+law_sprouted,[color=dark_goldenrod]發芽[/color]的馬鈴薯必須[color=dark_red]拒絕[/color]
+law_dehydrated,[color=dark_goldenrod]脫水[/color]的馬鈴薯必須[color=dark_red]拒絕[/color]
+law_frozen,[color=dark_goldenrod]冷凍[/color]的馬鈴薯必須[color=dark_red]拒絕[/color]
+law_over_5_years,[color=dark_goldenrod]5歲或以上[/color]的馬鈴薯必須[color=dark_red]拒絕[/color]
+law_under_3_years,[color=dark_goldenrod]3歲或以下[/color]的馬鈴薯必須[color=dark_red]拒絕[/color]
+law_under_2_years,[color=dark_goldenrod]2歲或以下[/color]的馬鈴薯必須[color=dark_red]拒絕[/color]
+law_males_only,[color=dark_goldenrod]僅限雄性[/color]馬鈴薯入境 - [color=dark_red]拒絕[/color]所有雌性
+law_females_only,[color=dark_goldenrod]僅限雌性[/color]馬鈴薯入境 - [color=dark_red]拒絕[/color]所有雄性
+law_country_spudland,[color=dark_goldenrod]所有[/color]來自[color=dark_goldenrod]Spudland[/color]的馬鈴薯必須[color=dark_red]拒絕[/color]
+law_country_potatopia,[color=dark_goldenrod]所有[/color]來自[color=dark_goldenrod]Potatopia[/color]的馬鈴薯必須[color=dark_red]拒絕[/color]
+law_country_tuberstan,[color=dark_goldenrod]所有[/color]來自[color=dark_goldenrod]Tuberstan[/color]的馬鈴薯必須[color=dark_red]拒絕[/color]
+law_country_north_yamnea,[color=dark_goldenrod]所有[/color]來自[color=dark_goldenrod]North Yamnea[/color]的馬鈴薯必須[color=dark_red]拒絕[/color]
+law_country_spuddington,[color=dark_goldenrod]所有[/color]來自[color=dark_goldenrod]Spuddington[/color]的馬鈴薯必須[color=dark_red]拒絕[/color]
+law_country_tatcross,[color=dark_goldenrod]所有[/color]來自[color=dark_goldenrod]Tatcross[/color]的馬鈴薯[color=dark_red]必須駁回[/color]
+law_country_mash_meadows,[color=dark_goldenrod]所有[/color]來自[color=dark_goldenrod]Mash Meadows[/color]的馬鈴薯[color=dark_red]必須駁回[/color]
+law_country_tuberville,[color=dark_goldenrod]所有[/color]來自[color=dark_goldenrod]Tuberville[/color]的馬鈴薯[color=dark_red]必須駁回[/color]
+law_country_chip_hill,[color=dark_goldenrod]所有[/color]來自[color=dark_goldenrod]Chip Hill[/color]的馬鈴薯[color=dark_red]必須駁回[/color] (禁止出口)
+law_country_murphyland,[color=dark_goldenrod]所有[/color]來自[color=dark_goldenrod]Murphyland[/color]的馬鈴薯[color=dark_red]必須駁回[/color]
+law_country_colcannon,[color=dark_goldenrod]所有[/color]來自[color=dark_goldenrod]Colcannon[/color]的馬鈴薯[color=dark_red]必須駁回[/color]
+law_country_pratie_point,[color=dark_goldenrod]所有[/color]來自[color=dark_goldenrod]Pratie Point[/color]的馬鈴薯[color=dark_red]必須駁回[/color]
+law_purple_majesty,[color=dark_goldenrod]Purple Majesty[/color]馬鈴薯品種[color=dark_red]必須駁回[/color]
+law_sweet_potatoes,[color=dark_goldenrod]甜馬鈴薯[/color]品種[color=dark_red]必須駁回[/color] (無可用許可證)
+law_yukon_gold,[color=dark_goldenrod]Yukon Gold[/color]馬鈴薯品種[color=dark_red]必須駁回[/color]
+law_fingerling,[color=dark_goldenrod]Fingerling[/color]馬鈴薯品種[color=dark_red]必須駁回[/color]
+law_red_bliss,[color=dark_goldenrod]Red Bliss[/color]馬鈴薯品種[color=dark_red]必須駁回[/color]
+law_russet,[color=dark_goldenrod]Russet[/color]馬鈴薯品種[color=dark_red]必須駁回[/color]

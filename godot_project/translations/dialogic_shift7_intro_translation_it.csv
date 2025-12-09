@@ -1,0 +1,41 @@
+﻿keys,it
+Text/102/text,"Bene, ce l'hai fatta. La resistenza sta [color=CHARTREUSE]diventando più forte[/color]. Grazie a quei manifesti, le persone stanno vedendo la verità."
+Text/103/text,"Sono riuscito a ottenere questo dossier dalle nostre fonti - programmi di produzione, liste di '[color=CRIMSON]ingredienti[/color]', nomi dei [color=DARK_SLATE_BLUE]scomparsi[/color]."
+Text/104/text,Questo non è solo un programma di integratori alimentari. Stanno [color=CRIMSON]processando patate[/color]...e non in modo positivo.
+Text/105/text,"Promemoria interni del Primo Ministro Idaho in persona, che autorizzano ""[color=DARK_ORANGE]l'utilizzo di asset rifiutati.[/color]"""
+Text/106/text,"Quote per ogni posto di blocco, con la Dogana delle Patate che ha il più alto rapporto di rifiuto-lavorazione."
+Text/107/text,La situazione fuori è peggiorata. Folle arrabbiate si radunano ai posti di blocco chiedendo risposte su Root Reserve.
+Text/108/text,[color=YELLOW]TRASMISSIONE DI EMERGENZA[/color]: La recente circolazione di [color=CRIMSON]documenti falsificati[/color] ha causato panico inutile.
+Text/109/text,Una ricompensa di [color=GOLD]10.000 Crediti Patata[/color] è offerta per informazioni che portino alla cattura di questi sabotatori.
+Text/10a/text,Consumare o distribuire questa propaganda è ora classificato come [color=RED]alto tradimento[/color].
+Text/10b/text,Il turno di oggi opererà secondo protocolli speciali. Ogni viaggiatore deve sottoporsi a una Valutazione della Lealtà.
+Text/10c/text,Coloro che dimostrano [color=CRIMSON]sentimenti anti-governativi[/color] devono essere segnalati immediatamente.
+Text/10d/text,Il [color=CRIMSON]traditore tra noi[/color] sarà trovato. E quando lo sarà... [passa il dito attraverso la gola]
+Text/10e/text,"Una patata nervosa si avvicina, [color=GOLD]distintivo foglia gialla[/color] parzialmente visibile. Una piccola nota è nascosta tra i documenti: ""[color=CHARTREUSE]Casa sicura compromessa. Nuova posizione: Magazzino 7, Settore 4.[/color]"""
+Choice/10f/text,Processali velocemente con il marchio UV (Aiuta)
+Choice/110/text,Segnalali immediatamente alla sicurezza (Tradisci)
+Text/111/text,"Il sollievo inonda il loro volto. ""Grazie. La verità prevarrà."""
+Text/112/text,"L'orrore si fa strada quando segnali alla sicurezza. ""[wave amp=25 freq=3]No, per favore! Ho una famiglia![/wave]"" Il loro distintivo giallo cade a terra."
+Text/113/text,Ben fatto. La tua lealtà è stata notata.
+Text/114/text,La tua decisione è stata notata. Sii pronto. [tornado radius=3 freq=2][color=CHARTREUSE]Qualcosa di grande sta arrivando[/color][/tornado]. La resistenza sta pianificando un'azione diretta.
+Text/115/text,"Quando accadrà, dovrai [color=YELLOW]scegliere da che parte stare[/color]. Non ci sarà più alcun terreno neutrale."
+Text/116/text,"Con ogni patata che processi, stai [pulse freq=2][color=CHARTREUSE]aiutando una rivoluzione[/color][/pulse] o [pulse freq=2][color=CRIMSON]permettendo un sistema orribile[/color][/pulse]."
+Choice/10f/disabled_text,
+Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha si guarda nervosamente alle spalle.[/color] Scusa, io... [color=YELLOW]Credo mi stiano osservando.[/color]"
+Text/102_foreshadow2/text,Russet ha fatto delle domande. Mi segue dopo i turni. [wave amp=15 freq=2][color=YELLOW]Devo stare più attenta.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, forse dovresti stare in disparte per un po'. Lascia che mi assuma io più rischi."
+Text/102_foreshadow4/text,"[color=STEEL_BLUE]Scuote la testa, forzando un sorriso.[/color] No. Siamo troppo vicini ora. Posso gestire Russet."
+Text/102_foreshadow5/text,Inoltre... [color=CHARTREUSE]qualcuno deve tenere voi germogli fuori dai guai.[/color]
+Text/106_trucks1/text,Ma non sappiamo ancora dove si trovi la struttura di lavorazione principale. I documenti elencano solo codici di spedizione.
+Text/106_trucks2/text,Ho osservato i [color=DARK_VIOLET]camion della Root Reserve[/color]. Partono ogni notte alle 03:00. Stesso percorso.
+Text/106_trucks3/text,[color=CHARTREUSE]Se potessimo seguirli...[/color] sapremmo esattamente dove stanno portando gli scarti.
+Choice/106_trucks4/text,Lo farò io. Conosco gli orari delle pattuglie.
+Choice/106_trucks5/text,Sembra rischioso. Non può farlo qualcun altro?
+Text/106_trucks6/text,[color=CHARTREUSE]Gli occhi di Sasha si illuminano.[/color] Sapevo che avevi radici d'acciaio. Fai attenzione - pattugliano pesantemente di notte.
+Text/106_trucks7/text,Ore 03:00. Ti accovacci nell'ombra mentre i camion della [color=DARK_VIOLET]Root Reserve[/color] rombano oltre.
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Rimani nascosto! Segui il convoglio![/color][/pulse]
+Text/106_trucks9/text,"I camion si fermano presso un enorme complesso nascosto nel distretto industriale. [color=DARK_VIOLET]Settore 7, Complesso Magazzini Delta.[/color]"
+Text/106_trucks10/text,Ciminiere eruttano fumo violaceo. L'odore è... [tornado radius=3 freq=2][color=CRIMSON]inconfondibile.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]Il cuore della Root Reserve.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]L'espressione di Sasha si incupisce per la delusione.[/color] Dobbiamo tutti correre dei rischi. Troverò un altro modo.

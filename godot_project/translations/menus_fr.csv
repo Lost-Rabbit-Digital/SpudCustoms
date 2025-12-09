@@ -1,0 +1,175 @@
+﻿keys,fr
+main_menu_feedback,Commentaires et bugs
+main_menu_version,Édition 1.2.0
+main_menu_new_game,Nouveau jeu
+main_menu_continue,Continuer
+main_menu_level_select,Sélection de niveau
+main_menu_score_attack,Attaque de score
+main_menu_options,Paramètres
+main_menu_credits,Crédits
+main_menu_exit,Quitter
+select_language,Langue
+social_discord_tooltip,Rejoignez notre Discord !
+social_steam_tooltip,Visitez-nous sur Steam
+social_twitch_tooltip,Intégration Twitch
+twitch_status_disabled,Désactivé
+twitch_status_no_viewers,Aucun spectateur dans le pool
+twitch_status_ready,{count} spectateurs prêts
+twitch_connection_disabled,Désactivé
+twitch_connection_disconnected,Déconnecté
+twitch_connection_connected,Connecté
+twitch_connection_connecting,Connexion...
+options_menu_title,Paramètres
+options_difficulty,Difficulté
+options_difficulty_easy,Facile
+options_difficulty_normal,Moyen
+options_difficulty_expert,Difficile
+options_music_volume,Volume de la musique
+options_sfx_volume,Volume des effets sonores
+options_camera_shake,Tremblement de caméra
+options_back,Retour
+paused_menu_title,En pause
+shift_summary_title,RÉSUMÉ DE SESSION
+shift_summary_continue,Continuer
+shift_summary_restart,Recommencer
+shift_summary_main_menu,Menu principal
+shift_summary_submit_score,Soumettre le score
+shift_summary_runner_stats,STATISTIQUES DU COUREUR
+shift_summary_document_stats,STATISTIQUES DU DOCUMENT
+shift_summary_performance,RÉSULTAT
+shift_summary_bonuses,BONUS
+_FORMAT KEYS,
+time_format,{minutes}min {seconds}sec
+_SHIFT SUMMARY DETAILS,
+shift_complete_success,SESSION {shift} TERMINÉE\nSUCCÈS !
+shift_complete_failure,SESSION {shift} TERMINÉE\n{failure}
+strike_limit_reached,LIMITE DE GRÈVES ATTEINTE !
+quota_not_met,QUOTA NON ATTEINT !
+shift_summary_title_with_difficulty,RÉSUMÉ DE SESSION\n{difficulty}
+runner_stats_template,\nSTATISTIQUES DU COUREUR\nTentatives de fuite: {runner_attempts}\nMissiles tirés: {fired}\nCoureurs touchés: {hit}\nTouches parfaites: {perfect}\nTaux de réussite: {rate}%
+document_stats_template,STATISTIQUES DU DOCUMENT\nDocuments tamponnés: {stamped}\nPommes de terre approuvées: {approved}\nPommes de terre rejetées: {rejected}\nTampons parfaits: {perfect_stamps}
+bonus_stats_template,BONUS\nBonus vitesse de traitement: {processing_speed_bonus}\nBonus précision de tampon: {accuracy}\nBonus touches parfaites: {perfect_hit_bonus}\nBonus score total: {total_score_bonus}
+performance_stats_template,PERFORMANCE\nTemps pris: {time_taken}\nScore attendu: {expected_score}\nScore total: {score}\nPourcentage de dépassement: {percent}%\nÉvaluation de performance:\n{rating}
+performance_exceptional,Exceptionnel !
+performance_excellent,Excellent !
+performance_good,Bon
+performance_needs_improvement,Nécessite une amélioration
+performance_poor,Médiocre
+global_leaderboard_title,Classement mondial\n- {difficulty}
+getting_leaderboard_scores,Récupération des scores du classement...
+_PAUSE OPTIONS OVERLAY,
+reset_game_label,Réinitialiser la partie:
+reset_game_button,Réinitialiser
+mute_label,Muet
+fullscreen_label,Plein écran:
+resolution_label,Résolution:
+antialiasing_label,Anti-crénelage:
+screenshake_label,Tremblement d'écran:
+mouse_sens_label,Sensibilité de la souris:
+___ LOADING SCREEN,
+Loading…,Chargement...
+___ DIALOGS IN GAME,
+You lose.,Vous avez perdu.
+You won!,Vous avez gagné !
+Thanks for playing!,Merci d'avoir joué !
+Please Confirm...,Veuillez confirmer…
+Go back to main menu?,Retourner au menu principal ?
+Quit the game?,Quitter le jeu ?
+Cancel,Annuler
+OK,OK
+___ OPTIONS MENU,
+Controls,Commandes
+Mouse Sensitivity :,Sensibilité de la souris :
+Actions & Inputs,Actions et entrées
+Add,Ajouter
+Remove,Supprimer
+Assign Key for {action},Attribuer une touche à {action}
+Listening for input...,Écoute des entrées…
+Press again to confirm...,Appuyez à nouveau pour confirmer…
+Focus here to assign inputs.,Ciblez ici pour attribuer les entrées.
+Already Assigned,Déjà attribué
+{key} already assigned to {action}.,{key} est déjà attribué à {action}.
+Remove Key for {action},Supprimer la clé pour {action}
+Are you sure you want to remove {key} from {action}?,Êtes-vous sûr de vouloir supprimer {key} de {action} ?
+Reset,Réinitialiser
+Audio,Son
+Master :,Principal :
+Music :,Musique :
+SFX :,Effets :
+Ambient :,Ambiante :
+Mute :,Silencieux :
+Video,Vidéo
+Fullscreen :,Plein écran :
+Resolution :,Résolution :
+Anti-Aliasing :,Anticrénelage :
+Disabled (Fastest),Désactivé (le plus rapide)
+8x (Slowest),8x (le plus lent)
+Camera Shake :,Tremblement de caméra :
+Normal,Moyen
+Reduced,Réduit
+Minimal,Faible
+None,Aucun
+Game,Jeu
+Reset Game :,Réinitialiser le jeu :
+Do you want to reset your game data?,Voulez-vous réinitialiser vos données de jeu ?
+Back,Retour
+_INGAME DIALOGUE,
+TAKE THEM!,PRENEZ-LES !
+"Take your documents, please.","Prenez vos documents, s'il vous plaît."
+_SHIFT SUMMARY SCREEN,
+Continue,Continuer
+Main Menu,Menu principal
+Submit Score,Soumettre le score
+Restart,Redémarrer
+SHIFT SUMMARY,RÉSUMÉ DU QUART
+_DIFFICULTY LEVELS,
+Easy,Facile
+Normal,Moyen
+Expert,Difficile
+Primary,Principal
+Secondary,Secondaire
+Primary Interaction,Interaction principale
+Secondary Interaction,Interaction secondaire
+Cancel Interaction,Annuler l'interaction
+Escape,Échap
+Dialogic Default Action,Action par défaut de la boîte de dialogue
+Enter,Entrée
+Left Mouse Button,Bouton gauche de la souris
+Right Mouse Button,Bouton droit de la souris
+_NEW GAME CONFIRMATION,
+Start New Game,Commencer une nouvelle partie
+Starting a new game will reset your progress. Are you sure you want to continue?,Commencer une nouvelle partie réinitialisera votre progression. Voulez-vous vraiment continuer ?
+"Yes, Start New Game","Oui, commencer une nouvelle partie"
+Skip,Passer
+History,Histoire
+Return,Retour
+Restart the game?,Redémarrer le jeu ?
+_HELP MENU,
+help_menu_button,Aide
+help_menu_title,Comment jouer
+help_tab_basics,Bases
+help_tab_gameplay,Jouabilité
+help_tab_minigames,Mini-jeux
+help_basics_intro,[b]Bienvenue à Spud Customs
+help_basics_gate,[b]Ouvrir la Barrière[/b]
+help_basics_documents,[b]Inspecter les Documents[/b]
+help_basics_stamping,[b]Tamponner les Documents[/b]
+help_basics_runners,[b]Fuyards[/b]\nCertaines patates tenteront de forcer le passage ! Cliquez pour tirer des missiles et les arrêter. Un timing parfait rapporte des points bonus.
+help_basics_xray,"[b]Scanner à rayons X[/b]\nÀ partir du Service 3, utilisez le scanner à rayons X pour chercher de la contrebande cachée sur les patates."
+help_gameplay_quota,"[b]Atteindre le quota[/b]\nChaque service a un quota de patates que vous devez traiter. Si vous n'atteignez pas le quota, vous serez renvoyé !"
+help_gameplay_strikes,"[b]Avertissements[/b]\nFaire des erreurs (mauvaises approbations/rejets, fuyards manqués) vous donne des avertissements. Trop d'avertissements et la partie est terminée !"
+help_gameplay_rules,"[b]Règles d'immigration[/b]\nConsultez le tableau d'affichage pour connaître les règles en vigueur. Les règles changent à chaque service : régions interdites, documents requis et conditions spéciales."
+help_gameplay_scoring,"[b]Score[/b]\nGagnez des points pour les bonnes décisions, les tampons parfaits et l'arrêt des fuyards. Des bonus sont accordés pour la vitesse et la précision !"
+help_gameplay_difficulty,"[b]Niveaux de difficulté[/b]\nFacile : Timing plus souple, moins de règles. Normal : Expérience standard. Expert : Timing strict, règles complexes, scores plus élevés."
+help_minigames_intro,"[b]Mini-jeux[/b]\nAu cours de vos services, vous rencontrerez des mini-jeux qui peuvent rapporter des points bonus. Terminez-les pour obtenir des récompenses ou passez-les sans pénalité."
+help_minigames_document_scanner,"[b]Scanner de documents[/b] (Service 1+)\nUtilisez la lumière UV pour trouver des éléments cachés sur les documents. Cliquez pour marquer les filigranes, les tampons et les symboles. Trouvez tous les éléments avant la fin du temps imparti !"
+help_minigames_stamp_sorting,"[b]Tri de tampons[/b] (Service 2+)\nTriez les tampons qui tombent dans les bons bacs. Les tampons verts vont dans APPROUVÉ, les tampons rouges dans REFUSÉ. Triez rapidement pour des points bonus !"
+help_minigames_fingerprint_match,[b]Correspondance d'empreintes[/b] (Service 3+)\nFaites correspondre les empreintes de la grille avec le modèle de référence. Cliquez sur les empreintes correspondantes pour vérifier l'identité. Une observation attentive est requise !
+help_minigames_code_breaker,"[b]Casseur de code[/b] (Service 4+)\nDéchiffrez le code secret ! Devinez la combinaison à 4 chiffres. Vert signifie bonne position, jaune signifie mauvaise position. Tentatives limitées !"
+help_minigames_border_chase,[b]Poursuite à la frontière[/b] (Service 5+)\nContrebande sur le tapis roulant ! Cliquez sur les objets ROUGES pour les confisquer. Laissez passer les objets VERTS. Des réflexes rapides rapportent plus de points !
+help_tab_lore,Histoire
+help_lore_world_intro,"[b]Le Monde de Spud[/b]\n\nBienvenue dans un pays où les patates ont bâti leur propre civilisation. Dans ce monde, les tubercules marchent, parlent et ont formé leur propre nation avec des lois, des frontières et une bureaucratie."
+help_lore_nation,"[b]La Nation de Spud[/b]\n\nSpud est une fière nation qui promet la prospérité à toutes les patates. Protégée par la Grande Muraille de Spud, la nation maintient des contrôles frontaliers stricts pour s'assurer que seuls les tubercules méritants puissent entrer.\n\nLe gouvernement promeut l'unité et l'obéissance, et l'on entend souvent les citoyens patriotes proclamer : « Gloire à Spud ! »"
+help_lore_your_role,"[b]Votre Rôle[/b]\n\nVous avez été sélectionné pour un rôle crucial dans la protection de nos frontières. En tant qu'Agent des Douanes, vous travaillez sous l'œil vigilant du Superviseur Russet.\n\nVotre bien-être dépend de vos performances. Atteignez vos quotas, suivez les règles, et n'oubliez pas : la nation compte sur vous."
+help_lore_border,"[b]Le Grand Mur[/b]\n\nLe puissant Grand Mur de Spud protège la nation des étrangers. Aux divers points de contrôle le long du mur, des agents comme vous s'assurent que seuls les plus méritants puissent entrer.\n\nCeux qui tentent de franchir la frontière sans les documents appropriés s'exposent à des conséquences immédiates."
+help_lore_secrets,[b]La Réserve Souterraine[/b]\n\nLes patates rejetées sont... traitées. Conformément au protocole. La mystérieuse Réserve Souterraine s'occupe de tous les détails.\n\nIl est préférable de ne pas poser trop de questions. Concentrez-vous sur vos tâches. Rien de plus.

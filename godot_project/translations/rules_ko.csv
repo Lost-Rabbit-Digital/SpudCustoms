@@ -1,0 +1,39 @@
+﻿keys,ko
+LAWS,규정
+msg_not_fresh,감자는 %s 상태였지만 신선해야 합니다
+msg_extra_eyes,"감자에 겹눈이 있었으며, 이는 금지됩니다"
+msg_rotten,썩은 감자는 허용되지 않습니다
+msg_sprouted,싹이 난 감자는 허용되지 않습니다
+msg_dehydrated,탈수된 감자는 오늘은 허용되지 않습니다
+msg_frozen,냉동 감자는 금지됩니다
+msg_over_age,감자는 %d세입니다 (최대 5세)
+msg_under_age,감자는 %d세입니다 (3세 이상이어야 합니다)
+law_fresh_potatoes,[color=dark_goldenrod]신선한 감자만[/color] 허용됩니다 - 그 외 모든 감자는 [color=dark_red]거부[/color]하십시오
+law_extra_eyes,[color=dark_goldenrod]겹눈[/color] 상태의 감자는 [color=dark_red]거부[/color]되어야 합니다
+law_rotten,[color=dark_goldenrod]썩은[/color] 감자는 [color=dark_red]거부[/color]되어야 합니다
+law_sprouted,[color=dark_goldenrod]싹이 난[/color] 감자는 [color=dark_red]거부[/color]되어야 합니다
+law_dehydrated,[color=dark_goldenrod]탈수된[/color] 감자는 [color=dark_red]거부[/color]되어야 합니다
+law_frozen,[color=dark_goldenrod]냉동된[/color] 감자는 [color=dark_red]거부[/color]되어야 합니다
+law_over_5_years,[color=dark_goldenrod]5세 이상[/color]의 감자는 [color=dark_red]거부[/color]되어야 합니다
+law_under_3_years,[color=dark_goldenrod]3세 이하[/color]의 감자는 [color=dark_red]거부[/color]되어야 합니다
+law_under_2_years,[color=dark_goldenrod]2세 이하[/color]의 감자는 [color=dark_red]거부[/color]되어야 합니다
+law_males_only,[color=dark_goldenrod]남성 감자만[/color] 허용됩니다 - 모든 여성 감자는 [color=dark_red]거부[/color]하십시오
+law_females_only,[color=dark_goldenrod]여성 감자만[/color] 허용됩니다 - 모든 남성 감자는 [color=dark_red]거부[/color]하십시오
+law_country_spudland,[color=dark_goldenrod]스퍼드랜드[/color] 출신 [color=dark_goldenrod]모든[/color] 감자는 [color=dark_red]거부[/color]되어야 합니다
+law_country_potatopia,[color=dark_goldenrod]포테이토피아[/color] 출신 [color=dark_goldenrod]모든[/color] 감자는 [color=dark_red]거부[/color]되어야 합니다
+law_country_tuberstan,[color=dark_goldenrod]튜버스탄[/color] 출신 [color=dark_goldenrod]모든[/color] 감자는 [color=dark_red]거부[/color]되어야 합니다
+law_country_north_yamnea,[color=dark_goldenrod]북얌니아[/color] 출신 [color=dark_goldenrod]모든[/color] 감자는 [color=dark_red]거부[/color]되어야 합니다
+law_country_spuddington,[color=dark_goldenrod]스퍼딩턴[/color] 출신 [color=dark_goldenrod]모든[/color] 감자는 [color=dark_red]거부[/color]되어야 합니다
+law_country_tatcross,[color=dark_goldenrod]모든[/color] [color=dark_goldenrod]탯크로스[/color]산 감자는 [color=dark_red]입국 거부[/color]되어야 합니다.
+law_country_mash_meadows,[color=dark_goldenrod]모든[/color] [color=dark_goldenrod]매쉬 메도우즈[/color]산 감자는 [color=dark_red]입국 거부[/color]되어야 합니다.
+law_country_tuberville,[color=dark_goldenrod]모든[/color] [color=dark_goldenrod]튜버빌[/color]산 감자는 [color=dark_red]입국 거부[/color]되어야 합니다.
+law_country_chip_hill,[color=dark_goldenrod]모든[/color] [color=dark_goldenrod]칩 힐[/color]산 감자는 [color=dark_red]입국 거부[/color]되어야 합니다. (수출 금지)
+law_country_murphyland,[color=dark_goldenrod]모든[/color] [color=dark_goldenrod]머피랜드[/color]산 감자는 [color=dark_red]입국 거부[/color]되어야 합니다.
+law_country_colcannon,[color=dark_goldenrod]모든[/color] [color=dark_goldenrod]콜캐넌[/color]산 감자는 [color=dark_red]입국 거부[/color]되어야 합니다.
+law_country_pratie_point,[color=dark_goldenrod]모든[/color] [color=dark_goldenrod]프래티 포인트[/color]산 감자는 [color=dark_red]입국 거부[/color]되어야 합니다.
+law_purple_majesty,[color=dark_goldenrod]퍼플 마제스티[/color] 품종 감자는 [color=dark_red]입국 거부[/color]되어야 합니다.
+law_sweet_potatoes,[color=dark_goldenrod]고구마[/color] 품종은 [color=dark_red]입국 거부[/color]되어야 합니다. (허가증 없음)
+law_yukon_gold,[color=dark_goldenrod]유콘 골드[/color] 품종 감자는 [color=dark_red]입국 거부[/color]되어야 합니다.
+law_fingerling,[color=dark_goldenrod]핑거링[/color] 품종 감자는 [color=dark_red]입국 거부[/color]되어야 합니다.
+law_red_bliss,[color=dark_goldenrod]레드 블리스[/color] 품종 감자는 [color=dark_red]입국 거부[/color]되어야 합니다.
+law_russet,[color=dark_goldenrod]러셋[/color] 품종 감자는 [color=dark_red]입국 거부[/color]되어야 합니다.

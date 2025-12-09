@@ -1,0 +1,18 @@
+﻿keys,fi
+Text/56/text,Tervetuloa Perunan kansakuntaan. Maa [pulse freq=2][color=MEDIUM_VIOLET_RED]menestyksestä kaikille perunoille[/color][/pulse].
+Text/57/text,Sinut on valittu [color=DARK_ORANGE]kriittiseen rooliin[/color] rajojemme suojelemisessa.
+Text/59/text,"KATSOKAA! [color=MEDIUM_VIOLET_RED]Mahtava muuri[/color], joka turvaa maamme. Täällä palvelet ja varmistat, että vain kelpaavat pääsevät sisään."
+Text/5a/text,"Ah, uusi verso. Kuuntele tarkasti, roolisi on [color=DARK_ORANGE]elintärkeä Perunan turvallisuudelle[/color]."
+Text/184/text,Hyvinvointisi [wave amp=20 freq=3][color=YELLOW]riippuu suorituksestasi[/color][/wave].
+Text/5b/text,Nimitän sinut [pulse freq=1][color=MEDIUM_VIOLET_RED]kunniakkaan Perunan[/color] tullivirkailijaksi. Kysyttävää?
+Choice/5c/text,Olen valmis palvelemaan Perunaa koko tärkkelydelläni!
+Choice/5d/text,Mitä tarkalleen tapahtuu hylätyille perunoille?
+Text/5e/text,Erinomaista! Tuollaista innostusta me tarvitsemme. Saatat ansaita [color=DARK_VIOLET]Juurivarannon[/color] tunnustuksen.
+Text/5f/text,Ne... [color=DARK_VIOLET]käsitellään[/color]. Protokollan mukaan. [color=DARK_VIOLET]Juurivaranto[/color] hoitaa kaikki yksityiskohdat.
+Text/60/text,Keskity tehtäviisi. [color=DARK_ORANGE]Ei enempää.[/color]
+Text/61/text,"Ensimmäinen työvuorosi alkaa nyt. Tarkista paperit huolellisesti, estä ne, jotka eivät täytä standardejamme."
+Text/62/text,"Täytä kiintiösi, vältä rangaistukset. [color=MEDIUM_VIOLET_RED]Kunnia Perunalle![/color]"
+Choice/5d/disabled_text,
+Choice/5c/disabled_text,
+Text/184b/text,"Ne, jotka kysyvät liikaa? Heidät [color=CRIMSON]uudelleensijoitetaan[/color]. Pysyvästi."
+Text/62b/text,"Ja muista, [color=MEDIUM_VIOLET_RED]Kunnia Spudille![/color]"

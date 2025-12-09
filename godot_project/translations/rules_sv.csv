@@ -1,0 +1,41 @@
+﻿keys,sv
+LAWS,LAGAR
+_VALIDATION MESSAGES,
+msg_not_fresh,Potatisen var %s men måste vara färsk
+msg_extra_eyes,"Potatisen hade Extra Ögon, vilket är förbjudet"
+msg_rotten,Rutten potatis är inte tillåten
+msg_sprouted,Grodda potatisar är inte tillåtna
+msg_dehydrated,Torkad potatis är inte tillåten idag
+msg_frozen,Fryst potatis är förbjuden
+msg_over_age,Potatisen är %d år gammal (max 5 år)
+msg_under_age,Potatisen är %d år gammal (måste vara över 3 år)
+_LAWS,
+law_fresh_potatoes,[color=dark_goldenrod]ENDAST färska[/color] potatisar tillåtna - [color=dark_red]AVVISA[/color] alla andra
+law_extra_eyes,[color=dark_goldenrod]Extra Ögon[/color] tillstånd potatisar måste [color=dark_red]AVVISAS[/color]
+law_rotten,[color=dark_goldenrod]Ruttna[/color] potatisar måste [color=dark_red]AVVISAS[/color]
+law_sprouted,[color=dark_goldenrod]Grodda[/color] potatisar måste [color=dark_red]AVVISAS[/color]
+law_dehydrated,[color=dark_goldenrod]Dehydrerade[/color] potatisar måste [color=dark_red]AVVISAS[/color]
+law_frozen,[color=dark_goldenrod]Frysta[/color] potatisar måste [color=dark_red]AVVISAS[/color]
+law_over_5_years,Potatisar [color=dark_goldenrod]5 år eller äldre[/color] måste [color=dark_red]AVVISAS[/color]
+law_under_3_years,Potatisar [color=dark_goldenrod]3 år eller yngre[/color] måste [color=dark_red]AVVISAS[/color]
+law_under_2_years,Potatisar [color=dark_goldenrod]2 år eller yngre[/color] måste [color=dark_red]AVVISAS[/color]
+law_males_only,[color=dark_goldenrod]ENDAST manliga[/color] potatisar tillåtna - [color=dark_red]AVVISA[/color] alla kvinnliga
+law_females_only,[color=dark_goldenrod]ENDAST kvinnliga[/color] potatisar tillåtna - [color=dark_red]AVVISA[/color] alla manliga
+law_country_spudland,[color=dark_goldenrod]ALLA[/color] potatisar från [color=dark_goldenrod]Spudland[/color] måste [color=dark_red]AVVISAS[/color]
+law_country_potatopia,[color=dark_goldenrod]ALLA[/color] potatisar från [color=dark_goldenrod]Potatopia[/color] måste [color=dark_red]AVVISAS[/color]
+law_country_tuberstan,[color=dark_goldenrod]ALLA[/color] potatisar från [color=dark_goldenrod]Tuberstan[/color] måste [color=dark_red]AVVISAS[/color]
+law_country_north_yamnea,[color=dark_goldenrod]ALLA[/color] potatisar från [color=dark_goldenrod]Norra Yamnea[/color] måste [color=dark_red]AVVISAS[/color]
+law_country_spuddington,[color=dark_goldenrod]ALLA[/color] potatisar från [color=dark_goldenrod]Spuddington[/color] måste [color=dark_red]AVVISAS[/color]
+law_country_tatcross,[color=dark_goldenrod]ALLA[/color] potatisar från [color=dark_goldenrod]Tatcross[/color] måste [color=dark_red]AVVISAS[/color]
+law_country_mash_meadows,[color=dark_goldenrod]ALLA[/color] potatisar från [color=dark_goldenrod]Mash Meadows[/color] måste [color=dark_red]AVVISAS[/color]
+law_country_tuberville,[color=dark_goldenrod]ALLA[/color] potatisar från [color=dark_goldenrod]Tuberville[/color] måste [color=dark_red]AVVISAS[/color]
+law_country_chip_hill,[color=dark_goldenrod]ALLA[/color] potatisar från [color=dark_goldenrod]Chip Hill[/color] måste [color=dark_red]AVVISAS[/color] (exportförbud)
+law_country_murphyland,[color=dark_goldenrod]ALLA[/color] potatisar från [color=dark_goldenrod]Murphyland[/color] måste [color=dark_red]AVVISAS[/color]
+law_country_colcannon,[color=dark_goldenrod]ALLA[/color] potatisar från [color=dark_goldenrod]Colcannon[/color] måste [color=dark_red]AVVISAS[/color]
+law_country_pratie_point,[color=dark_goldenrod]ALLA[/color] potatisar från [color=dark_goldenrod]Pratie Point[/color] måste [color=dark_red]AVVISAS[/color]
+law_purple_majesty,[color=dark_goldenrod]Purple Majesty[/color] potatis typer måste [color=dark_red]AVVISAS[/color]
+law_sweet_potatoes,[color=dark_goldenrod]Sötpotatis[/color] typer måste [color=dark_red]AVVISAS[/color] (inga tillstånd tillgängliga)
+law_yukon_gold,[color=dark_goldenrod]Yukon Gold[/color] potatis typer måste [color=dark_red]AVVISAS[/color]
+law_fingerling,[color=dark_goldenrod]Fingerling[/color] potatis typer måste [color=dark_red]AVVISAS[/color]
+law_red_bliss,[color=dark_goldenrod]Red Bliss[/color] potatis typer måste [color=dark_red]AVVISAS[/color]
+law_russet,[color=dark_goldenrod]Russet[/color] potatis typer måste [color=dark_red]AVVISAS[/color]

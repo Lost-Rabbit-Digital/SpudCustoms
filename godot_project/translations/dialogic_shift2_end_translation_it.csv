@@ -1,0 +1,26 @@
+﻿keys,it
+Text/200/text,"Ehi, nuovo germoglio! Turno difficile, eh? Mi chiamo Murphy. Sono qui da tre stagioni ormai."
+Text/201/text,"Ti ho visto parlare con Sasha prima. Lei è... [color=STEEL_BLUE]diversa[/color]. Diversa in senso buono, credo."
+Choice/202/text,Sembra simpatica. Mi ha dato qualche consiglio su come stare all'erta.
+Choice/203/text,Solo presentazioni. Niente di speciale.
+Text/204/text,Murphy si guarda intorno nervosamente. Già.
+Text/205/text,"Tra te e me? Quella trasmissione radiofonica sulle ""patate scomparse""... mio cugino è scomparso il mese scorso. Ha fallito la sua ispezione."
+Text/206/text,"Intelligente. Tieni la testa bassa, fai il tuo lavoro. Questo è quello che mi dico ogni giorno."
+Text/207/text,La voce di Murphy si abbassa. Anche se a volte mi chiedo dove vadano a finire tutte quelle patate respinte...
+Text/208/text,Nella mensa
+Text/209/text,"Fissi la pasta densa, viola-marrone. Tutti la mangiano senza fare domande. Dovrebbe essere nutriente."
+Choice/20a/text,Mangia la Riserva di Radici come tutti gli altri
+Choice/20b/text,Mettila da parte - non hai fame
+Text/20c/text,"Il sapore è... terroso. Ricco. Qualcosa in esso ti sembra [color=STEEL_BLUE]scomodamente familiare[/color], ma non riesci a capire perché."
+Text/20d/text,"Un ufficiale anziano se ne accorge. ""Chi non spreca non manca, germoglio. Quella è [pulse freq=2][color=DARK_VIOLET]nutrizione premium[/color][/pulse] lì."""
+Text/20e/text,Mormori una scusa riguardo a un mal di stomaco. L'ufficiale si stringe nelle spalle e si allontana.
+Text/20f/text,"Tornato nei tuoi alloggi, non riesci a scrollarti di dosso quello che ha detto Sasha. ""[color=YELLOW]Non tutto è come sembra.[/color]"""
+Text/210/text,"Hai chiesto a Russet delle patate respinte il tuo primo giorno. La sua risposta fu evasiva. ""[color=VIOLET]Processate. Secondo il protocollo.[/color]"""
+Text/211/text,"Processate [color=STEEL_BLUE]come[/color], esattamente?"
+Text/212/text,Eri così desideroso di servire. Così orgoglioso di essere stato scelto. Ma l'orgoglio non spiega le [color=CRIMSON]patate scomparse[/color].
+Text/213/text,"La radio ha detto che le segnalazioni di sparizioni ""continuano"". Questo significa che sta succedendo da un po'."
+Text/214/text,"Il sonno arriva lentamente. Quando arriva, sogni [wave amp=15 freq=2][color=DARK_VIOLET]fiumi viola[/color][/wave] che scorrono sotto il checkpoint."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

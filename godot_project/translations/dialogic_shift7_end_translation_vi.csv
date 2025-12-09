@@ -1,0 +1,92 @@
+﻿keys,vi
+Text/d2/text,"Sau ca làm việc của bạn, bạn được dẫn đến một cuộc họp bí mật của phe kháng chiến trong một nhà máy tinh bột bị bỏ hoang."
+Text/d3/text,Một củ khoai tây sần sùi với những vết sẹo chiến đấu nói chuyện với nhóm tụ họp.
+Text/d4/text,Thời gian cho những lời thì thầm và những tờ rơi đã kết thúc. Chính phủ đã cho thấy bộ mặt thật của họ.
+Text/d5/text,Nguồn tin của chúng tôi xác nhận rằng các nhà máy chế biến [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] đang tăng sản lượng.
+Text/d6/text,"Điều đó có nghĩa là [tornado radius=3 freq=3][color=CRIMSON]nhiều anh chị em của chúng ta đã biến mất, bị chế biến, bị tiêu thụ[/color][/tornado]."
+Text/d7/text,Nhà lãnh đạo đấm mạnh tay lên bàn. [pulse freq=3][color=CHARTREUSE]Điều này kết thúc ngay bây giờ.[/color][/pulse] Chúng ta có kế hoạch tấn công vào trung tâm hoạt động của họ.
+Text/d8/text,"Sasha trải ra những kế hoạch chi tiết trên bàn. Trong ba ngày nữa, chúng ta sẽ phát động cuộc tấn công chính."
+Text/d9/text,"Trong khi một đội tạo ra sự phân tán tại khu phức hợp chính phủ chính, một đội khác sẽ xâm nhập vào cơ sở Root Reserve lớn nhất."
+Text/da/text,"Mục tiêu của chúng ta: thu thập [color=CHARTREUSE]bằng chứng không thể chối cãi[/color] về những gì xảy ra bên trong, phát sóng nó đến toàn bộ Spud."
+Text/db/text,Sasha chỉ vào một phần của kế hoạch. Đây là nơi bạn tham gia.
+Text/dc/text,Chúng ta cần một người ở bên trong Hải quan Spud để đảm bảo các đặc vụ của chúng ta có thể vượt qua biên giới cho nhiệm vụ.
+Text/dd/text,Chúng tôi có thể trông cậy vào bạn để là người đó không?
+Choice/de/text,Tôi sẽ làm bất cứ điều gì cần thiết để phơi bày sự thật.
+Choice/df/text,Nghe có vẻ nguy hiểm. Nếu chúng ta bị bắt thì sao?
+Choice/e0/text,Có cách nào khác không đặt quá nhiều người vào rủi ro không?
+Text/e1/text,Khuôn mặt của Sasha rạng rỡ với hy vọng. Cảm ơn bạn. [color=CHARTREUSE]Lòng can đảm của bạn sẽ cứu vô số sinh mạng.[/color]
+Text/e2/text,"Cô ấy nắm chặt tay bạn. Khi tất cả này kết thúc, [color=CHARTREUSE]bạn sẽ được nhớ đến như một anh hùng của cuộc cách mạng.[/color]"
+Text/e3/text,Sasha gật đầu long trọng. Nó nguy hiểm. Tôi sẽ không nói dối bạn về điều đó.
+Text/e4/text,Tất cả chúng ta có thể kết thúc [color=DARK_VIOLET]bị chế biến thành Root Reserve[/color] nếu chúng ta thất bại.
+Text/e5/text,"Nhưng không làm gì còn nguy hiểm hơn. Cho tất cả chúng ta, về lâu dài."
+Text/e6/text,Vẻ mặt của Sasha trở nên ảm đạm. Chúng tôi đã thử những cách khác. Trong nhiều năm.
+Text/e7/text,Kiến nghị. Ngoại giao im lặng. Những lời mách nước vô danh. Không có gì hiệu quả.
+Text/e8/text,Đôi khi bạn phải mạo hiểm tất cả để thay đổi bất cứ điều gì.
+Text/e9/text,Một cuộc tranh luận gay gắt nổ ra giữa các thành viên kháng chiến.
+Text/ea/text,Một số người lập luận cho một cách tiếp cận mạnh mẽ hơn - phá hủy hoàn toàn các nhà máy chế biến.
+Text/eb/text,Những người khác khăng khăng rằng hành động bạo lực chỉ làm dư luận quay lưng lại với họ.
+Text/ec/text,ĐỦ RỒI! Nhà lãnh đạo khiến cả phòng im lặng với giọng nói đầy quyền lực.
+Text/ed/text,"Chúng ta không có khả năng bị chia rẽ. Không phải bây giờ, khi chúng ta đã quá gần."
+Text/ee/text,Mục tiêu của chúng ta đơn giản: tiết lộ sự thật. Hãy để người dân quyết định những gì xảy ra tiếp theo.
+Text/ef/text,Nhà lãnh đạo quay sang nói trực tiếp với bạn. Nhưng chúng tôi cần biết [color=YELLOW]bạn đứng ở đâu[/color].
+Text/f0/text,"Trong ba ngày, các đặc vụ của chúng tôi sẽ tiếp cận trạm kiểm soát của bạn. Họ sẽ mang [color=CHARTREUSE]thẻ nhận dạng màu xanh[/color]."
+Text/f1/text,Bạn sẽ giúp họ vượt qua chứ? Câu trả lời của bạn bây giờ sẽ quyết định bước đi tiếp theo của chúng tôi.
+Choice/f2/text,Tôi sẽ giúp họ vượt qua. Vì tương lai của Spud.
+Choice/f3/text,"Tôi không thể trực tiếp tham gia, nhưng tôi sẽ nhìn đi chỗ khác."
+Choice/f4/text,Tôi cần thêm thời gian để suy nghĩ về điều này.
+Text/f5/text,Nhà lãnh đạo nắm chặt vai bạn. [color=CHARTREUSE]Sự can đảm của bạn vinh danh tất cả chúng tôi.[/color]
+Text/f6/text,"Vào ngày thứ ba, khi mặt trời lên cao nhất, các đặc vụ của chúng tôi sẽ đến."
+Text/f7/text,"Mật khẩu là ""[wave amp=15 freq=3][color=CHARTREUSE]Rễ cây mọc sâu.[/color][/wave]"" Hãy nhớ điều đó."
+Text/f8/text,"Nhà lãnh đạo gật đầu chậm rãi, rõ ràng là thất vọng nhưng thông cảm."
+Text/f9/text,Đôi khi điều nhiều nhất chúng ta có thể yêu cầu là mọi người không cản đường chúng ta.
+Text/fa/text,Các đặc vụ của chúng tôi sẽ tiến hành theo kế hoạch. Chỉ là... đừng báo động.
+Text/fb/text,Vẻ mặt của nhà lãnh đạo cứng rắn lại. [color=YELLOW]Thời gian là một sự xa xỉ mà chúng ta không có.[/color]
+Text/fc/text,Nhưng buộc bất kỳ ai tham gia vào sự nghiệp của chúng ta không làm cho chúng ta tốt hơn họ.
+Text/fd/text,Chúng tôi sẽ tiến hành mà không dựa vào sự giúp đỡ của bạn. Hãy tìm kiếm trong lương tâm của bạn.
+Text/fe/text,"Khi cuộc họp kết thúc, Sasha đi với bạn trở lại hướng trạm kiểm soát."
+Text/ff/text,Dù chuyện gì xảy ra... cảm ơn vì tất cả những gì bạn đã làm.
+Text/100/text,"Bạn trở về khu vực của mình tại trạm kiểm soát, tâm trí bạn chạy đua với gánh nặng của những sự kiện sắp tới."
+Text/101/text,"Chỉ trong ba ngày, mọi thứ có thể thay đổi. [color=YELLOW]Tốt hơn hoặc tệ hơn.[/color]"
+Choice/de/disabled_text,
+Choice/f4/disabled_text,
+Choice/f3/disabled_text,
+Choice/f2/disabled_text,
+Choice/e0/disabled_text,
+Choice/df/disabled_text,
+Text/d2b/text,Trước khi chúng ta bắt đầu... Tôi có một lời thú nhận.
+Text/d2c/text,"Cái ghi chú bạn tìm thấy vào ngày đầu tiên? ""[color=GOLD]Một người bạn[/color]""?"
+Text/d2d/text,Sasha mỉm cười. Tôi thấy bạn đã giữ nó. Thông minh. Tôi biết mình đã chọn đúng mầm.
+Text/d2e/text,"Tôi đã theo dõi các sĩ quan mới trong nhiều tháng, tìm kiếm một người có [color=CHARTREUSE]ánh mắt nghi vấn[/color]. Một người có thể nhìn thấu những lời nói dối."
+Text/d2f/text,Vẻ mặt của Sasha phức tạp. Bạn đã cho Russet xem nó. Tôi đã phải ẩn mình trong nhiều tuần sau đó.
+Text/d2g/text,Nhưng dù sao thì bạn vẫn ở đây. Điều đó nói cho tôi biết điều gì đó về lương tâm của bạn.
+Text/d2h/text,Bạn đã hủy nó. Tôi không trách bạn - giữ nó rất mạo hiểm.
+Text/d2i/text,"Nhưng những lời đó dù sao cũng đã đi vào đầu bạn rồi, phải không?"
+Text/d2j/text,"[color=CHARTREUSE]Tôi là ""Một người bạn.""[/color] Và bây giờ bạn đã biết tại sao."
+Text/d2k/text,Sasha trải các tài liệu bị thu giữ lên bàn. Các bản kê khai xử lý từ tháng trước.
+Text/d2l/text,"Bạn quét qua các tên, và máu bạn lạnh toát."
+Text/d2m/text,Nó đây rồi. [color=GOLD]Maris Piper[/color]. Người phụ nữ trong bức ảnh.
+Text/d2n/text,"""[color=CRIMSON]Trạng thái: Đã xử lý. Lô RR-2847.[/color]"" Ghi ngày ba ngày sau khi chồng cô ấy cầu xin sự giúp đỡ của bạn."
+Text/d2o/text,Bạn cảm thấy bức ảnh trong túi. [color=STEEL_BLUE]Cô ấy đã đi rồi. Và bạn không thể cứu cô ấy.[/color]
+Text/d2p/text,Nhưng có lẽ... [color=CHARTREUSE]có lẽ bạn vẫn có thể cứu những người khác[/color].
+Text/d2q/text,Murphy xuất hiện từ bóng tối. Này. Mừng là bạn đã đến.
+Text/d2r/text,Murphy giơ lên tờ đơn RR-UTIL nhàu nát. Anh họ tôi cũng có trong danh sách đó. [color=CHARTREUSE]Chúng ta sẽ làm điều này cùng nhau.[/color]
+Text/ff2/text,[color=STEEL_BLUE]Cô ấy giữ khoảng cách khi bạn đi.[/color] Tôi cảm kích việc bạn không cản đường chúng tôi. Nó... cũng là một điều gì đó.
+Text/ff3/text,"[color=STEEL_BLUE]Cô ấy đi trong im lặng, khoanh tay.[/color] Tôi hy vọng bạn tìm thấy bất cứ sự chắc chắn nào bạn đang tìm kiếm. Những người còn lại trong chúng tôi không thể chờ đợi được nữa."
+Text/100_viktor1/text,"Trên đường trở về, bạn thấy Viktor một mình trên mái trạm kiểm soát, nhìn chằm chằm vào bầu trời đêm."
+Text/100_viktor2/text,Viktor cầm một thứ nhỏ
+Text/100_viktor3/text,"Cô ấy từng nói rằng dù mọi thứ có tăm tối đến đâu, những vì sao vẫn sẽ ở đó. [color=STEEL_BLUE]Vĩnh hằng. Đẹp đẽ.[/color]"
+Text/100_viktor4/text,"Anh ấy quay sang bạn, mắt long lanh. [wave amp=15 freq=2]Tôi cứ nghĩ mãi... cô ấy có đau khổ không?[/wave] Cô ấy có biết chuyện gì đang xảy ra không?"
+Text/100_viktor5/text,Giọng Viktor nghẹn lại. Cô ấy từng hỏi tôi liệu tôi có bao giờ nghi ngờ các lệnh từ chối không. Tôi đã bảo cô ấy [color=CRIMSON]hãy tin vào hệ thống[/color].
+Text/100_viktor6/text,[tornado radius=3 freq=2][color=CRIMSON]Tôi đã tự tay đưa vợ mình vào các bể xử lý mà không hề hay biết.[/color][/tornado]
+Choice/100_viktor_choice1/text,"""Bạn không thể nào biết được. Không ai trong chúng ta biết cả."""
+Choice/100_viktor_choice2/text,"""Elena sẽ muốn bạn chiến đấu ngay bây giờ, chứ không phải chìm đắm trong tội lỗi."""
+Choice/100_viktor_choice3/text,"""Tôi không biết phải nói gì. Tôi xin lỗi."""
+Text/100_viktor7/text,Anh ta lắc đầu chậm rãi. [color=STEEL_BLUE]Sự thiếu hiểu biết không phải là vô tội. Lẽ ra tôi nên hỏi. Lẽ ra tôi nên lắng nghe.[/color]
+Text/100_viktor8/text,Viktor cẩn thận cất bức ảnh đi. [color=CHARTREUSE]Nhưng bây giờ tôi đã biết. Và biết nghĩa là tôi phải hành động.[/color]
+Text/100_viktor9/text,"Viktor đứng thẳng dậy, một ngọn lửa lạnh lẽo bùng cháy lại trong mắt anh ta. [color=CHARTREUSE]Bạn nói đúng.[/color] Cô ấy mạnh mẽ hơn tôi. Dũng cảm hơn."
+Text/100_viktor10/text,Anh ta siết chặt nắm tay. [color=CHARTREUSE]Khi thời điểm đến
+Text/100_viktor11/text,[pulse freq=2][color=CRIMSON]Và Idaho sẽ phải trả giá cho mỗi sinh mạng mà hắn đã hủy hoại.[/color][/pulse]
+Text/100_viktor12/text,Viktor cố gắng thể hiện một vẻ buồn bã
+Text/100_viktor13/text,Anh ta nhìn lại những vì sao. [color=STEEL_BLUE]Elena hẳn đã thích bạn.[/color]
+Text/100_viktor14/text,"Anh ta quay người rời đi, rồi dừng lại. [color=CHARTREUSE]Khi phe kháng chiến hành động... tôi sẽ sẵn sàng.[/color]"
+Text/100_viktor15/text,Vì Elena. Vì tất cả bọn họ. [pulse freq=2][color=CHARTREUSE]Các lính gác sẽ theo tôi khi tôi nói cho họ sự thật.[/color][/pulse]

@@ -1,0 +1,33 @@
+﻿keys,id
+Text/156/text,Selamat datang di [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs Training![/color][/pulse]
+Text/157/text,Pelatihan ini akan mengajarkan Anda [wave amp=15 freq=2][color=DARK_ORANGE]keterampilan penting[/color][/wave] yang diperlukan untuk melindungi perbatasan Spud.
+Text/158/text,Tugas Anda adalah memproses kentang yang masuk di pos perbatasan kami.
+Text/159/text,Kentang yang bermigrasi akan berbaris di luar kantor Anda di sini.
+Text/15a/text,"Untuk mulai memproses kentang, Anda perlu membuka bilik Anda untuk layanan dengan saklar di sini."
+Text/15b/text,Anda akan memberi sinyal setiap kentang untuk mendekati kantor Anda dengan mengetuk megafon.
+Text/15c/text,Kentang akan masuk ke bilik satu per satu dan menyerahkan dokumen mereka.
+Text/15d/text,"Pertama, pindahkan dokumen mereka ke meja pemeriksaan untuk melihat lebih jelas."
+Text/15e/text,"Kemudian, cari [tornado radius=3 freq=2][color=YELLOW]tanggal kedaluwarsa, informasi yang salah, atau tanda pemalsuan[/color][/tornado]."
+Text/15f/text,"Meja Anda memiliki stempel untuk menandai dokumen, Anda dapat mengklik di sini untuk menarik keluar bilah stempel."
+Text/160/text,Kemudian letakkan dokumen di bawah stempel yang Anda inginkan...
+Text/161/text,Klik stempel untuk menandai dokumen sebagai [color=CHARTREUSE]disetujui[/color] atau [color=CRIMSON]ditolak[/color]...
+Text/162/text,Dan seret dokumen kembali ke kentang untuk menyelesaikan keputusan Anda!
+Text/163/text,"Terkadang, kentang akan mencoba [color=CRIMSON]melewati pos pemeriksaan Anda dengan cepat[/color]."
+Text/164/text,"Anda memiliki uplink langsung di bilik Anda, yang memungkinkan Anda mengendalikan [pulse freq=3][color=CRIMSON]peluncur rudal[/color][/pulse] di sepanjang dinding perbatasan."
+Text/165/text,"Klik pada ""pelari"" ini untuk meluncurkan rudal dan menghentikan mereka."
+Text/166/text,"Ingat, setiap pelari yang lolos akan dihitung sebagai [wave amp=20 freq=3][color=CRIMSON]pelanggaran terhadap Anda[/color][/wave]."
+Text/167/text,"Terlalu banyak pelanggaran, dan shift Anda akan berakhir... [tornado radius=3 freq=3][color=CRIMSON]secara permanen.[/color][/tornado]"
+Text/168/text,Setiap shift memiliki [color=DARK_ORANGE]kuota kentang[/color] yang harus Anda proses untuk menyelesaikan hari Anda.
+Text/169/text,"Skor Anda melacak kinerja Anda dibandingkan dengan rekan Anda di pos pemeriksaan ini, dan petugas di kantor bea cukai yang jauh."
+Text/16a/text,"Setelah setiap shift, Anda akan melihat ringkasan kinerja Anda, dan apakah Anda berhasil atau gagal dalam tugas Anda."
+Text/16b/text,"Anda akan melihat rincian bagaimana Anda menangani pelari, dan berapa banyak dokumen yang Anda proses."
+Text/16c/text,"Plus bonus apa pun yang Anda peroleh dari memproses dokumen dengan cepat, menyelaraskan stempel dengan sempurna, atau menyerang kentang pelari dengan sempurna."
+Text/16d/text,"Anda juga akan menerima peringkat kinerja berdasarkan seberapa baik Anda memproses kentang selama shift Anda, dan hingga 3 stempel emas jika Anda melebihi harapan."
+Text/16e/text,Di sini Anda dapat mengirimkan skor Anda untuk setiap shift ke database global petugas bea cukai dan melihat bagaimana Anda dibandingkan dengan petugas bea cukai paling elit di seluruh dunia.
+Text/16f/text,"Jika shift Anda berhasil, Anda akan dapat melanjutkan dengan mengklik ""Lanjutkan"" dan memulai shift berikutnya."
+Text/170/text,Itu mencakup dasar-dasar tugas Anda sebagai Petugas Bea Cukai.
+Text/171/text,"Ingat: periksa dokumen dengan teliti, hentikan pelari, dan penuhi kuota Anda."
+Text/172/text,Keselamatan dan keamanan Spud bergantung pada [pulse freq=2][color=DARK_ORANGE]kewaspadaan Anda![/color][/pulse]
+Text/174/text,Mari kita mulai [color=YELLOW]shift pelatihanmu[/color]...
+Text/180/text,Namun hati-hati - tidak setiap kentang memiliki dokumen yang lengkap.
+Text/181/text,[color=RED]Paspor kedaluwarsa[/color] otomatis ditolak. Tanpa pengecualian.

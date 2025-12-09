@@ -1,0 +1,18 @@
+keys,en
+Text/56/text,Welcome to the nation of Spud. A land of [pulse freq=2][color=MEDIUM_VIOLET_RED]prosperity for all potatoes[/color][/pulse].
+Text/57/text,You've been selected for a [color=DARK_ORANGE]crucial role[/color] in protecting our borders.
+Text/59/text,"BEHOLD! The [color=MEDIUM_VIOLET_RED]mighty wall[/color] that safeguards our nation. This is where you'll serve, ensuring only the worthy enter."
+Text/5a/text,"Ah, the new sprout. Listen carefully, your role is [color=DARK_ORANGE]vital to Spud's security[/color]."
+Text/184/text,Russet steps uncomfortably close. I've seen many sprouts come through here. [color=STEEL_BLUE]Most don't last.[/color]
+Text/184b/text,The ones who ask too many questions? They get [color=CRIMSON]reassigned[/color]. Permanently.
+Text/5b/text,I appoint you as a Customs Officer of [pulse freq=1][color=MEDIUM_VIOLET_RED]glorious Spud[/color][/pulse]. Any questions?
+Choice/5c/text,"""I'm ready to serve Spud with all my starch!"""
+Choice/5d/text,"""What exactly happens to rejected potatoes?"""
+Text/5e/text,Excellent! That's the kind of enthusiasm we need. You might earn a [color=VIOLET]Root Reserve[/color] commendation.
+Text/5f/text,They're... [color=VIOLET]processed[/color]. According to protocol. [color=VIOLET]Root Reserve[/color] handles all the details.
+Text/60/text,Focus on your duties. [color=DARK_ORANGE]Nothing more.[/color]
+Text/61/text,"Your first shift begins now. Check papers carefully, deny those who don't meet our standards."
+Text/62/text,"Meet your quota, avoid strikes."
+Text/62b/text,"And remember, [color=MEDIUM_VIOLET_RED]Glory to Spud![/color]"
+Choice/5c/disabled_text,
+Choice/5d/disabled_text,

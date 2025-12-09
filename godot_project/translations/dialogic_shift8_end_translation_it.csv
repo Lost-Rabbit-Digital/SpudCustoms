@@ -1,0 +1,59 @@
+﻿keys,it
+Text/265/text,Il turno finisce in un silenzio inquieto. Le pattuglie di sicurezza sono raddoppiate. Tutti si muovono sussurrando.
+Text/266/text,Ti stai dirigendo ai tuoi alloggi quando lo senti - [color=YELLOW]urla dall'ala degli ufficiali[/color].
+Text/267/text,Giri l'angolo per vedere le forze di sicurezza [pulse freq=3][color=RED]sfondare la porta di Sasha a calci[/color][/pulse].
+Text/268/text,La voce del Capo Yukon rimbomba. DOLCE PATATA SASHA! Sei in arresto per [color=CRIMSON]tradimento contro la nazione di Spud![/color]
+Text/269/text,"Sasha viene trascinata fuori, mentre si divincola. I suoi occhi sono provocatori anche mentre le guardie le torcono le braccia dietro la schiena."
+Text/26a/text,[tornado radius=4 freq=3][color=CHARTREUSE]LA VERITÀ VERRÀ A GALLA! NON POTETE ZITTIRCI TUTTI![/color][/tornado]
+Text/26b/text,Il suo sguardo ti trova tra la folla di curiosi. Il tempo sembra fermarsi.
+Text/26c/text,Riconoscimento... poi [color=CRIMSON]una devastante comprensione[/color]. Hai tradito la sua posizione. Lei lo sa.
+Text/26d/text,Non parla. Lo sguardo è sufficiente. [color=STEEL_BLUE]Delusione più profonda dell'odio.[/color]
+Text/26e/text,Un barlume di qualcosa - [color=CHARTREUSE]speranza? fiducia?[/color] - le attraversa il viso.
+Text/26f/text,"Le sue labbra si muovono silenziosamente: ""[color=CHARTREUSE]Le radici crescono in profondità.[/color]"" Un messaggio. Un promemoria."
+Text/270/text,"Russet emerge dalle ombre, con la soddisfazione che trasuda da ogni poro."
+Text/271/text,"Bene bene. La [color=CRIMSON]patata dolce diventa acida[/color]. Ho sempre saputo che c'era qualcosa di marcio in te, Sasha."
+Text/272/text,"Russet solleva una cartella. I tuoi piccoli [color=DARK_VIOLET]manifesti[/color]. Le tue ""prove"". Tutto recuperato."
+Text/273/text,Credevi davvero di poter minare [pulse freq=2][color=DARK_VIOLET]Riserva Radice[/color][/pulse]? Minare ME?
+Text/274/text,"Le copie sono già in giro, Russet. Il mondo saprà cosa fai alla nostra gente!"
+Text/275/text,Russet ride freddamente. Sapranno quello che diremo loro. E tu? Farai parte di un [color=CRIMSON]lotto molto speciale[/color].
+Text/276/text,"""[color=DARK_VIOLET]Miscela del Traditore[/color]"" - Penso che suoni bene."
+Text/277/text,Il tuo cuore batte forte. Ogni istinto urla di fare qualcosa. Ma le guardie sono ovunque.
+Choice/278/text,Fatti avanti e chiedi che la rilascino (Temerario)
+Choice/279/text,Resta nascosto - vivi per combattere un altro giorno (Pragmatico)
+Choice/27a/text,Incontra lo sguardo di Sasha e annuisci - una promessa (Risoluzione)
+Text/27b/text,"Ti fai strada tra la folla. ""[color=CHARTREUSE]Aspettate! Non ha fatto nulla di male![/color]"""
+Text/27c/text,"La testa di Yukon scatta verso di te. ""[color=RED]Prendete anche quello![/color] Chiaramente un complice!"""
+Text/27d/text,"Murphy ti afferra, tirandoti indietro. ""[color=STEEL_BLUE]Sono confusi nel caos! CORRI![/color]"""
+Text/27e/text,Murphy ti spinge verso un corridoio laterale mentre le guardie si avvicinano alla tua posizione.
+Text/27f/text,"Le guardie ti afferrano. Il sorriso di Russet si allarga. ""[color=CRIMSON]Due traditori al prezzo di uno.[/color]"""
+Text/280/text,"Ti ritiri nelle ombre, odiandoti con ogni fibra. [color=STEEL_BLUE]Codardo.[/color]"
+Text/281/text,Ma vivo. E libero. Per ora.
+Text/282/text,Incontri lo sguardo di Sasha. Un cenno lento e deliberato. [color=CHARTREUSE]Verrò a prenderti.[/color]
+Text/283/text,"Lei capisce. Il più piccolo sorriso. Poi viene trascinata dietro l'angolo, sparita."
+Text/284/text,"Ti trova nel caos. Il suo volto è una maschera, ma i suoi occhi bruciano."
+Text/285/text,L'hanno portata all'[color=CRIMSON]ala di elaborazione[/color]. Sottolivello 3. È lì che hanno portato mia moglie.
+Text/286/text,Ti preme qualcosa in mano - una [color=GOLD]scheda magnetica di sicurezza[/color].
+Text/287/text,Quando sarà il momento... [color=CHARTREUSE]Farò finta di niente[/color]. Per mia moglie. Per tutti loro.
+Text/288/text,"Murphy ti trascina nel magazzino, respirando affannosamente."
+Text/289/text,Ci siamo. Sta [color=CRIMSON]accadendo davvero[/color]. Hanno preso Sasha. La elaboreranno entro domattina.
+Text/28a/text,"È stato [color=STEEL_BLUE]stupido[/color]. Coraggioso, ma stupido. Ora sei sulla loro lista."
+Text/28b/text,La resistenza sta pianificando qualcosa. Domani. È la nostra unica possibilità di salvarla.
+Text/28c/text,Ci sei? [color=CHARTREUSE]Fino in fondo?[/color]
+Choice/28d/text,Fino in fondo. Qualunque cosa serva per salvare Sasha.
+Choice/28e/text,Devo pensare. Sta succedendo tutto troppo in fretta.
+Text/28f/text,Murphy ti stringe la spalla. [color=CHARTREUSE]Allora ci muoveremo all'alba. Le radici affondano in profondità.[/color]
+Text/290/text,"Il volto di Murphy si indurisce. Pensa in fretta. A quest'ora domani, sarà [color=DARK_VIOLET]Riserva di Radici[/color]."
+Text/291/text,"Resti sveglio, fissando il soffitto. Il volto di Sasha. La sua sfida. La sua paura."
+Text/292/text,Tiri fuori la foto della moglie scomparsa. Un altro volto che non sei riuscito a salvare.
+Text/293/text,[color=CHARTREUSE]Non questa volta.[/color]
+Text/294/text,"Entro domani, tutto cambierà. In un modo o nell'altro."
+Text/295/text,[pulse freq=2][color=YELLOW]Basta stare a guardare.[/color][/pulse]
+Text/296/text,"La cella è fredda. Attraverso le pareti, puoi sentire Sasha da qualche parte, mentre viene ""interrogata."""
+Text/297/text,"Domani, hanno detto. Sarete entrambi [color=DARK_VIOLET]processati[/color] insieme."
+Text/298/text,A meno che non arrivi la resistenza. A meno che qualcuno non vi salvi entrambi.
+Text/299/text,[color=STEEL_BLUE]La notte più lunga della vostra vita si estende davanti.[/color]
+Choice/278/disabled_text,
+Choice/279/disabled_text,
+Choice/27a/disabled_text,
+Choice/28d/disabled_text,
+Choice/28e/disabled_text,

@@ -1,0 +1,31 @@
+﻿keys,pl
+Text/50/text,"Dobra robota dzisiaj, pędzie. Pamiętaj, wydajność jest kluczowa. Mamy kwoty do realizacji."
+Text/51/text,"Nie zapomnij odebrać twojnej racji [wave amp=15 freq=2][color=DARK_VIOLET]Rezerwy Korzeni[/color][/wave]. Wiesz, co mówi radio, to smak przyszłości Spuda!"
+Text/52/text,Mała kartka wyślizguje się z kilku papierów na twoim biurku.
+Text/53/text,"[color=GOLD]Nie wszystko jest takie, jakie się wydaje. Korzenie naszego narodu zgnily. [br] Podążaj tropem, ale uważaj, żeby cię nie uciszono.[/color] [br] - [color=CHARTREUSE]Przyjaciel[/color]"
+Text/54/text,"Ta kartka... i sposób, w jaki Russet unikał mojego pytania o [pulse freq=3][color=CRIMSON]odrzuconych ziemniakach[/color][/pulse]... [br] Coś wydaje się [color=STEEL_BLUE]nie tak[/color]."
+Text/55/text,Powinienem pozostać [color=YELLOW]czujny[/color]. Tu dzieje się więcej niż stemplowanie paszportów.
+Text/52b/text,Tego nie było tu rano. Ktoś to tu położył [color=YELLOW]podczas twojej zmiany[/color].
+Text/53b/text,"[color=GOLD]Podążaj śladem, ale uważaj, żeby cię nie uciszono.[/color]"
+Text/53c/text,"[color=GOLD]Obserwuj, kto je [/color][color=DARK_VIOLET]Rezerwę[/color][color=GOLD]. Obserwuj, kto odmawia.[/color]"
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]Przyjaciel[/color]
+Choice/53e/text,"""Ukryj notatkę – zbadaj po cichu"""
+Choice/53f/text,"""Zniszcz notatkę – to może być test"""
+Choice/53g/text,"""Pokaż notatkę Russetowi natychmiast"""
+Text/53h/text,Ostrożnie składasz notatkę i wsuwasz ją do kieszeni. [color=CHARTREUSE]Ktoś wyciąga rękę.[/color]
+Text/53i/text,"Ale kto? I dlaczego ty, w swoim pierwszym dniu?"
+Text/53j/text,Drzesz notatkę na drobne kawałki
+Text/53k/text,"Russet powiedział, że pędy, które zadają pytania, zostają ""przeniesione"". Lepiej nie ryzykować."
+Text/53l/text,"Zatrzymujesz Russeta, zanim odejdzie. ""Panie? Znalazłem to w moich papierach..."""
+Text/53m/text,"Russet wyrywa notatkę, czyta ją. Jego wyraz twarzy mignął – [color=YELLOW]czy to było rozpoznanie?[/color]"
+Text/53n/text,"Propaganda. Rebelianci próbują skorumpować nowych oficerów. [color=DARK_ORANGE]Dobrze zrobiłeś, przynosząc mi to.[/color]"
+Text/53o/text,"Chowa notatkę do kieszeni. Zapomnij, że kiedykolwiek to widziałeś. I obserwuj każdego, kto zachowuje się... [color=CRIMSON]podejrzanie[/color]."
+Text/54b/text,"""[color=VIOLET]Przetworzone. Zgodnie z protokołem.[/color]"" Co to w ogóle znaczy?"
+Text/54c/text,"Ta notatka... mówiła, że korzenie [color=CRIMSON]zgniły[/color]."
+Text/54d/text,"Ale Spud jest wspaniały, prawda? Tak nam mówili. W co wierzyłem."
+Text/54e/text,"Wyciągasz notatkę, czytając ją ponownie. ""[color=GOLD]Obserwuj, kto je Rezerwę. Obserwuj, kto odmawia.[/color]"""
+Text/54f/text,Jutro będziesz zwracać uwagę. [color=YELLOW]Ktoś próbuje ci coś powiedzieć.[/color]
+Text/54g/text,"Twarz Russeta, gdy czytał notatkę. Przez chwilę wyglądał niemal... [color=STEEL_BLUE]przestraszony[/color]."
+Text/54h/text,Czym tak naprawdę jest [color=DARK_VIOLET]Rezerwa Korzeni[/color]? I dlaczego ktoś miałby cię przed tym ostrzegać?
+Text/54i/text,"Notatki już nie ma, ale słowa pozostają. [color=YELLOW]Nie wszystko jest takie, jakim się wydaje.[/color]"
+Text/54j/text,Może zniszczenie jej było mądrym wyborem. Może właśnie uciszyłeś swojego jedynego sojusznika.

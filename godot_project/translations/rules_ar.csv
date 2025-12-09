@@ -1,0 +1,39 @@
+﻿keys,ar
+LAWS,القوانين
+msg_not_fresh,كانت البطاطا %s ولكن يجب أن تكون طازجة
+msg_extra_eyes,البطاطا لديها عيون إضافية وهذا ممنوع
+msg_rotten,البطاطا الفاسدة ممنوعة
+msg_sprouted,البطاطا المنبتة ممنوعة
+msg_dehydrated,البطاطا المجففة ممنوعة اليوم
+msg_frozen,البطاطا المجمدة محظورة
+msg_over_age,عمر البطاطا %d سنة (الحد الأقصى 5 سنوات)
+msg_under_age,عمر البطاطا %d سنة (يجب أن يكون أكثر من 3)
+law_fresh_potatoes,يُسمح [color=dark_goldenrod]فقط بالبطاطا الطازجة[/color] - [color=dark_red]ارفض[/color] جميع الأنواع الأخرى
+law_extra_eyes,البطاطا ذات حالة [color=dark_goldenrod]العيون الإضافية[/color] يجب [color=dark_red]رفضها[/color]
+law_rotten,البطاطا [color=dark_goldenrod]الفاسدة[/color] يجب [color=dark_red]رفضها[/color]
+law_sprouted,البطاطا [color=dark_goldenrod]المنبتة[/color] يجب [color=dark_red]رفضها[/color]
+law_dehydrated,البطاطا [color=dark_goldenrod]المجففة[/color] يجب [color=dark_red]رفضها[/color]
+law_frozen,البطاطا [color=dark_goldenrod]المجمدة[/color] يجب [color=dark_red]رفضها[/color]
+law_over_5_years,البطاطا [color=dark_goldenrod]بعمر 5 سنوات أو أكثر[/color] يجب [color=dark_red]رفضها[/color]
+law_under_3_years,البطاطا [color=dark_goldenrod]بعمر 3 سنوات أو أقل[/color] يجب [color=dark_red]رفضها[/color]
+law_under_2_years,البطاطا [color=dark_goldenrod]بعمر سنتين أو أقل[/color] يجب [color=dark_red]رفضها[/color]
+law_males_only,يُسمح [color=dark_goldenrod]فقط بالبطاطا الذكور[/color] - [color=dark_red]ارفض[/color] جميع الإناث
+law_females_only,يُسمح [color=dark_goldenrod]فقط بالبطاطا الإناث[/color] - [color=dark_red]ارفض[/color] جميع الذكور
+law_country_spudland,[color=dark_goldenrod]جميع[/color] البطاطا من [color=dark_goldenrod]سبودلاند[/color] يجب [color=dark_red]رفضها[/color]
+law_country_potatopia,[color=dark_goldenrod]جميع[/color] البطاطا من [color=dark_goldenrod]بوتاتوبيا[/color] يجب [color=dark_red]رفضها[/color]
+law_country_tuberstan,[color=dark_goldenrod]جميع[/color] البطاطا من [color=dark_goldenrod]توبرستان[/color] يجب [color=dark_red]رفضها[/color]
+law_country_north_yamnea,[color=dark_goldenrod]جميع[/color] البطاطا من [color=dark_goldenrod]شمال يامنيا[/color] يجب [color=dark_red]رفضها[/color]
+law_country_spuddington,[color=dark_goldenrod]جميع[/color] البطاطا من [color=dark_goldenrod]سبودينغتون[/color] يجب [color=dark_red]رفضها[/color]
+law_country_tatcross,[color=dark_goldenrod]جميع[/color] البطاطس القادمة من [color=dark_goldenrod]تاتكروس[/color] [color=dark_red]يجب رفضها[/color]
+law_country_mash_meadows,[color=dark_goldenrod]جميع[/color] البطاطس القادمة من [color=dark_goldenrod]ماش ميدوز[/color] [color=dark_red]يجب رفضها[/color]
+law_country_tuberville,[color=dark_goldenrod]جميع[/color] البطاطس القادمة من [color=dark_goldenrod]توبرفيل[/color] [color=dark_red]يجب رفضها[/color]
+law_country_chip_hill,[color=dark_goldenrod]جميع[/color] البطاطس القادمة من [color=dark_goldenrod]تشيب هيل[/color] [color=dark_red]يجب رفضها[/color] (حظر تصدير)
+law_country_murphyland,[color=dark_goldenrod]جميع[/color] البطاطس القادمة من [color=dark_goldenrod]ميرفيلاند[/color] [color=dark_red]يجب رفضها[/color]
+law_country_colcannon,[color=dark_goldenrod]جميع[/color] البطاطس القادمة من [color=dark_goldenrod]كولكانون[/color] [color=dark_red]يجب رفضها[/color]
+law_country_pratie_point,[color=dark_goldenrod]جميع[/color] البطاطس القادمة من [color=dark_goldenrod]براتي بوينت[/color] [color=dark_red]يجب رفضها[/color]
+law_purple_majesty,[color=dark_goldenrod]جميع[/color] أنواع بطاطس [color=dark_goldenrod]بيربل ماجيستي[/color] [color=dark_red]يجب رفضها[/color]
+law_sweet_potatoes,[color=dark_goldenrod]جميع[/color] أنواع [color=dark_goldenrod]البطاطا الحلوة[/color] [color=dark_red]يجب رفضها[/color] (لا توجد تصاريح متاحة)
+law_yukon_gold,[color=dark_goldenrod]جميع[/color] أنواع بطاطس [color=dark_goldenrod]يوكون جولد[/color] [color=dark_red]يجب رفضها[/color]
+law_fingerling,[color=dark_goldenrod]جميع[/color] أنواع بطاطس [color=dark_goldenrod]فينجرلينج[/color] [color=dark_red]يجب رفضها[/color]
+law_red_bliss,[color=dark_goldenrod]جميع[/color] أنواع بطاطس [color=dark_goldenrod]ريد بليس[/color] [color=dark_red]يجب رفضها[/color]
+law_russet,[color=dark_goldenrod]جميع[/color] أنواع بطاطس [color=dark_goldenrod]راست[/color] [color=dark_red]يجب رفضها[/color]

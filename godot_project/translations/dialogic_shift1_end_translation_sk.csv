@@ -1,0 +1,31 @@
+﻿keys,sk
+Text/50/text,"Dobrá práca dnes, výhonok. Pamätaj, efektivita je kľúčová. Máme kvóty, ktoré musíme splniť."
+Text/51/text,"Nezabudni si vziať svoju dávku [wave amp=15 freq=2][color=DARK_VIOLET]Koreňovej rezervy[/color][/wave]. Vieš, čo hovorí rádio, je to chuť budúcnosti Spuda!"
+Text/52/text,Malá poznámka sa šmýka z niekoľkých papierov na tvojom stole.
+Text/53/text,"[color=GOLD]Nie všetko je také, aké sa zdá. Korene našej krajiny sú shnité. [br] Sleduj stopu, ale daj si pozor, aby si nebol umlčaný.[/color] [br] - [color=CHARTREUSE]Priateľ[/color]"
+Text/54/text,"Tá poznámka... a spôsob, akým sa Russet vyhol mojej otázke o [pulse freq=3][color=CRIMSON]zamietnutých zemiakoch[/color][/pulse]... [br] Niečo sa zdá [color=STEEL_BLUE]zvláštne[/color]."
+Text/55/text,Mal by som zostať [color=YELLOW]ostražitý[/color]. Je tu toho oveľa viac ako len pečiatkovanie pasov.
+Text/52b/text,Ráno tam nebola. Niekto ju tam položil [color=YELLOW]počas tvojej smeny[/color].
+Text/53b/text,"[color=GOLD]Sleduj stopu, ale dávaj si pozor, aby ťa neumlčali.[/color]"
+Text/53c/text,"[color=GOLD]Sleduj, kto je [/color][color=DARK_VIOLET]Rezervu[/color][color=GOLD]. Sleduj, kto odmieta.[/color]"
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]Priateľ[/color]
+Choice/53e/text,"""Schovaj si odkaz – vyšetruj potichu"""
+Choice/53f/text,"""Znič odkaz – toto by mohla byť skúška"""
+Choice/53g/text,"""Ukáž odkaz Russetovi okamžite"""
+Text/53h/text,Opatrne zložíš odkaz a vsunieš si ho do vrecka. [color=CHARTREUSE]Niekto sa ti ozýva.[/color]
+Text/53i/text,"Ale kto? A prečo ty, hneď v tvoj prvý deň?"
+Text/53j/text,Roztrháš odkaz na drobné kúsky
+Text/53k/text,"Russet povedal, že výhonky, ktoré sa pýtajú, sú ""preradené"". Radšej neriskovať."
+Text/53l/text,"Chytíš Russeta, kým odíde. ""Pane? Našiel som toto medzi mojimi papiermi..."""
+Text/53m/text,"Russet chytí odkaz, prečíta si ho. Jeho výraz prebleskne – [color=YELLOW]bolo to rozpoznanie?[/color]"
+Text/53n/text,"Propaganda. Rebeli sa snažia skorumpovať nových dôstojníkov. [color=DARK_ORANGE]Urobil si správne, že si mi to priniesol.[/color]"
+Text/53o/text,"Vsunie si odkaz do vrecka. Zabudni, že si to kedy videl. A sleduj každého, kto sa správa... [color=CRIMSON]podozrivo[/color]."
+Text/54b/text,"""[color=VIOLET]Spracované. Podľa protokolu.[/color]"" Čo to vôbec znamená?"
+Text/54c/text,"Ten odkaz... hovoril, že korene sú [color=CRIMSON]hnilé[/color]."
+Text/54d/text,"Ale Spud je slávny, však? To nám povedali. Čomu som veril."
+Text/54e/text,"Vytiahneš odkaz a znova si ho prečítaš. ""[color=GOLD]Sleduj, kto je Rezervu. Sleduj, kto odmieta.[/color]"""
+Text/54f/text,Zajtra si budeš dávať pozor. [color=YELLOW]Niekto sa ti snaží niečo povedať.[/color]
+Text/54g/text,"Russetova tvár, keď si prečítal odkaz. Na okamih vyzeral takmer... [color=STEEL_BLUE]vystrašene[/color]."
+Text/54h/text,Čo je [color=DARK_VIOLET]Koreňová Rezerva[/color] v skutočnosti? A prečo by ťa pred ňou niekto varoval?
+Text/54i/text,"Odkaz je preč, ale slová pretrvávajú. [color=YELLOW]Nie všetko je tak, ako sa zdá.[/color]"
+Text/54j/text,Možno bolo zničenie správna voľba. Možno si práve umlčal svojho jediného spojenca.

@@ -1,0 +1,54 @@
+﻿keys,es
+alert_border_runner,¡CORREDOR FRONTERIZO DETECTADO!\nHaz clic para lanzar misil!
+alert_rejected_fleeing,¡PATATA RECHAZADA HUYENDO!\nHaz clic para lanzar misil!
+alert_runner_escaped,¡CORREDOR ESCAPADO!\nStrike añadido!
+alert_points_deducted,¡CORREDOR ESCAPADO!\nStrike añadido!\n-{penalty} puntos!
+alert_perfect_hit,¡GOLPE PERFECTO! +{perfect} puntos de bono de precisión
+alert_perfect_stamp,¡SELLO PERFECTO! +{points} puntos!
+alert_combo,¡COMBO x{mult}! +{streak} puntos de bono de combo
+alert_quota_met,"¡Cuota cumplida, turno completado! \nBono: {bonus} puntos!"
+alert_strike_removed,¡Strike eliminado!
+alert_correct_decision,"Has tomado la decisión correcta, oficial.\n+{points} puntos!"
+alert_wrong_decision,"Has causado sufrimiento innecesario, oficial...\n+1 Strike!"
+alert_potato_should_be_approved,\nEsta patata cumple todos los requisitos y debería haber sido aprobada.
+alert_strike_out,¡Máximo de strikes excedido! Tu turno ha terminado.
+ui_score,Puntuación: {score}
+ui_quota,Cuota: {current} / {target}
+ui_strikes,Faltas: {current} / {max}
+ui_click_megaphone,Haz clic en el megáfono para llamar a la siguiente patata
+ui_drag_document,Arrastra el documento a la mesa de inspección
+ui_stamp_document,Selecciona un sello para aprobar o rechazar
+ui_check_violations,Revisa las violaciones del documento
+Strike removed!,¡Strike eliminado!
+BORDER RUNNER DETECTED!\nClick to launch missile!,¡CORREDOR FRONTERIZO DETECTADO!\nHaz clic para lanzar misil!
+REJECTED POTATO FLEEING!\nClick to launch missile!,¡PATATA RECHAZADA HUYENDO!\nHaz clic para lanzar misil!
+RUNNER ESCAPED!\nStrike added!,¡CORREDOR ESCAPADO!\nStrike añadido!
+Click megaphone to call the next potato,Haz clic en el megáfono para llamar a la siguiente patata
+Drag document to inspection table,Arrastra el documento a la mesa de inspección
+Select a stamp to approve or reject,Selecciona un sello para aprobar o rechazar
+Check for document violations,Revisa las violaciones del documento
+rule_explanation_header,EXPLICACIÓN DE REGLA:
+rule_explanation_fresh,Mira el campo 'Condición'. Si dice algo que no sea 'Fresco' - RECHAZAR
+rule_explanation_sweet_potato,Mira el campo 'Tipo'. Si dice 'Batata' - RECHAZAR (sin permisos)
+rule_explanation_chip_hill,Mira el campo 'País'. Si dice 'Chip Hill' - RECHAZAR (prohibido)
+rule_explanation_age,Mira el campo 'Fecha de Nacimiento'. Calcula la edad y verifica contra la regla
+rule_explanation_gender,Mira el campo 'Género' y verifica contra la regla actual
+rule_footer_text,Estas reglas deben aplicarse para TODAS las papas
+rule_tutorial_hint,¿Necesitas ayuda? Haz clic en cualquier regla para una explicación
+alert_correct_decision_detailed,¡DECISIÓN CORRECTA! +{points} puntos\n{reason}
+alert_wrong_decision_detailed,¡DECISIÓN INCORRECTA! ¡Strike añadido!\n{reason}
+alert_reason_approved,La papa cumple todos los requisitos - APROBADA
+alert_reason_should_reject,Deberías haber RECHAZADO esta papa
+tutorial_check_type,Verifica el campo 'Tipo' en el pasaporte
+tutorial_check_condition,Verifica el campo 'Condición' en el pasaporte
+tutorial_check_country,Verifica el campo 'País' en el pasaporte
+tutorial_check_age,Verifica la 'Fecha de Nacimiento' para calcular la edad
+tutorial_check_gender,Verifica el campo 'Género' en el pasaporte
+alert_streak_bonus_minigame,¡5 seguidos! ¡MINIJUEGO BONUS!
+alert_perfect_stamps_bonus_minigame,¡Sellos perfectos! ¡MINIJUEGO BONUS!
+alert_runner_bonus_minigame,¡Actividad sospechosa! ¡MINIJUEGO BONUS!
+alert_new_minigame_unlocked,¡Nuevo minijuego desbloqueado: {name}!
+alert_minigame_bonus,Bonus de minijuego: +{bonus} puntos!
+high_score_display,Puntuación más alta: {score}
+new_high_score,¡NUEVA PUNTUACIÓN MÁS ALTA!
+month_1,Enero

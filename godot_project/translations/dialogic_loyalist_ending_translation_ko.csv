@@ -1,0 +1,79 @@
+﻿keys,ko
+Text/299_suppress1/text,저항군의 공격이 시작되며 혼돈이 발생합니다. 폭발이 검문소를 뒤흔듭니다.
+Text/299_suppress2/text,"도망칠 수도, 숨을 수도 있었습니다. 대신, 당신은 [color=DARK_ORANGE]당신의 편을 선택했습니다[/color]."
+Text/299_suppress3/text,러셋이 당신의 팔을 잡습니다. [pulse freq=2][color=YELLOW]지금이 기회야![/color][/pulse] 충성을 증명해!
+Text/299_suppress4/text,저항군이 동쪽 문을 뚫으려 하고 있어! [color=CRIMSON]그들을 막아![/color]
+Text/299_suppress5/text,당신은 무기를 꽉 쥡니다. 이들은 당신이 아는 사람일 수도 있습니다. 당신이 도왔던 사람들.
+Text/299_suppress6/text,하지만 생존에는 대가가 따릅니다. [color=DARK_ORANGE]당신은 선택을 했습니다.[/color]
+Text/299_suppress7/text,[pulse freq=3][color=CRIMSON]국가를 위해 싸워라![/color][/pulse] 저항군의 공격을 진압해!
+Text/299_suppress8/text,"연기가 걷히자, 시체들이 땅에 널려 있습니다. 몇몇은 저항군 배지를 달고 있습니다."
+Text/299_suppress9/text,[color=STEEL_BLUE]쓰러진 이들 사이에서 익숙한 얼굴들이 보입니다.[/color]
+Text/299_suppress10/text,머피가 죽은 이들 사이에 누워 있습니다. 그의 눈은 허공을 응시합니다. 손에는 토미의 사진이 쥐어져 있습니다.
+Text/299_suppress11/text,[color=STEEL_BLUE]그는 자신이 믿는 것을 위해 싸우다 죽었습니다. 당신은 그것을 죽이는 데 일조했습니다.[/color]
+Text/300/text,저항군의 공격은 실패했습니다. 검문소는 그 어느 때보다 굳건히 서 있습니다. 그리고 당신은 당신의 자리를 지킵니다.
+Text/301/text,[pulse freq=2][color=GOLD]아이다호 수상 만세![/color][/pulse] 스퍼드의 수호자! 반역자들의 정복자!
+Text/302/text,화려한 예복을 입은 거대한 감자가 정예 경호원들의 호위를 받으며 장갑차에서 내립니다.
+Text/303/text,아이다호는 차갑고 계산적인 눈으로 검문소를 둘러봅니다.
+Text/304/text,러셋이 앞으로 달려가 깊이 허리 숙여 인사합니다. 수상님! 귀한 걸음 해주셔서 영광입니다!
+Text/305/text,반역자들은 명령하신 대로 [color=DARK_VIOLET]처리되었습니다[/color]. 이번 분기 생산량은 40% 증가했습니다!
+Text/306/text,그리고 이 자가 봉기 동안 충성을 지킨 장교인가?
+Text/307/text,"예, 수상님. 흔들림 없는 헌신을 보였습니다. 의심스러운 활동을 보고했습니다. 모범적인 시민입니다."
+Text/308/text,아이다호가 앞으로 나서서 당신의 가슴에 메달을 달아줍니다. [color=GOLD]황금 덩이줄기[/color]를요.
+Text/309/text,탁월한 공로에 대하여. 당신은 [color=DARK_ORANGE]스퍼드에 대한 충성[/color]은 언제나 보상받는다는 것을 증명했습니다.
+Choice/30a/text,"감사합니다, 수상님. 스퍼드에 영광을."
+Choice/30b/text,"저는 그저 제 의무를 다했을 뿐입니다, 각하. (억지로 미소 짓는다)"
+Text/30c/text,아이다호의 미소는 눈까지 닿지 않습니다. 그래. 확실히 그랬지.
+Text/30d/text,아이다호는 한참 동안 당신을 응시합니다. 의무. [color=STEEL_BLUE]그토록 복잡한 행동에 대한 너무나 단순한 단어.[/color]
+Text/30e/text,"""의무""를 그렇게 잘 수행하는 자들에게는 어떤 [color=CRIMSON]악몽[/color]이 찾아올까."
+Text/30f/text,승리를 기념하는 연회가 열린다. 식탁은 [color=DARK_VIOLET]뿌리 비축물[/color]이 넉넉하게 포함된 음식으로 가득하다.
+Text/310/text,러셋이 걸쭉한 보라색 액체가 담긴 잔을 들어 올린다. 건배! [color=CRIMSON]우리를 살찌우는 배신자들[/color]에게!
+Text/311/text,사람들이 웃는다. 몇몇은 불안하게. 대부분은 진심으로.
+Text/312/text,"그가 접시를 당신 쪽으로 민다. 새로 만든 것을 맛보게. [color=DARK_VIOLET]""저항의 혼합물.""[/color] 스퍼드의 미래를 위한 사샤의 공헌이다."
+Text/313/text,위장이 뒤틀린다. 접시 위의 음식. [color=CRIMSON]사샤.[/color] 머피의 사촌. 사진 속 아내.
+Text/314/text,[tornado radius=3 freq=2][color=CRIMSON]그들 모두.[/color][/tornado]
+Choice/315/text,억지로 먹는다 - 위장을 유지한다
+Choice/316/text,접시를 밀어낸다 - 이럴 수 없어
+Text/317/text,포크를 입술로 가져간다. 눈을 감는다. [color=STEEL_BLUE]씹어. 삼켜. 생각하지 마.[/color]
+Text/318/text,"러셋이 만족스럽게 고개를 끄덕인다. ""좋아. [color=DARK_ORANGE]크게 될 거야.[/color]"""
+Text/319/text,"당신은 접시를 밀어낸다. ""몸이 좋지 않습니다. 오늘의 흥분 때문에..."""
+Text/31a/text,"러셋의 눈이 잠시 가늘어졌다가 부드러워진다. ""물론이지. 참으로 [color=YELLOW]예민한 체질[/color]이군."""
+Text/31b/text,푹 쉬게. 내일은 [color=CRIMSON]처리할 일[/color]이 더 많으니 말이야.
+Text/31c/text,당신은 숙소로 돌아온다. 메달이 가슴을 무겁게 짓누른다.
+Text/31d/text,당신은 사라진 아내의 사진을 꺼낸다. 그녀는 지금쯤 같은 묶음에 있을 것이다.
+Text/31e/text,"당신은 그녀를 찾겠다고 약속했다. [color=STEEL_BLUE]당신은 그녀를 찾았다.[/color] 다만, 둘 중 누구도 바라던 방식은 아니었다."
+Text/31f/text,머피. 당신의 친구. 당신을 믿었던 사람. 그는 저항군에 있었다.
+Text/320/text,[color=CRIMSON]있었다.[/color]
+Text/321/text,당신은 창문에 비친 자신의 모습을 응시한다. 메달이 번뜩인다. [color=DARK_ORANGE]황금 덩이줄기.[/color] 스퍼드의 영웅.
+Text/322/text,[color=STEEL_BLUE]감자 껍질을 쓴 괴물.[/color]
+Text/323/text,"그날 밤, 당신은 사샤의 꿈을 꾼다. 그녀는 비난하지 않는다. 분노하지도 않는다. 그 편이 더 쉬울 텐데."
+Text/324/text,"그녀는 그저 그 눈으로 당신을 바라본다. ""[color=CHARTREUSE]뿌리는 깊이 자라나[/color],"" 그녀가 속삭인다."
+Text/325/text,[color=STEEL_BLUE]썩은 것들[/color]조차도.
+Text/326/text,몇 달이 흐른다. 당신은 승진한다. 국경 보안 지역 감찰관. 러셋의 오른팔.
+Text/327/text,당신은 스퍼드 역사상 그 누구보다 많은 거부를 감독했습니다. [color=DARK_VIOLET]뿌리 비축량[/color] 생산량이 치솟습니다.
+Text/328/text,당신의 사무실은 안락합니다. 당신의 배급량은 넉넉합니다. 당신의 가족은 보호받습니다.
+Text/329/text,당신은 약속받았던 모든 것을 가졌습니다.
+Text/32a/text,[color=STEEL_BLUE]잠[/color]을 제외한 모든 것. [color=STEEL_BLUE]평화[/color]를 제외한 모든 것. 거울을 볼 수 있는 능력을 제외한 모든 것.
+Text/32b/text,"어느 날, 당신은 그것을 알아차립니다. 벽에 긁힌 [color=GOLD]노란 감자 문양[/color] 하나. 그리고 또 다른 것. 그리고 수십 개."
+Text/32c/text,새로운 저항 세력이 형성되고 있습니다. 더 조용하게. 더 신중하게. 사샤의 실수로부터 배우면서.
+Choice/32d/text,즉시 보안팀에 문양을 보고하기
+Choice/32e/text,못 본 척하기
+Choice/32f/text,당신만의 흔적을 남기기 - 노란 잎 하나
+Text/330/text,당신은 보고서를 제출합니다. 또 다른 용의자들이 체포됩니다. 또 다른 승진.
+Text/331/text,순환은 계속됩니다. [color=CRIMSON]당신은 기계가 되었습니다.[/color]
+Text/332/text,당신은 지나쳐 갑니다. 아무 말도 하지 않습니다. 별것 아닙니다. [color=STEEL_BLUE]거의 아무것도 아닙니다.[/color]
+Text/333/text,하지만 그들에게 대항하지 않기로 선택한 것은 이번이 처음입니다.
+Text/334/text,"어쩌면 그것은 무언가일지도 모릅니다. 어쩌면 [color=YELLOW]너무 적고, 너무 늦었을[/color]지도 모릅니다."
+Text/335/text,"아무도 보지 않을 때, 당신은 문양 옆에 작은 [color=GOLD]노란 잎[/color]을 긁어 새깁니다."
+Text/336/text,단 한 번의 저항. 수년이 너무 늦었지만. 하지만 [color=CHARTREUSE]무언가[/color].
+Text/337/text,"사샤의 목소리가 당신의 기억 속에 울려 퍼집니다: ""[color=CHARTREUSE]뿌리는 깊이 자란다.[/color]"""
+Text/338/text,어쩌면 [color=CHARTREUSE]당신에게까지 닿을[/color] 만큼 깊이. 언젠가는.
+Text/339/text,스퍼드 국가는 견뎌냅니다. [color=DARK_VIOLET]뿌리 비축량[/color]은 흐릅니다. 소비의 순환은 계속됩니다.
+Text/33a/text,"하지만 어딘가, 벽의 균열 속에서, [color=CHARTREUSE]새로운 무언가가 자라고 있습니다[/color]."
+Text/33b/text,당신이 그 일부가 될지는... [color=YELLOW]그 이야기는 아직 쓰여지지 않았습니다[/color].
+Choice/30a/disabled_text,
+Choice/30b/disabled_text,
+Choice/315/disabled_text,
+Choice/316/disabled_text,
+Choice/32d/disabled_text,
+Choice/32e/disabled_text,
+Choice/32f/disabled_text,

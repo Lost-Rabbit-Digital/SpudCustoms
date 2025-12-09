@@ -1,0 +1,24 @@
+﻿keys,pt-BR
+Text/78/text,"Mais um dia no posto de controle. A fila de batatas se estende mais do que nunca, com todos tensos."
+Text/79/text,Novas ordens da cúpula. Estamos [wave amp=15 freq=3][color=DARK_ORANGE]dobrando as rejeições[/color][/wave]. Qualquer batata considerada insegura será detida imediatamente.
+Text/7a/text,Tenho uma missão especial. Recebemos informações sobre [pulse freq=2][color=CRIMSON]agitadores[/color][/pulse]. Seja vigilante com suas inspeções.
+Choice/7b/text,"""Sim, senhor, não o decepcionarei"""
+Choice/7c/text,"""Que tipo de agitadores estamos falando?"""
+Text/7d/text,Bom. Eu sabia que podia contar com você. Você irá longe com essa atitude.
+Text/7e/text,O tipo que [color=CRIMSON]ameaça nosso modo de vida[/color]. Não faça muitas perguntas se souber o que é bom para você.
+Text/7f/text,"[color=STEEL_BLUE]Por favor, eu imploro![/color] Minha esposa — o nome dela é [color=GOLD]Maris[/color] — ela deveria estar logo atrás de mim."
+Text/7fb/text,"Ela [tornado radius=2 freq=3]nunca passou pela alfândega[/tornado]. Disseram que os documentos dela tinham uma ""irregularidade""."
+Text/80/text,"Ninguém me diz o que aconteceu com ela. Por favor, [color=CHARTREUSE]ajude-me a encontrá-la![/color]"
+Choice/81/text,"""Sinto muito, mas não há nada que eu possa fazer."""
+Choice/82/text,"""Deixe-me ver o que consigo descobrir. Sem promessas."""
+Text/83/text,Assim como todos os outros... [color=STEEL_BLUE]Que sua consciência pese tanto quanto a minha.[/color]
+Text/83b/text,A batata desesperada se afasta arrastando os pés. Você a nota olhando para uma foto gasta antes que ela desapareça.
+Text/84/text,Obrigado! Mesmo uma pequena esperança é melhor do que nenhuma.
+Text/84b/text,"Ela entrega uma [color=GOLD]fotografia gasta[/color] em suas mãos. O nome dela é [color=GOLD]Maris Piper[/color]. Ela tem olhos gentis. Por favor, encontre-a."
+Text/84c/text,Você olha para a foto. Uma batata jovem com traços delicados e um sorriso caloroso. [color=GOLD]Maris Piper[/color].
+Text/84d/text,Para onde ela foi? A fila de rejeição leva a... onde exatamente?
+Text/85/text,Eu vi essa troca. [color=DARK_ORANGE]Simpatizar com os rejeitados só leva a problemas.[/color] Mantenha o foco no seu dever.
+Choice/7b/disabled_text,
+Choice/7c/disabled_text,
+Choice/81/disabled_text,
+Choice/82/disabled_text,

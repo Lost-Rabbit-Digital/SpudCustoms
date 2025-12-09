@@ -1,0 +1,18 @@
+﻿keys,pl
+Text/56/text,Witaj w narodzie Ziemniaka. Kraina [pulse freq=2][color=MEDIUM_VIOLET_RED]dobrobytu dla wszystkich ziemniaków[/color][/pulse].
+Text/57/text,Zostałeś wybrany do [color=DARK_ORANGE]kluczowej roli[/color] w ochronie naszych granic.
+Text/59/text,"SPÓJRZCIE! [color=MEDIUM_VIOLET_RED]Potężny mur[/color], który chroni naszą narodowość. Tutaj będziesz służyć, upewniając się, że wejdą tylko godni."
+Text/5a/text,"Ach, nowy pęd. Słuchaj uważnie, twoja rola jest [color=DARK_ORANGE]kluczowa dla bezpieczeństwa Ziemniaka[/color]."
+Text/184/text,Twój dobrobyt [wave amp=20 freq=3][color=YELLOW]zależy od twojej wydajności[/color][/wave].
+Text/5b/text,Mianuję cię Oficerem Celnym [pulse freq=1][color=MEDIUM_VIOLET_RED]chwalebnego Ziemniaka[/color][/pulse]. Jakieś pytania?
+Choice/5c/text,Jestem gotów służyć Ziemniakowi całą moją skrobią!
+Choice/5d/text,Co dokładnie dzieje się z odrzuconymi ziemniakami?
+Text/5e/text,Doskonale! Taki zapał jest nam potrzebny. Możesz zasłużyć na wyróżnienie [color=DARK_VIOLET]Rezerwy Korzeni[/color].
+Text/5f/text,Są... [color=DARK_VIOLET]przetwarzane[/color]. Zgodnie z protokołem. [color=DARK_VIOLET]Rezerwa Korzeni[/color] zajmuje się wszystkimi szczegółami.
+Text/60/text,Skoncentruj się na swoich obowiązkach. [color=DARK_ORANGE]Nic więcej.[/color]
+Text/61/text,"Twoja pierwsza zmiana zaczyna się teraz. Dokładnie sprawdzaj dokumenty, odmawiaj tym, którzy nie spełniają naszych standardów."
+Text/62/text,"Wypełnij swoją kwotę, unikaj kar. [color=MEDIUM_VIOLET_RED]Chwała Ziemniakowi![/color]"
+Choice/5d/disabled_text,
+Choice/5c/disabled_text,
+Text/184b/text,"Ci, którzy zadają zbyt wiele pytań? Zostają [color=CRIMSON]przeniesieni[/color]. Na stałe."
+Text/62b/text,"I pamiętaj, [color=MEDIUM_VIOLET_RED]Chwała Ziemniakowi![/color]"

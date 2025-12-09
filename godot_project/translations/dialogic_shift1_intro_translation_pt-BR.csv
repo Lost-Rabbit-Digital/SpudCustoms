@@ -1,0 +1,18 @@
+﻿keys,pt-BR
+Text/56/text,Bem-vindo à nação de Spud. Uma terra de [pulse freq=2][color=MEDIUM_VIOLET_RED]prosperidade para todas as batatas[/color][/pulse].
+Text/57/text,Você foi selecionado para um [color=DARK_ORANGE]papel crucial[/color] na proteção de nossas fronteiras.
+Text/59/text,"CONTEMPLE! A [color=MEDIUM_VIOLET_RED]poderosa muralha[/color] que salvaguarda nossa nação. É aqui que você servirá, garantindo que apenas os dignos entrem."
+Text/5a/text,"Ah, o novo broto. Ouça com atenção, seu papel é [color=DARK_ORANGE]vital para a segurança de Spud[/color]."
+Text/184/text,Russet se aproxima desconfortavelmente. Já vi muitos brotos passarem por aqui. [color=STEEL_BLUE]A maioria não dura.[/color]
+Text/184b/text,Aqueles que fazem muitas perguntas? Eles são [color=CRIMSON]realocados[/color]. Permanentemente.
+Text/5b/text,Eu o nomeio como Oficial da Alfândega da [pulse freq=1][color=MEDIUM_VIOLET_RED]gloriosa Spud[/color][/pulse]. Alguma pergunta?
+Choice/5c/text,"""Estou pronto para servir Spud com todo o meu amido!"""
+Choice/5d/text,"""O que exatamente acontece com as batatas rejeitadas?"""
+Text/5e/text,Excelente! Esse é o tipo de entusiasmo que precisamos. Você pode ganhar uma condecoração da [color=VIOLET]Reserva de Raízes[/color].
+Text/5f/text,Elas são... [color=VIOLET]processadas[/color]. De acordo com o protocolo. A [color=VIOLET]Reserva de Raízes[/color] cuida de todos os detalhes.
+Text/60/text,Concentre-se em seus deveres. [color=DARK_ORANGE]Nada mais.[/color]
+Text/61/text,"Seu primeiro turno começa agora. Verifique os documentos com atenção, negue a entrada daqueles que não atendem aos nossos padrões."
+Text/62/text,"Cumpra sua cota, evite penalidades."
+Text/62b/text,"E lembre-se, [color=MEDIUM_VIOLET_RED]Glória a Spud![/color]"
+Choice/5c/disabled_text,
+Choice/5d/disabled_text,

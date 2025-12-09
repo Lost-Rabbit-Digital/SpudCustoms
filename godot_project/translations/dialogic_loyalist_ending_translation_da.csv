@@ -1,0 +1,79 @@
+﻿keys,da
+Text/299_suppress1/text,"Kaos bryder ud, da modstandsangrebet begynder. Eksplosioner ryster kontrolposten."
+Text/299_suppress2/text,Du kunne løbe. Du kunne gemme dig. I stedet [color=DARK_ORANGE]vælger du side[/color].
+Text/299_suppress3/text,Russet griber din arm. [pulse freq=2][color=YELLOW]NU ER DIN CHANCE![/color][/pulse] Bevis din loyalitet!
+Text/299_suppress4/text,Modstanden forsøger at bryde igennem østporten! [color=CRIMSON]Stop dem![/color]
+Text/299_suppress5/text,"Du griber dit våben. Dette kunne være folk, du kender. Folk, du har hjulpet."
+Text/299_suppress6/text,Men overlevelse har en pris. [color=DARK_ORANGE]Du har truffet dit valg.[/color]
+Text/299_suppress7/text,[pulse freq=3][color=CRIMSON]Kæmp for staten![/color][/pulse] Undertryk modstandsangrebet!
+Text/299_suppress8/text,"Når røgen letter, ligger lig strøet på jorden. Nogle bærer modstandsmærker."
+Text/299_suppress9/text,[color=STEEL_BLUE]Du genkender ansigter blandt de faldne.[/color]
+Text/299_suppress10/text,Murphy ligger blandt de døde. Hans øjne stirrer ud i intet. Tommys foto knuget i hans hånd.
+Text/299_suppress11/text,"[color=STEEL_BLUE]Han døde kæmpende for noget, han troede på. Du hjalp med at dræbe det.[/color]"
+Text/300/text,"Modstandsangrebet mislykkedes. Kontrolposten står, stærkere end nogensinde. Og du forbliver på din post."
+Text/301/text,[pulse freq=2][color=GOLD]LÆNGE LEVE PREMIerminister IDAHO![/color][/pulse] Forsvarer af Spud! Overvinder af forrædere!
+Text/302/text,"En massiv kartoffel i udsmykket regalier stiger ned fra et pansret køretøj, flankeret af elitevagter."
+Text/303/text,"Idaho overskuer kontrolposten med kolde, beregnende øjne."
+Text/304/text,Russet skynder sig frem og bukker dybt. Premierminister! Vi er beærede over Deres tilstedeværelse!
+Text/305/text,Forræderne er blevet [color=DARK_VIOLET]behandlet[/color] som De beordrede. Produktionen er steget 40% dette kvartal!
+Text/306/text,"Og dette er officeren, der forblev loyal under opstanden?"
+Text/307/text,"Ja, Premierminister. Urokkelig dedikation. Rapporterede mistænkelige aktiviteter. En mønsterborger."
+Text/308/text,Idaho træder frem og fæstner en medalje på dit bryst - [color=GOLD]Den Gyldne Knold[/color].
+Text/309/text,"For enestående tjeneste. Du har bevist, at [color=DARK_ORANGE]loyalitet over for Spud[/color] altid vil blive belønnet."
+Choice/30a/text,"Tak, Premierminister. Ære til Spud."
+Choice/30b/text,"Jeg gjorde blot min pligt, hr. (Fremtvinger et smil)"
+Text/30c/text,Idahos smil når ikke hans øjne. Ja. Det gjorde du sandelig.
+Text/30d/text,Idaho studerer dig et langt øjeblik. Pligt. [color=STEEL_BLUE]Et så simpelt ord for så komplicerede handlinger.[/color]
+Text/30e/text,"Jeg spekulerer på, hvilke [color=CRIMSON]mareridt[/color] der hjemsøger dem, der gør deres ""pligt"" så godt."
+Text/30f/text,"En fest holdes til ære for sejren. Borde bugner af mad, herunder generøse portioner af [color=DARK_VIOLET]Rodreserve[/color]."
+Text/310/text,"Russet hæver et glas tyk, lilla væske. En skål! Til de [color=CRIMSON]forrædere, der nærer os[/color]!"
+Text/311/text,Rummet griner. Nogle nervøst. De fleste oprigtigt.
+Text/312/text,"Han skubber en tallerken hen mod dig. Prøv den nye sending. [color=DARK_VIOLET]""Modstandsblanding.""[/color] Sashas bidrag til Spuds fremtid."
+Text/313/text,Din mave vender sig. Maden på tallerkenen. [color=CRIMSON]Sasha.[/color] Murphys kusine. Konen fra billedet.
+Text/314/text,[tornado radius=3 freq=2][color=CRIMSON]Dem alle.[/color][/tornado]
+Choice/315/text,Tving dig selv til at spise – bevar din dækning
+Choice/316/text,Skub tallerkenen væk – du kan ikke gøre det her
+Text/317/text,Du fører gaflen til dine læber. Lukker øjnene. [color=STEEL_BLUE]Tygg. Synk. Tænk ikke.[/color]
+Text/318/text,"Russet nikker anerkendende. ""Godt. [color=DARK_ORANGE]Du vil nå langt.[/color]"""
+Text/319/text,"Du skubber tallerkenen væk. ""Jeg har det ikke godt. Dagens spænding..."""
+Text/31a/text,"Russets øjne indsnævres kort, så blødgøres de. Selvfølgelig. Sådan en [color=YELLOW]følsom konstitution[/color]."
+Text/31b/text,Hvil dig. I morgen har vi [color=CRIMSON]mere behandling[/color] at overvåge.
+Text/31c/text,Du vender tilbage til dine kvarterer. Medaljen vejer tungt på dit bryst.
+Text/31d/text,Du tager billedet af den savnede kone frem. Hun er sandsynligvis i samme sending som de andre nu.
+Text/31e/text,"Du lovede at finde hende. [color=STEEL_BLUE]Du fandt hende.[/color] Bare ikke på den måde, I begge havde håbet."
+Text/31f/text,"Murphy. Din ven. Den, der stolede på dig. Han var i modstandsbevægelsen."
+Text/320/text,[color=CRIMSON]Var.[/color]
+Text/321/text,Du stirrer på dit spejlbillede i vinduet. Medaljen skinner. [color=DARK_ORANGE]Gylden Knold[/color]. Spuds Helt.
+Text/322/text,[color=STEEL_BLUE]Monster i kartoffelskind.[/color]
+Text/323/text,Den nat drømmer du om Sasha. Hun anklager ikke. Raser ikke. Det ville være lettere.
+Text/324/text,"Hun ser bare på dig med de øjne. [color=CHARTREUSE]Rødderne gror dybt[/color], hvisker hun."
+Text/325/text,Selv de [color=STEEL_BLUE]rådne[/color].
+Text/326/text,Måneder går. Du bliver forfremmet. Regional Inspektør for Grænsesikkerhed. Russets højre hånd.
+Text/327/text,Du har stået for flere afvisninger end nogen anden i Spuds historie. [color=DARK_VIOLET]Rodreservens[/color] produktion stiger voldsomt.
+Text/328/text,Dit kontor er behageligt. Dine rationer er generøse. Din familie er beskyttet.
+Text/329/text,"Du har alt, du blev lovet."
+Text/32a/text,Alt undtagen [color=STEEL_BLUE]søvn[/color]. Undtagen [color=STEEL_BLUE]fred[/color]. Undtagen evnen til at se dig selv i et spejl.
+Text/32b/text,En dag bemærker du det. Et [color=GOLD]gult kartoffelemblem[/color] ridset ind i en væg. Så et mere. Så snesevis.
+Text/32c/text,En ny modstandsbevægelse er under opsejling. Mere stille. Mere forsigtig. Lærer af Sashas fejl.
+Choice/32d/text,Rapporter symbolerne til sikkerhedstjenesten med det samme
+Choice/32e/text,Lad som om du ikke så dem
+Choice/32f/text,Efterlad dit eget mærke – et enkelt gult blad
+Text/330/text,Du indgiver rapporten. Endnu et parti mistænkte er blevet samlet ind. Endnu en forfremmelse.
+Text/331/text,Cyklen fortsætter. [color=CRIMSON]Du er blevet maskinen.[/color]
+Text/332/text,Du går forbi. Siger intet. Det er ikke meget. [color=STEEL_BLUE]Det er næsten ingenting.[/color]
+Text/333/text,"Men det er første gang, du har valgt ikke at handle imod dem."
+Text/334/text,"Måske er det noget. Måske er det [color=YELLOW]for lidt, for sent[/color]."
+Text/335/text,"Når ingen ser på, ridser du et lille [color=GOLD]gult blad[/color] ved siden af emblemerne."
+Text/336/text,En enkelt trodsig handling. År for sent. Men [color=CHARTREUSE]noget[/color].
+Text/337/text,"Sashas stemme genlyder i din hukommelse: ""[color=CHARTREUSE]Rødderne vokser dybt.[/color]"""
+Text/338/text,Måske dybt nok til at [color=CHARTREUSE]nå selv dig[/color]. En dag.
+Text/339/text,Nationen Spud består. [color=DARK_VIOLET]Rodreserven[/color] flyder. Forbrugscyklussen fortsætter.
+Text/33a/text,"Men et sted, i sprækkerne i væggen, [color=CHARTREUSE]vokser noget nyt[/color]."
+Text/33b/text,Om du vil være en del af det... [color=YELLOW]den historie er endnu ikke skrevet[/color].
+Choice/30a/disabled_text,
+Choice/30b/disabled_text,
+Choice/315/disabled_text,
+Choice/316/disabled_text,
+Choice/32d/disabled_text,
+Choice/32e/disabled_text,
+Choice/32f/disabled_text,

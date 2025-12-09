@@ -1,0 +1,28 @@
+﻿keys,vi
+Text/140/text,"Biên giới giống như một [pulse freq=3][color=CRIMSON]vùng chiến sự[/color][/pulse]. Chướng ngại vật, xe bọc thép và vệ binh tinh nhuệ đứng sẵn sàng. Hôm nay là ngày lực lượng kháng chiến dự định tấn công."
+Text/141/text,"[wave amp=25 freq=3][color=YELLOW]PHÁT THANH KHẨN CẤP[/color][/wave]: Toàn bộ Spud đang trong tình trạng [color=RED]thiết quân luật[/color]. ""Lực lượng Kháng chiến"" đã phát động các cuộc tấn công vào các cơ sở chính phủ."
+Text/142/text,Bất kỳ ai giúp đỡ những [color=CRIMSON]kẻ cực đoan[/color] này sẽ đối mặt với [color=DARK_VIOLET]xử lý ngay lập tức[/color]. Bộ xác nhận: [color=DARK_VIOLET]Root Reserve[/color] vẫn an toàn cho tất cả [color=DARK_ORANGE]những củ khoai tây trung thành[/color].
+Text/143/text,[color=YELLOW]Bạo loạn đã nổ ra[/color] ở nhiều khu vực. Các tế bào kháng chiến đã tấn công ba cơ sở [color=DARK_VIOLET]Root Reserve[/color].
+Text/144/text,Mục tiêu của họ: truy cập vào cơ sở dữ liệu trung tâm với tất cả hồ sơ sản xuất. Bất kỳ dấu hiệu không trung thành nào đều có nghĩa là bị xử lý.
+Text/145/text,"Chúng tôi đã bắt được một số thành viên kháng chiến, bao gồm cả Sĩ quan Sasha."
+Text/146/text,[tornado radius=3 freq=2][color=CRIMSON]Những kẻ phản bội thực sự[/color][/tornado] là những kẻ [color=DARK_VIOLET]cho người dân chúng ta ăn thịt lẫn nhau[/color]. Các người không thể ngăn chặn sự thật!
+Text/147/text,"Cô ấy bị lôi đi, vẫn hét lớn: [color=CHARTREUSE]Người dân sẽ biết trong thức ăn của họ có gì![/color]"
+Text/148/text,"[color=CRIMSON]Kẻ phản bội[/color] sẽ bị [pulse freq=3][color=DARK_VIOLET]xử lý ngay lập tức[/color][/pulse]. Một lô đặc biệt của [color=DARK_VIOLET]Root Reserve[/color], được làm từ chính những kẻ khủng bố."
+Text/149/text,Tất cả các cửa khẩu biên giới đều [color=RED]bị đình chỉ[/color] trừ nhân viên thiết yếu có [color=GOLD]giấy phép Cấp Alpha[/color].
+Text/14a/text,Máy quét này [color=YELLOW]không thể bị đánh lừa[/color]. Báo động ngay lập tức đối với bất kỳ ai không có giấy phép thích hợp.
+Text/14b/text,Một củ khoai tây trong bộ đồng phục chính thức tiếp cận với thông tin xác thực Alpha có vẻ hoàn hảo.
+Text/14c/text,"Một tấm thẻ màu xanh nhỏ rơi ra từ tập hồ sơ. ""[wave amp=15 freq=3][color=CHARTREUSE]Rễ cây mọc sâu.[/color][/wave]"", họ lẩm bẩm khi nhặt tấm thẻ lên."
+Choice/14d/text,"Cho họ đi qua, bỏ qua cảnh báo của máy quét (Giúp đỡ lực lượng kháng chiến)"
+Choice/14e/text,Báo động ngay lập tức (Phản bội lực lượng kháng chiến)
+Text/14f/text,"Sự nhẹ nhõm hiện rõ trong mắt họ. ""[color=CHARTREUSE]Vì Sasha. Vì Spud.[/color]"" Họ biến mất về phía cơ sở dữ liệu trung tâm."
+Text/150/text,"Nỗi kinh hoàng hiện lên trên khuôn mặt họ. ""[color=CRIMSON]Mày là kẻ phản bội! Chúng tao đã tin tưởng mày![/color]"" Họ nhanh chóng bị vây quanh bởi lính gác."
+Text/151/text,Làm tốt lắm. Lòng trung thành của ngươi sẽ được thưởng.
+Text/152/text,"Đột nhiên, cơ sở [color=YELLOW]rung chuyển với những vụ nổ[/color]. Cuộc tấn công của lực lượng kháng chiến đã bắt đầu, bất kể sự lựa chọn của bạn."
+Text/153/text,"Tôi có nên ở lại vị trí của mình và hy vọng điều này sẽ qua đi, hay [color=CHARTREUSE]đứng lên[/color] và liều tất cả để vạch trần sự thật?"
+Choice/154/text,Tôi không thể từ bỏ nhiệm vụ của mình. Tôi sẽ giữ im lặng và hy vọng điều tốt nhất.
+Choice/155/text,Tôi đã đồng lõa quá lâu rồi. Đã đến lúc chiến đấu cho những gì đúng đắn.
+Choice/155/disabled_text,
+Choice/14d/disabled_text,
+Choice/154/disabled_text,
+Choice/14e/disabled_text,
+Text/156/text,[pulse freq=3][color=YELLOW]Nhanh chân lên![/color][/pulse] Lực lượng an ninh đang hỗn loạn - đây là cơ hội duy nhất để bạn trốn thoát!

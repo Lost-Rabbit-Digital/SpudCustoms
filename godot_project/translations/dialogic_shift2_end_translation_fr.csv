@@ -1,0 +1,26 @@
+﻿keys,fr
+Text/200/text,"Salut, nouvelle patate ! Dure journée, hein ? Je m'appelle Murphy. Je suis ici depuis trois saisons maintenant."
+Text/201/text,"Je t'ai vu parler à Sasha tout à l'heure. Elle est... [color=STEEL_BLUE]différente[/color]. Différente en bien, je crois."
+Choice/202/text,Elle a l'air sympa. Elle m'a donné des conseils pour rester vigilant.
+Choice/203/text,Juste des présentations. Rien de spécial.
+Text/204/text,Murphy jette un coup d'œil nerveux autour de lui. Ouais.
+Text/205/text,Entre nous ? Cette émission de radio sur les « pommes de terre disparues »... mon cousin a disparu le mois dernier. Il a échoué à son inspection.
+Text/206/text,"Bien vu. Fais profil bas, fais ton travail. C'est ce que je me dis tous les jours."
+Text/207/text,"Murphy baisse la voix. Pourtant, parfois je me demande où vont réellement toutes ces pommes de terre rejetées..."
+Text/208/text,À la cafétéria
+Text/209/text,"Vous fixez la pâte épaisse, brun-violet. Tout le monde la mange sans poser de questions. Elle est censée être nutritive."
+Choice/20a/text,Manger la Réserve Racinaire comme tout le monde
+Choice/20b/text,La pousser de côté - vous n'avez pas faim
+Text/20c/text,"Le goût est... terreux. Riche. Quelque chose à ce sujet vous semble [color=STEEL_BLUE]étrangement familier[/color], mais vous ne savez pas pourquoi."
+Text/20d/text,"Un officier supérieur le remarque. « Pas de gaspillage, jeune pousse. C'est de la [pulse freq=2][color=DARK_VIOLET]nutrition de première qualité[/color][/pulse] ça. »"
+Text/20e/text,Vous marmonnez une excuse de maux d'estomac. L'officier hausse les épaules et passe son chemin.
+Text/20f/text,"De retour dans vos quartiers, vous ne pouvez pas vous défaire de ce que Sasha a dit. « [color=YELLOW]Tout n'est pas ce qu'il semble être.[/color] »"
+Text/210/text,Vous avez interrogé Russet sur les pommes de terre rejetées le premier jour. Sa réponse était évasive. « [color=VIOLET]Traitées. Selon le protocole.[/color] »
+Text/211/text,"Traitées [color=STEEL_BLUE]comment[/color], exactement ?"
+Text/212/text,Vous étiez si impatient de servir. Si fier d'avoir été choisi. Mais la fierté n'explique pas les [color=CRIMSON]pommes de terre disparues[/color].
+Text/213/text,La radio a dit que les rapports de disparitions « continuent ». Cela signifie que ça dure depuis un certain temps.
+Text/214/text,"Le sommeil vient lentement. Quand il vient, vous rêvez de [wave amp=15 freq=2][color=DARK_VIOLET]rivières violettes[/color][/wave] coulant sous le poste de contrôle."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

@@ -1,0 +1,33 @@
+﻿keys,cs
+Text/131/text,"Krčíte se, zatímco bitva zuří. Je mi líto, Sašo. [color=STEEL_BLUE]Nejsem tak statečný jako ty[/color]."
+Text/132/text,[color=CRIMSON]Teroristický útok[/color] byl odražen! Vůdci jsou právě [color=DARK_VIOLET]zpracováváni[/color].
+Text/133/text,"Náčelník Yukon přivádí v řetězech členy odboje, mezi nimi i Sašu. ""Tito [color=CRIMSON]zrádci[/color] budou čelit [color=DARK_VIOLET]konečnému zpracování[/color]."""
+Text/134/text,"Saša zachytí váš pohled. Navzdory modřinám její pohled obsahuje [wave amp=15 freq=2][color=CHARTREUSE]žádné odsouzení, jen smutek[/color][/wave]."
+Text/135/text,"Přežil jste tím, že jste držel hlavu dole, ale [pulse freq=3][color=GOLD]za jakou cenu?[/color][/pulse] Když z továrny vane výroba [color=DARK_VIOLET]Kořenové Rezervy[/color], obrací se vám žaludek."
+Text/136/text,Možná je stále šance zevnitř. Nebo si možná jen uklidňujete svědomí.
+Text/137/text,[tornado radius=3 freq=2][color=CHARTREUSE]Opouštíte své stanoviště[/color][/tornado] a běžíte směrem k boji. Čas na opatrnost skončil.
+Text/138/text,"[pulse freq=3][color=GOLD]Dokaž, že jsi s námi![/color][/pulse] Jak znáš Sašu?"
+Text/139/text,"[color=CHARTREUSE]Kořeny rostou hluboko![/color] Jsem z kontrolního stanoviště, Saša mě naverbovala!"
+Text/13a/text,Právě ji berou do zpracovatelského závodu. Musíme si pospíšit!
+Text/13b/text,"Dveře se rozletí a odhalí [wave amp=25 freq=3][color=CRIMSON]hrůznou pravdu[/color][/wave] - drticí stroje, dopravníky nesoucí brambory do jejich zkázy."
+Text/13c/text,Na konci jednoho pásu - Saša a další [color=CRIMSON]bezmocně svázaní[/color]. Dozorce Russet stojí u ovládání.
+Text/13d/text,"[color=RED]TY![/color] Měl jsem tušit, že jsi jeden z nich! Ustup, nebo spustím procesor!"
+Text/13e/text,"Když bojovníci odboje přemůžou Russeta, Saša přesměruje kamery zařízení. [color=YELLOW]Lidé ze Spudu! Tohle je Kořenová Rezerva! Krmili nás navzájem![/color]"
+Text/13f/text,"Vrátil ses pro mě. [color=CHARTREUSE]Dokázali jsme to. Pravda je teď venku.[/color] Máme budoucnost, kterou musíme vybudovat!"
+Text/140/text,"[color=STEEL_BLUE]Vůdce odboje vykročí vpřed, zbraň namířená na Russeta.[/color] Ani krok dál, Russete. Ruce, kde je uvidím."
+Text/141/text,"[color=CRIMSON]Russetovy oči těkají mezi vámi a vůdcem odboje, čelo má orosené potem.[/color] Myslíš, že jsi vyhrál? Toto zařízení je základem Spudu!"
+Text/142/text,Základ utrpení. [pulse freq=3][color=CHARTREUSE]Dnes to končí.[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]Sasha se zmítá proti svým poutům na dopravním pásu
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""Russete"
+Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""Tohle... tohle dělali? Je to horší, než jsem si představoval...""[/color][/wave]"
+Choice/146/text,"[color=CHARTREUSE]""Sasho! Díky kořenům, že jsi naživu! Vydrž"
+Text/147/text,"[color=CRIMSON]Vrháš se na Russeta, pěsti zaťaté, sotva zadržován bojovníky odboje.[/color] Každá brambora, která prošla mým kontrolním bodem... kolik jsi jich..."
+Text/148/text,"Klid! Potřebujeme ho živého, aby svědčil. [color=STEEL_BLUE]Vůdce drží zbraň namířenou na Russeta.[/color] Šetři si svůj hněv na soudy."
+Text/149/text,"[color=STEEL_BLUE]Couvneš, ruka ti zakrývá ústa, zatímco vnímáš plnou hrůzu strojního zařízení.[/color] Razítkoval jsem jejich papíry... Poslal jsem je sem..."
+Text/14a/text,[color=CHARTREUSE]Nevěděl jsi. Nikdo z nás.[/color] Proto jsme teď tady. Soustřeď se!
+Text/14b/text,[color=CHARTREUSE]Spěcháš k dopravníku
+Text/14c/text,"[color=CHARTREUSE]Sashiny oči se lesknou slzami a nadějí, zatímco tvé ruce rozvazují uzly.[/color] Věděla jsem, že přijdeš. Nikdy jsem o tobě nepochybovala."
+Text/14d/text,"[color=STEEL_BLUE]Vůdce donutí Russeta kleknout si pod hrozbou zbraně.[/color] Svažte ho. Ujistěte se, že uvidí, co přijde dál."
+Text/14e/text,[color=CHARTREUSE]Sasha ti vezme ruku a proplete své prsty s tvými.[/color] Vrátil ses pro mě. Ať se stane cokoli dál... čelíme tomu spolu.
+Text/14f/text,"[color=STEEL_BLUE]Sasha tě pozorně sleduje a vidí zuřivost, která ti stále hoří v očích.[/color] Nasměruj ten oheň. Budeme ho potřebovat na to, co přijde dál."
+Text/150/text,"[color=STEEL_BLUE]Sasha ti položí jemnou ruku na rameno.[/color] Vina není tvoje, abys ji nesl. Jsi tady teď. To je to, na čem záleží."

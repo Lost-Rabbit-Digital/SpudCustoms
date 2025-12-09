@@ -1,0 +1,79 @@
+﻿keys,ja
+Text/299_suppress1/text,抵抗勢力の攻撃が始まり、混乱が勃発する。爆発が検問所を揺るがす。
+Text/299_suppress2/text,逃げることもできた。隠れることもできた。しかし、あなたは[color=DARK_ORANGE]自分の側を選んだ[/color]。
+Text/299_suppress3/text,ラセットがあなたの腕を掴む。[pulse freq=2][color=YELLOW]今がチャンスだ！[/color][/pulse] 忠誠を証明しろ！
+Text/299_suppress4/text,抵抗勢力が東門を突破しようとしている！[color=CRIMSON]奴らを止めろ！[/color]
+Text/299_suppress5/text,あなたは武器を握りしめる。彼らはあなたの知っている者たちかもしれない。あなたが助けた人々だ。
+Text/299_suppress6/text,しかし、生き残るには代償が伴う。[color=DARK_ORANGE]あなたは選択を終えたのだ。[/color]
+Text/299_suppress7/text,[pulse freq=3][color=CRIMSON]国家のために戦え！[/color][/pulse] 抵抗勢力の攻撃を鎮圧しろ！
+Text/299_suppress8/text,煙が晴れると、死体が地面に散乱していた。中には抵抗勢力のバッジをつけた者もいる。
+Text/299_suppress9/text,[color=STEEL_BLUE]倒れた者たちの中に、見覚えのある顔がある。[/color]
+Text/299_suppress10/text,マーフィーが死体の中に横たわっている。その目は虚空を見つめている。手にはトミーの写真が握りしめられている。
+Text/299_suppress11/text,[color=STEEL_BLUE]彼は信じるもののために戦い死んだ。あなたはそれを殺す手助けをしたのだ。[/color]
+Text/300/text,抵抗勢力の攻撃は失敗した。検問所は以前にも増して強固に立っている。そしてあなたは持ち場に留まる。
+Text/301/text,[pulse freq=2][color=GOLD]アイダホ首相に万歳！[/color][/pulse] スパッドの守護者！反逆者の征服者！
+Text/302/text,豪華な正装を身につけた巨大なジャガイモが、精鋭の護衛に挟まれ、装甲車両から降りてくる。
+Text/303/text,アイダホは冷たく、計算高い目で検問所を見渡す。
+Text/304/text,ラセットが慌てて前に進み出て、深々と頭を下げる。首相！ご臨席を光栄に存じます！
+Text/305/text,反逆者たちはご命令通り[color=DARK_VIOLET]処理されました[/color]。今四半期の生産量は40%増加しました！
+Text/306/text,そして、この者が反乱の間も忠誠を保った士官か？
+Text/307/text,はい、首相閣下。揺るぎない献身です。不審な活動を報告しました。模範的な市民です。
+Text/308/text,アイダホが前に進み出て、あなたの胸にメダルをピンで留める――[color=GOLD]黄金の塊茎[/color]を。
+Text/309/text,卓越した功績に対し。あなたは[color=DARK_ORANGE]スパッドへの忠誠[/color]が常に報われることを証明した。
+Choice/30a/text,ありがとうございます、首相閣下。スパッドに栄光あれ。
+Choice/30b/text,私はただ職務を全うしたまでです、閣下。（無理に笑う）
+Text/30c/text,アイダホの笑顔は目に届かない。そうだ。確かにそうしたな。
+Text/30d/text,アイダホはあなたをじっと見つめる。職務か。[color=STEEL_BLUE]複雑な行動に対する、なんと単純な言葉だろうか。[/color]
+Text/30e/text,その「職務」を完璧にこなす者たちには、どんな[color=CRIMSON]悪夢[/color]が訪れるのだろうか。
+Text/30f/text,勝利を祝う宴が催される。食卓には料理がうず高く積まれ、惜しみない量の[color=DARK_VIOLET]根の貯蔵品[/color]も並ぶ。
+Text/310/text,ラセットは濃い紫色の液体が入ったグラスを掲げる。乾杯！我々を養う[color=CRIMSON]裏切り者たち[/color]に！
+Text/311/text,部屋中に笑い声が響く。幾人かは不安げに。ほとんどは心底から。
+Text/312/text,彼が皿をあなたの方へ滑らせる。「新しいものを試してみてくれ。[color=DARK_VIOLET]『レジスタンス・ブレンド』[/color]だ。スパッドの未来へのサーシャの貢献だ。」
+Text/313/text,胃がひっくり返るような感覚。皿の上の食べ物。[color=CRIMSON]サーシャ[/color]。マーフィーのいとこ。写真の妻。
+Text/314/text,[tornado radius=3 freq=2][color=CRIMSON]その全てが。[/color][/tornado]
+Choice/315/text,無理に食べる - 正体を隠し通す
+Choice/316/text,皿を押しやる - こんなことはできない
+Text/317/text,フォークを唇に運ぶ。目を閉じる。[color=STEEL_BLUE]噛む。飲み込む。考えるな。[/color]
+Text/318/text,ラセットは満足げに頷く。「よろしい。[color=DARK_ORANGE]お前は出世するだろう。[/color]」
+Text/319/text,あなたは皿を押しやる。「気分が優れません。今日の興奮で...」
+Text/31a/text,ラセットの目が一瞬細められ、それから和らぐ。「なるほど。なんと[color=YELLOW]繊細な体質[/color]だこと。」
+Text/31b/text,ゆっくり休め。明日は、[color=CRIMSON]さらなる処理[/color]を監督せねばならん。
+Text/31c/text,あなたは自室に戻る。胸のメダルが重くのしかかる。
+Text/31d/text,行方不明の妻の写真を取り出す。彼女も今や同じバッチの中にいるのだろう。
+Text/31e/text,彼女を見つけると約束した。[color=STEEL_BLUE]見つけた。[/color]ただ、どちらも望まない形で。
+Text/31f/text,マーフィー。あなたの友人。あなたを信頼していた人物。彼はレジスタンスの一員だった。
+Text/320/text,[color=CRIMSON]だった。[/color]
+Text/321/text,窓に映る自分の姿を見つめる。メダルが輝く。[color=DARK_ORANGE]黄金の塊茎[/color]。スパッドの英雄。
+Text/322/text,[color=STEEL_BLUE]ジャガイモの皮を被った怪物。[/color]
+Text/323/text,その夜、あなたはサーシャの夢を見る。彼女は責めない。怒りもしない。その方がどれほど楽だっただろう。
+Text/324/text,彼女はただ、その目であなたを見つめる。[color=CHARTREUSE]根は深く張る[/color]、と彼女は囁く。
+Text/325/text,[color=STEEL_BLUE]腐ったもの[/color]でさえも。
+Text/326/text,数ヶ月が過ぎる。あなたは昇進した。国境警備の地域監察官。ラセットの右腕。
+Text/327/text,あなたはSpudの歴史上、誰よりも多くの承認拒否を監督しました。[color=DARK_VIOLET]ルートリザーブ[/color]の生産は急増しています。
+Text/328/text,あなたのオフィスは快適です。配給は豊富です。家族は守られています。
+Text/329/text,あなたは約束された全てを手に入れました。
+Text/32a/text,[color=STEEL_BLUE]睡眠[/color]以外は。[color=STEEL_BLUE]安らぎ[/color]以外は。鏡を見る勇気以外は。
+Text/32b/text,ある日、あなたはそれに気づきます。壁に引っ掻かれた[color=GOLD]黄色いジャガイモのエンブレム[/color]を。次に別のものを。そして、何十個もの。
+Text/32c/text,新しい抵抗勢力が形成されつつあります。より静かに。より慎重に。サーシャの過ちから学びながら。
+Choice/32d/text,すぐに警備にシンボルを報告する
+Choice/32e/text,見なかったふりをする
+Choice/32f/text,自分の印を残す - 一枚の黄色い葉
+Text/330/text,あなたは報告書を提出します。新たな容疑者たちが検挙されます。またしても昇進。
+Text/331/text,サイクルは続きます。[color=CRIMSON]あなたは機械と化したのです。[/color]
+Text/332/text,あなたは通り過ぎます。何も言いません。大したことではありません。[color=STEEL_BLUE]ほとんど何でもありません。[/color]
+Text/333/text,しかし、彼らに対して行動を起こさないことを選んだのは、それが初めてでした。
+Text/334/text,それは何か意味があるのかもしれません。あるいは、[color=YELLOW]時すでに遅し[/color]なのかもしれません。
+Text/335/text,誰も見ていない時、あなたはエンブレムの隣に小さな[color=GOLD]黄色い葉[/color]を引っ掻きます。
+Text/336/text,たった一つの反抗的な行為。何年も遅すぎた。しかし、[color=CHARTREUSE]それでも何か[/color]は。
+Text/337/text,サーシャの声があなたの記憶に響きます。「[color=CHARTREUSE]根は深く張る。[/color]」
+Text/338/text,[color=CHARTREUSE]あなたにさえ届く[/color]ほど深いのかもしれない。いつか。
+Text/339/text,Spudの国は存続します。[color=DARK_VIOLET]ルートリザーブ[/color]は流れ続けます。消費のサイクルは続きます。
+Text/33a/text,しかし、どこかで、壁のひび割れの奥で、[color=CHARTREUSE]新しい何かが育っています。[/color]
+Text/33b/text,あなたがその一部となるかどうかは… [color=YELLOW]その物語はまだ書かれていません。[/color]
+Choice/30a/disabled_text,
+Choice/30b/disabled_text,
+Choice/315/disabled_text,
+Choice/316/disabled_text,
+Choice/32d/disabled_text,
+Choice/32e/disabled_text,
+Choice/32f/disabled_text,

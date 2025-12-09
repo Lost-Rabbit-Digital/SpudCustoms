@@ -1,0 +1,92 @@
+﻿keys,sk
+Text/d2/text,Po tvojej zmene ťa zavedú na tajné stretnutie odboja v opustenej továrni na škrob.
+Text/d3/text,Ošľahaný zemiak s jazvami z bitiek oslovuje zhromaždený dav.
+Text/d4/text,Čas na šepkanie a letáky sa skončil. Vláda ukázala svoju pravú tvár.
+Text/d5/text,"Naše zdroje potvrdzujú, že spracovateľské závody [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] zvyšujú produkciu."
+Text/d6/text,"Čo znamená [tornado radius=3 freq=3][color=CRIMSON]viac našich bratov a sestier zmizlo, spracovaných, skonzumovaných[/color][/tornado]."
+Text/d7/text,Vodca udrie päsťou do stola. [pulse freq=3][color=CHARTREUSE]Toto sa teraz končí.[/color][/pulse] Máme plán zaútočiť na srdce ich operácie.
+Text/d8/text,Saša rozloží na stole podrobné plány. O tri dni spustíme našu hlavnú ofenzívu.
+Text/d9/text,"Zatiaľ čo jeden tím vytvorí diverzný manéver pri hlavnom vládnom komplexe, druhý infiltruje najväčšie zariadenie Root Reserve."
+Text/da/text,"Náš cieľ: získať [color=CHARTREUSE]nezvratné dôkazy[/color] o tom, čo sa deje vo vnútri, a vysielať ich do celého Spudu."
+Text/db/text,Saša ukazuje na časť plánov. Tu vstupuješ ty.
+Text/dc/text,"Potrebujeme niekoho vo vnútri Spud Colnej správy, aby sa uistil, že naši operatívci môžu prekročiť hranicu pre misiu."
+Text/dd/text,"Môžeme počítať s tým, že ty budeš tou osobou?"
+Choice/de/text,"Urobím čokoľvek, čo bude potrebné na odhalenie pravdy."
+Choice/df/text,Znie to nebezpečne. Čo ak nás chytia?
+Choice/e0/text,"Existuje iný spôsob, ktorý by neohrozil toľko ľudí?"
+Text/e1/text,Sašina tvár sa rozžiari nádejou. Ďakujem. [color=CHARTREUSE]Tvoja odvaha zachráni nespočetné životy.[/color]
+Text/e2/text,"Stlačí ti ruku. Keď sa toto všetko skončí, [color=CHARTREUSE]budeš zapamätaný ako hrdina revolúcie.[/color]"
+Text/e3/text,Saša vážne prikývne. Je to nebezpečné. Nebudem ti o tom klamať.
+Text/e4/text,"Všetci môžeme skončiť [color=DARK_VIOLET]spracovaní na Root Reserve[/color], ak zlyháme."
+Text/e5/text,"Ale nerobiť nič je ešte nebezpečnejšie. Pre nás všetkých, z dlhodobého hľadiska."
+Text/e6/text,Sašin výraz zvážnie. Skúšali sme iné spôsoby. Roky.
+Text/e7/text,Petície. Tichá diplomacia. Anonymné tipy. Nič nefungovalo.
+Text/e8/text,"Niekedy musíš riskovať všetko, aby si čokoľvek zmenil."
+Text/e9/text,Medzi členmi odboja vypukne rozohriata debata.
+Text/ea/text,Niektorí argumentujú za agresívnejší prístup - úplné zničenie spracovateľských závodov.
+Text/eb/text,"Iní trvajú na tom, že násilné akcie by len obrátili verejnú mienku proti nim."
+Text/ec/text,DOSŤ! Vodca umlčí miestnosť veliteľským hlasom.
+Text/ed/text,"Nemôžeme si dovoliť byť rozdelení. Nie teraz, keď sme tak blízko."
+Text/ee/text,"Náš cieľ je jednoduchý: odhaliť pravdu. Nechajme ľudí rozhodnúť, čo bude ďalej."
+Text/ef/text,"Vodca sa otáča, aby sa priamo obrátil na teba. Ale potrebujeme vedieť, [color=YELLOW]kde stojíš[/color]."
+Text/f0/text,O tri dni sa naši agenti priblížia k tvojmu kontrolnému stanovišťu. Budú mať [color=CHARTREUSE]modré identifikačné karty[/color].
+Text/f1/text,Pomôžeš im prejsť? Tvoja odpoveď teraz určí náš ďalší krok.
+Choice/f2/text,Pomôžem im prejsť. Pre budúcnosť Spudu.
+Choice/f3/text,"Nemôžem byť priamo zapojený, ale budem sa pozerať inam."
+Choice/f4/text,Potrebujem viac času na premýšľanie o tom.
+Text/f5/text,Vodca ti pevne zovrie rameno. [color=CHARTREUSE]Tvoja odvaha nás všetkých ctí.[/color]
+Text/f6/text,"Na tretí deň, keď slnko bude najvyššie, prídu naši agenti."
+Text/f7/text,"Heslo je ""[wave amp=15 freq=3][color=CHARTREUSE]Korene rastú hlboko.[/color][/wave]"" Zapamätaj si to."
+Text/f8/text,"Vodca pomaly prikývne, zjavne sklamaný, ale chápavý."
+Text/f9/text,"Niekedy je najviac, o čo môžeme žiadať, aby nám ľudia nestáli v ceste."
+Text/fa/text,Naši agenti budú postupovať podľa plánu. Len... nevyvolaj poplach.
+Text/fb/text,"Vodcov výraz sa spevní. [color=YELLOW]Čas je luxus, ktorý nemáme.[/color]"
+Text/fc/text,"Ale nútiť kohokoľvek, aby sa pridal k našej veci, nás nerobí o nič lepšími než oni."
+Text/fd/text,Budeme pokračovať bez spoliehania sa na tvoju pomoc. Hľadaj vo svojom svedomí.
+Text/fe/text,"Keď sa stretnutie končí, Saša kráča s tebou späť smerom ku kontrolnému stanovišťu."
+Text/ff/text,"Nech sa stane čokoľvek... ďakujem za všetko, čo si urobil."
+Text/100/text,"Vraciaš sa do svojich priestorov na kontrolnom stanovišti, tvoja myseľ sa preháňa pod ťarchou nadchádzajúcich udalostí."
+Text/101/text,Za len tri dni by sa všetko mohlo zmeniť. [color=YELLOW]K lepšiemu alebo horšiemu.[/color]
+Choice/de/disabled_text,
+Choice/f4/disabled_text,
+Choice/f3/disabled_text,
+Choice/f2/disabled_text,
+Choice/e0/disabled_text,
+Choice/df/disabled_text,
+Text/d2b/text,Než začneme... Musím sa priznať.
+Text/d2c/text,"Ten odkaz, čo si našiel v prvý deň? „[color=GOLD]Priateľ[/color]“?"
+Text/d2d/text,"Saša sa usmieva. Vidím, že si si ho nechal. Múdre. Vedela som, že som si vybrala správny výhonok."
+Text/d2e/text,"Mesiacmi som sledovala nových dôstojníkov, hľadala som niekoho s [color=CHARTREUSE]pochybovačnými očami[/color]. Niekoho, kto by mohol prekuknúť lži."
+Text/d2f/text,Sašin výraz je zložitý. Ukázal si to Russetovi. Potom som sa musela na týždne stiahnuť.
+Text/d2g/text,Ale aj tak si tu. To mi niečo hovorí o tvojom svedomí.
+Text/d2h/text,Zničil si ho. Nevyčítam ti to – bolo riskantné si ho nechať.
+Text/d2i/text,"Ale tie slová si aj tak našli cestu do tvojej hlavy, však?"
+Text/d2j/text,[color=CHARTREUSE]Ja som „Priateľ“.[/color] A teraz už vieš prečo.
+Text/d2k/text,Saša rozkladá zhabané dokumenty na stole. Manifesty o spracovaní z minulého mesiaca.
+Text/d2l/text,Skenuješ mená a tvoja krv tuhne.
+Text/d2m/text,Je to tam. [color=GOLD]Maris Piper[/color]. Žena z fotografie.
+Text/d2n/text,"„[color=CRIMSON]Stav: Spracované. Dávka RR-2847.[/color]“ Datované tri dni po tom, čo jej manžel prosil o tvoju pomoc."
+Text/d2o/text,Cítiš fotografiu vo vrecku. [color=STEEL_BLUE]Je preč. A ty si ju nemohol zachrániť.[/color]
+Text/d2p/text,Ale možno... [color=CHARTREUSE]možno ešte môžeš zachrániť iných[/color].
+Text/d2q/text,"Murphy sa vynorí z tieňov. Hej. Som rád, že si prišiel."
+Text/d2r/text,Murphy drží pokrčený formulár RR-UTIL. Môj bratranec je tiež na tom zozname. [color=CHARTREUSE]Robíme to spolu.[/color]
+Text/ff2/text,"[color=STEEL_BLUE]Drží si odstup, keď kráčaš.[/color] Cením si, že nám nestojíš v ceste. Je to... niečo."
+Text/ff3/text,"[color=STEEL_BLUE]Kráča v tichosti, so skríženými rukami.[/color] Dúfam, že nájdeš akúkoľvek istotu, ktorú hľadáš. My ostatní si nemôžeme dovoliť čakať."
+Text/100_viktor1/text,"Na ceste späť nájdeš Viktora samého na streche kontrolného bodu, ako hľadí na nočnú oblohu."
+Text/100_viktor2/text,Viktor drží malú
+Text/100_viktor3/text,"Hovorievala, že nech sa veci akokoľvek zhoršia, hviezdy tam stále budú. [color=STEEL_BLUE]Stále. Krásne.[/color]"
+Text/100_viktor4/text,"Otočí sa k tebe, oči sa mu lesknú. [wave amp=15 freq=2]Stále premýšľam... trpela?[/wave] Vedela, čo sa deje?"
+Text/100_viktor5/text,"Viktorovi sa zlomí hlas. Raz sa ma spýtala, či som niekedy spochybňoval zamietnutia. Povedal som jej, [color=CRIMSON]aby verila systému[/color]."
+Text/100_viktor6/text,"[tornado radius=3 freq=2][color=CRIMSON]Poslal som vlastnú ženu do spracovateľských nádrží bez toho, aby som to vedel.[/color][/tornado]"
+Choice/100_viktor_choice1/text,"""Nemohol si to vedieť. Nikto z nás to nevedel."""
+Choice/100_viktor_choice2/text,"""Elena by chcela, aby si teraz bojoval, nie sa utápať vo výčitkách."""
+Choice/100_viktor_choice3/text,"""Neviem, čo povedať. Je mi to ľúto."""
+Text/100_viktor7/text,Pomaly krúti hlavou. [color=STEEL_BLUE]Neznalosť nie je nevina. Mal som sa spýtať. Mal som počúvať.[/color]
+Text/100_viktor8/text,"Viktor opatrne odloží fotografiu. [color=CHARTREUSE]Ale teraz už viem. A vedieť znamená, že musím konať.[/color]"
+Text/100_viktor9/text,"Viktor sa narovná, v očiach sa mu znovu rozhorí chladný oheň. [color=CHARTREUSE]Máš pravdu.[/color] Bola silnejšia ako ja. Odvážnejšia."
+Text/100_viktor10/text,Zovrie päsť. [color=CHARTREUSE]Keď príde čas
+Text/100_viktor11/text,"[pulse freq=2][color=CRIMSON]A Idaho zaplatí za každý život, ktorý pohltil.[/color][/pulse]"
+Text/100_viktor12/text,Viktor sa zmôže na smutný
+Text/100_viktor13/text,Pozrie sa späť na hviezdy. [color=STEEL_BLUE]Elena by ťa mala rada.[/color]
+Text/100_viktor14/text,"Otočí sa, aby odišiel, potom sa zastaví. [color=CHARTREUSE]Keď sa odboj pohne... Budem pripravený.[/color]"
+Text/100_viktor15/text,"Pre Elenu. Pre všetkých z nich. [pulse freq=2][color=CHARTREUSE]Stráže ma budú nasledovať, keď im poviem pravdu.[/color][/pulse]"

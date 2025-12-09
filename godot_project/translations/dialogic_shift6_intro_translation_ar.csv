@@ -1,0 +1,69 @@
+﻿keys,ar
+Text/b8/text,المنشأة الحدودية في إغلاق تام، مع أمن مسلح يقوم بدوريات في كل ممر.
+Text/b9/text,[pulse freq=3][color=RED]انتباه! وضع أمني من المستوى الأحمر![/color][/pulse] سُرقت وثائق سرية الليلة الماضية.
+Text/ba/text,لدينا [tornado radius=4 freq=3][color=CRIMSON]خائن بيننا[/color][/tornado]. أي شخص يحجب معلومات سيعامل كمتواطئ.
+Text/bb/text,جميع الضباط، اصطفوا لإجراء [wave amp=15 freq=2][color=DARK_ORANGE]الفحص الأمني[/color][/wave]. سيتم وضع علامة على من لديهم استجابات إجهاد مرتفعة.
+Text/bc/text,هل رأيت ما يحدث في الخارج؟ منشورات في كل مكان تظهر أن [color=DARK_VIOLET]احتياطي الجذور[/color] مصنوع من... [pulse freq=3][color=CRIMSON]منا[/color][/pulse].
+Choice/bd/text,"""اخفض صوتك. نحن جميعاً مراقبون."""
+Choice/be/text,"""سمعت نفس الشائعات. إنه أمر مروع إن كان صحيحاً."""
+Choice/bf/text,"""هذه دعاية سخيفة. لا تنشر مثل هذه الأكاذيب."""
+Text/c0/text,أنت محق. ولكن إذا كان صحيحاً... فماذا يجعلنا ذلك؟
+Text/c1/text,تم رفض ابن عمي الشهر الماضي. هل هذا يعني...؟ [color=CHARTREUSE]لا أستطيع فعل هذا بعد الآن[/color].
+Text/c2/text,يصبح تعبيرهم حذراً. بالطبع. بطاطا مخلصة للأبد.
+Text/c3/text,اذكر مكان تواجدك الليلة الماضية بين الساعة 22:00 والساعة 04:00.
+Choice/c4/text,"""كنت في مسكني طوال الليل، نائماً."""
+Choice/c5/text,"""أفضل التحدث إلى ممثلي القانوني أولاً."""
+Text/c6/text,مستويات التوتر لديك تشير إلى [color=YELLOW]خداع[/color]. ومع ذلك... غير حاسمة. يمكنك الذهاب الآن.
+Text/c7/text,ممثل قانوني؟ هذا إجراء أمني، وليس محاكمة. تم تسجيل رفضك.
+Text/c7_viktor1/text,يقترب حارس أمن ضخم أثناء استراحتك. وجهه شاحب.
+Text/c7_viktor2/text,مرحباً... أنت أحد ضباط الجمارك، أليس كذلك؟ كنت أسأل عن زوجتي، إيلينا.
+Text/c7_viktor3/text,عبرت نقطة التفتيش هذه قبل ثلاثة أسابيع. [color=STEEL_BLUE]فشلت في التفتيش.[/color] لم أسمع عنها منذ ذلك الحين.
+Choice/c7_viktor4/text,"""فيكتور... لقد وجدت شيئاً. عن إيلينا. يجب أن تعرف الحقيقة."""
+Choice/c7_viktor5/text,"""أنا آسف يا فيكتور. لم أرَ شيئاً."""
+Text/c7_viktor6/text,تريه نسخة من صفحة البيان. يتحول وجهه إلى الأبيض.
+Text/c7_viktor7/text,[wave amp=25 freq=3]ترتجف يداه وهو يقرأ.[/wave] [color=GOLD]إيلينا بيتروف[/color]... [color=CRIMSON]تمت معالجتها... دفعة RR-2851...[/color]
+Text/c7_viktor8/text,صوته بالكاد همس. [tornado radius=3 freq=2][color=CRIMSON]هم... لقد حولوها إلى...[/color][/tornado]
+Text/c7_viktor9/text,يتحول حزنه إلى غضب بارد. [pulse freq=2][color=CRIMSON]أيداهو ستدفع ثمن هذا.[/color][/pulse] أقسم على ذكراها.
+Text/c7_viktor10/text,يمسك كتفك. [color=CHARTREUSE]شكراً لإخبارك لي.[/color] عندما يحين الوقت... سأتذكر هذا.
+Text/c7_viktor11/text,يهز رأسه بحزن. [color=STEEL_BLUE]لقد ظننت ذلك.[/color] لا أحد يعرف شيئاً. أو لا أحد يريد التحدث.
+Text/c7_viktor12/text,إذا سمعت أي شيء... [color=YELLOW]أرجوك.[/color] هي كل ما أملك.
+Text/c8/text,إنه يعمل. البيانات تسببت في ضجة، لكن [color=DARK_ORANGE]روسيت يشك بنا[/color].
+Text/c9/text,راقب الحلفاء من منظمتنا خلال نوبة اليوم. [color=CHARTREUSE]ستتعرف عليهم[/color].
+Text/ca/text,إذا تمكنت من إيصالهم بأمان، استخدم [color=CHARTREUSE]العلامة الخاصة التي ناقشناها[/color].
+Choice/cb/text,"""الأمر يستحق المخاطرة. أنا موافق."""
+Choice/cc/text,"""هذا يصبح خطيراً جداً. ربما يجب أن نلتزم الهدوء."""
+Text/cd/text,كنت أعلم أنني أستطيع الاعتماد عليك. عندما ينتهي هذا، [color=CHARTREUSE]سيعرف سبود من هم الأبطال الحقيقيون[/color].
+Text/ce/text,لقد تجاوزنا تلك النقطة بكثير. الاختباء لن ينقذنا. [color=CHARTREUSE]فقط إسقاط النظام هو ما سينقذنا[/color].
+Text/cf/text,كل محطة لديها الآن نظام [color=DARK_ORANGE]RealityScan[/color] الجديد. إنه يكشف العلامات غير المصرح بها والتزوير.
+Text/d0/text,يجب مسح جميع الوثائق قبل الموافقة. [color=CRIMSON]سيتم استئصال الخونة[/color]. أنا أضمن ذلك.
+Text/d0_qte1/text,في وقت لاحق من تلك النوبة، يقترب مسافر بوثائق تحمل [color=CHARTREUSE]علامة المقاومة الخفية[/color].
+Text/d0_qte2/text,يبدأ نظام [color=DARK_ORANGE]RealityScan[/color] مسحه. [wave amp=15 freq=3][color=RED]سيكتشف العلامة![/color][/wave]
+Text/d0_qte3/text,لديك ثوانٍ لتقرر. الماسح الضوئي يسخن...
+Choice/d0_qte4/text,"""تظاهر بخلل في الماسح الضوئي - بسرعة!"" (مساعدة المقاومة)"
+Choice/d0_qte5/text,"""دع الماسح الضوئي يكمل مسحه"" (اتبع البروتوكول)"
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]عليك العمل بسرعة![/color][/pulse] قم بتشغيل العطل قبل أن ينتهي من المسح!
+Text/d0_qte7/text,تتخبط في كابلات الماسح الضوئي. تتطاير الشرارات. الشاشة تومض ثم تنطفئ.
+Text/d0_qte8/text,يندفع روسيت. [color=YELLOW]ماذا حدث هنا؟[/color]
+Choice/d0_qte9/text,"""ارتفاع مفاجئ في التيار، سيدي. هذه الأنظمة الجديدة متقلبة المزاج."""
+Choice/d0_qte10/text,"""لا أعرف، سيدي. لقد توقف عن العمل فجأة."""
+Text/d0_qte11/text,يتمتم روسيت. [color=STEEL_BLUE]البيروقراطيون يعطوننا معدات غير مختبرة.[/color] عالجهم يدوياً وضع علامة لإعادة الفحص.
+Text/d0_qte12/text,ينظر إليك روسيت بشك. [color=YELLOW]يا له من توقيت مناسب.[/color] سأطلب من الصيانة أن تلقي نظرة عليه. لا تدع هذا يحدث مرة أخرى.
+Text/d0_qte13/text,يمنحك عضو المقاومة إيماءة امتنان خفيفة بينما يمرون.
+Text/d0_qte14/text,الماسح الضوئي [pulse freq=3][color=RED]يُصدر صوتًا عاليًا[/color][/pulse]. تم اكتشاف علامات غير مصرح بها!
+Text/d0_qte15/text,يظهر راسيت على الفور. [color=CHARTREUSE]أحسنت![/color] تم القبض على خائن آخر.
+Text/d0_qte16/text,"يتم سحب عضو المقاومة بعيدًا، والرعب في عينيه. ""[color=CRIMSON]أرجوك، لا! لدي أطفال![/color]"""
+Text/d0_qte17/text,تم [color=DARK_ORANGE]تسجيل ولائك في ملفك[/color]. استمر على هذا المنوال.
+Text/d1/text,مساعدة أعضاء المقاومة أصبحت أكثر خطورة بكثير، لكن [color=CHARTREUSE]الحقيقة يجب أن تنتشر[/color].
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,
+Choice/c7_viktor4/disabled_text,
+Choice/c7_viktor5/disabled_text,
+Choice/d0_qte4/disabled_text,
+Choice/d0_qte5/disabled_text,
+Choice/d0_qte9/disabled_text,
+Choice/d0_qte10/disabled_text,

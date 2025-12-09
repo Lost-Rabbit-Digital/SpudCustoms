@@ -1,0 +1,92 @@
+﻿keys,no
+Text/d2/text,Etter vakten din blir du ledet til et hemmelig motstandsmøte i en forlatt stivelsefabrikk.
+Text/d3/text,En værbitt potet med kampskader taler til den forsamlede gruppen.
+Text/d4/text,Tiden for hvisking og pamfletter er over. Regjeringen har vist sitt sanne ansikt.
+Text/d5/text,Våre kilder bekrefter at [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave]-anleggene øker produksjonen.
+Text/d6/text,"Hvilket betyr [tornado radius=3 freq=3][color=CRIMSON]flere av våre brødre og søstre forsvunnet, bearbeidet, konsumert[/color][/tornado]."
+Text/d7/text,Lederen slår en knyttneve i bordet. [pulse freq=3][color=CHARTREUSE]Dette slutter nå.[/color][/pulse] Vi har en plan for å slå til mot hjertet av operasjonen deres.
+Text/d8/text,Sasha ruller ut detaljerte planer på bordet. Om tre dager starter vi vår hovedoffensiv.
+Text/d9/text,"Mens ett lag skaper en avledning ved hovedregjeringskomplekset, vil et annet infiltrere det største Root Reserve-anlegget."
+Text/da/text,"Vårt mål: skaffe [color=CHARTREUSE]ubestridelige bevis[/color] på hva som skjer inne, og kringkaste det til hele Spud."
+Text/db/text,Sasha peker på en del av planene. Dette er hvor du kommer inn.
+Text/dc/text,Vi trenger noen på innsiden av Spud Tollvesen for å sikre at våre operative kan krysse grensen for oppdraget.
+Text/dd/text,Kan vi regne med at du er den personen?
+Choice/de/text,Jeg vil gjøre hva som helst for å avsløre sannheten.
+Choice/df/text,Det høres farlig ut. Hva om vi blir tatt?
+Choice/e0/text,Finnes det en annen måte som ikke setter så mange i fare?
+Text/e1/text,Sashas ansikt lyser opp med håp. Takk. [color=CHARTREUSE]Ditt mot vil redde utallige liv.[/color]
+Text/e2/text,"Hun klemmer hånden din. Når alt dette er over, [color=CHARTREUSE]vil du bli husket som en helt av revolusjonen.[/color]"
+Text/e3/text,Sasha nikker høytidelig. Det er farlig. Jeg vil ikke lyve til deg om det.
+Text/e4/text,Vi kan alle ende opp [color=DARK_VIOLET]bearbeidet til Root Reserve[/color] selv hvis vi mislykkes.
+Text/e5/text,"Men å ikke gjøre noe er enda farligere. For oss alle, på lang sikt."
+Text/e6/text,Sashas uttrykk blir dystert. Vi har prøvd andre måter. I årevis.
+Text/e7/text,Underskriftskampanjer. Stille diplomati. Anonyme tips. Ingenting har fungert.
+Text/e8/text,Noen ganger må du risikere alt for å endre noe.
+Text/e9/text,En opphetet debatt bryter ut blant motstandsmedlemmene.
+Text/ea/text,Noen argumenterer for en mer aggressiv tilnærming — å ødelegge bearbeidingsanleggene fullstendig.
+Text/eb/text,Andre insisterer på at voldelige handlinger bare vil vende den offentlige mening mot dem.
+Text/ec/text,NOK! Lederen bringer rommet til taushet med en kommanderende stemme.
+Text/ed/text,"Vi har ikke råd til å være splittet. Ikke nå, når vi er så nær."
+Text/ee/text,Vårt mål er enkelt: avsløre sannheten. La folket bestemme hva som skjer videre.
+Text/ef/text,Lederen snur seg for å henvende seg direkte til deg. Men vi trenger å vite [color=YELLOW]hvor du står[/color].
+Text/f0/text,Om tre dager vil våre agenter nærme seg kontrollposten din. De vil bære [color=CHARTREUSE]blå identifikasjonskort[/color].
+Text/f1/text,Vil du hjelpe dem å krysse? Ditt svar nå vil avgjøre vårt neste trekk.
+Choice/f2/text,Jeg vil hjelpe dem å krysse. For fremtiden til Spud.
+Choice/f3/text,"Jeg kan ikke være direkte involvert, men jeg vil se en annen vei."
+Choice/f4/text,Jeg trenger mer tid til å tenke på dette.
+Text/f5/text,Lederen griper skulderen din fast. [color=CHARTREUSE]Ditt mot hedrer oss alle.[/color]
+Text/f6/text,"På den tredje dagen, når solen står høyest, vil våre agenter komme."
+Text/f7/text,"Passordet er ""[wave amp=15 freq=3][color=CHARTREUSE]Røttene vokser dypt.[/color][/wave]"" Husk det."
+Text/f8/text,"Lederen nikker langsomt, tydelig skuffet men forståelsesfull."
+Text/f9/text,Noen ganger er det meste vi kan be om at folk ikke står i veien for oss.
+Text/fa/text,Våre agenter vil fortsette som planlagt. Bare... ikke utløs alarmen.
+Text/fb/text,Lederens uttrykk hardner. [color=YELLOW]Tid er en luksus vi ikke har.[/color]
+Text/fc/text,Men å tvinge noen til å slutte seg til vår sak gjør oss ikke bedre enn dem.
+Text/fd/text,Vi vil fortsette uten å regne med din hjelp. Søk i din samvittighet.
+Text/fe/text,"Mens møtet brytes opp, går Sasha med deg tilbake mot kontrollposten."
+Text/ff/text,Uansett hva som skjer... takk for alt du har gjort.
+Text/100/text,"Du vender tilbake til kvarteret ditt ved kontrollposten, tankene dine raser under vekten av kommende hendelser."
+Text/101/text,På bare tre dager kan alt forandre seg. [color=YELLOW]Til det bedre eller verre.[/color]
+Choice/de/disabled_text,
+Choice/f4/disabled_text,
+Choice/f3/disabled_text,
+Choice/f2/disabled_text,
+Choice/e0/disabled_text,
+Choice/df/disabled_text,
+Text/d2b/text,Før vi begynner... Jeg har en tilståelse å komme med.
+Text/d2c/text,"Den lappen du fant på din første dag? ""[color=GOLD]En venn[/color]""?"
+Text/d2d/text,Sasha smiler. Jeg ser du beholdt den. Smart. Jeg visste jeg valgte riktig spire.
+Text/d2e/text,"Jeg har observert nye offiserer i månedsvis, på jakt etter noen med [color=CHARTREUSE]spørrende øyne[/color]. Noen som kanskje kan se gjennom løgnene."
+Text/d2f/text,Sashas uttrykk er komplisert. Du viste den til Russet. Jeg måtte holde meg lavt i ukesvis etter det.
+Text/d2g/text,Men her er du likevel. Det forteller meg noe om din samvittighet.
+Text/d2h/text,Du ødela den. Jeg klandrer deg ikke – det var risikabelt å beholde den.
+Text/d2i/text,"Men ordene fant veien inn i hodet ditt likevel, gjorde de ikke?"
+Text/d2j/text,"[color=CHARTREUSE]Jeg er ""En venn.""[/color] Og nå vet du hvorfor."
+Text/d2k/text,Sasha sprer beslaglagte dokumenter på bordet. Behandlingslister fra den siste måneden.
+Text/d2l/text,"Du skanner navnene, og blodet ditt isner."
+Text/d2m/text,Der er hun. [color=GOLD]Maris Piper[/color]. Kvinnen fra bildet.
+Text/d2n/text,"""[color=CRIMSON]Status: Behandlet. Parti RR-2847.[/color]"" Datert tre dager etter at mannen hennes tryglet om din hjelp."
+Text/d2o/text,Du kjenner bildet i lommen. [color=STEEL_BLUE]Hun er borte. Og du kunne ikke redde henne.[/color]
+Text/d2p/text,Men kanskje... [color=CHARTREUSE]kanskje du fortsatt kan redde andre[/color].
+Text/d2q/text,Murphy kommer ut av skyggene. Hei. Glad du kom deg hit.
+Text/d2r/text,Murphy holder opp det krøllete RR-UTIL-skjemaet. Min fetter er også på den listen. [color=CHARTREUSE]Vi gjør dette sammen.[/color]
+Text/ff2/text,[color=STEEL_BLUE]Hun holder avstand mens du går.[/color] Jeg setter pris på at du ikke står i veien for oss. Det er... noe.
+Text/ff3/text,"[color=STEEL_BLUE]Hun går i stillhet, med armene i kors.[/color] Jeg håper du finner den vissheten du leter etter. Resten av oss har ikke råd til å vente."
+Text/100_viktor1/text,"På vei tilbake finner du Viktor alene på kontrollpunktets tak, stirrende på nattehimmelen."
+Text/100_viktor2/text,Viktor holder en liten
+Text/100_viktor3/text,"Hun pleide å si at uansett hvor mørkt det ble, ville stjernene fortsatt være der. [color=STEEL_BLUE]Konstante. Vakre.[/color]"
+Text/100_viktor4/text,"Han snur seg mot deg, øynene glitrer. [wave amp=15 freq=2]Jeg tenker stadig... led hun?[/wave] Visste hun hva som skjedde?"
+Text/100_viktor5/text,Viktors stemme brister. Hun spurte meg en gang om jeg noen gang stilte spørsmål ved avvisningene. Jeg sa til henne [color=CRIMSON]at hun skulle stole på systemet[/color].
+Text/100_viktor6/text,[tornado radius=3 freq=2][color=CRIMSON]Jeg sendte min egen kone til behandlingskarene uten å vite det.[/color][/tornado]
+Choice/100_viktor_choice1/text,Du kunne ikke visst. Ingen av oss visste.
+Choice/100_viktor_choice2/text,"Elena ville at du skulle kjempe nå, ikke drukne i skyld."
+Choice/100_viktor_choice3/text,Jeg vet ikke hva jeg skal si. Jeg beklager.
+Text/100_viktor7/text,Han rister sakte på hodet. [color=STEEL_BLUE]Uvitenhet er ikke uskyld. Jeg burde ha spurt. Burde ha lyttet.[/color]
+Text/100_viktor8/text,Viktor legger forsiktig bort bildet. [color=CHARTREUSE]Men nå vet jeg. Og å vite betyr at jeg må handle.[/color]
+Text/100_viktor9/text,"Viktor retter seg opp, en kald ild tennes på nytt i øynene hans. [color=CHARTREUSE]Du har rett.[/color] Hun var sterkere enn meg. Modigere."
+Text/100_viktor10/text,Han knytter neven. [color=CHARTREUSE]Når tiden er inne
+Text/100_viktor11/text,[pulse freq=2][color=CRIMSON]Og Idaho skal betale for hvert liv han har fortært.[/color][/pulse]
+Text/100_viktor12/text,Viktor klarer et trist
+Text/100_viktor13/text,Han ser tilbake på stjernene. [color=STEEL_BLUE]Elena ville ha likt deg.[/color]
+Text/100_viktor14/text,"Han snur seg for å gå, så stopper han. [color=CHARTREUSE]Når motstandsbevegelsen rykker... Jeg skal være klar.[/color]"
+Text/100_viktor15/text,For Elena. For dem alle. [pulse freq=2][color=CHARTREUSE]Vaktene vil følge meg når jeg forteller dem sannheten.[/color][/pulse]

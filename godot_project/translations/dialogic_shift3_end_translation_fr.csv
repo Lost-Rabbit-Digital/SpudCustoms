@@ -1,0 +1,27 @@
+﻿keys,fr
+Text/69/text,Pouvons-nous parler ? Quelque part en privé ? [color=YELLOW]Trop d'yeux et d'oreilles ici.[/color]
+Text/6a/text,Retrouve-moi près du vieux hangar de stockage après ton service. J'ai quelque chose que tu dois voir.
+Text/6b/text,"Tu te rapproches de tes collègues ? Souviens-toi, devenir amical peut mener à... [color=DARK_ORANGE]un jugement compromis[/color]."
+Text/6c/text,J'ai recueilli des informations sur les pommes de terre rejetées. [wave amp=20 freq=3][color=CRIMSON]Elles ne vont pas dans des centres de déportation.[/color][/wave]
+Text/6d/text,[tornado radius=4 freq=2][color=CRIMSON]Elles vont dans des installations de traitement Root Reserve.[/color][/tornado] Chacune d'entre elles.
+Text/6e/text,Ces documents montrent des pommes de terre déchargées dans une installation marquée du logo [color=DARK_VIOLET]Root Reserve[/color].
+Text/6f/text,Je pense savoir ce qui se passe. [pulse freq=3][color=CRIMSON]Elles deviennent Root Reserve.[/color][/pulse]
+Choice/70/text,C'est insensé. Ils... transforment les pommes de terre en nourriture ?
+Choice/71/text,Nous avons besoin de plus de preuves avant de porter des accusations.
+Text/72/text,[color=CRIMSON]Du cannibalisme avec des étapes supplémentaires.[/color] C'est ce qu'est [wave amp=25 freq=3][color=DARK_VIOLET]Root Reserve[/color][/wave]. Et nous avons aidé à sélectionner leurs ingrédients.
+Text/73/text,Je collecte des preuves depuis des mois. Garde les yeux ouverts. Tu verras que j'ai raison.
+Text/74/text,Une alarme lointaine retentit soudainement
+Text/75/text,Nous devons partir. Ils font des contrôles de sécurité à cette heure. Réfléchis à ce que je t'ai montré.
+Text/76/text,"Sasha te fourre le dossier dans les mains. ""[color=YELLOW]Garde-le en sécurité. Et ne fais confiance à personne.[/color]"""
+Text/77/text,Tu caches le dossier à l'intérieur de ta veste. [color=DARK_VIOLET]Root Reserve[/color]. Les rejets. Les pommes de terre manquantes. Tout se connecte d'une manière [tornado radius=3 freq=2][color=CRIMSON]horrifiante[/color][/tornado].
+Choice/71/disabled_text,
+Choice/70/disabled_text,
+Text/69_photo1/text,Vous ressortez la photo. [color=GOLD]Maris Piper[/color]. Un visage si doux.
+Text/69_photo2/text,Sa femme était si désespérée. [color=STEEL_BLUE]Que lui est-il arrivé ?[/color]
+Text/69_photo3/text,Vous remarquez quelque chose à l'arrière-plan de la photo - un camion avec un [color=DARK_VIOLET]logo violet[/color].
+Text/69_photo4/text,Ce symbole... vous l'avez vu sur les livraisons de la cafétéria. [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve.[/color][/wave]
+Text/6a_photo1/text,Sasha... cette photo. L'épouse de la femme me l'a donnée. Elle la cherchait.
+Text/6a_photo2/text,Le visage de Sasha s'assombrit. [color=STEEL_BLUE]Laissez-moi voir.[/color]
+Text/6a_photo3/text,"Sasha examine la photo, son expression s'assombrissant. [color=CRIMSON]Je reconnais ce camion.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Gardez cette photo en sécurité.[/color][/pulse] Elle pourrait être importante plus tard. Faites-moi confiance.
+Text/6f2/text,[pulse freq=3][color=CRIMSON]Ils deviennent Root Reserve.[/color][/pulse]

@@ -1,0 +1,27 @@
+﻿keys,es-419
+Text/3a/text,"El puesto de control ha sido reconstruido tras el ataque de la resistencia. La seguridad es sin precedentes, con transmisiones de propaganda elogiando a los ""valientes defensores""."
+Text/3b/text,He sido ascendido a Director Regional de Seguridad Fronteriza y [pulse freq=2]Distribución de la Reserva Radicular[/pulse].
+Text/3c/text,Russet te prende una pequeña medalla en el uniforme. Subdirector Regional... por tu lealtad inquebrantable a Spud.
+Text/3d/text,¡Tengo una misión especial! El Primer Ministro Idaho inspeccionará nuestras instalaciones hoy. Has sido seleccionado para la demostración.
+Text/3e/text,¿Has visto el nuevo lote de Reserva Radicular? Lo llaman 'Mezcla de la Resistencia' después de lo que les pasó a esos cautivos.
+Text/3f/text,Algunos dicen que la resistencia no estaba del todo equivocada. Que hay [wave amp=15 freq=3]pruebas de que decían la verdad[/wave]...
+Choice/40/text,"""Ten cuidado. Incluso hablar así es peligroso ahora."" (Cautious)"
+Choice/41/text,"""He tenido los mismos pensamientos. Esto no se siente bien."" (Sympathetic)"
+Text/42/text,Ya no todos creen la historia oficial. Mantén los ojos abiertos durante la visita del Primer Ministro.
+Text/43/text,"Una nueva resistencia se está formando. Más silenciosa, más cuidadosa. Si quieres saber más... busca el emblema de la papa amarilla."
+Text/44/text,ATENCIÓN: La caravana del Primer Ministro Idaho ha llegado. Todos los oficiales a sus puestos asignados. Protocolos de inspección en vigor.
+Text/45/text,Tu medalla se siente pesada: ¿una recompensa por lealtad o una marca de vergüenza? Pronto te enfrentarás al arquitecto de la Reserva Radicular.
+Text/46/text,"Después de la transmisión que expuso la Reserva Radicular, han estallado levantamientos por todo Spud. El Primer Ministro Idaho permanece atrincherado en el edificio de administración."
+Text/47/text,"Idaho planea una última transmisión para culparnos de la Reserva Radicular. No podemos dejar que reescriba la historia. Hoy, ponemos fin a su régimen."
+Text/48/text,Salvaste mi vida en la planta de procesamiento. Ahora tenemos la oportunidad de salvar a todo Spud.
+Text/49/text,Tu conocimiento de los protocolos de seguridad será crucial para la misión final. ¿Estás listo?
+Choice/4a/text,"""Estoy listo. Terminemos lo que empezamos."""
+Choice/4b/text,"""¿Cuál es exactamente el plan? Necesito detalles."""
+Text/4c/text,Sabía que no te echarías atrás. Eres uno de nuestros [tornado radius=3 freq=2]aliados más fuertes[/tornado].
+Text/4d/text,Nos infiltraremos usando uniformes del gobierno. Ayudarás a evadir los sistemas de seguridad. Nuestro objetivo es capturar a Idaho y forzar una confesión pública.
+Text/4e/text,"Estarás en el Equipo Alfa con Sasha, irrumpiendo por la entrada este. Tu objetivo: [color=GREEN]asegurar el centro de transmisión[/color]."
+Text/4f/text,"¿De leal oficial de aduanas a luchador de la resistencia? Es una transformación que nunca imaginaste. Pase lo que pase, Spud nunca volverá a ser el mismo."
+Choice/40/disabled_text,
+Choice/41/disabled_text,
+Choice/4a/disabled_text,
+Choice/4b/disabled_text,

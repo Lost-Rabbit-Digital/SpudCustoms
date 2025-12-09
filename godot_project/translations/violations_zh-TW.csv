@@ -1,0 +1,29 @@
+﻿keys,zh-TW
+violation_condition_not_fresh,拒絕：僅限新鮮馬鈴薯。此馬鈴薯為{condition}
+violation_extra_eyes,拒絕：額外芽眼狀況禁止
+violation_rotten,拒絕：腐爛馬鈴薯禁止
+violation_sprouted,拒絕：發芽馬鈴薯禁止
+violation_dehydrated,拒絕：脫水馬鈴薯禁止
+violation_frozen,拒絕：冷凍馬鈴薯禁止
+violation_too_old,拒絕：馬鈴薯年齡為{age}歲 (最大年齡：4歲)
+violation_too_young_3,拒絕：馬鈴薯年齡為{age}歲 (最小年齡：4歲)
+violation_too_young_2,拒絕：馬鈴薯年齡為{age}歲 (最小年齡：3歲)
+violation_males_only,拒絕：僅限雄性馬鈴薯
+violation_females_only,拒絕：僅限雌性馬鈴薯
+violation_country_spudland,拒絕：所有斯普德蘭馬鈴薯禁止入境
+violation_country_potatopia,拒絕：所有馬鈴薯樂園馬鈴薯禁止入境
+violation_country_tuberstan,拒絕：所有塊莖斯坦馬鈴薯禁止入境
+violation_country_north_yamnea,拒絕：所有北山藥尼亞馬鈴薯禁止入境
+violation_country_spuddington,拒絕：所有斯普丁頓馬鈴薯禁止入境
+violation_country_tatcross,拒絕：所有塔特十字馬鈴薯禁止入境
+violation_country_mash_meadows,拒絕：所有泥沼草地馬鈴薯禁止入境
+violation_country_tuberville,拒絕：所有塊莖鎮馬鈴薯禁止入境
+violation_country_chip_hill,拒絕：所有薯片山馬鈴薯禁止入境 (出口限制)
+violation_country_murphyland,拒絕：所有墨菲蘭馬鈴薯禁止入境
+violation_country_colcannon,拒絕：所有科爾坎農馬鈴薯禁止入境
+violation_country_pratie_point,拒絕：所有普拉蒂角馬鈴薯禁止入境
+violation_race_purple_majesty,拒絕：紫色帝王品種禁止
+violation_race_sweet_potato,拒絕：番薯品種需要特殊許可證 (未提供)
+violation_race_yukon_gold,拒絕：育空黃金品種禁止入境
+violation_expired_document,拒絕：文件已於 {date} 過期
+violation_invalid_potato,這顆馬鈴薯符合所有要求，本應獲准通過

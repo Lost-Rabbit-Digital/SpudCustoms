@@ -1,0 +1,35 @@
+﻿keys,zh-TW
+Text/a6/text,邊境設施今天感覺不同。氣氛緊張。警惕的寂靜取代了喧鬧，安全巡邏隊的人數也增加了。
+Text/a7/text,昨晚，[pulse freq=2][color=CRIMSON]違禁品[/color][/pulse]被發現了。是散佈關於[color=DARK_VIOLET]根源儲備[/color]謊言的傳單。
+Text/a8/text,我們正在實施[wave amp=15 freq=2][color=DARK_ORANGE]橙色威脅級別協議[/color][/wave]。所有官員都將接受忠誠度審查。所有旅客都將面臨最高級別的審查。
+Text/a9/text,有效了。傳單正在散播。人們開始質疑[color=DARK_VIOLET]根源儲備[/color]。
+Text/aa/text,我有消息來源告訴我，羅塞特的辦公室裡有一份貨運日誌——那份運輸艙單可以[tornado radius=3 freq=2][color=CHARTREUSE]證明一切[/color][/tornado]。
+Text/ab/text,我需要你幫我拿到它。今晚，最後一班結束後。我可以指望你嗎？
+Choice/ac/text,「我加入。讓我們揭露真相。」
+Choice/ad/text,「我不知道，莎夏...這可能很危險。」
+Text/ae/text,謝天謝地。我就知道你比其他人有[color=CHARTREUSE]更深的根基[/color]。我們午夜見。
+Text/af/text,有時候我們必須[color=CHARTREUSE]冒著被搗碎的風險去做正確的事[/color]。考慮一下吧。
+Text/b0/text,[color=DARK_ORANGE]忠誠度檢查[/color]。請說出你的姓名和警官編號。然後告訴我你為何效忠斯普德。
+Choice/b1/text,「我效忠是為了保護我們的邊境免受危險影響。」
+Choice/b2/text,「我效忠是為了確保每個人都受到公平待遇。」
+Text/b3/text,很好的回答。斯普德需要忠誠的保護者。掃描器顯示綠色。繼續工作吧，警官。
+Text/b4/text,那名警官揚起了眉毛。公平待遇？掃描器閃爍[color=DARK_ORANGE]琥珀色[/color]。記住，我們首要關心的是安全，而不是公平。
+Text/b5/text,今天的配額增加了。任何攜帶可疑物品的人都將被標記為[color=DARK_VIOLET]特殊處理[/color]。
+Text/b6/text,我今天會非常仔細地[color=DARK_ORANGE]審視你的決定[/color]。
+Text/b7/text,今晚可能會改變一切。但首先，[color=YELLOW]在不引起懷疑的情況下度過今天[/color]。
+Text/b4_viktor1/text,你經過時，一名魁梧的保安抓住了你的手臂。他的臉上佈滿了憂慮。
+Text/b4_viktor2/text,嘿...抱歉打擾你。你是海關官員之一，對吧？我叫[color=CHARTREUSE]維克托[/color]。
+Text/b4_viktor3/text,我一直在向所有人詢問我的妻子，[color=GOLD]埃琳娜[/color]。埃琳娜·彼得羅夫。她三週前通過了這個檢查站。
+Text/b4_viktor4/text,[color=STEEL_BLUE]檢查未通過。[/color]他們說她會被處理並送回家，但是...我什麼都沒聽到。
+Text/b4_viktor5/text,他的聲音顫抖著。沒有人會告訴我任何事。你知道那些被拒絕的旅客都去了哪裡嗎？
+Choice/b4_viktor6/text,「抱歉，維克托。我不知道。但我會留意一下的。」
+Choice/b4_viktor7/text,「我不能討論處理細節。這是安全協議。」
+Text/b4_viktor8/text,維克多眼中閃過一絲希望。[color=CHARTREUSE]謝謝你。[/color]無論你查到什麼……拜託了。她是我的一切。
+Text/b4_viktor9/text,維克多沮喪地點了點頭。[color=STEEL_BLUE]好吧。規章制度。[/color]我明白。
+Text/b4_viktor10/text,但如果你改變主意的話……[color=YELLOW]我需要知道她發生了什麼事。[/color]
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,
+Choice/b4_viktor6/disabled_text,
+Choice/b4_viktor7/disabled_text,

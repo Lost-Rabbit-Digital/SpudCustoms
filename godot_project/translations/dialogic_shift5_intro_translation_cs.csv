@@ -1,0 +1,33 @@
+﻿keys,cs
+Text/a6/text,"Hraniční zařízení dnes vypadá jinak. Napjaté. Bezpečnostní hlídky ve větším počtu, když ustaraché ticho nahrazuje štěbetání."
+Text/a7/text,Minulou noc byly objeveny [pulse freq=2][color=CRIMSON]zakázané materiály[/color][/pulse]. Letáky obsahující lži o [color=DARK_VIOLET]Kořenové rezervě[/color].
+Text/a8/text,Zavádíme [wave amp=15 freq=2][color=DARK_ORANGE]protokoly úrovně ORANŽOVÉ hrozby[/color][/wave]. Všichni důstojníci podléhají loajalitním prověrkám. Všichni cestující čelí maximálnímu prověřování.
+Text/a9/text,Funguje to. Letáky se šíří. Lidé se ptají na otázky o [color=DARK_VIOLET]Kořenové rezervě[/color].
+Text/aa/text,"Mám zdroje, které mi říkají, že v kanceláři Russeta je nákladní list - přepravní manifesty, které by mohly [tornado radius=3 freq=2][color=CHARTREUSE]dokázat vše[/color][/tornado]."
+Text/ab/text,"Potřebuji, abys mi pomohl je získat. Dnes v noci, po poslední směně. Mohu se na tebe spolehnout?"
+Choice/ac/text,Jsem v tom. Odhalme pravdu.
+Choice/ad/text,"Nevím, Sašo... tohle může být nebezpečné."
+Text/ae/text,"Díky bohu. Věděl jsem, že máš [color=CHARTREUSE]silnější kořeny než ostatní[/color]. Sejdeme se o půlnoci."
+Text/af/text,"Někdy musíme [color=CHARTREUSE]riskovat rozdrcení, abychom udělali to správné[/color]. Zamysli se nad tím."
+Text/b0/text,"[color=DARK_ORANGE]Kontrola loajality[/color]. Uveď své jméno a ID důstojníka. Pak mi řekni, proč sloužíš Spudovi."
+Choice/b1/text,Sloužím k ochraně našich hranic před nebezpečnými vlivy.
+Choice/b2/text,Sloužím k zajištění spravedlivého zacházení pro všechny.
+Text/b3/text,"Dobrá odpověď. Spud potřebuje věrné ochránce. Skener ukazuje zeleně. Pokračuj, důstojníče."
+Text/b4/text,"Důstojníkovy obočí se zvedají. Spravedlivé zacházení? Skener bliká [color=DARK_ORANGE]jantarově[/color]. Pamatuj, naší hlavní starostí je bezpečnost, ne spravedlnost."
+Text/b5/text,Denní kvóta byla zvýšena. Kdokoli s podezřelými materiály má být označen pro [color=DARK_VIOLET]speciální zpracování[/color].
+Text/b6/text,Budu [color=DARK_ORANGE]velmi pečlivě sledovat tvá rozhodnutí[/color] dnes.
+Text/b7/text,Dnešní noc by mohla změnit vše. Ale nejprve [color=YELLOW]přežij den bez vyvolání podezření[/color].
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,
+Text/b4_viktor1/text,"Robustní strážník vás chytí za paži, když procházíte kolem. Jeho tvář je zbrázděná starostmi."
+Text/b4_viktor2/text,"Hej... promiňte, že vás obtěžuji. Vy jste jeden z celníků, že? Jmenuji se [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Ptám se všech na svou ženu, [color=GOLD]Elenu[/color]. Elena Petrov. Přešla tento hraniční přechod před třemi týdny."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Neprošla kontrolou.[/color] Řekli, že bude zpracována a vrácena domů, ale... nic jsem neslyšel."
+Text/b4_viktor5/text,"Jeho hlas se chvěje. Nikdo mi nic neřekne. Víte, kam jdou odmítnutí cestující?"
+Choice/b4_viktor6/text,"„Je mi líto, Viktore. Nevím. Ale budu dávat pozor.“"
+Choice/b4_viktor7/text,„Nemohu probírat detaily zpracování. Bezpečnostní protokoly.“
+Text/b4_viktor8/text,"V Viktorových očích se zaleskne jiskřička naděje. [color=CHARTREUSE]Děkuji.[/color] Cokoli zjistíte... prosím. Je to všechno, co mám."
+Text/b4_viktor9/text,Viktor sklíčeně přikývne. [color=STEEL_BLUE]Jasně. Protokoly.[/color] Rozumím.
+Text/b4_viktor10/text,"Ale pokud si to rozmyslíte... [color=YELLOW]Potřebuji vědět, co se jí stalo.[/color]"

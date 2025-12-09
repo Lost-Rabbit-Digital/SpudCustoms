@@ -1,0 +1,33 @@
+﻿keys,no
+Text/156/text,Velkommen til [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs Training![/color][/pulse]
+Text/157/text,Denne treningen vil lære deg de [wave amp=15 freq=2][color=DARK_ORANGE]viktige ferdighetene[/color][/wave] som er nødvendige for å beskytte Spuds grenser.
+Text/158/text,Din plikt er å behandle innkommende poteter ved vår grensekontroll.
+Text/159/text,Immigrerende poteter vil stille seg i kø utenfor kontoret ditt her.
+Text/15a/text,For å begynne å behandle poteter må du åpne luken din for tjeneste med bryteren her.
+Text/15b/text,Du signaliserer til hver potet om å nærme seg kontoret ditt ved å trykke på megafonen.
+Text/15c/text,Poteter vil komme inn i luken én etter én og presentere sine dokumenter.
+Text/15d/text,Først må du flytte dokumentene deres over til inspeksjonsbordet for å få et bedre blikk.
+Text/15e/text,"Deretter se etter [tornado radius=3 freq=2][color=YELLOW]utløpte datoer, feil informasjon eller tegn på forfalskning[/color][/tornado]."
+Text/15f/text,"Skrivebordet ditt har stempler for å markere dokumenter, du kan klikke her for å trekke ut stempellinjen."
+Text/160/text,Plasser deretter dokumentet under stempelet du ønsker...
+Text/161/text,Klikk på stempelet for å markere dokumenter som [color=CHARTREUSE]godkjent[/color] eller [color=CRIMSON]avvist[/color]...
+Text/162/text,Og dra dokumentet tilbake til poteten for å fullføre beslutningen din!
+Text/163/text,Noen ganger vil poteter prøve å [color=CRIMSON]skynde seg forbi kontrollpunktet ditt[/color].
+Text/164/text,"Du har en direkte tilkobling i luken din, som lar deg kontrollere [pulse freq=3][color=CRIMSON]rakettutskytere[/color][/pulse] langs grensemuren."
+Text/165/text,"Klikk på disse ""løperne"" for å skyte en rakett og stoppe dem."
+Text/166/text,"Husk, hver løper som kommer gjennom vil telle som et [wave amp=20 freq=3][color=CRIMSON]slag mot deg[/color][/wave]."
+Text/167/text,"For mange slag, og skiftet ditt vil avsluttes... [tornado radius=3 freq=3][color=CRIMSON]permanent.[/color][/tornado]"
+Text/168/text,Hvert skift har en [color=DARK_ORANGE]kvote med poteter[/color] du må behandle for å fullføre dagen din.
+Text/169/text,"Poengsummen din holder styr på ytelsen din sammenlignet med kollegaene dine ved dette kontrollpunktet, og tjenestemenn i fjerne tollkontorer."
+Text/16a/text,"Etter hvert skift vil du se et sammendrag av ytelsen din, og om du lyktes eller mislyktes i plikten din."
+Text/16b/text,"Du vil se en oversikt over hvordan du håndterte løpere, og hvor mange dokumenter du behandlet."
+Text/16c/text,"Pluss eventuelle bonuser du tjente fra å behandle dokumenter raskt, perfekt justere stempler eller perfekt treffe løpende poteter."
+Text/16d/text,"Du vil også motta en ytelsesvurdering basert på hvor godt du behandlet poteter under skiftet ditt, og opptil 3 gylne stempler hvis du overgår forventningene."
+Text/16e/text,Her kan du sende inn poengsummen din for hvert skift til den globale databasen over tolltjenestemenn og se hvordan du sammenligner med de mest elitære tolltjenestemennene rundt om i verden.
+Text/16f/text,"Hvis skiftet ditt var vellykket, kan du fortsette ved å klikke på ""Fortsett"" og starte neste skift."
+Text/170/text,Det dekker det grunnleggende om pliktene dine som tolltjenestemann.
+Text/171/text,"Husk: sjekk dokumenter nøye, stopp løpere og oppfyll kvoten din."
+Text/172/text,Sikkerheten til Spud avhenger av din [pulse freq=2][color=DARK_ORANGE]årvåkenhet![/color][/pulse]
+Text/174/text,La oss starte din [color=YELLOW]treningsvakt[/color]...
+Text/180/text,Men vær forsiktig - ikke alle poteter har papirene sine i orden.
+Text/181/text,[color=RED]Utgåtte pass[/color] er en automatisk avvisning. Ingen unntak.

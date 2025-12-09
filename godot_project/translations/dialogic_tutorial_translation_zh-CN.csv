@@ -1,0 +1,33 @@
+﻿keys,zh-CN
+Text/156/text,欢迎来到[pulse freq=2][color=MEDIUM_VIOLET_RED]薯国海关！[/color][/pulse]
+Text/157/text,本次培训将教您保护薯国边境所需的[wave amp=15 freq=2][color=DARK_ORANGE]基本技能[/color][/wave]。
+Text/158/text,您已被选中担任一项重要职务：[color=DARK_ORANGE]边境海关官员[/color]。
+Text/159/text,移民土豆将在此处您的办公室外排队。
+Text/15a/text,要开始处理土豆，您需要使用此处的开关开放您的检查站。
+Text/15b/text,您将通过点击扩音器示意每个土豆靠近您的办公室。
+Text/15c/text,土豆将逐一进入检查站并出示他们的文件。
+Text/15d/text,首先，将他们的文件移到检查台以便仔细查看。
+Text/15e/text,然后，寻找[tornado radius=3 freq=2][color=YELLOW]过期日期、错误信息或伪造迹象[/color][/tornado]。
+Text/15f/text,您的桌子有用于标记文件的印章，您可以点击此处拉出印章栏。
+Text/160/text,然后将文件放在您想要的印章下方...
+Text/161/text,点击印章将文件标记为[color=CHARTREUSE]批准[/color]或[color=CRIMSON]拒绝[/color]...
+Text/162/text,并将文件拖回给土豆以最终确定您的决定！
+Text/163/text,有时，土豆会试图[color=CRIMSON]冲过您的检查站[/color]。
+Text/164/text,您的检查站有一个直接上行链路，允许您控制[pulse freq=3][color=CRIMSON]边境墙上的导弹发射器[/color][/pulse]。
+Text/165/text,点击这些“偷渡者”以发射导弹并阻止他们。
+Text/166/text,请记住，每个逃脱的偷渡者都将算作对您的[wave amp=20 freq=3][color=CRIMSON]一次惩罚[/color][/wave]。
+Text/167/text,惩罚过多，您的班次将结束...[tornado radius=3 freq=3][color=CRIMSON]永久性地。[/color][/tornado]
+Text/168/text,每个班次都有一个[color=DARK_ORANGE]土豆配额[/color]，您需要处理才能完成一天的工作。
+Text/169/text,您的分数会记录您的表现，与本检查站的同事相比，以及遥远海关办公室的官员相比。
+Text/16a/text,每个班次结束后，您将看到您的表现摘要，以及您是否成功履行了职责。
+Text/16b/text,您将看到您如何处理偷渡者，以及您处理了多少份文件的详细信息。
+Text/16c/text,此外，您还可以获得因快速处理文件、完美对齐印章或完美击中逃跑的土豆而获得的奖金。
+Text/16d/text,您还将获得一份绩效评级，基于您在班次中处理土豆的效率，如果您超出预期，最多可获得3枚金色印章。
+Text/16e/text,您可以在此处提交每个班次的分数到全球海关官员数据库，并查看您与全球最精英的海关官员相比如何。
+Text/16f/text,如果您的班次成功，您可以点击“继续”并开始下一个班次。
+Text/170/text,您的工作很简单。土豆们会抵达您的检查站，您检查他们的证件，并决定谁能通过。
+Text/171/text,我会[color=YELLOW]一步一步地[/color]引导您了解基本操作。按照提示操作，您就会掌握窍门。
+Text/172/text,Spud的安全与保障取决于您的[pulse freq=2][color=DARK_ORANGE]警惕性！[/color][/pulse]
+Text/174/text,让我们开始您的[color=YELLOW]训练班次[/color]...
+Text/180/text,但是请注意——并非所有土豆的证件都齐全。
+Text/181/text,[color=RED]过期护照[/color]将自动拒绝。没有例外。

@@ -1,0 +1,175 @@
+﻿keys,pt
+main_menu_feedback,Feedback e bugs
+main_menu_version,Versão 1.2.0
+main_menu_new_game,Novo jogo
+main_menu_continue,Continuar
+main_menu_level_select,Seleção de nível
+main_menu_score_attack,Ataque de pontuação
+main_menu_options,Opções
+main_menu_credits,Créditos
+main_menu_exit,Sair
+select_language,Idioma
+social_discord_tooltip,Junte-se ao nosso Discord!
+social_steam_tooltip,Visite-nos no Steam
+social_twitch_tooltip,Integração Twitch
+twitch_status_disabled,Desativado
+twitch_status_no_viewers,Sem espectadores no pool
+twitch_status_ready,{count} espectadores prontos
+twitch_connection_disabled,Desativado
+twitch_connection_disconnected,Desconectado
+twitch_connection_connected,Conectado
+twitch_connection_connecting,Conectando...
+options_menu_title,Opções
+options_difficulty,Dificuldade
+options_difficulty_easy,Fácil
+options_difficulty_normal,Padrão
+options_difficulty_expert,Especialista
+options_music_volume,Volume da música
+options_sfx_volume,Volume dos efeitos sonoros
+options_camera_shake,Tremor de câmera
+options_back,Voltar
+paused_menu_title,Pausado
+shift_summary_title,RESUMO DO TURNO
+shift_summary_continue,Continuar
+shift_summary_restart,Reiniciar
+shift_summary_main_menu,Menu principal
+shift_summary_submit_score,Enviar pontuação
+shift_summary_runner_stats,ESTATÍSTICAS DO CORREDOR
+shift_summary_document_stats,ESTATÍSTICAS DO DOCUMENTO
+shift_summary_performance,DESEMPENHO
+shift_summary_bonuses,BÔNUS
+_FORMAT KEYS,
+time_format,{minutes}min {seconds}seg
+_SHIFT SUMMARY DETAILS,
+shift_complete_success,TURNO {shift} COMPLETO\nSUCESSO!
+shift_complete_failure,TURNO {shift} COMPLETO\n{failure}
+strike_limit_reached,LIMITE DE GREVES ATINGIDO!
+quota_not_met,COTA NÃO ALCANÇADA!
+shift_summary_title_with_difficulty,RESUMO DO TURNO\n{difficulty}
+runner_stats_template,\nESTATÍSTICAS DO CORREDOR\nTentativas de corredor: {runner_attempts}\nMísseis disparados: {fired}\nCorredores atingidos: {hit}\nAcertos perfeitos: {perfect}\nTaxa de acerto: {rate}%
+document_stats_template,ESTATÍSTICAS DO DOCUMENTO\nDocumentos carimbados: {stamped}\nBatatas aprovadas: {approved}\nBatatas rejeitadas: {rejected}\nCarimbos perfeitos: {perfect_stamps}
+bonus_stats_template,BÔNUS\nBônus de velocidade de processamento: {processing_speed_bonus}\nBônus de precisão do carimbo: {accuracy}\nBônus de acertos perfeitos: {perfect_hit_bonus}\nBônus de pontuação total: {total_score_bonus}
+performance_stats_template,DESEMPENHO\nTempo gasto: {time_taken}\nPontuação esperada: {expected_score}\nPontuação total: {score}\nPercentagem de excesso: {percent}%\nClassificação de desempenho:\n{rating}
+performance_exceptional,Excepcional!
+performance_excellent,Excelente!
+performance_good,Bom
+performance_needs_improvement,Precisa melhorar
+performance_poor,Fraco
+global_leaderboard_title,Classificação Global\n- {difficulty}
+getting_leaderboard_scores,Obtendo pontuações da classificação...
+_PAUSE OPTIONS OVERLAY,
+reset_game_label,Reiniciar jogo:
+reset_game_button,Reiniciar
+mute_label,Silenciar
+fullscreen_label,Tela cheia:
+resolution_label,Resolução:
+antialiasing_label,Anti-Aliasing:
+screenshake_label,Tremor de tela:
+mouse_sens_label,Sensibilidade do mouse:
+___ LOADING SCREEN,
+Loading…,Carregando...
+___ DIALOGS IN GAME,
+You lose.,Você perdeu.
+You won!,Você venceu!
+Thanks for playing!,Obrigado por jogar!
+Please Confirm...,Por favor confirme...
+Go back to main menu?,Voltar ao menu principal?
+Quit the game?,Sair do jogo?
+Cancel,Cancelar
+OK,OK
+___ OPTIONS MENU,
+Controls,Controles
+Mouse Sensitivity :,Sensibilidade do rato:
+Actions & Inputs,Ações e Insumos
+Add,Adicionar
+Remove,Remover
+Assign Key for {action},Atribuir chave para {ação}
+Listening for input...,Ouvir sugestões...
+Press again to confirm...,Pressione novamente para confirmar...
+Focus here to assign inputs.,Concentre-se aqui para atribuir entradas.
+Already Assigned,Já atribuído
+{key} already assigned to {action}.,{key} já atribuído a {action}.
+Remove Key for {action},Remover chave para {ação}
+Are you sure you want to remove {key} from {action}?,Tem a certeza que pretende remover {key} de {action}?
+Reset,Reiniciar
+Audio,Áudio
+Master :,Mestre :
+Music :,Música :
+SFX :,Efeitos sonoros:
+Ambient :,Ambiente:
+Mute :,Mudo:
+Video,Vídeo
+Fullscreen :,Ecrã completo:
+Resolution :,Resolução:
+Anti-Aliasing :,Anti-aliasing:
+Disabled (Fastest),Desativado (mais rápido)
+8x (Slowest),8x (mais lento)
+Camera Shake :,Trepidação da câmara:
+Normal,Padrão
+Reduced,Reduzido
+Minimal,Mínimo
+None,Nenhum
+Game,Jogo
+Reset Game :,Reiniciar jogo:
+Do you want to reset your game data?,Quer repor os dados do seu jogo?
+Back,Voltar
+_INGAME DIALOGUE,
+TAKE THEM!,LEVE-OS!
+"Take your documents, please.","Leve os seus documentos, por favor."
+_SHIFT SUMMARY SCREEN,
+Continue,Continuar
+Main Menu,Menu principal
+Submit Score,Enviar pontuação
+Restart,Reiniciar
+SHIFT SUMMARY,RESUMO DO TURNO
+_DIFFICULTY LEVELS,
+Easy,Fácil
+Normal,Padrão
+Expert,Especialista
+Primary,Primário
+Secondary,Secundário
+Primary Interaction,Interação primária
+Secondary Interaction,Interação Secundária
+Cancel Interaction,Cancelar interação
+Escape,Escapar
+Dialogic Default Action,Ação padrão dialógica
+Enter,Digitar
+Left Mouse Button,Botão esquerdo do rato
+Right Mouse Button,Botão direito do rato
+_NEW GAME CONFIRMATION,
+Start New Game,Iniciar novo jogo
+Starting a new game will reset your progress. Are you sure you want to continue?,Começar um novo jogo irá reiniciar o seu progresso. Tem a certeza de que quer continuar?
+"Yes, Start New Game","Sim, iniciar novo jogo"
+Skip,Pular
+History,História
+Return,Retornar
+Restart the game?,Reiniciar o jogo?
+_HELP MENU,
+help_menu_button,Ajuda
+help_menu_title,Como jogar
+help_tab_basics,Básico
+help_tab_gameplay,Jogabilidade
+help_tab_minigames,Minijogos
+help_basics_intro,[b]Bem-vindo à Spud Customs
+help_basics_gate,[b]Abrindo o Portão[/b]
+help_basics_documents,[b]Inspecionando Documentos[/b]
+help_basics_stamping,[b]Carimbando Documentos[/b]
+help_basics_runners,[b]Fugitivos da Fronteira[/b]
+help_basics_xray,[b]Scanner de Raios-X[/b]
+help_gameplay_quota,[b]Atingindo a Quota[/b]
+help_gameplay_strikes,[b]Advertências[/b]
+help_gameplay_rules,[b]Regras de Imigração[/b]
+help_gameplay_scoring,[b]Pontuação[/b]
+help_gameplay_difficulty,[b]Níveis de Dificuldade[/b]
+help_minigames_intro,"[b]Minijogos[/b]\nAo longo dos seus turnos, você encontrará minijogos que podem render pontos bônus. Complete-os para receber recompensas ou pule sem penalidade."
+help_minigames_document_scanner,"[b]Scanner de Documentos[/b] (Turno 1+)\nUse a luz UV para encontrar elementos ocultos nos documentos. Clique para marcar marcas d'água, carimbos e símbolos. Encontre todos os elementos antes que o tempo acabe!"
+help_minigames_stamp_sorting,"[b]Organização de Carimbos[/b] (Turno 2+)\nOrganize os carimbos que caem nas caixas corretas. Carimbos verdes vão para APROVADO, carimbos vermelhos para NEGADO. Organize rapidamente para ganhar pontos bônus!"
+help_minigames_fingerprint_match,[b]Combinação de Impressões Digitais[/b] (Turno 3+)\nCombine as impressões digitais da grade com o padrão de referência. Clique nas impressões correspondentes para verificar a identidade. Observação atenta é necessária!
+help_minigames_code_breaker,"[b]Quebra-Código[/b] (Turno 4+)\nDecifre o código secreto! Adivinhe a combinação de 4 dígitos. Verde significa posição correta, amarelo significa posição errada. Tentativas limitadas!"
+help_minigames_border_chase,[b]Perseguição na Fronteira[/b] (Turno 5+)\nContrabando na esteira! Clique nos itens VERMELHOS para confiscá-los. Deixe os itens VERDES passarem. Reflexos rápidos rendem mais pontos!
+help_tab_lore,História
+help_lore_world_intro,"[b]O Mundo de Spud[/b]\n\nBem-vindo a uma terra onde as batatas construíram sua própria civilização. Neste mundo, os tubérculos andam, falam e formaram sua própria nação com leis, fronteiras e burocracia."
+help_lore_nation,"[b]A Nação de Spud[/b]\n\nSpud é uma nação orgulhosa que promete prosperidade para todas as batatas. Protegida pela Grande Muralha de Spud, a nação mantém controles de fronteira rigorosos para garantir que apenas os tubérculos dignos possam entrar.\n\nO governo promove a unidade e a obediência, com cidadãos patriotas frequentemente ouvidos proclamando: ""Glória a Spud!"""
+help_lore_your_role,"[b]Seu Papel[/b]\n\nVocê foi selecionado para um papel crucial na proteção das fronteiras. Como um Oficial da Alfândega, você trabalha sob o olhar atento do Supervisor Russet.\n\nO seu bem-estar depende do seu desempenho. Cumpra suas cotas, siga as regras e lembre-se: a nação conta com você."
+help_lore_border,"[b]A Grande Muralha[/b]\n\nA imponente Grande Muralha de Spud protege a nação de forasteiros. Em vários postos de controle ao longo da muralha, oficiais como você garantem que apenas os dignos possam entrar.\n\nAqueles que tentam cruzar a fronteira sem a documentação adequada enfrentam consequências imediatas."
+help_lore_secrets,[b]Reserva da Raiz[/b]\n\nBatatas rejeitadas são... processadas. De acordo com o protocolo. A misteriosa Reserva da Raiz cuida de todos os detalhes.\n\nÉ melhor não fazer muitas perguntas. Concentre-se em suas tarefas. Nada mais.

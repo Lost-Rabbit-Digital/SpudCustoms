@@ -1,0 +1,27 @@
+﻿keys,it
+Text/69/text,Possiamo parlare? Da qualche parte in privato? [color=YELLOW]Troppi occhi e orecchie qui.[/color]
+Text/6a/text,Incontrami vicino al vecchio capannone di stoccaggio dopo il tuo turno. Ho qualcosa che devi vedere.
+Text/6b/text,"Ti stai avvicinando ai colleghi? Ricorda, fare amicizia può portare a... [color=DARK_ORANGE]giudizio compromesso[/color]."
+Text/6c/text,Ho raccolto informazioni sulle patate scartate. [wave amp=20 freq=3][color=CRIMSON]Non vanno nei centri di deportazione.[/color][/wave]
+Text/6d/text,[tornado radius=4 freq=2][color=CRIMSON]Vanno negli impianti di lavorazione Root Reserve.[/color][/tornado] Ogni singola una.
+Text/6e/text,Questi documenti mostrano patate scaricate in una struttura contrassegnata con il logo [color=DARK_VIOLET]Root Reserve[/color].
+Text/6f/text,Penso di sapere cosa sta succedendo. [pulse freq=3][color=CRIMSON]Stanno diventando Root Reserve.[/color][/pulse]
+Choice/70/text,È assurdo. Stanno... trasformando le patate in cibo?
+Choice/71/text,Abbiamo bisogno di più prove prima di fare accuse.
+Text/72/text,[color=CRIMSON]Cannibalismo con passaggi extra.[/color] Questo è [wave amp=25 freq=3][color=DARK_VIOLET]Root Reserve[/color][/wave]. E noi abbiamo aiutato a selezionare i loro ingredienti.
+Text/73/text,Sto raccogliendo prove da mesi. Tieni gli occhi aperti. Vedrai che ho ragione.
+Text/74/text,Un allarme distante suona improvvisamente
+Text/75/text,Dobbiamo andare. Fanno controlli di sicurezza a quest'ora. Pensa a quello che ti ho mostrato.
+Text/76/text,"Sasha ti infila la cartella nelle mani. ""[color=YELLOW]Tienila al sicuro. E non fidarti di nessuno.[/color]"""
+Text/77/text,Nascondi la cartella dentro la tua giacca. [color=DARK_VIOLET]Root Reserve[/color]. Gli scarti. Le patate mancanti. Tutto si collega in un modo [tornado radius=3 freq=2][color=CRIMSON]terrificante[/color][/tornado].
+Choice/71/disabled_text,
+Choice/70/disabled_text,
+Text/69_photo1/text,Tiri fuori di nuovo la foto. [color=GOLD]Maris Piper[/color]. Un volto così gentile.
+Text/69_photo2/text,Sua moglie era così disperata. [color=STEEL_BLUE]Cosa le è successo?[/color]
+Text/69_photo3/text,Noti qualcosa sullo sfondo della foto - un camion con un [color=DARK_VIOLET]logo viola[/color].
+Text/69_photo4/text,Quel simbolo... l'hai visto sulle consegne della mensa. [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve.[/color][/wave]
+Text/6a_photo1/text,Sasha... questa foto. La moglie della donna me l'ha data. La stava cercando.
+Text/6a_photo2/text,Il volto di Sasha si incupisce. [color=STEEL_BLUE]Fammi vedere.[/color]
+Text/6a_photo3/text,"Sasha studia la foto, la sua espressione si incupisce. [color=CRIMSON]Riconosco quel camion.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Conserva questa foto.[/color][/pulse] Potrebbe essere importante più tardi. Fidati di me.
+Text/6f2/text,[pulse freq=3][color=CRIMSON]Stanno diventando Root Reserve.[/color][/pulse]

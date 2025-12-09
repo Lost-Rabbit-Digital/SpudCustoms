@@ -1,0 +1,22 @@
+﻿keys,ko
+Text/96/text,어두운 복도를 조심스럽게 지나가며 경비 순찰을 피하자 심장이 두근거립니다.
+Text/97/text,[color=CHARTREUSE]이 장치가 Russet의 사무실 자물쇠를 해제할 겁니다.[/color] 제가 동쪽 건물에서 경보를 울려 주의를 분산시키겠습니다. 5분 안에 끝내야 합니다.
+Text/98/text,서류는 그의 서류 캐비닛에 있을 겁니다. [color=CRIMSON]'RR 운송'이라고 적힌 빨간색 폴더[/color]를 찾으세요. 수색 흔적을 남기지 마세요.
+Text/99/text,"서류 캐비닛에서 두꺼운 [color=CRIMSON]""RR 운송""이라고 적힌 빨간색 폴더[/color]를 찾았습니다."
+Text/9a/text,"안에는 거부된 감자 수와 일치하는 운송 목록과, 아이다호 총리가 ""[pulse freq=3][color=DARK_VIOLET]국경 거부자들을 RR 생산에 전적으로 활용하라.[/color][/pulse]""고 지시하는 문서가 있습니다."
+Text/9a_viktor1/text,운송 목록의 이름을 훑어봅니다... 그리고 한 이름이 눈에 띕니다. [color=GOLD]엘레나 페트로프[/color].
+Text/9a_viktor2/text,그 이름... 전에 들어본 적이 있습니다. 경비원 빅토르가 아내가 실종되었다고 말했었죠.
+Text/9a_viktor3/text,"""[color=CRIMSON]상태: 처리됨. 배치 RR-2851.[/color]"" 2주 전 날짜입니다."
+Text/9b/text,"사무실 문으로 발소리가 다가옵니다. ""[wave amp=15 freq=3][color=YELLOW]이상하군, 분명 잠갔던 것 같은데.[/color][/wave]"""
+Choice/9c/text,책상 밑에 숨기
+Choice/9d/text,창문으로 뛰어내리기
+Text/9e/text,"Russet이 들어오자마자 책상 밑으로 몸을 숨깁니다. 심장이 두근거립니다. 그가 앉자, 그의 발이 당신의 얼굴에서 몇 인치 떨어져 있습니다."
+Text/9f/text,"""Russet입니다. 뭐라고요? [color=CHARTREUSE]또 경보가 울렸다고요?[/color] 지금 가겠습니다."" 그가 떠나고, 당신은 탈출합니다."
+Text/a0/text,"창문을 억지로 열고 뛰어내립니다. 다행히 1층입니다. 경비원이 소리칩니다: ""[color=RED]이봐! 멈춰![/color]"""
+Text/a1/text,당신은 운동장을 가로질러 질주하고 추격자들을 따돌리는 데 성공합니다.
+Text/a2/text,가져왔습니까?
+Text/a3/text,당신은 증거를 건네주며 찾은 것을 설명합니다.
+Text/a4/text,이것으로 모든 것이 증명됩니다. 저항군은 사본을 만들 것입니다. [tornado radius=3 freq=2]진실을 모든 곳에 퍼뜨리세요.[/tornado] 그들은 우리 모두를 침묵시킬 수 없습니다.
+Text/a5/text,"당신은 선을 넘었습니다. [wave amp=20 freq=3][color=YELLOW]이제 되돌릴 수 없습니다.[/color][/wave] 진실이 퍼지면, 스퍼드는 변혁될 것입니다."
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,

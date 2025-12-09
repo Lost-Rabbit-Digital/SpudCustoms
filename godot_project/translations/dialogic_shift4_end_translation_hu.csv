@@ -1,0 +1,49 @@
+﻿keys,hu
+Text/215/text,"Murphy elkap a folyosón, szemei kipirultak. Van egy perced?"
+Text/216/text,Murphy behúz egy üres raktárba és becsukja az ajtót.
+Text/217/text,"Az a vicc, amit meséltem a menzán... arról, hogy az unokatestvérem a [color=DARK_VIOLET]Gyökér Tartalék[/color] adagban van..."
+Text/218/text,"Murphy elcsukló hangon szól. Azt hiszem, már nem vicc volt."
+Text/219/text,"Azt mondtad, nem vicces. Igazad volt. [color=STEEL_BLUE]Ebben semmi sem vicces.[/color]"
+Text/21a/text,"Láttalak elmenni. Okos. Bárcsak abbahagyhatnám annak a cuccnak az evését, de [color=YELLOW]figyelnek[/color]. Mindig figyelnek."
+Text/21b/text,"Találtam valamit az unokatestvérem holmijai között. Az elutasítási űrlapját. Szokásos dolog, de..."
+Text/21c/text,"Murphy előhúz egy gyűrött űrlapot. Nézd meg a feldolgozási kódot. ""[color=CRIMSON]RR-UTIL-7[/color]."""
+Text/21d/text,Utánanéztem az archívumban. Az RR a [pulse freq=2][color=DARK_VIOLET]Gyökér Tartalék[/color][/pulse] rövidítése. Az UTIL azt jelenti... [color=CRIMSON]felhasználás[/color].
+Text/21d_breakdown1/text,[wave amp=20 freq=3]Murphy kezei remegni kezdenek.[/wave] Az unokatestvérem... Tommy... még csak huszonhárom éves volt.
+Text/21d_breakdown2/text,Egy [color=CHARTREUSE]jobb élet[/color] reményében jött ide. Egyetlen ellenőrzésen bukott el. Egyen. [color=STEEL_BLUE]Csak rosszkor volt rossz helyen.[/color]
+Text/21d_breakdown3/text,"Murphy lecsúszik a falon, arcát a kezébe temeti. És én... én [tornado radius=3 freq=2][color=CRIMSON]ETTEM[/color][/tornado] azt a cuccot. Minden nap."
+Text/21d_breakdown4/text,"Murphy felnéz rád, könnyek patakzanak az arcán. [pulse freq=2][color=CRIMSON]Mi van, ha ŐT ettem meg?[/color][/pulse]"
+Choice/21e/text,Murphy... Annyira sajnálom. Veled vagyok. Együtt megtaláljuk az igazságot.
+Choice/21f/text,"Murphy, ez veszélyes. Maradjunk távol tőle."
+Choice/220/text,Talán csak véletlen. Ne vonjunk le elhamarkodott következtetéseket.
+Text/221_comfort1/text,"Letérdelsz Murphy mellé, a vállára teszed a kezed."
+Text/221/text,"Murphy megragadja a karodat, mint egy mentőövet. [color=CHARTREUSE]Köszönöm.[/color] Azt hittem, megőrülök."
+Text/221_tommy/text,"[color=STEEL_BLUE]Hangja kissé megnyugszik.[/color] Tommyért. Ezt Tommyért tesszük. És mindenki másért, akit elvittek."
+Text/222/text,"Mások is gyanakodnak. Sasha embereket gyűjt. Azt hiszem, megbízik benned."
+Text/223/text,"Murphy megtörli a szemét, próbálja összeszedni magát. Igen. Igen, valószínűleg igazad van. Felejtsd el, amit mondtam."
+Text/224/text,De ha meggondolod magad... Én itt leszek. [color=STEEL_BLUE]Egyedül a kérdéseimmel. És a rémálmaimmal.[/color]
+Text/225/text,Véletlen. Murphy keserűen nevet a könnyeivel küszködve. Persze. És Tommy csak úgy [color=CRIMSON]eltűnt[/color] a semmibe.
+Text/226/text,"Mondogasd csak magadnak. Nézd meg, meddig segít aludni. [color=STEEL_BLUE]Nekem nem segít.[/color]"
+Text/227/text,"Sasha megjelenik a fülkédben, ahogy az utolsó műszak véget ér. Úgy nézel ki, mintha szellemet láttál volna."
+Text/228/text,Gondolom – Murphy mesélt neked az unokatestvéréről?
+Text/229/text,"Sasha helyeslően bólint. Jó. Szükségünk van olyanokra, akik kérdeznek."
+Text/22a/text,Sasha alaposan tanulmányozza az arcodat. Félsz. Ez okos. De a félelem senkit sem ment meg.
+Text/22b/text,"Az első napod óta figyeltelek. Ahogy [color=YELLOW]haboztál[/color], amikor Russet a „feldolgozásról” beszélt."
+Text/22c/text,"Megkérdezted, mi történik az elutasított krumplikkal. Ehhez bátorság kellett. [color=CHARTREUSE]A legtöbben csak tisztelegnek és bélyegeznek.[/color]"
+Text/22d/text,"Sasha közelebb hajol. Van egy minta. Minden krumpli, amit elutasítunk? 48 órán belül eltűnik. Nincs kitoloncolási jegyzőkönyv. Nincs áthelyezés."
+Text/22e/text,De a [color=DARK_VIOLET]Gyökér Tartalék[/color] termelés? [tornado radius=3 freq=2][color=CRIMSON]Felmegy.[/color][/tornado] Minden. Egyetlen. Alkalommal.
+Choice/22f/text,Hiszek neked. Hogyan segíthetek?
+Choice/230/text,"Látnom kell a bizonyítékot, mielőtt mindent kockáztatnék."
+Text/231/text,"Sasha szeme felcsillan. Tudtam, hogy jól választottam. Holnap este, műszak után. Megmutatom, mit találtam."
+Text/232/text,Addig
+Text/233/text,Rendben van. Jön a bizonyíték. Csak... tartsd nyitva a szemed a holnapi műszak alatt.
+Text/234/text,"Figyeld, hova mennek az [color=CRIMSON]elutasított krumplik[/color]. Kövesd a teherautókat, ha tudod."
+Text/235/text,"Előveszed a képet, amit a kétségbeesett krumpli adott neked. A felesége. [color=STEEL_BLUE]Hol van most?[/color]"
+Text/236/text,"Ha igaz, amit Sasha és Murphy mond... már..."
+Text/237/text,Nem tudod befejezni a gondolatot. De [color=CHARTREUSE]nem felejted el az arcát[/color].
+Text/238/text,"Holnap minden megváltozik. Vagy választ találsz, vagy örökre eltemeted a kérdéseket."
+Text/239/text,Egy dolog biztos: [color=YELLOW]nincs visszaút a boldog tudatlanságba[/color].
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

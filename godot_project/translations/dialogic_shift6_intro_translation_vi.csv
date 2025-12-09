@@ -1,0 +1,63 @@
+﻿keys,vi
+Text/b8/text,"Cơ sở biên giới đang trong tình trạng phong tỏa hoàn toàn, với an ninh vũ trang tuần tra mọi hành lang."
+Text/b9/text,[pulse freq=3][color=RED]CHÚ Ý! Tình huống an ninh MỨC ĐỎ![/color][/pulse] Tài liệu mật đã bị đánh cắp đêm qua.
+Text/ba/text,Chúng ta có [tornado radius=4 freq=3][color=CRIMSON]kẻ phản bội trong hàng ngũ[/color][/tornado]. Bất kỳ ai giữ lại thông tin sẽ bị coi là đồng lõa.
+Text/bb/text,"Tất cả sĩ quan, xếp hàng để [wave amp=15 freq=2][color=DARK_ORANGE]quét an ninh[/color][/wave]. Những người có phản ứng căng thẳng cao sẽ bị đánh dấu."
+Text/bc/text,Bạn đã thấy chuyện gì đang xảy ra bên ngoài chưa? Khắp nơi là những tờ rơi cho thấy [color=DARK_VIOLET]Root Reserve[/color] được làm từ... [pulse freq=3][color=CRIMSON]từ chúng ta[/color][/pulse].
+Choice/bd/text,Hãy hạ thấp giọng. Tất cả chúng ta đều đang bị theo dõi.
+Choice/be/text,Tôi đã nghe những tin đồn tương tự. Thật kinh khủng nếu đó là sự thật.
+Choice/bf/text,Đó là tuyên truyền vô lý. Đừng lan truyền những lời dối trá như vậy.
+Text/c0/text,Bạn nói đúng. Nhưng nếu đó là sự thật... điều đó biến chúng ta thành gì?
+Text/c1/text,Anh họ tôi đã bị từ chối tháng trước. Điều đó có nghĩa là...? Tôi [color=CHARTREUSE]không thể tiếp tục làm điều này nữa[/color].
+Text/c2/text,Biểu hiện của họ trở nên cảnh giác. Tất nhiên rồi. Trung thành với Spud mãi mãi.
+Text/c3/text,Hãy nêu rõ nơi bạn ở đêm qua từ 22:00 đến 04:00.
+Choice/c4/text,"Tôi đã ở trong phòng suốt đêm, ngủ."
+Choice/c5/text,Tôi muốn nói chuyện với đại diện pháp lý của tôi trước.
+Text/c6/text,Mức độ căng thẳng của bạn cho thấy [color=YELLOW]sự dối trá[/color]. Tuy nhiên... không có kết luận. Bạn có thể đi bây giờ.
+Text/c7/text,"Đại diện pháp lý? Đây là thủ tục an ninh, không phải phiên tòa. Việc từ chối của bạn đã được ghi nhận."
+Text/c8/text,"Nó đang có hiệu quả. Các bản tuyên ngôn đã gây xôn xao, nhưng [color=DARK_ORANGE]Russet nghi ngờ chúng ta[/color]."
+Text/c9/text,Hãy để ý các đồng minh từ tổ chức của chúng ta trong ca trực hôm nay. [color=CHARTREUSE]Bạn sẽ nhận ra họ[/color].
+Text/ca/text,"Nếu bạn có thể đưa họ qua an toàn, hãy sử dụng [color=CHARTREUSE]dấu hiệu đặc biệt mà chúng ta đã thảo luận[/color]."
+Choice/cb/text,Đáng để mạo hiểm. Tôi tham gia.
+Choice/cc/text,Điều này đang trở nên quá nguy hiểm. Có lẽ chúng ta nên ẩn mình.
+Text/cd/text,"Tôi biết tôi có thể trông cậy vào bạn. Khi tất cả kết thúc, [color=CHARTREUSE]Spud sẽ biết ai là những người hùng thực sự[/color]."
+Text/ce/text,Chúng ta đã vượt qua điểm đó từ lâu. Ẩn mình sẽ không cứu được chúng ta. [color=CHARTREUSE]Chỉ có lật đổ hệ thống mới làm được điều đó[/color].
+Text/cf/text,Mỗi trạm giờ đây đều có [color=DARK_ORANGE]hệ thống RealityScan mới[/color]. Nó phát hiện các dấu hiệu và giả mạo trái phép.
+Text/d0/text,Tất cả tài liệu phải được quét trước khi phê duyệt. [color=CRIMSON]Những kẻ phản bội sẽ bị tiêu diệt[/color]. Tôi đảm bảo điều đó.
+Text/d1/text,"Việc giúp đỡ các thành viên kháng chiến vừa trở nên nguy hiểm hơn nhiều, nhưng [color=CHARTREUSE]sự thật phải được lan truyền[/color]."
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,
+Text/c7_viktor1/text,Một lính gác an ninh vạm vỡ tiếp cận bạn trong giờ nghỉ. Khuôn mặt anh ta hốc hác.
+Text/c7_viktor2/text,"Này... anh là một trong những nhân viên hải quan, đúng không? Tôi đã hỏi thăm về vợ tôi, Elena."
+Text/c7_viktor3/text,Cô ấy đã qua trạm kiểm soát này ba tuần trước. [color=STEEL_BLUE]Không đạt kiểm tra.[/color] Tôi không nghe tin gì từ cô ấy kể từ đó.
+Choice/c7_viktor4/text,"""Viktor... Tôi đã tìm thấy một điều. Về Elena. Anh cần biết sự thật."""
+Choice/c7_viktor5/text,"""Tôi xin lỗi, Viktor. Tôi chưa thấy gì cả."" (Nói dối để bảo vệ anh ta)"
+Text/c7_viktor6/text,Bạn cho anh ta xem một bản sao của trang danh sách. Mặt anh ta tái mét.
+Text/c7_viktor7/text,[wave amp=25 freq=3]Tay anh ta run rẩy khi đọc.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Đã xử lý... Lô RR-2851...[/color]
+Text/c7_viktor8/text,Giọng anh ta chỉ còn là tiếng thì thầm. [tornado radius=3 freq=2][color=CRIMSON]Họ... họ BIẾN cô ấy thành...[/color][/tornado]
+Text/c7_viktor9/text,Nỗi đau của anh ta biến thành cơn thịnh nộ lạnh lẽo. [pulse freq=2][color=CRIMSON]Idaho sẽ phải trả giá cho chuyện này.[/color][/pulse] Tôi thề trên ký ức của cô ấy.
+Text/c7_viktor10/text,Anh ta nắm chặt vai bạn. [color=CHARTREUSE]Cảm ơn vì đã nói cho tôi biết.[/color] Khi thời điểm đến... tôi sẽ nhớ điều này.
+Text/c7_viktor11/text,Anh ta gật đầu buồn bã. [color=STEEL_BLUE]Tôi đã nghĩ vậy.[/color] Không ai biết gì cả. Hoặc không ai muốn nói.
+Text/c7_viktor12/text,Nếu bạn nghe thấy bất cứ điều gì... [color=YELLOW]làm ơn.[/color] Cô ấy là tất cả những gì tôi có.
+Text/d0_qte1/text,"Sau ca làm việc đó, một du khách tiếp cận với giấy tờ có [color=CHARTREUSE]dấu hiệu kháng chiến tinh vi[/color]."
+Text/d0_qte2/text,[color=DARK_ORANGE]RealityScan[/color] bắt đầu quét. [wave amp=15 freq=3][color=RED]Nó sắp phát hiện ra dấu hiệu đó![/color][/wave]
+Text/d0_qte3/text,Bạn có vài giây để quyết định. Máy quét đang khởi động...
+Choice/d0_qte4/text,"""Giả vờ máy quét bị trục trặc - nhanh lên!"" (Giúp phe kháng chiến)"
+Choice/d0_qte5/text,"""Để máy quét hoàn tất quá trình quét"" (Tuân thủ quy trình)"
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]Bạn cần hành động nhanh![/color][/pulse] Gây ra sự cố trước khi nó quét xong!
+Text/d0_qte7/text,Bạn loay hoay với dây cáp máy quét. Tia lửa bắn ra. Màn hình nhấp nháy rồi tắt ngúm.
+Text/d0_qte8/text,Russet vội vã chạy đến. [color=YELLOW]Chuyện gì đã xảy ra ở đây?[/color]
+Choice/d0_qte9/text,"""Tăng áp đột ngột, thưa sếp. Những hệ thống mới này rất thất thường."""
+Choice/d0_qte10/text,"""Tôi không biết, thưa sếp. Nó tự nhiên tắt ngúm."""
+Text/d0_qte11/text,Russet càu nhàu. [color=STEEL_BLUE]Mấy tay quan liêu đưa chúng ta thiết bị chưa kiểm tra.[/color] Xử lý thủ công và gắn cờ để kiểm tra lại.
+Text/d0_qte12/text,Russet nhìn bạn đầy nghi ngờ. [color=YELLOW]Thật tiện lợi làm sao.[/color] Tôi sẽ cho bộ phận bảo trì kiểm tra nó. Đừng để chuyện này xảy ra nữa.
+Text/d0_qte13/text,Thành viên kháng chiến khẽ gật đầu tỏ ý biết ơn khi họ đi qua.
+Text/d0_qte14/text,Máy quét [pulse freq=3][color=RED]KÊU BÍP BÍP ẦM Ĩ[/color][/pulse]. Phát hiện dấu hiệu trái phép!
+Text/d0_qte15/text,Russet xuất hiện ngay lập tức. [color=CHARTREUSE]Làm tốt lắm![/color] Một kẻ phản bội khác đã bị bắt.
+Text/d0_qte16/text,"Thành viên kháng chiến bị kéo đi, ánh mắt đầy kinh hoàng. ""[color=CRIMSON]Làm ơn, đừng! Tôi có con nhỏ![/color]"""
+Text/d0_qte17/text,Lòng trung thành của bạn được [color=DARK_ORANGE]ghi nhận trong hồ sơ[/color]. Hãy tiếp tục phát huy.

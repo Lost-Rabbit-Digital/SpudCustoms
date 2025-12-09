@@ -1,0 +1,33 @@
+﻿keys,cs
+Text/156/text,Vítejte ve [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs Training![/color][/pulse]
+Text/157/text,Tento výcvik vás naučí [wave amp=15 freq=2][color=DARK_ORANGE]základní dovednosti[/color][/wave] potřebné k ochraně hranic Spudu.
+Text/158/text,Vaší povinností je zpracovávat příchozí brambory na našem hraničním přechodu.
+Text/159/text,Imigrující brambory se budou řadit před vaší kanceláří.
+Text/15a/text,Pro zahájení zpracování brambor musíte otevřít svou budku pro službu pomocí přepínače zde.
+Text/15b/text,"Každé bramboře signalizujete, aby přistoupila k vaší kanceláři, klepnutím na megafon."
+Text/15c/text,Brambory budou vstupovat do budky jedna po druhé a předkládat své dokumenty.
+Text/15d/text,"Nejprve přesuňte jejich dokumenty na inspekční stůl, abyste se na ně mohli lépe podívat."
+Text/15e/text,"Poté hledejte [tornado radius=3 freq=2][color=YELLOW]prošlá data, nesprávné informace nebo známky padělání[/color][/tornado]."
+Text/15f/text,"Váš stůl má razítka pro označování dokumentů, můžete kliknout sem a vysunout lištu s razítky."
+Text/160/text,"Poté umístěte dokument pod razítko, které chcete použít..."
+Text/161/text,Kliknutím na razítko označíte dokumenty jako [color=CHARTREUSE]schválené[/color] nebo [color=CRIMSON]zamítnuté[/color]...
+Text/162/text,"A přetáhněte dokument zpět k bramboře, abyste dokončili své rozhodnutí!"
+Text/163/text,Někdy se brambory pokusí [color=CRIMSON]proběhnout kolem vašeho kontrolního stanoviště[/color].
+Text/164/text,"Máte přímé spojení ve své budce, které vám umožňuje ovládat [pulse freq=3][color=CRIMSON]raketomety[/color][/pulse] podél hraniční zdi."
+Text/165/text,"Kliknutím na tyto ""běžce"" vypustíte raketu a zastavíte je."
+Text/166/text,"Pamatujte, že každý běžec, který se dostane skrz, se počítá jako [wave amp=20 freq=3][color=CRIMSON]přestupek proti vám[/color][/wave]."
+Text/167/text,Příliš mnoho přestupků a vaše směna skončí... [tornado radius=3 freq=3][color=CRIMSON]navždy.[/color][/tornado]
+Text/168/text,"Každá směna má [color=DARK_ORANGE]kvótu brambor[/color], které musíte zpracovat, abyste dokončili svůj den."
+Text/169/text,Vaše skóre sleduje váš výkon ve srovnání s vašimi kolegy na tomto kontrolním stanovišti a úředníky ve vzdálených celních úřadech.
+Text/16a/text,"Po každé směně uvidíte shrnutí svého výkonu a to, zda jste ve své povinnosti uspěli nebo selhali."
+Text/16b/text,"Uvidíte rozpis toho, jak jste se vypořádali s běžci a kolik dokumentů jste zpracovali."
+Text/16c/text,"Plus všechny bonusy, které jste získali za rychlé zpracování dokumentů, dokonalé zarovnání razítek nebo dokonalé zasažení bramborových běžců."
+Text/16d/text,"Obdržíte také hodnocení výkonu založené na tom, jak dobře jste během své směny zpracovávali brambory, a až 3 zlatá razítka, pokud překonáte očekávání."
+Text/16e/text,"Zde můžete odeslat své skóre za každou směnu do globální databáze celních úředníků a zjistit, jak si stojíte ve srovnání s nejlepšími celními úředníky po celém světě."
+Text/16f/text,"Pokud byla vaše směna úspěšná, budete moci pokračovat kliknutím na ""Pokračovat"" a zahájením další směny."
+Text/170/text,To pokrývá základy vašich povinností jako celního úředníka.
+Text/171/text,"Pamatujte: kontrolujte dokumenty pečlivě, zastavujte běžce a plňte svou kvótu."
+Text/172/text,Bezpečnost Spudu závisí na vaší [pulse freq=2][color=DARK_ORANGE]bdělosti![/color][/pulse]
+Text/174/text,Začněme tvou [color=YELLOW]tréninkovou směnu[/color]...
+Text/180/text,Ale buď opatrný – ne každá brambora má své doklady v pořádku.
+Text/181/text,[color=RED]Prošlé pasy[/color] jsou automatické zamítnutí. Žádné výjimky.

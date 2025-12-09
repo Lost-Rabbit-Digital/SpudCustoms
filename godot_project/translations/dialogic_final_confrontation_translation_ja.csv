@@ -1,0 +1,88 @@
+﻿keys,ja
+Text/11/text,じゃがいも国境は[pulse freq=3][color=CRIMSON]大混乱[/color][/pulse]に陥っている。文書流出後、恐慌状態のじゃがいもたちが検問所に殺到し、必死に逃れようとしている。
+Text/12/text,あなたはサーシャと共に潜り抜ける。[wave amp=20 freq=3][color=CHARTREUSE]進み続けなければ！[/color][/wave] 人々はもう真実を知っている。
+Text/13/text,彼らはもう真実を黙らせることはできない。もし我々が[color=DARK_VIOLET]根源貯蔵庫[/color]施設に潜入し、証拠を放送できれば、それが[tornado radius=3 freq=2][color=CHARTREUSE]革命の火付け役[/color][/tornado]となるだろう。
+Text/14/text,あの場所は要塞だ。そして今、我々の中に[color=YELLOW]元税関職員[/color]がいる。彼らの目が疑わしげにあなたを細める。
+Choice/15/text,あなたの疑念は理解できますが、私はこの大義に身を捧げています。
+Choice/16/text,私はすでに全てを犠牲にしました。今さら後には引けません。
+Text/17/text,綺麗事だ。だが、そんな言葉は聞き飽きた。
+Text/18/text,彼らは文書の入手を手伝ってくれた。それは言葉ではなく、行動だ。
+Text/19/text,今さら忠実なじゃがいもには戻れない。抵抗運動へようこそ、同志よ。
+Text/1a_rescue1/text,斥候が駆け寄ってくる。彼女を見つけたぞ！[color=CHARTREUSE]サーシャは拘留ブロックにいる！[/color]
+Text/1a_rescue2/text,彼らは彼女を... [tornado radius=3 freq=2][color=CRIMSON]処理[/color][/tornado]しようとしている... 1時間もかからずに！
+Text/1a_rescue3/text,彼女を救わなければならない。[pulse freq=2][color=CHARTREUSE]彼女が全てを始めたんだ。[/color][/pulse] 彼女なしではここを離れない。
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]施設を駆け抜けろ！[/color][/wave] 手遅れになる前にサーシャにたどり着け！
+Text/1a_rescue_fail1/text,あなたはつまずく。前方の道は警備員に阻まれている！
+Text/1a_rescue_fail2/text,ヴィクトルが脇のドアを突き破って現れる。[color=CHARTREUSE]行け！俺が食い止める！[/color]
+Text/1a_rescue_fail3/text,エレナのために。彼ら全員のために。[color=STEEL_BLUE]もう誰も死なせない！[/color]
+Text/1a_rescue_fail4/text,マーフィーが火災報知器を引っ張る。[color=CHARTREUSE]トミーのために！[/color] スプリンクラーが警備員の目をくらませる！
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]俺が陽動する。彼女をそこから連れ出せ！[/color]
+Text/1a_rescue_fail6/text,[color=YELLOW]処理コンベアが詰まり[/color]、火花を散らして警備員の注意をそらす！
+Text/1a_rescue_fail7/text,運命――あるいは処理された者たちの亡霊が――あなたに二度目のチャンスを与える。
+Text/1a_rescue5/text,サーシャは独房から顔を上げる。傷だらけだが、心は折れていない。彼女の目が大きく見開かれる。[color=CHARTREUSE]来てくれたのね。[/color]
+Text/1a_rescue6/text,もちろん来たさ。[color=CHARTREUSE]これを一緒に終わらせるんだ。[/color]
+Choice/1a_rescue7/text,もう二度と会えないかと思って怖かった。
+Choice/1a_rescue8/text,みんな心配してたんだぞ。もう二度としないでくれ。
+Choice/1a_rescue9/text,やるべきことがある。アイダホが待っている。
+Text/1a_rescue10/text,[color=CHARTREUSE]サシャがあなたを軽く抱きしめる。[/color]来てくれると信じてた。疑ったことなんて一度もなかった。
+Text/1a_rescue11/text,さあ、奴らが奪った者たちの分まで報いを受けさせよう。[color=CHARTREUSE]共に。[/color]
+Text/1a_rescue12/text,サシャは痛みに耐えながら、か細い笑みを浮かべる。[color=STEEL_BLUE]やってみるわ。[/color]でも、危険を冒す価値のあることもある。
+Text/1a_rescue13/text,あなたがここにいることが、それを証明している。さあ、これを終わらせよう。
+Text/1a_rescue14/text,サシャは頷き、決意を新たにする。[color=CHARTREUSE]あなたの言う通りね。[/color]感傷は後回しでいい。
+Text/1a_rescue15/text,アイダホは自分が勝ったと思っている。彼がいかに間違っているか、見せつけてやろう。
+Text/1a/text,緊迫した潜入の末、あなたのチームは[color=DARK_VIOLET]ルートリザーブ[/color]の中心に立っている。[pulse freq=3][color=CRIMSON]恐るべき抑圧の機械[/color][/pulse]がむき出しになっている。
+Text/1b/text,[wave amp=25 freq=3][color=RED]警報が鳴り響き[/color][/wave]、警備員たちが侵入に対応しようと慌てふためく。あなたは廊下を駆け抜け、セキュリティシステムをかわす。
+Text/1c/text,スクリーンが点滅して映し出される。「ほうほう、[color=CRIMSON]裏切り者[/color]が反逆者のクズどもを連れて戻ってきたか。」
+Text/1d/text,スパッドの進歩を止められるとでも思ったか？[color=DARK_VIOLET]ルートリザーブ[/color]こそ、この国の生命線なのだ。
+Text/1e/text,だが、心配するな。お前はまだスパッドに貢献できる...[tornado radius=4 freq=3][color=DARK_VIOLET]処理槽の中でな！[/color][/tornado]
+Text/1f/text,スクリーンは突然、真っ暗になる。
+Text/20/text,あなたは決意を込めて他の者たちに振り向く。「アイダホのバンカーにたどり着くんだ。今すぐ！」
+Text/158/text,警備部隊が迫ってくる！[pulse freq=3][color=YELLOW]突破しろ！[/color][/pulse]
+Text/21_fail1/text,警備員たちが四方八方から迫ってくる。[color=CRIMSON]逃げ場はない！[/color]
+Text/21_fail2/text,ヴィクトルが警備員たちの背後に現れ、鋼のように冷たい声で言う。[color=STEEL_BLUE]武器を捨てろ。今すぐだ。[/color]
+Text/21_fail3/text,警備員たちはためらう――ヴィクトルは彼らの仲間だったのだ。[color=CRIMSON]エレナの名前はあの名簿にある。お前たちの家族も次かもしれないぞ。[/color]
+Text/21_fail4/text,何人かの警備員は武器を下ろす。他の者は逃げ出す。道が開ける。
+Text/21_fail5/text,東棟で爆発が起こる。無線からマーフィーの声が途切れ途切れに聞こえる。[color=CHARTREUSE]「あれが俺の陽動だ！動け！」[/color]
+Text/21_fail6/text,[color=STEEL_BLUE]警備員たちは爆発の方へ散っていく。トミーも誇りに思うだろう。[/color]
+Text/21_fail7/text,サシャが背後から先頭の警備員にタックルする。[color=CHARTREUSE]あの独房を生き延びたのは、あんたが死ぬのを見るためじゃない！[/color]
+Text/21_fail8/text,[color=STEEL_BLUE]走って！ここは私が引き受ける！[/color]
+Text/21/text,あなたのグループは警備の波をくぐり抜け、辛うじて捕獲を免れる。サシャのレジスタンス兵士たちが陽動を作り、あなたたちの進路を切り開く。
+Text/22/text,整備トンネルを抜ける苦難の脱出の末、あなたはついにアイダホのプライベートバンカーへ続く厳重なエレベーターにたどり着く。
+Text/23/text,サシャと仲間たちがそばにいる。あなたはついにアイダホと対峙する。
+Text/24/text,もう終わりだ、アイダホ。お前の秘密は暴かれた。この結末は…[pulse freq=2]お前次第だ。[/pulse]
+Choice/25/text,平和的な権力移行を交渉する (外交的)
+Choice/26/text,アイダホの即時逮捕を要求する (正義)
+Choice/27/text,アイダホの罪に私的制裁を下す (復讐)
+Choice/28/text,ルートリザーブのインフラ解体に着手する (解体)
+Text/29/text,アイダホ、これ以上血を流す必要はない。協力すれば…
+Text/2a/text,おやおや、[color=STEEL_BLUE]理想主義の愚か者[/color]め。これが交渉だとでも？
+Text/2b/text,アイダホがボタンを叩きつけ、[color=RED]警報が鳴り響く[/color]。「お前らにくれてやるのは、[color=DARK_VIOLET]フライ槽への片道切符だけだ！[/color]」
+Text/2c/text,そうはいかない、アイダホ。衛兵！お前たちはあの書類を見たはずだ、[color=YELLOW]奴がお前たちの家族に何をしたか知っているだろう。[/color]
+Text/2d/text,大柄な衛兵が前に進み出て、アイダホを素早く地面に蹴り倒す。
+Text/2e/text,銃声が室内に響き渡る。画面が暗転する。
+Text/2f/text,アイダホ、スパッドのポテト人民の名において、[color=CHARTREUSE]逮捕する！[/color]
+Text/30/text,終わりだ。人民は声を上げた。[color=CHARTREUSE]我々は、苦しみではなく大地に根を張る、新しいスパッドを築くだろう。[/color]
+Text/31/text,アイダホ、お前に[color=CRIMSON]取引も慈悲もない[/color]。暴君にふさわしいのは、暴君の裁きだけだ。
+Text/32/text,報い。それが私だ。[color=CHARTREUSE]犠牲になった全てのポテトのために、我々は未来を取り戻す！[/color]
+Text/33/text,奴のことは忘れろ。奴は病気の症状であって、病気そのものではない。[color=CHARTREUSE]この怪物の根も茎も、全て引き裂いてしまえ。[/color]
+Text/34/text,行くぞ！今すぐだ！
+Text/35/text,[color=DARK_VIOLET]ルートリザーブ[/color]の崩壊は、スパッド全土に変化の野火を燃え上がらせた。
+Text/36/text,全ての州のポテトたちが立ち上がり、[color=CHARTREUSE]彼らの国に対する新しいビジョン[/color]を受け入れた。
+Text/37/text,我々が自らのルーツに、そして我々をここに導いた理想に忠実である限り…[color=CHARTREUSE]道は見つかるだろう。[/color]
+Text/38/text,こうして、古きスパッドの灰の中から、[color=CHARTREUSE]新しい国家が根付き始めた[/color]。[color=DARK_VIOLET]ルートリザーブ[/color]の支配は終わったのだ。
+Text/151/text,[color=CHARTREUSE]サシャが寄り添い、共に新しい夜明けを見つめるあなたの手を取る。[/color]私たちがこれを築き上げた。あなたと、私で。
+Text/152/text,我々が自らのルーツに、そして我々をここに導いた理想に忠実である限り…[color=CHARTREUSE]道は見つかるだろう。[/color]共に。
+Text/153/text,[color=CHARTREUSE]あなたは彼女の手を握り返す。共に。[/color]
+Text/154/text,[color=STEEL_BLUE]サシャがあなたの隣に立つ。[/color]あなたの炎が、彼らの帝国を焼き尽くす火花を灯したのだ。
+Text/155/text,[color=STEEL_BLUE]怒りは決意へと鎮まった。なすべきことはまだある。[/color]
+Text/156/text,[color=STEEL_BLUE]サーシャが励ますように微笑む。[/color]あの検問所から、君はよくここまで来た。私たち皆もだ。
+Text/157/text,[color=STEEL_BLUE]罪悪感が完全に消え去ることはないだろうが、[/color]再建に意義を見出した。
+Choice/15/disabled_text,
+Choice/16/disabled_text,
+Choice/25/disabled_text,
+Choice/26/disabled_text,
+Choice/27/disabled_text,
+Choice/28/disabled_text,
+Choice/1a_rescue7/disabled_text,
+Choice/1a_rescue8/disabled_text,
+Choice/1a_rescue9/disabled_text,

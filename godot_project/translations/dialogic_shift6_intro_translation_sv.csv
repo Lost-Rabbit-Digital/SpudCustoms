@@ -1,0 +1,63 @@
+﻿keys,sv
+Text/b8/text,"Gränsanläggningen är helt nedstängd, med beväpnad säkerhetspersonal som patrullerar varje korridor."
+Text/b9/text,[pulse freq=3][color=RED]OBSERVERA! Säkerhetssituation NIVÅ RÖD![/color][/pulse] Hemligstämplade dokument stals i natt.
+Text/ba/text,Vi har en [tornado radius=4 freq=3][color=CRIMSON]förrädare bland oss[/color][/tornado]. Alla som undanhåller information kommer att behandlas som medbrottslingar.
+Text/bb/text,"Alla officerare, ställ upp för [wave amp=15 freq=2][color=DARK_ORANGE]säkerhetsscanning[/color][/wave]. De med förhöjda stressreaktioner kommer att flaggas."
+Text/bc/text,Har du sett vad som händer utanför? Flygblad överallt som visar att [color=DARK_VIOLET]Root Reserve[/color] är gjort av... [pulse freq=3][color=CRIMSON]av oss[/color][/pulse].
+Choice/bd/text,Sänk rösten. Vi övervakas alla.
+Choice/be/text,Jag har hört samma rykten. Det är hemskt om det är sant.
+Choice/bf/text,Det är löjlig propaganda. Sprid inte sådana lögner.
+Text/c0/text,Du har rätt. Men om det är sant... vad gör det oss till?
+Text/c1/text,Min kusin blev avvisad förra månaden. Betyder det...? Jag [color=CHARTREUSE]kan inte göra detta längre[/color].
+Text/c2/text,Deras uttryck blir reserverat. Självklart. Lojal mot Spud för alltid.
+Text/c3/text,Uppge din vistelseort i går kväll mellan klockan 22:00 och 04:00.
+Choice/c4/text,"Jag var i mitt kvarter hela natten, sovande."
+Choice/c5/text,Jag skulle föredra att tala med min juridiska representant först.
+Text/c6/text,Dina stressnivåer indikerar [color=YELLOW]bedrägeri[/color]. Dock... inte avgörande. Du får gå för tillfället.
+Text/c7/text,"Juridisk representant? Detta är en säkerhetsprocedur, inte en rättegång. Din vägran har noterats."
+Text/c8/text,"Det fungerar. Manifesten har orsakat uppståndelse, men [color=DARK_ORANGE]Russet misstänker oss[/color]."
+Text/c9/text,Håll utkik efter allierade från vår organisation under dagens skift. [color=CHARTREUSE]Du kommer att känna igen dem[/color].
+Text/ca/text,"Om du kan få dem igenom säkert, använd [color=CHARTREUSE]det speciella märket vi diskuterade[/color]."
+Choice/cb/text,Det är värt risken. Jag är med.
+Choice/cc/text,Det blir för farligt. Kanske borde vi hålla låg profil.
+Text/cd/text,"Jag visste att jag kunde räkna med dig. När detta är över, [color=CHARTREUSE]kommer Spud att veta vilka de verkliga hjältarna var[/color]."
+Text/ce/text,Vi är långt bortom den punkten. Att hålla låg profil kommer inte att rädda oss. [color=CHARTREUSE]Endast att störta systemet kommer att göra det[/color].
+Text/cf/text,Varje station har nu det nya [color=DARK_ORANGE]RealityScan-systemet[/color]. Det upptäcker obehöriga märkningar och förfalskningar.
+Text/d0/text,Alla dokument måste skannas före godkännande. [color=CRIMSON]Förrädarna kommer att utrotas[/color]. Jag garanterar det.
+Text/d1/text,"Att hjälpa motståndets medlemmar har just blivit mycket farligare, men [color=CHARTREUSE]sanningen måste spridas[/color]."
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,
+Text/c7_viktor1/text,En kraftig säkerhetsvakt närmar sig under din rast. Hans ansikte är utmärglat.
+Text/c7_viktor2/text,"Hej... du är en av tulltjänstemännen, eller hur? Jag har frågat runt om min fru, Elena."
+Text/c7_viktor3/text,Hon passerade denna kontrollpunkt för tre veckor sedan. [color=STEEL_BLUE]Underkänd vid inspektion.[/color] Jag har inte hört från henne sedan dess.
+Choice/c7_viktor4/text,"""Viktor... Jag hittade något. Om Elena. Du behöver veta sanningen."""
+Choice/c7_viktor5/text,"""Jag är ledsen, Viktor. Jag har inte sett något."" (Ljug för att skydda honom)"
+Text/c7_viktor6/text,Du visar honom en kopia av manifest-sidan. Hans ansikte blir vitt.
+Text/c7_viktor7/text,[wave amp=25 freq=3]Hans händer skakar när han läser.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Bearbetad... Batch RR-2851...[/color]
+Text/c7_viktor8/text,Hans röst är knappt en viskning. [tornado radius=3 freq=2][color=CRIMSON]De... de FÖRVANDLADE henne till...[/color][/tornado]
+Text/c7_viktor9/text,Hans sorg förvandlas till kall vrede. [pulse freq=2][color=CRIMSON]Idaho ska få betala för detta.[/color][/pulse] Jag svär det vid hennes minne.
+Text/c7_viktor10/text,Han griper din axel. [color=CHARTREUSE]Tack för att du berättade det.[/color] När tiden är inne... kommer jag att minnas detta.
+Text/c7_viktor11/text,Han nickar sorgset. [color=STEEL_BLUE]Jag trodde det.[/color] Ingen vet något. Eller ingen vill prata.
+Text/c7_viktor12/text,Om du hör något... [color=YELLOW]snälla.[/color] Hon är allt jag har.
+Text/d0_qte1/text,Senare under det skiftet närmar sig en resenär med papper som bär det [color=CHARTREUSE]subtila motståndsmärket[/color].
+Text/d0_qte2/text,[color=DARK_ORANGE]RealityScan[/color] påbörjar sin skanning. [wave amp=15 freq=3][color=RED]Den kommer att upptäcka märket![/color][/wave]
+Text/d0_qte3/text,Du har sekunder på dig att bestämma dig. Skannern värms upp...
+Choice/d0_qte4/text,"""Fejka ett skannerfel - snabbt!"" (Hjälp motståndet)"
+Choice/d0_qte5/text,"""Låt skannern slutföra sin skanning"" (Följ protokoll)"
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]Du måste arbeta snabbt![/color][/pulse] Utlös felet innan den slutför skanningen!
+Text/d0_qte7/text,Du fumlar med skannerkablarna. Gnistor flyger. Skärmen flimrar och dör.
+Text/d0_qte8/text,Russet skyndar sig dit. [color=YELLOW]Vad hände här?[/color]
+Choice/d0_qte9/text,"""Strömspik, sir. Dessa nya system är nyckfulla."""
+Choice/d0_qte10/text,"""Jag vet inte, sir. Den bara dog för mig."""
+Text/d0_qte11/text,Russet grymtar. [color=STEEL_BLUE]Byråkrater ger oss otestad utrustning.[/color] Bearbeta dem manuellt och flagga för ominspektion.
+Text/d0_qte12/text,Russet tittar misstänksamt på dig. [color=YELLOW]Så lägligt.[/color] Jag ska låta underhållet titta på den. Låt inte detta hända igen.
+Text/d0_qte13/text,Motståndsmedlemmen ger dig en ytterst liten nick av tacksamhet när de passerar.
+Text/d0_qte14/text,Skannern [pulse freq=3][color=RED]PIPER HÖGT[/color][/pulse]. Obehöriga markeringar upptäcktes!
+Text/d0_qte15/text,Russet dyker upp omedelbart. [color=CHARTREUSE]Bra jobbat![/color] Ännu en förrädare fångad.
+Text/d0_qte16/text,"Motståndaren släpas bort, skräck i deras ögon. [color=CRIMSON]Snälla, nej! Jag har barn![/color]"
+Text/d0_qte17/text,Din lojalitet är [color=DARK_ORANGE]antecknad i din akt[/color]. Fortsätt så här.

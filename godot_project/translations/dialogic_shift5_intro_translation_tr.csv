@@ -1,0 +1,33 @@
+﻿keys,tr
+Text/a6/text,Sınır tesisi bugün farklı hissettiriyor. Gergin. Güvenlik devriyelerinin sayısı artarken temkinli bir sessizlik sohbetin yerini alıyor.
+Text/a7/text,"Dün gece, [pulse freq=2][color=CRIMSON]yasaklı materyaller[/color][/pulse] keşfedildi. [color=DARK_VIOLET]Root Reserve[/color] hakkında yalanlar içeren broşürler."
+Text/a8/text,[wave amp=15 freq=2][color=DARK_ORANGE]TURUNCU tehdit seviyesi protokollerini[/color][/wave] uyguluyoruz. Tüm memurlar sadakat taramalarına tabi. Tüm yolcular maksimum incelemeyle karşı karşıya.
+Text/a9/text,İşe yarıyor. Broşürler yayılıyor. İnsanlar [color=DARK_VIOLET]Root Reserve[/color] hakkında sorular soruyor.
+Text/aa/text,Russet'in ofisinde bir sevkiyat kaydı olduğunu söyleyen kaynaklarım var - [tornado radius=3 freq=2][color=CHARTREUSE]her şeyi kanıtlayabilecek[/color][/tornado] nakliye manifestoları.
+Text/ab/text,"Onu almak için yardımına ihtiyacım var. Bu gece, son vardiyadan sonra. Sana güvenebilir miyim?"
+Choice/ac/text,Ben varım. Gerçeği ortaya çıkaralım.
+Choice/ad/text,"Bilmiyorum, Sasha... bu tehlikeli olabilir."
+Text/ae/text,Çok şükür. Senin [color=CHARTREUSE]diğerlerinden daha güçlü köklerin olduğunu[/color] biliyordum. Gece yarısı buluşacağız.
+Text/af/text,Bazen [color=CHARTREUSE]doğru olanı yapmak için ezilme riskini almamız gerekir[/color]. Bunu düşün.
+Text/b0/text,[color=DARK_ORANGE]Sadakat kontrolü[/color]. Lütfen adınızı ve memur kimliğinizi belirtin. Ardından neden Spud'a hizmet ettiğinizi söyleyin.
+Choice/b1/text,Sınırlarımızı tehlikeli etkilerden korumak için hizmet ediyorum.
+Choice/b2/text,Herkesin adil muamele görmesini sağlamak için hizmet ediyorum.
+Text/b3/text,"İyi cevap. Spud'un sadık koruyuculara ihtiyacı var. Tarayıcı yeşil gösteriyor. Devam edin, memur."
+Text/b4/text,"Memurun kaşları kalkar. Adil muamele mi? Tarayıcı [color=DARK_ORANGE]kehribar rengi[/color] yanıp sönüyor. Unutmayın, öncelikli endişemiz güvenlik, adalet değil."
+Text/b5/text,Bugünkü kota artırıldı. Şüpheli materyallere sahip herkes [color=DARK_VIOLET]özel işlem[/color] için işaretlenecek.
+Text/b6/text,Bugün [color=DARK_ORANGE]kararlarınızı çok dikkatli bir şekilde izliyor olacağım[/color].
+Text/b7/text,"Bu gece her şeyi değiştirebilir. Ama önce, [color=YELLOW]şüphe uyandırmadan günü atlat[/color]."
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,
+Text/b4_viktor1/text,Yanından geçerken iri yarı bir güvenlik görevlisi kolunuzdan yakalar. Yüzünde endişe çizgileri var.
+Text/b4_viktor2/text,"Hey... rahatsız ettiğim için üzgünüm. Gümrük memurlarından birisiniz, değil mi? Adım [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,Herkese karım [color=GOLD]Elena[/color]'yı soruyorum. Elena Petrov. Üç hafta önce bu kontrol noktasından geçti.
+Text/b4_viktor4/text,[color=STEEL_BLUE]Muayeneden geçemedi.[/color] İşlemleri yapılıp evine gönderileceğini söylediler ama... hiçbir haber alamadım.
+Text/b4_viktor5/text,Sesi titrer. Kimse bana bir şey söylemiyor. Reddedilen yolcular nereye gider biliyor musunuz?
+Choice/b4_viktor6/text,"""Üzgünüm, Viktor. Bilmiyorum. Ama gözümü açık tutacağım."""
+Choice/b4_viktor7/text,"""İşlem detaylarını tartışamam. Güvenlik protokolleri."""
+Text/b4_viktor8/text,Viktor'un gözlerinde bir umut parıltısı belirir. [color=CHARTREUSE]Teşekkür ederim.[/color] Bulduğun herhangi bir şey... lütfen. O benim tek varlığım.
+Text/b4_viktor9/text,"Viktor, morali bozuk bir şekilde başını sallar. [color=STEEL_BLUE]Doğru. Protokoller.[/color] Anlıyorum."
+Text/b4_viktor10/text,Ama fikrini değiştirirsen... [color=YELLOW]Ona ne olduğunu bilmem gerekiyor.[/color]

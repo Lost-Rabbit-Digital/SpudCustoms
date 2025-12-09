@@ -1,0 +1,43 @@
+﻿keys,es-419
+Text/102/text,"Bien, lo lograste. La resistencia [color=CHARTREUSE]crece[/color]. Gracias a esos manifiestos, la gente está viendo la verdad."
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha mira por encima del hombro con nerviosismo.[/color] Lo siento, yo... [color=YELLOW]Creo que me están vigilando.[/color]"
+Text/102_foreshadow2/text,Russet ha estado haciendo preguntas. Me sigue después de los turnos. [wave amp=15 freq=2][color=YELLOW]Necesito ser más cuidadosa.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, quizás deberías pasar desapercibida por un tiempo. Déjame asumir más riesgo."
+Text/102_foreshadow4/text,"[color=STEEL_BLUE]Ella sacude la cabeza, forzando una sonrisa.[/color] No. Estamos demasiado cerca ahora. Puedo con Russet."
+Text/102_foreshadow5/text,"Además... [color=CHARTREUSE]alguien tiene que mantenerlos a ustedes, brotes, lejos de problemas.[/color]"
+Text/103/text,"Logré conseguir este dosier de nuestras fuentes: programas de producción, listas de '[color=CRIMSON]ingredientes[/color]', nombres de los [color=DARK_SLATE_BLUE]desaparecidos[/color]."
+Text/104/text,Esto no es solo un programa de suplementos alimenticios. Están [color=CRIMSON]procesando papas[/color]... y no de buena manera.
+Text/105/text,"Memos internos del propio Primer Ministro Idaho, autorizando la '[color=DARK_ORANGE]utilización de activos rechazados.[/color]'"
+Text/106/text,"Cuotas para cada puesto de control, siendo Aduanas de la Papa el que tiene la mayor relación de rechazo a procesamiento."
+Text/106_trucks1/text,Pero aún no sabemos dónde está la instalación principal de procesamiento. Los documentos solo listan códigos de envío.
+Text/106_trucks2/text,He estado observando los [color=DARK_VIOLET]camiones de la Reserva de Raíces[/color]. Salen todas las noches a las 03:00. Misma ruta.
+Text/106_trucks3/text,[color=CHARTREUSE]Si pudiéramos seguirlos...[/color] sabríamos exactamente adónde llevan a los rechazados.
+Choice/106_trucks4/text,Lo haré. Conozco los horarios de patrulla.
+Choice/106_trucks5/text,Eso suena arriesgado. ¿No puede hacerlo otra persona?
+Text/106_trucks6/text,"[color=CHARTREUSE]Los ojos de Sasha se iluminan.[/color] Sabía que tenías raíces de acero. Ten cuidado, patrullan mucho por la noche."
+Text/106_trucks7/text,03:00 horas. Te agachas en las sombras mientras los camiones de la [color=DARK_VIOLET]Reserva de Raíces[/color] pasan retumbando.
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]¡Mantente oculto! ¡Sigue el convoy![/color][/pulse]
+Text/106_trucks9/text,"Los camiones se detienen en un complejo masivo escondido en el distrito industrial. [color=DARK_VIOLET]Sector 7, Complejo de Almacenes Delta.[/color]"
+Text/106_trucks10/text,Las chimeneas expulsan humo teñido de púrpura. El olor es... [tornado radius=3 freq=2][color=CRIMSON]inconfundible.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]El corazón de la Reserva de Raíces.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]La expresión de Sasha parpadea con decepción.[/color] Todos tenemos que asumir riesgos. Encontraré otra manera.
+Text/107/text,La situación exterior se ha deteriorado. Multitudes enfurecidas se congregan en los puestos de control exigiendo respuestas sobre la Reserva de Raíces.
+Text/108/text,[color=YELLOW]TRANSMISIÓN DE EMERGENCIA[/color]: La reciente circulación de [color=CRIMSON]documentos falsificados[/color] ha causado pánico innecesario.
+Text/109/text,Se ofrece una recompensa de [color=GOLD]10.000 Créditos Papa[/color] por información que conduzca a la captura de estos saboteadores.
+Text/10a/text,Consumir o distribuir esta propaganda ahora se clasifica como [color=RED]alta traición[/color].
+Text/10b/text,El turno de hoy operará bajo protocolos especiales. Cada viajero debe someterse a una Evaluación de Lealtad.
+Text/10c/text,Aquellos que demuestren [color=CRIMSON]sentimientos antigubernamentales[/color] deben ser señalados de inmediato.
+Text/10d/text,El [color=CRIMSON]traidor entre nosotros[/color] será encontrado. Y cuando lo sea... [color=DARK_ORANGE]Russet hace un gesto amenazante en su cuello.[/color]
+Text/10e/text,"Una patata nerviosa se acerca, con una [color=GOLD]insignia de hoja amarilla[/color] parcialmente visible. Una pequeña nota está escondida entre los papeles: ""[color=CHARTREUSE]Casa segura comprometida. Nueva ubicación: Almacén 7, Sector 4.[/color]"""
+Choice/10f/text,Procesarlos rápidamente con la marca UV (Ayudar)
+Choice/110/text,Reportarlos a seguridad de inmediato (Traicionar)
+Text/111/text,"El alivio inunda su rostro. ""Gracias. La verdad prevalecerá."""
+Text/112/text,"El horror se apodera de ellos mientras señalas a seguridad. ""[wave amp=25 freq=3]¡No, por favor! ¡Tengo una familia![/wave]"" Su insignia amarilla cae al suelo."
+Text/113/text,"""Bien hecho. Tu lealtad ha sido anotada."""
+Text/114/text,"""Tu decisión fue notada. Prepárate. [tornado radius=3 freq=2][color=CHARTREUSE]Algo grande se avecina[/color][/tornado]. La resistencia está planeando una acción directa."""
+Text/115/text,"""Cuando suceda, tendrás que [color=YELLOW]elegir un bando[/color]. No habrá término medio."""
+Text/116/text,"Con cada patata que procesas, estás [pulse freq=2][color=CHARTREUSE]ayudando a una revolución[/color][/pulse] o [pulse freq=2][color=CRIMSON]habilitando un sistema horrible[/color][/pulse]."
+Choice/10f/disabled_text,
+Choice/110/disabled_text,
+Choice/106_trucks4/disabled_text,
+Choice/106_trucks5/disabled_text,

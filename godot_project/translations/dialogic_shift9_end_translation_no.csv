@@ -1,0 +1,33 @@
+﻿keys,no
+Text/131/text,"Du dukker deg mens kampen raser. Jeg beklager, Sasha. Jeg er [color=STEEL_BLUE]ikke så modig som deg[/color]."
+Text/132/text,[color=CRIMSON]Terrorangrepet[/color] har blitt slått tilbake! Lederne blir [color=DARK_VIOLET]bearbeidet[/color] mens vi snakker.
+Text/133/text,"Høvding Yukon drar motstandsmedlemmer inn i lenker, Sasha blant dem. ""Disse [color=CRIMSON]forræderne[/color] vil møte [color=DARK_VIOLET]endelig bearbeidelse[/color]."""
+Text/134/text,"Sasha fanger blikket ditt. Til tross for blåmerkene hennes, inneholder blikket [wave amp=15 freq=2][color=CHARTREUSE]ingen fordømmelse, bare sorg[/color][/wave]."
+Text/135/text,"Du har overlevd ved å holde hodet lavt, men [pulse freq=3][color=GOLD]til hvilken pris?[/color][/pulse] Mens produksjonen av [color=DARK_VIOLET]Rotreserve[/color] strømmer fra anlegget, vrenger magen seg."
+Text/136/text,Kanskje det fortsatt er en sjanse fra innsiden. Eller kanskje du bare letter samvittigheten din.
+Text/137/text,Du [tornado radius=3 freq=2][color=CHARTREUSE]forlater posten din[/color][/tornado] og løper mot kampene. Tiden for forsiktighet er over.
+Text/138/text,[pulse freq=3][color=GOLD]Bevis at du er med oss![/color][/pulse] Hvordan kjenner du Sasha?
+Text/139/text,"[color=CHARTREUSE]Røttene vokser dypt![/color] Jeg er fra kontrollposten, Sasha rekrutterte meg!"
+Text/13a/text,De tar henne til prosesseringsanlegget akkurat nå. Vi må skynde oss!
+Text/13b/text,"Dørene eksploderer åpne og avslører den [wave amp=25 freq=3][color=CRIMSON]forferdelige sannheten[/color][/wave] - kvernemaskiner, transportbånd som bærer poteter til deres undergang."
+Text/13c/text,Ved enden av et transportbånd - Sasha og andre [color=CRIMSON]hjelpeløst bundet[/color]. Tilsynsmann Russet står ved kontrollene.
+Text/13d/text,[color=RED]DEG![/color] Jeg burde ha visst at du var en av dem! Trekk deg tilbake eller jeg starter prosessoren!
+Text/13e/text,"Mens motstandskjempere overmanner Russet, omdirigerer Sasha anleggets kameraer. [color=YELLOW]Spuds folk! Dette er Rotreserven! De har gitt oss hverandre som mat![/color]"
+Text/13f/text,Du kom tilbake for meg. [color=CHARTREUSE]Vi klarte det. Sannheten er ute nå.[/color] Vi har en fremtid å bygge!
+Text/140/text,"[color=STEEL_BLUE]Motstandslederen trer frem, med våpenet rettet mot Russet.[/color] Ikke et skritt til, Russet. Hendene dine der jeg kan se dem."
+Text/141/text,"[color=CRIMSON]Russets øyne flakker mellom deg og motstandslederen, svetten pipler frem i pannen hans.[/color] Tror du at du har vunnet? Dette anlegget er grunnlaget for Spud!"
+Text/142/text,Grunnlaget for lidelse. [pulse freq=3][color=CHARTREUSE]Det tar slutt i dag.[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]Sasha kjemper mot bindingene sine på samlebåndet[/color]
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""Russet[/color]"
+Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""Dette... dette er hva de har holdt på med? Det er verre enn jeg forestilte meg...""[/color][/wave]"
+Choice/146/text,"[color=CHARTREUSE]""Sasha! Takk røttene for at du lever! Hold deg fast[/color]"
+Text/147/text,"[color=CRIMSON]Du stormer mot Russet, med knyttede never, knapt holdt tilbake av motstandskjemperne.[/color] Hver potet som kom gjennom sjekkpunktet mitt... hvor mange har du..."
+Text/148/text,Rolig! Vi trenger ham i live for å vitne. [color=STEEL_BLUE]Lederen holder våpenet rettet mot Russet.[/color] Spar sinnet ditt til rettssalen.
+Text/149/text,"[color=STEEL_BLUE]Du vakler tilbake, med hånden for munnen, og tar inn maskineriets fulle gru.[/color] Jeg stemplet papirene deres... Jeg sendte dem hit..."
+Text/14a/text,[color=CHARTREUSE]Du visste ikke. Ingen av oss visste.[/color] Det er derfor vi er her nå. Fokuser!
+Text/14b/text,[color=CHARTREUSE]Du skynder deg til samlebåndet[/color]
+Text/14c/text,[color=CHARTREUSE]Sashas øyne skinner av tårer og håp mens hendene dine løsner knutene.[/color] Jeg visste du ville komme. Jeg tvilte aldri på deg.
+Text/14d/text,[color=STEEL_BLUE]Lederen tvinger Russet ned på knærne med våpen.[/color] Bind ham fast. Sørg for at han ser hva som skjer videre.
+Text/14e/text,[color=CHARTREUSE]Sasha tar hånden din og fletter fingrene sine sammen med dine.[/color] Du kom tilbake for meg. Uansett hva som skjer videre... møter vi det sammen.
+Text/14f/text,"[color=STEEL_BLUE]Sasha ser nøye på deg, og ser raseriet som fortsatt brenner i øynene dine.[/color] Kanaliser den ilden. Vi vil trenge den til det som kommer videre."
+Text/150/text,[color=STEEL_BLUE]Sasha legger en forsiktig hånd på skulderen din.[/color] Skylden er ikke din å bære. Du er her nå. Det er det som betyr noe.

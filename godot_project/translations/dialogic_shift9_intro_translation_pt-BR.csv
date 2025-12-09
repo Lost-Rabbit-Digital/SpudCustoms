@@ -1,0 +1,28 @@
+﻿keys,pt-BR
+Text/140/text,"A fronteira se assemelha a uma [pulse freq=3][color=CRIMSON]zona de guerra[/color][/pulse]. Barricadas, veículos blindados e guardas de elite estão a postos. Hoje é o dia em que a resistência planejou atacar."
+Text/141/text,"[wave amp=25 freq=3][color=YELLOW]TRANSMISSÃO DE EMERGÊNCIA[/color][/wave]: Toda Spud está sob [color=RED]lei marcial[/color]. ""A Resistência"" lançou ataques contra instalações governamentais."
+Text/142/text,Qualquer um que ajude esses [color=CRIMSON]extremistas[/color] enfrentará [color=DARK_VIOLET]processamento imediato[/color]. O Ministério confirma: a [color=DARK_VIOLET]Reserva de Raízes[/color] permanece segura para todas as [color=DARK_ORANGE]batatas leais[/color].
+Text/143/text,[color=YELLOW]Tumultos eclodiram[/color] em múltiplos setores. Células da Resistência atacaram três instalações da [color=DARK_VIOLET]Reserva de Raízes[/color].
+Text/144/text,Seu objetivo: acessar o banco de dados central com todos os registros de produção. Qualquer sinal de deslealdade significa processamento.
+Text/145/text,"Capturamos vários agentes da resistência, incluindo a Oficial Sasha."
+Text/146/text,Os [tornado radius=3 freq=2][color=CRIMSON]verdadeiros traidores[/color][/tornado] são aqueles que [color=DARK_VIOLET]alimentam nosso povo uns aos outros[/color]. Vocês não podem parar a verdade!
+Text/147/text,"Ela é arrastada, ainda gritando: [color=CHARTREUSE]O povo saberá o que há em sua comida![/color]"
+Text/148/text,"O [color=CRIMSON]traidor[/color] será [pulse freq=3][color=DARK_VIOLET]processado imediatamente[/color][/pulse]. Um lote especial da [color=DARK_VIOLET]Reserva de Raízes[/color], feito dos próprios terroristas."
+Text/149/text,"Todas as travessias de fronteira estão [color=RED]suspensas[/color], exceto para pessoal essencial com [color=GOLD]autorização Nível Alfa[/color]."
+Text/14a/text,Este scanner [color=YELLOW]não pode ser enganado[/color]. Soe o alarme imediatamente para qualquer um sem autorização adequada.
+Text/14b/text,Uma batata em uniforme oficial se aproxima com credenciais Alfa aparentemente perfeitas.
+Text/14c/text,"Um pequeno cartão azul cai da pasta. ""[wave amp=15 freq=3][color=CHARTREUSE]As raízes crescem fundo.[/color][/wave]"", eles murmuram ao pegar o cartão."
+Choice/14d/text,"Deixá-los passar, ignorando os alertas do scanner (Ajudar a resistência)"
+Choice/14e/text,Soar o alarme imediatamente (Trair a resistência)
+Text/14f/text,"Alívio transparece em seus olhos. ""[color=CHARTREUSE]Por Sasha. Por Spud.[/color]"" Eles desaparecem em direção ao banco de dados central."
+Text/150/text,"O horror surge em seu rosto. ""[color=CRIMSON]Seu traidor! Nós confiamos em você![/color]"" Eles são rapidamente cercados por guardas."
+Text/151/text,"""Excelente trabalho. Sua lealdade será recompensada."""
+Text/152/text,"De repente, a instalação [color=YELLOW]treme com explosões[/color]. O ataque da resistência começou, independentemente da sua escolha."
+Text/153/text,"Eu fico no meu posto e espero que isso passe, ou [color=CHARTREUSE]tomo uma posição[/color] e arrisco tudo para expor a verdade?"
+Choice/154/text,"""Não posso abandonar meu dever. Vou ficar quieto e esperar pelo melhor."""
+Choice/155/text,"""Fui cúmplice por tempo demais. É hora de lutar pelo que é certo."""
+Text/156/text,[pulse freq=3][color=YELLOW]Mova-se rapidamente![/color][/pulse] A segurança está em pânico - esta é sua única chance de escapar!
+Choice/14d/disabled_text,
+Choice/14e/disabled_text,
+Choice/154/disabled_text,
+Choice/155/disabled_text,

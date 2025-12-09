@@ -1,0 +1,175 @@
+﻿keys,id
+main_menu_feedback,Umpan balik dan Bug
+main_menu_version,Versi 1.2.0
+main_menu_new_game,Permainan Baru
+main_menu_continue,Lanjutkan
+main_menu_level_select,Pilih Level
+main_menu_score_attack,Serangan Skor
+main_menu_options,Pengaturan
+main_menu_credits,Kredit
+main_menu_exit,Keluar
+select_language,Bahasa
+social_discord_tooltip,Bergabung dengan Discord kami!
+social_steam_tooltip,Kunjungi kami di Steam
+social_twitch_tooltip,Integrasi Twitch
+twitch_status_disabled,Dinonaktifkan
+twitch_status_no_viewers,Tidak ada penonton di pool
+twitch_status_ready,{count} penonton siap
+twitch_connection_disabled,Dinonaktifkan
+twitch_connection_disconnected,Terputus
+twitch_connection_connected,Terhubung
+twitch_connection_connecting,Menghubungkan...
+options_menu_title,Pengaturan
+options_difficulty,Tingkat Kesulitan
+options_difficulty_easy,Mudah
+options_difficulty_normal,Sedang
+options_difficulty_expert,Ahli
+options_music_volume,Volume Musik
+options_sfx_volume,Volume Efek Suara
+options_camera_shake,Guncangan Kamera
+options_back,Kembali
+paused_menu_title,Dijeda
+shift_summary_title,RINGKASAN SHIFT
+shift_summary_continue,Lanjutkan
+shift_summary_restart,Mulai Ulang
+shift_summary_main_menu,Menu Utama
+shift_summary_submit_score,Kirim Skor
+shift_summary_runner_stats,STATISTIK PELARI
+shift_summary_document_stats,STATISTIK DOKUMEN
+shift_summary_performance,PERFORMA
+shift_summary_bonuses,BONUS
+_FORMAT KEYS,
+time_format,{minutes}mnt {seconds}dtk
+_SHIFT SUMMARY DETAILS,
+shift_complete_success,SHIFT {shift} SELESAI\nSUKSES!
+shift_complete_failure,SHIFT {shift} SELESAI\n{failure}
+strike_limit_reached,BATAS STRIKE TERCAPAI!
+quota_not_met,KUOTA TIDAK TERPENUHI!
+shift_summary_title_with_difficulty,RINGKASAN SHIFT\n{difficulty}
+runner_stats_template,\nSTATISTIK PELARI\nPercobaan Pelari: {runner_attempts}\nMisil Ditembakkan: {fired}\nPelari Terkena: {hit}\nTembakan Sempurna: {perfect}\nTingkat Keberhasilan: {rate}%
+document_stats_template,STATISTIK DOKUMEN\nDokumen Dicap: {stamped}\nKentang Disetujui: {approved}\nKentang Ditolak: {rejected}\nCap Sempurna: {perfect_stamps}
+bonus_stats_template,BONUS\nBonus Kecepatan Pemrosesan: {processing_speed_bonus}\nBonus Akurasi Cap: {accuracy}\nBonus Tembakan Sempurna: {perfect_hit_bonus}\nBonus Skor Total: {total_score_bonus}
+performance_stats_template,PERFORMA\nWaktu yang dibutuhkan: {time_taken}\nSkor yang diharapkan: {expected_score}\nTotal Skor: {score}\nPersentase di atas skor: {percent}%\nPenilaian Performa:\n{rating}
+performance_exceptional,Luar Biasa!
+performance_excellent,Sangat Bagus!
+performance_good,Bagus
+performance_needs_improvement,Perlu Perbaikan
+performance_poor,Buruk
+global_leaderboard_title,Papan Peringkat Global\n- {difficulty}
+getting_leaderboard_scores,Mendapatkan skor papan peringkat...
+_PAUSE OPTIONS OVERLAY,
+reset_game_label,Setel ulang permainan:
+reset_game_button,Setel ulang
+mute_label,Bisukan
+fullscreen_label,Layar penuh:
+resolution_label,Resolusi:
+antialiasing_label,Anti-Aliasing:
+screenshake_label,Guncangan layar:
+mouse_sens_label,Sensitivitas mouse:
+___ LOADING SCREEN,
+Loading…,Memuat...
+___ DIALOGS IN GAME,
+You lose.,Anda kalah.
+You won!,Anda menang!
+Thanks for playing!,Terima kasih sudah bermain!
+Please Confirm...,Harap Konfirmasi...
+Go back to main menu?,Kembali ke menu utama?
+Quit the game?,Keluar dari permainan?
+Cancel,Batal
+OK,Oke
+___ OPTIONS MENU,
+Controls,Kontrol
+Mouse Sensitivity :,Sensitivitas Mouse :
+Actions & Inputs,Tindakan & Input
+Add,Tambah
+Remove,Hapus
+Assign Key for {action},Tetapkan Tombol untuk {action}
+Listening for input...,Mendengarkan input...
+Press again to confirm...,Tekan lagi untuk mengonfirmasi...
+Focus here to assign inputs.,Fokus di sini untuk menetapkan input.
+Already Assigned,Sudah Ditetapkan
+{key} already assigned to {action}.,{key} sudah ditetapkan ke {action}.
+Remove Key for {action},Hapus Tombol untuk {action}
+Are you sure you want to remove {key} from {action}?,Apakah Anda yakin ingin menghapus {key} dari {action}?
+Reset,Setel Ulang
+Audio,Suara
+Master :,Utama :
+Music :,Musik :
+SFX :,Efek :
+Ambient :,Suasana :
+Mute :,Bisukan :
+Video,Tampilan
+Fullscreen :,Layar Penuh :
+Resolution :,Resolusi :
+Anti-Aliasing :,Anti-Aliasing :
+Disabled (Fastest),Dinonaktifkan (Tercepat)
+8x (Slowest),8x (Terlambat)
+Camera Shake :,Goyangan Kamera :
+Normal,Sedang
+Reduced,Dikurangi
+Minimal,Minim
+None,Tidak Ada
+Game,Permainan
+Reset Game :,Setel Ulang Permainan :
+Do you want to reset your game data?,Apakah Anda ingin menyetel ulang data permainan Anda? 
+Back,Kembali
+_INGAME DIALOGUE,
+TAKE THEM!,AMBIL!
+"Take your documents, please.",Silakan ambil dokumen Anda.
+_SHIFT SUMMARY SCREEN,
+Continue,Lanjutkan
+Main Menu,Menu Utama
+Submit Score,Kirim Skor
+Restart,Mulai Ulang
+SHIFT SUMMARY,RINGKASAN SHIFT
+_DIFFICULTY LEVELS,
+Easy,Mudah
+Normal,Sedang
+Expert,Ahli
+Primary,Utama
+Secondary,Sekunder
+Primary Interaction,Interaksi Utama
+Secondary Interaction,Interaksi Sekunder
+Cancel Interaction,Batalkan Interaksi
+Escape,Keluar
+Dialogic Default Action,Tindakan Default Dialogis
+Enter,Masuk
+Left Mouse Button,Tombol Kiri Mouse
+Right Mouse Button,Tombol Kanan Mouse
+_NEW GAME CONFIRMATION,
+Start New Game,Mulai Permainan Baru
+Starting a new game will reset your progress. Are you sure you want to continue?,Memulai permainan baru akan menyetel ulang kemajuan Anda. Apakah Anda yakin ingin melanjutkan?
+"Yes, Start New Game","Ya, Mulai Permainan Baru"
+Skip,Lewati
+History,Riwayat
+Return,Kembali
+Restart the game?,Mulai ulang permainan?
+_HELP MENU,
+help_menu_button,Bantuan
+help_menu_title,Cara Bermain
+help_tab_basics,Dasar
+help_tab_gameplay,Permainan
+help_tab_minigames,Minigame
+help_basics_intro,[b]Selamat Datang di Bea Cukai Spud
+help_basics_gate,[b]Membuka Gerbang[/b]\nKlik tombol gerbang atau gunakan megafon untuk memanggil kentang berikutnya ke pos Anda.
+help_basics_documents,"[b]Memeriksa Dokumen[/b]\nSeret dokumen ke meja Anda untuk memeriksanya. Periksa nama, tanggal, dan detail lainnya sesuai peraturan imigrasi untuk shift saat ini."
+help_basics_stamping,"[b]Mengecap Dokumen[/b]\nGunakan stempel DISETUJUI (hijau) untuk meloloskan imigran, atau stempel DITOLAK (merah) untuk menolak mereka. Akurasi stempel memengaruhi skormu!"
+help_basics_runners,[b]Penerobos Perbatasan[/b]\nBeberapa kentang akan mencoba lari melewati pos pemeriksaan! Klik untuk menembakkan misil dan menghentikan mereka. Waktu yang tepat memberikan poin bonus.
+help_basics_xray,"[b]Pemindai Sinar-X[/b]\nMulai dari Shift 3, gunakan mesin Sinar-X untuk memindai kentang dari barang selundupan tersembunyi."
+help_gameplay_quota,[b]Memenuhi Kuota[/b]\nSetiap shift memiliki kuota kentang yang harus Anda proses. Gagal memenuhi kuota dan Anda akan dipecat!
+help_gameplay_strikes,"[b]Teguran[/b]\nMembuat kesalahan (salah setuju/tolak, penerobos yang lolos) akan memberimu teguran. Terlalu banyak teguran dan permainan berakhir!"
+help_gameplay_rules,"[b]Peraturan Imigrasi[/b]\nPeriksa papan buletin untuk peraturan saat ini. Peraturan berubah setiap shift - wilayah terlarang, dokumen wajib, dan kondisi khusus."
+help_gameplay_scoring,"[b]Penilaian Skor[/b]\nDapatkan poin untuk keputusan yang benar, stempel yang sempurna, dan menghentikan penerobos. Bonus diberikan untuk kecepatan dan akurasi!"
+help_gameplay_difficulty,"[b]Tingkat Kesulitan[/b]\nMudah: Waktu lebih longgar, peraturan lebih sedikit. Normal: Pengalaman standar. Ahli: Waktu ketat, peraturan rumit, skor lebih tinggi."
+help_minigames_intro,"[b]Game Mini[/b]\nSepanjang shift, Anda akan menemukan game mini yang bisa menghasilkan poin bonus. Selesaikan untuk mendapat hadiah atau lewati tanpa penalti."
+help_minigames_document_scanner,"[b]Pemindai Dokumen[/b] (Shift 1+)\nGunakan sinar UV untuk menemukan elemen tersembunyi pada dokumen. Klik untuk menandai tanda air, stempel, dan simbol. Temukan semua elemen sebelum waktu habis!"
+help_minigames_stamp_sorting,"[b]Memilah Stempel[/b] (Shift 2+)\nPilah stempel yang jatuh ke dalam wadah yang benar. Stempel hijau masuk ke DISETUJUI, stempel merah masuk ke DITOLAK. Pilah dengan cepat untuk poin bonus!"
+help_minigames_fingerprint_match,[b]Mencocokkan Sidik Jari[/b] (Shift 3+)\nCocokkan sidik jari dari kisi dengan pola referensi. Klik sidik jari yang cocok untuk memverifikasi identitas. Dibutuhkan pengamatan yang cermat!
+help_minigames_code_breaker,"[b]Pemecah Kode[/b] (Shift 4+)\nPecahkan kode rahasianya! Tebak kombinasi 4 digit. Hijau berarti posisi benar, kuning berarti posisi salah. Kesempatan terbatas"
+help_minigames_border_chase,[b]Pengejaran Perbatasan[/b] (Shift 5+)\nBarang selundupan di konveyor! Klik barang MERAH untuk menyitanya. Biarkan barang HIJAU lewat. Refleks cepat menghasilkan lebih banyak poin!
+help_tab_lore,Cerita
+help_lore_world_intro,"[b]Dunia Spud[/b]\n\nSelamat datang di negeri tempat para kentang membangun peradaban mereka sendiri. Di dunia ini, para umbi berjalan, berbicara, dan telah membentuk bangsa mereka sendiri dengan hukum, perbatasan, dan birokrasi."
+help_lore_nation,"[b]Bangsa Spud[/b]\n\nSpud adalah bangsa yang bangga dan menjanjikan kemakmuran bagi semua kentang. Dilindungi oleh Tembok Agung Spud, bangsa ini menerapkan kontrol perbatasan yang ketat untuk memastikan hanya umbi yang layak yang boleh masuk.\n\nPemerintah menggalakkan persatuan dan kepatuhan, dengan warga patriotik yang sering terdengar menyerukan: ""Jaya Spud!"""
+help_lore_your_role,"[b]Peran Anda[/b]\n\nAnda telah terpilih untuk peran krusial dalam melindungi perbatasan. Sebagai Petugas Bea Cukai, Anda bekerja di bawah pengawasan ketat Supervisor Russet.\n\nKesejahteraan Anda bergantung pada kinerja Anda. Penuhi kuota Anda, patuhi peraturan, dan ingat: bangsa ini mengandalkan Anda."
+help_lore_border,"[b]Tembok Agung[/b]\n\nTembok Agung Spud yang perkasa melindungi bangsa dari orang luar. Di berbagai pos pemeriksaan di sepanjang tembok, petugas seperti Anda memastikan hanya mereka yang layak yang boleh masuk.\n\nMereka yang mencoba menerobos perbatasan tanpa dokumen yang sah akan menghadapi konsekuensi langsung."
+help_lore_secrets,[b]Cadangan Akar[/b]\n\nKentang yang ditolak... diproses. Sesuai protokol. Cadangan Akar yang misterius menangani semua detailnya.\n\nSebaiknya jangan terlalu banyak bertanya. Fokus pada tugas Anda. Tidak lebih.

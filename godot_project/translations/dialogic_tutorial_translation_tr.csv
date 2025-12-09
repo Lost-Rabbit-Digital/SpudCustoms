@@ -1,0 +1,33 @@
+﻿keys,tr
+Text/156/text,[pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs Training'e[/color][/pulse] Hoş Geldiniz!
+Text/157/text,"Bu eğitim size, Spud'un sınırlarını korumak için gereken [wave amp=15 freq=2][color=DARK_ORANGE]temel becerileri[/color][/wave] öğretecektir."
+Text/158/text,"Göreviniz, sınır kontrol noktamızdaki gelen patates işlemlerini yapmaktır."
+Text/159/text,Göç eden patatesler burada ofisinizin dışında sıraya girecekler.
+Text/15a/text,"Patatesleri işlemeye başlamak için, buradaki anahtarla kabininizi hizmete açmanız gerekiyor."
+Text/15b/text,Megafona dokunarak her patatese ofisinize yaklaşma sinyali vereceksiniz.
+Text/15c/text,Patatesler kabine tek tek girecek ve belgelerini sunacaklar.
+Text/15d/text,"İlk olarak, belgelerini daha iyi görmek için inceleme masasına taşıyın."
+Text/15e/text,"Sonra, [tornado radius=3 freq=2][color=YELLOW]süresi geçmiş tarihler, yanlış bilgiler veya sahtecilik belirtileri[/color][/tornado] arayın."
+Text/15f/text,"Masanızda belgeleri işaretlemek için damgalar var, damga çubuğunu çıkarmak için buraya tıklayabilirsiniz."
+Text/160/text,Ardından belgeyi istediğiniz damganın altına yerleştirin...
+Text/161/text,Belgeleri [color=CHARTREUSE]onaylanmış[/color] veya [color=CRIMSON]reddedilmiş[/color] olarak işaretlemek için damgaya tıklayın...
+Text/162/text,Ve kararınızı sonlandırmak için belgeyi patatese geri sürükleyin!
+Text/163/text,Bazen patatesler [color=CRIMSON]kontrol noktanızı koşarak geçmeye çalışacaklar[/color].
+Text/164/text,"Kabininizde, sınır duvarı boyunca [pulse freq=3][color=CRIMSON]füze fırlatıcılarını[/color][/pulse] kontrol etmenizi sağlayan doğrudan bir bağlantınız var."
+Text/165/text,"Bu ""koşuculara"" füze fırlatmak ve onları durdurmak için tıklayın."
+Text/166/text,"Unutmayın, geçmeyi başaran her koşucu size karşı bir [wave amp=20 freq=3][color=CRIMSON]uyarı[/color][/wave] olarak sayılacaktır."
+Text/167/text,"Çok fazla uyarı, ve vardiyamız... [tornado radius=3 freq=3][color=CRIMSON]kalıcı olarak sona erecek.[/color][/tornado]"
+Text/168/text,"Her vardiyada, gününüzü tamamlamak için işlemeniz gereken bir [color=DARK_ORANGE]patates kotası[/color] vardır."
+Text/169/text,"Puanınız, bu kontrol noktasındaki meslektaşlarınıza ve uzaktaki gümrük ofislerindeki memurlara kıyasla performansınızı takip eder."
+Text/16a/text,"Her vardiyadan sonra, performansınızın bir özetini ve görevinizde başarılı olup olmadığınızı göreceksiniz."
+Text/16b/text,Koşucularla nasıl başa çıktığınızın ve kaç belge işlediğinizin bir dökümünü göreceksiniz.
+Text/16c/text,"Ayrıca, belgeleri hızlı işleyerek, damgaları mükemmel hizalayarak veya koşan patatesleri mükemmel şekilde vurarak kazandığınız bonuslar da vardır."
+Text/16d/text,Vardiyamız sırasında patatesleri ne kadar iyi işlediğinize bağlı olarak bir performans değerlendirmesi ve beklentileri aşarsanız 3 altın damgaya kadar alacaksınız.
+Text/16e/text,Burada her vardiya için puanınızı gümrük memurlarının küresel veritabanına gönderebilir ve dünyadaki en elit gümrük memurlarıyla nasıl karşılaştırıldığınızı görebilirsiniz.
+Text/16f/text,"Vardiyamız başarılı olduysa, ""Devam Et"" düğmesine tıklayarak ve bir sonraki vardiyamıza başlayarak devam edebilirsiniz."
+Text/170/text,"Bu, Gümrük Memuru olarak görevlerinizin temellerini kapsar."
+Text/171/text,"Unutmayın: belgeleri dikkatle kontrol edin, koşucuları durdurun ve kotalarınızı doldurun."
+Text/172/text,"Spud'un güvenliği, sizin [pulse freq=2][color=DARK_ORANGE]uyanıklığınıza bağlıdır![/color][/pulse]"
+Text/174/text,Hadi [color=YELLOW]eğitim vardiyanıza[/color] başlayalım...
+Text/180/text,Ama dikkat et - her patatesin evrakları tam değil.
+Text/181/text,[color=RED]Süresi dolmuş pasaportlar[/color] otomatik ret nedenidir. İstisna yok.

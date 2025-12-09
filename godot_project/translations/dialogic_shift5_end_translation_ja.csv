@@ -1,0 +1,22 @@
+﻿keys,ja
+Text/96/text,暗い廊下を忍び足で進む。警備の巡回を避けながら、心臓が激しく脈打つ。
+Text/97/text,[color=CHARTREUSE]この装置でラセットのオフィスのロックを解除する[/color]。東棟で警報を鳴らして陽動する。君には5分ある。
+Text/98/text,「書類は彼の書類棚にあるはずだ。[color=CRIMSON]'RR輸送'と書かれた赤いファイル[/color]だ。捜索の痕跡を残すなよ。」
+Text/99/text,"書類棚から分厚い[color=CRIMSON]""RR輸送""と書かれた赤いファイル[/color]を見つけた。"
+Text/9a/text,中には、拒否されたポテトの数と一致する書類、そしてアイダホ首相からの「[pulse freq=3][color=DARK_VIOLET]国境で拒否された者をRR生産のために最大限活用する[/color][/pulse]」という指令書が入っていた。
+Text/9a_viktor1/text,書類に記載された名前をスキャンする…そして、ある名前が目に留まる。[color=GOLD]エレナ・ペトロフ[/color]。
+Text/9a_viktor2/text,その名前…以前にも聞いたことがある。警備員ヴィクトルが、妻が行方不明だと言っていた。
+Text/9a_viktor3/text,「[color=CRIMSON]ステータス：処理済み。バッチRR-2851。[/color]」日付は2週間前。
+Text/9b/text,足音がオフィスのドアに近づく。「[wave amp=15 freq=3][color=YELLOW]おかしいな、鍵をかけたはずだが。[/color][/wave]」
+Choice/9c/text,「机の下に隠れる」
+Choice/9d/text,「窓から飛び降りる」
+Text/9e/text,ラセットが入ってくるのと同時に、君は彼の机の下に飛び込む。心臓が激しく脈打つ。彼が座り、その足が君の顔から数センチのところにある。
+Text/9f/text,「ラセットだ。何？[color=CHARTREUSE]また警報か？[/color]今向かう。」彼が去り、君は脱出する。
+Text/a0/text,窓をこじ開けて飛び降りる。幸いにも1階だ。警備員が叫ぶ：「[color=RED]おい！止まれ！[/color]」
+Text/a1/text,敷地を駆け抜け、追っ手を振り切ることに成功した。
+Text/a2/text,手に入れたか？
+Text/a3/text,君は証拠を渡し、見つけたものを説明する。
+Text/a4/text,これで全てが証明される。レジスタンスがコピーを作成する。[tornado radius=3 freq=2]真実をあらゆる場所に広めるのだ。[/tornado]彼らは私たち全員を黙らせることはできない。
+Text/a5/text,君は一線を越えた。[wave amp=20 freq=3][color=YELLOW]もう後戻りはできない。[/color][/wave]真実が広まれば、スパッドは変革されるだろう。
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,

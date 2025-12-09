@@ -1,0 +1,85 @@
+﻿keys,hu
+Text/11/text,"A Spud határ [pulse freq=3][color=CRIMSON]káoszban[/color][/pulse] van. Pánikba esett krumplik özönlik el az ellenőrzőpontokat, kétségbeesetten menekülve a kiszivárgott dokumentumok után."
+Text/12/text,Átsurransz Sashával. [wave amp=20 freq=3][color=CHARTREUSE]Tovább kell haladnunk![/color][/wave] Az emberek most már ismerik az igazságot.
+Text/13/text,"Többé nem hallgattathatják el az igazságot. Ha be tudunk szivárogni a [color=DARK_VIOLET]Gyökértartalék[/color] létesítménybe és bizonyítékokat sugározhatunk, az [tornado radius=3 freq=2][color=CHARTREUSE]lángra lobbantja a forradalmat[/color][/tornado]."
+Text/14/text,Az a hely egy erőd. És most van köztünk egy [color=YELLOW]korábbi vámtiszt[/color]. Szemük gyanakodva szűkül össze feléd.
+Choice/15/text,"Értem a kételyeiteket, de elkötelezett vagyok az ügy iránt."
+Choice/16/text,Már mindent feláldoztam. Most nem hátrálok meg.
+Text/17/text,Szép szavak. De ilyeneket már hallottunk korábban.
+Text/18/text,"Segítettek nekünk megszerezni a dokumentumokat. Az tettek, nem szavak."
+Text/19/text,"Most már nem térhetsz vissza, hogy lojális krumpli legyél. Üdvözlünk az ellenállásban, elvtárs."
+Text/1a/text,"Egy feszült beszivárgás után csapatod a [color=DARK_VIOLET]Gyökértartalék[/color] szívében áll, az [pulse freq=3][color=CRIMSON]elnyomás szörnyű gépezetét[/color][/pulse] felfedve."
+Text/1b/text,"[wave amp=25 freq=3][color=RED]Riasztók szólnak[/color][/wave], miközben az őrök sietnek reagálni a behatolásotokra. Folyosókon rohantok keresztül, kikerülve a biztonsági rendszereket."
+Text/1c/text,"Egy képernyő villan fel. ""Nos, nos, a [color=CRIMSON]áruló[/color] visszatér a lázadó söpredékkel."""
+Text/1d/text,"Azt hitted, megállíthatod Spud fejlődését? A [color=DARK_VIOLET]Gyökértartalék[/color] e nemzet életere."
+Text/1e/text,De ne aggódj. Továbbra is szolgálni fogod Spudot... [tornado radius=4 freq=3][color=DARK_VIOLET]a feldolgozó tartályokban![/color][/tornado]
+Text/1f/text,A képernyő hirtelen elsötétül.
+Text/20/text,"A többiek felé fordulsz elszántan. ""El kell érnünk Idaho bunkerét. Most!"""
+Text/21/text,"Csapatod átharcol a biztonsági őrök hullámain, épp hogy elkerülve az elfogást. Sasha ellenállói figyelemelterelést teremtenek, megtisztítva utatokat előre."
+Text/22/text,Egy hajmeresztő szökés után a karbantartó alagutakon keresztül végre eléritek a biztonságos liftet Idaho privát bunkeréhez.
+Text/23/text,Sashával és szövetségeseiddel az oldaladon végre szembesíted Idahót.
+Text/24/text,"Vége van, Idaho. A titkaid lelepleződtek. Hogy ez hogyan végződik... [pulse freq=2]az rajtad múlik.[/pulse]"
+Choice/25/text,Tárgyalj a hatalom békés átadásáról (Diplomáciai)
+Choice/26/text,Követeld Idaho azonnali letartóztatását (Igazságszolgáltatás)
+Choice/27/text,Gyakorolj önbíráskodást Idaho bűneiért (Bosszú)
+Choice/28/text,Összpontosíts a Gyökértartalék infrastruktúrájának lebontására (Lebontás)
+Text/29/text,"Idaho, ennek nem kell több vérontással végződnie. Ha együttműködsz..."
+Text/2a/text,"Ó, te [color=STEEL_BLUE]idealista bolond[/color]. Azt hiszed, ez egy tárgyalás?"
+Text/2b/text,"Idaho összetör egy gombot, és [color=RED]riasztók kezdenek szólni[/color]. ""Az egyetlen dolog, amit nektek adok, egy [color=DARK_VIOLET]egyirányú jegy a sütőkádakba![/color]"""
+Text/2c/text,"Nem hiszem, Idaho. Őrök! Láttátok az aktát, [color=YELLOW]tudjátok, mit tett a családjaitokkal.[/color]"
+Text/2d/text,Egy nagydarab őr előlép és gyorsan a földre löki Idahót.
+Text/2e/text,Egy lövés visszhangzik a kamrában. A képernyő elsötétül.
+Text/2f/text,"Idaho, Spud burgonyanépének nevében, [color=CHARTREUSE]le vagy tartóztatva![/color]"
+Text/30/text,"Vége van. A nép beszélt. [color=CHARTREUSE]Új Spudot építünk, ahol gyökereink a földben vannak, nem a szenvedésben.[/color]"
+Text/31/text,"[color=CRIMSON]Nem lesz alku, nem lesz kegyelem[/color] számodra, Idaho. Egy zsarnok igazságszolgáltatása minden, amit érdemelsz."
+Text/32/text,Egy leszámolás. Az vagyok én. [color=CHARTREUSE]Minden feláldozott krumpliért visszavesszük a jövőnket![/color]
+Text/33/text,"Felejtsétek el őt. Ő egy tünet, nem a betegség. [color=CHARTREUSE]Tépjetek ki minden gyökeret és szárat ebből a szörnyűségből.[/color]"
+Text/34/text,Mennünk kell! Most!
+Text/35/text,A [color=DARK_VIOLET]Gyökértartalék[/color] bukása változások tűzvészét lobbantja lángra egész Spudban.
+Text/36/text,"Krumplik minden tartományban felkelnek, elfogadva egy [color=CHARTREUSE]új víziót nemzetük számára[/color]."
+Text/37/text,"Amíg hűek maradunk gyökereinkhez, az ideálokhoz, amelyek idehoztak minket... [color=CHARTREUSE]találunk egy utat.[/color]"
+Text/38/text,"És így, a régi Spud hamvaiból [color=CHARTREUSE]egy új nemzet kezd gyökeret ereszteni[/color]. A [color=DARK_VIOLET]Gyökértartalék[/color] uralma véget ért."
+Choice/15/disabled_text,
+Choice/28/disabled_text,
+Choice/27/disabled_text,
+Choice/26/disabled_text,
+Choice/25/disabled_text,
+Choice/16/disabled_text,
+Text/1a_rescue1/text,Egy felderítő rohan oda. Megtaláltuk! [color=CHARTREUSE]Sasha az őrizetes blokkban van![/color]
+Text/1a_rescue2/text,Készülnek... [tornado radius=3 freq=2][color=CRIMSON]feldolgozni őt[/color][/tornado]... kevesebb mint egy órán belül!
+Text/1a_rescue3/text,Meg kell mentenünk. [pulse freq=2][color=CHARTREUSE]Ő indította el mindezt.[/color][/pulse] Nem megyünk el nélküle.
+Text/1a_rescue4/text,"[wave amp=25 freq=3][color=YELLOW]Rohanj át a létesítményen![/color][/wave] Érd el Sashát, mielőtt túl késő lesz!"
+Text/1a_rescue_fail1/text,Megbotlasz. Az út előtt őrök állják el az utat!
+Text/1a_rescue_fail2/text,Viktor beront egy oldalsó ajtón. [color=CHARTREUSE]MENJ! Feltartom őket![/color]
+Text/1a_rescue_fail3/text,"Elenaért. Mindannyiukért. [color=STEEL_BLUE]Nem hagyom, hogy még egy meghaljon![/color]"
+Text/1a_rescue_fail4/text,Murphy meghúzza a tűzriasztót. [color=CHARTREUSE]Tommyért![/color] A sprinklerek elvakítják az őröket!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Elterelem a figyelmüket. Hozd ki onnan![/color]
+Text/1a_rescue_fail6/text,"Egy [color=YELLOW]feldolgozó futószalag elakad[/color], szikrákat szórva és elterelve az őrök figyelmét!"
+Text/1a_rescue_fail7/text,A sors – vagy a feldolgozottak szellemei – második esélyt ad neked.
+Text/1a_rescue5/text,"Sasha felnéz a cellájából, zúzódottan, de megtörhetetlenül. Szemei elkerekednek. [color=CHARTREUSE]Eljöttél.[/color]"
+Text/1a_rescue6/text,"Persze, hogy eljöttem. [color=CHARTREUSE]Ezt együtt fejezzük be.[/color]"
+Choice/1a_rescue7/text,"Féltem, hogy soha többé nem látlak."
+Choice/1a_rescue8/text,Halálra aggódtattál minket. Ne tedd ezt még egyszer.
+Choice/1a_rescue9/text,Dolgunk van. Idaho vár.
+Text/1a_rescue10/text,"[color=CHARTREUSE]Sasha egy rövid ölelésre húz magához.[/color] Tudtam, hogy eljössz. Soha nem kételkedtem."
+Text/1a_rescue11/text,"Most fizettessük meg velük mindenkiért, akit elvettek. [color=CHARTREUSE]Együtt.[/color]"
+Text/1a_rescue12/text,"Sasha fájdalmán keresztül is halványan elmosolyodik. [color=STEEL_BLUE]Megpróbálom.[/color] De vannak dolgok, amik megérik a kockázatot."
+Text/1a_rescue13/text,"Az, hogy itt vagy, bizonyítja ezt. Most fejezzük be ezt."
+Text/1a_rescue14/text,"Sasha bólint, elszántsága újra fellángol. [color=CHARTREUSE]Igazad van.[/color] Az érzelgősség várhat."
+Text/1a_rescue15/text,"Idaho azt hiszi, győzött. Mutassuk meg neki, mennyire téved."
+Text/158/text,Biztonsági erők közelednek! [pulse freq=3][color=YELLOW]Verekedd át magad![/color][/pulse]
+Text/21_fail1/text,Őrök közelednek minden irányból. [color=CRIMSON]Nincs hova futni![/color]
+Text/21_fail2/text,"Viktor megjelenik az őrök mögött, hangja acélhideg. [color=STEEL_BLUE]Álljatok le. Most.[/color]"
+Text/21_fail3/text,A őrök haboznak – Viktor a sajátjuk volt. [color=CRIMSON]Elena neve szerepel azokon a jegyzékekben. A családjaitok lehetnek a következők.[/color]
+Text/21_fail4/text,Néhány őr leengedi a fegyverét. Mások elmenekülnek. Az út szabaddá válik.
+Text/21_fail5/text,"Robbanás rázza meg a keleti szárnyat. Murphy hangja recseg a rádión: [color=CHARTREUSE]""Ez az én elterelésem! MOZGÁS!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Az őrök szétszóródnak a robbanás felé. Tommy büszke lenne.[/color]
+Text/21_fail7/text,"Sasha hátulról földre viszi a vezető őrt. [color=CHARTREUSE]Nem azért éltem túl azt a cellát, hogy most téged nézzelek meghalni![/color]"
+Text/21_fail8/text,[color=STEEL_BLUE]FUSS! Én megoldom![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha közelebb lép, keze megtalálja a tiédet, miközben együtt figyelitek az új hajnalt.[/color] Ezt mi építettük. Te és én."
+Text/152/text,"Amíg hűek maradunk a gyökereinkhez, az ideálokhoz, amelyek idehoztak minket... [color=CHARTREUSE]találni fogunk egy utat.[/color] Együtt."
+Text/153/text,[color=CHARTREUSE]Megszorítod a kezét. Együtt.[/color]
+Text/154/text,"[color=STEEL_BLUE]Sasha melletted áll.[/color] A te tüzed gyújtotta meg azt a szikrát, ami felégette a birodalmukat."
+Text/155/text,[color=STEEL_BLUE]A harag elszántsággá hűlt. Még van munka.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha támogatóan rád mosolyog.[/color] Hosszú utat tettél meg attól az ellenőrzőponttól. Mindannyian.
+Text/157/text,"[color=STEEL_BLUE]A bűntudat talán sosem múlik el teljesen, de célt találtál az újjáépítésben.[/color]"

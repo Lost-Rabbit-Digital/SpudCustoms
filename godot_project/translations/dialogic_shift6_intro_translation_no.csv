@@ -1,0 +1,63 @@
+﻿keys,no
+Text/b8/text,"Grenseanlegget er i fullstendig nedstengning, med bevæpnet sikkerhet som patruljerer hver korridor."
+Text/b9/text,[pulse freq=3][color=RED]OBS! NIVÅ RØD sikkerhetssituasjon![/color][/pulse] Klassifiserte dokumenter ble stjålet i går kveld.
+Text/ba/text,Vi har en [tornado radius=4 freq=3][color=CRIMSON]forræder blant oss[/color][/tornado]. Enhver som tilbakeholder informasjon vil bli behandlet som medskyldig.
+Text/bb/text,"Alle offiserer, still opp for [wave amp=15 freq=2][color=DARK_ORANGE]sikkerhetsskanning[/color][/wave]. De med forhøyede stressresponser vil bli flagget."
+Text/bc/text,Har du sett hva som skjer utenfor? Brosjyrer overalt som viser at [color=DARK_VIOLET]Root Reserve[/color] er laget av... [pulse freq=3][color=CRIMSON]av oss[/color][/pulse].
+Choice/bd/text,Senk stemmen din. Vi blir alle overvåket.
+Choice/be/text,Jeg har hørt de samme ryktene. Det er skremmende hvis det er sant.
+Choice/bf/text,Det er latterlig propaganda. Ikke spre slike løgner.
+Text/c0/text,Du har rett. Men hvis det er sant... hva gjør det oss til?
+Text/c1/text,Fetteren min ble avvist forrige måned. Betyr det...? Jeg [color=CHARTREUSE]kan ikke gjøre dette lenger[/color].
+Text/c2/text,Uttrykket deres blir reservert. Selvfølgelig. Lojal mot Spud for alltid.
+Text/c3/text,Oppgi hvor du befant deg i går kveld mellom kl. 22:00 og 04:00.
+Choice/c4/text,"Jeg var i mine kvarterer hele natten, og sov."
+Choice/c5/text,Jeg foretrekker å snakke med min juridiske representant først.
+Text/c6/text,Stressnivåene dine indikerer [color=YELLOW]bedrag[/color]. Imidlertid... ikke konkluderende. Du kan gå for nå.
+Text/c7/text,"Juridisk representant? Dette er en sikkerhetsprosedyre, ikke en rettssak. Din nektelse er notert."
+Text/c8/text,"Det fungerer. Manifestene har forårsaket oppstyr, men [color=DARK_ORANGE]Russet mistenker oss[/color]."
+Text/c9/text,Se etter allierte fra organisasjonen vår under dagens skift. [color=CHARTREUSE]Du vil gjenkjenne dem[/color].
+Text/ca/text,"Hvis du kan få dem trygt gjennom, bruk [color=CHARTREUSE]det spesielle merket vi diskuterte[/color]."
+Choice/cb/text,Det er verdt risikoen. Jeg er med.
+Choice/cc/text,Dette blir for farlig. Kanskje vi burde holde lav profil.
+Text/cd/text,"Jeg visste jeg kunne stole på deg. Når dette er over, [color=CHARTREUSE]vil Spud vite hvem de virkelige heltene var[/color]."
+Text/ce/text,Vi er langt forbi det punktet. Å holde lav profil vil ikke redde oss. [color=CHARTREUSE]Bare å velte systemet vil gjøre det[/color].
+Text/cf/text,Hver stasjon har nå det nye [color=DARK_ORANGE]RealityScan-systemet[/color]. Det oppdager uautoriserte markeringer og forfalskninger.
+Text/d0/text,Alle dokumenter må skannes før godkjenning. [color=CRIMSON]Forræderne vil bli utryddet[/color]. Jeg garanterer det.
+Text/d1/text,"Å hjelpe motstandsmedlemmer har nettopp blitt mye farligere, men [color=CHARTREUSE]sannheten må spres[/color]."
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,
+Text/c7_viktor1/text,En kraftig sikkerhetsvakt nærmer seg i pausen din. Ansiktet hans er herjet.
+Text/c7_viktor2/text,"Hei... du er en av tollbetjentene, ikke sant? Jeg har spurt rundt etter kona mi, Elena."
+Text/c7_viktor3/text,Hun krysset denne grensekontrollen for tre uker siden. [color=STEEL_BLUE]Mislyktes i kontrollen.[/color] Jeg har ikke hørt fra henne siden.
+Choice/c7_viktor4/text,"""Viktor... Jeg fant noe. Om Elena. Du må vite sannheten."""
+Choice/c7_viktor5/text,"""Jeg beklager, Viktor. Jeg har ikke sett noe."""
+Text/c7_viktor6/text,Du viser ham en kopi av manifest-siden. Han blir likblek.
+Text/c7_viktor7/text,[wave amp=25 freq=3]Hendene hans skjelver mens han leser.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Behandlet... Parti RR-2851...[/color]
+Text/c7_viktor8/text,Stemmen hans er knapt et hvisk. [tornado radius=3 freq=2][color=CRIMSON]De... de GJØRTE henne om til...[/color][/tornado]
+Text/c7_viktor9/text,Sorgen hans forvandles til kaldt raseri. [pulse freq=2][color=CRIMSON]Idaho skal betale for dette.[/color][/pulse] Jeg sverger det på hennes minne.
+Text/c7_viktor10/text,Han griper skulderen din. [color=CHARTREUSE]Takk for at du fortalte meg det.[/color] Når tiden kommer... skal jeg huske dette.
+Text/c7_viktor11/text,Han nikker trist. [color=STEEL_BLUE]Det tenkte jeg meg.[/color] Ingen vet noe. Eller ingen vil snakke.
+Text/c7_viktor12/text,Hvis du hører noe... [color=YELLOW]vær så snill.[/color] Hun er alt jeg har.
+Text/d0_qte1/text,Senere det skiftet nærmer en reisende seg med papirer som bærer det [color=CHARTREUSE]subtile motstandsmerket[/color].
+Text/d0_qte2/text,[color=DARK_ORANGE]RealityScan[/color] begynner sin skanning. [wave amp=15 freq=3][color=RED]Den kommer til å oppdage merket![/color][/wave]
+Text/d0_qte3/text,Du har sekunder på deg til å bestemme deg. Skanneren varmer opp...
+Choice/d0_qte4/text,"""Simuler en skannerfeil - raskt!"""
+Choice/d0_qte5/text,"""La skanneren fullføre skanningen sin"""
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]Du må jobbe raskt![/color][/pulse] Utløs feilen før den er ferdig med å skanne!
+Text/d0_qte7/text,Du fomler med skannerkablene. Gnister spruter. Skjermen flimrer og dør.
+Text/d0_qte8/text,Russet skynder seg bort. [color=YELLOW]Hva skjedde her?[/color]
+Choice/d0_qte9/text,"""Strømstøt, herr. Disse nye systemene er lunefulle."""
+Choice/d0_qte10/text,"""Jeg vet ikke, herr. Den sluttet bare å virke."""
+Text/d0_qte11/text,Russet gryntet. [color=STEEL_BLUE]Byråkrater gir oss utestestet utstyr.[/color] Behandle dem manuelt og flagg for ny inspeksjon.
+Text/d0_qte12/text,Russet ser mistenksomt på deg. [color=YELLOW]Så beleilig.[/color] Jeg skal få vedlikehold til å se på det. Ikke la dette skje igjen.
+Text/d0_qte13/text,Motstandsmedlemmet gir deg et knapt takknemlig nikk idet de passerer.
+Text/d0_qte14/text,Skanneren [pulse freq=3][color=RED]PIPER HØYT[/color][/pulse]. Uautoriserte markeringer oppdaget!
+Text/d0_qte15/text,Russet dukker øyeblikkelig opp. [color=CHARTREUSE]Bra gjort![/color] Enda en forræder tatt.
+Text/d0_qte16/text,"Motstandsmedlemmet blir dratt bort, med skrekk i øynene. ""[color=CRIMSON]Vær så snill, nei! Jeg har barn![/color]"""
+Text/d0_qte17/text,Din lojalitet er [color=DARK_ORANGE]notert i filen din[/color]. Fortsett slik.

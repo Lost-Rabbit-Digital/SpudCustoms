@@ -1,0 +1,27 @@
+﻿keys,ko
+Text/69_photo1/text,당신은 사진을 다시 꺼냅니다. [color=GOLD]마리스 파이퍼[/color]. 정말 선량한 얼굴이군요.
+Text/69_photo2/text,그녀의 아내는 너무나 절박했습니다. [color=STEEL_BLUE]그녀에게 무슨 일이 일어난 걸까요?[/color]
+Text/69_photo3/text,당신은 사진 배경에서 무언가를 발견합니다. - [color=DARK_VIOLET]보라색 로고[/color]가 있는 트럭입니다.
+Text/69_photo4/text,저 상징... 식당 배달품에서 본 적이 있어요. [wave amp=15 freq=2][color=DARK_VIOLET]루트 리저브.[/color][/wave]
+Text/69/text,이야기 좀 할 수 있을까요? 아무도 없는 곳에서요? [color=YELLOW]여기는 눈과 귀가 너무 많아요.[/color]
+Text/6a/text,근무가 끝난 후에 낡은 창고에서 만나요. 당신이 봐야 할 것이 있어요.
+Text/6a_photo1/text,사샤... 이 사진. 그 여자의 아내가 제게 줬어요. 그녀를 찾고 있었어요.
+Text/6a_photo2/text,사샤의 표정이 어두워집니다. [color=STEEL_BLUE]어디 봐요.[/color]
+Text/6a_photo3/text,"사샤는 사진을 유심히 살피고, 그녀의 표정은 더욱 어두워집니다. [color=CRIMSON]저 트럭을 알아요.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]이 사진을 잘 보관해요.[/color][/pulse] 나중에 중요해질 수 있어요. 날 믿어요.
+Text/6b/text,"동료들과 너무 가깝게 지내나요? 기억하세요, 친해지는 것은... [color=DARK_ORANGE]판단력 저하[/color]로 이어질 수 있습니다."
+Text/6c/text,저는 거부된 감자들에 대한 정보를 모으고 있었어요. [wave amp=20 freq=3][color=CRIMSON]그들은 추방 센터로 가지 않아요.[/color][/wave]
+Text/6d/text,[tornado radius=4 freq=2][color=CRIMSON]그들은 루트 리저브 가공 시설로 갑니다.[/color][/tornado] 한 명도 빠짐없이.
+Text/6e/text,이 문서들은 감자들이 [color=DARK_VIOLET]루트 리저브[/color] 로고가 표시된 시설에서 하역되는 것을 보여줍니다.
+Text/6f/text,무슨 일이 벌어지고 있는지 알 것 같아요...
+Text/6f2/text,[pulse freq=3][color=CRIMSON]그들은 루트 리저브가 되고 있어요.[/color][/pulse]
+Choice/70/text,"""미쳤군. 그들이... 감자를 음식으로 가공하고 있다고?"""
+Choice/71/text,"""고발하기 전에 더 많은 증거가 필요해요."""
+Text/72/text,[color=CRIMSON]추가 절차를 거친 식인 행위예요.[/color] 그게 바로 [wave amp=25 freq=3][color=DARK_VIOLET]루트 리저브[/color]예요. 그리고 우리는 그들의 재료를 선택하는 것을 돕고 있었던 거죠.
+Text/73/text,저는 몇 달 동안 증거를 모으고 있었어요. 잘 지켜봐요. 제가 옳다는 걸 알게 될 거예요.
+Text/74/text,멀리서 갑자기 경보음이 울립니다.
+Text/75/text,우린 가야 해요. 이 시간에는 보안 점검을 해요. 제가 보여준 것을 생각해 봐요.
+Text/76/text,"사샤가 당신의 손에 폴더를 쑤셔 넣습니다. ""[color=YELLOW]이걸 잘 보관해요. 그리고 아무도 믿지 마요.[/color]"""
+Text/77/text,당신은 재킷 안에 폴더를 숨깁니다. [color=DARK_VIOLET]루트 리저브[/color]. 거부된 감자들. 사라진 감자들. 모든 것이 [tornado radius=3 freq=2][color=CRIMSON]끔찍한 방식[/color]으로 연결됩니다.
+Choice/70/disabled_text,
+Choice/71/disabled_text,

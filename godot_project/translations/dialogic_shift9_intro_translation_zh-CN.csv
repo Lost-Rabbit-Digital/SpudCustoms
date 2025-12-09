@@ -1,0 +1,28 @@
+﻿keys,zh-CN
+Text/140/text,边境如同[pulse freq=3][color=CRIMSON]战区[/color][/pulse]。障碍物、装甲车和精锐卫兵严阵以待。今天正是抵抗组织计划发动袭击的日子。
+Text/141/text,[wave amp=25 freq=3][color=YELLOW]紧急广播[/color][/wave]：整个斯普德处于[color=RED]戒严状态[/color]。“抵抗组织”已对政府设施发动袭击。
+Text/142/text,任何协助这些[color=CRIMSON]极端分子[/color]的人都将面临[color=DARK_VIOLET]立即处理[/color]。部长确认：[color=DARK_VIOLET]根源储备[/color]对所有[color=DARK_ORANGE]忠诚的马铃薯[/color]来说依然安全。
+Text/143/text,多个区域已爆发[color=YELLOW]骚乱[/color]。抵抗组织细胞已袭击了三处[color=DARK_VIOLET]根源储备[/color]设施。
+Text/144/text,他们的目标：访问包含所有生产记录的中央数据库。任何不忠的迹象都意味着处理。
+Text/145/text,我们已抓获数名抵抗组织特工，包括萨莎警官。
+Text/146/text,真正的[tornado radius=3 freq=2][color=CRIMSON]叛徒[/color][/tornado]是那些[color=DARK_VIOLET]将我们的人民互相喂食[/color]的人。你们无法阻止真相！
+Text/147/text,她被拖走，仍在喊叫：[color=CHARTREUSE]人民会知道他们的食物里有什么！[/color]
+Text/148/text,这名[color=CRIMSON]叛徒[/color]将被[pulse freq=3][color=DARK_VIOLET]立即处理[/color][/pulse]。一批特殊的[color=DARK_VIOLET]根源储备[/color]，由恐怖分子自身制成。
+Text/149/text,所有边境口岸均已[color=RED]暂停[/color]，仅限持有[color=GOLD]阿尔法级别通行证[/color]的必要人员通行。
+Text/14a/text,这台扫描仪[color=YELLOW]无法被欺骗[/color]。任何没有适当通行证的人，立即拉响警报。
+Text/14b/text,一名身着官方制服的马铃薯走近，带着看似完美的阿尔法通行证。
+Text/14c/text,一张小小的蓝色卡片从文件夹中滑落。他们捡起卡片时喃喃自语：“[wave amp=15 freq=3][color=CHARTREUSE]根深蒂固。[/color][/wave]”
+Choice/14d/text,放行他们，忽略扫描仪警报（帮助抵抗组织）
+Choice/14e/text,立即拉响警报（背叛抵抗组织）
+Text/14f/text,他们眼中流露出如释重负的神情。“[color=CHARTREUSE]为了萨莎。为了斯普德。[/color]”他们消失在通往中央数据库的方向。
+Text/150/text,恐惧浮现在他们脸上。“[color=CRIMSON]你这叛徒！我们信任你！[/color]”他们很快被卫兵包围。
+Text/151/text,“干得好。你的忠诚将得到回报。”
+Text/152/text,突然，设施[color=YELLOW]因爆炸而震动[/color]。无论你的选择如何，抵抗组织的袭击都已开始。
+Text/153/text,我是坚守岗位，希望风波平息，还是[color=CHARTREUSE]挺身而出[/color]，冒一切风险揭露真相？
+Choice/154/text,我不能放弃职责。我会保持沉默，希望一切顺利。
+Choice/155/text,我同流合污太久了。是时候为正义而战了。
+Text/156/text,[pulse freq=3][color=YELLOW]快点！[/color][/pulse]安保人员正手忙脚乱——这是你逃跑的唯一机会！
+Choice/14d/disabled_text,
+Choice/14e/disabled_text,
+Choice/154/disabled_text,
+Choice/155/disabled_text,

@@ -1,0 +1,19 @@
+﻿keys,ko
+Text/86/text,오늘부로 새로운 보안 규정이 적용됩니다. [color=YELLOW]의심스러운 활동[/color]에 대한 정보가 입수되었습니다.
+Text/87/text,모든 여행객은 강화된 검사 절차를 거쳐야 합니다.
+Text/88/text,"[color=YELLOW]불안한 행동, 특이한 버릇, 또는 눈을 마주치려 하지 않는 태도[/color]를 주시하십시오."
+Text/89/text,"모든 의심스러운 물품은 압수 및 기록되어야 합니다. 물론, 스퍼드의 보안을 위해서입니다."
+Text/8a/text,"특히 우려되는 것은 [color=CRIMSON]금지된 물품[/color]입니다. - 반정부 문건, 촬영 장비 등입니다."
+Text/8b/text,[pulse freq=2][color=DARK_VIOLET]저런 자들을 위한 특별 절차가 마련되어 있습니다.[/color][/pulse]
+Text/8c/text,"[wave amp=15 freq=2][color=DARK_VIOLET]루트 리저브[/color][/wave] 트럭들이 ""프리미엄 리저브""라고 적힌 상자들을 식당으로 내리고 있습니다. 냄새는 구미를 당기지만, 속이 울렁거립니다."
+Text/8d/text,새로 나온 프리미엄 리저브 먹어봤어? 내 사촌이 지난달에 사라졌어. 검사에 통과하지 못했거든.
+Text/8e/text,"어쩌면 이 배치에 포함된 걸지도 모르지, 응? [tornado radius=2 freq=2][color=STEEL_BLUE]블랙 유머야, 알지?[/color][/tornado]"
+Choice/8f/text,"""전혀 재미없어. 하나도."""
+Choice/90/text,"""배고프지 않아. 실례할게."" (떠난다)"
+Text/91/text,네 말이 맞아. 가끔은 [pulse freq=3][color=CRIMSON]실제로 무슨 일이 벌어지고 있는지[/color][/pulse] 생각하는 것보다 농담하는 게 쉬워.
+Text/92/text,"""이봐, 이해해. 나도 입맛이 없어졌어..."""
+Text/93/text,"새로운 보안 규정, 시기가 절묘하지 않아? [wave amp=15 freq=3][color=YELLOW]그들은 루트 리저브에 대한 정보가 퍼지는 것을 막으려 하고 있어.[/color][/wave]"
+Text/94/text,우리에게 도움이 될 만한 게 있어. [color=CHARTREUSE]중요한 정보를 가진 몇몇 감자들은 통과할 자격이 있어[/color].
+Text/95/text,당신은 선택지를 신중하게 고려합니다. 오늘의 선택은 [color=CHARTREUSE]진실을 퍼뜨리는 데[/color] 도움이 될 수도... 또는 [color=CRIMSON]영원히 침묵시키는 데[/color] 도움이 될 수도 있습니다.
+Choice/8f/disabled_text,
+Choice/90/disabled_text,

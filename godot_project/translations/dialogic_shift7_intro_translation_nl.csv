@@ -1,0 +1,41 @@
+﻿keys,nl
+Text/102/text,"Goed, je hebt het gehaald. Het verzet wordt [color=CHARTREUSE]sterker[/color]. Dankzij die manifesten zien mensen de waarheid."
+Text/103/text,"Het is me gelukt om dit dossier van onze bronnen te krijgen - productieschema's, '[color=CRIMSON]ingrediënten[/color]' lijsten, namen van de [color=DARK_SLATE_BLUE]verdwenenen[/color]."
+Text/104/text,Dit is niet zomaar een voedingssupplementenprogramma. Ze [color=CRIMSON]verwerken aardappelen[/color]...en niet op een goede manier.
+Text/105/text,"Interne memo's van premier Idaho zelf, waarin hij de ""[color=DARK_ORANGE]benutting van afgewezen bezittingen[/color]"" autoriseert."
+Text/106/text,"Quota voor elk controlepunt, waarbij de Aardappeldouane de hoogste afwijzing-verwerkingsratio heeft."
+Text/107/text,De situatie buiten is verslechterd. Boze menigten verzamelen zich bij controleposten en eisen antwoorden over Root Reserve.
+Text/108/text,[color=YELLOW]NOODUITZENDING[/color]: Recente verspreiding van [color=CRIMSON]vervalste documenten[/color] heeft onnodige paniek veroorzaakt.
+Text/109/text,Een beloning van [color=GOLD]10.000 Aardappelkredieten[/color] wordt aangeboden voor informatie die leidt tot de arrestatie van deze saboteurs.
+Text/10a/text,Het consumeren of verspreiden van deze propaganda wordt nu geclassificeerd als [color=RED]hoogverraad[/color].
+Text/10b/text,De dienst van vandaag zal onder speciale protocollen werken. Elke reiziger moet een Loyaliteitsbeoordeling ondergaan.
+Text/10c/text,"Degenen die [color=CRIMSON]anti-regeringsgevoelens[/color] tonen, moeten onmiddellijk worden gemarkeerd."
+Text/10d/text,De [color=CRIMSON]verrader in ons midden[/color] zal worden gevonden. En wanneer dat gebeurt... [trekt vinger over de keel]
+Text/10e/text,"Een nerveuze aardappel nadert, [color=GOLD]geel bladinsigne[/color] gedeeltelijk zichtbaar. Een klein briefje zit tussen de papieren: ""[color=CHARTREUSE]Schuilplaats gecompromitteerd. Nieuwe locatie: Magazijn 7, Sector 4.[/color]"""
+Choice/10f/text,Verwerk ze snel door met de UV-markering (Help)
+Choice/110/text,Meld ze onmiddellijk bij de beveiliging (Verraad)
+Text/111/text,"Opluchting overspoelt hun gezicht. ""Dank je. De waarheid zal zegevieren."""
+Text/112/text,"Afschuw daagt als je de beveiliging waarschuwt. ""[wave amp=25 freq=3]Nee, alsjeblieft! Ik heb een familie![/wave]"" Hun gele insigne valt op de grond."
+Text/113/text,Goed gedaan. Je loyaliteit is opgemerkt.
+Text/114/text,Je beslissing werd opgemerkt. Wees klaar. [tornado radius=3 freq=2][color=CHARTREUSE]Er komt iets groots aan[/color][/tornado]. Het verzet plant een directe actie.
+Text/115/text,"Wanneer het gebeurt, zul je [color=YELLOW]een kant moeten kiezen[/color]. Er zal geen middenweg meer zijn."
+Text/116/text,"Met elke aardappel die je verwerkt, [pulse freq=2][color=CHARTREUSE]help je een revolutie[/color][/pulse] of [pulse freq=2][color=CRIMSON]faciliteer je een verschrikkelijk systeem[/color][/pulse]."
+Choice/10f/disabled_text,
+Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha kijkt nerveus over haar schouder.[/color] Sorry, ik... [color=YELLOW]Ik denk dat ze me in de gaten houden.[/color]"
+Text/102_foreshadow2/text,Russet heeft vragen gesteld. Hij volgt me na werktijd. [wave amp=15 freq=2][color=YELLOW]Ik moet voorzichtiger zijn.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, misschien moet je je een tijdje gedeisd houden. Laat mij meer risico nemen."
+Text/102_foreshadow4/text,[color=STEEL_BLUE]Ze schudt haar hoofd en forceert een glimlach.[/color] Nee. We zijn nu te dichtbij. Ik kan Russet aan.
+Text/102_foreshadow5/text,Bovendien... [color=CHARTREUSE]iemand moet jullie spruiten uit de problemen houden.[/color]
+Text/106_trucks1/text,Maar we weten nog steeds niet waar de belangrijkste verwerkingsfaciliteit is. De documenten vermelden alleen verzendcodes.
+Text/106_trucks2/text,Ik heb de [color=DARK_VIOLET]Root Reserve vrachtwagens[/color] in de gaten gehouden. Ze vertrekken elke nacht om 03:00 uur. Dezelfde route.
+Text/106_trucks3/text,[color=CHARTREUSE]Als we ze konden volgen...[/color] zouden we precies weten waar ze de afgekeurden heen brengen.
+Choice/106_trucks4/text,Ik doe het. Ik ken de patrouilleschema's.
+Choice/106_trucks5/text,Dat klinkt riskant. Kan iemand anders het niet doen?
+Text/106_trucks6/text,[color=CHARTREUSE]Sasha's ogen lichten op.[/color] Ik wist dat je stalen wortels had. Wees voorzichtig - ze patrouilleren 's nachts zwaar.
+Text/106_trucks7/text,03:00 uur. Je hurkt in de schaduw terwijl de [color=DARK_VIOLET]Root Reserve[/color] vrachtwagens voorbij denderen.
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Blijf verborgen! Volg het konvooi![/color][/pulse]
+Text/106_trucks9/text,"De vrachtwagens stoppen bij een enorm complex, verborgen in het industrieterrein. [color=DARK_VIOLET]Sector 7, Magazijncomplex Delta.[/color]"
+Text/106_trucks10/text,Schoorstenen spuwen paarsgetinte rook uit. De geur is... [tornado radius=3 freq=2][color=CRIMSON]onmiskenbaar.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]Het hart van Root Reserve.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]Sasha's gezichtsuitdrukking flakkert van teleurstelling.[/color] We moeten allemaal risico's nemen. Ik vind wel een andere manier.

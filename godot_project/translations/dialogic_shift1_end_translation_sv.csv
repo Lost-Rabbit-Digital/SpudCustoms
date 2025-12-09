@@ -1,0 +1,31 @@
+﻿keys,sv
+Text/50/text,"Bra jobb idag, skott. Kom ihåg, effektivitet är nyckeln. Vi har kvoter att uppfylla."
+Text/51/text,"Glöm inte att ta din ranson av [wave amp=15 freq=2][color=DARK_VIOLET]Rotreserv[/color][/wave]. Du vet vad radion säger, det är smaken av Spuds framtid!"
+Text/52/text,En liten lapp glider ut från några papper på ditt skrivbord.
+Text/53/text,"[color=GOLD]Inte allt är som det verkar. Vårt lands rötter har ruttnat. [br] Följ spåret, men var försiktig så att du inte tystas.[/color] [br] - [color=CHARTREUSE]En vän[/color]"
+Text/54/text,Den lappen... och sättet som Russet undvek min fråga om [pulse freq=3][color=CRIMSON]kasserade potatisar[/color][/pulse]... [br] Något känns [color=STEEL_BLUE]konstigt[/color].
+Text/55/text,Jag bör förbli [color=YELLOW]vaksam[/color]. Det pågår mer här än att stämpla pass.
+Text/52b/text,Den var inte där i morse. Någon placerade den [color=YELLOW]under ditt pass[/color].
+Text/53b/text,"[color=GOLD]Följ spåret, men se till att inte bli tystad.[/color]"
+Text/53c/text,[color=GOLD]Se vem som äter [/color][color=DARK_VIOLET]Reserven[/color][color=GOLD]. Se vem som vägrar.[/color]
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]En vän[/color]
+Choice/53e/text,Håll lappen gömd – undersök tyst
+Choice/53f/text,Förstör lappen – detta kan vara ett test
+Choice/53g/text,Visa lappen för Russet omedelbart
+Text/53h/text,Du viker lappen försiktigt och stoppar den i fickan. [color=CHARTREUSE]Någon sträcker ut en hand.[/color]
+Text/53i/text,"Men vem? Och varför du, på din allra första dag?"
+Text/53j/text,Du river lappen i små bitar
+Text/53k/text,"Russet sa att groddar som ställer frågor blir ""omplacerade"". Bättre att inte ta några risker."
+Text/53l/text,"Du hinner ikapp Russet innan han går. ""Sir? Jag hittade det här bland mina papper..."""
+Text/53m/text,"Russet rycker åt sig lappen, läser den. Hans uttryck flimrar till – [color=YELLOW]var det igenkänning?[/color]"
+Text/53n/text,Propaganda. Rebeller som försöker korrumpera nya tjänstemän. [color=DARK_ORANGE]Du gjorde rätt som tog det här till mig.[/color]
+Text/53o/text,Han stoppar lappen i fickan. Glöm att du någonsin såg den. Och håll utkik efter någon som agerar... [color=CRIMSON]misstänkt[/color].
+Text/54b/text,"""[color=VIOLET]Bearbetad. Enligt protokoll.[/color]"" Vad betyder det ens?"
+Text/54c/text,Den där lappen... den sa att rötterna har blivit [color=CRIMSON]ruttna[/color].
+Text/54d/text,"Men Spud är härligt, eller hur? Det är vad de berättade för oss. Vad jag trodde på."
+Text/54e/text,"Du tar fram lappen och läser den igen. ""[color=GOLD]Se vem som äter Reserven. Se vem som vägrar.[/color]"""
+Text/54f/text,Imorgon ska du vara uppmärksam. [color=YELLOW]Någon försöker berätta något för dig.[/color]
+Text/54g/text,Russets ansikte när han läste lappen. För ett ögonblick såg han nästan... [color=STEEL_BLUE]rädd[/color] ut.
+Text/54h/text,Vad är [color=DARK_VIOLET]Rotreserven[/color] egentligen? Och varför skulle någon varna dig för den?
+Text/54i/text,"Lappen är borta, men orden dröjer sig kvar. [color=YELLOW]Allt är inte som det verkar.[/color]"
+Text/54j/text,Kanske var det smarta valet att förstöra den. Kanske tystade du precis din enda allierade.

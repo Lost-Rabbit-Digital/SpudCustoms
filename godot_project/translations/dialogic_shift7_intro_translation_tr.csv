@@ -1,0 +1,41 @@
+﻿keys,tr
+Text/102/text,"İyi, başardın. Direniş [color=CHARTREUSE]güçleniyor[/color]. Bu manifestolar sayesinde insanlar gerçeği görüyor."
+Text/103/text,"Kaynaklarımızdan bu dosyayı ele geçirmeyi başardım - üretim programları, '[color=CRIMSON]içerik[/color]' listeleri, [color=DARK_SLATE_BLUE]kaybolan[/color] kişilerin isimleri."
+Text/104/text,Bu sadece bir gıda takviyesi programı değil. [color=CRIMSON]Patates işliyorlar[/color]...ve iyi bir şekilde değil.
+Text/105/text,"Başbakan Idaho'nun bizzat kendisinden, ""[color=DARK_ORANGE]reddedilen varlıkların kullanımını[/color]"" yetkilendiren iç yazışmalar."
+Text/106/text,"Her kontrol noktası için kotalar, Patates Gümrüğü'nün en yüksek ret-işleme oranına sahip olduğu."
+Text/107/text,Dışarıdaki durum kötüleşti. Öfkeli kalabalıklar kontrol noktalarında toplanıp Root Reserve hakkında cevaplar istiyor.
+Text/108/text,[color=YELLOW]ACİL YAYIN[/color]: Son zamanlarda dolaşıma giren [color=CRIMSON]sahte belgeler[/color] gereksiz paniğe neden oldu.
+Text/109/text,Bu sabotörlerin yakalanmasına yol açacak bilgiler için [color=GOLD]10.000 Patates Kredisi[/color] ödül veriliyor.
+Text/10a/text,Bu propagandayı tüketmek veya dağıtmak artık [color=RED]vatana ihanet[/color] olarak sınıflandırılıyor.
+Text/10b/text,Bugünkü vardiya özel protokoller altında çalışacak. Her yolcu Sadakat Değerlendirmesi'nden geçmeli.
+Text/10c/text,[color=CRIMSON]Hükümet karşıtı duygular[/color] gösterenler derhal işaretlenmeli.
+Text/10d/text,[color=CRIMSON]Aramızdaki hain[/color] bulunacak. Ve bulunduğunda... [parmağını boğazından geçirir]
+Text/10e/text,"Gergin bir patates yaklaşıyor, [color=GOLD]sarı yaprak rozeti[/color] kısmen görünür. Kağıtların arasına küçük bir not sıkıştırılmış: ""[color=CHARTREUSE]Güvenli ev tehlikede. Yeni konum: Depo 7, Sektör 4.[/color]"""
+Choice/10f/text,Onları UV işaretiyle hızlıca işleyin (Yardım)
+Choice/110/text,Hemen güvenliğe bildirin (İhanet)
+Text/111/text,"Yüzlerini rahatlama kaplıyor. ""Teşekkür ederim. Gerçek galip gelecek."""
+Text/112/text,"Güvenliğe işaret verdiğinde dehşet belirir. ""[wave amp=25 freq=3]Hayır, lütfen! Bir ailem var![/wave]"" Sarı rozetleri yere düşer."
+Text/113/text,Aferin. Sadakatin not edildi.
+Text/114/text,Kararın fark edildi. Hazır ol. [tornado radius=3 freq=2][color=CHARTREUSE]Büyük bir şey geliyor[/color][/tornado]. Direniş doğrudan bir eylem planlıyor.
+Text/115/text,"Olduğunda, [color=YELLOW]bir taraf seçmen[/color] gerekecek. Artık orta yol kalmayacak."
+Text/116/text,"Her işlediğin patatesle, ya [pulse freq=2][color=CHARTREUSE]bir devrime yardım ediyorsun[/color][/pulse] ya da [pulse freq=2][color=CRIMSON]korkunç bir sistemi mümkün kılıyorsun[/color][/pulse]."
+Choice/10f/disabled_text,
+Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha omzunun üzerinden gergin bir şekilde bakındı.[/color] Üzgünüm, ben... [color=YELLOW]Sanırım beni izliyorlar.[/color]"
+Text/102_foreshadow2/text,Russet sorular soruyor. Vardiya sonrası beni takip ediyor. [wave amp=15 freq=2][color=YELLOW]Daha dikkatli olmalıyım.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, belki bir süre ortalıkta görünmesen iyi olur. Riskin daha fazlasını ben alayım."
+Text/102_foreshadow4/text,"[color=STEEL_BLUE]Başını salladı, zoraki bir gülümseme takındı.[/color] Hayır. Artık çok yakınız. Russet'i hallederim."
+Text/102_foreshadow5/text,Ayrıca... [color=CHARTREUSE]birinin sizi filizleri beladan uzak tutması gerekiyor.[/color]
+Text/106_trucks1/text,Ama ana işleme tesisinin nerede olduğunu hala bilmiyoruz. Belgelerde sadece sevkiyat kodları listeleniyor.
+Text/106_trucks2/text,[color=DARK_VIOLET]Kök Rezervi kamyonlarını[/color] izliyorum. Her gece 03.00'te ayrılıyorlar. Aynı güzergah.
+Text/106_trucks3/text,[color=CHARTREUSE]Onları takip edebilsek...[/color] reddedilenleri tam olarak nereye götürdüklerini bilirdik.
+Choice/106_trucks4/text,Ben yaparım. Devriye programlarını biliyorum.
+Choice/106_trucks5/text,Kulağa riskli geliyor. Başka biri yapamaz mı?
+Text/106_trucks6/text,[color=CHARTREUSE]Sasha'nın gözleri parladı.[/color] Çelik gibi köklerin olduğunu biliyordum. Dikkatli ol - geceleri yoğun devriye geziyorlar.
+Text/106_trucks7/text,Saat 03.00. [color=DARK_VIOLET]Kök Rezervi[/color] kamyonları gürültüyle geçerken sen gölgelerde çömeliyorsun.
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Saklı kal! Konvoyu takip et![/color][/pulse]
+Text/106_trucks9/text,"Kamyonlar sanayi bölgesinde gizlenmiş devasa bir komplekste durur. [color=DARK_VIOLET]7. Sektör, Delta Depo Kompleksi.[/color]"
+Text/106_trucks10/text,Bacalar morumsu duman püskürtüyor. Koku... [tornado radius=3 freq=2][color=CRIMSON]şaşmaz.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]Kök Rezervi'nin kalbi.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]Sasha'nın ifadesinde hayal kırıklığı belirdi.[/color] Hepimiz risk almak zorundayız. Başka bir yol bulacağım.

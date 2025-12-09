@@ -1,0 +1,63 @@
+﻿keys,sk
+Text/b8/text,"Pohraničné zariadenie je v úplnej uzávere, s ozbrojenou ochrankou hliadkujúcou v každej chodbe."
+Text/b9/text,[pulse freq=3][color=RED]POZOR! Bezpečnostná situácia ÚROVNE ČERVENÁ![/color][/pulse] Tajné dokumenty boli v noci odcudzené.
+Text/ba/text,Máme [tornado radius=4
+Text/bb/text,"Všetci dôstojníci, nastúpte na [wave amp=15 freq=2][color=DARK_ORANGE]bezpečnostné skenovanie[/color][/wave]. Tí so zvýšenými stresovými reakciami budú označení."
+Text/bc/text,"Videli ste, čo sa deje vonku? Všade letáky ukazujúce, že [color=DARK_VIOLET]Root Reserve[/color] je vyrobený z... [pulse freq=3][color=CRIMSON]z nás[/color][/pulse]."
+Choice/bd/text,Stíš hlas. Všetci sme sledovaní.
+Choice/be/text,"Počul som rovnaké zvesti. Je to desivé, ak je to pravda."
+Choice/bf/text,To je smiešna propaganda. Nešír takéto klamstvá.
+Text/c0/text,Máš pravdu. Ale ak je to pravda... čo to z nás robí?
+Text/c1/text,Môj bratranec bol minulý mesiac odmietnutý. Znamená to...? [color=CHARTREUSE]Už takto nemôžem pokračovať[/color].
+Text/c2/text,Ich výraz sa stáva ostražitým. Samozrejme. Navždy verný Spudu.
+Text/c3/text,"Uveďte, kde ste sa nachádzali včera v noci medzi 22:00 a 04:00."
+Choice/c4/text,Bol som celú noc vo svojich ubytovacích priestoroch a spal som.
+Choice/c5/text,Radšej by som najprv hovoril so svojím právnym zástupcom.
+Text/c6/text,Vaše úrovne stresu naznačujú [color=YELLOW]klamstvo[/color]. Avšak... nepreukazné. Zatiaľ môžete ísť.
+Text/c7/text,"Právny zástupca? Toto je bezpečnostný postup, nie súdny proces. Vaše odmietnutie bolo zaznamenané."
+Text/c8/text,"Funguje to. Manifesty spôsobili rozruch, ale [color=DARK_ORANGE]Russet nás podozrieva[/color]."
+Text/c9/text,Sledujte spojencov z našej organizácie počas dnešnej zmeny. [color=CHARTREUSE]Spoznáte ich[/color].
+Text/ca/text,"Ak ich dokážete bezpečne previesť, použite [color=CHARTREUSE]špeciálnu značku, o ktorej sme hovorili[/color]."
+Choice/cb/text,Stojí to za to riziko. Idem do toho.
+Choice/cc/text,Začína to byť príliš nebezpečné. Možno by sme sa mali držať v ústraní.
+Text/cd/text,"Vedel som, že sa na teba môžem spoľahnúť. Keď sa to skončí, [color=CHARTREUSE]Spud bude vedieť, kto boli skutoční hrdinovia[/color]."
+Text/ce/text,Sme ďaleko za týmto bodom. Držať sa v ústraní nás nezachráni. [color=CHARTREUSE]Iba zvrhnutie systému to dokáže[/color].
+Text/cf/text,Každá stanica teraz má nový [color=DARK_ORANGE]systém RealityScan[/color]. Detekuje neautorizované značky a falzifikáty.
+Text/d0/text,Všetky dokumenty musia byť pred schválením oskenované. [color=CRIMSON]Zradcovia budú vykoreňovaní[/color]. Garantujem to.
+Text/d1/text,"Pomáhať členom odboja sa práve stalo oveľa nebezpečnejším, ale [color=CHARTREUSE]pravda sa musí šíriť[/color]."
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,
+Text/c7_viktor1/text,Mohutný strážnik sa priblíži počas tvojej prestávky. Jeho tvár je strhaná.
+Text/c7_viktor2/text,"Hej... ty si jeden z colníkov, však? Pýtal som sa na moju ženu, Elenu."
+Text/c7_viktor3/text,Prešla cez tento kontrolný bod pred tromi týždňami. [color=STEEL_BLUE]Neprešla kontrolou.[/color] Odvtedy som o nej nič nepočul.
+Choice/c7_viktor4/text,„Viktor... Niečo som našiel. O Elene. Musíš poznať pravdu.“
+Choice/c7_viktor5/text,"„Je mi ľúto, Viktor. Nič som nevidel.“ (Klamať, aby si ho ochránil)"
+Text/c7_viktor6/text,Ukážeš mu kópiu stránky z manifestu. Jeho tvár zbledne.
+Text/c7_viktor7/text,"[wave amp=25 freq=3]Jeho ruky sa trasú, keď číta.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Spracovaná... Šarža RR-2851...[/color]"
+Text/c7_viktor8/text,Jeho hlas je sotva šepot. [tornado radius=3 freq=2][color=CRIMSON]Oni... oni ju PREMENILI na...[/color][/tornado]
+Text/c7_viktor9/text,Jeho žiaľ sa mení na chladnú zúrivosť. [pulse freq=2][color=CRIMSON]Idaho za to zaplatí.[/color][/pulse] Prisahám na jej pamiatku.
+Text/c7_viktor10/text,"Chytí ťa za rameno. [color=CHARTREUSE]Ďakujem, že si mi to povedal.[/color] Keď príde čas... spomeniem si na to."
+Text/c7_viktor11/text,Smutne prikývne. [color=STEEL_BLUE]Myslel som si to.[/color] Nikto nič nevie. Alebo nikto nechce hovoriť.
+Text/c7_viktor12/text,"Ak niečo počuješ... [color=YELLOW]prosím.[/color] Je všetko, čo mám."
+Text/d0_qte1/text,"Neskôr počas tej smeny sa priblíži cestujúci s papiermi, ktoré nesú [color=CHARTREUSE]nenápadnú značku odporu[/color]."
+Text/d0_qte2/text,[color=DARK_ORANGE]RealityScan[/color] začína skenovať. [wave amp=15 freq=3][color=RED]Detekuje značku![/color][/wave]
+Text/d0_qte3/text,Máš sekundy na rozhodnutie. Skener sa zahrieva...
+Choice/d0_qte4/text,„Predstieraj poruchu skenera – rýchlo!“ (Pomôcť odboju)
+Choice/d0_qte5/text,„Nechaj skener dokončiť skenovanie“ (Dodržať protokol)
+Text/d0_qte6/text,"[pulse freq=3][color=YELLOW]Musíš konať rýchlo![/color][/pulse] Spusti poruchu, kým nedokončí skenovanie!"
+Text/d0_qte7/text,Šmátraš po kábloch skenera. Iskry lietajú. Obrazovka bliká a zhasne.
+Text/d0_qte8/text,Russet pribehne. [color=YELLOW]Čo sa tu stalo?[/color]
+Choice/d0_qte9/text,"„Prepätie, pane. Tieto nové systémy sú náladové.“"
+Choice/d0_qte10/text,"„Neviem, pane. Jednoducho mi zhasol.“"
+Text/d0_qte11/text,Russet si odfrkne. [color=STEEL_BLUE]Byrokrati nám dávajú netestované vybavenie.[/color] Spracuj ich manuálne a označ na opätovnú kontrolu.
+Text/d0_qte12/text,Russet si ťa podozrievavo premeria. [color=YELLOW]Aká náhoda.[/color] Nechám to pozrieť údržbárov. Nech sa to už nestane.
+Text/d0_qte13/text,"Člen odboja ti venuje sotva badateľné prikývnutie vďaky, keď prechádzajú."
+Text/d0_qte14/text,Skener [pulse freq=3][color=RED]HLASNO PÍPA[/color][/pulse]. Zistené nepovolené označenia!
+Text/d0_qte15/text,Russet sa okamžite objaví. [color=CHARTREUSE]Výborne![/color] Ďalší zradca chytený.
+Text/d0_qte16/text,"Člen odboja je odvlečený preč, s hrôzou v očiach. ""[color=CRIMSON]Prosím, nie! Mám deti![/color]"""
+Text/d0_qte17/text,Vaša lojalita je [color=DARK_ORANGE]zaznamenaná vo vašom spise[/color]. Len tak ďalej.

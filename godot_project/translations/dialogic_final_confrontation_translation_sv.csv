@@ -1,0 +1,85 @@
+﻿keys,sv
+Text/11/text,"Spud-gränsen är i [pulse freq=3][color=CRIMSON]kaos[/color][/pulse]. Panikslagna potatisar översvämmar kontrollpunkterna, desperata att fly efter de läckta dokumenten."
+Text/12/text,Du slinker igenom med Sasha. [wave amp=20 freq=3][color=CHARTREUSE]Vi måste fortsätta pressa på![/color][/wave] Folket känner nu till sanningen.
+Text/13/text,"De kan inte längre tysta ned sanningen. Om vi kan infiltrera [color=DARK_VIOLET]Rotreservatets[/color] anläggning och sända bevis, kommer det att [tornado radius=3 freq=2][color=CHARTREUSE]tända revolutionen[/color][/tornado]."
+Text/14/text,Den platsen är en fästning. Och nu har vi en [color=YELLOW]före detta tulltjänsteman[/color] ibland oss. Deras ögon smalnar misstänksamt mot dig.
+Choice/15/text,"Jag förstår er tvivel, men jag är hängiven denna sak."
+Choice/16/text,Jag har redan offrat allt. Jag kommer inte att backa nu.
+Text/17/text,Vackra ord. Men sådana har vi hört förut.
+Text/18/text,"De hjälpte oss att få tag på dokumenten. Det är handling, inte ord."
+Text/19/text,"Kan inte gå tillbaka till att vara en lojal potatis nu. Välkommen till motståndet, kamrat."
+Text/1a/text,"Efter en spänd infiltration står ditt team i hjärtat av [color=DARK_VIOLET]Rotreservatet[/color], det [pulse freq=3][color=CRIMSON]fruktansvärda förtryckets maskineri[/color][/pulse] blottlagt."
+Text/1b/text,"[wave amp=25 freq=3][color=RED]Larm tjuter[/color][/wave] medan vakter skyndar för att svara på ert intrång. Ni rusar genom korridorer, undviker säkerhetssystem."
+Text/1c/text,"En skärm flimrar till. ""Jaha, jaha, [color=CRIMSON]förrädaren[/color] återvänder med rebellavskum."""
+Text/1d/text,Trodde du att du kunde stoppa Spuds framsteg? [color=DARK_VIOLET]Rotreservatet[/color] är denna nations livsblod.
+Text/1e/text,Men oroa dig inte. Du kommer fortfarande att tjäna Spud... [tornado radius=4 freq=3][color=DARK_VIOLET]i bearbetningskaren![/color][/tornado]
+Text/1f/text,Skärmen blir plötsligt svart.
+Text/20/text,"Du vänder dig till de andra med beslutsamhet. ""Vi måste nå Idahos bunker. Nu!"""
+Text/21/text,"Er grupp kämpar genom vågor av säkerhetspersonal, undviker med nöd och näppe att bli tillfångatagna. Sashas motståndskämpar skapar avledningsmanövrar, röjer vägen framåt."
+Text/22/text,Efter en hårresande flykt genom underhållstunnlar når ni äntligen den säkra hissen till Idahos privata bunker.
+Text/23/text,Med Sasha och dina allierade vid din sida konfronterar du äntligen Idaho.
+Text/24/text,"Det är över, Idaho. Dina hemligheter är avslöjade. Hur detta slutar... [pulse freq=2]det är upp till dig.[/pulse]"
+Choice/25/text,Förhandla om en fredlig maktövergång (Diplomatisk)
+Choice/26/text,Kräv Idahos omedelbara arrestering (Rättvisa)
+Choice/27/text,Verkställ vigilanträttvisa för Idahos brott (Hämnd)
+Choice/28/text,Fokusera på att montera ner Rotreservatets infrastruktur (Demontering)
+Text/29/text,"Idaho, det behöver inte sluta med mer blodsutgjutelse. Om du samarbetar..."
+Text/2a/text,"Åh, din [color=STEEL_BLUE]idealistiska dåre[/color]. Tror du att detta är en förhandling?"
+Text/2b/text,"Idaho krossar en knapp, och [color=RED]larm börjar tjuta[/color]. ""Det enda jag kommer att ge er är en [color=DARK_VIOLET]enkelresa till friteringskarets![/color]"""
+Text/2c/text,"Det tror jag inte, Idaho. Vakter! Ni såg dossiern, [color=YELLOW]ni vet vad han gjorde mot era familjer.[/color]"
+Text/2d/text,En stor vakt kliver fram och sparkar snabbt Idaho till marken.
+Text/2e/text,Ett skott ekar genom kammaren. Skärmen tonas till svart.
+Text/2f/text,"Idaho, i namnet av potatisfolket i Spud, [color=CHARTREUSE]är du arresterad![/color]"
+Text/30/text,"Det är över. Folket har talat. [color=CHARTREUSE]Vi kommer att bygga ett nytt Spud där våra rötter är i jorden, inte i lidande.[/color]"
+Text/31/text,"Det kommer [color=CRIMSON]inte finnas några avtal, ingen nåd[/color] för dig, Idaho. En tyranns rättvisa är allt du förtjänar."
+Text/32/text,En uppgörelse. Det är vad jag är. [color=CHARTREUSE]För varje potatis som offrats tar vi tillbaka vår framtid![/color]
+Text/33/text,"Glöm honom. Han är ett symptom, inte sjukdomen. [color=CHARTREUSE]Riv ner varje rot och stjälk av denna avskyvärda sak.[/color]"
+Text/34/text,Vi måste gå! Nu!
+Text/35/text,Fallet av [color=DARK_VIOLET]Rotreservatet[/color] tänder en brand av förändring över hela Spud.
+Text/36/text,"Potatisar i varje provins reser sig, omfamnar en [color=CHARTREUSE]ny vision för sin nation[/color]."
+Text/37/text,"Så länge vi förblir trogna våra rötter, de ideal som förde oss hit... [color=CHARTREUSE]kommer vi att hitta en väg.[/color]"
+Text/38/text,"Och så, ur askan av det gamla Spud, [color=CHARTREUSE]börjar en ny nation slå rot[/color]. [color=DARK_VIOLET]Rotreservatets[/color] styre är över."
+Choice/15/disabled_text,
+Choice/28/disabled_text,
+Choice/27/disabled_text,
+Choice/26/disabled_text,
+Choice/25/disabled_text,
+Choice/16/disabled_text,
+Text/1a_rescue1/text,En spanare rusar fram. Vi hittade henne! [color=CHARTREUSE]Sasha är i förvarsblocket![/color]
+Text/1a_rescue2/text,De förbereder sig för att... [tornado radius=3 freq=2][color=CRIMSON]bearbeta henne[/color][/tornado]... om mindre än en timme!
+Text/1a_rescue3/text,Vi måste rädda henne. [pulse freq=2][color=CHARTREUSE]Hon startade allt det här.[/color][/pulse] Vi lämnar inte utan henne.
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]Rusa genom anläggningen![/color][/wave] Nå Sasha innan det är för sent!
+Text/1a_rescue_fail1/text,Du snubblar. Vägen framåt är blockerad av vakter!
+Text/1a_rescue_fail2/text,Viktor stormar in genom en sidodörr. [color=CHARTREUSE]KÖR! Jag håller dem![/color]
+Text/1a_rescue_fail3/text,För Elena. För dem alla. [color=STEEL_BLUE]Jag låter ingen mer dö![/color]
+Text/1a_rescue_fail4/text,Murphy rycker i ett brandlarm. [color=CHARTREUSE]För Tommy![/color] Sprinklerna bländar vakterna!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Jag skapar en distraktion. Få ut henne därifrån![/color]
+Text/1a_rescue_fail6/text,"Ett [color=YELLOW]bearbetningsband fastnar[/color], sprutar gnistor och distraherar vakterna!"
+Text/1a_rescue_fail7/text,Ödet – eller spökena från de bearbetade – ger dig en andra chans.
+Text/1a_rescue5/text,"Sasha tittar upp från sin cell, mörbultad men obruten. Hennes ögon vidgas. [color=CHARTREUSE]Du kom.[/color]"
+Text/1a_rescue6/text,Självklart kom jag. [color=CHARTREUSE]Vi avslutar det här tillsammans.[/color]
+Choice/1a_rescue7/text,Jag var rädd att jag aldrig skulle få se dig igen.
+Choice/1a_rescue8/text,Du gjorde oss oroliga. Gör inte det igen.
+Choice/1a_rescue9/text,Vi har jobb att göra. Idaho väntar.
+Text/1a_rescue10/text,[color=CHARTREUSE]Sasha drar dig in i en kort kram.[/color] Jag visste att du skulle komma. Jag tvivlade aldrig.
+Text/1a_rescue11/text,Nu ska vi låta dem betala för alla de har tagit. [color=CHARTREUSE]Tillsammans.[/color]
+Text/1a_rescue12/text,Sasha lyckas framkalla ett svagt leende trots smärtan. [color=STEEL_BLUE]Jag ska försöka.[/color] Men vissa saker är värda risken.
+Text/1a_rescue13/text,Att du är här bevisar det. Nu avslutar vi det här.
+Text/1a_rescue14/text,"Sasha nickar, hennes beslutsamhet återuppväckt. [color=CHARTREUSE]Du har rätt.[/color] Känslor kan vänta."
+Text/1a_rescue15/text,Idaho tror att han har vunnit. Låt oss visa honom hur fel han har.
+Text/158/text,Säkerhetsstyrkor närmar sig! [pulse freq=3][color=YELLOW]Kämpa dig igenom![/color][/pulse]
+Text/21_fail1/text,Vakter närmar sig från alla håll. [color=CRIMSON]Det finns ingenstans att fly![/color]
+Text/21_fail2/text,"Viktor dyker upp bakom vakterna, med en röst kall som stål. [color=STEEL_BLUE]Lägg ner vapnen. Nu.[/color]"
+Text/21_fail3/text,Vakterna tvekar – Viktor var en av deras egna. [color=CRIMSON]Elenas namn står på de manifesten. Era familjer kan stå näst på tur.[/color]
+Text/21_fail4/text,Vissa vakter sänker sina vapen. Andra flyr. Vägen är fri.
+Text/21_fail5/text,"En explosion skakar östflygeln. Murphys röst sprakar i kommunikationsradion: [color=CHARTREUSE]""Det är min avledning! RÖR PÅ ER!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Vakterna skingras mot explosionen. Tommy skulle vara stolt.[/color]
+Text/21_fail7/text,Sasha tacklar den ledande vakten bakifrån. [color=CHARTREUSE]Jag överlevde inte den cellen bara för att se dig dö![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]SPRING! Jag tar hand om det här![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha flyttar sig närmare, hennes hand finner din när ni ser den nya gryningen tillsammans.[/color] Vi byggde det här. Du och jag."
+Text/152/text,"Så länge vi förblir trogna våra rötter, de ideal som förde oss hit... [color=CHARTREUSE]kommer vi att hitta en väg.[/color] Tillsammans."
+Text/153/text,[color=CHARTREUSE]Du kramar hennes hand. Tillsammans.[/color]
+Text/154/text,[color=STEEL_BLUE]Sasha står bredvid dig.[/color] Din eld tände gnistan som brände ner deras imperium.
+Text/155/text,[color=STEEL_BLUE]Ilskan har svalnat till beslutsamhet. Det finns fortfarande arbete att göra.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha ger dig ett uppmuntrande leende.[/color] Du har kommit långt från den där kontrollstationen. Det har vi alla.
+Text/157/text,"[color=STEEL_BLUE]Skulden kanske aldrig helt försvinner, men du har funnit mening i återuppbyggnaden.[/color]"

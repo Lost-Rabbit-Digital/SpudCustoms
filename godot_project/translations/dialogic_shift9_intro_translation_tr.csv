@@ -1,0 +1,28 @@
+﻿keys,tr
+Text/140/text,"Sınır bir [pulse freq=3][color=CRIMSON]savaş bölgesi[/color][/pulse] gibi görünüyor. Barikatlar, zırhlı araçlar ve seçkin muhafızlar hazır bekliyor. Bugün direnişin saldırmayı planladığı gün."
+Text/141/text,"[wave amp=25 freq=3][color=YELLOW]ACİL YAYIN[/color][/wave]: Tüm Spud [color=RED]sıkıyönetim[/color] altında. ""Direniş"" hükümet tesislerine saldırılar başlattı."
+Text/142/text,Bu [color=CRIMSON]aşırılıkçılara[/color] yardım eden herkes [color=DARK_VIOLET]anında işleme[/color] tabi tutulacak. Bakanlık onaylıyor: [color=DARK_VIOLET]Root Reserve[/color] tüm [color=DARK_ORANGE]sadık patatesler[/color] için güvenli kalmaya devam ediyor.
+Text/143/text,Birçok sektörde [color=YELLOW]ayaklanmalar patlak verdi[/color]. Direniş hücreleri üç [color=DARK_VIOLET]Root Reserve[/color] tesisine saldırdı.
+Text/144/text,Hedefleri: tüm üretim kayıtlarının bulunduğu merkezi veritabanına erişmek. Sadakatsizliğin her işareti işlenme anlamına gelir.
+Text/145/text,Memur Sasha da dahil olmak üzere birkaç direniş operatifini yakaladık.
+Text/146/text,"[tornado radius=3 freq=2][color=CRIMSON]Gerçek hainler[/color][/tornado], [color=DARK_VIOLET]halkımızı birbirine yediren[/color] kişilerdir. Gerçeği durduramazsınız!"
+Text/147/text,Hala bağırarak sürükleniyor: [color=CHARTREUSE]İnsanlar yemeklerinde ne olduğunu bilecek![/color]
+Text/148/text,[color=CRIMSON]Hain[/color] [pulse freq=3][color=DARK_VIOLET]derhal işlenecek[/color][/pulse]. Teröristlerin kendilerinden yapılmış özel bir [color=DARK_VIOLET]Root Reserve[/color] partisi.
+Text/149/text,"Tüm sınır geçişleri, [color=GOLD]Alpha Seviye izni[/color] olan temel personel dışında [color=RED]askıya alındı[/color]."
+Text/14a/text,Bu tarayıcı [color=YELLOW]kandırılamaz[/color]. Uygun izni olmayan herkes için derhal alarm verin.
+Text/14b/text,"Resmi üniformalı bir patates, görünüşte mükemmel Alpha kimlik bilgileriyle yaklaşıyor."
+Text/14c/text,"Dosyadan küçük mavi bir kart düşüyor. ""[wave amp=15 freq=3][color=CHARTREUSE]Kökler derine iner.[/color][/wave]"", kartı alırken mırıldanıyor."
+Choice/14d/text,Tarayıcı alarmlarını görmezden gelerek onları geçirin (Direnişe yardım edin)
+Choice/14e/text,Derhal alarm verin (Direnişe ihanet edin)
+Text/14f/text,"Gözlerinde rahatlama görünüyor. ""[color=CHARTREUSE]Sasha için. Spud için.[/color]"" Merkezi veritabanına doğru kayboluyorlar."
+Text/150/text,"Yüzlerinde dehşet beliriyor. ""[color=CRIMSON]Seni hain! Sana güvenmiştik![/color]"" Hızla muhafızlar tarafından çevriliyor."
+Text/151/text,Mükemmel iş. Sadakatin ödüllendirilecek.
+Text/152/text,Aniden tesis [color=YELLOW]patlamalarla sarsılıyor[/color]. Seçiminizden bağımsız olarak direniş saldırısı başladı.
+Text/153/text,"Görevimde kalıp bunun geçmesini mi beklemeliyim, yoksa [color=CHARTREUSE]tutum alıp[/color] gerçeği ortaya çıkarmak için her şeyi riske mi atmalıyım?"
+Choice/154/text,Görevimi terk edemem. Sessiz kalacağım ve en iyisini umacağım.
+Choice/155/text,Çok uzun zamandır suç ortağıydım. Doğru olan için savaşma zamanı.
+Choice/155/disabled_text,
+Choice/14d/disabled_text,
+Choice/154/disabled_text,
+Choice/14e/disabled_text,
+Text/156/text,[pulse freq=3][color=YELLOW]Hızlı hareket et![/color][/pulse] Güvenlik karışıklık içinde - bu senin tek kaçış şansın!

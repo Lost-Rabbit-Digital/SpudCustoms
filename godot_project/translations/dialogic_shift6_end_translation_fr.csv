@@ -1,0 +1,43 @@
+﻿keys,fr
+Text/240/text,"Alors que le service du soir touche à sa fin, la plupart des agents sont partis. Seuls vous et une poignée de gardes restez."
+Text/241/text,Un garde costaud s'approche de votre poste. Il s'appelle Viktor. Je suis de garde de nuit.
+Text/242/text,"Ses yeux sont fatigués, hantés. Vous êtes le nouveau, n'est-ce pas ? Celui que Russet ne quitte pas des yeux ?"
+Choice/243/text,J'essaie juste de faire mon travail. Pourquoi Russet me surveille-t-il ?
+Choice/244/text,Y a-t-il quelque chose que je devrais savoir ?
+Text/245/text,Il hausse lourdement les épaules. Russet surveille tous ceux qui posent des questions. Ma [color=STEEL_BLUE]femme a posé des questions[/color] une fois.
+Text/246/text,Elle n'est plus là pour en poser.
+Text/247/text,"Il jette un coup d'œil autour de lui, puis baisse la voix. Juste... faites attention à qui vous faites confiance."
+Text/248/text,Et qui vous [color=CRIMSON]condamnez[/color]. Certains d'entre nous se souviennent de chaque visage que nous avons envoyé au traitement.
+Text/249/text,"Une pomme de terre nerveuse s'approche. Les papiers semblent en règle, mais vous remarquez la [color=CHARTREUSE]discrète épingle en forme de feuille[/color] sur son col."
+Text/24a/text,"Ils glissent leurs documents. Une petite note est glissée à l'intérieur : ""[color=CHARTREUSE]Sasha m'a envoyé. Un colis pour le réseau. S'il vous plaît.[/color]"""
+Text/24b/text,"Le nouveau [color=DARK_ORANGE]RealityScan[/color] clignote, prêt, à votre poste. Un seul scan et il détectera les éléments falsifiés dans leurs papiers."
+Choice/24c/text,Faites semblant que le scanner est en panne et laissez-les passer
+Choice/24d/text,Utilisez le scanner comme requis – vous ne pouvez pas risquer d'être exposé
+Choice/24e/text,"Faites signe à Viktor de regarder ailleurs, puis laissez-les passer"
+Text/24f/text,"Vous tapotez le scanner, froncez les sourcils, le tapotez à nouveau. ""Cette fichue machine fait des siennes. Passez."""
+Text/250/text,"Le soulagement inonde leur visage. Ils murmurent ""[color=CHARTREUSE]Merci[/color]"" et se dépêchent de passer."
+Text/251/text,"Vous croisez son regard et faites un signe de tête vers l'agent. Il les regarde, puis vous."
+Text/252/text,"Il tourne délibérément le dos, étudiant le mur. ""[color=STEEL_BLUE]Le scanner a eu des ratés toute la journée.[/color]"""
+Text/253/text,"L'agent passe. Viktor ne dit rien, mais vous avez maintenant partagé un secret."
+Text/254/text,"Vous lancez le scan. La machine [color=RED]retentit[/color]. ""Documentation falsifiée détectée."""
+Text/255/text,"L'horreur se lit sur leur visage. ""[color=CRIMSON]Vous ne comprenez pas ce que vous avez fait...[/color]"""
+Text/256/text,"Lui et d'autres gardes se rapprochent. L'agent est emmené de force, vous fixant toujours."
+Text/257/text,Sasha vous intercepte dans l'ombre. Cet agent transportait des [color=CHARTREUSE]copies des manifestes[/color] à nos contacts à l'extérieur.
+Text/258/text,"Grâce à vous, la vérité se répandra au-delà des frontières de Spud. [color=CHARTREUSE]Vous avez vraiment fait la différence.[/color]"
+Text/259/text,Les yeux de Sasha s'écarquillent. Viktor a aidé ? J'avais un pressentiment à son sujet. Sa femme était...
+Text/25a/text,Elle s'interrompt. Nous avons plus d'alliés que je ne le pensais.
+Text/25b/text,"Sasha vous aborde, l'expression froide. Cet agent avait une famille. Trois rejetons à la maison."
+Text/25c/text,Je comprends la peur. Mais [color=CRIMSON]la peur a des conséquences[/color]. Ils seront traités d'ici le matin.
+Text/25d/text,J'espère que votre dossier impeccable en vaut la peine.
+Text/25e/text,Murphy se glisse dans vos quartiers. On m'a dit qu'il y avait eu de l'agitation à votre poste ce soir.
+Text/25f/text,[color=CHARTREUSE]Bien. Nous sommes dans le même bateau maintenant.[/color] Pas de retour en arrière.
+Text/260/text,Le visage de Murphy s'assombrit. Je... je pensais que vous étiez avec nous. Que s'est-il passé ?
+Text/261/text,Le service de demain sera différent. Les enjeux n'ont jamais été aussi élevés.
+Text/262/text,"Mais pour la première fois, vous avez l'impression d'être du [color=CHARTREUSE]bon côté[/color]. Quoi qu'il en coûte."
+Text/263/text,Le visage de l'agent vous hante. Leur famille ne saura jamais pourquoi ils ne sont pas rentrés chez eux.
+Text/264/text,[color=STEEL_BLUE]À cause de vous.[/color]
+Choice/243/disabled_text,
+Choice/244/disabled_text,
+Choice/24c/disabled_text,
+Choice/24d/disabled_text,
+Choice/24e/disabled_text,

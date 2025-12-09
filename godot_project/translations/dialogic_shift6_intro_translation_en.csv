@@ -1,0 +1,69 @@
+﻿keys,en
+Text/b8/text,"The border facility is in complete lockdown, with armed security patrolling every corridor."
+Text/b9/text,[pulse freq=3][color=RED]ATTENTION! LEVEL RED security situation![/color][/pulse] Classified documents were stolen last night.
+Text/ba/text,We have a [tornado radius=4 freq=3][color=CRIMSON]traitor in our midst[/color][/tornado]. Anyone withholding information will be treated as complicit.
+Text/bb/text,"All officers, line up for [wave amp=15 freq=2][color=DARK_ORANGE]security scanning[/color][/wave]. Those with elevated stress responses will be flagged."
+Text/bc/text,Have you seen what's happening outside? Pamphlets everywhere showing [color=DARK_VIOLET]Root Reserve[/color] is made from... [pulse freq=3][color=CRIMSON]from us[/color][/pulse].
+Choice/bd/text,"""Keep your voice down. We're all being watched."""
+Choice/be/text,"""I've heard the same rumors. It's horrifying if true."""
+Choice/bf/text,"""That's ridiculous propaganda. Don't spread such lies."""
+Text/c0/text,You're right. But if it's true... what does that make us?
+Text/c1/text,My cousin was rejected last month. Does that mean...? I [color=CHARTREUSE]can't do this anymore[/color].
+Text/c2/text,Their expression becomes guarded. Of course. Loyal Spud forever.
+Text/c3/text,State your whereabouts last night between 2200 and 0400 hours.
+Choice/c4/text,"""I was in my quarters the entire night, sleeping."""
+Choice/c5/text,"""I'd prefer to speak to my legal representative first."""
+Text/c6/text,Your stress levels indicate [color=YELLOW]deception[/color]. However... inconclusive. You may go for now.
+Text/c7/text,"Legal representative? This is a security procedure, not a trial. Your refusal has been noted."
+Text/c7_viktor1/text,A burly security guard approaches during your break. His face is haggard.
+Text/c7_viktor2/text,"Hey... you're one of the customs officers, right? I've been asking around about my wife, Elena."
+Text/c7_viktor3/text,She crossed this checkpoint three weeks ago. [color=STEEL_BLUE]Failed inspection.[/color] I haven't heard from her since.
+Choice/c7_viktor4/text,"""Viktor... I found something. About Elena. You need to know the truth."""
+Choice/c7_viktor5/text,"""I'm sorry, Viktor. I haven't seen anything."" (Lie to protect him)"
+Text/c7_viktor6/text,You show him a copy of the manifest page. His face goes white.
+Text/c7_viktor7/text,"[wave amp=25 freq=3]His hands tremble as he reads.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Processed... Batch RR-2851...[/color]"
+Text/c7_viktor8/text,His voice is barely a whisper. [tornado radius=3 freq=2][color=CRIMSON]They... they MADE her into...[/color][/tornado]
+Text/c7_viktor9/text,His grief transforms into cold fury. [pulse freq=2][color=CRIMSON]Idaho will pay for this.[/color][/pulse] I swear it on her memory.
+Text/c7_viktor10/text,He grips your shoulder. [color=CHARTREUSE]Thank you for telling me.[/color] When the time comes... I'll remember this.
+Text/c7_viktor11/text,He nods sadly. [color=STEEL_BLUE]I thought so.[/color] No one knows anything. Or no one wants to talk.
+Text/c7_viktor12/text,"If you hear anything... [color=YELLOW]please.[/color] She's all I have."
+Text/c8/text,"It's working. The manifests have caused an uproar, but [color=DARK_ORANGE]Russet suspects us[/color]."
+Text/c9/text,Watch for allies from our organization during today's shift. [color=CHARTREUSE]You'll recognize them[/color].
+Text/ca/text,"If you can get them through safely, use the [color=CHARTREUSE]special mark we discussed[/color]."
+Choice/cb/text,"""It's worth the risk. I'm in."""
+Choice/cc/text,"""This is getting too dangerous. Maybe we should lay low."""
+Text/cd/text,"I knew I could count on you. When this is over, [color=CHARTREUSE]Spud will know who the real heroes were[/color]."
+Text/ce/text,We're way past that point. Laying low won't save us. [color=CHARTREUSE]Only bringing down the system will[/color].
+Text/cf/text,Each station now has the new [color=DARK_ORANGE]RealityScan system[/color]. It detects unauthorized markings and forgeries.
+Text/d0/text,All documents must be scanned before approval. The [color=CRIMSON]traitors will be rooted out[/color]. I guarantee it.
+Text/d0_qte1/text,"Later that shift, a traveler approaches with papers bearing the [color=CHARTREUSE]subtle resistance mark[/color]."
+Text/d0_qte2/text,The [color=DARK_ORANGE]RealityScan[/color] begins its sweep. [wave amp=15 freq=3][color=RED]It's going to detect the mark![/color][/wave]
+Text/d0_qte3/text,You have seconds to decide. The scanner is warming up...
+Choice/d0_qte4/text,"""Fake a scanner malfunction - quickly!"" (Help the resistance)"
+Choice/d0_qte5/text,"""Let the scanner complete its scan"" (Follow protocol)"
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]You need to work fast![/color][/pulse] Trigger the malfunction before it finishes scanning!
+Text/d0_qte7/text,You fumble with the scanner cables. Sparks fly. The screen flickers and dies.
+Text/d0_qte8/text,Russet rushes over. [color=YELLOW]What happened here?[/color]
+Choice/d0_qte9/text,"""Power surge, sir. These new systems are temperamental."""
+Choice/d0_qte10/text,"""I don't know, sir. It just died on me."""
+Text/d0_qte11/text,Russet grunts. [color=STEEL_BLUE]Bureaucrats giving us untested equipment.[/color] Process them manually and flag for re-inspection.
+Text/d0_qte12/text,Russet eyes you suspiciously. [color=YELLOW]How convenient.[/color] I'll have maintenance look at it. Don't let this happen again.
+Text/d0_qte13/text,The resistance member gives you the slightest nod of gratitude as they pass through.
+Text/d0_qte14/text,The scanner [pulse freq=3][color=RED]BEEPS LOUDLY[/color][/pulse]. Unauthorized markings detected!
+Text/d0_qte15/text,Russet appears instantly. [color=CHARTREUSE]Well done![/color] Another traitor caught.
+Text/d0_qte16/text,"The resistance member is dragged away, terror in their eyes. ""[color=CRIMSON]Please, no! I have children![/color]"""
+Text/d0_qte17/text,Your loyalty is [color=DARK_ORANGE]noted in your file[/color]. Keep this up.
+Text/d1/text,"Helping resistance members just got much more dangerous, but [color=CHARTREUSE]the truth must spread[/color]."
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,
+Choice/c7_viktor4/disabled_text,
+Choice/c7_viktor5/disabled_text,
+Choice/d0_qte4/disabled_text,
+Choice/d0_qte5/disabled_text,
+Choice/d0_qte9/disabled_text,
+Choice/d0_qte10/disabled_text,

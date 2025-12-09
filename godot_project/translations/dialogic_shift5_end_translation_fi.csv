@@ -1,0 +1,22 @@
+﻿keys,fi
+Text/96/text,"Hiivit pimentyneessä käytävässä, sydän hakkaa, kun väistelet turvallisuuspartioita."
+Text/97/text,[color=CHARTREUSE]Tämä laite poistaa lukon[/color] Russetin toimistosta. Käynnistän hälytykset itäsiivessä häiriöksi. Sinulla on viisi minuuttia.
+Text/98/text,Manifestit pitäisi olla hänen arkistokaapissaan. [color=CRIMSON]Punainen kansio merkinnällä 'RR Transport'[/color]. Älä jätä jälkiä etsinnästäsi.
+Text/99/text,"Löydät paksun [color=CRIMSON]punaisen kansion merkinnällä ""RR Transport""[/color] arkistokaapista."
+Text/9a/text,"Sisällä on manifestit, jotka vastaavat hylättyjä perunalukuja, sekä pääministeri Idahon direktiivi, joka valtuuttaa ""[pulse freq=3][color=DARK_VIOLET]rajaylitysten täyden hyödyntämisen RR-tuotantoon.[/color][/pulse]"""
+Text/9b/text,"Askeleet lähestyvät toimiston ovea. ""[wave amp=15 freq=3][color=YELLOW]Outoa, olin varma, että lukitsin sen.[/color][/wave]"""
+Choice/9c/text,Piiloudu pöydän alle
+Choice/9d/text,Hyppää ikkunasta
+Text/9e/text,"Syöksyt Russetin pöydän alle hänen saapuessaan, sydän hakkaa. Hän istuu, jalat senttien päässä kasvoistasi."
+Text/9f/text,Russet täällä. Mitä? [color=CHARTREUSE]Toinen hälytys?[/color] Olen matkalla. Hän poistuu ja sinä pääset pakoon.
+Text/a0/text,"Vängäiset ikkunan auki ja hyppäät. Onneksi se on vain yhden kerroksen korkuinen. Vartija huutaa: ""[color=RED]Pysähdy![/color]"""
+Text/a1/text,Juokset alueen poikki ja onnistut karkaamaan vainoojiltasi.
+Text/a2/text,Saitko sen?
+Text/a3/text,Luovutat todisteet selittäen mitä löysit.
+Text/a4/text,Tämä todistaa kaiken. Vastarinta tekee kopioita. [tornado radius=3 freq=2]Levitä totuutta kaikkialle.[/tornado] He eivät voi vaientaa meitä kaikkia.
+Text/a5/text,"Olet ylittänyt rajan. [wave amp=20 freq=3][color=YELLOW]Ei ole paluuta.[/color][/wave] Kun totuus leviää, Spud muuttuu."
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,
+Text/9a_viktor1/text,Skannaat nimet manifestista... ja yksi erottuu joukosta. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,Tuo nimi... olet kuullut sen aiemmin. Turvavartija Viktor mainitsi vaimonsa kadonneen.
+Text/9a_viktor3/text,"""[color=CRIMSON]Tila: Käsitelty. Erä RR-2851.[/color]"" Päivätty kaksi viikkoa sitten."

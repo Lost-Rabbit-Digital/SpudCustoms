@@ -1,0 +1,85 @@
+﻿keys,vi
+Text/11/text,"Biên giới Spud đang trong tình trạng [pulse freq=3][color=CRIMSON]hỗn loạn[/color][/pulse]. Những củ khoai tây hoảng loạn tràn ngập các trạm kiểm soát, tuyệt vọng trốn chạy sau khi các tài liệu bị rò rỉ."
+Text/12/text,Bạn lẻn qua cùng Sasha. [wave amp=20 freq=3][color=CHARTREUSE]Chúng ta phải tiếp tục đẩy mạnh![/color][/wave] Người dân giờ đã biết sự thật.
+Text/13/text,"Họ không thể bịt miệng sự thật nữa. Nếu chúng ta có thể xâm nhập vào cơ sở [color=DARK_VIOLET]Kho Dự Trữ Rễ[/color] và phát tán bằng chứng, nó sẽ [tornado radius=3 freq=2][color=CHARTREUSE]châm ngòi cho cuộc cách mạng[/color][/tornado]."
+Text/14/text,Nơi đó là một pháo đài. Và giờ chúng ta có một [color=YELLOW]cựu nhân viên hải quan[/color] trong hàng ngũ. Mắt họ nheo lại nghi ngờ về phía bạn.
+Choice/15/text,"Tôi hiểu sự nghi ngờ của các bạn, nhưng tôi cam kết với sự nghiệp này."
+Choice/16/text,Tôi đã hy sinh tất cả rồi. Tôi sẽ không lùi bước lúc này.
+Text/17/text,Những lời đẹp đẽ. Nhưng chúng tôi đã nghe những điều đó trước đây.
+Text/18/text,"Họ đã giúp chúng tôi lấy được tài liệu. Đó là hành động, không phải lời nói."
+Text/19/text,"Không thể quay lại làm một củ khoai tây trung thành nữa rồi. Chào mừng đến với phong trào kháng chiến, đồng chí."
+Text/1a/text,"Sau cuộc xâm nhập căng thẳng, đội của bạn đứng tại trung tâm của [color=DARK_VIOLET]Kho Dự Trữ Rễ[/color], [pulse freq=3][color=CRIMSON]bộ máy đàn áp kinh hoàng[/color][/pulse] bị phơi bày."
+Text/1b/text,"[wave amp=25 freq=3][color=RED]Còi báo động vang lên[/color][/wave] khi các lính gác vội vã phản ứng với sự xâm nhập của bạn. Bạn chạy qua các hành lang, tránh các hệ thống an ninh."
+Text/1c/text,"Một màn hình nhấp nháy. ""Ồ, ồ, [color=CRIMSON]kẻ phản bội[/color] trở lại với lũ nổi loạn cặn bã."""
+Text/1d/text,Ngươi nghĩ ngươi có thể ngăn cản sự tiến bộ của Spud sao? [color=DARK_VIOLET]Kho Dự Trữ Rễ[/color] là mạch máu của quốc gia này.
+Text/1e/text,Nhưng đừng lo. Ngươi vẫn sẽ phục vụ Spud... [tornado radius=4 freq=3][color=DARK_VIOLET]trong các bể chế biến![/color][/tornado]
+Text/1f/text,Màn hình đột nhiên tối đen.
+Text/20/text,"Bạn quay sang những người khác với quyết tâm. ""Chúng ta cần đến boongke của Idaho. Ngay bây giờ!"""
+Text/21/text,"Nhóm của bạn chiến đấu qua các đợt an ninh, suýt bị bắt. Các chiến binh kháng chiến của Sasha tạo ra các đòn nghi binh, mở đường cho bạn tiến tới."
+Text/22/text,"Sau cuộc trốn thoát kinh hoàng qua các đường hầm bảo trì, cuối cùng bạn cũng đến được thang máy an toàn dẫn tới boongke riêng của Idaho."
+Text/23/text,"Với Sasha và các đồng minh ở bên cạnh, cuối cùng bạn đối đầu với Idaho."
+Text/24/text,"Hết rồi, Idaho. Bí mật của ngươi đã bị phơi bày. Kết thúc này ra sao... [pulse freq=2]điều đó tùy thuộc vào ngươi.[/pulse]"
+Choice/25/text,Đàm phán chuyển giao quyền lực hòa bình (Ngoại giao)
+Choice/26/text,Yêu cầu bắt giữ Idaho ngay lập tức (Công lý)
+Choice/27/text,Thực thi công lý tư hình cho tội ác của Idaho (Báo thù)
+Choice/28/text,Tập trung vào việc tháo dỡ cơ sở hạ tầng Kho Dự Trữ Rễ (Tháo dỡ)
+Text/29/text,"Idaho, điều này không cần phải kết thúc bằng thêm đổ máu. Nếu ngươi hợp tác..."
+Text/2a/text,"Ôi, ngươi [color=STEEL_BLUE]kẻ lý tưởng ngây thơ[/color]. Ngươi nghĩ đây là một cuộc đàm phán sao?"
+Text/2b/text,"Idaho đập nát một nút bấm, và [color=RED]còi báo động bắt đầu vang lên[/color]. ""Điều duy nhất ta sẽ cho các ngươi là một [color=DARK_VIOLET]vé một chiều đến các bể chiên![/color]"""
+Text/2c/text,"Tôi không nghĩ vậy, Idaho. Lính gác! Các người đã thấy hồ sơ, [color=YELLOW]các người biết hắn đã làm gì với gia đình các người.[/color]"
+Text/2d/text,Một lính gác to lớn bước tới và nhanh chóng đá Idaho ngã xuống đất.
+Text/2e/text,Một tiếng súng vang vọng qua phòng. Màn hình tối dần.
+Text/2f/text,"Idaho, nhân danh người dân khoai tây của Spud, [color=CHARTREUSE]ngươi bị bắt![/color]"
+Text/30/text,"Đã xong. Người dân đã nói. [color=CHARTREUSE]Chúng ta sẽ xây dựng một Spud mới nơi rễ của chúng ta nằm trong đất, không phải trong đau khổ.[/color]"
+Text/31/text,"Sẽ [color=CRIMSON]không có thỏa thuận, không có sự khoan dung[/color] cho ngươi, Idaho. Công lý của một bạo chúa là tất cả những gì ngươi đáng được nhận."
+Text/32/text,"Một sự thanh toán. Đó là điều tôi đang làm. [color=CHARTREUSE]Cho mỗi củ khoai tây đã hy sinh, chúng ta lấy lại tương lai của mình![/color]"
+Text/33/text,"Quên hắn đi. Hắn là triệu chứng, không phải căn bệnh. [color=CHARTREUSE]Phá hủy mọi rễ và thân của sự quái đản này.[/color]"
+Text/34/text,Chúng ta phải đi! Ngay bây giờ!
+Text/35/text,Sự sụp đổ của [color=DARK_VIOLET]Kho Dự Trữ Rễ[/color] châm ngòi cho ngọn lửa thay đổi lan tỏa khắp Spud.
+Text/36/text,"Những củ khoai tây ở mọi tỉnh nổi dậy, đón nhận [color=CHARTREUSE]tầm nhìn mới cho quốc gia của họ[/color]."
+Text/37/text,"Miễn là chúng ta giữ vững niềm tin vào rễ của mình, vào những lý tưởng đã đưa chúng ta đến đây... [color=CHARTREUSE]chúng ta sẽ tìm được con đường.[/color]"
+Text/38/text,"Và như vậy, từ đống tro tàn của Spud cũ, [color=CHARTREUSE]một quốc gia mới bắt đầu bén rễ[/color]. Triều đại của [color=DARK_VIOLET]Kho Dự Trữ Rễ[/color] đã kết thúc."
+Choice/15/disabled_text,
+Choice/28/disabled_text,
+Choice/27/disabled_text,
+Choice/26/disabled_text,
+Choice/25/disabled_text,
+Choice/16/disabled_text,
+Text/1a_rescue1/text,Một trinh sát vội vàng chạy đến. Chúng ta tìm thấy cô ấy rồi! [color=CHARTREUSE]Sasha đang ở khu giam giữ![/color]
+Text/1a_rescue2/text,Chúng đang chuẩn bị... [tornado radius=3 freq=2][color=CRIMSON]xử lý cô ấy[/color][/tornado]... trong vòng chưa đầy một giờ nữa!
+Text/1a_rescue3/text,Chúng ta phải cứu cô ấy. [pulse freq=2][color=CHARTREUSE]Cô ấy đã khởi xướng tất cả chuyện này.[/color][/pulse] Chúng ta sẽ không rời đi nếu không có cô ấy.
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]Xông qua cơ sở![/color][/wave] Đến chỗ Sasha trước khi quá muộn!
+Text/1a_rescue_fail1/text,Bạn vấp ngã. Con đường phía trước bị lính gác chặn lại!
+Text/1a_rescue_fail2/text,Viktor xông qua một cánh cửa phụ. [color=CHARTREUSE]ĐI ĐI! Tôi sẽ cầm chân chúng![/color]
+Text/1a_rescue_fail3/text,Vì Elena. Vì tất cả bọn họ. [color=STEEL_BLUE]Tôi sẽ không để ai khác phải chết![/color]
+Text/1a_rescue_fail4/text,Murphy giật chuông báo cháy. [color=CHARTREUSE]Vì Tommy![/color] Hệ thống phun nước làm lính gác mù mắt!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Tôi sẽ tạo ra một sự đánh lạc hướng. Đưa cô ấy ra khỏi đó![/color]
+Text/1a_rescue_fail6/text,"Một [color=YELLOW]băng chuyền xử lý bị kẹt[/color], bắn ra tia lửa và đánh lạc hướng lính gác!"
+Text/1a_rescue_fail7/text,Định mệnh - hoặc những linh hồn của những người đã bị xử lý - ban cho bạn một cơ hội thứ hai.
+Text/1a_rescue5/text,"Sasha ngước lên từ phòng giam, bầm tím nhưng không hề gục ngã. Mắt cô ấy mở to. [color=CHARTREUSE]Bạn đã đến.[/color]"
+Text/1a_rescue6/text,Tất nhiên tôi phải đến rồi. [color=CHARTREUSE]Chúng ta sẽ kết thúc chuyện này cùng nhau.[/color]
+Choice/1a_rescue7/text,Tôi đã sợ rằng sẽ không bao giờ gặp lại bạn nữa.
+Choice/1a_rescue8/text,Bạn đã làm chúng tôi lo lắng đến phát ốm. Đừng làm vậy nữa.
+Choice/1a_rescue9/text,Chúng ta có việc phải làm. Idaho đang chờ đợi.
+Text/1a_rescue10/text,[color=CHARTREUSE]Sasha kéo bạn vào một cái ôm ngắn.[/color] Tôi biết bạn sẽ đến mà. Tôi chưa bao giờ nghi ngờ.
+Text/1a_rescue11/text,Bây giờ hãy bắt chúng phải trả giá cho tất cả những người chúng đã cướp đi. [color=CHARTREUSE]Cùng nhau.[/color]
+Text/1a_rescue12/text,Sasha gượng cười yếu ớt qua nỗi đau. [color=STEEL_BLUE]Tôi sẽ cố gắng.[/color] Nhưng có những điều đáng để mạo hiểm.
+Text/1a_rescue13/text,Việc bạn ở đây chứng minh điều đó. Bây giờ hãy kết thúc chuyện này.
+Text/1a_rescue14/text,"Sasha gật đầu, quyết tâm của cô ấy được nhen nhóm lại. [color=CHARTREUSE]Bạn nói đúng.[/color] Tình cảm có thể chờ đợi."
+Text/1a_rescue15/text,Idaho nghĩ rằng hắn đã thắng. Hãy cho hắn thấy hắn đã sai lầm đến mức nào.
+Text/158/text,Lực lượng an ninh đang bao vây! [pulse freq=3][color=YELLOW]Chiến đấu xuyên qua![/color][/pulse]
+Text/21_fail1/text,Lính gác bao vây từ mọi hướng. [color=CRIMSON]Không còn đường thoát![/color]
+Text/21_fail2/text,"Viktor xuất hiện phía sau lính gác, giọng nói lạnh lùng như thép. [color=STEEL_BLUE]Hạ vũ khí xuống. Ngay lập tức.[/color]"
+Text/21_fail3/text,Lính gác chần chừ - Viktor là người của họ. [color=CRIMSON]Tên của Elena có trong danh sách đó. Gia đình của bạn có thể là nạn nhân tiếp theo.[/color]
+Text/21_fail4/text,Một số lính gác hạ vũ khí. Những người khác bỏ chạy. Lối đi đã thông.
+Text/21_fail5/text,"Một vụ nổ làm rung chuyển cánh đông. Giọng Murphy rè rè qua bộ đàm: [color=CHARTREUSE]""Đó là đòn nghi binh của tôi! ĐI ĐI!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Lính gác tản ra về phía vụ nổ. Tommy hẳn sẽ tự hào.[/color]
+Text/21_fail7/text,Sasha lao vào vật ngã tên lính gác dẫn đầu từ phía sau. [color=CHARTREUSE]Tôi không sống sót khỏi nhà giam đó chỉ để nhìn bạn chết![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]CHẠY ĐI! Để tôi lo![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha tiến lại gần, tay cô ấy tìm thấy tay bạn khi hai người cùng ngắm bình minh mới.[/color] Chúng ta đã xây dựng điều này. Bạn và tôi."
+Text/152/text,"Chừng nào chúng ta còn giữ vững cội nguồn, giữ vững lý tưởng đã đưa chúng ta đến đây... [color=CHARTREUSE]chúng ta sẽ tìm ra cách.[/color] Cùng nhau."
+Text/153/text,[color=CHARTREUSE]Bạn siết chặt tay cô ấy. Cùng nhau.[/color]
+Text/154/text,[color=STEEL_BLUE]Sasha đứng cạnh bạn.[/color] Ngọn lửa của bạn đã thắp lên tia sáng thiêu rụi đế chế của họ.
+Text/155/text,[color=STEEL_BLUE]Cơn giận đã nguội lạnh thành quyết tâm. Vẫn còn nhiều việc phải làm.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha nở một nụ cười động viên với bạn.[/color] Bạn đã đi một chặng đường dài từ trạm kiểm soát đó. Tất cả chúng ta đều vậy.
+Text/157/text,"[color=STEEL_BLUE]Cảm giác tội lỗi có thể sẽ không bao giờ phai nhạt hoàn toàn, nhưng bạn đã tìm thấy mục đích trong công cuộc tái thiết.[/color]"

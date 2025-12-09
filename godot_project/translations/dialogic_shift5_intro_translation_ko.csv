@@ -1,0 +1,35 @@
+﻿keys,ko
+Text/a6/text,오늘 국경 시설 분위기가 심상치 않다. 긴장감이 감돈다. 평소의 수다가 사라지고 경계하는 침묵 속에 보안 순찰대가 늘어났다.
+Text/a7/text,"지난밤, [pulse freq=2][color=CRIMSON]금지 물품[/color][/pulse]이 발견되었다. [color=DARK_VIOLET]뿌리 보호구역[/color]에 대한 거짓 정보가 담긴 팸플릿이었다."
+Text/a8/text,"우리는 [wave amp=15 freq=2][color=DARK_ORANGE]위협 수준 오렌지 프로토콜[/color][/wave]을 시행한다. 모든 요원은 충성도 심사를 받으며, 모든 여행자는 최대한의 정밀 조사를 받게 될 것이다."
+Text/a9/text,효과가 있다. 팸플릿이 퍼지고 있다. 사람들이 [color=DARK_VIOLET]뿌리 보호구역[/color]에 대해 질문하고 있다.
+Text/aa/text,내 정보원에 따르면 러셋의 사무실에 선적 기록이 있다고 해. 모든 것을 [tornado radius=3 freq=2][color=CHARTREUSE]증명할[/color][/tornado] 수 있는 운송 명세서 말이야.
+Text/ab/text,"네가 그걸 가져오는 걸 도와줘야 해. 오늘 밤, 마지막 근무 교대 후에. 널 믿어도 될까?"
+Choice/ac/text,"""좋아, 같이 하자. 진실을 밝히자."""
+Choice/ad/text,"""모르겠어, 사샤... 이건 위험할 수도 있어."""
+Text/ae/text,다행이다. 네가 다른 이들보다 [color=CHARTREUSE]강한 뿌리[/color]를 가졌다는 걸 알았어. 자정에 만나자.
+Text/af/text,때로는 옳은 일을 하기 위해 [color=CHARTREUSE]으깨질 위험[/color]을 감수해야 해. 잘 생각해 봐.
+Text/b0/text,[color=DARK_ORANGE]충성도 확인[/color]. 이름과 요원 ID를 말하시오. 그리고 스퍼드를 위해 봉사하는 이유를 말하시오.
+Choice/b1/text,"""위험한 영향으로부터 국경을 보호하기 위해 봉사합니다."""
+Choice/b2/text,"""모든 사람이 공정한 대우를 받도록 보장하기 위해 봉사합니다."""
+Text/b3/text,"좋은 답변이다. 스퍼드에는 충성스러운 보호자가 필요하다. 스캐너는 녹색을 표시한다. 계속 진행하시오, 요원."
+Text/b4/text,"요원의 눈썹이 치켜 올라간다. 공정한 대우라고? 스캐너가 [color=DARK_ORANGE]황색[/color]으로 깜빡인다. 기억하시오, 우리의 최우선 관심사는 보안이지 공정함이 아니오."
+Text/b5/text,오늘의 할당량이 증가했다. 의심스러운 물품을 소지한 자는 [color=DARK_VIOLET]특별 처리[/color] 대상으로 분류될 것이다.
+Text/b6/text,오늘 당신의 [color=DARK_ORANGE]결정[/color]들을 매우 주의 깊게 지켜볼 것이다.
+Text/b7/text,"오늘 밤 모든 것이 바뀔 수 있다. 하지만 먼저, [color=YELLOW]의심을 사지 않고 오늘 하루를 버텨야[/color] 한다."
+Text/b4_viktor1/text,지나가던 중 건장한 보안 요원이 당신의 팔을 잡는다. 그의 얼굴에는 걱정이 가득하다.
+Text/b4_viktor2/text,"""저기... 죄송합니다만. 세관원 중 한 분이시죠? 제 이름은 [color=CHARTREUSE]빅토르[/color]입니다."""
+Text/b4_viktor3/text,"""제 아내 [color=GOLD]엘레나[/color]에 대해 모두에게 물어보고 있습니다. 엘레나 페트로프요. 그녀는 3주 전에 이 검문소를 통과했습니다."""
+Text/b4_viktor4/text,"""[color=STEEL_BLUE]검사 불합격[/color] 판정을 받았습니다. 그들은 그녀가 처리된 후 집으로 돌아갈 것이라고 말했지만... 아무 소식도 듣지 못했습니다."""
+Text/b4_viktor5/text,"그의 목소리가 떨린다. ""아무도 제게 아무것도 말해주지 않습니다. 불합격된 여행자들이 어디로 가는지 아십니까?"""
+Choice/b4_viktor6/text,"""죄송합니다, 빅토르. 저는 모릅니다. 하지만 잘 지켜보겠습니다."""
+Choice/b4_viktor7/text,"""처리 절차에 대한 세부 사항은 논의할 수 없습니다. 보안 규정입니다."""
+Text/b4_viktor8/text,빅토르의 눈에 한 줄기 희망이 스친다. [color=CHARTREUSE]고마워요.[/color] 뭐든 알아내시면... 제발요. 그 아이가 제 전부예요.
+Text/b4_viktor9/text,빅토르가 낙담한 듯 고개를 끄덕인다. [color=STEEL_BLUE]맞아요. 규정이죠.[/color] 이해합니다.
+Text/b4_viktor10/text,하지만 마음을 바꾸신다면... [color=YELLOW]그 아이에게 무슨 일이 있었는지 알아야 해요.[/color]
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,
+Choice/b4_viktor6/disabled_text,
+Choice/b4_viktor7/disabled_text,

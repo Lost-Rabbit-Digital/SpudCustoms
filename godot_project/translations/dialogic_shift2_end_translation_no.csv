@@ -1,0 +1,26 @@
+﻿keys,no
+Text/200/text,"Hei, nye potet! Tøff vakt, hva? Jeg heter Murphy. Har vært her i tre sesonger nå."
+Text/201/text,"Jeg så deg snakke med Sasha tidligere. Hun er... [color=STEEL_BLUE]annerledes[/color]. På en god måte, tror jeg."
+Choice/202/text,Hun virker hyggelig. Ga meg noen råd om å være på vakt.
+Choice/203/text,Bare introduksjoner. Ikke noe spesielt.
+Text/204/text,Murphy ser seg nervøst rundt. Ja.
+Text/205/text,"Mellom deg og meg? Den radiokringkastingen om ""savnede poteter""... kusinen min forsvant forrige måned. Strøk på inspeksjonen."
+Text/206/text,"Smart. Hold hodet nede, gjør jobben din. Det er det jeg sier til meg selv hver dag."
+Text/207/text,Murphy senker stemmen. Selv om jeg noen ganger lurer på hvor alle de avviste potetene egentlig blir av...
+Text/208/text,I kantinen
+Text/209/text,"Du stirrer på den tykke, lilla-brune grøten. Alle spiser den uten spørsmål. Den skal visst være næringsrik."
+Choice/20a/text,Spis Rotreserven som alle andre
+Choice/20b/text,Skyv den til side – du er ikke sulten
+Text/20c/text,"Smaken er... jordaktig. Rik. Noe ved den føles [color=STEEL_BLUE]ubehagelig kjent[/color], men du kan ikke sette fingeren på hvorfor."
+Text/20d/text,"En senioroffiser legger merke til det. ""Ikke sløs, ikke mangel, spire. Det er [pulse freq=2][color=DARK_VIOLET]førsteklasses næring[/color][/pulse] rett der."""
+Text/20e/text,Du mumler en unnskyldning om en urolig mage. Offiseren trekker på skuldrene og går videre.
+Text/20f/text,"Tilbake i kvarteret ditt kan du ikke riste av deg det Sasha sa. ""[color=YELLOW]Ikke alt er som det ser ut.[/color]"""
+Text/210/text,"Du spurte Russet om avviste poteter på din første dag. Svaret hans var unnvikende. ""[color=VIOLET]Behandlet. I henhold til protokoll.[/color]"""
+Text/211/text,"Behandlet [color=STEEL_BLUE]hvordan[/color], nøyaktig?"
+Text/212/text,Du var så ivrig etter å tjene. Så stolt over å bli valgt. Men stolthet forklarer ikke de [color=CRIMSON]savnede potetene[/color].
+Text/213/text,"Radioen sa at rapporter om forsvinninger ""fortsetter"". Det betyr at det har pågått en stund."
+Text/214/text,"Søvnen kommer sakte. Når den gjør det, drømmer du om [wave amp=15 freq=2][color=DARK_VIOLET]lilla elver[/color][/wave] som strømmer under grensekontrollen."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

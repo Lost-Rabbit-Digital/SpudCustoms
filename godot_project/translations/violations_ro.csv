@@ -1,0 +1,29 @@
+﻿keys,ro
+violation_condition_not_fresh,RESPINGE: Doar cartofi proaspeți permisi. Acest cartof este {condition}
+violation_extra_eyes,RESPINGE: Condiția Ochi Suplimentari este interzisă
+violation_rotten,RESPINGE: Cartofii putred sunt interzisi
+violation_sprouted,RESPINGE: Cartofii germinați sunt interzisi
+violation_dehydrated,RESPINGE: Cartofii deshidratați sunt interzisi
+violation_frozen,RESPINGE: Cartofii înghețați sunt interzisi
+violation_too_old,RESPINGE: Cartoful are {age} ani (vârsta maximă: 4 ani)
+violation_too_young_3,RESPINGE: Cartoful are {age} ani (vârsta minimă: 4 ani)
+violation_too_young_2,RESPINGE: Cartoful are {age} ani (vârsta minimă: 3 ani)
+violation_males_only,RESPINGE: Doar cartofi masculi permisi
+violation_females_only,RESPINGE: Doar cartofi femeli permisi
+violation_country_spudland,RESPINGE: Toți cartofii Spudland sunt interzisi
+violation_country_potatopia,RESPINGE: Toți cartofii Potatopia sunt interzisi
+violation_country_tuberstan,RESPINGE: Toți cartofii Tuberstan sunt interzisi
+violation_country_north_yamnea,RESPINGE: Toți cartofii North Yamnea sunt interzisi
+violation_country_spuddington,RESPINGE: Toți cartofii Spuddington sunt interzisi
+violation_country_tatcross,RESPINGE: Toți cartofii Tatcross sunt interzisi
+violation_country_mash_meadows,RESPINGE: Toți cartofii Mash Meadows sunt interzisi
+violation_country_tuberville,RESPINGE: Toți cartofii Tuberville sunt interzisi
+violation_country_chip_hill,RESPINGE: Toți cartofii Chip Hill sunt interzisi (restricții de export)
+violation_country_murphyland,RESPINGE: Toți cartofii Murphyland sunt interzisi
+violation_country_colcannon,RESPINGE: Toți cartofii Colcannon sunt interzisi
+violation_country_pratie_point,RESPINGE: Toți cartofii Pratie Point sunt interzisi
+violation_race_purple_majesty,RESPINGE: Tipurile Purple Majesty sunt interzise
+violation_race_sweet_potato,RESPINGE: Tipurile de cartof dulce necesită permise speciale (indisponibile)
+violation_race_yukon_gold,RESPINGE: Tipurile Yukon Gold sunt interzise
+violation_expired_document,RESPINGE: Documentul a expirat pe {date}
+violation_invalid_potato,Acest cartof îndeplinește toate cerințele și ar fi trebuit să fie aprobat

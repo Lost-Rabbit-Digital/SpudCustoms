@@ -1,0 +1,79 @@
+﻿keys,es-419
+Text/299_suppress1/text,El caos estalla mientras el ataque de la resistencia comienza. Explosiones sacuden el puesto de control.
+Text/299_suppress2/text,"Podrías correr. Podrías esconderte. En cambio, [color=DARK_ORANGE]eliges tu bando[/color]."
+Text/299_suppress3/text,Russet te agarra del brazo. [pulse freq=2][color=YELLOW]¡AHORA ES TU OPORTUNIDAD![/color][/pulse] ¡Demuestra tu lealtad!
+Text/299_suppress4/text,¡La resistencia está intentando irrumpir por la puerta este! [color=CRIMSON]¡Detenlos![/color]
+Text/299_suppress5/text,Aprietas tu arma. Podrían ser personas que conoces. Personas a las que has ayudado.
+Text/299_suppress6/text,Pero la supervivencia tiene un precio. [color=DARK_ORANGE]Has tomado tu decisión.[/color]
+Text/299_suppress7/text,[pulse freq=3][color=CRIMSON]¡Lucha por el estado![/color][/pulse] ¡Suprime el ataque de la resistencia!
+Text/299_suppress8/text,"Cuando el humo se disipa, los cuerpos yacen esparcidos por el suelo. Algunos llevan insignias de la resistencia."
+Text/299_suppress9/text,[color=STEEL_BLUE]Reconoces rostros entre los caídos.[/color]
+Text/299_suppress10/text,Murphy yace entre los muertos. Sus ojos miran al vacío. La foto de Tommy apretada en su mano.
+Text/299_suppress11/text,[color=STEEL_BLUE]Murió luchando por algo en lo que creía. Tú ayudaste a matarlo.[/color]
+Text/300/text,"El ataque de la resistencia fracasó. El puesto de control se mantiene, más fuerte que nunca. Y tú permaneces en tu puesto."
+Text/301/text,"[pulse freq=2][color=GOLD]¡SALVE, PRIMER MINISTRO IDAHO![/color][/pulse] ¡Defensor de Spud! ¡Vencedor de traidores!"
+Text/302/text,"Una patata imponente con una regia vestimenta desciende de un vehículo blindado, flanqueada por guardias de élite."
+Text/303/text,Idaho inspecciona el puesto de control con ojos fríos y calculadores.
+Text/304/text,"Russet se apresura hacia adelante, haciendo una profunda reverencia. ¡Primer Ministro! ¡Nos sentimos honrados con su presencia!"
+Text/305/text,Los traidores han sido [color=DARK_VIOLET]procesados[/color] como usted ordenó. ¡La producción ha aumentado un 40% este trimestre!
+Text/306/text,¿Y este es el oficial que se mantuvo leal durante el levantamiento?
+Text/307/text,"Sí, Primer Ministro. Dedicación inquebrantable. Reportó actividades sospechosas. Un ciudadano modelo."
+Text/308/text,"Idaho da un paso adelante, prendiendo una medalla en tu pecho - [color=GOLD]El Tubérculo Dorado[/color]."
+Text/309/text,Por un servicio más allá del deber. Has demostrado que la [color=DARK_ORANGE]lealtad a Spud[/color] siempre será recompensada.
+Choice/30a/text,"Gracias, Primer Ministro. Gloria a Spud."
+Choice/30b/text,"Solo cumplí con mi deber, señor. (Fuerzas una sonrisa)"
+Text/30c/text,La sonrisa de Idaho no llega a sus ojos. Sí. Ciertamente lo hiciste.
+Text/30d/text,Idaho te estudia por un largo momento. Deber. [color=STEEL_BLUE]Una palabra tan simple para acciones tan complicadas.[/color]
+Text/30e/text,Me pregunto qué [color=CRIMSON]pesadillas[/color] visitan a quienes cumplen su «deber» tan bien.
+Text/30f/text,"Se celebra un festín en honor a la victoria. Las mesas gimen bajo el peso de la comida, incluyendo generosas porciones de [color=DARK_VIOLET]Reserva de Raíz[/color]."
+Text/310/text,Russet levanta una copa de líquido espeso y morado. ¡Un brindis! ¡Por los [color=CRIMSON]traidores que nos nutren[/color]!
+Text/311/text,La sala ríe. Algunos con nerviosismo. La mayoría con sinceridad.
+Text/312/text,Te desliza un plato. Prueba la nueva tanda. [color=DARK_VIOLET]«Mezcla de la Resistencia»[/color]. La contribución de Sasha al futuro de Spud.
+Text/313/text,Tu estómago se revuelve. La comida en el plato. [color=CRIMSON]Sasha.[/color] La prima de Murphy. La esposa de la foto.
+Text/314/text,[tornado radius=3 freq=2][color=CRIMSON]Todos ellos.[/color][/tornado]
+Choice/315/text,Oblígate a comer - mantén tu tapadera
+Choice/316/text,Aparta el plato - no puedes hacer esto
+Text/317/text,Llevas el tenedor a tus labios. Cierras los ojos. [color=STEEL_BLUE]Mastica. Traga. No pienses.[/color]
+Text/318/text,"Russet asiente con aprobación. ""Bien. [color=DARK_ORANGE]Llegarás lejos.[/color]"""
+Text/319/text,"Apartas el plato. ""No me siento bien. La emoción del día..."""
+Text/31a/text,"Los ojos de Russet se entrecierran brevemente, luego se suavizan. Claro. Qué [color=YELLOW]constitución tan sensible[/color]."
+Text/31b/text,"Descansa. Mañana, tenemos [color=CRIMSON]más procesamiento[/color] que supervisar."
+Text/31c/text,Regresas a tus aposentos. La medalla pesa en tu pecho.
+Text/31d/text,Sacas la foto de la esposa desaparecida. Su esposa probablemente esté en el mismo lote que ella ahora.
+Text/31e/text,Prometiste encontrarla. [color=STEEL_BLUE]La encontraste.[/color] Solo que no de la forma en que ninguno de los dos esperaba.
+Text/31f/text,Murphy. Tu amigo. El que confió en ti. Estaba en la resistencia.
+Text/320/text,[color=CRIMSON]Estaba.[/color]
+Text/321/text,Miras tu reflejo en la ventana. La medalla reluce. [color=DARK_ORANGE]Tubérculo Dorado[/color]. Héroe de Spud.
+Text/322/text,[color=STEEL_BLUE]Monstruo con piel de patata.[/color]
+Text/323/text,"Esa noche, sueñas con Sasha. No acusa. No se enfurece. Eso sería más fácil."
+Text/324/text,"Solo te mira con esos ojos. [color=CHARTREUSE]Las raíces crecen profundas[/color], susurra."
+Text/325/text,Incluso las [color=STEEL_BLUE]podridas[/color].
+Text/326/text,Pasan los meses. Te ascienden. Inspector Regional de Seguridad Fronteriza. La mano derecha de Russet.
+Text/327/text,Supervisas más rechazos que nadie en la historia de Spud. La producción de [color=DARK_VIOLET]Reserva de Raíz[/color] se dispara.
+Text/328/text,Tu oficina es cómoda. Tus raciones son generosas. Tu familia está protegida.
+Text/329/text,Tienes todo lo que te prometieron.
+Text/32a/text,"Todo, excepto [color=STEEL_BLUE]dormir[/color]. Excepto la [color=STEEL_BLUE]paz[/color]. Excepto la capacidad de mirarte en un espejo."
+Text/32b/text,"Un día, lo notas. Un [color=GOLD]emblema de papa amarilla[/color] grabado en una pared. Luego otro. Luego docenas."
+Text/32c/text,Una nueva resistencia se está formando. Más silenciosa. Más cuidadosa. Aprendiendo de los errores de Sasha.
+Choice/32d/text,Reporta los símbolos a seguridad inmediatamente
+Choice/32e/text,Finge que no los viste
+Choice/32f/text,Deja tu propia marca: una sola hoja amarilla
+Text/330/text,Presentas el informe. Otro grupo de sospechosos es arrestado. Otro ascenso.
+Text/331/text,El ciclo continúa. [color=CRIMSON]Te has convertido en la máquina.[/color]
+Text/332/text,Pasas de largo. No dices nada. No es mucho. [color=STEEL_BLUE]Es casi nada.[/color]
+Text/333/text,Pero es la primera vez que eliges no actuar contra ellos.
+Text/334/text,"Quizás eso sea algo. Quizás sea [color=YELLOW]demasiado poco, demasiado tarde[/color]."
+Text/335/text,"Cuando nadie te ve, rascas una pequeña [color=GOLD]hoja amarilla[/color] junto a los emblemas."
+Text/336/text,Un solo acto de desafío. Años demasiado tarde. Pero [color=CHARTREUSE]algo[/color].
+Text/337/text,"La voz de Sasha resuena en tu memoria: ""[color=CHARTREUSE]Las raíces crecen profundas.[/color]"""
+Text/338/text,Quizás lo suficientemente profundas como para [color=CHARTREUSE]alcanzarte incluso a ti[/color]. Algún día.
+Text/339/text,La nación de Spud perdura. La [color=DARK_VIOLET]Reserva de Raíz[/color] fluye. El ciclo de consumo continúa.
+Text/33a/text,"Pero en algún lugar, en las grietas de la pared, [color=CHARTREUSE]algo nuevo está creciendo[/color]."
+Text/33b/text,Si serás parte de ello... [color=YELLOW]esa historia aún está por escribirse[/color].
+Choice/30a/disabled_text,
+Choice/30b/disabled_text,
+Choice/315/disabled_text,
+Choice/316/disabled_text,
+Choice/32d/disabled_text,
+Choice/32e/disabled_text,
+Choice/32f/disabled_text,

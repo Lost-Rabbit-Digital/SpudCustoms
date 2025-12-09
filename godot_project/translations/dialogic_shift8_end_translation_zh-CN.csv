@@ -1,0 +1,59 @@
+﻿keys,zh-CN
+Text/265/text,班次在令人不安的寂静中结束。安保巡逻人员翻倍。所有人都在窃窃私语。
+Text/266/text,你正走向宿舍，突然听到——[color=YELLOW]军官区传来叫喊声[/color]。
+Text/267/text,你拐过弯，看到安保部队[pulse freq=3][color=RED]踹开了萨莎的门[/color][/pulse]。
+Text/268/text,育空局长的声音轰鸣。甜薯萨莎！你因[color=CRIMSON]对薯国犯下叛国罪[/color]被捕！
+Text/269/text,萨莎被拖出来，挣扎着。即使卫兵将她的手臂扭到身后，她的眼神依然充满不屈。
+Text/26a/text,[tornado radius=4 freq=3][color=CHARTREUSE]真相终将大白！你们无法让所有人噤声！[/color][/tornado]
+Text/26b/text,她的目光在围观人群中找到了你。时间仿佛凝固了。
+Text/26c/text,认出……然后是[color=CRIMSON]毁灭性的理解[/color]。你出卖了她的位置。她知道了。
+Text/26d/text,她没有说话。那个眼神就足够了。[color=STEEL_BLUE]比仇恨更深的失望。[/color]
+Text/26e/text,一丝什么东西——[color=CHARTREUSE]希望？信任？[/color]——掠过她的脸庞。
+Text/26f/text,她的嘴唇无声地动了动：“[color=CHARTREUSE]根系深植。[/color]”一个信息。一个提醒。
+Text/270/text,褐皮从阴影中走出，满足感从每个毛孔中渗出。
+Text/271/text,真是的。这[color=CRIMSON]甜薯变酸了[/color]。萨莎，我一直就知道你有点腐烂。
+Text/272/text,褐皮举起一个文件夹。你的那些小[color=DARK_VIOLET]宣言[/color]。你的“证据”。都被找回来了。
+Text/273/text,你真以为你能动摇[pulse freq=2][color=DARK_VIOLET]根源储备[/color][/pulse]？动摇我？
+Text/274/text,副本已经流传出去了，褐皮。世界会知道你对我们的人民做了什么！
+Text/275/text,褐皮冷笑。他们只会知道我们告诉他们的。而你？你将成为[color=CRIMSON]非常特殊的一批[/color]。
+Text/276/text,“[color=DARK_VIOLET]叛徒特调[/color]”——我觉得这名字听起来不错。
+Text/277/text,你的心砰砰直跳。每个本能都在尖叫着让你做点什么。但卫兵无处不在。
+Choice/278/text,走上前去，要求他们释放她 (鲁莽)
+Choice/279/text,保持隐藏——留得青山在，不怕没柴烧 (务实)
+Choice/27a/text,捕捉到萨莎的目光并点头——一个承诺 (决心)
+Text/27b/text,你挤过人群。“[color=CHARTREUSE]等等！她没有做错任何事！[/color]”
+Text/27c/text,育空猛地把头转向你。“[color=RED]把那个人也抓住！[/color]显然是个同谋！”
+Text/27d/text,墨菲抓住你，把你拉了回来。“[color=STEEL_BLUE]他们在混乱中搞混了！快跑！[/color]”
+Text/27e/text,墨菲把你推向一条侧走廊，而警卫正逼近你的位置。
+Text/27f/text,警卫抓住你。罗素的笑容扩大了。“[color=CRIMSON]一石二鸟，两个叛徒。[/color]”
+Text/280/text,你缩回阴影中，恨透了自己。[color=STEEL_BLUE]懦夫。[/color]
+Text/281/text,但还活着。而且自由。暂时。
+Text/282/text,你捕捉到萨莎的目光。一个缓慢而坚定的点头。[color=CHARTREUSE]我会来救你。[/color]
+Text/283/text,她看到了。一丝微不可察的笑容。然后她被拖到拐角处，消失了。
+Text/284/text,他在混乱中找到你。他面无表情，但眼中燃烧着怒火。
+Text/285/text,他们把她带到了[color=CRIMSON]处理区[/color]。地下三层。他们就是把我妻子带到那里的。
+Text/286/text,他把一样东西塞到你手里——一张[color=GOLD]安全门禁卡[/color]。
+Text/287/text,时机到来时……[color=CHARTREUSE]我会睁一只眼闭一只眼[/color]。为了我的妻子。为了他们所有人。
+Text/288/text,墨菲把你拉进储藏室，气喘吁吁。
+Text/289/text,就是这样了。这[color=CRIMSON]真的发生了[/color]。他们抓住了萨莎。他们会在早上处理掉她。
+Text/28a/text,那真是[color=STEEL_BLUE]愚蠢[/color]。勇敢，但愚蠢。你现在在他们的名单上了。
+Text/28b/text,反抗军正在计划着什么。明天。这是我们拯救她的唯一机会。
+Text/28c/text,你加入吗？[color=CHARTREUSE]彻底加入吗？[/color]
+Choice/28d/text,彻底加入。不惜一切代价拯救萨莎。
+Choice/28e/text,我需要考虑一下。事情发展太快了。
+Text/28f/text,墨菲拍了拍你的肩膀。[color=CHARTREUSE]那我们黎明时分行动。根深蒂固。[/color]
+Text/290/text,墨菲的脸色变得严肃。快想。到明天这个时候，她就会成为[color=DARK_VIOLET]根源储备[/color]。
+Text/291/text,你躺着，睁着眼盯着天花板。萨莎的脸。她的反抗。她的恐惧。
+Text/292/text,你拿出失踪妻子的照片。又一张你无法拯救的脸。
+Text/293/text,[color=CHARTREUSE]这次不会了。[/color]
+Text/294/text,到明天，一切都会改变。无论如何。
+Text/295/text,[pulse freq=2][color=YELLOW]不再袖手旁观。[/color][/pulse]
+Text/296/text,牢房很冷。透过墙壁，你能听到萨莎在某个地方，正在被“审问”。
+Text/297/text,明天，他们说。你们俩将一起被[color=DARK_VIOLET]处理[/color]。
+Text/298/text,除非抵抗军到来。除非有人能救你们俩。
+Text/299/text,[color=STEEL_BLUE]你生命中最漫长的一夜，正摆在你的面前。[/color]
+Choice/278/disabled_text,
+Choice/279/disabled_text,
+Choice/27a/disabled_text,
+Choice/28d/disabled_text,
+Choice/28e/disabled_text,

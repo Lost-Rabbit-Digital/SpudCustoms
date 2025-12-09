@@ -1,0 +1,33 @@
+﻿keys,fr
+Text/156/text,Bienvenue à [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs Training![/color][/pulse]
+Text/157/text,Cette formation vous enseignera les [wave amp=15 freq=2][color=DARK_ORANGE]compétences essentielles[/color][/wave] nécessaires pour protéger les frontières de Spud.
+Text/158/text,Votre devoir est de traiter les pommes de terre entrantes à notre poste frontière.
+Text/159/text,Les pommes de terre immigrantes feront la queue devant votre bureau ici.
+Text/15a/text,"Pour commencer à traiter les pommes de terre, vous devez ouvrir votre guichet de service avec l'interrupteur ici."
+Text/15b/text,Vous signalerez à chaque pomme de terre d'approcher de votre bureau en tapant sur le mégaphone.
+Text/15c/text,Les pommes de terre entreront dans le guichet une par une et présenteront leurs documents.
+Text/15d/text,"D'abord, déplacez leurs documents sur la table d'inspection pour mieux les examiner."
+Text/15e/text,"Ensuite, recherchez les [tornado radius=3 freq=2][color=YELLOW]dates expirées, les informations incorrectes ou les signes de contrefaçon[/color][/tornado]."
+Text/15f/text,"Votre bureau dispose de tampons pour marquer les documents, vous pouvez cliquer ici pour sortir la barre de tampons."
+Text/160/text,Puis placez le document sous le tampon que vous souhaitez...
+Text/161/text,Cliquez sur le tampon pour marquer les documents comme [color=CHARTREUSE]approuvés[/color] ou [color=CRIMSON]rejetés[/color]...
+Text/162/text,Et faites glisser le document vers la pomme de terre pour finaliser votre décision !
+Text/163/text,"Parfois, les pommes de terre essaieront de [color=CRIMSON]se précipiter devant votre point de contrôle[/color]."
+Text/164/text,"Vous disposez d'une liaison directe dans votre guichet, qui vous permet de contrôler les [pulse freq=3][color=CRIMSON]lance-missiles[/color][/pulse] le long du mur frontalier."
+Text/165/text,"Cliquez sur ces ""coureurs"" pour lancer un missile et les arrêter."
+Text/166/text,"Rappelez-vous, chaque coureur qui passe comptera comme un [wave amp=20 freq=3][color=CRIMSON]avertissement contre vous[/color][/wave]."
+Text/167/text,"Trop d'avertissements, et votre service prendra fin... [tornado radius=3 freq=3][color=CRIMSON]définitivement.[/color][/tornado]"
+Text/168/text,Chaque service a un [color=DARK_ORANGE]quota de pommes de terre[/color] que vous devez traiter pour terminer votre journée.
+Text/169/text,Votre score suit votre performance par rapport à vos collègues à ce point de contrôle et aux agents des bureaux de douane éloignés.
+Text/16a/text,"Après chaque service, vous verrez un résumé de votre performance et si vous avez réussi ou échoué dans votre devoir."
+Text/16b/text,Vous verrez une répartition de la façon dont vous avez géré les coureurs et combien de documents vous avez traités.
+Text/16c/text,"Plus tous les bonus que vous avez gagnés en traitant rapidement les documents, en alignant parfaitement les tampons ou en frappant parfaitement les pommes de terre coureuses."
+Text/16d/text,"Vous recevrez également une évaluation de performance basée sur la façon dont vous avez traité les pommes de terre pendant votre service, et jusqu'à 3 tampons dorés si vous dépassez les attentes."
+Text/16e/text,"Ici, vous pouvez soumettre votre score pour chaque service à la base de données mondiale des agents des douanes et voir comment vous vous comparez aux agents des douanes les plus élites du monde entier."
+Text/16f/text,"Si votre service a été réussi, vous pourrez continuer en cliquant sur ""Continuer"" et en commençant votre prochain service."
+Text/170/text,Cela couvre les bases de vos devoirs en tant qu'agent des douanes.
+Text/171/text,"Souvenez-vous : vérifiez soigneusement les documents, arrêtez les coureurs et respectez votre quota."
+Text/172/text,La sécurité de Spud dépend de votre [pulse freq=2][color=DARK_ORANGE]vigilance ![/color][/pulse]
+Text/174/text,Commençons votre [color=YELLOW]service de formation[/color]...
+Text/180/text,Mais attention - toutes les pommes de terre n'ont pas leurs papiers en règle.
+Text/181/text,[color=RED]Passeports périmés[/color] sont un rejet automatique. Aucune exception.

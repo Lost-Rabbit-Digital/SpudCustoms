@@ -1,0 +1,33 @@
+﻿keys,da
+Text/a6/text,"Grænsefaciliteten føles anderledes i dag. Anspændt. Sikkerhedspatruljer i større antal, når bekymret tavshed erstatter snak."
+Text/a7/text,I nat blev [pulse freq=2][color=CRIMSON]forbudte materialer[/color][/pulse] opdaget. Løbesedler indeholdende løgne om [color=DARK_VIOLET]Rod Reserve[/color].
+Text/a8/text,Vi implementerer [wave amp=15 freq=2][color=DARK_ORANGE]trusselsniveau ORANGE protokoller[/color][/wave]. Alle betjente underlagt loyalitetstjek. Alle rejsende møder maksimal kontrol.
+Text/a9/text,Det virker. Løbesedlerne spredes. Folk stiller spørgsmål om [color=DARK_VIOLET]Rod Reserve[/color].
+Text/aa/text,"Jeg har kilder, der fortæller mig, at der er en forsendelseslog på Russetts kontor - transportmanifester, der kunne [tornado radius=3 freq=2][color=CHARTREUSE]bevise alt[/color][/tornado]."
+Text/ab/text,"Jeg har brug for din hjælp til at få fat i den. I nat, efter sidste vagt. Kan jeg stole på dig?"
+Choice/ac/text,Jeg er med. Lad os afsløre sandheden.
+Choice/ad/text,"Jeg ved ikke, Sasha... dette kan være farligt."
+Text/ae/text,"Gud være lovet. Jeg vidste, du havde [color=CHARTREUSE]stærkere rødder end de andre[/color]. Vi mødes ved midnat."
+Text/af/text,Nogle gange bliver vi nødt til at [color=CHARTREUSE]risikere at blive knust for at gøre det rigtige[/color]. Tænk over det.
+Text/b0/text,"[color=DARK_ORANGE]Loyalitetskontrol[/color]. Angiv dit navn og betjent-ID. Fortæl mig så, hvorfor du tjener Spud."
+Choice/b1/text,Jeg tjener for at beskytte vores grænser mod farlige påvirkninger.
+Choice/b2/text,Jeg tjener for at sikre retfærdig behandling for alle.
+Text/b3/text,"Godt svar. Spud har brug for loyale beskyttere. Scanneren viser grønt. Fortsæt, betjent."
+Text/b4/text,"Betjentens øjenbryn hæver sig. Retfærdig behandling? Scanneren blinker [color=DARK_ORANGE]ravfarvet[/color]. Husk, vores primære bekymring er sikkerhed, ikke retfærdighed."
+Text/b5/text,Dagens kvote er blevet øget. Enhver med mistænkeligt materiale skal markeres til [color=DARK_VIOLET]special behandling[/color].
+Text/b6/text,Jeg vil [color=DARK_ORANGE]holde meget nøje øje med dine beslutninger[/color] i dag.
+Text/b7/text,I nat kan alt ændre sig. Men først [color=YELLOW]overlev dagen uden at vække mistanke[/color].
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,
+Text/b4_viktor1/text,"En korpulent sikkerhedsvagt griber din arm, idet du passerer. Hans ansigt er furet af bekymring."
+Text/b4_viktor2/text,"Hey... undskyld jeg forstyrrer dig. Du er en af toldbetjentene, ikke? Jeg hedder [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Jeg har spurgt alle om min kone, [color=GOLD]Elena[/color]. Elena Petrov. Hun krydsede denne grænseovergang for tre uger siden."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Inspektion mislykkedes.[/color] De sagde, at hun ville blive behandlet og sendt hjem, men... jeg har ikke hørt noget."
+Text/b4_viktor5/text,"Hans stemme skælver. Ingen vil fortælle mig noget. Ved du, hvor de afviste rejsende bliver af?"
+Choice/b4_viktor6/text,"""Jeg er ked af det, Viktor. Jeg ved det ikke. Men jeg skal nok holde øje."""
+Choice/b4_viktor7/text,"""Jeg kan ikke diskutere behandlingsdetaljer. Sikkerhedsprotokoller."""
+Text/b4_viktor8/text,"Viktors øjne viser et glimt af håb. [color=CHARTREUSE]Tak.[/color] Alt hvad du finder ud af... vær sød. Hun er alt, hvad jeg har."
+Text/b4_viktor9/text,"Viktor nikker, nedslået. [color=STEEL_BLUE]Javel. Protokoller.[/color] Jeg forstår."
+Text/b4_viktor10/text,"Men hvis du ombestemmer dig... [color=YELLOW]Jeg er nødt til at vide, hvad der er sket med hende.[/color]"

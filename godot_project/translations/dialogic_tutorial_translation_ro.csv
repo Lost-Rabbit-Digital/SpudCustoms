@@ -1,0 +1,33 @@
+﻿keys,ro
+Text/156/text,Bine ați venit la [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs Training![/color][/pulse]
+Text/157/text,Acest antrenament vă va învăța [wave amp=15 freq=2][color=DARK_ORANGE]abilitățile esențiale[/color][/wave] necesare pentru a proteja frontierele Spud.
+Text/158/text,Datoria dvs. este să procesați cartofii care intră la punctul nostru de frontieră.
+Text/159/text,Cartofii imigranți se vor alinia în afara biroului dvs. de aici.
+Text/15a/text,"Pentru a începe procesarea cartofilor, trebuie să deschideți cabina dvs. pentru serviciu cu comutatorul de aici."
+Text/15b/text,Veți semnala fiecărui cartof să se apropie de biroul dvs. apăsând pe megafon.
+Text/15c/text,Cartofii vor intra în cabină unul câte unul și își vor prezenta documentele.
+Text/15d/text,"Mai întâi, mutați documentele lor pe masa de inspecție pentru o privire mai bună."
+Text/15e/text,"Apoi, căutați [tornado radius=3 freq=2][color=YELLOW]date expirate, informații incorecte sau semne de falsificare[/color][/tornado]."
+Text/15f/text,"Biroul dvs. are ștampile pentru marcarea documentelor, puteți face clic aici pentru a scoate bara de ștampile."
+Text/160/text,Apoi plasați documentul sub ștampila pe care o doriți...
+Text/161/text,Faceți clic pe ștampilă pentru a marca documentele ca [color=CHARTREUSE]aprobate[/color] sau [color=CRIMSON]respinse[/color]...
+Text/162/text,Și trageți documentul înapoi la cartof pentru a finaliza decizia dvs.!
+Text/163/text,"Uneori, cartofii vor încerca să [color=CRIMSON]treacă în grabă pe lângă punctul dvs. de control[/color]."
+Text/164/text,"Aveți o legătură directă în cabina dvs., care vă permite să controlați [pulse freq=3][color=CRIMSON]lansatoarele de rachete[/color][/pulse] de-a lungul zidului de frontieră."
+Text/165/text,"Faceți clic pe acești ""fugari"" pentru a lansa o rachetă și a-i opri."
+Text/166/text,"Rețineți, fiecare fugar care reușește să treacă va conta ca o [wave amp=20 freq=3][color=CRIMSON]greșeală împotriva dvs.[/color][/wave]"
+Text/167/text,"Prea multe greșeli, și tura dvs. se va termina... [tornado radius=3 freq=3][color=CRIMSON]definitiv.[/color][/tornado]"
+Text/168/text,Fiecare tură are o [color=DARK_ORANGE]cotă de cartofi[/color] pe care trebuie să îi procesați pentru a vă termina ziua.
+Text/169/text,Scorul dvs. ține evidența performanței dvs. în comparație cu colegii dvs. de la acest punct de control și cu funcționarii din birourile vamale îndepărtate.
+Text/16a/text,"După fiecare tură, veți vedea un rezumat al performanței dvs. și dacă ați reușit sau ați eșuat în îndatorirea dvs."
+Text/16b/text,Veți vedea o defalcare a modului în care ați gestionat fugarii și câte documente ați procesat.
+Text/16c/text,"Plus orice bonusuri pe care le-ați câștigat prin procesarea rapidă a documentelor, alinierea perfectă a ștampilelor sau lovirea perfectă a cartofilor fugari."
+Text/16d/text,"Veți primi, de asemenea, o evaluare a performanței pe baza calității procesării cartofilor în timpul turei dvs., și până la 3 ștampile de aur dacă depășiți așteptările."
+Text/16e/text,Aici puteți trimite scorul dvs. pentru fiecare tură la baza de date globală a ofițerilor vamali și puteți vedea cum vă comparați cu cei mai de elită ofițeri vamali din întreaga lume.
+Text/16f/text,"Dacă tura dvs. a fost de succes, veți putea continua făcând clic pe ""Continuă"" și începând următoarea tură."
+Text/170/text,Aceasta acoperă elementele de bază ale îndatoririlor dvs. ca Ofițer Vamal.
+Text/171/text,"Amintiți-vă: verificați documentele cu atenție, opriți fugarii și îndepliniți-vă cota."
+Text/172/text,Siguranța și securitatea Spud depinde de [pulse freq=2][color=DARK_ORANGE]vigilența dvs.![/color][/pulse]
+Text/174/text,Să începem [color=YELLOW]tura ta de instruire[/color]...
+Text/180/text,Dar ai grijă - nu fiecare cartof are actele în regulă.
+Text/181/text,[color=RED]Pașapoartele expirate[/color] sunt o respingere automată. Fără excepții.

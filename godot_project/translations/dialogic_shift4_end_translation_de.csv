@@ -1,0 +1,49 @@
+﻿keys,de
+Text/215/text,"Murphy fängt dich auf dem Gang ab, die Augen rot unterlaufen. Hast du eine Minute?"
+Text/216/text,Murphy zieht dich in einen leeren Abstellraum und schließt die Tür.
+Text/217/text,"Der Witz, den ich in der Kantine gemacht habe... darüber, dass mein Cousin in der [color=DARK_VIOLET]Wurzel-Reserve[/color]-Charge war..."
+Text/218/text,"Murphys Stimme bricht. Ich glaube, es war kein Witz mehr."
+Text/219/text,"Du sagtest, es sei nicht lustig. Du hattest recht. [color=STEEL_BLUE]Nichts davon ist lustig.[/color]"
+Text/21a/text,"Ich sah dich gehen. Klug. Ich wünschte, ich könnte aufhören, das Zeug zu essen, aber sie [color=YELLOW]beobachten[/color]. Sie beobachten immer."
+Text/21b/text,"Ich habe etwas in den Sachen meines Cousins gefunden. Sein Ablehnungsformular. Standardkram, aber..."
+Text/21c/text,"Murphy zieht ein zerknittertes Formular hervor. Sieh dir den Verarbeitungscode an. ""[color=CRIMSON]RR-UTIL-7[/color]."""
+Text/21d/text,Ich habe es in den Archiven nachgeschlagen. RR steht für [pulse freq=2][color=DARK_VIOLET]Wurzel-Reserve[/color][/pulse]. UTIL bedeutet... [color=CRIMSON]Verwertung[/color].
+Text/21d_breakdown1/text,[wave amp=20 freq=3]Murphys Hände beginnen zu zittern.[/wave] Mein Cousin... Tommy... er war erst dreiundzwanzig.
+Text/21d_breakdown2/text,Er kam hierher für ein [color=CHARTREUSE]besseres Leben[/color]. Eine Inspektion nicht bestanden. Eine einzige. [color=STEEL_BLUE]Einfach schlechtes Timing.[/color]
+Text/21d_breakdown3/text,"Murphy rutscht die Wand hinunter, das Gesicht in den Händen. Und ich... ich habe das Zeug [tornado radius=3 freq=2][color=CRIMSON]GEGESSEN[/color][/tornado]. Jeden Tag."
+Text/21d_breakdown4/text,"Murphy blickt dich an, Tränen strömen. [pulse freq=2][color=CRIMSON]Was, wenn ich IHN gegessen habe?[/color][/pulse]"
+Choice/21e/text,Murphy... Es tut mir so leid. Ich bin bei dir. Wir werden die Wahrheit gemeinsam herausfinden.
+Choice/21f/text,"Murphy, das ist gefährlich. Wir sollten uns da raushalten."
+Choice/220/text,Vielleicht ist es Zufall. Ziehen wir keine voreiligen Schlüsse.
+Text/221_comfort1/text,"Du kniest dich neben Murphy, legst eine Hand auf seine Schulter."
+Text/221/text,"Murphy greift deinen Arm wie einen Rettungsanker. [color=CHARTREUSE]Danke.[/color] Ich dachte, ich werde verrückt."
+Text/221_tommy/text,"[color=STEEL_BLUE]Seine Stimme wird etwas ruhiger.[/color] Für Tommy. Wir tun das für Tommy. Und für alle anderen, die sie geholt haben."
+Text/222/text,"Es gibt auch andere, die Verdacht schöpfen. Sasha hat Leute zusammengebracht. Ich glaube, sie vertraut dir."
+Text/223/text,"Murphy wischt sich die Augen, versucht sich zu fassen. Ja. Ja, du hast wahrscheinlich recht. Vergiss, dass ich etwas gesagt habe."
+Text/224/text,Aber falls du es dir anders überlegst... Ich werde hier sein. [color=STEEL_BLUE]Allein mit meinen Fragen. Und meinen Albträumen.[/color]
+Text/225/text,Zufall. Murphy lacht bitterlich durch seine Tränen. Sicher. Und Tommy ist einfach [color=CRIMSON]verschwunden[/color].
+Text/226/text,"Rede dir das nur weiter ein. Mal sehen, wie lange es dir hilft zu schlafen. [color=STEEL_BLUE]Mir hilft es nicht.[/color]"
+Text/227/text,"Sasha erscheint an deinem Schalter, als die letzte Schicht endet. Du siehst aus, als hättest du einen Geist gesehen."
+Text/228/text,Lass mich raten – Murphy hat dir von seinem Cousin erzählt?
+Text/229/text,"Sasha nickt zustimmend. Gut. Wir brauchen Leute, die Fragen stellen."
+Text/22a/text,Sasha mustert dein Gesicht aufmerksam. Du hast Angst. Das ist klug. Aber Angst wird niemanden retten.
+Text/22b/text,"Ich beobachte dich seit deinem ersten Tag. Die Art, wie du [color=YELLOW]zögertest[/color], als Russet von „Verarbeitung“ sprach."
+Text/22c/text,"Du hast gefragt, was mit abgelehnten Kartoffeln passiert. Das zeugte von Mut. [color=CHARTREUSE]Die meisten salutieren und stempeln einfach.[/color]"
+Text/22d/text,"Sasha beugt sich näher. Es gibt ein Muster. Jede Kartoffel, die wir ablehnen? Innerhalb von 48 Stunden verschwunden. Keine Deportationsakten. Keine Überstellungen."
+Text/22e/text,Aber die Produktion von [color=DARK_VIOLET]Root Reserve[/color]? [tornado radius=3 freq=2][color=CRIMSON]Sie steigt.[/color][/tornado] Jedes. Einzige. Mal.
+Choice/22f/text,Ich glaube dir. Wie kann ich helfen?
+Choice/230/text,"Ich brauche Beweise, bevor ich alles riskiere."
+Text/231/text,"Sashas Augen leuchten auf. Ich wusste, dass ich richtig gewählt hatte. Morgen Abend, nach der Schicht. Ich zeige dir, was ich gefunden habe."
+Text/232/text,Bis dahin
+Text/233/text,Fair genug. Beweise kommen. Aber... halte die Augen offen während der morgigen Schicht.
+Text/234/text,"Achte darauf, wohin die [color=CRIMSON]abgelehnten Kartoffeln[/color] gehen. Folge den Lastwagen, wenn du kannst."
+Text/235/text,"Du ziehst das Foto hervor, das dir die verzweifelte Kartoffel gegeben hat. Ihre Frau. [color=STEEL_BLUE]Wo ist sie jetzt?[/color]"
+Text/236/text,"Wenn das, was Sasha und Murphy sagen, wahr ist... dann ist sie bereits..."
+Text/237/text,Du kannst den Gedanken nicht zu Ende bringen. Aber du [color=CHARTREUSE]wirst ihr Gesicht nicht vergessen[/color].
+Text/238/text,"Morgen ändert sich alles. Entweder findest du Antworten, oder du begräbst die Fragen für immer."
+Text/239/text,Eines ist sicher: Es gibt [color=YELLOW]kein Zurück zur seligen Unwissenheit[/color].
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

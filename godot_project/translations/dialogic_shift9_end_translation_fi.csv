@@ -1,0 +1,33 @@
+﻿keys,fi
+Text/131/text,"Kyykistyt taistelun riehuessa. Olen pahoillani, Sasha. [color=STEEL_BLUE]En ole yhtä rohkea kuin sinä[/color]."
+Text/132/text,[color=CRIMSON]Terroristihyökkäys[/color] on torjuttu! Johtajia [color=DARK_VIOLET]käsitellään[/color] parhaillaan.
+Text/133/text,"Päällikkö Yukon raahaa vastarintajäseniä ketjuissa, Sasha heidän joukossaan. ""Nämä [color=CRIMSON]petturit[/color] kohtaavat [color=DARK_VIOLET]lopullisen käsittelyn[/color]."""
+Text/134/text,"Sasha katsoo sinua silmiin. Mustelmistaan huolimatta hänen katseessaan on [wave amp=15 freq=2][color=CHARTREUSE]ei tuomiota, vain surua[/color][/wave]."
+Text/135/text,"Olet selvinnyt pitämällä pääsi alhaalla, mutta [pulse freq=3][color=GOLD]millä hinnalla?[/color][/pulse] Kun [color=DARK_VIOLET]Juurivarasto[/color]-tuotanto leijailee tehtaasta, vatsasi kääntyy."
+Text/136/text,Ehkä on vielä mahdollisuus sisältä käsin. Tai ehkä vain rauhoitat omaatuntoasi.
+Text/137/text,[tornado radius=3 freq=2][color=CHARTREUSE]Hylkäät asemasi[/color][/tornado] ja ryntäät kohti taistelua. Varovaisuuden aika on ohi.
+Text/138/text,"[pulse freq=3][color=GOLD]Todista, että olet kanssamme![/color][/pulse] Miten tunnet Sashan?"
+Text/139/text,"[color=CHARTREUSE]Juuret kasvavat syvälle![/color] Olen tarkastuspisteeltä, Sasha värväsi minut!"
+Text/13a/text,He vievät hänet prosessointilaitokseen juuri nyt. Meidän on kiirehdittävä!
+Text/13b/text,"Ovet räjähtävät auki paljastaen [wave amp=25 freq=3][color=CRIMSON]kauhean totuuden[/color][/wave] - jauhamiskoneet, kuljettimet kuljettavat perunoita tuhoonsa."
+Text/13c/text,Yhden hihnan päässä - Sasha ja muut [color=CRIMSON]avuttomina sidottuina[/color]. Valvoja Russet seisoo ohjaimilla.
+Text/13d/text,"[color=RED]SINÄ![/color] Olisi pitänyt tietää, että olet yksi heistä! Peräänny tai käynnistän prosessorin!"
+Text/13e/text,"Kun vastarintataistelijat ylivoimaistavat Russetin, Sasha uudelleenohjaa laitoksen kamerat. [color=YELLOW]Spudin kansa! Tämä on Juurivarasto! He ovat syöttäneet meitä toisillemme![/color]"
+Text/13f/text,Palasit minun vuokseni. [color=CHARTREUSE]Me teimme sen. Totuus on nyt ulkona.[/color] Meillä on tulevaisuus rakennettavana!
+Text/140/text,"[color=STEEL_BLUE]Vastarintajohtaja astuu esiin, ase suunnattuna Russetiin.[/color] Ei askeltakaan enempää, Russet. Kädet näkyville."
+Text/141/text,"[color=CRIMSON]Russetin katse sinkoilee sinun ja vastarintajohtajan välillä, hiki helmeilee hänen otsallaan.[/color] Luuletko voittaneesi? Tämä laitos on Spudin perusta!"
+Text/142/text,Kärsimyksen perusta. [pulse freq=3][color=CHARTREUSE]Se loppuu tänään.[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]Sasha kamppailee siteitään vastaan kuljetinhihnalla
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""Russet"
+Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""Tätäkö... tätäkö he ovat tehneet? Tämä on pahempaa kuin kuvittelin...""[/color][/wave]"
+Choice/146/text,"[color=CHARTREUSE]""Sasha! Kiitos juurien, että olet elossa! Pidä kiinni"
+Text/147/text,"[color=CRIMSON]Syöksyt Russetia kohti, nyrkit puristettuina, vastarintataistelijoiden hädin tuskin pidätellessä sinua.[/color] Jokainen peruna, joka tuli tarkastuspisteeni läpi... kuinka monta sinä..."
+Text/148/text,Rauhoitu! Tarvitsemme häntä elossa todistamaan. [color=STEEL_BLUE]Johtaja pitää aseensa suunnattuna Russetiin.[/color] Säästä vihasi oikeuteen.
+Text/149/text,"[color=STEEL_BLUE]Horjahdat taaksepäin, käsi suusi edessä, tajuten koneiston täyden kauhun.[/color] Leimasin heidän paperinsa... Lähetin heidät tänne..."
+Text/14a/text,[color=CHARTREUSE]Et tiennyt. Kukaan meistä ei tiennyt.[/color] Siksi olemme täällä nyt. Keskity!
+Text/14b/text,[color=CHARTREUSE]Kiiruhdat kuljettimen luo
+Text/14c/text,"[color=CHARTREUSE]Sashan silmät kiiltävät kyynelistä ja toivosta, kun kätesi avaavat solmuja.[/color] Tiesin, että tulisit. En koskaan epäillyt sinua."
+Text/14d/text,"[color=STEEL_BLUE]Johtaja pakottaa Russetin polvilleen aseella uhaten.[/color] Sido hänet. Varmista, että hän katsoo, mitä seuraavaksi tapahtuu."
+Text/14e/text,"[color=CHARTREUSE]Sasha tarttuu käteesi, kietoo sormensa omiisi.[/color] Tulit takaisin minun vuokseni. Mitä tahansa seuraavaksi tapahtuukin... kohtaamme sen yhdessä."
+Text/14f/text,"[color=STEEL_BLUE]Sasha katsoo sinua tarkasti, nähden yhä silmissäsi palavan raivon.[/color] Kanavoi se tuli. Tarvitsemme sitä siihen, mitä seuraavaksi tapahtuu."
+Text/150/text,[color=STEEL_BLUE]Sasha asettaa hellästi kätensä olkapäällesi.[/color] Syyllisyys ei ole sinun kannettavanasi. Olet täällä nyt. Sillä on merkitystä.

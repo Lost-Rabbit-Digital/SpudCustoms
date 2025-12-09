@@ -1,0 +1,59 @@
+﻿keys,vi
+Text/265/text,Ca làm việc kết thúc trong sự im lặng bất an. Tuần tra an ninh đã tăng gấp đôi. Mọi người di chuyển trong tiếng thì thầm.
+Text/266/text,Bạn đang trên đường về phòng thì nghe thấy - [color=YELLOW]tiếng la hét từ khu sĩ quan[/color].
+Text/267/text,Bạn rẽ góc và thấy lực lượng an ninh [pulse freq=3][color=RED]đạp sập cửa của Sasha[/color][/pulse].
+Text/268/text,Giọng của Trưởng Yukon vang dội. KHOAI LANG SASHA! Ngươi bị bắt vì [color=CRIMSON]tội phản quốc chống lại quốc gia Spud![/color]
+Text/269/text,"Sasha bị lôi ra ngoài, giãy giụa. Đôi mắt cô ấy vẫn đầy thách thức ngay cả khi lính gác bẻ tay cô ra sau lưng."
+Text/26a/text,[tornado radius=4 freq=3][color=CHARTREUSE]SỰ THẬT SẼ ĐƯỢC PHƠI BÀY! CÁC NGƯƠI KHÔNG THỂ BỊT MIỆNG TẤT CẢ CHÚNG TA![/color][/tornado]
+Text/26b/text,Ánh mắt cô ấy tìm thấy bạn trong đám đông người đứng nhìn. Thời gian dường như ngừng lại.
+Text/26c/text,Sự nhận ra... rồi [color=CRIMSON]sự thấu hiểu đau lòng[/color]. Bạn đã phản bội vị trí của cô ấy. Cô ấy biết.
+Text/26d/text,Cô ấy không nói. Ánh mắt là đủ. [color=STEEL_BLUE]Nỗi thất vọng sâu sắc hơn cả sự căm ghét.[/color]
+Text/26e/text,Một thoáng gì đó - [color=CHARTREUSE]hy vọng? tin tưởng?[/color] - lướt qua khuôn mặt cô ấy.
+Text/26f/text,"Môi cô ấy khẽ mấp máy: ""[color=CHARTREUSE]Rễ cây mọc sâu.[/color]"" Một thông điệp. Một lời nhắc nhở."
+Text/270/text,"Russet xuất hiện từ bóng tối, sự thỏa mãn tràn ngập mọi lỗ chân lông."
+Text/271/text,"Chà chà. [color=CRIMSON]Khoai lang ngọt hóa chua[/color]. Ta luôn biết có điều gì đó thối nát về ngươi, Sasha."
+Text/272/text,"Russet giơ một tập tài liệu lên. Những [color=DARK_VIOLET]bản kê khai[/color] nhỏ của ngươi. ""Bằng chứng"" của ngươi. Tất cả đã được thu hồi."
+Text/273/text,Ngươi thực sự nghĩ rằng ngươi có thể phá hoại [pulse freq=2][color=DARK_VIOLET]Dự trữ Rễ[/color][/pulse]? Phá hoại TA ư?
+Text/274/text,"Các bản sao đã được phát tán rồi, Russet. Thế giới sẽ biết ngươi đã làm gì với người dân của chúng ta!"
+Text/275/text,Russet cười lạnh lùng. Chúng sẽ biết những gì chúng ta nói với chúng. Còn ngươi? Ngươi sẽ là một phần của một [color=CRIMSON]mẻ rất đặc biệt[/color].
+Text/276/text,"""[color=DARK_VIOLET]Hỗn hợp Kẻ phản bội[/color]"" - Ta nghĩ cái tên đó nghe hay đấy."
+Text/277/text,Tim bạn đập thình thịch. Mọi bản năng đều gào thét phải làm gì đó. Nhưng lính gác ở khắp mọi nơi.
+Choice/278/text,Bước tới và yêu cầu họ thả cô ấy (Liều lĩnh)
+Choice/279/text,Ở ẩn - sống để chiến đấu vào một ngày khác (Thực dụng)
+Choice/27a/text,Bắt gặp ánh mắt của Sasha và gật đầu - một lời hứa (Quyết tâm)
+Text/27b/text,"Bạn chen qua đám đông. ""[color=CHARTREUSE]Khoan đã! Cô ấy không làm gì sai cả![/color]"""
+Text/27c/text,"Đầu Yukon quay phắt về phía bạn. ""[color=RED]Bắt luôn kẻ đó![/color] Rõ ràng là đồng phạm!"""
+Text/27d/text,"Murphy túm lấy bạn, kéo bạn lại. ""[color=STEEL_BLUE]Chúng đang bối rối trong sự hỗn loạn! CHẠY ĐI![/color]"""
+Text/27e/text,Murphy đẩy bạn vào một hành lang phụ khi lính gác áp sát vị trí của bạn.
+Text/27f/text,"Lính gác tóm lấy bạn. Nụ cười của Russet toe toét. ""[color=CRIMSON]Hai kẻ phản bội với giá của một.[/color]"""
+Text/280/text,"Bạn rụt lại vào bóng tối, căm ghét bản thân đến tận xương tủy. [color=STEEL_BLUE]Đồ hèn.[/color]"
+Text/281/text,Nhưng còn sống. Và tự do. Tạm thời.
+Text/282/text,"Bạn bắt gặp ánh mắt của Sasha. Một cái gật đầu chậm rãi, dứt khoát. [color=CHARTREUSE]Tôi sẽ đến cứu em.[/color]"
+Text/283/text,"Cô ấy hiểu. Một nụ cười nhỏ xíu. Rồi cô ấy bị kéo đi khuất sau góc, biến mất."
+Text/284/text,"Anh ta tìm thấy bạn giữa sự hỗn loạn. Mặt anh ta vô cảm, nhưng đôi mắt rực lửa."
+Text/285/text,Họ đưa cô ấy đến [color=CRIMSON]khu xử lý[/color]. Tầng hầm 3. Đó là nơi họ đã đưa vợ tôi đi.
+Text/286/text,Anh ta ấn một thứ gì đó vào tay bạn - một [color=GOLD]thẻ khóa an ninh[/color].
+Text/287/text,Khi thời cơ đến... [color=CHARTREUSE]Tôi sẽ làm ngơ[/color]. Vì vợ tôi. Vì tất cả bọn họ.
+Text/288/text,"Murphy kéo bạn vào phòng kho, thở dốc."
+Text/289/text,Chuyện này là thật. Chuyện này [color=CRIMSON]thực sự đang xảy ra[/color]. Bọn chúng đã bắt được Sasha. Chúng sẽ xử lý cô ấy trước sáng.
+Text/28a/text,"Chuyện đó thật [color=STEEL_BLUE]ngu ngốc[/color]. Dũng cảm, nhưng ngu ngốc. Giờ bạn đã nằm trong danh sách của chúng."
+Text/28b/text,Lực lượng kháng chiến đang lên kế hoạch. Ngày mai. Đó là cơ hội duy nhất của chúng ta để cứu cô ấy.
+Text/28c/text,Bạn có tham gia không? [color=CHARTREUSE]Tham gia đến cùng chứ?[/color]
+Choice/28d/text,Đến cùng. Bất kể phải làm gì để cứu Sasha.
+Choice/28e/text,Tôi cần suy nghĩ. Chuyện này diễn ra quá nhanh.
+Text/28f/text,Murphy vỗ vai bạn. [color=CHARTREUSE]Vậy thì chúng ta sẽ hành động lúc bình minh. Rễ đã cắm sâu.[/color]
+Text/290/text,"Mặt Murphy đanh lại. Nghĩ nhanh đi. Đến giờ này ngày mai, cô ấy sẽ trở thành [color=DARK_VIOLET]Kho Dự Trữ Gốc[/color]."
+Text/291/text,"Bạn nằm thao thức, nhìn chằm chằm lên trần nhà. Khuôn mặt của Sasha. Sự bất chấp của cô ấy. Nỗi sợ hãi của cô ấy."
+Text/292/text,Bạn lấy ra bức ảnh người vợ mất tích. Một khuôn mặt khác mà bạn không thể cứu.
+Text/293/text,[color=CHARTREUSE]Không phải lần này.[/color]
+Text/294/text,"Đến ngày mai, mọi thứ sẽ thay đổi. Dù thế nào đi nữa."
+Text/295/text,[pulse freq=2][color=YELLOW]Không còn đứng ngoài cuộc nữa.[/color][/pulse]
+Text/296/text,"Xà lim lạnh lẽo. Xuyên qua những bức tường, bạn có thể nghe thấy Sasha ở đâu đó, đang bị ""tra hỏi."""
+Text/297/text,"Ngày mai, bọn chúng nói. Cả hai ngươi sẽ bị [color=DARK_VIOLET]xử lý[/color] cùng nhau."
+Text/298/text,Trừ khi lực lượng kháng chiến đến. Trừ khi có ai đó cứu cả hai ngươi.
+Text/299/text,[color=STEEL_BLUE]Đêm dài nhất cuộc đời ngươi đang trải dài phía trước.[/color]
+Choice/278/disabled_text,
+Choice/279/disabled_text,
+Choice/27a/disabled_text,
+Choice/28d/disabled_text,
+Choice/28e/disabled_text,

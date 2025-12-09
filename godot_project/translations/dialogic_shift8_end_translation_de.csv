@@ -1,0 +1,59 @@
+﻿keys,de
+Text/265/text,Die Schicht endet in unbehaglicher Stille. Die Sicherheitspatrouillen wurden verdoppelt. Alle bewegen sich flüsternd.
+Text/266/text,"Du bist auf dem Weg zu deinem Quartier, als du es hörst – [color=YELLOW]Geschrei aus dem Offiziersflügel[/color]."
+Text/267/text,"Du biegst um die Ecke und siehst, wie Sicherheitskräfte [pulse freq=3][color=RED]Sashas Tür eintreten[/color][/pulse]."
+Text/268/text,Chief Yukons Stimme dröhnt. SÜSSKARTOFFEL SASHA! Sie sind verhaftet wegen [color=CRIMSON]Verrats an der Nation Spud![/color]
+Text/269/text,"Sasha wird herausgeschleift, sich wehrend. Ihre Augen sind trotzig, selbst als Wachen ihr die Arme auf den Rücken drehen."
+Text/26a/text,[tornado radius=4 freq=3][color=CHARTREUSE]DIE WAHRHEIT WIRD ANS LICHT KOMMEN! IHR KÖNNT UNS NICHT ALLE ZUM SCHWEIGEN BRINGEN![/color][/tornado]
+Text/26b/text,Ihr Blick findet dich in der Menge der Schaulustigen. Die Zeit scheint stillzustehen.
+Text/26c/text,Erkenntnis... dann [color=CRIMSON]vernichtendes Verständnis[/color]. Du hast ihren Aufenthaltsort verraten. Sie weiß es.
+Text/26d/text,Sie spricht nicht. Der Blick genügt. [color=STEEL_BLUE]Enttäuschung tiefer als Hass.[/color]
+Text/26e/text,Ein Flackern von etwas – [color=CHARTREUSE]Hoffnung? Vertrauen?[/color] – huscht über ihr Gesicht.
+Text/26f/text,Ihre Lippen bewegen sich lautlos: „[color=CHARTREUSE]Die Wurzeln reichen tief.[/color]“ Eine Botschaft. Eine Erinnerung.
+Text/270/text,"Russet tritt aus den Schatten, Zufriedenheit trieft aus jeder Pore."
+Text/271/text,"Na, na. Die [color=CRIMSON]Süßkartoffel wird sauer[/color]. Ich wusste immer, dass etwas faul an dir war, Sasha."
+Text/272/text,Russet hält einen Ordner hoch. Eure kleinen [color=DARK_VIOLET]Manifeste[/color]. Eure „Beweise“. Alles wiedererlangt.
+Text/273/text,"Hast du wirklich geglaubt, du könntest [pulse freq=2][color=DARK_VIOLET]Wurzelreserve[/color][/pulse] untergraben? MICH untergraben?"
+Text/274/text,"Kopien sind bereits draußen, Russet. Die Welt wird wissen, was ihr unserem Volk antut!"
+Text/275/text,"Russet lacht kalt. Sie werden wissen, was wir ihnen erzählen. Und du? Du wirst Teil einer [color=CRIMSON]ganz besonderen Charge[/color] sein."
+Text/276/text,"„[color=DARK_VIOLET]Verräter-Mischung[/color]“ – Ich finde, das klingt gut."
+Text/277/text,"Dein Herz pocht. Jeder Instinkt schreit danach, etwas zu tun. Aber Wachen sind überall."
+Choice/278/text,Vortreten und ihre Freilassung fordern (Rücksichtslos)
+Choice/279/text,Versteckt bleiben – um an einem anderen Tag zu kämpfen (Pragmatisch)
+Choice/27a/text,Sashas Blick fangen und nicken – ein Versprechen (Entschlossenheit)
+Text/27b/text,Du drängst dich durch die Menge. „[color=CHARTREUSE]Wartet! Sie hat nichts falsch gemacht![/color]“
+Text/27c/text,Yukons Kopf schnellt zu dir herum. „[color=RED]Den auch festnehmen![/color]“ Eindeutig ein Komplize!
+Text/27d/text,Murphy packt dich und zieht dich zurück. „[color=STEEL_BLUE]Sie sind im Chaos verwirrt! LAUF![/color]“
+Text/27e/text,"Murphy schiebt dich in einen Seitenkorridor, während Wachen deine Position einkesseln."
+Text/27f/text,Wachen packen dich. Russets Lächeln weitet sich. „[color=CRIMSON]Zwei Verräter zum Preis von einem.[/color]“
+Text/280/text,Du ziehst dich in die Schatten zurück und hasst dich mit jeder Faser. [color=STEEL_BLUE]Feigling.[/color]
+Text/281/text,Aber lebendig. Und frei. Vorerst.
+Text/282/text,"Du fängst Sashas Blick auf. Ein langsames, bewusstes Nicken. [color=CHARTREUSE]Ich komme für dich.[/color]"
+Text/283/text,"Sie sieht es. Das kleinste Lächeln. Dann wird sie um die Ecke geschleift, verschwunden."
+Text/284/text,"Er findet dich im Chaos. Sein Gesicht ist eine Maske, aber seine Augen brennen."
+Text/285/text,Sie brachten sie in den [color=CRIMSON]Verarbeitungsflügel[/color]. Untergeschoss 3. Dort haben sie meine Frau hingebracht.
+Text/286/text,Er drückt dir etwas in die Hand – eine [color=GOLD]Sicherheitskarte[/color].
+Text/287/text,Wenn die Zeit kommt... [color=CHARTREUSE]werde ich wegschauen[/color]. Für meine Frau. Für sie alle.
+Text/288/text,Murphy zieht dich keuchend in den Lagerraum.
+Text/289/text,Das ist es. Das wird [color=CRIMSON]ernst[/color]. Sie haben Sasha. Sie werden sie bis zum Morgen verarbeiten.
+Text/28a/text,"Das war [color=STEEL_BLUE]dumm[/color]. Mutig, aber dumm. Du stehst jetzt auf ihrer Liste."
+Text/28b/text,"Der Widerstand plant etwas. Morgen. Es ist unsere einzige Chance, sie zu retten."
+Text/28c/text,Bist du dabei? [color=CHARTREUSE]Ganz dabei?[/color]
+Choice/28d/text,"Ganz dabei. Was auch immer nötig ist, um Sasha zu retten."
+Choice/28e/text,Ich muss nachdenken. Das geht zu schnell.
+Text/28f/text,Murphy legt dir die Hand auf die Schulter. [color=CHARTREUSE]Dann handeln wir im Morgengrauen. Die Wurzeln reichen tief.[/color]
+Text/290/text,Murphys Gesicht verhärtet sich. Denk schnell. Um diese Zeit morgen wird sie [color=DARK_VIOLET]Wurzelreserve[/color] sein.
+Text/291/text,Du liegst wach und starrst an die Decke. Sashas Gesicht. Ihr Trotz. Ihre Angst.
+Text/292/text,"Du ziehst das Foto der vermissten Frau hervor. Ein weiteres Gesicht, das du nicht retten konntest."
+Text/293/text,[color=CHARTREUSE]Nicht dieses Mal.[/color]
+Text/294/text,Bis morgen ändert sich alles. So oder so.
+Text/295/text,[pulse freq=2][color=YELLOW]Kein Zuschauen mehr.[/color][/pulse]
+Text/296/text,"Die Zelle ist kalt. Durch die Wände hörst du Sasha irgendwo, wie sie „verhört“ wird."
+Text/297/text,"Morgen, sagten sie. Ihr werdet beide zusammen [color=DARK_VIOLET]verarbeitet[/color]."
+Text/298/text,"Es sei denn, der Widerstand kommt. Es sei denn, jemand rettet euch beide."
+Text/299/text,[color=STEEL_BLUE]Die längste Nacht deines Lebens breitet sich vor dir aus.[/color]
+Choice/278/disabled_text,
+Choice/279/disabled_text,
+Choice/27a/disabled_text,
+Choice/28d/disabled_text,
+Choice/28e/disabled_text,

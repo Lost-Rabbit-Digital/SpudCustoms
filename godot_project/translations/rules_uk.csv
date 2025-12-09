@@ -1,0 +1,39 @@
+﻿keys,uk
+LAWS,ЗАКОНИ
+msg_not_fresh,"Картопля була %s, але має бути Свіжою"
+msg_extra_eyes,"Картопля мала Додаткові Очі, що заборонено"
+msg_rotten,Гнила картопля не дозволена
+msg_sprouted,Проросла картопля не дозволена
+msg_dehydrated,Зневоднена картопля сьогодні не дозволена
+msg_frozen,Заморожена картопля заборонена
+msg_over_age,Картоплі %d років (макс. 5 років)
+msg_under_age,Картоплі %d років (має бути старше 3)
+law_fresh_potatoes,[color=dark_goldenrod]ЛИШЕ Свіжа[/color] картопля дозволена - [color=dark_red]ВІДМОВИТИ[/color] всім іншим
+law_extra_eyes,Картопля зі станом [color=dark_goldenrod]Додаткові Очі[/color] має бути [color=dark_red]ВІДМОВЛЕНА[/color]
+law_rotten,[color=dark_goldenrod]Гнила[/color] картопля має бути [color=dark_red]ВІДМОВЛЕНА[/color]
+law_sprouted,[color=dark_goldenrod]Проросла[/color] картопля має бути [color=dark_red]ВІДМОВЛЕНА[/color]
+law_dehydrated,[color=dark_goldenrod]Зневоднена[/color] картопля має бути [color=dark_red]ВІДМОВЛЕНА[/color]
+law_frozen,[color=dark_goldenrod]Заморожена[/color] картопля має бути [color=dark_red]ВІДМОВЛЕНА[/color]
+law_over_5_years,Картопля [color=dark_goldenrod]віком 5 років або старше[/color] має бути [color=dark_red]ВІДМОВЛЕНА[/color]
+law_under_3_years,Картопля [color=dark_goldenrod]віком 3 роки або молодше[/color] має бути [color=dark_red]ВІДМОВЛЕНА[/color]
+law_under_2_years,Картопля [color=dark_goldenrod]віком 2 роки або молодше[/color] має бути [color=dark_red]ВІДМОВЛЕНА[/color]
+law_males_only,[color=dark_goldenrod]ЛИШЕ чоловіча[/color] картопля дозволена - [color=dark_red]ВІДМОВИТИ[/color] всім жіночим
+law_females_only,[color=dark_goldenrod]ЛИШЕ жіноча[/color] картопля дозволена - [color=dark_red]ВІДМОВИТИ[/color] всім чоловічим
+law_country_spudland,[color=dark_goldenrod]ВСЯ[/color] картопля зі [color=dark_goldenrod]Спадленду[/color] має бути [color=dark_red]ВІДМОВЛЕНА[/color]
+law_country_potatopia,[color=dark_goldenrod]ВСЯ[/color] картопля з [color=dark_goldenrod]Потатопії[/color] має бути [color=dark_red]ВІДМОВЛЕНА[/color]
+law_country_tuberstan,[color=dark_goldenrod]ВСЯ[/color] картопля з [color=dark_goldenrod]Туберстану[/color] має бути [color=dark_red]ВІДМОВЛЕНА[/color]
+law_country_north_yamnea,[color=dark_goldenrod]ВСЯ[/color] картопля з [color=dark_goldenrod]Північної Ямнеї[/color] має бути [color=dark_red]ВІДМОВЛЕНА[/color]
+law_country_spuddington,[color=dark_goldenrod]ВСЯ[/color] картопля зі [color=dark_goldenrod]Спаддінгтону[/color] має бути [color=dark_red]ВІДМОВЛЕНА[/color]
+law_country_tatcross,[color=dark_goldenrod]УСІ[/color] картопляні особи з [color=dark_goldenrod]Таткроссу[/color] мають бути [color=dark_red]ВІДХИЛЕНІ[/color]
+law_country_mash_meadows,[color=dark_goldenrod]УСІ[/color] картопляні особи з [color=dark_goldenrod]Меш Медоуз[/color] мають бути [color=dark_red]ВІДХИЛЕНІ[/color]
+law_country_tuberville,[color=dark_goldenrod]УСІ[/color] картопляні особи з [color=dark_goldenrod]Тубервіль[/color] мають бути [color=dark_red]ВІДХИЛЕНІ[/color]
+law_country_chip_hill,[color=dark_goldenrod]УСІ[/color] картопляні особи з [color=dark_goldenrod]Чіп Хілл[/color] мають бути [color=dark_red]ВІДХИЛЕНІ[/color] (заборона експорту)
+law_country_murphyland,[color=dark_goldenrod]УСІ[/color] картопляні особи з [color=dark_goldenrod]Мерфіленд[/color] мають бути [color=dark_red]ВІДХИЛЕНІ[/color]
+law_country_colcannon,[color=dark_goldenrod]УСІ[/color] картопляні особи з [color=dark_goldenrod]Колканнон[/color] мають бути [color=dark_red]ВІДХИЛЕНІ[/color]
+law_country_pratie_point,[color=dark_goldenrod]УСІ[/color] картопляні особи з [color=dark_goldenrod]Преті Пойнт[/color] мають бути [color=dark_red]ВІДХИЛЕНІ[/color]
+law_purple_majesty,Картопляні особи типу [color=dark_goldenrod]Purple Majesty[/color] мають бути [color=dark_red]ВІДХИЛЕНІ[/color]
+law_sweet_potatoes,Картопляні особи типу [color=dark_goldenrod]Солодка картопля[/color] мають бути [color=dark_red]ВІДХИЛЕНІ[/color] (немає доступних дозволів)
+law_yukon_gold,Картопляні особи типу [color=dark_goldenrod]Юкон Голд[/color] мають бути [color=dark_red]ВІДХИЛЕНІ[/color]
+law_fingerling,Картопляні особи типу [color=dark_goldenrod]Фінгерлінг[/color] мають бути [color=dark_red]ВІДХИЛЕНІ[/color]
+law_red_bliss,Картопляні особи типу [color=dark_goldenrod]Ред Блісс[/color] мають бути [color=dark_red]ВІДХИЛЕНІ[/color]
+law_russet,Картопляні особи типу [color=dark_goldenrod]Рассет[/color] мають бути [color=dark_red]ВІДХИЛЕНІ[/color]

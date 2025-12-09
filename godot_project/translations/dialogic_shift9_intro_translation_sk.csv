@@ -1,0 +1,28 @@
+﻿keys,sk
+Text/140/text,"Hranica pripomína [pulse freq=3][color=CRIMSON]vojnovú zónu[/color][/pulse]. Barikády, obrnené vozidlá a elitné stráže sú pripravené. Dnes je deň, kedy odboj plánoval zaútočiť."
+Text/141/text,"[wave amp=25 freq=3][color=YELLOW]NÚDZOVÉ VYSIELANIE[/color][/wave]: Celý Spud je pod [color=RED]stanným právom[/color]. ""Odboj"" zaútočil na vládne zariadenia."
+Text/142/text,"Každý, kto pomáha týmto [color=CRIMSON]extrémistom[/color], čelí [color=DARK_VIOLET]okamžitému spracovaniu[/color]. Ministerstvo potvrdzuje: [color=DARK_VIOLET]Root Reserve[/color] zostáva bezpečný pre všetky [color=DARK_ORANGE]lojálne zemiaky[/color]."
+Text/143/text,[color=YELLOW]Vypukli nepokoje[/color] vo viacerých sektoroch. Bunky odboja zaútočili na tri zariadenia [color=DARK_VIOLET]Root Reserve[/color].
+Text/144/text,Ich cieľ: prístup k centrálnej databáze so všetkými výrobnými záznamami. Akýkoľvek znak nelojálnosti znamená spracovanie.
+Text/145/text,"Zajali sme niekoľko odbojových operatívcov, vrátane dôstojníčky Sashe."
+Text/146/text,"[tornado radius=3 freq=2][color=CRIMSON]Skutoční zradcovia[/color][/tornado] sú tí, ktorí [color=DARK_VIOLET]kŕmia náš ľud navzájom[/color]. Nemôžete zastaviť pravdu!"
+Text/147/text,"Je odvlečená preč, stále kričiac: [color=CHARTREUSE]Ľudia sa dozvedia, čo je v ich jedle![/color]"
+Text/148/text,"[color=CRIMSON]Zradca[/color] bude [pulse freq=3][color=DARK_VIOLET]okamžite spracovaný[/color][/pulse]. Špeciálna dávka [color=DARK_VIOLET]Root Reserve[/color], vyrobená zo samotných teroristov."
+Text/149/text,Všetky hraničné prechody sú [color=RED]pozastavené[/color] okrem nevyhnutného personálu s [color=GOLD]povolením úrovne Alpha[/color].
+Text/14a/text,Tento skener [color=YELLOW]nemožno oklamať[/color]. Okamžite spustite poplach pre kohokoľvek bez riadneho povolenia.
+Text/14b/text,Zemiak v oficiálnej uniforme sa približuje so zdanlivo dokonalými povereniami Alpha.
+Text/14c/text,"Z priečinka vypadne malá modrá karta. ""[wave amp=15 freq=3][color=CHARTREUSE]Korene rastú hlboko.[/color][/wave]"", mrmlú pri zdvíhaní karty."
+Choice/14d/text,"Spracujte ich, ignorujte upozornenia skenera (Pomôžte odboju)"
+Choice/14e/text,Okamžite spustite poplach (Zraďte odboj)
+Text/14f/text,"Úľava sa ukáže v ich očiach. ""[color=CHARTREUSE]Pre Sashu. Pre Spud.[/color]"" Zmiznú smerom k centrálnej databáze."
+Text/150/text,"Hrôza sa objaví na ich tvári. ""[color=CRIMSON]Ty zradca! Verili sme ti![/color]"" Rýchlo ich obkľúčia stráže."
+Text/151/text,Výborná práca. Tvoja lojalita bude odmenená.
+Text/152/text,"Zrazu sa zariadenie [color=YELLOW]otriasa výbuchmi[/color]. Útok odboja sa začal, bez ohľadu na tvoju voľbu."
+Text/153/text,"Mám zostať na svojom mieste a dúfať, že to prejde, alebo [color=CHARTREUSE]zaujať postoj[/color] a riskovať všetko, aby som odhalil pravdu?"
+Choice/154/text,Nemôžem opustiť svoju povinnosť. Budem ticho a budem dúfať v to najlepšie.
+Choice/155/text,"Bol som príliš dlho spolupáchateľom. Je čas bojovať za to, čo je správne."
+Choice/155/disabled_text,
+Choice/14d/disabled_text,
+Choice/154/disabled_text,
+Choice/14e/disabled_text,
+Text/156/text,[pulse freq=3][color=YELLOW]Ponáhľajte sa![/color][/pulse] Bezpečnosť sa dáva do pohybu - toto je vaša jediná šanca na útek!

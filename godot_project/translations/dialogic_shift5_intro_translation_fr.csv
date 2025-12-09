@@ -1,0 +1,33 @@
+﻿keys,fr
+Text/a6/text,L'installation frontalière semble différente aujourd'hui. Tendue. Des patrouilles de sécurité en plus grand nombre alors qu'un silence méfiant remplace les bavardages.
+Text/a7/text,"La nuit dernière, des [pulse freq=2][color=CRIMSON]matériaux interdits[/color][/pulse] ont été découverts. Des pamphlets contenant des mensonges sur [color=DARK_VIOLET]Root Reserve[/color]."
+Text/a8/text,Nous mettons en œuvre les [wave amp=15 freq=2][color=DARK_ORANGE]protocoles de niveau de menace ORANGE[/color][/wave]. Tous les officiers sont soumis à des contrôles de loyauté. Tous les voyageurs font face à un examen maximal.
+Text/a9/text,Ça fonctionne. Les pamphlets se répandent. Les gens posent des questions sur [color=DARK_VIOLET]Root Reserve[/color].
+Text/aa/text,J'ai des sources qui me disent qu'il y a un registre d'expédition dans le bureau de Russet - des manifestes de transport qui pourraient [tornado radius=3 freq=2][color=CHARTREUSE]tout prouver[/color][/tornado].
+Text/ab/text,"J'ai besoin que tu m'aides à l'obtenir. Ce soir, après le dernier quart. Puis-je compter sur toi ?"
+Choice/ac/text,Je marche. Exposons la vérité.
+Choice/ad/text,"Je ne sais pas, Sasha... ça pourrait être dangereux."
+Text/ae/text,Dieu merci. Je savais que tu avais [color=CHARTREUSE]des racines plus fortes que les autres[/color]. On se retrouve à minuit.
+Text/af/text,"Parfois, nous devons [color=CHARTREUSE]risquer d'être écrasés pour faire ce qui est juste[/color]. Réfléchis-y."
+Text/b0/text,[color=DARK_ORANGE]Contrôle de loyauté[/color]. Veuillez indiquer votre nom et votre identifiant d'officier. Puis dites-moi pourquoi vous servez Spud.
+Choice/b1/text,Je sers à protéger nos frontières des influences dangereuses.
+Choice/b2/text,Je sers à garantir que tout le monde reçoive un traitement équitable.
+Text/b3/text,"Bonne réponse. Spud a besoin de protecteurs loyaux. Le scanner affiche vert. Continuez, officier."
+Text/b4/text,"Les sourcils de l'officier se lèvent. Un traitement équitable ? Le scanner clignote en [color=DARK_ORANGE]ambre[/color]. Rappelez-vous, notre préoccupation principale est la sécurité, pas l'équité."
+Text/b5/text,Le quota d'aujourd'hui a été augmenté. Toute personne avec des matériaux suspects doit être signalée pour [color=DARK_VIOLET]traitement spécial[/color].
+Text/b6/text,Je [color=DARK_ORANGE]surveillerai vos décisions[/color] très attentivement aujourd'hui.
+Text/b7/text,"Cette nuit pourrait tout changer. Mais d'abord, [color=YELLOW]survivez à la journée sans éveiller les soupçons[/color]."
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,
+Text/b4_viktor1/text,Un garde de sécurité costaud vous attrape le bras au passage. Son visage est marqué par l'inquiétude.
+Text/b4_viktor2/text,"Hé... désolé de vous déranger. Vous êtes l'un des agents des douanes, n'est-ce pas ? Je m'appelle [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"J'ai demandé à tout le monde des nouvelles de ma femme, [color=GOLD]Elena[/color]. Elena Petrov. Elle a traversé ce poste de contrôle il y a trois semaines."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Inspection échouée.[/color] Ils ont dit qu'elle serait traitée et renvoyée chez elle, mais... je n'ai aucune nouvelle."
+Text/b4_viktor5/text,Sa voix tremble. Personne ne veut me dire quoi que ce soit. Savez-vous où vont les voyageurs refusés ?
+Choice/b4_viktor6/text,"""Je suis désolé, Viktor. Je ne sais pas. Mais je vais garder l'œil ouvert."""
+Choice/b4_viktor7/text,"""Je ne peux pas divulguer les détails du traitement. Protocoles de sécurité."""
+Text/b4_viktor8/text,Une lueur d'espoir passe dans les yeux de Viktor. [color=CHARTREUSE]Merci.[/color] Si vous trouvez quoi que ce soit... s'il vous plaît. Elle est tout ce que j'ai.
+Text/b4_viktor9/text,"Viktor hoche la tête, abattu. [color=STEEL_BLUE]D'accord. Protocoles.[/color] Je comprends."
+Text/b4_viktor10/text,Mais si vous changez d'avis... [color=YELLOW]J'ai besoin de savoir ce qui lui est arrivé.[/color]

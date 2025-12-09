@@ -1,0 +1,175 @@
+﻿keys,de
+main_menu_feedback,Feedback und Fehler
+main_menu_version,Fassung 1.2.0
+main_menu_new_game,Neues Spiel
+main_menu_continue,Fortsetzen
+main_menu_level_select,Level-Auswahl
+main_menu_score_attack,Punkteangriff
+main_menu_options,Optionen
+main_menu_credits,Mitwirkende
+main_menu_exit,Beenden
+select_language,Sprache
+social_discord_tooltip,Tritt unserem Discord bei!
+social_steam_tooltip,Besuche uns auf Steam
+social_twitch_tooltip,Twitch-Integration
+twitch_status_disabled,Deaktiviert
+twitch_status_no_viewers,Keine Zuschauer im Pool
+twitch_status_ready,{count} Zuschauer bereit
+twitch_connection_disabled,Deaktiviert
+twitch_connection_disconnected,Getrennt
+twitch_connection_connected,Verbunden
+twitch_connection_connecting,Verbinden...
+options_menu_title,Optionen
+options_difficulty,Schwierigkeitsgrad
+options_difficulty_easy,Leicht
+options_difficulty_normal,Standard
+options_difficulty_expert,Experte
+options_music_volume,Musiklautstärke
+options_sfx_volume,Soundeffekt-Lautstärke
+options_camera_shake,Kamerawackeln
+options_back,Zurück
+paused_menu_title,Pausiert
+shift_summary_title,SCHICHT-ZUSAMMENFASSUNG
+shift_summary_continue,Fortsetzen
+shift_summary_restart,Neustart
+shift_summary_main_menu,Hauptmenü
+shift_summary_submit_score,Punktzahl einreichen
+shift_summary_runner_stats,LÄUFER-STATISTIKEN
+shift_summary_document_stats,DOKUMENT-STATISTIKEN
+shift_summary_performance,LEISTUNG
+shift_summary_bonuses,BONI
+_FORMAT KEYS,
+time_format,{minutes}Min {seconds}Sek
+_SHIFT SUMMARY DETAILS,
+shift_complete_success,SCHICHT {shift} ABGESCHLOSSEN\nERFOLG!
+shift_complete_failure,SCHICHT {shift} ABGESCHLOSSEN\n{failure}
+strike_limit_reached,STREIKELIMIT ERREICHT!
+quota_not_met,QUOTE NICHT ERFÜLLT!
+shift_summary_title_with_difficulty,SCHICHT-ZUSAMMENFASSUNG\n{difficulty}
+runner_stats_template,\nLÄUFER-STATISTIKEN\nLäuferversuche: {runner_attempts}\nAbgefeuerte Raketen: {fired}\nGetroffene Läufer: {hit}\nPerfekte Treffer: {perfect}\nTrefferquote: {rate}%
+document_stats_template,DOKUMENT-STATISTIKEN\nGestempelte Dokumente: {stamped}\nGenehmigte Kartoffeln: {approved}\nAbgelehnte Kartoffeln: {rejected}\nPerfekte Stempel: {perfect_stamps}
+bonus_stats_template,BONI\nVerarbeitungsgeschwindigkeitsbonus: {processing_speed_bonus}\nStempelgenauigkeitsbonus: {accuracy}\nPerfekte Treffer Bonus: {perfect_hit_bonus}\nGesamtpunktzahlbonus: {total_score_bonus}
+performance_stats_template,LEISTUNG\nBenötigte Zeit: {time_taken}\nErwartete Punktzahl: {expected_score}\nGesamtpunktzahl: {score}\nÜberschreitung in Prozent: {percent}%\nLeistungsbewertung:\n{rating}
+performance_exceptional,Außergewöhnlich!
+performance_excellent,Ausgezeichnet!
+performance_good,Gut
+performance_needs_improvement,Verbesserungsbedürftig
+performance_poor,Schlecht
+global_leaderboard_title,Globale Rangliste\n- {difficulty}
+getting_leaderboard_scores,Rufe Bestenlisten-Punktzahlen ab...
+_PAUSE OPTIONS OVERLAY,
+reset_game_label,Spiel zurücksetzen:
+reset_game_button,Zurücksetzen
+mute_label,Stummschalten
+fullscreen_label,Vollbild:
+resolution_label,Auflösung:
+antialiasing_label,Anti-Aliasing:
+screenshake_label,Bildschirmwackeln:
+mouse_sens_label,Mausempfindlichkeit:
+___ LOADING SCREEN,
+Loading…,Wird geladen...
+___ DIALOGS IN GAME,
+You lose.,Du verlierst.
+You won!,Du hast gewonnen!
+Thanks for playing!,Danke fürs Spielen!
+Please Confirm...,Bitte bestätigen...
+Go back to main menu?,Zurück zum Hauptmenü?
+Quit the game?,Spiel beenden?
+Cancel,Abbrechen
+OK,OK
+___ OPTIONS MENU,
+Controls,Steuerung
+Mouse Sensitivity :,Mausempfindlichkeit:
+Actions & Inputs,Aktionen & Eingaben
+Add,Hinzufügen
+Remove,Entfernen
+Assign Key for {action},Taste für {action} zuweisen
+Listening for input...,Warte auf Eingaben...
+Press again to confirm...,Erneut drücken zum Bestätigen...
+Focus here to assign inputs.,"Hier fokussieren, um Eingaben zuzuweisen."
+Already Assigned,Bereits zugewiesen
+{key} already assigned to {action}.,{key} ist bereits {action} zugewiesen.
+Remove Key for {action},Taste für {action} entfernen
+Are you sure you want to remove {key} from {action}?,Möchtest du {key} wirklich von {action} entfernen?
+Reset,Zurücksetzen
+Audio,Ton
+Master :,Master:
+Music :,Musik:
+SFX :,SFX:
+Ambient :,Umgebung:
+Mute :,Stumm:
+Video,Bild
+Fullscreen :,Vollbild:
+Resolution :,Auflösung:
+Anti-Aliasing :,Anti-Aliasing:
+Disabled (Fastest),Deaktiviert (am schnellsten)
+8x (Slowest),8x (am langsamsten)
+Camera Shake :,Kamerawackeln:
+Normal,Standard
+Reduced,Reduziert
+Minimal,Niedrig
+None,Keine
+Game,Spiel
+Reset Game :,Spiel zurücksetzen:
+Do you want to reset your game data?,Möchtest du deine Spieldaten zurücksetzen?
+Back,Zurück
+_INGAME DIALOGUE,
+TAKE THEM!,NIMM SIE!
+"Take your documents, please.",Bitte nimm deine Dokumente mit.
+_SHIFT SUMMARY SCREEN,
+Continue,Weiter
+Main Menu,Hauptmenü
+Submit Score,Punktzahl übermitteln
+Restart,Neustart
+SHIFT SUMMARY,SCHICHTÜBERSICHT
+_DIFFICULTY LEVELS,
+Easy,Einfach
+Normal,Standard
+Expert,Experte
+Primary,Primär
+Secondary,Sekundär
+Primary Interaction,Primäre Interaktion
+Secondary Interaction,Sekundäre Interaktion
+Cancel Interaction,Interaktion abbrechen
+Escape,Zurück
+Dialogic Default Action,Dialog-Standardaktion
+Enter,Eingabe
+Left Mouse Button,Linke Maustaste
+Right Mouse Button,Rechte Maustaste
+_NEW GAME CONFIRMATION,
+Start New Game,Neues Spiel starten
+Starting a new game will reset your progress. Are you sure you want to continue?,"Wenn du ein neues Spiel startest, wird dein Fortschritt zurückgesetzt. Möchtest du wirklich fortfahren?"
+"Yes, Start New Game","Ja, neues Spiel starten"
+Skip,Überspringen
+History,Verlauf
+Return,Zurück
+Restart the game?,Spiel neu starten?
+_HELP MENU,
+help_menu_button,Hilfe
+help_menu_title,Anleitung
+help_tab_basics,Grundlagen
+help_tab_gameplay,Spielablauf
+help_tab_minigames,Minispiele
+help_basics_intro,[b]Willkommen bei Spud Customs
+help_basics_gate,[b]Tor öffnen[/b]
+help_basics_documents,[b]Dokumente prüfen[/b]
+help_basics_stamping,[b]Dokumente stempeln[/b]
+help_basics_runners,[b]Grenzläufer[/b]
+help_basics_xray,[b]Röntgengerät[/b]
+help_gameplay_quota,[b]Quote erfüllen[/b]
+help_gameplay_strikes,"[b]Verwarnungen[/b]\nFehler (falsche Genehmigungen/Ablehnungen, übersehene Grenzläufer) geben dir Verwarnungen. Bei zu vielen Verwarnungen ist das Spiel vorbei!"
+help_gameplay_rules,"[b]Einwanderungsregeln[/b]\nPrüfe die Anschlagtafel für die aktuellen Regeln. Die Regeln ändern sich jede Schicht – gesperrte Regionen, erforderliche Dokumente und besondere Bedingungen."
+help_gameplay_scoring,"[b]Punktwertung[/b]\nErhalte Punkte für korrekte Entscheidungen, perfekte Stempelabdrücke und das Aufhalten von Grenzläufern. Boni werden für Geschwindigkeit und Genauigkeit vergeben!"
+help_gameplay_difficulty,"[b]Schwierigkeitsgrade[/b]\nEinfach: Großzügigeres Zeitlimit, weniger Regeln. Normal: Standard-Erlebnis. Experte: Strenges Zeitlimit, komplexe Regeln, höhere Punktzahlen."
+help_minigames_intro,"[b]Minispiele[/b]\nWährend deiner Schichten wirst du auf Minispiele stoßen, mit denen du Bonuspunkte verdienen kannst. Schließe sie für Belohnungen ab oder überspringe sie straffrei."
+help_minigames_document_scanner,"[b]Dokumentenscanner[/b] (Schicht 1+)\nBenutze UV-Licht, um versteckte Elemente auf Dokumenten zu finden. Klicke, um Wasserzeichen, Stempel und Symbole zu markieren. Finde alle Elemente, bevor die Zeit abläuft!"
+help_minigames_stamp_sorting,"[b]Stempel sortieren[/b] (Schicht 2+)\nSortiere fallende Stempel in die richtigen Behälter. Grüne Stempel gehören zu GENEHMIGT, rote Stempel zu ABGELEHNT. Sortiere schnell für Bonuspunkte!"
+help_minigames_fingerprint_match,"[b]Fingerabdruck-Abgleich[/b] (Schicht 3+)\nGleiche die Fingerabdrücke aus dem Raster mit dem Referenzmuster ab. Klicke auf übereinstimmende Abdrücke, um die Identität zu überprüfen. Sorgfältige Beobachtung erforderlich!"
+help_minigames_code_breaker,"[b]Codeknacker[/b] (Schicht 4+)\nKnacke den Geheimcode! Errate die 4-stellige Kombination. Grün bedeutet richtige Position, Gelb bedeutet falsche Position. Begrenzte Versuche!"
+help_minigames_border_chase,"[b]Grenzverfolgung[/b] (Schicht 5+)\nSchmuggelware auf dem Förderband! Klicke auf ROTE Gegenstände, um sie zu konfiszieren. Lasse GRÜNE Gegenstände passieren. Schnelle Reflexe bringen mehr Punkte!"
+help_tab_lore,Geschichte
+help_lore_world_intro,"[b]Die Welt von Spud[/b]\n\nWillkommen in einem Land, in dem Kartoffeln ihre eigene Zivilisation aufgebaut haben. In dieser Welt können Knollen laufen, sprechen und haben ihre eigene Nation mit Gesetzen, Grenzen und Bürokratie gegründet."
+help_lore_nation,"[b]Die Nation Spud[/b]\n\nSpud ist eine stolze Nation, die allen Kartoffeln Wohlstand verspricht. Geschützt durch die Große Mauer von Spud, unterhält die Nation strenge Grenzkontrollen, um sicherzustellen, dass nur würdige Knollen eintreten dürfen.\n\nDie Regierung fördert Einheit und Gehorsam, und patriotische Bürger hört man oft ausrufen: ""Ruhm für Spud!"""
+help_lore_your_role,"[b]Deine Rolle[/b]\n\nDu wurdest für eine entscheidende Rolle beim Schutz der Grenzen ausgewählt. Als Zollbeamter arbeitest du unter dem wachsamen Auge von Aufseher Russet.\n\nDein Wohlergehen hängt von deiner Leistung ab. Erfülle deine Quoten, befolge die Regeln und denk daran: Die Nation zählt auf dich."
+help_lore_border,"[b]Die Große Mauer[/b]\n\nDie mächtige Große Mauer von Spud schützt die Nation vor Außenstehenden. An verschiedenen Kontrollpunkten entlang der Mauer stellen Beamte wie du sicher, dass nur die Würdigen eintreten dürfen.\n\nDiejenigen, die versuchen, die Grenze ohne ordnungsgemäße Dokumente zu passieren, müssen mit sofortigen Konsequenzen rechnen."
+help_lore_secrets,"[b]Wurzelreserve[/b]\n\nAbgelehnte Kartoffeln werden... verarbeitet. Laut Protokoll. Die mysteriöse Wurzelreserve kümmert sich um alle Details.\n\nEs ist am besten, nicht zu viele Fragen zu stellen. Konzentriere dich auf deine Pflichten. Nichts weiter."

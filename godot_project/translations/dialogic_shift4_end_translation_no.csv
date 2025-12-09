@@ -1,0 +1,49 @@
+﻿keys,no
+Text/215/text,"Murphy tar deg fatt i korridoren, med rødkantede øyne. Har du et minutt?"
+Text/216/text,Murphy drar deg inn i et tomt lagerrom og lukker døren.
+Text/217/text,Den vitsen jeg fortalte i kantina... om at fetteren min var i [color=DARK_VIOLET]Rotreserven[/color]-partiet...
+Text/218/text,Murphys stemme brister. Jeg tror ikke det var en vits lenger.
+Text/219/text,Du sa det ikke var morsomt. Du hadde rett. [color=STEEL_BLUE]Ingenting med dette er morsomt.[/color]
+Text/21a/text,"Jeg så deg gå. Smart. Jeg skulle ønske jeg kunne slutte å spise det der, men de [color=YELLOW]ser[/color]. De ser alltid."
+Text/21b/text,"Jeg fant noe blant fetterens ting. Avslagsblanketten hans. Standard greier, men..."
+Text/21c/text,"Murphy drar frem en krøllet blankett. Se på behandlingskoden. ""[color=CRIMSON]RR-UTIL-7[/color]."""
+Text/21d/text,Jeg slo det opp i arkivene. RR står for [pulse freq=2][color=DARK_VIOLET]Rotreserven[/color][/pulse]. UTIL betyr... [color=CRIMSON]utnyttelse[/color].
+Text/21d_breakdown1/text,[wave amp=20 freq=3]Murphys hender begynner å skjelve.[/wave] Fetteren min... Tommy... han var bare tjuetre.
+Text/21d_breakdown2/text,Han kom hit for et [color=CHARTREUSE]bedre liv[/color]. Strøk på én inspeksjon. Én. [color=STEEL_BLUE]Bare dårlig timing.[/color]
+Text/21d_breakdown3/text,"Murphy glir ned langs veggen, ansiktet i hendene. Og jeg... jeg [tornado radius=3 freq=2][color=CRIMSON]SPISTE[/color][/tornado] det der. Hver dag."
+Text/21d_breakdown4/text,"Murphy ser opp på deg, tårene renner. [pulse freq=2][color=CRIMSON]Hva om jeg spiste HAM?[/color][/pulse]"
+Choice/21e/text,Murphy... Jeg er så lei meg. Jeg er med deg. Vi finner sannheten sammen.
+Choice/21f/text,"Murphy, dette er farlig. Vi burde holde oss unna."
+Choice/220/text,Kanskje det er en tilfeldighet. La oss ikke trekke forhastede konklusjoner.
+Text/221_comfort1/text,Du kneler ved siden av Murphy og legger en hånd på skulderen hans.
+Text/221/text,Murphy griper armen din som en livline. [color=CHARTREUSE]Takk.[/color] Jeg trodde jeg ble gal.
+Text/221_tommy/text,[color=STEEL_BLUE]Stemmen hans stabiliserer seg litt.[/color] For Tommy. Vi gjør dette for Tommy. Og alle andre de har tatt.
+Text/222/text,Det er andre som mistenker det også. Sasha har samlet folk. Jeg tror hun stoler på deg.
+Text/223/text,"Murphy tørker øynene, prøver å samle seg. Ja. Ja, du har nok rett. Glem at jeg sa noe."
+Text/224/text,Men hvis du ombestemmer deg... Jeg er her. [color=STEEL_BLUE]Alene med spørsmålene mine. Og marerittene mine.[/color]
+Text/225/text,Tilfeldighet. Murphy ler bittert gjennom tårene. Jada. Og Tommy bare [color=CRIMSON]forsvant[/color] i løse luften.
+Text/226/text,Fortsett å fortelle deg selv det. Se hvor lenge det hjelper deg å sove. [color=STEEL_BLUE]Det hjelper ikke meg.[/color]
+Text/227/text,Sasha dukker opp ved boden din når siste skift er over. Du ser ut som du har sett et spøkelse.
+Text/228/text,La meg gjette – Murphy fortalte deg om fetteren sin?
+Text/229/text,Sasha nikker anerkjennende. Bra. Vi trenger folk som stiller spørsmål.
+Text/22a/text,Sasha studerer ansiktet ditt nøye. Du er redd. Det er smart. Men frykt vil ikke redde noen.
+Text/22b/text,"Jeg har fulgt med deg siden din første dag. Måten du [color=YELLOW]nølte[/color] på da Russet snakket om ""prosessering""."
+Text/22c/text,Du spurte hva som skjer med avviste poteter. Det krevde mot. [color=CHARTREUSE]De fleste bare hilser og stempler.[/color]
+Text/22d/text,Sasha lener seg nærmere. Det er et mønster. Hver potet vi avviser? Borte innen 48 timer. Ingen deportasjonsjournaler. Ingen overføringer.
+Text/22e/text,Men [color=DARK_VIOLET]Rotreservat[/color]-produksjonen? [tornado radius=3 freq=2][color=CRIMSON]Den går opp.[/color][/tornado] Hver. Eneste. Gang.
+Choice/22f/text,Jeg tror deg. Hvordan kan jeg hjelpe?
+Choice/230/text,Jeg må se bevis før jeg risikerer alt.
+Text/231/text,"Sashas øyne lyser opp. Jeg visste jeg valgte riktig. I morgen kveld, etter vakten. Jeg skal vise deg hva jeg har funnet."
+Text/232/text,Inntil da
+Text/233/text,Greit nok. Bevis kommer. Bare... hold øynene åpne under morgendagens vakt.
+Text/234/text,Se hvor de [color=CRIMSON]avviste potetene[/color] drar. Følg lastebilene hvis du kan.
+Text/235/text,Du trekker frem bildet den desperate poteten ga deg. Kona hennes. [color=STEEL_BLUE]Hvor er hun nå?[/color]
+Text/236/text,Hvis det Sasha og Murphy sier er sant... har hun allerede blitt...
+Text/237/text,Du klarer ikke å fullføre tanken. Men du [color=CHARTREUSE]vil ikke glemme ansiktet hennes[/color].
+Text/238/text,"I morgen endres alt. Enten finner du svar, eller så begraver du spørsmålene for alltid."
+Text/239/text,Én ting er sikkert: det er [color=YELLOW]ingen vei tilbake til salig uvitenhet[/color].
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

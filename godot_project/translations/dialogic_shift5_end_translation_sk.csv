@@ -1,0 +1,22 @@
+﻿keys,sk
+Text/96/text,"Plazíš sa tmavou chodbou, srdce ti búši, ako sa vyhýbaš bezpečnostným hliadkam."
+Text/97/text,[color=CHARTREUSE]Toto zariadenie zruší zámok[/color] na Russetovej kancelárii. Spustím alarmy vo východnom krídle ako rozptýlenie. Budeš mať päť minút.
+Text/98/text,Manifesty by mali byť v jeho archíve. [color=CRIMSON]Červená zložka označená 'RR Transport'[/color]. Nenechaj žiadne stopy po svojom hľadaní.
+Text/99/text,"Nájdeš hrubú [color=CRIMSON]červenú zložku označenú ""RR Transport""[/color] v archíve."
+Text/9a/text,"Vnútri sú manifesty zodpovedajúce počtom zamietnutých zemiakov a smernica predsedu vlády Idaho povoľujúca ""[pulse freq=3][color=DARK_VIOLET]úplné využitie hraničných zamietnutí pre produkciu RR.[/color][/pulse]"""
+Text/9b/text,"Kroky sa blížia k dverám kancelárie. ""[wave amp=15 freq=3][color=YELLOW]Divné, myslel som, že som ich zamkol.[/color][/wave]"""
+Choice/9c/text,Schovať sa pod stôl
+Choice/9d/text,Vyskočiť z okna
+Text/9e/text,"Vkĺzneš pod Russetov stôl, keď vstúpi, srdce ti búši. Sadne si, jeho nohy sú centimetre od tvojej tváre."
+Text/9f/text,Russet tu. Čo? [color=CHARTREUSE]Ďalší poplach?[/color] Už idem. Opúšťa miestnosť a ty unikáš.
+Text/a0/text,"Vytrhnete okno a vyskočíte. Našťastie je to len jedno poschodie. Strážnik kričí: ""[color=RED]Stoj! Zastav![/color]"""
+Text/a1/text,Bežíš cez priestranstvo a podarí sa ti stratiť prenasledovateľov.
+Text/a2/text,Dostal si to?
+Text/a3/text,"Odovzdávaš dôkazy a vysvetľuješ, čo si našiel."
+Text/a4/text,Toto dokazuje všetko. Odpor urobí kópie. [tornado radius=3 freq=2]Šír pravdu všade.[/tornado] Nemôžu nás všetkých umlčať.
+Text/a5/text,"Prekročil si hranicu. [wave amp=20 freq=3][color=YELLOW]Niet návratu.[/color][/wave] Keď sa pravda rozšíri, Spud bude transformovaný."
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,
+Text/9a_viktor1/text,Skenujete mená na manifeste... a jedno vyniká. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,"To meno... už ste ho počuli. Bezpečnostný strážnik Viktor spomenul, že jeho manželka zmizla."
+Text/9a_viktor3/text,"""[color=CRIMSON]Stav: Spracované. Dávka RR-2851.[/color]"" Pred dvoma týždňami."

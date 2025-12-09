@@ -1,0 +1,26 @@
+﻿keys,cs
+Text/200/text,"Hej, nová bramboro! Těžká šichta, co? Jmenuju se Murphy. Jsem tu už tři sezóny."
+Text/201/text,"Viděl jsem tě dřív mluvit se Sashou. Ona je... [color=STEEL_BLUE]jiná[/color]. Dobře jiná, myslím."
+Choice/202/text,"Zdá se milá. Dala mi pár rad, jak zůstat ve střehu."
+Choice/203/text,Jen jsme se představili. Nic zvláštního.
+Text/204/text,Jo.
+Text/205/text,"Mezi námi? To rádiové vysílání o ""pohřešovaných bramborách""... můj bratranec zmizel minulý měsíc. Neprošel kontrolou."
+Text/206/text,"Chytré. Drž se při zemi, dělej svou práci. To si říkám každý den."
+Text/207/text,"I když se někdy ptám, kam vlastně všechny ty odmítnuté brambory jdou..."
+Text/208/text,V jídelně
+Text/209/text,"Zíráš na hustou, purpurově hnědou pastu. Všichni ji jedí bez otázek. Má být výživná."
+Choice/20a/text,Sněz Kořenovou rezervu jako všichni ostatní
+Choice/20b/text,Odsunout stranou – nemáš hlad
+Text/20c/text,"Chuť je... zemitá. Bohatá. Něco na ní je [color=STEEL_BLUE]nepříjemně povědomé[/color], ale nemůžeš si vzpomenout proč."
+Text/20d/text,"Neplýtvej, nebudeš strádat, klíčku. To je [pulse freq=2][color=DARK_VIOLET]prémiová výživa[/color][/pulse] přímo tam."
+Text/20e/text,Zamumláš výmluvu o bolavém žaludku.
+Text/20f/text,"Zpátky ve svých ubikacích se nemůžeš zbavit toho, co řekla Sasha. '[color=YELLOW]Ne všechno je tak, jak se zdá.[/color]'"
+Text/210/text,Zeptal ses Russeta na odmítnuté brambory hned první den. Jeho odpověď byla vyhýbavá. '[color=VIOLET]Zpracovány. Podle protokolu.[/color]'
+Text/211/text,"Zpracovány [color=STEEL_BLUE]jak[/color], přesně?"
+Text/212/text,"Byl jsi tak dychtivý sloužit. Tak hrdý, že jsi byl vybrán. Ale hrdost nevysvětluje [color=CRIMSON]pohřešované brambory[/color]."
+Text/213/text,"Rádio hlásilo, že zprávy o zmizeních 'pokračují'. To znamená, že se to děje už nějakou dobu."
+Text/214/text,"Spánek přichází pomalu. Když už přijde, sníš o [wave amp=15 freq=2][color=DARK_VIOLET]purpurových řekách[/color][/wave] tekoucích pod kontrolním stanovištěm."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

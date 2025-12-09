@@ -1,0 +1,85 @@
+﻿keys,fi
+Text/11/text,"Spudin raja on [pulse freq=3][color=CRIMSON]kaaoksessa[/color][/pulse]. Panikoituneet perunat tulvivat tarkastuspisteille, epätoivoisina paetakseen vuodettujen asiakirjojen jälkeen."
+Text/12/text,Livahdatte läpi Sashan kanssa. [wave amp=20 freq=3][color=CHARTREUSE]Meidän on jatkettava eteenpäin![/color][/wave] Ihmiset tietävät nyt totuuden.
+Text/13/text,"He eivät voi enää vaientaa totuutta. Jos voimme soluttautua [color=DARK_VIOLET]Juurivarasto[/color]-laitokseen ja lähettää todisteita, se [tornado radius=3 freq=2][color=CHARTREUSE]sytyttää vallankumouksen[/color][/tornado]."
+Text/14/text,Se paikka on linnoitus. Ja nyt keskuudessamme on [color=YELLOW]entinen tullivirkailija[/color]. Heidän silmänsä kaventuvat epäillen sinua kohtaan.
+Choice/15/text,"Ymmärrän epäilyksenne, mutta olen sitoutunut tähän asiaan."
+Choice/16/text,Olen jo uhrannut kaiken. En peräänny nyt.
+Text/17/text,Kauniita sanoja. Mutta niitä olemme kuulleet ennenkin.
+Text/18/text,"He auttoivat meitä saamaan asiakirjat. Se on tekoja, ei sanoja."
+Text/19/text,"Et voi enää palata olemaan uskollinen peruna. Tervetuloa vastarintaan, toveri."
+Text/1a/text,"Jännittyneen soluttautumisen jälkeen tiiminne seisoo [color=DARK_VIOLET]Juurivaraston[/color] sydämessä, [pulse freq=3][color=CRIMSON]kauhea sorron koneisto[/color][/pulse] paljaana."
+Text/1b/text,"[wave amp=25 freq=3][color=RED]Hälytykset soivat[/color][/wave] kun vartijat ryntäävät vastaamaan tunkeutumiiseenne. Juoksette käytäviä pitkin, väistellen turvajärjestelmiä."
+Text/1c/text,"Näyttö välkkyy päälle. ""No niin, [color=CRIMSON]petturi[/color] palaa kapinallisroskan kanssa."""
+Text/1d/text,Luulitko voivasi pysäyttää Spudin edistyksen? [color=DARK_VIOLET]Juurivarasto[/color] on tämän kansakunnan elinvoima.
+Text/1e/text,Mutta älä huoli. Palvelet edelleen Spudia... [tornado radius=4 freq=3][color=DARK_VIOLET]käsittelysammioissa![/color][/tornado]
+Text/1f/text,Näyttö pimenee äkillisesti.
+Text/20/text,"Käännyt muiden puoleen päättäväisenä. ""Meidän on päästävä Idahon bunkkeriin. Nyt!"""
+Text/21/text,"Ryhmänne taistelee turvajoukkojen aaltojen läpi, välttäen täpärästi kiinnijäämisen. Sashan vastarintataistelijat luovat harhautuksia, raivaavat tietänne eteenpäin."
+Text/22/text,Hirvittävän paon jälkeen huoltotunneleiden läpi saavutatte viimein turvallisen hissin Idahon yksityiseen bunkkeriin.
+Text/23/text,Sashan ja liittolaistesi rinnalla kohtaat viimein Idahon.
+Text/24/text,"Se on ohi, Idaho. Salaisuutesi on paljastettu. Miten tämä päättyy... [pulse freq=2]se riippuu sinusta.[/pulse]"
+Choice/25/text,Neuvottele rauhanomainen vallan siirto (Diplomaattinen)
+Choice/26/text,Vaadi Idahon välitöntä pidätystä (Oikeus)
+Choice/27/text,Toteuta omankädenoikeus Idahon rikoksista (Kosto)
+Choice/28/text,Keskity purkamaan Juurivaraston infrastruktuuri (Purkaminen)
+Text/29/text,"Idaho, tämän ei tarvitse päättyä lisäverilöylyyn. Jos teet yhteistyötä..."
+Text/2a/text,Voi sinua [color=STEEL_BLUE]idealistista hölmöä[/color]. Luuletko tämän olevan neuvottelu?
+Text/2b/text,"Idaho murskaa painikkeen, ja [color=RED]hälytykset alkavat soida[/color]. ""Ainoa asia, jonka annan teille, on [color=DARK_VIOLET]yhdensuuntainen matka paistosammioihin![/color]"""
+Text/2c/text,"En usko niin, Idaho. Vartijat! Näitte kansion, [color=YELLOW]tiedätte, mitä hän teki perheillenne.[/color]"
+Text/2d/text,Valtava vartija astuu esiin ja potkaisee Idahon nopeasti maahan.
+Text/2e/text,Laukaus kaikuu kammiossa. Näyttö pimenee.
+Text/2f/text,"Idaho, perunakansan nimissä, [color=CHARTREUSE]sinut on pidätetty![/color]"
+Text/30/text,"Se on ohi. Kansa on puhunut. [color=CHARTREUSE]Rakennamme uuden Spudin, jossa juuremme ovat maassa, eivät kärsimyksessä.[/color]"
+Text/31/text,"Sinulle [color=CRIMSON]ei tule olemaan sopimuksia, ei armoa[/color], Idaho. Tyrannin oikeus on kaikki, mitä ansaitset."
+Text/32/text,"Tilinteko. Sitä minä olen. [color=CHARTREUSE]Jokaisen uhratun perunan vuoksi, otamme tulevaisuutemme takaisin![/color]"
+Text/33/text,"Unohtakaa hänet. Hän on oire, ei tauti. [color=CHARTREUSE]Repikää alas jokainen juuri ja varsi tästä hirviömäisyydestä.[/color]"
+Text/34/text,Meidän on lähdettävä! Nyt!
+Text/35/text,[color=DARK_VIOLET]Juurivaraston[/color] kaatuminen sytyttää muutoksen kulovalkean kautta Spudin.
+Text/36/text,"Perunat jokaisessa maakunnassa nousevat, omaksuen [color=CHARTREUSE]uuden vision kansakunnalleen[/color]."
+Text/37/text,"Niin kauan kuin pysymme uskollisina juurillemme, ihanteille, jotka toivat meidät tänne... [color=CHARTREUSE]löydämme tien.[/color]"
+Text/38/text,"Ja niin, vanhan Spudin tuhkasta [color=CHARTREUSE]uusi kansakunta alkaa juurtua[/color]. [color=DARK_VIOLET]Juurivaraston[/color] valtakausi on ohi."
+Choice/15/disabled_text,
+Choice/28/disabled_text,
+Choice/27/disabled_text,
+Choice/26/disabled_text,
+Choice/25/disabled_text,
+Choice/16/disabled_text,
+Text/1a_rescue1/text,Tiedustelija ryntää paikalle. Löysimme hänet! [color=CHARTREUSE]Sasha on pidätyssellissä![/color]
+Text/1a_rescue2/text,He valmistautuvat... [tornado radius=3 freq=2][color=CRIMSON]käsittelemään hänet[/color][/tornado]... alle tunnissa!
+Text/1a_rescue3/text,Meidän on pelastettava hänet. [pulse freq=2][color=CHARTREUSE]Hän aloitti kaiken tämän.[/color][/pulse] Emme lähde ilman häntä.
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]Kiiruhda laitoksen läpi![/color][/wave] Tavoita Sasha ennen kuin on liian myöhäistä!
+Text/1a_rescue_fail1/text,Kompastut. Vartijat tukkivat tien eteenpäin!
+Text/1a_rescue_fail2/text,Viktor syöksyy sivuohesta sisään. [color=CHARTREUSE]MENE! Minä pidättelen heitä![/color]
+Text/1a_rescue_fail3/text,Elinalle. Heille kaikille. [color=STEEL_BLUE]En anna enää yhdenkään kuolla![/color]
+Text/1a_rescue_fail4/text,Murphy vetää palohälyttimestä. [color=CHARTREUSE]Tommylle![/color] Sprinklerit sokaisevat vartijat!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]Minä luon harhautuksen. Vie hänet pois sieltä![/color]
+Text/1a_rescue_fail6/text,"[color=YELLOW]Käsittelykuljetin juuttuu[/color], sinkoillen kipinöitä ja harhauttaen vartijoita!"
+Text/1a_rescue_fail7/text,Kohtalo – tai käsiteltyjen haamut – antaa sinulle toisen mahdollisuuden.
+Text/1a_rescue5/text,"Sasha katsoo ylös sellistään, mustelmilla mutta murtumattomana. Hänen silmänsä laajenevat. [color=CHARTREUSE]Tulit.[/color]"
+Text/1a_rescue6/text,Totta kai tulin. [color=CHARTREUSE]Me viimeistelemme tämän yhdessä.[/color]
+Choice/1a_rescue7/text,"Pelkäsin, etten näkisi sinua enää koskaan."
+Choice/1a_rescue8/text,Olimme sinusta sairaana huolesta. Älä tee sitä enää.
+Choice/1a_rescue9/text,Meillä on töitä tehtävänä. Idaho odottaa.
+Text/1a_rescue10/text,"[color=CHARTREUSE]Sasha vetää sinut lyhyeen syleilyyn.[/color] Tiesin, että tulisit. En koskaan epäillyt."
+Text/1a_rescue11/text,"Nyt annetaan heidän maksaa kaikista, jotka he ovat vieneet. [color=CHARTREUSE]Yhdessä.[/color]"
+Text/1a_rescue12/text,Sasha saa aikaan heikon hymyn kivun läpi. [color=STEEL_BLUE]Yritän.[/color] Mutta jotkut asiat ovat riskin arvoisia.
+Text/1a_rescue13/text,"Se, että olet täällä, todistaa sen. Nyt viimeistellään tämä."
+Text/1a_rescue14/text,"Sasha nyökkää, päättäväisyys uudelleen syttyneenä. [color=CHARTREUSE]Olet oikeassa.[/color] Tunnekuohu voi odottaa."
+Text/1a_rescue15/text,"Idaho luulee voittaneensa. Näytetään hänelle, kuinka väärässä hän on."
+Text/158/text,Turvallisuusjoukot lähestyvät! [pulse freq=3][color=YELLOW]Taistele tiesi läpi![/color][/pulse]
+Text/21_fail1/text,Vartijat lähestyvät joka suunnasta. [color=CRIMSON]Ei ole minnekään paeta![/color]
+Text/21_fail2/text,"Viktor ilmestyy vartijoiden taakse, ääni kylmä kuin teräs. [color=STEEL_BLUE]Laskekaa aseenne. Nyt.[/color]"
+Text/21_fail3/text,Vartijat epäröivät – Viktor oli yksi heistä. [color=CRIMSON]Elenan nimi on noissa manifesteissa. Perheenne voivat olla seuraavia.[/color]
+Text/21_fail4/text,Jotkut vartijat laskevat aseensa. Toiset pakenevat. Polku selkenee.
+Text/21_fail5/text,"Räjähdys järisyttää itäsiipeä. Murphyn ääni rätisee radiosta: [color=CHARTREUSE]""Se on minun harhautukseni! LIIKKUKAA!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]Vartijat hajaantuvat räjähdystä kohti. Tommy olisi ylpeä.[/color]
+Text/21_fail7/text,Sasha taklaa johtavan vartijan takaapäin. [color=CHARTREUSE]En selvinnyt siitä sellistä vain nähdäkseni sinun kuolevan![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]JUOKSE! Minä hoidan tämän![/color]
+Text/151/text,"[color=CHARTREUSE]Sasha siirtyy lähemmäs, hänen kätensä löytää sinun kätesi, kun katselette uutta aamunkoittoa yhdessä.[/color] Me rakensimme tämän. Sinä ja minä."
+Text/152/text,"Niin kauan kuin pysymme uskollisina juurillemme, ihanteille, jotka toivat meidät tänne... [color=CHARTREUSE]löydämme tien.[/color] Yhdessä."
+Text/153/text,[color=CHARTREUSE]Puristat hänen kättään. Yhdessä.[/color]
+Text/154/text,"[color=STEEL_BLUE]Sasha seisoo vierelläsi.[/color] Sinun tulesi sytytti kipinän, joka poltti heidän imperiuminsa."
+Text/155/text,[color=STEEL_BLUE]Viha on laantunut päättäväisyydeksi. Työtä on vielä tehtävänä.[/color]
+Text/156/text,[color=STEEL_BLUE]Sasha tarjoaa sinulle kannustavan hymyn.[/color] Olet tullut pitkän matkan siitä tarkastuspisteestä. Me kaikki olemme.
+Text/157/text,"[color=STEEL_BLUE]Syyllisyys ei ehkä koskaan täysin haihdu, mutta olet löytänyt tarkoituksen jälleenrakennuksesta.[/color]"

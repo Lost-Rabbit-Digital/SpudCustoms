@@ -1,0 +1,69 @@
+﻿keys,zh-TW
+Text/b8/text,邊境設施已全面封鎖，武裝警衛正在巡邏每一條走廊。
+Text/b9/text,[pulse freq=3][color=RED]警告！紅色警戒安全狀況！[/color][/pulse] 機密文件昨晚被盜。
+Text/ba/text,我們之中有[tornado radius=4 freq=3][color=CRIMSON]叛徒[/color][/tornado]。任何隱瞞資訊者將被視為同謀。
+Text/bb/text,全體警官，排隊進行[wave amp=15 freq=2][color=DARK_ORANGE]安全掃描[/color][/wave]。壓力反應過高者將被標記。
+Text/bc/text,你看到外面發生什麼事了嗎？到處都是傳單，上面寫著[color=DARK_VIOLET]根源儲備[/color]是由... [pulse freq=3][color=CRIMSON]由我們[/color][/pulse]製成的。
+Choice/bd/text,「小聲點。我們都被監視著。」
+Choice/be/text,「我也聽過同樣的謠言。如果這是真的，那太可怕了。」
+Choice/bf/text,「那是荒謬的宣傳。別散播這種謊言。」
+Text/c0/text,你說得對。但如果這是真的... 那我們算什麼？
+Text/c1/text,我表親上個月被拒絕了。那是不是意味著...? 我[color=CHARTREUSE]再也無法這樣下去了[/color]。
+Text/c2/text,他們的表情變得戒備。當然。永遠忠誠的馬鈴薯。
+Text/c3/text,說明你昨晚22點至凌晨4點之間的行蹤。
+Choice/c4/text,「我整晚都在我的寢室裡睡覺。」
+Choice/c5/text,「我想先和我的法律代表談談。」
+Text/c6/text,你的壓力水平顯示[color=YELLOW]欺騙[/color]。然而... 尚無定論。你現在可以走了。
+Text/c7/text,法律代表？這是一個安全程序，不是審判。你的拒絕已被記錄。
+Text/c7_viktor1/text,一名魁梧的警衛在你休息時走近。他的臉很憔悴。
+Text/c7_viktor2/text,嘿... 你是海關官員之一，對吧？我一直在打聽我妻子艾蓮娜的消息。
+Text/c7_viktor3/text,她三週前通過這個檢查站。[color=STEEL_BLUE]檢查失敗。[/color]從那以後我就沒有她的消息了。
+Choice/c7_viktor4/text,「維克多... 我發現了一些東西。關於艾蓮娜的。你需要知道真相。」
+Choice/c7_viktor5/text,「對不起，維克多。我什麼都沒看到。」(為了保護他而說謊)
+Text/c7_viktor6/text,你給他看了一份貨單頁的副本。他的臉色發白。
+Text/c7_viktor7/text,[wave amp=25 freq=3]他閱讀時雙手顫抖。[/wave] [color=GOLD]艾蓮娜·彼得羅夫[/color]... [color=CRIMSON]已處理... 批次RR-2851...[/color]
+Text/c7_viktor8/text,他的聲音微弱得幾乎聽不見。[tornado radius=3 freq=2][color=CRIMSON]他們... 他們把她做成了...[/color][/tornado]
+Text/c7_viktor9/text,他的悲痛轉化為冰冷的憤怒。[pulse freq=2][color=CRIMSON]愛達荷州會為此付出代價。[/color][/pulse]我以她的記憶發誓。
+Text/c7_viktor10/text,他握住你的肩膀。[color=CHARTREUSE]謝謝你告訴我。[/color]時機成熟時……我會記住這一切。
+Text/c7_viktor11/text,他悲傷地點點頭。[color=STEEL_BLUE]我就知道。[/color]沒人知道任何事。或者說，沒人願意開口。
+Text/c7_viktor12/text,如果你聽到什麼消息……[color=YELLOW]拜託了。[/color]她是我的一切。
+Text/c8/text,奏效了。這些清單引起了軒然大波，但[color=DARK_ORANGE]羅塞特懷疑我們了[/color]。
+Text/c9/text,在今天的班次中，留意我們組織的盟友。[color=CHARTREUSE]你會認出他們的[/color]。
+Text/ca/text,如果你能讓他們安全通過，就使用[color=CHARTREUSE]我們討論過的特殊標記[/color]。
+Choice/cb/text,「值得冒這個險。我加入。」
+Choice/cc/text,「這太危險了。也許我們該低調行事。」
+Text/cd/text,我就知道我可以指望你。當這一切結束時，[color=CHARTREUSE]馬鈴薯國會知道誰才是真正的英雄[/color]。
+Text/ce/text,我們已經過了那個階段了。低調行事救不了我們。[color=CHARTREUSE]只有推翻這個系統才能[/color]。
+Text/cf/text,每個檢查站現在都配備了新的[color=DARK_ORANGE]實境掃描系統[/color]。它能偵測未經授權的標記和偽造文件。
+Text/d0/text,所有文件都必須在批准前掃描。[color=CRIMSON]叛徒將被清除[/color]。我保證。
+Text/d0_qte1/text,在那個班次稍後，一位旅客走上前，他的文件上帶有[color=CHARTREUSE]細微的抵抗標記[/color]。
+Text/d0_qte2/text,[color=DARK_ORANGE]實境掃描系統[/color]開始掃描。[wave amp=15 freq=3][color=RED]它要偵測到標記了！[/color][/wave]
+Text/d0_qte3/text,你有幾秒鐘的時間做決定。掃描儀正在預熱中……
+Choice/d0_qte4/text,「快速偽造掃描儀故障！」（幫助抵抗組織）
+Choice/d0_qte5/text,「讓掃描儀完成掃描」（遵循協議）
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]你必須快點！[/color][/pulse]在它掃描完成前觸發故障！
+Text/d0_qte7/text,你笨拙地擺弄著掃描儀的電纜。火花四濺。螢幕閃爍了一下，然後熄滅了。
+Text/d0_qte8/text,羅塞特衝了過來。[color=YELLOW]這裡發生了什麼事？[/color]
+Choice/d0_qte9/text,「長官，是電壓突波。這些新系統很不穩定。」
+Choice/d0_qte10/text,「我不知道，長官。它突然就壞了。」
+Text/d0_qte11/text,羅塞特哼了一聲。[color=STEEL_BLUE]那些官僚給我們未經測試的設備。[/color]手動處理他們，並標記為重新檢查。
+Text/d0_qte12/text,羅塞特懷疑地看著你。[color=YELLOW]真巧啊。[/color]我會讓維修人員檢查。別再讓這種事發生了。
+Text/d0_qte13/text,那名抵抗組織成員在通過時，向你輕微地點了點頭，以示感謝。
+Text/d0_qte14/text,掃描儀[pulse freq=3][color=RED]發出巨響[/color][/pulse]。偵測到未經授權的標記！
+Text/d0_qte15/text,羅莎特立刻出現。[color=CHARTREUSE]幹得好！[/color]又抓到一個叛徒。
+Text/d0_qte16/text,這名反抗軍成員被拖走，眼中充滿恐懼。「[color=CRIMSON]不，求求你！我還有孩子！[/color]」
+Text/d0_qte17/text,你的忠誠已[color=DARK_ORANGE]記錄在你的檔案中[/color]。繼續保持。
+Text/d1/text,幫助反抗軍成員現在變得更加危險了，但[color=CHARTREUSE]真相必須傳播開來[/color]。
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,
+Choice/c7_viktor4/disabled_text,
+Choice/c7_viktor5/disabled_text,
+Choice/d0_qte4/disabled_text,
+Choice/d0_qte5/disabled_text,
+Choice/d0_qte9/disabled_text,
+Choice/d0_qte10/disabled_text,

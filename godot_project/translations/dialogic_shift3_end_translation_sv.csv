@@ -1,0 +1,27 @@
+﻿keys,sv
+Text/69/text,Kan vi prata? Någonstans privat? [color=YELLOW]För många ögon och öron här.[/color]
+Text/6a/text,Möt mig vid det gamla förrådet efter ditt skift. Jag har något du måste se.
+Text/6b/text,Blir du mysig med kollegor? Kom ihåg att bli vänlig kan leda till... [color=DARK_ORANGE]försämrat omdöme[/color].
+Text/6c/text,Jag har samlat information om avvisade potatisar. [wave amp=20 freq=3][color=CRIMSON]De går inte till deportationscentra.[/color][/wave]
+Text/6d/text,[tornado radius=4 freq=2][color=CRIMSON]De går till Root Reserve bearbetningsanläggningar.[/color][/tornado] Varenda en.
+Text/6e/text,Dessa dokument visar potatisar som lossas vid en anläggning märkt med [color=DARK_VIOLET]Root Reserve[/color] logotypen.
+Text/6f/text,Jag tror jag vet vad som händer. [pulse freq=3][color=CRIMSON]De blir Root Reserve.[/color][/pulse]
+Choice/70/text,Det är galet. De... bearbetar potatis till mat?
+Choice/71/text,Vi behöver mer bevis innan vi kommer med anklagelser.
+Text/72/text,[color=CRIMSON]Kannibalism med extra steg.[/color] Det är vad [wave amp=25 freq=3][color=DARK_VIOLET]Root Reserve[/color][/wave] är. Och vi har hjälpt till att välja deras ingredienser.
+Text/73/text,Jag har samlat bevis i månader. Håll ögonen öppna. Du kommer att se att jag har rätt.
+Text/74/text,Ett avlägset larm ljuder plötsligt
+Text/75/text,Vi måste gå. De gör säkerhetskontroller vid den här tiden. Tänk på vad jag har visat dig.
+Text/76/text,"Sasha stoppar mappen i dina händer. ""[color=YELLOW]Håll den här säker. Och lita inte på någon.[/color]"""
+Text/77/text,Du gömmer mappen inuti din jacka. [color=DARK_VIOLET]Root Reserve[/color]. Avvisningarna. De saknade potatisarna. Allt kopplas samman på ett [tornado radius=3 freq=2][color=CRIMSON]skrämmande sätt[/color][/tornado].
+Choice/71/disabled_text,
+Choice/70/disabled_text,
+Text/69_photo1/text,Du tar fram fotot igen. [color=GOLD]Maris Piper[/color]. Ett så vänligt ansikte.
+Text/69_photo2/text,Hennes fru var så desperat. [color=STEEL_BLUE]Vad hände med henne?[/color]
+Text/69_photo3/text,Du lägger märke till något i bakgrunden av fotot – en lastbil med en [color=DARK_VIOLET]lila logga[/color].
+Text/69_photo4/text,Den där symbolen... du har sett den på kafeterians leveranser. [wave amp=15 freq=2][color=DARK_VIOLET]Rotreserven.[/color][/wave]
+Text/6a_photo1/text,Sasha... det här fotot. Kvinnans fru gav det till mig. Hon letade efter henne.
+Text/6a_photo2/text,Sashas ansikte faller. [color=STEEL_BLUE]Låt mig se.[/color]
+Text/6a_photo3/text,"Sasha studerar fotot, hennes uttryck mörknar. [color=CRIMSON]Jag känner igen den där lastbilen.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Förvara det här fotot säkert.[/color][/pulse] Det kan bli viktigt senare. Lita på mig.
+Text/6f2/text,[pulse freq=3][color=CRIMSON]De blir Rotreserven.[/color][/pulse]

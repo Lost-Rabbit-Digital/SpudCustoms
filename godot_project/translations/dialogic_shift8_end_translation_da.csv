@@ -1,0 +1,59 @@
+﻿keys,da
+Text/265/text,Vagten slutter i urolig stilhed. Sikkerhedspatruljer er fordoblet. Alle bevæger sig hviskende.
+Text/266/text,"Du er på vej til dine kvarterer, da du hører det - [color=YELLOW]råb fra officerernes fløj[/color]."
+Text/267/text,Du runder hjørnet og ser sikkerhedsstyrker [pulse freq=3][color=RED]sparke Sashas dør ind[/color][/pulse].
+Text/268/text,Chef Yukons stemme brager. SØDKARTFFEL SASHA! Du er anholdt for [color=CRIMSON]forræderi mod Spuds nation![/color]
+Text/269/text,"Sasha bliver slæbt ud, kæmpende. Hendes øjne er trodsige, selv mens vagter vrider hendes arme om på ryggen."
+Text/26a/text,[tornado radius=4 freq=3][color=CHARTREUSE]SANDHEDEN VIL KOMME FREM! I KAN IKKE TIE OS ALLE![/color][/tornado]
+Text/26b/text,Hendes blik finder dig i mængden af tilskuere. Tiden synes at fryse.
+Text/26c/text,Genkendelse... så [color=CRIMSON]knusende forståelse[/color]. Du forrådte hendes placering. Hun ved det.
+Text/26d/text,Hun taler ikke. Blikket er nok. [color=STEEL_BLUE]Skuffelse dybere end had.[/color]
+Text/26e/text,Et glimt af noget - [color=CHARTREUSE]håb? tillid?[/color] - krydser hendes ansigt.
+Text/26f/text,"Hendes læber bevæger sig lydløst: ""[color=CHARTREUSE]Rødderne vokser dybt.[/color]"" Et budskab. En påmindelse."
+Text/270/text,"Russet dukker op fra skyggerne, tilfredshed siver fra hver pore."
+Text/271/text,"Nå nå. Den [color=CRIMSON]søde kartoffel bliver sur[/color]. Jeg vidste altid, der var noget råddent ved dig, Sasha."
+Text/272/text,"Russet holder en mappe op. Dine små [color=DARK_VIOLET]manifester[/color]. Dit ""bevis."" Alt er genfundet."
+Text/273/text,"Troede du virkelig, du kunne underminere [pulse freq=2][color=DARK_VIOLET]Rodreserven[/color][/pulse]? Underminere MIG?"
+Text/274/text,"Kopier er allerede derude, Russet. Verden vil vide, hvad du gør mod vores folk!"
+Text/275/text,"Russet griner koldt. De vil vide, hvad vi fortæller dem. Og du? Du bliver en del af et [color=CRIMSON]meget specielt parti[/color]."
+Text/276/text,"""[color=DARK_VIOLET]Forræderblanding[/color]"" - Jeg synes, det lyder godt."
+Text/277/text,Dit hjerte banker. Hvert instinkt skriger på at gøre noget. Men vagter er overalt.
+Choice/278/text,"Træd frem og kræv, at de løslader hende (Halsløs)"
+Choice/279/text,Bliv skjult - lev for at kæmpe en anden dag (Pragmatisk)
+Choice/27a/text,Fang Sashas blik og nik - et løfte (Beslutsomhed)
+Text/27b/text,"Du skubber dig gennem mængden. ""[color=CHARTREUSE]Vent! Hun har ikke gjort noget forkert![/color]"""
+Text/27c/text,"Yukons hoved vender sig skarpt mod dig. ""[color=RED]Grib den der også![/color] Helt klart en medskyldig!"""
+Text/27d/text,"Murphy griber dig og trækker dig tilbage. ""[color=STEEL_BLUE]De er forvirrede i kaosset! LØB![/color]"""
+Text/27e/text,"Murphy skubber dig mod en sidekorridor, mens vagter omringer din position."
+Text/27f/text,"Vagter griber dig. Russets smil breder sig. ""[color=CRIMSON]To forrædere for prisen af én.[/color]"""
+Text/280/text,Du kryber tilbage i skyggerne og hader dig selv med hver en fiber. [color=STEEL_BLUE]Fejling.[/color]
+Text/281/text,Men i live. Og fri. For nu.
+Text/282/text,"Du fanger Sashas blik. Et langsomt, bevidst nik. [color=CHARTREUSE]Jeg kommer efter dig.[/color]"
+Text/283/text,"Hun ser det. Det mindste smil. Så bliver hun slæbt rundt om hjørnet, væk."
+Text/284/text,"Han finder dig i kaosset. Hans ansigt er en maske, men hans øjne brænder."
+Text/285/text,"De tog hende til [color=CRIMSON]behandlingsfløjen[/color]. Underetage 3. Det er der, de tog min kone."
+Text/286/text,Han presser noget i din hånd – et [color=GOLD]sikkerhedsnøglekort[/color].
+Text/287/text,Når tiden kommer... [color=CHARTREUSE]Jeg vil se den anden vej[/color]. For min kone. For dem alle.
+Text/288/text,"Murphy trækker dig ind i lagerrummet, forpustet."
+Text/289/text,Det er nu. Det sker [color=CRIMSON]faktisk[/color]. De har Sasha. De vil behandle hende inden morgen.
+Text/28a/text,"Det var [color=STEEL_BLUE]dumt[/color]. Modigt, men dumt. Du er på deres liste nu."
+Text/28b/text,Modstandsbevægelsen planlægger noget. I morgen. Det er vores eneste chance for at redde hende.
+Text/28c/text,Er du med? [color=CHARTREUSE]Hele vejen?[/color]
+Choice/28d/text,Hele vejen. Hvad end der skal til for at redde Sasha.
+Choice/28e/text,Jeg er nødt til at tænke. Det går for hurtigt.
+Text/28f/text,Murphy tager fat om din skulder. [color=CHARTREUSE]Så rykker vi ved daggry. Rødderne vokser dybt.[/color]
+Text/290/text,Murphys ansigt hårdner. Tænk hurtigt. På denne tid i morgen vil hun være [color=DARK_VIOLET]Rodreserve[/color].
+Text/291/text,Du ligger vågen og stirrer i loftet. Sashas ansigt. Hendes trods. Hendes frygt.
+Text/292/text,Du tager billedet af den savnede kone frem. Endnu et ansigt du ikke kunne redde.
+Text/293/text,[color=CHARTREUSE]Ikke denne gang.[/color]
+Text/294/text,Inden i morgen ændrer alt sig. På den ene eller anden måde.
+Text/295/text,[pulse freq=2][color=YELLOW]Ikke mere at stå på sidelinjen.[/color][/pulse]
+Text/296/text,"Cellen er kold. Gennem væggene kan du høre Sasha et sted, blive ""afhørt."""
+Text/297/text,"I morgen, sagde de. I vil begge blive [color=DARK_VIOLET]behandlet[/color] sammen."
+Text/298/text,Medmindre modstandsbevægelsen kommer. Medmindre nogen redder jer begge.
+Text/299/text,[color=STEEL_BLUE]Den længste nat i dit liv strækker sig forude.[/color]
+Choice/278/disabled_text,
+Choice/279/disabled_text,
+Choice/27a/disabled_text,
+Choice/28d/disabled_text,
+Choice/28e/disabled_text,

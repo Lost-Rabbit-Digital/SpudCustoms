@@ -1,0 +1,59 @@
+﻿keys,fi
+Text/265/text,Vuoro päättyy levottomassa hiljaisuudessa. Turvapartiot ovat tuplaantuneet. Kaikki liikkuvat kuiskaten.
+Text/266/text,"Olet matkalla majoitukseesi, kun kuulet sen – [color=YELLOW]huutoa upseerisiivestä[/color]."
+Text/267/text,Käännyt kulman nähdäksesi turvallisuusjoukkojen [pulse freq=3][color=RED]potkivan Sashan ovea sisään[/color][/pulse].
+Text/268/text,Päällikkö Yukonin ääni jylisee. BATAATTI SASHA! Olet pidätetty syytettynä [color=CRIMSON]maanpetoksesta Spudin kansakuntaa vastaan![/color]
+Text/269/text,"Sasha raahataan ulos, kamppaillen. Hänen silmänsä ovat uhmakkaat, vaikka vartijat vääntävät hänen käsiään selän taakse."
+Text/26a/text,[tornado radius=4 freq=3][color=CHARTREUSE]TOTUUS TULEE ILMI! ET VOI VAIMENTAA MEITÄ KAIKKIA![/color][/tornado]
+Text/26b/text,Hänen katseensa löytää sinut katsojien joukosta. Aika tuntuu pysähtyvän.
+Text/26c/text,Tunnistus... sitten [color=CRIMSON]murskaava ymmärrys[/color]. Petät hänen sijaintinsa. Hän tietää.
+Text/26d/text,Hän ei puhu. Katse riittää. [color=STEEL_BLUE]Pettymys syvempi kuin viha.[/color]
+Text/26e/text,Jokin välähdys – [color=CHARTREUSE]toivoa? luottamusta?[/color] – kulkee hänen kasvoillaan.
+Text/26f/text,"Hänen huulensa liikkuvat äänettömästi: ""[color=CHARTREUSE]Juuret kasvavat syvälle.[/color]"" Viesti. Muistutus."
+Text/270/text,"Russet nousee varjoista, tyytyväisyys tihkuu jokaisesta ihohuokosesta."
+Text/271/text,"Kas kas. [color=CRIMSON]Bataatti muuttuu happamaksi[/color]. Tiesin aina, että sinussa oli jotain mätää, Sasha."
+Text/272/text,"Russet nostaa kansion. Pienet [color=DARK_VIOLET]manifestisi[/color]. Sinun ""todisteesi."" Kaikki takavarikoitu."
+Text/273/text,Todellako luulit voivasi horjuttaa [pulse freq=2][color=DARK_VIOLET]Juuresvarastoa[/color][/pulse]? Horjuttaa MINUA?
+Text/274/text,"Kopioita on jo levitetty, Russet. Maailma saa tietää, mitä teet kansallemme!"
+Text/275/text,"Russet nauraa kylmästi. He tietävät sen, mitä me kerromme heille. Entä sinä? Sinusta tulee osa [color=CRIMSON]erityisen erää[/color]."
+Text/276/text,"""[color=DARK_VIOLET]Petturin sekoitus[/color]"" – Mielestäni siinä on hyvä sointi."
+Text/277/text,Sydämesi hakkaa. Jokainen vaisto huutaa tekemään jotain. Mutta vartijoita on kaikkialla.
+Choice/278/text,Astu esiin ja vaadi heitä vapauttamaan hänet (Holtiton)
+Choice/279/text,Pysy piilossa – jotta voit taistella toisen kerran (Pragmaattinen)
+Choice/27a/text,Kohtaa Sashan katse ja nyökkää – lupaus (Päättäväisyys)
+Text/27b/text,"Työnnät itsesi väkijoukon läpi. ""[color=CHARTREUSE]Odottakaa! Hän ei ole tehnyt mitään väärää![/color]"""
+Text/27c/text,"Yukonin pää nykähtää sinua kohti. ""[color=RED]Ottakaa tuo myös kiinni![/color] Selvästi rikoskumppani!"""
+Text/27d/text,"Murphy tarttuu sinuun ja vetää sinua taaksepäin. ""[color=STEEL_BLUE]He ovat sekaisin kaaoksessa! JUOKSE![/color]"""
+Text/27e/text,"Murphy tönäisee sinut sivukäytävään, kun vartijat piirittävät asemaasi."
+Text/27f/text,"Vartijat nappaavat sinut. Russetin hymy levenee. ""[color=CRIMSON]Kaksi petturia yhden hinnalla.[/color]"""
+Text/280/text,"Vetäydyt takaisin varjoihin, vihaten itseäsi jokaisella solullasi. [color=STEEL_BLUE]Pelkuri.[/color]"
+Text/281/text,Mutta elossa. Ja vapaana. Toistaiseksi.
+Text/282/text,"Katseesi kohtaa Sashan. Hidas, harkittu nyökkäys. [color=CHARTREUSE]Tulen hakemaan sinua.[/color]"
+Text/283/text,"Hän näkee. Pienin hymy. Sitten hänet raahataan nurkan taakse, kadonnut."
+Text/284/text,"Hän löytää sinut kaaoksesta. Hänen kasvonsa ovat naamio, mutta hänen silmänsä palavat."
+Text/285/text,He veivät hänet [color=CRIMSON]käsittelysiipeen[/color]. Alitaso 3. Sinne he veivät vaimoni.
+Text/286/text,Hän painaa jotain käteesi – [color=GOLD]turva-avainkortin[/color].
+Text/287/text,Kun aika koittaa... [color=CHARTREUSE]Katson toiseen suuntaan[/color]. Vaimoni puolesta. Kaikkien heidän puolestaan.
+Text/288/text,"Murphy vetää sinut varastohuoneeseen, hengittäen raskaasti."
+Text/289/text,Nyt se on totta. Tämä [color=CRIMSON]tapahtuu oikeasti[/color]. Heillä on Sasha. He käsittelevät hänet aamuun mennessä.
+Text/28a/text,"Se oli [color=STEEL_BLUE]tyhmää[/color]. Rohkeaa, mutta tyhmää. Olet nyt heidän listallaan."
+Text/28b/text,Vastustusrintama suunnittelee jotain. Huomenna. Se on ainoa mahdollisuutemme pelastaa hänet.
+Text/28c/text,Oletko mukana? [color=CHARTREUSE]Loppuun asti?[/color]
+Choice/28d/text,Loppuun asti. Mitä tahansa Sashan pelastamiseksi.
+Choice/28e/text,Minun täytyy ajatella. Tämä etenee liian nopeasti.
+Text/28f/text,Murphy tarttuu olkapäähäsi. [color=CHARTREUSE]Sitten toimimme aamunkoitteessa. Juuret kasvavat syvälle.[/color]
+Text/290/text,Murphyn kasvot kovettuvat. Ajattele nopeasti. Tähän aikaan huomenna hän on [color=DARK_VIOLET]Juuresvarastossa[/color].
+Text/291/text,"Makaat hereillä, tuijottaen kattoa. Sashan kasvot. Hänen uhmansa. Hänen pelkonsa."
+Text/292/text,"Vedät esiin kuvan kadonneesta vaimosta. Toiset kasvot, joita et voinut pelastaa."
+Text/293/text,[color=CHARTREUSE]Ei tällä kertaa.[/color]
+Text/294/text,Huomiseen mennessä kaikki muuttuu. Tavalla tai toisella.
+Text/295/text,[pulse freq=2][color=YELLOW]Ei enää sivusta seuraamista.[/color][/pulse]
+Text/296/text,"Selli on kylmä. Seinien läpi kuulet Sashan jossain, jota ""kuulustellaan""."
+Text/297/text,"Huomenna, he sanoivat. Teidät molemmat [color=DARK_VIOLET]käsitellään[/color] yhdessä."
+Text/298/text,Ellei vastarinta saavu. Ellei joku pelasta teitä molempia.
+Text/299/text,[color=STEEL_BLUE]Elämäsi pisin yö venyy edessä.[/color]
+Choice/278/disabled_text,
+Choice/279/disabled_text,
+Choice/27a/disabled_text,
+Choice/28d/disabled_text,
+Choice/28e/disabled_text,

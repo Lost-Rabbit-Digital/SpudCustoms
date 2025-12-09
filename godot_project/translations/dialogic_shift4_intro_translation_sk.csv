@@ -1,0 +1,19 @@
+﻿keys,sk
+Text/86/text,Nové bezpečnostné protokoly dnes. Dostali sme spravodajské informácie o [color=YELLOW]podozrivých aktivitách[/color].
+Text/87/text,Všetci cestujúci musia prejsť rozšírenými kontrolnými postupmi.
+Text/88/text,"Sledujte [color=YELLOW]nervózne správanie, nezvyčajné spôsoby alebo neochotu nadviazať očný kontakt[/color]."
+Text/89/text,"Všetky podozrivé predmety musia byť zabavené a zaznamenané. Pre bezpečnosť Spuda, samozrejme."
+Text/8a/text,"Sme osobitne znepokojení [color=CRIMSON]zakázanými materiálmi[/color] - protivládnou literatúrou, fotografickým vybavením..."
+Text/8b/text,"Ich hlas klesá hrozivo. ""[pulse freq=2][color=DARK_VIOLET]Máme špeciálne postupy pre týchto jednotlivcov.[/color][/pulse]"""
+Text/8c/text,"[wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave] nákladné autá vykladajú debny označené ""Premium Reserve"" v jedálni. Vôňa je lákavá, ale žalúdok sa vám obracia."
+Text/8d/text,Vyskúšali ste nový Premium Reserve? Môj bratranec zmizol minulý mesiac. Neprešiel kontrolou.
+Text/8e/text,"Možno je súčasťou tejto dávky, čo? [tornado radius=2 freq=2][color=STEEL_BLUE]Čierny humor, rozumiete?[/color][/tornado]"
+Choice/8f/text,To nie je vôbec smiešné.
+Choice/90/text,Nemám hlad. Prepáčte. (Odísť)
+Text/91/text,"Máte pravdu. Niekedy je ľahšie žartovať ako premýšľať o [pulse freq=3][color=CRIMSON]tom, čo sa môže skutočne diať[/color][/pulse]."
+Text/92/text,"Dôstojník vás sleduje, ako odchádzate. ""Chápem. Tiež som stratil chuť do jedla..."""
+Text/93/text,"Výhodný čas pre nové bezpečnostné protokoly, nie? [wave amp=15 freq=3][color=YELLOW]Snažia sa zastaviť informácie o Root Reserve.[/color][/wave]"
+Text/94/text,"Mám niečo, čo by nám mohlo pomôcť. Niektoré zemiaky s [color=CHARTREUSE]kľúčovými informáciami si zaslúžia prejsť[/color]."
+Text/95/text,Opatrne zvažujete svoje možnosti. Dnešné rozhodnutia by mohli pomôcť [color=CHARTREUSE]šíriť pravdu[/color]... alebo ju [color=CRIMSON]navždy umlčať[/color].
+Choice/8f/disabled_text,
+Choice/90/disabled_text,

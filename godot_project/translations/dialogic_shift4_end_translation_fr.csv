@@ -1,0 +1,49 @@
+﻿keys,fr
+Text/215/text,"Murphy vous attrape dans le couloir, les yeux rougis. Vous avez une minute ?"
+Text/216/text,Murphy vous entraîne dans un débarras vide et ferme la porte.
+Text/217/text,Cette blague que j'ai faite à la cafétéria... à propos de mon cousin qui était dans le lot de la [color=DARK_VIOLET]Réserve Racinaire[/color]...
+Text/218/text,La voix de Murphy se brise. Je ne crois plus que c'était une blague.
+Text/219/text,Vous avez dit que ce n'était pas drôle. Vous aviez raison. [color=STEEL_BLUE]Rien de tout cela n'est drôle.[/color]
+Text/21a/text,"Je vous ai vu partir. Malin. J'aimerais pouvoir arrêter de manger ces trucs, mais ils [color=YELLOW]surveillent[/color]. Ils surveillent toujours."
+Text/21b/text,"J'ai trouvé quelque chose parmi les affaires de mon cousin. Son formulaire de rejet. Rien d'anormal, mais..."
+Text/21c/text,"Murphy sort un formulaire froissé. Regardez le code de traitement. ""[color=CRIMSON]RR-UTIL-7[/color]."""
+Text/21d/text,J'ai cherché dans les archives. RR signifie [pulse freq=2][color=DARK_VIOLET]Réserve Racinaire[/color][/pulse]. UTIL signifie... [color=CRIMSON]utilisation[/color].
+Text/21d_breakdown1/text,[wave amp=20 freq=3]Les mains de Murphy commencent à trembler.[/wave] Mon cousin... Tommy... il n'avait que vingt-trois ans.
+Text/21d_breakdown2/text,Il est venu ici pour une [color=CHARTREUSE]vie meilleure[/color]. Il a échoué à une seule inspection. Une. [color=STEEL_BLUE]Juste un mauvais timing.[/color]
+Text/21d_breakdown3/text,"Murphy glisse le long du mur, le visage dans les mains. Et moi... j'ai [tornado radius=3 freq=2][color=CRIMSON]MANGÉ[/color][/tornado] ces trucs. Tous les jours."
+Text/21d_breakdown4/text,"Murphy vous regarde, les larmes coulant. [pulse freq=2][color=CRIMSON]Et si je l'avais MANGÉ, LUI ?[/color][/pulse]"
+Choice/21e/text,Murphy... Je suis tellement désolé. Je suis avec vous. Nous trouverons la vérité ensemble.
+Choice/21f/text,"Murphy, c'est dangereux. Nous devrions rester en dehors de ça."
+Choice/220/text,C'est peut-être une coïncidence. Ne tirons pas de conclusions hâtives.
+Text/221_comfort1/text,"Vous vous agenouillez à côté de Murphy, posant une main sur son épaule."
+Text/221/text,Murphy s'accroche à votre bras comme à une bouée de sauvetage. [color=CHARTREUSE]Merci.[/color] Je pensais que je devenais fou.
+Text/221_tommy/text,[color=STEEL_BLUE]Sa voix se stabilise légèrement.[/color] Pour Tommy. Nous faisons ça pour Tommy. Et pour tous les autres qu'ils ont pris.
+Text/222/text,D'autres se doutent aussi de quelque chose. Sasha rassemble des gens. Je pense qu'elle vous fait confiance.
+Text/223/text,"Murphy s'essuie les yeux, essayant de se ressaisir. Oui. Oui, vous avez probablement raison. Oubliez ce que j'ai dit."
+Text/224/text,Mais si vous changez d'avis... Je serai là. [color=STEEL_BLUE]Seul avec mes questions. Et mes cauchemars.[/color]
+Text/225/text,Coïncidence. Murphy rit amèrement à travers ses larmes. Bien sûr. Et Tommy a juste [color=CRIMSON]disparu[/color] dans la nature.
+Text/226/text,"Continuez à vous raconter ça. Voyez combien de temps ça vous aidera à dormir. [color=STEEL_BLUE]Moi, ça ne m'aide pas.[/color]"
+Text/227/text,Sasha apparaît à votre poste alors que le dernier quart se termine. Vous avez l'air d'avoir vu un fantôme.
+Text/228/text,Laissez-moi deviner - Murphy vous a parlé de son cousin ?
+Text/229/text,Sasha hoche la tête d'un air approbateur. Bien. Nous avons besoin de gens qui posent des questions.
+Text/22a/text,Sasha étudie attentivement votre visage. Vous avez peur. C'est intelligent. Mais la peur ne sauvera personne.
+Text/22b/text,"Je vous observe depuis votre premier jour. La façon dont vous avez [color=YELLOW]hésité[/color] quand Russet a parlé de ""traitement""."
+Text/22c/text,Vous avez demandé ce qu'il advient des patates rejetées. Il fallait du cran. [color=CHARTREUSE]La plupart se contentent de saluer et de tamponner.[/color]
+Text/22d/text,Sasha se penche. Il y a un schéma. Chaque patate que nous rejetons ? Disparue en moins de 48 heures. Aucun dossier de déportation. Aucun transfert.
+Text/22e/text,Mais la production de la [color=DARK_VIOLET]Réserve de Racines[/color] ? [tornado radius=3 freq=2][color=CRIMSON]Elle augmente.[/color][/tornado] À chaque. Fois.
+Choice/22f/text,Je vous crois. Comment puis-je aider ?
+Choice/230/text,J'ai besoin de preuves avant de tout risquer.
+Text/231/text,"Les yeux de Sasha s'illuminent. Je savais que j'avais bien choisi. Demain soir, après le service. Je vous montrerai ce que j'ai trouvé."
+Text/232/text,D'ici là
+Text/233/text,Soit. Les preuves arrivent. Juste... gardez l'œil ouvert pendant le service de demain.
+Text/234/text,Observez où vont les [color=CRIMSON]patates rejetées[/color]. Suivez les camions si vous le pouvez.
+Text/235/text,Vous sortez la photo que la patate désespérée vous a donnée. Sa femme. [color=STEEL_BLUE]Où est-elle maintenant ?[/color]
+Text/236/text,Si ce que Sasha et Murphy disent est vrai... elle a déjà été...
+Text/237/text,Vous ne pouvez pas terminer cette pensée. Mais vous [color=CHARTREUSE]n'oublierez pas son visage[/color].
+Text/238/text,"Demain, tout change. Soit vous trouvez des réponses, soit vous enterrez les questions pour toujours."
+Text/239/text,Une chose est certaine : il n'y a [color=YELLOW]pas de retour possible à l'ignorance béate[/color].
+Choice/21e/disabled_text,
+Choice/21f/disabled_text,
+Choice/220/disabled_text,
+Choice/22f/disabled_text,
+Choice/230/disabled_text,

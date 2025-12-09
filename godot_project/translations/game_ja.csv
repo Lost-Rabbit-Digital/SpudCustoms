@@ -1,0 +1,54 @@
+﻿keys,ja
+alert_border_runner,国境突破者発見！\nクリックでミサイル発射！
+alert_rejected_fleeing,却下ポテト逃走中！\nクリックでミサイル発射！
+alert_runner_escaped,逃走者、逃亡！\nストライク追加！
+alert_points_deducted,逃走者、逃亡！\nストライク追加！\n-{penalty} ポイント！
+alert_perfect_hit,パーフェクトヒット！ +{perfect} 命中精度ボーナスポイント
+alert_perfect_stamp,パーフェクトスタンプ！ +{points} ポイント！
+alert_combo,コンボ x{mult}！ +{streak} コンボボーナスポイント
+alert_quota_met,ノルマ達成、シフト完了！\nボーナス: {bonus} ポイント！
+alert_strike_removed,ストライク解除！
+alert_correct_decision,適切な判断です、警官殿。\n+{points} ポイント！
+alert_wrong_decision,不必要な苦痛を与えましたね、警官殿...\n+1 ストライク！
+alert_potato_should_be_approved,\nこのポテトは全ての要件を満たしており、承認されるべきでした。
+alert_strike_out,最大ストライク数を超過しました！シフトは終了です。
+ui_score,スコア: {score}
+ui_quota,ノルマ: {current} / {target}
+ui_strikes,ストライク: {current} / {max}
+ui_click_megaphone,次のポテトを呼ぶにはメガホンをクリック
+ui_drag_document,書類を検査台にドラッグ
+ui_stamp_document,承認または却下するスタンプを選択
+ui_check_violations,書類違反を確認
+Strike removed!,ストライク解除！
+BORDER RUNNER DETECTED!\nClick to launch missile!,国境突破者発見！\nクリックでミサイル発射！
+REJECTED POTATO FLEEING!\nClick to launch missile!,却下ポテト逃走中！\nクリックでミサイル発射！
+RUNNER ESCAPED!\nStrike added!,逃走者、逃亡！\nストライク追加！
+Click megaphone to call the next potato,次のポテトを呼ぶにはメガホンをクリック
+Drag document to inspection table,書類を検査台へドラッグ
+Select a stamp to approve or reject,承認または拒否するスタンプを選択してください
+Check for document violations,書類違反を確認
+rule_explanation_header,ルール説明：
+rule_explanation_fresh,「状態」欄を確認してください。「新鮮」以外の場合は拒否してください。
+rule_explanation_sweet_potato,「種類」欄を確認してください。「サツマイモ」の場合は拒否してください。(許可証なし)
+rule_explanation_chip_hill,「国」欄を確認してください。「チップヒル」の場合は拒否してください。(禁止国)
+rule_explanation_age,「生年月日」欄を確認してください。年齢を計算し、ルールと照合してください。
+rule_explanation_gender,「性別」欄を確認し、現在のルールと照合してください。
+rule_footer_text,これらのルールは全てのジャガイモに適用されなければなりません
+rule_tutorial_hint,ヘルプが必要ですか？説明を見るには、いずれかのルールをクリックしてください。
+alert_correct_decision_detailed,正しい判断です！ +{points} ポイント\n{reason}
+alert_wrong_decision_detailed,間違った判断です！ストライクが追加されました！\n{reason}
+alert_reason_approved,ジャガイモは全ての要件を満たしています - 承認
+alert_reason_should_reject,このジャガイモは拒否すべきでした
+tutorial_check_type,パスポートの「種類」欄を確認してください
+tutorial_check_condition,パスポートの「状態」欄を確認してください
+tutorial_check_country,パスポートの「国」欄を確認してください
+tutorial_check_age,年齢を計算するために「生年月日」欄を確認してください
+tutorial_check_gender,パスポートの「性別」欄を確認してください
+alert_streak_bonus_minigame,5連続！ボーナスミニゲーム！
+alert_perfect_stamps_bonus_minigame,完璧なスタンプ！ボーナスミニゲーム！
+alert_runner_bonus_minigame,不審な活動！ボーナスミニゲーム！
+alert_new_minigame_unlocked,新しいミニゲームがアンロックされました：{name}！
+alert_minigame_bonus,ミニゲームボーナス：+{bonus} ポイント！
+high_score_display,ハイスコア：{score}
+new_high_score,新記録達成！
+month_1,1月

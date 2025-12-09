@@ -1,0 +1,29 @@
+﻿keys,ar
+violation_condition_not_fresh,رفض: يُسمح فقط بالبطاطس الطازجة. هذه البطاطس {condition}
+violation_extra_eyes,رفض: حالة العيون الزائدة ممنوعة
+violation_rotten,رفض: البطاطس الفاسدة ممنوعة
+violation_sprouted,رفض: البطاطس المنبتة ممنوعة
+violation_dehydrated,رفض: البطاطس المجففة ممنوعة
+violation_frozen,رفض: البطاطس المجمدة ممنوعة
+violation_too_old,رفض: عمر البطاطس {age} سنوات (الحد الأقصى للعمر: 4 سنوات)
+violation_too_young_3,رفض: عمر البطاطس {age} سنوات (الحد الأدنى للعمر: 4 سنوات)
+violation_too_young_2,رفض: عمر البطاطس {age} سنوات (الحد الأدنى للعمر: 3 سنوات)
+violation_males_only,رفض: يُسمح فقط بالبطاطس الذكور
+violation_females_only,رفض: يُسمح فقط بالبطاطس الإناث
+violation_country_spudland,رفض: جميع بطاطس سبودلاند ممنوعة
+violation_country_potatopia,رفض: جميع بطاطس بوتاتوبيا ممنوعة
+violation_country_tuberstan,رفض: جميع بطاطس تيوبرستان ممنوعة
+violation_country_north_yamnea,رفض: جميع بطاطس شمال يامنيا ممنوعة
+violation_country_spuddington,رفض: جميع بطاطس سبودينغتون ممنوعة
+violation_country_tatcross,رفض: جميع بطاطس تاتكروس ممنوعة
+violation_country_mash_meadows,رفض: جميع بطاطس ماش ميدوز ممنوعة
+violation_country_tuberville,رفض: جميع بطاطس توبرفيل ممنوعة
+violation_country_chip_hill,رفض: جميع بطاطس تشيب هيل ممنوعة (قيود التصدير)
+violation_country_murphyland,رفض: جميع بطاطس مورفيلاند ممنوعة
+violation_country_colcannon,رفض: جميع بطاطس كولكانون ممنوعة
+violation_country_pratie_point,رفض: جميع بطاطس براتي بوينت ممنوعة
+violation_race_purple_majesty,"رفض: أنواع ""بيربل ماجيستي"" ممنوعة"
+violation_race_sweet_potato,رفض: أنواع البطاطا الحلوة تتطلب تصاريح خاصة (غير متوفرة)
+violation_race_yukon_gold,رفض: أنواع يوكون جولد ممنوعة
+violation_expired_document,رفض: الوثيقة منتهية الصلاحية بتاريخ {date}
+violation_invalid_potato,هذه البطاطا تستوفي جميع المتطلبات وكان يجب الموافقة عليها

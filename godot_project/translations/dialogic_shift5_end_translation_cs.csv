@@ -1,0 +1,22 @@
+﻿keys,cs
+Text/96/text,"Plížíte se tmavou chodbou, srdce vám buší, když se vyhýbáte bezpečnostním hlídkám."
+Text/97/text,[color=CHARTREUSE]Toto zařízení zruší zámek[/color] na kanceláři Russeta. Spustím poplachy ve východním křídle jako rozptýlení. Budete mít pět minut.
+Text/98/text,Manifesty by měly být v jeho kartotéce. [color=CRIMSON]Červená složka označená 'RR Transport'[/color]. Nezanechávejte důkazy o vašem hledání.
+Text/99/text,"Nacházíte tlustou [color=CRIMSON]červenou složku označenou ""RR Transport""[/color] v kartotéce."
+Text/9a/text,"Uvnitř jsou manifesty odpovídající odmítnutým počtům brambor a direktiva od předsedy vlády Idaho povoující ""[pulse freq=3][color=DARK_VIOLET]plné využití hraničních odmítnutí pro produkci RR.[/color][/pulse]"""
+Text/9b/text,"Kroky se blíží ke dveřím kanceláře. ""[wave amp=15 freq=3][color=YELLOW]Divné, myslel jsem, že jsem to zamkl.[/color][/wave]"""
+Choice/9c/text,Schovej se pod stůl
+Choice/9d/text,Vyskočit z okna
+Text/9e/text,"Vrháte se pod Russetův stůl, když vstoupí, vaše srdce buší. Sedá si, jeho nohy jsou centimetry od vaší tváře."
+Text/9f/text,Russet zde. Co? [color=CHARTREUSE]Další poplach?[/color] Už jdu. Odchází a vy uniknete.
+Text/a0/text,"Vytrhnete okno a vyskočíte. Naštěstí je to jen o patro níž. Strážce křičí: ""[color=RED]Stůj! Zastav![/color]"""
+Text/a1/text,Utíkáte přes pozemky a podaří se vám ztratit pronásledovatele.
+Text/a2/text,Dostali jste to?
+Text/a3/text,"Předáváte důkazy a vysvětlujete, co jste našli."
+Text/a4/text,Toto dokazuje všechno. Odpor vytvoří kopie. [tornado radius=3 freq=2]Šiřte pravdu všude.[/tornado] Nemohou nás všechny umlčet.
+Text/a5/text,"Překročili jste hranici. [wave amp=20 freq=3][color=YELLOW]Není návratu.[/color][/wave] Až se pravda rozšíří, Spud bude transformován."
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,
+Text/9a_viktor1/text,Prohlížíte jména na manifestu... a jedno upoutá vaši pozornost. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,"To jméno... už jste ho slyšeli. Bezpečnostní strážník Viktor se zmínil, že jeho žena zmizela."
+Text/9a_viktor3/text,"""[color=CRIMSON]Stav: Zpracováno. Dávka RR-2851.[/color]"" Datováno před dvěma týdny."

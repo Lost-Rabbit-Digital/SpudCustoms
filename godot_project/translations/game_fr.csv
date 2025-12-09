@@ -1,0 +1,54 @@
+﻿keys,fr
+alert_border_runner,COUREUR FRONTALIER DÉTECTÉ !\nCliquez pour lancer le missile !
+alert_rejected_fleeing,POMME DE TERRE REJETÉE EN FUITE !\nCliquez pour lancer le missile !
+alert_runner_escaped,COUREUR ÉCHAPPÉ !\nStrike ajouté !
+alert_points_deducted,COUREUR ÉCHAPPÉ !\nStrike ajouté !\n-{penalty} points !
+alert_perfect_hit,COUP PARFAIT ! +{perfect} points de bonus de précision
+alert_perfect_stamp,TAMPON PARFAIT ! +{points} points !
+alert_combo,COMBO x{mult} ! +{streak} points de bonus de combo
+alert_quota_met,"Quota atteint, service terminé ! \nBonus : {bonus} points !"
+alert_strike_removed,Strike retiré !
+alert_correct_decision,"Vous avez fait le bon choix, officier.\n+{points} points !"
+alert_wrong_decision,"Vous avez causé des souffrances inutiles, officier...\n+1 Strike !"
+alert_potato_should_be_approved,\nCette pomme de terre remplit toutes les conditions et aurait dû être approuvée.
+alert_strike_out,Nombre maximum de strikes dépassé ! Votre service est terminé.
+ui_score,Score : {score}
+ui_quota,Quota : {current} / {target}
+ui_strikes,Strikes : {current} / {max}
+ui_click_megaphone,Cliquez sur le mégaphone pour appeler la prochaine pomme de terre
+ui_drag_document,Faites glisser le document sur la table d'inspection
+ui_stamp_document,Sélectionnez un tampon pour approuver ou rejeter
+ui_check_violations,Vérifiez les violations du document
+Strike removed!,Strike retiré !
+BORDER RUNNER DETECTED!\nClick to launch missile!,COUREUR FRONTALIER DÉTECTÉ !\nCliquez pour lancer le missile !
+REJECTED POTATO FLEEING!\nClick to launch missile!,POMME DE TERRE REJETÉE EN FUITE !\nCliquez pour lancer le missile !
+RUNNER ESCAPED!\nStrike added!,COUREUR ÉCHAPPÉ !\nStrike ajouté !
+Click megaphone to call the next potato,Cliquez sur le mégaphone pour appeler la prochaine pomme de terre
+Drag document to inspection table,Faites glisser le document sur la table d'inspection
+Select a stamp to approve or reject,Sélectionnez un tampon pour approuver ou rejeter
+Check for document violations,Vérifiez les violations du document
+rule_explanation_header,EXPLICATION DE RÈGLE:
+rule_explanation_fresh,Regardez le champ 'Condition'. S'il dit autre chose que 'Frais' - REJETER
+rule_explanation_sweet_potato,Regardez le champ 'Type'. S'il dit 'Patate Douce' - REJETER (pas de permis)
+rule_explanation_chip_hill,Regardez le champ 'Pays'. S'il dit 'Chip Hill' - REJETER (interdit)
+rule_explanation_age,Regardez le champ 'Date de Naissance'. Calculez l'âge et vérifiez par rapport à la règle
+rule_explanation_gender,Regardez le champ 'Genre' et vérifiez par rapport à la règle actuelle
+rule_footer_text,Ces règles doivent être appliquées pour TOUTES les pommes de terre
+rule_tutorial_hint,Besoin d'aide? Cliquez sur n'importe quelle règle pour une explication
+alert_correct_decision_detailed,BONNE DÉCISION! +{points} points\n{reason}
+alert_wrong_decision_detailed,MAUVAISE DÉCISION! Strike ajouté!\n{reason}
+alert_reason_approved,La pomme de terre répond à toutes les exigences - APPROUVÉE
+alert_reason_should_reject,Vous auriez dû REJETER cette pomme de terre
+tutorial_check_type,Vérifiez le champ 'Type' dans le passeport
+tutorial_check_condition,Vérifiez le champ 'Condition' dans le passeport
+tutorial_check_country,Vérifiez le champ 'Pays' dans le passeport
+tutorial_check_age,Vérifiez la 'Date de Naissance' pour calculer l'âge
+tutorial_check_gender,Vérifiez le champ 'Genre' dans le passeport
+alert_streak_bonus_minigame,5 d'affilée ! MINI-JEU BONUS !
+alert_perfect_stamps_bonus_minigame,Tampons parfaits ! MINI-JEU BONUS !
+alert_runner_bonus_minigame,Activité suspecte ! MINI-JEU BONUS !
+alert_new_minigame_unlocked,Nouveau mini-jeu débloqué : {name} !
+alert_minigame_bonus,Bonus mini-jeu : +{bonus} points !
+high_score_display,Meilleur score : {score}
+new_high_score,NOUVEAU MEILLEUR SCORE !
+month_1,Janvier

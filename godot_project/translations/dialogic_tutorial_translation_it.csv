@@ -1,0 +1,33 @@
+﻿keys,it
+Text/156/text,Benvenuto a [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs Training![/color][/pulse]
+Text/157/text,Questo addestramento ti insegnerà le [wave amp=15 freq=2][color=DARK_ORANGE]competenze essenziali[/color][/wave] necessarie per proteggere i confini di Spud.
+Text/158/text,Il tuo dovere è processare le patate in arrivo al nostro posto di frontiera.
+Text/159/text,Le patate immigranti faranno la fila fuori dal tuo ufficio qui.
+Text/15a/text,"Per iniziare a processare le patate, devi aprire il tuo sportello per il servizio con l'interruttore qui."
+Text/15b/text,Segnalerai a ogni patata di avvicinarsi al tuo ufficio toccando il megafono.
+Text/15c/text,Le patate entreranno nello sportello una per una e presenteranno i loro documenti.
+Text/15d/text,"Prima, sposta i loro documenti sul tavolo d'ispezione per una visione migliore."
+Text/15e/text,"Poi, cerca [tornado radius=3 freq=2][color=YELLOW]date scadute, informazioni errate o segni di contraffazione[/color][/tornado]."
+Text/15f/text,"La tua scrivania ha timbri per marcare i documenti, puoi cliccare qui per estrarre la barra dei timbri."
+Text/160/text,Poi posiziona il documento sotto il timbro che desideri...
+Text/161/text,Clicca sul timbro per marcare i documenti come [color=CHARTREUSE]approvati[/color] o [color=CRIMSON]respinti[/color]...
+Text/162/text,E trascina il documento indietro alla patata per finalizzare la tua decisione!
+Text/163/text,"A volte, le patate cercheranno di [color=CRIMSON]correre oltre il tuo posto di controllo[/color]."
+Text/164/text,"Hai un collegamento diretto nel tuo sportello, che ti consente di controllare i [pulse freq=3][color=CRIMSON]lanciamissili[/color][/pulse] lungo il muro di confine."
+Text/165/text,"Clicca su questi ""corridori"" per lanciare un missile e fermarli."
+Text/166/text,"Ricorda, ogni corridore che riesce a passare conterà come un [wave amp=20 freq=3][color=CRIMSON]richiamo contro di te[/color][/wave]."
+Text/167/text,"Troppi richiami, e il tuo turno finirà... [tornado radius=3 freq=3][color=CRIMSON]permanentemente.[/color][/tornado]"
+Text/168/text,Ogni turno ha una [color=DARK_ORANGE]quota di patate[/color] che devi processare per completare la tua giornata.
+Text/169/text,Il tuo punteggio tiene traccia delle tue prestazioni rispetto ai tuoi colleghi di questo posto di controllo e ai funzionari in uffici doganali distanti.
+Text/16a/text,"Dopo ogni turno, vedrai un riepilogo delle tue prestazioni e se hai avuto successo o hai fallito nel tuo dovere."
+Text/16b/text,Vedrai una ripartizione di come hai gestito i corridori e quanti documenti hai processato.
+Text/16c/text,"Più eventuali bonus che hai guadagnato processando rapidamente i documenti, allineando perfettamente i timbri o colpendo perfettamente le patate corridori."
+Text/16d/text,"Riceverai anche una valutazione delle prestazioni basata su quanto bene hai processato le patate durante il tuo turno, e fino a 3 timbri dorati se superi le aspettative."
+Text/16e/text,Qui puoi inviare il tuo punteggio per ogni turno al database globale degli ufficiali doganali e vedere come ti confronti con gli ufficiali doganali più elite di tutto il mondo.
+Text/16f/text,"Se il tuo turno è stato un successo, potrai continuare cliccando su ""Continua"" e iniziando il tuo prossimo turno."
+Text/170/text,Questo copre le basi dei tuoi doveri come Ufficiale Doganale.
+Text/171/text,"Ricorda: controlla attentamente i documenti, ferma i corridori e rispetta la tua quota."
+Text/172/text,La sicurezza di Spud dipende dalla tua [pulse freq=2][color=DARK_ORANGE]vigilanza![/color][/pulse]
+Text/174/text,Iniziamo il tuo [color=YELLOW]turno di addestramento[/color]...
+Text/180/text,Ma fai attenzione: non tutte le patate hanno i documenti in regola.
+Text/181/text,I [color=RED]passaporti scaduti[/color] sono un rifiuto automatico. Nessuna eccezione.

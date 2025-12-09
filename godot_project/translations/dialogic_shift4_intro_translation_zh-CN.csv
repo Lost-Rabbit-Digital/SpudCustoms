@@ -1,0 +1,19 @@
+﻿keys,zh-CN
+Text/86/text,今天启用了新的安全协议。我们收到了关于[color=YELLOW]可疑活动[/color]的情报。
+Text/87/text,所有旅客必须接受强化检查程序。
+Text/88/text,留意[color=YELLOW]紧张行为、异常举止或不愿眼神交流[/color]。
+Text/89/text,所有可疑物品必须没收并记录在案。当然，这是为了马铃薯国的安全。
+Text/8a/text,我们尤其关注[color=CRIMSON]违禁材料[/color]——反政府文学、摄影设备……
+Text/8b/text,"他的声音不祥地低沉下来。""[pulse freq=2][color=DARK_VIOLET]我们对那些人有特殊处理程序。[/color][/pulse]"""
+Text/8c/text,[wave amp=15 freq=2][color=DARK_VIOLET]根源储备[/color][/wave]的卡车将标有“特级储备”的板条箱卸到食堂。气味诱人，但你却感到反胃。
+Text/8d/text,你尝过新的特级储备了吗？我表弟上个月失踪了。检查不合格。
+Text/8e/text,也许他就是这批货的一部分，嗯？[tornado radius=2 freq=2][color=STEEL_BLUE]黑色幽默，你懂的？[/color][/tornado]
+Choice/8f/text,“这不好笑。一点也不。”
+Choice/90/text,“我不饿。抱歉。”（离开）
+Text/91/text,你说得对。有时候开玩笑比思考[pulse freq=3][color=CRIMSON]可能正在发生的事情[/color][/pulse]更容易。
+Text/92/text,警官看着你离开。“嘿，我懂。我也食欲不振了……”
+Text/93/text,新的安全协议来得真是时候，不是吗？[wave amp=15 freq=3][color=YELLOW]他们正试图阻止关于根源储备的信息传播。[/color][/wave]
+Text/94/text,我有东西可能对我们有帮助。一些带有[color=CHARTREUSE]重要信息[/color]的马铃薯应该被放行。
+Text/95/text,你仔细考虑你的选择。今天的选择可能有助于[color=CHARTREUSE]传播真相[/color]……或者[color=CRIMSON]永远将其扼杀[/color]。
+Choice/8f/disabled_text,
+Choice/90/disabled_text,

@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://blhtw24dce4v3"
+
+[deps]
+
+files=["res://translations/rules_zh-TW.zh_TW.translation"]
+
+source_file="res://translations/rules_zh-TW.csv"
+dest_files=["res://translations/rules_zh-TW.zh_TW.translation"]
+
+[params]
+
+compress=true
+delimiter=0

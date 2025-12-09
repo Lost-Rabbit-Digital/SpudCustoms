@@ -1,0 +1,33 @@
+﻿keys,ro
+Text/131/text,"Te ghemuiești în timp ce bătălia se intensifică. Îmi pare rău, Sasha. [color=STEEL_BLUE]Nu sunt la fel de curajos ca tine[/color]."
+Text/132/text,[color=CRIMSON]Atacul terorist[/color] a fost respins! Liderii sunt [color=DARK_VIOLET]procesați[/color] chiar acum.
+Text/133/text,"Șeful Yukon târăște membri ai rezistenței în lanțuri, Sasha printre ei. ""Acești [color=CRIMSON]trădători[/color] vor înfrunta [color=DARK_VIOLET]procesarea finală[/color]."""
+Text/134/text,"Sasha îți prinde privirea. În ciuda vânătăilor ei, privirea ei conține [wave amp=15 freq=2][color=CHARTREUSE]nicio judecată, doar tristețe[/color][/wave]."
+Text/135/text,"Ai supraviețuit ținându-ți capul plecat, dar [pulse freq=3][color=GOLD]cu ce preț?[/color][/pulse] În timp ce producția de [color=DARK_VIOLET]Rezervă Rădăcină[/color] emană din fabrică, stomacul ți se răsucește."
+Text/136/text,Poate că încă există o șansă din interior. Sau poate că doar îți liniștești conștiința.
+Text/137/text,[tornado radius=3 freq=2][color=CHARTREUSE]Îți abandonezi postul[/color][/tornado] și alergi spre luptă. Timpul pentru precauție s-a terminat.
+Text/138/text,[pulse freq=3][color=GOLD]Dovedește că ești cu noi![/color][/pulse] Cum o cunoști pe Sasha?
+Text/139/text,"[color=CHARTREUSE]Rădăcinile cresc adânc![/color] Sunt de la punctul de control, Sasha m-a recrutat!"
+Text/13a/text,O duc la fabrica de procesare chiar acum. Trebuie să ne grăbim!
+Text/13b/text,"Ușile explodează, dezvăluind [wave amp=25 freq=3][color=CRIMSON]adevărul înfiorător[/color][/wave] - mașini de măcinat, benzi transportoare ducând cartofi spre pierzania lor."
+Text/13c/text,La capătul unei benzi - Sasha și alții [color=CRIMSON]legați neajutorați[/color]. Supraveghetorul Russet stă la comenzi.
+Text/13d/text,[color=RED]TU![/color] Ar fi trebuit să știu că ești unul dintre ei! Dă-te înapoi sau pornesc procesorul!
+Text/13e/text,"În timp ce luptătorii rezistenței îl copleșesc pe Russet, Sasha redirecționează camerele facilității. [color=YELLOW]Oameni ai Spud-ului! Aceasta este Rezerva Rădăcină! Ne-au hrănit unii cu alții![/color]"
+Text/13f/text,Te-ai întors pentru mine. [color=CHARTREUSE]Am reușit. Adevărul este acum la lumină.[/color] Avem un viitor de construit!
+Text/140/text,"[color=STEEL_BLUE]Liderul rezistenței înaintează, cu arma îndreptată spre Russet.[/color] Niciun pas mai mult, Russet. Mâinile sus, unde le pot vedea."
+Text/141/text,"[color=CRIMSON]Ochii lui Russet se mișcă rapid între tine și liderul rezistenței, cu perle de transpirație pe fruntea lui.[/color] Crezi că ai câștigat? Această facilitate este fundația Spud!"
+Text/142/text,Fundația suferinței. [pulse freq=3][color=CHARTREUSE]Se termină azi.[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]Sasha se zbate împotriva legăturilor ei pe banda transportoare
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""Russet"
+Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""Asta... asta e ceea ce făceau? E mai rău decât mi-am imaginat...""[/color][/wave]"
+Choice/146/text,"[color=CHARTREUSE]""Sasha! Mulțumesc rădăcinilor că ești în viață! Ține-te bine"
+Text/147/text,"[color=CRIMSON]Te repezi spre Russet, cu pumnii strânși, abia reținut de luptătorii rezistenței.[/color] Fiecare cartof care a trecut prin punctul meu de control... câți ai..."
+Text/148/text,Calmează-te! Avem nevoie de el în viață ca să depună mărturie. [color=STEEL_BLUE]Liderul își ține arma îndreptată spre Russet.[/color] Păstrează-ți furia pentru tribunale.
+Text/149/text,"[color=STEEL_BLUE]Te clatini înapoi, cu mâna la gură, asimilând întreaga oroare a mașinăriei.[/color] Le-am ștampilat actele... I-am trimis aici..."
+Text/14a/text,[color=CHARTREUSE]Nu știai. Niciunul dintre noi. [/color]De aceea suntem aici acum. Concentrează-te!
+Text/14b/text,[color=CHARTREUSE]Te grăbești spre bandă
+Text/14c/text,[color=CHARTREUSE]Ochii Sashei strălucesc de lacrimi și speranță în timp ce mâinile tale desfac nodurile.[/color] Știam că vei veni. Nu m-am îndoit niciodată de tine.
+Text/14d/text,[color=STEEL_BLUE]Liderul îl forțează pe Russet să îngenuncheze sub amenințarea armei.[/color] Leagă-l. Asigură-te că privește ce urmează.
+Text/14e/text,"[color=CHARTREUSE]Sasha îți ia mâna, împletindu-și degetele cu ale tale.[/color] Te-ai întors pentru mine. Orice s-ar întâmpla mai departe... înfruntăm împreună."
+Text/14f/text,"[color=STEEL_BLUE]Sasha te privește cu atenție, văzând furia încă arzând în ochii tăi.[/color] Canalizează acel foc. Vom avea nevoie de el pentru ce urmează."
+Text/150/text,[color=STEEL_BLUE]Sasha îți așează o mână blândă pe umăr.[/color] Vina nu-ți aparține. Ești aici acum. Asta contează.

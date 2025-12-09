@@ -1,0 +1,31 @@
+﻿keys,ko
+Text/117/text,검문소가 군사 전초 기지로 변모했다. 검은 제복을 입은 정예 경비병들이 무기를 과시하며 순찰한다.
+Text/118/text,나는 아이다호 총리에 의해 수도에서 파견된 보안 최고 책임자 유콘이다.
+Text/119/text,"첩보에 따르면 [pulse freq=2][color=YELLOW]테러 공격이 임박했다[/color][/pulse]. ""저항군""이 내일 침투할 계획이다."
+Text/11a/text,모든 요원은 [wave amp=15 freq=2][color=DARK_ORANGE]충성도 심사[/color][/wave]에 응할 것이다. 의심스러운 행동은 구금 및 [color=DARK_VIOLET]처리[/color]를 의미한다.
+Text/11b/text,보안국과의 [tornado radius=3 freq=2][color=RED]전적인 협력[/color][/tornado]은 의무적이다. 너희 각자에 대한 내 보고서는 국장에게 제출되었다.
+Text/11c/text,러셋의 시선이 불편하게 너에게 머물다가 이내 다른 곳으로 향한다.
+Text/11d/text,이것은 [color=DARK_ORANGE]아이덴티티 스캔 5000[/color]이다. 생체 정보를 분석하여 침투 요원과 동조자를 탐지한다.
+Text/11e/text,스캐너를 작동시키는 자는 누구든 [color=CRIMSON]강화된 심문[/color]에 직면할 것이다. 예외 없이 사용하라.
+Text/11f/text,"사샤를 보았나? 그녀는 점호에 나타나지 않았다. 지난밤, [color=CRIMSON]보안군이 그녀의 숙소에 진입했다[/color]."
+Text/120/text,그들은 그녀가 [pulse freq=2][color=CHARTREUSE]저항군[/color][/pulse]의 일원이었다고 말한다.
+Choice/121/text,"""우리는 이것에 대해 이야기해서는 안 돼. 위험해."""
+Choice/122/text,"""나도 그녀가 걱정돼. 이건 옳지 않아."""
+Text/123/text,네 말이 맞아. 하지만 조심해. 그들은 그녀와의 연관성을 찾고 있어.
+Text/124/text,그럼 너희는 가까웠나? 조심해. 그들도 너를 감시하고 있을지 몰라.
+Text/125/text,"그 요원이 너에게 쪽지를 건넨다: ""[color=YELLOW]너의 근무지에서 의심스러운 것을 모두 치워라.[/color]"""
+Text/126/text,너는 이 검문소에 꽤 오랫동안 있었군. 흥미로운 근무 기록이군.
+Text/127/text,너는 현재 [wave amp=20 freq=3][color=CRIMSON]반역죄[/color][/wave]로 수사 중인 사샤 요원과 자주 목격되었다.
+Text/128/text,국장이 몸을 앞으로 기울인다. 그녀의 활동에 대해 나에게 말하고 싶은 것이 있나?
+Choice/129/text,"""사샤와 나는 그저 동료였습니다. 저는 업무 외 그녀에 대해 아무것도 모릅니다."""
+Choice/12a/text,"""저는 그녀의 의심스러운 활동에 대한 증거를 수집하여 나중에 보고할 참이었습니다."""
+Text/12b/text,여러 증인들이 다르게 말한다. 하지만 확실한 증거 없이는 너를 구금할 수 없다. [color=YELLOW]아직은.[/color]
+Text/12c/text,"너는 [color=CRIMSON]면밀한 감시[/color]를 받게 될 것이다. 한 번의 실수라도 한다면, 너는 [color=DARK_VIOLET]사샤와 합류하게 될 것이다[/color]."
+Text/12d/text,참 편리하군. 그런데도 지금까지 보고서를 제출하지 않았군.
+Text/12e/text,"너는 완전한 진술서를 제출해야 할 것이다. 너의 정보가 가치 있다고 증명된다면, 아마도 우리는 너의 지연된 보고를 눈감아 줄 것이다."
+Text/12f/text,나는 오늘 너의 업무를 [color=CRIMSON]감시할 것이다[/color]. 모든 여행자는 신원 스캔을 받아야 한다. [color=RED]예외는 없다[/color].
+Text/130/text,"사샤가 잡혔습니다. 저항 계획이 [color=CRIMSON]발각되었습니다[/color]. 경계 태세가 강화되어, 그들의 희망은 없어 보입니다."
+Choice/121/disabled_text,
+Choice/122/disabled_text,
+Choice/129/disabled_text,
+Choice/12a/disabled_text,

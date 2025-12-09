@@ -1,0 +1,41 @@
+﻿keys,no
+Text/102/text,"Bra, du klarte det. Motstanden blir [color=CHARTREUSE]sterkere[/color]. Takket være disse manifestene ser folk sannheten."
+Text/103/text,"Jeg klarte å få tak i denne mappen fra kildene våre - produksjonsplaner, '[color=CRIMSON]ingrediens[/color]' lister, navn på de [color=DARK_SLATE_BLUE]forsvunne[/color]."
+Text/104/text,Dette er ikke bare et kosttilskuddsprogram. De [color=CRIMSON]bearbeider poteter[/color]...og ikke på en god måte.
+Text/105/text,"Interne notater fra statsminister Idaho selv, som autoriserer ""[color=DARK_ORANGE]utnyttelse av avviste eiendeler.[/color]"""
+Text/106/text,"Kvoter for hvert kontrollpunkt, med Potet Toll som har det høyeste avvisning-til-bearbeiding-forholdet."
+Text/107/text,Situasjonen utenfor har forverret seg. Sinte folkemengder samler seg ved kontrollpunkter og krever svar om Root Reserve.
+Text/108/text,[color=YELLOW]NØDMELDING[/color]: Nylig sirkulasjon av [color=CRIMSON]forfalskede dokumenter[/color] har forårsaket unødvendig panikk.
+Text/109/text,En belønning på [color=GOLD]10.000 Potet-kreditter[/color] tilbys for informasjon som fører til pågripelse av disse sabotørene.
+Text/10a/text,Å konsumere eller distribuere denne propagandaen er nå klassifisert som [color=RED]høyforræderi[/color].
+Text/10b/text,Dagens skift vil operere under spesielle protokoller. Hver reisende må gjennomgå en Lojalitetsvurdering.
+Text/10c/text,De som viser [color=CRIMSON]anti-regjerings holdninger[/color] skal flagges umiddelbart.
+Text/10d/text,[color=CRIMSON]Forræderen blant oss[/color] vil bli funnet. Og når de blir det... [trekker fingeren over halsen]
+Text/10e/text,"En nervøs potet nærmer seg, [color=GOLD]gult blad-merke[/color] delvis synlig. En liten lapp er gjemt mellom papirene: ""[color=CHARTREUSE]Trygt hus kompromittert. Ny plassering: Lager 7, Sektor 4.[/color]"""
+Choice/10f/text,Prosesser dem raskt med UV-merket (Hjelp)
+Choice/110/text,Rapporter dem til sikkerhet umiddelbart (Forråd)
+Text/111/text,"Lettelse flommer over ansiktet deres. ""Takk. Sannheten vil seire."""
+Text/112/text,"Skrekk gryr når du signaliserer til sikkerheten. ""[wave amp=25 freq=3]Nei, vær så snill! Jeg har en familie![/wave]"" Deres gule merke faller til gulvet."
+Text/113/text,Godt gjort. Din lojalitet er notert.
+Text/114/text,Din beslutning ble lagt merke til. Vær klar. [tornado radius=3 freq=2][color=CHARTREUSE]Noe stort kommer[/color][/tornado]. Motstanden planlegger en direkte aksjon.
+Text/115/text,"Når det skjer, må du [color=YELLOW]velge side[/color]. Det vil ikke være noen middelvei igjen."
+Text/116/text,"Med hver potet du behandler, enten [pulse freq=2][color=CHARTREUSE]hjelper du en revolusjon[/color][/pulse] eller [pulse freq=2][color=CRIMSON]muliggjør du et forferdelig system[/color][/pulse]."
+Choice/10f/disabled_text,
+Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha kaster et nervøst blikk over skulderen.[/color] Unnskyld, jeg... [color=YELLOW]Jeg tror de ser på meg.[/color]"
+Text/102_foreshadow2/text,Russet har stilt spørsmål. Fulgt etter meg etter skift. [wave amp=15 freq=2][color=YELLOW]Jeg må være mer forsiktig.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, kanskje du burde ligge lavt en stund. La meg ta mer av risikoen."
+Text/102_foreshadow4/text,[color=STEEL_BLUE]Hun rister på hodet og fremtvinger et smil.[/color] Nei. Vi er for nærme nå. Jeg kan håndtere Russet.
+Text/102_foreshadow5/text,Dessuten... [color=CHARTREUSE]noen må holde dere spirer unna trøbbel.[/color]
+Text/106_trucks1/text,Men vi vet fortsatt ikke hvor hovedbehandlingsanlegget er. Dokumentene viser bare forsendelseskoder.
+Text/106_trucks2/text,Jeg har fulgt med på [color=DARK_VIOLET]Root Reserve-lastebilene[/color]. De drar hver natt kl. 03:00. Samme rute.
+Text/106_trucks3/text,[color=CHARTREUSE]Hvis vi kunne følge etter dem...[/color] ville vi visst nøyaktig hvor de tar med seg de forkastede.
+Choice/106_trucks4/text,Jeg gjør det. Jeg kjenner patruljeplanene.
+Choice/106_trucks5/text,Det høres risikabelt ut. Kan ikke noen andre gjøre det?
+Text/106_trucks6/text,[color=CHARTREUSE]Sashas øyne lyser opp.[/color] Jeg visste du hadde røtter av stål. Vær forsiktig – de patruljerer tungt om natten.
+Text/106_trucks7/text,Kl. 03:00. Du kryper sammen i skyggene mens [color=DARK_VIOLET]Root Reserve[/color]-lastebilene rumler forbi.
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Hold deg skjult! Følg konvoien![/color][/pulse]
+Text/106_trucks9/text,"Lastebilene stopper ved et massivt kompleks skjult i industriområdet. [color=DARK_VIOLET]Sektor 7, Lagerkompleks Delta.[/color]"
+Text/106_trucks10/text,Skorsteiner spyr ut lilla-farget røyk. Lukten er... [tornado radius=3 freq=2][color=CRIMSON]umiskjennelig.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]Hjertet av Root Reserve.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]Sashas uttrykk flimrer av skuffelse.[/color] Vi må alle ta risikoer. Jeg finner en annen måte.

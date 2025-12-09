@@ -1,0 +1,28 @@
+﻿keys,sv
+Text/140/text,"Gränsen liknar en [pulse freq=3][color=CRIMSON]krigszon[/color][/pulse]. Barrikader, pansarfordon och elitsoldater står redo. Idag är dagen då motståndsrörelsen planerade att slå till."
+Text/141/text,"[wave amp=25 freq=3][color=YELLOW]NÖDSÄNDNING[/color][/wave]: Hela Spud är under [color=RED]krigslagar[/color]. ""Motståndsrörelsen"" har inlett attacker mot statliga anläggningar."
+Text/142/text,Alla som hjälper dessa [color=CRIMSON]extremister[/color] möter [color=DARK_VIOLET]omedelbar processning[/color]. Ministeriet bekräftar: [color=DARK_VIOLET]Root Reserve[/color] förblir säkert för alla [color=DARK_ORANGE]lojala potatisar[/color].
+Text/143/text,[color=YELLOW]Upplopp har brutit ut[/color] i flera sektorer. Motståndsceller har attackerat tre [color=DARK_VIOLET]Root Reserve[/color]-anläggningar.
+Text/144/text,Deras mål: få tillgång till den centrala databasen med alla produktionsregister. Varje tecken på illojalitet betyder processning.
+Text/145/text,"Vi har fångat flera motståndssoldater, inklusive Officer Sasha."
+Text/146/text,De [tornado radius=3 freq=2][color=CRIMSON]verkliga förrädarna[/color][/tornado] är de som [color=DARK_VIOLET]matar vårt folk med varandra[/color]. Ni kan inte stoppa sanningen!
+Text/147/text,"Hon släpas iväg, fortfarande skrikande: [color=CHARTREUSE]Folket kommer att få veta vad som finns i deras mat![/color]"
+Text/148/text,"[color=CRIMSON]Förrädaren[/color] kommer att [pulse freq=3][color=DARK_VIOLET]processas omedelbart[/color][/pulse]. En speciell sats [color=DARK_VIOLET]Root Reserve[/color], gjord av terroristerna själva."
+Text/149/text,Alla gränsövergångar är [color=RED]avstängda[/color] förutom för nödvändig personal med [color=GOLD]Alpha-nivå behörighet[/color].
+Text/14a/text,Denna skanner [color=YELLOW]kan inte luras[/color]. Utlös larmet omedelbart för alla utan korrekt behörighet.
+Text/14b/text,En potatis i officiell uniform närmar sig med till synes perfekta Alpha-behörigheter.
+Text/14c/text,"Ett litet blått kort faller från mappen. ""[wave amp=15 freq=3][color=CHARTREUSE]Rötterna växer djupt.[/color][/wave]"", mumlar de medan de plockar upp kortet."
+Choice/14d/text,"Processera dem, ignorera skannervarningarna (Hjälp motståndsrörelsen)"
+Choice/14e/text,Utlös larmet omedelbart (Förråd motståndsrörelsen)
+Text/14f/text,"Lättnad syns i deras ögon. ""[color=CHARTREUSE]För Sasha. För Spud.[/color]"" De försvinner mot den centrala databasen."
+Text/150/text,"Skräck sprider sig i deras ansikte. ""[color=CRIMSON]Din förrädare! Vi litade på dig![/color]"" De omringas snabbt av vakter."
+Text/151/text,Utmärkt arbete. Din lojalitet kommer att belönas.
+Text/152/text,"Plötsligt [color=YELLOW]skakar anläggningen av explosioner[/color]. Motståndsrörelsens attack har börjat, oavsett ditt val."
+Text/153/text,"Ska jag stanna på min post och hoppas att detta går över, eller [color=CHARTREUSE]ta ställning[/color] och riskera allt för att avslöja sanningen?"
+Choice/154/text,Jag kan inte överge min plikt. Jag håller tyst och hoppas på det bästa.
+Choice/155/text,Jag har varit medbrottsling för länge. Det är dags att kämpa för det som är rätt.
+Choice/155/disabled_text,
+Choice/14d/disabled_text,
+Choice/154/disabled_text,
+Choice/14e/disabled_text,
+Text/156/text,[pulse freq=3][color=YELLOW]Rör dig snabbt![/color][/pulse] Säkerheten är i kaos - detta är din enda chans att fly!

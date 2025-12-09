@@ -1,0 +1,69 @@
+﻿keys,es-419
+Text/b8/text,"La instalación fronteriza está en completo confinamiento, con seguridad armada patrullando cada pasillo."
+Text/b9/text,[pulse freq=3][color=RED]¡ATENCIÓN! ¡Situación de seguridad NIVEL ROJO![/color][/pulse] Documentos clasificados fueron robados anoche.
+Text/ba/text,Tenemos un [tornado radius=4 freq=3][color=CRIMSON]traidor entre nosotros[/color][/tornado]. Cualquiera que retenga información será tratado como cómplice.
+Text/bb/text,"Todos los oficiales, formen fila para [wave amp=15 freq=2][color=DARK_ORANGE]escaneo de seguridad[/color][/wave]. Aquellos con respuestas de estrés elevadas serán señalados."
+Text/bc/text,¿Has visto lo que está pasando afuera? Folletos por todas partes mostrando que [color=DARK_VIOLET]Root Reserve[/color] está hecho de... [pulse freq=3][color=CRIMSON]de nosotros[/color][/pulse].
+Choice/bd/text,Baja la voz. Todos estamos siendo vigilados.
+Choice/be/text,He oído los mismos rumores. Es horrible si es cierto.
+Choice/bf/text,Eso es propaganda ridícula. No esparzas tales mentiras.
+Text/c0/text,Tienes razón. Pero si es cierto... ¿qué nos convierte en?
+Text/c1/text,Mi primo fue rechazado el mes pasado. ¿Eso significa...? Ya [color=CHARTREUSE]no puedo más con esto[/color].
+Text/c2/text,Su expresión se vuelve cautelosa. Por supuesto. Papa leal por siempre.
+Text/c3/text,Indique su paradero anoche entre las 22:00 y las 04:00 horas.
+Choice/c4/text,"Estuve en mis aposentos toda la noche, durmiendo."
+Choice/c5/text,Preferiría hablar con mi representante legal primero.
+Text/c6/text,Sus niveles de estrés indican [color=YELLOW]engaño[/color]. Sin embargo... no concluyente. Puede irse por ahora.
+Text/c7/text,"¿Representante legal? Esto es un procedimiento de seguridad, no un juicio. Su negativa ha sido registrada."
+Text/c7_viktor1/text,Un corpulento guardia de seguridad se acerca durante tu descanso. Su rostro está demacrado.
+Text/c7_viktor2/text,"Oye... eres uno de los oficiales de aduanas, ¿verdad? He estado preguntando por mi esposa, Elena."
+Text/c7_viktor3/text,Cruzó este puesto de control hace tres semanas. [color=STEEL_BLUE]Inspección fallida.[/color] No he sabido nada de ella desde entonces.
+Choice/c7_viktor4/text,Viktor... encontré algo. Sobre Elena. Necesitas saber la verdad.
+Choice/c7_viktor5/text,"Lo siento, Viktor. No he visto nada."
+Text/c7_viktor6/text,Le muestras una copia de la página del manifiesto. Su rostro se pone blanco.
+Text/c7_viktor7/text,[wave amp=25 freq=3]Sus manos tiemblan mientras lee.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Procesada... Lote RR-2851...[/color]
+Text/c7_viktor8/text,Su voz es apenas un susurro. [tornado radius=3 freq=2][color=CRIMSON]Ellos... la CONVIRTIERON en...[/color][/tornado]
+Text/c7_viktor9/text,Su dolor se transforma en furia fría. [pulse freq=2][color=CRIMSON]Idaho pagará por esto.[/color][/pulse] Lo juro por su memoria.
+Text/c7_viktor10/text,Te agarra el hombro. [color=CHARTREUSE]Gracias por decírmelo.[/color] Cuando llegue el momento... lo recordaré.
+Text/c7_viktor11/text,Asiente con tristeza. [color=STEEL_BLUE]Me lo temía.[/color] Nadie sabe nada. O nadie quiere hablar.
+Text/c7_viktor12/text,Si escuchas algo... [color=YELLOW]por favor.[/color] Es todo lo que tengo.
+Text/c8/text,"Está funcionando. Los manifiestos han causado un revuelo, pero [color=DARK_ORANGE]Russet sospecha de nosotros[/color]."
+Text/c9/text,Busca aliados de nuestra organización durante el turno de hoy. [color=CHARTREUSE]Los reconocerás[/color].
+Text/ca/text,"Si puedes hacer que pasen de forma segura, usa la [color=CHARTREUSE]marca especial que discutimos[/color]."
+Choice/cb/text,"""Vale la pena el riesgo. Estoy dentro."""
+Choice/cc/text,"""Esto se está volviendo demasiado peligroso. Quizás deberíamos mantener un perfil bajo."""
+Text/cd/text,"Sabía que podía contar contigo. Cuando esto termine, [color=CHARTREUSE]Spud sabrá quiénes fueron los verdaderos héroes[/color]."
+Text/ce/text,Ya hemos superado ese punto. Mantener un perfil bajo no nos salvará. [color=CHARTREUSE]Solo derribar el sistema lo hará[/color].
+Text/cf/text,Cada estación ahora tiene el nuevo [color=DARK_ORANGE]sistema RealityScan[/color]. Detecta marcas no autorizadas y falsificaciones.
+Text/d0/text,Todos los documentos deben ser escaneados antes de la aprobación. Los [color=CRIMSON]traidores serán erradicados[/color]. Lo garantizo.
+Text/d0_qte1/text,"Más tarde, en ese turno, un viajero se acerca con documentos que llevan la [color=CHARTREUSE]sutil marca de la resistencia[/color]."
+Text/d0_qte2/text,El [color=DARK_ORANGE]RealityScan[/color] comienza su barrido. [wave amp=15 freq=3][color=RED]¡Va a detectar la marca![/color][/wave]
+Text/d0_qte3/text,Tienes segundos para decidir. El escáner se está calentando...
+Choice/d0_qte4/text,"""¡Finge un fallo del escáner - rápido!"" (Ayudar a la resistencia)"
+Choice/d0_qte5/text,"""Deja que el escáner complete su escaneo"" (Seguir el protocolo)"
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]¡Tienes que actuar rápido![/color][/pulse] ¡Provoca el fallo antes de que termine de escanear!
+Text/d0_qte7/text,Manoseas los cables del escáner. Saltan chispas. La pantalla parpadea y se apaga.
+Text/d0_qte8/text,Russet se acerca corriendo. [color=YELLOW]¿Qué pasó aquí?[/color]
+Choice/d0_qte9/text,"""Una subida de tensión, señor. Estos nuevos sistemas son temperamentales."""
+Choice/d0_qte10/text,"""No lo sé, señor. Simplemente se apagó."""
+Text/d0_qte11/text,Russet gruñe. [color=STEEL_BLUE]Burócratas dándonos equipo sin probar.[/color] Procese manualmente y marque para una nueva inspección.
+Text/d0_qte12/text,Russet te mira con suspicacia. [color=YELLOW]Qué conveniente.[/color] Haré que mantenimiento lo revise. No permita que esto vuelva a suceder.
+Text/d0_qte13/text,El miembro de la resistencia te hace un leve asentimiento de gratitud mientras pasa.
+Text/d0_qte14/text,El escáner [pulse freq=3][color=RED]PITA FUERTEMENTE[/color][/pulse]. ¡Se detectaron marcas no autorizadas!
+Text/d0_qte15/text,Russet aparece al instante. [color=CHARTREUSE]¡Bien hecho![/color] Otro traidor atrapado.
+Text/d0_qte16/text,"El miembro de la resistencia es arrastrado, con terror en sus ojos. ""[color=CRIMSON]¡Por favor, no! ¡Tengo hijos![/color]"""
+Text/d0_qte17/text,Tu lealtad queda [color=DARK_ORANGE]registrada en tu expediente[/color]. Sigue así.
+Text/d1/text,"Ayudar a los miembros de la resistencia se volvió mucho más peligroso, pero [color=CHARTREUSE]la verdad debe difundirse[/color]."
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,
+Choice/c7_viktor4/disabled_text,
+Choice/c7_viktor5/disabled_text,
+Choice/d0_qte4/disabled_text,
+Choice/d0_qte5/disabled_text,
+Choice/d0_qte9/disabled_text,
+Choice/d0_qte10/disabled_text,

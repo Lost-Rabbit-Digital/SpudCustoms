@@ -1,0 +1,33 @@
+﻿keys,nl
+Text/a6/text,De grensvoorziening voelt vandaag anders aan. Gespannen. Veiligheidspatrouilles in grotere aantallen terwijl behoedzame stilte het geklets vervangt.
+Text/a7/text,Gisteravond werden [pulse freq=2][color=CRIMSON]verboden materialen[/color][/pulse] ontdekt. Pamfletten met leugens over [color=DARK_VIOLET]Root Reserve[/color].
+Text/a8/text,We implementeren [wave amp=15 freq=2][color=DARK_ORANGE]dreigingsniveau ORANJE protocollen[/color][/wave]. Alle officieren worden onderworpen aan loyaliteitscontroles. Alle reizigers worden maximaal onderzocht.
+Text/a9/text,Het werkt. De pamfletten verspreiden zich. Mensen stellen vragen over [color=DARK_VIOLET]Root Reserve[/color].
+Text/aa/text,Ik heb bronnen die me vertellen dat er een verzendingslogboek in Russet's kantoor ligt - transportmanifesten die [tornado radius=3 freq=2][color=CHARTREUSE]alles kunnen bewijzen[/color][/tornado].
+Text/ab/text,"Ik heb je hulp nodig om het te bemachtigen. Vanavond, na de laatste dienst. Kan ik op je rekenen?"
+Choice/ac/text,Ik doe mee. Laten we de waarheid blootleggen.
+Choice/ad/text,"Ik weet het niet, Sasha... dit kan gevaarlijk zijn."
+Text/ae/text,Gelukkig. Ik wist dat je [color=CHARTREUSE]sterkere wortels had dan de anderen[/color]. We ontmoeten elkaar om middernacht.
+Text/af/text,Soms moeten we [color=CHARTREUSE]het risico lopen geplet te worden om het juiste te doen[/color]. Denk erover na.
+Text/b0/text,[color=DARK_ORANGE]Loyaliteitscontrole[/color]. Noem alstublieft uw naam en officiersidentificatie. Vertel me dan waarom u Spud dient.
+Choice/b1/text,Ik dien om onze grenzen te beschermen tegen gevaarlijke invloeden.
+Choice/b2/text,Ik dien om ervoor te zorgen dat iedereen een eerlijke behandeling krijgt.
+Text/b3/text,"Goed antwoord. Spud heeft loyale beschermers nodig. Scanner toont groen. Ga verder, officier."
+Text/b4/text,"De wenkbrauwen van de officier gaan omhoog. Eerlijke behandeling? Scanner knippert [color=DARK_ORANGE]oranje[/color]. Onthoud, onze primaire zorg is veiligheid, niet eerlijkheid."
+Text/b5/text,Het quotum van vandaag is verhoogd. Iedereen met verdacht materiaal moet worden gemarkeerd voor [color=DARK_VIOLET]speciale verwerking[/color].
+Text/b6/text,Ik zal [color=DARK_ORANGE]je beslissingen[/color] vandaag zeer zorgvuldig in de gaten houden.
+Text/b7/text,"Vanavond kan alles veranderen. Maar eerst, [color=YELLOW]overleef de dag zonder verdenking te wekken[/color]."
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,
+Text/b4_viktor1/text,Een struise bewaker pakt je arm terwijl je passeert. Zijn gezicht is getekend door zorgen.
+Text/b4_viktor2/text,"Hé... sorry dat ik je stoor. Jij bent een van de douanebeambten, toch? Mijn naam is [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Ik heb iedereen gevraagd naar mijn vrouw, [color=GOLD]Elena[/color]. Elena Petrov. Ze is drie weken geleden deze controlepost gepasseerd."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Afgekeurd bij inspectie.[/color] Ze zeiden dat ze verwerkt en teruggestuurd zou worden, maar... Ik heb niets meer gehoord."
+Text/b4_viktor5/text,Zijn stem trilt. Niemand wil me iets vertellen. Weet jij waar de afgewezen reizigers naartoe gaan?
+Choice/b4_viktor6/text,"""Het spijt me, Viktor. Ik weet het niet. Maar ik zal mijn ogen openhouden."""
+Choice/b4_viktor7/text,"""Ik kan geen verwerkingsdetails bespreken. Veiligheidsprotocollen."""
+Text/b4_viktor8/text,Viktors ogen tonen een sprankje hoop. [color=CHARTREUSE]Dank je wel.[/color] Alles wat je te weten komt... alsjeblieft. Ze is alles wat ik heb.
+Text/b4_viktor9/text,"Viktor knikt, terneergeslagen. [color=STEEL_BLUE]Juist. Protocollen.[/color] Ik begrijp het."
+Text/b4_viktor10/text,Maar als je van gedachten verandert... [color=YELLOW]Ik moet weten wat er met haar gebeurd is.[/color]

@@ -1,0 +1,95 @@
+﻿keys,ja
+Text/d2/text,シフト後、あなたは廃墟の澱粉工場にある秘密のレジスタンス会合へと案内される。
+Text/d2b/text,始める前に… 告白があるの。
+Text/d2c/text,初日に見つけたあのメモ？「[color=GOLD]友[/color]」？
+Text/d2d/text,サーシャは微笑む。持っていたのね。賢い。やはり正しい芽を選んだわ。
+Text/d2e/text,何ヶ月も新任の職員を監視してきたの。[color=CHARTREUSE]疑いの目[/color]を持つ者を探して。嘘を見抜けるかもしれない者をね。
+Text/d2f/text,サーシャの表情は複雑だ。あなたはそれをラセットに見せたわね。そのせいで、私は何週間も身を潜めなければならなかった。
+Text/d2g/text,でも、それでもあなたはここにいる。それがあなたの良心について教えてくれるわ。
+Text/d2h/text,あなたはそれを破棄した。責めはしないわ。持っているのは危険だったもの。
+Text/d2i/text,でも、その言葉は結局あなたの心に届いたでしょう？
+Text/d2j/text,[color=CHARTREUSE]私が「友」よ。[/color]そして、これで理由が分かったでしょう。
+Text/d2k/text,サーシャは捕獲した書類をテーブルに広げる。過去1ヶ月の処理記録だ。
+Text/d2l/text,あなたはその名前をスキャンし、血の気が引く。
+Text/d2m/text,あった。[color=GOLD]マリス・パイパー[/color]。写真の女性だ。
+Text/d2n/text,「[color=CRIMSON]状態：処理済み。バッチ RR-2847。[/color]」夫が助けを求めてきた3日後の日付だ。
+Text/d2o/text,ポケットの中の写真を感じる。[color=STEEL_BLUE]彼女はもういない。そして、あなたは彼女を救えなかった。[/color]
+Text/d2p/text,でも、もしかしたら…[color=CHARTREUSE]まだ他の者を救えるかもしれない。[/color]
+Text/d2q/text,マーフィーが影から現れる。よお。来てくれて嬉しいぜ。
+Text/d2r/text,マーフィーはくしゃくしゃのRR-UTIL用紙を掲げる。俺のいとこもそのリストに載ってるんだ。[color=CHARTREUSE]俺たちで一緒にやるんだ。[/color]
+Text/d3/text,戦いの傷跡を持つ老練なジャガイモが、集まったグループに語りかける。
+Text/d4/text,囁きやパンフレットの時代は終わった。政府は本性を現したのだ。
+Text/d5/text,我々の情報筋が確認した。[wave amp=15 freq=2][color=DARK_VIOLET]ルートリザーブ[/color][/wave]の加工工場が生産を増やしていると。
+Text/d6/text,それはつまり、[tornado radius=3 freq=3][color=CRIMSON]より多くの兄弟姉妹が姿を消し、処理され、消費される[/color][/tornado]ということだ。
+Text/d7/text,リーダーはテーブルに拳を叩きつける。[pulse freq=3][color=CHARTREUSE]これは今、終わらせる！[/color][/pulse]彼らの作戦の心臓部を叩く計画がある。
+Text/d8/text,サーシャは詳細な計画をテーブルに広げる。3日後、我々は主要な攻勢を開始する。
+Text/d9/text,一つのチームが主要な政府複合施設で陽動を行う間、別のチームが最大のルートリザーブ施設に潜入する。
+Text/da/text,我々の目標は、内部で何が起こっているのかの[color=CHARTREUSE]揺るぎない証拠[/color]を入手し、それをスパッド全土に広めることだ。
+Text/db/text,サーシャが計画書のある箇所を指す。ここであなたの出番よ。
+Text/dc/text,我々の工作員が任務のために国境を越えられるよう、スパッド税関の内部の人間が必要なの。
+Text/dd/text,あなたがその人物になってくれると、我々は期待してもいいかしら？
+Choice/de/text,「真実を暴くためなら、どんなことでもします。」
+Choice/df/text,「危険そうですね。もし捕まったらどうなりますか？」
+Choice/e0/text,「そんなに多くの人を危険に晒さない、別の方法はありませんか？」
+Text/e1/text,サーシャの顔に希望の光が差す。ありがとう。[color=CHARTREUSE]あなたの勇気が、無数の命を救うでしょう。[/color]
+Text/e2/text,彼女はあなたの手を握りしめる。これが全て終わった時、[color=CHARTREUSE]あなたは革命の英雄として記憶されるでしょう。[/color]
+Text/e3/text,[color=STEEL_BLUE]サーシャの希望に満ちた表情が曇る。[/color]ええ…そうね。危険よ。
+Text/e4/text,失敗すれば、我々全員が[color=DARK_VIOLET]ルートリザーブに加工[/color]されてしまうかもしれない。
+Text/e5/text,[color=STEEL_BLUE]彼女は一瞬、目をそらす。[/color]あなたが全てを見てきた後なら…と思ったけれど、でも、わかるわ。恐れるのは当然のことよ。
+Text/e6/text,[color=STEEL_BLUE]サーシャの顔が曇る。彼女の目の光が薄れる。[/color]別の方法？我々は他の方法を試してきたわ。何年もね。
+Text/e7/text,請願。静かな外交。匿名での情報提供。[color=STEEL_BLUE]彼女の声が冷たくなる。[/color]何も効果がなかったわ。
+Text/e8/text,あなたは違うと期待していたのに。何が危機に瀕しているのか、あなたが理解していると。
+Text/e9/text,レジスタンスのメンバーたちの間で、白熱した議論が巻き起こる。
+Text/ea/text,一部はより攻撃的なアプローチ、つまり加工工場を完全に破壊することを主張する。
+Text/eb/text,他の者は、暴力的な行動は世論を彼らに敵対させるだけだと主張する。
+Text/ec/text,もう十分だ！リーダーが威厳のある声で部屋を静まらせる。
+Text/ed/text,我々は分裂している場合ではない。これほど目標に近づいている今、特にだ。
+Text/ee/text,我々の目標は単純だ。真実を暴くこと。次に何が起こるかは、人々に決めさせよう。
+Text/ef/text,リーダーはあなたに直接向き直る。しかし、我々は[color=YELLOW]あなたの立場[/color]を知る必要がある。
+Text/f0/text,3日後、我々の工作員があなたの検問所に近づく。彼らは[color=CHARTREUSE]青い身分証明書[/color]を持っているだろう。
+Text/f1/text,彼らが国境を越えるのを手伝ってくれるか？あなたの今の答えが、我々の次の行動を決定する。
+Choice/f2/text,「彼らが国境を越えるのを手伝います。スパッドの未来のために。」
+Choice/f3/text,直接関わることはできませんが、見て見ぬふりをしましょう。
+Choice/f4/text,これについては、もう少し考える時間が欲しいです。
+Text/f5/text,リーダーはあなたの肩をしっかりと掴む。[color=CHARTREUSE]あなたの勇気は我々全員の誇りだ。[/color]
+Text/f6/text,三日目、太陽が最も高く昇る頃、我々の工作員が来るだろう。
+Text/f7/text,パスワードは「[wave amp=15 freq=3][color=CHARTREUSE]根は深く張る。[/color][/wave]」だ。覚えておけ。
+Text/f8/text,リーダーはゆっくりと頷いた。明らかに失望しているが、理解を示しているようだった。
+Text/f9/text,時には、我々が求めることができる最大限は、人々が我々の邪魔をしないことだけだ。
+Text/fa/text,我々の工作員は計画通りに進める。ただ…警報を鳴らすな。
+Text/fb/text,リーダーの表情が硬くなる。[color=YELLOW]時間は我々にはない贅沢だ。[/color]
+Text/fc/text,しかし、誰かを我々の大義に強制的に参加させることは、我々を彼らと何ら変わらないものにする。
+Text/fd/text,我々はあなたの助けを当てにせず進める。己の良心に問え。
+Text/fe/text,会議が解散すると、サーシャはあなたと一緒に検問所へ戻る。
+Text/ff/text,[color=CHARTREUSE]歩きながら、彼女はあなたの手を取る。[/color]何が起ころうとも…我々は今、共にこの状況にいる。ありがとう。
+Text/ff2/text,[color=STEEL_BLUE]歩きながら、彼女はあなたとの距離を保つ。[/color]我々の邪魔をしなかったことに感謝する。それは…何かしらだ。
+Text/ff3/text,[color=STEEL_BLUE]彼女は腕を組み、黙って歩く。[/color]あなたが探している確信が見つかることを願う。我々には待っている余裕はない。
+Text/100_viktor1/text,帰り道、あなたはヴィクトルが一人で検問所の屋上に立ち、夜空を見つめているのを見つける。
+Text/100_viktor2/text,ヴィクトルは小さな
+Text/100_viktor3/text,彼女はよく言っていた…どんなに状況が暗くなっても、星々はそこにあるだろうと。[color=STEEL_BLUE]不変で。美しい。[/color]
+Text/100_viktor4/text,彼はあなたの方を向き、目が潤んでいる。[wave amp=15 freq=2]ずっと考えているんだ…彼女は苦しんだのだろうか？[/wave]何が起こっているのか、彼女は知っていたのだろうか？
+Text/100_viktor5/text,ヴィクトルの声が震える。彼女はかつて、私が拒否判定に疑問を抱いたことがあるかと尋ねた。私は彼女に[color=CRIMSON]システムを信頼しろ[/color]と言ったんだ。
+Text/100_viktor6/text,[tornado radius=3 freq=2][color=CRIMSON]知らずに、私は自分の妻を処理槽に送ってしまったんだ。[/color][/tornado]
+Choice/100_viktor_choice1/text,「知る由はなかった。我々誰も知らなかったんだ。」
+Choice/100_viktor_choice2/text,「エレナは今、罪悪感に溺れるのではなく、あなたに戦ってほしいと願うだろう。」
+Choice/100_viktor_choice3/text,「何と言えばいいか分からない。申し訳ない。」
+Text/100_viktor7/text,彼はゆっくりと首を振る。[color=STEEL_BLUE]無知は無垢ではない。尋ねるべきだった。耳を傾けるべきだった。[/color]
+Text/100_viktor8/text,ヴィクトルは慎重に写真をしまう。[color=CHARTREUSE]だが、もう知ってしまった。知ってしまったからには、行動せねばならない。[/color]
+Text/100_viktor9/text,ヴィクトルは背筋を伸ばし、その目に冷たい炎が再び宿る。[color=CHARTREUSE]君の言う通りだ。[/color]彼女は私より強かった。勇敢だった。
+Text/100_viktor10/text,彼は拳を握りしめる。[color=CHARTREUSE]時が来れば[/color]
+Text/100_viktor11/text,[pulse freq=2][color=CRIMSON]そして、アイダホは彼が奪った全ての命の代償を払うことになるだろう。[/color][/pulse]
+Text/100_viktor12/text,ヴィクトルは悲しげな
+Text/100_viktor13/text,彼は星空を見上げる。[color=STEEL_BLUE]エレナは君を気に入っただろう。[/color]
+Text/100_viktor14/text,彼は立ち去ろうと振り返り、そして立ち止まる。[color=CHARTREUSE]レジスタンスが動く時… 私は準備を整えておく。[/color]
+Text/100_viktor15/text,エレナのために。彼ら全員のために。[pulse freq=2][color=CHARTREUSE]私が真実を告げれば、衛兵たちは私に従うだろう。[/color][/pulse]
+Text/100/text,君は検問所の自室に戻る。来るべき出来事の重みに、思考は駆け巡る。
+Text/101/text,たった三日で、全てが変わるかもしれない。[color=YELLOW]良くも悪くも。[/color]
+Choice/de/disabled_text,
+Choice/df/disabled_text,
+Choice/e0/disabled_text,
+Choice/f2/disabled_text,
+Choice/f3/disabled_text,
+Choice/f4/disabled_text,
+Choice/100_viktor_choice1/disabled_text,
+Choice/100_viktor_choice2/disabled_text,
+Choice/100_viktor_choice3/disabled_text,

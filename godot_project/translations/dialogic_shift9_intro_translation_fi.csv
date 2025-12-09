@@ -1,0 +1,28 @@
+﻿keys,fi
+Text/140/text,"Raja muistuttaa [pulse freq=3][color=CRIMSON]sotavyöhykettä[/color][/pulse]. Barrikadit, panssariajoneuvot ja eliittivartiostot ovat valmiina. Tänään on päivä, jolloin vastarinta suunnitteli iskevänsä."
+Text/141/text,"[wave amp=25 freq=3][color=YELLOW]HÄTÄLÄHETYS[/color][/wave]: Koko Spud on [color=RED]sotatilassa[/color]. ""Vastarinta"" on käynnistänyt hyökkäykset hallituksen laitoksia vastaan."
+Text/142/text,"Jokainen, joka auttaa näitä [color=CRIMSON]ääriaineksia[/color], kohtaa [color=DARK_VIOLET]välittömän prosessoinnin[/color]. Ministeriö vahvistaa: [color=DARK_VIOLET]Juurivarasto[/color] pysyy turvallisena kaikille [color=DARK_ORANGE]lojaalille perunoille[/color]."
+Text/143/text,[color=YELLOW]Mellakoita on puhjennut[/color] useilla sektoreilla. Vastarintasolut ovat hyökänneet kolmeen [color=DARK_VIOLET]Juurivarasto[/color]-laitokseen.
+Text/144/text,"Heidän tavoitteensa: pääsy keskustietokantaan, jossa on kaikki tuotantotiedot. Mikä tahansa merkki epälojaaliudesta tarkoittaa prosessointia."
+Text/145/text,"Olemme ottaneet kiinni useita vastarinnan operatiiveja, mukaan lukien upseeri Sashan."
+Text/146/text,"[tornado radius=3 freq=2][color=CRIMSON]Todelliset petturit[/color][/tornado] ovat niitä, jotka [color=DARK_VIOLET]ruokkivat kansaamme toisillaan[/color]. Ette voi pysäyttää totuutta!"
+Text/147/text,"Hänet raahataan pois, yhä huutaen: [color=CHARTREUSE]Kansa tulee tietämään, mitä heidän ruoassaan on![/color]"
+Text/148/text,"[color=CRIMSON]Petturi[/color] tullaan [pulse freq=3][color=DARK_VIOLET]prosessoimaan välittömästi[/color][/pulse]. Erityinen erä [color=DARK_VIOLET]Juurivarastoa[/color], tehty terroristeista itsestään."
+Text/149/text,"Kaikki rajanylitykset ovat [color=RED]keskeytetty[/color] lukuun ottamatta välttämätöntä henkilöstöä, jolla on [color=GOLD]Alfa-tason lupa[/color]."
+Text/14a/text,Tätä skanneria [color=YELLOW]ei voi huijata[/color]. Anna hälytys välittömästi kenelle tahansa ilman asianmukaista lupaa.
+Text/14b/text,Peruna virallisessa univormussa lähestyy näennäisesti täydellisillä Alfa-valtuuksilla.
+Text/14c/text,"Pieni sininen kortti putoaa kansiosta. ""[wave amp=15 freq=3][color=CHARTREUSE]Juuret kasvavat syvälle.[/color][/wave]"", he mutisevat nostaessaan kortin."
+Choice/14d/text,"Päästä heidät läpi, jätä huomiotta skannerin hälytykset (Auta vastarintaa)"
+Choice/14e/text,Anna hälytys välittömästi (Petä vastarinta)
+Text/14f/text,"Helpotus näkyy heidän silmissään. ""[color=CHARTREUSE]Sashan puolesta. Spudin puolesta.[/color]"" He katoavat kohti keskustietokantaa."
+Text/150/text,"Kauhu valtaa heidän kasvonsa. ""[color=CRIMSON]Sinä petturi! Me luotimme sinuun![/color]"" Vartijat ympäröivät heidät nopeasti."
+Text/151/text,Erinomaista työtä. Lojaalisuutesi palkitaan.
+Text/152/text,"Yhtäkkiä laitos [color=YELLOW]tärisee räjähdyksistä[/color]. Vastarinnan hyökkäys on alkanut, riippumatta valinnastasi."
+Text/153/text,"Pysynkö paikallani ja toivon tämän menevän ohi, vai [color=CHARTREUSE]otanko kantaa[/color] ja riskeeraan kaiken paljastaakseni totuuden?"
+Choice/154/text,En voi hylätä velvollisuuttani. Pysyn hiljaa ja toivon parasta.
+Choice/155/text,"Olen ollut osallisena liian kauan. On aika taistella sen puolesta, mikä on oikein."
+Choice/155/disabled_text,
+Choice/14d/disabled_text,
+Choice/154/disabled_text,
+Choice/14e/disabled_text,
+Text/156/text,[pulse freq=3][color=YELLOW]Liiku nopeasti![/color][/pulse] Turvallisuus on sekaisin – tämä on ainoa mahdollisuutesi paeta!

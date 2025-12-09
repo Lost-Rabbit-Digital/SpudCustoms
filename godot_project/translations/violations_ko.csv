@@ -1,0 +1,29 @@
+﻿keys,ko
+violation_condition_not_fresh,입국 거부: 신선한 감자만 허용됩니다. 이 감자는 {condition}합니다.
+violation_extra_eyes,입국 거부: 눈이 너무 많은 감자는 금지됩니다.
+violation_rotten,입국 거부: 썩은 감자는 금지됩니다.
+violation_sprouted,입국 거부: 싹이 난 감자는 금지됩니다.
+violation_dehydrated,입국 거부: 탈수된 감자는 금지됩니다.
+violation_frozen,입국 거부: 언 감자는 금지됩니다.
+violation_too_old,입국 거부: 이 감자는 {age}세입니다 (최대 연령: 4세).
+violation_too_young_3,입국 거부: 이 감자는 {age}세입니다 (최소 연령: 4세).
+violation_too_young_2,입국 거부: 이 감자는 {age}세입니다 (최소 연령: 3세).
+violation_males_only,입국 거부: 수컷 감자만 허용됩니다.
+violation_females_only,입국 거부: 암컷 감자만 허용됩니다.
+violation_country_spudland,입국 거부: 모든 스푸드랜드 감자는 금지됩니다.
+violation_country_potatopia,입국 거부: 모든 포테이토피아 감자는 금지됩니다.
+violation_country_tuberstan,입국 거부: 모든 튜버스탄 감자는 금지됩니다.
+violation_country_north_yamnea,입국 거부: 모든 북얌니아 감자는 금지됩니다.
+violation_country_spuddington,입국 거부: 모든 스푸딩턴 감자는 금지됩니다.
+violation_country_tatcross,입국 거부: 모든 탯크로스 감자는 금지됩니다.
+violation_country_mash_meadows,입국 거부: 모든 매쉬 메도우즈 감자는 금지됩니다.
+violation_country_tuberville,입국 거부: 모든 튜버빌 감자는 금지됩니다.
+violation_country_chip_hill,입국 거부: 모든 칩 힐 감자는 금지됩니다 (수출 제한).
+violation_country_murphyland,입국 거부: 모든 머피랜드 감자는 금지됩니다.
+violation_country_colcannon,입국 거부: 모든 콜캐넌 감자는 금지됩니다.
+violation_country_pratie_point,입국 거부: 모든 프래티 포인트 감자는 금지됩니다.
+violation_race_purple_majesty,입국 거부: 퍼플 마제스티 품종은 금지됩니다.
+violation_race_sweet_potato,입국 거부: 고구마 품종은 특별 허가가 필요합니다 (발급 불가).
+violation_race_yukon_gold,거부: 유콘 골드 품종은 금지됩니다
+violation_expired_document,거부: 서류가 {date}에 만료되었습니다
+violation_invalid_potato,이 감자는 모든 요건을 충족하며 승인되었어야 했습니다

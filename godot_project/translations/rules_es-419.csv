@@ -1,0 +1,39 @@
+﻿keys,es-419
+LAWS,LEYES
+msg_not_fresh,La papa era %s pero debe ser Fresca
+msg_extra_eyes,"La papa tenía Ojos Extra, lo cual está prohibido"
+msg_rotten,Papas podridas no están permitidas
+msg_sprouted,Papas brotadas no están permitidas
+msg_dehydrated,Papas deshidratadas no están permitidas hoy
+msg_frozen,Papas congeladas están prohibidas
+msg_over_age,La papa tiene %d años (máx. 5 años)
+msg_under_age,La papa tiene %d años (debe tener más de 3)
+law_fresh_potatoes,[color=dark_goldenrod]SOLO Papas Frescas[/color] permitidas - [color=dark_red]RECHAZAR[/color] todas las demás
+law_extra_eyes,Papas con condición de [color=dark_goldenrod]Ojos Extra[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_rotten,Papas [color=dark_goldenrod]Podridas[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_sprouted,Papas [color=dark_goldenrod]Brotadas[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_dehydrated,Papas [color=dark_goldenrod]Deshidratadas[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_frozen,Papas [color=dark_goldenrod]Congeladas[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_over_5_years,Papas de [color=dark_goldenrod]5 años o más[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_under_3_years,Papas de [color=dark_goldenrod]3 años o menos[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_under_2_years,Papas de [color=dark_goldenrod]2 años o menos[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_males_only,[color=dark_goldenrod]SOLO Papas Macho[/color] permitidas - [color=dark_red]RECHAZAR[/color] todas las Hembras
+law_females_only,[color=dark_goldenrod]SOLO Papas Hembra[/color] permitidas - [color=dark_red]RECHAZAR[/color] todos los Machos
+law_country_spudland,[color=dark_goldenrod]TODAS[/color> las papas de [color=dark_goldenrod]Spudland[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_country_potatopia,[color=dark_goldenrod]TODAS[/color] las papas de [color=dark_goldenrod]Potatopia[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_country_tuberstan,[color=dark_goldenrod]TODAS[/color> las papas de [color=dark_goldenrod]Tuberstan[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_country_north_yamnea,[color=dark_goldenrod]TODAS[/color] las papas de [color=dark_goldenrod]North Yamnea[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_country_spuddington,[color=dark_goldenrod]TODAS[/color] las papas de [color=dark_goldenrod]Spuddington[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_country_tatcross,[color=dark_goldenrod]TODAS[/color] las papas de [color=dark_goldenrod]Tatcross[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_country_mash_meadows,[color=dark_goldenrod]TODAS[/color] las papas de [color=dark_goldenrod]Mash Meadows[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_country_tuberville,[color=dark_goldenrod]TODAS[/color] las papas de [color=dark_goldenrod]Tuberville[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_country_chip_hill,[color=dark_goldenrod]TODAS[/color] las papas de [color=dark_goldenrod]Chip Hill[/color] deben ser [color=dark_red]RECHAZADAS[/color] (prohibición de exportación)
+law_country_murphyland,[color=dark_goldenrod]TODAS[/color] las papas de [color=dark_goldenrod]Murphyland[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_country_colcannon,[color=dark_goldenrod]TODAS[/color] las papas de [color=dark_goldenrod]Colcannon[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_country_pratie_point,[color=dark_goldenrod]TODAS[/color] las papas de [color=dark_goldenrod]Pratie Point[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_purple_majesty,Las papas tipo [color=dark_goldenrod]Purple Majesty[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_sweet_potatoes,Las [color=dark_goldenrod]Batatas[/color] deben ser [color=dark_red]RECHAZADAS[/color] (no hay permisos disponibles)
+law_yukon_gold,Las papas tipo [color=dark_goldenrod]Yukon Gold[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_fingerling,Las papas tipo [color=dark_goldenrod]Fingerling[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_red_bliss,Las papas tipo [color=dark_goldenrod]Red Bliss[/color] deben ser [color=dark_red]RECHAZADAS[/color]
+law_russet,Las papas tipo [color=dark_goldenrod]Russet[/color] deben ser [color=dark_red]RECHAZADAS[/color]

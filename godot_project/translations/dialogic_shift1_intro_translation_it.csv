@@ -1,0 +1,18 @@
+﻿keys,it
+Text/56/text,Benvenuti nella nazione della Patata. Una terra di [pulse freq=2][color=MEDIUM_VIOLET_RED]prosperità per tutte le patate[/color][/pulse].
+Text/57/text,Sei stato selezionato per un [color=DARK_ORANGE]ruolo cruciale[/color] nella protezione dei nostri confini.
+Text/59/text,"OSSERVATE! Il [color=MEDIUM_VIOLET_RED]possente muro[/color] che protegge la nostra nazione. Qui servirai, assicurandoti che solo i degni entrino."
+Text/5a/text,"Ah, il nuovo germoglio. Ascolta attentamente, il tuo ruolo è [color=DARK_ORANGE]vitale per la sicurezza della Patata[/color]."
+Text/184/text,Il tuo benessere [wave amp=20 freq=3][color=YELLOW]dipende dalla tua performance[/color][/wave].
+Text/5b/text,Ti nomino Ufficiale Doganale della [pulse freq=1][color=MEDIUM_VIOLET_RED]gloriosa Patata[/color][/pulse]. Domande?
+Choice/5c/text,Sono pronto a servire la Patata con tutto il mio amido!
+Choice/5d/text,Cosa succede esattamente alle patate respinte?
+Text/5e/text,Eccellente! Questo è l'entusiasmo di cui abbiamo bisogno. Potresti guadagnare un riconoscimento della [color=DARK_VIOLET]Riserva Radice[/color].
+Text/5f/text,Sono... [color=DARK_VIOLET]processate[/color]. Secondo protocollo. La [color=DARK_VIOLET]Riserva Radice[/color] gestisce tutti i dettagli.
+Text/60/text,Concentrati sui tuoi doveri. [color=DARK_ORANGE]Nient'altro.[/color]
+Text/61/text,"Il tuo primo turno inizia ora. Controlla attentamente i documenti, nega l'ingresso a coloro che non soddisfano i nostri standard."
+Text/62/text,"Raggiungi la tua quota, evita le sanzioni. [color=MEDIUM_VIOLET_RED]Gloria alla Patata![/color]"
+Choice/5d/disabled_text,
+Choice/5c/disabled_text,
+Text/184b/text,Chi fa troppe domande? Vengono [color=CRIMSON]riassegnati[/color]. Permanentemente.
+Text/62b/text,"E ricorda, [color=MEDIUM_VIOLET_RED]Gloria a Spud![/color]"

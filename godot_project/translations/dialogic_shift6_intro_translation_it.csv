@@ -1,0 +1,63 @@
+﻿keys,it
+Text/b8/text,"La struttura di confine è in completo isolamento, con guardie armate che pattugliano ogni corridoio."
+Text/b9/text,[pulse freq=3][color=RED]ATTENZIONE! Situazione di sicurezza LIVELLO ROSSO![/color][/pulse] Documenti classificati sono stati rubati la scorsa notte.
+Text/ba/text,Abbiamo un [tornado radius=4 freq=3][color=CRIMSON]traditore tra noi[/color][/tornado]. Chiunque nasconda informazioni sarà trattato come complice.
+Text/bb/text,"Tutti gli ufficiali, mettetevi in fila per [wave amp=15 freq=2][color=DARK_ORANGE]la scansione di sicurezza[/color][/wave]. Coloro con risposte di stress elevate saranno segnalati."
+Text/bc/text,Hai visto cosa sta succedendo fuori? Opuscoli ovunque che mostrano che [color=DARK_VIOLET]Root Reserve[/color] è fatto di... [pulse freq=3][color=CRIMSON]di noi[/color][/pulse].
+Choice/bd/text,Abbassa la voce. Siamo tutti sotto sorveglianza.
+Choice/be/text,Ho sentito gli stessi rumors. È orribile se è vero.
+Choice/bf/text,È propaganda ridicola. Non diffondere simili bugie.
+Text/c0/text,Hai ragione. Ma se fosse vero... cosa ci renderebbe?
+Text/c1/text,Mio cugino è stato respinto il mese scorso. Significa...? [color=CHARTREUSE]Non posso continuare così[/color].
+Text/c2/text,La loro espressione diventa guardinga. Certo. Fedele a Spud per sempre.
+Text/c3/text,Dichiari la sua posizione ieri notte tra le 22:00 e le 04:00.
+Choice/c4/text,"Ero nei miei alloggi per tutta la notte, dormivo."
+Choice/c5/text,Preferirei parlare prima con il mio rappresentante legale.
+Text/c6/text,I suoi livelli di stress indicano [color=YELLOW]inganno[/color]. Tuttavia... non conclusivo. Può andare per ora.
+Text/c7/text,"Rappresentante legale? Questa è una procedura di sicurezza, non un processo. Il suo rifiuto è stato annotato."
+Text/c8/text,"Sta funzionando. I manifesti hanno causato scompiglio, ma [color=DARK_ORANGE]Russet sospetta di noi[/color]."
+Text/c9/text,Tieni d'occhio gli alleati della nostra organizzazione durante il turno di oggi. [color=CHARTREUSE]Li riconoscerai[/color].
+Text/ca/text,"Se riesci a farli passare in sicurezza, usa [color=CHARTREUSE]il segno speciale di cui abbiamo parlato[/color]."
+Choice/cb/text,Ne vale il rischio. Ci sto.
+Choice/cc/text,Sta diventando troppo pericoloso. Forse dovremmo mantenere un basso profilo.
+Text/cd/text,"Sapevo di poter contare su di te. Quando tutto questo sarà finito, [color=CHARTREUSE]Spud saprà chi erano i veri eroi[/color]."
+Text/ce/text,Siamo ben oltre quel punto. Mantenere un basso profilo non ci salverà. [color=CHARTREUSE]Solo abbattere il sistema lo farà[/color].
+Text/cf/text,Ogni stazione ora ha il nuovo [color=DARK_ORANGE]sistema RealityScan[/color]. Rileva marcature e falsificazioni non autorizzate.
+Text/d0/text,Tutti i documenti devono essere scansionati prima dell'approvazione. I [color=CRIMSON]traditori saranno estirpati[/color]. Lo garantisco.
+Text/d1/text,"Aiutare i membri della resistenza è appena diventato molto più pericoloso, ma [color=CHARTREUSE]la verità deve diffondersi[/color]."
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,
+Text/c7_viktor1/text,Una guardia di sicurezza corpulenta si avvicina durante la tua pausa. Il suo volto è scavato.
+Text/c7_viktor2/text,"Ehi... tu sei uno degli ufficiali doganali, vero? Ho chiesto in giro di mia moglie, Elena."
+Text/c7_viktor3/text,Ha attraversato questo checkpoint tre settimane fa. [color=STEEL_BLUE]Ispezione fallita.[/color] Non ho più avuto sue notizie da allora.
+Choice/c7_viktor4/text,"""Viktor... Ho trovato qualcosa. Riguardo Elena. Devi sapere la verità."""
+Choice/c7_viktor5/text,"""Mi dispiace, Viktor. Non ho visto niente."" (Menti per proteggerlo)"
+Text/c7_viktor6/text,Gli mostri una copia della pagina del manifesto. Il suo volto impallidisce.
+Text/c7_viktor7/text,[wave amp=25 freq=3]Le sue mani tremano mentre legge.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Processata... Lotto RR-2851...[/color]
+Text/c7_viktor8/text,La sua voce è appena un sussurro. [tornado radius=3 freq=2][color=CRIMSON]L'hanno... l'hanno TRASFORMATA in...[/color][/tornado]
+Text/c7_viktor9/text,Il suo dolore si trasforma in fredda furia. [pulse freq=2][color=CRIMSON]Idaho la pagherà per questo.[/color][/pulse] Lo giuro sulla sua memoria.
+Text/c7_viktor10/text,Ti afferra la spalla. [color=CHARTREUSE]Grazie per avermelo detto.[/color] Quando sarà il momento... Me ne ricorderò.
+Text/c7_viktor11/text,Annuisce tristemente. [color=STEEL_BLUE]Lo immaginavo.[/color] Nessuno sa niente. O nessuno vuole parlare.
+Text/c7_viktor12/text,Se senti qualcosa... [color=YELLOW]ti prego.[/color] È tutto ciò che ho.
+Text/d0_qte1/text,"Più tardi, durante quel turno, un viaggiatore si avvicina con documenti che recano il [color=CHARTREUSE]sottile segno della resistenza[/color]."
+Text/d0_qte2/text,Lo [color=DARK_ORANGE]RealityScan[/color] inizia la sua scansione. [wave amp=15 freq=3][color=RED]Sta per rilevare il segno![/color][/wave]
+Text/d0_qte3/text,Hai pochi secondi per decidere. Lo scanner si sta riscaldando...
+Choice/d0_qte4/text,"""Simula un malfunzionamento dello scanner - in fretta!"" (Aiuta la resistenza)"
+Choice/d0_qte5/text,"""Lascia che lo scanner completi la sua scansione"" (Segui il protocollo)"
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]Devi agire in fretta![/color][/pulse] Innesca il malfunzionamento prima che finisca di scansionare!
+Text/d0_qte7/text,Ti affretti con i cavi dello scanner. Volano scintille. Lo schermo sfarfalla e si spegne.
+Text/d0_qte8/text,Russet si precipita. [color=YELLOW]Cosa è successo qui?[/color]
+Choice/d0_qte9/text,"""Sbalzo di corrente, signore. Questi nuovi sistemi sono capricciosi."""
+Choice/d0_qte10/text,"""Non lo so, signore. Si è semplicemente spento."""
+Text/d0_qte11/text,Russet grugnisce. [color=STEEL_BLUE]Burocrati che ci danno attrezzature non testate.[/color] Processali manualmente e segnalali per una nuova ispezione.
+Text/d0_qte12/text,Russet ti guarda con sospetto. [color=YELLOW]Che tempismo.[/color] Farò controllare dalla manutenzione. Non lasciare che succeda di nuovo.
+Text/d0_qte13/text,Il membro della resistenza ti fa il più leggero cenno di gratitudine mentre passano.
+Text/d0_qte14/text,Lo scanner [pulse freq=3][color=RED]EMETTE UN FORTE SEGNALE ACUSTICO[/color][/pulse]. Contrassegni non autorizzati rilevati!
+Text/d0_qte15/text,Russet appare all'istante. [color=CHARTREUSE]Ben fatto![/color] Un altro traditore catturato.
+Text/d0_qte16/text,"Il membro della resistenza viene trascinato via, il terrore nei suoi occhi. ""[color=CRIMSON]No, per favore! Ho dei figli![/color]"""
+Text/d0_qte17/text,La tua lealtà è [color=DARK_ORANGE]annotata nel tuo fascicolo[/color]. Continua così.

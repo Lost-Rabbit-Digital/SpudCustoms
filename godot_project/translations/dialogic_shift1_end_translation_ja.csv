@@ -1,0 +1,34 @@
+﻿keys,ja
+Text/50/text,今日の仕事はまずまずだったな、新芽よ。効率が肝心だ。達成すべきノルマがある。
+Text/51/text,[wave amp=15 freq=2][color=DARK_VIOLET]根源備蓄[/color][/wave]の配給を忘れずにな。ラジオで言ってるだろう、それがジャガイモ国の未来の味だと！
+Text/52/text,荷物をまとめていると、仕事の書類の間から小さなメモが滑り落ちた。
+Text/52b/text,今朝はそこになかったはずだ。誰かが[color=YELLOW]勤務中[/color]に置いたのだ。
+Text/53/text,[color=GOLD]全てが見た目通りとは限らない。我々の国の根は腐りきっている。[/color]
+Text/53b/text,[color=GOLD]痕跡を追え、だが口封じされないよう気をつけろ。[/color]
+Text/53c/text,[color=GOLD]誰が[/color][color=DARK_VIOLET]備蓄[/color][color=GOLD]を食べるか見張れ。誰が拒むか見張れ。[/color]
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]友人より[/color]
+Choice/53e/text,メモを隠す - 静かに調査する
+Choice/53f/text,メモを破棄する - これはテストかもしれない
+Choice/53g/text,すぐにラセットにメモを見せる
+Text/53h/text,メモを慎重に折りたたみ、ポケットに滑り込ませた。[color=CHARTREUSE]誰かが接触を図っている。[/color]
+Text/53i/text,しかし誰が？そしてなぜ、初日の私に？
+Text/53j/text,メモを細かく引き裂いた。
+Text/53k/text,ラセットは、質問する新芽は「再配置」されると言っていた。危険を冒さない方がいい。
+Text/53l/text,ラセットが立ち去る前に呼び止めた。「局長？書類の中にこれを見つけまして…」
+Text/53m/text,ラセットはメモをひったくり、それを読んだ。彼の表情が揺らぐ――[color=YELLOW]あれは認識か？[/color]
+Text/53n/text,プロパガンダだ。反逆者が新任の職員を堕落させようとしている。[color=DARK_ORANGE]私にこれを持ってきたのは正解だった。[/color]
+Text/53o/text,彼はメモをポケットに入れた。それを見たことは忘れろ。そして…[color=CRIMSON]不審な[/color]行動をする者がいないか見張れ。
+Text/54/text,あのメモ…そしてラセットが[pulse freq=3][color=CRIMSON]却下されたジャガイモ[/color][/pulse]について私の質問に答えたやり方…
+Text/54b/text,「[color=VIOLET]処理済みだ。プロトコルに従って。[/color]」それが一体どういう意味だ？
+Text/54c/text,あのメモ…根が[color=CRIMSON]腐りきっている[/color]と言っていた。
+Text/54d/text,しかしジャガイモ国は輝かしい、そうだろう？彼らがそう言った。私が信じていたことだ。
+Text/54e/text,メモを取り出し、もう一度読む。「[color=GOLD]誰が備蓄を食べるか見張れ。誰が拒むか見張れ。[/color]」
+Text/54f/text,明日、注意して見よう。[color=YELLOW]誰かが何かを伝えようとしている。[/color]
+Text/54g/text,ラセットがメモを読んだ時の顔。一瞬、彼はほとんど…[color=STEEL_BLUE]怯えていた[/color]。
+Text/54h/text,[color=DARK_VIOLET]ルートリザーブ[/color]とは一体何なのか？なぜ誰かがそれについて警告するのか？
+Text/54i/text,メモは消えたが、言葉は残る。[color=YELLOW]全てが見た目通りとは限らない。[/color]
+Text/54j/text,それを破壊したのは賢明な選択だったのかもしれない。あるいは、あなたは唯一の味方を黙らせてしまったのかもしれない。
+Text/55/text,私は[color=YELLOW]警戒[/color]すべきだ。ここではパスポートにスタンプを押す以上のことが起きている。
+Choice/53e/disabled_text,
+Choice/53f/disabled_text,
+Choice/53g/disabled_text,

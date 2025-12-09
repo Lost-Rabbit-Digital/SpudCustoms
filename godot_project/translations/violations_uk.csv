@@ -1,0 +1,29 @@
+﻿keys,uk
+violation_condition_not_fresh,ВІДМОВИТИ: Дозволені лише свіжі картоплини. Ця картоплина {condition}
+violation_extra_eyes,ВІДМОВИТИ: Наявність додаткових вічок заборонена
+violation_rotten,ВІДМОВИТИ: Гнила картопля заборонена
+violation_sprouted,ВІДМОВИТИ: Проросла картопля заборонена
+violation_dehydrated,ВІДМОВИТИ: Зневоднена картопля заборонена
+violation_frozen,ВІДМОВИТИ: Заморожена картопля заборонена
+violation_too_old,ВІДМОВИТИ: Картоплині {age} років (максимальний вік: 4 роки)
+violation_too_young_3,ВІДМОВИТИ: Картоплині {age} років (мінімальний вік: 4 роки)
+violation_too_young_2,ВІДМОВИТИ: Картоплині {age} років (мінімальний вік: 3 роки)
+violation_males_only,ВІДМОВИТИ: Дозволені лише картоплини чоловічої статі
+violation_females_only,ВІДМОВИТИ: Дозволені лише картоплини жіночої статі
+violation_country_spudland,ВІДМОВИТИ: Усі картоплини зі Спадленду заборонені
+violation_country_potatopia,ВІДМОВИТИ: Усі картоплини з Потатопії заборонені
+violation_country_tuberstan,ВІДМОВИТИ: Усі картоплини з Туберстану заборонені
+violation_country_north_yamnea,ВІДМОВИТИ: Усі картоплини з Північної Ямнеї заборонені
+violation_country_spuddington,ВІДМОВИТИ: Усі картоплини зі Спаддінгтону заборонені
+violation_country_tatcross,ВІДМОВИТИ: Усі картоплини з Таткросу заборонені
+violation_country_mash_meadows,ВІДМОВИТИ: Усі картоплини з Меш Медоуз заборонені
+violation_country_tuberville,ВІДМОВИТИ: Усі картоплини з Тубервіля заборонені
+violation_country_chip_hill,ВІДМОВИТИ: Усі картоплини з Чіп Хілл заборонені (експортні обмеження)
+violation_country_murphyland,ВІДМОВИТИ: Усі картоплини з Мерфіленду заборонені
+violation_country_colcannon,ВІДМОВИТИ: Усі картоплини з Колканону заборонені
+violation_country_pratie_point,ВІДМОВИТИ: Усі картоплини з Преті Пойнт заборонені
+violation_race_purple_majesty,ВІДМОВИТИ: Типи 'Purple Majesty' заборонені
+violation_race_sweet_potato,ВІДМОВИТИ: Типи солодкої картоплі потребують спеціальних дозволів (недоступно)
+violation_race_yukon_gold,ВІДМОВИТИ: Сорти Юкон Голд заборонені
+violation_expired_document,ВІДМОВИТИ: Термін дії документа закінчився {date}
+violation_invalid_potato,Ця картопля відповідає всім вимогам і мала бути схвалена

@@ -1,0 +1,59 @@
+﻿keys,zh-TW
+Text/265/text,班次在令人不安的寂靜中結束。保安巡邏隊增加了一倍。每個人都低聲細語地移動著。
+Text/266/text,你正走向你的宿舍，此時你聽到——[color=YELLOW]來自軍官宿舍的叫喊聲[/color]。
+Text/267/text,你轉過街角，看到保安部隊[pulse freq=3][color=RED]踢開莎莎的門[/color][/pulse]。
+Text/268/text,育空局長的聲音響徹雲霄。甜薯莎莎！你因[color=CRIMSON]對薯國的叛國罪[/color]而被捕！
+Text/269/text,莎莎被拖了出來，掙扎著。即使警衛將她的手臂扭到身後，她的眼神依然充滿反抗。
+Text/26a/text,[tornado radius=4 freq=3][color=CHARTREUSE]真相會大白！你們無法讓所有人閉嘴！[/color][/tornado]
+Text/26b/text,她的目光在圍觀的人群中找到了你。時間彷彿靜止了。
+Text/26c/text,認出...接著是[color=CRIMSON]毀滅性的理解[/color]。你出賣了她的位置。她知道了。
+Text/26d/text,她沒有說話。那眼神就足夠了。[color=STEEL_BLUE]比仇恨更深的失望。[/color]
+Text/26e/text,一絲什麼東西——[color=CHARTREUSE]希望？信任？[/color]——掠過她的臉龐。
+Text/26f/text,她的嘴唇無聲地動著：「[color=CHARTREUSE]根深蒂固。[/color]」一個訊息。一個提醒。
+Text/270/text,褐皮從陰影中現身，滿足感從每個毛孔滲出。
+Text/271/text,哼，哼。[color=CRIMSON]甜薯變酸了[/color]。莎莎，我一直都知道你有些問題。
+Text/272/text,褐皮舉起一個文件夾。你那些小小的[color=DARK_VIOLET]宣言[/color]。你那些「證據」。全都找回來了。
+Text/273/text,你真的以為你能動搖[pulse freq=2][color=DARK_VIOLET]根源儲備[/color][/pulse]？動搖我？
+Text/274/text,褐皮，副本已經傳出去了。世界會知道你對我們的人民做了什麼！
+Text/275/text,褐皮冷笑。他們會知道我們告訴他們什麼。而你呢？你將成為一個[color=CRIMSON]非常特別的批次[/color]的一部分。
+Text/276/text,「[color=DARK_VIOLET]叛徒特調[/color]」——我覺得這聽起來不錯。
+Text/277/text,你的心臟狂跳。每個本能都在尖叫著要做點什麼。但警衛無處不在。
+Choice/278/text,走上前去要求他們釋放她 (魯莽)
+Choice/279/text,保持隱藏——留得青山在，不怕沒柴燒 (務實)
+Choice/27a/text,捕捉到莎莎的目光並點頭——一個承諾 (決心)
+Text/27b/text,你擠過人群。「[color=CHARTREUSE]等等！她沒有做錯任何事！[/color]」
+Text/27c/text,育空猛地轉頭看向你。「[color=RED]把那個也抓起來！[/color]明顯是個同謀！」
+Text/27d/text,墨菲抓住你，把你拉了回來。「[color=STEEL_BLUE]他們在混亂中搞不清狀況！快跑！[/color]」
+Text/27e/text,墨菲把你推向一條側邊走廊，警衛正逼近你的位置。
+Text/27f/text,警衛抓住你。羅塞特的笑容擴大。「[color=CRIMSON]買一送一，兩個叛徒。[/color]」
+Text/280/text,你縮回陰影中，痛恨自己到骨子裡。[color=STEEL_BLUE]懦夫。[/color]
+Text/281/text,但還活著。而且自由。暫時是。
+Text/282/text,你與莎夏四目相交。一個緩慢而堅定的點頭。「[color=CHARTREUSE]我會來救你。[/color]」
+Text/283/text,她看到了。一絲微小的笑容。接著她被拖到轉角，消失了。
+Text/284/text,他在混亂中找到你。他的臉上毫無表情，但他的眼神燃燒著。
+Text/285/text,他們把她帶到[color=CRIMSON]處理區[/color]。地下三層。那就是他們帶走我妻子的地方。
+Text/286/text,他把某物塞進你手裡——一張[color=GOLD]安全門禁卡[/color]。
+Text/287/text,時機到時... 我會[color=CHARTREUSE]睜一隻眼閉一隻眼[/color]。為了我妻子。為了他們所有人。
+Text/288/text,墨菲把你拉進儲藏室，大口喘氣。
+Text/289/text,就是這樣了。這[color=CRIMSON]真的發生了[/color]。他們抓到莎夏了。他們會在早上之前處理掉她。
+Text/28a/text,那真是[color=STEEL_BLUE]愚蠢[/color]。勇敢，但愚蠢。你現在在他們的黑名單上了。
+Text/28b/text,反抗軍正在策劃某事。明天。這是我們唯一能救她的機會。
+Text/28c/text,你要加入嗎？[color=CHARTREUSE]義無反顧嗎？[/color]
+Choice/28d/text,義無反顧。不惜一切代價救莎夏。
+Choice/28e/text,我需要考慮一下。這一切發生得太快了。
+Text/28f/text,墨菲拍了拍你的肩膀。「[color=CHARTREUSE]那麼我們黎明時分行動。根基深厚。[/color]」
+Text/290/text,墨菲的臉色變得嚴峻。快點想。到明天這個時候，她就會變成[color=DARK_VIOLET]根莖儲備[/color]。
+Text/291/text,你徹夜未眠，凝視著天花板。莎夏的臉龐。她的反抗。她的恐懼。
+Text/292/text,你拿出失蹤妻子的照片。另一張你無法拯救的臉龐。
+Text/293/text,[color=CHARTREUSE]這次絕不。[/color]
+Text/294/text,到明天，一切都會改變。無論如何。
+Text/295/text,[pulse freq=2][color=YELLOW]不再袖手旁觀。[/color][/pulse]
+Text/296/text,牢房很冷。透過牆壁，你能聽到莎夏在某處，正在被「審問」。
+Text/297/text,明天，他們說。你們倆將會一起被[color=DARK_VIOLET]處理[/color]。
+Text/298/text,除非抵抗軍到來。除非有人能拯救你們倆。
+Text/299/text,[color=STEEL_BLUE]你生命中最漫長的一夜正在前方展開。[/color]
+Choice/278/disabled_text,
+Choice/279/disabled_text,
+Choice/27a/disabled_text,
+Choice/28d/disabled_text,
+Choice/28e/disabled_text,

@@ -1,0 +1,54 @@
+﻿keys,ko
+alert_border_runner,국경 도주자 감지!\n클릭하여 미사일 발사!
+alert_rejected_fleeing,거부된 감자 도주 중!\n클릭하여 미사일 발사!
+alert_runner_escaped,도주자 탈출!\n스트라이크 추가!
+alert_points_deducted,도주자 탈출!\n스트라이크 추가!\n-{penalty}점!
+alert_perfect_hit,완벽 명중! +{perfect} 정확도 보너스 점수
+alert_perfect_stamp,완벽한 스탬프! +{points}점!
+alert_combo,콤보 x{mult}! +{streak} 콤보 보너스 점수
+alert_quota_met,"할당량 달성, 근무 완료! \n보너스: {bonus}점!"
+alert_strike_removed,스트라이크 제거!
+alert_correct_decision,"올바른 선택을 하셨습니다, 요원님.\n+{points}점!"
+alert_wrong_decision,"불필요한 고통을 야기했습니다, 요원님...\n+1 스트라이크!"
+alert_potato_should_be_approved,\n이 감자는 모든 요건을 충족하며 승인되었어야 했습니다.
+alert_strike_out,최대 스트라이크 초과! 근무가 종료됩니다.
+ui_score,점수: {score}
+ui_quota,할당량: {current} / {target}
+ui_strikes,스트라이크: {current} / {max}
+ui_click_megaphone,확성기를 클릭하여 다음 감자를 호출하세요
+ui_drag_document,문서를 검사 테이블로 드래그하세요
+ui_stamp_document,승인 또는 거부 스탬프를 선택하세요
+ui_check_violations,문서 위반 사항을 확인하세요
+Strike removed!,스트라이크 제거!
+BORDER RUNNER DETECTED!\nClick to launch missile!,국경 도주자 감지!\n클릭하여 미사일 발사!
+REJECTED POTATO FLEEING!\nClick to launch missile!,거부된 감자 도주 중!\n클릭하여 미사일 발사!
+RUNNER ESCAPED!\nStrike added!,도주자 탈출!\n스트라이크 추가!
+Click megaphone to call the next potato,확성기를 클릭하여 다음 감자를 호출하세요
+Drag document to inspection table,서류를 심사대 위로 드래그하세요
+Select a stamp to approve or reject,승인 또는 거절 도장을 선택하세요
+Check for document violations,서류 위반 사항을 확인하세요
+rule_explanation_header,규칙 설명:
+rule_explanation_fresh,'상태' 항목을 확인하세요. '신선함' 외의 다른 내용이 적혀 있다면 - 거절하세요
+rule_explanation_sweet_potato,'종류' 항목을 확인하세요. '고구마'라고 적혀 있다면 - 거절하세요 (허가증 없음)
+rule_explanation_chip_hill,'국가' 항목을 확인하세요. '칩 힐'이라고 적혀 있다면 - 거절하세요 (입국 금지)
+rule_explanation_age,'출생' 항목을 확인하세요. 나이를 계산하여 규칙과 비교하세요
+rule_explanation_gender,'성별' 항목을 확인하고 현재 규칙과 비교하세요
+rule_footer_text,이 규칙들은 모든 감자에게 반드시 적용되어야 합니다
+rule_tutorial_hint,도움이 필요하신가요? 설명을 보려면 아무 규칙이나 클릭하세요
+alert_correct_decision_detailed,올바른 결정! +{points}점\n{reason}
+alert_wrong_decision_detailed,잘못된 결정! 경고가 추가되었습니다!\n{reason}
+alert_reason_approved,감자가 모든 요건을 충족합니다 - 승인됨
+alert_reason_should_reject,이 감자를 거절했어야 했습니다
+tutorial_check_type,여권의 '종류' 항목을 확인하세요
+tutorial_check_condition,여권의 '상태' 항목을 확인하세요
+tutorial_check_country,여권의 '국가' 항목을 확인하세요
+tutorial_check_age,'출생' 항목을 확인하여 나이를 계산하세요
+tutorial_check_gender,여권의 '성별' 항목을 확인하세요
+alert_streak_bonus_minigame,5연속 성공! 보너스 미니게임!
+alert_perfect_stamps_bonus_minigame,완벽한 도장! 보너스 미니게임!
+alert_runner_bonus_minigame,의심스러운 활동! 보너스 미니게임!
+alert_new_minigame_unlocked,새로운 미니게임 잠금 해제: {name}!
+alert_minigame_bonus,미니게임 보너스: +{bonus}점!
+high_score_display,최고 점수: {score}
+new_high_score,신기록!
+month_1,1월

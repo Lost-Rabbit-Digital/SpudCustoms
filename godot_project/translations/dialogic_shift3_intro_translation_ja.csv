@@ -1,0 +1,24 @@
+﻿keys,ja
+Text/78/text,いつもの国境検問所での一日。ジャガイモたちの列はかつてないほど長く伸び、皆が神経を尖らせている。
+Text/79/text,上層部から新たな命令だ。[wave amp=15 freq=3][color=DARK_ORANGE]不許可を倍増[/color][/wave]させる。安全でないと判断されたジャガイモは、即座に拘束される。
+Text/7a/text,君には特別な任務がある。[pulse freq=2][color=CRIMSON]厄介者[/color][/pulse]に関する情報が入っている。検査は厳重に行え。
+Choice/7b/text,「はい、承知いたしました。期待を裏切りません。」
+Choice/7c/text,「どのような[pulse freq=2][color=CRIMSON]厄介者[/color][/pulse]のことですか？」
+Text/7d/text,よろしい。君ならそう言うと思っていたよ。その姿勢があれば、君は出世するだろう。
+Text/7e/text,我々の生活様式を[color=CRIMSON]脅かす[/color]者たちだ。身のためを思うなら、詮索しすぎるな。
+Text/7f/text,[color=STEEL_BLUE]お願いします、どうか！[/color] 妻が、[color=GOLD]マリス[/color]という名の妻が、私のすぐ後ろに来るはずだったんです。
+Text/7fb/text,彼女は[tornado radius=2 freq=3]税関を通過できなかった[/tornado]。書類に「不備」があったと言われたんです。
+Text/80/text,誰も彼女に何が起こったのか教えてくれない。お願いです、[color=CHARTREUSE]彼女を見つけるのを手伝ってください！[/color]
+Choice/81/text,「申し訳ありませんが、私には何もできません。」
+Choice/82/text,「何かわかるか調べてみましょう。約束はできませんが。」
+Text/83/text,他の者たちと同じように… [color=STEEL_BLUE]私の良心が重いように、あなたの良心も重くありますように。[/color]
+Text/83b/text,絶望したジャガイモは、よろよろと去っていく。彼女が姿を消す前に、使い古された写真を見つめているのに気づく。
+Text/84/text,ありがとうございます！小さな希望でも、ないよりはましです。
+Text/84b/text,彼女は[color=GOLD]使い古された写真[/color]をあなたの手に押し付ける。彼女の名前は[color=GOLD]マリス・パイパー[/color]です。優しい目をしています。どうか、彼女を見つけてください。
+Text/84c/text,あなたはその写真を見る。穏やかな顔立ちと温かい笑顔の若いジャガイモだ。[color=GOLD]マリス・パイパー[/color]。
+Text/84d/text,彼女はどこへ行ったのか？不許可者の列は…一体どこへ続くのだろうか？
+Text/85/text,今のやり取りは見たぞ。[color=DARK_ORANGE]不許可者に同情しても、ろくなことにはならない。[/color]職務に集中しろ。
+Choice/7b/disabled_text,
+Choice/7c/disabled_text,
+Choice/81/disabled_text,
+Choice/82/disabled_text,

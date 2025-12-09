@@ -1,0 +1,31 @@
+﻿keys,zh-CN
+Text/117/text,检查站已变成军事哨所。身着黑色制服的精英卫兵持枪巡逻。
+Text/118/text,我是安全总监育空，由爱达荷总理从首都派遣而来。
+Text/119/text,情报显示，[pulse freq=2][color=YELLOW]恐怖袭击迫在眉睫[/color][/pulse]。“抵抗组织”计划明日渗透。
+Text/11a/text,所有官员都将接受[wave amp=15 freq=2][color=DARK_ORANGE]忠诚度审查[/color][/wave]。行为可疑者将被拘留并[color=DARK_VIOLET]处理[/color]。
+Text/11b/text,[tornado radius=3 freq=2][color=RED]全力配合[/color][/tornado]安全部门是强制性的。我已将你们每个人的报告提交给总长。
+Text/11c/text,褐皮的目光在你身上不适地停留片刻，然后移开。
+Text/11d/text,这是[color=DARK_ORANGE]身份扫描仪5000[/color]。它通过生物识别技术检测渗透者和同情者。
+Text/11e/text,任何触发扫描仪的人都将面临[color=CRIMSON]强化审讯[/color]。务必无一例外地使用。
+Text/11f/text,你见到萨莎了吗？她没有点名。昨晚，[color=CRIMSON]安全部队进入了她的住所[/color]。
+Text/120/text,他们说她是[pulse freq=2][color=CHARTREUSE]抵抗组织[/color][/pulse]的一员。
+Choice/121/text,“我们不该谈论这个。这很危险。”
+Choice/122/text,“我也很担心她。这不对劲。”
+Text/123/text,你说得对。但你自己小心。他们正在寻找与她有联系的人。
+Text/124/text,这么说你们关系密切？小心点。他们可能也在监视你。
+Text/125/text,那名官员塞给你一张纸条：“[color=YELLOW]清理你的工作站，清除任何可疑物品。[/color]”
+Text/126/text,你在这个检查站待了相当长一段时间了。表现记录很有趣。
+Text/127/text,你被频繁看到与萨莎警官在一起，她现在正因[wave amp=20 freq=3][color=CRIMSON]叛国罪[/color][/wave]接受调查。
+Text/128/text,总长前倾身体。你有什么想告诉我关于她的活动的吗？
+Choice/129/text,“萨莎和我只是同事。工作之外的事情我一无所知。”
+Choice/12a/text,“我正在收集她可疑活动的证据，打算稍后报告。”
+Text/12b/text,多名证人有不同说法。不过，没有确凿证据，我不能拘留你。[color=YELLOW]暂时还不能。[/color]
+Text/12c/text,你将受到[color=CRIMSON]严密监视[/color]。一旦失误，你就会[color=DARK_VIOLET]和萨莎作伴[/color]。
+Text/12d/text,真巧。然而你直到现在才提交报告。
+Text/12e/text,你将提供一份完整的陈述。如果你的情报有价值，或许我们会忽略你延迟报告的问题。
+Text/12f/text,今天我将[color=CRIMSON]监督你的工作[/color]。每位旅客都必须进行身份扫描。[color=RED]无一例外[/color]。
+Text/130/text,萨莎被抓走了。抵抗计划已[color=CRIMSON]暴露[/color]。安保高度戒备，他们的希望渺茫。
+Choice/121/disabled_text,
+Choice/122/disabled_text,
+Choice/129/disabled_text,
+Choice/12a/disabled_text,

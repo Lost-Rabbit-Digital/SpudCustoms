@@ -1,0 +1,27 @@
+﻿keys,cs
+Text/69/text,Můžeme si promluvit? Někde v soukromí? [color=YELLOW]Je tu příliš mnoho očí a uší.[/color]
+Text/6a/text,"Sejdeme se u staré skladovací kůlny po tvé směně. Mám něco, co musíš vidět."
+Text/6b/text,"Sbližuješ se s kolegy? Pamatuj, že přátelství může vést k... [color=DARK_ORANGE]narušenému úsudku[/color]."
+Text/6c/text,Sbíral jsem informace o vyřazených bramborách. [wave amp=20 freq=3][color=CRIMSON]Neodcházejí do deportačních center.[/color][/wave]
+Text/6d/text,[tornado radius=4 freq=2][color=CRIMSON]Jdou do zpracovatelských zařízení Root Reserve.[/color][/tornado] Každá jedna.
+Text/6e/text,Tyto dokumenty ukazují brambory vyložené v zařízení označeném logem [color=DARK_VIOLET]Root Reserve[/color].
+Text/6f/text,"Myslím, že vím, co se děje. [pulse freq=3][color=CRIMSON]Stávají se Root Reserve.[/color][/pulse]"
+Choice/70/text,To je šílené. Oni... zpracovávají brambory na jídlo?
+Choice/71/text,"Potřebujeme více důkazů, než začneme obviňovat."
+Text/72/text,[color=CRIMSON]Kanibalismus s dalšími kroky.[/color] To je [wave amp=25 freq=3][color=DARK_VIOLET]Root Reserve[/color][/wave]. A my pomáháme vybírat jejich ingredience.
+Text/73/text,"Měsíce sbírám důkazy. Měj oči otevřené. Uvidíš, že mám pravdu."
+Text/74/text,V dálce náhle zazní alarm
+Text/75/text,"Musíme jít. V tuto hodinu dělají bezpečnostní kontroly. Přemýšlej o tom, co jsem ti ukázal."
+Text/76/text,"Saša ti strčí složku do rukou. ""[color=YELLOW]Uchovej ji v bezpečí. A nevěř nikomu.[/color]"""
+Text/77/text,Schováš složku do bundy. [color=DARK_VIOLET]Root Reserve[/color]. Vyřazování. Chybějící brambory. Vše se spojuje [tornado radius=3 freq=2][color=CRIMSON]děsivým způsobem[/color][/tornado].
+Choice/71/disabled_text,
+Choice/70/disabled_text,
+Text/69_photo1/text,Znovu vytáhnete fotku. [color=GOLD]Maris Piper[/color]. Taková laskavá tvář.
+Text/69_photo2/text,Její žena byla tak zoufalá. [color=STEEL_BLUE]Co se jí stalo?[/color]
+Text/69_photo3/text,V pozadí fotky si všimnete něčeho – náklaďáku s [color=DARK_VIOLET]fialovým logem[/color].
+Text/69_photo4/text,Ten symbol... viděli jste ho na dodávkách do jídelny. [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve.[/color][/wave]
+Text/6a_photo1/text,Sašo... tahle fotka. Dala mi ji manželka té ženy. Hledala ji.
+Text/6a_photo2/text,Saše poklesne tvář. [color=STEEL_BLUE]Ukaž mi to.[/color]
+Text/6a_photo3/text,"Saša si fotku prohlíží, její výraz ztmavne. [color=CRIMSON]Ten náklaďák poznávám.[/color]"
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]Tuhle fotku si schovej.[/color][/pulse] Mohla by být později důležitá. Věř mi.
+Text/6f2/text,[pulse freq=3][color=CRIMSON]Stávají se z nich Root Reserve.[/color][/pulse]

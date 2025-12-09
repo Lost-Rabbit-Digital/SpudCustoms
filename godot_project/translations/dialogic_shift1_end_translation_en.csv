@@ -1,0 +1,34 @@
+keys,en
+Text/50/text,"Adequate work today, sprout. Remember, efficiency is key. We have quotas to meet."
+Text/51/text,"Don't forget to grab your ration of [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave]. You know what the radio says, it's the flavor of Spud's future!"
+Text/52/text,"As you gather your things, a small note slips from between your work papers."
+Text/52b/text,It wasn't there this morning. Someone placed it [color=YELLOW]during your shift[/color].
+Text/53/text,[color=GOLD]Not all is as it seems. The roots of our nation have grown rotten.[/color]
+Text/53b/text,"[color=GOLD]Follow the trail, but take care not to be silenced.[/color]"
+Text/53c/text,[color=GOLD]Watch who eats the [/color][color=DARK_VIOLET]Reserve[/color][color=GOLD]. Watch who refuses.[/color]
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]A friend[/color]
+Choice/53e/text,"""Keep the note hidden - investigate quietly"""
+Choice/53f/text,"""Destroy the note - this could be a test"""
+Choice/53g/text,"""Show the note to Russet immediately"""
+Text/53h/text,You fold the note carefully and slip it into your pocket. [color=CHARTREUSE]Someone is reaching out.[/color]
+Text/53i/text,"But who? And why you, on your very first day?"
+Text/53j/text,You tear the note into tiny pieces, heart pounding. [color=STEEL_BLUE]This could be a loyalty test.[/color]
+Text/53k/text,"Russet said sprouts who ask questions get ""reassigned."" Better not to take chances."
+Text/53l/text,"You catch Russet before he leaves. ""Sir? I found this in my papers..."""
+Text/53m/text,"Russet snatches the note, reads it. His expression flickers - [color=YELLOW]was that recognition?[/color]"
+Text/53n/text,Propaganda. Rebels trying to corrupt new officers. [color=DARK_ORANGE]You did right bringing this to me.[/color]
+Text/53o/text,He pockets the note. Forget you ever saw it. And watch for anyone acting... [color=CRIMSON]suspicious[/color].
+Text/54/text,That note... and the way Russet answered my question about [pulse freq=3][color=CRIMSON]rejected potatoes[/color][/pulse]...
+Text/54b/text,"""[color=VIOLET]Processed. According to protocol.[/color]"" What does that even mean?"
+Text/54c/text,That note... it said the roots have grown [color=CRIMSON]rotten[/color].
+Text/54d/text,"But Spud is glorious, isn't it? That's what they told us. What I believed."
+Text/54e/text,"You pull out the note, reading it again. ""[color=GOLD]Watch who eats the Reserve. Watch who refuses.[/color]"""
+Text/54f/text,"Tomorrow, you'll pay attention. [color=YELLOW]Someone is trying to tell you something.[/color]"
+Text/54g/text,"Russet's face when he read the note. For just a moment, he looked almost... [color=STEEL_BLUE]afraid[/color]."
+Text/54h/text,What is [color=DARK_VIOLET]Root Reserve[/color] really? And why would someone warn you about it?
+Text/54i/text,"The note is gone, but the words linger. [color=YELLOW]Not all is as it seems.[/color]"
+Text/54j/text,Maybe destroying it was the smart choice. Maybe you just silenced your only ally.
+Text/55/text,I should stay [color=YELLOW]alert[/color]. There's more going on here than stamping passports.
+Choice/53e/disabled_text,
+Choice/53f/disabled_text,
+Choice/53g/disabled_text,

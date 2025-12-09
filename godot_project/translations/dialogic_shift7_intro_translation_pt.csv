@@ -1,0 +1,41 @@
+﻿keys,pt
+Text/102/text,"Bom, você conseguiu. A resistência está [color=CHARTREUSE]ficando mais forte[/color]. Graças àqueles manifestos, as pessoas estão vendo a verdade."
+Text/103/text,"Consegui obter este dossiê de nossas fontes - cronogramas de produção, listas de '[color=CRIMSON]ingredientes[/color]', nomes dos [color=DARK_SLATE_BLUE]desaparecidos[/color]."
+Text/104/text,Isto não é apenas um programa de suplementos alimentares. Eles estão [color=CRIMSON]processando batatas[/color]...e não de uma boa maneira.
+Text/105/text,"Memorandos internos do próprio Primeiro-Ministro Idaho, autorizando a ""[color=DARK_ORANGE]utilização de ativos rejeitados.[/color]"""
+Text/106/text,"Cotas para cada posto de controle, com a Alfândega de Batatas tendo a maior proporção de rejeição para processamento."
+Text/107/text,A situação lá fora deteriorou-se. Multidões furiosas se reúnem nos postos de controle exigindo respostas sobre a Root Reserve.
+Text/108/text,[color=YELLOW]TRANSMISSÃO DE EMERGÊNCIA[/color]: A recente circulação de [color=CRIMSON]documentos falsificados[/color] causou pânico desnecessário.
+Text/109/text,Uma recompensa de [color=GOLD]10.000 Créditos de Batata[/color] é oferecida por informações que levem à captura desses sabotadores.
+Text/10a/text,Consumir ou distribuir esta propaganda é agora classificado como [color=RED]alta traição[/color].
+Text/10b/text,O turno de hoje operará sob protocolos especiais. Cada viajante deve passar por uma Avaliação de Lealdade.
+Text/10c/text,Aqueles que demonstrarem [color=CRIMSON]sentimentos antigovernamentais[/color] devem ser sinalizados imediatamente.
+Text/10d/text,O [color=CRIMSON]traidor entre nós[/color] será encontrado. E quando for... [passa o dedo pela garganta]
+Text/10e/text,"Uma batata nervosa se aproxima, [color=GOLD]distintivo de folha amarela[/color] parcialmente visível. Uma pequena nota está escondida entre os papéis: ""[color=CHARTREUSE]Casa segura comprometida. Nova localização: Armazém 7, Setor 4.[/color]"""
+Choice/10f/text,Processe-os rapidamente com a marca UV (Ajuda)
+Choice/110/text,Reporte-os imediatamente à segurança (Traição)
+Text/111/text,"O alívio inunda seu rosto. ""Obrigado. A verdade prevalecerá."""
+Text/112/text,"O horror se revela quando você sinaliza para a segurança. ""[wave amp=25 freq=3]Não, por favor! Eu tenho uma família![/wave]"" Seu distintivo amarelo cai no chão."
+Text/113/text,Bem feito. Sua lealdade foi notada.
+Text/114/text,Sua decisão foi notada. Esteja pronto. [tornado radius=3 freq=2][color=CHARTREUSE]Algo grande está por vir[/color][/tornado]. A resistência está planejando uma ação direta.
+Text/115/text,"Quando acontecer, você precisará [color=YELLOW]escolher um lado[/color]. Não haverá mais meio-termo."
+Text/116/text,"Com cada batata que você processa, está [pulse freq=2][color=CHARTREUSE]ajudando uma revolução[/color][/pulse] ou [pulse freq=2][color=CRIMSON]permitindo um sistema horrível[/color][/pulse]."
+Choice/10f/disabled_text,
+Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha olha por cima do ombro nervosamente.[/color] Desculpe, eu... [color=YELLOW]Acho que estão me observando.[/color]"
+Text/102_foreshadow2/text,Russet tem feito perguntas. Me seguindo depois dos turnos. [wave amp=15 freq=2][color=YELLOW]Preciso ser mais cuidadosa.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, talvez você devesse ficar discreta por um tempo. Deixe-me assumir mais riscos."
+Text/102_foreshadow4/text,"[color=STEEL_BLUE]Ela balança a cabeça, forçando um sorriso.[/color] Não. Estamos muito perto agora. Eu consigo lidar com Russet."
+Text/102_foreshadow5/text,"Além disso... [color=CHARTREUSE]alguém tem que manter vocês, brotos, longe de problemas.[/color]"
+Text/106_trucks1/text,Mas ainda não sabemos onde fica a principal instalação de processamento. Os documentos listam apenas códigos de remessa.
+Text/106_trucks2/text,Tenho observado os [color=DARK_VIOLET]caminhões da Reserva da Raiz[/color]. Eles partem todas as noites às 0300. Mesma rota.
+Text/106_trucks3/text,[color=CHARTREUSE]Se pudéssemos segui-los...[/color] saberíamos exatamente para onde estão levando os rejeitados.
+Choice/106_trucks4/text,Eu faço isso. Conheço os horários das patrulhas.
+Choice/106_trucks5/text,Isso parece arriscado. Outra pessoa não pode fazer isso?
+Text/106_trucks6/text,[color=CHARTREUSE]Os olhos de Sasha se iluminam.[/color] Eu sabia que você tinha raízes de aço. Tenha cuidado — eles patrulham intensamente à noite.
+Text/106_trucks7/text,0300 horas. Você se agacha nas sombras enquanto os [color=DARK_VIOLET]caminhões da Reserva da Raiz[/color] passam roncando.
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Mantenha-se escondido! Siga o comboio![/color][/pulse]
+Text/106_trucks9/text,"Os caminhões param em um complexo enorme escondido no distrito industrial. [color=DARK_VIOLET]Setor 7, Complexo de Armazéns Delta.[/color]"
+Text/106_trucks10/text,Chaminés cospem fumaça arroxeada. O cheiro é... [tornado radius=3 freq=2][color=CRIMSON]inconfundível.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]O coração da Reserva da Raiz.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]A expressão de Sasha vacila com desapontamento.[/color] Todos nós temos que assumir riscos. Vou encontrar outro jeito.

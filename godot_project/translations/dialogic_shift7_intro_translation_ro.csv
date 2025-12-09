@@ -1,0 +1,41 @@
+﻿keys,ro
+Text/102/text,"Bine, ai reușit. Rezistența [color=CHARTREUSE]devine mai puternică[/color]. Datorită acelor manifeste, oamenii văd adevărul."
+Text/103/text,"Am reușit să obțin acest dosar de la sursele noastre - programe de producție, liste de '[color=CRIMSON]ingrediente[/color]', nume ale celor [color=DARK_SLATE_BLUE]dispăruți[/color]."
+Text/104/text,Acesta nu este doar un program de suplimente alimentare. Ei [color=CRIMSON]procesează cartofi[/color]...și nu într-un mod bun.
+Text/105/text,"Memorandumuri interne de la însuși Prim-ministrul Idaho, autorizând ""[color=DARK_ORANGE]utilizarea activelor respinse.[/color]"""
+Text/106/text,"Cote pentru fiecare punct de control, Vama Cartofilor având cel mai mare raport de respingere-la-procesare."
+Text/107/text,Situația din exterior s-a deteriorat. Mulțimi furioase se adună la punctele de control cerând răspunsuri despre Root Reserve.
+Text/108/text,[color=YELLOW]TRANSMISIE DE URGENȚĂ[/color]: Circulația recentă a [color=CRIMSON]documentelor falsificate[/color] a cauzat panică inutilă.
+Text/109/text,O recompensă de [color=GOLD]10.000 de Credite Cartof[/color] este oferită pentru informații care duc la capturarea acestor sabotori.
+Text/10a/text,Consumarea sau distribuirea acestei propagande este acum clasificată drept [color=RED]înaltă trădare[/color].
+Text/10b/text,Tura de azi va funcționa sub protocoale speciale. Fiecare călător trebuie să treacă printr-o Evaluare a Loialității.
+Text/10c/text,Cei care demonstrează [color=CRIMSON]sentimente anti-guvernamentale[/color] trebuie marcați imediat.
+Text/10d/text,[color=CRIMSON]Trădătorul dintre noi[/color] va fi găsit. Și când va fi... [trage cu degetul peste gât]
+Text/10e/text,"Un cartof nervos se apropie, [color=GOLD]insigna cu frunză galbenă[/color] parțial vizibilă. O notă mică este ascunsă între hârtii: ""[color=CHARTREUSE]Casa sigură compromisă. Nouă locație: Depozitul 7, Sectorul 4.[/color]"""
+Choice/10f/text,Procesează-i rapid cu marca UV (Ajutor)
+Choice/110/text,Raportează-i imediat la securitate (Trădare)
+Text/111/text,"Ușurarea le inundă fața. ""Mulțumesc. Adevărul va învinge."""
+Text/112/text,"Groaza se instaurează când semnalizezi securității. ""[wave amp=25 freq=3]Nu, te rog! Am o familie![/wave]"" Insigna lor galbenă cade pe podea."
+Text/113/text,Bine făcut. Loialitatea ta este notată.
+Text/114/text,Decizia ta a fost observată. Fii pregătit. [tornado radius=3 freq=2][color=CHARTREUSE]Ceva mare vine[/color][/tornado]. Rezistența planifică o acțiune directă.
+Text/115/text,"Când se va întâmpla, va trebui să [color=YELLOW]alegi o parte[/color]. Nu va mai exista nicio cale de mijloc."
+Text/116/text,"Cu fiecare cartof pe care îl procesezi, fie [pulse freq=2][color=CHARTREUSE]ajuți o revoluție[/color][/pulse], fie [pulse freq=2][color=CRIMSON]facilitezi un sistem oribil[/color][/pulse]."
+Choice/10f/disabled_text,
+Choice/110/disabled_text,
+Text/102_foreshadow1/text,"[color=STEEL_BLUE]Sasha privește peste umăr, nervoasă.[/color] Scuze, eu... [color=YELLOW]Cred că mă urmăresc.[/color]"
+Text/102_foreshadow2/text,Russet a pus întrebări. Mă urmărește după ture. [wave amp=15 freq=2][color=YELLOW]Trebuie să fiu mai atentă.[/color][/wave]
+Text/102_foreshadow3/text,"Sasha, poate ar trebui să stai pe tușă o vreme. Lasă-mă pe mine să-mi asum mai mult riscul."
+Text/102_foreshadow4/text,"[color=STEEL_BLUE]Dă din cap, forțând un zâmbet.[/color] Nu. Suntem prea aproape acum. Mă pot descurca cu Russet."
+Text/102_foreshadow5/text,"În plus... [color=CHARTREUSE]cineva trebuie să vă țină pe voi, lăstarii, departe de necazuri.[/color]"
+Text/106_trucks1/text,Dar încă nu știm unde este principala facilitate de procesare. Documentele listează doar coduri de expediere.
+Text/106_trucks2/text,Am urmărit camioanele [color=DARK_VIOLET]Rezervei de Rădăcini[/color]. Pleacă în fiecare noapte la 03:00. Același traseu.
+Text/106_trucks3/text,[color=CHARTREUSE]Dacă am putea să-i urmărim...[/color] am ști exact unde duc refuzurile.
+Choice/106_trucks4/text,O voi face eu. Știu programul patrulelor.
+Choice/106_trucks5/text,Sună riscant. Nu poate face altcineva?
+Text/106_trucks6/text,[color=CHARTREUSE]Ochii Sashei se luminează.[/color] Știam că ai rădăcini de oțel. Fii atent - patrulează intens noaptea.
+Text/106_trucks7/text,Ora 03:00. Te ghemuiești în umbră în timp ce camioanele [color=DARK_VIOLET]Rezervei de Rădăcini[/color] trec zgomotos.
+Text/106_trucks8/text,[pulse freq=2][color=YELLOW]Rămâi ascuns! Urmărește convoiul![/color][/pulse]
+Text/106_trucks9/text,"Camioanele se opresc la un complex masiv ascuns în districtul industrial. [color=DARK_VIOLET]Sectorul 7, Complexul de Depozite Delta.[/color]"
+Text/106_trucks10/text,Coșurile de fum scot un fum violaceu. Mirosul este... [tornado radius=3 freq=2][color=CRIMSON]inconfundabil.[/color][/tornado]
+Text/106_trucks11/text,[wave amp=20 freq=3][color=CHARTREUSE]Inima Rezervei de Rădăcini.[/color][/wave]
+Text/106_trucks12/text,[color=STEEL_BLUE]Expresia Sashei trădează dezamăgire.[/color] Cu toții trebuie să ne asumăm riscuri. Voi găsi altă cale.

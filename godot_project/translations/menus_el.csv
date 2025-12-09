@@ -1,0 +1,163 @@
+﻿keys,el
+main_menu_feedback,Σχόλια και Σφάλματα
+main_menu_version,Έκδοση 1.2.0
+main_menu_new_game,Νέο Παιχνίδι
+main_menu_continue,Συνέχεια
+main_menu_level_select,Επιλογή Επιπέδου
+main_menu_score_attack,Επίθεση Βαθμολογίας
+main_menu_options,Επιλογές
+main_menu_credits,Συντελεστές
+main_menu_exit,Έξοδος
+select_language,Γλώσσα
+social_discord_tooltip,Ελάτε στο Discord μας!
+social_steam_tooltip,Επισκεφθείτε μας στο Steam
+social_twitch_tooltip,Ενσωμάτωση Twitch
+twitch_status_disabled,Απενεργοποιημένο
+twitch_status_no_viewers,Δεν υπάρχουν θεατές διαθέσιμοι
+twitch_status_ready,{count} θεατές έτοιμοι
+twitch_connection_disabled,Απενεργοποιημένη
+twitch_connection_disconnected,Αποσυνδεδεμένη
+twitch_connection_connected,Συνδεδεμένη
+twitch_connection_connecting,Συνδέεται...
+options_menu_title,Επιλογές
+options_difficulty,Δυσκολία
+options_difficulty_easy,Εύκολο
+options_difficulty_normal,Κανονικό
+options_difficulty_expert,Ειδικό
+options_music_volume,Ένταση Μουσικής
+options_sfx_volume,Ένταση Ηχητικών Εφέ
+options_camera_shake,Κούνημα Κάμερας
+options_back,Πίσω
+paused_menu_title,Παύση
+shift_summary_title,ΣΥΝΟΨΗ ΒΑΡΔΙΑΣ
+shift_summary_continue,Συνέχεια
+shift_summary_restart,Επανεκκίνηση
+shift_summary_main_menu,Κύριο Μενού
+shift_summary_submit_score,Υποβολή Βαθμολογίας
+shift_summary_runner_stats,ΣΤΑΤΙΣΤΙΚΑ ΔΡΑΠΕΤΩΝ
+shift_summary_document_stats,ΣΤΑΤΙΣΤΙΚΑ ΕΓΓΡΑΦΩΝ
+shift_summary_performance,ΑΠΟΔΟΣΗ
+shift_summary_bonuses,ΜΠΟΝΟΥΣ
+time_format,{minutes}λ {seconds}δ
+shift_complete_success,ΒΑΡΔΙΑ {shift} ΟΛΟΚΛΗΡΩΘΗΚΕ\nΕΠΙΤΥΧΙΑ!
+shift_complete_failure,ΒΑΡΔΙΑ {shift} ΟΛΟΚΛΗΡΩΘΗΚΕ\n{failure}
+strike_limit_reached,ΟΡΙΟ ΠΟΙΝΩΝ ΕΦΤΑΣΕ!
+quota_not_met,Η ΠΟΣΟΣΤΩΣΗ ΔΕΝ ΕΠΙΤΕΥΧΘΗΚΕ!
+shift_summary_title_with_difficulty,ΣΥΝΟΨΗ ΒΑΡΔΙΑΣ\n{difficulty}
+runner_stats_template,\nΣΤΑΤΙΣΤΙΚΑ ΔΡΑΠΕΤΩΝ\nΠροσπάθειες Δραπετών: {runner_attempts}\nΕκτοξευθέντες Πύραυλοι: {fired}\nΔραπέτες που Χτυπήθηκαν: {hit}\nΤέλειες Βολές: {perfect}\nΠοσοστό Επιτυχίας: {rate}%
+document_stats_template,\nΣΤΑΤΙΣΤΙΚΑ ΕΓΓΡΑΦΩΝ\nΈγγραφα που Σφραγίστηκαν: {stamped}\nΠατάτες που Εγκρίθηκαν: {approved}\nΠατάτες που Απορρίφθηκαν: {rejected}\nΤέλειες Σφραγίδες: {perfect_stamps}
+bonus_stats_template,ΜΠΟΝΟΥΣ\nΜπόνους Ταχύτητας Επεξεργασίας: {processing_speed_bonus}\nΜπόνους Ακρίβειας Σφραγίδας: {accuracy}\nΜπόνους Τέλειων Βολών: {perfect_hit_bonus}\nΣυνολικό Μπόνους Βαθμολογίας: {total_score_bonus}
+performance_stats_template,\nΑΠΟΔΟΣΗ\nΧρόνος που Χρειάστηκε: {time_taken}\nΑναμενόμενη Βαθμολογία: {expected_score}\nΣυνολική Βαθμολογία: {score}\nΠοσοστό Υπέρβασης Βαθμολογίας: {percent}%\nΑξιολόγηση Απόδοσης:\n{rating}
+performance_exceptional,Εξαιρετική!
+performance_excellent,Άριστα!
+performance_good,Καλά
+performance_needs_improvement,Χρειάζεται Βελτίωση
+performance_poor,Κακή
+global_leaderboard_title,Παγκόσμιος Πίνακας Κατάταξης\n- {difficulty}
+getting_leaderboard_scores,Ανάκτηση βαθμολογιών...
+reset_game_label,Επαναφορά Παιχνιδιού :
+reset_game_button,Επαναφορά
+mute_label,Σίγαση
+fullscreen_label,Πλήρης Οθόνη :
+resolution_label,Ανάλυση :
+antialiasing_label,Εξομάλυνση Άκρων :
+screenshake_label,Κούνημα Οθόνης :
+mouse_sens_label,Ευαισθησία Ποντικιού :
+Loading…,Φόρτωση...
+You lose.,Χάσατε.
+You won!,Κερδίσατε!
+Thanks for playing!,Ευχαριστούμε που παίξατε!
+Please Confirm...,Παρακαλώ Επιβεβαιώστε...
+Go back to main menu?,Επιστροφή στο κεντρικό μενού;
+Quit the game?,Έξοδος από το παιχνίδι;
+Cancel,Ακύρωση
+OK,OK
+Controls,Χειριστήρια
+Mouse Sensitivity :,Mouse Sensitivity :
+Actions & Inputs,Ενέργειες & Εισόδους
+Add,Add
+Remove,Αφαίρεση
+Assign Key for {action},Ανάθεση πλήκτρου για {action}
+Listening for input...,Αναμονή για εισαγωγή...
+Press again to confirm...,Πατήστε ξανά για επιβεβαίωση...
+Focus here to assign inputs.,Εστιάστε εδώ για ανάθεση εισόδων.
+Already Assigned,Ήδη ανατεθειμένο
+{key} already assigned to {action}.,Το {key} έχει ήδη ανατεθεί στην ενέργεια {action}.
+Remove Key for {action},Αφαίρεση πλήκτρου για {action}
+Are you sure you want to remove {key} from {action}?,Είστε σίγουροι ότι θέλετε να αφαιρέσετε το {key} από την ενέργεια {action};
+Reset,Επαναφορά
+Audio,Ήχος
+Master :,Master :
+Music :,Music :
+SFX :,SFX :
+Ambient :,Ambient :
+Mute :,Mute :
+Video,Βίντεο
+Fullscreen :,Fullscreen :
+Resolution :,Resolution :
+Anti-Aliasing :,Anti-Aliasing :
+Disabled (Fastest),Απενεργοποιημένο (Ταχύτερο)
+8x (Slowest),8x (Αργότερο)
+Camera Shake :,Camera Shake :
+Normal,Κανονικό
+Reduced,Μειωμένο
+Minimal,Ελάχιστο
+None,Κανένα
+Game,Παιχνίδι
+Reset Game :,Reset Game :
+Do you want to reset your game data?,Θέλετε να επαναφέρετε τα δεδομένα του παιχνιδιού σας;
+Back,Πίσω
+TAKE THEM!,ΣΥΛΛΑΒΕΤΕ ΤΟΥΣ!
+"Take your documents, please.","Πάρτε τα έγγραφά σας, παρακαλώ."
+Continue,Συνέχεια
+Main Menu,Κύριο Μενού
+Submit Score,Υποβολή Βαθμολογίας
+Restart,Επανεκκίνηση
+SHIFT SUMMARY,ΠΕΡΙΛΗΨΗ ΒΑΡΔΙΑΣ
+Easy,Εύκολο
+Expert,Ειδικός
+Primary,Πρωτεύον
+Secondary,Δευτερεύον
+Primary Interaction,Πρωτεύουσα Αλληλεπίδραση
+Secondary Interaction,Δευτερεύουσα Αλληλεπίδραση
+Cancel Interaction,Ακύρωση Αλληλεπίδρασης
+Escape,Έξοδος
+Dialogic Default Action,Προεπιλεγμένη Ενέργεια Διαλόγου
+Enter,Enter
+Left Mouse Button,Αριστερό Κουμπί Ποντικιού
+Right Mouse Button,Δεξί Κουμπί Ποντικιού
+Start New Game,Έναρξη Νέου Παιχνιδιού
+Starting a new game will reset your progress. Are you sure you want to continue?,Η έναρξη νέου παιχνιδιού θα μηδενίσει την πρόοδό σας. Είστε σίγουροι ότι θέλετε να συνεχίσετε;
+"Yes, Start New Game","Ναι, Έναρξη Νέου Παιχνιδιού"
+Skip,Παράλειψη
+History,Ιστορικό
+Return,Επιστροφή
+Restart the game?,Επανεκκίνηση του παιχνιδιού;
+help_menu_button,Βοήθεια
+help_menu_title,Πώς να Παίξετε
+help_tab_basics,Βασικά
+help_tab_gameplay,Παιχνίδι
+help_tab_minigames,Μίνι-Παιχνίδια
+help_basics_intro,"[b]Καλώς ήρθατε στο Spud Customs![/b]\n\nΕίστε ένας συνοριοφύλακας σε ένα τελωνειακό σημείο ελέγχου πατάτας. Η δουλειά σας είναι να επιθεωρείτε έγγραφα, να εγκρίνετε ή να απορρίπτετε μετανάστες και να σταματάτε όσους προσπαθούν να περάσουν παράνομα τα σύνορα."
+help_basics_gate,[b]Άνοιγμα της Πύλης[/b]\nΚάντε κλικ στο κουμπί της πύλης ή χρησιμοποιήστε τον μεγαφωνικό για να καλέσετε την επόμενη πατάτα στο θάλαμό σας.
+help_basics_documents,"[b]Επιθεώρηση Εγγράφων[/b]\nΣύρετε τα έγγραφα στο γραφείο σας για να τα επιθεωρήσετε. Ελέγξτε ονόματα, ημερομηνίες και άλλες λεπτομέρειες σύμφωνα με τους κανόνες μετανάστευσης για την τρέχουσα βάρδια."
+help_basics_stamping,"[b]Σφράγιση Εγγράφων[/b]\nΧρησιμοποιήστε τη σφραγίδα ΕΓΚΡΙΘΗΚΕ (πράσινη) για να επιτρέψετε την είσοδο στους μετανάστες, ή τη σφραγίδα ΑΠΟΡΡΙΦΘΗΚΕ (κόκκινη) για να τους απορρίψετε. Η ακρίβεια της σφράγισης επηρεάζει το σκορ σας!"
+help_basics_runners,[b]Παραβάτες Συνόρων[/b]\nΚάποιες πατάτες θα προσπαθήσουν να περάσουν τρέχοντας το σημείο ελέγχου! Κάντε κλικ για να εκτοξεύσετε πυραύλους και να τις σταματήσετε. Ο τέλειος συγχρονισμός δίνει πόντους μπόνους.
+help_basics_xray,"[b]Σαρωτής Ακτίνων Χ[/b]\nΞεκινώντας από την Βάρδια 3, χρησιμοποιήστε το μηχάνημα ακτίνων Χ για να σαρώσετε τις πατάτες για κρυφά λαθραία."
+help_gameplay_quota,"[b]Επίτευξη Ποσόστωσης[/b]\nΚάθε βάρδια έχει μια ποσόστωση πατατών που πρέπει να επεξεργαστείτε. Αν αποτύχετε να εκπληρώσετε την ποσόστωση, θα απολυθείτε!"
+help_gameplay_strikes,"[b]Ποινές[/b]\nΤα λάθη (λανθασμένες εγκρίσεις/απορρίψεις, χαμένοι παραβάτες) σας δίνουν ποινές. Πάρα πολλές ποινές και το παιχνίδι τελειώνει!"
+help_gameplay_rules,"[b]Κανόνες Μετανάστευσης[/b]\nΕλέγξτε τον πίνακα ανακοινώσεων για τους τρέχοντες κανόνες. Οι κανόνες αλλάζουν κάθε βάρδια - απαγορευμένες περιοχές, απαιτούμενα έγγραφα και ειδικές συνθήκες."
+help_gameplay_scoring,"[b]Βαθμολογία[/b]\nΚερδίστε πόντους για σωστές αποφάσεις, τέλειες σφραγίδες και για το σταμάτημα των παραβατών. Μπόνους απονέμονται για ταχύτητα και ακρίβεια!"
+help_gameplay_difficulty,"[b]Επίπεδα Δυσκολίας[/b]\nΕύκολο: Πιο επιεικής χρονισμός, λιγότεροι κανόνες. Κανονικό: Τυπική εμπειρία. Ειδικός: Αυστηρός χρονισμός, σύνθετοι κανόνες, υψηλότερα σκορ."
+help_minigames_intro,"[b]Μίνι-Παιχνίδια[/b]\nΚαθ' όλη τη διάρκεια των βαρδιών σας, θα συναντήσετε μίνι-παιχνίδια που μπορούν να σας κερδίσουν πόντους μπόνους. Ολοκληρώστε τα για ανταμοιβές ή παραλείψτε τα χωρίς ποινή."
+help_minigames_document_scanner,"[b]Σαρωτής Εγγράφων[/b] (Βάρδια 1+)\nΧρησιμοποιήστε υπεριώδες φως για να βρείτε κρυφά στοιχεία στα έγγραφα. Κάντε κλικ για να επισημάνετε υδατογραφήματα, σφραγίδες και σύμβολα. Βρείτε όλα τα στοιχεία πριν τελειώσει ο χρόνος!"
+help_minigames_stamp_sorting,[b]Ταξινόμηση Σφραγίδων[/b] (Βάρδια 2+)
+help_minigames_fingerprint_match,[b]Αντιστοίχιση Δακτυλικών Αποτυπωμάτων[/b] (Βάρδια 3+)
+help_minigames_code_breaker,[b]Σπάσιμο Κώδικα[/b] (Βάρδια 4+)
+help_minigames_border_chase,[b]Καταδίωξη στα Σύνορα[/b] (Βάρδια 5+)
+help_tab_lore,Ιστορία
+help_lore_world_intro,[b]Ο Κόσμος του Spud[/b]
+help_lore_nation,[b]Το Έθνος του Spud[/b]
+help_lore_your_role,[b]Ο Ρόλος σας[/b]
+help_lore_border,[b]Το Μεγάλο Τείχος[/b]
+help_lore_secrets,[b]Αποθεματικό Ρίζας[/b]

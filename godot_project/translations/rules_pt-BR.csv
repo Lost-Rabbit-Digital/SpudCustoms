@@ -1,0 +1,39 @@
+﻿keys,pt-BR
+LAWS,LEIS
+msg_not_fresh,Batata estava %s mas deve ser Fresca
+msg_extra_eyes,"Batata tinha Olhos Extras, o que é proibido"
+msg_rotten,Batatas podres não são permitidas
+msg_sprouted,Batatas brotadas não são permitidas
+msg_dehydrated,Batatas desidratadas não são permitidas hoje
+msg_frozen,Batatas congeladas são proibidas
+msg_over_age,Batata tem %d anos (máx. 5 anos)
+msg_under_age,Batata tem %d anos (deve ter mais de 3)
+law_fresh_potatoes,[color=dark_goldenrod]APENAS Batatas Frescas[/color] permitidas - [color=dark_red]REJEITAR[/color] todas as outras
+law_extra_eyes,Batatas com condição de [color=dark_goldenrod]Olhos Extras[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_rotten,Batatas [color=dark_goldenrod]Podres[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_sprouted,Batatas [color=dark_goldenrod]Brotadas[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_dehydrated,Batatas [color=dark_goldenrod]Desidratadas[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_frozen,Batatas [color=dark_goldenrod]Congeladas[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_over_5_years,Batatas com [color=dark_goldenrod]5 anos ou mais[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_under_3_years,Batatas com [color=dark_goldenrod]3 anos ou menos[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_under_2_years,Batatas com [color=dark_goldenrod]2 anos ou menos[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_males_only,[color=dark_goldenrod]APENAS Batatas Machos[/color] permitidas - [color=dark_red]REJEITAR[/color] todas as Fêmeas
+law_females_only,[color=dark_goldenrod]APENAS Batatas Fêmeas[/color] permitidas - [color=dark_red]REJEITAR[/color] todos os Machos
+law_country_spudland,[color=dark_goldenrod]TODAS[/color> as batatas de [color=dark_goldenrod]Spudland[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_country_potatopia,[color=dark_goldenrod]TODAS[/color> as batatas de [color=dark_goldenrod]Potatopia[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_country_tuberstan,[color=dark_goldenrod]TODAS[/color> as batatas de [color=dark_goldenrod]Tuberstan[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_country_north_yamnea,[color=dark_goldenrod]TODAS[/color> as batatas de [color=dark_goldenrod]North Yamnea[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_country_spuddington,[color=dark_goldenrod]TODAS[/color> as batatas de [color=dark_goldenrod]Spuddington[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_country_tatcross,[color=dark_goldenrod]TODAS[/color] as batatas de [color=dark_goldenrod]Tatcross[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_country_mash_meadows,[color=dark_goldenrod]TODAS[/color] as batatas de [color=dark_goldenrod]Mash Meadows[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_country_tuberville,[color=dark_goldenrod]TODAS[/color] as batatas de [color=dark_goldenrod]Tuberville[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_country_chip_hill,[color=dark_goldenrod]TODAS[/color] as batatas de [color=dark_goldenrod]Chip Hill[/color] devem ser [color=dark_red]REJEITADAS[/color] (proibição de exportação)
+law_country_murphyland,[color=dark_goldenrod]TODAS[/color] as batatas de [color=dark_goldenrod]Murphyland[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_country_colcannon,[color=dark_goldenrod]TODAS[/color] as batatas de [color=dark_goldenrod]Colcannon[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_country_pratie_point,[color=dark_goldenrod]TODAS[/color] as batatas de [color=dark_goldenrod]Pratie Point[/color] devem ser [color=dark_red]REJEITADAS[/color]
+law_purple_majesty,Tipos de batata [color=dark_goldenrod]Purple Majesty[/color] devem ser [color=dark_red]REJEITADOS[/color]
+law_sweet_potatoes,Tipos de [color=dark_goldenrod]Batata Doce[/color] devem ser [color=dark_red]REJEITADOS[/color] (sem licenças disponíveis)
+law_yukon_gold,Tipos de batata [color=dark_goldenrod]Yukon Gold[/color] devem ser [color=dark_red]REJEITADOS[/color]
+law_fingerling,Tipos de batata [color=dark_goldenrod]Fingerling[/color] devem ser [color=dark_red]REJEITADOS[/color]
+law_red_bliss,Tipos de batata [color=dark_goldenrod]Red Bliss[/color] devem ser [color=dark_red]REJEITADOS[/color]
+law_russet,Tipos de batata [color=dark_goldenrod]Russet[/color] devem ser [color=dark_red]REJEITADOS[/color]

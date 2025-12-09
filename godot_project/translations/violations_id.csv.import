@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://e7ftycbrtwav"
+
+[deps]
+
+files=["res://translations/violations_id.id.translation"]
+
+source_file="res://translations/violations_id.csv"
+dest_files=["res://translations/violations_id.id.translation"]
+
+[params]
+
+compress=true
+delimiter=0

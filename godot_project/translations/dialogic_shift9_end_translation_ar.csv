@@ -1,0 +1,36 @@
+﻿keys,ar
+Text/131/text,تتراجع بينما تحتدم المعركة. أنا آسف يا ساشا. أنا [color=STEEL_BLUE]لست شجاعًا مثلك[/color].
+Text/132/text,"""لقد تم صد [color=CRIMSON]الهجوم الإرهابي[/color]! ويتم [color=DARK_VIOLET]معالجة[/color] قادة العصابة الآن."""
+Text/133/text,"يجرّ الرئيس يوكون أعضاء المقاومة بالسلاسل، وساشا من بينهم. ""سيواجه هؤلاء [color=CRIMSON]الخونة[/color] [color=DARK_VIOLET]المعالجة النهائية[/color]."""
+Text/134/text,تلتقي عينا ساشا بعينيك. على الرغم من كدماتها، تحمل نظرتها [wave amp=15 freq=2][color=CHARTREUSE]لا حكماً، بل حزناً فقط[/color][/wave].
+Text/135/text,لقد نجوت بالبقاء صامتاً، ولكن [pulse freq=3][color=GOLD]بأي ثمن؟[/color][/pulse] بينما تتصاعد رائحة إنتاج [color=DARK_VIOLET]مخزون الجذور[/color] من المصنع، تنقلب معدتك.
+Text/136/text,ربما لا تزال هناك فرصة من الداخل. أو ربما أنت فقط تخفف من ضميرك.
+Text/137/text,أنت [tornado radius=3 freq=2][color=CHARTREUSE]تتخلى عن موقعك[/color][/tornado] وتسرع نحو القتال. لقد ولى زمن الحذر.
+Text/138/text,[pulse freq=3][color=GOLD]أثبت أنك معنا![/color][/pulse] كيف تعرف ساشا؟
+Text/139/text,[color=CHARTREUSE]الجذور تنمو عميقاً![/color] أنا من نقطة التفتيش، ساشا جندتني!
+Text/13a/text,إنهم يأخذونها إلى مصنع المعالجة الآن. يجب أن نسرع!
+Text/13b/text,تُفتح الأبواب بقوة، كاشفة عن [wave amp=25 freq=3][color=CRIMSON]الحقيقة المروعة[/color][/wave] - آلات طحن، وسلاسل ناقلة تحمل البطاطس إلى هلاكها.
+Text/13c/text,في نهاية أحد الأحزمة - ساشا وآخرون [color=CRIMSON]مقيدون بلا حول ولا قوة[/color]. يقف المشرف روسيت عند أجهزة التحكم.
+Text/13d/text,[color=RED]أنت![/color] كان يجب أن أعلم أنك واحد منهم! ابتعد وإلا سأشغل المعالج!
+Text/140/text,[color=STEEL_BLUE]يتقدم قائد المقاومة، سلاحه موجه نحو روسيت.[/color] لا خطوة أخرى يا روسيت. ارفع يديك حيث أستطيع رؤيتهما.
+Text/141/text,[color=CRIMSON]تتراقص عينا روسيت بينك وبين قائد المقاومة، والعرق يتصبب من جبينه.[/color] هل تظن أنك فزت؟ هذا المرفق هو أساس سبود!
+Text/142/text,أساس المعاناة. [pulse freq=3][color=CHARTREUSE]سينتهي اليوم.[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]تكافح ساشا ضد قيودها على الحزام الناقل[/color]
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""روسيت[/color]"""
+Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""هذا... هذا ما كانوا يفعلونه؟ إنه أسوأ مما تخيلت...""[/color][/wave]"
+Choice/146/text,"[color=CHARTREUSE]""ساشا! شكراً للجذور أنكِ حية! تمسكي[/color]"""
+Text/147/text,[color=CRIMSON]تندفع نحو روسيت، قبضتاك مشدودتان، وبالكاد يوقفك مقاتلو المقاومة.[/color] كل بطاطا مرت عبر نقطة تفتيشي... كم عدد الذين قمت بـ...
+Text/148/text,اهدأ! نحتاجه حياً ليشهد. [color=STEEL_BLUE]يبقي القائد سلاحه موجهاً نحو روسيت.[/color] احتفظ بغضبك للمحاكم.
+Text/149/text,[color=STEEL_BLUE]تتراجع متعثراً، يدك تغطي فمك، مستوعباً الرعب الكامل للآلات.[/color] لقد ختمت أوراقهم... أرسلتهم إلى هنا...
+Text/14a/text,[color=CHARTREUSE]لم تكن تعلم. لم يعلم أي منا.[/color] لهذا نحن هنا الآن. ركز!
+Text/14b/text,[color=CHARTREUSE]تندفع نحو الحزام الناقل[/color]
+Text/14c/text,[color=CHARTREUSE]عينا ساشا تلمعان بالدموع والأمل بينما تعمل يداك على فك العقد.[/color] كنت أعلم أنك ستأتي. لم أشك فيك أبدًا.
+Text/14d/text,[color=STEEL_BLUE]يجبر القائد راسيت على الركوع تحت تهديد السلاح.[/color] اربطوه. تأكدوا من أنه يشاهد ما سيحدث تاليًا.
+Text/13e/text,[color=CHARTREUSE]تحررت ساشا من قيودها، ولم تضيع وقتًا، تعيد توجيه كاميرات المنشأة.[/color] [color=YELLOW]يا شعب سباد! هذه هي محمية الجذور! لقد كانوا يطعموننا لبعضنا البعض![/color]
+Text/14e/text,[color=CHARTREUSE]ساشا تمسك بيدك، تشابك أصابعها بأصابعك.[/color] لقد عدت من أجلي. مهما حدث بعد ذلك... سنواجهه معًا.
+Text/14f/text,[color=STEEL_BLUE]ساشا تراقبك بعناية، ترى الغضب الذي لا يزال يحترق في عينيك.[/color] وجه تلك النار. سنحتاجه لما سيأتي تاليًا.
+Text/150/text,[color=STEEL_BLUE]ساشا تضع يدًا حانية على كتفك.[/color] الذنب ليس لك لتحمله. أنت هنا الآن. هذا هو المهم.
+Text/13f/text,[color=CHARTREUSE]لقد فعلناها. الحقيقة باتت مكشوفة الآن.[/color] لدينا مستقبل لنبنيه!
+Choice/144/disabled_text,
+Choice/145/disabled_text,
+Choice/146/disabled_text,

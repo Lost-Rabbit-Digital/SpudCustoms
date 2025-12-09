@@ -1,0 +1,175 @@
+﻿keys,da
+main_menu_feedback,Feedback og fejl
+main_menu_version,Udgave 1.2.0
+main_menu_new_game,Nyt spil
+main_menu_continue,Fortsæt
+main_menu_level_select,Vælg niveau
+main_menu_score_attack,Score angreb
+main_menu_options,Indstillinger
+main_menu_credits,Krediteringer
+main_menu_exit,Afslut
+select_language,Sprog
+social_discord_tooltip,Tilslut dig vores Discord!
+social_steam_tooltip,Besøg os på Steam
+social_twitch_tooltip,Twitch-integration
+twitch_status_disabled,Deaktiveret
+twitch_status_no_viewers,Ingen seere i puljen
+twitch_status_ready,{count} seere klar
+twitch_connection_disabled,Deaktiveret
+twitch_connection_disconnected,Afbrudt
+twitch_connection_connected,Tilsluttet
+twitch_connection_connecting,Tilslutter...
+options_menu_title,Indstillinger
+options_difficulty,Sværhedsgrad
+options_difficulty_easy,Let
+options_difficulty_normal,Almindelig
+options_difficulty_expert,Ekspert
+options_music_volume,Musik lydstyrke
+options_sfx_volume,Lydeffekt lydstyrke
+options_camera_shake,Kamerarystelse
+options_back,Tilbage
+paused_menu_title,Sat på pause
+shift_summary_title,VAGTRESUMÉ
+shift_summary_continue,Fortsæt
+shift_summary_restart,Genstart
+shift_summary_main_menu,Hovedmenu
+shift_summary_submit_score,Indsend score
+shift_summary_runner_stats,LØBER STATISTIK
+shift_summary_document_stats,DOKUMENT STATISTIK
+shift_summary_performance,PRÆSTATION
+shift_summary_bonuses,BONUSSER
+_FORMAT KEYS,
+time_format,{minutes} min {seconds} s
+_SHIFT SUMMARY DETAILS,
+shift_complete_success,SKIFT {shift} FÆRDIG\nSUCCES!
+shift_complete_failure,SKIFT {shift} FÆRDIG\n{failure}
+strike_limit_reached,STREJKEGRÆNSE NÅT!
+quota_not_met,KVOTE IKKE OPFYLDT!
+shift_summary_title_with_difficulty,VAGTRESUMÉ\n{difficulty}
+runner_stats_template,\nLØBER STATISTIK\nLøberforsøg: {runner_attempts}\nAffyrede missiler: {fired}\nRamte løbere: {hit}\nPerfekte træffere: {perfect}\nTræfrate: {rate}%
+document_stats_template,DOKUMENT STATISTIK\nDokumenter stemplet: {stamped}\nKartofler godkendt: {approved}\nKartofler afvist: {rejected}\nPerfekte stempler: {perfect_stamps}
+bonus_stats_template,BONUSSER\nBehandlingshastighedsbonus: {processing_speed_bonus}\nStempelspræcisionsbonus: {accuracy}\nPerfekte træffere bonus: {perfect_hit_bonus}\nSamlet score bonus: {total_score_bonus}
+performance_stats_template,PRÆSTATION\nBrugt tid: {time_taken}\nForventet score: {expected_score}\nSamlet score: {score}\nOver-score procent: {percent}%\nPræstationsvurdering:\n{rating}
+performance_exceptional,Exceptionel!
+performance_excellent,Fremragende!
+performance_good,God
+performance_needs_improvement,Behøver forbedring
+performance_poor,Dårlig
+global_leaderboard_title,Global Resultattavle\n- {difficulty}
+getting_leaderboard_scores,Henter rangliste scores...
+_PAUSE OPTIONS OVERLAY,
+reset_game_label,Nulstil spil:
+reset_game_button,Nulstil
+mute_label,Lydløs
+fullscreen_label,Fuld skærm:
+resolution_label,Opløsning:
+antialiasing_label,Anti-Aliasing:
+screenshake_label,Skærmrystelse:
+mouse_sens_label,Musefølsomhed:
+___ LOADING SCREEN,
+Loading…,Indlæser...
+___ DIALOGS IN GAME,
+You lose.,Du taber.
+You won!,Du vandt!
+Thanks for playing!,Tak fordi du spiller!
+Please Confirm...,Bekræft venligst...
+Go back to main menu?,Gå tilbage til hovedmenuen?
+Quit the game?,Vil du afslutte spillet?
+Cancel,Ophæve
+OK,OK
+___ OPTIONS MENU,
+Controls,Kontrolelementer
+Mouse Sensitivity :,Musefølsomhed:
+Actions & Inputs,Handlinger & input
+Add,Tilføje
+Remove,Fjerne
+Assign Key for {action},Tildel nøgle til {action}
+Listening for input...,Lytter efter input...
+Press again to confirm...,Tryk igen for at bekræfte...
+Focus here to assign inputs.,Fokuser her for at tildele input.
+Already Assigned,Allerede tildelt
+{key} already assigned to {action}.,{key} er allerede tildelt til {action}.
+Remove Key for {action},Fjern nøgle til {action}
+Are you sure you want to remove {key} from {action}?,"Er du sikker på, at du vil fjerne {key} fra {action}?"
+Reset,Nulstil
+Audio,Lyd
+Master :,Mester:
+Music :,Musik:
+SFX :,SFX:
+Ambient :,Omgivende:
+Mute :,Slå lyden fra:
+Video,Billede
+Fullscreen :,Fuld skærm:
+Resolution :,Opløsning:
+Anti-Aliasing :,Anti-aliasing:
+Disabled (Fastest),Deaktiveret (hurtigste)
+8x (Slowest),8x (langsomst)
+Camera Shake :,Kamerarystelser:
+Normal,Almindelig
+Reduced,Reduceret
+Minimal,Minimum
+None,Ingen
+Game,Spil
+Reset Game :,Nulstil spil:
+Do you want to reset your game data?,Vil du nulstille dine spildata?
+Back,Tilbage
+_INGAME DIALOGUE,
+TAKE THEM!,TAG DEM!
+"Take your documents, please.",Tag venligst dine dokumenter.
+_SHIFT SUMMARY SCREEN,
+Continue,Fortsætte
+Main Menu,Hovedmenu
+Submit Score,Indsend score
+Restart,Genstart
+SHIFT SUMMARY,SKIFT SAMMENFATNING
+_DIFFICULTY LEVELS,
+Easy,Let
+Normal,Almindelig
+Expert,Ekspert
+Primary,Primær
+Secondary,Sekundær
+Primary Interaction,Primær interaktion
+Secondary Interaction,Sekundær interaktion
+Cancel Interaction,Annuller interaktion
+Escape,Flugt
+Dialogic Default Action,Dialogisk standardhandling
+Enter,Indtast
+Left Mouse Button,Venstre museknap
+Right Mouse Button,Højre museknap
+_NEW GAME CONFIRMATION,
+Start New Game,Start nyt spil
+Starting a new game will reset your progress. Are you sure you want to continue?,"Hvis du starter et nyt spil, nulstilles dine fremskridt. Er du sikker på, at du vil fortsætte?"
+"Yes, Start New Game","Ja, start nyt spil"
+Skip,Springe
+History,Historie
+Return,Retur
+Restart the game?,Genstarte spillet?
+_HELP MENU,
+help_menu_button,Hjælp
+help_menu_title,Sådan spiller du
+help_tab_basics,Grundlæggende
+help_tab_gameplay,Spil
+help_tab_minigames,Minispil
+help_basics_intro,[b]Velkommen til Spud Customs
+help_basics_gate,[b]Åbning af Porten[/b]
+help_basics_documents,[b]Inspektion af Dokumenter[/b]
+help_basics_stamping,[b]Stempling af Dokumenter[/b]
+help_basics_runners,[b]Grænseløbere[/b]
+help_basics_xray,[b]Røntgenscanner[/b]
+help_gameplay_quota,[b]Opfyldelse af Kvoten[/b]
+help_gameplay_strikes,[b]Strejker[/b]
+help_gameplay_rules,"[b]Immigrationsregler[/b]\nTjek opslagstavlen for de gældende regler. Reglerne ændres hver vagt - forbudte regioner, påkrævede dokumenter og særlige betingelser."
+help_gameplay_scoring,"[b]Pointsystem[/b]\nOptjen point for korrekte beslutninger, perfekte stempler og for at stoppe grænseløbere. Bonusser tildeles for hurtighed og nøjagtighed!"
+help_gameplay_difficulty,"[b]Sværhedsgrader[/b]\nLet: Mere lempelig timing, færre regler. Normal: Standardoplevelse. Ekspert: Stram timing, komplekse regler, højere point."
+help_minigames_intro,"[b]Minispil[/b]\nI løbet af dine vagter vil du støde på minispil, der kan give bonuspoint. Gennemfør dem for at få belønninger, eller spring over uden straf."
+help_minigames_document_scanner,"[b]Dokumentscanner[/b] (Vagt 1+)\nBrug UV-lys til at finde skjulte elementer på dokumenter. Klik for at markere vandmærker, stempler og symboler. Find alle elementer, før tiden løber ud!"
+help_minigames_stamp_sorting,"[b]Stempelsortering[/b] (Vagt 2+)\nSortér faldende stempler i de korrekte kasser. Grønne stempler skal i GODKENDT, røde stempler skal i AFVIST. Sortér hurtigt for at få bonuspoint!"
+help_minigames_fingerprint_match,[b]Fingeraftryksmatch[/b] (Vagt 3+)\nMatch fingeraftryk fra gitteret med referencemønsteret. Klik på matchende aftryk for at bekræfte identiteten. Kræver omhyggelig observation!
+help_minigames_code_breaker,"[b]Kodebryder[/b] (Vagt 4+)\nKnæk den hemmelige kode! Gæt den 4-cifrede kombination. Grøn betyder korrekt position, gul betyder forkert position. Begrænset antal forsøg!"
+help_minigames_border_chase,[b]Grænsejagt[/b] (Vagt 5+)\nKontrabande på transportbåndet! Klik på RØDE genstande for at konfiskere dem. Lad GRØNNE genstande passere. Hurtige reflekser giver flere point!
+help_tab_lore,Historie
+help_lore_world_intro,"[b]Spuds Verden[/b]\n\nVelkommen til et land, hvor kartofler har bygget deres egen civilisation. I denne verden kan knolde gå, tale og har dannet deres egen nation med love, grænser og bureaukrati."
+help_lore_nation,"[b]Nationen Spud[/b]\n\nSpud er en stolt nation, der lover velstand for alle kartofler. Beskyttet af Den Store Mur af Spud opretholder nationen streng grænsekontrol for at sikre, at kun værdige knolde kan komme ind.\n\nRegeringen fremmer enhed og lydighed, og patriotiske borgere høres ofte proklamere: ""Ære til Spud!"""
+help_lore_your_role,"[b]Din Rolle[/b]\n\nDu er blevet udvalgt til en afgørende rolle i beskyttelsen af grænserne. Som toldbetjent arbejder du under tilsynsførende Russets vågne øje.\n\nDit velfærd afhænger af din præstation. Opfyld dine kvoter, følg reglerne, og husk: Nationen regner med dig."
+help_lore_border,"[b]Den Store Mur[/b]\n\nDen mægtige Store Mur af Spud beskytter nationen mod udefrakommende. Ved forskellige kontrolposter langs muren sikrer betjente som dig, at kun de værdige kan komme ind.\n\nDe, der forsøger at forcere grænsen uden korrekt dokumentation, står over for øjeblikkelige konsekvenser."
+help_lore_secrets,[b]Rodreserven[/b]\n\nAfviste kartofler bliver... behandlet. Ifølge protokollen. Den mystiske Rodreserve håndterer alle detaljerne.\n\nDet er bedst ikke at stille for mange spørgsmål. Fokuser på dine pligter. Intet andet.

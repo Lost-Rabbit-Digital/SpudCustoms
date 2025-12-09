@@ -1,0 +1,175 @@
+﻿keys,nl
+main_menu_feedback,Feedback en bugs
+main_menu_version,Versie 1.2.0
+main_menu_new_game,Nieuw spel
+main_menu_continue,Doorgaan
+main_menu_level_select,Niveau selectie
+main_menu_score_attack,Score aanval
+main_menu_options,Opties
+main_menu_credits,Aftiteling
+main_menu_exit,Afsluiten
+select_language,Taal
+social_discord_tooltip,Word lid van onze Discord!
+social_steam_tooltip,Bezoek ons op Steam
+social_twitch_tooltip,Twitch-integratie
+twitch_status_disabled,Uitgeschakeld
+twitch_status_no_viewers,Geen kijkers in pool
+twitch_status_ready,{count} kijkers klaar
+twitch_connection_disabled,Uitgeschakeld
+twitch_connection_disconnected,Niet verbonden
+twitch_connection_connected,Verbonden
+twitch_connection_connecting,Verbinden...
+options_menu_title,Opties
+options_difficulty,Moeilijkheidsgraad
+options_difficulty_easy,Gemakkelijk
+options_difficulty_normal,Normaal
+options_difficulty_expert,Deskundige
+options_music_volume,Muziekvolume
+options_sfx_volume,Geluidseffecten volume
+options_camera_shake,Camera schudden
+options_back,Terug
+paused_menu_title,Gepauzeerd
+shift_summary_title,DIENST SAMENVATTING
+shift_summary_continue,Doorgaan
+shift_summary_restart,Herstarten
+shift_summary_main_menu,Hoofdmenu
+shift_summary_submit_score,Score indienen
+shift_summary_runner_stats,RENNER STATISTIEKEN
+shift_summary_document_stats,DOCUMENT STATISTIEKEN
+shift_summary_performance,PRESTATIE
+shift_summary_bonuses,BONUSSEN
+_FORMAT KEYS,
+time_format,{minutes}min {seconds}sec
+_SHIFT SUMMARY DETAILS,
+shift_complete_success,DIENST {shift} VOLTOOID\nSUCCES!
+shift_complete_failure,DIENST {shift} VOLTOOID\n{failure}
+strike_limit_reached,STAKINGSLIMIET BEREIKT!
+quota_not_met,QUOTUM NIET GEHAALD!
+shift_summary_title_with_difficulty,DIENST SAMENVATTING\n{difficulty}
+runner_stats_template,\nRENNER STATISTIEKEN\nRenner pogingen: {runner_attempts}\nRaketten afgevuurd: {fired}\nRenners geraakt: {hit}\nPerfecte treffers: {perfect}\nTrefpercentage: {rate}%
+document_stats_template,DOCUMENT STATISTIEKEN\nDocumenten gestempeld: {stamped}\nAardappelen goedgekeurd: {approved}\nAardappelen afgekeurd: {rejected}\nPerfecte stempels: {perfect_stamps}
+bonus_stats_template,BONUSSEN\nVerwerkingssnelheid bonus: {processing_speed_bonus}\nStempelprecisie bonus: {accuracy}\nPerfecte treffers bonus: {perfect_hit_bonus}\nTotale score bonus: {total_score_bonus}
+performance_stats_template,PRESTATIE\nTijd genomen: {time_taken}\nVerwachte score: {expected_score}\nTotale score: {score}\nOverscoringspercentage: {percent}%\nPrestatiewaardering:\n{rating}
+performance_exceptional,Uitzonderlijk!
+performance_excellent,Uitstekend!
+performance_good,Goed
+performance_needs_improvement,Moet verbeteren
+performance_poor,Slecht
+global_leaderboard_title,Wereldwijde ranglijst\n- {difficulty}
+getting_leaderboard_scores,Leaderboard scores ophalen...
+_PAUSE OPTIONS OVERLAY,
+reset_game_label,Spel resetten:
+reset_game_button,Resetten
+mute_label,Dempen
+fullscreen_label,Volledig scherm:
+resolution_label,Resolutie:
+antialiasing_label,Anti-Aliasing:
+screenshake_label,Schermschudding:
+mouse_sens_label,Muisgevoeligheid:
+___ LOADING SCREEN,
+Loading…,Laden...
+___ DIALOGS IN GAME,
+You lose.,Je verliest.
+You won!,Je hebt gewonnen!
+Thanks for playing!,Bedankt voor het spelen!
+Please Confirm...,Bevestigen...
+Go back to main menu?,Terug naar het hoofdmenu?
+Quit the game?,Spel afsluiten?
+Cancel,Annuleren
+OK,OK
+___ OPTIONS MENU,
+Controls,Besturing
+Mouse Sensitivity :,Muisgevoeligheid:
+Actions & Inputs,Acties en invoer
+Add,Toevoegen
+Remove,Verwijderen
+Assign Key for {action},Toets toewijzen aan {action}
+Listening for input...,Luisteren naar invoer...
+Press again to confirm...,Druk nogmaals om te bevestigen...
+Focus here to assign inputs.,Focus hier om invoer toe te wijzen.
+Already Assigned,Al toegewezen
+{key} already assigned to {action}.,{key} is al toegewezen aan {action}.
+Remove Key for {action},Toets verwijderen voor {action}
+Are you sure you want to remove {key} from {action}?,Weet je zeker dat je {key} uit {action} wilt verwijderen?
+Reset,Resetten
+Audio,Geluid
+Master :,Master:
+Music :,Muziek:
+SFX :,SFX:
+Ambient :,Ambient:
+Mute :,Dempen:
+Video,Beeld
+Fullscreen :,Volledig scherm:
+Resolution :,Resolutie:
+Anti-Aliasing :,Anti-aliasing:
+Disabled (Fastest),Uitgeschakeld (Snelst)
+8x (Slowest),8x (Langzaamst)
+Camera Shake :,Cameratrilling:
+Normal,Normaal
+Reduced,Verminderd
+Minimal,Minimaal
+None,Geen
+Game,Spel
+Reset Game :,Game resetten:
+Do you want to reset your game data?,Wilt u uw gamegegevens resetten?
+Back,Terug
+_INGAME DIALOGUE,
+TAKE THEM!,NEEM ZE MEE!
+"Take your documents, please.","Neem uw documenten mee, alstublieft."
+_SHIFT SUMMARY SCREEN,
+Continue,Doorgaan
+Main Menu,Hoofdmenu
+Submit Score,Score indienen
+Restart,Opnieuw starten
+SHIFT SUMMARY,SHIFT-OVERZICHT
+_DIFFICULTY LEVELS,
+Easy,Eenvoudig
+Normal,Normaal
+Expert,Deskundige
+Primary,Primair
+Secondary,Secundair
+Primary Interaction,Primaire interactie
+Secondary Interaction,Secundaire interactie
+Cancel Interaction,Interactie annuleren
+Escape,Annuleren
+Dialogic Default Action,Standaardactie dialoog
+Enter,Bevestigen
+Left Mouse Button,Linkermuisknop
+Right Mouse Button,Rechtermuisknop
+_NEW GAME CONFIRMATION,
+Start New Game,Nieuw spel starten
+Starting a new game will reset your progress. Are you sure you want to continue?,"Als u een nieuw spel start, wordt uw voortgang gereset. Weet u zeker dat u wilt doorgaan?"
+"Yes, Start New Game","Ja, start nieuw spel"
+Skip,Overslaan
+History,Geschiedenis
+Return,Terug
+Restart the game?,Spel opnieuw starten?
+_HELP MENU,
+help_menu_button,Hulp
+help_menu_title,Hoe te spelen
+help_tab_basics,Basis
+help_tab_gameplay,Spelverloop
+help_tab_minigames,Minispellen
+help_basics_intro,[b]Welkom bij Spud Customs
+help_basics_gate,[b]De Poort Openen[/b]
+help_basics_documents,[b]Documenten Inspecteren[/b]
+help_basics_stamping,"[b]Documenten Stempelen[/b]\nGebruik de GOEDGEKEURD (groene) stempel om reizigers door te laten, of de AFGEWEZEN (rode) stempel om ze te weigeren. De nauwkeurigheid van je stempels beïnvloedt je score!"
+help_basics_runners,[b]Grensvluchters[/b]\nSommige aardappels zullen proberen langs de controlepost te rennen! Klik om raketten af te vuren en ze te stoppen. Perfecte timing levert bonuspunten op.
+help_basics_xray,"[b]Röntgenscanner[/b]\nVanaf Dienst 3, gebruik de röntgenscanner om aardappels te scannen op verborgen smokkelwaar."
+help_gameplay_quota,"[b]Quotum Halen[/b]\nElke dienst heeft een quotum van aardappels die je moet verwerken. Haal je het quotum niet, dan word je ontslagen!"
+help_gameplay_strikes,"[b]Strafpunten[/b]\nFouten maken (verkeerde goedkeuringen/afwijzingen, gemiste vluchters) levert je strafpunten op. Te veel strafpunten en het is game over!"
+help_gameplay_rules,"[b]Immigratieregels[/b]\nKijk op het mededelingenbord voor de huidige regels. De regels veranderen elke dienst - verboden regio's, vereiste documenten en speciale voorwaarden."
+help_gameplay_scoring,"[b]Puntentelling[/b]\nVerdien punten voor juiste beslissingen, perfecte stempels en het stoppen van vluchters. Bonussen worden toegekend voor snelheid en nauwkeurigheid!"
+help_gameplay_difficulty,"[b]Moeilijkheidsgraden[/b]\nMakkelijk: Soepelere timing, minder regels. Normaal: Standaard ervaring. Expert: Strikte timing, complexe regels, hogere scores."
+help_minigames_intro,[b]Minigames[/b]\nTijdens je diensten kom je minigames tegen waarmee je bonuspunten kunt verdienen. Voltooi ze voor beloningen of sla ze over zonder straf.
+help_minigames_document_scanner,"[b]Documentscanner[/b] (Dienst 1+)\nGebruik UV-licht om verborgen elementen op documenten te vinden. Klik om watermerken, stempels en symbolen te markeren. Vind alle elementen voordat de tijd om is!"
+help_minigames_stamp_sorting,"[b]Stempels Sorteren[/b] (Dienst 2+)\nSorteer vallende stempels in de juiste bakken. Groene stempels gaan naar GOEDGEKEURD, rode stempels naar AFGEWEZEN. Sorteer snel voor bonuspunten!"
+help_minigames_fingerprint_match,[b]Vingerafdrukken Vergelijken[/b] (Dienst 3+)\nVergelijk de vingerafdrukken uit het rooster met het referentiepatroon. Klik op overeenkomende afdrukken om de identiteit te verifiëren. Goed opletten vereist!
+help_minigames_code_breaker,"[b]Codekraker[/b] (Dienst 4+)\nKraak de geheime code! Raad de 4-cijferige combinatie. Groen betekent juiste positie, geel betekent verkeerde positie. Beperkt aantal pogingen!"
+help_minigames_border_chase,[b]Smokkeljacht[/b] (Dienst 5+)\nSmokkelwaar op de transportband! Klik op RODE voorwerpen om ze in beslag te nemen. Laat GROENE voorwerpen door. Snelle reflexen leveren meer punten op!
+help_tab_lore,Verhaal
+help_lore_world_intro,"[b]De Wereld van Spud[/b]\n\nWelkom in een land waar aardappels hun eigen beschaving hebben opgebouwd. In deze wereld kunnen knollen lopen, praten en hebben ze hun eigen natie gevormd met wetten, grenzen en bureaucratie."
+help_lore_nation,"[b]De Natie van Spud[/b]\n\nSpud is een trotse natie die welvaart belooft voor alle aardappelen. Beschermd door de Grote Muur van Spud, handhaaft de natie strenge grenscontroles om ervoor te zorgen dat alleen waardige knollen binnen mogen komen.\n\nDe overheid bevordert eenheid en gehoorzaamheid, en patriottische burgers hoort men vaak verkondigen: ""Glorie aan Spud!"""
+help_lore_your_role,"[b]Uw Rol[/b]\n\nU bent geselecteerd voor een cruciale rol in de bescherming van de grenzen. Als Douanebeambte werkt u onder het toeziend oog van Supervisor Russet.\n\nUw welzijn hangt af van uw prestaties. Haal uw quota, volg de regels, en onthoud: de natie rekent op u."
+help_lore_border,"[b]De Grote Muur[/b]\n\nDe machtige Grote Muur van Spud beschermt de natie tegen buitenstaanders. Bij verschillende controleposten langs de muur zorgen beambten zoals u ervoor dat alleen de waardigen binnen mogen komen.\n\nDegenen die proberen de grens over te steken zonder de juiste documentatie, worden onmiddellijk geconfronteerd met de gevolgen."
+help_lore_secrets,[b]De Wortelreserve[/b]\n\nAfgewezen aardappelen worden... verwerkt. Volgens protocol. De mysterieuze Wortelreserve regelt alle details.\n\nHet is beter om niet te veel vragen te stellen. Concentreer u op uw taken. Niets meer.

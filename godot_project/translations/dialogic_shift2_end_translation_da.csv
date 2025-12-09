@@ -1,0 +1,26 @@
+﻿keys,da
+Text/200/text,"Hej, nye kartoffel! Hård vagt, hva'? Jeg hedder Murphy. Har været her i tre sæsoner nu."
+Text/201/text,"Jeg så dig tale med Sasha tidligere. Hun er... [color=STEEL_BLUE]anderledes[/color]. På en god måde, tror jeg."
+Choice/202/text,Hun virker flink. Gav mig nogle råd om at være opmærksom.
+Choice/203/text,Bare introduktioner. Intet særligt.
+Text/204/text,Murphy kigger sig nervøst omkring. Ja
+Text/205/text,"Mellem os? Den radioudsendelse om ""forsvundne kartofler""... min fætter forsvandt sidste måned. Dumpede sin inspektion."
+Text/206/text,"Smart. Hold hovedet nede, gør dit arbejde. Det er, hvad jeg fortæller mig selv hver dag."
+Text/207/text,"Murphys stemme sænkes. Selvom jeg nogle gange undrer mig over, hvor alle de afviste kartofler egentlig tager hen..."
+Text/208/text,I kantinen
+Text/209/text,"Du stirrer på den tykke, lilla-brune masse. Alle spiser det uden spørgsmål. Det skulle være nærende."
+Choice/20a/text,Spis Rodreserven som alle andre
+Choice/20b/text,Skub det til side - du er ikke sulten
+Text/20c/text,"Smagen er... jordagtig. Kraftig. Noget ved det føles [color=STEEL_BLUE]ubehageligt velkendt[/color], men du kan ikke sige hvorfor."
+Text/20d/text,"En overordnet officer bemærker det. ""Spild ikke, mangl ikke, spire. Det er [pulse freq=2][color=DARK_VIOLET]premium ernæring[/color][/pulse] lige der."""
+Text/20e/text,Du mumler en undskyldning om dårlig mave. Officeren trækker på skuldrene og går videre.
+Text/20f/text,"Tilbage i dine kvarterer kan du ikke slippe tanken om, hvad Sasha sagde. ""[color=YELLOW]Ikke alt er, som det ser ud til.[/color]"""
+Text/210/text,"Du spurgte Russet om afviste kartofler på din første dag. Hans svar var undvigende. ""[color=VIOLET]Forarbejdet. Ifølge protokol.[/color]"""
+Text/211/text,"Forarbejdet [color=STEEL_BLUE]hvordan[/color], helt præcist?"
+Text/212/text,Du var så ivrig efter at tjene. Så stolt over at være valgt. Men stolthed forklarer ikke de [color=CRIMSON]forsvundne kartofler[/color].
+Text/213/text,"Radioen sagde, at rapporter om forsvindinger ""fortsætter"". Det betyder, at det har stået på i et stykke tid."
+Text/214/text,"Søvnen kommer langsomt. Når den gør, drømmer du om [wave amp=15 freq=2][color=DARK_VIOLET]lilla floder[/color][/wave], der strømmer under kontrolposten."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

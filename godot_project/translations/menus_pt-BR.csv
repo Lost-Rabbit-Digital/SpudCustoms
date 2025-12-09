@@ -1,0 +1,163 @@
+﻿keys,pt-BR
+main_menu_feedback,Feedback e Bugs
+main_menu_version,Versão 1.2.0
+main_menu_new_game,Novo Jogo
+main_menu_continue,Continuar
+main_menu_level_select,Seleção de Nível
+main_menu_score_attack,Ataque de Pontuação
+main_menu_options,Opções
+main_menu_credits,Créditos
+main_menu_exit,Sair
+select_language,Idioma
+social_discord_tooltip,Entre no nosso Discord!
+social_steam_tooltip,Visite-nos no Steam
+social_twitch_tooltip,Integração com Twitch
+twitch_status_disabled,Desativado
+twitch_status_no_viewers,Nenhum espectador no grupo
+twitch_status_ready,{count} espectadores prontos
+twitch_connection_disabled,Desativado
+twitch_connection_disconnected,Desconectado
+twitch_connection_connected,Conectado
+twitch_connection_connecting,Conectando...
+options_menu_title,Opções
+options_difficulty,Dificuldade
+options_difficulty_easy,Fácil
+options_difficulty_normal,Normal
+options_difficulty_expert,Especialista
+options_music_volume,Volume da Música
+options_sfx_volume,Volume dos Efeitos Sonoros
+options_camera_shake,Vibração da Câmera
+options_back,Voltar
+paused_menu_title,Pausado
+shift_summary_title,RESUMO DO TURNO
+shift_summary_continue,Continuar
+shift_summary_restart,Reiniciar
+shift_summary_main_menu,Menu Principal
+shift_summary_submit_score,Enviar Pontuação
+shift_summary_runner_stats,ESTATÍSTICAS DE FUGITIVOS
+shift_summary_document_stats,ESTATÍSTICAS DE DOCUMENTOS
+shift_summary_performance,DESEMPENHO
+shift_summary_bonuses,BÔNUS
+time_format,{minutes}min {seconds}s
+shift_complete_success,TURNO {shift} CONCLUÍDO\nSUCESSO!
+shift_complete_failure,TURNO {shift} CONCLUÍDO\n{failure}
+strike_limit_reached,LIMITE DE ADVERTÊNCIAS ATINGIDO!
+quota_not_met,META NÃO ATINGIDA!
+shift_summary_title_with_difficulty,RESUMO DO TURNO\n{difficulty}
+runner_stats_template,\nESTATÍSTICAS DE FUGITIVOS\nTentativas de Fuga: {runner_attempts}\nMísseis Disparados: {fired}\nFugitivos Atingidos: {hit}\nAcertos Perfeitos: {perfect}\nTaxa de Acerto: {rate}%
+document_stats_template,\nESTATÍSTICAS DE DOCUMENTOS\nDocumentos Carimbados: {stamped}\nBatatas Aprovadas: {approved}\nBatatas Rejeitadas: {rejected}\nCarimbos Perfeitos: {perfect_stamps}
+bonus_stats_template,BÔNUS\nBônus de Velocidade de Processamento: {processing_speed_bonus}\nBônus de Precisão do Carimbo: {accuracy}\nBônus de Acertos Perfeitos: {perfect_hit_bonus}\nBônus de Pontuação Total: {total_score_bonus}
+performance_stats_template,\nDESEMPENHO\nTempo Decorrido: {time_taken}\nPontuação Esperada: {expected_score}\nPontuação Total: {score}\nPorcentagem de Pontuação Extra: {percent}%\nClassificação de Desempenho:\n{rating}
+performance_exceptional,Excepcional!
+performance_excellent,Excelente!
+performance_good,Bom
+performance_needs_improvement,Precisa Melhorar
+performance_poor,Ruim
+global_leaderboard_title,Placar Global\n- {difficulty}
+getting_leaderboard_scores,Carregando placares...
+reset_game_label,Reiniciar Jogo :
+reset_game_button,Reiniciar
+mute_label,Silenciar
+fullscreen_label,Tela Cheia :
+resolution_label,Resolução :
+antialiasing_label,Anti-Aliasing :
+screenshake_label,Tremor de Tela :
+mouse_sens_label,Sensibilidade do Mouse :
+Loading…,Carregando...
+You lose.,Você perdeu.
+You won!,Você venceu!
+Thanks for playing!,Obrigado por jogar!
+Please Confirm...,"Por favor, Confirme..."
+Go back to main menu?,Voltar ao menu principal?
+Quit the game?,Sair do jogo?
+Cancel,Cancelar
+OK,OK
+Controls,Controles
+Mouse Sensitivity :,Mouse Sensitivity :
+Actions & Inputs,Ações e Comandos
+Add,Add
+Remove,Remover
+Assign Key for {action},Atribuir Tecla para {action}
+Listening for input...,Aguardando entrada...
+Press again to confirm...,Pressione novamente para confirmar...
+Focus here to assign inputs.,Foque aqui para atribuir comandos.
+Already Assigned,Já Atribuído
+{key} already assigned to {action}.,{key} já atribuída a {action}.
+Remove Key for {action},Remover Tecla para {action}
+Are you sure you want to remove {key} from {action}?,Tem certeza que deseja remover {key} de {action}?
+Reset,Redefinir
+Audio,Áudio
+Master :,Master :
+Music :,Music :
+SFX :,SFX :
+Ambient :,Ambient :
+Mute :,Mute :
+Video,Vídeo
+Fullscreen :,Fullscreen :
+Resolution :,Resolution :
+Anti-Aliasing :,Anti-Aliasing :
+Disabled (Fastest),Desativado (Mais Rápido)
+8x (Slowest),8x (Mais Lento)
+Camera Shake :,Camera Shake :
+Normal,Normal
+Reduced,Reduzido
+Minimal,Mínimo
+None,Nenhum
+Game,Jogo
+Reset Game :,Reset Game :
+Do you want to reset your game data?,Deseja reiniciar seus dados de jogo?
+Back,Voltar
+TAKE THEM!,PEGUE-OS!
+"Take your documents, please.","Pegue seus documentos, por favor."
+Continue,Continuar
+Main Menu,Menu Principal
+Submit Score,Enviar Pontuação
+Restart,Reiniciar
+SHIFT SUMMARY,RESUMO DO TURNO
+Easy,Fácil
+Expert,Especialista
+Primary,Primário
+Secondary,Secundário
+Primary Interaction,Interação Primária
+Secondary Interaction,Interação Secundária
+Cancel Interaction,Cancelar Interação
+Escape,Escapar
+Dialogic Default Action,Ação Padrão de Diálogo
+Enter,Enter
+Left Mouse Button,Botão Esquerdo do Mouse
+Right Mouse Button,Botão Direito do Mouse
+Start New Game,Iniciar Novo Jogo
+Starting a new game will reset your progress. Are you sure you want to continue?,Iniciar um novo jogo irá resetar seu progresso. Tem certeza que deseja continuar?
+"Yes, Start New Game","Sim, Iniciar Novo Jogo"
+Skip,Pular
+History,Histórico
+Return,Voltar
+Restart the game?,Reiniciar o jogo?
+help_menu_button,Ajuda
+help_menu_title,Como Jogar
+help_tab_basics,Básico
+help_tab_gameplay,Jogabilidade
+help_tab_minigames,Minijogos
+help_basics_intro,"[b]Bem-vindo a Spud Customs![/b]\n\nVocê é um oficial da fronteira em um posto de controle alfandegário de batatas. Seu trabalho é inspecionar documentos, aprovar ou rejeitar imigrantes e deter aqueles que tentam cruzar a fronteira ilegalmente."
+help_basics_gate,[b]Abrindo o Portão[/b]\nClique no botão do portão ou use o megafone para chamar a próxima batata para sua cabine.
+help_basics_documents,"[b]Inspecionando Documentos[/b]\nArraste documentos para sua mesa para inspecioná-los. Verifique nomes, datas e outros detalhes de acordo com as regras de imigração do turno atual."
+help_basics_stamping,"[b]Carimbando Documentos[/b]\nUse o carimbo APROVADO (verde) para permitir a passagem de imigrantes, ou o carimbo NEGADO (vermelho) para rejeitá-los. A precisão do carimbo afeta sua pontuação!"
+help_basics_runners,[b]Fugitivos da Fronteira[/b]\nAlgumas batatas tentarão passar correndo pelo posto de controle! Clique para disparar mísseis e detê-los. O tempo perfeito concede pontos bônus.
+help_basics_xray,"[b]Scanner de Raio-X[/b]\nA partir do Turno 3, use a máquina de Raio-X para escanear batatas em busca de contrabando escondido."
+help_gameplay_quota,[b]Atingindo a Cota[/b]\nCada turno tem uma cota de batatas que você deve processar. Não atingir a cota resultará em demissão!
+help_gameplay_strikes,"[b]Advertências[/b]\nCometer erros (aprovações/rejeições incorretas, fugitivos perdidos) lhe dará advertências. Muitas advertências e é fim de jogo!"
+help_gameplay_rules,"[b]Regras de Imigração[/b]\nVerifique o quadro de avisos para as regras atuais. As regras mudam a cada turno - regiões banidas, documentos exigidos e condições especiais."
+help_gameplay_scoring,"[b]Pontuação[/b]\nGanhe pontos por decisões corretas, carimbos perfeitos e por deter fugitivos. Bônus são concedidos por velocidade e precisão!"
+help_gameplay_difficulty,"[b]Níveis de Dificuldade[/b]\nFácil: Tempo mais flexível, menos regras. Normal: Experiência padrão. Especialista: Tempo rigoroso, regras complexas, pontuações mais altas."
+help_minigames_intro,"[b]Minijogos[/b]\nAo longo dos seus turnos, você encontrará minijogos que podem render pontos bônus. Complete-os para obter recompensas ou pule sem penalidade."
+help_minigames_document_scanner,"[b]Scanner de Documentos[/b] (Turno 1+)\nUse luz UV para encontrar elementos ocultos nos documentos. Clique para marcar marcas d'água, carimbos e símbolos. Encontre todos os elementos antes que o tempo acabe!"
+help_minigames_stamp_sorting,[b]Classificação de Carimbos[/b] (Turno 2+)
+help_minigames_fingerprint_match,[b]Correspondência de Impressões Digitais[/b] (Turno 3+)
+help_minigames_code_breaker,[b]Quebra-Código[/b] (Turno 4+)
+help_minigames_border_chase,[b]Perseguição na Fronteira[/b] (Turno 5+)
+help_tab_lore,História
+help_lore_world_intro,[b]O Mundo de Spud[/b]
+help_lore_nation,[b]A Nação de Spud[/b]
+help_lore_your_role,[b]Seu Papel[/b]
+help_lore_border,[b]A Grande Muralha[/b]
+help_lore_secrets,[b]Reserva de Raízes[/b]

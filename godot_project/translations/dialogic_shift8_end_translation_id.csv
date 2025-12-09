@@ -1,0 +1,59 @@
+﻿keys,id
+Text/265/text,Giliran kerja berakhir dalam keheningan yang tidak nyaman. Patroli keamanan berlipat ganda. Semua orang bergerak berbisik-bisik.
+Text/266/text,Kau sedang menuju ke tempat tinggalmu saat kau mendengarnya - [color=YELLOW]teriakan dari sayap petugas[/color].
+Text/267/text,Kau memutar sudut dan melihat pasukan keamanan [pulse freq=3][color=RED]mendobrak pintu Sasha[/color][/pulse].
+Text/268/text,Suara Kepala Yukon menggelegar. SASHA SI UBI JALAR! Kau ditangkap atas tuduhan [color=CRIMSON]pengkhianatan terhadap bangsa Spud![/color]
+Text/269/text,"Sasha diseret keluar, meronta. Matanya menantang bahkan saat penjaga memelintir lengannya ke belakang punggungnya."
+Text/26a/text,[tornado radius=4 freq=3][color=CHARTREUSE]KEBENARAN AKAN TERUNGKAP! KAU TIDAK BISA MEMBUNGKAM KAMI SEMUA![/color][/tornado]
+Text/26b/text,Tatapannya menemukanmu di antara kerumunan penonton. Waktu seolah berhenti.
+Text/26c/text,Pengenalan... lalu [color=CRIMSON]pemahaman yang menghancurkan[/color]. Kau mengkhianati lokasinya. Dia tahu.
+Text/26d/text,Dia tidak berbicara. Tatapan itu sudah cukup. [color=STEEL_BLUE]Kekecewaan yang lebih dalam dari kebencian.[/color]
+Text/26e/text,Kilasan sesuatu - [color=CHARTREUSE]harapan? kepercayaan?[/color] - melintas di wajahnya.
+Text/26f/text,"Bibirnya bergerak tanpa suara: ""[color=CHARTREUSE]Akarnya tumbuh dalam.[/color]"" Sebuah pesan. Sebuah pengingat."
+Text/270/text,"Russet muncul dari bayangan, kepuasan memancar dari setiap pori."
+Text/271/text,"Nah, nah. [color=CRIMSON]Si ubi jalar menjadi busuk[/color]. Aku selalu tahu ada sesuatu yang busuk tentangmu, Sasha."
+Text/272/text,"Russet mengangkat sebuah map. [color=DARK_VIOLET]Manifesto kecilmu[/color]. ""Bukti""mu. Semua sudah ditemukan kembali."
+Text/273/text,Apa kau benar-benar berpikir bisa menggoyahkan [pulse freq=2][color=DARK_VIOLET]Cadangan Akar[/color][/pulse]? Menggoyahkan AKU?
+Text/274/text,"Salinannya sudah tersebar, Russet. Dunia akan tahu apa yang kau lakukan pada rakyat kami!"
+Text/275/text,Russet tertawa dingin. Mereka akan tahu apa yang kami beritahukan kepada mereka. Dan kau? Kau akan menjadi bagian dari [color=CRIMSON]kelompok yang sangat istimewa[/color].
+Text/276/text,"""[color=DARK_VIOLET]Campuran Pengkhianat[/color]"" - Kurasa itu terdengar bagus."
+Text/277/text,Jantungmu berdebar kencang. Setiap naluri berteriak untuk melakukan sesuatu. Tapi penjaga ada di mana-mana.
+Choice/278/text,Maju dan tuntut mereka membebaskannya (Sembrono)
+Choice/279/text,Tetap bersembunyi - hidup untuk berjuang di lain hari (Pragmatis)
+Choice/27a/text,Tangkap tatapan mata Sasha dan mengangguk - sebuah janji (Tekad)
+Text/27b/text,"Kau menerobos kerumunan. ""[color=CHARTREUSE]Tunggu! Dia tidak melakukan kesalahan apa pun![/color]"""
+Text/27c/text,"Kepala Yukon menoleh tajam ke arahmu. ""[color=RED]Tangkap dia juga![/color] Jelas seorang kaki tangan!"""
+Text/27d/text,"Murphy mencengkerammu, menarikmu mundur. ""[color=STEEL_BLUE]Mereka bingung dalam kekacauan ini! LARI![/color]"""
+Text/27e/text,Murphy mendorongmu ke koridor samping saat penjaga mendekatimu.
+Text/27f/text,"Penjaga menangkapmu. Senyum Russet melebar. ""[color=CRIMSON]Dua pengkhianat dengan harga satu.[/color]"""
+Text/280/text,"Kau menyusut kembali ke bayangan, membenci dirimu sendiri sekuat tenaga. [color=STEEL_BLUE]Pengecut.[/color]"
+Text/281/text,Tapi hidup. Dan bebas. Untuk saat ini.
+Text/282/text,"Kau menangkap mata Sasha. Anggukan lambat, disengaja. [color=CHARTREUSE]Aku akan datang menjemputmu.[/color]"
+Text/283/text,"Dia melihat. Senyum terkecil. Lalu dia diseret memutar sudut, menghilang."
+Text/284/text,"Dia menemukanmu di tengah kekacauan. Wajahnya seperti topeng, tapi matanya menyala."
+Text/285/text,Mereka membawanya ke [color=CRIMSON]sayap pemrosesan[/color]. Sub-level 3. Di sanalah mereka membawa istriku.
+Text/286/text,Dia menekan sesuatu ke tanganmu - sebuah [color=GOLD]kartu kunci keamanan[/color].
+Text/287/text,Saat waktunya tiba... [color=CHARTREUSE]Aku akan berpaling[/color]. Demi istriku. Demi mereka semua.
+Text/288/text,"Murphy menarikmu ke ruang penyimpanan, terengah-engah."
+Text/289/text,Ini dia. Ini [color=CRIMSON]benar-benar terjadi[/color]. Mereka menangkap Sasha. Mereka akan memprosesnya sebelum pagi.
+Text/28a/text,"Itu [color=STEEL_BLUE]bodoh[/color]. Berani, tapi bodoh. Kau ada di daftar mereka sekarang."
+Text/28b/text,Perlawanan sedang merencanakan sesuatu. Besok. Itu satu-satunya kesempatan kita untuk menyelamatkannya.
+Text/28c/text,Kau ikut? [color=CHARTREUSE]Sepenuhnya ikut?[/color]
+Choice/28d/text,Sepenuhnya. Apa pun yang diperlukan untuk menyelamatkan Sasha.
+Choice/28e/text,Aku perlu berpikir. Ini terlalu cepat.
+Text/28f/text,Murphy menepuk bahumu. [color=CHARTREUSE]Kalau begitu kita bergerak saat fajar. Akarnya tumbuh dalam.[/color]
+Text/290/text,"Wajah Murphy mengeras. Berpikir cepat. Besok pada jam ini, dia akan menjadi [color=DARK_VIOLET]Cadangan Akar[/color]."
+Text/291/text,"Kau berbaring terjaga, menatap langit-langit. Wajah Sasha. Pembangkangannya. Ketakutannya."
+Text/292/text,Kau mengeluarkan foto istri yang hilang. Wajah lain yang tidak bisa kau selamatkan.
+Text/293/text,[color=CHARTREUSE]Tidak kali ini.[/color]
+Text/294/text,"Besok, semuanya berubah. Dengan satu atau lain cara."
+Text/295/text,[pulse freq=2][color=YELLOW]Tidak ada lagi berdiri di pinggir lapangan.[/color][/pulse]
+Text/296/text,"Selnya dingin. Melalui dinding, kau bisa mendengar Sasha di suatu tempat, sedang ""diinterogasi."""
+Text/297/text,"Besok, kata mereka. Kalian berdua akan [color=DARK_VIOLET]diproses[/color] bersama."
+Text/298/text,Kecuali perlawanan datang. Kecuali seseorang menyelamatkan kalian berdua.
+Text/299/text,[color=STEEL_BLUE]Malam terpanjang dalam hidupmu terbentang di depan.[/color]
+Choice/278/disabled_text,
+Choice/279/disabled_text,
+Choice/27a/disabled_text,
+Choice/28d/disabled_text,
+Choice/28e/disabled_text,

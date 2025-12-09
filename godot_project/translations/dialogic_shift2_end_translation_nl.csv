@@ -1,0 +1,26 @@
+﻿keys,nl
+Text/200/text,"Hé, nieuwe spruit! Zware dienst, hè? Mijn naam is Murphy. Ik ben hier nu drie seizoenen."
+Text/201/text,"Ik zag je eerder met Sasha praten. Zij is... [color=STEEL_BLUE]anders[/color]. Op een goede manier anders, denk ik."
+Choice/202/text,Ze lijkt aardig. Ze gaf me advies over alert blijven.
+Choice/203/text,Gewoon kennismakingen. Niets bijzonders.
+Text/204/text,Murphy kijkt zenuwachtig om zich heen. Ja
+Text/205/text,Tussen jou en mij? Die radio-uitzending over 'vermist geraakte aardappels'... mijn neef is vorige maand vermist geraakt. Hij werd afgekeurd bij zijn inspectie.
+Text/206/text,"Slim. Houd je hoofd laag, doe je werk. Dat is wat ik mezelf elke dag vertel."
+Text/207/text,Murphy's stem wordt zachter. Hoewel ik me soms afvraag waar al die afgekeurde aardappels eigenlijk naartoe gaan...
+Text/208/text,In de kantine
+Text/209/text,"Je staart naar de dikke, paarsbruine pasta. Iedereen eet het zonder vragen te stellen. Het hoort voedzaam te zijn."
+Choice/20a/text,Eet de Wortel Reserve zoals iedereen
+Choice/20b/text,Schuif het opzij - je hebt geen honger
+Text/20c/text,"De smaak is... aards. Rijk. Iets eraan voelt [color=STEEL_BLUE]ongemakkelijk bekend[/color], maar je kunt niet plaatsen waarom."
+Text/20d/text,"Een hogere officier merkt het op. ""Verspil niet, dan lijd je geen gebrek, spruit. Dat is [pulse freq=2][color=DARK_VIOLET]premium voeding[/color][/pulse] daar."""
+Text/20e/text,Je mompelt een excuus over maagklachten. De officier haalt zijn schouders op en loopt verder.
+Text/20f/text,Terug in je kwartieren kun je niet loslaten wat Sasha zei. '[color=YELLOW]Niet alles is zoals het lijkt.[/color]'
+Text/210/text,Je vroeg Russet op je eerste dag naar afgekeurde aardappels. Zijn antwoord was ontwijkend. '[color=VIOLET]Verwerkt. Volgens protocol.[/color]'
+Text/211/text,"Hoe [color=STEEL_BLUE]verwerkt[/color], precies?"
+Text/212/text,Je was zo gretig om te dienen. Zo trots om gekozen te zijn. Maar trots verklaart de [color=CRIMSON]vermist geraakte aardappels[/color] niet.
+Text/213/text,De radio zei dat meldingen van verdwijningen 'voortduren.' Dat betekent dat het al een tijdje aan de gang is.
+Text/214/text,"De slaap komt langzaam. Als dat gebeurt, droom je van [wave amp=15 freq=2][color=DARK_VIOLET]paarse rivieren[/color][/wave] die onder de controlepost stromen."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

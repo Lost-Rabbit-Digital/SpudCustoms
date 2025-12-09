@@ -1,0 +1,88 @@
+﻿keys,ko
+Text/11/text,"감자 국경은 [pulse freq=3][color=CRIMSON]혼돈[/color][/pulse]에 빠졌다. 유출된 문서들 이후, 패닉에 빠진 감자들이 검문소를 덮치며 필사적으로 탈출하려 한다."
+Text/12/text,당신은 사샤와 함께 빠져나왔다. [wave amp=20 freq=3][color=CHARTREUSE]계속 나아가야 해![/color][/wave] 이제 사람들은 진실을 안다.
+Text/13/text,"그들은 더 이상 진실을 침묵시킬 수 없다. 만약 우리가 [color=DARK_VIOLET]뿌리 비축고[/color] 시설에 잠입하여 증거를 방송할 수 있다면, 그것은 [tornado radius=3 freq=2][color=CHARTREUSE]혁명의 불씨[/color][/tornado]가 될 것이다."
+Text/14/text,그곳은 요새다. 그리고 이제 우리 가운데 [color=YELLOW]전직 세관원[/color]이 있다. 그들의 눈이 의심스럽게 가늘어진다.
+Choice/15/text,당신의 의심을 이해합니다. 하지만 저는 이 대의에 헌신합니다.
+Choice/16/text,저는 이미 모든 것을 희생했습니다. 이제 와서 물러서지 않을 겁니다.
+Text/17/text,듣기 좋은 말이군요. 하지만 그런 말은 전에도 들었습니다.
+Text/18/text,"그들이 우리가 문서를 얻는 것을 도왔어. 그건 행동이지, 말이 아니야."
+Text/19/text,"이제 와서 충성스러운 감자로 돌아갈 순 없어. 저항군에 온 걸 환영한다, 동지."
+Text/1a_rescue1/text,정찰병이 달려온다. 그녀를 찾았어! [color=CHARTREUSE]사샤가 구금 구역에 있어![/color]
+Text/1a_rescue2/text,그들이... 한 시간도 안 남았어... [tornado radius=3 freq=2][color=CRIMSON]그녀를 처리[/color][/tornado]할 준비를 하고 있어!
+Text/1a_rescue3/text,그녀를 구해야 해. [pulse freq=2][color=CHARTREUSE]이 모든 것을 그녀가 시작했어.[/color][/pulse] 그녀 없이 떠나지 않을 거야.
+Text/1a_rescue4/text,[wave amp=25 freq=3][color=YELLOW]시설을 뚫고 달려![/color][/wave] 너무 늦기 전에 사샤에게 닿아!
+Text/1a_rescue_fail1/text,당신은 비틀거린다. 앞길이 경비병들에게 막혔다!
+Text/1a_rescue_fail2/text,빅토르가 옆문을 부수고 들어온다. [color=CHARTREUSE]가! 내가 막을게![/color]
+Text/1a_rescue_fail3/text,엘레나를 위해. 그들 모두를 위해. [color=STEEL_BLUE]또 다른 이를 죽게 두지 않을 거야![/color]
+Text/1a_rescue_fail4/text,머피가 화재 경보기를 잡아당긴다. [color=CHARTREUSE]토미를 위해![/color] 스프링클러가 경비병들의 눈을 가린다!
+Text/1a_rescue_fail5/text,[color=STEEL_BLUE]내가 시선을 끌게. 그녀를 거기서 빼내![/color]
+Text/1a_rescue_fail6/text,[color=YELLOW]처리 컨베이어가 멈춰서며[/color] 불꽃을 흩뿌리고 경비병들의 시선을 분산시킨다!
+Text/1a_rescue_fail7/text,운명 — 혹은 처리된 자들의 유령이 — 당신에게 두 번째 기회를 준다.
+Text/1a_rescue5/text,사샤가 감방에서 고개를 든다. 멍들었지만 꺾이지 않았다. 그녀의 눈이 커진다. [color=CHARTREUSE]왔구나.[/color]
+Text/1a_rescue6/text,물론 왔지. [color=CHARTREUSE]이 일을 함께 끝내는 거야.[/color]
+Choice/1a_rescue7/text,다시는 널 못 볼까 봐 무서웠어.
+Choice/1a_rescue8/text,널 걱정하느라 죽는 줄 알았어. 다시는 그러지 마.
+Choice/1a_rescue9/text,할 일이 있어. 아이다호가 기다리고 있어.
+Text/1a_rescue10/text,[color=CHARTREUSE]사샤가 당신을 잠시 껴안습니다.[/color] 올 줄 알았어. 한 번도 의심하지 않았어.
+Text/1a_rescue11/text,이제 그들이 데려간 모든 이들의 대가를 치르게 하자. [color=CHARTREUSE]함께.[/color]
+Text/1a_rescue12/text,사샤는 고통 속에서도 희미하게 미소 짓습니다. [color=STEEL_BLUE]노력해볼게.[/color] 하지만 어떤 것들은 위험을 감수할 가치가 있어.
+Text/1a_rescue13/text,네가 여기 있다는 게 그걸 증명해. 이제 끝내자.
+Text/1a_rescue14/text,사샤는 고개를 끄덕이며 결의를 다집니다. [color=CHARTREUSE]네 말이 맞아.[/color] 감정은 나중에 생각해도 돼.
+Text/1a_rescue15/text,아이다호는 자기가 이겼다고 생각하겠지. 그가 얼마나 틀렸는지 보여주자.
+Text/1a/text,"긴장감 넘치는 잠입 끝에, 당신의 팀은 [color=DARK_VIOLET]뿌리 보존 구역[/color]의 심장부에 서 있습니다. [pulse freq=3][color=CRIMSON]끔찍한 억압의 기계[/color][/pulse]가 적나라하게 드러난 곳에."
+Text/1b/text,[wave amp=25 freq=3][color=RED]경보가 울려 퍼지고[/color][/wave] 경비병들은 당신의 침입에 대응하기 위해 허둥지둥합니다. 당신은 복도를 질주하며 보안 시스템을 피합니다.
+Text/1c/text,"화면이 깜빡이며 켜집니다. ""이런 이런, [color=CRIMSON]배신자[/color]가 반란군 쓰레기들과 함께 돌아왔군."""
+Text/1d/text,감자국의 발전을 막을 수 있을 거라고 생각했나? [color=DARK_VIOLET]뿌리 보존 구역[/color]은 이 나라의 생명줄이다.
+Text/1e/text,하지만 걱정 마라. 너는 여전히 감자국을 섬기게 될 테니... [tornado radius=4 freq=3][color=DARK_VIOLET]가공 수조에서 말이다![/color][/tornado]
+Text/1f/text,화면이 갑자기 검게 변합니다.
+Text/20/text,"당신은 결의에 찬 얼굴로 다른 이들을 돌아봅니다. ""아이다호의 벙커에 도착해야 해. 당장!"""
+Text/158/text,보안군이 포위해 온다! [pulse freq=3][color=YELLOW]뚫고 나아가라![/color][/pulse]
+Text/21_fail1/text,경비병들이 사방에서 조여옵니다. [color=CRIMSON]도망칠 곳이 없어![/color]
+Text/21_fail2/text,"빅토르가 경비병들 뒤에 나타나, 강철처럼 차가운 목소리로 말합니다. [color=STEEL_BLUE]무기를 내려놔. 당장.[/color]"
+Text/21_fail3/text,경비병들은 망설입니다. 빅토르는 그들 중 한 명이었으니까요. [color=CRIMSON]엘레나의 이름이 그 명단에 있어. 너희 가족들도 다음 차례가 될 수 있다고.[/color]
+Text/21_fail4/text,일부 경비병들은 무기를 내립니다. 다른 이들은 도망칩니다. 길이 열립니다.
+Text/21_fail5/text,"동쪽 날개에서 폭발이 건물을 뒤흔듭니다. 통신망 너머로 머피의 목소리가 지직거립니다. [color=CHARTREUSE]""내 양동 작전이야! 움직여!""[/color]"
+Text/21_fail6/text,[color=STEEL_BLUE]경비병들은 폭발음이 들리는 쪽으로 흩어집니다. 토미라면 자랑스러워했을 거야.[/color]
+Text/21_fail7/text,사샤가 뒤에서 선두 경비병을 덮칩니다. [color=CHARTREUSE]그 감방에서 살아남은 게 네가 죽는 걸 보려고 한 게 아니야![/color]
+Text/21_fail8/text,[color=STEEL_BLUE]도망쳐! 내가 맡을게![/color]
+Text/21/text,"당신의 일행은 보안군의 파도를 뚫고 싸우며, 간신히 붙잡히는 것을 피합니다. 사샤의 저항군들은 양동 작전을 펼쳐 당신의 앞길을 틔워줍니다."
+Text/22/text,"유지보수 터널을 통한 끔찍한 탈출 끝에, 당신은 마침내 아이다호의 개인 벙커로 향하는 보안 엘리베이터에 도착합니다."
+Text/23/text,"사샤와 동료들이 당신 곁에 있는 가운데, 당신은 마침내 아이다호와 대면합니다."
+Text/24/text,"끝났어, 아이다호. 네 비밀은 드러났어. 어떻게 끝날지는... [pulse freq=2]네게 달렸어.[/pulse]"
+Choice/25/text,평화로운 정권 이양 협상 (외교적)
+Choice/26/text,아이다호의 즉각적인 체포 요구 (정의)
+Choice/27/text,아이다호의 죄에 대한 자경단식 정의 실현 (복수)
+Choice/28/text,루트 리저브 기반 시설 해체에 집중 (해체)
+Text/29/text,"아이다호, 더 이상의 유혈 사태로 끝날 필요는 없어. 네가 협력한다면..."
+Text/2a/text,"오, 이 [color=STEEL_BLUE]이상주의적인 바보[/color] 같으니. 이걸 협상이라고 생각하나?"
+Text/2b/text,"아이다호가 버튼을 부수자 [color=RED]경보가 울리기 시작한다[/color]. ""내가 너에게 줄 유일한 것은 [color=DARK_VIOLET]튀김 통으로 가는 편도 티켓뿐이다![/color]"""
+Text/2c/text,"그렇게는 안 될 걸, 아이다호. 경비병들! 너희는 서류를 봤잖아, [color=YELLOW]그가 너희 가족들에게 무슨 짓을 했는지 알잖아.[/color]"
+Text/2d/text,거구의 경비병이 앞으로 나서서 아이다호를 재빨리 땅에 쓰러뜨린다.
+Text/2e/text,총성이 방 안에 울려 퍼진다. 화면이 검게 변한다.
+Text/2f/text,"아이다호, 스퍼드의 감자 민족의 이름으로, [color=CHARTREUSE]체포한다![/color]"
+Text/30/text,끝났어. 민중이 말했어. [color=CHARTREUSE]우리의 뿌리가 고통이 아닌 흙에 닿는 새로운 스퍼드를 건설할 거야.[/color]
+Text/31/text,"아이다호, 너에게는 [color=CRIMSON]어떤 협상도, 어떤 자비도 없을 것이다[/color]. 폭군의 정의만이 네가 받을 전부다."
+Text/32/text,"심판자. 그것이 바로 나다. [color=CHARTREUSE]희생된 모든 감자를 위해, 우리는 우리의 미래를 되찾을 것이다![/color]"
+Text/33/text,"그를 잊어. 그는 증상일 뿐, 병이 아니야. [color=CHARTREUSE]이 괴물의 모든 뿌리와 줄기를 뽑아버려.[/color]"
+Text/34/text,가야 해! 지금 당장!
+Text/35/text,[color=DARK_VIOLET]루트 리저브[/color]의 몰락은 스퍼드 전역에 변화의 들불을 지폈다.
+Text/36/text,"모든 지방의 감자들이 들고일어나, [color=CHARTREUSE]자신들의 국가를 위한 새로운 비전[/color]을 받아들였다."
+Text/37/text,"우리가 우리의 뿌리, 우리를 이곳으로 이끈 이상에 충실하는 한... [color=CHARTREUSE]우리는 길을 찾을 거야.[/color]"
+Text/38/text,"그리하여, 옛 스퍼드의 잿더미 속에서, [color=CHARTREUSE]새로운 국가가 뿌리내리기 시작한다[/color]. [color=DARK_VIOLET]루트 리저브[/color]의 통치는 끝났다."
+Text/151/text,"[color=CHARTREUSE]새로운 새벽을 함께 바라보는 동안, 사샤가 가까이 다가와 당신의 손을 잡는다.[/color] 우리가 이걸 만들었어. 너와 나."
+Text/152/text,"우리가 우리의 뿌리, 우리를 이곳으로 이끈 이상에 충실하는 한... [color=CHARTREUSE]우리는 길을 찾을 거야.[/color] 함께."
+Text/153/text,[color=CHARTREUSE]당신이 그녀의 손을 꽉 쥔다. 함께.[/color]
+Text/154/text,[color=STEEL_BLUE]사샤가 당신 옆에 선다.[/color] 당신의 불꽃이 그들의 제국을 불태운 불씨를 지폈어.
+Text/155/text,[color=STEEL_BLUE]분노는 식어 결의가 되었습니다. 아직 할 일이 남아있습니다.[/color]
+Text/156/text,[color=STEEL_BLUE]사샤가 당신에게 격려의 미소를 보냅니다.[/color] 당신은 그 검문소에서부터 먼 길을 걸어왔습니다. 우리 모두가 그랬듯이요.
+Text/157/text,"[color=STEEL_BLUE]죄책감은 완전히 사라지지 않을지라도, 당신은 재건에서 목적을 찾았습니다.[/color]"
+Choice/15/disabled_text,
+Choice/16/disabled_text,
+Choice/25/disabled_text,
+Choice/26/disabled_text,
+Choice/27/disabled_text,
+Choice/28/disabled_text,
+Choice/1a_rescue7/disabled_text,
+Choice/1a_rescue8/disabled_text,
+Choice/1a_rescue9/disabled_text,

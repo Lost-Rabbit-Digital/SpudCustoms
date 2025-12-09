@@ -1,0 +1,24 @@
+﻿keys,hu
+Text/78/text,"Újabb nap az ellenőrzőponton. A krumplisor most hosszabb, mint valaha, mindenki feszült."
+Text/79/text,"Új utasítások felülről. [wave amp=15 freq=3][color=DARK_ORANGE]Megduplázzuk az elutasításokat[/color][/wave]. Minden krumplit, amit veszélyesnek ítélnek, azonnal visszatartanak."
+Text/7a/text,Különleges megbízatásom van. Hírszerzési adataink vannak [pulse freq=2][color=CRIMSON]zavarkeltőkről[/color][/pulse]. Legyenek éberek az ellenőrzés során.
+Choice/7b/text,"Igen, uram, nem fogom cserbenhagyni"
+Choice/7c/text,Milyen típusú zavarkeltőkről beszélünk?
+Text/7d/text,"Jó. Tudtam, hogy számíthatok magára. Ezzel a hozzáállással messzire fog jutni."
+Text/7e/text,"Azok, akik [color=CRIMSON]veszélyeztetik az életmódunkat[/color]. Ne tegyen fel túl sok kérdést, ha tudja, mi a jó magának."
+Text/7f/text,"[color=STEEL_BLUE]Könyörgök magának![/color] A feleségem épp mögöttem lett volna, de [tornado radius=2 freq=3]soha nem jutott át a vámon[/tornado]."
+Text/80/text,"Senki sem hajlandó elmondani, mi történt vele. Kérem, [color=CHARTREUSE]segítsen megtalálni![/color]"
+Choice/81/text,"Sajnálom, de nem tudok semmit tenni."
+Choice/82/text,"Hadd nézzem meg, mit tudok kideríteni. Nem ígérek semmit."
+Text/83/text,"Mint mindenki más... [color=STEEL_BLUE]Nyomja meg a lelkiismerete, ahogy az enyémet.[/color]"
+Text/84/text,"Köszönöm! Még egy apró remény is jobb, mint semmi. Itt az ő fényképe. Kérem, találja meg."
+Text/85/text,Láttam ezt a beszélgetést. [color=DARK_ORANGE]A kitaszítottakkal való együttérzés csak bajt hoz.[/color] Maradjon összpontosított a feladatán.
+Choice/7b/disabled_text,
+Choice/82/disabled_text,
+Choice/81/disabled_text,
+Choice/7c/disabled_text,
+Text/7fb/text,"[tornado radius=2 freq=3]Sosem jutott át a vámon[/tornado]. Azt mondták, 'rendellenesség' volt a papírjaiban."
+Text/83b/text,"A kétségbeesett krumpli elbotorkál. Észreveszed, hogy egy kopott fotót bámul, mielőtt eltűnik."
+Text/84b/text,"Egy [color=GOLD]kopott fényképet[/color] nyom a kezedbe. A neve [color=GOLD]Maris Piper[/color]. Kedves szemei vannak. Kérlek, találd meg!"
+Text/84c/text,"Ránézel a fotóra. Egy fiatal krumpli, szelíd vonásokkal és meleg mosollyal. [color=GOLD]Maris Piper[/color]."
+Text/84d/text,Hová tűnt? Az elutasítottak sora vezet... hová is pontosan?

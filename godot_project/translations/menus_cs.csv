@@ -1,0 +1,175 @@
+﻿keys,cs
+main_menu_feedback,Zpětná vazba a chyby
+main_menu_version,Verze 1.2.0
+main_menu_new_game,Nová hra
+main_menu_continue,Pokračovat
+main_menu_level_select,Výběr úrovně
+main_menu_score_attack,Útok na skóre
+main_menu_options,Možnosti
+main_menu_credits,Titulky
+main_menu_exit,Ukončit
+select_language,Jazyk
+social_discord_tooltip,Přidejte se na Discord!
+social_steam_tooltip,Navštivte nás na Steamu
+social_twitch_tooltip,Integrace Twitch
+twitch_status_disabled,Zakázáno
+twitch_status_no_viewers,Žádní diváci v poolu
+twitch_status_ready,{count} diváků připraveno
+twitch_connection_disabled,Zakázáno
+twitch_connection_disconnected,Odpojeno
+twitch_connection_connected,Připojeno
+twitch_connection_connecting,Připojování...
+options_menu_title,Možnosti
+options_difficulty,Obtížnost
+options_difficulty_easy,Snadná
+options_difficulty_normal,Normální
+options_difficulty_expert,Odborník
+options_music_volume,Hlasitost hudby
+options_sfx_volume,Hlasitost zvukových efektů
+options_camera_shake,Třesení kamery
+options_back,Zpět
+paused_menu_title,Pozastaveno
+shift_summary_title,SHRNUTÍ SMĚNY
+shift_summary_continue,Pokračovat
+shift_summary_restart,Restartujte
+shift_summary_main_menu,Hlavní menu
+shift_summary_submit_score,Odeslat skóre
+shift_summary_runner_stats,STATISTIKY BĚŽCE
+shift_summary_document_stats,STATISTIKY DOKUMENTU
+shift_summary_performance,VÝKON
+shift_summary_bonuses,BONUSY
+_FORMAT KEYS,
+time_format,{minutes}min {seconds}s
+_SHIFT SUMMARY DETAILS,
+shift_complete_success,SMĚNA {shift} DOKONČENA\nÚSPĚCH!
+shift_complete_failure,SMĚNA {shift} DOKONČENA\n{failure}
+strike_limit_reached,DOSAŽEN LIMIT POKUSŮ!
+quota_not_met,KVÓTA NESPLNĚNA!
+shift_summary_title_with_difficulty,SHRNUTÍ SMĚNY\n{difficulty}
+runner_stats_template,\nSTATISTIKY BĚŽCE\nPokusy o útěk: {runner_attempts}\nVypálené rakety: {fired}\nZasažení běžci: {hit}\nPerfektní zásahy: {perfect}\nÚspěšnost zásahů: {rate}%
+document_stats_template,STATISTIKY DOKUMENTU\nOrazítkované dokumenty: {stamped}\nSchválené brambory: {approved}\nZamítnuté brambory: {rejected}\nPerfektní razítka: {perfect_stamps}
+bonus_stats_template,BONUSY\nBonus za rychlost zpracování: {processing_speed_bonus}\nBonus za přesnost razítkování: {accuracy}\nBonus za perfektní zásahy: {perfect_hit_bonus}\nCelkový bodový bonus: {total_score_bonus}
+performance_stats_template,VÝKON\nStrávený čas: {time_taken}\nOčekávané skóre: {expected_score}\nCelkové skóre: {score}\nProcento překročení: {percent}%\nHodnocení výkonu:\n{rating}
+performance_exceptional,Výjimečný!
+performance_excellent,Vynikající!
+performance_good,Dobrý
+performance_needs_improvement,Vyžaduje zlepšení
+performance_poor,Špatný
+global_leaderboard_title,Globální žebříček\n- {difficulty}
+getting_leaderboard_scores,Získávání skóre z žebříčku...
+_PAUSE OPTIONS OVERLAY,
+reset_game_label,Restartovat hru
+reset_game_button,Resetovat
+mute_label,Ztlumit
+fullscreen_label,Celá obrazovka
+resolution_label,Rozlišení
+antialiasing_label,Anti-Aliasing
+screenshake_label,Třes obrazovky
+mouse_sens_label,Citlivost myši
+___ LOADING SCREEN,
+Loading…,Načítání...
+___ DIALOGS IN GAME,
+You lose.,Prohraješ.
+You won!,Vyhráli jste!
+Thanks for playing!,Díky za hraní!
+Please Confirm...,Prosím potvrďte...
+Go back to main menu?,Přejít zpět do hlavní nabídky?
+Quit the game?,Ukončit hru?
+Cancel,Zrušit
+OK,OK
+___ OPTIONS MENU,
+Controls,Ovládací prvky
+Mouse Sensitivity :,Citlivost myši:
+Actions & Inputs,Akce a vstupy
+Add,Přidat
+Remove,Odstranit
+Assign Key for {action},Přiřadit klíč pro {action}
+Listening for input...,Poslouchám vstup...
+Press again to confirm...,Stiskněte znovu pro potvrzení...
+Focus here to assign inputs.,Zaměřte se zde pro přiřazení vstupů.
+Already Assigned,Již přiděleno
+{key} already assigned to {action}.,{key} již přiřazen k {action}.
+Remove Key for {action},Odebrat klíč pro {action}
+Are you sure you want to remove {key} from {action}?,Opravdu chcete odstranit {key} z {action}?
+Reset,Resetovat
+Audio,Zvuk
+Master :,Mistr:
+Music :,hudba:
+SFX :,SFX:
+Ambient :,Okolní:
+Mute :,Ztlumit:
+Video,Obraz
+Fullscreen :,Celá obrazovka:
+Resolution :,rozlišení:
+Anti-Aliasing :,Anti-Aliasing:
+Disabled (Fastest),Zakázáno (nejrychlejší)
+8x (Slowest),8x (nejpomalejší)
+Camera Shake :,Chvění fotoaparátu:
+Normal,Normální
+Reduced,Snížená
+Minimal,Minimální
+None,Žádný
+Game,Hra
+Reset Game :,Resetovat hru:
+Do you want to reset your game data?,Chcete resetovat data hry?
+Back,Zadní
+_INGAME DIALOGUE,
+TAKE THEM!,Vezmi si je!
+"Take your documents, please.","Vezměte si doklady, prosím."
+_SHIFT SUMMARY SCREEN,
+Continue,Pokračovat
+Main Menu,Hlavní menu
+Submit Score,Odeslat skóre
+Restart,Restartujte
+SHIFT SUMMARY,SHRNUTÍ SHIFT
+_DIFFICULTY LEVELS,
+Easy,Snadný
+Normal,Normální
+Expert,Odborník
+Primary,Primární
+Secondary,Sekundární
+Primary Interaction,Primární interakce
+Secondary Interaction,Sekundární interakce
+Cancel Interaction,Zrušit interakci
+Escape,Uniknout
+Dialogic Default Action,Dialogická výchozí akce
+Enter,Vstupte
+Left Mouse Button,Levé tlačítko myši
+Right Mouse Button,Pravé tlačítko myši
+_NEW GAME CONFIRMATION,
+Start New Game,Spustit novou hru
+Starting a new game will reset your progress. Are you sure you want to continue?,Spuštěním nové hry se resetuje váš postup. Opravdu chcete pokračovat?
+"Yes, Start New Game","Ano, začít novou hru"
+Skip,Přeskočit
+History,Dějiny
+Return,Návrat
+Restart the game?,Restartovat hru?
+_HELP MENU,
+help_menu_button,Nápověda
+help_menu_title,Jak hrát
+help_tab_basics,Základy
+help_tab_gameplay,Hratelnost
+help_tab_minigames,Minihry
+help_basics_intro,[b]Vítejte v Bramborové Celnici
+help_basics_gate,[b]Otevření brány[/b]
+help_basics_documents,[b]Kontrola dokumentů[/b]
+help_basics_stamping,[b]Razítkování dokumentů[/b]
+help_basics_runners,[b]Uprchlíci z hranic[/b]
+help_basics_xray,[b]Rentgenový skener[/b]
+help_gameplay_quota,[b]Splnění kvóty[/b]
+help_gameplay_strikes,[b]Postihy[/b]
+help_gameplay_rules,[b]Imigrační pravidla[/b]
+help_gameplay_scoring,[b]Bodování[/b]
+help_gameplay_difficulty,[b]Úrovně obtížnosti[/b]
+help_minigames_intro,"[b]Minihry[/b]\nBěhem svých směn narazíte na minihry, za které můžete získat bonusové body. Dokončete je a získejte odměny, nebo je přeskočte bez postihu."
+help_minigames_document_scanner,"[b]Skener dokumentů[/b] (Směna 1+)\nPoužijte UV světlo k nalezení skrytých prvků na dokumentech. Kliknutím označte vodoznaky, razítka a symboly. Najděte všechny prvky, než vyprší čas!"
+help_minigames_stamp_sorting,"[b]Třídění razítek[/b] (Směna 2+)\nTřiďte padající razítka do správných přihrádek. Zelená razítka patří do SCHVÁLENO, červená do ZAMÍTNUTO. Třiďte rychle a získejte bonusové body!"
+help_minigames_fingerprint_match,[b]Shoda otisků prstů[/b] (Směna 3+)\nPřiřaďte otisky prstů z mřížky k referenčnímu vzoru. Kliknutím na shodné otisky ověřte totožnost. Vyžaduje se pečlivé pozorování!
+help_minigames_code_breaker,"[b]Lamač kódů[/b] (Směna 4+)\nProlomte tajný kód! Uhodněte 4místnou kombinaci. Zelená znamená správnou pozici, žlutá špatnou pozici. Omezený počet pokusů!"
+help_minigames_border_chase,[b]Honička na hranici[/b] (Směna 5+)\nKontraband na páse! Kliknutím na ČERVENÉ předměty je zabavte. ZELENÉ předměty nechte projet. Rychlé reflexy vám vynesou více bodů!
+help_tab_lore,Příběh
+help_lore_world_intro,"[b]Svět Brambor[/b]\n\nVítejte v zemi, kde si brambory vybudovaly vlastní civilizaci. V tomto světě hlízy chodí, mluví a vytvořily si vlastní národ se zákony, hranicemi a byrokracií."
+help_lore_nation,"[b]Národ Brambor[/b]\n\nBramborie je hrdý národ, který slibuje prosperitu všem bramborám. Národ, chráněný Velkou bramborovou zdí, udržuje přísné hraniční kontroly, aby zajistil, že vstoupit mohou jen hodné hlízy.\n\nVláda prosazuje jednotu a poslušnost a od vlasteneckých občanů je často slyšet provolání: „Sláva Bramborii!“"
+help_lore_your_role,"[b]Vaše role[/b]\n\nByl jste vybrán pro klíčovou roli v ochraně hranic. Jako celní úředník pracujete pod bedlivým dohledem dozorce Russeta.\n\nVáš blahobyt závisí na vašem výkonu. Plňte své kvóty, dodržujte pravidla a pamatujte: národ s vámi počítá."
+help_lore_border,"[b]Velká zeď[/b]\n\nMocná Velká bramborová zeď chrání národ před cizinci. Na různých kontrolních stanovištích podél zdi zajišťují úředníci jako vy, aby vstoupit mohli jen ti hodní.\n\nTi, kdo se pokusí překročit hranici bez řádných dokladů, čelí okamžitým následkům."
+help_lore_secrets,[b]Kořenová rezerva[/b]\n\nZamítnuté brambory jsou... zpracovány. Dle protokolu. Tajemná Kořenová rezerva se postará o všechny detaily.\n\nJe lepší se moc neptat. Soustřeďte se na své povinnosti. Nic víc.

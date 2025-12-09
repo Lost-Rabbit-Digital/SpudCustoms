@@ -1,0 +1,163 @@
+﻿keys,bg
+main_menu_feedback,Обратна връзка и грешки
+main_menu_version,Версия 1.2.0
+main_menu_new_game,Нова игра
+main_menu_continue,Продължи
+main_menu_level_select,Избор на ниво
+main_menu_score_attack,Атака за резултат
+main_menu_options,Настройки
+main_menu_credits,Кредити
+main_menu_exit,Изход
+select_language,Език
+social_discord_tooltip,Присъединете се към нашия Discord!
+social_steam_tooltip,Посетете ни в Steam
+social_twitch_tooltip,Twitch интеграция
+twitch_status_disabled,Изключено
+twitch_status_no_viewers,Няма зрители в пула
+twitch_status_ready,{count} зрители готови
+twitch_connection_disabled,Изключено
+twitch_connection_disconnected,Прекъсната връзка
+twitch_connection_connected,Свързано
+twitch_connection_connecting,Свързване...
+options_menu_title,Настройки
+options_difficulty,Трудност
+options_difficulty_easy,Лесно
+options_difficulty_normal,Нормално
+options_difficulty_expert,Експертно
+options_music_volume,Сила на музиката
+options_sfx_volume,Сила на звуковите ефекти
+options_camera_shake,Трус на камерата
+options_back,Назад
+paused_menu_title,Пауза
+shift_summary_title,ОБОБЩЕНИЕ НА СМЕНАТА
+shift_summary_continue,Продължи
+shift_summary_restart,Рестартирай
+shift_summary_main_menu,Главно меню
+shift_summary_submit_score,Изпрати резултат
+shift_summary_runner_stats,СТАТИСТИКА ЗА БЕГЪЛЦИ
+shift_summary_document_stats,СТАТИСТИКА ЗА ДОКУМЕНТИ
+shift_summary_performance,ИЗПЪЛНЕНИЕ
+shift_summary_bonuses,БОНУСИ
+time_format,{minutes}м {seconds}с
+shift_complete_success,СМЯНА {shift} ЗАВЪРШЕНА\nУСПЕХ!
+shift_complete_failure,СМЯНА {shift} ЗАВЪРШЕНА\n{failure}
+strike_limit_reached,ДОСТИГНАТ ЛИМИТ НА НАКАЗАНИЯ!
+quota_not_met,КВОТАТА НЕ Е ИЗПЪЛНЕНА!
+shift_summary_title_with_difficulty,ОБОБЩЕНИЕ НА СМЕНАТА\n{difficulty}
+runner_stats_template,\nСТАТИСТИКА ЗА БЕГЪЛЦИ\nОпити за бягство: {runner_attempts}\nИзстреляни ракети: {fired}\nПоразени бегълци: {hit}\nПерфектни попадения: {perfect}\nПроцент на попадения: {rate}%
+document_stats_template,\nСТАТИСТИКА ЗА ДОКУМЕНТИ\nПодпечатани документи: {stamped}\nОдобрени картофи: {approved}\nОтхвърлени картофи: {rejected}\nПерфектни печати: {perfect_stamps}
+bonus_stats_template,БОНУСИ\nБонус за скорост на обработка: {processing_speed_bonus}\nБонус за точност на печата: {accuracy}\nБонус за перфектни попадения: {perfect_hit_bonus}\nОбщ бонус за резултат: {total_score_bonus}
+performance_stats_template,\nИЗПЪЛНЕНИЕ\nИзминало време: {time_taken}\nОчакван резултат: {expected_score}\nОбщ резултат: {score}\nПроцент над очаквания резултат: {percent}%\nОценка на изпълнението:\n{rating}
+performance_exceptional,Изключително!
+performance_excellent,Отлично!
+performance_good,Добро
+performance_needs_improvement,Нуждае се от подобрение
+performance_poor,Лошо
+global_leaderboard_title,Глобална класация\n- {difficulty}
+getting_leaderboard_scores,Зареждане на резултати от класацията...
+reset_game_label,Рестартиране на играта :
+reset_game_button,Рестартиране
+mute_label,Без звук
+fullscreen_label,Цял екран :
+resolution_label,Резолюция :
+antialiasing_label,Изглаждане на ръбове :
+screenshake_label,Разклащане на екрана :
+mouse_sens_label,Чувствителност на мишката :
+Loading…,Зареждане...
+You lose.,Загубихте.
+You won!,Спечелихте!
+Thanks for playing!,"Благодарим ви, че играхте!"
+Please Confirm...,"Моля, потвърдете..."
+Go back to main menu?,Да се върнете в главното меню?
+Quit the game?,Да излезете от играта?
+Cancel,Отказ
+OK,OK
+Controls,Контроли
+Mouse Sensitivity :,Mouse Sensitivity :
+Actions & Inputs,Действия и входове
+Add,Add
+Remove,Премахни
+Assign Key for {action},Присвои клавиш за {action}
+Listening for input...,Изчаквам въвеждане...
+Press again to confirm...,Натисни отново за потвърждение...
+Focus here to assign inputs.,"Фокусирай тук, за да присвоиш въвеждания."
+Already Assigned,Вече присвоено
+{key} already assigned to {action}.,{key} вече присвоено на {action}.
+Remove Key for {action},Премахни клавиш за {action}
+Are you sure you want to remove {key} from {action}?,"Сигурни ли сте, че искате да премахнете {key} от {action}?"
+Reset,Нулиране
+Audio,Аудио
+Master :,Master :
+Music :,Music :
+SFX :,SFX :
+Ambient :,Ambient :
+Mute :,Mute :
+Video,Видео
+Fullscreen :,Fullscreen :
+Resolution :,Resolution :
+Anti-Aliasing :,Anti-Aliasing :
+Disabled (Fastest),Изключено (Най-бързо)
+8x (Slowest),8x (Най-бавно)
+Camera Shake :,Camera Shake :
+Normal,Нормално
+Reduced,Намалено
+Minimal,Минимално
+None,Няма
+Game,Игра
+Reset Game :,Reset Game :
+Do you want to reset your game data?,Искате ли да нулирате данните си от играта?
+Back,Назад
+TAKE THEM!,ХВАНЕТЕ ГИ!
+"Take your documents, please.","Вземете си документите, моля."
+Continue,Продължи
+Main Menu,Главно меню
+Submit Score,Изпрати резултат
+Restart,Рестартирай
+SHIFT SUMMARY,ОБОБЩЕНИЕ НА СМЯНАТА
+Easy,Лесно
+Expert,Експертно
+Primary,Основно
+Secondary,Вторично
+Primary Interaction,Основно взаимодействие
+Secondary Interaction,Вторично взаимодействие
+Cancel Interaction,Отмени взаимодействието
+Escape,Изход
+Dialogic Default Action,Действие по подразбиране на диалога
+Enter,Въведи
+Left Mouse Button,Ляв бутон на мишката
+Right Mouse Button,Десен бутон на мишката
+Start New Game,Започни нова игра
+Starting a new game will reset your progress. Are you sure you want to continue?,"Започването на нова игра ще изтрие напредъка ви. Сигурни ли сте, че искате да продължите?"
+"Yes, Start New Game","Да, започни нова игра"
+Skip,Пропусни
+History,История
+Return,Връщане
+Restart the game?,Рестартирате играта?
+help_menu_button,Помощ
+help_menu_title,Как се играе
+help_tab_basics,Основи
+help_tab_gameplay,Геймплей
+help_tab_minigames,Миниигри
+help_basics_intro,"[b]Добре дошли в Spud Customs![/b]\n\nВие сте граничен служител на митнически пункт за картофи. Вашата работа е да инспектирате документи, да одобрявате или отхвърляте имигранти и да спирате тези, които се опитват да преминат границата нелегално."
+help_basics_gate,"[b]Отваряне на портата[/b]\nКликнете върху бутона на портата или използвайте мегафона, за да извикате следващия картоф до вашата кабина."
+help_basics_documents,"[b]Проверка на документи[/b]\nПлъзнете документите до бюрото си, за да ги проверите. Проверете имена, дати и други детайли спрямо имиграционните правила за текущата смяна."
+help_basics_stamping,"[b]Подпечатване на документи[/b]\nИзползвайте печата ОДОБРЕНО (зелен), за да пропуснете имигрантите, или печата ОТХВЪРЛЕНО (червен), за да ги отхвърлите. Точността на печата влияе на резултата ви!"
+help_basics_runners,"[b]Бегълци от границата[/b]\nНякои картофи ще се опитат да избягат покрай контролния пункт! Кликнете, за да изстреляте ракети и да ги спрете. Перфектният тайминг дава бонус точки."
+help_basics_xray,"[b]Рентгенов скенер[/b]\nЗапочвайки от Смяна 3, използвайте рентгеновата машина, за да сканирате картофите за скрита контрабанда."
+help_gameplay_quota,"[b]Изпълнение на квотата[/b]\nВсяка смяна има квота от картофи, които трябва да обработите. Ако не изпълните квотата, ще бъдете уволнени!"
+help_gameplay_strikes,"[b]Наказания[/b]\nПравенето на грешки (грешни одобрения/отхвърляния, пропуснати бегълци) ви носи наказания. Твърде много наказания и играта свършва!"
+help_gameplay_rules,"[b]Имиграционни правила[/b]\nПроверете таблото за актуални правила. Правилата се променят всяка смяна – забранени региони, необходими документи и специални условия."
+help_gameplay_scoring,"[b]Точкуване[/b]\nПечелете точки за правилни решения, перфектни печати и спиране на бегълци. Бонуси се присъждат за скорост и точност!"
+help_gameplay_difficulty,"[b]Нива на трудност[/b]\nЛесно: По-толерантен тайминг, по-малко правила. Нормално: Стандартно преживяване. Експерт: Строг тайминг, сложни правила, по-високи резултати."
+help_minigames_intro,"[b]Миниигри[/b]\nПо време на смените си ще срещате миниигри, които могат да ви донесат бонус точки. Изпълнете ги за награди или ги пропуснете без наказание."
+help_minigames_document_scanner,"[b]Скенер за документи[/b] (Смяна 1+)\nИзползвайте UV светлина, за да намерите скрити елементи по документите. Кликнете, за да маркирате водни знаци, печати и символи. Намерете всички елементи, преди да изтече времето!"
+help_minigames_stamp_sorting,"[b]Сортиране на печати[/b] (Смяна 2+) Сортирайте падащите печати в правилните кошове. Зелените печати отиват за ОДОБРЕНИ, червените печати отиват за ОТХВЪРЛЕНИ. Сортирайте бързо за бонус точки!"
+help_minigames_fingerprint_match,"[b]Съвпадение на пръстови отпечатъци[/b] (Смяна 3+) Сравнете пръстовите отпечатъци от мрежата с референтния образец. Кликнете върху съвпадащите отпечатъци, за да потвърдите самоличността. Изисква се внимателно наблюдение!"
+help_minigames_code_breaker,"[b]Разбивач на кодове[/b] (Смяна 4+) Разбийте тайния код! Познайте 4-цифрената комбинация. Зелено означава правилна позиция, жълто означава грешна позиция. Ограничен брой опити!"
+help_minigames_border_chase,"[b]Гранично преследване[/b] (Смяна 5+) Контрабанда на конвейера! Кликнете върху ЧЕРВЕНИТЕ предмети, за да ги конфискувате. Оставете ЗЕЛЕНИТЕ предмети да преминат. Бързите рефлекси носят повече точки!"
+help_tab_lore,История
+help_lore_world_intro,"[b]Светът на Клубен[/b]\n\nДобре дошли в земя, където картофите са изградили своя собствена цивилизация. В този свят клубените ходят, говорят и са създали своя собствена нация със закони, граници и бюрокрация."
+help_lore_nation,"[b]Нацията Клубен[/b]\n\nКлубен е горда нация, която обещава просперитет за всички картофи. Защитена от Великата стена на Клубен, нацията поддържа строг граничен контрол, за да гарантира, че само достойни клубени могат да влязат.\n\nПравителството насърчава единството и подчинението, като патриотични граждани често се чуват да провъзгласяват: ""Слава на Клубен!"""
+help_lore_your_role,"[b]Вашата роля[/b]\n\nВие сте избрани за решаваща роля в защитата на границите. Като митнически служител, вие работите под зоркия поглед на Надзирател Ръсет.\n\nВашето благосъстояние зависи от вашето представяне. Изпълнявайте квотите си, спазвайте правилата и помнете: нацията разчита на вас."
+help_lore_border,"[b]Великата стена[/b]\n\nМогъщата Велика стена на Клубен защитава нацията от външни лица. На различни контролно-пропускателни пунктове по стената, служители като вас гарантират, че само достойните могат да влязат.\n\nТези, които се опитат да преминат границата без надлежна документация, се сблъскват с незабавни последици."
+help_lore_secrets,[b]Коренов резерв[/b]\n\nОтхвърлените картофи са... обработени. Според протокола. Мистериозният Коренов резерв се занимава с всички подробности.\n\nНай-добре е да не задавате твърде много въпроси. Съсредоточете се върху задълженията си. Нищо повече.

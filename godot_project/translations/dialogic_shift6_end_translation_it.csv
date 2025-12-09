@@ -1,0 +1,43 @@
+﻿keys,it
+Text/240/text,"Mentre il turno serale volge al termine, la maggior parte degli ufficiali se n'è andata. Solo tu e una manciata di guardie rimanete."
+Text/241/text,Una guardia corpulenta si avvicina alla tua postazione. Mi chiamo Viktor. Sono di guardia notturna.
+Text/242/text,"I suoi occhi sono stanchi, tormentati. Sei quello nuovo, vero? Quello che Russet continua a osservare?"
+Choice/243/text,Sto solo cercando di fare il mio lavoro. Perché Russet mi osserva?
+Choice/244/text,C'è qualcosa che dovrei sapere?
+Text/245/text,Scrolla pesantemente le spalle. Russet osserva tutti quelli che fanno domande. Mia [color=STEEL_BLUE]moglie ha fatto domande[/color] una volta.
+Text/246/text,Non è più qui per farne.
+Text/247/text,"Si guarda intorno, poi abbassa la voce. Solo... stai attento a chi ti fidi."
+Text/248/text,E chi [color=CRIMSON]condanni[/color]. Alcuni di noi ricordano ogni volto che abbiamo mandato alla lavorazione.
+Text/249/text,"Una patata nervosa si avvicina. I documenti sembrano in ordine, ma noti la [color=CHARTREUSE]spilla a foglia discreta[/color] sul loro colletto."
+Text/24a/text,"Fanno scivolare i loro documenti. Una minuscola nota è infilata all'interno: ""[color=CHARTREUSE]Sasha mi ha mandato. Pacchetto per la rete. Per favore.[/color]"""
+Text/24b/text,Il nuovo [color=DARK_ORANGE]RealityScan[/color] lampeggia pronto alla tua postazione. Una scansione e rileverà elementi falsificati nei loro documenti.
+Choice/24c/text,Fingi che lo scanner si sia guastato e lasciali passare
+Choice/24d/text,Usa lo scanner come richiesto - non puoi rischiare l'esposizione
+Choice/24e/text,"Fai segno a Viktor di guardare dall'altra parte, poi lasciali passare"
+Text/24f/text,"Batti sullo scanner, aggrotti la fronte, lo batti di nuovo. ""Questa cosa maledetta sta facendo i capricci. Vai pure."""
+Text/250/text,"Il sollievo inonda il loro volto. Mormorano ""[color=CHARTREUSE]Grazie[/color]"" e si affrettano a passare."
+Text/251/text,"Incroci il suo sguardo e annuisci verso l'agente. Lui guarda loro, poi te."
+Text/252/text,"Si volta deliberatamente, studiando il muro. ""[color=STEEL_BLUE]Lo scanner ha avuto problemi tutto il giorno.[/color]"""
+Text/253/text,"L'agente scivola via. Viktor non dice nulla, ma ora avete condiviso un segreto."
+Text/254/text,"Esegui la scansione. La macchina [color=RED]suona a tutto volume[/color]. ""Documentazione falsificata rilevata."""
+Text/255/text,"L'orrore si dipinge sul loro volto. ""[color=CRIMSON]Non capisci cosa hai fatto...[/color]"""
+Text/256/text,"Lui e le altre guardie si stringono intorno. L'agente viene trascinato via, fissandoti ancora."
+Text/257/text,Sasha ti intercetta nell'ombra. Quell'agente stava trasportando [color=CHARTREUSE]copie dei manifesti[/color] ai nostri contatti all'esterno.
+Text/258/text,"Grazie a te, la verità si diffonderà oltre i confini di Spud. [color=CHARTREUSE]Hai fatto una vera differenza.[/color]"
+Text/259/text,Gli occhi di Sasha si spalancano. Viktor ha aiutato? Avevo un presentimento su di lui. Sua moglie era...
+Text/25a/text,Si interrompe. Abbiamo più alleati di quanto pensassi.
+Text/25b/text,"Sasha ti trova, la sua espressione è fredda. Quell'agente aveva una famiglia. Tre germogli a casa."
+Text/25c/text,Capisco la paura. Ma [color=CRIMSON]la paura ha delle conseguenze[/color]. Saranno processati entro domattina.
+Text/25d/text,Spero che la tua fedina pulita ne valga la pena.
+Text/25e/text,Murphy si intrufola nei tuoi alloggi. Ho sentito che c'è stato un po' di trambusto alla tua stazione stasera.
+Text/25f/text,[color=CHARTREUSE]Bene. Ora ci siamo dentro insieme.[/color] Non si torna indietro.
+Text/260/text,Il volto di Murphy si incupisce. Io... pensavo fossi con noi. Cosa è successo?
+Text/261/text,Il turno di domani sarà diverso. La posta in gioco non è mai stata così alta.
+Text/262/text,"Ma per la prima volta, ti senti dalla [color=CHARTREUSE]parte giusta[/color]. Qualunque sia il costo."
+Text/263/text,Il volto dell'agente ti perseguita. La loro famiglia non saprà mai perché non sono tornati a casa.
+Text/264/text,[color=STEEL_BLUE]A causa tua.[/color]
+Choice/243/disabled_text,
+Choice/244/disabled_text,
+Choice/24c/disabled_text,
+Choice/24d/disabled_text,
+Choice/24e/disabled_text,

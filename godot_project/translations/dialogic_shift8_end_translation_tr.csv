@@ -1,0 +1,59 @@
+﻿keys,tr
+Text/265/text,Vardiya huzursuz bir sessizlikle sona erer. Güvenlik devriyeleri iki katına çıkarıldı. Herkes fısıltılarla hareket ediyor.
+Text/266/text,Koğuşuna doğru giderken onu duyarsın - [color=YELLOW]memurlar kanadından gelen bağırışları[/color].
+Text/267/text,Köşeyi döndüğünde güvenlik güçlerinin [pulse freq=3][color=RED]Sasha'nın kapısını tekmelerken[/color][/pulse] görürsün.
+Text/268/text,Şef Yukon'un sesi gürler. TATLI PATATES SASHA! Spud ulusuna karşı [color=CRIMSON]vatana ihanetten tutuklusun![/color]
+Text/269/text,"Sasha sürüklenerek dışarı çıkarılır, çırpınır. Gardiyanlar kollarını arkasına bükerken bile gözleri meydan okuyucudur."
+Text/26a/text,[tornado radius=4 freq=3][color=CHARTREUSE]GERÇEK ORTAYA ÇIKACAK! HEPİMİZİ SUSTURAMAZSINIZ![/color][/tornado]
+Text/26b/text,"Bakışları, kalabalıkta seni bulur. Zaman donmuş gibi görünür."
+Text/26c/text,Tanıma... sonra [color=CRIMSON]yıkıcı bir anlayış[/color]. Onun yerini ele verdin. Biliyor.
+Text/26d/text,Konuşmaz. Bakışı yeterlidir. [color=STEEL_BLUE]Nefretten daha derin bir hayal kırıklığı.[/color]
+Text/26e/text,Yüzünde bir anlığına bir şey belirir - [color=CHARTREUSE]umut mu? güven mi?[/color]
+Text/26f/text,Dudakları sessizce kıpırdar: '[color=CHARTREUSE]Kökler derine iner.[/color]' Bir mesaj. Bir hatırlatma.
+Text/270/text,"Russet gölgelerden çıkar, her gözenekten memnuniyet sızar."
+Text/271/text,"Vay vay. [color=CRIMSON]Tatlı patates ekşidi[/color]. Seninle ilgili her zaman çürük bir şeyler olduğunu biliyordum, Sasha."
+Text/272/text,Russet bir klasör tutar. Küçük [color=DARK_VIOLET]manifestoların[/color]. 'Kanıtların.' Hepsi ele geçirildi.
+Text/273/text,[pulse freq=2][color=DARK_VIOLET]Kök Rezervi'ni[/color][/pulse] baltalayabileceğini mi sandın? BENİ mi baltalayabileceğini?
+Text/274/text,"Kopyalar zaten dışarıda, Russet. Dünya, halkımıza ne yaptığını öğrenecek!"
+Text/275/text,Russet soğukça güler. Onlara ne söylersek onu bilecekler. Ya sen? Sen [color=CRIMSON]çok özel bir parti[/color]nin parçası olacaksın.
+Text/276/text,"""[color=DARK_VIOLET]Hain Karışımı[/color]"" - Bence kulağa hoş geliyor."
+Text/277/text,Kalbin gümbür gümbür atar. Her içgüdün bir şeyler yapman için çığlık atar. Ama gardiyanlar her yerde.
+Choice/278/text,Öne çık ve onu serbest bırakmalarını talep et (Pervasızca)
+Choice/279/text,Gizli kal - başka bir gün savaşmak için yaşa (Pragmatik)
+Choice/27a/text,Sasha'nın gözünü yakala ve başını salla - bir söz (Kararlılık)
+Text/27b/text,Kalabalığın arasından iterek geçersin. '[color=CHARTREUSE]Durun! O yanlış bir şey yapmadı![/color]'
+Text/27c/text,Yukon'un başı sana doğru döner. '[color=RED]Şunu da yakalayın![/color] Açıkça bir suç ortağı!'
+Text/27d/text,"Murphy seni yakalar, geri çeker. '[color=STEEL_BLUE]Kaosta kafaları karıştı! KAÇ![/color]'"
+Text/27e/text,"Murphy, muhafızlar pozisyonuna yaklaşırken seni bir yan koridora doğru iter."
+Text/27f/text,"Muhafızlar seni yakalar. Russet'ın gülümsemesi genişler. ""[color=CRIMSON]Bir bedele iki hain.[/color]"""
+Text/280/text,Her zerrenle kendinden nefret ederek gölgelere çekilirsin. [color=STEEL_BLUE]Korkak.[/color]
+Text/281/text,Ama hayatta. Ve özgür. Şimdilik.
+Text/282/text,"Sasha ile göz göze gelirsin. Yavaş, kararlı bir baş sallama. [color=CHARTREUSE]Senin için geliyorum.[/color]"
+Text/283/text,"O görür. Küçücük bir gülümseme. Sonra köşeden sürüklenir, gider."
+Text/284/text,"Seni kaosun içinde bulur. Yüzü maske gibidir, ama gözleri alev alevdir."
+Text/285/text,Onu [color=CRIMSON]işleme kanadına[/color] götürdüler. 3. Alt Kat. Karımı da oraya götürdüler.
+Text/286/text,Elinize bir şey tutuşturur - bir [color=GOLD]güvenlik anahtar kartı[/color].
+Text/287/text,Zamanı geldiğinde... [color=CHARTREUSE]Görmezden geleceğim[/color]. Karım için. Hepsi için.
+Text/288/text,Murphy seni nefes nefese depoya çeker.
+Text/289/text,İşte bu. Bu [color=CRIMSON]gerçekten oluyor[/color]. Sasha'yı yakaladılar. Sabaha kadar onu işleme alacaklar.
+Text/28a/text,"Bu [color=STEEL_BLUE]aptalcaydı[/color]. Cesurcaydı, ama aptalcaydı. Artık onların listesindesin."
+Text/28b/text,Direniş bir şeyler planlıyor. Yarın. Onu kurtarmak için tek şansımız bu.
+Text/28c/text,Katılıyor musun? [color=CHARTREUSE]Sonuna kadar var mısın?[/color]
+Choice/28d/text,Sonuna kadar. Sasha'yı kurtarmak için ne gerekiyorsa.
+Choice/28e/text,Düşünmem gerek. Bu çok hızlı ilerliyor.
+Text/28f/text,Murphy omzunu sıkar. [color=CHARTREUSE]O zaman şafakta harekete geçeriz. Kökler derine iner.[/color]
+Text/290/text,"Murphy'nin yüzü sertleşir. Hızlı düşün. Yarın bu zamana kadar, o [color=DARK_VIOLET]Kök Rezervi[/color] olacak."
+Text/291/text,"Uyanık yatarsın, tavana bakarak. Sasha'nın yüzü. Meydan okuması. Korkusu."
+Text/292/text,Kayıp eşinin fotoğrafını çıkarırsın. Kurtaramadığın başka bir yüz.
+Text/293/text,[color=CHARTREUSE]Bu sefer değil.[/color]
+Text/294/text,Yarına kadar her şey değişir. Bir şekilde ya da başka bir şekilde.
+Text/295/text,[pulse freq=2][color=YELLOW]Artık seyirci kalmak yok.[/color][/pulse]
+Text/296/text,"Hücre soğuk. Duvarların arasından, Sasha'yı bir yerlerde ""sorgulanırken"" duyabilirsin."
+Text/297/text,"Yarın, dediler. İkiniz birlikte [color=DARK_VIOLET]işlem göreceksiniz[/color]."
+Text/298/text,Direniş gelmezse. İkinizi de biri kurtarmazsa.
+Text/299/text,[color=STEEL_BLUE]Hayatınızın en uzun gecesi sizi bekliyor.[/color]
+Choice/278/disabled_text,
+Choice/279/disabled_text,
+Choice/27a/disabled_text,
+Choice/28d/disabled_text,
+Choice/28e/disabled_text,

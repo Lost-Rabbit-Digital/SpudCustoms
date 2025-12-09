@@ -1,0 +1,79 @@
+﻿keys,de
+Text/299_suppress1/text,"Chaos bricht aus, als der Widerstandsangriff beginnt. Explosionen erschüttern den Kontrollpunkt."
+Text/299_suppress2/text,Du könntest fliehen. Du könntest dich verstecken. Stattdessen [color=DARK_ORANGE]wählst du deine Seite[/color].
+Text/299_suppress3/text,Russet packt deinen Arm. [pulse freq=2][color=YELLOW]DAS IST DEINE CHANCE![/color][/pulse] Beweise deine Loyalität!
+Text/299_suppress4/text,"Der Widerstand versucht, das Osttor zu durchbrechen! [color=CRIMSON]Haltet sie auf![/color]"
+Text/299_suppress5/text,"Du packst deine Waffe. Das könnten Leute sein, die du kennst. Leute, denen du geholfen hast."
+Text/299_suppress6/text,Doch Überleben hat seinen Preis. [color=DARK_ORANGE]Du hast deine Wahl getroffen.[/color]
+Text/299_suppress7/text,[pulse freq=3][color=CRIMSON]Kämpfe für den Staat![/color][/pulse] Schlage den Widerstandsangriff nieder!
+Text/299_suppress8/text,"Als sich der Rauch lichtet, liegen Leichen auf dem Boden. Einige tragen Widerstandsabzeichen."
+Text/299_suppress9/text,[color=STEEL_BLUE]Du erkennst Gesichter unter den Gefallenen.[/color]
+Text/299_suppress10/text,Murphy liegt unter den Toten. Seine Augen starren ins Leere. Tommys Foto in seiner Hand umklammert.
+Text/299_suppress11/text,"[color=STEEL_BLUE]Er starb im Kampf für etwas, woran er glaubte. Du hast geholfen, es zu töten.[/color]"
+Text/300/text,"Der Widerstandsangriff scheiterte. Der Kontrollpunkt steht, stärker denn je. Und du bleibst auf deinem Posten."
+Text/301/text,[pulse freq=2][color=GOLD]ES LEBE PREMIERMINISTER IDAHO![/color][/pulse] Verteidiger von Spud! Besieger der Verräter!
+Text/302/text,"Eine riesige Kartoffel in prunkvoller Regalia steigt aus einem gepanzerten Fahrzeug, flankiert von Elitewachen."
+Text/303/text,"Idaho mustert den Kontrollpunkt mit kalten, berechnenden Augen."
+Text/304/text,Russet huscht vorwärts und verbeugt sich tief. Premierminister! Wir fühlen uns durch Ihre Anwesenheit geehrt!
+Text/305/text,Die Verräter wurden wie befohlen [color=DARK_VIOLET]verarbeitet[/color]. Die Produktion ist in diesem Quartal um 40% gestiegen!
+Text/306/text,"Und das ist der Offizier, der während des Aufstands loyal geblieben ist?"
+Text/307/text,"Ja, Premierminister. Unerschütterliche Hingabe. Verdächtige Aktivitäten gemeldet. Ein Vorbild von einem Bürger."
+Text/308/text,Idaho tritt vor und heftet dir eine Medaille an die Brust – [color=GOLD]Die Goldene Knolle[/color].
+Text/309/text,"Für außergewöhnliche Verdienste. Du hast bewiesen, dass [color=DARK_ORANGE]Loyalität zu Spud[/color] immer belohnt wird."
+Choice/30a/text,"Danke, Premierminister. Ruhm für Spud."
+Choice/30b/text,"Ich habe nur meine Pflicht getan, Sir. (Erzwingt ein Lächeln)"
+Text/30c/text,Idahos Lächeln erreicht seine Augen nicht. Ja. Das hast du in der Tat.
+Text/30d/text,Idaho mustert dich einen langen Moment. Pflicht. [color=STEEL_BLUE]Ein so einfaches Wort für so komplizierte Handlungen.[/color]
+Text/30e/text,"Ich frage mich, welche [color=CRIMSON]Albträume[/color] jene heimsuchen, die ihre „Pflicht“ so gut erfüllen."
+Text/30f/text,"Ein Festmahl wird zu Ehren des Sieges abgehalten. Tische biegen sich unter der Last des Essens, darunter großzügige Portionen [color=DARK_VIOLET]Wurzelreserve[/color]."
+Text/310/text,"Russet erhebt ein Glas dicker, violetter Flüssigkeit. Ein Hoch! Auf die [color=CRIMSON]Verräter, die uns nähren[/color]!"
+Text/311/text,Der Raum lacht. Manche nervös. Die meisten aufrichtig.
+Text/312/text,Er schiebt dir einen Teller hin. Probiere die neue Sorte. [color=DARK_VIOLET]„Widerstandsmischung.“[/color] Sashas Beitrag zu Spuds Zukunft.
+Text/313/text,Dein Magen krampft sich zusammen. Das Essen auf dem Teller. [color=CRIMSON]Sasha.[/color] Murphys Cousine. Die Frau vom Foto.
+Text/314/text,[tornado radius=3 freq=2][color=CRIMSON]Sie alle.[/color][/tornado]
+Choice/315/text,Zwing dich zu essen – Tarnung aufrechterhalten
+Choice/316/text,Teller wegschieben – das schaffst du nicht
+Text/317/text,Du führst die Gabel zu deinen Lippen. Schließt die Augen. [color=STEEL_BLUE]Kauen. Schlucken. Nicht denken.[/color]
+Text/318/text,Russet nickt zustimmend. „Gut. [color=DARK_ORANGE]Du wirst es weit bringen.[/color]“
+Text/319/text,Du schiebst den Teller weg. „Ich fühle mich nicht gut. Die Aufregung des Tages …“
+Text/31a/text,"Russets Augen verengen sich kurz, dann werden sie weicher. Natürlich. Eine so [color=YELLOW]zarte Konstitution[/color]."
+Text/31b/text,Ruh dich aus. Morgen haben wir [color=CRIMSON]mehr Verarbeitung[/color] zu beaufsichtigen.
+Text/31c/text,Du kehrst in deine Quartiere zurück. Die Medaille lastet schwer auf deiner Brust.
+Text/31d/text,Du ziehst das Foto der vermissten Frau heraus. Sie ist jetzt wahrscheinlich in derselben Charge wie sie.
+Text/31e/text,"Du hast versprochen, sie zu finden. [color=STEEL_BLUE]Du hast sie gefunden.[/color] Nur nicht so, wie ihr beide gehofft hattet."
+Text/31f/text,"Murphy. Dein Freund. Derjenige, der dir vertraute. Er war im Widerstand."
+Text/320/text,[color=CRIMSON]War.[/color]
+Text/321/text,Du starrst dein Spiegelbild im Fenster an. Die Medaille glänzt. [color=DARK_ORANGE]Goldene Knolle[/color]. Held von Spud.
+Text/322/text,[color=STEEL_BLUE]Monster in Kartoffelschale.[/color]
+Text/323/text,In dieser Nacht träumst du von Sasha. Sie klagt nicht an. Tobt nicht. Das wäre einfacher.
+Text/324/text,"Sie sieht dich nur mit diesen Augen an. [color=CHARTREUSE]Die Wurzeln wachsen tief[/color], flüstert sie."
+Text/325/text,Sogar die [color=STEEL_BLUE]faulen[/color].
+Text/326/text,Monate vergehen. Du wirst befördert. Regionalinspektor der Grenzsicherheit. Russets rechte Hand.
+Text/327/text,Sie überwachen mehr Ablehnungen als jeder andere in Spuds Geschichte. Die Produktion von [color=DARK_VIOLET]Wurzelreserve[/color] schießt in die Höhe.
+Text/328/text,Ihr Büro ist komfortabel. Ihre Rationen sind großzügig. Ihre Familie ist geschützt.
+Text/329/text,"Sie haben alles, was Ihnen versprochen wurde."
+Text/32a/text,"Alles außer [color=STEEL_BLUE]Schlaf[/color]. Außer [color=STEEL_BLUE]Frieden[/color]. Außer der Fähigkeit, sich im Spiegel anzusehen."
+Text/32b/text,"Eines Tages bemerken Sie es. Ein [color=GOLD]gelbes Kartoffel-Emblem[/color], in eine Wand gekratzt. Dann noch eins. Dann Dutzende."
+Text/32c/text,Ein neuer Widerstand formiert sich. Leiser. Vorsichtiger. Aus Sashas Fehlern lernend.
+Choice/32d/text,Melden Sie die Symbole sofort der Sicherheit
+Choice/32e/text,"Tun Sie so, als hätten Sie sie nicht gesehen"
+Choice/32f/text,Hinterlassen Sie Ihr eigenes Zeichen – ein einzelnes gelbes Blatt
+Text/330/text,Sie reichen den Bericht ein. Eine weitere Gruppe Verdächtiger wird festgenommen. Eine weitere Beförderung.
+Text/331/text,Der Kreislauf geht weiter. [color=CRIMSON]Sie sind zur Maschine geworden.[/color]
+Text/332/text,Sie gehen vorbei. Sagen nichts. Es ist nicht viel. [color=STEEL_BLUE]Es ist fast nichts.[/color]
+Text/333/text,"Aber es ist das erste Mal, dass Sie sich entschieden haben, nicht gegen sie vorzugehen."
+Text/334/text,"Vielleicht ist das etwas. Vielleicht ist es [color=YELLOW]zu wenig, zu spät[/color]."
+Text/335/text,"Wenn niemand zuschaut, kratzen Sie ein kleines [color=GOLD]gelbes Blatt[/color] neben die Embleme."
+Text/336/text,Ein einziger Akt des Widerstands. Jahre zu spät. Aber [color=CHARTREUSE]etwas[/color].
+Text/337/text,Sashas Stimme hallt in Ihrer Erinnerung wider: „[color=CHARTREUSE]Die Wurzeln wachsen tief.[/color]“
+Text/338/text,"Vielleicht tief genug, um [color=CHARTREUSE]sogar Sie zu erreichen[/color]. Eines Tages."
+Text/339/text,Die Nation Spud besteht fort. [color=DARK_VIOLET]Wurzelreserve[/color] fließt. Der Kreislauf des Konsums geht weiter.
+Text/33a/text,"Aber irgendwo, in den Rissen der Wand, [color=CHARTREUSE]wächst etwas Neues[/color]."
+Text/33b/text,Ob Sie ein Teil davon sein werden ... [color=YELLOW]diese Geschichte muss noch geschrieben werden[/color].
+Choice/30a/disabled_text,
+Choice/30b/disabled_text,
+Choice/315/disabled_text,
+Choice/316/disabled_text,
+Choice/32d/disabled_text,
+Choice/32e/disabled_text,
+Choice/32f/disabled_text,

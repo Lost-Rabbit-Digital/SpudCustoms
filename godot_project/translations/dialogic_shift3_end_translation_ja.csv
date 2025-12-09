@@ -1,0 +1,27 @@
+﻿keys,ja
+Text/69_photo1/text,もう一度写真を取り出す。[color=GOLD]マリス・パイパー[/color]。なんて優しい顔だ。
+Text/69_photo2/text,彼女の妻はひどく絶望していた。[color=STEEL_BLUE]彼女に何があったんだ？[/color]
+Text/69_photo3/text,写真の背景に何かがあることに気づく。[color=DARK_VIOLET]紫色のロゴ[/color]のトラックだ。
+Text/69_photo4/text,そのシンボル…食堂への配達で見たことがある。[wave amp=15 freq=2][color=DARK_VIOLET]ルート・リザーブ。[/color][/wave]
+Text/69/text,話せるか？人目のない場所で？[color=YELLOW]ここには目と耳が多すぎる。[/color]
+Text/6a/text,シフトの後、古い物置小屋で会おう。見てほしいものがある。
+Text/6a_photo1/text,サーシャ…この写真。あの女性の妻がくれたんだ。彼女を探していた。
+Text/6a_photo2/text,サーシャの顔が曇る。[color=STEEL_BLUE]見せて。[/color]
+Text/6a_photo3/text,サーシャは写真を凝視し、表情を暗くする。[color=CRIMSON]あのトラックに見覚えがある。[/color]
+Text/6a_photo4/text,[pulse freq=2][color=YELLOW]この写真を大切に保管して。[/color][/pulse]後で重要になるかもしれない。私を信じて。
+Text/6b/text,同僚と仲良くなっているのか？覚えておけ、親しくなると…[color=DARK_ORANGE]判断が鈍る[/color]ことにつながる。
+Text/6c/text,私は不合格になったジャガイモについて情報を集めてきた。[wave amp=20 freq=3][color=CRIMSON]彼らは強制送還センターには行かない。[/color][/wave]
+Text/6d/text,[tornado radius=4 freq=2][color=CRIMSON]彼らはルート・リザーブの加工施設へ送られる。[/color][/tornado]一人残らず。
+Text/6e/text,これらの書類は、[color=DARK_VIOLET]ルート・リザーブ[/color]のロゴが記された施設でジャガイモが荷降ろしされていることを示している。
+Text/6f/text,何が起こっているのか、分かった気がする…
+Text/6f2/text,[pulse freq=3][color=CRIMSON]彼らはルート・リザーブになっているんだ。[/color][/pulse]
+Choice/70/text,「そんな馬鹿な。彼らは…ジャガイモを食料に加工しているのか？」
+Choice/71/text,「告発する前にもっと証拠が必要だ。」
+Text/72/text,[color=CRIMSON]手間のかかる共食いだ。[/color]それが[wave amp=25 freq=3][color=DARK_VIOLET]ルート・リザーブ[/color][/wave]の正体だ。そして我々は、彼らの食材選びを手伝っていたんだ。
+Text/73/text,何ヶ月も証拠を集めてきた。目を凝らしていればいい。私が正しいと分かるだろう。
+Text/74/text,遠くで突然、警報が鳴り響く
+Text/75/text,行かなければ。この時間は警備の見回りがある。私が見せたことをよく考えるんだ。
+Text/76/text,サーシャはフォルダーをあなたの手に押し付ける。「[color=YELLOW]これを大切に保管して。そして、誰も信じないで。[/color]」
+Text/77/text,あなたはフォルダーをジャケットの内側に隠す。[color=DARK_VIOLET]ルート・リザーブ[/color]。不合格になった者たち。行方不明のジャガイモたち。全てが[tornado radius=3 freq=2][color=CRIMSON]恐ろしい形で[/color][/tornado]繋がっている。
+Choice/70/disabled_text,
+Choice/71/disabled_text,

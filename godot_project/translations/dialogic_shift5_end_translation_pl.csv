@@ -1,0 +1,22 @@
+﻿keys,pl
+Text/96/text,"Skradasz się przez zaciemniony korytarz, serce bije ci mocno, gdy unikasz patroli bezpieczeństwa."
+Text/97/text,[color=CHARTREUSE]To urządzenie wyłączy zamek[/color] w biurze Russeta. Wywołam alarmy we wschodnim skrzydle jako dywersję. Będziesz miał pięć minut.
+Text/98/text,Manifesty powinny być w jego archiwum. [color=CRIMSON]Czerwona teczka oznaczona 'RR Transport'[/color]. Nie zostawiaj śladów poszukiwań.
+Text/99/text,"Znajdujesz grubą [color=CRIMSON]czerwoną teczkę oznaczoną ""RR Transport""[/color] w archiwum."
+Text/9a/text,"W środku są manifesty odpowiadające odrzuconym liczbom ziemniaków oraz dyrektywa premiera Idaho zezwalająca na ""[pulse freq=3][color=DARK_VIOLET]pełne wykorzystanie odrzutów granicznych do produkcji RR.[/color][/pulse]"""
+Text/9b/text,"Kroki zbliżają się do drzwi biura. ""[wave amp=15 freq=3][color=YELLOW]Dziwne, byłem pewien, że zamknąłem.[/color][/wave]"""
+Choice/9c/text,Schować się pod biurkiem
+Choice/9d/text,Wyskoczyć przez okno
+Text/9e/text,"Wślizgujesz się pod biurko Russeta, gdy ten wchodzi, serce bije ci jak szalone. Siada, jego stopy centymetry od twojej twarzy."
+Text/9f/text,"Russet melduje się. Co? [color=CHARTREUSE]Kolejny alarm?[/color] Już idę. Opuszcza pomieszczenie, a ty uciekasz."
+Text/a0/text,"Wyrywasz okno i wyskakujesz. Na szczęście to tylko jedno piętro. Strażnik krzyczy: ""[color=RED]Stój! Zatrzymaj się![/color]"""
+Text/a1/text,Biegasz po terenie i udaje ci się zgubić prześladowców.
+Text/a2/text,Zdobyłeś to?
+Text/a3/text,"Przekazujesz dowody, wyjaśniając, co znalazłeś."
+Text/a4/text,To wszystko udowadnia. Opór zrobi kopie. [tornado radius=3 freq=2]Rozszerz prawdę wszędzie.[/tornado] Nie mogą nas wszystkich uciszyć.
+Text/a5/text,"Przekroczyłeś granicę. [wave amp=20 freq=3][color=YELLOW]Nie ma już odwrotu.[/color][/wave] Gdy prawda się rozszerzy, Spud zostanie przemieniony."
+Choice/9c/disabled_text,
+Choice/9d/disabled_text,
+Text/9a_viktor1/text,Skanujesz nazwiska na manifeście... i jedno się wyróżnia. [color=GOLD]Elena Petrov[/color].
+Text/9a_viktor2/text,"To imię... już je słyszałeś. Strażnik Wiktor wspominał, że jego żona zaginęła."
+Text/9a_viktor3/text,"""[color=CRIMSON]Status: Przetworzono. Partia RR-2851.[/color]"" Sprzed dwóch tygodni."

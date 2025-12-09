@@ -1,0 +1,19 @@
+﻿keys,ja
+Text/86/text,本日より新たな警備プロトコルが施行されます。[color=YELLOW]不審な活動[/color]に関する情報を受け取りました。
+Text/87/text,全ての旅行者は強化された検査手順を受けることが義務付けられます。
+Text/88/text,[color=YELLOW]不審な挙動、奇妙な癖、またはアイコンタクトを避ける傾向[/color]に警戒してください。
+Text/89/text,全ての不審物は没収され、記録されなければなりません。もちろん、スパッドの安全のためです。
+Text/8a/text,特に懸念しているのは[color=CRIMSON]禁制品[/color]です。反政府的な文献、写真撮影機材など…
+Text/8b/text,彼の声が不吉に低くなる。「[pulse freq=2][color=DARK_VIOLET]そのような者たちには、特別な手続きが用意されています。[/color][/pulse]」
+Text/8c/text,[wave amp=15 freq=2][color=DARK_VIOLET]ルートリザーブ[/color][/wave]のトラックが「プレミアムリザーブ」と書かれた木箱をカフェテリアに運び込んでいる。匂いは食欲をそそるが、あなたの胃はむかつく。
+Text/8d/text,新しいプレミアムリザーブはもう試しましたか？私のいとこは先月姿を消しました。検査に落ちて。
+Text/8e/text,もしかしたら、彼もこのロットの一部かもしれませんね？[tornado radius=2 freq=2][color=STEEL_BLUE]ブラックユーモアですよ、ね？[/color][/tornado]
+Choice/8f/text,「面白くありません。全くです。」
+Choice/90/text,「食欲がありません。失礼します。」
+Text/91/text,あなたの言う通りです。時には、[pulse freq=3][color=CRIMSON]実際に何が起こっているのか[/color][/pulse]を考えるよりも、冗談を言う方が楽です。
+Text/92/text,警官はあなたが立ち去るのを見送る。「おい、わかるよ。私も食欲をなくしたよ…」
+Text/93/text,新しい警備プロトコルには都合の良いタイミングですね？[wave amp=15 freq=3][color=YELLOW]彼らはルートリザーブに関する情報を止めようとしているんです。[/color][/wave]
+Text/94/text,私たちを助けるかもしれないものがあります。[color=CHARTREUSE]重要な情報を持つジャガイモ[/color]は、通過させるべきです。
+Text/95/text,あなたは慎重に選択肢を検討する。今日の選択は、[color=CHARTREUSE]真実を広める[/color]助けとなるか…それとも[color=CRIMSON]永遠にそれを沈黙させる[/color]か。
+Choice/8f/disabled_text,
+Choice/90/disabled_text,

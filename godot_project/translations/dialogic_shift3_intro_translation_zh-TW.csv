@@ -1,0 +1,24 @@
+﻿keys,zh-TW
+Text/78/text,檢查站的又一天。馬鈴薯的隊伍比以往更長，所有人神經緊繃。
+Text/79/text,來自上級的新指令。我們將[wave amp=15 freq=3][color=DARK_ORANGE]拒絕入境數量翻倍[/color][/wave]。任何被認定不安全的馬鈴薯將立即遭到拘留。
+Text/7a/text,我有項特別任務。我們收到關於[pulse freq=2][color=CRIMSON]麻煩製造者[/color][/pulse]的情報。檢查時務必保持警惕。
+Choice/7b/text,「是的，長官，我不會讓您失望的。」
+Choice/7c/text,「我們說的是什麼樣的麻煩製造者？」
+Text/7d/text,很好。我就知道可以指望你。憑這種態度，你會走得很遠。
+Text/7e/text,會[color=CRIMSON]威脅我們生活方式[/color]的那種。如果你識相的話，就別問太多問題。
+Text/7f/text,[color=STEEL_BLUE]拜託了，我求求你！[/color]我的妻子——她叫[color=GOLD]Maris[/color]——她本來應該就在我身後。
+Text/7fb/text,她[tornado radius=2 freq=3]從未通過邊檢[/tornado]。他們說她的文件有「異常」。
+Text/80/text,沒有人告訴我她發生了什麼事。拜託了，[color=CHARTREUSE]幫我找到她！[/color]
+Choice/81/text,「我很抱歉，但我無能為力。」
+Choice/82/text,「讓我試著查查看。但我不能保證什麼。」
+Text/83/text,就像所有其他人一樣... [color=STEEL_BLUE]願你的良心像我一樣沉重。[/color]
+Text/83b/text,那個絕望的馬鈴薯拖著腳步離開了。在她消失之前，你注意到她盯著一張磨損的照片。
+Text/84/text,謝謝你！哪怕只有一絲希望也聊勝於無。
+Text/84b/text,她將一張[color=GOLD]磨損的照片[/color]塞到你手中。她的名字是[color=GOLD]Maris Piper[/color]。她有一雙溫柔的眼睛。拜託找到她。
+Text/84c/text,你看著照片。一個年輕的馬鈴薯，有著溫和的臉龐和溫暖的笑容。[color=GOLD]Maris Piper[/color]。
+Text/84d/text,她去了哪裡？拒絕入境的隊伍會通往... 究竟是哪裡？
+Text/85/text,我看到了你們的對話。[color=DARK_ORANGE]同情被拒者只會惹麻煩。[/color]專注於你的職責。
+Choice/7b/disabled_text,
+Choice/7c/disabled_text,
+Choice/81/disabled_text,
+Choice/82/disabled_text,

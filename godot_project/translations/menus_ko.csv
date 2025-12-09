@@ -1,0 +1,163 @@
+﻿keys,ko
+main_menu_feedback,피드백 및 버그
+main_menu_version,버전 1.2.0
+main_menu_new_game,새 게임
+main_menu_continue,이어하기
+main_menu_level_select,레벨 선택
+main_menu_score_attack,스코어 어택
+main_menu_options,설정
+main_menu_credits,크레딧
+main_menu_exit,종료
+select_language,언어
+social_discord_tooltip,디스코드 참여!
+social_steam_tooltip,스팀 방문하기
+social_twitch_tooltip,트위치 연동
+twitch_status_disabled,비활성화됨
+twitch_status_no_viewers,대기 시청자 없음
+twitch_status_ready,{count}명의 시청자 준비됨
+twitch_connection_disabled,비활성화됨
+twitch_connection_disconnected,연결 끊김
+twitch_connection_connected,연결됨
+twitch_connection_connecting,연결 중...
+options_menu_title,설정
+options_difficulty,난이도
+options_difficulty_easy,쉬움
+options_difficulty_normal,보통
+options_difficulty_expert,전문가
+options_music_volume,음악 볼륨
+options_sfx_volume,효과음 볼륨
+options_camera_shake,카메라 흔들림
+options_back,뒤로
+paused_menu_title,일시 정지
+shift_summary_title,근무 요약
+shift_summary_continue,계속
+shift_summary_restart,재시작
+shift_summary_main_menu,메인 메뉴
+shift_summary_submit_score,점수 제출
+shift_summary_runner_stats,도주자 통계
+shift_summary_document_stats,서류 통계
+shift_summary_performance,성과
+shift_summary_bonuses,보너스
+time_format,{minutes}분 {seconds}초
+shift_complete_success,근무조 {shift} 완료\n성공!
+shift_complete_failure,근무조 {shift} 완료\n{failure}
+strike_limit_reached,경고 한도 도달!
+quota_not_met,할당량 미달!
+shift_summary_title_with_difficulty,근무 요약\n{difficulty}
+runner_stats_template,\n도주자 통계\n도주 시도: {runner_attempts}\n미사일 발사: {fired}\n도주자 명중: {hit}\n완벽 명중: {perfect}\n명중률: {rate}%
+document_stats_template,\n서류 통계\n서류 스탬프: {stamped}\n감자 승인: {approved}\n감자 거부: {rejected}\n완벽 스탬프: {perfect_stamps}
+bonus_stats_template,보너스\n처리 속도 보너스: {processing_speed_bonus}\n스탬프 정확도 보너스: {accuracy}\n완벽 명중 보너스: {perfect_hit_bonus}\n총점 보너스: {total_score_bonus}
+performance_stats_template,\n성과\n소요 시간: {time_taken}\n예상 점수: {expected_score}\n총점: {score}\n초과 점수 비율: {percent}%\n성과 등급:\n{rating}
+performance_exceptional,탁월함!
+performance_excellent,훌륭합니다!
+performance_good,좋습니다
+performance_needs_improvement,개선이 필요합니다
+performance_poor,미흡합니다
+global_leaderboard_title,글로벌 리더보드\n- {difficulty}
+getting_leaderboard_scores,리더보드 점수 불러오는 중...
+reset_game_label,게임 초기화 :
+reset_game_button,초기화
+mute_label,음소거
+fullscreen_label,전체 화면 :
+resolution_label,해상도 :
+antialiasing_label,안티앨리어싱 :
+screenshake_label,화면 흔들림 :
+mouse_sens_label,마우스 감도 :
+Loading…,불러오는 중...
+You lose.,패배했습니다.
+You won!,승리했습니다!
+Thanks for playing!,플레이해주셔서 감사합니다!
+Please Confirm...,확인해주세요...
+Go back to main menu?,메인 메뉴로 돌아가시겠습니까?
+Quit the game?,게임을 종료하시겠습니까?
+Cancel,취소
+OK,OK
+Controls,조작법
+Mouse Sensitivity :,Mouse Sensitivity :
+Actions & Inputs,동작 및 입력
+Add,Add
+Remove,제거
+Assign Key for {action},{action} 키 할당
+Listening for input...,입력 대기 중...
+Press again to confirm...,다시 눌러 확인...
+Focus here to assign inputs.,입력 할당을 위해 여기에 초점을 맞추세요.
+Already Assigned,이미 할당됨
+{key} already assigned to {action}.,{key}는 이미 {action}에 할당되었습니다.
+Remove Key for {action},{action} 키 제거
+Are you sure you want to remove {key} from {action}?,{action}에서 {key}를 제거하시겠습니까?
+Reset,초기화
+Audio,오디오
+Master :,Master :
+Music :,Music :
+SFX :,SFX :
+Ambient :,Ambient :
+Mute :,Mute :
+Video,비디오
+Fullscreen :,Fullscreen :
+Resolution :,Resolution :
+Anti-Aliasing :,Anti-Aliasing :
+Disabled (Fastest),비활성화 (가장 빠름)
+8x (Slowest),8배 (가장 느림)
+Camera Shake :,Camera Shake :
+Normal,보통
+Reduced,줄임
+Minimal,최소
+None,없음
+Game,게임
+Reset Game :,Reset Game :
+Do you want to reset your game data?,게임 데이터를 초기화하시겠습니까?
+Back,뒤로
+TAKE THEM!,체포해!
+"Take your documents, please.",서류를 가져가십시오.
+Continue,계속
+Main Menu,메인 메뉴
+Submit Score,점수 제출
+Restart,다시 시작
+SHIFT SUMMARY,근무 요약
+Easy,쉬움
+Expert,전문가
+Primary,주
+Secondary,보조
+Primary Interaction,주 상호작용
+Secondary Interaction,보조 상호작용
+Cancel Interaction,상호작용 취소
+Escape,취소
+Dialogic Default Action,대화 기본 동작
+Enter,엔터
+Left Mouse Button,마우스 왼쪽 버튼
+Right Mouse Button,마우스 오른쪽 버튼
+Start New Game,새 게임 시작
+Starting a new game will reset your progress. Are you sure you want to continue?,새 게임을 시작하면 진행 상황이 초기화됩니다. 계속하시겠습니까?
+"Yes, Start New Game","예, 새 게임 시작"
+Skip,건너뛰기
+History,기록
+Return,돌아가기
+Restart the game?,게임을 다시 시작하시겠습니까?
+help_menu_button,도움말
+help_menu_title,게임 방법
+help_tab_basics,기본
+help_tab_gameplay,게임 플레이
+help_tab_minigames,미니게임
+help_basics_intro,"[b]스퍼드 세관에 오신 것을 환영합니다![/b]\n\n당신은 감자 세관 검문소의 국경 관리관입니다. 당신의 임무는 서류를 검사하고, 이민자를 승인하거나 거부하며, 국경을 넘으려는 자들을 막는 것입니다."
+help_basics_gate,[b]게이트 열기[/b]\n게이트 버튼을 클릭하거나 확성기를 사용하여 다음 감자를 부스로 호출하세요.
+help_basics_documents,"[b]서류 검사[/b]\n서류를 책상으로 드래그하여 검사하세요. 현재 근무조의 이민 규칙에 따라 이름, 날짜 및 기타 세부 정보를 확인하세요."
+help_basics_stamping,"[b]서류 날인[/b]\n승인 (초록색) 도장을 사용하여 이민자를 통과시키거나, 거부 (빨간색) 도장을 사용하여 거부하세요. 도장 정확도가 점수에 영향을 미칩니다!"
+help_basics_runners,[b]국경 도주자[/b]\n일부 감자들이 검문소를 지나 도주하려고 할 것입니다! 클릭하여 미사일을 발사하고 그들을 막으세요. 완벽한 타이밍은 보너스 점수를 줍니다.
+help_basics_xray,[b]X-레이 스캐너[/b]\n3번째 근무조부터 X-레이 기계를 사용하여 감자에 숨겨진 밀수품을 스캔하세요.
+help_gameplay_quota,[b]할당량 달성[/b]\n각 근무조에는 처리해야 할 감자 할당량이 있습니다. 할당량을 달성하지 못하면 해고됩니다!
+help_gameplay_strikes,"[b]경고[/b]\n실수(잘못된 승인/거부, 놓친 도주자)를 하면 경고를 받습니다. 경고가 너무 많으면 게임 오버입니다!"
+help_gameplay_rules,"[b]이민 규칙[/b]\n게시판에서 현재 규칙을 확인하세요. 규칙은 근무조마다 변경됩니다 - 금지된 지역, 필수 서류, 특별 조건 등."
+help_gameplay_scoring,"[b]점수 획득[/b]\n올바른 결정, 완벽한 날인, 도주자 저지로 점수를 획득하세요. 속도와 정확도에 따라 보너스가 주어집니다!"
+help_gameplay_difficulty,"[b]난이도[/b]\n쉬움: 더 관대한 타이밍, 적은 규칙. 보통: 표준적인 경험. 전문가: 엄격한 타이밍, 복잡한 규칙, 더 높은 점수."
+help_minigames_intro,[b]미니게임[/b]\n근무조 동안 보너스 점수를 얻을 수 있는 미니게임을 만나게 됩니다. 보상을 위해 완료하거나 페널티 없이 건너뛸 수 있습니다.
+help_minigames_document_scanner,"[b]서류 스캐너[/b] (1 근무조+)\nUV 라이트를 사용하여 서류의 숨겨진 요소를 찾으세요. 클릭하여 워터마크, 도장, 기호를 표시하세요. 시간이 다 떨어지기 전에 모든 요소를 찾으세요!"
+help_minigames_stamp_sorting,[b]스탬프 분류[/b] (근무 2일차+)
+help_minigames_fingerprint_match,[b]지문 일치[/b] (근무 3일차+)
+help_minigames_code_breaker,[b]암호 해독[/b] (근무 4일차+)
+help_minigames_border_chase,[b]국경 추격[/b] (근무 5일차+)
+help_tab_lore,배경 이야기
+help_lore_world_intro,[b]스퍼드의 세계[/b]
+help_lore_nation,[b]스퍼드 국가[/b]
+help_lore_your_role,[b]당신의 역할[/b]
+help_lore_border,[b]만리장성[/b]
+help_lore_secrets,[b]뿌리 보관소[/b]

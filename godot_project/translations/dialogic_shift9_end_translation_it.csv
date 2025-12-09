@@ -1,0 +1,33 @@
+﻿keys,it
+Text/131/text,"Ti rannicchi mentre la battaglia infuria. Mi dispiace, Sasha. [color=STEEL_BLUE]Non sono coraggioso come te[/color]."
+Text/132/text,L'[color=CRIMSON]attacco terroristico[/color] è stato respinto! I capi stanno venendo [color=DARK_VIOLET]processati[/color] mentre parliamo.
+Text/133/text,"Il Capo Yukon trascina membri della resistenza in catene, Sasha tra loro. ""Questi [color=CRIMSON]traditori[/color] affronteranno [color=DARK_VIOLET]l'elaborazione finale[/color]."""
+Text/134/text,"Sasha incrocia il tuo sguardo. Nonostante i suoi lividi, il suo sguardo contiene [wave amp=15 freq=2][color=CHARTREUSE]nessun giudizio, solo tristezza[/color][/wave]."
+Text/135/text,"Sei sopravvissuto tenendo la testa bassa, ma [pulse freq=3][color=GOLD]a quale prezzo?[/color][/pulse] Mentre la produzione della [color=DARK_VIOLET]Riserva Radice[/color] si diffonde dall'impianto, il tuo stomaco si rivolta."
+Text/136/text,Forse c'è ancora una possibilità dall'interno. O forse stai solo placando la tua coscienza.
+Text/137/text,[tornado radius=3 freq=2][color=CHARTREUSE]Abbandoni il tuo posto[/color][/tornado] e corri verso il combattimento. Il tempo della cautela è finito.
+Text/138/text,[pulse freq=3][color=GOLD]Dimostra che sei con noi![/color][/pulse] Come conosci Sasha?
+Text/139/text,"[color=CHARTREUSE]Le radici crescono in profondità![/color] Sono del posto di controllo, Sasha mi ha reclutato!"
+Text/13a/text,La stanno portando all'impianto di lavorazione proprio ora. Dobbiamo affrettarci!
+Text/13b/text,"Le porte esplodono, rivelando la [wave amp=25 freq=3][color=CRIMSON]terribile verità[/color][/wave] - macchine trituratrici, nastri trasportatori che portano patate alla loro rovina."
+Text/13c/text,Alla fine di uno dei nastri - Sasha e altri [color=CRIMSON]legati senza possibilità di difesa[/color]. Il Supervisore Russet è ai controlli.
+Text/13d/text,[color=RED]TU![/color] Avrei dovuto sapere che eri uno di loro! Indietreggia o avvio il processore!
+Text/13e/text,"Mentre i combattenti della resistenza sopraffanno Russet, Sasha reindirizza le telecamere dell'impianto. [color=YELLOW]Popolo di Spud! Questa è la Riserva Radice! Ci hanno nutrito gli uni con gli altri![/color]"
+Text/13f/text,Sei tornato per me. [color=CHARTREUSE]Ce l'abbiamo fatta. La verità è fuori adesso.[/color] Abbiamo un futuro da costruire!
+Text/140/text,"[color=STEEL_BLUE]Il leader della resistenza si fa avanti, l'arma puntata su Russet.[/color] Non un altro passo, Russet. Le mani dove posso vederle."
+Text/141/text,"[color=CRIMSON]Gli occhi di Russet saettano tra te e il leader della resistenza, il sudore gli imperla la fronte.[/color] Credi di aver vinto? Questa struttura è la fondazione di Spud!"
+Text/142/text,La fondazione della sofferenza. [pulse freq=3][color=CHARTREUSE]Finisce oggi.[/color][/pulse]
+Text/143/text,[color=STEEL_BLUE]Sasha si dimena contro le sue legature sul nastro trasportatore[/color]
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""Russet[/color]"
+Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""Questo... questo è quello che stavano facendo? È peggio di quanto immaginassi...""[/color][/wave]"
+Choice/146/text,"[color=CHARTREUSE]""Sasha! Grazie alle radici sei viva! Resisti[/color]"
+Text/147/text,"[color=CRIMSON]Ti lanci verso Russet, i pugni serrati, a malapena trattenuto dai combattenti della resistenza.[/color] Ogni patata che è passata dal mio checkpoint... quante ne hai..."
+Text/148/text,Calma! Ci serve vivo per testimoniare. [color=STEEL_BLUE]Il leader tiene l'arma puntata su Russet.[/color] Conserva la tua rabbia per i tribunali.
+Text/149/text,"[color=STEEL_BLUE]Indietreggi, una mano a coprirti la bocca, assimilando l'orrore della macchinaria.[/color] Ho timbrato i loro documenti... Li ho mandati qui..."
+Text/14a/text,[color=CHARTREUSE]Non lo sapevi. Nessuno di noi lo sapeva.[/color] Ecco perché siamo qui ora. Concentrati!
+Text/14b/text,[color=CHARTREUSE]Ti precipiti al nastro trasportatore[/color]
+Text/14c/text,[color=CHARTREUSE]Gli occhi di Sasha brillano di lacrime e speranza mentre le tue mani sciolgono i nodi.[/color] Sapevo che saresti venuto. Non ho mai dubitato di te.
+Text/14d/text,[color=STEEL_BLUE]Il leader costringe Russet in ginocchio sotto la minaccia delle armi.[/color] Legalo. Assicurati che guardi quello che succederà dopo.
+Text/14e/text,"[color=CHARTREUSE]Sasha ti prende la mano, intrecciando le sue dita con le tue.[/color] Sei tornato per me. Qualunque cosa succeda dopo... l'affronteremo insieme."
+Text/14f/text,"[color=STEEL_BLUE]Sasha ti osserva attentamente, vedendo la furia che ancora ti brucia negli occhi.[/color] Canalizza quel fuoco. Ne avremo bisogno per quello che verrà dopo."
+Text/150/text,[color=STEEL_BLUE]Sasha ti posa una mano delicata sulla spalla.[/color] La colpa non è tua da portare. Sei qui ora. Questo è ciò che conta.

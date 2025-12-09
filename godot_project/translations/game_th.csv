@@ -1,0 +1,54 @@
+﻿keys,th
+alert_border_runner,ตรวจพบผู้หลบหนีชายแดน!\nคลิกเพื่อยิงขีปนาวุธ!
+alert_rejected_fleeing,มันฝรั่งที่ถูกปฏิเสธกำลังหลบหนี!\nคลิกเพื่อยิงขีปนาวุธ!
+alert_runner_escaped,ผู้หลบหนีหลุดรอดไปได้!\nเพิ่มสไตรค์!
+alert_points_deducted,ผู้หลบหนีหลุดรอดไปได้!\nเพิ่มสไตรค์!\n-{penalty} คะแนน!
+alert_perfect_hit,ยิงโดนเป้าอย่างสมบูรณ์! +{perfect} คะแนนโบนัสความแม่นยำ
+alert_perfect_stamp,ประทับตราสมบูรณ์แบบ! +{points} คะแนน!
+alert_combo,คอมโบ x{mult}! +{streak} คะแนนโบนัสคอมโบ
+alert_quota_met,"ทำโควตาได้สำเร็จ, จบกะแล้ว!\nโบนัส: {bonus} คะแนน!"
+alert_strike_removed,ลบสไตรค์แล้ว!
+alert_correct_decision,"คุณตัดสินใจถูกต้องแล้ว, เจ้าหน้าที่.\n+{points} คะแนน!"
+alert_wrong_decision,"คุณได้ก่อให้เกิดความทุกข์ทรมานโดยไม่จำเป็น, เจ้าหน้าที่...\n+1 สไตรค์!"
+alert_potato_should_be_approved,\nมันฝรั่งตัวนี้มีคุณสมบัติครบถ้วนและควรได้รับการอนุมัติ
+alert_strike_out,เกินจำนวนสไตรค์สูงสุดแล้ว!\nกะของคุณสิ้นสุดลงแล้ว.
+ui_score,คะแนน: {score}
+ui_quota,โควตา: {current} / {target}
+ui_strikes,สไตรค์: {current} / {max}
+ui_click_megaphone,คลิกโทรโข่งเพื่อเรียกมันฝรั่งตัวถัดไป
+ui_drag_document,ลากเอกสารไปที่โต๊ะตรวจสอบ
+ui_stamp_document,เลือกตราประทับเพื่ออนุมัติหรือปฏิเสธ
+ui_check_violations,ตรวจสอบการละเมิดเอกสาร
+Strike removed!,ลบสไตรค์แล้ว!
+BORDER RUNNER DETECTED!\nClick to launch missile!,ตรวจพบผู้หลบหนีชายแดน!\nคลิกเพื่อยิงขีปนาวุธ!
+REJECTED POTATO FLEEING!\nClick to launch missile!,มันฝรั่งที่ถูกปฏิเสธกำลังหลบหนี!\nคลิกเพื่อยิงขีปนาวุธ!
+RUNNER ESCAPED!\nStrike added!,ผู้หลบหนีหลุดรอดไปได้!\nเพิ่มสไตรค์!
+Click megaphone to call the next potato,คลิกโทรโข่งเพื่อเรียกมันฝรั่งตัวถัดไป
+Drag document to inspection table,ลากเอกสารไปที่โต๊ะตรวจสอบ
+Select a stamp to approve or reject,เลือกตราประทับเพื่ออนุมัติหรือปฏิเสธ
+Check for document violations,ตรวจสอบการละเมิดเอกสาร
+rule_explanation_header,คำอธิบายกฎ:
+rule_explanation_fresh,ดูที่ช่อง 'สภาพ' หากระบุสิ่งอื่นที่ไม่ใช่ 'สด' - ปฏิเสธ
+rule_explanation_sweet_potato,ดูที่ช่อง 'ประเภท' หากระบุว่า 'มันเทศ' - ปฏิเสธ (ไม่มีใบอนุญาต)
+rule_explanation_chip_hill,ดูที่ช่อง 'ประเทศ' หากระบุว่า 'ชิปฮิลล์' - ปฏิเสธ (ถูกแบน)
+rule_explanation_age,ดูที่ช่อง 'เกิด' คำนวณอายุและตรวจสอบตามกฎ
+rule_explanation_gender,ดูที่ช่อง 'เพศ' และตรวจสอบตามกฎปัจจุบัน
+rule_footer_text,กฎเหล่านี้ต้องถูกบังคับใช้กับมันฝรั่งทุกหัว
+rule_tutorial_hint,ต้องการความช่วยเหลือ? คลิกที่กฎใดก็ได้เพื่อดูคำอธิบาย
+alert_correct_decision_detailed,การตัดสินใจถูกต้อง! +{points} คะแนน\n{reason}
+alert_wrong_decision_detailed,การตัดสินใจผิดพลาด! เพิ่มการลงโทษ!\n{reason}
+alert_reason_approved,มันฝรั่งตรงตามข้อกำหนดทั้งหมด - อนุมัติ
+alert_reason_should_reject,คุณควรปฏิเสธมันฝรั่งหัวนี้
+tutorial_check_type,ตรวจสอบช่อง 'ประเภท' ในหนังสือเดินทาง
+tutorial_check_condition,ตรวจสอบช่อง 'สภาพ' ในหนังสือเดินทาง
+tutorial_check_country,ตรวจสอบช่อง 'ประเทศ' ในหนังสือเดินทาง
+tutorial_check_age,ตรวจสอบช่อง 'เกิด' เพื่อคำนวณอายุ
+tutorial_check_gender,ตรวจสอบช่อง 'เพศ' ในหนังสือเดินทาง
+alert_streak_bonus_minigame,ทำได้ 5 ครั้งติด! มินิเกมโบนัส!
+alert_perfect_stamps_bonus_minigame,ประทับตราสมบูรณ์แบบ! มินิเกมโบนัส!
+alert_runner_bonus_minigame,กิจกรรมน่าสงสัย! มินิเกมโบนัส!
+alert_new_minigame_unlocked,ปลดล็อกมินิเกมใหม่: {name}!
+alert_minigame_bonus,โบนัสมินิเกม: +{bonus} คะแนน!
+high_score_display,คะแนนสูงสุด: {score}
+new_high_score,ทำลายสถิติใหม่!
+month_1,มกราคม

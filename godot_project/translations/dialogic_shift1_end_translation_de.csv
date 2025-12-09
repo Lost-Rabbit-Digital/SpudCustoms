@@ -1,0 +1,31 @@
+﻿keys,de
+Text/50/text,"Gute Arbeit heute, Sprössling. Denk daran, Effizienz ist der Schlüssel. Wir haben Quoten zu erfüllen."
+Text/51/text,"Vergiss nicht, deine Ration [wave amp=15 freq=2][color=DARK_VIOLET]Wurzelreserve[/color][/wave] zu holen. Du weißt, was das Radio sagt, es ist der Geschmack von Spuds Zukunft!"
+Text/52/text,Ein kleiner Zettel rutscht aus einigen Papieren auf deinem Schreibtisch.
+Text/53/text,"[color=GOLD]Nicht alles ist, wie es scheint. Die Wurzeln unserer Nation sind verfault. [br] Folge der Spur, aber achte darauf, nicht zum Schweigen gebracht zu werden.[/color] [br] - [color=CHARTREUSE]Ein Freund[/color]"
+Text/54/text,"Diese Notiz... und die Art, wie Russet meiner Frage über [pulse freq=3][color=CRIMSON]abgelehnte Kartoffeln[/color][/pulse] auswich... [br] Etwas fühlt sich [color=STEEL_BLUE]seltsam[/color] an."
+Text/55/text,Ich sollte [color=YELLOW]wachsam[/color] bleiben. Es gibt mehr hier als Pässe zu stempeln.
+Text/52b/text,Es war heute Morgen nicht da. Jemand hat es [color=YELLOW]während deiner Schicht[/color] hingelegt.
+Text/53b/text,"[color=GOLD]Folge der Spur, aber hüte dich davor, zum Schweigen gebracht zu werden.[/color]"
+Text/53c/text,"[color=GOLD]Achte darauf, wer die [/color][color=DARK_VIOLET]Reserve[/color][color=GOLD] isst. Achte darauf, wer sich weigert.[/color]"
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]Ein Freund[/color]
+Choice/53e/text,"""Notiz versteckt halten – unauffällig ermitteln"""
+Choice/53f/text,"""Notiz zerstören – das könnte ein Test sein"""
+Choice/53g/text,"""Notiz Russet sofort zeigen"""
+Text/53h/text,Du faltest die Notiz vorsichtig und steckst sie in deine Tasche. [color=CHARTREUSE]Jemand sucht Kontakt.[/color]
+Text/53i/text,"Aber wer? Und warum du, an deinem allerersten Tag?"
+Text/53j/text,Du zerreißt die Notiz in winzige Stücke.
+Text/53k/text,"Russet sagte, Sprossen, die Fragen stellen, werden ""neu zugewiesen"". Besser keine Risiken eingehen."
+Text/53l/text,"Du fängst Russet ab, bevor er geht. ""Sir? Ich habe das in meinen Unterlagen gefunden..."""
+Text/53m/text,"Russet schnappt sich die Notiz, liest sie. Sein Ausdruck flackert – [color=YELLOW]war das Wiedererkennung?[/color]"
+Text/53n/text,"Propaganda. Rebellen, die versuchen, neue Offiziere zu korrumpieren. [color=DARK_ORANGE]Du hast richtig gehandelt, indem du mir das gebracht hast.[/color]"
+Text/53o/text,"Er steckt die Notiz ein. Vergiss, dass du sie je gesehen hast. Und achte auf jeden, der sich... [color=CRIMSON]verdächtig[/color] verhält."
+Text/54b/text,"""[color=VIOLET]Verarbeitet. Gemäß Protokoll.[/color]"" Was soll das überhaupt bedeuten?"
+Text/54c/text,"Diese Notiz... sie sagte, die Wurzeln seien [color=CRIMSON]verfault[/color] geworden."
+Text/54d/text,"Aber Spud ist glorreich, nicht wahr? Das haben sie uns gesagt. Was ich geglaubt habe."
+Text/54e/text,"Du ziehst die Notiz heraus und liest sie noch einmal. ""[color=GOLD]Achte darauf, wer die Reserve isst. Achte darauf, wer sich weigert.[/color]"""
+Text/54f/text,"Morgen wirst du aufmerksam sein. [color=YELLOW]Jemand versucht, dir etwas zu sagen.[/color]"
+Text/54g/text,"Russets Gesicht, als er die Notiz las. Für einen Moment sah er fast... [color=STEEL_BLUE]ängstlich[/color] aus."
+Text/54h/text,Was ist die [color=DARK_VIOLET]Wurzelreserve[/color] wirklich? Und warum sollte dich jemand davor warnen?
+Text/54i/text,"Die Notiz ist weg, aber die Worte bleiben. [color=YELLOW]Nicht alles ist, wie es scheint.[/color]"
+Text/54j/text,"Vielleicht war es die kluge Wahl, sie zu zerstören. Vielleicht hast du gerade deinen einzigen Verbündeten zum Schweigen gebracht."

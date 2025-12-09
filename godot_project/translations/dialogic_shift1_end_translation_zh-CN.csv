@@ -1,0 +1,34 @@
+﻿keys,zh-CN
+Text/50/text,今天工作还行，小薯苗。记住，效率是关键。我们有配额要完成。
+Text/51/text,别忘了领取你的配给[wave amp=15 freq=2][color=DARK_VIOLET]根源储备[/color][/wave]。你知道广播里怎么说的，这是薯国未来的味道！
+Text/52/text,当你收拾东西时，一张小纸条从你的工作文件里滑落出来。
+Text/52b/text,今天早上它不在这里。有人在[color=YELLOW]你当班期间[/color]放的。
+Text/53/text,[color=GOLD]并非一切都如表面所见。我们国家的根基已经腐烂。[/color]
+Text/53b/text,[color=GOLD]追寻线索，但要小心，别被灭口。[/color]
+Text/53c/text,[color=GOLD]留意谁食用[/color][color=DARK_VIOLET]储备[/color][color=GOLD]。留意谁拒绝。[/color]
+Text/53d/text,[color=GOLD]- [/color][color=CHARTREUSE]一位朋友[/color]
+Choice/53e/text,藏好纸条 - 悄悄调查
+Choice/53f/text,销毁纸条 - 这可能是一场考验
+Choice/53g/text,立刻把纸条给拉塞特看
+Text/53h/text,你小心地折好纸条，塞进口袋。[color=CHARTREUSE]有人在联系你。[/color]
+Text/53i/text,但会是谁？为什么是你，而且还是在你上任的第一天？
+Text/53j/text,你把纸条撕成碎片
+Text/53k/text,拉塞特说过，爱提问的小薯苗会被“重新分配”。最好不要冒险。
+Text/53l/text,你在拉塞特离开前叫住了他。“长官？我在我的文件里发现了这个……”
+Text/53m/text,拉塞特一把抢过纸条，读了起来。他的表情闪烁了一下——[color=YELLOW]那是认出来了吗？[/color]
+Text/53n/text,宣传伎俩。叛乱分子试图腐蚀新警官。[color=DARK_ORANGE]你把它拿给我看，做得很对。[/color]
+Text/53o/text,他把纸条塞进口袋。忘了你曾见过它。并留意任何行为……[color=CRIMSON]可疑[/color]的人。
+Text/54/text,那张纸条……还有拉塞特回答我关于[pulse freq=3][color=CRIMSON]被拒土豆[/color][/pulse]的方式……
+Text/54b/text,"""[color=VIOLET]已处理。依照规程。[/color]"" 那到底是什么意思？"
+Text/54c/text,那张纸条……它说根基已经[color=CRIMSON]腐烂[/color]了。
+Text/54d/text,但薯国是光荣的，不是吗？他们是这么告诉我们的。我一直都相信着。
+Text/54e/text,你拿出纸条，再次阅读。“[color=GOLD]留意谁食用储备。留意谁拒绝。[/color]”
+Text/54f/text,明天，你会留意的。[color=YELLOW]有人在试图告诉你什么。[/color]
+Text/54g/text,罗斯特读到纸条时的表情。那么一瞬间，他看起来几乎...[color=STEEL_BLUE]害怕[/color]。
+Text/54h/text,[color=DARK_VIOLET]根源储备[/color]到底是什么？为什么会有人警告你关于它的事？
+Text/54i/text,纸条不见了，但那些字句却萦绕不散。[color=YELLOW]并非所有事情都如表面所见。[/color]
+Text/54j/text,也许销毁它是明智之举。也许你只是让你唯一的盟友噤声了。
+Text/55/text,我应该保持[color=YELLOW]警惕[/color]。这里发生的事情远不止盖章护照那么简单。
+Choice/53e/disabled_text,
+Choice/53f/disabled_text,
+Choice/53g/disabled_text,

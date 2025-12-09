@@ -1,0 +1,33 @@
+﻿keys,hu
+Text/156/text,Üdvözöljük a [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs Training![/color][/pulse] képzésen!
+Text/157/text,"Ez a képzés megtanítja Önnek azokat a [wave amp=15 freq=2][color=DARK_ORANGE]alapvető készségeket[/color][/wave], amelyek szükségesek a Spud határainak védelméhez."
+Text/158/text,Az Ön feladata a bejövő burgonyák feldolgozása a határátkelőhelyünkön.
+Text/159/text,A bevándorló burgonyák sorba állnak az irodája előtt itt.
+Text/15a/text,A burgonyák feldolgozásának megkezdéséhez meg kell nyitnia a fülkéjét a szolgáltatáshoz az itt található kapcsolóval.
+Text/15b/text,"Minden burgonyának jelzi, hogy közelítse meg az irodáját a megafon megérintésével."
+Text/15c/text,A burgonyák egyenként lépnek be a fülkébe és bemutatják dokumentumaikat.
+Text/15d/text,"Először helyezze át a dokumentumaikat a vizsgálóasztalra, hogy jobban megnézhesse."
+Text/15e/text,"Ezután keressen [tornado radius=3 freq=2][color=YELLOW]lejárt dátumokat, helytelen információkat vagy hamisítás jeleit[/color][/tornado]."
+Text/15f/text,"Az asztalán bélyegzők vannak a dokumentumok megjelöléséhez, kattintson ide a bélyegzősáv kihúzásához."
+Text/160/text,Ezután helyezze a dokumentumot a kívánt bélyegző alá...
+Text/161/text,"Kattintson a bélyegzőre, hogy a dokumentumokat [color=CHARTREUSE]jóváhagyottként[/color] vagy [color=CRIMSON]elutasítottként[/color] jelölje meg..."
+Text/162/text,"És húzza vissza a dokumentumot a burgonyához, hogy véglegesítse döntését!"
+Text/163/text,Néha a burgonyák megpróbálnak [color=CRIMSON]átfutni az ellenőrzőpontján[/color].
+Text/164/text,"Van egy közvetlen kapcsolata a fülkéjében, amely lehetővé teszi, hogy [pulse freq=3][color=CRIMSON]rakétaindítókat[/color][/pulse] irányítson a határfal mentén."
+Text/165/text,"Kattintson ezekre a ""futókra"", hogy rakétát indítson és megállítsa őket."
+Text/166/text,"Ne feledje, minden futó, aki átjut, [wave amp=20 freq=3][color=CRIMSON]figyelmeztetésnek számít Ön ellen[/color][/wave]."
+Text/167/text,"Túl sok figyelmeztetés, és a műszakja véget ér... [tornado radius=3 freq=3][color=CRIMSON]véglegesen.[/color][/tornado]"
+Text/168/text,"Minden műszaknak van egy [color=DARK_ORANGE]burgonyakvótája[/color], amelyet fel kell dolgoznia a napja befejezéséhez."
+Text/169/text,A pontszáma nyomon követi teljesítményét az ellenőrzőponton lévő kollégáihoz és a távoli vámirodákban dolgozó tisztviselőkhöz képest.
+Text/16a/text,"Minden műszak után látni fogja a teljesítményének összefoglalóját, és azt, hogy sikerült-e teljesítenie vagy kudarcot vallott a kötelességében."
+Text/16b/text,"Látni fogja, hogyan kezelte a futókat, és hány dokumentumot dolgozott fel."
+Text/16c/text,"Plusz minden bónuszt, amit a dokumentumok gyors feldolgozásával, a bélyegzők tökéletes elhelyezésével vagy a futó burgonyák tökéletes eltalálásával szerzett."
+Text/16d/text,"Kap egy teljesítményértékelést is, amely azon alapul, hogy milyen jól dolgozta fel a burgonyákat a műszakja során, és akár 3 arany bélyegzőt is, ha túlteljesíti az elvárásokat."
+Text/16e/text,"Itt beküldheti pontszámát minden műszakról a vámtisztviselők globális adatbázisába, és megnézheti, hogyan hasonlít a világ legkiválóbb vámtisztviselőihez."
+Text/16f/text,"Ha a műszakja sikeres volt, folytathatja a ""Folytatás"" gombra kattintva és a következő műszakja megkezdésével."
+Text/170/text,Ez lefedi a vámtisztviselői kötelességeinek alapjait.
+Text/171/text,"Ne feledje: ellenőrizze gondosan a dokumentumokat, állítsa meg a futókat, és teljesítse a kvótáját."
+Text/172/text,A Spud biztonsága az Ön [pulse freq=2][color=DARK_ORANGE]éberségén múlik![/color][/pulse]
+Text/174/text,Kezdjük el a [color=YELLOW]betanuló műszakodat[/color]...
+Text/180/text,De légy óvatos - nem minden burgonyának vannak rendben a papírjai.
+Text/181/text,[color=RED]Lejárt útlevelek[/color] automatikus elutasítás. Nincs kivétel.

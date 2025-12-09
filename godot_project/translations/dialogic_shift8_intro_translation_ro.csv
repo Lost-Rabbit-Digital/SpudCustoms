@@ -1,0 +1,31 @@
+﻿keys,ro
+Text/117/text,Punctul de control s-a transformat într-un avanpost militar. Gărzi de elită în uniforme negre patrulează cu armele la vedere.
+Text/118/text,"Sunt Ofițerul Șef de Securitate Yukon, trimis din capitală de Prim-ministrul Idaho."
+Text/119/text,"Informațiile indică faptul că [pulse freq=2][color=YELLOW]un atac terorist este iminent[/color][/pulse]. ""Rezistența"" planifică să se infiltreze mâine."
+Text/11a/text,Toți ofițerii vor fi supuși [wave amp=15 freq=2][color=DARK_ORANGE]verificării loialității[/color][/wave]. Comportamentul suspect înseamnă detenție și [color=DARK_VIOLET]procesare[/color].
+Text/11b/text,[tornado radius=3 freq=2][color=RED]Cooperarea totală[/color][/tornado] cu Securitatea este obligatorie. Rapoartele mele despre fiecare dintre voi au fost furnizate Șefului.
+Text/11c/text,Privirea lui Russet zăbovește asupra ta inconfortabil înainte de a se îndepărta.
+Text/11d/text,Acesta este [color=DARK_ORANGE]IdentityScan 5000[/color]. Analizează datele biometrice pentru a detecta infiltrații și simpatizanții.
+Text/11e/text,Oricine este semnalat va înfrunta [color=CRIMSON]interogatoriu intensificat[/color]. Folosiți-l fără excepție.
+Text/11f/text,"Ai văzut-o pe Sasha? Nu s-a prezentat la apel. Aseară, [color=CRIMSON]forțele de securitate i-au intrat în locuință[/color]."
+Text/120/text,Se spune că făcea parte din [pulse freq=2][color=CHARTREUSE]rezistență[/color][/pulse].
+Choice/121/text,Nu ar trebui să vorbim despre asta. Este periculos.
+Choice/122/text,Și eu sunt îngrijorat pentru ea. Asta nu e corect.
+Text/123/text,Ai dreptate. Dar ai grijă. Caută conexiuni cu ea.
+Text/124/text,Deci erați apropiați? Fii atent. S-ar putea să te urmărească și pe tine.
+Text/125/text,"Ofițerul îți strecoară un bilet: ""[color=YELLOW]Curăță-ți postul de orice lucru suspect.[/color]"""
+Text/126/text,Ești la acest punct de control de ceva timp. Dosar de performanță interesant.
+Text/127/text,"Ai fost văzut frecvent cu Ofițerul Sasha, acum sub investigație pentru [wave amp=20 freq=3][color=CRIMSON]trădare[/color][/wave]."
+Text/128/text,Șeful se apleacă înainte. Este ceva ce ai dori să-mi spui despre activitățile ei?
+Choice/129/text,Sasha și cu mine eram doar colegi. Nu știu nimic despre ea în afara serviciului.
+Choice/12a/text,Strângeam dovezi despre activitățile ei suspecte pentru a raporta mai târziu.
+Text/12b/text,"Mai mulți martori spun altceva. Fără dovezi concrete totuși, nu te pot reține. [color=YELLOW]Încă.[/color]"
+Text/12c/text,Vei fi sub [color=CRIMSON]observație atentă[/color]. Un pas greșit și vei [color=DARK_VIOLET]fi alături de Sasha[/color].
+Text/12d/text,Ce convenabil. Și totuși nu ai depus niciun raport până acum.
+Text/12e/text,"Vei furniza o declarație completă. Dacă informațiile tale se dovedesc valoroase, poate vom trece cu vederea raportarea întârziată."
+Text/12f/text,Îți voi [color=CRIMSON]monitoriza munca[/color] astăzi. Fiecare călător trebuie scanat pentru identitate. [color=RED]Fără excepții[/color].
+Text/130/text,"Sasha a fost luată. Planul rezistenței este [color=CRIMSON]compromis[/color]. Cu securitatea în alertă maximă, șansele lor par fără speranță."
+Choice/121/disabled_text,
+Choice/12a/disabled_text,
+Choice/129/disabled_text,
+Choice/122/disabled_text,

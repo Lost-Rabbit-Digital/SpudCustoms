@@ -1,0 +1,33 @@
+﻿keys,es
+Text/156/text,¡Bienvenido a [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs Training![/color][/pulse]
+Text/157/text,Esta capacitación te enseñará las [wave amp=15 freq=2][color=DARK_ORANGE]habilidades esenciales[/color][/wave] necesarias para proteger las fronteras de Spud.
+Text/158/text,Tu deber es procesar las patatas entrantes en nuestro puesto fronterizo.
+Text/159/text,Las patatas inmigrantes harán fila fuera de tu oficina aquí.
+Text/15a/text,"Para comenzar a procesar patatas, debes abrir tu cabina para el servicio con el interruptor aquí."
+Text/15b/text,Señalarás a cada patata que se acerque a tu oficina tocando el megáfono.
+Text/15c/text,Las patatas entrarán a la cabina una por una y presentarán sus documentos.
+Text/15d/text,"Primero, mueve sus documentos a la mesa de inspección para verlos mejor."
+Text/15e/text,"Luego, busca [tornado radius=3 freq=2][color=YELLOW]fechas vencidas, información incorrecta o signos de falsificación[/color][/tornado]."
+Text/15f/text,"Tu escritorio tiene sellos para marcar documentos, puedes hacer clic aquí para sacar la barra de sellos."
+Text/160/text,Luego coloca el documento bajo el sello que deseas...
+Text/161/text,Haz clic en el sello para marcar documentos como [color=CHARTREUSE]aprobados[/color] o [color=CRIMSON]rechazados[/color]...
+Text/162/text,¡Y arrastra el documento de vuelta a la patata para finalizar tu decisión!
+Text/163/text,"A veces, las patatas intentarán [color=CRIMSON]pasar corriendo por tu punto de control[/color]."
+Text/164/text,"Tienes un enlace directo en tu cabina, que te permite controlar [pulse freq=3][color=CRIMSON]lanzamisiles[/color][/pulse] a lo largo del muro fronterizo."
+Text/165/text,"Haz clic en estos ""corredores"" para lanzar un misil y detenerlos."
+Text/166/text,"Recuerda, cada corredor que logre pasar contará como una [wave amp=20 freq=3][color=CRIMSON]falta contra ti[/color][/wave]."
+Text/167/text,"Demasiadas faltas, y tu turno terminará... [tornado radius=3 freq=3][color=CRIMSON]permanentemente.[/color][/tornado]"
+Text/168/text,Cada turno tiene una [color=DARK_ORANGE]cuota de patatas[/color] que debes procesar para terminar tu día.
+Text/169/text,Tu puntuación realiza un seguimiento de tu rendimiento en comparación con tus compañeros en este punto de control y funcionarios en oficinas aduaneras distantes.
+Text/16a/text,"Después de cada turno, verás un resumen de tu desempeño y si tuviste éxito o fallaste en tu deber."
+Text/16b/text,Verás un desglose de cómo manejaste a los corredores y cuántos documentos procesaste.
+Text/16c/text,"Además de cualquier bonificación que hayas ganado por procesar documentos rápidamente, alinear perfectamente los sellos o golpear perfectamente a las patatas corredoras."
+Text/16d/text,"También recibirás una calificación de desempeño basada en qué tan bien procesaste las patatas durante tu turno, y hasta 3 sellos dorados si superas las expectativas."
+Text/16e/text,Aquí puedes enviar tu puntuación de cada turno a la base de datos global de oficiales de aduanas y ver cómo te comparas con los oficiales de aduanas más élite de todo el mundo.
+Text/16f/text,"Si tu turno fue exitoso, podrás continuar haciendo clic en ""Continuar"" y comenzando tu próximo turno."
+Text/170/text,Eso cubre los conceptos básicos de tus deberes como Oficial de Aduanas.
+Text/171/text,"Recuerda: revisa los documentos cuidadosamente, detén a los corredores y cumple con tu cuota."
+Text/172/text,¡La seguridad de Spud depende de tu [pulse freq=2][color=DARK_ORANGE]vigilancia![/color][/pulse]
+Text/174/text,Empecemos tu [color=YELLOW]turno de entrenamiento[/color]...
+Text/180/text,Pero ten cuidado - no todas las patatas tienen sus papeles en regla.
+Text/181/text,[color=RED]Pasaportes caducados[/color] son un rechazo automático. Sin excepciones.

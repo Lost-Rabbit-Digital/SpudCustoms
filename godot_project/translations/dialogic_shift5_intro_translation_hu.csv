@@ -1,0 +1,33 @@
+﻿keys,hu
+Text/a6/text,"A határlétesítmény ma más érzetet kelt. Feszültet. Biztonsági járőrök nagyobb számban, ahogy az óvatos csend felváltja a csevegést."
+Text/a7/text,"Tegnap éjjel [pulse freq=2][color=CRIMSON]tiltott anyagokat[/color][/pulse] fedeztek fel. Röplapokat, amelyek hazugságokat tartalmaznak a [color=DARK_VIOLET]Root Reserve[/color]-ről."
+Text/a8/text,Bevezetjük a [wave amp=15 freq=2][color=DARK_ORANGE]NARANCSSÁRGA veszélyszintű protokollokat[/color][/wave]. Minden tiszt lojalitási ellenőrzésnek van alávetve. Minden utazó maximális ellenőrzéssel szembesül.
+Text/a9/text,Működik. A röplapok terjednek. Az emberek kérdéseket tesznek fel a [color=DARK_VIOLET]Root Reserve[/color]-ről.
+Text/aa/text,"Vannak forrásaim, akik azt mondják, hogy van egy szállítási napló Russet irodájában - szállítási jegyzékek, amelyek [tornado radius=3 freq=2][color=CHARTREUSE]mindent bizonyíthatnának[/color][/tornado]."
+Text/ab/text,"Szükségem van a segítségedre, hogy megszerezzem. Ma este, az utolsó műszak után. Számíthatok rád?"
+Choice/ac/text,Benne vagyok. Tárjuk fel az igazságot.
+Choice/ad/text,"Nem tudom, Sasha... ez veszélyes lehet."
+Text/ae/text,"Hála istennek. Tudtam, hogy neked [color=CHARTREUSE]erősebb gyökereid vannak, mint a többieknek[/color]. Éjfélkor találkozunk."
+Text/af/text,"Néha [color=CHARTREUSE]kockáztatnunk kell, hogy összezúzzanak minket, hogy megtegyük, ami helyes[/color]. Gondolkozz ezen."
+Text/b0/text,"[color=DARK_ORANGE]Lojalitási ellenőrzés[/color]. Kérjük, mondja meg a nevét és tiszti azonosítóját. Azután mondja el, miért szolgálja Spudot."
+Choice/b1/text,"Azért szolgálok, hogy megvédjem határainkat a veszélyes befolyásoktól."
+Choice/b2/text,"Azért szolgálok, hogy mindenki igazságos bánásmódban részesüljön."
+Text/b3/text,"Jó válasz. Spudnak lojális védelmezőkre van szüksége. A szkenner zöldet mutat. Folytassa, tiszt."
+Text/b4/text,"A tiszt szemöldöke felemelkedik. Igazságos bánásmód? A szkenner [color=DARK_ORANGE]borostyán[/color] színben villog. Ne feledje, elsődleges aggodalmunk a biztonság, nem az igazságosság."
+Text/b5/text,A mai kvótát megemelték. Minden gyanús anyaggal rendelkező személyt meg kell jelölni [color=DARK_VIOLET]különleges feldolgozásra[/color].
+Text/b6/text,[color=DARK_ORANGE]Figyelni fogom a döntéseit[/color] ma nagyon gondosan.
+Text/b7/text,"A mai este mindent megváltoztathat. De először, [color=YELLOW]éld túl a napot anélkül, hogy gyanút keltenél[/color]."
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,
+Text/b4_viktor1/text,"Egy nagydarab biztonsági őr megfogja a karodat, ahogy elhaladsz. Arcát ráncok barázdálják az aggodalomtól."
+Text/b4_viktor2/text,"Hé... elnézést, hogy zavarlak. Maga az egyik vámtiszt, ugye? A nevem [color=CHARTREUSE]Viktor[/color]."
+Text/b4_viktor3/text,"Mindenkit a feleségemről kérdeztem, [color=GOLD]Elenáról[/color]. Elena Petrov. Három hete lépte át ezt az ellenőrzőpontot."
+Text/b4_viktor4/text,"[color=STEEL_BLUE]Ellenőrzésen elutasítva.[/color] Azt mondták, feldolgozzák és hazaküldik, de... azóta sem hallottam semmit."
+Text/b4_viktor5/text,"Hangja elcsuklik. Senki sem mond semmit. Tudja, hová mennek az elutasított utazók?"
+Choice/b4_viktor6/text,"""Sajnálom, Viktor. Nem tudom. De figyelni fogok."""
+Choice/b4_viktor7/text,"""Nem beszélhetek feldolgozási részletekről. Biztonsági protokollok."""
+Text/b4_viktor8/text,Viktor szemében felcsillan a remény. [color=CHARTREUSE]Köszönöm.[/color] Bármit megtud... kérem. Ő mindenem.
+Text/b4_viktor9/text,Viktor lemondóan bólint. [color=STEEL_BLUE]Rendben. Protokollok.[/color] Értem.
+Text/b4_viktor10/text,"De ha meggondolja magát... [color=YELLOW]Tudnom kell, mi történt vele.[/color]"

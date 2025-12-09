@@ -1,0 +1,26 @@
+﻿keys,hu
+Text/200/text,"Szia, új krumpli! Nehéz műszak, mi? Murphy vagyok. Három szezonja vagyok itt."
+Text/201/text,"Láttalak korábban Sashával beszélgetni. Ő... [color=STEEL_BLUE]más[/color]. Jó értelemben más, azt hiszem."
+Choice/202/text,"Kedvesnek tűnik. Adott néhány tanácsot, hogy éber maradjak."
+Choice/203/text,Csak bemutatkozás. Semmi különös.
+Text/204/text,Murphy idegesen körbenéz. Igen.
+Text/205/text,"Köztünk szólva? Az a rádiós adás az ""eltűnt krumplikról""... az unokatestvérem múlt hónapban tűnt el. Megbukott az ellenőrzésen."
+Text/206/text,"Okos. Hajtsd le a fejed, végezd a munkád. Ezt mondom magamnak minden nap."
+Text/207/text,"Murphy hangja elhalkul. Bár néha elgondolkodom, hova is kerül valójában az összes elutasított krumpli..."
+Text/208/text,A menzán
+Text/209/text,"Bámulod a sűrű, lilásbarna pépet. Mindenki kérdés nélkül eszi. Állítólag tápláló."
+Choice/20a/text,"Edd meg a Gyökér Tartalékot, mint mindenki más"
+Choice/20b/text,Told félre – nem vagy éhes
+Text/20c/text,"Az íze... földes. Gazdag. Valami [color=STEEL_BLUE]kellemetlenül ismerős[/color] benne, de nem tudod, miért."
+Text/20d/text,"Egy rangidős tiszt észreveszi. ""Ne pazarolj, ne nélkülözz, hajtás. Az ott [pulse freq=2][color=DARK_VIOLET]prémium táplálék[/pulse][/color]."""
+Text/20e/text,"Gyomorpanaszra hivatkozva mormolsz egy kifogást. A tiszt vállat von, és továbbmegy."
+Text/20f/text,"Vissza a szállásodon, nem tudod kiverni a fejedből, amit Sasha mondott. ""[color=YELLOW]Nem minden az, aminek látszik.[/color]"""
+Text/210/text,"Megkérdezted Russetet az elutasított krumplikról az első napodon. A válasza kitérő volt. ""[color=VIOLET]Feldolgozva. A protokoll szerint.[/color]"""
+Text/211/text,Pontosan [color=STEEL_BLUE]hogyan[/color] feldolgozva?
+Text/212/text,"Olyan lelkes voltál, hogy szolgálhass. Olyan büszke, hogy kiválasztottak. De a büszkeség nem magyarázza az [color=CRIMSON]eltűnt krumplikat[/color]."
+Text/213/text,"A rádió szerint az eltűnésekről szóló jelentések ""folytatódnak"". Ez azt jelenti, hogy már egy ideje tart."
+Text/214/text,"Lassan jön álom a szemedre. Amikor elalszol, [wave amp=15 freq=2][color=DARK_VIOLET]lila folyókról[/color][/wave] álmodsz, amelyek az ellenőrzőpont alatt folynak."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

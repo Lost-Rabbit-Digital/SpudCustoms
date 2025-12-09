@@ -1,0 +1,29 @@
+﻿keys,bg
+violation_condition_not_fresh,ОТХВЪРЛЯНЕ: Разрешени са само пресни картофи. Този картоф е {condition}
+violation_extra_eyes,"ОТХВЪРЛЯНЕ: Състоянието ""Допълнителни очи"" е забранено."
+violation_rotten,ОТХВЪРЛЯНЕ: Гнили картофи са забранени.
+violation_sprouted,ОТХВЪРЛЯНЕ: Покълнали картофи са забранени.
+violation_dehydrated,ОТХВЪРЛЯНЕ: Дехидратирани картофи са забранени.
+violation_frozen,ОТХВЪРЛЯНЕ: Замразени картофи са забранени.
+violation_too_old,ОТХВЪРЛЯНЕ: Картофът е на {age} години (максимална възраст: 4 години)
+violation_too_young_3,ОТХВЪРЛЯНЕ: Картофът е на {age} години (минимална възраст: 4 години)
+violation_too_young_2,ОТХВЪРЛЯНЕ: Картофът е на {age} години (минимална възраст: 3 години)
+violation_males_only,ОТХВЪРЛЯНЕ: Разрешени са само мъжки картофи.
+violation_females_only,ОТХВЪРЛЯНЕ: Разрешени са само женски картофи.
+violation_country_spudland,ОТХВЪРЛЯНЕ: Всички картофи от Spudland са забранени.
+violation_country_potatopia,ОТХВЪРЛЯНЕ: Всички картофи от Potatopia са забранени.
+violation_country_tuberstan,ОТХВЪРЛЯНЕ: Всички картофи от Tuberstan са забранени.
+violation_country_north_yamnea,ОТХВЪРЛЯНЕ: Всички картофи от North Yamnea са забранени.
+violation_country_spuddington,ОТХВЪРЛЯНЕ: Всички картофи от Spuddington са забранени.
+violation_country_tatcross,ОТХВЪРЛЯНЕ: Всички картофи от Tatcross са забранени.
+violation_country_mash_meadows,ОТХВЪРЛЯНЕ: Всички картофи от Mash Meadows са забранени.
+violation_country_tuberville,ОТХВЪРЛЯНЕ: Всички картофи от Tuberville са забранени.
+violation_country_chip_hill,ОТХВЪРЛЯНЕ: Всички картофи от Chip Hill са забранени (ограничения за износ)
+violation_country_murphyland,ОТХВЪРЛЯНЕ: Всички картофи от Murphyland са забранени.
+violation_country_colcannon,ОТХВЪРЛЯНЕ: Всички картофи от Colcannon са забранени.
+violation_country_pratie_point,ОТХВЪРЛЯНЕ: Всички картофи от Pratie Point са забранени.
+violation_race_purple_majesty,"ОТХВЪРЛЯНЕ: Сортовете ""Purple Majesty"" са забранени."
+violation_race_sweet_potato,"ОТХВЪРЛЯНЕ: Сортовете ""Сладък картоф"" изискват специални разрешителни (не са налични)"
+violation_race_yukon_gold,ОТХВЪРЛИ: Сортовете Yukon Gold са забранени
+violation_expired_document,ОТХВЪРЛИ: Документът е изтекъл на {date}
+violation_invalid_potato,Този картоф отговаря на всички изисквания и е трябвало да бъде одобрен

@@ -1,0 +1,63 @@
+﻿keys,fr
+Text/b8/text,"L'installation frontalière est en confinement total, avec des agents de sécurité armés patrouillant dans chaque couloir."
+Text/b9/text,[pulse freq=3][color=RED]ATTENTION ! Situation de sécurité NIVEAU ROUGE ![/color][/pulse] Des documents classifiés ont été volés la nuit dernière.
+Text/ba/text,Nous avons un [tornado radius=4 freq=3][color=CRIMSON]traître parmi nous[/color][/tornado]. Quiconque dissimule des informations sera traité comme complice.
+Text/bb/text,"Tous les officiers, alignez-vous pour [wave amp=15 freq=2][color=DARK_ORANGE]le scan de sécurité[/color][/wave]. Ceux présentant des réponses de stress élevées seront signalés."
+Text/bc/text,Avez-vous vu ce qui se passe dehors ? Des pamphlets partout montrant que [color=DARK_VIOLET]Root Reserve[/color] est fait à partir de... [pulse freq=3][color=CRIMSON]de nous[/color][/pulse].
+Choice/bd/text,Baisse la voix. Nous sommes tous surveillés.
+Choice/be/text,J'ai entendu les mêmes rumeurs. C'est horrifiant si c'est vrai.
+Choice/bf/text,C'est une propagande ridicule. Ne répands pas de tels mensonges.
+Text/c0/text,Tu as raison. Mais si c'est vrai... qu'est-ce que cela fait de nous ?
+Text/c1/text,Mon cousin a été rejeté le mois dernier. Est-ce que cela signifie...? Je [color=CHARTREUSE]ne peux plus continuer ainsi[/color].
+Text/c2/text,Leur expression devient méfiante. Bien sûr. Fidèle à Spud pour toujours.
+Text/c3/text,Indiquez où vous étiez hier soir entre 22h00 et 04h00.
+Choice/c4/text,"J'étais dans mes quartiers toute la nuit, en train de dormir."
+Choice/c5/text,Je préférerais d'abord parler à mon représentant légal.
+Text/c6/text,Vos niveaux de stress indiquent une [color=YELLOW]tromperie[/color]. Cependant... non concluant. Vous pouvez partir pour l'instant.
+Text/c7/text,"Représentant légal ? C'est une procédure de sécurité, pas un procès. Votre refus a été noté."
+Text/c8/text,"Ça fonctionne. Les manifestes ont provoqué un tollé, mais [color=DARK_ORANGE]Russet nous soupçonne[/color]."
+Text/c9/text,Surveillez les alliés de notre organisation pendant le service d'aujourd'hui. [color=CHARTREUSE]Vous les reconnaîtrez[/color].
+Text/ca/text,"Si vous pouvez les faire passer en toute sécurité, utilisez [color=CHARTREUSE]la marque spéciale dont nous avons discuté[/color]."
+Choice/cb/text,Ça vaut le risque. Je suis partant.
+Choice/cc/text,Cela devient trop dangereux. Peut-être devrions-nous faire profil bas.
+Text/cd/text,"Je savais que je pouvais compter sur toi. Quand tout cela sera terminé, [color=CHARTREUSE]Spud saura qui étaient les vrais héros[/color]."
+Text/ce/text,Nous sommes bien au-delà de ce point. Faire profil bas ne nous sauvera pas. [color=CHARTREUSE]Seul le renversement du système le fera[/color].
+Text/cf/text,Chaque station dispose maintenant du nouveau [color=DARK_ORANGE]système RealityScan[/color]. Il détecte les marquages non autorisés et les contrefaçons.
+Text/d0/text,Tous les documents doivent être scannés avant approbation. Les [color=CRIMSON]traîtres seront déracinés[/color]. Je le garantis.
+Text/d1/text,"Aider les membres de la résistance est devenu beaucoup plus dangereux, mais [color=CHARTREUSE]la vérité doit se répandre[/color]."
+Choice/bd/disabled_text,
+Choice/be/disabled_text,
+Choice/bf/disabled_text,
+Choice/c4/disabled_text,
+Choice/c5/disabled_text,
+Choice/cb/disabled_text,
+Choice/cc/disabled_text,
+Text/c7_viktor1/text,Un garde de sécurité costaud s'approche pendant votre pause. Son visage est tiré.
+Text/c7_viktor2/text,"Hé... vous êtes l'un des agents des douanes, n'est-ce pas ? Je me suis renseigné sur ma femme, Elena."
+Text/c7_viktor3/text,Elle a traversé ce poste de contrôle il y a trois semaines. [color=STEEL_BLUE]Échec de l'inspection.[/color] Je n'ai plus eu de ses nouvelles depuis.
+Choice/c7_viktor4/text,"""Viktor... J'ai trouvé quelque chose. À propos d'Elena. Vous devez connaître la vérité."""
+Choice/c7_viktor5/text,"""Je suis désolé, Viktor. Je n'ai rien vu."" (Mentir pour le protéger)"
+Text/c7_viktor6/text,Vous lui montrez une copie de la page du manifeste. Son visage pâlit.
+Text/c7_viktor7/text,[wave amp=25 freq=3]Ses mains tremblent tandis qu'il lit.[/wave] [color=GOLD]Elena Petrov[/color]... [color=CRIMSON]Traitée... Lot RR-2851...[/color]
+Text/c7_viktor8/text,Sa voix n'est qu'un murmure. [tornado radius=3 freq=2][color=CRIMSON]Ils... ils l'ont transformée en...[/color][/tornado]
+Text/c7_viktor9/text,Son chagrin se transforme en fureur froide. [pulse freq=2][color=CRIMSON]Idaho paiera pour ça.[/color][/pulse] Je le jure sur sa mémoire.
+Text/c7_viktor10/text,Il vous serre l'épaule. [color=CHARTREUSE]Merci de me l'avoir dit.[/color] Quand le moment viendra... je m'en souviendrai.
+Text/c7_viktor11/text,Il hoche la tête tristement. [color=STEEL_BLUE]Je m'en doutais.[/color] Personne ne sait rien. Ou personne ne veut parler.
+Text/c7_viktor12/text,Si vous entendez quoi que ce soit... [color=YELLOW]s'il vous plaît.[/color] Elle est tout ce que j'ai.
+Text/d0_qte1/text,"Plus tard durant ce quart de travail, un voyageur s'approche avec des papiers portant la [color=CHARTREUSE]marque subtile de la résistance[/color]."
+Text/d0_qte2/text,Le [color=DARK_ORANGE]RealityScan[/color] commence son balayage. [wave amp=15 freq=3][color=RED]Il va détecter la marque ![/color][/wave]
+Text/d0_qte3/text,Vous avez quelques secondes pour décider. Le scanner se préchauffe...
+Choice/d0_qte4/text,"""Simulez un dysfonctionnement du scanner - vite !"" (Aider la résistance)"
+Choice/d0_qte5/text,"""Laissez le scanner terminer son balayage"" (Suivre le protocole)"
+Text/d0_qte6/text,[pulse freq=3][color=YELLOW]Vous devez agir vite ![/color][/pulse] Déclenchez le dysfonctionnement avant qu'il ne termine le balayage !
+Text/d0_qte7/text,Vous tripotez les câbles du scanner. Des étincelles volent. L'écran scintille et s'éteint.
+Text/d0_qte8/text,Russet se précipite. [color=YELLOW]Que s'est-il passé ici ?[/color]
+Choice/d0_qte9/text,"""Surtension, monsieur. Ces nouveaux systèmes sont capricieux."""
+Choice/d0_qte10/text,"""Je ne sais pas, monsieur. Il m'a juste lâché."""
+Text/d0_qte11/text,Russet grogne. [color=STEEL_BLUE]Ces bureaucrates nous donnent du matériel non testé.[/color] Traitez-les manuellement et signalez-les pour une nouvelle inspection.
+Text/d0_qte12/text,Russet vous regarde avec suspicion. [color=YELLOW]Comme c'est pratique.[/color] Je vais demander à la maintenance de s'en occuper. Ne laissez pas cela se reproduire.
+Text/d0_qte13/text,Le membre de la résistance vous fait un léger signe de tête de gratitude tandis qu'ils passent.
+Text/d0_qte14/text,Le scanner [pulse freq=3][color=RED]BIIPE FORT[/color][/pulse]. Marquages non autorisés détectés !
+Text/d0_qte15/text,Russet apparaît instantanément. [color=CHARTREUSE]Bien joué ![/color] Un autre traître capturé.
+Text/d0_qte16/text,"Le membre de la résistance est traîné, la terreur dans les yeux. ""[color=CRIMSON]Non, pitié ! J'ai des enfants ![/color]"""
+Text/d0_qte17/text,Votre loyauté est [color=DARK_ORANGE]notée dans votre dossier[/color]. Continuez ainsi.

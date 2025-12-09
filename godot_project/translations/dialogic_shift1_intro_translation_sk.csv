@@ -1,0 +1,18 @@
+﻿keys,sk
+Text/56/text,Vitajte v národe Zemiakov. Krajina [pulse freq=2][color=MEDIUM_VIOLET_RED]prosperity pre všetky zemiaky[/color][/pulse].
+Text/57/text,Boli ste vybraný pre [color=DARK_ORANGE]kľúčovú úlohu[/color] v ochrane našich hraníc.
+Text/59/text,"POHĽADAJTE! [color=MEDIUM_VIOLET_RED]Mocný múr[/color], ktorý chráni našu krajinu. Tu budete slúžiť a zabezpečovať, aby vstúpili len hodní."
+Text/5a/text,"Ah, nový výhonok. Počúvajte pozorne, vaša úloha je [color=DARK_ORANGE]kľúčová pre bezpečnosť Zemiakov[/color]."
+Text/184/text,Vaše blaho [wave amp=20 freq=3][color=YELLOW]závisí od vášho výkonu[/color][/wave].
+Text/5b/text,Menovím vás colníkom [pulse freq=1][color=MEDIUM_VIOLET_RED]slávnych Zemiakov[/color][/pulse]. Nejaké otázky?
+Choice/5c/text,Som pripravený slúžiť Zemiakom celým mojím škrobom!
+Choice/5d/text,Čo sa presne deje s odmietnutými zemiakmi?
+Text/5e/text,"Výborne! To je nadšenie, ktoré potrebujeme. Mohli by ste získať ocenenie [color=DARK_VIOLET]Koreňovej rezervy[/color]."
+Text/5f/text,Sú... [color=DARK_VIOLET]spracované[/color]. Podľa protokolu. [color=DARK_VIOLET]Koreňová rezerva[/color] rieši všetky detaily.
+Text/60/text,Sústreďte sa na svoje povinnosti. [color=DARK_ORANGE]Nič viac.[/color]
+Text/61/text,"Vaša prvá zmena začína teraz. Starostlivo skontrolujte dokumenty, zamietajte tých, ktorí nespĺňajú naše štandardy."
+Text/62/text,"Splňte svoju kvótu, vyhýbajte sa sankciám. [color=MEDIUM_VIOLET_RED]Sláva Zemiakom![/color]"
+Choice/5d/disabled_text,
+Choice/5c/disabled_text,
+Text/184b/text,"Tí, čo sa pýtajú príliš veľa otázok? Budú [color=CRIMSON]preradení[/color]. Natrvalo."
+Text/62b/text,"A nezabúdajte, [color=MEDIUM_VIOLET_RED]Sláva Zemiaku![/color]"

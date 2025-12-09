@@ -1,0 +1,31 @@
+﻿keys,ja
+Text/117/text,検問所は軍事拠点と化した。黒い制服をまとった精鋭兵が、武器を誇示しながら巡回している。
+Text/118/text,私は警備主任ユーコン。アイダホ首相の命により、首都より派遣された。
+Text/119/text,情報によると、[pulse freq=2][color=YELLOW]テロ攻撃が差し迫っている[/color][/pulse]。「抵抗勢力」が明日、潜入を企てている。
+Text/11a/text,全ての職員は[wave amp=15 freq=2][color=DARK_ORANGE]忠誠審査[/color][/wave]を受ける。不審な行動は拘束、そして「[color=DARK_VIOLET]処理[/color]」を意味する。
+Text/11b/text,警備隊への[tornado radius=3 freq=2][color=RED]全面的な協力[/color][/tornado]は義務である。君たち一人ひとりに関する私の報告書は、既に長官に提出済みだ。
+Text/11c/text,ラセットの視線が君に不快なほど長く留まり、やがて離れていった。
+Text/11d/text,これが[color=DARK_ORANGE]アイデンティティスキャン5000[/color]だ。生体認証を分析し、潜入者や共鳴者を検出する。
+Text/11e/text,スキャナーに反応した者は[color=CRIMSON]強化尋問[/color]を受ける。例外なく使用せよ。
+Text/11f/text,サーシャを見かけたか？彼女は点呼に現れなかった。昨夜、[color=CRIMSON]警備隊が彼女の宿舎に踏み込んだ[/color]。
+Text/120/text,彼らは、彼女が[pulse freq=2][color=CHARTREUSE]抵抗勢力[/color][/pulse]の一員だったと言っている。
+Choice/121/text,「この話はすべきではない。危険だ。」
+Choice/122/text,「私も彼女のことが心配だ。これは間違っている。」
+Text/123/text,君の言う通りだ。だが、気をつけろ。彼らは彼女との繋がりを探している。
+Text/124/text,君は彼女と親しかったのか？気をつけろ。君も監視されているかもしれない。
+Text/125/text,職員が君にメモを滑り込ませた：「[color=YELLOW]不審なものは全て持ち場から片付けろ。[/color]」
+Text/126/text,君はこの検問所にずいぶん長くいるな。興味深い勤務記録だ。
+Text/127/text,君は警官サーシャと頻繁に目撃されている。彼女は現在、[wave amp=20 freq=3][color=CRIMSON]反逆罪[/color][/wave]で捜査中だ。
+Text/128/text,長官が身を乗り出す。彼女の活動について、何か話したいことはあるか？
+Choice/129/text,「サーシャと私はただの同僚でした。仕事以外の彼女については何も知りません。」
+Choice/12a/text,「私は彼女の不審な活動について証拠を集めていました。後で報告するために。」
+Text/12b/text,複数の証人はそうではないと言っている。しかし、具体的な証拠がない限り、君を拘束することはできない。[color=YELLOW]まだはな。[/color]
+Text/12c/text,君は[color=CRIMSON]厳重な監視下[/color]に置かれる。一度でもしくじれば、君も[color=DARK_VIOLET]サーシャの仲間入り[/color]だ。
+Text/12d/text,都合がいいな。それなのに、今まで報告書は一切提出されていない。
+Text/12e/text,君は完全な供述書を提出するのだ。君の情報が価値あるものと証明されれば、報告の遅れは見過ごしてやるかもしれない。
+Text/12f/text,今日は君の仕事を[color=CRIMSON]監視させてもらう[/color]。全ての旅行者は身元スキャンを受けなければならない。[color=RED]例外は一切認めない[/color]。
+Text/130/text,サーシャが連れ去られた。抵抗計画は[color=CRIMSON]露見した[/color]。警備が厳戒態勢の中、彼らの勝機は絶望的だ。
+Choice/121/disabled_text,
+Choice/122/disabled_text,
+Choice/129/disabled_text,
+Choice/12a/disabled_text,

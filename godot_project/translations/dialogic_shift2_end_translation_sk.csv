@@ -1,0 +1,26 @@
+﻿keys,sk
+Text/200/text,"Ahoj, nový zemiak! Ťažká smena, čo? Volám sa Murphy. Som tu už tri sezóny."
+Text/201/text,"Videl som ťa predtým hovoriť so Sashou. Ona je... [color=STEEL_BLUE]iná[/color]. V dobrom zmysle iná, myslím."
+Choice/202/text,"Zdá sa milá. Dala mi pár rád, ako zostať ostražitý."
+Choice/203/text,Len sme sa predstavili. Nič zvláštne.
+Text/204/text,Murphy sa nervózne obzrie. Áno
+Text/205/text,Medzi nami? To rádiové vysielanie o „zmiznutých zemiakoch“... môj bratranec zmizol minulý mesiac. Neprešiel kontrolou.
+Text/206/text,"Múdre. Drž sa pri zemi, rob si svoju prácu. To si hovorím každý deň."
+Text/207/text,"Murphy stíši hlas. Hoci niekedy sa pýtam, kam vlastne idú všetky tie zamietnuté zemiaky..."
+Text/208/text,V jedálni
+Text/209/text,"Pozeráš sa na hustú, purpurovo-hnedú pastu. Všetci ju jedia bez otázok. Má byť výživná."
+Choice/20a/text,Zjedz Koreňovú rezervu ako všetci ostatní
+Choice/20b/text,Odsúň ju nabok – nie si hladný
+Text/20c/text,"Chuť je... zemitá. Sýta. Niečo na nej pôsobí [color=STEEL_BLUE]znepokojivo povedome[/color], ale nevieš si spomenúť prečo."
+Text/20d/text,"Všimne si to starší dôstojník. „Kto šetrí, má, výhonok. To je [pulse freq=2][color=DARK_VIOLET]prémiová výživa[/color][/pulse] priamo tam.“"
+Text/20e/text,Zamrmleš výhovorku o žalúdočnej nevoľnosti. Dôstojník pokrčí plecami a ide ďalej.
+Text/20f/text,"Späť vo svojich ubikáciách sa nemôžeš zbaviť toho, čo povedala Sasha. „[color=YELLOW]Nie všetko je tak, ako sa zdá.[/color]“"
+Text/210/text,Na svoj prvý deň si sa Russeta spýtal na zamietnuté zemiaky. Jeho odpoveď bola vyhýbavá. „[color=VIOLET]Spracované. Podľa protokolu.[/color]“
+Text/211/text,Spracované [color=STEEL_BLUE]ako[/color] presne?
+Text/212/text,"Bol si taký dychtivý slúžiť. Taký hrdý, že si bol vybraný. Ale hrdosť nevysvetľuje [color=CRIMSON]zmiznuté zemiaky[/color]."
+Text/213/text,"Rádio hlásilo, že správy o zmiznutiach „pokračujú“. To znamená, že sa to deje už nejaký čas."
+Text/214/text,"Spánok prichádza pomaly. Keď už príde, snívaš o [wave amp=15 freq=2][color=DARK_VIOLET]fialových riekach[/color][/wave] tečúcich pod kontrolným bodom."
+Choice/202/disabled_text,
+Choice/203/disabled_text,
+Choice/20a/disabled_text,
+Choice/20b/disabled_text,

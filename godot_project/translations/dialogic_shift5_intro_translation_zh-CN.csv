@@ -1,0 +1,35 @@
+﻿keys,zh-CN
+Text/a6/text,今天的边境设施气氛不同寻常。紧张。警惕的沉默取代了往日的喧嚣，巡逻的安保人员也增多了。
+Text/a7/text,昨晚，[pulse freq=2][color=CRIMSON]违禁品[/color][/pulse]被发现。是散布关于[color=DARK_VIOLET]根源储备[/color]谎言的传单。
+Text/a8/text,我们正在实施[wave amp=15 freq=2][color=DARK_ORANGE]橙色威胁级别协议[/color][/wave]。所有官员都将接受忠诚度审查。所有旅客都将面临最严格的审查。
+Text/a9/text,奏效了。传单正在扩散。人们开始对[color=DARK_VIOLET]根源储备[/color]提出疑问。
+Text/aa/text,有线人告诉我，罗斯特的办公室里有一份货运日志——那份运输清单可以[tornado radius=3 freq=2][color=CHARTREUSE]证明一切[/color][/tornado]。
+Text/ab/text,我需要你帮我拿到它。今晚，在最后一班岗结束后。我能指望你吗？
+Choice/ac/text,“我加入。让我们揭露真相。”
+Choice/ad/text,“我不知道，萨莎……这可能很危险。”
+Text/ae/text,太好了。我就知道你比其他人有[color=CHARTREUSE]更深的根基[/color]。我们午夜见面。
+Text/af/text,有时候，为了做正确的事，我们必须[color=CHARTREUSE]冒着被捣成泥的风险[/color]。考虑一下吧。
+Text/b0/text,[color=DARK_ORANGE]忠诚度检查[/color]。请报上你的姓名和警官证号。然后告诉我你为何效忠斯普德。
+Choice/b1/text,“我效忠是为了保护我们的边境免受危险影响。”
+Choice/b2/text,“我效忠是为了确保每个人都受到公平对待。”
+Text/b3/text,很好的回答。斯普德需要忠诚的守护者。扫描仪显示绿色。继续工作吧，警官。
+Text/b4/text,那名官员眉毛一挑。公平对待？扫描仪闪烁[color=DARK_ORANGE]琥珀色[/color]。记住，我们的首要任务是安全，而非公平。
+Text/b5/text,今天的配额增加了。任何携带可疑物品的人都将被标记为[color=DARK_VIOLET]特殊处理[/color]。
+Text/b6/text,今天我将非常仔细地[color=DARK_ORANGE]观察你的决定[/color]。
+Text/b7/text,今晚可能会改变一切。但首先，[color=YELLOW]在不引起怀疑的情况下度过今天[/color]。
+Text/b4_viktor1/text,当你经过时，一名魁梧的保安抓住了你的手臂。他的脸上写满了担忧。
+Text/b4_viktor2/text,嘿……抱歉打扰你。你是海关官员之一，对吧？我叫[color=CHARTREUSE]维克多[/color]。
+Text/b4_viktor3/text,我一直在向所有人打听我的妻子，[color=GOLD]埃琳娜[/color]。埃琳娜·彼得罗夫。她三周前通过了这个检查站。
+Text/b4_viktor4/text,[color=STEEL_BLUE]检查未通过。[/color]他们说她经过处理后就会被送回家，但是……我却什么消息都没收到。
+Text/b4_viktor5/text,他的声音颤抖着。没人告诉我任何事。你知道那些被拒绝的旅客去了哪里吗？
+Choice/b4_viktor6/text,“抱歉，维克多。我不知道。但我会留意一下的。”
+Choice/b4_viktor7/text,“我不能讨论处理细节。这是安全协议。”
+Text/b4_viktor8/text,维克托眼中闪过一丝希望。[color=CHARTREUSE]谢谢你。[/color]无论你查到什么……拜托了。她是我的一切。
+Text/b4_viktor9/text,维克托沮丧地点点头。[color=STEEL_BLUE]好吧。规程。[/color]我明白。
+Text/b4_viktor10/text,但如果你改变主意……[color=YELLOW]我必须知道她到底怎么了。[/color]
+Choice/ac/disabled_text,
+Choice/b2/disabled_text,
+Choice/b1/disabled_text,
+Choice/ad/disabled_text,
+Choice/b4_viktor6/disabled_text,
+Choice/b4_viktor7/disabled_text,

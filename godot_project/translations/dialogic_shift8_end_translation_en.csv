@@ -1,0 +1,59 @@
+keys,en
+Text/265/text,The shift ends in uneasy silence. Security patrols have doubled. Everyone moves in whispers.
+Text/266/text,You're heading to your quarters when you hear it - [color=YELLOW]shouting from the officers' wing[/color].
+Text/267/text,You round the corner to see security forces [pulse freq=3][color=RED]kicking down Sasha's door[/color][/pulse].
+Text/268/text,Chief Yukon's voice booms. SWEET POTATO SASHA! You are under arrest for [color=CRIMSON]treason against the nation of Spud![/color]
+Text/269/text,"Sasha is dragged out, struggling. Her eyes are defiant even as guards wrench her arms behind her back."
+Text/26a/text,[tornado radius=4 freq=3][color=CHARTREUSE]THE TRUTH WILL COME OUT! YOU CAN'T SILENCE ALL OF US![/color][/tornado]
+Text/26b/text,Her gaze finds you in the crowd of onlookers. Time seems to freeze.
+Text/26c/text,Recognition... then [color=CRIMSON]devastating understanding[/color]. You betrayed her location. She knows.
+Text/26d/text,She doesn't speak. The look is enough. [color=STEEL_BLUE]Disappointment deeper than hatred.[/color]
+Text/26e/text,A flicker of something - [color=CHARTREUSE]hope? trust?[/color] - crosses her face.
+Text/26f/text,"Her lips move silently: ""[color=CHARTREUSE]The roots grow deep.[/color]"" A message. A reminder."
+Text/270/text,"Russet emerges from the shadows, satisfaction oozing from every pore."
+Text/271/text,"Well well. The [color=CRIMSON]sweet potato turns sour[/color]. I always knew there was something rotten about you, Sasha."
+Text/272/text,"Russet holds up a folder. Your little [color=DARK_VIOLET]manifests[/color]. Your ""evidence."" All recovered."
+Text/273/text,Did you really think you could undermine [pulse freq=2][color=DARK_VIOLET]Root Reserve[/color][/pulse]? Undermine ME?
+Text/274/text,"Copies are already out there, Russet. The world will know what you do to our people!"
+Text/275/text,"Russet laughs coldly. They'll know what we tell them. And you? You'll be part of a [color=CRIMSON]very special batch[/color]."
+Text/276/text,"""[color=DARK_VIOLET]Traitor's Blend[/color]"" - I think that has a nice ring to it."
+Text/277/text,Your heart pounds. Every instinct screams to do something. But guards are everywhere.
+Choice/278/text,Step forward and demand they release her (Reckless)
+Choice/279/text,Stay hidden - live to fight another day (Pragmatic)
+Choice/27a/text,Catch Sasha's eye and nod - a promise (Resolve)
+Text/27b/text,"You push through the crowd. ""[color=CHARTREUSE]Wait! She hasn't done anything wrong![/color]"""
+Text/27c/text,"Yukon's head snaps toward you. ""[color=RED]Seize that one too![/color] Clearly an accomplice!"""
+Text/27d/text,"Murphy grabs you, pulling you back. ""[color=STEEL_BLUE]They're confused in the chaos! RUN![/color]"""
+Text/27e/text,Murphy shoves you toward a side corridor as guards close in on your position.
+Text/27f/text,"Guards grab you. Russet's smile widens. ""[color=CRIMSON]Two traitors for the price of one.[/color]"""
+Text/280/text,"You shrink back into the shadows, hating yourself with every fiber. [color=STEEL_BLUE]Coward.[/color]"
+Text/281/text,But alive. And free. For now.
+Text/282/text,"You catch Sasha's eye. A slow, deliberate nod. [color=CHARTREUSE]I'm coming for you.[/color]"
+Text/283/text,"She sees. The tiniest smile. Then she's dragged around the corner, gone."
+Text/284/text,"He finds you in the chaos. His face is a mask, but his eyes burn."
+Text/285/text,They took her to the [color=CRIMSON]processing wing[/color]. Sub-level 3. That's where they took my wife.
+Text/286/text,He presses something into your hand - a [color=GOLD]security keycard[/color].
+Text/287/text,"When the time comes... [color=CHARTREUSE]I'll look the other way[/color]. For my wife. For all of them."
+Text/288/text,"Murphy pulls you into the storage room, breathing hard."
+Text/289/text,This is it. This is [color=CRIMSON]actually happening[/color]. They've got Sasha. They'll process her by morning.
+Text/28a/text,"That was [color=STEEL_BLUE]stupid[/color]. Brave, but stupid. You're on their list now."
+Text/28b/text,The resistance is planning something. Tomorrow. It's our only chance to save her.
+Text/28c/text,Are you in? [color=CHARTREUSE]All the way in?[/color]
+Choice/28d/text,All the way. Whatever it takes to save Sasha.
+Choice/28e/text,I need to think. This is moving too fast.
+Text/28f/text,Murphy clasps your shoulder. [color=CHARTREUSE]Then we move at dawn. The roots grow deep.[/color]
+Text/290/text,"Murphy's face hardens. Think fast. By this time tomorrow, she'll be [color=DARK_VIOLET]Root Reserve[/color]."
+Text/291/text,"You lie awake, staring at the ceiling. Sasha's face. Her defiance. Her fear."
+Text/292/text,You pull out the photo of the missing wife. Another face you couldn't save.
+Text/293/text,[color=CHARTREUSE]Not this time.[/color]
+Text/294/text,"By tomorrow, everything changes. One way or another."
+Text/295/text,[pulse freq=2][color=YELLOW]No more standing on the sidelines.[/color][/pulse]
+Text/296/text,"The cell is cold. Through the walls, you can hear Sasha somewhere, being ""questioned."""
+Text/297/text,"Tomorrow, they said. You'll both be [color=DARK_VIOLET]processed[/color] together."
+Text/298/text,Unless the resistance comes. Unless someone saves you both.
+Text/299/text,[color=STEEL_BLUE]The longest night of your life stretches ahead.[/color]
+Choice/278/disabled_text,
+Choice/279/disabled_text,
+Choice/27a/disabled_text,
+Choice/28d/disabled_text,
+Choice/28e/disabled_text,
