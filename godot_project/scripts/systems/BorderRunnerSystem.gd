@@ -11,6 +11,12 @@ signal game_over_triggered
 ## Force Spuds to run the border for your entertainment
 @export var rapid_runners = false
 
+@export_group("Minigame Integration")
+## Chance that an unlocked minigame triggers instead of a border runner (0.25 = 25%)
+@export_range(0, 1, 0.01) var minigame_instead_chance: float = 0.25
+## Reference to the minigame launcher for checking unlocked games
+@export var minigame_launcher: MinigameLauncher = null
+
 @export_group("System References")
 ## Manager for handling the potato queue
 @export var queue_manager: Node2D
@@ -497,11 +503,44 @@ func update_runners(delta):
 func attempt_spawn_runner():
 	print("Attempting to spawn runner...")
 	if queue_manager.potatoes.size() > 0 and active_runners.size() < max_active_runners:
+		# Check if a minigame should trigger instead of a runner
+		if _try_trigger_minigame_instead():
+			time_since_last_run = 0.0
+			return  # Minigame event emitted, skip runner spawn
+
 		var potato = queue_manager.remove_front_potato()
 		if potato:
 			print("Starting new runner")
 			start_runner(potato)
 			time_since_last_run = 0.0
+
+
+## Try to trigger a minigame instead of a border runner.
+## Returns true if a minigame event was emitted, false otherwise.
+func _try_trigger_minigame_instead() -> bool:
+	# Need minigame launcher reference to check unlocked games
+	if not minigame_launcher:
+		return false
+
+	# Get list of unlocked minigames
+	var unlocked = minigame_launcher.get_unlocked_minigames()
+	if unlocked.is_empty():
+		return false
+
+	# Roll the chance (25% default)
+	if randf() > minigame_instead_chance:
+		return false
+
+	# Pick a random unlocked minigame
+	var random_type = unlocked[randi() % unlocked.size()]
+
+	# Emit event for mainGame.gd to handle (it checks the per-shift limit)
+	if EventBus:
+		EventBus.minigame_from_runner_requested.emit(random_type)
+		print("Minigame triggered instead of border runner: ", random_type)
+		return true
+
+	return false
 
 
 # In BorderRunnerSystem.gd

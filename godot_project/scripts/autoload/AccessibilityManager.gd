@@ -32,6 +32,26 @@ var current_font_size: FontSize = FontSize.MEDIUM
 var current_high_contrast: bool = false
 var dyslexia_font_enabled: bool = false
 
+# QTE Accessibility settings
+var qte_auto_complete: bool = false  # Automatically succeed all QTEs
+var qte_time_multiplier: float = 1.0  # Time given for each QTE prompt (1.0 = normal, 2.0 = double)
+var qte_reduced_prompts: bool = false  # Reduce number of QTE prompts
+
+# QTE difficulty presets
+enum QTEDifficulty {
+	STANDARD,  # Normal timing and prompts
+	RELAXED,   # 50% more time
+	ASSISTED,  # Double time, fewer prompts
+	AUTO       # Auto-complete all QTEs
+}
+
+const QTE_DIFFICULTY_SETTINGS = {
+	QTEDifficulty.STANDARD: {"time_multiplier": 1.0, "reduced_prompts": false, "auto": false},
+	QTEDifficulty.RELAXED: {"time_multiplier": 1.5, "reduced_prompts": false, "auto": false},
+	QTEDifficulty.ASSISTED: {"time_multiplier": 2.0, "reduced_prompts": true, "auto": false},
+	QTEDifficulty.AUTO: {"time_multiplier": 1.0, "reduced_prompts": false, "auto": true}
+}
+
 # UI scale options
 const UI_SCALE_OPTIONS = {
 	"80%": 0.8,
@@ -98,6 +118,11 @@ func load_settings():
 	# Load dyslexia font setting
 	dyslexia_font_enabled = Config.get_config("AccessibilitySettings", "DyslexiaFont", false)
 
+	# Load QTE accessibility settings
+	qte_auto_complete = Config.get_config("AccessibilitySettings", "QTEAutoComplete", false)
+	qte_time_multiplier = Config.get_config("AccessibilitySettings", "QTETimeMultiplier", 1.0)
+	qte_reduced_prompts = Config.get_config("AccessibilitySettings", "QTEReducedPrompts", false)
+
 
 ## Save accessibility settings to config
 func save_settings():
@@ -106,6 +131,10 @@ func save_settings():
 	Config.set_config("AccessibilitySettings", "FontSize", current_font_size)
 	Config.set_config("AccessibilitySettings", "HighContrast", current_high_contrast)
 	Config.set_config("AccessibilitySettings", "DyslexiaFont", dyslexia_font_enabled)
+	# QTE settings
+	Config.set_config("AccessibilitySettings", "QTEAutoComplete", qte_auto_complete)
+	Config.set_config("AccessibilitySettings", "QTETimeMultiplier", qte_time_multiplier)
+	Config.set_config("AccessibilitySettings", "QTEReducedPrompts", qte_reduced_prompts)
 
 
 ## Emit current settings via EventBus for system-wide updates
@@ -352,3 +381,65 @@ func reset_to_defaults():
 	set_font_size(FontSize.MEDIUM)
 	set_high_contrast(false)
 	set_dyslexia_font(false)
+	set_qte_difficulty(QTEDifficulty.STANDARD)
+
+
+# =====================
+# QTE Accessibility Methods
+# =====================
+
+## Set QTE difficulty preset (combines auto, time, and prompt settings)
+func set_qte_difficulty(difficulty: QTEDifficulty) -> void:
+	var settings = QTE_DIFFICULTY_SETTINGS.get(difficulty, QTE_DIFFICULTY_SETTINGS[QTEDifficulty.STANDARD])
+	qte_auto_complete = settings.auto
+	qte_time_multiplier = settings.time_multiplier
+	qte_reduced_prompts = settings.reduced_prompts
+	_emit_settings_changed()
+	save_settings()
+
+
+## Set QTE auto-complete mode
+func set_qte_auto_complete(enabled: bool) -> void:
+	qte_auto_complete = enabled
+	_emit_settings_changed()
+	save_settings()
+
+
+## Set QTE time multiplier (1.0 = normal, 2.0 = double time)
+func set_qte_time_multiplier(multiplier: float) -> void:
+	qte_time_multiplier = clamp(multiplier, 0.5, 3.0)
+	_emit_settings_changed()
+	save_settings()
+
+
+## Set QTE reduced prompts mode
+func set_qte_reduced_prompts(enabled: bool) -> void:
+	qte_reduced_prompts = enabled
+	_emit_settings_changed()
+	save_settings()
+
+
+## Get QTE settings for minigame configuration
+func get_qte_settings() -> Dictionary:
+	return {
+		"auto_complete": qte_auto_complete,
+		"time_multiplier": qte_time_multiplier,
+		"reduced_prompts": qte_reduced_prompts
+	}
+
+
+## Check if QTE should auto-complete
+func should_qte_auto_complete() -> bool:
+	return qte_auto_complete
+
+
+## Get adjusted time per prompt based on accessibility settings
+func get_adjusted_qte_time(base_time: float) -> float:
+	return base_time * qte_time_multiplier
+
+
+## Get adjusted prompt count based on accessibility settings
+func get_adjusted_qte_prompts(base_count: int) -> int:
+	if qte_reduced_prompts:
+		return max(2, int(base_count * 0.6))  # Reduce by 40%, minimum 2
+	return base_count

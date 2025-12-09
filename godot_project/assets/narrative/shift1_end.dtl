@@ -1,21 +1,85 @@
 # shift1_end.dtl
+# End of Shift 1 - Mysterious note planted, setting up conspiracy
+# The "friend" identity will be revealed in shift7_end based on player choices
+
 audio music "res://assets/audio/ambient/horror_drone_23.mp3" [fade="2.0" volume="-5.0" bus="Ambient"]
 audio music "res://assets/music/narrative/ambient_mysterious_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/customs_office.png" fade="2.0"]
+
 join supervisor_russet [z_index="1"]
 supervisor_russet: Adequate work today, sprout. Remember, efficiency is key. We have quotas to meet. #id:50
 supervisor_russet: Don't forget to grab your ration of [wave amp=15 freq=2][color=DARK_VIOLET]Root Reserve[/color][/wave]. You know what the radio says, it's the flavor of Spud's future! #id:51
 leave supervisor_russet
 
+# The mysterious note
 [background arg="res://assets/narrative/suspicious_note.png" fade="2.0"]
 audio "res://assets/audio/stings/revelation_dark.mp3" [volume="-5.0" bus="SFX"]
 audio "res://assets/audio/ui_drama/paper_evidence.mp3" [volume="-5.0" bus="SFX"]
-A small note slips out from some papers on your desk. #id:52
-"[color=GOLD]Not all is as it seems. The roots of our nation have grown rotten. [br] Follow the trail, but take care not to be silenced.[/color] [br] - [color=CHARTREUSE]A friend[/color]" #id:53
+join narrator [z_index="1"]
+narrator: As you gather your things, a small note slips from between your work papers. #id:52
+narrator: It wasn't there this morning. Someone placed it [color=YELLOW]during your shift[/color]. #id:52b
+leave narrator
 
+"[color=GOLD]Not all is as it seems. The roots of our nation have grown rotten.[/color]" #id:53
+"[color=GOLD]Follow the trail, but take care not to be silenced.[/color]" #id:53b
+"[color=GOLD]Watch who eats the [/color][color=DARK_VIOLET]Reserve[/color][color=GOLD]. Watch who refuses.[/color]" #id:53c
+"[color=GOLD]- [/color][color=CHARTREUSE]A friend[/color]" #id:53d
+
+# Player reaction to the note
+set {note_reaction} = "none"
+- "Keep the note hidden - investigate quietly" #id:53e
+	set {note_reaction} = "investigate"
+- "Destroy the note - this could be a test" #id:53f
+	set {note_reaction} = "destroy"
+- "Show the note to Russet immediately" #id:53g
+	set {note_reaction} = "report"
+
+if {note_reaction} == "investigate":
+	join player_character [z_index="1"]
+	player_character: You fold the note carefully and slip it into your pocket. [color=CHARTREUSE]Someone is reaching out.[/color] #id:53h
+	player_character: But who? And why you, on your very first day? #id:53i
+	leave player_character
+	set {kept_note} = "yes"
+elif {note_reaction} == "destroy":
+	join player_character [z_index="1"]
+	audio "res://assets/audio/paper/paper handled 3.wav" [volume="-5.0" bus="SFX"]
+	player_character: You tear the note into tiny pieces, heart pounding. [color=STEEL_BLUE]This could be a loyalty test.[/color] #id:53j
+	player_character: Russet said sprouts who ask questions get "reassigned." Better not to take chances. #id:53k
+	leave player_character
+	set {kept_note} = "no"
+else:
+	[background arg="res://assets/narrative/customs_office.png" fade="1.0"]
+	join supervisor_russet [z_index="1"]
+	audio "res://assets/audio/footsteps/Concrete Walk 1_1.wav" [volume="-5.0" bus="SFX"]
+	player_character: You catch Russet before he leaves. "Sir? I found this in my papers..." #id:53l
+	supervisor_russet: Russet snatches the note, reads it. His expression flickers - [color=YELLOW]was that recognition?[/color] #id:53m
+	supervisor_russet: Propaganda. Rebels trying to corrupt new officers. [color=DARK_ORANGE]You did right bringing this to me.[/color] #id:53n
+	supervisor_russet: He pockets the note. Forget you ever saw it. And watch for anyone acting... [color=CRIMSON]suspicious[/color]. #id:53o
+	leave supervisor_russet
+	set {kept_note} = "no"
+	set {reported_note} = "yes"
+
+# Personal quarters reflection
 [background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
 audio music "res://assets/music/ambient_vol3_sad_decisions_main.mp3" [fade="2.5" volume="-5.0" bus="Music"]
 join player_character [z_index="1"]
-player_character: That note... and the way Russet dodged my question about [pulse freq=3][color=CRIMSON]rejected potatoes[/color][/pulse]... [br] Something feels [color=STEEL_BLUE]off[/color]. #id:54
+
+if {initial_response} == "questioning":
+	player_character: That note... and the way Russet answered my question about [pulse freq=3][color=CRIMSON]rejected potatoes[/color][/pulse]... #id:54
+	player_character: "[color=VIOLET]Processed. According to protocol.[/color]" What does that even mean? #id:54b
+else:
+	player_character: That note... it said the roots have grown [color=CRIMSON]rotten[/color]. #id:54c
+	player_character: But Spud is glorious, isn't it? That's what they told us. What I believed. #id:54d
+
+if {kept_note} == "yes":
+	player_character: You pull out the note, reading it again. "[color=GOLD]Watch who eats the Reserve. Watch who refuses.[/color]" #id:54e
+	player_character: Tomorrow, you'll pay attention. [color=YELLOW]Someone is trying to tell you something.[/color] #id:54f
+elif {reported_note} == "yes":
+	player_character: Russet's face when he read the note. For just a moment, he looked almost... [color=STEEL_BLUE]afraid[/color]. #id:54g
+	player_character: What is [color=DARK_VIOLET]Root Reserve[/color] really? And why would someone warn you about it? #id:54h
+else:
+	player_character: The note is gone, but the words linger. [color=YELLOW]Not all is as it seems.[/color] #id:54i
+	player_character: Maybe destroying it was the smart choice. Maybe you just silenced your only ally. #id:54j
+
 player_character: I should stay [color=YELLOW]alert[/color]. There's more going on here than stamping passports. #id:55
 leave player_character

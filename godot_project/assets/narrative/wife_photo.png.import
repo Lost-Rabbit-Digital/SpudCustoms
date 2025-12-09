@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ib11i4ux0kfv"
-path="res://.godot/imported/reckoning.png-0b0f6f07beba007d05d67d835381d549.ctex"
+uid="uid://crnhkl7vprl6"
+path="res://.godot/imported/wife_photo.png-200b992b4540399090d6b7d1b0dabd92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/narrative/reckoning.png"
-dest_files=["res://.godot/imported/reckoning.png-0b0f6f07beba007d05d67d835381d549.ctex"]
+source_file="res://assets/narrative/wife_photo.png"
+dest_files=["res://.godot/imported/wife_photo.png-200b992b4540399090d6b7d1b0dabd92.ctex"]
 
 [params]
 

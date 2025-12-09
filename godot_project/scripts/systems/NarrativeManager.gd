@@ -24,9 +24,13 @@ const LEVEL_DIALOGUES: Dictionary[int, String] = {
 
 const LEVEL_END_DIALOGUES: Dictionary[int, String] = {
 	1: "shift1_end",
+	2: "shift2_end",
 	3: "shift3_end",
+	4: "shift4_end",
 	5: "shift5_end",
+	6: "shift6_end",
 	7: "shift7_end",
+	8: "shift8_end",
 	9: "shift9_end",
 	10: "final_confrontation"
 }
@@ -45,6 +49,7 @@ var dialogue_active: bool = false
 var current_skip_button_layer: CanvasLayer = null
 var cutscene_post_processing: CanvasLayer = null
 var history_panel_open: bool = false
+var cutscene_bloom_pulse: CutsceneBloomPulse = null
 
 # Preloaded resources for cutscene post-processing
 var cutscene_environment: Environment = preload("res://assets/styles/cutscene_environment.tres")
@@ -240,12 +245,45 @@ func create_cutscene_post_processing() -> void:
 	cutscene_post_processing.add_child(vignette_rect)
 	add_child(cutscene_post_processing)
 
+	# Add animated bloom pulse effect for visual interest
+	_create_bloom_pulse()
+
 
 func cleanup_cutscene_post_processing() -> void:
 	"""Remove cutscene post-processing effects."""
 	if cutscene_post_processing != null:
 		cutscene_post_processing.queue_free()
 		cutscene_post_processing = null
+
+	_cleanup_bloom_pulse()
+
+
+func _create_bloom_pulse() -> void:
+	"""Create animated bloom effect for cutscenes."""
+	if cutscene_bloom_pulse != null:
+		return
+
+	cutscene_bloom_pulse = CutsceneBloomPulse.new()
+	cutscene_bloom_pulse.name = "CutsceneBloomPulse"
+
+	# Configure the pulse for soft ethereal cinematic glow
+	cutscene_bloom_pulse.base_glow_intensity = 0.25
+	cutscene_bloom_pulse.pulse_amplitude = 0.12
+	cutscene_bloom_pulse.pulse_speed = 0.3  # Slow, gentle pulse
+	cutscene_bloom_pulse.secondary_amplitude = 0.04
+	cutscene_bloom_pulse.secondary_speed = 0.12  # Even slower secondary wave
+	cutscene_bloom_pulse.glow_bloom = 0.12
+	cutscene_bloom_pulse.glow_hdr_threshold = 0.75
+	cutscene_bloom_pulse.smoothing = 0.85
+
+	add_child(cutscene_bloom_pulse)
+
+
+func _cleanup_bloom_pulse() -> void:
+	"""Remove animated bloom effect."""
+	if cutscene_bloom_pulse != null:
+		cutscene_bloom_pulse.queue_free()
+		cutscene_bloom_pulse = null
 
 
 func create_skip_button():
@@ -309,6 +347,22 @@ func _on_dialogic_signal(argument):
 		_launch_qte("Escape the guards!", 6, 1.8)
 	elif argument == "qte_confrontation":
 		_launch_qte("Stand your ground!", 4, 2.5)
+	# New QTEs for enhanced narrative
+	elif argument == "qte_scanner_fake":
+		_launch_qte("Fake the malfunction!", 4, 2.2)
+	elif argument == "qte_surveillance":
+		_launch_qte("Stay hidden! Follow the trucks!", 5, 2.0)
+	elif argument == "qte_rescue":
+		_launch_qte("Race to save Sasha!", 5, 1.8)
+	elif argument == "qte_suppression":
+		_launch_qte("Suppress the attack!", 4, 2.5)
+
+	# Route to loyalist ending signal
+	if argument == "route_to_loyalist_ending":
+		# This would need to be handled by scene management
+		pass
+	elif argument == "credits_ready_loyalist":
+		get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
 
 	# Skip Steam achievements in DEV_MODE
 	# REFACTORED: Use GameStateManager
@@ -519,30 +573,78 @@ func save_narrative_choices() -> Dictionary:
 
 	# List of all narrative choice variables used in the game
 	# This list matches all variables used across all timeline files
+	# Updated to include all new variables from enhanced narrative
 	var choice_variables = [
-		"cafeteria_response",
-		"critical_choice",
-		"ending_choice",
-		"family_response",
-		"fellow_officer_response",
-		"fellow_officer_response_2",
-		"final_decision",
-		"final_mission_response",
-		"hide_choice",
-		"initial_response",
-		"interrogation_choice",
-		"interrogation_response",
-		"loyalty_response",
-		"resistance_mission",
-		"resistance_trust",
-		"reveal_reaction",
-		"sasha_investigation",
-		"sasha_plan_response",
-		"sasha_rescue_reaction",
-		"sasha_response",
-		"scanner_response",
-		"stay_or_go",
-		"yellow_badge_response",
+		# Shift 1 - Introduction
+		"initial_response",          # eager, questioning
+		"note_reaction",             # investigate, destroy, report
+		"kept_note",                 # yes, no
+		"reported_note",             # yes
+
+		# Shift 2 - Meeting Sasha & Murphy
+		"murphy_trust",              # open, guarded
+		"eat_reserve",               # ate, refused
+
+		# Shift 3 - Missing Wife
+		"scanner_response",          # loyal, questioning
+		"family_response",           # refuse, help
+		"has_wife_photo",            # yes, no
+		"wife_name",                 # "Maris Piper"
+		"reveal_reaction",           # shocked, cautious
+
+		# Shift 4 - Root Reserve Trucks
+		"cafeteria_response",        # serious, avoid
+		"murphy_alliance",           # ally, cautious, skeptical
+		"sasha_trust_level",         # committed, cautious
+
+		# Shift 5 - Loyalty Screening & Heist
+		"sasha_investigation",       # committed, hesitant
+		"loyalty_response",          # patriotic, idealistic
+		"hide_choice",               # desk, window
+		"viktor_wife_discovery",     # yes (discovered Viktor's wife on manifest)
+
+		# Shift 6 - RealityScan
+		"fellow_officer_response",   # cautious, sympathetic, loyal
+		"interrogation_response",    # lie, legal
+		"viktor_conversation",       # tell_truth, lie_protect
+		"scanner_choice",            # help, scan
+		"helped_operative",          # yes, no
+		"viktor_allied",             # yes
+		"betrayed_resistance",       # yes
+		"sasha_plan_response",       # committed, nervous
+		"malfunction_excuse",        # technical, innocent
+
+		# Shift 7 - Resistance Meeting
+		"resistance_mission",        # committed, hesitant, cautious
+		"final_decision",            # help, passive, undecided
+		"yellow_badge_response",     # help, betray
+		"follow_trucks",             # volunteer, hesitant
+		"found_facility",            # yes (found Root Reserve location)
+
+		# Shift 8 - Sasha's Capture
+		"sasha_response",            # cautious, concerned
+		"interrogation_choice",      # deny, betray
+		"sasha_arrest_reaction",     # intervene, hide, promise
+		"player_wanted",             # yes
+		"player_captured",           # yes
+		"has_keycard",               # yes
+		"murphy_final_alliance",     # committed, hesitant
+
+		# Shift 9 - The Attack
+		"critical_choice",           # help, betray
+		"stay_or_go",                # stay, go
+		"sasha_rescue_reaction",     # angry, disgusted, relieved
+
+		# Shift 10 & Endings
+		"fellow_officer_response_2", # cautious, sympathetic
+		"final_mission_response",    # determined, cautious
+		"resistance_trust",          # diplomatic, committed
+		"ending_choice",             # diplomatic, justice, vengeance, dismantle
+
+		# Loyalist Ending
+		"accept_medal",              # accept, reluctant
+		"eat_final",                 # eat, refuse
+		"final_loyalist_choice",     # report, ignore, hope
 	]
 
 	# Save each variable if it exists in Dialogic

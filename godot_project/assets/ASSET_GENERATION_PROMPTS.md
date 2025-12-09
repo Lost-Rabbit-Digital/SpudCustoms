@@ -25,6 +25,7 @@ This document contains prompts for generating music, sound effects, and cutscene
 
 | Filename | Priority | Referenced In | Prompt |
 |----------|----------|---------------|--------|
+| `assets/narrative/wife_photo.png` | High | shift3_intro.dtl:65 | Worn photograph of Maris Piper, an anthropomorphic potato woman. Portrait style, warm sepia-toned, slightly faded edges. Young potato with gentle features, kind eyes, and a warm genuine smile. Soft lighting, hopeful expression. The photo appears old and well-loved, with slight creases and wear marks. Nostalgic, intimate feeling. Close-up portrait composition like a beloved family photo. |
 | `assets/narrative/yellow_emblem.png` | Medium | loyalist_ending.dtl:196 | Close-up of wall with scratched yellow spud resistance emblem. Secret symbol of hope. Crude but meaningful. Graffiti on institutional concrete. A spark of defiance. |
 | `assets/narrative/sasha_quarters_raid.png` | Medium | shift8_end.dtl:22 | Security forces kicking down Sasha's door. Raid in progress. Dramatic action. Anthropomorphic potato guards in tactical gear breaching a modest living quarters. |
 | `assets/narrative/player_confronts_guards.png` | Medium | shift8_end.dtl:90 | Player stepping forward to confront guards during Sasha's arrest. Brave but foolish. POV shot of anthropomorphic potato officer standing up to authority. |

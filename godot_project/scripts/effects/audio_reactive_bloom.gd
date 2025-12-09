@@ -7,10 +7,10 @@ extends Node
 @export var audio_bus: StringName = &"Music"
 
 ## Base glow intensity when no audio is playing
-@export_range(0.0, 2.0) var base_glow_intensity: float = 0.05
+@export_range(0.0, 2.0) var base_glow_intensity: float = 0.02
 
 ## Maximum additional glow intensity added by audio
-@export_range(0.0, 3.0) var max_audio_glow: float = 1.1
+@export_range(0.0, 3.0) var max_audio_glow: float = 0.05
 
 ## Smoothing factor for glow transitions (higher = smoother but less responsive)
 @export_range(0.0, 0.99) var smoothing: float = 0.7
@@ -20,10 +20,10 @@ extends Node
 @export var max_frequency: float = 500.0
 
 ## Glow bloom level (controls which brightness levels glow)
-@export_range(0.0, 1.0) var glow_bloom: float = 0.5
+@export_range(0.0, 1.0) var glow_bloom: float = 0.02
 
 ## HDR threshold - pixels brighter than this will glow
-@export_range(0.0, 4.0) var glow_hdr_threshold: float = 0.8
+@export_range(0.0, 4.0) var glow_hdr_threshold: float = 0.95
 
 ## Enable/disable the effect
 @export var enabled: bool = true

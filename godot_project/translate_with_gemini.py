@@ -115,8 +115,11 @@ def get_translations_dir():
 
 
 def get_per_language_dir():
-    """Get the per-language translations directory path."""
-    return get_translations_dir() / 'per_language'
+    """Get the per-language translations directory path.
+
+    Now looks directly in translations/ root folder instead of per_language/ subdirectory.
+    """
+    return get_translations_dir()
 
 
 def get_combined_dir():
@@ -128,6 +131,129 @@ def ensure_dirs():
     """Ensure all translation directories exist."""
     get_per_language_dir().mkdir(parents=True, exist_ok=True)
     get_combined_dir().mkdir(parents=True, exist_ok=True)
+
+
+def is_per_language_file(filepath):
+    """Check if a file is in per-language format (e.g., menus_en.csv, menus_de.csv)."""
+    stem = filepath.stem
+    for lang_code in LANGUAGE_ORDER:
+        if stem.endswith(f'_{lang_code}'):
+            return True
+    return False
+
+
+def get_per_language_base_name(filepath):
+    """Get the base name from a per-language file (e.g., menus_en.csv -> menus)."""
+    stem = filepath.stem
+    for lang_code in LANGUAGE_ORDER:
+        suffix = f'_{lang_code}'
+        if stem.endswith(suffix):
+            return stem[:-len(suffix)]
+    return stem
+
+
+def get_per_language_lang_code(filepath):
+    """Get the language code from a per-language file (e.g., menus_en.csv -> en)."""
+    stem = filepath.stem
+    for lang_code in LANGUAGE_ORDER:
+        if stem.endswith(f'_{lang_code}'):
+            return lang_code
+    return None
+
+
+def group_per_language_files():
+    """Group per-language files by their base name.
+
+    Returns: {base_name: {lang_code: filepath}}
+    """
+    per_lang_dir = get_per_language_dir()
+    if not per_lang_dir.exists():
+        return {}
+
+    groups = defaultdict(dict)
+    for csv_file in per_lang_dir.glob('*.csv'):
+        if not is_per_language_file(csv_file):
+            continue
+        base_name = get_per_language_base_name(csv_file)
+        lang_code = get_per_language_lang_code(csv_file)
+        if base_name and lang_code:
+            groups[base_name][lang_code] = csv_file
+
+    return dict(groups)
+
+
+def get_english_translations(base_name, file_groups):
+    """Load English translations from a per-language file group.
+
+    Returns: {key: english_value}
+    """
+    if base_name not in file_groups:
+        return {}
+
+    if 'en' not in file_groups[base_name]:
+        return {}
+
+    en_file = file_groups[base_name]['en']
+    headers, rows = read_csv_file(en_file)
+
+    if not headers or not rows:
+        return {}
+
+    # Get key and value column indices
+    key_idx = 0  # First column is always keys
+    val_idx = get_language_index(headers, 'en')
+    if val_idx == -1:
+        val_idx = 1  # Fallback to second column
+
+    translations = {}
+    for row in rows:
+        if len(row) >= 2 and row[0] and not row[0].startswith('_'):
+            translations[row[0]] = row[val_idx] if val_idx < len(row) else ''
+
+    return translations
+
+
+def find_untranslated_per_language(base_name, file_groups, lang_code):
+    """Find untranslated keys for a specific language in per-language format.
+
+    Returns: {key: english_value} for keys that need translation
+    """
+    english_translations = get_english_translations(base_name, file_groups)
+    if not english_translations:
+        return {}
+
+    # If language file doesn't exist, all English keys need translation
+    if lang_code not in file_groups[base_name]:
+        # Filter out very short values that are likely symbols
+        return {k: v for k, v in english_translations.items() if v and len(v) > 3}
+
+    # Load existing translations for this language
+    lang_file = file_groups[base_name][lang_code]
+    headers, rows = read_csv_file(lang_file)
+
+    # Get value column index for this language
+    val_idx = get_language_index(headers, lang_code)
+    if val_idx == -1:
+        val_idx = 1  # Fallback to second column
+
+    existing_translations = {}
+    for row in rows:
+        if len(row) >= 2 and row[0]:
+            existing_translations[row[0]] = row[val_idx] if val_idx < len(row) else ''
+
+    # Find keys that need translation
+    untranslated = {}
+    for key, en_value in english_translations.items():
+        if not en_value or len(en_value) <= 3:
+            continue  # Skip very short values
+
+        lang_value = existing_translations.get(key, '')
+
+        # Consider untranslated if: empty, same as English, or missing
+        if not lang_value or lang_value == en_value:
+            untranslated[key] = en_value
+
+    return untranslated
 
 
 def get_csv_files(specific_file=None, use_combined=True):
@@ -335,6 +461,44 @@ def split_all_csvs():
 # MODE: MERGE PER-LANGUAGE FILES INTO COMBINED CSVs
 # ═══════════════════════════════════════════════════════════
 
+def install_to_godot():
+    """Copy combined CSV files to root translations folder for Godot import.
+
+    This copies files from translations/combined/ to translations/
+    so Godot can import them and generate .translation files.
+    """
+    import shutil
+
+    combined_dir = get_combined_dir()
+    root_dir = get_translations_dir()
+
+    if not combined_dir.exists():
+        print("Combined directory not found. Run --merge first.")
+        return
+
+    csv_files = list(combined_dir.glob('*.csv'))
+    if not csv_files:
+        print("No combined CSV files found. Run --merge first.")
+        return
+
+    print("=" * 80)
+    print("INSTALLING COMBINED CSVs TO GODOT")
+    print("=" * 80)
+
+    installed = 0
+    for csv_file in csv_files:
+        dest = root_dir / csv_file.name
+        shutil.copy2(csv_file, dest)
+        print(f"  Copied: {csv_file.name}")
+        installed += 1
+
+    print(f"\nInstalled {installed} files to {root_dir}")
+    print("\nNext steps:")
+    print("  1. Open Godot project")
+    print("  2. Wait for reimport (or use Project > Tools > Reimport All)")
+    print("  3. Check Project Settings > Localization > Translations")
+
+
 def merge_per_language_to_combined():
     """Merge per-language CSV files back into combined format.
 
@@ -469,6 +633,124 @@ def add_all_missing_columns():
             print(f"  {csv_file.name}: Added {len(missing)} languages: {', '.join(missing)}")
         else:
             print(f"  {csv_file.name}: All languages present")
+
+
+# ═══════════════════════════════════════════════════════════
+# MODE: CHECK PER-LANGUAGE TRANSLATIONS
+# ═══════════════════════════════════════════════════════════
+
+def check_per_language_translations(specific_base=None):
+    """Check per-language CSV files for untranslated content."""
+    file_groups = group_per_language_files()
+
+    if not file_groups:
+        print("No per-language files found in translations/per_language/")
+        return
+
+    if specific_base:
+        if specific_base not in file_groups:
+            print(f"ERROR: No files found for base name: {specific_base}")
+            return
+        file_groups = {specific_base: file_groups[specific_base]}
+
+    total_untranslated = 0
+    bases_with_issues = 0
+    missing_english = []
+
+    print("=" * 80)
+    print("PER-LANGUAGE TRANSLATION CHECK REPORT")
+    print("=" * 80)
+
+    for base_name, lang_files in sorted(file_groups.items()):
+        # Check if English file exists
+        if 'en' not in lang_files:
+            missing_english.append(base_name)
+            continue
+
+        english_translations = get_english_translations(base_name, file_groups)
+        if not english_translations:
+            continue
+
+        base_untranslated = 0
+        missing_langs = []
+
+        # Check each target language
+        for lang_code in LANGUAGE_COLUMNS.keys():
+            untranslated = find_untranslated_per_language(base_name, file_groups, lang_code)
+            if untranslated:
+                base_untranslated += len(untranslated)
+                if lang_code not in lang_files:
+                    missing_langs.append(lang_code)
+
+        if base_untranslated > 0:
+            bases_with_issues += 1
+            total_untranslated += base_untranslated
+
+            print(f"\n📄 {base_name}")
+            print("-" * 60)
+            print(f"   English keys: {len(english_translations)}")
+            print(f"   Existing translations: {len(lang_files) - 1} languages")
+            if missing_langs:
+                print(f"   Missing language files: {', '.join(sorted(missing_langs)[:10])}{'...' if len(missing_langs) > 10 else ''}")
+            print(f"   Total untranslated cells: {base_untranslated}")
+
+    print("\n" + "=" * 80)
+    print("SUMMARY")
+    print("=" * 80)
+    print(f"Translation groups checked: {len(file_groups)}")
+    print(f"Groups with untranslated content: {bases_with_issues}")
+    print(f"Total untranslated cells: {total_untranslated}")
+
+    if missing_english:
+        print(f"\n⚠️  Missing English files ({len(missing_english)}):")
+        for name in sorted(missing_english)[:10]:
+            print(f"   - {name}_en.csv")
+        if len(missing_english) > 10:
+            print(f"   ... and {len(missing_english) - 10} more")
+
+    if total_untranslated == 0 and not missing_english:
+        print("\n✅ All per-language translations are complete!")
+    else:
+        print(f"\n⚠️  Found {total_untranslated} cells that need translation")
+        print("   Run without --check to translate them")
+
+
+def write_per_language_file(base_name, lang_code, translations, file_groups):
+    """Write translations to a per-language file.
+
+    Args:
+        translations: {key: translated_value}
+    """
+    per_lang_dir = get_per_language_dir()
+    lang_file = per_lang_dir / f"{base_name}_{lang_code}.csv"
+
+    # If file exists, update it; otherwise create new
+    if lang_code in file_groups.get(base_name, {}):
+        existing_file = file_groups[base_name][lang_code]
+        headers, rows = read_csv_file(existing_file)
+
+        # Update existing rows
+        key_to_row = {row[0]: idx for idx, row in enumerate(rows) if row}
+        for key, value in translations.items():
+            if key in key_to_row:
+                row_idx = key_to_row[key]
+                if len(rows[row_idx]) > 1:
+                    rows[row_idx][1] = value
+            else:
+                # Add new row
+                rows.append([key, value])
+
+        write_csv_file(lang_file, headers, rows)
+    else:
+        # Create new file from English source
+        english_translations = get_english_translations(base_name, file_groups)
+        headers = ['keys', lang_code]
+        rows = []
+        for key, en_value in english_translations.items():
+            value = translations.get(key, en_value)  # Use translation if available, else English
+            rows.append([key, value])
+
+        write_csv_file(lang_file, headers, rows)
 
 
 # ═══════════════════════════════════════════════════════════
@@ -917,6 +1199,162 @@ async def translate_with_gemini_async(specific_file=None, dry_run=False):
 
 
 # ═══════════════════════════════════════════════════════════
+# MODE: TRANSLATE PER-LANGUAGE FILES WITH GEMINI
+# ═══════════════════════════════════════════════════════════
+
+async def translate_per_language_base_async(session, base_name, file_groups, semaphore, rate_limiter, progress, dry_run=False):
+    """Translate a single translation group (base name) in per-language format."""
+    import asyncio as aio
+
+    english_translations = get_english_translations(base_name, file_groups)
+    if not english_translations:
+        await progress.complete_file()
+        return
+
+    # Collect all translations needed for each language
+    by_language = {}
+    for lang_code in LANGUAGE_COLUMNS.keys():
+        untranslated = find_untranslated_per_language(base_name, file_groups, lang_code)
+        if untranslated:
+            by_language[lang_code] = untranslated
+
+    if not by_language:
+        await progress.complete_file()
+        return
+
+    if dry_run:
+        print(f"\n📄 {base_name} - Would translate:")
+        for lang_code, items in by_language.items():
+            lang_name = LANGUAGE_COLUMNS.get(lang_code, lang_code)
+            print(f"   {lang_name}: {len(items)} items")
+        await progress.complete_file()
+        return
+
+    # Create all translation tasks for parallel execution
+    translation_tasks = []
+    task_metadata = []  # Store (lang_code, batch_keys) for each task
+
+    for lang_code, untranslated_dict in by_language.items():
+        lang_name = LANGUAGE_COLUMNS.get(lang_code, lang_code)
+        items_list = list(untranslated_dict.items())
+
+        for i in range(0, len(items_list), BATCH_SIZE):
+            batch = dict(items_list[i:i + BATCH_SIZE])
+
+            task = translate_batch_async(
+                session, batch, lang_name, semaphore, rate_limiter
+            )
+            translation_tasks.append(task)
+            task_metadata.append((lang_code, batch))
+
+    # Execute all translation tasks in parallel
+    results = await aio.gather(*translation_tasks)
+
+    # Collect all translations by language
+    lang_translations = defaultdict(dict)
+    for (lang_code, batch), (translations, input_tokens, output_tokens) in zip(task_metadata, results):
+        if translations:
+            lang_translations[lang_code].update(translations)
+        await progress.update(len(translations), input_tokens, output_tokens)
+
+    # Write translations to per-language files
+    for lang_code, translations in lang_translations.items():
+        if translations:
+            write_per_language_file(base_name, lang_code, translations, file_groups)
+
+    await progress.complete_file()
+
+
+async def translate_per_language_async(specific_base=None, dry_run=False):
+    """Main async translation function for per-language files."""
+    import asyncio
+    import aiohttp
+
+    # Check for API key
+    if not GEMINI_API_KEY:
+        print("❌ ERROR: GEMINI_API_KEY environment variable is not set!")
+        print("")
+        print("To set it on Linux/Mac:")
+        print('    export GEMINI_API_KEY="your_api_key_here"')
+        print("")
+        print("Get your API key from: https://aistudio.google.com/apikey")
+        return
+
+    file_groups = group_per_language_files()
+
+    if not file_groups:
+        print("No per-language files found in translations/per_language/")
+        return
+
+    if specific_base:
+        if specific_base not in file_groups:
+            print(f"ERROR: No files found for base name: {specific_base}")
+            return
+        file_groups = {specific_base: file_groups[specific_base]}
+
+    print("🚀 Starting Gemini Translation Service for Spud Customs (Per-Language Mode)")
+    print(f"   Model: {GEMINI_MODEL}")
+    print(f"   Rate limit: {MAX_REQUESTS_PER_MINUTE} requests/minute")
+    print(f"   Batch size: {BATCH_SIZE} keys per request")
+    print(f"   Max concurrent: {MAX_CONCURRENT_REQUESTS} requests")
+    print(f"   Languages: {len(LANGUAGE_COLUMNS)} target languages")
+    print()
+
+    # Count total untranslated cells
+    total_cells = 0
+    bases_to_process = []
+
+    for base_name, lang_files in file_groups.items():
+        if 'en' not in lang_files:
+            continue  # Skip bases without English source
+
+        base_cells = 0
+        for lang_code in LANGUAGE_COLUMNS.keys():
+            untranslated = find_untranslated_per_language(base_name, file_groups, lang_code)
+            base_cells += len(untranslated)
+
+        if base_cells > 0:
+            total_cells += base_cells
+            bases_to_process.append((base_name, base_cells))
+
+    if total_cells == 0:
+        print("✅ All per-language translations are already complete!")
+        return
+
+    print(f"📊 Found {total_cells} untranslated cells across {len(bases_to_process)} translation groups:")
+    for base_name, count in sorted(bases_to_process, key=lambda x: -x[1])[:10]:
+        print(f"   {base_name}: {count} cells")
+    if len(bases_to_process) > 10:
+        print(f"   ... and {len(bases_to_process) - 10} more groups")
+    print()
+
+    if dry_run:
+        print("🔍 DRY RUN - No changes will be made\n")
+
+    # Initialize progress tracker
+    progress = ProgressTracker(total_cells, len(bases_to_process))
+
+    # Set up rate limiting and concurrency
+    semaphore = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
+    rate_limiter = RateLimiter(MAX_REQUESTS_PER_MINUTE)
+
+    # Create aiohttp session with higher connection limit
+    connector = aiohttp.TCPConnector(limit=MAX_CONCURRENT_REQUESTS)
+    async with aiohttp.ClientSession(connector=connector) as session:
+        tasks = [
+            translate_per_language_base_async(
+                session, base_name, file_groups, semaphore, rate_limiter, progress, dry_run
+            )
+            for base_name, _ in bases_to_process
+        ]
+
+        await asyncio.gather(*tasks)
+
+    if not dry_run:
+        progress.print_final()
+
+
+# ═══════════════════════════════════════════════════════════
 # MAIN CLI INTERFACE
 # ═══════════════════════════════════════════════════════════
 
@@ -926,13 +1364,10 @@ def main():
         description='Translation management tool for Spud Customs',
         epilog='''
 Examples:
-  %(prog)s                      # Translate all untranslated content
+  %(prog)s                      # Translate per-language files (default)
   %(prog)s --check              # Check for missing/untranslated content
-  %(prog)s --file game.csv      # Translate specific file only
+  %(prog)s --base menus         # Translate specific base name only
   %(prog)s --dry-run            # Preview what would be translated
-  %(prog)s --split              # Split combined CSVs to per-language files
-  %(prog)s --merge              # Merge per-language files to combined CSVs
-  %(prog)s --add-columns        # Add missing language columns to CSVs
   %(prog)s --list-languages     # List all supported Steam languages
         ''',
         formatter_class=argparse.RawDescriptionHelpFormatter
@@ -941,13 +1376,19 @@ Examples:
     parser.add_argument('--check', action='store_true',
                         help='Check for untranslated content without translating')
     parser.add_argument('--file', type=str, metavar='FILENAME',
-                        help='Process only a specific CSV file (e.g., game.csv)')
+                        help='Process only a specific CSV file (combined mode)')
+    parser.add_argument('--base', type=str, metavar='BASENAME',
+                        help='Process only a specific base name (e.g., menus, game, passport)')
     parser.add_argument('--dry-run', action='store_true',
                         help='Show what would be translated without making changes')
     parser.add_argument('--split', action='store_true',
                         help='Split combined CSVs into per-language files')
     parser.add_argument('--merge', action='store_true',
                         help='Merge per-language files into combined CSVs')
+    parser.add_argument('--install', action='store_true',
+                        help='Copy combined CSVs to translations/ root for Godot import')
+    parser.add_argument('--combined', action='store_true',
+                        help='Use combined CSV mode instead of per-language mode')
     parser.add_argument('--add-columns', action='store_true',
                         help='Add missing language columns to existing CSVs')
     parser.add_argument('--list-languages', action='store_true',
@@ -975,16 +1416,31 @@ Examples:
         merge_per_language_to_combined()
         return
 
+    if args.install:
+        install_to_godot()
+        return
+
     if args.add_columns:
         add_all_missing_columns()
         return
 
+    # Determine mode: per-language (default) or combined
+    # Per-language mode works with files like menus_en.csv, menus_de.csv (one file per language)
+    # Combined mode works with files like menus.csv (all languages in one file)
+    use_combined = args.combined or args.file is not None
+
     if args.check:
-        check_translations(args.file)
+        if use_combined:
+            check_translations(args.file)
+        else:
+            check_per_language_translations(args.base)
     else:
         try:
             import asyncio
-            asyncio.run(translate_with_gemini_async(args.file, args.dry_run))
+            if use_combined:
+                asyncio.run(translate_with_gemini_async(args.file, args.dry_run))
+            else:
+                asyncio.run(translate_per_language_async(args.base, args.dry_run))
         except ImportError as e:
             if 'aiohttp' in str(e):
                 print("❌ aiohttp is required for translation. Install with: pip install aiohttp")

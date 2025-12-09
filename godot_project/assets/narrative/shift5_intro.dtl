@@ -53,6 +53,31 @@ else:
 	security_officer: The officer's eyebrows raise. Fair treatment? Scanner flashes [color=DARK_ORANGE]amber[/color]. Remember, our primary concern is security, not fairness. #id:b4
 	leave security_officer
 
+# Viktor introduction - security guard worried about his missing wife
+[background arg="res://assets/narrative/checkpoint_corridor.png" fade="1.5"]
+audio "res://assets/audio/footsteps/Metal Walk 1_2.mp3" [volume="-8.0" bus="SFX"]
+join viktor [z_index="1"]
+viktor: A burly security guard catches your arm as you pass. His face is lined with worry. #id:b4_viktor1
+viktor: Hey... sorry to bother you. You're one of the customs officers, right? Name's [color=CHARTREUSE]Viktor[/color]. #id:b4_viktor2
+viktor: I've been asking everyone about my wife, [color=GOLD]Elena[/color]. Elena Petrov. She crossed this checkpoint three weeks ago. #id:b4_viktor3
+viktor: [color=STEEL_BLUE]Failed inspection.[/color] They said she'd be processed and returned home, but... I haven't heard anything. #id:b4_viktor4
+audio "res://assets/audio/stings/suspicion_sting.mp3" [volume="-10.0" bus="SFX"]
+viktor: His voice wavers. No one will tell me anything. Do you know where the rejected travelers go? #id:b4_viktor5
+
+set {viktor_initial_response} = "none"
+- "I'm sorry, Viktor. I don't know. But I'll keep an eye out." #id:b4_viktor6
+	set {viktor_initial_response} = "sympathetic"
+- "I can't discuss processing details. Security protocols." #id:b4_viktor7
+	set {viktor_initial_response} = "distant"
+
+if {viktor_initial_response} == "sympathetic":
+	viktor: Viktor's eyes show a flicker of hope. [color=CHARTREUSE]Thank you.[/color] Anything you find out... please. She's all I have. #id:b4_viktor8
+else:
+	viktor: Viktor nods, dejected. [color=STEEL_BLUE]Right. Protocols.[/color] I understand. #id:b4_viktor9
+	viktor: But if you change your mind... [color=YELLOW]I need to know what happened to her.[/color] #id:b4_viktor10
+
+leave viktor
+
 [background arg="res://assets/narrative/checkpoint_booth.png" fade="2.0"]
 audio music "res://assets/music/narrative/ambient_evil_suspense_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 join supervisor_russet [z_index="1"]

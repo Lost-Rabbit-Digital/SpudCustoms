@@ -1,19 +1,21 @@
 # shift5_end.dtl
 audio music "res://assets/music/narrative/unplugged_sneaky_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 audio "res://assets/music/narrative/creepy_creaks_ambience.mp3" [volume="-18.0" bus="Ambient"]
-[background arg="res://assets/narrative/checkpoint_corridor.png" fade="0.0"]
-audio "res://assets/audio/atmosphere/night_tension.mp3" [volume="-5.0" bus="Ambient"]
-join player_character [z_index="1"]
-player_character: You creep through the darkened corridor, heart pounding as you avoid security patrols. #id:96
-leave player_character
-
-[background arg="res://assets/narrative/resistance_base.png" fade="1.2"]
+# Sasha gives instructions BEFORE the break-in
+[background arg="res://assets/narrative/resistance_base.png" fade="0.0"]
 audio "res://assets/audio/mechanical/feedback 2.wav" [volume="-5.0" bus="SFX"]
 join sweet_potato_sasha [z_index="1"]
 sweet_potato_sasha: [color=CHARTREUSE]This device will disable the lock[/color] on Russet's office. I'll trigger alarms in the east wing as a distraction. You'll have five minutes. #id:97
 audio "res://assets/audio/mechanical/button assorted 2.wav" [volume="-5.0" bus="SFX"]
 sweet_potato_sasha: "The manifests should be in his filing cabinet. [color=CRIMSON]Red folder labeled 'RR Transport'[/color]. Don't leave evidence of your search." #id:98
 leave sweet_potato_sasha
+
+# Now the player proceeds with the break-in
+[background arg="res://assets/narrative/checkpoint_corridor.png" fade="1.2"]
+audio "res://assets/audio/atmosphere/night_tension.mp3" [volume="-5.0" bus="Ambient"]
+join player_character [z_index="1"]
+player_character: You creep through the darkened corridor, heart pounding as you avoid security patrols. #id:96
+leave player_character
 
 [background arg="res://assets/narrative/customs_office.png" fade="2.0"]
 audio "res://assets/audio/mechanical/Metal Old Door A.wav" [volume="-5.0" bus="SFX"]
@@ -23,9 +25,18 @@ player_character: You find the thick [color=CRIMSON]red folder labeled "RR Trans
 audio "res://assets/audio/paper/paper handled 1.wav" [volume="-5.0" bus="SFX"]
 player_character: Inside are manifests matching rejected potato counts, and a directive from Prime Minister Idaho authorizing "[pulse freq=3][color=DARK_VIOLET]full utilization of border rejects for RR production.[/color][/pulse]" #id:9a
 audio "res://assets/audio/stings/revelation_dark.mp3" [volume="-5.0" bus="SFX"]
+
+# Viktor's wife discovery
+player_character: You scan the names on the manifest... and one stands out. [color=GOLD]Elena Petrov[/color]. #id:9a_viktor1
+player_character: That name... you've heard it before. The security guard Viktor mentioned his wife was missing. #id:9a_viktor2
+audio "res://assets/audio/stings/suspicion_sting.mp3" [volume="-8.0" bus="SFX"]
+player_character: "[color=CRIMSON]Status: Processed. Batch RR-2851.[/color]" Dated two weeks ago. #id:9a_viktor3
+
+set {viktor_wife_discovery} = "yes"
+
 leave player_character
 
-[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+# Player is still in Russet's customs office - no background change needed
 audio music "res://assets/music/narrative/horror_hush_main.mp3" [fade="0.5" volume="-3.0" bus="Music"]
 audio "res://assets/audio/stings/tension_rise.mp3" [volume="-5.0" bus="SFX"]
 audio "res://assets/audio/footsteps/Concrete Walk 1_1.wav" [volume="-8.0" bus="SFX"]
