@@ -60,7 +60,17 @@ func _on_language_dropdown_item_selected(index):
 
 
 func _on_ResetGameControl_reset_confirmed():
+	# Reset persistent save data (keeps high scores)
+	if SaveManager:
+		SaveManager.reset_all_game_data(true)
+	# Reset runtime state
 	GlobalState.reset()
+	# Notify systems of reset
+	EventBus.shift_stats_reset.emit()
+	# Reset GameStateManager
+	if GameStateManager:
+		GameStateManager.set_shift(0)
+		GameStateManager.set_story_state(0)
 
 
 func _on_ResetProgressButton_pressed():

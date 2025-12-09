@@ -7,19 +7,7 @@
 [node name="Video" instance=ExtResource("1_nrerc")]
 script = ExtResource("2_qtdes")
 
-[node name="AntiAliasingControl" parent="VBoxContainer" index="2" instance=ExtResource("2_tyiki")]
-layout_mode = 2
-lock_titles = true
-option_values = [0, 1, 2, 3]
-option_titles = Array[String](["Disabled (Fastest)", "2x", "4x", "8x (Slowest)"])
-option_name = "Anti-Aliasing"
-option_section = 3
-key = "Anti-aliasing"
-section = "VideoSettings"
-property_type = 2
-default_value = 0
-
-[node name="CameraShakeControl" parent="VBoxContainer" index="3" instance=ExtResource("2_tyiki")]
+[node name="CameraShakeControl" parent="VBoxContainer" index="2" instance=ExtResource("2_tyiki")]
 layout_mode = 2
 lock_titles = true
 option_values = [1.0, 0.75, 0.5, 0.0]

@@ -8,7 +8,7 @@ var confirmation_dialog: ConfirmationDialog
 var tutorial_choice_dialog: AcceptDialog
 var load_confirmation_dialog: ConfirmationDialog
 var feedback_menu: Control
-@onready var version_label = $VersionMargin/VersionContainer/VersionLabel
+@onready var version_label = %VersionLabel
 @onready var bgm_player = $BackgroundMusicPlayer
 
 

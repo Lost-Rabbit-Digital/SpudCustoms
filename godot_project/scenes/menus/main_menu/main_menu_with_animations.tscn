@@ -1,6 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://c63y6b25bs4bk"]
+[gd_scene load_steps=31 format=3 uid="uid://c63y6b25bs4bk"]
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_0i2sc"]
+[ext_resource type="PackedScene" uid="uid://b2hwmqvp5r8jn" path="res://scenes/menus/main_menu/social_buttons.tscn" id="social_buttons"]
+[ext_resource type="Script" uid="uid://db8g88lbgkjmx" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/config_version_label.gd" id="version_label_script"]
 [ext_resource type="Texture2D" uid="uid://cpnwhkjpqunqa" path="res://assets/user_interface/social_icons/16x16/Steam.png" id="steam_normal"]
 [ext_resource type="Texture2D" uid="uid://c8xgj8lpyp7k2" path="res://assets/user_interface/social_icons/16x16_outline/Steam.png" id="steam_hover"]
 [ext_resource type="Texture2D" uid="uid://cknkkklfukmhr" path="res://assets/user_interface/social_icons/16x16/Twitch.png" id="twitch_normal"]
@@ -540,7 +542,22 @@ texture_normal = ExtResource("twitch_normal")
 texture_hover = ExtResource("twitch_hover")
 stretch_mode = 0
 
-[node name="BottomRightContainer" type="MarginContainer" parent="." index="10"]
+[node name="TopRightContainer" type="MarginContainer" parent="." index="10"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_bottom = 50.0
+grow_horizontal = 0
+grow_vertical = 1
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_top = 16
+
+[node name="LocalizationSelector" parent="TopRightContainer" instance=ExtResource("locale_selector")]
+layout_mode = 2
+
+[node name="BottomRightContainer" type="MarginContainer" parent="." index="11"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -554,18 +571,40 @@ grow_vertical = 0
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="LocalizationSelector" parent="BottomRightContainer" instance=ExtResource("locale_selector")]
+[node name="SocialButtons" parent="BottomRightContainer" instance=ExtResource("social_buttons")]
 layout_mode = 2
+
+[node name="BottomCenterContainer" type="MarginContainer" parent="." index="12"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -40.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 16
+
+[node name="VersionLabel" type="Label" parent="BottomCenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("version_label_script")
 
 [node name="AudioReactiveBloom" type="Node" parent="."]
 script = ExtResource("audio_bloom")
-base_glow_intensity = 0.25
-max_audio_glow = 0.5
-smoothing = 0.8
+base_glow_intensity = 0.1
+max_audio_glow = 0.2
+smoothing = 0.85
 min_frequency = 20.0
 max_frequency = 400.0
-glow_bloom = 0.35
-glow_hdr_threshold = 0.9
+glow_bloom = 0.15
+glow_hdr_threshold = 1.2
 
 [node name="MenuMusicVisualEffects" type="Node" parent="."]
 script = ExtResource("music_fx")
