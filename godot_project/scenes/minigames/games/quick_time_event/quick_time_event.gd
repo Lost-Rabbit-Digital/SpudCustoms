@@ -6,6 +6,8 @@ extends MinigameContainer
 ## Success leads to bonus points and narrative progression.
 ## Great for tense moments like escapes, infiltrations, or confrontations.
 ##
+## Now supports narrative images displayed alongside QTE prompts with fade transitions.
+##
 ## Unlocks: Shift 8+
 
 # Audio assets
@@ -13,6 +15,12 @@ var _snd_prompt_appear = preload("res://assets/audio/ui_feedback/motion_straight
 var _snd_key_success = preload("res://assets/audio/ui_feedback/Task Complete Ensemble 001.wav")
 var _snd_key_fail = preload("res://assets/audio/minigames/minigame_timeout_whomp.mp3")
 var _snd_sequence_complete = preload("res://assets/audio/minigames/minigame_success_fanfare.mp3")
+
+## Default placeholder color for missing images
+const PLACEHOLDER_COLOR: Color = Color(0.15, 0.12, 0.18, 1.0)
+
+## Default fade duration for image transitions
+const IMAGE_FADE_DURATION: float = 0.5
 
 ## Number of QTE prompts in the sequence
 @export var prompt_count: int = 5
@@ -46,6 +54,14 @@ var _progress_bar: ProgressBar = null
 var _feedback_label: Label = null
 var _timer_bar: ProgressBar = null
 
+# Visual pane elements for narrative images
+var _visual_pane: Control = null
+var _image_display: TextureRect = null
+var _placeholder_panel: Panel = null
+var _placeholder_label: Label = null
+var _current_image_path: String = ""
+var _image_fade_tween: Tween = null
+
 
 func _ready() -> void:
 	super._ready()
@@ -64,6 +80,7 @@ func _on_minigame_start(config: Dictionary) -> void:
 	_current_prompt_index = 0
 	_successful_presses = 0
 	_is_waiting_for_input = false
+	_current_image_path = ""
 
 	if config.has("prompt_count"):
 		prompt_count = config.prompt_count
@@ -74,10 +91,18 @@ func _on_minigame_start(config: Dictionary) -> void:
 		if instruction_label:
 			instruction_label.text = config.narrative_context
 
+	# Handle narrative image configuration
+	if config.has("image_path"):
+		_current_image_path = config.image_path
+
 	# Apply accessibility settings
 	_apply_accessibility_settings()
 
 	_setup_minigame_scene()
+
+	# Show narrative image if configured
+	if _current_image_path != "":
+		_show_narrative_image(_current_image_path)
 
 	# Check for auto-complete mode
 	if AccessibilityManager and AccessibilityManager.should_qte_auto_complete():
@@ -134,6 +159,9 @@ func _setup_minigame_scene() -> void:
 	bg.color = Color(0.05, 0.05, 0.08, 0.95)
 	bg.size = subviewport.size
 	subviewport.add_child(bg)
+
+	# Visual pane for narrative images (left side, behind prompts)
+	_setup_visual_pane()
 
 	# Narrative prompt (top)
 	_prompt_label = Label.new()
@@ -344,13 +372,17 @@ func _sequence_complete() -> void:
 	_feedback_label.text = "%d / %d successful (+%d points)" % [_successful_presses, prompt_count, total_score]
 	_feedback_label.modulate = Color.WHITE
 
+	# Fade out the narrative image if visible
+	_hide_narrative_image()
+
 	# Play completion sound
 	_play_sound(_snd_sequence_complete, -3.0)
 
 	complete_success(total_score, {
 		"successful_presses": _successful_presses,
 		"total_prompts": prompt_count,
-		"success_rate": success_rate
+		"success_rate": success_rate,
+		"image_shown": _current_image_path != ""
 	})
 
 
@@ -360,3 +392,149 @@ func _play_sound(sound: AudioStream, volume_db: float = 0.0, pitch: float = 1.0)
 		audio_player.volume_db = volume_db
 		audio_player.pitch_scale = pitch
 		audio_player.play()
+
+
+# === Visual Pane Methods ===
+
+## Set up the visual pane container for narrative images
+func _setup_visual_pane() -> void:
+	# Create visual pane container (positioned on the left side)
+	_visual_pane = Control.new()
+	_visual_pane.name = "VisualPane"
+	_visual_pane.size = Vector2(350, 280)
+	_visual_pane.position = Vector2(30, subviewport.size.y / 2 - 140)
+	_visual_pane.modulate.a = 0.0  # Start hidden
+	subviewport.add_child(_visual_pane)
+
+	# Create image display (fills the visual pane)
+	_image_display = TextureRect.new()
+	_image_display.name = "ImageDisplay"
+	_image_display.size = _visual_pane.size
+	_image_display.position = Vector2.ZERO
+	_image_display.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	_image_display.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	_visual_pane.add_child(_image_display)
+
+	# Create placeholder panel (shown when image is missing)
+	_placeholder_panel = Panel.new()
+	_placeholder_panel.name = "PlaceholderPanel"
+	_placeholder_panel.size = _visual_pane.size
+	_placeholder_panel.position = Vector2.ZERO
+	_placeholder_panel.visible = false
+
+	# Style the placeholder with a dark color
+	var style = StyleBoxFlat.new()
+	style.bg_color = PLACEHOLDER_COLOR
+	style.border_color = Color(0.3, 0.25, 0.35, 1.0)
+	style.border_width_left = 2
+	style.border_width_right = 2
+	style.border_width_top = 2
+	style.border_width_bottom = 2
+	style.corner_radius_top_left = 4
+	style.corner_radius_top_right = 4
+	style.corner_radius_bottom_left = 4
+	style.corner_radius_bottom_right = 4
+	_placeholder_panel.add_theme_stylebox_override("panel", style)
+	_visual_pane.add_child(_placeholder_panel)
+
+	# Create placeholder label
+	_placeholder_label = Label.new()
+	_placeholder_label.name = "PlaceholderLabel"
+	_placeholder_label.text = "[Image Pending]"
+	_placeholder_label.add_theme_font_size_override("font_size", 18)
+	_placeholder_label.add_theme_color_override("font_color", Color(0.5, 0.45, 0.55, 1.0))
+	_placeholder_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_placeholder_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	_placeholder_label.size = _visual_pane.size
+	_placeholder_label.position = Vector2.ZERO
+	_placeholder_panel.add_child(_placeholder_label)
+
+
+## Show a narrative image with fade-in animation
+## [param image_path]: Path to the image resource (e.g., "res://assets/narrative/sasha_rescue.png")
+func _show_narrative_image(image_path: String) -> void:
+	if _visual_pane == null:
+		return
+
+	# Cancel any existing fade tween
+	if _image_fade_tween and _image_fade_tween.is_running():
+		_image_fade_tween.kill()
+
+	# Try to load the image
+	var texture: Texture2D = null
+	if ResourceLoader.exists(image_path):
+		texture = load(image_path) as Texture2D
+
+	if texture:
+		# Show the actual image
+		_image_display.texture = texture
+		_image_display.visible = true
+		_placeholder_panel.visible = false
+	else:
+		# Show placeholder for missing image
+		_image_display.visible = false
+		_placeholder_panel.visible = true
+		# Extract filename for display
+		var filename = image_path.get_file().get_basename()
+		_placeholder_label.text = "[%s]" % filename.replace("_", " ").capitalize()
+
+	# Fade in the visual pane
+	_image_fade_tween = create_tween()
+	_image_fade_tween.tween_property(_visual_pane, "modulate:a", 1.0, IMAGE_FADE_DURATION).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+
+
+## Hide the narrative image with fade-out animation
+func _hide_narrative_image() -> void:
+	if _visual_pane == null:
+		return
+
+	# Cancel any existing fade tween
+	if _image_fade_tween and _image_fade_tween.is_running():
+		_image_fade_tween.kill()
+
+	# Fade out the visual pane
+	_image_fade_tween = create_tween()
+	_image_fade_tween.tween_property(_visual_pane, "modulate:a", 0.0, IMAGE_FADE_DURATION).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_CUBIC)
+
+
+## Transition to a new narrative image with crossfade
+## [param image_path]: Path to the new image resource
+func _transition_narrative_image(image_path: String) -> void:
+	if _visual_pane == null:
+		return
+
+	# If already visible, do a crossfade
+	if _visual_pane.modulate.a > 0.5:
+		# Quick fade out then fade in with new image
+		if _image_fade_tween and _image_fade_tween.is_running():
+			_image_fade_tween.kill()
+
+		_image_fade_tween = create_tween()
+		_image_fade_tween.tween_property(_visual_pane, "modulate:a", 0.0, IMAGE_FADE_DURATION * 0.5)
+		_image_fade_tween.tween_callback(_load_image_texture.bind(image_path))
+		_image_fade_tween.tween_property(_visual_pane, "modulate:a", 1.0, IMAGE_FADE_DURATION * 0.5)
+	else:
+		# Just show the new image
+		_show_narrative_image(image_path)
+
+
+## Helper to load image texture for crossfade callback
+func _load_image_texture(image_path: String) -> void:
+	var texture: Texture2D = null
+	if ResourceLoader.exists(image_path):
+		texture = load(image_path) as Texture2D
+
+	if texture:
+		_image_display.texture = texture
+		_image_display.visible = true
+		_placeholder_panel.visible = false
+	else:
+		_image_display.visible = false
+		_placeholder_panel.visible = true
+		var filename = image_path.get_file().get_basename()
+		_placeholder_label.text = "[%s]" % filename.replace("_", " ").capitalize()
+
+
+## Check if an image exists at the given path
+func _image_exists(image_path: String) -> bool:
+	return ResourceLoader.exists(image_path)

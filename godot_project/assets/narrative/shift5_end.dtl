@@ -14,21 +14,21 @@ leave sweet_potato_sasha
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="1.2"]
 audio "res://assets/audio/atmosphere/night_tension.mp3" [volume="-5.0" bus="Ambient"]
 join player_character [z_index="1"]
-player_character: You creep through the darkened corridor, heart pounding as you avoid security patrols. #id:96
+player_character: I creep through the darkened corridor, heart pounding as I avoid security patrols. #id:96
 leave player_character
 
 [background arg="res://assets/narrative/customs_office.png" fade="2.0"]
 audio "res://assets/audio/mechanical/Metal Old Door A.wav" [volume="-5.0" bus="SFX"]
 audio "res://assets/audio/ui_drama/paper_evidence.mp3" [volume="-5.0" bus="SFX"]
 join player_character [z_index="1"]
-player_character: You find the thick [color=CRIMSON]red folder labeled "RR Transport"[/color] in the filing cabinet. #id:99
+player_character: I find the thick [color=CRIMSON]red folder labeled "RR Transport"[/color] in the filing cabinet. #id:99
 audio "res://assets/audio/paper/paper handled 1.wav" [volume="-5.0" bus="SFX"]
 player_character: Inside are manifests matching rejected potato counts, and a directive from Prime Minister Idaho authorizing "[pulse freq=3][color=DARK_VIOLET]full utilization of border rejects for RR production.[/color][/pulse]" #id:9a
 audio "res://assets/audio/stings/revelation_dark.mp3" [volume="-5.0" bus="SFX"]
 
 # Viktor's wife discovery
-player_character: You scan the names on the manifest... and one stands out. [color=GOLD]Elena Petrov[/color]. #id:9a_viktor1
-player_character: That name... you've heard it before. The security guard Viktor mentioned his wife was missing. #id:9a_viktor2
+player_character: I scan the names on the manifest... and one stands out. [color=GOLD]Elena Petrov[/color]. #id:9a_viktor1
+player_character: That name... I've heard it before. The security guard Viktor mentioned his wife was missing. #id:9a_viktor2
 audio "res://assets/audio/stings/suspicion_sting.mp3" [volume="-8.0" bus="SFX"]
 player_character: "[color=CRIMSON]Status: Processed. Batch RR-2851.[/color]" Dated two weeks ago. #id:9a_viktor3
 
@@ -52,28 +52,95 @@ if {hide_choice} == "desk":
 	[background arg="res://assets/narrative/hiding_under_desk.png" fade="0.7"]
 	audio "res://assets/audio/stings/heartbeat_tension.mp3" [volume="-5.0" bus="SFX"]
 	join player_character [z_index="1"]
-	player_character: You dive under Russet's desk as he enters, your heart pounding. He sits, his feet inches from your face. #id:9e
+	player_character: I dive under Russet's desk as he enters, my heart pounding. He sits, his feet inches from my face. #id:9e
 	join supervisor_russet [z_index="1"]
 	supervisor_russet: "Russet here. What? [color=CHARTREUSE]Another alarm?[/color] I'm on my way." He leaves, and you escape. #id:9f
 
 else:
 	[background arg="res://assets/narrative/jump_out_window.png" fade="0.3"]
 	join player_character [z_index="1"]
-	player_character: You wrench open the window and jump. Thankfully it's only one story. A guard shouts\: "[color=RED]Hey! Stop![/color]" #id:a0
-	player_character: You sprint across the grounds and manage to lose your pursuers. #id:a1
+	player_character: I wrench open the window and jump. Thankfully it's only one story. A guard just outside the window shouts\: "[color=RED]Hey! Stop![/color]" #id:a0
+	player_character: I sprint across the grounds and manage to lose my pursuers. #id:a1
 	leave player_character
 
 [background arg="res://assets/narrative/resistance_base.png" fade="2.0"]
 audio music "res://assets/music/narrative/electronic_reborn_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 join sweet_potato_sasha [z_index="1"]
 sweet_potato_sasha: Did you get it? #id:a2
-join player_character [z_index="1"]
-player_character: You hand over the evidence, explaining what you found. #id:a3
-join sweet_potato_sasha [z_index="1"]
-sweet_potato_sasha: This proves everything. The resistance will make copies. [tornado radius=3 freq=2]Spread the truth everywhere.[/tornado] They can't silence us all. #id:a4
 leave sweet_potato_sasha
 
-[background arg="res://assets/narrative/checkpoint_exterior.png" fade="2.0"]
-join player_character [z_index="1"]
-player_character: You've crossed a line. [wave amp=20 freq=3][color=YELLOW]There's no going back.[/color][/wave] When the truth spreads, Spud will be transformed. #id:a5
-leave player_character
+set {evidence_choice} = "none"
+- "Hand over everything. The truth needs to spread." (Help) #id:a2_choice1
+	set {evidence_choice} = "hand_over"
+	set {pro_sasha_choice} = {pro_sasha_choice} + 1
+- "I found evidence, but I'm keeping it. Insurance." (Self-interest) #id:a2_choice2
+	set {evidence_choice} = "keep"
+	set {loyalist_points} = {loyalist_points} + 1
+- "The office was empty. They must have moved the files." (Lie) #id:a2_choice3
+	set {evidence_choice} = "lie"
+	set {loyalist_points} = {loyalist_points} + 2
+- "I'll give you some, and leak the rest to Russet. Let them destroy each other." (Chaos) #id:a2_choice4
+	set {evidence_choice} = "chaos"
+	set {chaos_agent} = "yes"
+	set {chaos_points} = {chaos_points} + 2
+
+if {evidence_choice} == "hand_over":
+	join player_character [z_index="1"]
+	player_character: I hand over the evidence, explaining what I found. #id:a3
+	leave player_character
+	join sweet_potato_sasha [z_index="1"]
+	sweet_potato_sasha: This proves everything. The resistance will make copies. [tornado radius=3 freq=2]Spread the truth everywhere.[/tornado] They can't silence us all. #id:a4
+	leave sweet_potato_sasha
+	[background arg="res://assets/narrative/checkpoint_exterior.png" fade="2.0"]
+	join player_character [z_index="1"]
+	player_character: I've crossed a line. [wave amp=20 freq=3][color=YELLOW]There's no going back.[/color][/wave] When the truth spreads, Spud will be transformed. #id:a5
+	leave player_character
+elif {evidence_choice} == "keep":
+	join player_character [z_index="1"]
+	player_character: I show her some of the evidence - enough to prove the point - but keep the key documents hidden. #id:a3_keep1
+	leave player_character
+	join sweet_potato_sasha [z_index="1"]
+	sweet_potato_sasha: [color=STEEL_BLUE]Sasha frowns, sensing something held back.[/color] Is this everything? #id:a3_keep2
+	leave sweet_potato_sasha
+	join player_character [z_index="1"]
+	player_character: That's all I could grab before Russet nearly caught me. #id:a3_keep3
+	leave player_character
+	join sweet_potato_sasha [z_index="1"]
+	sweet_potato_sasha: [color=STEEL_BLUE]She nods slowly, not entirely convinced.[/color] This will have to do. We'll make copies. #id:a3_keep4
+	leave sweet_potato_sasha
+	[background arg="res://assets/narrative/checkpoint_exterior.png" fade="2.0"]
+	join player_character [z_index="1"]
+	player_character: The real evidence stays with me. [color=DARK_ORANGE]Leverage.[/color] In this game, information is power. #id:a5_keep
+	leave player_character
+elif {evidence_choice} == "lie":
+	join player_character [z_index="1"]
+	player_character: I shake my head. "The filing cabinet was empty. Someone must have tipped them off." #id:a3_lie1
+	leave player_character
+	join sweet_potato_sasha [z_index="1"]
+	audio "res://assets/audio/stings/suspicion_sting.mp3" [volume="-8.0" bus="SFX"]
+	sweet_potato_sasha: [wave amp=15 freq=2][color=STEEL_BLUE]Sasha's expression flickers with doubt.[/color][/wave] Empty? That's... unfortunate. #id:a3_lie2
+	sweet_potato_sasha: [color=YELLOW]We'll have to find another way.[/color] You risked a lot for nothing. I'm sorry. #id:a3_lie3
+	leave sweet_potato_sasha
+	[background arg="res://assets/narrative/checkpoint_exterior.png" fade="2.0"]
+	join player_character [z_index="1"]
+	player_character: The evidence is secure in my quarters. [color=DARK_ORANGE]I'm not sure who to trust anymore - not even the resistance.[/color] #id:a5_lie
+	player_character: This information could be worth something to the right people. [color=CRIMSON]Time will tell.[/color] #id:a5_lie2
+	leave player_character
+else:
+	# Chaos agent path - play both sides
+	join player_character [z_index="1"]
+	player_character: I hand over half the documents, keeping the most damning evidence hidden. #id:a3_chaos1
+	leave player_character
+	join sweet_potato_sasha [z_index="1"]
+	sweet_potato_sasha: This is... helpful. But I expected more from Russet's office. #id:a3_chaos2
+	leave sweet_potato_sasha
+	join player_character [z_index="1"]
+	player_character: "That's everything I could grab." A smooth lie. #id:a3_chaos3
+	leave player_character
+	[background arg="res://assets/narrative/checkpoint_exterior.png" fade="2.0"]
+	audio "res://assets/audio/stings/suspicion_sting.mp3" [volume="-5.0" bus="SFX"]
+	join player_character [z_index="1"]
+	player_character: Tomorrow, Russet gets an anonymous tip about resistance operations. [color=CRIMSON]Incomplete, but enough to cause chaos.[/color] #id:a5_chaos1
+	player_character: [color=DARK_ORANGE]Both sides will tear each other apart while I watch.[/color] When the dust settles, I'll still be standing. #id:a5_chaos2
+	player_character: [pulse freq=2][color=YELLOW]Let them all burn.[/color][/pulse] #id:a5_chaos3
+	leave player_character

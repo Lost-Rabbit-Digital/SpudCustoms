@@ -29,7 +29,7 @@ murphy: Have you tried the new Premium Reserve? My cousin disappeared last month
 murphy: Maybe he's part of this batch, huh? [tornado radius=2 freq=2][color=STEEL_BLUE]Dark humor, you know?[/color][/tornado] #id:8e
 
 set {cafeteria_response} = "none"
-- "That's not funny. Not at all." #id:8f
+- "That's not funny. Not at all." (Serious) #id:8f
 	set {cafeteria_response} = "serious"
 - "I'm not hungry. Excuse me." (Leave) #id:90
 	set {cafeteria_response} = "avoid"
@@ -50,5 +50,5 @@ sweet_potato_sasha: I have something that might help us. Some potatoes with [col
 leave sweet_potato_sasha
 
 join player_character [z_index="1"]
-player_character: You consider your options carefully. Today's choices could help [color=CHARTREUSE]spread truth[/color]... or [color=CRIMSON]silence it forever[/color]. #id:95
+player_character: I consider my options carefully. Today's choices could help [color=CHARTREUSE]spread truth[/color]... or [color=CRIMSON]silence it forever[/color]. #id:95
 leave player_character

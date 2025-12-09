@@ -21,6 +21,7 @@ sweet_potato_sasha: I need you to help me get it. Tonight, after final shift. Ca
 set {sasha_investigation} = "none"
 - "I'm in. Let's expose the truth." #id:ac
 	set {sasha_investigation} = "committed"
+	set {pro_sasha_choice} = {pro_sasha_choice} + 1
 - "I don't know, Sasha...this could be dangerous." #id:ad
 	set {sasha_investigation} = "hesitant"
 

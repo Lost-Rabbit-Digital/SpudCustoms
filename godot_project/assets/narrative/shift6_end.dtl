@@ -11,22 +11,22 @@ join narrator [z_index="1"]
 narrator: As the evening shift winds down, most officers have left. Only you and a handful of guards remain. #id:240
 leave narrator
 
-# Introduce Guard Viktor - important for later payoff
+# Viktor on night watch - builds on previous encounters
 [background arg="res://assets/narrative/security_lockdown.png" fade="1.5"]
 audio "res://assets/audio/footsteps/Metal Walk 1_3.wav" [volume="-5.0" bus="SFX"]
 join viktor [z_index="1"]
-viktor: A burly guard approaches your station. Name's Viktor. I'm on night watch. #id:241
-viktor: His eyes are tired, haunted. You're the new one, right? The one Russet keeps watching? #id:242
+viktor: Viktor approaches your station. His eyes are tired, haunted. #id:241
+viktor: He nods in recognition. We keep running into each other. Night shift gets lonely. #id:242
 
 set {viktor_conversation} = "none"
-- "Just trying to do my job. Why does Russet watch me?" #id:243
+- "Any news about Elena?" (Concerned) #id:243
 	set {viktor_conversation} = "curious"
-- "Is there something I should know?" #id:244
+- "You seem troubled. What's on your mind?" (Direct) #id:244
 	set {viktor_conversation} = "direct"
 
 if {viktor_conversation} == "curious":
-	viktor: He shrugs heavily. Russet watches everyone who asks questions. My [color=STEEL_BLUE]wife asked questions[/color] once. #id:245
-	viktor: She's not around to ask anymore. #id:246
+	viktor: He shakes his head slowly. Nothing. It's like she [color=STEEL_BLUE]vanished into thin air[/color]. #id:245
+	viktor: But I won't stop looking. I can't. #id:246
 	leave viktor
 else:
 	viktor: He glances around, then lowers his voice. Just... be careful who you trust. #id:247
@@ -48,11 +48,11 @@ narrator: The new [color=DARK_ORANGE]RealityScan[/color] blinks ready at your st
 leave narrator
 
 set {scanner_choice} = "none"
-- "Pretend the scanner malfunctioned and wave them through" #id:24c
+- "Pretend the scanner malfunctioned and wave them through" (Help) #id:24c
 	set {scanner_choice} = "help"
-- "Use the scanner as required - you can't risk exposure" #id:24d
+- "Use the scanner as required - you can't risk exposure" (Protocol) #id:24d
 	set {scanner_choice} = "scan"
-- "Signal Viktor to look the other way, then let them pass" #id:24e
+- "Signal Viktor to look the other way, then let them pass" (Alliance) #id:24e
 	set {scanner_choice} = "viktor"
 
 if {scanner_choice} == "help":

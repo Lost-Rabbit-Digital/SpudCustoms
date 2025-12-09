@@ -7,7 +7,7 @@ if {stay_or_go} == "stay":
 	[background arg="res://assets/narrative/loyalist_outcome.png" fade="0.0"]
 	audio "res://assets/audio/explosions/big distant thump 5.wav" [volume="-5.0" bus="SFX"]
 	join player_character [z_index="1"]
-	player_character: You hunker down as the battle rages. I'm sorry, Sasha. I'm [color=STEEL_BLUE]not as brave as you[/color]. #id:131
+	player_character: I hunker down as the battle rages. I'm sorry, Sasha. I'm [color=STEEL_BLUE]not as brave as you[/color]. #id:131
 	leave player_character
 	audio "res://assets/audio/gunfire/Heavy Pistol Automatic B.wav" [volume="-5.0" bus="SFX"]
 	[background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
@@ -23,15 +23,15 @@ if {stay_or_go} == "stay":
 	leave security_chief
 	[background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
 	join player_character [z_index="1"] 
-	player_character: You've survived by keeping your head down, but [pulse freq=3][color=GOLD]at what cost?[/color][/pulse] As [color=DARK_VIOLET]Root Reserve[/color] production wafts from the plant, your stomach turns. #id:135
-	player_character: Perhaps there's still a chance from the inside. Or maybe you're just easing your conscience. #id:136
+	player_character: I've survived by keeping my head down, but [pulse freq=3][color=GOLD]at what cost?[/color][/pulse] As [color=DARK_VIOLET]Root Reserve[/color] production wafts from the plant, my stomach turns. #id:135
+	player_character: Perhaps there's still a chance from the inside. Or maybe I'm just easing my conscience. #id:136
 	leave player_character
 if {stay_or_go} == "go":
 	audio music "res://assets/music/narrative/metal_violence_main.mp3" [fade="1.0" volume="-5.0" bus="Music"]
 	[background arg="res://assets/narrative/resistance_planning.png" fade="0.0"]
 	audio "res://assets/audio/explosions/Explosion Close Collapse.wav" [volume="-12.0" bus="SFX"]
 	join player_character [z_index="1"]
-	player_character: You [tornado radius=3 freq=2][color=CHARTREUSE]abandon your post[/color][/tornado] and race toward the fighting. The time for caution is over. #id:137
+	player_character: I [tornado radius=3 freq=2][color=CHARTREUSE]abandon my post[/color][/tornado] and race toward the fighting. The time for caution is over. #id:137
 	leave player_character
 	[background arg="res://assets/narrative/joining_rebellion.png" fade="2.0"]
 	audio "res://assets/audio/gunfire/gun cocking 3.wav" [volume="-8.0" bus="SFX"]
@@ -78,21 +78,21 @@ if {stay_or_go} == "go":
 
 	if {sasha_rescue_reaction} == "angry":
 		join player_character [z_index="1"]
-		player_character: [color=CRIMSON]You charge toward Russet, fists clenched, barely held back by the resistance fighters.[/color] Every potato that came through my checkpoint... how many did you... #id:s9e_008
+		player_character: [color=CRIMSON]I charge toward Russet, fists clenched, barely held back by the resistance fighters.[/color] Every potato that came through my checkpoint... how many did you... #id:s9e_008
 		join resistance_leader [z_index="1"]
 		resistance_leader: Easy! We need him alive to testify. [color=STEEL_BLUE]The leader keeps their weapon trained on Russet.[/color] Save your anger for the courts. #id:s9e_009
 		leave resistance_leader
 		leave player_character
 	elif {sasha_rescue_reaction} == "disgusted":
 		join player_character [z_index="1"]
-		player_character: [color=STEEL_BLUE]You stagger back, hand covering your mouth, taking in the full horror of the machinery.[/color] I stamped their papers... I sent them here... #id:s9e_010
+		player_character: [color=STEEL_BLUE]I stagger back, hand covering my mouth, taking in the full horror of the machinery.[/color] I stamped their papers... I sent them here... #id:s9e_010
 		join resistance_leader [z_index="1"]
 		resistance_leader: [color=CHARTREUSE]You didn't know. None of us did.[/color] That's why we're here now. Focus! #id:s9e_011
 		leave resistance_leader
 		leave player_character
 	else:
 		join player_character [z_index="1"]
-		player_character: [color=CHARTREUSE]You rush to the conveyor, working frantically at Sasha's restraints.[/color] I'm here. I'm not leaving without you. #id:s9e_012
+		player_character: [color=CHARTREUSE]I rush to the conveyor, working frantically at Sasha's restraints.[/color] I'm here. I'm not leaving without you. #id:s9e_012
 		join sweet_potato_sasha [z_index="1"]
 		sweet_potato_sasha: [color=CHARTREUSE]Sasha's eyes shine with tears and hope as your hands work the knots.[/color] I knew you'd come. I never doubted you. #id:s9e_013
 		leave sweet_potato_sasha

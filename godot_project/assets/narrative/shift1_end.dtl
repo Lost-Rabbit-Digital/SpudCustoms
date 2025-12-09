@@ -27,23 +27,23 @@ leave narrator
 
 # Player reaction to the note
 set {note_reaction} = "none"
-- "Keep the note hidden - investigate quietly" #id:53e
+- "Keep the note hidden - investigate quietly" (Curious) #id:53e
 	set {note_reaction} = "investigate"
-- "Destroy the note - this could be a test" #id:53f
+- "Destroy the note - this could be a test" (Cautious) #id:53f
 	set {note_reaction} = "destroy"
-- "Show the note to Russet immediately" #id:53g
+- "Show the note to Russet immediately" (Loyal) #id:53g
 	set {note_reaction} = "report"
 
 if {note_reaction} == "investigate":
 	join player_character [z_index="1"]
-	player_character: You fold the note carefully and slip it into your pocket. [color=CHARTREUSE]Someone is reaching out.[/color] #id:53h
+	player_character: I fold the note carefully and slip it into my pocket. [color=CHARTREUSE]Someone is reaching out.[/color] #id:53h
 	player_character: But who? And why you, on your very first day? #id:53i
 	leave player_character
 	set {kept_note} = "yes"
 elif {note_reaction} == "destroy":
 	join player_character [z_index="1"]
 	audio "res://assets/audio/paper/paper handled 3.wav" [volume="-5.0" bus="SFX"]
-	player_character: You tear the note into tiny pieces, heart pounding. [color=STEEL_BLUE]This could be a loyalty test.[/color] #id:53j
+	player_character: I tear the note into tiny pieces, heart pounding. [color=STEEL_BLUE]This could be a loyalty test.[/color] #id:53j
 	player_character: Russet said sprouts who ask questions get "reassigned." Better not to take chances. #id:53k
 	leave player_character
 	set {kept_note} = "no"
@@ -51,7 +51,7 @@ else:
 	[background arg="res://assets/narrative/customs_office.png" fade="1.0"]
 	join supervisor_russet [z_index="1"]
 	audio "res://assets/audio/footsteps/Concrete Walk 1_1.wav" [volume="-5.0" bus="SFX"]
-	player_character: You catch Russet before he leaves. "Sir? I found this in my papers..." #id:53l
+	player_character: I catch Russet before he leaves. "Sir? I found this in my papers..." #id:53l
 	supervisor_russet: Russet snatches the note, reads it. His expression flickers - [color=YELLOW]was that recognition?[/color] #id:53m
 	supervisor_russet: Propaganda. Rebels trying to corrupt new officers. [color=DARK_ORANGE]You did right bringing this to me.[/color] #id:53n
 	supervisor_russet: He pockets the note. Forget you ever saw it. And watch for anyone acting... [color=CRIMSON]suspicious[/color]. #id:53o
@@ -72,14 +72,14 @@ else:
 	player_character: But Spud is glorious, isn't it? That's what they told us. What I believed. #id:54d
 
 if {kept_note} == "yes":
-	player_character: You pull out the note, reading it again. "[color=GOLD]Watch who eats the Reserve. Watch who refuses.[/color]" #id:54e
+	player_character: I pull out the note, reading it again. "[color=GOLD]Watch who eats the Reserve. Watch who refuses.[/color]" #id:54e
 	player_character: Tomorrow, you'll pay attention. [color=YELLOW]Someone is trying to tell you something.[/color] #id:54f
 elif {reported_note} == "yes":
 	player_character: Russet's face when he read the note. For just a moment, he looked almost... [color=STEEL_BLUE]afraid[/color]. #id:54g
 	player_character: What is [color=DARK_VIOLET]Root Reserve[/color] really? And why would someone warn you about it? #id:54h
 else:
 	player_character: The note is gone, but the words linger. [color=YELLOW]Not all is as it seems.[/color] #id:54i
-	player_character: Maybe destroying it was the smart choice. Maybe you just silenced your only ally. #id:54j
+	player_character: Maybe destroying it was the smart choice. Maybe I just silenced my only ally. #id:54j
 
 player_character: I should stay [color=YELLOW]alert[/color]. There's more going on here than stamping passports. #id:55
 leave player_character
