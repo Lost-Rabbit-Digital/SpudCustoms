@@ -41,6 +41,11 @@ This update is for you.
 [*] Parallax mouse background effect on main menu
 [*] Dynamic scene visuals with progressive poster display
 [*] Brown/gold themed UI throughout for visual consistency
+[*] Smooth fade transitions between shifts
+[*] Refined bloom/glow for better document readability
+[*] Animated bloom pulse effect in cutscenes
+[*] Reduced vignette for improved visibility
+[*] New cutscene artwork and Sasha credits image
 [/list]
 
 [h3]Audio[/h3]
@@ -50,6 +55,20 @@ This update is for you.
 [*] Dynamic music switches during narrative sequences
 [*] Improved NPC audio
 [*] Better audio levels throughout
+[*] New sound effects and narrative audio
+[/list]
+
+[h3]Story & Narrative[/h3]
+[list]
+[*] [b]Chaos Agent Path[/b] - New story path allowing players to sabotage both sides
+[*] [b]Viktor Storyline[/b] - New character with full subplot and grief narrative
+[*] [b]Sasha Ending Improvements[/b] - Now requires 3+ pro-Sasha choices with subtle hints
+[*] [b]QTE Narrative System[/b] - Quick Time Events during story transitions with failure paths
+[*] [b]QTE Visual Pane[/b] - UI support for narrative images during QTE sequences
+[*] Enhanced loyalist path narrative with dialogue fixes
+[*] Improved cutscene narrative with better choice continuity
+[*] Draggable citation note system for strike feedback
+[*] Expanded achievements and improved tracking
 [/list]
 
 [h3]Quality of Life[/h3]
@@ -60,6 +79,11 @@ This update is for you.
 [*] Language selector in main menu
 [*] Improved shift summary screen for story mode
 [*] Load game confirmation dialog
+[*] Date display in lower left corner of game scene
+[*] Clear user data button in options menu
+[*] Improved narrator intro flow in tutorial
+[*] Minigame unlock notifications delayed until after shift starts
+[*] Chance for minigame to trigger when border runner would spawn
 [/list]
 
 [h3]Twitch Integration[/h3]
@@ -87,6 +111,11 @@ This update is for you.
 [*] Fixed passport stamp positioning detection
 [*] Fixed stamp overlap detection
 [*] Fixed document dragging issues during tutorial
+[*] Fixed shift not advancing after completing day 1
+[*] Fixed duplicate dialogue IDs causing wrong text in tutorial
+[*] Fixed Viktor dialogue to show familiarity after first meeting
+[*] Fixed poster hover zoom issues
+[*] Fixed various border runner issues
 [/list]
 
 [h3]UI & Menu Fixes[/h3]
@@ -96,6 +125,9 @@ This update is for you.
 [*] Fixed passport text overflow with better font sizing
 [*] Fixed cutscene and menu bugs
 [*] Improved text readability throughout
+[*] Fixed Viktor and Murphy character display names
+[*] Fixed Maris Piper seeker's pronouns in shift 3 intro
+[*] Fixed malformed dialogue lines in diplomatic ending
 [/list]
 
 [h3]Localization[/h3]
@@ -104,6 +136,8 @@ This update is for you.
 [*] Fixed malformed CSV translations
 [*] Added missing translation entries
 [*] Improved translation tooling
+[*] Reorganized to per-language translation files for better maintainability
+[*] Added Viktor storyline and QTE translations
 [/list]
 
 [h2]Technical Improvements[/h2]
@@ -112,6 +146,8 @@ This update is for you.
 [*] Reorganized project assets for maintainability
 [*] Improved logging system
 [*] Better Steam integration checks
+[*] Improved QTE accessibility
+[*] Registered minigame system for better extensibility
 [/list]
 
 [hr][/hr]
@@ -133,15 +169,17 @@ A personal update: My son was born 25 weeks premature, weighing barely 1 pound. 
 Over **2,000 people** have joined us on this journey. Thank you for your feedback and support for our little story of potato redemption.
 
 **What's new:**
-- **5 Minigames** - Border Chase, Code Breaker, Document Scanner, Fingerprint Match, Stamp Sorting
+- **6 Minigames** - Border Chase, Code Breaker, Document Scanner, Fingerprint Match, Stamp Sorting, UV Scanner
 - **Overhauled Tutorial** - Interactive highlights, better pacing, progress tracking
-- **Updated Art** - New story art, minigame visuals, dynamic menu effects
+- **Updated Art** - New story art, minigame visuals, dynamic menu effects, shift fade transitions
 - **New Music** - 11 new tracks with dynamic switching during story moments
 - **Controller Support** - Full gamepad support with visual glyphs
 - **Twitch Integration** - Your viewers' names on potatoes!
 - **Help Menu** - Controls, gameplay tips, and lore from the pause menu
+- **Story Expansions** - New Chaos Agent path, Viktor storyline, improved Sasha ending, QTE narrative system
+- **Quality of Life** - Date display, clear user data button, improved tutorial flow
 - **Sentry Crash Reporting** - I can now fix bugs I can't reproduce myself!
-- **Tons of bug fixes** - Saving issues, tutorial bugs, UI problems, and more
+- **Tons of bug fixes** - Shift progression, dialogue issues, pronoun fixes, and more
 
 There's more in the works. Thank you for being part of this journey.
 
