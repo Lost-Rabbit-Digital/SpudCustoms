@@ -226,7 +226,7 @@ leave player_character
 # Ending Choice Section
 if {ending_choice} == "diplomatic":
 	audio music "res://assets/music/ambient_vol3_peace_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
-    [background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
+	[background arg="res://assets/narrative/idaho_confrontation.png" fade="2.0"]
 	audio "res://assets/audio/footsteps/Metal Walk 1_3.wav" [volume="-5.0" bus="SFX"]
 	join player_character [z_index="1"]
 	player_character: Idaho, it doesn't have to end in more bloodshed. If you cooperate... #id:29
