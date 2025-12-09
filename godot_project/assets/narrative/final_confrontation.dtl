@@ -24,6 +24,7 @@ set {resistance_trust} = "none"
 	set {resistance_trust} = "diplomatic"
 - "I've already sacrificed everything. I won't back down now." #id:16
 	set {resistance_trust} = "committed"
+	set {pro_sasha_choice} = {pro_sasha_choice} + 1
 
 if {resistance_trust} == "diplomatic":
 	resistance_member_2: Pretty words. But we've heard those before. #id:17
@@ -291,10 +292,16 @@ leave narrator
 join player_character [z_index="1"]
 [background arg="res://assets/narrative/credits.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
-if {sasha_rescue_reaction} == "relieved":
+# Romantic ending requires consistent support for Sasha (3+ pro-Sasha choices throughout the game)
+if {sasha_rescue_reaction} == "relieved" and {pro_sasha_choice} >= 3:
 	sweet_potato_sasha: [color=CHARTREUSE]Sasha moves closer, her hand finding yours as you watch the new dawn together.[/color] We built this. You and me. #id:fc_002
 	sweet_potato_sasha: As long as we stay true to our roots, to the ideals that brought us here... [color=CHARTREUSE]we'll find a way.[/color] Together. #id:fc_003
 	player_character: [color=CHARTREUSE]I squeeze her hand, feeling the warmth of a future finally worth fighting for.[/color] Together. #id:fc_004
+elif {sasha_rescue_reaction} == "relieved":
+	# Player said "relieved" but didn't earn the romantic ending through consistent support
+	sweet_potato_sasha: [color=STEEL_BLUE]Sasha gives you a grateful nod.[/color] We made it. Against all odds. #id:fc_002b
+	sweet_potato_sasha: As long as we stay true to our roots, to the ideals that brought us here... [color=CHARTREUSE]we'll find a way.[/color] #id:fc_003b
+	player_character: [color=STEEL_BLUE]There's warmth in her eyes, but also distance. Some bridges take longer to build.[/color] #id:fc_004b
 elif {sasha_rescue_reaction} == "angry":
 	sweet_potato_sasha: [color=STEEL_BLUE]Sasha stands beside you, a respectful distance between you.[/color] Your fire lit the spark that burned down their empire. #id:fc_005
 	sweet_potato_sasha: As long as we stay true to our roots, to the ideals that brought us here... [color=CHARTREUSE]we'll find a way.[/color] #id:fc_006

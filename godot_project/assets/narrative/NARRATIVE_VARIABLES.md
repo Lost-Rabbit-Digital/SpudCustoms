@@ -27,7 +27,7 @@ All variables below should be persisted when saving game state and restored when
 | Variable | Set In | Possible Values | Used In | Description |
 |----------|--------|-----------------|---------|-------------|
 | `murphy_trust` | shift2_end | "open", "guarded" | shift4_end | Initial conversation with Murphy |
-| `murphy_alliance` | shift4_end | "ally", "cautious", "skeptical" | shift6_end, shift7_end, shift8_end, final | Whether Murphy is an ally |
+| `murphy_alliance` | shift4_end | "ally", "cautious", "skeptical", "hostile" | shift6_end, shift7_end, shift8_end, final | Whether Murphy is an ally (hostile = loyalist rejection) |
 | `murphy_final_alliance` | shift8_end | "committed", "hesitant" | shift9_intro | Murphy's commitment before the attack |
 
 ### Viktor (Guard) Arc
@@ -79,6 +79,14 @@ All variables below should be persisted when saving game state and restored when
 |----------|--------|-----------------|---------|-------------|
 | `eat_reserve` | shift2_end | "ate", "refused" | shift4_end | Whether player ate Root Reserve |
 | `cafeteria_response` | shift4_intro | "serious", "avoid" | shift4_end | Response to dark humor about Root Reserve |
+
+### Path Tracking Variables
+
+| Variable | Set In | Possible Values | Used In | Description |
+|----------|--------|-----------------|---------|-------------|
+| `pro_sasha_choice` | multiple | integer (0-10) | final_confrontation | Counter for pro-Sasha/resistance choices (3+ needed for romantic ending) |
+| `loyalist_path` | shift4_end, shift10_intro | "yes" | shift10_intro, loyalist_ending | Whether player chose loyalist options |
+| `loyalist_points` | multiple | integer | loyalist_ending | Counter for self-interest/loyalist choices |
 
 ### Loyalist Path Variables
 

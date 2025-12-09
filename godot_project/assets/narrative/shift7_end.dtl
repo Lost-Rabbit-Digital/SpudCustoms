@@ -78,6 +78,7 @@ sweet_potato_sasha: Can we count on you to be that person? #id:dd
 set {resistance_mission} = "none"
 - "I'll do whatever it takes to expose the truth." #id:de
 	set {resistance_mission} = "committed"
+	set {pro_sasha_choice} = {pro_sasha_choice} + 1
 - "It sounds dangerous. What if we get caught?" #id:df
 	set {resistance_mission} = "hesitant"
 - "Is there another way that doesn't put so many at risk?" #id:e0
@@ -121,6 +122,7 @@ resistance_leader: Will you help them cross? Your answer now will determine our 
 set {final_decision} = "none"
 - "I'll help them cross. For the future of Spud." #id:f2
 	set {final_decision} = "help"
+	set {pro_sasha_choice} = {pro_sasha_choice} + 1
 - "I can't be directly involved, but I'll look the other way." #id:f3
 	set {final_decision} = "passive"
 - "I need more time to think about this." #id:f4

@@ -31,9 +31,9 @@ sweet_potato_sasha: I've been watching the [color=DARK_VIOLET]Root Reserve truck
 sweet_potato_sasha: [color=CHARTREUSE]If we could follow them...[/color] we'd know exactly where they're taking the rejects. #id:106_trucks3
 
 set {follow_trucks} = "none"
-- "I'll do it. I know the patrol schedules." #id:106_trucks4
+- "I'll do it. I know the patrol schedules." (Volunteer) #id:106_trucks4
 	set {follow_trucks} = "volunteer"
-- "That sounds risky. Can't someone else do it?" #id:106_trucks5
+- "That sounds risky. Can't someone else do it?" (Hesitant) #id:106_trucks5
 	set {follow_trucks} = "hesitant"
 
 if {follow_trucks} == "volunteer":

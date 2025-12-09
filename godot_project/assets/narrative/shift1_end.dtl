@@ -27,11 +27,11 @@ leave narrator
 
 # Player reaction to the note
 set {note_reaction} = "none"
-- "Keep the note hidden - investigate quietly" #id:53e
+- "Keep the note hidden - investigate quietly" (Curious) #id:53e
 	set {note_reaction} = "investigate"
-- "Destroy the note - this could be a test" #id:53f
+- "Destroy the note - this could be a test" (Cautious) #id:53f
 	set {note_reaction} = "destroy"
-- "Show the note to Russet immediately" #id:53g
+- "Show the note to Russet immediately" (Loyal) #id:53g
 	set {note_reaction} = "report"
 
 if {note_reaction} == "investigate":

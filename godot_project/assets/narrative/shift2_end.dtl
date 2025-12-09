@@ -12,9 +12,9 @@ murphy: Hey, new spud! Tough shift, huh? Name's Murphy. Been here three seasons 
 murphy: I saw you talking to Sasha earlier. She's... [color=STEEL_BLUE]different[/color]. Good different, I think. #id:201
 
 set {murphy_trust} = "none"
-- "She seems nice. Gave me some advice about staying alert." #id:202
+- "She seems nice. Gave me some advice about staying alert." (Open) #id:202
 	set {murphy_trust} = "open"
-- "Just introductions. Nothing special." #id:203
+- "Just introductions. Nothing special." (Guarded) #id:203
 	set {murphy_trust} = "guarded"
 
 if {murphy_trust} == "open":
@@ -39,9 +39,9 @@ join player_character [z_index="1"]
 player_character: I stare at the thick, purple-brown paste. Everyone eats it without question. It's supposed to be nutritious. #id:209
 
 set {eat_reserve} = "none"
-- "Eat the Root Reserve like everyone else" #id:20a
+- "Eat the Root Reserve like everyone else" (Conform) #id:20a
 	set {eat_reserve} = "ate"
-- "Push it aside - you're not hungry" #id:20b
+- "Push it aside - you're not hungry" (Refuse) #id:20b
 	set {eat_reserve} = "refused"
 
 if {eat_reserve} == "ate":

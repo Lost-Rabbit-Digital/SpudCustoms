@@ -54,9 +54,9 @@ audio music "res://assets/music/narrative/horror_terror_main.mp3" [fade="0.5" vo
 sweet_potato_sasha: [pulse freq=3][color=CRIMSON]They're becoming Root Reserve.[/color][/pulse] #id:6f2
 
 set {reveal_reaction} = "none"
-- "That's insane. They're... processing potatoes into food?" #id:70
+- "That's insane. They're... processing potatoes into food?" (Shocked) #id:70
 	set {reveal_reaction} = "shocked"
-- "We need more evidence before making accusations." #id:71
+- "We need more evidence before making accusations." (Cautious) #id:71
 	set {reveal_reaction} = "cautious"
 
 if {reveal_reaction} == "shocked":

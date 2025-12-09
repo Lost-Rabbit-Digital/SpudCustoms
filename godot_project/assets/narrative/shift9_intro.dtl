@@ -52,6 +52,7 @@ resistance_member_1: A tiny blue card falls from the folder. "[wave amp=15 freq=
 set {critical_choice} = "none"
 - "Process them through, ignoring the scanner alerts" (Help the resistance) #id:s9i_014
 	set {critical_choice} = "help"
+	set {pro_sasha_choice} = {pro_sasha_choice} + 1
 - "Sound the alarm immediately" (Betray the resistance) #id:s9i_015
 	set {critical_choice} = "betray"
 
@@ -79,6 +80,7 @@ player_character: Do I stay at my post and hope this blows over, or [color=CHART
 	set {stay_or_go} = "stay"
 - "I've been complicit for too long. It's time to fight for what's right." #id:s9i_022
 	set {stay_or_go} = "go"
+	set {pro_sasha_choice} = {pro_sasha_choice} + 1
 leave player_character
 
 # QTE for the "go" path - player must act quickly during the chaos

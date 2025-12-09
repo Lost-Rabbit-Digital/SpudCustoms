@@ -85,6 +85,7 @@ set {sasha_arrest_reaction} = "none"
 	set {sasha_arrest_reaction} = "hide"
 - "Catch Sasha's eye and nod - a promise" (Resolve) #id:27a
 	set {sasha_arrest_reaction} = "promise"
+	set {pro_sasha_choice} = {pro_sasha_choice} + 1
 
 if {sasha_arrest_reaction} == "intervene":
 	[background arg="res://assets/narrative/player_confronts_guards.png" fade="0.3"]

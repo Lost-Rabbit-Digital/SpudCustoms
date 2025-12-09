@@ -19,9 +19,9 @@ join supervisor_russet [z_index="1"]
 supervisor_russet: I have a special assignment. We've got intel on [pulse freq=2][color=CRIMSON]troublemakers[/color][/pulse]. Be vigilant with your inspections. #id:7a
 
 set {scanner_response} = "none"
-- "Yes sir, I won't let you down" #id:7b
+- "Yes sir, I won't let you down" (Loyal) #id:7b
 	set {scanner_response} = "loyal"
-- "What kind of troublemakers are we talking about?" #id:7c
+- "What kind of troublemakers are we talking about?" (Questioning) #id:7c
 	set {scanner_response} = "questioning"
 
 if {scanner_response} == "loyal":
@@ -42,9 +42,9 @@ npc_3: She [tornado radius=2 freq=3]never made it through customs[/tornado]. The
 npc_3: No one will tell me what happened to her. Please, [color=CHARTREUSE]help me find her![/color] #id:80
 
 set {family_response} = "none"
-- "I'm sorry, but there's nothing I can do." #id:81
+- "I'm sorry, but there's nothing I can do." (Refuse) #id:81
 	set {family_response} = "refuse"
-- "Let me see what I can find out. No promises." #id:82
+- "Let me see what I can find out. No promises." (Help) #id:82
 	set {family_response} = "help"
 
 if {family_response} == "refuse":

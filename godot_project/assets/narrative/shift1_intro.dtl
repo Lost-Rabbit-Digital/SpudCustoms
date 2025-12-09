@@ -25,9 +25,9 @@ supervisor_russet: I appoint you as a Customs Officer of [pulse freq=1][color=ME
 
 audio "res://assets/audio/stings/decision_weight.mp3" [volume="-8.0" bus="SFX"]
 set {initial_response} = "none"
-- "I'm ready to serve Spud with all my starch!" #id:5c
+- "I'm ready to serve Spud with all my starch!" (Eager) #id:5c
 	set {initial_response} = "eager"
-- "What exactly happens to rejected potatoes?" #id:5d
+- "What exactly happens to rejected potatoes?" (Questioning) #id:5d
 	set {initial_response} = "questioning"
 
 if {initial_response} == "eager":

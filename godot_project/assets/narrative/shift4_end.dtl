@@ -108,6 +108,7 @@ sweet_potato_sasha: But [color=DARK_VIOLET]Root Reserve[/color] production? [tor
 set {sasha_trust_level} = "none"
 - "I believe you. How can I help?" #id:22f
 	set {sasha_trust_level} = "committed"
+	set {pro_sasha_choice} = {pro_sasha_choice} + 1
 - "I need to see proof before I risk everything." #id:230
 	set {sasha_trust_level} = "cautious"
 

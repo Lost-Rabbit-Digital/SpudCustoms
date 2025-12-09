@@ -19,9 +19,9 @@ viktor: Viktor approaches your station. His eyes are tired, haunted. #id:241
 viktor: He nods in recognition. We keep running into each other. Night shift gets lonely. #id:242
 
 set {viktor_conversation} = "none"
-- "Any news about Elena?" #id:243
+- "Any news about Elena?" (Concerned) #id:243
 	set {viktor_conversation} = "curious"
-- "You seem troubled. What's on your mind?" #id:244
+- "You seem troubled. What's on your mind?" (Direct) #id:244
 	set {viktor_conversation} = "direct"
 
 if {viktor_conversation} == "curious":
@@ -48,11 +48,11 @@ narrator: The new [color=DARK_ORANGE]RealityScan[/color] blinks ready at your st
 leave narrator
 
 set {scanner_choice} = "none"
-- "Pretend the scanner malfunctioned and wave them through" #id:24c
+- "Pretend the scanner malfunctioned and wave them through" (Help) #id:24c
 	set {scanner_choice} = "help"
-- "Use the scanner as required - you can't risk exposure" #id:24d
+- "Use the scanner as required - you can't risk exposure" (Protocol) #id:24d
 	set {scanner_choice} = "scan"
-- "Signal Viktor to look the other way, then let them pass" #id:24e
+- "Signal Viktor to look the other way, then let them pass" (Alliance) #id:24e
 	set {scanner_choice} = "viktor"
 
 if {scanner_choice} == "help":
