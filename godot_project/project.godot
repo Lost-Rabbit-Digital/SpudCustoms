@@ -235,7 +235,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/maaacks_game_template/plugin.cfg")
+enabled=PackedStringArray("res://addons/clear_user_data/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/maaacks_game_template/plugin.cfg")
 
 [global_group]
 
