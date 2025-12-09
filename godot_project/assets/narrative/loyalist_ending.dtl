@@ -223,6 +223,7 @@ elif {final_loyalist_choice} == "ignore":
 	player_character: But it's the first time I've chosen not to act against them. #id:333
 	player_character: Maybe that's something. Maybe it's [color=YELLOW]too little, too late[/color]. #id:334
 	leave player_character
+	[signal arg="survivor"]
 else:
 	[background arg="res://assets/narrative/loyalist_end_hope.png" fade="2.0"]
 	audio "res://assets/audio/stings/revelation_hope.mp3" [volume="-8.0" bus="SFX"]

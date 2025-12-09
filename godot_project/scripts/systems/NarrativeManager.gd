@@ -35,12 +35,26 @@ const LEVEL_END_DIALOGUES: Dictionary[int, String] = {
 	10: "final_confrontation"
 }
 
-# Achievement IDs
+# Achievement IDs - All narrative achievements
+# Resistance Path Endings (4)
 const ACHIEVEMENTS: Dictionary[String, String] = {
 	"BORN_DIPLOMAT": "born_diplomat",
 	"TATER_OF_JUSTICE": "tater_of_justice",
 	"BEST_SERVED_HOT": "best_served_hot",
-	"DOWN_WITH_THE_TATRIARCHY": "down_with_the_tatriarchy"
+	"DOWN_WITH_THE_TATRIARCHY": "down_with_the_tatriarchy",
+	# Loyalist Path Endings (3)
+	"HEART_OF_STONE": "heart_of_stone",
+	"SURVIVOR": "survivor",
+	"LATE_BLOOMER": "late_bloomer",
+	# Special Ending (1)
+	"SAVIOR_OF_SPUD": "savior_of_spud",
+	# Character Arc Achievements (3)
+	"TOMMYS_LEGACY": "tommys_legacy",
+	"ELENAS_MEMORY": "elenas_memory",
+	"THE_NOTE": "the_note",
+	# Discovery Achievements (2)
+	"ROOT_OF_EVIL": "root_of_evil",
+	"CHAOS_ARCHITECT": "chaos_architect"
 }
 
 var current_shift: int = 1
@@ -50,6 +64,20 @@ var current_skip_button_layer: CanvasLayer = null
 var cutscene_post_processing: CanvasLayer = null
 var history_panel_open: bool = false
 var cutscene_bloom_pulse: CutsceneBloomPulse = null
+
+# Track the currently active narrative QTE for result handling
+var _active_narrative_qte: String = ""
+
+# Mapping of QTE signal names to their Dialogic result variable names
+const QTE_RESULT_VARIABLES: Dictionary = {
+	"qte_rescue": "qte_rescue_result",
+	"qte_confrontation": "qte_confrontation_result",
+	"qte_escape": "qte_escape_result",
+	"qte_infiltration": "qte_infiltration_result",
+	"qte_scanner_fake": "qte_scanner_result",
+	"qte_surveillance": "qte_surveillance_result",
+	"qte_suppression": "qte_suppression_result"
+}
 
 # Preloaded resources for cutscene post-processing
 var cutscene_environment: Environment = preload("res://assets/styles/cutscene_environment.tres")
@@ -121,6 +149,9 @@ func _connect_to_event_bus() -> void:
 	# Subscribe to narrative-related events
 	EventBus.narrative_choices_load_requested.connect(_on_load_narrative_choices_requested)
 	EventBus.narrative_choices_save_requested.connect(_on_save_narrative_choices_requested)
+
+	# Subscribe to minigame completion for QTE result handling
+	EventBus.minigame_completed.connect(_on_minigame_completed)
 
 
 func _on_load_narrative_choices_requested(choices: Dictionary) -> void:
@@ -341,22 +372,23 @@ func _on_dialogic_signal(argument):
 		get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
 
 	# QTE trigger signals from narrative timelines
+	# Track which QTE is running so we can set the result variable on completion
 	# Each QTE can now optionally display a narrative image alongside the prompts
 	if argument == "qte_infiltration":
-		_launch_qte("Infiltrate the facility!", 5, 2.0, "res://assets/narrative/night_gameplay.png")
+		_launch_qte("qte_infiltration", "Infiltrate the facility!", 5, 2.0, "res://assets/narrative/night_gameplay.png")
 	elif argument == "qte_escape":
-		_launch_qte("Escape the guards!", 6, 1.8, "res://assets/narrative/escape_route.png")
+		_launch_qte("qte_escape", "Escape the guards!", 6, 1.8, "res://assets/narrative/escape_route.png")
 	elif argument == "qte_confrontation":
-		_launch_qte("Stand your ground!", 4, 2.5, "res://assets/narrative/idaho_confrontation.png")
+		_launch_qte("qte_confrontation", "Stand your ground!", 4, 2.5, "res://assets/narrative/idaho_confrontation.png")
 	# New QTEs for enhanced narrative
 	elif argument == "qte_scanner_fake":
-		_launch_qte("Fake the malfunction!", 4, 2.2, "res://assets/narrative/checkpoint_booth.png")
+		_launch_qte("qte_scanner_fake", "Fake the malfunction!", 4, 2.2, "res://assets/narrative/checkpoint_booth.png")
 	elif argument == "qte_surveillance":
-		_launch_qte("Stay hidden! Follow the trucks!", 5, 2.0, "res://assets/narrative/night_gameplay.png")
+		_launch_qte("qte_surveillance", "Stay hidden! Follow the trucks!", 5, 2.0, "res://assets/narrative/night_gameplay.png")
 	elif argument == "qte_rescue":
-		_launch_qte("Race to save Sasha!", 5, 1.8, "res://assets/narrative/sasha_rescue.png")
+		_launch_qte("qte_rescue", "Race to save Sasha!", 5, 1.8, "res://assets/narrative/sasha_rescue.png")
 	elif argument == "qte_suppression":
-		_launch_qte("Suppress the attack!", 4, 2.5, "res://assets/narrative/border_chaos.png")
+		_launch_qte("qte_suppression", "Suppress the attack!", 4, 2.5, "res://assets/narrative/border_chaos.png")
 
 	# Route to loyalist ending signal
 	if argument == "route_to_loyalist_ending":
@@ -371,33 +403,64 @@ func _on_dialogic_signal(argument):
 		return
 
 	# REFACTORED: Emit achievement unlocked events
+	# Resistance Path Endings
 	if argument == "born_diplomat":
-		Steam.setAchievement(ACHIEVEMENTS.BORN_DIPLOMAT)
-		if EventBus:
-			EventBus.achievement_unlocked.emit(ACHIEVEMENTS.BORN_DIPLOMAT)
+		_unlock_achievement(ACHIEVEMENTS.BORN_DIPLOMAT)
 	if argument == "tater_of_justice":
-		Steam.setAchievement(ACHIEVEMENTS.TATER_OF_JUSTICE)
-		if EventBus:
-			EventBus.achievement_unlocked.emit(ACHIEVEMENTS.TATER_OF_JUSTICE)
+		_unlock_achievement(ACHIEVEMENTS.TATER_OF_JUSTICE)
 	if argument == "best_served_hot":
-		Steam.setAchievement(ACHIEVEMENTS.BEST_SERVED_HOT)
-		if EventBus:
-			EventBus.achievement_unlocked.emit(ACHIEVEMENTS.BEST_SERVED_HOT)
+		_unlock_achievement(ACHIEVEMENTS.BEST_SERVED_HOT)
 	if argument == "down_with_the_tatriarchy":
-		Steam.setAchievement(ACHIEVEMENTS.DOWN_WITH_THE_TATRIARCHY)
-		if EventBus:
-			EventBus.achievement_unlocked.emit(ACHIEVEMENTS.DOWN_WITH_THE_TATRIARCHY)
+		_unlock_achievement(ACHIEVEMENTS.DOWN_WITH_THE_TATRIARCHY)
+
+	# Loyalist Path Endings
+	if argument == "achievement_complicit":
+		_unlock_achievement(ACHIEVEMENTS.HEART_OF_STONE)
+	if argument == "survivor":
+		_unlock_achievement(ACHIEVEMENTS.SURVIVOR)
+	if argument == "achievement_late_bloomer":
+		_unlock_achievement(ACHIEVEMENTS.LATE_BLOOMER)
+
+	# Special Ending - Savior of Spud (romantic ending)
+	if argument == "savior_of_spud":
+		_unlock_achievement(ACHIEVEMENTS.SAVIOR_OF_SPUD)
+
+	# Discovery Achievements
+	if argument == "chaos_architect":
+		_unlock_achievement(ACHIEVEMENTS.CHAOS_ARCHITECT)
+	if argument == "root_of_evil":
+		_unlock_achievement(ACHIEVEMENTS.ROOT_OF_EVIL)
+
+	# Character Arc Achievements - checked at specific story moments
+	if argument == "tommys_legacy":
+		_unlock_achievement(ACHIEVEMENTS.TOMMYS_LEGACY)
+	if argument == "elenas_memory":
+		_unlock_achievement(ACHIEVEMENTS.ELENAS_MEMORY)
+	if argument == "the_note":
+		_unlock_achievement(ACHIEVEMENTS.THE_NOTE)
 
 
-func _launch_qte(context: String, prompt_count: int, time_per_prompt: float, image_path: String = "") -> void:
+func _unlock_achievement(achievement_id: String) -> void:
+	"""Helper to unlock a Steam achievement and emit the event."""
+	if Steam and Steam.isSteamRunning():
+		Steam.setAchievement(achievement_id)
+	if EventBus:
+		EventBus.achievement_unlocked.emit(achievement_id)
+
+
+func _launch_qte(qte_name: String, context: String, prompt_count: int, time_per_prompt: float, image_path: String = "") -> void:
 	"""Launch a QTE minigame during narrative sequences.
 
 	Args:
+		qte_name: Internal identifier for this QTE (e.g., "qte_rescue")
 		context: The narrative prompt text shown during the QTE
 		prompt_count: Number of key prompts to show
 		time_per_prompt: Seconds allowed per prompt
 		image_path: Optional path to a narrative image to display alongside the QTE
 	"""
+	# Track which QTE is active for result handling
+	_active_narrative_qte = qte_name
+
 	if EventBus:
 		var config: Dictionary = {
 			"narrative_context": context,
@@ -409,6 +472,40 @@ func _launch_qte(context: String, prompt_count: int, time_per_prompt: float, ima
 		if image_path != "":
 			config["image_path"] = image_path
 		EventBus.minigame_launch_requested.emit("quick_time_event", config)
+
+
+func _on_minigame_completed(result: Dictionary) -> void:
+	"""Handle QTE completion and set Dialogic variables for narrative branching.
+
+	When a narrative QTE completes, we set the corresponding Dialogic variable
+	to "pass" or "fail" based on the success rate. This enables the timeline
+	to branch based on QTE performance.
+	"""
+	# Only process if we have an active narrative QTE
+	if _active_narrative_qte.is_empty():
+		return
+
+	# Only process quick_time_event results
+	if result.get("minigame_type", "") != "quick_time_event":
+		return
+
+	# Check if this QTE has a result variable mapping
+	if not QTE_RESULT_VARIABLES.has(_active_narrative_qte):
+		_active_narrative_qte = ""
+		return
+
+	# Determine pass/fail based on success rate (50% threshold)
+	var success_rate: float = result.get("success_rate", 0.0)
+	var qte_result: String = "pass" if success_rate >= 0.5 else "fail"
+
+	# Set the Dialogic variable for narrative branching
+	var var_name: String = QTE_RESULT_VARIABLES[_active_narrative_qte]
+	if Dialogic and Dialogic.VAR:
+		Dialogic.VAR.set(var_name, qte_result)
+		print("NarrativeManager: Set %s = %s (success_rate: %.1f%%)" % [var_name, qte_result, success_rate * 100])
+
+	# Clear the active QTE tracker
+	_active_narrative_qte = ""
 
 
 func start_final_confrontation():
@@ -657,6 +754,25 @@ func save_narrative_choices() -> Dictionary:
 		"accept_medal",              # accept, reluctant
 		"eat_final",                 # eat, refuse
 		"final_loyalist_choice",     # report, ignore, hope
+
+		# Path Tracking Variables
+		"pro_sasha_choice",          # integer counter (0-10) for romantic ending
+		"loyalist_path",             # yes/no
+		"loyalist_points",           # integer counter
+		"chaos_agent",               # yes/no (sabotage both sides)
+		"chaos_points",              # integer counter (0-6)
+
+		# QTE Result Variables (set by NarrativeManager on QTE completion)
+		"qte_rescue_result",         # pass, fail
+		"qte_confrontation_result",  # pass, fail
+		"qte_escape_result",         # pass, fail
+		"qte_infiltration_result",   # pass, fail
+		"qte_scanner_result",        # pass, fail
+		"qte_surveillance_result",   # pass, fail
+		"qte_suppression_result",    # pass, fail
+
+		# Additional variables from shift6_end fix
+		"viktor_night_greeting",     # curious, direct (fixed: was overwriting viktor_conversation)
 	]
 
 	# Save each variable if it exists in Dialogic

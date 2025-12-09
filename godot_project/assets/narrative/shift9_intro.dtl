@@ -1,7 +1,50 @@
 # shift9_intro.dtl
+# TRANSITION: Bridge from Shift 8's emotional low point to Shift 9's chaos
+
+# If player was captured in shift 8, show different opening
+if {player_captured} == "yes":
+	audio music "res://assets/music/ambient_vol3_defeat_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+	[background arg="res://assets/narrative/interrogation.png" fade="0.0"]
+	join narrator [z_index="1"]
+	narrator: You've spent hours in the cold cell, listening to distant screams and the steady drip of water. #id:s9i_cap_001
+	narrator: Suddenly, [pulse freq=3][color=YELLOW]explosions rock the building[/color][/pulse]. The lights flicker. Guards shout in confusion. #id:s9i_cap_002
+	leave narrator
+
+	audio "res://assets/audio/stings/alarm_distant.mp3" [volume="-3.0" bus="SFX"]
+	[background arg="res://assets/narrative/resistance_attack.png" fade="0.5"]
+	join murphy [z_index="1"]
+	murphy: The cell door bursts open. Murphy stands there, smoke swirling behind him. #id:s9i_cap_003
+	murphy: [color=CHARTREUSE]Get up! The resistance is here![/color] We're getting you AND Sasha out! #id:s9i_cap_004
+	leave murphy
+
+	join player_character [z_index="1"]
+	player_character: After the longest night of your life, dawn has brought chaos - and a chance at freedom. #id:s9i_cap_005
+	leave player_character
+	set {player_captured} = "rescued"
+	# Skip to the resistance operative scene
+	jump s9i_operative_scene
+else:
+	# Normal opening - the sleepless night has passed
+	audio music "res://assets/music/narrative/ambient_evil_suspense_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+	[background arg="res://assets/narrative/personal_quarters.png" fade="0.0"]
+	join narrator [z_index="1"]
+	narrator: Dawn arrives after a sleepless night. Sasha's arrest plays on repeat in your mind. #id:s9i_trans_001
+	narrator: Every hour that passes is an hour closer to her being... [color=DARK_VIOLET]processed[/color]. #id:s9i_trans_002
+	leave narrator
+
+	join player_character [z_index="1"]
+	if {sasha_arrest_reaction} == "promise":
+		player_character: You made her a promise. Today, you keep it - or die trying. #id:s9i_trans_003
+	elif {sasha_arrest_reaction} == "hide":
+		player_character: The guilt weighs heavy. You hid while they took her. [color=STEEL_BLUE]Never again.[/color] #id:s9i_trans_004
+	else:
+		player_character: You almost got caught trying to help her. Today's plan had better work. #id:s9i_trans_005
+	leave player_character
+
+# Main shift 9 content begins
 audio music "res://assets/audio/ambient/horror_drone_49.mp3" [fade="2.0" volume="-5.0" bus="Ambient"]
 audio music "res://assets/music/narrative/horror_downward_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
-[background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]
+[background arg="res://assets/narrative/occupation_checkpoint.png" fade="1.5"]
 audio "res://assets/audio/atmosphere/war_zone_distant.mp3" [volume="-5.0" bus="Ambient"]
 join narrator [z_index="1"]
 narrator: The border resembles a [pulse freq=3][color=CRIMSON]war zone[/color][/pulse]. Barricades, armored vehicles, and elite guards stand ready. Today is when the resistance planned to strike. #id:s9i_001
@@ -41,6 +84,9 @@ join security_officer [z_index="1"]
 security_officer: All border crossings are [color=RED]suspended[/color] except for essential personnel with [color=GOLD]Level Alpha clearance[/color]. #id:s9i_010
 security_officer: This scanner [color=YELLOW]cannot be fooled[/color]. Sound the alarm immediately for anyone without proper clearance. #id:s9i_011
 leave security_officer
+
+# Label for captured player path to jump to
+label s9i_operative_scene
 
 [background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 audio music "res://assets/music/ambient_vol3_spirits_intensity_2.mp3" [fade="1.5" volume="-5.0" bus="Music"]

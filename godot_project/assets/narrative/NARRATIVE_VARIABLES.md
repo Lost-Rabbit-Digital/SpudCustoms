@@ -102,6 +102,35 @@ All variables below should be persisted when saving game state and restored when
 | `eat_final` | loyalist_ending | "eat", "refuse" | loyalist_ending | Whether player eats "Resistance Blend" |
 | `final_loyalist_choice` | loyalist_ending | "report", "ignore", "hope" | loyalist_ending | Final choice about yellow emblems |
 
+### Path Tracking Variables
+
+| Variable | Set In | Possible Values | Used In | Description |
+|----------|--------|-----------------|---------|-------------|
+| `pro_sasha_choice` | Multiple | integer (0-10) | final_confrontation | Counter for pro-resistance choices, 5+ needed for Savior of Spud |
+| `loyalist_path` | shift4_end | "yes", "no" | shift10_intro | Whether player is on loyalist path |
+| `loyalist_points` | Multiple | integer | loyalist_ending | Counter for loyalist actions |
+| `chaos_agent` | shift5_end, shift7_end | "yes", "no" | final_confrontation | Whether player is playing both sides |
+| `chaos_points` | Multiple | integer (0-6) | final_confrontation | Counter for chaos actions (4+ for Chaos Architect) |
+| `player_captured` | shift8_end | "yes", "rescued" | shift9_intro | Whether player was captured and rescued |
+
+### QTE Result Variables (Set by NarrativeManager)
+
+| Variable | Set In | Possible Values | Used In | Description |
+|----------|--------|-----------------|---------|-------------|
+| `qte_rescue_result` | final_confrontation | "pass", "fail" | final_confrontation | Result of Sasha rescue QTE |
+| `qte_confrontation_result` | final_confrontation | "pass", "fail" | final_confrontation | Result of final confrontation QTE |
+| `qte_escape_result` | shift9_intro | "pass", "fail" | shift10_intro | Result of escape QTE |
+| `qte_infiltration_result` | shift7_intro | "pass", "fail" | shift7_intro | Result of infiltration QTE |
+| `qte_scanner_result` | shift6_intro | "pass", "fail" | shift6_intro | Result of scanner fake QTE |
+| `qte_surveillance_result` | shift7_intro | "pass", "fail" | shift7_intro | Result of surveillance QTE |
+| `qte_suppression_result` | loyalist_ending | "pass", "fail" | loyalist_ending | Result of suppression QTE |
+
+### Additional UI Variables
+
+| Variable | Set In | Possible Values | Used In | Description |
+|----------|--------|-----------------|---------|-------------|
+| `viktor_night_greeting` | shift6_end | "curious", "direct" | shift6_end | Viktor's night greeting (fixed: was overwriting viktor_conversation) |
+
 ---
 
 ## New Cutscene Images Needed

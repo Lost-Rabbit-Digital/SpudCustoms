@@ -1,9 +1,26 @@
 # shift10_intro.dtl
+# TRANSITION: Bridge from Shift 9's chaos to the final confrontation
+
 audio music "res://assets/audio/ambient/horror_drone_49.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 if {stay_or_go} == "stay":
 	audio music "res://assets/music/narrative/ambient_defeat_main.mp3" [fade="2.0" volume="0.0" bus="Music"]
+
+	# TRANSITION: Days have passed since the attack
+	[background arg="res://assets/narrative/personal_quarters.png" fade="0.0"]
+	join narrator [z_index="1"]
+	narrator: Three days have passed since the resistance attack. The rebellion was crushed, its leaders captured. #id:s10_trans_stay_001
+	narrator: Sasha was [color=DARK_VIOLET]processed[/color] the morning after. You heard it announced on the broadcast, along with the other "traitors." #id:s10_trans_stay_002
+	leave narrator
+
+	join player_character [z_index="1"]
+	if {sasha_arrest_reaction} == "promise":
+		player_character: You made her a promise. You failed to keep it. The weight of that broken vow settles in your chest. #id:s10_trans_stay_003
+	else:
+		player_character: Another face joins the ghosts in your mind. Did you make the right choice? Does it even matter now? #id:s10_trans_stay_004
+	leave player_character
+
 	# Storyline for those who stayed at their post
-	[background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]
+	[background arg="res://assets/narrative/occupation_checkpoint.png" fade="1.5"]
 	join narrator [z_index="1"]
 	narrator: The checkpoint has been rebuilt after the resistance attack. Security is unprecedented, with propaganda broadcasts praising the "brave defenders." #id:3a
 	leave narrator
@@ -55,8 +72,24 @@ if {stay_or_go} == "stay":
 
 if {stay_or_go} == "go":
 	audio music "res://assets/music/narrative/electronic_cyberattack_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+
+	# TRANSITION: The aftermath of the escape
+	[background arg="res://assets/narrative/hideout.png" fade="0.0"]
+	join narrator [z_index="1"]
+	narrator: Hours have passed since your escape during the chaos. The resistance hideout is cramped but alive with purpose. #id:s10_trans_go_001
+	leave narrator
+
+	if {qte_escape_result} == "fail":
+		join player_character [z_index="1"]
+		player_character: Your escape was close - too close. A guard's bullet grazed you, but Murphy pulled you to safety. #id:s10_trans_go_002
+		leave player_character
+	else:
+		join player_character [z_index="1"]
+		player_character: Your escape was flawless. The skills you developed at the checkpoint served you well. #id:s10_trans_go_003
+		leave player_character
+
 	# Storyline for those who joined the resistance
-	[background arg="res://assets/narrative/resistance_planning.png" fade="0.0"]
+	[background arg="res://assets/narrative/resistance_planning.png" fade="1.5"]
 	join narrator [z_index="1"]
 	narrator: After the broadcast exposing Root Reserve, uprisings have erupted across Spud. Prime Minister Idaho remains barricaded in the administration building. #id:46
 	leave narrator
