@@ -87,6 +87,8 @@ All variables below should be persisted when saving game state and restored when
 | `pro_sasha_choice` | multiple | integer (0-10) | final_confrontation | Counter for pro-Sasha/resistance choices (3+ needed for romantic ending) |
 | `loyalist_path` | shift4_end, shift10_intro | "yes" | shift10_intro, loyalist_ending | Whether player chose loyalist options |
 | `loyalist_points` | multiple | integer | loyalist_ending | Counter for self-interest/loyalist choices |
+| `chaos_agent` | shift5_end, shift7_end, shift9_intro | "yes" | endings | Whether player is on chaos agent path (sabotage both sides) |
+| `chaos_points` | multiple | integer (0-6) | endings | Counter for chaos agent choices (play both sides against each other) |
 
 ### Loyalist Path Variables
 
