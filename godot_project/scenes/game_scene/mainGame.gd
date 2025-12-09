@@ -1847,6 +1847,11 @@ func process_decision(allowed):
 		
 		# The EventBus quota update is synchronous, so current_quota is already updated
 		if current_quota >= target_quota:
+			# IMMEDIATELY disable border runner system to prevent runners during shift end
+			# This prevents race condition where runners spawn during summary screen transition
+			if border_runner_system:
+				border_runner_system.disable()
+				border_runner_system.is_enabled = false
 			office_shutter_controller.lower_shutter(0.7)
 			print("Quota complete!")
 			end_shift(true)  # end shift with success condition
