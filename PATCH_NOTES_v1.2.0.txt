@@ -160,7 +160,7 @@ This update is for you.
 
 ---
 
-=== DISCORD ANNOUNCEMENT ===
+=== DISCORD ANNOUNCEMENT (FULL) ===
 
 **Spud Customs v1.2.0 - The "One Year Later" Update** is here!
 
@@ -186,3 +186,29 @@ There's more in the works. Thank you for being part of this journey.
 Now get back to work, Inspector.
 
 - Lost Rabbit Digital
+
+---
+
+=== DISCORD ANNOUNCEMENT (SHORT) ===
+
+# 🥔 Spud Customs v1.2.0 - The "One Year Later" Update
+
+*A personal note: My son was born at 1lb, now over 20lbs. This update is dedicated to him and the 2,000+ players who've joined this journey.*
+
+## ✨ Highlights
+- **6 Minigames** — Border Chase, Code Breaker, Fingerprint Match & more
+- **New Story Paths** — Chaos Agent route, Viktor storyline, improved Sasha ending
+- **QTE System** — Quick Time Events with narrative consequences
+- **Visual Polish** — Shift transitions, bloom tuning, new cutscene art
+- **QoL** — Date display, clear save data, better tutorial flow
+
+## 🔧 Key Fixes
+- Shift progression after day 1
+- Tutorial dialogue issues
+- Character pronoun fixes
+- Missile freeze bug
+
+Full notes: <steam link>
+
+*Now get back to work, Inspector.* 🥔
+— Lost Rabbit Digital
