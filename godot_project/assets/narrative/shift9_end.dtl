@@ -54,47 +54,47 @@ if {stay_or_go} == "go":
 	# Resistance leader confronts Russet at gunpoint
 	audio "res://assets/audio/gunfire/gun cocking 3.wav" [volume="-5.0" bus="SFX"]
 	join resistance_leader [z_index="1"]
-	resistance_leader: [color=STEEL_BLUE]The resistance leader steps forward, weapon trained on Russet.[/color] Not another step, Russet. Your hands where I can see them. #id:140
+	resistance_leader: [color=STEEL_BLUE]The resistance leader steps forward, weapon trained on Russet.[/color] Not another step, Russet. Your hands where I can see them. #id:s9e_001
 	join supervisor_russet [z_index="1"]
-	supervisor_russet: [color=CRIMSON]Russet's eyes dart between you and the resistance leader, sweat beading on his brow.[/color] You think you've won? This facility is the foundation of Spud! #id:141
-	resistance_leader: The foundation of suffering. [pulse freq=3][color=CHARTREUSE]It ends today.[/color][/pulse] #id:142
+	supervisor_russet: [color=CRIMSON]Russet's eyes dart between you and the resistance leader, sweat beading on his brow.[/color] You think you've won? This facility is the foundation of Spud! #id:s9e_002
+	resistance_leader: The foundation of suffering. [pulse freq=3][color=CHARTREUSE]It ends today.[/color][/pulse] #id:s9e_003
 	leave supervisor_russet
 	leave resistance_leader
 
 	# Player sees Sasha bound on the conveyor
 	[background arg="res://assets/narrative/plant_revelation.png" fade="1.5"]
 	join sweet_potato_sasha [z_index="1"]
-	sweet_potato_sasha: [color=STEEL_BLUE]Sasha struggles against her bindings on the conveyor belt, looking up as she sees you.[/color] You... you actually came! #id:143
+	sweet_potato_sasha: [color=STEEL_BLUE]Sasha struggles against her bindings on the conveyor belt, looking up as she sees you.[/color] You... you actually came! #id:s9e_004
 	leave sweet_potato_sasha
 
 	# Player reaction choice
 	set {sasha_rescue_reaction} = "none"
-	- [tornado radius=3 freq=2][color=CRIMSON]"Russet, you monster! You'll pay for every life you've taken!"[/color][/tornado] #id:144
+	- [tornado radius=3 freq=2][color=CRIMSON]"Russet, you monster! You'll pay for every life you've taken!"[/color][/tornado] #id:s9e_005
 		set {sasha_rescue_reaction} = "angry"
-	- [wave amp=15 freq=2][color=STEEL_BLUE]"This... this is what they've been doing? It's worse than I imagined..."[/color][/wave] #id:145
+	- [wave amp=15 freq=2][color=STEEL_BLUE]"This... this is what they've been doing? It's worse than I imagined..."[/color][/wave] #id:s9e_006
 		set {sasha_rescue_reaction} = "disgusted"
-	- [color=CHARTREUSE]"Sasha! Thank the roots you're alive! Hold on, we're getting you out!"[/color] #id:146
+	- [color=CHARTREUSE]"Sasha! Thank the roots you're alive! Hold on, we're getting you out!"[/color] #id:s9e_007
 		set {sasha_rescue_reaction} = "relieved"
 
 	if {sasha_rescue_reaction} == "angry":
 		join player_character [z_index="1"]
-		player_character: [color=CRIMSON]You charge toward Russet, fists clenched, barely held back by the resistance fighters.[/color] Every potato that came through my checkpoint... how many did you... #id:147
+		player_character: [color=CRIMSON]You charge toward Russet, fists clenched, barely held back by the resistance fighters.[/color] Every potato that came through my checkpoint... how many did you... #id:s9e_008
 		join resistance_leader [z_index="1"]
-		resistance_leader: Easy! We need him alive to testify. [color=STEEL_BLUE]The leader keeps their weapon trained on Russet.[/color] Save your anger for the courts. #id:148
+		resistance_leader: Easy! We need him alive to testify. [color=STEEL_BLUE]The leader keeps their weapon trained on Russet.[/color] Save your anger for the courts. #id:s9e_009
 		leave resistance_leader
 		leave player_character
 	elif {sasha_rescue_reaction} == "disgusted":
 		join player_character [z_index="1"]
-		player_character: [color=STEEL_BLUE]You stagger back, hand covering your mouth, taking in the full horror of the machinery.[/color] I stamped their papers... I sent them here... #id:149
+		player_character: [color=STEEL_BLUE]You stagger back, hand covering your mouth, taking in the full horror of the machinery.[/color] I stamped their papers... I sent them here... #id:s9e_010
 		join resistance_leader [z_index="1"]
-		resistance_leader: [color=CHARTREUSE]You didn't know. None of us did.[/color] That's why we're here now. Focus! #id:14a
+		resistance_leader: [color=CHARTREUSE]You didn't know. None of us did.[/color] That's why we're here now. Focus! #id:s9e_011
 		leave resistance_leader
 		leave player_character
 	else:
 		join player_character [z_index="1"]
-		player_character: [color=CHARTREUSE]You rush to the conveyor, working frantically at Sasha's restraints.[/color] I'm here. I'm not leaving without you. #id:14b
+		player_character: [color=CHARTREUSE]You rush to the conveyor, working frantically at Sasha's restraints.[/color] I'm here. I'm not leaving without you. #id:s9e_012
 		join sweet_potato_sasha [z_index="1"]
-		sweet_potato_sasha: [color=CHARTREUSE]Sasha's eyes shine with tears and hope as your hands work the knots.[/color] I knew you'd come. I never doubted you. #id:14c
+		sweet_potato_sasha: [color=CHARTREUSE]Sasha's eyes shine with tears and hope as your hands work the knots.[/color] I knew you'd come. I never doubted you. #id:s9e_013
 		leave sweet_potato_sasha
 		leave player_character
 
@@ -102,7 +102,7 @@ if {stay_or_go} == "go":
 	[background arg="res://assets/narrative/russet_standoff.png" fade="1.0"]
 	audio "res://assets/audio/stings/decision_weight.mp3" [volume="-5.0" bus="SFX"]
 	join resistance_leader [z_index="1"]
-	resistance_leader: [color=STEEL_BLUE]The leader forces Russet to his knees at gunpoint.[/color] Tie him up. Make sure he watches what comes next. #id:14d
+	resistance_leader: [color=STEEL_BLUE]The leader forces Russet to his knees at gunpoint.[/color] Tie him up. Make sure he watches what comes next. #id:s9e_014
 	leave resistance_leader
 
 	[background arg="res://assets/narrative/plant_revelation.png" fade="2.0"]
@@ -115,10 +115,10 @@ if {stay_or_go} == "go":
 	audio music "res://assets/music/narrative/sasha_theme_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 	join sweet_potato_sasha [z_index="1"]
 	if {sasha_rescue_reaction} == "relieved":
-		sweet_potato_sasha: [color=CHARTREUSE]Sasha takes your hand, intertwining her fingers with yours.[/color] You came back for me. Whatever happens next... we face it together. #id:14e
+		sweet_potato_sasha: [color=CHARTREUSE]Sasha takes your hand, intertwining her fingers with yours.[/color] You came back for me. Whatever happens next... we face it together. #id:s9e_015
 	elif {sasha_rescue_reaction} == "angry":
-		sweet_potato_sasha: [color=STEEL_BLUE]Sasha watches you carefully, seeing the fury still burning in your eyes.[/color] Channel that fire. We'll need it for what comes next. #id:14f
+		sweet_potato_sasha: [color=STEEL_BLUE]Sasha watches you carefully, seeing the fury still burning in your eyes.[/color] Channel that fire. We'll need it for what comes next. #id:s9e_016
 	else:
-		sweet_potato_sasha: [color=STEEL_BLUE]Sasha places a gentle hand on your shoulder.[/color] The guilt isn't yours to carry. You're here now. That's what matters. #id:150
+		sweet_potato_sasha: [color=STEEL_BLUE]Sasha places a gentle hand on your shoulder.[/color] The guilt isn't yours to carry. You're here now. That's what matters. #id:s9e_017
 	sweet_potato_sasha: [color=CHARTREUSE]We did it. The truth is out there now.[/color] We have a future to build! #id:13f
 	leave sweet_potato_sasha

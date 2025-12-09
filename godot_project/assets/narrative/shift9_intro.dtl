@@ -4,80 +4,80 @@ audio music "res://assets/music/narrative/horror_downward_main.mp3" [fade="2.0" 
 [background arg="res://assets/narrative/occupation_checkpoint.png" fade="0.0"]
 audio "res://assets/audio/atmosphere/war_zone_distant.mp3" [volume="-5.0" bus="Ambient"]
 join narrator [z_index="1"]
-narrator: The border resembles a [pulse freq=3][color=CRIMSON]war zone[/color][/pulse]. Barricades, armored vehicles, and elite guards stand ready. Today is when the resistance planned to strike. #id:140
+narrator: The border resembles a [pulse freq=3][color=CRIMSON]war zone[/color][/pulse]. Barricades, armored vehicles, and elite guards stand ready. Today is when the resistance planned to strike. #id:s9i_001
 leave narrator
 
 [background arg="res://assets/narrative/extreme_emergency.png" fade="0.3"]
 audio "res://assets/audio/atmosphere/broadcast_static.mp3" [volume="-5.0" bus="SFX"]
 audio "res://assets/audio/ui_drama/radio_click_on.mp3" [volume="-5.0" bus="SFX"]
 join announcer [z_index="1"]
-announcer: [wave amp=25 freq=3][color=YELLOW]EMERGENCY BROADCAST[/color][/wave]\: All of Spud is under [color=RED]martial law[/color]. "The Resistance" has launched attacks against government facilities. #id:141
-announcer: Anyone aiding these [color=CRIMSON]extremists[/color] faces [color=DARK_VIOLET]immediate processing[/color]. The Ministry confirms\: [color=DARK_VIOLET]Root Reserve[/color] remains safe for all [color=DARK_ORANGE]loyal potatoes[/color]. #id:142
+announcer: [wave amp=25 freq=3][color=YELLOW]EMERGENCY BROADCAST[/color][/wave]\: All of Spud is under [color=RED]martial law[/color]. "The Resistance" has launched attacks against government facilities. #id:s9i_002
+announcer: Anyone aiding these [color=CRIMSON]extremists[/color] faces [color=DARK_VIOLET]immediate processing[/color]. The Ministry confirms\: [color=DARK_VIOLET]Root Reserve[/color] remains safe for all [color=DARK_ORANGE]loyal potatoes[/color]. #id:s9i_003
 leave announcer
 
 [background arg="res://assets/narrative/supervisor_presenting.png" fade="1.5"]
 join security_chief [z_index="1"]
-security_chief: [color=YELLOW]Rioting has broken out[/color] in multiple sectors. Resistance cells have attacked three [color=DARK_VIOLET]Root Reserve[/color] facilities. #id:143
-security_chief: Their goal\: access the central database with all production records. Any sign of disloyalty means processing. #id:144
+security_chief: [color=YELLOW]Rioting has broken out[/color] in multiple sectors. Resistance cells have attacked three [color=DARK_VIOLET]Root Reserve[/color] facilities. #id:s9i_004
+security_chief: Their goal\: access the central database with all production records. Any sign of disloyalty means processing. #id:s9i_005
 leave security_chief
 
 [background arg="res://assets/narrative/sasha_capture.png" fade="1.5"]
 audio music "res://assets/music/ambient_vol3_defeat_main.mp3" [fade="1.0" volume="-5.0" bus="Music"]
 audio "res://assets/audio/stings/threat_reveal.mp3" [volume="-5.0" bus="SFX"]
 join supervisor_russet [z_index="1"]
-supervisor_russet: We've captured several resistance operatives, including Officer Sasha. #id:145
+supervisor_russet: We've captured several resistance operatives, including Officer Sasha. #id:s9i_006
 join sweet_potato_sasha [z_index="1"]
-sweet_potato_sasha: The [tornado radius=3 freq=2][color=CRIMSON]real traitors[/color][/tornado] are those who [color=DARK_VIOLET]feed our people to each other[/color]. You can't stop the truth! #id:146
-sweet_potato_sasha: She's dragged away, still shouting\: [color=CHARTREUSE]The people will know what's in their food![/color] #id:147
+sweet_potato_sasha: The [tornado radius=3 freq=2][color=CRIMSON]real traitors[/color][/tornado] are those who [color=DARK_VIOLET]feed our people to each other[/color]. You can't stop the truth! #id:s9i_007
+sweet_potato_sasha: She's dragged away, still shouting\: [color=CHARTREUSE]The people will know what's in their food![/color] #id:s9i_008
 audio "res://assets/audio/ui_drama/metal_cell_door.mp3" [volume="-5.0" bus="SFX"]
 leave sweet_potato_sasha
 
 join supervisor_russet [z_index="1"]
-supervisor_russet: The [color=CRIMSON]traitor[/color] will be [pulse freq=3][color=DARK_VIOLET]processed immediately[/color][/pulse]. A special batch of [color=DARK_VIOLET]Root Reserve[/color], made from the terrorists themselves. #id:148
+supervisor_russet: The [color=CRIMSON]traitor[/color] will be [pulse freq=3][color=DARK_VIOLET]processed immediately[/color][/pulse]. A special batch of [color=DARK_VIOLET]Root Reserve[/color], made from the terrorists themselves. #id:s9i_009
 leave supervisor_russet
 
 [background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 join security_officer [z_index="1"]
-security_officer: All border crossings are [color=RED]suspended[/color] except for essential personnel with [color=GOLD]Level Alpha clearance[/color]. #id:149
-security_officer: This scanner [color=YELLOW]cannot be fooled[/color]. Sound the alarm immediately for anyone without proper clearance. #id:14a
+security_officer: All border crossings are [color=RED]suspended[/color] except for essential personnel with [color=GOLD]Level Alpha clearance[/color]. #id:s9i_010
+security_officer: This scanner [color=YELLOW]cannot be fooled[/color]. Sound the alarm immediately for anyone without proper clearance. #id:s9i_011
 leave security_officer
 
 [background arg="res://assets/narrative/maximum_security.png" fade="2.0"]
 audio music "res://assets/music/ambient_vol3_spirits_intensity_2.mp3" [fade="1.5" volume="-5.0" bus="Music"]
 join resistance_member_1 [z_index="1"]
-resistance_member_1: A potato in official uniform approaches with seemingly perfect Alpha credentials. #id:14b
+resistance_member_1: A potato in official uniform approaches with seemingly perfect Alpha credentials. #id:s9i_012
 audio "res://assets/audio/stings/heartbeat_tension.mp3" [volume="-5.0" bus="SFX"]
-resistance_member_1: A tiny blue card falls from the folder. "[wave amp=15 freq=3][color=CHARTREUSE]The roots grow deep.[/color][/wave]", they mutter as they pick up the card. #id:14c
+resistance_member_1: A tiny blue card falls from the folder. "[wave amp=15 freq=3][color=CHARTREUSE]The roots grow deep.[/color][/wave]", they mutter as they pick up the card. #id:s9i_013
 
 set {critical_choice} = "none"
-- "Process them through, ignoring the scanner alerts" (Help the resistance) #id:14d
+- "Process them through, ignoring the scanner alerts" (Help the resistance) #id:s9i_014
 	set {critical_choice} = "help"
-- "Sound the alarm immediately" (Betray the resistance) #id:14e
+- "Sound the alarm immediately" (Betray the resistance) #id:s9i_015
 	set {critical_choice} = "betray"
 
 if {critical_choice} == "help":
 	join resistance_member_1 [z_index="1"]
-	resistance_member_1: Relief shows in their eyes. "[color=CHARTREUSE]For Sasha. For Spud.[/color]" They disappear toward the central database. #id:14f
+	resistance_member_1: Relief shows in their eyes. "[color=CHARTREUSE]For Sasha. For Spud.[/color]" They disappear toward the central database. #id:s9i_016
 	leave resistance_member_1
 else:
 	join resistance_member_1 [z_index="1"]
-	resistance_member_1: Horror dawns on their face. "[color=CRIMSON]You traitor! We trusted you![/color]" They're quickly surrounded by guards. #id:150
-	supervisor_russet: "Excellent work. Your loyalty will be rewarded." #id:151
+	resistance_member_1: Horror dawns on their face. "[color=CRIMSON]You traitor! We trusted you![/color]" They're quickly surrounded by guards. #id:s9i_017
+	supervisor_russet: "Excellent work. Your loyalty will be rewarded." #id:s9i_018
 	leave resistance_member_1
 
 [background arg="res://assets/narrative/night_attack.png" fade="2.0"]
 audio music "res://assets/music/narrative/metal_violence_main.mp3" [fade="0.5" volume="-3.0" bus="Music"]
 join narrator [z_index="1"]
-narrator: Suddenly, the facility [color=YELLOW]shakes with explosions[/color]. The resistance attack has begun, regardless of your choice. #id:152
+narrator: Suddenly, the facility [color=YELLOW]shakes with explosions[/color]. The resistance attack has begun, regardless of your choice. #id:s9i_019
 audio "res://assets/audio/stings/alarm_distant.mp3" [volume="-5.0" bus="SFX"]
 leave narrator
 
 [background arg="res://assets/narrative/night_gameplay.png" fade="2.0"]
 join player_character [z_index="1"]
-player_character: Do I stay at my post and hope this blows over, or [color=CHARTREUSE]take a stand[/color] and risk everything to expose the truth? #id:153
-- "I can't abandon my duty. I'll stay quiet and hope for the best." #id:154
+player_character: Do I stay at my post and hope this blows over, or [color=CHARTREUSE]take a stand[/color] and risk everything to expose the truth? #id:s9i_020
+- "I can't abandon my duty. I'll stay quiet and hope for the best." #id:s9i_021
 	set {stay_or_go} = "stay"
-- "I've been complicit for too long. It's time to fight for what's right." #id:155
+- "I've been complicit for too long. It's time to fight for what's right." #id:s9i_022
 	set {stay_or_go} = "go"
 leave player_character
 
@@ -85,6 +85,6 @@ leave player_character
 if {stay_or_go} == "go":
 	[background arg="res://assets/narrative/night_attack.png" fade="0.5"]
 	join narrator [z_index="1"]
-	narrator: [pulse freq=3][color=YELLOW]Move quickly![/color][/pulse] Security is scrambling - this is your only chance to escape! #id:156
+	narrator: [pulse freq=3][color=YELLOW]Move quickly![/color][/pulse] Security is scrambling - this is your only chance to escape! #id:s9i_023
 	leave narrator
 	[signal arg="qte_escape"]
