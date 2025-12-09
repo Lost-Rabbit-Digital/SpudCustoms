@@ -28,8 +28,8 @@ leave security_chief
 [background arg="res://assets/narrative/security_lockdown.png" fade="2.0"]
 audio music "res://assets/music/ambient_sadness_main.mp3" [fade="1.5" volume="-5.0" bus="Music"]
 join murphy [z_index="1"]
-murphy: Have you seen Sasha? She didn't report for roll call. Last night, [color=CRIMSON]security forces entered her quarters[/color]. #id:11f
-murphy: They're saying she was part of the [pulse freq=2][color=CHARTREUSE]resistance[/color][/pulse]. #id:120
+murphy: Have you seen Sasha? She didn't report for roll call. [color=YELLOW]I heard Russet put her name on the suspect list.[/color] #id:11f
+murphy: They're saying she's connected to the [pulse freq=2][color=CHARTREUSE]resistance[/color][/pulse]. Security might [color=CRIMSON]move on her tonight[/color]. #id:120
 
 set {sasha_response} = "none"
 - "We shouldn't be talking about this. It's dangerous." #id:121
@@ -78,5 +78,5 @@ leave security_officer
 
 [background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
 join player_character [z_index="1"]
-player_character: Sasha has been taken. The resistance plan is [color=CRIMSON]compromised[/color]. With security on high alert, their chances seem hopeless. #id:130
+player_character: Sasha is in danger. If security moves tonight, [color=CRIMSON]everything could fall apart[/color]. I need to stay alert. #id:130
 leave player_character

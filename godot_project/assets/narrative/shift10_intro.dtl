@@ -21,24 +21,37 @@ if {stay_or_go} == "stay":
 	set {fellow_officer_response_2} = "none"
 	- "Be careful. Even talking like that is dangerous now." (Cautious) #id:40
 		set {fellow_officer_response_2} = "cautious"
-	- "I've had the same thoughts. This doesn't feel right." (Sympathetic) #id:41
+	- "I've had the same thoughts. This doesn't feel right." (Doubt) #id:41
 		set {fellow_officer_response_2} = "sympathetic"
+	- "The resistance got what they deserved. I'm glad they're gone." (Loyalist) #id:41_loyalist
+		set {fellow_officer_response_2} = "loyalist"
+		set {loyalist_path} = "yes"
 	if {fellow_officer_response_2} == "cautious":
 		join npc_1 [z_index="1"]
 		npc_1: Not everyone believes the official story anymore. Keep your eyes open during the Prime Minister's visit. #id:42
-		leave 
+		leave npc_1
+	elif {fellow_officer_response_2} == "loyalist":
+		join npc_1 [z_index="1"]
+		npc_1: [color=STEEL_BLUE]The officer's expression shutters.[/color] Right. Of course. Glory to Spud. #id:42_loyalist
+		npc_1: They back away, eyes wary. [color=YELLOW]You've made another potential informant nervous.[/color] #id:42_loyalist2
+		leave npc_1
 	else:
 		join npc_1 [z_index="1"]
 		npc_1: There's a new resistance forming. Quieter, more careful. If you want to know more... watch for the yellow spud emblem. #id:43
-		leave 
-		[background arg="res://assets/narrative/official_arrival.png" fade="0.0"]
-		join announcer  [z_index="1"]
-		announcer: ATTENTION\: Prime Minister Idaho's motorcade has arrived. All officers to assigned stations. Inspection protocols in effect. #id:44
-		leave announcer
-		[background arg="res://assets/narrative/official_arrival.png" fade="2.0"]
-		join player_character [z_index="1"]
-		player_character: Your medal feels heavy - a reward for loyalty, or a mark of shame? Soon you'll face the architect of Root Reserve. #id:45
-		leave player_character
+		leave npc_1
+	[background arg="res://assets/narrative/official_arrival.png" fade="0.0"]
+	join announcer  [z_index="1"]
+	announcer: ATTENTION\: Prime Minister Idaho's motorcade has arrived. All officers to assigned stations. Inspection protocols in effect. #id:44
+	leave announcer
+	[background arg="res://assets/narrative/official_arrival.png" fade="2.0"]
+	join player_character [z_index="1"]
+	if {loyalist_path} == "yes":
+		player_character: The medal gleams on my chest. [color=DARK_ORANGE]Assistant Regional Director.[/color] Not bad for a sprout who started stamping passports. #id:45_loyalist1
+		player_character: Russet is getting old. Prime Minister Idaho values [color=CHARTREUSE]proven loyalty[/color]. With the right moves, I could have his job within the year. #id:45_loyalist2
+		player_character: [color=STEEL_BLUE]The cost?[/color] Just some sentimentality I couldn't afford anyway. #id:45_loyalist3
+	else:
+		player_character: My medal feels heavy - a reward for loyalty, or a mark of shame? Soon I'll face the architect of Root Reserve. #id:45
+	leave player_character
 
 if {stay_or_go} == "go":
 	audio music "res://assets/music/narrative/electronic_cyberattack_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]

@@ -10,7 +10,7 @@ narrator: The Spud border is in [pulse freq=3][color=CRIMSON]chaos[/color][/puls
 join player_character [z_index="1"]
 [background arg="res://assets/narrative/extreme_emergency.png" fade="1.2"]
 audio "res://assets/audio/gunfire/Heavy Pistol B.wav" [volume="-18.0" bus="SFX"]
-player_character: You slip through with Sasha. [wave amp=20 freq=3][color=CHARTREUSE]We have to keep pushing![/color][/wave] The people know the truth now. #id:12
+player_character: I slip through with Sasha. [wave amp=20 freq=3][color=CHARTREUSE]We have to keep pushing![/color][/wave] The people know the truth now. #id:12
 
 [background arg="res://assets/narrative/resistance_base.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
@@ -24,6 +24,7 @@ set {resistance_trust} = "none"
 	set {resistance_trust} = "diplomatic"
 - "I've already sacrificed everything. I won't back down now." #id:16
 	set {resistance_trust} = "committed"
+	set {pro_sasha_choice} = {pro_sasha_choice} + 1
 
 if {resistance_trust} == "diplomatic":
 	resistance_member_2: Pretty words. But we've heard those before. #id:17
@@ -62,7 +63,7 @@ if {qte_rescue_result} == "fail":
 	[background arg="res://assets/narrative/rescue_fail.png" fade="0.5"]
 	audio "res://assets/audio/stings/failure_sting.mp3" [volume="-5.0" bus="SFX"]
 	join player_character [z_index="1"]
-	player_character: You stumble, losing precious seconds. The path ahead is blocked by guards! #id:1a_rescue_fail1
+	player_character: I stumble, losing precious seconds. The path ahead is blocked by guards! #id:1a_rescue_fail1
 	leave player_character
 
 	if {viktor_allied} == "yes":
@@ -147,7 +148,7 @@ The screen suddenly goes black. #id:1f
 leave prime_minister_idaho
 
 join player_character [z_index="1"]
-player_character: You turn to the others with resolve. "We need to reach Idaho's bunker. Now!" #id:20
+player_character: I turn to the others with resolve. "We need to reach Idaho's bunker. Now!" #id:20
 audio music "res://assets/music/narrative/electronic_cyberattack_main.mp3" [fade="1.0" volume="-5.0" bus="Music"]
 leave player_character
 
@@ -291,10 +292,16 @@ leave narrator
 join player_character [z_index="1"]
 [background arg="res://assets/narrative/credits.png" fade="2.0"]
 join sweet_potato_sasha [z_index="1"]
-if {sasha_rescue_reaction} == "relieved":
+# Romantic ending requires consistent support for Sasha (3+ pro-Sasha choices throughout the game)
+if {sasha_rescue_reaction} == "relieved" and {pro_sasha_choice} >= 3:
 	sweet_potato_sasha: [color=CHARTREUSE]Sasha moves closer, her hand finding yours as you watch the new dawn together.[/color] We built this. You and me. #id:fc_002
 	sweet_potato_sasha: As long as we stay true to our roots, to the ideals that brought us here... [color=CHARTREUSE]we'll find a way.[/color] Together. #id:fc_003
-	player_character: [color=CHARTREUSE]You squeeze her hand, feeling the warmth of a future finally worth fighting for.[/color] Together. #id:fc_004
+	player_character: [color=CHARTREUSE]I squeeze her hand, feeling the warmth of a future finally worth fighting for.[/color] Together. #id:fc_004
+elif {sasha_rescue_reaction} == "relieved":
+	# Player said "relieved" but didn't earn the romantic ending through consistent support
+	sweet_potato_sasha: [color=STEEL_BLUE]Sasha gives you a grateful nod.[/color] We made it. Against all odds. #id:fc_002b
+	sweet_potato_sasha: As long as we stay true to our roots, to the ideals that brought us here... [color=CHARTREUSE]we'll find a way.[/color] #id:fc_003b
+	player_character: [color=STEEL_BLUE]There's warmth in her eyes, but also distance. Some bridges take longer to build.[/color] #id:fc_004b
 elif {sasha_rescue_reaction} == "angry":
 	sweet_potato_sasha: [color=STEEL_BLUE]Sasha stands beside you, a respectful distance between you.[/color] Your fire lit the spark that burned down their empire. #id:fc_005
 	sweet_potato_sasha: As long as we stay true to our roots, to the ideals that brought us here... [color=CHARTREUSE]we'll find a way.[/color] #id:fc_006

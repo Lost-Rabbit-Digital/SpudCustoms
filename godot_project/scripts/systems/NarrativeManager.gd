@@ -341,21 +341,22 @@ func _on_dialogic_signal(argument):
 		get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
 
 	# QTE trigger signals from narrative timelines
+	# Each QTE can now optionally display a narrative image alongside the prompts
 	if argument == "qte_infiltration":
-		_launch_qte("Infiltrate the facility!", 5, 2.0)
+		_launch_qte("Infiltrate the facility!", 5, 2.0, "res://assets/narrative/night_gameplay.png")
 	elif argument == "qte_escape":
-		_launch_qte("Escape the guards!", 6, 1.8)
+		_launch_qte("Escape the guards!", 6, 1.8, "res://assets/narrative/escape_route.png")
 	elif argument == "qte_confrontation":
-		_launch_qte("Stand your ground!", 4, 2.5)
+		_launch_qte("Stand your ground!", 4, 2.5, "res://assets/narrative/idaho_confrontation.png")
 	# New QTEs for enhanced narrative
 	elif argument == "qte_scanner_fake":
-		_launch_qte("Fake the malfunction!", 4, 2.2)
+		_launch_qte("Fake the malfunction!", 4, 2.2, "res://assets/narrative/checkpoint_booth.png")
 	elif argument == "qte_surveillance":
-		_launch_qte("Stay hidden! Follow the trucks!", 5, 2.0)
+		_launch_qte("Stay hidden! Follow the trucks!", 5, 2.0, "res://assets/narrative/night_gameplay.png")
 	elif argument == "qte_rescue":
-		_launch_qte("Race to save Sasha!", 5, 1.8)
+		_launch_qte("Race to save Sasha!", 5, 1.8, "res://assets/narrative/sasha_rescue.png")
 	elif argument == "qte_suppression":
-		_launch_qte("Suppress the attack!", 4, 2.5)
+		_launch_qte("Suppress the attack!", 4, 2.5, "res://assets/narrative/border_chaos.png")
 
 	# Route to loyalist ending signal
 	if argument == "route_to_loyalist_ending":
@@ -388,15 +389,26 @@ func _on_dialogic_signal(argument):
 			EventBus.achievement_unlocked.emit(ACHIEVEMENTS.DOWN_WITH_THE_TATRIARCHY)
 
 
-func _launch_qte(context: String, prompt_count: int, time_per_prompt: float) -> void:
-	"""Launch a QTE minigame during narrative sequences."""
+func _launch_qte(context: String, prompt_count: int, time_per_prompt: float, image_path: String = "") -> void:
+	"""Launch a QTE minigame during narrative sequences.
+
+	Args:
+		context: The narrative prompt text shown during the QTE
+		prompt_count: Number of key prompts to show
+		time_per_prompt: Seconds allowed per prompt
+		image_path: Optional path to a narrative image to display alongside the QTE
+	"""
 	if EventBus:
-		EventBus.minigame_launch_requested.emit("quick_time_event", {
+		var config: Dictionary = {
 			"narrative_context": context,
 			"prompt_count": prompt_count,
 			"time_per_prompt": time_per_prompt,
 			"force_launch": true  # Allow QTE even if not normally unlocked
-		})
+		}
+		# Add image path if provided
+		if image_path != "":
+			config["image_path"] = image_path
+		EventBus.minigame_launch_requested.emit("quick_time_event", config)
 
 
 func start_final_confrontation():

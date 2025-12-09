@@ -98,11 +98,12 @@ audio music "res://assets/music/narrative/electronic_reborn_main.mp3" [fade="2.0
 join sweet_potato_sasha [z_index="1"]
 sweet_potato_sasha: It's working. The manifests have caused an uproar, but [color=DARK_ORANGE]Russet suspects us[/color]. #id:c8
 sweet_potato_sasha: Watch for allies from our organization during today's shift. [color=CHARTREUSE]You'll recognize them[/color]. #id:c9
-sweet_potato_sasha: If you can get them through safely, use the [color=CHARTREUSE]special mark we discussed[/color]. #id:ca
+sweet_potato_sasha: If you can get them through safely, [color=CHARTREUSE]you'll know what to do[/color]. #id:ca
 
 set {sasha_plan_response} = "none"
 - "It's worth the risk. I'm in." #id:cb
 	set {sasha_plan_response} = "committed"
+	set {pro_sasha_choice} = {pro_sasha_choice} + 1
 - "This is getting too dangerous. Maybe we should lay low." #id:cc
 	set {sasha_plan_response} = "nervous"
 

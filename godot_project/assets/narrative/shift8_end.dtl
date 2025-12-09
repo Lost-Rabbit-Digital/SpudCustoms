@@ -15,7 +15,7 @@ leave narrator
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="1.5"]
 audio "res://assets/audio/footsteps/Concrete Walk 1_2.wav" [volume="-8.0" bus="SFX"]
 join player_character [z_index="1"]
-player_character: You're heading to your quarters when you hear it - [color=YELLOW]shouting from the officers' wing[/color]. #id:266
+player_character: I'm heading to my quarters when I hear it - [color=YELLOW]shouting from the officers' wing[/color]. #id:266
 leave player_character
 
 # The raid begins
@@ -76,7 +76,7 @@ audio music "res://assets/music/ambient_vol3_sad_decisions_main.mp3" [fade="1.0"
 audio "res://assets/audio/stings/decision_weight.mp3" [volume="-5.0" bus="SFX"]
 
 join player_character [z_index="1"]
-player_character: Your heart pounds. Every instinct screams to do something. But guards are everywhere. #id:277
+player_character: My heart pounds. Every instinct screams to do something. But guards are everywhere. #id:277
 
 set {sasha_arrest_reaction} = "none"
 - "Step forward and demand they release her" (Reckless) #id:278
@@ -85,12 +85,13 @@ set {sasha_arrest_reaction} = "none"
 	set {sasha_arrest_reaction} = "hide"
 - "Catch Sasha's eye and nod - a promise" (Resolve) #id:27a
 	set {sasha_arrest_reaction} = "promise"
+	set {pro_sasha_choice} = {pro_sasha_choice} + 1
 
 if {sasha_arrest_reaction} == "intervene":
 	[background arg="res://assets/narrative/player_confronts_guards.png" fade="0.3"]
 	audio "res://assets/audio/footsteps/Concrete Walk 1_3.wav" [volume="-5.0" bus="SFX"]
 	join player_character [z_index="1"]
-	player_character: You push through the crowd. "[color=CHARTREUSE]Wait! She hasn't done anything wrong![/color]" #id:27b
+	player_character: I push through the crowd. "[color=CHARTREUSE]Wait! She hasn't done anything wrong![/color]" #id:27b
 	join security_chief [z_index="1"]
 	audio "res://assets/audio/stings/threat_reveal.mp3" [volume="-5.0" bus="SFX"]
 	security_chief: Yukon's head snaps toward you. "[color=RED]Seize that one too![/color] Clearly an accomplice!" #id:27c
@@ -113,13 +114,13 @@ if {sasha_arrest_reaction} == "intervene":
 
 elif {sasha_arrest_reaction} == "hide":
 	join player_character [z_index="1"]
-	player_character: You shrink back into the shadows, hating yourself with every fiber. [color=STEEL_BLUE]Coward.[/color] #id:280
+	player_character: I shrink back into the shadows, hating myself with every fiber. [color=STEEL_BLUE]Coward.[/color] #id:280
 	player_character: But alive. And free. For now. #id:281
 	leave player_character
 
 else:
 	join player_character [z_index="1"]
-	player_character: You catch Sasha's eye. A slow, deliberate nod. [color=CHARTREUSE]I'm coming for you.[/color] #id:282
+	player_character: I catch Sasha's eye. A slow, deliberate nod. [color=CHARTREUSE]I'm coming for you.[/color] #id:282
 	join sweet_potato_sasha [z_index="1"]
 	sweet_potato_sasha: She sees. The tiniest smile. Then she's dragged around the corner, gone. #id:283
 	leave sweet_potato_sasha
@@ -174,10 +175,10 @@ audio music "res://assets/music/ambient_vol3_defeat_main.mp3" [fade="2.0" volume
 
 if {player_captured} != "yes":
 	join player_character [z_index="1"]
-	player_character: You lie awake, staring at the ceiling. Sasha's face. Her defiance. Her fear. #id:291
+	player_character: I lie awake, staring at the ceiling. Sasha's face. Her defiance. Her fear. #id:291
 
 	if {family_response} == "help":
-		player_character: You pull out the photo of the missing wife. Another face you couldn't save. #id:292
+		player_character: I pull out the photo of the missing wife. Another face I couldn't save. #id:292
 		player_character: [color=CHARTREUSE]Not this time.[/color] #id:293
 
 	player_character: By tomorrow, everything changes. One way or another. #id:294
@@ -186,8 +187,8 @@ if {player_captured} != "yes":
 else:
 	[background arg="res://assets/narrative/interrogation.png" fade="2.0"]
 	join player_character [z_index="1"]
-	player_character: The cell is cold. Through the walls, you can hear Sasha somewhere, being "questioned." #id:296
-	player_character: Tomorrow, they said. You'll both be [color=DARK_VIOLET]processed[/color] together. #id:297
-	player_character: Unless the resistance comes. Unless someone saves you both. #id:298
-	player_character: [color=STEEL_BLUE]The longest night of your life stretches ahead.[/color] #id:299
+	player_character: The cell is cold. Through the walls, I can hear Sasha somewhere, being "questioned." #id:296
+	player_character: Tomorrow, they said. We'll both be [color=DARK_VIOLET]processed[/color] together. #id:297
+	player_character: Unless the resistance comes. Unless someone saves us both. #id:298
+	player_character: [color=STEEL_BLUE]The longest night of my life stretches ahead.[/color] #id:299
 	leave player_character

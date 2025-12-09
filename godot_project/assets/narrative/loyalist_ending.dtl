@@ -23,8 +23,8 @@ supervisor_russet: The resistance is trying to breach the east gate! [color=CRIM
 leave supervisor_russet
 
 join player_character [z_index="1"]
-player_character: You grip your weapon. These could be people you know. People you've helped. #id:299_suppress5
-player_character: But survival has a price. [color=DARK_ORANGE]You've made your choice.[/color] #id:299_suppress6
+player_character: I grip my weapon. These could be people I know. People I've helped. #id:299_suppress5
+player_character: But survival has a price. [color=DARK_ORANGE]I've made my choice.[/color] #id:299_suppress6
 leave player_character
 
 # Suppression QTE - player actively fights resistance
@@ -122,7 +122,7 @@ leave supervisor_russet
 
 audio "res://assets/audio/stings/dread_chord.mp3" [volume="-5.0" bus="SFX"]
 join player_character [z_index="1"]
-player_character: Your stomach lurches. The food on the plate. [color=CRIMSON]Sasha.[/color] Murphy's cousin. The wife from the photo. #id:313
+player_character: My stomach lurches. The food on the plate. [color=CRIMSON]Sasha.[/color] Murphy's cousin. The wife from the photo. #id:313
 player_character: [tornado radius=3 freq=2][color=CRIMSON]All of them.[/color][/tornado] #id:314
 
 set {eat_final} = "none"
@@ -133,12 +133,12 @@ set {eat_final} = "none"
 
 if {eat_final} == "eat":
 	join player_character [z_index="1"]
-	player_character: You raise the fork to your lips. Close your eyes. [color=STEEL_BLUE]Chew. Swallow. Don't think.[/color] #id:317
+	player_character: I raise the fork to my lips. Close my eyes. [color=STEEL_BLUE]Chew. Swallow. Don't think.[/color] #id:317
 	player_character: Russet nods approvingly. "Good. [color=DARK_ORANGE]You'll go far.[/color]" #id:318
 	leave player_character
 else:
 	join player_character [z_index="1"]
-	player_character: You push the plate away. "I'm not feeling well. The excitement of the day..." #id:319
+	player_character: I push the plate away. "I'm not feeling well. The excitement of the day..." #id:319
 	join supervisor_russet [z_index="1"]
 	supervisor_russet: Russet's eyes narrow briefly, then soften. Of course. Such a [color=YELLOW]sensitive constitution[/color]. #id:31a
 	supervisor_russet: Rest up. Tomorrow, we have [color=CRIMSON]more processing[/color] to oversee. #id:31b
@@ -149,18 +149,18 @@ else:
 [background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
 audio music "res://assets/music/ambient_vol3_defeat_main.mp3" [fade="2.0" volume="-3.0" bus="Music"]
 join player_character [z_index="1"]
-player_character: You return to your quarters. The medal weighs heavy on your chest. #id:31c
+player_character: I return to my quarters. The medal weighs heavy on my chest. #id:31c
 
 if {family_response} == "help":
 	audio "res://assets/audio/paper/paper picked up 2.wav" [volume="-8.0" bus="SFX"]
-	player_character: You pull out the photo of the missing wife. Her wife is probably in the same batch as her now. #id:31d
-	player_character: You promised to find her. [color=STEEL_BLUE]You found her.[/color] Just not the way either of you hoped. #id:31e
+	player_character: I pull out the photo of the missing wife. Her wife is probably in the same batch as her now. #id:31d
+	player_character: I promised to find her. [color=STEEL_BLUE]I found her.[/color] Just not the way either of us hoped. #id:31e
 
 if {murphy_alliance} == "ally":
-	player_character: Murphy. Your friend. The one who trusted you. He was in the resistance. #id:31f
+	player_character: Murphy. My friend. The one who trusted me. He was in the resistance. #id:31f
 	player_character: [color=CRIMSON]Was.[/color] #id:320
 
-player_character: You stare at your reflection in the window. The medal gleams. [color=DARK_ORANGE]Golden Tuber[/color]. Hero of Spud. #id:321
+player_character: I stare at my reflection in the window. The medal gleams. [color=DARK_ORANGE]Golden Tuber[/color]. Hero of Spud. #id:321
 player_character: [color=STEEL_BLUE]Monster in potato skin.[/color] #id:322
 leave player_character
 
@@ -186,8 +186,8 @@ leave narrator
 
 [background arg="res://assets/narrative/loyalist_office.png" fade="2.0"]
 join player_character [z_index="1"]
-player_character: Your office is comfortable. Your rations are generous. Your family is protected. #id:328
-player_character: You have everything you were promised. #id:329
+player_character: My office is comfortable. My rations are generous. My family is protected. #id:328
+player_character: I have everything I was promised. #id:329
 audio "res://assets/audio/stings/suspicion_sting.mp3" [volume="-8.0" bus="SFX"]
 player_character: Everything except [color=STEEL_BLUE]sleep[/color]. Except [color=STEEL_BLUE]peace[/color]. Except the ability to look in a mirror. #id:32a
 leave player_character
@@ -212,15 +212,15 @@ set {final_loyalist_choice} = "none"
 if {final_loyalist_choice} == "report":
 	[background arg="res://assets/narrative/loyalist_end_dark.png" fade="2.0"]
 	join player_character [z_index="1"]
-	player_character: You file the report. Another batch of suspects rounded up. Another promotion. #id:330
-	player_character: The cycle continues. [color=CRIMSON]You've become the machine.[/color] #id:331
+	player_character: I file the report. Another batch of suspects rounded up. Another promotion. #id:330
+	player_character: The cycle continues. [color=CRIMSON]I've become the machine.[/color] #id:331
 	leave player_character
 	[signal arg="achievement_complicit"]
 elif {final_loyalist_choice} == "ignore":
 	[background arg="res://assets/narrative/loyalist_end_neutral.png" fade="2.0"]
 	join player_character [z_index="1"]
-	player_character: You walk past. Say nothing. It's not much. [color=STEEL_BLUE]It's almost nothing.[/color] #id:332
-	player_character: But it's the first time you've chosen not to act against them. #id:333
+	player_character: I walk past. Say nothing. It's not much. [color=STEEL_BLUE]It's almost nothing.[/color] #id:332
+	player_character: But it's the first time I've chosen not to act against them. #id:333
 	player_character: Maybe that's something. Maybe it's [color=YELLOW]too little, too late[/color]. #id:334
 	leave player_character
 else:

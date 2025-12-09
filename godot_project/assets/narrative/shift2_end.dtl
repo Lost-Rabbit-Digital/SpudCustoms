@@ -12,9 +12,9 @@ murphy: Hey, new spud! Tough shift, huh? Name's Murphy. Been here three seasons 
 murphy: I saw you talking to Sasha earlier. She's... [color=STEEL_BLUE]different[/color]. Good different, I think. #id:201
 
 set {murphy_trust} = "none"
-- "She seems nice. Gave me some advice about staying alert." #id:202
+- "She seems nice. Gave me some advice about staying alert." (Open) #id:202
 	set {murphy_trust} = "open"
-- "Just introductions. Nothing special." #id:203
+- "Just introductions. Nothing special." (Guarded) #id:203
 	set {murphy_trust} = "guarded"
 
 if {murphy_trust} == "open":
@@ -36,33 +36,33 @@ leave narrator
 
 audio "res://assets/audio/mechanical/liquid sloshing inside canister 1.wav" [volume="-8.0" bus="SFX"]
 join player_character [z_index="1"]
-player_character: You stare at the thick, purple-brown paste. Everyone eats it without question. It's supposed to be nutritious. #id:209
+player_character: I stare at the thick, purple-brown paste. Everyone eats it without question. It's supposed to be nutritious. #id:209
 
 set {eat_reserve} = "none"
-- "Eat the Root Reserve like everyone else" #id:20a
+- "Eat the Root Reserve like everyone else" (Conform) #id:20a
 	set {eat_reserve} = "ate"
-- "Push it aside - you're not hungry" #id:20b
+- "Push it aside - you're not hungry" (Refuse) #id:20b
 	set {eat_reserve} = "refused"
 
 if {eat_reserve} == "ate":
-	player_character: The taste is... earthy. Rich. Something about it feels [color=STEEL_BLUE]uncomfortably familiar[/color], but you can't place why. #id:20c
+	player_character: The taste is... earthy. Rich. Something about it feels [color=STEEL_BLUE]uncomfortably familiar[/color], but I can't place why. #id:20c
 else:
 	player_character: A senior officer notices. "Waste not, want not, sprout. That's [pulse freq=2][color=DARK_VIOLET]premium nutrition[/color][/pulse] right there." #id:20d
-	player_character: You mumble an excuse about an upset stomach. The officer shrugs and moves on. #id:20e
+	player_character: I mumble an excuse about an upset stomach. The officer shrugs and moves on. #id:20e
 
 leave player_character
 
 [background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
 audio music "res://assets/music/ambient_vol3_sad_decisions_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 join player_character [z_index="1"]
-player_character: Back in your quarters, you can't shake what Sasha said. "[color=YELLOW]Not everything is as it seems.[/color]" #id:20f
+player_character: Back in my quarters, I can't shake what Sasha said. "[color=YELLOW]Not everything is as it seems.[/color]" #id:20f
 
 if {initial_response} == "questioning":
-	player_character: You asked Russet about rejected potatoes on your first day. His answer was evasive. "[color=VIOLET]Processed. According to protocol.[/color]" #id:210
+	player_character: I asked Russet about rejected potatoes on my first day. His answer was evasive. "[color=VIOLET]Processed. According to protocol.[/color]" #id:210
 	player_character: Processed [color=STEEL_BLUE]how[/color], exactly? #id:211
 else:
-	player_character: You were so eager to serve. So proud to be chosen. But pride doesn't explain the [color=CRIMSON]missing potatoes[/color]. #id:212
+	player_character: I was so eager to serve. So proud to be chosen. But pride doesn't explain the [color=CRIMSON]missing potatoes[/color]. #id:212
 
 player_character: The radio said reports of disappearances "continue." That means it's been happening for a while. #id:213
-player_character: Sleep comes slowly. When it does, you dream of [wave amp=15 freq=2][color=DARK_VIOLET]purple rivers[/color][/wave] flowing beneath the checkpoint. #id:214
+player_character: Sleep comes slowly. When it does, I dream of [wave amp=15 freq=2][color=DARK_VIOLET]purple rivers[/color][/wave] flowing beneath the checkpoint. #id:214
 leave player_character
