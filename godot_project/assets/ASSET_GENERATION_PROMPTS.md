@@ -34,6 +34,30 @@ This document contains prompts for generating music, sound effects, and cutscene
 
 ---
 
+## GAMEPLAY SPRITES (Image Generation)
+
+### Flattened Potato / Squished Spud
+
+**Purpose:** Sprite for when a potato character is flattened by the missile defense system or other catastrophic events.
+
+| Filename | Priority | Usage | Prompt |
+|----------|----------|-------|--------|
+| `assets/potatoes/flattened/flattened_potato_russet.png` | High | Missile impact result | Top-down view of a cartoonishly flattened anthropomorphic potato character. Russet potato variety. Comically squished flat like a pancake with arms and legs splayed out. Eyes wide in surprise with spiral dizzy marks. Small cracks and stress marks on the flattened body. Same stylized illustration style as other game characters. Tan/brown russet potato skin tones. Expression should be comedic rather than gruesome - think classic cartoon squash-and-stretch aftermath. Transparent background. 256x256 pixels. |
+| `assets/potatoes/flattened/flattened_potato_yukon.png` | Medium | Missile impact result | Same as russet but with golden/yellow Yukon Gold potato skin tones. Cartoonishly flattened anthropomorphic potato. Comedic squished appearance. Transparent background. 256x256 pixels. |
+| `assets/potatoes/flattened/flattened_potato_purple.png` | Medium | Missile impact result | Same as russet but with purple/violet potato skin tones. Cartoonishly flattened anthropomorphic potato. Comedic squished appearance. Transparent background. 256x256 pixels. |
+| `assets/potatoes/flattened/flattened_potato_red.png` | Medium | Missile impact result | Same as russet but with red potato skin tones. Cartoonishly flattened anthropomorphic potato. Comedic squished appearance. Transparent background. 256x256 pixels. |
+
+**Style Notes:**
+- Keep the tone comedic/cartoony, not gory
+- Think "Wile E. Coyote after being flattened by a boulder"
+- Should match the existing potato character art style
+- Could show small stars/sparkles around the head indicating being dazed
+- Eyes should be swirly/dizzy spirals or X-shaped for comedic effect
+- Arms and legs should be splayed outward in classic "pancake" pose
+- May include a small crater impression or impact marks around the character
+
+---
+
 ## COMPLETED ASSETS
 
 The following assets have been generated and are available in the project:
@@ -80,7 +104,8 @@ All high-priority emotional and action scenes have been generated, including:
 
 - [x] Generate all music tracks (1 remaining)
 - [x] Generate all sound effects (complete)
-- [ ] Generate remaining cutscene art (6 remaining - 1 high priority)
+- [ ] Generate remaining cutscene art (5 remaining)
+- [ ] Generate flattened potato sprites (4 variants)
 - [x] Test audio levels in-game
 - [x] Verify image aspect ratios and formats
 

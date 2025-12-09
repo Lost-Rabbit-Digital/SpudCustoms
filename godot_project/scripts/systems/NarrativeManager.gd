@@ -48,6 +48,7 @@ var dialogic_timeline: Node
 var dialogue_active: bool = false
 var current_skip_button_layer: CanvasLayer = null
 var cutscene_post_processing: CanvasLayer = null
+var history_panel_open: bool = false
 var cutscene_bloom_pulse: CutsceneBloomPulse = null
 
 # Preloaded resources for cutscene post-processing
@@ -59,6 +60,11 @@ func _ready():
 	# Connect to EventBus events
 	_connect_to_event_bus()
 
+	# Connect to Dialogic history events to handle skip button visibility
+	if Dialogic and Dialogic.History:
+		Dialogic.History.open_requested.connect(_on_history_opened)
+		Dialogic.History.close_requested.connect(_on_history_closed)
+
 	# Skip initialization in score attack mode
 	if not GameStateManager:
 		push_error("NarrativeManager: GameStateManager not available")
@@ -68,11 +74,43 @@ func _ready():
 	if game_mode == "score_attack":
 		return
 
+	# Clear history from any previous sessions
+	clear_dialogic_history()
+
 	# Initialize dialogic and load dialogue for appropriate shift
 	var shift = GameStateManager.get_shift()
 	start_level_dialogue(shift)
 	# Make it impossible to pause the narrative manager
 	process_mode = Node.PROCESS_MODE_ALWAYS
+
+
+func _input(event: InputEvent) -> void:
+	# Allow any keypress or gamepad button to advance dialogue
+	if not dialogue_active or history_panel_open:
+		return
+
+	# Handle keyboard input - any key press advances dialogue
+	if event is InputEventKey and event.pressed and not event.echo:
+		# Ignore modifier keys
+		if event.keycode in [KEY_SHIFT, KEY_CTRL, KEY_ALT, KEY_META]:
+			return
+		# Ignore escape (used for menu/skip)
+		if event.keycode == KEY_ESCAPE:
+			return
+		# Trigger dialogic advance
+		if Dialogic and Dialogic.Inputs:
+			Dialogic.Inputs.dialogic_action.emit()
+			get_viewport().set_input_as_handled()
+			return
+
+	# Handle gamepad button input
+	if event is InputEventJoypadButton and event.pressed:
+		# Ignore start/select buttons
+		if event.button_index in [JOY_BUTTON_START, JOY_BUTTON_BACK]:
+			return
+		if Dialogic and Dialogic.Inputs:
+			Dialogic.Inputs.dialogic_action.emit()
+			get_viewport().set_input_as_handled()
 
 
 func _connect_to_event_bus() -> void:
@@ -632,3 +670,33 @@ func load_narrative_choices(choices: Dictionary) -> void:
 			EventBus.narrative_choice_made.emit(var_name, choices[var_name])
 
 	print("Loaded ", choices.size(), " narrative choices")
+
+
+## Clear Dialogic history - called on session restart to prevent buildup
+func clear_dialogic_history() -> void:
+	if not Dialogic:
+		return
+
+	# Clear simple history (used for display)
+	if Dialogic.History:
+		Dialogic.History.simple_history_content = []
+		Dialogic.History.full_event_history_content = []
+		print("NarrativeManager: Cleared Dialogic history")
+
+
+## Called when history panel is opened - hide skip buttons to prevent issues
+func _on_history_opened() -> void:
+	history_panel_open = true
+	var skip_buttons = get_tree().get_nodes_in_group("DialogueSkipButtons")
+	for button_layer in skip_buttons:
+		if is_instance_valid(button_layer):
+			button_layer.visible = false
+
+
+## Called when history panel is closed - show skip buttons again
+func _on_history_closed() -> void:
+	history_panel_open = false
+	var skip_buttons = get_tree().get_nodes_in_group("DialogueSkipButtons")
+	for button_layer in skip_buttons:
+		if is_instance_valid(button_layer):
+			button_layer.visible = true

@@ -2062,12 +2062,12 @@ func update_strikes_display():
 			)
 			tween.tween_property(strikes_label, "position", original_pos, 0.05)
 
-			# Change color briefly to red
+			# Change color briefly to bright red then settle to base reddish
 			tween.parallel().tween_property(
-				strikes_label, "modulate", Color(1.0, 0.3, 0.3, 1.0), 0.1
+				strikes_label, "modulate", Color(1.0, 0.2, 0.2, 1.0), 0.1
 			)
 			tween.tween_property(
-				strikes_label, "modulate", Color(1.0, 0.782051, 0.655081, 1.0), 0.3
+				strikes_label, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.3
 			)
 		else:
 			# Strikes decreased - positive bounce animation
@@ -2079,12 +2079,12 @@ func update_strikes_display():
 				. set_ease(Tween.EASE_OUT)
 			)
 
-			# Change color briefly to green
+			# Change color briefly to green (positive) then settle to base
 			tween.parallel().tween_property(
 				strikes_label, "modulate", Color(0.5, 1.0, 0.5, 1.0), 0.1
 			)
 			tween.tween_property(
-				strikes_label, "modulate", Color(1.0, 0.782051, 0.655081, 1.0), 0.3
+				strikes_label, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.3
 			)
 
 	# Update previous strikes for next comparison
