@@ -37,17 +37,20 @@ audio "res://assets/audio/stings/dread_chord.mp3" [volume="-5.0" bus="SFX"]
 murphy: Murphy looks up at you, tears streaming. [pulse freq=2][color=CRIMSON]What if I ate HIM?[/color][/pulse] #id:21d_breakdown4
 
 set {murphy_alliance} = "none"
-- "Murphy... I'm so sorry. I'm with you. We'll find the truth together." #id:21e
+- "Murphy... I'm so sorry. I'm with you. We'll find the truth together." (Help) #id:21e
 	set {murphy_alliance} = "ally"
-- "Murphy, this is dangerous. We should stay out of it." #id:21f
+- "Murphy, this is dangerous. We should stay out of it." (Cautious) #id:21f
 	set {murphy_alliance} = "cautious"
-- "Maybe it's a coincidence. Let's not jump to conclusions." #id:220
+- "Maybe it's a coincidence. Let's not jump to conclusions." (Dismiss) #id:220
 	set {murphy_alliance} = "skeptical"
+- "Tommy failed inspection. He's of more use to the nation as Root Reserve." (Loyalist) #id:21e_loyalist
+	set {murphy_alliance} = "hostile"
+	set {loyalist_path} = "yes"
 
 if {murphy_alliance} == "ally":
 	join murphy [z_index="1"]
 	join player_character [z_index="1"]
-	player_character: You kneel beside Murphy, putting a hand on his shoulder. #id:221_comfort1
+	player_character: I kneel beside Murphy, putting a hand on his shoulder. #id:221_comfort1
 	leave player_character
 	murphy: Murphy grabs your arm like a lifeline. [color=CHARTREUSE]Thank you.[/color] I thought I was going crazy. #id:221
 	murphy: [color=STEEL_BLUE]His voice steadies slightly.[/color] For Tommy. We do this for Tommy. And everyone else they've taken. #id:221_tommy
@@ -58,6 +61,18 @@ elif {murphy_alliance} == "cautious":
 	murphy: Murphy wipes his eyes, trying to compose himself. Yeah. Yeah, you're probably right. Forget I said anything. #id:223
 	murphy: But if you change your mind... I'll be here. [color=STEEL_BLUE]Alone with my questions. And my nightmares.[/color] #id:224
 	leave murphy
+elif {murphy_alliance} == "hostile":
+	join murphy [z_index="1"]
+	audio "res://assets/audio/stings/threat_reveal.mp3" [volume="-5.0" bus="SFX"]
+	murphy: [wave amp=25 freq=3]Murphy's face goes pale, then hardens.[/wave] What... what did you just say? #id:221_hostile1
+	murphy: [color=CRIMSON]His tears stop. Something cold replaces the grief.[/color] You really believe that? About Tommy? #id:221_hostile2
+	murphy: Murphy stands slowly, backing toward the door. [color=STEEL_BLUE]I thought you were different. I was wrong.[/color] #id:221_hostile3
+	murphy: Stay away from me. [pulse freq=2][color=CRIMSON]And if you report this conversation...[/color][/pulse] I'll deny everything. #id:221_hostile4
+	leave murphy
+	join player_character [z_index="1"]
+	player_character: One less loose end. Murphy's sentimentality would have gotten us both killed. #id:221_hostile5
+	player_character: [color=DARK_ORANGE]Russet will be pleased to hear about this.[/color] #id:221_hostile6
+	leave player_character
 else:
 	join murphy [z_index="1"]
 	murphy: Coincidence. Murphy laughs bitterly through his tears. Sure. And Tommy just [color=CRIMSON]vanished[/color] into thin air. #id:225
@@ -76,6 +91,9 @@ sweet_potato_sasha: Let me guess - Murphy told you about his cousin? #id:228
 
 if {murphy_alliance} == "ally":
 	sweet_potato_sasha: Sasha nods approvingly. Good. We need people who ask questions. #id:229
+elif {murphy_alliance} == "hostile":
+	sweet_potato_sasha: Sasha studies your face carefully. [color=STEEL_BLUE]Something's different about you.[/color] Harder. #id:22a_hostile1
+	sweet_potato_sasha: Murphy seemed shaken when I saw him earlier. [color=YELLOW]What did you say to him?[/color] #id:22a_hostile2
 else:
 	sweet_potato_sasha: Sasha studies your face carefully. You're scared. That's smart. But fear won't save anyone. #id:22a
 
@@ -109,11 +127,11 @@ audio music "res://assets/music/ambient_vol3_sad_decisions_main.mp3" [fade="2.0"
 join player_character [z_index="1"]
 
 if {family_response} == "help":
-	player_character: You pull out the photo the desperate potato gave you. Her wife. [color=STEEL_BLUE]Where is she now?[/color] #id:235
+	player_character: I pull out the photo the desperate potato gave me. Her wife. [color=STEEL_BLUE]Where is she now?[/color] #id:235
 	player_character: If what Sasha and Murphy are saying is true... she's already been... #id:236
 	audio "res://assets/audio/stings/revelation_dark.mp3" [volume="-8.0" bus="SFX"]
-	player_character: You can't finish the thought. But you [color=CHARTREUSE]won't forget her face[/color]. #id:237
+	player_character: I can't finish the thought. But I [color=CHARTREUSE]won't forget her face[/color]. #id:237
 
-player_character: Tomorrow, everything changes. Either you find answers, or you bury the questions forever. #id:238
+player_character: Tomorrow, everything changes. Either I find answers, or I bury the questions forever. #id:238
 player_character: One thing is certain: there's [color=YELLOW]no going back to blissful ignorance[/color]. #id:239
 leave player_character

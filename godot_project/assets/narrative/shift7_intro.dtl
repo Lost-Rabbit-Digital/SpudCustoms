@@ -55,7 +55,7 @@ if {follow_trucks} == "volunteer":
 	join player_character [z_index="1"]
 	player_character: The trucks stop at a massive complex hidden in the industrial district. [color=DARK_VIOLET]Sector 7, Warehouse Complex Delta.[/color] #id:106_trucks9
 	player_character: Smokestacks belch purple-tinged smoke. The smell is... [tornado radius=3 freq=2][color=CRIMSON]unmistakable.[/color][/tornado] #id:106_trucks10
-	player_character: You've found it. [wave amp=20 freq=3][color=CHARTREUSE]The heart of Root Reserve.[/color][/wave] #id:106_trucks11
+	player_character: I've found it. [wave amp=20 freq=3][color=CHARTREUSE]The heart of Root Reserve.[/color][/wave] #id:106_trucks11
 	leave player_character
 
 	set {found_facility} = "yes"

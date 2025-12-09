@@ -43,7 +43,7 @@ if {has_wife_photo} == "yes":
 	player_character: There it is. [color=GOLD]Maris Piper[/color]. The woman from the photo. #id:d2m
 	player_character: "[color=CRIMSON]Status: Processed. Batch RR-2847.[/color]" Dated three days after her husband begged for your help. #id:d2n
 	audio "res://assets/audio/stings/revelation_dark.mp3" [volume="-5.0" bus="SFX"]
-	player_character: You feel the photo in your pocket. [color=STEEL_BLUE]She's gone. And you couldn't save her.[/color] #id:d2o
+	player_character: I feel the photo in my pocket. [color=STEEL_BLUE]She's gone. And I couldn't save her.[/color] #id:d2o
 	player_character: But maybe... [color=CHARTREUSE]maybe you can still save others[/color]. #id:d2p
 	leave player_character
 
@@ -211,6 +211,6 @@ if {viktor_allied} == "yes":
 [background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]
 audio music "res://assets/music/ambient_vol3_sad_decisions_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 join player_character [z_index="1"]
-player_character: You return to your quarters at the checkpoint, mind racing with the weight of coming events. #id:100
+player_character: I return to my quarters at the checkpoint, mind racing with the weight of coming events. #id:100
 player_character: In just three days, everything could change. [color=YELLOW]For better or worse.[/color] #id:101
 leave player_character
