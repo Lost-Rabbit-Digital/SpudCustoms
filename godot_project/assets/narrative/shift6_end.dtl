@@ -18,15 +18,17 @@ join viktor [z_index="1"]
 viktor: Viktor approaches your station. His eyes are tired, haunted. #id:241
 viktor: He nods in recognition. We keep running into each other. Night shift gets lonely. #id:242
 
-set {viktor_conversation} = "none"
-- "Any news about Elena?" (Concerned) #id:243
-	set {viktor_conversation} = "curious"
-- "You seem troubled. What's on your mind?" (Direct) #id:244
-	set {viktor_conversation} = "direct"
+# Note: Use different variable name to avoid overwriting the important
+# viktor_conversation choice from shift6_intro (tell_truth/lie_protect)
+set {viktor_night_greeting} = "none"
+- "Just trying to do my job. Why does Russet watch me?" #id:243
+	set {viktor_night_greeting} = "curious"
+- "Is there something I should know?" #id:244
+	set {viktor_night_greeting} = "direct"
 
-if {viktor_conversation} == "curious":
-	viktor: He shakes his head slowly. Nothing. It's like she [color=STEEL_BLUE]vanished into thin air[/color]. #id:245
-	viktor: But I won't stop looking. I can't. #id:246
+if {viktor_night_greeting} == "curious":
+	viktor: He shrugs heavily. Russet watches everyone who asks questions. My [color=STEEL_BLUE]wife asked questions[/color] once. #id:245
+	viktor: She's not around to ask anymore. #id:246
 	leave viktor
 else:
 	viktor: He glances around, then lowers his voice. Just... be careful who you trust. #id:247

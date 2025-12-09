@@ -277,6 +277,29 @@ else: # dismantle
 	leave sweet_potato_sasha
 	leave player_character
 
+# Chaos Agent acknowledgment - if player manipulated both sides
+if {chaos_points} >= 4:
+	[background arg="res://assets/narrative/checkpoint_corridor.png" fade="1.5"]
+	audio "res://assets/audio/stings/suspicion_sting.mp3" [volume="-5.0" bus="SFX"]
+	join murphy [z_index="1"]
+	murphy: Murphy pulls you aside, voice low. I've been watching you this whole time. The way you played both sides... #id:fc_chaos_001
+	murphy: You leaked info to Russet. You helped operatives escape. You kept everyone guessing. [color=YELLOW]Impressive. Terrifying.[/color] #id:fc_chaos_002
+	leave murphy
+
+	join player_character [z_index="1"]
+	player_character: I did what I had to do. Survival in this world means keeping all your options open. #id:fc_chaos_003
+	leave player_character
+
+	join murphy [z_index="1"]
+	murphy: Maybe. Or maybe you're the most dangerous kind of potato - one who serves only themselves. #id:fc_chaos_004
+	murphy: Just know this: [color=STEEL_BLUE]I'll be watching.[/color] We all will. The new Spud needs leaders, not manipulators. #id:fc_chaos_005
+	leave murphy
+	[signal arg="chaos_architect"]
+
+# Savior of Spud achievement check - romantic ending path
+if {pro_sasha_choice} >= 5 and {sasha_rescue_reaction} == "relieved":
+	[signal arg="savior_of_spud"]
+
 # Common ending for all paths
 [background arg="res://assets/narrative/russet_standoff.png" fade="2.0"]
 audio "res://assets/audio/explosions/Explosion Ringing.wav" [volume="-5.0" bus="SFX"]
