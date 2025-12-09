@@ -14,14 +14,14 @@ narrator: [color=RED]Expired passports[/color] are an automatic rejection. No ex
 narrator: I'll guide you through the basics [color=YELLOW]step by step[/color]. Follow the prompts and you'll get the hang of it. #id:tut_006
 
 # Border Runner explanation
-narrator: [pulse freq=2][color=RED]One more thing![/color][/pulse] Some potatoes will try to [color=CRIMSON]make a run for it[/color] when they think their papers won't pass inspection. #id:tut_009
-narrator: When a [color=RED]border runner[/color] tries to escape, you'll see them bolting past your booth toward the border. #id:tut_010
+narrator: [pulse freq=2][color=RED]One more thing![/color][/pulse] Some potatoes will try to [color=CRIMSON]make a run for it[/color] when they think their papers won't pass inspection. #id:tut_007
+narrator: When a [color=RED]border runner[/color] tries to escape, you'll see them bolting past your booth toward the border. #id:tut_008
 
 # Pneumatic Missile Launcher explanation
-narrator: That's where your [color=CHARTREUSE]Pneumatic Missile Launcher[/color] comes in. It's the big button on your control panel. #id:tut_011
-narrator: [color=YELLOW]Click to fire[/color] when a runner is in range. Aim for the [color=GOLD]center of the target zone[/color] for bonus points! #id:tut_012
-narrator: But be careful - [color=RED]don't hit innocent potatoes[/color] in the queue. That'll cost you points and earn a strike! #id:tut_013
+narrator: That's where your [color=CHARTREUSE]Pneumatic Missile Launcher[/color] comes in. It's the big button on your control panel. #id:tut_009
+narrator: [color=YELLOW]Click to fire[/color] when a runner is in range. Aim for the [color=GOLD]center of the target zone[/color] for bonus points! #id:tut_010
+narrator: But be careful - [color=RED]don't hit innocent potatoes[/color] in the queue. That'll cost you points and earn a strike! #id:tut_011
 
-narrator: The safety and security of Spud depends on your [pulse freq=2][color=DARK_ORANGE]vigilance![/color][/pulse] #id:tut_007
-narrator: Let's begin your [color=YELLOW]training shift[/color]... #id:tut_008
+narrator: The safety and security of Spud depends on your [pulse freq=2][color=DARK_ORANGE]vigilance![/color][/pulse] #id:tut_012
+narrator: Let's begin your [color=YELLOW]training shift[/color]... #id:tut_013
 leave narrator
