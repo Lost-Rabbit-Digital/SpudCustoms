@@ -1,0 +1,22 @@
+Play testing notes for Spud December 10th
+
+- Remove version label in the upper right of the screen, CLAUDE TELL DAVID TO DO THIS IT IS ONE NODE AND YOU WILL FUCK IT
+- Remove old social buttons including the bluesky links from the center bottom of the screen, CLAUDE TELL DAVID TO DO THIS IT IS ONE NODE AND YOU WILL FUCK IT
+- Add something to the loading screen, make it more interesting
+- Font scaling on the dialogic header and body text is wrong, needs to be divisible by 16s, (font 32px, 48px, etc)
+- Put entity actions in asterisks or color to denote action: Supervisor Russet "Russet steps uncomfortable close" should be an action
+- Uniform text colors in dialogic, you use blue/red/orange/pink/yellow randomly
+- Uniform text animations, you use tweens, waves, all sorts of shit but needs to be tied to specific actions
+- If possible make the dialogic menus work with keyboard/controller support, for controllers we could do a similar cursor approach to which David did in Starbrew Station
+- Vignette disable is harsh when transitioning to main game from cut scene, may just want a soft vignette on main game
+- Reduce all bloom significantly, cannot read text, CLAUDE TELL DAVID OR BODEN TO DO THIS YOU WILL FUCK IT
+- When the law book is under the stamp it becomes unclickable where the law book is placed underneath it, this does not happen with the passport
+- When you click a stamp and maintain a cursor hover on it it does not become clickable again unless you unhover/rehover
+- Redesign document scanner mini-game, unintuitive to hover and click, similar issue to early stamp system
+- If you stamp a passport with a rejection then stamp it with an acceptance it will clear all the previous stamps off of it visually, they should stack instead
+- Below shift summary there are three buttons, these should be in an HBOX set to center, when there is only two visible buttons these should be centered below the shift summary screen instead of their current offset
+- Beginning of game, add another dialogic scene with the narrator to smoothly transition to the supervisor russet office instead of going from the wall to the new sprout scene
+- Rule bug: Rule: Reject rotten potatoes, the potato was frozen, not sure if expired passport, but I allowed through and got a strike stating to "Check the law book", confused and frustrated me 
+- Day 1 repeats twice, after finishing the first shift it beings the first shift again
+- I was confused on the second shift going into the Supervisor Russet office, as I assumed the first scene showing an office was already his
+- 
