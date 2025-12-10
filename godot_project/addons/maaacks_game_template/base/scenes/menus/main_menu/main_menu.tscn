@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c6k5nnpbypshi"]
+[gd_scene load_steps=19 format=3 uid="uid://c6k5nnpbypshi"]
 
 [ext_resource type="Script" uid="uid://bhgs1upaahk3y" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://hmx6o472ropw" path="res://addons/maaacks_game_template/base/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="2_qvrrd"]
@@ -8,11 +8,16 @@
 [ext_resource type="Script" uid="uid://b5oej1q4h7jvh" path="res://addons/maaacks_game_template/base/scripts/ui_sound_controller.gd" id="6_bs342"]
 [ext_resource type="Script" uid="uid://dmkubt2nsnsbn" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/config_version_label.gd" id="6_pdiij"]
 [ext_resource type="Script" uid="uid://bkwlopi4qn32o" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/config_name_label.gd" id="7_j7612"]
-[ext_resource type="Texture2D" uid="uid://dmkhc10xhp5g4" path="res://assets/user_interface/social_icons/16x16_outline/HeartCoded_BlueSky.png" id="10_4myoa"]
-[ext_resource type="Texture2D" uid="uid://bwpg7ia7hiyk0" path="res://assets/user_interface/social_icons/16x16/Discord.png" id="10_4utau"]
-[ext_resource type="Texture2D" uid="uid://bv47rc4bxekxy" path="res://assets/user_interface/social_icons/16x16_outline/Discord.png" id="10_oqvs2"]
-[ext_resource type="Texture2D" uid="uid://dimf1hf1nm87f" path="res://assets/user_interface/social_icons/16x16/BlueSky.png" id="11_4myoa"]
-[ext_resource type="Texture2D" uid="uid://drg3si3mndqcw" path="res://assets/user_interface/social_icons/16x16_outline/BodenGameDev_BlueSky.png" id="13_bcn5h"]
+[ext_resource type="Script" uid="uid://deorbpke78ng1" path="res://scripts/ui/social_buttons.gd" id="9_jhnug"]
+[ext_resource type="Texture2D" uid="uid://bd4u01a8g57dw" path="res://assets/sprites/social_icons/discord_icon_normal.png" id="10_7r4vv"]
+[ext_resource type="Texture2D" uid="uid://jg1bpbr8imkc" path="res://assets/sprites/social_icons/discord_icon_pressed.png" id="11_ieaq0"]
+[ext_resource type="Texture2D" uid="uid://bsqn40547cu8a" path="res://assets/sprites/social_icons/discord_icon_hovered.png" id="12_xwi4j"]
+[ext_resource type="Texture2D" uid="uid://dp5lhgp0en51r" path="res://assets/sprites/social_icons/steam_icon_normal.png" id="13_0y7ph"]
+[ext_resource type="Texture2D" uid="uid://ci31sairk4i3p" path="res://assets/sprites/social_icons/steam_icon_pressed.png" id="14_rcg5h"]
+[ext_resource type="Texture2D" uid="uid://uqnu0ksudfrn" path="res://assets/sprites/social_icons/steam_icon_hovered.png" id="15_ql3a6"]
+[ext_resource type="Texture2D" uid="uid://cbx4fde8fi65d" path="res://assets/sprites/social_icons/twitch_ui_icon_normal.png" id="16_gtxkw"]
+[ext_resource type="Texture2D" uid="uid://bfyi3b5xjkrod" path="res://assets/sprites/social_icons/twitch_ui_icon_pressed.png" id="17_l5ud6"]
+[ext_resource type="Texture2D" uid="uid://bhi33uyc7otli" path="res://assets/sprites/social_icons/twitch_ui_icon_hovered.png" id="18_dmdor"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -69,7 +74,7 @@ offset_bottom = 40.0
 grow_horizontal = 0
 tooltip_text = "Wait!"
 mouse_filter = 1
-text = "Version 1.1.0"
+text = "Version 1.2.0"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("6_pdiij")
@@ -186,49 +191,56 @@ custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
 text = "Exit"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
-custom_minimum_size = Vector2(32, 32)
+[node name="SocialButtons" type="HBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
+custom_minimum_size = Vector2(180, 48)
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = 3
+anchor_left = 1.0
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 64.0
-grow_horizontal = 2
+offset_left = -204.0
+offset_top = -72.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 0
 grow_vertical = 0
-scale = Vector2(1, 0.5)
-theme_override_constants/separation = 16
+theme_override_constants/separation = 12
 alignment = 1
+script = ExtResource("9_jhnug")
 
-[node name="BlueSkyHeartCodedButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
+[node name="DiscordButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/SocialButtons"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(32, 32)
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
-tooltip_text = "HeartCoded"
-texture_normal = ExtResource("11_4myoa")
-texture_hover = ExtResource("10_4myoa")
-stretch_mode = 0
+tooltip_text = "Join our Discord!"
+texture_normal = ExtResource("10_7r4vv")
+texture_pressed = ExtResource("11_ieaq0")
+texture_hover = ExtResource("12_xwi4j")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="DiscordButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
+[node name="SteamButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/SocialButtons"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(32, 32)
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
-tooltip_text = "Lost Rabbit Digital"
-texture_normal = ExtResource("10_4utau")
-texture_hover = ExtResource("10_oqvs2")
-stretch_mode = 0
+tooltip_text = "Visit us on Steam"
+texture_normal = ExtResource("13_0y7ph")
+texture_pressed = ExtResource("14_rcg5h")
+texture_hover = ExtResource("15_ql3a6")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="BlueSkyBodenGameDevButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer"]
+[node name="TwitchButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/SocialButtons"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(32, 32)
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
-tooltip_text = "BodenGameDev"
-texture_normal = ExtResource("11_4myoa")
-texture_hover = ExtResource("13_bcn5h")
-stretch_mode = 0
+tooltip_text = "Twitch Integration"
+texture_normal = ExtResource("16_gtxkw")
+texture_pressed = ExtResource("17_l5ud6")
+texture_hover = ExtResource("18_dmdor")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="OptionsContainer" type="MarginContainer" parent="."]
 unique_name_in_owner = true
@@ -283,7 +295,7 @@ text = "Back"
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/BlueSkyHeartCodedButton" to="." method="_on_blue_sky_heart_coded_button_pressed"]
-[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/DiscordButton" to="." method="_on_discord_button_pressed"]
-[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/BlueSkyBodenGameDevButton" to="." method="_on_blue_sky_boden_game_dev_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/SocialButtons/DiscordButton" to="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/SocialButtons" method="_on_discord_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/SocialButtons/SteamButton" to="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/SocialButtons" method="_on_steam_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/SocialButtons/TwitchButton" to="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/SocialButtons" method="_on_twitch_button_pressed"]
 [connection signal="pressed" from="FlowControlContainer/FlowControl/BackButton" to="." method="_on_back_button_pressed"]

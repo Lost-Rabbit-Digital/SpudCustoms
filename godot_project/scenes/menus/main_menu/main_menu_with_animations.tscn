@@ -1,22 +1,16 @@
-[gd_scene load_steps=31 format=3 uid="uid://c63y6b25bs4bk"]
+[gd_scene load_steps=25 format=3 uid="uid://c63y6b25bs4bk"]
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_0i2sc"]
-[ext_resource type="PackedScene" uid="uid://b2hwmqvp5r8jn" path="res://scenes/menus/main_menu/social_buttons.tscn" id="social_buttons"]
-[ext_resource type="Script" uid="uid://db8g88lbgkjmx" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/config_version_label.gd" id="version_label_script"]
-[ext_resource type="Texture2D" uid="uid://cpnwhkjpqunqa" path="res://assets/user_interface/social_icons/16x16/Steam.png" id="steam_normal"]
-[ext_resource type="Texture2D" uid="uid://c8xgj8lpyp7k2" path="res://assets/user_interface/social_icons/16x16_outline/Steam.png" id="steam_hover"]
-[ext_resource type="Texture2D" uid="uid://cknkkklfukmhr" path="res://assets/user_interface/social_icons/16x16/Twitch.png" id="twitch_normal"]
-[ext_resource type="Texture2D" uid="uid://co04m6lmvdxns" path="res://assets/user_interface/social_icons/16x16_outline/Twitch.png" id="twitch_hover"]
 [ext_resource type="Script" uid="uid://b5qy5nr1wivs4" path="res://scenes/menus/main_menu/main_menu_with_animations.gd" id="2_ncvk7"]
-[ext_resource type="PackedScene" uid="uid://cqvlk7m8fpnxr" path="res://scenes/menus/main_menu/localization_selector.tscn" id="locale_selector"]
-[ext_resource type="Script" path="res://scripts/effects/audio_reactive_bloom.gd" id="audio_bloom"]
-[ext_resource type="Script" path="res://scripts/effects/menu_music_visual_effects.gd" id="music_fx"]
 [ext_resource type="PackedScene" uid="uid://bdvdf5v87mmrr" path="res://scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_tuy3s"]
 [ext_resource type="PackedScene" uid="uid://dtu0ffm1m5mr7" path="res://scenes/menus/level_select_menu/level_select_menu.tscn" id="3_xj7vs"]
 [ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://scenes/credits/credits.tscn" id="4_lwsll"]
 [ext_resource type="AudioStream" uid="uid://bq42hbti5wytk" path="res://assets/music/ambient_faded_defeat_main_menu.mp3" id="6_xpvtk"]
 [ext_resource type="Texture2D" uid="uid://dp2tv5qwnoemk" path="res://assets/narrative/border_chaos.png" id="7_2k5l7"]
 [ext_resource type="Script" uid="uid://cwx4ydm7y6bo5" path="res://scripts/effects/parallax_mouse_background.gd" id="8_parallax"]
+[ext_resource type="Script" uid="uid://bvhdueby1nj7j" path="res://scripts/effects/audio_reactive_bloom.gd" id="audio_bloom"]
+[ext_resource type="PackedScene" uid="uid://cqvlk7m8fpnxr" path="res://scenes/menus/main_menu/localization_selector.tscn" id="locale_selector"]
+[ext_resource type="Script" uid="uid://c3qb06ae7t52o" path="res://scripts/effects/menu_music_visual_effects.gd" id="music_fx"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -420,6 +414,20 @@ script = ExtResource("8_parallax")
 [node name="VersionContainer" parent="VersionMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 
+[node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
+unique_name_in_owner = true
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+
 [node name="TitleContainer" parent="MenuContainer/TitleMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 
@@ -513,7 +521,7 @@ visible = false
 [node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="5"]
 visible = false
 
-[node name="LevelSelectContainer" type="MarginContainer" parent="." index="9"]
+[node name="LevelSelectContainer" type="MarginContainer" parent="." index="7"]
 unique_name_in_owner = true
 layout_mode = 0
 anchor_right = 1.0
@@ -524,25 +532,7 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 32
 
-[node name="SteamButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer" index="3"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-tooltip_text = "Visit us on Steam"
-texture_normal = ExtResource("steam_normal")
-texture_hover = ExtResource("steam_hover")
-stretch_mode = 0
-
-[node name="TwitchButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer" index="4"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-tooltip_text = "Twitch Integration"
-texture_normal = ExtResource("twitch_normal")
-texture_hover = ExtResource("twitch_hover")
-stretch_mode = 0
-
-[node name="TopRightContainer" type="MarginContainer" parent="." index="10"]
+[node name="TopRightContainer" type="MarginContainer" parent="." index="8"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -550,63 +540,22 @@ anchor_right = 1.0
 offset_left = -200.0
 offset_bottom = 50.0
 grow_horizontal = 0
-grow_vertical = 1
-theme_override_constants/margin_right = 16
 theme_override_constants/margin_top = 16
-
-[node name="LocalizationSelector" parent="TopRightContainer" instance=ExtResource("locale_selector")]
-layout_mode = 2
-
-[node name="BottomRightContainer" type="MarginContainer" parent="." index="11"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -200.0
-offset_top = -60.0
-grow_horizontal = 0
-grow_vertical = 0
 theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 16
 
-[node name="SocialButtons" parent="BottomRightContainer" instance=ExtResource("social_buttons")]
+[node name="LocalizationSelector" parent="TopRightContainer" index="0" instance=ExtResource("locale_selector")]
 layout_mode = 2
 
-[node name="BottomCenterContainer" type="MarginContainer" parent="." index="12"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -100.0
-offset_top = -40.0
-offset_right = 100.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/margin_bottom = 16
-
-[node name="VersionLabel" type="Label" parent="BottomCenterContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("version_label_script")
-
-[node name="AudioReactiveBloom" type="Node" parent="."]
+[node name="AudioReactiveBloom" type="Node" parent="." index="10"]
 script = ExtResource("audio_bloom")
 base_glow_intensity = 0.1
 max_audio_glow = 0.2
 smoothing = 0.85
-min_frequency = 20.0
 max_frequency = 400.0
 glow_bloom = 0.15
 glow_hdr_threshold = 1.2
 
-[node name="MenuMusicVisualEffects" type="Node" parent="."]
+[node name="MenuMusicVisualEffects" type="Node" parent="." index="11"]
 script = ExtResource("music_fx")
 title_label = NodePath("../MenuContainer/TitleMargin/TitleContainer/TitleLabel")
 title_max_pulse = 0.025
@@ -629,5 +578,3 @@ bg_smoothing = 0.94
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/BottomRowContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/BottomRowContainer/FeedbackButton2" to="." method="_on_feedback_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/BottomRowContainer/ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/SteamButton" to="." method="_on_steam_button_pressed"]
-[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/TwitchButton" to="." method="_on_twitch_button_pressed"]

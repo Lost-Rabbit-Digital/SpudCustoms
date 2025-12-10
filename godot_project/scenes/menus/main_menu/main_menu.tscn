@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://byvydukidk6i2"]
+[gd_scene load_steps=10 format=3 uid="uid://byvydukidk6i2"]
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_pss7b"]
 [ext_resource type="Script" uid="uid://bdet8115mn02d" path="res://scenes/menus/main_menu/main_menu.gd" id="2_lk0wa"]
@@ -6,22 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://scenes/credits/credits.tscn" id="3_vmius"]
 [ext_resource type="PackedScene" uid="uid://b2hwmqvp5r8jn" path="res://scenes/menus/main_menu/social_buttons.tscn" id="4_social"]
 [ext_resource type="PackedScene" uid="uid://cqvlk7m8fpnxr" path="res://scenes/menus/main_menu/localization_selector.tscn" id="5_locale"]
-[ext_resource type="Script" path="res://scripts/effects/audio_reactive_bloom.gd" id="7_bloom"]
-[ext_resource type="Script" path="res://scripts/effects/parallax_mouse_background.gd" id="8_parallax"]
-[ext_resource type="Script" path="res://scripts/effects/menu_music_visual_effects.gd" id="9_music_fx"]
+[ext_resource type="Script" uid="uid://bvhdueby1nj7j" path="res://scripts/effects/audio_reactive_bloom.gd" id="7_bloom"]
+[ext_resource type="Script" uid="uid://cwx4ydm7y6bo5" path="res://scripts/effects/parallax_mouse_background.gd" id="8_parallax"]
+[ext_resource type="Script" uid="uid://c3qb06ae7t52o" path="res://scripts/effects/menu_music_visual_effects.gd" id="9_music_fx"]
 
 [node name="MainMenu" instance=ExtResource("1_pss7b")]
 script = ExtResource("2_lk0wa")
 options_packed_scene = ExtResource("3_lqjmk")
 credits_packed_scene = ExtResource("3_vmius")
-
-[node name="BackgroundTextureRect" parent="." index="2"]
-script = ExtResource("8_parallax")
-max_offset = Vector2(30, 20)
-smoothing = 3.0
-
-[node name="HBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="2"]
-visible = false
 
 [node name="BottomRightContainer" type="MarginContainer" parent="." index="0"]
 layout_mode = 1
@@ -37,11 +29,11 @@ grow_vertical = 0
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="BottomRightContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="BottomRightContainer" index="0"]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="LocalizationSelector" parent="BottomRightContainer/VBoxContainer" instance=ExtResource("5_locale")]
+[node name="LocalizationSelector" parent="BottomRightContainer/VBoxContainer" index="0" instance=ExtResource("5_locale")]
 layout_mode = 2
 
 [node name="BottomCenterContainer" type="MarginContainer" parent="." index="1"]
@@ -58,21 +50,28 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/margin_bottom = 16
 
-[node name="SocialButtons" parent="BottomCenterContainer" instance=ExtResource("4_social")]
+[node name="SocialButtons" parent="BottomCenterContainer" index="0" instance=ExtResource("4_social")]
 layout_mode = 2
-alignment = 1
 
-[node name="AudioReactiveBloom" type="Node" parent="."]
+[node name="BackgroundTextureRect" parent="." index="4"]
+script = ExtResource("8_parallax")
+
+[node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
+text = "Version 1.2.0"
+
+[node name="HBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="2"]
+visible = false
+
+[node name="AudioReactiveBloom" type="Node" parent="." index="10"]
 script = ExtResource("7_bloom")
 base_glow_intensity = 0.4
 max_audio_glow = 1.2
 smoothing = 0.75
-min_frequency = 20.0
 max_frequency = 400.0
 glow_bloom = 0.6
 glow_hdr_threshold = 0.7
 
-[node name="MenuMusicVisualEffects" type="Node" parent="."]
+[node name="MenuMusicVisualEffects" type="Node" parent="." index="11"]
 script = ExtResource("9_music_fx")
 title_label = NodePath("../MenuContainer/TitleMargin/TitleContainer/TitleLabel")
 title_max_pulse = 0.025

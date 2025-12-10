@@ -17,7 +17,7 @@ func _ready():
 	var button_containers = [
 		$MenuContainer/MenuButtonsMargin/MenuButtonsContainer,
 		%MenuButtonsBoxContainer,
-		$MenuContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer
+		$MenuContainer/MenuButtonsMargin/MenuButtonsContainer/SocialButtons
 	]
 
 	var hover_config = {
@@ -205,19 +205,6 @@ func _on_back_button_pressed():
 
 func _on_discord_button_pressed() -> void:
 	await JuicyButtons.setup_button(%DiscordButton, "https://discord.gg/Y7caBf7gBj")
-
-
-func _on_blue_sky_heart_coded_button_pressed() -> void:
-	await JuicyButtons.setup_button(
-		%BlueSkyHeartCodedButton, "https://bsky.app/profile/heartcoded.bsky.social"
-	)
-
-
-func _on_blue_sky_boden_game_dev_button_pressed() -> void:
-	await JuicyButtons.setup_button(
-		%BlueSkyBodenGameDevButton, "https://bsky.app/profile/bodengamedev.bsky.social"
-	)
-
 
 func _on_feedback_button_pressed() -> void:
 	await JuicyButtons.setup_button(%FeedbackButton, "https://forms.gle/SP3CFfJVrF3wNBFJ8")
