@@ -19,4 +19,11 @@ Play testing notes for Spud December 10th
 - Rule bug: Rule: Reject rotten potatoes, the potato was frozen, not sure if expired passport, but I allowed through and got a strike stating to "Check the law book", confused and frustrated me 
 - Day 1 repeats twice, after finishing the first shift it beings the first shift again
 - I was confused on the second shift going into the Supervisor Russet office, as I assumed the first scene showing an office was already his
+
+3:12 PM
+- Remove Lost Rabbit Digital GitHub link from Credits
+- Updated credit to reflect proper usages
+- Only warn of progression clear on new game button if they actually have progress which will be cleared
+- If you hit escape on the main menu it closes the entire game, I hit escape to close the pop-up window and it closed the entire game
+- You can pause during a loading screen and soft-lock yourself, breaks the post processing, breaks all interaction on game scenes and most on dialogic, no way to undo unless you un-pause during the loading screen
 - 
