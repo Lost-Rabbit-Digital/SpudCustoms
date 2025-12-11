@@ -49,11 +49,13 @@ This update is dedicated to my little one, who spent the first months of life in
 - **Character Names**: Fixed Viktor and Murphy character display names in translations
 - **Pronoun Fixes**: Fixed Maris Piper seeker's pronouns in shift 3 intro
 - **Diplomatic Ending**: Fixed malformed dialogue lines in diplomatic ending
+- **Final Confrontation Timeline**: Fixed mixed indentation in final_confrontation.dtl that could affect dialogue flow control
 - **Missile Freeze**: Fixed game freeze caused by missile array index out of bounds
 - **Poster Hover**: Fixed poster hover zoom by using manual mouse position checking
 - **Border Runner Issues**: Fixed various tutorial, background, and border runner issues
 
 ## UI & QUALITY OF LIFE
+- **Main Menu Cleanup**: Improved main menu social buttons layout and version label styling
 - **Date Display**: Added date display to lower left corner of game scene
 - **Clear User Data**: Added button to clear user data from options menu
 - **Tutorial Flow**: Improved narrator intro flow in tutorial
