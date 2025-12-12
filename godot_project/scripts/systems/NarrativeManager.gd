@@ -188,10 +188,10 @@ func start_level_dialogue(level_id: int):
 	if EventBus:
 		EventBus.dialogue_started.emit(timeline_name)
 
-	var timeline = Dialogic.start(timeline_name)
-	# Only add as child if it doesn't already have a parent
-	if timeline and not timeline.get_parent():
-		add_child(timeline)
+	# Note: Dialogic.start() returns the layout node and automatically adds it to the
+	# scene tree via call_deferred. Do NOT call add_child on the returned node as this
+	# creates a race condition where the node ends up with two parents.
+	Dialogic.start(timeline_name)
 	# Connect signals safely - check if already connected to avoid duplicate connections
 	if not Dialogic.signal_event.is_connected(_on_dialogic_signal):
 		Dialogic.signal_event.connect(_on_dialogic_signal)
@@ -232,12 +232,12 @@ func start_level_end_dialogue(level_id: int):
 	if EventBus:
 		EventBus.dialogue_started.emit(timeline_name)
 
-	var timeline = Dialogic.start(timeline_name)
-	if timeline:
-		timeline.process_mode = Node.PROCESS_MODE_ALWAYS
-		# Only add as child if it doesn't already have a parent
-		if not timeline.get_parent():
-			add_child(timeline)
+	# Note: Dialogic.start() returns the layout node and automatically adds it to the
+	# scene tree via call_deferred. Do NOT call add_child on the returned node as this
+	# creates a race condition where the node ends up with two parents.
+	var layout = Dialogic.start(timeline_name)
+	if layout:
+		layout.process_mode = Node.PROCESS_MODE_ALWAYS
 	# Connect signals safely - check if already connected to avoid duplicate connections
 	if not Dialogic.signal_event.is_connected(_on_dialogic_signal):
 		Dialogic.signal_event.connect(_on_dialogic_signal)
@@ -538,9 +538,10 @@ func start_final_confrontation():
 
 	dialogue_active = true
 	create_cutscene_post_processing()
-	var timeline = Dialogic.start("final_confrontation")
-	if timeline and not timeline.get_parent():
-		add_child(timeline)
+	# Note: Dialogic.start() returns the layout node and automatically adds it to the
+	# scene tree via call_deferred. Do NOT call add_child on the returned node as this
+	# creates a race condition where the node ends up with two parents.
+	Dialogic.start("final_confrontation")
 	# Connect signals safely - check if already connected to avoid duplicate connections
 	if not Dialogic.signal_event.is_connected(_on_dialogic_signal):
 		Dialogic.signal_event.connect(_on_dialogic_signal)
