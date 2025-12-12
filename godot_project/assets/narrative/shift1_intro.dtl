@@ -1,5 +1,5 @@
 # shift1_intro.dtl
-audio music "res://assets/music/narrative/ambient_exploration_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
+audio music "res://assets/music/narrative/ambient_mysterious_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/nation_of_spud.png" fade="0.0"]
 join narrator [z_index="1"]
 narrator: Welcome to the nation of Spud. A land of [pulse freq=2][color=MEDIUM_VIOLET_RED]prosperity for all potatoes[/color][/pulse]. #id:56
