@@ -104,12 +104,12 @@ func _create_trash_zone(parent: Control) -> void:
 func _connect_signals() -> void:
 	"""Connect to relevant events."""
 	if EventBus:
-		EventBus.strike_changed.connect(_on_strike_changed)
+		EventBus.strike_add_requested.connect(_on_strike_add_requested)
 
 
-func _on_strike_changed(new_strikes: int, reason: String) -> void:
-	"""Handle strike change events - show citation note."""
-	if new_strikes > 0 and not reason.is_empty():
+func _on_strike_add_requested(reason: String, _metadata: Dictionary) -> void:
+	"""Handle strike add requests - show citation note."""
+	if not reason.is_empty():
 		show_citation(reason)
 
 
