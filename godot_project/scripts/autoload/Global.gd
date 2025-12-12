@@ -484,6 +484,8 @@ func capture_narrative_choices():
 		"sasha_investigation",       # committed, hesitant
 		"loyalty_response",          # patriotic, idealistic
 		"hide_choice",               # desk, window
+		"evidence_choice",           # hand_over, keep, lie, chaos
+		"viktor_wife_discovery",     # yes (discovered Viktor's wife on manifest)
 
 		# Shift 6 - RealityScan
 		"fellow_officer_response",   # cautious, sympathetic, loyal
