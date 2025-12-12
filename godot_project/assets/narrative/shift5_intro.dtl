@@ -56,7 +56,7 @@ else:
 
 # Viktor introduction - security guard worried about his missing wife
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="1.5"]
-audio "res://assets/audio/footsteps/Metal Walk 1_2.mp3" [volume="-8.0" bus="SFX"]
+audio "res://assets/audio/footsteps/Metal Walk 1_3.wav" [volume="-8.0" bus="SFX"]
 join viktor [z_index="1"]
 viktor: A burly security guard catches your arm as you pass. His face is lined with worry. #id:b4_viktor1
 viktor: Hey... sorry to bother you. You're one of the customs officers, right? Name's [color=CHARTREUSE]Viktor[/color]. #id:b4_viktor2

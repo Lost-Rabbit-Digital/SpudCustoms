@@ -129,7 +129,7 @@ else:
 # Viktor's moment - if allied earlier
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
 if {viktor_allied} == "yes":
-	audio "res://assets/audio/footsteps/Metal Walk 1_2.mp3" [volume="-8.0" bus="SFX"]
+	audio "res://assets/audio/footsteps/Metal Walk 1_3.wav" [volume="-8.0" bus="SFX"]
 	join viktor [z_index="1"]
 	viktor: He finds you in the chaos. His face is a mask, but his eyes burn. #id:284
 	viktor: They took her to the [color=CRIMSON]processing wing[/color]. Sub-level 3. That's where they took my wife. #id:285
