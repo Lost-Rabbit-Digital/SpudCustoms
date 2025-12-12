@@ -192,8 +192,11 @@ func start_level_dialogue(level_id: int):
 	# Only add as child if it doesn't already have a parent
 	if timeline and not timeline.get_parent():
 		add_child(timeline)
-	Dialogic.signal_event.connect(_on_dialogic_signal)
-	Dialogic.timeline_ended.connect(_on_shift_dialogue_finished)
+	# Connect signals safely - check if already connected to avoid duplicate connections
+	if not Dialogic.signal_event.is_connected(_on_dialogic_signal):
+		Dialogic.signal_event.connect(_on_dialogic_signal)
+	if not Dialogic.timeline_ended.is_connected(_on_shift_dialogue_finished):
+		Dialogic.timeline_ended.connect(_on_shift_dialogue_finished)
 
 
 func start_level_end_dialogue(level_id: int):
@@ -235,13 +238,19 @@ func start_level_end_dialogue(level_id: int):
 		# Only add as child if it doesn't already have a parent
 		if not timeline.get_parent():
 			add_child(timeline)
-	Dialogic.signal_event.connect(_on_dialogic_signal)
-	Dialogic.timeline_ended.connect(_on_end_dialogue_finished)
+	# Connect signals safely - check if already connected to avoid duplicate connections
+	if not Dialogic.signal_event.is_connected(_on_dialogic_signal):
+		Dialogic.signal_event.connect(_on_dialogic_signal)
+	if not Dialogic.timeline_ended.is_connected(_on_end_dialogue_finished):
+		Dialogic.timeline_ended.connect(_on_end_dialogue_finished)
 
 
 func _on_end_dialogue_finished():
 	print("End dialogue finished, calling cleanup")
 	dialogue_active = false
+
+	# Disconnect signals to prevent duplicate connections on next dialogue
+	_disconnect_dialogic_signals()
 
 	cleanup_skip_buttons()
 	cleanup_cutscene_post_processing()
@@ -287,6 +296,18 @@ func cleanup_cutscene_post_processing() -> void:
 		cutscene_post_processing = null
 
 	_cleanup_bloom_pulse()
+
+
+func _disconnect_dialogic_signals() -> void:
+	"""Disconnect Dialogic signals to prevent duplicate connections on next dialogue."""
+	if Dialogic.signal_event.is_connected(_on_dialogic_signal):
+		Dialogic.signal_event.disconnect(_on_dialogic_signal)
+	if Dialogic.timeline_ended.is_connected(_on_shift_dialogue_finished):
+		Dialogic.timeline_ended.disconnect(_on_shift_dialogue_finished)
+	if Dialogic.timeline_ended.is_connected(_on_end_dialogue_finished):
+		Dialogic.timeline_ended.disconnect(_on_end_dialogue_finished)
+	if Dialogic.timeline_ended.is_connected(_on_final_dialogue_finished):
+		Dialogic.timeline_ended.disconnect(_on_final_dialogue_finished)
 
 
 func _create_bloom_pulse() -> void:
@@ -357,6 +378,9 @@ func _on_skip_button_pressed():
 	Dialogic.Audio.stop_all_one_shot_sounds()
 	# End the current timeline
 	Dialogic.end_timeline()
+
+	# Disconnect signals to prevent duplicate connections on next dialogue
+	_disconnect_dialogic_signals()
 
 	# Find and remove the skip button
 	cleanup_skip_buttons()
@@ -515,12 +539,20 @@ func start_final_confrontation():
 	dialogue_active = true
 	create_cutscene_post_processing()
 	var timeline = Dialogic.start("final_confrontation")
-	add_child(timeline)
-	timeline.finished.connect(_on_final_dialogue_finished)
+	if timeline and not timeline.get_parent():
+		add_child(timeline)
+	# Connect signals safely - check if already connected to avoid duplicate connections
+	if not Dialogic.signal_event.is_connected(_on_dialogic_signal):
+		Dialogic.signal_event.connect(_on_dialogic_signal)
+	if not Dialogic.timeline_ended.is_connected(_on_final_dialogue_finished):
+		Dialogic.timeline_ended.connect(_on_final_dialogue_finished)
 
 
 func _on_intro_dialogue_finished():
 	dialogue_active = false
+
+	# Disconnect signals to prevent duplicate connections on next dialogue
+	_disconnect_dialogic_signals()
 
 	# Request to unlock next level via EventBus
 	if EventBus and GameStateManager:
@@ -539,6 +571,9 @@ func _on_shift_dialogue_finished():
 	dialogue_active = false
 	current_shift += 1
 
+	# Disconnect signals to prevent duplicate connections on next dialogue
+	_disconnect_dialogic_signals()
+
 	# Request to unlock next level via EventBus
 	if EventBus and GameStateManager:
 		EventBus.level_unlock_requested.emit(GameStateManager.get_shift() + 1)
@@ -552,6 +587,9 @@ func _on_shift_dialogue_finished():
 
 func _on_final_dialogue_finished():
 	dialogue_active = false
+
+	# Disconnect signals to prevent duplicate connections on next dialogue
+	_disconnect_dialogic_signals()
 
 	# Request to unlock next level via EventBus
 	if EventBus and GameStateManager:
