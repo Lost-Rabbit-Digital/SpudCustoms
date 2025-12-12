@@ -260,6 +260,10 @@ func _send_batched_events() -> void:
 	if _request_in_progress:
 		return
 
+	# Safety check: don't attempt HTTP requests if node is being freed or not in tree
+	if not is_instance_valid(http_request) or not http_request.is_inside_tree():
+		return
+
 	var events_to_send := event_queue.duplicate()
 	event_queue.clear()
 
@@ -747,6 +751,34 @@ func _save_config() -> void:
 # ==================== CLEANUP ====================
 
 
+func _save_session_stats_only() -> void:
+	"""Save session stats to config without attempting HTTP requests.
+	Called during NOTIFICATION_PREDELETE when HTTP is unsafe."""
+	if _config == null:
+		return
+
+	var session_duration := Time.get_unix_time_from_system() - session_start_time
+	_increment_stat("total_playtime", session_duration)
+	_set_stat("last_session_time", Time.get_unix_time_from_system())
+	_save_config()
+
+	if OS.is_debug_build():
+		print("📊 [Session Ended] session_duration_minutes=%.2f | total_events=%d | shifts_completed=%d | potatoes_processed=%d | accuracy_percent=%.2f | strikes_received=%d | cutscene_skip_rate=%.2f" % [
+			session_duration / 60.0,
+			events_this_session,
+			session_metrics.shifts_completed,
+			session_metrics.potatoes_processed,
+			_calculate_accuracy(),
+			session_metrics.strikes_received,
+			_calculate_skip_rate()
+		])
+
+
 func _notification(what: int) -> void:
-	if what == NOTIFICATION_WM_CLOSE_REQUEST or what == NOTIFICATION_PREDELETE:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		# Window close - safe to send final events
 		track_session_end()
+	elif what == NOTIFICATION_PREDELETE:
+		# Node being freed - only save config, don't try HTTP requests
+		# HTTP requests will fail at this point since children are being freed
+		_save_session_stats_only()
