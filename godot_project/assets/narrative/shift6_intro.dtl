@@ -65,7 +65,7 @@ else:
 # Viktor encounter - if player discovered his wife on manifest
 if {viktor_wife_discovery} == "yes":
 	[background arg="res://assets/narrative/checkpoint_corridor.png" fade="1.5"]
-	audio "res://assets/audio/footsteps/Metal Walk 1_2.mp3" [volume="-8.0" bus="SFX"]
+	audio "res://assets/audio/footsteps/Metal Walk 1_3.wav" [volume="-8.0" bus="SFX"]
 	join viktor [z_index="1"]
 	viktor: Viktor finds you during your break. His face is even more haggard than when you last spoke. #id:c7_viktor1
 	viktor: Hey... it's me again. I'm still asking around about Elena. No one will tell me anything. #id:c7_viktor2

@@ -14,7 +14,7 @@ audio "res://assets/audio/stings/threat_reveal.mp3" [volume="-5.0" bus="SFX"]
 leave supervisor_russet
 
 [background arg="res://assets/narrative/checkpoint_interior.png" fade="2.0"]
-audio "res://assets/audio/footsteps/Metal Walk 1_2.mp3" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/footsteps/Metal Walk 1_3.wav" [volume="-5.0" bus="SFX"]
 join supervisor_russet [z_index="1"]
 supervisor_russet: I have a special assignment. We've got intel on [pulse freq=2][color=CRIMSON]troublemakers[/color][/pulse]. Be vigilant with your inspections. #id:7a
 
