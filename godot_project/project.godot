@@ -159,6 +159,7 @@ variables={
 "scanner_response": "none",
 "stay_or_go": "go",
 "viktor_allied": "none",
+"viktor_comfort": "none",
 "viktor_conversation": "none",
 "viktor_wife_discovery": "no",
 "wife_name": "",
