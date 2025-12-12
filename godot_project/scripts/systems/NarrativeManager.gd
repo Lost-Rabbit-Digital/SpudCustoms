@@ -178,6 +178,10 @@ func start_level_dialogue(level_id: int):
 	if dialogue_active:
 		return
 
+	# Ensure counter variables are initialized before starting dialogue
+	# This prevents "Invalid named index" errors when incrementing uninitialized variables
+	_initialize_default_counters({})
+
 	dialogue_active = true
 	var skip_button_layer = create_skip_button()
 	create_cutscene_post_processing()
@@ -219,6 +223,10 @@ func start_level_end_dialogue(level_id: int):
 	if not level_id in LEVEL_END_DIALOGUES:
 		emit_signal("end_dialogue_finished")
 		return
+
+	# Ensure counter variables are initialized before starting dialogue
+	# This prevents "Invalid named index" errors when incrementing uninitialized variables
+	_initialize_default_counters({})
 
 	dialogue_active = true
 	var skip_button_layer = create_skip_button()
@@ -784,8 +792,21 @@ func save_narrative_choices() -> Dictionary:
 	return choices
 
 
+# Default values for counter variables that must be initialized before being incremented
+const DEFAULT_COUNTER_VARIABLES: Dictionary = {
+	"pro_sasha_choice": 0,    # Counter for pro-resistance choices (0-10)
+	"loyalist_points": 0,     # Counter for loyalist choices
+	"chaos_points": 0,        # Counter for chaos agent choices (0-6)
+	"chaos_agent": "no",      # Whether player is on chaos agent path
+}
+
+
 # Load Dialogic variables (narrative choices)
 func load_narrative_choices(choices: Dictionary) -> void:
+	# First, ensure counter variables have default values
+	# This prevents "Invalid named index" errors when incrementing uninitialized variables
+	_initialize_default_counters(choices)
+
 	if choices.is_empty():
 		return
 
@@ -798,6 +819,23 @@ func load_narrative_choices(choices: Dictionary) -> void:
 			EventBus.narrative_choice_made.emit(var_name, choices[var_name])
 
 	print("Loaded ", choices.size(), " narrative choices")
+
+
+func _initialize_default_counters(existing_choices: Dictionary) -> void:
+	"""Initialize counter variables with defaults if not already set.
+
+	This prevents 'Invalid named index' errors when timelines try to
+	increment variables like {pro_sasha_choice} = {pro_sasha_choice} + 1
+	before they've been initialized.
+	"""
+	for var_name in DEFAULT_COUNTER_VARIABLES.keys():
+		# Only initialize if not in existing choices (from save) and not already in Dialogic
+		if not existing_choices.has(var_name):
+			var has_var: bool = Dialogic.VAR.has(var_name) if Dialogic and Dialogic.VAR else false
+			if not has_var:
+				var default_value = DEFAULT_COUNTER_VARIABLES[var_name]
+				Dialogic.VAR.set(var_name, default_value)
+				print("NarrativeManager: Initialized counter '%s' to default value: %s" % [var_name, str(default_value)])
 
 
 ## Clear Dialogic history - called on session restart to prevent buildup

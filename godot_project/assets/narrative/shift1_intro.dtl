@@ -1,4 +1,12 @@
 # shift1_intro.dtl
+
+# Initialize counter variables with default values
+# These track player path through the narrative
+set {pro_sasha_choice} = 0
+set {loyalist_points} = 0
+set {chaos_points} = 0
+set {chaos_agent} = "no"
+
 audio music "res://assets/music/narrative/ambient_exploration_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 [background arg="res://assets/narrative/nation_of_spud.png" fade="0.0"]
 join narrator [z_index="1"]
