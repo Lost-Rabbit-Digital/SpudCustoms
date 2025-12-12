@@ -14,7 +14,7 @@ leave sweet_potato_sasha
 audio "res://assets/audio/mechanical/Metal Old Door A.wav" [volume="-8.0" bus="SFX"]
 join supervisor_russet [z_index="1"]
 supervisor_russet: Your next applicant is waiting. Check those stamps carefully! Any [color=YELLOW]suspicious behavior[/color] is to be reported. #id:65
-audio "res://assets/audio/mechanical/button pressed 2.mp3" [volume="-5.0" bus="SFX"]
+audio "res://assets/audio/mechanical/button assorted 2.wav" [volume="-5.0" bus="SFX"]
 supervisor_russet: Remember, a [color=DARK_ORANGE]dutiful officer[/color] has nothing to fear. Those who abandon their duty abandon their roots. #id:66
 leave supervisor_russet
 

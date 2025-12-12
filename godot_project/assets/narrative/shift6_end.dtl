@@ -59,7 +59,7 @@ set {scanner_choice} = "none"
 
 if {scanner_choice} == "help":
 	[background arg="res://assets/narrative/checkpoint_booth_night.png" fade="0.5"]
-	audio "res://assets/audio/mechanical/button pressed 1.mp3" [volume="-5.0" bus="SFX"]
+	audio "res://assets/audio/mechanical/button pressed 1.wav" [volume="-5.0" bus="SFX"]
 	join player_character [z_index="1"]
 	player_character: You tap the scanner, frown, tap it again. "Blasted thing's acting up. Go on through." #id:24f
 	join resistance_member_1 [z_index="1"]
@@ -81,7 +81,7 @@ elif {scanner_choice} == "viktor":
 	set {viktor_allied} = "yes"
 else:
 	[background arg="res://assets/narrative/checkpoint_booth_night.png" fade="0.5"]
-	audio "res://assets/audio/mechanical/button pressed 2.mp3" [volume="-5.0" bus="SFX"]
+	audio "res://assets/audio/mechanical/button assorted 2.wav" [volume="-5.0" bus="SFX"]
 	audio "res://assets/audio/stings/alarm_distant.mp3" [volume="-8.0" bus="SFX"]
 	join player_character [z_index="1"]
 	player_character: You run the scan. The machine [color=RED]blares[/color]. "Forged documentation detected." #id:254
