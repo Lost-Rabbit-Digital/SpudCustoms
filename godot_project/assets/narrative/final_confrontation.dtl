@@ -235,8 +235,8 @@ if {murphy_alliance} == "ally":
 	[background arg="res://assets/narrative/murphy_recognition.png" fade="0.8"]
 	audio music "res://assets/music/narrative/sasha_theme_main.mp3" [fade="2.0" volume="-8.0" bus="Music"]
 	join murphy [z_index="1"]
-	murphy: [color=STEEL_BLUE]Murphy steps forward, face pale, eyes fixed on something. His hand moves to his own forearm, touching a faded tattoo.[/color] #id:murphy_sac_020
-	murphy: [wave amp=15 freq=2]His voice cracks.[/wave] "The roots grow deep." We got matching tattoos. Me and Tommy. Said we'd always have each other's backs. #id:murphy_sac_021
+	murphy: [color=STEEL_BLUE]Murphy steps forward, face pale, eyes fixed on something. His hand moves to his own forearm, touching a faded tattoo—a small potato with three roots reaching down.[/color] #id:murphy_sac_020
+	murphy: [wave amp=15 freq=2]His voice cracks.[/wave] Matching tattoos. Me and Tommy. A spud with roots. Said we'd always stay grounded, no matter what. #id:murphy_sac_021
 	leave murphy
 
 	join player_character [z_index="1"]

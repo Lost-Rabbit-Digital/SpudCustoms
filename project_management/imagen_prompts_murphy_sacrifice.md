@@ -82,11 +82,13 @@ each face telling a story of fear.
 ```
 Close-up portrait of Murphy: male anthropomorphic potato in worn olive security
 uniform, face pale with dawning realization. His hand touching a faded tattoo
-on his forearm reading "The roots grow deep" in simple script. Eyes fixed on
-something off-screen (the monster). Tears beginning to form. Soft focus
+on his forearm—a simple symbol of a potato with three roots extending downward.
+Eyes fixed on something off-screen (the monster). Tears beginning to form. Soft focus
 background showing purple glow and chaos. Style: intimate emotional moment
 amid horror, shallow depth of field, the weight of recognition.
 ```
+
+**Tattoo Symbol:** A small potato silhouette with three curved roots extending down - represents "staying grounded" and family bonds. Simple enough for a small tattoo, iconic enough to be recognizable.
 
 ---
 
