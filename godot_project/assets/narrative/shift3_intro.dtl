@@ -37,6 +37,7 @@ else:
 audio music "res://assets/music/ambient_vol3_sad_decisions_main.mp3" [fade="1.5" volume="-5.0" bus="Music"]
 audio "res://assets/audio/stings/dread_chord.mp3" [volume="-5.0" bus="SFX"]
 join npc_3 [z_index="1"]
+npc_3: Say... you look just like my brother. #id:7f0
 npc_3: [color=STEEL_BLUE]Please, I beg you![/color] My wife - her name is [color=GOLD]Maris[/color] - she was supposed to be right behind me. #id:7f
 npc_3: She [tornado radius=2 freq=3]never made it through customs[/tornado]. They said her papers had an "irregularity." #id:7fb
 npc_3: No one will tell me what happened to her. Please, [color=CHARTREUSE]help me find her![/color] #id:80
