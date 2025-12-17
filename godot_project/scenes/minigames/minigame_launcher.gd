@@ -20,6 +20,7 @@ const MINIGAMES = {
 	"code_breaker": preload("res://scenes/minigames/games/code_breaker/code_breaker.tscn"),
 	"border_chase": preload("res://scenes/minigames/games/border_chase/border_chase.tscn"),
 	"quick_time_event": preload("res://scenes/minigames/games/quick_time_event/quick_time_event.tscn"),
+	"evidence_destruction": preload("res://scenes/minigames/games/evidence_destruction/evidence_destruction.tscn"),
 }
 
 ## Shift requirements to unlock each minigame
@@ -30,6 +31,7 @@ const MINIGAME_UNLOCK_SHIFTS = {
 	"code_breaker": 4,      # Unlocks at Shift 4
 	"border_chase": 5,      # Unlocks at Shift 5
 	"quick_time_event": 8,  # Unlocks at Shift 8 for narrative transitions
+	"evidence_destruction": 9,  # Shift 9 narrative minigame - replaces standard gameplay
 }
 
 ## Currently active minigame instance

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect width="128" height="128" fill="#228B22" rx="4"/>
+  <rect x="8" y="8" width="112" height="112" fill="#2a2a2a" rx="2"/>
+  <text x="64" y="55" font-family="monospace" font-size="10" fill="#90EE90" text-anchor="middle">SAFE</text>
+  <text x="64" y="75" font-family="monospace" font-size="8" fill="#ffffff" text-anchor="middle">Pay</text>
+  <text x="64" y="88" font-family="monospace" font-size="8" fill="#ffffff" text-anchor="middle">Stub</text>
+</svg>

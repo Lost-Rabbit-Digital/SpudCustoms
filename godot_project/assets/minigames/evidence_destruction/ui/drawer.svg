@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 200 150">
+  <rect width="200" height="150" fill="#8B4513" rx="8"/>
+  <rect x="10" y="10" width="180" height="130" fill="#5D3A1A" rx="4"/>
+  <rect x="80" y="60" width="40" height="10" fill="#3a3a3a" rx="2"/>
+  <text x="100" y="95" font-family="monospace" font-size="14" fill="#90EE90" text-anchor="middle">DRAWER</text>
+  <text x="100" y="115" font-family="monospace" font-size="10" fill="#888888" text-anchor="middle">[STASH]</text>
+</svg>
