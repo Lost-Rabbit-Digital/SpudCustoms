@@ -354,12 +354,20 @@ func create_skip_button():
 	var skip_button = Button.new()
 	skip_button.text = "Skip"
 	skip_button.custom_minimum_size = Vector2(50, 30)
-	skip_button.position = Vector2(1150, 8)  # Top-right corner
+
+	# Use anchor-based positioning to place button in top-right corner
+	# This matches how the History button is positioned in the Dialogic layout
+	skip_button.set_anchors_preset(Control.PRESET_TOP_RIGHT)
+	skip_button.offset_left = -131  # Position to the left of History button
+	skip_button.offset_top = 7
+	skip_button.offset_right = -81
+	skip_button.offset_bottom = 38
 
 	skip_button.connect("pressed", Callable(self, "_on_skip_button_pressed"))
 
 	canvas.add_child(skip_button)
-	add_child(canvas)
+	# Add to root viewport to ensure consistent rendering with Dialogic's layout
+	get_tree().root.add_child(canvas)
 
 	# Add to a dedicated group for easy finding/removal
 	canvas.add_to_group("DialogueSkipButtons")
