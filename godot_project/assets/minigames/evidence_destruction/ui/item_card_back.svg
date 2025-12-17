@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect width="128" height="128" fill="#C4A574" rx="4"/>
+  <rect x="4" y="4" width="120" height="120" fill="#B8956E" rx="2"/>
+  <!-- Manila folder look -->
+  <rect x="8" y="8" width="112" height="112" fill="#D4B896" rx="1"/>
+  <!-- Question mark -->
+  <text x="64" y="78" font-family="serif" font-size="48" fill="#8B7355" text-anchor="middle" font-weight="bold">?</text>
+  <!-- Folder tab -->
+  <rect x="40" y="4" width="48" height="12" fill="#C4A574" rx="2"/>
+</svg>

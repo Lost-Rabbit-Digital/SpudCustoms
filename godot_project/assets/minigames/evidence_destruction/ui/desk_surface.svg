@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#5D4E37"/>
+  <rect x="50" y="50" width="700" height="500" fill="#3d5c3d" rx="4"/>
+  <!-- Wood grain hints -->
+  <line x1="0" y1="100" x2="800" y2="100" stroke="#4a3f2a" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="250" x2="800" y2="250" stroke="#4a3f2a" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#4a3f2a" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="550" x2="800" y2="550" stroke="#4a3f2a" stroke-width="1" opacity="0.3"/>
+  <!-- Coffee ring stain -->
+  <circle cx="650" cy="150" r="30" fill="none" stroke="#3a2a1a" stroke-width="3" opacity="0.4"/>
+  <text x="400" y="300" font-family="monospace" font-size="24" fill="#888888" text-anchor="middle">DESK SURFACE</text>
+</svg>

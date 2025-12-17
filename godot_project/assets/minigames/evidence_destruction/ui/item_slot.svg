@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect width="128" height="128" fill="#3d3d3d" rx="4"/>
+  <rect x="4" y="4" width="120" height="120" fill="#2a2a2a" rx="2" stroke="#555555" stroke-width="2"/>
+  <text x="64" y="68" font-family="monospace" font-size="10" fill="#666666" text-anchor="middle">ITEM SLOT</text>
+</svg>

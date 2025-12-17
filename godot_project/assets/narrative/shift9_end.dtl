@@ -15,16 +15,50 @@ if {stay_or_go} == "stay":
 	join supervisor_russet [z_index="1"]
 	supervisor_russet: "The [color=CRIMSON]terrorist attack[/color] has been repelled! The ringleaders are being [color=DARK_VIOLET]processed[/color] as we speak." #id:132
 	leave supervisor_russet
+
+	# If player was under suspicion from the desk inspection, face additional scrutiny
+	if {under_suspicion} == "yes":
+		[background arg="res://assets/narrative/interrogation.png" fade="1.5"]
+		audio "res://assets/audio/stings/threat_reveal.mp3" [volume="-5.0" bus="SFX"]
+		join security_chief [z_index="1"]
+		security_chief: [color=RED]Not so fast.[/color] Chief Yukon steps in front of you. About those materials we found at your desk... #id:s9e_suspicion_001
+		security_chief: The attack is over. Now we have time to [pulse freq=2][color=CRIMSON]properly investigate[/color][/pulse]. Come with me. #id:s9e_suspicion_002
+		leave security_chief
+
+		join player_character [z_index="1"]
+		player_character: [color=STEEL_BLUE]My blood runs cold.[/color] I stayed to survive, but now I might face the same fate as Sasha. #id:s9e_suspicion_003
+		leave player_character
+
+		[background arg="res://assets/narrative/interrogation.png" fade="1.0"]
+		join security_chief [z_index="1"]
+		security_chief: [color=YELLOW]Hours of interrogation later...[/color] Your story checks out. Barely. But we'll be watching. #id:s9e_suspicion_004
+		security_chief: One more incident and you'll be joining the [color=DARK_VIOLET]special batch[/color]. Understood? #id:s9e_suspicion_005
+		leave security_chief
+
+		join player_character [z_index="1"]
+		player_character: [color=STEEL_BLUE]I nod, hollow inside.[/color] I survived the interrogation, but I'm marked now. Every move watched. #id:s9e_suspicion_006
+		leave player_character
+		[background arg="res://assets/narrative/loyalist_outcome.png" fade="1.5"]
+
 	[background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
 	join security_chief [z_index="1"]
 	security_chief: Chief Yukon drags in resistance members in chains, Sasha among them. "These [color=CRIMSON]traitors[/color] will face [color=DARK_VIOLET]final processing[/color]." #id:133
 	sweet_potato_sasha: Sasha catches your eye. Despite her bruises, her gaze holds [wave amp=15 freq=2][color=CHARTREUSE]no judgment, only sadness[/color][/wave]. #id:134
 
+	if {under_suspicion} == "yes":
+		sweet_potato_sasha: [color=STEEL_BLUE]She sees the fear in your eyes - the mark of interrogation.[/color] Her expression shifts to something like pity. #id:s9e_suspicion_007
+	elif {under_suspicion} == "mild":
+		sweet_potato_sasha: [color=STEEL_BLUE]Her eyes search yours, looking for some sign of the person she thought she knew.[/color] #id:s9e_suspicion_008
+
 	leave security_chief
 	[background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
-	join player_character [z_index="1"] 
-	player_character: I've survived by keeping my head down, but [pulse freq=3][color=GOLD]at what cost?[/color][/pulse] As [color=DARK_VIOLET]Root Reserve[/color] production wafts from the plant, my stomach turns. #id:135
-	player_character: Perhaps there's still a chance from the inside. Or maybe I'm just easing my conscience. #id:136
+	join player_character [z_index="1"]
+	if {under_suspicion} == "yes":
+		player_character: I've survived - [color=CRIMSON]barely[/color]. Kept my head down while they took everyone I cared about. Now I'm a marked potato, living on borrowed time. #id:s9e_suspicion_009
+		player_character: [pulse freq=3][color=GOLD]Was it worth it?[/color][/pulse] The smell of [color=DARK_VIOLET]Root Reserve[/color] processing answers that question. #id:s9e_suspicion_010
+	else:
+		player_character: I've survived by keeping my head down, but [pulse freq=3][color=GOLD]at what cost?[/color][/pulse] As [color=DARK_VIOLET]Root Reserve[/color] production wafts from the plant, my stomach turns. #id:135
+		player_character: Perhaps there's still a chance from the inside. Or maybe I'm just easing my conscience. #id:136
 	leave player_character
 if {stay_or_go} == "go":
 	audio music "res://assets/music/narrative/metal_violence_main.mp3" [fade="1.0" volume="-5.0" bus="Music"]
