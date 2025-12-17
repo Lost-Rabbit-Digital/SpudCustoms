@@ -577,10 +577,10 @@ func _on_desk_cleared() -> void:
 
 	# Set Dialogic variable for narrative branching
 	if Dialogic and Dialogic.VAR:
-		Dialogic.VAR.set_variable("inspection_result", inspection_result)
-		Dialogic.VAR.set_variable("evidence_found", evidence_found.size() > 0)
+		Dialogic.VAR.set("inspection_result", inspection_result)
+		Dialogic.VAR.set("evidence_found", evidence_found.size() > 0)
 		if evidence_found.size() > 0:
-			Dialogic.VAR.set_variable("evidence_found_type", evidence_found[0])
+			Dialogic.VAR.set("evidence_found_type", evidence_found[0])
 
 	# Complete with results
 	complete_success(0, {
@@ -612,8 +612,8 @@ func _on_time_up() -> void:
 
 	# Set Dialogic variables
 	if Dialogic and Dialogic.VAR:
-		Dialogic.VAR.set_variable("inspection_result", inspection_result)
-		Dialogic.VAR.set_variable("evidence_found", all_evidence.size() > 0)
+		Dialogic.VAR.set("inspection_result", inspection_result)
+		Dialogic.VAR.set("evidence_found", all_evidence.size() > 0)
 
 	# Override parent behavior - we want specific handling
 	_result.success = false

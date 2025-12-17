@@ -64,7 +64,7 @@ func should_appear() -> bool:
 		if not Dialogic or not Dialogic.VAR:
 			return false
 
-		var current_value = Dialogic.VAR.get_variable(required_variable)
+		var current_value = Dialogic.VAR.get(required_variable)
 
 		# Numeric comparison
 		if required_min_value >= 0:
