@@ -33,6 +33,10 @@ const STREAK_MINIGAME_CHANCE: float = 0.4  # 40% chance at milestone
 const PERFECT_STAMP_MINIGAME_THRESHOLD: int = 3
 const PERFECT_STAMP_MINIGAME_CHANCE: float = 0.5  # 50% chance after 3 perfect stamps
 
+# Narrative-only shifts: These shifts skip regular potato processing gameplay
+# and go directly from intro dialogue to end dialogue (climactic story moments)
+const NARRATIVE_ONLY_SHIFTS: Array[int] = [9, 10]
+
 
 ## Returns the maximum number of minigames allowed for the current shift.
 ## Scales with game progression: early shifts get fewer, later shifts get more.
@@ -2435,6 +2439,14 @@ func enable_controls():
 
 
 func _on_intro_dialogue_finished():
+	# Check if this is a narrative-only shift (skip gameplay, go directly to end dialogue)
+	var current_shift: int = GameStateManager.get_shift() if GameStateManager else Global.shift
+	if current_shift in NARRATIVE_ONLY_SHIFTS:
+		print("[MainGame] Shift %d is narrative-only, skipping gameplay" % current_shift)
+		# Go directly to end dialogue without any gameplay
+		_start_narrative_only_end_dialogue()
+		return
+
 	# Enable all game systems
 	enable_controls()
 	is_game_paused = false
@@ -2458,6 +2470,41 @@ func _on_intro_dialogue_finished():
 
 	# Show any pending unlock notifications after a short delay
 	_show_pending_unlock_notifications()
+
+
+## Handle narrative-only shifts by going directly to end dialogue
+## These are climactic story moments (shifts 9, 10) that skip regular gameplay
+func _start_narrative_only_end_dialogue() -> void:
+	var current_shift_id: int = GameStateManager.get_shift() if GameStateManager else Global.shift
+
+	# For shift 10 (final confrontation), use the special handler
+	if current_shift_id == 10:
+		narrative_manager.start_final_confrontation()
+		await narrative_manager.dialogue_finished
+		# Final confrontation handles its own ending via signals
+		return
+
+	# For other narrative-only shifts (like shift 9), start end dialogue
+	narrative_manager.start_level_end_dialogue(current_shift_id)
+	await narrative_manager.end_dialogue_finished
+
+	# Create minimal stats for the summary screen (no gameplay occurred)
+	var stats_dict: Dictionary = {
+		"base_score": 0,
+		"time_bonus": 0,
+		"accuracy_bonus": 0,
+		"perfect_hit_bonus": 0,
+		"final_score": GameStateManager.get_score() if GameStateManager else Global.score,
+		"quota_met": 0,
+		"quota_target": 0,
+		"strikes": 0,
+		"max_strikes": GameStateManager.get_max_strikes() if GameStateManager else Global.max_strikes,
+		"success": true,
+		"narrative_only": true  # Flag to indicate this was a narrative-only shift
+	}
+
+	# Show the summary screen
+	_show_shift_summary_screen(stats_dict)
 
 
 func _on_end_dialogue_finished():
