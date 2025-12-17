@@ -184,6 +184,10 @@ func start_level_dialogue(level_id: int):
 
 	var timeline_name = LEVEL_DIALOGUES.get(level_id, "generic_shift_start")
 
+	# Initialize shift-specific variables with defaults before timeline starts
+	# This prevents "Invalid named index" errors from uninitialized variables
+	_initialize_shift_variables(level_id)
+
 	# REFACTORED: Emit dialogue started event
 	if EventBus:
 		EventBus.dialogue_started.emit(timeline_name)
@@ -227,6 +231,10 @@ func start_level_end_dialogue(level_id: int):
 	var skip_button_layer = create_skip_button()
 	create_cutscene_post_processing()
 	var timeline_name = LEVEL_END_DIALOGUES.get(level_id, "generic_shift_start")
+
+	# Initialize shift-specific variables with defaults before timeline starts
+	# This prevents "Invalid named index" errors from uninitialized variables
+	_initialize_shift_variables(level_id)
 
 	# REFACTORED: Emit dialogue started event
 	if EventBus:
@@ -547,6 +555,15 @@ func _launch_evidence_destruction() -> void:
 	- evidence_found: true/false
 	- evidence_found_type: ID of first evidence found (if any)
 	"""
+	# Initialize variables with defaults BEFORE launching minigame
+	# This prevents "Invalid named index" errors if the timeline continues
+	# before the minigame completes or if the minigame is skipped
+	if Dialogic and Dialogic.VAR:
+		Dialogic.VAR.set("inspection_result", "clean")
+		Dialogic.VAR.set("evidence_found", false)
+		Dialogic.VAR.set("under_suspicion", "no")
+		print("[NarrativeManager] Initialized evidence destruction variables with defaults")
+
 	if EventBus:
 		var config: Dictionary = {
 			"force_launch": true,  # Always launch regardless of shift unlock
@@ -793,6 +810,26 @@ func fade_transition(fade_in: bool, callback: Callable):
 	)
 
 
+## Initialize shift-specific variables with safe defaults before timeline starts
+## This prevents "Invalid named index" errors when timelines check variables
+## that might not have been set yet (e.g., minigame results, conditional branches)
+func _initialize_shift_variables(level_id: int) -> void:
+	if not Dialogic or not Dialogic.VAR:
+		return
+
+	match level_id:
+		9:  # Shift 9 - Evidence Destruction & Attack
+			# These variables are used in shift9_intro and shift9_end
+			# Initialize with "clean/no" defaults - minigame will override if played
+			if not Dialogic.VAR.has("inspection_result"):
+				Dialogic.VAR.set("inspection_result", "clean")
+			if not Dialogic.VAR.has("evidence_found"):
+				Dialogic.VAR.set("evidence_found", false)
+			if not Dialogic.VAR.has("under_suspicion"):
+				Dialogic.VAR.set("under_suspicion", "no")
+			print("[NarrativeManager] Initialized Shift 9 variables with defaults")
+
+
 # Save all Dialogic variables (narrative choices)
 func save_narrative_choices() -> Dictionary:
 	var choices = {}
@@ -858,7 +895,10 @@ func save_narrative_choices() -> Dictionary:
 		"murphy_final_alliance",     # committed, hesitant
 
 		# Shift 9 - The Attack
-		"critical_choice",           # help, betray
+		"inspection_result",         # clean, suspicious, compromised (from evidence_destruction minigame)
+		"evidence_found",            # true, false (from evidence_destruction minigame)
+		"under_suspicion",           # yes, mild, no (set after inspection)
+		"critical_choice",           # help, betray, chaos
 		"stay_or_go",                # stay, go
 		"sasha_rescue_reaction",     # angry, disgusted, relieved
 
