@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://cwks4tbpoq3n5"]
+[gd_scene load_steps=61 format=3 uid="uid://cwks4tbpoq3n5"]
 
 [ext_resource type="Script" uid="uid://dweiain6vxa6t" path="res://scenes/game_scene/mainGame.gd" id="1_ado42"]
 [ext_resource type="PackedScene" uid="uid://1mf0og1h885p" path="res://scripts/systems/BorderRunnerSystem.tscn" id="2_4eqo0"]
@@ -238,23 +238,21 @@ offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
 [node name="DateLabel" type="Label" parent="UI/Labels"]
-visible = true
-z_index = 2
+z_index = 4
 z_as_relative = false
 texture_filter = 1
 texture_repeat = 1
 layout_mode = 0
-offset_left = 25.0
-offset_top = 665.0
-offset_right = 200.0
-offset_bottom = 715.0
+offset_left = 68.0
+offset_top = 646.0
+offset_right = 243.0
+offset_bottom = 696.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("8_ybo26")
 theme_override_font_sizes/font_size = 32
-text = "2024.12.26"
-horizontal_alignment = 0
+text = "2024.01.10"
 vertical_alignment = 1
 
 [node name="JudgementLabel" type="Label" parent="UI/Labels"]
@@ -285,7 +283,7 @@ offset_left = 867.0
 offset_top = 15.0
 offset_right = 1091.0
 offset_bottom = 65.0
-theme_override_colors/font_color = Color(1.0, 0.45, 0.4, 1)
+theme_override_colors/font_color = Color(1, 0.45, 0.4, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("8_ybo26")
@@ -730,7 +728,7 @@ unique_name_in_owner = true
 curve = SubResource("Curve2D_x3wa3")
 
 [connection signal="timeout" from="SystemManagers/Timers/MegaphoneFlashTimer" to="." method="_on_megaphone_flash_timer_timeout"]
-[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SystemManagers/Timers/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SystemManagers/Timers/AlertTimer" to="." method="_on_bulletin_flash_timer_timeout"]
 [connection signal="pressed" from="Gameplay/InteractiveElements/Megaphone/MegaphoneInteractionButton" to="." method="_on_megaphone_interaction_button_pressed"]
