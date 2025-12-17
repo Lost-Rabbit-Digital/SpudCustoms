@@ -6,7 +6,7 @@ My son Kobi was born 25 weeks premature in late November 2023, weighing barely 1
 
 Now, over a year later, he's grown from 1 pound to over 20 pounds. Last week he graduated from the NICU to the PICU - still waiting for his lungs to be strong enough for a home ventilator so we can finally go home. In the quiet hours between visits, I've been working to bring Spud Customs closer to the vision I had before life took an unexpected turn.
 
-A lot of the new content reflects feelings that mirror my experiences - Viktor's rooftop grief, Murphy's sacrifice, the old lesbian couple's erasure, the impact of thoughtless acts of hatred performed as social norm, and the helplessness in the face of disaster. I watch every recording that pops up online, and I'm grateful to each of you who've taken the time to experience this strange little world.
+A lot of the new content reflects feelings that mirror my experiences - Viktor's rooftop grief, Murphy's sacrifice, the old queer couple's erasure, the negative impact of thoughtless acts performed as social norm, and the helplessness in face of waves of ongoing disasters. I watch every recording that pops up online, and I'm grateful to each of you who've taken the time to experience this strange little world.
 
 Over 2,000 people have played Spud Customs and joined us on this journey. Thank you for your feedback, your patience, and your interest in our little story of potato redemption.
 
