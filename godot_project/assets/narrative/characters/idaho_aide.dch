@@ -1,0 +1,42 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "190",
+&"color": Color(0.6, 0.6, 0.7, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "default",
+"sound_moods": {
+"default": {
+"mode": 1,
+"name": "default",
+"pitch_base": 1.1,
+"pitch_variance": 0.05,
+"skip_characters": 2,
+"sound_path": "res://assets/audio/chatter/generic/",
+"volume_base": -8.0,
+"volume_variance": 1.0
+}
+},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "IdahoAide",
+&"description": "A nervous bureaucratic aide to Prime Minister Idaho. Shows moments of moral hesitation that Idaho dismisses.",
+&"display_name": "Idaho's Aide",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"IdahoAide": {
+"export_overrides": {
+"image": "\"res://assets/narrative/characters/idaho_aide.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 1.0
+}

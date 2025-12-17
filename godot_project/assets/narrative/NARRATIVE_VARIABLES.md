@@ -29,6 +29,16 @@ All variables below should be persisted when saving game state and restored when
 | `murphy_trust` | shift2_end | "open", "guarded" | shift4_end | Initial conversation with Murphy |
 | `murphy_alliance` | shift4_end | "ally", "cautious", "skeptical", "hostile" | shift6_end, shift7_end, shift8_end, final | Whether Murphy is an ally (hostile = loyalist rejection) |
 | `murphy_final_alliance` | shift8_end | "committed", "hesitant" | shift9_intro | Murphy's commitment before the attack |
+| `murphy_farewell` | final_confrontation | "desperate", "pleading", "shock" | final_confrontation | Player's reaction when Murphy walks toward the Amalgam |
+| `murphy_memorial` | final_confrontation | "honor", "grief", "determined", "numb" | final_confrontation | Player's response after Murphy's sacrifice |
+
+**Murphy's Sacrifice Sequence** (triggers if `murphy_alliance == "ally"`):
+- Idaho releases "Protocol HARVEST" - The Amalgam monster emerges
+- Murphy recognizes his cousin Tommy was distilled into the RR-UTIL-7 canister he's been carrying
+- Player is restrained by resistance members while Murphy sacrifices himself
+- Murphy's sacrifice wounds but doesn't kill the monster
+- Chain reaction of Extra Distilled tanks brings down the refinery tower
+- "Tommy started the fire. The lost ones finished it."
 
 ### Viktor (Guard) Arc
 
@@ -164,6 +174,31 @@ All variables below should be persisted when saving game state and restored when
 | `loyalist_end_hope.png` | loyalist_ending | Hopeful ending - player leaves yellow mark |
 | `loyalist_final.png` | loyalist_ending | Final scene for loyalist path |
 
+### Murphy's Sacrifice Sequence (High Priority - Protocol HARVEST)
+
+| Filename | Scene | Description |
+|----------|-------|-------------|
+| `idaho_bunker_monitors.png` | final_confrontation | Idaho in bunker watching security feeds, finger on Protocol HARVEST button |
+| `amalgam_emergence.png` | final_confrontation | Floor exploding upward, tendrils reaching from Sub-Level 3 |
+| `amalgam_reveal.png` | final_confrontation | HERO SHOT - The Amalgam fully revealed, frozen faces in its mass |
+| `team_horror.png` | final_confrontation | Resistance fighters reacting in terror to the monster |
+| `murphy_recognition.png` | final_confrontation | Murphy touching his "roots grow deep" tattoo, dawning realization |
+| `murphy_canister.png` | final_confrontation | Murphy's hands holding RR-UTIL-7 canister - Tommy in a can |
+| `amalgam_advance.png` | final_confrontation | The Amalgam lurching forward, blocking path to Idaho |
+| `player_restrained.png` | final_confrontation | POV shot - player's arms held back, Murphy walking away |
+| `murphy_stand.png` | final_confrontation | Wide shot - Murphy alone facing massive monster (Kong parallel) |
+| `murphy_arms_spread.png` | final_confrontation | ICONIC - Murphy arms spread, canister raised, facing the Amalgam |
+| `murphy_sacrifice_explosion.png` | final_confrontation | Murphy hurling canister, initial explosion beginning |
+| `purple_explosion.png` | final_confrontation | Full Extra Distilled detonation, Murphy silhouetted |
+| `amalgam_wounded.png` | final_confrontation | Monster still standing but burning - sacrifice wasn't enough |
+| `chain_reaction.png` | final_confrontation | Burning Amalgam crashing into refinery tanks |
+| `tower_collapse.png` | final_confrontation | Refinery tower collapsing onto the Amalgam |
+| `massive_explosion.png` | final_confrontation | HERO EXPLOSION - All tanks detonating, dawn breaking through |
+| `aftermath_rubble.png` | final_confrontation | Quiet aftermath, smoking rubble, path to Idaho clear |
+
+**Reference:** Kong: Skull Island (2017) - Cole's sacrifice scene
+**See:** `project_management/imagen_prompts_murphy_sacrifice.md` for detailed generation prompts
+
 ### Lower Priority (Polish)
 
 | Filename | Scene | Description |
@@ -171,6 +206,7 @@ All variables below should be persisted when saving game state and restored when
 | `root_reserve_can_closeup.png` | various | Disturbing close-up of Root Reserve can/label |
 | `murphy_breakdown.png` | shift4_end | Murphy emotional in storage room |
 | `viktor_portrait.png` | shift6_end | Guard Viktor's haunted face |
+| `idaho_aide.png` | final_confrontation | Nervous bureaucratic aide to Idaho (character portrait) |
 
 ---
 
