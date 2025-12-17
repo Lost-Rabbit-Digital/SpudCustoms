@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Schauen Sie auf das Feld 'Land'. Wenn es 'Chip Hill' 
 rule_explanation_age,Schauen Sie auf das Feld 'Geburtsdatum'. Berechnen Sie das Alter und prüfen Sie gegen die Regel
 rule_explanation_gender,Schauen Sie auf das Feld 'Geschlecht' und prüfen Sie gegen die aktuelle Regel
 rule_footer_text,Diese Regeln müssen für ALLE Kartoffeln durchgesetzt werden
+rule_expired_note,Abgelaufene Dokumente müssen IMMER abgelehnt werden.
 rule_tutorial_hint,Brauchen Sie Hilfe? Klicken Sie auf eine Regel für eine Erklärung
 alert_correct_decision_detailed,RICHTIGE ENTSCHEIDUNG! +{points} Punkte\n{reason}
 alert_wrong_decision_detailed,FALSCHE ENTSCHEIDUNG! Strike hinzugefügt!\n{reason}

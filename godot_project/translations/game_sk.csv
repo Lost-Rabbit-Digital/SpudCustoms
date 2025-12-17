@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Pozrite sa na pole 'Krajina'. Ak hovorí 'Chip Hill' 
 rule_explanation_age,Pozrite sa na pole 'Dátum narodenia'. Vypočítajte vek a skontrolujte podľa pravidla
 rule_explanation_gender,Pozrite sa na pole 'Pohlavie' a skontrolujte podľa aktuálneho pravidla
 rule_footer_text,Tieto pravidlá sa musia presadzovať pre VŠETKY zemiaky
+rule_expired_note,Dokumenty s uplynulou platnosťou musia byť VŽDY odmietnuté.
 rule_tutorial_hint,Ai nevoie de ajutor? Faceți clic pe orice regulă pentru o explicație
 alert_correct_decision_detailed,SPRÁVNE ROZHODNUTIE! +{points} bodov\n{reason}
 alert_wrong_decision_detailed,ZLÉ ROZHODNUTIE! Strike pridaný!\n{reason}

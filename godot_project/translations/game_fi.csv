@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Katso 'Maa' kenttää. Jos se sanoo 'Chip Hill' - HYL
 rule_explanation_age,Katso 'Syntymäaika' kenttää. Laske ikä ja tarkista sääntöä vastaan
 rule_explanation_gender,Katso 'Sukupuoli' kenttää ja tarkista nykyistä sääntöä vastaan
 rule_footer_text,Nämä säännöt on pakko panna täytäntöön KAIKILLE perunoille
+rule_expired_note,Vanhentuneet asiakirjat on AINA hylättävä.
 rule_tutorial_hint,Tarvitsetko apua? Napsauta mitä tahansa sääntöä selitystä varten
 alert_correct_decision_detailed,OIKEA PÄÄTÖS! +{points} pistettä\n{reason}
 alert_wrong_decision_detailed,VÄÄRÄ PÄÄTÖS! Isku lisätty!\n{reason}

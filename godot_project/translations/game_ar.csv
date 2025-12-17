@@ -34,6 +34,7 @@ rule_explanation_chip_hill,"انظر إلى حقل ""البلد"". إذا كان
 rule_explanation_age,"انظر إلى حقل ""تاريخ الميلاد"". احسب العمر وتحقق من مطابقته للقاعدة"
 rule_explanation_gender,"انظر إلى حقل ""الجنس"" وتحقق من مطابقته للقاعدة الحالية"
 rule_footer_text,يجب تطبيق هذه القواعد على جميع البطاطا
+rule_expired_note,يجب رفض الوثائق منتهية الصلاحية دائماً.
 rule_tutorial_hint,هل تحتاج مساعدة؟ انقر على أي قاعدة للحصول على شرح
 alert_correct_decision_detailed,قرار صحيح! +{points} نقطة\n{reason}
 alert_wrong_decision_detailed,قرار خاطئ! تمت إضافة ضربة!\n{reason}

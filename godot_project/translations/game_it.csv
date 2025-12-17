@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Guarda il campo 'Paese'. Se dice 'Chip Hill' - RIFIUT
 rule_explanation_age,Guarda il campo 'Data di Nascita'. Calcola l'età e controlla contro la regola
 rule_explanation_gender,Guarda il campo 'Genere' e controlla contro la regola attuale
 rule_footer_text,Queste regole devono essere applicate per TUTTE le patate
+rule_expired_note,I documenti scaduti devono SEMPRE essere rifiutati.
 rule_tutorial_hint,Hai bisogno di aiuto? Clicca su qualsiasi regola per una spiegazione
 alert_correct_decision_detailed,DECISIONE CORRETTA! +{points} punti\n{reason}
 alert_wrong_decision_detailed,DECISIONE SBAGLIATA! Strike aggiunto!\n{reason}

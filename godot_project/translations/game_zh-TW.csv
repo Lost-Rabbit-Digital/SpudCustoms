@@ -34,6 +34,7 @@ rule_explanation_chip_hill,查看「國家」欄位。如果顯示「薯片山�
 rule_explanation_age,查看「出生」欄位。計算年齡並核對規則。
 rule_explanation_gender,查看「性別」欄位並核對目前規則。
 rule_footer_text,這些規則必須對所有馬鈴薯強制執行。
+rule_expired_note,過期文件必須始終拒絕。
 rule_tutorial_hint,需要協助？點擊任何規則以查看說明。
 alert_correct_decision_detailed,正確決定！+{points} 點數\n{reason}
 alert_wrong_decision_detailed,錯誤決定！增加一次失誤！\n{reason}

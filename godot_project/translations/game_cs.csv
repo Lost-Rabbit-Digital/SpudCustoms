@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Podívejte se na pole 'Země'. Pokud říká 'Chip Hi
 rule_explanation_age,Podívejte se na pole 'Datum narození'. Vypočítejte věk a zkontrolujte podle pravidla
 rule_explanation_gender,Podívejte se na pole 'Pohlaví' a zkontrolujte podle aktuálního pravidla
 rule_footer_text,Tato pravidla musí být vynucována pro VŠECHNY brambory
+rule_expired_note,Dokumenty s prošlou platností musí být VŽDY odmítnuty.
 rule_tutorial_hint,Potřebujete pomoc? Klikněte na jakékoli pravidlo pro vysvětlení
 alert_correct_decision_detailed,SPRÁVNÉ ROZHODNUTÍ! +{points} bodů\n{reason}
 alert_wrong_decision_detailed,ŠPATNÉ ROZHODNUTÍ! Přidán trestný bod!\n{reason}

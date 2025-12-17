@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Lihat bidang 'Negara'. Jika mengatakan 'Chip Hill' - 
 rule_explanation_age,Lihat bidang 'Tanggal Lahir'. Hitung umur dan periksa terhadap aturan
 rule_explanation_gender,Lihat bidang 'Gender' dan periksa terhadap aturan saat ini
 rule_footer_text,Aturan ini harus ditegakkan untuk SEMUA kentang
+rule_expired_note,Dokumen yang sudah kedaluwarsa HARUS SELALU ditolak.
 rule_tutorial_hint,Butuh bantuan? Klik aturan apa pun untuk penjelasan
 alert_correct_decision_detailed,KEPUTUSAN BENAR! +{points} poin\n{reason}
 alert_wrong_decision_detailed,KEPUTUSAN SALAH! Strike ditambahkan!\n{reason}

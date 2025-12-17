@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Look at the 'Country' field. If it says 'Chip Hill' -
 rule_explanation_age,Look at 'Born' field. Calculate age and check against rule
 rule_explanation_gender,Look at the 'Gender' field and check against current rule
 rule_footer_text,These rules must be enforced for ALL potatoes
+rule_expired_note,Expired documents must ALWAYS be rejected.
 rule_tutorial_hint,Need help? Click on any rule for an explanation
 alert_correct_decision_detailed,CORRECT DECISION! +{points} points\n{reason}
 alert_wrong_decision_detailed,WRONG DECISION! Strike added!\n{reason}
