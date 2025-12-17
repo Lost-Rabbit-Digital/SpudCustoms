@@ -402,6 +402,14 @@ if {murphy_alliance} == "ally":
 	narrator: Tommy started the fire. [color=CHARTREUSE]The lost ones finished it.[/color] #id:murphy_sac_066
 	leave narrator
 
+	# MURPHY'S MEMORIAL - Intimate close-up
+	[background arg="res://assets/narrative/murphy_badge_memorial.png" fade="1.5"]
+	audio music "res://assets/music/narrative/sasha_theme_main.mp3" [fade="2.0" volume="-8.0" bus="Music"]
+	join narrator [z_index="1"]
+	narrator: [color=STEEL_BLUE]In the rubble, a charred security badge. The name barely legible: [color=CHARTREUSE]MURPHY[/color].[/color] #id:murphy_sac_066b
+	narrator: [color=STEEL_BLUE]Beside it, pushing through cracked concrete—a single green sprout. New life from sacrifice.[/color] #id:murphy_sac_066c
+	leave narrator
+
 	# AFTERMATH
 	[background arg="res://assets/narrative/aftermath_rubble.png" fade="2.0"]
 	audio music "res://assets/music/narrative/sasha_theme_main.mp3" [fade="3.0" volume="-5.0" bus="Music"]

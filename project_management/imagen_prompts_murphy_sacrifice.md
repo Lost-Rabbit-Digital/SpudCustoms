@@ -2,7 +2,7 @@
 
 > **Scene:** Final Confrontation - Protocol HARVEST
 > **Reference:** Kong: Skull Island - Cole's sacrifice scene
-> **Total Images Needed:** 17
+> **Total Images Needed:** 18
 
 ---
 
@@ -252,30 +252,39 @@ the lost ones finished it. Beautiful and terrible.
 
 ---
 
-## 17. Aftermath Rubble
+## 17. Murphy Badge Memorial (INTIMATE SHOT)
+**File:** `murphy_badge_memorial.png`
+
+```
+Extreme close-up: Murphy's charred security badge lying on rubble and ash,
+the name "MURPHY" barely legible through soot and damage. Beside it, pushing
+through a crack in the concrete, a single bright green potato sprout - new
+life emerging from sacrifice. Shallow depth of field, embers glowing softly
+in the blurred background. Dawn light catching the sprout's leaves.
+Style: intimate memorial, symbolic rebirth, bittersweet hope, the small
+beauty in devastation.
+```
+
+**Transition:** This intimate shot holds for a beat before pulling out to the wide aftermath.
+
+---
+
+## 18. Aftermath Rubble
 **File:** `aftermath_rubble.png`
 
 ```
-Quiet aftermath: smoking rubble where the tower and Amalgam stood. Dust and
-ash settling like snow. Embers floating in the air. In the foreground, small
-details - a charred security badge, a tiny green sprout emerging from cracked
-concrete. Dawn light breaking through the smoke clouds, painting the scene
-in soft gold and pink. The path to Idaho's bunker visible - a doorway standing
-intact amid the destruction. Style: aftermath of battle, somber beauty,
+Wide aftermath shot: smoking rubble where the tower and Amalgam stood. Dust and
+ash settling like snow. Embers floating in the air. Dawn light breaking through
+the smoke clouds, painting the scene in soft gold and pink. The path to Idaho's
+bunker visible - a heavy door labeled "IDAHO'S BUNKER" standing intact amid
+the destruction. The sprout from the previous shot now visible as a tiny green
+dot in the foreground rubble. Style: aftermath of battle, somber beauty,
 hope through devastation, the silence after thunder.
 ```
 
 ---
 
 ## Supplementary Shots (Optional)
-
-### Murphy Memorial Close-up
-```
-Extreme close-up: Murphy's charred security badge on rubble, name barely legible.
-A small potato sprout growing beside it - new life from sacrifice.
-Single tear or water droplet on the badge surface. Shallow depth of field,
-firelight in background. Style: intimate memorial, symbolic rebirth.
-```
 
 ### The Faces at Peace
 ```
@@ -315,6 +324,7 @@ Style: bittersweet resolution, the victims finally at rest.
 | Chain reaction | chain_reaction | 2s | Hope returns |
 | Tower falls | tower_collapse | 2s | Catharsis |
 | Final blast | massive_explosion | 3s | Release |
+| Badge memorial | murphy_badge_memorial | 4s | Intimate grief |
 | Aftermath | aftermath_rubble | 5s | Somber peace |
 
 ---

@@ -194,6 +194,7 @@ All variables below should be persisted when saving game state and restored when
 | `chain_reaction.png` | final_confrontation | Burning Amalgam crashing into refinery tanks |
 | `tower_collapse.png` | final_confrontation | Refinery tower collapsing onto the Amalgam |
 | `massive_explosion.png` | final_confrontation | HERO EXPLOSION - All tanks detonating, dawn breaking through |
+| `murphy_badge_memorial.png` | final_confrontation | Close-up of Murphy's charred badge with green sprout growing beside it |
 | `aftermath_rubble.png` | final_confrontation | Quiet aftermath, smoking rubble, path to Idaho clear |
 
 **Reference:** Kong: Skull Island (2017) - Cole's sacrifice scene
