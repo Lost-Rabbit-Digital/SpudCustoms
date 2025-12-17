@@ -62,6 +62,11 @@ var _placeholder_label: Label = null
 var _current_image_path: String = ""
 var _image_fade_tween: Tween = null
 
+# Multi-image progression system
+var _image_paths: Array[String] = []
+var _current_image_index: int = 0
+const MAX_IMAGE_FRAMES: int = 3
+
 
 func _ready() -> void:
 	super._ready()
@@ -81,6 +86,8 @@ func _on_minigame_start(config: Dictionary) -> void:
 	_successful_presses = 0
 	_is_waiting_for_input = false
 	_current_image_path = ""
+	_image_paths.clear()
+	_current_image_index = 0
 
 	if config.has("prompt_count"):
 		prompt_count = config.prompt_count
@@ -92,15 +99,24 @@ func _on_minigame_start(config: Dictionary) -> void:
 			instruction_label.text = config.narrative_context
 
 	# Handle narrative image configuration
-	if config.has("image_path"):
+	# Support both single image_path and array of image_paths
+	if config.has("image_paths") and config.image_paths is Array and config.image_paths.size() > 0:
+		for path in config.image_paths:
+			if path is String:
+				_image_paths.append(path)
+		# Set first image as current
+		if _image_paths.size() > 0:
+			_current_image_path = _image_paths[0]
+	elif config.has("image_path"):
 		_current_image_path = config.image_path
+		_image_paths.append(_current_image_path)
 
 	# Apply accessibility settings
 	_apply_accessibility_settings()
 
 	_setup_minigame_scene()
 
-	# Show narrative image if configured
+	# Show first narrative image if configured
 	if _current_image_path != "":
 		_show_narrative_image(_current_image_path)
 
@@ -154,49 +170,76 @@ func _setup_minigame_scene() -> void:
 	for child in subviewport.get_children():
 		child.queue_free()
 
+	# Layout constants for two-column design
+	var viewport_width: float = subviewport.size.x  # 800
+	var viewport_height: float = subviewport.size.y  # 600
+	var left_column_width: float = 380.0
+	var right_column_start: float = left_column_width + 20.0  # 400
+	var right_column_width: float = viewport_width - right_column_start  # 400
+	var right_column_center: float = right_column_start + right_column_width / 2.0  # 600
+
 	# Dark dramatic background
 	var bg = ColorRect.new()
 	bg.color = Color(0.05, 0.05, 0.08, 0.95)
 	bg.size = subviewport.size
 	subviewport.add_child(bg)
 
-	# Visual pane for narrative images (left side, behind prompts)
+	# Visual pane for narrative images (left column)
 	_setup_visual_pane()
 
-	# Narrative prompt (top)
+	# Narrative prompt (top, spans full width)
 	_prompt_label = Label.new()
 	_prompt_label.name = "PromptLabel"
 	_prompt_label.text = "Get ready..."
 	_prompt_label.add_theme_font_size_override("font_size", 24)
 	_prompt_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_prompt_label.size = Vector2(subviewport.size.x, 50)
-	_prompt_label.position = Vector2(0, 80)
+	_prompt_label.size = Vector2(viewport_width, 50)
+	_prompt_label.position = Vector2(0, 60)
 	subviewport.add_child(_prompt_label)
 
-	# Key to press (center, large)
+	# Key to press (right column, large)
 	_key_label = Label.new()
 	_key_label.name = "KeyLabel"
 	_key_label.text = ""
 	_key_label.add_theme_font_size_override("font_size", 72)
 	_key_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_key_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	_key_label.size = Vector2(subviewport.size.x, 100)
-	_key_label.position = Vector2(0, subviewport.size.y / 2 - 50)
+	_key_label.size = Vector2(right_column_width, 100)
+	_key_label.position = Vector2(right_column_start, viewport_height / 2 - 80)
 	_key_label.modulate = Color.WHITE
 	subviewport.add_child(_key_label)
 
-	# Timer bar (below key)
+	# Timer bar (right column, below key)
 	_timer_bar = ProgressBar.new()
 	_timer_bar.name = "TimerBar"
 	_timer_bar.min_value = 0
 	_timer_bar.max_value = 100
 	_timer_bar.value = 100
 	_timer_bar.show_percentage = false
-	_timer_bar.size = Vector2(400, 20)
-	_timer_bar.position = Vector2(subviewport.size.x / 2 - 200, subviewport.size.y / 2 + 70)
+	_timer_bar.size = Vector2(280, 20)
+	_timer_bar.position = Vector2(right_column_center - 140, viewport_height / 2 + 40)
 	subviewport.add_child(_timer_bar)
 
-	# Progress indicator (bottom)
+	# Feedback label (right column, below timer)
+	_feedback_label = Label.new()
+	_feedback_label.name = "FeedbackLabel"
+	_feedback_label.text = ""
+	_feedback_label.add_theme_font_size_override("font_size", 28)
+	_feedback_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_feedback_label.size = Vector2(right_column_width, 40)
+	_feedback_label.position = Vector2(right_column_start, viewport_height / 2 + 80)
+	_feedback_label.modulate = Color.WHITE
+	subviewport.add_child(_feedback_label)
+
+	# Progress indicator (bottom center, spans full width)
+	var progress_label = Label.new()
+	progress_label.text = "Progress"
+	progress_label.add_theme_font_size_override("font_size", 14)
+	progress_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	progress_label.size = Vector2(300, 20)
+	progress_label.position = Vector2(viewport_width / 2 - 150, viewport_height - 100)
+	subviewport.add_child(progress_label)
+
 	_progress_bar = ProgressBar.new()
 	_progress_bar.name = "ProgressBar"
 	_progress_bar.min_value = 0
@@ -204,27 +247,8 @@ func _setup_minigame_scene() -> void:
 	_progress_bar.value = 0
 	_progress_bar.show_percentage = false
 	_progress_bar.size = Vector2(300, 15)
-	_progress_bar.position = Vector2(subviewport.size.x / 2 - 150, subviewport.size.y - 100)
+	_progress_bar.position = Vector2(viewport_width / 2 - 150, viewport_height - 80)
 	subviewport.add_child(_progress_bar)
-
-	var progress_label = Label.new()
-	progress_label.text = "Progress"
-	progress_label.add_theme_font_size_override("font_size", 14)
-	progress_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	progress_label.size = Vector2(300, 20)
-	progress_label.position = Vector2(subviewport.size.x / 2 - 150, subviewport.size.y - 120)
-	subviewport.add_child(progress_label)
-
-	# Feedback label
-	_feedback_label = Label.new()
-	_feedback_label.name = "FeedbackLabel"
-	_feedback_label.text = ""
-	_feedback_label.add_theme_font_size_override("font_size", 28)
-	_feedback_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_feedback_label.size = Vector2(subviewport.size.x, 40)
-	_feedback_label.position = Vector2(0, subviewport.size.y / 2 + 110)
-	_feedback_label.modulate = Color.WHITE
-	subviewport.add_child(_feedback_label)
 
 
 func _show_next_prompt() -> void:
@@ -310,6 +334,9 @@ func _on_correct_key_pressed() -> void:
 
 	# Play success sound with increasing pitch
 	_play_sound(_snd_key_success, -3.0, 0.9 + _successful_presses * 0.05)
+
+	# Progress to next image if available (on successful press only)
+	_advance_narrative_image()
 
 	# Small delay before next prompt
 	await get_tree().create_timer(0.4).timeout
@@ -398,11 +425,18 @@ func _play_sound(sound: AudioStream, volume_db: float = 0.0, pitch: float = 1.0)
 
 ## Set up the visual pane container for narrative images
 func _setup_visual_pane() -> void:
-	# Create visual pane container (positioned on the left side)
+	# Layout constants for left column
+	var viewport_height: float = subviewport.size.y
+	var pane_width: float = 360.0
+	var pane_height: float = 380.0
+	var pane_x: float = 20.0
+	var pane_y: float = (viewport_height - pane_height) / 2.0 + 20.0  # Slightly below center
+
+	# Create visual pane container (left column)
 	_visual_pane = Control.new()
 	_visual_pane.name = "VisualPane"
-	_visual_pane.size = Vector2(350, 280)
-	_visual_pane.position = Vector2(30, subviewport.size.y / 2 - 140)
+	_visual_pane.size = Vector2(pane_width, pane_height)
+	_visual_pane.position = Vector2(pane_x, pane_y)
 	_visual_pane.modulate.a = 0.0  # Start hidden
 	subviewport.add_child(_visual_pane)
 
@@ -538,3 +572,19 @@ func _load_image_texture(image_path: String) -> void:
 ## Check if an image exists at the given path
 func _image_exists(image_path: String) -> bool:
 	return ResourceLoader.exists(image_path)
+
+
+## Advance to the next narrative image in the sequence (called on successful key press)
+## Stays on the last available image if we've shown all frames
+func _advance_narrative_image() -> void:
+	if _image_paths.size() <= 1:
+		return  # No progression needed for single image or no images
+
+	# Calculate next image index (cap at last available image)
+	var next_index: int = mini(_current_image_index + 1, _image_paths.size() - 1)
+
+	# Only transition if we're actually changing images
+	if next_index != _current_image_index:
+		_current_image_index = next_index
+		_current_image_path = _image_paths[_current_image_index]
+		_transition_narrative_image(_current_image_path)
