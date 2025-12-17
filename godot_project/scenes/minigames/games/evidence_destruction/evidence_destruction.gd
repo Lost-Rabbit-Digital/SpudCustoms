@@ -431,8 +431,8 @@ func _populate_desk_grid() -> void:
 		button.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		button.expand_icon = true
 
-		# Store item reference
-		button.set_meta("item_index", i)
+		# Store item reference directly (not index, which becomes invalid when items are removed)
+		button.set_meta("item", item)
 		button.set_meta("revealed", false)
 		button.pressed.connect(_on_item_button_pressed.bind(button))
 
@@ -441,11 +441,9 @@ func _populate_desk_grid() -> void:
 
 
 func _on_item_button_pressed(button: Button) -> void:
-	var item_index: int = button.get_meta("item_index", -1)
-	if item_index < 0 or item_index >= _desk_items.size():
+	var item: EvidenceItem = button.get_meta("item", null)
+	if item == null:
 		return
-
-	var item := _desk_items[item_index]
 
 	# Reveal the item if not already revealed
 	if not button.get_meta("revealed", false):
