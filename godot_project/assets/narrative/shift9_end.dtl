@@ -113,11 +113,11 @@ if {stay_or_go} == "go":
 
 	# Player reaction choice
 	set {sasha_rescue_reaction} = "none"
-	- [tornado radius=3 freq=2][color=CRIMSON]"Russet, you monster! You'll pay for every life you've taken!"[/color][/tornado] #id:s9e_005
+	- "Russet, you monster! You'll pay for every life you've taken!" (Angry) #id:s9e_005
 		set {sasha_rescue_reaction} = "angry"
-	- [wave amp=15 freq=2][color=STEEL_BLUE]"This... this is what they've been doing? It's worse than I imagined..."[/color][/wave] #id:s9e_006
+	- "This... this is what they've been doing? It's worse than I imagined..." (Horrified) #id:s9e_006
 		set {sasha_rescue_reaction} = "disgusted"
-	- [color=CHARTREUSE]"Sasha! Thank the roots you're alive! Hold on, we're getting you out!"[/color] #id:s9e_007
+	- "Sasha! Thank the roots you're alive! Hold on, we're getting you out!" (Relieved) #id:s9e_007
 		set {sasha_rescue_reaction} = "relieved"
 
 	if {sasha_rescue_reaction} == "angry":
