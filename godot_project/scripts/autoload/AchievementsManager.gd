@@ -2,7 +2,6 @@
 ##
 ## Centralizes achievement logic, tracks unlock state (synced with Steam),
 ## and provides data for the achievements UI panel.
-class_name AchievementsManager
 extends Node
 
 ## Emitted when any achievement is unlocked (for UI notifications)
