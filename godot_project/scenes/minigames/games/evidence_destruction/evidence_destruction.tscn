@@ -1,0 +1,300 @@
+[gd_scene load_steps=3 format=3 uid="uid://evidence_destruction"]
+
+[ext_resource type="Script" path="res://scenes/minigames/games/evidence_destruction/evidence_destruction.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/minigames/evidence_destruction/ui/desk_surface.svg" id="2_desk"]
+
+[node name="EvidenceDestruction" type="CanvasLayer"]
+layer = 100
+script = ExtResource("1_script")
+minigame_type = "evidence_destruction"
+time_limit = 180.0
+skippable = true
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.9)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = true
+size = Vector2i(800, 600)
+render_target_update_mode = 4
+
+[node name="GameRoot" type="Control" parent="SubViewportContainer/SubViewport"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="DeskBackground" type="TextureRect" parent="SubViewportContainer/SubViewport/GameRoot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("2_desk")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="DeskArea" type="Control" parent="SubViewportContainer/SubViewport/GameRoot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ItemGrid" type="GridContainer" parent="SubViewportContainer/SubViewport/GameRoot/DeskArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -120.0
+offset_right = 330.0
+offset_bottom = 100.0
+columns = 6
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+
+[node name="Shredder" type="Button" parent="SubViewportContainer/SubViewport/GameRoot/DeskArea"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_top = -80.0
+offset_right = -20.0
+offset_bottom = -10.0
+text = "SHREDDER"
+flat = true
+
+[node name="Drawer" type="Button" parent="SubViewportContainer/SubViewport/GameRoot/DeskArea"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -80.0
+offset_right = 180.0
+offset_bottom = -10.0
+text = "DRAWER"
+flat = true
+
+[node name="HUD" type="Control" parent="SubViewportContainer/SubViewport/GameRoot"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 60.0
+
+[node name="SuspicionLabel" type="Label" parent="SubViewportContainer/SubViewport/GameRoot/HUD"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 200.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(1, 0.4, 0.4, 1)
+theme_override_font_sizes/font_size = 14
+text = "Suspicion: 0%"
+
+[node name="SuspicionBar" type="ProgressBar" parent="SubViewportContainer/SubViewport/GameRoot/HUD"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 35.0
+offset_right = 220.0
+offset_bottom = 50.0
+max_value = 100.0
+show_percentage = false
+
+[node name="ItemsRemainingLabel" type="Label" parent="SubViewportContainer/SubViewport/GameRoot/HUD"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_top = 10.0
+offset_right = -20.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 14
+text = "Items: 12"
+horizontal_alignment = 2
+
+[node name="ExaminePanel" type="Panel" parent="SubViewportContainer/SubViewport/GameRoot"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -150.0
+offset_right = 180.0
+offset_bottom = 150.0
+
+[node name="PanelBackground" type="ColorRect" parent="SubViewportContainer/SubViewport/GameRoot/ExaminePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.15, 0.12, 0.1, 1)
+
+[node name="ItemImage" type="TextureRect" parent="SubViewportContainer/SubViewport/GameRoot/ExaminePanel"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 140.0
+offset_bottom = 140.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemName" type="Label" parent="SubViewportContainer/SubViewport/GameRoot/ExaminePanel"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 150.0
+offset_top = 20.0
+offset_right = 340.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(1, 0.9, 0.7, 1)
+theme_override_font_sizes/font_size = 16
+text = "Item Name"
+
+[node name="ItemDescription" type="RichTextLabel" parent="SubViewportContainer/SubViewport/GameRoot/ExaminePanel"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 150.0
+offset_top = 50.0
+offset_right = 340.0
+offset_bottom = 140.0
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "Item description goes here."
+fit_content = true
+
+[node name="InnerMonologue" type="RichTextLabel" parent="SubViewportContainer/SubViewport/GameRoot/ExaminePanel"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 150.0
+offset_right = 340.0
+offset_bottom = 200.0
+theme_override_colors/default_color = Color(0.7, 0.7, 0.9, 1)
+theme_override_font_sizes/normal_font_size = 11
+theme_override_font_sizes/italics_font_size = 11
+bbcode_enabled = true
+text = "[i]Inner monologue here...[/i]"
+fit_content = true
+
+[node name="ButtonContainer" type="HBoxContainer" parent="SubViewportContainer/SubViewport/GameRoot/ExaminePanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -60.0
+offset_right = 150.0
+offset_bottom = -15.0
+theme_override_constants/separation = 20
+
+[node name="ShredButton" type="Button" parent="SubViewportContainer/SubViewport/GameRoot/ExaminePanel/ButtonContainer"]
+custom_minimum_size = Vector2(130, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.8, 0.8, 1)
+text = "SHRED"
+
+[node name="StashButton" type="Button" parent="SubViewportContainer/SubViewport/GameRoot/ExaminePanel/ButtonContainer"]
+custom_minimum_size = Vector2(130, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.8, 1, 0.8, 1)
+text = "STASH"
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="TitleLabel" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = 20.0
+offset_right = 250.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 0.3, 0.3, 1)
+theme_override_font_sizes/font_size = 28
+text = "SECURITY INSPECTION IMMINENT"
+horizontal_alignment = 1
+
+[node name="InstructionLabel" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -80.0
+offset_right = 300.0
+offset_bottom = -50.0
+theme_override_font_sizes/font_size = 16
+text = "Clear your desk! Shred evidence, stash work items."
+horizontal_alignment = 1
+
+[node name="TimerLabel" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 0.8, 0.4, 1)
+theme_override_font_sizes/font_size = 32
+text = "180.0"
+horizontal_alignment = 2
+
+[node name="SkipButton" type="Button" parent="UI"]
+layout_mode = 1
+anchors_preset = 2
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -50.0
+offset_right = -20.0
+offset_bottom = -20.0
+text = "Skip"
+
+[node name="AudioPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"

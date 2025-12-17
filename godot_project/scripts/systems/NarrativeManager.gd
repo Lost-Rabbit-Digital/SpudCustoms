@@ -442,6 +442,11 @@ func _on_dialogic_signal(argument):
 			"res://assets/narrative/qte/qte_suppression_3.png",
 		])
 
+	# Evidence destruction minigame for Shift 9
+	# Replaces standard gameplay - player must clear desk before security inspection
+	elif argument == "evidence_destruction":
+		_launch_evidence_destruction()
+
 	# Route to loyalist ending signal
 	if argument == "route_to_loyalist_ending":
 		# This would need to be handled by scene management
@@ -530,19 +535,60 @@ func _launch_qte(qte_name: String, context: String, prompt_count: int, time_per_
 		EventBus.minigame_launch_requested.emit("quick_time_event", config)
 
 
-func _on_minigame_completed(result: Dictionary) -> void:
-	"""Handle QTE completion and set Dialogic variables for narrative branching.
+func _launch_evidence_destruction() -> void:
+	"""Launch the evidence destruction minigame for Shift 9.
 
-	When a narrative QTE completes, we set the corresponding Dialogic variable
-	to "pass" or "fail" based on the success rate. This enables the timeline
-	to branch based on QTE performance.
+	This minigame replaces standard customs processing in Shift 9. The player must
+	examine items on their desk and decide whether to shred (destroy evidence) or
+	stash (keep safe items) before a security inspection.
+
+	The minigame sets Dialogic variables for narrative branching:
+	- inspection_result: "clean", "suspicious", or "compromised"
+	- evidence_found: true/false
+	- evidence_found_type: ID of first evidence found (if any)
 	"""
-	# Only process if we have an active narrative QTE
+	if EventBus:
+		var config: Dictionary = {
+			"force_launch": true,  # Always launch regardless of shift unlock
+			"time_limit": 180.0,   # 3 minutes to clear desk
+			"items_to_show": 12,   # Number of items on desk
+		}
+		EventBus.minigame_launch_requested.emit("evidence_destruction", config)
+		print("[NarrativeManager] Launched evidence destruction minigame")
+
+
+func _on_minigame_completed(result: Dictionary) -> void:
+	"""Handle minigame completion and set Dialogic variables for narrative branching.
+
+	When a narrative minigame completes, we set the corresponding Dialogic variables
+	based on the result. This enables the timeline to branch based on performance.
+	"""
+	var minigame_type: String = result.get("minigame_type", "")
+
+	# Handle evidence destruction minigame (Shift 9)
+	# Note: The minigame itself sets Dialogic variables, but we log and can emit events here
+	if minigame_type == "evidence_destruction":
+		var inspection_result: String = result.get("inspection_result", "suspicious")
+		var evidence_found: Array = result.get("evidence_found", [])
+		print("[NarrativeManager] Evidence destruction completed: %s (evidence found: %d)" % [
+			inspection_result, evidence_found.size()
+		])
+		# Emit event for analytics or other systems
+		if EventBus:
+			EventBus.track_event.emit("evidence_destruction_completed", {
+				"result": inspection_result,
+				"evidence_count": evidence_found.size(),
+				"suspicion": result.get("suspicion_level", 0),
+				"timed_out": result.get("timed_out", false)
+			})
+		return
+
+	# QTE handling below - only process if we have an active narrative QTE
 	if _active_narrative_qte.is_empty():
 		return
 
-	# Only process quick_time_event results
-	if result.get("minigame_type", "") != "quick_time_event":
+	# Only process quick_time_event results for QTE tracking
+	if minigame_type != "quick_time_event":
 		return
 
 	# Check if this QTE has a result variable mapping
