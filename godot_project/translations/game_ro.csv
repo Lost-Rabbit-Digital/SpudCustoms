@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Priviți câmpul 'Țară'. Dacă spune 'Chip Hill' - 
 rule_explanation_age,Priviți câmpul 'Data Nașterii'. Calculați vârsta și verificați împotriva regulii
 rule_explanation_gender,Priviți câmpul 'Gen' și verificați împotriva regulii actuale
 rule_footer_text,Aceste reguli trebuie aplicate pentru TOȚI cartofii
+rule_expired_note,Documentele expirate trebuie ÎNTOTDEAUNA respinse.
 rule_tutorial_hint,Precisa de ajuda? Clique em qualquer regra para uma explicação
 alert_correct_decision_detailed,DECIZIE CORECTĂ! +{points} puncte\n{reason}
 alert_wrong_decision_detailed,DECIZIE GREȘITĂ! Strike adăugat!\n{reason}

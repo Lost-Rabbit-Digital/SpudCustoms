@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Titta på fältet 'Land'. Om det säger 'Chip Hill' -
 rule_explanation_age,Titta på fältet 'Födelsedatum'. Beräkna ålder och kontrollera mot regel
 rule_explanation_gender,Titta på fältet 'Kön' och kontrollera mot nuvarande regel
 rule_footer_text,Dessa regler måste tillämpas för ALLA potatisar
+rule_expired_note,Utgångna dokument måste ALLTID avvisas.
 rule_tutorial_hint,Potrebujete pomoc? Kliknite na akékoľvek pravidlo pre vysvetlenie
 alert_correct_decision_detailed,RÄTT BESLUT! +{points} poäng\n{reason}
 alert_wrong_decision_detailed,FEL BESLUT! Strike tillagd!\n{reason}

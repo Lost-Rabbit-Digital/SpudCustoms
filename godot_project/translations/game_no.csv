@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Se på 'Land' feltet. Hvis det sier 'Chip Hill' - AVV
 rule_explanation_age,Se på 'Fødselsdato' feltet. Beregn alder og sjekk mot regel
 rule_explanation_gender,Se på 'Kjønn' feltet og sjekk mot gjeldende regel
 rule_footer_text,Disse reglene må håndheves for ALLE poteter
+rule_expired_note,Utløpte dokumenter må ALLTID avvises.
 rule_tutorial_hint,Trenger du hjelp? Klikk på hvilken som helst regel for en forklaring
 alert_correct_decision_detailed,RIKTIG BESLUTNING! +{points} poeng\n{reason}
 alert_wrong_decision_detailed,FEIL BESLUTNING! Strike lagt til!\n{reason}

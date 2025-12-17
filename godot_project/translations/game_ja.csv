@@ -34,6 +34,7 @@ rule_explanation_chip_hill,「国」欄を確認してください。「チッ�
 rule_explanation_age,「生年月日」欄を確認してください。年齢を計算し、ルールと照合してください。
 rule_explanation_gender,「性別」欄を確認し、現在のルールと照合してください。
 rule_footer_text,これらのルールは全てのジャガイモに適用されなければなりません
+rule_expired_note,期限切れの書類は必ず拒否してください。
 rule_tutorial_hint,ヘルプが必要ですか？説明を見るには、いずれかのルールをクリックしてください。
 alert_correct_decision_detailed,正しい判断です！ +{points} ポイント\n{reason}
 alert_wrong_decision_detailed,間違った判断です！ストライクが追加されました！\n{reason}

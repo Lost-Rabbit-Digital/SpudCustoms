@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Ülke' alanına bakın. 'Chip Hill' diyorsa - REDDET 
 rule_explanation_age,Doğum Tarihi' alanına bakın. Yaşı hesaplayın ve kurala göre kontrol edin
 rule_explanation_gender,Cinsiyet' alanına bakın ve mevcut kurala göre kontrol edin
 rule_footer_text,Bu kurallar TÜM patatesler için uygulanmalıdır
+rule_expired_note,Süresi dolmuş belgeler HER ZAMAN reddedilmelidir.
 rule_tutorial_hint,Behöver du hjälp? Klicka på vilken regel som helst för en förklaring
 alert_correct_decision_detailed,DOĞRU KARAR! +{points} puan\n{reason}
 alert_wrong_decision_detailed,YANLIŞ KARAR! Strike eklendi!\n{reason}

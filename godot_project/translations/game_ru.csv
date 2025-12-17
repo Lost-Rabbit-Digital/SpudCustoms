@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Посмотрите на поле 'Страна'. Е
 rule_explanation_age,Посмотрите на поле 'Дата рождения'. Вычислите возраст и проверьте по правилу
 rule_explanation_gender,Посмотрите на поле 'Пол' и проверьте по текущему правилу
 rule_footer_text,Эти правила должны соблюдаться для ВСЕХ картофелин
+rule_expired_note,Документы с истекшим сроком ВСЕГДА должны быть отклонены.
 rule_tutorial_hint,Нужна помощь? Нажмите на любое правило для объяснения
 alert_correct_decision_detailed,ВЕРНОЕ РЕШЕНИЕ! +{points} очков\n{reason}
 alert_wrong_decision_detailed,НЕВЕРНОЕ РЕШЕНИЕ! Добавлен штраф!\n{reason}

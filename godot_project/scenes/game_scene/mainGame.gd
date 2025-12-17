@@ -950,7 +950,8 @@ func update_rules_display():
 		laws_text += str(i + 1) + ". " + rule_text + "\n\n"
 
 	# Add footer explaining enforcement
-	laws_text += "[center][i]" + tr("rule_footer_text") + "[/i][/center]"
+	laws_text += "[center][i]" + tr("rule_footer_text") + "[/i][/center]\n"
+	laws_text += "[center][i]" + tr("rule_expired_note") + "[/i][/center]"
 
 	# Update the law receipt display
 	if $Gameplay/InteractiveElements/LawReceipt/OpenReceipt/ReceiptNote:
@@ -1392,8 +1393,23 @@ func update_potato_info_display():
 		display_info.sex = translated_sex
 		display_info.condition = translated_condition
 
+		# Dynamic font scaling for long text fields to prevent overflow
+		var max_field_length: int = 0
+		max_field_length = max(max_field_length, current_potato_info.name.length())
+		max_field_length = max(max_field_length, current_potato_info.country_of_issue.length())
+		max_field_length = max(max_field_length, translated_condition.length())
+
+		# Scale font size based on longest field
+		var potato_info_label = $Gameplay/InteractiveElements/Passport/OpenPassport/PotatoInfo
+		if max_field_length > 15:
+			potato_info_label.add_theme_font_size_override("font_size", 13)
+		elif max_field_length > 12:
+			potato_info_label.add_theme_font_size_override("font_size", 14)
+		else:
+			potato_info_label.add_theme_font_size_override("font_size", 16)
+
 		# FIXED: Include race/type information clearly
-		$Gameplay/InteractiveElements/Passport/OpenPassport/PotatoInfo.text = (
+		potato_info_label.text = (
 			"""Type: {race}
 Born: {date_of_birth}
 Gender: {sex}

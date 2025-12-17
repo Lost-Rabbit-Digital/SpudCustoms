@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Olhe o campo 'País'. Se disser 'Chip Hill' - REJEITE
 rule_explanation_age,Olhe o campo 'Nascimento'. Calcule a idade e verifique contra a regra
 rule_explanation_gender,Olhe o campo 'Gênero' e verifique contra a regra atual
 rule_footer_text,Estas regras devem ser aplicadas a TODAS as batatas
+rule_expired_note,Documentos expirados devem SEMPRE ser rejeitados.
 rule_tutorial_hint,Precisa de ajuda? Clique em qualquer regra para uma explicação
 alert_correct_decision_detailed,DECISÃO CORRETA! +{points} pontos\n{reason}
 alert_wrong_decision_detailed,DECISÃO ERRADA! Uma penalidade foi adicionada!\n{reason}
