@@ -126,7 +126,7 @@ else:
 	leave sweet_potato_sasha
 	leave player_character
 
-# Viktor's moment - if allied earlier
+# Viktor's moment - ALLIED PATH
 [background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
 if {viktor_allied} == "yes":
 	audio "res://assets/audio/footsteps/Metal Walk 1_3.wav" [volume="-8.0" bus="SFX"]
@@ -138,7 +138,46 @@ if {viktor_allied} == "yes":
 	leave viktor
 	set {has_keycard} = "yes"
 
-# Murphy's reaction
+# VIKTOR'S SECOND CHANCE - For players who know about Elena but lied to protect him
+# This gives players another opportunity to bring Viktor into the fold
+elif {viktor_wife_discovery} == "yes" and {viktor_conversation} == "lie_protect":
+	if {player_captured} != "yes":
+		[background arg="res://assets/narrative/checkpoint_corridor.png" fade="2.0"]
+		audio "res://assets/audio/footsteps/Metal Walk 1_3.wav" [volume="-8.0" bus="SFX"]
+		audio "res://assets/audio/stings/dread_chord.mp3" [volume="-8.0" bus="SFX"]
+		join viktor [z_index="1"]
+		viktor: Viktor intercepts you. His eyes are hollow. [color=STEEL_BLUE]You lied to me.[/color] #id:s8e_viktor_second1
+		viktor: I found out anyway. The manifests. [color=GOLD]Elena Petrov. Batch RR-2851.[/color] #id:s8e_viktor_second2
+		viktor: [wave amp=20 freq=3]His voice shakes with barely contained rage.[/wave] My wife. They turned my wife into... into [color=DARK_VIOLET]that[/color]. #id:s8e_viktor_second3
+		viktor: Why didn't you tell me? [color=CRIMSON]I had a right to know![/color] #id:s8e_viktor_second4
+
+		set {viktor_second_chance} = "none"
+		- "I was trying to protect you. I'm sorry." #id:s8e_viktor_second5
+			set {viktor_second_chance} = "protect"
+		- "I didn't know how to tell you. Forgive me." #id:s8e_viktor_second6
+			set {viktor_second_chance} = "forgive"
+
+		if {viktor_second_chance} == "protect":
+			join viktor [z_index="1"]
+			viktor: [color=STEEL_BLUE]Protect me?[/color] From what? The truth? [wave amp=15 freq=2]I needed to know.[/wave] #id:s8e_viktor_second7
+			viktor: Viktor takes a shuddering breath. But... I understand. These are dark times. #id:s8e_viktor_second8
+			leave viktor
+		else:
+			join viktor [z_index="1"]
+			viktor: Viktor stares at you, searching for sincerity. [color=STEEL_BLUE]Forgiveness... I don't know if I have any left.[/color] #id:s8e_viktor_second9
+			viktor: But we have bigger enemies than each other. #id:s8e_viktor_second10
+			leave viktor
+
+		join viktor [z_index="1"]
+		viktor: They just took Sasha. She'll be processed by morning, just like Elena was. #id:s8e_viktor_second11
+		viktor: [pulse freq=2][color=CHARTREUSE]I won't let another one die. Not when I can stop it.[/color][/pulse] #id:s8e_viktor_second12
+		viktor: He presses a [color=GOLD]security keycard[/color] into your hand. Sub-level 3. That's where they'll keep her. #id:s8e_viktor_second13
+		viktor: When you move... [color=CHARTREUSE]I'll make sure the guards look the other way[/color]. For Elena. #id:s8e_viktor_second14
+		leave viktor
+		set {viktor_allied} = "yes"
+		set {has_keycard} = "yes"
+
+# Murphy's reaction - ALLIED PATH
 if {murphy_alliance} == "ally" and {player_captured} != "yes":
 	[background arg="res://assets/narrative/storage_room.png" fade="2.0"]
 	audio "res://assets/audio/furniture/Door Open C.wav" [volume="-8.0" bus="SFX"]
@@ -168,6 +207,49 @@ if {murphy_alliance} == "ally" and {player_captured} != "yes":
 		leave murphy
 
 	leave murphy
+
+# MURPHY'S SECOND CHANCE - For players who were cautious or skeptical (not hostile)
+# This gives players another opportunity to ally with Murphy before the finale
+elif {murphy_alliance} == "cautious" or {murphy_alliance} == "skeptical":
+	if {player_captured} != "yes":
+		[background arg="res://assets/narrative/storage_room.png" fade="2.0"]
+		audio "res://assets/audio/furniture/Door Open C.wav" [volume="-8.0" bus="SFX"]
+		audio "res://assets/audio/stings/decision_weight.mp3" [volume="-8.0" bus="SFX"]
+		join murphy [z_index="1"]
+		murphy: Murphy catches you in the corridor. His face is haggard, eyes wild. #id:s8e_murphy_second1
+		murphy: [color=STEEL_BLUE]I know... I know you didn't want to get involved before. I understood.[/color] #id:s8e_murphy_second2
+		murphy: But Sasha... [wave amp=15 freq=2]they've got Sasha[/wave]. She'll be [color=DARK_VIOLET]processed by morning[/color]. #id:s8e_murphy_second3
+
+		if {murphy_alliance} == "skeptical":
+			murphy: You thought it was a coincidence. My cousin. The manifests. [color=CRIMSON]Still think so?[/color] #id:s8e_murphy_second4a
+		else:
+			murphy: You said it was dangerous. [pulse freq=2][color=CRIMSON]You were right.[/color][/pulse] But doing nothing is worse. #id:s8e_murphy_second4b
+
+		murphy: Murphy pulls out the crumpled form - Tommy's processing code. He still carries it. Always. #id:s8e_murphy_second5
+		murphy: I can't do this alone. [color=CHARTREUSE]I need someone I can trust.[/color] #id:s8e_murphy_second6
+		murphy: The resistance is moving tomorrow. Our only chance to save Sasha - to save any of them. #id:s8e_murphy_second7
+		murphy: [pulse freq=3][color=GOLD]Are you with me this time?[/color][/pulse] #id:s8e_murphy_second8
+
+		set {murphy_second_chance} = "none"
+		- "I'm with you, Murphy. I should have said yes before." (Commit) #id:s8e_murphy_second9
+			set {murphy_second_chance} = "yes"
+			set {murphy_alliance} = "ally"
+		- "I'm sorry, Murphy. I still can't risk it." (Refuse) #id:s8e_murphy_second10
+			set {murphy_second_chance} = "no"
+
+		if {murphy_second_chance} == "yes":
+			join murphy [z_index="1"]
+			audio "res://assets/audio/stings/revelation_hope.mp3" [volume="-8.0" bus="SFX"]
+			murphy: Murphy's eyes fill with relief. [color=CHARTREUSE]Thank you.[/color] I knew... deep down, I knew you were one of us. #id:s8e_murphy_second11
+			murphy: He grips your arm. [color=CHARTREUSE]For Tommy. For Sasha. For everyone they've taken.[/color] #id:s8e_murphy_second12
+			murphy: We move at dawn. [pulse freq=2][color=CHARTREUSE]The roots grow deep.[/color][/pulse] #id:s8e_murphy_second13
+			leave murphy
+		else:
+			join murphy [z_index="1"]
+			murphy: Murphy's face crumbles, then hardens to stone. [color=STEEL_BLUE]I see.[/color] #id:s8e_murphy_second14
+			murphy: Then stay out of our way tomorrow. [color=CRIMSON]And live with whatever happens.[/color] #id:s8e_murphy_second15
+			murphy: He walks away without looking back. You may never see him again. #id:s8e_murphy_second16
+			leave murphy
 
 # Final reflection
 [background arg="res://assets/narrative/personal_quarters.png" fade="2.0"]

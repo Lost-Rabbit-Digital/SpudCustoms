@@ -129,13 +129,26 @@ leave sweet_potato_sasha
 # Continue to facility breach
 audio music "res://assets/audio/ambient/horror_drone_23.mp3" [fade="2.0" volume="-12.0" bus="Ambient"]
 [background arg="res://assets/narrative/processing_facility.png" fade="1.2"]
-join narrator [z_index="1"]
-narrator: After a tense infiltration, your team stands at the heart of [color=DARK_VIOLET]Root Reserve[/color], the [pulse freq=3][color=CRIMSON]horrific machinery of oppression[/color][/pulse] laid bare. #id:1a
-audio "res://assets/audio/atmosphere/facility_hum.mp3" [volume="-5.0" bus="Ambient"]
 
-narrator: [wave amp=25 freq=3][color=RED]Alarms blare[/color][/wave] as guards scramble to respond to your intrusion. You race through corridors, dodging security systems. #id:1b
-audio "res://assets/audio/stings/alarm_distant.mp3" [volume="-5.0" bus="SFX"]
-leave narrator
+# KEYCARD INTEGRATION - Viktor's keycard makes infiltration smoother
+if {has_keycard} == "yes":
+	join narrator [z_index="1"]
+	narrator: Viktor's [color=GOLD]security keycard[/color] opens doors that should have been impossible. Guards stare at their consoles in confusion as you slip past. #id:fc_keycard1
+	leave narrator
+	join player_character [z_index="1"]
+	player_character: [color=CHARTREUSE]Thank you, Viktor.[/color] Wherever you are. #id:fc_keycard2
+	leave player_character
+	join narrator [z_index="1"]
+	narrator: Your team reaches the heart of [color=DARK_VIOLET]Root Reserve[/color] with minimal resistance. The [pulse freq=3][color=CRIMSON]horrific machinery of oppression[/color][/pulse] laid bare. #id:1a_keycard
+	audio "res://assets/audio/atmosphere/facility_hum.mp3" [volume="-5.0" bus="Ambient"]
+	leave narrator
+else:
+	join narrator [z_index="1"]
+	narrator: After a tense infiltration, your team stands at the heart of [color=DARK_VIOLET]Root Reserve[/color], the [pulse freq=3][color=CRIMSON]horrific machinery of oppression[/color][/pulse] laid bare. #id:1a
+	audio "res://assets/audio/atmosphere/facility_hum.mp3" [volume="-5.0" bus="Ambient"]
+	narrator: [wave amp=25 freq=3][color=RED]Alarms blare[/color][/wave] as guards scramble to respond to your intrusion. You race through corridors, dodging security systems. #id:1b
+	audio "res://assets/audio/stings/alarm_distant.mp3" [volume="-5.0" bus="SFX"]
+	leave narrator
 
 [background arg="res://assets/narrative/checkpoint_booth_night.png" fade="2.0"]
 audio music "res://assets/music/narrative/horror_abyss_main.mp3" [fade="0.8" volume="-3.0" bus="Music"]

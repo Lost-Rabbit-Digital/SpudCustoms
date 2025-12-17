@@ -65,7 +65,17 @@ if {stay_or_go} == "go":
 	[background arg="res://assets/narrative/resistance_planning.png" fade="0.0"]
 	audio "res://assets/audio/explosions/Explosion Close Collapse.wav" [volume="-12.0" bus="SFX"]
 	join player_character [z_index="1"]
-	player_character: I [tornado radius=3 freq=2][color=CHARTREUSE]abandon my post[/color][/tornado] and race toward the fighting. The time for caution is over. #id:137
+
+	# Acknowledge the evidence destruction minigame outcome
+	if {under_suspicion} == "yes":
+		player_character: [color=STEEL_BLUE]They found evidence at my desk. I'm already marked.[/color] Nothing left to lose now. #id:s9e_go_suspicion1
+		player_character: I [tornado radius=3 freq=2][color=CHARTREUSE]abandon my post[/color][/tornado] and race toward the fighting. If I'm going down, it won't be in a cell. #id:s9e_go_suspicion2
+	elif {under_suspicion} == "mild":
+		player_character: [color=STEEL_BLUE]The inspector's suspicious eyes still burn in my memory.[/color] Close call. Too close. #id:s9e_go_mild1
+		player_character: I [tornado radius=3 freq=2][color=CHARTREUSE]abandon my post[/color][/tornado] and race toward the fighting. The time for caution is over. #id:137
+	else:
+		player_character: [color=CHARTREUSE]My desk was clean. They have nothing on me.[/color] But that won't matter after today. #id:s9e_go_clean1
+		player_character: I [tornado radius=3 freq=2][color=CHARTREUSE]abandon my post[/color][/tornado] and race toward the fighting. The time for caution is over. #id:137b
 	leave player_character
 	[background arg="res://assets/narrative/joining_rebellion.png" fade="2.0"]
 	audio "res://assets/audio/gunfire/gun cocking 3.wav" [volume="-8.0" bus="SFX"]
