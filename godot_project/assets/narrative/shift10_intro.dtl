@@ -73,20 +73,43 @@ if {stay_or_go} == "stay":
 if {stay_or_go} == "go":
 	audio music "res://assets/music/narrative/electronic_cyberattack_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
 
-	# TRANSITION: The aftermath of the escape
-	[background arg="res://assets/narrative/hideout.png" fade="0.0"]
+	# TRANSITION: The aftermath of the escape - bridge from processing plant
+	[background arg="res://assets/narrative/escape_route.png" fade="0.0"]
 	join narrator [z_index="1"]
-	narrator: Hours have passed since your escape during the chaos. The resistance hideout is cramped but alive with purpose. #id:s10_trans_go_001
+	narrator: Sasha's broadcast echoed across every screen in Spud. The truth was finally out. But so were you. #id:s10_trans_go_bridge1
 	leave narrator
 
+	[background arg="res://assets/narrative/night_customs.png" fade="1.5"]
+	join player_character [z_index="1"]
+	player_character: The resistance fighters led us through maintenance tunnels beneath the facility - routes they'd mapped for months. #id:s10_trans_go_bridge2
+	leave player_character
+
 	if {qte_escape_result} == "fail":
-		join player_character [z_index="1"]
-		player_character: Your escape was close - too close. A guard's bullet grazed you, but Murphy pulled you to safety. #id:s10_trans_go_002
-		leave player_character
+		join narrator [z_index="1"]
+		narrator: Your escape was close - too close. A guard's bullet grazed you during the chaos. #id:s10_trans_go_002
+		leave narrator
+		if {murphy_alliance} == "ally":
+			join murphy [z_index="1"]
+			murphy: Murphy pulled you through the last checkpoint, half-carrying you. [color=CHARTREUSE]"Almost there. Don't you dare give up now."[/color] #id:s10_trans_go_murphy1
+			leave murphy
+		elif {viktor_allied} == "yes":
+			join viktor [z_index="1"]
+			viktor: Viktor covered your retreat, his former colleagues hesitating to fire on one of their own. [color=STEEL_BLUE]"For Elena,"[/color] he muttered. #id:s10_trans_go_viktor1
+			leave viktor
+		else:
+			join sweet_potato_sasha [z_index="1"]
+			sweet_potato_sasha: Sasha stayed by your side the entire way. [color=CHARTREUSE]"I didn't survive that cell just to lose you now."[/color] #id:s10_trans_go_sasha1
+			leave sweet_potato_sasha
 	else:
 		join player_character [z_index="1"]
-		player_character: Your escape was flawless. The skills you developed at the checkpoint served you well. #id:s10_trans_go_003
+		player_character: Your escape was flawless. The skills you developed at the checkpoint - reading patrol patterns, timing movements - served you well. #id:s10_trans_go_003
 		leave player_character
+
+	# Arrival at hideout
+	[background arg="res://assets/narrative/hideout.png" fade="1.5"]
+	join narrator [z_index="1"]
+	narrator: Hours later, you emerged in a basement beneath an abandoned spud processing plant. Ironic. The resistance hideout was cramped but alive with purpose. #id:s10_trans_go_001
+	leave narrator
 
 	# Storyline for those who joined the resistance
 	[background arg="res://assets/narrative/resistance_planning.png" fade="1.5"]

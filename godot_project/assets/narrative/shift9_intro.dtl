@@ -32,14 +32,27 @@ else:
 	narrator: Every hour that passes is an hour closer to her being... [color=DARK_VIOLET]processed[/color]. #id:s9i_trans_002
 	leave narrator
 
-	join player_character [z_index="1"]
-	if {sasha_arrest_reaction} == "promise":
-		player_character: You made her a promise. Today, you keep it - or die trying. #id:s9i_trans_003
-	elif {sasha_arrest_reaction} == "hide":
-		player_character: The guilt weighs heavy. You hid while they took her. [color=STEEL_BLUE]Never again.[/color] #id:s9i_trans_004
+	# PLAYER_WANTED INTEGRATION - Player is on the security list
+	if {player_wanted} == "yes":
+		[background arg="res://assets/narrative/checkpoint_corridor.png" fade="1.0"]
+		audio "res://assets/audio/stings/suspicion_sting.mp3" [volume="-8.0" bus="SFX"]
+		join narrator [z_index="1"]
+		narrator: Your face is on every security terminal. [pulse freq=2][color=CRIMSON]WANTED FOR QUESTIONING.[/color][/pulse] #id:s9i_wanted_001
+		narrator: You slipped away last night, but they know. They're [color=YELLOW]hunting[/color] for you. #id:s9i_wanted_002
+		leave narrator
+		join player_character [z_index="1"]
+		player_character: Every guard's eyes seem to follow me. [color=STEEL_BLUE]It's only a matter of time before someone recognizes me.[/color] #id:s9i_wanted_003
+		player_character: I need to get to Sasha - and then get [color=CHARTREUSE]out[/color]. There's no going back to the old life now. #id:s9i_wanted_004
+		leave player_character
 	else:
-		player_character: You almost got caught trying to help her. Today's plan had better work. #id:s9i_trans_005
-	leave player_character
+		join player_character [z_index="1"]
+		if {sasha_arrest_reaction} == "promise":
+			player_character: You made her a promise. Today, you keep it - or die trying. #id:s9i_trans_003
+		elif {sasha_arrest_reaction} == "hide":
+			player_character: The guilt weighs heavy. You hid while they took her. [color=STEEL_BLUE]Never again.[/color] #id:s9i_trans_004
+		else:
+			player_character: You almost got caught trying to help her. Today's plan had better work. #id:s9i_trans_005
+		leave player_character
 
 # Main shift 9 content begins
 audio music "res://assets/audio/ambient/horror_drone_49.mp3" [fade="2.0" volume="-5.0" bus="Ambient"]
