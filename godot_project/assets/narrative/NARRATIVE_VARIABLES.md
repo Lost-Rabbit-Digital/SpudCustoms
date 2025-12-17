@@ -76,12 +76,23 @@ All variables below should be persisted when saving game state and restored when
 | `player_wanted` | shift8_end | "yes" | shift9_intro | Player is now wanted by security |
 | `player_captured` | shift8_end | "yes" | shift8_end, shift9_intro | Player was captured with Sasha |
 
-### Shift 9 - Rescue & Attack
+### Shift 9 - Evidence Destruction & Attack
 
 | Variable | Set In | Possible Values | Used In | Description |
 |----------|--------|-----------------|---------|-------------|
-| `critical_choice` | shift9_intro | "help", "betray" | shift9_intro | Help or betray resistance operative |
+| `inspection_result` | evidence_destruction minigame | "clean", "suspicious", "compromised" | shift9_intro, shift9_end | Result of desk inspection minigame |
+| `evidence_found` | evidence_destruction minigame | true, false | shift9_intro | Whether incriminating evidence was found |
+| `under_suspicion` | shift9_intro | "yes", "mild", "no" | shift9_end, shift10_intro | Player's suspicion level after inspection |
+| `critical_choice` | shift9_intro | "help", "betray", "chaos" | shift9_intro | Help or betray resistance operative |
 | `sasha_rescue_reaction` | shift9_end | "angry", "disgusted", "relieved" | final_confrontation | Reaction to seeing Sasha on conveyor |
+
+**Evidence Destruction Minigame** (replaces standard gameplay in Shift 9):
+- Triggered by `[signal arg="evidence_destruction"]` in shift9_intro
+- Player has 3 minutes to clear desk before security inspection
+- Items include: Sasha's letters, Murphy's notes, resistance pamphlets, fake IDs
+- Story-reactive items appear based on player choices (e.g., `murphy_alliance == "ally"`)
+- Wrong choices raise suspicion meter
+- Outcomes affect dialogue and player's standing in shift9_end
 
 ### Cafeteria Choices
 

@@ -85,6 +85,69 @@ security_officer: All border crossings are [color=RED]suspended[/color] except f
 security_officer: This scanner [color=YELLOW]cannot be fooled[/color]. Sound the alarm immediately for anyone without proper clearance. #id:s9i_011
 leave security_officer
 
+# Evidence Destruction Minigame - Player must clear their desk before security inspection
+# Only for players who weren't captured (captured players skip this)
+if {player_captured} != "yes":
+	[background arg="res://assets/narrative/checkpoint_desk.png" fade="1.0"]
+	audio "res://assets/audio/stings/alarm_distant.mp3" [volume="-8.0" bus="SFX"]
+	join announcer [z_index="1"]
+	announcer: [wave amp=20 freq=3][color=YELLOW]ATTENTION ALL PERSONNEL[/color][/wave]\: Security inspection of all workstations in [color=RED]five minutes[/color]. Remain at your desks. #id:s9i_inspection_001
+	announcer: Any [color=CRIMSON]unauthorized materials[/color] will result in [color=DARK_VIOLET]immediate detention[/color]. This is not a drill. #id:s9i_inspection_002
+	leave announcer
+
+	join player_character [z_index="1"]
+	player_character: [pulse freq=3][color=YELLOW]Five minutes.[/color][/pulse] My desk... Sasha's letters, the resistance contacts, Murphy's note... #id:s9i_inspection_003
+	player_character: I need to destroy the evidence before they find it. [color=CRIMSON]Everything incriminating has to go.[/color] #id:s9i_inspection_004
+	leave player_character
+
+	# Launch the evidence destruction minigame
+	[signal arg="evidence_destruction"]
+
+	# Branching based on inspection result
+	if {inspection_result} == "compromised":
+		[background arg="res://assets/narrative/interrogation.png" fade="1.5"]
+		audio "res://assets/audio/stings/threat_reveal.mp3" [volume="-5.0" bus="SFX"]
+		join security_chief [z_index="1"]
+		security_chief: [color=RED]What do we have here?[/color] The security team holds up the evidence they found. Resistance materials. At YOUR desk. #id:s9i_inspection_005
+		security_chief: You have [pulse freq=3][color=CRIMSON]ten seconds[/color][/pulse] to explain yourself before I have you dragged to processing. #id:s9i_inspection_006
+		leave security_chief
+
+		join player_character [z_index="1"]
+		- "Those aren't mine! Someone must have planted them!" (Deny) #id:s9i_inspection_007
+			player_character: [color=STEEL_BLUE]I feign shock and outrage.[/color] I'm a loyal officer! Check my record! #id:s9i_inspection_008
+			join security_chief [z_index="1"]
+			security_chief: [color=YELLOW]Hmm.[/color] Your record IS clean... We'll be watching you VERY closely. One wrong move... #id:s9i_inspection_009
+			leave security_chief
+		- "I was gathering intelligence on the resistance - for the Ministry!" (Bluff) #id:s9i_inspection_010
+			player_character: [color=STEEL_BLUE]I take a calculated risk.[/color] I've been tracking their movements. I was about to report! #id:s9i_inspection_011
+			join security_chief [z_index="1"]
+			security_chief: [color=YELLOW]Convenient timing.[/color] If you're lying, you'll wish you'd been processed. Get back to work. #id:s9i_inspection_012
+			leave security_chief
+		leave player_character
+		set {under_suspicion} = "yes"
+	elif {inspection_result} == "suspicious":
+		[background arg="res://assets/narrative/checkpoint_desk.png" fade="1.0"]
+		join security_officer [z_index="1"]
+		security_officer: [color=YELLOW]The inspector pauses at your desk, eyes narrowing.[/color] You seem nervous, officer. Something to hide? #id:s9i_inspection_013
+		leave security_officer
+		join player_character [z_index="1"]
+		player_character: [color=STEEL_BLUE]Just the stress of the situation, sir. Terrible business with those terrorists.[/color] #id:s9i_inspection_014
+		leave player_character
+		join security_officer [z_index="1"]
+		security_officer: [color=YELLOW]Hmm.[/color] Keep your head down and do your job. [color=STEEL_BLUE]The inspector moves on, but you feel watched.[/color] #id:s9i_inspection_015
+		leave security_officer
+		set {under_suspicion} = "mild"
+	else:
+		# Clean inspection
+		[background arg="res://assets/narrative/checkpoint_desk.png" fade="1.0"]
+		join security_officer [z_index="1"]
+		security_officer: [color=STEEL_BLUE]The inspector glances at your spotless desk and nods curtly.[/color] Carry on. #id:s9i_inspection_016
+		leave security_officer
+		join player_character [z_index="1"]
+		player_character: [color=CHARTREUSE]I exhale slowly as they move to the next station.[/color] That was too close. #id:s9i_inspection_017
+		leave player_character
+		set {under_suspicion} = "no"
+
 # Label for captured player path to jump to
 label s9i_operative_scene
 
