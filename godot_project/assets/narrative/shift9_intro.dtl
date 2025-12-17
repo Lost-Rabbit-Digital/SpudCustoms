@@ -11,7 +11,7 @@ if {player_captured} == "yes":
 	leave narrator
 
 	audio "res://assets/audio/stings/alarm_distant.mp3" [volume="-3.0" bus="SFX"]
-	[background arg="res://assets/narrative/resistance_attack.png" fade="0.5"]
+	[background arg="res://assets/narrative/night_attack.png" fade="0.5"]
 	join murphy [z_index="1"]
 	murphy: The cell door bursts open. Murphy stands there, smoke swirling behind him. #id:s9i_cap_003
 	murphy: [color=CHARTREUSE]Get up! The resistance is here![/color] We're getting you AND Sasha out! #id:s9i_cap_004
