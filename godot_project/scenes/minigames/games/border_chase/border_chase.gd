@@ -201,17 +201,8 @@ func _spawn_item() -> void:
 	var visual = _create_item_visual(is_contraband)
 	item.add_child(visual)
 
-	# Clickable area
-	var click_area = Area2D.new()
-	click_area.name = "ClickArea"
-	click_area.input_pickable = true  # Enable physics picking for mouse input
-	var collision = CollisionShape2D.new()
-	var shape = RectangleShape2D.new()
-	shape.size = Vector2(60, 60)
-	collision.shape = shape
-	click_area.add_child(collision)
-	click_area.input_event.connect(_on_item_clicked.bind(item))
-	item.add_child(click_area)
+	# Store hit box size for manual hit testing (physics picking doesn't work when paused)
+	item.set_meta("hit_size", Vector2(60, 60))
 
 	items_layer.add_child(item)
 	_active_items.append(item)
@@ -288,14 +279,46 @@ func _update_items(delta: float) -> void:
 		_complete_game()
 
 
-func _on_item_clicked(viewport: Node, event: InputEvent, shape_idx: int, item: Node2D) -> void:
-	if not event is InputEventMouseButton:
-		return
-	if not event.pressed or event.button_index != MOUSE_BUTTON_LEFT:
-		return
+## Convert screen mouse position to SubViewport local coordinates
+func _get_subviewport_mouse_pos() -> Vector2:
+	var screen_pos = get_viewport().get_mouse_position()
+	var container_rect = subviewport_container.get_global_rect()
+	var relative_pos = (screen_pos - container_rect.position) / container_rect.size
+	return relative_pos * Vector2(subviewport.size)
+
+
+## Handle input manually since physics picking doesn't work when tree is paused
+func _input(event: InputEvent) -> void:
 	if not _is_active or not _game_running:
 		return
 
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		var local_pos = _get_subviewport_mouse_pos()
+		_check_item_click(local_pos)
+
+
+## Check if click hit any item and handle it
+func _check_item_click(click_pos: Vector2) -> void:
+	# Check items in reverse order (top-most first)
+	for i in range(_active_items.size() - 1, -1, -1):
+		var item = _active_items[i]
+		if not is_instance_valid(item):
+			continue
+
+		var was_caught = item.get_meta("caught", false)
+		if was_caught:
+			continue
+
+		# Manual hit test using stored hit box size
+		var hit_size: Vector2 = item.get_meta("hit_size", Vector2(60, 60))
+		var item_rect = Rect2(item.position - hit_size / 2, hit_size)
+
+		if item_rect.has_point(click_pos):
+			_handle_item_clicked(item)
+			return  # Only handle one click at a time
+
+
+func _handle_item_clicked(item: Node2D) -> void:
 	var is_contraband = item.get_meta("is_contraband", false)
 	var was_caught = item.get_meta("caught", false)
 
