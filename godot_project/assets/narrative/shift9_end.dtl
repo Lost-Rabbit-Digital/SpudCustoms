@@ -4,13 +4,13 @@ audio music "res://assets/music/narrative/horror_aliens_main.mp3" [fade="2.0" vo
 
 if {stay_or_go} == "stay":
 	audio music "res://assets/music/narrative/ambient_defeat_main.mp3" [fade="2.0" volume="-5.0" bus="Music"]
-	[background arg="res://assets/narrative/loyalist_outcome.png" fade="0.0"]
+	[background arg="res://assets/narrative/loyalty_outcome.png" fade="0.0"]
 	audio "res://assets/audio/explosions/big distant thump 5.wav" [volume="-5.0" bus="SFX"]
 	join player_character [z_index="1"]
 	player_character: I hunker down as the battle rages. I'm sorry, Sasha. I'm [color=STEEL_BLUE]not as brave as you[/color]. #id:131
 	leave player_character
 	audio "res://assets/audio/gunfire/Heavy Pistol Automatic B.wav" [volume="-5.0" bus="SFX"]
-	[background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
+	[background arg="res://assets/narrative/loyalty_outcome.png" fade="2.0"]
 
 	join supervisor_russet [z_index="1"]
 	supervisor_russet: "The [color=CRIMSON]terrorist attack[/color] has been repelled! The ringleaders are being [color=DARK_VIOLET]processed[/color] as we speak." #id:132
@@ -38,9 +38,9 @@ if {stay_or_go} == "stay":
 		join player_character [z_index="1"]
 		player_character: [color=STEEL_BLUE]I nod, hollow inside.[/color] I survived the interrogation, but I'm marked now. Every move watched. #id:s9e_suspicion_006
 		leave player_character
-		[background arg="res://assets/narrative/loyalist_outcome.png" fade="1.5"]
+		[background arg="res://assets/narrative/loyalty_outcome.png" fade="1.5"]
 
-	[background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
+	[background arg="res://assets/narrative/loyalty_outcome.png" fade="2.0"]
 	join security_chief [z_index="1"]
 	security_chief: Chief Yukon drags in resistance members in chains, Sasha among them. "These [color=CRIMSON]traitors[/color] will face [color=DARK_VIOLET]final processing[/color]." #id:133
 	sweet_potato_sasha: Sasha catches your eye. Despite her bruises, her gaze holds [wave amp=15 freq=2][color=CHARTREUSE]no judgment, only sadness[/color][/wave]. #id:134
@@ -51,7 +51,7 @@ if {stay_or_go} == "stay":
 		sweet_potato_sasha: [color=STEEL_BLUE]Her eyes search yours, looking for some sign of the person she thought she knew.[/color] #id:s9e_suspicion_008
 
 	leave security_chief
-	[background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
+	[background arg="res://assets/narrative/loyalty_outcome.png" fade="2.0"]
 	join player_character [z_index="1"]
 	if {under_suspicion} == "yes":
 		player_character: I've survived - [color=CRIMSON]barely[/color]. Kept my head down while they took everyone I cared about. Now I'm a marked potato, living on borrowed time. #id:s9e_suspicion_009
