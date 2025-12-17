@@ -24,7 +24,7 @@ if {stay_or_go} == "stay":
 	join narrator [z_index="1"]
 	narrator: The checkpoint has been rebuilt after the resistance attack. Security is unprecedented, with propaganda broadcasts praising the "brave defenders." #id:3a
 	leave narrator
-	[background arg="res://assets/narrative/loyalist_outcome.png" fade="2.0"]
+	[background arg="res://assets/narrative/loyalty_outcome.png" fade="2.0"]
 	join supervisor_russet [z_index="1"]
 	supervisor_russet: I've been promoted to Regional Director of Border Security and [pulse freq=2]Root Reserve Distribution[/pulse]. #id:3b
 	supervisor_russet: Russet pins a small medal to your uniform. Assistant Regional Director... for your unwavering loyalty to Spud. #id:3c
