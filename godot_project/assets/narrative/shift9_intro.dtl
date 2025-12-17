@@ -101,7 +101,7 @@ leave security_officer
 # Evidence Destruction Minigame - Player must clear their desk before security inspection
 # Only for players who weren't captured (captured players skip this)
 if {player_captured} != "yes":
-	[background arg="res://assets/narrative/checkpoint_desk.png" fade="1.0"]
+	[background arg="res://assets/narrative/customs_office.png" fade="1.0"]
 	audio "res://assets/audio/stings/alarm_distant.mp3" [volume="-8.0" bus="SFX"]
 	join announcer [z_index="1"]
 	announcer: [wave amp=20 freq=3][color=YELLOW]ATTENTION ALL PERSONNEL[/color][/wave]\: Security inspection of all workstations in [color=RED]five minutes[/color]. Remain at your desks. #id:s9i_inspection_001
@@ -139,7 +139,7 @@ if {player_captured} != "yes":
 		leave player_character
 		set {under_suspicion} = "yes"
 	elif {inspection_result} == "suspicious":
-		[background arg="res://assets/narrative/checkpoint_desk.png" fade="1.0"]
+		[background arg="res://assets/narrative/customs_office.png" fade="1.0"]
 		join security_officer [z_index="1"]
 		security_officer: [color=YELLOW]The inspector pauses at your desk, eyes narrowing.[/color] You seem nervous, officer. Something to hide? #id:s9i_inspection_013
 		leave security_officer
@@ -152,7 +152,7 @@ if {player_captured} != "yes":
 		set {under_suspicion} = "mild"
 	else:
 		# Clean inspection
-		[background arg="res://assets/narrative/checkpoint_desk.png" fade="1.0"]
+		[background arg="res://assets/narrative/customs_office.png" fade="1.0"]
 		join security_officer [z_index="1"]
 		security_officer: [color=STEEL_BLUE]The inspector glances at your spotless desk and nods curtly.[/color] Carry on. #id:s9i_inspection_016
 		leave security_officer

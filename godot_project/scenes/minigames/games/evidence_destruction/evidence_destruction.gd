@@ -121,8 +121,8 @@ func _setup_ui_references() -> void:
 		_examine_name = _examine_panel.get_node_or_null("ItemName")
 		_examine_description = _examine_panel.get_node_or_null("ItemDescription")
 		_examine_monologue = _examine_panel.get_node_or_null("InnerMonologue")
-		_shred_button = _examine_panel.get_node_or_null("ShredButton")
-		_stash_button = _examine_panel.get_node_or_null("StashButton")
+		_shred_button = _examine_panel.get_node_or_null("ButtonContainer/ShredButton")
+		_stash_button = _examine_panel.get_node_or_null("ButtonContainer/StashButton")
 
 		# Connect buttons
 		if _shred_button:
