@@ -6,11 +6,13 @@ My son Kobi was born 25 weeks premature in late November 2023, weighing barely 1
 
 Now, over a year later, he's grown from 1 pound to over 20 pounds. Last week he graduated from the NICU to the PICU - still waiting for his lungs to be strong enough for a home ventilator so we can finally go home. In the quiet hours between visits, I've been working to bring Spud Customs closer to the vision I had before life took an unexpected turn.
 
-A lot of the new content reflects feelings that mirror my experiences - Viktor's rooftop grief, Murphy's sacrifice, the old queer couple's erasure, the negative impact of thoughtless acts performed as social norm, and the helplessness in face of waves of ongoing disasters. I watch every recording that pops up online, and I'm grateful to each of you who've taken the time to experience this strange little world.
+A lot of the new content reflects themes that emerged from my experiences - Viktor's rooftop grief, Murphy's sacrifice, the old queer couple's erasure, the negative impact of thoughtless acts performed as social norm, and the helplessness in face of waves of ongoing disasters. I watch every recording that pops up online, and I'm grateful to each of you who've taken the time to experience this strange little world.
 
 Over 2,000 people have played Spud Customs and joined us on this journey. Thank you for your feedback, your patience, and your interest in our little story of potato redemption.
 
 I hope this game can bloom even a fraction as much as Kobi has.
+
+One small tribute: the elderly traveler Jen Piper is named after one of the NICU nurses who cared for Kobi during those early months. Thank you, Jen.
 
 This update is for you.
 
@@ -44,6 +46,15 @@ This update is for you.
 - **Loyalist Path Enhancements**: Improved narrative for loyalist path with dialogue fixes
 - **Enhanced Cutscenes**: Improved cutscene narrative with better choice continuity and new scenes
 - **Citation Notes**: Added draggable citation note system for strike feedback
+
+## NEW MINIGAME: EVIDENCE DESTRUCTION
+- **Shift 9 Integration**: A new narrative minigame replaces standard gameplay during the climactic Shift 9
+- **Clear Your Desk**: Security inspection is imminent - you have 3 minutes to examine items and decide their fate
+- **Shred or Stash**: Destroy incriminating evidence (resistance pamphlets, coded messages, Sasha's letters) or safely stash legitimate work items (official stamps, regulations, loyalty certificates)
+- **Story-Driven Items**: The items on your desk reflect your choices throughout the game - helped the resistance? Murphy's warning note appears. Allied with Sasha? Her handwritten letters are there
+- **Suspicion Meter**: Wrong choices raise suspicion - shredding your loyalty certificate looks suspicious, but so does keeping resistance materials
+- **Branching Consequences**: Get caught with evidence and face interrogation. Clear your desk cleanly and proceed undetected. The outcome shapes your path through the finale
+- **Inner Monologue**: Each item reveals your character's thoughts, adding emotional weight to every decision
 
 ## ACHIEVEMENTS
 - **In-Game Achievement Viewer**: New achievements panel accessible from the pause menu showing all unlockable achievements
