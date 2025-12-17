@@ -26,12 +26,29 @@ var correct_decision_streak: int = 0
 var original_runner_chance: float = 0.15
 
 # Minigame triggers
-var _minigame_triggered_this_shift: bool = false
+var _minigames_triggered_this_shift: int = 0
 var _consecutive_perfect_stamps: int = 0
 const STREAK_MINIGAME_THRESHOLD: int = 5
 const STREAK_MINIGAME_CHANCE: float = 0.4  # 40% chance at milestone
 const PERFECT_STAMP_MINIGAME_THRESHOLD: int = 3
 const PERFECT_STAMP_MINIGAME_CHANCE: float = 0.5  # 50% chance after 3 perfect stamps
+
+
+## Returns the maximum number of minigames allowed for the current shift.
+## Scales with game progression: early shifts get fewer, later shifts get more.
+func _get_max_minigames_for_shift() -> int:
+	var current_shift: int = Global.shift
+	if current_shift <= 3:
+		return 1  # Early game: 1 minigame max
+	elif current_shift <= 6:
+		return 2  # Mid game: 2 minigames max
+	else:
+		return 3  # Late game (shifts 7-10): 3 minigames max
+
+
+## Check if more minigames can be triggered this shift
+func _can_trigger_minigame() -> bool:
+	return _minigames_triggered_this_shift < _get_max_minigames_for_shift()
 
 # storing and sending rule assignments
 signal rules_updated(new_rules)
@@ -1704,8 +1721,8 @@ func trigger_minigame(minigame_type: String, config: Dictionary = {}):
 
 ## Try to trigger a minigame when reaching streak milestone
 func _try_trigger_streak_minigame():
-	# Only trigger once per shift
-	if _minigame_triggered_this_shift:
+	# Check if we've hit the minigame limit for this shift
+	if not _can_trigger_minigame():
 		return
 
 	# Only trigger at exact milestone to avoid repeated triggers
@@ -1720,7 +1737,7 @@ func _try_trigger_streak_minigame():
 	if not minigame_launcher or minigame_launcher.get_unlocked_minigames().is_empty():
 		return
 
-	_minigame_triggered_this_shift = true
+	_minigames_triggered_this_shift += 1
 
 	# Play attention-grabbing sound and visual effect to prepare player
 	_play_minigame_warning_effect()
@@ -1733,8 +1750,8 @@ func _try_trigger_streak_minigame():
 
 ## Try to trigger a minigame when achieving consecutive perfect stamps
 func _try_trigger_perfect_stamp_minigame():
-	# Only trigger once per shift (shared with streak trigger)
-	if _minigame_triggered_this_shift:
+	# Check if we've hit the minigame limit for this shift
+	if not _can_trigger_minigame():
 		return
 
 	# Only trigger at exact threshold
@@ -1749,7 +1766,7 @@ func _try_trigger_perfect_stamp_minigame():
 	if not minigame_launcher or minigame_launcher.get_unlocked_minigames().is_empty():
 		return
 
-	_minigame_triggered_this_shift = true
+	_minigames_triggered_this_shift += 1
 
 	# Play attention-grabbing sound and visual effect to prepare player
 	_play_minigame_warning_effect()
@@ -1790,16 +1807,16 @@ func _play_minigame_warning_effect():
 ## Handle minigame trigger request from border runner system
 ## This is called when a minigame should trigger instead of a border runner
 func _on_minigame_from_runner_requested(minigame_type: String):
-	# Only trigger once per shift (shared with streak/perfect stamp triggers)
-	if _minigame_triggered_this_shift:
-		print("Minigame from runner skipped - already triggered this shift")
+	# Check if we've hit the minigame limit for this shift
+	if not _can_trigger_minigame():
+		print("Minigame from runner skipped - hit limit for this shift (%d/%d)" % [_minigames_triggered_this_shift, _get_max_minigames_for_shift()])
 		return
 
 	# Check if minigames are available
 	if not minigame_launcher or minigame_launcher.is_minigame_active():
 		return
 
-	_minigame_triggered_this_shift = true
+	_minigames_triggered_this_shift += 1
 
 	# Play warning effect and show alert
 	_play_minigame_warning_effect()
