@@ -575,7 +575,7 @@ func _on_minigame_completed(result: Dictionary) -> void:
 		])
 		# Emit event for analytics or other systems
 		if EventBus:
-			EventBus.track_event.emit("evidence_destruction_completed", {
+			EventBus.track_event("evidence_destruction_completed", {
 				"result": inspection_result,
 				"evidence_count": evidence_found.size(),
 				"suspicion": result.get("suspicion_level", 0),
