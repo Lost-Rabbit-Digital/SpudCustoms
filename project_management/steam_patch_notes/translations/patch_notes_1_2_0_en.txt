@@ -2,11 +2,15 @@
 
 [i]A personal note from the developer:[/i]
 
-My son was born 25 weeks premature in late November, weighing barely 1 pound. I'd been delaying the launch week after week, and finally decided to just release whatever I could muster the willpower to finish while we were checking into the NICU.
+My son Kobi was born 25 weeks premature in late November 2023, weighing barely 1 pound. I'd been delaying the launch week after week, and finally decided to release whatever I could muster the willpower to finish while we were checking into the NICU.
 
-Now, over a year later, he's grown from 1 pound to over 20 pounds - still in the NICU, but so much stronger. In the quiet hours between visits, I've been working to bring Spud Customs closer to the vision I had before life took an unexpected turn. I hope this game can bloom even a fraction as much as he has.
+Now, over a year later, he's grown from 1 pound to over 20 pounds. Last week he graduated from the NICU to the PICU - still waiting for his lungs to be strong enough for a home ventilator so we can finally go home. In the quiet hours between visits, I've been working to bring Spud Customs closer to the vision I had before life took an unexpected turn.
+
+A lot of the new content reflects feelings that mirror my experiences - Viktor's rooftop grief, Murphy's sacrifice, the old queer couple's erasure, the negative impact of thoughtless acts performed as social norm, and the helplessness in face of waves of ongoing disasters. I watch every recording that pops up online, and I'm grateful to each of you who've taken the time to experience this strange little world.
 
 Over 2,000 people have played Spud Customs and joined us on this journey. Thank you for your feedback, your patience, and your interest in our little story of potato redemption.
+
+I hope this game can bloom even a fraction as much as Kobi has.
 
 This update is for you.
 
@@ -58,12 +62,32 @@ This update is for you.
 [*] Language selector in main menu
 [*] Improved shift summary screen for story mode
 [*] Load game confirmation dialog
+[*] Minigames now appear more frequently as you progress through shifts
+[*] Improved law receipt with expired document notes
 [/list]
 
 [h3]Twitch Integration[/h3]
 [list]
 [*] Connect your Twitch channel to have viewer names appear on potatoes!
 [*] Auto-collects viewer names from chat
+[/list]
+
+[h3]Story & Narrative[/h3]
+[list]
+[*] [b]Murphy's Sacrifice[/b] - New "Protocol HARVEST" sequence with Murphy badge memorial scene
+[*] [b]Viktor Storyline[/b] - Full subplot with rooftop grief narrative
+[*] [b]Chaos Agent Path[/b] - New story path allowing players to sabotage both sides
+[*] [b]Sasha Ending[/b] - Now requires 3+ pro-Sasha choices with subtle hints throughout
+[*] Improved QTE narrative system with visual pane for story images
+[*] Enhanced loyalist path with dialogue fixes and better choice continuity
+[/list]
+
+[h3]Achievements[/h3]
+[list]
+[*] [b]In-Game Achievement Viewer[/b] - New panel accessible from pause menu showing all achievements
+[*] [b]Toast Notifications[/b] - Achievements now display a toast when unlocked
+[*] Expanded achievement set tracking gameplay milestones and story paths
+[*] Fixed achievement tracking - all achievements now unlock properly
 [/list]
 
 [h2]Bug Fixes[/h2]
