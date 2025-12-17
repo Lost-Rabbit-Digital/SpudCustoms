@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Kijk naar het veld 'Land'. Als het 'Chip Hill' zegt -
 rule_explanation_age,Kijk naar het veld 'Geboortedatum'. Bereken de leeftijd en controleer tegen de regel
 rule_explanation_gender,Kijk naar het veld 'Geslacht' en controleer tegen de huidige regel
 rule_footer_text,Deze regels moeten worden gehandhaafd voor ALLE aardappelen
+rule_expired_note,Verlopen documenten moeten ALTIJD worden afgewezen.
 rule_tutorial_hint,Hulp nodig? Klik op elke regel voor een uitleg
 alert_correct_decision_detailed,JUISTE BESLISSING! +{points} punten\n{reason}
 alert_wrong_decision_detailed,VERKEERDE BESLISSING! Strike toegevoegd!\n{reason}

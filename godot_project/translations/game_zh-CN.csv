@@ -34,6 +34,7 @@ rule_explanation_chip_hill,查看“国家”字段。如果显示“薯片山�
 rule_explanation_age,查看“出生”字段。计算年龄并对照规则检查
 rule_explanation_gender,查看“性别”字段并对照当前规则检查
 rule_footer_text,这些规则必须对所有土豆强制执行
+rule_expired_note,过期文件必须始终拒绝。
 rule_tutorial_hint,需要帮助？点击任意规则查看说明
 alert_correct_decision_detailed,正确决定！+{points} 分\n{reason}
 alert_wrong_decision_detailed,错误决定！增加一次失误！\n{reason}

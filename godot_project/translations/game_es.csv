@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Mira el campo 'País'. Si dice 'Chip Hill' - RECHAZAR
 rule_explanation_age,Mira el campo 'Fecha de Nacimiento'. Calcula la edad y verifica contra la regla
 rule_explanation_gender,Mira el campo 'Género' y verifica contra la regla actual
 rule_footer_text,Estas reglas deben aplicarse para TODAS las papas
+rule_expired_note,Los documentos vencidos SIEMPRE deben ser rechazados.
 rule_tutorial_hint,¿Necesitas ayuda? Haz clic en cualquier regla para una explicación
 alert_correct_decision_detailed,¡DECISIÓN CORRECTA! +{points} puntos\n{reason}
 alert_wrong_decision_detailed,¡DECISIÓN INCORRECTA! ¡Strike añadido!\n{reason}

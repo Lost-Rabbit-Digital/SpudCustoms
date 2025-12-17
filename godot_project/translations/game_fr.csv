@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Regardez le champ 'Pays'. S'il dit 'Chip Hill' - REJE
 rule_explanation_age,Regardez le champ 'Date de Naissance'. Calculez l'âge et vérifiez par rapport à la règle
 rule_explanation_gender,Regardez le champ 'Genre' et vérifiez par rapport à la règle actuelle
 rule_footer_text,Ces règles doivent être appliquées pour TOUTES les pommes de terre
+rule_expired_note,Les documents expirés doivent TOUJOURS être rejetés.
 rule_tutorial_hint,Besoin d'aide? Cliquez sur n'importe quelle règle pour une explication
 alert_correct_decision_detailed,BONNE DÉCISION! +{points} points\n{reason}
 alert_wrong_decision_detailed,MAUVAISE DÉCISION! Strike ajouté!\n{reason}

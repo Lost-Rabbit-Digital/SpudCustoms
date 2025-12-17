@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Κοιτάξτε το πεδίο 'Χώρα'. Αν α�
 rule_explanation_age,Κοιτάξτε το πεδίο 'Γέννηση'. Υπολογίστε την ηλικία και ελέγξτε βάσει κανόνα
 rule_explanation_gender,Κοιτάξτε το πεδίο 'Φύλο' και ελέγξτε βάσει του τρέχοντος κανόνα
 rule_footer_text,Αυτοί οι κανόνες πρέπει να επιβάλλονται για ΟΛΕΣ τις πατάτες
+rule_expired_note,Τα ληγμένα έγγραφα πρέπει ΠΑΝΤΑ να απορρίπτονται.
 rule_tutorial_hint,Χρειάζεστε βοήθεια; Κάντε κλικ σε οποιονδήποτε κανόνα για επεξήγηση
 alert_correct_decision_detailed,ΣΩΣΤΗ ΑΠΟΦΑΣΗ! +{points} πόντοι\n{reason}
 alert_wrong_decision_detailed,ΛΑΘΟΣ ΑΠΟΦΑΣΗ! Προστέθηκε ποινή!\n{reason}

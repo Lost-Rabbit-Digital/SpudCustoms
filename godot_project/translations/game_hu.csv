@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Nézze meg az 'Ország' mezőt. Ha azt mondja 'Chip H
 rule_explanation_age,Nézze meg a 'Születési dátum' mezőt. Számítsa ki az életkort és ellenőrizze a szabály szerint
 rule_explanation_gender,Nézze meg a 'Nem' mezőt és ellenőrizze az aktuális szabály szerint
 rule_footer_text,Ezeket a szabályokat MINDEN krumplira be kell tartatni
+rule_expired_note,A lejárt dokumentumokat MINDIG el kell utasítani.
 rule_tutorial_hint,Segítségre van szüksége? Kattintson bármely szabályra a magyarázatért
 alert_correct_decision_detailed,HELYES DÖNTÉS! +{points} pont\n{reason}
 alert_wrong_decision_detailed,ROSSZ DÖNTÉS! Strike hozzáadva!\n{reason}

@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Se på 'Land' feltet. Hvis det siger 'Chip Hill' - AF
 rule_explanation_age,Se på 'Fødselsdato' feltet. Beregn alder og tjek mod regel
 rule_explanation_gender,Se på 'Køn' feltet og tjek mod nuværende regel
 rule_footer_text,Disse regler skal håndhæves for ALLE kartofler
+rule_expired_note,Udløbne dokumenter skal ALTID afvises.
 rule_tutorial_hint,Brug for hjælp? Klik på enhver regel for en forklaring
 alert_correct_decision_detailed,KORREKT BESLUTNING! +{points} point\n{reason}
 alert_wrong_decision_detailed,FORKERT BESLUTNING! Strike tilføjet!\n{reason}

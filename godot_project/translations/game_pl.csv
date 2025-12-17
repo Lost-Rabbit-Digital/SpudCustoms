@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Spójrz na pole 'Kraj'. Jeśli mówi 'Chip Hill' - OD
 rule_explanation_age,Spójrz na pole 'Data Urodzenia'. Oblicz wiek i sprawdź względem reguły
 rule_explanation_gender,Spójrz na pole 'Płeć' i sprawdź względem bieżącej reguły
 rule_footer_text,Te zasady muszą być egzekwowane dla WSZYSTKICH ziemniaków
+rule_expired_note,Przeterminowane dokumenty muszą być ZAWSZE odrzucane.
 rule_tutorial_hint,Potrzebujesz pomocy? Kliknij dowolną zasadę
 alert_correct_decision_detailed,POPRAWNA DECYZJA! +{points} punktów\n{reason}
 alert_wrong_decision_detailed,ZŁA DECYZJA! Dodano Strike!\n{reason}

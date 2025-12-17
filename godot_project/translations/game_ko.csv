@@ -34,6 +34,7 @@ rule_explanation_chip_hill,'국가' 항목을 확인하세요. '칩 힐'이라�
 rule_explanation_age,'출생' 항목을 확인하세요. 나이를 계산하여 규칙과 비교하세요
 rule_explanation_gender,'성별' 항목을 확인하고 현재 규칙과 비교하세요
 rule_footer_text,이 규칙들은 모든 감자에게 반드시 적용되어야 합니다
+rule_expired_note,만료된 서류는 반드시 거절해야 합니다.
 rule_tutorial_hint,도움이 필요하신가요? 설명을 보려면 아무 규칙이나 클릭하세요
 alert_correct_decision_detailed,올바른 결정! +{points}점\n{reason}
 alert_wrong_decision_detailed,잘못된 결정! 경고가 추가되었습니다!\n{reason}

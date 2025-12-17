@@ -34,6 +34,7 @@ rule_explanation_chip_hill,Nhìn vào trường 'Quốc gia'. Nếu nó nói 'Ch
 rule_explanation_age,Nhìn vào trường 'Ngày Sinh'. Tính tuổi và kiểm tra theo quy tắc
 rule_explanation_gender,Nhìn vào trường 'Giới tính' và kiểm tra theo quy tắc hiện tại
 rule_footer_text,Những quy tắc này phải được thực thi cho TẤT CẢ khoai tây
+rule_expired_note,Tài liệu hết hạn phải LUÔN LUÔN bị từ chối.
 rule_tutorial_hint,Yardıma mı ihtiyacınız var? Açıklama için herhangi bir kurala tıklayın
 alert_correct_decision_detailed,QUYẾT ĐỊNH ĐÚNG! +{points} điểm\n{reason}
 alert_wrong_decision_detailed,QUYẾT ĐỊNH SAI! Thêm Strike!\n{reason}
