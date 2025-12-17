@@ -66,6 +66,7 @@ gdscript/warnings/integer_division=0
 
 directories/dch_directory={
 "announcer": "res://assets/narrative/characters/announcer.dch",
+"idaho_aide": "res://assets/narrative/characters/idaho_aide.dch",
 "murphy": "res://assets/narrative/characters/murphy.dch",
 "narrator": "res://assets/narrative/characters/narrator.dch",
 "npc_1": "res://assets/narrative/characters/npc_1.dch",
