@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <rect width="200" height="60" fill="#2a2a2a" rx="4"/>
+  <text x="10" y="20" font-family="monospace" font-size="10" fill="#888888">INSPECTION IN:</text>
+  <!-- Digital display -->
+  <rect x="10" y="28" width="180" height="26" fill="#1a1a1a" rx="2"/>
+  <text x="100" y="48" font-family="monospace" font-size="20" fill="#ff3333" text-anchor="middle">3:00</text>
+</svg>

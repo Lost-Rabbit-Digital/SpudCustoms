@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="50" viewBox="0 0 300 50">
+  <rect width="300" height="50" fill="#2a2a2a" rx="4"/>
+  <text x="10" y="20" font-family="monospace" font-size="12" fill="#ff6b6b">SUSPICION</text>
+  <!-- Meter background -->
+  <rect x="10" y="28" width="280" height="16" fill="#1a1a1a" rx="2"/>
+  <!-- Meter fill (placeholder at 30%) -->
+  <rect x="12" y="30" width="80" height="12" fill="#ff6b6b" rx="1"/>
+  <!-- Tick marks -->
+  <line x1="150" y1="28" x2="150" y2="44" stroke="#444444" stroke-width="1"/>
+  <line x1="220" y1="28" x2="220" y2="44" stroke="#444444" stroke-width="1"/>
+</svg>
