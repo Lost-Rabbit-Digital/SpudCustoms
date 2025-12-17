@@ -1,0 +1,53 @@
+keys,en
+achievement_unlocked_title,ACHIEVEMENT UNLOCKED!
+achievements_menu_button,Achievements
+achievements_progress_format,%d / %d Unlocked
+achievement_hidden_name,???
+achievement_hidden_desc,This achievement is hidden until unlocked
+achievement_category_gameplay,Gameplay
+achievement_category_resistance,Resistance Path
+achievement_category_loyalist,Loyalist Path
+achievement_category_character,Character Arcs
+achievement_category_discovery,Discovery
+achievement_rookie_officer_name,Rookie Officer
+achievement_rookie_officer_desc,Complete your first shift at the border
+achievement_veteran_officer_name,Customs Veteran
+achievement_veteran_officer_desc,Complete 10 shifts at the border
+achievement_master_officer_name,Master of Customs
+achievement_master_officer_desc,Complete 25 shifts at the border
+achievement_sharpshooter_name,Sharpshooter
+achievement_sharpshooter_desc,Stop 10 border runners with the missile system
+achievement_border_defender_name,Border Defender
+achievement_border_defender_desc,Stop 50 border runners with the missile system
+achievement_perfect_shot_name,Perfect Shot
+achievement_perfect_shot_desc,Land 5 perfect hits on border runners
+achievement_high_scorer_name,High Scorer
+achievement_high_scorer_desc,Achieve a score of 10,000 points
+achievement_score_legend_name,Score Legend
+achievement_score_legend_desc,Achieve a score of 50,000 points
+achievement_savior_of_spud_name,Savior of Spud
+achievement_savior_of_spud_desc,Complete the story and save the nation
+achievement_born_diplomat_name,Born Diplomat
+achievement_born_diplomat_desc,Achieve the diplomatic ending through peaceful negotiation
+achievement_tater_of_justice_name,Tater of Justice
+achievement_tater_of_justice_desc,Bring justice to the corrupt officials
+achievement_best_served_hot_name,Best Served Hot
+achievement_best_served_hot_desc,Exact your revenge on those who wronged you
+achievement_down_with_tatriarchy_name,Down with the Tatriarchy
+achievement_down_with_tatriarchy_desc,Lead the revolution and overthrow the regime
+achievement_heart_of_stone_name,Heart of Stone
+achievement_heart_of_stone_desc,Remain a cold and obedient bureaucrat until the end
+achievement_survivor_name,Survivor
+achievement_survivor_desc,Do whatever it takes to survive the regime
+achievement_late_bloomer_name,Late Bloomer
+achievement_late_bloomer_desc,Find redemption at the very last moment
+achievement_tommys_legacy_name,Tommy's Legacy
+achievement_tommys_legacy_desc,Uncover the truth about Tommy's fate
+achievement_elenas_memory_name,Elena's Memory
+achievement_elenas_memory_desc,Honor Elena's sacrifice and remember her story
+achievement_the_note_name,The Note
+achievement_the_note_desc,Discover the secret note and its hidden message
+achievement_root_of_evil_name,Root of Evil
+achievement_root_of_evil_desc,Expose the corruption at the heart of the regime
+achievement_chaos_architect_name,Chaos Architect
+achievement_chaos_architect_desc,Embrace chaos and watch the world burn

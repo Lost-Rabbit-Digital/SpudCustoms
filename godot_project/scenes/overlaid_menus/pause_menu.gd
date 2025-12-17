@@ -3,6 +3,7 @@ extends OverlaidMenu
 
 @export var options_packed_scene: PackedScene
 @export var help_packed_scene: PackedScene
+@export var achievements_packed_scene: PackedScene
 @export_file("*.tscn") var main_menu_scene: String
 
 var popup_open
@@ -58,6 +59,16 @@ func open_help_menu():
 	_enable_focus.call_deferred()
 
 
+func open_achievements_menu():
+	if achievements_packed_scene == null:
+		return
+	var achievements_scene = achievements_packed_scene.instantiate()
+	add_child(achievements_scene)
+	_disable_focus.call_deferred()
+	await achievements_scene.tree_exiting
+	_enable_focus.call_deferred()
+
+
 func _handle_cancel_input():
 	if popup_open != null:
 		close_popup()
@@ -75,6 +86,12 @@ func _setup_help():
 		%HelpButton.hide()
 
 
+func _setup_achievements():
+	if achievements_packed_scene == null:
+		if has_node("%AchievementsButton"):
+			%AchievementsButton.hide()
+
+
 func _setup_main_menu():
 	if main_menu_scene.is_empty():
 		%MainMenuButton.hide()
@@ -85,6 +102,7 @@ func _ready():
 		%ExitButton.hide()
 	_setup_options()
 	_setup_help()
+	_setup_achievements()
 	_setup_main_menu()
 	_setup_controller_hints()
 	_grab_initial_focus()
@@ -121,6 +139,10 @@ func _on_options_button_pressed():
 
 func _on_help_button_pressed():
 	open_help_menu()
+
+
+func _on_achievements_button_pressed():
+	open_achievements_menu()
 
 
 func _on_main_menu_button_pressed():

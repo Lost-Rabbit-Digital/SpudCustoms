@@ -1,0 +1,89 @@
+[gd_scene load_steps=3 format=3 uid="uid://achievement_tile_001"]
+
+[ext_resource type="Script" uid="uid://achievement_tile_script" path="res://scripts/ui/achievement_tile.gd" id="1_script"]
+[ext_resource type="FontFile" uid="uid://bu4wixto3oahp" path="res://assets/fonts/Pixellari.ttf" id="2_font"]
+
+[node name="AchievementTile" type="PanelContainer"]
+custom_minimum_size = Vector2(280, 100)
+script = ExtResource("1_script")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="IconContainer" type="Control" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="IconTexture" type="TextureRect" parent="MarginContainer/HBoxContainer/IconContainer"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LockOverlay" type="ColorRect" parent="MarginContainer/HBoxContainer/IconContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="NameLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 14
+text = "Achievement Name"
+
+[node name="DescriptionLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.75, 0.75, 0.75, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 11
+text = "Achievement description goes here and can wrap to multiple lines"
+autowrap_mode = 2
+
+[node name="ProgressContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/VBoxContainer/ProgressContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 16)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 100.0
+value = 50.0
+show_percentage = false
+
+[node name="ProgressLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/ProgressContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.65, 0.65, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 10
+text = "50 / 100"
