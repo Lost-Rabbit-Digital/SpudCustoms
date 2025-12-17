@@ -397,22 +397,50 @@ func _on_dialogic_signal(argument):
 
 	# QTE trigger signals from narrative timelines
 	# Track which QTE is running so we can set the result variable on completion
-	# Each QTE can now optionally display a narrative image alongside the prompts
+	# Each QTE displays up to 3 progressive narrative images (advancing on successful key press)
 	if argument == "qte_infiltration":
-		_launch_qte("qte_infiltration", "Infiltrate the facility!", 5, 2.0, "res://assets/narrative/night_gameplay.png")
+		_launch_qte("qte_infiltration", "Infiltrate the facility!", 5, 2.0, [
+			"res://assets/narrative/qte/qte_infiltration_1.png",
+			"res://assets/narrative/qte/qte_infiltration_2.png",
+			"res://assets/narrative/qte/qte_infiltration_3.png",
+		])
 	elif argument == "qte_escape":
-		_launch_qte("qte_escape", "Escape the guards!", 6, 1.8, "res://assets/narrative/escape_route.png")
+		_launch_qte("qte_escape", "Escape the guards!", 6, 1.8, [
+			"res://assets/narrative/qte/qte_escape_1.png",
+			"res://assets/narrative/qte/qte_escape_2.png",
+			"res://assets/narrative/qte/qte_escape_3.png",
+		])
 	elif argument == "qte_confrontation":
-		_launch_qte("qte_confrontation", "Stand your ground!", 4, 2.5, "res://assets/narrative/idaho_confrontation.png")
+		_launch_qte("qte_confrontation", "Stand your ground!", 4, 2.5, [
+			"res://assets/narrative/qte/qte_confrontation_1.png",
+			"res://assets/narrative/qte/qte_confrontation_2.png",
+			"res://assets/narrative/qte/qte_confrontation_3.png",
+		])
 	# New QTEs for enhanced narrative
 	elif argument == "qte_scanner_fake":
-		_launch_qte("qte_scanner_fake", "Fake the malfunction!", 4, 2.2, "res://assets/narrative/checkpoint_booth.png")
+		_launch_qte("qte_scanner_fake", "Fake the malfunction!", 4, 2.2, [
+			"res://assets/narrative/qte/qte_scanner_fake_1.png",
+			"res://assets/narrative/qte/qte_scanner_fake_2.png",
+			"res://assets/narrative/qte/qte_scanner_fake_3.png",
+		])
 	elif argument == "qte_surveillance":
-		_launch_qte("qte_surveillance", "Stay hidden! Follow the trucks!", 5, 2.0, "res://assets/narrative/night_gameplay.png")
+		_launch_qte("qte_surveillance", "Stay hidden! Follow the trucks!", 5, 2.0, [
+			"res://assets/narrative/qte/qte_surveillance_1.png",
+			"res://assets/narrative/qte/qte_surveillance_2.png",
+			"res://assets/narrative/qte/qte_surveillance_3.png",
+		])
 	elif argument == "qte_rescue":
-		_launch_qte("qte_rescue", "Race to save Sasha!", 5, 1.8, "res://assets/narrative/sasha_rescue.png")
+		_launch_qte("qte_rescue", "Race to save Sasha!", 5, 1.8, [
+			"res://assets/narrative/qte/qte_rescue_1.png",
+			"res://assets/narrative/qte/qte_rescue_2.png",
+			"res://assets/narrative/qte/qte_rescue_3.png",
+		])
 	elif argument == "qte_suppression":
-		_launch_qte("qte_suppression", "Suppress the attack!", 4, 2.5, "res://assets/narrative/border_chaos.png")
+		_launch_qte("qte_suppression", "Suppress the attack!", 4, 2.5, [
+			"res://assets/narrative/qte/qte_suppression_1.png",
+			"res://assets/narrative/qte/qte_suppression_2.png",
+			"res://assets/narrative/qte/qte_suppression_3.png",
+		])
 
 	# Route to loyalist ending signal
 	if argument == "route_to_loyalist_ending":
@@ -472,7 +500,7 @@ func _unlock_achievement(achievement_id: String) -> void:
 		EventBus.achievement_unlocked.emit(achievement_id)
 
 
-func _launch_qte(qte_name: String, context: String, prompt_count: int, time_per_prompt: float, image_path: String = "") -> void:
+func _launch_qte(qte_name: String, context: String, prompt_count: int, time_per_prompt: float, image_paths: Variant = null) -> void:
 	"""Launch a QTE minigame during narrative sequences.
 
 	Args:
@@ -480,7 +508,8 @@ func _launch_qte(qte_name: String, context: String, prompt_count: int, time_per_
 		context: The narrative prompt text shown during the QTE
 		prompt_count: Number of key prompts to show
 		time_per_prompt: Seconds allowed per prompt
-		image_path: Optional path to a narrative image to display alongside the QTE
+		image_paths: Optional - either a single image path (String) or array of image paths (Array[String])
+			for progressive image display. Up to 3 images are shown, advancing on each successful key press.
 	"""
 	# Track which QTE is active for result handling
 	_active_narrative_qte = qte_name
@@ -492,9 +521,12 @@ func _launch_qte(qte_name: String, context: String, prompt_count: int, time_per_
 			"time_per_prompt": time_per_prompt,
 			"force_launch": true  # Allow QTE even if not normally unlocked
 		}
-		# Add image path if provided
-		if image_path != "":
-			config["image_path"] = image_path
+		# Handle image paths - support both single string and array formats
+		if image_paths != null:
+			if image_paths is Array:
+				config["image_paths"] = image_paths
+			elif image_paths is String and image_paths != "":
+				config["image_path"] = image_paths
 		EventBus.minigame_launch_requested.emit("quick_time_event", config)
 
 
