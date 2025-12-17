@@ -1,0 +1,81 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxnarrchoicedsp"]
+
+[ext_resource type="Script" path="res://scripts/ui/NarrativeChoiceDisplay.gd" id="1_script"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fill"]
+bg_color = Color(0.4, 0.7, 1.0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="NarrativeChoiceDisplay" type="Control"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="HeaderContainer" type="VBoxContainer" parent="MainContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="PathIndicatorLabel" type="RichTextLabel" parent="MainContainer/HeaderContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(0, 24)
+bbcode_enabled = true
+text = "[b]Path:[/b] Undetermined"
+fit_content = true
+scroll_active = false
+
+[node name="TrustContainer" type="HBoxContainer" parent="MainContainer/HeaderContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="SashaTrustLabel" type="Label" parent="MainContainer/HeaderContainer/TrustContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Sasha Trust: 0/10"
+
+[node name="SashaTrustBar" type="ProgressBar" parent="MainContainer/HeaderContainer/TrustContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 16)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/fill = SubResource("StyleBoxFlat_fill")
+max_value = 10.0
+value = 5.0
+show_percentage = false
+
+[node name="ChaosIndicator" type="Label" parent="MainContainer/HeaderContainer/TrustContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Chaos: 0 pts"
+
+[node name="HSeparator" type="HSeparator" parent="MainContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="ShiftsContainer" type="VBoxContainer" parent="MainContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 6

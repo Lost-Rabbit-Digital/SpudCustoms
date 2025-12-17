@@ -6,7 +6,8 @@ var level_select_scene
 var animation_state_machine: AnimationNodeStateMachinePlayback
 var confirmation_dialog: ConfirmationDialog
 var tutorial_choice_dialog: AcceptDialog
-var load_confirmation_dialog: ConfirmationDialog
+var load_confirmation_dialog: Window
+var narrative_choice_display: NarrativeChoiceDisplay
 var feedback_menu: Control
 @onready var version_label = %VersionLabel
 @onready var bgm_player = $BackgroundMusicPlayer
@@ -146,25 +147,88 @@ func _on_skip_tutorial():
 
 
 func _setup_load_confirmation_dialog():
-	load_confirmation_dialog = ConfirmationDialog.new()
+	# Create custom window for continue dialog with narrative choices
+	load_confirmation_dialog = Window.new()
 	load_confirmation_dialog.title = "Continue Game"
-	load_confirmation_dialog.min_size = Vector2(450, 200)
-	load_confirmation_dialog.dialog_hide_on_ok = true
-	load_confirmation_dialog.get_ok_button().text = "Continue"
-	load_confirmation_dialog.get_cancel_button().text = "Cancel"
+	load_confirmation_dialog.size = Vector2i(500, 450)
+	load_confirmation_dialog.unresizable = true
+	load_confirmation_dialog.transient = true
+	load_confirmation_dialog.exclusive = true
+	load_confirmation_dialog.wrap_controls = true
 
 	# Apply consistent brown/gold theme
 	var dialog_theme = load("res://assets/styles/confirmation_dialog_theme.tres")
 	if dialog_theme:
 		load_confirmation_dialog.theme = dialog_theme
 
+	# Create main container
+	var main_container = VBoxContainer.new()
+	main_container.set_anchors_preset(Control.PRESET_FULL_RECT)
+	main_container.add_theme_constant_override("separation", 10)
+
+	# Add margin around content
+	var margin = MarginContainer.new()
+	margin.set_anchors_preset(Control.PRESET_FULL_RECT)
+	margin.add_theme_constant_override("margin_left", 15)
+	margin.add_theme_constant_override("margin_right", 15)
+	margin.add_theme_constant_override("margin_top", 15)
+	margin.add_theme_constant_override("margin_bottom", 15)
+	margin.add_child(main_container)
+
+	# Header label showing save info
+	var header_label = Label.new()
+	header_label.name = "HeaderLabel"
+	header_label.text = "Your Save Data"
+	header_label.add_theme_font_size_override("font_size", 18)
+	header_label.add_theme_color_override("font_color", Color(1.0, 0.9, 0.6))
+	main_container.add_child(header_label)
+
+	# Day label
+	var day_label = Label.new()
+	day_label.name = "DayLabel"
+	day_label.text = "Day: 1"
+	main_container.add_child(day_label)
+
+	# Separator
+	var sep = HSeparator.new()
+	main_container.add_child(sep)
+
+	# Narrative choice display component
+	var choice_display_scene = load("res://scenes/ui/narrative_choice_display.tscn")
+	if choice_display_scene:
+		narrative_choice_display = choice_display_scene.instantiate()
+		narrative_choice_display.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		main_container.add_child(narrative_choice_display)
+
+	# Button container
+	var button_container = HBoxContainer.new()
+	button_container.alignment = BoxContainer.ALIGNMENT_CENTER
+	button_container.add_theme_constant_override("separation", 20)
+
+	var continue_button = Button.new()
+	continue_button.name = "ContinueButton"
+	continue_button.text = "Continue"
+	continue_button.custom_minimum_size = Vector2(120, 40)
+	continue_button.pressed.connect(_on_load_game_confirmed)
+
+	var cancel_button = Button.new()
+	cancel_button.name = "CancelButton"
+	cancel_button.text = "Cancel"
+	cancel_button.custom_minimum_size = Vector2(120, 40)
+	cancel_button.pressed.connect(_on_load_dialog_cancelled)
+
+	button_container.add_child(continue_button)
+	button_container.add_child(cancel_button)
+	main_container.add_child(button_container)
+
+	load_confirmation_dialog.add_child(margin)
 	add_child(load_confirmation_dialog)
 
-	# Add juicy hover effects to dialog buttons
-	_setup_dialog_button_effects.call_deferred(load_confirmation_dialog)
+	# Add juicy hover effects to buttons
+	_setup_continue_dialog_button_effects.call_deferred()
 
-	# Connect confirmation signals
-	load_confirmation_dialog.confirmed.connect(_on_load_game_confirmed)
+	# Connect close request
+	load_confirmation_dialog.close_requested.connect(_on_load_dialog_cancelled)
 
 
 ## Apply juicy hover effects to all buttons in a dialog
@@ -215,76 +279,60 @@ func _show_load_confirmation():
 	var shift = save_data.get("shift", 1)
 	var narrative_choices = save_data.get("narrative_choices", {})
 
-	# Build the dialog text
-	var dialog_text = "[b]Your Save Data[/b]\n\n"
-	dialog_text += "Day: %d\n" % shift
+	# Update the day label
+	var margin = load_confirmation_dialog.get_child(0)
+	var main_container = margin.get_child(0)
+	var day_label = main_container.get_node("DayLabel")
+	if day_label:
+		day_label.text = "Day: %d" % shift
 
-	# Add narrative choices summary if any
-	if not narrative_choices.is_empty():
-		dialog_text += "\n[b]Key Choices Made:[/b]\n"
-		var choice_summaries = _get_choice_summaries(narrative_choices)
-		for summary in choice_summaries:
-			dialog_text += "• %s\n" % summary
+	# Update the narrative choice display
+	if narrative_choice_display:
+		narrative_choice_display.display_choices(narrative_choices, shift)
 
-	# For ConfirmationDialog, we need to use dialog_text (not RichTextLabel)
-	# Convert BBCode to plain text for display
-	var plain_text = dialog_text.replace("[b]", "").replace("[/b]", "")
-	load_confirmation_dialog.dialog_text = plain_text
+	# Show the dialog centered
 	load_confirmation_dialog.popup_centered()
 
 
-func _get_choice_summaries(choices: Dictionary) -> Array[String]:
-	"""Convert narrative choice variables to human-readable summaries"""
-	var summaries: Array[String] = []
-
-	# Map choice variable names to readable descriptions
-	var choice_descriptions = {
-		"initial_response": {
-			"eager": "Showed enthusiasm for Spud",
-			"questioning": "Questioned the system"
-		},
-		"yellow_badge_response": {
-			"obey": "Followed orders on yellow badges",
-			"question": "Questioned yellow badge policy"
-		},
-		"sasha_response": {
-			"help": "Chose to help Sasha",
-			"report": "Reported Sasha",
-			"ignore": "Ignored Sasha's request"
-		},
-		"resistance_mission": {
-			"accept": "Joined the resistance",
-			"refuse": "Refused to join resistance"
-		},
-		"loyalty_response": {
-			"loyal": "Remained loyal to Spud",
-			"doubt": "Expressed doubts about Spud"
-		},
-		"critical_choice": {
-			"resist": "Chose to resist",
-			"comply": "Chose to comply"
-		},
-		"final_decision": {
-			"freedom": "Chose freedom",
-			"duty": "Chose duty"
-		}
+## Setup juicy hover effects for continue dialog buttons
+func _setup_continue_dialog_button_effects() -> void:
+	var hover_config = {
+		"hover_scale": Vector2(1.03, 1.03),
+		"hover_time": 0.1,
+		"float_height": 2.0,
+		"float_duration": 0.8,
+		"bounce_factor": 0.8,
+		"damping": 0.85,
+		"wiggle_enabled": true,
+		"wiggle_angle": 1.5,
+		"wiggle_speed": 10.0
 	}
 
-	for choice_name in choices.keys():
-		var value = choices[choice_name]
-		if choice_descriptions.has(choice_name):
-			var descriptions = choice_descriptions[choice_name]
-			if descriptions.has(value):
-				summaries.append(descriptions[value])
+	var margin = load_confirmation_dialog.get_child(0)
+	if not margin:
+		return
+	var main_container = margin.get_child(0)
+	if not main_container:
+		return
 
-	# Limit to top 5 most recent/important choices
-	if summaries.size() > 5:
-		summaries = summaries.slice(0, 5)
+	var continue_btn = main_container.get_node_or_null("ContinueButton")
+	var cancel_btn = main_container.get_node_or_null("CancelButton")
 
-	return summaries
+	# Buttons are in a button container at the end
+	for child in main_container.get_children():
+		if child is HBoxContainer:
+			for button in child.get_children():
+				if button is Button:
+					JuicyButtons.setup_hover(button, hover_config)
+
+
+## Handle cancel button or window close
+func _on_load_dialog_cancelled() -> void:
+	load_confirmation_dialog.hide()
 
 
 func _on_load_game_confirmed():
+	load_confirmation_dialog.hide()
 	if GameStateManager:
 		GameStateManager.switch_game_mode("story")
 	load_game_scene()

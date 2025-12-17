@@ -7,6 +7,11 @@ signal back_pressed
 @onready var level_buttons_container: ItemList = %LevelButtonsContainer
 @onready var back_button: Button = %BackButton
 
+## Reference to the narrative choice popup
+var choice_info_popup: Window
+var narrative_choice_display: NarrativeChoiceDisplay
+var selected_level_id: int = -1
+
 # Dictionary mapping level IDs to their display names
 var levels = {
 	0: "Tutorial",
@@ -25,11 +30,170 @@ var levels = {
 
 func _ready() -> void:
 	add_levels_to_container()
+	_setup_choice_info_popup()
+	# Connect item selection change signal
+	if not level_buttons_container.item_selected.is_connected(_on_level_selected):
+		level_buttons_container.item_selected.connect(_on_level_selected)
 	# Debug initial shift value
 	# REFACTORED: Use GameStateManager
 	var current_shift = GameStateManager.get_shift() if GameStateManager else 1
 	print("DEBUG: Initial shift value: ", current_shift)
 	GlobalState.save()
+
+
+## Setup the popup window for showing narrative choices
+func _setup_choice_info_popup() -> void:
+	choice_info_popup = Window.new()
+	choice_info_popup.title = "Story Choices"
+	choice_info_popup.size = Vector2i(480, 420)
+	choice_info_popup.unresizable = true
+	choice_info_popup.transient = true
+	choice_info_popup.exclusive = true
+	choice_info_popup.wrap_controls = true
+
+	# Apply game theme
+	var dialog_theme = load("res://assets/styles/confirmation_dialog_theme.tres")
+	if dialog_theme:
+		choice_info_popup.theme = dialog_theme
+
+	# Main container with margin
+	var margin = MarginContainer.new()
+	margin.set_anchors_preset(Control.PRESET_FULL_RECT)
+	margin.add_theme_constant_override("margin_left", 15)
+	margin.add_theme_constant_override("margin_right", 15)
+	margin.add_theme_constant_override("margin_top", 15)
+	margin.add_theme_constant_override("margin_bottom", 15)
+
+	var main_container = VBoxContainer.new()
+	main_container.set_anchors_preset(Control.PRESET_FULL_RECT)
+	main_container.add_theme_constant_override("separation", 10)
+
+	# Header label
+	var header_label = Label.new()
+	header_label.name = "HeaderLabel"
+	header_label.text = "Choices up to Day 1"
+	header_label.add_theme_font_size_override("font_size", 18)
+	header_label.add_theme_color_override("font_color", Color(1.0, 0.9, 0.6))
+	main_container.add_child(header_label)
+
+	# Separator
+	var sep = HSeparator.new()
+	main_container.add_child(sep)
+
+	# Narrative choice display
+	var choice_display_scene = load("res://scenes/ui/narrative_choice_display.tscn")
+	if choice_display_scene:
+		narrative_choice_display = choice_display_scene.instantiate()
+		narrative_choice_display.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		main_container.add_child(narrative_choice_display)
+
+	# Button container
+	var button_container = HBoxContainer.new()
+	button_container.alignment = BoxContainer.ALIGNMENT_CENTER
+	button_container.add_theme_constant_override("separation", 20)
+
+	var play_button = Button.new()
+	play_button.name = "PlayButton"
+	play_button.text = "Play This Day"
+	play_button.custom_minimum_size = Vector2(140, 40)
+	play_button.pressed.connect(_on_play_button_pressed)
+
+	var close_button = Button.new()
+	close_button.name = "CloseButton"
+	close_button.text = "Close"
+	close_button.custom_minimum_size = Vector2(100, 40)
+	close_button.pressed.connect(_on_choice_popup_closed)
+
+	button_container.add_child(play_button)
+	button_container.add_child(close_button)
+	main_container.add_child(button_container)
+
+	margin.add_child(main_container)
+	choice_info_popup.add_child(margin)
+	add_child(choice_info_popup)
+
+	# Connect close request
+	choice_info_popup.close_requested.connect(_on_choice_popup_closed)
+
+	# Setup juicy hover effects for popup buttons
+	_setup_popup_button_effects.call_deferred()
+
+
+## Setup hover effects for popup buttons
+func _setup_popup_button_effects() -> void:
+	var hover_config = {
+		"hover_scale": Vector2(1.03, 1.03),
+		"hover_time": 0.1,
+		"float_height": 2.0,
+		"float_duration": 0.8,
+		"bounce_factor": 0.8,
+		"damping": 0.85,
+		"wiggle_enabled": true,
+		"wiggle_angle": 1.5,
+		"wiggle_speed": 10.0
+	}
+
+	var margin = choice_info_popup.get_child(0)
+	if not margin:
+		return
+	var main_container = margin.get_child(0)
+	if not main_container:
+		return
+
+	for child in main_container.get_children():
+		if child is HBoxContainer:
+			for button in child.get_children():
+				if button is Button:
+					JuicyButtons.setup_hover(button, hover_config)
+
+
+## Handle when a level item is selected (single click)
+func _on_level_selected(index: int) -> void:
+	var level_id = level_buttons_container.get_item_metadata(index)
+
+	# Only show popup for unlocked levels
+	if level_id <= GameState.get_max_level_reached():
+		selected_level_id = level_id
+		_show_choice_info_popup(level_id)
+
+
+## Show the choice info popup for a specific level
+func _show_choice_info_popup(level_id: int) -> void:
+	# Load saved narrative choices
+	var game_state = SaveManager.load_game_state()
+	var saved_choices = game_state.get("narrative_choices", {})
+
+	# If no saved choices and level > 1, use defaults for display
+	var display_choices = saved_choices
+	if saved_choices.is_empty() and level_id > 1:
+		display_choices = _get_default_choices_for_level(level_id)
+
+	# Update header
+	var margin = choice_info_popup.get_child(0)
+	var main_container = margin.get_child(0)
+	var header_label = main_container.get_node("HeaderLabel")
+	if header_label:
+		var level_name = levels.get(level_id, "Day %d" % level_id)
+		header_label.text = "Choices up to Day %d - %s" % [level_id, level_name]
+
+	# Update the narrative choice display (show choices up to selected level)
+	if narrative_choice_display:
+		narrative_choice_display.display_choices(display_choices, level_id)
+
+	# Show popup centered
+	choice_info_popup.popup_centered()
+
+
+## Handle popup close
+func _on_choice_popup_closed() -> void:
+	choice_info_popup.hide()
+
+
+## Handle play button in popup
+func _on_play_button_pressed() -> void:
+	choice_info_popup.hide()
+	if selected_level_id >= 0:
+		_start_level(selected_level_id)
 
 
 func add_levels_to_container() -> void:
@@ -70,38 +234,43 @@ func _on_level_buttons_container_item_activated(index: int) -> void:
 	# Get the level ID from metadata
 	var level_id = level_buttons_container.get_item_metadata(index)
 
-	# Debug what the level_id is
-	print("DEBUG: Selected level_id: ", level_id)
-
 	# Only proceed if the level is unlocked
 	if level_id <= GameState.get_max_level_reached():
-		# Print current shift value before changing anything
-		var current_shift = GameStateManager.get_shift() if GameStateManager else 1
-		print("DEBUG: Before change - shift value: ", current_shift)
+		_start_level(level_id)
 
-		# Set the current level in GameState
-		GameState.set_current_level(level_id)
 
-		# Set the shift in the GameStateManager
-		# REFACTORED: Use GameStateManager
-		if GameStateManager:
-			GameStateManager.set_shift(level_id)
-		print("DEBUG: Set shift to: ", level_id)
+## Start playing a specific level
+func _start_level(level_id: int) -> void:
+	# Debug what the level_id is
+	print("DEBUG: Starting level_id: ", level_id)
 
-		# Handle narrative choices for level select
-		_handle_narrative_choices_for_level(level_id)
+	# Print current shift value before changing anything
+	var current_shift = GameStateManager.get_shift() if GameStateManager else 1
+	print("DEBUG: Before change - shift value: ", current_shift)
 
-		# Update mode back to story mode
-		# REFACTORED: Use GameStateManager
-		if GameStateManager:
-			GameStateManager.switch_game_mode("story")
+	# Set the current level in GameState
+	GameState.set_current_level(level_id)
 
-		# Print value after the change to verify
-		var new_shift = GameStateManager.get_shift() if GameStateManager else level_id
-		print("DEBUG: After change - shift value: ", new_shift)
+	# Set the shift in the GameStateManager
+	# REFACTORED: Use GameStateManager
+	if GameStateManager:
+		GameStateManager.set_shift(level_id)
+	print("DEBUG: Set shift to: ", level_id)
 
-		# Emit signal to inform parent that a level was selected
-		level_selected.emit()
+	# Handle narrative choices for level select
+	_handle_narrative_choices_for_level(level_id)
+
+	# Update mode back to story mode
+	# REFACTORED: Use GameStateManager
+	if GameStateManager:
+		GameStateManager.switch_game_mode("story")
+
+	# Print value after the change to verify
+	var new_shift = GameStateManager.get_shift() if GameStateManager else level_id
+	print("DEBUG: After change - shift value: ", new_shift)
+
+	# Emit signal to inform parent that a level was selected
+	level_selected.emit()
 
 
 ## Handle narrative choices when starting from a specific level
@@ -129,6 +298,14 @@ func _handle_narrative_choices_for_level(level_id: int) -> void:
 ## These defaults create a "committed ally" playthrough
 func _get_default_choices_for_level(level_id: int) -> Dictionary:
 	var defaults = {}
+
+	# Path tracking - build up pro_sasha_choice based on level
+	# Each level adds ~1 point for a committed ally path
+	var sasha_trust = mini(level_id, 10)
+	defaults["pro_sasha_choice"] = sasha_trust
+	defaults["loyalist_path"] = "no"
+	defaults["chaos_agent"] = "no"
+	defaults["chaos_points"] = 0
 
 	# Level 2+: Shift 1 choices
 	if level_id >= 2:
