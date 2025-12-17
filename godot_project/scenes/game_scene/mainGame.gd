@@ -1949,7 +1949,16 @@ func process_decision(allowed):
 		EventBus.show_alert(alert_text, false)
 		correct_decision_streak = 0
 		point_multiplier = 1.0
-		EventBus.request_strike_add("incorrect_decision", {"potato_info": current_potato_info})
+
+		# Build detailed citation reason (same detail as alert)
+		var citation_reason: String = ""
+		if allowed and !correct_decision:
+			# Player approved an invalid potato - show the violation
+			citation_reason = validation.violation_reason if validation.violation_reason else tr("incorrect_decision")
+		else:
+			# Player rejected a valid potato
+			citation_reason = tr("alert_potato_should_be_approved").strip_edges()
+		EventBus.request_strike_add(citation_reason, {"potato_info": current_potato_info})
 
 		# ENHANCEMENT: Flash screen red for wrong decision
 		_flash_screen_color(Color.RED, 0.3)
