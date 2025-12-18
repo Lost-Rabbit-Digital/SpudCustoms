@@ -1,91 +1,143 @@
-# 🎵 Quick SFX Generation Guide - Top 5 Priority
+# 🎵 SFX Reference Guide
 
-Copy these prompts directly into ElevenLabs Sound Effects generator.
-
----
-
-## 1️⃣ Office Shutter Lever (CRITICAL - Missing)
-
-```
-Mechanical lever pull sound, heavy industrial metal clunk with satisfying click at the end, short 0.5 second duration, clean studio quality
-```
-
-**File name:** `office_shutter_lever.wav`  
-**Location:** `godot_project/assets/audio/ui_feedback/`
+This document tracks audio assets for game feedback sounds.
 
 ---
 
-## 2️⃣ Megaphone Hover Sound
+## ✅ Available Sounds (Already Exist)
 
-```
-Subtle metallic ping, soft and pleasant, very short 0.2 seconds, like hovering over a small metal object, clean and crisp
-```
+### Office Shutter Lever
+**Status:** ✅ EXISTS
+**Location:** `godot_project/assets/audio/mechanical/`
+**Files:**
+- `lever big 1.wav`
+- `lever big 2.wav`
+- `lever big 3.wav`
 
-**File name:** `megaphone_hover.wav`  
-**Location:** `godot_project/assets/audio/ui_feedback/`
-
----
-
-## 3️⃣ Stamp Bar Hover Sound
-
-```
-Gentle paper rustle with soft click, very brief 0.15 seconds, office desk sound, warm and inviting
-```
-
-**File name:** `stamp_bar_hover.wav`  
-**Location:** `godot_project/assets/audio/ui_feedback/`
-
----
-
-## 4️⃣ Potato Emote - Happy
-
-```
-Cheerful little squeak, cartoonish and playful, 0.3 seconds, like a small rubber toy being squeezed, upbeat and positive
-```
-
-**File name:** `emote_happy.wav`  
-**Location:** `godot_project/assets/audio/ui_feedback/`
-
----
-
-## 5️⃣ Potato Emote - Angry (Popping Veins)
-
-```
-Cartoon steam whistle, short angry puff sound, 0.4 seconds, comedic tension sound, like a pressure valve releasing
-```
-
-**File name:** `emote_angry.wav`  
-**Location:** `godot_project/assets/audio/ui_feedback/`
-
----
-
-## 🚀 Quick Workflow
-
-1. Open ElevenLabs Sound Effects
-2. Copy prompt → Paste → Generate
-3. Download as WAV (44.1kHz, 16-bit)
-4. Save to `godot_project/assets/audio/ui_feedback/`
-5. Open Godot → Import automatically creates `.import` file
-6. Reference in code with `preload("res://assets/audio/ui_feedback/filename.wav")`
-
----
-
-## 📋 Implementation Locations
-
-**Office Shutter Lever:**
+**Implementation:**
 - File: `godot_project/scripts/systems/OfficeShutterController.gd`
 - Add AudioStreamPlayer and play on lever click
 
-**Hover Sounds:**
-- File: `godot_project/scenes/game_scene/mainGame.gd`
-- Connect to megaphone `mouse_entered` signal
-- File: `godot_project/scripts/systems/stamp/StampBarController.gd`
-- Connect to stamp button `mouse_entered` signals
+---
 
-**Emote Sounds:**
-- File: `godot_project/scripts/systems/PotatoPerson.gd`
-- Play when `show_emote()` is called
+### Stamp Bar Slide Sound
+**Status:** ✅ EXISTS
+**Location:** `godot_project/assets/audio/gameplay/stamp_bar_slide.mp3`
+
+**Implementation:**
+- File: `godot_project/scripts/systems/stamp/StampBarController.gd`
+- Play when stamp bar opens/closes
 
 ---
 
-**Total Time:** 15-20 minutes to generate and implement these 5 critical sounds!
+### Potato Emote - Happy
+**Status:** ✅ EXISTS
+**Location:** `godot_project/assets/audio/emotes/emote_happy.mp3`
+
+**Implementation:**
+- File: `godot_project/scripts/systems/PotatoPerson.gd`
+- Play when `show_emote()` is called with happy state
+
+---
+
+### Potato Emote - Angry
+**Status:** ✅ EXISTS
+**Location:** `godot_project/assets/audio/emotes/emote_angry.mp3`
+
+**Implementation:**
+- File: `godot_project/scripts/systems/PotatoPerson.gd`
+- Play when `show_emote()` is called with angry state
+
+---
+
+### UI Hover Button
+**Status:** ✅ EXISTS
+**Location:** `godot_project/assets/audio/ui_feedback/ui_hover_button.mp3`
+
+**Implementation:**
+- Can be used for megaphone hover and other UI elements
+
+---
+
+## ⚠️ Sounds Needing Implementation
+
+The sounds above exist but may not be wired up in the code yet. Here's what needs to be connected:
+
+### 1. Office Shutter Lever Sound
+```gdscript
+# In OfficeShutterController.gd
+var lever_sounds = [
+    preload("res://assets/audio/mechanical/lever big 1.wav"),
+    preload("res://assets/audio/mechanical/lever big 2.wav"),
+    preload("res://assets/audio/mechanical/lever big 3.wav"),
+]
+
+func _on_lever_pulled():
+    $AudioStreamPlayer.stream = lever_sounds.pick_random()
+    $AudioStreamPlayer.play()
+```
+
+### 2. Potato Emote Sounds
+```gdscript
+# In PotatoPerson.gd
+var emote_happy_sound = preload("res://assets/audio/emotes/emote_happy.mp3")
+var emote_angry_sound = preload("res://assets/audio/emotes/emote_angry.mp3")
+
+func show_emote(emote_type: String):
+    match emote_type:
+        "happy":
+            $EmoteSFX.stream = emote_happy_sound
+            $EmoteSFX.play()
+        "angry":
+            $EmoteSFX.stream = emote_angry_sound
+            $EmoteSFX.play()
+```
+
+### 3. Megaphone Hover Sound
+```gdscript
+# In mainGame.gd or megaphone controller
+var hover_sound = preload("res://assets/audio/ui_feedback/ui_hover_button.mp3")
+
+func _on_megaphone_mouse_entered():
+    $HoverSFX.stream = hover_sound
+    $HoverSFX.play()
+```
+
+---
+
+## 📁 Audio Directory Structure
+
+```
+assets/audio/
+├── emotes/
+│   ├── emote_alert.mp3
+│   ├── emote_angry.mp3
+│   ├── emote_confused.mp3
+│   └── emote_happy.mp3
+├── gameplay/
+│   └── stamp_bar_slide.mp3
+├── mechanical/
+│   ├── lever big 1.wav
+│   ├── lever big 2.wav
+│   └── lever big 3.wav
+├── minigames/
+│   └── fingerprint_match_hover.mp3
+└── ui_feedback/
+    ├── ui_hover_button.mp3
+    ├── accept_green_alert.wav
+    ├── decline_red_alert.wav
+    └── achievement_unlocked.mp3
+```
+
+---
+
+## 🎯 Implementation Priority
+
+1. **High:** Connect lever sounds to OfficeShutterController
+2. **High:** Connect emote sounds to PotatoPerson
+3. **Medium:** Add hover sounds to megaphone and stamp bar
+4. **Low:** Consider adding more emote variations
+
+---
+
+**Note:** Prefer `.mp3` format for new sounds (smaller file size, good quality).
