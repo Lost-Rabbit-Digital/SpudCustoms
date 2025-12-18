@@ -185,11 +185,13 @@
   - Duration: 0.3s
   - Volume: -7dB
 
-#### UV Lamp (Planned)
+#### Document Scanner (UV Light Mini-game) ✓
 
-- **Activate**: Switch click + bulb buzz
-- **Secret revealed**: Mystery chord + sparkle
-- **Deactivate**: Click, buzz fades
+- Uses drag interaction to reveal hidden elements
+- Click to mark discovered elements for bonus points
+- Audio integrated into mini-game system
+
+**Note**: The X-Ray Scanner (above) is used in story mode for in-world scanning machines. The Document Scanner mini-game uses UV light theming for the puzzle gameplay.
 
 ### Ambient Sounds
 

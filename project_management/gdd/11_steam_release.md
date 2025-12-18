@@ -4,8 +4,8 @@
 
 ## Essential Features
 
-- **Steam Cloud Saves** (verification needed)
-- 10-15 Achievements (display in-game from menus)
+- **Steam Cloud Saves** ✓
+- 21 Achievements (displayed in-game from menus)
 - Global Leaderboards:
   - Per shift per difficulty
   - Score attack mode
@@ -17,7 +17,7 @@
 - 40+ unique immigration rules
 - **4 potato types** (progressive unlock)
 - 3 difficulty levels
-- 2-3 hour story campaign with **4 endings**
+- 2-3 hour story campaign with **8 endings**
 - Endless / Score Attack mode with progressive difficulty
 - Daily challenges with leaderboards
 
@@ -30,14 +30,14 @@
 - Regular content updates
 - Environmental storytelling elements
 
-## Pre-Release Checklist
+## Release Checklist ✓
 
-- Steam Cloud Save path verification
-- Leaderboard functionality testing (all modes)
-- Achievement unlock testing (narrative + stats-based)
-- All 4 story endings playable
-- Demo build testing before upload
-- Deployment process documentation (Steam Depots via Web Builds)
+- Steam Cloud Save path verification ✓
+- Leaderboard functionality testing (all modes) ✓
+- Achievement unlock testing (narrative + stats-based) ✓
+- All 8 story endings playable ✓
+- Demo build tested ✓
+- Deployment process documented (Steam Depots via Web Builds) ✓
 
 ## System Requirements
 

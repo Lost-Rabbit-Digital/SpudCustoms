@@ -2,11 +2,12 @@
 
 > **Back to:** [GDD Index](README.md) | **Previous:** [Steam Release Requirements](11_steam_release.md)
 
-## Current Phase: Version 1.2.0 - Feature Complete
+## Current Status: Released (v1.0 December 2024)
 
-**Target Release: December 12th, 2025**
+**Initial Release:** December 2024
+**Current Update:** Version 1.2.0 (December 2025)
 
-### Completed This Version ✓
+### Version 1.2.0 Features ✓
 
 - Dynamic tutorial system (replaces hard-coded screenshots)
 - 5 integrated mini-games (Document Scanner, Stamp Sorting, Fingerprint Match, Code Breaker, Border Chase)
@@ -22,37 +23,23 @@
 - TensionManager for near-failure visual/audio feedback
 - Celebration system for perfect hits
 - Contextual bubble dialogue system
+- Major narrative update with 8 distinct endings
 
-### Pre-Release Priorities
-
-1. Steam Cloud Save verification
-2. Multiple ending branches testing
-3. Choice tracking system verification
-4. Shift 10 narrative polish
-5. Final accessibility pass
-
-### Remaining Polish Items
-
-- Viewport masking for documents/stamps
-- Additional sound effects (hover sounds, document grip)
-- Accessibility features (colorblind mode, font size options)
-- Performance optimization (sprite pooling)
-
-## Phase 1: Core Development (Completed)
+## Phase 1: Core Development ✓ (Completed)
 
 - Basic gameplay mechanics ✓
 - Document system ✓
 - Stamp mechanics ✓
 - UI implementation ✓
 
-## Phase 2: Story Integration (In Progress)
+## Phase 2: Story Integration ✓ (Completed)
 
-- Narrative system (needs choice tracking fixes)
-- Cutscenes (needs fade improvements)
+- Narrative system ✓
+- Cutscenes ✓
 - Character development ✓
-- Dialogue system (needs font change)
-- **Multiple endings** (needs implementation)
-- **Environmental storytelling** (needs progressive integration)
+- Dialogue system ✓
+- Multiple endings (8 total) ✓
+- Environmental storytelling ✓
 
 ## Phase 3: Features & Polish ✓ (Completed)
 
@@ -61,17 +48,17 @@
 - EventBus architecture implementation ✓
 - Dynamic music system with 7 custom tracks ✓
 - Help menu with Lore tab ✓
-- Steam integration (ongoing testing)
-- Achievements (needs in-game display)
-- Bug fixing (major issues resolved)
+- Steam integration ✓
+- 21 achievements ✓
+- Bug fixing (major issues resolved) ✓
 
-## Phase 4: Testing & Launch
+## Phase 4: Testing & Launch ✓ (Completed)
 
-- Playtesting (narrative + stats achievements)
-- Balance adjustments
-- Final polish
-- Steam store setup
-- Accessibility features implementation
+- Playtesting (narrative + stats achievements) ✓
+- Balance adjustments ✓
+- Final polish ✓
+- Steam store setup ✓
+- Accessibility features ✓
 
 ---
 

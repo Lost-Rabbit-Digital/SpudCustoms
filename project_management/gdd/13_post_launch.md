@@ -2,28 +2,35 @@
 
 > **Back to:** [GDD Index](README.md) | **Previous:** [Development Timeline](12_timeline.md)
 
-## Month 1
+## Completed Post-Launch Updates
 
-- Critical bug fixes (extensive list documented)
+### Version 1.1.0 (Released)
+- Critical bug fixes
 - Performance optimization (particle/sprite pooling)
 - Community feedback integration
-- Localization: Chinese, Spanish, Portuguese, German
+- Full localization for all 29 Steam-supported languages ✓
 
-## Months 2-3
+### Version 1.2.0 (Current)
+- Major narrative update with 8 endings
+- 5 integrated mini-games
+- Dynamic tutorial system
+- TensionManager and celebration systems
+- EventBus architecture
 
+## Future Roadmap
+
+### Near-term
 - New potato types (beyond initial 4)
 - Additional rules and document types
 - Quality of life improvements
-- Multiplayer implementation exploration (co-op/versus)
 
-## Long-term
-
+### Long-term
 - Regular content updates
 - Seasonal events
 - Community features
-- Additional language localization
 - Level select leaderboard viewing
 - A* pathfinding for main menu potato lines
+- Multiplayer exploration (co-op/versus)
 
 ---
 

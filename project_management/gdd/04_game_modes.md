@@ -7,7 +7,7 @@
 - 2-3 hour campaign
 - Structured narrative progression
 - Character development
-- **4 distinct endings** based on player choices
+- **8 distinct endings** based on player choices
 
 ## Endless / Score Attack Mode
 

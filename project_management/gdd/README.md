@@ -1,6 +1,6 @@
 # Spud Customs - Game Design Document
 
-> **Version:** 1.2.0 Feature Complete | **Last Updated:** December 2025 | **Status:** Pre-Release
+> **Version:** 1.2.0 | **Last Updated:** December 2025 | **Status:** Released
 
 ## Overview
 
@@ -18,7 +18,7 @@ This directory contains the comprehensive Game Design Document for **Spud Custom
 | 06 | [Features & Systems](06_features_systems.md) | Mini-games, emotes, visual feedback, tension system |
 | 07 | [UI Layout](07_ui_layout.md) | Screen design, menus, accessibility, animations |
 | 08 | [Audio Design](08_audio_design.md) | Music system, SFX catalog, audio buses |
-| 09 | [Technical Implementation](09_technical.md) | EventBus, debug controls, known bugs |
+| 09 | [Technical Implementation](09_technical.md) | EventBus, debug controls |
 | 10 | [Quality Assurance](10_testing_qa.md) | Testing framework, CI/CD, manual testing |
 | 11 | [Steam Release](11_steam_release.md) | Requirements, system specs, store materials |
 | 12 | [Development Timeline](12_timeline.md) | Phases, current status, remaining work |
@@ -46,7 +46,7 @@ This directory contains the comprehensive Game Design Document for **Spud Custom
 
 ## Key Features Summary
 
-- **2-3 hour story campaign** with 4 distinct endings
+- **2-3 hour story campaign** with 8 distinct endings
 - **5 integrated mini-games** unlocking through story progression
 - **40+ immigration rules** with progressive complexity
 - **3 difficulty levels** (Easy, Normal, Hard)
