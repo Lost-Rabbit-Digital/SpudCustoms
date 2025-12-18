@@ -106,8 +106,11 @@ func _on_stamp_applied(stamp: StampComponent, document: Node, is_perfect: bool):
 		# Create the visual effect
 		create_perfect_stamp_effect(effect_position)
 
-		# Shake screen via EventBus
-		EventBus.screen_shake_requested.emit(3.0, 0.5)
+		# Trigger signature celebration effect (screen flash, slowmo, zoom punch)
+		EventBus.perfect_celebration_requested.emit(effect_position, "stamp")
+
+		# Trigger contextual bubble dialogue for perfect stamp
+		EventBus.bubble_dialogue_requested.emit("perfect_stamp", {"position": effect_position})
 
 		stamp_applied.emit(stamp, document, is_perfect)
 

@@ -16,9 +16,9 @@ extends Node
 ## Poster visibility configuration: maps shift thresholds to poster visibility
 ## Posters accumulate - once a poster appears, it stays visible for all higher shifts
 const POSTER_SHIFT_THRESHOLDS: Dictionary = {
-	"Poster1": 4,   # "Glory to Spudland" - appears at shift 4
-	"Poster2": 6,   # "Report Suspicious Tubers" - appears at shift 6
-	"Poster3": 9,   # "Keep Our Borders Clean" - appears at shift 9
+	"Poster1": 2,   # "Glory to Spudland" - appears at shift 2
+	"Poster2": 4,   # "Report Suspicious Tubers" - appears at shift 4
+	"Poster3": 6,   # "Keep Our Borders Clean" - appears at shift 6
 }
 
 ## Animation duration for poster fade-in (seconds)
