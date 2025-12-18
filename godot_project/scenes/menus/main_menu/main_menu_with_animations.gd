@@ -224,6 +224,9 @@ func _setup_load_confirmation_dialog():
 	load_confirmation_dialog.add_child(margin)
 	add_child(load_confirmation_dialog)
 
+	# Hide the popup initially - Windows are visible by default in Godot 4
+	load_confirmation_dialog.hide()
+
 	# Add juicy hover effects to buttons
 	_setup_continue_dialog_button_effects.call_deferred()
 
