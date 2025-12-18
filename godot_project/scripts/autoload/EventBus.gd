@@ -248,6 +248,25 @@ signal tutorial_completed()
 signal tutorial_hint_requested(hint_key: String)
 
 # ============================================================================
+# TENSION AND GAME FEEL EVENTS
+# ============================================================================
+
+## Emitted when tension level changes (0.0 = calm, 1.0 = critical)
+signal tension_level_changed(level: float, reason: String)
+
+## Emitted when entering critical state (near failure)
+signal critical_state_entered(reason: String)
+
+## Emitted when leaving critical state
+signal critical_state_exited()
+
+## Emitted for signature perfect hit celebration (stamp or runner)
+signal perfect_celebration_requested(position: Vector2, celebration_type: String)
+
+## Emitted for bubble dialogue trigger requests
+signal bubble_dialogue_requested(category: String, context: Dictionary)
+
+# ============================================================================
 # CONTROLLER EVENTS
 # ============================================================================
 

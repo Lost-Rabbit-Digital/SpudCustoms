@@ -13,6 +13,40 @@ var messages = {
 	"document_interaction": [],
 }
 
+# Contextual dialogue configuration
+# Maps EventBus triggers to dialogue categories and message keys
+const CONTEXTUAL_TRIGGERS: Dictionary = {
+	"perfect_stamp": {
+		"category": "perfect_stamp",
+		"chance": 0.7,  # 70% chance to trigger
+	},
+	"runner_stopped": {
+		"category": "runner_stopped",
+		"chance": 0.6,
+	},
+	"runner_escaped": {
+		"category": "runner_escaped",
+		"chance": 0.8,
+	},
+	"wrong_stamp": {
+		"category": "wrong_stamp",
+		"chance": 0.5,
+	},
+	"strike_received": {
+		"category": "strike_received",
+		"chance": 0.9,
+	},
+}
+
+# Contextual message counts (for translation keys)
+const CONTEXTUAL_MESSAGE_COUNTS: Dictionary = {
+	"perfect_stamp": 5,
+	"runner_stopped": 5,
+	"runner_escaped": 5,
+	"wrong_stamp": 4,
+	"strike_received": 4,
+}
+
 var customs_officer_sounds = [
 	preload("res://assets/audio/talking/froggy_phrase_1.wav"),
 	preload("res://assets/audio/talking/froggy_phrase_2.wav"),
@@ -23,12 +57,32 @@ var customs_officer_sounds = [
 	preload("res://assets/audio/talking/froggy_phrase_7.wav"),
 ]
 
+# Cooldown to prevent dialogue spam
+var _dialogue_cooldown: float = 0.0
+const DIALOGUE_COOLDOWN_TIME: float = 2.0
+
 @onready var bubble_text = $BubbleText
 
 
 func _ready():
 	# Load messages from JSON
 	load_messages()
+	# Connect to EventBus for contextual dialogue
+	_connect_eventbus_signals()
+
+
+func _process(delta: float) -> void:
+	# Update cooldown
+	if _dialogue_cooldown > 0:
+		_dialogue_cooldown -= delta
+
+
+func _connect_eventbus_signals() -> void:
+	if EventBus:
+		EventBus.bubble_dialogue_requested.connect(_on_bubble_dialogue_requested)
+		EventBus.runner_stopped.connect(_on_runner_stopped)
+		EventBus.runner_escaped.connect(_on_runner_escaped)
+		EventBus.strike_changed.connect(_on_strike_changed)
 
 
 func load_messages():
@@ -121,3 +175,138 @@ func play_random_officer_sound():
 	if !%SFXPool.is_playing():
 		%SFXPool.stream = customs_officer_sounds.pick_random()
 		%SFXPool.play()
+
+
+# ============================================================================
+# CONTEXTUAL DIALOGUE SYSTEM
+# ============================================================================
+
+## Trigger contextual dialogue based on game events
+## @param category: The dialogue category to use
+## @param context: Additional context data (optional)
+func trigger_contextual_dialogue(category: String, _context: Dictionary = {}) -> void:
+	# Check cooldown
+	if _dialogue_cooldown > 0:
+		return
+
+	# Check if this category has a chance to trigger
+	if CONTEXTUAL_TRIGGERS.has(category):
+		var trigger_config = CONTEXTUAL_TRIGGERS[category]
+		if randf() > trigger_config.chance:
+			return  # Chance check failed
+
+	# Set a random contextual message
+	set_contextual_message(category)
+
+	# Start cooldown
+	_dialogue_cooldown = DIALOGUE_COOLDOWN_TIME
+
+
+## Set a contextual message from a specific category
+func set_contextual_message(category: String) -> void:
+	# Check if we have message count for this category
+	if not CONTEXTUAL_MESSAGE_COUNTS.has(category):
+		push_warning("Unknown contextual dialogue category: " + category)
+		return
+
+	var message_count = CONTEXTUAL_MESSAGE_COUNTS[category]
+	if message_count <= 0:
+		return
+
+	# Show bubble and play sound
+	self.visible = true
+	play_random_officer_sound()
+
+	# Build translation key: dialogue_[category]_[number]
+	var random_index = (randi() % message_count) + 1
+	var translation_key = "dialogue_" + category + "_" + str(random_index)
+
+	# Set the text using translation
+	var translated_text = tr(translation_key)
+
+	# If translation not found (returns the key), use a fallback
+	if translated_text == translation_key:
+		# Fallback messages for untranslated categories
+		translated_text = _get_fallback_message(category)
+
+	bubble_text.text = translated_text
+
+	# Auto-hide after a delay
+	_auto_hide_bubble(3.0)
+
+
+func _get_fallback_message(category: String) -> String:
+	# Fallback messages in case translations aren't available yet
+	match category:
+		"perfect_stamp":
+			var messages_list = [
+				"Excellent work!",
+				"Now THAT'S how you stamp!",
+				"Precision at its finest!",
+				"The stamp gods smile upon you!",
+				"Textbook technique!",
+			]
+			return messages_list[randi() % messages_list.size()]
+		"runner_stopped":
+			var messages_list = [
+				"GOTCHA!",
+				"Not on MY watch!",
+				"Justice served, hot and fresh!",
+				"That's what happens to runners!",
+				"Target eliminated!",
+			]
+			return messages_list[randi() % messages_list.size()]
+		"runner_escaped":
+			var messages_list = [
+				"Blast! They got away!",
+				"Curses! Too slow!",
+				"That one slipped through...",
+				"The paperwork for this...",
+				"Not my finest moment.",
+			]
+			return messages_list[randi() % messages_list.size()]
+		"wrong_stamp":
+			var messages_list = [
+				"Wait, that's not right...",
+				"Hmm, did I mean to do that?",
+				"The ink... it betrays me!",
+				"Oops.",
+			]
+			return messages_list[randi() % messages_list.size()]
+		"strike_received":
+			var messages_list = [
+				"That'll go on my record...",
+				"The Ministry won't like this.",
+				"One step closer to mashing...",
+				"Strike! But not the good kind.",
+			]
+			return messages_list[randi() % messages_list.size()]
+		_:
+			return "..."
+
+
+func _auto_hide_bubble(delay: float) -> void:
+	await get_tree().create_timer(delay).timeout
+	self.visible = false
+
+
+# ============================================================================
+# EVENTBUS HANDLERS
+# ============================================================================
+
+func _on_bubble_dialogue_requested(category: String, context: Dictionary) -> void:
+	trigger_contextual_dialogue(category, context)
+
+
+func _on_runner_stopped(runner_data: Dictionary) -> void:
+	trigger_contextual_dialogue("runner_stopped", runner_data)
+
+
+func _on_runner_escaped(runner_data: Dictionary) -> void:
+	trigger_contextual_dialogue("runner_escaped", runner_data)
+
+
+func _on_strike_changed(current: int, _max_val: int, delta: int) -> void:
+	# Only trigger on strike added (delta > 0)
+	if delta > 0:
+		trigger_contextual_dialogue("strike_received", {"current_strikes": current})

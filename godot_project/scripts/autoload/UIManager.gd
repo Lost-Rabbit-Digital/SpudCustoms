@@ -7,18 +7,66 @@ var perfect_stamp_alert_sound = preload(
 )
 var negative_alert_sound = preload("res://assets/audio/ui_feedback/decline_red_alert.wav")
 
+# Perfect hit celebration sound (using the missile perfect hit sound)
+var perfect_hit_celebration_sound = preload("res://assets/audio/gameplay/missile_perfect_hit.mp3")
+
 # Screen shake settings
 var screen_shake_intensity_multiplier: float = 1.0  # Gets set from options menu
+
+# Perfect hit celebration settings
+const CELEBRATION_FLASH_DURATION: float = 0.15
+const CELEBRATION_SLOWMO_DURATION: float = 0.25
+const CELEBRATION_SLOWMO_SCALE: float = 0.5
+const CELEBRATION_ZOOM_AMOUNT: float = 1.03
+const CELEBRATION_PARTICLE_COUNT: int = 12
+
+# Celebration overlay components
+var _celebration_layer: CanvasLayer = null
+var _flash_rect: ColorRect = null
+var _particle_container: Node2D = null
 
 # Signal for alert events
 signal alert_displayed(alert_type: String, message: String)
 signal alert_cleared
+signal celebration_started(celebration_type: String)
+signal celebration_ended()
 
 
 # Initialize the UI manager
 func _ready():
 	# Load screen shake setting from config
 	update_camera_shake_setting()
+	_setup_celebration_overlay()
+	_connect_celebration_signals()
+
+
+func _setup_celebration_overlay() -> void:
+	# Create canvas layer for celebration effects
+	_celebration_layer = CanvasLayer.new()
+	_celebration_layer.name = "CelebrationLayer"
+	_celebration_layer.layer = 95  # Above most UI but below dialogue
+
+	# Create flash rect
+	_flash_rect = ColorRect.new()
+	_flash_rect.name = "FlashRect"
+	_flash_rect.color = Color(1.0, 1.0, 0.9, 0.0)  # Warm white, transparent
+	_flash_rect.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_flash_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_celebration_layer.add_child(_flash_rect)
+
+	# Create particle container (centered in viewport)
+	_particle_container = Node2D.new()
+	_particle_container.name = "ParticleContainer"
+	_celebration_layer.add_child(_particle_container)
+
+	add_child(_celebration_layer)
+	_celebration_layer.visible = false
+
+
+func _connect_celebration_signals() -> void:
+	if EventBus:
+		EventBus.perfect_celebration_requested.connect(_on_perfect_celebration_requested)
+		EventBus.perfect_hit_achieved.connect(_on_perfect_hit_achieved)
 
 
 ## Load the screen shake setting from config
@@ -220,3 +268,140 @@ func format_score(value: int) -> String:
 		count += 1
 
 	return formatted
+
+
+# ============================================================================
+# PERFECT HIT CELEBRATION SYSTEM
+# ============================================================================
+
+## Trigger signature perfect hit celebration
+## @param position: World position for particle effects
+## @param celebration_type: "stamp" or "runner" for different effects
+func trigger_perfect_celebration(position: Vector2 = Vector2.ZERO, celebration_type: String = "stamp") -> void:
+	celebration_started.emit(celebration_type)
+
+	# Show celebration layer
+	_celebration_layer.visible = true
+
+	# Position particles at event location (or center if not specified)
+	if position == Vector2.ZERO:
+		position = Vector2(640, 360)  # Center of 1280x720
+	_particle_container.position = position
+
+	# Run all celebration effects
+	_play_celebration_sound(celebration_type)
+	_trigger_screen_flash()
+	_trigger_slowmo_effect()
+	_trigger_zoom_punch()
+	_spawn_celebration_particles(position, celebration_type)
+	_trigger_celebration_haptic(celebration_type)
+
+	# Schedule celebration end
+	await get_tree().create_timer(0.5).timeout
+	_celebration_layer.visible = false
+	celebration_ended.emit()
+
+
+func _play_celebration_sound(celebration_type: String) -> void:
+	var audio_player = AudioStreamPlayer.new()
+	audio_player.stream = perfect_hit_celebration_sound
+	audio_player.volume_db = -3.0
+	audio_player.bus = "SFX"
+	audio_player.pitch_scale = 1.0 if celebration_type == "runner" else 1.1
+	add_child(audio_player)
+	audio_player.play()
+	audio_player.finished.connect(audio_player.queue_free)
+
+
+func _trigger_screen_flash() -> void:
+	if not _flash_rect:
+		return
+
+	# Quick bright flash
+	var tween = create_tween()
+	tween.tween_property(_flash_rect, "color:a", 0.25, 0.05)
+	tween.tween_property(_flash_rect, "color:a", 0.0, CELEBRATION_FLASH_DURATION)
+
+
+func _trigger_slowmo_effect() -> void:
+	# Brief slowmo for impact
+	Engine.time_scale = CELEBRATION_SLOWMO_SCALE
+
+	var tween = create_tween()
+	tween.set_ignore_time_scale(true)  # Tween runs in real time
+	tween.tween_property(Engine, "time_scale", 1.0, CELEBRATION_SLOWMO_DURATION)
+
+
+func _trigger_zoom_punch() -> void:
+	var root = get_tree().current_scene
+	if not root:
+		return
+
+	var original_scale = root.scale
+
+	var tween = create_tween()
+	tween.set_ignore_time_scale(true)
+	# Zoom in slightly
+	tween.tween_property(root, "scale", original_scale * CELEBRATION_ZOOM_AMOUNT, 0.08)
+	# Zoom back out with bounce
+	tween.tween_property(root, "scale", original_scale, 0.15).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+
+
+func _spawn_celebration_particles(position: Vector2, celebration_type: String) -> void:
+	# Determine particle color based on type
+	var base_color: Color
+	if celebration_type == "runner":
+		base_color = Color(1.0, 0.5, 0.2)  # Orange for runner hits
+	else:
+		base_color = Color(1.0, 0.85, 0.3)  # Gold for perfect stamps
+
+	# Spawn particles in a burst pattern
+	for i in range(CELEBRATION_PARTICLE_COUNT):
+		var particle = _create_celebration_particle(base_color)
+		_particle_container.add_child(particle)
+
+		# Calculate burst direction
+		var angle = (TAU / CELEBRATION_PARTICLE_COUNT) * i + randf_range(-0.2, 0.2)
+		var velocity = Vector2.from_angle(angle) * randf_range(150, 300)
+
+		# Animate particle
+		var tween = create_tween()
+		tween.set_parallel(true)
+		tween.set_ignore_time_scale(true)
+		tween.tween_property(particle, "position", particle.position + velocity, 0.4).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		tween.tween_property(particle, "modulate:a", 0.0, 0.4)
+		tween.tween_property(particle, "scale", Vector2(0.3, 0.3), 0.4)
+
+		# Cleanup
+		tween.chain().tween_callback(particle.queue_free)
+
+
+func _create_celebration_particle(base_color: Color) -> Node2D:
+	# Create a simple colored rect as particle
+	var particle = ColorRect.new()
+	particle.size = Vector2(8, 8)
+	particle.position = -particle.size / 2  # Center the particle
+	particle.color = base_color.lightened(randf_range(-0.1, 0.2))
+	particle.rotation = randf() * TAU
+	return particle
+
+
+func _trigger_celebration_haptic(celebration_type: String) -> void:
+	# Strong double-pulse haptic feedback
+	if EventBus:
+		var intensity = 1.0 if celebration_type == "runner" else 0.8
+		EventBus.haptic_feedback_requested.emit(intensity, 0.15)
+
+
+# ============================================================================
+# CELEBRATION EVENT HANDLERS
+# ============================================================================
+
+func _on_perfect_celebration_requested(position: Vector2, celebration_type: String) -> void:
+	trigger_perfect_celebration(position, celebration_type)
+
+
+func _on_perfect_hit_achieved(_bonus_points: int) -> void:
+	# Auto-trigger celebration for perfect runner hits
+	# Position defaults to center since we don't know the exact hit location
+	trigger_perfect_celebration(Vector2.ZERO, "runner")

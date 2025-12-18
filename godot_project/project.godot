@@ -54,6 +54,7 @@ VirtualCursor="*res://scripts/autoload/VirtualCursor.gd"
 InputGlyphManager="*res://scripts/autoload/InputGlyphManager.gd"
 TwitchIntegrationManager="*res://scripts/autoload/TwitchIntegrationManager.gd"
 SentryManager="*res://scripts/autoload/SentryManager.gd"
+TensionManager="*res://scripts/autoload/TensionManager.gd"
 
 [debug]
 
