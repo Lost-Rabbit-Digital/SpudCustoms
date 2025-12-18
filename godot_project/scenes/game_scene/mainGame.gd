@@ -1423,11 +1423,11 @@ func update_potato_info_display():
 		# Scale font size based on longest field
 		var potato_info_label = $Gameplay/InteractiveElements/Passport/OpenPassport/PotatoInfo
 		if max_field_length > 15:
-			potato_info_label.add_theme_font_size_override("font_size", 13)
+			potato_info_label.add_theme_font_size_override("font_size", 11)
 		elif max_field_length > 12:
-			potato_info_label.add_theme_font_size_override("font_size", 14)
+			potato_info_label.add_theme_font_size_override("font_size", 12)
 		else:
-			potato_info_label.add_theme_font_size_override("font_size", 16)
+			potato_info_label.add_theme_font_size_override("font_size", 14)
 
 		# FIXED: Include race/type information clearly
 		potato_info_label.text = (
