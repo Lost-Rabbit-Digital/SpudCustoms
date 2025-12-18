@@ -92,10 +92,11 @@ func _load_icon() -> void:
 			return
 
 	# Try fallback paths
-	var fallback_path: String = "res://assets/achievements/%s_%s.jpg" % [
-		_achievement.steam_id,
-		"completed" if _is_unlocked else "uncompleted"
-	]
+	var fallback_path: String
+	if _is_unlocked:
+		fallback_path = "res://assets/achievements/%s.png" % _achievement.steam_id
+	else:
+		fallback_path = "res://assets/achievements/%s_uncompleted.png" % _achievement.steam_id
 
 	if ResourceLoader.exists(fallback_path):
 		icon_texture.texture = load(fallback_path)

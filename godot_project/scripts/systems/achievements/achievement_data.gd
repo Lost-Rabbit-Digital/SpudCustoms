@@ -45,8 +45,8 @@ class Achievement:
 		is_hidden = p_is_hidden
 		progress_max = p_progress_max
 		progress_stat = p_progress_stat
-		icon_completed = "res://assets/achievements/%s_completed.jpg" % steam_id
-		icon_locked = "res://assets/achievements/%s_uncompleted.jpg" % steam_id
+		icon_completed = "res://assets/achievements/%s.png" % steam_id
+		icon_locked = "res://assets/achievements/%s_uncompleted.png" % steam_id
 
 
 ## All achievement definitions
