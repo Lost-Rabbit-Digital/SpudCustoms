@@ -59,3 +59,66 @@ citation_trash_label,TRASH
 citation_header,OFFICIAL CITATION
 citation_from_supervisor,From: Supervisor Russet
 citation_dismiss_hint,[Drag to Trash to dismiss]
+_MINIGAME COMMON,
+minigame_times_up,"Time's up! No worries, back to work!"
+minigame_time_format,{seconds}.{fraction}
+_QUICK TIME EVENT,
+qte_title,QUICK TIME EVENT
+qte_instruction,Press the keys as they appear!
+qte_auto_completed,Auto-completed
+qte_accessibility_note,(QTE Accessibility enabled)
+qte_get_ready,Get ready...
+qte_progress,Progress
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} successful (+{points} points)
+qte_image_pending,[Image Pending]
+_EVIDENCE DESTRUCTION,
+evidence_title,SECURITY INSPECTION IMMINENT
+evidence_instruction,"Clear your desk! Shred evidence, stash work items."
+evidence_suspicion,Suspicion: {percent}%
+evidence_items_remaining,Items: {count}
+evidence_times_up_found,"Time's up! They found the evidence..."
+evidence_times_up_suspicious,"Time's up! The inspection was... thorough."
+_CODE BREAKER,
+codebreaker_title,CODE BREAKER
+codebreaker_instruction,"Crack the code! Green = exact match, Yellow = right digit wrong spot"
+codebreaker_enter_code,ENTER THE CODE
+codebreaker_submit,SUBMIT
+codebreaker_clear,CLEAR
+codebreaker_previous_attempts,Previous Attempts:
+codebreaker_attempts,Attempts: {current} / {max}
+codebreaker_result_exact_close,{exact} exact, {close} close
+codebreaker_result_exact,{exact} exact
+codebreaker_result_close,{close} close
+codebreaker_result_none,no matches
+codebreaker_success,Code cracked in {attempts} attempts! +{points} points!
+codebreaker_failure,Out of attempts! The code was shown above.
+_DOCUMENT SCANNER,
+scanner_title,DOCUMENT SCANNER
+scanner_instruction,Drag the UV light to find hidden marks! Click to confirm.
+scanner_found,Found: {current} / {total}
+scanner_perfect,Perfect! All elements found! +{points} points!
+scanner_partial,Good effort! Found {found}/{total}. +{points} points!
+_BORDER CHASE,
+chase_title,BORDER CHASE
+chase_instruction,Click the RED contraband items! Let the GREEN items pass.
+chase_legend,RED = Catch!   GREEN = Let pass
+chase_caught,Caught: {current} / {total}
+chase_perfect,Perfect catch! +{points} points!
+chase_partial,Caught {count} items. +{points} points!
+_STAMP SORTING,
+sorting_title,STAMP SORTING
+sorting_instruction,"Drag stamps to the correct bin! Green = APPROVED, Red = DENIED"
+sorting_approved,APPROVED
+sorting_denied,DENIED
+sorting_progress,Sorted: {sorted}/{total}  Correct: {correct}
+sorting_perfect,Perfect sorting! +{points} points!
+sorting_partial,Sorted {correct}/{total} correctly. +{points} points!
+_FINGERPRINT MATCH,
+fingerprint_title,FINGERPRINT MATCH
+fingerprint_instruction,Find the fingerprint that matches the reference!
+fingerprint_reference,REFERENCE
+fingerprint_find_match,FIND THE MATCH
+fingerprint_progress,Matched: {current} / {total}
+fingerprint_success,All fingerprints matched! +{points} points!
+fingerprint_partial,Matched {matched}/{total}. +{points} points!

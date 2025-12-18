@@ -76,9 +76,9 @@ func _ready() -> void:
 	reward_multiplier = 1.0
 
 	if title_label:
-		title_label.text = "QUICK TIME EVENT"
+		title_label.text = tr("qte_title")
 	if instruction_label:
-		instruction_label.text = "Press the keys as they appear!"
+		instruction_label.text = tr("qte_instruction")
 
 
 func _on_minigame_start(config: Dictionary) -> void:
@@ -146,10 +146,10 @@ func _auto_complete_sequence() -> void:
 	_current_prompt_index = prompt_count
 
 	# Show brief "Auto-completed" message
-	_key_label.text = "Auto-completed"
+	_key_label.text = tr("qte_auto_completed")
 	_key_label.add_theme_font_size_override("font_size", 36)
 	_key_label.modulate = Color.CHARTREUSE
-	_feedback_label.text = "(QTE Accessibility enabled)"
+	_feedback_label.text = tr("qte_accessibility_note")
 	_feedback_label.modulate = Color.WHITE
 	_progress_bar.value = prompt_count
 
@@ -190,7 +190,7 @@ func _setup_minigame_scene() -> void:
 	# Narrative prompt (top, spans full width)
 	_prompt_label = Label.new()
 	_prompt_label.name = "PromptLabel"
-	_prompt_label.text = "Get ready..."
+	_prompt_label.text = tr("qte_get_ready")
 	_prompt_label.add_theme_font_size_override("font_size", 24)
 	_prompt_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_prompt_label.size = Vector2(viewport_width, 50)
@@ -233,7 +233,7 @@ func _setup_minigame_scene() -> void:
 
 	# Progress indicator (bottom center, spans full width)
 	var progress_label = Label.new()
-	progress_label.text = "Progress"
+	progress_label.text = tr("qte_progress")
 	progress_label.add_theme_font_size_override("font_size", 14)
 	progress_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	progress_label.size = Vector2(300, 20)
@@ -396,7 +396,7 @@ func _sequence_complete() -> void:
 
 	_key_label.text = outcome_message
 	_key_label.add_theme_font_size_override("font_size", 32)
-	_feedback_label.text = "%d / %d successful (+%d points)" % [_successful_presses, prompt_count, total_score]
+	_feedback_label.text = tr("qte_result").format({"successful": _successful_presses, "total": prompt_count, "points": total_score})
 	_feedback_label.modulate = Color.WHITE
 
 	# Fade out the narrative image if visible
@@ -474,7 +474,7 @@ func _setup_visual_pane() -> void:
 	# Create placeholder label
 	_placeholder_label = Label.new()
 	_placeholder_label.name = "PlaceholderLabel"
-	_placeholder_label.text = "[Image Pending]"
+	_placeholder_label.text = tr("qte_image_pending")
 	_placeholder_label.add_theme_font_size_override("font_size", 18)
 	_placeholder_label.add_theme_color_override("font_color", Color(0.5, 0.45, 0.55, 1.0))
 	_placeholder_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER

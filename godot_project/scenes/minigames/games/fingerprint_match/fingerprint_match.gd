@@ -57,9 +57,9 @@ func _ready() -> void:
 	reward_multiplier = 1.0
 
 	if title_label:
-		title_label.text = "FINGERPRINT MATCH"
+		title_label.text = tr("fingerprint_title")
 	if instruction_label:
-		instruction_label.text = "Find the fingerprint that matches the reference!"
+		instruction_label.text = tr("fingerprint_instruction")
 
 
 func _on_minigame_start(config: Dictionary) -> void:
@@ -94,7 +94,7 @@ func _setup_minigame_scene() -> void:
 	subviewport.add_child(ref_panel)
 
 	var ref_label = Label.new()
-	ref_label.text = "REFERENCE"
+	ref_label.text = tr("fingerprint_reference")
 	ref_label.add_theme_font_size_override("font_size", 18)
 	ref_label.position = Vector2(50, 70)
 	subviewport.add_child(ref_label)
@@ -108,7 +108,7 @@ func _setup_minigame_scene() -> void:
 
 	# Grid panel (right side)
 	var grid_label = Label.new()
-	grid_label.text = "FIND THE MATCH"
+	grid_label.text = tr("fingerprint_find_match")
 	grid_label.add_theme_font_size_override("font_size", 18)
 	grid_label.position = Vector2(350, 70)
 	subviewport.add_child(grid_label)
@@ -292,14 +292,14 @@ func _on_fingerprint_selected(index: int) -> void:
 func _update_progress() -> void:
 	var progress = subviewport.get_node_or_null("Progress")
 	if progress:
-		progress.text = "Matched: %d / %d" % [_correct_matches, matches_to_complete]
+		progress.text = tr("fingerprint_progress").format({"matched": _correct_matches, "total": matches_to_complete})
 
 
 func _complete_game() -> void:
 	var total_score = (matches_to_complete * points_per_match) + completion_bonus
 
 	if instruction_label:
-		instruction_label.text = "All fingerprints matched! +%d points!" % total_score
+		instruction_label.text = tr("fingerprint_success").format({"points": total_score})
 
 	complete_success(total_score, {
 		"matches": _correct_matches,
@@ -319,6 +319,6 @@ func _on_minigame_complete() -> void:
 		_result.perfect = false
 
 		if instruction_label:
-			instruction_label.text = "Matched %d/%d. +%d points!" % [
-				_correct_matches, matches_to_complete, partial_score
-			]
+			instruction_label.text = tr("fingerprint_partial").format({
+				"matched": _correct_matches, "total": matches_to_complete, "points": partial_score
+			})

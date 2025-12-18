@@ -59,11 +59,11 @@ func _on_endless_button_pressed():
 
 func _setup_confirmation_dialog():
 	confirmation_dialog = ConfirmationDialog.new()
-	confirmation_dialog.title = "Start New Game"
-	confirmation_dialog.dialog_text = "Starting a new game will reset your progress. Are you sure you want to continue?"
+	confirmation_dialog.title = tr("Start New Game")
+	confirmation_dialog.dialog_text = tr("Starting a new game will reset your progress. Are you sure you want to continue?")
 	confirmation_dialog.min_size = Vector2(400, 100)
 	confirmation_dialog.dialog_hide_on_ok = true
-	confirmation_dialog.get_ok_button().text = "Yes, Start New Game"
+	confirmation_dialog.get_ok_button().text = tr("new_game_confirm_button")
 	var dialog_theme = load("res://assets/styles/confirmation_dialog_theme.tres")
 	if dialog_theme:
 		confirmation_dialog.theme = dialog_theme
@@ -78,16 +78,16 @@ func _setup_confirmation_dialog():
 
 func _setup_tutorial_choice_dialog():
 	tutorial_choice_dialog = AcceptDialog.new()
-	tutorial_choice_dialog.title = "Tutorial"
-	tutorial_choice_dialog.dialog_text = "Would you like to play the tutorial?\n\nThe tutorial will walk you through the basics of being a customs officer at Spud Customs."
+	tutorial_choice_dialog.title = tr("tutorial_dialog_title")
+	tutorial_choice_dialog.dialog_text = tr("tutorial_dialog_text")
 	tutorial_choice_dialog.min_size = Vector2(450, 150)
 	tutorial_choice_dialog.dialog_hide_on_ok = true
 
 	# Rename OK button to "Play Tutorial"
-	tutorial_choice_dialog.get_ok_button().text = "Play Tutorial"
+	tutorial_choice_dialog.get_ok_button().text = tr("tutorial_choice_play")
 
 	# Add "Skip Tutorial" button
-	var skip_button = tutorial_choice_dialog.add_button("Skip Tutorial", true, "skip_tutorial")
+	var skip_button = tutorial_choice_dialog.add_button(tr("tutorial_choice_skip"), true, "skip_tutorial")
 
 	# Apply consistent brown/gold theme
 	var dialog_theme = load("res://assets/styles/confirmation_dialog_theme.tres")
@@ -149,7 +149,7 @@ func _on_skip_tutorial():
 func _setup_load_confirmation_dialog():
 	# Create custom window for continue dialog with narrative choices
 	load_confirmation_dialog = Window.new()
-	load_confirmation_dialog.title = "Continue Game"
+	load_confirmation_dialog.title = tr("continue_game_title")
 	load_confirmation_dialog.size = Vector2i(500, 450)
 	load_confirmation_dialog.unresizable = true
 	load_confirmation_dialog.transient = true
@@ -178,7 +178,7 @@ func _setup_load_confirmation_dialog():
 	# Header label showing save info
 	var header_label = Label.new()
 	header_label.name = "HeaderLabel"
-	header_label.text = "Your Save Data"
+	header_label.text = tr("continue_dialog_header")
 	header_label.add_theme_font_size_override("font_size", 18)
 	header_label.add_theme_color_override("font_color", Color(1.0, 0.9, 0.6))
 	main_container.add_child(header_label)
@@ -186,7 +186,7 @@ func _setup_load_confirmation_dialog():
 	# Day label
 	var day_label = Label.new()
 	day_label.name = "DayLabel"
-	day_label.text = "Day: 1"
+	day_label.text = tr("continue_dialog_day").format({"day": 1})
 	main_container.add_child(day_label)
 
 	# Separator
@@ -207,13 +207,13 @@ func _setup_load_confirmation_dialog():
 
 	var continue_button = Button.new()
 	continue_button.name = "ContinueButton"
-	continue_button.text = "Continue"
+	continue_button.text = tr("continue_dialog_continue")
 	continue_button.custom_minimum_size = Vector2(120, 40)
 	continue_button.pressed.connect(_on_load_game_confirmed)
 
 	var cancel_button = Button.new()
 	cancel_button.name = "CancelButton"
-	cancel_button.text = "Cancel"
+	cancel_button.text = tr("continue_dialog_cancel")
 	cancel_button.custom_minimum_size = Vector2(120, 40)
 	cancel_button.pressed.connect(_on_load_dialog_cancelled)
 
@@ -284,7 +284,7 @@ func _show_load_confirmation():
 	var main_container = margin.get_child(0)
 	var day_label = main_container.get_node("DayLabel")
 	if day_label:
-		day_label.text = "Day: %d" % shift
+		day_label.text = tr("continue_dialog_day").format({"day": shift})
 
 	# Update the narrative choice display
 	if narrative_choice_display:
