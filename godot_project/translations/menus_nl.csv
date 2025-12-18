@@ -146,6 +146,7 @@ Return,Terug
 Restart the game?,Spel opnieuw starten?
 _HELP MENU,
 help_menu_button,Hulp
+achievements_menu_button,Prestaties
 help_menu_title,Hoe te spelen
 help_tab_basics,Basis
 help_tab_gameplay,Spelverloop

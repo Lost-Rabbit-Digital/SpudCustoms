@@ -379,8 +379,8 @@ func _on_runner_escaped(runner_data: Dictionary) -> void:
 		EventBus.score_changed.emit(_score, -points_to_remove, "runner_escaped")
 		EventBus.ui_score_update_requested.emit(_score)
 
-	# Add strike
-	EventBus.request_strike_add("runner_escaped", runner_data)
+	# Add strike with translated citation reason
+	EventBus.request_strike_add(tr("citation_runner_escaped"), runner_data)
 
 	# Show alert
 	if points_to_remove > 0:

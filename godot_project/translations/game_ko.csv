@@ -2,6 +2,7 @@
 alert_border_runner,국경 도주자 감지!\n클릭하여 미사일 발사!
 alert_rejected_fleeing,거부된 감자 도주 중!\n클릭하여 미사일 발사!
 alert_runner_escaped,도주자 탈출!\n스트라이크 추가!
+citation_runner_escaped,국경 도주자가 도망쳤습니다! 제때 저지하지 못했습니다.
 alert_points_deducted,도주자 탈출!\n스트라이크 추가!\n-{penalty}점!
 alert_perfect_hit,완벽 명중! +{perfect} 정확도 보너스 점수
 alert_perfect_stamp,완벽한 스탬프! +{points}점!
@@ -11,6 +12,7 @@ alert_strike_removed,스트라이크 제거!
 alert_correct_decision,"올바른 선택을 하셨습니다, 요원님.\n+{points}점!"
 alert_wrong_decision,"불필요한 고통을 야기했습니다, 요원님...\n+1 스트라이크!"
 alert_potato_should_be_approved,\n이 감자는 모든 요건을 충족하며 승인되었어야 했습니다.
+incorrect_decision,문서 처리에서 잘못된 결정.
 alert_strike_out,최대 스트라이크 초과! 근무가 종료됩니다.
 ui_score,점수: {score}
 ui_quota,할당량: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,미니게임 보너스: +{bonus}점!
 high_score_display,최고 점수: {score}
 new_high_score,신기록!
 month_1,1월
+citation_trash_label,휴지통
+citation_header,공식 경고
+citation_from_supervisor,발신: 감독관 러셋
+citation_dismiss_hint,[휴지통으로 드래그하여 닫기]

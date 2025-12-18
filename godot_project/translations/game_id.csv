@@ -2,6 +2,7 @@
 alert_border_runner,PELARI PERBATASAN TERDETEKSI!\nKlik untuk meluncurkan rudal!
 alert_rejected_fleeing,KENTANG DITOLAK MELARIKAN DIRI!\nKlik untuk meluncurkan rudal!
 alert_runner_escaped,PELARI LOLOS!\nStrike ditambahkan!
+citation_runner_escaped,Seorang pelari lintas batas lolos! Anda gagal mencegatnya tepat waktu.
 alert_points_deducted,PELARI LOLOS!\nStrike ditambahkan!\n-{penalty} poin!
 alert_perfect_hit,PUKULAN SEMPURNA! +{perfect} poin bonus akurasi
 alert_perfect_stamp,STEMPEL SEMPURNA! +{points} poin!
@@ -11,6 +12,7 @@ alert_strike_removed,Strike dihapus!
 alert_correct_decision,"Anda membuat pilihan yang benar, petugas.\n+{points} poin!"
 alert_wrong_decision,"Anda telah menyebabkan penderitaan yang tidak perlu, petugas...\n+1 Strike!"
 alert_potato_should_be_approved,\nKentang ini memenuhi semua persyaratan dan seharusnya disetujui.
+incorrect_decision,Keputusan yang salah dalam pemrosesan dokumen.
 alert_strike_out,Batas maksimum strike terlampaui! Shift Anda berakhir.
 ui_score,Skor: {score}
 ui_quota,Kuota: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Bonus minigame: +{bonus} poin!
 high_score_display,Skor Tertinggi: {score}
 new_high_score,SKOR TERTINGGI BARU!
 month_1,Januari
+citation_trash_label,SAMPAH
+citation_header,PERINGATAN RESMI
+citation_from_supervisor,Dari: Supervisor Russet
+citation_dismiss_hint,[Seret ke Sampah untuk menutup]

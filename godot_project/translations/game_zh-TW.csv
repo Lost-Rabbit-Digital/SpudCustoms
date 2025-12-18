@@ -2,6 +2,7 @@
 alert_border_runner,偵測到邊境逃犯！\n點擊發射飛彈！
 alert_rejected_fleeing,被拒絕的馬鈴薯正在逃跑！\n點擊發射飛彈！
 alert_runner_escaped,逃犯已逃脫！\n增加一次失誤！
+citation_runner_escaped,邊境逃犯逃跑了！您未能及時攔截。
 alert_points_deducted,逃犯已逃脫！\n增加一次失誤！\n-{penalty} 分！
 alert_perfect_hit,完美命中！ +{perfect} 準確度獎勵分數
 alert_perfect_stamp,完美蓋章！ +{points} 分！
@@ -11,6 +12,7 @@ alert_strike_removed,失誤已移除！
 alert_correct_decision,警官，您做出了正確的選擇。\n+{points} 分！
 alert_wrong_decision,警官，您造成了不必要的痛苦……\n+1 次失誤！
 alert_potato_should_be_approved,\n這顆馬鈴薯符合所有要求，本應被批准。
+incorrect_decision,文件處理決定錯誤。
 alert_strike_out,已超出最大失誤次數！您的班次結束了。
 ui_score,分數：{score}
 ui_quota,配額：{current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,小遊戲獎勵：+{bonus} 點數！
 high_score_display,最高分數：{score}
 new_high_score,新最高分數！
 month_1,一月
+citation_trash_label,廢紙簍
+citation_header,官方警告
+citation_from_supervisor,來自：監督員拉塞特
+citation_dismiss_hint,[拖到廢紙簍關閉]

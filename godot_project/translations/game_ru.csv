@@ -2,6 +2,7 @@
 alert_border_runner,"БЕГЛЕЦ ОБНАРУЖЕН!\nНажмите, чтобы запустить ракету!"
 alert_rejected_fleeing,"ОТВЕРГНУТАЯ КАРТОФЕЛИНА СБЕГАЕТ!\nНажмите, чтобы запустить ракету!"
 alert_runner_escaped,БЕГЛЕЦ СБЕЖАЛ!\nДобавлен штраф!
+citation_runner_escaped,Беглец сбежал! Вы не успели его перехватить.
 alert_points_deducted,БЕГЛЕЦ СБЕЖАЛ!\nДобавлен штраф!\n-{penalty} очков!
 alert_perfect_hit,ИДЕАЛЬНОЕ ПОПАДАНИЕ! +{perfect} бонусных очков за точность
 alert_perfect_stamp,ИДЕАЛЬНЫЙ ШТАМП! +{points} очков!
@@ -11,6 +12,7 @@ alert_strike_removed,Штраф снят!
 alert_correct_decision,"Вы приняли верное решение, офицер.\n+{points} очков!"
 alert_wrong_decision,"Вы причинили ненужные страдания, офицер...\n+1 штраф!"
 alert_potato_should_be_approved,\nЭта картофелина соответствует всем требованиям и должна была быть одобрена.
+incorrect_decision,Неверное решение при обработке документа.
 alert_strike_out,Превышено максимальное количество штрафов! Ваша смена окончена.
 ui_score,Счёт: {score}
 ui_quota,Квота: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Бонус мини-игры: +{bonus} очков!
 high_score_display,Рекорд: {score}
 new_high_score,НОВЫЙ РЕКОРД!
 month_1,Январь
+citation_trash_label,КОРЗИНА
+citation_header,ОФИЦИАЛЬНОЕ ПРЕДУПРЕЖДЕНИЕ
+citation_from_supervisor,От: Надзиратель Рассет
+citation_dismiss_hint,[Перетащите в корзину, чтобы закрыть]

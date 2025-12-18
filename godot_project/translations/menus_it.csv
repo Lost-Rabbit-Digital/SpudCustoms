@@ -146,6 +146,7 @@ Return,Indietro
 Restart the game?,Vuoi riavviare la partita?
 _HELP MENU,
 help_menu_button,Aiuto
+achievements_menu_button,Obiettivi
 help_menu_title,Come giocare
 help_tab_basics,Basi
 help_tab_gameplay,Giocabilità

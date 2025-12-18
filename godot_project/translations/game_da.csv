@@ -2,6 +2,7 @@
 alert_border_runner,GRÆNSELØBER OPDAGET!\nKlik for at affyre missil!
 alert_rejected_fleeing,AFVIST KARTOFFEL FLYGTER!\nKlik for at affyre missil!
 alert_runner_escaped,LØBER UNDSLUPPET!\nStrike tilføjet!
+citation_runner_escaped,En grænsekrydser flygtede! Du formåede ikke at stoppe dem i tide.
 alert_points_deducted,LØBER UNDSLUPPET!\nStrike tilføjet!\n-{penalty} point!
 alert_perfect_hit,PERFEKT TRÆF! +{perfect} præcisionsbonus point
 alert_perfect_stamp,PERFEKT STEMPEL! +{points} point!
@@ -11,6 +12,7 @@ alert_strike_removed,Strike fjernet!
 alert_correct_decision,"Du traf det rigtige valg, betjent.\n+{points} point!"
 alert_wrong_decision,"Du har forårsaget unødvendig lidelse, betjent...\n+1 Strike!"
 alert_potato_should_be_approved,\nDenne kartoffel opfylder alle krav og burde være godkendt.
+incorrect_decision,Forkert beslutning ved dokumentbehandling.
 alert_strike_out,Maksimalt antal strikes overskredet! Din vagt er slut.
 ui_score,Point: {score}
 ui_quota,Kvote: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Minispil bonus: +{bonus} point!
 high_score_display,Højeste score: {score}
 new_high_score,NY HØJESTE SCORE!
 month_1,Januar
+citation_trash_label,PAPIRKURV
+citation_header,OFFICIEL BØDE
+citation_from_supervisor,Fra: Supervisor Russet
+citation_dismiss_hint,[Træk til papirkurven for at lukke]

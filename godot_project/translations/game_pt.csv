@@ -2,6 +2,7 @@
 alert_border_runner,CORREDOR DE FRONTEIRA DETECTADO!\nClique para lançar míssil!
 alert_rejected_fleeing,BATATA REJEITADA FUGINDO!\nClique para lançar míssil!
 alert_runner_escaped,CORREDOR ESCAPOU!\nStrike adicionado!
+citation_runner_escaped,Um corredor de fronteira escapou! Você não conseguiu interceptá-lo a tempo.
 alert_points_deducted,CORREDOR ESCAPOU!\nStrike adicionado!\n-{penalty} pontos!
 alert_perfect_hit,GOLPE PERFEITO! +{perfect} pontos de bônus de precisão
 alert_perfect_stamp,CARIMBO PERFEITO! +{points} pontos!
@@ -11,6 +12,7 @@ alert_strike_removed,Strike removido!
 alert_correct_decision,"Você tomou a decisão certa, oficial.\n+{points} pontos!"
 alert_wrong_decision,"Você causou sofrimento desnecessário, oficial...\n+1 Strike!"
 alert_potato_should_be_approved,\nEsta batata atende a todos os requisitos e deveria ter sido aprovada.
+incorrect_decision,Decisão incorreta no processamento de documento.
 alert_strike_out,Máximo de strikes excedido! Seu turno acabou.
 ui_score,Pontuação: {score}
 ui_quota,Cota: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Bônus de minijogo: +{bonus} pontos!
 high_score_display,Pontuação mais alta: {score}
 new_high_score,NOVA PONTUAÇÃO MAIS ALTA!
 month_1,Janeiro
+citation_trash_label,LIXO
+citation_header,CITAÇÃO OFICIAL
+citation_from_supervisor,De: Supervisor Russet
+citation_dismiss_hint,[Arrastar para o lixo para descartar]

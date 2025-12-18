@@ -2,6 +2,7 @@
 alert_border_runner,CORRIDORE AL CONFINE RILEVATO!\nClicca per lanciare il missile!
 alert_rejected_fleeing,PATATA RESPINTA IN FUGA!\nClicca per lanciare il missile!
 alert_runner_escaped,CORRIDORE FUGGITO!\nStrike aggiunto!
+citation_runner_escaped,Un corridore di confine è fuggito! Non sei riuscito a intercettarlo in tempo.
 alert_points_deducted,CORRIDORE FUGGITO!\nStrike aggiunto!\n-{penalty} punti!
 alert_perfect_hit,COLPO PERFETTO! +{perfect} punti bonus precisione
 alert_perfect_stamp,TIMBRO PERFETTO! +{points} punti!
@@ -11,6 +12,7 @@ alert_strike_removed,Strike rimosso!
 alert_correct_decision,"Hai fatto la scelta giusta, ufficiale.\n+{points} punti!"
 alert_wrong_decision,"Hai causato sofferenze inutili, ufficiale...\n+1 Strike!"
 alert_potato_should_be_approved,\nQuesta patata soddisfa tutti i requisiti ed avrebbe dovuto essere approvata.
+incorrect_decision,Decisione errata nell'elaborazione del documento.
 alert_strike_out,Numero massimo di strike superato! Il tuo turno è finito.
 ui_score,Punteggio: {score}
 ui_quota,Limite: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Bonus minigioco: +{bonus} punti!
 high_score_display,Punteggio più alto: {score}
 new_high_score,NUOVO PUNTEGGIO PIÙ ALTO!
 month_1,Gennaio
+citation_trash_label,CESTINO
+citation_header,AVVISO UFFICIALE
+citation_from_supervisor,Da: Supervisore Russet
+citation_dismiss_hint,[Trascina nel cestino per chiudere]

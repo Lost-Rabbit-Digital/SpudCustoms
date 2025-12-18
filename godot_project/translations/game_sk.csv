@@ -2,6 +2,7 @@
 alert_border_runner,POHRANIČNÝ BEŽEC DETEGOVANÝ!\nKliknite na odpálenie rakety!
 alert_rejected_fleeing,ZAMIETNUTÝ ZEMIAK UNIKÁ!\nKliknite na odpálenie rakety!
 alert_runner_escaped,BEŽEC UNIKOL!\nStrike pridaný!
+citation_runner_escaped,Bežec unikol! Nepodarilo sa vám ho včas zadržať.
 alert_points_deducted,BEŽEC UNIKOL!\nStrike pridaný!\n-{penalty} bodov!
 alert_perfect_hit,PERFEKTNÝ ZÁSAH! +{perfect} bodov bonusu presnosti
 alert_perfect_stamp,PERFEKTNÁ PEČIATKA! +{points} bodov!
@@ -11,6 +12,7 @@ alert_strike_removed,Strike odstránený!
 alert_correct_decision,"Vybrali ste správne, dôstojník.\n+{points} bodov!"
 alert_wrong_decision,"Spôsobili ste zbytočné utrpenie, dôstojník...\n+1 Strike!"
 alert_potato_should_be_approved,\nTento zemiak spĺňa všetky požiadavky a mal by byť schválený.
+incorrect_decision,Nesprávne rozhodnutie pri spracovaní dokumentu.
 alert_strike_out,Maximálny počet strikes prekročený! Vaša zmena sa skončila.
 ui_score,Skóre: {score}
 ui_quota,Kvóta: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Bonus z minihry: +{bonus} bodov!
 high_score_display,Najvyššie skóre: {score}
 new_high_score,NOVÉ NAJVYŠŠIE SKÓRE!
 month_1,Január
+citation_trash_label,KÔŠ
+citation_header,ÚRADNÁ CITÁCIA
+citation_from_supervisor,Od: Supervízor Russet
+citation_dismiss_hint,[Presuňte do koša na zatvorenie]

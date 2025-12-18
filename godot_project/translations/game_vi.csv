@@ -2,6 +2,7 @@
 alert_border_runner,NGƯỜI CHẠY BIÊN GIỚI ĐƯỢC PHÁT HIỆN!\nNhấp để phóng tên lửa!
 alert_rejected_fleeing,KHOAI TÂY BỊ TỪ CHỐI ĐANG CHẠY!\nNhấp để phóng tên lửa!
 alert_runner_escaped,NGƯỜI CHẠY TRỐN THOÁT!\nThêm Strike!
+citation_runner_escaped,Một người chạy trốn đã thoát! Bạn đã không kịp chặn họ.
 alert_points_deducted,NGƯỜI CHẠY TRỐN THOÁT!\nThêm Strike!\n-{penalty} điểm!
 alert_perfect_hit,PHÁT BẮN HOÀN HẢO! +{perfect} điểm thưởng độ chính xác
 alert_perfect_stamp,ĐÓNG DẤU HOÀN HẢO! +{points} điểm!
@@ -11,6 +12,7 @@ alert_strike_removed,Xóa Strike!
 alert_correct_decision,"Bạn đã đưa ra quyết định đúng, sĩ quan.\n+{points} điểm!"
 alert_wrong_decision,"Bạn đã gây đau khổ không cần thiết, sĩ quan...\n+1 Strike!"
 alert_potato_should_be_approved,\nQuả khoai tây này đáp ứng tất cả các yêu cầu và đáng lẽ phải được phê duyệt.
+incorrect_decision,Quyết định sai trong xử lý tài liệu.
 alert_strike_out,Vượt quá số lần strike tối đa! Ca làm việc của bạn kết thúc.
 ui_score,Điểm số: {score}
 ui_quota,Ngạch: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Thưởng trò chơi nhỏ: +{bonus} điểm!
 high_score_display,Điểm cao nhất: {score}
 new_high_score,ĐIỂM CAO MỚI!
 month_1,Tháng Một
+citation_trash_label,THÙNG RÁC
+citation_header,GIẤY CẢNH CÁO CHÍNH THỨC
+citation_from_supervisor,Từ: Giám sát viên Russet
+citation_dismiss_hint,[Kéo vào Thùng rác để đóng]

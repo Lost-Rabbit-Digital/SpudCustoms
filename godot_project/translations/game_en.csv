@@ -2,6 +2,7 @@
 alert_border_runner,BORDER RUNNER DETECTED!\nClick to launch missile!
 alert_rejected_fleeing,REJECTED POTATO FLEEING!\nClick to launch missile!
 alert_runner_escaped,RUNNER ESCAPED!\nStrike added!
+citation_runner_escaped,A border runner escaped! You failed to intercept them in time.
 alert_points_deducted,RUNNER ESCAPED!\nStrike added!\n-{penalty} points!
 alert_perfect_hit,PERFECT HIT! +{perfect} accuracy bonus points
 alert_perfect_stamp,PERFECT STAMP! +{points} points!
@@ -11,6 +12,7 @@ alert_strike_removed,Strike removed!
 alert_correct_decision,"You made the right choice, officer.\n+{points} points!"
 alert_wrong_decision,"You have caused unnecessary suffering, officer...\n+1 Strike!"
 alert_potato_should_be_approved,\nThis potato meets all requirements and should have been approved.
+incorrect_decision,Incorrect decision made on document processing.
 alert_strike_out,Maximum strikes exceeded! Your shift is over.
 ui_score,Score: {score}
 ui_quota,Quota: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Minigame bonus: +{bonus} points!
 high_score_display,High Score: {score}
 new_high_score,NEW HIGH SCORE!
 month_1,January
+citation_trash_label,TRASH
+citation_header,OFFICIAL CITATION
+citation_from_supervisor,From: Supervisor Russet
+citation_dismiss_hint,[Drag to Trash to dismiss]

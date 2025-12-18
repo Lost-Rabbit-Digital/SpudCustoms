@@ -2,6 +2,7 @@
 alert_border_runner,ตรวจพบผู้หลบหนีชายแดน!\nคลิกเพื่อยิงขีปนาวุธ!
 alert_rejected_fleeing,มันฝรั่งที่ถูกปฏิเสธกำลังหลบหนี!\nคลิกเพื่อยิงขีปนาวุธ!
 alert_runner_escaped,ผู้หลบหนีหลุดรอดไปได้!\nเพิ่มสไตรค์!
+citation_runner_escaped,ผู้หลบหนีหนีไปได้! คุณไม่สามารถสกัดกั้นได้ทันเวลา
 alert_points_deducted,ผู้หลบหนีหลุดรอดไปได้!\nเพิ่มสไตรค์!\n-{penalty} คะแนน!
 alert_perfect_hit,ยิงโดนเป้าอย่างสมบูรณ์! +{perfect} คะแนนโบนัสความแม่นยำ
 alert_perfect_stamp,ประทับตราสมบูรณ์แบบ! +{points} คะแนน!
@@ -11,6 +12,7 @@ alert_strike_removed,ลบสไตรค์แล้ว!
 alert_correct_decision,"คุณตัดสินใจถูกต้องแล้ว, เจ้าหน้าที่.\n+{points} คะแนน!"
 alert_wrong_decision,"คุณได้ก่อให้เกิดความทุกข์ทรมานโดยไม่จำเป็น, เจ้าหน้าที่...\n+1 สไตรค์!"
 alert_potato_should_be_approved,\nมันฝรั่งตัวนี้มีคุณสมบัติครบถ้วนและควรได้รับการอนุมัติ
+incorrect_decision,การตัดสินใจผิดพลาดในการประมวลผลเอกสาร
 alert_strike_out,เกินจำนวนสไตรค์สูงสุดแล้ว!\nกะของคุณสิ้นสุดลงแล้ว.
 ui_score,คะแนน: {score}
 ui_quota,โควตา: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,โบนัสมินิเกม: +{bonus} คะแน
 high_score_display,คะแนนสูงสุด: {score}
 new_high_score,ทำลายสถิติใหม่!
 month_1,มกราคม
+citation_trash_label,ถังขยะ
+citation_header,ใบเตือนอย่างเป็นทางการ
+citation_from_supervisor,จาก: ผู้ควบคุม รัสเซ็ต
+citation_dismiss_hint,[ลากไปที่ถังขยะเพื่อปิด]

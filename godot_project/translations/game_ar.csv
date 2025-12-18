@@ -2,6 +2,7 @@
 alert_border_runner,تم رصد متجاوز للحدود!\nانقر لإطلاق الصاروخ!
 alert_rejected_fleeing,بطاطا مرفوضة تفرّ!\nانقر لإطلاق الصاروخ!
 alert_runner_escaped,هرب المتجاوز!\nتمت إضافة مخالفة!
+citation_runner_escaped,هرب متجاوز للحدود! لقد فشلت في اعتراضه في الوقت المناسب.
 alert_points_deducted,هرب المتجاوز!\nتمت إضافة مخالفة!\n-{penalty} نقطة!
 alert_perfect_hit,إصابة مثالية! +{perfect} نقاط مكافأة دقة
 alert_perfect_stamp,ختم مثالي! +{points} نقطة!
@@ -11,6 +12,7 @@ alert_strike_removed,تمت إزالة مخالفة!
 alert_correct_decision,لقد اتخذت القرار الصحيح، أيها الضابط.\n+{points} نقطة!
 alert_wrong_decision,لقد تسببت في معاناة غير ضرورية، أيها الضابط...\n+1 مخالفة!
 alert_potato_should_be_approved,\nهذه البطاطا تستوفي جميع المتطلبات وكان يجب الموافقة عليها.
+incorrect_decision,قرار خاطئ في معالجة الوثائق.
 alert_strike_out,تم تجاوز الحد الأقصى للمخالفات! انتهى دوامك.
 ui_score,النقاط: {score}
 ui_quota,الحصة: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,مكافأة اللعبة المصغرة: +{bonus} نقطة
 high_score_display,أعلى نتيجة: {score}
 new_high_score,رقم قياسي جديد!
 month_1,يناير
+citation_trash_label,سلة المهملات
+citation_header,إنذار رسمي
+citation_from_supervisor,من: المشرف روسيت
+citation_dismiss_hint,[اسحب إلى سلة المهملات للإغلاق]

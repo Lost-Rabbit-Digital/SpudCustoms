@@ -2,6 +2,7 @@
 alert_border_runner,GRÄNSlöpare UPPTÄCKT!\nKlicka för att avfyra missil!
 alert_rejected_fleeing,AVVISAD POTATIS FLYR!\nKlicka för att avfyra missil!
 alert_runner_escaped,LÖPARE RYMT!\nStrike tillagd!
+citation_runner_escaped,En gränslöpare rymde! Du lyckades inte stoppa dem i tid.
 alert_points_deducted,LÖPARE RYMT!\nStrike tillagd!\n-{penalty} poäng!
 alert_perfect_hit,PERFEKT TRÄFF! +{perfect} precisionsbonus poäng
 alert_perfect_stamp,PERFEKT STÄMPEL! +{points} poäng!
@@ -11,6 +12,7 @@ alert_strike_removed,Strike borttagen!
 alert_correct_decision,"Du tog rätt beslut, polis.\n+{points} poäng!"
 alert_wrong_decision,"Du har orsakat onödigt lidande, polis...\n+1 Strike!"
 alert_potato_should_be_approved,\nDenna potatis uppfyller alla krav och borde ha godkänts.
+incorrect_decision,Felaktigt beslut vid dokumenthantering.
 alert_strike_out,Maximalt antal strikes överskridet! Ditt pass är över.
 ui_score,Poäng: {score}
 ui_quota,Kvot: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Minispelbonus: +{bonus} poäng!
 high_score_display,Högsta poäng: {score}
 new_high_score,NY HÖGSTA POÄNG!
 month_1,Januari
+citation_trash_label,PAPPERSKORG
+citation_header,OFFICIELL VARNING
+citation_from_supervisor,Från: Övervakare Russet
+citation_dismiss_hint,[Dra till papperskorgen för att stänga]

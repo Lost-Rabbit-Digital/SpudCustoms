@@ -146,6 +146,7 @@ Return,Retornar
 Restart the game?,Reiniciar o jogo?
 _HELP MENU,
 help_menu_button,Ajuda
+achievements_menu_button,Conquistas
 help_menu_title,Como jogar
 help_tab_basics,Básico
 help_tab_gameplay,Jogabilidade

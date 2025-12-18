@@ -146,6 +146,7 @@ Return,Retur
 Restart the game?,Starte spillet på nytt?
 _HELP MENU,
 help_menu_button,Hjelp
+achievements_menu_button,Prestasjoner
 help_menu_title,Hvordan spille
 help_tab_basics,Grunnleggende
 help_tab_gameplay,Spillmekanikk

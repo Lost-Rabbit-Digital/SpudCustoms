@@ -352,7 +352,7 @@ func create_skip_button():
 	canvas.layer = 100  # Put it above everything else
 
 	var skip_button = Button.new()
-	skip_button.text = "Skip"
+	skip_button.text = tr("Skip")
 	skip_button.custom_minimum_size = Vector2(50, 30)
 
 	# Use anchor-based positioning to place button in top-right corner

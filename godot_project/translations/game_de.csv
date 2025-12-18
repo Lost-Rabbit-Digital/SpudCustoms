@@ -2,6 +2,7 @@
 alert_border_runner,"GRENZLÄUFER ENTDECKT!\nKlicken Sie, um Rakete zu starten!"
 alert_rejected_fleeing,"ABGELEHNTER KARTOFFEL FLIEHT!\nKlicken Sie, um Rakete zu starten!"
 alert_runner_escaped,LÄUFER ENTKOMMEN!\nStrike hinzugefügt!
+citation_runner_escaped,Ein Grenzläufer ist entkommen! Sie haben ihn nicht rechtzeitig abgefangen.
 alert_points_deducted,LÄUFER ENTKOMMEN!\nStrike hinzugefügt!\n-{penalty} Punkte!
 alert_perfect_hit,PERFEKTER TREFFER! +{perfect} Präzisionsbonus-Punkte
 alert_perfect_stamp,PERFEKTER STEMPEL! +{points} Punkte!
@@ -11,6 +12,7 @@ alert_strike_removed,Strike entfernt!
 alert_correct_decision,"Sie haben die richtige Entscheidung getroffen, Offizier.\n+{points} Punkte!"
 alert_wrong_decision,"Sie haben unnötiges Leid verursacht, Offizier...\n+1 Strike!"
 alert_potato_should_be_approved,\nDiese Kartoffel erfüllt alle Anforderungen und hätte genehmigt werden sollen.
+incorrect_decision,Falsche Entscheidung bei der Dokumentenverarbeitung.
 alert_strike_out,Maximale Strikes überschritten! Ihre Schicht ist vorbei.
 ui_score,Punktestand: {score}
 ui_quota,Quote: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Minispiel-Bonus: +{bonus} Punkte!
 high_score_display,Highscore: {score}
 new_high_score,NEUER HIGHSCORE!
 month_1,Januar
+citation_trash_label,PAPIERKORB
+citation_header,AMTLICHE VERWARNUNG
+citation_from_supervisor,Von: Aufseher Russet
+citation_dismiss_hint,[Zum Schließen in den Papierkorb ziehen]

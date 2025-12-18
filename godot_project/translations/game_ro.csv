@@ -2,6 +2,7 @@
 alert_border_runner,FUGARUL DE FRONTIERĂ DETECTAT!\nApasă pentru a lansa racheta!
 alert_rejected_fleeing,CARTOF RESPINS FUGIND!\nApasă pentru a lansa racheta!
 alert_runner_escaped,FUGAR SCĂPAT!\nStrike adăugat!
+citation_runner_escaped,Un fugar a scăpat! Nu ai reușit să-l interceptezi la timp.
 alert_points_deducted,FUGAR SCĂPAT!\nStrike adăugat!\n-{penalty} puncte!
 alert_perfect_hit,LOVITURĂ PERFECTĂ! +{perfect} puncte bonus de precizie
 alert_perfect_stamp,ȘTAMPILĂ PERFECTĂ! +{points} puncte!
@@ -11,6 +12,7 @@ alert_strike_removed,Strike eliminat!
 alert_correct_decision,"Ai luat decizia corectă, ofițer.\n+{points} puncte!"
 alert_wrong_decision,"Ai cauzat suferință inutilă, ofițer...\n+1 Strike!"
 alert_potato_should_be_approved,\nAcest cartof îndeplinește toate cerințele și ar fi trebuit aprobat.
+incorrect_decision,Decizie incorectă în procesarea documentului.
 alert_strike_out,Număr maxim de strike-uri depășit! Tura ta s-a încheiat.
 ui_score,Scor: {score}
 ui_quota,Cotă: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Bonus minijoc: +{bonus} puncte!
 high_score_display,Scor maxim: {score}
 new_high_score,NOU SCOR MAXIM!
 month_1,Ianuarie
+citation_trash_label,GUNOI
+citation_header,AVERTISMENT OFICIAL
+citation_from_supervisor,De la: Supervizor Russet
+citation_dismiss_hint,[Trageți la gunoi pentru a închide]

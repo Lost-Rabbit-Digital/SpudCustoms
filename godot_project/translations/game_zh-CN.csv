@@ -2,6 +2,7 @@
 alert_border_runner,检测到边境逃犯！\n点击发射导弹！
 alert_rejected_fleeing,被拒土豆逃逸！\n点击发射导弹！
 alert_runner_escaped,逃犯逃逸！\n增加一次失误！
+citation_runner_escaped,边境逃犯逃跑了！您未能及时拦截。
 alert_points_deducted,逃犯逃逸！\n增加一次失误！\n扣除{penalty}点分数！
 alert_perfect_hit,完美命中！\n精准度奖励：+{perfect}点！
 alert_perfect_stamp,完美盖章！\n+{points}点分数！
@@ -11,6 +12,7 @@ alert_strike_removed,失误已移除！
 alert_correct_decision,您做出了正确的选择，警官。\n+{points}点分数！
 alert_wrong_decision,您造成了不必要的痛苦，警官……\n增加1次失误！
 alert_potato_should_be_approved,\n此土豆符合所有要求，本应被批准通过。
+incorrect_decision,文件处理决定错误。
 alert_strike_out,失误次数已达上限！您的班次结束了。
 ui_score,分数：{score}
 ui_quota,配额：{current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,小游戏奖励：+{bonus} 分！
 high_score_display,最高分：{score}
 new_high_score,新高分！
 month_1,一月
+citation_trash_label,废纸篓
+citation_header,官方警告
+citation_from_supervisor,来自：监督员拉塞特
+citation_dismiss_hint,[拖到废纸篓关闭]

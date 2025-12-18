@@ -2,6 +2,7 @@
 alert_border_runner,COUREUR FRONTALIER DÉTECTÉ !\nCliquez pour lancer le missile !
 alert_rejected_fleeing,POMME DE TERRE REJETÉE EN FUITE !\nCliquez pour lancer le missile !
 alert_runner_escaped,COUREUR ÉCHAPPÉ !\nStrike ajouté !
+citation_runner_escaped,Un coureur de frontière s'est échappé ! Vous n'avez pas réussi à l'intercepter à temps.
 alert_points_deducted,COUREUR ÉCHAPPÉ !\nStrike ajouté !\n-{penalty} points !
 alert_perfect_hit,COUP PARFAIT ! +{perfect} points de bonus de précision
 alert_perfect_stamp,TAMPON PARFAIT ! +{points} points !
@@ -11,6 +12,7 @@ alert_strike_removed,Strike retiré !
 alert_correct_decision,"Vous avez fait le bon choix, officier.\n+{points} points !"
 alert_wrong_decision,"Vous avez causé des souffrances inutiles, officier...\n+1 Strike !"
 alert_potato_should_be_approved,\nCette pomme de terre remplit toutes les conditions et aurait dû être approuvée.
+incorrect_decision,Mauvaise décision dans le traitement du document.
 alert_strike_out,Nombre maximum de strikes dépassé ! Votre service est terminé.
 ui_score,Score : {score}
 ui_quota,Quota : {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Bonus mini-jeu : +{bonus} points !
 high_score_display,Meilleur score : {score}
 new_high_score,NOUVEAU MEILLEUR SCORE !
 month_1,Janvier
+citation_trash_label,POUBELLE
+citation_header,AVERTISSEMENT OFFICIEL
+citation_from_supervisor,De: Superviseur Russet
+citation_dismiss_hint,[Glissez vers la poubelle pour fermer]

@@ -146,6 +146,7 @@ Return,Kembali
 Restart the game?,Mulai ulang permainan?
 _HELP MENU,
 help_menu_button,Bantuan
+achievements_menu_button,Pencapaian
 help_menu_title,Cara Bermain
 help_tab_basics,Dasar
 help_tab_gameplay,Permainan

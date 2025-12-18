@@ -2,6 +2,7 @@
 alert_border_runner,"ЗАСЕЧЕН ГРАНИЧЕН БЕГЛЕЦ!\nКликнете, за да изстреляте ракета!"
 alert_rejected_fleeing,"ОТХВЪРЛЕН КАРТОФ БЯГА!\nКликнете, за да изстреляте ракета!"
 alert_runner_escaped,БЕГЛЕЦЪТ ИЗБЯГА!\nДобавен е удар!
+citation_runner_escaped,Беглец избяга! Не успяхте да го прехванете навреме.
 alert_points_deducted,БЕГЛЕЦЪТ ИЗБЯГА!\nДобавен е удар!\n-{penalty} точки!
 alert_perfect_hit,ПЕРФЕКТЕН УДАР! +{perfect} бонус точки за точност
 alert_perfect_stamp,ПЕРФЕКТЕН ПЕЧАТ! +{points} точки!
@@ -11,6 +12,7 @@ alert_strike_removed,Ударът е премахнат!
 alert_correct_decision,"Взехте правилното решение, офицер.\n+{points} точки!"
 alert_wrong_decision,"Причинихте ненужно страдание, офицер...\n+1 Удар!"
 alert_potato_should_be_approved,\nТози картоф отговаря на всички изисквания и трябваше да бъде одобрен.
+incorrect_decision,Неправилно решение при обработка на документ.
 alert_strike_out,Максималният брой удари е надвишен! Вашата смяна приключи.
 ui_score,Резултат: {score}
 ui_quota,Квота: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Бонус от миниигра: +{bonus} точки!
 high_score_display,Най-добър резултат: {score}
 new_high_score,НОВ НАЙ-ДОБЪР РЕЗУЛТАТ!
 month_1,Януари
+citation_trash_label,КОШЧЕ
+citation_header,ОФИЦИАЛНО ПРЕДУПРЕЖДЕНИЕ
+citation_from_supervisor,От: Надзирател Ръсет
+citation_dismiss_hint,[Плъзнете в кошчето за затваряне]
