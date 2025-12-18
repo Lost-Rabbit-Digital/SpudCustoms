@@ -1,6 +1,6 @@
 # Spud Customs - Development Guidelines
 
-> **Last Updated:** December 2024 | **Version:** 1.2.0 | **Engine:** Godot 4.5
+> **Last Updated:** December 2025 | **Version:** 1.2.0 | **Engine:** Godot 4.5
 
 ## Project Overview
 
@@ -17,7 +17,7 @@
 - **Localization**: All Steam-supported languages (29 languages)
 
 **Reference Documentation:**
-- Game Design Document: `project_management/spud_customs_design_document.md`
+- Game Design Document: `project_management/gdd/README.md` (split into 15 focused sections)
 - Pre-release Testing: `project_management/testing/prerelease_test_procedure.md`
 - Steam Patch Notes: `project_management/steam_patch_notes/`
 - **EventBus Migration Guide**: `docs/EVENTBUS_MIGRATION_GUIDE.md`
@@ -70,7 +70,7 @@ SpudCustoms/
 **Key Stats:**
 - **GDScript files:** ~80 source files
 - **Scene files:** 48 .tscn files
-- **Autoload singletons:** 28 total (23 custom + 5 from plugins)
+- **Autoload singletons:** 29 total (24 custom + 5 from plugins)
 - **Supported languages:** 29 (all Steam-supported languages)
 - **Unit tests:** 14 test files (400+ test cases)
 - **Integration tests:** 10 test files
@@ -79,7 +79,7 @@ SpudCustoms/
 
 ## Autoload Architecture
 
-The project uses 28 autoload singletons for global state management. New code should use the EventBus pattern.
+The project uses 29 autoload singletons for global state management. New code should use the EventBus pattern.
 
 ### Core Architecture (Active Migration)
 
@@ -113,6 +113,7 @@ The project uses 28 autoload singletons for global state management. New code sh
 | `ConstantZIndexes` | Z-index layering constants | `scripts/autoload/` |
 | `DebugCommandManager` | Developer console commands | `scripts/autoload/` |
 | `SceneTransitionManager` | Scene loading transitions | `scripts/autoload/` |
+| `TensionManager` | Near-failure visual/audio feedback | `scripts/autoload/` |
 
 ### Plugin Autoloads
 
@@ -274,6 +275,13 @@ EventBus.dialogue_started.connect(_on_dialogue_started)
 # Analytics & Achievements
 EventBus.track_event(event_name, data)
 EventBus.emit_achievement_unlocked(achievement_id)
+
+# Tension & Game Feel (NEW)
+EventBus.tension_level_changed.connect(_on_tension_changed)  # 0.0 = calm, 1.0 = critical
+EventBus.critical_state_entered.connect(_on_critical_state)
+EventBus.critical_state_exited.connect(_on_critical_exited)
+EventBus.perfect_celebration_requested.emit(position, "stamp")  # Screen flash, slowmo, particles
+EventBus.bubble_dialogue_requested.emit("perfect_stamp", {})  # Contextual officer comments
 ```
 
 ### Migration Pattern
