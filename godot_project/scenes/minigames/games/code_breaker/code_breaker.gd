@@ -59,9 +59,9 @@ func _ready() -> void:
 	reward_multiplier = 1.0
 
 	if title_label:
-		title_label.text = "CODE BREAKER"
+		title_label.text = tr("codebreaker_title")
 	if instruction_label:
-		instruction_label.text = "Crack the code! Green = exact match, Yellow = right digit wrong spot"
+		instruction_label.text = tr("codebreaker_instruction")
 
 
 func _on_minigame_start(config: Dictionary) -> void:
@@ -95,7 +95,7 @@ func _setup_minigame_scene() -> void:
 
 	# Title
 	var title = Label.new()
-	title.text = "ENTER THE CODE"
+	title.text = tr("codebreaker_enter_code")
 	title.add_theme_font_size_override("font_size", 24)
 	title.position = Vector2(subviewport.size.x / 2 - 100, 30)
 	subviewport.add_child(title)
@@ -137,7 +137,7 @@ func _setup_minigame_scene() -> void:
 	# Submit button
 	var submit_btn = Button.new()
 	submit_btn.name = "SubmitButton"
-	submit_btn.text = "SUBMIT"
+	submit_btn.text = tr("codebreaker_submit")
 	submit_btn.custom_minimum_size = Vector2(150, 50)
 	submit_btn.add_theme_font_size_override("font_size", 20)
 	submit_btn.position = Vector2(subviewport.size.x / 2 - 75, 280)
@@ -147,7 +147,7 @@ func _setup_minigame_scene() -> void:
 	# Clear button
 	var clear_btn = Button.new()
 	clear_btn.name = "ClearButton"
-	clear_btn.text = "CLEAR"
+	clear_btn.text = tr("codebreaker_clear")
 	clear_btn.custom_minimum_size = Vector2(100, 40)
 	clear_btn.position = Vector2(subviewport.size.x / 2 - 50, 340)
 	clear_btn.pressed.connect(_on_clear_pressed)
@@ -160,7 +160,7 @@ func _setup_minigame_scene() -> void:
 	subviewport.add_child(history_panel)
 
 	var history_label = Label.new()
-	history_label.text = "Previous Attempts:"
+	history_label.text = tr("codebreaker_previous_attempts")
 	history_label.add_theme_font_size_override("font_size", 16)
 	history_label.position = Vector2(60, 385)
 	subviewport.add_child(history_label)
@@ -283,7 +283,7 @@ func _update_input_display() -> void:
 func _update_attempts_display() -> void:
 	var label = subviewport.get_node_or_null("AttemptsLabel")
 	if label:
-		label.text = "Attempts: %d / %d" % [_current_attempt, max_attempts]
+		label.text = tr("codebreaker_attempts").format({"current": _current_attempt, "max": max_attempts})
 
 
 func _add_history_entry(guess: Array[int], result: Dictionary) -> void:
@@ -339,13 +339,13 @@ func _add_history_entry(guess: Array[int], result: Dictionary) -> void:
 	var exact = result.correct_position
 	var close = result.correct_digit
 	if exact > 0 and close > 0:
-		summary_label.text = "%d exact, %d close" % [exact, close]
+		summary_label.text = tr("codebreaker_result_exact_close").format({"exact": exact, "close": close})
 	elif exact > 0:
-		summary_label.text = "%d exact" % exact
+		summary_label.text = tr("codebreaker_result_exact").format({"exact": exact})
 	elif close > 0:
-		summary_label.text = "%d close" % close
+		summary_label.text = tr("codebreaker_result_close").format({"close": close})
 	else:
-		summary_label.text = "no matches"
+		summary_label.text = tr("codebreaker_result_none")
 	summary_label.add_theme_font_size_override("font_size", 14)
 	summary_label.add_theme_color_override("font_color", Color(0.7, 0.7, 0.7))
 	summary_label.custom_minimum_size = Vector2(100, 25)
@@ -361,7 +361,7 @@ func _code_cracked() -> void:
 	var total_score = base_points + (attempts_saved * points_per_attempt_saved)
 
 	if instruction_label:
-		instruction_label.text = "Code cracked in %d attempts! +%d points!" % [_current_attempt, total_score]
+		instruction_label.text = tr("codebreaker_success").format({"attempts": _current_attempt, "points": total_score})
 
 	# Reveal the code with celebration
 	for i in range(code_length):
@@ -383,7 +383,7 @@ func _out_of_attempts() -> void:
 		_input_display[i].add_theme_color_override("font_color", Color.RED)
 
 	if instruction_label:
-		instruction_label.text = "Out of attempts! The code was shown above."
+		instruction_label.text = tr("codebreaker_failure")
 
 	# Small consolation points
 	var consolation = int(base_points * 0.25)

@@ -63,9 +63,9 @@ func _ready() -> void:
 	reward_multiplier = 1.0
 
 	if title_label:
-		title_label.text = "STAMP SORTING"
+		title_label.text = tr("sorting_title")
 	if instruction_label:
-		instruction_label.text = "Drag stamps to the correct bin! Green = APPROVED, Red = DENIED"
+		instruction_label.text = tr("sorting_instruction")
 
 
 func _on_minigame_start(config: Dictionary) -> void:
@@ -104,7 +104,7 @@ func _setup_minigame_scene() -> void:
 	subviewport.add_child(approved_visual)
 
 	var approved_label = Label.new()
-	approved_label.text = "APPROVED"
+	approved_label.text = tr("sorting_approved")
 	approved_label.add_theme_font_size_override("font_size", 24)
 	approved_label.position = _approved_bin.position + Vector2(40, 45)
 	subviewport.add_child(approved_label)
@@ -118,7 +118,7 @@ func _setup_minigame_scene() -> void:
 	subviewport.add_child(denied_visual)
 
 	var denied_label = Label.new()
-	denied_label.text = "DENIED"
+	denied_label.text = tr("sorting_denied")
 	denied_label.add_theme_font_size_override("font_size", 24)
 	denied_label.position = _denied_bin.position + Vector2(55, 45)
 	subviewport.add_child(denied_label)
@@ -152,7 +152,7 @@ func _spawn_next_stamp() -> void:
 	_current_stamp.add_child(stamp_rect)
 
 	var stamp_label = Label.new()
-	stamp_label.text = "APPROVED" if _stamp_type == "approved" else "DENIED"
+	stamp_label.text = tr("sorting_approved") if _stamp_type == "approved" else tr("sorting_denied")
 	stamp_label.add_theme_font_size_override("font_size", 14)
 	stamp_label.position = Vector2(-40, -10)
 	_current_stamp.add_child(stamp_label)
@@ -250,7 +250,7 @@ func _sort_stamp(correct: bool) -> void:
 
 
 func _update_progress_label(label: Label) -> void:
-	label.text = "Sorted: %d/%d  Correct: %d" % [_stamps_sorted, stamps_to_sort, _correct_sorts]
+	label.text = tr("sorting_progress").format({"sorted": _stamps_sorted, "total": stamps_to_sort, "correct": _correct_sorts})
 
 
 func _check_completion() -> void:
@@ -261,9 +261,9 @@ func _check_completion() -> void:
 
 	if instruction_label:
 		if _correct_sorts == stamps_to_sort:
-			instruction_label.text = "Perfect sorting! +%d points!" % total
+			instruction_label.text = tr("sorting_perfect").format({"points": total})
 		else:
-			instruction_label.text = "Sorted %d/%d correctly. +%d points!" % [_correct_sorts, stamps_to_sort, total]
+			instruction_label.text = tr("sorting_partial").format({"correct": _correct_sorts, "total": stamps_to_sort, "points": total})
 
 	complete_success(total, {
 		"correct": _correct_sorts,

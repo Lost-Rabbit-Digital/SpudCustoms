@@ -81,9 +81,9 @@ func _ready() -> void:
 	reward_multiplier = 1.0
 
 	if title_label:
-		title_label.text = "BORDER CHASE"
+		title_label.text = tr("chase_title")
 	if instruction_label:
-		instruction_label.text = "Click the RED contraband items! Let the GREEN items pass."
+		instruction_label.text = tr("chase_instruction")
 
 
 func _on_minigame_start(config: Dictionary) -> void:
@@ -148,7 +148,7 @@ func _setup_minigame_scene() -> void:
 
 	# Instructions
 	var legend = Label.new()
-	legend.text = "RED = Catch!   GREEN = Let pass"
+	legend.text = tr("chase_legend")
 	legend.add_theme_font_size_override("font_size", 16)
 	legend.position = Vector2(subviewport.size.x / 2 - 120, 420)
 	subviewport.add_child(legend)
@@ -393,7 +393,7 @@ func _flash_item(item: Node2D, color: Color) -> void:
 func _update_score_display() -> void:
 	var label = subviewport.get_node_or_null("ScoreLabel")
 	if label:
-		label.text = "Caught: %d / %d" % [_caught_count, items_to_catch]
+		label.text = tr("chase_caught").format({"current": _caught_count, "total": items_to_catch})
 
 
 func _complete_game() -> void:
@@ -411,9 +411,9 @@ func _complete_game() -> void:
 
 	if instruction_label:
 		if _caught_count >= items_to_catch and _missed_count == 0:
-			instruction_label.text = "Perfect catch! +%d points!" % total_score
+			instruction_label.text = tr("chase_perfect").format({"points": total_score})
 		else:
-			instruction_label.text = "Caught %d items. +%d points!" % [_caught_count, total_score]
+			instruction_label.text = tr("chase_partial").format({"count": _caught_count, "points": total_score})
 
 	complete_success(total_score, {
 		"caught": _caught_count,

@@ -210,3 +210,25 @@ help_lore_secrets,"[b]Root Reserve[/b]
 Rejected potatoes are... processed. According to protocol. The mysterious Root Reserve handles all the details.
 
 It's best not to ask too many questions. Focus on your duties. Nothing more."
+_LEVEL SELECT,
+level_select_choices_header,Choices up to Day {day}
+level_select_choices_header_named,Choices up to Day {day} - {name}
+level_select_play_day,Play This Day
+level_select_close,Close
+_CONTINUE DIALOG,
+continue_dialog_header,Your Save Data
+continue_dialog_day,Day: {day}
+continue_dialog_continue,Continue
+continue_dialog_cancel,Cancel
+_NEW GAME DIALOG,
+new_game_confirm_button,"Yes, Start New Game"
+tutorial_choice_play,Play Tutorial
+tutorial_choice_skip,Skip Tutorial
+tutorial_dialog_title,Tutorial
+tutorial_dialog_text,"Would you like to play the tutorial?
+
+The tutorial will walk you through the basics of being a customs officer at Spud Customs."
+continue_game_title,Continue Game
+level_select_story_choices,Story Choices
+reset_progress_confirm,Are you sure you want to reset story progress? This cannot be undone.
+reset_highscores_confirm,Are you sure you want to reset all high scores? This cannot be undone.

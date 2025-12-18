@@ -44,7 +44,7 @@ func _ready() -> void:
 ## Setup the popup window for showing narrative choices
 func _setup_choice_info_popup() -> void:
 	choice_info_popup = Window.new()
-	choice_info_popup.title = "Story Choices"
+	choice_info_popup.title = tr("level_select_story_choices")
 	choice_info_popup.size = Vector2i(480, 420)
 	choice_info_popup.unresizable = true
 	choice_info_popup.transient = true
@@ -71,7 +71,7 @@ func _setup_choice_info_popup() -> void:
 	# Header label
 	var header_label = Label.new()
 	header_label.name = "HeaderLabel"
-	header_label.text = "Choices up to Day 1"
+	header_label.text = tr("level_select_choices_header").format({"day": 1})
 	header_label.add_theme_font_size_override("font_size", 18)
 	header_label.add_theme_color_override("font_color", Color(1.0, 0.9, 0.6))
 	main_container.add_child(header_label)
@@ -94,13 +94,13 @@ func _setup_choice_info_popup() -> void:
 
 	var play_button = Button.new()
 	play_button.name = "PlayButton"
-	play_button.text = "Play This Day"
+	play_button.text = tr("level_select_play_day")
 	play_button.custom_minimum_size = Vector2(140, 40)
 	play_button.pressed.connect(_on_play_button_pressed)
 
 	var close_button = Button.new()
 	close_button.name = "CloseButton"
-	close_button.text = "Close"
+	close_button.text = tr("level_select_close")
 	close_button.custom_minimum_size = Vector2(100, 40)
 	close_button.pressed.connect(_on_choice_popup_closed)
 
@@ -173,8 +173,8 @@ func _show_choice_info_popup(level_id: int) -> void:
 	var main_container = margin.get_child(0)
 	var header_label = main_container.get_node("HeaderLabel")
 	if header_label:
-		var level_name = levels.get(level_id, "Day %d" % level_id)
-		header_label.text = "Choices up to Day %d - %s" % [level_id, level_name]
+		var level_name = levels.get(level_id, tr("continue_dialog_day").format({"day": level_id}))
+		header_label.text = tr("level_select_choices_header_named").format({"day": level_id, "name": level_name})
 
 	# Update the narrative choice display (show choices up to selected level)
 	if narrative_choice_display:

@@ -92,9 +92,9 @@ func _on_minigame_start(config: Dictionary) -> void:
 
 	# Update title and instructions
 	if title_label:
-		title_label.text = "SECURITY INSPECTION IMMINENT"
+		title_label.text = tr("evidence_title")
 	if instruction_label:
-		instruction_label.text = "Clear your desk! Shred evidence, stash work items."
+		instruction_label.text = tr("evidence_instruction")
 
 
 func _setup_ui_references() -> void:
@@ -552,10 +552,10 @@ func _update_ui() -> void:
 		_suspicion_bar.max_value = suspicion_threshold
 
 	if _suspicion_label:
-		_suspicion_label.text = "Suspicion: %d%%" % int((_suspicion / suspicion_threshold) * 100)
+		_suspicion_label.text = tr("evidence_suspicion").format({"percent": int((_suspicion / suspicion_threshold) * 100)})
 
 	if _items_remaining_label:
-		_items_remaining_label.text = "Items: %d" % _items_remaining
+		_items_remaining_label.text = tr("evidence_items_remaining").format({"count": _items_remaining})
 
 
 func _on_desk_cleared() -> void:
@@ -625,9 +625,9 @@ func _on_time_up() -> void:
 
 	if instruction_label:
 		if all_evidence.size() > 0:
-			instruction_label.text = "Time's up! They found the evidence..."
+			instruction_label.text = tr("evidence_times_up_found")
 		else:
-			instruction_label.text = "Time's up! The inspection was... thorough."
+			instruction_label.text = tr("evidence_times_up_suspicious")
 
 	_on_minigame_complete()
 	await get_tree().create_timer(1.5).timeout

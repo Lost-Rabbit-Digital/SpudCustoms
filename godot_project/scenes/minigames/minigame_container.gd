@@ -183,7 +183,7 @@ func _on_time_up() -> void:
 
 	# Show encouraging message
 	if instruction_label:
-		instruction_label.text = "Time's up! No worries, back to work!"
+		instruction_label.text = tr("minigame_times_up")
 
 	_on_minigame_complete()
 

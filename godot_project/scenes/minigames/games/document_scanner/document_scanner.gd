@@ -95,9 +95,9 @@ func _ready() -> void:
 
 	# Update UI
 	if title_label:
-		title_label.text = "DOCUMENT SCANNER"
+		title_label.text = tr("scanner_title")
 	if instruction_label:
-		instruction_label.text = "Drag the UV light to find hidden marks! Click to confirm."
+		instruction_label.text = tr("scanner_instruction")
 
 
 func _on_minigame_start(config: Dictionary) -> void:
@@ -428,7 +428,7 @@ func _mark_element_found(index: int) -> void:
 
 func _update_found_label() -> void:
 	if _found_label:
-		_found_label.text = "Found: %d / %d" % [_found_elements.size(), elements_to_find]
+		_found_label.text = tr("scanner_found").format({"current": _found_elements.size(), "total": elements_to_find})
 
 		if _found_elements.size() >= elements_to_find:
 			_found_label.add_theme_color_override("font_color", Color.GREEN)
@@ -440,7 +440,7 @@ func _all_elements_found() -> void:
 
 	# Update instruction with celebration
 	if instruction_label:
-		instruction_label.text = "Perfect! All elements found! +%d points!" % total_score
+		instruction_label.text = tr("scanner_perfect").format({"points": total_score})
 
 	# Complete with success
 	complete_success(total_score, {
@@ -467,6 +467,6 @@ func _on_minigame_complete() -> void:
 		_result.perfect = false
 
 		if instruction_label:
-			instruction_label.text = "Good effort! Found %d/%d. +%d points!" % [
-				_found_elements.size(), elements_to_find, partial_score
-			]
+			instruction_label.text = tr("scanner_partial").format({
+				"found": _found_elements.size(), "total": elements_to_find, "points": partial_score
+			})

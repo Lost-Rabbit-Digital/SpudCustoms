@@ -28,9 +28,9 @@ func _ready():
 		difficulty_option_button.clear()
 
 		# Add difficulty options
-		difficulty_option_button.add_item("Easy")
-		difficulty_option_button.add_item("Normal")
-		difficulty_option_button.add_item("Expert")
+		difficulty_option_button.add_item(tr("options_difficulty_easy"))
+		difficulty_option_button.add_item(tr("options_difficulty_normal"))
+		difficulty_option_button.add_item(tr("options_difficulty_expert"))
 
 		# Set current selection based on GameStateManager setting
 		# REFACTORED: Use GameStateManager
@@ -75,9 +75,9 @@ func _on_ResetGameControl_reset_confirmed():
 
 func _on_ResetProgressButton_pressed():
 	var confirmation_dialog = ConfirmationDialog.new()
-	confirmation_dialog.dialog_text = "Are you sure you want to reset story progress? This cannot be undone."
-	confirmation_dialog.get_ok_button().text = "Reset"
-	confirmation_dialog.get_cancel_button().text = "Cancel"
+	confirmation_dialog.dialog_text = tr("reset_progress_confirm")
+	confirmation_dialog.get_ok_button().text = tr("Reset")
+	confirmation_dialog.get_cancel_button().text = tr("Cancel")
 	var dialog_theme = load("res://assets/styles/confirmation_dialog_theme.tres")
 	if dialog_theme:
 		confirmation_dialog.theme = dialog_theme
@@ -88,9 +88,9 @@ func _on_ResetProgressButton_pressed():
 
 func _on_ResetHighScoresButton_pressed():
 	var confirmation_dialog = ConfirmationDialog.new()
-	confirmation_dialog.dialog_text = "Are you sure you want to reset all high scores? This cannot be undone."
-	confirmation_dialog.get_ok_button().text = "Reset"
-	confirmation_dialog.get_cancel_button().text = "Cancel"
+	confirmation_dialog.dialog_text = tr("reset_highscores_confirm")
+	confirmation_dialog.get_ok_button().text = tr("Reset")
+	confirmation_dialog.get_cancel_button().text = tr("Cancel")
 	var dialog_theme = load("res://assets/styles/confirmation_dialog_theme.tres")
 	if dialog_theme:
 		confirmation_dialog.theme = dialog_theme
