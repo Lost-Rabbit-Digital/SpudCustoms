@@ -238,6 +238,18 @@ func get_perfect_hits() -> int:
 	return _perfect_hits
 
 
+func get_total_shifts_completed() -> int:
+	return _total_shifts_completed
+
+
+func get_high_score(level: int = -1, difficulty: String = "") -> int:
+	if level == -1:
+		level = _shift
+	if difficulty.is_empty():
+		difficulty = _difficulty_level
+	return SaveManager.get_level_high_score(level, difficulty) if SaveManager else 0
+
+
 func get_total_playtime() -> float:
 	return _total_playtime
 
