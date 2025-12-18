@@ -284,17 +284,17 @@ func _handle_narrative_choices_for_level(level_id: int) -> void:
 	var saved_choices = game_state.get("narrative_choices", {})
 
 	if not saved_choices.is_empty():
-		# Has saved choices - restore them via Global
+		# Has saved choices - store them in Global for later restoration
+		# NOTE: Don't call restore_narrative_choices() here - Dialogic isn't ready yet.
+		# NarrativeManager will restore these when the dialogue actually starts.
 		Global.narrative_choices = saved_choices
-		Global.restore_narrative_choices()
-		print("Loaded saved narrative choices for level select: ", saved_choices.size(), " choices")
+		print("Stored saved narrative choices for level select: ", saved_choices.size(), " choices")
 	elif level_id > 1:
 		# Starting from a later level without save - set "committed ally" defaults
 		# This gives the player the full experience
 		var defaults = _get_default_choices_for_level(level_id)
 		Global.narrative_choices = defaults
-		Global.restore_narrative_choices()
-		print("Set default narrative choices for level ", level_id, ": ", defaults.size(), " choices")
+		print("Stored default narrative choices for level ", level_id, ": ", defaults.size(), " choices")
 
 
 ## Get sensible default choices for starting from a specific level

@@ -782,6 +782,14 @@ func _on_shift_summary_continue():
 		show_demo_limit_dialog()
 		return
 
+	# IMPORTANT: Check if this is the final shift - go to credits instead of continuing
+	# Shift 10 is the final day, there is no shift 11+
+	const FINAL_SHIFT: int = 10
+	if completed_shift >= FINAL_SHIFT:
+		print("Completed final shift %d - going to credits" % completed_shift)
+		get_tree().change_scene_to_file("res://scenes/end_credits/end_credits.tscn")
+		return
+
 	# Save high score for the current level
 	# REFACTORED: Use GameStateManager
 	var diff_level = GameStateManager.get_difficulty() if GameStateManager else Global.difficulty_level
