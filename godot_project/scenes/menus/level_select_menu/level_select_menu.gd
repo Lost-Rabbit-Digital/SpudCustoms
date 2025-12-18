@@ -112,6 +112,9 @@ func _setup_choice_info_popup() -> void:
 	choice_info_popup.add_child(margin)
 	add_child(choice_info_popup)
 
+	# Hide the popup initially - Windows are visible by default in Godot 4
+	choice_info_popup.hide()
+
 	# Connect close request
 	choice_info_popup.close_requested.connect(_on_choice_popup_closed)
 
