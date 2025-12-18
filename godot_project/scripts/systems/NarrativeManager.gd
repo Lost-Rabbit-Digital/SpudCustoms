@@ -5,6 +5,7 @@ signal intro_dialogue_finished
 signal end_dialogue_finished
 
 # Map level IDs to dialogue files
+# NOTE: Game ends at shift 10 (final_confrontation). No shifts beyond 10 exist.
 const LEVEL_DIALOGUES: Dictionary[int, String] = {
 	0: "tutorial",
 	1: "shift1_intro",
@@ -16,10 +17,7 @@ const LEVEL_DIALOGUES: Dictionary[int, String] = {
 	7: "shift7_intro",
 	8: "shift8_intro",
 	9: "shift9_intro",
-	10: "shift10_intro",
-	11: "shift11_intro",
-	12: "shift12_intro",
-	13: "shift13_intro"
+	10: "shift10_intro"
 }
 
 const LEVEL_END_DIALOGUES: Dictionary[int, String] = {
@@ -188,6 +186,11 @@ func start_level_dialogue(level_id: int):
 	# This prevents "Invalid named index" errors from uninitialized variables
 	_initialize_shift_variables(level_id)
 
+	# CRITICAL: Restore saved narrative choices to Dialogic BEFORE starting the timeline
+	# This ensures player's previous choices affect the dialogue correctly.
+	# We do this here because Dialogic is guaranteed to be ready at this point.
+	_restore_narrative_choices_to_dialogic()
+
 	# REFACTORED: Emit dialogue started event
 	if EventBus:
 		EventBus.dialogue_started.emit(timeline_name)
@@ -235,6 +238,9 @@ func start_level_end_dialogue(level_id: int):
 	# Initialize shift-specific variables with defaults before timeline starts
 	# This prevents "Invalid named index" errors from uninitialized variables
 	_initialize_shift_variables(level_id)
+
+	# CRITICAL: Restore saved narrative choices to Dialogic BEFORE starting the timeline
+	_restore_narrative_choices_to_dialogic()
 
 	# REFACTORED: Emit dialogue started event
 	if EventBus:
@@ -641,6 +647,14 @@ func start_final_confrontation():
 
 	dialogue_active = true
 	create_cutscene_post_processing()
+
+	# Initialize shift 10 variables with defaults before timeline starts
+	_initialize_shift_variables(10)
+
+	# CRITICAL: Restore saved narrative choices to Dialogic BEFORE starting the timeline
+	# This is especially important for the final confrontation as it determines the ending
+	_restore_narrative_choices_to_dialogic()
+
 	# Note: Dialogic.start() returns the layout node and automatically adds it to the
 	# scene tree via call_deferred. Do NOT call add_child on the returned node as this
 	# creates a race condition where the node ends up with two parents.
@@ -704,6 +718,17 @@ func _on_final_dialogue_finished():
 	cleanup_skip_buttons()
 	cleanup_cutscene_post_processing()
 	emit_signal("dialogue_finished")
+
+	# FALLBACK: If the final confrontation dialogue ends without triggering credits
+	# (which can happen if the dialogue path doesn't emit "credits_ready" signal),
+	# automatically go to credits after a short delay.
+	# The "credits_ready" signal in _on_dialogic_signal normally handles this,
+	# but this ensures we always go to credits after the final dialogue.
+	var current_shift = GameStateManager.get_shift() if GameStateManager else 10
+	if current_shift >= 10:
+		print("Final confrontation ended - triggering fallback credits transition")
+		# Use call_deferred to ensure all dialogue cleanup completes first
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/end_credits/end_credits.tscn")
 
 
 func is_dialogue_active() -> bool:
@@ -964,6 +989,31 @@ func load_narrative_choices(choices: Dictionary) -> void:
 			EventBus.narrative_choice_made.emit(var_name, choices[var_name])
 
 	print("Loaded ", choices.size(), " narrative choices")
+
+
+## Restore narrative choices from Global.narrative_choices to Dialogic
+## Called before starting a dialogue timeline to ensure saved choices are applied
+func _restore_narrative_choices_to_dialogic() -> void:
+	if not Global or Global.narrative_choices.is_empty():
+		return
+
+	if not Dialogic or not Dialogic.has_subsystem("VAR"):
+		push_warning("NarrativeManager: Dialogic VAR subsystem not ready, cannot restore choices")
+		return
+
+	var choices = Global.narrative_choices
+	var restored_count: int = 0
+
+	for var_name in choices.keys():
+		var value = choices[var_name]
+		Dialogic.VAR.set(var_name, value)
+		restored_count += 1
+
+	print("NarrativeManager: Restored %d narrative choices to Dialogic" % restored_count)
+
+	# Also emit events so other systems know choices were restored
+	if EventBus:
+		EventBus.narrative_choices_load_requested.emit(choices)
 
 
 ## Clear Dialogic history - called on session restart to prevent buildup
