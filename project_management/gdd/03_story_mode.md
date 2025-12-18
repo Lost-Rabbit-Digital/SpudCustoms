@@ -33,13 +33,10 @@ Each chapter represents one work shift (10 total shifts)
 - Major plot revelations
 - Increased difficulty
 - Character relationships deepen
-- **Needs Work**: Ending is abrupt and jarring, requires smoother transition
 
 ### Shift 10: "Mash or Be Mashed"
 
-- Story climax with **4 distinct endings** (2 art pieces + 4 dialogue lines each)
-- **Needs Revision**: Confusing narrative change in "stay" path regarding resistance members
-- **Requires Implementation**: Multiple ending branches based on player choices
+- Story climax with **8 distinct endings** (unique art and dialogue for each)
 - Final confrontations
 - Resolution of major plot threads
 

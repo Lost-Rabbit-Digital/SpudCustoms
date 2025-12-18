@@ -37,7 +37,7 @@
 
 ### Multiple Playthrough Investment (All Endings)
 
-- **4 endings total** (Revolution, Diplomatic, Loyalist, Savior)
+- **8 endings total** (4 Resistance path + 3 Loyalist path + 1 Special ending)
 - First playthrough: 2-3 hours
 - Subsequent playthroughs: 1-1.5 hours each (can skip seen dialogue)
 - **Total for 100% story completion**: ~6-8 hours
@@ -220,7 +220,7 @@
 ### Justification for 2-3 Hour Campaign
 
 - Focused narrative without padding
-- High replay value (4 endings, 3 difficulties)
+- High replay value (8 endings, 3 difficulties)
 - Endless mode extends playtime optionally
 - Price point ($4.99) matches content volume
 - Respects player time (modern design philosophy)

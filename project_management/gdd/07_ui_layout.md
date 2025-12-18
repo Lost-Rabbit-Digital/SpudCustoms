@@ -141,7 +141,7 @@
 │                                                 │
 │  [Walking Potatoes Background Animation]       │
 │                                                 │
-│  v1.1.0            [Social Icons]  [Steam Icon] │
+│  v1.2.0            [Social Icons]  [Steam Icon] │
 └─────────────────────────────────────────────────┘
 ```
 

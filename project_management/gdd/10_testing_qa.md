@@ -18,13 +18,30 @@ Comprehensive testing strategy combining automated unit tests, manual acceptance
 
 ```
 godot_project/tests/
-├── unit/                           # Unit tests for individual systems
+├── unit/                           # Unit tests for individual systems (14 files)
 │   ├── test_shift_stats.gd        # ShiftStats bonus calculations
 │   ├── test_stats_manager.gd      # Stamp accuracy checking
 │   ├── test_law_validator.gd      # Rule validation and date logic
-│   └── test_potato_factory.gd     # Character generation helpers
-└── integration/                    # Future integration tests
-    └── (planned for full gameplay flow testing)
+│   ├── test_potato_factory.gd     # Character generation helpers
+│   ├── test_event_bus.gd          # EventBus pattern tests
+│   ├── test_accessibility_manager.gd
+│   ├── test_drag_and_drop_manager.gd
+│   ├── test_narrative_manager.gd
+│   ├── test_queue_manager.gd
+│   ├── test_save_manager.gd
+│   ├── test_stamp_system.gd
+│   ├── test_tutorial_manager.gd
+│   └── test_ui_manager.gd
+└── integration/                    # Integration tests (10 files)
+    ├── test_achievement_flow.gd
+    ├── test_border_runner_flow.gd
+    ├── test_document_processing_flow.gd
+    ├── test_eventbus_game_flow.gd
+    ├── test_eventbus_score_flow.gd
+    ├── test_eventbus_strike_flow.gd
+    ├── test_narrative_choice_flow.gd
+    ├── test_save_load_flow.gd
+    └── test_shift_completion_flow.gd
 ```
 
 ## Unit Test Coverage
@@ -190,12 +207,12 @@ godot --headless --script res://tests/run_tests.gd
 
 ### Future Test Expansion
 
-**Integration Tests (Planned)**
+**Integration Tests ✓ (Implemented)**
 - Full gameplay loop testing
 - Save/load functionality
-- Steam API integration (leaderboards, achievements)
-- Multi-scene transitions
+- EventBus score and strike flows
 - Narrative choice persistence
+- Achievement unlock flows
 
 **Performance Tests (Planned)**
 - Frame rate benchmarking across difficulty levels
