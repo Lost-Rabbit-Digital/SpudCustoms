@@ -2,6 +2,7 @@
 alert_border_runner,HATÁRMETSZŐ ÉSZLELVE!\nKattintson a rakéta indításához!
 alert_rejected_fleeing,ELUTASÍTOTT KRUMPLI MENEKÜL!\nKattintson a rakéta indításához!
 alert_runner_escaped,FUTÁR ELMENEKÜLT!\nStrike hozzáadva!
+citation_runner_escaped,Egy határfutó elmenekült! Nem sikerült időben elfogni.
 alert_points_deducted,FUTÁR ELMENEKÜLT!\nStrike hozzáadva!\n-{penalty} pont!
 alert_perfect_hit,TÖKÉLETES TALÁLAT! +{perfect} pontossági bónusz pont
 alert_perfect_stamp,TÖKÉLETES BÉLYEGZÉS! +{points} pont!
@@ -11,6 +12,7 @@ alert_strike_removed,Strike eltávolítva!
 alert_correct_decision,"Jó döntést hozott, tiszt.\n+{points} pont!"
 alert_wrong_decision,"Szükségtelen szenvedést okozott, tiszt...\n+1 Strike!"
 alert_potato_should_be_approved,"\nEz a krumpli minden követelménynek megfelel, és jóvá kellett volna hagyni."
+incorrect_decision,Helytelen döntés a dokumentum feldolgozásánál.
 alert_strike_out,Maximális strike-ok túllépve! A műszaknak vége.
 ui_score,Pontszám: {score}
 ui_quota,Kvóta: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Minijáték bónusz: +{bonus} pont!
 high_score_display,Rekord: {score}
 new_high_score,ÚJ REKORD!
 month_1,Január
+citation_trash_label,SZEMÉT
+citation_header,HIVATALOS FIGYELMEZTETÉS
+citation_from_supervisor,Feladó: Russet Felügyelő
+citation_dismiss_hint,[Húzd a kukába az elvetéshez]

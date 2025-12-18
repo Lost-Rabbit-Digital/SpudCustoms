@@ -90,7 +90,7 @@ func _create_trash_zone(parent: Control) -> void:
 
 	# Add label
 	var label = Label.new()
-	label.text = "TRASH"
+	label.text = tr("citation_trash_label")
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	label.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -167,7 +167,7 @@ func _create_citation_note(reason: String) -> Control:
 
 	# Header
 	var header = Label.new()
-	header.text = "OFFICIAL CITATION"
+	header.text = tr("citation_header")
 	header.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	header.add_theme_color_override("font_color", Color(0.6, 0.1, 0.1))
 	header.add_theme_font_size_override("font_size", 16)
@@ -179,7 +179,7 @@ func _create_citation_note(reason: String) -> Control:
 
 	# From line
 	var from_line = Label.new()
-	from_line.text = "From: Supervisor Russet"
+	from_line.text = tr("citation_from_supervisor")
 	from_line.add_theme_color_override("font_color", Color(0.3, 0.3, 0.3))
 	from_line.add_theme_font_size_override("font_size", 12)
 	content.add_child(from_line)
@@ -195,7 +195,7 @@ func _create_citation_note(reason: String) -> Control:
 
 	# Instruction
 	var instruction = Label.new()
-	instruction.text = "[Drag to Trash to dismiss]"
+	instruction.text = tr("citation_dismiss_hint")
 	instruction.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	instruction.add_theme_color_override("font_color", Color(0.5, 0.5, 0.5))
 	instruction.add_theme_font_size_override("font_size", 10)

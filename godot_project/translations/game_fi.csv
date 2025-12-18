@@ -2,6 +2,7 @@
 alert_border_runner,RAJARIKOLLINEN HAVAITTU!\nKlikkaa lähettääksesi ohjuksen!
 alert_rejected_fleeing,HYLÄTTY PERUNA PAKENEE!\nKlikkaa lähettääksesi ohjuksen!
 alert_runner_escaped,PAKOLAINEN KARANNUT!\nIsku lisätty!
+citation_runner_escaped,Rajankävijä pakeni! Et ehtinyt pysäyttää häntä ajoissa.
 alert_points_deducted,PAKOLAINEN KARANNUT!\nIsku lisätty!\n-{penalty} pistettä!
 alert_perfect_hit,TÄYDELLINEN OSUMA! +{perfect} tarkkuusbonus pistettä
 alert_perfect_stamp,TÄYDELLINEN LEIMA! +{points} pistettä!
@@ -11,6 +12,7 @@ alert_strike_removed,Isku poistettu!
 alert_correct_decision,"Teit oikean valinnan, poliisi.\n+{points} pistettä!"
 alert_wrong_decision,"Olet aiheuttanut tarpeetonta kärsimystä, poliisi...\n+1 Isku!"
 alert_potato_should_be_approved,\nTämä peruna täyttää kaikki vaatimukset ja olisi pitänyt hyväksyä.
+incorrect_decision,Virheellinen päätös asiakirjan käsittelyssä.
 alert_strike_out,Enimmäisiskut ylitetty! Vuorosi on ohi.
 ui_score,Pisteet: {score}
 ui_quota,Kiintiö: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Minipelin bonus: +{bonus} pistettä!
 high_score_display,Ennätys: {score}
 new_high_score,UUSI ENNÄTYS!
 month_1,Tammikuu
+citation_trash_label,ROSKAKORI
+citation_header,VIRALLINEN HUOMAUTUS
+citation_from_supervisor,Lähettäjä: Esimies Russet
+citation_dismiss_hint,[Vedä roskakoriin hylätäksesi]

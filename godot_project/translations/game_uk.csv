@@ -2,6 +2,7 @@
 alert_border_runner,"ВИЯВЛЕНО ВТІКАЧА!\nНатисніть, щоб запустити ракету!"
 alert_rejected_fleeing,"ВІДМОВЛЕНА КАРТОПЛЯ ВТІКАЄ!\nНатисніть, щоб запустити ракету!"
 alert_runner_escaped,ВТІКАЧ ВТІК!\nДодано штрафне очко!
+citation_runner_escaped,Втікач втік! Ви не встигли його перехопити.
 alert_points_deducted,ВТІКАЧ ВТІК!\nДодано штрафне очко!\n-{penalty} очок!
 alert_perfect_hit,ІДЕАЛЬНЕ ВЛУЧАННЯ! +{perfect} бонусних очок за точність
 alert_perfect_stamp,ІДЕАЛЬНИЙ ШТАМП! +{points} очок!
@@ -11,6 +12,7 @@ alert_strike_removed,Штрафне очко знято!
 alert_correct_decision,"Ви зробили правильний вибір, офіцере.\n+{points} очок!"
 alert_wrong_decision,"Ви спричинили зайві страждання, офіцере...\n+1 штрафне очко!"
 alert_potato_should_be_approved,\nЦя картопля відповідає всім вимогам і мала бути схвалена.
+incorrect_decision,Неправильне рішення при обробці документа.
 alert_strike_out,Перевищено максимальну кількість штрафних очок! Ваша зміна завершена.
 ui_score,Рахунок: {score}
 ui_quota,Квота: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Бонус міні-гри: +{bonus} балів!
 high_score_display,Рекорд: {score}
 new_high_score,НОВИЙ РЕКОРД!
 month_1,Січень
+citation_trash_label,КОШИК
+citation_header,ОФІЦІЙНЕ ПОПЕРЕДЖЕННЯ
+citation_from_supervisor,Від: Наглядач Рассет
+citation_dismiss_hint,[Перетягніть у кошик, щоб закрити]

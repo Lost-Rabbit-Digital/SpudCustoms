@@ -2,6 +2,7 @@
 alert_border_runner,国境突破者発見！\nクリックでミサイル発射！
 alert_rejected_fleeing,却下ポテト逃走中！\nクリックでミサイル発射！
 alert_runner_escaped,逃走者、逃亡！\nストライク追加！
+citation_runner_escaped,国境走者が逃げました！時間内に阻止できませんでした。
 alert_points_deducted,逃走者、逃亡！\nストライク追加！\n-{penalty} ポイント！
 alert_perfect_hit,パーフェクトヒット！ +{perfect} 命中精度ボーナスポイント
 alert_perfect_stamp,パーフェクトスタンプ！ +{points} ポイント！
@@ -11,6 +12,7 @@ alert_strike_removed,ストライク解除！
 alert_correct_decision,適切な判断です、警官殿。\n+{points} ポイント！
 alert_wrong_decision,不必要な苦痛を与えましたね、警官殿...\n+1 ストライク！
 alert_potato_should_be_approved,\nこのポテトは全ての要件を満たしており、承認されるべきでした。
+incorrect_decision,書類処理における判断ミス。
 alert_strike_out,最大ストライク数を超過しました！シフトは終了です。
 ui_score,スコア: {score}
 ui_quota,ノルマ: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,ミニゲームボーナス：+{bonus} ポイント！
 high_score_display,ハイスコア：{score}
 new_high_score,新記録達成！
 month_1,1月
+citation_trash_label,ゴミ箱
+citation_header,公式警告
+citation_from_supervisor,差出人: ラセット監督官
+citation_dismiss_hint,[ゴミ箱にドラッグして閉じる]

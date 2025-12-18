@@ -2,6 +2,7 @@
 alert_border_runner,ΕΝΤΟΠΙΣΤΗΚΕ ΔΙΑΦΥΓΩΝ ΣΤΑ ΣΥΝΟΡΑ!\nΚάντε κλικ για εκτόξευση πυραύλου!
 alert_rejected_fleeing,ΑΠΟΡΡΙΦΘΕΙΣΑ ΠΑΤΑΤΑ ΔΙΑΦΕΥΓΕΙ!\nΚάντε κλικ για εκτόξευση πυραύλου!
 alert_runner_escaped,Ο ΔΡΑΠΕΤΗΣ ΕΞΕΦΥΓΕ!\nΠροστέθηκε ποινή!
+citation_runner_escaped,Ένας παράνομος διασυνοριακός δραπέτευσε! Απέτυχες να τον αναχαιτίσεις εγκαίρως.
 alert_points_deducted,Ο ΔΡΑΠΕΤΗΣ ΕΞΕΦΥΓΕ!\nΠροστέθηκε ποινή!\n-{penalty} πόντοι!
 alert_perfect_hit,ΤΕΛΕΙΑ ΒΟΛΗ! +{perfect} πόντοι μπόνους ακρίβειας
 alert_perfect_stamp,ΤΕΛΕΙΑ ΣΦΡΑΓΙΔΑ! +{points} πόντοι!
@@ -11,6 +12,7 @@ alert_strike_removed,Η ποινή αφαιρέθηκε!
 alert_correct_decision,"Κάνατε τη σωστή επιλογή, αξιωματικέ.\n+{points} πόντοι!"
 alert_wrong_decision,"Προκαλέσατε άσκοπη ταλαιπωρία, αξιωματικέ...\n+1 Ποινή!"
 alert_potato_should_be_approved,\nΑυτή η πατάτα πληροί όλες τις απαιτήσεις και θα έπρεπε να είχε εγκριθεί.
+incorrect_decision,Λάθος απόφαση στην επεξεργασία εγγράφου.
 alert_strike_out,Το μέγιστο όριο ποινών ξεπεράστηκε! Η βάρδιά σας τελείωσε.
 ui_score,Σκορ: {score}
 ui_quota,Όριο: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Μπόνους μίνι-παιχνιδιού: +{bonus} πό
 high_score_display,Υψηλό Σκορ: {score}
 new_high_score,ΝΕΟ ΥΨΗΛΟ ΣΚΟΡ!
 month_1,Ιανουάριος
+citation_trash_label,ΑΠΟΡΡΙΜΜΑΤΑ
+citation_header,ΕΠΙΣΗΜΗ ΠΑΡΑΠΟΜΠΗ
+citation_from_supervisor,Από: Επόπτης Ράσετ
+citation_dismiss_hint,[Σύρετε στα απορρίμματα για απόρριψη]

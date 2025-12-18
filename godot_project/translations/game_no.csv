@@ -2,6 +2,7 @@
 alert_border_runner,GRENSELØPER OPPDAGET!\nKlikk for å avfyre missil!
 alert_rejected_fleeing,AVVIST POTET RØMMER!\nKlikk for å avfyre missil!
 alert_runner_escaped,LØPER UNNSLUPPET!\nStrike lagt til!
+citation_runner_escaped,En grenseløper rømte! Du klarte ikke å stanse dem i tide.
 alert_points_deducted,LØPER UNNSLUPPET!\nStrike lagt til!\n-{penalty} poeng!
 alert_perfect_hit,PERFEKT TREFF! +{perfect} presisjonsbonuspoeng
 alert_perfect_stamp,PERFEKT STEMPEL! +{points} poeng!
@@ -11,6 +12,7 @@ alert_strike_removed,Strike fjernet!
 alert_correct_decision,"Du tok det rette valget, betjent.\n+{points} poeng!"
 alert_wrong_decision,"Du har forårsaket unødvendig lidelse, betjent...\n+1 Strike!"
 alert_potato_should_be_approved,\nDenne poteten oppfyller alle krav og burde ha blitt godkjent.
+incorrect_decision,Feil beslutning ved dokumentbehandling.
 alert_strike_out,Maksimalt antall strikes overskredet! Vakten din er over.
 ui_score,Poengsum: {score}
 ui_quota,Kvote: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Minispill bonus: +{bonus} poeng!
 high_score_display,Høyeste poengsum: {score}
 new_high_score,NY HØYESTE POENGSUM!
 month_1,Januar
+citation_trash_label,SØPPEL
+citation_header,OFFISIELL ADVARSEL
+citation_from_supervisor,Fra: Veileder Russet
+citation_dismiss_hint,[Dra til søppel for å lukke]

@@ -2,6 +2,7 @@
 alert_border_runner,"NARUSZYCIEL GRANICY WYKRYTY!\nKliknij, aby wystrzelić pocisk!"
 alert_rejected_fleeing,"ODRZUCONY ZIEMNIAK UCIEKA!\nKliknij, aby wystrzelić pocisk!"
 alert_runner_escaped,UCIEKINIER ZBIEGŁ!\nDodano Strike!
+citation_runner_escaped,Uciekinier zbiegł! Nie udało ci się go w porę przechwycić.
 alert_points_deducted,UCIEKINIER ZBIEGŁ!\nDodano Strike!\n-{penalty} punktów!
 alert_perfect_hit,IDEALNY STRZAŁ! +{perfect} punktów bonusu celności
 alert_perfect_stamp,IDEALNY STEMPEL! +{points} punktów!
@@ -11,6 +12,7 @@ alert_strike_removed,Strike usunięty!
 alert_correct_decision,"Podjąłeś słuszną decyzję, funkcjonariuszu.\n+{points} punktów!"
 alert_wrong_decision,"Spowodowałeś niepotrzebne cierpienie, funkcjonariuszu...\n+1 Strike!"
 alert_potato_should_be_approved,\nTen ziemniak spełnia wszystkie wymagania i powinien zostać zatwierdzony.
+incorrect_decision,Nieprawidłowa decyzja przy przetwarzaniu dokumentu.
 alert_strike_out,Maksymalna liczba uderzeń przekroczona! Twoja zmiana dobiegła końca.
 ui_score,Wynik: {score}
 ui_quota,Limit: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Bonus z minigry: +{bonus} punktów!
 high_score_display,Najlepszy wynik: {score}
 new_high_score,NOWY NAJLEPSZY WYNIK!
 month_1,Styczeń
+citation_trash_label,KOSZ
+citation_header,OFICJALNE UPOMNIENIE
+citation_from_supervisor,Od: Nadzorca Russet
+citation_dismiss_hint,[Przeciągnij do kosza, aby zamknąć]

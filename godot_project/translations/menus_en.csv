@@ -146,6 +146,7 @@ Return,Return
 Restart the game?,Restart the game?
 _HELP MENU,
 help_menu_button,Help
+achievements_menu_button,Achievements
 help_menu_title,How to Play
 help_tab_basics,Basics
 help_tab_gameplay,Gameplay

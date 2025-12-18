@@ -146,6 +146,7 @@ Return,Zurück
 Restart the game?,Spiel neu starten?
 _HELP MENU,
 help_menu_button,Hilfe
+achievements_menu_button,Erfolge
 help_menu_title,Anleitung
 help_tab_basics,Grundlagen
 help_tab_gameplay,Spielablauf

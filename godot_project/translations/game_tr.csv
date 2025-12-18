@@ -2,6 +2,7 @@
 alert_border_runner,SINIR KAÇAKÇISI TESPİT EDİLDİ!\nFüzeyi fırlatmak için tıklayın!
 alert_rejected_fleeing,REDDEDİLEN PATATES KAÇIYOR!\nFüzeyi fırlatmak için tıklayın!
 alert_runner_escaped,KAÇAK KAÇTI!\nStrike eklendi!
+citation_runner_escaped,Bir sınır kaçağı kaçtı! Zamanında durduramadınız.
 alert_points_deducted,KAÇAK KAÇTI!\nStrike eklendi!\n-{penalty} puan!
 alert_perfect_hit,MÜKEMMEL İSABET! +{perfect} isabetlilik bonus puanı
 alert_perfect_stamp,MÜKEMMEL DAMGA! +{points} puan!
@@ -11,6 +12,7 @@ alert_strike_removed,Strike kaldırıldı!
 alert_correct_decision,"Doğru kararı verdiniz, memur.\n+{points} puan!"
 alert_wrong_decision,"Gereksiz acı verdiniz, memur...\n+1 Strike!"
 alert_potato_should_be_approved,\nBu patates tüm gereklilikleri karşılıyor ve onaylanmalıydı.
+incorrect_decision,Belge işlemede yanlış karar.
 alert_strike_out,Maksimum strike sayısı aşıldı! Vardiyeniz bitti.
 ui_score,Puan: {score}
 ui_quota,Kota: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Mini oyun bonusu: +{bonus} puan!
 high_score_display,En Yüksek Puan: {score}
 new_high_score,YENİ EN YÜKSEK PUAN!
 month_1,Ocak
+citation_trash_label,ÇÖP
+citation_header,RESMİ UYARI
+citation_from_supervisor,Kimden: Müfettiş Russet
+citation_dismiss_hint,[Kapatmak için çöpe sürükleyin]

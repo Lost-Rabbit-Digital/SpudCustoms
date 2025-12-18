@@ -2,6 +2,7 @@
 alert_border_runner,POTVRZEN UPRCHLÍK NA HRANICI!\nKlikněte pro vypuštění rakety!
 alert_rejected_fleeing,ODMÍTNUTÝ BRAMBOR NA ÚTĚKU!\nKlikněte pro vypuštění rakety!
 alert_runner_escaped,UPRCHLÍK UNIKL!\nPřidán trestný bod!
+citation_runner_escaped,Uprchlík unikl! Nepodařilo se vám ho včas zadržet.
 alert_points_deducted,UPRCHLÍK UNIKL!\nPřidán trestný bod!\n-{penalty} bodů!
 alert_perfect_hit,PERFEKTNÍ ZÁSAH! +{perfect} bonusových bodů za přesnost
 alert_perfect_stamp,PERFEKTNÍ RAZÍTKO! +{points} bodů!
@@ -11,6 +12,7 @@ alert_strike_removed,Trestný bod odstraněn!
 alert_correct_decision,"Učinil jste správné rozhodnutí, důstojníku.\n+{points} bodů!"
 alert_wrong_decision,"Způsobil jste zbytečné utrpení, důstojníku...\n+1 trestný bod!"
 alert_potato_should_be_approved,\nTento brambor splňuje všechny požadavky a měl být schválen.
+incorrect_decision,Nesprávné rozhodnutí při zpracování dokumentu.
 alert_strike_out,Překročen maximální počet trestných bodů! Vaše směna končí.
 ui_score,Skóre: {score}
 ui_quota,Kvóta: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Bonus z minihry: +{bonus} bodů!
 high_score_display,Nejvyšší skóre: {score}
 new_high_score,NOVÉ NEJVYŠŠÍ SKÓRE!
 month_1,Leden
+citation_trash_label,KOŠ
+citation_header,ÚŘEDNÍ CITACE
+citation_from_supervisor,Od: Nadřízený Russet
+citation_dismiss_hint,[Přetáhněte do koše pro zavření]

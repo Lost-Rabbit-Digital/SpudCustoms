@@ -2,6 +2,7 @@
 alert_border_runner,GRENSOVERTREDER GEDETECTEERD!\nKlik om raket te lanceren!
 alert_rejected_fleeing,AFGEWEZEN AARDAPPEL VLUCHT!\nKlik om raket te lanceren!
 alert_runner_escaped,HARDLOPER ONTSNAPT!\nStrike toegevoegd!
+citation_runner_escaped,Een grensrenner is ontsnapt! U slaagde er niet in om hem op tijd te onderscheppen.
 alert_points_deducted,HARDLOPER ONTSNAPT!\nStrike toegevoegd!\n-{penalty} punten!
 alert_perfect_hit,PERFECTE TREFFER! +{perfect} nauwkeurigheidsbonus punten
 alert_perfect_stamp,PERFECT STEMPEL! +{points} punten!
@@ -11,6 +12,7 @@ alert_strike_removed,Strike verwijderd!
 alert_correct_decision,"U heeft de juiste keuze gemaakt, agent.\n+{points} punten!"
 alert_wrong_decision,"U heeft onnodige ellende veroorzaakt, agent...\n+1 Strike!"
 alert_potato_should_be_approved,\nDeze aardappel voldoet aan alle eisen en had goedgekeurd moeten worden.
+incorrect_decision,Verkeerde beslissing bij documentverwerking.
 alert_strike_out,Maximaal aantal strikes overschreden! Uw dienst is voorbij.
 ui_score,Punten: {score}
 ui_quota,Quotum: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Minigame bonus: +{bonus} punten!
 high_score_display,Hoogste score: {score}
 new_high_score,NIEUWE HOOGSTE SCORE!
 month_1,Januari
+citation_trash_label,PRULLENBAK
+citation_header,OFFICIËLE WAARSCHUWING
+citation_from_supervisor,Van: Supervisor Russet
+citation_dismiss_hint,[Sleep naar prullenbak om te sluiten]

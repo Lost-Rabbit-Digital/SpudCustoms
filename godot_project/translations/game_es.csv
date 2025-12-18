@@ -2,6 +2,7 @@
 alert_border_runner,¡CORREDOR FRONTERIZO DETECTADO!\nHaz clic para lanzar misil!
 alert_rejected_fleeing,¡PATATA RECHAZADA HUYENDO!\nHaz clic para lanzar misil!
 alert_runner_escaped,¡CORREDOR ESCAPADO!\nStrike añadido!
+citation_runner_escaped,¡Un corredor de frontera escapó! No lograste interceptarlo a tiempo.
 alert_points_deducted,¡CORREDOR ESCAPADO!\nStrike añadido!\n-{penalty} puntos!
 alert_perfect_hit,¡GOLPE PERFECTO! +{perfect} puntos de bono de precisión
 alert_perfect_stamp,¡SELLO PERFECTO! +{points} puntos!
@@ -11,6 +12,7 @@ alert_strike_removed,¡Strike eliminado!
 alert_correct_decision,"Has tomado la decisión correcta, oficial.\n+{points} puntos!"
 alert_wrong_decision,"Has causado sufrimiento innecesario, oficial...\n+1 Strike!"
 alert_potato_should_be_approved,\nEsta patata cumple todos los requisitos y debería haber sido aprobada.
+incorrect_decision,Decisión incorrecta en el procesamiento de documentos.
 alert_strike_out,¡Máximo de strikes excedido! Tu turno ha terminado.
 ui_score,Puntuación: {score}
 ui_quota,Cuota: {current} / {target}
@@ -53,3 +55,7 @@ alert_minigame_bonus,Bonus de minijuego: +{bonus} puntos!
 high_score_display,Puntuación más alta: {score}
 new_high_score,¡NUEVA PUNTUACIÓN MÁS ALTA!
 month_1,Enero
+citation_trash_label,PAPELERA
+citation_header,CITACIÓN OFICIAL
+citation_from_supervisor,De: Supervisor Russet
+citation_dismiss_hint,[Arrastrar a la papelera para descartar]
