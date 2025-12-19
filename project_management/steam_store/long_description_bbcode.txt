@@ -1,0 +1,105 @@
+[h1]SPUD CUSTOMS 1.2.0 - Stamp Visas. Launch Missiles. Shape History.[/h1]
+
+[i]In the nation of Spud, you're the last line between fragile peace and total chaos. Each shift tests your judgment: inspect documents, expose lies, make impossible choices, and defend your checkpoint with missile systems when potatoes make a run for the border.[/i]
+
+[img]{PLACEHOLDER_SCREENSHOT_1_GAMEPLAY_OVERVIEW}[/img]
+[i]Caption: Core gameplay - inspect documents, stamp decisions, manage the queue[/i]
+
+[h2]A Story of Choices and Consequences[/h2]
+
+Across [b]10 story shifts[/b] and [b]22 decision points[/b], you'll shape the destiny of innocent (and not-so-innocent) potatoes. Your choices ripple through the narrative, leading to [b]8 distinct endings[/b] - from loyal servant of the regime to revolutionary hero, from tragic survivor to romantic savior.
+
+[img]{PLACEHOLDER_SCREENSHOT_2_DIALOGUE_CHOICE}[/img]
+[i]Caption: A difficult dialogue choice moment - your decisions matter[/i]
+
+Will you enforce cruel laws... or risk everything to save innocent spuds?
+
+[h2]Key Features[/h2]
+
+[list]
+[*] [b]Inspect, Judge, Fire[/b] - Master the checkpoint. Approve visas, deny liars, and unleash missiles on runners who flee!
+[*] [b]8 Distinct Endings[/b] - Your choices lead to dramatically different conclusions. Discover the resistance path, loyalist endings, and the rare romantic finale.
+[*] [b]5 Integrated Minigames[/b] - UV scanning, stamp sorting, fingerprint matching, code breaking, and border chase add variety between document processing.
+[*] [b]NEW: Evidence Destruction[/b] - A tense narrative minigame where you must clear your desk before inspection. Every item tells a story.
+[*] [b]21 Steam Achievements[/b] - Track your progress through story milestones, character relationships, and gameplay mastery.
+[*] [b]Moral Dilemmas[/b] - Will you enforce cruel laws... or risk everything to save innocent spuds?
+[*] [b]Perfect for Any Schedule[/b] - 2-3 hour story campaign, quick 5-15 minute shifts, simple controls, and save anytime.
+[*] [b]3 Difficulty Levels[/b] - Story Mode for narrative focus, Normal for balanced challenge, Expert for veterans.
+[/list]
+
+[img]{PLACEHOLDER_SCREENSHOT_3_MISSILE_DEFENSE}[/img]
+[i]Caption: Border runner escaping! Launch missiles to stop them - but be careful who you target[/i]
+
+[h2]Meet the Characters[/h2]
+
+[list]
+[*] [b]Supervisor Russet[/b] - Your demanding boss who expects loyalty above all
+[*] [b]Sweet Potato Sasha[/b] - A mysterious figure with revolutionary connections
+[*] [b]Murphy[/b] - A fellow officer harboring a dark secret about his cousin Tommy
+[*] [b]Viktor[/b] - A grieving husband searching for answers about his wife's disappearance
+[*] [b]Jen Piper[/b] - An elderly traveler seeking reunion with her wife Maris
+[/list]
+
+[img]{PLACEHOLDER_SCREENSHOT_4_CUTSCENE_ART}[/img]
+[i]Caption: Hand-painted cutscene art brings the story to life[/i]
+
+[h2]Game Feel & Polish[/h2]
+
+[list]
+[*] [b]Tension System[/b] - Visual and audio feedback intensifies as you approach failure
+[*] [b]Celebration Effects[/b] - Screen flash, slowmo, and particle bursts reward perfect stamps and runner stops
+[*] [b]Contextual Dialogue[/b] - Your officer character comments on the action with localized quips
+[*] [b]Dynamic Music[/b] - 7 custom tracks shift with story moments
+[*] [b]Interactive Tutorial[/b] - Learn the ropes with guided, hands-on training
+[/list]
+
+[img]{PLACEHOLDER_SCREENSHOT_5_MINIGAME}[/img]
+[i]Caption: Code Breaker minigame - Wordle-style feedback helps you crack the code[/i]
+
+[h2]Built for Steam Deck & Controllers[/h2]
+
+[list]
+[*] Full controller support with visual input glyphs
+[*] Steam Deck verified compatible
+[*] Keybinding customization
+[*] Accessibility options
+[/list]
+
+[h2]Localization[/h2]
+
+Fully localized in [b]29 languages[/b] - all Steam-supported languages including:
+English, German, French, Spanish, Portuguese (Brazil), Russian, Chinese (Simplified & Traditional), Japanese, Korean, Polish, Turkish, Arabic, and more.
+
+[img]{PLACEHOLDER_SCREENSHOT_6_ACHIEVEMENTS}[/img]
+[i]Caption: In-game achievement viewer - track your progress toward all 21 achievements[/i]
+
+[h2]What's New in 1.2.0[/h2]
+
+[list]
+[*] [b]Evidence Destruction Minigame[/b] - New narrative minigame in Shift 9
+[*] [b]Murphy's Sacrifice[/b] - New "Protocol HARVEST" story sequence
+[*] [b]Viktor Storyline[/b] - Full grief narrative subplot
+[*] [b]Chaos Agent Path[/b] - Play both sides against each other
+[*] [b]In-Game Achievements[/b] - View and track all 21 achievements
+[*] [b]Tension & Celebration Systems[/b] - Enhanced game feel
+[*] [b]29 Languages[/b] - Expanded from 19 to all Steam languages
+[*] [b]Overhauled Tutorial[/b] - Interactive with shader highlighting
+[*] [b]150+ Bug Fixes[/b] - Stability and polish improvements
+[/list]
+
+[img]{PLACEHOLDER_SCREENSHOT_7_MENU}[/img]
+[i]Caption: Main menu with social links, language selector, and audio-reactive effects[/i]
+
+[hr][/hr]
+
+[h2]Join the Spud Customs Front Lines![/h2]
+
+[list]
+[*] Play free with the demo today
+[*] Shape the fate of Spud, one decision at a time
+[*] For fans of [i]Papers, Please[/i], [i]Not Tonight[/i], and unique story-driven indie games
+[/list]
+
+[i]Your shift begins now. Will you follow orders... or forge your own path?[/i]
+
+[b]- Lost Rabbit Digital[/b]
