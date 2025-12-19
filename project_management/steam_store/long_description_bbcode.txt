@@ -3,13 +3,13 @@
 
 In the nation of Spud, you're the last line between fragile peace and total chaos. Each shift tests your judgment: inspect documents, expose lies, make impossible choices, and defend your checkpoint with missile systems when potatoes make a run for the border.
 
-[img]{PLACEHOLDER_SCREENSHOT_1_GAMEPLAY_OVERVIEW}[/img]
+[p][img src="{STEAM_APP_IMAGE}/extras/gameplay_overview.png"][/img][/p]
 
 [h2]A Story of Choices and Consequences[/h2]
 
 Across 10 story shifts and 22 decision points, you'll shape the destiny of innocent (and not-so-innocent) potatoes. Your choices ripple through the narrative, leading to [b]8 distinct endings[/b]. Become a loyal servant of the regime. Join the resistance. Find love in unexpected places. Or play both sides and watch it all burn.
 
-[img]{PLACEHOLDER_SCREENSHOT_2_DIALOGUE_CHOICE}[/img]
+[p][img src="{STEAM_APP_IMAGE}/extras/dialogue_choice.png"][/img][/p]
 
 Will you enforce cruel laws... or risk everything to save innocent spuds?
 
@@ -19,13 +19,13 @@ Your desk is your battlefield. Passports pile up. The queue grows restless. Chec
 
 Between shifts, [b]5 minigames[/b] break up the paperwork: scan documents with UV light, sort stamps at lightning speed, match fingerprints, crack codes Wordle-style, and chase contraband down conveyor belts.
 
-[img]{PLACEHOLDER_SCREENSHOT_3_MISSILE_DEFENSE}[/img]
+[p][img src="{STEAM_APP_IMAGE}/extras/missile_gameplay.gif"][/img][/p]
 
 [h2]NEW in 1.2.0: Evidence Destruction[/h2]
 
 Security inspection is coming. You have 3 minutes to clear your desk. Every item tells a story: resistance pamphlets, coded messages, Sasha's letters, your loyalty certificate. What do you shred? What do you stash? Wrong choices raise suspicion. Get caught with the wrong evidence and face interrogation.
 
-[img]{PLACEHOLDER_SCREENSHOT_4_EVIDENCE_DESTRUCTION}[/img]
+[p][img src="{STEAM_APP_IMAGE}/extras/evidence_destruction.png"][/img][/p]
 
 [h2]The Characters[/h2]
 
@@ -33,7 +33,7 @@ Security inspection is coming. You have 3 minutes to clear your desk. Every item
 
 Their fates are in your hands. Every stamp matters.
 
-[img]{PLACEHOLDER_SCREENSHOT_5_CUTSCENE_ART}[/img]
+[p][img src="{STEAM_APP_IMAGE}/extras/cutscene_art.png"][/img][/p]
 
 [h2]Game Feel[/h2]
 
@@ -41,7 +41,7 @@ We sweated the details. The tension system tints your screen red as strikes pile
 
 Seven custom music tracks shift with the story's mood. The tutorial holds your hand with glowing highlights, then lets you loose on the chaos.
 
-[img]{PLACEHOLDER_SCREENSHOT_6_MINIGAME}[/img]
+[p][img src="{STEAM_APP_IMAGE}/extras/minigame_codebreaker.png"][/img][/p]
 
 [h2]Built for Everyone[/h2]
 
@@ -49,13 +49,13 @@ Full controller support with visual input glyphs. Steam Deck verified. 29 langua
 
 21 Steam achievements track your journey through story milestones, character relationships, and gameplay mastery. The in-game achievement viewer shows what you've unlocked and hints at what's still waiting.
 
-[img]{PLACEHOLDER_SCREENSHOT_7_ACHIEVEMENTS}[/img]
+[p][img src="{STEAM_APP_IMAGE}/extras/achievements_panel.png"][/img][/p]
 
 [h2]What's New in 1.2.0[/h2]
 
 The "One Year Later" update brings the Evidence Destruction minigame, Murphy's Sacrifice storyline ("Protocol HARVEST"), Viktor's grief narrative, the Chaos Agent path for playing both sides, an in-game achievement system, tension and celebration effects, expanded language support (19 to 29 languages), an overhauled interactive tutorial, and over 150 bug fixes.
 
-[img]{PLACEHOLDER_SCREENSHOT_8_MENU}[/img]
+[p][img src="{STEAM_APP_IMAGE}/extras/main_menu.png"][/img][/p]
 
 [hr][/hr]
 

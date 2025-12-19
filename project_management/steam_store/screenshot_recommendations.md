@@ -219,17 +219,17 @@
 
 ## Placeholder Mapping
 
-Use these placeholders in the BBCode store description. Replace with actual Steam CDN URLs after upload:
+Upload these files to Steamworks under "Extras" (Store Page > Graphical Assets > Extras). The BBCode references them as:
 
 ```
-{PLACEHOLDER_SCREENSHOT_1_GAMEPLAY_OVERVIEW}
-{PLACEHOLDER_SCREENSHOT_2_DIALOGUE_CHOICE}
-{PLACEHOLDER_SCREENSHOT_3_MISSILE_DEFENSE}
-{PLACEHOLDER_SCREENSHOT_4_EVIDENCE_DESTRUCTION}
-{PLACEHOLDER_SCREENSHOT_5_CUTSCENE_ART}
-{PLACEHOLDER_SCREENSHOT_6_MINIGAME}
-{PLACEHOLDER_SCREENSHOT_7_ACHIEVEMENTS}
-{PLACEHOLDER_SCREENSHOT_8_MENU}
+{STEAM_APP_IMAGE}/extras/gameplay_overview.png
+{STEAM_APP_IMAGE}/extras/dialogue_choice.png
+{STEAM_APP_IMAGE}/extras/missile_gameplay.gif
+{STEAM_APP_IMAGE}/extras/evidence_destruction.png
+{STEAM_APP_IMAGE}/extras/cutscene_art.png
+{STEAM_APP_IMAGE}/extras/minigame_codebreaker.png
+{STEAM_APP_IMAGE}/extras/achievements_panel.png
+{STEAM_APP_IMAGE}/extras/main_menu.png
 ```
 
-After uploading to Steam, replace each placeholder with the actual image URL from Steamworks.
+Name your uploaded files to match these paths exactly.
