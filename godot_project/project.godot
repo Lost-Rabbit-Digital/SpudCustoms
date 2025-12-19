@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Spud Customs"
 config/version="1.2.0"
-config/tags=PackedStringArray("active", "steam")
+config/tags=PackedStringArray("active", "open_sourced", "steam")
 run/main_scene="uid://cyqy6dvynho67"
 config/features=PackedStringArray("4.5", "Forward Plus")
 run/max_fps=90
