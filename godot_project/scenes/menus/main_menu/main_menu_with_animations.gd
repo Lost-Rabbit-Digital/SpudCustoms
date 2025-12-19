@@ -25,7 +25,7 @@ func _ready():
 	_setup_load_confirmation_dialog()
 	_setup_feedback_menu()
 	# Check for demo version - hide score attack in demo builds
-	if GameStateManager and GameStateManager.get_build_type() == "Demo Release":
+	if GameStateManager and GameStateManager.get_build_type() == "Demo":
 		# Hide score attack button
 		%EndlessButton.visible = false
 
