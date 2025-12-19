@@ -567,7 +567,6 @@ theme_override_constants/line_spacing = 2
 theme_override_fonts/font = ExtResource("29_b6emd")
 theme_override_font_sizes/font_size = 14
 clip_text = true
-autowrap_mode = 0
 
 [node name="LawReceipt" type="Sprite2D" parent="Gameplay/InteractiveElements"]
 z_index = 3
