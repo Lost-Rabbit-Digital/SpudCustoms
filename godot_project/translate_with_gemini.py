@@ -3,17 +3,22 @@
 Comprehensive translation management tool for Spud Customs.
 Handles translation checking, fixing, and API translation for multi-language CSV files.
 Supports both combined CSVs and per-language file formats.
+Also supports translating plain text files (Steam BBCode descriptions, etc.).
 
 Usage:
     python translate_with_gemini.py                    # Translate ALL untranslated keys
     python translate_with_gemini.py --check            # Check for missing/untranslated keys
-    python translate_with_gemini.py --file game.csv    # Translate specific file only
+    python translate_with_gemini.py --file game.csv    # Translate specific CSV file only
+    python translate_with_gemini.py --file ../project_management/steam_store/short_description.txt  # Translate text file
     python translate_with_gemini.py --dry-run          # Show what would be translated without making changes
     python translate_with_gemini.py --split            # Split combined CSVs into per-language files
     python translate_with_gemini.py --merge            # Merge per-language files into combined CSVs
 
 Note: The translate function automatically detects ALL keys that match English values
 and translates them across all language columns.
+
+For text files (non-CSV), translated versions are created with language suffixes:
+    short_description.txt -> short_description_de.txt, short_description_fr.txt, etc.
 """
 
 import argparse
@@ -1355,6 +1360,312 @@ async def translate_per_language_async(specific_base=None, dry_run=False):
 
 
 # ═══════════════════════════════════════════════════════════
+# MODE: TRANSLATE TEXT FILES (Non-CSV)
+# ═══════════════════════════════════════════════════════════
+
+# Steam BBCode translation context
+STEAM_BBCODE_CONTEXT = """This is a Steam store page description using Steam BBCode formatting.
+
+CRITICAL BBCode tags to preserve EXACTLY (do not translate anything inside these):
+- [h1], [h2], [h3] - Headers (translate content between tags)
+- [b], [/b] - Bold (translate content)
+- [i], [/i] - Italic (translate content)
+- [p], [/p] - Paragraph (translate content)
+- [hr], [/hr] - Horizontal rule (no content)
+- [img src="..."][/img] - Images (DO NOT translate, keep exactly as-is)
+- {STEAM_APP_IMAGE} - Steam variable (DO NOT translate, keep exactly)
+
+Rules for translation:
+1. Keep ALL BBCode tags exactly as they appear
+2. Keep ALL {STEAM_APP_IMAGE} references unchanged
+3. Keep ALL image URLs unchanged
+4. Translate ONLY the human-readable text content
+5. Maintain paragraph structure and formatting
+6. Keep game terms like "Spud Customs", character names (Russet, Sasha, Murphy, Viktor, Jen Piper, Tommy) untranslated
+7. Keep "Lost Rabbit Digital" unchanged (company name)
+8. Preserve newlines and spacing"""
+
+
+async def translate_text_content_async(session, text, target_language, semaphore, rate_limiter, is_bbcode=False, max_retries=3):
+    """Translate plain text or BBCode content using Gemini API.
+
+    Args:
+        text: The text content to translate
+        target_language: Full language name (e.g., "German")
+        is_bbcode: Whether the text contains Steam BBCode formatting
+        max_retries: Number of retry attempts
+
+    Returns: (translated_text, input_tokens, output_tokens)
+    """
+    import aiohttp
+    import asyncio as aio
+
+    async with semaphore:
+        for attempt in range(max_retries):
+            await rate_limiter.acquire()
+
+            context = STEAM_BBCODE_CONTEXT if is_bbcode else GAME_CONTEXT
+
+            prompt = f"""Translate the following text from English to {target_language}.
+
+Game context: {GAME_CONTEXT}
+
+{context if is_bbcode else ""}
+
+Rules:
+- Translate all human-readable text
+- Keep formatting codes, variables, and special markers unchanged
+- Maintain the same structure and line breaks
+- Return ONLY the translated text, no explanations
+
+Text to translate:
+{text}"""
+
+            payload = {
+                "contents": [{
+                    "parts": [{
+                        "text": prompt
+                    }]
+                }],
+                "generationConfig": {
+                    "temperature": 0.3,
+                    "topK": 40,
+                    "topP": 0.95,
+                    "maxOutputTokens": 16384,  # Larger for long descriptions
+                }
+            }
+
+            try:
+                async with session.post(
+                    GEMINI_API_URL,
+                    json=payload,
+                    timeout=aiohttp.ClientTimeout(total=120)  # Longer timeout for long texts
+                ) as response:
+                    if response.status == 429:
+                        wait_time = 2 ** attempt
+                        await aio.sleep(wait_time)
+                        continue
+
+                    response.raise_for_status()
+                    result = await response.json()
+
+                    usage = result.get('usageMetadata', {})
+                    input_tokens = usage.get('promptTokenCount', 0)
+                    output_tokens = usage.get('candidatesTokenCount', 0)
+
+                    if 'candidates' not in result or len(result['candidates']) == 0:
+                        return None, input_tokens, output_tokens
+
+                    candidate = result['candidates'][0]
+
+                    if candidate.get('finishReason') == 'SAFETY':
+                        print(f"\n⚠️  Safety filter triggered for {target_language}")
+                        return None, input_tokens, output_tokens
+
+                    if 'content' not in candidate:
+                        return None, input_tokens, output_tokens
+
+                    content = candidate['content']
+
+                    if 'parts' not in content or len(content['parts']) == 0:
+                        return None, input_tokens, output_tokens
+
+                    translated_text = content['parts'][0].get('text', '')
+
+                    return translated_text.strip() if translated_text else None, input_tokens, output_tokens
+
+            except aiohttp.ClientError as e:
+                if attempt < max_retries - 1:
+                    wait_time = 2 ** attempt
+                    await aio.sleep(wait_time)
+                    continue
+                print(f"\n❌ API error for {target_language} after {max_retries} attempts: {e}")
+                return None, 0, 0
+            except Exception as e:
+                print(f"\n❌ Unexpected error for {target_language}: {e}")
+                return None, 0, 0
+
+        return None, 0, 0
+
+
+def get_translated_filepath(original_path, lang_code):
+    """Generate the translated file path with language suffix.
+
+    Example: short_description.txt -> short_description_de.txt
+    """
+    path = Path(original_path)
+    return path.parent / f"{path.stem}_{lang_code}{path.suffix}"
+
+
+def is_text_file(filepath):
+    """Check if a file is a plain text file (not CSV)."""
+    path = Path(filepath)
+    # Common text file extensions for Steam store content
+    text_extensions = {'.txt', '.md', '.bbcode', '.html', '.htm'}
+    return path.suffix.lower() in text_extensions
+
+
+def detect_bbcode(text):
+    """Detect if text contains Steam BBCode formatting."""
+    bbcode_patterns = ['[h1]', '[h2]', '[h3]', '[b]', '[/b]', '[i]', '[/i]',
+                       '[img', '[hr]', '[p]', '{STEAM_APP_IMAGE}']
+    return any(pattern in text for pattern in bbcode_patterns)
+
+
+async def translate_text_file_async(filepath, languages=None, dry_run=False):
+    """Translate a text file to all specified languages.
+
+    Args:
+        filepath: Path to the text file to translate
+        languages: List of language codes to translate to (default: all non-English)
+        dry_run: If True, don't write files, just show what would be done
+    """
+    import asyncio
+    import aiohttp
+
+    # Check for API key
+    if not GEMINI_API_KEY:
+        print("❌ ERROR: GEMINI_API_KEY environment variable is not set!")
+        print("")
+        print("To set it on Windows (Command Prompt):")
+        print('    set GEMINI_API_KEY=your_api_key_here')
+        print("")
+        print("To set it on Windows (PowerShell):")
+        print('    $env:GEMINI_API_KEY="your_api_key_here"')
+        print("")
+        print("Get your API key from: https://aistudio.google.com/apikey")
+        return
+
+    filepath = Path(filepath)
+
+    # Handle relative paths
+    if not filepath.is_absolute():
+        # Try relative to current directory first
+        if not filepath.exists():
+            # Try relative to script directory
+            script_dir = Path(__file__).parent.resolve()
+            filepath = script_dir / filepath
+
+    if not filepath.exists():
+        print(f"❌ ERROR: File not found: {filepath}")
+        return
+
+    # Read the source file
+    try:
+        with open(filepath, 'r', encoding='utf-8-sig') as f:
+            source_text = f.read()
+    except Exception as e:
+        print(f"❌ ERROR: Could not read file: {e}")
+        return
+
+    if not source_text.strip():
+        print(f"❌ ERROR: File is empty: {filepath}")
+        return
+
+    # Detect if it's BBCode
+    is_bbcode = detect_bbcode(source_text)
+
+    # Determine languages to translate to
+    if languages is None:
+        languages = list(LANGUAGE_COLUMNS.keys())  # All non-English languages
+
+    print("🚀 Starting Text File Translation for Spud Customs")
+    print(f"   Model: {GEMINI_MODEL}")
+    print(f"   Source file: {filepath.name}")
+    print(f"   File type: {'Steam BBCode' if is_bbcode else 'Plain text'}")
+    print(f"   Content length: {len(source_text)} characters")
+    print(f"   Target languages: {len(languages)}")
+    print()
+
+    # Check which translations already exist
+    existing = []
+    needed = []
+    for lang_code in languages:
+        translated_path = get_translated_filepath(filepath, lang_code)
+        if translated_path.exists():
+            existing.append(lang_code)
+        else:
+            needed.append(lang_code)
+
+    if existing:
+        print(f"📁 Existing translations ({len(existing)}): {', '.join(existing[:10])}{'...' if len(existing) > 10 else ''}")
+
+    if not needed:
+        print("✅ All translations already exist!")
+        return
+
+    print(f"📝 Languages to translate ({len(needed)}): {', '.join(needed[:10])}{'...' if len(needed) > 10 else ''}")
+    print()
+
+    if dry_run:
+        print("🔍 DRY RUN - No files will be created")
+        print()
+        for lang_code in needed:
+            lang_name = LANGUAGE_COLUMNS.get(lang_code, lang_code)
+            output_path = get_translated_filepath(filepath, lang_code)
+            print(f"   Would create: {output_path.name} ({lang_name})")
+        return
+
+    # Set up for async translation
+    semaphore = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
+    rate_limiter = RateLimiter(MAX_REQUESTS_PER_MINUTE)
+
+    total_input_tokens = 0
+    total_output_tokens = 0
+    successful = 0
+    failed = 0
+    start_time = time.time()
+
+    connector = aiohttp.TCPConnector(limit=MAX_CONCURRENT_REQUESTS)
+    async with aiohttp.ClientSession(connector=connector) as session:
+        tasks = []
+        for lang_code in needed:
+            lang_name = LANGUAGE_COLUMNS.get(lang_code, lang_code)
+            task = translate_text_content_async(
+                session, source_text, lang_name, semaphore, rate_limiter, is_bbcode
+            )
+            tasks.append((lang_code, task))
+
+        # Execute translations with progress
+        for i, (lang_code, task) in enumerate(tasks):
+            lang_name = LANGUAGE_COLUMNS.get(lang_code, lang_code)
+            sys.stdout.write(f"\r📝 Translating: {lang_name} ({i+1}/{len(tasks)})".ljust(60))
+            sys.stdout.flush()
+
+            translated_text, input_tokens, output_tokens = await task
+            total_input_tokens += input_tokens
+            total_output_tokens += output_tokens
+
+            if translated_text:
+                output_path = get_translated_filepath(filepath, lang_code)
+                try:
+                    with open(output_path, 'w', encoding='utf-8') as f:
+                        f.write(translated_text)
+                    successful += 1
+                except Exception as e:
+                    print(f"\n❌ Error writing {output_path}: {e}")
+                    failed += 1
+            else:
+                failed += 1
+
+    elapsed = time.time() - start_time
+    print(f"\r{'=' * 60}")
+    print(f"✅ Text file translation complete!")
+    print(f"   Source: {filepath.name}")
+    print(f"   Successful translations: {successful}")
+    if failed:
+        print(f"   Failed translations: {failed}")
+    print(f"   Total tokens used: {total_input_tokens + total_output_tokens:,}")
+    print(f"   Time elapsed: {elapsed:.1f} seconds")
+    print(f"   Output directory: {filepath.parent}")
+
+
+async def translate_text_file_languages_async(filepath, languages, dry_run=False):
+    """Wrapper to translate a text file to specific languages."""
+    await translate_text_file_async(filepath, languages, dry_run)
+
+
+# ═══════════════════════════════════════════════════════════
 # MAIN CLI INTERFACE
 # ═══════════════════════════════════════════════════════════
 
@@ -1364,11 +1675,18 @@ def main():
         description='Translation management tool for Spud Customs',
         epilog='''
 Examples:
-  %(prog)s                      # Translate per-language files (default)
+  %(prog)s                      # Translate per-language CSV files (default)
   %(prog)s --check              # Check for missing/untranslated content
-  %(prog)s --base menus         # Translate specific base name only
+  %(prog)s --base menus         # Translate specific CSV base name only
   %(prog)s --dry-run            # Preview what would be translated
   %(prog)s --list-languages     # List all supported Steam languages
+
+Text File Translation:
+  %(prog)s --file short_description.txt                      # Translate text file to all languages
+  %(prog)s --file ../steam_store/long_description_bbcode.txt # Translate BBCode file
+  %(prog)s --file desc.txt --languages de,fr,ja              # Translate to specific languages only
+  %(prog)s --file desc.txt --force                           # Re-translate even if translations exist
+  %(prog)s --file desc.txt --dry-run                         # Preview without translating
         ''',
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
@@ -1376,7 +1694,11 @@ Examples:
     parser.add_argument('--check', action='store_true',
                         help='Check for untranslated content without translating')
     parser.add_argument('--file', type=str, metavar='FILENAME',
-                        help='Process only a specific CSV file (combined mode)')
+                        help='Process only a specific file. For CSV files, uses combined mode. For text files (.txt, .md, .bbcode), creates translated versions with language suffixes.')
+    parser.add_argument('--languages', type=str, metavar='CODES',
+                        help='Comma-separated language codes to translate to (e.g., "de,fr,ja"). Default: all languages')
+    parser.add_argument('--force', action='store_true',
+                        help='Force re-translation even if translated files already exist')
     parser.add_argument('--base', type=str, metavar='BASENAME',
                         help='Process only a specific base name (e.g., menus, game, passport)')
     parser.add_argument('--dry-run', action='store_true',
@@ -1422,6 +1744,50 @@ Examples:
 
     if args.add_columns:
         add_all_missing_columns()
+        return
+
+    # Parse language filter if provided
+    target_languages = None
+    if args.languages:
+        target_languages = [lang.strip() for lang in args.languages.split(',')]
+        # Validate language codes
+        invalid_langs = [lang for lang in target_languages if lang not in ALL_STEAM_LANGUAGES]
+        if invalid_langs:
+            print(f"❌ ERROR: Invalid language codes: {', '.join(invalid_langs)}")
+            print(f"   Use --list-languages to see valid codes")
+            return
+
+    # Check if --file points to a text file (non-CSV)
+    if args.file and is_text_file(args.file):
+        # Text file translation mode
+        try:
+            import asyncio
+
+            # Handle --force flag for text files
+            if args.force:
+                # Remove existing translations to force re-translation
+                filepath = Path(args.file)
+                if not filepath.is_absolute():
+                    if not filepath.exists():
+                        script_dir = Path(__file__).parent.resolve()
+                        filepath = script_dir / filepath
+
+                if filepath.exists():
+                    langs_to_check = target_languages if target_languages else list(LANGUAGE_COLUMNS.keys())
+                    for lang_code in langs_to_check:
+                        translated_path = get_translated_filepath(filepath, lang_code)
+                        if translated_path.exists():
+                            translated_path.unlink()
+                            print(f"   Removed existing: {translated_path.name}")
+
+            asyncio.run(translate_text_file_async(args.file, target_languages, args.dry_run))
+        except ImportError as e:
+            if 'aiohttp' in str(e):
+                print("❌ aiohttp is required for translation. Install with: pip install aiohttp")
+            else:
+                raise
+        except KeyboardInterrupt:
+            print("\n\n⚠️  Translation interrupted by user")
         return
 
     # Determine mode: per-language (default) or combined
