@@ -29,6 +29,7 @@
 [ext_resource type="Theme" uid="uid://dvc6ey2qolvid" path="res://assets/styles/dos_theme.tres" id="27_1orev"]
 [ext_resource type="Texture2D" uid="uid://puo1ep8s6a10" path="res://assets/megaphone/megaphone.png" id="28_f34gp"]
 [ext_resource type="Script" uid="uid://btjxkr2c6yk5p" path="res://scripts/systems/CitationNoteManager.gd" id="29_cnm01"]
+[ext_resource type="FontFile" uid="uid://cha74pfv8ri0o" path="res://assets/fonts/notoSans_multilang.ttf" id="30_noto"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gf7dt"]
 size = Vector2(730, 155)
@@ -268,7 +269,7 @@ offset_bottom = 323.0
 theme_override_colors/font_color = Color(1, 0.782051, 0.655081, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("4_mwcar")
+theme_override_fonts/font = ExtResource("30_noto")
 theme_override_font_sizes/font_size = 18
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -323,7 +324,7 @@ offset_bottom = 443.0
 theme_override_colors/font_color = Color(0.909804, 0.819608, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("4_mwcar")
+theme_override_fonts/font = ExtResource("30_noto")
 theme_override_font_sizes/font_size = 18
 autowrap_mode = 3
 
@@ -571,7 +572,7 @@ offset_top = 20.0
 offset_right = 13.0
 offset_bottom = 42.0
 theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
-theme_override_fonts/font = ExtResource("24_2fppd")
+theme_override_fonts/font = ExtResource("30_noto")
 theme_override_font_sizes/font_size = 18
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -583,7 +584,7 @@ offset_right = 33.0
 offset_bottom = 141.0
 theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
 theme_override_constants/line_spacing = 2
-theme_override_fonts/font = ExtResource("24_2fppd")
+theme_override_fonts/font = ExtResource("30_noto")
 theme_override_font_sizes/font_size = 16
 clip_text = true
 autowrap_mode = 0
@@ -607,6 +608,8 @@ offset_right = 89.0
 offset_bottom = 101.0
 theme = ExtResource("27_1orev")
 theme_override_colors/default_color = Color(0.341176, 0.282353, 0.282353, 1)
+theme_override_fonts/normal_font = ExtResource("30_noto")
+theme_override_font_sizes/normal_font_size = 18
 bbcode_enabled = true
 text = "[u]Laws[/u]
 North Yamnea potatoes not allowed.
