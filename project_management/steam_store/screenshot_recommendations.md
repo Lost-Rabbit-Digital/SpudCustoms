@@ -67,8 +67,26 @@
 
 ---
 
-### Screenshot 4: Cutscene Art
-**Placeholder**: `{PLACEHOLDER_SCREENSHOT_4_CUTSCENE_ART}`
+### Screenshot 4: Evidence Destruction Minigame (NEW!)
+**Placeholder**: `{PLACEHOLDER_SCREENSHOT_4_EVIDENCE_DESTRUCTION}`
+
+**What to Capture**:
+- New Shift 9 minigame interface
+- Desk items visible (papers, notes, stamps)
+- Suspicion meter showing
+- Timer counting down
+
+**Ideal Moment**: Early in the minigame with several items still on desk, suspicion meter visible
+
+**Tips**:
+- This is NEW content and a major v1.2.0 feature
+- Dramatic setup with security inspection imminent
+- Shows narrative integration with gameplay
+
+---
+
+### Screenshot 5: Cutscene Art
+**Placeholder**: `{PLACEHOLDER_SCREENSHOT_5_CUTSCENE_ART}`
 
 **What to Capture**:
 - Full-screen cutscene art (StagNation animated or static)
@@ -89,8 +107,8 @@
 
 ---
 
-### Screenshot 5: Minigame
-**Placeholder**: `{PLACEHOLDER_SCREENSHOT_5_MINIGAME}`
+### Screenshot 6: Minigame
+**Placeholder**: `{PLACEHOLDER_SCREENSHOT_6_MINIGAME}`
 
 **What to Capture**:
 - Any of the 5 minigames in action
@@ -110,8 +128,8 @@
 
 ---
 
-### Screenshot 6: Achievements Panel
-**Placeholder**: `{PLACEHOLDER_SCREENSHOT_6_ACHIEVEMENTS}`
+### Screenshot 7: Achievements Panel
+**Placeholder**: `{PLACEHOLDER_SCREENSHOT_7_ACHIEVEMENTS}`
 
 **What to Capture**:
 - In-game achievements viewer (from pause menu)
@@ -126,8 +144,8 @@
 
 ---
 
-### Screenshot 7: Main Menu
-**Placeholder**: `{PLACEHOLDER_SCREENSHOT_7_MENU}`
+### Screenshot 8: Main Menu
+**Placeholder**: `{PLACEHOLDER_SCREENSHOT_8_MENU}`
 
 **What to Capture**:
 - Main menu with parallax background effect
@@ -144,25 +162,12 @@
 
 ## Additional Recommended Screenshots
 
-### Screenshot 8: Tutorial in Progress
+### Screenshot 9: Tutorial in Progress
 **What to Capture**:
 - Tutorial overlay with shader highlighting
 - Tutorial text box with instructions
 - Progress indicator visible
 - Demonstrates the guided learning experience
-
----
-
-### Screenshot 9: Evidence Destruction Minigame
-**What to Capture**:
-- New Shift 9 minigame interface
-- Desk items visible (papers, notes, stamps)
-- Suspicion meter showing
-- Timer counting down
-
-**Tips**:
-- This is NEW content - highlights v1.2.0 features
-- Dramatic setup with security inspection imminent
 
 ---
 
@@ -182,11 +187,11 @@
 ## Screenshot Order Recommendation for Carousel
 
 1. **Gameplay Overview** - First impression of core loop
-2. **Missile Defense** - Action highlight
-3. **Dialogue Choice** - Story/choice emphasis
-4. **Cutscene Art** - Art quality showcase
-5. **Minigame** - Variety demonstration
-6. **Evidence Destruction** - New feature highlight
+2. **Dialogue Choice** - Story/choice emphasis
+3. **Missile Defense** - Action highlight
+4. **Evidence Destruction** - New v1.2.0 feature highlight
+5. **Cutscene Art** - Art quality showcase
+6. **Minigame** - Variety demonstration
 7. **Achievements** - Meta-progression
 8. **Main Menu** - Polish indicator
 
@@ -220,10 +225,11 @@ Use these placeholders in the BBCode store description. Replace with actual Stea
 {PLACEHOLDER_SCREENSHOT_1_GAMEPLAY_OVERVIEW}
 {PLACEHOLDER_SCREENSHOT_2_DIALOGUE_CHOICE}
 {PLACEHOLDER_SCREENSHOT_3_MISSILE_DEFENSE}
-{PLACEHOLDER_SCREENSHOT_4_CUTSCENE_ART}
-{PLACEHOLDER_SCREENSHOT_5_MINIGAME}
-{PLACEHOLDER_SCREENSHOT_6_ACHIEVEMENTS}
-{PLACEHOLDER_SCREENSHOT_7_MENU}
+{PLACEHOLDER_SCREENSHOT_4_EVIDENCE_DESTRUCTION}
+{PLACEHOLDER_SCREENSHOT_5_CUTSCENE_ART}
+{PLACEHOLDER_SCREENSHOT_6_MINIGAME}
+{PLACEHOLDER_SCREENSHOT_7_ACHIEVEMENTS}
+{PLACEHOLDER_SCREENSHOT_8_MENU}
 ```
 
 After uploading to Steam, replace each placeholder with the actual image URL from Steamworks.
