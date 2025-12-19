@@ -197,10 +197,12 @@ var show_keyboard_in_kb_mode: bool = true
 # ============================================================================
 
 func _ready() -> void:
-	# Connect to ControllerManager
+	# Connect to ControllerManager (with safety checks to prevent duplicate connections)
 	if ControllerManager:
-		ControllerManager.controller_type_changed.connect(_on_controller_type_changed)
-		ControllerManager.input_mode_changed.connect(_on_input_mode_changed)
+		if not ControllerManager.controller_type_changed.is_connected(_on_controller_type_changed):
+			ControllerManager.controller_type_changed.connect(_on_controller_type_changed)
+		if not ControllerManager.input_mode_changed.is_connected(_on_input_mode_changed):
+			ControllerManager.input_mode_changed.connect(_on_input_mode_changed)
 		current_controller_type = ControllerManager.current_controller_type
 
 	# Create default glyph directory if it doesn't exist
@@ -210,11 +212,11 @@ func _ready() -> void:
 
 
 func _ensure_glyph_directory() -> void:
-	# Check if glyph directory exists, create placeholder note if not
-	var dir = DirAccess.open("res://assets/user_interface/")
+	# Check if glyph directory exists (glyphs are in sprites, not user_interface)
+	var dir = DirAccess.open("res://assets/sprites/")
 	if dir:
 		if not dir.dir_exists("controller_glyphs"):
-			LogManager.write_warning("InputGlyphManager: Controller glyph directory not found. Glyphs will use fallbacks.")
+			LogManager.write_warning("InputGlyphManager: Controller glyph directory not found at res://assets/sprites/controller_glyphs/. Glyphs will use fallbacks.")
 
 # ============================================================================
 # GLYPH RETRIEVAL
