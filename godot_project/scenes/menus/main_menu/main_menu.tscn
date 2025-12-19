@@ -57,10 +57,28 @@ layout_mode = 2
 script = ExtResource("8_parallax")
 
 [node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
-text = "Version 1.2.0"
+text = "main_menu_version"
+
+[node name="FeedbackButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
+text = "main_menu_feedback"
 
 [node name="HBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="2"]
 visible = false
+
+[node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0"]
+text = "main_menu_new_game"
+
+[node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1"]
+text = "main_menu_options"
+
+[node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2"]
+text = "main_menu_credits"
+
+[node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3"]
+text = "main_menu_exit"
+
+[node name="BackButton" parent="FlowControlContainer/FlowControl" index="0"]
+text = "Back"
 
 [node name="AudioReactiveBloom" type="Node" parent="." index="10"]
 script = ExtResource("7_bloom")

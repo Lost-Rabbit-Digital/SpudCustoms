@@ -11,7 +11,7 @@ alignment = 2
 [node name="LanguageLabel" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Language:"
+text = "select_language"
 vertical_alignment = 1
 
 [node name="LanguageDropdown" type="OptionButton" parent="."]
