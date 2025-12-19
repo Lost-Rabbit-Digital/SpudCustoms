@@ -503,7 +503,7 @@ func end_shift(success: bool = true):
 	is_shift_ending = true
 
 	# First check if we've hit the demo limit
-	if Global.build_type == "Demo Release" and Global.shift >= 2 and success:
+	if Global.build_type == "Demo" and Global.shift >= 2 and success:
 		# We only show the demo limit message if the player successfully completed shift 2
 		# This will prevent the normal shift completion flow
 		await get_tree().create_timer(1.0).timeout  # Small delay for better flow
@@ -777,7 +777,7 @@ func _on_shift_summary_continue():
 	var completed_shift = current_shift
 
 	# Check for demo limit before proceeding
-	if Global.build_type == "Demo Release" and completed_shift >= 2:
+	if Global.build_type == "Demo" and completed_shift >= 2:
 		# Show demo limit message
 		show_demo_limit_dialog()
 		return
@@ -2836,7 +2836,7 @@ func fade_transition():
 
 func check_demo_limit() -> bool:
 	# Check if this is a demo build and if the player has reached the limit
-	if Global.build_type == "Demo Release" and Global.shift >= 3:
+	if Global.build_type == "Demo" and Global.shift >= 3:
 		return true
 	return false
 

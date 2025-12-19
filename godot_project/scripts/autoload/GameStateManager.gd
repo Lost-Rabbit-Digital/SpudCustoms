@@ -263,7 +263,7 @@ func set_last_game_stats(stats: Dictionary) -> void:
 
 
 func get_build_type() -> String:
-	return "Full Release"
+	return Global.build_type if Global else "Full"
 
 
 # ============================================================================
