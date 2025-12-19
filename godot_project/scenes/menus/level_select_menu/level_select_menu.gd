@@ -12,20 +12,27 @@ var choice_info_popup: Window
 var narrative_choice_display: NarrativeChoiceDisplay
 var selected_level_id: int = -1
 
-# Dictionary mapping level IDs to their display names
-var levels = {
-	0: "Tutorial",
-	1: "First Day on the Job",
-	2: "New Regulations",
-	3: "Increasing Pressure",
-	4: "Contraband Check",
-	5: "Midpoint Crisis",
-	6: "Increased Security",
-	7: "Under Scrutiny",
-	8: "Double Agents",
-	9: "Border Chaos",
-	10: "The Final Countdown"
+# Dictionary mapping level IDs to their translation keys
+const LEVEL_NAME_KEYS: Dictionary = {
+	0: "level_name_0",
+	1: "level_name_1",
+	2: "level_name_2",
+	3: "level_name_3",
+	4: "level_name_4",
+	5: "level_name_5",
+	6: "level_name_6",
+	7: "level_name_7",
+	8: "level_name_8",
+	9: "level_name_9",
+	10: "level_name_10"
 }
+
+
+## Gets the translated level name for a given level ID
+func get_level_name(level_id: int) -> String:
+	if LEVEL_NAME_KEYS.has(level_id):
+		return tr(LEVEL_NAME_KEYS[level_id])
+	return tr("continue_dialog_day").format({"day": level_id})
 
 
 func _ready() -> void:
@@ -196,7 +203,7 @@ func _show_choice_info_popup(level_id: int) -> void:
 	var main_container = margin.get_child(0)
 	var header_label = main_container.get_node("HeaderLabel")
 	if header_label:
-		var level_name = levels.get(level_id, tr("continue_dialog_day").format({"day": level_id}))
+		var level_name = get_level_name(level_id)
 		header_label.text = tr("level_select_choices_header_named").format({"day": level_id, "name": level_name})
 
 	# Update the narrative choice display (show choices up to selected level)
@@ -229,8 +236,8 @@ func add_levels_to_container() -> void:
 	# Note: Level unlock syncing is now handled by GameState/SaveManager
 
 	# Add levels to the container
-	for level_id in range(levels.size()):
-		var level_name = levels[level_id]
+	for level_id in range(LEVEL_NAME_KEYS.size()):
+		var level_name = get_level_name(level_id)
 
 		# Check if the level is unlocked
 		var is_unlocked = level_id <= max_unlocked_level
