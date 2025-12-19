@@ -56,13 +56,26 @@ func _setup_choice_info_popup() -> void:
 	if dialog_theme:
 		choice_info_popup.theme = dialog_theme
 
+	# Create a PanelContainer with border styling matching the level select ItemList
+	var panel_container = PanelContainer.new()
+	panel_container.set_anchors_preset(Control.PRESET_FULL_RECT)
+
+	# Create a StyleBoxFlat that matches the ItemList panel style (2px border, 3px corner radius)
+	var panel_style = StyleBoxFlat.new()
+	panel_style.bg_color = Color(0.25, 0.14, 0.06, 1)  # Dark brown background
+	panel_style.set_border_width_all(2)  # Match ItemList's 2px border
+	panel_style.border_color = Color(0.896599, 0.712161, 0.435342, 1)  # Gold border
+	panel_style.set_corner_radius_all(3)  # Match ItemList's 3px corner radius
+	panel_style.set_content_margin_all(4)
+	panel_container.add_theme_stylebox_override("panel", panel_style)
+
 	# Main container with margin
 	var margin = MarginContainer.new()
 	margin.set_anchors_preset(Control.PRESET_FULL_RECT)
-	margin.add_theme_constant_override("margin_left", 15)
-	margin.add_theme_constant_override("margin_right", 15)
-	margin.add_theme_constant_override("margin_top", 15)
-	margin.add_theme_constant_override("margin_bottom", 15)
+	margin.add_theme_constant_override("margin_left", 11)
+	margin.add_theme_constant_override("margin_right", 11)
+	margin.add_theme_constant_override("margin_top", 11)
+	margin.add_theme_constant_override("margin_bottom", 11)
 
 	var main_container = VBoxContainer.new()
 	main_container.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -109,7 +122,8 @@ func _setup_choice_info_popup() -> void:
 	main_container.add_child(button_container)
 
 	margin.add_child(main_container)
-	choice_info_popup.add_child(margin)
+	panel_container.add_child(margin)
+	choice_info_popup.add_child(panel_container)
 	add_child(choice_info_popup)
 
 	# Hide the popup initially - Windows are visible by default in Godot 4
@@ -136,7 +150,11 @@ func _setup_popup_button_effects() -> void:
 		"wiggle_speed": 10.0
 	}
 
-	var margin = choice_info_popup.get_child(0)
+	# Hierarchy: choice_info_popup -> panel_container -> margin -> main_container
+	var panel_container = choice_info_popup.get_child(0)
+	if not panel_container:
+		return
+	var margin = panel_container.get_child(0)
 	if not margin:
 		return
 	var main_container = margin.get_child(0)
@@ -172,7 +190,9 @@ func _show_choice_info_popup(level_id: int) -> void:
 		display_choices = _get_default_choices_for_level(level_id)
 
 	# Update header
-	var margin = choice_info_popup.get_child(0)
+	# Hierarchy: choice_info_popup -> panel_container -> margin -> main_container
+	var panel_container = choice_info_popup.get_child(0)
+	var margin = panel_container.get_child(0)
 	var main_container = margin.get_child(0)
 	var header_label = main_container.get_node("HeaderLabel")
 	if header_label:
