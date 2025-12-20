@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://byvydukidk6i2"]
+[gd_scene load_steps=11 format=3 uid="uid://byvydukidk6i2"]
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_pss7b"]
 [ext_resource type="Script" uid="uid://bdet8115mn02d" path="res://scenes/menus/main_menu/main_menu.gd" id="2_lk0wa"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://bvhdueby1nj7j" path="res://scripts/effects/audio_reactive_bloom.gd" id="7_bloom"]
 [ext_resource type="Script" uid="uid://cwx4ydm7y6bo5" path="res://scripts/effects/parallax_mouse_background.gd" id="8_parallax"]
 [ext_resource type="Script" uid="uid://c3qb06ae7t52o" path="res://scripts/effects/menu_music_visual_effects.gd" id="9_music_fx"]
+[ext_resource type="Script" path="res://scripts/ui/localized_version_label.gd" id="10_version"]
 
 [node name="MainMenu" instance=ExtResource("1_pss7b")]
 script = ExtResource("2_lk0wa")
@@ -57,6 +58,7 @@ layout_mode = 2
 script = ExtResource("8_parallax")
 
 [node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
+script = ExtResource("10_version")
 text = "main_menu_version"
 
 [node name="FeedbackButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
