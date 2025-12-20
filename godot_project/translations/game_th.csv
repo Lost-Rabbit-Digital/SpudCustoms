@@ -55,6 +55,17 @@ alert_minigame_bonus,โบนัสมินิเกม: +{bonus} คะแน
 high_score_display,คะแนนสูงสุด: {score}
 new_high_score,ทำลายสถิติใหม่!
 month_1,มกราคม
+month_2,กุมภาพันธ์
+month_3,มีนาคม
+month_4,เมษายน
+month_5,พฤษภาคม
+month_6,มิถุนายน
+month_7,กรกฎาคม
+month_8,สิงหาคม
+month_9,กันยายน
+month_10,ตุลาคม
+month_11,พฤศจิกายน
+month_12,ธันวาคม
 citation_trash_label,ถังขยะ
 citation_header,ใบเตือนอย่างเป็นทางการ
 citation_from_supervisor,จาก: ผู้ควบคุม รัสเซ็ต

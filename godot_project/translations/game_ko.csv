@@ -55,6 +55,17 @@ alert_minigame_bonus,미니게임 보너스: +{bonus}점!
 high_score_display,최고 점수: {score}
 new_high_score,신기록!
 month_1,1월
+month_2,2월
+month_3,3월
+month_4,4월
+month_5,5월
+month_6,6월
+month_7,7월
+month_8,8월
+month_9,9월
+month_10,10월
+month_11,11월
+month_12,12월
 citation_trash_label,휴지통
 citation_header,공식 경고
 citation_from_supervisor,발신: 감독관 러셋

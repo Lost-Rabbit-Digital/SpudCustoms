@@ -162,6 +162,7 @@ help_lore_nation,[b]ประเทศสปัด[/b]
 help_lore_your_role,[b]บทบาทของคุณ[/b]
 help_lore_border,[b]กำแพงอันยิ่งใหญ่[/b]
 help_lore_secrets,[b]เขตสงวนราก[/b]
+day_transition_label,วันที่ {day}
 level_select_choices_header,ตัวเลือกถึงวันที่ {day}
 level_select_choices_header_named,ตัวเลือกถึงวันที่ {day} - {name}
 level_select_play_day,เล่นวันนี้

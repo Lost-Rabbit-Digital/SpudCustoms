@@ -178,16 +178,29 @@ func reset_game_state(keep_high_scores = true):
 
 
 func advance_shift():
-	shift += 1
-	GameState.set_current_level(shift)
-	GameState.level_reached(shift)
+	# Get the current playing shift from GameStateManager (source of truth)
+	var current_playing_shift: int = GameStateManager.get_shift() if GameStateManager else shift
+	var new_shift: int = current_playing_shift + 1
+
+	# Update our local shift to match
+	shift = new_shift
+
+	# Always update current_level to reflect what we're now playing
+	GameState.set_current_level(new_shift)
+
+	# Only update max_level_reached if this is genuinely new progress
+	# (i.e., we're not replaying an earlier level)
+	var max_reached: int = GameState.get_max_level_reached()
+	if new_shift > max_reached:
+		GameState.level_reached(new_shift)
+
 	# reset per-shift stats
 	reset_shift_stats()
 
 	# Disable tutorial mode when advancing past shift 0
-	if shift > 0 and GameStateManager:
+	if new_shift > 0 and GameStateManager:
 		GameStateManager.set_tutorial_mode(false)
-		GameStateManager.set_shift(shift)
+		GameStateManager.set_shift(new_shift)
 
 	var scaling_factor: float
 	# Update quota target for new shift based on difficulty
@@ -199,7 +212,7 @@ func advance_shift():
 		"Expert":
 			scaling_factor = DIFFICULTY_SCALING_EXPERT
 
-	quota_target = int(floor((base_quota_target + (shift - 1)) * scaling_factor))
+	quota_target = int(floor((base_quota_target + (new_shift - 1)) * scaling_factor))
 	save_game_state()
 
 

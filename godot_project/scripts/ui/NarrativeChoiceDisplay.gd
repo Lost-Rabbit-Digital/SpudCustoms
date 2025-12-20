@@ -177,12 +177,12 @@ func clear_display() -> void:
 func display_choices(choices: Dictionary, max_shift: int = -1) -> void:
 	clear_display()
 
+	# Always update path indicators with translated defaults
+	_update_path_indicators(choices)
+
 	if choices.is_empty():
 		_show_no_choices_message()
 		return
-
-	# Update path indicators
-	_update_path_indicators(choices)
 
 	# Create sections for each shift that has choices
 	for shift in range(1, 11):

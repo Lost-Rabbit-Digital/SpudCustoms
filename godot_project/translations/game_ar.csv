@@ -55,6 +55,17 @@ alert_minigame_bonus,مكافأة اللعبة المصغرة: +{bonus} نقطة
 high_score_display,أعلى نتيجة: {score}
 new_high_score,رقم قياسي جديد!
 month_1,يناير
+month_2,فبراير
+month_3,مارس
+month_4,أبريل
+month_5,مايو
+month_6,يونيو
+month_7,يوليو
+month_8,أغسطس
+month_9,سبتمبر
+month_10,أكتوبر
+month_11,نوفمبر
+month_12,ديسمبر
 citation_trash_label,سلة المهملات
 citation_header,إنذار رسمي
 citation_from_supervisor,من: المشرف روسيت

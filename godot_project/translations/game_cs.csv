@@ -55,6 +55,17 @@ alert_minigame_bonus,Bonus z minihry: +{bonus} bodů!
 high_score_display,Nejvyšší skóre: {score}
 new_high_score,NOVÉ NEJVYŠŠÍ SKÓRE!
 month_1,Leden
+month_2,Únor
+month_3,Březen
+month_4,Duben
+month_5,Květen
+month_6,Červen
+month_7,Červenec
+month_8,Srpen
+month_9,Září
+month_10,Říjen
+month_11,Listopad
+month_12,Prosinec
 citation_trash_label,KOŠ
 citation_header,ÚŘEDNÍ CITACE
 citation_from_supervisor,Od: Nadřízený Russet

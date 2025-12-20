@@ -55,6 +55,17 @@ alert_minigame_bonus,Μπόνους μίνι-παιχνιδιού: +{bonus} πό
 high_score_display,Υψηλό Σκορ: {score}
 new_high_score,ΝΕΟ ΥΨΗΛΟ ΣΚΟΡ!
 month_1,Ιανουάριος
+month_2,Φεβρουάριος
+month_3,Μάρτιος
+month_4,Απρίλιος
+month_5,Μάιος
+month_6,Ιούνιος
+month_7,Ιούλιος
+month_8,Αύγουστος
+month_9,Σεπτέμβριος
+month_10,Οκτώβριος
+month_11,Νοέμβριος
+month_12,Δεκέμβριος
 citation_trash_label,ΑΠΟΡΡΙΜΜΑΤΑ
 citation_header,ΕΠΙΣΗΜΗ ΠΑΡΑΠΟΜΠΗ
 citation_from_supervisor,Από: Επόπτης Ράσετ

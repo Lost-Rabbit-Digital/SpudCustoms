@@ -55,6 +55,17 @@ alert_minigame_bonus,Bônus do minijogo: +{bonus} pontos!
 high_score_display,Recorde: {score}
 new_high_score,NOVO RECORDE!
 month_1,Janeiro
+month_2,Fevereiro
+month_3,Março
+month_4,Abril
+month_5,Maio
+month_6,Junho
+month_7,Julho
+month_8,Agosto
+month_9,Setembro
+month_10,Outubro
+month_11,Novembro
+month_12,Dezembro
 citation_trash_label,LIXO
 citation_header,CITAÇÃO OFICIAL
 citation_from_supervisor,De: Supervisor Russet

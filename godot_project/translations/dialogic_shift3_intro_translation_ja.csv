@@ -6,6 +6,7 @@ Choice/7b/text,「はい、承知いたしました。期待を裏切りませ�
 Choice/7c/text,「どのような[pulse freq=2][color=CRIMSON]厄介者[/color][/pulse]のことですか？」
 Text/7d/text,よろしい。君ならそう言うと思っていたよ。その姿勢があれば、君は出世するだろう。
 Text/7e/text,我々の生活様式を[color=CRIMSON]脅かす[/color]者たちだ。身のためを思うなら、詮索しすぎるな。
+Text/7f0/text,"ねえ...あなた、私の兄にそっくりね。"
 Text/7f/text,[color=STEEL_BLUE]お願いします、どうか！[/color] 妻が、[color=GOLD]マリス[/color]という名の妻が、私のすぐ後ろに来るはずだったんです。
 Text/7fb/text,彼女は[tornado radius=2 freq=3]税関を通過できなかった[/tornado]。書類に「不備」があったと言われたんです。
 Text/80/text,誰も彼女に何が起こったのか教えてくれない。お願いです、[color=CHARTREUSE]彼女を見つけるのを手伝ってください！[/color]

@@ -6,6 +6,7 @@ Choice/7b/text,"""Yes sir, I won't let you down"""
 Choice/7c/text,"""What kind of troublemakers are we talking about?"""
 Text/7d/text,Good. I knew I could count on you. You'll go far with that attitude.
 Text/7e/text,"The kind that [color=CRIMSON]threaten our way of life[/color]. Don't ask too many questions if you know what's good for you."
+Text/7f0/text,"Say... you look just like my brother."
 Text/7f/text,"[color=STEEL_BLUE]Please, I beg you![/color] My wife - her name is [color=GOLD]Maris[/color] - she was supposed to be right behind me."
 Text/7fb/text,"She [tornado radius=2 freq=3]never made it through customs[/tornado]. They said her papers had an ""irregularity."""
 Text/80/text,"No one will tell me what happened to her. Please, [color=CHARTREUSE]help me find her![/color]"

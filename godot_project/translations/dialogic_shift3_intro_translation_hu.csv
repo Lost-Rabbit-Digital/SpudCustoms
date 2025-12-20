@@ -6,6 +6,7 @@ Choice/7b/text,"Igen, uram, nem fogom cserbenhagyni"
 Choice/7c/text,Milyen típusú zavarkeltőkről beszélünk?
 Text/7d/text,"Jó. Tudtam, hogy számíthatok magára. Ezzel a hozzáállással messzire fog jutni."
 Text/7e/text,"Azok, akik [color=CRIMSON]veszélyeztetik az életmódunkat[/color]. Ne tegyen fel túl sok kérdést, ha tudja, mi a jó magának."
+Text/7f0/text,"Mondja... pont úgy néz ki, mint a bátyám."
 Text/7f/text,"[color=STEEL_BLUE]Könyörgök magának![/color] A feleségem épp mögöttem lett volna, de [tornado radius=2 freq=3]soha nem jutott át a vámon[/tornado]."
 Text/80/text,"Senki sem hajlandó elmondani, mi történt vele. Kérem, [color=CHARTREUSE]segítsen megtalálni![/color]"
 Choice/81/text,"Sajnálom, de nem tudok semmit tenni."

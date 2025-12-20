@@ -55,6 +55,17 @@ alert_minigame_bonus,Minigame bonus: +{bonus} points!
 high_score_display,High Score: {score}
 new_high_score,NEW HIGH SCORE!
 month_1,January
+month_2,February
+month_3,March
+month_4,April
+month_5,May
+month_6,June
+month_7,July
+month_8,August
+month_9,September
+month_10,October
+month_11,November
+month_12,December
 citation_trash_label,TRASH
 citation_header,OFFICIAL CITATION
 citation_from_supervisor,From: Supervisor Russet
@@ -122,3 +133,8 @@ fingerprint_find_match,FIND THE MATCH
 fingerprint_progress,Matched: {current} / {total}
 fingerprint_success,All fingerprints matched! +{points} points!
 fingerprint_partial,Matched {matched}/{total}. +{points} points!
+_SCORE ATTACK MODE,
+score_attack_mode_label,Score Attack Mode
+score_attack_welcome_title,SCORE ATTACK MODE!
+score_attack_welcome_survive,Survive as long as possible!
+score_attack_welcome_difficulty,Difficulty increases over time!

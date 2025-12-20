@@ -44,22 +44,17 @@ func _ready() -> void:
 
 
 func _setup_world_environment() -> void:
-	# Look for existing WorldEnvironment in scene tree
-	_world_environment = _find_world_environment()
+	# Always create our own WorldEnvironment as a child
+	# This ensures we don't permanently modify the game's environment
+	# When this node is freed, our WorldEnvironment is also freed and
+	# the game's original WorldEnvironment takes over again
+	_world_environment = WorldEnvironment.new()
+	_world_environment.name = "CutsceneWorldEnvironment"
+	add_child(_world_environment)
 
-	if not _world_environment:
-		_world_environment = WorldEnvironment.new()
-		_world_environment.name = "CutsceneWorldEnvironment"
-		add_child(_world_environment)
-
-	# Create or get the Environment resource
-	if _world_environment.environment:
-		# Duplicate to avoid modifying the shared resource
-		_environment = _world_environment.environment.duplicate()
-		_world_environment.environment = _environment
-	else:
-		_environment = Environment.new()
-		_world_environment.environment = _environment
+	# Create a new Environment resource for cutscene effects
+	_environment = Environment.new()
+	_world_environment.environment = _environment
 
 	# Configure the environment for 2D glow
 	_environment.background_mode = Environment.BG_CANVAS
@@ -80,34 +75,6 @@ func _setup_world_environment() -> void:
 	_environment.set_glow_level(4, false)
 	_environment.set_glow_level(5, false)
 	_environment.set_glow_level(6, false)
-
-
-func _find_world_environment() -> WorldEnvironment:
-	# First check if there's one as a direct child
-	var child_env = get_node_or_null("WorldEnvironment") as WorldEnvironment
-	if child_env:
-		return child_env
-
-	# Check parent and siblings
-	var parent = get_parent()
-	if parent:
-		for child in parent.get_children():
-			if child is WorldEnvironment:
-				return child
-
-	# Search the entire scene tree
-	var root = get_tree().root
-	return _find_world_environment_recursive(root)
-
-
-func _find_world_environment_recursive(node: Node) -> WorldEnvironment:
-	if node is WorldEnvironment:
-		return node
-	for child in node.get_children():
-		var result = _find_world_environment_recursive(child)
-		if result:
-			return result
-	return null
 
 
 func _process(delta: float) -> void:

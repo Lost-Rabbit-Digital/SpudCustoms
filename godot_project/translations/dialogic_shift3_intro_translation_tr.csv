@@ -6,6 +6,7 @@ Choice/7b/text,"Evet, efendim, sizi hayal kırıklığına uğratmayacağım"
 Choice/7c/text,Ne tür provokatörlerden bahsediyoruz?
 Text/7d/text,İyi. Size güvenebileceğimi biliyordum. Bu tutumla çok ileriye gideceksiniz.
 Text/7e/text,Bizim [color=CRIMSON]yaşam tarzımızı tehdit edenler[/color]. Kendi iyiliğinizi biliyorsanız çok soru sormayın.
+Text/7f0/text,"Söyle... kardeşime çok benziyorsun."
 Text/7f/text,[color=STEEL_BLUE]Yalvarıyorum![/color] Karım tam arkamda olmalıydı ama [tornado radius=2 freq=3]gümrükten hiç geçemedi[/tornado].
 Text/80/text,"Kimse ona ne olduğunu söylemek istemiyor. Lütfen, [color=CHARTREUSE]onu bulmama yardım edin![/color]"
 Choice/81/text,"Özür dilerim, ama yapabileceğim bir şey yok."
