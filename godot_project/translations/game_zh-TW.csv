@@ -78,7 +78,7 @@ qte_auto_completed,自動完成
 qte_accessibility_note,(快速反應事件輔助功能已啟用)
 qte_get_ready,準備好...
 qte_progress,進度
-qte_key_prompt,[{key}]
+qte_key_prompt,按鍵提示: [{key}]
 qte_result,{successful} / {total} 成功 (+{points} 點)
 qte_image_pending,[圖片待定]
 evidence_title,安全檢查迫在眉睫
@@ -125,3 +125,7 @@ fingerprint_find_match,找出匹配
 fingerprint_progress,已匹配: {current} / {total}
 fingerprint_success,所有指紋均已匹配！ +{points} 分！
 fingerprint_partial,已匹配 {matched}/{total}。 +{points} 分！
+score_attack_mode_label,分數挑戰模式
+score_attack_welcome_title,分數挑戰模式！
+score_attack_welcome_survive,盡可能地生存下去！
+score_attack_welcome_difficulty,難度會隨時間增加！

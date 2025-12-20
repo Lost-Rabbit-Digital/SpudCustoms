@@ -125,3 +125,7 @@ fingerprint_find_match,ค้นหาคู่ที่ตรงกัน
 fingerprint_progress,จับคู่แล้ว: {current} / {total}
 fingerprint_success,จับคู่ลายนิ้วมือได้ทั้งหมดแล้ว! +{points} คะแนน!
 fingerprint_partial,จับคู่ได้ {matched}/{total} ลาย +{points} คะแนน!
+score_attack_mode_label,โหมดล่าคะแนน
+score_attack_welcome_title,โหมดล่าคะแนน!
+score_attack_welcome_survive,เอาชีวิตรอดให้นานที่สุด!
+score_attack_welcome_difficulty,ความยากเพิ่มขึ้นเรื่อยๆ!

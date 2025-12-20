@@ -125,3 +125,7 @@ fingerprint_find_match,HITTA MATCHNINGEN
 fingerprint_progress,Matchade: {current} / {total}
 fingerprint_success,Alla fingeravtryck matchade! +{points} poäng!
 fingerprint_partial,Matchade {matched}/{total}. +{points} poäng!
+score_attack_mode_label,Poängattackläge
+score_attack_welcome_title,POÄNGATTACKLÄGE!
+score_attack_welcome_survive,Överlev så länge som möjligt!
+score_attack_welcome_difficulty,Svårighetsgraden ökar med tiden!

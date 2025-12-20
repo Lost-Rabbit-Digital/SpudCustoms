@@ -125,3 +125,7 @@ fingerprint_find_match,ZNAJDŹ DOPASOWANIE
 fingerprint_progress,Dopasowano: {current} / {total}
 fingerprint_success,Wszystkie odciski palców dopasowane! +{points} punktów!
 fingerprint_partial,Dopasowano {matched}/{total}. +{points} punktów!
+score_attack_mode_label,Tryb Ataku na Wynik
+score_attack_welcome_title,TRYB ATAKU NA WYNIK!
+score_attack_welcome_survive,Przetrwaj jak najdłużej!
+score_attack_welcome_difficulty,Trudność wzrasta z czasem!

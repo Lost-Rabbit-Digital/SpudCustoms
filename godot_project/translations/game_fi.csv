@@ -125,3 +125,7 @@ fingerprint_find_match,ETSI VASTINE
 fingerprint_progress,Täsmätty: {current} / {total}
 fingerprint_success,Kaikki sormenjäljet täsmäsivät! +{points} pistettä!
 fingerprint_partial,Täsmätty {matched}/{total}. +{points} pistettä!
+score_attack_mode_label,Pistehyökkäystila
+score_attack_welcome_title,PISTEHYÖKKÄYSTILA!
+score_attack_welcome_survive,Selviydy mahdollisimman pitkään!
+score_attack_welcome_difficulty,Vaikeustaso nousee ajan kuluessa!

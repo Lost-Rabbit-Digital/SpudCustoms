@@ -125,3 +125,7 @@ fingerprint_find_match,查找匹配
 fingerprint_progress,已匹配: {current} / {total}
 fingerprint_success,所有指纹均已匹配！+{points} 分！
 fingerprint_partial,已匹配 {matched}/{total}。+{points} 分！
+score_attack_mode_label,积分挑战模式
+score_attack_welcome_title,积分挑战模式！
+score_attack_welcome_survive,尽可能久地生存！
+score_attack_welcome_difficulty,难度会随时间增加！

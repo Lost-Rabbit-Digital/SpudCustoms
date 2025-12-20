@@ -125,3 +125,7 @@ fingerprint_find_match,ΒΡΕΣ ΤΟ ΤΑΙΡΙΑΣΜΑ
 fingerprint_progress,Αντιστοιχισμένα: {current} / {total}
 fingerprint_success,Όλα τα δακτυλικά αποτυπώματα αντιστοιχίστηκαν! +{points} πόντοι!
 fingerprint_partial,Αντιστοιχίστηκαν {matched}/{total}. +{points} πόντοι!
+score_attack_mode_label,Λειτουργία Επίθεσης Βαθμολογίας
+score_attack_welcome_title,ΛΕΙΤΟΥΡΓΙΑ ΕΠΙΘΕΣΗΣ ΒΑΘΜΟΛΟΓΙΑΣ!
+score_attack_welcome_survive,Επιβίωσε όσο περισσότερο γίνεται!
+score_attack_welcome_difficulty,Η δυσκολία αυξάνεται με την πάροδο του χρόνου!

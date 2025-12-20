@@ -125,3 +125,7 @@ fingerprint_find_match,أوجد المطابقة
 fingerprint_progress,مطابق: {current} / {total}
 fingerprint_success,جميع البصمات متطابقة! +{points} نقاط!
 fingerprint_partial,مطابق {matched}/{total}. +{points} نقاط!
+score_attack_mode_label,وضع هجوم النقاط
+score_attack_welcome_title,نمط هجوم النقاط!
+score_attack_welcome_survive,صمد لأطول فترة ممكنة!
+score_attack_welcome_difficulty,تزداد الصعوبة بمرور الوقت!

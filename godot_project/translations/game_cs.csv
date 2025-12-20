@@ -125,3 +125,7 @@ fingerprint_find_match,NAJDI SHODU
 fingerprint_progress,Spárováno: {current} / {total}
 fingerprint_success,Všechny otisky prstů spárovány! +{points} bodů!
 fingerprint_partial,Spárováno {matched}/{total}. +{points} bodů!
+score_attack_mode_label,Režim bodového útoku
+score_attack_welcome_title,REŽIM BODOVÉHO ÚTOKU!
+score_attack_welcome_survive,Přežijte co nejdéle!
+score_attack_welcome_difficulty,Obtížnost se časem zvyšuje!

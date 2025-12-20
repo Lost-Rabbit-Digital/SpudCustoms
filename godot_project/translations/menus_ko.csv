@@ -368,3 +368,7 @@ tutorial_stamp_usage_step5,[center][b]잘하셨습니다![/b][/center]\n\n첫 �
 tutorial_strikes_and_quota_step1,[center][b]할당량 시스템[/b][/center]\n\n[color=yellow]할당량[/color] 표시를 보세요. 이것은 매 근무 교대마다 얼마나 많은 감자를 정확하게 처리해야 하는지 보여줍니다.
 tutorial_strikes_and_quota_step2,[center][b]경고를 피하세요![/b][/center]\n\n[color=red]경고[/color] 카운터는 당신의 실수를 보여줍니다. 경고가 너무 많으면 게임 오버입니다!\n\n잘못된 결정을 내리면 경고를 받게 됩니다.
 tutorial_strikes_and_quota_step3,[center][b]훈련 완료![/b][/center]\n\n훈련 근무 교대를 완료하기 위해 계속해서 감자를 처리하세요.\n\n완료되면 [color=green]세관원[/color]으로 인증받고 첫 실제 근무를 시작할 준비가 됩니다!
+loading_level_in_progress,레벨 로딩 중...
+loading_level_waiting,아직 레벨 로딩 중...
+loading_level_still_waiting,아직 레벨 로딩 중... (%d초)
+loading_level_complete,레벨 로딩 완료!

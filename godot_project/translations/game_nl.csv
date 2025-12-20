@@ -125,3 +125,7 @@ fingerprint_find_match,VIND DE OVEREENKOMST
 fingerprint_progress,Overeenkomsten: {current} / {total}
 fingerprint_success,Alle vingerafdrukken komen overeen! +{points} punten!
 fingerprint_partial,Overeenkomsten {matched}/{total}. +{points} punten!
+score_attack_mode_label,Score-aanvalmodus
+score_attack_welcome_title,SCORE-AANVALMODUS!
+score_attack_welcome_survive,Overleef zo lang mogelijk!
+score_attack_welcome_difficulty,De moeilijkheidsgraad neemt na verloop van tijd toe!

@@ -125,3 +125,7 @@ fingerprint_find_match,ENCONTRAR LA COINCIDENCIA
 fingerprint_progress,Coincidencias: {current} / {total}
 fingerprint_success,¡Todas las huellas dactilares coinciden! ¡+{points} puntos!
 fingerprint_partial,Coincidencias {matched}/{total}. ¡+{points} puntos!
+score_attack_mode_label,Modo Ataque de Puntuación
+score_attack_welcome_title,¡MODO ATAQUE DE PUNTUACIÓN!
+score_attack_welcome_survive,¡Sobrevive el mayor tiempo posible!
+score_attack_welcome_difficulty,¡La dificultad aumenta con el tiempo!

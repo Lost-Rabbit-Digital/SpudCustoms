@@ -125,3 +125,7 @@ fingerprint_find_match,GĂSEȘTE POTRIVIREA
 fingerprint_progress,Potriviri: {current} / {total}
 fingerprint_success,Toate amprentele s-au potrivit! +{points} puncte!
 fingerprint_partial,Potriviri {matched}/{total}. +{points} puncte!
+score_attack_mode_label,Mod Atac Scor
+score_attack_welcome_title,MOD ATAC SCOR!
+score_attack_welcome_survive,Supraviețuiește cât mai mult posibil!
+score_attack_welcome_difficulty,Dificultatea crește în timp!

@@ -78,7 +78,7 @@ qte_auto_completed,Tự động hoàn thành
 qte_accessibility_note,(Trợ năng QTE đã bật)
 qte_get_ready,Chuẩn bị...
 qte_progress,Tiến độ
-qte_key_prompt,[{key}]
+qte_key_prompt,Nhấn [{key}]
 qte_result,{successful} / {total} thành công (+{points} điểm)
 qte_image_pending,[Hình ảnh đang chờ]
 evidence_title,KIỂM TRA AN NINH SẮP DIỄN RA
@@ -125,3 +125,7 @@ fingerprint_find_match,TÌM KHỚP
 fingerprint_progress,Đã khớp: {current} / {total}
 fingerprint_success,Tất cả dấu vân tay đã khớp! +{points} điểm!
 fingerprint_partial,Đã khớp {matched}/{total}. +{points} điểm!
+score_attack_mode_label,Chế độ Thử thách Điểm số
+score_attack_welcome_title,CHẾ ĐỘ THỬ THÁCH ĐIỂM SỐ!
+score_attack_welcome_survive,Sống sót càng lâu càng tốt!
+score_attack_welcome_difficulty,Độ khó tăng dần theo thời gian!

@@ -380,3 +380,7 @@ tutorial_stamp_usage_step5,[center][b]Hyvin tehty![/b][/center]\n\nOlet käsitel
 tutorial_strikes_and_quota_step1,"[center][b]Kiintiöjärjestelmä[/b][/center]\n\nKatso [color=yellow]Kiintiö[/color]-näyttöä. Tämä näyttää, kuinka monta perunaa sinun on käsiteltävä oikein jokaisessa vuorossa."
 tutorial_strikes_and_quota_step2,[center][b]Vältä virheitä![/b][/center]\n\n[color=red]Virheet[/color]-laskuri näyttää virheesi. Liian monta virhettä ja peli on ohi!\n\nTee vääriä päätöksiä ja saat virheitä.
 tutorial_strikes_and_quota_step3,"[center][b]Koulutus suoritettu![/b][/center]\n\nJatka perunoiden käsittelyä suorittaaksesi koulutusvuorosi loppuun.\n\nKun olet valmis, sinut [color=green]sertifioidaan tullivirkailijaksi[/color] ja olet valmis ensimmäiseen oikeaan päivääsi!"
+loading_level_in_progress,Ladataan tasoa...
+loading_level_waiting,Tasoa ladataan edelleen...
+loading_level_still_waiting,Tasoa ladataan edelleen... (%d sekuntia)
+loading_level_complete,Taso ladattu!

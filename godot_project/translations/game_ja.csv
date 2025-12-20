@@ -125,3 +125,7 @@ fingerprint_find_match,一致箇所を探す
 fingerprint_progress,一致済み: {current} / {total}
 fingerprint_success,全ての指紋が一致しました！ +{points}ポイント！
 fingerprint_partial,{matched}/{total}個一致しました。 +{points}ポイント！
+score_attack_mode_label,スコアアタックモード
+score_attack_welcome_title,スコアアタックモード！
+score_attack_welcome_survive,できるだけ長く生き残れ！
+score_attack_welcome_difficulty,時間と共に難易度が上昇する！

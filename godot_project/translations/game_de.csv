@@ -125,3 +125,7 @@ fingerprint_find_match,FINDE DIE ÜBEREINSTIMMUNG
 fingerprint_progress,Abgeglichen: {current} / {total}
 fingerprint_success,Alle Fingerabdrücke stimmen überein! +{points} Punkte!
 fingerprint_partial,Abgeglichen {matched}/{total}. +{points} Punkte!
+score_attack_mode_label,Highscore-Modus
+score_attack_welcome_title,PUNKTEJAGD-MODUS!
+score_attack_welcome_survive,Überlebe so lange wie möglich!
+score_attack_welcome_difficulty,Der Schwierigkeitsgrad steigt mit der Zeit!

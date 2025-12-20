@@ -125,3 +125,7 @@ fingerprint_find_match,ENCONTRAR CORRESPONDÊNCIA
 fingerprint_progress,Correspondências: {current} / {total}
 fingerprint_success,Todas as impressões digitais correspondem! +{points} pontos!
 fingerprint_partial,Correspondências {matched}/{total}. +{points} pontos!
+score_attack_mode_label,Modo Ataque de Pontuação
+score_attack_welcome_title,MODO ATAQUE DE PONTUAÇÃO!
+score_attack_welcome_survive,Sobreviva o máximo possível!
+score_attack_welcome_difficulty,A dificuldade aumenta com o tempo!

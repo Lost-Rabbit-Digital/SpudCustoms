@@ -125,3 +125,7 @@ fingerprint_find_match,TALÁLD MEG AZ EGYEZÉST
 fingerprint_progress,Egyező: {current} / {total}
 fingerprint_success,Minden ujjlenyomat egyezett! +{points} pont!
 fingerprint_partial,{matched}/{total} egyezett. +{points} pont!
+score_attack_mode_label,Pontvadászat Mód
+score_attack_welcome_title,PONTOKVADÁSZAT MÓD!
+score_attack_welcome_survive,"Éld túl, ameddig csak tudod!"
+score_attack_welcome_difficulty,A nehézség idővel növekszik!

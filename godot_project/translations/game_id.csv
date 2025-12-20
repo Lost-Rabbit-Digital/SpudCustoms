@@ -125,3 +125,7 @@ fingerprint_find_match,TEMUKAN YANG COCOK
 fingerprint_progress,Cocok: {current} / {total}
 fingerprint_success,Semua sidik jari cocok! +{points} poin!
 fingerprint_partial,Cocok {matched}/{total}. +{points} poin!
+score_attack_mode_label,Mode Serangan Skor
+score_attack_welcome_title,MODE SERANGAN SKOR!
+score_attack_welcome_survive,Bertahanlah selama mungkin!
+score_attack_welcome_difficulty,Tingkat kesulitan akan meningkat seiring waktu!

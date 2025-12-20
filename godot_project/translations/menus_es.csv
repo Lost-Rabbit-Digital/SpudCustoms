@@ -380,3 +380,7 @@ tutorial_stamp_usage_step5,[center][b]¡Bien Hecho![/b][/center]\n\n¡Has proces
 tutorial_strikes_and_quota_step1,[center][b]El Sistema de Cuota[/b][/center]\n\nMira la pantalla de [color=yellow]Cuota[/color]. Esto muestra cuántas patatas debes procesar correctamente cada turno.
 tutorial_strikes_and_quota_step2,[center][b]¡Evita las Faltas![/b][/center]\n\nEl contador de [color=red]Faltas[/color] muestra tus errores. ¡Demasiadas faltas y se acabó el juego!\n\nToma decisiones incorrectas y ganarás faltas.
 tutorial_strikes_and_quota_step3,"[center][b]¡Entrenamiento Completado![/b][/center]\n\nContinúa procesando patatas para completar tu turno de entrenamiento.\n\nUna vez terminado, serás [color=green]certificado como Oficial de Aduanas[/color] y ¡listo para tu primer día real!"
+loading_level_in_progress,Cargando Nivel...
+loading_level_waiting,Aún Cargando Nivel...
+loading_level_still_waiting,Aún Cargando Nivel... (%d segundos)
+loading_level_complete,Carga de Nivel Completa!

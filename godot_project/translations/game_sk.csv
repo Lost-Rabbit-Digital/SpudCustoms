@@ -125,3 +125,7 @@ fingerprint_find_match,NÁJDITE ZHODU
 fingerprint_progress,Nájdených: {current} / {total}
 fingerprint_success,Všetky odtlačky prstov sa zhodujú! +{points} bodov!
 fingerprint_partial,Nájdených {matched}/{total}. +{points} bodov!
+score_attack_mode_label,Režim bodového útoku
+score_attack_welcome_title,REŽIM BODOVÉHO ÚTOKU!
+score_attack_welcome_survive,Prežite čo najdlhšie!
+score_attack_welcome_difficulty,Obtiažnosť sa časom zvyšuje!

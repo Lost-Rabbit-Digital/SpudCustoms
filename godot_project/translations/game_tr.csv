@@ -125,3 +125,7 @@ fingerprint_find_match,EŞLEŞENİ BUL
 fingerprint_progress,Eşleşen: {current} / {total}
 fingerprint_success,Tüm parmak izleri eşleşti! +{points} puan!
 fingerprint_partial,{matched}/{total} eşleşti. +{points} puan!
+score_attack_mode_label,Skor Saldırısı Modu
+score_attack_welcome_title,SKOR SALDIRISI MODU!
+score_attack_welcome_survive,Mümkün olduğunca uzun süre hayatta kal!
+score_attack_welcome_difficulty,Zorluk zamanla artar!

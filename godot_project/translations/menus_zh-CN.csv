@@ -368,3 +368,7 @@ tutorial_stamp_usage_step5,[center][b]做得好！[/b][/center]\n\n你已经处�
 tutorial_strikes_and_quota_step1,[center][b]配额系统[/b][/center]\n\n查看[color=yellow]配额[/color]显示。这显示了你每个班次必须正确处理的土豆数量。
 tutorial_strikes_and_quota_step2,[center][b]避免失误！[/b][/center]\n\n[color=red]失误[/color]计数器显示你的错误。失误过多就会游戏结束！\n\n做出错误决定会累积失误。
 tutorial_strikes_and_quota_step3,[center][b]训练完成！[/b][/center]\n\n继续处理土豆以完成你的训练班次。\n\n完成后，你将被[color=green]认证为海关官员[/color]，并准备好迎接你的第一个正式工作日！
+loading_level_in_progress,正在加载关卡...
+loading_level_waiting,仍在加载关卡...
+loading_level_still_waiting,仍在加载关卡... (%d 秒)
+loading_level_complete,关卡加载完成！

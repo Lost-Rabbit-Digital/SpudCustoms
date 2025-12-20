@@ -78,7 +78,7 @@ qte_auto_completed,자동 완료
 qte_accessibility_note,(QTE 접근성 활성화됨)
 qte_get_ready,준비하세요...
 qte_progress,진행도
-qte_key_prompt,[{key}]
+qte_key_prompt,키: [{key}]
 qte_result,{successful} / {total} 성공 (+{points}점)
 qte_image_pending,[이미지 준비 중]
 evidence_title,보안 검사 임박
@@ -125,3 +125,7 @@ fingerprint_find_match,일치 항목 찾기
 fingerprint_progress,일치: {current} / {total}
 fingerprint_success,모든 지문 일치! +{points}점!
 fingerprint_partial,일치: {matched}/{total}. +{points}점!
+score_attack_mode_label,스코어 어택 모드
+score_attack_welcome_title,스코어 어택 모드!
+score_attack_welcome_survive,최대한 오래 생존하세요!
+score_attack_welcome_difficulty,시간이 지날수록 난이도가 상승합니다!

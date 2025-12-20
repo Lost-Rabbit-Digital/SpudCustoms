@@ -368,3 +368,7 @@ tutorial_stamp_usage_step5,[center][b]Чудово зроблено![/b][/center
 tutorial_strikes_and_quota_step1,"[center][b]Система квот[/b][/center]\n\nПодивіться на індикатор [color=yellow]Квота[/color]. Він показує, скільки картоплі ви повинні правильно обробити за кожну зміну."
 tutorial_strikes_and_quota_step2,"[center][b]Уникайте штрафів![/b][/center]\n\nЛічильник [color=red]Штрафи[/color] показує ваші помилки. Забагато штрафів — і гра закінчена!\n\nПриймайте неправильні рішення, і ви отримаєте штрафи."
 tutorial_strikes_and_quota_step3,"[center][b]Навчання завершено![/b][/center]\n\nПродовжуйте обробляти картоплю, щоб завершити свою навчальну зміну.\n\nПісля завершення ви будете [color=green]сертифіковані як митний офіцер[/color] і готові до свого першого справжнього дня!"
+loading_level_in_progress,Завантаження рівня...
+loading_level_waiting,Рівень все ще завантажується...
+loading_level_still_waiting,Рівень все ще завантажується... (%d секунд)
+loading_level_complete,Завантаження рівня завершено!

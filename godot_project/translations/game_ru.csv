@@ -125,3 +125,7 @@ fingerprint_find_match,НАЙТИ СОВПАДЕНИЕ
 fingerprint_progress,Совпало: {current} / {total}
 fingerprint_success,Все отпечатки совпали! +{points} очков!
 fingerprint_partial,Совпало {matched}/{total}. +{points} очков!
+score_attack_mode_label,Режим «Атака на очки»
+score_attack_welcome_title,АТАКА НА ОЧКИ!
+score_attack_welcome_survive,Выживайте как можно дольше!
+score_attack_welcome_difficulty,Сложность возрастает со временем!

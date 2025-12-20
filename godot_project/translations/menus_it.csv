@@ -380,3 +380,7 @@ tutorial_stamp_usage_step5,[center][b]Ben Fatto![/b][/center]\n\nHai elaborato l
 tutorial_strikes_and_quota_step1,[center][b]Il Sistema delle Quote[/b][/center]\n\nGuarda il display [color=yellow]Quota[/color]. Questo mostra quante patate devi elaborare correttamente ogni turno.
 tutorial_strikes_and_quota_step2,[center][b]Evita gli Errori![/b][/center]\n\nIl contatore [color=red]Errori[/color] mostra i tuoi sbagli. Troppi errori e sarà game over!\n\nPrendi decisioni sbagliate e accumulerai errori.
 tutorial_strikes_and_quota_step3,"[center][b]Addestramento Completato![/b][/center]\n\nContinua a elaborare patate per completare il tuo turno di addestramento.\n\nUna volta finito, sarai [color=green]certificato come Ufficiale Doganale[/color] e pronto per il tuo primo vero giorno!"
+loading_level_in_progress,Caricamento Livello...
+loading_level_waiting,Ancora in Caricamento Livello...
+loading_level_still_waiting,Ancora in Caricamento Livello... (%d secondi)
+loading_level_complete,Caricamento Livello Completato!

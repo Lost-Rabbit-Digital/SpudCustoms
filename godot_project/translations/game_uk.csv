@@ -125,3 +125,7 @@ fingerprint_find_match,ЗНАЙТИ ЗБІГ
 fingerprint_progress,Зіставлено: {current} / {total}
 fingerprint_success,Усі відбитки збіглися! +{points} балів!
 fingerprint_partial,Зіставлено {matched}/{total}. +{points} балів!
+score_attack_mode_label,Режим атаки на очки
+score_attack_welcome_title,РЕЖИМ АТАКИ НА ОЧКИ!
+score_attack_welcome_survive,Вижити якомога довше!
+score_attack_welcome_difficulty,Складність зростає з часом!

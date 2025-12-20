@@ -71,7 +71,7 @@ citation_header,ОФИЦИАЛНО ПРЕДУПРЕЖДЕНИЕ
 citation_from_supervisor,От: Надзирател Ръсет
 citation_dismiss_hint,[Плъзнете в кошчето за затваряне]
 minigame_times_up,"Времето изтече! Няма страшно, обратно на работа!"
-minigame_time_format,{seconds}.{fraction}
+minigame_time_format,{секунди}.{части}
 qte_title,СЪБИТИЕ С БЪРЗА РЕАКЦИЯ
 qte_instruction,Натиснете клавишите както се появяват!
 qte_auto_completed,Автоматично завършено
@@ -125,3 +125,7 @@ fingerprint_find_match,НАМЕРИ СЪВПАДЕНИЕТО
 fingerprint_progress,Съвпаднали: {current} / {total}
 fingerprint_success,Всички отпечатъци съвпаднаха! +{points} точки!
 fingerprint_partial,Съвпаднали {matched}/{total}. +{points} точки!
+score_attack_mode_label,Режим Атака на Точки
+score_attack_welcome_title,РЕЖИМ АТАКА НА ТОЧКИ!
+score_attack_welcome_survive,Оцелейте възможно най-дълго!
+score_attack_welcome_difficulty,Трудността нараства с времето!
