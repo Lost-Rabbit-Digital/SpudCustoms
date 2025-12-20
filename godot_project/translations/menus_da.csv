@@ -147,6 +147,8 @@ Restart the game?,Genstarte spillet?
 _HELP MENU,
 help_menu_button,Hjælp
 achievements_menu_button,Præstationer
+achievements_panel_title,PRÆSTATIONER
+achievements_panel_close,Luk
 help_menu_title,Sådan spiller du
 help_tab_basics,Grundlæggende
 help_tab_gameplay,Spil

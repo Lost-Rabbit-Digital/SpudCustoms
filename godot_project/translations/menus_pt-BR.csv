@@ -135,6 +135,8 @@ Return,Voltar
 Restart the game?,Reiniciar o jogo?
 help_menu_button,Ajuda
 achievements_menu_button,Conquistas
+achievements_panel_title,CONQUISTAS
+achievements_panel_close,Fechar
 help_menu_title,Como Jogar
 help_tab_basics,Básico
 help_tab_gameplay,Jogabilidade

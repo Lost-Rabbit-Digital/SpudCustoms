@@ -147,6 +147,8 @@ Restart the game?,Reštartovať hru?
 _HELP MENU,
 help_menu_button,Pomoc
 achievements_menu_button,Úspechy
+achievements_panel_title,ÚSPECHY
+achievements_panel_close,Zatvoriť
 help_menu_title,Ako hrať
 help_tab_basics,Základy
 help_tab_gameplay,Hrateľnosť
