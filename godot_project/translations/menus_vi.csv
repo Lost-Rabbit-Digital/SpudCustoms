@@ -147,6 +147,8 @@ Restart the game?,Khởi động lại trò chơi?
 _HELP MENU,
 help_menu_button,Trợ giúp
 achievements_menu_button,Thành tựu
+achievements_panel_title,THÀNH TÍCH
+achievements_panel_close,Đóng
 help_menu_title,Cách chơi
 help_tab_basics,Cơ bản
 help_tab_gameplay,Lối chơi

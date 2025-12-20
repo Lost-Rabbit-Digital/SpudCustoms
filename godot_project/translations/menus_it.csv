@@ -147,6 +147,8 @@ Restart the game?,Vuoi riavviare la partita?
 _HELP MENU,
 help_menu_button,Aiuto
 achievements_menu_button,Obiettivi
+achievements_panel_title,TRAGUARDI
+achievements_panel_close,Chiudi
 help_menu_title,Come giocare
 help_tab_basics,Basi
 help_tab_gameplay,Giocabilità

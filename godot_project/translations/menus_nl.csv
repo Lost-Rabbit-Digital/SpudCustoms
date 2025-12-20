@@ -147,6 +147,8 @@ Restart the game?,Spel opnieuw starten?
 _HELP MENU,
 help_menu_button,Hulp
 achievements_menu_button,Prestaties
+achievements_panel_title,PRESTATIES
+achievements_panel_close,Sluiten
 help_menu_title,Hoe te spelen
 help_tab_basics,Basis
 help_tab_gameplay,Spelverloop

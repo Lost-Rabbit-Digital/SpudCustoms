@@ -147,6 +147,8 @@ Restart the game?,Reporniți jocul?
 _HELP MENU,
 help_menu_button,Ajutor
 achievements_menu_button,Realizări
+achievements_panel_title,REALIZĂRI
+achievements_panel_close,Închide
 help_menu_title,Cum să joci
 help_tab_basics,Bazele
 help_tab_gameplay,Mod de joc

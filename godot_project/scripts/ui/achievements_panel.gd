@@ -25,6 +25,10 @@ var _category_containers: Dictionary = {}
 func _ready() -> void:
 	close_button.pressed.connect(_on_close_pressed)
 
+	# Set translated UI text
+	title_label.text = tr("achievements_panel_title")
+	close_button.text = tr("achievements_panel_close")
+
 	# Setup controller hints if available
 	_setup_controller_hints()
 

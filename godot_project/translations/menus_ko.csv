@@ -135,6 +135,8 @@ Return,돌아가기
 Restart the game?,게임을 다시 시작하시겠습니까?
 help_menu_button,도움말
 achievements_menu_button,업적
+achievements_panel_title,업적
+achievements_panel_close,닫기
 help_menu_title,게임 방법
 help_tab_basics,기본
 help_tab_gameplay,게임 플레이

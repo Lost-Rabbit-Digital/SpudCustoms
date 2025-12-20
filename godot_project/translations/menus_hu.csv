@@ -147,6 +147,8 @@ Restart the game?,Újraindítja a játékot?
 _HELP MENU,
 help_menu_button,Segítség
 achievements_menu_button,Eredmények
+achievements_panel_title,EREDMÉNYEK
+achievements_panel_close,Bezárás
 help_menu_title,Hogyan játssz
 help_tab_basics,Alapok
 help_tab_gameplay,Játékmenet

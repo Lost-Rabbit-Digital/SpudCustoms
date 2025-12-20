@@ -135,6 +135,8 @@ Return,Връщане
 Restart the game?,Рестартирате играта?
 help_menu_button,Помощ
 achievements_menu_button,Постижения
+achievements_panel_title,ПОСТИЖЕНИЯ
+achievements_panel_close,Затвори
 help_menu_title,Как се играе
 help_tab_basics,Основи
 help_tab_gameplay,Геймплей

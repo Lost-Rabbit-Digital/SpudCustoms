@@ -147,6 +147,8 @@ Restart the game?,Restart the game?
 _HELP MENU,
 help_menu_button,Help
 achievements_menu_button,Achievements
+achievements_panel_title,ACHIEVEMENTS
+achievements_panel_close,Close
 help_menu_title,How to Play
 help_tab_basics,Basics
 help_tab_gameplay,Gameplay

@@ -147,6 +147,8 @@ Restart the game?,Aloitetaanko peli uudelleen?
 _HELP MENU,
 help_menu_button,Ohje
 achievements_menu_button,Saavutukset
+achievements_panel_title,SAAVUTUKSET
+achievements_panel_close,Sulje
 help_menu_title,Miten pelata
 help_tab_basics,Perusteet
 help_tab_gameplay,Pelattavuus

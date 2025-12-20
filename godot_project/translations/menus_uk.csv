@@ -135,6 +135,8 @@ Return,Повернутися
 Restart the game?,Перезапустити гру?
 help_menu_button,Допомога
 achievements_menu_button,Досягнення
+achievements_panel_title,ДОСЯГНЕННЯ
+achievements_panel_close,Закрити
 help_menu_title,Як грати
 help_tab_basics,Основи
 help_tab_gameplay,Ігровий процес
