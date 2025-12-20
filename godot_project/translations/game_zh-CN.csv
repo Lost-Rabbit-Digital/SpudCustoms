@@ -60,7 +60,7 @@ citation_header,官方警告
 citation_from_supervisor,来自：监督员拉塞特
 citation_dismiss_hint,[拖到废纸篓关闭]
 minigame_times_up,时间到！别担心，回去工作吧！
-minigame_time_format,{seconds}.{fraction}
+minigame_time_format,{秒}.{毫秒}
 qte_title,快速反应事件
 qte_instruction,按照提示按下按键！
 qte_auto_completed,已自动完成

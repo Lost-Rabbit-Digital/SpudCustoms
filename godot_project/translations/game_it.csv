@@ -60,7 +60,7 @@ citation_header,AVVISO UFFICIALE
 citation_from_supervisor,Da: Supervisore Russet
 citation_dismiss_hint,[Trascina nel cestino per chiudere]
 minigame_times_up,"Tempo scaduto! Nessun problema, torna al lavoro!"
-minigame_time_format,{seconds}.{fraction}
+minigame_time_format,{secondi}.{frazione}
 qte_title,EVENTO A TEMPO
 qte_instruction,Premi i tasti quando appaiono!
 qte_auto_completed,Completato automaticamente

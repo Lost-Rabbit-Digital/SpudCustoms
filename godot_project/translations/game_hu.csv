@@ -60,14 +60,14 @@ citation_header,HIVATALOS FIGYELMEZTETÉS
 citation_from_supervisor,Feladó: Russet Felügyelő
 citation_dismiss_hint,[Húzd a kukába az elvetéshez]
 minigame_times_up,"Idő lejárt! Semmi gond, vissza a munkához!"
-minigame_time_format,{seconds}.{fraction}
+minigame_time_format,{másodperc}.{töredék}
 qte_title,GYORS ESEMÉNY
 qte_instruction,"Nyomd meg a gombokat, ahogy megjelennek!"
 qte_auto_completed,Automatikus teljesítés
 qte_accessibility_note,(QTE akadálymentesítés engedélyezve)
 qte_get_ready,Készülj fel...
 qte_progress,Haladás
-qte_key_prompt,[{key}]
+qte_key_prompt,[{billentyű}]
 qte_result,{successful} / {total} sikeres (+{points} pont)
 qte_image_pending,[Kép készülőben]
 evidence_title,BIZTONSÁGI ELLENŐRZÉS KÖZELEG

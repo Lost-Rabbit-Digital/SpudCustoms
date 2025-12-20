@@ -18,7 +18,7 @@ Text/140/text,"[color=STEEL_BLUE]Vastarintajohtaja astuu esiin, ase suunnattuna 
 Text/141/text,"[color=CRIMSON]Russetin katse sinkoilee sinun ja vastarintajohtajan välillä, hiki helmeilee hänen otsallaan.[/color] Luuletko voittaneesi? Tämä laitos on Spudin perusta!"
 Text/142/text,Kärsimyksen perusta. [pulse freq=3][color=CHARTREUSE]Se loppuu tänään.[/color][/pulse]
 Text/143/text,[color=STEEL_BLUE]Sasha kamppailee siteitään vastaan kuljetinhihnalla
-Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""Russet"
+Choice/144/text,"[tornado radius=3 freq=2][color=CRIMSON]""Rusettiperuna"
 Choice/145/text,"[wave amp=15 freq=2][color=STEEL_BLUE]""Tätäkö... tätäkö he ovat tehneet? Tämä on pahempaa kuin kuvittelin...""[/color][/wave]"
 Choice/146/text,"[color=CHARTREUSE]""Sasha! Kiitos juurien, että olet elossa! Pidä kiinni"
 Text/147/text,"[color=CRIMSON]Syöksyt Russetia kohti, nyrkit puristettuina, vastarintataistelijoiden hädin tuskin pidätellessä sinua.[/color] Jokainen peruna, joka tuli tarkastuspisteeni läpi... kuinka monta sinä..."

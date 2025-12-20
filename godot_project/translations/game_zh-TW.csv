@@ -60,7 +60,7 @@ citation_header,官方警告
 citation_from_supervisor,來自：監督員拉塞特
 citation_dismiss_hint,[拖到廢紙簍關閉]
 minigame_times_up,時間到！別擔心，回去工作吧！
-minigame_time_format,{seconds}.{fraction}
+minigame_time_format,{秒}.{毫秒}
 qte_title,快速反應事件
 qte_instruction,依序按下出現的按鍵！
 qte_auto_completed,自動完成

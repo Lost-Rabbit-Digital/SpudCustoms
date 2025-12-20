@@ -67,7 +67,7 @@ qte_auto_completed,Automatisch abgeschlossen
 qte_accessibility_note,(QTE-Barrierefreiheit aktiviert)
 qte_get_ready,Bereit machen...
 qte_progress,Fortschritt
-qte_key_prompt,[{key}]
+qte_key_prompt,[{Taste}]
 qte_result,{successful} / {total} erfolgreich (+{points} Punkte)
 qte_image_pending,[Bild ausstehend]
 evidence_title,SICHERHEITSINSPEKTION STEHT BEVOR

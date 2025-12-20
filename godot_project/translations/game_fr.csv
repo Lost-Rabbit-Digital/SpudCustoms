@@ -60,14 +60,14 @@ citation_header,AVERTISSEMENT OFFICIEL
 citation_from_supervisor,De: Superviseur Russet
 citation_dismiss_hint,[Glissez vers la poubelle pour fermer]
 minigame_times_up,"Temps écoulé ! Pas d'inquiétude, au travail !"
-minigame_time_format,{seconds}.{fraction}
+minigame_time_format,{secondes}.{fraction}
 qte_title,ÉVÉNEMENT EN TEMPS LIMITÉ
 qte_instruction,Appuyez sur les touches dès qu'elles apparaissent !
 qte_auto_completed,Terminé automatiquement
 qte_accessibility_note,(Accessibilité QTE activée)
 qte_get_ready,Préparez-vous...
 qte_progress,Progression
-qte_key_prompt,[{key}]
+qte_key_prompt,[{touche}]
 qte_result,{successful} / {total} réussis (+{points} points)
 qte_image_pending,[Image en attente]
 evidence_title,INSPECTION DE SÉCURITÉ IMMINENTE
