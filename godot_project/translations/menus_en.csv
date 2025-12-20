@@ -410,6 +410,11 @@ tutorial_skip,Skip
 tutorial_skip_all,Skip All Tutorials
 tutorial_continue_auto,(continuing automatically...)
 tutorial_continue_click,(click to continue...)
+_LOADING SCREEN,
+loading_level_in_progress,Loading Level...
+loading_level_waiting,Still Loading Level...
+loading_level_still_waiting,Still Loading Level... (%d seconds)
+loading_level_complete,Loading Level Complete!
 tutorial_header,"Tutorial {current} of {total}: {name} - Step {step} of {steps}"
 tutorial_header_single,"{name} - Step {step} of {steps}"
 _TUTORIAL NAMES,

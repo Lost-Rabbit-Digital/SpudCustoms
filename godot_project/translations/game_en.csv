@@ -122,3 +122,8 @@ fingerprint_find_match,FIND THE MATCH
 fingerprint_progress,Matched: {current} / {total}
 fingerprint_success,All fingerprints matched! +{points} points!
 fingerprint_partial,Matched {matched}/{total}. +{points} points!
+_SCORE ATTACK MODE,
+score_attack_mode_label,Score Attack Mode
+score_attack_welcome_title,SCORE ATTACK MODE!
+score_attack_welcome_survive,Survive as long as possible!
+score_attack_welcome_difficulty,Difficulty increases over time!

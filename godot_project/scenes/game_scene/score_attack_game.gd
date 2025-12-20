@@ -19,7 +19,7 @@ func _ready():
 		GameStateManager._quota_target = 9999  # Effectively infinite
 
 	# Update UI to show score attack mode
-	$UI/Labels/QuotaLabel.text = "Score Attack Mode"
+	$UI/Labels/QuotaLabel.text = tr("score_attack_mode_label")
 
 	# Set initial difficulty based on selected difficulty
 	# Set initial difficulty based on selected difficulty
@@ -39,10 +39,15 @@ func _ready():
 	# Special welcome message
 	# Special welcome message
 	# REFACTORED: Use EventBus
-	EventBus.show_alert(
-		"SCORE ATTACK MODE!\nSurvive as long as possible!\nDifficulty increases over time!",
-		true
-	)
+	var welcome_msg = "%s\n%s\n%s" % [
+		tr("score_attack_welcome_title"),
+		tr("score_attack_welcome_survive"),
+		tr("score_attack_welcome_difficulty")
+	]
+	EventBus.show_alert(welcome_msg, true)
+
+	# Show date in score attack mode (uses current date instead of game date)
+	update_date_display()
 
 
 func _process(delta):
