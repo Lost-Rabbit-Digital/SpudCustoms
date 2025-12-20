@@ -162,6 +162,7 @@ help_lore_nation,[b]Нация Картофеля[/b]
 help_lore_your_role,[b]Ваша роль[/b]
 help_lore_border,[b]Великая Стена[/b]
 help_lore_secrets,[b]Корневой Резерв[/b]
+day_transition_label,День {day}
 level_select_choices_header,Выбор до Дня {day}
 level_select_choices_header_named,Выбор до Дня {day} - {name}
 level_select_play_day,Начать этот день

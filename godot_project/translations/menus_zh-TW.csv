@@ -162,6 +162,7 @@ help_lore_nation,[b]薯國[/b]
 help_lore_your_role,[b]您的職責[/b]
 help_lore_border,[b]長城[/b]
 help_lore_secrets,[b]根部儲備[/b]
+day_transition_label,第 {day} 天
 level_select_choices_header,第 {day} 天前的選擇
 level_select_choices_header_named,第 {day} 天前的選擇 - {name}
 level_select_play_day,遊玩本日

@@ -162,6 +162,7 @@ help_lore_nation,[b]스퍼드 국가[/b]
 help_lore_your_role,[b]당신의 역할[/b]
 help_lore_border,[b]만리장성[/b]
 help_lore_secrets,[b]뿌리 보관소[/b]
+day_transition_label,{day}일차
 level_select_choices_header,{day}일차까지의 선택
 level_select_choices_header_named,{day}일차까지의 선택 - {name}
 level_select_play_day,이 날 플레이

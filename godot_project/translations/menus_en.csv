@@ -210,6 +210,8 @@ help_lore_secrets,"[b]Root Reserve[/b]
 Rejected potatoes are... processed. According to protocol. The mysterious Root Reserve handles all the details.
 
 It's best not to ask too many questions. Focus on your duties. Nothing more."
+_DAY TRANSITION,
+day_transition_label,Day {day}
 _LEVEL SELECT,
 level_select_choices_header,Choices up to Day {day}
 level_select_choices_header_named,Choices up to Day {day} - {name}

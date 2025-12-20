@@ -174,6 +174,7 @@ help_lore_nation,"[b]Nationen Spud[/b]\n\nSpud är en stolt nation som lovar vä
 help_lore_your_role,"[b]Din Roll[/b]\n\nDu har blivit utvald för en avgörande roll i att skydda gränserna. Som tulltjänsteman arbetar du under Inspektör Russets vaksamma öga.\n\nDitt välbefinnande beror på din prestation. Uppfyll dina kvoter, följ reglerna, och kom ihåg: nationen räknar med dig."
 help_lore_border,[b]Den Stora Muren[/b]\n\nDen mäktiga Stora Potatismuren skyddar nationen från utomstående. Vid olika kontrollstationer längs muren ser tjänstemän som du till att endast de värdiga får passera in.\n\nDe som försöker ta sig över gränsen utan korrekta dokument möter omedelbara konsekvenser.
 help_lore_secrets,[b]Rotreserven[/b]\n\nNekade potatisar blir... behandlade. Enligt protokoll. Den mystiska Rotreserven hanterar alla detaljer.\n\nDet är bäst att inte ställa för många frågor. Fokusera på dina plikter. Inget mer.
+day_transition_label,Dag {day}
 level_select_choices_header,Val upp till Dag {day}
 level_select_choices_header_named,Val upp till Dag {day} - {name}
 level_select_play_day,Spela Denna Dag

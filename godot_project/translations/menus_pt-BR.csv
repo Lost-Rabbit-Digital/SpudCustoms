@@ -162,6 +162,7 @@ help_lore_nation,[b]A Nação de Spud[/b]
 help_lore_your_role,[b]Seu Papel[/b]
 help_lore_border,[b]A Grande Muralha[/b]
 help_lore_secrets,[b]Reserva de Raízes[/b]
+day_transition_label,Dia {day}
 level_select_choices_header,Escolhas até o Dia {day}
 level_select_choices_header_named,Escolhas até o Dia {day} - {name}
 level_select_play_day,Jogar Este Dia
