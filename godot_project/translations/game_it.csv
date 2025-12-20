@@ -67,7 +67,7 @@ qte_auto_completed,Completato automaticamente
 qte_accessibility_note,(Accessibilità QTE abilitata)
 qte_get_ready,Preparati...
 qte_progress,Progresso
-qte_key_prompt,[{key}]
+qte_key_prompt,[{tasto}]
 qte_result,{successful} / {total} riusciti (+{points} punti)
 qte_image_pending,[Immagine in attesa]
 evidence_title,ISPEZIONE DI SICUREZZA IMMINENTE

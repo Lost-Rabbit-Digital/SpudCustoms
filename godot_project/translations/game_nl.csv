@@ -84,7 +84,7 @@ codebreaker_clear,WISSEN
 codebreaker_previous_attempts,Vorige Pogingen:
 codebreaker_attempts,Pogingen: {current} / {max}
 codebreaker_result_exact_close,{exact} exacte
-codebreaker_result_exact,{exact} exact
+codebreaker_result_exact,{exact} precies
 codebreaker_result_close,{close} bijna
 codebreaker_result_none,geen treffers
 codebreaker_success,Code gekraakt in {attempts} pogingen! +{points} punten!
