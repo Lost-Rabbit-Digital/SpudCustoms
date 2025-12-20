@@ -1,7 +1,7 @@
 extends Node
 
 # Development mode - Set to true to disable Steam functionality
-const DEV_MODE = true  # Set to true to skip all Steam features
+const DEV_MODE = false  # Set to true to skip all Steam features
 
 # Difficulty scaling factors for quota calculations
 const DIFFICULTY_SCALING_EASY: float = 0.8
