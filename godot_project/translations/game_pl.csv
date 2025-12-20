@@ -55,6 +55,17 @@ alert_minigame_bonus,Bonus z minigry: +{bonus} punktów!
 high_score_display,Najlepszy wynik: {score}
 new_high_score,NOWY NAJLEPSZY WYNIK!
 month_1,Styczeń
+month_2,Luty
+month_3,Marzec
+month_4,Kwiecień
+month_5,Maj
+month_6,Czerwiec
+month_7,Lipiec
+month_8,Sierpień
+month_9,Wrzesień
+month_10,Październik
+month_11,Listopad
+month_12,Grudzień
 citation_trash_label,KOSZ
 citation_header,OFICJALNE UPOMNIENIE
 citation_from_supervisor,Od: Nadzorca Russet

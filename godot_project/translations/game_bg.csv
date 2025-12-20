@@ -55,6 +55,17 @@ alert_minigame_bonus,Бонус от миниигра: +{bonus} точки!
 high_score_display,Най-добър резултат: {score}
 new_high_score,НОВ НАЙ-ДОБЪР РЕЗУЛТАТ!
 month_1,Януари
+month_2,Февруари
+month_3,Март
+month_4,Април
+month_5,Май
+month_6,Юни
+month_7,Юли
+month_8,Август
+month_9,Септември
+month_10,Октомври
+month_11,Ноември
+month_12,Декември
 citation_trash_label,КОШЧЕ
 citation_header,ОФИЦИАЛНО ПРЕДУПРЕЖДЕНИЕ
 citation_from_supervisor,От: Надзирател Ръсет

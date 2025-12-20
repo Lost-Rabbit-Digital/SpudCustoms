@@ -55,6 +55,17 @@ alert_minigame_bonus,Thưởng trò chơi nhỏ: +{bonus} điểm!
 high_score_display,Điểm cao nhất: {score}
 new_high_score,ĐIỂM CAO MỚI!
 month_1,Tháng Một
+month_2,Tháng Hai
+month_3,Tháng Ba
+month_4,Tháng Tư
+month_5,Tháng Năm
+month_6,Tháng Sáu
+month_7,Tháng Bảy
+month_8,Tháng Tám
+month_9,Tháng Chín
+month_10,Tháng Mười
+month_11,Tháng Mười Một
+month_12,Tháng Mười Hai
 citation_trash_label,THÙNG RÁC
 citation_header,GIẤY CẢNH CÁO CHÍNH THỨC
 citation_from_supervisor,Từ: Giám sát viên Russet

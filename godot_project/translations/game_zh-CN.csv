@@ -55,6 +55,17 @@ alert_minigame_bonus,小游戏奖励：+{bonus} 分！
 high_score_display,最高分：{score}
 new_high_score,新高分！
 month_1,一月
+month_2,二月
+month_3,三月
+month_4,四月
+month_5,五月
+month_6,六月
+month_7,七月
+month_8,八月
+month_9,九月
+month_10,十月
+month_11,十一月
+month_12,十二月
 citation_trash_label,废纸篓
 citation_header,官方警告
 citation_from_supervisor,来自：监督员拉塞特

@@ -55,6 +55,17 @@ alert_minigame_bonus,Bonus de minijuego: +{bonus} puntos!
 high_score_display,Puntuación más alta: {score}
 new_high_score,¡NUEVA PUNTUACIÓN MÁS ALTA!
 month_1,Enero
+month_2,Febrero
+month_3,Marzo
+month_4,Abril
+month_5,Mayo
+month_6,Junio
+month_7,Julio
+month_8,Agosto
+month_9,Septiembre
+month_10,Octubre
+month_11,Noviembre
+month_12,Diciembre
 citation_trash_label,PAPELERA
 citation_header,CITACIÓN OFICIAL
 citation_from_supervisor,De: Supervisor Russet

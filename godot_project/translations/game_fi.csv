@@ -55,6 +55,17 @@ alert_minigame_bonus,Minipelin bonus: +{bonus} pistettä!
 high_score_display,Ennätys: {score}
 new_high_score,UUSI ENNÄTYS!
 month_1,Tammikuu
+month_2,Helmikuu
+month_3,Maaliskuu
+month_4,Huhtikuu
+month_5,Toukokuu
+month_6,Kesäkuu
+month_7,Heinäkuu
+month_8,Elokuu
+month_9,Syyskuu
+month_10,Lokakuu
+month_11,Marraskuu
+month_12,Joulukuu
 citation_trash_label,ROSKAKORI
 citation_header,VIRALLINEN HUOMAUTUS
 citation_from_supervisor,Lähettäjä: Esimies Russet

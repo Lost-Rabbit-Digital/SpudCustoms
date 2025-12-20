@@ -55,6 +55,17 @@ alert_minigame_bonus,Bonus minigioco: +{bonus} punti!
 high_score_display,Punteggio più alto: {score}
 new_high_score,NUOVO PUNTEGGIO PIÙ ALTO!
 month_1,Gennaio
+month_2,Febbraio
+month_3,Marzo
+month_4,Aprile
+month_5,Maggio
+month_6,Giugno
+month_7,Luglio
+month_8,Agosto
+month_9,Settembre
+month_10,Ottobre
+month_11,Novembre
+month_12,Dicembre
 citation_trash_label,CESTINO
 citation_header,AVVISO UFFICIALE
 citation_from_supervisor,Da: Supervisore Russet

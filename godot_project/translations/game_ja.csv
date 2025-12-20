@@ -55,6 +55,17 @@ alert_minigame_bonus,ミニゲームボーナス：+{bonus} ポイント！
 high_score_display,ハイスコア：{score}
 new_high_score,新記録達成！
 month_1,1月
+month_2,2月
+month_3,3月
+month_4,4月
+month_5,5月
+month_6,6月
+month_7,7月
+month_8,8月
+month_9,9月
+month_10,10月
+month_11,11月
+month_12,12月
 citation_trash_label,ゴミ箱
 citation_header,公式警告
 citation_from_supervisor,差出人: ラセット監督官
