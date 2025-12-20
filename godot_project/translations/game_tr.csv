@@ -71,14 +71,14 @@ citation_header,RESMİ UYARI
 citation_from_supervisor,Kimden: Müfettiş Russet
 citation_dismiss_hint,[Kapatmak için çöpe sürükleyin]
 minigame_times_up,"Süre doldu! Merak etme, iş başına!"
-minigame_time_format,{seconds}.{fraction}
+minigame_time_format,{saniye}.{kesir}
 qte_title,HIZLI ZAMAN ETKİNLİĞİ
 qte_instruction,Tuşlar göründükçe basın!
 qte_auto_completed,Otomatik Tamamlandı
 qte_accessibility_note,(QTE Erişilebilirliği etkin)
 qte_get_ready,Hazır ol...
 qte_progress,İlerleme
-qte_key_prompt,[{key}]
+qte_key_prompt,[{tuş}]
 qte_result,{successful} / {total} başarılı (+{points} puan)
 qte_image_pending,[Görsel Bekleniyor]
 evidence_title,GÜVENLİK DENETİMİ KAPIDA

@@ -71,7 +71,7 @@ citation_header,GIẤY CẢNH CÁO CHÍNH THỨC
 citation_from_supervisor,Từ: Giám sát viên Russet
 citation_dismiss_hint,[Kéo vào Thùng rác để đóng]
 minigame_times_up,"Hết giờ! Đừng lo, quay lại làm việc thôi!"
-minigame_time_format,{seconds}.{fraction}
+minigame_time_format,"{seconds},{fraction} giây"
 qte_title,SỰ KIỆN NHANH
 qte_instruction,Nhấn các phím khi chúng xuất hiện!
 qte_auto_completed,Tự động hoàn thành
