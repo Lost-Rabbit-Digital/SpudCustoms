@@ -55,6 +55,17 @@ alert_minigame_bonus,Bonus minijoc: +{bonus} puncte!
 high_score_display,Scor maxim: {score}
 new_high_score,NOU SCOR MAXIM!
 month_1,Ianuarie
+month_2,Februarie
+month_3,Martie
+month_4,Aprilie
+month_5,Mai
+month_6,Iunie
+month_7,Iulie
+month_8,August
+month_9,Septembrie
+month_10,Octombrie
+month_11,Noiembrie
+month_12,Decembrie
 citation_trash_label,GUNOI
 citation_header,AVERTISMENT OFICIAL
 citation_from_supervisor,De la: Supervizor Russet

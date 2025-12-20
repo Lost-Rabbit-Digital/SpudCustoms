@@ -55,6 +55,17 @@ alert_minigame_bonus,Minispill bonus: +{bonus} poeng!
 high_score_display,Høyeste poengsum: {score}
 new_high_score,NY HØYESTE POENGSUM!
 month_1,Januar
+month_2,Februar
+month_3,Mars
+month_4,April
+month_5,Mai
+month_6,Juni
+month_7,Juli
+month_8,August
+month_9,September
+month_10,Oktober
+month_11,November
+month_12,Desember
 citation_trash_label,SØPPEL
 citation_header,OFFISIELL ADVARSEL
 citation_from_supervisor,Fra: Veileder Russet

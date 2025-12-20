@@ -55,6 +55,17 @@ alert_minigame_bonus,小遊戲獎勵：+{bonus} 點數！
 high_score_display,最高分數：{score}
 new_high_score,新最高分數！
 month_1,一月
+month_2,二月
+month_3,三月
+month_4,四月
+month_5,五月
+month_6,六月
+month_7,七月
+month_8,八月
+month_9,九月
+month_10,十月
+month_11,十一月
+month_12,十二月
 citation_trash_label,廢紙簍
 citation_header,官方警告
 citation_from_supervisor,來自：監督員拉塞特

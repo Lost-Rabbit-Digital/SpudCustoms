@@ -55,6 +55,17 @@ alert_minigame_bonus,Minispil bonus: +{bonus} point!
 high_score_display,Højeste score: {score}
 new_high_score,NY HØJESTE SCORE!
 month_1,Januar
+month_2,Februar
+month_3,Marts
+month_4,April
+month_5,Maj
+month_6,Juni
+month_7,Juli
+month_8,August
+month_9,September
+month_10,Oktober
+month_11,November
+month_12,December
 citation_trash_label,PAPIRKURV
 citation_header,OFFICIEL BØDE
 citation_from_supervisor,Fra: Supervisor Russet

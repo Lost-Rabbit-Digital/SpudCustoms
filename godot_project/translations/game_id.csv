@@ -55,6 +55,17 @@ alert_minigame_bonus,Bonus minigame: +{bonus} poin!
 high_score_display,Skor Tertinggi: {score}
 new_high_score,SKOR TERTINGGI BARU!
 month_1,Januari
+month_2,Februari
+month_3,Maret
+month_4,April
+month_5,Mei
+month_6,Juni
+month_7,Juli
+month_8,Agustus
+month_9,September
+month_10,Oktober
+month_11,November
+month_12,Desember
 citation_trash_label,SAMPAH
 citation_header,PERINGATAN RESMI
 citation_from_supervisor,Dari: Supervisor Russet

@@ -55,6 +55,17 @@ alert_minigame_bonus,Bonus z minihry: +{bonus} bodov!
 high_score_display,Najvyššie skóre: {score}
 new_high_score,NOVÉ NAJVYŠŠIE SKÓRE!
 month_1,Január
+month_2,Február
+month_3,Marec
+month_4,Apríl
+month_5,Máj
+month_6,Jún
+month_7,Júl
+month_8,August
+month_9,September
+month_10,Október
+month_11,November
+month_12,December
 citation_trash_label,KÔŠ
 citation_header,ÚRADNÁ CITÁCIA
 citation_from_supervisor,Od: Supervízor Russet

@@ -55,6 +55,17 @@ alert_minigame_bonus,Minijáték bónusz: +{bonus} pont!
 high_score_display,Rekord: {score}
 new_high_score,ÚJ REKORD!
 month_1,Január
+month_2,Február
+month_3,Március
+month_4,Április
+month_5,Május
+month_6,Június
+month_7,Július
+month_8,Augusztus
+month_9,Szeptember
+month_10,Október
+month_11,November
+month_12,December
 citation_trash_label,SZEMÉT
 citation_header,HIVATALOS FIGYELMEZTETÉS
 citation_from_supervisor,Feladó: Russet Felügyelő
