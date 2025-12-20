@@ -90,6 +90,15 @@ This update is for you.
 - **Minigame Frequency Scaling**: Minigames now appear more frequently as you progress through shifts
 - **Law Receipt Improvements**: Added expired document note to law receipt, fixed passport text overflow
 
+## READABILITY & ACCESSIBILITY IMPROVEMENTS
+- **Reduced Bloom**: Bloom intensity reduced by 50% for better document readability
+- **Post-Cutscene Bloom Fix**: Fixed gameplay bloom being too high after cutscenes
+- **Improved Passport Text**: Switched passport and rules labels to Noto Sans font for better legibility across all languages
+- **Better Text Sizing**: Increased text sizes throughout for improved readability
+- **Localized Dates**: Passport dates now display with localized month names in all 29 supported languages
+- **Unified UI Borders**: Narrative summary window borders now match level select UI styling
+- **Shift Replay Bug**: Fixed game progression bug when replaying earlier shifts
+
 ## PLAYER ENGAGEMENT
 - **Review Requests**: Added tasteful review prompts for both demo and full game players
 - **Translation Fixes**: Various translation improvements across supported languages
@@ -97,4 +106,10 @@ This update is for you.
 ## TECHNICAL IMPROVEMENTS
 - **Expanded Language Support**: Now supporting all Steam-supported languages (29 languages total)
 - **Translation System Overhaul**: Reorganized to per-language translation files for better maintainability
+- **Localization Fixes**: Fixed translation gaps for achievements panel, score values, tutorial system, level select, and story choices
+- **Korean Translation**: Fixed continue dialog and version label translations
+- **Score Attack Translations**: Fixed Score Attack mode and loading screen translations
 - **QTE Accessibility**: Improved QTE accessibility and registered minigame system
+- **EventBus Architecture**: Complete refactor for better stability and testability
+- **Sentry Integration**: Anonymous crash reports for faster issue resolution
+- **Updated Splash Screens**: Refreshed splash screen visuals
