@@ -6,6 +6,7 @@ Choice/7b/text,"Ja, herr, jag ska inte svika er"
 Choice/7c/text,Vilka slags bråkmakare pratar vi om?
 Text/7d/text,Bra. Jag visste att jag kunde lita på dig. Du kommer långt med den inställningen.
 Text/7e/text,De som [color=CRIMSON]hotar vårt levnadssätt[/color]. Ställ inte för många frågor om du vet vad som är bra för dig.
+Text/7f0/text,"Säg... du ser precis ut som min bror."
 Text/7f/text,"[color=STEEL_BLUE]Jag ber er![/color] Min fru skulle ha varit precis bakom mig, men [tornado radius=2 freq=3]hon kom aldrig igenom tullen[/tornado]."
 Text/80/text,"Ingen vill berätta för mig vad som hänt henne. Snälla, [color=CHARTREUSE]hjälp mig att hitta henne![/color]"
 Choice/81/text,"Förlåt, men jag kan inte göra något."

@@ -6,6 +6,7 @@ Choice/7b/text,"Vâng, thưa ông, tôi sẽ không làm ông thất vọng"
 Choice/7c/text,Chúng ta đang nói về những kẻ gây rối như thế nào?
 Text/7d/text,Tốt. Tôi đã biết tôi có thể tin tưởng anh. Anh sẽ đi xa với thái độ này.
 Text/7e/text,Những kẻ [color=CRIMSON]đe dọa lối sống của chúng tôi[/color]. Đừng hỏi quá nhiều nếu anh biết điều gì tốt cho mình.
+Text/7f0/text,"Nói đi... anh trông giống hệt anh trai tôi."
 Text/7f/text,"[color=STEEL_BLUE]Tôi van nài ông![/color] Vợ tôi lẽ ra phải ngay sau lưng tôi, nhưng [tornado radius=2 freq=3]cô ấy chưa bao giờ vượt qua được hải quan[/tornado]."
 Text/80/text,"Không ai muốn cho tôi biết chuyện gì đã xảy ra với cô ấy. Xin hãy, [color=CHARTREUSE]giúp tôi tìm cô ấy![/color]"
 Choice/81/text,"Xin lỗi, nhưng tôi không thể làm gì được."

@@ -6,6 +6,7 @@ Choice/7b/text,"Ano, pane, nezklamám vás"
 Choice/7c/text,O jakých problémových jedincích mluvíte?
 Text/7d/text,"Dobře. Věděl jsem, že se na vás mohu spolehnout. S tímto přístupem postoupíte vysoko."
 Text/7e/text,"Ti, co [color=CRIMSON]ohrožují náš způsob života[/color]. Neptejte se příliš mnoha otázek, pokud víte, co je pro vás dobré."
+Text/7f0/text,"Řekněte... vypadáte úplně jako můj bratr."
 Text/7f/text,"[color=STEEL_BLUE]Prosím, zapřísahám vás![/color] Moje žena měla být hned za mnou, ale [tornado radius=2 freq=3]nikdy nepřešla celní kontrolou[/tornado]."
 Text/80/text,"Nikdo mi neřekne, co se jí stalo. Prosím, [color=CHARTREUSE]pomozte mi ji najít![/color]"
 Choice/81/text,"Je mi líto, ale nemohu s tím nic udělat."

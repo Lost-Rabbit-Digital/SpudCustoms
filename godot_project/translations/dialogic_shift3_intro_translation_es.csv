@@ -6,6 +6,7 @@ Choice/7b/text,"Sí, señor, no le decepcionaré"
 Choice/7c/text,¿De qué tipo de alborotadores estamos hablando?
 Text/7d/text,Bien. Sabía que podía contar contigo. Llegarás lejos con esa actitud.
 Text/7e/text,Los que [color=CRIMSON]amenazan nuestra forma de vida[/color]. No hagas demasiadas preguntas si sabes lo que te conviene.
+Text/7f0/text,"Oye... te pareces mucho a mi hermano."
 Text/7f/text,"[color=STEEL_BLUE]¡Por favor, le suplico![/color] Mi esposa debía estar justo detrás de mí, pero [tornado radius=2 freq=3]nunca pasó por la aduana[/tornado]."
 Text/80/text,"Nadie me dice qué le ha pasado. Por favor, [color=CHARTREUSE]¡ayúdeme a encontrarla![/color]"
 Choice/81/text,"Lo siento, pero no puedo hacer nada."

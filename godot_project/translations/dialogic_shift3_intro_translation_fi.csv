@@ -6,6 +6,7 @@ Choice/7b/text,"Kyllä, herra, en petä teitä"
 Choice/7c/text,Minkälaisista häiriköistä on kyse?
 Text/7d/text,"Hyvä. Tiesin, että voin luottaa sinuun. Tulet menestyväksi tuolla asenteella."
 Text/7e/text,"Ne, jotka [color=CRIMSON]uhkaavat elämäntapaamme[/color]. Älä kysy liikaa kysymyksiä, jos tiedät, mikä on parhaaksesi."
+Text/7f0/text,"Sanopas... näytät aivan veljeltäni."
 Text/7f/text,"[color=STEEL_BLUE]Rukoilen teitä![/color] Vaimoni oli olevinaan juuri minun takana, mutta [tornado radius=2 freq=3]hän ei koskaan päässyt tullista läpi[/tornado]."
 Text/80/text,"Kukaan ei kerro minulle, mitä hänelle on tapahtunut. Pyydän, [color=CHARTREUSE]auttakaa minua löytämään hänet![/color]"
 Choice/81/text,"Valitan, mutta en voi tehdä mitään."

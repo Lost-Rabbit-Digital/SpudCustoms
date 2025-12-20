@@ -6,6 +6,7 @@ Choice/7b/text,"Da, domnule, nu vă voi dezamăgi"
 Choice/7c/text,Despre ce fel de agitatori vorbim?
 Text/7d/text,Bine. Am știut că mă pot baza pe tine. Vei merge departe cu această atitudine.
 Text/7e/text,Cei care [color=CRIMSON]amenință modul nostru de viață[/color]. Nu pune prea multe întrebări dacă știi ce e bine pentru tine.
+Text/7f0/text,"Spune... semeni exact cu fratele meu."
 Text/7f/text,"[color=STEEL_BLUE]Vă implor![/color] Soția mea ar fi trebuit să fie chiar în spatele meu, dar [tornado radius=2 freq=3]niciodată nu a trecut de vamă[/tornado]."
 Text/80/text,"Nimeni nu vrea să-mi spună ce i s-a întâmplat. Vă rog, [color=CHARTREUSE]ajutați-mă să o găsesc![/color]"
 Choice/81/text,"Îmi pare rău, dar nu pot face nimic."

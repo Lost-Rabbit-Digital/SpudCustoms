@@ -6,6 +6,7 @@ Choice/7b/text,"Oui, monsieur, je ne vous décevrai pas"
 Choice/7c/text,De quels types d'agitateurs parlez-vous ?
 Text/7d/text,Bien. Je savais que je pouvais compter sur vous. Vous irez loin avec cet état d'esprit.
 Text/7e/text,Ceux qui [color=CRIMSON]menacent notre mode de vie[/color]. Ne posez pas trop de questions si vous savez ce qui est bon pour vous.
+Text/7f0/text,"Dis... tu ressembles exactement à mon frère."
 Text/7f/text,"[color=STEEL_BLUE]Je vous en supplie![/color] Ma femme devait être juste derrière moi, mais [tornado radius=2 freq=3]elle n'a jamais passé la douane[/tornado]."
 Text/80/text,"Personne ne veut me dire ce qui lui est arrivé. S'il vous plaît, [color=CHARTREUSE]aidez-moi à la retrouver![/color]"
 Choice/81/text,"Je suis désolé, mais je ne peux rien faire."

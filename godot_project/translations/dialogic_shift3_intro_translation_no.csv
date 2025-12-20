@@ -6,6 +6,7 @@ Choice/7b/text,"Ja, herr, jeg skal ikke skuffe deg"
 Choice/7c/text,Hva slags bråkmakere snakker vi om?
 Text/7d/text,Godt. Jeg visste jeg kunne stole på deg. Du kommer til å gå langt med den innstillingen.
 Text/7e/text,De som [color=CRIMSON]truer vår livsstil[/color]. Ikke still for mange spørsmål hvis du vet hva som er best for deg.
+Text/7f0/text,"Si... du ser akkurat ut som broren min."
 Text/7f/text,"[color=STEEL_BLUE]Jeg ber deg innstendig![/color] Kona mi skulle ha vært rett bak meg, men [tornado radius=2 freq=3]hun kom aldri gjennom tollen[/tornado]."
 Text/80/text,"Ingen vil fortelle meg hva som har skjedd med henne. Vær så snill, [color=CHARTREUSE]hjelp meg å finne henne![/color]"
 Choice/81/text,"Beklager, men jeg kan ikke gjøre noe."

@@ -6,6 +6,7 @@ Choice/7b/text,"Áno, pán, nesklame vás"
 Choice/7c/text,O akých výtržníkoch hovoríme?
 Text/7d/text,"Dobre. Vedel som, že sa na vás môžem spoľahnúť. S týmto prístupom pôjdete ďaleko."
 Text/7e/text,"Tí, čo [color=CRIMSON]ohrozujú náš spôsob života[/color]. Nepýtajte sa príliš veľa otázok, ak viete, čo je pre vás dobré."
+Text/7f0/text,"Hovorte... vyzeráte presne ako môj brat."
 Text/7f/text,"[color=STEEL_BLUE]Prosím vás![/color] Moja manželka mala byť hneď za mnou, ale [tornado radius=2 freq=3]nikdy neprešla colnou kontrolou[/tornado]."
 Text/80/text,"Nikto mi nechce povedať, čo sa jej stalo. Prosím, [color=CHARTREUSE]pomôžte mi nájsť ju![/color]"
 Choice/81/text,"Je mi ľúto, ale nemôžem nič urobiť."
