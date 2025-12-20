@@ -36,14 +36,15 @@ var waiting_for_action: bool = false
 var waiting_for_click: bool = false  # Waiting for user to click to continue
 
 # Tutorial definitions with expanded, friendly dialogue
-# Tutorial definitions - text uses placeholders for controller-aware prompts
-# {interact} = Click / Press RT, {drag} = Drag / Use Left Stick
+# Tutorial definitions - text uses translation key references for localization
+# {interact} = Click / Press RT, {drag} = Drag / Use Left Stick (substituted at runtime)
+# name_key and text_key reference translation keys in menus_*.csv
 const TUTORIALS = {
 	"welcome": {
-		"name": "Welcome to Spud Customs",
+		"name_key": "tutorial_welcome_name",
 		"steps": [
 			{
-				"text": "[center][b]Welcome to Spud Customs![/b][/center]\n\nYour job is to process incoming potatoes at the border checkpoint. Let's learn the basics!",
+				"text_key": "tutorial_welcome_step1",
 				"target": null,
 				"highlight": false,
 				"duration": 8.0,
@@ -54,17 +55,17 @@ const TUTORIALS = {
 		"priority": 0
 	},
 	"gate_control": {
-		"name": "Opening the Gate",
+		"name_key": "tutorial_gate_control_name",
 		"steps": [
 			{
-				"text": "[center][b]Opening Your Booth[/b][/center]\n\nSee that lever? {interact} it to raise the shutter and open your booth for business!\n\n[color=yellow]{interact} the lever now.[/color]",
+				"text_key": "tutorial_gate_control_step1",
 				"target": "ShutterLever",
 				"highlight": true,
 				"wait_for_action": "lever_pulled",
 				"pause_game": false
 			},
 			{
-				"text": "[center][b]Great job![/b][/center]\n\nYour booth is now open. Potatoes in the queue can see you're ready for service.",
+				"text_key": "tutorial_gate_control_step2",
 				"target": null,
 				"highlight": false,
 				"duration": 5.0,
@@ -75,17 +76,17 @@ const TUTORIALS = {
 		"priority": 1
 	},
 	"megaphone_call": {
-		"name": "Calling Potatoes",
+		"name_key": "tutorial_megaphone_call_name",
 		"steps": [
 			{
-				"text": "[center][b]Calling the Next Potato[/b][/center]\n\nUse the megaphone to call the next potato from the queue to your booth.\n\n[color=yellow]{interact} the megaphone![/color]",
+				"text_key": "tutorial_megaphone_call_step1",
 				"target": "Megaphone",
 				"highlight": true,
 				"wait_for_action": "megaphone_clicked",
 				"pause_game": false
 			},
 			{
-				"text": "[center][b]Here they come![/b][/center]\n\nWatch as the potato approaches your booth. They'll present their documents for inspection.",
+				"text_key": "tutorial_megaphone_call_step2",
 				"target": null,
 				"highlight": false,
 				"duration": 6.0,
@@ -96,24 +97,24 @@ const TUTORIALS = {
 		"priority": 2
 	},
 	"document_inspection": {
-		"name": "Inspecting Documents",
+		"name_key": "tutorial_document_inspection_name",
 		"steps": [
 			{
-				"text": "[center][b]Document Inspection[/b][/center]\n\nThe potato has handed you their passport. {drag} it to your inspection table to examine it closely.\n\n[color=yellow]{drag} the passport to the table.[/color]",
+				"text_key": "tutorial_document_inspection_step1",
 				"target": "Passport",
 				"highlight": true,
 				"wait_for_action": "document_picked_up",
 				"pause_game": false
 			},
 			{
-				"text": "[center][b]Examining the Passport[/b][/center]\n\n{interact} the passport to open it and review the potato's information:\n\n- Name and photo\n- Country of origin\n- Potato type and condition\n\nLook for anything suspicious!",
+				"text_key": "tutorial_document_inspection_step2",
 				"target": "Passport",
 				"highlight": true,
 				"wait_for_action": "passport_opened",
 				"pause_game": false
 			},
 			{
-				"text": "[center][b]Check the Rules![/b][/center]\n\nBefore making your decision, you need to check the immigration rules. Let's learn about them!",
+				"text_key": "tutorial_document_inspection_step3",
 				"target": null,
 				"highlight": false,
 				"duration": 6.0,
@@ -124,17 +125,17 @@ const TUTORIALS = {
 		"priority": 3
 	},
 	"rules_checking": {
-		"name": "Immigration Rules",
+		"name_key": "tutorial_rules_checking_name",
 		"steps": [
 			{
-				"text": "[center][b]Immigration Rules[/b][/center]\n\nLook at the rules pamphlet on the right side. These rules tell you which potatoes to [color=green]APPROVE[/color] or [color=red]REJECT[/color].\n\nReject any potato that violates the current rules!\n\n[color=red]IMPORTANT: Documents with expired dates must be REJECTED![/color]",
+				"text_key": "tutorial_rules_checking_step1",
 				"target": "RulesLabel",
 				"highlight": true,
 				"duration": 10.0,
 				"pause_game": false
 			},
 			{
-				"text": "[center][b]Stay Vigilant![/b][/center]\n\nRules change between shifts. Always check the current rules before making decisions.\n\nCompare passport information against active rules carefully.",
+				"text_key": "tutorial_rules_checking_step2",
 				"target": null,
 				"highlight": false,
 				"duration": 7.0,
@@ -145,38 +146,38 @@ const TUTORIALS = {
 		"priority": 4
 	},
 	"stamp_usage": {
-		"name": "Using the Stamps",
+		"name_key": "tutorial_stamp_usage_name",
 		"steps": [
 			{
-				"text": "[center][b]The Stamp Bar[/b][/center]\n\nSee the stamp bar at the top? {interact} the handle to reveal your approval and rejection stamps.\n\n[color=yellow]{interact} to open the stamp bar.[/color]",
+				"text_key": "tutorial_stamp_usage_step1",
 				"target": "StampBarController",
 				"highlight": true,
 				"wait_for_action": "stamp_bar_opened",
 				"pause_game": false
 			},
 			{
-				"text": "[center][b]Positioning for Stamping[/b][/center]\n\n{drag} the passport under the stamps. You'll see a guide showing where to place it.\n\n[color=green]Green stamp[/color] = APPROVE\n[color=red]Red stamp[/color] = REJECT\n\n[color=yellow]Position the passport under a stamp.[/color]",
+				"text_key": "tutorial_stamp_usage_step2",
 				"target": "Passport",
 				"highlight": true,
 				"wait_for_action": "document_under_stamp",
 				"pause_game": false
 			},
 			{
-				"text": "[center][b]Apply the Stamp![/b][/center]\n\n{interact} the stamp to mark the passport with your decision.\n\n[color=yellow]{interact} a stamp to apply it.[/color]",
+				"text_key": "tutorial_stamp_usage_step3",
 				"target": "StampBarController",
 				"highlight": true,
 				"wait_for_action": "stamp_applied",
 				"pause_game": false
 			},
 			{
-				"text": "[center][b]Return the Documents[/b][/center]\n\nNow {drag} the stamped passport back to the potato to complete their processing.\n\n[color=yellow]Return the passport to the potato.[/color]",
+				"text_key": "tutorial_stamp_usage_step4",
 				"target": "Passport",
 				"highlight": true,
 				"wait_for_action": "document_returned",
 				"pause_game": false
 			},
 			{
-				"text": "[center][b]Well Done![/b][/center]\n\nYou've processed your first potato! Keep an eye on your quota - you need to process enough potatoes each shift.",
+				"text_key": "tutorial_stamp_usage_step5",
 				"target": null,
 				"highlight": false,
 				"duration": 7.0,
@@ -187,24 +188,24 @@ const TUTORIALS = {
 		"priority": 5
 	},
 	"strikes_and_quota": {
-		"name": "Strikes and Quota",
+		"name_key": "tutorial_strikes_and_quota_name",
 		"steps": [
 			{
-				"text": "[center][b]The Quota System[/b][/center]\n\nLook at the [color=yellow]Quota[/color] display. This shows how many potatoes you must process correctly each shift.",
+				"text_key": "tutorial_strikes_and_quota_step1",
 				"target": "QuotaLabel",
 				"highlight": true,
 				"duration": 8.0,
 				"pause_game": false
 			},
 			{
-				"text": "[center][b]Avoid Strikes![/b][/center]\n\nThe [color=red]Strikes[/color] counter shows your mistakes. Too many strikes and it's game over!\n\nMake wrong decisions and you'll earn strikes.",
+				"text_key": "tutorial_strikes_and_quota_step2",
 				"target": "StrikesLabel",
 				"highlight": true,
 				"duration": 8.0,
 				"pause_game": false
 			},
 			{
-				"text": "[center][b]Training Complete![/b][/center]\n\nContinue processing potatoes to complete your training shift.\n\nOnce finished, you'll be [color=green]certified as a Customs Officer[/color] and ready for your first real day!",
+				"text_key": "tutorial_strikes_and_quota_step3",
 				"target": null,
 				"highlight": false,
 				"duration": 10.0,
@@ -215,6 +216,26 @@ const TUTORIALS = {
 		"priority": 6
 	}
 }
+
+
+## Gets the translated name for a tutorial
+func get_tutorial_name(tutorial_id: String) -> String:
+	if TUTORIALS.has(tutorial_id):
+		var name_key = TUTORIALS[tutorial_id].get("name_key", "")
+		if name_key != "":
+			return tr(name_key)
+	return tutorial_id
+
+
+## Gets the translated text for a tutorial step
+func get_step_text(tutorial_id: String, step_index: int) -> String:
+	if TUTORIALS.has(tutorial_id):
+		var steps = TUTORIALS[tutorial_id].get("steps", [])
+		if step_index < steps.size():
+			var text_key = steps[step_index].get("text_key", "")
+			if text_key != "":
+				return tr(text_key)
+	return ""
 
 # Queue for tutorials to run in order
 var tutorial_queue: Array = []
@@ -254,8 +275,8 @@ func _on_input_mode_changed(_mode: int) -> void:
 	if current_tutorial != "" and tutorial_label:
 		var tutorial = TUTORIALS[current_tutorial]
 		if current_step < tutorial["steps"].size():
-			var step = tutorial["steps"][current_step]
-			tutorial_label.text = _format_tutorial_text(step["text"])
+			var step_text = get_step_text(current_tutorial, current_step)
+			tutorial_label.text = _format_tutorial_text(step_text)
 
 
 ## Format tutorial text with controller-aware prompts
@@ -427,7 +448,8 @@ func _show_current_step():
 		EventBus.tutorial_step_advanced.emit(current_tutorial + "_step_" + str(current_step))
 
 	# Update UI text and progress
-	_update_tutorial_text(step["text"])
+	var step_text = get_step_text(current_tutorial, current_step)
+	_update_tutorial_text(step_text)
 	_update_progress_label()
 
 	# Position panel based on target - move to top for document-related targets
@@ -585,13 +607,13 @@ func _create_tutorial_ui():
 	# Skip buttons
 	if can_skip_tutorials:
 		skip_button = Button.new()
-		skip_button.text = "Skip"
+		skip_button.text = tr("tutorial_skip")
 		skip_button.add_theme_font_size_override("font_size", 14)
 		skip_button.pressed.connect(skip_current_tutorial)
 		bottom_row.add_child(skip_button)
 
 		var skip_all_button = Button.new()
-		skip_all_button.text = "Skip All Tutorials"
+		skip_all_button.text = tr("tutorial_skip_all")
 		skip_all_button.add_theme_font_size_override("font_size", 14)
 		skip_all_button.pressed.connect(skip_all_tutorials)
 		bottom_row.add_child(skip_all_button)
@@ -624,19 +646,23 @@ func _update_progress_label():
 	var current_step_display = current_step + 1  # 1-indexed for display
 
 	# Show overall tutorial progress and step within current tutorial
-	var tutorial_name = tutorial.get("name", current_tutorial)
+	var tutorial_name = get_tutorial_name(current_tutorial)
 	if total_tutorials_in_session > 1:
 		# Show "Tutorial X of Y: Name - Step A of B"
-		progress_label.text = "Tutorial %d of %d: %s - Step %d of %d" % [
-			current_tutorial_index,
-			total_tutorials_in_session,
-			tutorial_name,
-			current_step_display,
-			total_steps
-		]
+		progress_label.text = tr("tutorial_header").format({
+			"current": current_tutorial_index,
+			"total": total_tutorials_in_session,
+			"name": tutorial_name,
+			"step": current_step_display,
+			"steps": total_steps
+		})
 	else:
 		# Single tutorial, just show name and step
-		progress_label.text = "%s - Step %d of %d" % [tutorial_name, current_step_display, total_steps]
+		progress_label.text = tr("tutorial_header_single").format({
+			"name": tutorial_name,
+			"step": current_step_display,
+			"steps": total_steps
+		})
 
 
 ## Position the tutorial panel based on the current step's target
@@ -673,7 +699,7 @@ func _position_panel_for_step(step: Dictionary):
 func _update_continue_hint(auto_progress: bool):
 	if continue_hint_label:
 		if auto_progress:
-			continue_hint_label.text = "(continuing automatically...)"
+			continue_hint_label.text = tr("tutorial_continue_auto")
 			continue_hint_label.visible = true
 		else:
 			continue_hint_label.text = ""
@@ -687,7 +713,7 @@ func _start_click_to_continue_wait(delay: float = 6.0):
 
 	# Show click hint
 	if continue_hint_label:
-		continue_hint_label.text = "(click to continue...)"
+		continue_hint_label.text = tr("tutorial_continue_click")
 		continue_hint_label.visible = true
 
 	# Start timer for auto-advance
