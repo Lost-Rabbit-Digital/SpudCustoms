@@ -538,7 +538,7 @@ scale = Vector2(2.42121, 2.42121)
 
 [node name="OpenPassport" type="Sprite2D" parent="Gameplay/InteractiveElements/Passport"]
 visible = false
-scale = Vector2(1.25, 1.25)
+scale = Vector2(1.35, 1.35)
 texture = ExtResource("25_gf7dt")
 
 [node name="PassportPhotoGenerator" parent="Gameplay/InteractiveElements/Passport/OpenPassport" instance=ExtResource("23_3qac4")]
@@ -559,9 +559,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PotatoInfo" type="Label" parent="Gameplay/InteractiveElements/Passport/OpenPassport"]
-offset_left = -110.0
+offset_left = -115.0
 offset_top = 47.0
-offset_right = 33.0
+offset_right = 45.0
 offset_bottom = 141.0
 theme_override_colors/font_color = Color(0.341176, 0.282353, 0.282353, 1)
 theme_override_constants/line_spacing = 2
