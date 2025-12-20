@@ -232,3 +232,214 @@ continue_game_title,Continue Game
 level_select_story_choices,Story Choices
 reset_progress_confirm,Are you sure you want to reset story progress? This cannot be undone.
 reset_highscores_confirm,Are you sure you want to reset all high scores? This cannot be undone.
+_LEVEL NAMES,
+level_name_0,Tutorial
+level_name_1,First Day on the Job
+level_name_2,New Regulations
+level_name_3,Increasing Pressure
+level_name_4,Contraband Check
+level_name_5,Midpoint Crisis
+level_name_6,Increased Security
+level_name_7,Under Scrutiny
+level_name_8,Double Agents
+level_name_9,Border Chaos
+level_name_10,The Final Countdown
+_SHIFT NAMES FOR STORY CHOICES,
+shift_name_1,First Day on the Job
+shift_name_2,Meeting Sasha & Murphy
+shift_name_3,The Missing Wife
+shift_name_4,Root Reserve Trucks
+shift_name_5,Loyalty Screening
+shift_name_6,RealityScan
+shift_name_7,Resistance Meeting
+shift_name_8,Sasha's Capture
+shift_name_9,The Attack
+shift_name_10,The Final Countdown
+shift_name_unknown,Unknown
+_PATH INDICATORS,
+path_chaos_agent,Chaos Agent
+path_loyalist,Loyalist Path
+path_resistance_ally,Resistance Ally
+path_questioning,Questioning
+path_undetermined,Undetermined
+_STORY CHOICE UI,
+story_choice_path_label,Path:
+story_choice_sasha_trust,Sasha Trust: {value}/10
+story_choice_chaos_points,Chaos: {value} pts
+story_choice_no_choices,No choices recorded yet
+story_choice_day_header,Day {day} - {name}
+_CHOICE DESCRIPTIONS - SHIFT 1,
+choice_initial_response_eager,Showed enthusiasm for Spud
+choice_initial_response_questioning,Questioned the system
+choice_note_reaction_investigate,Chose to investigate the note
+choice_note_reaction_destroy,Destroyed the mysterious note
+choice_note_reaction_report,Reported the note to authorities
+choice_kept_note_yes,Kept the mysterious note
+choice_kept_note_no,Discarded the note
+choice_reported_note_yes,Reported the note
+_CHOICE DESCRIPTIONS - SHIFT 2,
+choice_murphy_trust_open,Opened up to Murphy
+choice_murphy_trust_guarded,Stayed guarded with Murphy
+choice_eat_reserve_ate,Ate the reserve rations
+choice_eat_reserve_refused,Refused the reserve rations
+_CHOICE DESCRIPTIONS - SHIFT 3,
+choice_scanner_response_loyal,Showed loyalty during scanner test
+choice_scanner_response_questioning,Questioned the scanner's purpose
+choice_family_response_refuse,Refused to help find the wife
+choice_family_response_help,Agreed to help find the missing wife
+choice_has_wife_photo_yes,Obtained photo of the missing wife
+choice_reveal_reaction_shocked,Was shocked by the revelation
+choice_reveal_reaction_cautious,Reacted cautiously to the revelation
+_CHOICE DESCRIPTIONS - SHIFT 4,
+choice_cafeteria_response_serious,Took cafeteria rumors seriously
+choice_cafeteria_response_avoid,Avoided cafeteria discussions
+choice_murphy_alliance_ally,Allied with Murphy
+choice_murphy_alliance_cautious,Stayed cautious with Murphy
+choice_murphy_alliance_skeptical,Remained skeptical of Murphy
+choice_sasha_trust_level_committed,Fully committed to trusting Sasha
+choice_sasha_trust_level_cautious,Remained cautious about Sasha
+_CHOICE DESCRIPTIONS - SHIFT 5,
+choice_sasha_investigation_committed,Committed to Sasha's investigation
+choice_sasha_investigation_hesitant,Hesitant about the investigation
+choice_loyalty_response_patriotic,Gave patriotic responses
+choice_loyalty_response_idealistic,Expressed idealistic views
+choice_hide_choice_desk,Hid behind the desk
+choice_hide_choice_window,Hid by the window
+choice_evidence_choice_hand_over,Handed over the evidence
+choice_evidence_choice_keep,Kept the evidence hidden
+choice_evidence_choice_lie,Lied about the evidence
+choice_evidence_choice_chaos,Used evidence to cause chaos
+choice_viktor_wife_discovery_yes,Discovered Viktor's wife on manifest
+_CHOICE DESCRIPTIONS - SHIFT 6,
+choice_fellow_officer_response_cautious,Was cautious with fellow officer
+choice_fellow_officer_response_sympathetic,Showed sympathy to fellow officer
+choice_fellow_officer_response_loyal,Remained loyal around fellow officer
+choice_interrogation_response_lie,Lied during interrogation
+choice_interrogation_response_legal,Gave legal responses
+choice_viktor_conversation_tell_truth,Told Viktor the truth
+choice_viktor_conversation_lie_protect,Lied to protect Viktor
+choice_viktor_conversation_curious,Was curious about Viktor
+choice_scanner_choice_help,Helped sabotage the scanner
+choice_scanner_choice_scan,Operated scanner normally
+choice_scanner_choice_viktor,Chose Viktor for scanner
+choice_helped_operative_yes,Helped the resistance operative
+choice_helped_operative_no,Refused to help the operative
+choice_viktor_allied_yes,Formed alliance with Viktor
+choice_betrayed_resistance_yes,Betrayed the resistance
+choice_sasha_plan_response_committed,Committed to Sasha's plan
+choice_sasha_plan_response_nervous,Was nervous about the plan
+choice_malfunction_excuse_technical,Blamed technical malfunction
+choice_malfunction_excuse_innocent,Played innocent
+_CHOICE DESCRIPTIONS - SHIFT 7,
+choice_resistance_mission_committed,Committed to resistance mission
+choice_resistance_mission_hesitant,Hesitant about the mission
+choice_resistance_mission_cautious,Approached mission cautiously
+choice_final_decision_help,Decided to help the resistance
+choice_final_decision_passive,Remained passive
+choice_final_decision_undecided,Stayed undecided
+choice_yellow_badge_response_help,Helped yellow badge holders
+choice_yellow_badge_response_betray,Betrayed yellow badge holders
+choice_follow_trucks_volunteer,Volunteered to follow trucks
+choice_follow_trucks_hesitant,Hesitant to follow trucks
+choice_found_facility_yes,Found the Root Reserve facility
+_CHOICE DESCRIPTIONS - SHIFT 8,
+choice_sasha_response_cautious,Was cautious about Sasha's situation
+choice_sasha_response_concerned,Showed concern for Sasha
+choice_interrogation_choice_deny,Denied knowledge under interrogation
+choice_interrogation_choice_betray,Betrayed others under interrogation
+choice_sasha_arrest_reaction_intervene,Intervened in Sasha's arrest
+choice_sasha_arrest_reaction_hide,Hid during Sasha's arrest
+choice_sasha_arrest_reaction_promise,Made a promise to Sasha
+choice_player_wanted_yes,Became wanted by authorities
+choice_player_captured_yes,Was captured by authorities
+choice_has_keycard_yes,Obtained security keycard
+choice_murphy_final_alliance_committed,Fully committed to Murphy's alliance
+choice_murphy_final_alliance_hesitant,Hesitant about final alliance
+_CHOICE DESCRIPTIONS - SHIFT 9,
+choice_critical_choice_help,Helped during the critical moment
+choice_critical_choice_betray,Betrayed at the critical moment
+choice_stay_or_go_stay,Stayed to fight
+choice_stay_or_go_go,Chose to escape
+choice_sasha_rescue_reaction_angry,Reacted with anger to rescue
+choice_sasha_rescue_reaction_disgusted,Was disgusted by events
+choice_sasha_rescue_reaction_relieved,Felt relieved after rescue
+_CHOICE DESCRIPTIONS - SHIFT 10 & ENDINGS,
+choice_fellow_officer_response_2_cautious,Remained cautious with colleagues
+choice_fellow_officer_response_2_sympathetic,Showed sympathy to colleagues
+choice_final_mission_response_determined,Determined to complete final mission
+choice_final_mission_response_cautious,Cautious about final mission
+choice_resistance_trust_diplomatic,Took diplomatic approach with resistance
+choice_resistance_trust_committed,Fully committed to the resistance
+choice_ending_choice_diplomatic,Chose diplomatic ending
+choice_ending_choice_justice,Chose justice ending
+choice_ending_choice_vengeance,Chose vengeance ending
+choice_ending_choice_dismantle,Chose to dismantle the system
+choice_accept_medal_accept,Accepted the medal with pride
+choice_accept_medal_reluctant,Reluctantly accepted the medal
+choice_eat_final_eat,Ate the final offering
+choice_eat_final_refuse,Refused the final offering
+choice_final_loyalist_choice_report,Reported dissenters
+choice_final_loyalist_choice_ignore,Ignored the dissenters
+choice_final_loyalist_choice_hope,Held onto hope for change
+_QTE RESULTS,
+choice_qte_rescue_result_pass,Succeeded in rescue attempt
+choice_qte_rescue_result_fail,Failed rescue attempt
+choice_qte_confrontation_result_pass,Won the confrontation
+choice_qte_confrontation_result_fail,Lost the confrontation
+choice_qte_escape_result_pass,Escaped successfully
+choice_qte_escape_result_fail,Failed to escape
+choice_qte_infiltration_result_pass,Infiltration successful
+choice_qte_infiltration_result_fail,Infiltration failed
+choice_qte_scanner_result_pass,Scanner sabotage successful
+choice_qte_scanner_result_fail,Scanner sabotage failed
+choice_qte_surveillance_result_pass,Avoided surveillance
+choice_qte_surveillance_result_fail,Caught by surveillance
+choice_qte_suppression_result_pass,Resisted suppression
+choice_qte_suppression_result_fail,Succumbed to suppression
+_PASSPORT LABELS,
+passport_label_type,Type:
+passport_label_born,Born:
+passport_label_gender,Gender:
+passport_label_country,Country:
+passport_label_expires,Expires:
+passport_label_condition,Condition:
+_TUTORIAL UI,
+tutorial_skip,Skip
+tutorial_skip_all,Skip All Tutorials
+tutorial_continue_auto,(continuing automatically...)
+tutorial_continue_click,(click to continue...)
+tutorial_header,"Tutorial {current} of {total}: {name} - Step {step} of {steps}"
+tutorial_header_single,"{name} - Step {step} of {steps}"
+_TUTORIAL NAMES,
+tutorial_welcome_name,Welcome to Spud Customs
+tutorial_gate_control_name,Opening the Gate
+tutorial_megaphone_call_name,Calling Potatoes
+tutorial_document_inspection_name,Inspecting Documents
+tutorial_rules_checking_name,Immigration Rules
+tutorial_stamp_usage_name,Using the Stamps
+tutorial_strikes_and_quota_name,Strikes and Quota
+_TUTORIAL STEP TEXT - WELCOME,
+tutorial_welcome_step1,"[center][b]Welcome to Spud Customs![/b][/center]\n\nYour job is to process incoming potatoes at the border checkpoint. Let's learn the basics!"
+_TUTORIAL STEP TEXT - GATE CONTROL,
+tutorial_gate_control_step1,"[center][b]Opening Your Booth[/b][/center]\n\nSee that lever? {interact} it to raise the shutter and open your booth for business!\n\n[color=yellow]{interact} the lever now.[/color]"
+tutorial_gate_control_step2,"[center][b]Great job![/b][/center]\n\nYour booth is now open. Potatoes in the queue can see you're ready for service."
+_TUTORIAL STEP TEXT - MEGAPHONE,
+tutorial_megaphone_call_step1,"[center][b]Calling the Next Potato[/b][/center]\n\nUse the megaphone to call the next potato from the queue to your booth.\n\n[color=yellow]{interact} the megaphone![/color]"
+tutorial_megaphone_call_step2,"[center][b]Here they come![/b][/center]\n\nWatch as the potato approaches your booth. They'll present their documents for inspection."
+_TUTORIAL STEP TEXT - DOCUMENT INSPECTION,
+tutorial_document_inspection_step1,"[center][b]Document Inspection[/b][/center]\n\nThe potato has handed you their passport. {drag} it to your inspection table to examine it closely.\n\n[color=yellow]{drag} the passport to the table.[/color]"
+tutorial_document_inspection_step2,"[center][b]Examining the Passport[/b][/center]\n\n{interact} the passport to open it and review the potato's information:\n\n- Name and photo\n- Country of origin\n- Potato type and condition\n\nLook for anything suspicious!"
+tutorial_document_inspection_step3,"[center][b]Check the Rules![/b][/center]\n\nBefore making your decision, you need to check the immigration rules. Let's learn about them!"
+_TUTORIAL STEP TEXT - RULES CHECKING,
+tutorial_rules_checking_step1,"[center][b]Immigration Rules[/b][/center]\n\nLook at the rules pamphlet on the right side. These rules tell you which potatoes to [color=green]APPROVE[/color] or [color=red]REJECT[/color].\n\nReject any potato that violates the current rules!\n\n[color=red]IMPORTANT: Documents with expired dates must be REJECTED![/color]"
+tutorial_rules_checking_step2,"[center][b]Stay Vigilant![/b][/center]\n\nRules change between shifts. Always check the current rules before making decisions.\n\nCompare passport information against active rules carefully."
+_TUTORIAL STEP TEXT - STAMP USAGE,
+tutorial_stamp_usage_step1,"[center][b]The Stamp Bar[/b][/center]\n\nSee the stamp bar at the top? {interact} the handle to reveal your approval and rejection stamps.\n\n[color=yellow]{interact} to open the stamp bar.[/color]"
+tutorial_stamp_usage_step2,"[center][b]Positioning for Stamping[/b][/center]\n\n{drag} the passport under the stamps. You'll see a guide showing where to place it.\n\n[color=green]Green stamp[/color] = APPROVE\n[color=red]Red stamp[/color] = REJECT\n\n[color=yellow]Position the passport under a stamp.[/color]"
+tutorial_stamp_usage_step3,"[center][b]Apply the Stamp![/b][/center]\n\n{interact} the stamp to mark the passport with your decision.\n\n[color=yellow]{interact} a stamp to apply it.[/color]"
+tutorial_stamp_usage_step4,"[center][b]Return the Documents[/b][/center]\n\nNow {drag} the stamped passport back to the potato to complete their processing.\n\n[color=yellow]Return the passport to the potato.[/color]"
+tutorial_stamp_usage_step5,"[center][b]Well Done![/b][/center]\n\nYou've processed your first potato! Keep an eye on your quota - you need to process enough potatoes each shift."
+_TUTORIAL STEP TEXT - STRIKES AND QUOTA,
+tutorial_strikes_and_quota_step1,"[center][b]The Quota System[/b][/center]\n\nLook at the [color=yellow]Quota[/color] display. This shows how many potatoes you must process correctly each shift."
+tutorial_strikes_and_quota_step2,"[center][b]Avoid Strikes![/b][/center]\n\nThe [color=red]Strikes[/color] counter shows your mistakes. Too many strikes and it's game over!\n\nMake wrong decisions and you'll earn strikes."
+tutorial_strikes_and_quota_step3,"[center][b]Training Complete![/b][/center]\n\nContinue processing potatoes to complete your training shift.\n\nOnce finished, you'll be [color=green]certified as a Customs Officer[/color] and ready for your first real day!"

@@ -1438,16 +1438,15 @@ func update_potato_info_display():
 			potato_info_label.add_theme_font_size_override("font_size", 14)
 
 		# FIXED: Include race/type information clearly
+		# Use translation keys for labels, values come from display_info
 		potato_info_label.text = (
-			"""Type: {race}
-Born: {date_of_birth}
-Gender: {sex}
-Country: {country_of_issue}
-Expires: {expiration_date}
-Condition: {condition}
-		"""
-			. format(display_info)
-		)
+			tr("passport_label_type") + " {race}\n" +
+			tr("passport_label_born") + " {date_of_birth}\n" +
+			tr("passport_label_gender") + " {sex}\n" +
+			tr("passport_label_country") + " {country_of_issue}\n" +
+			tr("passport_label_expires") + " {expiration_date}\n" +
+			tr("passport_label_condition") + " {condition}"
+		).format(display_info)
 	else:
 		print("No current_potato_info found.")
 
