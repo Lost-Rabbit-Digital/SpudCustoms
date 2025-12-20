@@ -11,7 +11,7 @@ const DIFFICULTY_SCALING_EXPERT: float = 1.2
 # Persistent variables
 var current_story_state: int = 0
 var difficulty_level = "Normal"  # Can be "Easy", "Normal", or "Expert"
-var build_type = "Full"  # Can be "Full" or "Demo"
+var build_type = "Demo"  # Can be "Full" or "Demo"
 var base_quota_target = 8  # Quota scaling variable
 var game_mode = "score_attack"
 var narrative_choices: Dictionary = {}  # Track player's narrative choices
