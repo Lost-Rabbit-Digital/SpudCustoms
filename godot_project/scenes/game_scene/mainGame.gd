@@ -1418,24 +1418,40 @@ func update_potato_info_display():
 			"condition_" + current_potato_info.condition.to_lower().replace(" ", "_")
 		)
 
+		# Translate race using translation key (e.g., "Sweet Potato" -> "race_sweet_potato")
+		var race_key = "race_" + current_potato_info.race.to_lower().replace(" ", "_")
+		var translated_race = tr(race_key)
+
+		# Translate country using translation key (e.g., "Mash Meadows" -> "country_mash_meadows")
+		var country_key = "country_" + current_potato_info.country_of_issue.to_lower().replace(" ", "_")
+		var translated_country = tr(country_key)
+
+		# Format dates like desk display (Month Day, Year)
+		var formatted_dob = _format_passport_date(current_potato_info.date_of_birth)
+		var formatted_expiration = _format_passport_date(current_potato_info.expiration_date)
+
 		var display_info = current_potato_info.duplicate()
 		display_info.sex = translated_sex
 		display_info.condition = translated_condition
+		display_info.race = translated_race
+		display_info.country_of_issue = translated_country
+		display_info.date_of_birth = formatted_dob
+		display_info.expiration_date = formatted_expiration
 
 		# Dynamic font scaling for long text fields to prevent overflow
 		var max_field_length: int = 0
 		max_field_length = max(max_field_length, current_potato_info.name.length())
-		max_field_length = max(max_field_length, current_potato_info.country_of_issue.length())
+		max_field_length = max(max_field_length, translated_country.length())
 		max_field_length = max(max_field_length, translated_condition.length())
 
-		# Scale font size based on longest field
+		# Scale font size based on longest field (adjusted for smaller base font)
 		var potato_info_label = $Gameplay/InteractiveElements/Passport/OpenPassport/PotatoInfo
 		if max_field_length > 15:
-			potato_info_label.add_theme_font_size_override("font_size", 13)
+			potato_info_label.add_theme_font_size_override("font_size", 11)
 		elif max_field_length > 12:
-			potato_info_label.add_theme_font_size_override("font_size", 14)
+			potato_info_label.add_theme_font_size_override("font_size", 12)
 		else:
-			potato_info_label.add_theme_font_size_override("font_size", 16)
+			potato_info_label.add_theme_font_size_override("font_size", 13)
 
 		# FIXED: Include race/type information clearly
 		# Use translation keys for labels, values come from display_info
@@ -1452,6 +1468,32 @@ func update_potato_info_display():
 
 	# Update mugshot and passport visuals
 	update_potato_texture()
+
+
+## Format a date string from YYYY.MM.DD to localized "Month Day, Year" format
+func _format_passport_date(date_string: String) -> String:
+	var parts = date_string.split(".")
+	if parts.size() != 3:
+		return date_string  # Return original if format is unexpected
+
+	var year = int(parts[0])
+	var month = int(parts[1])
+	var day = int(parts[2])
+
+	# Get translated month name using same keys as desk date display
+	var month_key = "month_%d" % month
+	var month_name = tr(month_key)
+
+	# Fallback to English if translation not found
+	if month_name == month_key:
+		var months_en = ["January", "February", "March", "April", "May", "June",
+						 "July", "August", "September", "October", "November", "December"]
+		if month >= 1 and month <= 12:
+			month_name = months_en[month - 1]
+		else:
+			month_name = "Unknown"
+
+	return "%s %d, %d" % [month_name, day, year]
 
 
 func get_random_name():
