@@ -6,6 +6,7 @@ Choice/7b/text,"Ja, Herr, ich werde Sie nicht enttäuschen"
 Choice/7c/text,Von welchen Unruhestiftern sprechen wir?
 Text/7d/text,"Gut. Ich wusste, ich kann mich auf Sie verlassen. Sie werden mit dieser Einstellung weit kommen."
 Text/7e/text,"Diejenigen, die [color=CRIMSON]unsere Lebensweise bedrohen[/color]. Stellen Sie nicht zu viele Fragen, wenn Sie wissen, was gut für Sie ist."
+Text/7f0/text,"Sag mal... du siehst genauso aus wie mein Bruder."
 Text/7f/text,"[color=STEEL_BLUE]Ich flehe Sie an![/color] Meine Frau sollte direkt hinter mir sein, aber [tornado radius=2 freq=3]sie kam nie durch die Zollkontrolle[/tornado]."
 Text/80/text,"Niemand will mir sagen, was mit ihr passiert ist. Bitte, [color=CHARTREUSE]helfen Sie mir, sie zu finden![/color]"
 Choice/81/text,"Es tut mir leid, aber ich kann nichts tun."

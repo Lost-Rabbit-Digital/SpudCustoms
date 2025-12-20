@@ -6,6 +6,7 @@ Choice/7b/text,"Tak, proszę pana, nie zawiodę"
 Choice/7c/text,O jakich troublemakers mówimy?
 Text/7d/text,"Dobrze. Wiedziałem, że mogę na tobie polegać. Zajdziesz daleko z taką postawą."
 Text/7e/text,"Ci, którzy [color=CRIMSON]zagrażają naszemu stylowi życia[/color]. Nie zadawaj zbyt wielu pytań, jeśli wiesz, co jest dla ciebie dobre."
+Text/7f0/text,"Hej... wyglądasz zupełnie jak mój brat."
 Text/7f/text,"[color=STEEL_BLUE]Błagam![/color] Moja żona miała być tuż za mną, ale [tornado radius=2 freq=3]nigdy nie przeszła przez odprawę celną[/tornado]."
 Text/80/text,"Nikt nie chce mi powiedzieć, co się jej stało. Proszę, [color=CHARTREUSE]pomóż mi ją znaleźć![/color]"
 Choice/81/text,"Przepraszam, ale nic nie mogę zrobić."

@@ -6,6 +6,7 @@ Choice/7b/text,"Sì, signore, non la deluderò"
 Choice/7c/text,Di che tipo di elementi sovversivi stiamo parlando?
 Text/7d/text,Bene. Sapevo di poter contare su di te. Andrai lontano con questo atteggiamento.
 Text/7e/text,Coloro che [color=CRIMSON]minacciano il nostro modo di vivere[/color]. Non fare troppe domande se sai cosa è meglio per te.
+Text/7f0/text,"Ehi... assomigli proprio a mio fratello."
 Text/7f/text,"[color=STEEL_BLUE]La prego![/color] Mia moglie avrebbe dovuto essere proprio dietro di me, ma [tornado radius=2 freq=3]non è mai passata attraverso la dogana[/tornado]."
 Text/80/text,"Nessuno mi vuole dire cosa le è successo. Per favore, [color=CHARTREUSE]aiutatemi a trovarla![/color]"
 Choice/81/text,"Mi dispiace, ma non posso fare nulla."

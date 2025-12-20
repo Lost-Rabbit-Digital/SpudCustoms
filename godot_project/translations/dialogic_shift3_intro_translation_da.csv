@@ -6,6 +6,7 @@ Choice/7b/text,"Ja, hr., jeg vil ikke svigte dig"
 Choice/7c/text,Hvilke slags problematiske personer taler vi om?
 Text/7d/text,"Godt. Jeg vidste, jeg kunne stole på dig. Du vil nå langt med den indstilling."
 Text/7e/text,"Dem, der [color=CRIMSON]truer vores måde at leve på[/color]. Stil ikke for mange spørgsmål, hvis du ved, hvad der er godt for dig."
+Text/7f0/text,"Sig... du ligner præcis min bror."
 Text/7f/text,"[color=STEEL_BLUE]Jeg bønfalder dig![/color] Min kone skulle have været lige bag mig, men [tornado radius=2 freq=3]hun kom aldrig igennem toldkontrollen[/tornado]."
 Text/80/text,"Ingen vil fortælle mig, hvad der er sket med hende. Please, [color=CHARTREUSE]hjælp mig med at finde hende![/color]"
 Choice/81/text,"Jeg er ked af det, men der er intet, jeg kan gøre."

@@ -6,6 +6,7 @@ Choice/7b/text,"""Sí, señor, no le fallaré."""
 Choice/7c/text,"""¿De qué clase de agitadores estamos hablando?"""
 Text/7d/text,Bien. Sabía que podía contar contigo. Llegarás lejos con esa actitud.
 Text/7e/text,Los que [color=CRIMSON]amenazan nuestra forma de vida[/color]. No hagas demasiadas preguntas si sabes lo que te conviene.
+Text/7f0/text,"Oye... te pareces mucho a mi hermano."
 Text/7f/text,"[color=STEEL_BLUE]¡Por favor, se lo ruego![/color] Mi esposa —su nombre es [color=GOLD]Maris[/color]— se suponía que venía justo detrás de mí."
 Text/7fb/text,"Ella [tornado radius=2 freq=3]nunca pasó por aduanas[/tornado]. Dijeron que sus papeles tenían una ""irregularidad""."
 Text/80/text,"Nadie me dirá qué le pasó. ¡Por favor, [color=CHARTREUSE]ayúdeme a encontrarla![/color]"
