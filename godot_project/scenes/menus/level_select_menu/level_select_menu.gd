@@ -281,8 +281,12 @@ func _start_level(level_id: int) -> void:
 	# Set the current level in GameState
 	GameState.set_current_level(level_id)
 
-	# Set the shift in the GameStateManager
-	# REFACTORED: Use GameStateManager
+	# Sync Global.shift to match the selected level
+	# This ensures advance_shift() works correctly when replaying earlier levels
+	if Global:
+		Global.shift = level_id
+
+	# Set the shift in the GameStateManager (source of truth)
 	if GameStateManager:
 		GameStateManager.set_shift(level_id)
 	print("DEBUG: Set shift to: ", level_id)
@@ -291,7 +295,6 @@ func _start_level(level_id: int) -> void:
 	_handle_narrative_choices_for_level(level_id)
 
 	# Update mode back to story mode
-	# REFACTORED: Use GameStateManager
 	if GameStateManager:
 		GameStateManager.switch_game_mode("story")
 
