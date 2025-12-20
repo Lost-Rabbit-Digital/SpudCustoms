@@ -59,3 +59,58 @@ citation_trash_label,GUNOI
 citation_header,AVERTISMENT OFICIAL
 citation_from_supervisor,De la: Supervizor Russet
 citation_dismiss_hint,[Trageți la gunoi pentru a închide]
+minigame_times_up,"Timpul a expirat! Nu-ți face griji, înapoi la treabă!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,EVENIMENT CU TIMP LIMITAT
+qte_instruction,Apasă tastele pe măsură ce apar!
+qte_auto_completed,Completat automat
+qte_accessibility_note,(Accesibilitate QTE activată)
+qte_get_ready,Pregătește-te...
+qte_progress,Progres
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} reușite (+{points} puncte)
+qte_image_pending,[Imagine în Așteptare]
+evidence_title,INSPECȚIE DE SECURITATE IMINENTĂ
+evidence_instruction,"Curăță-ți biroul! Distruge probele, ascunde obiectele de lucru."
+evidence_suspicion,Suspiciune: {percent}%
+evidence_items_remaining,Obiecte: {count}
+evidence_times_up_found,Timpul a expirat! Au găsit probele...
+evidence_times_up_suspicious,Timpul a expirat! Inspecția a fost... amănunțită.
+codebreaker_title,SPĂRGĂTOR DE CODURI
+codebreaker_instruction,"Spargi codul! Verde = potrivire exactă, Galben = cifră corectă, loc greșit"
+codebreaker_enter_code,INTRODU CODUL
+codebreaker_submit,TRIMITE
+codebreaker_clear,ȘTERGE
+codebreaker_previous_attempts,Încercări Anterioare:
+codebreaker_attempts,Încercări: {current} / {max}
+codebreaker_result_exact_close,{exact} potriviri exacte
+codebreaker_result_exact,{exact} potriviri exacte
+codebreaker_result_close,{close} potriviri apropiate
+codebreaker_result_none,nicio potrivire
+codebreaker_success,Cod descifrat în {attempts} încercări! +{points} puncte!
+codebreaker_failure,Ai rămas fără încercări! Codul a fost afișat mai sus.
+scanner_title,SCANNER DE DOCUMENTE
+scanner_instruction,Trage lumina UV pentru a găsi semne ascunse! Apasă pentru a confirma.
+scanner_found,Găsite: {current} / {total}
+scanner_perfect,Perfect! Toate elementele găsite! +{points} puncte!
+scanner_partial,Efort bun! Ai găsit {found}/{total}. +{points} puncte!
+chase_title,URMĂRIRE LA GRANIȚĂ
+chase_instruction,Apasă pe obiectele de contrabandă ROȘII! Lasă obiectele VERZI să treacă.
+chase_legend,ROȘU = Prinde!   VERDE = Lasă să treacă
+chase_caught,Prinse: {current} / {total}
+chase_perfect,Captură perfectă! +{points} puncte!
+chase_partial,Ai prins {count} obiecte. +{points} puncte!
+sorting_title,SORTARE ȘTAMPILE
+sorting_instruction,"Trage ștampilele în coșul corect! Verde = APROBAT, Roșu = REFUZAT"
+sorting_approved,APROBAT
+sorting_denied,REFUZAT
+sorting_progress,Sortate: {sorted}/{total}  Corecte: {correct}
+sorting_perfect,Sortare perfectă! +{points} puncte!
+sorting_partial,Ai sortat {correct}/{total} corect. +{points} puncte!
+fingerprint_title,POTRIVIRE AMPRENTĂ
+fingerprint_instruction,Găsește amprenta care se potrivește cu referința!
+fingerprint_reference,REFERINȚĂ
+fingerprint_find_match,GĂSEȘTE POTRIVIREA
+fingerprint_progress,Potriviri: {current} / {total}
+fingerprint_success,Toate amprentele s-au potrivit! +{points} puncte!
+fingerprint_partial,Potriviri {matched}/{total}. +{points} puncte!

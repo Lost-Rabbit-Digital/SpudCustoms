@@ -31,3 +31,16 @@ Text/172/text,La seguridad de Spud depende de tu [pulse freq=2][color=DARK_ORANG
 Text/174/text,Comencemos tu [color=YELLOW]turno de entrenamiento[/color]...
 Text/180/text,Pero ten cuidado: no todas las papas tienen sus papeles en regla.
 Text/181/text,[color=RED]Pasaportes vencidos[/color] son un rechazo automático. Sin excepciones.
+Text/tut_001/text,Bienvenido a [pulse freq=2][color=MEDIUM_VIOLET_RED]¡Aduanas Spud![/color][/pulse]
+Text/tut_002/text,Has sido seleccionado para un rol vital: [color=DARK_ORANGE]Agente de Aduanas Fronterizo[/color].
+Text/tut_003/text,"Tu trabajo es simple. Las patatas llegan a tu puesto, revisas sus documentos y decides quién pasa."
+Text/tut_004/text,Pero ten cuidado - no todas las patatas tienen sus papeles en orden.
+Text/tut_005/text,[color=RED]Pasaportes vencidos[/color] son un rechazo automático. Sin excepciones.
+Text/tut_006/text,Te guiaré a través de lo básico [color=YELLOW]paso a paso[/color]. Sigue las indicaciones y le tomarás el truco.
+Text/tut_007/text,[pulse freq=2][color=RED]¡Una cosa más![/color][/pulse] Algunas patatas intentarán [color=CRIMSON]darse a la fuga[/color] cuando crean que sus papeles no pasarán la inspección.
+Text/tut_008/text,"Cuando un [color=RED]fugitivo de la frontera[/color] intente escapar, los verás pasar corriendo por tu puesto hacia la frontera."
+Text/tut_009/text,Ahí es donde entra en juego tu [color=CHARTREUSE]Lanzamisiles Neumático[/color]. Es el botón grande en tu panel de control.
+Text/tut_010/text,[color=YELLOW]Haz clic para disparar[/color] cuando un fugitivo esté al alcance. ¡Apunta al [color=GOLD]centro de la zona objetivo[/color] para obtener puntos de bonificación!
+Text/tut_011/text,Pero ten cuidado - [color=RED]no golpees a patatas inocentes[/color] en la fila. ¡Eso te costará puntos y te ganará una falta!
+Text/tut_012/text,La seguridad de Spud depende de tu [pulse freq=2][color=DARK_ORANGE]¡vigilancia![/color][/pulse]
+Text/tut_013/text,Comencemos tu [color=YELLOW]turno de entrenamiento[/color]...

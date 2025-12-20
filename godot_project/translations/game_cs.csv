@@ -59,3 +59,58 @@ citation_trash_label,KOŠ
 citation_header,ÚŘEDNÍ CITACE
 citation_from_supervisor,Od: Nadřízený Russet
 citation_dismiss_hint,[Přetáhněte do koše pro zavření]
+minigame_times_up,"Čas vypršel! Bez obav, zpět k práci!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,RYCHLÁ AKCE
+qte_instruction,"Mačkejte klávesy, jak se objeví!"
+qte_auto_completed,Automaticky dokončeno
+qte_accessibility_note,(Přístupnost QTE povolena)
+qte_get_ready,Připravte se...
+qte_progress,Postup
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} úspěšných (+{points} bodů)
+qte_image_pending,[Obrázek se připravuje]
+evidence_title,BEZPROSTŘEDNÍ BEZPEČNOSTNÍ INSPEKCE
+evidence_instruction,"Uklidte si stůl! Skartujte důkazy, schovejte pracovní předměty."
+evidence_suspicion,Podezření: {percent}%
+evidence_items_remaining,Předměty: {count}
+evidence_times_up_found,Čas vypršel! Našli důkazy...
+evidence_times_up_suspicious,Čas vypršel! Inspekce byla... důkladná.
+codebreaker_title,LÁMÁNÍ KÓDU
+codebreaker_instruction,"Rozluštěte kód! Zelená = přesná shoda, Žlutá = správná číslice, špatné místo"
+codebreaker_enter_code,ZADEJTE KÓD
+codebreaker_submit,ODESLAT
+codebreaker_clear,VYMAZAT
+codebreaker_previous_attempts,Předchozí pokusy:
+codebreaker_attempts,Pokusy: {current} / {max}
+codebreaker_result_exact_close,{exact} přesných
+codebreaker_result_exact,{exact} přesných
+codebreaker_result_close,{close} blízkých
+codebreaker_result_none,žádné shody
+codebreaker_success,Kód prolomen v {attempts} pokusech! +{points} bodů!
+codebreaker_failure,Došly pokusy! Kód byl zobrazen výše.
+scanner_title,SKENER DOKUMENTŮ
+scanner_instruction,Přetáhněte UV světlo k nalezení skrytých značek! Kliknutím potvrďte.
+scanner_found,Nalezeno: {current} / {total}
+scanner_perfect,Perfektní! Všechny prvky nalezeny! +{points} bodů!
+scanner_partial,Dobrý pokus! Nalezeno {found}/{total}. +{points} bodů!
+chase_title,HRANIČNÍ HONIČKA
+chase_instruction,Klikněte na ČERVENÉ pašované předměty! Zelené předměty nechte projít.
+chase_legend,ČERVENÁ = Chytit!   ZELENÁ = Nechat projít
+chase_caught,Chyceno: {current} / {total}
+chase_perfect,Perfektní úlovek! +{points} bodů!
+chase_partial,Chyceno {count} předmětů. +{points} bodů!
+sorting_title,TŘÍDĚNÍ RAZÍTEK
+sorting_instruction,"Přetáhněte razítka do správného koše! Zelená = SCHVÁLENO, Červená = ZAMÍTNUTO"
+sorting_approved,SCHVÁLENO
+sorting_denied,ZAMÍTNUTO
+sorting_progress,Roztříděno: {sorted}/{total} Správně: {correct}
+sorting_perfect,Perfektní třídění! +{points} bodů!
+sorting_partial,Správně roztříděno {correct}/{total}. +{points} bodů!
+fingerprint_title,SHODA OTISKŮ PRSTŮ
+fingerprint_instruction,"Najděte otisk prstu, který odpovídá referenci!"
+fingerprint_reference,VZOR
+fingerprint_find_match,NAJDI SHODU
+fingerprint_progress,Spárováno: {current} / {total}
+fingerprint_success,Všechny otisky prstů spárovány! +{points} bodů!
+fingerprint_partial,Spárováno {matched}/{total}. +{points} bodů!

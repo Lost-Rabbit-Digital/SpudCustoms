@@ -162,3 +162,20 @@ help_lore_nation,[b]斯普德之国[/b]\n斯普德是一个骄傲的国家，承
 help_lore_your_role,[b]您的职责[/b]\n您已被选中，肩负着保护边境的关键职责。作为一名海关官员，您将在主管拉塞特的严密监督下工作。\n\n您的福祉取决于您的表现。完成您的配额，遵守规则，并记住：国家正指望着您。
 help_lore_border,[b]伟大长城[/b]\n雄伟的斯普德长城保护着国家免受外来者的侵扰。在长城沿线的各个检查站，像您一样的官员确保只有合格者才能进入。\n\n那些试图在没有适当文件的情况下越境者将面临即时后果。
 help_lore_secrets,[b]根部储备[/b]\n被拒绝的马铃薯会……被处理。根据协议。神秘的根部储备负责所有细节。\n\n最好不要问太多问题。专注于您的职责。仅此而已。
+level_select_choices_header,可选关卡：第 {day} 天及之前
+level_select_choices_header_named,可选关卡：第 {day} 天及之前 - {name}
+level_select_play_day,游玩此日
+level_select_close,关闭
+continue_dialog_header,您的存档
+continue_dialog_day,天数：{day}
+continue_dialog_continue,继续
+continue_dialog_cancel,取消
+new_game_confirm_button,是，开始新游戏
+tutorial_choice_play,游玩教程
+tutorial_choice_skip,跳过教程
+tutorial_dialog_title,教程
+tutorial_dialog_text,您想游玩教程吗？\n\n教程将引导您了解在“Spud Customs”担任马铃薯海关官员的基础知识。
+continue_game_title,继续游戏
+level_select_story_choices,故事选择
+reset_progress_confirm,您确定要重置故事进度吗？此操作无法撤销。
+reset_highscores_confirm,您确定要重置所有高分吗？此操作无法撤销。

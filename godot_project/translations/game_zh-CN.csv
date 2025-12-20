@@ -59,3 +59,58 @@ citation_trash_label,废纸篓
 citation_header,官方警告
 citation_from_supervisor,来自：监督员拉塞特
 citation_dismiss_hint,[拖到废纸篓关闭]
+minigame_times_up,时间到！别担心，回去工作吧！
+minigame_time_format,{seconds}.{fraction}
+qte_title,快速反应事件
+qte_instruction,按照提示按下按键！
+qte_auto_completed,已自动完成
+qte_accessibility_note,(快速反应事件辅助功能已启用)
+qte_get_ready,准备好...
+qte_progress,进度
+qte_key_prompt,[{key}]
+qte_result,成功 {successful} / {total} 次 (获得 {points} 分)
+qte_image_pending,[图片待定]
+evidence_title,安全检查迫在眉睫
+evidence_instruction,清理你的桌子！销毁证据，藏好工作物品。
+evidence_suspicion,嫌疑度：{percent}%
+evidence_items_remaining,物品：{count}
+evidence_times_up_found,时间到！他们找到了证据...
+evidence_times_up_suspicious,时间到！这次检查...非常彻底。
+codebreaker_title,密码破译
+codebreaker_instruction,破解密码！绿色 = 完全匹配，黄色 = 数字正确位置错误
+codebreaker_enter_code,输入密码
+codebreaker_submit,提交
+codebreaker_clear,清除
+codebreaker_previous_attempts,历史尝试：
+codebreaker_attempts,尝试次数：{current} / {max}
+codebreaker_result_exact_close,{exact} 位正确
+codebreaker_result_exact,{exact} 完全匹配
+codebreaker_result_close,{close} 接近
+codebreaker_result_none,无匹配
+codebreaker_success,密码已破解，尝试了 {attempts} 次！+{points} 分！
+codebreaker_failure,尝试次数已用尽！密码已显示在上方。
+scanner_title,文档扫描仪
+scanner_instruction,拖动紫外线灯寻找隐藏标记！点击确认。
+scanner_found,已找到：{current} / {total}
+scanner_perfect,完美！所有元素已找到！+{points} 分！
+scanner_partial,干得不错！找到了 {found}/{total} 个。+{points} 分！
+chase_title,边境追捕
+chase_instruction,点击红色违禁品！让绿色物品通过。
+chase_legend,红色 = 抓捕！ 绿色 = 放行
+chase_caught,已抓捕：{current} / {total}
+chase_perfect,完美抓捕！+{points} 分！
+chase_partial,抓捕了 {count} 个物品。+{points} 分！
+sorting_title,印章分类
+sorting_instruction,将印章拖到正确的箱子！绿色 = 批准，红色 = 拒绝
+sorting_approved,批准
+sorting_denied,拒绝
+sorting_progress,已分类：{sorted}/{total} 正确：{correct}
+sorting_perfect,完美分类！+{points} 分！
+sorting_partial,正确分类了 {correct}/{total} 个。+{points} 分！
+fingerprint_title,指纹匹配
+fingerprint_instruction,找到与参考匹配的指纹！
+fingerprint_reference,参考
+fingerprint_find_match,查找匹配
+fingerprint_progress,已匹配: {current} / {total}
+fingerprint_success,所有指纹均已匹配！+{points} 分！
+fingerprint_partial,已匹配 {matched}/{total}。+{points} 分！

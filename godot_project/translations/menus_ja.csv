@@ -162,3 +162,20 @@ help_lore_nation,[b]イモ国家[/b]
 help_lore_your_role,[b]あなたの役割[/b]
 help_lore_border,[b]長城[/b]
 help_lore_secrets,[b]根源貯蔵庫[/b]
+level_select_choices_header,Day {day}までの選択肢
+level_select_choices_header_named,Day {day}までの選択肢 - {name}
+level_select_play_day,この日をプレイ
+level_select_close,閉じる
+continue_dialog_header,セーブデータ
+continue_dialog_day,日: {day}
+continue_dialog_continue,続ける
+continue_dialog_cancel,キャンセル
+new_game_confirm_button,はい、新規ゲームを開始
+tutorial_choice_play,チュートリアルをプレイ
+tutorial_choice_skip,チュートリアルをスキップ
+tutorial_dialog_title,チュートリアル
+tutorial_dialog_text,チュートリアルをプレイしますか？\n\nチュートリアルでは、Spud Customsの税関職員としての基本を学ぶことができます。
+continue_game_title,ゲームを続ける
+level_select_story_choices,ストーリー選択
+reset_progress_confirm,ストーリーの進行状況をリセットしますか？この操作は元に戻せません。
+reset_highscores_confirm,全てのハイスコアをリセットしますか？この操作は元に戻せません。

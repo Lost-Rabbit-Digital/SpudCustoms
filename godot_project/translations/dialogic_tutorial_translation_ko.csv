@@ -31,3 +31,16 @@ Text/172/text,스퍼드의 안전과 보안은 당신의 [pulse freq=2][color=DA
 Text/174/text,당신의 [color=YELLOW]훈련 근무[/color]를 시작합시다...
 Text/180/text,하지만 조심하세요. 모든 감자가 서류를 제대로 갖추고 있는 것은 아닙니다.
 Text/181/text,[color=RED]만료된 여권[/color]은 자동 거부 사유입니다. 예외는 없습니다.
+Text/tut_001/text,[pulse freq=2][color=MEDIUM_VIOLET_RED]스퍼드 세관[/color][/pulse]에 오신 것을 환영합니다!
+Text/tut_002/text,"당신은 중요한 역할, [color=DARK_ORANGE]국경 세관원[/color]에 선발되었습니다."
+Text/tut_003/text,당신의 임무는 간단합니다. 감자들이 부스에 도착하면 서류를 확인하고 통과 여부를 결정합니다.
+Text/tut_004/text,하지만 조심하세요. 모든 감자가 서류를 제대로 갖추고 있는 것은 아닙니다.
+Text/tut_005/text,[color=RED]만료된 여권[/color]은 자동 거부 사유입니다. 예외는 없습니다.
+Text/tut_006/text,제가 기본 사항을 [color=YELLOW]단계별로[/color] 안내해 드릴 것입니다. 지시에 따르면 금방 익숙해질 겁니다.
+Text/tut_007/text,[pulse freq=2][color=RED]한 가지 더![/color][/pulse] 일부 감자들은 서류가 검사를 통과하지 못할 것이라고 생각하면 [color=CRIMSON]도주를 시도[/color]할 것입니다.
+Text/tut_008/text,"[color=RED]국경 도주자[/color]가 탈출을 시도하면, 그들이 부스를 지나 국경을 향해 달아나는 것을 보게 될 것입니다."
+Text/tut_009/text,바로 그때 당신의 [color=CHARTREUSE]공압 미사일 발사기[/color]가 활약할 때입니다. 그것은 제어판의 큰 버튼입니다.
+Text/tut_010/text,도주자가 사정권에 들어오면 [color=YELLOW]클릭하여 발사[/color]하세요. 보너스 점수를 위해 [color=GOLD]표적 구역 중앙[/color]을 노리세요!
+Text/tut_011/text,하지만 조심하세요. 대기열에 있는 [color=RED]무고한 감자를 맞히지 마세요[/color]. 점수를 잃고 스트라이크를 받게 될 것입니다!
+Text/tut_012/text,스퍼드의 안전과 보안은 당신의 [pulse freq=2][color=DARK_ORANGE]경계심[/color]에 달려 있습니다!
+Text/tut_013/text,당신의 [color=YELLOW]훈련 근무[/color]를 시작합시다...

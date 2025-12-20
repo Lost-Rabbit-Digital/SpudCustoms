@@ -31,3 +31,16 @@ Text/172/text,La sicurezza di Spud dipende dalla tua [pulse freq=2][color=DARK_O
 Text/174/text,Iniziamo il tuo [color=YELLOW]turno di addestramento[/color]...
 Text/180/text,Ma fai attenzione: non tutte le patate hanno i documenti in regola.
 Text/181/text,I [color=RED]passaporti scaduti[/color] sono un rifiuto automatico. Nessuna eccezione.
+Text/tut_001/text,Benvenuti a [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs![/color][/pulse]
+Text/tut_002/text,Sei stato selezionato per un ruolo vitale: [color=DARK_ORANGE]Agente di Dogana di Confine[/color].
+Text/tut_003/text,"Il tuo lavoro è semplice. Le patate arrivano alla tua cabina, tu controlli i loro documenti, e decidi chi passa."
+Text/tut_004/text,Ma fai attenzione - non tutte le patate hanno i documenti in regola.
+Text/tut_005/text,[color=RED]Passaporti scaduti[/color] sono un rifiuto automatico. Nessuna eccezione.
+Text/tut_006/text,Ti guiderò attraverso le basi [color=YELLOW]passo dopo passo[/color]. Segui le istruzioni e ci prenderai la mano.
+Text/tut_007/text,[pulse freq=2][color=RED]Ancora una cosa![/color][/pulse] Alcune patate cercheranno di [color=CRIMSON]darsela a gambe[/color] quando pensano che i loro documenti non supereranno l'ispezione.
+Text/tut_008/text,"Quando un [color=RED]fuggitivo di confine[/color] cerca di scappare, li vedrai sfrecciare oltre la tua cabina verso il confine."
+Text/tut_009/text,È qui che entra in gioco il tuo [color=CHARTREUSE]Lanciamissili Pneumatico[/color]. È il grande pulsante sul tuo pannello di controllo.
+Text/tut_010/text,[color=YELLOW]Clicca per sparare[/color] quando un fuggitivo è a tiro. Mira al [color=GOLD]centro della zona bersaglio[/color] per punti bonus!
+Text/tut_011/text,Ma fai attenzione - [color=RED]non colpire patate innocenti[/color] in coda. Questo ti costerà punti e ti farà guadagnare uno strike!
+Text/tut_012/text,La sicurezza di Spud dipende dalla tua [pulse freq=2][color=DARK_ORANGE]vigilanza![/color][/pulse]
+Text/tut_013/text,Iniziamo il tuo [color=YELLOW]turno di addestramento[/color]...

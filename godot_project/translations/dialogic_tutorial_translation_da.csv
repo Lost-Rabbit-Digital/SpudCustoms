@@ -31,3 +31,16 @@ Text/172/text,Sikkerheden og trygheden for Spud afhænger af din [pulse freq=2][
 Text/174/text,Lad os begynde din [color=YELLOW]træningsvagt[/color]...
 Text/180/text,Men vær forsigtig - ikke alle kartofler har deres papirer i orden.
 Text/181/text,[color=RED]Udløbne pas[/color] er en automatisk afvisning. Ingen undtagelser.
+Text/tut_001/text,Velkommen til [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Told![/color][/pulse]
+Text/tut_002/text,Du er blevet udvalgt til en vital rolle: [color=DARK_ORANGE]Grænsetoldbetjent[/color].
+Text/tut_003/text,"Dit job er simpelt. Kartofler ankommer til din bod, du tjekker deres dokumenter, og du beslutter, hvem der kommer igennem."
+Text/tut_004/text,Men vær forsigtig - ikke alle kartofler har deres papirer i orden.
+Text/tut_005/text,[color=RED]Udløbne pas[/color] er en automatisk afvisning. Ingen undtagelser.
+Text/tut_006/text,"Jeg vil guide dig gennem det grundlæggende [color=YELLOW]trin for trin[/color]. Følg anvisningerne, og du vil fange det."
+Text/tut_007/text,"[pulse freq=2][color=RED]Én ting til![/color][/pulse] Nogle kartofler vil forsøge at [color=CRIMSON]stikke af[/color], når de tror, deres papirer ikke vil bestå inspektionen."
+Text/tut_008/text,"Når en [color=RED]grænseløber[/color] forsøger at flygte, vil du se dem spurte forbi din bod mod grænsen."
+Text/tut_009/text,Det er her din [color=CHARTREUSE]Pneumatiske Missilkaster[/color] kommer ind i billedet. Det er den store knap på dit kontrolpanel.
+Text/tut_010/text,"[color=YELLOW]Klik for at affyre[/color], når en løber er inden for rækkevidde. Sigt efter [color=GOLD]midten af målområdet[/color] for bonuspoint!"
+Text/tut_011/text,Men vær forsigtig - [color=RED]ram ikke uskyldige kartofler[/color] i køen. Det vil koste dig point og give dig en streg!
+Text/tut_012/text,Sikkerheden for Spud afhænger af din [pulse freq=2][color=DARK_ORANGE]årvågenhed![/color][/pulse]
+Text/tut_013/text,Lad os begynde din [color=YELLOW]træningsvagt[/color]...

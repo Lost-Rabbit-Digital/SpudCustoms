@@ -174,3 +174,20 @@ help_lore_nation,"[b]Spudin kansakunta[/b]\n\nSpud on ylpeä kansakunta, joka lu
 help_lore_your_role,"[b]Sinun roolisi[/b]\n\nSinut on valittu tärkeään rooliin suojelemaan rajoja. Tullivirkailijana työskentelet valvoja Russetin valvovan silmän alla.\n\nHyvinvointisi riippuu suorituksestasi. Täytä kiintiösi, noudata sääntöjä ja muista: kansakunta luottaa sinuun."
 help_lore_border,"[b]Suuri muuri[/b]\n\nMahtava Spudin suuri muuri suojelee kansakuntaa ulkopuolisilta. Muurin varrella olevilla eri tarkastuspisteillä sinun kaltaisesi virkailijat varmistavat, että vain arvoisensa pääsevät sisään.\n\nNe, jotka yrittävät ylittää rajan ilman asianmukaisia asiakirjoja, kohtaavat välittömiä seurauksia."
 help_lore_secrets,[b]Juurireservi[/b]\n\nHylätyt perunat... käsitellään. Protokollan mukaisesti. Salaperäinen Juurireservi hoitaa kaikki yksityiskohdat.\n\nOn parasta olla esittämättä liikaa kysymyksiä. Keskity tehtäviisi. Ei mihinkään muuhun.
+level_select_choices_header,Valinnat päivään {day} asti
+level_select_choices_header_named,Valinnat päivään {day} asti - {name}
+level_select_play_day,Pelaa tämä päivä
+level_select_close,Sulje
+continue_dialog_header,Tallennustietosi
+continue_dialog_day,Päivä: {day}
+continue_dialog_continue,Jatka
+continue_dialog_cancel,Peruuta
+new_game_confirm_button,"Kyllä, aloita uusi peli"
+tutorial_choice_play,Pelaa tutoriaali
+tutorial_choice_skip,Ohita tutoriaali
+tutorial_dialog_title,Tutoriaali
+tutorial_dialog_text,Haluatko pelata tutoriaalin?\n\nTutoriaali opastaa sinut Spud Customs -tullivirkailijan perusasioihin.
+continue_game_title,Jatka peliä
+level_select_story_choices,Tarinavalinnat
+reset_progress_confirm,"Oletko varma, että haluat nollata tarinan edistymisen? Tätä ei voi kumota."
+reset_highscores_confirm,"Oletko varma, että haluat nollata kaikki ennätykset? Tätä ei voi kumota."

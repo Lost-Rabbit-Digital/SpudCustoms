@@ -59,3 +59,58 @@ citation_trash_label,ゴミ箱
 citation_header,公式警告
 citation_from_supervisor,差出人: ラセット監督官
 citation_dismiss_hint,[ゴミ箱にドラッグして閉じる]
+minigame_times_up,タイムアップ！大丈夫、仕事に戻りましょう！
+minigame_time_format,{seconds}.{fraction}
+qte_title,クイックタイムイベント
+qte_instruction,表示されたキーを押してください！
+qte_auto_completed,自動完了
+qte_accessibility_note,（QTEアクセシビリティ有効）
+qte_get_ready,準備してください…
+qte_progress,進行度
+qte_key_prompt,[{key}]
+qte_result,{total}中{successful}回成功 (+{points}ポイント)
+qte_image_pending,[画像準備中]
+evidence_title,抜き打ち検査迫る！
+evidence_instruction,デスクを片付けろ！証拠を破棄し、仕事道具を隠せ！
+evidence_suspicion,疑念: {percent}%
+evidence_items_remaining,アイテム: {count}
+evidence_times_up_found,タイムアップ！証拠が見つかってしまった…
+evidence_times_up_suspicious,タイムアップ！検査は…徹底的だった。
+codebreaker_title,コードブレーカー
+codebreaker_instruction,コードを解読せよ！緑 = 完全一致、黄 = 数字は正しいが場所が違う
+codebreaker_enter_code,コードを入力
+codebreaker_submit,送信
+codebreaker_clear,クリア
+codebreaker_previous_attempts,過去の試行:
+codebreaker_attempts,試行回数: {current} / {max}
+codebreaker_result_exact_close,{exact}個一致
+codebreaker_result_exact,{exact} 完全一致
+codebreaker_result_close,{close} 惜しい
+codebreaker_result_none,一致なし
+codebreaker_success,コード解読成功！{attempts}回でクリア！ +{points}ポイント！
+codebreaker_failure,試行回数切れ！ 正解コードは上記に表示されています。
+scanner_title,書類スキャナー
+scanner_instruction,UVライトをドラッグして隠されたマークを見つけよう！クリックで確定。
+scanner_found,発見済み：{current} / {total}
+scanner_perfect,完璧！全ての要素を発見！ +{points}ポイント！
+scanner_partial,よくやった！ {total}個中{found}個を発見。 +{points}ポイント！
+chase_title,国境追跡
+chase_instruction,赤色の密輸品をクリック！緑色の品は通過させよう。
+chase_legend,赤 = 捕獲！ 緑 = 通過
+chase_caught,捕獲数：{current} / {total}
+chase_perfect,完璧な捕獲！ +{points}ポイント！
+chase_partial,{count}個の品を捕獲。 +{points}ポイント！
+sorting_title,スタンプ仕分け
+sorting_instruction,スタンプを正しい箱にドラッグ！ 緑 = 承認、赤 = 拒否
+sorting_approved,承認
+sorting_denied,拒否
+sorting_progress,仕分け済み：{sorted}/{total} 正解数：{correct}
+sorting_perfect,完璧な仕分け！ +{points}ポイント！
+sorting_partial,{total}個中{correct}個を正しく仕分け。 +{points}ポイント！
+fingerprint_title,指紋照合
+fingerprint_instruction,参照と一致する指紋を見つけよう！
+fingerprint_reference,参照
+fingerprint_find_match,一致箇所を探す
+fingerprint_progress,一致済み: {current} / {total}
+fingerprint_success,全ての指紋が一致しました！ +{points}ポイント！
+fingerprint_partial,{matched}/{total}個一致しました。 +{points}ポイント！

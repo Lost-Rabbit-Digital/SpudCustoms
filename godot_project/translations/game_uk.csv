@@ -59,3 +59,58 @@ citation_trash_label,КОШИК
 citation_header,ОФІЦІЙНЕ ПОПЕРЕДЖЕННЯ
 citation_from_supervisor,Від: Наглядач Рассет
 citation_dismiss_hint,[Перетягніть у кошик, щоб закрити]
+minigame_times_up,"Час вийшов! Не хвилюйтесь, до роботи!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,ШВИДКА ПОДІЯ
+qte_instruction,"Натискайте клавіші, коли вони з'являються!"
+qte_auto_completed,Автоматично завершено
+qte_accessibility_note,(Доступність QTE увімкнено)
+qte_get_ready,Приготуйтесь...
+qte_progress,Прогрес
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} успішних (+{points} очок)
+qte_image_pending,[Зображення очікується]
+evidence_title,ПЕРЕВІРКА БЕЗПЕКИ НЕМИНУЧА
+evidence_instruction,"Приберіть стіл! Знищіть докази, сховайте робочі предмети."
+evidence_suspicion,Підозра: {percent}%
+evidence_items_remaining,Предметів: {count}
+evidence_times_up_found,Час вийшов! Вони знайшли докази...
+evidence_times_up_suspicious,Час вийшов! Перевірка була... ретельною.
+codebreaker_title,ЗЛАМУВАЧ КОДУ
+codebreaker_instruction,"Зламайте код! Зелений = точний збіг, Жовтий = правильна цифра, не на своєму місці"
+codebreaker_enter_code,ВВЕДІТЬ КОД
+codebreaker_submit,НАДІСЛАТИ
+codebreaker_clear,ОЧИСТИТИ
+codebreaker_previous_attempts,Попередні спроби:
+codebreaker_attempts,Спроби: {current} / {max}
+codebreaker_result_exact_close,{exact} точних
+codebreaker_result_exact,{exact} точних збігів
+codebreaker_result_close,{close} близьких збігів
+codebreaker_result_none,немає збігів
+codebreaker_success,Код зламано за {attempts} спроб! +{points} балів!
+codebreaker_failure,Спроби вичерпано! Код було показано вище.
+scanner_title,СКАНЕР ДОКУМЕНТІВ
+scanner_instruction,"Перетягніть УФ-лампу, щоб знайти приховані позначки! Натисніть, щоб підтвердити."
+scanner_found,Знайдено: {current} / {total}
+scanner_perfect,Ідеально! Усі елементи знайдено! +{points} балів!
+scanner_partial,Непогано! Знайдено {found}/{total}. +{points} балів!
+chase_title,ПРИКОРДОННА ПОГОНЯ
+chase_instruction,Натискайте на ЧЕРВОНІ контрабандні предмети! Дозвольте ЗЕЛЕНИМ предметам пройти.
+chase_legend,ЧЕРВОНИЙ = Зловити! ЗЕЛЕНИЙ = Пропустити
+chase_caught,Зловлено: {current} / {total}
+chase_perfect,Ідеальне затримання! +{points} балів!
+chase_partial,Зловлено {count} предметів. +{points} балів!
+sorting_title,СОРТУВАННЯ ШТАМПІВ
+sorting_instruction,"Перетягніть штампи у правильний кошик! Зелений = СХВАЛЕНО, Червоний = ВІДМОВЛЕНО"
+sorting_approved,СХВАЛЕНО
+sorting_denied,ВІДМОВЛЕНО
+sorting_progress,Відсортовано: {sorted}/{total} Правильно: {correct}
+sorting_perfect,Ідеальне сортування! +{points} балів!
+sorting_partial,Правильно відсортовано {correct}/{total}. +{points} балів!
+fingerprint_title,ЗБІГ ВІДБИТКІВ ПАЛЬЦІВ
+fingerprint_instruction,"Знайдіть відбиток пальця, який відповідає зразку!"
+fingerprint_reference,ЗРАЗОК
+fingerprint_find_match,ЗНАЙТИ ЗБІГ
+fingerprint_progress,Зіставлено: {current} / {total}
+fingerprint_success,Усі відбитки збіглися! +{points} балів!
+fingerprint_partial,Зіставлено {matched}/{total}. +{points} балів!

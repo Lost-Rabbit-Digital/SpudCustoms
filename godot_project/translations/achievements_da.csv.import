@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cmuemj0iskk5j"
+
+[deps]
+
+files=["res://translations/achievements_da.da.translation"]
+
+source_file="res://translations/achievements_da.csv"
+dest_files=["res://translations/achievements_da.da.translation"]
+
+[params]
+
+compress=true
+delimiter=0

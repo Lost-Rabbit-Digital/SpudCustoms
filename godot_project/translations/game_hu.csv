@@ -59,3 +59,58 @@ citation_trash_label,SZEMÉT
 citation_header,HIVATALOS FIGYELMEZTETÉS
 citation_from_supervisor,Feladó: Russet Felügyelő
 citation_dismiss_hint,[Húzd a kukába az elvetéshez]
+minigame_times_up,"Idő lejárt! Semmi gond, vissza a munkához!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,GYORS ESEMÉNY
+qte_instruction,"Nyomd meg a gombokat, ahogy megjelennek!"
+qte_auto_completed,Automatikus teljesítés
+qte_accessibility_note,(QTE akadálymentesítés engedélyezve)
+qte_get_ready,Készülj fel...
+qte_progress,Haladás
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} sikeres (+{points} pont)
+qte_image_pending,[Kép készülőben]
+evidence_title,BIZTONSÁGI ELLENŐRZÉS KÖZELEG
+evidence_instruction,"Takarítsd el az asztalod! Zúzd le a bizonyítékokat, rejtsd el a munkaeszközöket."
+evidence_suspicion,Gyanú: {percent}%
+evidence_items_remaining,Tárgyak: {count}
+evidence_times_up_found,Lejárt az idő! Megtalálták a bizonyítékot...
+evidence_times_up_suspicious,Lejárt az idő! Az ellenőrzés... alapos volt.
+codebreaker_title,KÓDTÖRŐ
+codebreaker_instruction,"Törd fel a kódot! Zöld = pontos egyezés, Sárga = jó szám, rossz helyen"
+codebreaker_enter_code,ADD MEG A KÓDOT
+codebreaker_submit,KÜLDÉS
+codebreaker_clear,TÖRLÉS
+codebreaker_previous_attempts,Előző próbálkozások:
+codebreaker_attempts,Próbálkozások: {current} / {max}
+codebreaker_result_exact_close,{exact} pontos
+codebreaker_result_exact,{exact} pontos
+codebreaker_result_close,{close} majdnem
+codebreaker_result_none,nincs találat
+codebreaker_success,Kód feltörve {attempts} próbálkozásból! +{points} pont!
+codebreaker_failure,Elfogyott a próbálkozás! A kód fentebb látható volt.
+scanner_title,DOKUMENTUM SZKENNER
+scanner_instruction,Húzza az UV lámpát a rejtett jelek megtalálásához! Kattintson a megerősítéshez.
+scanner_found,Megtalálva: {current} / {total}
+scanner_perfect,Tökéletes! Minden elem megtalálva! +{points} pont!
+scanner_partial,Szép munka! {found}/{total} megtalálva. +{points} pont!
+chase_title,HATÁRÜLDÖZÉS
+chase_instruction,Kattintson a PIROS csempészárukra! A ZÖLD tárgyakat engedje át.
+chase_legend,PIROS = Elkapni!   ZÖLD = Átengedni
+chase_caught,Elkapva: {current} / {total}
+chase_perfect,Tökéletes fogás! +{points} pont!
+chase_partial,{count} tárgy elkapva. +{points} pont!
+sorting_title,BÉLYEGZŐ RENDEZÉS
+sorting_instruction,"Húzza a bélyegzőket a megfelelő tartóba! Zöld = JÓVÁHAGYVA, Piros = ELUTASÍTVA"
+sorting_approved,JÓVÁHAGYVA
+sorting_denied,ELUTASÍTVA
+sorting_progress,Rendezve: {sorted}/{total}  Helyes: {correct}
+sorting_perfect,Tökéletes rendezés! +{points} pont!
+sorting_partial,{correct}/{total} helyesen rendezve. +{points} pont!
+fingerprint_title,UJJLENYOMAT EGYEZTETÉS
+fingerprint_instruction,"Keresse meg az ujjlenyomatot, amelyik megegyezik a referenciával!"
+fingerprint_reference,REFERENCIA
+fingerprint_find_match,TALÁLD MEG AZ EGYEZÉST
+fingerprint_progress,Egyező: {current} / {total}
+fingerprint_success,Minden ujjlenyomat egyezett! +{points} pont!
+fingerprint_partial,{matched}/{total} egyezett. +{points} pont!

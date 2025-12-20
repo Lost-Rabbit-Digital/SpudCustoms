@@ -31,3 +31,16 @@ Text/172/text,Bezpieczeństwo Spud zależy od Twojej [pulse freq=2][color=DARK_O
 Text/174/text,Zacznijmy twoją [color=YELLOW]zmianę szkoleniową[/color]...
 Text/180/text,Ale bądź ostrożny - nie każdy ziemniak ma dokumenty w porządku.
 Text/181/text,[color=RED]Wygasłe paszporty[/color] są automatycznym odrzuceniem. Bez wyjątków.
+Text/tut_001/text,Witaj w [pulse freq=2][color=MEDIUM_VIOLET_RED]Ziemniaczanym Urzędzie Celnym![/color][/pulse]
+Text/tut_002/text,Zostałeś wybrany do kluczowej roli: [color=DARK_ORANGE]Funkcjonariusz Celny Graniczny[/color].
+Text/tut_003/text,"Twoja praca jest prosta. Ziemniaki przybywają do twojej budki, sprawdzasz ich dokumenty i decydujesz, kto przejdzie."
+Text/tut_004/text,Ale bądź ostrożny - nie każdy ziemniak ma dokumenty w porządku.
+Text/tut_005/text,[color=RED]Wygasłe paszporty[/color] to automatyczna odmowa. Bez wyjątków.
+Text/tut_006/text,"Przeprowadzę cię przez podstawy [color=YELLOW]krok po kroku[/color]. Postępuj zgodnie z instrukcjami, a szybko to opanujesz."
+Text/tut_007/text,"[pulse freq=2][color=RED]Jeszcze jedno![/color][/pulse] Niektóre ziemniaki spróbują [color=CRIMSON]uciec[/color], gdy uznają, że ich dokumenty nie przejdą kontroli."
+Text/tut_008/text,"Gdy [color=RED]uciekinier graniczny[/color] spróbuje uciec, zobaczysz, jak pędzą obok twojej budki w stronę granicy."
+Text/tut_009/text,Wtedy do akcji wkracza twoja [color=CHARTREUSE]Pneumatyczna Wyrzutnia Pocisków[/color]. To ten duży przycisk na twoim panelu sterowania.
+Text/tut_010/text,"[color=YELLOW]Kliknij, aby wystrzelić[/color], gdy uciekinier znajdzie się w zasięgu. Celuj w [color=GOLD]środek strefy celu[/color], aby zdobyć punkty bonusowe!"
+Text/tut_011/text,Ale bądź ostrożny - [color=RED]nie traf niewinnych ziemniaków[/color] w kolejce. Stracisz za to punkty i zarobisz karę!
+Text/tut_012/text,Bezpieczeństwo i ochrona Ziemniaczanej Krainy zależy od twojej [pulse freq=2][color=DARK_ORANGE]czujności![/color][/pulse]
+Text/tut_013/text,Rozpocznijmy twoją [color=YELLOW]zmianę szkoleniową[/color]...

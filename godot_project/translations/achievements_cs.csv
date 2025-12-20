@@ -1,0 +1,53 @@
+﻿keys,cs
+achievement_unlocked_title,ÚSPĚCH ODEMČEN!
+achievements_menu_button,Úspěchy
+achievements_progress_format,%d / %d Odemčeno
+achievement_hidden_name,???
+achievement_hidden_desc,"Tento úspěch je skrytý, dokud nebude odemčen"
+achievement_category_gameplay,Hratelnost
+achievement_category_resistance,Cesta Odporu
+achievement_category_loyalist,Cesta Věrných
+achievement_category_character,Příběhy Postav
+achievement_category_discovery,Objevy
+achievement_rookie_officer_name,Začínající Důstojník
+achievement_rookie_officer_desc,Dokončete svou první směnu na hranici
+achievement_veteran_officer_name,Celní Veterán
+achievement_veteran_officer_desc,Dokončete 10 směn na hranici
+achievement_master_officer_name,Mistr Celní Správy
+achievement_master_officer_desc,Dokončete 25 směn na hranici
+achievement_sharpshooter_name,Ostrostřelec
+achievement_sharpshooter_desc,Zastavte 10 hraničních běžců raketovým systémem
+achievement_border_defender_name,Obránce Hranice
+achievement_border_defender_desc,Zastavte 50 hraničních běžců raketovým systémem
+achievement_perfect_shot_name,Dokonalý Zásah
+achievement_perfect_shot_desc,Udělejte 5 dokonalých zásahů na hraniční běžce
+achievement_high_scorer_name,Mistr Skóre
+achievement_high_scorer_desc,Dosáhněte skóre 10
+achievement_score_legend_name,Legenda Skóre
+achievement_score_legend_desc,Dosáhněte skóre 50
+achievement_savior_of_spud_name,Zachránce Brambor
+achievement_savior_of_spud_desc,Dokončete příběh a zachraňte národ
+achievement_born_diplomat_name,Narozený Diplomat
+achievement_born_diplomat_desc,Dosáhněte diplomatického konce mírovým vyjednáváním
+achievement_tater_of_justice_name,Brambor Spravedlnosti
+achievement_tater_of_justice_desc,Přineste spravedlnost zkorumpovaným úředníkům
+achievement_best_served_hot_name,Nejlépe chutná horká
+achievement_best_served_hot_desc,"Pomstěte se těm, kteří vám ublížili"
+achievement_down_with_tatriarchy_name,Pryč s Tatriarchií
+achievement_down_with_tatriarchy_desc,Veďte revoluci a svrhněte režim
+achievement_heart_of_stone_name,Srdce z kamene
+achievement_heart_of_stone_desc,Zůstaňte chladným a poslušným byrokratem až do konce
+achievement_survivor_name,Přeživší
+achievement_survivor_desc,"Udělejte cokoli je potřeba, abyste přežili režim"
+achievement_late_bloomer_name,Pozdní květ
+achievement_late_bloomer_desc,Najděte vykoupení v poslední chvíli
+achievement_tommys_legacy_name,Tommyho odkaz
+achievement_tommys_legacy_desc,Odhalte pravdu o Tommyho osudu
+achievement_elenas_memory_name,Elenina památka
+achievement_elenas_memory_desc,Uctěte Eleninu oběť a pamatujte na její příběh
+achievement_the_note_name,Vzkaz
+achievement_the_note_desc,Objevte tajný vzkaz a jeho skrytou zprávu
+achievement_root_of_evil_name,Kořen zla
+achievement_root_of_evil_desc,Odhalte korupci v srdci režimu
+achievement_chaos_architect_name,Architekt chaosu
+achievement_chaos_architect_desc,"Přijměte chaos a sledujte, jak svět hoří"

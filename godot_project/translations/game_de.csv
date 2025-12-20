@@ -59,3 +59,58 @@ citation_trash_label,PAPIERKORB
 citation_header,AMTLICHE VERWARNUNG
 citation_from_supervisor,Von: Aufseher Russet
 citation_dismiss_hint,[Zum Schließen in den Papierkorb ziehen]
+minigame_times_up,"Zeit ist um! Keine Sorge, zurück an die Arbeit!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,SCHNELLZEIT-EREIGNIS
+qte_instruction,"Drücke die Tasten, wenn sie erscheinen!"
+qte_auto_completed,Automatisch abgeschlossen
+qte_accessibility_note,(QTE-Barrierefreiheit aktiviert)
+qte_get_ready,Bereit machen...
+qte_progress,Fortschritt
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} erfolgreich (+{points} Punkte)
+qte_image_pending,[Bild ausstehend]
+evidence_title,SICHERHEITSINSPEKTION STEHT BEVOR
+evidence_instruction,"Räum deinen Schreibtisch auf! Beweise vernichten, Arbeitsgegenstände verstecken."
+evidence_suspicion,Verdacht: {percent}%
+evidence_items_remaining,Gegenstände: {count}
+evidence_times_up_found,Zeit ist um! Sie haben die Beweise gefunden...
+evidence_times_up_suspicious,Zeit ist um! Die Inspektion war... gründlich.
+codebreaker_title,CODEKNACKER
+codebreaker_instruction,"Knack den Code! Grün = exakte Übereinstimmung, Gelb = richtige Ziffer, falscher Platz"
+codebreaker_enter_code,CODE EINGEBEN
+codebreaker_submit,BESTÄTIGEN
+codebreaker_clear,LÖSCHEN
+codebreaker_previous_attempts,Vorherige Versuche:
+codebreaker_attempts,Versuche: {current} / {max}
+codebreaker_result_exact_close,{exact} exakt
+codebreaker_result_exact,{exact} exakt
+codebreaker_result_close,{close} nah
+codebreaker_result_none,keine Treffer
+codebreaker_success,Code geknackt in {attempts} Versuchen! +{points} Punkte!
+codebreaker_failure,Keine Versuche mehr! Der Code wurde oben angezeigt.
+scanner_title,DOKUMENTENSCANNER
+scanner_instruction,"Ziehen Sie das UV-Licht, um versteckte Merkmale zu finden! Klicken Sie zur Bestätigung."
+scanner_found,Gefunden: {current} / {total}
+scanner_perfect,Perfekt! Alle Elemente gefunden! +{points} Punkte!
+scanner_partial,Gute Arbeit! {found}/{total} gefunden. +{points} Punkte!
+chase_title,GRENZJAGD
+chase_instruction,Klicken Sie auf die ROTEN Schmuggelwaren! Lassen Sie die GRÜNEN Gegenstände passieren.
+chase_legend,ROT = Fangen!   GRÜN = Passieren lassen
+chase_caught,Gefangen: {current} / {total}
+chase_perfect,Perfekter Fang! +{points} Punkte!
+chase_partial,{count} Gegenstände gefangen. +{points} Punkte!
+sorting_title,STEMPELSORTIERUNG
+sorting_instruction,"Ziehen Sie die Stempel in den richtigen Behälter! Grün = GENEHMIGT, Rot = ABGELEHNT"
+sorting_approved,GENEHMIGT
+sorting_denied,ABGELEHNT
+sorting_progress,Sortiert: {sorted}/{total}  Korrekt: {correct}
+sorting_perfect,Perfekte Sortierung! +{points} Punkte!
+sorting_partial,{correct}/{total} korrekt sortiert. +{points} Punkte!
+fingerprint_title,FINGERABDRUCK-ABGLEICH
+fingerprint_instruction,"Finden Sie den Fingerabdruck, der mit der Referenz übereinstimmt!"
+fingerprint_reference,REFERENZ
+fingerprint_find_match,FINDE DIE ÜBEREINSTIMMUNG
+fingerprint_progress,Abgeglichen: {current} / {total}
+fingerprint_success,Alle Fingerabdrücke stimmen überein! +{points} Punkte!
+fingerprint_partial,Abgeglichen {matched}/{total}. +{points} Punkte!

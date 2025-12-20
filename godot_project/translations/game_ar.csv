@@ -59,3 +59,58 @@ citation_trash_label,سلة المهملات
 citation_header,إنذار رسمي
 citation_from_supervisor,من: المشرف روسيت
 citation_dismiss_hint,[اسحب إلى سلة المهملات للإغلاق]
+minigame_times_up,انتهى الوقت! لا تقلق، عد إلى العمل!
+minigame_time_format,{seconds}.{fraction}
+qte_title,حدث الوقت السريع
+qte_instruction,اضغط المفاتيح كما تظهر!
+qte_auto_completed,اكتمل تلقائيًا
+qte_accessibility_note,(تم تمكين إمكانية وصول حدث الوقت السريع)
+qte_get_ready,استعد...
+qte_progress,التقدم
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} ناجحة (+{points} نقاط)
+qte_image_pending,[الصورة قيد الانتظار]
+evidence_title,تفتيش أمني وشيك
+evidence_instruction,أخلِ مكتبك! امحِ الأدلة، أخفِ أغراض العمل.
+evidence_suspicion,اشتباه: {percent}%
+evidence_items_remaining,أغراض: {count}
+evidence_times_up_found,انتهى الوقت! لقد عثروا على الأدلة...
+evidence_times_up_suspicious,انتهى الوقت! كان التفتيش... دقيقًا.
+codebreaker_title,فك الشفرة
+codebreaker_instruction,فك الشفرة! أخضر = تطابق تام، أصفر = الرقم صحيح والمكان خاطئ
+codebreaker_enter_code,أدخل الشفرة
+codebreaker_submit,إرسال
+codebreaker_clear,مسح
+codebreaker_previous_attempts,المحاولات السابقة:
+codebreaker_attempts,محاولات: {current} / {max}
+codebreaker_result_exact_close,{exact} تطابق تام
+codebreaker_result_exact,{exact} مطابق
+codebreaker_result_close,{close} قريب
+codebreaker_result_none,لا توجد مطابقات
+codebreaker_success,تم فك الشفرة في {attempts} محاولات! +{points} نقطة!
+codebreaker_failure,نفدت المحاولات! تم عرض الرمز أعلاه.
+scanner_title,ماسح المستندات
+scanner_instruction,اسحب ضوء الأشعة فوق البنفسجية للعثور على العلامات المخفية! انقر للتأكيد.
+scanner_found,عُثر على: {current} / {total}
+scanner_perfect,ممتاز! تم العثور على جميع العناصر! +{points} نقطة!
+scanner_partial,جهد جيد! عُثر على {found}/{total}. +{points} نقطة!
+chase_title,مطاردة الحدود
+chase_instruction,انقر على العناصر المهربة الحمراء! دع العناصر الخضراء تمر.
+chase_legend,[color=#FF0000]أحمر[/color] = امسك!   [color=#00FF00]أخضر[/color] = دع يمر
+chase_caught,تم الإمساك بـ: {current} / {total}
+chase_perfect,إمساك مثالي! +{points} نقطة!
+chase_partial,تم الإمساك بـ {count} عنصر. +{points} نقطة!
+sorting_title,فرز الأختام
+sorting_instruction,اسحب الأختام إلى الصندوق الصحيح! [color=#00FF00]أخضر[/color] = موافقة، [color=#FF0000]أحمر[/color] = رفض
+sorting_approved,موافقة
+sorting_denied,رفض
+sorting_progress,تم الفرز: {sorted}/{total}  صحيح: {correct}
+sorting_perfect,فرز مثالي! +{points} نقطة!
+sorting_partial,تم فرز {correct}/{total} بشكل صحيح. +{points} نقطة!
+fingerprint_title,مطابقة بصمة الإصبع
+fingerprint_instruction,ابحث عن بصمة الإصبع التي تطابق المرجع!
+fingerprint_reference,المرجع
+fingerprint_find_match,أوجد المطابقة
+fingerprint_progress,مطابق: {current} / {total}
+fingerprint_success,جميع البصمات متطابقة! +{points} نقاط!
+fingerprint_partial,مطابق {matched}/{total}. +{points} نقاط!

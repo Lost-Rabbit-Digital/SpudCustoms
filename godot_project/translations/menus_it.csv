@@ -174,3 +174,20 @@ help_lore_nation,"[b]La Nazione di Spud[/b]\n\nSpud è una nazione orgogliosa ch
 help_lore_your_role,"[b]Il Tuo Ruolo[/b]\n\nSei stato selezionato per un ruolo cruciale nella protezione dei confini. Come Funzionario della Dogana, lavori sotto l'occhio vigile del Supervisore Russet.\n\nIl tuo benessere dipende dalle tue prestazioni. Raggiungi le tue quote, segui le regole e ricorda: la nazione conta su di te."
 help_lore_border,"[b]La Grande Muraglia[/b]\n\nL'imponente Grande Muraglia di Spud protegge la nazione dagli estranei. Nei vari posti di blocco lungo la muraglia, funzionari come te si assicurano che solo i meritevoli possano entrare.\n\nColoro che tentano di attraversare il confine senza la documentazione adeguata subiscono conseguenze immediate."
 help_lore_secrets,[b]Riserva Radice[/b]\n\nLe patate respinte vengono... processate. Secondo il protocollo. La misteriosa Riserva Radice si occupa di tutti i dettagli.\n\nÈ meglio non fare troppe domande. Concentrati sui tuoi doveri. Nient'altro.
+level_select_choices_header,Scelte fino al Giorno {day}
+level_select_choices_header_named,Scelte fino al Giorno {day} - {name}
+level_select_play_day,Gioca Questo Giorno
+level_select_close,Chiudi
+continue_dialog_header,I Tuoi Dati di Salvataggio
+continue_dialog_day,Giorno: {day}
+continue_dialog_continue,Continua
+continue_dialog_cancel,Annulla
+new_game_confirm_button,"Sì, Inizia Nuova Partita"
+tutorial_choice_play,Gioca Tutorial
+tutorial_choice_skip,Salta Tutorial
+tutorial_dialog_title,Tutorial
+tutorial_dialog_text,Desideri giocare il tutorial?\n\nIl tutorial ti guiderà attraverso le basi dell'essere un ufficiale doganale a Spud Customs.
+continue_game_title,Continua Partita
+level_select_story_choices,Scelte della Storia
+reset_progress_confirm,Sei sicuro di voler resettare i progressi della storia? Questa azione non può essere annullata.
+reset_highscores_confirm,Sei sicuro di voler resettare tutti i punteggi migliori? Questa azione non può essere annullata.

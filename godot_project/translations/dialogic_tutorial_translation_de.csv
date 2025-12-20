@@ -31,3 +31,16 @@ Text/172/text,Die Sicherheit von Spud hängt von Ihrer [pulse freq=2][color=DARK
 Text/174/text,Beginnen wir Ihre [color=YELLOW]Trainingsschicht[/color]...
 Text/180/text,Seien Sie aber vorsichtig – nicht jede Kartoffel hat ihre Papiere in Ordnung.
 Text/181/text,[color=RED]Abgelaufene Pässe[/color] sind eine automatische Ablehnung. Keine Ausnahmen.
+Text/tut_001/text,Willkommen bei [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs![/color][/pulse]
+Text/tut_002/text,Sie wurden für eine wichtige Rolle ausgewählt: [color=DARK_ORANGE]Grenz-Zollbeamter[/color].
+Text/tut_003/text,"Ihre Aufgabe ist einfach. Kartoffeln kommen an Ihrem Schalter an, Sie überprüfen ihre Dokumente, und Sie entscheiden, wer passieren darf."
+Text/tut_004/text,Aber seien Sie vorsichtig - nicht jede Kartoffel hat ihre Papiere in Ordnung.
+Text/tut_005/text,[color=RED]Abgelaufene Pässe[/color] führen zu einer automatischen Ablehnung. Keine Ausnahmen.
+Text/tut_006/text,Ich werde Sie durch die Grundlagen [color=YELLOW]Schritt für Schritt[/color] führen. Folgen Sie den Anweisungen und Sie werden den Dreh rausbekommen.
+Text/tut_007/text,"[pulse freq=2][color=RED]Noch etwas![/color][/pulse] Manche Kartoffeln werden versuchen, [color=CRIMSON]die Flucht zu ergreifen[/color], wenn sie glauben, dass ihre Papiere die Kontrolle nicht bestehen werden."
+Text/tut_008/text,"Wenn ein [color=RED]Grenzflüchtling[/color] versucht zu entkommen, werden Sie sehen, wie sie an Ihrem Schalter vorbeirasen Richtung Grenze."
+Text/tut_009/text,Hier kommt Ihr [color=CHARTREUSE]Pneumatischer Raketenwerfer[/color] ins Spiel. Das ist der große Knopf auf Ihrem Bedienfeld.
+Text/tut_010/text,"[color=YELLOW]Zum Feuern klicken[/color], wenn ein Flüchtling in Reichweite ist. Zielen Sie auf die [color=GOLD]Mitte der Zielzone[/color] für Bonuspunkte!"
+Text/tut_011/text,Aber seien Sie vorsichtig - [color=RED]treffen Sie keine unschuldigen Kartoffeln[/color] in der Warteschlange. Das kostet Sie Punkte und bringt Ihnen einen Strike ein!
+Text/tut_012/text,Die Sicherheit von Spud hängt von Ihrer [pulse freq=2][color=DARK_ORANGE]Wachsamkeit[/color] ab!
+Text/tut_013/text,Beginnen wir Ihre [color=YELLOW]Trainingsschicht[/color]...

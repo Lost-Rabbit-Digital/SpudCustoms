@@ -59,3 +59,58 @@ citation_trash_label,廢紙簍
 citation_header,官方警告
 citation_from_supervisor,來自：監督員拉塞特
 citation_dismiss_hint,[拖到廢紙簍關閉]
+minigame_times_up,時間到！別擔心，回去工作吧！
+minigame_time_format,{seconds}.{fraction}
+qte_title,快速反應事件
+qte_instruction,依序按下出現的按鍵！
+qte_auto_completed,自動完成
+qte_accessibility_note,(快速反應事件輔助功能已啟用)
+qte_get_ready,準備好...
+qte_progress,進度
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} 成功 (+{points} 點)
+qte_image_pending,[圖片待定]
+evidence_title,安全檢查迫在眉睫
+evidence_instruction,清理你的桌面！銷毀證據，藏好工作物品。
+evidence_suspicion,嫌疑：{percent}%
+evidence_items_remaining,物品：{count}
+evidence_times_up_found,時間到！他們找到了證據...
+evidence_times_up_suspicious,時間到！這次檢查...非常徹底。
+codebreaker_title,密碼破解
+codebreaker_instruction,破解密碼！綠色 = 完全符合，黃色 = 數字正確但位置錯誤
+codebreaker_enter_code,輸入密碼
+codebreaker_submit,提交
+codebreaker_clear,清除
+codebreaker_previous_attempts,先前嘗試：
+codebreaker_attempts,嘗試次數：{current} / {max}
+codebreaker_result_exact_close,{exact} 個完全符合
+codebreaker_result_exact,{exact} 精確
+codebreaker_result_close,{close} 接近
+codebreaker_result_none,無符合項目
+codebreaker_success,密碼已於 {attempts} 次嘗試中破解！+{points} 點數！
+codebreaker_failure,嘗試次數已用盡！密碼已顯示於上方。
+scanner_title,文件掃描器
+scanner_instruction,拖曳紫外線燈以尋找隱藏標記！點擊以確認。
+scanner_found,已找到：{current} / {total}
+scanner_perfect,完美！所有元素均已找到！+{points} 點數！
+scanner_partial,表現不錯！找到 {found}/{total} 個。+{points} 點數！
+chase_title,邊境追捕
+chase_instruction,點擊紅色違禁品！讓綠色物品通過。
+chase_legend,紅色 = 攔截！ 綠色 = 放行
+chase_caught,已攔截：{current} / {total}
+chase_perfect,完美攔截！+{points} 點數！
+chase_partial,攔截了 {count} 個物品。+{points} 點數！
+sorting_title,印章分類
+sorting_instruction,將印章拖曳至正確的箱子！綠色 = 批准，紅色 = 拒絕
+sorting_approved,批准
+sorting_denied,拒絕
+sorting_progress,已分類：{sorted}/{total} 正確：{correct}
+sorting_perfect,完美分類！+{points} 點數！
+sorting_partial,正確分類了 {correct}/{total} 個。+{points} 點數！
+fingerprint_title,指紋比對
+fingerprint_instruction,找到與參考指紋相符的指紋！
+fingerprint_reference,參考
+fingerprint_find_match,找出匹配
+fingerprint_progress,已匹配: {current} / {total}
+fingerprint_success,所有指紋均已匹配！ +{points} 分！
+fingerprint_partial,已匹配 {matched}/{total}。 +{points} 分！

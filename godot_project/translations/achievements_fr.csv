@@ -1,0 +1,53 @@
+﻿keys,fr
+achievement_unlocked_title,SUCCÈS DÉVERROUILLÉ !
+achievements_menu_button,Succès
+achievements_progress_format,%d / %d Déverrouillés
+achievement_hidden_name,???
+achievement_hidden_desc,Ce succès est caché jusqu'à ce qu'il soit déverrouillé
+achievement_category_gameplay,Gameplay
+achievement_category_resistance,Voie de la Résistance
+achievement_category_loyalist,Voie du Loyaliste
+achievement_category_character,Arcs Narratifs des Personnages
+achievement_category_discovery,Découverte
+achievement_rookie_officer_name,Officier Recrue
+achievement_rookie_officer_desc,Terminez votre première période de service à la frontière
+achievement_veteran_officer_name,Vétéran des Douanes
+achievement_veteran_officer_desc,Terminez 10 périodes de service à la frontière
+achievement_master_officer_name,Maître des Douanes
+achievement_master_officer_desc,Terminez 25 périodes de service à la frontière
+achievement_sharpshooter_name,Tireur d'élite
+achievement_sharpshooter_desc,Arrêtez 10 coureurs de frontière avec le système de missiles
+achievement_border_defender_name,Défenseur de la Frontière
+achievement_border_defender_desc,Arrêtez 50 coureurs de frontière avec le système de missiles
+achievement_perfect_shot_name,Tir Parfait
+achievement_perfect_shot_desc,Réussissez 5 tirs parfaits sur des coureurs de frontière
+achievement_high_scorer_name,Meilleur Pointeur
+achievement_high_scorer_desc,Atteignez un score de 10
+achievement_score_legend_name,Légende du Score
+achievement_score_legend_desc,Atteignez un score de 50
+achievement_savior_of_spud_name,Sauveur de Spud
+achievement_savior_of_spud_desc,Terminer l'histoire et sauver la nation
+achievement_born_diplomat_name,Diplomate Né
+achievement_born_diplomat_desc,Atteindre la fin diplomatique par la négociation pacifique
+achievement_tater_of_justice_name,Justicier de la Patate
+achievement_tater_of_justice_desc,Rendre justice aux fonctionnaires corrompus
+achievement_best_served_hot_name,Meilleur Servi Chaud
+achievement_best_served_hot_desc,Assouvir sa vengeance sur ceux qui vous ont fait du tort
+achievement_down_with_tatriarchy_name,À bas la Tatriarchie
+achievement_down_with_tatriarchy_desc,Mener la révolution et renverser le régime
+achievement_heart_of_stone_name,Cœur de Pierre
+achievement_heart_of_stone_desc,Rester un bureaucrate froid et obéissant jusqu'à la fin
+achievement_survivor_name,Survivant
+achievement_survivor_desc,Faire tout ce qu'il faut pour survivre au régime
+achievement_late_bloomer_name,Éclosion Tardive
+achievement_late_bloomer_desc,Trouver la rédemption au tout dernier moment
+achievement_tommys_legacy_name,L'Héritage de Tommy
+achievement_tommys_legacy_desc,Découvrir la vérité sur le destin de Tommy
+achievement_elenas_memory_name,La Mémoire d'Elena
+achievement_elenas_memory_desc,Honorer le sacrifice d'Elena et se souvenir de son histoire
+achievement_the_note_name,La Note
+achievement_the_note_desc,Découvrir la note secrète et son message caché
+achievement_root_of_evil_name,Racine du Mal
+achievement_root_of_evil_desc,Exposer la corruption au cœur du régime
+achievement_chaos_architect_name,Architecte du Chaos
+achievement_chaos_architect_desc,Embrassez le chaos et regardez le monde brûler

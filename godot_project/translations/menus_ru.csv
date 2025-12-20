@@ -123,7 +123,7 @@ Secondary Interaction,Второстепенное взаимодействие
 Cancel Interaction,Отменить взаимодействие
 Escape,Esc
 Dialogic Default Action,Действие по умолчанию в диалоге
-Enter,Enter
+Enter,Ввод
 Left Mouse Button,Левая кнопка мыши
 Right Mouse Button,Правая кнопка мыши
 Start New Game,Начать новую игру
@@ -162,3 +162,20 @@ help_lore_nation,[b]Нация Картофеля[/b]
 help_lore_your_role,[b]Ваша роль[/b]
 help_lore_border,[b]Великая Стена[/b]
 help_lore_secrets,[b]Корневой Резерв[/b]
+level_select_choices_header,Выбор до Дня {day}
+level_select_choices_header_named,Выбор до Дня {day} - {name}
+level_select_play_day,Начать этот день
+level_select_close,Закрыть
+continue_dialog_header,Ваши сохранения
+continue_dialog_day,День: {day}
+continue_dialog_continue,Продолжить
+continue_dialog_cancel,Отмена
+new_game_confirm_button,"Да, начать новую игру"
+tutorial_choice_play,Пройти обучение
+tutorial_choice_skip,Пропустить обучение
+tutorial_dialog_title,Обучение
+tutorial_dialog_text,Хотите пройти обучение?\n\nОбучение ознакомит вас с основами работы таможенника в «Spud Customs».
+continue_game_title,Продолжить игру
+level_select_story_choices,Выбор истории
+reset_progress_confirm,"Вы уверены, что хотите сбросить прогресс истории? Это действие нельзя отменить."
+reset_highscores_confirm,"Вы уверены, что хотите сбросить все рекорды? Это действие нельзя отменить."

@@ -1,0 +1,53 @@
+﻿keys,th
+achievement_unlocked_title,ปลดล็อกความสำเร็จ!
+achievements_menu_button,ความสำเร็จ
+achievements_progress_format,ปลดล็อกแล้ว %d / %d
+achievement_hidden_name,???
+achievement_hidden_desc,ความสำเร็จนี้จะถูกซ่อนไว้จนกว่าจะปลดล็อก
+achievement_category_gameplay,การเล่นเกม
+achievement_category_resistance,เส้นทางต่อต้าน
+achievement_category_loyalist,เส้นทางผู้ภักดี
+achievement_category_character,เรื่องราวตัวละคร
+achievement_category_discovery,การค้นพบ
+achievement_rookie_officer_name,เจ้าหน้าที่มือใหม่
+achievement_rookie_officer_desc,ปฏิบัติงานกะแรกที่ด่านชายแดนสำเร็จ
+achievement_veteran_officer_name,ทหารผ่านศึกศุลกากร
+achievement_veteran_officer_desc,ปฏิบัติงานกะที่ด่านชายแดนสำเร็จ 10 ครั้ง
+achievement_master_officer_name,ปรมาจารย์ศุลกากร
+achievement_master_officer_desc,ปฏิบัติงานกะที่ด่านชายแดนสำเร็จ 25 ครั้ง
+achievement_sharpshooter_name,พลแม่นปืน
+achievement_sharpshooter_desc,หยุดผู้ลักลอบข้ามแดน 10 รายด้วยระบบขีปนาวุธ
+achievement_border_defender_name,ผู้พิทักษ์ชายแดน
+achievement_border_defender_desc,หยุดผู้ลักลอบข้ามแดน 50 รายด้วยระบบขีปนาวุธ
+achievement_perfect_shot_name,ยิงเข้าเป้าสมบูรณ์แบบ
+achievement_perfect_shot_desc,ยิงผู้ลักลอบข้ามแดนเข้าเป้าสมบูรณ์แบบ 5 ครั้ง
+achievement_high_scorer_name,ผู้ทำคะแนนสูงสุด
+achievement_high_scorer_desc,ทำคะแนนได้ 10
+achievement_score_legend_name,ตำนานคะแนน
+achievement_score_legend_desc,ทำคะแนนได้ 50
+achievement_savior_of_spud_name,ผู้กอบกู้สปัด
+achievement_savior_of_spud_desc,จบเรื่องราวและกอบกู้ประเทศชาติ
+achievement_born_diplomat_name,นักการทูตโดยกำเนิด
+achievement_born_diplomat_desc,บรรลุฉากจบทางการทูตด้วยการเจรจาอย่างสันติ
+achievement_tater_of_justice_name,มันฝรั่งแห่งความยุติธรรม
+achievement_tater_of_justice_desc,นำความยุติธรรมมาสู่เจ้าหน้าที่ทุจริต
+achievement_best_served_hot_name,แก้แค้นได้ถึงใจ
+achievement_best_served_hot_desc,ล้างแค้นผู้ที่ทำผิดต่อคุณ
+achievement_down_with_tatriarchy_name,โค่นล้มมันธิปไตย
+achievement_down_with_tatriarchy_desc,นำการปฏิวัติและโค่นล้มระบอบการปกครอง
+achievement_heart_of_stone_name,ใจหิน
+achievement_heart_of_stone_desc,คงความเป็นข้าราชการที่เย็นชาและเชื่อฟังจนถึงที่สุด
+achievement_survivor_name,ผู้รอดชีวิต
+achievement_survivor_desc,ทำทุกวิถีทางเพื่อเอาชีวิตรอดจากระบอบการปกครอง
+achievement_late_bloomer_name,ผู้ที่เบ่งบานช้า
+achievement_late_bloomer_desc,ค้นพบการไถ่บาปในช่วงเวลาสุดท้าย
+achievement_tommys_legacy_name,มรดกของทอมมี่
+achievement_tommys_legacy_desc,เปิดเผยความจริงเกี่ยวกับชะตากรรมของทอมมี่
+achievement_elenas_memory_name,ความทรงจำของเอเลน่า
+achievement_elenas_memory_desc,ให้เกียรติการเสียสละของเอเลน่าและจดจำเรื่องราวของเธอ
+achievement_the_note_name,บันทึก
+achievement_the_note_desc,ค้นพบบันทึกลับและข้อความที่ซ่อนอยู่
+achievement_root_of_evil_name,รากเหง้าแห่งความชั่วร้าย
+achievement_root_of_evil_desc,เปิดโปงการทุจริตที่เป็นแก่นกลางของระบอบการปกครอง
+achievement_chaos_architect_name,สถาปนิกแห่งความโกลาหล
+achievement_chaos_architect_desc,โอบกอดความวุ่นวายและเฝ้าดูโลกมอดไหม้

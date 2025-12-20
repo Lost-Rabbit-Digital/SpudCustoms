@@ -1,0 +1,53 @@
+﻿keys,bg
+achievement_unlocked_title,ПОСТИЖЕНИЕ ОТКЛЮЧЕНО!
+achievements_menu_button,Постижения
+achievements_progress_format,%d / %d Отключени
+achievement_hidden_name,???
+achievement_hidden_desc,"Това постижение е скрито, докато не бъде отключено"
+achievement_category_gameplay,Геймплей
+achievement_category_resistance,Път на съпротивата
+achievement_category_loyalist,Път на лоялиста
+achievement_category_character,Развитие на героите
+achievement_category_discovery,Открития
+achievement_rookie_officer_name,Новобранец инспектор
+achievement_rookie_officer_desc,Завършете първата си смяна на границата
+achievement_veteran_officer_name,Митнически ветеран
+achievement_veteran_officer_desc,Завършете 10 смени на границата
+achievement_master_officer_name,Майстор на митницата
+achievement_master_officer_desc,Завършете 25 смени на границата
+achievement_sharpshooter_name,Точен стрелец
+achievement_sharpshooter_desc,Спрете 10 гранични бегълци с ракетната система
+achievement_border_defender_name,Защитник на границата
+achievement_border_defender_desc,Спрете 50 гранични бегълци с ракетната система
+achievement_perfect_shot_name,Перфектен изстрел
+achievement_perfect_shot_desc,Нанесете 5 перфектни удара на гранични бегълци
+achievement_high_scorer_name,Рекордьор
+achievement_high_scorer_desc,Постигнете резултат от 10
+achievement_score_legend_name,Легенда по точки
+achievement_score_legend_desc,Постигнете резултат от 50
+achievement_savior_of_spud_name,Спасител на Картофената нация
+achievement_savior_of_spud_desc,Завършете историята и спасете нацията
+achievement_born_diplomat_name,Роден дипломат
+achievement_born_diplomat_desc,Постигнете дипломатическия край чрез мирни преговори
+achievement_tater_of_justice_name,Картоф на справедливостта
+achievement_tater_of_justice_desc,Въздайте справедливост на корумпираните служители
+achievement_best_served_hot_name,Най-добре се сервира горещо
+achievement_best_served_hot_desc,"Отмъстете си на тези, които са ви навредили"
+achievement_down_with_tatriarchy_name,Долу Татриархията
+achievement_down_with_tatriarchy_desc,Поведете революцията и свалете режима
+achievement_heart_of_stone_name,Каменно сърце
+achievement_heart_of_stone_desc,Останете студен и покорен бюрократ докрай
+achievement_survivor_name,Оцелял
+achievement_survivor_desc,"Направете всичко необходимо, за да оцелеете при режима"
+achievement_late_bloomer_name,Късно разцъфтял
+achievement_late_bloomer_desc,Намерете изкупление в последния момент
+achievement_tommys_legacy_name,Наследството на Томи
+achievement_tommys_legacy_desc,Разкрийте истината за съдбата на Томи
+achievement_elenas_memory_name,Паметта на Елена
+achievement_elenas_memory_desc,Почетете жертвата на Елена и запомнете нейната история
+achievement_the_note_name,Бележката
+achievement_the_note_desc,Открийте тайната бележка и нейното скрито послание
+achievement_root_of_evil_name,Коренът на злото
+achievement_root_of_evil_desc,Разобличете корупцията в сърцето на режима
+achievement_chaos_architect_name,Архитект на хаоса
+achievement_chaos_architect_desc,Прегърни хаоса и гледай как светът гори

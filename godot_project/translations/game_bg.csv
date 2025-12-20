@@ -59,3 +59,58 @@ citation_trash_label,КОШЧЕ
 citation_header,ОФИЦИАЛНО ПРЕДУПРЕЖДЕНИЕ
 citation_from_supervisor,От: Надзирател Ръсет
 citation_dismiss_hint,[Плъзнете в кошчето за затваряне]
+minigame_times_up,"Времето изтече! Няма страшно, обратно на работа!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,СЪБИТИЕ С БЪРЗА РЕАКЦИЯ
+qte_instruction,Натиснете клавишите както се появяват!
+qte_auto_completed,Автоматично завършено
+qte_accessibility_note,(Достъпност за QTE активирана)
+qte_get_ready,Пригответе се...
+qte_progress,Прогрес
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} успешни (+{points} точки)
+qte_image_pending,[Изображение очаква]
+evidence_title,ПРЕДСТОИ ПРОВЕРКА ЗА СИГУРНОСТ
+evidence_instruction,"Изчистете бюрото си! Унищожете доказателства, скрийте работни предмети."
+evidence_suspicion,Подозрение: {percent}%
+evidence_items_remaining,Предмети: {count}
+evidence_times_up_found,Времето изтече! Откриха доказателствата...
+evidence_times_up_suspicious,Времето изтече! Проверката беше... щателна.
+codebreaker_title,РАЗБИВАЧ НА КОДОВЕ
+codebreaker_instruction,"Разбийте кода! Зелено = точно съвпадение, Жълто = правилна цифра на грешно място"
+codebreaker_enter_code,ВЪВЕДЕТЕ КОДА
+codebreaker_submit,ИЗПРАТИ
+codebreaker_clear,ИЗЧИСТИ
+codebreaker_previous_attempts,Предишни опити:
+codebreaker_attempts,Опити: {current} / {max}
+codebreaker_result_exact_close,{exact} точни
+codebreaker_result_exact,{exact} точно
+codebreaker_result_close,{close} близо
+codebreaker_result_none,няма съвпадения
+codebreaker_success,Кодът е разбит от {attempts} опита! +{points} точки!
+codebreaker_failure,Изчерпани опити! Кодът беше показан по-горе.
+scanner_title,СКЕНЕР ЗА ДОКУМЕНТИ
+scanner_instruction,"Плъзнете UV лампата, за да намерите скрити знаци! Кликнете за потвърждение."
+scanner_found,Намерени: {current} / {total}
+scanner_perfect,Перфектно! Всички елементи са намерени! +{points} точки!
+scanner_partial,Добро усилие! Намерени {found}/{total}. +{points} точки!
+chase_title,ГРАНИЧНО ПРЕСЛЕДВАНЕ
+chase_instruction,Кликнете върху ЧЕРВЕНИТЕ контрабандни предмети! Оставете ЗЕЛЕНИТЕ предмети да преминат.
+chase_legend,ЧЕРВЕНО = Хвани!   ЗЕЛЕНО = Пусни!
+chase_caught,Хванати: {current} / {total}
+chase_perfect,Перфектен улов! +{points} точки!
+chase_partial,Хванати {count} предмета. +{points} точки!
+sorting_title,СОРТИРАНЕ НА ПЕЧАТИ
+sorting_instruction,"Плъзнете печатите в правилния кош! Зелено = ОДОБРЕНО, Червено = ОТХВЪРЛЕНО"
+sorting_approved,ОДОБРЕНО
+sorting_denied,ОТХВЪРЛЕНО
+sorting_progress,Сортирани: {sorted}/{total}  Верни: {correct}
+sorting_perfect,Перфектно сортиране! +{points} точки!
+sorting_partial,Сортирани {correct}/{total} правилно. +{points} точки!
+fingerprint_title,СЪВПАДЕНИЕ НА ОТПЕЧАТЪЦИ
+fingerprint_instruction,"Намерете отпечатъка, който съвпада с еталона!"
+fingerprint_reference,ЕТАЛОН
+fingerprint_find_match,НАМЕРИ СЪВПАДЕНИЕТО
+fingerprint_progress,Съвпаднали: {current} / {total}
+fingerprint_success,Всички отпечатъци съвпаднаха! +{points} точки!
+fingerprint_partial,Съвпаднали {matched}/{total}. +{points} точки!

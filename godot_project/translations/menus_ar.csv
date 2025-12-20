@@ -162,3 +162,20 @@ help_lore_nation,"[b]أمة سبود[/b]\n\nسبود أمة فخورة تعد ب
 help_lore_your_role,[b]دورك[/b]\n\nلقد تم اختيارك لدور حاسم في حماية الحدود. بصفتك ضابط جمارك، تعمل تحت المراقبة اليقظة للمشرف راسيت.\n\nرفاهيتك تعتمد على أدائك. حقق حصصك، اتبع القواعد، وتذكر: الأمة تعتمد عليك.
 help_lore_border,[b]السور العظيم[/b]\n\nسور سبود العظيم يحمي الأمة من الغرباء. عند نقاط تفتيش مختلفة على طول السور، يضمن ضباط مثلك أن يدخل الجديرون فقط.\n\nأولئك الذين يحاولون عبور الحدود دون وثائق مناسبة يواجهون عواقب فورية.
 help_lore_secrets,[b]احتياطي الجذور[/b]\n\nالبطاطا المرفوضة يتم... معالجتها. وفقًا للبروتوكول. احتياطي الجذور الغامض يتولى جميع التفاصيل.\n\nمن الأفضل عدم طرح الكثير من الأسئلة. ركز على واجباتك. لا شيء أكثر.
+level_select_choices_header,الخيارات حتى اليوم {day}
+level_select_choices_header_named,الخيارات حتى اليوم {day} - {name}
+level_select_play_day,العب هذا اليوم
+level_select_close,إغلاق
+continue_dialog_header,بيانات حفظك
+continue_dialog_day,اليوم: {day}
+continue_dialog_continue,متابعة
+continue_dialog_cancel,إلغاء
+new_game_confirm_button,نعم، ابدأ لعبة جديدة
+tutorial_choice_play,العب الدرس التعليمي
+tutorial_choice_skip,تخطي الدرس التعليمي
+tutorial_dialog_title,الدرس التعليمي
+tutorial_dialog_text,هل ترغب في لعب الدرس التعليمي؟ \n\nسيرشدك الدرس التعليمي خلال أساسيات كونك ضابط جمارك في جمارك البطاطس.
+continue_game_title,متابعة اللعبة
+level_select_story_choices,خيارات القصة
+reset_progress_confirm,هل أنت متأكد أنك تريد إعادة تعيين تقدم القصة؟ لا يمكن التراجع عن هذا.
+reset_highscores_confirm,هل أنت متأكد أنك تريد إعادة تعيين جميع النتائج العالية؟ لا يمكن التراجع عن هذا.

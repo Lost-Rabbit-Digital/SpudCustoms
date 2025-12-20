@@ -59,3 +59,58 @@ citation_trash_label,ROSKAKORI
 citation_header,VIRALLINEN HUOMAUTUS
 citation_from_supervisor,Lähettäjä: Esimies Russet
 citation_dismiss_hint,[Vedä roskakoriin hylätäksesi]
+minigame_times_up,"Aika loppui! Ei hätää, takaisin töihin!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,NOPEA TAPAHTUMA
+qte_instruction,Paina näppäimiä niiden ilmestyessä!
+qte_auto_completed,Automaattisesti suoritettu
+qte_accessibility_note,(QTE-esteettömyys käytössä)
+qte_get_ready,Valmistaudu...
+qte_progress,Edistyminen
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} onnistunutta (+{points} pistettä)
+qte_image_pending,[Kuva tulossa]
+evidence_title,VÄLITÖN TURVATARKASTUS
+evidence_instruction,"Tyhjennä työpöytäsi! Silppua todisteet, kätke työtavarat."
+evidence_suspicion,Epäily: {percent}%
+evidence_items_remaining,Esineet: {count}
+evidence_times_up_found,Aika loppui! He löysivät todisteet...
+evidence_times_up_suspicious,Aika loppui! Tarkastus oli... perusteellinen.
+codebreaker_title,KOODINMURTO
+codebreaker_instruction,"Murra koodi! Vihreä = täsmällinen osuma, Keltainen = oikea numero väärässä paikassa"
+codebreaker_enter_code,SYÖTÄ KOODI
+codebreaker_submit,LÄHETÄ
+codebreaker_clear,TYHJENNÄ
+codebreaker_previous_attempts,Edelliset yritykset:
+codebreaker_attempts,Yritykset: {current} / {max}
+codebreaker_result_exact_close,{exact} täsmällistä
+codebreaker_result_exact,{exact} tarkka
+codebreaker_result_close,{close} lähellä
+codebreaker_result_none,ei osumia
+codebreaker_success,Koodi murrettu {attempts} yrityksellä! +{points} pistettä!
+codebreaker_failure,Yritykset loppuivat! Koodi näytettiin yllä.
+scanner_title,ASIAKIRJASKANNERI
+scanner_instruction,Vedä UV-valoa löytääksesi piilotetut merkit! Vahvista napsauttamalla.
+scanner_found,Löydetty: {current} / {total}
+scanner_perfect,Täydellistä! Kaikki elementit löydetty! +{points} pistettä!
+scanner_partial,Hyvä yritys! Löydetty {found}/{total}. +{points} pistettä!
+chase_title,RAJAJAHTI
+chase_instruction,Napsauta PUNAISET salakuljetusesineet! Anna VIHREIDEN esineiden kulkea.
+chase_legend,PUNAINEN = Kiinni! VIHREÄ = Anna kulkea
+chase_caught,Kiinni saatu: {current} / {total}
+chase_perfect,Täydellinen saalis! +{points} pistettä!
+chase_partial,{count} esinettä saatu kiinni. +{points} pistettä!
+sorting_title,LEIMALAJITTELU
+sorting_instruction,"Vedä leimat oikeaan astiaan! Vihreä = HYVÄKSYTTY, Punainen = HYLÄTTY"
+sorting_approved,HYVÄKSYTTY
+sorting_denied,HYLÄTTY
+sorting_progress,Lajiteltu: {sorted}/{total} Oikein: {correct}
+sorting_perfect,Täydellinen lajittelu! +{points} pistettä!
+sorting_partial,Lajiteltu {correct}/{total} oikein. +{points} pistettä!
+fingerprint_title,SORMENJÄLKIEN SOVITUS
+fingerprint_instruction,"Etsi sormenjälki, joka vastaa viitettä!"
+fingerprint_reference,VIITE
+fingerprint_find_match,ETSI VASTINE
+fingerprint_progress,Täsmätty: {current} / {total}
+fingerprint_success,Kaikki sormenjäljet täsmäsivät! +{points} pistettä!
+fingerprint_partial,Täsmätty {matched}/{total}. +{points} pistettä!

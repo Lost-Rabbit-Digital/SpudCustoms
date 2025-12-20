@@ -59,3 +59,58 @@ citation_trash_label,PAPPERSKORG
 citation_header,OFFICIELL VARNING
 citation_from_supervisor,Från: Övervakare Russet
 citation_dismiss_hint,[Dra till papperskorgen för att stänga]
+minigame_times_up,"Tiden är ute! Inga problem, tillbaka till jobbet!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,SNABBTIDSHÄNDELSE
+qte_instruction,Tryck på tangenterna när de visas!
+qte_auto_completed,Automatiskt slutförd
+qte_accessibility_note,(QTE-tillgänglighet aktiverad)
+qte_get_ready,Gör dig redo...
+qte_progress,Framsteg
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} lyckade (+{points} poäng)
+qte_image_pending,[Bild väntar]
+evidence_title,SÄKERHETSINSPEKTION FÖRESTÅENDE
+evidence_instruction,"Rensa ditt skrivbord! Makulera bevis, göm arbetsföremål."
+evidence_suspicion,Misstanke: {percent}%
+evidence_items_remaining,Föremål: {count}
+evidence_times_up_found,Tiden är ute! De hittade bevisen...
+evidence_times_up_suspicious,Tiden är ute! Inspektionen var... grundlig.
+codebreaker_title,KODKNÄCKARE
+codebreaker_instruction,"Knäck koden! Grön = exakt matchning, Gul = rätt siffra fel plats"
+codebreaker_enter_code,ANGE KODEN
+codebreaker_submit,SKICKA
+codebreaker_clear,RENSA
+codebreaker_previous_attempts,Tidigare försök:
+codebreaker_attempts,Försök: {current} / {max}
+codebreaker_result_exact_close,{exact} exakta
+codebreaker_result_exact,{exact} exakta
+codebreaker_result_close,{close} nära
+codebreaker_result_none,inga träffar
+codebreaker_success,Kod knäckt på {attempts} försök! +{points} poäng!
+codebreaker_failure,Slut på försök! Koden visades ovan.
+scanner_title,DOKUMENTSKÄNNARE
+scanner_instruction,Dra UV-ljuset för att hitta dolda märken! Klicka för att bekräfta.
+scanner_found,Hittat: {current} / {total}
+scanner_perfect,Perfekt! Alla element hittade! +{points} poäng!
+scanner_partial,Bra försök! Hittade {found}/{total}. +{points} poäng!
+chase_title,GRÄNSJAKT
+chase_instruction,Klicka på de RÖDA smuggelobjekten! Låt de GRÖNA objekten passera.
+chase_legend,RÖD = Fånga!   GRÖN = Låt passera
+chase_caught,Fångade: {current} / {total}
+chase_perfect,Perfekt fångst! +{points} poäng!
+chase_partial,Fångade {count} objekt. +{points} poäng!
+sorting_title,STÄMPELSORTERING
+sorting_instruction,"Dra stämplarna till rätt fack! Grön = GODKÄND, Röd = NEKAD"
+sorting_approved,GODKÄND
+sorting_denied,NEKAD
+sorting_progress,Sorterade: {sorted}/{total} Rätt: {correct}
+sorting_perfect,Perfekt sortering! +{points} poäng!
+sorting_partial,Sorterade {correct}/{total} korrekt. +{points} poäng!
+fingerprint_title,FINGERAVTRYCKSMATCHNING
+fingerprint_instruction,Hitta fingeravtrycket som matchar referensen!
+fingerprint_reference,REFERENS
+fingerprint_find_match,HITTA MATCHNINGEN
+fingerprint_progress,Matchade: {current} / {total}
+fingerprint_success,Alla fingeravtryck matchade! +{points} poäng!
+fingerprint_partial,Matchade {matched}/{total}. +{points} poäng!

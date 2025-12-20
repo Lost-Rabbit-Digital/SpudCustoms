@@ -59,3 +59,58 @@ citation_trash_label,PAPELERA
 citation_header,CITACIÓN OFICIAL
 citation_from_supervisor,De: Supervisor Russet
 citation_dismiss_hint,[Arrastrar a la papelera para descartar]
+minigame_times_up,"¡Se acabó el tiempo! ¡No te preocupes, de vuelta al trabajo!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,EVENTO DE TIEMPO RÁPIDO
+qte_instruction,¡Pulsa las teclas a medida que aparecen!
+qte_auto_completed,Completado automáticamente
+qte_accessibility_note,(Accesibilidad QTE activada)
+qte_get_ready,Prepárate...
+qte_progress,Progreso
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} aciertos (+{points} puntos)
+qte_image_pending,[Imagen Pendiente]
+evidence_title,INSPECCIÓN DE SEGURIDAD INMINENTE
+evidence_instruction,"¡Despeja tu escritorio! Tritura pruebas, esconde objetos de trabajo."
+evidence_suspicion,Sospecha: {percent}%
+evidence_items_remaining,Objetos: {count}
+evidence_times_up_found,¡Se acabó el tiempo! Encontraron las pruebas...
+evidence_times_up_suspicious,¡Se acabó el tiempo! La inspección fue... minuciosa.
+codebreaker_title,ROMPE CÓDIGOS
+codebreaker_instruction,"¡Descifra el código! Verde = coincidencia exacta, Amarillo = dígito correcto en lugar incorrecto"
+codebreaker_enter_code,INTRODUCE EL CÓDIGO
+codebreaker_submit,ENVIAR
+codebreaker_clear,BORRAR
+codebreaker_previous_attempts,Intentos Anteriores:
+codebreaker_attempts,Intentos: {current} / {max}
+codebreaker_result_exact_close,{exact} exactos
+codebreaker_result_exact,{exact} exacto
+codebreaker_result_close,{close} cerca
+codebreaker_result_none,ninguna coincidencia
+codebreaker_success,Código descifrado en {attempts} intentos! +{points} puntos!
+codebreaker_failure,¡Se acabaron los intentos! El código se mostró arriba.
+scanner_title,ESCÁNER DE DOCUMENTOS
+scanner_instruction,Arrastra la luz UV para encontrar marcas ocultas! Haz clic para confirmar.
+scanner_found,Encontrado: {current} / {total}
+scanner_perfect,¡Perfecto! ¡Todos los elementos encontrados! +{points} puntos!
+scanner_partial,¡Buen esfuerzo! Encontraste {found}/{total}. +{points} puntos!
+chase_title,PERSECUCIÓN FRONTERIZA
+chase_instruction,¡Haz clic en los artículos de contrabando ROJOS! Deja pasar los artículos VERDES.
+chase_legend,ROJO = ¡Atrapar! VERDE = Dejar pasar
+chase_caught,Atrapados: {current} / {total}
+chase_perfect,¡Captura perfecta! +{points} puntos!
+chase_partial,Atrapaste {count} artículos. +{points} puntos!
+sorting_title,CLASIFICACIÓN DE SELLOS
+sorting_instruction,"¡Arrastra los sellos al contenedor correcto! Verde = APROBADO, Rojo = DENEGADO"
+sorting_approved,APROBADO
+sorting_denied,DENEGADO
+sorting_progress,Clasificados: {sorted}/{total} Correctos: {correct}
+sorting_perfect,¡Clasificación perfecta! +{points} puntos!
+sorting_partial,Clasificaste {correct}/{total} correctamente. +{points} puntos!
+fingerprint_title,COINCIDENCIA DE HUELLAS DACTILARES
+fingerprint_instruction,¡Encuentra la huella dactilar que coincida con la referencia!
+fingerprint_reference,REFERENCIA
+fingerprint_find_match,ENCONTRAR LA COINCIDENCIA
+fingerprint_progress,Coincidencias: {current} / {total}
+fingerprint_success,¡Todas las huellas dactilares coinciden! ¡+{points} puntos!
+fingerprint_partial,Coincidencias {matched}/{total}. ¡+{points} puntos!

@@ -59,3 +59,58 @@ citation_trash_label,KÔŠ
 citation_header,ÚRADNÁ CITÁCIA
 citation_from_supervisor,Od: Supervízor Russet
 citation_dismiss_hint,[Presuňte do koša na zatvorenie]
+minigame_times_up,"Čas vypršal! Žiadne obavy, späť do práce!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,RÝCHLA UDALOSŤ
+qte_instruction,"Stláčajte klávesy tak, ako sa objavia!"
+qte_auto_completed,Automaticky dokončené
+qte_accessibility_note,(Prístupnosť QTE povolená)
+qte_get_ready,Pripravte sa...
+qte_progress,Postup
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} úspešných (+{points} bodov)
+qte_image_pending,[Obrázok čaká]
+evidence_title,BEZPEČNOSTNÁ INŠPEKCIA SA BLÍŽI
+evidence_instruction,"Upratajte si stôl! Skartujte dôkazy, ukryte pracovné predmety."
+evidence_suspicion,Podozrenie: {percent}%
+evidence_items_remaining,Predmety: {count}
+evidence_times_up_found,Čas vypršal! Našli dôkazy...
+evidence_times_up_suspicious,Čas vypršal! Inšpekcia bola... dôkladná.
+codebreaker_title,LÚŠTIČ KÓDU
+codebreaker_instruction,"Rozlúštite kód! Zelená = presná zhoda, Žltá = správna číslica, nesprávne miesto"
+codebreaker_enter_code,ZADAJTE KÓD
+codebreaker_submit,ODOSLAŤ
+codebreaker_clear,VYMAZAŤ
+codebreaker_previous_attempts,Predchádzajúce pokusy:
+codebreaker_attempts,Pokusy: {current} / {max}
+codebreaker_result_exact_close,{exact} presných
+codebreaker_result_exact,{exact} presne
+codebreaker_result_close,{close} blízko
+codebreaker_result_none,žiadne zhody
+codebreaker_success,Kód rozlúštený za {attempts} pokusov! +{points} bodov!
+codebreaker_failure,Došli pokusy! Kód bol zobrazený vyššie.
+scanner_title,SKENER DOKUMENTOV
+scanner_instruction,"Potiahnite UV svetlo, aby ste našli skryté značky! Kliknite pre potvrdenie."
+scanner_found,Nájdené: {current} / {total}
+scanner_perfect,Perfektné! Všetky prvky nájdené! +{points} bodov!
+scanner_partial,Dobrý pokus! Nájdených {found}/{total}. +{points} bodov!
+chase_title,HRANIČNÁ NAHÁŇAČKA
+chase_instruction,Kliknite na ČERVENÉ pašované predmety! ZELENÉ predmety nechajte prejsť.
+chase_legend,ČERVENÁ = Chyť! ZELENÁ = Nechaj prejsť
+chase_caught,Chytených: {current} / {total}
+chase_perfect,Perfektný úlovok! +{points} bodov!
+chase_partial,Chytených {count} predmetov. +{points} bodov!
+sorting_title,TRIEDENIE PEČIATOK
+sorting_instruction,"Potiahnite pečiatky do správneho koša! Zelená = SCHVÁLENÉ, Červená = ZAMIETNUTÉ"
+sorting_approved,SCHVÁLENÉ
+sorting_denied,ZAMIETNUTÉ
+sorting_progress,Roztriedených: {sorted}/{total} Správne: {correct}
+sorting_perfect,Perfektné triedenie! +{points} bodov!
+sorting_partial,Správne roztriedených {correct}/{total}. +{points} bodov!
+fingerprint_title,ZHODA ODTLAČKOV PRSTOV
+fingerprint_instruction,"Nájdite odtlačok prsta, ktorý sa zhoduje s referenciou!"
+fingerprint_reference,VZOR
+fingerprint_find_match,NÁJDITE ZHODU
+fingerprint_progress,Nájdených: {current} / {total}
+fingerprint_success,Všetky odtlačky prstov sa zhodujú! +{points} bodov!
+fingerprint_partial,Nájdených {matched}/{total}. +{points} bodov!

@@ -31,3 +31,16 @@ Text/172/text,La sécurité de Spud dépend de votre [pulse freq=2][color=DARK_O
 Text/174/text,Commençons votre [color=YELLOW]service de formation[/color]...
 Text/180/text,Mais attention - toutes les pommes de terre n'ont pas leurs papiers en règle.
 Text/181/text,[color=RED]Passeports périmés[/color] sont un rejet automatique. Aucune exception.
+Text/tut_001/text,Bienvenue à [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs ![/color][/pulse]
+Text/tut_002/text,Vous avez été sélectionné pour un rôle vital : [color=DARK_ORANGE]Agent des Douanes Frontalières[/color].
+Text/tut_003/text,"Votre travail est simple. Des pommes de terre arrivent à votre guichet, vous vérifiez leurs documents, et vous décidez qui passe."
+Text/tut_004/text,Mais soyez prudent - toutes les pommes de terre n'ont pas leurs papiers en règle.
+Text/tut_005/text,Les [color=RED]passeports expirés[/color] entraînent un rejet automatique. Aucune exception.
+Text/tut_006/text,Je vais vous guider à travers les bases [color=YELLOW]étape par étape[/color]. Suivez les instructions et vous prendrez le coup de main.
+Text/tut_007/text,[pulse freq=2][color=RED]Une dernière chose ![/color][/pulse] Certaines pommes de terre essaieront de [color=CRIMSON]s'enfuir[/color] quand elles penseront que leurs papiers ne passeront pas l'inspection.
+Text/tut_008/text,"Quand un [color=RED]fugitif frontalier[/color] essaie de s'échapper, vous le verrez foncer devant votre guichet vers la frontière."
+Text/tut_009/text,C'est là que votre [color=CHARTREUSE]Lanceur de Missiles Pneumatique[/color] entre en jeu. C'est le gros bouton sur votre panneau de contrôle.
+Text/tut_010/text,[color=YELLOW]Cliquez pour tirer[/color] quand un fugitif est à portée. Visez le [color=GOLD]centre de la zone cible[/color] pour des points bonus !
+Text/tut_011/text,Mais soyez prudent - [color=RED]ne frappez pas les pommes de terre innocentes[/color] dans la file d'attente. Cela vous coûtera des points et vous vaudra une pénalité !
+Text/tut_012/text,La sûreté et la sécurité de Spud dépendent de votre [pulse freq=2][color=DARK_ORANGE]vigilance ![/color][/pulse]
+Text/tut_013/text,Commençons votre [color=YELLOW]quart d'entraînement[/color]...

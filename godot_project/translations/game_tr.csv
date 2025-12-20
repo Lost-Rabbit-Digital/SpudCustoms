@@ -59,3 +59,58 @@ citation_trash_label,ÇÖP
 citation_header,RESMİ UYARI
 citation_from_supervisor,Kimden: Müfettiş Russet
 citation_dismiss_hint,[Kapatmak için çöpe sürükleyin]
+minigame_times_up,"Süre doldu! Merak etme, iş başına!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,HIZLI ZAMAN ETKİNLİĞİ
+qte_instruction,Tuşlar göründükçe basın!
+qte_auto_completed,Otomatik Tamamlandı
+qte_accessibility_note,(QTE Erişilebilirliği etkin)
+qte_get_ready,Hazır ol...
+qte_progress,İlerleme
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} başarılı (+{points} puan)
+qte_image_pending,[Görsel Bekleniyor]
+evidence_title,GÜVENLİK DENETİMİ KAPIDA
+evidence_instruction,"Masanı temizle! Kanıtları imha et, çalışma eşyalarını sakla."
+evidence_suspicion,Şüphe: %{percent}
+evidence_items_remaining,Eşyalar: {count}
+evidence_times_up_found,Süre doldu! Kanıtları buldular...
+evidence_times_up_suspicious,Süre doldu! Denetim... titizdi.
+codebreaker_title,ŞİFRE KIRICI
+codebreaker_instruction,"Şifreyi kır! Yeşil = tam eşleşme, Sarı = doğru rakam yanlış yer"
+codebreaker_enter_code,ŞİFREYİ GİRİN
+codebreaker_submit,GÖNDER
+codebreaker_clear,TEMİZLE
+codebreaker_previous_attempts,Önceki Denemeler:
+codebreaker_attempts,Denemeler: {current} / {max}
+codebreaker_result_exact_close,{exact} tam
+codebreaker_result_exact,{exact} tam
+codebreaker_result_close,{close} yakın
+codebreaker_result_none,eşleşme yok
+codebreaker_success,Kod {attempts} denemede kırıldı! +{points} puan!
+codebreaker_failure,Denemeler tükendi! Kod yukarıda gösterildi.
+scanner_title,BELGE TARAYICI
+scanner_instruction,Gizli işaretleri bulmak için UV ışığını sürükle! Onaylamak için tıkla.
+scanner_found,Bulundu: {current} / {total}
+scanner_perfect,Mükemmel! Tüm öğeler bulundu! +{points} puan!
+scanner_partial,İyi iş! {found}/{total} bulundu. +{points} puan!
+chase_title,SINIR KOVALAMACASI
+chase_instruction,KIRMIZI kaçak eşyalara tıkla! YEŞİL eşyaların geçmesine izin ver.
+chase_legend,KIRMIZI = Yakala! YEŞİL = Geçmesine İzin Ver
+chase_caught,Yakalandı: {current} / {total}
+chase_perfect,Mükemmel yakalama! +{points} puan!
+chase_partial,{count} eşya yakalandı. +{points} puan!
+sorting_title,MÜHÜR AYIRMA
+sorting_instruction,"Mühürleri doğru kutuya sürükle! Yeşil = ONAYLANDI, Kırmızı = REDDEDİLDİ"
+sorting_approved,ONAYLANDI
+sorting_denied,REDDEDİLDİ
+sorting_progress,Ayıklandı: {sorted}/{total} Doğru: {correct}
+sorting_perfect,Mükemmel ayırma! +{points} puan!
+sorting_partial,{correct}/{total} doğru ayıklandı. +{points} puan!
+fingerprint_title,PARMAK İZİ EŞLEŞTİRME
+fingerprint_instruction,Referansla eşleşen parmak izini bul!
+fingerprint_reference,REFERANS
+fingerprint_find_match,EŞLEŞENİ BUL
+fingerprint_progress,Eşleşen: {current} / {total}
+fingerprint_success,Tüm parmak izleri eşleşti! +{points} puan!
+fingerprint_partial,{matched}/{total} eşleşti. +{points} puan!

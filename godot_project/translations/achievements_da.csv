@@ -1,0 +1,53 @@
+﻿keys,da
+achievement_unlocked_title,BEDRIFT LÅST OP!
+achievements_menu_button,Bedrifter
+achievements_progress_format,%d / %d Låst op
+achievement_hidden_name,???
+achievement_hidden_desc,"Denne bedrift er skjult, indtil den låses op"
+achievement_category_gameplay,Gameplay
+achievement_category_resistance,Modstandssti
+achievement_category_loyalist,Loyaliststi
+achievement_category_character,Karakterforløb
+achievement_category_discovery,Opdagelse
+achievement_rookie_officer_name,Nybetjent
+achievement_rookie_officer_desc,Gennemfør din første vagt ved grænsen
+achievement_veteran_officer_name,Toldveteran
+achievement_veteran_officer_desc,Gennemfør 10 vagter ved grænsen
+achievement_master_officer_name,Toldmester
+achievement_master_officer_desc,Gennemfør 25 vagter ved grænsen
+achievement_sharpshooter_name,Skarpskytte
+achievement_sharpshooter_desc,Stop 10 grænseløbere med missilsystemet
+achievement_border_defender_name,Grænseforsvarer
+achievement_border_defender_desc,Stop 50 grænseløbere med missilsystemet
+achievement_perfect_shot_name,Perfekt Skud
+achievement_perfect_shot_desc,Ram 5 perfekte træffere på grænseløbere
+achievement_high_scorer_name,Højscorer
+achievement_high_scorer_desc,Opnå en score på 10
+achievement_score_legend_name,Scorelegende
+achievement_score_legend_desc,Opnå en score på 50
+achievement_savior_of_spud_name,Spuds Frelser
+achievement_savior_of_spud_desc,Gennemfør historien og red nationen
+achievement_born_diplomat_name,Født Diplomat
+achievement_born_diplomat_desc,Opnå den diplomatiske slutning gennem fredelig forhandling
+achievement_tater_of_justice_name,Retfærdighedens Kartoffel
+achievement_tater_of_justice_desc,Bring retfærdighed til de korrupte embedsmænd
+achievement_best_served_hot_name,Bedst serveret varm
+achievement_best_served_hot_desc,"Tag hævn over dem, der gjorde dig uret"
+achievement_down_with_tatriarchy_name,Ned med Tatriarkiet
+achievement_down_with_tatriarchy_desc,Led revolutionen og omstyr styret
+achievement_heart_of_stone_name,Hjerte af sten
+achievement_heart_of_stone_desc,Forbliv en kold og lydig bureaukrat til det sidste
+achievement_survivor_name,Overlever
+achievement_survivor_desc,Gør hvad der skal til for at overleve styret
+achievement_late_bloomer_name,Sen Blomstrer
+achievement_late_bloomer_desc,Find forløsning i sidste øjeblik
+achievement_tommys_legacy_name,Tommys Arv
+achievement_tommys_legacy_desc,Afdæk sandheden om Tommys skæbne
+achievement_elenas_memory_name,Elenas Minde
+achievement_elenas_memory_desc,Ær Elenas offer og husk hendes historie
+achievement_the_note_name,Noten
+achievement_the_note_desc,Opdag den hemmelige note og dens skjulte budskab
+achievement_root_of_evil_name,Ondskabens Rod
+achievement_root_of_evil_desc,Afslør korruptionen i hjertet af styret
+achievement_chaos_architect_name,Kaosarkitekt
+achievement_chaos_architect_desc,Omfavn kaos og se verden brænde

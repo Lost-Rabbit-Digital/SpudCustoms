@@ -31,3 +31,16 @@ Text/172/text,A Spud biztonsága az Ön [pulse freq=2][color=DARK_ORANGE]ébers�
 Text/174/text,Kezdjük el a [color=YELLOW]betanuló műszakodat[/color]...
 Text/180/text,De légy óvatos - nem minden burgonyának vannak rendben a papírjai.
 Text/181/text,[color=RED]Lejárt útlevelek[/color] automatikus elutasítás. Nincs kivétel.
+Text/tut_001/text,Üdvözöljük a [pulse freq=2][color=MEDIUM_VIOLET_RED]Krumpli Vámhivatalban![/color][/pulse]
+Text/tut_002/text,Önt egy létfontosságú szerepre választották ki: [color=DARK_ORANGE]Határőrségi Tiszt[/color].
+Text/tut_003/text,"A feladata egyszerű. Krumplik érkeznek a fülkéjéhez, ellenőrzi az irataikat, és eldönti, ki juthat át."
+Text/tut_004/text,De legyen óvatos - nem minden krumpli iratai vannak rendben.
+Text/tut_005/text,[color=RED]Lejárt útlevelek[/color] automatikus elutasítást jelentenek. Nincs kivétel.
+Text/tut_006/text,"Végigvezetem az alapokon [color=YELLOW]lépésről lépésre[/color]. Kövesse az utasításokat, és belejön."
+Text/tut_007/text,"[pulse freq=2][color=RED]Még egy dolog![/color][/pulse] Néhány krumpli megpróbál [color=CRIMSON]megszökni[/color], amikor azt hiszik, az irataik nem mennek át az ellenőrzésen."
+Text/tut_008/text,"Amikor egy [color=RED]határszökő[/color] megpróbál elmenekülni, látni fogja, ahogy elrohannak a fülkéje mellett a határ felé."
+Text/tut_009/text,Itt jön képbe a [color=CHARTREUSE]Pneumatikus Rakétavetője[/color]. Ez a nagy gomb a vezérlőpultján.
+Text/tut_010/text,"[color=YELLOW]Kattintson a tüzeléshez[/color], amikor egy szökő a hatótávolságon belül van. Célozza meg a [color=GOLD]célzóna közepét[/color] bónusz pontokért!"
+Text/tut_011/text,"De legyen óvatos - [color=RED]ne találjon el ártatlan krumplikat[/color] a sorban. Ez pontokba fog kerülni, és egy büntetést von maga után!"
+Text/tut_012/text,Spud biztonsága az Ön [pulse freq=2][color=DARK_ORANGE]éberségén múlik![/color][/pulse]
+Text/tut_013/text,Kezdjük el a [color=YELLOW]kiképzési műszakját[/color]...

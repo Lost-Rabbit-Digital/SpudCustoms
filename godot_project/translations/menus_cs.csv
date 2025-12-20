@@ -174,3 +174,20 @@ help_lore_nation,"[b]Národ Brambor[/b]\n\nBramborie je hrdý národ, který sli
 help_lore_your_role,"[b]Vaše role[/b]\n\nByl jste vybrán pro klíčovou roli v ochraně hranic. Jako celní úředník pracujete pod bedlivým dohledem dozorce Russeta.\n\nVáš blahobyt závisí na vašem výkonu. Plňte své kvóty, dodržujte pravidla a pamatujte: národ s vámi počítá."
 help_lore_border,"[b]Velká zeď[/b]\n\nMocná Velká bramborová zeď chrání národ před cizinci. Na různých kontrolních stanovištích podél zdi zajišťují úředníci jako vy, aby vstoupit mohli jen ti hodní.\n\nTi, kdo se pokusí překročit hranici bez řádných dokladů, čelí okamžitým následkům."
 help_lore_secrets,[b]Kořenová rezerva[/b]\n\nZamítnuté brambory jsou... zpracovány. Dle protokolu. Tajemná Kořenová rezerva se postará o všechny detaily.\n\nJe lepší se moc neptat. Soustřeďte se na své povinnosti. Nic víc.
+level_select_choices_header,Možnosti do dne {day}
+level_select_choices_header_named,Možnosti do dne {day} - {name}
+level_select_play_day,Hrát tento den
+level_select_close,Zavřít
+continue_dialog_header,Vaše uložená data
+continue_dialog_day,Den: {day}
+continue_dialog_continue,Pokračovat
+continue_dialog_cancel,Zrušit
+new_game_confirm_button,"Ano, začít novou hru"
+tutorial_choice_play,Hrát tutoriál
+tutorial_choice_skip,Přeskočit tutoriál
+tutorial_dialog_title,Tutoriál
+tutorial_dialog_text,Chcete si zahrát tutoriál?\n\nTutoriál vás provede základy práce celníka na Spud Customs.
+continue_game_title,Pokračovat ve hře
+level_select_story_choices,Příběhové volby
+reset_progress_confirm,"Jste si jisti, že chcete resetovat postup v příběhu? Tuto akci nelze vrátit zpět."
+reset_highscores_confirm,"Jste si jisti, že chcete resetovat všechna nejvyšší skóre? Tuto akci nelze vrátit zpět."

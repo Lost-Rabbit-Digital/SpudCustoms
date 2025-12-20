@@ -31,3 +31,16 @@ Text/172/text,Siguranța și securitatea Spud depinde de [pulse freq=2][color=DA
 Text/174/text,Să începem [color=YELLOW]tura ta de instruire[/color]...
 Text/180/text,Dar ai grijă - nu fiecare cartof are actele în regulă.
 Text/181/text,[color=RED]Pașapoartele expirate[/color] sunt o respingere automată. Fără excepții.
+Text/tut_001/text,Bun venit la [pulse freq=2][color=MEDIUM_VIOLET_RED]Vama Cartofilor![/color][/pulse]
+Text/tut_002/text,Ați fost selectat pentru un rol vital: [color=DARK_ORANGE]Ofițer Vamal de Frontieră[/color].
+Text/tut_003/text,"Munca dumneavoastră este simplă. Cartofii sosesc la ghișeul dumneavoastră, le verificați documentele și decideți cine trece."
+Text/tut_004/text,Dar fiți atent - nu toți cartofii au actele în regulă.
+Text/tut_005/text,[color=RED]Pașapoartele expirate[/color] duc la o respingere automată. Fără excepții.
+Text/tut_006/text,Vă voi ghida prin elementele de bază [color=YELLOW]pas cu pas[/color]. Urmați instrucțiunile și vă veți obișnui.
+Text/tut_007/text,[pulse freq=2][color=RED]Încă ceva![/color][/pulse] Unii cartofi vor încerca să [color=CRIMSON]o ia la fugă[/color] când cred că actele lor nu vor trece de inspecție.
+Text/tut_008/text,"Când un [color=RED]fugar de frontieră[/color] încearcă să scape, îi veți vedea fugind pe lângă ghișeul dumneavoastră spre graniță."
+Text/tut_009/text,Aici intervine [color=CHARTREUSE]Lansatorul dumneavoastră Pneumatic de Rachete[/color]. Este butonul mare de pe panoul dumneavoastră de control.
+Text/tut_010/text,[color=YELLOW]Clic pentru a trage[/color] când un fugar este în rază. Țintiți spre [color=GOLD]centrul zonei țintă[/color] pentru puncte bonus!
+Text/tut_011/text,Dar fiți atent - [color=RED]nu loviți cartofi nevinovați[/color] din coadă. Asta vă va costa puncte și vă va aduce o penalizare!
+Text/tut_012/text,Siguranța și securitatea Cartofiei depinde de [pulse freq=2][color=DARK_ORANGE]vigilența[/color][/pulse] dumneavoastră!
+Text/tut_013/text,Să începem [color=YELLOW]tura dumneavoastră de antrenament[/color]...

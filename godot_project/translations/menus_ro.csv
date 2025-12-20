@@ -174,3 +174,20 @@ help_lore_nation,"[b]Națiunea Spud[/b]\n\nSpud este o națiune mândră care pr
 help_lore_your_role,"[b]Rolul Tău[/b]\n\nAi fost selectat pentru un rol crucial în protejarea granițelor. Ca Ofițer Vamal, lucrezi sub ochiul vigilent al Supervizorului Russet.\n\nBunăstarea ta depinde de performanța ta. Îndeplinește-ți cotele, respectă regulile și nu uita: națiunea se bazează pe tine."
 help_lore_border,"[b]Marele Zid[/b]\n\nMărețul Zid al Spud apără națiunea de străini. La diverse puncte de control de-a lungul zidului, ofițeri ca tine se asigură că doar cei demni pot intra.\n\nCei care încearcă să treacă granița fără documentația corespunzătoare se confruntă cu consecințe imediate."
 help_lore_secrets,[b]Rezerva Rădăcină[/b]\n\nCartofii respinși sunt... procesați. Conform protocolului. Misterioasa Rezervă Rădăcină se ocupă de toate detaliile.\n\nE mai bine să nu pui prea multe întrebări. Concentrează-te pe îndatoririle tale. Nimic mai mult.
+level_select_choices_header,Alegeri până la Ziua {day}
+level_select_choices_header_named,Alegeri până la Ziua {day} - {name}
+level_select_play_day,Joacă Această Zi
+level_select_close,Închide
+continue_dialog_header,Datele Tale Salvate
+continue_dialog_day,Ziua: {day}
+continue_dialog_continue,Continuă
+continue_dialog_cancel,Anulează
+new_game_confirm_button,"Da, Începe Joc Nou"
+tutorial_choice_play,Joacă Tutorialul
+tutorial_choice_skip,Omite Tutorialul
+tutorial_dialog_title,Tutorial
+tutorial_dialog_text,Dorești să joci tutorialul?\n\nTutorialul te va ghida prin elementele de bază ale meseriei de ofițer vamal la Spud Customs.
+continue_game_title,Continuă Jocul
+level_select_story_choices,Alegeri Poveste
+reset_progress_confirm,Ești sigur că vrei să resetezi progresul poveștii? Această acțiune nu poate fi anulată.
+reset_highscores_confirm,Ești sigur că vrei să resetezi toate scorurile mari? Această acțiune nu poate fi anulată.

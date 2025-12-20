@@ -59,3 +59,58 @@ citation_trash_label,КОРЗИНА
 citation_header,ОФИЦИАЛЬНОЕ ПРЕДУПРЕЖДЕНИЕ
 citation_from_supervisor,От: Надзиратель Рассет
 citation_dismiss_hint,[Перетащите в корзину, чтобы закрыть]
+minigame_times_up,"Время вышло! Не волнуйтесь, возвращайтесь к работе!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,СОБЫТИЕ БЫСТРОГО РЕАГИРОВАНИЯ
+qte_instruction,Нажимайте клавиши по мере их появления!
+qte_auto_completed,Автоматически завершено
+qte_accessibility_note,(Доступность QTE включена)
+qte_get_ready,Приготовьтесь...
+qte_progress,Прогресс
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} успешно (+{points} очков)
+qte_image_pending,[Изображение ожидается]
+evidence_title,ПРОВЕРКА БЕЗОПАСНОСТИ НЕМИНУЕМА
+evidence_instruction,"Очистите свой стол! Уничтожьте улики, спрячьте рабочие предметы."
+evidence_suspicion,Подозрение: {percent}%
+evidence_items_remaining,Предметы: {count}
+evidence_times_up_found,Время вышло! Они нашли улики...
+evidence_times_up_suspicious,Время вышло! Проверка была... тщательной.
+codebreaker_title,ВЗЛОМ КОДА
+codebreaker_instruction,"Взломайте код! Зеленый = точное совпадение, Желтый = правильная цифра, неверное место"
+codebreaker_enter_code,ВВЕДИТЕ КОД
+codebreaker_submit,ПОДТВЕРДИТЬ
+codebreaker_clear,ОЧИСТИТЬ
+codebreaker_previous_attempts,Предыдущие попытки:
+codebreaker_attempts,Попытки: {current} / {max}
+codebreaker_result_exact_close,{exact} точных
+codebreaker_result_exact,{exact} точных совпадений
+codebreaker_result_close,{close} близких совпадений
+codebreaker_result_none,нет совпадений
+codebreaker_success,Код взломан за {attempts} попыток! +{points} очков!
+codebreaker_failure,Попытки исчерпаны! Код был показан выше.
+scanner_title,СКАНЕР ДОКУМЕНТОВ
+scanner_instruction,"Перетащите УФ-лампу, чтобы найти скрытые метки! Нажмите, чтобы подтвердить."
+scanner_found,Найдено: {current} / {total}
+scanner_perfect,Идеально! Все элементы найдены! +{points} очков!
+scanner_partial,Неплохо! Найдено {found}/{total}. +{points} очков!
+chase_title,ПОГОНЯ НА ГРАНИЦЕ
+chase_instruction,Нажмите на КРАСНЫЕ контрабандные предметы! Пропустите ЗЕЛЁНЫЕ предметы.
+chase_legend,КРАСНЫЙ = Поймать! ЗЕЛЁНЫЙ = Пропустить
+chase_caught,Поймано: {current} / {total}
+chase_perfect,Идеальный улов! +{points} очков!
+chase_partial,Поймано {count} предметов. +{points} очков!
+sorting_title,СОРТИРОВКА ШТАМПОВ
+sorting_instruction,"Перетащите штампы в нужную корзину! Зелёный = ОДОБРЕНО, Красный = ОТКАЗАНО"
+sorting_approved,ОДОБРЕНО
+sorting_denied,ОТКАЗАНО
+sorting_progress,Отсортировано: {sorted}/{total} Верно: {correct}
+sorting_perfect,Идеальная сортировка! +{points} очков!
+sorting_partial,Правильно отсортировано {correct}/{total}. +{points} очков!
+fingerprint_title,ПОИСК СОВПАДЕНИЙ ОТПЕЧАТКОВ
+fingerprint_instruction,"Найдите отпечаток пальца, который соответствует образцу!"
+fingerprint_reference,ЭТАЛОН
+fingerprint_find_match,НАЙТИ СОВПАДЕНИЕ
+fingerprint_progress,Совпало: {current} / {total}
+fingerprint_success,Все отпечатки совпали! +{points} очков!
+fingerprint_partial,Совпало {matched}/{total}. +{points} очков!

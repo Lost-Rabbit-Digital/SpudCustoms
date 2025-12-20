@@ -31,3 +31,16 @@ Text/172/text,Spudin turvallisuus riippuu [pulse freq=2][color=DARK_ORANGE]valpp
 Text/174/text,Aloitetaan [color=YELLOW]harjoitusvuorosi[/color]...
 Text/180/text,Mutta ole varovainen – kaikki perunat eivät ole asiakirjojaan kunnossa.
 Text/181/text,[color=RED]Vanhentuneet passit[/color] ovat automaattinen hylkäys. Ei poikkeuksia.
+Text/tut_001/text,Tervetuloa [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs![/color][/pulse]
+Text/tut_002/text,Sinut on valittu tärkeään rooliin: [color=DARK_ORANGE]Rajatullivirkailija[/color].
+Text/tut_003/text,"Työsi on yksinkertainen. Perunat saapuvat koppiisi, tarkistat heidän asiakirjansa, ja päätät, kuka pääsee läpi."
+Text/tut_004/text,Mutta ole varovainen – kaikilla perunoilla ei ole papereita kunnossa.
+Text/tut_005/text,[color=RED]Vanhentuneet passit[/color] ovat automaattinen hylkäys. Ei poikkeuksia.
+Text/tut_006/text,Opastan sinua perusasioissa [color=YELLOW]askel askeleelta[/color]. Seuraa ohjeita ja opit kyllä.
+Text/tut_007/text,"[pulse freq=2][color=RED]Vielä yksi asia![/color][/pulse] Jotkut perunat yrittävät [color=CRIMSON]paeta[/color], kun he luulevat, etteivät heidän paperinsa läpäise tarkastusta."
+Text/tut_008/text,"Kun [color=RED]rajakarkaaja[/color] yrittää paeta, näet heidän syöksyvän koppisi ohi kohti rajaa."
+Text/tut_009/text,Siinä kohtaa [color=CHARTREUSE]Pneumaattinen ohjuslaukaisin[/color] tulee käyttöön. Se on iso painike ohjauspaneelissasi.
+Text/tut_010/text,"[color=YELLOW]Napsauta laukaistaksesi[/color], kun karkaaja on kantaman sisällä. Tähtää [color=GOLD]maalialueen keskelle[/color] saadaksesi bonuspisteitä!"
+Text/tut_011/text,Mutta ole varovainen – [color=RED]älä osu viattomiin perunoihin[/color] jonossa. Se maksaa sinulle pisteitä ja ansaitsee varoituksen!
+Text/tut_012/text,Spudin turvallisuus riippuu sinun [pulse freq=2][color=DARK_ORANGE]valppaudestasi![/color][/pulse]
+Text/tut_013/text,Aloitetaan sinun [color=YELLOW]harjoitusvuorosi[/color]...

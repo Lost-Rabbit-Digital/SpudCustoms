@@ -59,3 +59,58 @@ citation_trash_label,SAMPAH
 citation_header,PERINGATAN RESMI
 citation_from_supervisor,Dari: Supervisor Russet
 citation_dismiss_hint,[Seret ke Sampah untuk menutup]
+minigame_times_up,"Waktu habis! Jangan khawatir, kembali bertugas!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,AKSI CEPAT
+qte_instruction,Tekan tombol sesuai yang muncul!
+qte_auto_completed,Otomatis Selesai
+qte_accessibility_note,(Aksesibilitas QTE diaktifkan)
+qte_get_ready,Bersiap...
+qte_progress,Kemajuan
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} berhasil (+{points} poin)
+qte_image_pending,[Gambar Tertunda]
+evidence_title,INSPEKSI KEAMANAN AKAN SEGERA DIMULAI
+evidence_instruction,"Bersihkan mejamu! Hancurkan bukti, sembunyikan barang kerja."
+evidence_suspicion,Kecurigaan: {percent}%
+evidence_items_remaining,Barang: {count}
+evidence_times_up_found,Waktu habis! Mereka menemukan buktinya...
+evidence_times_up_suspicious,Waktu habis! Inspeksinya... menyeluruh.
+codebreaker_title,PEMECAH KODE
+codebreaker_instruction,"Pecahkan kodenya! Hijau = cocok persis, Kuning = digit benar posisi salah"
+codebreaker_enter_code,MASUKKAN KODE
+codebreaker_submit,KIRIM
+codebreaker_clear,HAPUS
+codebreaker_previous_attempts,Percobaan Sebelumnya:
+codebreaker_attempts,Percobaan: {current} / {max}
+codebreaker_result_exact_close,{exact} tepat
+codebreaker_result_exact,{exact} tepat
+codebreaker_result_close,{close} mendekati
+codebreaker_result_none,tidak ada yang cocok
+codebreaker_success,Kode berhasil dipecahkan dalam {attempts} percobaan! +{points} poin!
+codebreaker_failure,Percobaan habis! Kode ditampilkan di atas.
+scanner_title,PEMINDAI DOKUMEN
+scanner_instruction,Seret lampu UV untuk menemukan tanda tersembunyi! Klik untuk mengonfirmasi.
+scanner_found,Ditemukan: {current} / {total}
+scanner_perfect,Sempurna! Semua elemen ditemukan! +{points} poin!
+scanner_partial,Usaha bagus! Ditemukan {found}/{total}. +{points} poin!
+chase_title,PENGEJARAN PERBATASAN
+chase_instruction,Klik item selundupan MERAH! Biarkan item HIJAU lewat.
+chase_legend,MERAH = Tangkap! HIJAU = Biarkan lewat
+chase_caught,Tertangkap: {current} / {total}
+chase_perfect,Penangkapan sempurna! +{points} poin!
+chase_partial,{count} item tertangkap. +{points} poin!
+sorting_title,PENYORTIRAN STAMPEL
+sorting_instruction,"Seret stampel ke tempat yang benar! Hijau = DISETUJUI, Merah = DITOLAK"
+sorting_approved,DISETUJUI
+sorting_denied,DITOLAK
+sorting_progress,Disortir: {sorted}/{total} Benar: {correct}
+sorting_perfect,Penyortiran sempurna! +{points} poin!
+sorting_partial,{correct}/{total} disortir dengan benar. +{points} poin!
+fingerprint_title,PENCOCOKAN SIDIK JARI
+fingerprint_instruction,Temukan sidik jari yang cocok dengan referensi!
+fingerprint_reference,REFERENSI
+fingerprint_find_match,TEMUKAN YANG COCOK
+fingerprint_progress,Cocok: {current} / {total}
+fingerprint_success,Semua sidik jari cocok! +{points} poin!
+fingerprint_partial,Cocok {matched}/{total}. +{points} poin!

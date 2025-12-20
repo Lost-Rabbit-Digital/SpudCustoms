@@ -59,3 +59,58 @@ citation_trash_label,SØPPEL
 citation_header,OFFISIELL ADVARSEL
 citation_from_supervisor,Fra: Veileder Russet
 citation_dismiss_hint,[Dra til søppel for å lukke]
+minigame_times_up,"Tiden er ute! Ingen fare, tilbake til jobb!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,HURTIGHENDELSE
+qte_instruction,Trykk tastene når de vises!
+qte_auto_completed,Automatisk fullført
+qte_accessibility_note,(Hurtighendelse-tilgjengelighet aktivert)
+qte_get_ready,Gjør deg klar...
+qte_progress,Fremdrift
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} vellykket (+{points} poeng)
+qte_image_pending,[Bilde venter]
+evidence_title,SIKKERHETSINSPEKSJON FORESTÅENDE
+evidence_instruction,"Rydd pulten din! Makuler bevis, gjem arbeidsgjenstander."
+evidence_suspicion,Mistanke: {percent}%
+evidence_items_remaining,Gjenstander: {count}
+evidence_times_up_found,Tiden er ute! De fant bevisene...
+evidence_times_up_suspicious,Tiden er ute! Inspeksjonen var... grundig.
+codebreaker_title,KODEKNEKKER
+codebreaker_instruction,"Knekk koden! Grønn = nøyaktig treff, Gul = riktig siffer feil plass"
+codebreaker_enter_code,SKRIV INN KODEN
+codebreaker_submit,SEND INN
+codebreaker_clear,TØM
+codebreaker_previous_attempts,Tidligere forsøk:
+codebreaker_attempts,Forsøk: {current} / {max}
+codebreaker_result_exact_close,{exact} nøyaktige
+codebreaker_result_exact,{exact} eksakt
+codebreaker_result_close,{close} nær
+codebreaker_result_none,ingen treff
+codebreaker_success,Kode knekt på {attempts} forsøk! +{points} poeng!
+codebreaker_failure,Tom for forsøk! Koden ble vist ovenfor.
+scanner_title,DOKUMENTSKANNER
+scanner_instruction,Dra UV-lyset for å finne skjulte merker! Klikk for å bekrefte.
+scanner_found,Funnet: {current} / {total}
+scanner_perfect,Perfekt! Alle elementer funnet! +{points} poeng!
+scanner_partial,Bra innsats! Fant {found}/{total}. +{points} poeng!
+chase_title,GRENSEJAKT
+chase_instruction,Klikk på de RØDE smuglergjenstandene! La de GRØNNE gjenstandene passere.
+chase_legend,RØD = Fang! GRØNN = La passere
+chase_caught,Fanget: {current} / {total}
+chase_perfect,Perfekt fangst! +{points} poeng!
+chase_partial,Fanget {count} gjenstander. +{points} poeng!
+sorting_title,STEMPELSORTERING
+sorting_instruction,"Dra stemplene til riktig beholder! Grønn = GODKJENT, Rød = AVVIST"
+sorting_approved,GODKJENT
+sorting_denied,AVVIST
+sorting_progress,Sortert: {sorted}/{total} Riktig: {correct}
+sorting_perfect,Perfekt sortering! +{points} poeng!
+sorting_partial,Sorterte {correct}/{total} riktig. +{points} poeng!
+fingerprint_title,FINGERAVTRYKKSTREFF
+fingerprint_instruction,Finn fingeravtrykket som matcher referansen!
+fingerprint_reference,REFERANSE
+fingerprint_find_match,FINN MATCHEN
+fingerprint_progress,Matchet: {current} / {total}
+fingerprint_success,Alle fingeravtrykk matchet! +{points} poeng!
+fingerprint_partial,Matchet {matched}/{total}. +{points} poeng!

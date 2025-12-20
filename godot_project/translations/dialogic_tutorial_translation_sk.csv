@@ -31,3 +31,16 @@ Text/172/text,Bezpečnosť Spudu závisí od vašej [pulse freq=2][color=DARK_OR
 Text/174/text,Začnime vašu [color=YELLOW]tréningovú zmenu[/color]...
 Text/180/text,Ale buďte opatrní – nie každý zemiak má v poriadku doklady.
 Text/181/text,[color=RED]Prepadnuté pasy[/color] sú automatickým zamietnutím. Žiadne výnimky.
+Text/tut_001/text,Vitajte v [pulse freq=2][color=MEDIUM_VIOLET_RED]Zemiakovej colnici![/color][/pulse]
+Text/tut_002/text,Boli ste vybraní pre kľúčovú úlohu: [color=DARK_ORANGE]Pohraničný colník[/color].
+Text/tut_003/text,"Vaša práca je jednoduchá. Zemiaky prichádzajú k vašej búdke, skontrolujete ich doklady a rozhodnete, kto prejde."
+Text/tut_004/text,Buďte však opatrní – nie každý zemiak má doklady v poriadku.
+Text/tut_005/text,[color=RED]Expirované pasy[/color] sú automatickým zamietnutím. Žiadne výnimky.
+Text/tut_006/text,Prevediem vás základmi [color=YELLOW]krok za krokom[/color]. Postupujte podľa pokynov a rýchlo sa to naučíte.
+Text/tut_007/text,"[pulse freq=2][color=RED]Ešte jedna vec![/color][/pulse] Niektoré zemiaky sa pokúsia [color=CRIMSON]utiecť[/color], keď si myslia, že ich doklady neprejdú kontrolou."
+Text/tut_008/text,"Keď sa [color=RED]hraničný bežec[/color] pokúsi utiecť, uvidíte ho utekať okolo vašej búdky smerom k hranici."
+Text/tut_009/text,Tu prichádza na rad váš [color=CHARTREUSE]Pneumatický raketomet[/color]. Je to to veľké tlačidlo na vašom ovládacom paneli.
+Text/tut_010/text,"[color=YELLOW]Kliknutím vystrelíte[/color], keď je bežec v dosahu. Mierte na [color=GOLD]stred cieľovej zóny[/color] pre bonusové body!"
+Text/tut_011/text,Buďte však opatrní – [color=RED]netrafte nevinné zemiaky[/color] v rade. To vás bude stáť body a dostanete trest!
+Text/tut_012/text,Bezpečnosť a ochrana Spudu závisí od vašej [pulse freq=2][color=DARK_ORANGE]bdelosti![/color][/pulse]
+Text/tut_013/text,Začnime vašu [color=YELLOW]tréningovú smenu[/color]...

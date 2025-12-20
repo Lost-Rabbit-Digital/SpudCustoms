@@ -1,0 +1,53 @@
+﻿keys,ko
+achievement_unlocked_title,업적 달성!
+achievements_menu_button,업적
+achievements_progress_format,%d / %d 달성
+achievement_hidden_name,???
+achievement_hidden_desc,이 업적은 잠금 해제될 때까지 숨겨져 있습니다
+achievement_category_gameplay,게임 플레이
+achievement_category_resistance,저항의 길
+achievement_category_loyalist,충성파의 길
+achievement_category_character,캐릭터 아크
+achievement_category_discovery,발견
+achievement_rookie_officer_name,신참 감시관
+achievement_rookie_officer_desc,국경에서 첫 근무를 완료하십시오.
+achievement_veteran_officer_name,베테랑 세관원
+achievement_veteran_officer_desc,국경에서 10회 근무를 완료하십시오.
+achievement_master_officer_name,세관의 달인
+achievement_master_officer_desc,국경에서 25회 근무를 완료하십시오.
+achievement_sharpshooter_name,명사수
+achievement_sharpshooter_desc,미사일 시스템으로 국경 도주자 10명을 저지하십시오.
+achievement_border_defender_name,국경 수호자
+achievement_border_defender_desc,미사일 시스템으로 국경 도주자 50명을 저지하십시오.
+achievement_perfect_shot_name,완벽한 사격
+achievement_perfect_shot_desc,국경 도주자에게 5회 완벽한 명중을 기록하십시오.
+achievement_high_scorer_name,고득점자
+achievement_high_scorer_desc,점수 10점을 달성하십시오.
+achievement_score_legend_name,득점의 전설
+achievement_score_legend_desc,점수 50점을 달성하십시오.
+achievement_savior_of_spud_name,스퍼드의 구원자
+achievement_savior_of_spud_desc,스토리를 완료하고 국가를 구원하십시오.
+achievement_born_diplomat_name,타고난 외교관
+achievement_born_diplomat_desc,평화로운 협상을 통해 외교적 엔딩을 달성하십시오.
+achievement_tater_of_justice_name,정의의 감자
+achievement_tater_of_justice_desc,부패한 관리들에게 정의를 구현하십시오.
+achievement_best_served_hot_name,뜨겁게 복수하라
+achievement_best_served_hot_desc,당신에게 잘못을 저지른 자들에게 복수하십시오.
+achievement_down_with_tatriarchy_name,감자 가부장제 타도
+achievement_down_with_tatriarchy_desc,혁명을 이끌고 정권을 타도하십시오.
+achievement_heart_of_stone_name,돌 심장
+achievement_heart_of_stone_desc,마지막까지 냉정하고 순종적인 관료로 남으십시오.
+achievement_survivor_name,생존자
+achievement_survivor_desc,무슨 수를 써서라도 정권에서 살아남으십시오.
+achievement_late_bloomer_name,늦깎이
+achievement_late_bloomer_desc,마지막 순간에 구원을 찾으십시오.
+achievement_tommys_legacy_name,토미의 유산
+achievement_tommys_legacy_desc,토미의 운명에 대한 진실을 밝히십시오.
+achievement_elenas_memory_name,엘레나의 기억
+achievement_elenas_memory_desc,엘레나의 희생을 기리고 그녀의 이야기를 기억하십시오.
+achievement_the_note_name,쪽지
+achievement_the_note_desc,비밀 쪽지를 발견하고 숨겨진 메시지를 찾으십시오.
+achievement_root_of_evil_name,악의 근원
+achievement_root_of_evil_desc,정권의 심장부에 있는 부패를 폭로하십시오.
+achievement_chaos_architect_name,혼돈의 설계자
+achievement_chaos_architect_desc,혼돈을 껴안고 세상이 불타는 것을 지켜봐라

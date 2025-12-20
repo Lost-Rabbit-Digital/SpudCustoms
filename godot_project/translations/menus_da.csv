@@ -174,3 +174,20 @@ help_lore_nation,"[b]Nationen Spud[/b]\n\nSpud er en stolt nation, der lover vel
 help_lore_your_role,"[b]Din Rolle[/b]\n\nDu er blevet udvalgt til en afgørende rolle i beskyttelsen af grænserne. Som toldbetjent arbejder du under tilsynsførende Russets vågne øje.\n\nDit velfærd afhænger af din præstation. Opfyld dine kvoter, følg reglerne, og husk: Nationen regner med dig."
 help_lore_border,"[b]Den Store Mur[/b]\n\nDen mægtige Store Mur af Spud beskytter nationen mod udefrakommende. Ved forskellige kontrolposter langs muren sikrer betjente som dig, at kun de værdige kan komme ind.\n\nDe, der forsøger at forcere grænsen uden korrekt dokumentation, står over for øjeblikkelige konsekvenser."
 help_lore_secrets,[b]Rodreserven[/b]\n\nAfviste kartofler bliver... behandlet. Ifølge protokollen. Den mystiske Rodreserve håndterer alle detaljerne.\n\nDet er bedst ikke at stille for mange spørgsmål. Fokuser på dine pligter. Intet andet.
+level_select_choices_header,Valg op til Dag {day}
+level_select_choices_header_named,Valg op til Dag {day} - {name}
+level_select_play_day,Spil Denne Dag
+level_select_close,Luk
+continue_dialog_header,Dine Gemte Data
+continue_dialog_day,Dag: {day}
+continue_dialog_continue,Fortsæt
+continue_dialog_cancel,Annuller
+new_game_confirm_button,"Ja, Start Nyt Spil"
+tutorial_choice_play,Spil Vejledning
+tutorial_choice_skip,Spring Vejledning Over
+tutorial_dialog_title,Vejledning
+tutorial_dialog_text,Vil du gerne spille vejledningen?\n\nVejledningen vil guide dig gennem grundprincipperne for at være toldbetjent hos Spud Customs.
+continue_game_title,Fortsæt Spil
+level_select_story_choices,Historievalg
+reset_progress_confirm,"Er du sikker på, at du vil nulstille historiens fremskridt? Dette kan ikke fortrydes."
+reset_highscores_confirm,"Er du sikker på, at du vil nulstille alle highscores? Dette kan ikke fortrydes."

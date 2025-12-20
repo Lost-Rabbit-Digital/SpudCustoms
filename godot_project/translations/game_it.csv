@@ -59,3 +59,58 @@ citation_trash_label,CESTINO
 citation_header,AVVISO UFFICIALE
 citation_from_supervisor,Da: Supervisore Russet
 citation_dismiss_hint,[Trascina nel cestino per chiudere]
+minigame_times_up,"Tempo scaduto! Nessun problema, torna al lavoro!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,EVENTO A TEMPO
+qte_instruction,Premi i tasti quando appaiono!
+qte_auto_completed,Completato automaticamente
+qte_accessibility_note,(Accessibilità QTE abilitata)
+qte_get_ready,Preparati...
+qte_progress,Progresso
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} riusciti (+{points} punti)
+qte_image_pending,[Immagine in attesa]
+evidence_title,ISPEZIONE DI SICUREZZA IMMINENTE
+evidence_instruction,"Sgombra la scrivania! Distruggi le prove, nascondi gli oggetti di lavoro."
+evidence_suspicion,Sospetto: {percent}%
+evidence_items_remaining,Oggetti: {count}
+evidence_times_up_found,Tempo scaduto! Hanno trovato le prove...
+evidence_times_up_suspicious,Tempo scaduto! L'ispezione è stata... approfondita.
+codebreaker_title,ROMPICODICE
+codebreaker_instruction,"Decifra il codice! Verde = corrispondenza esatta, Giallo = cifra giusta, posizione sbagliata"
+codebreaker_enter_code,INSERISCI IL CODICE
+codebreaker_submit,INVIA
+codebreaker_clear,CANCELLA
+codebreaker_previous_attempts,Tentativi precedenti:
+codebreaker_attempts,Tentativi: {current} / {max}
+codebreaker_result_exact_close,{exact} esatti
+codebreaker_result_exact,{exact} esatti
+codebreaker_result_close,{close} vicini
+codebreaker_result_none,nessuna corrispondenza
+codebreaker_success,Codice decifrato in {attempts} tentativi! +{points} punti!
+codebreaker_failure,Tentativi esauriti! Il codice è stato mostrato sopra.
+scanner_title,SCANNER DOCUMENTI
+scanner_instruction,Trascina la luce UV per trovare i segni nascosti! Clicca per confermare.
+scanner_found,Trovati: {current} / {total}
+scanner_perfect,Perfetto! Tutti gli elementi trovati! +{points} punti!
+scanner_partial,Buon tentativo! Trovati {found}/{total}. +{points} punti!
+chase_title,INSEGUIMENTO AL CONFINE
+chase_instruction,Clicca gli oggetti di contrabbando ROSSI! Lascia passare gli oggetti VERDI.
+chase_legend,ROSSO = Cattura! VERDE = Lascia passare
+chase_caught,Catturati: {current} / {total}
+chase_perfect,Cattura perfetta! +{points} punti!
+chase_partial,Catturati {count} oggetti. +{points} punti!
+sorting_title,SMISTAMENTO TIMBRI
+sorting_instruction,"Trascina i timbri nel contenitore corretto! Verde = APPROVATO, Rosso = NEGATO"
+sorting_approved,APPROVATO
+sorting_denied,NEGATO
+sorting_progress,Smistati: {sorted}/{total} Corretti: {correct}
+sorting_perfect,Smistamento perfetto! +{points} punti!
+sorting_partial,Smistati {correct}/{total} correttamente. +{points} punti!
+fingerprint_title,CONFRONTO IMPRONTE DIGITALI
+fingerprint_instruction,Trova l'impronta digitale che corrisponde al riferimento!
+fingerprint_reference,RIFERIMENTO
+fingerprint_find_match,TROVA LA CORRISPONDENZA
+fingerprint_progress,Corrispondenti: {current} / {total}
+fingerprint_success,Tutte le impronte digitali corrispondono! +{points} punti!
+fingerprint_partial,Corrispondenti {matched}/{total}. +{points} punti!

@@ -162,3 +162,20 @@ help_lore_nation,[b]ประเทศสปัด[/b]
 help_lore_your_role,[b]บทบาทของคุณ[/b]
 help_lore_border,[b]กำแพงอันยิ่งใหญ่[/b]
 help_lore_secrets,[b]เขตสงวนราก[/b]
+level_select_choices_header,ตัวเลือกถึงวันที่ {day}
+level_select_choices_header_named,ตัวเลือกถึงวันที่ {day} - {name}
+level_select_play_day,เล่นวันนี้
+level_select_close,ปิด
+continue_dialog_header,ข้อมูลบันทึกของคุณ
+continue_dialog_day,วันที่: {day}
+continue_dialog_continue,เล่นต่อ
+continue_dialog_cancel,ยกเลิก
+new_game_confirm_button,"ใช่, เริ่มเกมใหม่"
+tutorial_choice_play,เล่นบทช่วยสอน
+tutorial_choice_skip,ข้ามบทช่วยสอน
+tutorial_dialog_title,บทช่วยสอน
+tutorial_dialog_text,คุณต้องการเล่นบทช่วยสอนหรือไม่? \n\nบทช่วยสอนจะแนะนำคุณเกี่ยวกับพื้นฐานของการเป็นเจ้าหน้าที่ศุลกากรที่ Spud Customs
+continue_game_title,เล่นเกมต่อ
+level_select_story_choices,ตัวเลือกเนื้อเรื่อง
+reset_progress_confirm,คุณแน่ใจหรือไม่ว่าต้องการรีเซ็ตความคืบหน้าของเนื้อเรื่อง? การกระทำนี้ไม่สามารถย้อนกลับได้
+reset_highscores_confirm,คุณแน่ใจหรือไม่ว่าต้องการรีเซ็ตคะแนนสูงสุดทั้งหมด? การกระทำนี้ไม่สามารถย้อนกลับได้

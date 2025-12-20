@@ -59,3 +59,58 @@ citation_trash_label,LIXO
 citation_header,CITAÇÃO OFICIAL
 citation_from_supervisor,De: Supervisor Russet
 citation_dismiss_hint,[Arrastar para o lixo para descartar]
+minigame_times_up,"Tempo esgotado! Sem problemas, de volta ao trabalho!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,EVENTO DE TEMPO RÁPIDO
+qte_instruction,Pressione as teclas conforme elas aparecem!
+qte_auto_completed,Concluído automaticamente
+qte_accessibility_note,(Acessibilidade QTE ativada)
+qte_get_ready,Prepare-se...
+qte_progress,Progresso
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} bem-sucedidos (+{points} pontos)
+qte_image_pending,[Imagem Pendente]
+evidence_title,INSPEÇÃO DE SEGURANÇA IMINENTE
+evidence_instruction,"Limpe sua mesa! Destrua provas, esconda itens de trabalho."
+evidence_suspicion,Suspeita: {percent}%
+evidence_items_remaining,Itens: {count}
+evidence_times_up_found,Tempo esgotado! Eles encontraram as provas...
+evidence_times_up_suspicious,Tempo esgotado! A inspeção foi... minuciosa.
+codebreaker_title,QUEBRA-CÓDIGOS
+codebreaker_instruction,"Quebre o código! Verde = correspondência exata, Amarelo = dígito certo no lugar errado"
+codebreaker_enter_code,DIGITE O CÓDIGO
+codebreaker_submit,ENVIAR
+codebreaker_clear,LIMPAR
+codebreaker_previous_attempts,Tentativas Anteriores:
+codebreaker_attempts,Tentativas: {current} / {max}
+codebreaker_result_exact_close,{exact} exatos
+codebreaker_result_exact,{exact} exatos
+codebreaker_result_close,{close} próximos
+codebreaker_result_none,nenhum acerto
+codebreaker_success,Código decifrado em {attempts} tentativas! +{points} pontos!
+codebreaker_failure,Tentativas esgotadas! O código foi exibido acima.
+scanner_title,SCANNER DE DOCUMENTOS
+scanner_instruction,Arraste a luz UV para encontrar marcas ocultas! Clique para confirmar.
+scanner_found,Encontrados: {current} / {total}
+scanner_perfect,Perfeito! Todos os elementos encontrados! +{points} pontos!
+scanner_partial,Bom esforço! Encontrou {found}/{total}. +{points} pontos!
+chase_title,PERSEGUIÇÃO NA FRONTEIRA
+chase_instruction,Clique nos itens de contrabando VERMELHOS! Deixe os itens VERDES passarem.
+chase_legend,VERMELHO = Pegar!   VERDE = Deixar passar
+chase_caught,Pegos: {current} / {total}
+chase_perfect,Captura perfeita! +{points} pontos!
+chase_partial,Pegou {count} itens. +{points} pontos!
+sorting_title,CLASSIFICAÇÃO DE CARIMBOS
+sorting_instruction,"Arraste os carimbos para o compartimento correto! Verde = APROVADO, Vermelho = NEGADO"
+sorting_approved,APROVADO
+sorting_denied,NEGADO
+sorting_progress,Classificados: {sorted}/{total} Corretos: {correct}
+sorting_perfect,Classificação perfeita! +{points} pontos!
+sorting_partial,Classificou {correct}/{total} corretamente. +{points} pontos!
+fingerprint_title,COMPARAÇÃO DE IMPRESSÕES DIGITAIS
+fingerprint_instruction,Encontre a impressão digital que corresponde à referência!
+fingerprint_reference,REFERÊNCIA
+fingerprint_find_match,ENCONTRAR CORRESPONDÊNCIA
+fingerprint_progress,Correspondências: {current} / {total}
+fingerprint_success,Todas as impressões digitais correspondem! +{points} pontos!
+fingerprint_partial,Correspondências {matched}/{total}. +{points} pontos!

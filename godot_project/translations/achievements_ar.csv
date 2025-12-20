@@ -1,0 +1,53 @@
+﻿keys,ar
+achievement_unlocked_title,إنجاز تم فتحه!
+achievements_menu_button,الإنجازات
+achievements_progress_format,تم فتح %d / %d
+achievement_hidden_name,???
+achievement_hidden_desc,هذا الإنجاز مخفي حتى يتم فتحه
+achievement_category_gameplay,اللعب
+achievement_category_resistance,مسار المقاومة
+achievement_category_loyalist,مسار الموالين
+achievement_category_character,مسارات الشخصيات
+achievement_category_discovery,الاكتشاف
+achievement_rookie_officer_name,ضابط مبتدئ
+achievement_rookie_officer_desc,أكمل ورديتك الأولى على الحدود
+achievement_veteran_officer_name,مخضرم الجمارك
+achievement_veteran_officer_desc,أكمل 10 ورديات على الحدود
+achievement_master_officer_name,سيد الجمارك
+achievement_master_officer_desc,أكمل 25 وردية على الحدود
+achievement_sharpshooter_name,قناص
+achievement_sharpshooter_desc,أوقف 10 من الهاربين من الحدود باستخدام نظام الصواريخ
+achievement_border_defender_name,مدافع الحدود
+achievement_border_defender_desc,أوقف 50 من الهاربين من الحدود باستخدام نظام الصواريخ
+achievement_perfect_shot_name,رمية مثالية
+achievement_perfect_shot_desc,سدد 5 ضربات مثالية على الهاربين من الحدود
+achievement_high_scorer_name,صاحب أعلى نقاط
+achievement_high_scorer_desc,حقق نتيجة 10
+achievement_score_legend_name,أسطورة النقاط
+achievement_score_legend_desc,حقق نتيجة 50
+achievement_savior_of_spud_name,منقذ الوطن
+achievement_savior_of_spud_desc,أكمل القصة وأنقذ الوطن
+achievement_born_diplomat_name,دبلوماسي بالفطرة
+achievement_born_diplomat_desc,حقق النهاية الدبلوماسية من خلال المفاوضات السلمية
+achievement_tater_of_justice_name,بطل العدالة
+achievement_tater_of_justice_desc,أقم العدل على المسؤولين الفاسدين
+achievement_best_served_hot_name,أفضل ما يُقدم ساخناً
+achievement_best_served_hot_desc,خذ بثأرك ممن ظلموك
+achievement_down_with_tatriarchy_name,تسقط سلطة البطاطا
+achievement_down_with_tatriarchy_desc,قد الثورة وأسقط النظام
+achievement_heart_of_stone_name,قلب من حجر
+achievement_heart_of_stone_desc,ابقَ بيروقراطياً بارداً ومطيعاً حتى النهاية
+achievement_survivor_name,ناجٍ
+achievement_survivor_desc,افعل كل ما يلزم للنجاة من النظام
+achievement_late_bloomer_name,زهرة متأخرة
+achievement_late_bloomer_desc,جد الخلاص في اللحظة الأخيرة تماماً
+achievement_tommys_legacy_name,إرث تومي
+achievement_tommys_legacy_desc,اكشف الحقيقة حول مصير تومي
+achievement_elenas_memory_name,ذكرى إيلينا
+achievement_elenas_memory_desc,كرم تضحية إيلينا وتذكر قصتها
+achievement_the_note_name,المذكرة
+achievement_the_note_desc,اكتشف المذكرة السرية ورسالتها المخفية
+achievement_root_of_evil_name,جذر الشر
+achievement_root_of_evil_desc,اكشف الفساد في قلب النظام
+achievement_chaos_architect_name,مهندس الفوضى
+achievement_chaos_architect_desc,احتضن الفوضى وشاهد العالم يحترق

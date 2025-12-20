@@ -174,3 +174,20 @@ help_lore_nation,"[b]Nasjonen Spud[/b]\n\nSpud er en stolt nasjon som lover vels
 help_lore_your_role,"[b]Din Rolle[/b]\n\nDu har blitt utvalgt til en avgjørende rolle i beskyttelsen av grensene. Som tollbetjent jobber du under det vaktsomme blikket til overbetjent Russet.\n\nDin velferd avhenger av din prestasjon. Oppfyll kvotene dine, følg reglene, og husk: nasjonen stoler på deg."
 help_lore_border,"[b]Den Store Muren[/b]\n\nDen mektige Store Spud-muren beskytter nasjonen mot utenforstående. Ved ulike kontrollposter langs muren, sørger betjenter som deg for at kun de verdige får komme inn.\n\nDe som forsøker å krysse grensen ulovlig uten riktig dokumentasjon, møter umiddelbare konsekvenser."
 help_lore_secrets,[b]Rotreservatet[/b]\n\nAvviste poteter blir... behandlet. I henhold til protokollen. Det mystiske Rotreservatet håndterer alle detaljene.\n\nDet er best å ikke stille for mange spørsmål. Fokuser på pliktene dine. Ingenting mer.
+level_select_choices_header,Valg frem til Dag {day}
+level_select_choices_header_named,Valg frem til Dag {day} - {name}
+level_select_play_day,Spill Denne Dagen
+level_select_close,Lukk
+continue_dialog_header,Dine Lagringsdata
+continue_dialog_day,Dag: {day}
+continue_dialog_continue,Fortsett
+continue_dialog_cancel,Avbryt
+new_game_confirm_button,"Ja, Start Nytt Spill"
+tutorial_choice_play,Spill Opplæring
+tutorial_choice_skip,Hopp over Opplæring
+tutorial_dialog_title,Opplæring
+tutorial_dialog_text,Vil du spille opplæringen?\n\nOpplæringen vil veilede deg gjennom det grunnleggende ved å være en tollbetjent hos Spud Customs.
+continue_game_title,Fortsett Spill
+level_select_story_choices,Historievalg
+reset_progress_confirm,Er du sikker på at du vil nullstille historiefremdriften? Dette kan ikke angres.
+reset_highscores_confirm,Er du sikker på at du vil nullstille alle toppscore? Dette kan ikke angres.

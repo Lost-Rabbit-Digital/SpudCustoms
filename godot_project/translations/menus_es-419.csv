@@ -86,20 +86,20 @@ Already Assigned,Ya asignado
 Remove Key for {action},Quitar tecla para {action}
 Are you sure you want to remove {key} from {action}?,¿Estás seguro de que quieres quitar {key} de {action}?
 Reset,Restablecer
-Audio,Audio
+Audio,Audio: Audio
 Master :,Master :
 Music :,Music :
 SFX :,SFX :
 Ambient :,Ambient :
 Mute :,Mute :
-Video,Video
+Video,Video: Video
 Fullscreen :,Fullscreen :
 Resolution :,Resolution :
 Anti-Aliasing :,Anti-Aliasing :
 Disabled (Fastest),Desactivado (Más rápido)
 8x (Slowest),8x (Más lento)
 Camera Shake :,Camera Shake :
-Normal,Normal
+Normal,Normal: Normal
 Reduced,Reducida
 Minimal,Mínimo
 None,Ninguno
@@ -121,9 +121,9 @@ Secondary,Secundario
 Primary Interaction,Interacción Primaria
 Secondary Interaction,Interacción Secundaria
 Cancel Interaction,Cancelar Interacción
-Escape,Escape
+Escape,Escape: Escape
 Dialogic Default Action,Acción Predeterminada de Diálogo
-Enter,Enter
+Enter,Enter: Enter
 Left Mouse Button,Botón Izquierdo del Ratón
 Right Mouse Button,Botón Derecho del Ratón
 Start New Game,Iniciar Nueva Partida
@@ -162,3 +162,20 @@ help_lore_nation,[b]La Nación de Spud[/b]
 help_lore_your_role,[b]Tu Rol[/b]
 help_lore_border,[b]La Gran Muralla[/b]
 help_lore_secrets,[b]Reserva de Raíces[/b]
+level_select_choices_header,Opciones hasta el Día {day}
+level_select_choices_header_named,Opciones hasta el Día {day} - {name}
+level_select_play_day,Jugar Este Día
+level_select_close,Cerrar
+continue_dialog_header,Tu Partida Guardada
+continue_dialog_day,Día: {day}
+continue_dialog_continue,Continuar
+continue_dialog_cancel,Cancelar
+new_game_confirm_button,"Sí, Iniciar Nueva Partida"
+tutorial_choice_play,Jugar Tutorial
+tutorial_choice_skip,Omitir Tutorial
+tutorial_dialog_title,Tutorial
+tutorial_dialog_text,¿Desea jugar el tutorial?\n\nEl tutorial le guiará a través de los conceptos básicos de ser un oficial de aduanas en Spud Customs.
+continue_game_title,Continuar Partida
+level_select_story_choices,Opciones de Historia
+reset_progress_confirm,¿Está seguro de que desea reiniciar el progreso de la historia? Esto no se puede deshacer.
+reset_highscores_confirm,¿Está seguro de que desea reiniciar todas las puntuaciones más altas? Esto no se puede deshacer.

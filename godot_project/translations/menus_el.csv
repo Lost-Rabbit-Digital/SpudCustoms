@@ -162,3 +162,20 @@ help_lore_nation,[b]Το Έθνος του Spud[/b]
 help_lore_your_role,[b]Ο Ρόλος σας[/b]
 help_lore_border,[b]Το Μεγάλο Τείχος[/b]
 help_lore_secrets,[b]Αποθεματικό Ρίζας[/b]
+level_select_choices_header,Επιλογές μέχρι την Ημέρα {day}
+level_select_choices_header_named,Επιλογές μέχρι την Ημέρα {day} - {name}
+level_select_play_day,Παίξτε Αυτή την Ημέρα
+level_select_close,Κλείσιμο
+continue_dialog_header,Τα Αποθηκευμένα Δεδομένα σας
+continue_dialog_day,Ημέρα: {day}
+continue_dialog_continue,Συνέχεια
+continue_dialog_cancel,Ακύρωση
+new_game_confirm_button,"Ναι, Ξεκινήστε Νέο Παιχνίδι"
+tutorial_choice_play,Παίξτε το Εκπαιδευτικό
+tutorial_choice_skip,Παράλειψη Εκπαιδευτικού
+tutorial_dialog_title,Εκπαιδευτικό
+tutorial_dialog_text,Θα θέλατε να παίξετε το εκπαιδευτικό;\n\nΤο εκπαιδευτικό θα σας καθοδηγήσει στα βασικά του να είστε τελωνειακός υπάλληλος στην Spud Customs.
+continue_game_title,Συνέχεια Παιχνιδιού
+level_select_story_choices,Επιλογές Ιστορίας
+reset_progress_confirm,Είστε σίγουροι ότι θέλετε να επαναφέρετε την πρόοδο της ιστορίας; Αυτό δεν μπορεί να αναιρεθεί.
+reset_highscores_confirm,Είστε σίγουροι ότι θέλετε να επαναφέρετε όλες τις υψηλές βαθμολογίες; Αυτό δεν μπορεί να αναιρεθεί.

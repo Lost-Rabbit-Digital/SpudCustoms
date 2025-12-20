@@ -174,3 +174,20 @@ help_lore_nation,[b]Krumpli Nemzete[/b]
 help_lore_your_role,[b]A te szereped[/b]
 help_lore_border,[b]A Nagy Fal[/b]
 help_lore_secrets,[b]Gyökérfeldolgozó[/b]
+level_select_choices_header,Választási lehetőségek a {day}. napig
+level_select_choices_header_named,Választási lehetőségek a {day}. napig - {name}
+level_select_play_day,Játék ezen a napon
+level_select_close,Bezárás
+continue_dialog_header,Mentett adataid
+continue_dialog_day,Nap: {day}
+continue_dialog_continue,Folytatás
+continue_dialog_cancel,Mégse
+new_game_confirm_button,"Igen, új játék indítása"
+tutorial_choice_play,Oktatóanyag lejátszása
+tutorial_choice_skip,Oktatóanyag kihagyása
+tutorial_dialog_title,Oktatóanyag
+tutorial_dialog_text,Szeretnéd lejátszani az oktatóanyagot?\n\nAz oktatóanyag bevezet a Spud Customs vámügyintézői alapjaiba.
+continue_game_title,Játék folytatása
+level_select_story_choices,Történeti választási lehetőségek
+reset_progress_confirm,Biztosan vissza szeretnéd állítani a történeti előrehaladást? Ez nem vonható vissza.
+reset_highscores_confirm,Biztosan vissza szeretnéd állítani az összes rekordot? Ez nem vonható vissza.

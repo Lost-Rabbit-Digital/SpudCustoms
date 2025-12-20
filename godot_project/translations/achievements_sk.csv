@@ -1,0 +1,53 @@
+﻿keys,sk
+achievement_unlocked_title,ÚSPECH ODOMKNUTÝ!
+achievements_menu_button,Úspechy
+achievements_progress_format,%d / %d Odomknutých
+achievement_hidden_name,???
+achievement_hidden_desc,"Tento úspech je skrytý, kým sa neodomkne"
+achievement_category_gameplay,Hrateľnosť
+achievement_category_resistance,Cesta odporu
+achievement_category_loyalist,Cesta lojalistu
+achievement_category_character,Charakterové oblúky
+achievement_category_discovery,Objavovanie
+achievement_rookie_officer_name,Nováčik dôstojník
+achievement_rookie_officer_desc,Dokončiť svoju prvú smenu na hranici
+achievement_veteran_officer_name,Colný veterán
+achievement_veteran_officer_desc,Dokončiť 10 smien na hranici
+achievement_master_officer_name,Majster colníctva
+achievement_master_officer_desc,Dokončiť 25 smien na hranici
+achievement_sharpshooter_name,Ostreľovač
+achievement_sharpshooter_desc,Zastaviť 10 hraničných bežcov pomocou raketového systému
+achievement_border_defender_name,Obranca hraníc
+achievement_border_defender_desc,Zastaviť 50 hraničných bežcov pomocou raketového systému
+achievement_perfect_shot_name,Perfektný výstrel
+achievement_perfect_shot_desc,Zasiahnuť 5 perfektných zásahov na hraničných bežcov
+achievement_high_scorer_name,Majster skóre
+achievement_high_scorer_desc,Dosiahnuť skóre 10
+achievement_score_legend_name,Legenda skóre
+achievement_score_legend_desc,Dosiahnuť skóre 50
+achievement_savior_of_spud_name,Spasiteľ Spudu
+achievement_savior_of_spud_desc,Dokončite príbeh a zachráňte národ
+achievement_born_diplomat_name,Narodený diplomat
+achievement_born_diplomat_desc,Dosiahnite diplomatický koniec prostredníctvom mierových rokovaní
+achievement_tater_of_justice_name,Zemiak spravodlivosti
+achievement_tater_of_justice_desc,Prineste spravodlivosť skorumpovaným úradníkom
+achievement_best_served_hot_name,Najlepšie podávané horúce
+achievement_best_served_hot_desc,"Pomstite sa tým, ktorí vám ublížili"
+achievement_down_with_tatriarchy_name,Preč so zemiakokraciou
+achievement_down_with_tatriarchy_desc,Veďte revolúciu a zvrhnite režim
+achievement_heart_of_stone_name,Srdce z kameňa
+achievement_heart_of_stone_desc,Zostaňte chladným a poslušným byrokratom až do konca
+achievement_survivor_name,Preživší
+achievement_survivor_desc,"Urobte čokoľvek je potrebné, aby ste prežili režim"
+achievement_late_bloomer_name,Neskorý kvet
+achievement_late_bloomer_desc,Nájdite vykúpenie v poslednej chvíli
+achievement_tommys_legacy_name,Tommyho odkaz
+achievement_tommys_legacy_desc,Odhaľte pravdu o Tommyho osude
+achievement_elenas_memory_name,Elenina spomienka
+achievement_elenas_memory_desc,Uctite Eleninu obeť a spomeňte si na jej príbeh
+achievement_the_note_name,Odkaz
+achievement_the_note_desc,Objavte tajný odkaz a jeho skrytú správu
+achievement_root_of_evil_name,Koreň zla
+achievement_root_of_evil_desc,Odhaľte korupciu v srdci režimu
+achievement_chaos_architect_name,Architekt chaosu
+achievement_chaos_architect_desc,"Prijmi chaos a sleduj, ako svet horí"

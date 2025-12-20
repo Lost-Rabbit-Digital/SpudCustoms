@@ -31,3 +31,16 @@ Text/172/text,Spud的安全与保障取决于您的[pulse freq=2][color=DARK_ORA
 Text/174/text,让我们开始您的[color=YELLOW]训练班次[/color]...
 Text/180/text,但是请注意——并非所有土豆的证件都齐全。
 Text/181/text,[color=RED]过期护照[/color]将自动拒绝。没有例外。
+Text/tut_001/text,欢迎来到[pulse freq=2][color=MEDIUM_VIOLET_RED]薯国海关！[/color][/pulse]
+Text/tut_002/text,您已被选中担任一个重要职务：[color=DARK_ORANGE]边境海关官员[/color]。
+Text/tut_003/text,您的工作很简单。马铃薯会抵达您的检查站，您检查他们的证件，并决定谁能通过。
+Text/tut_004/text,但请注意——并非所有马铃薯的证件都符合规定。
+Text/tut_005/text,[color=RED]过期护照[/color]将自动被拒绝。没有例外。
+Text/tut_006/text,我将[color=YELLOW]一步步[/color]引导您了解基础知识。按照提示操作，您很快就能掌握。
+Text/tut_007/text,[pulse freq=2][color=RED]还有一件事！[/color][/pulse] 有些马铃薯认为自己的证件无法通过检查时，会试图[color=CRIMSON]逃跑[/color]。
+Text/tut_008/text,当[color=RED]越境逃犯[/color]试图逃跑时，您会看到他们冲过您的检查站，奔向边境。
+Text/tut_009/text,这就是您的[color=CHARTREUSE]气动导弹发射器[/color]派上用场的时候了。它就是您控制面板上的那个大按钮。
+Text/tut_010/text,当逃犯进入射程时，[color=YELLOW]点击发射[/color]。瞄准[color=GOLD]目标区域中心[/color]以获得额外分数！
+Text/tut_011/text,但请注意——[color=RED]不要击中排队中的无辜马铃薯[/color]。那会扣除您的分数并获得一次惩罚！
+Text/tut_012/text,薯国的安全与保障取决于您的[pulse freq=2][color=DARK_ORANGE]警惕！[/color][/pulse]
+Text/tut_013/text,让我们开始您的[color=YELLOW]训练班次[/color]...

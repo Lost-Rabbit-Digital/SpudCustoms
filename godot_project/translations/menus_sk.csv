@@ -174,3 +174,20 @@ help_lore_nation,"[b]Národ Spud[/b]\n\nSpud je hrdý národ, ktorý sľubuje pr
 help_lore_your_role,"[b]Vaša úloha[/b]\n\nBoli ste vybraný na kľúčovú úlohu pri ochrane hraníc. Ako colný úradník pracujete pod ostražitým dohľadom dozorcu Russeta.\n\nVáš blahobyt závisí od vášho výkonu. Plňte svoje kvóty, dodržiavajte pravidlá a pamätajte: národ sa na vás spolieha."
 help_lore_border,"[b]Veľký múr[/b]\n\nMocný Veľký múr Spudu chráni národ pred cudzincami. Na rôznych kontrolných stanovištiach pozdĺž múru úradníci ako vy zaisťujú, že vstúpiť môžu len tí hodní.\n\nTí, ktorí sa pokúsia prekročiť hranicu bez riadnych dokladov, čelia okamžitým následkom."
 help_lore_secrets,[b]Koreňová rezerva[/b]\n\nZamietnuté zemiaky sú... spracované. Podľa protokolu. Záhadná Koreňová rezerva sa postará o všetky detaily.\n\nJe lepšie neklásť príliš veľa otázok. Sústreďte sa na svoje povinnosti. Nič viac.
+level_select_choices_header,Voľby do Dňa {day}
+level_select_choices_header_named,Voľby do Dňa {day} - {name}
+level_select_play_day,Hrať Tento Deň
+level_select_close,Zavrieť
+continue_dialog_header,Vaša Uložená Hra
+continue_dialog_day,Deň: {day}
+continue_dialog_continue,Pokračovať
+continue_dialog_cancel,Zrušiť
+new_game_confirm_button,"Áno, Začať Novú Hru"
+tutorial_choice_play,Hrať Tutoriál
+tutorial_choice_skip,Preskočiť Tutoriál
+tutorial_dialog_title,Tutoriál
+tutorial_dialog_text,Chceli by ste si zahrať tutoriál?\n\nTutoriál vás prevedie základmi práce colníka v Spud Customs.
+continue_game_title,Pokračovať v Hre
+level_select_story_choices,Príbehové Voľby
+reset_progress_confirm,Naozaj chcete resetovať príbehový postup? Túto akciu nemožno vrátiť späť.
+reset_highscores_confirm,Naozaj chcete resetovať všetky najvyššie skóre? Túto akciu nemožno vrátiť späť.

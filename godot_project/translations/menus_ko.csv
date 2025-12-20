@@ -162,3 +162,20 @@ help_lore_nation,[b]스퍼드 국가[/b]
 help_lore_your_role,[b]당신의 역할[/b]
 help_lore_border,[b]만리장성[/b]
 help_lore_secrets,[b]뿌리 보관소[/b]
+level_select_choices_header,{day}일차까지의 선택
+level_select_choices_header_named,{day}일차까지의 선택 - {name}
+level_select_play_day,이 날 플레이
+level_select_close,닫기
+continue_dialog_header,저장된 게임 데이터
+continue_dialog_day,일차: {day}
+continue_dialog_continue,계속하기
+continue_dialog_cancel,취소
+new_game_confirm_button,"예, 새 게임 시작"
+tutorial_choice_play,튜토리얼 플레이
+tutorial_choice_skip,튜토리얼 건너뛰기
+tutorial_dialog_title,튜토리얼
+tutorial_dialog_text,튜토리얼을 플레이하시겠습니까?\n\n튜토리얼은 스퍼드 세관의 세관원으로서 알아야 할 기본 사항을 안내해 드립니다.
+continue_game_title,게임 계속하기
+level_select_story_choices,스토리 선택
+reset_progress_confirm,스토리 진행 상황을 초기화하시겠습니까? 이 작업은 되돌릴 수 없습니다.
+reset_highscores_confirm,모든 최고 점수를 초기화하시겠습니까? 이 작업은 되돌릴 수 없습니다.

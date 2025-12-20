@@ -174,3 +174,20 @@ help_lore_nation,"[b]La Nation de Spud[/b]\n\nSpud est une fière nation qui pro
 help_lore_your_role,"[b]Votre Rôle[/b]\n\nVous avez été sélectionné pour un rôle crucial dans la protection de nos frontières. En tant qu'Agent des Douanes, vous travaillez sous l'œil vigilant du Superviseur Russet.\n\nVotre bien-être dépend de vos performances. Atteignez vos quotas, suivez les règles, et n'oubliez pas : la nation compte sur vous."
 help_lore_border,"[b]Le Grand Mur[/b]\n\nLe puissant Grand Mur de Spud protège la nation des étrangers. Aux divers points de contrôle le long du mur, des agents comme vous s'assurent que seuls les plus méritants puissent entrer.\n\nCeux qui tentent de franchir la frontière sans les documents appropriés s'exposent à des conséquences immédiates."
 help_lore_secrets,[b]La Réserve Souterraine[/b]\n\nLes patates rejetées sont... traitées. Conformément au protocole. La mystérieuse Réserve Souterraine s'occupe de tous les détails.\n\nIl est préférable de ne pas poser trop de questions. Concentrez-vous sur vos tâches. Rien de plus.
+level_select_choices_header,Choix jusqu'au Jour {day}
+level_select_choices_header_named,Choix jusqu'au Jour {day} - {name}
+level_select_play_day,Jouer Ce Jour
+level_select_close,Fermer
+continue_dialog_header,Votre Sauvegarde
+continue_dialog_day,Jour : {day}
+continue_dialog_continue,Continuer
+continue_dialog_cancel,Annuler
+new_game_confirm_button,"Oui, Commencer une Nouvelle Partie"
+tutorial_choice_play,Jouer le Tutoriel
+tutorial_choice_skip,Passer le Tutoriel
+tutorial_dialog_title,Tutoriel
+tutorial_dialog_text,Voulez-vous jouer le tutoriel ?\n\nLe tutoriel vous guidera à travers les bases du métier d'agent des douanes à Spud Customs.
+continue_game_title,Continuer la Partie
+level_select_story_choices,Choix de l'Histoire
+reset_progress_confirm,Êtes-vous sûr de vouloir réinitialiser la progression de l'histoire ? Ceci est irréversible.
+reset_highscores_confirm,Êtes-vous sûr de vouloir réinitialiser tous les meilleurs scores ? Ceci est irréversible.

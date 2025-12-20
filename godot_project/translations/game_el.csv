@@ -59,3 +59,58 @@ citation_trash_label,ΑΠΟΡΡΙΜΜΑΤΑ
 citation_header,ΕΠΙΣΗΜΗ ΠΑΡΑΠΟΜΠΗ
 citation_from_supervisor,Από: Επόπτης Ράσετ
 citation_dismiss_hint,[Σύρετε στα απορρίμματα για απόρριψη]
+minigame_times_up,"Ο χρόνος τελείωσε! Μην ανησυχείς, πίσω στη δουλειά!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,ΓΡΗΓΟΡΟ ΣΥΜΒΑΝ ΧΡΟΝΟΥ
+qte_instruction,Πάτησε τα πλήκτρα όπως εμφανίζονται!
+qte_auto_completed,Αυτόματη ολοκλήρωση
+qte_accessibility_note,(Προσβασιμότητα QTE ενεργοποιημένη)
+qte_get_ready,Ετοιμάσου...
+qte_progress,Πρόοδος
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} επιτυχημένα (+{points} πόντοι)
+qte_image_pending,[Εικόνα σε εκκρεμότητα]
+evidence_title,ΕΠΙΚΕΙΤΑΙ ΕΛΕΓΧΟΣ ΑΣΦΑΛΕΙΑΣ
+evidence_instruction,"Καθάρισε το γραφείο σου! Κατάστρεψε αποδεικτικά, απόκρυψε αντικείμενα εργασίας."
+evidence_suspicion,Υποψία: {percent}%
+evidence_items_remaining,Αντικείμενα: {count}
+evidence_times_up_found,Ο χρόνος τελείωσε! Βρήκαν τα αποδεικτικά...
+evidence_times_up_suspicious,Ο χρόνος τελείωσε! Ο έλεγχος ήταν... ενδελεχής.
+codebreaker_title,ΣΠΑΣΤΗΣ ΚΩΔΙΚΩΝ
+codebreaker_instruction,"Σπάσε τον κωδικό! Πράσινο = ακριβής αντιστοιχία, Κίτρινο = σωστός αριθμός λάθος θέση"
+codebreaker_enter_code,ΕΙΣΑΓΩΓΗ ΚΩΔΙΚΟΥ
+codebreaker_submit,ΥΠΟΒΟΛΗ
+codebreaker_clear,ΕΚΚΑΘΑΡΙΣΗ
+codebreaker_previous_attempts,Προηγούμενες Προσπάθειες:
+codebreaker_attempts,Προσπάθειες: {current} / {max}
+codebreaker_result_exact_close,{exact} ακριβή
+codebreaker_result_exact,{exact} ακριβώς
+codebreaker_result_close,{close} κοντά
+codebreaker_result_none,καμία αντιστοιχία
+codebreaker_success,Ο κωδικός αποκρυπτογραφήθηκε σε {attempts} προσπάθειες! +{points} πόντοι!
+codebreaker_failure,Εξαντλήθηκαν οι προσπάθειες! Ο κωδικός εμφανίστηκε παραπάνω.
+scanner_title,ΣΑΡΩΤΗΣ ΕΓΓΡΑΦΩΝ
+scanner_instruction,Σύρετε το φως UV για να βρείτε κρυφά σημάδια! Κάντε κλικ για επιβεβαίωση.
+scanner_found,Βρέθηκαν: {current} / {total}
+scanner_perfect,Τέλεια! Όλα τα στοιχεία βρέθηκαν! +{points} πόντοι!
+scanner_partial,Καλή προσπάθεια! Βρέθηκαν {found}/{total}. +{points} πόντοι!
+chase_title,ΚΥΝΗΓΗΤΟ ΣΤΑ ΣΥΝΟΡΑ
+chase_instruction,Κάντε κλικ στα ΚΟΚΚΙΝΑ λαθραία αντικείμενα! Αφήστε τα ΠΡΑΣΙΝΑ αντικείμενα να περάσουν.
+chase_legend,ΚΟΚΚΙΝΟ = Πιάσε!   ΠΡΑΣΙΝΟ = Άφησε να περάσει
+chase_caught,Πιάστηκαν: {current} / {total}
+chase_perfect,Τέλεια σύλληψη! +{points} πόντοι!
+chase_partial,Πιάστηκαν {count} αντικείμενα. +{points} πόντοι!
+sorting_title,ΤΑΞΙΝΟΜΗΣΗ ΣΦΡΑΓΙΔΩΝ
+sorting_instruction,"Σύρετε τις σφραγίδες στον σωστό κάδο! Πράσινο = ΕΓΚΡΙΘΗΚΕ, Κόκκινο = ΑΠΟΡΡΙΦΘΗΚΕ"
+sorting_approved,ΕΓΚΡΙΘΗΚΕ
+sorting_denied,ΑΠΟΡΡΙΦΘΗΚΕ
+sorting_progress,Ταξινομήθηκαν: {sorted}/{total}  Σωστά: {correct}
+sorting_perfect,Τέλεια ταξινόμηση! +{points} πόντοι!
+sorting_partial,Ταξινομήθηκαν {correct}/{total} σωστά. +{points} πόντοι!
+fingerprint_title,ΑΝΤΙΣΤΟΙΧΙΑ ΔΑΚΤΥΛΙΚΟΥ ΑΠΟΤΥΠΩΜΑΤΟΣ
+fingerprint_instruction,Βρείτε το δακτυλικό αποτύπωμα που ταιριάζει με την αναφορά!
+fingerprint_reference,ΑΝΑΦΟΡΑ
+fingerprint_find_match,ΒΡΕΣ ΤΟ ΤΑΙΡΙΑΣΜΑ
+fingerprint_progress,Αντιστοιχισμένα: {current} / {total}
+fingerprint_success,Όλα τα δακτυλικά αποτυπώματα αντιστοιχίστηκαν! +{points} πόντοι!
+fingerprint_partial,Αντιστοιχίστηκαν {matched}/{total}. +{points} πόντοι!

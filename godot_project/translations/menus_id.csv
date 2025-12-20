@@ -174,3 +174,20 @@ help_lore_nation,"[b]Bangsa Spud[/b]\n\nSpud adalah bangsa yang bangga dan menja
 help_lore_your_role,"[b]Peran Anda[/b]\n\nAnda telah terpilih untuk peran krusial dalam melindungi perbatasan. Sebagai Petugas Bea Cukai, Anda bekerja di bawah pengawasan ketat Supervisor Russet.\n\nKesejahteraan Anda bergantung pada kinerja Anda. Penuhi kuota Anda, patuhi peraturan, dan ingat: bangsa ini mengandalkan Anda."
 help_lore_border,"[b]Tembok Agung[/b]\n\nTembok Agung Spud yang perkasa melindungi bangsa dari orang luar. Di berbagai pos pemeriksaan di sepanjang tembok, petugas seperti Anda memastikan hanya mereka yang layak yang boleh masuk.\n\nMereka yang mencoba menerobos perbatasan tanpa dokumen yang sah akan menghadapi konsekuensi langsung."
 help_lore_secrets,[b]Cadangan Akar[/b]\n\nKentang yang ditolak... diproses. Sesuai protokol. Cadangan Akar yang misterius menangani semua detailnya.\n\nSebaiknya jangan terlalu banyak bertanya. Fokus pada tugas Anda. Tidak lebih.
+level_select_choices_header,Pilihan hingga Hari ke-{day}
+level_select_choices_header_named,Pilihan hingga Hari ke-{day} - {name}
+level_select_play_day,Mainkan Hari Ini
+level_select_close,Tutup
+continue_dialog_header,Data Tersimpan Anda
+continue_dialog_day,Hari: {day}
+continue_dialog_continue,Lanjutkan
+continue_dialog_cancel,Batal
+new_game_confirm_button,"Ya, Mulai Game Baru"
+tutorial_choice_play,Mainkan Tutorial
+tutorial_choice_skip,Lewati Tutorial
+tutorial_dialog_title,Tutorial
+tutorial_dialog_text,Apakah Anda ingin memainkan tutorial? \n\nTutorial ini akan memandu Anda melalui dasar-dasar menjadi petugas bea cukai di Spud Customs.
+continue_game_title,Lanjutkan Game
+level_select_story_choices,Pilihan Cerita
+reset_progress_confirm,Apakah Anda yakin ingin mengatur ulang progres cerita? Tindakan ini tidak dapat dibatalkan.
+reset_highscores_confirm,Apakah Anda yakin ingin mengatur ulang semua skor tertinggi? Tindakan ini tidak dapat dibatalkan.

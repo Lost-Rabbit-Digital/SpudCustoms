@@ -31,3 +31,16 @@ Text/172/text,Sikkerheten til Spud avhenger av din [pulse freq=2][color=DARK_ORA
 Text/174/text,La oss starte din [color=YELLOW]treningsvakt[/color]...
 Text/180/text,Men vær forsiktig - ikke alle poteter har papirene sine i orden.
 Text/181/text,[color=RED]Utgåtte pass[/color] er en automatisk avvisning. Ingen unntak.
+Text/tut_001/text,Velkommen til [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Tollstasjon![/color][/pulse]
+Text/tut_002/text,Du er valgt ut til en viktig rolle: [color=DARK_ORANGE]Grensetollbetjent[/color].
+Text/tut_003/text,"Jobben din er enkel. Poteter ankommer din bod, du sjekker dokumentene deres, og du bestemmer hvem som får passere."
+Text/tut_004/text,Men vær forsiktig - ikke alle poteter har papirene sine i orden.
+Text/tut_005/text,[color=RED]Utgåtte pass[/color] er automatisk avslag. Ingen unntak.
+Text/tut_006/text,Jeg vil veilede deg gjennom det grunnleggende [color=YELLOW]steg for steg[/color]. Følg instruksjonene og du vil få taket på det.
+Text/tut_007/text,[pulse freq=2][color=RED]Én ting til![/color][/pulse] Noen poteter vil prøve å [color=CRIMSON]stikke av[/color] når de tror papirene deres ikke vil bestå inspeksjonen.
+Text/tut_008/text,"Når en [color=RED]grenseløper[/color] prøver å rømme, vil du se dem spurte forbi din bod mot grensen."
+Text/tut_009/text,Det er her din [color=CHARTREUSE]Pneumatiske Missilkaster[/color] kommer inn. Det er den store knappen på kontrollpanelet ditt.
+Text/tut_010/text,[color=YELLOW]Klikk for å skyte[/color] når en løper er innen rekkevidde. Sikt mot [color=GOLD]midten av målområdet[/color] for bonuspoeng!
+Text/tut_011/text,Men vær forsiktig - [color=RED]ikke treff uskyldige poteter[/color] i køen. Det vil koste deg poeng og gi deg en streik!
+Text/tut_012/text,Sikkerheten til Spud avhenger av din [pulse freq=2][color=DARK_ORANGE]årvåkenhet![/color][/pulse]
+Text/tut_013/text,La oss starte din [color=YELLOW]treningsvakt[/color]...

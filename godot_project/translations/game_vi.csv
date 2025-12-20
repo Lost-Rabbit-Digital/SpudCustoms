@@ -59,3 +59,58 @@ citation_trash_label,THÙNG RÁC
 citation_header,GIẤY CẢNH CÁO CHÍNH THỨC
 citation_from_supervisor,Từ: Giám sát viên Russet
 citation_dismiss_hint,[Kéo vào Thùng rác để đóng]
+minigame_times_up,"Hết giờ! Đừng lo, quay lại làm việc thôi!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,SỰ KIỆN NHANH
+qte_instruction,Nhấn các phím khi chúng xuất hiện!
+qte_auto_completed,Tự động hoàn thành
+qte_accessibility_note,(Trợ năng QTE đã bật)
+qte_get_ready,Chuẩn bị...
+qte_progress,Tiến độ
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} thành công (+{points} điểm)
+qte_image_pending,[Hình ảnh đang chờ]
+evidence_title,KIỂM TRA AN NINH SẮP DIỄN RA
+evidence_instruction,"Dọn dẹp bàn làm việc! Hủy bằng chứng, cất vật phẩm làm việc."
+evidence_suspicion,Nghi ngờ: {percent}%
+evidence_items_remaining,Vật phẩm: {count}
+evidence_times_up_found,Hết giờ! Họ đã tìm thấy bằng chứng...
+evidence_times_up_suspicious,Hết giờ! Cuộc kiểm tra đã... rất kỹ lưỡng.
+codebreaker_title,GIẢI MÃ
+codebreaker_instruction,"Giải mã! Xanh lá = khớp chính xác, Vàng = đúng số sai vị trí"
+codebreaker_enter_code,NHẬP MÃ
+codebreaker_submit,GỬI
+codebreaker_clear,XÓA
+codebreaker_previous_attempts,Các lần thử trước:
+codebreaker_attempts,Lần thử: {current} / {max}
+codebreaker_result_exact_close,{exact} chính xác
+codebreaker_result_exact,{exact} chính xác
+codebreaker_result_close,{close} gần đúng
+codebreaker_result_none,không khớp
+codebreaker_success,Mã đã được giải trong {attempts} lần thử! +{points} điểm!
+codebreaker_failure,Hết lượt thử! Mã đã được hiển thị bên trên.
+scanner_title,MÁY QUÉT TÀI LIỆU
+scanner_instruction,Kéo đèn UV để tìm dấu hiệu ẩn! Nhấp để xác nhận.
+scanner_found,Đã tìm thấy: {current} / {total}
+scanner_perfect,Hoàn hảo! Đã tìm thấy tất cả các yếu tố! +{points} điểm!
+scanner_partial,Nỗ lực tốt! Đã tìm thấy {found}/{total}. +{points} điểm!
+chase_title,TRUY ĐUỔI BIÊN GIỚI
+chase_instruction,Nhấp vào các vật phẩm buôn lậu MÀU ĐỎ! Cho phép các vật phẩm MÀU XANH LÁ đi qua.
+chase_legend,ĐỎ = Bắt!   XANH LÁ = Cho qua
+chase_caught,Đã bắt: {current} / {total}
+chase_perfect,Bắt hoàn hảo! +{points} điểm!
+chase_partial,Đã bắt {count} vật phẩm. +{points} điểm!
+sorting_title,PHÂN LOẠI CON DẤU
+sorting_instruction,"Kéo con dấu vào thùng đúng! Xanh lá = ĐƯỢC PHÊ DUYỆT, Đỏ = BỊ TỪ CHỐI"
+sorting_approved,ĐƯỢC PHÊ DUYỆT
+sorting_denied,BỊ TỪ CHỐI
+sorting_progress,Đã phân loại: {sorted}/{total}  Đúng: {correct}
+sorting_perfect,Phân loại hoàn hảo! +{points} điểm!
+sorting_partial,Đã phân loại đúng {correct}/{total}. +{points} điểm!
+fingerprint_title,KHỚP VÂN TAY
+fingerprint_instruction,Tìm vân tay khớp với mẫu tham chiếu!
+fingerprint_reference,THAM CHIẾU
+fingerprint_find_match,TÌM KHỚP
+fingerprint_progress,Đã khớp: {current} / {total}
+fingerprint_success,Tất cả dấu vân tay đã khớp! +{points} điểm!
+fingerprint_partial,Đã khớp {matched}/{total}. +{points} điểm!

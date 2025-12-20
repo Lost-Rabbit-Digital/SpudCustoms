@@ -59,3 +59,58 @@ citation_trash_label,PAPIRKURV
 citation_header,OFFICIEL BØDE
 citation_from_supervisor,Fra: Supervisor Russet
 citation_dismiss_hint,[Træk til papirkurven for at lukke]
+minigame_times_up,"Tiden er udløbet! Ingen bekymringer, tilbage til arbejdet!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,HURTIGT BEGIVENHED
+qte_instruction,"Tryk på tasterne, når de vises!"
+qte_auto_completed,Automatisk gennemført
+qte_accessibility_note,(QTE Tilgængelighed aktiveret)
+qte_get_ready,Gør dig klar...
+qte_progress,Fremskridt
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} succesfulde (+{points} point)
+qte_image_pending,[Billede afventer]
+evidence_title,SIKKERHEDSINSPEKTION NÆRMEST
+evidence_instruction,"Ryd dit skrivebord! Makulér beviser, gem arbejdsgenstande."
+evidence_suspicion,Mistanke: {percent}%
+evidence_items_remaining,Genstande: {count}
+evidence_times_up_found,Tiden er udløbet! De fandt beviserne...
+evidence_times_up_suspicious,Tiden er udløbet! Inspektionen var... grundig.
+codebreaker_title,KODEBRYDER
+codebreaker_instruction,"Knæk koden! Grøn = nøjagtigt match, Gul = rigtigt ciffer forkert sted"
+codebreaker_enter_code,INDTAST KODEN
+codebreaker_submit,INDSEND
+codebreaker_clear,RYD
+codebreaker_previous_attempts,Tidligere forsøg:
+codebreaker_attempts,Forsøg: {current} / {max}
+codebreaker_result_exact_close,{exact} nøjagtige
+codebreaker_result_exact,{exact} præcise
+codebreaker_result_close,{close} nære
+codebreaker_result_none,ingen match
+codebreaker_success,Kode knækket på {attempts} forsøg! +{points} point!
+codebreaker_failure,Ingen forsøg tilbage! Koden blev vist ovenfor.
+scanner_title,DOKUMENTSCANNER
+scanner_instruction,Træk UV-lyset for at finde skjulte mærker! Klik for at bekræfte.
+scanner_found,Fundet: {current} / {total}
+scanner_perfect,Perfekt! Alle elementer fundet! +{points} point!
+scanner_partial,God indsats! Fandt {found}/{total}. +{points} point!
+chase_title,GRÆNSEJAGT
+chase_instruction,Klik på de RØDE smuglervarer! Lad de GRØNNE genstande passere.
+chase_legend,RØD = Fang! GRØN = Lad passere
+chase_caught,Fanget: {current} / {total}
+chase_perfect,Perfekt fangst! +{points} point!
+chase_partial,Fangede {count} genstande. +{points} point!
+sorting_title,STEMPELSORTERING
+sorting_instruction,"Træk stempler til den korrekte beholder! Grøn = GODKENDT, Rød = AFVIST"
+sorting_approved,GODKENDT
+sorting_denied,AFVIST
+sorting_progress,Sorteret: {sorted}/{total} Korrekt: {correct}
+sorting_perfect,Perfekt sortering! +{points} point!
+sorting_partial,Sorterede {correct}/{total} korrekt. +{points} point!
+fingerprint_title,FINGERAFTYKSMATCH
+fingerprint_instruction,Find fingeraftrykket der matcher referencen!
+fingerprint_reference,REFERENCE
+fingerprint_find_match,FIND MATCHET
+fingerprint_progress,Matchet: {current} / {total}
+fingerprint_success,Alle fingeraftryk matchet! +{points} point!
+fingerprint_partial,Matchet {matched}/{total}. +{points} point!

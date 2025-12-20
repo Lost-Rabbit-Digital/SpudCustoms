@@ -174,3 +174,20 @@ help_lore_nation,[b]Quốc Gia Spud[/b]
 help_lore_your_role,[b]Vai Trò Của Bạn[/b]
 help_lore_border,[b]Vạn Lý Trường Thành[/b]
 help_lore_secrets,[b]Khu Trữ Củ[/b]
+level_select_choices_header,Các lựa chọn đến Ngày {day}
+level_select_choices_header_named,Các lựa chọn đến Ngày {day} - {name}
+level_select_play_day,Chơi Ngày này
+level_select_close,Đóng
+continue_dialog_header,Dữ liệu đã lưu của bạn
+continue_dialog_day,Ngày: {day}
+continue_dialog_continue,Tiếp tục
+continue_dialog_cancel,Hủy
+new_game_confirm_button,"Có, Bắt đầu trò chơi mới"
+tutorial_choice_play,Chơi Hướng dẫn
+tutorial_choice_skip,Bỏ qua Hướng dẫn
+tutorial_dialog_title,Hướng dẫn
+tutorial_dialog_text,Bạn có muốn chơi phần hướng dẫn không? \n\nPhần hướng dẫn sẽ chỉ cho bạn những điều cơ bản để trở thành một nhân viên hải quan tại Spud Customs.
+continue_game_title,Tiếp tục trò chơi
+level_select_story_choices,Các lựa chọn cốt truyện
+reset_progress_confirm,Bạn có chắc muốn đặt lại tiến độ cốt truyện không? Thao tác này không thể hoàn tác.
+reset_highscores_confirm,Bạn có chắc muốn đặt lại tất cả điểm cao không? Thao tác này không thể hoàn tác.

@@ -59,3 +59,58 @@ citation_trash_label,KOSZ
 citation_header,OFICJALNE UPOMNIENIE
 citation_from_supervisor,Od: Nadzorca Russet
 citation_dismiss_hint,[Przeciągnij do kosza, aby zamknąć]
+minigame_times_up,"Koniec czasu! Bez obaw, wracaj do pracy!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,SZYBKA AKCJA CZASOWA
+qte_instruction,"Naciśnij klawisze, gdy się pojawią!"
+qte_auto_completed,Ukończono automatycznie
+qte_accessibility_note,(Ułatwienia dla Szybkich Akcji Czasowych włączone)
+qte_get_ready,Przygotuj się...
+qte_progress,Postęp
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} udanych (+{points} punktów)
+qte_image_pending,[Obraz w Przygotowaniu]
+evidence_title,KONTROLA BEZPIECZEŃSTWA NIEUCHRONNA
+evidence_instruction,"Posprzątaj biurko! Zniszcz dowody, ukryj przedmioty służbowe."
+evidence_suspicion,Podejrzenie: {percent}%
+evidence_items_remaining,Przedmioty: {count}
+evidence_times_up_found,Koniec czasu! Znaleźli dowody...
+evidence_times_up_suspicious,Koniec czasu! Kontrola była... dokładna.
+codebreaker_title,ŁAMACZ KODÓW
+codebreaker_instruction,"Złam kod! Zielony = dokładne dopasowanie, Żółty = właściwa cyfra, złe miejsce"
+codebreaker_enter_code,WPROWADŹ KOD
+codebreaker_submit,ZATWIERDŹ
+codebreaker_clear,WYCZYŚĆ
+codebreaker_previous_attempts,Poprzednie próby:
+codebreaker_attempts,Próby: {current} / {max}
+codebreaker_result_exact_close,{exact} dokładnych
+codebreaker_result_exact,{exact} trafień
+codebreaker_result_close,{close} zbliżonych
+codebreaker_result_none,brak trafień
+codebreaker_success,Kod złamany w {attempts} próbach! +{points} punktów!
+codebreaker_failure,Koniec prób! Kod został pokazany powyżej.
+scanner_title,SKANER DOKUMENTÓW
+scanner_instruction,"Przeciągnij światło UV, aby znaleźć ukryte ślady! Kliknij, aby potwierdzić."
+scanner_found,Znaleziono: {current} / {total}
+scanner_perfect,Doskonale! Wszystkie elementy znalezione! +{points} punktów!
+scanner_partial,Dobra robota! Znaleziono {found}/{total}. +{points} punktów!
+chase_title,POŚCIG GRANICZNY
+chase_instruction,Kliknij CZERWONE przedmioty kontrabandy! Pozwól ZIELONYM przedmiotom przejść.
+chase_legend,CZERWONE = Złap! ZIELONE = Przepuść
+chase_caught,Złapano: {current} / {total}
+chase_perfect,Doskonałe złapanie! +{points} punktów!
+chase_partial,Złapano {count} przedmiotów. +{points} punktów!
+sorting_title,SORTOWANIE PIECZĄTEK
+sorting_instruction,"Przeciągnij pieczątki do właściwego pojemnika! Zielony = ZATWIERDZONE, Czerwony = ODRZUCONE"
+sorting_approved,ZATWIERDZONE
+sorting_denied,ODRZUCONE
+sorting_progress,Posortowano: {sorted}/{total} Poprawnie: {correct}
+sorting_perfect,Doskonałe sortowanie! +{points} punktów!
+sorting_partial,Posortowano {correct}/{total} poprawnie. +{points} punktów!
+fingerprint_title,DOPASOWANIE ODCISKU PALCA
+fingerprint_instruction,Znajdź odcisk palca pasujący do wzorca!
+fingerprint_reference,WZORZEC
+fingerprint_find_match,ZNAJDŹ DOPASOWANIE
+fingerprint_progress,Dopasowano: {current} / {total}
+fingerprint_success,Wszystkie odciski palców dopasowane! +{points} punktów!
+fingerprint_partial,Dopasowano {matched}/{total}. +{points} punktów!

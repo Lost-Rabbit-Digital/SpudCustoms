@@ -31,3 +31,16 @@ Text/172/text,Säkerheten och tryggheten för Spud beror på din [pulse freq=2][
 Text/174/text,Låt oss börja ditt [color=YELLOW]träningspass[/color]...
 Text/180/text,Men var försiktig - inte varje potatis har sina papper i ordning.
 Text/181/text,[color=RED]Utgångna pass[/color] är ett automatiskt avslag. Inga undantag.
+Text/tut_001/text,Välkommen till [pulse freq=2][color=MEDIUM_VIOLET_RED]Spud Customs![/color][/pulse]
+Text/tut_002/text,Du har valts ut för en viktig roll: [color=DARK_ORANGE]Gränstulltjänsteman[/color].
+Text/tut_003/text,"Ditt jobb är enkelt. Potatisar anländer till din lucka, du kontrollerar deras dokument, och du bestämmer vem som får passera."
+Text/tut_004/text,Men var försiktig – inte alla potatisar har sina papper i ordning.
+Text/tut_005/text,[color=RED]Utgångna pass[/color] är ett automatiskt avslag. Inga undantag.
+Text/tut_006/text,Jag guidar dig genom grunderna [color=YELLOW]steg för steg[/color]. Följ anvisningarna så kommer du att lära dig det.
+Text/tut_007/text,[pulse freq=2][color=RED]En sak till![/color][/pulse] Vissa potatisar kommer att försöka [color=CRIMSON]smita[/color] när de tror att deras papper inte kommer att godkännas vid kontrollen.
+Text/tut_008/text,"När en [color=RED]gränsrymmare[/color] försöker fly, kommer du att se dem rusa förbi din lucka mot gränsen."
+Text/tut_009/text,Det är då din [color=CHARTREUSE]Pneumatiska missilavfyrare[/color] kommer till användning. Det är den stora knappen på din kontrollpanel.
+Text/tut_010/text,[color=YELLOW]Klicka för att avfyra[/color] när en rymmare är inom räckhåll. Sikta på [color=GOLD]mitten av målområdet[/color] för bonuspoäng!
+Text/tut_011/text,Men var försiktig – [color=RED]träffa inte oskyldiga potatisar[/color] i kön. Det kommer att kosta dig poäng och ge dig en varning!
+Text/tut_012/text,Spuds säkerhet och trygghet beror på din [pulse freq=2][color=DARK_ORANGE]vaksamhet![/color][/pulse]
+Text/tut_013/text,Låt oss påbörja ditt [color=YELLOW]träningsskift[/color]...

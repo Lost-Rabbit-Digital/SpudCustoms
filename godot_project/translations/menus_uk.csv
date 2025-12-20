@@ -162,3 +162,20 @@ help_lore_nation,[b]Нація Спаду[/b]
 help_lore_your_role,[b]Ваша Роль[/b]
 help_lore_border,[b]Велика Стіна[/b]
 help_lore_secrets,[b]Кореневий Резерв[/b]
+level_select_choices_header,Вибір до Дня {day}
+level_select_choices_header_named,Вибір до Дня {day} - {name}
+level_select_play_day,Грати цей День
+level_select_close,Закрити
+continue_dialog_header,Ваші збережені дані
+continue_dialog_day,День: {day}
+continue_dialog_continue,Продовжити
+continue_dialog_cancel,Скасувати
+new_game_confirm_button,"Так, почати нову гру"
+tutorial_choice_play,Пройти навчання
+tutorial_choice_skip,Пропустити навчання
+tutorial_dialog_title,Навчання
+tutorial_dialog_text,Бажаєте пройти навчання?\n\nНавчання ознайомить вас з основами роботи митного офіцера у «Spud Customs».
+continue_game_title,Продовжити гру
+level_select_story_choices,Вибір історії
+reset_progress_confirm,"Ви впевнені, що хочете скинути прогрес історії? Цю дію неможливо скасувати."
+reset_highscores_confirm,"Ви впевнені, що хочете скинути всі рекорди? Цю дію неможливо скасувати."

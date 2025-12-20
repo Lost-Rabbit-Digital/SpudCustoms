@@ -59,3 +59,58 @@ citation_trash_label,ถังขยะ
 citation_header,ใบเตือนอย่างเป็นทางการ
 citation_from_supervisor,จาก: ผู้ควบคุม รัสเซ็ต
 citation_dismiss_hint,[ลากไปที่ถังขยะเพื่อปิด]
+minigame_times_up,หมดเวลา! ไม่ต้องห่วง กลับไปทำงานต่อ!
+minigame_time_format,{seconds}.{fraction}
+qte_title,เหตุการณ์ตอบสนองฉับไว
+qte_instruction,กดปุ่มตามที่ปรากฏ!
+qte_auto_completed,สำเร็จอัตโนมัติ
+qte_accessibility_note,(เปิดใช้งานการเข้าถึง QTE แล้ว)
+qte_get_ready,เตรียมตัว...
+qte_progress,ความคืบหน้า
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} สำเร็จ (+{points} คะแนน)
+qte_image_pending,[กำลังรอรูปภาพ]
+evidence_title,การตรวจสอบความปลอดภัยกำลังจะมาถึง
+evidence_instruction,เคลียร์โต๊ะของคุณ! ทำลายหลักฐาน ซ่อนอุปกรณ์ทำงาน
+evidence_suspicion,ความสงสัย: {percent}%
+evidence_items_remaining,สิ่งของ: {count}
+evidence_times_up_found,หมดเวลา! พวกเขาพบหลักฐานแล้ว...
+evidence_times_up_suspicious,หมดเวลา! การตรวจสอบนั้น... ละเอียดถี่ถ้วน
+codebreaker_title,ถอดรหัส
+codebreaker_instruction,"ถอดรหัส! สีเขียว = ตรงกันเป๊ะ, สีเหลือง = ตัวเลขถูกตำแหน่งผิด"
+codebreaker_enter_code,ป้อนรหัส
+codebreaker_submit,ส่ง
+codebreaker_clear,ล้าง
+codebreaker_previous_attempts,ความพยายามก่อนหน้า:
+codebreaker_attempts,ความพยายาม: {current} / {max}
+codebreaker_result_exact_close,{exact} ตรงกันเป๊ะ
+codebreaker_result_exact,{exact} ตรงกันเป๊ะ
+codebreaker_result_close,{close} ใกล้เคียง
+codebreaker_result_none,ไม่ตรงกันเลย
+codebreaker_success,ถอดรหัสได้แล้วใน {attempts} ครั้ง! +{points} คะแนน!
+codebreaker_failure,หมดโอกาสแล้ว! รหัสถูกแสดงไว้ด้านบนแล้ว
+scanner_title,เครื่องสแกนเอกสาร
+scanner_instruction,ลากไฟ UV เพื่อค้นหาเครื่องหมายที่ซ่อนอยู่! คลิกเพื่อยืนยัน
+scanner_found,พบแล้ว: {current} / {total}
+scanner_perfect,ยอดเยี่ยม! พบองค์ประกอบทั้งหมดแล้ว! +{points} คะแนน!
+scanner_partial,ทำได้ดี! พบ {found}/{total} รายการ +{points} คะแนน!
+chase_title,การไล่ล่าที่ชายแดน
+chase_instruction,คลิกที่สิ่งของต้องห้ามสีแดง! ปล่อยให้สิ่งของสีเขียวผ่านไป
+chase_legend,แดง = จับ! เขียว = ปล่อยผ่าน
+chase_caught,จับได้: {current} / {total}
+chase_perfect,จับได้สมบูรณ์แบบ! +{points} คะแนน!
+chase_partial,จับได้ {count} รายการ +{points} คะแนน!
+sorting_title,การคัดแยกตราประทับ
+sorting_instruction,"ลากตราประทับไปยังถังที่ถูกต้อง! เขียว = อนุมัติ, แดง = ไม่อนุมัติ"
+sorting_approved,อนุมัติ
+sorting_denied,ไม่อนุมัติ
+sorting_progress,คัดแยกแล้ว: {sorted}/{total} ถูกต้อง: {correct}
+sorting_perfect,คัดแยกได้สมบูรณ์แบบ! +{points} คะแนน!
+sorting_partial,คัดแยกถูกต้อง {correct}/{total} รายการ +{points} คะแนน!
+fingerprint_title,การจับคู่ลายนิ้วมือ
+fingerprint_instruction,ค้นหาลายนิ้วมือที่ตรงกับตัวอย่างอ้างอิง!
+fingerprint_reference,อ้างอิง
+fingerprint_find_match,ค้นหาคู่ที่ตรงกัน
+fingerprint_progress,จับคู่แล้ว: {current} / {total}
+fingerprint_success,จับคู่ลายนิ้วมือได้ทั้งหมดแล้ว! +{points} คะแนน!
+fingerprint_partial,จับคู่ได้ {matched}/{total} ลาย +{points} คะแนน!

@@ -59,3 +59,58 @@ citation_trash_label,PRULLENBAK
 citation_header,OFFICIËLE WAARSCHUWING
 citation_from_supervisor,Van: Supervisor Russet
 citation_dismiss_hint,[Sleep naar prullenbak om te sluiten]
+minigame_times_up,"De tijd is om! Geen zorgen, terug aan het werk!"
+minigame_time_format,{seconds}.{fraction}
+qte_title,SNEL REACTIE EVENEMENT
+qte_instruction,Druk op de toetsen zoals ze verschijnen!
+qte_auto_completed,Automatisch voltooid
+qte_accessibility_note,(QTE Toegankelijkheid ingeschakeld)
+qte_get_ready,Bereid je voor...
+qte_progress,Voortgang
+qte_key_prompt,[{key}]
+qte_result,{successful} / {total} geslaagd (+{points} punten)
+qte_image_pending,[Afbeelding volgt]
+evidence_title,VEILIGHEIDSINSPECTIE OP HANDEN
+evidence_instruction,"Ruim je bureau op! Versnipper bewijs, berg werkspullen op."
+evidence_suspicion,Verdenking: {percent}%
+evidence_items_remaining,Items: {count}
+evidence_times_up_found,De tijd is om! Ze hebben het bewijs gevonden...
+evidence_times_up_suspicious,De tijd is om! De inspectie was... grondig.
+codebreaker_title,CODEKRAKER
+codebreaker_instruction,"Kraak de code! Groen = exacte overeenkomst, Geel = juiste cijfer, verkeerde positie"
+codebreaker_enter_code,VOER DE CODE IN
+codebreaker_submit,INDIENEN
+codebreaker_clear,WISSEN
+codebreaker_previous_attempts,Vorige Pogingen:
+codebreaker_attempts,Pogingen: {current} / {max}
+codebreaker_result_exact_close,{exact} exacte
+codebreaker_result_exact,{exact} exact
+codebreaker_result_close,{close} bijna
+codebreaker_result_none,geen treffers
+codebreaker_success,Code gekraakt in {attempts} pogingen! +{points} punten!
+codebreaker_failure,Pogingen op! De code stond hierboven.
+scanner_title,DOCUMENTSCANNER
+scanner_instruction,Sleep het UV-licht om verborgen markeringen te vinden! Klik om te bevestigen.
+scanner_found,Gevonden: {current} / {total}
+scanner_perfect,Perfect! Alle elementen gevonden! +{points} punten!
+scanner_partial,Goed gedaan! {found}/{total} gevonden. +{points} punten!
+chase_title,GRENSJACHT
+chase_instruction,Klik op de RODE smokkelwaar! Laat de GROENE items passeren.
+chase_legend,ROOD = Vangen!   GROEN = Laten passeren
+chase_caught,Gevangen: {current} / {total}
+chase_perfect,Perfecte vangst! +{points} punten!
+chase_partial,{count} items gevangen. +{points} punten!
+sorting_title,STEMPELS SORTEREN
+sorting_instruction,"Sleep stempels naar de juiste bak! Groen = GOEDGEKEURD, Rood = GEWEIGERD"
+sorting_approved,GOEDGEKEURD
+sorting_denied,GEWEIGERD
+sorting_progress,Gesorteerd: {sorted}/{total}  Correct: {correct}
+sorting_perfect,Perfect gesorteerd! +{points} punten!
+sorting_partial,{correct}/{total} correct gesorteerd. +{points} punten!
+fingerprint_title,VINGERAFDRUK OVEREENKOMST
+fingerprint_instruction,Vind de vingerafdruk die overeenkomt met de referentie!
+fingerprint_reference,REFERENTIE
+fingerprint_find_match,VIND DE OVEREENKOMST
+fingerprint_progress,Overeenkomsten: {current} / {total}
+fingerprint_success,Alle vingerafdrukken komen overeen! +{points} punten!
+fingerprint_partial,Overeenkomsten {matched}/{total}. +{points} punten!

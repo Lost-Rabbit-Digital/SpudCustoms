@@ -31,3 +31,16 @@ Text/172/text,تعتمد سلامة وأمن سبود على [pulse freq=2][colo
 Text/174/text,لنبدأ [color=YELLOW]وردية التدريب[/color]...
 Text/180/text,ولكن كن حذرًا - ليست كل البطاطس أوراقها سليمة.
 Text/181/text,[color=RED]جوازات السفر المنتهية الصلاحية[/color] هي رفض تلقائي. لا استثناءات.
+Text/tut_001/text,مرحباً بك في [pulse freq=2][color=MEDIUM_VIOLET_RED]جمارك سبود![/color][/pulse]
+Text/tut_002/text,لقد تم اختيارك لدور حيوي: [color=DARK_ORANGE]ضابط جمارك الحدود[/color].
+Text/tut_003/text,مهمتك بسيطة. تصل البطاطس إلى كشكك، تفحص وثائقهم، وتقرر من يسمح له بالمرور.
+Text/tut_004/text,لكن كن حذراً - ليست كل بطاطس أوراقها سليمة.
+Text/tut_005/text,[color=RED]جوازات السفر المنتهية الصلاحية[/color] هي رفض تلقائي. لا استثناءات.
+Text/tut_006/text,سأرشدك عبر الأساسيات [color=YELLOW]خطوة بخطوة[/color]. اتبع التعليمات وستتقن الأمر.
+Text/tut_007/text,[pulse freq=2][color=RED]شيء آخر![/color][/pulse] ستحاول بعض البطاطس [color=CRIMSON]الفرار[/color] عندما تعتقد أن أوراقها لن تجتاز التفتيش.
+Text/tut_008/text,عندما يحاول [color=RED]فارّ من الحدود[/color] الفرار، سترى أنهم يندفعون مسرعين بجانب كشكك نحو الحدود.
+Text/tut_009/text,هنا يأتي دور [color=CHARTREUSE]قاذفة الصواريخ الهوائية[/color] الخاصة بك. إنه الزر الكبير على لوحة التحكم الخاصة بك.
+Text/tut_010/text,[color=YELLOW]انقر للإطلاق[/color] عندما يكون الفارّ في المدى. صوب نحو [color=GOLD]مركز منطقة الهدف[/color] للحصول على نقاط إضافية!
+Text/tut_011/text,لكن كن حذراً - [color=RED]لا تضرب البطاطس البريئة[/color] في الطابور. سيكلفك ذلك نقاطاً وسيكسبك ضربة!
+Text/tut_012/text,سلامة وأمن سبود يعتمد على [pulse freq=2][color=DARK_ORANGE]يقظتك![/color][/pulse]
+Text/tut_013/text,لنبدأ [color=YELLOW]نوبة تدريبك[/color]...

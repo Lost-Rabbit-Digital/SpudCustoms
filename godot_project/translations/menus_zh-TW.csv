@@ -162,3 +162,20 @@ help_lore_nation,[b]薯國[/b]
 help_lore_your_role,[b]您的職責[/b]
 help_lore_border,[b]長城[/b]
 help_lore_secrets,[b]根部儲備[/b]
+level_select_choices_header,第 {day} 天前的選擇
+level_select_choices_header_named,第 {day} 天前的選擇 - {name}
+level_select_play_day,遊玩本日
+level_select_close,關閉
+continue_dialog_header,您的存檔資料
+continue_dialog_day,天數：{day}
+continue_dialog_continue,繼續
+continue_dialog_cancel,取消
+new_game_confirm_button,是，開始新遊戲
+tutorial_choice_play,遊玩教學
+tutorial_choice_skip,跳過教學
+tutorial_dialog_title,教學
+tutorial_dialog_text,您想遊玩教學嗎？\n\n本教學將引導您了解在「馬鈴薯海關」擔任海關官員的基本知識。
+continue_game_title,繼續遊戲
+level_select_story_choices,故事選擇
+reset_progress_confirm,您確定要重設故事進度嗎？此操作無法復原。
+reset_highscores_confirm,您確定要重設所有高分紀錄嗎？此操作無法復原。

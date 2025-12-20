@@ -174,3 +174,20 @@ help_lore_nation,"[b]Die Nation Spud[/b]\n\nSpud ist eine stolze Nation, die all
 help_lore_your_role,"[b]Deine Rolle[/b]\n\nDu wurdest für eine entscheidende Rolle beim Schutz der Grenzen ausgewählt. Als Zollbeamter arbeitest du unter dem wachsamen Auge von Aufseher Russet.\n\nDein Wohlergehen hängt von deiner Leistung ab. Erfülle deine Quoten, befolge die Regeln und denk daran: Die Nation zählt auf dich."
 help_lore_border,"[b]Die Große Mauer[/b]\n\nDie mächtige Große Mauer von Spud schützt die Nation vor Außenstehenden. An verschiedenen Kontrollpunkten entlang der Mauer stellen Beamte wie du sicher, dass nur die Würdigen eintreten dürfen.\n\nDiejenigen, die versuchen, die Grenze ohne ordnungsgemäße Dokumente zu passieren, müssen mit sofortigen Konsequenzen rechnen."
 help_lore_secrets,"[b]Wurzelreserve[/b]\n\nAbgelehnte Kartoffeln werden... verarbeitet. Laut Protokoll. Die mysteriöse Wurzelreserve kümmert sich um alle Details.\n\nEs ist am besten, nicht zu viele Fragen zu stellen. Konzentriere dich auf deine Pflichten. Nichts weiter."
+level_select_choices_header,Auswahl bis Tag {day}
+level_select_choices_header_named,Auswahl bis Tag {day} - {name}
+level_select_play_day,Diesen Tag spielen
+level_select_close,Schließen
+continue_dialog_header,Ihr Spielstand
+continue_dialog_day,Tag: {day}
+continue_dialog_continue,Fortsetzen
+continue_dialog_cancel,Abbrechen
+new_game_confirm_button,"Ja, neues Spiel starten"
+tutorial_choice_play,Tutorial spielen
+tutorial_choice_skip,Tutorial überspringen
+tutorial_dialog_title,Tutorial
+tutorial_dialog_text,Möchten Sie das Tutorial spielen?\n\nDas Tutorial führt Sie durch die Grundlagen der Arbeit als Zollbeamter bei Spud Customs.
+continue_game_title,Spiel fortsetzen
+level_select_story_choices,Story-Auswahl
+reset_progress_confirm,"Sind Sie sicher, dass Sie den Story-Fortschritt zurücksetzen möchten? Dies kann nicht rückgängig gemacht werden."
+reset_highscores_confirm,"Sind Sie sicher, dass Sie alle Highscores zurücksetzen möchten? Dies kann nicht rückgängig gemacht werden."

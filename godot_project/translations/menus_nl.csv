@@ -174,3 +174,20 @@ help_lore_nation,"[b]De Natie van Spud[/b]\n\nSpud is een trotse natie die welva
 help_lore_your_role,"[b]Uw Rol[/b]\n\nU bent geselecteerd voor een cruciale rol in de bescherming van de grenzen. Als Douanebeambte werkt u onder het toeziend oog van Supervisor Russet.\n\nUw welzijn hangt af van uw prestaties. Haal uw quota, volg de regels, en onthoud: de natie rekent op u."
 help_lore_border,"[b]De Grote Muur[/b]\n\nDe machtige Grote Muur van Spud beschermt de natie tegen buitenstaanders. Bij verschillende controleposten langs de muur zorgen beambten zoals u ervoor dat alleen de waardigen binnen mogen komen.\n\nDegenen die proberen de grens over te steken zonder de juiste documentatie, worden onmiddellijk geconfronteerd met de gevolgen."
 help_lore_secrets,[b]De Wortelreserve[/b]\n\nAfgewezen aardappelen worden... verwerkt. Volgens protocol. De mysterieuze Wortelreserve regelt alle details.\n\nHet is beter om niet te veel vragen te stellen. Concentreer u op uw taken. Niets meer.
+level_select_choices_header,Keuzes tot Dag {day}
+level_select_choices_header_named,Keuzes tot Dag {day} - {name}
+level_select_play_day,Speel Deze Dag
+level_select_close,Sluiten
+continue_dialog_header,Jouw Opgeslagen Gegevens
+continue_dialog_day,Dag: {day}
+continue_dialog_continue,Doorgaan
+continue_dialog_cancel,Annuleren
+new_game_confirm_button,"Ja, Start Nieuw Spel"
+tutorial_choice_play,Speel Tutorial
+tutorial_choice_skip,Sla Tutorial Over
+tutorial_dialog_title,Tutorial
+tutorial_dialog_text,Wil je de tutorial spelen?\n\nDe tutorial leidt je door de basisprincipes van het zijn van een douanebeambte bij Spud Customs.
+continue_game_title,Spel Doorgaan
+level_select_story_choices,Verhaal Keuzes
+reset_progress_confirm,Weet je zeker dat je de voortgang van het verhaal wilt resetten? Dit kan niet ongedaan gemaakt worden.
+reset_highscores_confirm,Weet je zeker dat je alle topscores wilt resetten? Dit kan niet ongedaan gemaakt worden.

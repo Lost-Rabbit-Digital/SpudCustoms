@@ -174,3 +174,20 @@ help_lore_nation,"[b]A Nação de Spud[/b]\n\nSpud é uma nação orgulhosa que 
 help_lore_your_role,"[b]Seu Papel[/b]\n\nVocê foi selecionado para um papel crucial na proteção das fronteiras. Como um Oficial da Alfândega, você trabalha sob o olhar atento do Supervisor Russet.\n\nO seu bem-estar depende do seu desempenho. Cumpra suas cotas, siga as regras e lembre-se: a nação conta com você."
 help_lore_border,"[b]A Grande Muralha[/b]\n\nA imponente Grande Muralha de Spud protege a nação de forasteiros. Em vários postos de controle ao longo da muralha, oficiais como você garantem que apenas os dignos possam entrar.\n\nAqueles que tentam cruzar a fronteira sem a documentação adequada enfrentam consequências imediatas."
 help_lore_secrets,[b]Reserva da Raiz[/b]\n\nBatatas rejeitadas são... processadas. De acordo com o protocolo. A misteriosa Reserva da Raiz cuida de todos os detalhes.\n\nÉ melhor não fazer muitas perguntas. Concentre-se em suas tarefas. Nada mais.
+level_select_choices_header,Escolhas até o Dia {day}
+level_select_choices_header_named,Escolhas até o Dia {day} - {name}
+level_select_play_day,Jogar Este Dia
+level_select_close,Fechar
+continue_dialog_header,Seus Dados Salvos
+continue_dialog_day,Dia: {day}
+continue_dialog_continue,Continuar
+continue_dialog_cancel,Cancelar
+new_game_confirm_button,"Sim, Iniciar Novo Jogo"
+tutorial_choice_play,Jogar Tutorial
+tutorial_choice_skip,Pular Tutorial
+tutorial_dialog_title,Tutorial
+tutorial_dialog_text,Gostaria de jogar o tutorial?\n\nO tutorial irá guiá-lo pelos fundamentos de ser um oficial de alfândega em Spud Customs.
+continue_game_title,Continuar Jogo
+level_select_story_choices,Escolhas da História
+reset_progress_confirm,Tem certeza de que deseja reiniciar o progresso da história? Isso não pode ser desfeito.
+reset_highscores_confirm,Tem certeza de que deseja reiniciar todas as pontuações mais altas? Isso não pode ser desfeito.

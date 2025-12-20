@@ -1,0 +1,53 @@
+﻿keys,pt
+achievement_unlocked_title,CONQUISTA DESBLOQUEADA!
+achievements_menu_button,Conquistas
+achievements_progress_format,%d / %d Desbloqueadas
+achievement_hidden_name,???
+achievement_hidden_desc,Esta conquista está oculta até ser desbloqueada
+achievement_category_gameplay,Jogabilidade
+achievement_category_resistance,Caminho da Resistência
+achievement_category_loyalist,Caminho Lealista
+achievement_category_character,Arcos de Personagem
+achievement_category_discovery,Descoberta
+achievement_rookie_officer_name,Oficial Novato
+achievement_rookie_officer_desc,Complete seu primeiro turno na fronteira
+achievement_veteran_officer_name,Veterano da Alfândega
+achievement_veteran_officer_desc,Complete 10 turnos na fronteira
+achievement_master_officer_name,Mestre da Alfândega
+achievement_master_officer_desc,Complete 25 turnos na fronteira
+achievement_sharpshooter_name,Atirador de Elite
+achievement_sharpshooter_desc,Detenha 10 corredores de fronteira com o sistema de mísseis
+achievement_border_defender_name,Defensor da Fronteira
+achievement_border_defender_desc,Detenha 50 corredores de fronteira com o sistema de mísseis
+achievement_perfect_shot_name,Tiro Perfeito
+achievement_perfect_shot_desc,Acerte 5 tiros perfeitos em corredores de fronteira
+achievement_high_scorer_name,Recordista
+achievement_high_scorer_desc,Alcance uma pontuação de 10
+achievement_score_legend_name,Lenda da Pontuação
+achievement_score_legend_desc,Alcance uma pontuação de 50
+achievement_savior_of_spud_name,Salvador de Spud
+achievement_savior_of_spud_desc,Complete a história e salve a nação
+achievement_born_diplomat_name,Diplomata Nato
+achievement_born_diplomat_desc,Alcance o final diplomático através de negociação pacífica
+achievement_tater_of_justice_name,Batata da Justiça
+achievement_tater_of_justice_desc,Faça justiça aos oficiais corruptos
+achievement_best_served_hot_name,Melhor Servido Quente
+achievement_best_served_hot_desc,Vingue-se daqueles que o prejudicaram
+achievement_down_with_tatriarchy_name,Abaixo a Batatarcado
+achievement_down_with_tatriarchy_desc,Lidere a revolução e derrube o regime
+achievement_heart_of_stone_name,Coração de Pedra
+achievement_heart_of_stone_desc,Permaneça um burocrata frio e obediente até o fim
+achievement_survivor_name,Sobrevivente
+achievement_survivor_desc,Faça o que for preciso para sobreviver ao regime
+achievement_late_bloomer_name,Florescimento Tardio
+achievement_late_bloomer_desc,Encontre a redenção no último momento
+achievement_tommys_legacy_name,Legado de Tommy
+achievement_tommys_legacy_desc,Descubra a verdade sobre o destino de Tommy
+achievement_elenas_memory_name,Memória de Elena
+achievement_elenas_memory_desc,Honre o sacrifício de Elena e lembre-se da sua história
+achievement_the_note_name,A Nota
+achievement_the_note_desc,Descubra a nota secreta e sua mensagem oculta
+achievement_root_of_evil_name,Raiz do Mal
+achievement_root_of_evil_desc,Exponha a corrupção no coração do regime
+achievement_chaos_architect_name,Arquiteto do Caos
+achievement_chaos_architect_desc,Abraçar o caos e ver o mundo queimar
