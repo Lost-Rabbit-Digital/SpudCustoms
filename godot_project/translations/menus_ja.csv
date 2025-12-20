@@ -135,6 +135,8 @@ Return,戻る
 Restart the game?,ゲームを再開しますか？
 help_menu_button,ヘルプ
 achievements_menu_button,実績
+achievements_panel_title,実績
+achievements_panel_close,閉じる
 help_menu_title,遊び方
 help_tab_basics,基本
 help_tab_gameplay,ゲームプレイ
