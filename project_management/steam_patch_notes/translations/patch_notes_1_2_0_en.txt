@@ -66,6 +66,16 @@ This update is for you.
 [*] Improved law receipt with expired document notes
 [/list]
 
+[h3]Readability & Accessibility[/h3]
+[list]
+[*] Bloom intensity reduced by 50% for better document readability
+[*] Fixed gameplay bloom being too high after cutscenes
+[*] Switched passport and rules labels to Noto Sans font for better legibility across all languages
+[*] Increased text sizes throughout for improved readability
+[*] Passport dates now display with localized month names in all 29 languages
+[*] Unified narrative summary window borders with level select UI styling
+[/list]
+
 [h3]Twitch Integration[/h3]
 [list]
 [*] Connect your Twitch channel to have viewer names appear on potatoes!
@@ -109,6 +119,8 @@ This update is for you.
 [*] Fixed passport stamp positioning detection
 [*] Fixed stamp overlap detection
 [*] Fixed document dragging issues during tutorial
+[*] Fixed game progression bug when replaying earlier shifts
+[*] Fixed shift summary spacing issues
 [/list]
 
 [h3]UI & Menu Fixes[/h3]
@@ -126,6 +138,11 @@ This update is for you.
 [*] Fixed malformed CSV translations
 [*] Added missing translation entries
 [*] Improved translation tooling
+[*] Fixed translation gaps for achievements panel and score values
+[*] Fixed Korean translation for continue dialog and version label
+[*] Fixed Score Attack and loading screen translations
+[*] Added localization support for tutorial system and passport labels
+[*] Added localization support for level select and story choices
 [/list]
 
 [h2]Technical Improvements[/h2]
@@ -134,6 +151,8 @@ This update is for you.
 [*] Reorganized project assets for maintainability
 [*] Improved logging system
 [*] Better Steam integration checks
+[*] Updated splash screens with refreshed visuals
+[*] Sentry integration for anonymous crash reports
 [/list]
 
 [hr][/hr]
