@@ -762,7 +762,7 @@ func show_day_transition(current_day: int, next_day: int):
 
 	# Create old day label (starts centered)
 	var old_day_label: Label = Label.new()
-	old_day_label.text = "Day %d" % current_day
+	old_day_label.text = tr("day_transition_label").format({"day": current_day})
 	old_day_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	old_day_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	old_day_label.add_theme_font_override("font", font)
@@ -774,7 +774,7 @@ func show_day_transition(current_day: int, next_day: int):
 
 	# Create new day label (starts above center, invisible)
 	var new_day_label: Label = Label.new()
-	new_day_label.text = "Day %d" % next_day
+	new_day_label.text = tr("day_transition_label").format({"day": next_day})
 	new_day_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	new_day_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	new_day_label.add_theme_font_override("font", font)

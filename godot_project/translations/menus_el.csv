@@ -162,6 +162,7 @@ help_lore_nation,[b]Το Έθνος του Spud[/b]
 help_lore_your_role,[b]Ο Ρόλος σας[/b]
 help_lore_border,[b]Το Μεγάλο Τείχος[/b]
 help_lore_secrets,[b]Αποθεματικό Ρίζας[/b]
+day_transition_label,Ημέρα {day}
 level_select_choices_header,Επιλογές μέχρι την Ημέρα {day}
 level_select_choices_header_named,Επιλογές μέχρι την Ημέρα {day} - {name}
 level_select_play_day,Παίξτε Αυτή την Ημέρα

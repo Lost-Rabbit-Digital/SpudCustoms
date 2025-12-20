@@ -174,6 +174,7 @@ help_lore_nation,"[b]La nación de Spud[/b]\n\nSpud es una nación orgullosa que
 help_lore_your_role,"[b]Tu papel[/b]\n\nHas sido seleccionado para un papel crucial en la protección de las fronteras. Como agente de aduanas, trabajas bajo la atenta mirada del supervisor Russet.\n\nTu bienestar depende de tu rendimiento. Cumple tus cuotas, sigue las reglas y recuerda: la nación cuenta contigo."
 help_lore_border,"[b]La Gran Muralla[/b]\n\nLa imponente Gran Muralla de Spud protege a la nación de los forasteros. En varios puntos de control a lo largo de la muralla, agentes como tú se aseguran de que solo los dignos puedan entrar.\n\nAquellos que intentan cruzar la frontera sin la documentación adecuada se enfrentan a consecuencias inmediatas."
 help_lore_secrets,[b]Reserva de la Raíz[/b]\n\nLas patatas rechazadas son... procesadas. Según el protocolo. La misteriosa Reserva de la Raíz se encarga de todos los detalles.\n\nEs mejor no hacer demasiadas preguntas. Céntrate en tus deberes. Nada más.
+day_transition_label,Día {day}
 level_select_choices_header,Opciones hasta el Día {day}
 level_select_choices_header_named,Opciones hasta el Día {day} - {name}
 level_select_play_day,Jugar Este Día

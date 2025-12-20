@@ -3,7 +3,7 @@
 [ext_resource type="FontVariation" uid="uid://t3ii3pbmg2bo" path="res://assets/fonts/Modern_DOS_Font_Variation.tres" id="1_nqg4q"]
 
 [resource]
-line_spacing = 6.0
+line_spacing = 2.0
 font = ExtResource("1_nqg4q")
 font_size = 14
 font_color = Color(0.5016, 0.621427, 0.88, 1)

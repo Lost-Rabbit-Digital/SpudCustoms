@@ -174,6 +174,7 @@ help_lore_nation,"[b]Spud Ulusu[/b]\n\nSpud, tüm patateslere refah vaat eden gu
 help_lore_your_role,"[b]Rolün[/b]\n\nSınırları korumak için çok önemli bir role seçildin. Bir Gümrük Memuru olarak, Amir Russet'in dikkatli gözleri altında çalışıyorsun.\n\nRefahın senin performansına bağlı. Kotalarını doldur, kurallara uy ve unutma: ulus sana güveniyor."
 help_lore_border,"[b]Yüce Duvar[/b]\n\nSpud'un kudretli Yüce Duvarı, ulusu yabancılardan korur. Duvar boyunca çeşitli kontrol noktalarında, senin gibi memurlar yalnızca layık olanların girebilmesini sağlar.\n\nUygun belgeler olmadan sınırı geçmeye çalışanlar anında sonuçlarıyla yüzleşir."
 help_lore_secrets,[b]Kök Rezervi[/b]\n\nReddedilen patatesler... işleme alınır. Protokole göre. Gizemli Kök Rezervi tüm ayrıntılarla ilgilenir.\n\nÇok fazla soru sormamak en iyisidir. Görevlerine odaklan. Hepsi bu kadar.
+day_transition_label,Gün {day}
 level_select_choices_header,Gün {day}'e Kadar Seçenekler
 level_select_choices_header_named,Gün {day}'e Kadar Seçenekler - {name}
 level_select_play_day,Bu Günü Oyna
