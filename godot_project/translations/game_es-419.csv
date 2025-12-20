@@ -60,14 +60,14 @@ citation_header,CITACIÓN OFICIAL
 citation_from_supervisor,De: Supervisor Russet
 citation_dismiss_hint,[Arrastrar a la papelera para descartar]
 minigame_times_up,"¡Se acabó el tiempo! ¡No te preocupes, de vuelta al trabajo!"
-minigame_time_format,{seconds}.{fraction}
+minigame_time_format,{segundos}.{fracción}
 qte_title,EVENTO DE TIEMPO RÁPIDO
 qte_instruction,¡Presiona las teclas a medida que aparecen!
 qte_auto_completed,Autocompletado
 qte_accessibility_note,(Accesibilidad QTE habilitada)
 qte_get_ready,¡Prepárate...
 qte_progress,Progreso
-qte_key_prompt,[{key}]
+qte_key_prompt,[{tecla}]
 qte_result,{successful} / {total} exitosos (+{points} puntos)
 qte_image_pending,[Imagen Pendiente]
 evidence_title,INSPECCIÓN DE SEGURIDAD INMINENTE

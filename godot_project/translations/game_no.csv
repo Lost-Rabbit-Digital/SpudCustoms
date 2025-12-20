@@ -60,14 +60,14 @@ citation_header,OFFISIELL ADVARSEL
 citation_from_supervisor,Fra: Veileder Russet
 citation_dismiss_hint,[Dra til søppel for å lukke]
 minigame_times_up,"Tiden er ute! Ingen fare, tilbake til jobb!"
-minigame_time_format,{seconds}.{fraction}
+minigame_time_format,{sekunder}.{brøkdel}
 qte_title,HURTIGHENDELSE
 qte_instruction,Trykk tastene når de vises!
 qte_auto_completed,Automatisk fullført
 qte_accessibility_note,(Hurtighendelse-tilgjengelighet aktivert)
 qte_get_ready,Gjør deg klar...
 qte_progress,Fremdrift
-qte_key_prompt,[{key}]
+qte_key_prompt,[{tast}]
 qte_result,{successful} / {total} vellykket (+{points} poeng)
 qte_image_pending,[Bilde venter]
 evidence_title,SIKKERHETSINSPEKSJON FORESTÅENDE

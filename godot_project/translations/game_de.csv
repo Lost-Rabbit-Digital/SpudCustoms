@@ -60,7 +60,7 @@ citation_header,AMTLICHE VERWARNUNG
 citation_from_supervisor,Von: Aufseher Russet
 citation_dismiss_hint,[Zum Schließen in den Papierkorb ziehen]
 minigame_times_up,"Zeit ist um! Keine Sorge, zurück an die Arbeit!"
-minigame_time_format,{seconds}.{fraction}
+minigame_time_format,"{seconds},{fraction}"
 qte_title,SCHNELLZEIT-EREIGNIS
 qte_instruction,"Drücke die Tasten, wenn sie erscheinen!"
 qte_auto_completed,Automatisch abgeschlossen

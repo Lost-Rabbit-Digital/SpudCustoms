@@ -179,3 +179,189 @@ continue_game_title,Продолжить игру
 level_select_story_choices,Выбор истории
 reset_progress_confirm,"Вы уверены, что хотите сбросить прогресс истории? Это действие нельзя отменить."
 reset_highscores_confirm,"Вы уверены, что хотите сбросить все рекорды? Это действие нельзя отменить."
+level_name_0,Обучение
+level_name_1,Первый день на работе
+level_name_2,Новые постановления
+level_name_3,Растущее давление
+level_name_4,Проверка на контрабанду
+level_name_5,Кризис середины пути
+level_name_6,Усиленная безопасность
+level_name_7,Под пристальным вниманием
+level_name_8,Двойные агенты
+level_name_9,Хаос на границе
+level_name_10,Обратный отсчет
+shift_name_1,Первый день на работе
+shift_name_2,Встреча с Сашей и Мерфи
+shift_name_3,Пропавшая жена
+shift_name_4,Грузовики Корневого Резерва
+shift_name_5,Проверка Лояльности
+shift_name_6,РеалитиСкан
+shift_name_7,Встреча Сопротивления
+shift_name_8,Захват Саши
+shift_name_9,Атака
+shift_name_10,Финальный Отсчет
+shift_name_unknown,Неизвестно
+path_chaos_agent,Агент Хаоса
+path_loyalist,Путь Лоялиста
+path_resistance_ally,Союзник Сопротивления
+path_questioning,Сомневающийся
+path_undetermined,Неопределенный
+story_choice_path_label,Путь:
+story_choice_sasha_trust,Доверие Саше: {value}/10
+story_choice_chaos_points,Хаос: {value} очков
+story_choice_no_choices,Выборы пока не записаны
+story_choice_day_header,День {day} - {name}
+choice_initial_response_eager,Проявил энтузиазм к Spud
+choice_initial_response_questioning,Поставил систему под сомнение
+choice_note_reaction_investigate,Решил расследовать записку
+choice_note_reaction_destroy,Уничтожил таинственную записку
+choice_note_reaction_report,Сообщил о записке властям
+choice_kept_note_yes,Сохранил таинственную записку
+choice_kept_note_no,Выбросил записку
+choice_reported_note_yes,Доложил о записке
+choice_murphy_trust_open,Открылся Мёрфи
+choice_murphy_trust_guarded,Держался настороже с Мёрфи
+choice_eat_reserve_ate,Съел запасной паёк
+choice_eat_reserve_refused,Отказался от запасного пайка
+choice_scanner_response_loyal,Проявил лояльность во время теста сканера
+choice_scanner_response_questioning,Подверг сомнению назначение сканера
+choice_family_response_refuse,Отказался помочь найти жену
+choice_family_response_help,Согласился помочь найти пропавшую жену
+choice_has_wife_photo_yes,Получил фото пропавшей жены
+choice_reveal_reaction_shocked,Был шокирован откровением
+choice_reveal_reaction_cautious,Отреагировал осторожно на откровение
+choice_cafeteria_response_serious,Воспринял слухи в столовой всерьёз
+choice_cafeteria_response_avoid,Избегал обсуждений в столовой
+choice_murphy_alliance_ally,Объединился с Мёрфи
+choice_murphy_alliance_cautious,Оставался осторожным с Мёрфи
+choice_murphy_alliance_skeptical,Оставался скептиком в отношении Мёрфи
+choice_sasha_trust_level_committed,Полностью доверился Саше
+choice_sasha_trust_level_cautious,Оставался осторожным в отношении Саши
+choice_sasha_investigation_committed,Принял участие в расследовании Саши
+choice_sasha_investigation_hesitant,Колебался насчёт расследования
+choice_loyalty_response_patriotic,Давал патриотические ответы
+choice_loyalty_response_idealistic,Выражал идеалистические взгляды
+choice_hide_choice_desk,Спрятался за столом
+choice_hide_choice_window,Спрятался у окна
+choice_evidence_choice_hand_over,Передал улики
+choice_evidence_choice_keep,Спрятал улики
+choice_evidence_choice_lie,Солгал об уликах
+choice_evidence_choice_chaos,Использовал улики для создания хаоса
+choice_viktor_wife_discovery_yes,Обнаружил жену Виктора в манифесте
+choice_fellow_officer_response_cautious,Был осторожен с сослуживцем
+choice_fellow_officer_response_sympathetic,Проявил сочувствие к сослуживцу
+choice_fellow_officer_response_loyal,Остался верен сослуживцу
+choice_interrogation_response_lie,Солгал во время допроса
+choice_interrogation_response_legal,Отвечал в рамках закона
+choice_viktor_conversation_tell_truth,Сказал Виктору правду
+choice_viktor_conversation_lie_protect,"Солгал, чтобы защитить Виктора"
+choice_viktor_conversation_curious,Проявил любопытство к Виктору
+choice_scanner_choice_help,Помог саботировать сканер
+choice_scanner_choice_scan,Работал со сканером в обычном режиме
+choice_scanner_choice_viktor,Назначил Виктора на сканер
+choice_helped_operative_yes,Помог оперативнику сопротивления
+choice_helped_operative_no,Отказался помочь оперативнику
+choice_viktor_allied_yes,Заключил союз с Виктором
+choice_betrayed_resistance_yes,Предал сопротивление
+choice_sasha_plan_response_committed,Принял план Саши
+choice_sasha_plan_response_nervous,Нервничал по поводу плана
+choice_malfunction_excuse_technical,Списал на техническую неисправность
+choice_malfunction_excuse_innocent,Притворился невинным
+choice_resistance_mission_committed,Посвятил себя миссии сопротивления
+choice_resistance_mission_hesitant,Сомневался насчет миссии
+choice_resistance_mission_cautious,Отнесся к миссии осторожно
+choice_final_decision_help,Решил помочь Сопротивлению
+choice_final_decision_passive,Остался пассивным
+choice_final_decision_undecided,Остался нерешительным
+choice_yellow_badge_response_help,Помог обладателям желтых значков
+choice_yellow_badge_response_betray,Предал обладателей желтых значков
+choice_follow_trucks_volunteer,Вызвался следить за грузовиками
+choice_follow_trucks_hesitant,"Сомневался, следить ли за грузовиками"
+choice_found_facility_yes,Нашел объект «Корневой Резерв»
+choice_sasha_response_cautious,Был осторожен насчет ситуации Саши
+choice_sasha_response_concerned,Проявил беспокойство за Сашу
+choice_interrogation_choice_deny,Отрицал свою осведомленность на допросе
+choice_interrogation_choice_betray,Предал других на допросе
+choice_sasha_arrest_reaction_intervene,Вмешался в арест Саши
+choice_sasha_arrest_reaction_hide,Спрятался во время ареста Саши
+choice_sasha_arrest_reaction_promise,Дал обещание Саше
+choice_player_wanted_yes,Стал разыскиваемым властями
+choice_player_captured_yes,Был схвачен властями
+choice_has_keycard_yes,Получил ключ-карту безопасности
+choice_murphy_final_alliance_committed,Полностью присоединился к альянсу Мерфи
+choice_murphy_final_alliance_hesitant,Колебался насчет окончательного альянса
+choice_critical_choice_help,Помог в критический момент
+choice_critical_choice_betray,Предал в критический момент
+choice_stay_or_go_stay,Остался сражаться
+choice_stay_or_go_go,Решил сбежать
+choice_sasha_rescue_reaction_angry,Отреагировал с гневом на спасение
+choice_sasha_rescue_reaction_disgusted,Испытал отвращение к событиям
+choice_sasha_rescue_reaction_relieved,Почувствовал облегчение после спасения
+choice_fellow_officer_response_2_cautious,Оставался осторожным с коллегами
+choice_fellow_officer_response_2_sympathetic,Проявил сочувствие к коллегам
+choice_final_mission_response_determined,Решил завершить последнюю миссию
+choice_final_mission_response_cautious,Осторожен в отношении последней миссии
+choice_resistance_trust_diplomatic,Применил дипломатический подход к сопротивлению
+choice_resistance_trust_committed,Полностью посвятил себя сопротивлению
+choice_ending_choice_diplomatic,Выбрал дипломатическую концовку
+choice_ending_choice_justice,Выбрал концовку справедливости
+choice_ending_choice_vengeance,Выбрал концовку мести
+choice_ending_choice_dismantle,Выбрал демонтаж системы
+choice_accept_medal_accept,Принял медаль с гордостью
+choice_accept_medal_reluctant,Неохотно принял медаль
+choice_eat_final_eat,Съел последнее подношение
+choice_eat_final_refuse,Отказался от последнего подношения
+choice_final_loyalist_choice_report,Доложил о диссидентах
+choice_final_loyalist_choice_ignore,Проигнорировал диссидентов
+choice_final_loyalist_choice_hope,Сохранил надежду на перемены
+choice_qte_rescue_result_pass,Попытка спасения удалась
+choice_qte_rescue_result_fail,Попытка спасения провалилась
+choice_qte_confrontation_result_pass,Выиграл противостояние
+choice_qte_confrontation_result_fail,Проиграл противостояние
+choice_qte_escape_result_pass,Побег удался
+choice_qte_escape_result_fail,Побег не удался
+choice_qte_infiltration_result_pass,Проникновение удалось
+choice_qte_infiltration_result_fail,Проникновение не удалось
+choice_qte_scanner_result_pass,Саботаж сканера удался
+choice_qte_scanner_result_fail,Саботаж сканера не удался
+choice_qte_surveillance_result_pass,Избежал слежки
+choice_qte_surveillance_result_fail,Обнаружен слежкой
+choice_qte_suppression_result_pass,Подавлению оказано сопротивление
+choice_qte_suppression_result_fail,Поддался подавлению
+passport_label_type,Тип:
+passport_label_born,Рожден:
+passport_label_gender,Пол:
+passport_label_country,Страна:
+passport_label_expires,Истекает:
+passport_label_condition,Состояние:
+tutorial_skip,Пропустить
+tutorial_skip_all,Пропустить все обучения
+tutorial_continue_auto,(продолжение автоматически...)
+tutorial_continue_click,"(нажмите, чтобы продолжить...)"
+tutorial_header,Обучение {current} из {total}: {name} - Шаг {step} из {steps}
+tutorial_header_single,{name} - Шаг {step} из {steps}
+tutorial_welcome_name,Добро пожаловать в «Картофельную Таможню»
+tutorial_gate_control_name,Открытие ворот
+tutorial_megaphone_call_name,Вызов картофелин
+tutorial_document_inspection_name,Проверка документов
+tutorial_rules_checking_name,Правила въезда
+tutorial_stamp_usage_name,Использование штампов
+tutorial_strikes_and_quota_name,Штрафы и норма
+tutorial_welcome_step1,[center][b]Добро пожаловать в «Картофельную таможню»![/b][/center]\n\nВаша задача — обрабатывать прибывающих картофелин на пограничном пункте. Давайте изучим основы!
+tutorial_gate_control_step1,"[center][b]Открытие вашей кабины[/b][/center]\n\nВидите этот рычаг? {interact} его, чтобы поднять ставень и открыть вашу кабину для работы!\n\n[color=yellow]{interact} рычаг сейчас.[/color]"
+tutorial_gate_control_step2,"[center][b]Отличная работа![/b][/center]\n\nВаша кабина теперь открыта. Картофелины в очереди видят, что вы готовы к работе."
+tutorial_megaphone_call_step1,"[center][b]Вызов следующей картофелины[/b][/center]\n\nИспользуйте мегафон, чтобы вызвать следующую картофелину из очереди к вашей кабине.\n\n[color=yellow]{interact} мегафон![/color]"
+tutorial_megaphone_call_step2,"[center][b]Они идут![/b][/center]\n\nСледите, как картофелина приближается к вашей кабине. Они предъявят свои документы для проверки."
+tutorial_document_inspection_step1,"[center][b]Проверка документов[/b][/center]\n\nКартофелина передала вам свой паспорт. {drag} его на ваш стол для проверки, чтобы внимательно изучить.\n\n[color=yellow]{drag} паспорт на стол.[/color]"
+tutorial_document_inspection_step2,"[center][b]Изучение паспорта[/b][/center]\n\n{interact} паспорт, чтобы открыть его и просмотреть информацию о картофелине:\n\n- Имя и фото\n- Страна происхождения\n- Тип и состояние картофелины\n\nИщите что-нибудь подозрительное!"
+tutorial_document_inspection_step3,"[center][b]Проверьте правила![/b][/center]\n\nПрежде чем принять решение, вам нужно проверить правила въезда. Давайте узнаем о них!"
+tutorial_rules_checking_step1,"[center][b]Правила въезда[/b][/center]\n\nПосмотрите на брошюру с правилами справа. Эти правила говорят вам, каких картофелин [color=green]ОДОБРЯТЬ[/color] или [color=red]ОТКЛОНЯТЬ[/color].\n\nОтклоняйте любую картофелину, которая нарушает текущие правила!\n\n[color=red]ВАЖНО: Документы с истекшим сроком действия должны быть ОТКЛОНЕНЫ![/color]"
+tutorial_rules_checking_step2,"[center][b]Будьте бдительны![/b][/center]\n\nПравила меняются между сменами. Всегда проверяйте текущие правила, прежде чем принимать решения.\n\nТщательно сравнивайте информацию в паспорте с действующими правилами."
+tutorial_stamp_usage_step1,"[center][b]Панель со штампами[/b][/center]\n\nВидите панель со штампами сверху? {interact} ручку, чтобы показать штампы одобрения и отказа.\n\n[color=yellow]{interact}, чтобы открыть панель со штампами.[/color]"
+tutorial_stamp_usage_step2,"[center][b]Размещение для штамповки[/b][/center]\n\n{drag} паспорт под штампы. Вы увидите подсказку, показывающую, куда его поместить.\n\n[color=green]Зеленый штамп[/color] = ОДОБРИТЬ\n[color=red]Красный штамп[/color] = ОТКЛОНИТЬ\n\n[color=yellow]Разместите паспорт под штампом.[/color]"
+tutorial_stamp_usage_step3,"[center][b]Поставьте штамп![/b][/center]\n\n{interact} штамп, чтобы отметить паспорт вашим решением.\n\n[color=yellow]{interact} штамп, чтобы поставить его.[/color]"
+tutorial_stamp_usage_step4,"[center][b]Верните документы[/b][/center]\n\nТеперь {drag} проштампованный паспорт обратно картофелине, чтобы завершить ее обработку.\n\n[color=yellow]Верните паспорт картофелине.[/color]"
+tutorial_stamp_usage_step5,[center][b]Отлично![/b][/center]\n\nВы обработали свою первую картофелину! Следите за вашей нормой — вам нужно обрабатывать достаточно картофелин каждую смену.
+tutorial_strikes_and_quota_step1,"[center][b]Система норм[/b][/center]\n\nПосмотрите на индикатор [color=yellow]Нормы[/color]. Он показывает, сколько картофелин вы должны обработать правильно за каждую смену."
+tutorial_strikes_and_quota_step2,"[center][b]Избегайте штрафов![/b][/center]\n\nСчетчик [color=red]Штрафов[/color] показывает ваши ошибки. Слишком много штрафов — и игра окончена!\n\nПринимайте неверные решения, и вы получите штрафы."
+tutorial_strikes_and_quota_step3,"[center][b]Обучение завершено![/b][/center]\n\nПродолжайте обрабатывать картофелины, чтобы завершить свою тренировочную смену.\n\nПосле завершения вы будете [color=green]сертифицированы как сотрудник таможни[/color] и готовы к своему первому настоящему дню!"

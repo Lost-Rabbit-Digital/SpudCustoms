@@ -60,7 +60,7 @@ citation_header,OFFICIEL BØDE
 citation_from_supervisor,Fra: Supervisor Russet
 citation_dismiss_hint,[Træk til papirkurven for at lukke]
 minigame_times_up,"Tiden er udløbet! Ingen bekymringer, tilbage til arbejdet!"
-minigame_time_format,{seconds}.{fraction}
+minigame_time_format,"{seconds},{fraction}"
 qte_title,HURTIGT BEGIVENHED
 qte_instruction,"Tryk på tasterne, når de vises!"
 qte_auto_completed,Automatisk gennemført

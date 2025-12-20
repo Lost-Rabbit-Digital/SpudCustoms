@@ -60,7 +60,7 @@ citation_header,公式警告
 citation_from_supervisor,差出人: ラセット監督官
 citation_dismiss_hint,[ゴミ箱にドラッグして閉じる]
 minigame_times_up,タイムアップ！大丈夫、仕事に戻りましょう！
-minigame_time_format,{seconds}.{fraction}
+minigame_time_format,{seconds}秒.{fraction}
 qte_title,クイックタイムイベント
 qte_instruction,表示されたキーを押してください！
 qte_auto_completed,自動完了

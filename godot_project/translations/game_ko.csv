@@ -60,7 +60,7 @@ citation_header,공식 경고
 citation_from_supervisor,발신: 감독관 러셋
 citation_dismiss_hint,[휴지통으로 드래그하여 닫기]
 minigame_times_up,"시간 초과! 걱정 마, 업무 복귀!"
-minigame_time_format,{seconds}.{fraction}
+minigame_time_format,{seconds}초.{fraction}
 qte_title,퀵 타임 이벤트
 qte_instruction,나타나는 키를 누르세요!
 qte_auto_completed,자동 완료

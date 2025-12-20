@@ -179,3 +179,189 @@ continue_game_title,Συνέχεια Παιχνιδιού
 level_select_story_choices,Επιλογές Ιστορίας
 reset_progress_confirm,Είστε σίγουροι ότι θέλετε να επαναφέρετε την πρόοδο της ιστορίας; Αυτό δεν μπορεί να αναιρεθεί.
 reset_highscores_confirm,Είστε σίγουροι ότι θέλετε να επαναφέρετε όλες τις υψηλές βαθμολογίες; Αυτό δεν μπορεί να αναιρεθεί.
+level_name_0,Εκμάθηση
+level_name_1,Πρώτη Μέρα στη Δουλειά
+level_name_2,Νέοι Κανονισμοί
+level_name_3,Αυξανόμενη Πίεση
+level_name_4,Έλεγχος Λαθρεμπορίου
+level_name_5,Κρίση Μέσης Διαδρομής
+level_name_6,Αυξημένη Ασφάλεια
+level_name_7,Υπό Εξέταση
+level_name_8,Διπλοί Πράκτορες
+level_name_9,Χάος στα Σύνορα
+level_name_10,Η Τελική Αντίστροφη Μέτρηση
+shift_name_1,Πρώτη Μέρα στη Δουλειά
+shift_name_2,Συνάντηση με τη Σάσα & τον Μέρφι
+shift_name_3,Η Εξαφανισμένη Σύζυγος
+shift_name_4,Φορτηγά Αποθεμάτων Ριζών
+shift_name_5,Έλεγχος Πιστότητας
+shift_name_6,Σάρωση Πραγματικότητας
+shift_name_7,Συνάντηση Αντίστασης
+shift_name_8,Η Σύλληψη της Σάσα
+shift_name_9,Η Επίθεση
+shift_name_10,Η Τελική Αντίστροφη Μέτρηση
+shift_name_unknown,Άγνωστο
+path_chaos_agent,Πράκτορας του Χάους
+path_loyalist,Μονοπάτι Πιστού
+path_resistance_ally,Σύμμαχος Αντίστασης
+path_questioning,Αμφισβήτηση
+path_undetermined,Απροσδιόριστο
+story_choice_path_label,Μονοπάτι:
+story_choice_sasha_trust,Εμπιστοσύνη στη Σάσα: {value}/10
+story_choice_chaos_points,Χάος: {value} μον.
+story_choice_no_choices,Δεν έχουν καταγραφεί επιλογές ακόμα
+story_choice_day_header,Ημέρα {day} - {name}
+choice_initial_response_eager,Έδειξε ενθουσιασμό για την Spud
+choice_initial_response_questioning,Αμφισβήτησε το σύστημα
+choice_note_reaction_investigate,Επέλεξε να διερευνήσει το σημείωμα
+choice_note_reaction_destroy,Κατέστρεψε το μυστηριώδες σημείωμα
+choice_note_reaction_report,Ανέφερε το σημείωμα στις αρχές
+choice_kept_note_yes,Κράτησε το μυστηριώδες σημείωμα
+choice_kept_note_no,Απέρριψα το σημείωμα
+choice_reported_note_yes,Ανέφερα το σημείωμα
+choice_murphy_trust_open,Άνοιξα στον Μέρφι
+choice_murphy_trust_guarded,Έμεινα επιφυλακτικός με τον Μέρφι
+choice_eat_reserve_ate,Έφαγα τις εφεδρικές μερίδες
+choice_eat_reserve_refused,Αρνήθηκα τις εφεδρικές μερίδες
+choice_scanner_response_loyal,Έδειξα αφοσίωση κατά τον έλεγχο σαρωτή
+choice_scanner_response_questioning,Αμφισβήτησα τον σκοπό του σαρωτή
+choice_family_response_refuse,Αρνήθηκα να βοηθήσω να βρω τη σύζυγο
+choice_family_response_help,Συμφώνησα να βοηθήσω να βρω την αγνοούμενη σύζυγο
+choice_has_wife_photo_yes,Έλαβα φωτογραφία της αγνοούμενης συζύγου
+choice_reveal_reaction_shocked,Σοκαρίστηκα από την αποκάλυψη
+choice_reveal_reaction_cautious,Αντέδρασα επιφυλακτικά στην αποκάλυψη
+choice_cafeteria_response_serious,Πήρα στα σοβαρά τις φήμες του κυλικείου
+choice_cafeteria_response_avoid,Απέφυγα τις συζητήσεις του κυλικείου
+choice_murphy_alliance_ally,Συμμάχησα με τον Μέρφι
+choice_murphy_alliance_cautious,Έμεινα επιφυλακτικός με τον Μέρφι
+choice_murphy_alliance_skeptical,Έμεινα σκεπτικός απέναντι στον Μέρφι
+choice_sasha_trust_level_committed,Δεσμεύτηκα πλήρως να εμπιστευτώ τη Σάσα
+choice_sasha_trust_level_cautious,Έμεινα επιφυλακτικός με τη Σάσα
+choice_sasha_investigation_committed,Δεσμεύτηκα στην έρευνα της Σάσα
+choice_sasha_investigation_hesitant,Δίστασα για την έρευνα
+choice_loyalty_response_patriotic,Έδωσα πατριωτικές απαντήσεις
+choice_loyalty_response_idealistic,Εξέφρασα ιδεαλιστικές απόψεις
+choice_hide_choice_desk,Κρύφτηκα πίσω από το γραφείο
+choice_hide_choice_window,Κρύφτηκε στο παράθυρο
+choice_evidence_choice_hand_over,Παρέδωσε τα αποδεικτικά στοιχεία
+choice_evidence_choice_keep,Κράτησε κρυφά τα αποδεικτικά στοιχεία
+choice_evidence_choice_lie,Ψεύστηκε για τα αποδεικτικά στοιχεία
+choice_evidence_choice_chaos,Χρησιμοποίησε τα αποδεικτικά στοιχεία για να προκαλέσει χάος
+choice_viktor_wife_discovery_yes,Ανακάλυψε τη σύζυγο του Βίκτορ στο μανιφέστο
+choice_fellow_officer_response_cautious,Ήταν επιφυλακτικός με τον συνάδελφο αξιωματικό
+choice_fellow_officer_response_sympathetic,Έδειξε συμπάθεια στον συνάδελφο αξιωματικό
+choice_fellow_officer_response_loyal,Παρέμεινε πιστός στον συνάδελφο αξιωματικό
+choice_interrogation_response_lie,Ψεύστηκε κατά την ανάκριση
+choice_interrogation_response_legal,Έδωσε νόμιμες απαντήσεις
+choice_viktor_conversation_tell_truth,Είπε στον Βίκτορ την αλήθεια
+choice_viktor_conversation_lie_protect,Ψεύστηκε για να προστατεύσει τον Βίκτορ
+choice_viktor_conversation_curious,Ήταν περίεργος για τον Βίκτορ
+choice_scanner_choice_help,Βοήθησε να σαμποταριστεί ο σαρωτής
+choice_scanner_choice_scan,Λειτούργησε τον σαρωτή κανονικά
+choice_scanner_choice_viktor,Επέλεξε τον Βίκτορ για τον σαρωτή
+choice_helped_operative_yes,Βοήθησε τον πράκτορα της αντίστασης
+choice_helped_operative_no,Αρνήθηκε να βοηθήσει τον πράκτορα
+choice_viktor_allied_yes,Σχημάτισε συμμαχία με τον Βίκτορ
+choice_betrayed_resistance_yes,Πρόδωσε την αντίσταση
+choice_sasha_plan_response_committed,Δεσμεύτηκε στο σχέδιο της Σάσα
+choice_sasha_plan_response_nervous,Ήταν νευρικός για το σχέδιο
+choice_malfunction_excuse_technical,Κατηγόρησε τεχνική δυσλειτουργία
+choice_malfunction_excuse_innocent,Υποδύθηκε τον αθώο
+choice_resistance_mission_committed,Δεσμεύτηκε στην αποστολή αντίστασης
+choice_resistance_mission_hesitant,Δίστασε για την αποστολή
+choice_resistance_mission_cautious,Προσέγγισε την αποστολή με προσοχή
+choice_final_decision_help,Αποφάσισε να βοηθήσει την αντίσταση
+choice_final_decision_passive,Παρέμεινε παθητικός
+choice_final_decision_undecided,Παρέμεινε αναποφάσιστος
+choice_yellow_badge_response_help,Βοήθησε τους κατόχους κίτρινης κονκάρδας
+choice_yellow_badge_response_betray,Πρόδωσε τους κατόχους κίτρινης κονκάρδας
+choice_follow_trucks_volunteer,Προσφέρθηκε να ακολουθήσει τα φορτηγά
+choice_follow_trucks_hesitant,Δίστασε να ακολουθήσει τα φορτηγά
+choice_found_facility_yes,Βρήκε την εγκατάσταση Root Reserve
+choice_sasha_response_cautious,Ήταν επιφυλακτικός για την κατάσταση της Σάσα
+choice_sasha_response_concerned,Έδειξε ανησυχία για τη Σάσα
+choice_interrogation_choice_deny,Αρνήθηκε γνώση υπό ανάκριση
+choice_interrogation_choice_betray,Πρόδωσε άλλους υπό ανάκριση
+choice_sasha_arrest_reaction_intervene,Επεμβήκε στη σύλληψη της Σάσα
+choice_sasha_arrest_reaction_hide,Κρύφτηκε κατά τη σύλληψη της Σάσα
+choice_sasha_arrest_reaction_promise,Έκανε μια υπόσχεση στη Σάσα
+choice_player_wanted_yes,Έγινε καταζητούμενος από τις αρχές
+choice_player_captured_yes,Συνελήφθη από τις αρχές
+choice_has_keycard_yes,Απέκτησε κάρτα ασφαλείας
+choice_murphy_final_alliance_committed,Δεσμεύτηκε πλήρως στη συμμαχία του Μέρφι
+choice_murphy_final_alliance_hesitant,Δίστασε για την τελική συμμαχία
+choice_critical_choice_help,Βοήθησε στην κρίσιμη στιγμή
+choice_critical_choice_betray,Πρόδωσε στην κρίσιμη στιγμή
+choice_stay_or_go_stay,Έμεινε να πολεμήσει
+choice_stay_or_go_go,Επέλεξε να αποδράσει
+choice_sasha_rescue_reaction_angry,Αντέδρασε με οργή στη διάσωση
+choice_sasha_rescue_reaction_disgusted,Αηδίασε με τα γεγονότα
+choice_sasha_rescue_reaction_relieved,Ένιωσε ανακούφιση μετά τη διάσωση
+choice_fellow_officer_response_2_cautious,Παρέμεινε επιφυλακτικός με τους συναδέλφους
+choice_fellow_officer_response_2_sympathetic,Έδειξε συμπάθεια στους συναδέλφους
+choice_final_mission_response_determined,Αποφασισμένος να ολοκληρώσει την τελική αποστολή
+choice_final_mission_response_cautious,Επιφυλακτικός για την τελική αποστολή
+choice_resistance_trust_diplomatic,Ακολούθησε διπλωματική προσέγγιση με την αντίσταση
+choice_resistance_trust_committed,Πλήρως αφοσιωμένος στην αντίσταση
+choice_ending_choice_diplomatic,Επέλεξε διπλωματικό τέλος
+choice_ending_choice_justice,Επέλεξε τέλος δικαιοσύνης
+choice_ending_choice_vengeance,Επέλεξε τέλος εκδίκησης
+choice_ending_choice_dismantle,Επέλεξε να διαλύσει το σύστημα
+choice_accept_medal_accept,Αποδέχτηκε το μετάλλιο με υπερηφάνεια
+choice_accept_medal_reluctant,Αποδέχτηκε απρόθυμα το μετάλλιο
+choice_eat_final_eat,Έφαγε την τελική προσφορά
+choice_eat_final_refuse,Αρνήθηκε την τελική προσφορά
+choice_final_loyalist_choice_report,Κατήγγειλε τους αντιφρονούντες
+choice_final_loyalist_choice_ignore,Αγνόησε τους αντιφρονούντες
+choice_final_loyalist_choice_hope,Κράτησε την ελπίδα για αλλαγή
+choice_qte_rescue_result_pass,Επέτυχε στην προσπάθεια διάσωσης
+choice_qte_rescue_result_fail,Απέτυχε στην προσπάθεια διάσωσης
+choice_qte_confrontation_result_pass,Κέρδισε την αντιπαράθεση
+choice_qte_confrontation_result_fail,Έχασες την αναμέτρηση
+choice_qte_escape_result_pass,Επιτυχής διαφυγή
+choice_qte_escape_result_fail,Αποτυχία διαφυγής
+choice_qte_infiltration_result_pass,Επιτυχής διείσδυση
+choice_qte_infiltration_result_fail,Αποτυχία διείσδυσης
+choice_qte_scanner_result_pass,Επιτυχής δολιοφθορά σαρωτή
+choice_qte_scanner_result_fail,Αποτυχία δολιοφθοράς σαρωτή
+choice_qte_surveillance_result_pass,Αποφυγή επιτήρησης
+choice_qte_surveillance_result_fail,Εντοπίστηκες από την επιτήρηση
+choice_qte_suppression_result_pass,Αντίσταση στην καταστολή
+choice_qte_suppression_result_fail,Υπέκυψες στην καταστολή
+passport_label_type,Τύπος:
+passport_label_born,Γέννηση:
+passport_label_gender,Φύλο:
+passport_label_country,Χώρα:
+passport_label_expires,Λήγει:
+passport_label_condition,Κατάσταση:
+tutorial_skip,Παράλειψη
+tutorial_skip_all,Παράλειψη Όλων των Εκπαιδευτικών
+tutorial_continue_auto,(συνεχίζεται αυτόματα...)
+tutorial_continue_click,(κάντε κλικ για να συνεχίσετε...)
+tutorial_header,Εκπαιδευτικό {current} από {total}: {name} - Βήμα {step} από {steps}
+tutorial_header_single,{name} - Βήμα {step} από {steps}
+tutorial_welcome_name,Καλώς ήρθατε στο Spud Customs
+tutorial_gate_control_name,Άνοιγμα της Πύλης
+tutorial_megaphone_call_name,Καλώντας Πατάτες
+tutorial_document_inspection_name,Επιθεώρηση Εγγράφων
+tutorial_rules_checking_name,Κανόνες Μετανάστευσης
+tutorial_stamp_usage_name,Χρήση των Σφραγίδων
+tutorial_strikes_and_quota_name,Λάθη και Ποσόστωση
+tutorial_welcome_step1,[center][b]Καλώς ήρθατε στο Τελωνείο Πατάτας![/b][/center]\n\nΗ δουλειά σας είναι να διεκπεραιώνετε τις εισερχόμενες πατάτες στο συνοριακό σημείο ελέγχου. Ας μάθουμε τα βασικά!
+tutorial_gate_control_step1,[center][b]Άνοιγμα του Θαλάμου σας[/b][/center]\n\nΒλέπετε αυτόν τον μοχλό; {interact} τον για να σηκώσετε το ρολό και να ανοίξετε τον θάλαμό σας για δουλειά!\n\n[color=yellow]{interact} τον μοχλό τώρα.[/color]
+tutorial_gate_control_step2,[center][b]Εξαιρετική δουλειά![/b][/center]\n\nΟ θάλαμός σας είναι τώρα ανοιχτός. Οι πατάτες στην ουρά μπορούν να δουν ότι είστε έτοιμοι για εξυπηρέτηση.
+tutorial_megaphone_call_step1,[center][b]Καλώντας την Επόμενη Πατάτα[/b][/center]\n\nΧρησιμοποιήστε τον μεγαφωνικό για να καλέσετε την επόμενη πατάτα από την ουρά στον θάλαμό σας.\n\n[color=yellow]{interact} τον μεγαφωνικό![/color]
+tutorial_megaphone_call_step2,[center][b]Έρχονται![/b][/center]\n\nΠαρακολουθήστε καθώς η πατάτα πλησιάζει τον θάλαμό σας. Θα παρουσιάσουν τα έγγραφά τους για επιθεώρηση.
+tutorial_document_inspection_step1,[center][b]Επιθεώρηση Εγγράφων[/b][/center]\n\nΗ πατάτα σας έδωσε το διαβατήριό της. {drag} το στο τραπέζι επιθεώρησης για να το εξετάσετε προσεκτικά.\n\n[color=yellow]{drag} το διαβατήριο στο τραπέζι.[/color]
+tutorial_document_inspection_step2,[center][b]Εξέταση του Διαβατηρίου[/b][/center]\n\n{interact} το διαβατήριο για να το ανοίξετε και να ελέγξετε τις πληροφορίες της πατάτας:\n\n- Όνομα και φωτογραφία\n- Χώρα προέλευσης\n- Τύπος και κατάσταση πατάτας\n\nΨάξτε για οτιδήποτε ύποπτο!
+tutorial_document_inspection_step3,"[center][b]Ελέγξτε τους Κανόνες![/b][/center]\n\nΠριν λάβετε την απόφασή σας, πρέπει να ελέγξετε τους κανόνες μετανάστευσης. Ας μάθουμε γι' αυτούς!"
+tutorial_rules_checking_step1,[center][b]Κανόνες Μετανάστευσης[/b][/center]\n\nΚοιτάξτε το φυλλάδιο κανόνων στη δεξιά πλευρά. Αυτοί οι κανόνες σας λένε ποιες πατάτες να [color=green]ΕΓΚΡΙΝΕΤΕ[/color] ή να [color=red]ΑΠΟΡΡΙΨΕΤΕ[/color].\n\nΑπορρίψτε οποιαδήποτε πατάτα παραβιάζει τους τρέχοντες κανόνες!\n\n[color=red]ΣΗΜΑΝΤΙΚΟ: Έγγραφα με ληγμένες ημερομηνίες πρέπει να ΑΠΟΡΡΙΠΤΟΝΤΑΙ![/color]
+tutorial_rules_checking_step2,[center][b]Μείνετε σε Επαγρύπνηση![/b][/center]\n\nΟι κανόνες αλλάζουν μεταξύ των βαρδιών. Πάντα να ελέγχετε τους τρέχοντες κανόνες πριν λάβετε αποφάσεις.\n\nΣυγκρίνετε προσεκτικά τις πληροφορίες του διαβατηρίου με τους ενεργούς κανόνες.
+tutorial_stamp_usage_step1,[center][b]Η Μπάρα Σφραγίδων[/b][/center]\n\nΒλέπετε τη μπάρα σφραγίδων στην κορυφή; {interact} τη λαβή για να αποκαλύψετε τις σφραγίδες έγκρισης και απόρριψής σας.\n\n[color=yellow]{interact} για να ανοίξετε τη μπάρα σφραγίδων.[/color]
+tutorial_stamp_usage_step2,[center][b]Τοποθέτηση για Σφράγιση[/b][/center]\n\n{drag} το διαβατήριο κάτω από τις σφραγίδες. Θα δείτε έναν οδηγό που δείχνει πού να το τοποθετήσετε.\n\n[color=green]Πράσινη σφραγίδα[/color] = ΕΓΚΡΙΣΗ\n[color=red]Κόκκινη σφραγίδα[/color] = ΑΠΟΡΡΙΨΗ\n\n[color=yellow]Τοποθετήστε το διαβατήριο κάτω από μια σφραγίδα.[/color]
+tutorial_stamp_usage_step3,[center][b]Εφαρμόστε τη Σφραγίδα![/b][/center]\n\n{interact} τη σφραγίδα για να σημειώσετε το διαβατήριο με την απόφασή σας.\n\n[color=yellow]{interact} μια σφραγίδα για να την εφαρμόσετε.[/color]
+tutorial_stamp_usage_step4,[center][b]Επιστρέψτε τα Έγγραφα[/b][/center]\n\nΤώρα {drag} το σφραγισμένο διαβατήριο πίσω στην πατάτα για να ολοκληρώσετε τη διεκπεραίωσή της.\n\n[color=yellow]Επιστρέψτε το διαβατήριο στην πατάτα.[/color]
+tutorial_stamp_usage_step5,[center][b]Μπράβο![/b][/center]\n\nΈχετε διεκπεραιώσει την πρώτη σας πατάτα! Παρακολουθήστε την ποσόστωσή σας - πρέπει να διεκπεραιώνετε αρκετές πατάτες σε κάθε βάρδια.
+tutorial_strikes_and_quota_step1,[center][b]Το Σύστημα Ποσόστωσης[/b][/center]\n\nΚοιτάξτε την ένδειξη [color=yellow]Ποσόστωσης[/color]. Αυτή δείχνει πόσες πατάτες πρέπει να διεκπεραιώσετε σωστά σε κάθε βάρδια.
+tutorial_strikes_and_quota_step2,[center][b]Αποφύγετε τα Λάθη![/b][/center]\n\nΟ μετρητής [color=red]Λαθών[/color] δείχνει τα λάθη σας. Πάρα πολλά λάθη και το παιχνίδι τελειώνει!\n\nΛάβετε λανθασμένες αποφάσεις και θα κερδίσετε λάθη.
+tutorial_strikes_and_quota_step3,"[center][b]Η Εκπαίδευση Ολοκληρώθηκε![/b][/center]\n\nΣυνεχίστε να διεκπεραιώνετε πατάτες για να ολοκληρώσετε τη βάρδια εκπαίδευσής σας.\n\nΜόλις τελειώσετε, θα [color=green]πιστοποιηθείτε ως Τελωνειακός Υπάλληλος[/color] και θα είστε έτοιμοι για την πρώτη σας πραγματική μέρα!"

@@ -60,14 +60,14 @@ citation_header,ÚRADNÁ CITÁCIA
 citation_from_supervisor,Od: Supervízor Russet
 citation_dismiss_hint,[Presuňte do koša na zatvorenie]
 minigame_times_up,"Čas vypršal! Žiadne obavy, späť do práce!"
-minigame_time_format,{seconds}.{fraction}
+minigame_time_format,{sekundy}.{zlomok}
 qte_title,RÝCHLA UDALOSŤ
 qte_instruction,"Stláčajte klávesy tak, ako sa objavia!"
 qte_auto_completed,Automaticky dokončené
 qte_accessibility_note,(Prístupnosť QTE povolená)
 qte_get_ready,Pripravte sa...
 qte_progress,Postup
-qte_key_prompt,[{key}]
+qte_key_prompt,[{kláves}]
 qte_result,{successful} / {total} úspešných (+{points} bodov)
 qte_image_pending,[Obrázok čaká]
 evidence_title,BEZPEČNOSTNÁ INŠPEKCIA SA BLÍŽI

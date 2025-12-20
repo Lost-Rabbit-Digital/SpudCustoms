@@ -191,3 +191,189 @@ continue_game_title,Fortsett Spill
 level_select_story_choices,Historievalg
 reset_progress_confirm,Er du sikker på at du vil nullstille historiefremdriften? Dette kan ikke angres.
 reset_highscores_confirm,Er du sikker på at du vil nullstille alle toppscore? Dette kan ikke angres.
+level_name_0,Opplæring
+level_name_1,Første arbeidsdag
+level_name_2,Nye forskrifter
+level_name_3,Økende press
+level_name_4,Kontrabandekontroll
+level_name_5,Midtveiskrise
+level_name_6,Økt sikkerhet
+level_name_7,Under lupen
+level_name_8,Dobbeltagenter
+level_name_9,Grensekaos
+level_name_10,Den siste nedtellingen
+shift_name_1,Første arbeidsdag
+shift_name_2,Møte Sasha og Murphy
+shift_name_3,Den savnede kona
+shift_name_4,Rotreservat-lastebiler
+shift_name_5,Lojalitetskontroll
+shift_name_6,RealityScan
+shift_name_7,Motstandsmøte
+shift_name_8,Sashas pågripelse
+shift_name_9,Angrepet
+shift_name_10,Den siste nedtellingen
+shift_name_unknown,Ukjent
+path_chaos_agent,Kaosagent
+path_loyalist,Lojaliststi
+path_resistance_ally,Motstandsalliert
+path_questioning,Spørrende
+path_undetermined,Ubestemt
+story_choice_path_label,Sti:
+story_choice_sasha_trust,Sasha Tillit: {value}/10
+story_choice_chaos_points,Kaos: {value} poeng
+story_choice_no_choices,Ingen valg registrert ennå
+story_choice_day_header,Dag {day} - {name}
+choice_initial_response_eager,Viste entusiasme for Spud
+choice_initial_response_questioning,Stilte spørsmål ved systemet
+choice_note_reaction_investigate,Valgte å etterforske lappen
+choice_note_reaction_destroy,Ødela den mystiske lappen
+choice_note_reaction_report,Rapporterte lappen til myndighetene
+choice_kept_note_yes,Beholdt den mystiske lappen
+choice_kept_note_no,Kastet lappen
+choice_reported_note_yes,Rapporterte lappen
+choice_murphy_trust_open,Åpnet seg for Murphy
+choice_murphy_trust_guarded,Forble tilbakeholden med Murphy
+choice_eat_reserve_ate,Spiste rasjonene i reserve
+choice_eat_reserve_refused,Avslo rasjonene i reserve
+choice_scanner_response_loyal,Viste lojalitet under skannertesten
+choice_scanner_response_questioning,Stilte spørsmål ved skannerens formål
+choice_family_response_refuse,Avslo å hjelpe med å finne kona
+choice_family_response_help,Gikk med på å hjelpe med å finne den savnede kona
+choice_has_wife_photo_yes,Skaffet bilde av den savnede kona
+choice_reveal_reaction_shocked,Ble sjokkert av avsløringen
+choice_reveal_reaction_cautious,Reagerte forsiktig på avsløringen
+choice_cafeteria_response_serious,Tok kantinerykter alvorlig
+choice_cafeteria_response_avoid,Unngikk kantinediskusjoner
+choice_murphy_alliance_ally,Allierte seg med Murphy
+choice_murphy_alliance_cautious,Forble forsiktig med Murphy
+choice_murphy_alliance_skeptical,Forble skeptisk til Murphy
+choice_sasha_trust_level_committed,Fullt ut forpliktet seg til å stole på Sasha
+choice_sasha_trust_level_cautious,Forble forsiktig med Sasha
+choice_sasha_investigation_committed,Forpliktet seg til Sashas etterforskning
+choice_sasha_investigation_hesitant,Nølte med etterforskningen
+choice_loyalty_response_patriotic,Ga patriotiske svar
+choice_loyalty_response_idealistic,Uttrykte idealistiske synspunkter
+choice_hide_choice_desk,Gjemte seg bak skrivebordet
+choice_hide_choice_window,Gjemte seg ved vinduet
+choice_evidence_choice_hand_over,Overleverte bevisene
+choice_evidence_choice_keep,Holdt bevisene skjult
+choice_evidence_choice_lie,Løy om bevisene
+choice_evidence_choice_chaos,Brukte bevisene til å skape kaos
+choice_viktor_wife_discovery_yes,Oppdaget Viktors kone på manifestet
+choice_fellow_officer_response_cautious,Var forsiktig med medoffiseren
+choice_fellow_officer_response_sympathetic,Viste sympati med medoffiseren
+choice_fellow_officer_response_loyal,Forble lojal overfor medoffiseren
+choice_interrogation_response_lie,Løy under avhøret
+choice_interrogation_response_legal,Ga lovlige svar
+choice_viktor_conversation_tell_truth,Fortalte Viktor sannheten
+choice_viktor_conversation_lie_protect,Løy for å beskytte Viktor
+choice_viktor_conversation_curious,Var nysgjerrig på Viktor
+choice_scanner_choice_help,Hjalp til med å sabotere skanneren
+choice_scanner_choice_scan,Opererte skanneren normalt
+choice_scanner_choice_viktor,Valgte Viktor til skanneren
+choice_helped_operative_yes,Hjalp motstandsagenten
+choice_helped_operative_no,Nektet å hjelpe agenten
+choice_viktor_allied_yes,Inngikk allianse med Viktor
+choice_betrayed_resistance_yes,Forrådte motstandsbevegelsen
+choice_sasha_plan_response_committed,Forpliktet seg til Sashas plan
+choice_sasha_plan_response_nervous,Var nervøs for planen
+choice_malfunction_excuse_technical,Skyldte på teknisk feil
+choice_malfunction_excuse_innocent,Spilte uskyldig
+choice_resistance_mission_committed,Forpliktet seg til motstandsoppdraget
+choice_resistance_mission_hesitant,Nølte med oppdraget
+choice_resistance_mission_cautious,Gikk forsiktig til oppdraget
+choice_final_decision_help,Bestemte seg for å hjelpe motstandsbevegelsen
+choice_final_decision_passive,Forble passiv
+choice_final_decision_undecided,Forble ubestemt
+choice_yellow_badge_response_help,Hjalp de med gult merke
+choice_yellow_badge_response_betray,Forrådte de med gult merke
+choice_follow_trucks_volunteer,Meldte seg frivillig til å følge lastebilene
+choice_follow_trucks_hesitant,Nølte med å følge lastebilene
+choice_found_facility_yes,Fant Rotreservat-anlegget
+choice_sasha_response_cautious,Var forsiktig med Sashas situasjon
+choice_sasha_response_concerned,Viste bekymring for Sasha
+choice_interrogation_choice_deny,Benektet kjennskap under avhør
+choice_interrogation_choice_betray,Svek andre under avhør
+choice_sasha_arrest_reaction_intervene,Grep inn i Sashas arrestasjon
+choice_sasha_arrest_reaction_hide,Gjemte seg under Sashas arrestasjon
+choice_sasha_arrest_reaction_promise,Ga et løfte til Sasha
+choice_player_wanted_yes,Ble etterlyst av myndighetene
+choice_player_captured_yes,Ble tatt av myndighetene
+choice_has_keycard_yes,Skaffet sikkerhetsnøkkelkort
+choice_murphy_final_alliance_committed,Forpliktet seg helt til Murphys allianse
+choice_murphy_final_alliance_hesitant,Nølte med den endelige alliansen
+choice_critical_choice_help,Hjalp til i det kritiske øyeblikket
+choice_critical_choice_betray,Svek i det kritiske øyeblikket
+choice_stay_or_go_stay,Ble værende for å kjempe
+choice_stay_or_go_go,Valgte å flykte
+choice_sasha_rescue_reaction_angry,Reagerte med sinne på redningen
+choice_sasha_rescue_reaction_disgusted,Følte avsky over hendelsene
+choice_sasha_rescue_reaction_relieved,Følte seg lettet etter redningen
+choice_fellow_officer_response_2_cautious,Forble forsiktig med kolleger
+choice_fellow_officer_response_2_sympathetic,Viste sympati med kolleger
+choice_final_mission_response_determined,Fast bestemt på å fullføre siste oppdrag
+choice_final_mission_response_cautious,Forsiktig med siste oppdrag
+choice_resistance_trust_diplomatic,Tok en diplomatisk tilnærming med motstandsbevegelsen
+choice_resistance_trust_committed,Forpliktet seg helt til motstandsbevegelsen
+choice_ending_choice_diplomatic,Valgte diplomatisk slutt
+choice_ending_choice_justice,Valgte rettferdighetens slutt
+choice_ending_choice_vengeance,Valgte hevnens slutt
+choice_ending_choice_dismantle,Valgte å demontere systemet
+choice_accept_medal_accept,Aksepterte medaljen med stolthet
+choice_accept_medal_reluctant,Motvillig aksepterte medaljen
+choice_eat_final_eat,Spiste det siste tilbudet
+choice_eat_final_refuse,Avslo det siste tilbudet
+choice_final_loyalist_choice_report,Angav dissidenter
+choice_final_loyalist_choice_ignore,Ignorerte dissidentene
+choice_final_loyalist_choice_hope,Holdt fast ved håpet om endring
+choice_qte_rescue_result_pass,Lyktes med redningsforsøket
+choice_qte_rescue_result_fail,Mislyktes med redningsforsøket
+choice_qte_confrontation_result_pass,Vant konfrontasjonen
+choice_qte_confrontation_result_fail,Tapte konfrontasjonen
+choice_qte_escape_result_pass,Rømte vellykket
+choice_qte_escape_result_fail,Mislyktes med flukten
+choice_qte_infiltration_result_pass,Infiltrasjonen lyktes
+choice_qte_infiltration_result_fail,Infiltrasjonen mislyktes
+choice_qte_scanner_result_pass,Skannersabotasjen lyktes
+choice_qte_scanner_result_fail,Skannersabotasjen mislyktes
+choice_qte_surveillance_result_pass,Unngikk overvåking
+choice_qte_surveillance_result_fail,Fanget av overvåking
+choice_qte_suppression_result_pass,Motsto undertrykkelse
+choice_qte_suppression_result_fail,Bukket under for undertrykkelse
+passport_label_type,Type:
+passport_label_born,Født:
+passport_label_gender,Kjønn:
+passport_label_country,Land:
+passport_label_expires,Utløper:
+passport_label_condition,Tilstand:
+tutorial_skip,Hopp over
+tutorial_skip_all,Hopp over alle veiledninger
+tutorial_continue_auto,(fortsetter automatisk...)
+tutorial_continue_click,(klikk for å fortsette...)
+tutorial_header,Veiledning {current} av {total}: {name} - Trinn {step} av {steps}
+tutorial_header_single,{name} - Trinn {step} av {steps}
+tutorial_welcome_name,Velkommen til Spud Customs
+tutorial_gate_control_name,Åpne porten
+tutorial_megaphone_call_name,Kalle inn poteter
+tutorial_document_inspection_name,Dokumentinspeksjon
+tutorial_rules_checking_name,Immigrasjonsregler
+tutorial_stamp_usage_name,Bruke stemplene
+tutorial_strikes_and_quota_name,Anmerkninger og kvoten
+tutorial_welcome_step1,[center][b]Velkommen til Spud Customs![/b][/center]\n\nDin jobb er å behandle innkommende poteter ved grensekontrollen. La oss lære det grunnleggende!
+tutorial_gate_control_step1,[center][b]Åpne din bod[/b][/center]\n\nSer du den spaken? {interact} den for å heve skodden og åpne boden din for forretninger!\n\n[color=yellow]{interact} spaken nå.[/color]
+tutorial_gate_control_step2,[center][b]Bra jobbet![/b][/center]\n\nBoden din er nå åpen. Poteter i køen kan se at du er klar for service.
+tutorial_megaphone_call_step1,[center][b]Kall inn neste potet[/b][/center]\n\nBruk megafonen til å kalle inn neste potet fra køen til boden din.\n\n[color=yellow]{interact} megafonen![/color]
+tutorial_megaphone_call_step2,[center][b]Her kommer de![/b][/center]\n\nSe poteten nærme seg boden din. De vil presentere dokumentene sine for inspeksjon.
+tutorial_document_inspection_step1,[center][b]Dokumentinspeksjon[/b][/center]\n\nPoteten har gitt deg passet sitt. {drag} det til inspeksjonsbordet ditt for å undersøke det nøye.\n\n[color=yellow]{drag} passet til bordet.[/color]
+tutorial_document_inspection_step2,[center][b]Undersøke passet[/b][/center]\n\n{interact} passet for å åpne det og gjennomgå potetens informasjon:\n\n- Navn og bilde\n- Opprinnelsesland\n- Potettype og tilstand\n\nSe etter noe mistenkelig!
+tutorial_document_inspection_step3,"[center][b]Sjekk Reglene![/b][/center]\n\nFør du tar en avgjørelse, må du sjekke immigrasjonsreglene. La oss lære om dem!"
+tutorial_rules_checking_step1,[center][b]Immigrasjonsregler[/b][/center]\n\nSe på regelheftet på høyre side. Disse reglene forteller deg hvilke poteter du skal [color=green]GODKJENNE[/color] eller [color=red]AVVISE[/color].\n\nAvvis enhver potet som bryter gjeldende regler!\n\n[color=red]VIKTIG: Dokumenter med utløpte datoer må AVVISES![/color]
+tutorial_rules_checking_step2,[center][b]Vær Våken![/b][/center]\n\nRegler endres mellom vaktene. Sjekk alltid gjeldende regler før du tar avgjørelser.\n\nSammenlign passinformasjon nøye med aktive regler.
+tutorial_stamp_usage_step1,[center][b]Stempelbaren[/b][/center]\n\nSer du stempelbaren øverst? {interact} håndtaket for å avsløre godkjennings- og avvisningsstemplene dine.\n\n[color=yellow]{interact} for å åpne stempelbaren.[/color]
+tutorial_stamp_usage_step2,[center][b]Plassering for Stempling[/b][/center]\n\n{drag} passet under stemplene. Du vil se en guide som viser hvor du skal plassere det.\n\n[color=green]Grønt stempel[/color] = GODKJENN\n[color=red]Rødt stempel[/color] = AVVIS\n\n[color=yellow]Plasser passet under et stempel.[/color]
+tutorial_stamp_usage_step3,[center][b]Påfør Stempelet![/b][/center]\n\n{interact} stempelet for å markere passet med din avgjørelse.\n\n[color=yellow]{interact} et stempel for å påføre det.[/color]
+tutorial_stamp_usage_step4,[center][b]Returner Dokumentene[/b][/center]\n\nNå {drag} det stemplede passet tilbake til poteten for å fullføre behandlingen deres.\n\n[color=yellow]Returner passet til poteten.[/color]
+tutorial_stamp_usage_step5,[center][b]Bra Jobbet![/b][/center]\n\nDu har behandlet din første potet! Følg med på kvoten din – du må behandle nok poteter hver vakt.
+tutorial_strikes_and_quota_step1,[center][b]Kvotsystemet[/b][/center]\n\nSe på [color=yellow]Kvote[/color]-visningen. Denne viser hvor mange poteter du må behandle korrekt hver vakt.
+tutorial_strikes_and_quota_step2,[center][b]Unngå Anmerkninger![/b][/center]\n\n[color=red]Anmerkninger[/color]-telleren viser dine feil. For mange anmerkninger og det er game over!\n\nTa feil avgjørelser og du vil få anmerkninger.
+tutorial_strikes_and_quota_step3,"[center][b]Trening Fullført![/b][/center]\n\nFortsett å behandle poteter for å fullføre din treningsvakt.\n\nNår du er ferdig, vil du bli [color=green]sertifisert som tollbetjent[/color] og klar for din første virkelige dag!"

@@ -179,3 +179,189 @@ continue_game_title,게임 계속하기
 level_select_story_choices,스토리 선택
 reset_progress_confirm,스토리 진행 상황을 초기화하시겠습니까? 이 작업은 되돌릴 수 없습니다.
 reset_highscores_confirm,모든 최고 점수를 초기화하시겠습니까? 이 작업은 되돌릴 수 없습니다.
+level_name_0,튜토리얼
+level_name_1,첫 출근
+level_name_2,새로운 규정
+level_name_3,압박 심화
+level_name_4,밀수품 검사
+level_name_5,중반 위기
+level_name_6,보안 강화
+level_name_7,정밀 조사
+level_name_8,이중 스파이
+level_name_9,국경 혼란
+level_name_10,최후의 카운트다운
+shift_name_1,첫 출근
+shift_name_2,사샤와 머피와의 만남
+shift_name_3,사라진 아내
+shift_name_4,뿌리 비축 트럭
+shift_name_5,충성도 심사
+shift_name_6,리얼리티스캔
+shift_name_7,저항군 회의
+shift_name_8,사샤 체포
+shift_name_9,공격
+shift_name_10,최후의 카운트다운
+shift_name_unknown,알 수 없음
+path_chaos_agent,카오스 요원
+path_loyalist,충성파 경로
+path_resistance_ally,저항군 동맹
+path_questioning,의문을 품는
+path_undetermined,미정
+story_choice_path_label,경로:
+story_choice_sasha_trust,사샤 신뢰도: {value}/10
+story_choice_chaos_points,카오스: {value} 점
+story_choice_no_choices,아직 기록된 선택 없음
+story_choice_day_header,{day}일 - {name}
+choice_initial_response_eager,스퍼드에 대한 열정 보임
+choice_initial_response_questioning,시스템에 의문 제기
+choice_note_reaction_investigate,쪽지 조사 선택
+choice_note_reaction_destroy,의문의 쪽지 파괴
+choice_note_reaction_report,쪽지를 당국에 보고
+choice_kept_note_yes,의문의 쪽지 보관
+choice_kept_note_no,쪽지 폐기
+choice_reported_note_yes,쪽지를 보고했습니다
+choice_murphy_trust_open,머피에게 마음을 열었습니다
+choice_murphy_trust_guarded,머피를 경계했습니다
+choice_eat_reserve_ate,비상 식량을 먹었습니다
+choice_eat_reserve_refused,비상 식량을 거부했습니다
+choice_scanner_response_loyal,스캐너 테스트 중 충성심을 보였습니다
+choice_scanner_response_questioning,스캐너의 목적에 의문을 제기했습니다
+choice_family_response_refuse,아내 수색 지원을 거부했습니다
+choice_family_response_help,실종된 아내 수색을 돕기로 동의했습니다
+choice_has_wife_photo_yes,실종된 아내의 사진을 얻었습니다
+choice_reveal_reaction_shocked,폭로에 충격을 받았습니다
+choice_reveal_reaction_cautious,폭로에 신중하게 반응했습니다
+choice_cafeteria_response_serious,식당 소문을 진지하게 받아들였습니다
+choice_cafeteria_response_avoid,식당에서의 논의를 피했습니다
+choice_murphy_alliance_ally,머피와 동맹을 맺었습니다
+choice_murphy_alliance_cautious,머피에게 신중하게 대했습니다
+choice_murphy_alliance_skeptical,머피에게 회의적이었습니다
+choice_sasha_trust_level_committed,사샤를 전적으로 신뢰했습니다
+choice_sasha_trust_level_cautious,사샤에게 계속 신중했습니다
+choice_sasha_investigation_committed,사샤의 수사에 전념했습니다
+choice_sasha_investigation_hesitant,수사를 망설였습니다
+choice_loyalty_response_patriotic,애국적인 답변을 했습니다
+choice_loyalty_response_idealistic,이상주의적인 견해를 표명했습니다
+choice_hide_choice_desk,책상 뒤에 숨었습니다
+choice_hide_choice_window,창문 옆에 숨었습니다
+choice_evidence_choice_hand_over,증거를 제출했다
+choice_evidence_choice_keep,증거를 숨겼다
+choice_evidence_choice_lie,증거에 대해 거짓말했다
+choice_evidence_choice_chaos,증거로 혼란을 야기했다
+choice_viktor_wife_discovery_yes,명단에서 빅토르의 아내를 발견했다
+choice_fellow_officer_response_cautious,동료 요원에게 신중했다
+choice_fellow_officer_response_sympathetic,동료 요원에게 동정심을 보였다
+choice_fellow_officer_response_loyal,동료 요원에게 충실했다
+choice_interrogation_response_lie,심문 중에 거짓말했다
+choice_interrogation_response_legal,법적인 답변을 했다
+choice_viktor_conversation_tell_truth,빅토르에게 진실을 말했다
+choice_viktor_conversation_lie_protect,빅토르를 보호하기 위해 거짓말했다
+choice_viktor_conversation_curious,빅토르에 대해 궁금해했다
+choice_scanner_choice_help,스캐너 파괴를 도왔다
+choice_scanner_choice_scan,스캐너를 정상적으로 운영했다
+choice_scanner_choice_viktor,스캐너에 빅토르를 선택했다
+choice_helped_operative_yes,저항군 요원을 도왔다
+choice_helped_operative_no,요원을 돕기를 거부했다
+choice_viktor_allied_yes,빅토르와 동맹을 맺었다
+choice_betrayed_resistance_yes,저항군을 배신했다
+choice_sasha_plan_response_committed,사샤의 계획에 전념했다
+choice_sasha_plan_response_nervous,계획에 대해 불안해했다
+choice_malfunction_excuse_technical,기술적 오작동을 탓했다
+choice_malfunction_excuse_innocent,결백한 척했다
+choice_resistance_mission_committed,저항군 임무에 전념했다
+choice_resistance_mission_hesitant,임무에 대해 망설임
+choice_resistance_mission_cautious,임무에 신중하게 접근함
+choice_final_decision_help,저항군을 돕기로 결정함
+choice_final_decision_passive,수동적으로 남음
+choice_final_decision_undecided,결정하지 못함
+choice_yellow_badge_response_help,노란 배지 소지자를 도움
+choice_yellow_badge_response_betray,노란 배지 소지자를 배신함
+choice_follow_trucks_volunteer,트럭 추적에 자원함
+choice_follow_trucks_hesitant,트럭 추적을 망설임
+choice_found_facility_yes,뿌리 보관 시설을 발견함
+choice_sasha_response_cautious,사샤의 상황에 신중함
+choice_sasha_response_concerned,사샤에게 우려를 표함
+choice_interrogation_choice_deny,심문 중 아는 바를 부인함
+choice_interrogation_choice_betray,심문 중 다른 이들을 배신함
+choice_sasha_arrest_reaction_intervene,사샤의 체포에 개입함
+choice_sasha_arrest_reaction_hide,사샤 체포 중 숨음
+choice_sasha_arrest_reaction_promise,사샤에게 약속함
+choice_player_wanted_yes,당국에 수배됨
+choice_player_captured_yes,당국에 체포됨
+choice_has_keycard_yes,보안 키카드 획득
+choice_murphy_final_alliance_committed,머피의 동맹에 전적으로 헌신함
+choice_murphy_final_alliance_hesitant,최종 동맹에 망설임
+choice_critical_choice_help,결정적인 순간에 도움
+choice_critical_choice_betray,결정적인 순간에 배신함
+choice_stay_or_go_stay,남아 싸움
+choice_stay_or_go_go,탈출을 선택했다
+choice_sasha_rescue_reaction_angry,구출에 분노로 반응했다
+choice_sasha_rescue_reaction_disgusted,사건들에 혐오감을 느꼈다
+choice_sasha_rescue_reaction_relieved,구출 후 안도감을 느꼈다
+choice_fellow_officer_response_2_cautious,동료들에게 신중했다
+choice_fellow_officer_response_2_sympathetic,동료들에게 동정심을 보였다
+choice_final_mission_response_determined,최종 임무 완수를 결심했다
+choice_final_mission_response_cautious,최종 임무에 대해 신중했다
+choice_resistance_trust_diplomatic,저항군과 외교적으로 접근했다
+choice_resistance_trust_committed,저항군에 전념했다
+choice_ending_choice_diplomatic,외교적 결말을 선택했다
+choice_ending_choice_justice,정의로운 결말을 선택했다
+choice_ending_choice_vengeance,복수의 결말을 선택했다
+choice_ending_choice_dismantle,시스템 해체를 선택했다
+choice_accept_medal_accept,자랑스럽게 메달을 수락했다
+choice_accept_medal_reluctant,마지못해 메달을 수락했다
+choice_eat_final_eat,마지막 제물을 먹었다
+choice_eat_final_refuse,마지막 제물을 거부했다
+choice_final_loyalist_choice_report,반대자들을 보고했다
+choice_final_loyalist_choice_ignore,반대자들을 무시했다
+choice_final_loyalist_choice_hope,변화에 대한 희망을 품었다
+choice_qte_rescue_result_pass,구출 시도에 성공했다
+choice_qte_rescue_result_fail,구출 시도에 실패했다
+choice_qte_confrontation_result_pass,대결에서 승리했다
+choice_qte_confrontation_result_fail,대결에서 패배했다
+choice_qte_escape_result_pass,탈출 성공!
+choice_qte_escape_result_fail,탈출 실패!
+choice_qte_infiltration_result_pass,잠입 성공!
+choice_qte_infiltration_result_fail,잠입 실패!
+choice_qte_scanner_result_pass,스캐너 교란 성공!
+choice_qte_scanner_result_fail,스캐너 교란 실패!
+choice_qte_surveillance_result_pass,감시 회피 성공!
+choice_qte_surveillance_result_fail,감시망에 발각!
+choice_qte_suppression_result_pass,진압 저항 성공!
+choice_qte_suppression_result_fail,진압에 굴복!
+passport_label_type,유형:
+passport_label_born,출생:
+passport_label_gender,성별:
+passport_label_country,국가:
+passport_label_expires,만료:
+passport_label_condition,상태:
+tutorial_skip,건너뛰기
+tutorial_skip_all,모든 튜토리얼 건너뛰기
+tutorial_continue_auto,(자동으로 계속됩니다...)
+tutorial_continue_click,(클릭하여 계속...)
+tutorial_header,튜토리얼 {current}/{total}: {name} - {step}/{steps}단계
+tutorial_header_single,{name} - {step}/{steps}단계
+tutorial_welcome_name,스퍼드 세관에 오신 것을 환영합니다
+tutorial_gate_control_name,게이트 열기
+tutorial_megaphone_call_name,감자 호출
+tutorial_document_inspection_name,서류 검사
+tutorial_rules_checking_name,입국 규정
+tutorial_stamp_usage_name,스탬프 사용
+tutorial_strikes_and_quota_name,경고와 할당량
+tutorial_welcome_step1,[center][b]Spud Customs에 오신 것을 환영합니다![/b][/center]\n\n당신의 임무는 국경 검문소로 들어오는 감자들을 처리하는 것입니다. 기본 사항을 배워봅시다!
+tutorial_gate_control_step1,[center][b]부스 열기[/b][/center]\n\n저 레버가 보이시나요? {interact}하여 셔터를 올리고 부스를 열어 업무를 시작하세요!\n\n[color=yellow]지금 레버를 {interact}하세요.[/color]
+tutorial_gate_control_step2,[center][b]아주 잘하셨습니다![/b][/center]\n\n이제 부스가 열렸습니다. 대기 중인 감자들이 당신이 업무 준비를 마쳤다는 것을 알 수 있습니다.
+tutorial_megaphone_call_step1,[center][b]다음 감자 부르기[/b][/center]\n\n확성기를 사용하여 대기열에서 다음 감자를 부스로 부르세요.\n\n[color=yellow]확성기를 {interact}하세요![/color]
+tutorial_megaphone_call_step2,[center][b]오고 있습니다![/b][/center]\n\n감자가 부스로 다가오는 것을 지켜보세요. 그들은 검사를 위해 서류를 제시할 것입니다.
+tutorial_document_inspection_step1,[center][b]서류 검사[/b][/center]\n\n감자가 여권을 건네주었습니다. 여권을 검사 테이블로 {drag}하여 자세히 살펴보세요.\n\n[color=yellow]여권을 테이블로 {drag}하세요.[/color]
+tutorial_document_inspection_step2,[center][b]여권 검토[/b][/center]\n\n여권을 {interact}하여 열고 감자의 정보를 확인하세요:\n\n- 이름과 사진\n- 원산지\n- 감자 종류 및 상태\n\n의심스러운 점이 있는지 찾아보세요!
+tutorial_document_inspection_step3,[center][b]규칙을 확인하세요![/b][/center]\n\n결정을 내리기 전에 입국 규정을 확인해야 합니다. 이에 대해 알아봅시다!
+tutorial_rules_checking_step1,[center][b]입국 규정[/b][/center]\n\n오른쪽에 있는 규정 안내 책자를 보세요. 이 규정은 어떤 감자를 [color=green]승인[/color]하거나 [color=red]거부[/color]해야 하는지 알려줍니다.\n\n현재 규정을 위반하는 감자는 모두 거부하세요!\n\n[color=red]중요: 만료된 서류는 반드시 거부해야 합니다![/color]
+tutorial_rules_checking_step2,[center][b]항상 경계하세요![/b][/center]\n\n규정은 근무 교대마다 변경됩니다. 결정을 내리기 전에 항상 현재 규정을 확인하세요.\n\n여권 정보를 현재 활성화된 규정과 신중하게 비교하세요.
+tutorial_stamp_usage_step1,[center][b]스탬프 바[/b][/center]\n\n상단에 스탬프 바가 보이시나요? 손잡이를 {interact}하여 승인 및 거부 스탬프를 꺼내세요.\n\n[color=yellow]스탬프 바를 열려면 {interact}하세요.[/color]
+tutorial_stamp_usage_step2,[center][b]스탬프 찍기 위치[/b][/center]\n\n여권을 스탬프 아래로 {drag}하세요. 여권을 놓을 위치를 보여주는 안내선이 보일 것입니다.\n\n[color=green]녹색 스탬프[/color] = 승인\n[color=red]빨간색 스탬프[/color] = 거부\n\n[color=yellow]여권을 스탬프 아래에 놓으세요.[/color]
+tutorial_stamp_usage_step3,[center][b]스탬프를 찍으세요![/b][/center]\n\n스탬프를 {interact}하여 여권에 당신의 결정을 표시하세요.\n\n[color=yellow]스탬프를 {interact}하여 찍으세요.[/color]
+tutorial_stamp_usage_step4,[center][b]서류 반환[/b][/center]\n\n이제 스탬프가 찍힌 여권을 감자에게 {drag}하여 처리를 완료하세요.\n\n[color=yellow]여권을 감자에게 돌려주세요.[/color]
+tutorial_stamp_usage_step5,[center][b]잘하셨습니다![/b][/center]\n\n첫 번째 감자를 처리했습니다! 할당량을 주시하세요 - 매 근무 교대마다 충분한 감자를 처리해야 합니다.
+tutorial_strikes_and_quota_step1,[center][b]할당량 시스템[/b][/center]\n\n[color=yellow]할당량[/color] 표시를 보세요. 이것은 매 근무 교대마다 얼마나 많은 감자를 정확하게 처리해야 하는지 보여줍니다.
+tutorial_strikes_and_quota_step2,[center][b]경고를 피하세요![/b][/center]\n\n[color=red]경고[/color] 카운터는 당신의 실수를 보여줍니다. 경고가 너무 많으면 게임 오버입니다!\n\n잘못된 결정을 내리면 경고를 받게 됩니다.
+tutorial_strikes_and_quota_step3,[center][b]훈련 완료![/b][/center]\n\n훈련 근무 교대를 완료하기 위해 계속해서 감자를 처리하세요.\n\n완료되면 [color=green]세관원[/color]으로 인증받고 첫 실제 근무를 시작할 준비가 됩니다!
