@@ -17,13 +17,23 @@ const HIGHSCORES_SAVE_PATH = "user://highscores.save"
 signal save_completed(success: bool)
 signal load_completed(success: bool)
 
+# Performance: Cache game state to avoid repeated disk reads
+var _cached_game_state: Dictionary = {}
+var _cache_valid: bool = false
+
 
 # Save the current game state
 func save_game_state(data: Dictionary) -> bool:
-	# Remove difficulty_level if it's in the data
+	# Invalidate cache on save
+	_cache_valid = false
+
 	var save_file = FileAccess.open(GAMESTATE_SAVE_PATH, FileAccess.WRITE)
 	if save_file:
 		save_file.store_var(data)
+
+		# Update cache with saved data
+		_cached_game_state = data.duplicate(true)
+		_cache_valid = true
 
 		# Upload to Steam Cloud if available
 		if Steam.isSteamRunning():
@@ -39,8 +49,12 @@ func save_game_state(data: Dictionary) -> bool:
 		return false
 
 
-# Load the game state
+# Load the game state (uses cache to avoid repeated disk reads)
 func load_game_state() -> Dictionary:
+	# Return cached data if available (major performance improvement)
+	if _cache_valid and not _cached_game_state.is_empty():
+		return _cached_game_state.duplicate(true)
+
 	var data = {}
 	var success = false
 
@@ -73,6 +87,11 @@ func load_game_state() -> Dictionary:
 		if save_file:
 			data = save_file.get_var()
 			success = true
+
+	# Cache the loaded data for future reads
+	if success:
+		_cached_game_state = data.duplicate(true)
+		_cache_valid = true
 
 	load_completed.emit(success)
 	return data
@@ -238,3 +257,9 @@ func reset_all_game_data(keep_high_scores: bool = true) -> bool:
 	}
 
 	return save_game_state(game_state)
+
+
+## Invalidate the game state cache (call if external changes are made to save files)
+func invalidate_cache() -> void:
+	_cache_valid = false
+	_cached_game_state.clear()

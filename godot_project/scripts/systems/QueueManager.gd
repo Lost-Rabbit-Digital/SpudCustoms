@@ -9,6 +9,8 @@ var spawn_point: Vector2
 var path_node_path: NodePath
 var potato_walk_speed = 150
 var potato_run_speed = 200
+# Performance: Shared footprint pool for all potatoes
+var _footprint_pool: FootprintPool = null
 
 
 func _ready():
@@ -32,6 +34,11 @@ func _ready():
 	max_potatoes = curve.get_point_count() - 1
 	print("Maximum amount of potatoes in line: ", max_potatoes)
 
+	# Performance: Initialize shared footprint pool
+	_footprint_pool = FootprintPool.new()
+	add_child(_footprint_pool)
+	_footprint_pool.initialize(50)  # Pool size for footprints
+
 
 func can_add_potato() -> bool:
 	return potatoes.size() < max_potatoes
@@ -50,6 +57,10 @@ func spawn_new_potato():
 			#print("Potato created with info: ", potato.get_potato_info())
 			add_child(potato)
 
+			# Performance: Assign shared footprint pool
+			if _footprint_pool:
+				potato.footprint_pool = _footprint_pool
+
 			potato.position = spawn_point
 			potato.set_state(potato.TaterState.QUEUED)
 			potato.update_appearance()
@@ -65,6 +76,11 @@ func spawn_new_potato():
 func add_potato(potato_info: Dictionary):
 	var potato = PotatoPerson.instantiate()
 	add_child(potato)
+
+	# Performance: Assign shared footprint pool
+	if _footprint_pool:
+		potato.footprint_pool = _footprint_pool
+
 	potato.position = spawn_point
 	potato.current_point = 0
 	potato.target_point = 0
