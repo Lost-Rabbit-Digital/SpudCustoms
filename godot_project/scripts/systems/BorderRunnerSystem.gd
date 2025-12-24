@@ -123,6 +123,8 @@ var difficulty_level
 @onready var missile_frames: SpriteFrames
 @onready var smoke_frames: SpriteFrames
 @onready var explosion_frames: SpriteFrames
+# Performance: Use object pool for explosions
+var _explosion_pool: ExplosionPool = null
 
 
 class Missile:
@@ -312,6 +314,11 @@ func _ready():
 		smoke.visible = false
 		add_child(smoke)
 		smoke_particle_pool.append(smoke)
+
+	# Performance: Initialize explosion pool
+	_explosion_pool = ExplosionPool.new()
+	add_child(_explosion_pool)
+	_explosion_pool.initialize(explosion_frames, 15, self)
 
 	# REFACTORED: Direct reference to CursorManager autoload
 	if CursorManager:
@@ -871,41 +878,35 @@ func trigger_explosion(missile_or_position):
 		push_error("Could not find main game node with shake_screen method!")
 		#print("Current node: ", self.name, ", Parent: ", get_parent().name if get_parent() else "none")
 
-	# Create explosion animation
-	var explosion = AnimatedSprite2D.new()
-	explosion.sprite_frames = explosion_frames
-	explosion.global_position = explosion_position
-	explosion.scale = Vector2(explosion_size / 16.0, explosion_size / 16.0) * randf_range(0.5, 2)
-	explosion.z_index = ConstantZIndexes.Z_INDEX.EXPLOSIONS  # Above missiles
-	explosion.play("default")
-
-	# Ensure explosion is removed after animation
-	explosion.animation_finished.connect(_on_explosion_animation_finished.bind(explosion))
-
-	# Fallback timer to ensure removal
-	var cleanup_timer = get_tree().create_timer(2.0)
-	cleanup_timer.timeout.connect(_on_explosion_cleanup_timeout.bind(explosion))
-
-	# Create a tween for scaling and fading
-	var exp_tween = create_tween()
-	exp_tween.set_parallel(true)
-
-	# Scale up with bounce effect
-	(
-		exp_tween
-		. tween_property(
-			explosion,
-			"scale",
-			Vector2(explosion_size / 32.0, explosion_size / 32.0) * randf_range(0.8, 1.2),
-			0.7
+	# Create explosion animation using pool (performance optimization)
+	var explosion: AnimatedSprite2D
+	if _explosion_pool:
+		explosion = _explosion_pool.spawn_explosion(
+			explosion_position,
+			explosion_size / 16.0,  # base_scale
+			0.2,  # fade_delay
+			3.0,  # fade_duration
+			true  # auto_return to pool
 		)
-		. set_trans(Tween.TRANS_ELASTIC)
-		. set_ease(Tween.EASE_OUT)
-	)
-	# Fade out explosion
-
-	exp_tween.tween_property(explosion, "modulate:a", 0.5 * randf_range(0.8, 1.2), 3).set_delay(0.2)
-	add_child(explosion)
+	else:
+		# Fallback to manual creation if pool not available
+		explosion = AnimatedSprite2D.new()
+		explosion.sprite_frames = explosion_frames
+		explosion.global_position = explosion_position
+		explosion.scale = Vector2(explosion_size / 16.0, explosion_size / 16.0) * randf_range(0.5, 2)
+		explosion.z_index = ConstantZIndexes.Z_INDEX.EXPLOSIONS
+		explosion.play("default")
+		explosion.animation_finished.connect(_on_explosion_animation_finished.bind(explosion))
+		var cleanup_timer = get_tree().create_timer(2.0)
+		cleanup_timer.timeout.connect(_on_explosion_cleanup_timeout.bind(explosion))
+		var exp_tween = create_tween()
+		exp_tween.set_parallel(true)
+		exp_tween.tween_property(
+			explosion, "scale",
+			Vector2(explosion_size / 32.0, explosion_size / 32.0) * randf_range(0.8, 1.2), 0.7
+		).set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_OUT)
+		exp_tween.tween_property(explosion, "modulate:a", 0.5 * randf_range(0.8, 1.2), 3).set_delay(0.2)
+		add_child(explosion)
 
 	# Brief game pause for impact
 	#var previous_pause_state = get_tree().paused
