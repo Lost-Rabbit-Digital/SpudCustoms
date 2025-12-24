@@ -86,6 +86,9 @@ signal game_over_triggered
 
 var smoke_particle_pool = []
 var max_smoke_particles = 50
+# Performance: Cache viewport rect to avoid recalculating every frame per missile
+var _cached_viewport_rect: Rect2 = Rect2()
+var _viewport_rect_valid: bool = false
 
 var explosion_sound_pool = [
 	preload("res://assets/audio/explosions/big distant thump 4.wav"),
@@ -328,6 +331,9 @@ func _process(delta):
 		print("No queue manager found!")
 		return
 
+	# Performance: Cache viewport rect once per frame for all missiles
+	_cached_viewport_rect = get_viewport_rect().grow(100)
+
 	# Update missile cooldown timer
 	if missile_cooldown_timer > 0:
 		missile_cooldown_timer -= delta
@@ -406,8 +412,8 @@ func update_missiles(delta):
 			continue
 
 		# Add a boundary check - trigger explosion instead of silent removal
-		var viewport_rect = get_viewport_rect().grow(100)  # Add some margin
-		if !viewport_rect.has_point(missile.position):
+		# Performance: Use cached viewport rect instead of recalculating per missile
+		if !_cached_viewport_rect.has_point(missile.position):
 			trigger_explosion(missile)
 			active_missiles.remove_at(i)
 			i -= 1

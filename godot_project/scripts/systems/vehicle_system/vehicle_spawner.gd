@@ -41,6 +41,8 @@ enum Direction { DOWN = 0, UP = 1 }
 var _spawn_timer: Timer
 var _rng: RandomNumberGenerator = RandomNumberGenerator.new()
 var _vehicle_scene: PackedScene
+# Performance: Cache active vehicles to avoid get_children() every frame
+var _active_vehicles: Array[Node2D] = []
 
 
 func _ready() -> void:
@@ -79,6 +81,7 @@ func _spawn_vehicle() -> void:
 	# Instance the vehicle
 	var vehicle = _vehicle_scene.instantiate()
 	add_child(vehicle)
+	_active_vehicles.append(vehicle)
 
 	# Set the default z-index for all vehicles
 	vehicle.z_index = ConstantZIndexes.Z_INDEX.VEHICLES
@@ -107,9 +110,15 @@ func _spawn_vehicle() -> void:
 
 ## Process function to move all vehicles
 func _process(delta: float) -> void:
-	for vehicle in get_children():
-		# Skip any child that isn't a vehicle (like our timer)
-		if not vehicle.has_meta("direction"):
+	# Performance: Iterate backwards through cached array to allow safe removal
+	var i: int = _active_vehicles.size() - 1
+	while i >= 0:
+		var vehicle = _active_vehicles[i]
+
+		# Check if vehicle is still valid
+		if not is_instance_valid(vehicle):
+			_active_vehicles.remove_at(i)
+			i -= 1
 			continue
 
 		var direction = vehicle.get_meta("direction")
@@ -121,21 +130,19 @@ func _process(delta: float) -> void:
 			# Define the desk border position (where vehicles should disappear)
 			var desk_border_y = 580  # Adjust this to match your exact border position
 
-			# Check if vehicle has reached the desk border
-			if vehicle.position.y >= desk_border_y:
-				# Remove the vehicle immediately when it reaches the border
+			# Check if vehicle has reached the desk border or standard despawn
+			if vehicle.position.y >= desk_border_y or vehicle.position.y > bottom_despawn_y:
 				vehicle.queue_free()
-				continue
-
-			# If we didn't remove the vehicle, check standard despawn
-			if vehicle.position.y > bottom_despawn_y:
-				vehicle.queue_free()
+				_active_vehicles.remove_at(i)
 		else:
 			vehicle.position.y -= vehicle_speed * delta
 
 			# Check if the vehicle should be removed
 			if vehicle.position.y < top_despawn_y:
 				vehicle.queue_free()
+				_active_vehicles.remove_at(i)
+
+		i -= 1
 
 
 ## Timer timeout handler - spawns a new vehicle and schedules the next spawn

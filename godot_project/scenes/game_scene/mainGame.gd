@@ -630,12 +630,8 @@ func end_shift(success: bool = true):
 		var score_val = GameStateManager.get_score()
 		GameState.set_high_score(current_shift, diff_level, score_val)
 
-		# Increment total shifts completed for achievements
-		Global.total_shifts_completed += 1
-
-		# Check and update achievements
-		Global.check_achievements()
-		Global.update_steam_stats()
+		# Note: Achievement check already done above (lines 616-617)
+		# Removed duplicate calls that were causing double Steam API calls
 
 	GlobalState.save()
 
