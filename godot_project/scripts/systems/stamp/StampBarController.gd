@@ -111,15 +111,15 @@ func _ready():
 
 	# Ensure toggle button is visible
 	toggle_position_button.visible = true
-	# Create a visual indicator for the stamp point (only visible in debug)
-	# Add to stamp_bar so it moves with the bar
+	# Create a visual indicator for the stamp point (only visible in editor debug)
+	# This is for development purposes only - never shown in exported builds or during gameplay
 	stamp_point_marker = Sprite2D.new()
-	# Create this small texture
 	stamp_point_marker.texture = preload("res://assets/stamps/stamp_point_marker.png")
 	stamp_point_marker.position = stamp_point_offset
 	stamp_point_marker.scale = Vector2(0.5, 0.5)
+	stamp_point_marker.visible = false  # Start hidden, only show via debug command
 
-	# Only show in debug mode
+	# Only add to scene in debug mode, but keep hidden by default
 	if OS.is_debug_build():
 		stamp_bar.add_child(stamp_point_marker)
 
@@ -182,11 +182,10 @@ func _input(event):
 
 
 func update_stamp_position():
-	# This updates the global position of the stamp point based on the stamp bar's position
-	# Use stamp_bar's global position since that's what moves when the bar slides in/out
-	var global_stamp_point = stamp_bar.global_position + stamp_point_offset
-	if stamp_point_marker:
-		stamp_point_marker.global_position = global_stamp_point
+	# The stamp_point_marker is a child of stamp_bar with position = stamp_point_offset,
+	# so it automatically moves with the bar. No need to update its position here.
+	# This function is kept for potential future use or external position queries.
+	pass
 
 
 # UI Management Functions
