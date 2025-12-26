@@ -376,7 +376,7 @@ func _spawn_celebration_particles(position: Vector2, celebration_type: String) -
 		tween.chain().tween_callback(particle.queue_free)
 
 
-func _create_celebration_particle(base_color: Color) -> Node2D:
+func _create_celebration_particle(base_color: Color) -> ColorRect:
 	# Create a simple colored rect as particle
 	var particle = ColorRect.new()
 	particle.size = Vector2(8, 8)
