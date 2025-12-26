@@ -71,14 +71,14 @@ citation_header,OFFICIELL VARNING
 citation_from_supervisor,Från: Övervakare Russet
 citation_dismiss_hint,[Dra till papperskorgen för att stänga]
 minigame_times_up,"Tiden är ute! Inga problem, tillbaka till jobbet!"
-minigame_time_format,{seconds}.{fraction}
+minigame_time_format,{sekunder}.{hundradelar}
 qte_title,SNABBTIDSHÄNDELSE
 qte_instruction,Tryck på tangenterna när de visas!
 qte_auto_completed,Automatiskt slutförd
 qte_accessibility_note,(QTE-tillgänglighet aktiverad)
 qte_get_ready,Gör dig redo...
 qte_progress,Framsteg
-qte_key_prompt,[{key}]
+qte_key_prompt,[{tangent}]
 qte_result,{successful} / {total} lyckade (+{points} poäng)
 qte_image_pending,[Bild väntar]
 evidence_title,SÄKERHETSINSPEKTION FÖRESTÅENDE

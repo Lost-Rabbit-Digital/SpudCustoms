@@ -1,9 +1,9 @@
 ﻿keys,ru
-achievement_unlocked_title,ДОСТИЖЕНИЕ ОТКРЫТО!
+achievement_unlocked_title,ДОСТИЖЕНИЕ РАЗБЛОКИРОВАНО!
 achievements_menu_button,Достижения
-achievements_progress_format,%d / %d Открыто
+achievements_progress_format,%d / %d Разблокировано
 achievement_hidden_name,???
-achievement_hidden_desc,"Это достижение скрыто, пока не будет открыто"
+achievement_hidden_desc,"Это достижение скрыто, пока не будет разблокировано"
 achievement_category_gameplay,Игровой процесс
 achievement_category_resistance,Путь Сопротивления
 achievement_category_loyalist,Путь Лоялиста
@@ -20,34 +20,34 @@ achievement_sharpshooter_desc,Остановите 10 нарушителей г�
 achievement_border_defender_name,Защитник Границы
 achievement_border_defender_desc,Остановите 50 нарушителей границы с помощью ракетной системы
 achievement_perfect_shot_name,Идеальный Выстрел
-achievement_perfect_shot_desc,Нанесите 5 идеальных попаданий по нарушителям границы
+achievement_perfect_shot_desc,Совершите 5 идеальных попаданий по нарушителям границы
 achievement_high_scorer_name,Рекордсмен
 achievement_high_scorer_desc,Наберите 10 000 очков
-achievement_score_legend_name,Легенда по очкам
+achievement_score_legend_name,Легенда Счёта
 achievement_score_legend_desc,Наберите 50 000 очков
-achievement_savior_of_spud_name,Спаситель Спада
+achievement_savior_of_spud_name,Спаситель Клубнеграда
 achievement_savior_of_spud_desc,Завершите историю и спасите нацию
-achievement_born_diplomat_name,Прирождённый Дипломат
-achievement_born_diplomat_desc,Достигните дипломатической концовки путём мирных переговоров
-achievement_tater_of_justice_name,Вершитель Справедливости
+achievement_born_diplomat_name,Прирождённый дипломат
+achievement_born_diplomat_desc,Добейтесь дипломатической концовки путём мирных переговоров
+achievement_tater_of_justice_name,Клубень справедливости
 achievement_tater_of_justice_desc,Воздайте по заслугам коррумпированным чиновникам
-achievement_best_served_hot_name,Подано горячим
+achievement_best_served_hot_name,Месть подаётся горячей
 achievement_best_served_hot_desc,"Отомстите тем, кто причинил вам зло"
-achievement_down_with_tatriarchy_name,Долой Татриархию!
+achievement_down_with_tatriarchy_name,Долой Клубнеархию!
 achievement_down_with_tatriarchy_desc,Возглавьте революцию и свергните режим
-achievement_heart_of_stone_name,Каменное Сердце
-achievement_heart_of_stone_desc,Оставайтесь холодным и послушным бюрократом до конца
+achievement_heart_of_stone_name,Каменное сердце
+achievement_heart_of_stone_desc,Оставайтесь холодным и послушным бюрократом до самого конца
 achievement_survivor_name,Выживший
 achievement_survivor_desc,"Идите на всё, чтобы пережить режим"
-achievement_late_bloomer_name,Поздний Расцвет
+achievement_late_bloomer_name,Поздний расцвет
 achievement_late_bloomer_desc,Найдите искупление в самый последний момент
 achievement_tommys_legacy_name,Наследие Томми
 achievement_tommys_legacy_desc,Раскройте правду о судьбе Томми
 achievement_elenas_memory_name,Память Елены
-achievement_elenas_memory_desc,Почтите жертву Елены и запомните её историю
+achievement_elenas_memory_desc,Почтите жертву Елены и помните её историю
 achievement_the_note_name,Записка
-achievement_the_note_desc,Найдите секретную записку и её скрытое послание
-achievement_root_of_evil_name,Корень Зла
-achievement_root_of_evil_desc,Разоблачите коррупцию в сердце режима
-achievement_chaos_architect_name,Архитектор Хаоса
-achievement_chaos_architect_desc,"Примите хаос и наблюдайте, как мир горит"
+achievement_the_note_desc,Обнаружьте секретную записку и её скрытое послание
+achievement_root_of_evil_name,Корень зла
+achievement_root_of_evil_desc,Разоблачите коррупцию в самом сердце режима
+achievement_chaos_architect_name,Архитектор хаоса
+achievement_chaos_architect_desc,"Прими хаос и наблюдай, как мир пылает"

@@ -1,7 +1,7 @@
 ﻿keys,pl
 achievement_unlocked_title,OSIĄGNIĘCIE ODBLOKOWANE!
 achievements_menu_button,Osiągnięcia
-achievements_progress_format,%d / %d Odblokowano
+achievements_progress_format,%d / %d Odblokowane
 achievement_hidden_name,???
 achievement_hidden_desc,"To osiągnięcie jest ukryte, dopóki nie zostanie odblokowane"
 achievement_category_gameplay,Rozgrywka
@@ -11,9 +11,9 @@ achievement_category_character,Łuki Postaci
 achievement_category_discovery,Odkrycia
 achievement_rookie_officer_name,Młodszy Oficer
 achievement_rookie_officer_desc,Ukończ swoją pierwszą zmianę na granicy
-achievement_veteran_officer_name,Weteran Celny
+achievement_veteran_officer_name,Weteran Graniczny
 achievement_veteran_officer_desc,Ukończ 10 zmian na granicy
-achievement_master_officer_name,Mistrz Służby Celnej
+achievement_master_officer_name,Mistrz Graniczny
 achievement_master_officer_desc,Ukończ 25 zmian na granicy
 achievement_sharpshooter_name,Strzelec Wyborowy
 achievement_sharpshooter_desc,Zatrzymaj 10 uciekinierów granicznych za pomocą systemu rakietowego
@@ -21,26 +21,26 @@ achievement_border_defender_name,Obrońca Granicy
 achievement_border_defender_desc,Zatrzymaj 50 uciekinierów granicznych za pomocą systemu rakietowego
 achievement_perfect_shot_name,Idealny Strzał
 achievement_perfect_shot_desc,Zadaj 5 idealnych trafień uciekinierom granicznym
-achievement_high_scorer_name,Wysoki Wynik
-achievement_high_scorer_desc,Osiągnij wynik 10 000
-achievement_score_legend_name,Legenda Wyników
-achievement_score_legend_desc,Osiągnij wynik 50 000
+achievement_high_scorer_name,Zdobywca Wysokiego Wyniku
+achievement_high_scorer_desc,Osiągnij wynik 10 000 punktów
+achievement_score_legend_name,Legenda Punktacji
+achievement_score_legend_desc,Osiągnij wynik 50 000 punktów
 achievement_savior_of_spud_name,Zbawca Spud
 achievement_savior_of_spud_desc,Ukończ historię i ocal naród
 achievement_born_diplomat_name,Urodzony Dyplomata
 achievement_born_diplomat_desc,Osiągnij dyplomatyczne zakończenie poprzez pokojowe negocjacje
 achievement_tater_of_justice_name,Ziemniak Sprawiedliwości
 achievement_tater_of_justice_desc,Wymierz sprawiedliwość skorumpowanym urzędnikom
-achievement_best_served_hot_name,Najlepiej Podawać na Gorąco
+achievement_best_served_hot_name,Najlepiej podawać na gorąco
 achievement_best_served_hot_desc,"Dokonaj zemsty na tych, którzy cię skrzywdzili"
 achievement_down_with_tatriarchy_name,Precz z Tatriarchią
 achievement_down_with_tatriarchy_desc,Poprowadź rewolucję i obal reżim
 achievement_heart_of_stone_name,Serce z Kamienia
 achievement_heart_of_stone_desc,Pozostań zimnym i posłusznym biurokratą do samego końca
 achievement_survivor_name,Ocalały
-achievement_survivor_desc,"Zrób wszystko, by przetrwać reżim"
-achievement_late_bloomer_name,Późno Zakwitający
-achievement_late_bloomer_desc,Znajdź odkupienie w ostatniej chwili
+achievement_survivor_desc,"Zrób wszystko, co konieczne, aby przetrwać reżim"
+achievement_late_bloomer_name,Późno Zakwitły
+achievement_late_bloomer_desc,Odnajdź odkupienie w ostatniej chwili
 achievement_tommys_legacy_name,Dziedzictwo Tommy'ego
 achievement_tommys_legacy_desc,Odkryj prawdę o losie Tommy'ego
 achievement_elenas_memory_name,Pamięć Eleny
@@ -50,4 +50,4 @@ achievement_the_note_desc,Odkryj sekretną notatkę i jej ukrytą wiadomość
 achievement_root_of_evil_name,Korzeń Zła
 achievement_root_of_evil_desc,Ujawnij korupcję w sercu reżimu
 achievement_chaos_architect_name,Architekt Chaosu
-achievement_chaos_architect_desc,"Przyjmij chaos i patrz, jak świat płonie"
+achievement_chaos_architect_desc,"Obejmij chaos i patrz, jak świat płonie"

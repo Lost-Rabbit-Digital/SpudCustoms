@@ -4,10 +4,10 @@ achievements_menu_button,Obiettivi
 achievements_progress_format,%d / %d Sbloccati
 achievement_hidden_name,???
 achievement_hidden_desc,Questo obiettivo è nascosto finché non viene sbloccato
-achievement_category_gameplay,Dinamiche di Gioco
-achievement_category_resistance,Percorso della Resistenza
-achievement_category_loyalist,Percorso del Lealista
-achievement_category_character,Archi Narrativi dei Personaggi
+achievement_category_gameplay,Gameplay
+achievement_category_resistance,Percorso di Resistenza
+achievement_category_loyalist,Percorso Lealista
+achievement_category_character,Archi dei Personaggi
 achievement_category_discovery,Scoperta
 achievement_rookie_officer_name,Agente Recluta
 achievement_rookie_officer_desc,Completa il tuo primo turno al confine
@@ -22,24 +22,24 @@ achievement_border_defender_desc,Ferma 50 fuggitivi di confine con il sistema mi
 achievement_perfect_shot_name,Colpo Perfetto
 achievement_perfect_shot_desc,Metti a segno 5 colpi perfetti sui fuggitivi di confine
 achievement_high_scorer_name,Punteggio Elevato
-achievement_high_scorer_desc,Raggiungi un punteggio di 10.000
+achievement_high_scorer_desc,Raggiungi un punteggio di 10.000 punti
 achievement_score_legend_name,Leggenda del Punteggio
-achievement_score_legend_desc,Raggiungi un punteggio di 50.000
+achievement_score_legend_desc,Raggiungi un punteggio di 50.000 punti
 achievement_savior_of_spud_name,Salvatore di Spud
 achievement_savior_of_spud_desc,Completa la storia e salva la nazione
 achievement_born_diplomat_name,Diplomatico Nato
 achievement_born_diplomat_desc,Raggiungi il finale diplomatico attraverso negoziati pacifici
-achievement_tater_of_justice_name,Giustiziere della Patata
+achievement_tater_of_justice_name,Patata della Giustizia
 achievement_tater_of_justice_desc,Rendi giustizia ai funzionari corrotti
-achievement_best_served_hot_name,Servita Calda
-achievement_best_served_hot_desc,Compi la tua vendetta su coloro che ti hanno fatto un torto
+achievement_best_served_hot_name,Meglio Servito Caldo
+achievement_best_served_hot_desc,Vendicati su coloro che ti hanno fatto un torto
 achievement_down_with_tatriarchy_name,Abbasso il Tatriarcato
 achievement_down_with_tatriarchy_desc,Guida la rivoluzione e rovescia il regime
 achievement_heart_of_stone_name,Cuore di Pietra
 achievement_heart_of_stone_desc,Rimani un burocrate freddo e obbediente fino alla fine
 achievement_survivor_name,Sopravvissuto
 achievement_survivor_desc,Fai tutto il necessario per sopravvivere al regime
-achievement_late_bloomer_name,Sbocciato Tardi
+achievement_late_bloomer_name,Fioritura Tarda
 achievement_late_bloomer_desc,Trova la redenzione all'ultimo momento
 achievement_tommys_legacy_name,L'Eredità di Tommy
 achievement_tommys_legacy_desc,Scopri la verità sul destino di Tommy

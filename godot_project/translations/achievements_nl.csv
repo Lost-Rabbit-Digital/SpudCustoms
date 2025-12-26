@@ -4,10 +4,10 @@ achievements_menu_button,Prestaties
 achievements_progress_format,%d / %d Ontgrendeld
 achievement_hidden_name,???
 achievement_hidden_desc,Deze prestatie is verborgen totdat deze is ontgrendeld
-achievement_category_gameplay,Spelverloop
-achievement_category_resistance,Pad van Verzet
-achievement_category_loyalist,Pad van de Loyalist
-achievement_category_character,Verhaallijnen Personages
+achievement_category_gameplay,Gameplay
+achievement_category_resistance,Verzetsroute
+achievement_category_loyalist,Loyalistenroute
+achievement_category_character,Karakterbogen
 achievement_category_discovery,Ontdekking
 achievement_rookie_officer_name,Beginnend Officier
 achievement_rookie_officer_desc,Voltooi je eerste dienst aan de grens
@@ -22,32 +22,32 @@ achievement_border_defender_desc,Stop 50 grensvluchters met het raketsysteem
 achievement_perfect_shot_name,Perfect Schot
 achievement_perfect_shot_desc,Raak 5 grensvluchters perfect
 achievement_high_scorer_name,Topscorer
-achievement_high_scorer_desc,Behaal een score van 10.000
+achievement_high_scorer_desc,Behaal een score van 10.000 punten
 achievement_score_legend_name,Scorelegende
-achievement_score_legend_desc,Behaal een score van 50.000
+achievement_score_legend_desc,Behaal een score van 50.000 punten
 achievement_savior_of_spud_name,Redder van Spud
 achievement_savior_of_spud_desc,Voltooi het verhaal en red de natie
-achievement_born_diplomat_name,Geboren Diplomaat
+achievement_born_diplomat_name,Geboren diplomaat
 achievement_born_diplomat_desc,Bereik het diplomatieke einde door middel van vreedzame onderhandelingen
-achievement_tater_of_justice_name,Pieper van Gerechtigheid
+achievement_tater_of_justice_name,Aardappel van Gerechtigheid
 achievement_tater_of_justice_desc,Breng gerechtigheid aan de corrupte ambtenaren
 achievement_best_served_hot_name,Het best heet geserveerd
-achievement_best_served_hot_desc,Wreek je op degenen die je onrecht hebben aangedaan
-achievement_down_with_tatriarchy_name,Weg met de Tatriarchie!
+achievement_best_served_hot_desc,Neem wraak op degenen die je onrecht hebben aangedaan
+achievement_down_with_tatriarchy_name,Neer met de Tatriarchie
 achievement_down_with_tatriarchy_desc,Leid de revolutie en werp het regime omver
-achievement_heart_of_stone_name,Hart van Steen
+achievement_heart_of_stone_name,Hart van steen
 achievement_heart_of_stone_desc,Blijf een koude en gehoorzame bureaucraat tot het einde
 achievement_survivor_name,Overlever
 achievement_survivor_desc,Doe wat nodig is om het regime te overleven
-achievement_late_bloomer_name,Laatbloeier
+achievement_late_bloomer_name,Late bloeier
 achievement_late_bloomer_desc,Vind verlossing op het allerlaatste moment
-achievement_tommys_legacy_name,Tommy's Erfenis
+achievement_tommys_legacy_name,Tommy's nalatenschap
 achievement_tommys_legacy_desc,Ontdek de waarheid over Tommy's lot
-achievement_elenas_memory_name,Elena's Herinnering
+achievement_elenas_memory_name,Elena's herinnering
 achievement_elenas_memory_desc,Eer Elena's offer en herinner haar verhaal
-achievement_the_note_name,Het Briefje
-achievement_the_note_desc,Ontdek het geheime briefje en zijn verborgen boodschap
-achievement_root_of_evil_name,Wortel van het Kwaad
+achievement_the_note_name,De notitie
+achievement_the_note_desc,Ontdek de geheime notitie en zijn verborgen boodschap
+achievement_root_of_evil_name,Wortel van het kwaad
 achievement_root_of_evil_desc,Ontmasker de corruptie in het hart van het regime
-achievement_chaos_architect_name,Architect van de Chaos
-achievement_chaos_architect_desc,Omarm de chaos en zie de wereld branden
+achievement_chaos_architect_name,Architect van de chaos
+achievement_chaos_architect_desc,Omarm chaos en zie de wereld branden

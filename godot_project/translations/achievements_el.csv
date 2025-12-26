@@ -9,37 +9,37 @@ achievement_category_resistance,Μονοπάτι Αντίστασης
 achievement_category_loyalist,Μονοπάτι Πιστού
 achievement_category_character,Ιστορίες Χαρακτήρων
 achievement_category_discovery,Ανακάλυψη
-achievement_rookie_officer_name,Αρχάριος Υπάλληλος
+achievement_rookie_officer_name,Νεοσύλλεκτος Υπάλληλος
 achievement_rookie_officer_desc,Ολοκληρώστε την πρώτη σας βάρδια στα σύνορα
 achievement_veteran_officer_name,Βετεράνος Τελωνείου
 achievement_veteran_officer_desc,Ολοκληρώστε 10 βάρδιες στα σύνορα
 achievement_master_officer_name,Άρχοντας του Τελωνείου
 achievement_master_officer_desc,Ολοκληρώστε 25 βάρδιες στα σύνορα
-achievement_sharpshooter_name,Ελεύθερος Σκοπευτής
-achievement_sharpshooter_desc,Σταματήστε 10 παραβάτες συνόρων με το πυραυλικό σύστημα
+achievement_sharpshooter_name,Ευστοχος Σκοπευτής
+achievement_sharpshooter_desc,Σταματήστε 10 παραβάτες συνόρων με το σύστημα πυραύλων
 achievement_border_defender_name,Υπερασπιστής Συνόρων
-achievement_border_defender_desc,Σταματήστε 50 παραβάτες συνόρων με το πυραυλικό σύστημα
+achievement_border_defender_desc,Σταματήστε 50 παραβάτες συνόρων με το σύστημα πυραύλων
 achievement_perfect_shot_name,Τέλειο Χτύπημα
 achievement_perfect_shot_desc,Πετύχετε 5 τέλεια χτυπήματα σε παραβάτες συνόρων
-achievement_high_scorer_name,Υψηλός Σκορ
-achievement_high_scorer_desc,Επιτύχετε σκορ 10.000
+achievement_high_scorer_name,Υψηλός Σκόρερ
+achievement_high_scorer_desc,Επιτύχετε σκορ 10.000 πόντων
 achievement_score_legend_name,Θρύλος Σκορ
-achievement_score_legend_desc,Επιτύχετε σκορ 50.000
+achievement_score_legend_desc,Επιτύχετε σκορ 50.000 πόντων
 achievement_savior_of_spud_name,Σωτήρας του Σπουντ
 achievement_savior_of_spud_desc,Ολοκληρώστε την ιστορία και σώστε το έθνος
 achievement_born_diplomat_name,Γεννημένος Διπλωμάτης
 achievement_born_diplomat_desc,Επιτύχετε το διπλωματικό τέλος μέσω ειρηνικών διαπραγματεύσεων
 achievement_tater_of_justice_name,Πατάτα της Δικαιοσύνης
 achievement_tater_of_justice_desc,Φέρτε δικαιοσύνη στους διεφθαρμένους αξιωματούχους
-achievement_best_served_hot_name,Καλύτερα Σερβιρισμένο Ζεστό
+achievement_best_served_hot_name,Σερβίρεται Καλύτερα Ζεστό
 achievement_best_served_hot_desc,Πάρτε την εκδίκησή σας από αυτούς που σας αδίκησαν
-achievement_down_with_tatriarchy_name,Κάτω η Παταταρχία
-achievement_down_with_tatriarchy_desc,Ηγηθείτε της επανάστασης και ανατρέψτε το καθεστώς
-achievement_heart_of_stone_name,Καρδιά από Πέτρα
+achievement_down_with_tatriarchy_name,Κάτω η Τατριαρχία
+achievement_down_with_tatriarchy_desc,Οδηγήστε την επανάσταση και ανατρέψτε το καθεστώς
+achievement_heart_of_stone_name,Πέτρινη Καρδιά
 achievement_heart_of_stone_desc,Παραμείνετε ένας ψυχρός και υπάκουος γραφειοκράτης μέχρι το τέλος
 achievement_survivor_name,Επιζών
 achievement_survivor_desc,"Κάντε ό,τι χρειάζεται για να επιβιώσετε από το καθεστώς"
-achievement_late_bloomer_name,Αργοπορημένος Ανθός
+achievement_late_bloomer_name,Αργοπορημένος
 achievement_late_bloomer_desc,Βρείτε τη λύτρωση την τελευταία στιγμή
 achievement_tommys_legacy_name,Η Κληρονομιά του Τόμι
 achievement_tommys_legacy_desc,Αποκαλύψτε την αλήθεια για την τύχη του Τόμι
@@ -47,7 +47,7 @@ achievement_elenas_memory_name,Η Μνήμη της Έλενας
 achievement_elenas_memory_desc,Τιμήστε τη θυσία της Έλενας και θυμηθείτε την ιστορία της
 achievement_the_note_name,Το Σημείωμα
 achievement_the_note_desc,Ανακαλύψτε το μυστικό σημείωμα και το κρυφό του μήνυμα
-achievement_root_of_evil_name,Η Ρίζα του Κακού
+achievement_root_of_evil_name,Ρίζα του Κακού
 achievement_root_of_evil_desc,Αποκαλύψτε τη διαφθορά στην καρδιά του καθεστώτος
 achievement_chaos_architect_name,Αρχιτέκτονας του Χάους
 achievement_chaos_architect_desc,Αγκαλιάστε το χάος και δείτε τον κόσμο να καίγεται

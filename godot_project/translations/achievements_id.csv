@@ -4,7 +4,7 @@ achievements_menu_button,Pencapaian
 achievements_progress_format,%d / %d Terbuka
 achievement_hidden_name,???
 achievement_hidden_desc,Pencapaian ini tersembunyi hingga terbuka
-achievement_category_gameplay,Permainan
+achievement_category_gameplay,Gameplay
 achievement_category_resistance,Jalur Perlawanan
 achievement_category_loyalist,Jalur Loyalis
 achievement_category_character,Alur Karakter
@@ -16,36 +16,36 @@ achievement_veteran_officer_desc,Selesaikan 10 shift di perbatasan
 achievement_master_officer_name,Master Bea Cukai
 achievement_master_officer_desc,Selesaikan 25 shift di perbatasan
 achievement_sharpshooter_name,Penembak Jitu
-achievement_sharpshooter_desc,Hentikan 10 pelintas batas dengan sistem rudal
+achievement_sharpshooter_desc,Hentikan 10 pelari perbatasan dengan sistem rudal
 achievement_border_defender_name,Pembela Perbatasan
-achievement_border_defender_desc,Hentikan 50 pelintas batas dengan sistem rudal
+achievement_border_defender_desc,Hentikan 50 pelari perbatasan dengan sistem rudal
 achievement_perfect_shot_name,Tembakan Sempurna
-achievement_perfect_shot_desc,Lakukan 5 tembakan sempurna pada pelintas batas
+achievement_perfect_shot_desc,Lakukan 5 tembakan sempurna pada pelari perbatasan
 achievement_high_scorer_name,Pencetak Skor Tinggi
-achievement_high_scorer_desc,Raih skor 10.000
+achievement_high_scorer_desc,Raih skor 10.000 poin
 achievement_score_legend_name,Legenda Skor
-achievement_score_legend_desc,Raih skor 50.000
+achievement_score_legend_desc,Raih skor 50.000 poin
 achievement_savior_of_spud_name,Penyelamat Spud
 achievement_savior_of_spud_desc,Selesaikan cerita dan selamatkan bangsa
 achievement_born_diplomat_name,Diplomat Sejati
 achievement_born_diplomat_desc,Raih akhir diplomatik melalui negosiasi damai
-achievement_tater_of_justice_name,Penegak Keadilan
+achievement_tater_of_justice_name,Kentang Keadilan
 achievement_tater_of_justice_desc,Tegakkan keadilan bagi para pejabat korup
-achievement_best_served_hot_name,Terbaik Disajikan Panas
-achievement_best_served_hot_desc,Balaskan dendammu pada mereka yang menyakitimu
+achievement_best_served_hot_name,Dihidangkan Panas
+achievement_best_served_hot_desc,Tuntaskan dendammu pada mereka yang telah menyakitimu
 achievement_down_with_tatriarchy_name,Gulingkan Tatriarki
 achievement_down_with_tatriarchy_desc,Pimpin revolusi dan gulingkan rezim
 achievement_heart_of_stone_name,Hati Batu
 achievement_heart_of_stone_desc,Tetaplah menjadi birokrat yang dingin dan patuh hingga akhir
 achievement_survivor_name,Penyintas
-achievement_survivor_desc,Lakukan apa pun untuk bertahan dari rezim
-achievement_late_bloomer_name,Pencerahan Terlambat
+achievement_survivor_desc,Lakukan apa pun untuk bertahan hidup dari rezim
+achievement_late_bloomer_name,Terlambat Mekar
 achievement_late_bloomer_desc,Temukan penebusan di saat-saat terakhir
 achievement_tommys_legacy_name,Warisan Tommy
 achievement_tommys_legacy_desc,Ungkap kebenaran tentang nasib Tommy
 achievement_elenas_memory_name,Kenangan Elena
-achievement_elenas_memory_desc,Hormati pengorbanan Elena dan kenang kisahnya
-achievement_the_note_name,Catatan Itu
+achievement_elenas_memory_desc,Hormati pengorbanan Elena dan ingat kisahnya
+achievement_the_note_name,Catatan
 achievement_the_note_desc,Temukan catatan rahasia dan pesan tersembunyinya
 achievement_root_of_evil_name,Akar Kejahatan
 achievement_root_of_evil_desc,Ungkap korupsi di jantung rezim

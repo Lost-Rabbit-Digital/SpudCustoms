@@ -71,7 +71,7 @@ citation_header,ОФИЦИАЛЬНОЕ ПРЕДУПРЕЖДЕНИЕ
 citation_from_supervisor,От: Надзиратель Рассет
 citation_dismiss_hint,[Перетащите в корзину, чтобы закрыть]
 minigame_times_up,"Время вышло! Не волнуйтесь, возвращайтесь к работе!"
-minigame_time_format,{seconds}.{fraction}
+minigame_time_format,"{seconds},{fraction}"
 qte_title,СОБЫТИЕ БЫСТРОГО РЕАГИРОВАНИЯ
 qte_instruction,Нажимайте клавиши по мере их появления!
 qte_auto_completed,Автоматически завершено

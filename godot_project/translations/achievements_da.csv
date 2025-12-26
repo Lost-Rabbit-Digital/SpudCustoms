@@ -1,12 +1,12 @@
 ﻿keys,da
-achievement_unlocked_title,BEDRIFT LÅST OP!
-achievements_menu_button,Bedrifter
+achievement_unlocked_title,PRÆSTATION LÅST OP!
+achievements_menu_button,Præstationer
 achievements_progress_format,%d / %d Låst op
 achievement_hidden_name,???
-achievement_hidden_desc,"Denne bedrift er skjult, indtil den låses op"
-achievement_category_gameplay,Spil
-achievement_category_resistance,Modstandssti
-achievement_category_loyalist,Loyaliststi
+achievement_hidden_desc,"Denne præstation er skjult, indtil den låses op"
+achievement_category_gameplay,Gameplay
+achievement_category_resistance,Modstandsvej
+achievement_category_loyalist,Loyalistvej
 achievement_category_character,Karakterforløb
 achievement_category_discovery,Opdagelse
 achievement_rookie_officer_name,Nybetjent
@@ -19,23 +19,23 @@ achievement_sharpshooter_name,Skarpskytte
 achievement_sharpshooter_desc,Stop 10 grænseløbere med missilsystemet
 achievement_border_defender_name,Grænseforsvarer
 achievement_border_defender_desc,Stop 50 grænseløbere med missilsystemet
-achievement_perfect_shot_name,Perfekt Skud
-achievement_perfect_shot_desc,Ram 5 perfekte træffere på grænseløbere
-achievement_high_scorer_name,Højscorer
-achievement_high_scorer_desc,Opnå en score på 10.000
-achievement_score_legend_name,Scorelegende
-achievement_score_legend_desc,Opnå en score på 50.000
+achievement_perfect_shot_name,Perfekt skud
+achievement_perfect_shot_desc,Ram 5 perfekte skud på grænseløbere
+achievement_high_scorer_name,Topscorer
+achievement_high_scorer_desc,Opnå en score på 10.000 point
+achievement_score_legend_name,Scoringslegende
+achievement_score_legend_desc,Opnå en score på 50.000 point
 achievement_savior_of_spud_name,Spuds Frelser
 achievement_savior_of_spud_desc,Gennemfør historien og red nationen
 achievement_born_diplomat_name,Født Diplomat
 achievement_born_diplomat_desc,Opnå den diplomatiske slutning gennem fredelig forhandling
 achievement_tater_of_justice_name,Retfærdighedens Kartoffel
 achievement_tater_of_justice_desc,Bring retfærdighed til de korrupte embedsmænd
-achievement_best_served_hot_name,Bedst serveret varm
-achievement_best_served_hot_desc,"Tag hævn over dem, der gjorde dig uret"
-achievement_down_with_tatriarchy_name,Ned med Tatriarkiet
+achievement_best_served_hot_name,Bedst Serveret Varm
+achievement_best_served_hot_desc,"Udfør din hævn over dem, der gjorde dig uret"
+achievement_down_with_tatriarchy_name,Ned med Kartoffel-arkiet
 achievement_down_with_tatriarchy_desc,Led revolutionen og omstyr styret
-achievement_heart_of_stone_name,Hjerte af sten
+achievement_heart_of_stone_name,Hjerte af Sten
 achievement_heart_of_stone_desc,Forbliv en kold og lydig bureaukrat til det sidste
 achievement_survivor_name,Overlever
 achievement_survivor_desc,Gør hvad der skal til for at overleve styret

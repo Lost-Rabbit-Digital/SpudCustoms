@@ -7,13 +7,13 @@ achievement_hidden_desc,Denne prestasjonen er skjult til den er låst opp
 achievement_category_gameplay,Spill
 achievement_category_resistance,Motstandsveien
 achievement_category_loyalist,Lojalistveien
-achievement_category_character,Karakterbuer
+achievement_category_character,Karakterhistorier
 achievement_category_discovery,Oppdagelse
 achievement_rookie_officer_name,Fersk Offiser
 achievement_rookie_officer_desc,Fullfør din første vakt ved grensen
-achievement_veteran_officer_name,Tollveteran
+achievement_veteran_officer_name,Grenseveteran
 achievement_veteran_officer_desc,Fullfør 10 vakter ved grensen
-achievement_master_officer_name,Tollmester
+achievement_master_officer_name,Grensemester
 achievement_master_officer_desc,Fullfør 25 vakter ved grensen
 achievement_sharpshooter_name,Skarpskytter
 achievement_sharpshooter_desc,Stopp 10 grenseløpere med missilsystemet
@@ -22,32 +22,32 @@ achievement_border_defender_desc,Stopp 50 grenseløpere med missilsystemet
 achievement_perfect_shot_name,Perfekt Skudd
 achievement_perfect_shot_desc,Treff 5 perfekte skudd på grenseløpere
 achievement_high_scorer_name,Høyscorer
-achievement_high_scorer_desc,Oppnå en poengsum på 10 000
+achievement_high_scorer_desc,Oppnå en poengsum på 10 000 poeng
 achievement_score_legend_name,Poenglegende
-achievement_score_legend_desc,Oppnå en poengsum på 50 000
+achievement_score_legend_desc,Oppnå en poengsum på 50 000 poeng
 achievement_savior_of_spud_name,Frelser av Spud
 achievement_savior_of_spud_desc,Fullfør historien og redd nasjonen
-achievement_born_diplomat_name,Født diplomat
+achievement_born_diplomat_name,Født Diplomat
 achievement_born_diplomat_desc,Oppnå den diplomatiske slutten gjennom fredelige forhandlinger
-achievement_tater_of_justice_name,Rettferdighetens potet
-achievement_tater_of_justice_desc,Skaff rettferdighet til de korrupte embetsmennene
-achievement_best_served_hot_name,Best servert varmt
+achievement_tater_of_justice_name,Potet av Rettferdighet
+achievement_tater_of_justice_desc,Bring rettferdighet til de korrupte tjenestemennene
+achievement_best_served_hot_name,Best Servert Varm
 achievement_best_served_hot_desc,Ta hevn på de som gjorde deg urett
-achievement_down_with_tatriarchy_name,Ned med Taterarkiet
+achievement_down_with_tatriarchy_name,Ned med Tatriarkiet
 achievement_down_with_tatriarchy_desc,Led revolusjonen og styrk regimet
-achievement_heart_of_stone_name,Hjerte av stein
+achievement_heart_of_stone_name,Hjerte av Stein
 achievement_heart_of_stone_desc,Forbli en kald og lydig byråkrat til slutten
 achievement_survivor_name,Overlever
 achievement_survivor_desc,Gjør hva som helst for å overleve regimet
-achievement_late_bloomer_name,Sen blomstrer
-achievement_late_bloomer_desc,Finn forløsning i siste øyeblikk
-achievement_tommys_legacy_name,Tommys arv
+achievement_late_bloomer_name,Senblomstrer
+achievement_late_bloomer_desc,Finn forløsning i det aller siste øyeblikk
+achievement_tommys_legacy_name,Tommys Arv
 achievement_tommys_legacy_desc,Avslør sannheten om Tommys skjebne
-achievement_elenas_memory_name,Elenas minne
+achievement_elenas_memory_name,Elenas Minne
 achievement_elenas_memory_desc,Hedre Elenas offer og husk hennes historie
 achievement_the_note_name,Notatet
 achievement_the_note_desc,Oppdag det hemmelige notatet og dets skjulte budskap
-achievement_root_of_evil_name,Ondskapens rot
+achievement_root_of_evil_name,Roten til det Onde
 achievement_root_of_evil_desc,Avslør korrupsjonen i hjertet av regimet
 achievement_chaos_architect_name,Kaosarkitekt
 achievement_chaos_architect_desc,Omfavn kaos og se verden brenne

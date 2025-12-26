@@ -5,26 +5,26 @@ achievements_progress_format,%d / %d Freigeschaltet
 achievement_hidden_name,???
 achievement_hidden_desc,"Diese Errungenschaft ist versteckt, bis sie freigeschaltet wird"
 achievement_category_gameplay,Gameplay
-achievement_category_resistance,Widerstandspfad
-achievement_category_loyalist,Loyalistenpfad
+achievement_category_resistance,Weg des Widerstands
+achievement_category_loyalist,Weg des Loyalisten
 achievement_category_character,Charakterbögen
-achievement_category_discovery,Entdeckungen
-achievement_rookie_officer_name,Anfänger-Beamter
+achievement_category_discovery,Entdeckung
+achievement_rookie_officer_name,Anfänger-Offizier
 achievement_rookie_officer_desc,Schließe deine erste Schicht an der Grenze ab
-achievement_veteran_officer_name,Zollveteran
+achievement_veteran_officer_name,Zoll-Veteran
 achievement_veteran_officer_desc,Schließe 10 Schichten an der Grenze ab
-achievement_master_officer_name,Zollmeister
+achievement_master_officer_name,Meister des Zolls
 achievement_master_officer_desc,Schließe 25 Schichten an der Grenze ab
 achievement_sharpshooter_name,Scharfschütze
 achievement_sharpshooter_desc,Stoppe 10 Grenzläufer mit dem Raketensystem
 achievement_border_defender_name,Grenzverteidiger
 achievement_border_defender_desc,Stoppe 50 Grenzläufer mit dem Raketensystem
 achievement_perfect_shot_name,Perfekter Schuss
-achievement_perfect_shot_desc,Lande 5 perfekte Treffer auf Grenzläufern
-achievement_high_scorer_name,Spitzenreiter
-achievement_high_scorer_desc,Erreiche eine Punktzahl von 10.000
+achievement_perfect_shot_desc,Lande 5 perfekte Treffer bei Grenzläufern
+achievement_high_scorer_name,Highscore-Jäger
+achievement_high_scorer_desc,Erreiche eine Punktzahl von 10.000 Punkten
 achievement_score_legend_name,Punkte-Legende
-achievement_score_legend_desc,Erreiche eine Punktzahl von 50.000
+achievement_score_legend_desc,Erreiche eine Punktzahl von 50.000 Punkten
 achievement_savior_of_spud_name,Retter von Spud
 achievement_savior_of_spud_desc,Schließe die Geschichte ab und rette die Nation
 achievement_born_diplomat_name,Geborener Diplomat
@@ -33,16 +33,16 @@ achievement_tater_of_justice_name,Knolle der Gerechtigkeit
 achievement_tater_of_justice_desc,Bringe den korrupten Beamten Gerechtigkeit
 achievement_best_served_hot_name,Am besten heiß serviert
 achievement_best_served_hot_desc,"Nimm Rache an denen, die dir Unrecht getan haben"
-achievement_down_with_tatriarchy_name,Nieder mit dem Tatriarchat
+achievement_down_with_tatriarchy_name,Nieder mit der Knollenarchie
 achievement_down_with_tatriarchy_desc,Führe die Revolution an und stürze das Regime
 achievement_heart_of_stone_name,Herz aus Stein
-achievement_heart_of_stone_desc,Bleibe ein kalter und gehorsamer Bürokrat bis zum Ende
+achievement_heart_of_stone_desc,Bleibe ein kalter und gehorsamer Bürokrat bis zum Schluss
 achievement_survivor_name,Überlebender
 achievement_survivor_desc,"Tue, was immer nötig ist, um das Regime zu überleben"
 achievement_late_bloomer_name,Spätzünder
 achievement_late_bloomer_desc,Finde Erlösung im allerletzten Moment
 achievement_tommys_legacy_name,Tommys Vermächtnis
-achievement_tommys_legacy_desc,Enthülle die Wahrheit über Tommys Schicksal
+achievement_tommys_legacy_desc,Decke die Wahrheit über Tommys Schicksal auf
 achievement_elenas_memory_name,Elenas Erinnerung
 achievement_elenas_memory_desc,Ehre Elenas Opfer und erinnere dich an ihre Geschichte
 achievement_the_note_name,Die Notiz

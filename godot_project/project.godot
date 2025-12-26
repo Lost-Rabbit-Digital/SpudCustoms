@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Spud Customs"
-config/version="1.2.0"
+config/version="1.2.1"
 config/tags=PackedStringArray("active", "open_sourced", "steam")
 run/main_scene="uid://cyqy6dvynho67"
 config/features=PackedStringArray("4.5", "Forward Plus")
 run/max_fps=90
 boot_splash/show_image=false
-config/icon="res://assets/potatoes/heads/russet_burbank_head.png"
+config/icon="uid://cmpl66rkjtfqc"
 
 [audio]
 
