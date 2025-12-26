@@ -1014,8 +1014,17 @@ func skip_current_tutorial():
 
 
 ## Skip all tutorials for this session
+## Marks all queued tutorials as completed so they won't replay on subsequent shifts
 func skip_all_tutorials():
+	# Mark all queued tutorials as completed before clearing
+	for queued in tutorial_queue:
+		var tutorial_id = queued.get("id", "")
+		if tutorial_id != "":
+			tutorials_completed[tutorial_id] = true
 	tutorial_queue.clear()
+
+	# Also mark the current tutorial as completed (skip_current_tutorial does this too,
+	# but we call it for proper cleanup of UI elements)
 	skip_current_tutorial()
 
 
