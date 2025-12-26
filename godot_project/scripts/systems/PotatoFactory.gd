@@ -2,6 +2,16 @@ class_name PotatoFactory
 extends Node
 
 static var potato_scene = load("res://scripts/systems/PotatoPerson.tscn")
+# Performance: Preload CharacterGenerator to avoid blocking load() during gameplay
+static var character_generator_scene = preload("res://scripts/systems/character_generator.tscn")
+# Performance: Preload explosion spritesheet
+static var _explosion_spritesheet = preload("res://assets/effects/explosion_spritesheet.png")
+# Performance: Preload gib textures once
+static var _gib_textures: Array = []
+static var _gib_textures_loaded: bool = false
+# Performance: Cache explosion frames
+static var _explosion_frames: Array[Texture2D] = []
+static var _explosion_frames_loaded: bool = false
 
 
 # Static function to create a new potato with random attributes
@@ -32,8 +42,8 @@ static func create_potato_with_info(info: Dictionary) -> PotatoPerson:
 
 # Generate random potato info
 static func generate_random_potato_info() -> Dictionary:
-	# Generate character appearance
-	var character_gen = load("res://scripts/systems/character_generator.tscn").instantiate()
+	# Generate character appearance (uses preloaded scene for performance)
+	var character_gen = character_generator_scene.instantiate()
 
 	# Gender first since it affects character generation
 	var sex = get_random_sex()
@@ -241,22 +251,32 @@ static func create_gibs(
 	return gibs
 
 
-# Helper to load gib textures
+# Helper to load gib textures (cached for performance)
 static func load_gib_textures() -> Array:
-	var textures = []
+	# Return cached textures if already loaded
+	if _gib_textures_loaded:
+		return _gib_textures
+
+	# Load textures once and cache them
 	for i in range(1, 9):
 		var texture_path = "res://assets/potato_giblets/giblet_" + str(i) + ".png"
 		var texture = load(texture_path)
 		if texture:
-			textures.append(texture)
+			_gib_textures.append(texture)
 		else:
 			print("Failed to load gib texture: ", texture_path)
-	return textures
+
+	_gib_textures_loaded = true
+	return _gib_textures
 
 
 static func load_explosion_frames() -> Array[Texture2D]:
-	var frames: Array[Texture2D] = []
-	var spritesheet = load("res://assets/effects/explosion_spritesheet.png")
+	# Return cached frames if already loaded
+	if _explosion_frames_loaded:
+		return _explosion_frames
+
+	# Use preloaded spritesheet
+	var spritesheet = _explosion_spritesheet
 
 	if spritesheet:
 		# Assuming 13 frames arranged horizontally
@@ -267,9 +287,10 @@ static func load_explosion_frames() -> Array[Texture2D]:
 			var atlas = AtlasTexture.new()
 			atlas.atlas = spritesheet
 			atlas.region = Rect2(i * frame_width, 0, frame_width, frame_height)
-			frames.append(atlas)
+			_explosion_frames.append(atlas)
 
-	return frames
+	_explosion_frames_loaded = true
+	return _explosion_frames
 
 
 # Function to create pixel art explosion at a position
