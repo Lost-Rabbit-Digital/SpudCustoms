@@ -357,18 +357,21 @@ func _spawn_celebration_particles(position: Vector2, celebration_type: String) -
 
 	# Spawn particles in a burst pattern
 	for i in range(CELEBRATION_PARTICLE_COUNT):
-		var particle = _create_celebration_particle(base_color)
+		var particle: ColorRect = _create_celebration_particle(base_color)
+		if particle == null:
+			continue
 		_particle_container.add_child(particle)
 
 		# Calculate burst direction
-		var angle = (TAU / CELEBRATION_PARTICLE_COUNT) * i + randf_range(-0.2, 0.2)
-		var velocity = Vector2.from_angle(angle) * randf_range(150, 300)
+		var angle: float = (TAU / CELEBRATION_PARTICLE_COUNT) * i + randf_range(-0.2, 0.2)
+		var velocity: Vector2 = Vector2.from_angle(angle) * randf_range(150, 300)
+		var target_position: Vector2 = particle.position + velocity
 
 		# Animate particle
-		var tween = create_tween()
+		var tween: Tween = create_tween()
 		tween.set_parallel(true)
 		tween.set_ignore_time_scale(true)
-		tween.tween_property(particle, "position", particle.position + velocity, 0.4).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		tween.tween_property(particle, "position", target_position, 0.4).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 		tween.tween_property(particle, "modulate:a", 0.0, 0.4)
 		tween.tween_property(particle, "scale", Vector2(0.3, 0.3), 0.4)
 
@@ -378,7 +381,7 @@ func _spawn_celebration_particles(position: Vector2, celebration_type: String) -
 
 func _create_celebration_particle(base_color: Color) -> ColorRect:
 	# Create a simple colored rect as particle
-	var particle = ColorRect.new()
+	var particle: ColorRect = ColorRect.new()
 	particle.size = Vector2(8, 8)
 	particle.position = -particle.size / 2  # Center the particle
 	particle.color = base_color.lightened(randf_range(-0.1, 0.2))
