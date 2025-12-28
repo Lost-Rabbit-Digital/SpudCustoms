@@ -209,6 +209,9 @@ func _finish() -> void:
 	_is_active = false
 	visible = false
 
+	# Stop any timer animations
+	_stop_timer_pulse()
+
 	# Restore pause state
 	get_tree().paused = _was_tree_paused
 
@@ -230,11 +233,63 @@ func _update_timer_display() -> void:
 	var fraction = int((_time_remaining - seconds) * 10)
 	timer_label.text = "%d.%d" % [seconds, fraction]
 
-	# Color warning when low on time
-	if _time_remaining <= 3.0:
-		timer_label.add_theme_color_override("font_color", Color.ORANGE)
-	elif _time_remaining <= 1.0:
+	# Color and animation warning when low on time (accessibility: use color + animation)
+	if _time_remaining <= 1.0:
+		# Critical time - red + fast pulse
 		timer_label.add_theme_color_override("font_color", Color.RED)
+		_start_timer_pulse(0.15)  # Fast pulse
+	elif _time_remaining <= 3.0:
+		# Warning time - orange + slow pulse
+		timer_label.add_theme_color_override("font_color", Color.ORANGE)
+		_start_timer_pulse(0.3)  # Slower pulse
+	else:
+		# Normal time - stop any pulsing
+		_stop_timer_pulse()
+		timer_label.remove_theme_color_override("font_color")
+
+
+## Start a pulsing animation on the timer label for accessibility (non-color indicator)
+func _start_timer_pulse(pulse_speed: float = 0.3) -> void:
+	if not timer_label:
+		return
+
+	# Only create new tween if not already pulsing at this speed
+	if timer_label.has_meta("pulse_speed") and timer_label.get_meta("pulse_speed") == pulse_speed:
+		return
+
+	# Stop existing pulse
+	_stop_timer_pulse()
+
+	timer_label.set_meta("pulse_speed", pulse_speed)
+	timer_label.set_meta("pulsing", true)
+
+	var tween = create_tween()
+	tween.set_loops()  # Infinite loop
+	tween.tween_property(timer_label, "scale", Vector2(1.2, 1.2), pulse_speed).set_ease(Tween.EASE_OUT)
+	tween.tween_property(timer_label, "scale", Vector2(1.0, 1.0), pulse_speed).set_ease(Tween.EASE_IN)
+
+	timer_label.set_meta("pulse_tween", tween)
+
+
+## Stop the timer pulse animation
+func _stop_timer_pulse() -> void:
+	if not timer_label:
+		return
+
+	if timer_label.has_meta("pulse_tween"):
+		var tween = timer_label.get_meta("pulse_tween")
+		if tween and tween.is_valid():
+			tween.kill()
+		timer_label.remove_meta("pulse_tween")
+
+	if timer_label.has_meta("pulse_speed"):
+		timer_label.remove_meta("pulse_speed")
+
+	if timer_label.has_meta("pulsing"):
+		timer_label.remove_meta("pulsing")
+
+	# Reset scale
+	timer_label.scale = Vector2.ONE
 
 
 # === Virtual methods for subclasses ===
