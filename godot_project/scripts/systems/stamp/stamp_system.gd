@@ -35,6 +35,8 @@ var stamp_ink_sounds = [
 	preload("res://assets/audio/gameplay/stamp_ink_splatter.mp3"),
 	preload("res://assets/audio/gameplay/stamp_ink_spray.mp3")
 ]
+# Performance: Cache loaded stamp sounds to avoid disk I/O on every stamp
+var _cached_stamp_sounds: Array[AudioStream] = []
 
 # Shake effect
 var shake_callback: Callable
@@ -47,6 +49,9 @@ func _init(audio: AudioStreamPlayer2D, shake_func: Callable):
 
 	# Load stamp sounds - only stamp_sound_1.mp3 exists
 	stamp_sounds.append("res://assets/audio/mechanical/stamp_sound_1.mp3")
+
+	# Performance: Pre-load and cache stamp sounds to avoid disk I/O during gameplay
+	_cache_stamp_sounds()
 
 
 func _process(delta):
@@ -326,20 +331,27 @@ func _play_ink_sound():
 		ink_player.finished.connect(ink_player.queue_free)
 
 
-# Play a random stamp sound
-func play_random_stamp_sound():
-	if audio_player and stamp_sounds.size() > 0:
-		# Actually load the audio files
-		var sound_files = []
+# Performance: Pre-load stamp sounds into cache
+func _cache_stamp_sounds() -> void:
+	if _cached_stamp_sounds.is_empty():
 		for sound_path in stamp_sounds:
 			var sound = load(sound_path)
 			if sound:
-				sound_files.append(sound)
+				_cached_stamp_sounds.append(sound)
 			else:
 				push_warning("Could not load stamp sound: " + sound_path)
 
-		if sound_files.size() > 0:
-			audio_player.stream = sound_files[randi() % sound_files.size()]
+
+# Play a random stamp sound (uses cached sounds to avoid disk I/O)
+func play_random_stamp_sound():
+	if audio_player and _cached_stamp_sounds.size() > 0:
+		audio_player.stream = _cached_stamp_sounds.pick_random()
+		audio_player.play()
+	elif audio_player and stamp_sounds.size() > 0:
+		# Fallback: cache wasn't initialized, do it now
+		_cache_stamp_sounds()
+		if _cached_stamp_sounds.size() > 0:
+			audio_player.stream = _cached_stamp_sounds.pick_random()
 			audio_player.play()
 		else:
 			push_warning("No stamp sounds could be loaded")

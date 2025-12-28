@@ -12,6 +12,9 @@ static var _gib_textures_loaded: bool = false
 # Performance: Cache explosion frames
 static var _explosion_frames: Array[Texture2D] = []
 static var _explosion_frames_loaded: bool = false
+# Performance: Cache missile frames to avoid disk I/O on every missile creation
+static var _missile_frames: Array[Texture2D] = []
+static var _missile_frames_loaded: bool = false
 # Performance: Object pool for character generator to avoid GC pressure from repeated instantiation
 static var _cached_character_generator: Node = null
 
@@ -331,39 +334,45 @@ static func create_pixel_explosion(position: Vector2, parent: Node, scale_multip
 		return null
 
 
-# Function to create missile sprites
+# Performance: Load and cache missile frames once
+static func _load_missile_frames() -> void:
+	if not _missile_frames_loaded:
+		for i in range(1, 3):  # 2 frames
+			var texture_path = "res://assets/missiles/rocket_frame_%d.png" % i
+			var texture = load(texture_path)
+			if texture:
+				_missile_frames.append(texture)
+			else:
+				print("Failed to load missile frame: ", texture_path)
+		_missile_frames_loaded = true
+
+
+# Function to create missile sprites (uses cached textures to avoid disk I/O)
 static func create_missile_sprite() -> AnimatedSprite2D:
+	# Ensure missile frames are cached
+	_load_missile_frames()
+
+	if _missile_frames.is_empty():
+		print("Failed to load missile frames")
+		return null
+
 	# Create sprite frames resource
 	var sprite_frames = SpriteFrames.new()
 
-	# Load missile textures
-	var missile_frames = []
-	for i in range(1, 3):  # 2 frames
-		var texture_path = "res://assets/missiles/rocket_frame_%d.png" % i
-		var texture = load(texture_path)
-		if texture:
-			missile_frames.append(texture)
-		else:
-			print("Failed to load missile frame: ", texture_path)
+	# Add animation using cached frames
+	sprite_frames.add_animation("default")
+	for frame in _missile_frames:
+		sprite_frames.add_frame("default", frame)
 
-	# Add animation
-	if missile_frames.size() > 0:
-		sprite_frames.add_animation("default")
-		for frame in missile_frames:
-			sprite_frames.add_frame("default", frame)
+	# Set FPS
+	sprite_frames.set_animation_speed("default", 10)  # 10 FPS
 
-		# Set FPS
-		sprite_frames.set_animation_speed("default", 10)  # 10 FPS
+	# Create animated sprite
+	var missile_sprite = AnimatedSprite2D.new()
+	missile_sprite.sprite_frames = sprite_frames
+	missile_sprite.play("default")
 
-		# Create animated sprite
-		var missile_sprite = AnimatedSprite2D.new()
-		missile_sprite.sprite_frames = sprite_frames
-		missile_sprite.play("default")
-
-		return missile_sprite
-	else:
-		print("Failed to load missile frames")
-		return null
+	return missile_sprite
 
 
 # AnimatedExplosion class for handling explosion animations
