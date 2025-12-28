@@ -57,6 +57,7 @@ global_leaderboard_title,Глобальна таблиця лідерів\n- {di
 getting_leaderboard_scores,Завантаження результатів таблиці лідерів...
 reset_game_label,Скинути гру :
 reset_game_button,Скинути
+reset_game_success,Скидання завершено!
 mute_label,Вимкнути звук
 fullscreen_label,Повноекранний режим :
 resolution_label,Роздільна здатність :

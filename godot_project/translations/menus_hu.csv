@@ -60,6 +60,7 @@ getting_leaderboard_scores,Ranglisták betöltése...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Játék újraindítása:
 reset_game_button,Újraindítás
+reset_game_success,Visszaállítás kész!
 mute_label,Némítás
 fullscreen_label,Teljes képernyő:
 resolution_label,Felbontás:

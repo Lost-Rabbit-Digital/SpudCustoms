@@ -57,6 +57,7 @@ global_leaderboard_title,Παγκόσμιος Πίνακας Κατάταξης\
 getting_leaderboard_scores,Ανάκτηση βαθμολογιών...
 reset_game_label,Επαναφορά Παιχνιδιού :
 reset_game_button,Επαναφορά
+reset_game_success,Επαναφορά ολοκληρώθηκε!
 mute_label,Σίγαση
 fullscreen_label,Πλήρης Οθόνη :
 resolution_label,Ανάλυση :

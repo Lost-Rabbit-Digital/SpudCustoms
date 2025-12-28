@@ -57,6 +57,7 @@ global_leaderboard_title,全球排行榜\n- {difficulty}
 getting_leaderboard_scores,正在获取排行榜分数...
 reset_game_label,重置游戏 :
 reset_game_button,重置
+reset_game_success,重置完成！
 mute_label,静音
 fullscreen_label,全屏 :
 resolution_label,分辨率 :

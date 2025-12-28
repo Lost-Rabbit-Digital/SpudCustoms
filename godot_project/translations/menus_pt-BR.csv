@@ -57,6 +57,7 @@ global_leaderboard_title,Placar Global\n- {difficulty}
 getting_leaderboard_scores,Carregando placares...
 reset_game_label,Reiniciar Jogo :
 reset_game_button,Reiniciar
+reset_game_success,Reinício concluído!
 mute_label,Silenciar
 fullscreen_label,Tela Cheia :
 resolution_label,Resolução :

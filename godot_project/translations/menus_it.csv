@@ -60,6 +60,7 @@ getting_leaderboard_scores,Recupero punteggi classifica...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Ripristina gioco:
 reset_game_button,Ripristina
+reset_game_success,Ripristino completato!
 mute_label,Muto
 fullscreen_label,Schermo intero:
 resolution_label,Risoluzione:

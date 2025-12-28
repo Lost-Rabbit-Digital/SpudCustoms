@@ -60,6 +60,7 @@ getting_leaderboard_scores,Obteniendo puntuaciones de la clasificación...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Reiniciar juego:
 reset_game_button,Reiniciar
+reset_game_success,¡Reinicio completado!
 mute_label,Silenciar
 fullscreen_label,Pantalla completa:
 resolution_label,Resolución:

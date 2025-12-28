@@ -60,6 +60,7 @@ getting_leaderboard_scores,Lider tablosu puanları alınıyor...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Oyunu sıfırla:
 reset_game_button,Sıfırla
+reset_game_success,Sıfırlama tamamlandı!
 mute_label,Sessize al
 fullscreen_label,Tam ekran:
 resolution_label,Çözünürlük:

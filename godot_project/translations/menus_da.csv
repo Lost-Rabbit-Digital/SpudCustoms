@@ -60,6 +60,7 @@ getting_leaderboard_scores,Henter rangliste scores...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Nulstil spil:
 reset_game_button,Nulstil
+reset_game_success,Nulstilling fuldført!
 mute_label,Lydløs
 fullscreen_label,Fuld skærm:
 resolution_label,Opløsning:

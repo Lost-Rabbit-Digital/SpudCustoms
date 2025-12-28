@@ -60,6 +60,7 @@ getting_leaderboard_scores,Getting leaderboard scores...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Reset Game :
 reset_game_button,Reset
+reset_game_success,Reset Complete!
 mute_label,Mute
 fullscreen_label,Fullscreen :
 resolution_label,Resolution :

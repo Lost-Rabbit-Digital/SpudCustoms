@@ -57,6 +57,7 @@ global_leaderboard_title,Глобална класация\n- {difficulty}
 getting_leaderboard_scores,Зареждане на резултати от класацията...
 reset_game_label,Рестартиране на играта :
 reset_game_button,Рестартиране
+reset_game_success,Нулирането завършено!
 mute_label,Без звук
 fullscreen_label,Цял екран :
 resolution_label,Резолюция :

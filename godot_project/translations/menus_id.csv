@@ -60,6 +60,7 @@ getting_leaderboard_scores,Mendapatkan skor papan peringkat...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Setel ulang permainan:
 reset_game_button,Setel ulang
+reset_game_success,Setel ulang selesai!
 mute_label,Bisukan
 fullscreen_label,Layar penuh:
 resolution_label,Resolusi:

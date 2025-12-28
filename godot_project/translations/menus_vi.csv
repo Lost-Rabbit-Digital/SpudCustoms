@@ -60,6 +60,7 @@ getting_leaderboard_scores,Đang lấy điểm bảng xếp hạng...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Đặt lại trò chơi:
 reset_game_button,Đặt lại
+reset_game_success,Đặt lại hoàn tất!
 mute_label,Tắt tiếng
 fullscreen_label,Toàn màn hình
 resolution_label,Độ phân giải:

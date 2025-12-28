@@ -60,6 +60,7 @@ getting_leaderboard_scores,Henter poengtavle-resultater...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Tilbakestill spill:
 reset_game_button,Tilbakestill
+reset_game_success,Tilbakestilling fullført!
 mute_label,Demp
 fullscreen_label,Fullskjerm:
 resolution_label,Oppløsning:

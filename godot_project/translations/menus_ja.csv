@@ -57,6 +57,7 @@ global_leaderboard_title,グローバルリーダーボード\n- {difficulty}
 getting_leaderboard_scores,リーダーボードスコアを取得中...
 reset_game_label,ゲームをリセット :
 reset_game_button,リセット
+reset_game_success,リセット完了！
 mute_label,ミュート
 fullscreen_label,フルスクリーン :
 resolution_label,解像度 :
