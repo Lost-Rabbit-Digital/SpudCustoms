@@ -12,6 +12,24 @@ static var _gib_textures_loaded: bool = false
 # Performance: Cache explosion frames
 static var _explosion_frames: Array[Texture2D] = []
 static var _explosion_frames_loaded: bool = false
+# Performance: Object pool for character generator to avoid GC pressure from repeated instantiation
+static var _cached_character_generator: Node = null
+
+
+## Returns a cached character generator instance for object pooling.
+## The generator is lazily instantiated and added to the scene tree on first use.
+## This avoids repeated allocations and GC pressure from instantiating/freeing
+## a CharacterGenerator for each potato created.
+static func _get_cached_character_generator() -> Node:
+	if not is_instance_valid(_cached_character_generator):
+		_cached_character_generator = character_generator_scene.instantiate()
+		# Add to scene tree so it can access its child nodes
+		var main_loop = Engine.get_main_loop()
+		if main_loop and main_loop.root:
+			main_loop.root.add_child(_cached_character_generator)
+			# Hide the pooled generator - it's only used for data generation
+			_cached_character_generator.visible = false
+	return _cached_character_generator
 
 
 # Static function to create a new potato with random attributes
@@ -42,8 +60,8 @@ static func create_potato_with_info(info: Dictionary) -> PotatoPerson:
 
 # Generate random potato info
 static func generate_random_potato_info() -> Dictionary:
-	# Generate character appearance (uses preloaded scene for performance)
-	var character_gen = character_generator_scene.instantiate()
+	# Generate character appearance using pooled generator (avoids GC pressure)
+	var character_gen = _get_cached_character_generator()
 
 	# Gender first since it affects character generation
 	var sex = get_random_sex()
@@ -57,7 +75,7 @@ static func generate_random_potato_info() -> Dictionary:
 	# Now randomize
 	character_gen.randomise_character()
 	var character_data = character_gen.get_character_data()
-	character_gen.queue_free()
+	# Note: Don't queue_free() - the generator is pooled and reused
 
 	# Randomize expiration date
 	var expiration_date: String
