@@ -9,6 +9,7 @@ alert_perfect_stamp,STEMPEL SEMPURNA! +{points} poin!
 alert_combo,KOMBO x{mult}! +{streak} poin bonus kombo
 alert_quota_met,"Kuota terpenuhi, shift selesai! \nBonus: {bonus} poin!"
 alert_strike_removed,Strike dihapus!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"Anda membuat pilihan yang benar, petugas.\n+{points} poin!"
 alert_wrong_decision,"Anda telah menyebabkan penderitaan yang tidak perlu, petugas...\n+1 Strike!"
 alert_potato_should_be_approved,\nKentang ini memenuhi semua persyaratan dan seharusnya disetujui.

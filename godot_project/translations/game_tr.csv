@@ -9,6 +9,7 @@ alert_perfect_stamp,MÜKEMMEL DAMGA! +{points} puan!
 alert_combo,KOMBO x{mult}! +{streak} kombo bonus puanı
 alert_quota_met,"Kota tamamlandı, vardiya bitti! \nBonus: {bonus} puan!"
 alert_strike_removed,Strike kaldırıldı!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"Doğru kararı verdiniz, memur.\n+{points} puan!"
 alert_wrong_decision,"Gereksiz acı verdiniz, memur...\n+1 Strike!"
 alert_potato_should_be_approved,\nBu patates tüm gereklilikleri karşılıyor ve onaylanmalıydı.

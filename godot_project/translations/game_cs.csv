@@ -9,6 +9,7 @@ alert_perfect_stamp,PERFEKTNÍ RAZÍTKO! +{points} bodů!
 alert_combo,KOMBO x{mult}! +{streak} bonusových bodů za sérii
 alert_quota_met,"Kvóta splněna, směna dokončena! \nBonus: {bonus} bodů!"
 alert_strike_removed,Trestný bod odstraněn!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"Učinil jste správné rozhodnutí, důstojníku.\n+{points} bodů!"
 alert_wrong_decision,"Způsobil jste zbytečné utrpení, důstojníku...\n+1 trestný bod!"
 alert_potato_should_be_approved,\nTento brambor splňuje všechny požadavky a měl být schválen.

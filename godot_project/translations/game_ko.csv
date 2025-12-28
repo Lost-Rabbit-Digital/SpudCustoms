@@ -9,6 +9,7 @@ alert_perfect_stamp,완벽한 스탬프! +{points}점!
 alert_combo,콤보 x{mult}! +{streak} 콤보 보너스 점수
 alert_quota_met,"할당량 달성, 근무 완료! \n보너스: {bonus}점!"
 alert_strike_removed,스트라이크 제거!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"올바른 선택을 하셨습니다, 요원님.\n+{points}점!"
 alert_wrong_decision,"불필요한 고통을 야기했습니다, 요원님...\n+1 스트라이크!"
 alert_potato_should_be_approved,\n이 감자는 모든 요건을 충족하며 승인되었어야 했습니다.

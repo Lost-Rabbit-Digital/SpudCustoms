@@ -9,6 +9,7 @@ alert_perfect_stamp,PERFEKTNÁ PEČIATKA! +{points} bodov!
 alert_combo,KOMBINÁCIA x{mult}! +{streak} bodov bonusu kombinácie
 alert_quota_met,"Kvóta splnená, zmena dokončená! \nBonus: {bonus} bodov!"
 alert_strike_removed,Strike odstránený!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"Vybrali ste správne, dôstojník.\n+{points} bodov!"
 alert_wrong_decision,"Spôsobili ste zbytočné utrpenie, dôstojník...\n+1 Strike!"
 alert_potato_should_be_approved,\nTento zemiak spĺňa všetky požiadavky a mal by byť schválený.

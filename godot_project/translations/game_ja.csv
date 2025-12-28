@@ -9,6 +9,7 @@ alert_perfect_stamp,パーフェクトスタンプ！ +{points} ポイント！
 alert_combo,コンボ x{mult}！ +{streak} コンボボーナスポイント
 alert_quota_met,ノルマ達成、シフト完了！\nボーナス: {bonus} ポイント！
 alert_strike_removed,ストライク解除！
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,適切な判断です、警官殿。\n+{points} ポイント！
 alert_wrong_decision,不必要な苦痛を与えましたね、警官殿...\n+1 ストライク！
 alert_potato_should_be_approved,\nこのポテトは全ての要件を満たしており、承認されるべきでした。

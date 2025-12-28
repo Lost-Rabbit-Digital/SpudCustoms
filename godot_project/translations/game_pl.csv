@@ -9,6 +9,7 @@ alert_perfect_stamp,IDEALNY STEMPEL! +{points} punktów!
 alert_combo,COMBO x{mult}! +{streak} punktów bonusu combo
 alert_quota_met,"Limit osiągnięty, zmiana zakończona! \nBonus: {bonus} punktów!"
 alert_strike_removed,Strike usunięty!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"Podjąłeś słuszną decyzję, funkcjonariuszu.\n+{points} punktów!"
 alert_wrong_decision,"Spowodowałeś niepotrzebne cierpienie, funkcjonariuszu...\n+1 Strike!"
 alert_potato_should_be_approved,\nTen ziemniak spełnia wszystkie wymagania i powinien zostać zatwierdzony.

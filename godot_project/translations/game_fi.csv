@@ -9,6 +9,7 @@ alert_perfect_stamp,TÄYDELLINEN LEIMA! +{points} pistettä!
 alert_combo,YHDISTELMÄ x{mult}! +{streak} yhdistelmäbonus pistettä
 alert_quota_met,"Kiintiö täytetty, vuoro suoritettu! \nBonus: {bonus} pistettä!"
 alert_strike_removed,Isku poistettu!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"Teit oikean valinnan, poliisi.\n+{points} pistettä!"
 alert_wrong_decision,"Olet aiheuttanut tarpeetonta kärsimystä, poliisi...\n+1 Isku!"
 alert_potato_should_be_approved,\nTämä peruna täyttää kaikki vaatimukset ja olisi pitänyt hyväksyä.

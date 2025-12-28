@@ -9,6 +9,7 @@ alert_perfect_stamp,完美蓋章！ +{points} 分！
 alert_combo,連擊 x{mult}！ +{streak} 連擊獎勵分數
 alert_quota_met,配額達成，班次完成！ \n獎勵：{bonus} 分！
 alert_strike_removed,失誤已移除！
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,警官，您做出了正確的選擇。\n+{points} 分！
 alert_wrong_decision,警官，您造成了不必要的痛苦……\n+1 次失誤！
 alert_potato_should_be_approved,\n這顆馬鈴薯符合所有要求，本應被批准。

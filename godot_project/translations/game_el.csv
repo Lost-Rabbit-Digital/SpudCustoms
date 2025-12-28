@@ -9,6 +9,7 @@ alert_perfect_stamp,ΤΕΛΕΙΑ ΣΦΡΑΓΙΔΑ! +{points} πόντοι!
 alert_combo,ΚΟΜΠΟ x{mult}! +{streak} πόντοι μπόνους κόμπο
 alert_quota_met,"Το όριο επετεύχθη, η βάρδια ολοκληρώθηκε! \nΜπόνους: {bonus} πόντοι!"
 alert_strike_removed,Η ποινή αφαιρέθηκε!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"Κάνατε τη σωστή επιλογή, αξιωματικέ.\n+{points} πόντοι!"
 alert_wrong_decision,"Προκαλέσατε άσκοπη ταλαιπωρία, αξιωματικέ...\n+1 Ποινή!"
 alert_potato_should_be_approved,\nΑυτή η πατάτα πληροί όλες τις απαιτήσεις και θα έπρεπε να είχε εγκριθεί.
