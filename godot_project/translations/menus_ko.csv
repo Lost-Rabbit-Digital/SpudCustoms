@@ -57,6 +57,7 @@ global_leaderboard_title,글로벌 리더보드\n- {difficulty}
 getting_leaderboard_scores,리더보드 점수 불러오는 중...
 reset_game_label,게임 초기화 :
 reset_game_button,초기화
+reset_game_success,초기화 완료!
 mute_label,음소거
 fullscreen_label,전체 화면 :
 resolution_label,해상도 :

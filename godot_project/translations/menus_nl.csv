@@ -60,6 +60,7 @@ getting_leaderboard_scores,Leaderboard scores ophalen...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Spel resetten:
 reset_game_button,Resetten
+reset_game_success,Reset voltooid!
 mute_label,Dempen
 fullscreen_label,Volledig scherm:
 resolution_label,Resolutie:

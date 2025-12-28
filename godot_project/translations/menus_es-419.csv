@@ -57,6 +57,7 @@ global_leaderboard_title,Clasificación Global\n- {difficulty}
 getting_leaderboard_scores,Cargando puntuaciones de la clasificación...
 reset_game_label,Reiniciar Juego :
 reset_game_button,Reiniciar
+reset_game_success,¡Reinicio completado!
 mute_label,Silenciar
 fullscreen_label,Pantalla Completa :
 resolution_label,Resolución :

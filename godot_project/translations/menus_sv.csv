@@ -60,6 +60,7 @@ getting_leaderboard_scores,Hämtar resultattavla...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Återställ spel:
 reset_game_button,Återställ
+reset_game_success,Återställning klar!
 mute_label,Ljud av
 fullscreen_label,Helskärm:
 resolution_label,Upplösning:

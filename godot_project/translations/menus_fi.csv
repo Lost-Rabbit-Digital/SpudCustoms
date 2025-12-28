@@ -60,6 +60,7 @@ getting_leaderboard_scores,Haetaan pistetilastoja...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Nollaa peli:
 reset_game_button,Nollaa
+reset_game_success,Nollaus valmis!
 mute_label,Mykistä
 fullscreen_label,Koko näyttö:
 resolution_label,Resoluutio:

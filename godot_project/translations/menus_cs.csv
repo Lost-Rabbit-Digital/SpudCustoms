@@ -60,6 +60,7 @@ getting_leaderboard_scores,Získávání skóre z žebříčku...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Restartovat hru
 reset_game_button,Resetovat
+reset_game_success,Reset dokončen!
 mute_label,Ztlumit
 fullscreen_label,Celá obrazovka
 resolution_label,Rozlišení

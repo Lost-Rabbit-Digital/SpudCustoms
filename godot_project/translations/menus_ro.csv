@@ -60,6 +60,7 @@ getting_leaderboard_scores,Se obțin scorurile din clasament...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Resetează jocul:
 reset_game_button,Resetează
+reset_game_success,Resetare finalizată!
 mute_label,Mut
 fullscreen_label,Ecran complet:
 resolution_label,Rezoluție:
