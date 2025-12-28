@@ -341,6 +341,10 @@ tutorial_skip,Пропустить
 tutorial_skip_all,Пропустить все обучения
 tutorial_continue_auto,(продолжение автоматически...)
 tutorial_continue_click,"(нажмите, чтобы продолжить...)"
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Обучение {current} из {total}: {name} - Шаг {step} из {steps}
 tutorial_header_single,{name} - Шаг {step} из {steps}
 tutorial_welcome_name,Добро пожаловать в «Картофельную Таможню»

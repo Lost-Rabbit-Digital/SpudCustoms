@@ -341,6 +341,10 @@ tutorial_skip,Пропусни
 tutorial_skip_all,Пропусни всички уроци
 tutorial_continue_auto,(продължава автоматично...)
 tutorial_continue_click,(кликнете за продължаване...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Урок {current} от {total}: {name} - Стъпка {step} от {steps}
 tutorial_header_single,{name} - Стъпка {step} от {steps}
 tutorial_welcome_name,Добре дошли в Картофени Митници

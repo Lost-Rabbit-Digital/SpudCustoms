@@ -341,6 +341,10 @@ tutorial_skip,スキップ
 tutorial_skip_all,全てのチュートリアルをスキップ
 tutorial_continue_auto,(自動的に続行中...)
 tutorial_continue_click,(クリックして続行...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,チュートリアル {total}の{current}: {name} - {steps}の{step}ステップ
 tutorial_header_single,{name} - {steps}の{step}ステップ
 tutorial_welcome_name,スパッド税関へようこそ

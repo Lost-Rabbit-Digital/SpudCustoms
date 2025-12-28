@@ -341,6 +341,10 @@ tutorial_skip,跳过
 tutorial_skip_all,跳过所有教程
 tutorial_continue_auto,(自动继续中...)
 tutorial_continue_click,(点击继续...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,教程 {current}/{total}：{name} - 步骤 {step}/{steps}
 tutorial_header_single,{name} - 步骤 {step}/{steps}
 tutorial_welcome_name,欢迎来到马铃薯海关

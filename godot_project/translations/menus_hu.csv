@@ -353,6 +353,10 @@ tutorial_skip,Kihagyás
 tutorial_skip_all,Összes oktatóanyag kihagyása
 tutorial_continue_auto,(automatikus folytatás...)
 tutorial_continue_click,(kattints a folytatáshoz...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Oktatóanyag {current}/{total}: {name} - {step}/{steps} lépés
 tutorial_header_single,{name} - {step}/{steps} lépés
 tutorial_welcome_name,Üdv a Spud Customs-nál

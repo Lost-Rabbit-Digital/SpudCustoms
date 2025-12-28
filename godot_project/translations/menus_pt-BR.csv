@@ -341,6 +341,10 @@ tutorial_skip,Pular
 tutorial_skip_all,Pular Todos os Tutoriais
 tutorial_continue_auto,(continuando automaticamente...)
 tutorial_continue_click,(clique para continuar...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Tutorial {current} de {total}: {name} - Passo {step} de {steps}
 tutorial_header_single,{name} - Passo {step} de {steps}
 tutorial_welcome_name,Bem-vindo(a) à Alfândega da Batata

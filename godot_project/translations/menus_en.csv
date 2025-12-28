@@ -412,6 +412,10 @@ tutorial_skip,Skip
 tutorial_skip_all,Skip All Tutorials
 tutorial_continue_auto,(continuing automatically...)
 tutorial_continue_click,(click to continue...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 _LOADING SCREEN,
 loading_level_in_progress,Loading Level...
 loading_level_waiting,Still Loading Level...

@@ -341,6 +341,10 @@ tutorial_skip,Παράλειψη
 tutorial_skip_all,Παράλειψη Όλων των Εκπαιδευτικών
 tutorial_continue_auto,(συνεχίζεται αυτόματα...)
 tutorial_continue_click,(κάντε κλικ για να συνεχίσετε...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Εκπαιδευτικό {current} από {total}: {name} - Βήμα {step} από {steps}
 tutorial_header_single,{name} - Βήμα {step} από {steps}
 tutorial_welcome_name,Καλώς ήρθατε στο Spud Customs
