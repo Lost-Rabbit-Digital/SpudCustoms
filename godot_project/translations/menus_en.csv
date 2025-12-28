@@ -433,27 +433,27 @@ tutorial_rules_checking_name,Immigration Rules
 tutorial_stamp_usage_name,Using the Stamps
 tutorial_strikes_and_quota_name,Strikes and Quota
 _TUTORIAL STEP TEXT - WELCOME,
-tutorial_welcome_step1,"[center][b]Welcome to Spud Customs![/b][/center]\n\nYour job is to process incoming potatoes at the border checkpoint. Let's learn the basics!"
+tutorial_welcome_step1,"[center][b]Welcome to Spud Customs![/b][/center]\n\nYou're a border officer. Your job: check documents and decide who gets in.\n\n[color=yellow]Let's learn the basics![/color]"
 _TUTORIAL STEP TEXT - GATE CONTROL,
-tutorial_gate_control_step1,"[center][b]Opening Your Booth[/b][/center]\n\nSee that lever? {interact} it to raise the shutter and open your booth for business!\n\n[color=yellow]{interact} the lever now.[/color]"
-tutorial_gate_control_step2,"[center][b]Great job![/b][/center]\n\nYour booth is now open. Potatoes in the queue can see you're ready for service."
+tutorial_gate_control_step1,"[center][b]Open Your Booth[/b][/center]\n\nPull the lever to raise the shutter and start your shift!\n\n[color=yellow]{interact} the lever now.[/color]"
+tutorial_gate_control_step2,"[center][b]Booth Open![/b][/center]\n\nGreat! Your booth is now open for business."
 _TUTORIAL STEP TEXT - MEGAPHONE,
-tutorial_megaphone_call_step1,"[center][b]Calling the Next Potato[/b][/center]\n\nUse the megaphone to call the next potato from the queue to your booth.\n\n[color=yellow]{interact} the megaphone![/color]"
+tutorial_megaphone_call_step1,"[center][b]Call the Next Potato[/b][/center]\n\nUse the megaphone to summon a potato from the queue.\n\n[color=yellow]{interact} the megaphone![/color]"
 tutorial_megaphone_call_step2,"[center][b]Here they come![/b][/center]\n\nWatch as the potato approaches your booth. They'll present their documents for inspection."
 _TUTORIAL STEP TEXT - DOCUMENT INSPECTION,
-tutorial_document_inspection_step1,"[center][b]Document Inspection[/b][/center]\n\nThe potato has handed you their passport. {drag} it to your inspection table to examine it closely.\n\n[color=yellow]{drag} the passport to the table.[/color]"
-tutorial_document_inspection_step2,"[center][b]Examining the Passport[/b][/center]\n\n{interact} the passport to open it and review the potato's information:\n\n- Name and photo\n- Country of origin\n- Potato type and condition\n\nLook for anything suspicious!"
+tutorial_document_inspection_step1,"[center][b]Inspect Documents[/b][/center]\n\nThe potato handed you their passport. Drag it to your desk to look closer.\n\n[color=yellow]{drag} the passport to your desk.[/color]"
+tutorial_document_inspection_step2,"[center][b]Open the Passport[/b][/center]\n\n{interact} the passport to open it and see their details.\n\n[color=yellow]{interact} to open.[/color]"
 tutorial_document_inspection_step3,"[center][b]Check the Rules![/b][/center]\n\nBefore making your decision, you need to check the immigration rules. Let's learn about them!"
 _TUTORIAL STEP TEXT - RULES CHECKING,
-tutorial_rules_checking_step1,"[center][b]Immigration Rules[/b][/center]\n\nLook at the rules pamphlet on the right side. These rules tell you which potatoes to [color=green]APPROVE[/color] or [color=red]REJECT[/color].\n\nReject any potato that violates the current rules!\n\n[color=red]IMPORTANT: Documents with expired dates must be REJECTED![/color]"
+tutorial_rules_checking_step1,"[center][b]Check the Rules[/b][/center]\n\nLook at the rules pamphlet on the right. It tells you who to [color=green]APPROVE[/color] or [color=red]REJECT[/color].\n\n[color=red]Expired documents = REJECT![/color]"
 tutorial_rules_checking_step2,"[center][b]Stay Vigilant![/b][/center]\n\nRules change between shifts. Always check the current rules before making decisions.\n\nCompare passport information against active rules carefully."
 _TUTORIAL STEP TEXT - STAMP USAGE,
-tutorial_stamp_usage_step1,"[center][b]The Stamp Bar[/b][/center]\n\nSee the stamp bar at the top? {interact} the handle to reveal your approval and rejection stamps.\n\n[color=yellow]{interact} to open the stamp bar.[/color]"
-tutorial_stamp_usage_step2,"[center][b]Positioning for Stamping[/b][/center]\n\n{drag} the passport under the stamps. You'll see a guide showing where to place it.\n\n[color=green]Green stamp[/color] = APPROVE\n[color=red]Red stamp[/color] = REJECT\n\n[color=yellow]Position the passport under a stamp.[/color]"
-tutorial_stamp_usage_step3,"[center][b]Apply the Stamp![/b][/center]\n\n{interact} the stamp to mark the passport with your decision.\n\n[color=yellow]{interact} a stamp to apply it.[/color]"
-tutorial_stamp_usage_step4,"[center][b]Return the Documents[/b][/center]\n\nNow {drag} the stamped passport back to the potato to complete their processing.\n\n[color=yellow]Return the passport to the potato.[/color]"
+tutorial_stamp_usage_step1,"[center][b]Open the Stamp Bar[/b][/center]\n\n{interact} the handle at the top to reveal your stamps.\n\n[color=yellow]{interact} to open stamps.[/color]"
+tutorial_stamp_usage_step2,"[center][b]Position the Passport[/b][/center]\n\n{drag} the passport under the stamps. A guide will show you where.\n\n[color=green]Green stamp = APPROVE[/color] | [color=red]Red stamp = REJECT[/color]"
+tutorial_stamp_usage_step3,"[center][b]Stamp It![/b][/center]\n\n{interact} the correct stamp to mark your decision.\n\n[color=yellow]Choose wisely![/color]"
+tutorial_stamp_usage_step4,"[center][b]Return the Passport[/b][/center]\n\n{drag} the stamped passport back to the potato.\n\n[color=yellow]Give it back to complete processing.[/color]"
 tutorial_stamp_usage_step5,"[center][b]Well Done![/b][/center]\n\nYou've processed your first potato! Keep an eye on your quota - you need to process enough potatoes each shift."
 _TUTORIAL STEP TEXT - STRIKES AND QUOTA,
-tutorial_strikes_and_quota_step1,"[center][b]The Quota System[/b][/center]\n\nLook at the [color=yellow]Quota[/color] display. This shows how many potatoes you must process correctly each shift."
-tutorial_strikes_and_quota_step2,"[center][b]Avoid Strikes![/b][/center]\n\nThe [color=red]Strikes[/color] counter shows your mistakes. Too many strikes and it's game over!\n\nMake wrong decisions and you'll earn strikes."
-tutorial_strikes_and_quota_step3,"[center][b]Training Complete![/b][/center]\n\nContinue processing potatoes to complete your training shift.\n\nOnce finished, you'll be [color=green]certified as a Customs Officer[/color] and ready for your first real day!"
+tutorial_strikes_and_quota_step1,"[center][b]Meet Your Quota[/b][/center]\n\nThe [color=yellow]Quota[/color] shows how many potatoes you must process correctly.\n\nMeet your quota to complete the shift!"
+tutorial_strikes_and_quota_step2,"[center][b]Avoid Strikes![/b][/center]\n\n[color=red]Strikes[/color] = mistakes. Too many strikes = game over!\n\nBe careful with your decisions."
+tutorial_strikes_and_quota_step3,"[center][b]Training Complete![/b][/center]\n\nYou know the basics! Process the remaining potatoes to finish your training.\n\n[color=green]Good luck, Officer![/color]"
