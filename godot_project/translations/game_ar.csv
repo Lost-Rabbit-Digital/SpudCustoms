@@ -9,6 +9,7 @@ alert_perfect_stamp,ختم مثالي! +{points} نقطة!
 alert_combo,سلسلة x{mult}! +{streak} نقاط مكافأة السلسلة
 alert_quota_met,تم تحقيق الحصة، انتهى الدوام! \nمكافأة: {bonus} نقطة!
 alert_strike_removed,تمت إزالة مخالفة!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,لقد اتخذت القرار الصحيح، أيها الضابط.\n+{points} نقطة!
 alert_wrong_decision,لقد تسببت في معاناة غير ضرورية، أيها الضابط...\n+1 مخالفة!
 alert_potato_should_be_approved,\nهذه البطاطا تستوفي جميع المتطلبات وكان يجب الموافقة عليها.

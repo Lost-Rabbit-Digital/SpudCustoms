@@ -9,6 +9,7 @@ alert_perfect_stamp,ІДЕАЛЬНИЙ ШТАМП! +{points} очок!
 alert_combo,КОМБО x{mult}! +{streak} бонусних очок за комбо
 alert_quota_met,"Квоту виконано, зміну завершено! \nБонус: {bonus} очок!"
 alert_strike_removed,Штрафне очко знято!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"Ви зробили правильний вибір, офіцере.\n+{points} очок!"
 alert_wrong_decision,"Ви спричинили зайві страждання, офіцере...\n+1 штрафне очко!"
 alert_potato_should_be_approved,\nЦя картопля відповідає всім вимогам і мала бути схвалена.

@@ -1706,7 +1706,10 @@ func _on_quota_updated(new_target: int, current_met: int):
 # NEW: Handle strike removed with sound
 func _on_strike_removed(current_strikes: int, max_strikes: int):
 	update_strikes_display()
-	
+
+	# Show the "Strike Forgiven" popup near the strikes label
+	show_strike_forgiven_popup()
+
 	# Play strike removed sound
 	var strike_removed_sound = preload("res://assets/audio/gameplay/strike_removed.mp3")
 	var player = AudioStreamPlayer.new()
@@ -1717,6 +1720,50 @@ func _on_strike_removed(current_strikes: int, max_strikes: int):
 	add_child(player)
 	player.play()
 	player.finished.connect(player.queue_free)
+
+
+## Shows a floating "+1 Strike Forgiven!" popup near the Strikes label.
+## The popup floats up and fades out over time. Uses gold/yellow color
+## to distinguish it from the red Strikes label.
+func show_strike_forgiven_popup() -> void:
+	var strikes_label = $UI/Labels/StrikesLabel
+	if not strikes_label:
+		return
+
+	# Create the floating label
+	var popup = Label.new()
+	popup.text = tr("alert_strike_forgiven")
+	popup.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+
+	# Style the popup with gold/yellow color (positive, distinct from red strikes)
+	popup.add_theme_color_override("font_color", Color(1.0, 0.85, 0.2, 1.0))  # Gold
+	popup.add_theme_color_override("font_outline_color", Color(0.0, 0.0, 0.0, 1.0))
+	popup.add_theme_constant_override("outline_size", 4)
+	popup.add_theme_font_size_override("font_size", 24)
+
+	# Position above the strikes label
+	popup.position = strikes_label.position + Vector2(0, -30)
+	popup.z_index = 20  # Above most UI elements
+
+	# Add to UI layer
+	$UI/Labels.add_child(popup)
+
+	# Animate: float up and fade out
+	var tween = create_tween()
+	tween.set_parallel(true)
+
+	# Float upward
+	tween.tween_property(popup, "position:y", popup.position.y - 50, 1.5).set_ease(Tween.EASE_OUT)
+
+	# Fade out (start visible, fade after a brief moment)
+	tween.tween_property(popup, "modulate:a", 0.0, 1.0).set_delay(0.5)
+
+	# Scale up slightly then back
+	tween.tween_property(popup, "scale", Vector2(1.1, 1.1), 0.15).set_ease(Tween.EASE_OUT)
+	tween.chain().tween_property(popup, "scale", Vector2(1.0, 1.0), 0.1)
+
+	# Clean up after animation
+	tween.chain().tween_callback(popup.queue_free)
 
 
 # NEW: Handle runner escaped with sound
@@ -2161,21 +2208,14 @@ func update_strikes_display():
 				strikes_label, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.3
 			)
 		else:
-			# Strikes decreased - positive bounce animation
+			# Strikes decreased - positive bounce animation only (no color change)
+			# The green flash was confusing because players associate strikes with bad things
 			tween.tween_property(strikes_label, "scale", Vector2(1.2, 1.2), 0.1)
 			(
 				tween
 				. tween_property(strikes_label, "scale", Vector2(1.0, 1.0), 0.2)
 				. set_trans(Tween.TRANS_BOUNCE)
 				. set_ease(Tween.EASE_OUT)
-			)
-
-			# Change color briefly to green (positive) then settle to base
-			tween.parallel().tween_property(
-				strikes_label, "modulate", Color(0.5, 1.0, 0.5, 1.0), 0.1
-			)
-			tween.tween_property(
-				strikes_label, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.3
 			)
 
 	# Update previous strikes for next comparison

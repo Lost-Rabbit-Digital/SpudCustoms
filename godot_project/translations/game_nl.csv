@@ -9,6 +9,7 @@ alert_perfect_stamp,PERFECT STEMPEL! +{points} punten!
 alert_combo,COMBO x{mult}! +{streak} combo bonuspunten
 alert_quota_met,"Quotum behaald, dienst voltooid! \nBonus: {bonus} punten!"
 alert_strike_removed,Strike verwijderd!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"U heeft de juiste keuze gemaakt, agent.\n+{points} punten!"
 alert_wrong_decision,"U heeft onnodige ellende veroorzaakt, agent...\n+1 Strike!"
 alert_potato_should_be_approved,\nDeze aardappel voldoet aan alle eisen en had goedgekeurd moeten worden.

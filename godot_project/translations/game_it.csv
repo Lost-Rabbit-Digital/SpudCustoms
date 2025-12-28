@@ -9,6 +9,7 @@ alert_perfect_stamp,TIMBRO PERFETTO! +{points} punti!
 alert_combo,COMBO x{mult}! +{streak} punti bonus combo
 alert_quota_met,"Quota raggiunta, turno completato! \nBonus: {bonus} punti!"
 alert_strike_removed,Strike rimosso!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"Hai fatto la scelta giusta, ufficiale.\n+{points} punti!"
 alert_wrong_decision,"Hai causato sofferenze inutili, ufficiale...\n+1 Strike!"
 alert_potato_should_be_approved,\nQuesta patata soddisfa tutti i requisiti ed avrebbe dovuto essere approvata.

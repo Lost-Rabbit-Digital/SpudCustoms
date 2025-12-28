@@ -9,6 +9,7 @@ alert_perfect_stamp,CARIMBO PERFEITO! +{points} pontos!
 alert_combo,COMBO x{mult}! +{streak} pontos de bônus de combo
 alert_quota_met,"Cota atingida, turno concluído! \nBônus: {bonus} pontos!"
 alert_strike_removed,Strike removido!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"Você tomou a decisão certa, oficial.\n+{points} pontos!"
 alert_wrong_decision,"Você causou sofrimento desnecessário, oficial...\n+1 Strike!"
 alert_potato_should_be_approved,\nEsta batata atende a todos os requisitos e deveria ter sido aprovada.

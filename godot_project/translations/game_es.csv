@@ -9,6 +9,7 @@ alert_perfect_stamp,¡SELLO PERFECTO! +{points} puntos!
 alert_combo,¡COMBO x{mult}! +{streak} puntos de bono de combo
 alert_quota_met,"¡Cuota cumplida, turno completado! \nBono: {bonus} puntos!"
 alert_strike_removed,¡Strike eliminado!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"Has tomado la decisión correcta, oficial.\n+{points} puntos!"
 alert_wrong_decision,"Has causado sufrimiento innecesario, oficial...\n+1 Strike!"
 alert_potato_should_be_approved,\nEsta patata cumple todos los requisitos y debería haber sido aprobada.
