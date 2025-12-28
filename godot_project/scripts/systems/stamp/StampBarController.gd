@@ -422,21 +422,25 @@ func animate_stamp(stamp_type: String, target_position: Vector2):
 	return_tween.tween_callback(func(): temp_stamp.queue_free())
 
 
-# Play a random stamp sound effect
+# Performance: Pre-load stamp sounds into cache
+func _cache_stamp_sounds() -> void:
+	if not _stamp_sounds_cached:
+		for i in range(1, 6):
+			var sound_path = "res://assets/audio/mechanical/stamp_sound_" + str(i) + ".mp3"
+			var sound = load(sound_path)
+			if sound:
+				_cached_stamp_sounds.append(sound)
+		_stamp_sounds_cached = true
+
+
+# Play a random stamp sound effect (uses cached sounds to avoid disk I/O)
 func play_random_stamp_sound():
-	var stamp_sounds = []
+	# Ensure sounds are cached
+	if not _stamp_sounds_cached:
+		_cache_stamp_sounds()
 
-	# Try to load sound effects
-	for i in range(1, 6):
-		var sound_path = "res://assets/audio/mechanical/stamp_sound_" + str(i) + ".mp3"
-		var sound = load(sound_path)
-		if sound:
-			stamp_sounds.append(sound)
-		else:
-			push_warning("Could not load stamp sound: " + sound_path)
-
-	if sfx_player and stamp_sounds.size() > 0:
-		sfx_player.stream = stamp_sounds[randi() % stamp_sounds.size()]
+	if sfx_player and _cached_stamp_sounds.size() > 0:
+		sfx_player.stream = _cached_stamp_sounds.pick_random()
 		sfx_player.play()
 	else:
 		push_warning("STAMP CONTROLLER: NO AUDIO SETUP FOR STAMPS")
@@ -486,6 +490,10 @@ func create_final_stamp(stamp_type: String, pos: Vector2):
 
 # Hover sound for stamp bar
 var hover_sound_stamp_bar = preload("res://assets/audio/ui_feedback/ui_hover_stamp_bar.mp3")
+
+# Performance: Cache stamp sounds to avoid disk I/O on every stamp action
+var _cached_stamp_sounds: Array[AudioStream] = []
+var _stamp_sounds_cached: bool = false
 
 
 func _on_toggle_position_button_mouse_entered() -> void:

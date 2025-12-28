@@ -193,30 +193,37 @@ func _on_button_mouse_entered(button: Control, hover_defaults: Dictionary) -> vo
 	sound_player.finished.connect(_free_audio_player.bind(sound_player))
 	sound_player.play()
 
-	# Start a process function on the button if it doesn't exist
-	if not button.has_node("FloatController"):
-		var timer = Timer.new()
+	# Reuse existing timer if present, otherwise create a new one
+	var timer = button.get_node_or_null("FloatController")
+	if timer:
+		# Timer exists - just restart it
+		timer.start()
+	else:
+		# Create new timer
+		timer = Timer.new()
 		timer.set_name("FloatController")
 		timer.wait_time = 0.016  # ~60fps
 		timer.autostart = true
 		button.add_child(timer)
-
-		# Initialize spring physics variables
-		button.set_meta("velocity", 0.0)
-		button.set_meta(
-			"target_y", button.get_meta("original_position").y - hover_defaults.float_height
-		)
-		button.set_meta("time_counter", 0.0)
-
 		# Connect timer to the float animation handler
 		timer.timeout.connect(_on_float_timer_timeout.bind(button, hover_defaults))
+
+	# Initialize/reset spring physics variables
+	button.set_meta("velocity", 0.0)
+	button.set_meta(
+		"target_y", button.get_meta("original_position").y - hover_defaults.float_height
+	)
+	button.set_meta("time_counter", 0.0)
 
 
 ## Handle the floating animation update on each timer tick
 func _on_float_timer_timeout(button: Control, hover_defaults: Dictionary) -> void:
 	# Only animate if still hovering
 	if not button.get_meta("is_hovering"):
-		button.get_node("FloatController").queue_free()
+		# Stop the timer instead of destroying it - it will be reused on next hover
+		var timer = button.get_node_or_null("FloatController")
+		if timer:
+			timer.stop()
 		return
 
 	var original_pos = button.get_meta("original_position")
