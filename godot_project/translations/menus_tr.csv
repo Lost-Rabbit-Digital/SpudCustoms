@@ -354,6 +354,10 @@ tutorial_skip,Atla
 tutorial_skip_all,Tüm Eğitimleri Atla
 tutorial_continue_auto,(otomatik devam ediyor...)
 tutorial_continue_click,(devam etmek için tıklayın...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Eğitim {current} / {total}: {name} - Adım {step} / {steps}
 tutorial_header_single,{name} - Adım {step} / {steps}
 tutorial_welcome_name,Spud Gümrükleri'ne Hoş Geldiniz

@@ -354,6 +354,10 @@ tutorial_skip,Bỏ qua
 tutorial_skip_all,Bỏ qua tất cả hướng dẫn
 tutorial_continue_auto,(tự động tiếp tục...)
 tutorial_continue_click,(nhấp để tiếp tục...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Hướng dẫn {current} trên {total}: {name} - Bước {step} trên {steps}
 tutorial_header_single,{name} - Bước {step} trên {steps}
 tutorial_welcome_name,Chào mừng đến với Spud Customs

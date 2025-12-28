@@ -354,6 +354,10 @@ tutorial_skip,Preskočiť
 tutorial_skip_all,Preskočiť všetky tutoriály
 tutorial_continue_auto,(pokračuje automaticky...)
 tutorial_continue_click,(kliknite pre pokračovanie...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Tutoriál {current} z {total}: {name} - Krok {step} z {steps}
 tutorial_header_single,{name} - Krok {step} z {steps}
 tutorial_welcome_name,Vitajte v Zemiakovej colnici

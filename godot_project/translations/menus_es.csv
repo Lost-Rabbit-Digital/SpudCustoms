@@ -354,6 +354,10 @@ tutorial_skip,Omitir
 tutorial_skip_all,Omitir todos los tutoriales
 tutorial_continue_auto,(continuando automáticamente...)
 tutorial_continue_click,(clic para continuar...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Tutorial {current} de {total}: {name} - Paso {step} de {steps}
 tutorial_header_single,{name} - Paso {step} de {steps}
 tutorial_welcome_name,Bienvenido a Spud Customs

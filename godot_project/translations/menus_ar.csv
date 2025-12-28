@@ -342,6 +342,10 @@ tutorial_skip,تخطي
 tutorial_skip_all,تخطي جميع الدروس
 tutorial_continue_auto,(يستمر تلقائياً...)
 tutorial_continue_click,(انقر للمتابعة...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,درس {current} من {total}: {name} - الخطوة {step} من {steps}
 tutorial_header_single,{name} - الخطوة {step} من {steps}
 tutorial_welcome_name,مرحباً بك في جمارك البطاطس

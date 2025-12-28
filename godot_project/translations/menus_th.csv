@@ -342,6 +342,10 @@ tutorial_skip,ข้าม
 tutorial_skip_all,ข้ามบทเรียนทั้งหมด
 tutorial_continue_auto,(ดำเนินการต่ออัตโนมัติ...)
 tutorial_continue_click,(คลิกเพื่อดำเนินการต่อ...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,บทเรียนที่ {current} จาก {total}: {name} - ขั้นตอนที่ {step} จาก {steps}
 tutorial_header_single,{name} - ขั้นตอนที่ {step} จาก {steps}
 tutorial_welcome_name,ยินดีต้อนรับสู่ Spud Customs

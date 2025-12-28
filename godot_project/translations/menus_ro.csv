@@ -354,6 +354,10 @@ tutorial_skip,Sari peste
 tutorial_skip_all,Sari peste toate tutorialele
 tutorial_continue_auto,(se continuă automat...)
 tutorial_continue_click,(apasă pentru a continua...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Tutorialul {current} din {total}: {name} - Pasul {step} din {steps}
 tutorial_header_single,{name} - Pasul {step} din {steps}
 tutorial_welcome_name,Bun venit la Vama Cartofilor

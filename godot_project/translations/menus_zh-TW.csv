@@ -342,6 +342,10 @@ tutorial_skip,跳過
 tutorial_skip_all,跳過所有教學
 tutorial_continue_auto,(自動繼續中...)
 tutorial_continue_click,(點擊以繼續...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,教學 {current} / {total}：{name} - 步驟 {step} / {steps}
 tutorial_header_single,{name} - 步驟 {step} / {steps}
 tutorial_welcome_name,歡迎來到馬鈴薯海關

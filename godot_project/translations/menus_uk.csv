@@ -342,6 +342,10 @@ tutorial_skip,Пропустити
 tutorial_skip_all,Пропустити всі посібники
 tutorial_continue_auto,(продовжується автоматично...)
 tutorial_continue_click,"(натисніть, щоб продовжити...)"
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Посібник {current} з {total}: {name} - Крок {step} з {steps}
 tutorial_header_single,{name} - Крок {step} з {steps}
 tutorial_welcome_name,Ласкаво просимо до Spud Customs
