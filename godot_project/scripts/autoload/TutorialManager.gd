@@ -170,7 +170,7 @@ const TUTORIALS = {
 			},
 			{
 				"text_key": "tutorial_stamp_usage_step3",
-				"target": "StampBarController",
+				"target": ["ApprovalButton", "RejectionButton"],  # Highlight BOTH stamp buttons
 				"highlight": true,
 				"wait_for_action": "stamp_applied",
 				"pause_game": false
@@ -710,8 +710,17 @@ func _position_panel_for_step(step: Dictionary):
 	var target = step.get("target", "")
 
 	# Document-related targets that require the panel at the top
-	var document_targets = ["Passport", "LawReceipt", "StampBarController", "RulesLabel"]
-	var should_be_at_top = target in document_targets
+	var document_targets = ["Passport", "LawReceipt", "StampBarController", "RulesLabel", "ApprovalButton", "RejectionButton"]
+
+	# Handle both single target (String) and multiple targets (Array)
+	var should_be_at_top: bool = false
+	if target is Array:
+		for t in target:
+			if t in document_targets:
+				should_be_at_top = true
+				break
+	else:
+		should_be_at_top = target in document_targets
 
 	# Animate position change
 	var tween = create_tween()
@@ -881,15 +890,20 @@ func _is_action_condition_met(action: String) -> bool:
 
 
 ## Highlight a target node using the sweep shader
-func _highlight_target(target_name: String):
-	var target_node = _find_target_node(target_name)
-	if not target_node:
-		push_warning("[TutorialManager] Could not find target node: " + target_name)
-		return
+## Supports both single target (String) and multiple targets (Array)
+func _highlight_target(target_name):
+	# Support both single target and array of targets
+	var targets: Array = target_name if target_name is Array else [target_name]
 
-	print("[TutorialManager] Highlighting target: ", target_name, " -> ", target_node.name, " (", target_node.get_class(), ")")
-	# Apply shader to the target
-	_apply_highlight_shader(target_node)
+	for name in targets:
+		var target_node = _find_target_node(name)
+		if not target_node:
+			push_warning("[TutorialManager] Could not find target node: " + str(name))
+			continue
+
+		print("[TutorialManager] Highlighting target: ", name, " -> ", target_node.name, " (", target_node.get_class(), ")")
+		# Apply shader to the target
+		_apply_highlight_shader(target_node)
 
 
 ## Find a target node by name
@@ -913,6 +927,9 @@ func _find_target_node(target_name: String) -> Node:
 		"Gameplay/InteractiveElements/%s" % target_name,
 		"Gameplay/InteractiveElements/OfficeShutterController/%s" % target_name,
 		"Gameplay/InteractiveElements/StampBarController/%s" % target_name,
+		# Stamp buttons are nested deeper inside StampBarController
+		"Gameplay/InteractiveElements/StampBarController/StampBar/Background/ApprovalStamp/%s" % target_name,
+		"Gameplay/InteractiveElements/StampBarController/StampBar/Background/RejectionStamp/%s" % target_name,
 		"Gameplay/%s" % target_name,
 		"UI/%s" % target_name,
 		"UI/Labels/%s" % target_name,
