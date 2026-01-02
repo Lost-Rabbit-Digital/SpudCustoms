@@ -60,6 +60,7 @@ getting_leaderboard_scores,Henter poengtavle-resultater...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Tilbakestill spill:
 reset_game_button,Tilbakestill
+reset_game_success,Tilbakestilling fullført!
 mute_label,Demp
 fullscreen_label,Fullskjerm:
 resolution_label,Oppløsning:
@@ -353,6 +354,10 @@ tutorial_skip,Hopp over
 tutorial_skip_all,Hopp over alle veiledninger
 tutorial_continue_auto,(fortsetter automatisk...)
 tutorial_continue_click,(klikk for å fortsette...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Veiledning {current} av {total}: {name} - Trinn {step} av {steps}
 tutorial_header_single,{name} - Trinn {step} av {steps}
 tutorial_welcome_name,Velkommen til Spud Customs

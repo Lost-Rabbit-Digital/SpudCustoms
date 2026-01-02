@@ -9,6 +9,7 @@ alert_perfect_stamp,ПЕРФЕКТЕН ПЕЧАТ! +{points} точки!
 alert_combo,КОМБО x{mult}! +{streak} бонус точки за комбо
 alert_quota_met,"Квотата е изпълнена, смяната приключи! \nБонус: {bonus} точки!"
 alert_strike_removed,Ударът е премахнат!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"Взехте правилното решение, офицер.\n+{points} точки!"
 alert_wrong_decision,"Причинихте ненужно страдание, офицер...\n+1 Удар!"
 alert_potato_should_be_approved,\nТози картоф отговаря на всички изисквания и трябваше да бъде одобрен.

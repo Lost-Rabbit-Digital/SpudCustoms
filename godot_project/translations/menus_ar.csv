@@ -57,6 +57,7 @@ global_leaderboard_title,لوحة المتصدرين العالمية\n- {diffic
 getting_leaderboard_scores,يتم جلب نتائج لوحة المتصدرين...
 reset_game_label,إعادة تعيين اللعبة :
 reset_game_button,إعادة تعيين
+reset_game_success,تمت إعادة التعيين!
 mute_label,كتم الصوت
 fullscreen_label,وضع ملء الشاشة :
 resolution_label,الدقة :
@@ -341,6 +342,10 @@ tutorial_skip,تخطي
 tutorial_skip_all,تخطي جميع الدروس
 tutorial_continue_auto,(يستمر تلقائياً...)
 tutorial_continue_click,(انقر للمتابعة...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,درس {current} من {total}: {name} - الخطوة {step} من {steps}
 tutorial_header_single,{name} - الخطوة {step} من {steps}
 tutorial_welcome_name,مرحباً بك في جمارك البطاطس

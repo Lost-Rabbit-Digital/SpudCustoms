@@ -60,6 +60,7 @@ getting_leaderboard_scores,Récupération des scores du classement...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Réinitialiser la partie:
 reset_game_button,Réinitialiser
+reset_game_success,Réinitialisation terminée !
 mute_label,Muet
 fullscreen_label,Plein écran:
 resolution_label,Résolution:
@@ -353,6 +354,10 @@ tutorial_skip,Passer
 tutorial_skip_all,Passer tous les tutoriels
 tutorial_continue_auto,(suite automatique...)
 tutorial_continue_click,(cliquer pour continuer...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Tutoriel {current} sur {total} : {name} - Étape {step} sur {steps}
 tutorial_header_single,{name} - Étape {step} sur {steps}
 tutorial_welcome_name,Bienvenue à Spud Customs

@@ -60,6 +60,7 @@ getting_leaderboard_scores,Leaderboard scores ophalen...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Spel resetten:
 reset_game_button,Resetten
+reset_game_success,Reset voltooid!
 mute_label,Dempen
 fullscreen_label,Volledig scherm:
 resolution_label,Resolutie:
@@ -353,6 +354,10 @@ tutorial_skip,Overslaan
 tutorial_skip_all,Alle tutorials overslaan
 tutorial_continue_auto,(gaat automatisch verder...)
 tutorial_continue_click,(klik om verder te gaan...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Tutorial {current} van {total}: {name} - Stap {step} van {steps}
 tutorial_header_single,{name} - Stap {step} van {steps}
 tutorial_welcome_name,Welkom bij Spud Customs

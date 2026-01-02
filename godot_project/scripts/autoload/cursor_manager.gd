@@ -5,6 +5,10 @@ extends Node
 ## based on different states. It automatically updates the cursor when hovering
 ## over interactive elements or when in different game states.
 
+# Cached node references to avoid repeated get_tree()/get_viewport() calls every frame
+var _tree: SceneTree
+var _viewport: Viewport
+
 # Cursor texture paths - customize these to match your assets
 var cursor_textures = {
 	"default": preload("res://assets/user_interface/cursor/cursor_default.png"),
@@ -44,6 +48,10 @@ var is_in_dialogue: bool = false
 
 
 func _ready():
+	# Cache node references to avoid repeated lookups in _process()
+	_tree = get_tree()
+	_viewport = get_viewport()
+
 	# Set initial cursor
 	update_cursor("default")
 
@@ -53,13 +61,12 @@ func _ready():
 		EventBus.dialogue_ended.connect(_on_dialogue_ended)
 
 	# Connect to UI input signals system-wide
-	var tree = get_tree()
-	if tree:
-		get_tree().node_added.connect(_on_node_added)
+	if _tree:
+		_tree.node_added.connect(_on_node_added)
 
 		# Process all existing buttons in the scene
-		if tree.current_scene:
-			_connect_buttons_in_node(tree.current_scene)
+		if _tree.current_scene:
+			_connect_buttons_in_node(_tree.current_scene)
 
 
 func _on_dialogue_started(_timeline_name: String) -> void:
@@ -75,9 +82,8 @@ func _process(_delta):
 		return
 
 	# Skip cursor updates if game is paused or in dialogue
-	var is_paused = get_tree().paused
-
-	if is_paused or is_in_dialogue:
+	# Use cached _tree reference to avoid get_tree() call every frame
+	if _tree.paused or is_in_dialogue:
 		return
 
 	# Handle mouse button pressed state
@@ -97,8 +103,9 @@ func _process(_delta):
 			update_cursor(hover_state)
 
 	# Check for missile zone if callback provided
+	# Use cached _viewport reference to avoid get_viewport() call every frame
 	if missile_zone_callback.is_valid() and hover_state_stack.is_empty() and not input_pressed:
-		var mouse_pos = get_viewport().get_mouse_position()
+		var mouse_pos = _viewport.get_mouse_position()
 		if missile_zone_callback.call(mouse_pos):
 			update_cursor("target")
 

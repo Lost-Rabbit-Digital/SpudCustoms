@@ -932,12 +932,15 @@ func transition_to_scene(scene_path: String):
 	tween.tween_callback(_handle_scene_transition.bind(scene_path))
 
 
-# General utility function for transitions within viewport
+# General utility function for transitions within viewport (uses threaded loading)
 func transition_within_viewport(scene_path: String):
 	# Find the parent viewport container
 	var viewport_container = find_parent_viewport_container()
 
 	if viewport_container:
+		# Start loading the scene in the background during fade
+		ResourceLoader.load_threaded_request(scene_path)
+
 		# Create fade effect
 		var fade_rect = ColorRect.new()
 		fade_rect.color = Color(0, 0, 0, 0)
@@ -950,12 +953,26 @@ func transition_within_viewport(scene_path: String):
 		tween.tween_property(fade_rect, "color", Color(0, 0, 0, 1), 0.5)
 		await tween.finished
 
+		# Wait for threaded load to complete
+		var scene_resource = null
+		while true:
+			var status = ResourceLoader.load_threaded_get_status(scene_path)
+			if status == ResourceLoader.THREAD_LOAD_LOADED:
+				scene_resource = ResourceLoader.load_threaded_get(scene_path)
+				break
+			elif status == ResourceLoader.THREAD_LOAD_FAILED:
+				push_error("Failed to load scene: " + scene_path)
+				fade_rect.queue_free()
+				return
+			# Small delay before checking again
+			await get_tree().create_timer(0.016).timeout
+
 		# Remove all current children from the viewport
 		for child in viewport_container.get_children():
 			child.free()
 
-		# Instantiate the new scene
-		var new_scene = load(scene_path).instantiate()
+		# Instantiate the loaded scene
+		var new_scene = scene_resource.instantiate()
 		viewport_container.add_child(new_scene)
 
 		print("Transitioned within viewport to: " + scene_path)

@@ -57,6 +57,7 @@ global_leaderboard_title,글로벌 리더보드\n- {difficulty}
 getting_leaderboard_scores,리더보드 점수 불러오는 중...
 reset_game_label,게임 초기화 :
 reset_game_button,초기화
+reset_game_success,초기화 완료!
 mute_label,음소거
 fullscreen_label,전체 화면 :
 resolution_label,해상도 :
@@ -341,6 +342,10 @@ tutorial_skip,건너뛰기
 tutorial_skip_all,모든 튜토리얼 건너뛰기
 tutorial_continue_auto,(자동으로 계속됩니다...)
 tutorial_continue_click,(클릭하여 계속...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,튜토리얼 {current}/{total}: {name} - {step}/{steps}단계
 tutorial_header_single,{name} - {step}/{steps}단계
 tutorial_welcome_name,스퍼드 세관에 오신 것을 환영합니다

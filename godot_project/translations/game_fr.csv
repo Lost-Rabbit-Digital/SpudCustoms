@@ -9,6 +9,7 @@ alert_perfect_stamp,TAMPON PARFAIT ! +{points} points !
 alert_combo,COMBO x{mult} ! +{streak} points de bonus de combo
 alert_quota_met,"Quota atteint, service terminé ! \nBonus : {bonus} points !"
 alert_strike_removed,Strike retiré !
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"Vous avez fait le bon choix, officier.\n+{points} points !"
 alert_wrong_decision,"Vous avez causé des souffrances inutiles, officier...\n+1 Strike !"
 alert_potato_should_be_approved,\nCette pomme de terre remplit toutes les conditions et aurait dû être approuvée.

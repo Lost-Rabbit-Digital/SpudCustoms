@@ -211,33 +211,111 @@ func _spawn_item() -> void:
 func _create_item_visual(is_contraband: bool) -> Node2D:
 	var container = Node2D.new()
 
-	var rect = ColorRect.new()
-	rect.size = Vector2(50, 50)
-	rect.position = Vector2(-25, -25)
+	# Use sprite-based visuals for better accessibility (shape differentiation)
+	var sprite = Sprite2D.new()
+	sprite.name = "ItemSprite"
 
 	if is_contraband:
-		# Red contraband - various suspicious shapes
-		rect.color = Color(0.8, 0.2, 0.2)
-		var shapes = ["!", "X", "?", "*"]
-		var symbol = Label.new()
-		symbol.text = shapes[randi() % shapes.size()]
-		symbol.add_theme_font_size_override("font_size", 32)
-		symbol.add_theme_color_override("font_color", Color.WHITE)
-		symbol.position = Vector2(-10, -20)
-		container.add_child(rect)
-		container.add_child(symbol)
+		# Contraband items use angular/dangerous shapes from spritesheet
+		sprite.texture = _tex_contraband_items
+		# Spritesheet is ~960x480 with items roughly 48x48 each (20 columns, 10 rows approx)
+		sprite.hframes = 6
+		sprite.vframes = 4
+		sprite.frame = randi() % (sprite.hframes * sprite.vframes)
 	else:
-		# Green safe item
-		rect.color = Color(0.2, 0.6, 0.2)
-		var checkmark = Label.new()
-		checkmark.text = "OK"
-		checkmark.add_theme_font_size_override("font_size", 20)
-		checkmark.add_theme_color_override("font_color", Color.WHITE)
-		checkmark.position = Vector2(-15, -12)
-		container.add_child(rect)
-		container.add_child(checkmark)
+		# Safe items use rounded/friendly shapes from spritesheet
+		sprite.texture = _tex_approved_items
+		# Spritesheet layout for approved items
+		sprite.hframes = 6
+		sprite.vframes = 4
+		sprite.frame = randi() % (sprite.hframes * sprite.vframes)
+
+	# Scale sprite to fit item size (50x50 target)
+	var frame_size = sprite.texture.get_size() / Vector2(sprite.hframes, sprite.vframes)
+	var target_size = Vector2(50, 50)
+	sprite.scale = target_size / frame_size
+
+	# Apply accessibility-aware colors
+	var base_color: Color
+	if AccessibilityManager and AccessibilityManager.current_colorblind_mode != AccessibilityManager.ColorblindMode.NONE:
+		# Use colorblind-friendly palette
+		if is_contraband:
+			base_color = AccessibilityManager.get_rejection_color()
+		else:
+			base_color = AccessibilityManager.get_approval_color()
+		# Apply as a tint while preserving sprite details
+		sprite.modulate = base_color.lightened(0.3)
+	else:
+		# Default: subtle tint to indicate type (sprites are primary differentiator)
+		if is_contraband:
+			sprite.modulate = Color(1.2, 0.9, 0.9)  # Slight warm tint
+		else:
+			sprite.modulate = Color(0.9, 1.1, 0.9)  # Slight cool tint
+
+	container.add_child(sprite)
+
+	# Add shape indicator for additional accessibility (works in grayscale too)
+	var indicator = _create_shape_indicator(is_contraband)
+	indicator.position = Vector2(20, -20)  # Top-right corner
+	container.add_child(indicator)
 
 	return container
+
+
+## Create a shape-based indicator for accessibility (distinguishable without color)
+func _create_shape_indicator(is_contraband: bool) -> Node2D:
+	var indicator = Node2D.new()
+	indicator.name = "ShapeIndicator"
+
+	if is_contraband:
+		# Triangle/warning shape for contraband
+		var polygon = Polygon2D.new()
+		polygon.polygon = PackedVector2Array([
+			Vector2(0, -10),   # Top point
+			Vector2(-8, 6),    # Bottom left
+			Vector2(8, 6)      # Bottom right
+		])
+		polygon.color = Color(1.0, 0.3, 0.3, 0.9)
+
+		# Apply colorblind color if active
+		if AccessibilityManager and AccessibilityManager.current_colorblind_mode != AccessibilityManager.ColorblindMode.NONE:
+			polygon.color = AccessibilityManager.get_rejection_color()
+
+		# Add exclamation mark inside triangle
+		var symbol = Label.new()
+		symbol.text = "!"
+		symbol.add_theme_font_size_override("font_size", 12)
+		symbol.add_theme_color_override("font_color", Color.WHITE)
+		symbol.position = Vector2(-3, -8)
+
+		indicator.add_child(polygon)
+		indicator.add_child(symbol)
+	else:
+		# Circle/checkmark shape for safe items
+		var circle_points: PackedVector2Array = []
+		for i in range(12):
+			var angle = i * TAU / 12
+			circle_points.append(Vector2(cos(angle), sin(angle)) * 8)
+
+		var polygon = Polygon2D.new()
+		polygon.polygon = circle_points
+		polygon.color = Color(0.3, 0.8, 0.3, 0.9)
+
+		# Apply colorblind color if active
+		if AccessibilityManager and AccessibilityManager.current_colorblind_mode != AccessibilityManager.ColorblindMode.NONE:
+			polygon.color = AccessibilityManager.get_approval_color()
+
+		# Add checkmark inside circle
+		var symbol = Label.new()
+		symbol.text = "✓"
+		symbol.add_theme_font_size_override("font_size", 10)
+		symbol.add_theme_color_override("font_color", Color.WHITE)
+		symbol.position = Vector2(-5, -7)
+
+		indicator.add_child(polygon)
+		indicator.add_child(symbol)
+
+	return indicator
 
 
 func _update_items(delta: float) -> void:

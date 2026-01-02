@@ -60,6 +60,7 @@ getting_leaderboard_scores,Haetaan pistetilastoja...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Nollaa peli:
 reset_game_button,Nollaa
+reset_game_success,Nollaus valmis!
 mute_label,Mykistä
 fullscreen_label,Koko näyttö:
 resolution_label,Resoluutio:
@@ -353,6 +354,10 @@ tutorial_skip,Ohita
 tutorial_skip_all,Ohita kaikki opetusohjelmat
 tutorial_continue_auto,(jatkuu automaattisesti...)
 tutorial_continue_click,(jatka napsauttamalla...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Opetusohjelma {current} / {total}: {name} - Vaihe {step} / {steps}
 tutorial_header_single,{name} - Vaihe {step} / {steps}
 tutorial_welcome_name,Tervetuloa Spud Customs -peliin

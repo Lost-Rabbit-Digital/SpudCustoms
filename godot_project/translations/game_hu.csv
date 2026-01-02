@@ -9,6 +9,7 @@ alert_perfect_stamp,TÖKÉLETES BÉLYEGZÉS! +{points} pont!
 alert_combo,KOMBÓ x{mult}! +{streak} kombó bónusz pont
 alert_quota_met,"Kvóta teljesítve, műszak befejezve! \nBónusz: {bonus} pont!"
 alert_strike_removed,Strike eltávolítva!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"Jó döntést hozott, tiszt.\n+{points} pont!"
 alert_wrong_decision,"Szükségtelen szenvedést okozott, tiszt...\n+1 Strike!"
 alert_potato_should_be_approved,"\nEz a krumpli minden követelménynek megfelel, és jóvá kellett volna hagyni."

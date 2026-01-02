@@ -9,6 +9,7 @@ alert_perfect_stamp,ประทับตราสมบูรณ์แบบ! +
 alert_combo,คอมโบ x{mult}! +{streak} คะแนนโบนัสคอมโบ
 alert_quota_met,"ทำโควตาได้สำเร็จ, จบกะแล้ว!\nโบนัส: {bonus} คะแนน!"
 alert_strike_removed,ลบสไตรค์แล้ว!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"คุณตัดสินใจถูกต้องแล้ว, เจ้าหน้าที่.\n+{points} คะแนน!"
 alert_wrong_decision,"คุณได้ก่อให้เกิดความทุกข์ทรมานโดยไม่จำเป็น, เจ้าหน้าที่...\n+1 สไตรค์!"
 alert_potato_should_be_approved,\nมันฝรั่งตัวนี้มีคุณสมบัติครบถ้วนและควรได้รับการอนุมัติ

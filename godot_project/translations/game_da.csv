@@ -9,6 +9,7 @@ alert_perfect_stamp,PERFEKT STEMPEL! +{points} point!
 alert_combo,COMBO x{mult}! +{streak} combo bonuspoint
 alert_quota_met,"Kvote opfyldt, vagt afsluttet! \nBonus: {bonus} point!"
 alert_strike_removed,Strike fjernet!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"Du traf det rigtige valg, betjent.\n+{points} point!"
 alert_wrong_decision,"Du har forårsaget unødvendig lidelse, betjent...\n+1 Strike!"
 alert_potato_should_be_approved,\nDenne kartoffel opfylder alle krav og burde være godkendt.

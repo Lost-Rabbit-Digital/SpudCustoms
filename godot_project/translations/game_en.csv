@@ -9,6 +9,7 @@ alert_perfect_stamp,PERFECT STAMP! +{points} points!
 alert_combo,COMBO x{mult}! +{streak} combo bonus points
 alert_quota_met,"Quota met, shift completed! \nBonus: {bonus} points!"
 alert_strike_removed,Strike removed!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"You made the right choice, officer.\n+{points} points!"
 alert_wrong_decision,"You have caused unnecessary suffering, officer...\n+1 Strike!"
 alert_potato_should_be_approved,\nThis potato meets all requirements and should have been approved.

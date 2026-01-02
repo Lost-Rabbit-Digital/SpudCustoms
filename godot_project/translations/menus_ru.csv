@@ -57,6 +57,7 @@ global_leaderboard_title,Глобальная таблица лидеров\n- {
 getting_leaderboard_scores,Загрузка результатов таблицы лидеров...
 reset_game_label,Сбросить игру :
 reset_game_button,Сбросить
+reset_game_success,Сброс завершён!
 mute_label,Выключить звук
 fullscreen_label,Полноэкранный режим :
 resolution_label,Разрешение :
@@ -341,6 +342,10 @@ tutorial_skip,Пропустить
 tutorial_skip_all,Пропустить все обучения
 tutorial_continue_auto,(продолжение автоматически...)
 tutorial_continue_click,"(нажмите, чтобы продолжить...)"
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Обучение {current} из {total}: {name} - Шаг {step} из {steps}
 tutorial_header_single,{name} - Шаг {step} из {steps}
 tutorial_welcome_name,Добро пожаловать в «Картофельную Таможню»

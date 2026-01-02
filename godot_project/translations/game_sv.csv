@@ -9,6 +9,7 @@ alert_perfect_stamp,PERFEKT STÄMPEL! +{points} poäng!
 alert_combo,COMBO x{mult}! +{streak} combo bonuspoäng
 alert_quota_met,"Kvot uppnådd, pass avslutat! \nBonus: {bonus} poäng!"
 alert_strike_removed,Strike borttagen!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"Du tog rätt beslut, polis.\n+{points} poäng!"
 alert_wrong_decision,"Du har orsakat onödigt lidande, polis...\n+1 Strike!"
 alert_potato_should_be_approved,\nDenna potatis uppfyller alla krav och borde ha godkänts.

@@ -60,6 +60,7 @@ getting_leaderboard_scores,Pobieranie wyników rankingu...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Zresetuj grę:
 reset_game_button,Zresetuj
+reset_game_success,Zresetowano!
 mute_label,Wycisz
 fullscreen_label,Pełny ekran:
 resolution_label,Rozdzielczość:
@@ -353,6 +354,10 @@ tutorial_skip,Pomiń
 tutorial_skip_all,Pomiń wszystkie samouczki
 tutorial_continue_auto,(kontynuowanie automatycznie...)
 tutorial_continue_click,"(kliknij, aby kontynuować...)"
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Samouczek {current} z {total}: {name} - Krok {step} z {steps}
 tutorial_header_single,{name} - Krok {step} z {steps}
 tutorial_welcome_name,Witaj w Spud Customs

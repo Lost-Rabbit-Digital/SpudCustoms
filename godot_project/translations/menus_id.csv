@@ -60,6 +60,7 @@ getting_leaderboard_scores,Mendapatkan skor papan peringkat...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Setel ulang permainan:
 reset_game_button,Setel ulang
+reset_game_success,Setel ulang selesai!
 mute_label,Bisukan
 fullscreen_label,Layar penuh:
 resolution_label,Resolusi:
@@ -353,6 +354,10 @@ tutorial_skip,Lewati
 tutorial_skip_all,Lewati Semua Tutorial
 tutorial_continue_auto,(melanjutkan secara otomatis...)
 tutorial_continue_click,(klik untuk melanjutkan...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Tutorial {current} dari {total}: {name} - Langkah {step} dari {steps}
 tutorial_header_single,{name} - Langkah {step} dari {steps}
 tutorial_welcome_name,Selamat Datang di Bea Cukai Kentang

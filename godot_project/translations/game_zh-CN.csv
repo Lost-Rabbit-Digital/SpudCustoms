@@ -9,6 +9,7 @@ alert_perfect_stamp,完美盖章！\n+{points}点分数！
 alert_combo,连击 x{mult}！\n连击奖励：+{streak}点！
 alert_quota_met,配额已达，班次完成！\n奖励：{bonus}点分数！
 alert_strike_removed,失误已移除！
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,您做出了正确的选择，警官。\n+{points}点分数！
 alert_wrong_decision,您造成了不必要的痛苦，警官……\n增加1次失误！
 alert_potato_should_be_approved,\n此土豆符合所有要求，本应被批准通过。

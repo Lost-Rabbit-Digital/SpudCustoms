@@ -57,6 +57,7 @@ global_leaderboard_title,全球排行榜\n- {difficulty}
 getting_leaderboard_scores,正在获取排行榜分数...
 reset_game_label,重置游戏 :
 reset_game_button,重置
+reset_game_success,重置完成！
 mute_label,静音
 fullscreen_label,全屏 :
 resolution_label,分辨率 :
@@ -341,6 +342,10 @@ tutorial_skip,跳过
 tutorial_skip_all,跳过所有教程
 tutorial_continue_auto,(自动继续中...)
 tutorial_continue_click,(点击继续...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,教程 {current}/{total}：{name} - 步骤 {step}/{steps}
 tutorial_header_single,{name} - 步骤 {step}/{steps}
 tutorial_welcome_name,欢迎来到马铃薯海关

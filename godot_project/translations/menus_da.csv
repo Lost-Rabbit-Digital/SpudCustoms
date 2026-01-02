@@ -60,6 +60,7 @@ getting_leaderboard_scores,Henter rangliste scores...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Nulstil spil:
 reset_game_button,Nulstil
+reset_game_success,Nulstilling fuldført!
 mute_label,Lydløs
 fullscreen_label,Fuld skærm:
 resolution_label,Opløsning:
@@ -353,6 +354,10 @@ tutorial_skip,Spring over
 tutorial_skip_all,Spring alle vejledninger over
 tutorial_continue_auto,(fortsætter automatisk...)
 tutorial_continue_click,(klik for at fortsætte...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Vejledning {current} af {total}: {name} - Trin {step} af {steps}
 tutorial_header_single,{name} - Trin {step} af {steps}
 tutorial_welcome_name,Velkommen til Spud Customs

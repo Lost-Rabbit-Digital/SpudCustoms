@@ -56,9 +56,10 @@ const Z_INDEX = {
 	# ----------------------------------------------------------------------
 	## Documents which are not actively interacted with
 	"IDLE_DOCUMENT": 3,
-	## Documents which are actively been dragged
-	"OPEN_DRAGGED_DOCUMENT": 4,
-	## Documents which are closed
+	## Documents which are actively being dragged (open state, on inspection table)
+	## Must be above SCREEN_BORDERS to prevent clipping when dragged near top of screen
+	"OPEN_DRAGGED_DOCUMENT": 24,
+	## Documents which are closed and being dragged
 	"CLOSED_DRAGGED_DOCUMENT": 25,
 	"STAMPS": null,  # Stamps and inking tools
 	"INKWELL": null,  # Inkwell and other similar desk tools

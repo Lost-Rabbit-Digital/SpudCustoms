@@ -29,11 +29,17 @@ var tutorial_label: RichTextLabel = null
 var skip_button: Button = null
 var continue_hint_label: Label = null
 var progress_label: Label = null
+var continue_button: Button = null
+var back_button: Button = null
 
 # Step timing
 var step_timer: Timer = null
+var action_skip_timer: Timer = null  # Fallback timer for action steps
 var waiting_for_action: bool = false
 var waiting_for_click: bool = false  # Waiting for user to click to continue
+
+# Step history for back navigation
+var step_history: Array[int] = []
 
 # Tutorial definitions with expanded, friendly dialogue
 # Tutorial definitions - text uses translation key references for localization
@@ -164,7 +170,7 @@ const TUTORIALS = {
 			},
 			{
 				"text_key": "tutorial_stamp_usage_step3",
-				"target": "StampBarController",
+				"target": ["ApprovalButton", "RejectionButton"],  # Highlight BOTH stamp buttons
 				"highlight": true,
 				"wait_for_action": "stamp_applied",
 				"pause_game": false
@@ -256,7 +262,15 @@ func _ready():
 	step_timer.process_mode = Node.PROCESS_MODE_ALWAYS  # Timer must also always process
 	step_timer.timeout.connect(_on_step_timer_timeout)
 	add_child(step_timer)
-	print("[TutorialManager] Initialized - step_timer created with PROCESS_MODE_ALWAYS")
+
+	# Create action skip timer (fallback for action steps)
+	action_skip_timer = Timer.new()
+	action_skip_timer.one_shot = true
+	action_skip_timer.process_mode = Node.PROCESS_MODE_ALWAYS
+	action_skip_timer.timeout.connect(_on_action_skip_timer_timeout)
+	add_child(action_skip_timer)
+
+	print("[TutorialManager] Initialized - timers created with PROCESS_MODE_ALWAYS")
 
 	# Load saved progress
 	load_tutorial_progress()
@@ -411,7 +425,9 @@ func start_tutorial(tutorial_id: String):
 
 	current_tutorial = tutorial_id
 	current_step = 0
+	step_history.clear()
 	waiting_for_action = false
+	waiting_for_click = false
 	print("[TutorialManager] Starting tutorial: ", tutorial_id)
 
 	tutorial_started.emit(tutorial_id)
@@ -470,26 +486,28 @@ func _show_current_step():
 		# Check if action condition is already met (e.g., passport already open)
 		if _is_action_condition_met(action):
 			print("[TutorialManager] Action condition already met: ", action)
-			# Wait for user to read the text, allow click to skip
-			# Use longer wait time (6 seconds) since tutorial steps often have a lot of text
-			_start_click_to_continue_wait(6.0)
+			# Show Continue button for the user to proceed when ready
+			waiting_for_action = false
+			waiting_for_click = false
+			_update_continue_hint_for_text_step()
+			_update_button_visibility()
 			return
 
 		waiting_for_action = true
-		_update_continue_hint(false)
-	elif step.has("duration"):
-		var duration = step["duration"]
-		print("[TutorialManager] Step has duration: ", duration, " seconds - starting timer")
-		waiting_for_action = false
-		step_timer.start(duration)
-		print("[TutorialManager] Timer started, time_left: ", step_timer.time_left, ", is_stopped: ", step_timer.is_stopped())
-		_update_continue_hint(true)
+		waiting_for_click = false
+		_update_continue_hint_for_action_step()
+		_update_button_visibility()
+
+		# Start fallback timer for action steps (30 seconds)
+		action_skip_timer.start(30.0)
+		print("[TutorialManager] Action skip timer started (30 seconds)")
 	else:
-		# Default: wait 3 seconds
-		print("[TutorialManager] Step has no duration/action, using default 3 seconds")
+		# Text-based step - show Continue button, no auto-advance timer
+		print("[TutorialManager] Text step - waiting for Continue button press")
 		waiting_for_action = false
-		step_timer.start(3.0)
-		_update_continue_hint(true)
+		waiting_for_click = false
+		_update_continue_hint_for_text_step()
+		_update_button_visibility()
 
 
 ## Create the tutorial UI panel
@@ -591,20 +609,38 @@ func _create_tutorial_ui():
 	tutorial_label.add_theme_color_override("default_color", Color.WHITE)
 	vbox.add_child(tutorial_label)
 
-	# Create bottom row for hints and skip buttons
+	# Create bottom row for navigation and skip buttons
 	var bottom_row = HBoxContainer.new()
-	bottom_row.alignment = BoxContainer.ALIGNMENT_END
+	bottom_row.alignment = BoxContainer.ALIGNMENT_CENTER
+	bottom_row.add_theme_constant_override("separation", 10)
 	vbox.add_child(bottom_row)
 
-	# Continue hint
+	# Back button (left side)
+	back_button = Button.new()
+	back_button.text = tr("tutorial_back")
+	back_button.add_theme_font_size_override("font_size", 14)
+	back_button.pressed.connect(_go_to_previous_step)
+	back_button.visible = false  # Hidden initially (shown when step > 0)
+	bottom_row.add_child(back_button)
+
+	# Continue hint label (center, expands)
 	continue_hint_label = Label.new()
 	continue_hint_label.text = ""
 	continue_hint_label.add_theme_color_override("font_color", Color(0.7, 0.7, 0.7))
 	continue_hint_label.add_theme_font_size_override("font_size", 14)
 	continue_hint_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	continue_hint_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	bottom_row.add_child(continue_hint_label)
 
-	# Skip buttons
+	# Continue button (visible for non-action steps)
+	continue_button = Button.new()
+	continue_button.text = tr("tutorial_continue")
+	continue_button.add_theme_font_size_override("font_size", 14)
+	continue_button.pressed.connect(_on_continue_pressed)
+	continue_button.visible = false  # Hidden initially (shown for non-action steps)
+	bottom_row.add_child(continue_button)
+
+	# Skip buttons (right side)
 	if can_skip_tutorials:
 		skip_button = Button.new()
 		skip_button.text = tr("tutorial_skip")
@@ -674,8 +710,17 @@ func _position_panel_for_step(step: Dictionary):
 	var target = step.get("target", "")
 
 	# Document-related targets that require the panel at the top
-	var document_targets = ["Passport", "LawReceipt", "StampBarController", "RulesLabel"]
-	var should_be_at_top = target in document_targets
+	var document_targets = ["Passport", "LawReceipt", "StampBarController", "RulesLabel", "ApprovalButton", "RejectionButton"]
+
+	# Handle both single target (String) and multiple targets (Array)
+	var should_be_at_top: bool = false
+	if target is Array:
+		for t in target:
+			if t in document_targets:
+				should_be_at_top = true
+				break
+	else:
+		should_be_at_top = target in document_targets
 
 	# Animate position change
 	var tween = create_tween()
@@ -695,7 +740,77 @@ func _position_panel_for_step(step: Dictionary):
 		tween.parallel().tween_property(tutorial_panel, "offset_bottom", -20, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
 
 
-## Update continue hint visibility
+## Update continue hint for text steps (shows Continue button)
+func _update_continue_hint_for_text_step():
+	if continue_hint_label:
+		continue_hint_label.text = ""
+		continue_hint_label.visible = false
+
+
+## Update continue hint for action steps (shows action required message)
+func _update_continue_hint_for_action_step():
+	if continue_hint_label:
+		continue_hint_label.text = tr("tutorial_action_required")
+		continue_hint_label.visible = true
+
+
+## Show the "Having trouble?" hint for action steps after timeout
+func _show_action_skip_hint():
+	if continue_hint_label:
+		continue_hint_label.text = tr("tutorial_skip_action")
+		continue_hint_label.add_theme_color_override("font_color", Color(1.0, 0.8, 0.4))  # Yellow-ish
+		continue_hint_label.visible = true
+	# Also show continue button as fallback
+	if continue_button:
+		continue_button.visible = true
+
+
+## Update button visibility based on current state
+func _update_button_visibility():
+	# Back button: visible when step > 0
+	if back_button:
+		back_button.visible = current_step > 0
+
+	# Continue button: visible when NOT waiting for action
+	if continue_button:
+		continue_button.visible = not waiting_for_action
+
+
+## Handle Continue button press
+func _on_continue_pressed():
+	if waiting_for_action:
+		# If waiting for action but user pressed continue (fallback), allow skip
+		print("[TutorialManager] Continue pressed during action wait - skipping action")
+		action_skip_timer.stop()
+	print("[TutorialManager] Continue button pressed, advancing step")
+	_advance_step()
+
+
+## Handle Back button press - go to previous step
+func _go_to_previous_step():
+	if current_step > 0:
+		print("[TutorialManager] Going back to step ", current_step - 1)
+		# Stop any running timers
+		step_timer.stop()
+		action_skip_timer.stop()
+		waiting_for_action = false
+		waiting_for_click = false
+
+		# Go to previous step
+		current_step -= 1
+		_show_current_step()
+	else:
+		print("[TutorialManager] Already at first step, cannot go back")
+
+
+## Action skip timer timeout - show "Having trouble?" hint
+func _on_action_skip_timer_timeout():
+	if waiting_for_action:
+		print("[TutorialManager] Action skip timer fired - showing skip hint")
+		_show_action_skip_hint()
+
+
+## Legacy: Update continue hint visibility (kept for compatibility)
 func _update_continue_hint(auto_progress: bool):
 	if continue_hint_label:
 		if auto_progress:
@@ -707,6 +822,7 @@ func _update_continue_hint(auto_progress: bool):
 
 
 ## Start waiting for click to continue (with optional auto-advance after delay)
+## Note: This is now mostly used for already-met action conditions
 func _start_click_to_continue_wait(delay: float = 6.0):
 	waiting_for_click = true
 	waiting_for_action = false
@@ -718,6 +834,7 @@ func _start_click_to_continue_wait(delay: float = 6.0):
 
 	# Start timer for auto-advance
 	step_timer.start(delay)
+	_update_button_visibility()
 	print("[TutorialManager] Waiting for click or ", delay, " seconds")
 
 
@@ -728,21 +845,6 @@ func _on_panel_clicked():
 		waiting_for_click = false
 		step_timer.stop()
 		_advance_step()
-
-
-## Input handler for click-to-continue
-func _input(event: InputEvent):
-	if not waiting_for_click:
-		return
-
-	# Check for mouse click on the tutorial panel only
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			# Only advance if clicking on the tutorial panel itself
-			if tutorial_panel and tutorial_panel.get_global_rect().has_point(event.position):
-				_on_panel_clicked()
-	elif event.is_action_pressed("ui_accept") or event.is_action_pressed("primary_interaction"):
-		_on_panel_clicked()
 
 
 ## Check if an action condition is already met
@@ -788,15 +890,20 @@ func _is_action_condition_met(action: String) -> bool:
 
 
 ## Highlight a target node using the sweep shader
-func _highlight_target(target_name: String):
-	var target_node = _find_target_node(target_name)
-	if not target_node:
-		push_warning("[TutorialManager] Could not find target node: " + target_name)
-		return
+## Supports both single target (String) and multiple targets (Array)
+func _highlight_target(target_name):
+	# Support both single target and array of targets
+	var targets: Array = target_name if target_name is Array else [target_name]
 
-	print("[TutorialManager] Highlighting target: ", target_name, " -> ", target_node.name, " (", target_node.get_class(), ")")
-	# Apply shader to the target
-	_apply_highlight_shader(target_node)
+	for name in targets:
+		var target_node = _find_target_node(name)
+		if not target_node:
+			push_warning("[TutorialManager] Could not find target node: " + str(name))
+			continue
+
+		print("[TutorialManager] Highlighting target: ", name, " -> ", target_node.name, " (", target_node.get_class(), ")")
+		# Apply shader to the target
+		_apply_highlight_shader(target_node)
 
 
 ## Find a target node by name
@@ -820,6 +927,9 @@ func _find_target_node(target_name: String) -> Node:
 		"Gameplay/InteractiveElements/%s" % target_name,
 		"Gameplay/InteractiveElements/OfficeShutterController/%s" % target_name,
 		"Gameplay/InteractiveElements/StampBarController/%s" % target_name,
+		# Stamp buttons are nested deeper inside StampBarController
+		"Gameplay/InteractiveElements/StampBarController/StampBar/Background/ApprovalStamp/%s" % target_name,
+		"Gameplay/InteractiveElements/StampBarController/StampBar/Background/RejectionStamp/%s" % target_name,
 		"Gameplay/%s" % target_name,
 		"UI/%s" % target_name,
 		"UI/Labels/%s" % target_name,
@@ -919,6 +1029,15 @@ func trigger_tutorial_action(action_name: String):
 func _advance_step():
 	print("[TutorialManager] _advance_step: from step ", current_step, " to step ", current_step + 1)
 	tutorial_step_completed.emit(current_tutorial, current_step)
+
+	# Stop any running timers
+	step_timer.stop()
+	action_skip_timer.stop()
+
+	# Reset continue hint color to default
+	if continue_hint_label:
+		continue_hint_label.add_theme_color_override("font_color", Color(0.7, 0.7, 0.7))
+
 	current_step += 1
 	waiting_for_action = false
 	waiting_for_click = false
@@ -1032,6 +1151,12 @@ func skip_all_tutorials():
 func cleanup_tutorial_ui():
 	_clear_all_highlights()
 
+	# Stop any running timers
+	if step_timer:
+		step_timer.stop()
+	if action_skip_timer:
+		action_skip_timer.stop()
+
 	if tutorial_panel:
 		# tutorial_panel is child of full_screen_container which is child of canvas_layer
 		var full_screen_container = tutorial_panel.get_parent()
@@ -1042,6 +1167,8 @@ func cleanup_tutorial_ui():
 		skip_button = null
 		continue_hint_label = null
 		progress_label = null
+		continue_button = null
+		back_button = null
 
 		# Free the canvas layer (which will also free the full_screen_container)
 		if canvas_layer:
@@ -1049,6 +1176,7 @@ func cleanup_tutorial_ui():
 
 	current_tutorial = ""
 	current_step = 0
+	step_history.clear()
 	tutorial_queue.clear()
 	total_tutorials_in_session = 0
 	current_tutorial_index = 0
@@ -1081,6 +1209,7 @@ func reset_all_tutorials():
 	tutorials_completed.clear()
 	current_tutorial = ""
 	current_step = 0
+	step_history.clear()
 	tutorial_queue.clear()
 	total_tutorials_in_session = 0
 	current_tutorial_index = 0

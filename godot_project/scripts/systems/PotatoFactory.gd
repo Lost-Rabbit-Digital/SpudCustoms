@@ -12,6 +12,27 @@ static var _gib_textures_loaded: bool = false
 # Performance: Cache explosion frames
 static var _explosion_frames: Array[Texture2D] = []
 static var _explosion_frames_loaded: bool = false
+# Performance: Cache missile frames to avoid disk I/O on every missile creation
+static var _missile_frames: Array[Texture2D] = []
+static var _missile_frames_loaded: bool = false
+# Performance: Object pool for character generator to avoid GC pressure from repeated instantiation
+static var _cached_character_generator: Node = null
+
+
+## Returns a cached character generator instance for object pooling.
+## The generator is lazily instantiated and added to the scene tree on first use.
+## This avoids repeated allocations and GC pressure from instantiating/freeing
+## a CharacterGenerator for each potato created.
+static func _get_cached_character_generator() -> Node:
+	if not is_instance_valid(_cached_character_generator):
+		_cached_character_generator = character_generator_scene.instantiate()
+		# Add to scene tree so it can access its child nodes
+		var main_loop = Engine.get_main_loop()
+		if main_loop and main_loop.root:
+			main_loop.root.add_child(_cached_character_generator)
+			# Hide the pooled generator - it's only used for data generation
+			_cached_character_generator.visible = false
+	return _cached_character_generator
 
 
 # Static function to create a new potato with random attributes
@@ -42,8 +63,8 @@ static func create_potato_with_info(info: Dictionary) -> PotatoPerson:
 
 # Generate random potato info
 static func generate_random_potato_info() -> Dictionary:
-	# Generate character appearance (uses preloaded scene for performance)
-	var character_gen = character_generator_scene.instantiate()
+	# Generate character appearance using pooled generator (avoids GC pressure)
+	var character_gen = _get_cached_character_generator()
 
 	# Gender first since it affects character generation
 	var sex = get_random_sex()
@@ -57,7 +78,7 @@ static func generate_random_potato_info() -> Dictionary:
 	# Now randomize
 	character_gen.randomise_character()
 	var character_data = character_gen.get_character_data()
-	character_gen.queue_free()
+	# Note: Don't queue_free() - the generator is pooled and reused
 
 	# Randomize expiration date
 	var expiration_date: String
@@ -313,39 +334,45 @@ static func create_pixel_explosion(position: Vector2, parent: Node, scale_multip
 		return null
 
 
-# Function to create missile sprites
+# Performance: Load and cache missile frames once
+static func _load_missile_frames() -> void:
+	if not _missile_frames_loaded:
+		for i in range(1, 3):  # 2 frames
+			var texture_path = "res://assets/missiles/rocket_frame_%d.png" % i
+			var texture = load(texture_path)
+			if texture:
+				_missile_frames.append(texture)
+			else:
+				print("Failed to load missile frame: ", texture_path)
+		_missile_frames_loaded = true
+
+
+# Function to create missile sprites (uses cached textures to avoid disk I/O)
 static func create_missile_sprite() -> AnimatedSprite2D:
+	# Ensure missile frames are cached
+	_load_missile_frames()
+
+	if _missile_frames.is_empty():
+		print("Failed to load missile frames")
+		return null
+
 	# Create sprite frames resource
 	var sprite_frames = SpriteFrames.new()
 
-	# Load missile textures
-	var missile_frames = []
-	for i in range(1, 3):  # 2 frames
-		var texture_path = "res://assets/missiles/rocket_frame_%d.png" % i
-		var texture = load(texture_path)
-		if texture:
-			missile_frames.append(texture)
-		else:
-			print("Failed to load missile frame: ", texture_path)
+	# Add animation using cached frames
+	sprite_frames.add_animation("default")
+	for frame in _missile_frames:
+		sprite_frames.add_frame("default", frame)
 
-	# Add animation
-	if missile_frames.size() > 0:
-		sprite_frames.add_animation("default")
-		for frame in missile_frames:
-			sprite_frames.add_frame("default", frame)
+	# Set FPS
+	sprite_frames.set_animation_speed("default", 10)  # 10 FPS
 
-		# Set FPS
-		sprite_frames.set_animation_speed("default", 10)  # 10 FPS
+	# Create animated sprite
+	var missile_sprite = AnimatedSprite2D.new()
+	missile_sprite.sprite_frames = sprite_frames
+	missile_sprite.play("default")
 
-		# Create animated sprite
-		var missile_sprite = AnimatedSprite2D.new()
-		missile_sprite.sprite_frames = sprite_frames
-		missile_sprite.play("default")
-
-		return missile_sprite
-	else:
-		print("Failed to load missile frames")
-		return null
+	return missile_sprite
 
 
 # AnimatedExplosion class for handling explosion animations

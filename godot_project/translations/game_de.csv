@@ -9,6 +9,7 @@ alert_perfect_stamp,PERFEKTER STEMPEL! +{points} Punkte!
 alert_combo,COMBO x{mult}! +{streak} Combo-Bonuspunkte
 alert_quota_met,"Quote erfüllt, Schicht beendet! \nBonus: {bonus} Punkte!"
 alert_strike_removed,Strike entfernt!
+alert_strike_forgiven,+1 Strike Forgiven!
 alert_correct_decision,"Sie haben die richtige Entscheidung getroffen, Offizier.\n+{points} Punkte!"
 alert_wrong_decision,"Sie haben unnötiges Leid verursacht, Offizier...\n+1 Strike!"
 alert_potato_should_be_approved,\nDiese Kartoffel erfüllt alle Anforderungen und hätte genehmigt werden sollen.

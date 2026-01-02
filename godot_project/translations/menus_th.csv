@@ -57,6 +57,7 @@ global_leaderboard_title,กระดานผู้นำระดับโล�
 getting_leaderboard_scores,กำลังดึงคะแนนกระดานผู้นำ...
 reset_game_label,รีเซ็ตเกม :
 reset_game_button,รีเซ็ต
+reset_game_success,รีเซ็ตสำเร็จ!
 mute_label,ปิดเสียง
 fullscreen_label,เต็มจอ :
 resolution_label,ความละเอียด :
@@ -341,6 +342,10 @@ tutorial_skip,ข้าม
 tutorial_skip_all,ข้ามบทเรียนทั้งหมด
 tutorial_continue_auto,(ดำเนินการต่ออัตโนมัติ...)
 tutorial_continue_click,(คลิกเพื่อดำเนินการต่อ...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,บทเรียนที่ {current} จาก {total}: {name} - ขั้นตอนที่ {step} จาก {steps}
 tutorial_header_single,{name} - ขั้นตอนที่ {step} จาก {steps}
 tutorial_welcome_name,ยินดีต้อนรับสู่ Spud Customs

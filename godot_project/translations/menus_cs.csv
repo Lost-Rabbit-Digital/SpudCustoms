@@ -60,6 +60,7 @@ getting_leaderboard_scores,Získávání skóre z žebříčku...
 _PAUSE OPTIONS OVERLAY,
 reset_game_label,Restartovat hru
 reset_game_button,Resetovat
+reset_game_success,Reset dokončen!
 mute_label,Ztlumit
 fullscreen_label,Celá obrazovka
 resolution_label,Rozlišení
@@ -353,6 +354,10 @@ tutorial_skip,Přeskočit
 tutorial_skip_all,Přeskočit všechny tutoriály
 tutorial_continue_auto,(pokračuje automaticky...)
 tutorial_continue_click,(klikněte pro pokračování...)
+tutorial_continue,Continue
+tutorial_back,Back
+tutorial_action_required,Complete the action above to continue
+tutorial_skip_action,Having trouble? Click here to skip
 tutorial_header,Tutoriál {current} z {total}: {name} - Krok {step} z {steps}
 tutorial_header_single,{name} - Krok {step} z {steps}
 tutorial_welcome_name,Vítejte v Bramborové Celní Kontrole
