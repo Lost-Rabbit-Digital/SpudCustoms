@@ -1,0 +1,3 @@
+
+# AAP 128 with quantize at 128
+python palette_matcher.py -i ./spud_customs_test -o ./spud_customs_test_aap_128_c_128 -p aap-128.txt -c 128
